@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b51fd0f090eb53184572ac1ee26d30177fae1df
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: aa231a2f232c6c834e05edfbca5d6023e0326d54
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339287"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216730"
 ---
 # <a name="cgopherlocator-class"></a>Classe CGopherLocator
 Obtém um gopher "localizador" de um servidor gopher, determina o tipo de localizador e torna o localizador disponível para [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md).  
@@ -102,7 +102,7 @@ BOOL GetLocatorType(DWORD& dwRef) const;
  Uma referência a um DWORD que receberá o tipo de localizador. Ver **comentários** para uma tabela de tipos de localizador.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
   
 ### <a name="remarks"></a>Comentários  
  Os possíveis tipos são da seguinte maneira:  

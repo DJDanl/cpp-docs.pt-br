@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3227ebd4767bd7639bb5e5d8d5a1c73e26079dc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5a0f00e9ad0a94aaa96afb3031b57e1c7da703dc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953415"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208183"
 ---
 # <a name="queryinterface"></a>QueryInterface
-Embora existam mecanismos pelos quais um objeto pode expressar a funcionalidade que fornece estaticamente (antes que seja instanciado), o mecanismo COM fundamental é usar o `IUnknown` método chamado [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521).  
+Embora existam mecanismos pelos quais um objeto pode expressar a funcionalidade que fornece estaticamente (antes que seja instanciado), o mecanismo COM fundamental é usar o `IUnknown` método chamado [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).  
   
  Cada interface deriva `IUnknown`, portanto, cada interface tem uma implementação de `QueryInterface`. Independentemente da implementação, este método consulta um objeto usando o IID da interface à qual o chamador quiser um ponteiro. Se o objeto der suporte a essa interface `QueryInterface` recupera um ponteiro para a interface, enquanto também chama `AddRef`. Caso contrário, ele retornará o código de erro E_NOINTERFACE.  
   
@@ -34,5 +34,5 @@ Embora existam mecanismos pelos quais um objeto pode expressar a funcionalidade 
   
 ## <a name="see-also"></a>Consulte também  
  [Introdução a COM](../atl/introduction-to-com.md)   
- [QueryInterface: Navegando em um objeto](http://msdn.microsoft.com/library/windows/desktop/ms687230)
+ [QueryInterface: Navegando em um objeto](/windows/desktop/com/queryinterface--navigating-in-an-object)
 

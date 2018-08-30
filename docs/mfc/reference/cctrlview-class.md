@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80e89573e67113900db7b35ffe3f1189de1c524a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: fdcec255c7d2398e1bb0efa7f86a31fc5dd938e4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336326"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210197"
 ---
 # <a name="cctrlview-class"></a>Classe CCtrlView
 Se adapta a arquitetura de exibição de documento para controles comuns aceitos pelo Windows 98 e Windows NT versões 3.51 e posterior.  
@@ -140,7 +140,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
   
 ### <a name="parameters"></a>Parâmetros  
  *cs*  
- Um [CREATESTRUCT](http://msdn.microsoft.com/library/windows/desktop/ms632603) estrutura.  
+ Um [CREATESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632603) estrutura.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se a criação da janela deve continuar; 0 para indicar falha na criação.  

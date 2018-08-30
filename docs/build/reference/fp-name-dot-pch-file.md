@@ -1,5 +1,5 @@
 ---
-title: -Fp (nome. O arquivo pch) | Microsoft Docs
+title: -Fp (nome. Arquivo pch) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,22 +25,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f59477695b83b33dd3cfa2b37837c5b52c8002
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 723bf8d6f49157a2cdc02376e1a628ba697eceb2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376326"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217985"
 ---
 # <a name="fp-name-pch-file"></a>/Fp (nomear arquivo .Pch)
 Fornece um nome de caminho para um cabeçalho pré-compilado em vez de usar o nome do caminho padrão.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-> **/FP**_pathname_  
+> **/FP**<em>pathname</em>  
   
 ## <a name="remarks"></a>Comentários  
- Use essa opção com [/Yc (criar a arquivo de cabeçalho pré-compilado)](../../build/reference/yc-create-precompiled-header-file.md) ou [/Yu (usar pré-compilado arquivo de cabeçalho)](../../build/reference/yu-use-precompiled-header-file.md) para fornecer um nome de caminho para um cabeçalho pré-compilado em vez de usar o nome do caminho padrão. Você também pode usar **/Fp** com **/Yc** para especificar o uso de um arquivo de cabeçalho pré-compilado que difere do **/Yc * filename* argumento e o nome base do arquivo de origem.  
+ Use essa opção com [/Yc (criar a arquivo de cabeçalho pré-compilado)](../../build/reference/yc-create-precompiled-header-file.md) ou [/Yu (usar arquivo de cabeçalho pré-compilado)](../../build/reference/yu-use-precompiled-header-file.md) para fornecer um nome de caminho para um cabeçalho pré-compilado em vez de usar o nome do caminho padrão. Você também pode usar **/Fp** com **/Yc** para especificar o uso de um arquivo de cabeçalho pré-compilado que difere do **/Yc**<em>filename</em> argumento e do nome de base do arquivo de origem.  
   
  Se você não especificar uma extensão como parte do nome do caminho, uma extensão de. pch será assumida. Se você especificar um diretório sem um nome de arquivo, o nome de arquivo padrão é VC*x*0.pch, onde *x* é a versão principal do Visual C++ em uso.  
   
@@ -48,13 +48,13 @@ Fornece um nome de caminho para um cabeçalho pré-compilado em vez de usar o no
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
 2.  Clique o **C/C++** pasta.  
   
 3.  Clique o **cabeçalhos pré-compilados** página de propriedades.  
   
-4.  Modificar o **arquivo de cabeçalho pré-compilado** propriedade.  
+4.  Modificar a **arquivo de cabeçalho pré-compilado** propriedade.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
   
@@ -68,7 +68,7 @@ CL /DDEBUG /Zi /Yc /FpDPROG.PCH PROG.CPP
 ```  
   
 ## <a name="example"></a>Exemplo  
- O comando a seguir especifica o uso de um arquivo de cabeçalho pré-compilado chamado MYPCH.pch. O compilador assumirá que o código-fonte em PROG.cpp foi pré-compilado por meio de MYAPP.h e que o código pré-compilado reside em MYPCH.pch. Ele usa o conteúdo de MYPCH.pch e compila o restante do PROG.cpp para criar um arquivo. obj. A saída deste exemplo é um arquivo chamado PROG.exe.  
+ O comando a seguir especifica o uso de um arquivo de cabeçalho pré-compilado chamado MYPCH.pch. O compilador pressupõe que o código-fonte no Prog tem sido pré-compilado por meio de MYAPP.h e que o código pré-compilado reside em MYPCH.pch. Ele usa o conteúdo de MYPCH.pch e compila o restante do Prog para criar um arquivo. obj. A saída deste exemplo é um arquivo chamado PROG.exe.  
   
 ```  
 CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP  

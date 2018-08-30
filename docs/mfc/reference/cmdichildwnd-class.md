@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe649a3ca8ef0fb5e0091136fc9160ac89c248a1
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 4d31392a59707e5a7d072615ed7c930eaf1e14b9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338656"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207622"
 ---
 # <a name="cmdichildwnd-class"></a>Classe CMDIChildWnd
 Fornece a funcionalidade de um Windows vários janela de filho de MDI (interface MDI) do documento, juntamente com os membros para gerenciar a janela.  
@@ -143,7 +143,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parâmetros  
  *lpszClassName*  
- Aponta para uma cadeia de caracteres terminada em nulo que nomeia a classe do Windows (um [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) estrutura). O nome de classe pode ser qualquer nome registrado com o [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) função global. Deve ser NULL para um padrão `CMDIChildWnd`.  
+ Aponta para uma cadeia de caracteres terminada em nulo que nomeia a classe do Windows (um [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) estrutura). O nome de classe pode ser qualquer nome registrado com o [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) função global. Deve ser NULL para um padrão `CMDIChildWnd`.  
   
  *lpszWindowName*  
  Aponta para uma cadeia de caracteres com terminação nula que representa o nome da janela. Usado como o texto da barra de título.  

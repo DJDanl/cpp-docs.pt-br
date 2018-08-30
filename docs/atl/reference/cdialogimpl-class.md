@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f6fb0cc519b7c03b84122b24e23e4ea9b49bc71
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 09cc987b583bdddd78604f75bd07bc9e2743a1dc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880697"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206635"
 ---
 # <a name="cdialogimpl-class"></a>Classe CDialogImpl
 Essa classe fornece métodos para criar uma caixa de diálogo modal ou sem janela restrita.  
@@ -102,7 +102,7 @@ template <class T,
 |Criando controles|[Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md)|  
 |Usando as caixas de diálogo do ATL|[Classes de janela da ATL](../../atl/atl-window-classes.md)|  
 |ATL Project Wizard|[Criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)|  
-|Caixas de diálogo|[Caixas de diálogo](http://msdn.microsoft.com/library/windows/desktop/ms632588) e tópicos subsequentes no SDK do Windows|  
+|Caixas de diálogo|[Caixas de diálogo](https://msdn.microsoft.com/library/windows/desktop/ms632588) e tópicos subsequentes no SDK do Windows|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlwin  
@@ -126,7 +126,7 @@ HWND Create(
  [in] O identificador para a janela do proprietário.  
   
  **RECT &** *rect*  
- [in] Um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que especifica o tamanho e a posição da caixa de diálogo.  
+ [in] Um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que especifica o tamanho e a posição da caixa de diálogo.  
   
  *dwInitParam*  
  [in] Especifica o valor para passar para a caixa de diálogo do *lParam* parâmetro da mensagem WM_INITDIALOG.  
@@ -199,7 +199,7 @@ INT_PTR DoModal(
   
 ### <a name="parameters"></a>Parâmetros  
  *hWndParent*  
- [in] O identificador para a janela do proprietário. O valor padrão é o valor de retorno de [GetActiveWindow](http://msdn.microsoft.com/library/windows/desktop/ms646292) função do Win32.  
+ [in] O identificador para a janela do proprietário. O valor padrão é o valor de retorno de [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) função do Win32.  
   
  *dwInitParam*  
  [in] Especifica o valor para passar para a caixa de diálogo do *lParam* parâmetro da mensagem WM_INITDIALOG.  

@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d86e5e36c7219a79b77d79fe02e6b2ae811ccabc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b3e12028d91d488aed635adfeedc206eaffe08ae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612712"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205807"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Classe Platform::Collections::UnorderedMap
 
@@ -112,7 +112,7 @@ virtual void Clear();
 
 ## <a name="first"></a>  Método unorderedmap:: First
 
-Retorna um iterador que especifica o primeiro [ikeyvaluepair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elemento no mapa não ordenado.
+Retorna um iterador que especifica o primeiro [ikeyvaluepair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elemento no mapa não ordenado.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -223,7 +223,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno
 
-Um [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) que contém informações sobre o objeto que gerou o evento e o tipo de alteração que ocorreu. Consulte também [IMapChangedEventArgs\<K >](http://msdn.microsoft.com/library/windows/apps/br226034.aspx) e [CollectionChange Enumeration](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
+Um [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) que contém informações sobre o objeto que gerou o evento e o tipo de alteração que ocorreu. Consulte também [IMapChangedEventArgs\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx) e [CollectionChange Enumeration](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
 
 ## <a name="net-framework-equivalent"></a>Equivalente ao .NET Framework
 
@@ -247,7 +247,7 @@ A porção de chave do par chave-valor. O tipo de *chave* é o typename *K*.
 
 ## <a name="size"></a>  Método unorderedmap:: Size
 
-Retorna o número de [ikeyvaluepair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementos em UnorderedMap.
+Retorna o número de [ikeyvaluepair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementos em UnorderedMap.
 
 ### <a name="syntax"></a>Sintaxe
 

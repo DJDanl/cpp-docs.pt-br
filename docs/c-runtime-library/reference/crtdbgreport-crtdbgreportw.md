@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2b0bcdc5ee6c4c2b71837f1cdd958f50d8d0b4a
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 5aa7efb7881b00933afab92a7157c09e0f769605
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42575442"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204417"
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
@@ -108,8 +108,8 @@ A tabela a seguir lista as opções disponíveis para o modo de relatório ou mo
 
 |Modo do relatório|Arquivo do relatório|**Crtdbgreport**, **CrtDbgReportW** comportamento|
 |-----------------|-----------------|------------------------------------------------|
-|**_CRTDBG_MODE_DEBUG**|Não aplicável|Grava mensagens usando a API [OutputDebugString](http://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) do Windows.|
-|**_CRTDBG_MODE_WNDW**|Não aplicável|Chama a API [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) do Windows para criar uma caixa de mensagem e exibir a mensagem junto com os botões **Anular**, **Tentar novamente** e **Ignorar**. Se um usuário clica **anular**, **crtdbgreport** ou **crtdbgreport** será anulado imediatamente. Se um usuário clicar em **Tentar novamente**, ele retornará 1. Se um usuário clica **Ignore**, a execução continua e **crtdbgreport** e **CrtDbgReportW** retornam 0. Observe que clicar em **Ignorar** quando há uma condição de erro geralmente resulta em “comportamento inesperado”.|
+|**_CRTDBG_MODE_DEBUG**|Não aplicável|Grava mensagens usando a API [OutputDebugString](https://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) do Windows.|
+|**_CRTDBG_MODE_WNDW**|Não aplicável|Chama a API [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) do Windows para criar uma caixa de mensagem e exibir a mensagem junto com os botões **Anular**, **Tentar novamente** e **Ignorar**. Se um usuário clica **anular**, **crtdbgreport** ou **crtdbgreport** será anulado imediatamente. Se um usuário clicar em **Tentar novamente**, ele retornará 1. Se um usuário clica **Ignore**, a execução continua e **crtdbgreport** e **CrtDbgReportW** retornam 0. Observe que clicar em **Ignorar** quando há uma condição de erro geralmente resulta em “comportamento inesperado”.|
 |**_CRTDBG_MODE_FILE**|**__HFILE**|Grava a mensagem fornecida pelo usuário **MANIPULAR**, usando o Windows [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) API e não verifica a validade do identificador de arquivo; o aplicativo é responsável por abrir o arquivo de relatório e passar um arquivo válido identificador.|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|Grava a mensagem **stderr**.|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|Grava a mensagem **stdout**.|

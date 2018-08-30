@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb66d7435331124b4455c476c10986931b4c6e1d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 95eea7434fdaa12a6178ebd9648e8088b24b4dc8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850042"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205942"
 ---
 # <a name="coledocument-class"></a>Classe COleDocument
 A classe base para documentos OLE que dão suporte à edição visual.  
@@ -176,11 +176,11 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 ### <a name="remarks"></a>Comentários  
  Essa função atualiza o dispositivo de destino de impressão para todos os itens, mas não atualiza o cache de apresentação para esses itens. Para atualizar o cache de apresentação para um item, chame [COleClientItem::UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink).  
   
- Os argumentos para essa função contêm informações que OLE usa para identificar o dispositivo de destino. O [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) estrutura contém informações que o Windows usa para inicializar a caixa de diálogo de impressão comum. Depois que o usuário fecha a caixa de diálogo, o Windows retorna informações sobre as seleções do usuário nessa estrutura. O `m_pd` membro de uma [CPrintDialog](../../mfc/reference/cprintdialog-class.md) objeto é um `PRINTDLG` estrutura.  
+ Os argumentos para essa função contêm informações que OLE usa para identificar o dispositivo de destino. O [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) estrutura contém informações que o Windows usa para inicializar a caixa de diálogo de impressão comum. Depois que o usuário fecha a caixa de diálogo, o Windows retorna informações sobre as seleções do usuário nessa estrutura. O `m_pd` membro de uma [CPrintDialog](../../mfc/reference/cprintdialog-class.md) objeto é um `PRINTDLG` estrutura.  
   
- Para obter mais informações, consulte o [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646843) estrutura no SDK do Windows.  
+ Para obter mais informações, consulte o [PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) estrutura no SDK do Windows.  
   
- Para obter mais informações, consulte o [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) estrutura no SDK do Windows.  
+ Para obter mais informações, consulte o [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) estrutura no SDK do Windows.  
   
 ##  <a name="coledocument"></a>  COleDocument::COleDocument  
  Constrói um objeto `COleDocument`.  

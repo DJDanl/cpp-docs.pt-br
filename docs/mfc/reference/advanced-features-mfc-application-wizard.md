@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71cfea0f5dc62e9e7aee4ec5372464ed83bced15
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: c5a3746116679ba8cfee086b42359cce8003b282
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42540543"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198120"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Funcionalidades avançadas, Assistente de Aplicativo MFC
 Este tópico lista as opções para recursos adicionais para seu aplicativo, como a Ajuda, suporte para impressão e assim por diante. Em cada seção, especifique o suporte adicional para esses recursos avançados.  
@@ -47,17 +47,17 @@ Este tópico lista as opções para recursos adicionais para seu aplicativo, com
  Oferece suporte ao Windows Sockets, que você pode usar para escrever aplicativos que se comuniquem por redes TCP/IP.  
   
  **Acessibilidade ativa**  
- Adiciona suporte para [IAccessible](http://msdn.microsoft.com/library/windows/desktop/dd318466) à [CWnd](../../mfc/reference/cwnd-class.md)-classes derivadas, que você pode usar para personalizar a interface do usuário para melhorar a interação com clientes de acessibilidade.  
+ Adiciona suporte para [IAccessible](/windows/desktop/api/oleacc/nn-oleacc-iaccessible) à [CWnd](../../mfc/reference/cwnd-class.md)-classes derivadas, que você pode usar para personalizar a interface do usuário para melhorar a interação com clientes de acessibilidade.  
   
  **Manifesto de controle comum**  
  Habilitado por padrão. Gera um manifesto de aplicativo para habilitar a DLL de Controle Comum que é fornecida com o Microsoft Windows XP e sistemas operacionais mais recentes.  
   
  A versão 6 da DLL de Controle Comum não atualiza automaticamente a versão anterior dos Controles Comuns que seus aplicativos existentes usam. Para usar a versão 6 da DLL de Controle Comum, você deve criar um manifesto de aplicativo que direcione o aplicativo para carregar a DLL. Essa DLL de Controle Comum também oferece suporte aos temas do Windows XP.  
   
- Um manifesto de aplicativo também pode especificar outros DLLs e versões que seu aplicativo precisa. Para obter mais informações sobre manifestos de aplicativo, consulte [aplicativos isolados e Assemblies lado a lado](http://msdn.microsoft.com/library/dd408052) no SDK do Windows.  
+ Um manifesto de aplicativo também pode especificar outros DLLs e versões que seu aplicativo precisa. Para obter mais informações sobre manifestos de aplicativo, consulte [aplicativos isolados e Assemblies lado a lado](/windows/desktop/SbsCs/isolated-applications-and-side-by-side-assemblies-portal) no SDK do Windows.  
   
  **Suporte ao Gerenciador de reinicialização**  
- Adiciona suporte para o [Gerenciador de reinicialização do Windows](/windows/desktop/RstMgr/using-restart-manager). Este vídeo mostra como usar o Gerenciador de reinicialização do MFC: [como fazer: usar o novo Gerenciador de reinicialização](http://msdn.microsoft.com/vstudio/ee886407).  
+ Adiciona suporte para o [Gerenciador de reinicialização do Windows](/windows/desktop/RstMgr/using-restart-manager). Este vídeo mostra como usar o Gerenciador de reinicialização do MFC: [como fazer: usar o novo Gerenciador de reinicialização](https://msdn.microsoft.com/vstudio/ee886407).  
   
  **Painéis de quadros avançados**  
  |Opção|Descrição|  

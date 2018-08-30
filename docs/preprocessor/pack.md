@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39d19749f44645d30d9a3826758f54737d3e68af
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 0bcbd8dcc64d26f124a7b6443a79f01aa4329414
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540132"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207486"
 ---
 # <a name="pack"></a>pack
 Especifica o alinhamento de empacotamento da estrutura, união e membros da classe.  
@@ -38,7 +38,7 @@ Especifica o alinhamento de empacotamento da estrutura, união e membros da clas
 
 Para empacotar uma classe é colocar seus membros diretamente após a outra na memória, o que pode significar que alguns ou todos os membros podem ser alinhados em um limite menor do que o alinhamento padrão a arquitetura de destino. **pacote de** proporciona controle no nível de declaração de dados. Isso é diferente da opção de compilador [/Zp](../build/reference/zp-struct-member-alignment.md), que fornece apenas o controle de nível de módulo. **Pack** entra em vigor na primeira **struct**, **união**, ou **classe** declaração após o pragma. **pacote de** não tem nenhum efeito nas definições. Chamando **pack** sem argumentos define *n* como um valor definido na opção de compilador `/Zp`. Se a opção de compilador não for definida, o valor padrão é 8.  
   
-Se você alterar o alinhamento de uma estrutura, isso pode não usar tanto espaço na memória, mas você pode passar por uma redução de desempenho ou mesmo uma exceção gerada por hardware devido ao acesso não alinhado.  Você pode modificar esse comportamento de exceção usando [SetErrorMode](http://msdn.microsoft.com/library/windows/desktop/ms680621).  
+Se você alterar o alinhamento de uma estrutura, isso pode não usar tanto espaço na memória, mas você pode passar por uma redução de desempenho ou mesmo uma exceção gerada por hardware devido ao acesso não alinhado.  Você pode modificar esse comportamento de exceção usando [SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621).  
   
 *Mostrar* (opcional)  
 Exibe o valor atual de byte para o alinhamento de empacotamento. O valor é exibido por uma mensagem de aviso.  

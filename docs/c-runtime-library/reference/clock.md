@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4caf2518de21a938822e443c0383c22cf170d44
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd4b399900802d110ff5746a0ccb2424ba40e6b5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395361"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209860"
 ---
 # <a name="clock"></a>clock
 
@@ -54,13 +54,13 @@ clock_t clock( void );
 
 ## <a name="return-value"></a>Valor de retorno
 
-O tempo decorrido desde a inicialização do CRT no início do processo, medido em **CLOCKS_PER_SEC** unidades por segundo. Se o tempo decorrido está indisponível ou excedeu o tempo máximo positivo que pode ser registrado como um **clock_t** tipo, a função retorna o valor `(clock_t)(-1)`.
+O tempo decorrido desde a inicialização do CRT no início do processo, medido em **CLOCKS_PER_SEC** unidades por segundo. Se o tempo decorrido não estiver disponível ou excedeu o tempo máximo positivo que pode ser gravado como um **clock_t** tipo, a função retorna o valor `(clock_t)(-1)`.
 
 ## <a name="remarks"></a>Comentários
 
-O **relógio** função informa quanto tempo de relógio se passou desde a inicialização do CRT durante a inicialização do processo. Observe que essa função não está estritamente em conformidade com ISO C, que especifica o tempo de CPU líquido como o valor retornado. Para obter tempos de CPU, use a função Win32 [GetProcessTimes](https://msdn.microsoft.com/library/windows/desktop/ms683223). Para determinar o tempo decorrido em segundos, divida o valor retornado pelo **relógio** função pela macro **CLOCKS_PER_SEC**.
+O **relógio** função informa ao tempo de relógio se passou desde a inicialização do CRT durante o início do processo. Observe que essa função não está estritamente em conformidade com ISO C, que especifica o tempo de CPU líquido como o valor retornado. Para obter tempos de CPU, use a função Win32 [GetProcessTimes](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getprocesstimes). Para determinar o tempo decorrido em segundos, divida o valor retornado pela **relógio** função pela macro **CLOCKS_PER_SEC**.
 
-Dado um tempo suficiente, o valor retornado por **relógio** pode exceder o máximo valor positivo de **clock_t**. Quando o processo ficou mais, o valor retornado por **relógio** é sempre `(clock_t)(-1)`, conforme especificado pelo padrão ISO C99 (7.23.2.1) e ISO C11 padrão (7.27.2.1). Microsoft implementa **clock_t** como um **longo**, um inteiro de 32 bits e o **CLOCKS_PER_SEC** macro está definida como 1.000. Isso permite um máximo **relógio** função de valor de retorno de 2147483.647 segundos ou sobre 24.8 dias. Não confie no valor retornado por **relógio** em processos executados por mais do que esse período de tempo. Você pode usar de 64 bits [tempo](time-time32-time64.md) função ou o Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904) função tempo de processo de registro de muitos anos.
+Dada a tempo suficiente, o valor retornado por **relógio** pode exceder o valor máximo positivo de **clock_t**. Quando o processo foi executado por mais tempo, o valor retornado por **relógio** é sempre `(clock_t)(-1)`, conforme especificado pelo padrão ISO C99 (7.23.2.1) e do ISO C11 (7.27.2.1). A Microsoft implementa **clock_t** como um **longo**, um inteiro com sinal de 32 bits e o **CLOCKS_PER_SEC** macro é definida como 1.000. Isso fornece um máximo **relógio** valor retornado de 2147483,647 segundos ou cerca de 24,8 dias de função. Não confie no valor retornado por **relógio** em processos que foram executados por mais tempo que essa quantidade de tempo. Você pode usar de 64 bits [tempo](time-time32-time64.md) função ou o Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904) função para o tempo decorrido de processo de registro de muitos anos.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fc3c849506401e44dfebcd4d0722953b557ae01
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8e0972b1584f4df92455bb17e0db8e577f988ae8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404741"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213105"
 ---
 # <a name="mbsnbcpy-mbsnbcpyl"></a>_mbsnbcpy, _mbsnbcpy_l
 
@@ -106,14 +106,14 @@ Localidade a usar.
 
 ## <a name="remarks"></a>Comentários
 
-O **mbsnbcpy** função cópias *contagem* bytes do *strSource* para *strDest*. Se *contagem* excede o tamanho de *strDest* ou as cadeias de caracteres de origem e de destino se sobrepõem, o comportamento de **mbsnbcpy** é indefinido.
+O **mbsnbcpy** função cópias *contagem* bytes do *strSource* para *strDest*. Se *contagem* excede o tamanho de *strDest* ou as cadeias de caracteres de origem e de destino se sobrepõem, o comportamento do **mbsnbcpy** é indefinido.
 
-Se *strSource* ou *strDest* é um ponteiro nulo, essa função invoca o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, a função retorna **nulo** e define **errno** para **EINVAL**.
+Se *strSource* ou *strDest* é um ponteiro nulo, essa função invocará o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará **nulo** e define **errno** para **EINVAL**.
 
-O valor de saída é afetado pela configuração do **LC_CTYPE** configuração de categoria da localidade, consulte [setlocale, wsetlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções são idênticas, exceto aqueles que não têm o **_l** sufixo usam a localidade atual e as versões que têm o **_l** sufixo em vez disso, use o parâmetro de localidade que passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da **LC_CTYPE** configuração da categoria da localidade; consulte [setlocale, wsetlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções são idênticas, exceto que aquelas que não têm o **l** sufixo usam a localidade atual e as versões que têm o **l** sufixo, em vez disso, use o parâmetro de localidade que passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
-> Essas funções podem ser vulneráveis a ameaças de estouro de buffer. As saturações de buffer podem ser usadas para executar código arbitrário do invasor, que pode resultar na elevação de privilégio sem garantia e comprometer o sistema. Para obter mais informações, consulte [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) (Evitando estouros de buffer).
+> Essas funções podem ser vulneráveis a ameaças de estouro de buffer. As saturações de buffer podem ser usadas para executar código arbitrário do invasor, que pode resultar na elevação de privilégio sem garantia e comprometer o sistema. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
 Em C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais recentes e mais seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

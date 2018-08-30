@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ee32e9c94f9bd9d1da4e3d3beaf9bfa0039b8cf
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 3824113c1cbf1edc15f4a060dfdcc50df8759c4d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403820"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215917"
 ---
 # <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
 **Seção específica da Microsoft**  
@@ -168,7 +168,7 @@ explicit _com_ptr_t(
  Uma cadeia de caracteres multibyte que contém um `CLSID` (começando com "**{**") ou um `ProgID`.  
   
  *pOuter*  
- O externo desconhecido para [agregação](http://msdn.microsoft.com/library/windows/desktop/ms686558).  
+ O externo desconhecido para [agregação](/windows/desktop/com/aggregation).  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe _com_ptr_t](../cpp/com-ptr-t-class.md)

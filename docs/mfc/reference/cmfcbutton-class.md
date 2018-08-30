@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e50f48ad935e74bff05fe41dd77a0b17c0bd26ed
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 155aa704efe0686fc03be6e2b12c076656fad7a1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337301"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217503"
 ---
 # <a name="cmfcbutton-class"></a>Classe CMFCButton
 O `CMFCButton` classe adiciona funcionalidade para o [CButton](../../mfc/reference/cbutton-class.md) classe como alinhar o texto do botão, combinar o texto do botão e uma imagem, selecionar um cursor e especificando uma dica de ferramenta.  
@@ -137,7 +137,7 @@ class CMFCButton : public CButton
 |[CMFCButton::IsRadioButton](#isradiobutton)|Indica se um botão é um botão de opção.|  
 |[CMFCButton::IsWindowsThemingEnabled](#iswindowsthemingenabled)|Indica se o estilo da borda do botão corresponde ao tema atual do Windows.|  
 |`CMFCButton::OnDrawParentBackground`|Desenha a tela de fundo do pai de um botão na área especificada. (Substitui [AFX_GLOBAL_DATA::DrawParentBackground](../../mfc/reference/afx-global-data-structure.md)|  
-|`CMFCButton::PreTranslateMessage`|Converte as mensagens da janela antes de serem expedidas para o [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funções do Windows. (Substitui [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|`CMFCButton::PreTranslateMessage`|Converte as mensagens da janela antes de serem expedidas para o [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funções do Windows. (Substitui [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCButton::SetAutorepeatMode](#setautorepeatmode)|Define um botão para o modo de repetição automática.|  
 |[CMFCButton::SetCheckedImage](#setcheckedimage)|Define a imagem para um botão marcado.|  
 |[CMFCButton::SetFaceColor](#setfacecolor)|Define a cor de plano de fundo para o texto do botão.|  

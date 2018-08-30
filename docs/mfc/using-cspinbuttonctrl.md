@@ -19,24 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bea2f2f51ed3b012ee9b5afe2572b2a6be9e0d57
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 3768cda94eb0adda8562c46124be8e9b2d4a2501
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955476"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215086"
 ---
 # <a name="using-cspinbuttonctrl"></a>Usando CSpinButtonCtrl
-O *botão de rotação* controle (também conhecido como um *acima-abaixo* controle) fornece um par de setas que um usuário pode clicar para ajustar um valor. Esse valor é conhecido como o *posição atual*. A posição permanece dentro do intervalo do botão de rotação. Quando o usuário clica na seta para cima, a posição aproxima o máximo; e, quando o usuário clica na seta para baixo, a posição aproxima o mínimo.  
+O *botão de rotação* controle (também conhecido como um *up-down* controle) fornece um par de setas em que um usuário pode clicar para ajustar um valor. Esse valor é conhecido como o *posição atual*. A posição permanece dentro do intervalo do botão de rotação. Quando o usuário clica na seta para cima, a posição se move em direção ao máximo; e quando o usuário clica na seta para baixo, a posição se move em direção ao mínimo.  
   
- O controle de botão de rotação é representado em MFC pelo [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md) classe.  
+ O controle de botão de rotação é representado no MFC com o [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md) classe.  
   
 > [!NOTE]
->  Por padrão, o intervalo para o botão de rotação tem o máximo definido como zero (0) e o mínimo definido como 100. Como o valor máximo é menor que o valor mínimo, clicando na seta para cima diminui a posição e clicando na seta para baixo aumenta a ele. Use [CSpinButtonCtrl::SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) ajustar esses valores.  
+>  Por padrão, o intervalo para o botão de rotação tem o máximo definido como zero (0) e o mínimo definido como 100. Como o valor máximo é menor que o valor mínimo, clicando na seta para cima diminui a posição e clicando na seta para baixo aumenta a ele. Use [CSpinButtonCtrl::SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) para ajustar esses valores.  
   
- Normalmente, a posição atual é exibida em um controle complementar. O controle complementar é conhecido como o *janela buddy*. Para obter uma ilustração de um controle de botão de rotação, consulte [sobre os controles para cima para baixo](http://msdn.microsoft.com/library/windows/desktop/bb759889) no SDK do Windows.  
+ Normalmente, a posição atual é exibida em um controle complementar. O controle complementar é conhecido como o *janela buddy*. Para obter uma ilustração de um controle de botão de rotação, consulte [sobre controles de cima para baixo](/windows/desktop/Controls/up-down-controls) no SDK do Windows.  
   
- Para criar um controle de rotação e uma janela de buddy do controle de edição, no Visual Studio, arraste um controle de edição para a caixa de diálogo ou janela e, em seguida, arraste um controle de rotação. Selecione o controle de rotação e defina seu **Buddy automático** e **conjunto inteiro de amigo** propriedades **True**. Defina também a **alinhamento** propriedade; **Alinhar à direita** é mais comum. Com essas configurações, o controle de edição é definido como a janela buddy porque ela diretamente precede o controle de edição na ordem de tabulação. O controle de edição exibe números inteiros e o controle de rotação é inserido no lado direito do controle de edição. Opcionalmente, você pode definir o intervalo válido do controle de rotação usando o [CSpinButtonCtrl::SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) método. Não há manipuladores de eventos são necessárias para se comunicar entre o controle de rotação e a janela buddy porque eles trocam dados diretamente. Se você usar um controle de rotação para algum outro propósito, por exemplo, para ver uma sequência de janelas ou caixas de diálogo, em seguida, adicione um manipulador para a mensagem UDN_DELTAPOS e executar a ação personalizada.  
+ Para criar um controle de rotação e uma janela de buddy do controle de edição, no Visual Studio, arraste um controle de edição para a caixa de diálogo ou janela e, em seguida, arraste um controle de rotação. Selecione o controle de rotação e defina suas **Buddy automático** e **conjunto inteiro de amigo** propriedades a serem **verdadeiro**. Também defina as **alinhamento** propriedade; **Alinhar à direita** é mais comum. Com essas configurações, o controle de edição é definido como a janela buddy porque precede diretamente o controle de edição na ordem de tabulação. O controle de edição exibe números inteiros e o controle de rotação é inserido no lado direito do controle de edição. Opcionalmente, você pode definir o intervalo válido de controle de rotação usando a [CSpinButtonCtrl::SetRange](../mfc/reference/cspinbuttonctrl-class.md#setrange) método. Não há manipuladores de eventos são necessárias para se comunicar entre o controle de rotação e a janela buddy porque eles trocam dados diretamente. Se você usar um controle de rotação para algum outro propósito, por exemplo, para a página por meio de uma sequência de janelas ou caixas de diálogo, em seguida, adicione um manipulador para a mensagem UDN_DELTAPOS e executar sua ação de personalizado.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
   

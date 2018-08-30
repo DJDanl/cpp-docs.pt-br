@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5bbbc225e4fee1aba380694fc3b39a7f59e1a294
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4cec0e02a6a61638f8aed1b4015fea065cbfd343
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611480"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207682"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -43,7 +43,7 @@ A interface designada que você deseja ter vtable padrão para o objeto COM.
 
 ## <a name="remarks"></a>Comentários
 
-O **defaultvtable** atributo C++ tem a mesma funcionalidade que o [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) atributo MIDL.
+O **defaultvtable** atributo C++ tem a mesma funcionalidade que o [defaultvtable](/windows/desktop/Midl/defaultvtable) atributo MIDL.
 
 ## <a name="example"></a>Exemplo
 

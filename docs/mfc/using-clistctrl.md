@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce28c5be7ff87d9ebad38d35bf19b7d182531ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 52ec0bcda66ec8f1a166351682b163a09ffb55d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382980"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210484"
 ---
 # <a name="using-clistctrl"></a>Usando CListCtrl
-Use um controle de lista para exibir qualquer disposição dos ícones com rótulos, como no Explorador de arquivos ou listas de colunas de texto, com ou sem ícones. Para obter uma descrição dos quatro possíveis "modos de exibição" (não deve ser confundido com modos de exibição do MFC), você pode ter em um controle de lista – modo de exibição de ícone, modo de exibição de ícone pequeno, exibição de lista e exibição de relatório — Consulte exibições no [CListCtrl](../mfc/reference/clistctrl-class.md) visão geral da classe.  
+Use um controle de lista para exibir qualquer disposição dos ícones com os rótulos, como no Explorador de arquivos ou listas de colunas de texto, com ou sem ícones. Para obter uma descrição das quatro possíveis "exibições" (não deve ser confundido com modos de exibição do MFC), você pode ter em um controle de lista – modo de exibição de ícone, modo de exibição de ícone pequeno, exibição de lista e exibição de relatório — Consulte modos de exibição na [CListCtrl](../mfc/reference/clistctrl-class.md) visão geral da classe.  
   
- Em alguns modos de exibição, os usuários podem arrastar ícones para posições diferentes ou editar rótulos de ícones. Por exemplo, consulte o painel direito no Explorador de arquivos, que usa um controle de lista em uma janela nondialog. Você pode fazer experiências com modos de exibição disponíveis no menu de exibição do Explorer.  
+ Em alguns modos de exibição, os usuários podem arrastar ícones em posições diferentes ou editar rótulos de ícone. Por exemplo, consulte o painel direito no Explorador de arquivos, que usa um controle de lista em uma janela nondialog. Você pode experimentar com as exibições disponíveis no menu de exibição do Explorer.  
   
- Para obter informações relacionadas, consulte [sobre controles de exibição de lista](http://msdn.microsoft.com/library/windows/desktop/bb774735) no SDK do Windows.  
+ Para obter informações relacionadas, consulte [sobre controles de exibição de lista](/windows/desktop/Controls/list-view-controls-overview) no SDK do Windows.  
   
 > [!NOTE]
->  O SDK do Windows se refere a controles de lista como "controles de exibição de lista". Esse uso de "view" não se refere a classes de exibição do MFC, particularmente `CListView`. Para obter mais informações, consulte [controle e exibição de lista](../mfc/list-control-and-list-view.md).  
+>  O SDK do Windows refere-se aos controles de lista como "controles de exibição de lista". Esse uso de "view" não faz referência a classes de exibição do MFC, particularmente `CListView`. Para obter mais informações, consulte [controle de lista e exibição de lista](../mfc/list-control-and-list-view.md).  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
   

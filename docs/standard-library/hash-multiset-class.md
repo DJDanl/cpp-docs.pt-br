@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b889a0d9be1942d2d381b0c6a85236c94f4e6ebf
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c02db557f877f43f39286856de02d68b87959fee
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965465"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210426"
 ---
 # <a name="hashmultiset-class"></a>Classe hash_multiset
 
@@ -119,11 +119,14 @@ class hash_multiset
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave* tipo de dados do elemento a ser armazenado no hash_multiset.
+*Chave*<br/>
+ O tipo de dados do elemento a ser armazenado no hash_multiset.
 
-*Características* o tipo que inclui dois objetos de função, um da classe compare que é um predicado binário capaz de comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa e uma função de hash que é um unário predicado de mapeamento de valores de chave da elementos para inteiros sem sinal do tipo `size_t`. Esse argumento é opcional e o `hash_compare` *< chave,* **menos * * *\<chave >>* é o valor padrão.
+*Características*<br/>
+ O tipo que inclui dois objetos de função: um da classe compare que é um predicado binário capaz de comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa e uma função de hash que é um valores de chave de mapeamento de predicado unário dos elementos para sem sinal inteiros do tipo `size_t`. Esse argumento é opcional e o `hash_compare<Key, less<Key> >` é o valor padrão.
 
-*Alocador* o tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre o hash_multiset alocação e desalocação de memória. Esse argumento é opcional e o valor padrão é **alocador * * *\<Key >.*
+*Alocador*<br/>
+ O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação de memória do hash_multiset. Esse argumento é opcional e o valor padrão é `allocator<Key>`.
 
 ## <a name="remarks"></a>Comentários
 
@@ -145,7 +148,7 @@ A escolha do tipo de contêiner deve se basear, de modo geral, no tipo de pesqui
 
 O hash_multiset deve ser o contêiner associativo escolhido quando as condições que associam os valores às respectivas chaves forem atendidas pelo aplicativo. Os elementos de um hash_multiset podem ser múltiplos e atuar como suas próprias chaves de classificação, de modo que as chaves não são exclusivas. Um modelo para esse tipo de estrutura é uma lista ordenada de palavras, por exemplo, na qual as palavras podem ocorrer mais de uma vez. Não tendo sido permitidas várias ocorrências das palavras, um hash_multiser seria a estrutura de contêiner apropriada. Se definições exclusivas fossem anexadas como valores à lista de palavras-chave exclusivas, um hash_map seria uma estrutura apropriada para conter esses dados. Se, em vez disso, as definições não fossem exclusivas, um hash_multimap seria o contêiner ideal.
 
-O hash_multiset ordena a sequência que controla chamando um objeto de características de hash armazenado do tipo [value_compare](#value_compare). Esse objeto armazenado pode ser acessado chamando a função membro [key_comp](#key_comp). Um objeto de função deve se comportar da mesma forma um objeto da classe `hash_compare` *< chave,* **menos * * *\<chave >>.* Especificamente, para todos os valores *chave* do tipo `Key`, a chamada **característica**( *chave*) produz uma distribuição de valores do tipo `size_t`.
+O hash_multiset ordena a sequência que controla chamando um objeto de características de hash armazenado do tipo [value_compare](#value_compare). Esse objeto armazenado pode ser acessado chamando a função membro [key_comp](#key_comp). Um objeto de função deve se comportar da mesma forma um objeto da classe `hash_compare<Key, less<Key> >`. Especificamente, para todos os valores *chave* do tipo `Key`, a chamada `Trait(Key)` produz uma distribuição de valores do tipo `size_t`.
 
 De modo geral, os elementos precisam ser simplesmente menores que os comparáveis para estabelecer essa ordem: desse modo, considerando dois elementos, pode ser determinado que, ou eles são equivalentes (no sentido de que nenhum deles é menor que o outro), ou que um é menor que o outro. Isso resulta em uma ordenação entre os elementos não equivalentes. Fazendo uma observação mais técnica, a função de comparação é um predicado binário que induz a uma ordenação fraca restrita no sentido matemático padrão. Um predicado binário *f*( *x*, *y*) é um objeto de função que tem dois objetos de argumento x e y e um valor retornado de true ou false. Uma ordenação imposta a um hash_multiset será uma ordenação fraca estrita se o predicado binário for irreflexivo, antissimétrico e transitivo, e se a equivalência for transitiva, em que dois objetos x e y serão definidos para serem equivalentes quando *f*( *x*, *y*) e *f*( *y*, *x*) forem falsos. Se a condição mais forte de igualdade entre as chaves substituir essa equivalência, a ordenação será total (no sentido de que todos os elementos serão ordenados um em relação ao outro) e as chaves correspondentes não poderão ser diferenciadas uma da outra.
 
@@ -551,7 +554,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*chave* a chave dos elementos a serem correspondidos do hash_multiset.
+*key*<br/>
+ O valor dos elementos a serem correspondidos do hash_multiset.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -718,8 +722,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::di
 
 ### <a name="remarks"></a>Comentários
 
-
-          `difference_type` é o tipo retornado ao subtrair ou incrementar por meio de iteradores do contêiner. `difference_type` geralmente é usado para representar o número de elementos no intervalo [`first`, `last`) entre os iteradores `first` e `last`, inclui o elemento apontado por `first` e o intervalo de elementos até, mas sem incluir, o elemento apontado por `last`.
+`difference_type` é o tipo retornado ao subtrair ou incrementar por meio de iteradores do contêiner. `difference_type` geralmente é usado para representar o número de elementos no intervalo [`first`, `last`) entre os iteradores `first` e `last`, inclui o elemento apontado por `first` e o intervalo de elementos até, mas sem incluir, o elemento apontado por `last`.
 
 Observe que, embora `difference_type` esteja disponível para todos os iteradores que atendem aos requisitos de um iterador de entrada, o que inclui a classe de iteradores bidirecionais com suporte de contêineres reversíveis, como conjuntos. a subtração entre iteradores tem suporte apenas de iteradores de acesso aleatório fornecidos por um contêiner de acesso aleatório como vetor ou deque.
 
@@ -1018,7 +1021,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parâmetros
 
-*chave* a chave do argumento a ser comparado com a chave de classificação de um elemento do hash_multiset que está sendo pesquisado.
+*key*<br/>
+ A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_multiset que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1106,13 +1110,17 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Where* posição do elemento a ser removido do hash_multiset.
+*_Where*<br/>
+ Posição do elemento a ser removido do hash_multiset.
 
-*primeiro* posição do primeiro elemento removido do hash_multiset.
+*first*<br/>
+ Posição do primeiro elemento removido do hash_multiset.
 
-*última* posição logo após o último elemento removido do hash_multiset.
+*last*<br/>
+ Posição logo após o último elemento removido do hash_multiset.
 
-*chave* a chave dos elementos a ser removido do hash_multiset.
+*key*<br/>
+ A chave dos elementos a serem removidos do hash_multiset.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1223,7 +1231,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*chave* a chave do argumento a ser correspondido pela chave de classificação de um elemento do hash_multiset que está sendo pesquisado.
+*key*<br/>
+ A chave do argumento que deve corresponder à chave de classificação de um elemento do hash_multiset que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1657,7 +1666,8 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>Parâmetros
 
-*chave* a chave do argumento a ser comparado com a chave de classificação de um elemento do hash_multiset que está sendo pesquisado.
+*key*<br/>
+ A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_multiset que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2139,7 +2149,8 @@ void swap(hash_multiset& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* o hash_multiset do argumento que fornece os elementos a serem trocados com o hash_multiset de destino.
+*right*<br/>
+ O hash_multiset do argumento que fornece os elementos a serem trocados com o hash_multiset de destino.
 
 ### <a name="remarks"></a>Comentários
 
@@ -2214,7 +2225,8 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>Parâmetros
 
-*chave* a chave do argumento a ser comparado com a chave de classificação de um elemento do hash_multiset que está sendo pesquisado.
+*key*<br/>
+ A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_multiset que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 

@@ -54,15 +54,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d6dc2c196e40daf4aa793f6643da95206b12be0
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 2abbf512085c9c59e9e6874e3f815548cd9052c1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37123130"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217098"
 ---
 # <a name="ctoolbar-class"></a>Classe CToolBar
-Barras de controle que tem uma linha de botões de bitmap e separadores opcionais.  
+Barras de controle que têm uma linha de botões de bitmap e separadores opcionais.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -83,71 +83,71 @@ class CToolBar : public CControlBar
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CToolBar::CommandToIndex](#commandtoindex)|Retorna o índice de um botão com a ID de comando especificada.|  
-|[CToolBar::Create](#create)|Cria a barra de ferramentas do Windows e a anexa ao `CToolBar` objeto.|  
-|[CToolBar::CreateEx](#createex)|Cria um `CToolBar` objeto com estilos adicionais para o item inserido `CToolBarCtrl` objeto.|  
+|[CToolBar::Create](#create)|Cria a barra de ferramentas do Windows e anexa-o para o `CToolBar` objeto.|  
+|[CToolBar::CreateEx](#createex)|Cria uma `CToolBar` objeto com estilos adicionais para o embedded `CToolBarCtrl` objeto.|  
 |[CToolBar::GetButtonInfo](#getbuttoninfo)|Recupera a ID, o estilo e o número de imagem de um botão.|  
-|[CToolBar::GetButtonStyle](#getbuttonstyle)|Recupera o estilo de um botão.|  
+|[CToolBar::GetButtonStyle](#getbuttonstyle)|Recupera o estilo para um botão.|  
 |[CToolBar::GetButtonText](#getbuttontext)|Recupera o texto que será exibido em um botão.|  
 |[CToolBar::GetItemID](#getitemid)|Retorna a ID de comando de um botão ou um separador no índice especificado.|  
 |[CToolBar::GetItemRect](#getitemrect)|Recupera o retângulo de exibição para o item no índice especificado.|  
 |[CToolBar::GetToolBarCtrl](#gettoolbarctrl)|Permite acesso direto ao controle comum subjacente.|  
-|[CToolBar::LoadBitmap](#loadbitmap)|Carrega o bitmap que contém imagens de bitmap de botão.|  
-|[CToolBar::LoadToolBar](#loadtoolbar)|Carrega um recurso da barra de ferramentas criado com o editor de recurso.|  
+|[CToolBar::LoadBitmap](#loadbitmap)|Carrega o bitmap que contém imagens de botões de bitmap.|  
+|[CToolBar::LoadToolBar](#loadtoolbar)|Carrega um recurso de barra de ferramentas criado com o editor de recursos.|  
 |[CToolBar::SetBitmap](#setbitmap)|Define uma imagem de bitmap.|  
 |[CToolBar::SetButtonInfo](#setbuttoninfo)|Define a ID, o estilo e o número de imagem de um botão.|  
 |[CToolBar::SetButtons](#setbuttons)|Botão de conjuntos de estilos e um índice de imagens de botão dentro do bitmap.|  
 |[CToolBar::SetButtonStyle](#setbuttonstyle)|Define o estilo de um botão.|  
 |[CToolBar::SetButtonText](#setbuttontext)|Define o texto que será exibido em um botão.|  
 |[CToolBar::SetHeight](#setheight)|Define a altura da barra de ferramentas.|  
-|[CToolBar::SetSizes](#setsizes)|Define os tamanhos dos botões e seus bitmaps.|  
+|[CToolBar::SetSizes](#setsizes)|Define os tamanhos de botões e seus bitmaps.|  
   
 ## <a name="remarks"></a>Comentários  
- Os botões podem agir como pushbuttons, botões da caixa de seleção ou botões de opção. `CToolBar` os objetos são geralmente inseridos membros dos objetos de janela com moldura derivados da classe [CFrameWnd](../../mfc/reference/cframewnd-class.md) ou [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md).  
+ Os botões podem agir como comportarem, botões de caixa de seleção ou botões de opção. `CToolBar` os objetos são normalmente inseridos membros dos objetos de janela com moldura derivados da classe [CFrameWnd](../../mfc/reference/cframewnd-class.md) ou [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md).  
   
- [CToolBar::GetToolBarCtrl](#gettoolbarctrl), uma função de membro novo MFC 4.0, permite aproveitar o suporte para personalização da barra de ferramentas e recursos adicionais do controle comum do Windows. `CToolBar` funções de membro lhe oferece a maioria da funcionalidade de controles comuns do Windows; No entanto, quando você chama `GetToolBarCtrl`, você pode fornecer as barras de ferramentas ainda mais as características das barras de ferramentas do Windows 95/98. Quando você chama `GetToolBarCtrl`, ela retornará uma referência a um `CToolBarCtrl` objeto. Consulte [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) para obter mais informações sobre a criação de barras de ferramentas usando controles comuns do Windows. Para obter mais informações sobre controles comuns, consulte [controles comuns](http://msdn.microsoft.com/library/windows/desktop/bb775493) no SDK do Windows.  
+ [CToolBar::GetToolBarCtrl](#gettoolbarctrl), uma função de membro novo a MFC 4.0, permite que você tirar proveito do suporte do controle do Windows comuns de personalização da barra de ferramentas e funcionalidades adicionais. `CToolBar` funções de membro lhe oferece a maioria da funcionalidade dos controles comuns do Windows; No entanto, quando você chama `GetToolBarCtrl`, você pode fornecer suas barras de ferramentas ainda mais as características das barras de ferramentas do Windows 95/98. Quando você chama `GetToolBarCtrl`, ele retornará uma referência a um `CToolBarCtrl` objeto. Ver [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) para obter mais informações sobre como criar barras de ferramentas usando controles comuns do Windows. Para obter mais informações sobre controles comuns, consulte [controles comuns](/windows/desktop/Controls/common-controls-intro) no SDK do Windows.  
   
- Visual C++ fornece dois métodos para criar uma barra de ferramentas. Para criar um recurso da barra de ferramentas usando o Editor de recursos, siga estas etapas:  
+ Visual C++ fornece dois métodos para criar uma barra de ferramentas. Para criar um recurso de barra de ferramentas usando o Editor de recursos, siga estas etapas:  
   
 1.  Crie um recurso da barra de ferramentas.  
   
 2.  Construir o `CToolBar` objeto.  
   
-3.  Chamar o [criar](#create) (ou [CreateEx](#createex)) função para criar a barra de ferramentas do Windows e anexá-lo para o `CToolBar` objeto.  
+3.  Chame o [Create](#create) (ou [CreateEx](#createex)) função para criar a barra de ferramentas do Windows e anexá-lo para o `CToolBar` objeto.  
   
-4.  Chamar [LoadToolBar](#loadtoolbar) carregar o recurso da barra de ferramentas.  
+4.  Chame [LoadToolBar](#loadtoolbar) para carregar o recurso da barra de ferramentas.  
   
  Caso contrário, siga estas etapas:  
   
 1.  Construir o `CToolBar` objeto.  
   
-2.  Chamar o [criar](#create) (ou [CreateEx](#createex)) função para criar a barra de ferramentas do Windows e anexá-lo para o `CToolBar` objeto.  
+2.  Chame o [Create](#create) (ou [CreateEx](#createex)) função para criar a barra de ferramentas do Windows e anexá-lo para o `CToolBar` objeto.  
   
-3.  Chamar [LoadBitmap](#loadbitmap) para carregar o bitmap que contém as imagens de botão da barra de ferramentas.  
+3.  Chame [LoadBitmap](#loadbitmap) para carregar o bitmap que contém as imagens de botão de barra de ferramentas.  
   
-4.  Chamar [SetButtons](#setbuttons) para definir o estilo do botão e associar cada botão com uma imagem de bitmap.  
+4.  Chame [SetButtons](#setbuttons) para definir o estilo de botão e associar cada botão com uma imagem em bitmap.  
   
- Todas as imagens do botão na barra de ferramentas são obtidas de um bitmap, que deve conter uma imagem para cada botão. Todas as imagens devem ser do mesmo tamanho; o padrão é 16 pixels de largura e 15 pixels de altura. Imagens devem ser lado a lado no bitmap.  
+ Todas as imagens de botão na barra de ferramentas são tiradas de um bitmap, que deve conter uma imagem para cada botão. Todas as imagens devem ser do mesmo tamanho; o padrão é 16 pixels de largura e 15 pixels de altura. Imagens devem ser lado a lado no bitmap.  
   
- O `SetButtons` função usa um ponteiro para uma matriz de IDs de controle e um inteiro que especifica o número de elementos na matriz. A função define ID cada botão como o valor do elemento correspondente da matriz e atribui cada botão de um índice de imagem, que especifica a posição da imagem do botão no bitmap. Se um elemento de matriz tem o valor ID_SEPARATOR, nenhum índice de imagem é atribuído.  
+ O `SetButtons` função usa um ponteiro para uma matriz de IDs de controle e um inteiro que especifica o número de elementos na matriz. A função define a ID de cada botão para o valor do elemento correspondente da matriz e atribui cada botão de um índice de imagem, que especifica a posição da imagem do botão no bitmap. Se um elemento de matriz tem o valor ID_SEPARATOR, nenhum índice de imagem é atribuído.  
   
- A ordem das imagens no bitmap geralmente é a ordem na qual eles são desenhados na tela, mas você pode usar o [SetButtonInfo](#setbuttoninfo) função para alterar a relação entre a ordem de imagem e a ordem de desenho.  
+ A ordem das imagens no bitmap é normalmente a ordem na qual eles são desenhados na tela, mas você pode usar o [SetButtonInfo](#setbuttoninfo) função para alterar a relação entre a ordem de imagem e a ordem de desenho.  
   
- Todos os botões na barra de ferramentas são do mesmo tamanho. O padrão é 22 x 24 pixels, de acordo com *diretrizes de Interface do Windows para Design de Software*. Nenhum espaço adicional entre as dimensões de imagem e o botão é usado para formar uma borda ao redor da imagem.  
+ Todos os botões na barra de ferramentas são do mesmo tamanho. O padrão é 22 x 24 pixels, de acordo com *Windows Interface Guidelines for Software Design*. Nenhum espaço adicional entre as dimensões de imagem e o botão é usado para formar uma borda ao redor da imagem.  
   
- Cada botão tem uma imagem. Os vários estados de botão e estilos (pressionado para cima, para baixo, indeterminado desabilitado e desabilitado para baixo) são gerados a partir de uma imagem. Embora os bitmaps podem ser todas as cores, você pode obter os melhores resultados com imagens em preto e tons de cinza.  
+ Cada botão tem uma imagem. Os vários estados de botão e estilos (pressionado para cima, para baixo, desabilitado, desabilitado para baixo e indeterminado) gerados a partir de que uma imagem. Embora os bitmaps podem ser qualquer cor, você pode obter os melhores resultados com imagens em preto e tons de cinza.  
   
 > [!WARNING]
-> `CToolBar` dá suporte a bitmaps com um máximo de 16 cores. Quando você carregar uma imagem em um editor de barra de ferramentas, o Visual Studio automaticamente converte a imagem em um bitmap de 16 cores, se necessário e exibe uma mensagem de aviso se a imagem foi convertida. Se você usar uma imagem com mais de 16 cores (usando um editor externo para editar a imagem), o aplicativo pode se comportar inesperadamente.  
+> `CToolBar` dá suporte a bitmaps com um máximo de 16 cores. Quando você carrega uma imagem em um editor de barra de ferramentas, o Visual Studio automaticamente converte a imagem para um bitmap de 16 cores, se necessário e exibe uma mensagem de aviso se a imagem foi convertida. Se você usar uma imagem com mais de 16 cores (usando um editor externo para editar a imagem), o aplicativo talvez tenha um comportamento inesperado.  
   
- Botões da barra de ferramentas imitar pushbuttons por padrão. No entanto, os botões de barra de ferramentas também podem imitar botões da caixa de seleção ou botões de opção. Botões da caixa de seleção tem três estados: indeterminado marcados e desmarcados. Botões de opção têm apenas dois estados: marcada e desmarcada.  
+ Botões da barra de ferramentas imitar comportarem, por padrão. No entanto, os botões de barra de ferramentas também podem imitar os botões de caixa de seleção ou botões de opção. Botões da caixa de seleção tem três estados: marcado, desmarcado e indeterminado. Botões de opção têm apenas dois estados: marcada e desmarcada.  
   
- Para definir um botão individual ou o estilo do separador sem apontando para uma matriz, chame [GetButtonStyle](#getbuttonstyle) para recuperar o estilo e, em seguida, chamar [SetButtonStyle](#setbuttonstyle) em vez de `SetButtons`. `SetButtonStyle` é mais útil quando você deseja alterar o estilo do botão em tempo de execução.  
+ Para definir um botão individual ou o estilo do separador sem que aponta para uma matriz, chame [GetButtonStyle](#getbuttonstyle) para recuperar o estilo e, em seguida, chame [SetButtonStyle](#setbuttonstyle) em vez de `SetButtons`. `SetButtonStyle` é mais útil quando você deseja alterar o estilo de um botão em tempo de execução.  
   
- Para atribuir o texto a ser exibido em um botão, chame [GetButtonText](#getbuttontext) para recuperar o texto a ser exibido no botão e, em seguida, chame [SetButtonText](#setbuttontext) para definir o texto.  
+ Para atribuir texto a ser exibido em um botão, chame [GetButtonText](#getbuttontext) para recuperar o texto a ser exibido no botão e, em seguida, chame [SetButtonText](#setbuttontext) para definir o texto.  
   
- Para criar um botão de caixa de seleção, atribua-o estilo TBBS_CHECKBOX ou use um `CCmdUI` do objeto `SetCheck` função de membro em um manipulador de ON_UPDATE_COMMAND_UI. Chamando `SetCheck` uma botão se transforma em um botão de caixa de seleção. Passar `SetCheck` um argumento de 0 para 1 desmarcada, para marcada ou 2 para indeterminado.  
+ Para criar um botão da caixa de seleção, atribua a ele o estilo TBBS_CHECKBOX ou usar um `CCmdUI` do objeto `SetCheck` função de membro em um manipulador de ON_UPDATE_COMMAND_UI. Chamar `SetCheck` transforma um botão de ação em um botão da caixa de seleção. Passar `SetCheck` um argumento de 0 para 1 desmarcada, para marcar ou 2 para indeterminado.  
   
- Para criar um botão de opção, chame um [CCmdUI](../../mfc/reference/ccmdui-class.md) do objeto [SetRadio](../../mfc/reference/ccmdui-class.md#setradio) a função de membro de um manipulador ON_UPDATE_COMMAND_UI. Passar `SetRadio` um argumento de 0 para diferente de zero para marcada ou desmarcada. Para fornecer comportamento mutuamente exclusivas de um grupo de opção, você deve ter manipuladores ON_UPDATE_COMMAND_UI para todos os botões no grupo.  
+ Para criar um botão de opção, chame um [CCmdUI](../../mfc/reference/ccmdui-class.md) do objeto [SetRadio](../../mfc/reference/ccmdui-class.md#setradio) a função de membro de um manipulador ON_UPDATE_COMMAND_UI. Passar `SetRadio` um argumento de 0 para diferente de zero para marcada ou desmarcada. Para fornecer comportamento de um grupo rádio mutuamente exclusivas, você deve ter manipuladores ON_UPDATE_COMMAND_UI para todos os botões no grupo.  
   
  Para obter mais informações sobre como usar `CToolBar`, consulte o artigo [implementação da barra de ferramentas MFC](../../mfc/mfc-toolbar-implementation.md) e [31 de observação técnica: barras de controle](../../mfc/tn031-control-bars.md).  
   
@@ -166,7 +166,7 @@ class CToolBar : public CControlBar
  **Cabeçalho:** afxext.h  
   
 ##  <a name="commandtoindex"></a>  CToolBar::CommandToIndex  
- Essa função de membro retorna o índice da primeira barra de ferramentas botão, começando na posição 0, cuja ID de comando corresponde `nIDFind`.  
+ Essa função membro retorna o índice da primeira barra de ferramentas botão, começando na posição 0, cuja ID de comando corresponde ao `nIDFind`.  
   
 ```  
 int CommandToIndex(UINT nIDFind) const;  
@@ -177,10 +177,10 @@ int CommandToIndex(UINT nIDFind) const;
  ID de comando de um botão de barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O índice do botão, ou -1 se o botão não tem a ID de comando especificada.  
+ O índice do botão ou -1 se nenhum botão tem a ID do comando fornecido.  
   
 ##  <a name="create"></a>  CToolBar::Create  
- Essa função de membro cria uma barra de ferramentas do Windows (uma janela filho) e o associa a `CToolBar` objeto.  
+ Essa função membro cria uma barra de ferramentas do Windows (uma janela filho) e o associa com o `CToolBar` objeto.  
   
 ```  
 virtual BOOL Create(
@@ -198,27 +198,27 @@ virtual BOOL Create(
   
 - Barra de controle de CBRS_TOP está na parte superior da janela do quadro.  
   
-- Barra de controle de CBRS_BOTTOM é na parte inferior da janela do quadro.  
+- Barra de controle CBRS_BOTTOM é na parte inferior da janela do quadro.  
   
 - Barra de controle de CBRS_NOALIGN não é reposicionada quando o pai for redimensionado.  
   
 - Barra de controle CBRS_TOOLTIPS exibe dicas de ferramenta.  
   
-- Barra de controle de CBRS_SIZE_DYNAMIC é dinâmica.  
+- Barra de controle CBRS_SIZE_DYNAMIC é dinâmica.  
   
-- Barra de controle de CBRS_SIZE_FIXED é fixo.  
+- Barra de controle CBRS_SIZE_FIXED é fixo.  
   
-- Barra de controle de CBRS_FLOATING é flutuante.  
+- Barra de controle CBRS_FLOATING é flutuante.  
   
-- Barra de Status CBRS_FLYBY exibe informações sobre o botão.  
+- Barra de Status de CBRS_FLYBY exibe informações sobre o botão.  
   
-- Barra de controle de CBRS_HIDE_INPLACE não será exibida para o usuário.  
+- Barra de controle de CBRS_HIDE_INPLACE não é exibida ao usuário.  
   
  *nID*  
- ID de janela filho. da barra de ferramentas  
+ ID da janela filho. da barra de ferramentas  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se for bem-sucedida; Caso contrário, 0.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
  Ele também define a altura da barra de ferramentas para um valor padrão.  
@@ -227,7 +227,7 @@ virtual BOOL Create(
  [!code-cpp[NVC_MFCDocView#179](../../mfc/codesnippet/cpp/ctoolbar-class_1.cpp)]  
   
 ##  <a name="createex"></a>  CToolBar::CreateEx  
- Chamar essa função para criar uma barra de ferramentas do Windows (uma janela filho) e associá-lo com o `CToolBar` objeto.  
+ Chame essa função para criar uma barra de ferramentas do Windows (uma janela filho) e associá-lo com o `CToolBar` objeto.  
   
 ```  
 virtual BOOL CreateEx(
@@ -247,40 +247,40 @@ virtual BOOL CreateEx(
  Ponteiro para a janela que é pai da barra de ferramentas.  
   
  *dwCtrlStyle*  
- Estilos adicionais para a criação do item inserido [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) objeto. Por padrão, esse valor é definido como TBSTYLE_FLAT. Para obter uma lista completa dos estilos de barra de ferramentas, consulte *dwStyle*.  
+ Estilos adicionais para a criação de inserido [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) objeto. Por padrão, esse valor é definido como TBSTYLE_FLAT. Para obter uma lista completa dos estilos de barra de ferramentas, consulte *dwStyle*.  
   
  *dwStyle*  
- O estilo de barra de ferramentas. Consulte [controle de barra de ferramentas e os estilos de botão](http://msdn.microsoft.com/library/windows/desktop/bb760439) no SDK do Windows para obter uma lista de estilos apropriados.  
+ O estilo de barra de ferramentas. Ver [controle de barra de ferramentas e os estilos de botão](/windows/desktop/Controls/toolbar-control-and-button-styles) no SDK do Windows para obter uma lista de estilos apropriados.  
   
  *rcBorders*  
- Um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que define as larguras das bordas da janela de ferramentas. Essas áreas são definidas como 0,0,0,0 por padrão, resultando assim em uma janela de ferramentas sem bordas.  
+ Um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que define as larguras das bordas de janela da barra de ferramentas. Essas áreas são definidas como 0,0,0,0 por padrão, resultando em uma janela de ferramentas sem bordas.  
   
  *nID*  
- ID de janela filho. da barra de ferramentas  
+ ID da janela filho. da barra de ferramentas  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se for bem-sucedida; Caso contrário, 0.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
  Ele também define a altura da barra de ferramentas para um valor padrão.  
   
- Use `CreateEx`, em vez de [criar](#create), quando determinados estilos precisam estar presente durante a criação do controle de barra de ferramenta incorporado. Por exemplo, definir *dwCtrlStyle* para TBSTYLE_FLAT &#124; TBSTYLE_TRANSPARENT para criar uma barra de ferramentas que se parece com as barras de ferramentas do Internet Explorer 4.  
+ Use `CreateEx`, em vez de [criar](#create), quando determinados estilos precisam estar presente durante a criação do controle de barra de ferramenta incorporado. Por exemplo, defina *dwCtrlStyle* para TBSTYLE_FLAT &#124; TBSTYLE_TRANSPARENT para criar uma barra de ferramentas que se parece com as barras de ferramentas do Internet Explorer 4.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#180](../../mfc/codesnippet/cpp/ctoolbar-class_2.cpp)]  
   
 ##  <a name="ctoolbar"></a>  CToolBar::CToolBar  
- Essa função de membro constrói um `CToolBar` do objeto e define o tamanho padrão.  
+ Essa função membro constrói um `CToolBar` do objeto e define os tamanhos padrão.  
   
 ```  
 CToolBar();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Chamar o [criar](#create) função de membro para criar a janela de ferramentas.  
+ Chame o [criar](#create) função de membro para criar a janela de ferramentas.  
   
 ##  <a name="getbuttoninfo"></a>  CToolBar::GetButtonInfo  
- Essa função de membro recupera a ID de controle, o estilo e o índice de imagem do botão da barra de ferramentas ou separador no local especificado por *nIndex.*  
+ Essa função membro recupera a ID de controle, o estilo e o índice de imagem do botão de barra de ferramentas ou separador no local especificado por *nIndex.*  
   
 ```  
 void GetButtonInfo(
@@ -292,24 +292,24 @@ void GetButtonInfo(
   
 ### <a name="parameters"></a>Parâmetros  
  *nIndex*  
- Índice do botão ou o separador são cujas informações a serem recuperados.  
+ Índice do botão de barra de ferramentas ou separador cujas informações deve ser recuperado.  
   
  *nID*  
- Referência a um UINT que é definido para a ID de comando do botão.  
+ Referência a um UINT que é definido como a ID de comando do botão.  
   
  *nStyle*  
- Referência a um UINT que é definido para o estilo do botão.  
+ Referência a um UINT que é definido como o estilo do botão.  
   
  *iImage*  
  Referência a um número inteiro que é definido como o índice da imagem do botão dentro do bitmap.  
   
 ### <a name="remarks"></a>Comentários  
- Esses valores são atribuídos a variáveis referenciadas por *nID*, *nStyle*, e *iImage*. O índice de imagem é a posição da imagem dentro do bitmap que contém imagens para todos os botões da barra de ferramentas. A primeira imagem está na posição 0.  
+ Esses valores são atribuídos a variáveis referenciada pelo *nID*, *nStyle*, e *iImage*. O índice de imagem é a posição da imagem dentro do bitmap que contém imagens para todos os botões da barra de ferramentas. A primeira imagem está na posição 0.  
   
- Se *nIndex* Especifica um separador, *iImage* é definido como a largura em pixels do separador.  
+ Se *nIndex* Especifica um separador *iImage* é definido como a largura do separador em pixels.  
   
 ##  <a name="getbuttonstyle"></a>  CToolBar::GetButtonStyle  
- Chame essa função de membro para recuperar o estilo de um botão ou separador na barra de ferramentas.  
+ Chame essa função de membro para recuperar o estilo de um botão ou um separador na barra de ferramentas.  
   
 ```  
 UINT GetButtonStyle(int nIndex) const;  
@@ -317,13 +317,13 @@ UINT GetButtonStyle(int nIndex) const;
   
 ### <a name="parameters"></a>Parâmetros  
  *nIndex*  
- O índice do estilo de botão ou o separador de barra de ferramentas a ser recuperado.  
+ O índice do estilo de botão ou separador de barra de ferramentas a ser recuperado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O estilo do botão ou separador especificado por *nIndex*.  
   
 ### <a name="remarks"></a>Comentários  
- Estilo do botão determina como o botão é exibido e como ele responde à entrada do usuário. Consulte [SetButtonStyle](#setbuttonstyle) para obter exemplos de estilos de botão.  
+ Estilo de um botão determina a aparência do botão e como ele responde à entrada do usuário. Ver [SetButtonStyle](#setbuttonstyle) para obter exemplos de estilos de botão.  
   
 ##  <a name="getbuttontext"></a>  CToolBar::GetButtonText  
  Chame essa função de membro para recuperar o texto que aparece em um botão.  
@@ -347,10 +347,10 @@ void GetButtonText(
  Um `CString` objeto que contém o texto do botão.  
   
 ### <a name="remarks"></a>Comentários  
- O segundo formulário desse membro da função preenchimentos um `CString` objeto com o texto de cadeia de caracteres.  
+ O segundo formulário desse membro de função preenche uma `CString` objeto com o texto de cadeia de caracteres.  
   
 ##  <a name="getitemid"></a>  CToolBar::GetItemID  
- Essa função de membro retorna a ID de comando do botão ou separador especificado por *nIndex*.  
+ Essa função membro retorna a ID de comando do botão ou separador especificado por *nIndex*.  
   
 ```  
 UINT GetItemID(int nIndex) const;  
@@ -364,10 +364,10 @@ UINT GetItemID(int nIndex) const;
  A ID de comando do botão ou separador especificado por *nIndex*.  
   
 ### <a name="remarks"></a>Comentários  
- Separadores de retorno ID_SEPARATOR.  
+ Separadores de retornam ID_SEPARATOR.  
   
 ##  <a name="getitemrect"></a>  CToolBar::GetItemRect  
- Essa função de membro preenche o `RECT` estrutura cujo endereço está contido no *lpRect* com as coordenadas do botão ou separador especificado por *nIndex*.  
+ Essa função membro preenche o `RECT` estrutura cujo endereço está contido no *lpRect* com as coordenadas do botão ou separador especificado por *nIndex*.  
   
 ```  
 virtual void GetItemRect(
@@ -377,21 +377,21 @@ virtual void GetItemRect(
   
 ### <a name="parameters"></a>Parâmetros  
  *nIndex*  
- Índice do item (botão ou separador) cujas coordenadas do retângulo devem ser recuperados.  
+ Índice do item (botão ou separador) cujas coordenadas do retângulo devem ser recuperadas.  
   
  *lpRect*  
- Endereço do [RECT](../../mfc/reference/rect-structure1.md) estrutura que conterá as coordenadas do item.  
+ Endereço do [RECT](../../mfc/reference/rect-structure1.md) estrutura que contém as coordenadas do item.  
   
 ### <a name="remarks"></a>Comentários  
- As coordenadas são em pixels em relação ao canto superior esquerdo da barra de ferramentas.  
+ As coordenadas são em pixels, relativa ao canto superior esquerdo da barra de ferramentas.  
   
  Use `GetItemRect` para obter as coordenadas de um separador que você deseja substituir por uma caixa de combinação ou outro controle.  
   
 ### <a name="example"></a>Exemplo  
-  Consulte o exemplo para [CToolBar::SetSizes](#setsizes).  
+  Veja o exemplo de [CToolBar::SetSizes](#setsizes).  
   
 ##  <a name="gettoolbarctrl"></a>  CToolBar::GetToolBarCtrl  
- Essa função de membro permite acesso direto ao controle comum subjacente.  
+ Essa função membro permite acesso direto ao controle comum subjacente.  
   
 ```  
 CToolBarCtrl& GetToolBarCtrl() const;  
@@ -401,15 +401,15 @@ CToolBarCtrl& GetToolBarCtrl() const;
  Uma referência a um objeto `CToolBarCtrl`.  
   
 ### <a name="remarks"></a>Comentários  
- Use `GetToolBarCtrl` para tirar proveito da funcionalidade de controle comum da barra de ferramentas do Windows e para aproveitar o suporte [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) permite a personalização da barra de ferramentas.  
+ Use `GetToolBarCtrl` para tirar proveito da funcionalidade do que o controle comum de barra de ferramentas do Windows e para aproveitar o suporte [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) permite a personalização da barra de ferramentas.  
   
- Para obter mais informações sobre o uso de controles comuns, consulte o artigo [controles](../../mfc/controls-mfc.md) e [controles comuns](http://msdn.microsoft.com/library/windows/desktop/bb775493) no SDK do Windows.  
+ Para obter mais informações sobre como usar controles comuns, consulte o artigo [controles](../../mfc/controls-mfc.md) e [controles comuns](/windows/desktop/Controls/common-controls-intro) no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocViewSDI#15](../../mfc/codesnippet/cpp/ctoolbar-class_3.cpp)]  
   
 ##  <a name="loadbitmap"></a>  CToolBar::LoadBitmap  
- Chamar essa função de membro para carregar o bitmap especificado por `lpszResourceName` ou `nIDResource`.  
+ Chame essa função de membro para carregar o bitmap especificado por `lpszResourceName` ou `nIDResource`.  
   
 ```  
 BOOL LoadBitmap(LPCTSTR lpszResourceName);  
@@ -421,19 +421,19 @@ BOOL LoadBitmap(UINT nIDResource);
  Ponteiro para o nome do recurso de bitmap a ser carregado.  
   
  *nIDResource*  
- ID de recurso do bitmap a ser carregado.  
+ ID do recurso de bitmap a ser carregado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se for bem-sucedida; Caso contrário, 0.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- O bitmap deve conter uma imagem para cada botão da barra de ferramentas. Se as imagens não são do tamanho padrão (16 pixels de largura e 15 pixels de altura), chamada [SetSizes](#setsizes) para definir os tamanhos de botão e suas imagens.  
+ O bitmap deve conter uma imagem para cada botão de barra de ferramentas. Se as imagens não são do tamanho padrão (16 pixels de largura e 15 pixels de altura), chamada [SetSizes](#setsizes) para definir os tamanhos de botão e suas imagens.  
   
 > [!WARNING]
-> `CToolBar` dá suporte a bitmaps com um máximo de 16 cores. Quando você carregar uma imagem em um editor de barra de ferramentas, o Visual Studio automaticamente converte a imagem em um bitmap de 16 cores, se necessário e exibe uma mensagem de aviso se a imagem foi convertida. Se você usar uma imagem com mais de 16 cores (usando um editor externo para editar a imagem), o aplicativo pode se comportar inesperadamente.  
+> `CToolBar` dá suporte a bitmaps com um máximo de 16 cores. Quando você carrega uma imagem em um editor de barra de ferramentas, o Visual Studio automaticamente converte a imagem para um bitmap de 16 cores, se necessário e exibe uma mensagem de aviso se a imagem foi convertida. Se você usar uma imagem com mais de 16 cores (usando um editor externo para editar a imagem), o aplicativo talvez tenha um comportamento inesperado.  
   
 ##  <a name="loadtoolbar"></a>  CToolBar::LoadToolBar  
- Chamar essa função de membro para carregar a barra de ferramentas especificada por *lpszResourceName* ou *nIDResource*.  
+ Chame essa função de membro para carregar a barra de ferramentas especificada por *lpszResourceName* ou *nIDResource*.  
   
 ```  
 BOOL LoadToolBar(LPCTSTR lpszResourceName);  
@@ -445,16 +445,16 @@ BOOL LoadToolBar(UINT nIDResource);
  Ponteiro para o nome do recurso da barra de ferramentas a ser carregado.  
   
  *nIDResource*  
- ID de recurso da barra de ferramentas a ser carregado.  
+ ID do recurso da barra de ferramentas a ser carregado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se for bem-sucedida; Caso contrário, 0.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Consulte [editor de barra de ferramentas](../../windows/toolbar-editor.md) para obter mais informações sobre como criar um recurso da barra de ferramentas.  
+ Ver [editor de barra de ferramentas](../../windows/toolbar-editor.md) para obter mais informações sobre como criar um recurso da barra de ferramentas.  
   
 ### <a name="example"></a>Exemplo  
-  Consulte o exemplo para [CToolBar::CreateEx](#createex).  
+  Veja o exemplo de [CToolBar::CreateEx](#createex).  
   
 ##  <a name="setbitmap"></a>  CToolBar::SetBitmap  
  Chame essa função de membro para definir a imagem de bitmap para a barra de ferramentas.  
@@ -468,13 +468,13 @@ BOOL SetBitmap(HBITMAP hbmImageWell);
  Identificador de uma imagem de bitmap que está associado com uma barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se for bem-sucedida; Caso contrário, 0.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
  Por exemplo, chamar `SetBitmap` para alterar a imagem de bitmap depois que o usuário executa uma ação em um documento que altera a ação de um botão.  
   
 ##  <a name="setbuttoninfo"></a>  CToolBar::SetButtonInfo  
- Chame essa função de membro para definir a ID de comando, o estilo e o número de imagem do botão.  
+ Chame essa função de membro para definir a ID de comando, o estilo e o número da imagem do botão.  
   
 ```  
 void SetButtonInfo(
@@ -486,19 +486,19 @@ void SetButtonInfo(
   
 ### <a name="parameters"></a>Parâmetros  
  *nIndex*  
- Índice de base zero do botão ou separador para o qual as informações são a ser definido.  
+ Índice baseado em zero do botão ou separador para as quais informações deve ser definido.  
   
  *nID*  
  O valor para o qual a ID de comando do botão é definida.  
   
  *nStyle*  
- O estilo do botão novo. Os estilos de botão a seguir têm suporte:  
+ O novo estilo de botão. Os estilos de botão a seguir têm suporte:  
   
-- Botão de ação padrão TBBS_BUTTON (padrão)  
+- Pushbutton TBBS_BUTTON Standard (padrão)  
   
 - Separador TBBS_SEPARATOR  
   
-- Botão da caixa de seleção automática de TBBS_CHECKBOX  
+- Botão de caixa de seleção automática de TBBS_CHECKBOX  
   
 - TBBS_GROUP marca o início de um grupo de botões  
   
@@ -506,23 +506,23 @@ void SetButtonInfo(
   
 - TBBS_DROPDOWN cria um botão de lista suspensa.  
   
-- TBBS_AUTOSIZE largura do botão será calculada com base no texto do botão, não no tamanho da imagem.  
+- TBBS_AUTOSIZE a largura do botão será calculada com base no texto do botão, não no tamanho da imagem.  
   
 - TBBS_NOPREFIX o texto do botão não terá um prefixo de acelerador associado a ele.  
   
  *iImage*  
- Novo índice de imagem do botão dentro do bitmap.  
+ Novo índice para a imagem do botão dentro do bitmap.  
   
 ### <a name="remarks"></a>Comentários  
- Para separadores, que tem o estilo TBBS_SEPARATOR, essa função define a largura do separador em pixels para o valor armazenado na *iImage*.  
+ Para separadores, que têm o estilo TBBS_SEPARATOR, essa função define a largura do separador em pixels para o valor armazenado no *iImage*.  
   
 > [!NOTE]
->  Você também pode definir estados de botão usando o *nStyle* parâmetro; no entanto, como estados do botão são controlados pelo [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) manipulador, qualquer estado definido por você usando `SetButtonInfo` serão perdidas durante o processamento ocioso Avançar. Consulte [como objetos de atualização de Interface do usuário](../../mfc/how-to-update-user-interface-objects.md) e [TN031: barras de controle](../../mfc/tn031-control-bars.md) para obter mais informações.  
+>  Você também pode definir os estados do botão usando o *nStyle* parâmetro; no entanto, porque os estados do botão são controlados pelo [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) manipulador, qualquer estado definido por você usando `SetButtonInfo` serão perdidas durante o próximo processamento ocioso. Ver [como objetos de Interface do usuário de atualização](../../mfc/how-to-update-user-interface-objects.md) e [TN031: barras de controle](../../mfc/tn031-control-bars.md) para obter mais informações.  
   
  Para obter informações sobre imagens de bitmap e botões, consulte o [CToolBar](../../mfc/reference/ctoolbar-class.md) visão geral e [CToolBar::LoadBitmap](#loadbitmap).  
   
 ##  <a name="setbuttons"></a>  CToolBar::SetButtons  
- Essa função de membro define a ID de comando da cada botão barra de ferramentas para o valor especificado pelo elemento correspondente da matriz *lpIDArray*.  
+ Essa função membro define a ID de comando da cada botão barra de ferramentas como o valor especificado pelo elemento correspondente da matriz *lpIDArray*.  
   
 ```  
 BOOL SetButtons(
@@ -535,20 +535,20 @@ BOOL SetButtons(
  Ponteiro para uma matriz de Ids de comando. Ele pode ser NULL para alocar botões vazio.  
   
  *nIDCount*  
- Número de elementos na matriz apontada pelo *lpIDArray*.  
+ Número de elementos na matriz apontada por *lpIDArray*.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se for bem-sucedida; Caso contrário, 0.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Se um elemento da matriz tem o valor ID_SEPARATOR, um separador é criado na posição correspondente da barra de ferramentas. Essa função também define o estilo de cada botão TBBS_BUTTON e estilo da cada separador para TBBS_SEPARATOR e atribui um índice de imagem para cada botão. O índice de imagem Especifica a posição da imagem do botão dentro do bitmap.  
+ Se um elemento da matriz tem o valor ID_SEPARATOR, um separador será criado na posição correspondente da barra de ferramentas. Essa função também define o estilo de cada botão TBBS_BUTTON e estilo do separador cada TBBS_SEPARATOR e atribui um índice de imagem para cada botão. O índice de imagem Especifica a posição da imagem do botão dentro do bitmap.  
   
- Não precisa levar em conta para separadores em bitmap porque essa função não atribui índices de imagem para separadores. Se a barra de ferramentas tem botões em posições 0, 1 e 3 e um separador na posição 2, as imagens em posições 0, 1 e 2 em seu bitmap são atribuídos aos botões em posições 0, 1 e 3, respectivamente.  
+ Não precisa levar em conta para separadores em bitmap porque essa função não atribui os índices de imagem para separadores. Se sua barra de ferramentas tem botões em posições 0, 1 e 3 e um separador na posição 2, as imagens em posições 0, 1 e 2 em seu bitmap são atribuídos aos botões em posições 0, 1 e 3, respectivamente.  
   
- Se *lpIDArray* for NULL, essa função aloca espaço para o número de itens especificado pela *nIDCount*. Use [SetButtonInfo](#setbuttoninfo) para definir atributos de cada item.  
+ Se *lpIDArray* for NULL, essa função aloca espaço para o número de itens especificado por *nIDCount*. Use [SetButtonInfo](#setbuttoninfo) para definir atributos de cada item.  
   
 ##  <a name="setbuttonstyle"></a>  CToolBar::SetButtonStyle  
- Chame essa função de membro para definir o estilo de um botão ou um separador, ou para botões.  
+ Chame essa função de membro para definir o estilo de um botão ou um separador, ou para agrupar os botões.  
   
 ```  
 void SetButtonStyle(
@@ -558,16 +558,16 @@ void SetButtonStyle(
   
 ### <a name="parameters"></a>Parâmetros  
  *nIndex*  
- Índice do botão ou separador cujas informações são definido.  
+ Índice do botão ou separador cujas informações deve ser definido.  
   
  *nStyle*  
- O estilo do botão. Os estilos de botão a seguir têm suporte:  
+ O estilo de botão. Os estilos de botão a seguir têm suporte:  
   
-- Botão de ação padrão TBBS_BUTTON (padrão)  
+- Pushbutton TBBS_BUTTON Standard (padrão)  
   
 - Separador TBBS_SEPARATOR  
   
-- Botão da caixa de seleção automática de TBBS_CHECKBOX  
+- Botão de caixa de seleção automática de TBBS_CHECKBOX  
   
 - TBBS_GROUP marca o início de um grupo de botões  
   
@@ -575,17 +575,17 @@ void SetButtonStyle(
   
 - TBBS_DROPDOWN cria um botão de lista suspensa  
   
-- TBBS_AUTOSIZE largura do botão será calculada com base no texto do botão, não no tamanho da imagem  
+- TBBS_AUTOSIZE a largura do botão será calculada com base no texto do botão, não no tamanho da imagem  
   
 - TBBS_NOPREFIX o texto do botão não terá um prefixo de acelerador associado a ele  
   
 ### <a name="remarks"></a>Comentários  
- Estilo do botão determina como o botão é exibido e como ele responde à entrada do usuário.  
+ Estilo de um botão determina a aparência do botão e como ele responde à entrada do usuário.  
   
- Antes de chamar `SetButtonStyle`, chame o [GetButtonStyle](#getbuttonstyle) função de membro para recuperar o estilo do botão ou separador.  
+ Antes de chamar `SetButtonStyle`, chame o [GetButtonStyle](#getbuttonstyle) a função de membro para recuperar o estilo de botão ou separador.  
   
 > [!NOTE]
->  Você também pode definir estados de botão usando o *nStyle* parâmetro; no entanto, como estados do botão são controlados pelo [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) manipulador, qualquer estado definido por você usando `SetButtonStyle` serão perdidas durante o processamento ocioso Avançar. Consulte [como objetos de atualização de Interface do usuário](../../mfc/how-to-update-user-interface-objects.md) e [TN031: barras de controle](../../mfc/tn031-control-bars.md) para obter mais informações.  
+>  Você também pode definir os estados do botão usando o *nStyle* parâmetro; no entanto, porque os estados do botão são controlados pelo [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) manipulador, qualquer estado definido por você usando `SetButtonStyle` serão perdidas durante o próximo processamento ocioso. Ver [como objetos de Interface do usuário de atualização](../../mfc/how-to-update-user-interface-objects.md) e [TN031: barras de controle](../../mfc/tn031-control-bars.md) para obter mais informações.  
   
 ##  <a name="setbuttontext"></a>  CToolBar::SetButtonText  
  Chame essa função para definir o texto em um botão.  
@@ -598,19 +598,19 @@ BOOL SetButtonText(
   
 ### <a name="parameters"></a>Parâmetros  
  *nIndex*  
- Índice do botão cujo texto será definido.  
+ Índice do botão cujo texto deve ser definido.  
   
  *lpszText*  
  Aponta para o texto a ser definido em um botão.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se for bem-sucedida; Caso contrário, 0.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0.  
   
 ### <a name="example"></a>Exemplo  
-  Consulte o exemplo para [CToolBar::GetToolBarCtrl](#gettoolbarctrl).  
+  Veja o exemplo de [CToolBar::GetToolBarCtrl](#gettoolbarctrl).  
   
 ##  <a name="setheight"></a>  CToolBar::SetHeight  
- Essa função de membro define a altura da barra de ferramentas para o valor, em pixels, especificado em *cyHeight*.  
+ Essa função membro define a altura da barra de ferramentas como o valor, em pixels, especificado na *cyHeight*.  
   
 ```  
 void SetHeight(int cyHeight);
@@ -621,12 +621,12 @@ void SetHeight(int cyHeight);
  A altura em pixels, da barra de ferramentas.  
   
 ### <a name="remarks"></a>Comentários  
- Depois de chamar [SetSizes](#setsizes), use a função de membro para substituir a altura da barra de ferramentas padrão. Se a altura for muito pequena, serão recortados os botões na parte inferior.  
+ Depois de chamar [SetSizes](#setsizes), usar essa função de membro para substituir a altura da barra de ferramentas padrão. Se a altura for muito pequena, os botões serão recortados na parte inferior.  
   
- Se essa função não for chamada, a estrutura usa o tamanho do botão para determinar a altura da barra de ferramentas.  
+ Se essa função não for chamada, o framework usa o tamanho do botão para determinar a altura da barra de ferramentas.  
   
 ##  <a name="setsizes"></a>  CToolBar::SetSizes  
- Chamar essa função de membro para definir os botões da barra de ferramentas para o tamanho, em pixels, especificado em *sizeButton*.  
+ Chame essa função de membro para definir os botões da barra de ferramentas como o tamanho, em pixels, especificado na *sizeButton*.  
   
 ```  
 void SetSizes(
@@ -636,15 +636,15 @@ void SetSizes(
   
 ### <a name="parameters"></a>Parâmetros  
  *sizeButton*  
- O tamanho em pixels de cada botão.  
+ O tamanho em pixels, de cada botão.  
   
  *sizeImage*  
- O tamanho em pixels de cada imagem.  
+ O tamanho em pixels, de cada imagem.  
   
 ### <a name="remarks"></a>Comentários  
- O *sizeImage* parâmetro deve conter o tamanho, em pixels, das imagens de bitmap da barra de ferramentas. As dimensões em *sizeButton* deve ser suficiente para manter a imagem mais 7 pixels extras de largura e 6 extra de altura. Essa função também define a altura da barra de ferramentas para ajustar os botões.  
+ O *sizeImage* parâmetro deve conter o tamanho, em pixels, das imagens no bitmap da barra de ferramentas. As dimensões no *sizeButton* deve ser suficiente para manter a imagem mais 7 pixels extras na largura e 6 extra de altura de pixels. Essa função também define a altura da barra de ferramentas de acordo com os botões.  
   
- Chamar essa função de membro apenas para as barras de ferramentas que não seguem *diretrizes de Interface do Windows para Design de Software* recomendações para tamanhos de imagem do botão.  
+ Chame essa função de membro somente para as barras de ferramentas que não seguem *Windows Interface Guidelines for Software Design* recomendações para tamanhos de botão e imagem.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCListView#8](../../atl/reference/codesnippet/cpp/ctoolbar-class_4.cpp)]  
@@ -654,6 +654,6 @@ void SetSizes(
  [DLGCBR32 de exemplo do MFC](../../visual-cpp-samples.md)   
  [Exemplo MFC DOCKTOOL](../../visual-cpp-samples.md)   
  [Classe CControlBar](../../mfc/reference/ccontrolbar-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classe CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)   
  [Classe CControlBar](../../mfc/reference/ccontrolbar-class.md)

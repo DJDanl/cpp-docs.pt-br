@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3afe558ad5d17c7c9741a1c211bb838c615c8542
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: b83531c1452174403f3ead3c5bd3d1b59b0c7d4d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539352"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213443"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Criando operações assíncronas em C++ para aplicativos UWP
 Este documento descreve alguns dos principais pontos para ter em mente quando você usa a classe de tarefa para gerar operações assíncronas baseadas em Windows ThreadPool em um aplicativo de tempo de execução Universal do Windows (UWP).  
   
- O uso de programação assíncrona é um componente fundamental no modelo de aplicativo de tempo de execução do Windows porque ela permite que aplicativos continuem respondendo à entrada do usuário. Você pode iniciar uma tarefa de longa execução sem bloquear o thread de interface do usuário, e você pode receber os resultados da tarefa mais tarde. Você também pode cancelar as tarefas e receber notificações de progresso como tarefas executadas em segundo plano. O documento [programação assíncrona em C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) fornece uma visão geral do padrão assíncrono que está disponível no Visual C++ para criar aplicativos UWP. Esse documento ensina como consumir e criar cadeias de operações assíncronas de tempo de execução do Windows. Esta seção descreve como usar os tipos em ppltasks. h para gerar operações assíncronas que podem ser consumidas por outro componente de tempo de execução do Windows e como controlar o trabalho assíncrono como é executado. Também considere a leitura [padrões e dicas no Hilo (aplicativos da Windows Store usando C++ e XAML) de programação assíncrona](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx) para saber mais como usamos a classe de tarefa para implementar operações assíncronas no Hilo, um aplicativo de tempo de execução do Windows usando C++ e XAML.  
+ O uso de programação assíncrona é um componente fundamental no modelo de aplicativo de tempo de execução do Windows porque ela permite que aplicativos continuem respondendo à entrada do usuário. Você pode iniciar uma tarefa de longa execução sem bloquear o thread de interface do usuário, e você pode receber os resultados da tarefa mais tarde. Você também pode cancelar as tarefas e receber notificações de progresso como tarefas executadas em segundo plano. O documento [programação assíncrona em C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) fornece uma visão geral do padrão assíncrono que está disponível no Visual C++ para criar aplicativos UWP. Esse documento ensina como consumir e criar cadeias de operações assíncronas de tempo de execução do Windows. Esta seção descreve como usar os tipos em ppltasks. h para gerar operações assíncronas que podem ser consumidas por outro componente de tempo de execução do Windows e como controlar o trabalho assíncrono como é executado. Também considere a leitura [padrões e dicas no Hilo (aplicativos da Windows Store usando C++ e XAML) de programação assíncrona](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx) para saber mais como usamos a classe de tarefa para implementar operações assíncronas no Hilo, um aplicativo de tempo de execução do Windows usando C++ e XAML.  
   
 > [!NOTE]
 >  Você pode usar o [biblioteca de padrões paralelos](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL) e [biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md) em um aplicativo UWP. No entanto, você não pode usar o Agendador de tarefas ou o Gerenciador de recursos. Este documento descreve os recursos adicionais que fornece a PPL que estão disponíveis apenas para um aplicativo UWP e não a um aplicativo da área de trabalho.  
@@ -61,16 +61,16 @@ Este documento descreve alguns dos principais pontos para ter em mente quando vo
   
  Ao usar o tempo de execução do Windows, você pode usar os melhores recursos de várias linguagens de programação e combiná-los em um aplicativo. Por exemplo, você pode criar sua interface do usuário em JavaScript e executar a lógica de aplicativo de computação intensa em um componente C++. A capacidade de executar essas operações de computação intensa em segundo plano é um fator importante em manter a interface do usuário responsiva. Porque o `task` classe é específico a C++, você deve usar uma interface de tempo de execução do Windows para se comunicar operações assíncronas para outros componentes (que podem ser escritos em linguagens diferentes do C++). O tempo de execução do Windows fornece quatro interfaces que você pode usar para representar operações assíncronas:  
   
- [Windows::Foundation::IAsyncAction](http://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)  
+ [Windows::Foundation::IAsyncAction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)  
  Representa uma ação assíncrona.  
   
- [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](http://msdn.microsoft.com/library/windows/apps/br206581.aspx)  
+ [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)  
  Representa uma ação assíncrona que relata o progresso.  
   
- [Windows::Foundation::IAsyncOperation\<TResult>](http://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
+ [Windows::Foundation::IAsyncOperation\<TResult>](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
  Representa uma operação assíncrona que retorna um resultado.  
   
- [Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress >](http://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
+ [Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress >](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
  Representa uma operação assíncrona que retorna um resultado e relatórios de progresso.  
   
  A noção de um *ação* significa que a tarefa assíncrona não produz um valor (pense em uma função que retorna `void`). A noção de um *operação* significa que a tarefa assíncrona produzir um valor. A noção de *andamento* significa que a tarefa possa relatar mensagens de andamento ao chamador. JavaScript, o .NET Framework e Visual C++ fornece sua própria maneira de criar instâncias dessas interfaces para uso pelo limite da ABI. Para o Visual C++, a PPL fornece o [Concurrency:: create_async](reference/concurrency-namespace-functions.md#create_async) função. Essa função cria uma operação que representa a conclusão de uma tarefa ou ação assíncrona do tempo de execução do Windows. O `create_async` função usa uma função de trabalho (normalmente uma expressão lambda), cria internamente uma `task` objeto e o encapsula em uma das quatro interfaces de tempo de execução do Windows assíncronas de tarefa.  
@@ -102,7 +102,7 @@ Este documento descreve alguns dos principais pontos para ter em mente quando vo
  [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]  
   
 ##  <a name="example-component"></a> Exemplo: Criando um componente de tempo de execução do Windows C++ e consumindo-o em c#  
- Considere um aplicativo que usa XAML e c# para definir a interface do usuário e um componente de tempo de execução do C++ Windows para executar operações de computação intensiva. Neste exemplo, o componente C++ calcula os números em um determinado intervalo são primo. Para ilustrar as diferenças entre as quatro interfaces de tarefa assíncrona do tempo de execução do Windows, começar, no Visual Studio, criando uma **solução em branco** e nomeá-lo `Primes`. Em seguida, adicione à solução um **componente de tempo de execução do Windows** do projeto e nomeá-lo `PrimesLibrary`. Adicione o seguinte código para o arquivo de cabeçalho gerado do C++ (Este exemplo renomeia Class1.h para Primes.h). Cada `public` método define uma das quatro interfaces assíncronas. Os métodos que retornam um valor retornam um [Windows::Foundation::Collections::IVector\<int >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) objeto. Os métodos que informam o andamento produzem `double` valores que definem a porcentagem do trabalho geral que foi concluída.  
+ Considere um aplicativo que usa XAML e c# para definir a interface do usuário e um componente de tempo de execução do C++ Windows para executar operações de computação intensiva. Neste exemplo, o componente C++ calcula os números em um determinado intervalo são primo. Para ilustrar as diferenças entre as quatro interfaces de tarefa assíncrona do tempo de execução do Windows, começar, no Visual Studio, criando uma **solução em branco** e nomeá-lo `Primes`. Em seguida, adicione à solução um **componente de tempo de execução do Windows** do projeto e nomeá-lo `PrimesLibrary`. Adicione o seguinte código para o arquivo de cabeçalho gerado do C++ (Este exemplo renomeia Class1.h para Primes.h). Cada `public` método define uma das quatro interfaces assíncronas. Os métodos que retornam um valor retornam um [Windows::Foundation::Collections::IVector\<int >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) objeto. Os métodos que informam o andamento produzem `double` valores que definem a porcentagem do trabalho geral que foi concluída.  
   
  [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]  
   
@@ -113,7 +113,7 @@ Este documento descreve alguns dos principais pontos para ter em mente quando vo
   
  [!code-cpp[concrt-windowsstore-primes#2](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_3.cpp)]  
   
- Cada método primeiro executa validação para garantir que os parâmetros de entrada sejam não-negativo. Se um valor de entrada for negativo, o método gerará [Platform:: invalidargumentexception](http://msdn.microsoft.com/library/windows/apps/hh755794\(v=vs.110\).aspx). Tratamento de erros é explicado mais adiante nesta seção.  
+ Cada método primeiro executa validação para garantir que os parâmetros de entrada sejam não-negativo. Se um valor de entrada for negativo, o método gerará [Platform:: invalidargumentexception](https://msdn.microsoft.com/library/windows/apps/hh755794\(v=vs.110\).aspx). Tratamento de erros é explicado mais adiante nesta seção.  
   
  Para consumir esses métodos de um aplicativo UWP, use o Visual c# **aplicativo em branco (XAML)** modelo para adicionar um segundo projeto à solução do Visual Studio. Este exemplo denomina o projeto `Primes`. Em seguida, na `Primes` do projeto, adicione uma referência para o `PrimesLibrary` projeto.  
   
@@ -127,7 +127,7 @@ Este documento descreve alguns dos principais pontos para ter em mente quando vo
   
  Esses métodos usam o `async` e `await` palavras-chave para atualizar a interface do usuário depois de concluir as operações assíncronas. Para obter informações sobre codificação assíncrona em aplicativos UWP, consulte [Threading e programação assíncrona](/windows/uwp/threading-async).  
   
- O `getPrimesCancellation` e `cancelGetPrimes` métodos funcionam juntos para permitir que o usuário cancelar a operação. Quando o usuário escolhe o **cancele** botão, o `cancelGetPrimes` chamadas de método [IAsyncOperationWithProgress\<TResult, TProgress >:: Cancelar](http://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel.aspx) para cancelar a operação. O tempo de execução de simultaneidade, que gerencia a operação assíncrona subjacente, gera um tipo de exceção interna que é capturado pelo Windows Runtime para comunicar-se de que o cancelamento foi concluído. Para obter mais informações sobre o modelo de cancelamento, consulte [cancelamento](../../parallel/concrt/cancellation-in-the-ppl.md).  
+ O `getPrimesCancellation` e `cancelGetPrimes` métodos funcionam juntos para permitir que o usuário cancelar a operação. Quando o usuário escolhe o **cancele** botão, o `cancelGetPrimes` chamadas de método [IAsyncOperationWithProgress\<TResult, TProgress >:: Cancelar](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel.aspx) para cancelar a operação. O tempo de execução de simultaneidade, que gerencia a operação assíncrona subjacente, gera um tipo de exceção interna que é capturado pelo Windows Runtime para comunicar-se de que o cancelamento foi concluído. Para obter mais informações sobre o modelo de cancelamento, consulte [cancelamento](../../parallel/concrt/cancellation-in-the-ppl.md).  
   
 > [!IMPORTANT]
 >  Para habilitar a PPL relatar corretamente para o tempo de execução do Windows, que ele cancelou a operação, não Capture esse tipo de exceção interna. Isso significa que você também não deve capturar todas as exceções (`catch (...)`). Se você deve capturar todas as exceções, relançar a exceção para garantir que o tempo de execução do Windows pode concluir a operação de cancelamento.  
@@ -136,7 +136,7 @@ Este documento descreve alguns dos principais pontos para ter em mente quando vo
   
  ![Aplicativo de números primos de tempo de execução do Windows](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")  
   
- Para obter exemplos que usam `create_async` para criar tarefas assíncronas que podem ser consumidas por outros idiomas, consulte [usando o C++ no exemplo Bing Maps Trip Optimizer](http://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx) e [operações assíncronas do Windows 8 em C++ com PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).  
+ Para obter exemplos que usam `create_async` para criar tarefas assíncronas que podem ser consumidas por outros idiomas, consulte [usando o C++ no exemplo Bing Maps Trip Optimizer](https://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx) e [operações assíncronas do Windows 8 em C++ com PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).  
   
 ##  <a name="exethread"></a> Controlando o Thread de execução  
  O tempo de execução do Windows usa o modelo de threading COM. Nesse modelo, os objetos são hospedados em apartments diferentes, dependendo de como eles lidam com suas sincronizações. Objetos thread-safe são hospedados no multi-threaded apartment (MTA). Objetos que devem ser acessados por um único thread são hospedados em um single-threaded apartment (STA).  
@@ -165,7 +165,7 @@ Este documento descreve alguns dos principais pontos para ter em mente quando vo
 >  Não chame [concurrency::task::wait](reference/task-class.md#wait) no corpo de uma continuação que é executado no STA. Caso contrário, o tempo de execução gera [Concurrency:: invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) porque esse método bloqueia o thread atual e pode fazer com que o aplicativo pare de responder. No entanto, você pode chamar o [concurrency::task::get](reference/task-class.md#get) método para receber o resultado da tarefa antecedente em uma continuação baseada em tarefa.  
   
 ##  <a name="example-app"></a> Exemplo: Controlando a execução em um aplicativo de tempo de execução do Windows com C++ e XAML  
- Considere um aplicativo XAML de C++ que lê um arquivo do disco, localiza as palavras mais comuns nesse arquivo e, em seguida, mostra os resultados na interface do usuário. Para criar esse aplicativo, iniciar, no Visual Studio, criando uma **aplicativo em branco (Universal Windows)** do projeto e nomeá-lo `CommonWords`. Em seu manifesto de aplicativo, especifique o **biblioteca de documentos** capacidade de permitir que o aplicativo acessar a pasta de documentos. Adicione também o tipo de arquivo de texto (. txt) à seção declarations do manifesto do aplicativo. Para obter mais informações sobre os recursos de aplicativo e declarações, consulte [pacotes de aplicativos e implantação](http://msdn.microsoft.com/library/windows/apps/hh464929.aspx).  
+ Considere um aplicativo XAML de C++ que lê um arquivo do disco, localiza as palavras mais comuns nesse arquivo e, em seguida, mostra os resultados na interface do usuário. Para criar esse aplicativo, iniciar, no Visual Studio, criando uma **aplicativo em branco (Universal Windows)** do projeto e nomeá-lo `CommonWords`. Em seu manifesto de aplicativo, especifique o **biblioteca de documentos** capacidade de permitir que o aplicativo acessar a pasta de documentos. Adicione também o tipo de arquivo de texto (. txt) à seção declarations do manifesto do aplicativo. Para obter mais informações sobre os recursos de aplicativo e declarações, consulte [pacotes de aplicativos e implantação](https://msdn.microsoft.com/library/windows/apps/hh464929.aspx).  
   
  Atualizar o `Grid` elemento em MainPage. XAML para incluir uma `ProgressRing` elemento e um `TextBlock` elemento. O `ProgressRing` indica que a operação está em andamento e o `TextBlock` mostra os resultados do cálculo.  
   

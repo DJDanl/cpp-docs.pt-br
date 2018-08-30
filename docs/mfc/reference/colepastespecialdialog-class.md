@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42f4a45dc2b49b784f74175203e892c253ea1f5e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9c3dff52e3607125493c956d46e1bd38c399565e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851411"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213333"
 ---
 # <a name="colepastespecialdialog-class"></a>Classe COlePasteSpecialDialog
 Usado para a caixa de diálogo Colar especial do OLE.  
@@ -85,7 +85,7 @@ class COlePasteSpecialDialog : public COleDialog
 ## <a name="remarks"></a>Comentários  
  Criar um objeto da classe `COlePasteSpecialDialog` quando você deseja chamar essa caixa de diálogo. Depois de um `COlePasteSpecialDialog` objeto foi construído, você pode usar o [AddFormat](#addformat) e [AddStandardFormats](#addstandardformats) funções de membro para adicionar os formatos de área de transferência para a caixa de diálogo. Você também pode usar o [m_ps](#m_ps) estrutura para inicializar os valores ou os estados dos controles na caixa de diálogo. O `m_ps` estrutura é do tipo OLEUIPASTESPECIAL.  
   
- Para obter mais informações, consulte o [OLEUIPASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/ms692434) estrutura no SDK do Windows.  
+ Para obter mais informações, consulte o [OLEUIPASTESPECIAL](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipastespeciala) estrutura no SDK do Windows.  
   
  Para obter mais informações sobre caixas de diálogo OLE específico, consulte o artigo [caixas de diálogo em OLE](../../mfc/dialog-boxes-in-ole.md).  
   
@@ -157,9 +157,9 @@ void AddFormat(
 ### <a name="remarks"></a>Comentários  
  Essa função pode ser chamada para adicionar os formatos padrão como CF_TEXT ou CF_TIFF ou formatos personalizados que seu aplicativo foi registrado com o sistema. Para obter mais informações sobre a colagem de objetos de dados em seu aplicativo, consulte o artigo [fontes de dados e objetos de dados: manipulação](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- Para obter mais informações, consulte o [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) tipo de enumeração e a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura no SDK do Windows.  
+ Para obter mais informações, consulte o [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) tipo de enumeração e a [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) estrutura no SDK do Windows.  
   
- Para obter mais informações, consulte o [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) enumerados tipo no SDK do Windows.  
+ Para obter mais informações, consulte o [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) enumerados tipo no SDK do Windows.  
   
 ##  <a name="addlinkentry"></a>  COlePasteSpecialDialog::AddLinkEntry  
  Adiciona uma nova entrada à lista de formatos com suporte de área de transferência.  
@@ -173,7 +173,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
  O formato da área de transferência para adicionar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Uma [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) estrutura que contém as informações para a nova entrada de link.  
+ Uma [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) estrutura que contém as informações para a nova entrada de link.  
   
 ##  <a name="addstandardformats"></a>  COlePasteSpecialDialog::AddStandardFormats  
  Chame essa função para adicionar os seguintes formatos de área de transferência para a lista de formatos que pode dar suporte a seu aplicativo em uma operação de colar especial:  
@@ -231,7 +231,7 @@ COlePasteSpecialDialog(
 ### <a name="remarks"></a>Comentários  
  Essa função só constrói um `COlePasteSpecialDialog` objeto. Para exibir a caixa de diálogo, chame o [DoModal](#domodal) função.  
   
- Para obter mais informações, consulte o [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172) enumerados tipo no SDK do Windows.  
+ Para obter mais informações, consulte o [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) enumerados tipo no SDK do Windows.  
   
 ##  <a name="createitem"></a>  COlePasteSpecialDialog::CreateItem  
  Cria o novo item que foi selecionado na caixa de diálogo Colar especial.  
@@ -264,7 +264,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL se o usuário cancelou a caixa de diálogo.  
   
-- IDABORT se ocorreu um erro. Se IDABORT for retornado, chame o `COleDialog::GetLastError` a função de membro para obter mais informações sobre o tipo de erro que ocorreu. Para obter uma lista de possíveis erros, consulte o [OleUIPasteSpecial](http://msdn.microsoft.com/library/windows/desktop/ms694512) função no SDK do Windows.  
+- IDABORT se ocorreu um erro. Se IDABORT for retornado, chame o `COleDialog::GetLastError` a função de membro para obter mais informações sobre o tipo de erro que ocorreu. Para obter uma lista de possíveis erros, consulte o [OleUIPasteSpecial](/windows/desktop/api/oledlg/nf-oledlg-oleuipastespeciala) função no SDK do Windows.  
   
 ### <a name="remarks"></a>Comentários  
  Se você quiser inicializar os vários controles de caixa de diálogo definindo membros do [m_ps](#m_ps) estrutura, você deve fazer isso antes de chamar `DoModal`, mas depois que o objeto de caixa de diálogo é construído.  
@@ -288,7 +288,7 @@ DVASPECT GetDrawAspect() const;
 ### <a name="remarks"></a>Comentários  
  Apenas chame essa função após [DoModal](#domodal) retorna IDOK.  
   
- Para obter mais informações sobre o aspecto de desenho, consulte o [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura no SDK do Windows.  
+ Para obter mais informações sobre o aspecto de desenho, consulte o [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) estrutura no SDK do Windows.  
   
 ##  <a name="geticonicmetafile"></a>  COlePasteSpecialDialog::GetIconicMetafile  
  Obtém o metarquivo associado ao item selecionado pelo usuário.  
@@ -311,7 +311,7 @@ int GetPasteIndex() const;
  O índice na matriz de `OLEUIPASTEENTRY` estruturas que foi selecionado pelo usuário. O formato que corresponde ao índice selecionado deve ser usado ao executar a operação de colagem.  
   
 ### <a name="remarks"></a>Comentários  
- Para obter mais informações, consulte o [OLEUIPASTEENTRY](http://msdn.microsoft.com/library/windows/desktop/ms690165) estrutura no SDK do Windows.  
+ Para obter mais informações, consulte o [OLEUIPASTEENTRY](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipasteentrya) estrutura no SDK do Windows.  
   
 ##  <a name="getselectiontype"></a>  COlePasteSpecialDialog::GetSelectionType  
  Determina o tipo de seleção feito de usuário.  
@@ -355,7 +355,7 @@ OLEUIPASTESPECIAL m_ps;
 ### <a name="remarks"></a>Comentários  
  Os membros dessa estrutura podem ser modificados diretamente ou por meio de funções de membro.  
   
- Para obter mais informações, consulte o [OLEUIPASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/ms692434) estrutura no SDK do Windows.  
+ Para obter mais informações, consulte o [OLEUIPASTESPECIAL](/windows/desktop/api/oledlg/ns-oledlg-tagoleuipastespeciala) estrutura no SDK do Windows.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplo MFC OCLIENT](../../visual-cpp-samples.md)   

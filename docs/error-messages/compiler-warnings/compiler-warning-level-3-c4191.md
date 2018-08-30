@@ -16,33 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 892bf76a8480e573a71e768fbe24778e7e66f88b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3b0198971064bec114e4665a499e070ddb61501
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291486"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197492"
 ---
-# <a name="compiler-warning-level-3-c4191"></a>Compilador C4191 de aviso (nível 3)
-' operador/operação': conversão não segura de 'tipo de expressão' para 'tipo necessário'  
+# <a name="compiler-warning-level-3-c4191"></a>Compilador aviso (nível 3) C4191
+' operator/operation': conversão não segura de 'type of expression' em 'type required'  
   
- Várias operações envolvendo ponteiros de função são consideradas inseguras:  
+ Várias operações que envolvem ponteiros de função são consideradas não seguras:  
   
 -   Tipos de função com as convenções de chamada diferentes.  
   
--   Tipos de função com as convenções de retorno diferentes.  
+-   Tipos de função com as convenções de retornados diferentes.  
   
--   Tipos de argumento ou retorno com classificações, categorias de tipos ou tamanhos diferentes.  
+-   Tipos de argumento ou retorno com tamanhos diferentes, tipo categorias ou classificações.  
   
--   Comprimentos diferentes de lista de argumento (em `__cdecl`, somente na conversão da lista mais longa para a lista mais curto, mesmo se for mais curto é varargs).  
+-   Comprimentos de lista de argumento diferentes (em `__cdecl`, somente na conversão da lista mais longa para a lista mais curta, mesmo se for mais curto é varargs).  
   
--   Ponteiro para dados (diferente de **void\***) um alias em relação a um ponteiro para função.  
+-   Ponteiro para dados (diferente de **void**<strong>\*</strong>) tem um alias em relação a um ponteiro para função.  
   
--   Outra diferença de tipo que gerará um erro ou aviso em um `reinterpret_cast`.  
+-   Outra diferença de tipo que produziria um erro ou aviso em um `reinterpret_cast`.  
   
- Chamar essa função através do ponteiro resultante pode causar a falha do programa.  
+ Chamar essa função através do ponteiro resultante pode fazer com que seu programa falhe.  
   
- Esse aviso é desativada por padrão. Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.  
+ Esse aviso é desativado por padrão. Ver [compilador avisos que são desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.  
   
  O exemplo a seguir gera C4191:  
   

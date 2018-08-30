@@ -1,7 +1,7 @@
 ---
-title: Compilador (nível 4) de aviso C4565 | Microsoft Docs
+title: Compilador aviso (nível 4) C4565 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,23 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3c4249783686c1fabb44395d3c092eca0d9230a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c25f2f1fc16c6d45a7d1eddec8d3efe62db142f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293352"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211256"
 ---
-# <a name="compiler-warning-level-4-c4565"></a>Compilador C4565 de aviso (nível 4)
-'function': redefinição; o símbolo foi declarado anteriormente com __declspec(modifier)  
-  
- Um símbolo foi redefinido ou declarado novamente e a declaração, ao contrário a definição ou declaração, a primeira ou segunda definição não tinha um `__declspec` modificador (***modificador***). Esse aviso é informativo. Para corrigir esse aviso, exclua uma das definições.  
-  
- O exemplo a seguir gera C4565:  
-  
-```  
-// C4565.cpp  
-// compile with: /W4 /LD  
-__declspec(noalias) void f();  
-void f();   // C4565  
+# <a name="compiler-warning-level-4-c4565"></a>Compilador aviso (nível 4) C4565
+
+> '*função*': redefinição; símbolo foi declarado anteriormente com declspec (*modificador*)
+
+## <a name="remarks"></a>Comentários
+
+Um símbolo foi redefinido ou declarado novamente e a segunda definição ou declaração, ao contrário da primeira definição ou declaração, não tinha uma `__declspec` modificador (*modificador*). Esse aviso é informativo. Para corrigir este aviso, exclua uma das definições.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C4565:
+
+```cpp
+// C4565.cpp
+// compile with: /W4 /LD
+__declspec(noalias) void f();
+void f();   // C4565
 ```

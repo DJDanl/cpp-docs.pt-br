@@ -50,19 +50,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c73813c406011eaadd540398d3364ec183f8deaf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a700d6e7befb71b1161ec27beb7a839f93e003e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414211"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211468"
 ---
 # <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec, _wcsdec, _mbsdec, _mbsdec_l
 
 Recua um ponteiro de cadeia de caracteres em um caractere.
 
 > [!IMPORTANT]
-> **mbsdec** e **mbsdec_l** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsdec** e **mbsdec_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -89,36 +89,36 @@ unsigned char *_mbsdec_l(
 ### <a name="parameters"></a>Parâmetros
 
 *start*<br/>
-Ponteiro para qualquer caractere (ou para **mbsdec** e **mbsdec_l**, o primeiro byte de qualquer caractere multibyte) na cadeia de caracteres de origem; *iniciar* devem preceder *atual* na cadeia de caracteres de origem.
+Ponteiro para qualquer caractere (ou para **_mbsdec** e **_mbsdec_l**, o primeiro byte de qualquer caractere multibyte) na cadeia de caracteres de origem; *inicie* deve preceder *atual* na cadeia de caracteres de origem.
 
 *current*<br/>
-Ponteiro para qualquer caractere (ou para **mbsdec** e **mbsdec_l**, o primeiro byte de qualquer caractere multibyte) na cadeia de caracteres de origem; *atual* devem seguir *iniciar* na cadeia de caracteres de origem.
+Ponteiro para qualquer caractere (ou para **_mbsdec** e **_mbsdec_l**, o primeiro byte de qualquer caractere multibyte) na cadeia de caracteres de origem; *atual* deve seguir *iniciar* na cadeia de caracteres de origem.
 
 *locale*<br/>
 Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**mbsdec**, **mbsdec_l**, **strdec**, e **wcsdec** retornam um ponteiro para o caractere que precede *atual*; **mbsdec** retorna **nulo** se o valor de *iniciar* é maior que ou igual do *atual*. **tcsdec** mapeia para uma dessas funções e seu valor de retorno depende do mapeamento.
+**_mbsdec**, **_mbsdec_l**, **_strdec**, e **_wcsdec** retornam um ponteiro para o caractere que precede imediatamente *atual*; **_mbsdec** retorna **nulo** se o valor de *iniciar* é maior que ou igual do *atual*. **_tcsdec** mapeia para uma dessas funções e seu valor de retorno depende do mapeamento.
 
 ## <a name="remarks"></a>Comentários
 
-O **mbsdec** e **mbsdec_l** funções retornam um ponteiro para o primeiro byte do caractere multibyte precede *atual* na cadeia de caracteres que contém *iniciar*.
+O **_mbsdec** e **_mbsdec_l** funções retornam um ponteiro para o primeiro byte do caractere multibyte que precede imediatamente *atual* na cadeia de caracteres que contém *iniciar*.
 
-O valor de saída é afetado pela configuração do **LC_CTYPE** configuração de categoria da localidade, consulte [setlocale, wsetlocale](setlocale-wsetlocale.md) para obter mais informações.  **mbsdec** reconhece as sequências de caracteres multibyte de acordo com a localidade que está atualmente em uso, enquanto **mbsdec_l** é idêntico, exceto que ele em vez disso, usa o parâmetro de localidade que é transmitido. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da **LC_CTYPE** configuração da categoria da localidade; consulte [setlocale, wsetlocale](setlocale-wsetlocale.md) para obter mais informações.  **_mbsdec** reconhece sequências de caracteres multibyte de acordo com a localidade que está atualmente em uso, enquanto **_mbsdec_l** é idêntico, exceto que em vez disso, ele usa o parâmetro de localidade que é passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Se *iniciar* ou *atual* é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essa função retorna **EINVAL** e define **errno** para **EINVAL**.
+Se *inicie* ou *atual* está **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito no [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retorna **EINVAL** e define **errno** para **EINVAL**.
 
 > [!IMPORTANT]
-> Essas funções podem ser vulneráveis a ameaças de estouro de buffer. Os estouros de buffer podem ser usados em ataques de sistema porque podem causar uma elevação de privilégio não garantida. Para obter mais informações, consulte [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) (Evitando estouros de buffer).
+> Essas funções podem ser vulneráveis a ameaças de estouro de buffer. Os estouros de buffer podem ser usados em ataques de sistema porque podem causar uma elevação de privilégio não garantida. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tcsdec**|**_strdec**|**_mbsdec**|**_wcsdec**|
+|**_tcsdec**|**_strdec**|**_mbsdec**|**_wcsdec**|
 
-**strdec** e **wcsdec** são versões de caractere de byte único e de caractere largo de **mbsdec** e **mbsdec_l**. **strdec** e **wcsdec** são fornecidos apenas para esse mapeamento e não deve ser usado caso contrário.
+**_strdec** e **_wcsdec** são versões de caractere de byte único e caracteres largos **_mbsdec** e **_mbsdec_l**. **_strdec** e **_wcsdec** são fornecidos apenas para esse mapeamento e não deve ser usado caso contrário.
 
 Para obter mais informações, consulte [Usando mapeamentos de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapeamentos de Texto Genérico](../../c-runtime-library/generic-text-mappings.md).
 
@@ -135,7 +135,7 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra um uso de **tcsdec**.
+O exemplo a seguir mostra um uso de **_tcsdec**.
 
 ```cpp
 // crt_tcsdec.cpp
@@ -161,7 +161,7 @@ int main()
 }
 ```
 
-O exemplo a seguir mostra um uso de **mbsdec**.
+O exemplo a seguir mostra um uso de **_mbsdec**.
 
 ```cpp
 // crt_mbsdec.cpp

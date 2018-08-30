@@ -21,21 +21,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8257631e46a1ebcf5c882d9f87c628c04ccc84f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3e8c3af361e1ffb5928132727fa124f03a99e81e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347767"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205643"
 ---
 # <a name="mfc-com"></a>MFC COM
-Um subconjunto de MFC foi projetado para suporte de COM, enquanto a maioria de biblioteca de modelo ativa (ATL) foi projetado para programação COM. Esta seção de tópicos descreve o suporte do MFC para COM.  
+Um subconjunto do MFC foi projetado para dar suporte a COM, enquanto a maioria da biblioteca ATL (Active Template) foi projetado para a programação COM. Esta seção de tópicos descreve o suporte do MFC para COM.  
   
- Active tecnologias (como ActiveX controles, contenção de documentos ativos, OLE e assim por diante) usam o modelo de objeto de componente (COM) para habilitar os componentes de software interajam uns com os outros em um ambiente de rede, independentemente do idioma com o qual eles foram criado. Tecnologias de ativas podem ser usadas para criar aplicativos que são executados na área de trabalho ou na Internet. Para obter mais informações, consulte [Introdução ao COM](../atl/introduction-to-com.md) ou [o modelo de objeto de componente](http://msdn.microsoft.com/library/windows/desktop/ms694363).  
+ Tecnologias do Active Directory (como o ActiveX controles, confinamento do documento ativo, OLE e assim por diante) usam o modelo de objeto de componente (COM) para habilitar os componentes de software interajam uns com os outros em um ambiente de rede, independentemente do idioma com o qual eles foram criado. Tecnologias de Active Directory podem ser usadas para criar aplicativos que são executados na área de trabalho ou na Internet. Para obter mais informações, consulte [Introdução a COM](../atl/introduction-to-com.md) ou [o modelo de objeto de componente](/windows/desktop/com/the-component-object-model).  
   
- Tecnologias Active incluem tecnologias de cliente e servidor, incluindo o seguinte:  
+ Tecnologias do Active Directory incluem tecnologias de cliente e servidor, incluindo o seguinte:  
   
--   [Contenção de documentos ativos](../mfc/active-document-containment.md), suporte em versões MFC 4.2 e posterior, permite que os usuários exibam [documentos ativos](../mfc/active-documents.md) (como arquivos do Microsoft Excel ou Word) e ativar toda a interface de nativo do documento aplicativo em toda a área cliente de um [contêiner de documento ativo](../mfc/active-document-containers.md) como o Microsoft Office Binder ou o Microsoft Internet Explorer. Os contêineres de atuam como clientes, enquanto os documentos são fornecidos pelo [servidores de documentos ativos](../mfc/active-document-servers.md). Para obter mais informações sobre o uso de documentos ativos em aplicativos da Internet, consulte: [documentos ativos na Internet](../mfc/active-documents-on-the-internet.md).  
+-   [Contenção de documentos ativos](../mfc/active-document-containment.md), tem suporte em versões MFC 4.2 e posterior, permite que os usuários exibam [documentos ativos](../mfc/active-documents.md) (como arquivos do Microsoft Excel ou Word) e ativar toda a interface nativas do documento aplicativo em toda a área cliente de um [contêiner de documento ativo](../mfc/active-document-containers.md) como o Microsoft Internet Explorer ou o Microsoft Office Binder. Os contêineres atuam como clientes, enquanto os documentos são fornecidos pelo [servidores de documentos ativos](../mfc/active-document-servers.md). Para obter mais informações sobre como usar documentos ativos em aplicativos da Internet, consulte: [documentos ativos na Internet](../mfc/active-documents-on-the-internet.md).  
   
 -   Controles ActiveX são objetos interativos que podem ser usados em contêineres como um site da Web. Para obter mais informações sobre os controles ActiveX, consulte:  
   
@@ -49,17 +49,17 @@ Um subconjunto de MFC foi projetado para suporte de COM, enquanto a maioria de b
   
     -   [Depuração de um controle ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)  
   
--   Script ativo controla o comportamento integrado de um ou mais controles ActiveX em um navegador ou servidor. Para obter mais informações sobre scripts ativos, consulte [tecnologia ativa na Internet](../mfc/active-technology-on-the-internet.md).  
+-   Script ativo controla o comportamento integrado de um ou mais controles ActiveX em um navegador ou servidor. Para obter mais informações sobre scripts do Active Directory, consulte [tecnologia ativa na Internet](../mfc/active-technology-on-the-internet.md).  
   
--   [Automação](../mfc/automation.md) (anteriormente conhecido como automação OLE) permite que um aplicativo para manipular objetos implementados em outro aplicativo ou "exponha" objetos de forma podem ser manipulados.  
+-   [Automação](../mfc/automation.md) (anteriormente conhecido como automação OLE) torna possível para um aplicativo para manipular objetos implementados em outro aplicativo ou "expor" objetos para que eles podem ser manipulados.  
   
-     O objeto automatizado pode ser local ou remoto (em outro computador acessível em uma rede). Automação está disponível para objetos COM e OLE.  
+     O objeto automatizado pode ser local ou remoto (em outro computador acessível em uma rede). Automação está disponível para objetos OLE e COM.  
   
--   Esta seção também fornece informações sobre como escrever componentes COM usando MFC, por exemplo, em [pontos de Conexão](../mfc/connection-points.md).  
+-   Esta seção também fornece informações sobre como escrever componentes usando o MFC, por exemplo, no [pontos de Conexão](../mfc/connection-points.md).  
   
- Para uma discussão sobre o que ainda será chamado OLE versus o que é chamado agora de tecnologia ativa, consulte os tópicos sobre [OLE](../mfc/ole-in-mfc.md).  
+ Para uma discussão sobre o que ainda é chamado de OLE versus o que agora é chamado de tecnologia do Active Directory, consulte os tópicos sobre [OLE](../mfc/ole-in-mfc.md).  
   
- Além disso, consulte o artigo da Base de dados de Conhecimento Q248019: como: evitar servidor ocupado diálogo caixa do que aparecem durante um COM operação demorada.  
+ Além disso, consulte o artigo da Base de dados de Conhecimento Q248019: HOWTO: evitar servidor ocupado caixa de diálogo caixa do que aparecem durante um COM operação demorada.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Contenção de documentos ativos](../mfc/active-document-containment.md)  

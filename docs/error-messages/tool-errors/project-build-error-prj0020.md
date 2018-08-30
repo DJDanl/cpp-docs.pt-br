@@ -1,7 +1,7 @@
 ---
-title: Erro de Build prj0020 no projeto | Microsoft Docs
+title: Erro de Build prj0020 do projeto | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd7ad1b3952da6282c0b9179b9fcc3dbab89cc54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d5f87dd50f52acb482a471708d1d20cc9853e02
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317668"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214051"
 ---
 # <a name="project-build-error-prj0020"></a>Erro de Build PRJ0020 no Projeto
-'Da ferramenta', propriedade 'property' contém o arquivo' nome de arquivo inválido'.  
-  
- O nome do arquivo, ***arquivo***, especificado na propriedade de ***propriedade***, para a ferramenta ***ferramenta***, era inválido.  
-  
- Você pode ter usado uma macro desconhecida ou inválida.  
-  
- Consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md) para obter informações sobre como acessar as propriedades do projeto.
+
+> Ferramenta '*ferramenta*', propriedade '*propriedade*'contém o nome de arquivo inválido'*arquivo*'.
+
+O nome do arquivo *arquivo*, especificado na propriedade *propriedade* para a ferramenta *ferramenta*, era inválido.
+
+Você pode ter usado uma macro desconhecida ou inválida.
+
+Ver [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md) para obter informações sobre como acessar as propriedades do projeto.

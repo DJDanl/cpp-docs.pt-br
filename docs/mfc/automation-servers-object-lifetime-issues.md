@@ -1,5 +1,5 @@
 ---
-title: 'Servidores de automação: Problemas de vida útil do objeto | Microsoft Docs'
+title: 'Servidores de automação: Problemas de tempo de vida do objeto | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,23 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e27812c20a64f5472c29a66298bcdec30bf4ef2b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c139bbde88d3d0389c3426fb71ade837ee5e654
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341794"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215204"
 ---
 # <a name="automation-servers-object-lifetime-issues"></a>Servidores de automação: problemas de tempo de vida do objeto
-Quando um cliente de automação cria ou um item OLE é ativado, o servidor passa o cliente um ponteiro para o objeto. O cliente estabelece uma referência ao objeto por meio de uma chamada para a função OLE [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379). Essa referência está em vigor até que o cliente chama [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms682317). (Os aplicativos cliente escritos com classes OLE da biblioteca Microsoft Foundation Class não precisam fazer essas chamadas; a estrutura faz isso). O sistema OLE e o próprio servidor podem estabelecer referências ao objeto. Um servidor não deve destruir um objeto como referências externas ao objeto permanecem em vigor.  
+Quando um cliente de automação cria ou ativa um item OLE, o servidor passa o cliente um ponteiro para esse objeto. O cliente estabelece uma referência ao objeto por meio de uma chamada para a função OLE [IUnknown:: AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref). Essa referência está em vigor até que o cliente chama [IUnknown:: Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release). (Os aplicativos cliente escritos com classes OLE da biblioteca Microsoft Foundation Class não precisam fazer essas chamadas; a estrutura faz isso). O sistema OLE e o próprio servidor podem estabelecer referências ao objeto. Um servidor não deve destruir um objeto, desde que as referências externas ao objeto permanecem em vigor.  
   
- A estrutura mantém uma contagem interna do número de referências a qualquer objeto de servidor derivado de [CCmdTarget](../mfc/reference/ccmdtarget-class.md). Esse contador é atualizado quando um cliente de automação ou outra entidade adiciona ou libera uma referência ao objeto.  
+ O framework mantém uma contagem interna do número de referências a qualquer objeto de servidor derivados [CCmdTarget](../mfc/reference/ccmdtarget-class.md). Essa contagem é atualizada quando um cliente de automação ou outra entidade adiciona ou libera uma referência ao objeto.  
   
- Quando a contagem de referência se torna a 0, o framework chama a função virtual [CCmdTarget::OnFinalRelease](../mfc/reference/ccmdtarget-class.md#onfinalrelease). A implementação padrão Esta função chama o **excluir** operador para excluir este objeto.  
+ Quando a contagem de referência se torna 0, o framework chama a função virtual [CCmdTarget::OnFinalRelease](../mfc/reference/ccmdtarget-class.md#onfinalrelease). A implementação padrão dessa função chama o **excluir** operador excluir este objeto.  
   
- A biblioteca Microsoft Foundation Class fornece recursos adicionais para controlar o comportamento do aplicativo quando os clientes externos têm referências a objetos do aplicativo. Além de manter uma contagem de referências para cada objeto, servidores mantém uma contagem global de objetos ativos. As funções globais [AfxOleLockApp](../mfc/reference/application-control.md#afxolelockapp) e [AfxOleUnlockApp](../mfc/reference/application-control.md#afxoleunlockapp) atualizar a contagem do aplicativo de objetos ativos. Se essa conta é diferente de zero, o aplicativo não encerra quando o usuário escolhe o fechamento do menu do sistema ou sair no menu arquivo. Em vez disso, a janela do aplicativo principal é oculta (mas não destruída) até que todos os pendentes cliente solicitações foram concluídas. Normalmente, `AfxOleLockApp` e `AfxOleUnlockApp` são chamados em construtores e destruidores, respectivamente, de classes que oferecem suporte à automação.  
+ A biblioteca Microsoft Foundation Class fornece recursos adicionais para controlar o comportamento do aplicativo quando os clientes externos têm referências a objetos do aplicativo. Além de manter uma contagem de referências para cada objeto, servidores de mantenham uma contagem global de objetos ativos. As funções globais [AfxOleLockApp](../mfc/reference/application-control.md#afxolelockapp) e [AfxOleUnlockApp](../mfc/reference/application-control.md#afxoleunlockapp) atualizar a contagem do aplicativo de objetos ativos. Se essa contagem é diferente de zero, o aplicativo não termina quando o usuário escolhe o fechamento do menu do sistema ou sair do menu arquivo. Em vez disso, a janela do aplicativo principal é oculta (mas não destruída) até que todos os pendentes cliente solicitações foram concluídas. Normalmente, `AfxOleLockApp` e `AfxOleUnlockApp` são chamados nos construtores e destruidores, respectivamente, de classes que oferecem suporte à automação.  
   
- Às vezes, circunstâncias forçar o servidor seja finalizado enquanto um cliente ainda tem uma referência a um objeto. Por exemplo, um recurso do qual depende o servidor pode se tornar indisponível, fazendo com que o servidor encontrar um erro. O usuário também pode fechar um documento do servidor que contém os objetos aos quais outros aplicativos tem referências.  
+ Às vezes, circunstâncias forçar o servidor terminar enquanto um cliente ainda tem uma referência a um objeto. Por exemplo, um recurso do qual o servidor depende pode se tornar indisponível, fazendo com que o servidor ao encontrar um erro. O usuário também pode fechar um documento do servidor que contém os objetos aos quais outros aplicativos tem referências.  
   
  No SDK do Windows, consulte `IUnknown::AddRef` e `IUnknown::Release`.  
   

@@ -22,19 +22,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 819f9424b2439cc49517afe54d62a8ed4f06d22d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40a3a9e1cf1384603d6b7d95fa5960e951f932ef
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373381"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216877"
 ---
 # <a name="exceptions-cc"></a>Exceções (C/C++)
-Dois códigos de exceção podem ser aumentados quando falhas são encontradas:  
+Dois códigos de exceção podem ser gerados quando são encontradas falhas:  
   
--   Para uma **LoadLibrary** falha  
+-   Para um **LoadLibrary** falha  
   
--   Para uma **GetProcAddress** falha  
+-   Para um **GetProcAddress** falha  
   
  Eis aqui as informações de exceção:  
   
@@ -46,11 +46,11 @@ Dois códigos de exceção podem ser aumentados quando falhas são encontradas:
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)  
 ```  
   
- Os códigos de exceção lançados são o padrão VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) e os valores de VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). A exceção passa um ponteiro para um **DelayLoadInfo** estrutura no valor LPDWORD que pode ser recuperada por **GetExceptionInformation** no [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) estrutura de campo ExceptionInformation [0].  
+ Os códigos de exceção lançados são o padrão VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) e os valores de VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). A exceção passa um ponteiro para um **DelayLoadInfo** estrutura no valor LPDWORD que pode ser recuperado pela **GetExceptionInformation** no [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-_exception_record) estrutura, o campo ExceptionInformation [0].  
   
- Além disso, se o bits incorretos são definidos no campo grAttrs, a exceção ERROR_INVALID_PARAMETER é gerada. Essa exceção é, para todos os efeitos, fatal.  
+ Além disso, se os bits incorretos forem definidos no campo grAttrs, a exceção ERROR_INVALID_PARAMETER é lançada. Essa exceção é, para todas as intenções e finalidades, fatal.  
   
- Consulte [estrutura e definições de constantes](../../build/reference/structure-and-constant-definitions.md) para obter mais informações.  
+ Ver [definições de estrutura e constante](../../build/reference/structure-and-constant-definitions.md) para obter mais informações.  
   
 ## <a name="see-also"></a>Consulte também  
  [Tratamento de erro e notificação](../../build/reference/error-handling-and-notification.md)

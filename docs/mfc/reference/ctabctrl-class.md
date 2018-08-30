@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 561f407fc651c08d46fe97486e2f9201cfe17333
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 5c9ea52115cf5921aab4cc7f6cefb939f3e6e461
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37123169"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207174"
 ---
 # <a name="ctabctrl-class"></a>Classe CTabCtrl
 Fornece a funcionalidade de controle de guia comum do Windows.  
@@ -110,43 +110,43 @@ class CTabCtrl : public CWnd
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CTabCtrl::AdjustRect](#adjustrect)|Calcula a área de exibição de um controle guia recebe um retângulo de janela ou calcula o retângulo de janela que corresponde a uma área de exibição fornecido.|  
-|[CTabCtrl::Create](#create)|Cria um controle de guia e a anexa a uma instância de um `CTabCtrl` objeto.|  
-|[CTabCtrl::CreateEx](#createex)|Cria um controle guia com os estilos estendidos do Windows especificados e a anexa a uma instância de um `CTabCtrl` objeto.|  
+|[CTabCtrl::AdjustRect](#adjustrect)|Calcula a área de exibição de um controle guia, dada um retângulo de janela ou calcula o retângulo de janela que corresponde a uma área de exibição em questão.|  
+|[CTabCtrl::Create](#create)|Cria um controle guia e o anexa a uma instância de um `CTabCtrl` objeto.|  
+|[CTabCtrl::CreateEx](#createex)|Cria um controle guia com os estilos estendidos do Windows especificados e anexa-o a uma instância de um `CTabCtrl` objeto.|  
 |[CTabCtrl::DeleteAllItems](#deleteallitems)|Remove todos os itens de um controle guia.|  
 |[CTabCtrl::DeleteItem](#deleteitem)|Remove um item de um controle guia.|  
-|[CTabCtrl::DeselectAll](#deselectall)|Redefine os itens em um controle guia, desmarcando qualquer um que foi pressionado.|  
+|[CTabCtrl::DeselectAll](#deselectall)|Redefine os itens em um controle guia, limpando todos os que foram pressionadas.|  
 |[CTabCtrl::DrawItem](#drawitem)|Desenha um item especificado de um controle guia.|  
 |[CTabCtrl::GetCurFocus](#getcurfocus)|Recupera a guia com o foco atual de um controle guia.|  
 |[CTabCtrl::GetCurSel](#getcursel)|Determina a guia selecionada no momento em um controle guia.|  
 |[CTabCtrl::GetExtendedStyle](#getextendedstyle)|Recupera os estilos estendidos que estão atualmente em uso para o controle de guia.|  
-|[CTabCtrl::GetImageList](#getimagelist)|Recupera a lista de imagens associada a um controle guia.|  
+|[CTabCtrl::GetImageList](#getimagelist)|Recupera a lista de imagens associada com um controle guia.|  
 |[CTabCtrl::GetItem](#getitem)|Recupera informações sobre uma guia em um controle guia.|  
 |[CTabCtrl::GetItemCount](#getitemcount)|Recupera o número de guias no controle guia.|  
 |[CTabCtrl::GetItemRect](#getitemrect)|Recupera o retângulo delimitador para uma guia em um controle guia.|  
 |[CTabCtrl::GetItemState](#getitemstate)|Recupera o estado do item de controle de guia indicado.|  
 |[CTabCtrl::GetRowCount](#getrowcount)|Recupera o número atual de linhas de guias em um controle guia.|  
-|[CTabCtrl::GetToolTips](#gettooltips)|Recupera o identificador do controle de dica de ferramenta associado a um controle guia.|  
+|[CTabCtrl::GetToolTips](#gettooltips)|Recupera o identificador de controle de dica de ferramenta associado com um controle guia.|  
 |[CTabCtrl::HighlightItem](#highlightitem)|Define o estado de realce de um item de guia.|  
-|[CTabCtrl::HitTest](#hittest)|Determina qual guia, se houver, está em uma posição especificada de tela.|  
+|[CTabCtrl::HitTest](#hittest)|Determina qual guia, se houver, está em uma posição da tela especificadas.|  
 |[CTabCtrl::InsertItem](#insertitem)|Insere uma nova guia em um controle guia.|  
 |[CTabCtrl::RemoveImage](#removeimage)|Remove uma imagem da lista de imagens de um controle guia.|  
-|[CTabCtrl::SetCurFocus](#setcurfocus)|Define o foco para um guia especificado em um controle guia.|  
+|[CTabCtrl::SetCurFocus](#setcurfocus)|Define o foco para uma guia especificada em um controle guia.|  
 |[CTabCtrl::SetCurSel](#setcursel)|Seleciona uma guia em um controle guia.|  
 |[CTabCtrl::SetExtendedStyle](#setextendedstyle)|Define os estilos estendidos para um controle guia.|  
 |[CTabCtrl::SetImageList](#setimagelist)|Atribui uma lista de imagens a um controle guia.|  
-|[CTabCtrl::SetItem](#setitem)|Define alguns ou todos os atributos da guia.|  
-|[CTabCtrl::SetItemExtra](#setitemextra)|Define o número de bytes por guia reservado para dados de aplicativo definido em um controle guia.|  
+|[CTabCtrl::SetItem](#setitem)|Define alguns ou todos os atributos de uma guia.|  
+|[CTabCtrl::SetItemExtra](#setitemextra)|Define o número de bytes por guia reservado para os dados definidos pelo aplicativo em um controle guia.|  
 |[CTabCtrl::SetItemSize](#setitemsize)|Define a largura e altura de um item.|  
 |[CTabCtrl::SetItemState](#setitemstate)|Define o estado do item de controle de guia indicado.|  
 |[CTabCtrl::SetMinTabWidth](#setmintabwidth)|Define a largura mínima de itens em um controle guia.|  
-|[CTabCtrl::SetPadding](#setpadding)|Define a quantidade de espaço (preenchimento) em torno de ícone de cada guia e o rótulo em um controle guia.|  
-|[CTabCtrl::SetToolTips](#settooltips)|Atribui um controle de dica de ferramenta a um controle guia.|  
+|[CTabCtrl::SetPadding](#setpadding)|Define a quantidade de espaço (preenchimento) em torno do ícone de cada guia e o rótulo em um controle guia.|  
+|[CTabCtrl::SetToolTips](#settooltips)|Atribui um controle de dica de ferramenta para um controle guia.|  
   
 ## <a name="remarks"></a>Comentários  
- Um "controle de guia" é análogo a divisores em um bloco de anotações ou rótulos em um arquivo de gabinete. Usando um controle guia, um aplicativo pode definir várias páginas para a mesma área de uma caixa de diálogo ou janela. Cada página consiste em um conjunto de informações ou um grupo de controles que o aplicativo é exibido quando o usuário seleciona a guia correspondente. Um tipo especial de controle de guia exibe as guias que se parecem com botões. Clicar em um botão deve executar imediatamente um comando em vez de exibir uma página.  
+ Um "controle de guia" é análogo aos divisores de um bloco de anotações ou os rótulos em um arquivo de gabinete. Ao usar um controle guia, um aplicativo pode definir várias páginas para a mesma área de uma janela ou caixa de diálogo. Cada página consiste em um conjunto de informações ou um grupo de controles que o aplicativo exibe quando o usuário seleciona a guia correspondente. Um tipo especial de controle de guia exibe as guias que se parecem com botões. Clicar em um botão deve executar imediatamente um comando em vez de exibir uma página.  
   
- Esse controle (e, portanto, o `CTabCtrl` classe) está disponível apenas para programas em execução na versão do Windows 95/98 e Windows NT 3.51 e posterior.  
+ Esse controle (e, portanto, o `CTabCtrl` classe) está disponível somente para programas executados na versão do Windows 95/98 e Windows NT 3.51 e posterior.  
   
  Para obter mais informações sobre como usar `CTabCtrl`, consulte [controles](../../mfc/controls-mfc.md) e [usando CTabCtrl](../../mfc/using-ctabctrl.md).  
   
@@ -160,10 +160,10 @@ class CTabCtrl : public CWnd
  `CTabCtrl`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxcmn.h  
+ **Cabeçalho:** afxcmn. h  
   
 ##  <a name="adjustrect"></a>  CTabCtrl::AdjustRect  
- Calcula a área de exibição de um controle guia recebe um retângulo de janela ou calcula o retângulo de janela que corresponde a uma área de exibição fornecido.  
+ Calcula a área de exibição de um controle guia, dada um retângulo de janela ou calcula o retângulo de janela que corresponde a uma área de exibição em questão.  
   
 ```  
 void AdjustRect(BOOL bLarger,   LPRECT lpRect);
@@ -171,16 +171,16 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
   
 ### <a name="parameters"></a>Parâmetros  
  *bLarger*  
- Indica qual operação a ser executada. Se esse parâmetro for TRUE, *lpRect* Especifica um retângulo de exibição e recebe o retângulo de janela correspondente. Se esse parâmetro for FALSE, *lpRect* Especifica um retângulo de janela e recebe o retângulo de exibição correspondente.  
+ Indica qual operação executar. Se esse parâmetro for TRUE, o *lpRect* Especifica um retângulo de exibição e recebe o retângulo de janela correspondente. Se esse parâmetro for FALSE, o *lpRect* Especifica um retângulo de janela e recebe o retângulo de exibição correspondente.  
   
  *lpRect*  
- Ponteiro para um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que especifica o retângulo fornecido e recebe o retângulo calculado.  
+ Ponteiro para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que especifica o retângulo determinado e recebe o retângulo calculado.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CTabCtrl#1](../../mfc/reference/codesnippet/cpp/ctabctrl-class_1.cpp)]  
   
 ##  <a name="create"></a>  CTabCtrl::Create  
- Cria um controle de guia e a anexa a uma instância de um `CTabCtrl` objeto.  
+ Cria um controle guia e o anexa a uma instância de um `CTabCtrl` objeto.  
   
 ```  
 virtual BOOL Create(
@@ -192,34 +192,34 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parâmetros  
  *dwStyle*  
- Especifica o estilo do controle de guia. Aplique qualquer combinação de [guia estilos de controle](http://msdn.microsoft.com/library/windows/desktop/bb760549), descrito no SDK do Windows. Consulte **comentários** para obter uma lista de estilos de janela que você também pode aplicar ao controle.  
+ Especifica o estilo do controle guia. Aplicar qualquer combinação de [estilos de controle de guia](/windows/desktop/Controls/tab-control-styles), descrito no SDK do Windows. Ver **comentários** para obter uma lista de estilos de janela que você também pode aplicar ao controle.  
   
  *Rect*  
- Especifica o tamanho e a posição do controle. Ele pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura.  
+ Especifica o tamanho e a posição do controle guia. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura.  
   
  *pParentWnd*  
- Especifica a janela do pai do controle, geralmente um `CDialog`. Ele não deve ser NULL.  
+ Especifica a janela do pai do controle de guia, geralmente um `CDialog`. Ele não deve ser NULL.  
   
  *nID*  
- Especifica a ID. do controle  
+ Especifica a ID. do controle guia  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a inicialização do objeto foi bem-sucedida; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
- Você pode criar um `CTabCtrl` objeto em duas etapas. Primeiro, chame o construtor e, em seguida, chamar `Create`, que cria o controle de guia e anexa-o para o `CTabCtrl` objeto.  
+ Você constrói um `CTabCtrl` objeto em duas etapas. Primeiro, chame o construtor e, em seguida, chame `Create`, que cria o controle de guia e anexa-o para o `CTabCtrl` objeto.  
   
- Além dos estilos de controle da guia, você pode aplicar os seguintes estilos de janela a um controle guia:  
+ Além dos estilos de controle de guia, você pode aplicar os seguintes estilos de janela a um controle guia:  
   
-- Estilo cria uma janela filho que representa o controle de guia. Não pode ser usado com o estilo WS_POPUP.  
+- WS_CHILD cria uma janela filho que representa o controle de guia. Não pode ser usado com o estilo WS_POPUP.  
   
-- WS_VISIBLE cria um controle de guia é visível inicialmente.  
+- WS_VISIBLE cria um controle guia que está visível inicialmente.  
   
 - WS_DISABLED cria uma janela que é inicialmente desabilitada.  
   
-- WS_GROUP Especifica o primeiro controle de um grupo de controles em que o usuário pode mover de um controle para o seguinte com as teclas de direção. Todos os controles definidos com o estilo WS_GROUP após o primeiro controle pertencem ao mesmo grupo. O próximo controle com o estilo WS_GROUP encerra o grupo de estilo e inicia o próximo grupo (ou seja, termina um grupo onde começa o próximo).  
+- WS_GROUP Especifica o primeiro controle de um grupo de controles em que o usuário pode mover de um controle para a próxima com as teclas de direção. Todos os controles definidos com o estilo WS_GROUP após o primeiro controle pertencem ao mesmo grupo. O próximo controle com o estilo WS_GROUP termina o grupo de estilo e inicia o próximo grupo (ou seja, um grupo termina onde o próximo começa).  
   
-- WS_TABSTOP Especifica um número de controles por meio do qual o usuário pode mover usando a tecla TAB. A tecla TAB move o usuário para o próximo controle especificado pelo estilo WS_TABSTOP.  
+- WS_TABSTOP Especifica um número de controles por meio do qual o usuário pode mover usando a tecla TAB. A tecla TAB move o usuário para o próximo controle especificado pelo estilo de WS_TABSTOP.  
   
  Para criar um controle guia com estilos de janela estendidos, chame [CTabCtrl::CreateEx](#createex) em vez de `Create`.  
   
@@ -240,27 +240,27 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parâmetros  
  *dwExStyle*  
- Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o *dwExStyle* parâmetro [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
+ Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o *dwExStyle* parâmetro para [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
   
  *dwStyle*  
- Especifica o estilo do controle de guia. Aplique qualquer combinação de [guia estilos de controle](http://msdn.microsoft.com/library/windows/desktop/bb760549), descrito no SDK do Windows. Consulte **comentários** na [criar](#create) para obter uma lista de estilos de janela que você também pode aplicar ao controle.  
+ Especifica o estilo do controle guia. Aplicar qualquer combinação de [estilos de controle de guia](/windows/desktop/Controls/tab-control-styles), descrito no SDK do Windows. Ver **Remarks** na [criar](#create) para obter uma lista de estilos de janela que você também pode aplicar ao controle.  
   
  *Rect*  
- Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e a posição da janela deve ser criada, nas coordenadas do cliente de *pParentWnd*.  
+ Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.  
   
  *pParentWnd*  
  Um ponteiro para a janela que é o pai do controle.  
   
  *nID*  
- ID de janela filho. do controle  
+ ID da janela filho. do controle  
   
 ### <a name="return-value"></a>Valor de retorno  
- Caso contrário, 0 diferente de zero se tiver êxito.  
+ Caso contrário, 0 diferente de zero se for bem-sucedido.  
   
 ### <a name="remarks"></a>Comentários  
- Use `CreateEx` em vez de [criar](#create) para aplicar estilos estendidos do Windows, especificados pelo prefácio de estilo estendido do Windows **WS_EX_**.  
+ Use `CreateEx` em vez de [Create](#create) para aplicar estilos estendidos do Windows, especificados pelo prefácio de estilo estendido do Windows **WS_EX_**.  
   
- `CreateEx` cria o controle com os estilos estendidos do Windows especificados pela *dwExStyle*. Conjunto estendido estilos específicos para usar um controle [SetExtendedStyle](#setextendedstyle). Por exemplo, use `CreateEx` para definir esses estilos como WS_EX_CONTEXTHELP, mas use `SetExtendedStyle` para definir esses estilos como TCS_EX_FLATSEPARATORS. Para obter mais informações, consulte os estilos descritos em [estendidos estilos de controle guia](http://msdn.microsoft.com/library/windows/desktop/bb760546) no SDK do Windows.  
+ `CreateEx` cria o controle com os estilos estendidos do Windows especificados pela *dwExStyle*. Conjunto de estilos específicos para um controle usando estendidos [SetExtendedStyle](#setextendedstyle). Por exemplo, use `CreateEx` para definir esses estilos como WS_EX_CONTEXTHELP, mas use `SetExtendedStyle` para definir esses estilos como TCS_EX_FLATSEPARATORS. Para obter mais informações, consulte os estilos descritos em [estilos estendidos de controle de guia](/windows/desktop/Controls/tab-control-extended-styles) no SDK do Windows.  
   
 ##  <a name="ctabctrl"></a>  CTabCtrl::CTabCtrl  
  Constrói um objeto `CTabCtrl`.  
@@ -277,7 +277,7 @@ BOOL DeleteAllItems();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se for bem-sucedida; Caso contrário, 0.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0.  
   
 ##  <a name="deleteitem"></a>  CTabCtrl::DeleteItem  
  Remove o item especificado de um controle guia.  
@@ -291,13 +291,13 @@ BOOL DeleteItem(int nItem);
  Valor com base em zero do item a ser excluído.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se for bem-sucedida; Caso contrário, 0.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CTabCtrl#3](../../mfc/reference/codesnippet/cpp/ctabctrl-class_3.cpp)]  
   
 ##  <a name="deselectall"></a>  CTabCtrl::DeselectAll  
- Redefine os itens em um controle guia, desmarcando qualquer um que foi pressionado.  
+ Redefine os itens em um controle guia, limpando todos os que foram pressionadas.  
   
 ```  
 void DeselectAll(BOOL fExcludeFocus);
@@ -305,13 +305,13 @@ void DeselectAll(BOOL fExcludeFocus);
   
 ### <a name="parameters"></a>Parâmetros  
  *fExcludeFocus*  
- Sinalizador que especifica o escopo de deselection o item. Se esse parâmetro for definido como FALSE, todos os botões da guia serão redefinidos. Se ele for definido como TRUE, todos os itens, exceto a selecionada no momento de guia será redefinido.  
+ Sinalizador que especifica o escopo de deselection o item. Se esse parâmetro for definido como FALSE, todos os botões da guia serão redefinidos. Se for definido como TRUE, em seguida, todos os guia itens além daquele selecionado no momento será redefinido.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função de membro implementa o comportamento da mensagem Win32, [TCM_DESELECTALL](http://msdn.microsoft.com/library/windows/desktop/bb760579), conforme descrito no SDK do Windows.  
+ Essa função membro implementa o comportamento da mensagem Win32, [TCM_DESELECTALL](/windows/desktop/Controls/tcm-deselectall), conforme descrito no SDK do Windows.  
   
 ##  <a name="drawitem"></a>  CTabCtrl::DrawItem  
- Chamado pelo framework quando um aspecto visual de um desenho proprietário é alterado controle guia.  
+ Chamado pelo framework quando um aspecto visual de um alterações de controle de guia de desenho do proprietário.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -319,14 +319,14 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
 ### <a name="parameters"></a>Parâmetros  
  *lpDrawItemStruct*  
- Um ponteiro para um [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) estrutura que descreve o item a ser pintado.  
+ Um ponteiro para um [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) estrutura que descreve o item a ser pintado.  
   
 ### <a name="remarks"></a>Comentários  
- O `itemAction` membro o `DRAWITEMSTRUCT` estrutura define a ação de desenho que deve ser executada.  
+ O `itemAction` membro o `DRAWITEMSTRUCT` estrutura define a ação de desenho a ser executada.  
   
- Por padrão, essa função de membro não faz nada. Substituir essa função de membro para implementar o desenho de um desenho proprietário `CTabCtrl` objeto.  
+ Por padrão, essa função membro não faz nada. Substituir essa função de membro para implementar o desenho de um desenho proprietário `CTabCtrl` objeto.  
   
- O aplicativo deve restaurar todos os objetos de interface (GDI) do dispositivo gráficos selecionados para o contexto de exibição fornecido no *lpDrawItemStruct* antes desse membro função termina.  
+ O aplicativo deve restaurar todos os objetos de interface (GDI) do dispositivo gráficos selecionados para o contexto de exibição fornecido no *lpDrawItemStruct* antes desse membro função encerra.  
   
 ##  <a name="getcurfocus"></a>  CTabCtrl::GetCurFocus  
  Recupera o índice da guia com o foco atual.  
@@ -346,7 +346,7 @@ int GetCurSel() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Índice com base em zero da guia selecionada se for bem-sucedido ou - 1 se a guia não estiver selecionada.  
+ Índice baseado em zero da guia selecionada se for bem-sucedido ou - 1 se a guia não estiver selecionada.  
   
 ##  <a name="getextendedstyle"></a>  CTabCtrl::GetExtendedStyle  
  Recupera os estilos estendidos que estão atualmente em uso para o controle de guia.  
@@ -356,20 +356,20 @@ DWORD GetExtendedStyle();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Representa os estilos estendidos atualmente em uso para o controle de guia. Esse valor é uma combinação de [estendidos estilos de controle guia](http://msdn.microsoft.com/library/windows/desktop/bb760546), conforme descrito no SDK do Windows.  
+ Representa os estilos estendidos atualmente em uso para o controle de guia. Esse valor é uma combinação de [estilos estendidos de controle guia](/windows/desktop/Controls/tab-control-extended-styles), conforme descrito no SDK do Windows.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função de membro implementa o comportamento da mensagem de Win32 [TCM_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760585), conforme descrito no SDK do Windows.  
+ Essa função membro implementa o comportamento da mensagem do Win32 [TCM_GETEXTENDEDSTYLE](/windows/desktop/Controls/tcm-getextendedstyle), conforme descrito no SDK do Windows.  
   
 ##  <a name="getimagelist"></a>  CTabCtrl::GetImageList  
- Recupera a lista de imagem que está associado a um controle guia.  
+ Recupera a lista de imagens que está associada com um controle guia.  
   
 ```  
 CImageList* GetImageList() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, um ponteiro para a lista de imagens da guia controle; Caso contrário, nulo.  
+ Se for bem-sucedido, um ponteiro para a lista de imagens da guia de controle; Caso contrário, nulo.  
   
 ##  <a name="getitem"></a>  CTabCtrl::GetItem  
  Recupera informações sobre uma guia em um controle guia.  
@@ -380,19 +380,19 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
   
 ### <a name="parameters"></a>Parâmetros  
  *nItem*  
- Índice de base zero da guia.  
+ Índice baseado em zero da guia.  
   
  *pTabCtrlItem*  
- Ponteiro para um [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) estrutura, usada para especificar as informações a serem recuperados. Também é usado para receber informações sobre a guia. Essa estrutura é usada com o `InsertItem`, `GetItem`, e `SetItem` funções de membro.  
+ Ponteiro para um [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) estrutura, usada para especificar as informações a serem recuperadas. Também é usado para receber informações sobre a guia. Essa estrutura é usada com o `InsertItem`, `GetItem`, e `SetItem` funções de membro.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retornará TRUE se bem-sucedido; FALSO caso contrário.  
+ Retornará TRUE se bem-sucedido; FALSE caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Quando a mensagem é enviada, o `mask` membro especifica quais atributos retornam. Se o `mask` membro Especifica o valor TCIF_TEXT, o `pszText` membro deve conter o endereço do buffer que recebe o texto do item e o `cchTextMax` membro deve especificar o tamanho do buffer.  
   
  `mask`  
- Valor que especifica qual `TCITEM` para recuperar ou definir os membros de estrutura. Esse membro pode ser zero ou uma combinação dos seguintes valores:  
+ Valor que especifica qual `TCITEM` membros para recuperar ou definir da estrutura. Esse membro pode ser zero ou uma combinação dos seguintes valores:  
   
 - TCIF_TEXT o `pszText` membro é válido.  
   
@@ -405,16 +405,16 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
 - TCIF_STATE o `dwState` membro é válido.  
   
  `pszText`  
- Ponteiro para uma cadeia de caracteres terminada em nulo que contém o texto da guia se a estrutura contém informações sobre uma guia. Se a estrutura estiver recebendo informações, esse membro Especifica o endereço do buffer que recebe o texto da guia.  
+ Ponteiro para uma cadeia de caracteres terminada em nulo que contém o texto da guia se a estrutura contém informações sobre uma guia. Se a estrutura é receber informações, esse membro Especifica o endereço do buffer que recebe o texto da guia.  
   
  `cchTextMax`  
- Tamanho do buffer apontado pelo `pszText`. Esse membro será ignorado se a estrutura não está recebendo informações.  
+ Tamanho do buffer apontado por `pszText`. Esse membro será ignorado se a estrutura não está recebendo informações.  
   
  `iImage`  
- Indexar o controle de guia lista de imagens, ou - 1 se não houver nenhuma imagem para a guia.  
+ Indexar o controle de guia lista de imagens, ou - 1 se não houver nenhuma imagem da guia.  
   
  lParam  
- Dados definidos pelo aplicativo associados com a guia. Se houver mais de quatro bytes de dados definido pelo aplicativo por tabulação, um aplicativo deve definir uma estrutura e usá-lo em vez do `TCITEM` estrutura. O primeiro membro da estrutura de aplicativo definido deve ser um [TCITEMHEADER](http://msdn.microsoft.com/library/windows/desktop/bb760556)estrutura. O `TCITEMHEADER` estrutura é idêntica do `TCITEM` estrutura, mas sem o `lParam` membro. A diferença entre o tamanho da sua estrutura e o tamanho do `TCITEMHEADER` estrutura deve igual ao número de bytes adicionais por tabulação.  
+ Dados definidos pelo aplicativo associados com a guia. Se houver mais de quatro bytes de dados definido pelo aplicativo por tabulação, um aplicativo deve definir uma estrutura e usá-lo em vez do `TCITEM` estrutura. O primeiro membro da estrutura definida pelo aplicativo deve ser um [TCITEMHEADER](/windows/desktop/api/commctrl/ns-commctrl-tagtcitemheadera)estrutura. O `TCITEMHEADER` estrutura é idêntica de `TCITEM` estrutura, mas sem o `lParam` membro. A diferença entre o tamanho da sua estrutura e o tamanho do `TCITEMHEADER` estrutura deve ser igual ao número de bytes adicionais por guia.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  
@@ -430,7 +430,7 @@ int GetItemCount() const;
  Número de itens no controle guia.  
   
 ### <a name="example"></a>Exemplo  
-  Consulte o exemplo para [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
+  Veja o exemplo de [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
 ##  <a name="getitemrect"></a>  CTabCtrl::GetItemRect  
  Recupera o retângulo delimitador para a guia especificada em um controle guia.  
@@ -441,19 +441,19 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
   
 ### <a name="parameters"></a>Parâmetros  
  *nItem*  
- Índice de base zero do item de guia.  
+ Índice baseado em zero do item de guia.  
   
  *lpRect*  
- Ponteiro para um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que recebe o retângulo delimitador da guia. Essas coordenadas usam modo de mapeamento do visor atual.  
+ Ponteiro para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que recebe o retângulo delimitador da guia. Essas coordenadas usam modo de mapeamento do visor atual.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se for bem-sucedida; Caso contrário, 0.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0.  
   
 ### <a name="example"></a>Exemplo  
-  Consulte o exemplo para [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
+  Veja o exemplo de [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
 ##  <a name="getitemstate"></a>  CTabCtrl::GetItemState  
- Recupera o estado do item de controle de guia identificado por *nItem*.  
+ Recupera o estado do item de controle de guia identificado pelo *nItem*.  
   
 ```  
 DWORD GetItemState(
@@ -463,18 +463,18 @@ DWORD GetItemState(
   
 ### <a name="parameters"></a>Parâmetros  
  *nItem*  
- O número de índice com base em zero do item para o qual recuperar informações de estado.  
+ O número de índice baseado em zero do item para o qual recuperar informações de estado.  
   
  *dwMask*  
- Especifica que o estado do item de sinalizadores para retornar a máscara. Para obter uma lista de valores, consulte o membro de máscara do [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) estrutura, conforme descrito no SDK do Windows.  
+ Máscara especificando quais do estado do item de sinalizadores para retornar. Para obter uma lista de valores, consulte o membro de máscara do [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) estrutura, conforme descrito no SDK do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Uma referência a um valor DWORD receber as informações de estado. Pode ser um dos seguintes valores:  
+ Uma referência a um valor DWORD que recebe as informações de estado. pode ser um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |TCIS_BUTTONPRESSED|O item de controle de guia é selecionado.|  
-|TCIS_HIGHLIGHTED|O item de controle de guia é realçado e a guia e texto são desenhados usando a cor de realce atual. Ao usar a cor de realce, isso será uma interpolação true, não uma cor pontilhada.|  
+|TCIS_HIGHLIGHTED|O item de controle de guia é realçado, e a guia e texto são desenhados usando a cor de realce atual. Ao usar a cor de realce, esse será uma verdadeira interpolação, não uma cor pontilhada.|  
   
 ### <a name="remarks"></a>Comentários  
  Estado de um item é especificado pelo `dwState` membro o `TCITEM` estrutura.  
@@ -493,17 +493,17 @@ int GetRowCount() const;
  Somente os controles de guia que têm o estilo TCS_MULTILINE podem ter várias linhas de guias.  
   
 ##  <a name="gettooltips"></a>  CTabCtrl::GetToolTips  
- Recupera o identificador do controle de dica de ferramenta associado a um controle guia.  
+ Recupera o identificador de controle de dica de ferramenta associado com um controle guia.  
   
 ```  
 CToolTipCtrl* GetToolTips() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Identificador do controle dica de ferramenta se bem-sucedido; Caso contrário, NULL.  
+ Identificador do controle dica de ferramenta se bem-sucedido; Caso contrário, nulo.  
   
 ### <a name="remarks"></a>Comentários  
- Um controle guia cria um controle de dica de ferramenta se ele tiver o estilo TCS_TOOLTIPS. Você também pode atribuir um controle de dica de ferramenta a um controle guia usando o `SetToolTips` função de membro.  
+ Um controle guia cria um controle de dica de ferramenta se ele tem o estilo TCS_TOOLTIPS. Você também pode atribuir um controle de dica de ferramenta a um controle guia usando o `SetToolTips` função de membro.  
   
 ##  <a name="highlightitem"></a>  CTabCtrl::HighlightItem  
  Define o estado de realce de um item de guia.  
@@ -514,19 +514,19 @@ BOOL HighlightItem(int idItem,   BOOL fHighlight = TRUE);
   
 ### <a name="parameters"></a>Parâmetros  
  *idItem*  
- Índice de base zero de um item de controle de guia.  
+ Índice baseado em zero de um item de controle de guia.  
   
  *fHighlight*  
- Valor que especifica o estado de realce a ser definido. Se esse valor for TRUE, a guia é realçada; Se for FALSE, a guia é definida para seu estado padrão.  
+ Valor que especifica o estado de realce a ser definido. Se esse valor for TRUE, a guia é realçada; Se for FALSE, a guia é definida como seu estado padrão.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se for bem-sucedida; Caso contrário, zero.  
+ Diferente de zero se bem-sucedido; Caso contrário, zero.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função de membro implementa a mensagem de Win32 [TCM_HIGHLIGHTITEM](http://msdn.microsoft.com/library/windows/desktop/bb760602), conforme descrito no SDK do Windows.  
+ Essa função membro implementa a mensagem do Win32 [TCM_HIGHLIGHTITEM](/windows/desktop/Controls/tcm-highlightitem), conforme descrito no SDK do Windows.  
   
 ##  <a name="hittest"></a>  CTabCtrl::HitTest  
- Determina qual guia, se houver, está na posição especificada de tela.  
+ Determina qual guia, se houver, será a posição da tela especificadas.  
   
 ```  
 int HitTest(TCHITTESTINFO* pHitTestInfo) const;  
@@ -534,13 +534,13 @@ int HitTest(TCHITTESTINFO* pHitTestInfo) const;
   
 ### <a name="parameters"></a>Parâmetros  
  *pHitTestInfo*  
- Ponteiro para um [TCHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb760553) estrutura, conforme descrito no SDK do Windows, que especifica a posição da tela para testar.  
+ Ponteiro para um [TCHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtchittestinfo) estrutura, conforme descrito no SDK do Windows, que especifica a posição da tela para testar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna o índice baseado em zero da guia ou - 1 se a guia não estiver na posição especificada.  
   
 ##  <a name="insertitem"></a>  CTabCtrl::InsertItem  
- Insere uma nova guia em um controle guia existente.  
+ Insere uma nova guia em um controle de guia existente.  
   
 ```  
 LONG InsertItem(
@@ -579,41 +579,41 @@ LONG InsertItem(
   
 ### <a name="parameters"></a>Parâmetros  
  *nItem*  
- Índice de base zero da nova guia.  
+ Índice baseado em zero da nova guia.  
   
  *pTabCtrlItem*  
- Ponteiro para um [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) estrutura que especifica os atributos da guia.  
+ Ponteiro para um [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) estrutura que especifica os atributos da guia.  
   
  *lpszItem*  
  Endereço de uma cadeia de caracteres terminada em nulo que contém o texto da guia.  
   
- *nImage*  
- O índice de base zero de uma imagem para inserir de uma lista de imagens.  
+ *Nimagem*  
+ O índice baseado em zero de uma imagem para inserir de uma lista de imagens.  
   
  *nMask*  
- Especifica qual `TCITEM` estrutura atributos a serem definidos. Pode ser zero ou uma combinação dos seguintes valores:  
+ Especifica qual `TCITEM` estruturar os atributos a serem definidos. Pode ser zero ou uma combinação dos seguintes valores:  
   
 - TCIF_TEXT o `pszText` membro é válido.  
   
 - TCIF_IMAGE o `iImage` membro é válido.  
   
-- TCIF_PARAM o *lParam* membro é válido.  
+- TCIF_PARAM a *lParam* membro é válido.  
   
 - TCIF_RTLREADING o texto de `pszText` é exibido usando a ordem de leitura da direita para a esquerda nos sistemas hebraico ou árabe.  
   
-- TCIF_STATE o *dwState* membro é válido.  
+- TCIF_STATE a *dwState* membro é válido.  
   
  *lParam*  
  Dados definidos pelo aplicativo associados com a guia.  
   
  *dwState*  
- Especifica valores para os estados do item. Para obter mais informações, consulte [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) no SDK do Windows.  
+ Especifica valores para os estados do item. Para obter mais informações, consulte [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) no SDK do Windows.  
   
  *dwStateMask*  
- Especifica quais estados devem ser definidas. Para obter mais informações, consulte [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) no SDK do Windows.  
+ Especifica quais estados devem ser definidas. Para obter mais informações, consulte [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) no SDK do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Índice de base zero da guia novo se bem-sucedido; Caso contrário, - 1.  
+ Índice baseado em zero da guia novo se bem-sucedido; Caso contrário, - 1.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CTabCtrl#5](../../mfc/reference/codesnippet/cpp/ctabctrl-class_5.cpp)]  
@@ -626,14 +626,14 @@ void RemoveImage(int nImage);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *nImage*  
- Índice de base zero da imagem a ser removido.  
+ *Nimagem*  
+ Índice baseado em zero da imagem a ser removida.  
   
 ### <a name="remarks"></a>Comentários  
  O controle de guia atualiza o índice de imagem de cada guia para que cada guia permaneça associado com a mesma imagem.  
   
 ##  <a name="setcurfocus"></a>  CTabCtrl::SetCurFocus  
- Define o foco para um guia especificado em um controle guia.  
+ Define o foco para uma guia especificada em um controle guia.  
   
 ```  
 void SetCurFocus(int nItem);
@@ -641,10 +641,10 @@ void SetCurFocus(int nItem);
   
 ### <a name="parameters"></a>Parâmetros  
  *nItem*  
- Especifica o índice da guia que obtém o foco.  
+ Especifica o índice do guia, que obtém o foco.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função de membro implementa o comportamento da mensagem de Win32 [TCM_SETCURFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb760610), conforme descrito no SDK do Windows.  
+ Essa função membro implementa o comportamento da mensagem do Win32 [TCM_SETCURFOCUS](/windows/desktop/Controls/tcm-setcurfocus), conforme descrito no SDK do Windows.  
   
 ##  <a name="setcursel"></a>  CTabCtrl::SetCurSel  
  Seleciona uma guia em um controle guia.  
@@ -655,13 +655,13 @@ int SetCurSel(int nItem);
   
 ### <a name="parameters"></a>Parâmetros  
  *nItem*  
- O índice de base zero do item a ser selecionado.  
+ O índice baseado em zero do item a ser selecionado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Índice de base zero da guia anteriormente selecionada se for bem-sucedido, caso contrário, - 1.  
+ O índice baseado em zero da guia selecionada anteriormente se for bem-sucedido, caso contrário, - 1.  
   
 ### <a name="remarks"></a>Comentários  
- Um controle de guia não envia uma mensagem de notificação TCN_SELCHANGING ou TCN_SELCHANGE quando uma guia é selecionada usando essa função. Essas notificações são enviadas, usando WM_NOTIFY, quando o usuário clica ou usa o teclado para alterar guias.  
+ Um controle guia não envia uma mensagem de notificação TCN_SELCHANGING ou TCN_SELCHANGE quando uma guia é selecionada com o uso dessa função. Essas notificações são enviadas, WM_NOTIFY, quando o usuário clica ou usa o teclado para alterar as guias.  
   
 ##  <a name="setextendedstyle"></a>  CTabCtrl::SetExtendedStyle  
  Define os estilos estendidos para um controle guia.  
@@ -672,16 +672,16 @@ DWORD SetExtendedStyle(DWORD dwNewStyle,   DWORD dwExMask = 0);
   
 ### <a name="parameters"></a>Parâmetros  
  *dwNewStyle*  
- Valor que especifica uma combinação de guia controle estilos estendidos.  
+ Valor que especifica uma combinação de guia controla estilos estendidos.  
   
  *dwExMask*  
- Um valor DWORD que indica quais estilos em *dwNewStyle* devem ser afetadas. Somente os estilos estendidos em *dwExMask* será alterado. Todos os outros estilos serão mantidos como está. Se esse parâmetro for zero, então todos os estilos em *dwNewStyle* serão afetados.  
+ Um valor DWORD que indica quais estilos no *dwNewStyle* são que serão afetadas. Somente os estilos estendidos na *dwExMask* será alterado. Todos os outros estilos serão mantidos como está. Se esse parâmetro for zero, então todos os estilos no *dwNewStyle* serão afetados.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um valor DWORD que contém o anterior [estendidos estilos de controle guia](http://msdn.microsoft.com/library/windows/desktop/bb760546), conforme descrito no SDK do Windows.  
+ Um valor DWORD que contém o anterior [estilos estendidos de controle guia](/windows/desktop/Controls/tab-control-extended-styles), conforme descrito no SDK do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Essa função de membro implementa o comportamento da mensagem de Win32 [TCM_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760627), conforme descrito no SDK do Windows.  
+ Essa função membro implementa o comportamento da mensagem do Win32 [TCM_SETEXTENDEDSTYLE](/windows/desktop/Controls/tcm-setextendedstyle), conforme descrito no SDK do Windows.  
   
 ##  <a name="setimagelist"></a>  CTabCtrl::SetImageList  
  Atribui uma lista de imagens a um controle guia.  
@@ -695,10 +695,10 @@ CImageList* SetImageList(CImageList* pImageList);
  Ponteiro para a lista de imagens a ser atribuído ao controle guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna um ponteiro para a lista anterior de imagem ou nulo se não houver nenhuma lista de imagem anterior.  
+ Retorna um ponteiro para a lista de imagens anteriores ou nulo se não houver nenhuma lista de imagens anteriores.  
   
 ##  <a name="setitem"></a>  CTabCtrl::SetItem  
- Define alguns ou todos os atributos da guia.  
+ Define alguns ou todos os atributos de uma guia.  
   
 ```  
 BOOL SetItem(int nItem,   TCITEM* pTabCtrlItem);
@@ -706,19 +706,19 @@ BOOL SetItem(int nItem,   TCITEM* pTabCtrlItem);
   
 ### <a name="parameters"></a>Parâmetros  
  *nItem*  
- Índice de base zero do item.  
+ Índice baseado em zero do item.  
   
  *pTabCtrlItem*  
- Ponteiro para um [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) estrutura que contém os novos atributos do item. O `mask` membro especifica quais atributos a serem definidos. Se o `mask` membro Especifica o valor TCIF_TEXT, o `pszText` membro é o endereço de uma cadeia de caracteres terminada em nulo e o `cchTextMax` membro será ignorado.  
+ Ponteiro para um [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) estrutura que contém os novos atributos de item. O `mask` membro especifica quais atributos a serem definidos. Se o `mask` membro Especifica o valor TCIF_TEXT, o `pszText` membro é o endereço de uma cadeia de caracteres terminada em nulo e o `cchTextMax` membro será ignorado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se for bem-sucedida; Caso contrário, 0.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0.  
   
 ### <a name="example"></a>Exemplo  
-  Consulte o exemplo para [GetItem](#getitem).  
+  Veja o exemplo de [GetItem](#getitem).  
   
 ##  <a name="setitemextra"></a>  CTabCtrl::SetItemExtra  
- Define o número de bytes por guia reservado para dados de aplicativo definido em um controle guia.  
+ Define o número de bytes por guia reservado para os dados definidos pelo aplicativo em um controle guia.  
   
 ```  
 BOOL SetItemExtra(int nBytes);
@@ -729,13 +729,13 @@ BOOL SetItemExtra(int nBytes);
  O número de bytes adicionais para definir.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se for bem-sucedida; Caso contrário, zero.  
+ Diferente de zero se bem-sucedido; Caso contrário, zero.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função de membro implementa o comportamento da mensagem de Win32 [TCM_SETITEMEXTRA](http://msdn.microsoft.com/library/windows/desktop/bb760633), conforme descrito no SDK do Windows.  
+ Essa função membro implementa o comportamento da mensagem do Win32 [TCM_SETITEMEXTRA](/windows/desktop/Controls/tcm-setitemextra), conforme descrito no SDK do Windows.  
   
 ##  <a name="setitemsize"></a>  CTabCtrl::SetItemSize  
- Define a largura e altura dos itens de controle da guia.  
+ Define a largura e altura dos itens de controle de guia.  
   
 ```  
 CSize SetItemSize(CSize size);
@@ -743,13 +743,13 @@ CSize SetItemSize(CSize size);
   
 ### <a name="parameters"></a>Parâmetros  
  *size*  
- A nova largura e altura, em pixels, dos itens de controle da guia.  
+ A nova largura e altura, em pixels, dos itens de controle de guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna a antiga largura e altura dos itens de controle da guia.  
+ Retorna a antiga largura e altura dos itens de controle de guia.  
   
 ##  <a name="setitemstate"></a>  CTabCtrl::SetItemState  
- Define o estado do item de controle de guia identificado por *nItem*.  
+ Define o estado do item de controle de guia identificado pelo *nItem*.  
   
 ```  
 BOOL SetItemState(
@@ -760,21 +760,21 @@ BOOL SetItemState(
   
 ### <a name="parameters"></a>Parâmetros  
  *nItem*  
- O número de índice com base em zero do item para o qual definir informações de estado.  
+ O número de índice baseado em zero do item para o qual definir informações de estado.  
   
  *dwMask*  
- Especifica que o estado do item de sinalizadores para definir a máscara. Para obter uma lista de valores, consulte o membro de máscara do [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) estrutura, conforme descrito no SDK do Windows.  
+ Especificando quais do estado do item de sinalizadores para definir a máscara. Para obter uma lista de valores, consulte o membro de máscara do [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) estrutura, conforme descrito no SDK do Windows.  
   
  *dwState*  
- Uma referência a um valor DWORD que contém as informações de estado. Pode ser um dos seguintes valores:  
+ Uma referência a um valor DWORD que contém as informações de estado. pode ser um dos seguintes valores:  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |TCIS_BUTTONPRESSED|O item de controle de guia é selecionado.|  
-|TCIS_HIGHLIGHTED|O item de controle de guia é realçado e a guia e texto são desenhados usando a cor de realce atual. Ao usar a cor de realce, isso será uma interpolação true, não uma cor pontilhada.|  
+|TCIS_HIGHLIGHTED|O item de controle de guia é realçado, e a guia e texto são desenhados usando a cor de realce atual. Ao usar a cor de realce, esse será uma verdadeira interpolação, não uma cor pontilhada.|  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se for bem-sucedida; Caso contrário, 0.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0.  
   
 ##  <a name="setmintabwidth"></a>  CTabCtrl::SetMinTabWidth  
  Define a largura mínima de itens em um controle guia.  
@@ -785,16 +785,16 @@ int SetMinTabWidth(int cx);
   
 ### <a name="parameters"></a>Parâmetros  
  *CX*  
- Largura mínima a ser definido para um item de controle de guia. Se esse parâmetro for definido como -1, o controle usará a largura da guia padrão.  
+ Largura mínima a ser definido para um item de controle de guia. Se esse parâmetro for definido como -1, o controle usará a largura de tabulação padrão.  
   
 ### <a name="return-value"></a>Valor de retorno  
  A largura mínima de guia anterior.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Essa função de membro implementa o comportamento da mensagem de Win32 [TCM_SETMINTABWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760637), conforme descrito no SDK do Windows.  
+ Essa função membro implementa o comportamento da mensagem do Win32 [TCM_SETMINTABWIDTH](/windows/desktop/Controls/tcm-setmintabwidth), conforme descrito no SDK do Windows.  
   
 ##  <a name="setpadding"></a>  CTabCtrl::SetPadding  
- Define a quantidade de espaço (preenchimento) em torno de ícone de cada guia e o rótulo em um controle guia.  
+ Define a quantidade de espaço (preenchimento) em torno do ícone de cada guia e o rótulo em um controle guia.  
   
 ```  
 void SetPadding(CSize size);
@@ -802,10 +802,10 @@ void SetPadding(CSize size);
   
 ### <a name="parameters"></a>Parâmetros  
  *size*  
- Define a quantidade de espaço (preenchimento) em torno de ícone de cada guia e o rótulo em um controle guia.  
+ Define a quantidade de espaço (preenchimento) em torno do ícone de cada guia e o rótulo em um controle guia.  
   
 ##  <a name="settooltips"></a>  CTabCtrl::SetToolTips  
- Atribui um controle de dica de ferramenta a um controle guia.  
+ Atribui um controle de dica de ferramenta para um controle guia.  
   
 ```  
 void SetToolTips(CToolTipCtrl* pWndTip);
@@ -816,13 +816,13 @@ void SetToolTips(CToolTipCtrl* pWndTip);
  Identificador do controle de dica de ferramenta.  
   
 ### <a name="remarks"></a>Comentários  
- Você pode obter o controle de dica de ferramenta associado a um controle guia fazendo uma chamada para `GetToolTips`.  
+ Você pode obter o controle da dica de ferramenta associado com um controle guia, fazendo uma chamada para `GetToolTips`.  
   
 ### <a name="example"></a>Exemplo  
-  Consulte o exemplo para [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
+  Veja o exemplo de [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CWnd](../../mfc/reference/cwnd-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classe CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)   
  [Classe CListCtrl](../../mfc/reference/clistctrl-class.md)

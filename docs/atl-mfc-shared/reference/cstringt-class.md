@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4089b786363f6b1bcbb50d08e16821efc186539a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 481b50fa99e367859eab51b41a1c5e37d8602341
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609493"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197927"
 ---
 # <a name="cstringt-class"></a>Classe CStringT
 Essa classe representa um `CStringT` objeto.  
@@ -705,7 +705,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 > [!NOTE]
 > `FormatMessage` tenta alocar memória do sistema para a cadeia de caracteres formatada recentemente. Se essa tentativa falhar, uma exceção de memória é gerada automaticamente.  
   
- Cada inserção deve ter um parâmetro posterior correspondente a *pszFormat* ou *nFormatID* parâmetro. Dentro do texto da mensagem, várias sequências de escape têm suporte para formatação dinâmica a mensagem. Para obter mais informações, consulte o Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) função no SDK do Windows.  
+ Cada inserção deve ter um parâmetro posterior correspondente a *pszFormat* ou *nFormatID* parâmetro. Dentro do texto da mensagem, várias sequências de escape têm suporte para formatação dinâmica a mensagem. Para obter mais informações, consulte o Windows [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) função no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATLMFC_Utilities#118](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_13.cpp)]  
@@ -730,7 +730,7 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 > [!NOTE]
 > `FormatMessageV` chamadas [CStringT::FormatMessage](#formatmessage), que tenta alocar memória do sistema para a cadeia de caracteres formatada recentemente. Se essa tentativa falhar, uma exceção de memória é gerada automaticamente.  
   
- Para obter mais informações, consulte o Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) função no SDK do Windows.  
+ Para obter mais informações, consulte o Windows [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) função no SDK do Windows.  
   
 ##  <a name="formatv"></a>  CStringT::FormatV  
  Formata uma cadeia de caracteres de mensagem usando uma lista de argumentos variável.  

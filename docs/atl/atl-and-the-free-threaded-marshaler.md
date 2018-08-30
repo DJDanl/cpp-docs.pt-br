@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 015b07e5870aa6269dc76af8610d42fb469a6d33
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 6fa2e03bbb7307b2bc9633c21510f3b1939d4ad9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848344"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218042"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL e marshaler livre de threads
 Página de atributos do ATL Simple Object Wizard fornece uma opção que permite que sua classe agregar o marshaler livre (FTM).  
   
- O assistente gera código para criar uma instância do marshaler livre na `FinalConstruct` e liberar a instância em `FinalRelease`. Uma macro COM_INTERFACE_ENTRY_AGGREGATE é adicionada automaticamente para o mapa de COM para garantir que `QueryInterface` as solicitações de [IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707) são manipuladas pelo marshaler livre.  
+ O assistente gera código para criar uma instância do marshaler livre na `FinalConstruct` e liberar a instância em `FinalRelease`. Uma macro COM_INTERFACE_ENTRY_AGGREGATE é adicionada automaticamente para o mapa de COM para garantir que `QueryInterface` as solicitações de [IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal) são manipuladas pelo marshaler livre.  
   
  O marshaler livre permite acesso direto a interfaces em seu objeto de qualquer thread no mesmo processo, acelerar chamadas entre apartments. Essa opção destina-se a classes que usam o modelo de threading os dois.  
   
@@ -36,8 +36,8 @@ Página de atributos do ATL Simple Object Wizard fornece uma opção que permite
   
 ## <a name="see-also"></a>Consulte também  
  [Conceitos](../atl/active-template-library-atl-concepts.md)   
- [CoCreateFreeThreadedMarshaler](http://msdn.microsoft.com/library/windows/desktop/ms694500)   
- [IMarshal](http://msdn.microsoft.com/library/windows/desktop/dd542707)   
- [Quando usar a tabela de Interface Global](http://msdn.microsoft.com/library/windows/desktop/ms693729)   
- [Problemas de Threading do servidor em processo](http://msdn.microsoft.com/library/windows/desktop/ms687205)
+ [CoCreateFreeThreadedMarshaler](/windows/desktop/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)   
+ [IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal)   
+ [Quando usar a tabela de Interface Global](/windows/desktop/com/when-to-use-the-global-interface-table)   
+ [Problemas de Threading do servidor em processo](/windows/desktop/com/in-process-server-threading-issues)
 

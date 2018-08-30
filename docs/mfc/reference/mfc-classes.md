@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc862ee708239878229825c9aa050c2835222b95
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 5bfff86dd688ea5029a0c0971c3f8ad6c6aef3b5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42543091"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213186"
 ---
 # <a name="mfc-classes"></a>Classes MFC
 As classes na lista a seguir são incluídas na biblioteca Microsoft Foundation Class (MFC).  
@@ -135,7 +135,7 @@ As classes na lista a seguir são incluídas na biblioteca Microsoft Foundation 
  Fornece a funcionalidade de uma caixa de lista de verificação do Windows.  
   
  [Classe CClientDC](../../mfc/reference/cclientdc-class.md)  
- Manipula a chamada das funções do Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) na ocasião da construção e [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) no tempo de destruição.  
+ Manipula a chamada das funções do Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) na ocasião da construção e [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) no tempo de destruição.  
   
  [Classe CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
  Classe base para a arquitetura de mapa de mensagem da biblioteca Microsoft Foundation Class.  
@@ -861,7 +861,7 @@ As classes na lista a seguir são incluídas na biblioteca Microsoft Foundation 
  Representa uma janela do quadro de metade da altura normalmente Vista em torno de barras de ferramentas flutuantes.  
   
  [Classe CMonikerFile](../../mfc/reference/cmonikerfile-class.md)  
- Representa um fluxo de dados ([IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) nomeado por uma [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
+ Representa um fluxo de dados ([IStream](/windows/desktop/api/objidl/nn-objidl-istream)) nomeado por uma [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker).  
   
  [Classe CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)  
  Encapsula a funcionalidade de um controle de calendário mensal.  
@@ -930,7 +930,7 @@ As classes na lista a seguir são incluídas na biblioteca Microsoft Foundation 
  Fornece suporte para interfaces de controle personalizado do lado do cliente.  
   
  [Classe COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md)  
- Para obter mais informações, consulte o [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) estrutura no SDK do Windows.  
+ Para obter mais informações, consulte o [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) estrutura no SDK do Windows.  
   
  [Classe COleCurrency](../../mfc/reference/colecurrency-class.md)  
  Encapsula o `CURRENCY` tipo de dados de automação OLE.  
@@ -1173,7 +1173,7 @@ As classes na lista a seguir são incluídas na biblioteca Microsoft Foundation 
  Encapsula uma transição de velocidade sinusoidal que tem uma amplitude que é determinada pela velocidade inicial da variável de animação.  
   
  [Classe CSize](../../atl-mfc-shared/reference/csize-class.md)  
- Semelhante do Windows [tamanho](http://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura, que implementa uma coordenada ou posição relativa.  
+ Semelhante do Windows [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura, que implementa uma coordenada ou posição relativa.  
   
  [Classe CSliderCtrl](../../mfc/reference/csliderctrl-class.md)  
  Fornece a funcionalidade do controle deslizante Windows comuns.  

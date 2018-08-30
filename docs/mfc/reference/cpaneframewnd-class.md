@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dcd45226c85238ddd9e3d6d5a35460f0bb58916
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bcc4ec99ea8dc7dfc0706237e274b6b96f437829
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42544393"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214985"
 ---
 # <a name="cpaneframewnd-class"></a>Classe CPaneFrameWnd
 Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
@@ -210,7 +210,7 @@ class CPaneFrameWnd : public CWnd
 |[CPaneFrameWnd::OnShowPane](#onshowpane)|Chamado pelo framework quando um painel da janela com minimoldura é ocultado ou exibido.|  
 |[CPaneFrameWnd::PaneFromPoint](#panefrompoint)|Retorna um painel se ele contiver um ponto fornecido pelo usuário dentro de uma janela com minimoldura.|  
 |[CPaneFrameWnd::Pin](#pin)||  
-|`CPaneFrameWnd::PreTranslateMessage`|Usado pela classe [CWinApp](../../mfc/reference/cwinapp-class.md) para converter as mensagens da janela antes de serem expedidas para o [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funções do Windows.|  
+|`CPaneFrameWnd::PreTranslateMessage`|Usado pela classe [CWinApp](../../mfc/reference/cwinapp-class.md) para converter as mensagens da janela antes de serem expedidas para o [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funções do Windows.|  
 |[CPaneFrameWnd::RedrawAll](#redrawall)|Redesenha a todas as janelas com minimoldura.|  
 |[CPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|Chamado pelo framework para remover os painéis não válido.|  
 |[CPaneFrameWnd::RemovePane](#removepane)|Remove um painel de janela com minimoldura.|  
@@ -532,7 +532,7 @@ virtual int GetCaptionHeight() const;
  A altura, em pixels, da janela com minimoldura.  
   
 ### <a name="remarks"></a>Comentários  
- Chame esse método para determinar a altura de uma janela com minimoldura. Por padrão, a altura é definida como SM_CYSMCAPTION. Para obter mais informações, consulte [função GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385).  
+ Chame esse método para determinar a altura de uma janela com minimoldura. Por padrão, a altura é definida como SM_CYSMCAPTION. Para obter mais informações, consulte [função GetSystemMetrics](https://msdn.microsoft.com/library/windows/desktop/ms724385).  
   
 ##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect  
  Calcula o retângulo delimitador de uma legenda de janela com minimoldura.  

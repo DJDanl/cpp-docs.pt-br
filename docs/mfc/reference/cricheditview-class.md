@@ -110,12 +110,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ece09b51dba7be272a208478d48196024189180e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 2f2be7e74de20c1ecac2ea0a58c167cd7384e89a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853499"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212352"
 ---
 # <a name="cricheditview-class"></a>Classe CRichEditView
 Com o [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) e [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md), fornece a funcionalidade do controle de edição rica dentro do contexto da arquitetura de exibição de documento do MFC.  
@@ -344,16 +344,16 @@ CHARFORMAT2& GetCharFormatSelection();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) estrutura que contém o caractere de formatação de atributos da seleção atual.  
+ Um [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) estrutura que contém o caractere de formatação de atributos da seleção atual.  
   
 ### <a name="remarks"></a>Comentários  
- Para obter mais informações, consulte o [EM_GETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb788026) mensagem e o [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) estrutura no SDK do Windows.  
+ Para obter mais informações, consulte o [EM_GETCHARFORMAT](/windows/desktop/Controls/em-getcharformat) mensagem e o [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) estrutura no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#152](../../mfc/codesnippet/cpp/cricheditview-class_2.cpp)]  
   
 ##  <a name="getclipboarddata"></a>  CRichEditView::GetClipboardData  
- O framework chama essa função como parte do processamento de [IRichEditOleCallback::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774315).  
+ O framework chama essa função como parte do processamento de [IRichEditOleCallback::GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getclipboarddata).  
   
 ```  
 virtual HRESULT GetClipboardData(
@@ -365,7 +365,7 @@ virtual HRESULT GetClipboardData(
   
 ### <a name="parameters"></a>Parâmetros  
  *lpchrg*  
- Ponteiro para o [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) estrutura especificando o intervalo de caracteres (e itens OLE) para copiar para o objeto de dados especificado por *lplpdataobj*.  
+ Ponteiro para o [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) estrutura especificando o intervalo de caracteres (e itens OLE) para copiar para o objeto de dados especificado por *lplpdataobj*.  
   
  *dwReco*  
  Sinalizador de operação de área de transferência. Pode ser um destes valores.  
@@ -381,23 +381,23 @@ virtual HRESULT GetClipboardData(
 - RECO_PASTE colar da área de transferência.  
   
  *lpRichDataObj*  
- Ponteiro para um [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) controle de edição de objeto que contém os dados de área de transferência da sofisticada ( [IRichEditOle::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774341)).  
+ Ponteiro para um [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) controle de edição de objeto que contém os dados de área de transferência da sofisticada ( [IRichEditOle::GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditole-getclipboarddata)).  
   
  *lplpdataobj*  
  Ponteiro para a variável de ponteiro que recebe o endereço do `IDataObject` objeto que representa o intervalo especificado em de *lpchrg* parâmetro. O valor de *lplpdataobj* será ignorado se um erro será retornado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um valor HRESULT o sucesso da operação de emissão de relatórios. Para obter mais informações sobre o HRESULT, consulte [estrutura de códigos de erro COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) no SDK do Windows.  
+ Um valor HRESULT o sucesso da operação de emissão de relatórios. Para obter mais informações sobre o HRESULT, consulte [estrutura de códigos de erro COM](/windows/desktop/com/structure-of-com-error-codes) no SDK do Windows.  
   
 ### <a name="remarks"></a>Comentários  
  Se o valor de retorno indica êxito, `IRichEditOleCallback::GetClipboardData` retorna o `IDataObject` acessado por *lplpdataobj*; caso contrário, ele retornará o acessados por *lpRichDataObj*. Substitua essa função para fornecer seus próprios dados de área de transferência. A implementação padrão dessa função retornará E_NOTIMPL.  
   
  Isso é um avançado substituível.  
   
- Para obter mais informações, consulte [IRichEditOle::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774341), [IRichEditOleCallback::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774315), e [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) no SDK do Windows e consulte [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) no Windows SDK.  
+ Para obter mais informações, consulte [IRichEditOle::GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditole-getclipboarddata), [IRichEditOleCallback::GetClipboardData](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getclipboarddata), e [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) no SDK do Windows e consulte [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) no Windows SDK.  
   
 ##  <a name="getcontextmenu"></a>  CRichEditView::GetContextMenu  
- O framework chama essa função como parte do processamento de [IRichEditOleCallback::GetContextMenu](http://msdn.microsoft.com/library/windows/desktop/bb774317).  
+ O framework chama essa função como parte do processamento de [IRichEditOleCallback::GetContextMenu](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu).  
   
 ```  
 virtual HMENU GetContextMenu(
@@ -414,7 +414,7 @@ virtual HMENU GetContextMenu(
  Ponteiro para um `OLEOBJECT` estrutura especificando o primeiro objeto OLE selecionado se a seleção contém um ou mais itens OLE. Se a seleção não contém itens, *lpoleobj* é NULL. O `OLEOBJECT` estrutura contém um ponteiro para um objeto OLE v-table.  
   
  *lpchrg*  
- Ponteiro para um [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) estrutura que contém a seleção atual.  
+ Ponteiro para um [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) estrutura que contém a seleção atual.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Identificador para o menu de contexto.  
@@ -436,7 +436,7 @@ virtual HMENU GetContextMenu(
   
  A implementação padrão retorna NULL. Isso é um avançado substituível.  
   
- Para obter mais informações, consulte [IRichEditOleCallback::GetContextMenu](http://msdn.microsoft.com/library/windows/desktop/bb774317) e [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) no SDK do Windows.  
+ Para obter mais informações, consulte [IRichEditOleCallback::GetContextMenu](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu) e [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) no SDK do Windows.  
   
  Para obter mais informações sobre o `OLEOBJECT` de tipo, consulte o artigo de estruturas de dados OLE e alocação de estrutura na *Base de dados de Conhecimento OLE*.  
   
@@ -504,10 +504,10 @@ PARAFORMAT2& GetParaFormatSelection();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) estrutura que contém os atributos da seleção atual de formatação de parágrafo.  
+ Um [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) estrutura que contém os atributos da seleção atual de formatação de parágrafo.  
   
 ### <a name="remarks"></a>Comentários  
- Para obter mais informações, consulte [EM_GETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774182) mensagem e [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) estrutura no SDK do Windows.  
+ Para obter mais informações, consulte [EM_GETPARAFORMAT](/windows/desktop/Controls/em-getparaformat) mensagem e [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) estrutura no SDK do Windows.  
   
 ##  <a name="getprintrect"></a>  CRichEditView::GetPrintRect  
  Chame essa função para recuperar os limites da área de impressão dentro do retângulo de página.  
@@ -576,7 +576,7 @@ long GetTextLengthEx(
   
 ### <a name="parameters"></a>Parâmetros  
  *dwFlags*  
- Valor que especifica o método a ser usada para determinar o comprimento do texto. Esse membro pode ser um ou mais dos valores listados no membro de sinalizadores [GETTEXTLENGTHEX](http://msdn.microsoft.com/library/windows/desktop/bb787915) descrito no SDK do Windows.  
+ Valor que especifica o método a ser usada para determinar o comprimento do texto. Esse membro pode ser um ou mais dos valores listados no membro de sinalizadores [GETTEXTLENGTHEX](/windows/desktop/api/richedit/ns-richedit-_gettextlengthex) descrito no SDK do Windows.  
   
  *uCodePage*  
  Página de código para tradução (CP_ACP página de código ANSI, 1200 para Unicode).  
@@ -585,7 +585,7 @@ long GetTextLengthEx(
  O número de caracteres ou bytes no controle de edição. Se os sinalizadores incompatíveis foram definidos no *dwFlags*, essa função membro retornará E_INVALIDARG.  
   
 ### <a name="remarks"></a>Comentários  
- `GetTextLengthEx` oferece outras maneiras de determinar o comprimento do texto. Ele dá suporte a funcionalidade avançada Editar 2.0. Para obter mais informações, consulte [sobre como editar controles sofisticados](http://msdn.microsoft.com/library/windows/desktop/bb787873) no SDK do Windows.  
+ `GetTextLengthEx` oferece outras maneiras de determinar o comprimento do texto. Ele dá suporte a funcionalidade avançada Editar 2.0. Para obter mais informações, consulte [sobre como editar controles sofisticados](/windows/desktop/Controls/about-rich-edit-controls) no SDK do Windows.  
   
 ##  <a name="insertfileasobject"></a>  CRichEditView::InsertFileAsObject  
  Chame essa função para inserir o arquivo especificado (como uma [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md) objeto) em uma avançada Editar modo de exibição.  
@@ -613,7 +613,7 @@ HRESULT InsertItem(CRichEditCntrItem* pItem);
  Um valor HRESULT que indica o sucesso da inserção.  
   
 ### <a name="remarks"></a>Comentários  
- Para obter mais informações sobre o HRESULT, consulte [estrutura de códigos de erro COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) no SDK do Windows.  
+ Para obter mais informações sobre o HRESULT, consulte [estrutura de códigos de erro COM](/windows/desktop/com/structure-of-com-error-codes) no SDK do Windows.  
   
 ##  <a name="isricheditformat"></a>  CRichEditView::IsRichEditFormat  
  Chame essa função para determinar se *cf* é um formato de área de transferência que é o texto, RTF ou rich text com itens OLE.  
@@ -691,7 +691,7 @@ void OnCharEffect(
 ### <a name="remarks"></a>Comentários  
  Cada chamada para essa função alterna os efeitos de formatação especificados para a seleção atual.  
   
- Para obter mais informações sobre o *dwMask* e *dwEffect* parâmetros e seus valores possíveis, consulte os membros de dados correspondentes de [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) no SDK do Windows.  
+ Para obter mais informações sobre o *dwMask* e *dwEffect* parâmetros e seus valores possíveis, consulte os membros de dados correspondentes de [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#155](../../mfc/codesnippet/cpp/cricheditview-class_5.cpp)]  
@@ -745,7 +745,7 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
   
 ### <a name="parameters"></a>Parâmetros  
  *lpStg*  
- Ponteiro para um [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) objeto.  
+ Ponteiro para um [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se bem-sucedido; Caso contrário, 0;  
@@ -755,7 +755,7 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
   
  Isso é um avançado substituível.  
   
- Para obter mais informações, consulte [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015) no SDK do Windows.  
+ Para obter mais informações, consulte [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) no SDK do Windows.  
   
 ##  <a name="onparaalign"></a>  CRichEditView::OnParaAlign  
  Chame essa função para alterar o alinhamento de parágrafo para os parágrafos selecionados.  
@@ -864,9 +864,9 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
  O texto que não foi encontrado.  
   
 ### <a name="remarks"></a>Comentários  
- Substituir essa função para alterar a notificação de saída de um [MessageBeep](http://msdn.microsoft.com/library/windows/desktop/ms680356).  
+ Substituir essa função para alterar a notificação de saída de um [MessageBeep](/windows/desktop/api/winuser/nf-winuser-messagebeep).  
   
- Para obter mais informações, consulte [MessageBeep](http://msdn.microsoft.com/library/windows/desktop/ms680356) no SDK do Windows.  
+ Para obter mais informações, consulte [MessageBeep](/windows/desktop/api/winuser/nf-winuser-messagebeep) no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#157](../../mfc/codesnippet/cpp/cricheditview-class_7.cpp)]  
@@ -894,7 +894,7 @@ void OnUpdateCharEffect(
 ### <a name="remarks"></a>Comentários  
  A máscara *dwMask* Especifica qual caractere atributos de formatação para verificar. Os sinalizadores *dwEffect* lista o atributos para limpar/conjunto de formatação de caractere.  
   
- Para obter mais informações sobre o *dwMask* e *dwEffect* parâmetros e seus valores possíveis, consulte os membros de dados correspondentes de [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) no SDK do Windows.  
+ Para obter mais informações sobre o *dwMask* e *dwEffect* parâmetros e seus valores possíveis, consulte os membros de dados correspondentes de [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#158](../../mfc/codesnippet/cpp/cricheditview-class_8.cpp)]  
@@ -1003,7 +1003,7 @@ virtual HRESULT QueryAcceptData(
   
 ### <a name="parameters"></a>Parâmetros  
  *lpdataobj*  
- Ponteiro para o [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) à consulta.  
+ Ponteiro para o [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) à consulta.  
   
  *lpcfFormat*  
  Ponteiro para o formato de dados aceitável.  
@@ -1023,7 +1023,7 @@ virtual HRESULT QueryAcceptData(
 ### <a name="remarks"></a>Comentários  
  Substitua essa função para lidar com uma organização diferente dos itens de COM em sua classe derivada de documento. Isso é um avançado substituível.  
   
- Para obter mais informações sobre o HRESULT e `IDataObject`, consulte [estrutura de códigos de erro COM](http://msdn.microsoft.com/library/windows/desktop/ms690088) e [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421), respectivamente, no SDK do Windows.  
+ Para obter mais informações sobre o HRESULT e `IDataObject`, consulte [estrutura de códigos de erro COM](/windows/desktop/com/structure-of-com-error-codes) e [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject), respectivamente, no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#160](../../mfc/codesnippet/cpp/cricheditview-class_10.cpp)]  
@@ -1037,12 +1037,12 @@ void SetCharFormat(CHARFORMAT2 cf);
   
 ### <a name="parameters"></a>Parâmetros  
  *CF*  
- [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) estrutura que contém o caractere padrão novos atributos de formatação.  
+ [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) estrutura que contém o caractere padrão novos atributos de formatação.  
   
 ### <a name="remarks"></a>Comentários  
  Somente os atributos especificados pela `dwMask` membro *cf* são alteradas por essa função.  
   
- Para obter mais informações, consulte [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) mensagem e [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) estrutura no SDK do Windows.  
+ Para obter mais informações, consulte [EM_SETCHARFORMAT](/windows/desktop/Controls/em-setcharformat) mensagem e [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) estrutura no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#152](../../mfc/codesnippet/cpp/cricheditview-class_2.cpp)]  
@@ -1092,7 +1092,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
   
 ### <a name="parameters"></a>Parâmetros  
  *PF*  
- [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) estrutura que contém o novo padrão de atributos de formatação de parágrafo.  
+ [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) estrutura que contém o novo padrão de atributos de formatação de parágrafo.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se bem-sucedido; Caso contrário, 0.  
@@ -1100,7 +1100,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ### <a name="remarks"></a>Comentários  
  Somente os atributos especificados pela `dwMask` membro *pf* são alteradas por essa função.  
   
- Para obter mais informações, consulte [EM_SETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774276) mensagem e [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) estrutura no SDK do Windows.  
+ Para obter mais informações, consulte [EM_SETPARAFORMAT](/windows/desktop/Controls/em-setparaformat) mensagem e [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) estrutura no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#162](../../mfc/codesnippet/cpp/cricheditview-class_12.cpp)]  

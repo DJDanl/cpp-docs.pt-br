@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb1e8085810eea78d18a5ef68f18e4323ec9d3f4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 936777adf9863c233303c4b78ffd9e45aa0f3b95
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605415"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209525"
 ---
 # <a name="lcid"></a>lcid
 
@@ -36,7 +36,7 @@ Permite que você passar um identificador de localidade para uma função.
 
 ## <a name="remarks"></a>Comentários
 
-O **lcid** atributo C++ implementa a funcionalidade da [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) atributo MIDL. Se você quiser implementar a localidade para um bloco de biblioteca, use o **lcid =** `lcid` parâmetro para o [módulo](../windows/module-cpp.md) atributo.
+O **lcid** atributo C++ implementa a funcionalidade da [lcid](/windows/desktop/Midl/lcid) atributo MIDL. Se você quiser implementar a localidade para um bloco de biblioteca, use o **lcid =** `lcid` parâmetro para o [módulo](../windows/module-cpp.md) atributo.
 
 ## <a name="example"></a>Exemplo
 

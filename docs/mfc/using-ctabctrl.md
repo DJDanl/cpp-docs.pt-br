@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fd34d88a035e4180eff955238004a18d9af09a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9918bfa73249812a55ce2b8f5718a53ee9cec087
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383676"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217916"
 ---
 # <a name="using-ctabctrl"></a>Usando CTabCtrl
-Um "controle de guia" é análogo a rotulado pastas em um arquivo de gabinete ou divisores em um bloco de anotações. Use o controle de guia, representado pela classe [CTabCtrl](../mfc/reference/ctabctrl-class.md), para mostrar várias páginas de informações ou controles a um usuário, um de cada vez, em um formato que sugere uma relação lógica entre cada página ou pares.  
+Um "controle de guia" é análogo a pastas rotuladas de um arquivo ou os divisores de um bloco de anotações. Usar o controle de guia, representado pela classe [CTabCtrl](../mfc/reference/ctabctrl-class.md), para mostrar várias páginas de informações ou controles a um usuário, um de cada vez, em um formato que sugere uma relação lógica entre cada página ou mesmo nível.  
   
- Para obter mais informações sobre controles de guia, consulte [controles de guia](http://msdn.microsoft.com/library/windows/desktop/bb760550) no SDK do Windows.  
+ Para obter mais informações sobre controles de guia, consulte [controles de guia](/windows/desktop/Controls/tab-controls) no SDK do Windows.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
   

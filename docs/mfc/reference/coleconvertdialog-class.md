@@ -32,15 +32,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd2b9e09ed536d30729d39d53dc983d02cf0c6d7
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4c63eda0bbe734bd7c9f0a972e6756a444369123
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849676"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212424"
 ---
 # <a name="coleconvertdialog-class"></a>Classe COleConvertDialog
-Para obter mais informações, consulte o [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) estrutura no SDK do Windows.  
+Para obter mais informações, consulte o [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) estrutura no SDK do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -135,7 +135,7 @@ explicit COleConvertDialog (
 ### <a name="remarks"></a>Comentários  
  Para exibir a caixa de diálogo, chame o [DoModal](#domodal) função.  
   
- Para obter mais informações, consulte [chave CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) e o [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) estrutura.  
+ Para obter mais informações, consulte [chave CLSID](/windows/desktop/com/clsid-key-hklm) e o [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) estrutura.  
   
 ##  <a name="doconvert"></a>  COleConvertDialog::DoConvert  
  Chame essa função, após retornar com êxito do [DoModal](#domodal), seja para converter ou ativar um objeto do tipo [COleClientItem](../../mfc/reference/coleclientitem-class.md).  
@@ -168,7 +168,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL se o usuário cancelou a caixa de diálogo.  
   
-- IDABORT se ocorreu um erro. Se IDABORT for retornado, chame o [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) a função de membro para obter mais informações sobre o tipo de erro que ocorreu. Para obter uma lista de possíveis erros, consulte o [OleUIConvert](http://msdn.microsoft.com/library/windows/desktop/ms680694) função no SDK do Windows.  
+- IDABORT se ocorreu um erro. Se IDABORT for retornado, chame o [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) a função de membro para obter mais informações sobre o tipo de erro que ocorreu. Para obter uma lista de possíveis erros, consulte o [OleUIConvert](/windows/desktop/api/oledlg/nf-oledlg-oleuiconverta) função no SDK do Windows.  
   
 ### <a name="remarks"></a>Comentários  
  Se você quiser inicializar os vários controles de caixa de diálogo definindo membros do [m_cv](#m_cv) estrutura, você deve fazer isso antes de chamar `DoModal`, mas depois que o objeto de caixa de diálogo é construído.  
@@ -188,7 +188,7 @@ REFCLSID GetClassID() const;
 ### <a name="remarks"></a>Comentários  
  Chamada para essa função somente após [DoModal](#domodal) retorna IDOK.  
   
- Para obter mais informações, consulte [chave CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) no SDK do Windows.  
+ Para obter mais informações, consulte [chave CLSID](/windows/desktop/com/clsid-key-hklm) no SDK do Windows.  
   
 ##  <a name="getdrawaspect"></a>  COleConvertDialog::GetDrawAspect  
  Chame essa função para determinar se o usuário optou por exibir o item selecionado como um ícone.  
@@ -207,7 +207,7 @@ DVASPECT GetDrawAspect() const;
 ### <a name="remarks"></a>Comentários  
  Chamada para essa função somente após [DoModal](#domodal) retorna IDOK.  
   
- Para obter mais informações sobre o aspecto de desenho, consulte o [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) estrutura de dados no SDK do Windows.  
+ Para obter mais informações sobre o aspecto de desenho, consulte o [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) estrutura de dados no SDK do Windows.  
   
 ##  <a name="geticonicmetafile"></a>  COleConvertDialog::GetIconicMetafile  
  Chame essa função para obter um identificador para o metarquivo que contém o aspecto icônico do item selecionado.  
@@ -258,7 +258,7 @@ OLEUICONVERT m_cv;
 ### <a name="remarks"></a>Comentários  
  Os membros dessa estrutura podem ser modificados diretamente ou através de funções de membro.  
   
- Para obter mais informações, consulte o [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) estrutura no SDK do Windows.  
+ Para obter mais informações, consulte o [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) estrutura no SDK do Windows.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe COleDialog](../../mfc/reference/coledialog-class.md)   

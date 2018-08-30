@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49e07fd632459e1d668d0201c821065bfaeea72c
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: e4bdae31c3a2f84dd959baf49fae7e43a6cc9eb0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42573300"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206391"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -93,7 +93,7 @@ Tamanho da pila para um novo thread ou 0.
 Lista de argumentos a serem passados para um novo thread, ou **nulo**.
 
 *Segurança*<br/>
-Ponteiro para uma estrutura [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) que determina se o identificador retornado pode ser herdado por processos filhos. Se *segurança* é **nulo**, o identificador não pode ser herdado. Deve ser **nulo** para aplicativos do Windows 95.
+Ponteiro para uma estrutura [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) que determina se o identificador retornado pode ser herdado por processos filhos. Se *segurança* é **nulo**, o identificador não pode ser herdado. Deve ser **nulo** para aplicativos do Windows 95.
 
 *initflag*<br/>
 Sinalizadores que controlam o estado inicial de um novo thread. Definir *initflag* como 0 para executar imediatamente, ou a **CREATE_SUSPENDED** para criar o thread em um estado suspenso; use [ResumeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-resumethread) para executar o thread. Definir *initflag* à **STACK_SIZE_PARAM_IS_A_RESERVATION** sinalizador usar *stack_size* conforme o tamanho da pilha em bytes de reserva inicial; se esse sinalizador é não especificado, *stack_size* Especifica o tamanho de confirmação.
@@ -131,7 +131,7 @@ Ele é mais seguro usar **beginthreadex** que **beginthread**. Se o thread que �
 
 Você pode chamar [endthread](endthread-endthreadex.md) ou **endthreadex** explicitamente para terminar um thread; no entanto, **endthread** ou **endthreadex** é chamado automaticamente quando o thread volta da rotina que é passada como um parâmetro. Encerrar um thread com uma chamada para **endthread** ou **endthreadex** ajuda a garantir que a recuperação correta de recursos são alocados para o thread.
 
-**endthread** fecha automaticamente o identificador de thread, enquanto **endthreadex** não faz isso. Portanto, quando você usa **beginthread** e **endthread**, não feche explicitamente o identificador de thread chamando Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API. Esse comportamento é diferente do comportamento da API [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) do Win32.
+**endthread** fecha automaticamente o identificador de thread, enquanto **endthreadex** não faz isso. Portanto, quando você usa **beginthread** e **endthread**, não feche explicitamente o identificador de thread chamando Win32 [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API. Esse comportamento é diferente do comportamento da API [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) do Win32.
 
 > [!NOTE]
 > Arquivos executáveis vinculados a libcmt. lib, não chame Win32 **ExitThread** API para que você não impedir que o sistema de tempo de execução recupere recursos alocados. **endthread** e **endthreadex** recuperar os recursos alocados ao thread e, em seguida, chame **ExitThread**.
@@ -335,4 +335,4 @@ Counter should be 1000000; it is-> 1000000
 - [_endthread, _endthreadex](endthread-endthreadex.md)
 - [abort](abort.md)
 - [exit, _Exit, _exit](exit-exit-exit.md)
-- [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)
+- [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread)

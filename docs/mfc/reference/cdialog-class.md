@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb8dd6fbb4cbbcea6e452afadff5b0c0e081d34e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ff3bc9ea331be6c25be80b21c14a309d47718c8e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339404"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217327"
 ---
 # <a name="cdialog-class"></a>Classe CDialog
 A classe base usada para exibir caixas de diálogo na tela.  
@@ -115,7 +115,7 @@ class CDialog : public CWnd
   
  Para criar uma caixa de diálogo modal, construa um objeto na pilha usando o construtor para a sua classe derivada de caixa de diálogo e, em seguida, chame `DoModal` para criar a janela de diálogo e seus controles. Se você quiser criar uma caixa de diálogo sem janela restrita, chame `Create` no construtor da sua classe de caixa de diálogo.  
   
- Você também pode criar um modelo na memória usando um [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) estrutura de dados, conforme descrito no SDK do Windows. Depois que você construir um `CDialog` do objeto, chame [CreateIndirect](#createindirect) para criar uma sem janela restrita caixa de diálogo ou chamada [InitModalIndirect](#initmodalindirect) e [DoModal](#domodal) para criar uma modal caixa de diálogo.  
+ Você também pode criar um modelo na memória usando um [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) estrutura de dados, conforme descrito no SDK do Windows. Depois que você construir um `CDialog` do objeto, chame [CreateIndirect](#createindirect) para criar uma sem janela restrita caixa de diálogo ou chamada [InitModalIndirect](#initmodalindirect) e [DoModal](#domodal) para criar uma modal caixa de diálogo.  
   
  O mapa de dados do exchange e a validação é escrito em uma substituição do `CWnd::DoDataExchange` que é adicionado à sua nova classe de caixa de diálogo. Consulte a [DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange) função de membro em `CWnd` para obter mais informações sobre a funcionalidade de troca e validação.  
   
@@ -220,7 +220,7 @@ virtual BOOL Create(
   
  O `Create` função membro retorna imediatamente depois que ele cria a caixa de diálogo.  
   
- Use o estilo WS_VISIBLE no modelo de caixa de diálogo se a caixa de diálogo deve aparecer quando a janela pai é criada. Caso contrário, você deve chamar `ShowWindow`. Para obter ainda mais os estilos de caixa de diálogo e seu aplicativo, consulte o [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) estrutura no SDK do Windows e [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles) no *referência da MFC*.  
+ Use o estilo WS_VISIBLE no modelo de caixa de diálogo se a caixa de diálogo deve aparecer quando a janela pai é criada. Caso contrário, você deve chamar `ShowWindow`. Para obter ainda mais os estilos de caixa de diálogo e seu aplicativo, consulte o [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) estrutura no SDK do Windows e [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles) no *referência da MFC*.  
   
  Use o `CWnd::DestroyWindow` função para destruir uma caixa de diálogo criada pela `Create` função.  
   
@@ -244,7 +244,7 @@ virtual BOOL CreateIndirect(
   
 ### <a name="parameters"></a>Parâmetros  
  *lpDialogTemplate*  
- Aponta para a memória que contém um modelo de caixa de diálogo usado para criar a caixa de diálogo. Esse modelo é na forma de um [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) informações de estrutura e o controle, conforme descrito no SDK do Windows.  
+ Aponta para a memória que contém um modelo de caixa de diálogo usado para criar a caixa de diálogo. Esse modelo é na forma de um [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) informações de estrutura e o controle, conforme descrito no SDK do Windows.  
   
  *pParentWnd*  
  Aponta para o objeto de janela pai do objeto de caixa de diálogo (do tipo [CWnd](../../mfc/reference/cwnd-class.md)). Se for NULL, a janela do pai do objeto de caixa de diálogo é definida como a janela principal do aplicativo.  
@@ -261,7 +261,7 @@ virtual BOOL CreateIndirect(
 ### <a name="remarks"></a>Comentários  
  O `CreateIndirect` função membro retorna imediatamente depois que ele cria a caixa de diálogo.  
   
- Use o estilo WS_VISIBLE no modelo de caixa de diálogo se a caixa de diálogo deve aparecer quando a janela pai é criada. Caso contrário, você deve chamar `ShowWindow` para fazer com que ele seja exibido. Para obter mais informações sobre como você pode especificar outros estilos de caixa de diálogo no modelo, consulte o [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) estrutura no SDK do Windows.  
+ Use o estilo WS_VISIBLE no modelo de caixa de diálogo se a caixa de diálogo deve aparecer quando a janela pai é criada. Caso contrário, você deve chamar `ShowWindow` para fazer com que ele seja exibido. Para obter mais informações sobre como você pode especificar outros estilos de caixa de diálogo no modelo, consulte o [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) estrutura no SDK do Windows.  
   
  Use o `CWnd::DestroyWindow` função para destruir uma caixa de diálogo criada pela `CreateIndirect` função.  
   
@@ -275,7 +275,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Uma **int** valor que especifica o valor da *Nresultado* parâmetro passado para o [CDialog::EndDialog](#enddialog) função de membro, que é usada para fechar a caixa de diálogo. O valor retornado será -1 se a função não foi possível criar a caixa de diálogo ou IDABORT se ocorreu algum outro erro, caso em que a janela de saída conterá informações de erro [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
+ Uma **int** valor que especifica o valor da *Nresultado* parâmetro passado para o [CDialog::EndDialog](#enddialog) função de membro, que é usada para fechar a caixa de diálogo. O valor retornado será -1 se a função não foi possível criar a caixa de diálogo ou IDABORT se ocorreu algum outro erro, caso em que a janela de saída conterá informações de erro [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
 ### <a name="remarks"></a>Comentários  
  Essa função membro lida com toda a interação com o usuário enquanto a caixa de diálogo está ativa. Isso faz com que a caixa de diálogo modal; ou seja, o usuário não pode interagir com outras janelas, até que a caixa de diálogo é fechada.  
@@ -358,7 +358,7 @@ BOOL InitModalIndirect(
   
 ### <a name="parameters"></a>Parâmetros  
  *lpDialogTemplate*  
- Aponta para a memória que contém um modelo de caixa de diálogo usado para criar a caixa de diálogo. Esse modelo é na forma de um [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) informações de estrutura e o controle, conforme descrito no SDK do Windows.  
+ Aponta para a memória que contém um modelo de caixa de diálogo usado para criar a caixa de diálogo. Esse modelo é na forma de um [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) informações de estrutura e o controle, conforme descrito no SDK do Windows.  
   
  *hDialogTemplate*  
  Contém um identificador para a memória global que contém um modelo de caixa de diálogo. Esse modelo é na forma de um `DLGTEMPLATE` estrutura e os dados para cada controle na caixa de diálogo.  

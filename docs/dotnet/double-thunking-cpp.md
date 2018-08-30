@@ -19,29 +19,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 47d5bbbecc8e1b9743c543a503df1a0afa0dc0ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3e37b3b7fc477de0bdbeb00a15ebd86e6c44d25c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111202"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216631"
 ---
 # <a name="double-thunking-c"></a>Conversão dupla (C++)
-Conversão dupla refere-se a perda de desempenho que você pode experimentar quando uma chamada de função em chamadas um contexto gerenciado um Visual C++ gerenciado função e onde a execução de programa chama o ponto de entrada nativo da função para chamar a função gerenciada. Este tópico discute onde ocorre a conversão dupla e como evitá-lo para melhorar o desempenho.  
+Conversão dupla se refere à perda de desempenho que você pode enfrentar quando uma chamada de função em um chamadas de contexto gerenciado um Visual C++ gerenciado função e onde a execução do programa chama o ponto de entrada nativo da função para chamar a função gerenciada. Este tópico discute onde ocorre a conversão dupla e como evitá-lo para melhorar o desempenho.  
   
 ## <a name="remarks"></a>Comentários  
- Por padrão, ao compilar com **/clr**, a definição de uma função gerenciada faz com que o compilador gere um ponto de entrada gerenciado e um ponto de entrada nativo. Isso permite que a função gerenciada a ser chamado de sites de chamada gerenciado e nativo. No entanto, quando existe um ponto de entrada nativo, ele pode ser o ponto de entrada para todas as chamadas para a função. Se uma função de chamada for gerenciada, o ponto de entrada nativo chamará o ponto de entrada gerenciado. Na verdade, duas chamadas são necessários para invocar a função (portanto, duplos conversão). Por exemplo, funções virtuais sempre são chamadas por meio de um ponto de entrada nativo.  
+ Por padrão, ao compilar com **/clr**, a definição de uma função gerenciada faz com que o compilador gere um ponto de entrada gerenciado e um ponto de entrada nativo. Isso permite que a função gerenciada a ser chamado de sites de chamada nativa e gerenciada. No entanto, quando existe um ponto de entrada nativo, ele pode ser o ponto de entrada para todas as chamadas para a função. Se uma função de chamada for gerenciada, o ponto de entrada nativo, em seguida, chamará o ponto de entrada gerenciado. Na verdade, duas chamadas são necessários para invocar a função (portanto, duplas conversão dupla). Por exemplo, as funções virtuais sempre são chamadas por meio de um ponto de entrada nativo.  
   
- Uma resolução é informar ao compilador para não gerar um ponto de entrada nativo para uma função gerenciada, que a função apenas ser chamada em um contexto de gerenciado usando o [clrcall](../cpp/clrcall.md) convenção de chamada.  
+ Uma resolução é dizer ao compilador para não gerar um ponto de entrada nativo para uma função gerenciada, que a função somente será chamada de um contexto gerenciado, usando o [clrcall](../cpp/clrcall.md) convenção de chamada.  
   
- Da mesma forma, se você exportar ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) uma função gerenciada, um ponto de entrada nativo é gerado e qualquer função que importa e chama a função será chamada através do ponto de entrada nativo. Para evitar dupla nessa situação, não use semântica de importação/exportação nativo; simplesmente referencie os metadados por meio de `#using` (consulte [#using diretiva](../preprocessor/hash-using-directive-cpp.md)).  
+ Da mesma forma, se você exportar ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) uma função gerenciada, um ponto de entrada nativo é gerado e qualquer função que importa e chama essa função chamará o ponto de entrada nativo. Para evitar a dupla nessa situação, não use semântica de importação/exportação nativo; Basta referenciar os metadados por meio `#using` (consulte [# diretiva using](../preprocessor/hash-using-directive-cpp.md)).  
   
- O compilador foi atualizado para reduzir dupla desnecessários. Por exemplo, qualquer função com um tipo gerenciado na assinatura (incluindo o tipo de retorno) implicitamente será marcada como `__clrcall`. Para obter mais informações sobre a eliminação de conversão dupla, consulte [ http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx ](http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).  
+ O compilador foi atualizado para reduzir a dupla desnecessária. Por exemplo, qualquer função com um tipo gerenciado na assinatura (incluindo o tipo de retorno) implicitamente será marcada como `__clrcall`. Para obter mais informações sobre a eliminação de duas conversões, consulte [ https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx ](https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).  
   
 ## <a name="example"></a>Exemplo  
   
 ### <a name="description"></a>Descrição  
- O exemplo a seguir demonstra dupla. Quando compilado nativo (sem **/clr**), a chamada à função virtual em `main` gera uma chamada para `T`do construtor de cópia e uma chamada para o destruidor. Comportamento semelhante é obtido quando a função virtual é declarada com **/clr** e `__clrcall`. No entanto, quando compilado apenas com **/clr**, a chamada de função gera uma chamada para o construtor de cópia, mas há outra chamada para o construtor de cópia devido à conversão de nativo para gerenciado.  
+ O exemplo a seguir demonstra a conversão dupla. Quando compilado nativo (sem **/clr**), a chamada para a função virtual na `main` gera uma chamada para `T`do construtor e uma chamada para o destruidor de copiar. Um comportamento semelhante é obtido quando a função virtual é declarada com **/clr** e `__clrcall`. No entanto, quando apenas compilado com **/clr**, a chamada de função gera uma chamada para o construtor de cópia, mas há outra chamada para o construtor de cópia devido à conversão de nativo para gerenciado.  
   
 ### <a name="code"></a>Código  
   
@@ -98,7 +98,7 @@ __thiscall T::~T(void)
 ## <a name="example"></a>Exemplo  
   
 ### <a name="description"></a>Descrição  
- O exemplo anterior demonstrou a existência de dupla. Este exemplo mostra o efeito. O `for` loop chama a função virtual e o tempo de execução de relatórios do programa. O tempo mais lento é relatado quando o programa é compilado com **/clr**. Os tempos mais rápidos são relatados ao compilar sem **/clr** ou se a função virtual for declarada com `__clrcall`.  
+ O exemplo anterior demonstrou a existência de conversão dupla. Este exemplo mostra seu efeito. O `for` loop chama a função virtual e o tempo de execução de relatórios do programa. A hora mais lenta é relatada quando o programa é compilado com **/clr**. Os tempos mais rápidos são relatados ao compilar sem **/clr** ou se a função virtual é declarada com `__clrcall`.  
   
 ### <a name="code"></a>Código  
   

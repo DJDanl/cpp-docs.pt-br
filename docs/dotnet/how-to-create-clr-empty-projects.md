@@ -16,26 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c6910d8ff234573a6cb05c68275f81641831e73b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcb104b5265d79c6eac41b7632a12d99a8ec236b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33128508"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212703"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>Como criar projetos vazios CLR
-Para criar um projeto vazio do CLR, use o **projeto vazio do CLR** modelo, que está disponível a partir de **novo projeto** caixa de diálogo.  
+Para criar um projeto CLR vazio, use o **projeto CLR vazio** modelo, que está disponível a partir de **novo projeto** caixa de diálogo.  
   
 > [!NOTE]
->  A aparência dos recursos no IDE pode depender de suas configurações ativas ou edição e pode diferir daqueles descritos na Ajuda. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  A aparência dos recursos no IDE pode depender de suas configurações ativas ou edição e pode diferir dos descritos na Ajuda. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### <a name="to-create-a-clr-empty-project"></a>Para criar um projeto vazio do CLR  
+### <a name="to-create-a-clr-empty-project"></a>Para criar um projeto CLR vazio  
   
 1.  No menu **Arquivo**, clique em **Novo** e clique em **Projeto**.  
   
      A caixa de diálogo **Novo Projeto** é exibida.  
   
-2.  Em **modelos instalados**, clique no **Visual C++** nó; em seguida, clique no **CLR** nó. Escolha o **projeto vazio do CLR** ícone.  
+2.  Sob **modelos instalados**, clique no **Visual C++** nó; em seguida, clique o **CLR** nó. Escolha o **projeto CLR vazio** ícone.  
   
 3.  No **nome** , digite um nome exclusivo para seu aplicativo.  
   

@@ -1,5 +1,5 @@
 ---
-title: Compilando C/C++ aplicativos isolados e Assemblies lado a lado | Microsoft Docs
+title: Criação de C/C++ de aplicativos isolados e Assemblies lado a lado | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,19 +19,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ca99de7403ad56ae82fdd25af8ff22167084b91
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b8d806af709d6d6e2a5754bc80a34a473900177f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361278"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212906"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Compilando aplicativos isolados do C/C++ e assemblies lado a lado
-Visual C++ dá suporte a um modelo de implantação para aplicativos de cliente do Windows com base na ideia de [aplicativos isolados](http://msdn.microsoft.com/library/aa375190) e [assemblies lado a lado](http://msdn.microsoft.com/library/ff951640). Por padrão, Visual C++ cria todos os aplicativos C/C++ nativo isolados como aplicativos que usam [manifestos](http://msdn.microsoft.com/library/aa375365) para descrever as suas dependências em bibliotecas do Visual C++.  
+Visual C++ oferece suporte a um modelo de implantação para aplicativos de cliente do Windows com base na ideia de [aplicativos isolados](/windows/desktop/SbsCs/isolated-applications) e [assemblies lado a lado](/windows/desktop/SbsCs/about-side-by-side-assemblies-). Por padrão, o Visual C++ compila todos os aplicativos C/C++ nativos como aplicativos isolados que usam [manifestos](https://msdn.microsoft.com/library/aa375365) para descrever suas dependências em bibliotecas do Visual C++.  
   
- A compilação de programas do C/C++ como aplicativos isolados apresenta muitas vantagens. Por exemplo, um aplicativo isolado não é afetado quando outros aplicativos do C/C++ instalam ou desinstalam bibliotecas do Visual C++. Visual bibliotecas C++ usadas por aplicativos isolados ainda podem ser redistribuídas na pasta local do aplicativo, ou pela instalação para o cache de assembly nativo (WinSxS); No entanto, manutenção das bibliotecas do Visual C++ para aplicativos já implantados podem ser simplificados usando um [arquivo de configuração do publicador](http://msdn.microsoft.com/library/aa375680). O modelo de implantação do aplicativo isolado facilita a garantia de que os aplicativos do C/C++ em execução em um computador específico usam a versão mais recente das bibliotecas do Visual C++, enquanto mantém aberta a possibilidade dos administradores de sistema e dos autores de aplicativos controlarem a associação de versão explícita dos aplicativos para suas DLLs dependentes.  
+ A compilação de programas do C/C++ como aplicativos isolados apresenta muitas vantagens. Por exemplo, um aplicativo isolado não é afetado quando outros aplicativos do C/C++ instalam ou desinstalam bibliotecas do Visual C++. Bibliotecas do Visual C++ usadas por aplicativos isolados ainda podem ser redistribuídas na pasta local do aplicativo ou pela instalação para o cache de assembly nativo (WinSxS); No entanto, a manutenção das bibliotecas do Visual C++ para aplicativos já implantados podem ser simplificados usando um [arquivo de configuração de publicador](/windows/desktop/SbsCs/publisher-configuration). O modelo de implantação do aplicativo isolado facilita a garantia de que os aplicativos do C/C++ em execução em um computador específico usam a versão mais recente das bibliotecas do Visual C++, enquanto mantém aberta a possibilidade dos administradores de sistema e dos autores de aplicativos controlarem a associação de versão explícita dos aplicativos para suas DLLs dependentes.  
   
- Esta seção aborda como é possível compilar o aplicativo do C/C++ como um aplicativo isolado e garantir que ele seja associado a bibliotecas do Visual C++ com um manifesto. As informações desta seção se aplicam principalmente a aplicativos do Visual C++ nativos ou não gerenciados. Para obter informações sobre como implantar aplicativos nativos compilados com o Visual C++, consulte [arquivos de redistribuição do Visual C++](../ide/redistributing-visual-cpp-files.md).  
+ Esta seção aborda como é possível compilar o aplicativo do C/C++ como um aplicativo isolado e garantir que ele seja associado a bibliotecas do Visual C++ com um manifesto. As informações desta seção se aplicam principalmente a aplicativos do Visual C++ nativos ou não gerenciados. Para obter informações sobre como implantar aplicativos nativos compilados com o Visual C++, consulte [redistribuindo arquivos do Visual C++](../ide/redistributing-visual-cpp-files.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Conceitos de aplicativos isolados e assemblies lado a lado](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)  
@@ -49,6 +49,6 @@ Visual C++ dá suporte a um modelo de implantação para aplicativos de cliente 
  [Solução de problemas de aplicativos isolados e assemblies lado a lado do C/C++](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)  
   
 ## <a name="related-sections"></a>Seções relacionadas  
- [Aplicativos isolados e Assemblies lado a lado](http://msdn.microsoft.com/library/dd408052)  
+ [Aplicativos isolados e Assemblies lado a lado](/windows/desktop/SbsCs/isolated-applications-and-side-by-side-assemblies-portal)  
   
- [Implantando aplicativos de área de trabalho](../ide/deploying-native-desktop-applications-visual-cpp.md)
+ [Implantando aplicativos da área de trabalho](../ide/deploying-native-desktop-applications-visual-cpp.md)

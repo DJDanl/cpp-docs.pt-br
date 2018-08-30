@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3f312267d83f73e30eecb569b50678e7cf5da5e7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 52fb779173565eaa35eec37da80c93ba0610c14f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607272"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199062"
 ---
 # <a name="public-c-attributes"></a>public (atributos C++)
 
@@ -36,7 +36,7 @@ Garante que um typedef entra em biblioteca de tipos, mesmo se ele não é refere
 
 ## <a name="remarks"></a>Comentários
 
-O **pública** atributo C++ tem a mesma funcionalidade que o [público](http://msdn.microsoft.com/library/windows/desktop/aa367150) atributo MIDL.
+O **pública** atributo C++ tem a mesma funcionalidade que o [público](/windows/desktop/Midl/public) atributo MIDL.
 
 ## <a name="example"></a>Exemplo
 

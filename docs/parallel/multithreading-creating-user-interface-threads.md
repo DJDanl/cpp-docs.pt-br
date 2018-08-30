@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 625518a76bb22c60a41175e649af7ae650161494
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: ad16b4955cf8128d4f54edceeadd4b6551bc6f14
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131554"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206508"
 ---
 # <a name="multithreading-creating-mfc-user-interface-threads"></a>Multithreading: Criando Threads de Interface do usuário do MFC
 Um thread de interface do usuário geralmente é usado para manipular a entrada do usuário e responder aos eventos de usuário, independentemente dos threads de execução de outras partes do aplicativo. O thread principal do aplicativo (fornecido na sua `CWinApp`-classe derivada) já é criada e iniciada para você. Este tópico descreve as etapas necessárias para criar threads adicionais da interface do usuário.  
@@ -49,13 +49,13 @@ O MFC fornece duas versões do `AfxBeginThread` por meio de sobrecarga de parâm
   
 - O [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) da classe derivada de `CWinThread`.  
   
-- (Opcional) O nível de prioridade desejada. O padrão é prioridade normal. Para obter mais informações sobre os níveis de prioridade disponíveis, consulte [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) no SDK do Windows.  
+- (Opcional) O nível de prioridade desejada. O padrão é prioridade normal. Para obter mais informações sobre os níveis de prioridade disponíveis, consulte [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) no SDK do Windows.  
   
 - (Opcional) O tamanho desejado de pilha do thread. O padrão é o mesmo tamanho de pilha do thread de criação.  
   
 - (Opcional) CREATE_SUSPENDED se você quiser que o thread a ser criado em um estado suspenso. O padrão é 0 ou iniciar o thread normalmente.  
   
-- (Opcional) Os atributos de segurança desejado. O padrão é o mesmo acesso que o thread pai. Para obter mais informações sobre o formato de informações de segurança, consulte [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) no SDK do Windows.  
+- (Opcional) Os atributos de segurança desejado. O padrão é o mesmo acesso que o thread pai. Para obter mais informações sobre o formato de informações de segurança, consulte [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) no SDK do Windows.  
   
 `AfxBeginThread` faz a maior parte do trabalho para você. Ele cria um novo objeto de sua classe, inicializa-o com as informações fornecidas e chamadas [CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread) para iniciar a execução do thread. Verificações são feitas em todo o procedimento para garantir que todos os objetos são desalocados corretamente caso de falha de qualquer parte da criação.  
   

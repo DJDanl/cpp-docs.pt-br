@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed63e89c2470691b677a234ba6b30e4f3ddd558d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5d5804a7437dabd688abab04ebdd50a79decbaaa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571456"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198763"
 ---
 # <a name="ole-db-programming"></a>Programação de banco de dados OLE
 Microsoft OLE DB é uma tecnologia herdada; para novos aplicativos é a API de acesso a dados necessários para servidores vinculados do SQL. Todos os outros novos aplicativos devem usar o ODBC. O provedor OLE DB atual para o SQL Server é SQLNCLI11. DLL. O provedor ainda está enviando em SQL Server 2016. Esta documentação destina-se a desenvolvedores que estão mantendo os aplicativos existentes que já usam o OLE DB.
@@ -40,7 +40,7 @@ Microsoft OLE DB é uma tecnologia herdada; para novos aplicativos é a API de a
 |Macros e classes de modelos OLE DB|[Referência de modelos OLE DB](../../data/oledb/ole-db-templates.md) (Visual C++)|  
 |Atributos do consumidor OLE DB |[Atributos de consumidor do OLE DB](../../windows/ole-db-consumer-attributes.md)|  
 |Interfaces OLE DB|[Referência do programador de OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) (no SDK do Windows)|  
-|Exemplos de modelos OLE DB|[Exemplos de modelos OLE DB](http://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)| 
+|Exemplos de modelos OLE DB|[Exemplos de modelos OLE DB](https://msdn.microsoft.com/08958863-0b5f-41ad-ae99-fca7440c553c)| 
 |Visão geral de programação (Visual C++) de acesso a dados|[Programação de acesso a dados](../../data/data-access-programming-mfc-atl.md)|  
 |Tópicos conceituais do ODBC|[ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)|  
 

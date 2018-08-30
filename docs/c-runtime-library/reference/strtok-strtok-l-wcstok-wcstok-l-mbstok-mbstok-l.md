@@ -55,19 +55,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45e2155f830a302f316aa96ce41b65a71709bc0d
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5b714d8b78ecfc28db9f6e69308777ed53be7987
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451791"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210867"
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
 Localiza o próximo token em uma cadeia de caracteres usando a localidade atual ou uma localidade específica que é informada. Versões mais seguras dessas funções estão disponíveis; consulte [strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l](strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md).
 
 > [!IMPORTANT]
-> **mbstok** e **mbstok_l** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbstok** e **mbstok_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -104,16 +104,16 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna um ponteiro para o próximo token encontrado no *strToken*. Elas retornam **nulo** quando não há mais tokens forem encontrados. Cada chamada modifica *strToken* substituindo um caractere nulo para o primeiro delimitador que ocorre após o token retornado.
+Retorna um ponteiro para o próximo token encontrado no *strToken*. Elas retornam **nulo** quando não há mais tokens são encontradas. Cada chamada modifica *strToken* substituindo um caractere nulo para o primeiro delimitador que ocorre após o token retornado.
 
 ## <a name="remarks"></a>Comentários
 
-O **strtok** função localiza o próximo token em *strToken*. O conjunto de caracteres em *strDelimit* Especifica possíveis delimitadores de token a ser localizado na *strToken* na chamada atual. **wcstok** e **mbstok** são versões de caracteres largos e caracteres multibyte **strtok**. O valor de retorno e argumentos **wcstok** são caracteres largos cadeias de caracteres; desses **mbstok** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
+O **strtok** função localiza o próximo token no *strToken*. O conjunto de caracteres em *strDelimit* Especifica possíveis delimitadores de token a ser localizado na *strToken* na chamada atual. **wcstok** e **mbstok** são versões de caractere largo e caracteres multibyte **strtok**. Os argumentos e o valor de retorno **wcstok** são largos cadeias de caracteres; aqueles de **mbstok** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
 
 > [!IMPORTANT]
-> Essas funções acarretam uma ameaça em potencial em relação ao problema de estouro de buffer. Os problemas de estouro de buffer são um método frequente de ataque ao sistema, resultando em uma elevação de privilégio sem garantia. Para obter mais informações, consulte [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) (Evitando estouros de buffer).
+> Essas funções acarretam uma ameaça em potencial em relação ao problema de estouro de buffer. Os problemas de estouro de buffer são um método frequente de ataque ao sistema, resultando em uma elevação de privilégio sem garantia. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
-Na primeira chamada para **strtok**, a função ignora delimitadores à esquerda e retorna um ponteiro para o primeiro token no *strToken*, encerrando o token com um caractere nulo. Tokens mais podem ser divididas fora o restante do *strToken* por uma série de chamadas para **strtok**. Cada chamada para **strtok** modifica *strToken* inserindo um caractere nulo após o **token** retornado pela chamada. Para ler o próximo token de *strToken*, chame **strtok** com um **nulo** valor para o *strToken* argumento. O **nulo** *strToken* faz com que o argumento **strtok** para procurar o próximo token em modificada *strToken*. O *strDelimit* argumento pode ter qualquer valor de uma chamada para a próxima para que o conjunto de delimitadores pode variar.
+Na primeira chamada para **strtok**, a função ignora delimitadores à esquerda e retorna um ponteiro para o primeiro token no *strToken*, encerrando o token com um caractere nulo. Mais tokens podem ser divididos, fora o restante da *strToken* por uma série de chamadas para **strtok**. Cada chamada para **strtok** modifica *strToken* inserindo um caractere nulo após o **token** retornado pela chamada. Para ler o próximo token de *strToken*, chame **strtok** com um **nulo** valor para o *strToken* argumento. O **nulo** *strToken* faz com que o argumento **strtok** para procurar o próximo token no modificado *strToken*. O *strDelimit* argumento pode assumir qualquer valor de uma chamada para o próximo, de modo que o conjunto de delimitadores pode variar.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 

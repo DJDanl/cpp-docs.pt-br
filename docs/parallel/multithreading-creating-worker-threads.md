@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90e0af6a1b11b114e56e6c1d87cb293ab83dd768
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 1057d8992f6554d4d5fbbfd93b383e2ddd9dab53
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131183"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211631"
 ---
 # <a name="multithreading-creating-worker-threads-in-mfc"></a>Multithreading: Criando Threads de trabalho no MFC
 Um thread de trabalho normalmente é usado para lidar com tarefas em segundo plano que o usuário não deve ter que aguardar para continuar a usar seu aplicativo. Tarefas como o recálculo e a impressão em segundo plano são bons exemplos de threads de trabalho. Este tópico detalha as etapas necessárias para criar um thread de trabalho. Os tópicos incluem:  
@@ -46,13 +46,13 @@ Há duas versões sobrecarregadas do `AfxBeginThread`: um que só cria threads d
   
 - O parâmetro a ser passado para a função de controle.  
   
-- (Opcional) A prioridade desejada do thread. O padrão é prioridade normal. Para obter mais informações sobre os níveis de prioridade disponíveis, consulte [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) no SDK do Windows.  
+- (Opcional) A prioridade desejada do thread. O padrão é prioridade normal. Para obter mais informações sobre os níveis de prioridade disponíveis, consulte [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) no SDK do Windows.  
   
 - (Opcional) O tamanho desejado de pilha do thread. O padrão é o mesmo tamanho de pilha do thread de criação.  
   
 - (Opcional) CREATE_SUSPENDED se você quiser que o thread a ser criado em um estado suspenso. O padrão é 0 ou iniciar o thread normalmente.  
   
-- (Opcional) Os atributos de segurança desejado. O padrão é o mesmo acesso que o thread pai. Para obter mais informações sobre o formato de informações de segurança, consulte [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) no SDK do Windows.  
+- (Opcional) Os atributos de segurança desejado. O padrão é o mesmo acesso que o thread pai. Para obter mais informações sobre o formato de informações de segurança, consulte [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) no SDK do Windows.  
   
 `AfxBeginThread` cria e inicializa um `CWinThread` inicia o objeto para você e retorna seu endereço para que você possa consultá-lo mais tarde. Verificações são feitas em todo o procedimento para garantir que todos os objetos são desalocados corretamente caso de falha de qualquer parte da criação.  
   

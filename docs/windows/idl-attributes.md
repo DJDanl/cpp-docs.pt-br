@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e084064db598c651865ab671256fa82d54332910
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9a5fcfe550fbcab7ffc872cd2a802906e1416a24
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607680"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196628"
 ---
 # <a name="idl-attributes"></a>Atributos IDL
 
@@ -126,4 +126,4 @@ Observe que [idl_quote](../windows/idl-quote.md) permite que você use construç
 ## <a name="see-also"></a>Consulte também
 
 [Atributos por grupo](../windows/attributes-by-group.md)  
-[Limitações de atributo](http://msdn.microsoft.com/6e6c4329-f667-4869-b991-cbe9cb7a8f61)
+[Limitações de atributo](https://msdn.microsoft.com/6e6c4329-f667-4869-b991-cbe9cb7a8f61)

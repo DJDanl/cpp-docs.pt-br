@@ -17,28 +17,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e12c212939a708a4411a28bff0ebe5026a21b1e
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 7fd5166161fea29ab2c46d0969c6174cb247be15
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36932124"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212737"
 ---
 # <a name="list-items-and-image-lists"></a>Itens de lista e listas de imagens
-Um "item" em um controle de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)) consiste em um ícone, um rótulo e possivelmente outras informações (em "subitens").  
+Um "item" em um controle de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)) consiste em um ícone, um rótulo e, possivelmente, outras informações (em "subitens").  
   
- Os ícones de itens de controle de lista estão contidos em listas de imagens. Uma lista de imagem contém ícones em tamanho normal usadas no modo de exibição de ícone. Uma lista de imagens em segundo lugar, opcional, contém versões menores dos ícones a mesma para uso em outros modos de exibição do controle. Uma lista opcional de terceira contém imagens de "estado", como caixas de seleção para exibição na frente de ícones pequenos em certos modos de exibição. Uma lista opcional quarta contém imagens que são exibidas em itens individuais do cabeçalho do controle de lista.  
+ Os ícones para itens de controle de lista estão contidos em listas de imagens. Uma lista de imagem contém ícones em tamanho normal usadas no modo de exibição de ícone. Uma lista de imagens em segundo lugar, opcional, contém versões menores dos mesmos ícones para uso em outros modos de exibição do controle. Uma terceira lista opcional contém imagens de "estado", como caixas de seleção, para exibição na frente de ícones pequenos em determinados modos de exibição. Uma quarta lista opcional contém imagens que são exibidas em itens individuais de cabeçalho do controle de lista.  
   
 > [!NOTE]
->  Se um controle de exibição de lista é criado com o estilo LVS_SHAREIMAGELISTS, você é responsável por destruindo as listas de imagens quando elas não estão mais em uso. Especifique esse estilo se você atribuir a mesma imagem listas para vários controles de exibição de lista; Caso contrário, mais de um controle pode tentar destruir a mesma lista de imagem.  
+>  Se um controle de exibição de lista é criado com o estilo LVS_SHAREIMAGELISTS, você é responsável por destruir as listas de imagens, quando eles não estão mais em uso. Especifique esse estilo se você atribuir a mesma imagem listas para vários controles de exibição de lista; Caso contrário, mais de um controle pode tentar destruir a mesma lista de imagens.  
   
- Para obter mais informações sobre itens de lista, consulte [listas de imagens de exibição de lista](http://msdn.microsoft.com/library/windows/desktop/bb774736) e [itens e Subitems](http://msdn.microsoft.com/library/windows/desktop/bb774736) no SDK do Windows. Consulte também a classe [CImageList](../mfc/reference/cimagelist-class.md) no *referência MFC* e [usando CImageList](../mfc/using-cimagelist.md) nesta família de artigos.  
+ Para obter mais informações sobre itens de lista, consulte [listas de imagens do modo de exibição de lista](/windows/desktop/Controls/using-list-view-controls) e [itens e subitens](/windows/desktop/Controls/using-list-view-controls) no SDK do Windows. Consulte também a classe [CImageList](../mfc/reference/cimagelist-class.md) na *referência da MFC* e [usando CImageList](../mfc/using-cimagelist.md) nessa família de artigos.  
   
- Para criar um controle de lista, você precisa fornecer as listas de imagens a ser usado quando você insere novos itens na lista. O exemplo a seguir demonstra esse procedimento, onde *m_pImagelist* é um ponteiro de tipo `CImageList` e *m_listctrl* é um `CListCtrl` membro de dados.  
+ Para criar um controle de lista, você precisará fornecer listas de imagens a serem usados ao inserir novos itens na lista. O exemplo a seguir demonstra esse procedimento, onde *m_pImagelist* é um ponteiro de tipo `CImageList` e *m_listctrl* é um `CListCtrl` membro de dados.  
   
  [!code-cpp[NVC_MFCControlLadenDialog#19](../mfc/codesnippet/cpp/list-items-and-image-lists_1.cpp)]  
   
- No entanto, se você não planeja exibir ícones no modo de exibição de lista ou controle de lista, listas de imagens não é necessário.  
+ No entanto, se você não planeja exibir ícones em seu modo de exibição de lista ou um controle de lista, você não precisa de listas de imagens.  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando CListCtrl](../mfc/using-clistctrl.md)   

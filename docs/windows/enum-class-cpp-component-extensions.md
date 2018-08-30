@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b1f1e19ac51e36b04dd8ecfe89dbb7e3d592d869
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 625b99751c570c47456aad4903de5b8c4049ac42
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611956"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207596"
 ---
 # <a name="enum-class--c-component-extensions"></a>classe enum (Extensões de Componentes C++)
 
@@ -65,7 +65,7 @@ O valor de cada enumerador é uma expressão de constante ou é definida implici
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações e exemplos, consulte [Enums](http://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
+Para obter mais informações e exemplos, consulte [Enums](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
 
 Observe que o compilador emite mensagens de erro se a expressão de constante que define o valor de um enumerador não pode ser representada pelo *tipo subjacente*.  No entanto, o compilador não relatará um erro para um valor que não é apropriado para o tipo subjacente. Por exemplo:
 

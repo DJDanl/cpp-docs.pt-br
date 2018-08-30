@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfc59e4652c7c758e7fb5b3ee8a228963a6b6f7d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8f07f14cca7ea0346cc6772d3dca959af07a05cd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883239"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218156"
 ---
 # <a name="catlfilemappingbase-class"></a>Classe CAtlFileMappingBase
 Essa classe representa um arquivo mapeado em memória.  
@@ -76,7 +76,7 @@ class CAtlFileMappingBase
 ## <a name="remarks"></a>Comentários  
  Mapeamento de arquivo é a associação do conteúdo do arquivo com uma parte do espaço de endereço virtual de um processo. Essa classe fornece métodos para criar objetos de mapeamento de arquivo que permitir que os programas para acessar facilmente e compartilhar dados.  
   
- Para obter mais informações, consulte [arquivo de mapeamento](http://msdn.microsoft.com/library/windows/desktop/aa366556) no SDK do Windows.  
+ Para obter mais informações, consulte [arquivo de mapeamento](/windows/desktop/Memory/file-mapping) no SDK do Windows.  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlfile.h  
@@ -179,16 +179,16 @@ HRESULT MapFile(
  O deslocamento de arquivo onde o mapeamento deve começar. O valor de deslocamento deve ser um múltiplo da granularidade de alocação de memória do sistema.  
   
  *dwMappingProtection*  
- A proteção desejada para o modo de exibição de arquivo quando o arquivo é mapeado. Ver *flProtect* na [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) no SDK do Windows.  
+ A proteção desejada para o modo de exibição de arquivo quando o arquivo é mapeado. Ver *flProtect* na [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) no SDK do Windows.  
   
  *dwViewDesiredAccess*  
- Especifica o tipo de acesso para o modo de exibição de arquivo e, portanto, a proteção das páginas mapeado pelo arquivo. Ver *dwDesiredAccess* na [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) no SDK do Windows.  
+ Especifica o tipo de acesso para o modo de exibição de arquivo e, portanto, a proteção das páginas mapeado pelo arquivo. Ver *dwDesiredAccess* na [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) no SDK do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- Depois que um objeto de mapeamento de arquivos tiver sido criado, o tamanho do arquivo não deve exceder o tamanho do objeto de mapeamento de arquivo; Se isso acontecer, não todo o conteúdo do arquivo estará disponível para o compartilhamento. Para obter mais detalhes, consulte [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) e [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) no SDK do Windows.  
+ Depois que um objeto de mapeamento de arquivos tiver sido criado, o tamanho do arquivo não deve exceder o tamanho do objeto de mapeamento de arquivo; Se isso acontecer, não todo o conteúdo do arquivo estará disponível para o compartilhamento. Para obter mais detalhes, consulte [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) e [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  Veja o exemplo de [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).  
@@ -217,19 +217,19 @@ HRESULT MapSharedMem(
  Aponta para um valor BOOLIANO que é definida como TRUE se o objeto de mapeamento já existia.  
   
  *lpsa*  
- O ponteiro para um `SECURITY_ATTRIBUTES` estrutura que determina se o identificador retornado pode ser herdado por processos filhos. Ver *lpAttributes* na [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537) no SDK do Windows.  
+ O ponteiro para um `SECURITY_ATTRIBUTES` estrutura que determina se o identificador retornado pode ser herdado por processos filhos. Ver *lpAttributes* na [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) no SDK do Windows.  
   
  *dwMappingProtection*  
  A proteção desejada para o modo de exibição de arquivo, quando o arquivo é mapeado. Ver *flProtect* em `CreateFileMapping` no SDK do Windows.  
   
  *dwViewDesiredAccess*  
- Especifica o tipo de acesso para o modo de exibição de arquivo e, portanto, a proteção das páginas mapeado pelo arquivo. Ver *dwDesiredAccess* na [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) no SDK do Windows.  
+ Especifica o tipo de acesso para o modo de exibição de arquivo e, portanto, a proteção das páginas mapeado pelo arquivo. Ver *dwDesiredAccess* na [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) no SDK do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- `MapShareMem` permite que um objeto de mapeamento de arquivo existente, criado por [CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537), para ser compartilhado entre processos.  
+ `MapShareMem` permite que um objeto de mapeamento de arquivo existente, criado por [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga), para ser compartilhado entre processos.  
   
 ##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping  
  Chame esse método para abrir um objeto de mapeamento de arquivo nomeado para o arquivo especificado.  
@@ -253,7 +253,7 @@ HRESULT OpenMapping(
  O deslocamento de arquivo onde o mapeamento deve começar. O valor de deslocamento deve ser um múltiplo da granularidade de alocação de memória do sistema.  
   
  *dwViewDesiredAccess*  
- Especifica o tipo de acesso para o modo de exibição de arquivo e, portanto, a proteção das páginas mapeado pelo arquivo. Ver *dwDesiredAccess* na [MapViewOfFileEx](http://msdn.microsoft.com/library/windows/desktop/aa366763) no SDK do Windows.  
+ Especifica o tipo de acesso para o modo de exibição de arquivo e, portanto, a proteção das páginas mapeado pelo arquivo. Ver *dwDesiredAccess* na [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) no SDK do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
@@ -286,7 +286,7 @@ HRESULT Unmap() throw();
  Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- Ver [UnmapViewOfFile](http://msdn.microsoft.com/library/windows/desktop/aa366882) no SDK do Windows para obter mais detalhes.  
+ Ver [UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/aa366882) no SDK do Windows para obter mais detalhes.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CAtlFileMapping](../../atl/reference/catlfilemapping-class.md)   

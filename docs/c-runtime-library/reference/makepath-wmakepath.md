@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c339ce6ad67186dc7a4f43d7006c5beb047c8f90
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 20985ce09d301002e6db3164cc3e99f36b03717b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404946"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204898"
 ---
 # <a name="makepath-wmakepath"></a>_makepath, _wmakepath
 
@@ -77,19 +77,19 @@ void _wmakepath(
 
 *caminho* buffer de caminho completo.
 
-*unidade* contém uma letra (A, B e assim por diante) correspondente à unidade desejada e uma vírgula à direita opcional. **makepath** insere os dois-pontos automaticamente no caminho composto, se ele estiver ausente. Se *unidade* é **nulo** ou aponta para uma cadeia de caracteres vazia, nenhuma letra de unidade aparece na composição *caminho* cadeia de caracteres.
+*unidade* contém uma letra (A, B e assim por diante) correspondente à unidade desejada e um dois-pontos opcional à direita. **makepath** insere os dois-pontos automaticamente no caminho de composição se ele estiver ausente. Se *unidade* é **nulo** ou aponta para uma cadeia de caracteres vazia, nenhuma letra da unidade é exibida na composição *caminho* cadeia de caracteres.
 
-*dir* contém o caminho de diretórios, não incluindo o designador de unidade ou o nome de arquivo real. A barra à direita é opcional e uma barra invertida (/) ou uma barra invertida (\\) ou podem ser usados em uma única *dir* argumento. Se nenhuma barra à direita (/ ou \\) for especificada, ela será inserida automaticamente. Se *dir* é **nulo** ou aponta para uma cadeia de caracteres vazia, nenhum caminho de diretório é inserido na composição *caminho* cadeia de caracteres.
+*dir* contém o caminho de diretórios, não incluindo o designador de unidade ou o nome de arquivo real. A barra à direita é opcional e uma barra (/) ou uma barra invertida (\\) ou ambas podem ser usadas em uma única *dir* argumento. Se nenhuma barra à direita (/ ou \\) for especificada, ela será inserida automaticamente. Se *dir* é **nulo** ou apontar para uma cadeia de caracteres vazia, nenhum caminho de diretório é inserido na composição *caminho* cadeia de caracteres.
 
-*fname* contém o nome de arquivo base sem qualquer extensão de nome de arquivo. Se *fname* é **nulo** ou aponta para uma cadeia de caracteres vazia, nenhum nome de arquivo é inserido na composição *caminho* cadeia de caracteres.
+*fname* contém o nome de arquivo base sem qualquer extensão de nome de arquivo. Se *fname* é **nulo** ou apontar para uma cadeia de caracteres vazia, nenhum nome de arquivo é inserido na composição *caminho* cadeia de caracteres.
 
-*ext* contém a extensão de nome de arquivo real, com ou sem um ponto à esquerda (.). **makepath** insere o período automaticamente se ele não aparecer na *ext*. Se *ext* é **nulo** ou aponta para uma cadeia de caracteres vazia, nenhuma extensão é inserido na composição *caminho* cadeia de caracteres.
+*ext* contém a extensão de nome de arquivo real, com ou sem um ponto à esquerda (.). **makepath** insere o período automaticamente se ele não aparecer na *ext*. Se *ext* é **nulo** ou aponta para uma cadeia de caracteres vazia, nenhuma extensão será inserido na composição *caminho* cadeia de caracteres.
 
 ## <a name="remarks"></a>Comentários
 
-O **makepath** função cria uma cadeia de caracteres de caminho composto de componentes individuais, armazena o resultado em *caminho*. O *caminho* pode incluir uma letra de unidade, caminho de diretório, nome de arquivo e extensão de nome de arquivo. **wmakepath** é uma versão de caractere largo de **makepath**; os argumentos para **wmakepath** são cadeias de caracteres do caractere largo. **wmakepath** e **makepath** se comportam de forma idêntica caso contrário.
+O **makepath** função cria uma cadeia de caracteres de caminho de composição de componentes individuais e armazena o resultado na *caminho*. O *caminho* pode incluir uma letra de unidade, caminho de diretório, nome de arquivo e extensão de nome de arquivo. **wmakepath** é uma versão de caractere largo de **makepath**; os argumentos a serem **wmakepath** são cadeias de caracteres largos. **wmakepath** e **makepath** se comportam de forma idêntica caso contrário.
 
-**Observação de Segurança** Use uma cadeia de caracteres terminada em nulo. Para evitar a saturação do buffer, a cadeia de caracteres terminada em nulo não deve exceder o tamanho do *caminho* buffer. **makepath** não garante que o comprimento da cadeia de caracteres de caminho composto não exceda **MAX_PATH**. Para obter mais informações, consulte [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) (Evitando estouros de buffer).
+**Observação de Segurança** Use uma cadeia de caracteres terminada em nulo. Para evitar a saturação do buffer, a cadeia de caracteres terminada em nulo não deve exceder o tamanho do *caminho* buffer. **makepath** Certifique-se que o comprimento da cadeia de caracteres de caminho de composição não exceda **MAX_PATH**. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -97,9 +97,9 @@ O **makepath** função cria uma cadeia de caracteres de caminho composto de com
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**tmakepath**|**_makepath**|**_makepath**|**_wmakepath**|
 
-O *caminho* argumento deve apontar para um buffer vazio grande o suficiente para conter o caminho completo. Composição *caminho* deve ser maior do que o **MAX_PATH** constante, definido em Stdlib.h.
+O *caminho* argumento deve apontar para um buffer vazio grande o suficiente para conter o caminho completo. A composição *caminho* deve ser maior do que o **MAX_PATH** constante, definida em stdlib. h.
 
-Se o caminho é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Além disso, **errno** é definido como **EINVAL**. **NULO** são permitidos valores para todos os outros parâmetros.
+Se o caminho estiver **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Além disso, **errno** é definido como **EINVAL**. **NULO** são permitidos valores para todos os outros parâmetros.
 
 ## <a name="requirements"></a>Requisitos
 

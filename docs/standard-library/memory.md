@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85fe930ba0616e27b06aee863285638613f7e31d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3b90a96816855e08610d0f63f3ab5c237d564453
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858923"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217943"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -85,7 +85,7 @@ Define uma classe, um operador e vários modelos que ajudam a alocar e a liberar
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|A classe de modelo descreve um objeto que gerencia a alocação de armazenamento e a liberação de matrizes de objetos do tipo **Type**.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Descreve um objeto que determina todas as informações necessárias a um contêiner habilitado para alocador.|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|A classe de modelo descreve um objeto que armazena um ponteiro para um objeto alocado do tipo **Type \*** que garante que o objeto para o qual ele aponta é excluído quando seu auto_ptr delimitador é destruído.|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|A classe de modelo descreve um objeto que armazena um ponteiro para um objeto alocado do tipo **tipo** <strong>\*</strong> que garante que o objeto para o qual ele aponta é excluído quando seu auto_ptr delimitador obtém destruído.|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|Relata a exceção weak_ptr incorreta.|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|Ajuda a gerar um `shared_ptr`.|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|Fornece informações que são necessárias a um objeto da classe de modelo `allocator_traits` para descrever um alocador com o tipo de ponteiro `Ptr`.|

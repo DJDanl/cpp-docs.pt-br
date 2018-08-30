@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40b84e3daac5a1e5574c09e656d39dc774b57031
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: bb157fb5c39dff7f4e06926ddd17ed38d7a5174a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027739"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218627"
 ---
 # <a name="map-class"></a>Classe map
 
@@ -123,15 +123,19 @@ class map;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave* os dados de chave tipo a ser armazenado no mapa.
+*Chave*<br/>
+ O tipo de dados da chave a ser armazenado no mapa.
 
-*Tipo* tipo de dados do elemento a ser armazenado no mapa.
+*Tipo*<br/>
+ O tipo de dados do elemento a ser armazenado no mapa.
 
-*Características* o tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no mapa. Esse argumento é opcional e o predicado binário `less<Key>` é o valor padrão.
+*Características*<br/>
+ O tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no mapa. Esse argumento é opcional e o predicado binário `less<Key>` é o valor padrão.
 
 No C++ 14, você pode habilitar a pesquisa heterogênea ao especificar o predicado std::less<>, que não tem nenhum parâmetro de tipo. Para obter mais informações, consulte [Pesquisa heterogênea em contêineres associativos](../standard-library/stl-containers.md#sequence_containers)
 
-*Alocador* o tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre o mapa alocação e desalocação de memória. Esse argumento é opcional e o valor padrão é `allocator<pair<const Key, Type> >`.
+*Alocador*<br/>
+ O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação do mapa da memória. Esse argumento é opcional e o valor padrão é `allocator<pair<const Key, Type> >`.
 
 ## <a name="remarks"></a>Comentários
 
@@ -572,7 +576,8 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*chave* o valor da chave dos elementos a serem correspondidos do mapa.
+*key*<br/>
+ O valor de chave dos elementos a serem correspondidos do mapa.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -742,8 +747,7 @@ typedef allocator_type::difference_type difference_type;
 
 ### <a name="remarks"></a>Comentários
 
-
-          `difference_type` é o tipo retornado ao subtrair ou incrementar por meio de iteradores do contêiner. `difference_type` é geralmente usado para representar o número de elementos no intervalo *[ first, last)* entre os iteradores `first` e `last`, inclui o elemento apontado por `first` e o intervalo de elementos até, mas sem incluir, o elemento apontado por `last`.
+`difference_type` é o tipo retornado ao subtrair ou incrementar por meio de iteradores do contêiner. `difference_type` é geralmente usado para representar o número de elementos no intervalo *[ first, last)* entre os iteradores `first` e `last`, inclui o elemento apontado por `first` e o intervalo de elementos até, mas sem incluir, o elemento apontado por `last`.
 
 Observe que, embora `difference_type` esteja disponível para todos os iteradores que atendem aos requisitos de um iterador de entrada, que inclui a classe de iteradores bidirecionais com suporte pelos contêineres reversíveis, como conjunto, a subtração entre iteradores só tem suporte pelos iteradores de acesso aleatório fornecidos por um contêiner de acesso aleatório, como vetor.
 
@@ -1036,7 +1040,8 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>Parâmetros
 
-*chave* o valor de chave de argumento a ser comparado com a chave de classificação de um elemento do mapa que está sendo pesquisado.
+*key*<br/>
+ O valor de chave do argumento a ser comparado com a chave de classificação de um elemento do mapa que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1122,13 +1127,17 @@ size_type erase(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Onde* posição do elemento a ser removido.
+*Where*<br/>
+ A posição do elemento a ser removido.
 
-*Primeiro* posição do primeiro elemento a ser removido.
+*Primeiro*<br/>
+ A posição do primeiro elemento a ser removido.
 
-*Última* posição logo após o último elemento a ser removido.
+*último*<br/>
+ A posição logo após o último elemento a ser removido.
 
-*Chave* o valor da chave dos elementos a ser removido.
+*Chave*<br/>
+ O valor de chave dos elementos a serem removidos.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1230,7 +1239,8 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*chave* o valor da chave a ser correspondido pela chave de classificação de um elemento do mapa que está sendo pesquisado.
+*key*<br/>
+ O valor da chave a ser correspondido pela chave de classificação de um elemento do mapa que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1562,11 +1572,11 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Comentários
 
-O `iterator` definido pelos pontos do mapa para elementos que são objetos do [value_type](#value_type), que é do tipo `pair` * \< * **constKey**, * *Tipo * * * >*, cujo primeiro membro é a chave do elemento e cujo segundo membro é a referência mapeada mantida pelo elemento.
+O iterador definido pelos pontos do mapa para elementos que são objetos do [value_type](#value_type), que é do tipo `pair<const Key, Type>`, cujo primeiro membro é a chave do elemento e cujo segundo membro é a referência mapeada mantida pelo elemento.
 
-A referência a um **iterador** `Iter` que aponta para um elemento em um mapa, use o `->` operador.
+A referência a um iterador *Iter* que aponta para um elemento em um mapa, use o `->` operador.
 
-Para acessar o valor de chave do elemento, use `Iter` -> **first**, que é equivalente a (\* `Iter`). **first**. Para acessar o valor dos dados mapeados do elemento, use `Iter` -> **second**, que é equivalente a (\* `Iter`). **second**.
+Para acessar o valor da chave do elemento, use `Iter->first`, que é equivalente a `(*Iter).first`. Para acessar o valor dos dados mapeados para o elemento, use `Iter->second`, que é equivalente a `(*Iter).second`.
 
 ### <a name="example"></a>Exemplo
 
@@ -1588,7 +1598,7 @@ Retorna o objeto de função que usa um mapa para ordenar os seus elementos.
 
 O objeto armazenado define a função membro
 
-**operador booliano**( **constKey&**`left`, **const Key&**`right`);
+`bool operator(const Key& left, const Key& right);`
 
 que retornará **true** se `left` preceder e não for igual a `right` na ordem de classificação.
 
@@ -1691,7 +1701,8 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*chave* o valor de chave de argumento a ser comparado com a chave de classificação de um elemento do mapa que está sendo pesquisado.
+*key*<br/>
+ O valor de chave do argumento a ser comparado com a chave de classificação de um elemento do mapa que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2403,9 +2414,9 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 Um tipo de `reverse_iterator` não pode modificar o valor de um elemento e é usado para iterar o mapa em ordem inversa.
 
-O `reverse_iterator` definido pelos pontos do mapa para elementos que são objetos do [value_type](#value_type), que é do tipo `pair` * \< * **constKey**, * *Tipo * * * >*, cujo primeiro membro é a chave do elemento e cujo segundo membro é a referência mapeada mantida pelo elemento.
+O `reverse_iterator` definido pelos pontos do mapa para elementos que são objetos do [value_type](#value_type), que é do tipo `pair<const Key, Type>`, cujo primeiro membro é a chave do elemento e cujo segundo membro é a referência mapeada mantida pelo elemento.
 
-A referência a um `reverse_iterator` `rIter` que aponta para um elemento em um mapa, use o `->` operador.
+A referência a um `reverse_iterator` *rIter* que aponta para um elemento em um mapa, use o `->` operador.
 
 Para acessar o valor de chave do elemento, use `rIter` -> **first**, que é equivalente a (\* `rIter`). **first**. Para acessar o valor dos dados mapeados do elemento, use `rIter` -> **second**, que é equivalente a (\* `rIter`). **first**.
 
@@ -2480,7 +2491,8 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* o mapa de argumento que fornece os elementos a serem trocados com o mapa de destino.
+*right*<br/>
+ O mapa de argumentos que fornece os elementos a serem trocados com o mapa de destino.
 
 ### <a name="remarks"></a>Comentários
 
@@ -2550,7 +2562,8 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*chave* o valor de chave de argumento a ser comparado com o valor de chave de classificação de um elemento do mapa que está sendo pesquisado.
+*key*<br/>
+ O valor de chave do argumento a ser comparado com o valor da chave de classificação de um elemento do mapa que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2739,7 +2752,7 @@ int main( )
 
 ## <a name="see-also"></a>Consulte também
 
-[\<Map > membros](http://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
+[\<Map > membros](https://msdn.microsoft.com/7e8f0bc2-6034-40f6-9d14-76d4cef86308)<br/>
 [Contêineres](../cpp/containers-modern-cpp.md)<br/>
 [Acesso Thread-Safe na Biblioteca Padrão C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Referência da biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md)<br/>

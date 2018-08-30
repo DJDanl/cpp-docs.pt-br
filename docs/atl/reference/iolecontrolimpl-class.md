@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34bdb0af5965b300e77a02858af3708c90fa63d0
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6e3ba537568ba59c241378aeba83450db536511a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879277"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201331"
 ---
 # <a name="iolecontrolimpl-class"></a>Classe IOleControlImpl
 Essa classe fornece uma implementação padrão do `IOleControl` interface e implementa `IUnknown`.  
@@ -57,7 +57,7 @@ class IOleControlImpl
 |[IOleControlImpl::OnMnemonic](#onmnemonic)|Informa o controle que um usuário pressiona um pressionamento de tecla especificado. A implementação de ATL retornará E_NOTIMPL.|  
   
 ## <a name="remarks"></a>Comentários  
- Classe `IOleControlImpl` fornece uma implementação padrão do [IOleControl](http://msdn.microsoft.com/library/windows/desktop/ms694320) interface e implementa `IUnknown` enviando informações para o despejo de compilações de dispositivo na depuração.  
+ Classe `IOleControlImpl` fornece uma implementação padrão do [IOleControl](/windows/desktop/api/ocidl/nn-ocidl-iolecontrol) interface e implementa `IUnknown` enviando informações para o despejo de compilações de dispositivo na depuração.  
   
  **Artigos relacionados** [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md), [criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -79,7 +79,7 @@ HRESULT FreezeEvents(BOOL bFreeze);
 ### <a name="remarks"></a>Comentários  
  `FreezeEvents` em seguida, Retorna S_OK.  
   
- Ver [IOleControl:: FreezeEvents](http://msdn.microsoft.com/library/windows/desktop/ms678482) no Windows SDK.  
+ Ver [IOleControl:: FreezeEvents](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-freezeevents) no Windows SDK.  
   
 ##  <a name="getcontrolinfo"></a>  IOleControlImpl::GetControlInfo  
  Preencha as informações sobre o comportamento de teclado do controle.  
@@ -89,7 +89,7 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IOleControl:GetControlInfo](http://msdn.microsoft.com/library/windows/desktop/ms693730) no Windows SDK.  
+ Ver [IOleControl:GetControlInfo](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo) no Windows SDK.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retornará E_NOTIMPL.  
@@ -105,7 +105,7 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
  Retorna S_OK.  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175) no Windows SDK.  
+ Ver [IOleControl::OnAmbientPropertyChange](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-onambientpropertychange) no Windows SDK.  
   
 ##  <a name="onmnemonic"></a>  IOleControlImpl::OnMnemonic  
  Informa o controle que um usuário pressiona um pressionamento de tecla especificado.  
@@ -118,9 +118,9 @@ HRESULT OnMnemonic(LPMSG pMsg);
  Retornará E_NOTIMPL.  
   
 ### <a name="remarks"></a>Comentários  
- Ver [IOleControl::OnMnemonic](http://msdn.microsoft.com/library/windows/desktop/ms680699) no Windows SDK.  
+ Ver [IOleControl::OnMnemonic](/windows/desktop/api/ocidl/nf-ocidl-iolecontrol-onmnemonic) no Windows SDK.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)   
- [Interfaces de controles ActiveX](http://msdn.microsoft.com/library/windows/desktop/ms692724)   
+ [Interfaces de controles ActiveX](/windows/desktop/com/activex-controls-interfaces)   
  [Visão geral da classe](../../atl/atl-class-overview.md)

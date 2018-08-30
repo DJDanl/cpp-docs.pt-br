@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 177f3110b2bc782093a91ee9dfaa560843791b5c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2050a444ca228554cfbb3b6bba2693c55e53c4a2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571448"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217544"
 ---
 # <a name="rowset-object-interfaces"></a>Interfaces de objeto do conjunto de linhas
 A tabela a seguir mostra as interfaces obrigatórias e opcionais definidas por OLE DB para um objeto de conjunto de linhas.  
@@ -39,7 +39,7 @@ A tabela a seguir mostra as interfaces obrigatórias e opcionais definidas por O
 |[IChapteredRowset](/previous-versions/windows/desktop/ms718180\(v=vs.85\))|Opcional|Não|  
 |[IColumnsInfo2](/previous-versions/windows/desktop/ms712953\(v=vs.85\))|Opcional|Não|  
 |[IColumnsRowset](/previous-versions/windows/desktop/ms722657\(v=vs.85\))|Opcional|Não|  
-|[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Opcional|Sim (por meio de ATL)|  
+|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Opcional|Sim (por meio de ATL)|  
 |[IDBAsynchStatus](/previous-versions/windows/desktop/ms709832\(v=vs.85\))|Opcional|Não|  
 |[IGetRow](/previous-versions/windows/desktop/ms718047\(v=vs.85\))|Opcional|Não|  
 |[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))|Opcional|Sim|  

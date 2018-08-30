@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a8c92bc8a0b7ac02bae85697eae047acf117652f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2aaf38745c02c5975eb2a46f135c51b6d7247610
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604958"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213750"
 ---
 # <a name="switchis"></a>switch_is
 
@@ -36,7 +36,7 @@ Especifica a expressão ou um identificador que atua como o discriminador de uni
 
 ## <a name="remarks"></a>Comentários
 
-O **switch_is** atributo C++ tem a mesma funcionalidade que o [switch_is](http://msdn.microsoft.com/library/windows/desktop/aa367275) atributo MIDL.
+O **switch_is** atributo C++ tem a mesma funcionalidade que o [switch_is](/windows/desktop/Midl/switch-is) atributo MIDL.
 
 ## <a name="example"></a>Exemplo
 

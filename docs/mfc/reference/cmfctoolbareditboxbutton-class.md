@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c15dc3dc2b4c1fdf549ec90ae6d782b5f8a72509
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 928e2845321ad12a92e4ba3f42838b3f468dce70
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853804"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215508"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>Classe CMFCToolBarEditBoxButton
 Um botão de barra de ferramentas que contém um controle de edição ( [classe CEdit](../../mfc/reference/cedit-class.md)).  
@@ -105,7 +105,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 |`CMFCToolBarEditBoxButton::GetThisClass`|Usado pelo framework para obter um ponteiro para o [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está associado com esse tipo de classe.|  
 |[CMFCToolBarEditBoxButton::HaveHotBorder](#havehotborder)|Determina se uma borda do botão é exibida quando um usuário clica no botão. (Substitui [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|  
 |[CMFCToolBarEditBoxButton::IsFlatMode](#isflatmode)|Determina se os botões da caixa de edição têm um estilo simples.|  
-|[CMFCToolBarEditBoxButton::NotifyCommand](#notifycommand)|Especifica se o botão processa os [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensagem. (Substitui [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
+|[CMFCToolBarEditBoxButton::NotifyCommand](#notifycommand)|Especifica se o botão processa os [WM_COMMAND](/windows/desktop/menurc/wm-command) mensagem. (Substitui [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
 |[CMFCToolBarEditBoxButton::OnAddToCustomizePage](#onaddtocustomizepage)|Chamado pelo framework quando o botão é adicionado a um **personalizar** caixa de diálogo. (Substitui [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage).)|  
 |`CMFCToolBarEditBoxButton::OnCalculateSize`|Chamado pelo framework para calcular o tamanho do botão para o contexto de dispositivo especificado e o estado de encaixe. (Substitui [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
 |[CMFCToolBarEditBoxButton::OnChangeParentWnd](#onchangeparentwnd)|Chamado pelo framework quando o botão é inserido em uma nova barra de ferramentas. (Substitui [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
@@ -361,7 +361,7 @@ static BOOL __stdcall IsFlatMode();
  Por padrão, os botões da caixa de edição têm um estilo simples. Use o [CMFCToolBarEditBoxButton::SetFlatMode](#setflatmode) método para alterar a aparência de estilo plano para o seu aplicativo.  
   
 ##  <a name="notifycommand"></a>  CMFCToolBarEditBoxButton::NotifyCommand  
- Especifica se o botão processa os [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensagem.  
+ Especifica se o botão processa os [WM_COMMAND](/windows/desktop/menurc/wm-command) mensagem.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
@@ -375,9 +375,9 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  TRUE se o botão processa a mensagem WM_COMMAND, ou FALSE para indicar que a mensagem deve ser tratada pela barra de ferramentas pai.  
   
 ### <a name="remarks"></a>Comentários  
- O framework chama esse método quando ele está prestes a enviar uma [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensagem para a janela pai.  
+ O framework chama esse método quando ele está prestes a enviar uma [WM_COMMAND](/windows/desktop/menurc/wm-command) mensagem para a janela pai.  
   
- Este método estende a implementação da classe base ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) pelo processamento de [EN_UPDATE](http://msdn.microsoft.com/library/windows/desktop/bb761687) notificação. Para cada caixa de edição com a mesma ID de comando como esse objeto, ele define seu rótulo de texto para o rótulo de texto desse objeto.  
+ Este método estende a implementação da classe base ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) pelo processamento de [EN_UPDATE](/windows/desktop/Controls/en-update) notificação. Para cada caixa de edição com a mesma ID de comando como esse objeto, ele define seu rótulo de texto para o rótulo de texto desse objeto.  
   
 ##  <a name="onaddtocustomizepage"></a>  CMFCToolBarEditBoxButton::OnAddToCustomizePage  
  Chamado pelo framework quando o botão é adicionado a um **personalizar** caixa de diálogo.  

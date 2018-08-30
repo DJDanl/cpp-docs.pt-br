@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc5d51bfeb18b51be5a54c51046e3cd420fb1cb8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 9f522635c170af784b5bd9f2bb7011fd51e345b3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852101"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211601"
 ---
 # <a name="coleupdatedialog-class"></a>Classe COleUpdateDialog
 Usado para um caso especial de caixa de diálogo Editar Links do OLE, que deve ser usado quando você precisa atualizar somente objetos vinculados ou incorporados em um documento.  
@@ -114,7 +114,7 @@ virtual INT_PTR DoModal();
   
 - IDCANCEL se nenhum dos itens vinculados ou inseridos no documento atual precisam ser atualizados.  
   
-- IDABORT se ocorreu um erro. Se IDABORT for retornado, chame o [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) a função de membro para obter mais informações sobre o tipo de erro que ocorreu. Para obter uma lista de possíveis erros, consulte o [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) função no SDK do Windows.  
+- IDABORT se ocorreu um erro. Se IDABORT for retornado, chame o [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) a função de membro para obter mais informações sobre o tipo de erro que ocorreu. Para obter uma lista de possíveis erros, consulte o [OleUIEditLinks](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa) função no SDK do Windows.  
   
 ### <a name="remarks"></a>Comentários  
  Todos os links e/ou objetos incorporados são atualizados, a menos que o usuário seleciona o botão Cancelar.  

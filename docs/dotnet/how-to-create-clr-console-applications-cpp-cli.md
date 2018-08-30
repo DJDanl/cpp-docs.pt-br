@@ -1,5 +1,5 @@
 ---
-title: 'Como: criar aplicativos do Console CLR (C + + CLI) | Microsoft Docs'
+title: 'Como: criar aplicativos do Console CLR (C + + / CLI) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3257d690ac949edff7958615656db052c3468c01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60804b3863a4b44bc963f289b1d6a8c2f2d5cbf7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33132564"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211151"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>Como criar aplicativos do console CLR (C++/CLI)
-Você pode usar o modelo de aplicativo de Console para criar um projeto de aplicativo de console que já tenha arquivos e referências ao projeto essencial.  
+Você pode usar o modelo de aplicativo de Console para criar um projeto de aplicativo de console que já tenha arquivos e as referências de projeto essenciais.  
   
- Normalmente, um aplicativo de console é compilado em um arquivo executável autônomo, mas não tem uma interface gráfica do usuário. Um usuário executa o aplicativo de console em um prompt de comando e usa o prompt de comando para instruções de problema para o aplicativo em execução. Também no prompt de comando, o aplicativo fornece informações de saída. A urgência de um aplicativo de console, é uma ótima maneira de aprender técnicas de programação sem precisar se preocupar para implementar uma interface do usuário.  
+ Normalmente, um aplicativo de console é compilado em um arquivo executável autônomo, mas não tem uma interface gráfica do usuário. Um usuário executa o aplicativo de console em um prompt de comando e usar o prompt de comando para obter instruções de problema para o aplicativo em execução. Também no prompt de comando, o aplicativo fornece informações de saída. A urgência de um aplicativo de console torna uma ótima maneira de aprender técnicas de programação sem preocupação com a implementação de uma interface de usuário.  
   
- Quando você usa o modelo de aplicativo de Console para criar um projeto, ele adiciona automaticamente essas referências e arquivos:  
+ Quando você usa o modelo de aplicativo de Console para criar um projeto, ele automaticamente adiciona essas referências e arquivos:  
   
 -   Referências a esses namespaces do .NET Framework:  
   
-    -   [Sistema](https://msdn.microsoft.com/en-us/library/system.appdomainmanager.appdomainmanager.aspx)— contém as classes fundamentais e classes base que definem comumente usados valores e tipos de dados de referência, eventos e manipuladores de eventos, interfaces, atributos e exceções de processamento.  
+    -   [Sistema](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)— contém as classes fundamentais e classes base que definem comumente usados valores e tipos de dados de referência, eventos e manipuladores de eventos, interfaces, atributos e exceções de processamento.  
   
-    -   mscorlib — o assembly DLL que dá suporte ao desenvolvimento do .NET Framework.  
+    -   mscorlib — a DLL que oferece suporte ao desenvolvimento do .NET Framework do assembly.  
   
 -   Arquivos de origem:  
   
-    -   Console (arquivo. cpp) — o ponto de entrada e de arquivo fonte principal no aplicativo que você acabou de criar. Identifica o arquivo. dll de projeto e o namespace do projeto. Fornece seu próprio código nesse arquivo.  
+    -   Console (arquivo. cpp), ponto de entrada e de arquivo de origem principal no aplicativo que você acabou de criar. Identifica o arquivo. dll do projeto e o namespace do projeto. Forneça seu próprio código nesse arquivo.  
   
-    -   Atributos de AssemblyInfo.cpp—Contains, arquivos, recursos, tipos, informações de controle de versão, as informações de assinatura e assim por diante que você pode usar para modificar metadados de assembly do projeto. Para obter mais informações, consulte [conteúdo de um Assembly](/dotnet/framework/app-domains/assembly-contents).  
+    -   Atributos de AssemblyInfo.cpp—Contains, arquivos, recursos, tipos, informações de controle de versão, informações de assinatura e assim por diante que você pode usar para modificar metadados do assembly do projeto. Para obter mais informações, consulte [conteúdo do Assembly](/dotnet/framework/app-domains/assembly-contents).  
   
-    -   Stdafx.cpp—Used para criar um arquivo de cabeçalho pré-compilado chamado Win32.pch e um arquivo de tipos precompilados chamado StdAfx.obj.  
+    -   Stdafx.cpp—Used para criar um arquivo de cabeçalho pré-compilado que é denominado Win32.pch e um arquivo de tipos precompilados chamado Stdafx. obj.  
   
 -   Arquivos de cabeçalho:  
   
-    -   Stdafx.h—Used para criar um arquivo de cabeçalho pré-compilado chamado Win32.pch e um arquivo de tipos precompilados chamado StdAfx.obj.  
+    -   Stdafx.h—Used para criar um arquivo de cabeçalho pré-compilado que é denominado Win32.pch e um arquivo de tipos precompilados chamado Stdafx. obj.  
   
     -   Resource.h—A gerado incluir arquivo para app.rc.  
   
 -   Arquivos de recurso:  
   
-    -   arquivo de script de recurso de App.rc—the de um programa.  
+    -   arquivo de script de recurso App.rc—the de um programa.  
   
     -   arquivo de ícone App.ico—the de um programa.  
   
@@ -62,7 +62,7 @@ Você pode usar o modelo de aplicativo de Console para criar um projeto de aplic
   
 1.  Na barra de menus, escolha **Arquivo**, **Novo**, **Projeto**.  
   
-2.  No **novo projeto** caixa de diálogo **modelos instalados**, selecione o **Visual C++** nó, selecione o **CLR** nó e selecione o modelo de aplicativo de Console.  
+2.  No **novo projeto** caixa de diálogo **modelos instalados**, selecione o **Visual C++** nó, selecione o **CLR** nó e, em seguida, selecione o modelo de aplicativo de Console.  
   
 3.  No **nome** , digite um nome exclusivo para seu aplicativo.  
   

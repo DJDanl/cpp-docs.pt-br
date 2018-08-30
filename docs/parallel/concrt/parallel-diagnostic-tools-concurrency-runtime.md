@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb41f9630e22d9067743b106aed49ea9c51ee4ae
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6243bd4167ec640553a6cb55d7d6f67319315e19
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538575"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217340"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Ferramentas de diagnóstico em paralelo (Tempo de Execução de Simultaneidade)
 O Visual Studio fornece amplo suporte para depuração e criação de perfil de aplicativos multi-threaded.  
@@ -31,7 +31,7 @@ O Visual Studio fornece amplo suporte para depuração e criação de perfil de 
  As ferramentas de criação de perfil fornecem três modos de exibição de dados que exibem informações gráficas, tabulares e numéricas sobre como um aplicativo multithread interage com ele próprio e com outros programas. Os modos de exibição que você possa identificar rapidamente as áreas de preocupação e navegar de pontos em que o gráfico exibe a pilhas de chamadas, chamam o código-fonte e sites. Para saber mais, confira [Visualização Simultânea](/visualstudio/profiling/concurrency-visualizer).  
   
 ## <a name="event-tracing"></a>Rastreamento de eventos  
- Usa o tempo de execução de simultaneidade [rastreamento de eventos para Windows](http://msdn.microsoft.com/library/windows/desktop/bb968803) (ETW) para notificar as ferramentas de instrumentação, como os criadores de perfil, quando eventos diversos ocorrem. Esses eventos incluem quando um agendador é ativado ou desativado, quando um contexto de inicia, encerra, bloqueia, desbloqueia ou produz, e quando um algoritmo paralelo começa ou termina.  
+ Usa o tempo de execução de simultaneidade [rastreamento de eventos para Windows](/windows/desktop/ETW/event-tracing-portal) (ETW) para notificar as ferramentas de instrumentação, como os criadores de perfil, quando eventos diversos ocorrem. Esses eventos incluem quando um agendador é ativado ou desativado, quando um contexto de inicia, encerra, bloqueia, desbloqueia ou produz, e quando um algoritmo paralelo começa ou termina.  
   
  Ferramentas como o [simultânea](/visualstudio/profiling/concurrency-visualizer) utilizar esta funcionalidade; portanto, geralmente, você precisa trabalhar diretamente com esses eventos. No entanto, esses eventos são úteis quando você estiver desenvolvendo um criador de perfil personalizado ou quando você usa ferramentas de rastreamento de eventos, como [Xperf](http://go.microsoft.com/fwlink/p/?linkid=160628).  
   

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee63cf7f5ec2bd0d6ed76bf891ed82492c76560d
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 8d9c4c43098d7f0ca8a5e9588a69a47d6e98a066
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885149"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210049"
 ---
 # <a name="string-conversion-macros"></a>Macros de conversão de cadeia de caracteres
 
@@ -38,7 +38,7 @@ As macros de conversão de cadeia de caracteres discutidas neste documento são 
 
 ##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  Macros de conversão de cadeia de caracteres TEXTMETRIC e DEVMODE
 
-Essas macros de criar uma cópia de um [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) ou [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) estruturar e converter as cadeias de caracteres dentro da nova estrutura para um novo tipo de cadeia de caracteres. As macros de alocar memória na pilha para a nova estrutura e retornam um ponteiro para a nova estrutura.  
+Essas macros de criar uma cópia de um [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) ou [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) estruturar e converter as cadeias de caracteres dentro da nova estrutura para um novo tipo de cadeia de caracteres. As macros de alocar memória na pilha para a nova estrutura e retornam um ponteiro para a nova estrutura.  
   
 ```cpp
 MACRONAME( address_of_structure )

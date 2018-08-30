@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e68cdc236759776fa327b4602343ec9ac73b9bba
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 61599d9080bf5cdce56f30ed38e6b20064032512
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338352"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216697"
 ---
 # <a name="message-map-macros-mfc"></a>Macros de mapa de mensagem (MFC)
 Para dar suporte a mapas de mensagem, o MFC fornece as seguintes macros:  
@@ -307,7 +307,7 @@ ON_MESSAGE( message, memberFxn )
  O tipo da função deve ser `afx_msg LRESULT (CWnd::*)(WPARAM, LPARAM)`.  
   
 ### <a name="remarks"></a>Comentários  
- Mensagens definidas pelo usuário são todas as mensagens que não são mensagens do Windows WM_MESSAGE padrão. Ao selecionar uma ID de mensagem, você deve usar valores dentro do intervalo de WM_USER (0x0400) 0x7FFF ou WM_APP (0x8000) para 0xBFFF. Para obter mais informações sobre IDs de mensagens, consulte [WM_APP](http://msdn.microsoft.com/library/windows/desktop/ms644930).  
+ Mensagens definidas pelo usuário são todas as mensagens que não são mensagens do Windows WM_MESSAGE padrão. Ao selecionar uma ID de mensagem, você deve usar valores dentro do intervalo de WM_USER (0x0400) 0x7FFF ou WM_APP (0x8000) para 0xBFFF. Para obter mais informações sobre IDs de mensagens, consulte [WM_APP](/windows/desktop/winmsg/wm-app).  
   
  Deve haver exatamente uma instrução de macro ON_MESSAGE no mapa de mensagem para todas as mensagens definidas pelo usuário que devem ser mapeada para uma função de manipulador de mensagens.  
   
@@ -505,7 +505,7 @@ END_MESSAGE_MAP()
  **Cabeçalho:** afxmsg_.h  
   
 ### <a name="see-also"></a>Consulte também  
- [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947)   
+ [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)   
  [Manipuladores definidos pelo usuário](user-defined-handlers.md)
 
 ## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE    

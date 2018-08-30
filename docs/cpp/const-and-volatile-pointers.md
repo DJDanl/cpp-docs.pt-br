@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e32312e8c6f3dc149f6e5e1f8dc37b1395732d02
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 52550df1ca89ec1252fc2910bf27598d51302495
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408184"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212255"
 ---
 # <a name="const-and-volatile-pointers"></a>Ponteiros const e volatile
 O [const](../cpp/const-cpp.md) e [volátil](../cpp/volatile-cpp.md) palavras-chave alterar como os ponteiros são tratados. O **const** palavra-chave especifica que o ponteiro não pode ser modificado após a inicialização; o ponteiro é protegido contra modificações posteriores.  
@@ -96,7 +96,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  A instrução anterior declara uma função, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), onde dois dos três argumentos são do tipo ponteiro para **char**. Porque os argumentos são passados por referência e não por valor, a função seria livre para alterar `strDestination` e `strSource` se `strSource` não for declarado como **const**. A declaração de `strSource` como **const** assegura que o chamador `strSource` não pode ser alterado pela função chamada.  
   
 > [!NOTE]
->  Porque não há uma conversão padrão de *typename* **\*** para **const** *typename* **\***, é permitido para passar um argumento do tipo `char *` à [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). No entanto, o inverso não é verdadeiro; Nenhuma conversão implícita existe para remover o **const** atributo de um objeto ou ponteiro.  
+> Porque não há uma conversão padrão de *typename* <strong>\*</strong> para **const** *typename* <strong>\*</strong>, é permitido para passar um argumento do tipo `char *` à [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). No entanto, o inverso não é verdadeiro; Nenhuma conversão implícita existe para remover o **const** atributo de um objeto ou ponteiro.  
   
  Um **const** ponteiro de um determinado tipo pode ser atribuído a um ponteiro do mesmo tipo. No entanto, um ponteiro que não é **const** não pode ser atribuído a um **const** ponteiro. O código a seguir mostra atribuições corretas e incorretas:  
   

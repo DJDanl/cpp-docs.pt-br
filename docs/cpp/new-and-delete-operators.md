@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2648d3628b8edd8b864dcf69dcfa7acb6d07339
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 3a1470c544e624de4ef9fb570859dca9b282edde
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406657"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208060"
 ---
 # <a name="new-and-delete-operators"></a>Operadores new e delete
 
@@ -55,7 +55,7 @@ Os dois escopos para **operador new** funções são descritas na tabela a segui
 |**:: operador new**|Global|  
 |*nome da classe* **:: operador new**|Classe|  
   
- O primeiro argumento para **operador new** deve ser do tipo `size_t` (um tipo definido no \<stddef. h >), e o tipo de retorno é sempre **void \*** .  
+ O primeiro argumento para **operador new** deve ser do tipo `size_t` (um tipo definido no \<stddef. h >), e o tipo de retorno é sempre **void** <strong>\*</strong>.  
   
  Global **operador new** função é chamada quando o **novos** operador é usado para alocar objetos de tipos internos, objetos do tipo de classe que não contêm definidos pelo usuário **operador new** funções e matrizes de qualquer tipo. Quando o **novos** operador é usado para alocar objetos de um tipo de classe onde um **operador new** for definido, essa classe **operador new** é chamado.  
   

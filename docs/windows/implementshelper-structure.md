@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf80852bf058f0e27fc1261cce471adfc0d2935b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5a3a31125d8489551f1eec143013661bf385f29a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589328"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212439"
 ---
 # <a name="implementshelper-structure"></a>Estrutura ImplementsHelper
 
@@ -70,5 +70,5 @@ Esse modelo percorre uma lista de interfaces e os adiciona como classes base e c
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência (biblioteca de tempo de execução do Windows)](http://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)  
+[Referência (biblioteca de tempo de execução do Windows)](https://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)  
 [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

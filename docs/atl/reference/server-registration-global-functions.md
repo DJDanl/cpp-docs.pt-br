@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bed065eb959d959086133a757b7ca3594214719
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a2cc139fa0aa933131e4e19b8efa397e4bddee50
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883274"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209222"
 ---
 # <a name="server-registration-global-functions"></a>Funções globais de registro do servidor
 Essas funções dão suporte para registrar e cancelar o registro de objetos de servidor no mapa de objetos.  
@@ -113,10 +113,10 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
  Ponteiro para o módulo de COM.  
   
  *dwClsContext*  
- Especifica o contexto no qual o objeto de classe deve ser executado. Os valores possíveis são CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER ou CLSCTX_LOCAL_SERVER. Ver [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) para obter mais detalhes.  
+ Especifica o contexto no qual o objeto de classe deve ser executado. Os valores possíveis são CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER ou CLSCTX_LOCAL_SERVER. Ver [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) para obter mais detalhes.  
   
  *dwFlags*  
- Determina os tipos de conexão para o objeto de classe. Os valores possíveis são REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE ou REGCLS_MULTI_SEPARATE. Ver [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) para obter mais detalhes.  
+ Determina os tipos de conexão para o objeto de classe. Os valores possíveis são REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE ou REGCLS_MULTI_SEPARATE. Ver [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) para obter mais detalhes.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  

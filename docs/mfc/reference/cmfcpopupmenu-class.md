@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04217a03defcecf990a943d5d99f8370a966a5f7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 125b15062fc46850ad9b0d2512f9f7cc2e2095e1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540943"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204206"
 ---
 # <a name="cmfcpopupmenu-class"></a>Classe CMFCPopupMenu
 Implementa a funcionalidade de menu pop-up do Windows e a estende adicionando recursos, como menus destacáveis e dicas de ferramentas.
@@ -510,7 +510,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
  TRUE para habilitar o som, caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
- Se você habilitar o som, o framework chama o [PlaySound](http://msdn.microsoft.com/library/windows/desktop/bb774426) método quando um usuário abre um menu pop-up ou seleciona um comando de menu. Por padrão, esse recurso está habilitado.  
+ Se você habilitar o som, o framework chama o [PlaySound](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iusernotification-playsound) método quando um usuário abre um menu pop-up ou seleciona um comando de menu. Por padrão, esse recurso está habilitado.  
   
 ##  <a name="enableresize"></a>  CMFCPopupMenu::EnableResize  
 

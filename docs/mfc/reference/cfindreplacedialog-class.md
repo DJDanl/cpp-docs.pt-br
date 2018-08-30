@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c88a517d600536d4f89b1621e225ad80666885a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: cabd6f331ed7348fe84a585a863ccb7e90b992fc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338643"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203999"
 ---
 # <a name="cfindreplacedialog-class"></a>Classe CFindReplaceDialog
 Permite que você implemente caixas de diálogo Localizar/Substituir de cadeia de caracteres padrão em seu aplicativo.  
@@ -95,9 +95,9 @@ class CFindReplaceDialog : public CCommonDialog
   
  Uma vez um `CFindReplaceDialog` objeto foi construído, você deve chamar o [criar](#create) função de membro para criar e exibir a caixa de diálogo.  
   
- Use o [m_fr](#m_fr) estrutura para inicializar a caixa de diálogo antes de chamar `Create`. O `m_fr` estrutura é do tipo [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Para obter mais informações sobre essa estrutura, consulte o SDK do Windows.  
+ Use o [m_fr](#m_fr) estrutura para inicializar a caixa de diálogo antes de chamar `Create`. O `m_fr` estrutura é do tipo [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). Para obter mais informações sobre essa estrutura, consulte o SDK do Windows.  
   
- Para a janela pai a ser notificado de localizar/substituir solicitações, você deve usar o Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) funcionar e usar o [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) macro de mapa de mensagem em seu quadro janela que manipula essa mensagem registrada.  
+ Para a janela pai a ser notificado de localizar/substituir solicitações, você deve usar o Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) funcionar e usar o [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) macro de mapa de mensagem em seu quadro janela que manipula essa mensagem registrada.  
   
  Você pode determinar se o usuário optou por encerrar a caixa de diálogo com o `IsTerminating` função de membro.  
   
@@ -165,7 +165,7 @@ virtual BOOL Create(
  Ponteiro para a cadeia de caracteres de substituição de padrão quando a caixa de diálogo é exibida. Se for NULL, a caixa de diálogo não contém uma cadeia de caracteres de substituição padrão.  
   
  *dwFlags*  
- Um ou mais sinalizadores que você pode usar para personalizar as configurações da caixa de diálogo, combinadas com o operador OR bit a bit. O valor padrão é FR_DOWN, que especifica que a pesquisa deve continuar em uma direção para baixo. Consulte a [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835) estrutura no SDK do Windows para obter mais informações sobre esses sinalizadores.  
+ Um ou mais sinalizadores que você pode usar para personalizar as configurações da caixa de diálogo, combinadas com o operador OR bit a bit. O valor padrão é FR_DOWN, que especifica que a pesquisa deve continuar em uma direção para baixo. Consulte a [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea) estrutura no SDK do Windows para obter mais informações sobre esses sinalizadores.  
   
  *pParentWnd*  
  Um ponteiro para a janela do pai ou proprietária da caixa de diálogo. Esta é a janela que receberá a mensagem especial que indica que uma ação de localizar/substituir é solicitada. Se for NULL, a janela principal do aplicativo é usada.  
@@ -174,7 +174,7 @@ virtual BOOL Create(
  Diferente de zero se o objeto de caixa de diálogo foi criado com êxito; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Para a janela pai a ser notificado de localizar/substituir solicitações, você deve usar o Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) função cujo valor de retorno é um número de mensagem exclusivo a instância do aplicativo. A janela do quadro deve ter uma entrada de mapa de mensagem que declara a função de retorno de chamada ( `OnFindReplace` no exemplo a seguir) que manipula essa mensagem registrada. O fragmento de código a seguir está um exemplo de como fazer isso para uma classe de janela de quadro chamada `CMyRichEditView`:  
+ Para a janela pai a ser notificado de localizar/substituir solicitações, você deve usar o Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) função cujo valor de retorno é um número de mensagem exclusivo a instância do aplicativo. A janela do quadro deve ter uma entrada de mapa de mensagem que declara a função de retorno de chamada ( `OnFindReplace` no exemplo a seguir) que manipula essa mensagem registrada. O fragmento de código a seguir está um exemplo de como fazer isso para uma classe de janela de quadro chamada `CMyRichEditView`:  
   
  [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]  
   
@@ -269,7 +269,7 @@ FINDREPLACE m_fr;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- `m_fr` é uma estrutura do tipo [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Seus membros armazenam as características do objeto de caixa de diálogo. Depois de criar uma `CFindReplaceDialog` objeto, você pode usar `m_fr` modificar vários valores na caixa de diálogo.  
+ `m_fr` é uma estrutura do tipo [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). Seus membros armazenam as características do objeto de caixa de diálogo. Depois de criar uma `CFindReplaceDialog` objeto, você pode usar `m_fr` modificar vários valores na caixa de diálogo.  
   
  Para obter mais informações sobre essa estrutura, consulte o `FINDREPLACE` estrutura no SDK do Windows.  
   

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88afe292905ee46c1e939d29f787055f98058dc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acb7b173ffd22e65e20dcc9cceef61b2e2131c83
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372172"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213395"
 ---
 # <a name="assemblyresource-embed-a-managed-resource"></a>/ASSEMBLYRESOURCE (inserir um recurso gerenciado)
 ```  
@@ -38,16 +38,16 @@ ms.locfileid: "32372172"
  O recurso gerenciado que você deseja inserir neste assembly.  
   
  *name*  
- Opcional. O nome lógico para o recurso. o nome usado para carregar o recurso. O padrão é o nome do arquivo.  
+ Opcional. O nome lógico do recurso; o nome usado para carregar o recurso. O padrão é o nome do arquivo.  
   
  Opcionalmente, você pode especificar se o arquivo deve ser privado no manifesto do assembly. Por padrão, *nome* é público no assembly.  
   
 ## <a name="remarks"></a>Comentários  
  Use a opção de /ASSEMBLYRESOURCE. para inserir um recurso em um assembly.  
   
- Recursos são públicos no assembly quando criado com o vinculador. O vinculador não permitem que você renomeie o recurso no assembly.  
+ Os recursos são públicos no assembly quando criado com a opção de vinculador. O vinculador não permite que você renomeie o recurso no assembly.  
   
- Se *filename* é um arquivo de recurso (. resources) do .NET Framework criado, por exemplo, pelo [gerador de arquivo (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator) ou no ambiente de desenvolvimento, ele pode ser acessado com membros de **Resources** namespace (consulte [System.Resources.ResourceManager](https://msdn.microsoft.com/en-us/library/system.resources.resourcemanager.aspx) para obter mais informações). Para todos os outros recursos, use o **GetManifestResource** \* métodos em **System.Reflection.Assembly** classe para acessar o recurso em tempo de execução.  
+ Se *filename* é um arquivo de recurso (. resources) do .NET Framework criado, por exemplo, pelo [gerador de arquivos de recurso (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator) ou no ambiente de desenvolvimento, ele pode ser acessado com membros no **System. Resources** namespace (consulte [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx) para obter mais informações). Para todos os outros recursos, use o **GetManifestResource** \* métodos **Reflection** classe para acessar o recurso em tempo de execução.  
   
  Outras opções de vinculador que afetam a geração de assembly são:  
   
@@ -59,21 +59,21 @@ ms.locfileid: "32372172"
   
 -   [/ DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)  
   
--   [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
+-   [/ KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
   
 -   [/ KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
   
--   [/ NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
+-   [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).  
   
 2.  Clique o **vinculador** pasta.  
   
 3.  Clique o **entrada** página de propriedades.  
   
-4.  Modificar o **Inserir arquivo de recurso gerenciado** propriedade.  
+4.  Modificar a **Inserir arquivo de recurso gerenciado** propriedade.  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   

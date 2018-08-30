@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: 47ac885152b0fdfbb9ce1ab77f6597db00c5bc07
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1060c5c02b0e599de5ca5a39970825fd5622ebf5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960246"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199182"
 ---
 # <a name="ltnumericgt-functions"></a>Funções &lt;numeric&gt;
 
@@ -62,7 +62,7 @@ A soma dos *val* e todos os elementos no intervalo especificado para a primeira 
 
 ### <a name="remarks"></a>Comentários
 
-O valor inicial garante que haverá um resultado bem definido quando o intervalo estiver vazio, caso em que *val* é retornado. A operação binária não precisa ser associativa ou comutativa. O resultado é inicializado com o valor inicial *val* e, em seguida *resultado*  =  `binary_op` ( *resultado*, **\*** `Iter`) é calculado iterativamente pelo intervalo, em que `Iter` é um iterador que aponta para o elemento sucessivo no intervalo. O intervalo deve ser válido e a complexidade deve ser linear com o tamanho do intervalo. O tipo de retorno do operador binário deve ser conversível para **Type** para garantir o fechamento durante a iteração.
+O valor inicial garante que haverá um resultado bem definido quando o intervalo estiver vazio, caso em que *val* é retornado. A operação binária não precisa ser associativa ou comutativa. O resultado é inicializado com o valor inicial *val* e, em seguida *resultado*  =  `binary_op` ( *resultado*, <strong>\*</strong> `Iter`) é calculado iterativamente pelo intervalo, em que `Iter` é um iterador que aponta para o elemento sucessivo no intervalo. O intervalo deve ser válido e a complexidade deve ser linear com o tamanho do intervalo. O tipo de retorno do operador binário deve ser conversível para **Type** para garantir o fechamento durante a iteração.
 
 ### <a name="example"></a>Exemplo
 

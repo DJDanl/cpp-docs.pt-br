@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81e76347e197469e4e4fa490d4ddfc42ef0fbd71
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: b76525c6e10284109952ede7f5e7c70132684d75
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338070"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210958"
 ---
 # <a name="carchive-class"></a>Classe CArchive
 Permite que você salve uma rede complexa de objetos em um formulário binário permanente (geralmente armazenamento em disco) que persiste depois que esses objetos são excluídos.  
@@ -561,7 +561,7 @@ CRuntimeClass* ReadClass(
   
  Sua classe de tempo de execução deve usar [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) e [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); caso contrário, `ReadClass` gerará um [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
- Se *pSchema* for NULL, o esquema da classe armazenado pode ser recuperado chamando [CArchive::GetObjectSchema](#getobjectschema); caso contrário, **\** * * pSchema* será contém o esquema da classe de tempo de execução que foi armazenado anteriormente.  
+ Se *pSchema* for NULL, o esquema da classe armazenado pode ser recuperado chamando [CArchive::GetObjectSchema](#getobjectschema); caso contrário, <strong>\*</strong>  *pSchema* conterá o esquema da classe de tempo de execução que foi armazenado anteriormente.  
   
  Você pode usar [SerializeClass](#serializeclass) em vez de `ReadClass`, que trata de leitura e gravação da referência de classe.  
   

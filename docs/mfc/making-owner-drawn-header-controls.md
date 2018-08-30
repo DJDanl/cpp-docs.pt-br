@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10315395e9699e2a93c802001ba920dcac1440f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca5545f7ebf828a04321db999d74aaa0d8a42187
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345230"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214727"
 ---
 # <a name="making-owner-drawn-header-controls"></a>Criando controles de cabeçalho desenhados pelo proprietário
-Você pode definir os itens individuais de um controle de cabeçalho ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) para ser itens desenhados pelo proprietário. Para obter mais informações, consulte [controles de cabeçalho Owner-Drawn](http://msdn.microsoft.com/library/windows/desktop/bb775238) no SDK do Windows.  
+Você pode definir itens individuais de um controle de cabeçalho ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) ser itens desenhados pelo proprietário. Para obter mais informações, consulte [controles de cabeçalho Owner-Drawn](/windows/desktop/Controls/header-controls) no SDK do Windows.  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando CHeaderCtrl](../mfc/using-cheaderctrl.md)   

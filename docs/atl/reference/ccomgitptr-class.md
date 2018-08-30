@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90da5e8394ea4f630a817b68edf60d4242b40be9
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a45866226f06b20d0805b7c4e294ff6d2d65506e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884168"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197914"
 ---
 # <a name="ccomgitptr-class"></a>Classe CComGITPtr
 Essa classe fornece métodos para lidar com ponteiros de interface e a tabela de interface global (GIT).  
@@ -254,6 +254,6 @@ HRESULT Revoke() throw();
   
 ## <a name="see-also"></a>Consulte também  
  [Marshaler livre](../../atl/atl-and-the-free-threaded-marshaler.md)   
- [Acessando as Interfaces entre Apartments](http://msdn.microsoft.com/library/windows/desktop/ms682353)   
- [Quando usar a tabela de Interface Global](http://msdn.microsoft.com/library/windows/desktop/ms693729)   
+ [Acessando as Interfaces entre Apartments](/windows/desktop/com/accessing-interfaces-across-apartments)   
+ [Quando usar a tabela de Interface Global](/windows/desktop/com/when-to-use-the-global-interface-table)   
  [Visão geral da classe](../../atl/atl-class-overview.md)

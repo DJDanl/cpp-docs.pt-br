@@ -9,21 +9,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aecb47db6e9d620ff49fac337454242a1bdb72a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3b2f8ab1c52297a95c89f8ee00053d24baebe39d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605695"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205474"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Reprovando tipos e membros (C++/CX)
-No C + + c++ /CLI CX, substituição de membros e tipos de tempo de execução do Windows para produtores e consumidores usando o [preterido](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c) atributo tem suporte. Se você consumir uma API para a qual esse atributo foi aplicado, você receberá uma mensagem de aviso de tempo de compilação indicando que a API foi substituída e recomendando também uma API alternativa para uso. Em seus próprios tipos e métodos públicos, você pode aplicar esse atributo e fornecer sua própria mensagem personalizada.  
+No C + + c++ /CLI CX, substituição de membros e tipos de tempo de execução do Windows para produtores e consumidores usando o [preterido](/uwp/api/windows.foundation.metadata.deprecatedattribute) atributo tem suporte. Se você consumir uma API para a qual esse atributo foi aplicado, você receberá uma mensagem de aviso de tempo de compilação indicando que a API foi substituída e recomendando também uma API alternativa para uso. Em seus próprios tipos e métodos públicos, você pode aplicar esse atributo e fornecer sua própria mensagem personalizada.  
   
 > [!CAUTION]
->  O [preterido](http://msdn.microsoft.com/en-us/8b02ad36-3b5f-4361-888b-e6a99040e57c) atributo é usado apenas com tipos de tempo de execução do Windows. Para classes e membros C++ padrão, use [__declspec(deprecated)](http://msdn.microsoft.com/library/044swk7y.aspx).  
+>  O [preterido](/uwp/api/windows.foundation.metadata.deprecatedattribute) atributo é usado apenas com tipos de tempo de execução do Windows. Para classes C++ padrão e membros, use [__declspec(deprecated)](../cpp/deprecated-cpp.md).  
   
 ### <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como substituir suas próprias APIs públicas – por exemplo, em um componente do Tempo de Execução do Windows. O segundo parâmetro, do tipo [Windows:Foundation::Metadata::DeprecationType](http://msdn.microsoft.com/en-us/ee01e63d-37d0-4273-accc-fca174f88bfa) especifica se a API está sendo substituída ou removida. Há suporte somente para o valor DeprecationType::Deprecated no momento. O terceiro parâmetro no atributo especifica a [Windows::Foundation::Metadata::Platform](http://msdn.microsoft.com/en-us/1eae292d-1ab7-4d97-a58c-b0beffd51ef5) à qual o atributo se aplica.  
+ O exemplo a seguir mostra como substituir suas próprias APIs públicas – por exemplo, em um componente do Tempo de Execução do Windows. O segundo parâmetro do tipo [Windows: Foundation:: Metadata:: deprecationtype](/uwp/api/windows.foundation.metadata.deprecationtype) Especifica se a API está sendo substituída ou removida. Há suporte somente para o valor DeprecationType::Deprecated no momento. O terceiro parâmetro no atributo especifica o [Windows::Foundation::Metadata::Platform](/uwp/api/windows.foundation.metadata.platformattribute) ao qual o atributo se aplica.  
   
 ```  
   

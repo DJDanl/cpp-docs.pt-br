@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1acc2d5918bea040e1f004e8a1d11ceee3146f89
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 61601baca7a91d76f473281184c335cc5277f815
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848613"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201848"
 ---
 # <a name="crebar-class"></a>Classe CReBar
 Uma barra de controle que fornece o layout, persistência e informações de estado para controles rebar.  
@@ -105,7 +105,7 @@ BOOL AddBar(
  Um ponteiro para um `CBitmap` objeto a ser exibido no plano de fundo de rebar. NULL por padrão.  
   
  *dwStyle*  
- Um DWORD que contém o estilo para aplicar a rebar. Consulte a `fStyle` descrição na estrutura Win32 da função [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) para obter uma lista completa dos estilos de banda.  
+ Um DWORD que contém o estilo para aplicar a rebar. Consulte a `fStyle` descrição na estrutura Win32 da função [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) para obter uma lista completa dos estilos de banda.  
   
  *clrFore*  
  Um valor COLORREF que representa a cor de primeiro plano do rebar.  
@@ -135,7 +135,7 @@ virtual BOOL Create(
  Ponteiro para o `CWnd` objeto cuja janela do Windows é o pai da barra de status. Normalmente, a janela do quadro.  
   
  *dwCtrlStyle*  
- O estilo do controle rebar. Por padrão, RBS_BANDBORDERS, que exibe linhas estreitas para separar as faixas adjacentes dentro do controle rebar. Ver [estilos de controle Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) no SDK do Windows para obter uma lista de estilos.  
+ O estilo do controle rebar. Por padrão, RBS_BANDBORDERS, que exibe linhas estreitas para separar as faixas adjacentes dentro do controle rebar. Ver [estilos de controle Rebar](/windows/desktop/Controls/rebar-control-styles) no SDK do Windows para obter uma lista de estilos.  
   
  *dwStyle*  
  Os estilos de janela de rebar.  

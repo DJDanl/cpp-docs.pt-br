@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77b0c115dbd820ea715b739dd3e4d6eb2c5f4950
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 0a2652730c981313ee3e168aca4a36a91fadde47
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883444"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198449"
 ---
 # <a name="ccomcontrol-class"></a>Classe CComControl
 Essa classe fornece métodos para criar e gerenciar os controles ATL.  
@@ -157,7 +157,7 @@ HRESULT FireOnChanged(DISPID dispID);
  Um dos valores HRESULT padrão.  
   
 ### <a name="remarks"></a>Comentários  
- Se sua classe de controle deriva [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), este método chama [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) notificar todos conectados `IPropertyNotifySink` interfaces que o controle especificado propriedade foi alterada. Se sua classe de controle não é derivado de `IPropertyNotifySink`, esse método retorna S_OK. 
+ Se sua classe de controle deriva [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), este método chama [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) notificar todos conectados `IPropertyNotifySink` interfaces que o controle especificado propriedade foi alterada. Se sua classe de controle não é derivado de `IPropertyNotifySink`, esse método retorna S_OK. 
   
  Esse método é seguro chamar o mesmo que o controle não dá suporte a pontos de conexão.  
   
@@ -179,7 +179,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
  Um dos valores HRESULT padrão.  
   
 ### <a name="remarks"></a>Comentários  
- Se sua classe de controle deriva [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638), este método chama [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) notificar todos conectados `IPropertyNotifySink` interfaces que especificado propriedade de controle está prestes a ser alterada. Se sua classe de controle não é derivado de `IPropertyNotifySink`, esse método retorna S_OK.  
+ Se sua classe de controle deriva [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), este método chama [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) notificar todos conectados `IPropertyNotifySink` interfaces que especificado propriedade de controle está prestes a ser alterada. Se sua classe de controle não é derivado de `IPropertyNotifySink`, esse método retorna S_OK.  
 
   
  Esse método é seguro chamar o mesmo que o controle não dá suporte a pontos de conexão.  
@@ -205,10 +205,10 @@ int MessageBox(
  O título da caixa de diálogo. Se NULL (o padrão), o título "Error" é usado.  
   
  *nType*  
- Especifica o conteúdo e o comportamento da caixa de diálogo. Consulte a [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) entrada na documentação do SDK do Windows para obter uma lista das caixas de mensagem diferentes disponíveis. O padrão fornece um simples **Okey** botão.  
+ Especifica o conteúdo e o comportamento da caixa de diálogo. Consulte a [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) entrada na documentação do SDK do Windows para obter uma lista das caixas de mensagem diferentes disponíveis. O padrão fornece um simples **Okey** botão.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna um valor inteiro especificando um dos valores de item de menu listados na [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) na documentação do SDK do Windows.  
+ Retorna um valor inteiro especificando um dos valores de item de menu listados na [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) na documentação do SDK do Windows.  
   
 ### <a name="remarks"></a>Comentários  
  `MessageBox` é útil durante o desenvolvimento e como uma maneira fácil de exibir uma mensagem de aviso ou erro para o usuário.  

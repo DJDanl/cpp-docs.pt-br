@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f945766283fa6e58b1eb3430cc780b1ae136e9f
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: b9853cbcecd691f0ea16358259c8a0ac7b213433
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884724"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211181"
 ---
 # <a name="umenuorid-class"></a>Classe u_menuorid
 Essa classe fornece wrappers `CreateWindow` e `CreateWindowEx`.  
@@ -55,7 +55,7 @@ class _U_MENUorID
 ## <a name="remarks"></a>Comentários  
  Essa classe de adaptador do argumento permite IDs (unidades) ou (HMENUs) a serem passados para uma função sem a necessidade de uma conversão explícita de identificadores de menu na parte do chamador.  
   
- Essa classe é projetada para a implementação de invólucros para a API do Windows, particularmente o [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) e [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funções, que aceitam um argumento HMENU que pode ser uma janela filho identificador (UINT) em vez de um identificador de menu. Por exemplo, você pode ver essa classe em uso como um parâmetro para [CWindowImpl::Create](cwindowimpl-class.md#create).  
+ Essa classe é projetada para a implementação de invólucros para a API do Windows, particularmente o [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) e [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) funções, que aceitam um argumento HMENU que pode ser uma janela filho identificador (UINT) em vez de um identificador de menu. Por exemplo, você pode ver essa classe em uso como um parâmetro para [CWindowImpl::Create](cwindowimpl-class.md#create).  
 
   
  A classe define duas sobrecargas de construtor: uma aceita um argumento UINT e o outra aceita um argumento HMENU. O argumento UINT apenas é convertido para um HMENU no construtor e o resultado armazenado no membro de dados único da classe, [m_hMenu](#_u_menuorid__m_hmenu). O argumento para o construtor HMENU é armazenado diretamente, sem conversão.  

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb3a57cec78c0ea02e16edd890d2a66362bfc011
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 86a6437e7a30fb92d2af66c3d657150549273cd3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594863"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208443"
 ---
 # <a name="string-c"></a>string (C++)
 
@@ -36,7 +36,7 @@ Indica que o unidimensional **char**, **wchar_t**, `byte` (ou equivalente) matri
 
 ## <a name="remarks"></a>Comentários
 
-O **cadeia de caracteres** atributo C++ tem a mesma funcionalidade que o [cadeia de caracteres](http://msdn.microsoft.com/library/windows/desktop/aa367270) atributo MIDL.
+O **cadeia de caracteres** atributo C++ tem a mesma funcionalidade que o [cadeia de caracteres](/windows/desktop/Midl/string) atributo MIDL.
 
 ## <a name="example"></a>Exemplo
 

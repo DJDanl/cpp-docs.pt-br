@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d54a22bd215a80f3e7cab3770a4ba12cd7baffb
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 218b03ed1e1c69dd7b365e9c2526aef5b1145aed
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027436"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218483"
 ---
 # <a name="coledroptarget-class"></a>Classe COleDropTarget
 Fornece o mecanismo de comunicação entre uma janela e as bibliotecas OLE.  
@@ -138,7 +138,7 @@ virtual DROPEFFECT OnDragEnter(
 ### <a name="remarks"></a>Comentários  
  Substitua essa função para permitir operações de soltar ocorrer na janela. A implementação padrão chama [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter), que simplesmente retorna DROPEFFECT_NONE por padrão.  
   
- Para obter mais informações, consulte [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) no SDK do Windows.  
+ Para obter mais informações, consulte [IDropTarget::DragEnter](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragenter) no SDK do Windows.  
   
 ##  <a name="ondragleave"></a>  COleDropTarget::OnDragLeave  
  Chamado pelo framework quando o cursor deixa a janela enquanto uma operação de arrastar estiver em vigor.  
@@ -154,7 +154,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 ### <a name="remarks"></a>Comentários  
  Substitua essa função se você quiser o comportamento especial quando a operação de arrastar deixa a janela especificada. A implementação padrão dessa função chama [CView::OnDragLeave](../../mfc/reference/cview-class.md#ondragleave).  
   
- Para obter mais informações, consulte [IDropTarget::DragLeave](http://msdn.microsoft.com/library/windows/desktop/ms680110) no SDK do Windows.  
+ Para obter mais informações, consulte [IDropTarget::DragLeave](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragleave) no SDK do Windows.  
   
 ##  <a name="ondragover"></a>  COleDropTarget::OnDragOver  
  Chamado pelo framework quando o cursor é arrastado sobre a janela.  
@@ -196,7 +196,7 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="remarks"></a>Comentários  
  Essa função deve ser substituída para permitir operações de soltar ocorrer na janela. A implementação padrão dessa função chama [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover), que retorna DROPEFFECT_NONE por padrão. Porque essa função é chamada com frequência durante uma operação de arrastar e soltar, ele deve ser otimizado tanto quanto possível.  
   
- Para obter mais informações, consulte [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129) no SDK do Windows.  
+ Para obter mais informações, consulte [IDropTarget::DragOver](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-dragover) no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
@@ -275,7 +275,7 @@ Contém o local do cursor, em pixels, em relação à tela.
   
  A implementação padrão de `COleDropTarget::OnDrop` chamadas [CView::OnDrop](../../mfc/reference/cview-class.md#ondrop), que simplesmente retorna FALSE por padrão.  
   
- Para obter mais informações, consulte [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) no SDK do Windows.  
+ Para obter mais informações, consulte [IDropTarget::Drop](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-drop) no SDK do Windows.  
   
 ##  <a name="ondropex"></a>  COleDropTarget::OnDropEx  
  Chamado pelo framework quando uma operação de soltar deve ocorrer.  
@@ -325,7 +325,7 @@ virtual DROPEFFECT OnDropEx(
   
  - DROPEFFECT_SCROLL indica que uma operação de arrastar rolagem está prestes a ocorrer ou se está ocorrendo no destino.  
   
- Para obter mais informações, consulte [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) no SDK do Windows.  
+ Para obter mais informações, consulte [IDropTarget::Drop](/windows/desktop/api/oleidl/nf-oleidl-idroptarget-drop) no SDK do Windows.  
   
 ##  <a name="register"></a>  COleDropTarget::Register  
  Chame essa função para registrar sua janela com DLLs OLE como um destino de soltar válido.  
@@ -344,7 +344,7 @@ BOOL Register(CWnd* pWnd);
 ### <a name="remarks"></a>Comentários  
  Essa função deve ser chamada para operações de descarte para serem aceitos.  
   
- Para obter mais informações, consulte [RegisterDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms678405) no SDK do Windows.  
+ Para obter mais informações, consulte [RegisterDragDrop](/windows/desktop/api/ole2/nf-ole2-registerdragdrop) no SDK do Windows.  
   
 ##  <a name="revoke"></a>  COleDropTarget::Revoke  
  Chame essa função antes da destruição de qualquer janela que foi registrada como um destino de soltar por meio de uma chamada para [registrar](#register) para removê-lo da lista de destinos de soltar.  
@@ -356,7 +356,7 @@ virtual void Revoke();
 ### <a name="remarks"></a>Comentários  
  Essa função é chamada automaticamente a partir de [o OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy) manipulador para a janela que foi registrada, portanto, geralmente não é necessário chamar essa função explicitamente.  
   
- Para obter mais informações, consulte [RevokeDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms692643) no SDK do Windows.  
+ Para obter mais informações, consulte [RevokeDragDrop](/windows/desktop/api/ole2/nf-ole2-revokedragdrop) no SDK do Windows.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplo MFC HIERSVR](../../visual-cpp-samples.md)   

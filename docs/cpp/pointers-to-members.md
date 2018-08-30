@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c610d7f72c76e8c761de0cb01c42c8d6006e4b7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e137f0f41c94473d47985ceb848eeef7c7c9ca08
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407774"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208510"
 ---
 # <a name="pointers-to-members"></a>Ponteiros para membros
 As declarações dos ponteiros para os membros são casos especiais de declarações do ponteiro.  Elas são declaradas usando a seguinte sequência:  
@@ -45,7 +45,7 @@ As declarações dos ponteiros para os membros são casos especiais de declaraç
   - Um modificador opcional específico da Microsoft. Para obter mais informações, consulte [modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md).  
 1. O nome qualificado da classe que contém os membros a serem apontados.  
   - O operador ::.  
-  - O **\*** operador.  
+  - O <strong>\*</strong> operador.  
   - Opcional **const** e/ou **volátil** especificadores.  
   - O identificador que nomeia o ponteiro para o membro.  
   
@@ -101,7 +101,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- A diferença entre o **.\***  e **-> \*** operadores (os operadores de ponteiro para membro) é que o **.\***  operador seleciona membros dado um objeto ou uma referência de objeto, enquanto a **-> \*** operador seleciona membros por meio de um ponteiro. (Para obter mais informações sobre esses operadores, consulte [expressões com operadores de ponteiro para membro](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
+ A diferença entre o **.** <strong>\*</strong> e **->** <strong>\*</strong> operadores (os operadores de ponteiro para membro) é que o **.** <strong>\*</strong> operador seleciona membros dado um objeto ou uma referência de objeto, enquanto o **->** <strong>\*</strong> operador seleciona membros por meio de um ponteiro. (Para obter mais informações sobre esses operadores, consulte [expressões com operadores de ponteiro para membro](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
  O resultado dos operadores de ponteiro para membro é o tipo do membro — nesse caso, `char *`.  
   
@@ -123,7 +123,7 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 ```  
   
 ## <a name="restrictions-on-pointers-to-members"></a>Restrições em ponteiros para membros  
- O endereço de um membro estático não é um ponteiro para um membro. É um ponteiro normal para uma instância do membro estático. Como apenas uma instância de um membro estático existe para todos os objetos de uma determinada classe, comuns address-of **(&)** e desreferência **(\*)** operadores podem ser usados.  
+ O endereço de um membro estático não é um ponteiro para um membro. É um ponteiro normal para uma instância do membro estático. Como apenas uma instância de um membro estático existe para todos os objetos de uma determinada classe, comuns address-of (**&**) e desreferência (<strong>\*</strong>) operadores podem ser usados.  
   
 ## <a name="pointers-to-members-and-virtual-functions"></a>Ponteiros para membros e funções virtuais  
  Chamar uma função virtual por meio de uma função de ponteiro para membro funciona como se a função tivesse sido chamada diretamente; a função correta é procurada na tabela v e chamada.  

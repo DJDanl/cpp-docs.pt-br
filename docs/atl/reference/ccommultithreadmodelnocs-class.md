@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65f8021bdc16dcfb2c4d1aa69936f27cfe7ac1df
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 09e209a7b3e81ac232d2c0441a84e55ded8faecf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884812"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212851"
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>Classe CComMultiThreadModelNoCS
 `CComMultiThreadModelNoCS` fornece métodos thread-safe para incrementar e diminuir o valor de uma variável, sem bloqueio de seção crítica ou a funcionalidade de desbloqueio.  
@@ -117,7 +117,7 @@ typedef CComFakeCriticalSection CriticalSection;
  Ver [CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection).  
   
 ##  <a name="decrement"></a>  CComMultiThreadModelNoCS::Decrement  
- A função estática chama a função Win32 [InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580), que diminui o valor da variável apontado por *p*.  
+ A função estática chama a função Win32 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement), que diminui o valor da variável apontado por *p*.  
   
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw();
@@ -134,7 +134,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
  **InterlockedDecrement** impede que mais de um thread simultaneamente usando essa variável.  
   
 ##  <a name="increment"></a>  CComMultiThreadModelNoCS::Increment  
- A função estática chama a função Win32 [InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614), que incrementa o valor da variável apontado por *p*.  
+ A função estática chama a função Win32 [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement), que incrementa o valor da variável apontado por *p*.  
   
 ```
 static ULONG WINAPI Increment(LPLONG p) throw();

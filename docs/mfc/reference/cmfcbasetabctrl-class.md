@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a629f372058e3e6688a57043d73e29717f3601d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 212637b55a422c11d82ae6ad9f548d9e429c41dd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540757"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198562"
 ---
 # <a name="cmfcbasetabctrl-class"></a>Classe CMFCBaseTabCtrl
 Implementa a funcionalidade básica para janelas com guias.  
@@ -357,7 +357,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||  
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||  
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||  
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Usado pela classe [CWinApp](../../mfc/reference/cwinapp-class.md) para converter as mensagens da janela antes de serem expedidas para o [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funções do Windows. (Substitui [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Usado pela classe [CWinApp](../../mfc/reference/cwinapp-class.md) para converter as mensagens da janela antes de serem expedidas para o [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funções do Windows. (Substitui [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|Recalcula o layout interno de uma janela com guias.|  
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|Remove todas as guias da janela com guias.|  
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|Remove uma guia em uma janela com guias.|  
@@ -776,7 +776,7 @@ virtual COLORREF GetActiveTabColor() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que especifica a cor do plano de fundo da guia ativa.  
+ Um [COLORREF](/windows/desktop/gdi/colorref) valor que especifica a cor do plano de fundo da guia ativa.  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, a cor de plano de fundo da guia Active Directory é COLOR_WINDOW. Você pode alterar a cor de plano de fundo para a guia ativa usando o método [CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor).  
@@ -789,7 +789,7 @@ virtual COLORREF GetActiveTabTextColor() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que especifica a cor do texto da guia Active Directory.  
+ Um [COLORREF](/windows/desktop/gdi/colorref) valor que especifica a cor do texto da guia Active Directory.  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, a cor do texto para guias de Active Directory é COLOR_WINDOWTEXT. Você pode alterar a cor do texto com o método [CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor).  
@@ -812,7 +812,7 @@ const CArray<COLORREF,COLORREF>& GetAutoColors() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Uma referência a uma matriz de [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valores que o [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) object usa para coloração automática de guia.  
+ Uma referência a uma matriz de [COLORREF](/windows/desktop/gdi/colorref) valores que o [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) object usa para coloração automática de guia.  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, o framework inicializa a matriz de cores para uma cor definida pela biblioteca. Você pode fornecer uma matriz personalizada de cores, chamando o método [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).  
@@ -958,7 +958,7 @@ virtual COLORREF GetTabBkColor(int iTab) const;
  O índice baseado em zero da guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que indica a cor do plano de fundo da guia especificada; -1 se *iTab* está fora do intervalo.  
+ Um [COLORREF](/windows/desktop/gdi/colorref) valor que indica a cor do plano de fundo da guia especificada; -1 se *iTab* está fora do intervalo.  
   
 ##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize  
  Recupera o tamanho das bordas da guia no controle guia.  
@@ -1176,7 +1176,7 @@ virtual COLORREF GetTabTextColor(int iTab) const;
  O índice baseado em zero da guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parâmetro que indica a cor do texto da guia especificada; -1 se *iTab* está fora do intervalo.  
+ Um [COLORREF](/windows/desktop/gdi/colorref) parâmetro que indica a cor do texto da guia especificada; -1 se *iTab* está fora do intervalo.  
   
 ##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd  
  Retorna o ponteiro para o painel que reside na guia especificada.  
@@ -1844,7 +1844,7 @@ virtual void SetActiveTabColor(COLORREF clr);
  Especifica a nova cor de plano de fundo.  
   
 ### <a name="remarks"></a>Comentários  
- O framework obtém a cor de fundo padrão para o Active Directory guias dos [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)método.  
+ O framework obtém a cor de fundo padrão para o Active Directory guias dos [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)método.  
   
 ##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor  
  Define a cor do texto para guias de Active Directory.  
@@ -1855,10 +1855,10 @@ virtual void SetActiveTabTextColor(COLORREF clr);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *clr*  
- Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parâmetro que especifica a cor do texto novo.  
+ Um [COLORREF](/windows/desktop/gdi/colorref) parâmetro que especifica a cor do texto novo.  
   
 ### <a name="remarks"></a>Comentários  
- Por padrão, o framework obtém a cor do texto do [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371). Substituir essa cor padrão usando o `SetActiveTabTextColor` método.  
+ Por padrão, o framework obtém a cor do texto do [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371). Substituir essa cor padrão usando o `SetActiveTabTextColor` método.  
   
 ##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors  
  Define as cores do controle guia que usa a estrutura no modo de cor automática.  
@@ -1929,7 +1929,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
  A largura de cada imagem em pixels.  
   
  [in] *clrTransp*  
- Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parâmetro que indica a cor transparente da imagem.  
+ Um [COLORREF](/windows/desktop/gdi/colorref) parâmetro que indica a cor transparente da imagem.  
   
  [in] *hImageList*  
  Um identificador para uma lista de imagem pré-carregada.  
@@ -2114,7 +2114,7 @@ virtual BOOL SetTabTextColor(
  O índice baseado em zero da guia.  
   
  [in] *cor*  
- Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parâmetro que indica a cor do texto novo.  
+ Um [COLORREF](/windows/desktop/gdi/colorref) parâmetro que indica a cor do texto novo.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se bem-sucedido; Caso contrário, 0.  

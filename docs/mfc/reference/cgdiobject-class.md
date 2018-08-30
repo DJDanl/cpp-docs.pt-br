@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6749c62a5d8de0bd1da3a5d619a85a0ec874a21a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: e72c7ea788085f25dc2a4ec1b2f8682df9e20b25
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338412"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209121"
 ---
 # <a name="cgdiobject-class"></a>Classe CGdiObject
 Fornece uma classe base para vários tipos de gráficos do Windows em objetos de interface (GDI) do dispositivo, como bitmaps, regiões, pincéis, canetas, paletas e fontes.  
@@ -139,7 +139,7 @@ BOOL CreateStockObject(int nIndex);
   
 ### <a name="parameters"></a>Parâmetros  
  *nIndex*  
- Uma constante especificando o tipo de objeto de estoque desejado. Consulte o parâmetro *fnObject* para [GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925) no SDK do Windows para obter uma descrição dos valores apropriados.  
+ Uma constante especificando o tipo de objeto de estoque desejado. Consulte o parâmetro *fnObject* para [GetStockObject](/windows/desktop/api/wingdi/nf-wingdi-getstockobject) no SDK do Windows para obter uma descrição dos valores apropriados.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se a função for bem-sucedida; caso contrário, 0.  
@@ -230,14 +230,14 @@ int GetObject(
 |------------|-----------------|  
 |`CPen`|[LOGPEN](../../mfc/reference/logpen-structure.md)|  
 |`CBrush`|[LOGBRUSH](../../mfc/reference/logbrush-structure.md)|  
-|`CFont`|[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)|  
+|`CFont`|[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)|  
 |`CBitmap`|[BITMAP](../../mfc/reference/bitmap-structure.md)|  
 |`CPalette`|WORD|  
 |`CRgn`|Sem suporte|  
   
  Se o objeto for um `CBitmap` objeto, `GetObject` retorna apenas a largura, altura e informações de formato de cor do bitmap. Os bits reais podem ser recuperados por meio [CBitmap::GetBitmapBits](../../mfc/reference/cbitmap-class.md#getbitmapbits).  
   
- Se o objeto for um `CPalette` objeto, `GetObject` recupera uma palavra que especifica o número de entradas da paleta. A função não recupera o [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) estrutura que define a paleta. Um aplicativo pode obter informações sobre as entradas da paleta chamando [CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries).  
+ Se o objeto for um `CPalette` objeto, `GetObject` recupera uma palavra que especifica o número de entradas da paleta. A função não recupera o [LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette) estrutura que define a paleta. Um aplicativo pode obter informações sobre as entradas da paleta chamando [CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries).  
   
 ##  <a name="getobjecttype"></a>  CGdiObject::GetObjectType  
  Recupera o tipo do objeto GDI.  

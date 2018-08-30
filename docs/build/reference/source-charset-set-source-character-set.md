@@ -1,5 +1,5 @@
 ---
-title: -origem-charset (conjunto de caracteres de origem do conjunto) | Microsoft Docs
+title: -source-charset (definir conjunto de caracteres de origem) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4f010eb0f0b83dbc41ebeff624033e59d582535
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 722586f3a629535c5ea70c26e5172e6bc7ecb418
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379218"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213074"
 ---
-# <a name="source-charset-set-source-character-set"></a>/Source-charset (definir fonte do conjunto de caracteres)
-Permite que você especifique o caractere de origem definido para o executável.  
+# <a name="source-charset-set-source-character-set"></a>/Source-charset (Definir origem conjunto de caracteres)
+Permite que você especifique o conjunto para o executável de caracteres de origem.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,33 +36,33 @@ Permite que você especifique o caractere de origem definido para o executável.
   
 ## <a name="arguments"></a>Arguments  
  **IANA_name**  
- Nome do conjunto de caracteres definida pelo IANA.  
+ Nome do conjunto de caracteres de definido pelo IANA.  
   
  **CPID**  
  O identificador de página de código como um número decimal.  
   
 ## <a name="remarks"></a>Comentários  
- Você pode usar o **/source-charset** opção para especificar um caractere de origem estendido definido para usar quando os arquivos de origem incluem caracteres que não são representados no conjunto de caracteres de origem básico. O conjunto de caracteres de origem é a codificação usada para interpretar o texto de origem do programa para a representação interna usada como entrada para as fases de pré-processamento antes da compilação. A representação interna é convertida para o conjunto de caracteres de execução para armazenar valores de cadeia de caracteres e caracteres no executável. Você pode usar qualquer IANA ou nome do conjunto de caracteres ISO ou um ponto (.) seguido por um identificador de página de código decimal de 3 a 5 dígitos para especificar o conjunto de caracteres para usar. Para obter uma lista de identificadores de página de código de suporte e os nomes do conjunto de caracteres, consulte [identificadores de página de código](http://msdn.microsoft.com/library/windows/desktop/dd317756).  
+ Você pode usar o **/source-charset** opção para especificar um caractere de origem estendido definido para usar quando os arquivos de origem incluem caracteres que não são representadas no conjunto de caracteres de origem básicos. O conjunto de caracteres de origem é a codificação usada para interpretar o texto de origem do seu programa com a representação interna usada como entrada para as fases de pré-processamento antes da compilação. A representação interna, em seguida, é convertida para o conjunto de caracteres de execução para armazenar valores de cadeia de caracteres e o caractere no executável. Você pode usar qualquer um dos IANA ou nome do conjunto de caracteres ISO ou um ponto (.) seguido por um identificador de página de código decimal de 3 a 5 dígitos para especificar o conjunto de caracteres para usar. Para obter uma lista de identificadores de páginas de código de suporte e os nomes do conjunto de caracteres, consulte [identificadores de páginas de código](/windows/desktop/Intl/code-page-identifiers).  
   
- Por padrão, o Visual Studio detecta uma marca de ordem de byte para determinar se o arquivo de origem está em um formato codificado de Unicode, por exemplo, UTF-16 ou UTF-8. Se nenhuma marca de ordem de byte for encontrada, ele pressupõe que o arquivo de origem é codificado usando a página de código do usuário atual, a menos que você especifique um conjunto de caracteres nome ou páginas de código usando o **/source-charset** opção. O Visual Studio permite que você salve seu código-fonte C++ usando qualquer uma das várias codificações de caracteres. Para obter mais informações sobre conjuntos de caracteres de origem e de execução, consulte [conjuntos de caracteres](../../cpp/character-sets.md) na documentação do idioma.  
+ Por padrão, o Visual Studio detecta uma marca de ordem de byte para determinar se o arquivo de origem está em um formato codificado de Unicode, por exemplo, UTF-16 ou UTF-8. Se nenhuma marca de ordem de byte for encontrada, ele pressupõe que o arquivo de origem é codificado usando a página de código do usuário atual, a menos que você especifique um conjunto de caracteres nome ou páginas de código usando o **/source-charset** opção. Visual Studio permite que você salvar seu código-fonte C++, usando qualquer uma das várias codificações de caracteres. Para obter mais informações sobre conjuntos de caracteres de origem e de execução, consulte [conjuntos de caracteres](../../cpp/character-sets.md) na documentação do idioma.  
   
- O conjunto de caracteres de origem que você fornecer deve mapear os caracteres ASCII de 7 bits para os mesmos pontos de código no seu conjunto de caracteres, ou muitos erros de compilação têm probabilidade de seguir. O conjunto de caracteres de origem também deve ser podem ser mapeado para o caractere Unicode estendido definido pode ser codificado por UTF-8. Caracteres que não pode ser codificadas em UTF-8 são representados por um substituto específicos de implementação. O compilador da Microsoft usa um ponto de interrogação esses caracteres.  
+ O conjunto de caracteres de origem que você fornecer deve mapear os caracteres ASCII de 7 bits para os mesmos pontos de código no seu conjunto de caracteres ou provavelmente muitos erros de compilação a seguir. Seu conjunto de caracteres de origem também deve ser podem ser mapeado para o caractere Unicode estendido definido pode ser codificado por UTF-8. Caracteres que não pode ser codificadas em UTF-8 são representados por um substituto específico da implementação. O compilador Microsoft usa um ponto de interrogação para esses caracteres.  
   
- Se você deseja definir o conjunto de caracteres de origem e o conjunto de caracteres de execução para UTF-8, você pode usar o **/utf-8** opção de compilador como um atalho. É equivalente a especificar **/origem-charset:utf-/execution 8-charset:utf-8** na linha de comando. Além disso, qualquer uma dessas opções permite que o **/validate-charset** opção por padrão.  
+ Se você quiser definir o conjunto de caracteres de origem e o conjunto de caracteres de execução para UTF-8, você pode usar o **/utf-8** opção do compilador como um atalho. Ele equivale à especificação **/origem-charset:utf-/execution 8-charset:utf-8** na linha de comando. Além disso, qualquer uma dessas opções permite que o **/validate-charset** opção por padrão.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra o projeto **páginas de propriedade** caixa de diálogo. Para obter mais informações, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
+1.  Abra o projeto **páginas de propriedade** caixa de diálogo. Para obter mais informações, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
 2.  Expanda o **propriedades de configuração**, **C/C++**, **linha de comando** pasta.  
   
-3.  Em **opções avançadas de**, adicione o **/source-charset** opção e especifique a codificação preferencial.  
+3.  Na **opções avançadas**, adicione o **/source-charset** opção e especifique a codificação preferencial.  
   
-4.  Escolha **Okey** para salvar suas alterações.  
+4.  Escolher **Okey** para salvar suas alterações.  
   
 ## <a name="see-also"></a>Consulte também  
  [Opções do compilador](../../build/reference/compiler-options.md)   
  [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)   
- [/Execution-charset (defina a execução do conjunto de caracteres)](../../build/reference/execution-charset-set-execution-character-set.md)   
- [/UTF-8 (Definir origem e o executável conjuntos de caracteres UTF-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)   
+ [/Execution-charset (definir execução de conjunto de caracteres)](../../build/reference/execution-charset-set-execution-character-set.md)   
+ [/UTF-8 (Definir origem e executáveis conjuntos de caracteres UTF-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)   
  [/validate-charset (validar quanto à presença de caracteres compatíveis)](../../build/reference/validate-charset-validate-for-compatible-characters.md)

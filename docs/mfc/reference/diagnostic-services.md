@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee3fbc85ee6068c6e45f2847ae7ba45a425db8e8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5be60ff1f0aa8b2ceff7517a9af968e0b7690478
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541543"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214673"
 ---
 # <a name="diagnostic-services"></a>Serviços de diagnóstico
 A biblioteca Microsoft Foundation Class fornece vários serviços de diagnóstico que tornam a depuração de seus programas mais fácil. Esses serviços de diagnóstico incluem macros e funções globais que permitem que você controle a memória do seu programa alocações, despejar o conteúdo dos objetos durante o tempo de execução e imprimir as mensagens de depuração durante o tempo de execução. As macros e funções globais para serviços de diagnóstico são agrupadas nas seguintes categorias:  
@@ -79,8 +79,8 @@ A biblioteca Microsoft Foundation Class fornece vários serviços de diagnóstic
 |[AfxCheckError](#afxcheckerror)|Variável global usado para testar o SCODE passado para ver se ele é um erro e, em caso afirmativo, gera o erro apropriado.|  
 |[AfxCheckMemory](#afxcheckmemory)|Verifica que a integridade de todos os memória alocada no momento.|  
 |[AfxDebugBreak](#afxdebugbreak)|Faz com que uma quebra na execução.|
-|[AfxDump](#cdumpcontext_in_mfc)|Se for chamado no depurador, despejos de memória o estado de um objeto durante a depuração.|  
-|[AfxDump](#afxdump)|Função interna que o estado de um objeto de despejos de memória durante a depuração.|
+|[afxDump](#cdumpcontext_in_mfc)|Se for chamado no depurador, despejos de memória o estado de um objeto durante a depuração.|  
+|[afxDump](#afxdump)|Função interna que o estado de um objeto de despejos de memória durante a depuração.|
 |[AfxDumpStack](#afxdumpstack)|Gere uma imagem da pilha atual. Essa função é sempre vinculada estaticamente.|  
 |[AfxEnableMemoryLeakDump](#afxenablememoryleakdump)|Permite que o despejo de vazamento de memória.|  
 |[AfxEnableMemoryTracking](#afxenablememorytracking)|Ativa o acompanhamento de intermitente da memória.|  
@@ -605,7 +605,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
   
  Para usar essa função com êxito:  
   
--   O arquivo IMAGEHLP. DLL deve estar em seu caminho. Se você não tiver essa DLL, a função exibirá uma mensagem de erro. Ver [biblioteca de ajuda de imagem](http://msdn.microsoft.com/library/windows/desktop/ms680321) para obter informações sobre o conjunto de funções fornecida pelo IMAGEHLP.  
+-   O arquivo IMAGEHLP. DLL deve estar em seu caminho. Se você não tiver essa DLL, a função exibirá uma mensagem de erro. Ver [biblioteca de ajuda de imagem](/windows/desktop/Debug/image-help-library) para obter informações sobre o conjunto de funções fornecida pelo IMAGEHLP.  
   
 -   Os módulos que têm os quadros na pilha devem incluir informações de depuração. Se eles não contêm informações de depuração, a função ainda irá gerar um rastreamento de pilha, mas o rastreamento será menos detalhado.  
 ### <a name="requirements"></a>Requisitos  

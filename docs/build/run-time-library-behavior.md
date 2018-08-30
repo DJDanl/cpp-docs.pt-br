@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6606fd65f0f551ca9105c8f9810a75902802334d
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: d6475e2ea3ec7fe69325fd82671952dbe2c39620
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571554"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217286"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>DLLs e comportamento da biblioteca em tempo de execução Visual C++  
   
@@ -67,7 +67,7 @@ extern "C" BOOL WINAPI DllMain (
 Algumas bibliotecas de encapsulam o `DllMain` função para você. Por exemplo, em uma DLL MFC regular, implementar o `CWinApp` do objeto `InitInstance` e `ExitInstance` funções de membro para executar a inicialização e término exigido pela sua DLL. Para obter mais detalhes, consulte o [inicializar o DLLs MFC regulares](#initializing-regular-dlls) seção.  
   
 > [!WARNING]
-> Há limites significativos sobre o que você com segurança pode fazer em um ponto de entrada da DLL. Ver [práticas recomendadas gerais](https://msdn.microsoft.com/library/windows/desktop/dn633971#general_best_practices) APIs específicas do Windows que não são seguros para chamar em `DllMain`. Se você precisa de nada, mas a inicialização mais simples, em seguida, fazer isso em uma função de inicialização para a DLL. Você pode exigir que aplicativos chamem a função de inicialização após `DllMain` tem execução e antes de eles chamam outras funções na DLL.  
+> Há limites significativos sobre o que você com segurança pode fazer em um ponto de entrada da DLL. Ver [práticas recomendadas gerais](/windows/desktop/Dlls/dynamic-link-library-best-practices) APIs específicas do Windows que não são seguros para chamar em `DllMain`. Se você precisa de nada, mas a inicialização mais simples, em seguida, fazer isso em uma função de inicialização para a DLL. Você pode exigir que aplicativos chamem a função de inicialização após `DllMain` tem execução e antes de eles chamam outras funções na DLL.  
   
 <a name="initializing-non-mfc-dlls"></a>  
   
@@ -116,7 +116,7 @@ extern "C" BOOL WINAPI DllMain (
   
 Como DLLs MFC regulares têm uma `CWinApp` do objeto, eles devem executar suas tarefas de inicialização e término no mesmo local como um aplicativo do MFC: na `InitInstance` e `ExitInstance` funções de membro da DLL `CWinApp`-derivado classe. Como o MFC fornece um `DllMain` que é chamada pela função `_DllMainCRTStartup` para `DLL_PROCESS_ATTACH` e `DLL_PROCESS_DETACH`, você não deve escrever seu próprio `DllMain` função. O MFC fornecido pelo `DllMain` chamadas de função `InitInstance` quando a DLL é carregada e chama `ExitInstance` antes que a DLL seja descarregada.  
   
-Uma DLL MFC regular pode manter o controle de vários threads chamando [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801) e [TlsGetValue](http://msdn.microsoft.com/library/windows/desktop/ms686812) em seu `InitInstance` função. Essas funções permitem que a DLL acompanhar dados específicos de segmento.  
+Uma DLL MFC regular pode manter o controle de vários threads chamando [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc) e [TlsGetValue](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue) em seu `InitInstance` função. Essas funções permitem que a DLL acompanhar dados específicos de segmento.  
   
 Na DLL MFC regular que vincula dinamicamente ao MFC, se você estiver usando qualquer OLE do MFC, banco de dados MFC (ou DAO) ou suporte a MFC de soquetes, respectivamente, a depuração MFCO DLLs de extensão do MFC*versão*D.dll, MFCD*versão*D.dll e MFCN*versão*D.dll (onde *versão* é o número de versão) são vinculadas automaticamente. Você deve chamar uma das seguintes funções de inicialização predefinidos para cada uma dessas DLLs que você está usando em seu MFC DLL regular `CWinApp::InitInstance`.  
   
@@ -179,14 +179,14 @@ Aplicativos que o link para as DLLs de extensão MFC deve chamar explicitamente 
   
 Porque MFCx0.dll está totalmente inicializado no momento `DllMain` é chamado, você pode alocar memória e chamar funções MFC em `DllMain` (ao contrário da versão de 16 bits do MFC).  
   
-DLLs de extensão podem cuidar de multithreading manipulando o `DLL_THREAD_ATTACH` e `DLL_THREAD_DETACH` casos no `DllMain` função. Esses casos são passados para `DllMain` quando os threads de anexação e desanexação da DLL. Chamando [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801) quando uma DLL está relacionada a anexar permite que a DLL manter os índices de armazenamento local (TLS) para cada thread anexado à DLL do thread.  
+DLLs de extensão podem cuidar de multithreading manipulando o `DLL_THREAD_ATTACH` e `DLL_THREAD_DETACH` casos no `DllMain` função. Esses casos são passados para `DllMain` quando os threads de anexação e desanexação da DLL. Chamando [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc) quando uma DLL está relacionada a anexar permite que a DLL manter os índices de armazenamento local (TLS) para cada thread anexado à DLL do thread.  
   
 Observe que o arquivo de cabeçalho Afxdllx.h contém definições especiais para estruturas usadas em DLLs de extensão do MFC, como a definição para `AFX_EXTENSION_MODULE` e `CDynLinkLibrary`. Você deve incluir esse arquivo de cabeçalho em sua extensão MFC DLL.  
   
 > [!NOTE]
 >  É importante que você não define nem excluir qualquer uma das definições de `_AFX_NO_XXX` macros em Stdafx. h. Essas macros existem somente para fins de verificação se uma plataforma de destino específico dá suporte a esse recurso, ou não. Você pode escrever o seu programa Verifique essas macros (por exemplo, `#ifndef _AFX_NO_OLE_SUPPORT`), mas seu programa nunca deve definir ou excluir as definições dessas macros.  
   
-Uma função de inicialização de exemplo que manipula multithreading está incluído no [usando o Thread armazenamento Local em uma biblioteca de vínculo dinâmico](http://msdn.microsoft.com/library/windows/desktop/ms686997) no SDK do Windows. Observe que o exemplo contém uma função de ponto de entrada chamada `LibMain`, mas você deve nomear essa função `DllMain` para que ele funcione com as bibliotecas de tempo de execução MFC e C.  
+Uma função de inicialização de exemplo que manipula multithreading está incluído no [usando o Thread armazenamento Local em uma biblioteca de vínculo dinâmico](/windows/desktop/Dlls/using-thread-local-storage-in-a-dynamic-link-library) no SDK do Windows. Observe que o exemplo contém uma função de ponto de entrada chamada `LibMain`, mas você deve nomear essa função `DllMain` para que ele funcione com as bibliotecas de tempo de execução MFC e C.  
   
 ## <a name="see-also"></a>Consulte também  
   

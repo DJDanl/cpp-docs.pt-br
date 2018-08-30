@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 338412780116201b40e51ff38c4805097add4e3c
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 770d110a5acd66b307e675d8c71a7de108bae6b5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885969"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198491"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Rotinas de troca dos dados da caixa de diálogo padrão
 Este tópico lista as rotinas de exchange (DDX) de dados de caixa de diálogo padrão usadas para controles de caixa de diálogo comuns MFC.  
@@ -159,7 +159,7 @@ void AFXAPI DDX_Check(
  Uma referência a uma variável de membro do objeto de exibição de controle com o qual os dados são trocados, exibição de formulário ou caixa de diálogo.  
   
 ### <a name="remarks"></a>Comentários  
- Quando `DDX_Check` é chamado, *valor* é definido como o estado atual do controle de caixa de seleção. Para obter uma lista dos valores de estado possíveis, consulte [BM_GETCHECK](http://msdn.microsoft.com/library/windows/desktop/bb775986) no SDK do Windows.  
+ Quando `DDX_Check` é chamado, *valor* é definido como o estado atual do controle de caixa de seleção. Para obter uma lista dos valores de estado possíveis, consulte [BM_GETCHECK](/windows/desktop/Controls/bm-getcheck) no SDK do Windows.  
   
  Para obter mais informações sobre DDX, consulte [troca de dados de caixa de diálogo e validação](../../mfc/dialog-data-exchange-and-validation.md).  
   
@@ -296,7 +296,7 @@ void AFXAPI DDX_IPAddress(
 |1|16 por meio do 23|  
 |0|24 a 31|  
   
- Usar o Win32 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378) para ler o valor ou use [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380) para preencher o valor. Essas mensagens são descritas no SDK do Windows.  
+ Usar o Win32 [IPM_GETADDRESS](/windows/desktop/Controls/ipm-getaddress) para ler o valor ou use [IPM_SETADDRESS](/windows/desktop/Controls/ipm-setaddress) para preencher o valor. Essas mensagens são descritas no SDK do Windows.  
   
 ### <a name="remarks"></a>Comentários  
  Quando `DDX_IPAddress` é chamado, *valor* é lida por qualquer um do controle de endereço IP, ou *valor* é gravado para o controle, dependendo da direção da troca.  
@@ -488,7 +488,7 @@ void AFXAPI DDX_Scroll(
  Uma referência a uma variável de membro da caixa de diálogo, a exibição de formulário ou controle exibir objeto com o qual os dados são trocados.  
   
 ### <a name="remarks"></a>Comentários  
- Quando `DDX_Scroll` é chamado, *valor* é definido como a posição atual de controle de posição do controle. Para obter mais informações sobre os valores associados com a posição atual de controle de posição do controle, consulte [GetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787585) no SDK do Windows.  
+ Quando `DDX_Scroll` é chamado, *valor* é definido como a posição atual de controle de posição do controle. Para obter mais informações sobre os valores associados com a posição atual de controle de posição do controle, consulte [GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrollpos) no SDK do Windows.  
   
  Para obter mais informações sobre DDX, consulte [troca de dados de caixa de diálogo e validação](../../mfc/dialog-data-exchange-and-validation.md).  
   

@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: add135c353366ed54a24c63fcce2101c49d24fe7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c767b39874ff64082d8533f92a9e006f69835c97
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338575"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205929"
 ---
 # <a name="cclientdc-class"></a>Classe CClientDC
-Se encarrega de chamar as funções do Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) na ocasião da construção e [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) no tempo de destruição.  
+Se encarrega de chamar as funções do Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) na ocasião da construção e [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) no tempo de destruição.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -77,7 +77,7 @@ explicit CClientDC(CWnd* pWnd);
  A janela cuja área de cliente que acessará o objeto de contexto de dispositivo.  
   
 ### <a name="remarks"></a>Comentários  
- O construtor chama a função do Windows [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871).  
+ O construtor chama a função do Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc).  
   
  Uma exceção (do tipo `CResourceException`) será gerada se o Windows `GetDC` chamar falhar. Um contexto de dispositivo pode não estar disponível se o Windows já alocado todos os seus contextos de dispositivo disponíveis. Seu aplicativo compete para os cinco comuns contextos de exibição disponíveis a qualquer momento determinado em Windows.  
   

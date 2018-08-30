@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7458a82cce22830dd16525a5f33ed12c6c1b6e0d
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3c56cdcf59c6dad891029e21e14940598e0cfeae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957957"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209078"
 ---
 # <a name="basicstring-class"></a>Classe basic_string
 
@@ -881,7 +881,7 @@ Um ponteiro para a versão do estilo C da cadeia de caracteres de invocação.  
 
 ### <a name="remarks"></a>Comentários
 
-Os objetos do tipo cadeia de caracteres que pertencem à classe de modelo basic_string\<char> do C++ não são necessariamente terminados em nulo. O caractere nulo '\0' é usado como um caractere especial em uma cadeia de caracteres do C para marcar o fim da cadeia de caracteres, mas não tem nenhum significado especial em um objeto do tipo cadeia de caracteres e pode ser uma parte da cadeia de caracteres, assim como qualquer outro caractere. Há uma conversão automática de **char\*** const em cadeias de caracteres, mas a classe de cadeia de caracteres não fornece conversões automáticas de cadeias de caracteres do estilo C em objetos do tipo **basic_string\<char>**.
+Os objetos do tipo cadeia de caracteres que pertencem à classe de modelo basic_string\<char> do C++ não são necessariamente terminados em nulo. O caractere nulo '\0' é usado como um caractere especial em uma cadeia de caracteres do C para marcar o fim da cadeia de caracteres, mas não tem nenhum significado especial em um objeto do tipo cadeia de caracteres e pode ser uma parte da cadeia de caracteres, assim como qualquer outro caractere. Há uma conversão automática de **const char** <strong>\*</strong> em cadeias de caracteres, mas a cadeia de caracteres de classe não fornece conversões automáticas de cadeias de caracteres de estilo C em objetos do tipo **basic_string\<char >**.
 
 A cadeia de caracteres do estilo C retornada não deve ser modificada, pois isso poderia invalidar o ponteiro para a cadeia de caracteres, nem excluída, pois a cadeia de caracteres tem um tempo de vida limitado e pertence à classe de cadeia de caracteres.
 
@@ -1652,7 +1652,7 @@ Um ponteiro para o primeiro elemento da matriz que contém o conteúdo da cadeia
 
 Os objetos do tipo cadeia de caracteres que pertencem à classe de modelo basic_string \<char> do C++ não são necessariamente terminados em nulo. O tipo de retorno para `data` não é um C-cadeia de caracteres válida, porque nenhum caractere nulo é acrescentado. O caractere nulo '\0' é usado como um caractere especial em uma cadeia de caracteres do C para marcar o fim da cadeia de caracteres, mas não tem nenhum significado especial em um objeto do tipo cadeia de caracteres e pode ser uma parte do objeto de cadeia de caracteres, assim como qualquer outro caractere.
 
-Há uma conversão automática de **char\*** const em cadeias de caracteres, mas a classe de cadeia de caracteres não fornece conversões automáticas de cadeias de caracteres de estilo C em objetos do tipo **basic_string \<char>**.
+Há uma conversão automática de **const char** <strong>\*</strong> em cadeias de caracteres, mas a cadeia de caracteres de classe não fornece conversões automáticas de cadeias de caracteres de estilo C em objetos do tipo **basic_string \<char >**.
 
 A cadeia de caracteres retornada não deve ser modificada, pois isso poderia invalidar o ponteiro para a cadeia de caracteres, nem excluída, pois a cadeia de caracteres tem um tempo de vida limitado e pertence à classe de cadeia de caracteres.
 
@@ -3528,7 +3528,7 @@ typedef typename allocator_type::pointer pointer;
 
 O tipo é um sinônimo de `allocator_type::pointer`.
 
-Para o tipo `string`, é equivalente a **char\***.
+Para o tipo `string`, é equivalente a **char**<strong>\*</strong>.
 
 ### <a name="example"></a>Exemplo
 

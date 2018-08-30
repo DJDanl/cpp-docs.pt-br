@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f9b2de39f5b5340eff22c7e22244aca3d05af67
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d486047b708e0c3412aa63e0a0b026a2a4204f71
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376566"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213893"
 ---
 # <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY (especificar dependências de manifesto)
 ```  
@@ -31,19 +31,19 @@ ms.locfileid: "32376566"
 ```  
   
 ## <a name="remarks"></a>Comentários  
- /MANIFESTDEPENDENCY permite que você especifique os atributos que serão colocados no \<dependência > seção do arquivo de manifesto.  
+ /MANIFESTDEPENDENCY permite especificar atributos que serão colocados no \<dependência > seção do arquivo de manifesto.  
   
- Consulte [/MANIFEST (manifesto de Assembly do Create lado a lado)](../../build/reference/manifest-create-side-by-side-assembly-manifest.md) para obter informações sobre como criar um arquivo de manifesto.  
+ Ver [/MANIFEST (criar Side-by-Side manifesto do Assembly)](../../build/reference/manifest-create-side-by-side-assembly-manifest.md) para obter informações sobre como criar um arquivo de manifesto.  
   
- Para obter mais informações sobre o \<dependência > seção do arquivo de manifesto, consulte [arquivos de configuração do publicador](http://msdn.microsoft.com/library/aa375682).  
+ Para obter mais informações sobre o \<dependência > seção do arquivo de manifesto, consulte [arquivos de configuração de publicador](/windows/desktop/SbsCs/publisher-configuration-files).  
   
- Informações de /MANIFESTDEPENDENCY podem ser passadas para o vinculador de duas maneiras:  
+ Informações de /MANIFESTDEPENDENCY podem ser passadas para o vinculador em uma das duas maneiras:  
   
 -   Diretamente na linha de comando (ou em um arquivo de resposta) com /MANIFESTDEPENDENCY.  
   
 -   Por meio de [comentário](../../preprocessor/comment-c-cpp.md) pragma.  
   
- O exemplo a seguir mostra um comentário /MANIFESTDEPENDENCY passado por meio de pragma,  
+ O exemplo a seguir mostra um comentário /MANIFESTDEPENDENCY passado por meio do pragma,  
   
 ```  
 #pragma comment(linker, "\"/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"")  
@@ -59,7 +59,7 @@ ms.locfileid: "32376566"
 </dependency>  
 ```  
   
- Os comentários /MANIFESTDEPENDENCY mesmo podem ser passados na linha de comando da seguinte maneira:  
+ Os mesmos comentários /MANIFESTDEPENDENCY podem ser passados na linha de comando da seguinte maneira:  
   
 ```  
 "/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"  
@@ -69,15 +69,15 @@ ms.locfileid: "32376566"
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Expanda o **propriedades de configuração** nó.  
+2.  Expanda o nó **Propriedades de Configuração**.  
   
 3.  Expanda o **vinculador** nó.  
   
 4.  Selecione o **o arquivo de manifesto** página de propriedades.  
   
-5.  Modificar o **dependências de manifesto adicionais** propriedade.  
+5.  Modificar a **dependências de manifesto adicionais** propriedade.  
   
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
   

@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a53b865d054948d9ee22acbfbec0b6ddf807ec0c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e63f13c07ceb6220ba3dc8e7932c7357ed649188
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954754"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199231"
 ---
 # <a name="priorityqueue-class"></a>Classe priority_queue
 
@@ -50,11 +50,14 @@ class priority_queue
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo* tipo de dados do elemento a ser armazenado no priority_queue.
+*Tipo*<br/>
+ O tipo de dados do elemento a ser armazenado no priority_queue.
 
-*Contêiner* o tipo de contêiner subjacente usado para implementar o priority_queue.
+*Contêiner*<br/>
+ O tipo do contêiner subjacente usado para implementar o priority_queue.
 
-*Comparar* o tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no priority_queue. Esse argumento é opcional e o predicado binário **menos***\<*** typename** *contêiner ***:: value_type*** >* é o valor padrão.
+*Compare*<br/>
+ O tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no priority_queue. Esse argumento é opcional e o predicado binário `less<typename Container::value_type>` é o valor padrão.
 
 ## <a name="remarks"></a>Comentários
 
@@ -249,15 +252,20 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
 
 ### <a name="parameters"></a>Parâmetros
 
-*_ comp* a função de comparação do tipo **constTraits** usada para ordenar os elementos no priority_queue, cujo padrão é a função de comparação do contêiner base.
+*_ comp*<br/>
+ A função de comparação do tipo **constTraits** usado para ordenar os elementos no priority_queue, cujo padrão é a função de comparação do contêiner base.
 
-*_Cont* contêiner base do qual o priority_queue construído será uma cópia.
+*_Cont*<br/>
+ O contêiner base do qual o priority_queue construído será uma cópia.
 
-*à direita* priority_queue da qual o conjunto criado é uma cópia.
+*right*<br/>
+ A priority_queue da qual o conjunto construído será uma cópia.
 
-*primeiro* a posição do primeiro elemento no intervalo de elementos a serem copiados.
+*first*<br/>
+ A posição do primeiro elemento no intervalo de elementos a serem copiados.
 
-*última* a posição do primeiro elemento além do intervalo de elementos a serem copiados.
+*last*<br/>
+ A posição do primeiro elemento além do intervalo de elementos a serem copiados.
 
 ### <a name="remarks"></a>Comentários
 
@@ -388,7 +396,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Val* o elemento adicionado à parte superior do priority_queue.
+*Val*<br/>
+ O elemento adicionado à parte superior da priority_queue.
 
 ### <a name="remarks"></a>Comentários
 

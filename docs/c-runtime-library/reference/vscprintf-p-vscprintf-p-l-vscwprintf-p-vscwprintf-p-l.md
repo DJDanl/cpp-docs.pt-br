@@ -51,12 +51,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2da945addb975404a5ea6d1805a8f0abf5d5b9eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49dd74c679e451a658828fcacb55146e3f8d5d17
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412899"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200288"
 ---
 # <a name="vscprintfp-vscprintfpl-vscwprintfp-vscwprintfpl"></a>_vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l
 
@@ -100,18 +100,18 @@ Para obter mais informações, consulte [Especificações de formato](../../c-ru
 
 ## <a name="return-value"></a>Valor de retorno
 
-**vscprintf_p** retorna o número de caracteres que será gerado se a cadeia de caracteres apontada pela lista de argumentos foi impresso ou enviado para um arquivo ou os códigos de buffer usando a formatação especificada. O valor retornado não inclui o caractere nulo de terminação. **vscwprintf_p** executa a mesma função para caracteres largos.
+**vscprintf_p** retorna o número de caracteres que será gerado se a cadeia de caracteres apontada pela lista de argumentos tiver sido impressa ou enviado para um arquivo ou códigos de buffer usando a formatação especificado. O valor retornado não inclui o caractere nulo de terminação. **vscwprintf_p** executa a mesma função para caracteres largos.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções são diferentes de **vscprintf** e **vscwprintf** apenas se eles oferecem suporte a capacidade de especificar a ordem em que os argumentos são usados. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+Essas funções diferem das **vsnprintf** e **vscwprintf** somente em que eles oferecem suporte a capacidade de especificar a ordem na qual os argumentos são usados. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
-Se *formato* é um ponteiro nulo, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, retornam -1, as funções e defina **errno** para **EINVAL**.
+Se *formato* for um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornarão -1 e defina **errno** à **EINVAL**.
 
 > [!IMPORTANT]
-> Certifique-se de que se *formato* é uma cadeia de caracteres definida pelo usuário, ele é terminado em null e tem o número correto e o tipo de parâmetros. Para obter mais informações, consulte [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) (Evitando estouros de buffer).
+> Certifique-se de que, se *formato* é uma cadeia de caracteres definida pelo usuário, ele é finalizada com null e tem o número correto e o tipo de parâmetros. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

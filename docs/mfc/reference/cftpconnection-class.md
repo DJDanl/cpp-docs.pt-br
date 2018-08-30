@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5e0c902b9de9ea4d742d96b88f86d47231597f7
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c539504e7bb6e2b02b86d99c890ed5d6ecf1fc27
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337327"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217852"
 ---
 # <a name="cftpconnection-class"></a>Classe CFtpConnection
 Gerencia sua conexão de FTP para um servidor da Internet e permite a manipulação direta de diretórios e arquivos naquele servidor.  
@@ -179,7 +179,7 @@ CInternetFile* Command(
 - `CmdRespRead` Uma resposta é esperada.  
   
  *dwFlags*  
- Um valor que contém os sinalizadores que controlam a essa função. Para obter uma lista completa, consulte [FTPCommand](http://msdn.microsoft.com/library/windows/desktop/aa384133).  
+ Um valor que contém os sinalizadores que controlam a essa função. Para obter uma lista completa, consulte [FTPCommand](/windows/desktop/api/wininet/nf-wininet-ftpcommanda).  
   
  *dwContext*  
  Um ponteiro para um valor que contém um valor definido pelo aplicativo usado para identificar o contexto do aplicativo nos retornos de chamada.  
@@ -188,7 +188,7 @@ CInternetFile* Command(
  Diferente de zero se bem-sucedido; Caso contrário, 0.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função membro emula a funcionalidade dos [FTPCommand](http://msdn.microsoft.com/library/windows/desktop/aa384133) funcionar, conforme descrito no SDK do Windows.  
+ Essa função membro emula a funcionalidade dos [FTPCommand](/windows/desktop/api/wininet/nf-wininet-ftpcommanda) funcionar, conforme descrito no SDK do Windows.  
   
  Se ocorrer um erro, o MFC gera uma exceção do tipo [CInternetException](../../mfc/reference/cinternetexception-class.md).  
   
@@ -204,7 +204,7 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
  Um ponteiro para uma cadeia de caracteres que contém o nome do diretório a ser criado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função do Windows [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função do Windows [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
   
 ### <a name="remarks"></a>Comentários  
  Use `GetCurrentDirectory` para determinar o diretório de trabalho atual para essa conexão ao servidor. Não presuma que o sistema remoto conectou você para o diretório raiz.  
@@ -238,7 +238,7 @@ BOOL GetCurrentDirectory(
 |No retorno|O número de caracteres armazenadas *pstrDirName*. Se a função de membro falhar e ERROR_INSUFFICIENT_BUFFER for retornado, em seguida *lpdwLen* contém o número de bytes que o aplicativo deve alocar para receber a cadeia de caracteres.|  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter o nome do diretório como uma URL em vez disso, chame [GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl).  
@@ -272,7 +272,7 @@ BOOL GetCurrentDirectoryAsURL(
 |No retorno|O número de caracteres armazenadas *pstrDirName*. Se a função de membro falhar e ERROR_INSUFFICIENT_BUFFER for retornado, em seguida *lpdwLen* contém o número de bytes que o aplicativo deve alocar para receber a cadeia de caracteres.|  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
   
 ### <a name="remarks"></a>Comentários  
  `GetCurrentDirectoryAsURL` se comporta da mesma maneira como [GetCurrentDirectory](#getcurrentdirectory)  
@@ -322,13 +322,13 @@ BOOL GetFile(
 -   FILE_ATTRIBUTE_TEMPORARY o arquivo está sendo usado para armazenamento temporário. Aplicativos devem gravar o arquivo apenas se for absolutamente necessário. A maioria dos dados do arquivo permanece na memória sem que estão sendo liberados para a mídia porque o arquivo em breve será excluído.  
   
  *dwFlags*  
- Especifica as condições sob as quais a transferência ocorre. Esse parâmetro pode ser qualquer um dos *dwFlags* valores descritos na [FtpGetFile](http://msdn.microsoft.com/library/windows/desktop/aa384157) no SDK do Windows.  
+ Especifica as condições sob as quais a transferência ocorre. Esse parâmetro pode ser qualquer um dos *dwFlags* valores descritos na [FtpGetFile](/windows/desktop/api/wininet/nf-wininet-ftpgetfilea) no SDK do Windows.  
   
  *dwContext*  
  O identificador de contexto para a recuperação de arquivo. Ver **Remarks** para obter mais informações sobre *dwContext*.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
   
 ### <a name="remarks"></a>Comentários  
  `GetFile` é uma rotina de alto nível que manipula toda a sobrecarga associada com a leitura de um arquivo de um servidor FTP e armazená-lo localmente. Aplicativos que só recuperam dados de arquivo, ou que exigem fechar controle sobre a transferência de arquivos, devem usar `OpenFile` e [CInternetFile::Read](../../mfc/reference/cinternetfile-class.md#read) em vez disso.  
@@ -410,7 +410,7 @@ BOOL PutFile(
  O identificador de contexto para colocar o arquivo. Ver **Remarks** para obter mais informações sobre *dwContext*.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
   
 ### <a name="remarks"></a>Comentários  
  `PutFile` é uma rotina de alto nível que manipula todas as operações associadas ao armazenamento de um arquivo em um servidor FTP. Que enviar apenas dados ou que exigem controle mais detalhado sobre a transferência de arquivos, os aplicativos devem usar [OpenFile](#openfile) e [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write).  
@@ -429,7 +429,7 @@ BOOL Remove(LPCTSTR pstrFileName);
  Um ponteiro para uma cadeia de caracteres que contém o nome do arquivo a ser removido.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
   
 ### <a name="remarks"></a>Comentários  
  O *pstrFileName* parâmetro pode ser um filename parcialmente qualificado totalmente qualificado ou relativo para o diretório atual. Uma barra invertida (\\) ou barra invertida (/) pode ser usada como o separador de diretório para qualquer nome. O `Remove` função converte os separadores de nome de diretório nos caracteres apropriados antes de serem usadas.  
@@ -446,7 +446,7 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
  Um ponteiro para uma cadeia de caracteres que contém o diretório a ser removido.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
   
 ### <a name="remarks"></a>Comentários  
  Use [GetCurrentDirectory](#getcurrentdirectory) para determinar o diretório de trabalho atual do servidor. Não presuma que o sistema remoto conectou você para o diretório raiz.  
@@ -470,7 +470,7 @@ BOOL Rename(
  Um ponteiro para uma cadeia de caracteres que contém o nome do arquivo novo.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
   
 ### <a name="remarks"></a>Comentários  
  O *pstrExisting* e *pstrNew* parâmetros podem ser um filename parcialmente qualificado totalmente qualificado ou relativo para o diretório atual. Uma barra invertida (\\) ou barra invertida (/) pode ser usada como o separador de diretório para qualquer nome. `Rename` converte os separadores de nome de diretório nos caracteres apropriados antes de serem usadas.  
@@ -487,7 +487,7 @@ BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
  Um ponteiro para uma cadeia de caracteres que contém o nome do diretório.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
   
 ### <a name="remarks"></a>Comentários  
  O *pstrDirName* parâmetro pode ser um nome parcial ou totalmente qualificado relativo ao diretório atual. Uma barra invertida (\\) ou barra invertida (/) pode ser usada como o separador de diretório para qualquer nome. `SetCurrentDirectory` converte os separadores de nome de diretório nos caracteres apropriados antes de serem usadas.  

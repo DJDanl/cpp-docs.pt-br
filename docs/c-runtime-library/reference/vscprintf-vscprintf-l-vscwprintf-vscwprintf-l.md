@@ -52,12 +52,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c7b1771b065d7a0acc4db73eb188884086ff3b1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 959f39df33c2cdcd40a71a801ca715ab7c0eccf0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414162"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213640"
 ---
 # <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l
 
@@ -101,18 +101,18 @@ Para obter mais informações, consulte [Especificações de formato](../../c-ru
 
 ## <a name="return-value"></a>Valor de retorno
 
-**vscprintf** retorna o número de caracteres que será gerado se a cadeia de caracteres apontada pela lista de argumentos foi impresso ou enviado para um arquivo ou os códigos de buffer usando a formatação especificada. O valor retornado não inclui o caractere nulo de terminação. **vscwprintf** executa a mesma função para caracteres largos.
+**vsnprintf** retorna o número de caracteres que será gerado se a cadeia de caracteres apontada pela lista de argumentos tiver sido impressa ou enviado para um arquivo ou códigos de buffer usando a formatação especificado. O valor retornado não inclui o caractere nulo de terminação. **vscwprintf** executa a mesma função para caracteres largos.
 
-As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
-Se *formato* é um ponteiro nulo, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, retornam -1, as funções e defina **errno** para **EINVAL**.
+Se *formato* for um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornarão -1 e defina **errno** à **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-Cada *argumento* (se houver) é convertido de acordo com a especificação de formato correspondente em *formato*. O formato consiste em caracteres simples e tem o mesmo formulário e funcionar como o *formato* argumento [printf](printf-printf-l-wprintf-wprintf-l.md).
+Cada *argumento* (se houver) é convertido de acordo com a especificação de formato correspondente em *formato*. O formato consiste em caracteres comuns e tem o mesmo formato e função que o *formato* argumento para [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 > [!IMPORTANT]
-> Certifique-se de que se *formato* é uma cadeia de caracteres definida pelo usuário, ele é terminado em null e tem o número correto e o tipo de parâmetros. Para obter mais informações, consulte [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) (Evitando estouros de buffer).
+> Certifique-se de que, se *formato* é uma cadeia de caracteres definida pelo usuário, ele é finalizada com null e tem o número correto e o tipo de parâmetros. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -125,7 +125,7 @@ Cada *argumento* (se houver) é convertido de acordo com a especificação de fo
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**vscprintf**, **vscprintf_l**|\<stdio.h>|
+|**vsnprintf**, **vscprintf_l**|\<stdio.h>|
 |**vscwprintf**, **vscwprintf_l**|\<stdio.h> ou \<wchar.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).

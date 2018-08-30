@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae0c3cd1d00ce83a4e952d60a978663bfa76f814
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef8cc6fe14dc2c636b02ce2002787a74b12b5528
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357223"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217894"
 ---
 # <a name="ccomautocriticalsection-class"></a>Classe CComAutoCriticalSection
-`CComAutoCriticalSection` fornece métodos para a obtenção e liberar a propriedade de um objeto de seção crítica.  
+`CComAutoCriticalSection` fornece métodos para obter e liberar a propriedade de um objeto de seção crítica.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,10 +46,10 @@ class CComAutoCriticalSection : public CComCriticalSection
 ## <a name="remarks"></a>Comentários  
  `CComAutoCriticalSection` é semelhante à classe [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md), exceto `CComAutoCriticalSection` automaticamente inicializa o objeto de seção crítica no construtor.  
   
- Normalmente, você usa `CComAutoCriticalSection` por meio de `typedef` nome [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). Faz referência a esse nome `CComAutoCriticalSection` quando [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) está sendo usado.  
+ Normalmente, você usa `CComAutoCriticalSection` por meio de `typedef` nome [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). Esse nome faz referência a `CComAutoCriticalSection` quando [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) está sendo usado.  
 
   
- O `Init` e `Term` métodos de [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) não estão disponíveis ao usar essa classe.  
+ O `Init` e `Term` métodos do [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) não estão disponíveis ao usar essa classe.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)  
@@ -67,7 +67,7 @@ CComAutoCriticalSection();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Chama a função Win32 [InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472), que inicializa o objeto de seção crítica.  
+ Chama a função Win32 [InitializeCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection), que inicializa o objeto de seção crítica.  
   
 ##  <a name="dtor"></a>  CComAutoCriticalSection:: ~ CComAutoCriticalSection  
  O destruidor.  
@@ -77,7 +77,7 @@ CComAutoCriticalSection();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- As chamadas de destruidor [DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552), que libera todos os recursos do sistema usados pelo objeto de seção crítica.  
+ As chamadas de destruidor [DeleteCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection), que libera todos os recursos do sistema usados pelo objeto de seção crítica.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)   

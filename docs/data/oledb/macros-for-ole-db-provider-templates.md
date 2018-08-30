@@ -62,12 +62,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 747f54e4ae37fe31eeea7540c1531b988d692427
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: e2456eed4f55fe5a5f68552cfe91e5785fc99cf5
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573022"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209015"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Macros para modelos de provedor de banco de dados OLE
 As macros do provedor OLE DB modelos oferecem funcionalidade nas seguintes categorias:  
@@ -231,7 +231,7 @@ PROPERTY_INFO_ENTRY(dwPropID)
  [in] Um [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) GUID para identificar uma propriedade do conjunto de valor que pode ser usado em conjunto com a propriedade.  
   
 #### <a name="remarks"></a>Comentários  
- Essa macro define o valor da propriedade do tipo `DWORD` para um valor padrão definido em ATLDB. H. Para definir a propriedade como um valor de sua escolha, use [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Para definir a [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) e [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) para a propriedade ao mesmo tempo, use [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
+ Essa macro define o valor da propriedade do tipo `DWORD` para um valor padrão definido em ATLDB. H. Para definir a propriedade como um valor de sua escolha, use [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md). Para definir a [VARTYPE](https://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) e [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) para a propriedade ao mesmo tempo, use [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
   
 #### <a name="example"></a>Exemplo  
  Ver [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
@@ -250,7 +250,7 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
  [in] Um [DBPROPID](/previous-versions/windows/desktop/ms723882\(v=vs.85\)) GUID para identificar uma propriedade do conjunto de valor que pode ser usado em conjunto com a propriedade.  
   
  *vt*  
- [in] O [VARTYPE](http://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) desta entrada de propriedade.  
+ [in] O [VARTYPE](https://msdn.microsoft.com/317b911b-1805-402d-a9cb-159546bc88b4) desta entrada de propriedade.  
   
  *dwFlags*  
  [in] Um [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342\(v=vs.85\)) valor que descreve esta entrada de propriedade.  

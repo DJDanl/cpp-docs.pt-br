@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f09df81587012703d8ba1fc883413d6d35929e8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: dd815f1af5a6eced06eae99316b2ee137fa398c9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404932"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209355"
 ---
 # <a name="overview-of-declarators"></a>Visão geral dos declaradores
 Declaradores são os componentes de uma declaração que especificam nomes de objetos ou funções. Os declaradores também especificam se o objeto nomeado é ou não um objeto, um ponteiro, uma referência ou uma matriz.  Quando os declaradores não especificam o tipo de base, eles modificam as informações de tipo no tipo básico para especificar tipos derivados, como ponteiros, referências e matrizes.  Aplicado a funções, o declarador trabalha com o especificador de tipo para especificar completamente o tipo de retorno de uma função para ser um objeto, ponteiro ou referência. (Especificadores, abordados em [declarações e definições](declarations-and-definitions-cpp.md), transmitem propriedades como o armazenamento e o tipo de classe. Os modificadores, abordados nesta seção e, na [modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md), modificam declaradores.) A figura a seguir mostra uma declaração completa de `MyFunction`, e chama os componentes da declaração.  
@@ -53,7 +53,7 @@ const char *pch, ch;
   
  **Declaradores para ponteiros, referências e matrizes**  
   
- Os operadores de ponteiro inseridos na frente do nome fazem com que o objeto seja um ponteiro ou uma referência.  O **\*** operador declara o nome como um ponteiro; o **&** operador declara-o como uma referência.  
+ Os operadores de ponteiro inseridos na frente do nome fazem com que o objeto seja um ponteiro ou uma referência.  O <strong>\*</strong> operador declara o nome como um ponteiro; o **&** operador declara-o como uma referência.  
   
 ```cpp 
 int *i; // declarator is *i  

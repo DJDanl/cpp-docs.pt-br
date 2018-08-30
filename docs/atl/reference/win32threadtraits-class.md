@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c61ba91fe29610f4b313cf31c65f514ef8e46f96
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: a5d94f92d21ea435bf7d73a6e28470babd293ed3
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883668"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206909"
 ---
 # <a name="win32threadtraits-class"></a>Classe Win32ThreadTraits
 Essa classe fornece a função de criação de um thread do Windows. Use essa classe se o thread não usará as funções de CRT.  
@@ -48,7 +48,7 @@ class Win32ThreadTraits
 |[Win32ThreadTraits::CreateThread](#createthread)|(Estático) Chame essa função para criar um thread que não deve usar funções de CRT.|  
   
 ## <a name="remarks"></a>Comentários  
- Características de thread são classes que fornecem uma função de criação de um tipo específico de thread. A função de criação tem a mesma assinatura e a semântica de como o Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) função.  
+ Características de thread são classes que fornecem uma função de criação de um tipo específico de thread. A função de criação tem a mesma assinatura e a semântica de como o Windows [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) função.  
   
  Características de thread são usadas pelas classes:  
   
@@ -94,10 +94,10 @@ static HANDLE CreateThread(
  [out] Endereço da variável DWORD que, em caso de sucesso, recebe a ID do thread do thread recém-criado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna o identificador para o thread recém-criado ou nulo, em caso de falha. Chame [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) para obter mais informações sobre o erro.  
+ Retorna o identificador para o thread recém-criado ou nulo, em caso de falha. Chame [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) para obter mais informações sobre o erro.  
   
 ### <a name="remarks"></a>Comentários  
- Ver [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) para obter mais informações sobre os parâmetros para essa função.  
+ Ver [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) para obter mais informações sobre os parâmetros para essa função.  
   
  Essa função chama `CreateThread` para criar o thread.  
   

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0e063aa51e136dfcc7a4445948e8a68d7a99bca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 62f467ff467d785d17601737436e0eb1ff972f37
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369832"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205487"
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (pesquisa de manifesto)
 Especifica o comportamento da pesquisa de manifesto.  
@@ -35,27 +35,27 @@ Especifica o comportamento da pesquisa de manifesto.
 ```  
   
 ## <a name="remarks"></a>Comentários  
- **/ALLOWISOLATION:no** indica DLLs são carregadas como se não houve nenhum manifesto e faz com que o vinculador definir o `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit do cabeçalho opcional `DllCharacteristics` campo.  
+ **/ALLOWISOLATION:no** indica a DLLs serão carregadas como se houvesse nenhum manifesto e faz com que o vinculador defina o `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit no cabeçalho opcional `DllCharacteristics` campo.  
   
- **/ALLOWISOLATION** faz com que o sistema operacional ao manifesto pesquisas e carrega.  
+ **/ALLOWISOLATION** faz com que o sistema operacional de manifesto cargas e pesquisas.  
   
  **/ALLOWISOLATION** é o padrão.  
   
- Quando o isolamento é desabilitado por um executável, o carregador do Windows não tentará localizar um manifesto de aplicativo para o processo criado recentemente. O novo processo não terá um contexto de ativação padrão, mesmo se houver um manifesto dentro do executável ou colocado no mesmo diretório do executável com nome * executável-name ***. manifest**.  
+ Quando o isolamento é desabilitado por um executável, o carregador do Windows não tentará encontrar um manifesto de aplicativo para o processo recém-criado. O novo processo não terá um contexto de ativação padrão, mesmo se houver um manifesto dentro do executável ou colocada no mesmo diretório que o executável com o nome <em>nome do executável</em>**. manifest**.  
   
- Para obter mais informações, consulte [referência de arquivos de manifesto](http://msdn.microsoft.com/library/aa375632).  
+ Para obter mais informações, consulte [referência de arquivos de manifesto](/windows/desktop/SbsCs/manifest-files-reference).  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).  
   
-2.  Expanda o **propriedades de configuração** nó.  
+2.  Expanda o nó **Propriedades de Configuração**.  
   
 3.  Expanda o **vinculador** nó.  
   
 4.  Selecione o **o arquivo de manifesto** página de propriedades.  
   
-5.  Modificar o **permitir isolamento** propriedade.  
+5.  Modificar a **permitir isolamento** propriedade.  
   
 ## <a name="see-also"></a>Consulte também  
  [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   

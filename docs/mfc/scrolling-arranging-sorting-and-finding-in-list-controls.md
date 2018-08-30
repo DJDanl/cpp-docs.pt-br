@@ -21,17 +21,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f9ff7afa5440e0d0b83240b1248c33ab0d385e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 073a11b8b798e9b94164a79af2340b0ad133d957
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379184"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197816"
 ---
 # <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>Rolando, organizando, classificando e localizando em controles de lista
-Controles de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)) são roláveis por padrão. Para obter mais informações, consulte [posição de rolagem](http://msdn.microsoft.com/library/windows/desktop/bb774736) no SDK do Windows e o [rolagem](../mfc/reference/clistctrl-class.md#scroll) função de membro.  
+Controles de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)) são rolável por padrão. Para obter mais informações, consulte [posição de rolagem](/windows/desktop/Controls/using-list-view-controls) no SDK do Windows e o [rolagem](../mfc/reference/clistctrl-class.md#scroll) função de membro.  
   
- Você pode chamar `CListCtrl` funções de membro para organizar itens de lista no controle, classificar itens e localizar itens específicos. Para obter mais informações, consulte [Arranging, classificando e Localizando](http://msdn.microsoft.com/library/windows/desktop/bb774736) no SDK do Windows e o [CListCtrl](../mfc/reference/clistctrl-class.md) membros [organizar](../mfc/reference/clistctrl-class.md#arrange), [SortItems](../mfc/reference/clistctrl-class.md#sortitems) , e [FindItem](../mfc/reference/clistctrl-class.md#finditem).  
+ Você pode chamar `CListCtrl` funções de membro para organizar itens de lista no controle, classificar itens e localizar itens específicos. Para obter mais informações, consulte [Arranging, classificando e Localizando](https://msdn.microsoft.com/library/windows/desktop/bb774736) no SDK do Windows e o [CListCtrl](../mfc/reference/clistctrl-class.md) membros [organizar](../mfc/reference/clistctrl-class.md#arrange), [SortItems](../mfc/reference/clistctrl-class.md#sortitems) , e [FindItem](../mfc/reference/clistctrl-class.md#finditem).  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando CListCtrl](../mfc/using-clistctrl.md)   

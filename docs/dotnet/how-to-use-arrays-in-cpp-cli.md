@@ -1,5 +1,5 @@
 ---
-title: 'Como: usar matrizes em C + + CLI | Microsoft Docs'
+title: 'Como: usar matrizes no c++ /CLI CLI | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 14eb98f485dc60974253e85086bb25531de7105d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 865416872855be19f4848587e51edf8bfbbdb299
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33138771"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212999"
 ---
 # <a name="how-to-use-arrays-in-ccli"></a>Como usar matrizes em C++/CLI
-Este artigo descreve como usar matrizes em C + + CLI.  
+Este artigo descreve como usar matrizes no C + + / CLI.  
   
-## <a name="single-dimension-arrays"></a>Matrizes de dimensão única  
- O exemplo a seguir mostra como criar matrizes de dimensão de referência, o valor e tipos de ponteiro nativo. Ele também mostra como retornar uma matriz de dimensão única de uma função e como passar uma matriz de dimensão única como um argumento para uma função.  
+## <a name="single-dimension-arrays"></a>Matrizes unidimensionais  
+ O exemplo a seguir mostra como criar matrizes de dimensão de referência, valor e tipos de ponteiro nativo. Ele também mostra como retornar uma matriz de dimensão única de uma função e como passar uma matriz de dimensão única como um argumento para uma função.  
   
 ```cpp  
 // mcppv2_sdarrays.cpp  
@@ -160,7 +160,7 @@ MyStruct1[0] = 40
 MyStruct1[1] = 41  
 ```  
   
- O próximo exemplo mostra como executar a inicialização de agregação em matrizes gerenciadas da dimensão.  
+ O próximo exemplo mostra como realizar a inicialização de agregação em matrizes gerenciadas de dimensão única.  
   
 ```cpp  
 // mcppv2_sdarrays_aggregate_init.cpp  
@@ -213,7 +213,7 @@ IntArray[1, 0] = 11
 IntArray[1, 1] = 11  
 ```  
   
- Este exemplo mostra como executar a inicialização de agregação em uma matriz de multi-dimensão gerenciada:  
+ Este exemplo mostra como realizar a inicialização de agregação em uma matriz gerenciada de várias dimensões:  
   
 ```cpp  
 // mcppv2_mdarrays_aggregate_initialization.cpp  
@@ -460,7 +460,7 @@ MyClass0[1] = 1
 [ g h ]  
 ```  
   
-## <a name="managed-arrays-as-template-type-parameters"></a>Gerenciado matrizes como parâmetros de tipo de modelo  
+## <a name="managed-arrays-as-template-type-parameters"></a>Matrizes gerenciadas como parâmetros de tipo de modelo  
  Este exemplo mostra como usar uma matriz gerenciada como um parâmetro para um modelo:  
   
 ```cpp  
@@ -490,7 +490,7 @@ Return Code: 0
 ```  
   
 ## <a name="typedefs-for-managed-arrays"></a>Typedefs para matrizes gerenciadas  
- Este exemplo mostra como fazer um typedef para uma matriz gerenciada:  
+ Este exemplo mostra como fazer um typedef de uma matriz gerenciada:  
   
 ```cpp  
 // mcppv2_typedef_arrays.cpp  
@@ -505,10 +505,10 @@ int main() {
 }  
 ```  
   
-## <a name="sorting-arrays"></a>Classificando matrizes  
- Ao contrário de matrizes C++ padrão, matrizes gerenciadas implicitamente são derivadas de uma classe base da matriz na qual eles herdam o comportamento comum. Um exemplo é o `Sort` método, que pode ser usado para classificar os itens em qualquer matriz.  
+## <a name="sorting-arrays"></a>Matrizes de classificação  
+ Ao contrário das matrizes de C++ padrão, matrizes gerenciadas são implicitamente derivados de uma classe base da matriz da qual eles herdam comportamento comum. Um exemplo é o `Sort` método, que pode ser usado para ordenar os itens em qualquer matriz.  
   
- Para matrizes que contêm tipos intrínsecos básico, você pode chamar o `Sort` método. Você pode substituir os critérios de classificação, e essa é necessária quando você deseja classificar para arrays de tipos complexos. Nesse caso, o tipo de elemento de matriz deve implementar o [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx) método.  
+ Para matrizes que contêm tipos intrínsecos básicos, você pode chamar o `Sort` método. Você pode substituir os critérios de classificação, e fazer isso é necessário quando você deseja classificar para matrizes de tipos complexos. Nesse caso, o tipo de elemento de matriz deve implementar o [IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx) método.  
   
 ```cpp  
 // array_sort.cpp  
@@ -524,9 +524,9 @@ int main() {
 ```  
   
 ## <a name="sorting-arrays-by-using-custom-criteria"></a>Classificar matrizes usando critérios personalizados  
- Para classificar matrizes que contêm tipos intrínsecos básico, basta chamar o `Array::Sort` método. No entanto, para matrizes de classificação que contenham tipos complexos ou substituir os critérios de classificação padrão, substituem o [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx) método.  
+ Para classificar matrizes que contêm tipos intrínsecos básicos, basta chamar o `Array::Sort` método. No entanto, a matrizes de classificação que contêm tipos complexos ou substituir os critérios de classificação padrão, substituem os [IComparable::CompareTo](https://msdn.microsoft.com/library/system.icomparable.compareto.aspx) método.  
   
- No exemplo a seguir, uma estrutura denominada `Element` é derivado de <xref:System.IComparable>e gravados para fornecer uma <xref:System.IComparable.CompareTo%2A> método que usa a média de dois inteiros como o critério de classificação.  
+ No exemplo a seguir, uma estrutura denominada `Element` deriva <xref:System.IComparable>e elaborado para fornecer um <xref:System.IComparable.CompareTo%2A> método que usa a média dos dois inteiros como o critério de classificação.  
   
 ```cpp  
 using namespace System;  
@@ -571,7 +571,7 @@ int main() {
 ```  
   
 ## <a name="array-covariance"></a>Covariância de matriz  
- Dada a classe de referência D que tem classe base direta ou indireta B, uma matriz de tipo D pode ser atribuída a uma variável de matriz do tipo b.  
+ Dada a classe de referência D que tem a classe base direta ou indireta B, uma matriz do tipo D pode ser atribuída a uma variável de matriz do tipo b.  
   
 ```cpp  
 // clr_array_covariance.cpp  
@@ -584,9 +584,9 @@ int main() {
 }  
 ```  
   
- Uma atribuição para um elemento de matriz deve ser compatível com atribuição com o tipo dinâmico da matriz. Faz com que uma atribuição para um elemento de matriz que tem um tipo incompatível `System::ArrayTypeMismatchException` seja gerada.  
+ Uma atribuição a um elemento de matriz deve ter atribuições compatíveis com o tipo dinâmico da matriz. Faz com que uma atribuição a um elemento de matriz que tem um tipo incompatível `System::ArrayTypeMismatchException` seja lançada.  
   
- Covariância de matriz não se aplica a matrizes de tipo de classe de valor. Por exemplo, as matrizes de Int32 não podem ser convertidas em objeto ^ matrizes, nem mesmo usando conversão boxing.  
+ Covariância de matriz não se aplica a matrizes de tipo de classe de valor. Por exemplo, as matrizes de Int32 não podem ser convertidos ao objeto ^ matrizes, nem mesmo usando a conversão boxing.  
   
 ```cpp  
 // clr_array_covariance2.cpp  

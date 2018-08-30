@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a922ac1a96a59d574f46f7b04db8b160a5079918
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e23bd9e0816c10f41e298afc9e82edbdd27e7a5f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374044"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206482"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE (Link para recurso do .NET Framework)
 ```  
@@ -38,15 +38,15 @@ ms.locfileid: "32374044"
  O arquivo de recurso do .NET Framework ao qual você deseja vincular do assembly.  
   
 ## <a name="remarks"></a>Comentários  
- A opção /ASSEMBLYLINKRESOURCE cria um link para um recurso do .NET Framework no arquivo de saída; o arquivo de recurso não é colocado no arquivo de saída. [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) incorpora um arquivo de recurso no arquivo de saída.  
+ A opção /ASSEMBLYLINKRESOURCE cria um link para um recurso do .NET Framework no arquivo de saída; o arquivo de recurso não é colocado no arquivo de saída. [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) insere um arquivo de recurso no arquivo de saída.  
   
- Recursos vinculados são públicos no assembly quando criado com o vinculador.  
+ Recursos vinculados são públicos no assembly quando criado com a opção de vinculador.  
   
- /ASSEMBLYLINKRESOURCE requer que a compilação incluem [/clr](../../build/reference/clr-common-language-runtime-compilation.md); [/LN](../../build/reference/ln-create-msil-module.md) ou [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) não é permitido com /ASSEMBLYLINKRESOURCE.  
+ /ASSEMBLYLINKRESOURCE requer que a compilação incluir [/clr](../../build/reference/clr-common-language-runtime-compilation.md); [/LN](../../build/reference/ln-create-msil-module.md) ou [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) não é permitido com /ASSEMBLYLINKRESOURCE.  
   
- Se *filename* é um arquivo de recursos do .NET Framework criado, por exemplo, por [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) ou no ambiente de desenvolvimento, ele pode ser acessado com membros de **Resources** namespace. Para obter mais informações, consulte [System.Resources.ResourceManager](https://msdn.microsoft.com/en-us/library/system.resources.resourcemanager.aspx). Para todos os outros recursos, use o **GetManifestResource** \* métodos de **System.Reflection.Assembly** classe para acessar o recurso em tempo de execução.  
+ Se *filename* é um arquivo de recursos do .NET Framework criado, por exemplo, por [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) ou no ambiente de desenvolvimento, ele pode ser acessado com membros no **Resources** namespace. Para obter mais informações, consulte [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx). Para todos os outros recursos, use o **GetManifestResource** \* métodos de **Reflection** classe para acessar o recurso em tempo de execução.  
   
- *nome de arquivo* pode ser qualquer formato de arquivo. Por exemplo, você talvez queira fazer uma parte DLL nativa do assembly, para que possa ser instalado no Cache de Assembly Global e acessado a partir do código gerenciado no assembly.  
+ *nome de arquivo* pode ser qualquer formato de arquivo. Por exemplo, você talvez queira fazer uma parte DLL nativa do assembly, para que possa ser instalado no Cache de Assembly Global e acessado no código gerenciado no assembly.  
   
  Outras opções de vinculador que afetam a geração de assembly são:  
   
@@ -60,13 +60,13 @@ ms.locfileid: "32374044"
   
 -   [/ KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
   
--   [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
+-   [/ KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
   
--   [/ NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
+-   [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
   
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
   
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).  
+1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).  
   
 2.  Clique o **vinculador** pasta.  
   

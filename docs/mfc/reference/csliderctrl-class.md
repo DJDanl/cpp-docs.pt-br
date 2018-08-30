@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd58faa0cda2162f1abe906da8e38d4d62402db8
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: acf85412f6fde233d592f545b6611053a2f80e01
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850203"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215351"
 ---
 # <a name="csliderctrl-class"></a>Classe CSliderCtrl
 Fornece a funcionalidade do controle deslizante Windows comuns.  
@@ -206,10 +206,10 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Parâmetros  
  *dwStyle*  
- Especifica o estilo do controle deslizante. Aplicar qualquer combinação de [estilos de controle deslizante](http://msdn.microsoft.com/library/windows/desktop/bb760147), descrito no SDK do Windows, para o controle.  
+ Especifica o estilo do controle deslizante. Aplicar qualquer combinação de [estilos de controle deslizante](/windows/desktop/Controls/trackbar-control-styles), descrito no SDK do Windows, para o controle.  
   
  *Rect*  
- Especifica o tamanho e a posição do controle deslizante. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura.  
+ Especifica o tamanho e a posição do controle deslizante. Ela pode ser um [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto ou uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura.  
   
  *pParentWnd*  
  Especifica a janela do pai do controle deslizante, geralmente um `CDialog`. Ele não deve ser NULL.  
@@ -241,13 +241,13 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parâmetros  
  *dwExStyle*  
- Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o *dwExStyle* parâmetro para [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
+ Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o *dwExStyle* parâmetro para [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
   
  *dwStyle*  
- Especifica o estilo do controle deslizante. Aplicar qualquer combinação de [estilos de controle deslizante](http://msdn.microsoft.com/library/windows/desktop/bb760147), descrito no SDK do Windows, para o controle.  
+ Especifica o estilo do controle deslizante. Aplicar qualquer combinação de [estilos de controle deslizante](/windows/desktop/Controls/trackbar-control-styles), descrito no SDK do Windows, para o controle.  
   
  *Rect*  
- Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.  
+ Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que descreve o tamanho e posição da janela a ser criado, em coordenadas do cliente do *pParentWnd*.  
   
  *pParentWnd*  
  Um ponteiro para a janela que é o pai do controle.  
@@ -287,7 +287,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
  Um ponteiro para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela buddy no local especificado por *fLocation*, ou nulo se nenhuma janela buddy existe nesse local.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função membro implementa o comportamento da mensagem do Win32 [TBM_GETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760178), conforme descrito no SDK do Windows. Para obter uma descrição dos estilos de controle deslizante, consulte [estilos de controle Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) no SDK do Windows.  
+ Essa função membro implementa o comportamento da mensagem do Win32 [TBM_GETBUDDY](/windows/desktop/Controls/tbm-getbuddy), conforme descrito no SDK do Windows. Para obter uma descrição dos estilos de controle deslizante, consulte [estilos de controle Trackbar](/windows/desktop/Controls/trackbar-control-styles) no SDK do Windows.  
   
 ##  <a name="getchannelrect"></a>  CSliderCtrl::GetChannelRect  
  Recupera o tamanho e posição do retângulo delimitador do canal do controle deslizante.  
@@ -415,7 +415,7 @@ int GetThumbLength() const;
  O tamanho do controle deslizante, em pixels.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método envia o [TBM_GETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760201) mensagem, que é descrita no SDK do Windows.  
+ Esse método envia o [TBM_GETTHUMBLENGTH](/windows/desktop/Controls/tbm-getthumblength) mensagem, que é descrita no SDK do Windows.  
   
 ##  <a name="getthumbrect"></a>  CSliderCtrl::GetThumbRect  
  Recupera o tamanho e posição do retângulo delimitador para o controle deslizante (miniatura) em um controle deslizante.  
@@ -477,9 +477,9 @@ CToolTipCtrl* GetToolTips() const;
  Um ponteiro para um [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) de objeto ou nulo se as dicas de ferramentas não estão em uso. Se o controle deslizante não usa o estilo TBS_TOOLTIPS, o valor retornado é NULL.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função membro implementa o comportamento da mensagem do Win32 [TBM_GETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760209), conforme descrito no SDK do Windows. Observe que essa função membro retorna um `CToolTipCtrl` objeto em vez de um identificador para um controle.  
+ Essa função membro implementa o comportamento da mensagem do Win32 [TBM_GETTOOLTIPS](/windows/desktop/Controls/tbm-gettooltips), conforme descrito no SDK do Windows. Observe que essa função membro retorna um `CToolTipCtrl` objeto em vez de um identificador para um controle.  
   
- Para obter uma descrição dos estilos de controle deslizante, consulte [estilos de controle Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) no SDK do Windows.  
+ Para obter uma descrição dos estilos de controle deslizante, consulte [estilos de controle Trackbar](/windows/desktop/Controls/trackbar-control-styles) no SDK do Windows.  
   
 ##  <a name="setbuddy"></a>  CSliderCtrl::SetBuddy  
  Atribui uma janela como a janela buddy para um controle deslizante.  
@@ -505,9 +505,9 @@ CWnd* SetBuddy(
  Um ponteiro para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que recebeu anteriormente para o controle deslizante nesse local.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função membro implementa o comportamento da mensagem do Win32 [TBM_SETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760213), conforme descrito no SDK do Windows. Observe que essa função membro usa ponteiros para `CWnd` objetos, em vez de identificadores de janela para seu valor de retorno e de parâmetro.  
+ Essa função membro implementa o comportamento da mensagem do Win32 [TBM_SETBUDDY](/windows/desktop/Controls/tbm-setbuddy), conforme descrito no SDK do Windows. Observe que essa função membro usa ponteiros para `CWnd` objetos, em vez de identificadores de janela para seu valor de retorno e de parâmetro.  
   
- Para obter uma descrição dos estilos de controle deslizante, consulte [estilos de controle Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) no SDK do Windows.  
+ Para obter uma descrição dos estilos de controle deslizante, consulte [estilos de controle Trackbar](/windows/desktop/Controls/trackbar-control-styles) no SDK do Windows.  
   
 ##  <a name="setlinesize"></a>  CSliderCtrl::SetLineSize  
  Define o tamanho da linha de um controle deslizante.  
@@ -636,9 +636,9 @@ void SetThumbLength(int nLength);
 |[in] *nLength*|Tamanho do controle deslizante, em pixels.|  
   
 ### <a name="remarks"></a>Comentários  
- Esse método requer que a barra de controle seja definida como [TBS_FIXEDLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760147) estilo.  
+ Esse método requer que a barra de controle seja definida como [TBS_FIXEDLENGTH](/windows/desktop/Controls/trackbar-control-styles) estilo.  
   
- Esse método envia o [TBM_SETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760234) mensagem, que é descrita no SDK do Windows.  
+ Esse método envia o [TBM_SETTHUMBLENGTH](/windows/desktop/Controls/tbm-setthumblength) mensagem, que é descrita no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo de código a seguir define a variável `m_sliderCtrl`, que é usado para acessar a barra de controle atual. O exemplo também define uma variável, `thumbLength`, que é usado para armazenar o comprimento padrão do componente do elevador da barra de controle. Essas variáveis são usadas no exemplo a seguir.  
@@ -689,13 +689,13 @@ int SetTipSide(int nLocation);
   
 ### <a name="parameters"></a>Parâmetros  
  *Nlocal*  
- Valor que representa o local no qual exibir o controle de dica de ferramenta. Para obter uma lista de valores possíveis, consulte a mensagem do Win32 [TBM_SETTIPSIDE](http://msdn.microsoft.com/library/windows/desktop/bb760240), conforme descrito no SDK do Windows.  
+ Valor que representa o local no qual exibir o controle de dica de ferramenta. Para obter uma lista de valores possíveis, consulte a mensagem do Win32 [TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside), conforme descrito no SDK do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um valor que representa o local anterior da dica de ferramenta do controle. O valor de retorno é igual a um dos possíveis valores para *Nlocal*.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função membro implementa o comportamento da mensagem Win32 TBM_SETTIPSIDE, conforme descrito no SDK do Windows. Os controles deslizantes que usam o estilo TBS_TOOLTIPS exibem dicas de ferramenta. Para obter uma descrição dos estilos de controle deslizante, consulte [estilos de controle Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) no SDK do Windows.  
+ Essa função membro implementa o comportamento da mensagem Win32 TBM_SETTIPSIDE, conforme descrito no SDK do Windows. Os controles deslizantes que usam o estilo TBS_TOOLTIPS exibem dicas de ferramenta. Para obter uma descrição dos estilos de controle deslizante, consulte [estilos de controle Trackbar](/windows/desktop/Controls/trackbar-control-styles) no SDK do Windows.  
   
 ##  <a name="settooltips"></a>  CSliderCtrl::SetToolTips  
  Atribui um controle de dica de ferramenta para um controle deslizante.  
@@ -709,7 +709,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
  Um ponteiro para um [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) objeto que contém as dicas de ferramenta para usar com o controle deslizante.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função membro implementa o comportamento da mensagem do Win32 [TBM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760242), conforme descrito no SDK do Windows. Quando um controle deslizante é criado com o estilo TBS_TOOLTIPS, ele cria um controle de dica de ferramenta padrão que aparece ao lado do controle deslizante, exibindo a posição atual do controle deslizante. Para obter uma descrição dos estilos de controle deslizante, consulte [estilos de controle Trackbar](http://msdn.microsoft.com/library/windows/desktop/bb760147) no SDK do Windows.  
+ Essa função membro implementa o comportamento da mensagem do Win32 [TBM_SETTOOLTIPS](/windows/desktop/Controls/tbm-settooltips), conforme descrito no SDK do Windows. Quando um controle deslizante é criado com o estilo TBS_TOOLTIPS, ele cria um controle de dica de ferramenta padrão que aparece ao lado do controle deslizante, exibindo a posição atual do controle deslizante. Para obter uma descrição dos estilos de controle deslizante, consulte [estilos de controle Trackbar](/windows/desktop/Controls/trackbar-control-styles) no SDK do Windows.  
   
 ## <a name="see-also"></a>Consulte também  
  [CMNCTRL2 de exemplo do MFC](../../visual-cpp-samples.md)   

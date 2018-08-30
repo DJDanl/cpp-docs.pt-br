@@ -17,32 +17,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32d3cc6244bc2f928c8d1d0c6e46d1bc5a57aa3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e488d4b475cbc73f57bb90ccd081b6d490221d58
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385931"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202254"
 ---
 # <a name="working-with-the-toolbar-control"></a>Trabalhando com o controle da barra de ferramentas
-Este artigo explica como é possível acessar o [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objeto subjacente um [CToolBar](../mfc/reference/ctoolbar-class.md) para maior controle sobre as barras de ferramentas. Este é um tópico avançado.  
+Este artigo explica como você pode acessar o [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objeto subjacentes uma [CToolBar](../mfc/reference/ctoolbar-class.md) para maior controle sobre suas barras de ferramentas. Este é um tópico avançado.  
   
 ## <a name="procedures"></a>Procedimentos  
   
-#### <a name="to-access-the-toolbar-common-control-underlying-your-ctoolbar-object"></a>Para acessar o controle de barra de ferramentas comuns subjacente de seu objeto CToolBar  
+#### <a name="to-access-the-toolbar-common-control-underlying-your-ctoolbar-object"></a>Para acessar o controle de barra de ferramentas comum subjacente de seu objeto CToolBar  
   
-1.  Chamar [CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl).  
+1.  Chame [CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl).  
   
- `GetToolBarCtrl` Retorna uma referência a um [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objeto. Você pode usar a referência para chamar funções de membro da classe de controle de barra de ferramentas.  
+ `GetToolBarCtrl` Retorna uma referência a um [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objeto. Você pode usar a referência para chamar funções de membro de classe de controle de barra de ferramentas.  
   
 > [!CAUTION]
->  Ao chamar `CToolBarCtrl` **obter** funções é seguro, tenha cuidado se você chamar o **definir** funções. Este é um tópico avançado. Normalmente, você não deve precisa acessar o controle de barra de ferramentas subjacente.  
+>  Ao chamar `CToolBarCtrl` **Obtenha** funções é seguro, tenha cuidado se você chamar o **definir** funções. Este é um tópico avançado. Normalmente não é necessário acessar o controle de barra de ferramentas subjacente.  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
   
 -   [Controles (controles comuns do Windows)](../mfc/controls-mfc.md)  
   
--   [Fundamentos da barra de ferramentas](../mfc/toolbar-fundamentals.md)  
+-   [Conceitos básicos da barra de ferramentas](../mfc/toolbar-fundamentals.md)  
   
 -   [Encaixando e flutuando barras de ferramentas](../mfc/docking-and-floating-toolbars.md)  
   
@@ -60,11 +60,11 @@ Este artigo explica como é possível acessar o [CToolBarCtrl](../mfc/reference/
   
 -   [Várias barras de ferramentas](../mfc/toolbar-fundamentals.md)  
   
--   [Usando as barras de ferramentas antigas](../mfc/using-your-old-toolbars.md)  
+-   [Usando as barras](../mfc/using-your-old-toolbars.md)  
   
 -   [Barras de controle](../mfc/control-bars.md)  
   
- Para obter informações gerais sobre o uso de controles comuns do Windows, consulte [controles comuns do](http://msdn.microsoft.com/library/windows/desktop/bb775493).  
+ Para obter informações gerais sobre o uso de controles comuns do Windows, consulte [controles comuns](/windows/desktop/Controls/common-controls-intro).  
   
 ## <a name="see-also"></a>Consulte também  
  [Implementação da barra de ferramentas do MFC](../mfc/mfc-toolbar-implementation.md)

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 132936805d948257f8d6579f0f840aaf2fd15a0d
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 60fb1c219068cc0c59f908688ea5c471946458ad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849650"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204135"
 ---
 # <a name="cpen-class"></a>Classe CPen
 Encapsula uma caneta de interface (GDI) do dispositivo de gráficos Windows.  
@@ -57,10 +57,10 @@ class CPen : public CGdiObject
 |Nome|Descrição|  
 |----------|-----------------|  
 |[CPen::CreatePen](#createpen)|Cria uma caneta superficial ou geométrica lógica com o estilo especificado, largura e atributos de pincel e anexa-o para o `CPen` objeto.|  
-|[CPen::CreatePenIndirect](#createpenindirect)|Cria uma caneta com o estilo, largura e cor fornecida um [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) estruturar e anexa-o para o `CPen` objeto.|  
+|[CPen::CreatePenIndirect](#createpenindirect)|Cria uma caneta com o estilo, largura e cor fornecida um [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) estruturar e anexa-o para o `CPen` objeto.|  
 |[CPen::FromHandle](#fromhandle)|Retorna um ponteiro para um `CPen` quando é fornecido um HPEN do Windows do objeto.|  
-|[CPen::GetExtLogPen](#getextlogpen)|Obtém uma [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) estrutura subjacente.|  
-|[CPen::GetLogPen](#getlogpen)|Obtém uma [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) estrutura subjacente.|  
+|[CPen::GetExtLogPen](#getextlogpen)|Obtém uma [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen) estrutura subjacente.|  
+|[CPen::GetLogPen](#getlogpen)|Obtém uma [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) estrutura subjacente.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -144,7 +144,7 @@ CPen(
   
 - Une PS_JOIN_BEVEL são biselada.  
   
-- Une PS_JOIN_MITER estão em Malhete quando estes estiverem dentro do limite atual definido pela [SetMiterLimit](http://msdn.microsoft.com/library/windows/desktop/dd145076) função. Se a junção exceder esse limite, ele é biselado.  
+- Une PS_JOIN_MITER estão em Malhete quando estes estiverem dentro do limite atual definido pela [SetMiterLimit](/windows/desktop/api/wingdi/nf-wingdi-setmiterlimit) função. Se a junção exceder esse limite, ele é biselado.  
   
 - Une PS_JOIN_ROUND são redonda.  
   
@@ -208,7 +208,7 @@ BOOL CreatePen(
  Contém uma cor RGB para a caneta.  
   
  *pLogBrush*  
- Aponta para um [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) estrutura. Se *nPenStyle* é PS_COSMETIC, o `lbColor` membro do `LOGBRUSH` estrutura Especifica a cor da caneta e o *lbStyle* membro do `LOGBRUSH` estrutura deve ser definida como BS_ SÓLIDA. Se nPenStyle for PS_GEOMETRIC, todos os membros devem ser usados para especificar os atributos de pincel da caneta.  
+ Aponta para um [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) estrutura. Se *nPenStyle* é PS_COSMETIC, o `lbColor` membro do `LOGBRUSH` estrutura Especifica a cor da caneta e o *lbStyle* membro do `LOGBRUSH` estrutura deve ser definida como BS_ SÓLIDA. Se nPenStyle for PS_GEOMETRIC, todos os membros devem ser usados para especificar os atributos de pincel da caneta.  
   
  *nStyleCount*  
  Especifica o comprimento, em unidades de palavras duplas, do *lpStyle* matriz. Esse valor deve ser zero se *nPenStyle* não é PS_USERSTYLE.  
@@ -290,7 +290,7 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
 ### <a name="parameters"></a>Parâmetros  
  *pLogPen*  
- Aponta para um [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711) estrutura que contém informações sobre a caneta.  
+ Aponta para um [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen) estrutura que contém informações sobre a caneta.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se bem-sucedido; Caso contrário, 0.  
@@ -300,13 +300,13 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
  Consulte os tópicos a seguir no SDK do Windows para obter informações sobre atributos de caneta:  
   
-- [GetObject](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
+- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)  
   
-- [EXTLOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd162711)  
+- [EXTLOGPEN](/windows/desktop/api/wingdi/ns-wingdi-tagextlogpen)  
   
-- [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)  
+- [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)  
   
-- [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705)  
+- [ExtCreatePen](/windows/desktop/api/wingdi/nf-wingdi-extcreatepen)  
   
 ### <a name="example"></a>Exemplo  
  O exemplo de código a seguir demonstra a chamada `GetExtLogPen` para recuperar os atributos de uma caneta e, em seguida, criar uma caneta de novo, superficial com a mesma cor.  
@@ -322,7 +322,7 @@ int GetLogPen(LOGPEN* pLogPen);
   
 ### <a name="parameters"></a>Parâmetros  
  *pLogPen*  
- Aponta para um [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041) estrutura para conter informações sobre a caneta.  
+ Aponta para um [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) estrutura para conter informações sobre a caneta.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se bem-sucedido; Caso contrário, 0.  
@@ -334,9 +334,9 @@ int GetLogPen(LOGPEN* pLogPen);
   
  Consulte os tópicos a seguir no SDK do Windows para obter informações sobre atributos de caneta:  
   
-- [GetObject](http://msdn.microsoft.com/library/windows/desktop/dd144904)  
+- [GetObject](/windows/desktop/api/wingdi/nf-wingdi-getobject)  
   
-- [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)  
+- [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen)  
   
 ### <a name="example"></a>Exemplo  
  O exemplo de código a seguir demonstra a chamada `GetLogPen` para recuperar um caractere de caneta e, em seguida, criar uma caneta de novo e sólida com a mesma cor.  
@@ -356,7 +356,7 @@ operator HPEN() const;
 ### <a name="remarks"></a>Comentários  
  Esse operador é um operador de conversão, que dá suporte ao uso direto de um objeto HPEN.  
   
- Para obter mais informações sobre como usar objetos gráficos, consulte o artigo [gráfico de objetos](http://msdn.microsoft.com/library/windows/desktop/dd144962) no SDK do Windows.  
+ Para obter mais informações sobre como usar objetos gráficos, consulte o artigo [gráfico de objetos](/windows/desktop/gdi/graphic-objects) no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocView#104](../../mfc/codesnippet/cpp/cpen-class_7.cpp)]  

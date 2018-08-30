@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e16aa9377676e415f416dc4f7dae9cb9f2a40dab
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: ed85edeaf5400805d4628e10acab4cdf4af52082
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336560"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202724"
 ---
 # <a name="cinternetfile-class"></a>Classe CInternetFile
 Permite acesso aos arquivos em sistemas remotos que usam protocolos de Internet.  
@@ -258,7 +258,7 @@ virtual LPTSTR ReadString(
  Uma referência para o [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto que recebe a linha de leitura.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o buffer que contém dados simples recuperados a partir de [CInternetFile](../../mfc/reference/cinternetfile-class.md) objeto. Independentemente do tipo de dados do buffer passado para esse método, ele não executa qualquer manipulações nos dados (por exemplo, a conversão para Unicode), portanto, você deve mapear os dados retornados para a estrutura esperada, como se o **void\***  tipo foram retornados.  
+ Um ponteiro para o buffer que contém dados simples recuperados a partir de [CInternetFile](../../mfc/reference/cinternetfile-class.md) objeto. Independentemente do tipo de dados do buffer passado para esse método, ele não executa qualquer manipulações nos dados (por exemplo, a conversão para Unicode), portanto, você deve mapear os dados retornados para a estrutura esperada, como se o **void** <strong>\*</strong> tipo foram retornados.  
   
  NULL se o final do arquivo foi atingido sem ler todos os dados; ou, se boolean, FALSE se o final do arquivo foi atingido sem ler todos os dados.  
   
@@ -317,7 +317,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
  O tamanho do buffer desejado em bytes.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
   
 ### <a name="remarks"></a>Comentários  
  As APIs do WinInet subjacente não executar armazenamento em buffer, então, escolha um tamanho de buffer que permite que seu aplicativo ler os dados com eficiência, independentemente da quantidade de dados a serem lidos. Se cada chamada para [leitura](#read) normalmente envolve um aount grande de dados (por exemplo, quatro ou mais quilobytes), não há necessidade de um buffer. No entanto, se você chamar `Read` para obter partes pequenas de dados, ou se você usar [ReadString](#readstring) ler linhas individuais ao mesmo tempo, em seguida, um buffer de leitura melhora o desempenho do aplicativo.  
@@ -338,7 +338,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
  O tamanho do buffer em bytes.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função Win32 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
+ Diferente de zero se bem-sucedido; Caso contrário, 0. Se a chamada falhar, a função Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) pode ser chamado para determinar a causa do erro.  
   
 ### <a name="remarks"></a>Comentários  
  Portanto, subjacente APIs WinInet não tiverem um buffer, escolha um tamanho de buffer que permite que seu aplicativo gravar dados com eficiência, independentemente da quantidade de dados a serem gravados. Se cada chamada para [gravar](#write) normalmente envolve uma grande quantidade de dados (por exemplo, quatro ou mais quilobytes por vez), não há necessidade de um buffer. No entanto, se você chamar [gravar](#write) para escrever pequenos blocos de dados, um buffer de gravação melhora o desempenho do aplicativo.  

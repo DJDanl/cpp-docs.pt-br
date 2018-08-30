@@ -1,7 +1,7 @@
 ---
-title: Erro de Build prj0024 no projeto | Microsoft Docs
+title: Erro de Build prj0024 do projeto | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59bf76aba80093bf9e8e653bdfb9fad49687a501
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb539a5f1ee5f1aa5f9d828d93fa6d0dc8690c22
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318341"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215592"
 ---
 # <a name="project-build-error-prj0024"></a>Erro de Build PRJ0024 no Projeto
-O caminho Unicode 'path' não pôde ser convertido na página de código ANSI do usuário.  
-  
- ***caminho*** é a versão original do Unicode da cadeia de caracteres de caminho. Esse erro pode ocorrer em casos em que há um caminho de Unicode que não pode ser convertido diretamente para ANSI para a página de código atual do sistema.  
-  
- Esse erro pode ocorrer se você estiver trabalhando com um projeto que foi desenvolvido em um sistema usando uma página de código que não está no seu computador.  
-  
- A resolução para esse erro é atualizar o caminho para usar texto ANSI ou para instalar a página de código em seu computador e defina-o como o padrão do sistema.
+
+> O caminho Unicode '*caminho*' não pôde ser convertido na página de código ANSI do usuário.
+
+*caminho* é a versão original do Unicode da cadeia de caracteres de caminho. Esse erro pode ocorrer em casos em que há um caminho de Unicode que não pode ser convertido diretamente para ANSI para a página de código atual do sistema.
+
+Esse erro pode ocorrer se você estiver trabalhando com um projeto que foi desenvolvido em um sistema usando uma página de código que não está em seu computador.
+
+A resolução para esse erro é atualizar o caminho para usar texto ANSI ou para instalar a página de código em seu computador e defini-lo como o padrão do sistema.

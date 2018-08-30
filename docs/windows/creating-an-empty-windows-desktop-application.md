@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1d8b81174bcb6f70e168e8da09f5e35fe646ace
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 55ce0fc38c5633e334211a1c4985de65aa4dc8ad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603725"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197770"
 ---
 # <a name="creating-an-empty-windows-desktop-application"></a>Criando um aplicativo de área de trabalho do Windows vazio
 
@@ -45,4 +45,4 @@ Em seguida, você pode [adicionar arquivos ao seu projeto do Visual C++ vazio](.
 
 ## <a name="see-also"></a>Consulte também
 
-[Implantando aplicativos](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+[Implantando aplicativos](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

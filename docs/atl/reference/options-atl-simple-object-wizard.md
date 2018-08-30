@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1cef503bf9862f1259e25aff76a013d60776077
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 36aab0177eaa62e5ec9601d9258c7de1a6ce7b59
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883720"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205684"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Opções, ATL Simple Object Wizard
 Use esta página do ATL Simple Object Wizard para projetar para maior eficiência e o suporte para o objeto de erro.  
@@ -35,14 +35,14 @@ Use esta página do ATL Simple Object Wizard para projetar para maior eficiênci
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|**Simples**|Especifica que o objeto sempre é executado no thread COM primário. Ver [single-threaded Apartments](http://msdn.microsoft.com/library/windows/desktop/ms680112) e [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) para obter mais informações.|  
-|**Apartment**|Especifica que o objeto usa apartamento de threading. Apartment equivalente a único thread. Cada objeto de um componente do apartment-threaded é atribuído um apartamento de thread, durante a vida útil do objeto; No entanto, vários threads podem ser usados para vários objetos. Cada compartimento estiver associado a um thread específico e tem uma bomba de mensagem do Windows (padrão).<br /><br /> Ver [single-threaded Apartments](http://msdn.microsoft.com/library/windows/desktop/ms680112) para obter mais informações.|  
+|**Simples**|Especifica que o objeto sempre é executado no thread COM primário. Ver [single-threaded Apartments](/windows/desktop/com/single-threaded-apartments) e [InprocServer32](/windows/desktop/com/inprocserver32) para obter mais informações.|  
+|**Apartment**|Especifica que o objeto usa apartamento de threading. Apartment equivalente a único thread. Cada objeto de um componente do apartment-threaded é atribuído um apartamento de thread, durante a vida útil do objeto; No entanto, vários threads podem ser usados para vários objetos. Cada compartimento estiver associado a um thread específico e tem uma bomba de mensagem do Windows (padrão).<br /><br /> Ver [single-threaded Apartments](/windows/desktop/com/single-threaded-apartments) para obter mais informações.|  
 |**Ambos**|Especifica que o objeto pode usar apartment ou threading livre, dependendo de qual tipo de um thread é criada.|  
-|**livre**|Especifica que o objeto usa threading livre. Threading livre é equivalente a um modelo de apartment com vários threads. Ver [multi-threaded Apartments](http://msdn.microsoft.com/library/windows/desktop/ms693421) para obter mais informações.|  
+|**livre**|Especifica que o objeto usa threading livre. Threading livre é equivalente a um modelo de apartment com vários threads. Ver [multi-threaded Apartments](/windows/desktop/com/multithreaded-apartments) para obter mais informações.|  
 |**Neutral**|Especifica que o objeto segue as diretrizes para apartments de vários threads, mas ela pode ser executada em qualquer tipo de thread.|  
   
  **Agregação**  
- Indica se o objeto usa [agregação](http://msdn.microsoft.com/library/windows/desktop/ms686558). O objeto agregado escolhe quais interfaces para expor para clientes e as interfaces são expostas como se o objeto agregado implementada-los. Os clientes do objeto agregado se comunicam somente com o objeto agregado.  
+ Indica se o objeto usa [agregação](/windows/desktop/com/aggregation). O objeto agregado escolhe quais interfaces para expor para clientes e as interfaces são expostas como se o objeto agregado implementada-los. Os clientes do objeto agregado se comunicam somente com o objeto agregado.  
   
 |Opção|Descrição|  
 |------------|-----------------|  
@@ -71,5 +71,5 @@ Use esta página do ATL Simple Object Wizard para projetar para maior eficiênci
 ## <a name="see-also"></a>Consulte também  
  [ATL Simple Object Wizard](../../atl/reference/atl-simple-object-wizard.md)   
  [Objeto simples da ATL](../../atl/reference/adding-an-atl-simple-object.md)   
- [Problemas de Threading do servidor em processo](http://msdn.microsoft.com/library/windows/desktop/ms687205)
+ [Problemas de Threading do servidor em processo](/windows/desktop/com/in-process-server-threading-issues)
 

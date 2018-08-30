@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b3792bc5377d90acb6f5ddf619e888ddd606e1e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1852e765ed859f95f6de5319a1e9d8fa364f7681
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594087"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207057"
 ---
 # <a name="lengthis"></a>length_is
 
@@ -43,7 +43,7 @@ Uma ou mais expressões de linguagem C. Slots de argumentos vazia são permitido
 
 ## <a name="remarks"></a>Comentários
 
-O **length_is** atributo C++ tem a mesma funcionalidade que o [length_is](http://msdn.microsoft.com/library/windows/desktop/aa367068) atributo MIDL.
+O **length_is** atributo C++ tem a mesma funcionalidade que o [length_is](/windows/desktop/Midl/length-is) atributo MIDL.
 
 ## <a name="example"></a>Exemplo
 

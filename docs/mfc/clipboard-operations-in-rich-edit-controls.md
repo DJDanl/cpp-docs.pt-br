@@ -20,23 +20,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e831a76a491d1025ae45117d40362a85523742da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb207b31da27041ee777277e7e76502789402ab7
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341278"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216224"
 ---
 # <a name="clipboard-operations-in-rich-edit-controls"></a>Operações da Área de Transferência em controles de edição avançada
-Seu aplicativo pode colar o conteúdo da área de transferência em um controle de edição avançada ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) usando o formato de área de transferência melhor disponível ou em um formato específico de área de transferência. Você também pode determinar se um controle de edição é capaz de colar um formato de área de transferência.  
+Seu aplicativo pode colar o conteúdo da área de transferência em um controle rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) usando o formato de área de transferência melhor disponível ou em um formato específico da área de transferência. Você também pode determinar se um controle rich edit é capaz de colando um formato de área de transferência.  
   
- Você pode copiar ou recortar o conteúdo da seleção atual usando o [cópia](../mfc/reference/cricheditctrl-class.md#copy) ou [Recortar](../mfc/reference/cricheditctrl-class.md#cut) função de membro. Da mesma forma, você pode colar o conteúdo da área de transferência em um controle de edição com formato usando o [colar](../mfc/reference/cricheditctrl-class.md#paste) função de membro. O controle cola o primeiro formato disponível que reconhece, que é provavelmente o formato mais descritivo.  
+ É possível copiar ou recortar o conteúdo da seleção atual, usando o [cópia](../mfc/reference/cricheditctrl-class.md#copy) ou [Recortar](../mfc/reference/cricheditctrl-class.md#cut) função de membro. Da mesma forma, você pode colar o conteúdo da área de transferência em um controle rich edit usando o [colar](../mfc/reference/cricheditctrl-class.md#paste) função de membro. O controle cola o primeiro formato disponível que ele reconhece que provavelmente é o formato mais descritivo.  
   
- Para colar um formato específico de área de transferência, você pode usar o [PasteSpecial](../mfc/reference/cricheditctrl-class.md#pastespecial) função de membro. Essa função é útil para aplicativos com um comando Colar especial que permite que o usuário selecionar o formato de área de transferência. Você pode usar o [CanPaste](../mfc/reference/cricheditctrl-class.md#canpaste) função de membro para determinar se um determinado formato é reconhecido pelo controle.  
+ Para colar um formato específico da área de transferência, você pode usar o [PasteSpecial](../mfc/reference/cricheditctrl-class.md#pastespecial) função de membro. Essa função é útil para aplicativos com um comando Colar especial que permite ao usuário selecionar o formato de área de transferência. Você pode usar o [CanPaste](../mfc/reference/cricheditctrl-class.md#canpaste) função de membro para determinar se um determinado formato é reconhecido pelo controle.  
   
- Você também pode usar `CanPaste` para determinar se qualquer formato de área de transferência disponível é reconhecido por um controle de edição. Essa função é útil para o `OnInitMenuPopup` manipulador. Um aplicativo pode habilitar ou cinza seu comando Colar dependendo se o controle pode colar qualquer formato disponível.  
+ Você também pode usar `CanPaste` para determinar se qualquer formato de área de transferência disponível é reconhecido por um controle rich edit. Essa função é útil para o `OnInitMenuPopup` manipulador. Um aplicativo pode habilitar ou cinza seu comando Colar, dependendo se o controle pode colar qualquer formato disponível.  
   
- Formatos register área de transferência dois controles edição com formato: formato rich text e um formato chamado RichEdit texto e objetos. Um aplicativo pode registrar esses formatos, usando o [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) de função, especificando o **CF_RTF** e **CF_RETEXTOBJ** valores.  
+ Formatos Registre-se na área de transferência dois controles edição rica: formato rich text e um formato chamado RichEdit texto e objetos. Um aplicativo pode registrar esses formatos usando o [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) funcionar, especificando as **CF_RTF** e **CF_RETEXTOBJ** valores.  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando CRichEditCtrl](../mfc/using-cricheditctrl.md)   

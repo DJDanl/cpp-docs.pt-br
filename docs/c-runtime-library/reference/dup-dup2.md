@@ -38,16 +38,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad477dc09ce6c8bee2d69e479f8e1615639cb14d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 820172e1e6ab4ad007c89b2b40f03512134f0f0d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399797"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215947"
 ---
 # <a name="dup-dup2"></a>_dup, _dup2
 
-Cria um segundo descritor de arquivo para um arquivo aberto (**DUP**), ou reatribui um descritor de arquivo (**dup2**).
+Cria um segundo descritor de arquivo para um arquivo aberto (**DUP**), ou reatribui um descritor de arquivo (**_dup2**).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -66,15 +66,15 @@ Qualquer descritor de arquivo.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**DUP** retorna um novo descritor de arquivo. **dup2** retorna 0 para indicar êxito. Se ocorrer um erro, cada função retorna -1 e conjuntos de **errno** para **EBADF** se o descritor de arquivo é inválido ou a **EMFILE** se não há mais descritores de arquivo estão disponíveis. No caso de um descritor de arquivo inválido, a função também invoca o manipulador de parâmetro inválido, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).
+**DUP** retorna um novo descritor de arquivo. **_dup2** retorna 0 para indicar êxito. Se ocorrer um erro, cada função retornará -1 e definirá **errno** à **EBADF** se o descritor de arquivo é inválido ou a **EMFILE** se não há outros descritores de arquivo disponíveis. No caso de um descritor de arquivo inválido, a função também invoca o manipulador de parâmetro inválido, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md).
 
 Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **DUP** e **dup2** funções associar um segundo descritor de arquivo um arquivo aberto. Essas funções podem ser usadas para associar um descritor de arquivo predefinido, como para **stdout**, com um arquivo diferente. As operações no arquivo podem ser realizadas usando um descritor de arquivo. O tipo de acesso permitido para o arquivo não é afetado pela criação de um novo descritor. **DUP** retorna o próximo descritor de arquivo disponíveis para o arquivo. **dup2** força *fd2* para se referir ao mesmo arquivo como *fd1*. Se *fd2* está associado com um arquivo aberto no momento da chamada, esse arquivo é fechado.
+O **DUP** e **_dup2** funções associar um segundo descritor de arquivo com um arquivo aberto. Essas funções podem ser usadas para associar um descritor de arquivo predefinido, como **stdout**, com um arquivo diferente. As operações no arquivo podem ser realizadas usando um descritor de arquivo. O tipo de acesso permitido para o arquivo não é afetado pela criação de um novo descritor. **DUP** retorna o próximo descritor de arquivo disponível para o arquivo. **_dup2** força *fd2* para se referir ao mesmo arquivo como *fd1*. Se *fd2* está associado com um arquivo aberto no momento da chamada, esse arquivo é fechado.
 
-Ambos **DUP** e **dup2** aceitar descritores de arquivo como parâmetros. Para passar um fluxo (**arquivo \*** ) para qualquer uma dessas funções, use [fileno](fileno.md). O **fileno** rotina retorna o descritor de arquivo associado atualmente com o fluxo fornecido. O exemplo a seguir mostra como associar **stderr** (definido como **arquivo \***  em stdio. h) com um descritor de arquivo:
+Ambos **DUP** e **_dup2** aceitam descritores de arquivo como parâmetros. Para passar um fluxo (`FILE *`) para qualquer uma dessas funções, use [fileno](fileno.md). O **fileno** rotina retorna o descritor de arquivo atualmente associado com o fluxo fornecido. O exemplo a seguir mostra como associar **stderr** (definido como `FILE *` em stdio. h) com um descritor de arquivo:
 
 ```C
 int cstderr = _dup( _fileno( stderr ));
@@ -87,7 +87,7 @@ int cstderr = _dup( _fileno( stderr ));
 |**_dup**|\<io.h>|
 |**_dup2**|\<io.h>|
 
-Não há suporte para o console em aplicativos do Windows UWP (plataforma Universal). Os identificadores de fluxo padrão que estão associados com o console, **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C podem usá-los em aplicativos UWP . Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

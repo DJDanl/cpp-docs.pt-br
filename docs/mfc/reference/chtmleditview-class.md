@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0519373a46e1c25feda7a3130b420c565a96eece
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c52518bc2588188ea2990ddb3be1f7d79dd461d8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339537"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211891"
 ---
 # <a name="chtmleditview-class"></a>Classe CHtmlEditView
 Fornece a funcionalidade da plataforma de edição WebBrowser no contexto da arquitetura de documento/exibição do MFC.  
@@ -110,7 +110,7 @@ virtual BOOL Create(
  Especifica os atributos de estilo de janela. Por padrão, os estilos WS_VISIBLE e WS_CHILD Windows são definidos.  
   
  *Rect*  
- Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) especificando o tamanho e posição da janela de estrutura. O *rectDefault* valor permite que o Windows especificar o tamanho e posição da nova janela.  
+ Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) especificando o tamanho e posição da janela de estrutura. O *rectDefault* valor permite que o Windows especificar o tamanho e posição da nova janela.  
   
  *pParentWnd*  
  Um ponteiro para a janela pai do controle.  

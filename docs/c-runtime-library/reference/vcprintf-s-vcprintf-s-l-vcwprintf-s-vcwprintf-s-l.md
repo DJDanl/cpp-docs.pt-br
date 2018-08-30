@@ -53,12 +53,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 628e942ae77449f4dcd809d519da8696cd9fec6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 39f169c18554aa91e3f66a3e30a62a801c9d345d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415761"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208982"
 ---
 # <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s, _vcprintf_s_l, _vcwprintf_s, _vcwprintf_s_l
 
@@ -107,16 +107,16 @@ Para obter mais informações, consulte [Sintaxe de especificação de formato: 
 
 O número de caracteres gravados ou um valor negativo se ocorrer erro de saída.
 
-Como as versões menos segura dessas funções se *formato* é um ponteiro nulo, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Além disso, ao contrário as menos seguras versões dessas funções, se *formato* não especifica um formato válido, será gerada uma exceção de parâmetro inválido. Se a execução é permitida para continuar, essas funções retornam um código de erro e o conjunto **errno** esse código de erro. O código de erro padrão é **EINVAL** se um valor mais específico não se aplica.
+Como as versões menos seguras dessas funções, se *formato* for um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Além disso, ao contrário das versões menos seguras dessas funções, se *formato* não especifica um formato válido, será gerada uma exceção de parâmetro inválido. Se a execução puder continuar, essas funções retornarão um código de erro e definirão **errno** esse código de erro. O código de erro padrão é **EINVAL** se um valor mais específico não se aplica.
 
 ## <a name="remarks"></a>Comentários
 
 Cada uma dessas funções usa um ponteiro para uma lista de argumentos e, em seguida, formata e grava os dados determinados no console. **vcwprintf_s** é a versão de caractere largo de **vcprintf_s**. Uma cadeia de caracteres largos é usada como argumento.
 
-As versões dessas funções que têm o **_l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade que é transmitido em vez da localidade atual.
+As versões dessas funções que têm o **l** sufixo são idênticas, exceto por usarem o parâmetro de localidade passado em vez da localidade atual.
 
 > [!IMPORTANT]
-> Verifique se *format* não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) (Evitando estouros de buffer).
+> Verifique se *format* não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

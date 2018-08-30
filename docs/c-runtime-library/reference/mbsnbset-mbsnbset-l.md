@@ -42,16 +42,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 316580b0c5f1f46ffa9f4a49ef759b347032fc09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 17cbcb0313ac0a3e14b45d851ee6f4e98d5ec993
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404643"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206404"
 ---
 # <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset, _mbsnbset_l
 
-Define o primeiro **n** bytes de uma cadeia de caracteres multibyte em um caractere especificado. Versões mais seguras dessas funções estão disponíveis, consulte [_mbsnbset_s, _mbsnbset_s_l](mbsnbset-s-mbsnbset-s-l.md).
+Define os primeiros **n** bytes de uma cadeia de caracteres multibyte para um caractere especificado. Versões mais seguras dessas funções estão disponíveis, consulte [_mbsnbset_s, _mbsnbset_s_l](mbsnbset-s-mbsnbset-s-l.md).
 
 > [!IMPORTANT]
 > Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -92,15 +92,15 @@ Localidade a usar.
 
 ## <a name="remarks"></a>Comentários
 
-O **mbsnbset** e **mbsnbset_l** funções definir, no máximo, a primeira *contagem* bytes de *str* para *c*. Se *contagem* é maior que o comprimento de *str*, o comprimento de *str* é usado em vez de *contagem*. Se *c* é um caractere multibyte e não pode ser definida totalmente para o último byte especificado por *contagem*, o último byte é preenchido com um caractere em branco. **mbsnbset** e **mbsnbset_l** não coloca uma terminação nula no final da *str*.
+O **mbsnbset** e **mbsnbset_l** funções definem, no máximo, o primeiro *contagem* bytes de *str* para *c*. Se *contagem* é maior que o comprimento de *str*, o comprimento da *str* é usado em vez de *contagem*. Se *c* é um caractere multibyte e não pode ser definido inteiramente para o último byte especificado por *contagem*, o último byte é preenchido com um caractere em branco. **mbsnbset** e **mbsnbset_l** não coloca uma terminação nula no final da *str*.
 
-**mbsnbset** e **mbsnbset_l** é semelhante a **mbsnset**, exceto que ele define *contagem* bytes em vez de *contagem* caracteres de *c*.
+**mbsnbset** e **mbsnbset_l** é semelhante à **mbsnset**, exceto que ele define *contagem* bytes em vez de *contagem* caracteres de *c*.
 
-Se *str* é **nulo** ou *contagem* for zero, esta função gera uma exceção de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e a função retorna **nulo**. Além disso, se *c* não é um caractere de multibyte válido, **errno** é definido como **EINVAL** e um espaço é usado em vez disso.
+Se *str* é **nulo** ou *contagem* for zero, essa função gera uma exceção de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e a função retornará **nulo**. Além disso, se *c* não é um caractere multibyte válido **errno** está definido como **EINVAL** e um espaço é usado em vez disso.
 
-O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. O **mbsnbset** versão dessa função usa a localidade atual para este comportamento dependente de localidade; a **mbsnbset_l** versão é idêntica, exceto que ele use o parâmetro de localidade passado em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. O **mbsnbset** versão dessa função usa a localidade atual desse comportamento dependente da localidade; as **mbsnbset_l** versão é idêntico, exceto que ele use o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-**Observação de segurança** Essa API causa uma ameaça em potencial em relação ao problema de estouro de buffer. Os problemas de estouro de buffer são um método frequente de ataque ao sistema, resultando em uma elevação de privilégio sem garantia. Para obter mais informações, consulte [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) (Evitando estouros de buffer).
+**Observação de segurança** Essa API causa uma ameaça em potencial em relação ao problema de estouro de buffer. Os problemas de estouro de buffer são um método frequente de ataque ao sistema, resultando em uma elevação de privilégio sem garantia. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

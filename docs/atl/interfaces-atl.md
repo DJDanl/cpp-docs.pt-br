@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7becd9e27294c81ce6144d08c79cfac52636fbf
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1410a437d87b56b244eb4fcd711797c279bec446
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848259"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217877"
 ---
 # <a name="interfaces-atl"></a>Interfaces (ATL)
 Uma interface é a maneira na qual um objeto exponha sua funcionalidade para o mundo exterior. No COM, uma interface é uma tabela de ponteiros (como uma vtable C++) para funções implementadas pelo objeto. A tabela representa a interface e as funções para o qual ele aponta são os métodos dessa interface. Um objeto pode expor quantas interfaces conforme ele escolhe.  
@@ -34,5 +34,5 @@ Uma interface é a maneira na qual um objeto exponha sua funcionalidade para o m
   
 ## <a name="see-also"></a>Consulte também  
  [Introdução a COM](../atl/introduction-to-com.md)   
- [Interfaces e objetos COM](http://msdn.microsoft.com/library/windows/desktop/ms690343)
+ [Interfaces e objetos COM](/windows/desktop/com/com-objects-and-interfaces)
 

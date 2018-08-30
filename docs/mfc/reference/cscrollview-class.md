@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43ad1d1d047b9e44da27d1c9eb24dde39fd429ef
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: b1a4d3d44f7ce18486feab4096673970857a0907
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849910"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214971"
 ---
 # <a name="cscrollview-class"></a>Classe CScrollView
 Um [CView](../../mfc/reference/cview-class.md) com recursos de rolagem.  
@@ -86,9 +86,9 @@ class CScrollView : public CView
   
 -   Rola automaticamente em resposta às mensagens do teclado, mouse não rolam ou a roda do IntelliMouse.  
   
- Para rolar automaticamente em resposta às mensagens do teclado, adicionar uma mensagem WM_KEYDOWN e de teste para VK_DOWN, VK_PREV e chame [SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597).  
+ Para rolar automaticamente em resposta às mensagens do teclado, adicionar uma mensagem WM_KEYDOWN e de teste para VK_DOWN, VK_PREV e chame [SetScrollPos](/windows/desktop/api/winuser/nf-winuser-setscrollpos).  
   
- Você pode lidar com a roda do mouse para rolar por conta própria, substituindo a mensagem mapeada [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) e [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) funções de membro. Como são para `CScrollView`, o comportamento recomendado para dar suporte a essas funções de membro [WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617), a mensagem de rotação da roda.  
+ Você pode lidar com a roda do mouse para rolar por conta própria, substituindo a mensagem mapeada [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) e [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) funções de membro. Como são para `CScrollView`, o comportamento recomendado para dar suporte a essas funções de membro [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel), a mensagem de rotação da roda.  
   
  Para tirar proveito da rolagem automática, derive sua classe de exibição da `CScrollView` em vez do `CView`. Quando o modo de exibição é criado, se você deseja calcular o tamanho da exibição rolável com base no tamanho do documento, a chamada a `SetScrollSizes` função de membro de sua substituição de um [cview:: Oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate) ou [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Você deve escrever seu próprio código para consultar o tamanho do documento. Por exemplo, consulte o [exemplo de Scribble](../../visual-cpp-samples.md).)  
   

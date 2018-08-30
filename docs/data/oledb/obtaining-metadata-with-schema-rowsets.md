@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9d86984dc67dd5cbea6fe52ff1c8b099e5b061f5
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7b131119f5f6207feccec3c683a470a8b099de12
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337184"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207836"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Obtendo metadados com conjuntos de linhas de esquema
 Às vezes você precisa obter informações sobre o provedor, conjunto de linhas, tabela, colunas ou outras informações de banco de dados sem abrir o conjunto de linhas. Dados sobre a estrutura de banco de dados são chamados de metadados e podem ser recuperados por um número de métodos diferentes. Um método é usar conjuntos de linhas de esquema.  
@@ -60,7 +60,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
  O [CRestrictions](../../data/oledb/crestrictions-class.md) classe fornece o suporte de restrição. Depois de criar uma instância do conjunto de linhas de esquema, chame [crestrictions:: Open](../../data/oledb/crestrictions-open.md). Esse método retorna um conjunto de resultados com base nas restrições que você especificar.  
   
- Para especificar restrições, consulte [apêndice b: Schema Rowsets](http://go.microsoft.com/fwlink/p/?linkid=64681) e consultar o conjunto de linhas que você está usando. Por exemplo, `CColumns` corresponde do [conjunto de linhas COLUMNS](http://go.microsoft.com/fwlink/p/?linkid=64682); esse tópico lista as colunas de restrição no conjunto de linhas COLUMNS: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Você deve seguir nessa ordem no especificando suas restrições.  
+ Para especificar restrições, consulte [apêndice b: Schema Rowsets](/previous-versions/windows/desktop/ms712921\(v=vs.85\)) e consultar o conjunto de linhas que você está usando. Por exemplo, `CColumns` corresponde do [conjunto de linhas COLUMNS](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); esse tópico lista as colunas de restrição no conjunto de linhas COLUMNS: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Você deve seguir nessa ordem no especificando suas restrições.  
   
  Portanto, por exemplo, se você quiser restringir por nome de tabela, observe que TABLE_NAME é a terceira coluna de restrição e, em seguida, chamar `Open`, especificando o nome da tabela desejado como o terceiro parâmetro de restrição, conforme mostrado no exemplo a seguir.  
   
@@ -90,9 +90,9 @@ CRestrictions<CAccessor<CColumnsInfo>
   
  Para a referência do conjunto de linhas de esquema, classes typedef fornecida nos modelos do OLE DB (consulte [Classes de conjunto de linhas de esquema e Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).  
   
- Para obter mais informações sobre conjuntos de linhas de esquema de OLE DB, incluindo colunas de restrição, consulte [apêndice b: Schema Rowsets](http://go.microsoft.com/fwlink/p/?linkid=64681) na referência do OLE DB do programador.  
+ Para obter mais informações sobre conjuntos de linhas de esquema de OLE DB, incluindo colunas de restrição, consulte [apêndice b: Schema Rowsets](/previous-versions/windows/desktop/ms712921\(v=vs.85\)) na referência do OLE DB do programador.  
   
- Para obter exemplos mais complexos de como usar classes rowset do esquema, consulte o [CatDB](http://msdn.microsoft.com/003d516b-2bf6-444e-8be5-4ebaa0b66046) e [DBViewer](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) exemplos.  
+ Para obter exemplos mais complexos de como usar classes rowset do esquema, consulte o [CatDB](https://github.com/Microsoft/VCSamples) e [DBViewer](https://github.com/Microsoft/VCSamples) exemplos.  
   
  Para obter informações sobre o suporte do provedor de conjuntos de linhas de esquema, consulte [que dão suporte a conjuntos de linhas de esquema](../../data/oledb/supporting-schema-rowsets.md).  
   

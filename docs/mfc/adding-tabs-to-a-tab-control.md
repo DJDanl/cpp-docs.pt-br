@@ -17,25 +17,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86032bd3d1ce10221cb5d8094e4ba6de866e1eea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb8caad0b7d1f632a2d97e4ea6bda7c93a2b4d74
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342847"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218291"
 ---
 # <a name="adding-tabs-to-a-tab-control"></a>Adicionando guias a um controle de guia
-Depois de criar o controle de guia ([CTabCtrl](../mfc/reference/ctabctrl-class.md)), adicionar quantas guias conforme necessário.  
+Depois de criar o controle de guia ([CTabCtrl](../mfc/reference/ctabctrl-class.md)), adicionar tantos guias, conforme necessário.  
   
 ### <a name="to-add-a-tab-item"></a>Para adicionar um item de guia  
   
-1.  Preparar um [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) estrutura.  
+1.  Preparar uma [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) estrutura.  
   
-2.  Chamar [CTabCtrl::InsertItem](../mfc/reference/ctabctrl-class.md#insertitem), passando a estrutura.  
+2.  Chame [CTabCtrl::InsertItem](../mfc/reference/ctabctrl-class.md#insertitem), passando a estrutura.  
   
-3.  Repita as etapas 1 e 2 para os itens da guia adicional.  
+3.  Repita as etapas 1 e 2 para itens de guia adicional.  
   
- Para obter mais informações, consulte [criando um controle guia](http://msdn.microsoft.com/library/windows/desktop/bb760550) no SDK do Windows.  
+ Para obter mais informações, consulte [criando um controle guia](/windows/desktop/Controls/tab-controls) no SDK do Windows.  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando CTabCtrl](../mfc/using-ctabctrl.md)   

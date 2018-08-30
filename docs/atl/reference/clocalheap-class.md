@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0489d46ada0e68456f6ae16e7cd702c892a7b9
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6f30208cbe3ebb72014f027533c7b3c659e4ac23
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37880109"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213267"
 ---
 # <a name="clocalheap-class"></a>Classe CLocalHeap
 Essa classe implementa [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) usando as funções de heap local do Win32.  
@@ -55,7 +55,7 @@ class CLocalHeap : public IAtlMemMgr
  `CLocalHeap` implementa as funções de alocação de memória usando as funções de heap local do Win32.  
   
 > [!NOTE]
->  As funções de heap local são mais lentas do que outras funções de gerenciamento de memória e não fornecem o máximo de recursos. Portanto, os novos aplicativos devem usar o [funções de heap](http://msdn.microsoft.com/library/windows/desktop/aa366711). Eles estão disponíveis na [CWin32Heap](../../atl/reference/cwin32heap-class.md) classe.  
+>  As funções de heap local são mais lentas do que outras funções de gerenciamento de memória e não fornecem o máximo de recursos. Portanto, os novos aplicativos devem usar o [funções de heap](/windows/desktop/Memory/heap-functions). Eles estão disponíveis na [CWin32Heap](../../atl/reference/cwin32heap-class.md) classe.  
   
 ## <a name="example"></a>Exemplo  
  Veja o exemplo de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).  
@@ -85,7 +85,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>Comentários  
  Chame [CLocalHeap::Free](#free) ou [CLocalHeap::Reallocate](#reallocate) para liberar a memória alocada por esse método.  
   
- Implementado usando [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723) com um parâmetro de sinalizador de LMEM_FIXED.  
+ Implementado usando [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc) com um parâmetro de sinalizador de LMEM_FIXED.  
   
 ##  <a name="free"></a>  CLocalHeap::Free  
  Chame esse método para liberar um bloco de memória alocada por este Gerenciador de memória.  
@@ -99,7 +99,7 @@ virtual void Free(void* p) throw();
  Ponteiro de memória alocado anteriormente por este Gerenciador de memória. NULL é um valor válido e não faz nada.  
   
 ### <a name="remarks"></a>Comentários  
- Implementado usando [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730).  
+ Implementado usando [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree).  
   
 ##  <a name="getsize"></a>  CLocalHeap::GetSize  
  Chame esse método para obter o tamanho alocado de um bloco de memória alocado por este Gerenciador de memória.  
@@ -116,7 +116,7 @@ virtual size_t GetSize(void* p) throw();
  Retorna o tamanho do bloco de memória alocada em bytes.  
   
 ### <a name="remarks"></a>Comentários  
- Implementado usando [LocalSize](http://msdn.microsoft.com/library/windows/desktop/aa366745).  
+ Implementado usando [LocalSize](/windows/desktop/api/winbase/nf-winbase-localsize).  
   
 ##  <a name="reallocate"></a>  CLocalHeap::Reallocate  
  Chame esse método para realocar a memória alocada por este Gerenciador de memória.  
@@ -138,7 +138,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="remarks"></a>Comentários  
  Chame [CLocalHeap::Free](#free) para liberar a memória alocada por esse método.  
   
- Implementado usando [LocalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366742).  
+ Implementado usando [LocalReAlloc](/windows/desktop/api/winbase/nf-winbase-localrealloc).  
   
 ## <a name="see-also"></a>Consulte também  
  [Visão geral da classe](../../atl/atl-class-overview.md)   

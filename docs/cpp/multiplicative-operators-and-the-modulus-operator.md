@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b238a496718088f0251faa49281fdc8939c01c7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a51544f1e367e1db0b5ae72948af68fbedfa7504
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408353"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209722"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Operadores multiplicativos e o operador de módulo
 ## <a name="syntax"></a>Sintaxe  
@@ -44,15 +44,15 @@ expression % expression
 ## <a name="remarks"></a>Comentários  
  Os operadores de multiplicação são:  
   
--   Multiplicação (**\***)  
+-   Multiplicação (<strong>\*</strong>)  
   
 -   Divisão (**/**)  
   
--   Módulo (resto da divisão) (`%`)  
+-   Módulo (resto da divisão) (**%**)  
   
  Esses operadores binários possuem associatividade da esquerda para a direita.  
   
- Os operadores de multiplicação usam operandos de tipos aritméticos. O operador de módulo (`%`) tem um requisito mais restrito, já que seus operandos devem ser do tipo integral. (Para obter o resto de uma divisão de ponto flutuante, use a função de tempo de execução [fmod](../c-runtime-library/reference/fmod-fmodf.md).) As conversões abordadas em [conversões padrão](standard-conversions.md) são aplicadas aos operandos, e o resultado é do tipo convertido.  
+ Os operadores de multiplicação usam operandos de tipos aritméticos. O operador de módulo (**%**) tem um requisito mais rígido que seus operandos devem ser do tipo integral. (Para obter o resto de uma divisão de ponto flutuante, use a função de tempo de execução [fmod](../c-runtime-library/reference/fmod-fmodf.md).) As conversões abordadas em [conversões padrão](standard-conversions.md) são aplicadas aos operandos, e o resultado é do tipo convertido.  
   
  O operador de multiplicação gera o resultado da multiplicação do primeiro operando pelo segundo.  
   

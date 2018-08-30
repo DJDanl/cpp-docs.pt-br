@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f23c4836d178c64590536a809ac5fe6cbbdf8380
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1fec8a41a1c9d1a9d01952a0a72829d2122e0e40
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416495"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216971"
 ---
 # <a name="wcstombss-wcstombssl"></a>wcstombs_s, _wcstombs_s_l
 
@@ -103,7 +103,7 @@ O tamanho em bytes do *mbstr* buffer.
 Aponta para a cadeia de caracteres largos a ser convertida.
 
 *count*<br/>
-O número máximo de bytes para armazenar no *mbstr* buffer, não incluindo o caractere null de terminação ou [TRUNCATE](../../c-runtime-library/truncate.md).
+O número máximo de bytes para armazenar na *mbstr* buffer, não incluindo o caractere nulo de terminação, ou [TRUNCATE](../../c-runtime-library/truncate.md).
 
 *locale*<br/>
 A localidade a ser usada.
@@ -114,36 +114,36 @@ Zero se for bem-sucedido ou um código de erro em caso de falha.
 
 |Condição de erro|Valor de retorno e **errno**|
 |---------------------|------------------------------|
-|*mbstr* é **nulo** e *sizeInBytes* > 0|**EINVAL**|
+|*mbstr* está **nulo** e *sizeInBytes* > 0|**EINVAL**|
 |*wcstr* é **nulo**|**EINVAL**|
-|O buffer de destino é muito pequeno para conter a cadeia de caracteres convertida (a menos que *contagem* é **TRUNCATE**; consulte comentários abaixo)|**ERANGE**|
+|O buffer de destino é muito pequeno para conter a cadeia de caracteres convertida (a menos que *contagem* é **TRUNCATE**; consulte os comentários abaixo)|**ERANGE**|
 
-Se qualquer uma dessas condições ocorrer, a exceção de parâmetro inválido será invocada, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, a função retornará um código de erro e define **errno** conforme indicado na tabela.
+Se qualquer uma dessas condições ocorrer, a exceção de parâmetro inválido será invocada, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retorna um código de erro e definirá **errno** conforme indicado na tabela.
 
 ## <a name="remarks"></a>Comentários
 
-O **wcstombs_s** função converte uma cadeia de caracteres largos apontada pelo *wcstr* em caracteres multibyte armazenados no buffer apontado pelo *mbstr*. A conversão continuará para cada caractere até que uma das seguintes condições seja atendida:
+O **wcstombs_s** função converte uma cadeia de caracteres largos apontada por *wcstr* em caracteres multibyte armazenados no buffer apontado por *mbstr*. A conversão continuará para cada caractere até que uma das seguintes condições seja atendida:
 
 - Um caractere largo nulo é encontrado
 
 - Um caractere largo que não pode ser convertido é encontrado
 
-- O número de bytes armazenados no *mbstr* buffer é igual a *contagem*.
+- O número de bytes armazenados na *mbstr* buffer equals *contagem*.
 
 A cadeia de caracteres de destino sempre é terminada em nulo (mesmo em caso de erro).
 
-Se *contagem* é o valor especial [TRUNCATE](../../c-runtime-library/truncate.md), em seguida, **wcstombs_s** converte máximo da cadeia de caracteres como será se ajustar no buffer de destino, enquanto ainda deixa espaço para um valor nulo terminador. Se a cadeia de caracteres é truncada, o valor de retorno é **STRUNCATE**, e a conversão é considerada bem-sucedido.
+Se *contagem* é o valor especial [TRUNCATE](../../c-runtime-library/truncate.md), em seguida, **wcstombs_s** converterá grande parte da cadeia de caracteres que caberá no buffer de destino ainda deixando espaço para um valor nulo terminador. Se a cadeia de caracteres é truncada, o valor retornado será **STRUNCATE**, e a conversão é considerada bem-sucedida.
 
-Se **wcstombs_s** com êxito converte a cadeia de caracteres de origem, ele coloca o tamanho em bytes da cadeia de caracteres convertida, incluindo o terminador nulo, em  *&#42;pReturnValue* (fornecido  *pReturnValue* não é **nulo**). Isso ocorre mesmo se o *mbstr* argumento é **nulo** e fornece uma maneira de determinar o tamanho do buffer necessário. Observe que, se *mbstr* é **nulo**, *contagem* será ignorado.
+Se **wcstombs_s** converte com êxito a cadeia de caracteres de origem, ele colocará o tamanho em bytes da cadeia de caracteres convertida, incluindo o terminador nulo, em  *&#42;pReturnValue* (fornecido  *pReturnValue* não é **nulo**). Isso ocorre mesmo se o *mbstr* argumento é **nulo** e fornece uma maneira de determinar o tamanho do buffer. Observe que, se *mbstr* é **nulo**, *contagem* será ignorado.
 
-Se **wcstombs_s** encontra um caractere largo não é possível converter um caractere multibyte, ele coloca 0  *&#42;pReturnValue*, define o buffer de destino como uma cadeia de caracteres vazia, define **errno**  para **EILSEQ**e retorna **EILSEQ**.
+Se **wcstombs_s** encontrar um caractere largo que não é possível converter um caractere multibyte, ele colocará 0 em  *&#42;pReturnValue*, definirá o buffer de destino como uma cadeia de caracteres vazia, definirá **errno**  à **EILSEQ**e retorna **EILSEQ**.
 
-Se as sequências apontada pelo *wcstr* e *mbstr* se sobrepõem, o comportamento de **wcstombs_s** é indefinido.
+Se as sequências apontadas por *wcstr* e *mbstr* se sobrepõem, o comportamento do **wcstombs_s** é indefinido.
 
 > [!IMPORTANT]
-> Certifique-se de que *wcstr* e *mbstr* não se sobrepõem e que *contagem* corretamente reflete o número de caracteres largos para converter.
+> Certifique-se de que *wcstr* e *mbstr* não se sobrepõem e que *contagem* reflete corretamente o número de caracteres largos a ser convertido.
 
-**wcstombs_s** usa a localidade atual para qualquer comportamento dependente de localidade; **wcstombs_s_l** é idêntico ao **wcstombs** exceto que ele usa a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**wcstombs_s** usa a localidade atual para qualquer comportamento dependente da localidade. **wcstombs_s_l** é idêntico ao **wcstombs** , exceto que ele usa a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
@@ -208,4 +208,4 @@ Convert wide-character string:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md)<br/>
-[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>
+[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

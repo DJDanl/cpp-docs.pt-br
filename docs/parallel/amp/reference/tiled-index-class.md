@@ -29,15 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd28ab01d0d4180cc518cff230eb7df8261f4940
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4ed19dd2a1b62a3682d96f8c9a596fa6a4b1b377
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692139"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209427"
 ---
 # <a name="tiledindex-class"></a>Classe tiled_index
-Fornece um índice em uma [tiled_extent](tiled-extent-class.md) objeto. Essa classe tem propriedades para acessar elementos relativo à origem do bloco local e relativo à origem global. Para obter mais informações sobre os espaços de lado a lado, consulte [usando blocos](../../../parallel/amp/using-tiles.md).  
+Fornece um índice em uma [tiled_extent](tiled-extent-class.md) objeto. Essa classe possui propriedades para acessar elementos relativa à origem do bloco local e relativo à origem global. Para obter mais informações sobre espaços lado a lado, consulte [blocos usando](../../../parallel/amp/using-tiles.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -63,13 +63,13 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 #### <a name="parameters"></a>Parâmetros  
  `_Dim0`  
- O comprimento da dimensão mais significativo.  
+ O comprimento da dimensão mais significativa.  
   
  `_Dim1`  
- O comprimento da dimensão próximo ao mais significativo.  
+ O comprimento da dimensão Avançar mais significativa.  
   
  `_Dim2`  
- O comprimento da dimensão menos significativo.  
+ O comprimento da dimensão menos significativa.  
   
 ## <a name="members"></a>Membros  
   
@@ -84,7 +84,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[get_tile_extent](#tiled_index__get_tile_extent)|Retorna um [extensão](extent-class.md) objeto que tem os valores de `tiled_index` argumentos de modelo `_Dim0`, `_Dim1`, e `_Dim2`.|  
+|[get_tile_extent](#tiled_index__get_tile_extent)|Retorna um [extent](extent-class.md) objeto que tem os valores da `tiled_index` argumentos do modelo `_Dim0`, `_Dim1`, e `_Dim2`.|  
 
 
   
@@ -92,23 +92,23 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[barreira constante](#tiled_index__barrier)|Armazena um [tile_barrier](tile-barrier-class.md) objeto que representa uma barreira no bloco atual de threads.|  
+|[barreira constante](#tiled_index__barrier)|Armazena uma [tile_barrier](tile-barrier-class.md) objeto que representa uma barreira no quadro atual de threads.|  
 |||  
-|[Constante global](#tiled_index__global)|Armazena um [índice](index-class.md) objeto do índice de classificação 1, 2 ou 3 que representa global em um [grade](http://msdn.microsoft.com/en-us/f7d1b6a6-586c-4345-b09a-bfc26c492cb0) objeto.|  
-|[Constante local](#tiled_index__local)|Armazena um `index` o objeto de índice de classificação 1, 2 ou 3 que representa o relativo no bloco atual de um [tiled_extent](tiled-extent-class.md) objeto.|  
+|[Constante global](#tiled_index__global)|Armazena uma [índice](index-class.md) objeto de índice de classificação 1, 2 ou 3 que representa o modelo global em um [grade](https://msdn.microsoft.com/f7d1b6a6-586c-4345-b09a-bfc26c492cb0) objeto.|  
+|[Constante local](#tiled_index__local)|Armazena uma `index` objeto de índice de classificação 1, 2 ou 3 que representa a relativa no quadro atual de um [tiled_extent](tiled-extent-class.md) objeto.|  
 |[Constante de classificação](#tiled_index__rank)|Armazena a classificação do `tiled_index` objeto.|  
-|[Constante Tile](#tiled_index__tile)|Armazena um `index` objeto de classificação 1, 2 ou 3 que representa as coordenadas do bloco atual de um `tiled_extent` objeto.|  
-|[Constante tile_dim0](#tiled_index__tile_dim0)|Armazena o comprimento da dimensão mais significativo.|  
-|[Constante tile_dim1](#tiled_index__tile_dim1)|Armazena o comprimento da dimensão próximo ao mais significativo.|  
-|[Constante tile_dim2](#tiled_index__tile_dim2)|Armazena o comprimento da dimensão menos significativo.|  
-|[Constante de tile_origin](#tiled_index__tile_origin)|Armazena um `index` objeto de coordenadas de classificação 1, 2 ou 3 que representa global da origem do bloco atual em um `tiled_extent` objeto.|  
+|[Constante Tile](#tiled_index__tile)|Armazena uma `index` objeto de classificação 1, 2 ou 3 que representa as coordenadas do quadro atual de um `tiled_extent` objeto.|  
+|[Constante tile_dim0](#tiled_index__tile_dim0)|Armazena o comprimento da dimensão mais significativa.|  
+|[Constante tile_dim1](#tiled_index__tile_dim1)|Armazena o comprimento da dimensão Avançar mais significativa.|  
+|[Constante tile_dim2](#tiled_index__tile_dim2)|Armazena o comprimento da dimensão menos significativa.|  
+|[tile_origin constante](#tiled_index__tile_origin)|Armazena uma `index` objeto das coordenadas de classificação 1, 2 ou 3 que representa o global da origem do quadro atual em um `tiled_extent` objeto.|  
 
   
 ### <a name="public-data-members"></a>Membros de Dados Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[tile_extent](#tile_extent)|Obtém um [extensão](extent-class.md) objeto que tem os valores a `tiled_index` argumentos de template `tiled_index` argumentos de template `_Dim0`, `_Dim1`, e `_Dim2`.|  
+|[tile_extent](#tile_extent)|Obtém uma [extent](extent-class.md) objeto que tem os valores da `tiled_index` argumentos do modelo `tiled_index` argumentos de modelo `_Dim0`, `_Dim1`, e `_Dim2`.|  
 
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
@@ -117,7 +117,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
  `tiled_index`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** amp.h  
+ **Cabeçalho:** amp. h  
   
  **Namespace:** Simultaneidade  
 
@@ -141,34 +141,34 @@ tiled_index(
   
 #### <a name="parameters"></a>Parâmetros  
  `_Global`  
- Global [índice](index-class.md) do construído `tiled_index`.  
+ Global [índice](index-class.md) de construído `tiled_index`.  
   
  `_Local`  
- Local [índice](index-class.md) do construído `tiled_index`  
+ O local [índice](index-class.md) de construído `tiled_index`  
   
  `_Tile`  
- O bloco [índice](index-class.md) do construído `tiled_index`  
+ O bloco [índice](index-class.md) de construído `tiled_index`  
   
  `_Tile_origin`  
- A origem de bloco [índice](index-class.md) do construído `tiled_index`  
+ A origem do bloco [índice](index-class.md) de construído `tiled_index`  
   
  `_Barrier`  
- O [tile_barrier](tile-barrier-class.md) objeto o construído `tiled_index`.  
+ O [tile_barrier](tile-barrier-class.md) objeto de construído `tiled_index`.  
   
  `_Other`  
- O `tile_index` objeto a ser copiado para o construído `tiled_index`.  
+ O `tile_index` objeto a ser copiado para construído `tiled_index`.  
   
 ## <a name="overloads"></a>Sobrecargas  
   
 |||  
 |-|-|  
 |Nome|Descrição|  
-|`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|Inicializa uma nova instância do `tile_index` classe do índice de bloco em coordenadas global e a posição relativa em bloco em coordenadas de locais. O `_Global` e `_Tile_origin` parâmetros são computados.|  
-|`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Inicializa uma nova instância do `tile_index` classe copiando especificado `tiled_index` objeto.|  
+|`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|Inicializa uma nova instância do `tile_index` classe do índice de bloco em coordenadas globais e a posição relativa no quadro em coordenadas locais. O `_Global` e `_Tile_origin` parâmetros são computados.|  
+|`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Inicializa uma nova instância dos `tile_index` classe copiando especificado `tiled_index` objeto.|  
 
 
 ## <a name="tiled_index__get_tile_extent"></a>  get_tile_extent
-Retorna um [extensão](extent-class.md) objeto que tem os valores de `tiled_index` argumentos de modelo `_Dim0`, `_Dim1`, e `_Dim2`.  
+Retorna um [extent](extent-class.md) objeto que tem os valores da `tiled_index` argumentos do modelo `_Dim0`, `_Dim1`, e `_Dim2`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -177,10 +177,10 @@ extent<rank> get_tile_extent()restrict(amp,cpu);
 ```  
   
 ## <a name="return-value"></a>Valor de retorno  
- Um `extent` objeto que tem os valores de `tiled_index` argumentos de template `_Dim0`, `_Dim1`, e `_Dim2`.  
+ Uma `extent` objeto que tem os valores da `tiled_index` argumentos do modelo `_Dim0`, `_Dim1`, e `_Dim2`.  
 
 ## <a name="tiled_index__barrier"></a>  barrier   
-Armazena um [tile_barrier](tile-barrier-class.md) objeto que representa uma barreira no bloco atual de threads.  
+Armazena uma [tile_barrier](tile-barrier-class.md) objeto que representa uma barreira no quadro atual de threads.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -189,7 +189,7 @@ const tile_barrier barrier;
 ```  
 
 ## <a name="tiled_index__global"></a>  global   
-Armazena um [índice](index-class.md) objeto de classificação 1, 2 ou 3, que representa o índice global de um objeto.  
+Armazena uma [índice](index-class.md) objeto de classificação 1, 2 ou 3 que representa o índice global de um objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -198,7 +198,7 @@ const index<rank> global;
 ```  
   
 ## <a name="tiled_index__local"></a>  local   
-Armazena um [índice](index-class.md) o objeto de índice de classificação 1, 2 ou 3 que representa o relativo no bloco atual de um [tiled_extent](tiled-extent-class.md) objeto.  
+Armazena uma [índice](index-class.md) objeto de índice de classificação 1, 2 ou 3 que representa a relativa no quadro atual de um [tiled_extent](tiled-extent-class.md) objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -206,7 +206,7 @@ Armazena um [índice](index-class.md) o objeto de índice de classificação 1, 
 const index<rank> local;  
 ```  
   
-## <a name="tiled_index__rank"></a>  Classificação   
+## <a name="tiled_index__rank"></a>  classificação   
 Armazena a classificação do `tiled_index` objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -216,7 +216,7 @@ static const int rank = _Rank;
 ```  
 
 ## <a name="tiled_index__tile"></a>  lado a lado   
-Armazena um [índice](index-class.md) objeto de classificação 1, 2 ou 3 que representa as coordenadas do bloco atual de um [tiled_extent](tiled-extent-class.md) objeto.  
+Armazena uma [índice](index-class.md) objeto de classificação 1, 2 ou 3 que representa as coordenadas do quadro atual de um [tiled_extent](tiled-extent-class.md) objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -225,7 +225,7 @@ const index<rank> tile;
 ```  
   
 ## <a name="tiled_index__tile_dim0"></a>  tile_dim0  
-Armazena o comprimento da dimensão mais significativo.  
+Armazena o comprimento da dimensão mais significativa.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -234,7 +234,7 @@ static const int tile_dim0 = _Dim0;
 ```  
    
 ## <a name="tiled_index__tile_dim1"></a>  tile_dim1   
-Armazena o comprimento da dimensão próximo ao mais significativo.  
+Armazena o comprimento da dimensão Avançar mais significativa.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -242,7 +242,7 @@ Armazena o comprimento da dimensão próximo ao mais significativo.
 static const int tile_dim1 = _Dim1;  
 ```  
 ## <a name="tiled_index__tile_dim2"></a>  tile_dim2   
-Armazena o comprimento da dimensão menos significativo.  
+Armazena o comprimento da dimensão menos significativa.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -250,7 +250,7 @@ Armazena o comprimento da dimensão menos significativo.
 static const int tile_dim2 = _Dim2;  
 ```  
 ## <a name="tiled_index__tile_origin"></a>  tile_origin   
-Armazena um [índice](index-class.md) objeto de coordenadas de classificação 1, 2 ou 3 que representa global da origem do bloco atual dentro de um [tiled_extent](tiled-extent-class.md) objeto.  
+Armazena uma [índice](index-class.md) objeto das coordenadas de classificação 1, 2 ou 3 que representa o global da origem do quadro atual dentro de uma [tiled_extent](tiled-extent-class.md) objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -258,7 +258,7 @@ Armazena um [índice](index-class.md) objeto de coordenadas de classificação 1
 const index<rank> tile_origin  
 ```  
 ## <a name="tile_extent"></a>  tile_extent
-  Obtém um [extensão](extent-class.md) objeto que tem os valores a `tiled_index` argumentos de template `tiled_index` argumentos de template `_Dim0`, `_Dim1`, e `_Dim2`.  
+  Obtém uma [extent](extent-class.md) objeto que tem os valores da `tiled_index` argumentos do modelo `tiled_index` argumentos de modelo `_Dim0`, `_Dim1`, e `_Dim2`.  
   
 ## <a name="syntax"></a>Sintaxe  
   

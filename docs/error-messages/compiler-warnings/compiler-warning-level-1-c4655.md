@@ -1,7 +1,7 @@
 ---
-title: Compilador (nível 1) de aviso C4655 | Microsoft Docs
+title: Compilador aviso (nível 1) C4655 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6011bf3a2a3bf1718fc15823f2541f49306857c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9600c0fb9b4f03112ebd9cf430e3f833899c5f3c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283257"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209095"
 ---
-# <a name="compiler-warning-level-1-c4655"></a>Compilador C4655 de aviso (nível 1)
-**'**   
- ***símbolo* ': tipo de variável é novo desde a última compilação, ou é definido de forma diferente em outro lugar**  
-  
- Você alterados ou adicionados a um novo tipo de dados desde a última compilação bem-sucedida. Editar e continuar não dá suporte a alterações em tipos de dados existente.  
-  
- Esse aviso é seguido por um [C1092 de Erro Fatal](../../error-messages/compiler-errors-1/fatal-error-c1092.md). Para obter mais informações, consulte o [suporte para alterações de código](/visualstudio/debugger/supported-code-changes-cpp).  
-  
-### <a name="to-remove-this-warning-without-ending-the-current-debug-session"></a>Para remover este aviso sem encerrar a sessão de depuração atual  
-  
-1.  Altere o tipo de dados para seu estado antes do erro.  
-  
-2.  Do **depurar** menu, escolha **aplicar alterações de código**.  
-  
-### <a name="to-remove-this-warning-without-changing-your-source-code"></a>Para remover este aviso sem alterar seu código-fonte  
-  
-1.  Do **depurar** menu, escolha **parar depuração**.  
-  
-2.  Do **criar** menu, escolha **criar**.
+# <a name="compiler-warning-level-1-c4655"></a>Compilador aviso (nível 1) C4655
+
+> '*símbolo*': tipo de variável é novo desde a última compilação, ou é definido de forma diferente em outro lugar
+
+## <a name="remarks"></a>Comentários
+
+Você alterou ou adicionado um novo tipo de dados desde a última compilação bem-sucedida. Editar e continuar não suporta alterações em tipos de dados existentes.
+
+Esse aviso é seguido por um [Fatal C1092 de erro](../../error-messages/compiler-errors-1/fatal-error-c1092.md). Para obter mais informações, consulte o [Supported Code Changes](/visualstudio/debugger/supported-code-changes-cpp).
+
+### <a name="to-remove-this-warning-without-ending-the-current-debug-session"></a>Para remover este aviso sem encerrar a sessão de depuração atual
+
+1. Altere o tipo de dados para seu estado antes do erro.
+
+2. Dos **Debug** menu, escolha **aplicar alterações de código**.
+
+### <a name="to-remove-this-warning-without-changing-your-source-code"></a>Para remover este aviso sem alterar seu código-fonte
+
+1. Dos **Debug** menu, escolha **parar depuração**.
+
+2. Dos **Build** menu, escolha **Build**.

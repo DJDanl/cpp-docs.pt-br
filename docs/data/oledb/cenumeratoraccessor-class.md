@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8eea759f7f2af32fe688bbc8583eafc1244b20d7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0af12e1cd2f9925d5b7df8ccf16a7838a2e8c78b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572430"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215605"
 ---
 # <a name="cenumeratoraccessor-class"></a>Classe CEnumeratorAccessor
 Usado pelo [CEnumerator](../../data/oledb/cenumerator-class.md) para acessar os dados do conjunto de linhas do enumerador.  
@@ -77,7 +77,7 @@ class CEnumeratorAccessor
 |[m_nType](#ntype)|Uma variável que indica se a linha descreve uma fonte de dados ou um enumerador.|  
 |[m_szDescription](#szdescription)|A descrição da fonte de dados ou enumerador.|  
 |[m_szName](#szname)|O nome da fonte de dados ou enumerador.|  
-|[m_szParseName](#szparsename)|Cadeia de caracteres para passar para [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) para obter um identificador de origem para a fonte de dados ou enumerador.|  
+|[m_szParseName](#szparsename)|Cadeia de caracteres para passar para [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) para obter um identificador de origem para a fonte de dados ou enumerador.|  
   
 ## <a name="remarks"></a>Comentários  
  Esse conjunto de linhas consiste nas fontes de dados e enumeradores visíveis do enumerador atual.  
@@ -131,7 +131,7 @@ WCHAR m_szName[129];
  Ver [ISourcesRowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)) na *referência do programador DB OLE* para obter mais informações.  
 
 ## <a name="szparsename"></a> Cenumeratoraccessor:: M_szparsename
-Cadeia de caracteres para passar para [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) para obter um identificador de origem para a fonte de dados ou enumerador.  
+Cadeia de caracteres para passar para [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) para obter um identificador de origem para a fonte de dados ou enumerador.  
   
 ### <a name="syntax"></a>Sintaxe  
   

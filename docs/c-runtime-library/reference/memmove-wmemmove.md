@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66ea555d08ecb92895e170c3088332a532149ad1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 11f474675d8ba5b370b1f13f048e989d9c283bde
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401107"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204622"
 ---
 # <a name="memmove-wmemmove"></a>memmove, wmemmove
 
@@ -77,11 +77,11 @@ O valor de *dest*.
 
 ## <a name="remarks"></a>Comentários
 
-Cópias *contagem* bytes (**memmove**) ou caracteres (**wmemmove**) de *src* para *dest*. Se algumas regiões da área de origem e do destino se sobrepõem, as duas funções garantem que os bytes de origem originais na região sobreposta são copiados antes de serem substituídos.
+Cópias *contagem* bytes (**memmove**) ou caracteres (**wmemmove**) da *src* para *dest*. Se algumas regiões da área de origem e do destino se sobrepõem, as duas funções garantem que os bytes de origem originais na região sobreposta são copiados antes de serem substituídos.
 
-**Observação de segurança** Certifique-se de que o buffer de destino seja do mesmo tamanho ou maior que o buffer de origem. Para obter mais informações, consulte [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) (Evitando estouros de buffer).
+**Observação de segurança** Certifique-se de que o buffer de destino seja do mesmo tamanho ou maior que o buffer de origem. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer).
 
-O **memmove** e **wmemmove** funções só serão substituídas se a constante **_CRT_SECURE_DEPRECATE_MEMORY** está definido antes da instrução de inclusão para que as funções para ser substituído, como o exemplo a seguir:
+O **memmove** e **wmemmove** funções serão preteridas apenas se a constante **_CRT_SECURE_DEPRECATE_MEMORY** é definido antes da instrução de inclusão para que as funções sejam preteridas, como no exemplo a seguir:
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY

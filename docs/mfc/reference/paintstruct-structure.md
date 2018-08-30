@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75a3db6c6beb18afe2303b464fcab290b2e132fc
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: dddf9c117f2366496609f8bdf4ffc2f069f66ace
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338204"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199567"
 ---
 # <a name="paintstruct-structure"></a>Estrutura PAINTSTRUCT
 O `PAINTSTRUCT` estrutura contém informações que podem ser usadas para pintar a área de cliente de uma janela.  
@@ -44,7 +44,7 @@ typedef struct tagPAINTSTRUCT {
  Identifica o contexto de exibição a ser usado para pintura.  
   
  *fErase*  
- Especifica se o plano de fundo precisa ser redesenhado. Não é 0 se o aplicativo deve redesenhar a tela de fundo. O aplicativo é responsável por desenhar a tela de fundo se uma classe de janela do Windows é criada sem um pincel de plano de fundo (consulte a descrição do `hbrBackground` membro do [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) estrutura no SDK do Windows).  
+ Especifica se o plano de fundo precisa ser redesenhado. Não é 0 se o aplicativo deve redesenhar a tela de fundo. O aplicativo é responsável por desenhar a tela de fundo se uma classe de janela do Windows é criada sem um pincel de plano de fundo (consulte a descrição do `hbrBackground` membro do [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) estrutura no SDK do Windows).  
   
  *rcPaint*  
  Especifica o canto superior esquerdo e inferior direita cantos do retângulo no qual a pintura é solicitada.  

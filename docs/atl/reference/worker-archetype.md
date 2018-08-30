@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75f9e974a2969fa817598556e3e043626a826970
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: fd9e665a83db3b824e03eb960baf54f296d15d4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881299"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204848"
 ---
 # <a name="worker-archetype"></a>Arquétipo de trabalhador
 As classes que estão em conformidade com o *trabalhador* arquétipo fornecer o código para processar itens de trabalho em fila em um pool de threads.  
@@ -32,7 +32,7 @@ As classes que estão em conformidade com o *trabalhador* arquétipo fornecer o 
 |------------|-----------------|  
 |[Initialize](#initialize)|Chamado para inicializar o objeto de trabalho antes de todas as solicitações são passadas para [Execute](#execute).|  
 |[Executar](#execute)|Chamado para processar um item de trabalho.|  
-|[Encerrar](#terminate)|Chamado para inicializar o objeto de trabalho depois que todas as solicitações foram passadas ao [Execute](#execute).|  
+|[Terminar](#terminate)|Chamado para inicializar o objeto de trabalho depois que todas as solicitações foram passadas ao [Execute](#execute).|  
   
 |DefTipo|Descrição|  
 |-------------|-----------------|  
@@ -82,7 +82,7 @@ void Execute(
  Um parâmetro personalizado compreendido pela classe de trabalho. Também é passado para `WorkerArchetype::Initialize` e `Terminate`.  
   
  *pOverlapped*  
- Um ponteiro para o [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) estrutura usada para criar a fila em que o trabalho itens entraram na fila.  
+ Um ponteiro para o [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-_overlapped) estrutura usada para criar a fila em que o trabalho itens entraram na fila.  
   
 ## <a name="initialize"></a> WorkerArchetype::Initialize
 Chamado para inicializar o objeto de trabalho antes de todas as solicitações são passadas para `WorkerArchetype::Execute`.  

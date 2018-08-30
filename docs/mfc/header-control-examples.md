@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20cdf22a91f7c144c2bbdb96d6789ca45778994
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0b48dc1aa1f2e966836bba8d04227f7c74d5abd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342755"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208108"
 ---
 # <a name="header-control-examples"></a>Exemplos de controle de cabeçalho
-Para obter exemplos de controles de cabeçalho, consulte o [controles de cabeçalho](http://msdn.microsoft.com/library/windows/desktop/bb775238) no SDK do Windows.  
+Para obter exemplos de controles de cabeçalho, consulte o [controles de cabeçalho](/windows/desktop/Controls/header-controls) no SDK do Windows.  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando CHeaderCtrl](../mfc/using-cheaderctrl.md)   

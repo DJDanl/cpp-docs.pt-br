@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08779311cc6a2ff0df622d69cf94ced07e67e9e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 31d3f647d2d72cf96c9b935c33376aae698464c8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412407"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207570"
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
 
@@ -60,9 +60,9 @@ Será diferente de zero se a função obtiver êxito, zero se ela falhar.
 
 ## <a name="remarks"></a>Comentários
 
-O **resetstkoflw** função recupera de uma condição de estouro de pilha, permitindo que um programa continuar, em vez de falha com um erro de exceção fatal. Se o **resetstkoflw** função não for chamada, não existem páginas proteção após a exceção anterior. Na próxima vez que houver um excedente de pilha, não haverá qualquer exceção e o processo terminará sem aviso.
+O **resetstkoflw** função recupera-se de uma condição de estouro de pilha, permitindo que um programa continue em vez de falhar com um erro de exceção fatal. Se o **resetstkoflw** função não for chamada, não existem páginas guard após a exceção anterior. Na próxima vez que houver um excedente de pilha, não haverá qualquer exceção e o processo terminará sem aviso.
 
-Se um thread em um aplicativo causa uma exceção **EXCEPTION_STACK_OVERFLOW**, o thread deixou sua pilha em um estado danificado. Isso é diferente de outras exceções como **EXCEPTION_ACCESS_VIOLATION** ou **EXCEPTION_INT_DIVIDE_BY_ZERO**, nas quais a pilha não está danificada. A pilha é definida para um valor arbitrariamente pequeno quando o programa é carregado pela primeira vez. Em seguida, a pilha aumenta conforme a demanda para atender às necessidades do thread. Isso é implementado colocando uma página com acesso PAGE_GUARD no final da pilha atual. Para obter mais informações, consulte [Criando páginas de proteção](http://msdn.microsoft.com/library/windows/desktop/aa366549).
+Se um thread em um aplicativo causa uma exceção **EXCEPTION_STACK_OVERFLOW**, o thread deixou sua pilha em um estado danificado. Isso é diferente de outras exceções como **EXCEPTION_ACCESS_VIOLATION** ou **EXCEPTION_INT_DIVIDE_BY_ZERO**, nas quais a pilha não está danificada. A pilha é definida para um valor arbitrariamente pequeno quando o programa é carregado pela primeira vez. Em seguida, a pilha aumenta conforme a demanda para atender às necessidades do thread. Isso é implementado colocando uma página com acesso PAGE_GUARD no final da pilha atual. Para obter mais informações, consulte [Criando páginas de proteção](/windows/desktop/Memory/creating-guard-pages).
 
 Quando o código faz com que o ponteiro de pilha aponte para um endereço nessa página, ocorre uma exceção e o sistema executa as três ações a seguir:
 
@@ -84,7 +84,7 @@ Quando esse tamanho de pilha máximo for excedido, o sistema executa as três a�
 
 Observe que, nesse ponto, a pilha não tem uma página de proteção. Na próxima vez que o programa aumentar totalmente a pilha até o fim, onde deveria haver uma página de proteção, o programa grava além do fim da pilha e causa uma violação de acesso.
 
-Chamar **resetstkoflw** para restaurar a página de proteção sempre que a recuperação é feita após uma exceção de estouro de pilha. Essa função pode ser chamada de dentro do corpo principal de um **EXCEPT** bloco ou fora uma **EXCEPT** bloco. No entanto, há algumas restrições sobre quando isso deve ser usado. **resetstkoflw** nunca deve ser chamado do:
+Chame **resetstkoflw** para restaurar a página de proteção sempre que a recuperação é feita após uma exceção de estouro de pilha. Essa função pode ser chamada de dentro do corpo principal de um **EXCEPT** bloco ou fora uma **EXCEPT** bloco. No entanto, há algumas restrições sobre quando isso deve ser usado. **resetstkoflw** nunca deve ser chamado de:
 
 - Uma expressão de filtro.
 
@@ -98,13 +98,13 @@ Chamar **resetstkoflw** para restaurar a página de proteção sempre que a recu
 
 Nesses pontos, a pilha ainda não está suficientemente organizada.
 
-Exceções de estouro de pilha são geradas como exceções estruturadas, não as exceções do C++, portanto **resetstkoflw** não é útil em um comum **catch** bloquear porque ele não irá capturar uma exceção de estouro de pilha. No entanto, se [_set_se_translator](set-se-translator.md) for usado para implementar um conversor de exceção estruturada que gera exceções C++ (como no segundo exemplo), uma exceção de excedente de pilha resulta em uma exceção C++ que pode ser manipulada por um bloco catch de C++.
+Exceções de estouro de pilha são geradas como exceções estruturadas, não exceções C++, portanto **resetstkoflw** não é útil em um comum **catch** bloquear, pois ele não vai capturar uma exceção de estouro de pilha. No entanto, se [_set_se_translator](set-se-translator.md) for usado para implementar um conversor de exceção estruturada que gera exceções C++ (como no segundo exemplo), uma exceção de excedente de pilha resulta em uma exceção C++ que pode ser manipulada por um bloco catch de C++.
 
 Não é seguro chamar **_resetstkoflw** em um bloco catch de C++ que é alcançado de uma exceção gerada pela função do conversor de exceção estruturada. Nesse caso, o espaço de pilha não é liberado e o ponteiro de pilha não é redefinido até estar fora do bloco catch, embora os destruidores tenham sido chamados para todos os objetos destrutíveis antes do bloco catch. Essa função não deve ser chamada até o espaço de pilha ser liberado e o ponteiro de pilha ser redefinido. Portanto, ele deve ser chamado somente depois de sair do bloco catch. Como o menor espaço na pilha possível deve ser usado no bloco catch devido ao excedente de pilha que ocorre no bloco catch que está tentando se recuperar de um excedente de pilha anterior não é recuperável e pode fazer com que o programa pare de responder enquanto o excedente no bloco catch dispara uma exceção que é em si manipulada pelo mesmo bloco catch.
 
 Há situações em que **_resetstkoflw** pode falhar, mesmo se usado em um local correto, como em um bloco **__except**. Se, mesmo depois do desenrolamento da pilha, ainda não houver espaço de pilha suficiente para executar **_resetstkoflw** sem gravar na última página da pilha, **_resetstkoflw** não conseguirá redefinir a última página da pilha como a página de proteção e retornará 0, indicando falha. Portanto, o uso seguro desta função deve incluir a verificação do valor retornado em vez de supor que é seguro usar a pilha.
 
-Tratamento estruturado de exceções não irá capturar um **STATUS_STACK_OVERFLOW** exceção quando o aplicativo é compilado com **/clr** (consulte [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md)).
+Manipulação de exceção estruturada não irá capturar uma **STATUS_STACK_OVERFLOW** exceção quando o aplicativo é compilado com **/clr** (consulte [/clr (compilação Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -118,7 +118,7 @@ Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra o uso recomendado o **resetstkoflw** função.
+O exemplo a seguir mostra o uso recomendado de **resetstkoflw** função.
 
 ```C
 // crt_resetstkoflw.c
@@ -222,7 +222,7 @@ resetting stack overflow
 
 ### <a name="description"></a>Descrição
 
-O exemplo a seguir mostra o uso recomendado de **resetstkoflw** em um programa onde estruturado de exceções são convertidas em exceções do C++.
+O exemplo a seguir mostra o uso recomendado de **resetstkoflw** em um programa em que exceções estruturadas são convertidas em exceções do C++.
 
 ### <a name="code"></a>Código
 

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2625316aa731e658d9d45e495809d2402a3cb4c5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 12b6d0b0ccc21f4ab1f8b3d7116f098a532d0418
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849744"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216255"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>Classe CMFCToolBarFontComboBox
 Um botão de barra de ferramentas que contém um controle de caixa de combinação que permite que o usuário selecione uma fonte de uma lista de fontes do sistema.  
@@ -70,7 +70,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
  Para sincronizar a fonte do documento com a fonte selecionada na caixa de combinação, use o [CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc) método para recuperar os atributos da fonte selecionada e usar esses atributos para criar um [ Classe CFont](../../mfc/reference/cfont-class.md) objeto.  
   
- O botão de caixa de combinação de fonte chama a função Win32 [EnumFontFamiliesEx](http://msdn.microsoft.com/library/windows/desktop/dd162620) para determinar as fontes de tela e de impressora disponíveis no sistema.  
+ O botão de caixa de combinação de fonte chama a função Win32 [EnumFontFamiliesEx](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesexa) para determinar as fontes de tela e de impressora disponíveis no sistema.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -126,7 +126,7 @@ CMFCToolBarFontComboBox();
  TRUETYPE_FONTTYPE  
   
  [in] *nCharSet*  
- Se definido como DEFAULT_CHARSET, a caixa de combinação contém as fontes de tudo com nome exclusivo em todos os conjuntos de caracteres. (Se houver duas fontes com o mesmo nome, a caixa de combinação contém um deles.) Se definido como um valor de conjunto de caracteres válida, a caixa de combinação contém apenas as fontes no conjunto de caracteres especificado. Ver [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) para obter uma lista de caracteres possíveis define.  
+ Se definido como DEFAULT_CHARSET, a caixa de combinação contém as fontes de tudo com nome exclusivo em todos os conjuntos de caracteres. (Se houver duas fontes com o mesmo nome, a caixa de combinação contém um deles.) Se definido como um valor de conjunto de caracteres válida, a caixa de combinação contém apenas as fontes no conjunto de caracteres especificado. Ver [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) para obter uma lista de caracteres possíveis define.  
   
  [in] *dwStyle*  
  O estilo da caixa de combinação. (consulte [estilos de caixa de combinação](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  

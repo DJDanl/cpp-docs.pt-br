@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3657e7076bf67a5a3870d7d127cc150f976ecde
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6fcfffcd9508876399b30238cac0b4f65c92c733
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883652"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206495"
 ---
 # <a name="object-status-macros"></a>Macros de Status do objeto
 Essa macro define sinalizadores que pertencem aos controles ActiveX.  
@@ -43,7 +43,7 @@ DECLARE_OLEMISC_STATUS( miscstatus )
  Sinalizadores OLEMISC tudo aplicáveis.  
   
 ### <a name="remarks"></a>Comentários  
- Essa macro é usada para definir os sinalizadores OLEMISC para um controle ActiveX. Consulte a [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) para obter mais detalhes.  
+ Essa macro é usada para definir os sinalizadores OLEMISC para um controle ActiveX. Consulte a [IOleObject::GetMiscStatus](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) para obter mais detalhes.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing#124](../../atl/codesnippet/cpp/object-status-macros_1.h)]  

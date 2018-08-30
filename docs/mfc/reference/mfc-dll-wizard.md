@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c58362b46050a7e2a504a4cd78085975e1c5e1a6
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 9b352d3f99ccee103f7f08e54fb96634bad4a32a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39025764"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216481"
 ---
 # <a name="mfc-dll-wizard"></a>Assistente de DLL MFC
 Quando você usa o Assistente de DLL do MFC para criar um projeto de DLL do MFC, você obtém um aplicativo de início do trabalho com uma funcionalidade interna que, quando compilado, irá implementar os recursos básicos de um [DLL](../../build/dlls-in-visual-cpp.md). O programa de início do MFC inclui arquivos de origem (. cpp) C++, arquivos de recurso (. rc) e um arquivo de projeto (. vcxproj). O código gerado nesses arquivos starter baseia-se no MFC. Para obter mais informações, consulte os detalhes do arquivo readme. txt que é gerado para o seu projeto no Visual Studio, e [Classes e funções geradas pelo Assistente de DLL do MFC](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  
@@ -50,7 +50,7 @@ Quando você usa o Assistente de DLL do MFC para criar um projeto de DLL do MFC,
  [Criando e gerenciando projetos do Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   
  [Páginas de propriedades](../../ide/property-pages-visual-cpp.md)   
  [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md)   
- [Implantação de aplicativos](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)   
+ [Implantação de aplicativos](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)   
  [Classe MFC](../../mfc/reference/adding-an-mfc-class.md)   
  [Adicionando uma função de membro](../../ide/adding-a-member-function-visual-cpp.md)   
  [Implementando uma interface](../../ide/implementing-an-interface-visual-cpp.md)   

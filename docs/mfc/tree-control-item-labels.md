@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fc207dcff5002262c345b106be99a775ed626b9
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: e016093e2dcde68fcc01691c4877841d648321fb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953713"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207458"
 ---
 # <a name="tree-control-item-labels"></a>Rótulos do item de controle de árvore
-Você normalmente especifica o texto do rótulo de um item ao adicionar o item ao controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). O `InsertItem` função de membro pode passar um [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) estrutura que define as propriedades do item, incluindo uma cadeia de caracteres que contém o texto do rótulo. `InsertItem` tem várias sobrecargas que podem ser chamadas com várias combinações de parâmetros.  
+Você normalmente especifica o texto do rótulo de um item ao adicionar o item ao controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). O `InsertItem` função de membro pode passar uma [TVITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtvitema) estrutura que define as propriedades do item, incluindo uma cadeia de caracteres que contém o texto do rótulo. `InsertItem` tem várias sobrecargas que podem ser chamadas com várias combinações de parâmetros.  
   
- Um controle de árvore aloca memória para armazenar cada item; o texto dos rótulos de item ocupa uma parte significativa da memória. Se seu aplicativo mantém uma cópia das cadeias de caracteres no controle de árvore, você pode diminuir os requisitos de memória do controle, especificando o **LPSTR_TEXTCALLBACK** valor o *pszText* membro `TV_ITEM` ou *lpszItem* parâmetro em vez de passar cadeias de caracteres reais para o controle de árvore. Usando **LPSTR_TEXTCALLBACK** faz com que o controle de árvore recuperar o texto do rótulo de um item do aplicativo sempre que o item precisa ser redesenhada. Para recuperar o texto, o controle de árvore envia um [TVN_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773518) mensagem de notificação, que inclui o endereço de um [NMTVDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773418) estrutura. Você deve responder ao definir os membros apropriados da estrutura incluído.  
+ Um controle de árvore aloca memória para armazenar cada item; o texto dos rótulos de item ocupa uma parte significativa da memória. Se seu aplicativo mantém uma cópia das cadeias de caracteres no controle de árvore, você pode diminuir os requisitos de memória do controle especificando o **LPSTR_TEXTCALLBACK** valor na *pszText* membro `TV_ITEM` ou o *lpszItem* parâmetro em vez de passar cadeias de caracteres reais para o controle de árvore. Usando o **LPSTR_TEXTCALLBACK** faz com que o controle de árvore recuperar o texto do rótulo de um item do aplicativo sempre que o item precisa ser redesenhado. Para recuperar o texto, o controle de árvore envia um [TVN_GETDISPINFO](/windows/desktop/Controls/tvn-getdispinfo) mensagem de notificação, que inclui o endereço de uma [NMTVDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtvdispinfoa) estrutura. Você deve responder ao definir os membros adequados da estrutura incluído.  
   
  Um controle de árvore usa a memória alocada do heap do processo que cria o controle de árvore. O número máximo de itens em um controle de árvore é com base na quantidade de memória disponível no heap. Cada item tem 64 bytes.  
   

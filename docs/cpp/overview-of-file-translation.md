@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eec47e9810e0cc846cc351330512256a32f95aac
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e6ef9a28af02cbb22eb4e3d2ceaad206a94d6309
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406839"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199386"
 ---
 # <a name="overview-of-file-translation"></a>Visão geral da translação de arquivo
 Os programas C++, como os programas C, consistem em um ou mais arquivos. Cada um desses arquivos é convertido na seguinte ordem conceitual (a ordem real segue a regra “como está”: a conversão deve ocorrer como se estas etapas tivessem sido cumpridas):  
@@ -54,7 +54,7 @@ Os programas C++, como os programas C, consistem em um ou mais arquivos. Cada um
   
 - Uma macro predefinida, `__cplusplus`, é definido somente para C++. Ver [Macros predefinidas](../preprocessor/predefined-macros.md) na *referência de pré-processador* para obter mais informações.  
   
-- O pré-processador C não reconhece os operadores C++: **.\*** , **-> \***, e `::`. Ver [operadores](../cpp/cpp-built-in-operators-precedence-and-associativity.md) e [expressões](../cpp/expressions-cpp.md), para obter mais informações sobre operadores.  
+- O pré-processador C não reconhece os operadores C++: **.** <strong>\*</strong>, **->** <strong>\*</strong>, e **::**. Ver [operadores](../cpp/cpp-built-in-operators-precedence-and-associativity.md) e [expressões](../cpp/expressions-cpp.md), para obter mais informações sobre operadores.  
   
 ## <a name="see-also"></a>Consulte também  
  [Convenções lexicais](../cpp/lexical-conventions.md)

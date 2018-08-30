@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87e2e48a7d923811e2c696f0ec8bee72e8327a13
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 9458e427c1954a351ffcedfa2fce0a39634d8369
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464396"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216359"
 ---
 # <a name="statements-c"></a>Instruções (C++)
 As instruções em C++ são os elementos do programa que controlam como e em que ordem os objetos são manipulados. Esta seção inclui:  
@@ -42,7 +42,7 @@ As instruções em C++ são os elementos do programa que controlam como e em que
   
     -   [Instruções de salto](../cpp/jump-statements-cpp.md). Estas instruções transferem o controle imediatamente para outro local da função ou retornam o controle à função.  
   
-    -   [Instruções de declaração](http://msdn.microsoft.com/14538558-356f-450e-9e1e-3cd62ba952b9). As declarações introduzem um nome em um programa. ([Declarações e definições](declarations-and-definitions-cpp.md) fornece informações mais detalhadas sobre declarações.)  
+    -   [Instruções de declaração](https://msdn.microsoft.com/14538558-356f-450e-9e1e-3cd62ba952b9). As declarações introduzem um nome em um programa. ([Declarações e definições](declarations-and-definitions-cpp.md) fornece informações mais detalhadas sobre declarações.)  
   
  Para obter informações sobre instruções de tratamento de exceções, consulte [tratamento de exceções](../cpp/exception-handling-in-visual-cpp.md).  
   

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9641545721776530ccf09a5a1ea99485f510265
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 49973d203670eaa2aa0988d9de04784d13eaec09
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571831"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196681"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Vincular um executável a uma DLL  
   
@@ -76,7 +76,7 @@ Aqui estão dois riscos da vinculação explícita para estar atento:
   
 -   Se a DLL tem uma `DllMain` função de ponto de entrada, o sistema operacional chama a função no contexto do thread que chamou `LoadLibrary`. A função de ponto de entrada não é chamada se a DLL já está anexada ao processo devido a uma chamada anterior a `LoadLibrary` que não teve nenhuma chamada correspondente para o `FreeLibrary` função. A vinculação explícita pode causar problemas se a DLL usa um `DllMain` função para executar a inicialização para cada thread de um processo porque threads que já existem quando `LoadLibrary` (ou `AfxLoadLibrary`) é chamado não são inicializados.  
   
--   Se uma DLL declara os dados de extensão estático como `__declspec(thread)`, ele pode causar uma falha de proteção se explicitamente vinculado. Depois que a DLL é carregada por uma chamada para `LoadLibrary`, ele faz com que uma falha de proteção sempre que o código faz referência a esses dados. (Incluem itens estáticos globais e locais de dados de extensão estático.) Portanto, quando você cria uma DLL, você deve evitar o uso de armazenamento local de thread ou informar os usuários DLL sobre as possíveis armadilhas de carregamento dinâmico de sua DLL. Para obter mais informações, consulte [usando o armazenamento local de thread em uma biblioteca de vínculo dinâmico (Windows SDK)](http://msdn.microsoft.com/library/windows/desktop/ms686997).  
+-   Se uma DLL declara os dados de extensão estático como `__declspec(thread)`, ele pode causar uma falha de proteção se explicitamente vinculado. Depois que a DLL é carregada por uma chamada para `LoadLibrary`, ele faz com que uma falha de proteção sempre que o código faz referência a esses dados. (Incluem itens estáticos globais e locais de dados de extensão estático.) Portanto, quando você cria uma DLL, você deve evitar o uso de armazenamento local de thread ou informar os usuários DLL sobre as possíveis armadilhas de carregamento dinâmico de sua DLL. Para obter mais informações, consulte [usando o armazenamento local de thread em uma biblioteca de vínculo dinâmico (Windows SDK)](https://msdn.microsoft.com/library/windows/desktop/ms686997).  
   
 <a name="linking-implicitly"></a>  
   

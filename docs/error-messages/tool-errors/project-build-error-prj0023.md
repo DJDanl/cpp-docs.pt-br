@@ -1,7 +1,7 @@
 ---
-title: Erro de Build prj0023 no projeto | Microsoft Docs
+title: Erro de Build prj0023 do projeto | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7351d140cefe720e6bde123e00a950a34bd3404b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 47b31aa1acba3d13bfeb52e52233f90e1c12cbda
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321880"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213880"
 ---
 # <a name="project-build-error-prj0023"></a>Erro de Build PRJ0023 no Projeto
-'Da ferramenta', uma propriedade desconhecida contém nome de arquivo inválido 'file'.  
-  
- O nome do arquivo, ***arquivo***, especificado para a ferramenta ***ferramenta***, era inválido.  
-  
- Você pode ter usado uma macro desconhecida ou inválida.  
-  
- Consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md) para obter informações sobre como acessar as propriedades do projeto.
+
+> Ferramenta '*ferramenta*', a propriedade desconhecida contém o nome de arquivo inválido'*arquivo*'.
+
+O nome do arquivo *arquivo* especificadas para a ferramenta *ferramenta* era inválido.
+
+Você pode ter usado uma macro desconhecida ou inválida.
+
+Ver [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md) para obter informações sobre como acessar as propriedades do projeto.

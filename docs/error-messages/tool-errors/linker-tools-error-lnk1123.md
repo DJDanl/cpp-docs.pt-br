@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de vinculador LNK1123 erro | Microsoft Docs
+title: Erro das LNK1123 das ferramentas de vinculador | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.technology:
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b12a65e61c5677943b4ea1b4b85c12cfc796af45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 482d140407a22d1ea63db07101f76f028877bdc1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300271"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206782"
 ---
 # <a name="linker-tools-error-lnk1123"></a>Erro das Ferramentas de Vinculador LNK1123
 
@@ -35,13 +35,13 @@ Os arquivos de entrada devem ter o formato COFF (Common Object File Format). Se 
 
 - Aplica todos os service packs e atualizações para sua versão do Visual Studio. Isso é especialmente importante para o Visual Studio 2010.
 
-- Tente compilar com a vinculação incremental desabilitada. Na barra de menus, escolha **Projeto**, **Propriedades**. No **páginas de propriedade** caixa de diálogo caixa, expanda **propriedades de configuração**, **vinculador**. Alterar o valor de **habilitar vínculo Incremental** para **não**.
+- Tente compilar com a vinculação incremental desabilitada. Na barra de menus, escolha **Projeto**, **Propriedades**. No **páginas de propriedades** diálogo caixa, expanda **propriedades de configuração**, **vinculador**. Altere o valor de **habilitar vinculação Incremental** à **não**.
 
 - Verifique se a versão do CVTRES.EXE encontrada primeiro na variável de ambiente PATH combina com a versão das ferramentas de compilação ou com a versão do Conjunto de Ferramentas de Plataforma, usado no projeto.
 
-- Tente desativar a opção de inserir manifesto. Na barra de menus, escolha **Projeto**, **Propriedades**. No **páginas de propriedade** caixa de diálogo caixa, expanda **propriedades de configuração**, **ferramenta de manifesto**, **de entrada e saída**. Alterar o valor de **Inserir manifesto** para **não**.
+- Tente desativar a opção de inserção de manifesto. Na barra de menus, escolha **Projeto**, **Propriedades**. No **páginas de propriedades** diálogo caixa, expanda **propriedades de configuração**, **ferramenta de manifesto**, **de entrada e saída**. Altere o valor de **Inserir manifesto** à **não**.
 
-- Verifique se o tipo de arquivo é válido. Por exemplo, verifique se um objeto OMF é de 32 bits e não de 16 bits. Para obter mais informações, consulte [. Arquivos obj como entrada de vinculador](../../build/reference/dot-obj-files-as-linker-input.md) e [formato PE](https://msdn.microsoft.com/library/windows/desktop/ms680547).
+- Verifique se o tipo de arquivo é válido. Por exemplo, verifique se um objeto OMF é de 32 bits e não de 16 bits. Para obter mais informações, consulte [. Arquivos obj como entrada de vinculador](../../build/reference/dot-obj-files-as-linker-input.md) e [formato PE](/windows/desktop/Debug/pe-format).
 
 - Verifique se o arquivo não está corrompido. Recompile-o, se necessário.
 

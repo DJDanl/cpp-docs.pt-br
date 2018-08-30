@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7e77238478e32fd5b45f96cdd8a86c2205eef7
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 94468f2499a349847f62ed65a03e88cf776536ce
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882839"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207190"
 ---
 # <a name="ccontainedwindowt-class"></a>Classe CContainedWindowT
 Essa classe implementa uma janela contida dentro de outro objeto.  
@@ -115,7 +115,7 @@ class CContainedWindowT : public TBase
 |Criando controles|[Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md)|  
 |Usando o windows em ATL|[Classes de janela da ATL](../../atl/atl-window-classes.md)|  
 |ATL Project Wizard|[Criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)|  
-|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595) e tópicos subsequentes no SDK do Windows|  
+|Windows|[Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595) e tópicos subsequentes no SDK do Windows|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `TBase`  
@@ -214,22 +214,22 @@ HWND Create(
  [in] O identificador para a janela pai ou proprietária.  
   
  *Rect*  
- [in] Um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) especificando a posição da janela de estrutura. O `RECT` pode ser passada por um ponteiro ou referência.  
+ [in] Um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) especificando a posição da janela de estrutura. O `RECT` pode ser passada por um ponteiro ou referência.  
   
  *szWindowName*  
  [in] Especifica o nome da janela. O valor padrão é NULL.  
   
  *dwStyle*  
- [in] O estilo da janela. O valor padrão é WS_CHILD &#124; WS_VISIBLE. Para obter uma lista de valores possíveis, consulte [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) no SDK do Windows.  
+ [in] O estilo da janela. O valor padrão é WS_CHILD &#124; WS_VISIBLE. Para obter uma lista de valores possíveis, consulte [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) no SDK do Windows.  
   
  *dwExStyle*  
- [in] O estilo de janela estendidos. O valor padrão é 0, indicando que nenhum estilo estendido. Para obter uma lista de valores possíveis, consulte [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
+ [in] O estilo de janela estendidos. O valor padrão é 0, indicando que nenhum estilo estendido. Para obter uma lista de valores possíveis, consulte [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
   
  *MenuOrID*  
  [in] Para uma janela filho, o identificador de janela. Para uma janela de nível superior, um identificador de menu da janela. O valor padrão é **0U**.  
   
  *lpCreateParam*  
- [in] Um ponteiro para dados de criação da janela. Para obter uma descrição completa, consulte a descrição para o parâmetro final [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680).  
+ [in] Um ponteiro para dados de criação da janela. Para obter uma descrição completa, consulte a descrição para o parâmetro final [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680).  
   
 ### <a name="return-value"></a>Valor de retorno  
  Se for bem-sucedido, o identificador para a janela recém-criado; Caso contrário, nulo.  
@@ -268,7 +268,7 @@ LRESULT DefWindowProc(
  O resultado do processamento da mensagem.  
   
 ### <a name="remarks"></a>Comentários  
- Por padrão, `DefWindowProc` chamadas a [CallWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633571) para enviar as informações de mensagem para o procedimento de janela especificado na função do Win32 [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
+ Por padrão, `DefWindowProc` chamadas a [CallWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633571) para enviar as informações de mensagem para o procedimento de janela especificado na função do Win32 [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).  
   
 ##  <a name="getcurrentmessage"></a>  CContainedWindowT::GetCurrentMessage  
  Retorna a mensagem atual (`m_pCurrentMsg`).  

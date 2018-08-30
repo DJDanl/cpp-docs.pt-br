@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 661735e91084bad45553de71e80a599afd674028
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: f07efa6ebbea70f83803238bf73e2d3e806ea457
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336820"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204563"
 ---
 # <a name="persistence-of-ole-controls"></a>Persistência de controles OLE
 Um recurso de controles OLE é propriedade persistência (serialização ou), que permite que o controle OLE ler ou gravar valores de propriedade de e para um arquivo ou fluxo. Um aplicativo de contêiner pode usar a serialização para armazenar valores de propriedade do controle, mesmo depois que o aplicativo foi destruído o controle. Os valores de propriedade do controle OLE, em seguida, podem ser lidos do arquivo ou fluxo quando uma nova instância do controle é criado em um momento posterior.  
@@ -93,7 +93,7 @@ hBlobDefault
   
 -   Um bloco de memória que contém os dados binários reais.  
   
- Observe que `PX_Blob` alocará memória, usando o Windows [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) API, ao carregar as propriedades de tipo de BLOB. Você é responsável por liberar essa memória. Portanto, o destruidor de seu controle deve chamar [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) em qualquer propriedade de tipo de BLOB alças para liberar até toda a memória alocada para o seu controle.  
+ Observe que `PX_Blob` alocará memória, usando o Windows [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) API, ao carregar as propriedades de tipo de BLOB. Você é responsável por liberar essa memória. Portanto, o destruidor de seu controle deve chamar [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) em qualquer propriedade de tipo de BLOB alças para liberar até toda a memória alocada para o seu controle.  
   
 ##  <a name="px_bool"></a>  PX_Bool  
  Chame essa função dentro do seu controle `DoPropExchange` a função de membro para serializar ou inicializar uma propriedade do tipo BOOL.  

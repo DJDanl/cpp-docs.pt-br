@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ace66d9528534b382eda02160372bfc56aced0f5
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 4b505b9f6164566a1e196c601bdfe3eab4b4a991
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882989"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208576"
 ---
 # <a name="ccomcontrolbase-class"></a>Classe CComControlBase
 Essa classe fornece métodos para criar e gerenciar os controles ATL.  
@@ -198,11 +198,11 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::m_rcPos](#m_rcpos)|A posição em pixels do controle, expressada em coordenadas de contêiner.|  
 |[CComControlBase::m_sizeExtent](#m_sizeextent)|A extensão do controle em unidades HIMETRIC (cada unidade 0,01 milímetros) para um determinado vídeo.|  
 |[CComControlBase::m_sizeNatural](#m_sizenatural)|O tamanho físico do controle em unidades HIMETRIC (cada unidade 0,01 milímetros).|  
-|[CComControlBase::m_spAdviseSink](#m_spadvisesink)|Um ponteiro direto para a conexão de consultoria no contêiner (o contêiner [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)).|  
+|[CComControlBase::m_spAdviseSink](#m_spadvisesink)|Um ponteiro direto para a conexão de consultoria no contêiner (o contêiner [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink)).|  
 |[CComControlBase::m_spAmbientDispatch](#m_spambientdispatch)|Um `CComDispatchDriver` objeto que permite recuperar e definir as propriedades do contêiner por meio de um `IDispatch` ponteiro.|  
 |[CComControlBase::m_spClientSite](#m_spclientsite)|Um ponteiro para o site do cliente do controle dentro do contêiner.|  
 |[CComControlBase::m_spDataAdviseHolder](#m_spdataadviseholder)|Fornece um padrão significa que manter as conexões de consultoria entre objetos de dados e Coletores de aviso.|  
-|[CComControlBase::m_spInPlaceSite](#m_spinplacesite)|Um ponteiro para o contêiner [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), ou [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) ponteiro de interface.|  
+|[CComControlBase::m_spInPlaceSite](#m_spinplacesite)|Um ponteiro para o contêiner [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex), ou [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless) ponteiro de interface.|  
 |[CComControlBase::m_spOleAdviseHolder](#m_spoleadviseholder)|Fornece uma implementação padrão de uma maneira de manter conexões de consultoria.|  
   
 ## <a name="remarks"></a>Comentários  
@@ -245,7 +245,7 @@ CComControlBase(HWND& h);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Se o controle estiver em janelas, `~CComControlBase` destrói chamando [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682).  
+ Se o controle estiver em janelas, `~CComControlBase` destrói chamando [DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682).  
   
 ##  <a name="controlqueryinterface"></a>  CComControlBase::ControlQueryInterface  
  Recupera um ponteiro para a interface solicitada.  
@@ -447,7 +447,7 @@ HRESULT GetAmbientFont(IFont** ppFont);
   
 ### <a name="parameters"></a>Parâmetros  
  *ppFont*  
- Um ponteiro para o contêiner do ambiente [IFont](http://msdn.microsoft.com/library/windows/desktop/ms680673) interface.  
+ Um ponteiro para o contêiner do ambiente [IFont](/windows/desktop/api/ocidl/nn-ocidl-ifont) interface.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um dos valores HRESULT padrão.  
@@ -464,7 +464,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
   
 ### <a name="parameters"></a>Parâmetros  
  *ppFont*  
- Um ponteiro para o contêiner do ambiente [IFontDisp](http://msdn.microsoft.com/library/windows/desktop/ms692695) interface de expedição.  
+ Um ponteiro para o contêiner do ambiente [IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695) interface de expedição.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
@@ -762,7 +762,7 @@ unsigned m_bAutoSize:1;
 > [!NOTE]
 >  Para usar este membro de dados dentro de sua classe de controle, você deve declará-la como um membro de dados em sua classe de controle. Sua classe de controle não herdará esse membro de dados da classe base porque ele está declarado dentro de uma união na classe base.  
   
- Se você adicionar o **AutoDimensionar** opção a [propriedades do estoque](../../atl/reference/stock-properties-atl-control-wizard.md) guia do Assistente de controle da ATL, o assistente automaticamente cria esse membro de dados em sua classe de controle, cria um put e métodos para a propriedade get e suporta [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) para notificar o contêiner automaticamente quando a propriedade é alterada.  
+ Se você adicionar o **AutoDimensionar** opção a [propriedades do estoque](../../atl/reference/stock-properties-atl-control-wizard.md) guia do Assistente de controle da ATL, o assistente automaticamente cria esse membro de dados em sua classe de controle, cria um put e métodos para a propriedade get e suporta [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) para notificar o contêiner automaticamente quando a propriedade é alterada.  
   
 ##  <a name="m_bdrawfromnatural"></a>  CComControlBase::m_bDrawFromNatural  
  Sinalizador que indica que `IDataObjectImpl::GetData` e `CComControlBase::GetZoomInfo` deve definir o tamanho do controle de `m_sizeNatural` , em vez de `m_sizeExtent`.  
@@ -814,7 +814,7 @@ unsigned m_bInPlaceSiteEx:1;
 > [!NOTE]
 >  Para usar este membro de dados dentro de sua classe de controle, você deve declará-la como um membro de dados em sua classe de controle. Sua classe de controle não herdará esse membro de dados da classe base porque ele está declarado dentro de uma união na classe base.  
   
- O membro de dados `m_spInPlaceSite` aponta para um [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), ou [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) interface, dependendo do valor da `m_bWndLess` e `m_bInPlaceSiteEx` sinalizadores. (O membro de dados `m_bNegotiatedWnd` deve ser verdadeiro para o `m_spInPlaceSite` ponteiro seja válido.)  
+ O membro de dados `m_spInPlaceSite` aponta para um [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex), ou [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless) interface, dependendo do valor da `m_bWndLess` e `m_bInPlaceSiteEx` sinalizadores. (O membro de dados `m_bNegotiatedWnd` deve ser verdadeiro para o `m_spInPlaceSite` ponteiro seja válido.)  
   
  Se `m_bWndLess` é FALSE e `m_bInPlaceSiteEx` for TRUE, `m_spInPlaceSite` é um `IOleInPlaceSiteEx` ponteiro de interface. Ver [m_spInPlaceSite](#m_spinplacesite) para uma tabela que mostra a relação entre esses membros de dados de três.  
   
@@ -844,7 +844,7 @@ unsigned m_bRecomposeOnResize:1;
 > [!NOTE]
 >  Para usar este membro de dados dentro de sua classe de controle, você deve declará-la como um membro de dados em sua classe de controle. Sua classe de controle não herdará esse membro de dados da classe base porque ele está declarado dentro de uma união na classe base.  
   
- Esse sinalizador é verificado pela [IOleObjectImpl::SetExtent](../../atl/reference/ioleobjectimpl-class.md#setextent) e, se for TRUE, `SetExtent` notifica o contêiner de alterações de modo de exibição. Se esse sinalizador estiver definido, o OLEMISC_RECOMPOSEONRESIZE bit na [OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) enumeração também deve ser definida.  
+ Esse sinalizador é verificado pela [IOleObjectImpl::SetExtent](../../atl/reference/ioleobjectimpl-class.md#setextent) e, se for TRUE, `SetExtent` notifica o contêiner de alterações de modo de exibição. Se esse sinalizador estiver definido, o OLEMISC_RECOMPOSEONRESIZE bit na [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) enumeração também deve ser definida.  
   
 ##  <a name="m_brequiressave"></a>  CComControlBase::m_bRequiresSave  
  Sinalizador que indica que o controle foi alterado desde que foi salvo pela última vez.  
@@ -935,7 +935,7 @@ unsigned m_bWndLess:1;
 > [!NOTE]
 >  Para usar este membro de dados dentro de sua classe de controle, você deve declará-la como um membro de dados em sua classe de controle. Sua classe de controle não herdará esse membro de dados da classe base porque ele está declarado dentro de uma união na classe base.  
   
- O membro de dados `m_spInPlaceSite` aponta para um [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), ou [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) interface, dependendo do valor da `m_bWndLess` e [CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex) sinalizadores. (O membro de dados [CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd) deve ser verdadeiro para o [CComControlBase::m_spInPlaceSite](#m_spinplacesite) ponteiro seja válido.)  
+ O membro de dados `m_spInPlaceSite` aponta para um [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex), ou [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless) interface, dependendo do valor da `m_bWndLess` e [CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex) sinalizadores. (O membro de dados [CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd) deve ser verdadeiro para o [CComControlBase::m_spInPlaceSite](#m_spinplacesite) ponteiro seja válido.)  
   
  Se `m_bWndLess` for TRUE, `m_spInPlaceSite` é um `IOleInPlaceSiteWindowless` ponteiro de interface. Ver [CComControlBase::m_spInPlaceSite](#m_spinplacesite) para uma tabela que mostra a relação completa entre esses membros de dados.  
   
@@ -1008,7 +1008,7 @@ SIZE m_sizeNatural;
  Você pode converter o tamanho em pixels com a função global [AtlHiMetricToPixel](pixel-himetric-conversion-global-functions.md#atlhimetrictopixel).  
   
 ##  <a name="m_spadvisesink"></a>  CComControlBase::m_spAdviseSink  
- Um ponteiro direto para a conexão de consultoria no contêiner (o contêiner [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)).  
+ Um ponteiro direto para a conexão de consultoria no contêiner (o contêiner [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink)).  
   
 ```
 CComPtr<IAdviseSink>
@@ -1058,12 +1058,12 @@ CComPtr<IDataAdviseHolder>
 > [!NOTE]
 >  Para usar este membro de dados dentro de sua classe de controle, você deve declará-la como um membro de dados em sua classe de controle. Sua classe de controle não herdará esse membro de dados da classe base porque ele está declarado dentro de uma união na classe base.  
   
- Um objeto de dados é um controle que pode transferir dados e que implementa [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421), cujos métodos especificam a mídia de formato e transferência de dados.  
+ Um objeto de dados é um controle que pode transferir dados e que implementa [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject), cujos métodos especificam a mídia de formato e transferência de dados.  
   
- A interface `m_spDataAdviseHolder` implementa o [IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579) e [IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448) métodos para estabelecer e excluir conexões de consultoria para o contêiner. O contêiner do controle deve implementar um coletor de aviso, oferecendo suporte a [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) interface.  
+ A interface `m_spDataAdviseHolder` implementa o [IDataObject::DAdvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dadvise) e [IDataObject::DUnadvise](/windows/desktop/api/objidl/nf-objidl-idataobject-dunadvise) métodos para estabelecer e excluir conexões de consultoria para o contêiner. O contêiner do controle deve implementar um coletor de aviso, oferecendo suporte a [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink) interface.  
   
 ##  <a name="m_spinplacesite"></a>  CComControlBase::m_spInPlaceSite  
- Um ponteiro para o contêiner [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586), [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461), ou [IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300) ponteiro de interface.  
+ Um ponteiro para o contêiner [IOleInPlaceSite](/windows/desktop/api/oleidl/nn-oleidl-ioleinplacesite), [IOleInPlaceSiteEx](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesiteex), ou [IOleInPlaceSiteWindowless](/windows/desktop/api/ocidl/nn-ocidl-ioleinplacesitewindowless) ponteiro de interface.  
   
 ```
 CComPtr<IOleInPlaceSiteWindowless>
@@ -1098,7 +1098,7 @@ CComPtr<IOleAdviseHolder>
 > [!NOTE]
 >  Para usar este membro de dados dentro de sua classe de controle, você deve declará-la como um membro de dados em sua classe de controle. Sua classe de controle não herdará esse membro de dados da classe base porque ele está declarado dentro de uma união na classe base.  
   
- A interface `m_spOleAdviseHolder` implementa o [IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573) e [IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749) métodos para estabelecer e excluir conexões de consultoria para o contêiner. O contêiner do controle deve implementar um coletor de aviso, oferecendo suporte a [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) interface.  
+ A interface `m_spOleAdviseHolder` implementa o [IOleObject::Advise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-advise) e [IOleObject::Unadvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-unadvise) métodos para estabelecer e excluir conexões de consultoria para o contêiner. O contêiner do controle deve implementar um coletor de aviso, oferecendo suporte a [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink) interface.  
   
 ##  <a name="ondraw"></a>  CComControlBase::OnDraw  
  Substitua este método para desenhar seu controle.  
@@ -1291,7 +1291,7 @@ HRESULT SendOnDataChange(DWORD advf = 0);
   
 ### <a name="parameters"></a>Parâmetros  
  *advf*  
- Aconselhamos sinalizadores que especificam como a chamada para [IAdviseSink::OnDataChange](http://msdn.microsoft.com/library/windows/desktop/ms687283) é feita. Os valores são do [ADVF](http://msdn.microsoft.com/library/windows/desktop/ms693742) enumeração.  
+ Aconselhamos sinalizadores que especificam como a chamada para [IAdviseSink::OnDataChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-ondatachange) é feita. Os valores são do [ADVF](/windows/desktop/api/objidl/ne-objidl-tagadvf) enumeração.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
@@ -1344,7 +1344,7 @@ HRESULT SendOnViewChange(DWORD dwAspect, LONG lindex = -1);
  Retorna S_OK no êxito ou um erro HRESULT em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- `SendOnViewChange` chamadas [IAdviseSink::OnViewChange](http://msdn.microsoft.com/library/windows/desktop/ms694337). O único valor de *lindex* atualmente com suporte é 1, que indica que toda a exibição é de interesse.  
+ `SendOnViewChange` chamadas [IAdviseSink::OnViewChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-onviewchange). O único valor de *lindex* atualmente com suporte é 1, que indica que toda a exibição é de interesse.  
   
 ##  <a name="setcontrolfocus"></a>  CComControlBase::SetControlFocus  
  Define ou remove o foco do teclado de ou para o controle.  
@@ -1361,7 +1361,7 @@ BOOL SetControlFocus(BOOL bGrab);
  Retornará TRUE se o controle com êxito recebe o foco; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
- Para um controle da janela, a função da API do Windows [SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms646312) é chamado. Para um controle sem janelas, [IOleInPlaceSiteWindowless::SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms679745) é chamado. Por meio dessa chamada, um controle sem janelas obtém o foco do teclado e responde às mensagens de janela.  
+ Para um controle da janela, a função da API do Windows [SetFocus](https://msdn.microsoft.com/library/windows/desktop/ms646312) é chamado. Para um controle sem janelas, [IOleInPlaceSiteWindowless::SetFocus](/windows/desktop/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus) é chamado. Por meio dessa chamada, um controle sem janelas obtém o foco do teclado e responde às mensagens de janela.  
   
 ##  <a name="setdirty"></a>  CComControlBase::SetDirty  
  Define o membro de dados `m_bRequiresSave` ao valor na *bDirty*.  

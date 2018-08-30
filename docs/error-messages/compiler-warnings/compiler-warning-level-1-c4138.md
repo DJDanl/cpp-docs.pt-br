@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4138 | Microsoft Docs
+title: Compilador aviso (nível 1) C4138 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0865935c30c4934684c7a12e50ab26f3e8b12c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cc3102f18021c16663bdf61dcde6df5e6893d46c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277027"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197082"
 ---
-# <a name="compiler-warning-level-1-c4138"></a>Compilador C4138 de aviso (nível 1)
+# <a name="compiler-warning-level-1-c4138"></a>Compilador aviso (nível 1) C4138
 ' * /' encontrado fora de comentário  
   
- O delimitador de fechamento de comentário não for precedido por um delimitador de comentário de abertura. O compilador assumirá um espaço entre o asterisco (**\***) e a barra (/).  
+ O delimitador de comentário de fechamento não é precedido por um delimitador de comentário de abertura. O compilador pressupõe um espaço entre o asterisco (<strong>\*</strong>) e uma barra (/).  
   
 ## <a name="example"></a>Exemplo  
   
@@ -41,7 +41,7 @@ int main()
   
  Esse aviso pode ser causado pela tentativa de aninhar comentários.  
   
- Esse aviso pode ser resolvido se você comentar seções de código que contém comentários, coloque o código em um **#if / #endif** bloquear e defina a expressão de controle como zero:  
+ Esse aviso pode ser resolvido se você comentar seções de código que contêm comentários, coloque o código em um **#if / #endif** bloquear e definir a expressão de controle como zero:  
   
 ```  
 // C4138b.cpp  

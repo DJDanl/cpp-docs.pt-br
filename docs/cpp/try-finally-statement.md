@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 043c11a6255e3b80fde176f1b2525e8285bbff12
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 1fbdc6c2285042dc3529d837de3e4b4ffd3c4fd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464854"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215525"
 ---
 # <a name="try-finally-statement"></a>Instrução try-finally
 **Seção específica da Microsoft**  
@@ -90,7 +90,7 @@ Ordem de execução do manipulador de encerramento
 ## <a name="abnormal-termination"></a>encerramento anormal  
  Sair de um **try-finally** instrução usando o [longjmp](../c-runtime-library/reference/longjmp.md) função de tempo de execução é considerada um encerramento anormal. É ilegal para ir diretamente para um **Try** instrução, mas legal para sair de uma. Todos os **Finally** instruções que são ativas entre o ponto de partida (encerramento normal da **Try** bloco) e o destino (o **EXCEPT** bloquear que manipula a exceção) deve ser executado. Isso se chama desenrolamento local.  
   
- Se um **tente** bloco é encerrado prematuramente por qualquer motivo, incluindo um salto para fora do bloco, o sistema executa associado **finalmente** bloco como parte do processo de desenrolamento de pilha. Nesses casos, o [AbnormalTermination](http://msdn.microsoft.com/library/windows/desktop/ms679265) retornos de função **true** se chamado de dentro do **finalmente** bloco; caso contrário, ele retornará **false**.  
+ Se um **tente** bloco é encerrado prematuramente por qualquer motivo, incluindo um salto para fora do bloco, o sistema executa associado **finalmente** bloco como parte do processo de desenrolamento de pilha. Nesses casos, o [AbnormalTermination](/windows/desktop/Debug/abnormaltermination) retornos de função **true** se chamado de dentro do **finalmente** bloco; caso contrário, ele retornará **false**.  
   
  O manipulador de término não for chamado se um processo for interrompido no meio da execução uma **try-finally** instrução.  
   
@@ -100,4 +100,4 @@ Ordem de execução do manipulador de encerramento
  [Escrevendo um manipulador de término](../cpp/writing-a-termination-handler.md)   
  [(C/C++) de tratamento de exceções estruturado](../cpp/structured-exception-handling-c-cpp.md)   
  [Palavras-chave](../cpp/keywords-cpp.md)   
- [Sintaxe do manipulador de término](http://msdn.microsoft.com/library/windows/desktop/ms681393)
+ [Sintaxe do manipulador de término](/windows/desktop/Debug/termination-handler-syntax)

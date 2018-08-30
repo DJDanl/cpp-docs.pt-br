@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0be744b8f703bfdc6487995e4a082e5b4c1561c3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 648b1084b978e4a7ab38775aefcdc7026fee1243
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606834"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206455"
 ---
 # <a name="event--c-component-extensions"></a>evento (Extensões de Componentes C++)
 
@@ -85,7 +85,7 @@ Você pode usar **+ = de operadores** e **operador-=** para adicionar e remover 
 
 ### <a name="remarks"></a>Comentários
 
-Para obter mais informações, consulte [eventos (C + + c++ /CX)](http://msdn.microsoft.com/library/windows/apps/hh755799.aspx).
+Para obter mais informações, consulte [eventos (C + + c++ /CX)](https://msdn.microsoft.com/library/windows/apps/hh755799.aspx).
 
 Se você pretende adicionar e, em seguida, remover um manipulador de eventos, você deve salvar a estrutura de EventRegistrationToken que é retornada pela operação de adição. Em seguida, na operação de remoção, você deve usar a estrutura EventRegistrationToken salva para identificar o manipulador de eventos a ser removido.
 

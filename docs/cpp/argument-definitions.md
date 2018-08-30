@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 044c5df5ae0a51912893ccf306a5c93afceb7ab3
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 66c1e1eea44ee105176d8693cec95bcce3c18a1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407582"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200634"
 ---
 # <a name="argument-definitions"></a>Definições de argumento
 Os argumentos do protótipo  
@@ -44,7 +44,7 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
  O primeiro argumento de linha de comando é sempre `argv` **[1]** e o último é `argv` **[** `argc` - 1 **]**.  
   
 > [!NOTE]
->  Por convenção, `argv`**[0]** é o comando com que o programa é invocado.  No entanto, é possível gerar um processo usando [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) e, se você usar o primeiro e segundo argumentos (*lpApplicationName* e *lpCommandLine*), `argv` **[0]** talvez não seja o executável nome; use [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) para recuperar o nome do executável e o caminho totalmente qualificado.  
+>  Por convenção, `argv`**[0]** é o comando com que o programa é invocado.  No entanto, é possível gerar um processo usando [CreateProcess](https://msdn.microsoft.com/library/windows/desktop/ms683197) e, se você usar o primeiro e segundo argumentos (*lpApplicationName* e *lpCommandLine*), `argv` **[0]** talvez não seja o executável nome; use [GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197) para recuperar o nome do executável e o caminho totalmente qualificado.  
   
 ## <a name="microsoft-specific"></a>Específico da Microsoft  
  *envp*  

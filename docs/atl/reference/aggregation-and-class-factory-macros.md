@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4995779a7f5595eca9dc47a29ea11d875995e959
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d964e844e8be4b741628397bf8a63bbd109820d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881221"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43210936"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Macros de classe de fábrica e agregação
 Essas macros fornecem maneiras de controlar a agregação e de declaração de fábricas de classes.  
@@ -86,7 +86,7 @@ DECLARE_CLASSFACTORY()
  [!code-cpp[NVC_ATL_COM#55](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_2.h)]  
   
 ##  <a name="ccomclassfactory_class"></a>  Classe CComClassFactory  
- Essa classe implementa a [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) interface.  
+ Essa classe implementa a [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) interface.  
   
 ```
 class CComClassFactory : public IClassFactory,
@@ -94,7 +94,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 ```  
   
 ### <a name="remarks"></a>Comentários  
- `CComClassFactory` implementa o [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) interface, que contém métodos para criação de um objeto de um CLSID particular, bem como a fábrica de classes na memória para permitir que os novos objetos sejam criadas mais rapidamente o bloqueio. `IClassFactory` deve ser implementado para cada classe que você registre-se no registro do sistema e que você atribuir um CLSID.  
+ `CComClassFactory` implementa o [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) interface, que contém métodos para criação de um objeto de um CLSID particular, bem como a fábrica de classes na memória para permitir que os novos objetos sejam criadas mais rapidamente o bloqueio. `IClassFactory` deve ser implementado para cada classe que você registre-se no registro do sistema e que você atribuir um CLSID.  
   
  Objetos ATL normalmente adquirem uma fábrica de classes derivando [CComCoClass](../../atl/reference/ccomcoclass-class.md). Essa classe inclui a macro [DECLARE_CLASSFACTORY](#declare_classfactory), que declara `CComClassFactory` porque a fábrica de classe padrão. Para substituir esse padrão, especifique o DECLARE_CLASSFACTORY*XXX* macros em sua definição de classe. Por exemplo, o [DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex) macro usa a classe especificada para a fábrica de classes:  
   
@@ -147,7 +147,7 @@ DECLARE_CLASSFACTORY2( lic )
  [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]  
   
 ##  <a name="ccomclassfactory2_class"></a>  Classe CComClassFactory2  
- Essa classe implementa a [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) interface.  
+ Essa classe implementa a [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2) interface.  
   
 ```
 template <class license>
@@ -160,14 +160,14 @@ class  CComClassFactory2 : public IClassFactory2,
  *licença*  
  Uma classe que implementa as funções estáticas a seguir:  
   
-- **VerifyLicenseKey de BOOL estático (BSTR** `bstr` **);**  
+- `static BOOL VerifyLicenseKey( BSTR bstr );`  
   
-- **GetLicenseKey de BOOL estático (DWORD** `dwReserved` **, BSTR\***  `pBstr` **);**  
+- `static BOOL GetLicenseKey( DWORD dwReserved, BSTR * pBstr );`  
   
-- **estático (de BOOL IsLicenseValid);**  
+- `static BOOL IsLicenseValid( );`  
   
 ### <a name="remarks"></a>Comentários  
- `CComClassFactory2` implementa o [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) interface, que é uma extensão de [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364). `IClassFactory2` criação do objeto de controles por meio de uma licença. Uma classe factory executando em um computador licenciado pode fornecer uma chave de licença de tempo de execução. Essa chave de licença permite que um aplicativo instanciar objetos quando não existe uma licença completa de máquina.  
+ `CComClassFactory2` implementa o [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2) interface, que é uma extensão de [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory). `IClassFactory2` criação do objeto de controles por meio de uma licença. Uma classe factory executando em um computador licenciado pode fornecer uma chave de licença de tempo de execução. Essa chave de licença permite que um aplicativo instanciar objetos quando não existe uma licença completa de máquina.  
   
  Objetos ATL normalmente adquirem uma fábrica de classes derivando [CComCoClass](../../atl/reference/ccomcoclass-class.md). Essa classe inclui a macro [DECLARE_CLASSFACTORY](#declare_classfactory), que declara [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) porque a fábrica de classe padrão. Para usar `CComClassFactory2`, especifique o [DECLARE_CLASSFACTORY2](#declare_classfactory2) macro na definição de classe do objeto. Por exemplo:  
   
@@ -195,7 +195,7 @@ DECLARE_CLASSFACTORY_AUTO_THREAD()
  [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]  
   
 ##  <a name="ccomclassfactoryautothread_class"></a>  Classe CComClassFactoryAutoThread  
- Essa classe implementa a [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) de interface e permite que os objetos a serem criados em vários apartments.  
+ Essa classe implementa a [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) de interface e permite que os objetos a serem criados em vários apartments.  
   
 > [!IMPORTANT]
 >  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
@@ -334,7 +334,7 @@ DECLARE_VIEW_STATUS( statusFlags )
   
 ### <a name="parameters"></a>Parâmetros  
  *statusFlags*  
- [in] Os sinalizadores de exibir status. Ver [VIEWSTATUS](http://msdn.microsoft.com/library/windows/desktop/ms687201) para obter uma lista dos sinalizadores.  
+ [in] Os sinalizadores de exibir status. Ver [VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) para obter uma lista dos sinalizadores.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_ATL_Windowing#126](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_9.h)]  

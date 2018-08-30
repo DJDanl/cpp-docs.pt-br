@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7ab10a6c0c53bd9aba87ddea594e689b3142b4c
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 67dab7c8e280f8fbbdcc66beef031d1e9430ac1f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027255"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215802"
 ---
 # <a name="tn014-custom-controls"></a>TN014: controles personalizados
 
@@ -122,7 +122,7 @@ O exemplo mais comum de um botão de desenho de Self é um botão de bitmap. Um 
 
 Ocasionalmente, você desejará alterar a funcionalidade de um objeto que já existe. Os exemplos anteriores exigia que você personalize os controles antes que eles foram criados. A criação de subclasses dinâmica permite que você personalize um controle que já foi criado.
 
-A criação de subclasses é o termo do Windows para substituir a [WndProc](http://msdn.microsoft.com/94ba8ffa-3c36-46d4-ac74-9bd10b1ffd26) de uma janela com um personalizado `WndProc` e chamar o antigo `WndProc` para a funcionalidade padrão.
+A criação de subclasses é o termo do Windows para substituir a [WndProc](https://msdn.microsoft.com/94ba8ffa-3c36-46d4-ac74-9bd10b1ffd26) de uma janela com um personalizado `WndProc` e chamar o antigo `WndProc` para a funcionalidade padrão.
 
 Isso não deve ser confundido com a derivação de classe do C++. Para fins de esclarecimento, os termos de C++ *classe base* e *classe derivada* são análogas às *superclasse* e *subclasse* no Windows modelo de objeto. Derivação de C++ com a criação de classes do MFC e Windows são funcionalmente semelhante, exceto o C++ não oferece suporte para a criação de subclasses dinâmica.
 

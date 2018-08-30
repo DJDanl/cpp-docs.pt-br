@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88f431ab86762e50f91571a85f0fc60e41d8d711
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: f8b63de74a044a55362c2ebafc814fcf0136434d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849624"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216836"
 ---
 # <a name="cpropexchange-class"></a>Classe CPropExchange
 Oferece suporte à implementação de persistência para seus controles OLE.  
@@ -131,7 +131,7 @@ virtual BOOL ExchangeFontProp(
  Uma referência a um [CFontHolder](../../mfc/reference/cfontholder-class.md) objeto que contém a propriedade de fonte.  
   
  *pFontDesc*  
- Um ponteiro para um [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782) estrutura que contém os valores para inicializar o estado padrão da propriedade da fonte quando *pFontDispAmbient* é NULL.  
+ Um ponteiro para um [FONTDESC](/windows/desktop/api/olectl/ns-olectl-tagfontdesc) estrutura que contém os valores para inicializar o estado padrão da propriedade da fonte quando *pFontDispAmbient* é NULL.  
   
  *pFontDispAmbient*  
  Um ponteiro para o `IFontDisp` interface de uma fonte a ser usado para inicializar o estado padrão da propriedade da fonte.  

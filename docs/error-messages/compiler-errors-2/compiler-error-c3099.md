@@ -1,5 +1,5 @@
 ---
-title: C3099 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3099 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27059beb1cb587b9060da8c5cc5702ea966422f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea57a79fab92152824b7c9aaf0c5d50c14fee32e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249749"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211989"
 ---
-# <a name="compiler-error-c3099"></a>C3099 de erro do compilador
-'palavra-chave': usar [System::AttributeUsageAttribute] atributos gerenciados; Use [Windows::Foundation::Metadata::AttributeUsageAttribute] para atributos de WinRT  
+# <a name="compiler-error-c3099"></a>Erro do compilador C3099
+'palavra-chave': use [System::AttributeUsageAttribute] para atributos gerenciados. Use [Windows::Foundation::Metadata::AttributeUsageAttribute] para atributos de WinRT  
   
- Use <xref:System.AttributeUsageAttribute> para declarar **/clr** atributos. Use `Windows::Foundation::Metadata::AttributeUsageAttribute` para declarar os atributos de tempo de execução do Windows.  
+ Use <xref:System.AttributeUsageAttribute> declarar **/clr** atributos. Use `Windows::Foundation::Metadata::AttributeUsageAttribute` declarar atributos de tempo de execução do Windows.  
   
- Para obter mais informações sobre atributos /CLR, consulte [atributos definidos pelo usuário](../../windows/user-defined-attributes-cpp-component-extensions.md). Para atributos com suporte em tempo de execução do Windows, consulte [Windows.Foundation.Metadata namespace](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.aspx)  
+ Para obter mais informações sobre atributos /CLR, consulte [atributos definidos pelo usuário](../../windows/user-defined-attributes-cpp-component-extensions.md). Para atributos com suporte em tempo de execução do Windows, consulte [namespace do Windows](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.aspx)  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir gera C3099 e mostra como corrigi-lo.  

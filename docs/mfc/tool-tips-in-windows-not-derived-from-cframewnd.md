@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f187ae7e3d5d9dbe6441aa8e2ba0f7631fd5072
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 380435001bdcfacdc22c80d25d5ef228b67e3127
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956515"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207583"
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>Dicas de ferramenta no Windows derivadas de CFrameWnd
-Família este artigo aborda habilitando dicas de ferramenta para controles contidos em uma janela que não é derivada de [CFrameWnd](../mfc/reference/cframewnd-class.md). O artigo [dicas de ferramenta da barra de ferramentas](../mfc/toolbar-tool-tips.md) fornece informações sobre dicas de ferramenta para controles em um `CFrameWnd`.  
+Família este artigo aborda habilitando dicas de ferramenta para controles contidos em uma janela que não é derivada de [CFrameWnd](../mfc/reference/cframewnd-class.md). O artigo [dicas de ferramenta de barras de ferramentas](../mfc/toolbar-tool-tips.md) fornece informações sobre dicas de ferramenta para controles em um `CFrameWnd`.  
   
  Os tópicos abordados nesta família artigo incluem:  
   
@@ -37,11 +37,11 @@ Família este artigo aborda habilitando dicas de ferramenta para controles conti
   
 -   [Estrutura TOOLTIPTEXT](../mfc/tooltiptext-structure.md)  
   
- Dicas de ferramenta são exibidas automaticamente para os botões e outros controles contidos em uma janela pai derivam de `CFrameWnd`. Isso ocorre porque `CFrameWnd` tem um manipulador padrão para o [TTN_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760269) notificação, que manipula **TTN_NEEDTEXT** controles associados a controles de dica de notificações da ferramenta.  
+ Dicas de ferramenta são exibidas automaticamente para os botões e outros controles contidos em uma janela pai derivado de `CFrameWnd`. Isso ocorre porque `CFrameWnd` tem um manipulador padrão para o [TTN_GETDISPINFO](/windows/desktop/Controls/ttn-getdispinfo) notificação, que manipula **TTN_NEEDTEXT** controles associados a controles de dica de notificações da ferramenta.  
   
- No entanto, esse manipulador padrão não é chamado quando o **TTN_NEEDTEXT** notificação é enviada de um controle de dica de ferramenta associado a um controle em uma janela que não é um `CFrameWnd`, como um controle em uma caixa de diálogo ou uma exibição de formulário. Portanto, é necessário para fornecer uma função de manipulador para o **TTN_NEEDTEXT** mensagem de notificação para exibir dicas de ferramentas para controles filho.  
+ No entanto, esse manipulador padrão não é chamado quando o **TTN_NEEDTEXT** notificação é enviada de um controle de dica de ferramenta associado ao controle em uma janela que não é um `CFrameWnd`, como um controle em uma caixa de diálogo ou uma exibição de formulário. Portanto, é necessário para fornecer uma função de manipulador para o **TTN_NEEDTEXT** mensagem de notificação para exibir dicas de ferramenta para controles filho.  
   
- As dicas de ferramenta padrão fornecidas para o windows por [CWnd::EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips) não tem texto associado a eles. Para recuperar o texto da dica de ferramenta a ser exibido, o **TTN_NEEDTEXT** notificação é enviada para a janela pai do controle de dica de ferramenta antes que a janela de dica de ferramenta é exibida. Se não houver nenhum manipulador para essa mensagem atribuir um valor para o *pszText* membro o **TOOLTIPTEXT** estrutura, não haverá nenhum texto exibido para a dica de ferramenta.  
+ As dicas de ferramenta padrão fornecidas para o windows por [CWnd::EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips) não tem texto associado a eles. Para recuperar o texto da dica de ferramenta a ser exibido, o **TTN_NEEDTEXT** notificação é enviada para a janela pai do controle de dica de ferramenta antes que a janela de dica de ferramenta é exibida. Se não houver nenhum manipulador para esta mensagem atribuir um valor para o *pszText* membro a **TOOLTIPTEXT** estrutura, não haverá nenhum texto exibido para a dica de ferramenta.  
   
 ## <a name="see-also"></a>Consulte também  
  [Dicas de ferramenta](../mfc/tool-tips.md)

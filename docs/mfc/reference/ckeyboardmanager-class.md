@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105a6310968844336ead5c787586d547f3952e57
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 82447c14209f2f47fb6224df7e1daeb18ed6048e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338978"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212885"
 ---
 # <a name="ckeyboardmanager-class"></a>Classe CKeyboardManager
 Gerencia tabelas de chave de atalho para a janela do quadro principal e janelas filho.  
@@ -169,7 +169,7 @@ static BOOL __stdcall IsKeyHandled(
 |-|-|  
 |Parâmetro|Descrição|  
 |[in] *nKey*|A tecla a ser verificada.|  
-|[in] *fVirt*|Especifica o comportamento da tecla de atalho. Para obter uma lista de valores possíveis, consulte [estrutura de ACELERAÇÃO](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
+|[in] *fVirt*|Especifica o comportamento da tecla de atalho. Para obter uma lista de valores possíveis, consulte [estrutura de ACELERAÇÃO](/windows/desktop/api/winuser/ns-winuser-tagaccel).|  
 |[in] *pWndFrame*|Uma janela do quadro. Este método determina se uma tecla de atalho é tratada neste quadro.|  
 |[in] *bIsDefaultFrame*|Um parâmetro booliano que indica se *pWndFrame* é a janela de quadro do padrão.|  
   
@@ -197,7 +197,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
  Diferente de zero se o caractere for imprimível, zero se não for.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método falhar se uma chamada para [GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299) falhar.  
+ Esse método falhar se uma chamada para [GetKeyboardState](https://msdn.microsoft.com/library/windows/desktop/ms646299) falhar.  
   
 ##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators  
  Indica se menus mostram todas as teclas de atalho associadas aos comandos de menu ou as teclas de atalho padrão.  

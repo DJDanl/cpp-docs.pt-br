@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b09ed632f22ec78e6b2fd8d5bf0a64cec1512ba8
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: c865fdce61af5b5bbce6e8b8b8658946ffbf5e48
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028116"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204293"
 ---
 # <a name="adding-an-mfc-class"></a>Adicionando uma classe do MFC
-Para adicionar classes derivadas de classes da biblioteca Microsoft Foundation Class (MFC) ao seu projeto, use o **Add Class** comando disponível no [exibição de classe](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925). Especifique o nome da nova classe, selecione a classe base e selecione a ID da caixa de diálogo com a qual ele está associado (se houver). O Assistente de código cria um arquivo de cabeçalho e um arquivo de implementação e os adiciona ao seu projeto.  
+Para adicionar classes derivadas de classes da biblioteca Microsoft Foundation Class (MFC) ao seu projeto, use o **Add Class** comando disponível no [exibição de classe](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925). Especifique o nome da nova classe, selecione a classe base e selecione a ID da caixa de diálogo com a qual ele está associado (se houver). O Assistente de código cria um arquivo de cabeçalho e um arquivo de implementação e os adiciona ao seu projeto.  
   
 > [!NOTE]
 >  Você pode adicionar classes MFC para um aplicativo ATL COM se você inicialmente [criou o aplicativo com suporte do MFC](../../atl/reference/mfc-support-in-atl-projects.md). Você também pode adicionar classes MFC para projetos do Win32 que têm suporte do MFC.  

@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15623673651e2c1aa02a5c1b5baa779789961e2b
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: c4fc2eb252c81e903174d99d4a55b2f3c1eed321
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339560"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205281"
 ---
 # <a name="ccombobox-class"></a>Classe CComboBox
 Fornece a funcionalidade de uma caixa de combinação do Windows.  
@@ -286,7 +286,7 @@ int AddString(LPCTSTR lpszString);
  Se a caixa de listagem não foi criada com o [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilo, a cadeia de caracteres é adicionada ao final da lista. Caso contrário, a cadeia de caracteres é inserida na lista, e a lista é classificada.  
   
 > [!NOTE]
->  Não há suporte para essa função, o Windows `ComboBoxEx` controle. Para obter mais informações sobre esse controle, consulte [ComboBoxEx controles](http://msdn.microsoft.com/library/windows/desktop/bb775738) no SDK do Windows.  
+>  Não há suporte para essa função, o Windows `ComboBoxEx` controle. Para obter mais informações sobre esse controle, consulte [ComboBoxEx controles](/windows/desktop/Controls/comboboxex-controls) no SDK do Windows.  
   
  Para inserir uma cadeia de caracteres em um local específico dentro da lista, use o [InsertString](#insertstring) função de membro.  
   
@@ -493,7 +493,7 @@ int Dir(
  Se o valor retornado for maior que ou igual a 0, ele é o índice baseado em zero do último nome de arquivo adicionado à lista. O valor de retorno será CB_ERR se ocorrer um erro; o valor de retorno é CB_ERRSPACE se não houver espaço suficiente está disponível para armazenar novas cadeias de caracteres.  
   
 ### <a name="remarks"></a>Comentários  
- Não há suporte para essa função, o Windows `ComboBoxEx` controle. Para obter mais informações sobre esse controle, consulte [ComboBoxEx controles](http://msdn.microsoft.com/library/windows/desktop/bb775738) no SDK do Windows.  
+ Não há suporte para essa função, o Windows `ComboBoxEx` controle. Para obter mais informações sobre esse controle, consulte [ComboBoxEx controles](/windows/desktop/Controls/comboboxex-controls) no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CComboBox#10](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]  
@@ -537,7 +537,7 @@ int FindString(
  Se o valor retornado for maior que ou igual a 0, ele é o índice baseado em zero do item correspondente. Ele será CB_ERR se a pesquisa foi bem-sucedida.  
   
 ### <a name="remarks"></a>Comentários  
- Não há suporte para essa função, o Windows `ComboBoxEx` controle. Para obter mais informações sobre esse controle, consulte [ComboBoxEx controles](http://msdn.microsoft.com/library/windows/desktop/bb775738) no SDK do Windows.  
+ Não há suporte para essa função, o Windows `ComboBoxEx` controle. Para obter mais informações sobre esse controle, consulte [ComboBoxEx controles](/windows/desktop/Controls/comboboxex-controls) no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
@@ -576,13 +576,13 @@ BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
   
 ### <a name="parameters"></a>Parâmetros  
  *pcbi*  
- Um ponteiro para o [COMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775798) estrutura.  
+ Um ponteiro para o [COMBOBOXINFO](/windows/desktop/api/winuser/ns-winuser-tagcomboboxinfo) estrutura.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna verdadeiro em caso de êxito, FALSE em caso de falha.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função membro emula a funcionalidade dos [CB_GETCOMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775839) da mensagem, conforme descrito no SDK do Windows.  
+ Essa função membro emula a funcionalidade dos [CB_GETCOMBOBOXINFO](/windows/desktop/Controls/cb-getcomboboxinfo) da mensagem, conforme descrito no SDK do Windows.  
   
 ##  <a name="getcount"></a>  CComboBox::GetCount  
  Chame essa função de membro para recuperar o número de itens na parte da caixa de listagem de uma caixa de combinação.  
@@ -625,7 +625,7 @@ BOOL GetCueBanner(
 ### <a name="remarks"></a>Comentários  
  Texto de indicação é um aviso que é exibido na área de entrada de controle de caixa de combinação. O texto de indicação é exibido até que o usuário forneça uma entrada.  
   
- Esse método envia o [CB_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775843) mensagem, que é descrita no SDK do Windows.  
+ Esse método envia o [CB_GETCUEBANNER](/windows/desktop/Controls/cb-getcuebanner) mensagem, que é descrita no SDK do Windows.  
   
 ##  <a name="getcursel"></a>  CComboBox::GetCurSel  
  Chame essa função de membro para determinar qual item da caixa de combinação está selecionado.  
@@ -754,13 +754,13 @@ DWORD_PTR GetItemData(int nIndex) const;
  O valor de 32 bits associado com o item ou CB_ERR se ocorrer um erro.  
   
 ### <a name="remarks"></a>Comentários  
- O valor de 32 bits pode ser definido com o *dwItemData* parâmetro de uma [SetItemData](#setitemdata) chamada de função de membro. Use o `GetItemDataPtr` se o valor de 32 bits a ser recuperado é um ponteiro de função de membro ( **void\***).  
+ O valor de 32 bits pode ser definido com o *dwItemData* parâmetro de uma [SetItemData](#setitemdata) chamada de função de membro. Use o `GetItemDataPtr` se o valor de 32 bits a ser recuperado é um ponteiro de função de membro (**void** <strong>\*</strong>).  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
   
 ##  <a name="getitemdataptr"></a>  CComboBox::GetItemDataPtr  
- Recupera o valor de 32 bits fornecida pelo aplicativo associado ao item de caixa de combinação especificado como um ponteiro ( **void\***).  
+ Recupera o valor de 32 bits fornecida pelo aplicativo associado ao item de caixa de combinação especificado como um ponteiro (**void** <strong>\*</strong>).  
   
 ```  
 void* GetItemDataPtr(int nIndex) const;  
@@ -869,7 +869,7 @@ int GetMinVisible() const;
  O número mínimo de itens visíveis na lista suspensa atual.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método envia o [CB_GETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) mensagem, que é descrita no SDK do Windows.  
+ Esse método envia o [CB_GETMINVISIBLE](/windows/desktop/Controls/cb-setminvisible) mensagem, que é descrita no SDK do Windows.  
   
 ##  <a name="gettopindex"></a>  CComboBox::GetTopIndex  
  Recupera o índice baseado em zero do primeiro item visível na parte de caixa de listagem da caixa de combinação.  
@@ -939,7 +939,7 @@ int InsertString(
  Ao contrário o [AddString](#addstring) função de membro, o `InsertString` função de membro não faz com que uma lista com o [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) estilo a ser classificado.  
   
 > [!NOTE]
->  Não há suporte para essa função, o Windows `ComboBoxEx` controle. Para obter mais informações sobre esse controle, consulte [ComboBoxEx controles](http://msdn.microsoft.com/library/windows/desktop/bb775738) no SDK do Windows.  
+>  Não há suporte para essa função, o Windows `ComboBoxEx` controle. Para obter mais informações sobre esse controle, consulte [ComboBoxEx controles](/windows/desktop/Controls/comboboxex-controls) no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CComboBox#27](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]  
@@ -1056,7 +1056,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 ### <a name="remarks"></a>Comentários  
  Texto de indicação é um aviso que é exibido na área de entrada de controle de caixa de combinação. O texto de indicação é exibido até que o usuário forneça uma entrada.  
   
- Esse método envia o [CB_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775897) mensagem, que é descrita no SDK do Windows.  
+ Esse método envia o [CB_SETCUEBANNER](/windows/desktop/Controls/cb-setcuebanner) mensagem, que é descrita no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo de código a seguir define a variável *m_combobox*, que é usado para acessar programaticamente o controle de caixa de combinação. Essa variável é usada no exemplo a seguir.  
@@ -1133,7 +1133,7 @@ BOOL SetEditSel(
  As posições são baseados em zero. Para selecionar o primeiro caractere de controle de edição, você deve especificar uma posição inicial de 0. A posição final é o caractere logo após o último caractere para selecionar. Por exemplo, para selecionar os quatro primeiros caracteres do controle de edição, você usaria uma posição inicial de 0 e uma posição final de 4.  
   
 > [!NOTE]
->  Não há suporte para essa função, o Windows `ComboBoxEx` controle. Para obter mais informações sobre esse controle, consulte [ComboBoxEx controles](http://msdn.microsoft.com/library/windows/desktop/bb775738) no SDK do Windows.  
+>  Não há suporte para essa função, o Windows `ComboBoxEx` controle. Para obter mais informações sobre esse controle, consulte [ComboBoxEx controles](/windows/desktop/Controls/comboboxex-controls) no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
   Veja o exemplo de [CComboBox::GetEditSel](#geteditsel).  
@@ -1207,7 +1207,7 @@ int SetItemData(
  [!code-cpp[NVC_MFC_CComboBox#36](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]  
   
 ##  <a name="setitemdataptr"></a>  CComboBox::SetItemDataPtr  
- Define o valor de 32 bits associado com o item especificado em uma caixa de combinação para ser o ponteiro especificado ( **void\***).  
+ Define o valor de 32 bits associado com o item especificado em uma caixa de combinação para ser o ponteiro especificado (**void** <strong>\*</strong>).  
   
 ```  
 int SetItemDataPtr(
@@ -1297,7 +1297,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método envia o [CB_SETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) mensagem, que é descrita no SDK do Windows.  
+ Esse método envia o [CB_SETMINVISIBLE](/windows/desktop/Controls/cb-setminvisible) mensagem, que é descrita no SDK do Windows.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo de código a seguir define a variável *m_combobox*, que é usado para acessar programaticamente o controle de caixa de combinação. Essa variável é usada no exemplo a seguir.  

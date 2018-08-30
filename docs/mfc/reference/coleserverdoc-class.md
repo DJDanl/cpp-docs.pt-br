@@ -92,12 +92,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67920590979c4b9bf3099e8c64c142aeb813b1ce
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a02ade5beb9c3a8480672211fff4b9d23fe48562
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851652"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217583"
 ---
 # <a name="coleserverdoc-class"></a>Classe COleServerDoc
 A classe base para documentos de servidor OLE.  
@@ -296,7 +296,7 @@ LPOLECLIENTSITE GetClientSite() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Recupera um ponteiro para subjacente [IOleClientSite](http://msdn.microsoft.com/library/windows/desktop/ms693706) interface.  
+ Recupera um ponteiro para subjacente [IOleClientSite](/windows/desktop/api/oleidl/nn-oleidl-ioleclientsite) interface.  
   
 ##  <a name="getdocobjectserver"></a>  COleServerDoc::GetDocObjectServer  
  Substituir essa função para criar um novo `CDocObjectServer` item e retornar um ponteiro para ele.  
@@ -492,7 +492,7 @@ virtual void OnClose(OLECLOSE dwCloseOption);
 ### <a name="remarks"></a>Comentários  
  A implementação padrão chama `CDocument::OnCloseDocument`.  
   
- Para obter mais informações e valores adicionais, consulte [OLECLOSE](http://msdn.microsoft.com/library/windows/desktop/ms680623) no SDK do Windows.  
+ Para obter mais informações e valores adicionais, consulte [OLECLOSE](/windows/desktop/api/oleidl/ne-oleidl-tagoleclose) no SDK do Windows.  
   
 ##  <a name="ondeactivate"></a>  COleServerDoc::OnDeactivate  
  Chamado pelo framework quando o usuário desativa um item incorporado ou vinculado que está ativo no momento no local.  
@@ -668,7 +668,7 @@ virtual void OnResizeBorder(
 ### <a name="remarks"></a>Comentários  
  Essa função é redimensionada e ajusta as barras de ferramentas e outros elementos de interface do usuário acordo com o novo tamanho da janela.  
   
- Para obter mais informações, consulte [IOleInPlaceUIWindow](http://msdn.microsoft.com/library/windows/desktop/ms680716) no SDK do Windows.  
+ Para obter mais informações, consulte [IOleInPlaceUIWindow](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceuiwindow) no SDK do Windows.  
   
  Isso é um avançado substituível.  
   

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb3a2bce257717c695c1458b12f3e6d4f11b9d7a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a4d6bf9d62ae1cb80041145903267d4af4d88eaa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849731"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214146"
 ---
 # <a name="cmfccolordialog-class"></a>Classe CMFCColorDialog
 O `CMFCColorDialog` classe representa uma caixa de diálogo de seleção de cor.  
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 |----------|-----------------|  
 |[CMFCColorDialog::GetColor](#getcolor)|Retorna a cor selecionada atual.|  
 |[CMFCColorDialog::GetPalette](#getpalette)|Retorna a paleta de cores.|  
-|`CMFCColorDialog::PreTranslateMessage`|Converte as mensagens da janela antes de serem expedidas para o [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funções do Windows. Para sintaxe e obter mais informações, consulte [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Substitui `CDialogEx::PreTranslateMessage`.)|  
+|`CMFCColorDialog::PreTranslateMessage`|Converte as mensagens da janela antes de serem expedidas para o [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funções do Windows. Para sintaxe e obter mais informações, consulte [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Substitui `CDialogEx::PreTranslateMessage`.)|  
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|Uma paleta deriva da paleta do sistema.|  
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|Define a cor selecionada atual.|  
 |[CMFCColorDialog::SetNewColor](#setnewcolor)|Define a cor mais equivalente a um valor RGB especificado.|  
@@ -149,7 +149,7 @@ COLORREF GetColor() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que contém as informações de RGB para a cor selecionada na caixa de diálogo de cor.  
+ Um [COLORREF](/windows/desktop/gdi/colorref) valor que contém as informações de RGB para a cor selecionada na caixa de diálogo de cor.  
   
 ### <a name="remarks"></a>Comentários  
  Chame essa função depois de chamar o `DoModal` método.  
@@ -196,7 +196,7 @@ void SetNewColor(COLORREF rgb);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *rgb*  
- Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) que especifica uma cor RGB.  
+ Um [COLORREF](/windows/desktop/gdi/colorref) que especifica uma cor RGB.  
   
 ### <a name="remarks"></a>Comentários  
   

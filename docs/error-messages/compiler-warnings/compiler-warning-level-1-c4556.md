@@ -1,7 +1,7 @@
 ---
-title: Compilador (nível 1) de aviso C4556 | Microsoft Docs
+title: Compilador aviso (nível 1) C4556 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -17,31 +17,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22d10f7dc73e0d5e39fcad8975114f7cb176b24d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 987e4dc3ba6aea7dcb01dc05cd94c45baced05b8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282906"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211022"
 ---
-# <a name="compiler-warning-level-1-c4556"></a>Compilador C4556 de aviso (nível 1)
-valor de argumento imediato intrínseco 'value' está fora do intervalo 'lowerbound - upperbound'  
-  
- Um intrínseco corresponde a uma instrução de hardware. A instrução de hardware tem um número fixo de bits para codificar a constante. Se ***valor*** está fora do intervalo, ele será não codificar corretamente. O compilador trunca os bits extras.  
-  
- O exemplo a seguir gera C4556:  
-  
-```  
-// C4556.cpp  
-// compile with: /W1  
-// processor: x86 IPF  
-#include <xmmintrin.h>  
-void test()  
-{  
-   __m64 m;  
-   _m_pextrw(m, 5);   // C4556  
-}  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-1-c4556"></a>Compilador aviso (nível 1) C4556
+
+> valor do argumento imediato intrínseco '*valor*'está fora do intervalo'*lowerbound* - *máximo*'
+
+## <a name="remarks"></a>Comentários
+
+Um intrínseco corresponde a uma instrução de hardware. A instrução de hardware tem um número fixo de bits para codificar a constante. Se *valor* está fora do intervalo, ele será não codificar corretamente. O compilador trunca os bits extras.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C4556:
+
+```cpp
+// C4556.cpp
+// compile with: /W1
+// processor: x86 IPF
+#include <xmmintrin.h>
+
+void test()
+{
+   __m64 m;
+   _m_pextrw(m, 5);   // C4556
+}
+
+int main()
+{
+}
 ```

@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b54b8e4fdfbbfd282475ed0ca6e221d826953cad
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: d784d7f3c03b18d2f81d6eec8bc9e4b76c7ee8da
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879566"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216763"
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>Classe ISpecifyPropertyPagesImpl
-Essa classe implementa `IUnknown` e fornece uma implementação padrão do [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) interface.  
+Essa classe implementa `IUnknown` e fornece uma implementação padrão do [ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages) interface.  
   
 > [!IMPORTANT]
 >  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
@@ -54,7 +54,7 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 |[ISpecifyPropertyPagesImpl::GetPages](#getpages)|Preenche os valores de uma matriz de contado de UUID. Cada UUID corresponde ao CLSID para uma das páginas de propriedades que podem ser exibidas na folha de propriedades do objeto.|  
   
 ## <a name="remarks"></a>Comentários  
- O [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) interface permite que um cliente para obter uma lista de CLSIDs para as páginas de propriedades com suporte por um objeto. Classe `ISpecifyPropertyPagesImpl` fornece uma implementação padrão dessa interface e implementa `IUnknown` enviando informações para o despejo de compilações de dispositivo na depuração.  
+ O [ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages) interface permite que um cliente para obter uma lista de CLSIDs para as páginas de propriedades com suporte por um objeto. Classe `ISpecifyPropertyPagesImpl` fornece uma implementação padrão dessa interface e implementa `IUnknown` enviando informações para o despejo de compilações de dispositivo na depuração.  
   
 > [!NOTE]
 >  Não exponha o `ISpecifyPropertyPages` se seu objeto não dá suporte a páginas de propriedades de interface.  
@@ -70,7 +70,7 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
  **Cabeçalho:** atlcom  
   
 ##  <a name="getpages"></a>  ISpecifyPropertyPagesImpl::GetPages  
- Preenche a matriz de [CAUUID](http://msdn.microsoft.com/library/windows/desktop/ms680048) estrutura com os CLSIDs para as páginas de propriedades que podem ser exibidos na folha de propriedades do objeto.  
+ Preenche a matriz de [CAUUID](/windows/desktop/api/ocidl/ns-ocidl-tagcauuid) estrutura com os CLSIDs para as páginas de propriedades que podem ser exibidos na folha de propriedades do objeto.  
   
 ```
 STDMETHOD(GetPages)(CAUUID* pPages);
@@ -79,7 +79,7 @@ STDMETHOD(GetPages)(CAUUID* pPages);
 ### <a name="remarks"></a>Comentários  
  ATL usa o mapa de propriedade do objeto para recuperar cada CLSID.  
   
- Ver [ISpecifyPropertyPages::GetPages](http://msdn.microsoft.com/library/windows/desktop/ms687276) no Windows SDK.  
+ Ver [ISpecifyPropertyPages::GetPages](/windows/desktop/api/ocidl/nf-ocidl-ispecifypropertypages-getpages) no Windows SDK.  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)   

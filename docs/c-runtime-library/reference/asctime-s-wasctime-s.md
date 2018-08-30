@@ -40,16 +40,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4300d5fdab43cf4d22cf4e1fdee790f9d06d00d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b5414a59aac41bec29886b1aa83c20395b3e916
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403242"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208673"
 ---
 # <a name="asctimes-wasctimes"></a>asctime_s, _wasctime_s
 
-Converter um **tm** estrutura como uma cadeia de caracteres de tempo. Essas funções são versões de [asctime, wasctime](asctime-wasctime.md) com aprimoramentos de segurança conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Converter um **tm** estrutura em uma cadeia de caracteres de hora. Essas funções são versões de [asctime, wasctime](asctime-wasctime.md) com aprimoramentos de segurança conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -79,13 +79,13 @@ errno_t _wasctime_s(
 ### <a name="parameters"></a>Parâmetros
 
 *buffer*<br/>
-Um ponteiro para um buffer para armazenar o resultado de cadeia de caracteres. Essa função assume um ponteiro para um local de memória válido com um tamanho especificado por *numberOfElements*.
+Um ponteiro para um buffer para armazenar o resultado de cadeia de caracteres. Essa função assume um ponteiro para um local de memória válido com um tamanho especificado pelo *numberOfElements*.
 
 *numberOfElements*<br/>
 O tamanho do buffer usado para armazenar o resultado.
 
 *tmSource*<br/>
-Estrutura de hora/data. Essa função assume um ponteiro para um válida **struct** **tm** objeto.
+Estrutura de hora/data. Essa função assume um ponteiro para um válido **struct** **tm** objeto.
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -96,33 +96,33 @@ Zero se for bem-sucedido. Se houver uma falha, o manipulador de parâmetro invá
 |*buffer*|*numberOfElements*|*tmSource*|Valor de|Valor em *buffer*|
 |--------------|------------------------|----------|------------|-----------------------|
 |**NULL**|Qualquer|Qualquer|**EINVAL**|Não modificado|
-|Não **nulo** (aponta válido da memória)|0|Qualquer|**EINVAL**|Não modificado|
-|não **nulo**|0< tamanho < 26|Qualquer|**EINVAL**|Cadeia de caracteres vazia|
-|não **nulo**|>= 26|**NULL**|**EINVAL**|Cadeia de caracteres vazia|
-|não **nulo**|>= 26|Estrutura de hora inválida ou valores fora do intervalo para os componentes da hora|**EINVAL**|Cadeia de caracteres vazia|
+|Não **nulo** (aponta para a memória válida)|0|Qualquer|**EINVAL**|Não modificado|
+|Não **nulo**|0< tamanho < 26|Qualquer|**EINVAL**|Cadeia de caracteres vazia|
+|Não **nulo**|>= 26|**NULL**|**EINVAL**|Cadeia de caracteres vazia|
+|Não **nulo**|>= 26|Estrutura de hora inválida ou valores fora do intervalo para os componentes da hora|**EINVAL**|Cadeia de caracteres vazia|
 
 > [!NOTE]
 > Condições de erro para **wasctime_s** são semelhantes às **asctime_s** com a exceção de que o limite de tamanho é medido em palavras.
 
 ## <a name="remarks"></a>Comentários
 
-O **asctime** função converte uma hora armazenada como uma estrutura para uma cadeia de caracteres. O *tmSource* valor normalmente é obtido de uma chamada para **gmtime** ou **localtime**. Ambas as funções podem ser usadas para preencher um **tm** estrutura, conforme definido no momento. H.
+O **asctime** função converte uma hora armazenada como uma estrutura de cadeia de caracteres. O *tmSource* valor geralmente é obtido de uma chamada para **gmtime** ou **localtime**. Ambas as funções podem ser usadas para preencher uma **tm** estrutura, conforme definido no tempo. H.
 
 |membro timeptr|Valor|
 |--------------------|-----------|
-|**tm_hour**|Horas desde a meia-noite (0-23)|
+|**tm_hour**|Horas desde a meia-noite (0 a 23)|
 |**tm_isdst**|Positivo se o horário de verão estiver em vigor; 0 se o horário de verão não estiver em vigor; negativo se o status de horário de verão for desconhecido. A biblioteca em tempo de execução C presume as regras dos Estados Unidos para implementar o cálculo de DST (horário de verão).|
-|**tm_mday**|Dia do mês (1-31)|
-|**tm_min**|Minutos após a hora (0-59)|
-|**tm_mon**|Mês (0-11; Janeiro = 0)|
-|**tm_sec**|Segundos após o minuto (0-59)|
-|**tm_wday**|Dia da semana (0 a 6; Domingo = 0)|
-|**tm_yday**|Dia do ano (365 0; 1 de janeiro = 0)|
+|**tm_mday**|Dia do mês (1 a 31)|
+|**tm_min**|Minutos após a hora (0 a 59)|
+|**tm_mon**|Mês (0 – 11; Janeiro = 0)|
+|**tm_sec**|Segundos após o minuto (0 a 59)|
+|**tm_wday**|Dia da semana (0 – 6; Domingo = 0)|
+|**tm_yday**|Dia do ano (0 – 365; 1 de janeiro = 0)|
 |**tm_year**|Ano (ano atual menos 1900)|
 
 A cadeia de caracteres convertida também é ajustada de acordo com as configurações de fuso horário local. Consulte as funções [time, _time32, _time64](time-time32-time64.md), [_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md) e [localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md) para informações sobre a configuração da hora local e a função [_tzset](tzset.md) para informações sobre a definição do ambiente de fuso horário e variáveis globais.
 
-O resultado de cadeia de caracteres produzido por **asctime_s** contém exatamente 26 caracteres e tem o formato `Wed Jan 02 02:03:55 1980\n\0`. Um relógio de 24 horas é usado. Todos os campos têm uma largura constante. O caractere de nova linha e o caractere nulo ocupam as duas últimas posições da cadeia de caracteres. O valor passado como o segundo parâmetro deve ser pelo menos desse tamanho. Se for menos, um código de erro **EINVAL**, será retornado.
+O resultado de cadeia de caracteres produzido por **asctime_s** contém exatamente 26 caracteres e tem o formato `Wed Jan 02 02:03:55 1980\n\0`. Um relógio de 24 horas é usado. Todos os campos têm uma largura constante. O caractere de nova linha e o caractere nulo ocupam as duas últimas posições da cadeia de caracteres. O valor passado como o segundo parâmetro deve ser pelo menos desse tamanho. Se for menor, um código de erro **EINVAL**, será retornado.
 
 **wasctime_s** é uma versão de caractere largo de **asctime_s**. **wasctime_s** e **asctime_s** se comportam de forma idêntica caso contrário.
 
@@ -143,13 +143,13 @@ No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sob
 
 ## <a name="security"></a>Segurança
 
-Se o ponteiro de buffer não é **nulo** e o ponteiro não aponta para um buffer válido, a função substituirá o que está no local. Isso também pode resultar em uma violação de acesso.
+Se o ponteiro de buffer não for **nulo** e o ponteiro não aponta para um buffer válido, a função substituirá tudo o que está no local. Isso também pode resultar em uma violação de acesso.
 
-O [estouro de buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795) poderá ocorrer se o argumento de tamanho passado for maior que o tamanho real do buffer.
+O [estouro de buffer](/windows/desktop/SecBP/avoiding-buffer-overruns) poderá ocorrer se o argumento de tamanho passado for maior que o tamanho real do buffer.
 
 ## <a name="example"></a>Exemplo
 
-Este programa coloca a hora do sistema em inteiro longo **aclock**, converte-o para a estrutura **newtime** e converte-o em forma de cadeia de caracteres de saída, usando o **asctime_s**função.
+Esse programa coloca a hora do sistema no inteiro longo **aclock**, converte-o para a estrutura **newtime** e, em seguida, converte para o formulário de cadeia de caracteres para saída, usando o **asctime_s**função.
 
 ```C
 // crt_asctime_s.c

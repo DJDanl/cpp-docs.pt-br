@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43ee49dede1a71e8bd2a01e98a3bdd2dd53ef63d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: fbabd502ca6d9d81c569831f9dcb0b344523bb3e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42539353"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215322"
 ---
 # <a name="cmfccolorbutton-class"></a>Classe CMFCColorButton
 O `CMFCColorButton` e [classe CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) classes são usadas juntos para implementar um controle de seletor de cor.  
@@ -112,10 +112,10 @@ class CMFCColorButton : public CMFCButton
 |`m_bAltColorDlg`|Um booliano. Se for TRUE, o framework exibe a [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) caixa de diálogo de cor quando o *outros* botão é clicado, ou se for FALSE, a caixa de diálogo de cores do sistema. O valor padrão é TRUE. Para obter mais informações, consulte [CMFCColorButton::EnableOtherButton](#enableotherbutton).|  
 |`m_bAutoSetFocus`|Um booliano. Se for TRUE, a estrutura define o foco no menu de cor quando o menu é exibido ou se for FALSE, não altera o foco. O valor padrão é TRUE.|  
 |[CMFCColorButton::m_bEnabledInCustomizeMode](#m_benabledincustomizemode)|Indica se o modo de personalização está habilitado para o botão de cor.|  
-|`m_Color`|Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor. Contém a cor atualmente selecionada.|  
-|`m_ColorAutomatic`|Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor. Contém a cor padrão selecionado no momento.|  
-|`m_Colors`|Um [CArray](../../mfc/reference/carray-class.md) dos [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valores. Contém as cores disponíveis no momento.|  
-|`m_lstDocColors`|Um [CList](../../mfc/reference/clist-class.md) dos [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valores. Contém as cores do documento atual.|  
+|`m_Color`|Um [COLORREF](/windows/desktop/gdi/colorref) valor. Contém a cor atualmente selecionada.|  
+|`m_ColorAutomatic`|Um [COLORREF](/windows/desktop/gdi/colorref) valor. Contém a cor padrão selecionado no momento.|  
+|`m_Colors`|Um [CArray](../../mfc/reference/carray-class.md) dos [COLORREF](/windows/desktop/gdi/colorref) valores. Contém as cores disponíveis no momento.|  
+|`m_lstDocColors`|Um [CList](../../mfc/reference/clist-class.md) dos [COLORREF](/windows/desktop/gdi/colorref) valores. Contém as cores do documento atual.|  
 |`m_nColumns`|Um inteiro. Contém o número de colunas a serem exibidas na grade de cores em um menu de seleção de cor.|  
 |`m_pPalette`|Um ponteiro para um [CPalette](../../mfc/reference/cpalette-class.md). Contém as cores que estão disponíveis no menu de seleção de cor atual.|  
 |`m_pPopup`|Um ponteiro para um [classe CMFCColorPopupMenu](../../mfc/reference/cmfccolorpopupmenu-class.md) objeto. O menu de seleção de cor é exibido quando você clica no botão de cor.|  
@@ -439,7 +439,7 @@ virtual void UpdateColor(COLORREF color);
  [Classe CMFCButton](../../mfc/reference/cmfcbutton-class.md)   
  [Classe CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)   
  [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)   
- [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
+ [COLORREF](/windows/desktop/gdi/colorref)   
  [Classe CPalette](../../mfc/reference/cpalette-class.md)   
  [Classe CArray](../../mfc/reference/carray-class.md)   
  [Classe CList](../../mfc/reference/clist-class.md)   

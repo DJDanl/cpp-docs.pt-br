@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f2d01de9d2ee8fe585a55d89808bb76250c242b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a510d163075ccefbc61364cd7efa4003dfd0b8aa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540961"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208552"
 ---
 # <a name="cmfctoolbar-class"></a>Classe CMFCToolBar
 O `CMFCToolBar` é semelhante a classe [classe CToolBar](../../mfc/reference/ctoolbar-class.md), mas fornece suporte adicional para recursos de interface do usuário. Isso inclui planas, barras de ferramentas com imagens quentes, ícones grandes, botões de paginação, barras de ferramentas bloqueadas, controles rebar, texto sob imagens, imagens de plano de fundo e com guias barras de ferramentas. O `CMFCToolBar` classe também contém o suporte interno para personalização do usuário das barras de ferramentas e menus, arrastar e soltar entre barras de ferramentas e menus, botões da caixa de combinação, edite os botões de caixa, selecionadores de cores e botões de rolagem.
@@ -916,7 +916,7 @@ virtual BOOL Create(
  Um ponteiro para a janela pai da barra de ferramentas.  
   
  [in] *dwStyle*  
- O estilo de barra de ferramentas. Ver [controle de barra de ferramentas e os estilos de botão](http://msdn.microsoft.com/library/windows/desktop/bb760439) no SDK do Windows para a lista de estilos.  
+ O estilo de barra de ferramentas. Ver [controle de barra de ferramentas e os estilos de botão](/windows/desktop/Controls/toolbar-control-and-button-styles) no SDK do Windows para a lista de estilos.  
   
  [in] *nID*  
  A ID da janela filho da barra de ferramentas.  
@@ -950,7 +950,7 @@ virtual BOOL CreateEx(
  Estilos adicionais para criar o objeto de barra de controle inserido.  
   
  [in] *dwStyle*  
- O estilo de barra de ferramentas. Ver [controle de barra de ferramentas e os estilos de botão](http://msdn.microsoft.com/library/windows/desktop/bb760439) para obter uma lista de estilos apropriados.  
+ O estilo de barra de ferramentas. Ver [controle de barra de ferramentas e os estilos de botão](/windows/desktop/Controls/toolbar-control-and-button-styles) para obter uma lista de estilos apropriados.  
   
  [in] *rcBorders*  
  Um `CRect` objeto que especifica as larguras das bordas de janela da barra de ferramentas.  
@@ -1493,7 +1493,7 @@ static COLORREF GetHotTextColor();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) valor que representam a cor do texto realçado.  
+ Um [COLORREF](/windows/desktop/gdi/colorref) valor que representam a cor do texto realçado.  
   
 ### <a name="remarks"></a>Comentários  
  Chame [CMFCToolBar::SetHotTextColor](#sethottextcolor) para definir uma nova cor de texto para botões da barra de ferramentas realçados.  
@@ -2222,7 +2222,7 @@ BOOL IsOneRowWithSibling();
  TRUE se a barra de ferramentas e seu irmão são posicionados na mesma linha; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
- O [CMFCCustomizeButton::CreatePopupMenu](http://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) método chama esse método para determinar como mostrar as **personalizar** menu pop-up. Se esse método retornar TRUE, o framework exibe a **Mostrar botões em uma linha** botão. Caso contrário, exibe a estrutura de **Mostrar botões em duas linhas** botão.  
+ O [CMFCCustomizeButton::CreatePopupMenu](https://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) método chama esse método para determinar como mostrar as **personalizar** menu pop-up. Se esse método retornar TRUE, o framework exibe a **Mostrar botões em uma linha** botão. Caso contrário, exibe a estrutura de **Mostrar botões em duas linhas** botão.  
   
  Normalmente, você não precisará usar esse método. Para habilitar o **Mostrar botões em uma linha** ou **Mostrar botões em duas linhas** botões, chame [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
   

@@ -27,15 +27,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ea5da8b98c528eb6832c850e41b0a42c386f901
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0259716bb1106dbc5c2da5a3738cd78e5c8c877f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571742"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43202469"
 ---
 # <a name="ccomaggobject-class"></a>Classe CComAggObject
-Essa classe implementa a [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interface para um objeto agregado. Por definição, um objeto agregado está contido dentro de um objeto externo. O `CComAggObject` classe é semelhante ao [classe CComObject](../../atl/reference/ccomobject-class.md), exceto que ele expõe uma interface que é diretamente acessível para clientes externos.  
+Essa classe implementa a [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) interface para um objeto agregado. Por definição, um objeto agregado está contido dentro de um objeto externo. O `CComAggObject` classe é semelhante ao [classe CComObject](../../atl/reference/ccomobject-class.md), exceto que ele expõe uma interface que é diretamente acessível para clientes externos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -76,7 +76,7 @@ class CComAggObject : public IUnknown,
 |[CComAggObject::m_contained](#m_contained)|Delegados `IUnknown` chamadas para o externo desconhecido.|  
   
 ## <a name="remarks"></a>Comentários  
- `CComAggObject` implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) para um objeto agregado. `CComAggObject` tem seu próprio `IUnknown` interface, separado do que o objeto externo `IUnknown` de interface e mantém seu próprio contagem de referência.  
+ `CComAggObject` implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) para um objeto agregado. `CComAggObject` tem seu próprio `IUnknown` interface, separado do que o objeto externo `IUnknown` de interface e mantém seu próprio contagem de referência.  
   
  Para obter mais informações sobre agregação, consulte o artigo [conceitos básicos de objetos COM de ATL](../../atl/fundamentals-of-atl-com-objects.md).  
   
@@ -139,7 +139,7 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>Parâmetros  
  *PP*  
- [out] Um ponteiro para um **CComAggObject\<* * * contidos* **>** ponteiro. Se `CreateInstance` não for bem-sucedida, *pp* é definido como NULL.  
+ [out] Um ponteiro para um **CComAggObject\<**<em>contido</em> **>** ponteiro. Se `CreateInstance` não for bem-sucedida, *pp* é definido como NULL.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um valor padrão de HRESULT.  

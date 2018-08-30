@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4d1911a8bd8a7f3079497ec66ea1de59aff480a0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9d84eef4c91442eedc830fdee836dc5d950b5eae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604044"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209584"
 ---
 # <a name="creating-new-symbols"></a>Criando novos símbolos
 
@@ -45,7 +45,7 @@ Quando você inicia um novo projeto, talvez seja conveniente para mapear os nome
 
 Se você digitar um nome de símbolo que já existe, uma caixa de mensagem será exibida, informando que um símbolo com este nome já está definido. Não é possível definir duas ou mais símbolos com o mesmo nome, mas você pode definir símbolos diferentes com o mesmo valor numérico. Para obter mais informações, consulte [restrições de nome de símbolo](../windows/symbol-name-restrictions.md) e [restrições de valor de símbolo](../windows/symbol-value-restrictions.md).
 
-Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recursos a propriedades, e [passo a passo: usando recursos para localização com o ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).
+Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recurso a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir recursos cadeias de caracteres de propriedades.
 
 ## <a name="requirements"></a>Requisitos
 

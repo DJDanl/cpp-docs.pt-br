@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf610316c504e61d56556a20797f55d2906bca27
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea9d028454c408492378c345fb6d6c6d9dfc23cb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406908"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199582"
 ---
 # <a name="rtcseterrorfuncw"></a>_RTC_SetErrorFuncW
 
@@ -61,35 +61,48 @@ O endereço da função que manipulará verificações de erro em tempo de execu
 
 ## <a name="return-value"></a>Valor de retorno
 
-A função de erro definido anteriormente. ou **nulo** se não houver nenhuma função definida anteriormente.
+A função de erro definida anteriormente. ou **nulo** se não houver nenhuma função definida anteriormente.
 
 ## <a name="remarks"></a>Comentários
 
-No novo código, use somente **RTC_SetErrorFuncW**. **Rtc_seterrorfunc** está incluído somente na biblioteca para compatibilidade com versões anteriores.
+No novo código, use somente **RTC_SetErrorFuncW**. **Rtc_seterrorfunc** só é incluída na biblioteca para compatibilidade com versões anteriores.
 
-O **RTC_SetErrorFuncW** retorno de chamada se aplica somente ao componente que ele foi vinculado, mas não global.
+O **RTC_SetErrorFuncW** retorno de chamada se aplica somente ao componente que ele estava vinculado, mas não globalmente.
 
-Verifique se o endereço que você passa para **RTC_SetErrorFuncW** é que uma função de tratamento de erros válido.
+Certifique-se de que o endereço que você passa para **RTC_SetErrorFuncW** é o de um função de tratamento de erro válido.
 
-Se um erro foi atribuído um tipo de -1 usando [RTC_SetErrorType](rtc-seterrortype.md), a função de tratamento de erros não for chamado.
+Se um erro foi atribuído um tipo de -1 usando [RTC_SetErrorType](rtc-seterrortype.md), a função de tratamento de erro não é chamado.
 
 Antes de chamar essa função, você deve chamar primeiro uma das funções de inicialização de verificação de erro em tempo de execução. Para obter mais informações, consulte [Usando verificações de tempo de execução sem a Biblioteca em Tempo de Execução C](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library).
 
 **_RTC_error_fnW** é definido da seguinte forma:
 
-> **TypeDef int ( cdecl \*_RTC_error_fnW) (int** *errorType* **, wchar_t const \***  *filename* **, int***linenumber* **, wchar_t const \***  *moduleName* **, wchar_t const \***  *formato* **,...);** 
+```cpp
+typedef int (__cdecl * _RTC_error_fnW)(
+    int errorType,
+    const wchar_t * filename,
+    int linenumber,
+    const wchar_t * moduleName,
+    const wchar_t * format,
+    ... );
+```
 
 em que:
 
-*errorType* o tipo de erro que é especificado pelo [RTC_SetErrorType](rtc-seterrortype.md).
+*errorType*<br/>
+O tipo de erro que é especificado pelo [_RTC_SetErrorType](rtc-seterrortype.md).
 
-*nome de arquivo* o arquivo de origem onde a falha ocorreu, ou nulo se nenhuma informação de depuração está disponível.
+*filename*<br/>
+O arquivo de origem no qual a falha ocorreu ou nulo se nenhuma informação de depuração estiver disponível.
 
-*LineNumber* a linha em *filename* onde a falha ocorreu, ou 0 se não há informações de depuração.
+*linenumber*<br/>
+A linha em *filename* em que a falha ocorreu ou 0 se nenhuma informação de depuração estiver disponível.
 
-*moduleName* DLL ou nome do arquivo executável onde a falha ocorreu.
+*moduleName*<br/>
+A DLL ou o nome do executável em que a falha ocorreu.
 
-*formato* printf a cadeia de caracteres de estilo para exibir uma mensagem de erro, usando os parâmetros restantes. O primeiro argumento do VA_ARGLIST é o número de erro RTC que ocorreu.
+*format*<br/>
+A cadeia de estilo printf para exibir uma mensagem de erro usando os parâmetros restantes. O primeiro argumento do VA_ARGLIST é o número de erro RTC que ocorreu.
 
 Para obter um exemplo que mostra como usar **_RTC_error_fnW**, consulte [Personalização de verificações em tempo de execução nativo](/visualstudio/debugger/native-run-time-checks-customization).
 

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 623ba901d1998a899a443d235d65c6b205cfea4f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 424ee48e683bc22870900805aacd32f31fb12949
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853687"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218222"
 ---
 # <a name="coledbrecordview-class"></a>Classe COleDBRecordView
 Uma exibição que exibe registros de banco de dados em controles.  
@@ -56,7 +56,7 @@ class COleDBRecordView : public CFormView
 ## <a name="remarks"></a>Comentários  
  A exibição é um modo de exibição de formulário conectado diretamente a um `CRowset` objeto. O modo de exibição é criado a partir de um recurso de modelo de caixa de diálogo e exibe os campos do `CRowset` objeto nos controles do modelo de caixa de diálogo. O `COleDBRecordView` usa o objeto de troca de dados de caixa de diálogo (DDX) e a funcionalidade de navegação inserida no `CRowset`, para automatizar a movimentação de dados entre os controles no formulário e os campos do conjunto de linhas. `COleDBRecordView` também fornece uma implementação padrão para a movimentação para o primeiro, próximo, anterior ou o último registro e uma interface para atualizar o registro no momento no modo de exibição.  
   
- Você pode usar funções DDX com `COleDbRecordView` obter dados diretamente do conjunto de registros de banco de dados e exibi-lo em um controle de caixa de diálogo. Você deve usar o **funções DDX _\***  métodos (como `DDX_Text`), e não o **DDX_Field\***  funções (como `DDX_FieldText`) com `COleDbRecordView`. `DDX_FieldText` não funcionará com `COleDbRecordView` porque `DDX_FieldText` usa um argumento adicional do tipo **CRecordset\***  (para `CRecordView`) ou **CDaoRecordset\***  (para `CDaoRecordView`).  
+ Você pode usar funções DDX com `COleDbRecordView` obter dados diretamente do conjunto de registros de banco de dados e exibi-lo em um controle de caixa de diálogo. Você deve usar o `DDX_*` métodos (como `DDX_Text`), e não a `DDX_Field*` funções (como `DDX_FieldText`) com `COleDbRecordView`. `DDX_FieldText` não funcionará com `COleDbRecordView` porque `DDX_FieldText` usa um argumento adicional do tipo `CRecordset*` (para `CRecordView`) ou `CDaoRecordset*` (para `CDaoRecordView`).  
   
 > [!NOTE]
 >  Se você estiver trabalhando com as classes de objetos de acesso a dados (DAO) em vez de OLE DB consumidor classes de modelo, use a classe [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) em vez disso. Para obter mais informações, consulte o artigo [visão geral: banco de dados de programação](../../data/data-access-programming-mfc-atl.md).  

@@ -1,7 +1,7 @@
 ---
-title: Erro de Build prj0004 no projeto | Microsoft Docs
+title: Erro de Build prj0004 do projeto | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a10246f1d01441a84947a2fa426e962d49414782
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76847c0df06ec61c29f84efb46eca87683c86cb4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316287"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216060"
 ---
 # <a name="project-build-error-prj0004"></a>Erro de Build PRJ0004 no Projeto
-Não foi possível gerar a linha de comando para a ferramenta 'ferramenta'.  
-  
- Uma ou mais propriedades foram especificadas de forma a tornar a sintaxe de chamada para ***ferramenta*** ilegal:  
-  
--   Você pode ter especificado as macros mal formadas ou desconhecidas.  
-  
--   O computador pode ser pouco espaço livre em disco.  
-  
- Talvez você queira examinar as configurações para a ferramenta examinando o [página de propriedade de linha de comando](../../ide/command-line-property-pages.md).
+
+> Não foi possível gerar a linha de comando para o '*ferramenta*' ferramenta.
+
+Uma ou mais propriedades foram especificadas de forma a tornar a sintaxe da chamada para *ferramenta* ilegal:
+
+- Você pode ter especificado as macros mal formadas ou desconhecidas.
+
+- O computador pode ser baixa de espaço livre em disco.
+
+Talvez você queira examinar as configurações para a ferramenta observando os [página de propriedades de linha de comando](../../ide/command-line-property-pages.md).

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45624c094d7ae656c50b55cc932762b7f9aa6476
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 97e08ca5e8fcf78215edd80ae053c5576b6bc95f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854064"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207472"
 ---
 # <a name="cmfcpropertysheet-class"></a>Classe CMFCPropertySheet
 O `CMFCPropertySheet` classe dá suporte a uma folha de propriedades em que cada página de propriedades é indicada por uma guia de página, um botão de barra de ferramentas, um nó de controle de árvore ou um item de lista.  
@@ -91,9 +91,9 @@ class CMFCPropertySheet : public CPropertySheet
 |[CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol)|Inicializa a aparência do controle de planilha de propriedade atual.|  
 |[CMFCPropertySheet::OnActivatePage](#onactivatepage)|Chamado pelo framework quando uma página de propriedades está habilitada.|  
 |[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)|Chamado pelo framework para desenhar um cabeçalho de página de propriedade personalizada.|  
-|`CMFCPropertySheet::OnInitDialog`|Manipula o [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) mensagem. (Substitui [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|  
+|`CMFCPropertySheet::OnInitDialog`|Manipula o [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) mensagem. (Substitui [CPropertySheet::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|  
 |[CMFCPropertySheet::OnRemoveTreePage](#onremovetreepage)|Chamado pelo framework para remover uma página de propriedades de um controle de árvore.|  
-|`CMFCPropertySheet::PreTranslateMessage`|Converte as mensagens da janela antes de serem expedidas para o [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funções do Windows. (Substitui `CPropertySheet::PreTranslateMessage`.)|  
+|`CMFCPropertySheet::PreTranslateMessage`|Converte as mensagens da janela antes de serem expedidas para o [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funções do Windows. (Substitui `CPropertySheet::PreTranslateMessage`.)|  
 |[CMFCPropertySheet::RemoveCategory](#removecategory)|Remove um nó de controle de árvore.|  
 |[CMFCPropertySheet::RemovePage](#removepage)|Remove uma página de propriedades da folha de propriedades.|  
 |[CMFCPropertySheet::SetIconsList](#seticonslist)|Especifica a lista de imagens que são usados no controle de navegação do painel de tarefas do Outlook.|  

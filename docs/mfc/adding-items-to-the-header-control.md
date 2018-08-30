@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69d64265a94df2770e3a234ab992130b4809f9e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6450d99b8df436c64337e52fc14244ecbb0edfc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342729"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206141"
 ---
 # <a name="adding-items-to-the-header-control"></a>Adicionando itens ao controle de cabeçalho
-Depois de criar o controle de cabeçalho ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) em sua janela pai, adicione quantas "itens de cabeçalho" conforme necessário: normalmente um por coluna.  
+Depois de criar seu controle de cabeçalho ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) em sua janela pai, adicione quantos "itens de cabeçalho" conforme necessário: normalmente, uma por coluna.  
   
 ### <a name="to-add-a-header-item"></a>Para adicionar um item de cabeçalho  
   
-1.  Preparar um [HD_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247) estrutura.  
+1.  Preparar uma [HD_ITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) estrutura.  
   
-2.  Chamar [CHeaderCtrl::InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem), passando a estrutura.  
+2.  Chame [CHeaderCtrl::InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem), passando a estrutura.  
   
 3.  Repita as etapas 1 e 2 para itens adicionais.  
   
- Para obter mais informações, consulte [adicionar um Item a um controle de cabeçalho](http://msdn.microsoft.com/library/windows/desktop/bb775238) no SDK do Windows.  
+ Para obter mais informações, consulte [adicionando um Item a um controle de cabeçalho](/windows/desktop/Controls/header-controls) no SDK do Windows.  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando CHeaderCtrl](../mfc/using-cheaderctrl.md)   

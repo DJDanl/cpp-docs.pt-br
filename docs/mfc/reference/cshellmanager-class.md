@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0752d278f0459c3558021d02fbcddb6ba234df53
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 35f186822e00f74552e3bf8d52950f3c4bbe5b45
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852374"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207386"
 ---
 # <a name="cshellmanager-class"></a>Classe CShellManager
 Implementa vários métodos que permitem que você trabalhe com ponteiros para listas de identificadores (PIDLs).  
@@ -117,7 +117,7 @@ BOOL BrowseForFolder(
  O título da caixa de diálogo.  
   
  [in] *ulFlags*  
- Sinalizadores que especificam as opções para a caixa de diálogo. Ver [BROWSEINFO](http://msdn.microsoft.com/library/windows/desktop/bb773205) para a descrição detalhada.  
+ Sinalizadores que especificam as opções para a caixa de diálogo. Ver [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa) para a descrição detalhada.  
   
  [out] *piFolderImage*  
  Um ponteiro para o valor de inteiro em que o método grava o índice de imagem da pasta selecionada.  
@@ -153,7 +153,7 @@ LPITEMIDLIST ConcatenateItem(
  Um ponteiro para a nova lista de item, se a função for bem-sucedida, caso contrário, nulo.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método cria uma nova [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) grande o suficiente para conter as duas *pidl1* e *pidl2*. Em seguida, ele copia *pidl1* e *pidl2* para a nova lista.  
+ Esse método cria uma nova [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist) grande o suficiente para conter as duas *pidl1* e *pidl2*. Em seguida, ele copia *pidl1* e *pidl2* para a nova lista.  
   
 ##  <a name="copyitem"></a>  CShellManager::CopyItem  
  Copia uma lista de itens.  

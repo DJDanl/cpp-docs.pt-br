@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ea43fefabe43bec8a5bf9b00404491a405e5416
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: d9e90570e783b2c42081da4854d54a65d1bdb9b6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852975"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208860"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>Classe CMFCPropertyGridFontProperty
 O `CMFCPropertyGridFileProperty` classe dá suporte a um item de controle de lista de propriedade que abre uma caixa de diálogo de seleção de fonte.  
@@ -90,7 +90,7 @@ CMFCPropertyGridFontProperty(
  Uma estrutura de fonte lógica que especifica os atributos da fonte.  
   
  [in] *dwFontDialogFlags*  
- Estilos que são aplicados à caixa de diálogo de fonte que é exibida quando você clicar no botão de lista suspensa de valor de propriedade. O valor padrão é a combinação bit a bit (OR) de CF_EFFECTS e CF_SCREENFONTS. Para obter mais informações, consulte o *sinalizadores* parâmetro do [CHOOSEFONT estrutura](http://msdn.microsoft.com/library/windows/desktop/ms646832).  
+ Estilos que são aplicados à caixa de diálogo de fonte que é exibida quando você clicar no botão de lista suspensa de valor de propriedade. O valor padrão é a combinação bit a bit (OR) de CF_EFFECTS e CF_SCREENFONTS. Para obter mais informações, consulte o *sinalizadores* parâmetro do [CHOOSEFONT estrutura](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).  
   
  [in] *lpszDescr*  
  Descrição da propriedade da fonte. O valor padrão é NULL.  
@@ -129,7 +129,7 @@ LPLOGFONT GetLogFont();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para um [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) estrutura que descreve a fonte selecionada.  
+ Um ponteiro para um [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) estrutura que descreve a fonte selecionada.  
   
 ### <a name="remarks"></a>Comentários  
   

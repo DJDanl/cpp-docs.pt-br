@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1696389ce3dc40c5d02ec660ebaeb6bf3e6c3ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d7aff43577a4b1aa55fc0725ba4753228e334000
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345229"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199655"
 ---
 # <a name="notifications-sent-by-animation-controls"></a>Notificações enviadas por controles de animação
-Um controle de animação ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) envia os dois tipos diferentes de mensagens de notificação. As notificações são enviadas na forma de [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) mensagens.  
+Um controle de animação ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) envia dois tipos diferentes de mensagens de notificação. As notificações são enviadas na forma de [WM_COMMAND](/windows/desktop/menurc/wm-command) mensagens.  
   
- O [ACN_START](http://msdn.microsoft.com/library/windows/desktop/bb761891) mensagem é enviada quando o controle de animação começou a ser reproduzida um clipe. O [ACN_STOP](http://msdn.microsoft.com/library/windows/desktop/bb761893) mensagem é enviada quando o controle de animação é concluída ou interrompido reproduzir um clipe.  
+ O [ACN_START](/windows/desktop/Controls/acn-start) mensagem é enviada quando o controle de animação foi iniciada, reproduzindo um clipe. O [ACN_STOP](/windows/desktop/Controls/acn-stop) mensagem é enviada quando o controle de animação tiver concluído ou interrompido reproduzindo um clipe.  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando CAnimateCtrl](../mfc/using-canimatectrl.md)   

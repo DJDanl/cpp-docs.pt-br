@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc498b96dad089276b248fbb2e420dde3c0bc514
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: e660144808c3e9abf8f8c090b9af5ff2eb73d9e9
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027132"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43211799"
 ---
 # <a name="cdocobjectserveritem-class"></a>Classe de CDocObjectServerItem
 Verbos de servidor OLE especificamente para servidores DocObject.  
@@ -62,7 +62,7 @@ class CDocObjectServerItem : public COleServerItem
 |[CDocObjectServerItem::OnShow](#onshow)|Chamado pelo framework para tornar o DocObject item in loco Active Directory. Se o item não for DocObject, chamadas [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|  
   
 ## <a name="remarks"></a>Comentários  
- `CDocObjectServerItem` Define as funções de membro substituíveis: [OnHide](#onhide), [AoAbrir](http://msdn.microsoft.com/7a9b1363-6ad8-4732-9959-4e35c07644fd), e [OnShow](#onshow).  
+ `CDocObjectServerItem` Define as funções de membro substituíveis: [OnHide](#onhide), [AoAbrir](https://msdn.microsoft.com/7a9b1363-6ad8-4732-9959-4e35c07644fd), e [OnShow](#onshow).  
   
  Para usar `CDocObjectServerItem`, garantem que o [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) substituir em seu `COleServerDoc`-classe derivada retorna um novo `CDocObjectServerItem` objeto. Se você precisar alterar qualquer funcionalidade no item, você pode criar uma nova instância da sua própria `CDocObjectServerItem`-classe derivada.  
   

@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97548fca6b47e8d765eb7744a86ab0d4cfa27b17
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 50bb4061a13a9057a695b25ca32421c4dd7ed88b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337470"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207818"
 ---
 # <a name="cframewndex-class"></a>Classe CFrameWndEx
 Implementa a funcionalidade de um Windows único sobreposta de interface de documento (SDI) ou a janela de quadro pop-up e fornece membros para gerenciar a janela. Ele estende o [CFrameWnd](../../mfc/reference/cframewnd-class.md) classe.  
@@ -250,7 +250,7 @@ class CFrameWndEx : public CFrameWnd
 |[CFrameWndEx::OnCreate](#oncreate)|Chamado pelo framework depois que o quadro for criado.|  
 |[CFrameWndEx::OnDestroy](#ondestroy)|Chamado pelo framework quando o quadro é destruído.|  
 |[CFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Chamado pelo framework quando o aplicativo desenha a imagem associada a um item de menu.|  
-|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Chamado pelo framework quando um `CMFCPopupMenu` processos de objeto um [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) mensagem.|  
+|[CFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Chamado pelo framework quando um `CMFCPopupMenu` processos de objeto um [WM_PAINT](/windows/desktop/gdi/wm-paint) mensagem.|  
 |[CFrameWndEx::OnDWMCompositionChanged](#ondwmcompositionchanged)|Chamado pelo framework quando a composição do Gerenciador de janelas da área de trabalho (DWM) foi habilitada ou desabilitada.|  
 |[CFrameWndEx::OnExitSizeMove](#onexitsizemove)|Chamado pelo framework quando o quadro para mover ou redimensionar.|  
 |[CFrameWndEx::OnGetMinMaxInfo](#ongetminmaxinfo)|Chamado pelo framework quando o quadro é redimensionado para definir limites de dimensão da janela.|  
@@ -358,7 +358,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
  Um identificador para uma estrutura que contém as posições de várias janelas. .  
   
 ### <a name="remarks"></a>Comentários  
- A estrutura hdwp é inicializada, o [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) método.  
+ A estrutura hdwp é inicializada, o [BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672) método.  
   
 ##  <a name="delayupdateframemenu"></a>  CFrameWndEx::DelayUpdateFrameMenu  
  Define o menu de quadro e, em seguida, atualiza-lo quando o processamento de comando está ocioso.  
@@ -1093,7 +1093,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *lpMMI*  
- Ponteiro para um [MINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632605) estrutura.  
+ Ponteiro para um [MINMAXINFO](https://msdn.microsoft.com/library/windows/desktop/ms632605) estrutura.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1129,7 +1129,7 @@ afx_msg void OnLButtonDown(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *nFlags*  
- Indica se o usuário pressionou teclas modificadoras. Para os valores possíveis, consulte o parâmetro *wParam* na [WM_LBUTTONDOWN notificação](http://msdn.microsoft.com/library/windows/desktop/ms645607).  
+ Indica se o usuário pressionou teclas modificadoras. Para os valores possíveis, consulte o parâmetro *wParam* na [WM_LBUTTONDOWN notificação](/windows/desktop/inputdev/wm-lbuttondown).  
   
  [in] *ponto*  
  Especifica a x e coordenadas y do ponteiro, relativo ao canto superior esquerdo da janela.  
@@ -1147,7 +1147,7 @@ afx_msg void OnLButtonUp(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *nFlags*  
- Indica se o usuário pressionou teclas modificadoras. Para os valores possíveis, consulte o parâmetro *wParam* na [WM_LBUTTONUP notificação](http://msdn.microsoft.com/library/windows/desktop/ms645608).  
+ Indica se o usuário pressionou teclas modificadoras. Para os valores possíveis, consulte o parâmetro *wParam* na [WM_LBUTTONUP notificação](/windows/desktop/inputdev/wm-lbuttonup).  
   
  [in] *ponto*  
  Especifica a x e coordenadas y do ponteiro, relativo ao canto superior esquerdo da janela.  
@@ -1221,7 +1221,7 @@ afx_msg void OnMouseMove(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *nFlags*  
- Indica se um usuário pressionada as teclas modificadoras. Para os valores possíveis, consulte o parâmetro *wParam* na [WM_MOUSEMOVE notificação](http://msdn.microsoft.com/library/windows/desktop/ms645616).  
+ Indica se um usuário pressionada as teclas modificadoras. Para os valores possíveis, consulte o parâmetro *wParam* na [WM_MOUSEMOVE notificação](/windows/desktop/inputdev/wm-mousemove).  
   
  [in] *ponto*  
  Especifica a x e y coordenadas do ponteiro relativa ao canto superior esquerdo da janela.  
@@ -1290,7 +1290,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
  O local do ponteiro em coordenadas da tela.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Valor enumerado de ocorrência de um ponteiro. Para obter uma lista de valores possíveis, consulte [notificação WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618).  
+ Valor enumerado de ocorrência de um ponteiro. Para obter uma lista de valores possíveis, consulte [notificação WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest).  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1305,7 +1305,7 @@ afx_msg void OnNcMouseMove(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *nHitTest*  
- Valor enumerado de ocorrência de um ponteiro. Para obter uma lista de valores possíveis, consulte [notificação WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618).  
+ Valor enumerado de ocorrência de um ponteiro. Para obter uma lista de valores possíveis, consulte [notificação WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest).  
   
  [in] *ponto*  
  O local do ponteiro em coordenadas da tela.  
@@ -1369,7 +1369,7 @@ afx_msg LRESULT OnPowerBroadcast(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *wp*  
- O evento de gerenciamento de energia. Para obter uma lista de valores possíveis, consulte [mensagem WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247).  
+ O evento de gerenciamento de energia. Para obter uma lista de valores possíveis, consulte [mensagem WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast).  
   
  [in] *lp*  
  Este parâmetro não é usado.  
@@ -1442,7 +1442,7 @@ afx_msg LRESULT OnSetText(
  Ponteiro para o texto da janela.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retornar o valor de uma chamada para [DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572).  
+ Retornar o valor de uma chamada para [DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572).  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1518,7 +1518,7 @@ afx_msg void OnSize(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *nType*  
- O tipo de redimensionamento. Para os valores possíveis, consulte o parâmetro *wParam* na [WM_SIZE notificação](http://msdn.microsoft.com/library/windows/desktop/ms632646).  
+ O tipo de redimensionamento. Para os valores possíveis, consulte o parâmetro *wParam* na [WM_SIZE notificação](/windows/desktop/winmsg/wm-size).  
   
  [in] *cx*  
  Nova largura do quadro, em pixels.  
@@ -1539,7 +1539,7 @@ afx_msg void OnSizing(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *fwSide*  
- A borda do quadro que é movido. Consulte o parâmetro *wParam* na [WM_SIZING notificação](http://msdn.microsoft.com/library/windows/desktop/ms632647).  
+ A borda do quadro que é movido. Consulte o parâmetro *wParam* na [WM_SIZING notificação](/windows/desktop/winmsg/wm-sizing).  
   
  [no, out] *pRect*  
  Ponteiro para um [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [RECT](../../mfc/reference/rect-structure1.md) estrutura que contém as coordenadas do quadro.  
@@ -1896,10 +1896,10 @@ virtual void WinHelp(
   
 ### <a name="parameters"></a>Parâmetros  
  *dwData*  
- Dados que dependem de *nCmd* parâmetro. Para obter uma lista de valores possíveis, consulte [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
+ Dados que dependem de *nCmd* parâmetro. Para obter uma lista de valores possíveis, consulte [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa).  
   
  *nCmd*  
- O comando de Ajuda. Para obter uma lista de valores possíveis, consulte [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267).  
+ O comando de Ajuda. Para obter uma lista de valores possíveis, consulte [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa).  
   
 ### <a name="remarks"></a>Comentários  
   

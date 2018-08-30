@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa450436bee52aa9cd13803e3bf51c6a500fa0e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 43d6d1ace739c50d471c7e57b8670d010319ae1a
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883369"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196041"
 ---
 # <a name="cominterfaceentry-macros"></a>Macros COM_INTERFACE_ENTRY  
  Essas macros inserir interfaces de um objeto em seu mapa COM, para que eles possam ser acessados por `QueryInterface`. A ordem das entradas no mapa de COM é que as interfaces de ordem serão verificadas para um IID correspondente durante `QueryInterface`.  
@@ -48,7 +48,7 @@ ms.locfileid: "37883369"
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|Mesmo que [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), exceto que consultar qualquer IID resulta na consulta de encaminhamento *punk*.|  
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|Mesmo que [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), exceto se *punk* for NULL, ele cria automaticamente a agregação descrita pelo *clsid*.|  
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|Mesmo que [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), exceto que consultar qualquer IID resulta na consulta de encaminhamento *punk*e se *punk* for NULL, a criação automática a agregação descrita pelo *clsid*.|  
-|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Faz com que o programa chamar [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297) quando a interface especificada é consultada para.|  
+|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Faz com que o programa chamar [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297) quando a interface especificada é consultada para.|  
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|Salva os dados específicos à interface para todas as instâncias.|  
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|Expõe as interfaces destacáveis.|  
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Processa o mapa COM da classe base quando o processamento atinge essa entrada no mapa COM.|  
@@ -229,7 +229,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
  [!code-cpp[NVC_ATL_Windowing#115](../../atl/codesnippet/cpp/com-map-macros_7.h)]  
   
 ##  <a name="com_interface_entry_break"></a>  COM_INTERFACE_ENTRY_BREAK  
- Faz com que o programa chamar [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297) quando a interface especificada é consultada para.  
+ Faz com que o programa chamar [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297) quando a interface especificada é consultada para.  
   
 ```
 COM_INTERFACE_ENTRY_BREAK(x)

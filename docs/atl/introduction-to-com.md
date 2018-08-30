@@ -1,5 +1,5 @@
 ---
-title: Introdução ao COM | Microsoft Docs
+title: Introdução a COM | Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
 ms.technology:
@@ -14,31 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 938d0c45cae5ec9a2988f77f539af1a3d5513b83
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5a408ecb1a96aab284a4ac8c7cdd59909ed7c0ea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356169"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216517"
 ---
-# <a name="introduction-to-com"></a>Introdução ao COM
-COM é fundamentais "modelo de objeto" no qual OLE e controles ActiveX são criados. COM permite que um objeto expor sua funcionalidade a outros componentes e aplicativos do host. Ele define como o objeto expõe em si e como essa exposição funciona em processos e em redes. COM também define o ciclo de vida do objeto.  
+# <a name="introduction-to-com"></a>Introdução a COM
+O COM é fundamentais "modelo de objeto" em quais controles ActiveX e OLE são criados. COM permite que um objeto exponha sua funcionalidade a outros componentes e aplicativos host. Ele define como expõe o objeto em si e como essa exposição funciona entre processos e entre redes. COM também define o ciclo de vida do objeto.  
   
  Fundamentais para COM são esses conceitos:  
   
 -   [Interfaces](../atl/interfaces-atl.md) — o mecanismo pelo qual um objeto expõe sua funcionalidade.  
   
--   [IUnknown](../atl/iunknown.md) — a interface básica em que todos os outros são baseados. Ele implementa a contagem de referência e a interface de consulta mecanismos em execução usando COM.  
+-   [IUnknown](../atl/iunknown.md) — a interface básica na qual todos os outros são baseados. Ele implementa a contagem de referência e a interface consultando os mecanismos de execução usando COM.  
   
--   [Contagem de referência](../atl/reference-counting.md) — a técnica pelo qual um objeto (ou, estritamente, uma interface) decide quando ele não está mais sendo usado e, portanto, é livre para remover a mesmo.  
+-   [Contagem de referência](../atl/reference-counting.md) — a técnica pela qual um objeto (ou, estritamente, uma interface) decide quando ele não está sendo usado e, portanto, está livre para remover a mesmo.  
   
 -   [QueryInterface](../atl/queryinterface.md) — o método usado para consultar um objeto para uma determinada interface.  
   
--   [Marshaling](../atl/marshaling.md) — o mecanismo que permite que objetos sejam usados por thread, processo e limites de rede, permitindo a independência de localização.  
+-   [Marshaling](../atl/marshaling.md) — o mecanismo que permite que objetos sejam usados por thread, processo e limites de rede, permitindo a independência de local.  
   
 -   [Agregação](../atl/aggregation.md) — uma maneira na qual um objeto pode fazer uso de outro.  
   
 ## <a name="see-also"></a>Consulte também  
  [Introdução ao COM e ATL](../atl/introduction-to-com-and-atl.md)   
- [O modelo de objeto do componente](http://msdn.microsoft.com/library/windows/desktop/ms694363)
+ [O modelo de objeto de componente](/windows/desktop/com/the-component-object-model)
 

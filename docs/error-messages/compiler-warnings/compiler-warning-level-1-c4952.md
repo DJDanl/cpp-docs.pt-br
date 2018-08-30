@@ -1,7 +1,7 @@
 ---
-title: Compilador (nível 1) de aviso C4952 | Microsoft Docs
+title: Compilador aviso (nível 1) C4952 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/27/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42696dfae816742c958bca23e25e311e834dd62a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f62f4c18380d89eb516a5fa49ef63e92ab79a6f2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292136"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207145"
 ---
-# <a name="compiler-warning-level-1-c4952"></a>Compilador C4952 de aviso (nível 1)
-'function': nenhum dado de perfil encontrado no banco de dados do programa 'pgd_file'  
-  
- Ao usar [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), o compilador detectou um módulo de entrada foi recompilado após `/LTCG:PGINSTRUMENT` e tem uma nova função (***função***) presente.  
-  
- Esse aviso é informativo. Para resolver este aviso, execute `/LTCG:PGINSTRUMENT`, todos os teste de refazer é executado e executar `/LTCG:PGOPTIMIZE`.  
-  
- Esse aviso deve ser substituído com um erro se `/LTCG:PGOPTIMIZE` tenha sido usada.
+# <a name="compiler-warning-level-1-c4952"></a>Compilador aviso (nível 1) C4952
+
+> '*função*': nenhum dado de perfil encontrado no banco de dados do programa '*pgd_file*'
+
+Ao usar [/LTCG:PGUPDATE](../../build/reference/ltcg-link-time-code-generation.md), o compilador detectou um módulo de entrada foi recompilado após `/LTCG:PGINSTRUMENT` e tem uma nova função (*função*) presente.
+
+Esse aviso é informativo. Para resolver este aviso, execute `/LTCG:PGINSTRUMENT`, todos os teste de refazer é executado e executar `/LTCG:PGOPTIMIZE`.
+
+Esse aviso deve ser substituído com um erro se `/LTCG:PGOPTIMIZE` tivesse sido usada.

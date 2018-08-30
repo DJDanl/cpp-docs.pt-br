@@ -1,5 +1,5 @@
 ---
-title: 'Área de transferência: Usando o mecanismo da área de transferência OLE | Microsoft Docs'
+title: 'Área de transferência: Usando o mecanismo de área de transferência OLE | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4940c614046e3ca407887e05e84c811a156d9c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d37618dccabd576a67c8b82a8b8ab38246254070
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342531"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214697"
 ---
 # <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Área de Transferência: usando o mecanismo Área de Transferência OLE
-OLE usa os formatos padrão e alguns formatos OLE específico para a transferência de dados por meio da área de transferência.  
+OLE usa os formatos padrão e alguns formatos específicos de OLE para a transferência de dados por meio da área de transferência.  
   
- Quando você recorta ou copia dados de um aplicativo, os dados são armazenados na área de transferência a ser usado posteriormente em operações de colagem. Esses dados estão em uma variedade de formatos. Quando um usuário opta por colar os dados da área de transferência, o aplicativo pode escolher qual esses formatos para uso. O aplicativo deve ser escrito para escolher o formato que fornece a maioria das informações, a menos que o usuário solicitar especificamente para um determinado formato, Colar especial. Antes de continuar, talvez você queira ler a [objetos de dados e fontes de dados (OLE)](../mfc/data-objects-and-data-sources-ole.md) tópicos. Eles descrevem os conceitos básicos de como funcionam as transferências de dados e como implementá-los em seus aplicativos.  
+ Quando você recorta ou copia dados de um aplicativo, os dados são armazenados na área de transferência a ser usado posteriormente em operações de colagem. Esses dados estão em uma variedade de formatos. Quando um usuário escolhe colar dados da área de transferência, o aplicativo pode escolher qual desses formatos para usar. O aplicativo deve ser escrito para escolher o formato que fornece a maioria das informações, a menos que o usuário solicitar especificamente para um determinado formato, usando Colar especial. Antes de continuar, talvez você queira ler a [objetos de dados e fontes de dados (OLE)](../mfc/data-objects-and-data-sources-ole.md) tópicos. Eles descrevem os conceitos básicos de como funcionam as transferências de dados e como implementá-los em seus aplicativos.  
   
- Windows define um número de formatos padrão que pode ser usado para a transferência de dados por meio da área de transferência. Isso inclui metarquivos, texto, bitmaps e outros. OLE define um número de formatos de OLE específico. Para aplicativos que precisam de mais detalhes e fornecido por esses formatos padrão, é uma boa ideia para registrar seus próprios formatos personalizados de área de transferência. Use a função de API do Win32 [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) para fazer isso.  
+ Windows define um número de formatos padrão que pode ser usado para a transferência de dados por meio da área de transferência. Isso inclui metarquivos, texto, bitmaps e outras pessoas. OLE define um número de formatos de OLE específico. Para aplicativos que precisam de mais detalhes e fornecido por esses formatos padrão, é uma boa ideia registrar seus próprios formatos personalizados de área de transferência. Use a função de API do Win32 [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) para fazer isso.  
   
- Por exemplo, o Microsoft Excel registra um formato personalizado de planilhas. Esse formato executa muito mais informações que, por exemplo, faz de um bitmap. Quando essa data será colado em um aplicativo que ofereça suporte ao formato de planilha, todas as fórmulas e os valores da planilha são mantidos e podem ser atualizados, se necessário. O Microsoft Excel também coloca os dados na área de transferência em formatos para que ele pode ser colado como um item OLE. Nenhum contêiner de documento OLE pode colar essas informações como um item inserido. Este item inserido pode ser alterado usando o Microsoft Excel. A área de transferência também contém um bitmap simples da imagem do intervalo selecionado na planilha. Isso também pode ser colado em contêineres de documento OLE ou editores de bitmap, como o Paint. No caso de um bitmap, no entanto, não é possível manipular os dados como uma planilha.  
+ Por exemplo, o Microsoft Excel registra um formato personalizado para planilhas. Esse formato transporta informações muito mais que, por exemplo, um bitmap faz. Quando esses dados são colados em um aplicativo que dá suporte ao formato de planilha, todas as fórmulas e os valores da planilha são mantidos e podem ser atualizados, se necessário. O Microsoft Excel também coloca os dados na área de transferência em formatos para que ele pode ser colado como um item OLE. Qualquer contêiner de documento OLE pode colar essas informações como um item inserido. Este item inserido pode ser alterado usando o Microsoft Excel. A área de transferência também contém um bitmap simples da imagem do intervalo selecionado na planilha. Isso também pode ser colado em contêineres de documento OLE ou editores de bitmap, como tinta. No caso de um bitmap, no entanto, não há nenhuma maneira de manipular os dados como uma planilha.  
   
- Para recuperar o número máximo de informações da área de transferência, aplicativos devem verificar esses formatos personalizados antes de colar os dados da área de transferência.  
+ Para recuperar a quantidade máxima de informações da área de transferência, os aplicativos devem verificar para esses formatos personalizados antes de colar os dados da área de transferência.  
   
- Por exemplo, para habilitar o comando Cortar, você pode escrever um manipulador de algo semelhante ao seguinte:  
+ Por exemplo, para habilitar o comando Recortar, você pode escrever um manipulador de algo semelhante ao seguinte:  
   
  [!code-cpp[NVC_MFCListView#3](../atl/reference/codesnippet/cpp/clipboard-using-the-ole-clipboard-mechanism_1.cpp)]  
   

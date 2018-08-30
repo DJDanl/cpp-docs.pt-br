@@ -14,29 +14,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e54327344d61cc70e68b528c5f88f3d30f5d185a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1eaf9417f4d2b3b825933589556055772b84e057
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367853"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197407"
 ---
 # <a name="how-to-build-registration-free-com-components"></a>Como compilar componentes COM sem registro
-OS componentes com sem registro são componentes COM que tenham manifestos incorporados as DLLs.  
+Componentes do COM sem registro são componentes COM que tem criados as DLLs de manifestos.  
   
-### <a name="to-build-manifests-into-com-components"></a>Para criar os manifestos em componentes COM  
+### <a name="to-build-manifests-into-com-components"></a>Para compilar manifestos em componentes COM  
   
 1.  Abra as páginas de propriedades do projeto para o componente COM.  
   
 2.  Expanda o **propriedades de configuração** nó e, em seguida, expanda o **ferramenta de manifesto** nó.  
   
-3.  Selecione o **de entrada e saída** página de propriedades e defina o **Inserir manifesto** propriedade igual a **Sim**.  
+3.  Selecione o **de entrada e saída** página de propriedades e defina as **Inserir manifesto** propriedade igual a **Sim**.  
   
 4.  Clique em **OK**.  
   
 5.  Compile a solução.  
   
 ## <a name="see-also"></a>Consulte também  
- [Aplicativos isolados](http://msdn.microsoft.com/library/aa375190)   
- [Sobre Assemblies lado a lado](http://msdn.microsoft.com/library/ff951640)   
+ [Aplicativos isolados](/windows/desktop/SbsCs/isolated-applications)   
+ [Sobre Assemblies lado a lado](/windows/desktop/SbsCs/about-side-by-side-assemblies-)   
  [Como compilar aplicativos isolados para consumir componentes COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaaad259fa0c864a72feaff3222f683563c8ca91
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 1b9dc87340d567f876d91abc4d8ebfa1d6353cad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852302"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43209981"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Conceitos básicos de objetos COM da ATL
 A ilustração a seguir descreve a relação entre as classes e interfaces que são usadas para definir um objeto COM ATL.  
@@ -40,7 +40,7 @@ A ilustração a seguir descreve a relação entre as classes e interfaces que s
   
  Porque o cliente não precisa passar o objeto externo para interagir com o objeto interno, os objetos agregados são geralmente mais eficientes. Além disso, o objeto externo não precisa conhecer a funcionalidade do objeto agregado, considerando que a interface do objeto agregado está diretamente disponível para o cliente. No entanto, nem todos os objetos podem ser agregados. Para um objeto a ser agregada, ele precisa ser projetado com a agregação em mente.  
   
- Implementa ATL [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) em duas fases:  
+ Implementa ATL [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) em duas fases:  
   
 -   [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), ou [CComPolyObject](../atl/reference/ccompolyobject-class.md) implementa o `IUnknown` métodos.  
   

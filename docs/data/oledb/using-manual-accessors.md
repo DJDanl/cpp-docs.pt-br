@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 236fd1809fa012262f3a98f0f1856f3bbff6b454
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: dceca7ead0910474b2277538066d3cbae4bc791e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340858"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213822"
 ---
 # <a name="using-manual-accessors"></a>Usando acessadores manuais
 Há quatro coisas a fazer ao lidar com um comando desconhecido:  
@@ -53,7 +53,7 @@ Há quatro coisas a fazer ao lidar com um comando desconhecido:
   
 6.  Chamar `GetNextResult` para determinar se mais conjuntos de linhas estão disponíveis. Repita as etapas 2 a 5.  
   
- Para obter um exemplo de um acessador manual, consulte `CDBListView::CallProcedure` no [DBVIEWER](http://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) exemplo.  
+ Para obter um exemplo de um acessador manual, consulte `CDBListView::CallProcedure` no [DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) exemplo.  
   
 ## <a name="see-also"></a>Consulte também  
  [Usando acessadores](../../data/oledb/using-accessors.md)

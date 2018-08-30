@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0ed609de9d36b602bf525a9643534cf5d1d55a8
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3c77b232fe87a722194a21d60457a01051827a7e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963028"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214160"
 ---
 # <a name="deque-class"></a>Classe deque
 
@@ -118,9 +118,11 @@ class deque
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo* tipo de dados do elemento a ser armazenado no deque.
+*Tipo*<br/>
+ O tipo de dados do elemento a ser armazenado no deque.
 
-*Alocador* o tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre o deque alocação e desalocação de memória. Esse argumento é opcional e o valor padrão é **alocador\<tipo > * * *.*
+*Alocador*<br/>
+ O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre a alocação e desalocação de memória do deque. Esse argumento é opcional e o valor padrão é **allocator\<tipo >**.
 
 ## <a name="remarks"></a>Comentários
 
@@ -243,15 +245,20 @@ void assign(initializer_list<Type> IList);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Primeiro* a posição do primeiro elemento no intervalo de elementos a ser copiado do deque de argumentos.
+*Primeiro*<br/>
+ Posição do elemento primeiro no intervalo de elementos a ser copiado do deque de argumentos.
 
-*Última* posição do primeiro elemento além do intervalo de elementos a ser copiado do deque de argumentos.
+*último*<br/>
+ Posição do primeiro elemento após o intervalo de elementos a ser copiado do deque de argumentos.
 
-*Contagem de* o número de cópias de um elemento que está sendo inserido no deque.
+*Contagem*<br/>
+ O número de cópias de um elemento que está sendo inserido no deque.
 
-*Val* o valor do elemento que está sendo inserido no deque.
+*Val*<br/>
+ O valor do elemento que está sendo inserido no deque.
 
-*IList* a initializer_list que está sendo inserido no deque.
+*IList*<br/>
+ A initializer_list que está sendo inserida no deque.
 
 ### <a name="remarks"></a>Comentários
 
@@ -325,7 +332,8 @@ const_reference at(size_type pos) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS* o subscrito (ou o número de posição) do elemento a ser referenciado no deque.
+*POS*<br/>
+ O subscrito (ou o número da posição) do elemento a ser referenciado no deque.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1337,11 +1345,14 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Where* posição do elemento a ser removido do deque.
+*_Where*<br/>
+ Posição do elemento a ser removido do deque.
 
-*primeiro* posição do primeiro elemento removido do deque.
+*first*<br/>
+ Posição do primeiro elemento removido do deque.
 
-*última* posição logo após o último elemento removido do deque.
+*last*<br/>
+ Posição imediatamente após o último elemento removido do deque.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1591,7 +1602,8 @@ const_reference operator[](size_type pos) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS* a posição do elemento de deque a ser referenciado.
+*POS*<br/>
+ A posição do elemento de deque a ser referenciada.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2086,9 +2098,11 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Newsize* o novo tamanho do deque.
+*_Newsize*<br/>
+ O novo tamanho do deque.
 
-*Val* o valor dos novos elementos a serem adicionados ao deque se o novo tamanho for maior do que o tamanho original. Se o valor for omitido, os novos elementos receberão o valor padrão para a classe.
+*Val*<br/>
+ O valor dos novos elementos a serem adicionados ao deque se o novo tamanho for maior que o tamanho original. Se o valor for omitido, os novos elementos receberão o valor padrão para a classe.
 
 ### <a name="remarks"></a>Comentários
 
@@ -2263,9 +2277,11 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* o deque que fornece os elementos a serem trocados ou o deque cujos elementos deverão ser trocados por aqueles do deque `left`.
+*right*<br/>
+ O deque que fornece os elementos a serem trocados ou o deque cujos elementos deverão ser trocados com aqueles do deque `left`.
 
-*à esquerda* um deque cujos elementos deverão ser trocados por aqueles do deque *direito*.
+*left*<br/>
+ Um deque cujos elementos deverão ser trocados por aqueles do deque *certa*.
 
 ### <a name="example"></a>Exemplo
 

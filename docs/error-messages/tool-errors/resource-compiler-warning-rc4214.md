@@ -16,14 +16,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d7c18a81b2a7cf978ce056672cb318edca700fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 654996499c0fbee2c7410663fd7dfbbac3d145b2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319033"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43199090"
 ---
 # <a name="resource-compiler-warning-rc4214"></a>Aviso RC4214 (compilador de recurso)
 Página de código não é válida: ignorado  
   
- O arquivo. rc continha um argumento de página de código e a página de código especificada é inválida. Consulte [IsValidCodePage](http://msdn.microsoft.com/library/windows/desktop/dd318674) para obter mais informações.
+ O arquivo. rc continha um argumento de página de código e a página de código especificada é inválida. Ver [IsValidCodePage](/windows/desktop/api/winnls/nf-winnls-isvalidcodepage) para obter mais informações.

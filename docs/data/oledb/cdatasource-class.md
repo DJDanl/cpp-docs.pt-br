@@ -68,12 +68,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 69a96cf199e7ce131e91f750cdd83ebc915c38d8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 984bdabb9d67b157468287fa64f9f21ddabdd5d1
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572025"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217223"
 ---
 # <a name="cdatasource-class"></a>Classe CDataSource
 Corresponde a um objeto de fonte de dados do OLE DB, que representa uma conexão por meio de um provedor para uma fonte de dados.  
@@ -271,7 +271,7 @@ HRESULT Open(LPCSTR szProgID,
  Um HRESULT padrão.  
   
 ### <a name="remarks"></a>Comentários  
- A sobrecarga do método que usa o *hWnd* parâmetro abre um objeto de fonte de dados com os componentes de serviço no Oledb32,dll; essa DLL contém a implementação dos recursos de componentes de serviço como o pool de recursos, automático A inscrição de transação e assim por diante. Para obter mais informações, consulte "OLE DB Services" na referência do OLE DB programador em [ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
+ A sobrecarga do método que usa o *hWnd* parâmetro abre um objeto de fonte de dados com os componentes de serviço no Oledb32,dll; essa DLL contém a implementação dos recursos de componentes de serviço como o pool de recursos, automático A inscrição de transação e assim por diante. Para obter mais informações, consulte "OLE DB Services" na referência do OLE DB programador em [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
   
  As sobrecargas de método que não usam o *hWnd* parâmetro abrir um objeto de fonte de dados sem usar os componentes de serviço no Oledb32,dll. Um [CDataSource](../../data/oledb/cdatasource-class.md) objeto aberto com essas sobrecargas de função, será possível utilizar qualquer um da funcionalidade dos componentes de serviço.  
   
@@ -299,7 +299,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
  Um HRESULT padrão.  
   
 ### <a name="remarks"></a>Comentários  
- Este método abre um objeto de fonte de dados usando os componentes de serviço em Oledb32,dll; Essa DLL contém a implementação de recursos de componentes de serviço, como o pool de recursos, a inscrição automática de transação e assim por diante. Para obter mais informações, consulte "OLE DB Services" na referência do OLE DB programador em [ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
+ Este método abre um objeto de fonte de dados usando os componentes de serviço em Oledb32,dll; Essa DLL contém a implementação de recursos de componentes de serviço, como o pool de recursos, a inscrição automática de transação e assim por diante. Para obter mais informações, consulte "OLE DB Services" na referência do OLE DB programador em [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
 
 ## <a name="openfrominitializationstring"></a> Cdatasource:: Openfrominitializationstring
 Abre uma fonte de dados especificada pela cadeia de caracteres de inicialização fornecida pelo usuário.  
@@ -351,7 +351,7 @@ HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
  Um HRESULT padrão.  
   
 ### <a name="remarks"></a>Comentários  
- Este método abre um objeto de fonte de dados usando os componentes de serviço em Oledb32,dll; Essa DLL contém a implementação de recursos de componentes de serviço, como o pool de recursos, a inscrição automática de transação e assim por diante. Para obter mais informações, consulte "OLE DB Services" na referência do OLE DB programador em [ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
+ Este método abre um objeto de fonte de dados usando os componentes de serviço em Oledb32,dll; Essa DLL contém a implementação de recursos de componentes de serviço, como o pool de recursos, a inscrição automática de transação e assim por diante. Para obter mais informações, consulte "OLE DB Services" na referência do OLE DB programador em [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).
 
 ## <a name="openwithservicecomponents"></a> Cdatasource:: Openwithservicecomponents
 Abre um objeto de fonte de dados usando os componentes de serviço em Oledb32,dll.  
@@ -385,7 +385,7 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
  Um HRESULT padrão.  
   
 ### <a name="remarks"></a>Comentários  
- Este método abre um objeto de fonte de dados usando os componentes de serviço em Oledb32,dll; Essa DLL contém a implementação de recursos de componentes de serviço, como o pool de recursos, a inscrição automática de transação e assim por diante. Para obter mais informações, consulte "OLE DB Services" na referência do OLE DB programador em [ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).    
+ Este método abre um objeto de fonte de dados usando os componentes de serviço em Oledb32,dll; Essa DLL contém a implementação de recursos de componentes de serviço, como o pool de recursos, a inscrição automática de transação e assim por diante. Para obter mais informações, consulte "OLE DB Services" na referência do OLE DB programador em [ https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](https://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).    
 
 ## <a name="see-also"></a>Consulte também  
  [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7fd35c351639d4b7b5f3b9dbbbce1c5e7cbcb79
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 38a624aacc302812865a785c537eb906a0489379
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539753"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207635"
 ---
 # <a name="csplitbutton-class"></a>Classe CSplitButton
 O `CSplitButton` classe representa um controle de botão de divisão. O controle de botão de divisão executa um comportamento padrão quando um usuário clica na parte principal do botão e exibe um menu suspenso quando um usuário clica na seta suspensa do botão.  
@@ -62,7 +62,7 @@ class CSplitButton : public CButton
 |[CSplitButton::OnDropDown](#ondropdown)|Lida com a notificação BCN_DROPDOWN que o sistema envia quando um usuário clica na seta suspensa do controle de botão de divisão atual.|  
   
 ## <a name="remarks"></a>Comentários  
- O `CSplitButton` classe é derivada de [CButton](../../mfc/reference/cbutton-class.md) classe. O controle de botão de divisão é um controle de botão cujo estilo é BS_SPLITBUTTON. Ele exibe um menu personalizado quando um usuário clica na seta suspensa. Para obter mais informações, consulte os estilos BS_SPLITBUTTON e BS_DEFSPLITBUTTON no [estilos de botão](http://msdn.microsoft.com/library/windows/desktop/bb775951).  
+ O `CSplitButton` classe é derivada de [CButton](../../mfc/reference/cbutton-class.md) classe. O controle de botão de divisão é um controle de botão cujo estilo é BS_SPLITBUTTON. Ele exibe um menu personalizado quando um usuário clica na seta suspensa. Para obter mais informações, consulte os estilos BS_SPLITBUTTON e BS_DEFSPLITBUTTON no [estilos de botão](/windows/desktop/Controls/button-styles).  
   
  A figura abaixo mostra uma caixa de diálogo que contém um controle de paginação e um controle de botão de divisão (1). A seta suspensa (2) já foi clicado e o submenu (3) é exibida.  
   
@@ -102,7 +102,7 @@ virtual BOOL Create(
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
 |[in] *dwStyle*|Uma combinação bit a bit (OR) de estilos a serem aplicados ao controle. Para obter mais informações, consulte [estilos de botão](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
-|[in] *rect*|Uma referência a um [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém a posição e o tamanho do controle.|  
+|[in] *rect*|Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém a posição e o tamanho do controle.|  
 |[in] *pParentWnd*|Um ponteiro não nulo para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle.|  
 |[in] *nID*|A ID do controle.|  
   
@@ -146,8 +146,8 @@ afx_msg void OnDropDown(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *pNMHDR*|Ponteiro para um [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) estrutura que contém informações sobre o [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) notificação.|  
-|[out] *pResult*|(Não usado; nenhum valor será retornado). Retornar o valor de [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) notificação.|  
+|[in] *pNMHDR*|Ponteiro para um [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) estrutura que contém informações sobre o [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) notificação.|  
+|[out] *pResult*|(Não usado; nenhum valor será retornado). Retornar o valor de [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) notificação.|  
   
 ### <a name="remarks"></a>Comentários  
  Quando o usuário clica na seta suspensa em um controle de botão de divisão, o sistema envia uma notificação BCN_DROPDOWN da mensagem, que o `OnDropDown` identificadores de método. No entanto, o `CSplitButton` objeto não encaminha a notificação BCN_DROPDOWN para o controle que contém o controle de botão de divisão. Consequentemente, contendo o controle não pode dar suporte a uma ação personalizada em resposta à notificação.  

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 724772c0057d5defc8bfa3e2207df85d3a207f31
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e9a946689d563f1c681fee305ec05438bc5eb687
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590288"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204732"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Passo a passo: Criar um aplicativo tradicional de área de trabalho do Windows (C++)
 
@@ -219,7 +219,7 @@ Em seguida, você aprenderá a criar o código para um aplicativo de desktop do 
    }
    ```
 
-   Essa função retorna um `HWND`, que é um identificador para uma janela. Um identificador é um pouco como um ponteiro que o Windows usa para controlar as janelas abertas. Para obter mais informações, consulte [tipos de dados do Windows](https://msdn.microsoft.com/library/windows/desktop/aa383751).
+   Essa função retorna um `HWND`, que é um identificador para uma janela. Um identificador é um pouco como um ponteiro que o Windows usa para controlar as janelas abertas. Para obter mais informações, consulte [tipos de dados do Windows](/windows/desktop/WinProg/windows-data-types).
 
 1. Neste momento a janela foi criada, mas ainda assim será preciso informar ao Windows para torná-la visível. É o que esse código faz:
 
@@ -340,9 +340,9 @@ Em seguida, você aprenderá a criar o código para um aplicativo de desktop do 
 
 1. Para habilitar o `WndProc` função para manipular as mensagens que o aplicativo recebe, implemente uma instrução switch.
 
-   É uma mensagem importante para lidar com o [WM_PAINT](https://msdn.microsoft.com/library/windows/desktop/dd145213) mensagem. O aplicativo recebe esta mensagem quando parte de sua janela exibida deve ser atualizado. Esse evento pode ocorrer quando um usuário move uma janela na frente de sua janela, então, se ele afasta novamente. Seu aplicativo não sabe quando ocorrem eventos assim; somente Windows sabe, para que ele o notificará com `WM_PAINT`. Quando a janela é exibida pela primeira vez, tudo isso deve ser atualizado.
+   É uma mensagem importante para lidar com o [WM_PAINT](/windows/desktop/gdi/wm-paint) mensagem. O aplicativo recebe esta mensagem quando parte de sua janela exibida deve ser atualizado. Esse evento pode ocorrer quando um usuário move uma janela na frente de sua janela, então, se ele afasta novamente. Seu aplicativo não sabe quando ocorrem eventos assim; somente Windows sabe, para que ele o notificará com `WM_PAINT`. Quando a janela é exibida pela primeira vez, tudo isso deve ser atualizado.
 
-   Para lidar com uma `WM_PAINT` da mensagem, primeira chamada [BeginPaint](https://msdn.microsoft.com/library/windows/desktop/dd183362), em seguida, lidar com toda a lógica para dispor o texto, botões e outros controles na janela e, em seguida, chamar [EndPaint](https://msdn.microsoft.com/library/windows/desktop/dd162598). Para este aplicativo, a lógica entre a chamada inicial e a chamada final é exibir a cadeia de caracteres "Olá, área de trabalho do Windows!" Na janela. No código a seguir, observe que o [TextOut](https://msdn.microsoft.com/library/windows/desktop/dd145133) função é usada para exibir a cadeia de caracteres.
+   Para lidar com uma `WM_PAINT` da mensagem, primeira chamada [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint), em seguida, lidar com toda a lógica para dispor o texto, botões e outros controles na janela e, em seguida, chamar [EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint). Para este aplicativo, a lógica entre a chamada inicial e a chamada final é exibir a cadeia de caracteres "Olá, área de trabalho do Windows!" Na janela. No código a seguir, observe que o [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) função é usada para exibir a cadeia de caracteres.
 
    ```cpp
    PAINTSTRUCT ps;
@@ -369,7 +369,7 @@ Em seguida, você aprenderá a criar o código para um aplicativo de desktop do 
 
    `HDC` Nesse código é um identificador para um contexto de dispositivo, que é uma estrutura de dados que usa o Windows para permitir que seu aplicativo para se comunicar com o subsistema de gráficos. O `BeginPaint` e `EndPaint` funções garantem que seu aplicativo se comporta como um bom cidadão e não usa o contexto de dispositivo por mais tempo do que o necessário. Isso ajuda a garantir que o subsistema de gráficos está disponível para uso por outros aplicativos.
 
-1. Um aplicativo normalmente trata muitas outras mensagens, por exemplo, [WM_CREATE](https://msdn.microsoft.com/library/windows/desktop/ms632619) quando uma janela é criada, e [WM_DESTROY](https://msdn.microsoft.com/library/windows/desktop/ms632620) quando a janela é fechada. O código a seguir mostra um arquivo mas concluir `WndProc` função.
+1. Um aplicativo normalmente trata muitas outras mensagens, por exemplo, [WM_CREATE](/windows/desktop/winmsg/wm-create) quando uma janela é criada, e [WM_DESTROY](/windows/desktop/winmsg/wm-destroy) quando a janela é fechada. O código a seguir mostra um arquivo mas concluir `WndProc` função.
 
    ```cpp
    LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)

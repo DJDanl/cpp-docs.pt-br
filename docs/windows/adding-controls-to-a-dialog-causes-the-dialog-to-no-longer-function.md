@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c1cb1a1894f3288e2825c5eb7d521a468ccdfa7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6d27c12b491fc5f05da58a84703ea13e84e9e9c6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592808"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215364"
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>A adição de controles a uma caixa de diálogo faz a caixa de diálogo deixar de funcionar
 
@@ -61,11 +61,11 @@ Atualmente, o editor de caixa de diálogo não automaticamente adiciona código 
 
 ## <a name="the-fix-for-common-controls"></a>A correção para controles comuns
 
-Para usar controles comuns em uma caixa de diálogo, você precisará chamar [InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697) ou `AFXInitCommonControls` antes de criar a caixa de diálogo.
+Para usar controles comuns em uma caixa de diálogo, você precisará chamar [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) ou `AFXInitCommonControls` antes de criar a caixa de diálogo.
 
 ## <a name="the-fix-for-richedit-controls"></a>A correção para controles RichEdit
 
-Você deve chamar `LoadLibrary` para controles de edição avançados. Para obter mais informações, consulte [usando o controle RichEdit 1.0 com MFC](../windows/using-the-richedit-1-0-control-with-mfc.md), [sobre como editar controles sofisticados](http://msdn.microsoft.com/library/windows/desktop/bb787873) no SDK do Windows, e [visão geral do controle de edição de Rich](../mfc/overview-of-the-rich-edit-control.md).
+Você deve chamar `LoadLibrary` para controles de edição avançados. Para obter mais informações, consulte [usando o controle RichEdit 1.0 com MFC](../windows/using-the-richedit-1-0-control-with-mfc.md), [sobre como editar controles sofisticados](/windows/desktop/Controls/about-rich-edit-controls) no SDK do Windows, e [visão geral do controle de edição de Rich](../mfc/overview-of-the-rich-edit-control.md).
 
 ## <a name="requirements"></a>Requisitos
 

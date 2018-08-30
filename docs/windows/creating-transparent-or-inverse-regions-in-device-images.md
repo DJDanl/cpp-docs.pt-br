@@ -30,12 +30,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5ed2a88e8963bae06e33835f3982d8651445929
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b5bc95e75cc9a58dd6f01b8a4ca537709941f6bf
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599514"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215934"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>Criando regiões transparentes ou inversas em imagens de dispositivo (editor de imagens para ícones)
 
@@ -44,7 +44,7 @@ No [editor de imagens](../windows/image-editor-for-icons.md), a imagem de ícone
 As cores da tela e o inverso é aplicar a ícones e cursores da forma e a imagem derivada de cor ou designarem Inverter regiões. As cores indicam partes da imagem que possui os atributos. Você pode alterar as cores que representam os atributos de cor da tela e cor inverso no modo de edição. Essas alterações não afetam a aparência do ícone ou cursor em seu aplicativo.
 
 > [!NOTE]
-> As caixas de diálogo e os comandos de menu vistos podem ser diferentes daqueles descritos na **Ajuda**, dependendo da edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](http://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
+> As caixas de diálogo e os comandos de menu vistos podem ser diferentes daqueles descritos na **Ajuda**, dependendo da edição ou das configurações ativas. Para alterar as configurações, escolha **Importar e Exportar Configurações** no menu **Ferramentas**. Para obter mais informações, consulte [Personalizando configurações de desenvolvimento no Visual Studio](https://msdn.microsoft.com/22c4debb-4e31-47a8-8f19-16f328d7dcd3).
 
 ### <a name="to-create-transparent-or-inverse-regions"></a>Para criar regiões transparentes ou inversas
 

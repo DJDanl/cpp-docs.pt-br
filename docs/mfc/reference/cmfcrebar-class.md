@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8af155401492e97be6a9e3a80b72c8c4e7fbd9e
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 8910a1742bf50f178c75b5c78f250b8c1f103b04
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538778"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217971"
 ---
 # <a name="cmfcrebar-class"></a>Classe CMFCReBar
 Um `CMFCReBar` objeto é uma barra de controle que fornece o layout, persistência e informações de estado para controles rebar.  
@@ -69,7 +69,7 @@ class CMFCReBar : public CPane
 |[CMFCReBar::GetReBarCtrl](#getrebarctrl)|Fornece acesso direto à subjacente [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) controle comum.|  
 |[CMFCReBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|(Substitui [CPane::OnShowControlBarMenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu).)|  
 |[CMFCReBar::OnToolHitTest](#ontoolhittest)|(Substitui [CWnd::OnToolHitTest](../../mfc/reference/cwnd-class.md#ontoolhittest).)|  
-|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(Substitui [CBasePane::OnUpdateCmdUI](http://msdn.microsoft.com/e139f06a-9793-4ee2-bc3d-517389368c77).)|  
+|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(Substitui [CBasePane::OnUpdateCmdUI](https://msdn.microsoft.com/e139f06a-9793-4ee2-bc3d-517389368c77).)|  
 |[CMFCReBar::SetPaneAlignment](#setpanealignment)|(Substitui [CBasePane::SetPaneAlignment](../../mfc/reference/cbasepane-class.md#setpanealignment).)|  
   
 ## <a name="remarks"></a>Comentários  
@@ -120,7 +120,7 @@ BOOL AddBar(
  Especifica o bitmap a ser exibido no plano de fundo de rebar.  
   
  [in] *dwStyle*  
- Contém o estilo a ser aplicado para a faixa. Para obter uma lista completa dos estilos de banda, consulte a descrição para o `fStyle` no [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) estrutura na documentação do SDK do Windows.  
+ Contém o estilo a ser aplicado para a faixa. Para obter uma lista completa dos estilos de banda, consulte a descrição para o `fStyle` no [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) estrutura na documentação do SDK do Windows.  
   
  [in] *clrFore*  
  Representa a cor de primeiro plano do rebar.  
@@ -147,7 +147,7 @@ BOOL Create(
  Um ponteiro para a janela pai desse controle rebar.  
   
  [in] *dwCtrlStyle*  
- Especifica o estilo do controle rebar. O valor de estilo padrão é **RBS_BANDBORDERS**, que exibe restringir linhas para separar as faixas adjacentes no controle rebar. Para obter uma lista de estilos válidas, consulte [estilos de controle Rebar](http://msdn.microsoft.com/library/windows/desktop/bb774377) na documentação do SDK do Windows.  
+ Especifica o estilo do controle rebar. O valor de estilo padrão é **RBS_BANDBORDERS**, que exibe restringir linhas para separar as faixas adjacentes no controle rebar. Para obter uma lista de estilos válidas, consulte [estilos de controle Rebar](/windows/desktop/Controls/rebar-control-styles) na documentação do SDK do Windows.  
   
  [in] *dwStyle*  
  O estilo da janela do controle rebar. Para obter uma lista de estilos válidas, consulte [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles).  

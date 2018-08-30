@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0322d6b304366e598fc3db206d4c2e4b9b9d6315
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 114ccb875c1551528eb77edb9c2fae0ecb27edd6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336592"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212037"
 ---
 # <a name="event-sink-maps"></a>Mapas de coleta de evento
 Quando um controle OLE inserido dispara um evento, o contêiner do controle recebe o evento usando um mecanismo chamado de um "mapa coletor de evento," fornecido pelo MFC. Este mapa de coletor de evento designa as funções de manipulador para cada evento específico, bem como os parâmetros desses eventos. Para obter mais informações sobre mapas de coleta de eventos, consulte o artigo [contêineres de controle ActiveX](../../mfc/activex-control-containers.md).  
@@ -222,7 +222,7 @@ ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
  A ID de expedição da propriedade envolvida na notificação.  
   
  *pfnRequest*  
- Ponteiro para uma função de membro que manipula o `OnRequestEdit` notificação para essa propriedade. Essa função deve ter um BOOL tipo de retorno e um **BOOL\***  parâmetro. Essa função deve definir o parâmetro como TRUE para permitir que a propriedade a alteração e FALSE para não permitir. A função deve retornar TRUE para indicar que a notificação foi tratada; Caso contrário, FALSE.  
+ Ponteiro para uma função de membro que manipula o `OnRequestEdit` notificação para essa propriedade. Essa função deve ter um BOOL tipo de retorno e um **BOOL** <strong>\*</strong> parâmetro. Essa função deve definir o parâmetro como TRUE para permitir que a propriedade a alteração e FALSE para não permitir. A função deve retornar TRUE para indicar que a notificação foi tratada; Caso contrário, FALSE.  
   
  *pfnChanged*  
  Ponteiro para uma função de membro que manipula o `OnChanged` notificação para essa propriedade. A função deve ter um BOOL de tipo de retorno e um parâmetro UINT. A função deve retornar TRUE para indicar que a notificação foi tratada; Caso contrário, FALSE.  
@@ -259,10 +259,10 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
  A ID de expedição da propriedade envolvida na notificação.  
   
  *pfnRequest*  
- Ponteiro para uma função de membro que manipula o `OnRequestEdit` notificação para essa propriedade. Essa função deve ter um tipo de retorno de BOOL e UINT e **BOOL\***  parâmetros. A função deve definir o parâmetro como TRUE para permitir que a propriedade a alteração e FALSE para não permitir. A função deve retornar TRUE para indicar que a notificação foi tratada; Caso contrário, FALSE.  
+ Ponteiro para uma função de membro que manipula o `OnRequestEdit` notificação para essa propriedade. Essa função deve ter uma `BOOL` tipo de retorno e `UINT` e `BOOL*` parâmetros. A função deve definir o parâmetro como TRUE para permitir que a propriedade a alteração e FALSE para não permitir. A função deve retornar TRUE para indicar que a notificação foi tratada; Caso contrário, FALSE.  
   
  *pfnChanged*  
- Ponteiro para uma função de membro que manipula o `OnChanged` notificação para essa propriedade. A função deve ter um BOOL de tipo de retorno e um parâmetro UINT. A função deve retornar TRUE para indicar que a notificação foi tratada; Caso contrário, FALSE.  
+ Ponteiro para uma função de membro que manipula o `OnChanged` notificação para essa propriedade. A função deve ter uma `BOOL` tipo de retorno e um `UINT` parâmetro. A função deve retornar TRUE para indicar que a notificação foi tratada; Caso contrário, FALSE.  
   
 ### <a name="requirements"></a>Requisitos  
   **Cabeçalho** afxdisp.h  
@@ -284,7 +284,7 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
  A ID de expedição da propriedade envolvida na notificação.  
   
  *pfnRequest*  
- Ponteiro para uma função de membro que manipula o `OnRequestEdit` notificação para essa propriedade. Essa função deve ter um BOOL tipo de retorno e um **BOOL\***  parâmetro. Essa função deve definir o parâmetro como TRUE para permitir que a propriedade a alteração e FALSE para não permitir. A função deve retornar TRUE para indicar que a notificação foi tratada; Caso contrário, FALSE.  
+ Ponteiro para uma função de membro que manipula o `OnRequestEdit` notificação para essa propriedade. Essa função deve ter um BOOL tipo de retorno e um **BOOL** <strong>\*</strong> parâmetro. Essa função deve definir o parâmetro como TRUE para permitir que a propriedade a alteração e FALSE para não permitir. A função deve retornar TRUE para indicar que a notificação foi tratada; Caso contrário, FALSE.  
   
  *pfnChanged*  
  Ponteiro para uma função de membro que manipula o `OnChanged` notificação para essa propriedade. A função deve ter um BOOL sem parâmetros e tipo de retorno. A função deve retornar TRUE para indicar que a notificação foi tratada; Caso contrário, FALSE.  

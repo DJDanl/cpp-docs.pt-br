@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abc3721159dfa7470106e6935664f3119ae4d264
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: eb505ac53c6a8b3b05edfc99bad813ebe2c341d0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885033"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218559"
 ---
 # <a name="ccomtearoffobject-class"></a>Classe CComTearOffObject
 Essa classe implementa uma interface destacáveis.  
@@ -46,7 +46,7 @@ class CComTearOffObject : public Base
  *Base de dados de*  
  Sua classe destacável, derivada de `CComTearOffObjectBase` e as interfaces que você deseja que o seu objeto destacáveis para dar suporte.  
   
- ATL implementa suas interfaces destacáveis em duas fases — o `CComTearOffObjectBase` métodos lidam com a contagem de referência e `QueryInterface`, enquanto `CComTearOffObject` implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509).  
+ ATL implementa suas interfaces destacáveis em duas fases — o `CComTearOffObjectBase` métodos lidam com a contagem de referência e `QueryInterface`, enquanto `CComTearOffObject` implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown).  
   
 ## <a name="members"></a>Membros  
   

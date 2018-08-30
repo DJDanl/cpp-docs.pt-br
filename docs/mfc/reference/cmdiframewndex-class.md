@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db7a95327430b4d0bbfda173c83b7631af822060
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: d9644882f537285b27fa376afa65581d6d4c3c9f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339235"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216282"
 ---
 # <a name="cmdiframewndex-class"></a>Classe CMDIFrameWndEx
 Estende a funcionalidade do [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), uma janela de quadro de Interface de documentos múltiplos (MDI) Windows.  
@@ -252,7 +252,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Chamado pelo framework quando um menu que tem uma barra destacável está ativado.|  
 |[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Chamado pelo framework para atualizar o menu de quadro. (Substitui `CMDIFrameWnd::OnUpdateFrameMenu`.)|  
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Retorna o painel de encaixe que contém o ponto especificado.|  
-|`CMDIFrameWndEx::PreTranslateMessage`|Usado pela classe [CWinApp](../../mfc/reference/cwinapp-class.md) para converter as mensagens da janela antes de serem expedidas para o [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funções do Windows.  (Substitui `CMDIFrameWnd::PreTranslateMessage`.)|  
+|`CMDIFrameWndEx::PreTranslateMessage`|Usado pela classe [CWinApp](../../mfc/reference/cwinapp-class.md) para converter as mensagens da janela antes de serem expedidas para o [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funções do Windows.  (Substitui `CMDIFrameWnd::PreTranslateMessage`.)|  
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Chamado pelo framework para recalcular o layout da janela do quadro. (Substitui [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|  
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Cancela o registro de um painel e a remove do Gerenciador de encaixe.|  
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Salva o layout atual do MDI Tabbed Groups e a lista de documentos abertos anteriormente.|  
@@ -1341,7 +1341,7 @@ virtual BOOL OnMenuButtonToolHitTest(
  O botão de barra de ferramentas.  
   
  [out] *pTI*  
- Ponteiro para um [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) estrutura.  
+ Ponteiro para um [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) estrutura.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o aplicativo preenche o *pTI* parâmetro. A implementação padrão retorna falso.  
@@ -1790,7 +1790,7 @@ virtual void WinHelp(
  Especifica os dados conforme necessário para o tipo de ajuda especificado por *nCmd*.  
   
  [in] *nCmd*  
- Especifica o tipo de ajuda solicitado. Para obter uma lista de valores possíveis e como eles afetam os *dwData* parâmetro, consulte o [função WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) no SDK do Windows.  
+ Especifica o tipo de ajuda solicitado. Para obter uma lista de valores possíveis e como eles afetam os *dwData* parâmetro, consulte o [função WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) no SDK do Windows.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método substitui [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).  
