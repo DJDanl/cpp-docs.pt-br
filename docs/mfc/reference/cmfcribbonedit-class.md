@@ -83,12 +83,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a27548d51d3de1a27da0b765bd85439467c024
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 46d96d574fedf9af2fe7eb46c872819cf54a364e
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850216"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216453"
 ---
 # <a name="cmfcribbonedit-class"></a>Classe CMFCRibbonEdit
 Implementa um controle de edição que está localizado em uma barra de faixa de opções.  
@@ -224,7 +224,7 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
  Um ponteiro para a janela pai do `CMFCRibbonEdit` objeto.  
   
  [in] *dwEditStyle*  
- Especifica o estilo da caixa de texto. Você pode combinar os estilos de janela listados na seção de comentários com o [estilos de controle de edição](http://msdn.microsoft.com/library/windows/desktop/bb775464) que são descritos no SDK do Windows.  
+ Especifica o estilo da caixa de texto. Você pode combinar os estilos de janela listados na seção de comentários com o [estilos de controle de edição](/windows/desktop/Controls/edit-control-styles) que são descritos no SDK do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para a nova caixa de texto se o método foi bem-sucedida; Caso contrário, nulo.  
@@ -345,7 +345,7 @@ int GetTextAlign() const;
   
 - **ES_RIGHT** para alinhamento à direita  
   
- Para obter mais informações sobre esses estilos, consulte [Editar estilos de controle](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
+ Para obter mais informações sobre esses estilos, consulte [Editar estilos de controle](/windows/desktop/Controls/edit-control-styles).  
   
 ##  <a name="getwidth"></a>  CMFCRibbonEdit::GetWidth  
  Recupera a largura, em pixels, do [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) controle.  
@@ -601,7 +601,7 @@ virtual void Redraw();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Esse método redesenha o retângulo de exibição para o `CMFCRibbonEdit` objeto indiretamente chamando [CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) com os sinalizadores RDW_INVALIDATE, RDW_ERASE e RDW_UPDATENOW definido.  
+ Esse método redesenha o retângulo de exibição para o `CMFCRibbonEdit` objeto indiretamente chamando [CWnd::RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) com os sinalizadores RDW_INVALIDATE, RDW_ERASE e RDW_UPDATENOW definido.  
   
 ##  <a name="setaccdata"></a>  CMFCRibbonEdit::SetACCData  
  Define os dados de acessibilidade para o [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) objeto.  
@@ -655,7 +655,7 @@ void SetTextAlign(int nAlign);
   
 - ES_RIGHT para alinhamento à direita  
   
- Para obter mais informações sobre esses estilos, consulte [Editar estilos de controle](http://msdn.microsoft.com/library/windows/desktop/bb775464).  
+ Para obter mais informações sobre esses estilos, consulte [Editar estilos de controle](/windows/desktop/Controls/edit-control-styles).  
   
 ##  <a name="setwidth"></a>  CMFCRibbonEdit::SetWidth  
  Define a largura da caixa de texto para o [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) controle.  

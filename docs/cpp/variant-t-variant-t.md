@@ -228,15 +228,15 @@ _variant_t(
   
 -   **_variant_t( bstr_t&**  `bstrSrc`  **)** constrói um `_variant_t` objeto do tipo VT_BSTR de um `_bstr_t` objeto. Um novo `BSTR` é alocado.  
   
--   **{1&gt;_variant_t (wchar_t** <strong>\*</strong> *1&gt;Operator=(&lt;1}{2&gt;wstrsrc&lt;2}{3&gt;)&lt;3***)** constrói um `_variant_t` objeto do tipo VT_BSTR de uma cadeia de caracteres Unicode.   Um novo `BSTR` é alocado.  
+-   **_variant_t( wchar_t** <strong>\*</strong> *wstrSrc*  **)** constrói um `_variant_t` objeto do tipo VT_BSTR de uma cadeia de caracteres Unicode.   Um novo `BSTR` é alocado.  
   
--   **{1&gt;_variant_t (char**<strong>\*</strong>`strSrc`**)** constrói um `_variant_t` objeto do tipo VT_BSTR de uma cadeia de caracteres.     Um novo `BSTR` é alocado.  
+-   **_variant_t (char**<strong>\*</strong>  `strSrc`  **)** constrói um `_variant_t` objeto do tipo VT_BSTR de uma cadeia de caracteres.     Um novo `BSTR` é alocado.  
   
 -   **_variant_t( bool**  `bSrc`  **)** constrói um `_variant_t` objeto do tipo VT_BOOL de um **bool** valor.  
   
--   **{1&gt;_variant_t (IUnknown** <strong>\*</strong> `pIUknownSrc` **, bool**`fAddRef`**= true)** constrói um `_variant_t` objeto do tipo VT_UNKNOWN a partir de um ponteiro de interface COM.       Se `fAddRef` é **verdadeira**, em seguida, `AddRef` é chamado no ponteiro de interface fornecido para corresponder a chamada para `Release` que ocorrerá quando o `_variant_t` objeto é destruído. Cabe a você chamar `Release` no ponteiro de interface fornecido. Se `fAddRef` está **falsos**, o construtor assume a propriedade do ponteiro de interface fornecido; não chame `Release` no ponteiro de interface fornecido.  
+-   **_variant_t( IUnknown**<strong>\*</strong>  `pIUknownSrc` **, bool**  `fAddRef`  **= true)** constrói um `_variant_t` objeto do tipo VT_UNKNOWN a partir de um ponteiro de interface COM.       Se `fAddRef` é **verdadeira**, em seguida, `AddRef` é chamado no ponteiro de interface fornecido para corresponder a chamada para `Release` que ocorrerá quando o `_variant_t` objeto é destruído. Cabe a você chamar `Release` no ponteiro de interface fornecido. Se `fAddRef` está **falsos**, o construtor assume a propriedade do ponteiro de interface fornecido; não chame `Release` no ponteiro de interface fornecido.  
   
--   **{1&gt;_variant_t (IDispatch** <strong>\*</strong> `pDispSrc` **, bool**`fAddRef`**= true)** constrói um `_variant_t` objeto do Digite VT_DISPATCH a partir de um ponteiro de interface COM.       Se `fAddRef` é **verdadeira**, em seguida, `AddRef` é chamado no ponteiro de interface fornecido para corresponder a chamada para `Release` que ocorrerá quando o `_variant_t` objeto é destruído. Cabe a você chamar `Release` no ponteiro de interface fornecido. Se `fAddRef` está **falsos**, o construtor assume a propriedade do ponteiro de interface fornecido; não chame `Release` no ponteiro de interface fornecido.  
+-   **_variant_t( IDispatch** <strong>\*</strong> `pDispSrc` **, bool**`fAddRef`**= true)** constrói um `_variant_t` objeto do Digite VT_DISPATCH a partir de um ponteiro de interface COM.       Se `fAddRef` é **verdadeira**, em seguida, `AddRef` é chamado no ponteiro de interface fornecido para corresponder a chamada para `Release` que ocorrerá quando o `_variant_t` objeto é destruído. Cabe a você chamar `Release` no ponteiro de interface fornecido. Se `fAddRef` está **falsos**, o construtor assume a propriedade do ponteiro de interface fornecido; não chame `Release` no ponteiro de interface fornecido.  
   
 -   **_variant_t( DECIMAL&**  `decSrc`  **)** constrói um `_variant_t` VT_DECIMAL a partir do objeto do tipo um `DECIMAL` valor.  
   
