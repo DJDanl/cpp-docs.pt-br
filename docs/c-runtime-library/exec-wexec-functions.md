@@ -63,12 +63,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 728c4878736d2e0cafc94660db3d9a709f87715f
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 1da7c4102f15bf4a9c8ec583cf39e621d6872cb0
+ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451518"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42578513"
 ---
 # <a name="exec-wexec-functions"></a>Funções _exec, _wexec
 Cada função desta família carrega e executa um novo processo:  
@@ -90,7 +90,7 @@ Cada função desta família carrega e executa um novo processo:
 |`v`|`argv`, matriz de ponteiros para argumentos da linha de comando, que é passada para `_exec`. Normalmente usado quando o número de parâmetros para o novo processo é variável.|  
   
 ## <a name="remarks"></a>Comentários  
- Cada função `_exec` carrega e executa um novo processo. Todas as funções `_exec` usam a mesma função do sistema operacional ([CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425.aspx)). As funções `_exec` identificam automaticamente os argumentos da cadeia de caracteres multibyte como apropriados, reconhecendo as sequências de caracteres multibyte de acordo com a página de código multibyte em uso no momento. As funções `_wexec` são versões de caractere largo das funções `_exec`. As funções `_wexec` se comportam de maneira idêntica às equivalentes da família `_exec`, exceto por não identificarem cadeias de caracteres multibyte.  
+ Cada função `_exec` carrega e executa um novo processo. Todas as funções `_exec` usam a mesma função do sistema operacional ([CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)). As funções `_exec` identificam automaticamente os argumentos da cadeia de caracteres multibyte como apropriados, reconhecendo as sequências de caracteres multibyte de acordo com a página de código multibyte em uso no momento. As funções `_wexec` são versões de caractere largo das funções `_exec`. As funções `_wexec` se comportam de maneira idêntica às equivalentes da família `_exec`, exceto por não identificarem cadeias de caracteres multibyte.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico  
   
@@ -113,7 +113,7 @@ Cada função desta família carrega e executa um novo processo:
 >  Os espaços inseridos nas cadeias de caracteres podem causar um comportamento inesperado. Por exemplo, passando `_exec`, a cadeia de caracteres `"hi there"` resultará na obtenção de dois argumentos pelo processo, `"hi"` e `"there"`. Se a intenção for fazer o novo processo abrir um arquivo chamado "hi there", o processo falhará. É possível evitar isso colocando a cadeia de caracteres entre aspas: `"\"hi there\""`.  
   
 > [!IMPORTANT]
->  Não passe a entrada do usuário para `_exec` sem verificar explicitamente seu conteúdo. `_exec` resultará em uma chamada para [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425.aspx), então tenha em mente que nomes de caminho desqualificados podem levar a possíveis vulnerabilidades de segurança.  
+>  Não passe a entrada do usuário para `_exec` sem verificar explicitamente seu conteúdo. `_exec` resultará em uma chamada para [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa), então tenha em mente que nomes de caminho desqualificados podem levar a possíveis vulnerabilidades de segurança.  
   
  As funções `_exec` validam seus parâmetros. Se os parâmetros esperados forem ponteiros nulos, cadeias de caracteres vazias ou omitidos, as funções `_exec` invocarão o manipulador de parâmetro inválido, como descrito em [Validação de parâmetro](../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão `errno` como `EINVAL` e retornarão -1. Nenhum processo novo é executado.  
   

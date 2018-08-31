@@ -12,24 +12,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a1b05c96e4db1af204937068f019222d3c53684
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d264c77668e0220c4198657b8133f0ebea34e6cb
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850138"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578176"
 ---
 # <a name="porting-and-upgrading-examples-and-case-studies"></a>Portando e atualizando: exemplos e estudos de caso
 Você pode ter uma ideia dos tipos de problemas que podem ocorrer durante uma migração de uma versão anterior do Visual C++ para a atual examinando histórias de migrações bem-sucedidas.  
   
-## <a name="examples-of-successful-migrations"></a>Exemplos de migrações bem-sucedidas  
- Aqui você pode ler sobre o que foi necessário para migrar algumas ferramentas e exemplos modestos para a versão mais recente do Visual C++. Os problemas encontrados nessas migrações são típicos dos tipos de problemas que podem ser encontrados em qualquer migração, mas com uma exceção importante e que é o tamanho do código. Os exemplos são obviamente muito pequenos e curto em comparação com o código do aplicativo do mundo real.  
+## <a name="examples-of-successful-migrations"></a>Exemplos de migrações bem-sucedidas 
+
+Aqui você pode ler sobre o que foi necessário para migrar algumas ferramentas e exemplos modestos para a versão mais recente do Visual C++. Os problemas encontrados nessas migrações são típicos dos tipos de problemas que podem ser encontrados em qualquer migração, mas com uma exceção importante e que é o tamanho do código. Os exemplos são obviamente muito pequenos e curto em comparação com o código do aplicativo do mundo real.  
   
--   [Scribble do MFC](../porting/porting-guide-mfc-scribble.md) é um exemplo que usa os fundamentos do MFC.  
+- [Scribble do MFC](../porting/porting-guide-mfc-scribble.md) é um exemplo que usa os fundamentos do MFC.  
   
--   [COM Spy](../porting/porting-guide-mfc-scribble.md) é um aplicativo que exibe informações sobre os componentes COM+ em um computador.  
+- [COM Spy](../porting/porting-guide-mfc-scribble.md) é um aplicativo que exibe informações sobre os componentes COM+ em um computador.  
   
--   [Spy++](../porting/porting-guide-spy-increment.md) é um aplicativo que inspeciona e fornece informações sobre os elementos de interface do usuário em aplicativos em execução.  
+- [Spy++](../porting/porting-guide-spy-increment.md) é um aplicativo que inspeciona e fornece informações sobre os elementos de interface do usuário em aplicativos em execução.  
   
 ## <a name="see-also"></a>Consulte também  
- [Guia de atualização e portabilidade do Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)
+ 
+[Guia de atualização e portabilidade do Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)
