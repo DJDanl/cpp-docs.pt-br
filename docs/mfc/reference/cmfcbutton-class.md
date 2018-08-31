@@ -1,7 +1,7 @@
 ---
 title: Classe CMFCButton | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/28/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 155aa704efe0686fc03be6e2b12c076656fad7a1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8385320b51efedd214424385babc5f03d5559873
+ms.sourcegitcommit: 220fd4fda829f810e15fc1a1d98ab43c46201b47
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217503"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43352710"
 ---
 # <a name="cmfcbutton-class"></a>Classe CMFCButton
 O `CMFCButton` classe adiciona funcionalidade para o [CButton](../../mfc/reference/cbutton-class.md) classe como alinhar o texto do botão, combinar o texto do botão e uma imagem, selecionar um cursor e especificando uma dica de ferramenta.  
@@ -165,12 +165,17 @@ class CMFCButton : public CButton
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|Indica se é necessário desenhar um retângulo de foco ao redor de um botão.|  
-|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|Indica se é para realçar um botão de estilo BS_CHECKBOX quando o cursor passa sobre ele.|  
-|[CMFCButton::m_bRightImage](#m_brightimage)|Indica se deve exibir uma imagem à direita do botão.|  
-|[CMFCButton::m_bTransparent](#m_btransparent)|Indica se o botão é transparente.|  
 |[CMFCButton::m_nAlignStyle](#m_nalignstyle)|Especifica o alinhamento do texto do botão.|  
+|[CMFCButton::m_bDontUseWinXPTheme](#m_bDontUseWinXPTheme)|Especifica se deve usar temas do Windows XP.|
+|[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|Indica se é necessário desenhar um retângulo de foco ao redor de um botão.| 
 |[CMFCButton::m_nFlatStyle](#m_nflatstyle)|Especifica o estilo do botão, como sem borda, simples, simples de ponto e vírgula ou 3D.|  
+|[CMFCButton::m_bGrayDisabled](#m_bGrayDisabled)|Quando for verdadeiro, permite que um botão desabilitado a ser desenhado como acinzentado.|
+|[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|Indica se é para realçar um botão de estilo BS_CHECKBOX quando o cursor passa sobre ele.|  
+|[CMFCButton::m_bResponseOnButtonDown](#m_bResponseOnButtonDown)|Indica se deve responder a botão para baixo de eventos.|
+|[CMFCButton::m_bRightImage](#m_brightimage)|Indica se deve exibir uma imagem à direita do botão.|
+|[CMFCButton::m_bTopImage](#m_bTopImage)| Indica se a imagem está sobre o botão.|
+|[CMFCButton::m_bTransparent](#m_btransparent)|Indica se o botão é transparente.|  
+|[CMFCButton::m_bWasDblClk](#m_bWasDblClk)| Indica se o último clique o evento foi um clique duplo.|
   
 ## <a name="remarks"></a>Comentários  
  Outros tipos de botões são derivados do `CMFCButton` classe, como o [CMFCURLLinkButton](../../mfc/reference/cmfclinkctrl-class.md) classe, que dá suporte a hiperlinks, e o `CMFCColorButton` classe, que dá suporte a uma caixa de diálogo do seletor de cor.  
@@ -376,7 +381,16 @@ static BOOL IsWindowsThemingEnabled();
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o estilo da borda do botão corresponde ao tema atual do Windows; Caso contrário, FALSE.  
-  
+
+
+
+## <a name="a-namembdontusewinxptheme-cmfcbuttonmbdontusewinxptheme"></a><a name="m_bDontUseWinXPTheme"/> CMFCButton::m_bDontUseWinXPTheme
+Especifica se deve usar temas do Windows XP, quando o botão de desenho.
+
+```  
+BOOL m_bDontUseWinXPTheme;  
+```
+
 ##  <a name="m_bdrawfocus"></a>  CMFCButton::m_bDrawFocus  
  Indica se é necessário desenhar um retângulo de foco ao redor de um botão.  
   
@@ -388,7 +402,15 @@ BOOL m_bDrawFocus;
  Defina o `m_bDrawFocus` membro como TRUE para especificar que a estrutura será desenhar um retângulo de foco ao redor do texto do botão e se o botão recebe o foco da imagem.  
   
  O `CMFCButton` construtor inicializa esse membro como TRUE.  
-  
+
+##  <a name="m_bGrayDisabled"></a>  CMFCButton::m_bGrayDisabled
+Quando for verdadeiro, permite que um botão desabilitado a ser desenhado como acinzentado.
+
+
+```  
+BOOL m_bGrayDisabled;  
+```
+
 ##  <a name="m_bhighlightchecked"></a>  CMFCButton::m_bHighlightChecked  
  Indica se é para realçar um botão de estilo BS_CHECKBOX quando o cursor passa sobre ele.  
   
@@ -398,14 +420,29 @@ BOOL m_bHighlightChecked;
   
 ### <a name="remarks"></a>Comentários  
  Defina o `m_bHighlightChecked` membro como TRUE para especificar que o framework irá realçar um botão de estilo BS_CHECKBOX quando o mouse passa sobre ele.  
-  
+
+##  <a name="m_bResponseOnButtonDown"></a> CMFCButton::m_bResponseOnButtonDown
+Indica se deve responder a botão para baixo de eventos.
+
+```  
+BOOL m_bResponseOnButtonDown;  
+```  
+
 ##  <a name="m_brightimage"></a>  CMFCButton::m_bRightImage  
  Indica se deve exibir uma imagem à direita do botão.  
   
 ```  
 BOOL m_bRightImage;  
 ```  
-  
+
+
+##  <a name="m_bTopImage"></a>  CMFCButton::m_bTopImage](#m_bTopImage)
+Indica se a imagem está sobre o botão.
+
+```  
+BOOL m_bTopImage;  
+```
+
 ### <a name="remarks"></a>Comentários  
  Defina o `m_bRightImage` membro como TRUE para especificar que o framework exibirá a imagem do botão à direita do rótulo de texto do botão.  
   
@@ -436,7 +473,14 @@ AlignStyle m_nAlignStyle;
 |ALIGN_RIGHT|Alinha o texto do botão à direita do botão.|  
   
  O `CMFCButton` construtor inicializa este membro para ALIGN_CENTER.  
-  
+
+##  <a name="m_bWasDblClk"></a>  CMFCButton::m_bWasDblClk](#m_bWasDblClk) | 
+Indica se o último clique o evento foi um clique duplo. |
+
+```  
+BOOL m_bWasDblClk;  
+```  
+
 ##  <a name="m_nflatstyle"></a>  CMFCButton::m_nFlatStyle  
  Especifica o estilo do botão, como sem borda, simples, simples de ponto e vírgula ou 3D.  
   
