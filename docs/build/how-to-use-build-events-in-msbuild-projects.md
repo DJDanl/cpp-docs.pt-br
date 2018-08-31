@@ -16,19 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59863911072b491eb19a1296f3cb40d4f4ab4dce
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: cdc5ea4c2cd1e02e6894d2dedf8470641021f0b2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613050"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214463"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Como usar eventos de build em projetos de MSBuild
 Um evento de compilação é um comando que o MSBuild executa em um estágio específico no processo de compilação. O *pré-build* evento ocorre antes do início do build; a *pré-vínculo* evento ocorre antes do início da etapa de link; e o *pós-compilação* evento ocorre após a compilação termina com êxito. Um evento de compilação ocorre apenas se a etapa de compilação associado ocorre. Por exemplo, o evento de pré-vínculo não ocorrer se a etapa de link não é executado.  
   
  Cada um dos eventos de três build é representada por um elemento de comando em um grupo de definição de item (`<Command>`) que é executado e um elemento de mensagem (`<Message>`) que é exibido quando **MSBuild** executa o evento de compilação. Cada elemento é opcional e, se você especificar o mesmo elemento várias vezes, a última ocorrência terá precedência.  
   
- Um recurso opcional *uso no build* elemento (`<`* build-evento ***UseInBuild**`>`) pode ser especificado em um grupo de propriedade para indicar se o evento de build é executado. O valor do conteúdo de um *uso no build* elemento seja `true` ou `false`. Por padrão, um evento de compilação é executado, a menos que seu correspondente *uso no build* é definido como `false`.  
+ Um recurso opcional *uso no build* elemento (`<`*evento de build*`UseInBuild>`) pode ser especificado em um grupo de propriedade para indicar se o evento de build é executado. O valor do conteúdo de um *uso no build* elemento seja `true` ou `false`. Por padrão, um evento de compilação é executado, a menos que seu correspondente *uso no build* é definido como `false`.  
   
  A tabela a seguir lista cada elemento XML do evento de compilação:  
   

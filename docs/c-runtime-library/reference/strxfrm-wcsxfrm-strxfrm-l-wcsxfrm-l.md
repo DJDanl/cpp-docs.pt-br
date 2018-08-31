@@ -45,12 +45,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bc9746d2c98f1799cbdd244e7fc4d465fd705fa
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 96f459c8360969146f8cf76a48c9141000066745
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451713"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214287"
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 
@@ -92,24 +92,24 @@ Cadeia de caracteres de destino.
 Cadeia de caracteres de origem.
 
 *count*<br/>
-Número máximo de caracteres para colocar em *strDest*.
+Número máximo de caracteres a serem colocados na *strDest*.
 
 *locale*<br/>
 A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna o tamanho da cadeia de caracteres transformada, sem contar o caractere nulo de terminação. Se o valor de retorno é maior que ou igual a *contagem*, o conteúdo de *strDest* é imprevisível. Em um erro, cada função define **errno** e retorna **INT_MAX**. Para um caractere inválido, **errno** é definido como **EILSEQ**.
+Retorna o tamanho da cadeia de caracteres transformada, sem contar o caractere nulo de terminação. Se o valor de retorno é maior que ou igual a *contagem*, o conteúdo dos *strDest* é imprevisível. Em um erro, cada função define **errno** e retorna **INT_MAX**. Para um caractere inválido **errno** é definido como **EILSEQ**.
 
 ## <a name="remarks"></a>Comentários
 
-O **strxfrm** função transforma a cadeia de caracteres apontada por *strSource* em uma nova agrupados armazenado em *strDest*. Não mais do que *contagem* caracteres, incluindo o caractere nulo, são transformados e colocadas em cadeia de caracteres resultante. A transformação é feita usando a localidade **LC_COLLATE** configuração de categoria. Para obter mais informações sobre **LC_COLLATE**, consulte [setlocale](setlocale-wsetlocale.md). **strxfrm** usa a localidade atual para o seu comportamento dependem da localidade; **strxfrm_l** é idêntico, exceto que ele usa a localidade passada em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O **strxfrm** função transforma a cadeia de caracteres apontada por *strSource* em um novo formato agrupado que é armazenado no *strDest*. Não mais do que *contagem* caracteres, incluindo o caractere nulo, são transformados e colocados na cadeia de caracteres resultante. A transformação é feita usando a localidade **LC_COLLATE** configuração de categoria. Para obter mais informações sobre **LC_COLLATE**, consulte [setlocale](setlocale-wsetlocale.md). **strxfrm** usa a localidade atual de seu comportamento dependente da localidade; **strxfrm_l** é idêntico, exceto que ele usa a localidade passada em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Após a transformação, uma chamada para **strcmp** com as duas cadeias de caracteres transformadas produz resultados idênticos aos de uma chamada para **strcoll** aplicado para as duas cadeias de caracteres originais. Assim como acontece com **strcoll** e **stricoll**, **strxfrm** automaticamente trata cadeias de caracteres multibyte conforme apropriado.
+Após a transformação, uma chamada para **strcmp** com as duas cadeias de caracteres transformadas produz resultados idênticos aos de uma chamada para **strcoll** aplicado para as duas cadeias de caracteres originais. Assim como acontece com **strcoll** e **stricoll**, **strxfrm** manipula automaticamente as cadeias de caracteres multibyte conforme apropriado.
 
-**wcsxfrm** é uma versão de caractere largo de **strxfrm**; os argumentos de cadeia de caracteres de **wcsxfrm** são ponteiros de caractere largo. Para **wcsxfrm**, após a transformação de cadeia de caracteres, uma chamada para **wcscmp** com as duas cadeias de caracteres transformadas produz resultados idênticos aos de uma chamada para **wcscoll** aplicada para o originais duas cadeias de caracteres. **wcsxfrm** e **strxfrm** se comportam de forma idêntica caso contrário. **wcsxfrm** usa a localidade atual para o seu comportamento dependem da localidade; **wcsxfrm_l** usa a localidade passada em vez da localidade atual.
+**wcsxfrm** é uma versão de caractere largo de **strxfrm**; os argumentos de cadeia de caracteres de **wcsxfrm** são ponteiros de caractere largo. Para **wcsxfrm**após a transformação de cadeia de caracteres, uma chamada para **wcscmp** com as duas cadeias de caracteres transformadas produz resultados idênticos aos de uma chamada para **wcscoll** aplicada para o cadeias de caracteres de dois originais. **wcsxfrm** e **strxfrm** se comportam de forma idêntica caso contrário. **wcsxfrm** usa a localidade atual de seu comportamento dependente da localidade; **wcsxfrm_l** usa a localidade passada em vez da localidade atual.
 
-Essas funções validam seus parâmetros. Se *strSource* é um ponteiro nulo, ou *strDest* é um **nulo** ponteiro (a menos que contagem será zero), ou se *contagem* é maior do que **INT_MAX**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL** e retornar **INT_MAX**.
+Essas funções validam seus parâmetros. Se *strSource* for um ponteiro nulo, ou *strDest* é um **nulo** ponteiro (a menos que contagem seja zero), ou se *contagem* é maior que **INT_MAX**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e retornar **INT_MAX**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -120,9 +120,9 @@ Essas funções validam seus parâmetros. Se *strSource* é um ponteiro nulo, ou
 
 Na localidade “C”, a ordem dos caracteres no conjunto de caracteres (conjunto de caracteres ASCII) é a mesma que a ordem lexicográfica dos caracteres. No entanto, em outras localidades, a ordem de caracteres no conjunto de caracteres pode ser diferente da ordem lexicográfica de caracteres. Por exemplo, em algumas localidades europeias, o caractere “a” (valor 0x61) precede o caractere “&\#x00E4;” (valor 0xE4) no conjunto de caracteres, mas o caractere “ä” precede a caractere “a” lexicograficamente.
 
-Em locais para o qual o conjunto de caracteres e a ordem lexicográfica de caractere são diferentes, use **strxfrm** nessas cadeias de caracteres originais e, em seguida, **strcmp** nessas cadeias de caracteres resultantes para produzir uma cadeia de caracteres lexicográfica comparação de acordo com a localidade atual **LC_COLLATE** configuração de categoria. Portanto, para comparar duas cadeias de caracteres lexicograficamente na localidade acima, use **strxfrm** em cadeias originais, em seguida, **strcmp** em cadeias de caracteres resultantes. Como alternativa, você pode usar **strcoll** em vez de **strcmp** nessas cadeias de caracteres originais.
+Em localidades para as quais o conjunto de caracteres e a ordem lexicográfica de caracteres diferem, use **strxfrm** nas cadeias de caracteres originais e, em seguida **strcmp** em cadeias de caracteres resultantes para produzir uma cadeia de caracteres lexicográfica comparação de acordo com a localidade atual **LC_COLLATE** configuração de categoria. Portanto, para comparar duas cadeias de caracteres lexicograficamente na localidade acima, use **strxfrm** em cadeias de caracteres originais, então **strcmp** nas cadeias de caracteres resultantes. Como alternativa, você pode usar **strcoll** vez **strcmp** nas cadeias de caracteres originais.
 
-**strxfrm** é basicamente um wrapper em torno de [LCMapString](http://msdn.microsoft.com/library/windows/desktop/dd318700) com **LCMAP_SORTKEY**.
+**strxfrm** é basicamente um wrapper em torno [LCMapString](/windows/desktop/api/winnls/nf-winnls-lcmapstringa) com **LCMAP_SORTKEY**.
 
 O valor da expressão a seguir é o tamanho da matriz necessário para manter o **strxfrm** transformação da cadeia de caracteres de origem:
 

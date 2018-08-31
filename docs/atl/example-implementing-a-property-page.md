@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4c7329e7784fc5228bca5aa5b167d04ded51aaf
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 43ce702c1da30e6f624477b74e381576539ef9e0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852259"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214776"
 ---
 # <a name="example-implementing-a-property-page"></a>Exemplo: Implementando uma página de propriedades
 Este exemplo mostra como criar uma página de propriedades que exibe as propriedades de (e permite que você altere uma) a [Classes de documento](../mfc/document-classes.md) interface.  
@@ -70,7 +70,7 @@ Este exemplo mostra como criar uma página de propriedades que exibe as propried
  Esses controles serão usados para exibir o nome de arquivo do documento e seu status de somente leitura.  
   
 > [!NOTE]
->  O recurso de caixa de diálogo não inclui um quadro ou comando botões nem tem a aparência com guias que você talvez esperasse. Esses recursos são fornecidos por um quadro de página de propriedade, como aquele criado chamando [OleCreatePropertyFrame](http://msdn.microsoft.com/library/windows/desktop/ms678437).  
+>  O recurso de caixa de diálogo não inclui um quadro ou comando botões nem tem a aparência com guias que você talvez esperasse. Esses recursos são fornecidos por um quadro de página de propriedade, como aquele criado chamando [OleCreatePropertyFrame](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe).  
   
 ##  <a name="vcconadding_message_handlers"></a> Adicionando manipuladores de mensagens  
  Com os controles em vigor, você pode adicionar manipuladores de mensagens para atualizar o status de falta de limpeza da página quando o valor de qualquer um dos controles é alterado:  

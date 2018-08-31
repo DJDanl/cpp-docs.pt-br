@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1c8aaed0a9f50e20dba5938b9b37425f4caa2bb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 25fca5e7e51789aceef8fb92cf48cc238a8e26fa
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33101871"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195991"
 ---
 # <a name="data-source-object-interfaces"></a>Interfaces de objeto da fonte de dados
 A tabela a seguir mostra as interfaces obrigatórias e opcionais definidas por OLE DB para um objeto de fonte de dados.  
@@ -35,14 +35,14 @@ A tabela a seguir mostra as interfaces obrigatórias e opcionais definidas por O
 |`IDBCreateSession`|Obrigatório|Sim|  
 |`IDBInitialize`|Obrigatório|Sim|  
 |`IDBProperties`|Obrigatório|Sim|  
-|[IPersist](http://msdn.microsoft.com/library/windows/desktop/ms688695)|Obrigatório|Sim|  
-|[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Opcional|Não|  
+|[IPersist](/windows/desktop/api/objidl/nn-objidl-ipersist)|Obrigatório|Sim|  
+|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Opcional|Não|  
 |`IDBDataSourceAdmin`|Opcional|Não|  
 |`IDBInfo`|Opcional|Não|  
-|[IPersistFile](http://msdn.microsoft.com/library/windows/desktop/ms687223)|Opcional|Não|  
+|[IPersistFile](/windows/desktop/api/objidl/nn-objidl-ipersistfile)|Opcional|Não|  
 |`ISupportErrorInfo`|Opcional|Não|  
   
- A fonte de dados objeto implementa a `IDBProperties`, `IDBInitialize`, e `IDBCreateSession` interfaces por meio da herança. Você pode escolher dar suporte a funcionalidade adicional ao herdar ou não herdar de uma dessas classes de implementação. Se você desejar oferecer suporte a `IDBDataSourceAdmin` interface, você deve herdar do `IDBDataSourceAdminImpl` classe.  
+ A fonte de dados objeto implementa a `IDBProperties`, `IDBInitialize`, e `IDBCreateSession` interfaces por meio da herança. Você pode escolher dar suporte à funcionalidade adicional por herdar ou não herdar de uma dessas classes de implementação. Se você quiser dar suporte a `IDBDataSourceAdmin` interface, você deve herdar o `IDBDataSourceAdminImpl` classe.  
   
 ## <a name="see-also"></a>Consulte também  
  [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

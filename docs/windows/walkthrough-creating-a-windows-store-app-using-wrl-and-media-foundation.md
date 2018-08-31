@@ -13,16 +13,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4967be81e45e52ce7c321ceb552b13a1dc59bd0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2775e0348f6bfe1e7fe960a105ebf0c31fcaae96
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604884"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214825"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Passo a passo: Criando um aplicativo UWP usando WRL e Media Foundation
 
-Saiba como usar a biblioteca de modelos do Windows em tempo de execução C++ (WRL) para criar um aplicativo de plataforma Universal do Windows (UWP) que usa [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).
+Saiba como usar a biblioteca de modelos do Windows em tempo de execução C++ (WRL) para criar um aplicativo de plataforma Universal do Windows (UWP) que usa [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
 
 Este exemplo cria uma transformação personalizada do Media Foundation que se aplica a um efeito de escala de cinza para imagens que são capturadas de uma webcam. O aplicativo usa C++ para definir a transformação personalizada e o c# para usar o componente para transformar as imagens capturadas.
 
@@ -36,7 +36,7 @@ Na maioria dos casos, você pode usar C + + c++ /CX para criar o tempo de execu�
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-- Experiência com o [tempo de execução do Windows](http://msdn.microsoft.com/library/windows/apps/br211377.aspx).
+- Experiência com o [tempo de execução do Windows](https://msdn.microsoft.com/library/windows/apps/br211377.aspx).
 
 - Experiência com COM.
 
@@ -52,7 +52,7 @@ Na maioria dos casos, você pode usar C + + c++ /CX para criar o tempo de execu�
 
 - O [InspectableClass](../windows/inspectableclass-macro.md) macro implementa a funcionalidade básica de COM, como a contagem de referência e o `QueryInterface` método e define o tempo de execução do nome da classe e o nível de confiança.
 
-- Usar o Microsoft:: wrl::[classe de módulo](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/b4acf5de-2f4c-4c8b-b5ff-9140d023ecbe/locales/en-US) para implementar as funções de ponto de entrada DLL, como [DllGetActivationFactory](http://msdn.microsoft.com/library/br205771.aspx), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), e [ DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject).
+- Usar o Microsoft:: wrl::[classe de módulo](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/b4acf5de-2f4c-4c8b-b5ff-9140d023ecbe/locales/en-US) para implementar as funções de ponto de entrada DLL, como [DllGetActivationFactory](https://msdn.microsoft.com/library/br205771.aspx), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), e [ DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject).
 
 - Vincule seu DLL do componente a runtimeobject. Também especifique [/WINMD](../cppcx/compiler-and-linker-options-c-cx.md) na linha do vinculador para gerar os metadados do Windows.
 
@@ -113,7 +113,7 @@ Na maioria dos casos, você pode usar C + + c++ /CX para criar o tempo de execu�
 
 3. No `Package.appxmanifest`diante de **funcionalidades** guia, selecione **microfone** e **Webcam**. Os dois recursos são necessários para capturar fotos de webcam.
 
-4. Na `MainPage.xaml`, adicione este código para a raiz [grade](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) elemento:
+4. Na `MainPage.xaml`, adicione este código para a raiz [grade](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx) elemento:
 
    [!code-xml[wrl-media-capture#7](../windows/codesnippet/Xaml/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_7.xaml)]
 
@@ -132,5 +132,5 @@ O exemplo mostra como capturar fotos da webcam padrão, um por vez. O [exemplo d
 ## <a name="see-also"></a>Consulte também
 
 [WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows)](../windows/windows-runtime-cpp-template-library-wrl.md)  
-[Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197)  
+[Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk)  
 [Exemplo de extensões de mídia](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

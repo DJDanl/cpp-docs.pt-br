@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9cef186c18622dc361f97bd65e7bd264a6f03cf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2abd889584ce39627153d6eac59db9240367ba20
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599578"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214385"
 ---
 # <a name="how-to-copy-resources"></a>Como copiar recursos
 
@@ -37,7 +37,7 @@ Você pode copiar recursos de um arquivo para outro sem alterá-los ou pode [alt
 Você pode facilmente copiar recursos de um recurso existente ou arquivo executável para o arquivo de recurso atual. Para fazer isso, você abra ambos os arquivos que contêm recursos ao mesmo tempo e arrasta itens de um arquivo para outro ou copia e cola entre os dois arquivos. Esse método funciona para arquivos de script (. rc) do recurso e arquivos de modelo (. rct) de recursos, bem como arquivos executáveis (.exe).
 
 > [!NOTE]
-> O Visual C++ inclui arquivos de recurso de exemplo que você pode usar em seu próprio aplicativo. Para obter mais informações, consulte [clip-art: recursos comuns](http://msdn.microsoft.com/9bac2891-b6b3-49ec-a287-cec850c707e0).
+> O Visual C++ inclui arquivos de recurso de exemplo que você pode usar em seu próprio aplicativo. Para obter mais informações, consulte [clip-art: recursos comuns](https://msdn.microsoft.com/9bac2891-b6b3-49ec-a287-cec850c707e0).
 
 Você pode usar o método de arrastar e soltar entre arquivos. rc que estão abertos [fora do projeto](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
 

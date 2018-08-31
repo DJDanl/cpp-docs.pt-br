@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad0db4641731f4c92550fad075b759957383c52a
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 42995e4040c6f73614659eede61f1560e1f31aed
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027570"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214399"
 ---
 # <a name="atl-path-functions"></a>Funções de caminho da ATL
 
@@ -76,49 +76,49 @@ ATL fornece a classe ATLPath para manipular caminhos na forma de [CPathT](cpatht
   
 |||  
 |-|-|  
-|[ATLPath::AddBackslash](#addbackslash)|Essa função é um wrapper sobrecarregado para [PathAddBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773561).|  
-|[ATLPath::AddExtension](#addextension)|Essa função é um wrapper sobrecarregado para [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563).|  
-|[ATLPath::Append](#append)|Essa função é um wrapper sobrecarregado para [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565).|  
-|[ATLPath::BuildRoot](#buildroot)|Essa função é um wrapper sobrecarregado para [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567).|  
-|[ATLPath::Canonicalize](#canonicalize)|Essa função é um wrapper sobrecarregado para [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569).|  
-|[ATLPath::Combine](#combine)|Essa função é um wrapper sobrecarregado para [PathCombine](http://msdn.microsoft.com/library/windows/desktop/bb773571).|  
-|[ATLPath::CommonPrefix](#commonprefix)|Essa função é um wrapper sobrecarregado para [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574).|  
-|[ATLPath::CompactPath](#compactpath)|Essa função é um wrapper sobrecarregado para [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575).|  
-|[ATLPath::CompactPathEx](#compactpathex)|Essa função é um wrapper sobrecarregado para [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578).|  
-|[ATLPath::FileExists](#fileexists)|Essa função é um wrapper sobrecarregado para [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584).|  
-|[ATLPath::FindExtension](#findextension)|Essa função é um wrapper sobrecarregado para [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587).|  
-|[ATLPath::FindFileName](#findfilename)|Essa função é um wrapper sobrecarregado para [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589).|  
-|[ATLPath::GetDriveNumber](#getdrivenumber)|Essa função é um wrapper sobrecarregado para [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612).|  
-|[ATLPath::IsDirectory](#isdirectory)|Essa função é um wrapper sobrecarregado para [PathIsDirectory](http://msdn.microsoft.com/library/windows/desktop/bb773621).|  
-|[ATLPath::IsFileSpec](#isfilespec)|Essa função é um wrapper sobrecarregado para [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627).|  
-|[ATLPath::IsPrefix](#isprefix)|Essa função é um wrapper sobrecarregado para [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650).|  
-|[ATLPath::IsRelative](#isrelative)|Essa função é um wrapper sobrecarregado para [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660).|  
-|[ATLPath::IsRoot](#isroot)|Essa função é um wrapper sobrecarregado para [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674).|  
-|[ATLPath::IsSameRoot](#issameroot)|Essa função é um wrapper sobrecarregado para [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687).|  
-|[ATLPath::IsUNC](#isunc)|Essa função é um wrapper sobrecarregado para [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712).|  
-|[ATLPath::IsUNCServer](#isuncserver)|Essa função é um wrapper sobrecarregado para [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722).|  
-|[ATLPath::IsUNCServerShare](#isuncservershare)|Essa função é um wrapper sobrecarregado para [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723).|  
-|[ATLPath::MakePretty](#makepretty)|Essa função é um wrapper sobrecarregado para [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725).|  
-|[ATLPath::MatchSpec](#matchspec)|Essa função é um wrapper sobrecarregado para [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727).|  
-|[ATLPath::QuoteSpaces](#quotespaces)|Essa função é um wrapper sobrecarregado para [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739).|  
-|[ATLPath::RelativePathTo](#relativepathto)|Essa função é um wrapper sobrecarregado para [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740).|  
-|[ATLPath::RemoveArgs](#removeargs)|Essa função é um wrapper sobrecarregado para [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742).|  
-|[ATLPath::RemoveBackslash](#removebackslash)|Essa função é um wrapper sobrecarregado para [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743).|  
-|[ATLPath::RemoveBlanks](#removeblanks)|Essa função é um wrapper sobrecarregado para [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745).|  
-|[ATLPath::RemoveExtension](#removeextension)|Essa função é um wrapper sobrecarregado para [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746).|  
-|[ATLPath::RemoveFileSpec](#removefilespec)|Essa função é um wrapper sobrecarregado para [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748).|  
-|[ATLPath::RenameExtension](#renameextension)|Essa função é um wrapper sobrecarregado para [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749).|  
-|[ATLPath::SkipRoot](#skiproot)|Essa função é um wrapper sobrecarregado para [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754).|  
-|[ATLPath::StripPath](#strippath)|Essa função é um wrapper sobrecarregado para [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756).|  
-|[ATLPath::StripToRoot](#striptoroot)|Essa função é um wrapper sobrecarregado para [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757).|  
-|[ATLPath::UnquoteSpaces](#unquotespaces)|Essa função é um wrapper sobrecarregado para [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763).|  
+|[ATLPath::AddBackslash](#addbackslash)|Essa função é um wrapper sobrecarregado para [PathAddBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha).|  
+|[ATLPath::AddExtension](#addextension)|Essa função é um wrapper sobrecarregado para [PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona).|  
+|[ATLPath::Append](#append)|Essa função é um wrapper sobrecarregado para [PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda).|  
+|[ATLPath::BuildRoot](#buildroot)|Essa função é um wrapper sobrecarregado para [PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota).|  
+|[ATLPath::Canonicalize](#canonicalize)|Essa função é um wrapper sobrecarregado para [PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea).|  
+|[ATLPath::Combine](#combine)|Essa função é um wrapper sobrecarregado para [PathCombine](/windows/desktop/api/shlwapi/nf-shlwapi-pathcombinea).|  
+|[ATLPath::CommonPrefix](#commonprefix)|Essa função é um wrapper sobrecarregado para [PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa).|  
+|[ATLPath::CompactPath](#compactpath)|Essa função é um wrapper sobrecarregado para [PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha).|  
+|[ATLPath::CompactPathEx](#compactpathex)|Essa função é um wrapper sobrecarregado para [PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa).|  
+|[ATLPath::FileExists](#fileexists)|Essa função é um wrapper sobrecarregado para [PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa).|  
+|[ATLPath::FindExtension](#findextension)|Essa função é um wrapper sobrecarregado para [PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona).|  
+|[ATLPath::FindFileName](#findfilename)|Essa função é um wrapper sobrecarregado para [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea).|  
+|[ATLPath::GetDriveNumber](#getdrivenumber)|Essa função é um wrapper sobrecarregado para [PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera).|  
+|[ATLPath::IsDirectory](#isdirectory)|Essa função é um wrapper sobrecarregado para [PathIsDirectory](/windows/desktop/api/shlwapi/nf-shlwapi-pathisdirectorya).|  
+|[ATLPath::IsFileSpec](#isfilespec)|Essa função é um wrapper sobrecarregado para [PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca).|  
+|[ATLPath::IsPrefix](#isprefix)|Essa função é um wrapper sobrecarregado para [PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa).|  
+|[ATLPath::IsRelative](#isrelative)|Essa função é um wrapper sobrecarregado para [PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea).|  
+|[ATLPath::IsRoot](#isroot)|Essa função é um wrapper sobrecarregado para [PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota).|  
+|[ATLPath::IsSameRoot](#issameroot)|Essa função é um wrapper sobrecarregado para [PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota).|  
+|[ATLPath::IsUNC](#isunc)|Essa função é um wrapper sobrecarregado para [PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca).|  
+|[ATLPath::IsUNCServer](#isuncserver)|Essa função é um wrapper sobrecarregado para [PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera).|  
+|[ATLPath::IsUNCServerShare](#isuncservershare)|Essa função é um wrapper sobrecarregado para [PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea).|  
+|[ATLPath::MakePretty](#makepretty)|Essa função é um wrapper sobrecarregado para [PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya).|  
+|[ATLPath::MatchSpec](#matchspec)|Essa função é um wrapper sobrecarregado para [PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca).|  
+|[ATLPath::QuoteSpaces](#quotespaces)|Essa função é um wrapper sobrecarregado para [PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa).|  
+|[ATLPath::RelativePathTo](#relativepathto)|Essa função é um wrapper sobrecarregado para [PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa).|  
+|[ATLPath::RemoveArgs](#removeargs)|Essa função é um wrapper sobrecarregado para [PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa).|  
+|[ATLPath::RemoveBackslash](#removebackslash)|Essa função é um wrapper sobrecarregado para [PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha).|  
+|[ATLPath::RemoveBlanks](#removeblanks)|Essa função é um wrapper sobrecarregado para [PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa).|  
+|[ATLPath::RemoveExtension](#removeextension)|Essa função é um wrapper sobrecarregado para [PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona).|  
+|[ATLPath::RemoveFileSpec](#removefilespec)|Essa função é um wrapper sobrecarregado para [PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca).|  
+|[ATLPath::RenameExtension](#renameextension)|Essa função é um wrapper sobrecarregado para [PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona).|  
+|[ATLPath::SkipRoot](#skiproot)|Essa função é um wrapper sobrecarregado para [PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota).|  
+|[ATLPath::StripPath](#strippath)|Essa função é um wrapper sobrecarregado para [PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha).|  
+|[ATLPath::StripToRoot](#striptoroot)|Essa função é um wrapper sobrecarregado para [PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota).|  
+|[ATLPath::UnquoteSpaces](#unquotespaces)|Essa função é um wrapper sobrecarregado para [PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa).|  
   
 ## <a name="requirements"></a>Requisitos  
  **Cabeçalho:** atlpath  
 
 ## <a name="addbackslash"></a> ATLPath::AddBackSlash
 
-Essa função é um wrapper sobrecarregado para [PathAddBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773561).  
+Essa função é um wrapper sobrecarregado para [PathAddBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -128,13 +128,13 @@ inline wchar_t* AddBackslash(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathAddBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773561) para obter detalhes.  
+ Ver [PathAddBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha) para obter detalhes.  
   
  
   
 
 ## <a name="addextension"></a> ATLPath::AddExtension
- Essa função é um wrapper sobrecarregado para [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563).  
+ Essa função é um wrapper sobrecarregado para [PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -144,10 +144,10 @@ inline BOOL AddExtension(wchar_t* pszPath, const wchar_t* pszExtension);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563) para obter detalhes. 
+ Ver [PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona) para obter detalhes. 
   
 ## <a name="append"></a> ATLPath::Append
- Essa função é um wrapper sobrecarregado para [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565).  
+ Essa função é um wrapper sobrecarregado para [PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -157,13 +157,13 @@ inline BOOL Append(wchar_t* pszPath, const wchar_t* pszMore);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565) para obter detalhes.  
+ Ver [PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda) para obter detalhes.  
   
  
   
 
 ## <a name="buildroot"></a> ATLPath::BuildRoot
- Essa função é um wrapper sobrecarregado para [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567).  
+ Essa função é um wrapper sobrecarregado para [PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -173,13 +173,13 @@ inline wchar_t* BuildRoot(wchar_t* pszPath, int iDrive);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567) para obter detalhes.  
+ Ver [PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota) para obter detalhes.  
   
  
   
 
 ## <a name="canonicalize"></a> ATLPath::Canonicalize
- Essa função é um wrapper sobrecarregado para [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569).  
+ Essa função é um wrapper sobrecarregado para [PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -189,13 +189,13 @@ inline BOOL Canonicalize(wchar_t* pszDest, const wchar_t* pszSrc);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569) para obter detalhes.  
+ Ver [PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea) para obter detalhes.  
   
  
   
 
 ## <a name="combine"></a> ATLPath::Combine 
-Essa função é um wrapper sobrecarregado para [PathCombine](https://msdn.microsoft.com/library/windows/desktop/bb773571).  
+Essa função é um wrapper sobrecarregado para [PathCombine](/windows/desktop/api/shlwapi/nf-shlwapi-pathcombinea).  
 
 ### <a name="syntax"></a>Sintaxe  
 ```
@@ -215,7 +215,7 @@ Consulte PathCombine para obter detalhes.
 
 
 ## <a name="commonprefix"></a> ATLPath::CommonPrefix
- Essa função é um wrapper sobrecarregado para [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574).  
+ Essa função é um wrapper sobrecarregado para [PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -232,13 +232,13 @@ inline int CommonPrefix(
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574) para obter detalhes.  
+ Ver [PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa) para obter detalhes.  
   
  
   
 
 ## <a name="compactpath"></a> ATLPath::CompactPath
- Essa função é um wrapper sobrecarregado para [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575).  
+ Essa função é um wrapper sobrecarregado para [PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -255,13 +255,13 @@ inline BOOL CompactPath(
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575) para obter detalhes.  
+ Ver [PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha) para obter detalhes.  
   
  
   
 
 ## <a name="compactpathex"></a> ATLPath::CompactPathEx
- Essa função é um wrapper sobrecarregado para [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578).  
+ Essa função é um wrapper sobrecarregado para [PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -280,13 +280,13 @@ inline BOOL CompactPathEx(
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578) para obter detalhes.  
+ Ver [PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa) para obter detalhes.  
   
  
   
 
 ## <a name="fileexists"></a> ATLPath::FileExists
- Essa função é um wrapper sobrecarregado para [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584).  
+ Essa função é um wrapper sobrecarregado para [PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -296,13 +296,13 @@ inline BOOL FileExists(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584) para obter detalhes.  
+ Ver [PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa) para obter detalhes.  
   
  
   
 
 ## <a name="findextension"></a> ATLPath::FindExtension
- Essa função é um wrapper sobrecarregado para [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587).  
+ Essa função é um wrapper sobrecarregado para [PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -312,13 +312,13 @@ inline wchar_t* FindExtension(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587) para obter detalhes.  
+ Ver [PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona) para obter detalhes.  
   
  
   
 
 ## <a name="findfilename"></a> ATLPath::FindFileName
- Essa função é um wrapper sobrecarregado para [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589).  
+ Essa função é um wrapper sobrecarregado para [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -328,13 +328,13 @@ inline wchar_t* FindFileName(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589) para obter detalhes.  
+ Ver [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) para obter detalhes.  
   
  
   
 
 ## <a name="getdrivenumber"></a> ATLPath::GetDriveNumber  
- Essa função é um wrapper sobrecarregado para [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612).  
+ Essa função é um wrapper sobrecarregado para [PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -344,13 +344,13 @@ inline int GetDriveNumber(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612) para obter detalhes.  
+ Ver [PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera) para obter detalhes.  
   
  
 
 
 ## <a name="isdirectory"></a>  ATLPath::IsDirectory 
-Essa função é um wrapper sobrecarregado para [PathIsDirectory](https://msdn.microsoft.com/library/windows/desktop/bb773621).
+Essa função é um wrapper sobrecarregado para [PathIsDirectory](/windows/desktop/api/shlwapi/nf-shlwapi-pathisdirectorya).
 
 ```  
 inline BOOL IsDirectory(const char* pszPath);
@@ -360,7 +360,7 @@ inline BOOL IsDirectory(const wchar_t* pszPath);
 Consulte PathIsDirectory para obter detalhes.  
 
 ## <a name="isfilespec"></a> ATLPath::IsFileSpec
- Essa função é um wrapper sobrecarregado para [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627).  
+ Essa função é um wrapper sobrecarregado para [PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -370,13 +370,13 @@ inline BOOL IsFileSpec(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627) para obter detalhes.  
+ Ver [PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca) para obter detalhes.  
   
  
   
 
 ## <a name="isprefix"></a> ATLPath::IsPrefix
- Essa função é um wrapper sobrecarregado para [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650).  
+ Essa função é um wrapper sobrecarregado para [PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -386,13 +386,13 @@ inline BOOL IsPrefix(const wchar_t* pszPrefix, const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650) para obter detalhes.  
+ Ver [PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa) para obter detalhes.  
   
  
   
 
 ## <a name="isrelative"></a> ATLPath::IsRelative
- Essa função é um wrapper sobrecarregado para [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660).  
+ Essa função é um wrapper sobrecarregado para [PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -402,13 +402,13 @@ inline BOOL IsRelative(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660) para obter detalhes.  
+ Ver [PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea) para obter detalhes.  
   
  
   
 
 ## <a name="isroot"></a> ATLPath::IsRoot
- Essa função é um wrapper sobrecarregado para [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674).  
+ Essa função é um wrapper sobrecarregado para [PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -418,13 +418,13 @@ inline BOOL IsRoot(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674) para obter detalhes.  
+ Ver [PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota) para obter detalhes.  
   
  
   
 
 ## <a name="issameroot"></a> ATLPath::IsSameRoot
- Essa função é um wrapper sobrecarregado para [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687).  
+ Essa função é um wrapper sobrecarregado para [PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -434,13 +434,13 @@ inline BOOL IsSameRoot(const wchar_t* pszPath1, const wchar_t* pszPath2);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687) para obter detalhes.  
+ Ver [PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota) para obter detalhes.  
   
  
   
 
 ## <a name="isunc"></a> ATLPath::IsUNC
- Essa função é um wrapper sobrecarregado para [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712).  
+ Essa função é um wrapper sobrecarregado para [PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -450,13 +450,13 @@ inline BOOL IsUNC(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712) para obter detalhes.  
+ Ver [PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca) para obter detalhes.  
   
  
   
 
 ## <a name="isuncserver"></a> ATLPath::IsUNCServer
- Essa função é um wrapper sobrecarregado para [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722).  
+ Essa função é um wrapper sobrecarregado para [PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -466,13 +466,13 @@ inline BOOL IsUNCServer(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722) para obter detalhes.  
+ Ver [PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera) para obter detalhes.  
   
  
   
 
 ## <a name="isuncservershare"></a> ATLPath::IsUNCServerShare
- Essa função é um wrapper sobrecarregado para [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723).  
+ Essa função é um wrapper sobrecarregado para [PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -482,13 +482,13 @@ inline BOOL IsUNCServerShare(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723) para obter detalhes.  
+ Ver [PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea) para obter detalhes.  
   
  
   
 
 ## <a name="makepretty"></a> ATLPath::MakePretty
- Essa função é um wrapper sobrecarregado para [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725).  
+ Essa função é um wrapper sobrecarregado para [PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -498,13 +498,13 @@ inline BOOL MakePretty(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725) para obter detalhes.  
+ Ver [PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya) para obter detalhes.  
   
  
   
 
 ## <a name="matchspec"></a> ATLPath::MatchSpec  
- Essa função é um wrapper sobrecarregado para [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727).  
+ Essa função é um wrapper sobrecarregado para [PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -514,13 +514,13 @@ inline BOOL MatchSpec(const wchar_t* pszPath, const wchar_t* pszSpec);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727) para obter detalhes.  
+ Ver [PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca) para obter detalhes.  
   
  
   
 
 ## <a name="quotespaces"></a> ATLPath::QuoteSpaces  
- Essa função é um wrapper sobrecarregado para [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739).  
+ Essa função é um wrapper sobrecarregado para [PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -530,13 +530,13 @@ inline void QuoteSpaces(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739) para obter detalhes.  
+ Ver [PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa) para obter detalhes.  
   
  
   
 
 ## <a name="relativepathto"></a> ATLPath::RelativePathTo
- Essa função é um wrapper sobrecarregado para [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740).  
+ Essa função é um wrapper sobrecarregado para [PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -557,13 +557,13 @@ inline BOOL RelativePathTo(
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740) para obter detalhes.  
+ Ver [PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa) para obter detalhes.  
   
  
   
 
 ## <a name="removeargs"></a> ATLPath::RemoveArgs  
- Essa função é um wrapper sobrecarregado para [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742).  
+ Essa função é um wrapper sobrecarregado para [PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -573,13 +573,13 @@ inline void RemoveArgs(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742) para obter detalhes.  
+ Ver [PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa) para obter detalhes.  
   
  
   
 
 ## <a name="removebackslash"></a> ATLPath::RemoveBackslash
- Essa função é um wrapper sobrecarregado para [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743).  
+ Essa função é um wrapper sobrecarregado para [PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -589,13 +589,13 @@ inline wchar_t* RemoveBackslash(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743) para obter detalhes.  
+ Ver [PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha) para obter detalhes.  
   
  
   
 
 ## <a name="removeblanks"></a> ATLPath::RemoveBlanks
- Essa função é um wrapper sobrecarregado para [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745).  
+ Essa função é um wrapper sobrecarregado para [PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -605,13 +605,13 @@ inline void RemoveBlanks(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745) para obter detalhes.  
+ Ver [PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa) para obter detalhes.  
   
  
   
 
 ## <a name="removeextension"></a> ATLPath::RemoveExtension
- Essa função é um wrapper sobrecarregado para [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746).  
+ Essa função é um wrapper sobrecarregado para [PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -621,13 +621,13 @@ inline void RemoveExtension(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746) para obter detalhes.  
+ Ver [PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona) para obter detalhes.  
   
  
   
 
 ## <a name="removefilespec"></a> ATLPath::RemoveFileSpec
- Essa função é um wrapper sobrecarregado para [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748).  
+ Essa função é um wrapper sobrecarregado para [PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -637,13 +637,13 @@ inline BOOL RemoveFileSpec(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748) para obter detalhes.  
+ Ver [PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca) para obter detalhes.  
   
  
   
 
 ## <a name="renameextension"></a> ATLPath::RenameExtension
- Essa função é um wrapper sobrecarregado para [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749).  
+ Essa função é um wrapper sobrecarregado para [PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -653,13 +653,13 @@ inline BOOL RenameExtension(wchar_t* pszPath, const wchar_t* pszExt);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749) para obter detalhes.  
+ Ver [PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona) para obter detalhes.  
   
  
   
 
 ## <a name="skiproot"></a> ATLPath::SkipRoot
- Essa função é um wrapper sobrecarregado para [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754).  
+ Essa função é um wrapper sobrecarregado para [PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -669,13 +669,13 @@ inline wchar_t* SkipRoot(const wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754) para obter detalhes.  
+ Ver [PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota) para obter detalhes.  
   
  
   
 
 ## <a name="strippath"></a> ATLPath::StripPath
- Essa função é um wrapper sobrecarregado para [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756).  
+ Essa função é um wrapper sobrecarregado para [PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -685,14 +685,14 @@ inline void StripPath(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756) para obter detalhes.  
+ Ver [PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha) para obter detalhes.  
   
  
   
 
 
 ## <a name="striptoroot"></a> ATLPath::StripToRoot
- Essa função é um wrapper sobrecarregado para [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757).  
+ Essa função é um wrapper sobrecarregado para [PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -702,13 +702,13 @@ inline BOOL StripToRoot(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757) para obter detalhes.  
+ Ver [PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota) para obter detalhes.  
   
  
   
 
 ## <a name="unquotespaces"></a> ATLPath::UnquoteSpaces
- Essa função é um wrapper sobrecarregado para [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763).  
+ Essa função é um wrapper sobrecarregado para [PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -718,7 +718,7 @@ inline void UnquoteSpaces(wchar_t* pszPath);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Ver [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763) para obter detalhes.  
+ Ver [PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa) para obter detalhes.  
   
  
   

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 921510a548f638f06953f95abe79f825e57e179b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ccd5f5220a49ddb63554b4c3b96533a3066d4d4b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586852"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43214586"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -43,7 +43,7 @@ Uma ou mais interfaces que você especifique quando você aplica a origem do atr
 
 ## <a name="remarks"></a>Comentários
 
-O **fonte** atributo C++ tem a mesma funcionalidade que o [origem](http://msdn.microsoft.com/library/windows/desktop/aa367166) atributo MIDL.
+O **fonte** atributo C++ tem a mesma funcionalidade que o [origem](/windows/desktop/Midl/source) atributo MIDL.
 
 Você pode usar o [padrão](../windows/default-cpp.md) atributo para especificar a interface de origem padrão para um objeto.
 

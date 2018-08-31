@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f3b8b266d44f9109a346160a1b2493f8644be839
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: a220f0dc2c979676ad2e28fd504ef80e0925f74d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207592"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195682"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Chamando funções nativas a partir do código gerenciado
 O common language runtime fornece serviços de invocação de plataforma, ou PInvoke, que permite que código gerenciado chame funções de estilo C em nativas bibliotecas de vínculo dinâmico (DLLs). Os mesmo empacotamento de dados são usados para a interoperabilidade COM o tempo de execução e para o mecanismo IJW, ou "Simplesmente funciona".  
@@ -36,7 +36,7 @@ O common language runtime fornece serviços de invocação de plataforma, ou PIn
   
 -   [Usando interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
   
--   [Um olhar detalhado sobre invocação de plataforma](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
+-   [Um olhar detalhado sobre invocação de plataforma](https://msdn.microsoft.com/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
   
  Os exemplos nesta seção só ilustram como `PInvoke` pode ser usado. `PInvoke` pode simplificar o empacotamento de dados personalizados porque você fornece informações de empacotamento declarativamente em atributos em vez de escrever o código procedural.  
   

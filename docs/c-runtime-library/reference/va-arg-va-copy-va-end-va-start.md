@@ -47,12 +47,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f634e713bcf87aa6d97ed4e49595e4c0f8b72ab3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c33c8dbfe55008c084daf8f6b9f4700f13281012
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417227"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195423"
 ---
 # <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
 
@@ -90,10 +90,10 @@ Tipo de argumento a ser recuperado.
 Ponteiro para a lista de argumentos.
 
 *dest*<br/>
-Ponteiro para a lista de argumentos seja inicializada em *src*
+Ponteiro para a lista de argumentos a ser inicializado no *src*
 
 *src*<br/>
-Ponteiro para a lista inicializado de argumentos para copiar para *dest*.
+Ponteiro para a lista inicializada de argumentos para copiar *dest*.
 
 *prev_param*<br/>
 Parâmetro que precede o primeiro argumento opcional.
@@ -104,19 +104,19 @@ Parâmetro que precede o primeiro argumento opcional.
 
 ## <a name="remarks"></a>Comentários
 
-O **va_arg**, **va_copy**, **va_end**, e **va_start** macros fornecem uma maneira portátil para acessar os argumentos para uma função quando o função aceita um número variável de argumentos. Há duas versões das macros: as macros definidas em STDARG.H estão em conformidade com a norma ISO C99; as macros definidas em VARARGS.H foram preteridas, mas são mantidas para fins de compatibilidade com código gravado antes da norma ANSI C89.
+O **va_arg**, **va_copy**, **va_end**, e **va_start** macros fornecem uma maneira portátil para acessar os argumentos para uma função quando o função usa um número variável de argumentos. Há duas versões das macros: as macros definidas em STDARG.H estão em conformidade com a norma ISO C99; as macros definidas em VARARGS.H foram preteridas, mas são mantidas para fins de compatibilidade com código gravado antes da norma ANSI C89.
 
 Essas macros pressupõem que a função usa um número fixo de argumentos necessários, seguido por um número variável de argumentos opcionais. Os argumentos necessários são declarados como parâmetros comuns para a função e podem ser acessados por meio dos nomes de parâmetro. Os argumentos opcionais são acessados por meio das macros em STDARG.H (ou VARARGS.H para código gravado antes da norma ANSI C89), que define um ponteiro para o primeiro argumento opcional na lista de argumentos, recupera os argumentos da lista e redefine o ponteiro quando o processamento do argumento é concluído.
 
 As macros do padrão C, definidas em STDARG.H, são usadas da seguinte maneira:
 
-- **va_start** define *arg_ptr* para o primeiro argumento opcional na lista de argumentos passado para a função. O argumento *arg_ptr* devem ter o **va_list** tipo. O argumento *prev_param* é o nome do parâmetro necessário que precede o primeiro argumento opcional na lista de argumentos. Se *prev_param* é declarada com a classe de armazenamento de registro, o comportamento da macro está definido. **va_start** deve ser usado antes de **va_arg** é usado pela primeira vez.
+- **va_start** define *arg_ptr* para o primeiro argumento opcional na lista de argumentos que é passado para a função. O argumento *arg_ptr* deve ter o **va_list** tipo. O argumento *prev_param* é o nome do parâmetro necessário que precede imediatamente o primeiro argumento opcional na lista de argumentos. Se *prev_param* é declarado com a classe de armazenamento de registro, o comportamento da macro será indefinido. **va_start** devem ser usados antes **va_arg** é usado pela primeira vez.
 
-- **va_arg** recupera um valor de *tipo* do local que é determinado pelo *arg_ptr*e incrementos *arg_ptr* para apontar para o próximo argumento da lista por usar o tamanho de *tipo* para determinar onde o próximo argumento é iniciada. **va_arg** pode ser usada várias vezes na função para recuperar argumentos da lista.
+- **va_arg** recupera um valor de *tipo* partir do local fornecido por *arg_ptr*e incrementos *arg_ptr* para apontar para o próximo argumento na lista por usando o tamanho de *tipo* para determinar onde começa o próximo argumento. **va_arg** pode ser usado qualquer número de vezes na função para recuperar argumentos da lista.
 
-- **va_copy** faz uma cópia de uma lista de argumentos em seu estado atual. O *src* parâmetro já deve ser inicializado com **va_start**; pode ter sido atualizado com **va_arg** chama, mas não deve ter sido redefinido com **va_end** . O próximo argumento que é recuperado por **va_arg** de *dest* é o mesmo que o próximo argumento que é recuperado do *src*.
+- **va_copy** faz uma cópia de uma lista de argumentos em seu estado atual. O *src* já deve estar inicializado com o parâmetro **va_start**; ele foi atualizado com **va_arg** chama, mas não deve ter sido redefinido com **va_end** . O próximo argumento que é recuperado por **va_arg** partir *dest* é o mesmo que o próximo argumento recuperado do *src*.
 
-- Depois que todos os argumentos forem recuperados, **va_end** redefine o ponteiro para **nulo**. **va_end** deve ser chamado em cada lista de argumentos é inicializada com **va_start** ou **va_copy** antes da função retorna.
+- Depois que todos os argumentos forem recuperados, **va_end** redefine o ponteiro para **nulo**. **va_end** deve ser chamado em cada lista de argumentos é inicializada com **va_start** ou **va_copy** antes que a função retorna.
 
 > [!NOTE]
 > As macros em VARARGS.H foram preteridas e são mantidas somente para compatibilidade com versões anteriores do código gravado antes da norma ANSI C89 com. Em outros casos, use as macros em STDARGS.H.
@@ -153,7 +153,7 @@ int main()
 }
 ```
 
-Observe que **testit** espera que seu segundo parâmetro para ser um **int** ou um **char\***. Os argumentos transmitidos são 0xffffffff (um **sem sinal** **int**, não um **int**) e **nulo** (na verdade, um **int**, não um **char\***). Quando o programa é compilado para código nativo, ele produz esta saída:
+Observe que **testit** espera que seu segundo parâmetro seja uma **int** ou uma **char**<strong>\*</strong>. Os argumentos sendo passados são 0xffffffff (um **sem sinal** **int**, e não um **int**) e **nulo** (na verdade, um **int**, e não uma **char**<strong>\*</strong>). Quando o programa é compilado para código nativo, ele produz esta saída:
 
 ```Output
 -1
