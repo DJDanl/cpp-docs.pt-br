@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7008e7fe670471301968482fbd4c6c758f0ff5e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 3ad6ef6ffaa6341e62b09920ab95d50c5720428c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340496"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195860"
 ---
 # <a name="building-c-projects-in-visual-studio"></a>Compilando projetos do C++ no Visual Studio
 No IDE (ambiente de desenvolvimento integrado) do Visual Studio há diversas formas de compilar uma solução completa ou apenas um projeto em uma solução. Você também pode modificar as definições de compilação e especificar etapas de compilação especificadas para aumentar a eficiência do seu processo de desenvolvimento.  
@@ -50,7 +50,7 @@ No IDE (ambiente de desenvolvimento integrado) do Visual Studio há diversas for
   
  Ao compilar um aplicativo em Visual C++ no Visual Studio, você pode modificar diversas definições da compilação na caixa de diálogo Páginas de Propriedades do projeto. Para obter informações sobre como definir as propriedades do projeto, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).  
   
- Para obter um exemplo de como usar o IDE para criar, compilar e depurar um projeto do C++, confira [Passo a passo: Explorar o IDE do Visual Studio com o C++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio). Para obter um exemplo de como usar o IDE para compilar um projeto do C++/CLR, confira [Passo a passo: Compilando um programa do C++ direcionado ao CLR no Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md). Para obter um exemplo de como usar o IDE para criar um aplicativo do Windows Runtime, confira [Criar seu primeiro aplicativo do Windows Runtime usando o C++](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx).  
+ Para obter um exemplo de como usar o IDE para criar, compilar e depurar um projeto do C++, confira [Passo a passo: Explorar o IDE do Visual Studio com o C++](/visualstudio/ide/getting-started-with-cpp-in-visual-studio). Para obter um exemplo de como usar o IDE para compilar um projeto do C++/CLR, confira [Passo a passo: Compilando um programa do C++ direcionado ao CLR no Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md). Para obter um exemplo de como usar o IDE para criar um aplicativo do Windows Runtime, confira [Criar seu primeiro aplicativo do Windows Runtime usando o C++](https://msdn.microsoft.com/library/windows/apps/hh974580.aspx).  
   
  Para saber mais sobre como compilar, modificar definições de compilação e especificar etapas de compilação personalizadas, consulte os artigos mencionados a seguir.  
   

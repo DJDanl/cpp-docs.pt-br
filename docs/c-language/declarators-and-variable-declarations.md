@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0219c5eecda84f27411ee0dca9cc43a1b5c9148e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a5ec2cf7984940421726dd0197dff4cf6d5ea0c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390600"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200353"
 ---
 # <a name="declarators-and-variable-declarations"></a>Declaradores e declarações variáveis
 O restante desta seção descreve o formato e o significado das declarações para os tipos de variável resumidos nesta lista. Em particular, as demais seções explicam como declarar o seguinte:  
@@ -35,7 +35,7 @@ O restante desta seção descreve o formato e o significado das declarações pa
 |[Estruturas](../c-language/structure-declarations.md)|Variáveis compostas de uma coleção de valores que podem ter tipos diferentes|  
 |[Uniões](../c-language/union-declarations.md)|Variáveis compostas de vários valores de tipos diferentes que ocupam o mesmo espaço de armazenamento|  
   
- Um declarador é a parte de uma declaração que especifica o nome a ser introduzido no programa. Pode incluir modificadores como **\*** (pointer-to) e qualquer uma das palavras-chave de convenção de chamada da Microsoft.  
+ Um declarador é a parte de uma declaração que especifica o nome a ser introduzido no programa. Pode incluir modificadores como <strong>\*</strong> (pointer-to) e qualquer uma das palavras-chave de convenção de chamada da Microsoft.  
   
  **Seção específica da Microsoft**  
   
@@ -63,8 +63,8 @@ __declspec(thread) char *var;
  &nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  
   
  *pointer*:  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub>  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub> *pointer*  
+ &nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub>  
+ &nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub> *pointer*  
   
  *type-qualifier-list*:  
  &nbsp;&nbsp;*type-qualifier*  
@@ -73,7 +73,7 @@ __declspec(thread) char *var;
 > [!NOTE]
 >  Consulte a sintaxe de *declaration* na [Visão Geral de Declarações](../c-language/overview-of-declarations.md) ou em [Resumo da Sintaxe da Linguagem C](../c-language/c-language-syntax-summary.md) para a sintaxe que se refere a *declarator*.  
   
- Quando um declarador consiste em um identificador não modificado, o item que está sendo declarado tem um tipo de base. Se um asterisco (**\***) aparecer à esquerda de um identificador, o tipo será modificado para um tipo de ponteiro. Se o identificador for seguido por colchetes (**[ ]**), o tipo será modificado para um tipo de matriz. Se o identificador for seguido por parênteses, o tipo será modificado para um tipo de função. Para obter mais informações sobre como interpretar a precedência em declarações, consulte [Interpretação de declaradores mais complexos](../c-language/interpreting-more-complex-declarators.md).  
+ Quando um declarador consiste em um identificador não modificado, o item que está sendo declarado tem um tipo de base. Se um asterisco (<strong>\*</strong>) aparecer à esquerda de um identificador, o tipo será modificado para um tipo de ponteiro. Se o identificador for seguido por colchetes (**[ ]**), o tipo será modificado para um tipo de matriz. Se o identificador for seguido por parênteses, o tipo será modificado para um tipo de função. Para obter mais informações sobre como interpretar a precedência em declarações, consulte [Interpretação de declaradores mais complexos](../c-language/interpreting-more-complex-declarators.md).  
   
  Cada declarador declara pelo menos um identificador. Um declarador deve incluir um especificador de tipo para ser uma declaração completa. O especificador de tipo fornece o tipo dos elementos de um tipo de matriz, o tipo de objeto tratado por um tipo ponteiro ou o tipo de retorno de uma função.  
   

@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c425a71f8bb8a7972ade29fb0d18cf3eab7debb5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 59b19a35a70b3bdadd935f06ff7d9ae1ce7d7d95
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33330175"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216374"
 ---
 # <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Caixa de diálogo COM Isolado, Ferramenta de Manifesto, Propriedades de Configuração, Páginas de Propriedades de &lt;Projectname&gt;
-Use essa caixa de diálogo para especificar as opções de **COM Isolado** para [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+Use essa caixa de diálogo para especificar as opções de **COM Isolado** para [Mt.exe](https://msdn.microsoft.com/library/aa375649).  
   
  Para acessar essa caixa de diálogo da página de propriedades, abra as páginas de propriedades do projeto ou da folha de propriedades. Expanda o nó **Ferramenta de Manifesto** em **Propriedades Comuns** e, em seguida, selecione **COM Isolado**.  
   
@@ -47,7 +47,7 @@ Use essa caixa de diálogo para especificar as opções de **COM Isolado** para 
  Usa a opção /replacements para especificar o caminho completo para o arquivo que contém os valores das cadeias de caracteres substituíveis no arquivo .rgs.  
   
 ## <a name="see-also"></a>Consulte também  
- [Aplicativos isolados](http://msdn.microsoft.com/library/aa375190)   
+ [Aplicativos isolados](/windows/desktop/SbsCs/isolated-applications)   
  [Manifesto do aplicativo ClickOnce](/visualstudio/deployment/clickonce-application-manifest)   
  [Páginas de propriedades da Ferramenta de Manifesto](../ide/manifest-tool-property-pages.md)   
  [Trabalhando com Propriedades do Projeto](../ide/working-with-project-properties.md)   

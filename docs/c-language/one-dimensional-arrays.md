@@ -20,23 +20,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d7366a2c0a1b8ae9ed4e37eaaa89de9baf794d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbb47eae81df8b1080480843bfa5a444f6eb989f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388900"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43196970"
 ---
 # <a name="one-dimensional-arrays"></a>Matrizes unidimensionais
 Uma expressão de pós-fixação seguida por uma expressão entre colchetes (**[ ]**) é uma representação assinada de um elemento de um objeto da matriz. Uma expressão subscrita representa o valor no endereço que está na posição *expression*, além de *postfix-expression* quando expresso como  
   
 ```  
-  
-postfix-expression  
-[  
-expression  
-]  
-  
+postfix-expression [ expression ]
 ```  
   
  Geralmente, o valor representado por *postfix-expression* é um valor do ponteiro, como um identificador de matriz e *expression* é um valor integral. No entanto, tudo o que é necessário sintaticamente é que uma das expressões seja do tipo ponteiro e a outra seja do tipo integral. Assim, o valor integral pode estar na posição de *postfix-expression* e o valor do ponteiro pode estar entre colchetes na posição *expression* ou "subscrita". Por exemplo, esse código é válido:  
@@ -52,7 +47,7 @@ int main() {
   
  As expressões subscritas geralmente são usadas para se referir a elementos da matriz, mas você pode aplicar um subscrito a qualquer ponteiro. Independentemente da ordem dos valores, *expression* deve estar entre colchetes (**[ ]**).  
   
- A expressão subscrita é avaliada mediante adição do valor integral ao valor do ponteiro, seguida por aplicação do operador de indireção (**\***) ao resultado. (Consulte [Operadores de indireção e endereço](../c-language/indirection-and-address-of-operators.md) para encontrar uma discussão do operador de indireção.) De fato, para uma matriz unidimensional, as quatro expressões a seguir são equivalentes, supondo que `a` é um ponteiro e `b` é um inteiro:  
+ A expressão subscrita é avaliada mediante adição do valor integral ao valor do ponteiro, seguida por aplicação do operador de indireção (<strong>\*</strong>) ao resultado. (Consulte [Operadores de indireção e endereço](../c-language/indirection-and-address-of-operators.md) para encontrar uma discussão do operador de indireção.) De fato, para uma matriz unidimensional, as quatro expressões a seguir são equivalentes, supondo que `a` é um ponteiro e `b` é um inteiro:  
   
 ```  
 a[b]  

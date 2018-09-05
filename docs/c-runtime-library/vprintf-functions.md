@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d63e5da79b0f78e701f3ababaf54bef41fbf88a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 127cf8683d4d2627bdc19bef4a9ddfa93e3d7387
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418374"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216928"
 ---
 # <a name="vprintf-functions"></a>Funções vprintf
 Cada uma das funções do `vprintf` usa um ponteiro para uma lista de argumentos e então formata e grava os dados determinados em um destino em particular. As funções diferem na validação de parâmetro executada, se as funções obtêm cadeias de caracteres com caracteres largos e de byte único, o destino de saída e o suporte para a especificação na qual os parâmetros são usados na cadeia de caracteres de formatação.  
@@ -89,7 +89,7 @@ Cada uma das funções do `vprintf` usa um ponteiro para uma lista de argumentos
  Para **vsprintf**, `vswprintf`, `_vsnprintf` e `_vsnwprintf`, se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.  
   
 > [!IMPORTANT]
->  Verifique se *format* não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) (Evitando estouros de buffer). Se estiver usando as versões seguras dessas funções (os sufixos **_s** ou **_p**), uma cadeia de caracteres de formato fornecida pelo usuário poderia disparar uma exceção de parâmetro inválido caso a cadeia de caracteres fornecida pelo usuário contivesse caracteres de formatação inválidos.  
+>  Verifique se *format* não é uma cadeia de caracteres definida pelo usuário. Para obter mais informações, consulte [Avoiding Buffer Overruns](/windows/desktop/SecBP/avoiding-buffer-overruns) (Evitando estouros de buffer). Se estiver usando as versões seguras dessas funções (os sufixos **_s** ou **_p**), uma cadeia de caracteres de formato fornecida pelo usuário poderia disparar uma exceção de parâmetro inválido caso a cadeia de caracteres fornecida pelo usuário contivesse caracteres de formatação inválidos.  
   
 ## <a name="see-also"></a>Consulte também  
  [E/S de fluxo](../c-runtime-library/stream-i-o.md)   

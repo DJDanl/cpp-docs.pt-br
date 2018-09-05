@@ -15,17 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f5709ef6fdcaaceecc79cd635374ee77d537100
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eeb1f8e08fbb1d4f30517485c9296febab5a0de0
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387382"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43198750"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>Especificações de caractere octa e hexadecimal
-A sequência **\\***ooo* significa que é possível especificar qualquer caractere no conjunto de caracteres ASCII como um código de caracteres octal de três dígitos. O valor numérico inteiro octal especifica o valor de caractere desejado ou do caractere largo.  
+A sequência **\\**<em>ooo</em> significa que é possível especificar qualquer caractere no conjunto de caracteres ASCII como um código de caracteres octal de três dígitos. O valor numérico inteiro octal especifica o valor de caractere desejado ou do caractere largo.  
   
- De maneira semelhante, a sequência **\x***hhh* permite especificar qualquer caractere ASCII como um código de caracteres hexadecimal. Por exemplo, o caractere de backspace ASCII pode ser atribuído como a sequência de escape C normal (**\b**) ou codificado como **\010** (octal) ou **\x008** (hexadecimal).  
+ De maneira semelhante, a sequência **\x**<em>hhh</em> permite especificar qualquer caractere ASCII como um código de caracteres hexadecimal. Por exemplo, o caractere de backspace ASCII pode ser atribuído como a sequência de escape C normal (**\b**) ou codificado como **\010** (octal) ou **\x008** (hexadecimal).  
   
  Você pode usar somente os dígitos de 0 a 7 em uma sequência de escape octal. As sequências de escape octais nunca poderão ser maiores do que três dígitos e são encerradas pelo primeiro caractere que não seja um dígito octal. Embora não seja necessário usar todos os três dígitos, você deve usar pelo menos um. Por exemplo, a representação octal é **\10** para o caractere de backspace ASCII e **\101** para a letra A, conforme indicado em um gráfico ASCII.  
   

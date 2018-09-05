@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55a2bb282d19a48cfd510056e327e7abca4de4ad
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 13d163ad8de9ef3ee6c8c1375c234a412c70de7d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337035"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213130"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Adicionando funcionalidade com assistentes de código (C++)
 Depois de criar um projeto, você desejará alterar ou adicionar funcionalidades ao projeto. Essas tarefas incluem criação de classes, adição de novas variáveis e funções de membro e adição de métodos e propriedades de Automação. Os assistentes de código foram projetados para permitir que você faça tudo isso.  
@@ -56,7 +56,7 @@ Depois de criar um projeto, você desejará alterar ou adicionar funcionalidades
   
 -   No **Gerenciador de Soluções**, se você clicar com o botão direito do mouse em qualquer pasta e clicar em **Adicionar** no menu de atalho, poderá adicionar arquivos novos ou existentes, mais pastas, itens, classes, recursos e referências Web ao projeto.  
   
--   Na [janela Modo de Exibição de Classe](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), se você clicar com o botão direito do mouse no nó apropriado e clicar em **Adicionar** no menu de atalho, poderá adicionar funções, variáveis, classes, propriedades, métodos, eventos, interfaces, pontos de conexão ou outro código ao projeto.  
+-   Na [janela Modo de Exibição de Classe](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), se você clicar com o botão direito do mouse no nó apropriado e clicar em **Adicionar** no menu de atalho, poderá adicionar funções, variáveis, classes, propriedades, métodos, eventos, interfaces, pontos de conexão ou outro código ao projeto.  
   
     > [!NOTE]
     >  O Visual Studio não fornece um assistente para adicionar uma interface a um projeto. Adicione uma interface a um projeto ATL ou a um [Adicionando Suporte para ATL ao Projeto MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) com a adição de um objeto simples usando o [Assistente de Objeto ATL Simples](../atl/reference/atl-simple-object-wizard.md). Como alternativa, abra o arquivo .idl do projeto e crie a interface digitando:  

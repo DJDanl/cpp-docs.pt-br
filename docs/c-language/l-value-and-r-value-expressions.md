@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 654805750b3cd17e2157fa3710791493970b371f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8003997d82c59d42813d7852e6c3fadb8f12fb26
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386258"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43208902"
 ---
 # <a name="l-value-and-r-value-expressions"></a>Expressões L-Value e R-Value
 Expressões que fazem referência a locais de memória são chamadas de expressões “l-value”. Um l-value representa um valor de “localizador” da região de armazenamento ou um valor “à esquerda”, que indica que pode aparecer à esquerda do sinal de igual (**=**). Os l-values frequentemente são identificadores.  
@@ -39,7 +39,7 @@ Expressões que fazem referência a locais de memória são chamadas de express�
   
 -   Uma expressão de seleção de membros (**->** ou **.**)  
   
--   Uma expressão unary-indirection (**\***) que não faz referência a uma matriz  
+-   Uma expressão unary-indirection (<strong>\*</strong>) que não faz referência a uma matriz  
   
 -   Uma expressão l-value entre parênteses  
   

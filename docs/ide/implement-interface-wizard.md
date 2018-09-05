@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf2ddf83b7a03f8d4e01b61f82e46e0d26a5547b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c43619fcb1d684d7e0d2d6645b7a5feaac61e472
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340535"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195189"
 ---
 # <a name="implement-interface-wizard"></a>Assistente de Implementação de Interface
 Este assistente implementa uma interface para um objeto COM. As implementações de muitas interfaces estão incluídas nas bibliotecas COM disponíveis no Visual Studio e no Windows. Uma implementação de interface é associada a um objeto quando uma instância do objeto é criada, e ele fornece os serviços oferecidos pelo objeto.  
   
- Para ver uma discussão sobre interfaces e implementações, confira [Interfaces e implementações de Interface](http://msdn.microsoft.com/library/windows/desktop/ms694356) no SDK do Windows.  
+ Para ver uma discussão sobre interfaces e implementações, confira [Interfaces e implementações de Interface](/windows/desktop/com/interfaces-and-interface-implementations) no SDK do Windows.  
   
  **Implementar interface de**  
  Especifica o local da biblioteca de tipos, com base na qual a interface é criada.  

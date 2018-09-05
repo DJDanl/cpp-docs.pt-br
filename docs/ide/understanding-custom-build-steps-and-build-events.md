@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a50c0cf224104f720a73a4830405e7114cda74ed
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 16c1bdf088e0545292a672458c066364b5a47ff4
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33338761"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206289"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Noções básicas de etapas e eventos de build personalizados
 No ambiente de desenvolvimento do Visual C++, há três formas básicas de personalizar o processo de build:  
@@ -73,4 +73,4 @@ No ambiente de desenvolvimento do Visual C++, há três formas básicas de perso
 ## <a name="see-also"></a>Consulte também  
  [Compilando projetos do C++ no Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)   
  [Macros comuns para comandos e propriedades de build](../ide/common-macros-for-build-commands-and-properties.md)   
- [Caixa de diálogo Ordem de Build da Ferramenta](http://msdn.microsoft.com/en-us/6204c5b1-7ce9-4948-9ff6-0268642ee14c)
+ [Caixa de diálogo Ordem de Build da Ferramenta](https://msdn.microsoft.com/6204c5b1-7ce9-4948-9ff6-0268642ee14c)

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3586fb33c30148c870b096d0d49a41d7ad8c6c8
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4a9b2aa4389d693cfc6734a29f3a744e955ca3ea
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33335426"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43213787"
 ---
 # <a name="stock-properties"></a>Propriedades de estoque
 Caso esteja adicionando uma propriedade a uma dispinterface MFC usando o [Assistente de Adição de Propriedade](../ide/idl-attributes-add-property-wizard.md), escolha uma propriedade de estoque na lista **Nome da propriedade** da página [Nomes](../ide/names-add-property-wizard.md) do assistente. Estas são as seguintes propriedades:  
@@ -35,7 +35,7 @@ Caso esteja adicionando uma propriedade a uma dispinterface MFC usando o [Assist
 |**Fonte**|Retorna ou define a fonte de ambiente do controle. Nulo se o controle não tem nenhuma fonte.|  
 |`ForeColor`|Retorna ou define a propriedade `ForeColor` de ambiente do controle.|  
 |**hWnd**|Retorna ou define a propriedade **hWnd** do controle. **hWnd** não tem nenhum tipo de implementação **Variável de membro**.|  
-|**ReadyState**|Retorna ou define a propriedade **ReadyState** do controle. Um controle pode estar nos seguintes estados: inicialização cancelada, inicializado, carregando, interativo ou completo. Confira [READYSTATE](https://msdn.microsoft.com/en-us/library/aa768362.aspx) no *SDK da Internet* para obter mais informações.|  
+|**ReadyState**|Retorna ou define a propriedade **ReadyState** do controle. Um controle pode estar nos seguintes estados: inicialização cancelada, inicializado, carregando, interativo ou completo. Confira [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) no *SDK da Internet* para obter mais informações.|  
 |**Texto**|Retorna ou define o texto contido em um controle. **Text** não tem nenhum tipo de implementação **Variável de membro**.|  
   
 ## <a name="see-also"></a>Consulte também  

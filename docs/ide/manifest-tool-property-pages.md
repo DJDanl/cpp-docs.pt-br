@@ -14,17 +14,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2221430522329616dd19f32484b66dc957593c3a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 16a5033a2656cea3f1cecea1e5b97f4ad9c117ad
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33321981"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222201"
 ---
 # <a name="manifest-tool-property-pages"></a>Páginas de propriedades Ferramenta de Manifesto
 Use as páginas de propriedades da **Ferramenta de Manifesto** para definir opções de build para mt.exe.  
   
- Para obter mais informações sobre a ferramenta de manifesto, confira [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+ Para obter mais informações sobre a ferramenta de manifesto, confira [Mt.exe](https://msdn.microsoft.com/library/aa375649).  
   
  [Caixa de diálogo Geral, Ferramenta de Manifesto, Propriedades de Configuração, Páginas de Propriedades de \<Projectname>](../ide/general-manifest-tool-configuration-properties.md)  
   

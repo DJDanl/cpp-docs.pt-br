@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45eda098202fdf9286905bdc967b6aa1d7bd7035
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 00b19fa7166e6edad05d729c5a738a2a827086ae
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327574"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43212789"
 ---
 # <a name="adding-a-property-visual-c"></a>Adicionando uma propriedade (Visual C++)
 Use o [Assistente de Adição de Propriedade](../ide/names-add-property-wizard.md) para adicionar um método a uma interface no projeto.  
   
 ### <a name="to-add-a-property-to-your-object"></a>Para adicionar uma propriedade ao objeto  
   
-1.  Em [Modo de Exibição de Classe](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), clique com o botão direito do mouse no nome da interface à qual você deseja adicionar a propriedade.  
+1.  Em [Modo de Exibição de Classe](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), clique com o botão direito do mouse no nome da interface à qual você deseja adicionar a propriedade.  
   
     > [!NOTE]
     >  Adicione também propriedades a dispinterfaces, que estarão aninhadas no nó da biblioteca, a menos que o projeto esteja atribuído.  
@@ -49,5 +49,5 @@ Use o [Assistente de Adição de Propriedade](../ide/names-add-property-wizard.m
 ## <a name="see-also"></a>Consulte também  
  [Criando uma interface COM](../ide/creating-a-com-interface-visual-cpp.md)   
  [Editando uma interface COM](../ide/editing-a-com-interface.md)   
- [O Component Object Model](http://msdn.microsoft.com/library/windows/desktop/ms694363)   
- [Ponteiros de interface e interfaces](http://msdn.microsoft.com/library/windows/desktop/ms688484)
+ [O Component Object Model](/windows/desktop/com/the-component-object-model)   
+ [Ponteiros de interface e interfaces](/windows/desktop/com/interface-pointers-and-interfaces)

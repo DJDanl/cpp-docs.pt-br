@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2922a0a92a121d6838478daaf2c32f1c7a630d21
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a2fe0896a8fbd8b8c0a8f68847ee138017eaa36b
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340353"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43215495"
 ---
 # <a name="managed-resources-property-page"></a>Página de propriedades Recursos Gerenciados
 Habilita as configurações do compilador de recurso.  
@@ -42,6 +42,6 @@ Habilita as configurações do compilador de recurso.
  Para obter informações sobre como acessar a página de propriedades de **Recursos Gerenciados**, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Usando o RC (a linha de comando do RC)](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
+ [Usando o RC (a linha de comando do RC)](https://msdn.microsoft.com/library/windows/desktop/aa381055)   
  [Páginas de propriedades](../ide/property-pages-visual-cpp.md)   
  [/ASSEMBLYRESOURCE (inserir um recurso gerenciado)](../build/reference/assemblyresource-embed-a-managed-resource.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01add77f68ac35b4c669391504461dd516b55d3d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1f8fae2d8af1b7121290bfbd42b2668afc50034c
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325377"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43217247"
 ---
 # <a name="ltparamgt-visual-c"></a>&lt;param&gt; (Visual C++)
 A marca \<param> deve ser usada no comentário para uma declaração de método para descrever um dos parâmetros do método.  
@@ -42,7 +42,7 @@ A marca \<param> deve ser usada no comentário para uma declaração de método 
  Uma descrição do parâmetro.  
   
 ## <a name="remarks"></a>Comentários  
- O texto da marcação \<param> será exibido no IntelliSense, no [Pesquisador de Objetos](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) e no relatório Web de comentários sobre código.  
+ O texto da marcação \<param> será exibido no IntelliSense, no [Pesquisador de Objetos](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470) e no relatório Web de comentários sobre código.  
   
  Compile com [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação em um arquivo.  
   

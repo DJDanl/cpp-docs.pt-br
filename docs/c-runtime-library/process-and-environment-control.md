@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e52284db986ec642724f97aae75a9af004339b40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0fbbe1f7feca0b2c8d21bfaf5da3e758e2c6c0bb
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392465"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200957"
 ---
 # <a name="process-and-environment-control"></a>Processo e controle de ambiente
 
@@ -56,7 +56,7 @@ Use as rotinas de controle de processo para iniciar, parar e gerenciar processos
 |[exit](../c-runtime-library/reference/exit-exit-exit.md)|Chamar funções registradas por **atexit** e **_onexit**, liberar todos os buffers, fechar todos os arquivos abertos e terminar o processo|
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|Terminar o processo imediatamente sem chamar **atexit** ou **_onexit** ou liberar buffers|
 |[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md), [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Obter o valor da variável do ambiente|
-|[_getpid](../c-runtime-library/reference/getpid.md)|Obter o número de identificação do processo|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.id.aspx)|
+|[_getpid](../c-runtime-library/reference/getpid.md)|Obter o número de identificação do processo|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/library/system.diagnostics.process.id.aspx)|
 |[longjmp](../c-runtime-library/reference/longjmp.md)|Restaurar o ambiente de pilha salvo. Usá-lo para executar um **goto** não local|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|Agendar rotinas para execução no encerramento do programa; usar para compatibilidade com a versão 7.0 do Microsoft C/C++ e versões anteriores|
 |[_pclose](../c-runtime-library/reference/pclose.md)|Aguardar um novo processador de comando e fechar o fluxo no pipe associado|

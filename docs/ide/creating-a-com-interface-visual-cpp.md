@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2844e9051c5e6adf14085bcd7bfcd8096c6f8f7
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: b69c2318ec5b1dd986a71bc684e1c9adc0f4ef0f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332576"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43194958"
 ---
 # <a name="creating-a-com-interface-visual-c"></a>Criando uma interface COM (Visual C++)
 O Visual C++ fornece assistentes e modelos para criar projetos que usam interfaces e dispinterfaces de definição COM para classes de automação e objetos COM.  
@@ -67,7 +67,7 @@ interface IMyInterface {
   
  Confira [Implementando uma interface](../ide/implementing-an-interface-visual-cpp.md) e [Adicionando objetos e controles a um projeto ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) para obter mais informações.  
   
- O Visual C++ fornece várias maneiras de exibir e [editar as interfaces COM](../ide/editing-a-com-interface.md) definidas para seus projetos. O [Modo de Exibição de Classe](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) exibe ícones para qualquer interface ou dispinterface definida em um arquivo .idl no projeto do C++.  
+ O Visual C++ fornece várias maneiras de exibir e [editar as interfaces COM](../ide/editing-a-com-interface.md) definidas para seus projetos. O [Modo de Exibição de Classe](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925) exibe ícones para qualquer interface ou dispinterface definida em um arquivo .idl no projeto do C++.  
   
  Para as classes de objeto COM baseadas na ATL, o Modo de Exibição de Classe lê o mapa COM na classe ATL para exibir a relação entre a classe ATL e as interfaces implementadas por ela.  
   

@@ -170,12 +170,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0865aaf418fb6d8624f3dec9c853c32c1e3bbc83
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: a502ae93b43320fb3a8f43b36b5bc4ef43c23dd2
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208774"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216998"
 ---
 # <a name="standard-types"></a>Tipos padrão
 A biblioteca em tempo de execução da Microsoft define os seguintes tipos e definições de tipo padrão.  
@@ -211,7 +211,7 @@ A biblioteca em tempo de execução da Microsoft define os seguintes tipos e def
 |Estruturas `div_t`, `ldiv_t` e `lldiv_t`|Armazenam os valores retornados por [div](../c-runtime-library/reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md) e [lldiv](../c-runtime-library/reference/ldiv-lldiv.md), respectivamente.|STDLIB.H|  
 |Inteiro `errno_t`|Usado para um tipo de retorno de função ou parâmetro que trata os códigos de erro de `errno`.|STDDEF.H,<br /><br /> CRTDEFS.H|  
 |Estrutura `_exception`|Armazena informações de erro para [_matherr](../c-runtime-library/reference/matherr.md).|MATH.H|  
-|`_EXCEPTION_POINTERS`|Contém um registro de exceção. Veja [EXCEPTION_POINTERS](http://msdn.microsoft.com/library/windows/desktop/ms679331) para saber mais.|FPIEEE.H|  
+|`_EXCEPTION_POINTERS`|Contém um registro de exceção. Veja [EXCEPTION_POINTERS](/windows/desktop/api/winnt/ns-winnt-_exception_pointers) para saber mais.|FPIEEE.H|  
 |Estrutura `FILE`|Armazena informações sobre o estado atual do fluxo; usado em todas as operações de E/S de fluxo.|STDIO.H|  
 |Estruturas `_finddata_t`, `_wfinddata_t`, `_finddata32_t`, `_wfinddata32_t`, `_finddatai64_t`, `_wfinddatai64_t`, `__finddata64_t`, `__wfinddata64_t`, `__finddata32i64_t`, `__wfinddata32i64_t`, `__finddata64i32_t`, `__wfinddata64i32_t`|Armazenar informações de atributo de arquivo retornadas por [_findfirst, _wfindfirst e funções relacionadas](../c-runtime-library/reference/findfirst-functions.md) e [_findnext, _wfindnext e funções relacionadas](../c-runtime-library/reference/findnext-functions.md). Veja [Funções de pesquisa de nome de arquivo](../c-runtime-library/filename-search-functions.md) para saber mais sobre membros de estrutura.|IO.H, WCHAR.H|  
 |Estrutura `_FPIEEE_RECORD`|Contém informações que pertencem à exceção de ponto flutuante IEEE; passadas para o manipulador de interceptação definido pelo usuário por [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md).|FPIEEE.H|  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7d305b2bc74455abd6fdbcfb29ed7ef4103bf19
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ffb239db12111f80e894c68cff568338bb3ed038
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391894"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43207264"
 ---
 # <a name="structure-declarations"></a>Declarações de estrutura
 Uma "declaração de estrutura" nomeia um tipo e especifica uma sequência de valores variáveis (chamados de "membros" ou "campos" da estrutura) que podem ter tipos diferentes. Um identificador opcional, chamado de "marca", fornece o nome do tipo de estrutura e pode ser usado em referências subsequentes ao tipo. Uma variável desse tipo de estrutura mantém a sequência inteira definida por esse tipo. As estruturas em C são semelhantes aos tipos conhecidos como "registros" em outras linguagens.  
@@ -163,7 +163,7 @@ struct somestruct
   
  O compilador permite uma matriz não dimensionada ou de tamanho zero como o último membro de uma estrutura. Isso poderá ser útil se uma matriz constante tiver tamanhos diferentes quando usada em situações variadas. A declaração de uma estrutura assim é semelhante a esta:  
   
- `struct` *identifier***{** *set-of-declarations* *type array-name***[ ];};**  
+**struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em>**\[]; };**  
   
  As matrizes não dimensionadas só podem aparecer como o último membro de uma estrutura. As estruturas que contêm declarações de matrizes não dimensionadas podem ser aninhadas em outras estruturas, desde que nenhum membro adicional seja declarado em nenhuma das estruturas de inclusão. Matrizes dessas estruturas não são permitidas. O operador `sizeof`, quando aplicado a uma variável desse tipo ou ao próprio tipo, pressupõe 0 como o tamanho da matriz.  
   

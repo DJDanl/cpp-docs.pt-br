@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08cf1386ef177823c37bc285392309ec47f3c464
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 282fd41602b70f743926b0fe5322346e9cdfd3fc
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340691"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43203289"
 ---
 # <a name="project-and-solution-files"></a>Arquivos de projeto e solução
 Os arquivos a seguir são criados quando você cria um projeto no Visual Studio. Eles são usados para gerenciar arquivos de projeto na solução.  
@@ -40,7 +40,7 @@ Os arquivos a seguir são criados quando você cria um projeto no Visual Studio.
 |*Nome_do_projeto*.sdf|*Nome_do_projeto*|Não exibido no Gerenciador de Soluções|O arquivo de *navegação no banco de dados*. Dá suporte às funcionalidades de procura e de navegação como **Ir para definição**, **Localizar Todas as Referências** e **Modo de Exibição de Classe**. É gerado pela análise dos arquivos de cabeçalho.|  
 |*Nome_do_projeto.* vcxproj.filters|*Nome_do_projeto*|Não exibido no Gerenciador de Soluções|O arquivo de *filtros*. Especifica o local em que colocar um arquivo adicionado à solução. Por exemplo, um arquivo .h é colocado no nó **Arquivos de Cabeçalho**.|  
 |*Nome_do_projeto.* vcxproj.user|*Nome_do_projeto*|Não exibido no Gerenciador de Soluções|O arquivo de *usuário de migração*. Depois que um projeto é migrado do Visual Studio 2008, esse arquivo contém informações que foram convertidas de qualquer arquivo .vsprops.|  
-|*Nome_do_projeto*.idl|*Nome_do_projeto*|Origem|(Específico ao projeto) Contém o código-fonte da linguagem IDL para uma biblioteca de tipos de controle. Esse arquivo é usado pelo Visual C++ para gerar uma biblioteca de tipos. A biblioteca gerada expõe a interface do controle para outros clientes de Automação. Para obter mais informações, confira [Arquivo IDL](http://msdn.microsoft.com/library/windows/desktop/aa378712) no SDK do Windows.|  
+|*Nome_do_projeto*.idl|*Nome_do_projeto*|Origem|(Específico ao projeto) Contém o código-fonte da linguagem IDL para uma biblioteca de tipos de controle. Esse arquivo é usado pelo Visual C++ para gerar uma biblioteca de tipos. A biblioteca gerada expõe a interface do controle para outros clientes de Automação. Para obter mais informações, confira [Arquivo IDL](https://msdn.microsoft.com/library/windows/desktop/aa378712) no SDK do Windows.|  
 |Readme.txt|*Nome_do_projeto*|Projeto|O arquivo *Leiame*. É gerado pelo assistente de aplicativo e descreve os arquivos em um projeto.|  
   
 ## <a name="see-also"></a>Consulte também  

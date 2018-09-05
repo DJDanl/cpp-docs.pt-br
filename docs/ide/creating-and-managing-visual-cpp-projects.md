@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3afbd2019965d859895462cfdad57292bc2e0b3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 41b3565893d65990955f0fd28c6cccce7fcb1f32
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332417"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222237"
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Criando e gerenciando projetos do Visual C++ baseados no MSBuild
 O MSBuild é o sistema de build nativo para o Visual C++ e, geralmente, é o melhor sistema de build a ser usado para aplicativos UWP, bem como para aplicativos da Área de Trabalho que usam bibliotecas MFC ou ATL. O MSBuild está totalmente integrado com o IDE e o sistema de projeto do Visual Studio, mas você também pode usá-lo na linha de comando. Começando pelo Visual Studio 2017, o Visual C++ dá suporte ao [CMake e a outros sistemas que não são MSBuild, por meio do recurso Abrir Pasta](non-msbuild-projects.md).
@@ -68,8 +68,8 @@ Crie projetos do Visual C++ escolhendo **Arquivo &#124; Novo &#124; Projeto**, g
  [Compilando programas do C/C++](../build/building-c-cpp-programs.md)  
  Fornece links para tópicos que descrevem como compilar seu programa pela linha de comando ou pelo ambiente de desenvolvimento integrado do Visual Studio.  
   
- [Referência do Visual C++](http://msdn.microsoft.com/en-us/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
+ [Referência do Visual C++](https://msdn.microsoft.com/1ba03b5c-8229-4f63-b08c-6c12141d6ab1)  
  Fornece links aos tópicos que descrevem as referências de linguagem C e C++, as bibliotecas fornecidas com o Visual C++, o modelo de objeto de extensibilidade do Visual C++ e o MASM (Microsoft Macro Assembler).  
   
 ## <a name="see-also"></a>Consulte também  
- [SDK do Visual Studio](http://msdn.microsoft.com/vstudio/extend)
+ [SDK do Visual Studio](https://msdn.microsoft.com/vstudio/extend)

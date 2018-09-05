@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6c4f108b30babcc30ffc5f2fc4c63fe764db2e3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4c9ab0120b3aad3f4f4470ca9094f8a975dbb12d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339768"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43200314"
 ---
 # <a name="add-class-dialog-box"></a>Caixa de diálogo Adicionar Classe
 A caixa de diálogo **Adicionar Classe** contém modelos que permitem:  
@@ -32,7 +32,7 @@ A caixa de diálogo **Adicionar Classe** contém modelos que permitem:
   
 -   Criar a nova classe automaticamente adicionando o código-fonte e os arquivos apropriados ao projeto.  
   
- Acesse a caixa de diálogo **Adicionar Classe** no menu **Projeto**, **Gerenciador de Soluções** ou em [Modo de Exibição de Classe](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
+ Acesse a caixa de diálogo **Adicionar Classe** no menu **Projeto**, **Gerenciador de Soluções** ou em [Modo de Exibição de Classe](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
   
 > [!NOTE]
 >  Quando você tentar adicionar uma classe que não é adequada ao projeto atual, você receberá uma mensagem de erro. Clique em **OK** para retornar à caixa de diálogo **Adicionar Classe**.  

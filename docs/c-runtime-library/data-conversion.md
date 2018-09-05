@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0260ebe37e0656f2078b247017d9f02ccc88474
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2475a7d4f6399f408dfd1d5903a1920baf97c6bd
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392439"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43201732"
 ---
 # <a name="data-conversion"></a>Conversão de dados
 
@@ -59,7 +59,7 @@ Essas rotinas convertem dados de um formulário para outro. Geralmente, essas ro
 |[strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)|Transformar cadeia de caracteres em forma agrupada com base em informações específicas da localidade|
 |[toascii, __toascii](../c-runtime-library/reference/toascii-toascii.md)|Converter caractere em código ASCII||
 |[tolower, _tolower, towlower, _tolower_l, _towlower_l](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md), [_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l](../c-runtime-library/reference/mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)|Testar caractere e converter em minúsculas se estiver em maiúsculas|
-|[tolower, _tolower, towlower, _tolower_l, _towlower_l](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)|Converter caractere em minúsculas incondicionalmente|[System::String::ToLower](https://msdn.microsoft.com/en-us/library/system.string.tolower.aspx)|
+|[tolower, _tolower, towlower, _tolower_l, _towlower_l](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)|Converter caractere em minúsculas incondicionalmente|[System::String::ToLower](https://msdn.microsoft.com/library/system.string.tolower.aspx)|
 |[toupper, _toupper, towupper, _toupper_l, _towupper_l](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md), [_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l](../c-runtime-library/reference/mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)|Testar caractere e converter em maiúsculas se estiver em minúsculas|
 |[toupper, _toupper, towupper, _toupper_l, _towupper_l](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|Converter caractere em maiúsculas incondicionalmente|
 |[wcstombs, _wcstombs_l](../c-runtime-library/reference/wcstombs-wcstombs-l.md), [wcstombs_s, _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)|Converter sequência de caracteres largos na sequência de caracteres multibyte correspondente|

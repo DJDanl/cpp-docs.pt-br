@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50bf1bdeeed862ecbc03270e403ccafaf32bfde8
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 94da3456cc7c4723875b6376d5d9b2411f3f7ca8
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332810"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43197897"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Usando modelos para adicionar novo item do Visual C++
 Adicione com facilidade itens que são comuns a projetos do Visual C++ usando o comando **Adicionar Novo Item**. Quando você usa o comando **Adicionar Novo Item**, a caixa de diálogo `Add New Item` é exibida com uma lista de modelos de item, que adiciona os arquivos apropriados ao projeto.  
@@ -44,7 +44,7 @@ Adicione com facilidade itens que são comuns a projetos do Visual C++ usando o 
 |Arquivo de Cabeçalho (.h)|Cria um arquivo de cabeçalho do C++.|  
 |Página HTML (.htm)|Cria um arquivo HTML em branco.|  
 |Arquivo de Ícone (.ico)|Cria um arquivo de ícone do Win32.|  
-|Classe do Instalador|Adiciona uma classe que herda da [Classe do Instalador](https://msdn.microsoft.com/en-us/library/system.configuration.install.installer.aspx) usando funcionalidades CLR.|  
+|Classe do Instalador|Adiciona uma classe que herda da [Classe do Instalador](https://msdn.microsoft.com/library/system.configuration.install.installer.aspx) usando funcionalidades CLR.|  
 |Arquivo MIDL (.idl)|Cria um arquivo de linguagem IDL.|  
 |Arquivo de Definição de Módulo (.def)|Cria um arquivo de definição de exportação de DLL.|  
 |Folha de Propriedades (.props)|Cria um arquivo de folha de propriedades do Visual C++.|  

@@ -25,35 +25,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e1709c878a0b5f5325798b874e5549c5c8cb83f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: eae97f795898c97bfb371637fc52a27c9e39039d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33329976"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43204683"
 ---
 # <a name="midl-property-pages-general"></a>Páginas de propriedade MDL: geral
 A página de propriedades **Geral** na pasta **MIDL** especifica as seguintes opções do compilador MIDL:  
   
--   Definições de pré-processador [(/D](http://msdn.microsoft.com/library/windows/desktop/aa367321))  
+-   Definições de pré-processador [(/D](https://msdn.microsoft.com/library/windows/desktop/aa367321))  
   
--   Diretórios de inclusão adicionais ([/I](http://msdn.microsoft.com/library/windows/desktop/aa367328))  
+-   Diretórios de inclusão adicionais ([/I](https://msdn.microsoft.com/library/windows/desktop/aa367328))  
   
--   Ignorar caminho de inclusão padrão ([/no_def_idir](http://msdn.microsoft.com/library/windows/desktop/aa367347))  
+-   Ignorar caminho de inclusão padrão ([/no_def_idir](https://msdn.microsoft.com/library/windows/desktop/aa367347))  
   
--   Compatível com MkTypLib ([/mktyplib203](http://msdn.microsoft.com/library/windows/desktop/aa367332))  
+-   Compatível com MkTypLib ([/mktyplib203](https://msdn.microsoft.com/library/windows/desktop/aa367332))  
   
--   Nível de aviso ([/W](http://msdn.microsoft.com/library/windows/desktop/aa367383))  
+-   Nível de aviso ([/W](https://msdn.microsoft.com/library/windows/desktop/aa367383))  
   
--   Avisar como erro ([/WX](http://msdn.microsoft.com/library/windows/desktop/aa367387))  
+-   Avisar como erro ([/WX](https://msdn.microsoft.com/library/windows/desktop/aa367387))  
   
--   Suprimir faixa de inicialização ([/nologo](http://msdn.microsoft.com/library/windows/desktop/aa367341))  
+-   Suprimir faixa de inicialização ([/nologo](https://msdn.microsoft.com/library/windows/desktop/aa367341))  
   
--   Tipo de caractere MIDL ([/char](http://msdn.microsoft.com/library/windows/desktop/aa367314))  
+-   Tipo de caractere MIDL ([/char](https://msdn.microsoft.com/library/windows/desktop/aa367314))  
   
--   Ambiente de destino ([/env](http://msdn.microsoft.com/library/windows/desktop/aa367323))  
+-   Ambiente de destino ([/env](https://msdn.microsoft.com/library/windows/desktop/aa367323))  
   
--   Gerar proxies sem stub ([/Oicf](http://msdn.microsoft.com/library/windows/desktop/aa367352))  
+-   Gerar proxies sem stub ([/Oicf](https://msdn.microsoft.com/library/windows/desktop/aa367352))  
   
  Para obter informações sobre como acessar a página de propriedades **Geral** na pasta **MIDL**, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).  
   
