@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f7d7bed9725e4ec1cc8ad0fc66673ce5c6212e1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cfee61f1632fad2d762c41149c1bc302a1c4b9da
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211206"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691980"
 ---
 # <a name="implementing-an-interface-visual-c"></a>Implementando uma interface (Visual C++)
 Para implementar uma interface, você precisa ter criado um projeto como um aplicativo ATL COM ou como um aplicativo MFC que contém suporte para ATL. Use o [Assistente de Projeto ATL](../atl/reference/atl-project-wizard.md) para criar um aplicativo ATL ou [Adicionar um objeto ATL ao aplicativo MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar o suporte à ATL para um aplicativo MFC.  
@@ -46,7 +46,7 @@ Para implementar uma interface, você precisa ter criado um projeto como um apli
 4.  Em Modo de Exibição de Classe, expanda o nó Bases e Interfaces do objeto para ver a interface implementada e, em seguida, expanda o nó da interface para ver as propriedades, os métodos e os eventos disponíveis.  
   
     > [!NOTE]
-    >  Use também o [Pesquisador de Objetos](https://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470) para examinar os membros da interface.  
+    >  Use também o [Pesquisador de Objetos](/visualstudio/ide/viewing-the-structure-of-code) para examinar os membros da interface.  
   
 ## <a name="see-also"></a>Consulte também  
  [Criando uma interface COM](../ide/creating-a-com-interface-visual-cpp.md)   

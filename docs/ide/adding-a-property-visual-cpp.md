@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00b19fa7166e6edad05d729c5a738a2a827086ae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e121cf9738910b105f5bb1933592e67d334f8937
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212789"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685320"
 ---
 # <a name="adding-a-property-visual-c"></a>Adicionando uma propriedade (Visual C++)
 Use o [Assistente de Adição de Propriedade](../ide/names-add-property-wizard.md) para adicionar um método a uma interface no projeto.  
   
 ### <a name="to-add-a-property-to-your-object"></a>Para adicionar uma propriedade ao objeto  
   
-1.  Em [Modo de Exibição de Classe](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), clique com o botão direito do mouse no nome da interface à qual você deseja adicionar a propriedade.  
+1.  Em [Modo de Exibição de Classe](/visualstudio/ide/viewing-the-structure-of-code), clique com o botão direito do mouse no nome da interface à qual você deseja adicionar a propriedade.  
   
     > [!NOTE]
     >  Adicione também propriedades a dispinterfaces, que estarão aninhadas no nó da biblioteca, a menos que o projeto esteja atribuído.  
