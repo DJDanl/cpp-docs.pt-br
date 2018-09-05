@@ -1,7 +1,7 @@
 ---
 title: Diretivas do Assembler ARM | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -12,103 +12,104 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f5ab97fb9ccdff19206b829383c622efd3f7921
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 282d8bbd55bec8053961c709eb3733a65972b187
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053295"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693107"
 ---
 # <a name="arm-assembler-directives"></a>Diretivas do assembler ARM
-A maior parte do tempo, o assembler ARM Microsoft usa a linguagem de assembly do ARM, que está documentada no capítulo 7 da [guia de ferramentas do ARM assembler](http://go.microsoft.com/fwlink/p/?linkid=246102). No entanto, as implementações Microsoft algumas diretivas de assembly diferem as diretivas de assembly do ARM. Este artigo explica as diferenças.  
-  
-## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Microsoft implementações das diretivas de Assembly do ARM  
- ÁREA  
- O assembler ARM Microsoft dá suporte a esses atributos de área: ALINHAR, código, CODEALIGN, dados, NOINIT, READONLY, READWRITE, THUMB, ARM.  
-  
- Todos exceto THUMB e ARM funcionam conforme documentado no [guia de ferramentas do ARM assembler](http://go.microsoft.com/fwlink/p/?linkid=246102).  
-  
- Em assembler ARM Microsoft, THUMB indica que uma seção de código contém código Thumb e é o padrão para seções de código.  ARM indica que a seção contém código ARM.  
-  
- ATTR  
- Sem suporte.  
-  
- CODE16  
- Não tem suporte porque isso implica pre-UAL Thumb a sintaxe, que o assembler ARM Microsoft não permite.  Use a diretiva de digital em vez disso, juntamente com a sintaxe do UAL.  
-  
- COMUNS  
- Não há suporte para a especificação de um alinhamento para a região comum.  
-  
- DCDO  
- Sem suporte.  
-  
- DN, QN, SN  
- Não há suporte para a especificação de um tipo ou uma rota no registro de alias.  
-  
- ENTRADA  
- Sem suporte.  
-  
- EQU  
- Não há suporte para a especificação de um tipo para o símbolo definido.  
-  
- EXPORTAÇÃO e GLOBAL  
- ```  
-EXPORTsym {[type]}  
-```  
-  
- `sym` é o símbolo a ser exportado.  `[type]`, se especificado, pode ser `[DATA]` para indicar que o símbolo aponta para dados ou `[FUNC]` para indicar que o símbolo de pontos de código.  
-  
- GLOBAL é um sinônimo para exportação.  
-  
- EXPORTAS  
- Sem suporte.  
-  
- QUADRO  
- Sem suporte.  
-  
- FUNÇÃO e PROC  
- Embora a sintaxe de assembly oferece suporte à especificação de um personalizado convenção de chamada em procedimentos, listando os registros de salvamento do chamador e aqueles que são receptor salvamento, do assembler ARM Microsoft aceita a sintaxe e ignora as listas de registro.  As informações de depuração que são produzidas pelo assembler oferece suporte somente a convenção de chamada de padrão.  
-  
- IMPORTAÇÃO e EXTERN  
- ```  
-IMPORT sym{, WEAK alias{, TYPE t}}  
-```  
-  
- `sym` é o nome do símbolo a ser importado.  
-  
- Se FRACA `alias` for especificado, ele indicará que `sym` é um externo fraco. Se nenhuma definição para ele é encontrada em vez do link, todas as referências a ele em vez disso, associar a `alias`.  
-  
- Se tipo `t` for especificado, então `t` indica como o vinculador deve tentar resolver `sym`.  Esses valores para `t` são possíveis:   
-1 — não execute uma pesquisa de biblioteca para `sym`  
-2 – realizar uma pesquisa de biblioteca para `sym`  
-3 –`sym` é um alias para `alias` (padrão)  
-  
- EXTERN é um sinônimo para importação, exceto que `sym` são importados apenas se houver referência a ele no assembly atual.  
-  
- MACRO  
- Não há suporte para o uso de uma variável para manter o código de condição de uma macro. Valores padrão para parâmetros não têm suporte de macro.  
-  
- NOFP  
- Sem suporte.  
-  
- ACEITAR, TTL, SUBT  
- Não tem suporte porque o assembler ARM Microsoft não produzir listagens.  
-  
- PRESERVE8  
- Sem suporte.  
-  
- REALOCAÇÃO  
- `RELOC n` só pode seguir uma instrução ou uma diretiva de definição de dados. Não há nenhum "símbolo anônimo" que pode ser realocado.  
-  
- EXIGIR  
- Sem suporte.  
-  
- REQUIRE8  
- Sem suporte.  
-  
- THUMBX  
- Não tem suportada porque o assembler ARM Microsoft não oferece suporte para o conjunto de instruções Thumb 2EE.  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de linha de comando do Assembler ARM](../../assembler/arm/arm-assembler-command-line-reference.md)   
- [Mensagens de diagnóstico do assembler ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)
+
+Na maior parte, o assembler Microsoft ARM usa a linguagem de assembly do ARM, que está documentada na [compilador ARM armasm guia de referência](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html). No entanto, as implementações Microsoft de algumas diretivas de assembly diferem das diretivas de assembly do ARM. Este artigo explica as diferenças.
+
+## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Implementações Microsoft de diretivas de Assembly do ARM
+
+`AREA`<br/>
+O assembler Microsoft ARM dá suporte a estes `AREA` atributos: `ALIGN`, `CODE`, `CODEALIGN`, `DATA`, `NOINIT`, `READONLY`, `READWRITE`, `THUMB`, `ARM`.
+
+Todos, exceto `THUMB` e `ARM` funcionam conforme documentado na [compilador ARM armasm guia de referência](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html).
+
+No assembler Microsoft ARM, `THUMB` indica que um `CODE` seção contém código Thumb e é o padrão para `CODE` seções.  `ARM` indica que a seção contém código ARM.
+
+`ATTR`<br/>
+Sem suporte.
+
+`CODE16`<br/>
+Não tem suporte porque ele implica a sintaxe de Thumb de pré-UAL, que não permite o assembler Microsoft ARM.  Use o `THUMB` diretiva em vez disso, juntamente com a sintaxe do UAL.
+
+`COMMON`<br/>
+Não há suporte para a especificação de um alinhamento para a região comuns.
+
+`DCDO`<br/>
+Sem suporte.
+
+`DN`, `QN`, `SN`<br/>
+Não há suporte para a especificação de um tipo ou uma pista sobre o registro de alias.
+
+`ENTRY`<br/>
+Sem suporte.
+
+`EQU`<br/>
+Não há suporte para a especificação de um tipo para o símbolo definido.
+
+`EXPORT` e `GLOBAL`
+
+> **EXPORTAR** <em>sym</em>{**[**<em>tipo</em>**]**}
+
+*SYM* é o símbolo a ser exportado.  [*tipo*], se especificado, pode ser `[DATA]` para indicar que o símbolo de pontos de dados ou `[FUNC]` para indicar que o símbolo de pontos de código.
+
+`GLOBAL` é um sinônimo de `EXPORT`.
+
+`EXPORTAS`<br/>
+Sem suporte.
+
+`FRAME`<br/>
+Sem suporte.
+
+`FUNCTION` e `PROC`<br/>
+Embora a sintaxe de assembly oferece suporte à especificação de um personalizado convenção de chamada em procedimentos, listando os registros que estão chamador save e aqueles que são o salvamento do computador chamado, o assembler Microsoft ARM aceita a sintaxe, mas ignora as listas de registro.  As informações de depuração que são produzidas pelo assembler dá suporte a apenas o padrão de convenção de chamada.
+
+`IMPORT` e `EXTERN`
+
+> **IMPORTAÇÃO** *sym*{**, FRACA** *alias*{**, tipo** *t*}}
+
+*SYM* é o nome do símbolo a ser importado.
+
+Se `WEAK` *alias* for especificado, ele indicará que *sym* é um externo fraco. Se nenhuma definição para que ele é encontrada em tempo de vinculação e, em seguida, todas as referências a ele em vez disso, associar a *alias*.
+
+Se `TYPE` *t* for especificado, então *t* indica como o vinculador deve tentar resolver *sym*.  Esses valores para *t* são possíveis:<br/>
+1 — não execute uma pesquisa de biblioteca para *sym*<br/>
+2 – executar uma pesquisa de biblioteca para *sym*<br/>
+3 —*sym* é um alias para *alias* (padrão)
+
+`EXTERN` é um sinônimo de `IMPORT`, exceto que *sym* é importado somente se houver referências a ele no assembly atual.
+
+`MACRO`<br/>
+Não há suporte para o uso de uma variável para conter o código de condição de uma macro. Valores padrão para parâmetros não têm suporte de macro.
+
+`NOFP`<br/>
+Sem suporte.
+
+`OPT`, `TTL`, `SUBT`<br/>
+Não tem suporte porque o assembler Microsoft ARM não produz listagens.
+
+`PRESERVE8`<br/>
+Sem suporte.
+
+`RELOC`<br/>
+`RELOC n` só pode seguir uma instrução ou uma diretiva de definição de dados. Não há nenhum "símbolo anônimo" que pode ser realocado.
+
+`REQUIRE`<br/>
+Sem suporte.
+
+`REQUIRE8`<br/>
+Sem suporte.
+
+`THUMBX`<br/>
+Não tem suportada porque o assembler Microsoft ARM não suporta o conjunto de instruções do Thumb 2EE.
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de linha de comando do assembler ARM](../../assembler/arm/arm-assembler-command-line-reference.md)<br/>
+[Mensagens de diagnóstico do assembler ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)<br/>

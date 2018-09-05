@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d96b9430cd5a6a4a9f3d65ab60c49a38b0530db7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c0cbc2e88bc123b4de82ca69a41a17a41729bb4a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211091"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691186"
 ---
 # <a name="working-with-resource-files"></a>Trabalhando com arquivos de recurso
 
 > [!WARNING]
-> Esta seção se aplica a aplicativos da área de trabalho do Windows escritos em C++. Para obter informações sobre recursos em aplicativos da plataforma Universal do Windows escritos em C++, consulte [definindo recursos do aplicativo](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
+> Esta seção se aplica a aplicativos da área de trabalho do Windows escritos em C++. Para obter informações sobre recursos em aplicativos da plataforma Universal do Windows escritos em C++, consulte [definindo recursos do aplicativo](/windows/uwp/app-resources/).
 >
 > Para obter informações sobre como adicionar recursos a C + + c++ /CLI projetos da CLI, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*.
 
@@ -52,9 +52,6 @@ Descreve os editores de recursos fornecidos no Visual Studio, os tipos de recurs
 
 [Visual C++](../visual-cpp-in-visual-studio.md)  
 Fornece links para a documentação do Visual C++.
-
-[Introdução ao Visual Studio](https://msdn.microsoft.com/99997089-56ff-4d60-81a9-447062dc98ac)  
-Descreve o conjunto completo de ferramentas de desenvolvimento que todas usam o mesmo ambiente de desenvolvimento integrado (IDE), o que permite compartilhar ferramentas e facilita na criação de soluções de linguagens mistas.
 
 [Fale conosco](/visualstudio/ide/talk-to-us)  
 Fornece links para informações sobre o uso do conjunto de documentação, o contado com suporte ao produto, e a aplicação de recursos de acessibilidade.

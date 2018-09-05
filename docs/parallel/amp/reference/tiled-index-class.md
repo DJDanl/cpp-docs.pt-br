@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ed19dd2a1b62a3682d96f8c9a596fa6a4b1b377
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 715fcc37c41251b0a42fd6508f8a358758105a1f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209427"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680189"
 ---
 # <a name="tiledindex-class"></a>Classe tiled_index
 Fornece um índice em uma [tiled_extent](tiled-extent-class.md) objeto. Essa classe possui propriedades para acessar elementos relativa à origem do bloco local e relativo à origem global. Para obter mais informações sobre espaços lado a lado, consulte [blocos usando](../../../parallel/amp/using-tiles.md).  
@@ -94,7 +94,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 |----------|-----------------|  
 |[barreira constante](#tiled_index__barrier)|Armazena uma [tile_barrier](tile-barrier-class.md) objeto que representa uma barreira no quadro atual de threads.|  
 |||  
-|[Constante global](#tiled_index__global)|Armazena uma [índice](index-class.md) objeto de índice de classificação 1, 2 ou 3 que representa o modelo global em um [grade](https://msdn.microsoft.com/f7d1b6a6-586c-4345-b09a-bfc26c492cb0) objeto.|  
+|[Constante global](#tiled_index__global)|Armazena uma [índice](index-class.md) objeto de classificação 1, 2 ou 3 que representa o índice global em um objeto de grade.|  
 |[Constante local](#tiled_index__local)|Armazena uma `index` objeto de índice de classificação 1, 2 ou 3 que representa a relativa no quadro atual de um [tiled_extent](tiled-extent-class.md) objeto.|  
 |[Constante de classificação](#tiled_index__rank)|Armazena a classificação do `tiled_index` objeto.|  
 |[Constante Tile](#tiled_index__tile)|Armazena uma `index` objeto de classificação 1, 2 ou 3 que representa as coordenadas do quadro atual de um `tiled_extent` objeto.|  

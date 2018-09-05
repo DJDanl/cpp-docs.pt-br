@@ -1,7 +1,7 @@
 ---
 title: operador % | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,24 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 762cc5412bb2a7b1cc4c2f800410ab19d2e2c56a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: a1f169db569b216757acae3ca55ac3c1c0373e6f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055694"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692533"
 ---
 # <a name="operator-"></a>Operador %
-Trata o valor do *expressão* em um argumento de macro como texto.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-%  
-expression  
-  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de operadores](../../assembler/masm/operators-reference.md)
+
+Trata o valor de *expressão* em um argumento de macro como texto.
+
+## <a name="syntax"></a>Sintaxe
+
+> % *Expressão*
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de operadores](../../assembler/masm/operators-reference.md)<br/>

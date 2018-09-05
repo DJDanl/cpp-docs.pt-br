@@ -1,7 +1,7 @@
 ---
 title: MMWORD | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,35 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e97b1e58116d633519b1a780928e05862ac1771d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 7314c6d0861195e312c7f72481d2e195e041965d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054774"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679228"
 ---
 # <a name="mmword"></a>MMWORD
-Usado para operandos de multimídia de 64 bits com instruções MMX e SSE (XMM).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-MMWORD  
-```  
-  
-## <a name="remarks"></a>Comentários  
- `MMWORD` é um tipo.  Antes de MMWORD que está sendo adicionado para MASM, funcionalidade equivalente pode foi obtida com:  
-  
-```  
-mov mm0, qword ptr [ebx]  
-```  
-  
- Enquanto trabalha ambas as instruções em operandos de 64 bits, `QWORD` é o tipo para números inteiros sem sinal de 64 bits e `MMWORD` é o tipo para um valor de multimídia de 64 bits.  
-  
- `MMWORD` serve para representar o mesmo tipo [m64](../../cpp/m64.md).  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-movq     mm0, mmword ptr [ebx]  
+
+Usado para operandos multimídia de 64 bits com instruções MMX e SSE (XMM).
+
+## <a name="syntax"></a>Sintaxe
+
+> MMWORD
+
+## <a name="remarks"></a>Comentários
+
+`MMWORD` é um tipo.  Antes de MMWORD que está sendo adicionado para MASM, funcionalidade equivalente pode foi obtida com:
+
+```asm
+    mov mm0, qword ptr [ebx]
+```
+
+Embora as duas instruções funcionam em operandos de 64 bits `QWORD` é o tipo para inteiros sem sinal de 64 bits e `MMWORD` é o tipo para um valor de multimídia de 64 bits.
+
+`MMWORD` destina-se para representar o mesmo tipo que [__m64](../../cpp/m64.md).
+
+## <a name="example"></a>Exemplo
+
+```asm
+    movq     mm0, mmword ptr [ebx]
 ```

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5b080945309732bec06c63eb665bbf6dd5f4acb5
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2b0a5c568a774d0aed05d702454664e653989401
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340557"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676830"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Problemas de design arquitetônico de banco de dados OLE
 Você deve considerar os seguintes problemas antes de iniciar seu aplicativo OLE DB:  
@@ -39,15 +39,9 @@ Você deve considerar os seguintes problemas antes de iniciar seu aplicativo OLE
  **Você tem código mais antigo usando outra tecnologia de acesso de dados (ADO, ODBC ou DAO)?**  
  Considerando as combinações possíveis de tecnologias (por exemplo, usando componentes ADO com componentes de OLE DB e migrar o código do ODBC para OLE DB), que abrange todas as situações está além do escopo da documentação do Visual C++. No entanto, muitos artigos que abordam vários cenários estão disponíveis nos seguintes sites da Microsoft:  
   
--   [Ajuda e Suporte da Microsoft](http://go.microsoft.com/fwlink/p/?linkid=148218)  
+-   [Ajuda e Suporte da Microsoft](https://support.microsoft.com/)  
   
--   [Visão geral do Microsoft Data Access artigos técnicos](http://go.microsoft.com/fwlink/p/?linkid=148217)  
-  
--   [Centro de soluções do Visual Studio](http://go.microsoft.com/fwlink/p/?linkid=148215)  
-  
--   [Pesquisar no Microsoft.com](http://search.microsoft.com/)  
-  
- Quando você executa uma pesquisa, insira uma combinação de palavras-chave que melhor se adapta ao seu cenário; Por exemplo: se você estivesse usando objetos do ADO com um provedor OLE DB, tente uma pesquisa booliana com **ADO e "OLE DB"**. Se você desejava migrar código mais antigo do DAO, ODBC, selecione "todas as palavras" e especificar cadeias de caracteres, como **DAO migrando**.  
+-   [Visão geral do Microsoft Data Access artigos técnicos](https://msdn.microsoft.com/en-us/library/ms810811.aspx)  
   
 ## <a name="see-also"></a>Consulte também  
  [Programação OLE DB](../../data/oledb/ole-db-programming.md)   

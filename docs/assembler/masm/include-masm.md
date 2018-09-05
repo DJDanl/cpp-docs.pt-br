@@ -1,7 +1,7 @@
 ---
 title: INCLUDE (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 346f076e63df7b02928b5abf49def827229bb289
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 26752dc25c30fa22a523a5c224192d2023c0b135
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054592"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685581"
 ---
 # <a name="include-masm"></a>INCLUDE (MASM)
-Inserções de código do arquivo de origem fornecido pelo *filename* no arquivo de origem durante o assembly.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-INCLUDE filename  
-```  
-  
-## <a name="remarks"></a>Comentários  
- O *filename* devem ser colocados entre colchetes angulares se ele inclui uma barra invertida, ponto e vírgula, maior-que símbolo, menos-que o símbolo, aspas simples ou aspas duplas.  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de diretivas](../../assembler/masm/directives-reference.md)
+
+Inserções de código-fonte de arquivo de origem fornecido por *filename* no arquivo de origem durante o assembly.
+
+## <a name="syntax"></a>Sintaxe
+
+> INCLUIR nome de arquivo
+
+## <a name="remarks"></a>Comentários
+
+O *filename* deverão ser colocados entre colchetes angulares, se ele inclui uma barra invertida, ponto e vírgula, maior-que símbolo, menor-que o símbolo, marca de aspas simples ou aspas duplas.
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>

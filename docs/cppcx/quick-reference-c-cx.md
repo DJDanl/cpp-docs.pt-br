@@ -9,15 +9,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a54774193c0274c2ee9e4f79c389cee3ffe5c49
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 272921d0a9ac00ec5ee69fb50a17a34e257b1725
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608327"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692582"
 ---
 # <a name="quick-reference-ccx"></a>Referência rápida (C++/CX)
-O tempo de execução do Windows dá suporte a aplicativos de plataforma Universal do Windows (UWP) que executam apenas em um ambiente de sistema operacional confiável, usam funções autorizadas, tipos de dados e dispositivos e são distribuídos por meio do Microsoft Store. O C + + c++ /CLI CX simplificam a escrita de aplicativos para o tempo de execução do Windows. Este artigo é uma referência rápida; Para obter a documentação mais completa, consulte [sistema de tipos](../cppcx/type-system-c-cx.md) e [extensões de componentes para plataformas de tempo de execução](http://go.microsoft.com/fwlink/p/?linkid=228720).  
+O tempo de execução do Windows dá suporte a aplicativos de plataforma Universal do Windows (UWP) que executam apenas em um ambiente de sistema operacional confiável, usam funções autorizadas, tipos de dados e dispositivos e são distribuídos por meio do Microsoft Store. O C + + c++ /CLI CX simplificam a escrita de aplicativos para o tempo de execução do Windows. Este artigo é uma referência rápida; Para obter a documentação mais completa, consulte [sistema de tipo](../cppcx/type-system-c-cx.md).  
   
  Quando você compila na linha de comando, use o **/ZW** opção do compilador para compilar um aplicativo UWP ou um componente de tempo de execução do Windows. Para acessar as declarações de tempo de execução do Windows, que são definidas nos arquivos de metadados (. winmd) de tempo de execução do Windows, especifique a `#using` diretiva ou o **/FU** opção de compilador. Quando você cria um projeto para um aplicativo UWP, o Visual Studio por padrão define essas opções e adiciona as referências a todas as bibliotecas de tempo de execução do Windows.  
   

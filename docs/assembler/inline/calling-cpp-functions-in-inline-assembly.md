@@ -1,7 +1,7 @@
 ---
 title: Chamando funções C++ em Assembly embutido | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -19,20 +19,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffbd8038d240bc2ab0240d172d914790b6ca02ab
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4717ae24dc1a0b6f51f7a00f68f6569c2f988c65
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049617"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678938"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>Chamando funções C++ no assembly embutido
-## <a name="microsoft-specific"></a>Específico da Microsoft  
- Um `__asm` bloco pode chamar somente funções de C++ globais que não estão sobrecarregadas. Se você chamar uma função sobrecarregada de C++ global ou uma função de membro de C++, o compilador emite um erro.  
-  
- Você também pode chamar quaisquer funções declaradas com **extern "C"** vinculação. Isso permite que um `__asm` blocos dentro de um programa do C++ para chamar as funções de biblioteca C, porque todos os arquivos de cabeçalho padrão declarar as funções da biblioteca tenham **extern "C"** vinculação.  
-  
- **Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Assembler embutido](../../assembler/inline/inline-assembler.md)
+
+**Seção específica da Microsoft**
+
+Um `__asm` bloco pode chamar apenas funções de C++ globais que não são sobrecarregadas. Se você chamar uma função sobrecarregada de C++ global ou uma função de membro de C++, o compilador emitirá um erro.
+
+Você também pode chamar quaisquer funções declaradas com **extern "C"** vinculação. Isso permite que um `__asm` bloco dentro de um programa C++ para chamar as funções da biblioteca C, porque todos os arquivos de cabeçalho padrão declara as funções de biblioteca ter **extern "C"** vinculação.
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Assembler embutido](../../assembler/inline/inline-assembler.md)<br/>

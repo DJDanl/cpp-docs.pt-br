@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b30aa51f284d216332225664d07d7692bd042a1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 456772306c854d4450a7be3996285e90a1d5783f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223059"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679458"
 ---
 # <a name="cdockablepane-class"></a>Classe CDockablePane
 Implementa um painel que pode ser encaixado em um local de encaixe ou incluído em um painel com guias.  
@@ -213,7 +213,7 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|Especifica se as guias estão localizadas na parte superior ou inferior do painel.|  
 |[CDockablePane::IsTracked](#istracked)|Especifica se um painel está sendo arrastado pelo usuário.|  
 |[CDockablePane::IsVisible](#isvisible)|Determina se o painel atual está visível.|  
-|[CDockablePane::LoadState](https://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917)|Usado internamente.|  
+|[CDockablePane::LoadState](#loadstate)|Usado internamente.|  
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|Chamado pelo framework quando o pai de um painel é alterado. (Substitui [CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent).)|  
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|Chamado pelo framework quando uma barra de encaixe flutuante se encaixa em uma janela do quadro.|  
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|Chamado pelo framework quando o pai do painel está prestes a ser alterada. (Substitui [CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent).)|  
@@ -1153,7 +1153,18 @@ virtual BOOL IsVisible() const;
  Se o painel encaixável estiver no modo de ocultar automaticamente e `IsHideInAutoHideMode` retorna TRUE, o estado de visibilidade depende do estado de visibilidade da barra de ferramentas AutoOcultar relacionados.  
   
  Se o painel encaixável não estiver no modo de ocultar automaticamente, o estado de visibilidade é determinado pelo [CBasePane::IsVisible](../../mfc/reference/cbasepane-class.md#isvisible) método.  
-  
+
+## ##  <a name="loadstate"></a>  CDockablePane::LoadState  
+Somente para uso interno. Para obter mais detalhes, consulte o código-fonte localizado na pasta VC\atlmfc\src\mfc de sua instalação do Visual Studio.
+
+```
+virtual BOOL LoadState(
+   LPCTSTR lpszProfileName = NULL,
+   int nIndex = -1,
+   UINT uiID = (UINT) -1
+);  
+```
+
 ##  <a name="m_bdisableanimation"></a>  CDockablePane::m_bDisableAnimation  
  Especifica se a animação de ocultar automaticamente do painel de ferramentas acoplável está desabilitada.  
   

@@ -1,7 +1,7 @@
 ---
 title: EXTERNDEF | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b010f52f91a04388f34052fcc5c374690cff13df
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d5c3d42cabb88c38ce1d98da24cd2cb4ddec8d5b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052694"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683655"
 ---
 # <a name="externdef"></a>EXTERNDEF
-Define uma ou mais variáveis externas, rótulos ou símbolos chamados *nome* cujo tipo é `type`.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-EXTERNDEF [[langtype]] name:type [[, [[langtype]] name:type]]...  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Se *nome* é definido no módulo, ele será tratado como [público](../../assembler/masm/public-masm.md). Se *nome* é referenciado no módulo, ele será tratado como [EXTERN](../../assembler/masm/extern-masm.md). Se *nome* não é referenciado, ele será ignorado. O `type` pode ser [ABS](../../assembler/masm/operator-abs.md), que importa *nome* como uma constante. Normalmente usado em incluem arquivos.  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de diretivas](../../assembler/masm/directives-reference.md)
+
+Define uma ou mais variáveis externas, rótulos ou símbolos chamados *nome* cujo tipo é `type`.
+
+## <a name="syntax"></a>Sintaxe
+
+> Nome: tipo EXTERNDEF [[langtype]] [[, nome: tipo de [[langtype]]]]...
+
+## <a name="remarks"></a>Comentários
+
+Se *nome* é definido no módulo, ele será tratado como [público](../../assembler/masm/public-masm.md). Se *nome* é referenciada no módulo, ele será tratado como [EXTERN](../../assembler/masm/extern-masm.md). Se *nome* não é referenciado, ele será ignorado. O `type` pode ser [ABS](../../assembler/masm/operator-abs.md), que importa *nome* como uma constante. Normalmente usado em incluir arquivos.
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>

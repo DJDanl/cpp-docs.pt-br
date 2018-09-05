@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f79917e34a749048696f320a8311978acc2739f4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1c1d483f6ba532a6d8eeee1a8ec831cfd1d94b62
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202849"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678003"
 ---
 # <a name="colecontrolsite-class"></a>Classe COleControlSite
 Fornece suporte para interfaces de controle personalizado do lado do cliente.  
@@ -797,7 +797,7 @@ virtual BOOL ModifyStyle(
  Os estilos a ser adicionado dos estilos de janela atual.  
   
  *nFlags*  
- Sinalizadores de posicionamento de janela. Para obter uma lista de valores possíveis, consulte o [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) função no SDK do Windows.  
+ Sinalizadores de posicionamento de janela. Para obter uma lista de valores possíveis, consulte o [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) função no SDK do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se os estilos são alteradas, caso contrário, zero.  
@@ -805,7 +805,7 @@ virtual BOOL ModifyStyle(
 ### <a name="remarks"></a>Comentários  
  Propriedade Enabled de estoque do controle será modificado para corresponder à configuração para WS_DISABLED. Propriedade de estilo da borda do controle estoque será modificada para coincidir com a configuração solicitada para WS_BORDER. Todos os outros estilos são aplicados diretamente para o identificador de janela do controle, caso haja algum.  
   
- Modifica os estilos de janela do controle. Estilos a ser adicionado ou removido podem ser combinados usando o OR bit a bit ( &#124; ) operador. Consulte a [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) função no SDK do Windows para obter informações sobre os estilos de janela disponíveis.  
+ Modifica os estilos de janela do controle. Estilos a ser adicionado ou removido podem ser combinados usando o OR bit a bit ( &#124; ) operador. Consulte a [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) função no SDK do Windows para obter informações sobre os estilos de janela disponíveis.  
   
  Se *nFlags* for diferente de zero `ModifyStyle` chama a função Win32 `SetWindowPos`e redesenhar a janela combinando *nFlags* com os quatro sinalizadores a seguir:  
   
@@ -837,7 +837,7 @@ virtual BOOL ModifyStyleEx(
  Os estilos estendidos a serem adicionados dos estilos de janela atual.  
   
  *nFlags*  
- Sinalizadores de posicionamento de janela. Para obter uma lista de valores possíveis, consulte o [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) função no SDK do Windows.  
+ Sinalizadores de posicionamento de janela. Para obter uma lista de valores possíveis, consulte o [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) função no SDK do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se os estilos são alteradas, caso contrário, zero.  
@@ -845,7 +845,7 @@ virtual BOOL ModifyStyleEx(
 ### <a name="remarks"></a>Comentários  
  Estoque do controle propriedade Appearance será modificado para corresponder à configuração para WS_EX_CLIENTEDGE. Todos os outros estilos de janela estendidos são aplicados diretamente ao identificador de janela do controle, caso haja algum.  
   
- Modifica a janela estilos do objeto de controle de site estendidos. Estilos a ser adicionado ou removido podem ser combinados usando o OR bit a bit ( &#124; ) operador. Consulte a [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) função no SDK do Windows para obter informações sobre os estilos de janela disponíveis.  
+ Modifica a janela estilos do objeto de controle de site estendidos. Estilos a ser adicionado ou removido podem ser combinados usando o OR bit a bit ( &#124; ) operador. Consulte a [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) função no SDK do Windows para obter informações sobre os estilos de janela disponíveis.  
   
  Se *nFlags* for diferente de zero `ModifyStyleEx` chama a função Win32 `SetWindowPos`e redesenhar a janela combinando *nFlags* com os quatro sinalizadores a seguir:  
   
@@ -1051,7 +1051,7 @@ virtual BOOL SetWindowPos(
  A nova altura da janela.  
   
  *nFlags*  
- Especifica a janela de dimensionamento e posicionamento sinalizadores. Para os valores possíveis, consulte a seção comentários para [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) no SDK do Windows.  
+ Especifica a janela de dimensionamento e posicionamento sinalizadores. Para os valores possíveis, consulte a seção comentários para [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) no SDK do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se for bem-sucedido, caso contrário, zero.  

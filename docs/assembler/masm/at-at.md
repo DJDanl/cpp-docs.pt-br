@@ -1,7 +1,7 @@
 ---
 title: '@@: | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac2c3494f82e7a0fc99853494e5020b51b905292
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 1f9f1bd26862147bb365349e25709a7086085c0a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056455"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691320"
 ---
 # <a name=""></a>@@:
-Define um rótulo de código reconhecível somente entre *label1* e *label2*, onde *label1* é o início do código ou anterior `@@:` rótulo e *label2* é o final do código ou o próximo `@@:` rótulo. Consulte [ @B ](../../assembler/masm/at-b.md) e [ @F ](../../assembler/masm/at-f.md).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-@@:  
-  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de símbolos](../../assembler/masm/symbols-reference.md)
+
+Define um rótulo de código reconhecível apenas entre *label1* e *label2*, onde *label1* é o início do código ou anterior `@@:` rótulo e o *label2* é o final do código ou a próxima `@@:` rótulo. Ver [ @B ](../../assembler/masm/at-b.md) e [ @F ](../../assembler/masm/at-f.md).
+
+## <a name="syntax"></a>Sintaxe
+
+> @@:
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de símbolos](../../assembler/masm/symbols-reference.md)<br/>

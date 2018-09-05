@@ -1,7 +1,7 @@
 ---
 title: EVEN | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77e75563e1871982c82a5b9ee0240b9d5844de57
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: ca330cbea59c47889f7f9f7f3e02a18defb569ab
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054553"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678639"
 ---
 # <a name="even"></a>EVEN
-Alinha a próxima variável ou instrução em um mesmo bytes.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-EVEN  
-  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de diretivas](../../assembler/masm/directives-reference.md)
+
+Alinha-se a variável ou instrução em um byte até mesmo o próximo.
+
+## <a name="syntax"></a>Sintaxe
+
+> EVEN
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>

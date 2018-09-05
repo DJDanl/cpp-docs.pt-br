@@ -1,7 +1,7 @@
 ---
-title: Intel&#39;conjunto de instruções MMX de s | Microsoft Docs
+title: Intel&#39;conjunto de instruções MMX s | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -14,18 +14,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c054c1236fbbc74cfc45834f05aa2be08faa07f6
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 95f3cb57fc5c046057a5efa568ce930f13ca3256
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050731"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688347"
 ---
 # <a name="intel39s-mmx-instruction-set"></a>Intel&#39;conjunto de instruções MMX s
-## <a name="microsoft-specific"></a>Específico da Microsoft  
- O compilador do Visual C++ permite que você use instruções MMX (extensão de multimídia) da Intel no assembler embutido. As instruções MMX também têm suporte a desmontagem do depurador. O compilador gera uma mensagem de aviso se a função contém instruções MMX, mas não contém uma instrução EMMS para esvaziar o estado de multimídia. Para obter mais informações, consulte o site da Intel.  
-  
- **Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando a linguagem de assembly em blocos __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Seção específica da Microsoft**
+
+O compilador do Visual C++ permite que você use instruções MMX (extensão de multimídia) da Intel no assembler embutido. As instruções MMX também são compatíveis com a desmontagem do depurador. O compilador gera uma mensagem de aviso se a função contém instruções MMX, mas não contém uma instrução EMMS para esvaziar o estado de multimídia. Para obter mais informações, consulte o site da Intel.
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Usando a linguagem de assembly em blocos __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

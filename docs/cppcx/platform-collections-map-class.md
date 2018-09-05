@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2192786a9ebb14061e31655fd63e0f7c67b5100
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e199df62aa6bc0c3dc670bd2951a7af2667e7faa
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218417"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687580"
 ---
 # <a name="platformcollectionsmap-class"></a>Classe Platform::Collections::Map
 
@@ -72,7 +72,7 @@ Os tipos permitidos são:
 
 - classe de enum pública
 
-O mapa é basicamente um wrapper para [std::map](../standard-library/map-class.md). É uma implementação concreta de C++ do [IMAP < ikeyvaluepair\<K, V >>](http://go.microsoft.com/fwlink/p/?LinkId=262408) e [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) interfaces de tempo de execução do Windows de tipos que são transmitidos pelas público. Se você tentar usar um tipo `Platform::Collections::Map` em um parâmetro ou valor de retorno público, o erro do compilador C3986 será gerado. Você pode corrigir o erro alterando o tipo do valor de parâmetro ou retornado para [IMAP\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262408).
+O mapa é basicamente um wrapper para [std::map](../standard-library/map-class.md). É uma implementação concreta de C++ do [IMAP < ikeyvaluepair\<K, V >>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) e [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) interfaces de tempo de execução do Windows de tipos que são transmitidos pelas público. Se você tentar usar um tipo `Platform::Collections::Map` em um parâmetro ou valor de retorno público, o erro do compilador C3986 será gerado. Você pode corrigir o erro alterando o tipo do valor de parâmetro ou retornado para [IMAP\<K, V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
 
 Para obter mais informações, consulte [coleções](../cppcx/collections-c-cx.md).
 

@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3f8e1875f318b35e0b28cf1e36f926d54cab4831
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6780927732d0f555cc5778fe9564c9225a50aa80
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204122"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691801"
 ---
 # <a name="idbschemarowsetimpl-class"></a>Classe IDBSchemaRowsetImpl
 Fornece implementação para conjuntos de linhas de esquema.  
@@ -279,8 +279,7 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
  A implementação dessa função exige que o usuário tenha um esquema do mapa na classe de sessão. Usando as informações de mapa de esquema, ele responde com a matriz de GUIDs para os esquemas no mapa. Isso representa os esquemas com suporte pelo provedor.  
 
 ## <a name="see-also"></a>Consulte também  
- [Membros de classe IDBSchemaRowsetImpl](https://msdn.microsoft.com/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
  [Classes de conjunto de linhas de esquema e Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)   
  [Suporte a conjuntos de linhas de esquema](../../data/oledb/supporting-schema-rowsets.md)    
  [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)    
- [UpdatePV](../../visual-cpp-samples.md)
+ [UpdatePV](https://github.com/Microsoft/VCSamples)

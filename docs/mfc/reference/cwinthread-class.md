@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02bfbe474d30088c887e7a16b6dcea079dfd9821
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 784425246c3be99acde2942633ce5190807c59b4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213060"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689552"
 ---
 # <a name="cwinthread-class"></a>Classe CWinThread
 Representa um segmento de execução dentro de um aplicativo.  
@@ -96,10 +96,10 @@ class CWinThread : public CCmdTarget
 |[CWinThread::IsIdleMessage](#isidlemessage)|Verifica se há mensagens especiais.|  
 |[CWinThread::OnIdle](#onidle)|Substitua para executar o processamento de tempo ocioso do thread específico.|  
 |[CWinThread::PostThreadMessage](#postthreadmessage)|Posta uma mensagem para outro `CWinThread` objeto.|  
-|[CWinThread::PreTranslateMessage](#pretranslatemessage)|Filtra as mensagens antes de serem distribuídos para as funções do Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).|  
+|[CWinThread::PreTranslateMessage](#pretranslatemessage)|Filtra as mensagens antes de serem distribuídos para as funções do Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|  
 |[CWinThread::ProcessMessageFilter](#processmessagefilter)|Interceptar determinadas mensagens antes que elas atinjam o aplicativo.|  
 |[CWinThread::ProcessWndProcException](#processwndprocexception)|Intercepta todas as exceções sem tratamento lançadas por manipuladores de comandos e de mensagem do thread.|  
-|[CWinThread::PumpMessage](#pumpmessage)|Contém o loop de mensagens do thread.|  
+|[CWinThread::PumpMessage](#pumpmessage)|contém o loop de mensagens do thread.|  
 |[Cwinthread:: ResumeThread](#resumethread)|Contagem de suspensões diminui uma do thread.|  
 |[CWinThread::Run](#run)|Função de controle para threads de uma bomba de mensagem. Substitua para personalizar o loop de mensagem padrão.|  
 |[CWinThread::SetThreadPriority](#setthreadpriority)|Define a prioridade do thread atual.|  
@@ -411,7 +411,7 @@ BOOL PostThreadMessage(
 >  Ao chamar o Windows [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946) função dentro de um aplicativo do MFC, a mensagem MFC manipuladores não são chamados. Para obter mais informações, consulte o artigo da Base de dados de Conhecimento, "PRB: MFC mensagem manipulador não chamado com PostThreadMessage()" (Q142415).  
   
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage  
- Substituir esta função para filtrar mensagens de janela antes de serem distribuídos para as funções do Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).  
+ Substituir esta função para filtrar mensagens de janela antes de serem distribuídos para as funções do Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -485,7 +485,7 @@ virtual LRESULT ProcessWndProcException(
  Essa função membro é usada somente em threads que tiverem uma bomba de mensagem.  
   
 ##  <a name="pumpmessage"></a>  CWinThread::PumpMessage  
- Contém o loop de mensagens do thread.  
+ contém o loop de mensagens do thread.  
   
 ```  
 virtual BOOL PumpMessage();
@@ -520,7 +520,7 @@ virtual int Run();
  Uma **int** valor retornado pelo thread. Esse valor pode ser recuperado chamando [GetExitCodeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getexitcodethread).  
   
 ### <a name="remarks"></a>Comentários  
- `Run` adquire e envia mensagens do Windows até que o aplicativo recebe um [WM_QUIT](/windows/desktop/winmsg/wm-quit) mensagem. Se a fila de mensagens do thread não contém no momento, nenhuma mensagem `Run` chamadas `OnIdle` para executar o processamento de tempo ocioso. Mensagens de entrada acessem o [PreTranslateMessage](#pretranslatemessage) função de membro para um processamento especial e, em seguida, para a função do Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) para tradução do teclado padrão. Por fim, o [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) Windows função é chamada.  
+ `Run` adquire e envia mensagens do Windows até que o aplicativo recebe um [WM_QUIT](/windows/desktop/winmsg/wm-quit) mensagem. Se a fila de mensagens do thread não contém no momento, nenhuma mensagem `Run` chamadas `OnIdle` para executar o processamento de tempo ocioso. Mensagens de entrada acessem o [PreTranslateMessage](#pretranslatemessage) função de membro para um processamento especial e, em seguida, para a função do Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) para tradução do teclado padrão. Por fim, o [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows função é chamada.  
   
  `Run` raramente é substituído, mas você pode substituí-lo para implementar um comportamento especial.  
   

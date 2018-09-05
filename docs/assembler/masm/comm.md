@@ -1,7 +1,7 @@
 ---
 title: COMM | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,39 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1df6c729ab130a7ff38d7f7cf83224e7425e7dba
-ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
+ms.openlocfilehash: 87bf6d91de052d7ecaf637100b455e66819c748b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463017"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690026"
 ---
 # <a name="comm"></a>COMM
 
-Cria uma variável pública com os atributos especificados no *definição*.
+Cria uma variável pública com os atributos especificados na *definição*.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **Comunicação** *definição* [, *definição*]...
+> **COMM** *definição* [, *definição*]...
 
 ## <a name="remarks"></a>Comentários
 
-Variáveis pública são alocados pelo vinculador e não podem ser inicializados. Isso significa que você não pode depender do local ou uma sequência de tais variáveis.
+Quase variáveis são alocadas pelo vinculador e não podem ser inicializadas. Isso significa que você não pode depender do local ou a sequência de tais variáveis.
 
 Cada *definição* tem a seguinte forma:
 
 [*langtype*] [**NEAR** &#124; **EXTREMO**] _rótulo_**:**_tipo_[**:**_contagem_]
 
-Opcional *langtype* define as convenções de nomenclatura para o nome que segue. Ela substitui qualquer idioma especificado pelo **. MODELO** diretiva. Opcional **NEAR** ou **EXTREMO** substituir o modelo de memória atual. O *rótulo* é o nome da variável. O *tipo* pode ser qualquer especificador de tipo ([bytes](../../assembler/masm/byte-masm.md), [WORD](../../assembler/masm/word.md), e assim por diante) ou um inteiro que especifica o número de bytes. Opcional *contagem* Especifica o número de elementos no objeto de dados declarado; o padrão é um.
+Opcional *langtype* define as convenções de nomenclatura para o nome que segue. Ela substitui qualquer idioma especificado pelo **. MODELO** diretiva. Opcional **NEAR** ou **EXTREMO** substituir o modelo de memória atual. O *rótulo* é o nome da variável. O *tipo* pode ser qualquer especificador de tipo ([bytes](../../assembler/masm/byte-masm.md), [WORD](../../assembler/masm/word.md)e assim por diante) ou um inteiro que especifica o número de bytes. Opcional *contagem* Especifica o número de elementos no objeto de dados declarado; o padrão é um.
 
 ## <a name="example"></a>Exemplo
 
 Este exemplo cria uma matriz de elementos de 512 bytes:
 
-```masm
+```asm
 COMM FAR ByteArray:BYTE:512
 ```
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de diretivas](../../assembler/masm/directives-reference.md)
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>

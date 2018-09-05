@@ -1,7 +1,7 @@
 ---
 title: Depuração e listagens para Assembly embutido | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -19,24 +19,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 457402626edcdb2be05923aa33bbd26b1cab7137
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b6cca954ae15252b97d883ba8491fdb98e506f68
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050110"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689283"
 ---
 # <a name="debugging-and-listings-for-inline-assembly"></a>Depuração e listagens para assembly embutido
-## <a name="microsoft-specific"></a>Específico da Microsoft  
- Programas que contém o código de assembly embutido podem ser depurados com um depurador de nível de origem se você compilar com o [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) opção.  
-  
- No depurador, você pode definir pontos de interrupção nas linhas de C ou C++ e linguagem de assembly. Se você habilitar o assembly misto e modo de origem, você pode exibir a origem e o formulário desmontado do código de assembly.  
-  
- Observe que colocar várias instruções ou instruções de linguagem do código-fonte em uma linha pode dificultar a depuração. No modo de origem, você pode usar o depurador para definir pontos de interrupção em uma única linha, mas não em instruções individuais na mesma linha. O mesmo princípio se aplica a um `__asm` bloco definida como uma macro de C, que se expande para uma única linha lógica.  
-  
- Se você criar uma fonte de misto e assembly listando com o [/FAs](../../build/reference/fa-fa-listing-file.md) opção de compilador, a listagem contém formas de origem e o assembly de cada linha de linguagem de assembly. Macros não são expandidas nas listagens, mas eles são expandidos durante a compilação.  
-  
- **Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando a linguagem de assembly em blocos __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Seção específica da Microsoft**
+
+Programas que contém o código de assembly embutido podem ser depurados com um depurador de nível de código-fonte, se você compilar com o [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) opção.
+
+No depurador, você pode definir pontos de interrupção nas linhas de C ou C++ e linguagem de assembly. Se você habilitar o assembly misto e modo de origem, você pode exibir a origem e o formulário desmontado do código do assembly.
+
+Observe que colocar várias instruções de assembly ou instruções de linguagem do código-fonte em uma única linha pode obstruir a depuração. No modo código-fonte, você pode usar o depurador para definir pontos de interrupção em uma única linha, mas não em instruções individuais na mesma linha. O mesmo princípio se aplica a um `__asm` bloco definido como uma macro de C, que se expande para uma única linha lógica.
+
+Se você criar um misto de código-fonte e o assembly listando com o [/FAs](../../build/reference/fa-fa-listing-file.md) opção de compilador, a listagem contém a origem e o assembly de formulários de cada linha da linguagem de assembly. Macros não são expandidas nas listagens, mas eles são expandidos durante a compilação.
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Usando a linguagem de assembly em blocos __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

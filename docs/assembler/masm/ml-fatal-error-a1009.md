@@ -1,7 +1,7 @@
 ---
-title: ML Erro Fatal A1009 | Microsoft Docs
+title: Erro Fatal de ML A1009 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65df88c6ccfd19f7d8c7d745204a176dc3272674
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5dde8fbc68fa125afd71798707acad879691af23
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053282"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687078"
 ---
 # <a name="ml-fatal-error-a1009"></a>Erro fatal A1009 (ML)
-**linha muito longa**  
-  
- Uma linha em um arquivo de origem excedeu o limite de 512 caracteres.  
-  
- Se várias linhas físicas são concatenadas com o caractere de continuação de linha (\), em seguida, a linha lógica resultante ainda é limitada a 512 caracteres.  
-  
-## <a name="see-also"></a>Consulte também  
- [Mensagens de erro de ML](../../assembler/masm/ml-error-messages.md)
+
+**linha muito longa**
+
+Uma linha em um arquivo de origem excedeu o limite de 512 caracteres.
+
+Se várias linhas físicas são concatenadas com o caractere de continuação de linha (\), a linha lógica resultante é ainda é limitada a 512 caracteres.
+
+## <a name="see-also"></a>Consulte também
+
+[Mensagens de erro de ML](../../assembler/masm/ml-error-messages.md)<br/>

@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f8221b44d668a3ca2446913958645bb5e160dc87
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a9897be9bbcae0a03ef67996bda6f3ffbe894b8f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194898"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680446"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>Simplificando acesso a dados com atributos de banco de dados
 Este tópico demonstra o uso de atributos de banco de dados para simplificar as operações de banco de dados.  
@@ -208,4 +208,3 @@ HRESULT hr = Open(m_session, "Authors", pPropSet);
   
 ## <a name="see-also"></a>Consulte também  
  [Atributos de consumidor do OLE DB](../../windows/ole-db-consumer-attributes.md)   
- [Instruções passo a passo de atributos](https://msdn.microsoft.com/73df1d5d-261a-4521-98fb-06dcbf5ec0d0)

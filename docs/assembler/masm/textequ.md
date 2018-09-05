@@ -1,7 +1,7 @@
 ---
 title: TEXTEQU | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8abd0ea1ac254add53fc2375d61fe2111c11e31
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 4d0626caca0a7af4b2cb420fef85963f59e1b64f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052954"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689640"
 ---
 # <a name="textequ"></a>TEXTEQU
-Atribui *textitem* para *nome*. O *textitem* pode ser uma cadeia de caracteres literal, uma constante precedida por um `%`, ou a cadeia de caracteres retornada por uma função de macro.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-name TEXTEQU [[textitem]]  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de diretivas](../../assembler/masm/directives-reference.md)
+
+Atribui *textitem* à *nome*. O *textitem* pode ser uma cadeia de caracteres literal, uma constante precedida por um `%`, ou a cadeia de caracteres retornada por uma função de macro.
+
+## <a name="syntax"></a>Sintaxe
+
+> nome TEXTEQU [[textitem]]
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>

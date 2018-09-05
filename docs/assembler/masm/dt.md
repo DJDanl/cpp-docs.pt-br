@@ -1,7 +1,7 @@
 ---
 title: DT | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,21 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c945276154f77003557539737adc5bafda351a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 243911e42d9c41de7ddf7d8778b27e0526cdd355
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055548"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679442"
 ---
 # <a name="dt"></a>DT
-Aloca e, opcionalmente, inicializa 10 bytes de armazenamento para cada `initializer`. Também pode ser usado como um especificador de tipo em qualquer lugar, um tipo é legal. `DT` é um sinônimo do [TBYTE](../../assembler/masm/tbyte.md).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-[[name]] DT initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de diretivas](../../assembler/masm/directives-reference.md)
+
+Aloca e inicializa opcionalmente 10 bytes de armazenamento para cada `initializer`. Também pode ser usado como um especificador de tipo em qualquer lugar que um tipo é legal. `DT` é um sinônimo de [TBYTE](../../assembler/masm/tbyte.md).
+
+## <a name="syntax"></a>Sintaxe
+
+> [[nome]] Inicializador DT [[, inicializador]]...
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>

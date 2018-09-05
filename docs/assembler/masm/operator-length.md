@@ -1,7 +1,7 @@
 ---
 title: operador LENGTH | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e4f94859bd42e47595110817604288030015862
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 24f20c13e07d1e06de0a8fbd196a95c5f373bef9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057166"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682683"
 ---
 # <a name="operator-length"></a>operador LENGTH
-Retorna o número de itens de dados em *variável* criado pelo inicializador de primeiro.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-LENGTH variable  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de operadores](../../assembler/masm/operators-reference.md)
+
+Retorna o número de itens de dados em *variável* criado pelo inicializador de primeira.
+
+## <a name="syntax"></a>Sintaxe
+
+> Variável de tamanho
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de operadores](../../assembler/masm/operators-reference.md)<br/>

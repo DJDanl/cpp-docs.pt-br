@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aae516aeecd90a46544d1e9e28e1352fc73f6e2c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e331966c44d19f2410a59505348bcc0a37c63912
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221454"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676047"
 ---
 # <a name="how-to-open-a-resource-script-file-in-text-format"></a>Como abrir o arquivo de script do recurso no formato de texto
 
@@ -33,7 +33,7 @@ Pode haver ocasiões quando desejar exibir o conteúdo do arquivo de script (. r
 > [!NOTE]
 > Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).
 
-Você pode facilmente abrir o arquivo de recurso no formato de texto para exibir todos os recursos que ele contém e executem operações globais com suporte a [editor de texto](https://msdn.microsoft.com/508e1f18-99d5-48ad-b5ad-d011b21c6ab1).
+Você pode abrir facilmente o arquivo de recurso no formato de texto para exibir todos os recursos que ele contém e executem operações globais com suporte pelo editor de texto.
 
 > [!NOTE]
 > Os editores de recursos não ler diretamente. rc ou `resource.h` arquivos. O compilador de recurso compila-os em arquivos de .aps, que são consumidos pelos editores de recursos. Esse arquivo é uma etapa de compilação e armazena apenas dados simbólicos. Como com um normal de processo de compilação, as informações que não seja simbólicas (por exemplo, comentários) são descartadas durante o processo de compilação. Sempre que o arquivo .aps obtém fora de sincronia com o arquivo. RC, o arquivo. rc for gerado novamente (por exemplo, quando você salva, o editor de recurso substitui o arquivo. RC e o arquivo Resource h). Todas as alterações para os próprios recursos permanecerão incorporadas no arquivo. RC, mas comentários sempre serão perdidos depois que o arquivo. RC é substituído. Para obter informações sobre como preservar comentários, consulte [incluindo recursos em tempo de compilação](../windows/how-to-include-resources-at-compile-time.md).

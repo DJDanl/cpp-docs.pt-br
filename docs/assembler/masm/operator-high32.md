@@ -1,7 +1,7 @@
 ---
 title: operador HIGH32 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ee4dd585cdb5dccb12300bcfc74a37a5b4b7f10
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c85744918b9c66ad9adaed3e5f595e21d24904f1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056828"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688150"
 ---
 # <a name="operator-high32"></a>operator HIGH32
-Retorna os 32 bits altos de *expressão*. Expressões MASM são valores de 64 bits.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-HIGH32 expression  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de operadores](../../assembler/masm/operators-reference.md)
+
+Retorna os 32 bits altos do *expressão*. Expressões MASM são valores de 64 bits.
+
+## <a name="syntax"></a>Sintaxe
+
+> Expressão HIGH32
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de operadores](../../assembler/masm/operators-reference.md)<br/>

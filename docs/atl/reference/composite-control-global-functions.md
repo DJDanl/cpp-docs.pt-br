@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d433c76e054b16491ab7586d6107b4931dc2915
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cf8c5bf4336df95caabd26d5ba4a395190c9591a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203710"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677842"
 ---
 # <a name="composite-control-global-functions"></a>Funções globais de controle de composição
 Essas funções fornecem suporte para a criação de caixas de diálogo e para criação, hospedagem e licenciando controles ActiveX.  
@@ -442,7 +442,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
  Diferente de zero se a inicialização do controle de código de hospedagem foi bem-sucedida; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função deve ser chamada antes de usar o controle ATL que hospeda a API. Após uma chamada para essa função, o **"AtlAxWin"** classe de janela pode ser usado em chamadas para [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) ou [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680), conforme descrito no SDK do Windows.  
+ Essa função deve ser chamada antes de usar o controle ATL que hospeda a API. Após uma chamada para essa função, o **"AtlAxWin"** classe de janela pode ser usado em chamadas para [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) ou [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa), conforme descrito no SDK do Windows.  
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
  Essa função cancela o controle do ATL que hospeda o código Cancelando o registro a **"AtlAxWin80"** e **"AtlAxWinLic80"** classes de janela.  

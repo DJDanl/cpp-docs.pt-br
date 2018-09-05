@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5063081c219090486db64ce308411d12ec23cb7e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 87cca4472ebc0cf5f6b31d377fd82f2c51d25946
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209968"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677541"
 ---
 # <a name="internet-information-by-task"></a>Informações da Internet por tarefa
 As tarefas listadas neste tópico são classificadas com base na tarefa que você deseja realizar.  
@@ -43,8 +43,6 @@ As tarefas listadas neste tópico são classificadas com base na tarefa que voc�
 -   [Saiba mais sobre documentos ativos no contexto da Internet](../mfc/active-documents-on-the-internet.md)  
   
 -   [Otimizar um controle ActiveX](../mfc/mfc-activex-controls-optimization.md)  
-  
--   [Criar arquivos CAB assinados para controles ATL e MFC](https://msdn.microsoft.com/14e50724-2505-4258-ae6b-326b706de409)  
   
 ###  <a name="_core_wininet_tasks"></a> Tarefas de WinInet  
   

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a4827900f30dba168f9f5b1b6a93c2aa7e331b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e835da146cb609abc873e7e53eb617b8635af0e5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215729"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689101"
 ---
 # <a name="cbrush-class"></a>Classe CBrush
 Encapsula um pincel de interface (GDI) do dispositivo de gráficos Windows.  
@@ -313,7 +313,7 @@ BOOL CreateSysColorBrush(int nIndex);
   
 ### <a name="parameters"></a>Parâmetros  
  *nIndex*  
- Especifica um índice de cores. Esse valor corresponde à cor usada para pintar um dos elementos da 21 janela. Ver [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371) no SDK do Windows para obter uma lista de valores.  
+ Especifica um índice de cores. Esse valor corresponde à cor usada para pintar um dos elementos da 21 janela. Ver [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) no SDK do Windows para obter uma lista de valores.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se bem-sucedido; Caso contrário, 0.  

@@ -12,19 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0b74909e048789662800569f8d996747fb8cadf
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 84ea10c87e463e797b4c35b1f94843228c4cb063
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403031"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681496"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Como criar e usar instâncias shared_ptr
 O `shared_ptr` tipo é um ponteiro inteligente na biblioteca padrão C++ que foi projetado para cenários em que mais de um proprietário pode ter que gerenciar o tempo de vida do objeto na memória. Depois de inicializar uma `shared_ptr` copiá-lo, passá-lo pelo valor em argumentos de função e atribuí-la a outro `shared_ptr` instâncias. Todas as instâncias de apontar para o mesmo objeto e compartilhar o acesso a um "bloco de controle" que incrementa e decrementa a contagem de referência sempre que um novo `shared_ptr` é adicionado, sai do escopo ou é redefinido. Quando a contagem de referência atinge zero, o bloco de controle exclui o recurso de memória e ela mesma.  
   
  A ilustração a seguir mostra várias `shared_ptr` instâncias que apontam para um local de memória.  
   
- [![Ponteiro compartilhado](../cpp/media/shared_ptr.png "shared_ptr")](assetId:///9785ad08-31d8-411a-86a9-fb9cd9684c27)  
+ [![Ponteiro compartilhado](../cpp/media/shared_ptr.png "shared_ptr")]  
   
 ## <a name="example"></a>Exemplo  
  Sempre que possível, use o [make_shared](../standard-library/memory-functions.md#make_shared) função para criar um `shared_ptr` quando o recurso de memória é criado pela primeira vez. `make_shared` é à prova de exceções. Ele usa a mesma chamada para alocar a memória para o bloco de controle e o recurso e, assim, reduz a sobrecarga de construção. Se você não usar `make_shared`, em seguida, você precisa usar uma expressão explícita de novo para criar o objeto antes de transmiti-lo para o `shared_ptr` construtor. O exemplo a seguir mostra várias maneiras de declarar e inicializar um `shared_ptr` junto com um novo objeto.  

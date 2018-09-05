@@ -1,7 +1,7 @@
 ---
-title: ML erro não fatal A2047 | Microsoft Docs
+title: Erro não fatal de ML A2047 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95d01abf57eb58dadc4f46369b3613abfd5c49b1
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: b2dae687e4ac60157e8c929bedc5e1941160848c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054883"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688098"
 ---
 # <a name="ml-nonfatal-error-a2047"></a>Erro não fatal A2047 (ML)
-**cadeia de caracteres vazia (null)**  
-  
- Uma cadeia de caracteres consistia em um par de delimitador de aspas simples e nenhum caractere dentro.  
-  
- Uma cadeia de caracteres a ser válido, ele deve conter 1 a 255 caracteres.  
-  
-## <a name="see-also"></a>Consulte também  
- [Mensagens de erro de ML](../../assembler/masm/ml-error-messages.md)
+
+**cadeia de caracteres vazia (null)**
+
+Uma cadeia de caracteres é formada por um par de delimitador de aspas e nenhum caractere dentro.
+
+Uma cadeia de caracteres seja válido, ele deve conter entre 1 e 255 caracteres.
+
+## <a name="see-also"></a>Consulte também
+
+[Mensagens de erro de ML](../../assembler/masm/ml-error-messages.md)<br/>

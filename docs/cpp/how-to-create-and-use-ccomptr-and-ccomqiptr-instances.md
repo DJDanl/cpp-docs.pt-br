@@ -12,15 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cfdbff4d63197ca37976d5dcc242ac7b8ab8410
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 77a747b75f0b8c1d7d5fba6b43dd9a29f17fdc00
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194126"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676933"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Como criar e usar instâncias CComPtr e CComQIPtr
-Na programação clássica do Windows, bibliotecas geralmente são implementadas como objetos COM (ou mais precisamente, como servidores COM). Muitos componentes do sistema operacional Windows são implementados como servidores COM e muitos colaboradores fornecem bibliotecas neste formulário. Para obter informações sobre os conceitos básicos de COM, consulte [(COM Component Object Model)](https://msdn.microsoft.com/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4).  
+Na programação clássica do Windows, bibliotecas geralmente são implementadas como objetos COM (ou mais precisamente, como servidores COM). Muitos componentes do sistema operacional Windows são implementados como servidores COM e muitos colaboradores fornecem bibliotecas neste formulário. Para obter informações sobre os conceitos básicos de COM, consulte [(COM Component Object Model)](/windows/desktop/com/component-object-model--com--portal).  
   
  Quando você instancia um objeto de modelo de objeto de componente (COM), armazenar o ponteiro de interface em um ponteiro inteligente COM, que executa a referência de contagem usando chamadas para `AddRef` e `Release` no destruidor. Se você estiver usando a biblioteca ATL (Active Template) ou o Microsoft Foundation Class Library (MFC), em seguida, use o `CComPtr` ponteiro inteligente. Se você não estiver usando o MFC ou ATL, em seguida, use `_com_ptr_t`. Porque não há nenhuma COM equivalente a `std::unique_ptr`, use esses ponteiros inteligentes para o único proprietário e o proprietário de vários cenários. Ambos `CComPtr` e `ComQIPtr` suporte mover as operações que têm referências de rvalue.  
   

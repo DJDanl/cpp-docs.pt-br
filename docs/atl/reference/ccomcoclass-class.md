@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 693a0e63e5fe67b1a3837ae71945ccc60b5fb247
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 475a4f4d5f39f7fdfa569441fb2cb0fc72b745a0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204337"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677876"
 ---
 # <a name="ccomcoclass-class"></a>Classe CComCoClass
 Essa classe fornece métodos para criar instâncias de uma classe e obter suas propriedades.  
@@ -58,7 +58,7 @@ class CComCoClass
 |[CComCoClass::GetObjectDescription](#getobjectdescription)|(Estático) Substitua para retornar a descrição do objeto.|  
   
 ## <a name="remarks"></a>Comentários  
- `CComCoClass` fornece métodos para recuperar o CLSID de um objeto, definindo as informações de erro e criação de instâncias da classe. Qualquer classe registrada na [mapa de objetos](https://msdn.microsoft.com/b57619cc-534f-4b8f-bfd4-0c12f937202f) deve ser derivado de `CComCoClass`.  
+ `CComCoClass` fornece métodos para recuperar o CLSID de um objeto, definindo as informações de erro e criação de instâncias da classe. Qualquer classe registrada no mapa de objetos deve ser derivado de `CComCoClass`.  
   
  `CComCoClass` também define o modelo padrão de fábrica e agregação de classe para seu objeto. `CComCoClass` usa as duas macros a seguir:  
   

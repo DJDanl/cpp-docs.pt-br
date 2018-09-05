@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0c2acf17831e5cb3a2e0118ffe3606bc7beef25
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d75b8cb328ec69d5c322538a073fac5fc1761aed
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212982"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683672"
 ---
 # <a name="clr-integration-ccx"></a>Integração CLR (C++/CX)
 Alguns tipos de tempo de execução do Windows recebem tratamento especial no C + + c++ /CX e os idiomas que são baseados no common language runtime (CLR). Este artigo aborda como vários tipos em uma linguagem são mapeados para outra linguagem. Por exemplo, o CLR mapeia Windows.Foundation.IVector para System.Collections.IList, Windows.Foundation.IMap para System.Collections.IDictionary e assim por diante. Da mesma forma, C + + c++ /CX mapeia tipos como Platform:: delegate e Platform:: String.  
@@ -22,7 +22,7 @@ Alguns tipos de tempo de execução do Windows recebem tratamento especial no C 
 ## <a name="mapping-the-windows-runtime-to-ccx"></a>Mapeando o tempo de execução do Windows para C + + c++ /CX  
  Quando C + + c++ /CLI CX lê um arquivo de metadados (. winmd) do Windows, o compilador mapeia automaticamente namespaces comuns do Windows Runtime e tipos para C + + c++ /CLI CX namespaces e tipos. Por exemplo, o tipo de tempo de execução do Windows numérico `UInt32` é mapeada automaticamente para `default::uint32`.  
   
- C + + c++ /CLI CX mapeia vários outros tipos de tempo de execução do Windows para o **plataforma** namespace. Por exemplo, o **Windows:: Foundation** identificador HSTRING, que representa uma cadeia de texto Unicode somente leitura, é mapeado para o C + + c++ /CLI CX `Platform::String` classe. Quando uma operação de tempo de execução do Windows retorna um erro HRESULT, ele é mapeado para um C + + c++ /CX `Platform::Exception`. Para obter mais informações, consulte [tipos internos](https://msdn.microsoft.com/acc196fd-09da-4882-b554-6c94685ec75f).  
+ C + + c++ /CLI CX mapeia vários outros tipos de tempo de execução do Windows para o **plataforma** namespace. Por exemplo, o **Windows:: Foundation** identificador HSTRING, que representa uma cadeia de texto Unicode somente leitura, é mapeado para o C + + c++ /CLI CX `Platform::String` classe. Quando uma operação de tempo de execução do Windows retorna um erro HRESULT, ele é mapeado para um C + + c++ /CX `Platform::Exception`.   
   
  O C + + c++ /CX também mapeia determinados tipos nos namespaces de tempo de execução do Windows para aprimorar a funcionalidade do tipo. Para esses tipos C + +, c++ /CLI CX fornece construtores e métodos que são específicas do C++ e não estão disponíveis no arquivo. winmd padrão do tipo auxiliares.  
   

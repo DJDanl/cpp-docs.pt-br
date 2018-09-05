@@ -40,19 +40,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb62c18f7508a21e24fb5628e8ac01162db1405e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8a06fa858ac7d2d8458bd3adf3fb44ca7bdee929
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402706"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678148"
 ---
 # <a name="exit-exit-exit"></a>exit, _Exit, _exit
 
-Encerra o processo de chamada. O **sair** função termina após a limpeza; **exit** e **exit** terminá-lo imediatamente.
+Encerra o processo de chamada. O **sair** função termina após a limpeza; **exit** e **exit** encerrá-lo imediatamente.
 
 > [!NOTE]
-> Não use esse método para desligar um aplicativo do Windows UWP (plataforma Universal), exceto em teste ou cenários de depuração. Modos de interface do usuário ou por programação para fechar um aplicativo de repositório não são permitidos de acordo com o [políticas do Microsoft Store](/legal/windows/agreements/store-policies). Para obter mais informações, consulte [ciclo de vida do aplicativo de UWP](/windows/uwp/launch-resume/app-lifecycle). Para obter mais informações sobre aplicativos do Windows 10, consulte [Guias de instrução para aplicativos do Windows 10](http://go.microsoft.com/fwlink/p/?linkid=619133).
+> Não use esse método para desligar um aplicativo de plataforma Universal do Windows (UWP), exceto em teste ou cenários de depuração. Maneiras programáticas ou interface do usuário de fechar um aplicativo da Store não são permitidas de acordo com o [políticas do Microsoft Store](/legal/windows/agreements/store-policies). Para obter mais informações, consulte [ciclo de vida do aplicativo UWP](/windows/uwp/launch-resume/app-lifecycle). Para obter mais informações sobre aplicativos do Windows 10, consulte [Guias de instrução para aplicativos do Windows 10](https://developer.microsoft.com/en-us/windows/apps).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -74,11 +74,11 @@ void _exit(
 
 ## <a name="remarks"></a>Comentários
 
-O **sair**, **exit** e **exit** funções encerrar o processo de chamada. O **sair** função chama destruidores para objetos de thread local, em seguida, chama — na ordem do último a entrar, primeiro a sair (UEPS) — as funções que são registradas por **atexit** e **OnExit**e, em seguida, libera todos os buffers de arquivo antes de ele encerra o processo. O **exit** e **exit** funções terminar o processo sem destruir os objetos de local de thread ou processamento **atexit** ou **OnExit**funções e sem eliminação de buffers de fluxo.
+O **saia**, **exit** e **exit** funções encerram o processo de chamada. O **saia** função chama destruidores para objetos de thread local, em seguida, chama — na ordem do último a entrar, primeiro a sair (UEPS) — as funções que são registradas por **atexit** e **OnExit**e, em seguida, libera todos os buffers de arquivo antes de encerrar o processo. O **exit** e **exit** funções terminar o processo sem destruir objetos de thread local ou processamento **atexit** ou **OnExit**funções e sem eliminação de buffers de fluxo.
 
-Embora o **sair**, **exit** e **exit** chamadas não retornam um valor, o valor em *status* é disponibilizada para o ambiente de host ou aguardando o processo de chamada, se houver, depois que o processo foi encerrado. Normalmente, os conjuntos de chamador de *status* valor como 0 para indicar uma saída normal ou algum outro valor para indicar um erro. O *status* valor está disponível para o comando de lote de sistema operacional **ERRORLEVEL** e é representado por uma das duas constantes: **EXIT_SUCCESS**, que representa um valor 0, ou **EXIT_FAILURE**, que representa um valor de 1.
+Embora o **saia**, **exit** e **exit** chamadas não retornam um valor, o valor na *status* é disponibilizado para o ambiente de host ou aguardando o processo de chamada, se houver uma, depois que o processo é encerrado. Normalmente, o chamador define o *status* valor como 0 para indicar uma saída normal ou para algum outro valor para indicar um erro. O *status* valor estará disponível para o comando de lote do sistema operacional **ERRORLEVEL** e é representado por uma das duas constantes: **EXIT_SUCCESS**, que representa um valor 0, ou **EXIT_FAILURE**, que representa um valor de 1.
 
-O **sair**, **exit**, **exit**, **quick_exit**, **cexit**, e **c_exit** funções se comportam da seguinte maneira.
+O **saia**, **exit**, **exit**, **quick_exit**, **cexit**, e **c_exit** funções se comportam da seguinte maneira.
 
 |Função|Descrição|
 |--------------|-----------------|
@@ -89,7 +89,7 @@ O **sair**, **exit**, **exit**, **quick_exit**, **cexit**, e **c_exit** funçõe
 |**_cexit**|Executa procedimentos completos de encerramento de biblioteca C e retorna ao chamador. Não encerra o processo.|
 |**_c_exit**|Executa procedimentos mínimos de encerramento de biblioteca C e retorna ao chamador. Não encerra o processo.|
 
-Quando você chama o **sair**, **exit** ou **exit** função destruidores para objetos temporários ou automática que existem no momento da chamada não forem chamados. Um objeto automática é um objeto de local não-estático definido em uma função. Um objeto temporário é um objeto que é criado pelo compilador, como um valor retornado por uma chamada de função. Para destruir um objeto automático antes de chamar **sair**, **exit**, ou **exit**, explicitamente chamar o destruidor para o objeto, como mostrado aqui:
+Quando você chama o **saia**, **exit** ou **exit** função, os destruidores de quaisquer objetos temporários ou automáticos que existem no momento da chamada não são chamados. Um objeto automático é um objeto de local não-estático definido em uma função. Um objeto temporário é um objeto que é criado pelo compilador, como um valor retornado por uma chamada de função. Para destruir um objeto automático antes de chamar **saia**, **exit**, ou **exit**explicitamente chamar o destruidor do objeto, como mostrado aqui:
 
 ```cpp
 void last_fn() {}
@@ -100,13 +100,13 @@ void last_fn() {}
 }
 ```
 
-Não use **DLL_PROCESS_ATTACH** chamar **sair** de **DllMain**. Para sair do **DLLMain** funcionar, retornar **FALSE** de **DLL_PROCESS_ATTACH**.
+Não use **DLL_PROCESS_ATTACH** chamar **sair** da **DllMain**. Para sair de **DLLMain** funcionar, retornar **falso** do **DLL_PROCESS_ATTACH**.
 
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho necessário|
 |--------------|---------------------|
-|**sair**, **exit**, **Exit**|\<process.h> ou \<stdlib.h>|
+|**Saia**, **exit**, **Exit**|\<process.h> ou \<stdlib.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d58bf1d860bac7328c491164f6aeb77bed19b9cd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e85fc8207e9700f35b59bfaba62dcd699ee37dd5
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195025"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676918"
 ---
 # <a name="summary-of-scope-rules"></a>Resumo das regras de escopo
 O uso de um nome deve ser inequívoco dentro de seu escopo (até o ponto onde a sobrecarga é determinada). Se o nome denota uma função, a função deve ser inequívoca em relação ao número e tipo de parâmetros. Se o nome permanecer inequívoco, [acesso de membro](../cpp/member-access-control-cpp.md) as regras são aplicadas.  
   
 ## <a name="constructor-initializers"></a>Inicializadores de construtores  
- Inicializadores de construtor (descrito na [Inicializando Bases e membros](https://msdn.microsoft.com/2f71377e-2b6b-49da-9a26-18e9b40226a1)) são avaliados no escopo do bloco externo do construtor para o qual eles são especificados. Portanto, eles podem usar nomes de parâmetro do construtor.  
+ [Inicializadores de construtor](constructors-cpp.md#member_init_list) são avaliados no escopo do bloco externo do construtor para o qual eles são especificados. Portanto, eles podem usar nomes de parâmetro do construtor.  
   
 ## <a name="global-names"></a>Nomes globais  
  Um nome de um objeto, função ou enumerador é global se introduzido fora de qualquer função ou classe, ou se prefixado pelo operador unário global de escopo (`::`), além de não usado junto a qualquer um desses operadores binários:  

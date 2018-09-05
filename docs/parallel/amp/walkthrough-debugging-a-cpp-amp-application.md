@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bec76b407221fb9029662ba982a10edc4ca9c77
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3a8c5affeaee73be7dd464ea44ea62db35257f7b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604914"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689750"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Instruções passo a passo: depurando um aplicativo C++ AMP
 Este tópico demonstra como depurar um aplicativo que usa C++ Accelerated Massive Parallelism (C++ AMP) para aproveitar a unidade de processamento gráfico (GPU). Ele usa um programa de redução em paralelo a soma de uma grande matriz de inteiros. Esta explicação passo a passo ilustra as seguintes tarefas:  
@@ -398,4 +398,4 @@ Executar todos os threads em um determinado bloco para a linha que contém o cur
 [Depurando código de GPU](/visualstudio/debugger/debugging-gpu-code)   
 [Como: usar a janela de Threads GPU](/visualstudio/debugger/how-to-use-the-gpu-threads-window)   
 [Como: usar a janela Inspeção paralela](/visualstudio/debugger/how-to-use-the-parallel-watch-window)   
-[Analisando código AMP de C++ com o Visualizador de simultaneidade](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)
+[Analisando código AMP de C++ com o Visualizador de simultaneidade](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

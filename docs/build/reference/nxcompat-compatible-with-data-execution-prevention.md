@@ -17,42 +17,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb4f8a91545a196bc92fdc0ec44e89a7d5680185
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9f6e2c3f1c297493b2af72f280ac5eabcb6f17ce
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374798"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690313"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (compatível com Prevenção de Execução de Dados)
 
-Indica que um executável é compatível com o recurso do Windows Data Execution Prevention.
+Indica que um executável é compatível com o recurso Windows Data Execution Prevention.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/NXCOMPAT**[**: NENHUM**]
+> **/NXCOMPAT**[**: NENHUMA**]
 
 ## <a name="remarks"></a>Comentários
 
 Por padrão, **/NXCOMPAT** está em.
 
-**/NXCOMPAT: no** pode ser usado para especificar explicitamente um executável como incompatíveis com prevenção de execução de dados.
+**/NXCOMPAT: no** pode ser usado para especificar explicitamente um executável como incompatível com Data Execution Prevention.
 
 Para obter mais informações sobre a prevenção de execução de dados, consulte estes artigos:
 
-- [Uma descrição detalhada do recurso prevenção de execução de dados (DEP)](http://go.microsoft.com/fwlink/p/?linkid=157771)
+- [Uma descrição detalhada do recurso prevenção de execução de dados (DEP)](https://support.microsoft.com/en-us/help/875352/a-detailed-description-of-the-data-execution-prevention-dep-feature-in)
 
-- [Prevenção de execução de dados](http://go.microsoft.com/fwlink/p/?linkid=157770)
+- [Prevenção de execução de dados](/windows/desktop/Memory/data-execution-prevention)
 
-- [Prevenção de execução de dados (Windows Embedded)](http://go.microsoft.com/fwlink/p/?linkid=157768)
+- [Prevenção de execução de dados (Windows Embedded)](/previous-versions/windows/embedded/ms913190\(v=winembedded.5\))
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Para definir essa opção do vinculador no Visual Studio
 
-1. Abra o projeto **páginas de propriedade** caixa de diálogo. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra o projeto **páginas de propriedade** caixa de diálogo. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
 
 1. Escolha o **propriedades de configuração** > **vinculador** > **linha de comando** página de propriedades.
 
-1. Insira a opção no **opções adicionais** caixa. Escolha **Okey** ou **aplicar** para aplicar a alteração.
+1. Insira a opção na **opções adicionais** caixa. Escolher **Okey** ou **aplicar** para aplicar a alteração.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51472ba9c0bc15d6b12ddcd3a3b88b65a3a2682b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1e66254e9e2e0090fafb1a1c0d2aa061d6e70806
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205190"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680853"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Suporte de MBCS no Visual C++
 Quando executado em uma versão do Windows habilitada MBCS, o sistema de desenvolvimento do Visual C++ (incluindo as ferramentas de editor, depurador e linha de comando de código do código-fonte integrado) está habilitado para MBCS, com exceção da janela de memória.  
@@ -47,13 +47,13 @@ Quando executado em uma versão do Windows habilitada MBCS, o sistema de desenvo
  Visual C++ aceita caracteres de byte duplo, onde for apropriado para isso. Isso inclui nomes de caminhos e nomes de arquivo nas caixas de diálogo e as entradas de texto no editor de recursos do Visual C++ (por exemplo, texto estático no editor de caixa de diálogo) e entradas de texto estático no editor de ícone. Além disso, o pré-processador reconhece algumas diretivas de byte duplo — por exemplo, arquivo nomes na `#include` instruções e como argumentos para o `code_seg` e `data_seg` pragmas. No editor de código fonte, são aceitos caracteres de byte duplo em comentários e literais de cadeia de caracteres, embora não estejam em elementos de linguagem C/C++ (como nomes de variáveis).  
   
 ##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> Suporte para o Editor de método de entrada (IME)  
- Aplicativos escritos para mercados do Leste Asiático que usam MBCS (por exemplo, Japão) normalmente o IME do Windows de suporte para a inserção de ambos os caracteres de byte único e duplo. O ambiente de desenvolvimento do Visual C++ contém suporte completo para o IME. Para obter mais informações, consulte [exemplo de IME: demonstra como implementar IME nível 3 e de modo do IME do controle](https://msdn.microsoft.com/87ebdf65-cef0-451d-a6fc-d5fb64178b14).  
+ Aplicativos escritos para mercados do Leste Asiático que usam MBCS (por exemplo, Japão) normalmente o IME do Windows de suporte para a inserção de ambos os caracteres de byte único e duplo. O ambiente de desenvolvimento do Visual C++ contém suporte completo para o IME.
   
  Os teclados japoneses não suportam diretamente caracteres Kanji. O IME converterá uma cadeia de caracteres fonética inserida em uma dos alfabetos outros japonês (Romaji, Katakana ou Hiragana) em suas representações de Kanji possíveis. Caso haja ambiguidade, você pode selecionar entre várias alternativas. Quando você tiver selecionado o caractere de Kanji pretendido, o IME passa dois `WM_CHAR` mensagens para o aplicativo de controle.  
   
  O IME, ativado por ALT +\` combinação de teclas, aparece como um conjunto de botões (um indicador) e uma janela de conversão. O aplicativo posiciona a janela no ponto de inserção de texto. O aplicativo deve tratar `WM_MOVE` e `WM_SIZE` mensagens pelo reposicionamento a janela de conversão em conformidade com o novo local ou o tamanho da janela de destino.  
   
- Se você quiser que os usuários do seu aplicativo para ter a capacidade de inserir caracteres Kanji, o aplicativo deve tratar as mensagens do IME do Windows. Para obter mais informações sobre a programação do IME, consulte [IME](/previous-versions/windows/desktop/ms776145\(v=vs.85\)).  
+ Se você quiser que os usuários do seu aplicativo para ter a capacidade de inserir caracteres Kanji, o aplicativo deve tratar as mensagens do IME do Windows. Para obter mais informações sobre a programação do IME, consulte [Input Method Manager](/windows/desktop/intl/input-method-manager).  
   
 ## <a name="visual-c-debugger"></a>Depurador do Visual C++  
  O depurador do Visual C++ fornece a capacidade de definir pontos de interrupção em mensagens IME. Além disso, a janela de memória pode exibir caracteres de byte duplo.  

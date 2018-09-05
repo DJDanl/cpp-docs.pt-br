@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0886f020be80ae417cd44a5b5cb5116198ce6a1e
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: f0a812ff5304288a2a7c25edeb07d76a4d06ded8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539737"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683009"
 ---
 # <a name="ribbon-designer-mfc"></a>Designer da faixa de opções (MFC)
-O Designer de faixa de opções permite que você crie e personalize faixas de opções em aplicativos MFC. Uma faixa de opções é um elemento de interface do usuário do usuário que organiza comandos em grupos lógicos. Esses grupos aparecem em guias separadas em uma faixa na parte superior da janela. A faixa de opções substitui a barra de menus e barras de ferramentas. Uma faixa de opções pode melhorar significativamente a usabilidade do aplicativo. Para obter mais informações, consulte [faixas de opções](http://go.microsoft.com/fwlink/p/?linkid=129233). A ilustração a seguir mostra uma faixa de opções.  
+O Designer de faixa de opções permite que você crie e personalize faixas de opções em aplicativos MFC. Uma faixa de opções é um elemento de interface do usuário do usuário que organiza comandos em grupos lógicos. Esses grupos aparecem em guias separadas em uma faixa na parte superior da janela. A faixa de opções substitui a barra de menus e barras de ferramentas. Uma faixa de opções pode melhorar significativamente a usabilidade do aplicativo. Para obter mais informações, consulte [faixas de opções](/windows/desktop/uxguide/cmd-ribbons). A ilustração a seguir mostra uma faixa de opções.  
   
  ![Controle de recurso de faixa de opções do MFC](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")  
   

@@ -1,7 +1,7 @@
 ---
-title: ML Erro Fatal A1010 | Microsoft Docs
+title: Erro Fatal de ML A1010 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b622595b6994c4c4eaa74ed8f824f28dffe89b1a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 12b7e8698951e8ef59e0433134ec992af5d5f77f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057676"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676291"
 ---
 # <a name="ml-fatal-error-a1010"></a>Erro fatal A1010 (ML)
-**aninhamento de bloco não correspondentes:**  
-  
- A partir de um bloco não tinha um fim correspondente ou final de um bloco não tem um início correspondente. Um dos procedimentos a seguir pode estar envolvido:  
-  
--   Uma diretiva de alto nível, como [. Se](../../assembler/masm/dot-if.md), [. REPITA](../../assembler/masm/dot-repeat.md), ou [. ENQUANTO](../../assembler/masm/dot-while.md).  
-  
--   Uma diretiva de assembly condicional como [se](../../assembler/masm/if-masm.md), [REPITA](../../assembler/masm/repeat.md), ou **ENQUANTO**.  
-  
--   Uma definição de estrutura ou união.  
-  
--   Uma definição de procedimento.  
-  
--   Uma definição de segmento.  
-  
--   Um [POPCONTEXT](../../assembler/masm/popcontext.md) diretiva.  
-  
--   Um assembly condicional diretiva, como um [ELSE](../../assembler/masm/else-masm.md), [ELSEIF](../../assembler/masm/elseif-masm.md), ou **ENDIF** sem uma [se](../../assembler/masm/if-masm.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Mensagens de erro de ML](../../assembler/masm/ml-error-messages.md)
+
+**aninhamento de bloco sem correspondência:**
+
+Início de um bloco não tinha um end correspondente ou o fim do bloco não tinha um começa a correspondência. Um dos procedimentos a seguir pode ser envolvido:
+
+- Uma diretiva de alto nível, como [. IF](../../assembler/masm/dot-if.md), [. REPITA](../../assembler/masm/dot-repeat.md), ou [. ENQUANTO](../../assembler/masm/dot-while.md).
+
+- Uma diretiva condicional assembly como [IF](../../assembler/masm/if-masm.md), [REPITA](../../assembler/masm/repeat.md), ou **ENQUANTO**.
+
+- Uma definição de estrutura ou união.
+
+- Uma definição de procedimento.
+
+- Uma definição de segmento.
+
+- Um [POPCONTEXT](../../assembler/masm/popcontext.md) diretiva.
+
+- Um assembly de condicional diretiva, como um [ELSE](../../assembler/masm/else-masm.md), [ELSEIF](../../assembler/masm/elseif-masm.md), ou **ENDIF** sem encontrar uma correspondência [se](../../assembler/masm/if-masm.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Mensagens de erro de ML](../../assembler/masm/ml-error-messages.md)<br/>

@@ -1,7 +1,7 @@
 ---
 title: RÓTULO (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4189d1ae5cf79d0ecf8cc07fa940e754fe314a6d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d7fe6e6b2297cac689ed5f179b3e299488dd99cc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054062"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690584"
 ---
 # <a name="label-masm"></a>LABEL (MASM)
-Cria um novo rótulo atribuindo o valor de contador do local atual e a determinado `type` para *nome*.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-      name LABEL type  
-name LABEL [[NEAR | FAR | PROC]] PTR [[type]]   
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de diretivas](../../assembler/masm/directives-reference.md)
+
+Cria um novo rótulo atribuindo o valor de contador do local atual e a determinada *tipo* à *nome*.
+
+## <a name="syntax"></a>Sintaxe
+
+> *nome da* rótulo *tipo*
+
+> *nome* rótulo [[NEAR | MUITO | PTR PROC]] [[*tipo*]]
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>

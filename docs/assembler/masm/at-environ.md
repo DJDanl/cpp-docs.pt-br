@@ -1,7 +1,7 @@
 ---
 title: '@Environ | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fb6cb46b7c84a8fde2226a684713f7db2a22450
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 73a2135a3f5872320c245c7c9cbae8627de8c91a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049561"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692897"
 ---
 # <a name="environ"></a>@Environ
-O valor da variável de ambiente *envvar* (função de macro).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-@Environ( envvar )  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de símbolos](../../assembler/masm/symbols-reference.md)
+
+O valor da variável de ambiente *envvar* (função de macro).
+
+## <a name="syntax"></a>Sintaxe
+
+> @Environ(envvar)
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de símbolos](../../assembler/masm/symbols-reference.md)<br/>

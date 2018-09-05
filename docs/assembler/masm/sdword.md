@@ -1,7 +1,7 @@
 ---
 title: SDWORD | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,24 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0435692996cc2189bcf30ab6ff10fc9ddbc0b271
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c0873a57bd9d741c2606cb0735c0d632667bae05
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32058021"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693267"
 ---
 # <a name="sdword"></a>SDWORD
-Aloca e, opcionalmente, inicializa uma palavra dupla assinada (4 bytes) de armazenamento para cada `initializer`. Também pode ser usado como um especificador de tipo em qualquer lugar, um tipo é legal.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-name SDWORD initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de diretivas](../../assembler/masm/directives-reference.md)   
- [DWORD](../../assembler/masm/dword.md)   
- [DD](../../assembler/masm/dd.md)
+
+Aloca e inicializa, opcionalmente, uma palavra dupla com sinal (4 bytes) de armazenamento para cada `initializer`. Também pode ser usado como um especificador de tipo em qualquer lugar que um tipo é legal.
+
+## <a name="syntax"></a>Sintaxe
+
+> inicializador SDWORD nome [[, inicializador]]...
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>
+[DWORD](../../assembler/masm/dword.md)<br/>
+[DD](../../assembler/masm/dd.md)<br/>

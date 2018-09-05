@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7dbd74a8f216efb64d220747155a619d2084b3b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b022c4c42a7373f9bfc23c1fff5be2c1317709de
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211756"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692442"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: mapeamento de identificadores do Windows para objetos
 Essa observação descreve o MFC rotinas que dão suporte a mapeamento Windows identificadores para objetos C++ do objeto.  
@@ -74,7 +74,7 @@ CWnd myWnd;
 myWnd.Attach(hWnd);
 ```  
   
- Isso torna uma entrada na associação de mapa permanente *myWnd* e *hWnd*. Chamando `CWnd::FromHandle(hWnd)` agora retornará um ponteiro para *myWnd*. Quando *myWnd* é excluído, o destruidor automaticamente destruirá *hWnd* chamando o Windows [DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682) função. Se isso não for desejado, *hWnd* deve ser desanexado do *myWnd* antes *myWnd* é destruído (normalmente ao deixar o escopo no qual *myWnd*foi definido). O `Detach` método faz isso.  
+ Isso torna uma entrada na associação de mapa permanente *myWnd* e *hWnd*. Chamando `CWnd::FromHandle(hWnd)` agora retornará um ponteiro para *myWnd*. Quando *myWnd* é excluído, o destruidor automaticamente destruirá *hWnd* chamando o Windows [DestroyWindow](/windows/desktop/api/winuser/nf-winuser-destroywindow) função. Se isso não for desejado, *hWnd* deve ser desanexado do *myWnd* antes *myWnd* é destruído (normalmente ao deixar o escopo no qual *myWnd*foi definido). O `Detach` método faz isso.  
   
 ```  
 myWnd.Detach();

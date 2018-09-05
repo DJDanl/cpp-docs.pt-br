@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 55ce0fc38c5633e334211a1c4985de65aa4dc8ad
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0c8bbd345e2d3fe0c5571407d41f590c6cc8d7ba
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197770"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676817"
 ---
 # <a name="creating-an-empty-windows-desktop-application"></a>Criando um aplicativo de área de trabalho do Windows vazio
 
@@ -42,7 +42,3 @@ ms.locfileid: "43197770"
 O projeto aparece na **Gerenciador de soluções** com três diretórios para conter os arquivos de origem, arquivos de cabeçalho e arquivos de recurso.
 
 Em seguida, você pode [adicionar arquivos ao seu projeto do Visual C++ vazio](../windows/adding-files-to-an-empty-win32-applications.md).
-
-## <a name="see-also"></a>Consulte também
-
-[Implantando aplicativos](https://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)

@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b505b9f6164566a1e196c601bdfe3eab4b4a991
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 51f39d26e8998ab48c01961659a4da45de21ea9c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208576"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679854"
 ---
 # <a name="ccomcontrolbase-class"></a>Classe CComControlBase
 Essa classe fornece métodos para criar e gerenciar os controles ATL.  
@@ -245,7 +245,7 @@ CComControlBase(HWND& h);
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Se o controle estiver em janelas, `~CComControlBase` destrói chamando [DestroyWindow](https://msdn.microsoft.com/library/windows/desktop/ms632682).  
+ Se o controle estiver em janelas, `~CComControlBase` destrói chamando [DestroyWindow](/windows/desktop/api/winuser/nf-winuser-destroywindow).  
   
 ##  <a name="controlqueryinterface"></a>  CComControlBase::ControlQueryInterface  
  Recupera um ponteiro para a interface solicitada.  

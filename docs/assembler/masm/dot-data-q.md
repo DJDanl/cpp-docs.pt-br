@@ -1,7 +1,7 @@
 ---
 title: .DATA? | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 022994186f58f86037f756ff8e771b9a40086a3b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 51dc83fbeace435cb5f37de54720df9597305948
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052096"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43682295"
 ---
 # <a name="data"></a>.DATA?
-Quando usado com [. MODELO](../../assembler/masm/dot-model.md), inicia um próximo segmento de dados para dados não inicializados (_BSS de nome de segmento).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-.DATA?  
-  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de diretivas](../../assembler/masm/directives-reference.md)
+
+Quando usado com [. MODELO](../../assembler/masm/dot-model.md), inicia um segmento de dados quase para dados não inicializados (_BSS de nome de segmento).
+
+## <a name="syntax"></a>Sintaxe
+
+> .DATA?
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>

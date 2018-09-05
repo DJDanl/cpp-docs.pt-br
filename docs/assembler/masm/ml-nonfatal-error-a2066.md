@@ -1,7 +1,7 @@
 ---
-title: ML erro não fatal A2066 | Microsoft Docs
+title: Erro não fatal de ML A2066 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92cc0daf183f617767ff5ff119c5e95b8f34cd51
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8cf5cbe7d5c77da7f129cbc40ffa97f4051afca6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054257"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690246"
 ---
 # <a name="ml-nonfatal-error-a2066"></a>Erro não fatal A2066 (ML)
-**tamanho incompatível de modo e o segmento da CPU**  
-  
- Foi feita uma tentativa de abrir um segmento com um **USE16**, **USE32**, ou **simples** atributo que não é compatível com a CPU especificada ou para alterar para uma CPU de 16 bits em 32 bits segmento.  
-  
- O **USE32** e **simples** atributos devem ser precedidos pela. 386 de ou diretiva de processador maior.  
-  
-## <a name="see-also"></a>Consulte também  
- [Mensagens de erro de ML](../../assembler/masm/ml-error-messages.md)
+
+**tamanho incompatível de modo e o segmento da CPU**
+
+Foi feita uma tentativa para abrir um segmento com uma **USE16**, **USE32**, ou **simples** atributo que não era compatível com a CPU especificada ou para alterar para uma CPU de 16 bits em 32 bits segmento.
+
+O **USE32** e **simples** atributos devem ser precedidos pela. 386 de ou diretiva de processador maior.
+
+## <a name="see-also"></a>Consulte também
+
+[Mensagens de erro de ML](../../assembler/masm/ml-error-messages.md)<br/>

@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a510d163075ccefbc61364cd7efa4003dfd0b8aa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 43eb3f239f50b59245714069c70655a997882c64
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208552"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689226"
 ---
 # <a name="cmfctoolbar-class"></a>Classe CMFCToolBar
 O `CMFCToolBar` é semelhante a classe [classe CToolBar](../../mfc/reference/ctoolbar-class.md), mas fornece suporte adicional para recursos de interface do usuário. Isso inclui planas, barras de ferramentas com imagens quentes, ícones grandes, botões de paginação, barras de ferramentas bloqueadas, controles rebar, texto sob imagens, imagens de plano de fundo e com guias barras de ferramentas. O `CMFCToolBar` classe também contém o suporte interno para personalização do usuário das barras de ferramentas e menus, arrastar e soltar entre barras de ferramentas e menus, botões da caixa de combinação, edite os botões de caixa, selecionadores de cores e botões de rolagem.
@@ -2222,7 +2222,7 @@ BOOL IsOneRowWithSibling();
  TRUE se a barra de ferramentas e seu irmão são posicionados na mesma linha; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
- O [CMFCCustomizeButton::CreatePopupMenu](https://msdn.microsoft.com/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) método chama esse método para determinar como mostrar as **personalizar** menu pop-up. Se esse método retornar TRUE, o framework exibe a **Mostrar botões em uma linha** botão. Caso contrário, exibe a estrutura de **Mostrar botões em duas linhas** botão.  
+ O [CMFCCustomizeButton::CreatePopupMenu](internal-classes.md) método chama esse método para determinar como mostrar as **personalizar** menu pop-up. Se esse método retornar TRUE, o framework exibe a **Mostrar botões em uma linha** botão. Caso contrário, exibe a estrutura de **Mostrar botões em duas linhas** botão.  
   
  Normalmente, você não precisará usar esse método. Para habilitar o **Mostrar botões em uma linha** ou **Mostrar botões em duas linhas** botões, chame [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
   

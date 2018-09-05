@@ -1,7 +1,7 @@
 ---
 title: .MMX | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c769b138b722445bccc41315dc2e2d27c74b8fad
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 25e413dba3dac1978ee567ccd0649b6b714f3ce6
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050344"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688618"
 ---
 # <a name="mmx"></a>.MMX
-Permite que o assembly de MMX ou uma instrução, várias instruções de dados (SIMD).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-.MMX  
-  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de diretivas](../../assembler/masm/directives-reference.md)
+
+Habilitar a montagem de MMX ou instrução única, várias instruções de dados (SIMD).
+
+## <a name="syntax"></a>Sintaxe
+
+> .MMX
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>

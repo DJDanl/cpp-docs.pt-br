@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a26394a906f40d6dc194118bb312cfe1a0ce834e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6719d7b104c5dd520a8c4e8a027ea47bd76a95bc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219878"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689504"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Como realizar marshaling de estruturas usando PInvoke
 Este documento explica como nativas funções que aceitam a C-style structs podem ser chamados de funções gerenciadas pelo usando P/Invoke. Embora seja recomendável que você use os recursos de interoperabilidade C++ em vez de P/Invoke como P/Invoke oferece pouco tempo de compilação relatório de erro, não é fortemente tipado e pode ser enfadonho implementar, se a API não gerenciada é empacotada como uma DLL e o código-fonte não é disponível, o P/Invoke é a única opção. Caso contrário, consulte os seguintes documentos:  
@@ -34,7 +34,7 @@ Este documento explica como nativas funções que aceitam a C-style structs pode
   
  Por padrão, nativas e gerenciadas estruturas são dispostas diferente na memória, isso com êxito a passagem de estruturas além do limite gerenciado/requer etapas adicionais para preservar a integridade dos dados.  
   
- Este documento explica as etapas necessárias para definir equivalentes gerenciados de estruturas nativas e como estruturas resultantes podem ser passadas para funções não gerenciadas. Este documento presume que simples estruturas — aquelas que não contêm cadeias de caracteres ou ponteiros — são usados. Para obter informações sobre a interoperabilidade não blittable, consulte [usando Interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md). P/Invoke não pode ter tipos não blittable como um valor de retorno. Tipos blittable têm a mesma representação em código gerenciado e não gerenciado. Para obter mais informações, consulte [Blittable e não blittable](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3).  
+ Este documento explica as etapas necessárias para definir equivalentes gerenciados de estruturas nativas e como estruturas resultantes podem ser passadas para funções não gerenciadas. Este documento presume que simples estruturas — aquelas que não contêm cadeias de caracteres ou ponteiros — são usados. Para obter informações sobre a interoperabilidade não blittable, consulte [usando Interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md). P/Invoke não pode ter tipos não blittable como um valor de retorno. Tipos blittable têm a mesma representação em código gerenciado e não gerenciado. Para obter mais informações, consulte [Blittable e não blittable](/dotnet/framework/interop/blittable-and-non-blittable-types).  
   
  Marshaling simples, estruturas de blittable além do limite gerenciado/primeiro requer que versões gerenciadas de cada estrutura nativa seja definida. Essas estruturas podem ter qualquer nome válido; Não há nenhuma relação entre a versão nativa e gerenciada de duas estruturas que não seja o seu layout de dados. Portanto, é vital que a versão gerenciada contém campos que são do mesmo tamanho e na mesma ordem que a versão nativa. (Não há nenhum mecanismo para garantir que as versões gerenciadas e nativas da estrutura são equivalentes, para que as incompatibilidades não se tornará aparentes até o tempo de execução. É responsabilidade do programador garantir que as duas estruturas tenham o mesmo layout de dados.)  
   

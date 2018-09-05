@@ -1,7 +1,7 @@
 ---
-title: ML Erro Fatal A1017 | Microsoft Docs
+title: Erro Fatal de ML A1017 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5fcb2d921a40b35c6022b2aca1e22adc2d8c45e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: fb98eab68da417526a75beaa57870ce906c85a8d
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054677"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688553"
 ---
 # <a name="ml-fatal-error-a1017"></a>Erro fatal A1017 (ML)
-**nome do arquivo de origem ausentes**  
-  
- ML não foi possível localizar um arquivo para montar ou passar para o vinculador.  
-  
- Esse erro é gerado quando você fornecer opções de linha de comando ML sem especificar um nome de arquivo para agir. Para montar arquivos que não têm uma extensão. ASM, use o **/Ta** opção de linha de comando.  
-  
- Esse erro também pode ser gerado por meio de invocação ML sem parâmetros, se a variável de ambiente ML contém opções de linha de comando.  
-  
-## <a name="see-also"></a>Consulte também  
- [Mensagens de erro de ML](../../assembler/masm/ml-error-messages.md)
+
+**nome do arquivo de origem ausentes**
+
+AM não foi possível localizar um arquivo para montar ou passar para o vinculador.
+
+Esse erro é gerado quando você fornecer opções de linha de comando ML sem especificar um nome de arquivo para agir. Para montar arquivos que não têm uma extensão. ASM, use o **/Ta** opção de linha de comando.
+
+Esse erro também pode ser gerado invocando ML sem parâmetros, se a variável de ambiente ML contém opções de linha de comando.
+
+## <a name="see-also"></a>Consulte também
+
+[Mensagens de erro de ML](../../assembler/masm/ml-error-messages.md)<br/>

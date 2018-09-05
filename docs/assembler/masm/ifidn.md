@@ -1,7 +1,7 @@
 ---
 title: IFIDN] | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ce0c854b90da4b6f692413e57e79d508388c70a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 983ca0a13321e6df021666c231e8eeba0b322ad7
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055119"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691500"
 ---
 # <a name="ifidn"></a>IFIDN]
-Conjunto de concessões se os itens de texto são idênticos.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-IFIDN[[I]] textitem1, textitem2  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Se **I** é fornecido, a comparação diferencia maiusculas de minúsculas. Consulte [se](../../assembler/masm/if-masm.md) para obter a sintaxe completa.  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de diretivas](../../assembler/masm/directives-reference.md)
+
+Conjunto de concessões se os itens de texto são idênticos.
+
+## <a name="syntax"></a>Sintaxe
+
+> Textitem1 IFIDN [[I]], textitem2
+
+## <a name="remarks"></a>Comentários
+
+Se **I** é fornecido, a comparação diferencia maiusculas de minúsculas. Ver [IF](../../assembler/masm/if-masm.md) para a sintaxe completa.
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>

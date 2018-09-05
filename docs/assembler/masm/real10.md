@@ -1,7 +1,7 @@
 ---
 title: REAL10 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfb52065f35e61225891cc196637644db19cfb68
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: d0ed588a62ee57bd31225698edba2652d0f71d4b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053363"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684219"
 ---
 # <a name="real10"></a>REAL10
-Aloca e, opcionalmente, inicializa um número de ponto flutuante de 10 bytes para cada *inicializador*.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-name REAL10 initializer [[, initializer]]...  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de diretivas](../../assembler/masm/directives-reference.md)
+
+Aloca e inicializa, opcionalmente, um número de ponto flutuante de 10 bytes para cada *inicializador*.
+
+## <a name="syntax"></a>Sintaxe
+
+> inicializador de REAL10 nome [[, inicializador]]...
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>

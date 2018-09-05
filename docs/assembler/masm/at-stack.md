@@ -1,7 +1,7 @@
 ---
 title: '@stack | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1d42d96a4860a7f177406568171af0197644e6d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c8c2b32f27145220aa4bf8973265df97ab7a31db
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052593"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683935"
 ---
 # <a name="stack"></a>@stack
-DGROUP para perto de pilha para as pilhas distante (macro de texto) ou de pilhas.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-@stack  
-  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de símbolos](../../assembler/masm/symbols-reference.md)
+
+DGROUP para perto de pilhas ou pilha para as pilhas de extrema (macro de texto).
+
+## <a name="syntax"></a>Sintaxe
+
+> @stack
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de símbolos](../../assembler/masm/symbols-reference.md)<br/>

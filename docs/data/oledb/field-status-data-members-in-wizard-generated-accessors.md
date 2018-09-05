@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 829dbcc78e7d415de1745a8bd0cceb1f8c475ce0
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 2538e2b14277b24c583ae2392dd9249c93d4854b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336434"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690259"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Membros de dados do status de campo em acessadores gerados por assistente
 Quando você usa o ATL OLE DB consumidor Wizard para criar um consumidor, o assistente gera um membro de dados na classe de registro de usuário de cada campo que você especificar no seu mapa de coluna. Cada membro de dados é do tipo `DWORD` e contém um valor de status correspondente ao seu respectivo campo.  
@@ -85,7 +85,7 @@ END_COLUMN_MAP()
   
  Você também pode usar os valores de status para definir um valor NULL para um determinado campo. Isso ajuda você em casos em que você deseja distinguir um valor de campo como NULL em vez de zero. Cabe a você decidir se NULL é um valor válido ou um valor especial e decidir como seu aplicativo deve tratá-la. OLE DB define DBSTATUS_S_ISNULL como o meio correto de especificar um valor nulo genérico. Se o consumidor lê os dados e o valor for nulo, o campo de status é definido como DBSTATUS_S_ISNULL. Se o consumidor deseja definir um valor NULL, o consumidor define o valor de status como DBSTATUS_S_ISNULL antes de chamar o provedor.  
   
- Em seguida, abra o OLEDB e pesquise por `DBSTATUSENUM`. Em seguida, você pode corresponder o valor numérico do status diferente de zero em relação a `DBSTATUSENUM` valores de enumeração. Se o nome da enumeração não é suficiente para dizer o que está errado, consulte o tópico "Status" na seção "Valores de dados de associação" de [guia do programador do DB OLE](http://go.microsoft.com/fwlink/p/?linkid=121548). Este tópico contém tabelas de valores de status usados ao obter ou definir os dados. Para obter informações sobre valores de comprimento, consulte o tópico "Comprimento" na mesma seção.  
+ Em seguida, abra o OLEDB e pesquise por `DBSTATUSENUM`. Em seguida, você pode corresponder o valor numérico do status diferente de zero em relação a `DBSTATUSENUM` valores de enumeração. Se o nome da enumeração não é suficiente para dizer o que está errado, consulte o tópico "Status" na seção "Valores de dados de associação" de [guia do programador do DB OLE](/previous-versions/windows/desktop/ms713643\(v=vs.85\)). Este tópico contém tabelas de valores de status usados ao obter ou definir os dados. Para obter informações sobre valores de comprimento, consulte o tópico "Comprimento" na mesma seção.  
   
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>Recuperando o Status de uma coluna ou de comprimento  
  Você pode recuperar o status de uma coluna (para verificar se há DBSTATUS_S_ISNULL, por exemplo) ou o comprimento de uma coluna de comprimento variável:  

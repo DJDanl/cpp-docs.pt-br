@@ -1,7 +1,7 @@
 ---
-title: ALIAS (MASM) | Microsoft Docs
+title: O ALIAS (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,34 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b14e1c41a448d0cb7014dabc50a42305249938f
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c6a977d35040d8ca25cd3bd4ae4def233092b37a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049161"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691056"
 ---
 # <a name="alias-masm"></a>ALIAS (MASM)
-O **ALIAS** diretiva cria um nome alternativo para uma função.  Isso permite que você crie vários nomes para uma função ou bibliotecas que permitem que o vinculador (LINK.exe) para mapear uma função antiga para uma nova função.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-ALIAS  <  
-alias  
-> = <  
-actual-name  
->  
-  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `actual-name`  
- O nome real da função ou procedimento.  Os colchetes são necessários.  
-  
- `alias`  
- O nome de alias ou alternativo.  Os colchetes são necessários.  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de diretivas](../../assembler/masm/directives-reference.md)
+
+O **ALIAS** diretiva cria um nome alternativo para uma função.  Isso permite que você crie vários nomes para uma função, ou crie bibliotecas que permitem que o vinculador (LINK.exe) para mapear uma função antiga para uma nova função.
+
+## <a name="syntax"></a>Sintaxe
+
+> ALIAS \< *alias*> = \< *nome real*>
+
+#### <a name="parameters"></a>Parâmetros
+
+*nome real*<br/>
+O nome real da função ou procedimento.  Os colchetes angulares são necessários.
+
+*alias*<br/>
+O nome de alias ou alternativo.  Os colchetes angulares são necessários.
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>

@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38ceffd8a5f01cdc97ee162cc92fce319f771dbe
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ea90d30a492fc19020a3309a994f885ab5916be2
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221566"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690541"
 ---
 # <a name="errorcode-class"></a>Classe error_code
 
@@ -172,7 +172,7 @@ error_code(_Enum _Errcode,
 
 O primeiro construtor armazena um valor zero de código de erro e um ponteiro para [generic_category](../standard-library/system-error-functions.md#generic_category).
 
-O segundo construtor armazena *val* como o valor de código de erro e um ponteiro para [error_category](https://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8).
+O segundo construtor armazena *val* como o valor de código de erro e um ponteiro para [error_category](../standard-library/error-category-class.md).
 
 O terceiro construtor armazena `(value_type)_Errcode` como o valor de código de erro e um ponteiro para [generic_category](../standard-library/system-error-functions.md#generic_category).
 
@@ -238,7 +238,7 @@ O operador de membro retorna `!(*this == right)`.
 
 ## <a name="op_lt"></a>  error_code::operator&lt;
 
-Testa se o objeto [error_code](https://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) é menor que o objeto `error_code` passado para comparação.
+Testa se o objeto `error_code` é menor que o objeto `error_code` passado para comparação.
 
 ```cpp
 bool operator<(const error_code& right) const;
@@ -260,7 +260,7 @@ O operador de membro retorna `category() < right.category() || category() == rig
 
 ## <a name="op_eq"></a>  error_code::operator=
 
-Atribui um novo valor de enumeração ao objeto [error_code](https://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31).
+Atribui um novo valor de enumeração ao objeto `error_code`.
 
 ```cpp
 template <class _Enum>

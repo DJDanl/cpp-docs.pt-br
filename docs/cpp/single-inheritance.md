@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c4acddaeac8e63ecd09860ffc9c56c97b212506
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e0a4e8c47ea924fc098458219946f440f093339c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219722"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681731"
 ---
 # <a name="single-inheritance"></a>Herança única
 Na “herança única”, uma forma comum de herança, as classes têm apenas uma classe base. Considere a relação lustrada na figura a seguir.  
@@ -63,7 +63,7 @@ Exemplo de gráfico acíclico direcionado
  No diagrama mostrado acima, chamado “grafo direcionado acíclico” (ou “DAG”), algumas das classes são classes base para mais de uma classe derivada. No entanto, o contrário não é verdadeiro: há apenas uma classe base direta para qualquer classe derivada especificada. O gráfico na figura denota uma estrutura de "herança única".  
   
 > [!NOTE]
->  Os grafos direcionados acíclicos não são exclusivos da herança única. Também são usados para denotar gráficos de herança múltipla. Este tópico é abordado [herança múltipla](https://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca).  
+>  Os grafos direcionados acíclicos não são exclusivos da herança única. Também são usados para denotar gráficos de herança múltipla.  
   
  Na herança, a classe derivada contém os membros da classe base mais os novos membros que você adicionar. Como resultado, uma classe derivada pode se referir a membros da classe base (a menos que esses membros sejam redefinidos na classe derivada). O operador de resolução de escopo (`::`) pode ser usado para fazer referência a membros de classes base diretas e indiretas quando esses membros são redefinidos na classe derivada. Considere este exemplo:  
   

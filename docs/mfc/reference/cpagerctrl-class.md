@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f311f7b73e72f47f363cfd5645c97b57eda5b480
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b7fd978390a2b991da2bddedbab1c05497709d67
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200870"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688137"
 ---
 # <a name="cpagerctrl-class"></a>Classe CPagerCtrl
 O `CPagerCtrl` classe encapsula o controle de paginação do Windows, que pode rolar na exibição de uma janela contida que não se ajusta a janela.  
@@ -183,7 +183,7 @@ virtual BOOL CreateEx(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *dwExStyle*|Uma combinação bit a bit dos estilos estendidos para ser aplicado ao controle. Para obter mais informações, consulte o *dwExStyle* parâmetro do [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) função.|  
+|[in] *dwExStyle*|Uma combinação bit a bit dos estilos estendidos para ser aplicado ao controle. Para obter mais informações, consulte o *dwExStyle* parâmetro do [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) função.|  
 |[in] *dwStyle*|Uma combinação bit a bit (OR) de [estilos da janela](../../mfc/reference/styles-used-by-mfc.md#window-styles) e [estilos de controle de pager](/windows/desktop/Controls/pager-control-styles) a ser aplicado ao controle.|  
 |[in] *rect*|Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém a posição e tamanho do controle em coordenadas de cliente.|  
 |[in] *pParentWnd*|Um ponteiro para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle. Esse parâmetro não pode ser NULL.|  

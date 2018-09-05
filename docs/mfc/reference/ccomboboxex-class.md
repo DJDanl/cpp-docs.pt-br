@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c3626fbdba9fcf34364237e8970e5b941ecce9d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cd480e7b1ffb0923e33361c545bca68202ec3f4f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201520"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687710"
 ---
 # <a name="ccomboboxex-class"></a>Classe CComboBoxEx
 Estende a caixa de combinação controle de caixa, fornecendo suporte para listas de imagens.  
@@ -200,7 +200,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parâmetros  
  *dwExStyle*  
- Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o *dwExStyle* parâmetro para [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
+ Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o *dwExStyle* parâmetro para [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) no SDK do Windows.  
   
  *dwStyle*  
  Estilo do controle de caixa de combinação. Ver [criar](#create) para obter uma lista de estilos.  
@@ -381,7 +381,7 @@ CImageList* SetImageList(CImageList* pImageList);
  Um ponteiro para um [CImageList](../../mfc/reference/cimagelist-class.md) objeto que contém as imagens usadas anteriormente pelo `CComboBoxEx` controle. NULL se nenhuma lista de imagens foi definida anteriormente.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função membro implementa a funcionalidade da mensagem [CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist), conforme descrito no SDK do Windows. Se você alterar a altura do controle de edição padrão, chame a função Win32 [SetWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms633545) redimensione seu controle depois de chamar `SetImageList`, ou ele não será exibido corretamente.  
+ Essa função membro implementa a funcionalidade da mensagem [CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist), conforme descrito no SDK do Windows. Se você alterar a altura do controle de edição padrão, chame a função Win32 [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) redimensione seu controle depois de chamar `SetImageList`, ou ele não será exibido corretamente.  
   
  O `CImageList` objeto apontado pelo valor de retorno é um objeto temporário e é destruído durante o próximo tempo de processamento ocioso.  
   

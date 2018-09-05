@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12081cbc34182fc4c974bd96fd0ce7bbc78cca5f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ed404bcbbdd62c051b0f93e2607d1278bfbf0204
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220223"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691829"
 ---
 # <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Instruções passo a passo: usando o Tempo de Execução de Simultaneidade em um aplicativo habilitado para COM
 Este documento demonstra como usar o tempo de execução de simultaneidade em um aplicativo que usa o modelo de objeto de componente (COM).  
@@ -36,7 +36,7 @@ Este documento demonstra como usar o tempo de execução de simultaneidade em um
   
 - [Tratamento de Exceção](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)  
   
- Para obter mais informações sobre o COM, consulte [(COM Component Object Model)](https://msdn.microsoft.com/library/windows/desktop/ms680573).  
+ Para obter mais informações sobre o COM, consulte [(COM Component Object Model)](/windows/desktop/com/component-object-model--com--portal).  
   
 ## <a name="managing-the-lifetime-of-the-com-library"></a>Gerenciando o Tempo de Vida da Biblioteca COM  
  Embora o uso do COM o tempo de execução de simultaneidade segue os mesmos princípios como qualquer outro mecanismo de simultaneidade, as diretrizes a seguir podem ajudá-lo a usar essas bibliotecas em conjunto com eficiência.  

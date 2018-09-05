@@ -27,17 +27,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99cf5f3c1eb0a81a636407a722149d6cee1bee64
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5bb14f9581a521345772cd72348b40db3f80496a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220680"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678365"
 ---
 # <a name="resource-files-visual-studio"></a>Arquivos de recurso (Visual Studio)
 
 > [!NOTE]
-> Este material se aplica a aplicativos de área de trabalho do Windows. Para obter informações sobre recursos em aplicativos da plataforma Universal do Windows, consulte [definindo recursos do aplicativo](https://msdn.microsoft.com/476ea844-632c-4467-9ce3-966be1350dd4).
+> Este material se aplica a aplicativos de área de trabalho do Windows. Para obter informações sobre recursos em aplicativos da plataforma Universal do Windows, consulte [definindo recursos do aplicativo](/windows/uwp/app-resources/).
 >
 > Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
 >

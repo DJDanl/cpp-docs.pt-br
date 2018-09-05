@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7d31203069fe6916c485586fdfb62ee48559727
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c6fddd90eaa6259cd2552dddbeafb405d90580ac
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195882"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684346"
 ---
 # <a name="concurrentunorderedmap-class"></a>Classe concurrent_unordered_map
 O `concurrent_unordered_map` classe é um contêiner protegido contra simultaneidade que controla uma sequência de comprimento variado de elementos do tipo `std::pair<const K, _Element_type>`. A sequência é representada de maneira que permite a prova de simultaneidade de acréscimo, acesso de elemento, acesso de iterador e operações de passagem de iterador.  
@@ -328,7 +328,7 @@ std::pair<const_iterator,
  O valor chave a ser pesquisado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um [par](https://msdn.microsoft.com/c5a37023-d939-4eb2-ae24-ce8e0cd4505d) onde o primeiro elemento é um iterador para o início e o segundo elemento é um iterador para o fim do intervalo.  
+ Um [par](../../../standard-library/pair-structure.md) onde o primeiro elemento é um iterador para o início e o segundo elemento é um iterador para o fim do intervalo.  
   
 ### <a name="remarks"></a>Comentários  
  É possível para inserções simultâneas fazer com que as chaves adicionais a serem inseridos após o iterador de início e antes do iterador de fim.  

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b774c5f99387ca4403941d1461593bef8801e5de
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1055d60d95292d3585bccf64c56962d62d4ea48e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220626"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680549"
 ---
 # <a name="c-runtime-error-r6025"></a>C R6025 de erro de tempo de execução
 chamada de função virtual pura  
@@ -41,4 +41,3 @@ chamada de função virtual pura
   
  Esse erro é causado por chamar uma função virtual em uma classe base abstrata através de um ponteiro que é criado por uma conversão para o tipo da classe derivada, mas é, na verdade, um ponteiro para a classe base. Isso pode ocorrer ao converter de um **void** <strong>\*</strong> em um ponteiro para uma classe quando o **void** <strong>\*</strong> foi criado durante a construção da classe base.  
   
- Para obter mais informações, consulte o [o suporte da Microsoft](http://go.microsoft.com/fwlink/p/?linkid=75220) site.

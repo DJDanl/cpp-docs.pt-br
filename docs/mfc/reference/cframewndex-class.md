@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50bb4061a13a9057a695b25ca32421c4dd7ed88b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2854199796f5d75cc4b24016def3c63327a5d511
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207818"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43692036"
 ---
 # <a name="cframewndex-class"></a>Classe CFrameWndEx
 Implementa a funcionalidade de um Windows único sobreposta de interface de documento (SDI) ou a janela de quadro pop-up e fornece membros para gerenciar a janela. Ele estende o [CFrameWnd](../../mfc/reference/cframewnd-class.md) classe.  
@@ -1442,7 +1442,7 @@ afx_msg LRESULT OnSetText(
  Ponteiro para o texto da janela.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retornar o valor de uma chamada para [DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572).  
+ Retornar o valor de uma chamada para [DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca).  
   
 ### <a name="remarks"></a>Comentários  
   

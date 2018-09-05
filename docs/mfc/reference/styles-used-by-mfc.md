@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de4e448450aa346875bfef5e9455d713258b5d6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 043a046209d5e52439ed61165557cc6596db48e8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199915"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689315"
 ---
 # <a name="styles-used-by-mfc"></a>Estilos usados pelo MFC  
   
@@ -219,7 +219,7 @@ Use os seguintes sinalizadores de estilo para especificar o comportamento e a ap
   
 ## <a name="button-styles"></a> Estilos de botão  
   
-Estilos de botão aplicam a [classe CButton](../../mfc/reference/cbutton-class.md) objetos, como botões de opção, caixas de seleção e comportarem. Especificar uma combinação de estilos a *dwStyle* parâmetro do [CButton::Create](../../mfc/reference/cbutton-class.md#create). Para obter mais informações sobre estilos de botão no Windows, consulte [estilos de botão (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951).  
+Estilos de botão aplicam a [classe CButton](../../mfc/reference/cbutton-class.md) objetos, como botões de opção, caixas de seleção e comportarem. Especificar uma combinação de estilos a *dwStyle* parâmetro do [CButton::Create](../../mfc/reference/cbutton-class.md#create). Para obter mais informações sobre estilos de botão no Windows, consulte [estilos de botão (Windows)](/windows/desktop/Controls/button-styles).  
   
 ### <a name="button-types"></a>Tipos de botão  
   
@@ -288,7 +288,7 @@ A tabela a seguir lista as opções adicionais que você pode usar com qualquer 
   
 ## <a name="combo-box-styles"></a>  Estilos de caixa de combinação  
   
-Os seguintes estilos de caixa de combinação estão disponíveis no MFC. Para obter mais informações sobre estilos de caixa de combinação no Windows, consulte [estilos de caixa de combinação (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796).  
+Os seguintes estilos de caixa de combinação estão disponíveis no MFC. Para obter mais informações sobre estilos de caixa de combinação no Windows, consulte [estilos de caixa de combinação (Windows)](/windows/desktop/Controls/combo-box-styles).  
   
 |Estilo|Descrição|  
 |-----------|-----------------|  
@@ -308,7 +308,7 @@ Os seguintes estilos de caixa de combinação estão disponíveis no MFC. Para o
   
 ## <a name="edit-styles"></a>  Editar estilos  
   
-Editar estilos [classe CEdit](../../mfc/reference/cedit-class.md) objetos. Especificar uma combinação de estilos a *dwStyle* parâmetro do [CEdit::Create](../../mfc/reference/cedit-class.md#create). Para obter mais informações sobre estilos de controle de edição no Windows, consulte [Editar estilos de controle (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464).  
+Editar estilos [classe CEdit](../../mfc/reference/cedit-class.md) objetos. Especificar uma combinação de estilos a *dwStyle* parâmetro do [CEdit::Create](../../mfc/reference/cedit-class.md#create). Para obter mais informações sobre estilos de controle de edição no Windows, consulte [Editar estilos de controle (Windows)](/windows/desktop/Controls/edit-control-styles).  
   
 |Estilo|Descrição|  
 |-----------|-----------------|  
@@ -339,7 +339,7 @@ Estilos de janela com moldura [classe CFrameWnd](../../mfc/reference/cframewnd-c
   
 ## <a name="list-box-styles"></a> Estilos de caixa de listagem  
   
-Estilos de caixa de listagem [classe CListBox](../../mfc/reference/clistbox-class.md) objetos. Especificar uma combinação de estilos a *dwStyle* parâmetro do [CListBox::Create](../../mfc/reference/clistbox-class.md#create). Para obter mais informações sobre estilos de caixa de lista no Windows, consulte [estilos de caixa de lista (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149).  
+Estilos de caixa de listagem [classe CListBox](../../mfc/reference/clistbox-class.md) objetos. Especificar uma combinação de estilos a *dwStyle* parâmetro do [CListBox::Create](../../mfc/reference/clistbox-class.md#create). Para obter mais informações sobre estilos de caixa de lista no Windows, consulte [estilos de caixa de lista (Windows)](/windows/desktop/Controls/list-box-styles).  
   
 |Estilo|Descrição|  
 |-----------|-----------------|  
@@ -362,7 +362,7 @@ Estilos de caixa de listagem [classe CListBox](../../mfc/reference/clistbox-clas
   
 ##<a name="message-box-styles"></a>  Estilos de caixa de mensagem  
   
-Estilos de caixa de mensagem se aplicam a [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) itens. Especificar uma combinação de estilos a *nType* parâmetro de `AfxMessageBox`. Para obter mais informações sobre estilos de caixa de mensagem no Windows, consulte [função MessageBox (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505).  
+Estilos de caixa de mensagem se aplicam a [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) itens. Especificar uma combinação de estilos a *nType* parâmetro de `AfxMessageBox`. Para obter mais informações sobre estilos de caixa de mensagem no Windows, consulte [função MessageBox (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox).  
   
 Os estilos de caixa de mensagem a seguir estão disponíveis.  
   
@@ -403,7 +403,7 @@ Os estilos de caixa de mensagem a seguir estão disponíveis.
   
 ## <a name="scroll-bar-styles"></a> Estilos de barra de rolagem  
   
-Estilos de barra de rolagem se aplicam a [classe CScrollBar](../../mfc/reference/cscrollbar-class.md) objetos. Especificar uma combinação de estilos a *dwStyle* parâmetro do [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Para obter mais informações sobre a rolagem da barra estilos de controle no Windows, consulte [estilos de controle de barra de rolagem (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533).  
+Estilos de barra de rolagem se aplicam a [classe CScrollBar](../../mfc/reference/cscrollbar-class.md) objetos. Especificar uma combinação de estilos a *dwStyle* parâmetro do [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create). Para obter mais informações sobre a rolagem da barra estilos de controle no Windows, consulte [estilos de controle de barra de rolagem (Windows)](/windows/desktop/Controls/scroll-bar-control-styles).  
   
 |Estilo|Descrição|  
 |-----------|-----------------|  
@@ -420,7 +420,7 @@ Estilos de barra de rolagem se aplicam a [classe CScrollBar](../../mfc/reference
   
 ## <a name="static-styles"></a> Estilos estáticos  
   
-Estilos estáticos se aplicam a [classe CStatic](../../mfc/reference/cstatic-class.md) objetos. Especificar uma combinação de estilos a *dwStyle* parâmetro do [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Para obter mais informações sobre estilos de controle estático no Windows, consulte [estilos de controle estático (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773).  
+Estilos estáticos se aplicam a [classe CStatic](../../mfc/reference/cstatic-class.md) objetos. Especificar uma combinação de estilos a *dwStyle* parâmetro do [CStatic::Create](../../mfc/reference/cstatic-class.md#create). Para obter mais informações sobre estilos de controle estático no Windows, consulte [estilos de controle estático (Windows)](/windows/desktop/Controls/static-control-styles).  
   
 |Estilo|Descrição|  
 |-----------|-----------------|  
@@ -488,7 +488,7 @@ Estilos da janela se aplicam a [classe CWnd](../../mfc/reference/cwnd-class.md) 
   
 ## <a name="extended-window-styles"></a> Estilos de janela estendidos  
   
-Estilos de janela estendidos se aplicam a [classe CWnd](../../mfc/reference/cwnd-class.md) objetos. Especificar uma combinação de estilos a *dwExStyle* parâmetro do [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Para obter mais informações sobre estilos de janela estendidos no Windows, consulte [estilos de janela estendidos (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543).  
+Estilos de janela estendidos se aplicam a [classe CWnd](../../mfc/reference/cwnd-class.md) objetos. Especificar uma combinação de estilos a *dwExStyle* parâmetro do [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Para obter mais informações sobre estilos de janela estendidos no Windows, consulte [estilos de janela estendidos (Windows)](/windows/desktop/winmsg/extended-window-styles).  
   
 |Estilo|Descrição|  
 |-----------|-----------------|  
@@ -524,14 +524,14 @@ Estilos de janela estendidos se aplicam a [classe CWnd](../../mfc/reference/cwnd
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)  
 [CStatic::Create](../../mfc/reference/cstatic-class.md#create)  
 [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)  
-[CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679)  
-[CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680)  
-[Estilos de botão (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)  
-[Estilos de caixa de combinação (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)  
-[Editar estilos de controle (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775464)  
-[Listar estilos de caixa (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149) 
-[função MessageBox (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505) 
-[estilos de controle de barra de rolagem (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb787533)  
-[Estilos de controle estático (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb760773)  
+[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)  
+[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)  
+[Estilos de botão (Windows)](/windows/desktop/Controls/button-styles)  
+[Estilos de caixa de combinação (Windows)](/windows/desktop/Controls/combo-box-styles)  
+[Editar estilos de controle (Windows)](/windows/desktop/Controls/edit-control-styles)  
+[Listar estilos de caixa (Windows)](/windows/desktop/Controls/list-box-styles) 
+[função MessageBox (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox) 
+[estilos de controle de barra de rolagem (Windows)](/windows/desktop/Controls/scroll-bar-control-styles)  
+[Estilos de controle estático (Windows)](/windows/desktop/Controls/static-control-styles)  
 [Estilos de janela (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)  
-[Estilos de janela estendidos (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)  
+[Estilos de janela estendidos (Windows)](/windows/desktop/winmsg/extended-window-styles)  

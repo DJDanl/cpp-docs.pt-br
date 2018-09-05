@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebbb33a4f17f5b4d458c4add4d59040d698dd4b8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 58eb907841abf63d77817e106ee339ad6c49bd7b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222188"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681197"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Usando objetos accelerator e accelerator_view
 Você pode usar o [accelerator](../../parallel/amp/reference/accelerator-class.md) e [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) classes para especificar o dispositivo ou emulador para executar seu código C++ AMP em. Um sistema pode ter vários dispositivos ou emuladores que diferem pela quantidade de memória, suporte à memória compartilhada, suporte à depuração ou suporte de precisão dupla. C++ Accelerated Massive Parallelism (C++ AMP) fornece APIs que você pode usar para examinar os Aceleradores disponíveis, definir um como padrão, especificar várias accelerator_views para chamadas múltiplas ao parallel_for_each e executar tarefas de depuração especiais.  
@@ -180,11 +180,11 @@ Os caminhos de dispositivo dos três Aceleradores especiais estão disponíveis 
   
 - [Membro de dados de Accelerator::direct3d_warp](reference/accelerator-class.md#direct3d_warp): Este acelerador fornece uma solução de fallback para a execução de código C++ AMP em CPUs de vários núcleos que usam extensões de SIMD de Streaming (SSE).  
   
-- [Accelerator:: cpu_accelerator membro de dados](reference/accelerator-class.md#cpu_accelerator): você pode usar esse acelerador para configurar matrizes de teste. Ele não é possível executar o código de C++ AMP. Para obter mais informações, consulte o [Preparando matrizes no C++ AMP](http://go.microsoft.com/fwlink/p/?linkId=248485) postar no blog programação paralela em código nativo.  
+- [Accelerator:: cpu_accelerator membro de dados](reference/accelerator-class.md#cpu_accelerator): você pode usar esse acelerador para configurar matrizes de teste. Ele não é possível executar o código de C++ AMP. Para obter mais informações, consulte o [Preparando matrizes no C++ AMP](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/) postar no blog programação paralela em código nativo.  
   
 ## <a name="interoperability"></a>Interoperabilidade  
  
-O tempo de execução C++ AMP oferece suporte à interoperabilidade entre o `accelerator_view` classe e o Direct3D [ID3D11Device interface](http://go.microsoft.com/fwlink/p/?linkId=248488). O [create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) leva um `IUnknown` interface e retorna um `accelerator_view` objeto. O [get_device](https://msdn.microsoft.com/8194125e-8396-4d62-aa8a-65831dea8439) leva um `accelerator_view` objeto e retorna um `IUknown` interface.  
+O tempo de execução C++ AMP oferece suporte à interoperabilidade entre o `accelerator_view` classe e o Direct3D [ID3D11Device interface](/windows/desktop/api/d3d11/nn-d3d11-id3d11device). O [create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) leva um `IUnknown` interface e retorna um `accelerator_view` objeto. O [get_device](reference/concurrency-direct3d-namespace-functions-amp.md#get_device) leva um `accelerator_view` objeto e retorna um `IUnknown` interface.  
   
 ## <a name="see-also"></a>Consulte também  
  

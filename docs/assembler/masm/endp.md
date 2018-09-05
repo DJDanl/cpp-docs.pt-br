@@ -1,7 +1,7 @@
 ---
 title: ENDP | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,27 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cda1cb52b2d82083456e9642b1fc2c39c4978ba6
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 44ffd82bd21f0a1c627f8368d5f7ee3914ef29c0
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052541"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691816"
 ---
 # <a name="endp"></a>ENDP
-Marca o fim do procedimento *nome* anteriormente iniciada com **PROC**.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-name  
- ENDP  
-  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Consulte [PROC](../../assembler/masm/proc.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de diretivas](../../assembler/masm/directives-reference.md)
+
+Marca o final do procedimento *nome* anteriormente iniciada com **PROC**.
+
+## <a name="syntax"></a>Sintaxe
+
+> *nome* ENDP
+
+## <a name="remarks"></a>Comentários
+
+Ver [PROC](../../assembler/masm/proc.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>

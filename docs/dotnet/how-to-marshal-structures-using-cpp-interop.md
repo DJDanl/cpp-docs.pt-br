@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e135dd1cbfc3aeb164449a1f09e6c1cdf6287582
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bbf85f8da0477de2483ee2ce4b981d832421da95
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215114"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43680896"
 ---
 # <a name="how-to-marshal-structures-using-c-interop"></a>Como realizar marshaling de estruturas usando interop C++
 Este tópico demonstra uma faceta de interoperabilidade do Visual C++. Para obter mais informações, consulte [usando Interop do C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
@@ -32,7 +32,7 @@ Este tópico demonstra uma faceta de interoperabilidade do Visual C++. Para obte
  O código a seguir exemplos de uso de [gerenciado, não gerenciado](../preprocessor/managed-unmanaged.md) #pragma diretivas para implementar gerenciados e funções no mesmo arquivo, mas essas funções interoperam da mesma maneira, se definida em arquivos separados. Arquivos que contêm apenas as funções não gerenciadas não precisa ser compilado com [/clr (compilação de tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como passar uma estrutura de gerenciado para uma função não gerenciada, por valor e por referência. Como a estrutura neste exemplo contém os tipos de dados intrínseco só simples (consulte [Blittable e não blittable](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), nenhum empacotamento especial é necessária. Para realizar marshaling de estruturas não blittable, como aqueles que contêm ponteiros, consulte [como: empacotar Embedded ponteiros usando Interop do C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+ O exemplo a seguir demonstra como passar uma estrutura de gerenciado para uma função não gerenciada, por valor e por referência. Como a estrutura neste exemplo contém os tipos de dados intrínseco só simples (consulte [Blittable e não blittable](/dotnet/framework/interop/blittable-and-non-blittable-types)), nenhum empacotamento especial é necessária. Para realizar marshaling de estruturas não blittable, como aqueles que contêm ponteiros, consulte [como: empacotar Embedded ponteiros usando Interop do C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct1.cpp  
@@ -89,7 +89,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como passar uma estrutura de um não gerenciado para uma função gerenciada, por valor e por referência. Como a estrutura neste exemplo contém os tipos de dados intrínseco só simples (consulte [Blittable e não blittable](https://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), nenhum empacotamento especial é necessária. Para realizar marshaling de estruturas não blittable, como aqueles que contêm ponteiros, consulte [como: empacotar Embedded ponteiros usando Interop do C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+ O exemplo a seguir demonstra como passar uma estrutura de um não gerenciado para uma função gerenciada, por valor e por referência. Como a estrutura neste exemplo contém os tipos de dados intrínseco só simples (consulte [Blittable e não blittable](/dotnet/framework/interop/blittable-and-non-blittable-types)), nenhum empacotamento especial é necessária. Para realizar marshaling de estruturas não blittable, como aqueles que contêm ponteiros, consulte [como: empacotar Embedded ponteiros usando Interop do C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct2.cpp  

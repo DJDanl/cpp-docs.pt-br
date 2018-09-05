@@ -1,7 +1,7 @@
 ---
 title: pseudoinstrução Emit | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -17,33 +17,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ad75f4abf2e86cb08ba646e50e9390650993d05
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: c8c11165e8b6632488d29e5fe79aa945332c25e9
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32050692"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689356"
 ---
 # <a name="emit-pseudoinstruction"></a>Pseudoinstrução _emit
-## <a name="microsoft-specific"></a>Específico da Microsoft  
- O **pseudoinstrução** Emit define um byte no local atual no segmento de texto atual. O **pseudoinstrução** Emit é semelhante a [DB](../../assembler/masm/db.md) diretiva de MASM.  
-  
- O fragmento a seguir coloca os bytes 0x4A, 0x43 e 0x4B no código:  
-  
-```  
-#define randasm __asm _emit 0x4A __asm _emit 0x43 __asm _emit 0x4B  
- .  
- .  
- .  
-__asm {  
-     randasm  
-     }  
-```  
-  
+
+**Seção específica da Microsoft**
+
+O **pseudoinstrução** Emit define um byte na posição atual no segmento de texto atual. O **pseudoinstrução** Emit é semelhante a [DB](../../assembler/masm/db.md) diretiva do MASM.
+
+O fragmento a seguir coloca os bytes 0x4A, 0x43 e 0x4B no código:
+
+```cpp
+#define randasm __asm _emit 0x4A __asm _emit 0x43 __asm _emit 0x4B
+.
+.
+.
+__asm {
+     randasm
+     }
+```
+
 > [!CAUTION]
->  Se `_emit` gera instruções que modificam registros e compilar o aplicativo com otimizações, o compilador não pode determinar quais registros são afetados. Por exemplo, se `_emit` gera uma instrução que modifica o **rax** o registro, o compilador não sabe que **rax** foi alterado. O compilador pode, em seguida, fazer uma suposição incorreta sobre o valor em que registrar depois que o código do assembler embutido é executado. Consequentemente, seu aplicativo pode apresentar um comportamento imprevisível quando ele é executado.  
-  
- **Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando a linguagem de assembly em blocos __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+> Se `_emit` gera instruções que modificam os registros e você compila o aplicativo com otimizações, o compilador não pode determinar quais registros são afetados. Por exemplo, se `_emit` gera uma instrução que modifica o **rax** register, o compilador não sabe disso **rax** foi alterado. O compilador pode, em seguida, fazer uma suposição incorreta sobre o valor em que registrar depois que o código de assembler embutido é executado. Consequentemente, seu aplicativo pode apresentar um comportamento imprevisível, quando ele é executado.
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Usando a linguagem de assembly em blocos __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

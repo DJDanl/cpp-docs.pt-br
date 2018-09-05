@@ -1,7 +1,7 @@
 ---
 title: operador LENGTHOF | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -18,22 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be32d102d41cccf4c4bc2ac239b4c140151e7c95
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 553a64730f63db54944cfa01662cd455ac3a081e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052844"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676179"
 ---
 # <a name="operator-lengthof"></a>Operador LENGTHOF
-Retorna o número de objetos de dados em *variável*.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-LENGTHOF variable  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de operadores](../../assembler/masm/operators-reference.md)
+
+Retorna o número de objetos de dados no *variável*.
+
+## <a name="syntax"></a>Sintaxe
+
+> Variável LENGTHOF
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de operadores](../../assembler/masm/operators-reference.md)<br/>

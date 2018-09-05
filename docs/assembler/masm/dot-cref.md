@@ -1,7 +1,7 @@
 ---
 title: .CREF | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef70402499b79d4068d5ff54ed2156fd5871c5bc
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 225379a1d28f525823dd22d4e7cef8fa6e06b802
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051499"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684131"
 ---
 # <a name="cref"></a>.CREF
-Habilita lista de símbolos na parte de símbolo do arquivo de tabela e o navegador de símbolo.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-.CREF  
-  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de diretivas](../../assembler/masm/directives-reference.md)
+
+Habilita a listagem de símbolos na parte de símbolo do arquivo de tabela e o navegador do símbolo.
+
+## <a name="syntax"></a>Sintaxe
+
+> .CREF
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>

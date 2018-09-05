@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d543ca2d908f59487572f5abc68dc5b04223b88f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4ffea5b097460dbed2b6d5dd4ea4e79f283cd412
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207609"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693953"
 ---
 # <a name="concurrentunorderedset-class"></a>Classe concurrent_unordered_set
 O `concurrent_unordered_set` classe é um contêiner protegido contra simultaneidade que controla uma sequência de comprimento variado de elementos do tipo K. A sequência é representada de maneira que permite a prova de simultaneidade de acréscimo, acesso de elemento de iterador e operações de passagem de iterador.  
@@ -293,7 +293,7 @@ std::pair<const_iterator,
  O valor chave a ser pesquisado.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um [par](https://msdn.microsoft.com/32e72d66-3020-4cb9-92c3-f7a5fa7998ff) onde o primeiro elemento é um iterador para o início e o segundo elemento é um iterador para o fim do intervalo.  
+ Um [par](../../../standard-library/pair-structure.md) onde o primeiro elemento é um iterador para o início e o segundo elemento é um iterador para o fim do intervalo.  
   
 ### <a name="remarks"></a>Comentários  
  É possível para inserções simultâneas fazer com que as chaves adicionais a serem inseridos após o iterador de início e antes do iterador de fim.  

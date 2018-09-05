@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b41646dbde21f68c2cc23dfbcf977d9f5ad06c1e
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: ce106727fac6b3b9903a53fae64bee94441aa038
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467834"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685070"
 ---
 # <a name="safebuffers"></a>safebuffers
 **Seção específica da Microsoft**  
@@ -36,7 +36,7 @@ __declspec( safebuffers )
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O **/GS** opção de compilador faz o compilador teste excesso de buffer inserindo verificações de segurança na pilha. Os tipos de estruturas de dados que são elegíveis para verificações de segurança são descritos em [/GS (Buffer Security Check)](../build/reference/gs-buffer-security-check.md). Para obter mais informações sobre a detecção de estouro de buffer, consulte [compilador verificações de segurança detalhadas](http://go.microsoft.com/fwlink/p/?linkid=7260) no site do MSDN.  
+ O **/GS** opção de compilador faz o compilador teste excesso de buffer inserindo verificações de segurança na pilha. Os tipos de estruturas de dados que são elegíveis para verificações de segurança são descritos em [/GS (Buffer Security Check)](../build/reference/gs-buffer-security-check.md). Para obter mais informações sobre a detecção de estouro de buffer, consulte [recursos de segurança no MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/).  
   
  Uma análise de código manual por especialista ou uma análise externa pode determinar que a função está protegida contra o excesso de buffer. Nesse caso, você pode suprimir as verificações de segurança para uma função aplicando o **__declspec(safebuffers)** palavra-chave para a declaração da função.  
   

@@ -12,17 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 980facfddffb9a7c55854e05e42e7e7c5ec4c889
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0f4796b7c3d6cdc4a44326d9b4db388a12ce5a3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326014"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43683493"
 ---
 # <a name="math-errors-m6101-through-m6205"></a>Erros matemáticos M6101 até M6205
 
 Esta seção é uma referência para os erros gerados pela biblioteca de matemática de ponto flutuante de tempo de execução.
 
-Você pode obter assistência adicional para erros e avisos em fóruns públicos da Microsoft. Você pode procurar o erro ou o número de aviso sobre a [comunidade de desenvolvedores](https://go.microsoft.com/fwlink/p/?linkid=820594) site. O [linguagem Visual C++](http://go.microsoft.com/fwlink/p/?linkid=158195) fórum é para perguntas e discussões sobre a sintaxe de linguagem do C++ e o compilador MSVC. O [geral do Visual C++](http://go.microsoft.com/fwlink/p/?linkid=158194) fórum é de dúvidas sobre o Visual C++ que não são abordadas em outros fóruns. Você também pode procurar por erros e avisos e fazer perguntas em [estouro de pilha](http://stackoverflow.com/) para encontrar soluções.
+Você pode obter assistência adicional para erros e avisos em fóruns públicos da Microsoft. Você pode procurar o erro ou o número de aviso sobre a [comunidade de desenvolvedores](https://developercommunity.visualstudio.com) site. O [geral do Visual C++](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vcgeneral) é de fórum para perguntas sobre o Visual C++ que não são discutidas em outros fóruns. Você também pode procurar erros e avisos e faça perguntas no [Stack Overflow](http://stackoverflow.com/) para encontrar soluções.
 
-Para obter links para ajuda adicional e recursos da comunidade, consulte [a Ajuda do Visual C++ e da comunidade](../../visual-cpp-help-and-community.md).
+Para obter links para ajuda adicional e recursos da comunidade, consulte [Ajuda do Visual C++ e a comunidade](../../visual-cpp-help-and-community.md).

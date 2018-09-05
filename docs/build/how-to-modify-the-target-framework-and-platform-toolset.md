@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c53960b7ef972d605902a260de9e7ef344a31274
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: eef4c0e7e32b85e26fbdc6adb7a2ebd26850b2ae
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573020"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691729"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma
 Você pode alterar as configurações de projeto do Visual C++ para ter diferentes versões do .NET Framework e usar conjuntos de ferramentas de plataforma diferente. Por padrão, o sistema do projeto usa a versão do .NET Framework e do conjunto de ferramentas que corresponde à versão do Visual Studio usada para criar o projeto. É possível alterar o conjunto de ferramentas da plataforma de destino modificando as propriedades do projeto. É possível alterar a Estrutura de destino modificando o arquivo do projeto (.vcxproj). Não é preciso manter uma base de código separada para cada destino de compilação.  
@@ -34,7 +34,7 @@ Você pode alterar as configurações de projeto do Visual C++ para ter diferent
 > [!NOTE]
 >  Para alterar o conjunto de ferramentas da plataforma de destino, é preciso ter a versão associada do Visual Studio ou do Windows Platform SDK instalada. Por exemplo, para a plataforma Itanium com o **Windows7.1SDK** conjunto de ferramentas de plataforma, você deve ter [Microsoft Windows SDK para Windows 7 e .NET Framework 4 SP1](http://www.microsoft.com/download/details.aspx?id=8279) instalados; no entanto, você pode usar outra versão compatível do Visual Studio para fazer o trabalho de desenvolvimento, desde que você o correto ferramentas de plataforma e versão do Framework de destino.  
   
- É possível estender a plataforma de destino ainda mais criando um conjunto de ferramentas personalizado da plataforma. Para obter mais informações, consulte [C++ multiplataforma nativa](http://go.microsoft.com/fwlink/p/?linkid=196619) no blog do Visual C++.  
+ É possível estender a plataforma de destino ainda mais criando um conjunto de ferramentas personalizado da plataforma. Para obter mais informações, consulte [C++ multiplataforma nativa](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) no blog do Visual C++.  
   
 ### <a name="to-change-the-target-framework"></a>Para alterar a Estrutura de destino  
   

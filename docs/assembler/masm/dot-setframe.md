@@ -1,7 +1,7 @@
 ---
 title: .SETFRAME | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,60 +16,62 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c49d512534a11f01376deac41006e55c6b7b9d89
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 956a49e40c38310819d66e89fa6bf4492443a29c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32052580"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43691283"
 ---
 # <a name="setframe"></a>.SETFRAME
-Preenche o quadro de registrar o campo e o deslocamento nas informações de liberação usando o registro especificado (`reg`) e deslocamento (`offset`). O deslocamento deve ser um múltiplo de 16 e menor ou igual a 240. Essa diretiva também gera um `UWOP_SET_FPREG` desenrolar a entrada de código para registrar especificado usando o deslocamento de prólogo atual.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-.SETFRAME reg, offset  
-```  
-  
-## <a name="remarks"></a>Comentários  
- . SETFRAME permite que os usuários de ml64.exe especificar como uma função de quadro esvazia e só é permitida no prólogo, que se estende do [PROC](../../assembler/masm/proc.md) declaração de quadro para o [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) diretiva. Essas diretivas não geram código; Gerar apenas `.xdata` e `.pdata`. . SETFRAME deve ser precedido por instruções que as ações a ser organizado de fato implementam. É uma boa prática para encapsular as diretivas de liberação e o código que eles se destinam à liberação em uma macro para garantir o contrato.  
-  
- Para obter mais informações, consulte [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
-  
-## <a name="sample"></a>Amostra  
-  
-### <a name="description"></a>Descrição  
- O exemplo a seguir mostra como usar um ponteiro de quadro:  
-  
-### <a name="code"></a>Código  
-  
-```  
-; ml64 frmex2.asm /link /entry:frmex2 /SUBSYSTEM:CONSOLE  
-_text SEGMENT  
-frmex2 PROC FRAME  
-   push rbp  
-.pushreg rbp  
-   sub rsp, 010h  
-.allocstack 010h  
-   mov rbp, rsp  
-.setframe rbp, 0  
-.endprolog  
-   ; modify the stack pointer outside of the prologue (similar to alloca)  
-   sub rsp, 060h  
-  
-   ; we can unwind from the following AV because of the frame pointer     
-   mov rax, 0  
-   mov rax, [rax] ; AV!  
-  
-   add rsp, 060h  
-   add rsp, 010h  
-   pop rbp  
-   ret  
-frmex2 ENDP  
-_text ENDS  
-END  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de diretivas](../../assembler/masm/directives-reference.md)
+
+Preenchimentos no quadro de campo e o deslocamento registrar as informações de desenrolamento usando o registro especificado (`reg`) e deslocamento (`offset`). O deslocamento deve ser um múltiplo de 16 e menor ou igual a 240. Essa diretiva também gera um `UWOP_SET_FPREG` entrada de código de desenrolamento para registrar especificado usando o deslocamento atual do prólogo.
+
+## <a name="syntax"></a>Sintaxe
+
+> . Reg SETFRAME, deslocamento
+
+## <a name="remarks"></a>Comentários
+
+. SETFRAME permite que os usuários de ml64.exe especificar como uma função de quadro é desenrolado e só é permitida dentro do prólogo, que se estende do [PROC](../../assembler/masm/proc.md) declaração de quadro para o [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) diretiva. Essas diretivas não geram código; elas só geram `.xdata` e `.pdata`. . SETFRAME deve ser precedido por instruções que realmente implementam as ações a ser organizado. É uma boa prática para encapsular as diretivas de desenrolamento e o código que eles se destinam à desenrolamento em uma macro para garantir que o contrato.
+
+Para obter mais informações, consulte [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+
+## <a name="sample"></a>Amostra
+
+### <a name="description"></a>Descrição
+
+O exemplo a seguir mostra como usar um ponteiro de quadro:
+
+### <a name="code"></a>Código
+
+```asm
+; ml64 frmex2.asm /link /entry:frmex2 /SUBSYSTEM:CONSOLE
+_text SEGMENT
+frmex2 PROC FRAME
+   push rbp
+.pushreg rbp
+   sub rsp, 010h
+.allocstack 010h
+   mov rbp, rsp
+.setframe rbp, 0
+.endprolog
+   ; modify the stack pointer outside of the prologue (similar to alloca)
+   sub rsp, 060h
+
+   ; we can unwind from the following AV because of the frame pointer
+   mov rax, 0
+   mov rax, [rax] ; AV!
+
+   add rsp, 060h
+   add rsp, 010h
+   pop rbp
+   ret
+frmex2 ENDP
+_text ENDS
+END
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>

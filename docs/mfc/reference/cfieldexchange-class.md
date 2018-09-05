@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6735cddf401ba09d3743b178357fb740b873c21
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 76167793f7252540dbe9feedbb2d83678ebdcacb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336501"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688380"
 ---
 # <a name="cfieldexchange-class"></a>Classe CFieldExchange
 Dá suporte a rotinas de troca (RFX em massa) de campos de registro em massa usadas pelas classes de banco de dados e registrar troca de campos (RFX).  
@@ -117,7 +117,7 @@ void SetFieldType(UINT nFieldType);
 |Valor do parâmetro SetFieldType|Tipo de membro de dados de parâmetro|  
 |----------------------------------|-----------------------------------|  
 |`CFieldExchange::inputParam`|Parâmetro de entrada. Um valor que é passado para o conjunto de registros de consulta ou um procedimento armazenado.|  
-|' ieldExchange::param * *`ame as **CFieldExchange::inputParam`.|  
+|`CFieldExchange::param` | Mesmo que `CFieldExchange::inputParam`.|  
 |`CFieldExchange::outputParam`|Parâmetro de saída. Um valor de retorno do conjunto de registros de procedimento armazenado.|  
 |`CFieldExchange::inoutParam`|Parâmetro de entrada/saída. Um valor que é passado e retornado do conjunto de registros de procedimento armazenado.|  
   

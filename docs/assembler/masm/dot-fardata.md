@@ -1,7 +1,7 @@
 ---
 title: .FARDATA | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6418c122f23b24cde76f3c31a3b0ff3b5c72723
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 941fbd86ec977f2f6fbe5a3af26b79ad8771e037
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32054940"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693317"
 ---
 # <a name="fardata"></a>.FARDATA
-Quando usado com [. MODELO](../../assembler/masm/dot-model.md), inicia um segmento de dados distante para dados inicializado (nome de segmento FAR_DATA ou *nome*).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-.FARDATA [[name]]  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de diretivas](../../assembler/masm/directives-reference.md)
+
+Quando usado com [. MODELO](../../assembler/masm/dot-model.md), inicia um segmento de dados mais distante para dados inicializados (nome de segmento FAR_DATA ou *nome*).
+
+## <a name="syntax"></a>Sintaxe
+
+> . FARDATA [[nome]]
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>

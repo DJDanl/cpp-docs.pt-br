@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 046ce538dafe90b172096eb37bf2309f8c75db1c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e6b8922ea176619764308122867c4d2ebfcfe449
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206245"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676803"
 ---
 # <a name="editing-a-message-handler"></a>Editando um manipulador de mensagens
 Depois de definir um manipulador de mensagens, você pode ir para definição da função de membro para adicionar ou modificar o código.  
   
  Para ir para uma definição de função de membro do [editor de caixa de diálogo](../../windows/dialog-editor.md), clique duas vezes em um controle para o qual um manipulador já está definido. Você navega até o arquivo no qual o manipulador de mensagens do controle selecionado é definido.  
   
- Para ir para uma definição de função de membro [modo de exibição de classe](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), clique duas vezes no nome da função na exibição de classe.  
+ Para ir para uma definição de função de membro [modo de exibição de classe](/visualstudio/ide/viewing-the-structure-of-code), clique duas vezes no nome da função na exibição de classe.  
   
 ## <a name="see-also"></a>Consulte também  
  [Mapeando mensagens para funções](../../mfc/reference/mapping-messages-to-functions.md)   

@@ -1,7 +1,7 @@
 ---
 title: Referência de operadores (MASM) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -15,86 +15,89 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d00391f7ceaf95038c5c52db396e60cbec234099
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: e4708af3c0fa272a1ca803f549ce8953caccaa27
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057546"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688170"
 ---
 # <a name="masm-operators-reference"></a>Referência de operadores (MASM)
 
-## <a name="arithmetic"></a>Aritmética  
-  
-||||  
-|-|-|-|  
-|[*](../../assembler/masm/operator-multiply.md)|[+](../../assembler/masm/operator-add.md)|[-](../../assembler/masm/operator-subtract-2.md)|  
-|[.](../../assembler/masm/operator-dot.md)|[/](../../assembler/masm/operator-subtract-1.md)|[&#91;&#93;](../../assembler/masm/operator-brackets.md)|  
-|[MOD](../../assembler/masm/operator-mod.md)|||  
-  
-## <a name="control-flow"></a>Fluxo de controle  
-  
-||||  
-|-|-|-|  
-|[\!](../../assembler/masm/operator-logical-not-masm.md)|[\!=](../../assembler/masm/operator-not-equal-masm.md)|[&](../../assembler/masm/operator-logical-and-masm.md)|  
-|[&&](../../assembler/masm/operator-logical-and-masm-run-time.md)|[<](../../assembler/masm/operator-less-than-masm-run-time.md)|[\<=](../../assembler/masm/operator-less-or-equal-masm-run-time.md)|  
-|[==](../../assembler/masm/operator-equal-masm-run-time.md)|[>](../../assembler/masm/operator-greater-than-masm-run-time.md)|[>=](../../assembler/masm/operator-greater-or-equal-masm-run-time.md)|  
-|[&#124;&#124;](../../assembler/masm/operator-logical-or.md)|||  
-  
-## <a name="logical-and-shift"></a>Lógica e Shift  
-  
-||||  
-|-|-|-|  
-|[E](../../assembler/masm/operator-and.md)|[NÃO](../../assembler/masm/operator-not.md)|[OR](../../assembler/masm/operator-or.md)|  
-|[SHL](../../assembler/masm/operator-shl.md)|[SHR](../../assembler/masm/operator-shr.md)|[XOR](../../assembler/masm/operator-xor.md)|  
-  
-## <a name="macro"></a>Macro  
-  
-||||  
-|-|-|-|  
-|[\!](../../assembler/masm/operator-logical-not-masm-run-time.md)|[%](../../assembler/masm/operator-percent.md)|[&](../../assembler/masm/operator-bitwise-and.md)|  
-|[;;](../../assembler/masm/operator-semicolons.md)|[<>](../../assembler/masm/operator-literal.md)||  
-  
-## <a name="miscellaneous"></a>Diversos  
-  
-||||  
-|-|-|-|  
-|[' '](../../assembler/masm/operator-single-quote.md)|[" "](../../assembler/masm/operator-double-quote.md)|[:](../../assembler/masm/operator-colon.md)|  
-|[::](../../assembler/masm/operator-semicolons.md)|[;](../../assembler/masm/operator-semicolon.md)|[CARREGAR?](../../assembler/masm/operator-carry-q.md)|  
-|[DUP](../../assembler/masm/operator-dup.md)|[ESTOURO?](../../assembler/masm/operator-overflow-q.md)|[PARIDADE?](../../assembler/masm/operator-parity-q.md)|  
-|[ENTRAR?](../../assembler/masm/operator-sign-q.md)|[ZERO?](../../assembler/masm/operator-zero-q.md)||  
-  
-## <a name="record"></a>Registro  
-  
-|||  
-|-|-|  
-|[MASK](../../assembler/masm/operator-mask.md)|[LARGURA](../../assembler/masm/operator-width.md)|  
-  
-## <a name="relational"></a>Relacional  
-  
-||||  
-|-|-|-|  
-|[EQ](../../assembler/masm/operator-eq.md)|[GE](../../assembler/masm/operator-ge.md)|[GT](../../assembler/masm/operator-gt.md)|  
-|[LE](../../assembler/masm/operator-le.md)|[LT](../../assembler/masm/operator-lt.md)|[NE](../../assembler/masm/operator-ne.md)|  
-  
-## <a name="segment"></a>segmento  
-  
-|||  
-|-|-|  
-|[:](../../assembler/masm/operator-colon.md)|[IMAGEREL](../../assembler/masm/operator-imagerel.md)|  
-|[LROFFSET](../../assembler/masm/operator-lroffset.md)|[OFFSET](../../assembler/masm/operator-offset.md)|  
-|[SECTIONREL](../../assembler/masm/operator-sectionrel.md)|[SEG](../../assembler/masm/operator-seg.md)|  
-  
-## <a name="type"></a>Tipo  
-  
-||||  
-|-|-|-|  
-|[ALTA](../../assembler/masm/operator-high.md)|[HIGH32](../../assembler/masm/operator-high32.md)|[HIGHWORD](../../assembler/masm/operator-highword.md)|  
-|[LENGTH](../../assembler/masm/operator-length.md)|[LENGTHOF](../../assembler/masm/operator-lengthof.md)|[BAIXA](../../assembler/masm/operator-low.md)|  
-|[LOW32](../../assembler/masm/operator-low32.md)|[LOWWORD](../../assembler/masm/operator-lowword.md)|[OPATTR](../../assembler/masm/operator-opattr.md)|  
-|[PTR](../../assembler/masm/operator-ptr.md)|[SHORT](../../assembler/masm/operator-short.md)|[TAMANHO](../../assembler/masm/operator-size.md)|  
-|[SIZEOF](../../assembler/masm/operator-sizeof.md)|[ISSO](../../assembler/masm/operator-this.md)|[TIPO DE](../../assembler/masm/operator-type.md)|  
-  
-## <a name="see-also"></a>Consulte também  
+## <a name="arithmetic"></a>aritmética
 
-[Referência do Microsoft Macro Assembler](../../assembler/masm/microsoft-macro-assembler-reference.md)
+||||
+|-|-|-|
+|[* (multiplicação)](operator-multiply.md)|[+ (adição)](operator-add.md)|[-(subtrair ou negar)](operator-subtract-2.md)|
+|[. (campo)](operator-dot.md)|[/ (divisão)](operator-subtract-1.md)|[&#91;&#93;(índice)](operator-brackets.md)|
+|[MOD (resto)](operator-mod.md)|||
+
+## <a name="control-flow"></a>Fluxo de controle
+
+||||
+|-|-|-|
+|[! (not lógico de tempo de execução)](operator-logical-not-masm-run-time.md)|[! = (tempo de execução não igual)](operator-not-equal-masm.md)|[&#124;&#124;(tempo de execução de lógico ou)](operator-logical-or.md)|
+|[& & (tempo de execução lógico e)](operator-logical-and-masm-run-time.md)|[< (tempo de execução menor que)](operator-less-than-masm-run-time.md)|[\<= (tempo de execução menor ou igual a)](operator-less-or-equal-masm-run-time.md)|
+|[= = (tempo de execução igual)](operator-equal-masm-run-time.md)|[> (tempo de execução maior que)](operator-greater-than-masm-run-time.md)|[> = (tempo de execução maior ou igual)](operator-greater-or-equal-masm-run-time.md)|
+|[& (tempo de execução do bit a bit e)](operator-bitwise-and.md)|||
+|[CARREGAR? (teste de realização de tempo de execução)](operator-carry-q.md)|[ESTOURO? (teste de estouro de tempo de execução)](operator-overflow-q.md)|[PARIDADE? (teste de paridade de tempo de execução)](operator-parity-q.md)|
+|[ENTRAR? (tempo de execução de teste de sinal)](operator-sign-q.md)|[ZERO? (zero em tempo de execução teste)](operator-zero-q.md)||
+
+## <a name="logical-and-shift"></a>Lógico- and -Shift
+
+||||
+|-|-|-|
+|[E (bit a bit e)](operator-and.md)|[NÃO (not bit a bit)](operator-not.md)|[OR (bit a bit ou)](operator-or.md)|
+|[SHL (bits de deslocamento à esquerda)](operator-shl.md)|[SHR (bits de deslocamento à direita)](operator-shr.md)|[XOR (exclusivo bit a bit ou)](operator-xor.md)|
+
+## <a name="macro"></a>Macro
+
+||||
+|-|-|-|
+|[! (o caractere literal)](operator-logical-not-masm.md)|[% (trate como texto)](operator-percent.md)||
+|[;; (trate como comentário)](operator-semicolons.md)|[&lt; &gt; (trate como um literal)](operator-literal.md)|[& & (substitua o valor do parâmetro)](operator-logical-and-masm.md)|
+
+## <a name="miscellaneous"></a>Diversos
+
+||||
+|-|-|-|
+|[' ' (trate como cadeia de caracteres)](operator-single-quote.md)|["" (tratar como cadeia de caracteres)](operator-double-quote.md)||
+|: (definição de rótulo de local)|:: (registrar o segmento e o deslocamento)|:: (definição de rótulo global)|
+|[; (trate como comentário)](operator-semicolon.md)|[DUP (declaração de repetição)](operator-dup.md)||
+
+## <a name="record"></a>Registro
+
+|||
+|-|-|
+|[MÁSCARA (obter o registro ou do campo de máscara de bits)](operator-mask.md)|[LARGURA (obter a largura do registro ou do campo)](operator-width.md)|
+
+## <a name="relational"></a>Relacional
+
+||||
+|-|-|-|
+|[EQ (igual)](operator-eq.md)|[GE (maior ou igual)](operator-ge.md)|[GT (maior que)](operator-gt.md)|
+|[LE (menor ou igual)](operator-le.md)|[LT (menor que)](operator-lt.md)|[NE (não igual)](operator-ne.md)|
+
+## <a name="segment"></a>Segmento
+
+|||
+|-|-|
+|[: (substituição de segmento)](operator-colon.md)|:: (registrar o segmento e o deslocamento)|
+|[IMAGEREL (deslocamento relativo da imagem)](operator-imagerel.md)|[LROFFSET (carregador resolvido deslocamento)](operator-lroffset.md)|
+|[DESLOCAMENTO (deslocamento relativo do segmento)](operator-offset.md)|[SECTIONREL (deslocamento relativo de seção)](operator-sectionrel.md)|
+|[SEG (segmento get)](operator-seg.md)||
+
+## <a name="type"></a>Tipo
+
+||||
+|-|-|-|
+|[ALTA (alta 8 bits de 16 bits mais baixas)](operator-high.md)|[HIGH32 (32 bits altos de 64 bits)](operator-high32.md)|[HIGHWORD (16 bits altos de 32 bits mais baixas)](operator-highword.md)|
+|[TAMANHO (número de elementos na matriz)](operator-length.md)|[LENGTHOF (número de elementos na matriz)](operator-lengthof.md)|[LOW (baixa 8 bits)](operator-low.md)|
+|[LOW32 (32 bits baixos)](operator-low32.md)|[LOWWORD (16 bits baixos)](operator-lowword.md)|[OPATTR (informações de tipo de argumento get)](operator-opattr.md)|
+|[PTR (ponteiro para ou como tipo)](operator-ptr.md)|[SHORT (tipo de marca de rótulos curtos)](operator-short.md)|[TAMANHO (de tipo ou variável)](operator-size.md)|
+|[SIZEOF (tamanho do tipo ou variável)](operator-sizeof.md)|[Esse (local atual)](operator-this.md)|[TIPO (tipo de expressão de get)](operator-type.md)|
+|[. TIPO (informações de tipo de argumento get)](operator-dot-type.md)|||
+
+## <a name="see-also"></a>Consulte também
+
+[Referência do Microsoft Macro Assembler](microsoft-macro-assembler-reference.md)<br/>

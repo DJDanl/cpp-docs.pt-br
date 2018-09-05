@@ -1,7 +1,7 @@
 ---
-title: . SAÍDA | Microsoft Docs
+title: . SAIR | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eade5df90a385c790587ee8d292703939d6f4d3a
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 02c60bfcb80a70779a54c8f3b194fdcf68408d17
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32053721"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693304"
 ---
 # <a name="exit"></a>.EXIT
-Gera o código de encerramento.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-.EXIT [[expression]]  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Retorna opcional *expressão* shell.  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de diretivas](../../assembler/masm/directives-reference.md)
+
+Gera o código de finalização.
+
+## <a name="syntax"></a>Sintaxe
+
+> . SAÍDA [[expressão]]
+
+## <a name="remarks"></a>Comentários
+
+Retorna opcional *expressão* ao shell.
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>

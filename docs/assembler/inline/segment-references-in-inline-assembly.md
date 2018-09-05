@@ -1,7 +1,7 @@
 ---
-title: Referências de Assembly embutido de segmento | Microsoft Docs
+title: Segmentar referências em Assembly embutido | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
@@ -19,18 +19,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7add95852f751ed29dad8e0ba9577abd55fabaf
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 792dda60407928aaf4a7d3fec2a61c0018b8b35a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051470"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676383"
 ---
 # <a name="segment-references-in-inline-assembly"></a>Referências de segmento em assembly embutido
-## <a name="microsoft-specific"></a>Específico da Microsoft  
- Você deve se referir a segmentos por registro em vez de nome (nome de segmento `_TEXT` é inválido, por exemplo). Substituições de segmento devem usar o registro explicitamente, como ES: [BX].  
-  
- **Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando a linguagem de assembly em blocos __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+
+**Seção específica da Microsoft**
+
+Você deve se referir a segmentos pelo registro em vez de por nome (o nome do segmento `_TEXT` é inválido, por exemplo). Substituições de segmento devem usar o registro explicitamente, como em ES: [BX].
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Usando a linguagem de assembly em blocos __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

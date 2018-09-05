@@ -1,7 +1,7 @@
 ---
 title: operador SHORT | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -17,22 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f307482e602759c688ebca120a46efce7624a25
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 13ea2b0d7333bcdabc42e59ac3f3d4e4a24a0af3
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056321"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686230"
 ---
 # <a name="operator-short"></a>operador SHORT
-Define o tipo de *rótulo* para curto. Todos os saltos para *rótulo* deve ser curto (dentro do intervalo de -128 bytes + 127 da instrução de salto para *rótulo*).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-SHORT label  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de operadores](../../assembler/masm/operators-reference.md)
+
+Define o tipo de *rótulo* em short. Todos os saltos para *etiqueta* deve ser curto (dentro do intervalo de -128 a + 127 bytes da instrução de salto para *rótulo*).
+
+## <a name="syntax"></a>Sintaxe
+
+> Rótulos CURTOS
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de operadores](../../assembler/masm/operators-reference.md)<br/>

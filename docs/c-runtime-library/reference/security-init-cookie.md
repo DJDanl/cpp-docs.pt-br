@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e6bfafa1322d9730923867c86f754153f641460
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 84edc9fb461a6f0721abb648a88e1d81a4a19d07
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406570"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678951"
 ---
 # <a name="securityinitcookie"></a>__security_init_cookie
 
@@ -55,9 +55,9 @@ void __security_init_cookie(void);
 
 O cookie de segurança global é usado para proteção de estouro de buffer no código compilado com [/GS (Buffer Security Check)](../../build/reference/gs-buffer-security-check.md) e no código que usa a manipulação de exceção. Na entrada para uma função protegida contra estouro, o cookie é colocado na pilha e na saída o valor da pilha é comparado com o cookie global. Qualquer diferença entre eles indica que ocorreu um estouro do buffer e causa o encerramento imediato do programa.
 
-Normalmente, **security_init_cookie** é chamado pelo CRT quando ele é inicializado. Se você ignorar inicialização CRT — por exemplo, se você usar [/ENTRY](../../build/reference/entry-entry-point-symbol.md) para especificar um ponto de entrada, em seguida, você deve chamar **security_init_cookie** por conta própria. Se **security_init_cookie** não for chamado, global cookie de segurança é definido como um valor padrão e proteção de estouro de buffer for comprometida. Como um invasor pode explorar esse valor de cookie padrão para anular as verificações de estouro de buffer, é recomendável que você sempre chamar **security_init_cookie** ao definir seu próprio ponto de entrada.
+Normalmente, **security_init_cookie** é chamado pelo CRT quando ele é inicializado. Se você ignorar inicialização CRT — por exemplo, se você usar [/ENTRY](../../build/reference/entry-entry-point-symbol.md) para especificar um ponto de entrada, em seguida, você deve chamar **security_init_cookie** por conta própria. Se **security_init_cookie** não for chamado, a global cookie de segurança é definida como um valor padrão e a proteção de estouro de buffer está comprometida. Como um invasor pode explorar esse valor de cookie padrão para vencer as verificações de estouro de buffer, é recomendável que você sempre chame **security_init_cookie** ao definir seu próprio ponto de entrada.
 
-A chamada para **security_init_cookie** devem ser feitas antes de qualquer protegido saturação de função é inserida; caso contrário, será detectada uma saturação de buffer artificiais. Para obter mais informações, consulte [Erro em Tempo de Execução C R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md).
+A chamada para **security_init_cookie** devem ser feitas antes de qualquer protegida contra estouro função é inserida; caso contrário, será detectado um estouro de buffer artificiais. Para obter mais informações, consulte [Erro em Tempo de Execução C R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -73,4 +73,4 @@ Consulte os exemplos em [Erro em Tempo de Execução C R6035](../../error-messag
 
 ## <a name="see-also"></a>Consulte também
 
-[Análise aprofundada das verificações de segurança do compilador](http://go.microsoft.com/fwlink/p/?linkid=7260)<br/>
+[Microsoft Security Response Center](https://www.microsoft.com/en-us/msrc?rtc=1)

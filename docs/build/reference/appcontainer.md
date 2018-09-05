@@ -18,15 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c47154d7a5eddd26573612708462c0352da30ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea6f08a141d48183d96dba6cb02fcf31909af0ae
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368428"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686247"
 ---
 # <a name="appcontainer"></a>/APPCONTAINER
-Marca um executável que deve ser executado em um contêiner do aplicativo — por exemplo, um aplicativo Microsoft Store ou Universal do Windows.  
+Marca um executável que deve ser executado em um aplicativo contêiner — por exemplo, um aplicativo Microsoft Store ou Windows Universal.  
   
 ```  
   
@@ -34,8 +34,8 @@ Marca um executável que deve ser executado em um contêiner do aplicativo — p
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Um executável que tem o **/APPCONTAINER** opção set só pode ser executado em um contêiner do aplicativo, que é o ambiente de isolamento do processo introduzido no Windows 8. Para aplicativos da Microsoft Store e Universal do Windows, essa opção deve ser definida.  
+ Um executável que tem o **/APPCONTAINER** conjunto de opções pode ser executado somente em um aplicativo de contêiner, que é o ambiente de isolamento de processo introduzido no Windows 8. Para aplicativos da Microsoft Store e Universal do Windows, essa opção deve ser definida.  
   
 ## <a name="see-also"></a>Consulte também  
- [Opções EDITBIN](../../build/reference/editbin-options.md)   
- [O que é um aplicativo Universal do Windows?](http://go.microsoft.com/fwlink/p/?LinkID=522074)
+ [Opções de EDITBIN](../../build/reference/editbin-options.md)   
+ [O que é um aplicativo Universal do Windows?](/windows/uwp/get-started/universal-application-platform-guide)

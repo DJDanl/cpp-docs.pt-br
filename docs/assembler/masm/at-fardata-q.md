@@ -1,7 +1,7 @@
 ---
 title: '@fardata? | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 751e8aec6eeb23c5ad8823052b00c8da5871517b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 5f1663990a6534f38765d0f4e2eb0e89c0b95ccd
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32049499"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688653"
 ---
 # <a name="fardata"></a>@fardata?
-O nome do segmento definido pelo [. FARDATA? ](../../assembler/masm/dot-fardata-q.md) diretiva (macro de texto).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-@fardata?  
-  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de símbolos](../../assembler/masm/symbols-reference.md)
+
+O nome do segmento definido pelo [. FARDATA? ](../../assembler/masm/dot-fardata-q.md) diretiva (macro de texto).
+
+## <a name="syntax"></a>Sintaxe
+
+> @fardata?
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de símbolos](../../assembler/masm/symbols-reference.md)<br/>

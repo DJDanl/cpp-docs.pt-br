@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 91a010c9ffe1f05780c25fc6d6ec96d2619a8019
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e97393aa6989b7af0a7f3a9a97adaf529f21ba8a
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202757"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686716"
 ---
 # <a name="viewing-and-adding-activex-controls-to-a-dialog-box"></a>Exibindo e adicionando controles ActiveX a uma caixa de diálogo
 
@@ -47,12 +47,12 @@ Visual Studio permite que você inserir controles ActiveX em sua caixa de diálo
    O controle aparece na caixa de diálogo onde você pode editá-lo ou criar manipuladores para ele como faria qualquer outro controle.
 
    > [!NOTE]
-   > Você pode adicionar controles ActiveX para o [janela caixa de ferramentas](/visualstudio/ide/reference/toolbox). Para obter mais informações, consulte [guias na caixa de ferramentas e Gerenciando itens](https://msdn.microsoft.com/21285050-cadd-455a-b1f5-a2289a89c4db).
+   > Você pode adicionar controles ActiveX para o [janela caixa de ferramentas](/visualstudio/ide/reference/toolbox).
 
    > [!CAUTION]
    > Ele pode não ser legal para distribuir todos os controles ActiveX em seu sistema. Consulte o contrato de licença para softwares que instalados os controles ou entre em contato com a empresa de software.
 
-   Você pode colocar controles na **caixa de ferramentas** janela para facilitar o acesso. Para obter mais informações, consulte [caixa de diálogo Personalizar caixa de ferramentas](https://msdn.microsoft.com/bd07835f-18a8-433e-bccc-7141f65263bb).
+   Você pode colocar controles na **caixa de ferramentas** janela para facilitar o acesso. Para saber mais, confira [Caixa de Ferramentas](/visualstudio/ide/reference/toolbox).
 
 Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
 

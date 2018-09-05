@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb99d0cb37fff5abe5a7eb54d3ba9c4226e5fd1c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 27ce284bee21d17101c9e93627841f2dcd6c00d4
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197195"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678622"
 ---
 # <a name="cwindowimpl-class"></a>Classe CWindowImpl
 Fornece métodos para criar ou uma janela de subclasses.  
@@ -156,16 +156,16 @@ HWND Create(
  [in] Especifica o nome da janela. O valor padrão é NULL.  
   
  *dwStyle*  
- [in] O estilo da janela. Esse valor é combinado com o estilo fornecido pela classe de características da janela. O valor padrão fornece as características de controle completo sobre o estilo de classe. Para obter uma lista de valores possíveis, consulte [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) no SDK do Windows.  
+ [in] O estilo da janela. Esse valor é combinado com o estilo fornecido pela classe de características da janela. O valor padrão fornece as características de controle completo sobre o estilo de classe. Para obter uma lista de valores possíveis, consulte [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) no SDK do Windows.  
   
  *dwExStyle*  
- [in] O estilo de janela estendidos. Esse valor é combinado com o estilo fornecido pela classe de características da janela. O valor padrão fornece as características de controle completo sobre o estilo de classe. Para obter uma lista de valores possíveis, consulte [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
+ [in] O estilo de janela estendidos. Esse valor é combinado com o estilo fornecido pela classe de características da janela. O valor padrão fornece as características de controle completo sobre o estilo de classe. Para obter uma lista de valores possíveis, consulte [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) no SDK do Windows.  
   
  *MenuOrID*  
  [in] Para uma janela filho, o identificador de janela. Para uma janela de nível superior, um identificador de menu da janela. O valor padrão é **0U**.  
   
  *lpCreateParam*  
- [in] Um ponteiro para dados de criação da janela. Para obter uma descrição completa, consulte a descrição para o parâmetro final [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680).  
+ [in] Um ponteiro para dados de criação da janela. Para obter uma descrição completa, consulte a descrição para o parâmetro final [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).  
   
 ### <a name="return-value"></a>Valor de retorno  
  Se for bem-sucedido, o identificador para a janela criada recentemente. Caso contrário, nulo.  
@@ -262,7 +262,7 @@ WNDPROC m_pfnSuperWindowProc;
   
 |Tipo de janela|Procedimento de janela|  
 |--------------------|----------------------|  
-|Uma janela com base em uma nova classe de janela, especificada por meio de [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) macro.|O [DefWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633572) função do Win32.|  
+|Uma janela com base em uma nova classe de janela, especificada por meio de [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) macro.|O [DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca) função do Win32.|  
 |Uma janela com base em uma classe de janela que modifica uma classe existente, especificada por meio de [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) macro.|Procedimento de janela da classe de janela existente.|  
 |Uma janela de subclasse.|A subclasse original procedimento da janela.|  
   

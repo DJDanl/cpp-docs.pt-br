@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58509ec4f6a3773478e1bc544f28baf92d7e97b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c940ec56b0f522e90410b786d595f4cbf929ed89
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206886"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43688539"
 ---
 # <a name="cwinapp-class"></a>Classe CWinApp
 
@@ -270,7 +270,7 @@ class CWinApp : public CWinThread
 |[CWinApp::OnIdle](#onidle)|Substitua para executar o processamento de tempo ocioso de específicos do aplicativo.|
 |[CWinApp::OpenDocumentFile](#opendocumentfile)|Chamado pelo framework para abrir um documento de um arquivo.|
 |[CWinApp::ParseCommandLine](#parsecommandline)|Analisa os parâmetros individuais e os sinalizadores na linha de comando.|
-|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Filtra as mensagens antes de serem distribuídos para as funções do Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934).|
+|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Filtra as mensagens antes de serem distribuídos para as funções do Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|Interceptar determinadas mensagens antes que elas atinjam o aplicativo.|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|Lida com argumentos de linha de comando e sinalizadores.|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|Intercepta todas as exceções sem tratamento lançadas por manipuladores de comandos e de mensagem do aplicativo.|
@@ -1794,7 +1794,7 @@ Para obter uma descrição dos sinalizadores de linha de comando, consulte [CCom
 
 ##  <a name="pretranslatemessage"></a>  CWinApp::PreTranslateMessage
 
-Substituir esta função para filtrar mensagens de janela antes de serem distribuídos para as funções do Windows [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) a implementação padrão executa a tecla de aceleração tradução, então você deve chamar o `CWinApp::PreTranslateMessage` função de membro em sua versão substituída.
+Substituir esta função para filtrar mensagens de janela antes de serem distribuídos para as funções do Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) a implementação padrão executa a tecla de aceleração tradução, então você deve chamar o `CWinApp::PreTranslateMessage` função de membro em sua versão substituída.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);

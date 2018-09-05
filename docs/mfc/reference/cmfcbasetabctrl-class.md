@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 212637b55a422c11d82ae6ad9f548d9e429c41dd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dbd12c98014e2adfe9617f0bdaac891f33ebc600
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198562"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693920"
 ---
 # <a name="cmfcbasetabctrl-class"></a>Classe CMFCBaseTabCtrl
 Implementa a funcionalidade básica para janelas com guias.  
@@ -357,7 +357,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||  
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||  
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||  
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Usado pela classe [CWinApp](../../mfc/reference/cwinapp-class.md) para converter as mensagens da janela antes de serem expedidas para o [TranslateMessage](https://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](https://msdn.microsoft.com/library/windows/desktop/ms644934) funções do Windows. (Substitui [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Usado pela classe [CWinApp](../../mfc/reference/cwinapp-class.md) para converter as mensagens da janela antes de serem expedidas para o [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funções do Windows. (Substitui [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|Recalcula o layout interno de uma janela com guias.|  
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|Remove todas as guias da janela com guias.|  
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|Remove uma guia em uma janela com guias.|  
@@ -1844,7 +1844,7 @@ virtual void SetActiveTabColor(COLORREF clr);
  Especifica a nova cor de plano de fundo.  
   
 ### <a name="remarks"></a>Comentários  
- O framework obtém a cor de fundo padrão para o Active Directory guias dos [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371)método.  
+ O framework obtém a cor de fundo padrão para o Active Directory guias dos [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)método.  
   
 ##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor  
  Define a cor do texto para guias de Active Directory.  
@@ -1858,7 +1858,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
  Um [COLORREF](/windows/desktop/gdi/colorref) parâmetro que especifica a cor do texto novo.  
   
 ### <a name="remarks"></a>Comentários  
- Por padrão, o framework obtém a cor do texto do [GetSysColor](https://msdn.microsoft.com/library/windows/desktop/ms724371). Substituir essa cor padrão usando o `SetActiveTabTextColor` método.  
+ Por padrão, o framework obtém a cor do texto do [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor). Substituir essa cor padrão usando o `SetActiveTabTextColor` método.  
   
 ##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors  
  Define as cores do controle guia que usa a estrutura no modo de cor automática.  

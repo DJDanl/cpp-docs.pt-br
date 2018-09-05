@@ -1,7 +1,7 @@
 ---
-title: ML erro não fatal A2010 | Microsoft Docs
+title: Erro não fatal de ML A2010 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,17 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f11e9398e0ac629a4b4d8b5602f7b11650fff00d
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 99d7d90142f0415347e52f4386de8338697d8d79
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055594"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684922"
 ---
 # <a name="ml-nonfatal-error-a2010"></a>Erro não fatal A2010 (ML)
-**expressão de tipo inválido**  
-  
- O operando a [esta](../../assembler/masm/operator-this.md) ou [PTR](../../assembler/masm/operator-ptr.md) não era uma expressão de tipo válido.  
-  
-## <a name="see-also"></a>Consulte também  
- [Mensagens de erro de ML](../../assembler/masm/ml-error-messages.md)
+
+**expressão de tipo inválido**
+
+O operando [THIS](../../assembler/masm/operator-this.md) ou [PTR](../../assembler/masm/operator-ptr.md) não era uma expressão de tipo válido.
+
+## <a name="see-also"></a>Consulte também
+
+[Mensagens de erro de ML](../../assembler/masm/ml-error-messages.md)<br/>

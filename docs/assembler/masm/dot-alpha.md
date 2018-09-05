@@ -1,7 +1,7 @@
 ---
 title: .ALPHA | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,23 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc06020c9560d58bba337313874ba63132ac2df4
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 79cdf913af155e57347d173f7e90d683002a770c
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051727"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689571"
 ---
 # <a name="alpha"></a>.ALPHA
-Classifica em ordem alfabética segmentos.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-.ALPHA  
-  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de diretivas](../../assembler/masm/directives-reference.md)
+
+Ordena os segmentos em ordem alfabética.
+
+## <a name="syntax"></a>Sintaxe
+
+> .ALPHA
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>

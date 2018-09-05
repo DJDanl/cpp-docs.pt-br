@@ -1,7 +1,7 @@
 ---
 title: .NOCREF | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,25 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ee936ebbbd2136f14fecf51bfe0b7d69c61a476
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 9ad9e4d84d8d49b4d1b5c71cc695031da9cd878e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32055073"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43679994"
 ---
 # <a name="nocref"></a>.NOCREF
-Suprime a lista de símbolos no arquivo de tabela e o navegador de símbolo.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-.NOCREF [[name[[, name]]...]]  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Se forem especificados nomes, os nomes de determinado são suprimidos. Mesmo que [. XCREF](../../assembler/masm/dot-xcref.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de diretivas](../../assembler/masm/directives-reference.md)
+
+Suprime a listagem de símbolos no arquivo de tabela e o navegador do símbolo.
+
+## <a name="syntax"></a>Sintaxe
+
+> . NOCREF [[nome [[, name]]...]]
+
+## <a name="remarks"></a>Comentários
+
+Se forem especificados nomes, somente os nomes são suprimidos. Mesmo que [. XCREF](../../assembler/masm/dot-xcref.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>

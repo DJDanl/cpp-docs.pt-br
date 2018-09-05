@@ -1,7 +1,7 @@
 ---
 title: .CONST | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0da2e3787c277763dae99837e12e83c515bc811e
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 073f4f95315827f3534f8511f3a33a4d9cea246b
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051608"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43681963"
 ---
 # <a name="const"></a>.CONST
-Quando usado com [. MODELO](../../assembler/masm/dot-model.md), inicia um segmento de dados constante (ao segmento nome CONST).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-.CONST  
-  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Este segmento tem o atributo somente leitura.  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de diretivas](../../assembler/masm/directives-reference.md)
+
+Quando usado com [. MODELO](../../assembler/masm/dot-model.md), inicia um segmento de dados constante (com o segmento de nome CONST).
+
+## <a name="syntax"></a>Sintaxe
+
+> .CONST
+
+## <a name="remarks"></a>Comentários
+
+Este segmento tem o atributo somente leitura.
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>

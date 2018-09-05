@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4919d9fd947a489ee9535abd5aa57d7861ba5a37
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2fdb2bbb3681fab2bae42866df40d0ca363b7935
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197988"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43676761"
 ---
 # <a name="changing-list-control-styles"></a>Alterando estilos de controle de lista
 Você pode alterar o estilo da janela de um controle de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)) a qualquer momento após criá-lo. Alterando o estilo da janela, você deve alterar o tipo de exibição que usa o controle. Por exemplo, para emular o Explorer, você pode fornecer itens de menu ou botões de barra de ferramentas para alternar entre o controle entre diferentes modos de exibição: modo de exibição de ícone, exibição de lista e assim por diante.  
   
- Por exemplo, quando o usuário seleciona o item de menu, você pode fazer uma chamada para [GetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633584) para recuperar o estilo atual do controle e, em seguida, chame [SetWindowLong](https://msdn.microsoft.com/library/windows/desktop/ms633591) para redefinir o estilo. Para obter mais informações, consulte [controles de exibição de lista usando](/windows/desktop/Controls/using-list-view-controls) no SDK do Windows.  
+ Por exemplo, quando o usuário seleciona o item de menu, você pode fazer uma chamada para [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) para recuperar o estilo atual do controle e, em seguida, chame [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) para redefinir o estilo. Para obter mais informações, consulte [controles de exibição de lista usando](/windows/desktop/Controls/using-list-view-controls) no SDK do Windows.  
   
  Estilos disponíveis são listados na [criar](../mfc/reference/clistctrl-class.md#create). Os estilos **LVS_ICON**, **LVS_SMALLICON**, **LVS_LIST**, e **LVS_REPORT** designar os modos de exibição de controle de lista de quatro.  
   

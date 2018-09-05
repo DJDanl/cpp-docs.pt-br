@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b5a9f936dc47852c766370d330576dc16ca58a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8c5c2697c22384524234f90a48c396a91b3c3522
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213656"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43678092"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Classe CMFCRibbonBaseElement
 O `CMFCRibbonBaseElement` classe é a classe base para todos os elementos que você pode adicionar a um [barra de faixa de opções](../../mfc/reference/cmfcribbonbar-class.md). Exemplos de elementos de faixa de opções são a faixa de opções como botões, caixas de seleção de faixa de opções e caixas de combinação da faixa de opções.  
@@ -921,7 +921,7 @@ virtual CWnd* GetParentWnd() const;
  Um ponteiro para a janela pai para o elemento de faixa de opções, se o método foi bem-sucedida; Caso contrário, nulo.  
   
 ### <a name="remarks"></a>Comentários  
- A janela pai de um elemento de faixa de opções é um [classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) ou um [CMFCRibbonPanelMenuBar](https://msdn.microsoft.com/7bd4b986-8b7b-493e-9746-bd3161b78581).  
+ A janela pai de um elemento de faixa de opções é um [classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) ou um [CMFCRibbonPanelMenuBar](internal-classes.md).  
   
 ##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed  
  Recupera um ponteiro para o elemento de faixa de opções, se o usuário a pressionar no momento.  

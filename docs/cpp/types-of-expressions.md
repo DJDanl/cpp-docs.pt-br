@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0827aa34a0812281b3aa4f70b78a14a0336b8921
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 68920a47971f260cbdd11224edd5d8e8b70a0f07
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204716"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686316"
 ---
 # <a name="types-of-expressions"></a>Tipos de expressões
 As expressões C++ são divididas em várias categorias:  
@@ -36,7 +36,7 @@ As expressões C++ são divididas em várias categorias:
   
 -   [Expressões de constante](../cpp/cpp-constant-expressions.md). As expressões constantes são totalmente formadas por dados constantes.  
   
--   [Expressões com conversões de tipo explícito](https://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae). As conversões de tipo explícito podem ser usadas em expressões.  
+-   [Expressões com conversões de tipo explícito](explicit-type-conversion-operator-parens.md). As conversões de tipo explícito podem ser usadas em expressões.  
   
 -   [Expressões com operadores de ponteiro para membro](../cpp/pointer-to-member-operators-dot-star-and-star.md).  
   

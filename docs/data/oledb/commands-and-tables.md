@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2e9d9fc72791572d840b88f1d74eb736e3ad65c7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d6397e6e8355e8361ea95f03fc9b67d2f3211478
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213704"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685567"
 ---
 # <a name="commands-and-tables"></a>Comandos e tabelas
 Comandos e tabelas permitem acessar conjuntos de linhas; ou seja, abra a conjuntos de linhas, executar comandos e associar colunas. O [CCommand](../../data/oledb/ccommand-class.md) e [CTable](../../data/oledb/ctable-class.md) classes instancia os objetos de comando e tabela, respectivamente. Essas classes derivam [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) conforme mostrado na figura a seguir.  
@@ -43,7 +43,7 @@ Comando e as Classes Table
   
 -   Para fontes de dados que dão suporte a comandos, você pode usar o `CCommand` classe em vez disso. Para executar um comando, chame [abrir](../../data/oledb/ccommand-open.md) nessa classe. Como alternativa, você pode chamar `Prepare` para preparar um comando que você deseja executar mais de uma vez.  
   
-     `CCommand` tem três argumentos de modelo: um tipo de acessador, um tipo de conjunto de linhas e um tipo de resultado (`CNoMultipleResults`, por padrão, ou `CMultipleResults`). Se você especificar `CMultipleResults`, o `CCommand` classe oferece suporte a `IMultipleResults` de interface e lida com vários conjuntos de linhas. O [DBVIEWER](https://msdn.microsoft.com/07620f99-c347-4d09-9ebc-2459e8049832) exemplo mostra como lidar com vários resultados.  
+     `CCommand` tem três argumentos de modelo: um tipo de acessador, um tipo de conjunto de linhas e um tipo de resultado (`CNoMultipleResults`, por padrão, ou `CMultipleResults`). Se você especificar `CMultipleResults`, o `CCommand` classe oferece suporte a `IMultipleResults` de interface e lida com vários conjuntos de linhas. O [DBVIEWER](https://github.com/Microsoft/VCSamples) exemplo mostra como lidar com vários resultados.  
   
 ## <a name="see-also"></a>Consulte também  
  [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

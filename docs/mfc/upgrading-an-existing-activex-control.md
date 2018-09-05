@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca5a5e4d7bda9fe14362696d44137273cc020c7f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3d162aea1d000aa9e65aea253f974c38ffc85bcd
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203124"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686180"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Atualizando um controle ActiveX existente
 Controles ActiveX existente (anteriormente conhecido como controles OLE) pode ser usado na Internet sem modificação. No entanto, você talvez queira modificar controles para melhorar o desempenho. Ao usar o controle em uma página da Web, há considerações adicionais. O arquivo. ocx e todos os arquivos de suporte devem ser no computador de destino ou ser baixados da Internet. Isso torna o tamanho do código e uma consideração importante de tempo de download. Downloads podem ser empacotados em um arquivo. cab assinados. Você pode marcar seu controle como seguros para script e como seguro para inicialização.  
@@ -89,7 +89,7 @@ CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
   
  O arquivo de gabinete apontado pelo `CODEBASE` deve conter o arquivo. ocx para seu controle ActiveX e um arquivo. inf para controlar sua instalação. Você cria o arquivo de gabinete, especificando o nome do seu arquivo de controle e um arquivo. inf. Não inclua as DLLs dependentes que possam existir no sistema nesse arquivo de gabinete. Por exemplo, as DLLs do MFC são empacotadas em um arquivo de gabinete separado e referenciadas pelo arquivo. inf controladora.  
   
- Para obter detalhes sobre como criar um arquivo CAB, consulte [criando um arquivo CAB](https://msdn.microsoft.com/cc52fd09-bdf6-4410-a693-149a308f36a3).  
+ Para obter detalhes sobre como criar um arquivo CAB, consulte [criando um arquivo CAB](/windows/desktop/devnotes/cabinet-api-functions).  
   
 ### <a name="the-inf-file"></a>O arquivo INF  
  O exemplo a seguir, spindial.inf, listas os arquivos de suporte e as informações de versão necessário para o MFC Spindial controlar. Observe que o local para as DLLs do MFC é um site da Microsoft. O mfc42.cab é fornecido e assinado pela Microsoft.  
@@ -221,7 +221,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 ##  <a name="_core_signing_code"></a> Assinatura de código  
  Assinatura de código foi projetada para identificar a origem do código e garantir que o código não foi alterado desde que ele foi assinado. Dependendo das configurações de segurança do navegador, os usuários podem ser avisados antes que o código é baixado. Os usuários podem optar por confiar determinados os proprietários de certificado ou de empresas, no qual caso código assinado por aqueles confiável será baixado sem aviso. Código é assinado digitalmente para evitar a violação.  
   
- Verifique se que seu código final é assinado para que o controle pode ser baixado automaticamente sem exibir mensagens de aviso de relação de confiança. Para obter detalhes sobre como assinar o código, verifique a documentação sobre o Authenticode no SDK do ActiveX e veja [Assinando um arquivo CAB](https://msdn.microsoft.com/04d8b47a-8f1c-4b54-ab90-730fcdc03747).  
+ Verifique se que seu código final é assinado para que o controle pode ser baixado automaticamente sem exibir mensagens de aviso de relação de confiança. Para obter detalhes sobre como assinar o código, verifique a documentação sobre o Authenticode no SDK do ActiveX e veja [Assinando um arquivo CAB](/windows/desktop/devnotes/cabinet-api-functions).  
   
  Dependendo da relação de confiança e o navegador de nível configurações de segurança, um certificado pode ser exibido para identificar a pessoa ou empresa de assinatura. Se o nível de segurança for nenhum, ou se o proprietário do certificado assinado do controle é confiável, um certificado não será exibido. Ver [níveis de segurança de navegador do Internet Explorer e o comportamento de controle](#_core_internet_explorer_browser_safety_levels_and_control_behavior) para obter detalhes sobre como a configuração de segurança do navegador determinará se o controle é baixado e um certificado exibido.  
   

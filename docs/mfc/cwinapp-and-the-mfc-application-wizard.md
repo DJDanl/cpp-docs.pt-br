@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a716119acc857419dcf128c39ab2c20921cd2d4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 59fcd3f00fb8998cf90c88d574b9d22051cb4305
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211385"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687778"
 ---
 # <a name="cwinapp-and-the-mfc-application-wizard"></a>CWinApp e o Assistente de Aplicativo MFC
 Quando ele cria um aplicativo de esqueleto, o Assistente de aplicativo do MFC declara uma classe de aplicativo derivada de [CWinApp](../mfc/reference/cwinapp-class.md). O Assistente de aplicativo do MFC também gera um arquivo de implementação que contém os seguintes itens:  
@@ -36,7 +36,7 @@ Quando ele cria um aplicativo de esqueleto, o Assistente de aplicativo do MFC de
   
 -   Uma implementação padrão de seu `InitInstance` função de membro.  
   
- A classe do aplicativo é colocada no cabeçalho do projeto e arquivos de origem principal. Os nomes da classe e os arquivos criados são baseados no nome do projeto que você fornecer no Assistente de aplicativo MFC. A maneira mais fácil para exibir o código para essas classes é por meio [modo de exibição de classe](https://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  
+ A classe do aplicativo é colocada no cabeçalho do projeto e arquivos de origem principal. Os nomes da classe e os arquivos criados são baseados no nome do projeto que você fornecer no Assistente de aplicativo MFC. A maneira mais fácil para exibir o código para essas classes é por meio [modo de exibição de classe](/visualstudio/ide/viewing-the-structure-of-code).  
   
  O mapa de mensagem fornecida e implementações padrão são adequadas para muitas finalidades, mas você pode modificá-los conforme necessário. Essas implementações mais interessantes é a `InitInstance` função de membro. Normalmente, você adicionará código para a implementação de esqueleto de `InitInstance`.  
   

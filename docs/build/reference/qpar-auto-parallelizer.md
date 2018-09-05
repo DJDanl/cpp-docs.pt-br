@@ -14,15 +14,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430bf1ebc79008d97435ecbcb3b15cf19dda5f8d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 24c3501422a0bfbaba8aea0e45c102f63948b7db
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375682"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43684499"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar (paralelizador automático)
-Permite que o [Paralelizador automático](../../parallel/auto-parallelization-and-auto-vectorization.md) recurso do compilador automaticamente paralelizar loops em seu código.  
+Permite que o [Paralelizador automático](../../parallel/auto-parallelization-and-auto-vectorization.md) recurso do compilador automaticamente paralelizar loops no código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,17 +31,17 @@ Permite que o [Paralelizador automático](../../parallel/auto-parallelization-an
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Quando o compilador automaticamente parallelizes loops em código, ela espalha computação em vários núcleos de processador. Um loop é paralelizado somente se o compilador determina que é permitido fazer isso e esse paralelização podem melhorar o desempenho.  
+ Quando o compilador paraleliza automaticamente loops no código, ele distribui a computação em vários núcleos de processador. Um loop é paralelizado somente se o compilador determina o que é legal para fazê-lo e essa paralelização melhorar o desempenho.  
   
- O `#pragma loop()` diretivas estão disponíveis para ajudar o otimizador paralelizar loops específicos. Para obter mais informações, consulte [loop](../../preprocessor/loop.md).  
+ O `#pragma loop()` diretivas estão disponíveis para ajudar o otimizador de paralelizar loops específicos. Para obter mais informações, consulte [loop](../../preprocessor/loop.md).  
   
- Para obter informações sobre como habilitar as mensagens de saída para o paralelizador automático, consulte [/Qpar-report (nível de emissão de relatórios do Paralelizador automático)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md).  
+ Para obter informações sobre como habilitar as mensagens de saída para paralelizador automático, consulte [/Qpar-report (nível de relatórios do Paralelizador automático)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md).  
   
 ### <a name="to-set-the-qpar-compiler-option-in-visual-studio"></a>Para definir a opção de compilador /Qpar no Visual Studio  
   
 1.  No **Gerenciador de Soluções**, abra o menu de atalho para o projeto e escolha **Propriedades**.  
   
-2.  No **páginas de propriedade** caixa de diálogo **C/C++**, selecione **linha de comando**.  
+2.  No **páginas de propriedades** caixa de diálogo **C/C++**, selecione **linha de comando**.  
   
 3.  No **opções adicionais** , digite `/Qpar`.  
   
@@ -54,5 +54,5 @@ Permite que o [Paralelizador automático](../../parallel/auto-parallelization-an
  [/Qpar-Report (nível de Paralelizador automático relatórios)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   
  [Opções do compilador](../../build/reference/compiler-options.md)   
  [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)   
- [#pragma loop()](../../preprocessor/loop.md)   
- [Programação paralela em código nativo](http://go.microsoft.com/fwlink/p/?linkid=263662)
+ [#pragma loop()&lt;3](../../preprocessor/loop.md)   
+ [Programação paralela em código nativo](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

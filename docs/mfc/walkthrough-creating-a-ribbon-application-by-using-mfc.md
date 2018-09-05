@@ -15,18 +15,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 495f5b415aac2a59eeae45720944a03251b0faa5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: db5fac0bc8900d15968639e8ed3909417353d596
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210691"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43690741"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Instruções passo a passo: criando um aplicativo da faixa de opções usando MFC
 Este passo a passo mostra como usar o **Assistente de aplicativo MFC** para criar um aplicativo que tenha uma faixa de opções por padrão. Em seguida, você pode expandir a faixa de opções adicionando uma **personalizado** categoria de faixa de opções que tem um **Favoritos** painel e, em seguida, adicionando alguns comandos mais usados ao painel de faixa de opções.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
- Este passo a passo pressupõe que você configurou o Visual Studio para usar **configurações gerais de desenvolvimento**. Se você estiver usando configurações diferentes, alguns dos elementos da interface do usuário (UI) mencionados nas instruções talvez não sejam exibidos. Para obter informações sobre como alterar as configurações, consulte [como: redefinir suas configurações](https://msdn.microsoft.com/c95c51be-e609-4769-abba-65e6beedec76).  
+ Este passo a passo pressupõe que você configurou o Visual Studio para usar **configurações gerais de desenvolvimento**. Se você estiver usando configurações diferentes, alguns dos elementos da interface do usuário (UI) mencionados nas instruções talvez não sejam exibidos.  
   
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Para criar um aplicativo do MFC que tenha uma faixa de opções  
   

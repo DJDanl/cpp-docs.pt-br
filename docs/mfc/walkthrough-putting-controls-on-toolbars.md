@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dd920f3dd8d08d6ceb766b9c10969137b8bf03c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 258d8f10238db58be26743694943ae3bd6abc20e
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199258"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693569"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Instruções passo a passo: colocando controles em barras de ferramentas
 Este tópico descreve como adicionar um botão de barra de ferramentas que contém um controle do Windows para uma barra de ferramentas. No MFC, um botão de barra de ferramentas deve ser um [classe CMFCToolBarButton](../mfc/reference/cmfctoolbarbutton-class.md)-derivado de classe, por exemplo [classe CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [classe CMFCToolBarEditBoxButton](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Classe CMFCDropDownToolbarButton](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), ou [classe CMFCToolBarMenuButton](../mfc/reference/cmfctoolbarmenubutton-class.md).  
@@ -73,7 +73,7 @@ Este tópico descreve como adicionar um botão de barra de ferramentas que cont�
   
     1.  Passar o `ID_EDIT_FIND_COMBO` como a ID de comando.  
   
-    2.  Use [CCommandManager::GetCmdImage](https://msdn.microsoft.com/4094d08e-de74-4398-a483-76d27a742dca) com `ID_EDIT_FIND` para obter o índice de imagem.  
+    2.  Use [CCommandManager::GetCmdImage](reference/internal-classes.md) com `ID_EDIT_FIND` para obter o índice de imagem.  
   
     3.  Para obter uma lista de estilos de caixa de combinação disponíveis, consulte [estilos de caixa de combinação](../mfc/reference/styles-used-by-mfc.md#combo-box-styles).  
   

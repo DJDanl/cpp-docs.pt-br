@@ -1,7 +1,7 @@
 ---
 title: SUBSTR | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,22 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dec1d1b1de47aa645147419a8bf96ad870cc21b
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 8ecd5a56b00ae663eeaacbedbdbefdecab36438f
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32056610"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687363"
 ---
 # <a name="substr"></a>SUBSTR
-Retorna uma subcadeia de caracteres de *textitem*, a partir de *posição*. O *textitem* pode ser uma cadeia de caracteres literal, uma constante precedida por um `%`, ou a cadeia de caracteres retornada por uma função de macro.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-name SUBSTR textitem, position [[, length]]  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de diretivas](../../assembler/masm/directives-reference.md)
+
+Retorna uma subcadeia de caracteres de *textitem*, com preço inicial *posição*. O *textitem* pode ser uma cadeia de caracteres literal, uma constante precedida por um `%`, ou a cadeia de caracteres retornada por uma função de macro.
+
+## <a name="syntax"></a>Sintaxe
+
+> Nomeie SUBSTR textitem, posição [[, tamanho]]
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>

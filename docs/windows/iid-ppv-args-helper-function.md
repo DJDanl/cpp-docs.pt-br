@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a6131cea7a7684036fd7183a79214c7c6936540b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 32970c9d30e1804071190ee5a57c42fd4b6334af
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218742"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43677245"
 ---
 # <a name="iidppvargshelper-function"></a>Função IID_PPV_ARGS_Helper
 
@@ -60,6 +60,3 @@ Um erro de tempo de compilação será gerado se o parâmetro de modelo *T* não
 
 **Cabeçalho:** client.h
 
-## <a name="see-also"></a>Consulte também
-
-[Referência (biblioteca de tempo de execução do Windows)](https://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)

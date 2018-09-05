@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac4a2c7bafc25aaaf8591f38cad47df199e74c30
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0801fab2ef5cec0da42cb40e28cd5124141c1007
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196584"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43686079"
 ---
 # <a name="ctoolbarctrl-class"></a>Classe CToolBarCtrl
 Fornece a funcionalidade do controle de comum de barra de ferramentas do Windows.  
@@ -622,7 +622,7 @@ virtual BOOL Create(
   
 - WS_DISABLED raramente  
   
- Ver [CreateWindow](https://msdn.microsoft.com/library/windows/desktop/ms632679) no SDK do Windows para obter uma descrição dos estilos de janela.  
+ Ver [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) no SDK do Windows para obter uma descrição dos estilos de janela.  
   
  Opcionalmente, aplicar uma combinação de [estilos de controle comuns](/windows/desktop/Controls/common-control-styles), conforme descrito no SDK do Windows.  
   
@@ -646,7 +646,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Parâmetros  
  *dwExStyle*  
- Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o *dwExStyle* parâmetro para [CreateWindowEx](https://msdn.microsoft.com/library/windows/desktop/ms632680) no SDK do Windows.  
+ Especifica o estilo estendido do controle que está sendo criado. Para obter uma lista dos estilos estendidos do Windows, consulte o *dwExStyle* parâmetro para [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) no SDK do Windows.  
   
  *dwStyle*  
  Especifica o estilo do controle de barra de ferramentas. Barras de ferramentas devem sempre ter o estilo WS_CHILD. Além disso, você pode especificar qualquer combinação de estilos de barra de ferramentas e os estilos de janela conforme descrito na **Remarks** seção [criar](#create).  

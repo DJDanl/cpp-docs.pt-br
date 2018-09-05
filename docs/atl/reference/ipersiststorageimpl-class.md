@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08cde95cf7ce680137aa932eb9642b9cd910318a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e7a337743ece9edfa71a052ee9d6e19728b0c051
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223207"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43693710"
 ---
 # <a name="ipersiststorageimpl-class"></a>Classe IPersistStorageImpl
 Essa classe implementa a [IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage) interface.  
@@ -66,7 +66,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 ## <a name="remarks"></a>Comentários  
  `IPersistStorageImpl` implementa o [IPersistStorage](/windows/desktop/api/objidl/nn-objidl-ipersiststorage) de interface, que permite que um cliente para solicitar que o carregamento do objeto e salve seus dados persistentes usando um armazenamento.  
   
- A implementação dessa classe requer a classe `T` para tornar uma implementação do `IPersistStreamInit` disponíveis por meio da interface `QueryInterface`. Normalmente, isso significa que a classe `T` deve derivar de [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md), forneça uma entrada para `IPersistStreamInit` no [mapa COM](https://msdn.microsoft.com/library/ead2a1e3-334d-44ad-bb1f-b94bb14c2333)e usar um [mapa de propriedade](https://msdn.microsoft.com/library/bfe30be6-62c3-4dc2-bd49-21ef96f15427) a descrição de dados persistentes da classe.  
+ A implementação dessa classe requer a classe `T` para tornar uma implementação do `IPersistStreamInit` disponíveis por meio da interface `QueryInterface`. Normalmente, isso significa que a classe `T` deve derivar de [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md), forneça uma entrada para `IPersistStreamInit` no [mapa COM](com-map-macros.md)e usar um [mapa de propriedade](property-map-macros.md) a descrição de dados persistentes da classe.  
   
  **Artigos relacionados** [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md), [criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)  
   

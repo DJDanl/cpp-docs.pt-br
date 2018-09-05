@@ -1,7 +1,7 @@
 ---
-title: ML erro não fatal A2039 | Microsoft Docs
+title: Erro não fatal de ML A2039 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: error-reference
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab04ad28754aab16c76c899b3eb588b7f59720c8
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: f51b1f9fcd114e1db6f8f1e3d8d0f1c5ad1989cb
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32057611"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687424"
 ---
 # <a name="ml-nonfatal-error-a2039"></a>Erro não fatal A2039 (ML)
-**linha muito longa**  
-  
- Uma linha do arquivo de origem excedeu o limite de 512 caracteres.  
-  
- Se várias linhas físicas são concatenadas com o caractere de continuação de linha (\), em seguida, a linha lógica resultante ainda é limitada a 512 caracteres.  
-  
-## <a name="see-also"></a>Consulte também  
- [Mensagens de erro de ML](../../assembler/masm/ml-error-messages.md)
+
+**linha muito longa**
+
+Uma linha do arquivo de origem excedeu o limite de 512 caracteres.
+
+Se várias linhas físicas são concatenadas com o caractere de continuação de linha (\), a linha lógica resultante é ainda é limitada a 512 caracteres.
+
+## <a name="see-also"></a>Consulte também
+
+[Mensagens de erro de ML](../../assembler/masm/ml-error-messages.md)<br/>

@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0d137281d7f573275b216eecaea9e4f09564b9f6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6ff7af5ceac971bc230addf81dbd7131a455ada1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206545"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43687857"
 ---
 # <a name="runtimeclassbaset-structure"></a>Estrutura RuntimeClassBaseT
 
@@ -58,5 +58,4 @@ Fornece métodos auxiliares para `QueryInterface` operações e ao obter IDs de 
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência (biblioteca de tempo de execução do Windows)](https://msdn.microsoft.com/00000000-0000-0000-0000-000000000000)  
 [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

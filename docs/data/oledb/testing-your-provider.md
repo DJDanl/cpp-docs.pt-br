@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 906156a24cfb58697ff4dd95e922f5ee326fd07d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7801d29371a2be069dcdf60807b0d8a99c99eedc
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339722"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43689588"
 ---
 # <a name="testing-your-provider"></a>Testando o provedor
 Antes de liberar um provedor, você deve executar os testes a seguir, na ordem indicada. Esses testes garantem que as funções de provedor corretamente para a maioria dos usuários em potencial.  
@@ -31,7 +31,7 @@ Antes de liberar um provedor, você deve executar os testes a seguir, na ordem i
   
 2.  Teste-o usando um aplicativo de consumidor escrito com o ADO. A maioria dos desenvolvedores (especialmente desenvolvedores Microsoft Visual Basic e c# Microsoft) usam o ADO ou ADO.NET para aplicativos de consumidor. O consumidor de teste deve cobrir todas as áreas funcionais do seu provedor. Para obter um exemplo de um aplicativo de consumidor do ADO, consulte [exemplos de código ADO no Microsoft Visual Basic](https://msdn.microsoft.com/library/ms807514.aspx).  
   
-3.  Execute os testes de conformidade com OLE DB (incluindo testes de conformidade do ADO) garantir que seu provedor satisfaça o nível padrão de 0 para provedores OLE DB. (Para obter uma explicação de nível 0, pesquise por "OLE DB nível 0 testes de conformidade" em [guia do programador do DB OLE](http://go.microsoft.com/fwlink/p/?linkid=121548). Esses testes e a documentação associada são incluídos com o Visual C++ no SDK de acesso a dados. Esses testes também ajudam a garantir que seu provedor seja executado bem quando agregados por outros [provedores de serviço](../../data/oledb/ole-db-resource-pooling-and-services.md) e são especialmente úteis se você modificar ou adicionar propriedades. Para obter mais informações sobre os testes de conformidade, consulte o arquivo Leiame para o SDK de acesso de dados, que está localizado em um dos CDs do Visual Studio.  
+3.  Execute os testes de conformidade com OLE DB (incluindo testes de conformidade do ADO) garantir que seu provedor satisfaça o nível padrão de 0 para provedores OLE DB. (Para obter uma explicação de nível 0, pesquise por "OLE DB nível 0 testes de conformidade" em [guia do programador do DB OLE](/previous-versions/windows/desktop/ms713643\(v=vs.85\)). Esses testes e a documentação associada são incluídos com o Visual C++ no SDK de acesso a dados. Esses testes também ajudam a garantir que seu provedor seja executado bem quando agregados por outros [provedores de serviço](../../data/oledb/ole-db-resource-pooling-and-services.md) e são especialmente úteis se você modificar ou adicionar propriedades. Para obter mais informações sobre os testes de conformidade, consulte o arquivo Leiame para o SDK de acesso de dados, que está localizado em um dos CDs do Visual Studio.  
   
 ## <a name="see-also"></a>Consulte também  
  [Trabalhando com modelos de provedor do OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

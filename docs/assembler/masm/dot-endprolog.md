@@ -1,7 +1,7 @@
 ---
 title: .ENDPROLOG | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/30/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa74b469dba3bee1b4fa0a5c1e066f93826c3477
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 370db59c6be4b3f53c9596c1ca443374acd2d2c8
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2018
-ms.locfileid: "32051645"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43685416"
 ---
 # <a name="endprolog"></a>.ENDPROLOG
-Sinaliza o término das declarações de prólogo.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-.ENDPROLOG  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Erro ao usar qualquer uma das declarações de prólogo fora da região entre [PROC](../../assembler/masm/proc.md) quadro e. ENDPROLOG.  
-  
- Para obter mais informações, consulte [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de diretivas](../../assembler/masm/directives-reference.md)
+
+Sinaliza o término das declarações do prólogo.
+
+## <a name="syntax"></a>Sintaxe
+
+> .ENDPROLOG
+
+## <a name="remarks"></a>Comentários
+
+É um erro ao usar qualquer uma das declarações de prólogo fora da região entre [PROC](../../assembler/masm/proc.md) quadro e. ENDPROLOG.
+
+Para obter mais informações, consulte [MASM para x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de diretivas](../../assembler/masm/directives-reference.md)<br/>
