@@ -17,25 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50529f5e229736c2d2688cb74edabee0ec492718
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 537755ff7162c30c586eb813fecf643de816a351
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963557"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751453"
 ---
 # <a name="adding-an-atl-com-10-component"></a>Adicionando um componente ATL COM+ 1.0
-Este assistente adiciona um objeto ao seu projeto que oferece suporte aos serviços COM+ 1.0, incluindo transações.  
-  
-### <a name="to-add-an-atl-com-10-component-to-your-project"></a>Para adicionar um componente ATL COM+ 1.0 ao seu projeto  
-  
-1.  Em ambos **Gerenciador de soluções** ou [exibição de classe](/visualstudio/ide/viewing-the-structure-of-code), clique no nome do projeto ao qual você deseja adicionar o componente ATL COM+ 1.0.  
-  
-2.  No menu de atalho, clique em **Add**e, em seguida, clique em **Adicionar classe**.  
-  
-3.  No [Add Class](../../ide/add-class-dialog-box.md) caixa de diálogo, no painel modelos, clique em **componente ATL COM+ 1.0**e, em seguida, clique em **abrir** para exibir o [Assistente componente ATL COM+ 1.0 ](../../atl/reference/atl-com-plus-1-0-component-wizard.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)   
- [Adicionando um método](../../ide/adding-a-method-visual-cpp.md)
+
+Este assistente adiciona um objeto ao seu projeto que oferece suporte aos serviços COM+ 1.0, incluindo transações.
+
+### <a name="to-add-an-atl-com-10-component-to-your-project"></a>Para adicionar um componente ATL COM+ 1.0 ao seu projeto
+
+1. Em ambos **Gerenciador de soluções** ou [exibição de classe](/visualstudio/ide/viewing-the-structure-of-code), clique no nome do projeto ao qual você deseja adicionar o componente ATL COM+ 1.0.
+
+2. No menu de atalho, clique em **Add**e, em seguida, clique em **Adicionar classe**.
+
+3. No [Add Class](../../ide/add-class-dialog-box.md) caixa de diálogo, no painel modelos, clique em **componente ATL COM+ 1.0**e, em seguida, clique em **abrir** para exibir o [Assistente componente ATL COM+ 1.0 ](../../atl/reference/atl-com-plus-1-0-component-wizard.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)   
+[Adicionando um método](../../ide/adding-a-method-visual-cpp.md)
 
