@@ -1,5 +1,5 @@
 ---
-title: Vantagens e desvantagens do método usado para vincular CRT | Microsoft Docs
+title: Vantagens e desvantagens do método usado para vincular ao CRT | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,25 +14,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2835e88da11b8d8332226080eb860afd41c0702
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b90259a942ea785cfbfee4bfda803d9d7b568d4
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355381"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753871"
 ---
-# <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>Vantagens e desvantagens do método usado para vincular CRT
-Seu projeto pode vincular com CRT dinamicamente ou estaticamente. A tabela a seguir descreve os benefícios e os inconvenientes envolvidos na escolha de qual método usar.  
-  
-|Método|Benefício|Compensação|  
-|------------|-------------|--------------|  
-|A vinculação estática para CRT<br /><br /> (**Biblioteca de tempo de execução** definida como **Single-threaded**)|A DLL do CRT não é necessário no sistema onde a imagem será executado.|Cerca de 25K de código de inicialização é adicionado à sua imagem, aumentar substancialmente o seu tamanho.|  
-|Vinculando dinamicamente a CRT<br /><br /> (**Biblioteca de tempo de execução** definida como **multi-threaded**)|Sua imagem não requer o código de inicialização do CRT, portanto, é muito menor.|A DLL do CRT deve ser no sistema executando a imagem.|  
-  
- O tópico [vinculando a CRT em seu projeto de ATL](../atl/linking-to-the-crt-in-your-atl-project.md) discute como selecionar a maneira pela qual deseja vincular a CRT.  
-  
-## <a name="see-also"></a>Consulte também  
- [Programando com código ATL e C Run-Time](../atl/programming-with-atl-and-c-run-time-code.md)   
- [DLLs e o comportamento de biblioteca de tempo de execução do Visual C++](../build/run-time-library-behavior.md)   
- [Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md)
+# <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>Vantagens e desvantagens do método usado para vincular ao CRT
+
+Seu projeto pode vincular com o CRT dinamicamente ou estaticamente. A tabela a seguir descreve os benefícios e compensações envolvidas na escolha de qual método usar.
+
+|Método|Benefício|Compensação|
+|------------|-------------|--------------|
+|Vincular estaticamente ao CRT<br /><br /> (**Biblioteca de tempo de execução** definido como **Single-threaded**)|A DLL do CRT não é necessário no sistema em que a imagem será executado.|Cerca de 25 mil do código de inicialização é adicionado à sua imagem, aumentar substancialmente o seu tamanho.|
+|Vincular dinamicamente ao CRT<br /><br /> (**Biblioteca de tempo de execução** definido como **multi-threaded**)|Sua imagem não exige o código de inicialização do CRT, portanto, é muito menor.|A DLL do CRT deve ser no sistema executando a imagem.|
+
+O tópico [vinculando ao CRT em seu projeto de ATL](../atl/linking-to-the-crt-in-your-atl-project.md) discute como selecionar a maneira na qual deseja vincular ao CRT.
+
+## <a name="see-also"></a>Consulte também
+
+[Programando com código de tempo de execução de C e ATL](../atl/programming-with-atl-and-c-run-time-code.md)   
+[DLLs e comportamento da biblioteca em tempo de execução Visual C++](../build/run-time-library-behavior.md)   
+[Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md)
 
