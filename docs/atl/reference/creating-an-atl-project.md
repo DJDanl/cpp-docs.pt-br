@@ -19,32 +19,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61302df754c0657fb201d555c6e7491ba1414f7f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4b937212f49bd09f6498ebcda934e1aa362d959e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962937"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755516"
 ---
 # <a name="creating-an-atl-project"></a>Criando um projeto ATL
-A maneira mais fácil para criar um projeto ATL é usar a ATL Project Wizard, localizado na pasta de projetos do Win32 a **caixa de diálogo Novo projeto**.  
-  
-### <a name="to-create-an-atl-project-using-the-atl-project-wizard"></a>Para criar um projeto ATL usando o Assistente de projeto do ATL  
-  
-1.  Siga as instruções no tópico [criando um projeto com um Assistente de aplicativo do Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
-  
-2.  Selecione o **projeto da ATL** ícone no painel de modelos para abrir o Assistente de projeto de ATL.  
-  
-3.  Definir as configurações do aplicativo usando o [configurações do aplicativo](../../atl/reference/application-settings-atl-project-wizard.md) página do `ATL Project Wizard`.  
-  
-    > [!NOTE]
-    >  Ignore esta etapa para manter o Assistente de configurações padrão.  
-  
-4.  Clique em **concluir** para fechar o assistente e abrir o novo projeto no ambiente de desenvolvimento.  
-  
- Depois que o projeto é criado, você pode exibir os arquivos criados na **Gerenciador de soluções**. Para obter mais informações sobre os arquivos que o assistente cria para seu projeto, consulte o arquivo gerado pelo projeto Readme. txt. Para obter mais informações sobre os tipos de arquivo, consulte [tipos de arquivo criados para projetos do Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md). Para obter mais informações sobre as configurações para o novo projeto ATL e como alterá-las, consulte [as configurações padrão de projeto de ATL](../../atl/reference/default-atl-project-configurations.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Páginas de propriedade](../../ide/property-pages-visual-cpp.md)   
+
+A maneira mais fácil para criar um projeto ATL é usar a ATL Project Wizard, localizado na pasta de projetos do Win32 a **caixa de diálogo Novo projeto**.
+
+### <a name="to-create-an-atl-project-using-the-atl-project-wizard"></a>Para criar um projeto ATL usando o Assistente de projeto do ATL
+
+1. Siga as instruções no tópico [criando um projeto com um Assistente de aplicativo do Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).
+
+2. Selecione o **projeto da ATL** ícone no painel de modelos para abrir o Assistente de projeto de ATL.
+
+3. Definir as configurações do aplicativo usando o [configurações do aplicativo](../../atl/reference/application-settings-atl-project-wizard.md) página do `ATL Project Wizard`.
+
+   > [!NOTE]
+   > Ignore esta etapa para manter o Assistente de configurações padrão.
+
+4. Clique em **concluir** para fechar o assistente e abrir o novo projeto no ambiente de desenvolvimento.
+
+Depois que o projeto é criado, você pode exibir os arquivos criados na **Gerenciador de soluções**. Para obter mais informações sobre os arquivos que o assistente cria para seu projeto, consulte o arquivo gerado pelo projeto Readme. txt. Para obter mais informações sobre os tipos de arquivo, consulte [tipos de arquivo criados para projetos do Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md). Para obter mais informações sobre as configurações para o novo projeto ATL e como alterá-las, consulte [as configurações padrão de projeto de ATL](../../atl/reference/default-atl-project-configurations.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+[Páginas de propriedade](../../ide/property-pages-visual-cpp.md)   
 

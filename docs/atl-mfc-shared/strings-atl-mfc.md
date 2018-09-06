@@ -1,5 +1,5 @@
 ---
-title: Cadeias de caracteres (MFC ATL) | Microsoft Docs
+title: Cadeias de caracteres (ATL – MFC) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -31,30 +31,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c5ebcd038c7526edca7de4756bf3f5562f361b1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a918866710575ecc091fcce4564a7617d28a102d
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355474"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752769"
 ---
 # <a name="strings-atlmfc"></a>Cadeias de caracteres (ATL/MFC)
-Quase todos os programas trabalham com dados de cadeia de caracteres. Visual C++ fornece várias maneiras de gerenciar esses dados de cadeia de caracteres.  
-  
-## <a name="in-this-section"></a>Nesta seção  
- [Usando CStringT](../atl-mfc-shared/using-cstringt.md)  
- Descreve a programação usando a classe de modelo CStringT.  
-  
- [Usando CString](../atl-mfc-shared/using-cstring.md)  
- Descreve a programação usando CString, a implementação padrão de CStringT.  
-  
-## <a name="related-sections"></a>Seções relacionadas  
- [Visão geral de CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
- Fornece informações de referência sobre compartilhado `CStringT` classe.  
-  
- [Conceitos do MFC](../mfc/mfc-concepts.md)  
- Fornece tópicos conceituais e baseados em tarefas para ajudá-lo a programar usando a biblioteca do MFC.  
-  
-## <a name="see-also"></a>Consulte também  
- [Classes compartilhadas do ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)
+
+Quase todos os programas funcionam com dados de cadeia de caracteres. Visual C++ fornece várias maneiras para gerenciar esses dados de cadeia de caracteres.
+
+## <a name="in-this-section"></a>Nesta seção
+
+[Usando CStringT](../atl-mfc-shared/using-cstringt.md)  
+Descreve a programação usando a classe de modelo CStringT.
+
+[Usando CString](../atl-mfc-shared/using-cstring.md)  
+Descreve a programação usando o CString, a implementação padrão de CStringT.
+
+## <a name="related-sections"></a>Seções relacionadas
+
+[Visão geral de CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
+Fornece informações de referência sobre o compartilhado `CStringT` classe.
+
+[Conceitos do MFC](../mfc/mfc-concepts.md)  
+Fornece tópicos conceituais e baseados em tarefas para ajudar você a programar usando a biblioteca do MFC.
+
+## <a name="see-also"></a>Consulte também
+
+[Classes compartilhadas ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)
 

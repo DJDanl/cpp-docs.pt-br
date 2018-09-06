@@ -1,5 +1,5 @@
 ---
-title: C. 2 regras | Microsoft Docs
+title: C.2 regras | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,308 +12,216 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3bdf26435fdfeea2196b9ef281d656805f51bf2
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: bb83b35a03608e272e9af67159b61e5dbf4e1ec6
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694986"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755015"
 ---
 # <a name="c2-rules"></a>C.2 Regras
-A notação é descrita na seção 6.1 C padrão. Este apêndice gramática mostra as extensões a gramática da linguagem de base para as diretivas OpenMP C e C++.  
-  
- **/\* em C++ (ISO/IEC 14882:1998) \*/**  
-  
- *instrução seq*:  
-  
- *statement*  
-  
- *diretiva de OpenMP*  
-  
- *instrução de declaração seq*  
-  
- *diretiva de openmp seq de instrução*  
-  
- **/\* no C90 (ISO/IEC 9899:1990) \*/**  
-  
- *statement-list*:  
-  
- *statement*  
-  
- *diretiva de OpenMP*  
-  
- *statement-list statement*  
-  
- *diretiva de openmp lista de instruções*  
-  
- **/\* no C99 (ISO/IEC 9899:1999) \*/**  
-  
- *Bloquear item*:  
-  
- *declaration*  
-  
- *statement*  
-  
- *diretiva de OpenMP*  
-  
- *statement*:  
-  
- **/\* instruções padrão \*/**  
-  
- *construção de OpenMP*  
-  
- *construção OpenMP*:  
-  
- *construção paralela*  
-  
- *para criar*  
-  
- *construção de seções*  
-  
- *construção de único*  
-  
- *paralelo para construção*  
-  
- *construção de seções de paralelo*  
-  
- *construc mestre*  
-  
- *construto Critical*  
-  
- *constructo Atomic*  
-  
- *construção ordenada*  
-  
- *diretiva de OpenMP*:  
-  
- *diretiva de barreira*  
-  
- *diretiva de liberação*  
-  
- *bloco estruturado*:  
-  
- *statement*  
-  
- *construção paralela*:  
-  
- *bloco estruturado paralela diretiva*  
-  
- *diretiva paralelo*:  
-  
- **# pragma omp parallel***paralelo cláusula*optseq *nova linha*   
-  
- *cláusula paralelo*:  
-  
- *cláusula exclusivo paralelo*  
-  
- *cláusula de dados*  
-  
- *cláusula exclusivo paralelo*:  
-  
- **Se (** *expressão* **)**  
-  
- **num_threads (** *expressão* **)**  
-  
- *para construir*:  
-  
- *instrução de iteração para diretiva*  
-  
- *para diretiva*:  
-  
- **# pragma omp para** *para cláusula*optseq *nova linha*  
-  
- *cláusula for*:  
-  
- *exclusivo para cláusula*  
-  
- *cláusula de dados*  
-  
- **nowait**  
-  
- *exclusivo para cláusula*:  
-  
- **ordenados**  
-  
- **agenda (** *tipo de agenda* **)**  
-  
- **agenda (** *tipo de agenda* **,** *expressão* **)**  
-  
- *tipo de agenda*:  
-  
- **static**  
-  
- **dynamic**  
-  
- **interativa**  
-  
- **Tempo de execução**  
-  
- *construção de seções*:  
-  
- *escopo de seção de diretiva de seções*  
-  
- *diretiva de seções*:  
-  
- **seções do # pragma omp** *seções cláusula*optseq *nova linha*  
-  
- *cláusula seções*:  
-  
- *cláusula de dados*  
-  
- **nowait**  
-  
- *escopo de seção*:  
-  
- *{seção sequência}*  
-  
- *sequência de seção*:  
-  
- *diretiva de seção*aceitação *bloco estruturado*  
-  
- *sequência de seção diretiva de seção estruturado de bloco*  
-  
- *diretiva de seção*:  
-  
- **seção do # pragma omp** *nova linha*  
-  
- *construção de único*:  
-  
- *diretiva único bloco estruturado*  
-  
- *diretiva única*:  
-  
- **# pragma omp único** *única cláusula*optseq *nova linha*  
-  
- *cláusula única*:  
-  
- *cláusula de dados*  
-  
- **nowait**  
-  
- *paralelo para construção*:  
-  
- *instrução de iteração em paralelo para diretiva*  
-  
- *paralelo para diretiva*:  
-  
- **# pragma omp parallel para** *paralelo para cláusula*optseq *nova linha*  
-  
- *paralelo para cláusula*:  
-  
- *cláusula exclusivo paralelo*  
-  
- *exclusivo para cláusula*  
-  
- *cláusula de dados*  
-  
- *construção de seções paralelo*:  
-  
- *escopo de seção paralelo de seções de diretiva*  
-  
- *diretiva de seções paralelo*:  
-  
- **seções de paralelo # pragma omp** *paralelo de seções de cláusula*optseq *nova linha*  
-  
- *cláusula de seções paralelo*:  
-  
- *cláusula exclusivo paralelo*  
-  
- *cláusula de dados*  
-  
- *construção mestre*:  
-  
- *bloco estruturado de diretiva mestre*  
-  
- *diretiva mestre*:  
-  
- **mestre do # pragma omp** *nova linha*  
-  
- *construto Critical*:  
-  
- *bloco estruturado de diretiva crítica*  
-  
- *diretiva crítica*:  
-  
- **# pragma omp crítico** *região frase*aceitação *nova linha*  
-  
- *frase de região*:  
-  
- *(identificador)*  
-  
- *diretiva de barreira*:  
-  
- **barreira do # pragma omp** *nova linha*  
-  
- *constructo Atomic*:  
-  
- *instrução de expressão de diretiva atômica*  
-  
- *diretiva atômica*:  
-  
- **# pragma omp atomic** *nova linha*  
-  
- *diretiva de liberação*:  
-  
- **# pragma omp liberação** *vars de liberação*aceitação *nova linha*  
-  
- *liberação vars*:  
-  
- *(lista de variável)*  
-  
- *construção ordenada*:  
-  
- *diretiva ordenada bloco estruturado*  
-  
- *diretiva ordenada*:  
-  
- **# pragma omp ordenados** *nova linha*  
-  
- *declaração*:  
-  
- **/\* declarações padrão \*/**  
-  
- *diretiva threadprivate*  
-  
- *diretiva threadprivate*:  
-  
- **# pragma omp threadprivate (** *lista variável***)** *nova linha*   
-  
- *cláusula dados*:  
-  
- **privada (** *lista variável* **)**  
-  
- **copyprivate (***lista variável***)**   
-  
- **firstprivate (***lista variável***)**   
-  
- **lastprivate (** *lista variável***)**   
-  
- **compartilhado (** *lista variável* **)**  
-  
- **padrão (compartilhado)**  
-  
- **padrão (nenhum)**  
-  
- **redução (***operador de reduction***:***lista variável***)**   
-  
- **copyin (***lista variável***)**   
-  
- *operador de Reduction*:  
-  
- *Um dos*:  **+  \* -& ^ &#124; & &&#124;&#124;**  
-  
- **/\* em C \*/**  
-  
- *lista de variável*:  
-  
- *identifier*  
-  
- *lista de variável* **,** *identificador*  
-  
- **/\* em C++ \*/**  
-  
- *lista de variável*:  
-  
- *ID de expressão*  
-  
- *lista de variável* **,** *id de expressão*
+A notação é descrita na seção 6.1 do padrão C. Este apêndice gramática mostra as extensões para a gramática da linguagem de base para as diretivas OpenMP C e C++.
+
+**/\* no C++ (ISO/IEC 14882:1998) \*/**
+
+*instrução seq*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Instrução*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*diretiva de OpenMP*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instrução de declaração seq*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*diretiva de openmp seq de instrução*
+
+**/\* no C90 (ISO/IEC 9899:1990) \*/**
+
+*statement-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Instrução*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*diretiva de OpenMP*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instrução de lista de instruções*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*diretiva de openmp da lista de instruções*
+
+**/\* em C99 (ISO/IEC 9899:1999) \*/**
+
+*Bloquear item*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaração*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Instrução*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*diretiva de OpenMP*
+
+**/\* instruções padrão \*/**
+
+*statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*construção de OpenMP*
+
+*construção de OpenMP*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*construção paralela*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*para construção*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*construção de seções*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*construção de único*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*paralelo para construção*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*paralelo de seções de construção*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*constructo Master*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*construto crítico*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*constructo Atomic*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*construção ordenada*
+
+*diretiva de OpenMP*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*diretiva de barreira*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*diretiva de liberação*
+
+*bloco estruturado*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Instrução*
+
+*constructo paralelo*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*bloco estruturado de diretiva paralelo*
+
+*diretiva paralelo*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# pragma omp parallel** *cláusula paralelo*<sub>optseq</sub> *nova linha*
+
+*cláusula paralelo*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*cláusula exclusivo paralelo*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*cláusula de dados*
+
+*cláusula exclusivo paralelo*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Se (** *expressão* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**num_threads (** *expressão* **)**
+
+*para construção*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instrução de iteração para diretiva*
+
+*para diretiva*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# pragma omp para** *para cláusula*<sub>optseq</sub> *nova linha*
+
+*cláusula for*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*exclusivo para cláusula*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*cláusula de dados*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**nowait**
+
+*exclusivo para cláusula*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Ordenado**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**agenda (** *tipo de agenda* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**agenda (** *tipo de agenda* **,** *expressão* **)**
+
+*tipo de agenda*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Estático**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dinâmico**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**interativa**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**tempo de execução**
+
+*construção de seções*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*escopo de seção de diretiva de seções*
+
+*diretiva de seções*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**seções do # pragma omp** *cláusula seções*<sub>optseq</sub> *nova linha*
+
+*cláusula seções*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*cláusula de dados*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**nowait**
+
+*escopo de seção*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*{seção sequência}*
+
+*sequência de seção*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*diretiva de seção*<sub>opt</sub> *bloco estruturado*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*sequência de seção diretiva de seção estruturado de blocos*
+
+*diretiva de seção*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**seção do # pragma omp** *nova linha*
+
+*construção de único*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*bloco estruturado de diretiva único*
+
+*diretiva única*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# pragma omp única** *única cláusula*<sub>optseq</sub> *nova linha*
+
+*única cláusula*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*cláusula de dados*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**nowait**
+
+*paralelo para construção*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instrução de iteração em paralelo para diretiva*
+
+*paralelo para diretiva*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# pragma omp parallel para** *paralelo para cláusula*<sub>optseq</sub> *nova linha*
+
+*cláusula for paralelo*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*cláusula exclusivo paralelo*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*exclusivo para cláusula*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*cláusula de dados*
+
+*construção de seções de paralelo*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*escopo de seção paralelo de seções de diretiva*
+
+*diretiva de seções de paralelo*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**seções paralela do # pragma omp** *paralelo de seções de cláusula*<sub>optseq</sub> *nova linha*
+
+*paralelo de seções de cláusula*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*cláusula exclusivo paralelo*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*cláusula de dados*
+
+*construção de mestre*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*bloco estruturado de diretiva Master*
+
+*diretiva mestre*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**mestre do # pragma omp** *nova linha*
+
+*construto Critical*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*bloco estruturado de diretiva Critical*
+
+*diretiva Critical*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# pragma omp crítico** *região frase*<sub>aceitar</sub> *nova linha*
+
+*frase de região*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*(identificador)*
+
+*diretiva de barreira*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**barreira do # pragma omp** *nova linha*
+
+*constructo Atomic*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instrução de expressão de diretiva Atomic*
+
+*diretiva Atomic*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# pragma omp atomic** *nova linha*
+
+*diretiva Flush*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# pragma omp liberação** *flush vars*<sub>aceitar</sub> *nova linha*
+
+*liberação vars*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*(lista de variável)*
+
+*construção ordenada*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*bloco estruturado de diretiva ordenada*
+
+*diretiva ordenada*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# pragma omp ordenados** *nova linha*
+
+**/\* declarações padrão \*/**
+
+*declaração*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*diretiva threadprivate*
+
+*diretiva threadprivate*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**# pragma omp threadprivate (** *variável-list***)** *nova linha* 
+
+*cláusula data*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**privado (** *variável-list* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**copyprivate (***variável-list***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**firstprivate (***variável-list***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**lastprivate (** *variável-list***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**compartilhado (** *variável-list* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**padrão (compartilhado)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**padrão (nenhum)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**redução de (***operador de reduction***:***lista variável***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**copyin (***variável-list***)** 
+
+*operador de Reduction*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Um dos:  **+  \* -& ^ &#124; & &&#124;&#124;**
+
+**/\* em C \*/**
+
+*lista de variável*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Identificador*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*lista de variável* **,** *identificador*
+
+**/\* no C++ \*/**
+
+*lista de variável*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expressão de ID*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*lista de variável* **,** *id-expression*

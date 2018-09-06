@@ -14,44 +14,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70b1e0e6ef1294ff23952816db6f468022609f4f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 5699ce82a6e8537f12da50fdcb8288da167ecca3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408369"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752233"
 ---
 # <a name="microsoft-extensions"></a>Extensões da Microsoft
-*instrução ASM*:  
- **ASM***instrução de assembly* **;** aceitar    
-  
- **ASM {***lista de instruções de assembly***};** aceitar      
-  
- *lista de instruções de assembly*:  
- *instrução de assembly* **;** aceitar  
-  
- *instrução de assembly* **;** *lista de instruções de assembly* **;** aceitar  
-  
- *lista de modificador MS*:  
- *MS-modifier ms-modificador-list*otimizado  
-  
- *MS-modifier*:  
- **__cdecl**  
-  
- **__fastcall**  
-  
- **__stdcall**  
-  
- **syscall** (reservado para implementações futuras)  
-  
- **{1&gt;__oldcall&lt;1** (reservado para implementações futuras)  
-  
- **unaligned** (reservado para implementações futuras)  
-  
- *modificador com base em*  
-  
- *modificador com base em*:  
- **based (** *tipo com base em* **)**  
-  
- *texto com base em*:  
- *name*  
+
+*instrução ASM*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**ASM***instrução de assembly* **;** <sub>otimizado  </sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**ASM {***lista de instruções de assembly***};** <sub>otimizado    </sub>
+
+*lista de instruções de assembly*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instrução de assembly* **;** <sub>otimizado</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instrução de assembly* **;** *lista de instruções de assembly* **;** <sub>otimizado</sub>
+
+*lista de modificador MS*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*MS-modifier* *modificador-ms-list*<sub>otimizado</sub>
+
+*MS-modifier*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**cdecl**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**fastcall**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**stdcall**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**syscall** (reservado para implementações futuras)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{1&gt;__oldcall&lt;1** (reservado para implementações futuras)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**unaligned** (reservado para implementações futuras)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*modificador com base em*
+
+*modificador com base em*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**based (** *tipo com base em* **)**
+
+*texto com base em*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Nome*

@@ -1,5 +1,5 @@
 ---
-title: Adicionando um manipulador de mensagem ATL | Microsoft Docs
+title: Adicionando um manipulador de mensagens do ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,24 +18,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e79598b79ccbad13ad98c7fc1284808fe1b05cfc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 712f1b725afd52057deca8f05047c91bfc4affce
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354150"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43753404"
 ---
-# <a name="adding-an-atl-message-handler"></a>Adicionando um manipulador de mensagem do ATL
-Para adicionar um manipulador de mensagens (uma função de membro que manipula mensagens do Windows) para um controle, selecione o controle no modo de exibição de classe. Abra o **propriedades** janela, selecione o **mensagens** ícone e clique na lista suspensa de controle na caixa oposta a mensagem necessária. Isso adicionará uma declaração para o manipulador de mensagens no arquivo de cabeçalho do controle e uma implementação de esqueleto do manipulador no arquivo. cpp do controle. Ele também adicionar o mapa de mensagem e adicione uma entrada para o manipulador.  
-  
- Adicionar um manipulador de mensagens em ATL é semelhante a adicionar um manipulador de mensagens para uma classe do MFC. Consulte [adicionando um manipulador de mensagens do MFC](../mfc/reference/adding-an-mfc-message-handler.md) para obter mais informações.  
-  
- As seguintes condições se aplicam apenas a adição de um manipulador de mensagem ATL:  
-  
--   Os manipuladores de mensagens seguem a mesma convenção de nomenclatura do MFC.  
-  
--   As novas entradas de mapa de mensagem são adicionadas para o mapa de mensagem principal. O assistente não reconhece os mapas de mensagem alternativo e encadeamento.  
-  
-## <a name="see-also"></a>Consulte também  
- [Implementando uma janela](../atl/implementing-a-window.md)
+# <a name="adding-an-atl-message-handler"></a>Adicionando um manipulador de mensagens do ATL
+
+Para adicionar um manipulador de mensagens (uma função de membro que lida com mensagens do Windows) para um controle, selecione o controle no modo de exibição de classe. Em seguida, abra o **propriedades** janela, selecione a **mensagens** ícone e clique na lista suspensa de controle na caixa oposta a mensagem necessária. Isso adicionará uma declaração para o manipulador de mensagens no arquivo de cabeçalho do controle e uma implementação de esqueleto do manipulador no arquivo. cpp do controle. Ele também adicionar o mapa de mensagem e adicione uma entrada para o manipulador.
+
+Adicionar um manipulador de mensagens em ATL é semelhante a adicionar um manipulador de mensagens para uma classe do MFC. Ver [adicionando um manipulador de mensagens do MFC](../mfc/reference/adding-an-mfc-message-handler.md) para obter mais informações.
+
+As seguintes condições se aplicam somente a adição de um manipulador de mensagem ATL:
+
+- Os manipuladores de mensagem seguem a mesma convenção de nomenclatura do MFC.
+
+- As novas entradas de mapa de mensagem são adicionadas para o mapa de mensagem principal. O assistente não reconhece mapas de mensagem alternativo e encadeamento.
+
+## <a name="see-also"></a>Consulte também
+
+[Implementando uma janela](../atl/implementing-a-window.md)
 

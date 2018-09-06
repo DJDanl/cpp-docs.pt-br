@@ -21,11 +21,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e1dfbcff7e9e470992b0799aac1c87984b52ed50
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689465"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755902"
 ---
 # <a name="platformcollectionsmapview-class"></a>Classe Platform::Collections::MapView
 Representa uma exibição somente leitura em um *mapa*, que é uma coleção de pares chave-valor.  

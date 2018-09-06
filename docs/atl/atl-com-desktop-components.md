@@ -15,47 +15,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e53f2dfd0181b85efbc71defbc528d452d32b4dd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b16f2fd1a82d6199f1e035b06f8c0598810f0dfd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953843"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752150"
 ---
 # <a name="atl-com-desktop-components"></a>Componentes de área de trabalho COM da ATL
-Referência da ATL documenta a biblioteca ATL (Active Template), um conjunto de classes C++ baseadas em modelos que simplifica a programação de objetos de modelo de objeto de componente (COM). Para aproveitar ao máximo da ATL, esteja familiarizado com o COM é altamente recomendável.  
-  
-## <a name="in-this-section"></a>Nesta seção  
- [Visão geral de classes da ATL](../atl/atl-class-overview.md)  
- Fornece links para e breves descrições das classes ATL organizadas por categoria.  
-  
- [Classes e structs da ATL](../atl/reference/atl-classes.md)  
- Fornece material de referência sobre as classes e structs organizados em ordem alfabética.  
-  
- [Funções da ATL](../atl/reference/atl-functions.md)  
- Fornece material de referência sobre as funções globais, organizadas em ordem alfabética. Inclui tópicos de organizar as funções em categorias.  
-  
- [Variáveis globais da ATL](../atl/reference/atl-global-variables.md)  
- Fornece material de referência sobre as variáveis globais, organizadas em ordem alfabética.  
-  
- [Macros da ATL](../atl/reference/atl-macros.md)  
- Fornece material de referência sobre as macros organizadas em ordem alfabética. Inclui tópicos de organizar as macros em categorias.  
-  
- [Typedefs ATL](../atl/reference/atl-typedefs.md)  
- Fornece material de referência sobre os typedefs organizados em ordem alfabética  
-  
- [Arquétipo de trabalhador](../atl/reference/worker-archetype.md)  
- Fornece links para o arquétipo de trabalhador de ATL.  
-  
-## <a name="related-sections"></a>Seções relacionadas  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- Fornece tópicos sobre como programar usando a biblioteca ATL (Active Template).  
-  
- [Tutorial da ATL](../atl/active-template-library-atl-tutorial.md)  
- Orienta a criação de um controle e demonstra alguns conceitos básicos ATL no processo.  
-  
- [Exemplos de ATL](../visual-cpp-samples.md)  
- Código de exemplo que mostra como usar a ATL para gravar objetos COM.  
-  
- [Modelos do OLE DB](../data/oledb/ole-db-templates.md)  
- Fornece material de referência para os modelos OLE DB do consumidor e o provedor de um conjunto de classes de modelo que implementa várias interfaces OLE DB comumente usadas.  
+
+Referência da ATL documenta a biblioteca ATL (Active Template), um conjunto de classes C++ baseadas em modelos que simplifica a programação de objetos de modelo de objeto de componente (COM). Para aproveitar ao máximo da ATL, esteja familiarizado com o COM é altamente recomendável.
+
+## <a name="in-this-section"></a>Nesta seção
+
+[Visão geral de classes da ATL](../atl/atl-class-overview.md)  
+Fornece links para e breves descrições das classes ATL organizadas por categoria.
+
+[Classes e structs da ATL](../atl/reference/atl-classes.md)  
+Fornece material de referência sobre as classes e structs organizados em ordem alfabética.
+
+[Funções da ATL](../atl/reference/atl-functions.md)  
+Fornece material de referência sobre as funções globais, organizadas em ordem alfabética. Inclui tópicos de organizar as funções em categorias.
+
+[Variáveis globais da ATL](../atl/reference/atl-global-variables.md)  
+Fornece material de referência sobre as variáveis globais, organizadas em ordem alfabética.
+
+[Macros da ATL](../atl/reference/atl-macros.md)  
+Fornece material de referência sobre as macros organizadas em ordem alfabética. Inclui tópicos de organizar as macros em categorias.
+
+[Typedefs ATL](../atl/reference/atl-typedefs.md)  
+Fornece material de referência sobre os typedefs organizados em ordem alfabética
+
+[Arquétipo de trabalhador](../atl/reference/worker-archetype.md)  
+Fornece links para o arquétipo de trabalhador de ATL.
+
+## <a name="related-sections"></a>Seções relacionadas
+
+[ATL](../atl/active-template-library-atl-concepts.md)  
+Fornece tópicos sobre como programar usando a biblioteca ATL (Active Template).
+
+[Tutorial da ATL](../atl/active-template-library-atl-tutorial.md)  
+Orienta a criação de um controle e demonstra alguns conceitos básicos ATL no processo.
+
+[Exemplos de ATL](../visual-cpp-samples.md)  
+Código de exemplo que mostra como usar a ATL para gravar objetos COM.
+
+[Modelos do OLE DB](../data/oledb/ole-db-templates.md)  
+Fornece material de referência para os modelos OLE DB do consumidor e o provedor de um conjunto de classes de modelo que implementa várias interfaces OLE DB comumente usadas.  

@@ -1,5 +1,5 @@
 ---
-title: Assistente de projeto de configurações do aplicativo, ATL | Microsoft Docs
+title: Assistente de projeto de configurações do aplicativo, o ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,48 +16,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47fbf95451834e5f8c41e8b6d7e5af7a9746bb85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dee20d07ff37024506ef925fd94363bf85ceb8bc
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357399"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756880"
 ---
-# <a name="application-settings-atl-project-wizard"></a>Configurações do aplicativo, Assistente de projeto ATL
-Use o **configurações de aplicativo** página do Assistente de projeto de ATL para criar e adicionar recursos básicos para um novo projeto ATL.  
-  
-## <a name="server-type"></a>Tipo de servidor  
- Escolha um dos três tipos de servidor:  
-  
- **biblioteca de vínculo dinâmico (DLL)**  
- Selecione para criar um servidor em processo.  
-  
- **Executável (EXE)**  
- Selecione para criar um servidor local de fora do processo. Essa opção não permite o suporte para MFC ou COM+ 1.0. Ele não permite a mesclagem de código proxy/stub.  
-  
- **Serviço (EXE)**  
- Selecione para criar um aplicativo do Windows que é executado em segundo plano quando o Windows iniciar. Essa opção não permitir o suporte para MFC ou COM+ 1.0 ou não que a mesclagem de código proxy/stub.  
-  
-## <a name="additional-options"></a>Opções adicionais  
-  
+# <a name="application-settings-atl-project-wizard"></a>Configurações do aplicativo, ATL Project Wizard
+
+Use o **configurações do aplicativo** página do Assistente de projeto da ATL para criar e adicionar recursos básicos para um novo projeto ATL.
+
+## <a name="server-type"></a>Tipo de servidor
+
+Escolha um dos três tipos de servidor:
+
+**Biblioteca de vínculo dinâmico (DLL)**  
+Selecione para criar um servidor em processo.
+
+**Executável (EXE)**  
+Selecione para criar um servidor local do out-of-process. Essa opção não permite o suporte para MFC ou COM+ 1.0. Ele não permite a mesclagem de código de proxy/stub.
+
+**Serviço (EXE)**  
+Selecione para criar um aplicativo do Windows que é executado em segundo plano quando o Windows é iniciado. Essa opção não permite o suporte para MFC ou COM+ 1.0 ou não permite a mesclagem de código de proxy/stub.
+
+## <a name="additional-options"></a>Opções adicionais
+
 > [!NOTE]
->  Todas as opções adicionais estão disponíveis para projetos DLL apenas.  
-  
- **Permitir mesclagem do código proxy/stub**  
- Selecione o **Permitir mesclagem do código proxy/stub** caixa de seleção como uma conveniência ao empacotamento interfaces é necessária. Essa opção coloca o código de proxy e stub gerado pelo MIDL no mesmo executável do servidor.  
-  
- **Suporte MFC**  
- Selecione para especificar que o objeto inclui suporte do MFC. Esta opção vincula seu projeto para as bibliotecas MFC para que você pode acessar qualquer uma das classes e funções que eles contêm.  
-  
- **Suporte de COM+ 1.0**  
- Selecione para modificar as configurações de compilação de projeto para dar suporte aos componentes COM+ 1.0. Além da lista padrão de bibliotecas, o assistente adiciona o comsvcs.lib de biblioteca específico do componente COM+ 1.0  
-  
- Além disso, o mtxex.dll é carregado no sistema host quando o aplicativo é iniciado de atraso.  
-  
--   **Suporte do registrador de componente** se seu projeto ATL contém suporte para os componentes COM+ 1.0, você pode definir essa opção. O registrador de componente permite que seu objeto de COM+ 1.0 obter uma lista de componentes, registrar componentes ou cancelar o registro de componentes (individualmente ou todos de uma vez).  
-  
-## <a name="see-also"></a>Consulte também  
- [Assistente de projeto ATL](../../atl/reference/atl-project-wizard.md)   
- [Criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)   
- [Configurações de projeto padrão da ATL](../../atl/reference/default-atl-project-configurations.md)
+>  Todas as opções adicionais estão disponíveis para apenas os projetos DLL.
+
+**Permitir mesclagem do código de proxy/stub**  
+Selecione o **Permitir mesclagem do código de proxy/stub** caixa de seleção como uma conveniência ao marshaling de interfaces é necessária. Essa opção coloca o código de proxy e stub gerado pelo MIDL no mesmo executável como o servidor.
+
+**Suporte MFC**  
+Selecione esta opção para especificar que seu objeto inclui suporte do MFC. Esta opção vincula seu projeto para as bibliotecas MFC para que você possa acessar qualquer uma das classes e funções que eles contêm.
+
+**Suporte a COM+ 1.0**  
+Selecione esta opção para modificar as configurações de build do projeto para dar suporte a componentes COM+ 1.0. Além da lista padrão de bibliotecas, o assistente adiciona o comsvcs.lib de biblioteca específico do componente COM+ 1.0
+
+Além disso, o mtxex.dll é atrasar carregada no sistema host, quando seu aplicativo é iniciado.
+
+- **Registrador de componentes de suporte** se seu projeto ATL contém suporte para componentes COM+ 1.0, você pode definir essa opção. O registrador de componentes permite que seu objeto COM+ 1.0 obter uma lista de componentes, componentes de registrar ou cancelar o registro de componentes (individualmente ou ao mesmo tempo).
+
+## <a name="see-also"></a>Consulte também
+
+[ATL Project Wizard](../../atl/reference/atl-project-wizard.md)   
+[Criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)   
+[Configurações de projeto padrão da ATL](../../atl/reference/default-atl-project-configurations.md)
 

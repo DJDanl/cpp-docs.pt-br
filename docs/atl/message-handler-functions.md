@@ -23,24 +23,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6440ad59218f4c69eb3421176ebdfdc7a36e9531
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e7c1073d33004b726ddf273f89f98ac033faa483
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218827"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757345"
 ---
 # <a name="message-handler-functions"></a>Funções de manipulador de mensagens
-ATL fornece três tipos de funções de manipulador de mensagens:  
-  
-|Tipo de manipulador de mensagens|Macro correspondente da mensagem|  
-|-----------------------------|---------------------------------|  
-|[MessageHandler](../atl/messagehandler.md)|[MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)|  
-|[CommandHandler](../atl/commandhandler.md)|[COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)|  
-|[NotifyHandler](../atl/notifyhandler.md)|[NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)|  
-  
-## <a name="see-also"></a>Consulte também  
- [Implementando uma janela](../atl/implementing-a-window.md)   
- [Mapas de Mensagens](../atl/message-maps-atl.md)   
- [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
+
+ATL fornece três tipos de funções de manipulador de mensagens:
+
+|Tipo de manipulador de mensagens|Macro correspondente da mensagem|
+|-----------------------------|---------------------------------|
+|[MessageHandler](../atl/messagehandler.md)|[MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)|
+|[CommandHandler](../atl/commandhandler.md)|[COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)|
+|[NotifyHandler](../atl/notifyhandler.md)|[NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)|
+
+## <a name="see-also"></a>Consulte também
+
+[Implementando uma janela](../atl/implementing-a-window.md)   
+[Mapas de Mensagens](../atl/message-maps-atl.md)   
+[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 

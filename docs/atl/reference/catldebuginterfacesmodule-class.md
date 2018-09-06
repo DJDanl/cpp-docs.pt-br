@@ -18,28 +18,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 265bc9c59e240dc11ecf71b67719fc8dd1ea5ad4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6dbac5c07f04725400423e72d1cc38eb0f25e48f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359216"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755507"
 ---
 # <a name="catldebuginterfacesmodule-class"></a>Classe CAtlDebugInterfacesModule
-Essa classe fornece suporte para interfaces de depuração.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
+
+Essa classe fornece suporte para interfaces de depuração.
+
+## <a name="syntax"></a>Sintaxe
+
 ```
 class CAtlDebugInterfacesModule
-```  
-  
-## <a name="remarks"></a>Comentários  
- `CAtlDebugInterfacesModule` fornece o suporte necessário para interfaces de depuração. Ele está incluído em qualquer projeto que define o símbolo [_ATL_DEBUG_QI](debugging-and-error-reporting-macros.md#_atl_debug_qi).  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase  
-  
-## <a name="see-also"></a>Consulte também  
- [Visão geral da classe](../../atl/atl-class-overview.md)   
- [Classes de módulo](../../atl/atl-module-classes.md)
+```
+
+## <a name="remarks"></a>Comentários
+
+`CAtlDebugInterfacesModule` fornece o suporte necessário para interfaces de depuração. Ele é incluído em qualquer projeto que define o símbolo [_ATL_DEBUG_QI](debugging-and-error-reporting-macros.md#_atl_debug_qi).
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** atlbase. h
+
+## <a name="see-also"></a>Consulte também
+
+[Visão geral da classe](../../atl/atl-class-overview.md)   
+[Classes de módulo](../../atl/atl-module-classes.md)

@@ -17,33 +17,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c44b62410b7098d1d672ac859285c7d06b27ab77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 506dc7179db367d4683a180d6148a07e9f2916ee
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355869"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755132"
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>Programando com código de tempo de execução ATL e C
-Esta seção discute as vantagens de usar a biblioteca de tempo de execução do C (CRT) com a vinculação estática ou dinâmica.  
-  
-## <a name="in-this-section"></a>Nesta seção  
- [Vantagens e desvantagens do método usado para vincular ao CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)  
- Resume os benefícios e os inconvenientes envolvidos em Vincular estaticamente a CRT ou vincular dinamicamente.  
-  
- [Vinculando ao CRT em seu projeto ATL](../atl/linking-to-the-crt-in-your-atl-project.md)  
- Descreve as configurações de projeto e opções de vinculador para vincular a CRT; também fornece detalhes sobre como vincular a CRT afeta a imagem de programa.  
-  
-## <a name="related-sections"></a>Seções relacionadas  
- [ATL](../atl/active-template-library-atl-concepts.md)  
- Fornece links para tópicos conceituais sobre como programar usando o Active Template Library.  
-  
- [Comportamento de DLLs e da biblioteca em tempo de execução do Visual C++](../build/run-time-library-behavior.md)  
- Fornece detalhes sobre como funciona o código de inicialização VCRuntime e CRT.  
-  
- [Bibliotecas em tempo de execução C](../c-runtime-library/crt-library-features.md)  
- Discute vários arquivos. lib que compõem as bibliotecas de tempo de execução do C e lista suas opções de compilador associado e diretivas de pré-processador.  
-  
-## <a name="see-also"></a>Consulte também  
- [Conceitos](../atl/active-template-library-atl-concepts.md)
+
+Esta seção aborda os benefícios de usar a biblioteca de tempo de execução C (CRT) com a vinculação estática ou dinâmica.
+
+## <a name="in-this-section"></a>Nesta seção
+
+[Vantagens e desvantagens do método usado para vincular ao CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)  
+Resume os benefícios e compensações envolvidas na vinculação estaticamente ao CRT ou vincular dinamicamente.
+
+[Vinculando ao CRT em seu projeto ATL](../atl/linking-to-the-crt-in-your-atl-project.md)  
+Discute as configurações do projeto e as opções do vinculador para vincular ao CRT; também fornece detalhes sobre como vincular ao CRT afeta a imagem do programa.
+
+## <a name="related-sections"></a>Seções relacionadas
+
+[ATL](../atl/active-template-library-atl-concepts.md)  
+Fornece links para tópicos conceituais sobre como programar usando o Active Template Library.
+
+[Comportamento de DLLs e da biblioteca em tempo de execução do Visual C++](../build/run-time-library-behavior.md)  
+Fornece detalhes sobre como funciona o código de inicialização VCRuntime e CRT.
+
+[Bibliotecas em tempo de execução C](../c-runtime-library/crt-library-features.md)  
+Discute os diversos arquivos. lib que compõem as bibliotecas de tempo de execução do C e lista suas opções de compilador associadas e diretivas do pré-processador.
+
+## <a name="see-also"></a>Consulte também
+
+[Conceitos](../atl/active-template-library-atl-concepts.md)
 

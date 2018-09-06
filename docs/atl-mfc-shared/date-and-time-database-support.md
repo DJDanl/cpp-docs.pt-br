@@ -21,21 +21,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e5047dfb2d8a162cf6d82c07007504df897afa1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c077ec376155f576b9cd0db9662f47a9d747c8a3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353881"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751459"
 ---
 # <a name="date-and-time-database-support"></a>Data e hora: suporte de banco de dados
-A partir da versão 4.0, MFC banco de dados usa programação o [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) e [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) classes para representar dados de data e hora. Essas classes, também é usadas em automação, são derivadas da classe [COleVariant](../mfc/reference/colevariant-class.md). Fornecer um melhor suporte para gerenciamento de dados de data e hora que [CTime](../atl-mfc-shared/reference/ctime-class.md) e [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md).  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
-  
--   [Suporte de automação de data e a programação de tempo](../atl-mfc-shared/date-and-time-automation-support.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Data e hora](../atl-mfc-shared/date-and-time.md)
 
+A partir da versão 4.0, o MFC database usa programação a [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) e [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) classes para representar dados de data e hora. Essas classes, também é usados na automação, são derivadas da classe [COleVariant](../mfc/reference/colevariant-class.md). Eles fornecem o melhor suporte para gerenciamento de dados de data e hora em que [CTime](../atl-mfc-shared/reference/ctime-class.md) e [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md).
+
+## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+
+- [Suporte de automação de data e a programação de tempo](../atl-mfc-shared/date-and-time-automation-support.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Data e hora](../atl-mfc-shared/date-and-time.md)
 

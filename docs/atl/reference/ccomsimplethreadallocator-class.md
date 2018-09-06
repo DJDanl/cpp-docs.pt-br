@@ -21,58 +21,66 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2c571733aca48ddbfd881a294786d1de334c7c3
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: e2c8c7b2e6132bb39c8e548f6057ded0b0ca6c1e
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884659"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752460"
 ---
 # <a name="ccomsimplethreadallocator-class"></a>Classe CComSimpleThreadAllocator
-Essa classe gerencia a seleção de thread para a classe `CComAutoThreadModule`.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
+
+Essa classe gerencia a seleção de thread para a classe `CComAutoThreadModule`.
+
+## <a name="syntax"></a>Sintaxe
+
 ```
 class CComSimpleThreadAllocator
-```  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-methods"></a>Métodos Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CComSimpleThreadAllocator::GetThread](#getthread)|Seleciona um thread.|  
-  
-## <a name="remarks"></a>Comentários  
- `CComSimpleThreadAllocator` gerencia a seleção de thread para [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread` simplesmente percorre cada thread e retorna o outro na sequência.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase. h  
-  
-##  <a name="getthread"></a>  CComSimpleThreadAllocator::GetThread  
- Seleciona um thread, especificando o próximo segmento na sequência.  
-  
+```
+
+## <a name="members"></a>Membros
+
+### <a name="public-methods"></a>Métodos Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CComSimpleThreadAllocator::GetThread](#getthread)|Seleciona um thread.|
+
+## <a name="remarks"></a>Comentários
+
+`CComSimpleThreadAllocator` gerencia a seleção de thread para [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md). `CComSimpleThreadAllocator::GetThread` simplesmente percorre cada thread e retorna o outro na sequência.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** atlbase. h
+
+##  <a name="getthread"></a>  CComSimpleThreadAllocator::GetThread
+
+Seleciona um thread, especificando o próximo segmento na sequência.
+
 ```
 int GetThread(CComApartment* /* pApt */, int nThreads);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *pApt*  
- Não é usado na implementação do padrão da ATL.  
-  
- *nThreads*  
- O número máximo de threads no módulo do EXE.  
-  
-### <a name="return-value"></a>Valor de retorno  
- Um inteiro entre zero e (*nThreads* - 1). Identifica um dos threads no módulo do EXE.  
-  
-### <a name="remarks"></a>Comentários  
- Você pode substituir `GetThread` para fornecer um método diferente da seleção ou fazer uso do *pApt* parâmetro.  
-  
- `GetThread` é chamado pelo [CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance).  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe CComApartment](../../atl/reference/ccomapartment-class.md)   
- [Visão geral da classe](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*pApt*  
+Não é usado na implementação do padrão da ATL.
+
+*nThreads*  
+O número máximo de threads no módulo do EXE.
+
+### <a name="return-value"></a>Valor de retorno
+
+Um inteiro entre zero e (*nThreads* - 1). Identifica um dos threads no módulo do EXE.
+
+### <a name="remarks"></a>Comentários
+
+Você pode substituir `GetThread` para fornecer um método diferente da seleção ou fazer uso do *pApt* parâmetro.
+
+`GetThread` é chamado pelo [CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance).
+
+## <a name="see-also"></a>Consulte também
+
+[Classe CComApartment](../../atl/reference/ccomapartment-class.md)   
+[Visão geral da classe](../../atl/atl-class-overview.md)

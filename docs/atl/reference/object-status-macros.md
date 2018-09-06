@@ -14,39 +14,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fcfffcd9508876399b30238cac0b4f65c92c733
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 04bad7c90869eb5a5b87a465b175e4ed3f0b9991
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206495"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43751505"
 ---
 # <a name="object-status-macros"></a>Macros de Status do objeto
-Essa macro define sinalizadores que pertencem aos controles ActiveX.  
-  
-|||  
-|-|-|  
+
+Essa macro define sinalizadores que pertencem aos controles ActiveX.
+
+|||
+|-|-|
 |[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|Usado em controles ActiveX ATL para definir os sinalizadores OLEMISC.|  
 
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlcom  
+## <a name="requirements"></a>Requisitos
 
-##  <a name="declare_olemisc_status"></a>  DECLARE_OLEMISC_STATUS  
- Usado em controles ActiveX ATL para definir os sinalizadores OLEMISC.  
-  
+**Cabeçalho:** atlcom  
+
+##  <a name="declare_olemisc_status"></a>  DECLARE_OLEMISC_STATUS
+
+Usado em controles ActiveX ATL para definir os sinalizadores OLEMISC.
+
 ```
 DECLARE_OLEMISC_STATUS( miscstatus )
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *miscstatus*  
- Sinalizadores OLEMISC tudo aplicáveis.  
-  
-### <a name="remarks"></a>Comentários  
- Essa macro é usada para definir os sinalizadores OLEMISC para um controle ActiveX. Consulte a [IOleObject::GetMiscStatus](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) para obter mais detalhes.  
-  
-### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_ATL_Windowing#124](../../atl/codesnippet/cpp/object-status-macros_1.h)]  
-  
-## <a name="see-also"></a>Consulte também  
- [Macros](../../atl/reference/atl-macros.md)
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*miscstatus*  
+Sinalizadores OLEMISC tudo aplicáveis.
+
+### <a name="remarks"></a>Comentários
+
+Essa macro é usada para definir os sinalizadores OLEMISC para um controle ActiveX. Consulte a [IOleObject::GetMiscStatus](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) para obter mais detalhes.
+
+### <a name="example"></a>Exemplo
+
+[!code-cpp[NVC_ATL_Windowing#124](../../atl/codesnippet/cpp/object-status-macros_1.h)]
+
+## <a name="see-also"></a>Consulte também
+
+[Macros](../../atl/reference/atl-macros.md)

@@ -14,31 +14,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a408ecb1a96aab284a4ac8c7cdd59909ed7c0ea
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0302727bba0155fe59ffa223f5e4e91ef3c122de
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216517"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754838"
 ---
 # <a name="introduction-to-com"></a>Introdução a COM
-O COM é fundamentais "modelo de objeto" em quais controles ActiveX e OLE são criados. COM permite que um objeto exponha sua funcionalidade a outros componentes e aplicativos host. Ele define como expõe o objeto em si e como essa exposição funciona entre processos e entre redes. COM também define o ciclo de vida do objeto.  
-  
- Fundamentais para COM são esses conceitos:  
-  
--   [Interfaces](../atl/interfaces-atl.md) — o mecanismo pelo qual um objeto expõe sua funcionalidade.  
-  
--   [IUnknown](../atl/iunknown.md) — a interface básica na qual todos os outros são baseados. Ele implementa a contagem de referência e a interface consultando os mecanismos de execução usando COM.  
-  
--   [Contagem de referência](../atl/reference-counting.md) — a técnica pela qual um objeto (ou, estritamente, uma interface) decide quando ele não está sendo usado e, portanto, está livre para remover a mesmo.  
-  
--   [QueryInterface](../atl/queryinterface.md) — o método usado para consultar um objeto para uma determinada interface.  
-  
--   [Marshaling](../atl/marshaling.md) — o mecanismo que permite que objetos sejam usados por thread, processo e limites de rede, permitindo a independência de local.  
-  
--   [Agregação](../atl/aggregation.md) — uma maneira na qual um objeto pode fazer uso de outro.  
-  
-## <a name="see-also"></a>Consulte também  
- [Introdução ao COM e ATL](../atl/introduction-to-com-and-atl.md)   
- [O modelo de objeto de componente](/windows/desktop/com/the-component-object-model)
+
+O COM é fundamentais "modelo de objeto" em quais controles ActiveX e OLE são criados. COM permite que um objeto exponha sua funcionalidade a outros componentes e aplicativos host. Ele define como expõe o objeto em si e como essa exposição funciona entre processos e entre redes. COM também define o ciclo de vida do objeto.
+
+Fundamentais para COM são esses conceitos:
+
+- [Interfaces](../atl/interfaces-atl.md) — o mecanismo pelo qual um objeto expõe sua funcionalidade.
+
+- [IUnknown](../atl/iunknown.md) — a interface básica na qual todos os outros são baseados. Ele implementa a contagem de referência e a interface consultando os mecanismos de execução usando COM.
+
+- [Contagem de referência](../atl/reference-counting.md) — a técnica pela qual um objeto (ou, estritamente, uma interface) decide quando ele não está sendo usado e, portanto, está livre para remover a mesmo.
+
+- [QueryInterface](../atl/queryinterface.md) — o método usado para consultar um objeto para uma determinada interface.
+
+- [Marshaling](../atl/marshaling.md) — o mecanismo que permite que objetos sejam usados por thread, processo e limites de rede, permitindo a independência de local.
+
+- [Agregação](../atl/aggregation.md) — uma maneira na qual um objeto pode fazer uso de outro.
+
+## <a name="see-also"></a>Consulte também
+
+[Introdução ao COM e ATL](../atl/introduction-to-com-and-atl.md)   
+[O modelo de objeto de componente](/windows/desktop/com/the-component-object-model)
 

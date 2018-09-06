@@ -17,31 +17,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5eadb13e71e65e07c807812ad00fc1989c3a19f9
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 9753578de006ed46719d94d5861035ab77dbca6c
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132201"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752246"
 ---
 # <a name="date-and-time"></a>Data e Hora
-MFC dá suporte a várias maneiras diferentes de trabalhar com datas e horas. Elas incluem:  
-  
--   Classes de tempo de uso geral. O [CTime](../atl-mfc-shared/reference/ctime-class.md) e [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) classes encapsulam a maioria das funcionalidades associadas com a biblioteca em tempo padrão ANSI, que é declarada no tempo. H.  
-  
--   Suporte para o relógio do sistema. Com o MFC versão 3.0, foi adicionado suporte para `CTime` do Win32 `SYSTEMTIME` e `FILETIME` tipos de dados.  
-  
--   Suporte para a automação [tipo de dados DATE](../atl-mfc-shared/date-type.md). Data dá suporte a data, hora e valores de data/hora. O [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) e [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) classes encapsulam essa funcionalidade. Eles funcionam com o [COleVariant](../mfc/reference/colevariant-class.md) classe usando o suporte de automação.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
-  
--   [Data e hora: suporte a SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
-  
--   [Data e hora: suporte a automação](../atl-mfc-shared/date-and-time-automation-support.md)  
-  
--   [Data e hora: suporte a banco de dados](../atl-mfc-shared/date-and-time-database-support.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Conceitos](../mfc/mfc-concepts.md)   
- [Tópicos gerais do MFC](../mfc/general-mfc-topics.md)
+
+MFC dá suporte a várias maneiras diferentes de trabalhar com datas e horas. Elas incluem:
+
+- Classes de tempo de uso geral. O [CTime](../atl-mfc-shared/reference/ctime-class.md) e [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) classes encapsulam a maioria das funcionalidades associadas com a biblioteca em tempo padrão ANSI, que é declarada no tempo. H.
+
+- Suporte para o relógio do sistema. Com o MFC versão 3.0, foi adicionado suporte para `CTime` do Win32 `SYSTEMTIME` e `FILETIME` tipos de dados.
+
+- Suporte para a automação [tipo de dados DATE](../atl-mfc-shared/date-type.md). Data dá suporte a data, hora e valores de data/hora. O [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) e [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) classes encapsulam essa funcionalidade. Eles funcionam com o [COleVariant](../mfc/reference/colevariant-class.md) classe usando o suporte de automação.
+
+## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+
+- [Data e hora: suporte a SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)
+
+- [Data e hora: suporte a automação](../atl-mfc-shared/date-and-time-automation-support.md)
+
+- [Data e hora: suporte a banco de dados](../atl-mfc-shared/date-and-time-database-support.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Conceitos](../mfc/mfc-concepts.md)   
+[Tópicos gerais do MFC](../mfc/general-mfc-topics.md)
 

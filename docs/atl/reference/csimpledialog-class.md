@@ -21,72 +21,82 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0c713781ff6c780e63fdf19545f83bf693a081b
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 0a476daeb680048c7bbb21565014487f6b937c78
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37881653"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754885"
 ---
 # <a name="csimpledialog-class"></a>Classe CSimpleDialog
-Essa classe implementa uma caixa de diálogo modal básico.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
+
+Essa classe implementa uma caixa de diálogo modal básico.
+
+## <a name="syntax"></a>Sintaxe
+
 ```
 template <WORD t_wDlgTemplateID, BOOL t_bCenter = TRUE>  
 class CSimpleDialog : public CDialogImplBase
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- *t_wDlgTemplateID*  
-  
- A ID de recurso do recurso de modelo de caixa de diálogo.  
-  
- *t_bCenter*  
- TRUE se o objeto de caixa de diálogo será centralizado na janela do proprietário; Caso contrário, FALSE.  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-methods"></a>Métodos Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CSimpleDialog::DoModal](#domodal)|Cria uma caixa de diálogo modal.|  
-  
-## <a name="remarks"></a>Comentários  
- Implementa uma caixa de diálogo modal com funcionalidade básica. `CSimpleDialog` fornece suporte para controles comuns Windows somente. Para criar e exibir uma caixa de diálogo modal, crie uma instância dessa classe, fornecendo o nome de um modelo de recurso existente para a caixa de diálogo. O objeto de caixa de diálogo é fechada quando o usuário clica em qualquer controle com um valor predefinido (como IDOK ou IDCANCEL).  
-  
- `CSimpleDialog` permite que você crie apenas as caixas de diálogo modal. `CSimpleDialog` fornece o procedimento de caixa de diálogo, que usa o mapa de mensagem padrão para direcionar mensagens para manipuladores adequados.  
-  
- Ver [implementar uma caixa de diálogo](../../atl/implementing-a-dialog-box.md) para obter mais informações.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `CDialogImplBase`  
-  
- `CSimpleDialog`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlwin  
-  
-##  <a name="domodal"></a>  CSimpleDialog::DoModal  
- Invoca uma caixa de diálogo modal e retorna o resultado da caixa de diálogo quando terminar.  
-  
+```
+
+#### <a name="parameters"></a>Parâmetros
+
+*t_wDlgTemplateID*
+
+A ID de recurso do recurso de modelo de caixa de diálogo.
+
+*t_bCenter*  
+TRUE se o objeto de caixa de diálogo será centralizado na janela do proprietário; Caso contrário, FALSE.
+
+## <a name="members"></a>Membros
+
+### <a name="public-methods"></a>Métodos Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CSimpleDialog::DoModal](#domodal)|Cria uma caixa de diálogo modal.|
+
+## <a name="remarks"></a>Comentários
+
+Implementa uma caixa de diálogo modal com funcionalidade básica. `CSimpleDialog` fornece suporte para controles comuns Windows somente. Para criar e exibir uma caixa de diálogo modal, crie uma instância dessa classe, fornecendo o nome de um modelo de recurso existente para a caixa de diálogo. O objeto de caixa de diálogo é fechada quando o usuário clica em qualquer controle com um valor predefinido (como IDOK ou IDCANCEL).
+
+`CSimpleDialog` permite que você crie apenas as caixas de diálogo modal. `CSimpleDialog` fornece o procedimento de caixa de diálogo, que usa o mapa de mensagem padrão para direcionar mensagens para manipuladores adequados.
+
+Ver [implementar uma caixa de diálogo](../../atl/implementing-a-dialog-box.md) para obter mais informações.
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`CDialogImplBase`
+
+`CSimpleDialog`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** atlwin
+
+##  <a name="domodal"></a>  CSimpleDialog::DoModal
+
+Invoca uma caixa de diálogo modal e retorna o resultado da caixa de diálogo quando terminar.
+
 ```
 INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *hWndParent*  
- Um identificador para o pai da caixa de diálogo. Se nenhum valor for fornecido, o pai é definido para a janela ativa atual.  
-  
-### <a name="return-value"></a>Valor de retorno  
- Se for bem-sucedido, o valor de retorno é a ID de recurso do controle que ignorados a caixa de diálogo.  
-  
- Se a função falhar, o valor de retorno é -1. Para obter outras informações sobre o erro, chame `GetLastError`.  
-  
-### <a name="remarks"></a>Comentários  
- Esse método lida com toda a interação com o usuário enquanto a caixa de diálogo está ativa. Isso faz com que a caixa de diálogo modal; ou seja, o usuário não pode interagir com outras janelas, até que a caixa de diálogo é fechada.  
-  
-## <a name="see-also"></a>Consulte também  
- [Visão geral da classe](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*hWndParent*  
+Um identificador para o pai da caixa de diálogo. Se nenhum valor for fornecido, o pai é definido para a janela ativa atual.
+
+### <a name="return-value"></a>Valor de retorno
+
+Se for bem-sucedido, o valor de retorno é a ID de recurso do controle que ignorados a caixa de diálogo.
+
+Se a função falhar, o valor de retorno é -1. Para obter outras informações sobre o erro, chame `GetLastError`.
+
+### <a name="remarks"></a>Comentários
+
+Esse método lida com toda a interação com o usuário enquanto a caixa de diálogo está ativa. Isso faz com que a caixa de diálogo modal; ou seja, o usuário não pode interagir com outras janelas, até que a caixa de diálogo é fechada.
+
+## <a name="see-also"></a>Consulte também
+
+[Visão geral da classe](../../atl/atl-class-overview.md)

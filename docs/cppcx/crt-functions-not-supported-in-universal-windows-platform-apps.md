@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4ef64ac81e36a298d89078997992343d92b7dbdc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609179"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43756864"
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>Funções de CRT sem suporte em aplicativos da Plataforma Universal do Windows
 Muitas funções CRT (tempo de execução do C) não estão disponíveis quando você cria aplicativos UWP (Plataforma Universal do Windows). Em alguns casos, as soluções alternativas estão disponíveis —-por exemplo, você pode usar o tempo de execução do Windows ou as APIs do Win32. No entanto, em outros casos, as funções de CRT foram proibidas, pois os recursos que correspondem a elas ou às APIs de suporte não são aplicáveis aos aplicativos UWP. Para procurar um método alternativo que tem suporte para o tempo de execução do Windows, consulte [alternativas para APIs do Windows em aplicativos UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).  

@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0aaaffb4254fc676e95f6c6bb315d5f257d64e48
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592415"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754898"
 ---
 # <a name="platformdetailsguid-struct"></a>struct Platform::Details::__GUID
 Esse struct destina-se somente a uso interno, e não é destinado a ser usado para desenvolvimento.  
