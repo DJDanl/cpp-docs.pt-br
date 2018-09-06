@@ -17,37 +17,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c530622f096ef14d4eb3de56e5219e8f7df4f082
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45139b16ebb923acd004d995cd9466ea9e39e163
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359739"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765730"
 ---
 # <a name="celementtraits-class"></a>Classe CElementTraits
-Essa classe é usada pelas classes de coleção para fornecer funções e métodos para mover, copiar, comparação e operações de hash.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
+
+Essa classe é usada pelas classes de coleção para fornecer funções e métodos para mover, copiar, comparação e operações de hash.
+
+## <a name="syntax"></a>Sintaxe
+
 ```
 template<typename T>  
 class CElementTraits : public CDefaultElementTraits<T>
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `T`  
- O tipo de dados a serem armazenados na coleção.  
-  
-## <a name="remarks"></a>Comentários  
- Essa classe fornece métodos e funções estáticas padrão para mover, copiar, comparando e armazenados em um objeto de classe de coleção de elementos de hash. `CElementTraits` é especificado como o provedor padrão dessas operações pelas classes de coleção [CAtlArray](../../atl/reference/catlarray-class.md), [CAtlList](../../atl/reference/catllist-class.md), [CRBMap](../../atl/reference/crbmap-class.md), [CRBMultiMap](../../atl/reference/crbmultimap-class.md), e [CRBTree](../../atl/reference/crbtree-class.md).  
-  
- As implementações padrão serão suficiente para tipos de dados simples, mas se as classes de coleção são usadas para armazenar objetos mais complexos, as funções e os métodos devem ser substituídos por implementações fornecido pelo usuário.  
-  
- Para obter mais informações, consulte [Classes de coleção ATL](../../atl/atl-collection-classes.md).  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlcoll.h  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
- [Visão geral da classe](../../atl/atl-class-overview.md)
+```
+
+#### <a name="parameters"></a>Parâmetros
+
+`T`  
+O tipo de dados a serem armazenados na coleção.
+
+## <a name="remarks"></a>Comentários
+
+Essa classe fornece métodos e funções estáticas de padrão para mover, copiar, comparando e armazenados em um objeto de classe de coleção de elementos de hash. `CElementTraits` é especificado como o provedor padrão, essas operações pelas classes de coleção [CAtlArray](../../atl/reference/catlarray-class.md), [CAtlList](../../atl/reference/catllist-class.md), [CRBMap](../../atl/reference/crbmap-class.md), [CRBMultiMap](../../atl/reference/crbmultimap-class.md), e [CRBTree](../../atl/reference/crbtree-class.md).
+
+As implementações padrão serão suficiente para tipos de dados simples, mas se as classes de coleção são usadas para armazenar objetos mais complexos, as funções e os métodos devem ser substituídos por implementações fornecida pelo usuário.
+
+Para obter mais informações, consulte [Classes de coleção ATL](../../atl/atl-collection-classes.md).
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** atlcoll.h
+
+## <a name="see-also"></a>Consulte também
+
+[Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
+[Visão geral da classe](../../atl/atl-class-overview.md)

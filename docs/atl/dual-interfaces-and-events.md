@@ -15,21 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99dc173f3dde8ea81f6dc11d02298cd94673f999
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a482486be66811954602849c4bdde5b8955c887f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32354061"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763208"
 ---
-# <a name="dual-interfaces-and-events"></a>Eventos e Interfaces duplas
-Embora seja possível criar uma interface de evento como um duplo, há vários motivos bom design para não fazer isso. O motivo fundamental é que a origem do evento será disparado somente o evento por meio de vtable ou `Invoke`, mas não ambos. Se a origem do evento dispara o evento como uma chamada de método vtable direto, o `IDispatch` métodos nunca serão usados e é claro que a interface deve ter sido uma interface vtable puro. Se a origem do evento dispara o evento como uma chamada para `Invoke`, os métodos vtable nunca serão usados e é claro que a interface deve ter sido um dispinterface. Se você definir as interfaces de evento como duals, você vai exigir que clientes implementar a parte de uma interface que nunca será usada.  
-  
+# <a name="dual-interfaces-and-events"></a>Interfaces duplas e eventos
+
+Embora seja possível criar uma interface de eventos como um duplo, há um número de design bons motivos para não fazê-lo. O motivo pelo qual fundamental é que a origem do evento será disparado somente o evento por meio de vtable ou `Invoke`, não ambos. Se a origem do evento dispara o evento como uma chamada de método direto vtable, o `IDispatch` métodos nunca serão usados e é claro que a interface deve ter sido uma interface vtable puro. Se a origem do evento dispara o evento como uma chamada para `Invoke`, os métodos de vtable nunca serão usados e é claro que a interface deve ter sido um dispinterface. Se você definir suas interfaces de evento como duals, você vai exigir que os clientes implementem a parte de uma interface que nunca será usada.
+
 > [!NOTE]
->  Esse argumento não se aplica às duas interfaces, em geral. De uma perspectiva de implementação, duals são uma maneira bem com suporte, rápida e conveniente de implementação de interfaces que são acessíveis a uma ampla gama de clientes.  
-  
- Houver mais razões para evitar interfaces de evento dupla; suporte Visual Basic, nem Internet Explorer.  
-  
-## <a name="see-also"></a>Consulte também  
- [Interfaces duplas e a ATL](../atl/dual-interfaces-and-atl.md)
+>  Esse argumento não se aplica a interfaces duplas, em geral. Da perspectiva de implementação, duals são uma maneira rápida, conveniente e bem suportada da implementação de interfaces que são acessíveis a uma ampla variedade de clientes.
+
+Há mais razões para evitar interfaces de evento dupla; nem o Visual Basic nem o Internet Explorer dão suporte a eles.
+
+## <a name="see-also"></a>Consulte também
+
+[Interfaces duplas e a ATL](../atl/dual-interfaces-and-atl.md)
 

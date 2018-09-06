@@ -83,11 +83,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c8b3772f556dd92694222e4f3d7d2e15deb051c5
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339664"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766039"
 ---
 # <a name="cdaotabledef-class"></a>Classe CDaoTableDef
 Representa a definição armazenada de uma tabela base ou uma tabela anexada.  

@@ -30,271 +30,296 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d0d1e35e3c2a7d9467024afdf3d415478cd7de1
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: ec4fa860387068dd345c19467583922ebaeb49ab
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37884971"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763667"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Classe CAtlPreviewCtrlImpl
-Essa classe é uma implementação de ATL de uma janela que é colocada em uma janela host fornecida pelo Shell para visualização avançada.  
-  
+
+Essa classe é uma implementação de ATL de uma janela que é colocada em uma janela host fornecida pelo Shell para visualização avançada.
+
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
+>  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+
+## <a name="syntax"></a>Sintaxe
+
 ```
 class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPreviewCtrl;
-```  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-constructors"></a>Construtores Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl](#dtor)|Destructs um objeto de controle de versão prévia.|  
-|[CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl](#catlpreviewctrlimpl)|Constrói um objeto de controle de versão prévia.|  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CAtlPreviewCtrlImpl::Create](#create)|Chamado por um manipulador de visualização avançada para criar a janela do Windows.|  
-|[CAtlPreviewCtrlImpl::Destroy](#destroy)|Chamado por um manipulador de visualização avançada quando ele precisa destruir esse controle.|  
-|[CAtlPreviewCtrlImpl::Focus](#focus)|Define o foco de entrada para esse controle.|  
-|[CAtlPreviewCtrlImpl::OnPaint](#onpaint)|Manipula a mensagem WM_PAINT.|  
-|[CAtlPreviewCtrlImpl::Redraw](#redraw)|Informa a esse controle seja redesenhada.|  
-|[CAtlPreviewCtrlImpl::SetHost](#sethost)|Define um novo pai para este controle.|  
-|[CAtlPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Chamado por um manipulador de visualização avançada quando ele precisa definir os visuais de uma visualização avançada conteúdo.|  
-|[CAtlPreviewCtrlImpl::SetRect](#setrect)|Define um novo retângulo delimitador para este controle.|  
-  
-### <a name="protected-methods"></a>Métodos Protegidos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CAtlPreviewCtrlImpl::DoPaint](#dopaint)|Chamado pelo framework para renderizar a visualização.|  
-  
-### <a name="protected-constants"></a>Constantes protegidos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CAtlPreviewCtrlImpl::m_plf](#m_plf)|Fonte usada para exibir texto na janela de visualização.|  
-  
-### <a name="protected-data-members"></a>Membros de dados protegidos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CAtlPreviewCtrlImpl::m_clrBack](#m_clrback)|Cor do plano de fundo da janela de visualização.|  
+```
+
+## <a name="members"></a>Membros
+
+### <a name="public-constructors"></a>Construtores Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl](#dtor)|Destructs um objeto de controle de versão prévia.|
+|[CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl](#catlpreviewctrlimpl)|Constrói um objeto de controle de versão prévia.|
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CAtlPreviewCtrlImpl::Create](#create)|Chamado por um manipulador de visualização avançada para criar a janela do Windows.|
+|[CAtlPreviewCtrlImpl::Destroy](#destroy)|Chamado por um manipulador de visualização avançada quando ele precisa destruir esse controle.|
+|[CAtlPreviewCtrlImpl::Focus](#focus)|Define o foco de entrada para esse controle.|
+|[CAtlPreviewCtrlImpl::OnPaint](#onpaint)|Manipula a mensagem WM_PAINT.|
+|[CAtlPreviewCtrlImpl::Redraw](#redraw)|Informa a esse controle seja redesenhada.|
+|[CAtlPreviewCtrlImpl::SetHost](#sethost)|Define um novo pai para este controle.|
+|[CAtlPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Chamado por um manipulador de visualização avançada quando ele precisa definir os visuais de uma visualização avançada conteúdo.|
+|[CAtlPreviewCtrlImpl::SetRect](#setrect)|Define um novo retângulo delimitador para este controle.|
+
+### <a name="protected-methods"></a>Métodos Protegidos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CAtlPreviewCtrlImpl::DoPaint](#dopaint)|Chamado pelo framework para renderizar a visualização.|
+
+### <a name="protected-constants"></a>Constantes protegidos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CAtlPreviewCtrlImpl::m_plf](#m_plf)|Fonte usada para exibir texto na janela de visualização.|
+
+### <a name="protected-data-members"></a>Membros de dados protegidos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CAtlPreviewCtrlImpl::m_clrBack](#m_clrback)|Cor do plano de fundo da janela de visualização.|
 |[CAtlPreviewCtrlImpl::m_clrText](#m_clrtext)|Cor do texto da janela visualização.|  
 
-  
-## <a name="remarks"></a>Comentários  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `TBase`  
-  
- `ATL::CMessageMap`  
-  
- `ATL::CWindowImplRoot<TBase>`  
-  
- `ATL::CWindowImplBaseT<TBase,TWinTraits>`  
-  
- [ATL::CWindowImpl\<CAtlPreviewCtrlImpl >](../../atl/reference/cwindowimpl-class.md)  
-  
- `IPreviewCtrl`  
-  
- `ATL::CAtlPreviewCtrlImpl`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlpreviewctrlimpl.h  
-  
-##  <a name="catlpreviewctrlimpl"></a>  CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl  
- Constrói um objeto de controle de versão prévia.  
-  
+## <a name="remarks"></a>Comentários
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`TBase`
+
+`ATL::CMessageMap`
+
+`ATL::CWindowImplRoot<TBase>`
+
+`ATL::CWindowImplBaseT<TBase,TWinTraits>`
+
+[ATL::CWindowImpl\<CAtlPreviewCtrlImpl >](../../atl/reference/cwindowimpl-class.md)
+
+`IPreviewCtrl`
+
+`ATL::CAtlPreviewCtrlImpl`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** atlpreviewctrlimpl.h
+
+##  <a name="catlpreviewctrlimpl"></a>  CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl
+
+Constrói um objeto de controle de versão prévia.
+
 ```
 CAtlPreviewCtrlImpl(void) : m_clrText(0),
    m_clrBack(RGB(255, 255, 255)), m_plf(NULL);
-```  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="dtor"></a>  CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl  
- Destructs um objeto de controle de versão prévia.  
-  
+```
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="dtor"></a>  CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl
+
+Destructs um objeto de controle de versão prévia.
+
 ```
 virtual ~CAtlPreviewCtrlImpl(void);
-```  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="create"></a>  CAtlPreviewCtrlImpl::Create  
- Chamado por um manipulador de visualização avançada para criar a janela do Windows.  
-  
+```
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="create"></a>  CAtlPreviewCtrlImpl::Create
+
+Chamado por um manipulador de visualização avançada para criar a janela do Windows.
+
 ```
 virtual BOOL Create(HWND hWndParent, const RECT* prc);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *hWndParent*  
- Um identificador para a janela de host fornecido pelo Shell para visualização avançada.  
-  
- *República Popular da China*  
- Especifica o tamanho inicial e a posição da janela.  
-  
-### <a name="return-value"></a>Valor de retorno  
- VERDADEIRO se bem-sucedido; Caso contrário, FALSE.  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="destroy"></a>  CAtlPreviewCtrlImpl::Destroy  
- Chamado por um manipulador de visualização avançada quando ele precisa destruir esse controle.  
-  
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*hWndParent*  
+Um identificador para a janela de host fornecido pelo Shell para visualização avançada.
+
+*República Popular da China*  
+Especifica o tamanho inicial e a posição da janela.
+
+### <a name="return-value"></a>Valor de retorno
+
+VERDADEIRO se bem-sucedido; Caso contrário, FALSE.
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="destroy"></a>  CAtlPreviewCtrlImpl::Destroy
+
+Chamado por um manipulador de visualização avançada quando ele precisa destruir esse controle.
+
 ```
 virtual void Destroy();
-```  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="dopaint"></a>  CAtlPreviewCtrlImpl::DoPaint  
- Chamado pelo framework para renderizar a visualização.  
-  
+```
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="dopaint"></a>  CAtlPreviewCtrlImpl::DoPaint
+
+Chamado pelo framework para renderizar a visualização.
+
 ```
 virtual void DoPaint(HDC hdc);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *hDC*  
- Um identificador para um contexto de dispositivo para pintura.  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="focus"></a>  CAtlPreviewCtrlImpl::Focus  
- Define o foco de entrada para esse controle.  
-  
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*hDC*  
+Um identificador para um contexto de dispositivo para pintura.
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="focus"></a>  CAtlPreviewCtrlImpl::Focus
+
+Define o foco de entrada para esse controle.
+
 ```
 virtual void Focus();
-```  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="m_clrback"></a>  CAtlPreviewCtrlImpl::m_clrBack  
- Cor do plano de fundo da janela de visualização.  
-  
+```
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="m_clrback"></a>  CAtlPreviewCtrlImpl::m_clrBack
+
+Cor do plano de fundo da janela de visualização.
+
 ```
 COLORREF m_clrBack;
-```  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="m_clrtext"></a>  CAtlPreviewCtrlImpl::m_clrText  
- Cor do texto da janela de visualização.  
-  
+```
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="m_clrtext"></a>  CAtlPreviewCtrlImpl::m_clrText
+
+Cor do texto da janela de visualização.
+
 ```
 COLORREF m_clrText;
-```  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="m_plf"></a>  CAtlPreviewCtrlImpl::m_plf  
- Fonte usada para exibir texto na janela de visualização.  
-  
+```
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="m_plf"></a>  CAtlPreviewCtrlImpl::m_plf
+
+Fonte usada para exibir texto na janela de visualização.
+
 ```
 const LOGFONTW* m_plf;
-```  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="onpaint"></a>  CAtlPreviewCtrlImpl::OnPaint  
- Manipula a mensagem WM_PAINT.  
-  
+```
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="onpaint"></a>  CAtlPreviewCtrlImpl::OnPaint
+
+Manipula a mensagem WM_PAINT.
+
 ```
 LRESULT OnPaint(  
     UINT nMsg,
     WPARAM wParam,
     LPARAM lParam,
     BOOL& bHandled);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *nMsg*  
- Defina como WM_PAINT.  
-  
- *wParam*  
- Este parâmetro não é usado.  
-  
- *lParam*  
- Este parâmetro não é usado.  
-  
- *bHandled*  
- Quando essa função retorna, ele contém TRUE.  
-  
-### <a name="return-value"></a>Valor de retorno  
- Sempre retorna 0.  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="redraw"></a>  CAtlPreviewCtrlImpl::Redraw  
- Informa a esse controle seja redesenhada.  
-  
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*nMsg*  
+Defina como WM_PAINT.
+
+*wParam*  
+Este parâmetro não é usado.
+
+*lParam*  
+Este parâmetro não é usado.
+
+*bHandled*  
+Quando essa função retorna, ele contém TRUE.
+
+### <a name="return-value"></a>Valor de retorno
+
+Sempre retorna 0.
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="redraw"></a>  CAtlPreviewCtrlImpl::Redraw
+
+Informa a esse controle seja redesenhada.
+
 ```
 virtual void Redraw();
-```  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="sethost"></a>  CAtlPreviewCtrlImpl::SetHost  
- Define um novo pai para este controle.  
-  
+```
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="sethost"></a>  CAtlPreviewCtrlImpl::SetHost
+
+Define um novo pai para este controle.
+
 ```
 virtual void SetHost(HWND hWndParent);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *hWndParent*  
- Um identificador para a nova janela pai.  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="setpreviewvisuals"></a>  CAtlPreviewCtrlImpl::SetPreviewVisuals  
- Chamado por um manipulador de visualização avançada quando ele precisa definir os visuais de uma visualização avançada conteúdo.  
-  
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*hWndParent*  
+Um identificador para a nova janela pai.
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="setpreviewvisuals"></a>  CAtlPreviewCtrlImpl::SetPreviewVisuals
+
+Chamado por um manipulador de visualização avançada quando ele precisa definir os visuais de uma visualização avançada conteúdo.
+
 ```
 virtual void SetPreviewVisuals(
     COLORREF clrBack,
     COLORREF clrText,
     const LOGFONTW* plf);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *clrBack*  
- Cor do plano de fundo da janela de visualização.  
-  
- *clrText*  
- Cor do texto da janela de visualização.  
-  
- *plf*  
- Fonte usada para exibir texto na janela de visualização.  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="setrect"></a>  CAtlPreviewCtrlImpl::SetRect  
- Define um novo retângulo delimitador para este controle.  
-  
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*clrBack*  
+Cor do plano de fundo da janela de visualização.
+
+*clrText*  
+Cor do texto da janela de visualização.
+
+*plf*  
+Fonte usada para exibir texto na janela de visualização.
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="setrect"></a>  CAtlPreviewCtrlImpl::SetRect
+
+Define um novo retângulo delimitador para este controle.
+
 ```
 virtual void SetRect(const RECT* prc, BOOL bRedraw);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *República Popular da China*  
- Especifica o novo tamanho e posição do controle de versão prévia.  
-  
- *bRedraw*  
- Especifica se o controle deve ser redesenhado.  
-  
-### <a name="remarks"></a>Comentários  
-  
-## <a name="see-also"></a>Consulte também  
- [Componentes de área de trabalho COM da ATL](../../atl/atl-com-desktop-components.md)
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*República Popular da China*  
+Especifica o novo tamanho e posição do controle de versão prévia.
+
+*bRedraw*  
+Especifica se o controle deve ser redesenhado.
+
+### <a name="remarks"></a>Comentários
+
+## <a name="see-also"></a>Consulte também
+
+[Componentes de área de trabalho COM da ATL](../../atl/atl-com-desktop-components.md)

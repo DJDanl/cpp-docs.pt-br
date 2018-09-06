@@ -16,21 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 571cee9a309f1e980e62521215a717e6af432b08
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 995693a73fde41a3f5e31d81224b96d12edb2c46
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964100"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763273"
 ---
 # <a name="mmc-snap-in-classes"></a>Classes de Snap-In do MMC
-As classes a seguir fornecem suporte para desenvolvimento Microsoft Management Console (MMC) snap-in de componentes:  
-  
--   [CSnapInItemImpl](../atl/reference/csnapinitemimpl-class.md) implementa um objeto de snap-in do nó, como adicionar itens de menu e barras de ferramentas e comandos para o nó de snap-in para a função de manipulador apropriado de encaminhamento.  
-  
--   [CSnapInPropertyPageImpl](../atl/reference/csnapinpropertypageimpl-class.md) implementa um objeto de página de propriedade do snap-in.  
-  
-## <a name="see-also"></a>Consulte também  
- [Visão geral da classe](../atl/atl-class-overview.md)   
- [Macros de snap-in do objeto](../atl/reference/snap-in-object-macros.md)
+
+As classes a seguir fornecem suporte para desenvolvimento Microsoft Management Console (MMC) snap-in de componentes:
+
+- [CSnapInItemImpl](../atl/reference/csnapinitemimpl-class.md) implementa um objeto de snap-in do nó, como adicionar itens de menu e barras de ferramentas e comandos para o nó de snap-in para a função de manipulador apropriado de encaminhamento.
+
+- [CSnapInPropertyPageImpl](../atl/reference/csnapinpropertypageimpl-class.md) implementa um objeto de página de propriedade do snap-in.
+
+## <a name="see-also"></a>Consulte também
+
+[Visão geral da classe](../atl/atl-class-overview.md)   
+[Macros de snap-in do objeto](../atl/reference/snap-in-object-macros.md)
 

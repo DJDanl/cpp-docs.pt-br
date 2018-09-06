@@ -16,32 +16,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 745e8ee1074af6b4126a2123acafdc821906d24c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c3629b65b8f6373b20fc35dd6d90133d7377e674
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362346"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43766555"
 ---
-# <a name="interfaces-atl-control-wizard"></a>Interfaces de Assistente de controle ATL
-Esta página do assistente identifica as interfaces que dá suporte ao controle. Por padrão, as interfaces com suporte são normalmente usadas pela maioria dos contêineres.  
-  
+# <a name="interfaces-atl-control-wizard"></a>Interfaces, o Assistente de controle ATL
+
+Esta página do assistente identifica as interfaces que dá suporte ao controle. Por padrão, as interfaces com suporte são aqueles normalmente é usado pela maioria dos contêineres.
+
 > [!NOTE]
->  Se você selecionou **controle mínimo** no [opções](../../atl/reference/options-atl-control-wizard.md) guia interfaces não são exibidas por padrão no **com suporte** caixa de listagem.  
-  
- **Sem suporte**  
- Indica as interfaces disponíveis no momento não há suporte para o controle.  
-  
- **Com suporte**  
- Indica as interfaces que atualmente têm suporte para o controle.  
-  
-|Botão de transferência|Descrição|  
-|---------------------|-----------------|  
-|**>**|Adiciona o **com suporte** lista o nome da interface selecionado no momento o **não tem suporte** lista.|  
-|**>>**|Adiciona o **com suporte** lista todos os nomes de interface disponíveis no **não tem suporte** lista.|  
-|**<**|Remove o nome da interface selecionado no momento o **com suporte** lista.|  
-|**<<**|Remove todos os nomes listados no momento da interface de **com suporte** lista.|  
-  
-## <a name="see-also"></a>Consulte também  
- [Assistente de Controle da ATL](../../atl/reference/atl-control-wizard.md)
+>  Se você tiver selecionado **controle mínimo** sobre o [opções](../../atl/reference/options-atl-control-wizard.md) guia, nenhuma interface aparece por padrão no **com suporte** caixa de listagem.
+
+**Não tem suporte**  
+Indica as interfaces disponíveis que não têm suporte atualmente para o controle.
+
+**Com suporte**  
+Indica as interfaces que têm suporte atualmente para o controle.
+
+|Botão de transferência|Descrição|
+|---------------------|-----------------|
+|**>**|Adiciona à **com suporte** lista o nome da interface selecionado no momento a **não tem suporte** lista.|
+|**>>**|Adiciona o **com suporte** listar todos os nomes de interface disponíveis na **não tem suporte** lista.|
+|**<**|Remove o nome da interface selecionado no momento a **com suporte** lista.|
+|**<<**|Remove todos os nomes listados atualmente da interface de **com suporte** lista.|
+
+## <a name="see-also"></a>Consulte também
+
+[Assistente de Controle da ATL](../../atl/reference/atl-control-wizard.md)
 

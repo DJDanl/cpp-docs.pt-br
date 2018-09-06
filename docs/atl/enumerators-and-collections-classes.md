@@ -16,29 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62729df015e214f37acdda7d5cb2ef710dce6cb9
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: c84becc5b7117c9095a055e6a815e52396987800
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37847876"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758385"
 ---
 # <a name="enumerators-and-collections-classes"></a>Classes de coleções e enumeradores
-As classes a seguir fornecem suporte para coleções de COM e enumerações:  
-  
--   [CComEnum](../atl/reference/ccomenum-class.md) define uma COM o objeto de enumerador com base em uma matriz.  
-  
--   [CComEnumImpl](../atl/reference/ccomenumimpl-class.md) fornece a implementação de uma interface de enumerador COM onde os itens que estão sendo enumerados são armazenados em uma matriz.  
-  
--   [CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md) define uma COM o objeto de enumerador com base em uma coleção de biblioteca padrão C++.  
-  
--   [IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md) fornece a implementação de uma interface de enumerador COM onde os itens que estão sendo enumerados são armazenados em um contêiner de biblioteca padrão C++ compatível com.  
-  
--   [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md) fornece a implementação para o `Count`, `Item`, e `_NewEnum` propriedades de uma interface de coleção.  
-  
-## <a name="related-articles"></a>Artigos relacionados  
- [Coleções e enumeradores da ATL](../atl/atl-collections-and-enumerators.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Visão geral da classe](../atl/atl-class-overview.md)
+
+As classes a seguir fornecem suporte para coleções de COM e enumerações:
+
+- [CComEnum](../atl/reference/ccomenum-class.md) define uma COM o objeto de enumerador com base em uma matriz.
+
+- [CComEnumImpl](../atl/reference/ccomenumimpl-class.md) fornece a implementação de uma interface de enumerador COM onde os itens que estão sendo enumerados são armazenados em uma matriz.
+
+- [CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md) define uma COM o objeto de enumerador com base em uma coleção de biblioteca padrão C++.
+
+- [IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md) fornece a implementação de uma interface de enumerador COM onde os itens que estão sendo enumerados são armazenados em um contêiner de biblioteca padrão C++ compatível com.
+
+- [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md) fornece a implementação para o `Count`, `Item`, e `_NewEnum` propriedades de uma interface de coleção.
+
+## <a name="related-articles"></a>Artigos relacionados
+
+[Coleções e enumeradores da ATL](../atl/atl-collections-and-enumerators.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Visão geral da classe](../atl/atl-class-overview.md)
 

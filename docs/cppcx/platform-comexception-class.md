@@ -18,11 +18,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ef60fc542b38c7619ce7b65cc7f39db79ed1b228
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679018"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764105"
 ---
 # <a name="platformcomexception-class"></a>Classe Platform::COMException
 Representa um ou mais erros COM que ocorrem durante a execução do aplicativo. COMException é a classe base para um conjunto de exceções padrão predefinidas.  

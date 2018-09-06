@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4954e98c1e6f1da30e321aad0c0e37cc5c1ab994
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606526"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765352"
 ---
 # <a name="begin-function"></a>Função begin
 Retorna um iterador que aponta para o início de uma coleção que é acessada pelo parâmetro de interface especificado.  

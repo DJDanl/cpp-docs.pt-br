@@ -18,67 +18,76 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d942c0611b408303922f3e6ab91000630ce8774
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 6d3463b9eaad5134f68fbe533e50431ef3a91cf5
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37883587"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761193"
 ---
 # <a name="cautoptrlist-class"></a>Classe CAutoPtrList
-Essa classe fornece métodos úteis ao construir uma lista de ponteiros inteligentes.  
-  
+
+Essa classe fornece métodos úteis ao construir uma lista de ponteiros inteligentes.
+
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
+>  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+
+## <a name="syntax"></a>Sintaxe
+
 ```
 template<typename E>  
 class CAutoPtrList : 
    public CAtlList<ATL::CAutoPtr<E>, CAutoPtrElementTraits<E>>
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- *E*  
- O tipo de ponteiro.  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-constructors"></a>Construtores Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CAutoPtrList::CAutoPtrList](#cautoptrlist)|O construtor.|  
-  
-## <a name="remarks"></a>Comentários  
- Essa classe fornece um construtor e deriva de métodos de [CAtlList](../../atl/reference/catllist-class.md) e [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) para ajudar na criação de um objeto de lista armazenar ponteiros inteligentes. A classe [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) fornece uma função semelhante para um objeto de matriz.  
-  
- Para obter mais informações, consulte [Classes de coleção ATL](../../atl/atl-collection-classes.md).  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- [CAtlList](../../atl/reference/catllist-class.md)  
-  
- `CAutoPtrList`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlcoll.h  
-  
-##  <a name="cautoptrlist"></a>  CAutoPtrList::CAutoPtrList  
- O construtor.  
-  
+```
+
+#### <a name="parameters"></a>Parâmetros
+
+*E*  
+O tipo de ponteiro.
+
+## <a name="members"></a>Membros
+
+### <a name="public-constructors"></a>Construtores Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CAutoPtrList::CAutoPtrList](#cautoptrlist)|O construtor.|
+
+## <a name="remarks"></a>Comentários
+
+Essa classe fornece um construtor e deriva de métodos de [CAtlList](../../atl/reference/catllist-class.md) e [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) para ajudar na criação de um objeto de lista armazenar ponteiros inteligentes. A classe [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) fornece uma função semelhante para um objeto de matriz.
+
+Para obter mais informações, consulte [Classes de coleção ATL](../../atl/atl-collection-classes.md).
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+[CAtlList](../../atl/reference/catllist-class.md)
+
+`CAutoPtrList`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** atlcoll.h
+
+##  <a name="cautoptrlist"></a>  CAutoPtrList::CAutoPtrList
+
+O construtor.
+
 ```
 CAutoPtrList(UINT nBlockSize = 10) throw();
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *nBlockSize*  
- O tamanho do bloco, com um padrão de 10.  
-  
-### <a name="remarks"></a>Comentários  
- O tamanho do bloco é uma medida da quantidade de memória alocada quando um novo elemento é necessário. Tamanhos de bloco maiores reduzem chamadas para rotinas de alocação de memória, mas usam mais recursos.  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe CAtlList](../../atl/reference/catllist-class.md)   
- [Classe CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)   
- [Visão geral da classe](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*nBlockSize*  
+O tamanho do bloco, com um padrão de 10.
+
+### <a name="remarks"></a>Comentários
+
+O tamanho do bloco é uma medida da quantidade de memória alocada quando um novo elemento é necessário. Tamanhos de bloco maiores reduzem chamadas para rotinas de alocação de memória, mas usam mais recursos.
+
+## <a name="see-also"></a>Consulte também
+
+[Classe CAtlList](../../atl/reference/catllist-class.md)   
+[Classe CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)   
+[Visão geral da classe](../../atl/atl-class-overview.md)

@@ -117,11 +117,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 991b8c55c02272613ce329be9a053ff0110f1926
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42544390"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764869"
 ---
 # <a name="cframewnd-class"></a>Classe CFrameWnd
 Fornece a funcionalidade de uma janela de quadro pop-up, juntamente com os membros para gerenciar a janela ou Windows interface SDI (SDI) sobreposta.  

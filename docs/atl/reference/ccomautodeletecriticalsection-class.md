@@ -17,39 +17,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b90afb9ae47ced33c331aef988489b567b1078b
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 53078d740d1051a928b4592d275f33944685e622
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879896"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767098"
 ---
 # <a name="ccomautodeletecriticalsection-class"></a>Classe CComAutoDeleteCriticalSection
-Essa classe fornece métodos para obter e liberar a propriedade de um objeto de seção crítica.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
+
+Essa classe fornece métodos para obter e liberar a propriedade de um objeto de seção crítica.
+
+## <a name="syntax"></a>Sintaxe
+
 ```
 class CComAutoDeleteCriticalSection : public CComSafeDeleteCriticalSection
-```  
-  
-## <a name="remarks"></a>Comentários  
- `CComAutoDeleteCriticalSection` deriva da classe [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md). No entanto, `CComAutoDeleteCriticalSection` substitui o [termo](ccomsafedeletecriticalsection-class.md#term) método **privada** acesso, o que força a limpeza de memória interna para ocorrer somente quando as instâncias dessa classe saem do escopo ou explicitamente são excluídas do memória.  
+```
 
-  
- Essa classe apresenta não há métodos adicionais ao longo de sua classe base. Ver [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) e [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) para obter mais informações sobre classes de auxiliar de seção crítica.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)  
-  
- [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)  
-  
- `CComAutoDeleteCriticalSection`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlcore.h  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)   
- [Classe CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)   
- [Visão geral da classe](../../atl/atl-class-overview.md)
+## <a name="remarks"></a>Comentários
+
+`CComAutoDeleteCriticalSection` deriva da classe [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md). No entanto, `CComAutoDeleteCriticalSection` substitui o [termo](ccomsafedeletecriticalsection-class.md#term) método **privada** acesso, o que força a limpeza de memória interna para ocorrer somente quando as instâncias dessa classe saem do escopo ou explicitamente são excluídas do memória.  
+
+Essa classe apresenta não há métodos adicionais ao longo de sua classe base. Ver [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) e [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) para obter mais informações sobre classes de auxiliar de seção crítica.
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)
+
+[CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)
+
+`CComAutoDeleteCriticalSection`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** atlcore.h
+
+## <a name="see-also"></a>Consulte também
+
+[Classe CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)   
+[Classe CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)   
+[Visão geral da classe](../../atl/atl-class-overview.md)

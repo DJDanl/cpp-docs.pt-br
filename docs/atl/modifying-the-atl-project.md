@@ -1,5 +1,5 @@
 ---
-title: Modificar o projeto ATL | Microsoft Docs
+title: Modificando o projeto ATL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a8594c2d98b05750d6e43138101894fb8fc4b72
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8f94a698d9e23d0481daf940fc55fa99616104aa
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32355027"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763452"
 ---
-# <a name="modifying-the-atl-project"></a>Modificar o projeto ATL
-Neste ponto, seu projeto do controle composto implementa os objetos necessários para o controle composto. A próxima etapa é adicionar os controles que o controle composto conterá e tratar todos os eventos necessários.  
-  
- Para adicionar outros controles ActiveX ou Windows, adicionar um novo script de recurso e, em seguida, use o editor de caixa de diálogo. Para obter mais informações sobre como adicionar controles (e tarefas relacionadas), consulte [Editor de caixa de diálogo](../windows/dialog-editor.md).  
-  
- Para lidar com todos os eventos necessários dos controles ActiveX, consulte [adicionando funcionalidade para o controle composto](../atl/adding-functionality-to-the-composite-control.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Fundamentos do controle composto](../atl/atl-composite-control-fundamentals.md)   
- [Como criar um arquivo de script de recurso](../windows/how-to-create-a-resource-script-file.md)
+# <a name="modifying-the-atl-project"></a>Modificando o projeto da ATL
+
+Neste ponto, seu projeto de controle de composição implementa os objetos necessários para o controle de composição. A próxima etapa é adicionar todos os controles que o controle composto conterá e tratar todos os eventos necessários.
+
+Para adicionar controles ActiveX ou o Windows adicionais, adicione um novo script de recurso e, em seguida, use o editor de caixa de diálogo. Para obter mais informações sobre como adicionar controles (e tarefas relacionadas), consulte [Editor de caixa de diálogo](../windows/dialog-editor.md).
+
+Para lidar com todos os eventos necessários dos controles ActiveX, consulte [adicionando funcionalidade ao controle de composição](../atl/adding-functionality-to-the-composite-control.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Fundamentos do controle composto](../atl/atl-composite-control-fundamentals.md)   
+[Como criar um arquivo de script de recurso](../windows/how-to-create-a-resource-script-file.md)
 

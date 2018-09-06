@@ -21,114 +21,132 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d4c752dc2a139d1e0bac38d9c307154cdc32fe6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 99f0615dc37070311428ec12894bcaeea8febe8d
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196313"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43760611"
 ---
 # <a name="cautorevertimpersonation-class"></a>Classe CAutoRevertImpersonation
-Essa classe é revertido [CAccessToken](../../atl/reference/caccesstoken-class.md) objetos para um estado nonimpersonating quando ele sai do escopo.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
+
+Essa classe é revertido [CAccessToken](../../atl/reference/caccesstoken-class.md) objetos para um estado nonimpersonating quando ele sai do escopo.
+
+## <a name="syntax"></a>Sintaxe
+
 ```
 class CAutoRevertImpersonation
-```  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-constructors"></a>Construtores Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CAutoRevertImpersonation::CAutoRevertImpersonation](#cautorevertimpersonation)|Constrói um `CAutoRevertImpersonation` objeto|  
-|[CAutoRevertImpersonation:: ~ CAutoRevertImpersonation](#dtor)|Destrói o objeto e reverte a representação de token de acesso.|  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CAutoRevertImpersonation::Attach](#attach)|Automatiza a reversão da representação de um token de acesso.|  
-|[CAutoRevertImpersonation::Detach](#detach)|Cancela a reverter a representação automática.|  
-|[CAutoRevertImpersonation::GetAccessToken](#getaccesstoken)|Recupera o atual de token de acesso associado a este objeto.|  
-  
-## <a name="remarks"></a>Comentários  
- Uma [token de acesso](/windows/desktop/SecAuthZ/access-tokens) é um objeto que descreve o contexto de segurança de um processo ou thread e é alocado para cada usuário conectado no sistema Windows NT ou Windows 2000. Esses tokens de acesso podem ser representados com o `CAccessToken` classe.  
-  
- Às vezes, é necessário representar os tokens de acesso. Essa classe é fornecida como uma conveniência, mas não realiza a representação de tokens de acesso; ele executa a reversão automática para um estado nonimpersonated apenas. Isso ocorre porque a representação de token de acesso pode ser executada várias maneiras diferentes.  
-  
- Para obter uma introdução ao modelo de controle de acesso no Windows, consulte [controle de acesso](/windows/desktop/SecAuthZ/access-control) no SDK do Windows.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlsecurity. h  
-  
-##  <a name="attach"></a>  CAutoRevertImpersonation::Attach  
- Automatiza a reversão da representação de um token de acesso.  
-  
+```
+
+## <a name="members"></a>Membros
+
+### <a name="public-constructors"></a>Construtores Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CAutoRevertImpersonation::CAutoRevertImpersonation](#cautorevertimpersonation)|Constrói um `CAutoRevertImpersonation` objeto|
+|[CAutoRevertImpersonation:: ~ CAutoRevertImpersonation](#dtor)|Destrói o objeto e reverte a representação de token de acesso.|
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CAutoRevertImpersonation::Attach](#attach)|Automatiza a reversão da representação de um token de acesso.|
+|[CAutoRevertImpersonation::Detach](#detach)|Cancela a reverter a representação automática.|
+|[CAutoRevertImpersonation::GetAccessToken](#getaccesstoken)|Recupera o atual de token de acesso associado a este objeto.|
+
+## <a name="remarks"></a>Comentários
+
+Uma [token de acesso](/windows/desktop/SecAuthZ/access-tokens) é um objeto que descreve o contexto de segurança de um processo ou thread e é alocado para cada usuário conectado no sistema Windows NT ou Windows 2000. Esses tokens de acesso podem ser representados com o `CAccessToken` classe.
+
+Às vezes, é necessário representar os tokens de acesso. Essa classe é fornecida como uma conveniência, mas não realiza a representação de tokens de acesso; ele executa a reversão automática para um estado nonimpersonated apenas. Isso ocorre porque a representação de token de acesso pode ser executada várias maneiras diferentes.
+
+Para obter uma introdução ao modelo de controle de acesso no Windows, consulte [controle de acesso](/windows/desktop/SecAuthZ/access-control) no SDK do Windows.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** atlsecurity. h
+
+##  <a name="attach"></a>  CAutoRevertImpersonation::Attach
+
+Automatiza a reversão da representação de um token de acesso.
+
 ```
 void Attach(const CAccessToken* pAT) throw();
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *pAT*  
- O endereço do [CAccessToken](../../atl/reference/caccesstoken-class.md) objeto a ser revertida automaticamente  
-  
-### <a name="remarks"></a>Comentários  
- Esse método só deve ser usado se o [CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) objeto foi criado com um valor nulo `CAccessToken` ponteiro, ou se [desanexar](#detach) foi chamado anteriormente. Para casos simples, não é necessário usar esse método.  
-  
-##  <a name="cautorevertimpersonation"></a>  CAutoRevertImpersonation::CAutoRevertImpersonation  
- Constrói um objeto `CAutoRevertImpersonation`.  
-  
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*pAT*  
+O endereço do [CAccessToken](../../atl/reference/caccesstoken-class.md) objeto a ser revertida automaticamente
+
+### <a name="remarks"></a>Comentários
+
+Esse método só deve ser usado se o [CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) objeto foi criado com um valor nulo `CAccessToken` ponteiro, ou se [desanexar](#detach) foi chamado anteriormente. Para casos simples, não é necessário usar esse método.
+
+##  <a name="cautorevertimpersonation"></a>  CAutoRevertImpersonation::CAutoRevertImpersonation
+
+Constrói um objeto `CAutoRevertImpersonation`.
+
 ```
 CAutoRevertImpersonation(const CAccessToken* pAT) throw();
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *pAT*  
- O endereço do [CAccessToken](../../atl/reference/caccesstoken-class.md) objeto a ser revertido automaticamente.  
-  
-### <a name="remarks"></a>Comentários  
- A representação real do token de acesso deve ser executada separadamente do e, preferencialmente, antes da criação de um `CAutoRevertImpersonation` objeto. Essa representação será revertida automaticamente quando o `CAutoRevertImpersonation` objeto sai do escopo.  
-  
-##  <a name="dtor"></a>  CAutoRevertImpersonation:: ~ CAutoRevertImpersonation  
- Destrói o objeto e reverte a representação de token de acesso.  
-  
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*pAT*  
+O endereço do [CAccessToken](../../atl/reference/caccesstoken-class.md) objeto a ser revertido automaticamente.
+
+### <a name="remarks"></a>Comentários
+
+A representação real do token de acesso deve ser executada separadamente do e, preferencialmente, antes da criação de um `CAutoRevertImpersonation` objeto. Essa representação será revertida automaticamente quando o `CAutoRevertImpersonation` objeto sai do escopo.
+
+##  <a name="dtor"></a>  CAutoRevertImpersonation:: ~ CAutoRevertImpersonation
+
+Destrói o objeto e reverte a representação de token de acesso.
+
 ```
 ~CAutoRevertImpersonation() throw();
-```  
-  
-### <a name="remarks"></a>Comentários  
- Reverte qualquer representação atualmente em vigor para o [CAccessToken](../../atl/reference/caccesstoken-class.md) objeto fornecido durante a construção ou por meio de [anexar](#attach) método. Se nenhum `CAccessToken` está associado, o destruidor não tem nenhum efeito.  
-  
-##  <a name="detach"></a>  CAutoRevertImpersonation::Detach  
- Cancela a reverter a representação automática.  
-  
+```
+
+### <a name="remarks"></a>Comentários
+
+Reverte qualquer representação atualmente em vigor para o [CAccessToken](../../atl/reference/caccesstoken-class.md) objeto fornecido durante a construção ou por meio de [anexar](#attach) método. Se nenhum `CAccessToken` está associado, o destruidor não tem nenhum efeito.
+
+##  <a name="detach"></a>  CAutoRevertImpersonation::Detach
+
+Cancela a reverter a representação automática.
+
 ```
 const CAccessToken* Detach() throw();
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
- O endereço do previamente associado [CAccessToken](../../atl/reference/caccesstoken-class.md), ou nulo se nenhuma associação existia.  
-  
-### <a name="remarks"></a>Comentários  
- Chamando **desanexar** impede que o `CAutoRevertImpersonation` objeto reverter qualquer representação atualmente em vigor para o [CAccessToken](../../atl/reference/caccesstoken-class.md) objeto associado a este objeto. `CAutoRevertImpersonation` podem ser destruídos com nenhum efeito ou reassociados a mesma ou em outra `CAccessToken` do objeto usando [Attach](#attach).  
-  
-##  <a name="getaccesstoken"></a>  CAutoRevertImpersonation::GetAccessToken  
- Recupera o atual de token de acesso associado a este objeto.  
-  
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+O endereço do previamente associado [CAccessToken](../../atl/reference/caccesstoken-class.md), ou nulo se nenhuma associação existia.
+
+### <a name="remarks"></a>Comentários
+
+Chamando **desanexar** impede que o `CAutoRevertImpersonation` objeto reverter qualquer representação atualmente em vigor para o [CAccessToken](../../atl/reference/caccesstoken-class.md) objeto associado a este objeto. `CAutoRevertImpersonation` podem ser destruídos com nenhum efeito ou reassociados a mesma ou em outra `CAccessToken` do objeto usando [Attach](#attach).
+
+##  <a name="getaccesstoken"></a>  CAutoRevertImpersonation::GetAccessToken
+
+Recupera o atual de token de acesso associado a este objeto.
+
 ```
 const CAccessToken* GetAccessToken() throw();
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
- O endereço do previamente associado [CAccessToken](../../atl/reference/caccesstoken-class.md), ou nulo se nenhuma associação existia.  
-  
-### <a name="remarks"></a>Comentários  
- Se esse método é chamado para fins que incluem a reversão de uma representação do `CAccessToken` objeto, o [desanexar](#detach) método deve ser usado em vez disso.  
-  
-## <a name="see-also"></a>Consulte também  
- [Exemplo de ATLSecurity](../../visual-cpp-samples.md)   
- [Tokens de acesso](/windows/desktop/SecAuthZ/access-tokens)   
- [Visão geral da classe](../../atl/atl-class-overview.md)
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+O endereço do previamente associado [CAccessToken](../../atl/reference/caccesstoken-class.md), ou nulo se nenhuma associação existia.
+
+### <a name="remarks"></a>Comentários
+
+Se esse método é chamado para fins que incluem a reversão de uma representação do `CAccessToken` objeto, o [desanexar](#detach) método deve ser usado em vez disso.
+
+## <a name="see-also"></a>Consulte também
+
+[Exemplo de ATLSecurity](../../visual-cpp-samples.md)   
+[Tokens de acesso](/windows/desktop/SecAuthZ/access-tokens)   
+[Visão geral da classe](../../atl/atl-class-overview.md)

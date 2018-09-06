@@ -17,33 +17,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2832b9866145d9af510302c8c6d327972205495
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 93d30c1af67159c04546076a07c78fbaec9cbb91
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38952962"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762313"
 ---
 # <a name="ccomobjectroot-class"></a>Classe CComObjectRoot
-Este typedef de [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) é modelada no modelo do servidor de threading padrão.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
+
+Este typedef de [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) é modelada no modelo do servidor de threading padrão.
+
+## <a name="syntax"></a>Sintaxe
+
 ```
 typedef CComObjectRootEx<CComObjectThreadModel> CComObjectRoot;
-```  
-  
-## <a name="remarks"></a>Comentários  
- `CComObjectRoot` é um `typedef` dos [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) modelada no modelo do servidor de threading padrão. Assim [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) fará referência a [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) ou [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md).  
-  
- `CComObjectRootEx` lida com gerenciamento de contagem de referência de objeto para objetos não agregados e agregados. Ele armazena a contagem de referência de objeto, se seu objeto não está sendo agregado e mantém o ponteiro para o externo desconhecido se o objeto está sendo agregado. Para objetos agregados, `CComObjectRootEx` métodos podem ser usados para tratar a falha do objeto interno para construir e proteger o objeto externo quando as interfaces internas são liberadas após a exclusão ou o objeto interno é excluído.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlcom  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
- [Classe CComAggObject](../../atl/reference/ccomaggobject-class.md)   
- [Classe CComObject](../../atl/reference/ccomobject-class.md)   
- [Classe CComPolyObject](../../atl/reference/ccompolyobject-class.md)   
- [Visão geral da classe](../../atl/atl-class-overview.md)
+```
+
+## <a name="remarks"></a>Comentários
+
+`CComObjectRoot` é um `typedef` dos [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) modelada no modelo do servidor de threading padrão. Assim [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) fará referência a [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) ou [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md).
+
+`CComObjectRootEx` lida com gerenciamento de contagem de referência de objeto para objetos não agregados e agregados. Ele armazena a contagem de referência de objeto, se seu objeto não está sendo agregado e mantém o ponteiro para o externo desconhecido se o objeto está sendo agregado. Para objetos agregados, `CComObjectRootEx` métodos podem ser usados para tratar a falha do objeto interno para construir e proteger o objeto externo quando as interfaces internas são liberadas após a exclusão ou o objeto interno é excluído.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** atlcom
+
+## <a name="see-also"></a>Consulte também
+
+[Classe CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
+[Classe CComAggObject](../../atl/reference/ccomaggobject-class.md)   
+[Classe CComObject](../../atl/reference/ccomobject-class.md)   
+[Classe CComPolyObject](../../atl/reference/ccompolyobject-class.md)   
+[Visão geral da classe](../../atl/atl-class-overview.md)

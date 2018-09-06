@@ -18,18 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25a02ade201c611ec9849d7557f3c854beb5bacc
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 026c97868bbaffe089fa6cdb7dd75022af0ab288
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955339"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765246"
 ---
 # <a name="error-information-classes"></a>Classes de informações de erro
-A classe a seguir indica como as informações de erro são tratadas:  
-  
--   [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) determina se o objeto é compatível com o [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) interface. `IErrorInfo` permite que as informações de erro sejam propagadas de volta ao cliente.  
-  
-## <a name="see-also"></a>Consulte também  
- [Visão geral da classe](../atl/atl-class-overview.md)
+
+A classe a seguir indica como as informações de erro são tratadas:
+
+- [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) determina se o objeto é compatível com o [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) interface. `IErrorInfo` permite que as informações de erro sejam propagadas de volta ao cliente.
+
+## <a name="see-also"></a>Consulte também
+
+[Visão geral da classe](../atl/atl-class-overview.md)
 

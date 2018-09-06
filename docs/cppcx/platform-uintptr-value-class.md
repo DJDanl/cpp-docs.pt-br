@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ec2651ae44955a4adfa1319e5528b7fe948a15bf
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42581177"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759390"
 ---
 # <a name="platformuintptr-value-class"></a>Platform::classe de valor UIntPtr
 Representa um ponteiro sem sinal cujo tamanho é apropriado para a plataforma (32 ou 64 bits).  

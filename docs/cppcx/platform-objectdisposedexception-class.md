@@ -17,11 +17,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 53946335175b0919c800a5ddb57d4be2fdcc20b3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592272"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764472"
 ---
 # <a name="platformobjectdisposedexception-class"></a>Classe Platform::ObjectDisposedException
 Gerada quando uma operação é executada em um objeto descartado.  

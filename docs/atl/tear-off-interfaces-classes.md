@@ -17,20 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb7fec440902652d8ab04f688488a00340ab41aa
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8ea912ec843cdf91d45b2a6e588c25ffd7749546
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956973"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762935"
 ---
 # <a name="tear-off-interfaces-classes"></a>Classes de Interfaces destacáveis
-As classes a seguir fornecem suporte para interfaces destacáveis:  
-  
--   [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md) implementa `IUnknown` para uma interface destacáveis.  
-  
--   [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) implementa `IUnknown` para uma interface destacáveis "cache".  
-  
-## <a name="see-also"></a>Consulte também  
- [Visão geral da classe](../atl/atl-class-overview.md)
+
+As classes a seguir fornecem suporte para interfaces destacáveis:
+
+- [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md) implementa `IUnknown` para uma interface destacáveis.
+
+- [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md) implementa `IUnknown` para uma interface destacáveis "cache".
+
+## <a name="see-also"></a>Consulte também
+
+[Visão geral da classe](../atl/atl-class-overview.md)
 

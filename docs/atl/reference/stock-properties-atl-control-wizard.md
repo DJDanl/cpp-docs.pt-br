@@ -14,29 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b6ba488e2cb498aa3d130a8525f1438adc6d406
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b84563c2576f4969acb4162bcaa92d6f62f97c72
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358893"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767459"
 ---
-# <a name="stock-properties-atl-control-wizard"></a>Propriedades de estoque, o Assistente de controle ATL
-Esta página do assistente identifica as propriedades de estoque com suporte para o controle. Por padrão, não há propriedades são identificadas.  
-  
- **Sem suporte**  
- Indica as propriedades disponíveis no momento não há suporte para o controle.  
-  
- **Com suporte**  
- Indica as propriedades que são atualmente suportadas para o controle.  
-  
-|Botão de transferência|Descrição|  
-|---------------------|-----------------|  
-|**>**|Adiciona o **com suporte** lista o nome da propriedade selecionado no momento o **não tem suporte** lista.|  
-|**>>**|Adiciona o **com suporte** lista todos os nomes de propriedade disponíveis no **não tem suporte** lista.|  
-|**<**|Remove o nome da propriedade selecionado no momento o **com suporte** lista.|  
-|**<<**|Remove todos os nomes de propriedade listados no momento no **com suporte** lista.|  
-  
-## <a name="see-also"></a>Consulte também  
- [Assistente de Controle da ATL](../../atl/reference/atl-control-wizard.md)
+# <a name="stock-properties-atl-control-wizard"></a>Propriedades de estoque, Assistente de controle ATL
+
+Esta página do assistente identifica as propriedades de estoque com suporte para o controle. Por padrão, nenhuma propriedade é identificada.
+
+**Não tem suporte**  
+Indica as propriedades disponíveis que não têm suporte atualmente para o controle.
+
+**Com suporte**  
+Indica as propriedades que têm suporte atualmente para o controle.
+
+|Botão de transferência|Descrição|
+|---------------------|-----------------|
+|**>**|Adiciona o **com suporte** lista o nome da propriedade selecionado no momento a **não tem suporte** lista.|
+|**>>**|Adiciona o **com suporte** listar todos os nomes de propriedade disponíveis na **não tem suporte** lista.|
+|**<**|Remove o nome da propriedade selecionado no momento a **com suporte** lista.|
+|**<<**|Remove todos os nomes de propriedade listados atualmente na **com suporte** lista.|
+
+## <a name="see-also"></a>Consulte também
+
+[Assistente de Controle da ATL](../../atl/reference/atl-control-wizard.md)
 

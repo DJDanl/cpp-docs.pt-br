@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f5cfe1bf4ae614bc892b4ea93d36fa44604029f1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600849"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764300"
 ---
 # <a name="properties-ccx"></a>Propriedades (C++/CX)
 Tipos de tempo de execução do Windows expõem dados públicos como propriedades. O código de cliente acessa a propriedade como um datamember público. Internamente, a propriedade é implementada como um bloco que contém um método acessador get, um método acessador set ou ambos. Usando os métodos acessadores, você pode executar ações adicionais antes ou depois de recuperar o valor, por exemplo, você pode disparar um evento ou executar verificações de validação.  

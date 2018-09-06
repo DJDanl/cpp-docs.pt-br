@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1597acfdf608d5e8801870fcebb43109c2eb803d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593786"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762577"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Opções de compilador e vinculador (C++/CX)
 Uma variável de ambiente, C + + c++ /CLI opções do compilador CX e opções do vinculador dão suporte a compilação de aplicativos para o tempo de execução do Windows.  

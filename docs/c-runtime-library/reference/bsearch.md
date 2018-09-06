@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77d7576b5e8914148a8c67d8df82573c1f379e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1128834e49de75feba37409101a9ffe2a3e2ece2
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394688"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764781"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -63,7 +63,7 @@ O objeto a ser pesquisado.
 *base*<br/>
 Ponteiro para a base de dados de pesquisa.
 
-*Número*<br/>
+*número*<br/>
 Número de elementos.
 
 *width*<br/>
@@ -74,11 +74,11 @@ Função de retorno de chamada que compara dois elementos. A primeira é um pont
 
 ## <a name="return-value"></a>Valor de retorno
 
-**bSearch** retorna um ponteiro para uma ocorrência de *chave* na matriz apontada pelo *base*. Se *chave* não for encontrado, a função retorna **nulo**. Se a matriz não estiver em ordem de classificação crescente ou contiver registros duplicados com chaves idênticas, o resultado será imprevisível.
+**bSearch** retorna um ponteiro para uma ocorrência de *chave* na matriz apontada por *base*. Se *chave* não for encontrado, a função retorna **nulo**. Se a matriz não estiver em ordem de classificação crescente ou contiver registros duplicados com chaves idênticas, o resultado será imprevisível.
 
 ## <a name="remarks"></a>Comentários
 
-O **bsearch** função executa uma pesquisa binária de uma matriz classificada de *número* elementos, cada um dos *largura* bytes de tamanho. O *base* valor é um ponteiro para a base da matriz a ser pesquisada, e *chave* é o valor que está sendo procurado. O *comparar* parâmetro é um ponteiro para uma rotina fornecido pelo usuário que compara a chave solicitada para um elemento de matriz e retorna um dos valores a seguir, especificando sua relação:
+O **bsearch** função executa uma pesquisa binária de uma matriz classificada de *número* elementos, cada um dos *largura* bytes de tamanho. O *base* valor é um ponteiro para a base da matriz a ser pesquisada, e *chave* é o valor que está sendo procurado. O *comparar* parâmetro é um ponteiro para uma rotina fornecida pelo usuário que compara a chave solicitada para um elemento de matriz e retorna um dos valores a seguir especifica seu relacionamento:
 
 |Valor retornado por *comparar* rotina|Descrição|
 |-----------------------------------------|-----------------|
@@ -86,7 +86,7 @@ O **bsearch** função executa uma pesquisa binária de uma matriz classificada 
 |0|A chave é igual ao elemento da matriz.|
 |> 0|A chave é maior que o elemento da matriz.|
 
-Essa função valida seus parâmetros. Se *comparar*, *chave* ou *número* é **nulo**, ou se *base* é **NULL**e **número* é diferente de zero, ou se *largura* for zero, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e a função retorna **nulo**.
+Essa função valida seus parâmetros. Se *compare*, *chave* ou *número* é **nulo**, ou se *base* é **NULL**e *número* for diferente de zero ou se *largura* for zero, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como `EINVAL` e a função retornará **nulo**.
 
 ## <a name="requirements"></a>Requisitos
 

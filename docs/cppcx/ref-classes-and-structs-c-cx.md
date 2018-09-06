@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ba5ce5b5cb2f55caf00ea6094cb4e14b2b08c236
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584114"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767601"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Classes e estruturas ref (C++/CX)
 O C + + c++ /CLI suporta CX definidos pelo usuário *classes ref* e *estruturas ref*, definidas pelo usuário *classes de valor* e *structs de valor*. Essas estruturas de dados são os contêineres principais pelos quais C + + c++ /CLI CX oferece suporte ao sistema de tipo de tempo de execução do Windows. O conteúdo é emitido para metadados de acordo com determinadas regras específicas, e isso permite que ele seja transmitido entre componentes de tempo de execução do Windows e aplicativos de plataforma Universal do Windows que são escritos em C++ ou outras linguagens.  

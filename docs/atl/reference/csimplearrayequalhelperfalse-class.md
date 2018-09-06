@@ -18,54 +18,62 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a325da2edd4af8b8b0e6e965dc60df8c11bf8d30
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 74bc3326c50f1b460fc212074b7ca34dec518c76
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882850"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43765629"
 ---
 # <a name="csimplearrayequalhelperfalse-class"></a>Classe CSimpleArrayEqualHelperFalse
-Essa classe é um auxiliar para o [CSimpleArray](../../atl/reference/csimplearray-class.md) classe.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
+
+Essa classe é um auxiliar para o [CSimpleArray](../../atl/reference/csimplearray-class.md) classe.
+
+## <a name="syntax"></a>Sintaxe
+
 ```
 template <class T>  
 class CSimpleArrayEqualHelperFalse
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- *T*  
- Uma classe derivada.  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-methods"></a>Métodos Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CSimpleArrayEqualHelperFalse::IsEqual](#isequal)|(Estático) Retorna falso.|  
-  
-## <a name="remarks"></a>Comentários  
- Essa classe de características é um complemento para o `CSimpleArray` classe. IT sempre retorna false e Além disso, será chamada `ATLASSERT` com um argumento de false se ele nunca é referenciado. Em situações em que o teste de igualdade não está suficientemente definido, essa classe permite que uma matriz que contém elementos para operar corretamente para a maioria dos métodos, mas falhar de maneira bem definida para os métodos que dependem de comparações, como [CSimpleArray:: Localizar](../../atl/reference/csimplearray-class.md#find).  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlsimpcoll.h  
-  
-##  <a name="isequal"></a>  CSimpleArrayEqualHelperFalse::IsEqual  
- Retorna false.  
-  
+```
+
+#### <a name="parameters"></a>Parâmetros
+
+*T*  
+Uma classe derivada.
+
+## <a name="members"></a>Membros
+
+### <a name="public-methods"></a>Métodos Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CSimpleArrayEqualHelperFalse::IsEqual](#isequal)|(Estático) Retorna falso.|
+
+## <a name="remarks"></a>Comentários
+
+Essa classe de características é um complemento para o `CSimpleArray` classe. IT sempre retorna false e Além disso, será chamada `ATLASSERT` com um argumento de false se ele nunca é referenciado. Em situações em que o teste de igualdade não está suficientemente definido, essa classe permite que uma matriz que contém elementos para operar corretamente para a maioria dos métodos, mas falhar de maneira bem definida para os métodos que dependem de comparações, como [CSimpleArray:: Localizar](../../atl/reference/csimplearray-class.md#find).
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** atlsimpcoll.h
+
+##  <a name="isequal"></a>  CSimpleArrayEqualHelperFalse::IsEqual
+
+Retorna false.
+
 ```
 static bool IsEqual(const T&, const T&);
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
- Retorna false.  
-  
-### <a name="remarks"></a>Comentários  
- Esse método sempre retorna false e chamará `ATLASSERT` com um argumento FALSO se referenciado. A finalidade de `CSimpleArrayEqualHelperFalse::IsEqual` é forçar métodos usando comparações falhe de maneira bem definida, quando os testes de igualdade não foram definidos adequadamente.  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)   
- [Visão geral da classe](../../atl/atl-class-overview.md)
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Retorna false.
+
+### <a name="remarks"></a>Comentários
+
+Esse método sempre retorna false e chamará `ATLASSERT` com um argumento FALSO se referenciado. A finalidade de `CSimpleArrayEqualHelperFalse::IsEqual` é forçar métodos usando comparações falhe de maneira bem definida, quando os testes de igualdade não foram definidos adequadamente.
+
+## <a name="see-also"></a>Consulte também
+
+[Classe CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)   
+[Visão geral da classe](../../atl/atl-class-overview.md)

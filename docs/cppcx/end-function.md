@@ -16,11 +16,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ec25b92ca9ce21f72ff2fb573aae316ef1c19eac
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596644"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759093"
 ---
 # <a name="end-function"></a>Função end
 Retorna um iterador que aponta além do fim de uma coleção que é acessada pelo parâmetro de interface especificado.  

@@ -1,5 +1,5 @@
 ---
-title: Inserindo um controle composto | Microsoft Docs
+title: Inserindo um controle de composição | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 796974bb9fb7ab7965fd2af0b62378d62d621652
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c5a2c99992d84757aebcb50dca828dbdc23870b8
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358684"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43764160"
 ---
-# <a name="inserting-a-composite-control"></a>Inserindo um controle composto
-O **Adicionar classe** caixa de diálogo permite que você inserir um objeto ATL em um projeto. Acessar essa caixa de diálogo clicando com o nome do projeto no Gerenciador de soluções, apontando para **adicionar**e, em seguida, clicando em **Adicionar classe**.  
-  
- No **Adicionar classe** caixa de diálogo caixa, escolha **controle ATL**. Isso iniciará o [Assistente de controle ATL](../atl/reference/atl-control-wizard.md). Para criar um controle composto, selecione o **opções** guia e, em seguida, clique no **controle composto** caixa de seleção.  
-  
- Uma página HTML padrão será criada para o controle de exibição.  
-  
-## <a name="see-also"></a>Consulte também  
- [Fundamentos do controle composto](../atl/atl-composite-control-fundamentals.md)
+# <a name="inserting-a-composite-control"></a>Inserindo um controle de composição
+
+O **Adicionar classe** caixa de diálogo permite que você inserir um objeto ATL em um projeto. Acessar essa caixa de diálogo clicando com o nome do projeto no Gerenciador de soluções, que aponta para **Add**e, em seguida, clicando em **Adicionar classe**.
+
+No **Add Class** diálogo caixa, escolha **controle ATL**. Isso iniciará a [Assistente de controle ATL](../atl/reference/atl-control-wizard.md). Para criar um controle de composição, selecione a **opções** guia e, em seguida, clique no **controle de composição** caixa de seleção.
+
+Uma página HTML padrão será criada para o controle de exibição.
+
+## <a name="see-also"></a>Consulte também
+
+[Fundamentos do controle composto](../atl/atl-composite-control-fundamentals.md)
 

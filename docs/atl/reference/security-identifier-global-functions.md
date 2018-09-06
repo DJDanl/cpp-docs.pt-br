@@ -47,254 +47,290 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b567c56c8c4ca5c25fc870e91c8c608e17280557
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 74836c06e4ff7a9188c9886087502ad4909aebf0
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610227"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762408"
 ---
 # <a name="security-identifier-global-functions"></a>Funções globais de identificador de segurança
-Essas funções retornam objetos de SID bem conhecido comuns.  
-  
+
+Essas funções retornam objetos de SID bem conhecido comuns.
+
 > [!IMPORTANT]
->  As funções listadas na tabela a seguir não podem ser usadas em aplicativos executados no tempo de execução do Windows.  
-  
-|||  
-|-|-|  
-|[SIDs::AccountOps](#accountops)|Retorna o SID DOMAIN_ALIAS_RID_ACCOUNT_OPS.|  
-|[SIDs::Admins](#admins)|Retorna o SID DOMAIN_ALIAS_RID_ADMINS.|  
-|[SIDs::AnonymousLogon](#anonymouslogon)|Retorna o SID SECURITY_ANONYMOUS_LOGON_RID.|  
-|[SIDs::AuthenticatedUser](#authenticateduser)|Retorna o SID SECURITY_AUTHENTICATED_USER_RID.|  
-|[SIDs::BackupOps](#backupops)|Retorna o SID DOMAIN_ALIAS_RID_BACKUP_OPS.|  
-|[SIDs::batch](#batch)|Retorna o SID SECURITY_BATCH_RID.|  
-|[SIDs::CreatorGroup](#creatorgroup)|Retorna o SID SECURITY_CREATOR_GROUP_RID.|  
-|[SIDs::CreatorGroupServer](#creatorgroupserver)|Retorna o SID SECURITY_CREATOR_GROUP_SERVER_RID.|  
-|[SIDs::CreatorOwner](#creatorowner)|Retorna o SID SECURITY_CREATOR_OWNER_RID.|  
-|[SIDs::CreatorOwnerServer](#creatorownerserver)|Retorna o SID SECURITY_CREATOR_OWNER_SERVER_RID.|  
-|[SIDs::dialup](#dialup)|Retorna o SID SECURITY_DIALUP_RID.|  
-|[SIDs::Guests](#guests)|Retorna o SID DOMAIN_ALIAS_RID_GUESTS.|  
-|[SIDs::Interactive](#interactive)|Retorna o SID SECURITY_INTERACTIVE_RID.|  
-|[SIDs::local](#local)|Retorna o SID SECURITY_LOCAL_RID.|  
-|[SIDs::Network](#network)|Retorna o SID SECURITY_NETWORK_RID.|  
-|[SIDs::NetworkService](#networkservice)|Retorna o SID SECURITY_NETWORK_SERVICE_RID.|  
-|[SIDs::null](#null)|Retorna o SID SECURITY_NULL_RID.|  
-|[SIDs::PreW2KAccess](#prew2kaccess)|Retorna o SID DOMAIN_ALIAS_RID_PREW2KCOMPACCESS.|  
-|[SIDs::PowerUsers](#powerusers)|Retorna o SID DOMAIN_ALIAS_RID_POWER_USERS.|  
-|[SIDs::PrintOps](#printops)|Retorna o SID DOMAIN_ALIAS_RID_PRINT_OPS.|  
-|[SIDs::proxy](#proxy)|Retorna o SID SECURITY_PROXY_RID.|  
-|[SIDs::RasServers](#rasservers)|Retorna o SID DOMAIN_ALIAS_RID_RAS_SERVERS.|  
-|[SIDs::Replicator](#replicator)|Retorna o SID DOMAIN_ALIAS_RID_REPLICATOR.|  
-|[SIDs::RestrictedCode](#restrictedcode)|Retorna o SID SECURITY_RESTRICTED_CODE_RID.|  
-|[SIDs::Self](#self)|Retorna o SID SECURITY_PRINCIPAL_SELF_RID.|  
-|[SIDs::ServerLogon](#serverlogon)|Retorna o SID SECURITY_SERVER_LOGON_RID.|  
-|[SIDs::Service](#service)|Retorna o SID SECURITY_SERVICE_RID.|  
-|[SIDs::System](#system)|Retorna o SID SECURITY_LOCAL_SYSTEM_RID.|  
-|[SIDs::SystemOps](#systemops)|Retorna o SID DOMAIN_ALIAS_RID_SYSTEM_OPS.|  
-|[SIDs::terminalserver](#terminalserver)|Retorna o SID SECURITY_TERMINAL_SERVER_RID.|  
-|[SIDs::Users](#users)|Retorna o SID DOMAIN_ALIAS_RID_USERS.|  
+>  As funções listadas na tabela a seguir não podem ser usadas em aplicativos executados no tempo de execução do Windows.
+
+|||
+|-|-|
+|[SIDs::AccountOps](#accountops)|Retorna o SID DOMAIN_ALIAS_RID_ACCOUNT_OPS.|
+|[SIDs::Admins](#admins)|Retorna o SID DOMAIN_ALIAS_RID_ADMINS.|
+|[SIDs::AnonymousLogon](#anonymouslogon)|Retorna o SID SECURITY_ANONYMOUS_LOGON_RID.|
+|[SIDs::AuthenticatedUser](#authenticateduser)|Retorna o SID SECURITY_AUTHENTICATED_USER_RID.|
+|[SIDs::BackupOps](#backupops)|Retorna o SID DOMAIN_ALIAS_RID_BACKUP_OPS.|
+|[SIDs::batch](#batch)|Retorna o SID SECURITY_BATCH_RID.|
+|[SIDs::CreatorGroup](#creatorgroup)|Retorna o SID SECURITY_CREATOR_GROUP_RID.|
+|[SIDs::CreatorGroupServer](#creatorgroupserver)|Retorna o SID SECURITY_CREATOR_GROUP_SERVER_RID.|
+|[SIDs::CreatorOwner](#creatorowner)|Retorna o SID SECURITY_CREATOR_OWNER_RID.|
+|[SIDs::CreatorOwnerServer](#creatorownerserver)|Retorna o SID SECURITY_CREATOR_OWNER_SERVER_RID.|
+|[SIDs::dialup](#dialup)|Retorna o SID SECURITY_DIALUP_RID.|
+|[SIDs::Guests](#guests)|Retorna o SID DOMAIN_ALIAS_RID_GUESTS.|
+|[SIDs::Interactive](#interactive)|Retorna o SID SECURITY_INTERACTIVE_RID.|
+|[SIDs::local](#local)|Retorna o SID SECURITY_LOCAL_RID.|
+|[SIDs::Network](#network)|Retorna o SID SECURITY_NETWORK_RID.|
+|[SIDs::NetworkService](#networkservice)|Retorna o SID SECURITY_NETWORK_SERVICE_RID.|
+|[SIDs::null](#null)|Retorna o SID SECURITY_NULL_RID.|
+|[SIDs::PreW2KAccess](#prew2kaccess)|Retorna o SID DOMAIN_ALIAS_RID_PREW2KCOMPACCESS.|
+|[SIDs::PowerUsers](#powerusers)|Retorna o SID DOMAIN_ALIAS_RID_POWER_USERS.|
+|[SIDs::PrintOps](#printops)|Retorna o SID DOMAIN_ALIAS_RID_PRINT_OPS.|
+|[SIDs::proxy](#proxy)|Retorna o SID SECURITY_PROXY_RID.|
+|[SIDs::RasServers](#rasservers)|Retorna o SID DOMAIN_ALIAS_RID_RAS_SERVERS.|
+|[SIDs::Replicator](#replicator)|Retorna o SID DOMAIN_ALIAS_RID_REPLICATOR.|
+|[SIDs::RestrictedCode](#restrictedcode)|Retorna o SID SECURITY_RESTRICTED_CODE_RID.|
+|[SIDs::Self](#self)|Retorna o SID SECURITY_PRINCIPAL_SELF_RID.|
+|[SIDs::ServerLogon](#serverlogon)|Retorna o SID SECURITY_SERVER_LOGON_RID.|
+|[SIDs::Service](#service)|Retorna o SID SECURITY_SERVICE_RID.|
+|[SIDs::System](#system)|Retorna o SID SECURITY_LOCAL_SYSTEM_RID.|
+|[SIDs::SystemOps](#systemops)|Retorna o SID DOMAIN_ALIAS_RID_SYSTEM_OPS.|
+|[SIDs::terminalserver](#terminalserver)|Retorna o SID SECURITY_TERMINAL_SERVER_RID.|
+|[SIDs::Users](#users)|Retorna o SID DOMAIN_ALIAS_RID_USERS.|
 |[SIDs::World](#world)|Retorna o SID SECURITY_WORLD_RID.|  
 
-### <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlsecurity. h 
+### <a name="requirements"></a>Requisitos
 
-##  <a name="accountops"></a>  SIDs::AccountOps  
- Retorna o SID DOMAIN_ALIAS_RID_ACCOUNT_OPS.    
-  
+**Cabeçalho:** atlsecurity. h 
+
+##  <a name="accountops"></a>  SIDs::AccountOps
+
+Retorna o SID DOMAIN_ALIAS_RID_ACCOUNT_OPS.
+
 ```
 CSid AccountOps() throw(...);
-```  
-  
-##  <a name="admins"></a>  SIDs::Admins  
- Retorna o SID DOMAIN_ALIAS_RID_ADMINS.  
+```
+
+##  <a name="admins"></a>  SIDs::Admins
+
+Retorna o SID DOMAIN_ALIAS_RID_ADMINS.  
 ```
 CSid Admins() throw(...);
-```  
-  
-##  <a name="anonymouslogon"></a>  SIDs::AnonymousLogon  
- Retorna o SID SECURITY_ANONYMOUS_LOGON_RID.  
+```
+
+##  <a name="anonymouslogon"></a>  SIDs::AnonymousLogon
+
+Retorna o SID SECURITY_ANONYMOUS_LOGON_RID.  
 ```
 CSid AnonymousLogon() throw(...);
-```  
-  
-##  <a name="authenticateduser"></a>  SIDs::AuthenticatedUser  
- Retorna o SID SECURITY_AUTHENTICATED_USER_RID.  
+```
+
+##  <a name="authenticateduser"></a>  SIDs::AuthenticatedUser
+
+Retorna o SID SECURITY_AUTHENTICATED_USER_RID.  
 ```
 CSid AuthenticatedUser() throw(...);
-```  
-  
-##  <a name="backupops"></a>  SIDs::BackupOps  
- Retorna o SID DOMAIN_ALIAS_RID_BACKUP_OPS.  
+```
+
+##  <a name="backupops"></a>  SIDs::BackupOps
+
+Retorna o SID DOMAIN_ALIAS_RID_BACKUP_OPS.  
 ```
 CSid BackupOps() throw(...);
-```  
-  
-##  <a name="batch"></a>  SIDs::batch  
- Retorna o SID SECURITY_BATCH_RID.  
+```
+
+##  <a name="batch"></a>  SIDs::batch
+
+Retorna o SID SECURITY_BATCH_RID.  
 ```
 CSid Batch() throw(...);
-```  
-  
-##  <a name="creatorgroup"></a>  SIDs::CreatorGroup  
- Retorna o SID SECURITY_CREATOR_GROUP_RID.  
+```
+
+##  <a name="creatorgroup"></a>  SIDs::CreatorGroup
+
+Retorna o SID SECURITY_CREATOR_GROUP_RID.  
 ```
 CSid CreatorGroup() throw(...);
-```  
-  
-##  <a name="creatorgroupserver"></a>  SIDs::CreatorGroupServer  
- Retorna o SID SECURITY_CREATOR_GROUP_SERVER_RID.  
+```
+
+##  <a name="creatorgroupserver"></a>  SIDs::CreatorGroupServer
+
+Retorna o SID SECURITY_CREATOR_GROUP_SERVER_RID.  
 ```
 CSid CreatorGroupServer() throw(...);
-```  
-  
-##  <a name="creatorowner"></a>  SIDs::CreatorOwner  
- Retorna o SID SECURITY_CREATOR_OWNER_RID.  
+```
+
+##  <a name="creatorowner"></a>  SIDs::CreatorOwner
+
+Retorna o SID SECURITY_CREATOR_OWNER_RID.  
 ```
 CSid CreatorOwner() throw(...);
-```  
-  
-##  <a name="creatorownerserver"></a>  SIDs::CreatorOwnerServer  
- Retorna o SID SECURITY_CREATOR_OWNER_SERVER_RID.  
+```
+
+##  <a name="creatorownerserver"></a>  SIDs::CreatorOwnerServer
+
+Retorna o SID SECURITY_CREATOR_OWNER_SERVER_RID.  
 ```
 CSid CreatorOwnerServer() throw(...);
-```  
-  
-##  <a name="dialup"></a>  SIDs::dialup  
- Retorna o SID SECURITY_DIALUP_RID.  
+```
+
+##  <a name="dialup"></a>  SIDs::dialup
+
+Retorna o SID SECURITY_DIALUP_RID.  
 ```
 CSid Dialup() throw(...);
-```  
-  
-##  <a name="guests"></a>  SIDs::Guests  
- Retorna o SID DOMAIN_ALIAS_RID_GUESTS.  
+```
+
+##  <a name="guests"></a>  SIDs::Guests
+
+Retorna o SID DOMAIN_ALIAS_RID_GUESTS.  
 ```
 CSid Guests() throw(...);
-```  
-  
-##  <a name="interactive"></a>  SIDs::Interactive  
- Retorna o SID SECURITY_INTERACTIVE_RID.  
+```
+
+##  <a name="interactive"></a>  SIDs::Interactive
+
+Retorna o SID SECURITY_INTERACTIVE_RID.  
 ```
 CSid Interactive() throw(...);
-```  
-  
-##  <a name="local"></a>  SIDs::local  
- Retorna o SID SECURITY_LOCAL_RID.  
+```
+
+##  <a name="local"></a>  SIDs::local
+
+Retorna o SID SECURITY_LOCAL_RID.  
 ```
 CSid Local() throw(...);
-```  
-  
-##  <a name="network"></a>  SIDs::Network  
- Retorna o SID SECURITY_NETWORK_RID.  
+```
+
+##  <a name="network"></a>  SIDs::Network
+
+Retorna o SID SECURITY_NETWORK_RID.  
 ```
 CSid Network() throw(...);
-```  
-  
-##  <a name="networkservice"></a>  SIDs::NetworkService  
- Retorna o SID SECURITY_NETWORK_SERVICE_RID.  
+```
+
+##  <a name="networkservice"></a>  SIDs::NetworkService
+
+Retorna o SID SECURITY_NETWORK_SERVICE_RID.  
 ```
 CSid NetworkService() throw(...);
-```  
-  
-### <a name="remarks"></a>Comentários  
- Use o NetworkService para permitir que o usuário NT AUTHORITY\NetworkService ler um objeto de segurança CPerfMon. NetworkService adiciona um SecurityAttribute ao código ATLServer que permitirá que a DLL de logon na conta NetworkService no Windows XP Home Edition, Windows XP Professional, Windows Server 2003 e o sistema de operacional maior.  
-  
- Quando os contadores de log personalizado são criados com a classe ATLServer CPerfMon no MMC do Perfmon, os contadores podem não aparecer ao exibir o arquivo de log, embora eles sejam exibidos corretamente no modo de exibição em tempo real. Contadores de desempenho personalizados CPerfMon não tem as permissões necessárias para executar sob o serviço de "Logs e alertas de desempenho" (smlogsvc.exe) no Windows XP Home Edition, Windows XP Professional, Windows Server 2003 (ou posterior) de sistemas de operacionais. Esse serviço é executado sob a conta "NT AUTHORITY\NetworkService".  
-  
-##  <a name="null"></a>  SIDs::null  
- Retorna o SID SECURITY_NULL_RID.  
+```
+
+### <a name="remarks"></a>Comentários
+
+Use o NetworkService para permitir que o usuário NT AUTHORITY\NetworkService ler um objeto de segurança CPerfMon. NetworkService adiciona um SecurityAttribute ao código ATLServer que permitirá que a DLL de logon na conta NetworkService no Windows XP Home Edition, Windows XP Professional, Windows Server 2003 e o sistema de operacional maior.
+
+Quando os contadores de log personalizado são criados com a classe ATLServer CPerfMon no MMC do Perfmon, os contadores podem não aparecer ao exibir o arquivo de log, embora eles sejam exibidos corretamente no modo de exibição em tempo real. Contadores de desempenho personalizados CPerfMon não tem as permissões necessárias para executar sob o serviço de "Logs e alertas de desempenho" (smlogsvc.exe) no Windows XP Home Edition, Windows XP Professional, Windows Server 2003 (ou posterior) de sistemas de operacionais. Esse serviço é executado sob a conta "NT AUTHORITY\NetworkService".
+
+##  <a name="null"></a>  SIDs::null
+
+Retorna o SID SECURITY_NULL_RID.  
 ```
 CSid Null() throw(...);
-```  
-  
-##  <a name="prew2kaccess"></a>  SIDs::PreW2KAccess  
- Retorna o SID DOMAIN_ALIAS_RID_PREW2KCOMPACCESS.  
+```
+
+##  <a name="prew2kaccess"></a>  SIDs::PreW2KAccess
+
+Retorna o SID DOMAIN_ALIAS_RID_PREW2KCOMPACCESS.  
 ```
 CSid PreW2KAccess() throw(...);
-```  
-  
-##  <a name="powerusers"></a>  SIDs::PowerUsers  
- Retorna o SID DOMAIN_ALIAS_RID_POWER_USERS.  
+```
+
+##  <a name="powerusers"></a>  SIDs::PowerUsers
+
+Retorna o SID DOMAIN_ALIAS_RID_POWER_USERS.  
 ```
 CSid PowerUsers() throw(...);
-```  
-  
-##  <a name="printops"></a>  SIDs::PrintOps  
- Retorna o SID DOMAIN_ALIAS_RID_PRINT_OPS.  
+```
+
+##  <a name="printops"></a>  SIDs::PrintOps
+
+Retorna o SID DOMAIN_ALIAS_RID_PRINT_OPS.  
 ```
 CSid PrintOps() throw(...);
-```  
-  
-##  <a name="proxy"></a>  SIDs::proxy  
- Retorna o SID SECURITY_PROXY_RID.  
+```
+
+##  <a name="proxy"></a>  SIDs::proxy
+
+Retorna o SID SECURITY_PROXY_RID.  
 ```
 CSid Proxy() throw(...);
-```  
-  
-##  <a name="rasservers"></a>  SIDs::RasServers  
- Retorna o SID DOMAIN_ALIAS_RID_RAS_SERVERS.  
+```
+
+##  <a name="rasservers"></a>  SIDs::RasServers
+
+Retorna o SID DOMAIN_ALIAS_RID_RAS_SERVERS.  
 ```
 CSid RasServers() throw(...);
-```  
-  
-##  <a name="replicator"></a>  SIDs::Replicator  
- Retorna o SID DOMAIN_ALIAS_RID_REPLICATOR.  
+```
+
+##  <a name="replicator"></a>  SIDs::Replicator
+
+Retorna o SID DOMAIN_ALIAS_RID_REPLICATOR.  
 ```
 CSid Replicator() throw(...);
-```  
-  
-##  <a name="restrictedcode"></a>  SIDs::RestrictedCode  
- Retorna o SID SECURITY_RESTRICTED_CODE_RID.  
+```
+
+##  <a name="restrictedcode"></a>  SIDs::RestrictedCode
+
+Retorna o SID SECURITY_RESTRICTED_CODE_RID.  
 ```
 CSid RestrictedCode() throw(...);
-```  
-  
-##  <a name="self"></a>  SIDs::Self  
- Retorna o SID SECURITY_PRINCIPAL_SELF_RID.  
+```
+
+##  <a name="self"></a>  SIDs::Self
+
+Retorna o SID SECURITY_PRINCIPAL_SELF_RID.  
 ```
 CSid Self() throw(...);
-```  
-  
-##  <a name="serverlogon"></a>  SIDs::ServerLogon  
- Retorna o SID SECURITY_SERVER_LOGON_RID.  
+```
+
+##  <a name="serverlogon"></a>  SIDs::ServerLogon
+
+Retorna o SID SECURITY_SERVER_LOGON_RID.  
 ```
 CSid ServerLogon() throw(...);
-```  
-  
-##  <a name="service"></a>  SIDs::Service  
- Retorna o SID SECURITY_SERVICE_RID.  
+```
+
+##  <a name="service"></a>  SIDs::Service
+
+Retorna o SID SECURITY_SERVICE_RID.  
 ```
 CSid Service() throw(...);
-```  
-  
-##  <a name="system"></a>  SIDs::System  
- Retorna o SID SECURITY_LOCAL_SYSTEM_RID.  
+```
+
+##  <a name="system"></a>  SIDs::System
+
+Retorna o SID SECURITY_LOCAL_SYSTEM_RID.  
 ```
 CSid System() throw(...);
-```  
-  
-##  <a name="systemops"></a>  SIDs::SystemOps  
- Retorna o SID DOMAIN_ALIAS_RID_SYSTEM_OPS.  
+```
+
+##  <a name="systemops"></a>  SIDs::SystemOps
+
+Retorna o SID DOMAIN_ALIAS_RID_SYSTEM_OPS.  
 ```
 CSid SystemOps() throw(...);
-```  
-  
-##  <a name="terminalserver"></a>  SIDs::terminalserver  
- Retorna o SID SECURITY_TERMINAL_SERVER_RID.  
+```
+
+##  <a name="terminalserver"></a>  SIDs::terminalserver
+
+Retorna o SID SECURITY_TERMINAL_SERVER_RID.  
 ```
 CSid TerminalServer() throw(...);
-```  
-  
-##  <a name="users"></a>  SIDs::Users  
- Retorna o SID DOMAIN_ALIAS_RID_USERS.  
+```
+
+##  <a name="users"></a>  SIDs::Users
+
+Retorna o SID DOMAIN_ALIAS_RID_USERS.  
 ```
 CSid Users() throw(...);
-```  
-  
-##  <a name="world"></a>  SIDs::World  
- Retorna o SID SECURITY_WORLD_RID.  
+```
+
+##  <a name="world"></a>  SIDs::World
+
+Retorna o SID SECURITY_WORLD_RID.  
 ```
 CSid World() throw(...);
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Funções](../../atl/reference/atl-functions.md)
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Funções](../../atl/reference/atl-functions.md)

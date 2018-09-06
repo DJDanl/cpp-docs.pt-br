@@ -10,11 +10,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8465572cf5b921f56e357ae554ecdeaf9943b725
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606370"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767572"
 ---
 # <a name="events-ccx"></a>Eventos (C++/CX)
 Um Windows tempo de execução do tipo pode declarar (isto é, publicar) eventos e o código de cliente no mesmo componente ou em outros componentes podem assinar esses eventos associando métodos chamados *manipuladores de eventos* com o evento. Vários manipuladores de eventos podem ser associados a um único evento. Quando o objeto de publicação gera o evento, ele faz com que todos os manipuladores de eventos sejam invocados. Dessa forma, uma classe assinante poderá executar qualquer ação personalizada que seja apropriada quando o editor gerar o evento. Um evento possui um tipo delegate que especifica a assinatura que todos os manipuladores de eventos devem ter para assinar o evento.  

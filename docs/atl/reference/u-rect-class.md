@@ -19,69 +19,77 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ebb76d2f373862b39f2a3742481e14523a7a94b
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 1041141e9f31e59ab7a1884e976828972c0abd91
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37882215"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43767318"
 ---
 # <a name="urect-class"></a>Classe u_rect
-Essa classe de adaptador do argumento permite tanto `RECT` ponteiros ou referências a serem passados para uma função que é implementada em termos de ponteiros.  
-  
+
+Essa classe de adaptador do argumento permite tanto `RECT` ponteiros ou referências a serem passados para uma função que é implementada em termos de ponteiros.
+
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
+>  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+
+## <a name="syntax"></a>Sintaxe
+
 ```
 class _U_RECT
-```  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-constructors"></a>Construtores Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[_U_RECT::_U_RECT](#_u_rect___u_rect)|O construtor.|  
-  
-### <a name="public-data-members"></a>Membros de Dados Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[_U_RECT::m_lpRect](#_u_rect__m_lprect)|Ponteiro para um `RECT`.|  
-  
-## <a name="remarks"></a>Comentários  
- A classe define duas sobrecargas de construtor: uma aceita um **RECT &** argumento e o outro aceita um `LPRECT` argumento. O primeiro construtor armazena o endereço do argumento de referência no membro de dados único da classe, [m_lpRect](#_u_rect__m_lprect). O argumento para o construtor do ponteiro é armazenado diretamente, sem conversão.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlwin  
-  
-##  <a name="_u_rect__m_lprect"></a>  _U_RECT::m_lpRect  
- A classe contém o valor passado para qualquer um dos seus construtores como pública `LPRECT` membro de dados.  
-  
+```
+
+## <a name="members"></a>Membros
+
+### <a name="public-constructors"></a>Construtores Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[_U_RECT::_U_RECT](#_u_rect___u_rect)|O construtor.|
+
+### <a name="public-data-members"></a>Membros de Dados Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[_U_RECT::m_lpRect](#_u_rect__m_lprect)|Ponteiro para um `RECT`.|
+
+## <a name="remarks"></a>Comentários
+
+A classe define duas sobrecargas de construtor: uma aceita um **RECT &** argumento e o outro aceita um `LPRECT` argumento. O primeiro construtor armazena o endereço do argumento de referência no membro de dados único da classe, [m_lpRect](#_u_rect__m_lprect). O argumento para o construtor do ponteiro é armazenado diretamente, sem conversão.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** atlwin
+
+##  <a name="_u_rect__m_lprect"></a>  _U_RECT::m_lpRect
+
+A classe contém o valor passado para qualquer um dos seus construtores como pública `LPRECT` membro de dados.
+
 ```
 LPRECT m_lpRect;
-```  
-  
-##  <a name="_u_rect___u_rect"></a>  _U_RECT::_U_RECT  
- O endereço do argumento de referência é armazenado no membro de dados único da classe, [m_lpRect](#_u_rect__m_lprect).  
-  
+```
+
+##  <a name="_u_rect___u_rect"></a>  _U_RECT::_U_RECT
+
+O endereço do argumento de referência é armazenado no membro de dados único da classe, [m_lpRect](#_u_rect__m_lprect).
+
 ```
 _U_RECT(RECT& rc);  
 _U_RECT(LPRECT lpRect);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *RC*  
- Uma referência a `RECT`.  
-  
- *lpRect*  
- Um `RECT` ponteiro.  
-  
-### <a name="remarks"></a>Comentários  
- O argumento para o construtor do ponteiro é armazenado diretamente, sem conversão.  
-  
-## <a name="see-also"></a>Consulte também  
- [Visão geral da classe](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*RC*  
+Uma referência a `RECT`.
+
+*lpRect*  
+Um `RECT` ponteiro.
+
+### <a name="remarks"></a>Comentários
+
+O argumento para o construtor do ponteiro é armazenado diretamente, sem conversão.
+
+## <a name="see-also"></a>Consulte também
+
+[Visão geral da classe](../../atl/atl-class-overview.md)

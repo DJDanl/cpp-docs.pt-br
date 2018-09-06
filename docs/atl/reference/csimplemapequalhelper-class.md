@@ -19,79 +19,90 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d629806582d7ad9902ef5ca0d9425d6f1ecd7d7
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 1670ff7ed53d05b1dfc09e6953650892b0335f61
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37879688"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761463"
 ---
 # <a name="csimplemapequalhelper-class"></a>Classe CSimpleMapEqualHelper
-Essa classe é um auxiliar para o [CSimpleMap](../../atl/reference/csimplemap-class.md) classe.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
+
+Essa classe é um auxiliar para o [CSimpleMap](../../atl/reference/csimplemap-class.md) classe.
+
+## <a name="syntax"></a>Sintaxe
+
 ```
 template <class TKey, class TVal>  
 class CSimpleMapEqualHelper
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- *TKey*  
- O elemento-chave.  
-  
- *TVal*  
- O elemento de valor.  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-methods"></a>Métodos Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|(Estático) Testes de duas chaves quanto à igualdade.|  
-|[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|(Estático) Testa dois valores quanto à igualdade.|  
-  
-## <a name="remarks"></a>Comentários  
- Essa classe de características é um suplemento para o `CSimpleMap` classe. Fornece métodos para comparar dois `CSimpleMap` igualdade de elementos (especificamente, os componentes de chave e valor) do objeto. Por padrão, as chaves e valores são comparados usando **Operator**, mas se o mapa contém tipos de dados complexos que não têm seu próprios operador de igualdade, essa classe pode ser substituída para fornecer a funcionalidade adicional necessária.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlsimpcoll.h  
-  
-##  <a name="isequalkey"></a>  CSimpleMapEqualHelper::IsEqualKey  
- Testes de duas chaves quanto à igualdade.  
-  
+```
+
+#### <a name="parameters"></a>Parâmetros
+
+*TKey*  
+O elemento-chave.
+
+*TVal*  
+O elemento de valor.
+
+## <a name="members"></a>Membros
+
+### <a name="public-methods"></a>Métodos Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|(Estático) Testes de duas chaves quanto à igualdade.|
+|[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|(Estático) Testa dois valores quanto à igualdade.|
+
+## <a name="remarks"></a>Comentários
+
+Essa classe de características é um suplemento para o `CSimpleMap` classe. Fornece métodos para comparar dois `CSimpleMap` igualdade de elementos (especificamente, os componentes de chave e valor) do objeto. Por padrão, as chaves e valores são comparados usando **Operator**, mas se o mapa contém tipos de dados complexos que não têm seu próprios operador de igualdade, essa classe pode ser substituída para fornecer a funcionalidade adicional necessária.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** atlsimpcoll.h
+
+##  <a name="isequalkey"></a>  CSimpleMapEqualHelper::IsEqualKey
+
+Testes de duas chaves quanto à igualdade.
+
 ```
 static bool IsEqualKey(const TKey& k1, const TKey& k2);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *K1*  
- A primeira chave.  
-  
- *K2*  
- A segunda chave.  
-  
-### <a name="return-value"></a>Valor de retorno  
- Retorna VERDADEIRO se as chaves são iguais, caso contrário, false.  
-  
-##  <a name="isequalvalue"></a>  CSimpleMapEqualHelper::IsEqualValue  
- Testa dois valores quanto à igualdade.  
-  
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*K1*  
+A primeira chave.
+
+*K2*  
+A segunda chave.
+
+### <a name="return-value"></a>Valor de retorno
+
+Retorna VERDADEIRO se as chaves são iguais, caso contrário, false.
+
+##  <a name="isequalvalue"></a>  CSimpleMapEqualHelper::IsEqualValue
+
+Testa dois valores quanto à igualdade.
+
 ```
 static bool IsEqualValue(const TVal& v1, const TVal& v2);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *v1*  
- O primeiro valor.  
-  
- *v2*  
- O segundo valor.  
-  
-### <a name="return-value"></a>Valor de retorno  
- Retorna true se os valores forem iguais, caso contrário, false.  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe CSimpleMapEqualHelperFalse](../../atl/reference/csimplemapequalhelperfalse-class.md)   
- [Visão geral da classe](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*v1*  
+O primeiro valor.
+
+*v2*  
+O segundo valor.
+
+### <a name="return-value"></a>Valor de retorno
+
+Retorna true se os valores forem iguais, caso contrário, false.
+
+## <a name="see-also"></a>Consulte também
+
+[Classe CSimpleMapEqualHelperFalse](../../atl/reference/csimplemapequalhelperfalse-class.md)   
+[Visão geral da classe](../../atl/atl-class-overview.md)

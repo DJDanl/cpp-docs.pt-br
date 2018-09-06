@@ -20,90 +20,105 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94532b40bb44094290eab29a2b8a1f6095a225c5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a35579cc29e2ec964998c3c126c7aadb17de57e0
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221095"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757832"
 ---
 # <a name="ccomallocator-class"></a>Classe CComAllocator
-Essa classe fornece métodos para gerenciamento de memória usando COM rotinas de memória.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
+
+Essa classe fornece métodos para gerenciamento de memória usando COM rotinas de memória.
+
+## <a name="syntax"></a>Sintaxe
+
 ```
 class CComAllocator
-```  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-methods"></a>Métodos Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CComAllocator::Allocate](#allocate)|Chame esse método estático para alocar memória.|  
-|[CComAllocator::Free](#free)|Chame esse método estático para liberar a memória alocada.|  
-|[CComAllocator::Reallocate](#reallocate)|Chame esse método estático para realocar a memória.|  
-  
-## <a name="remarks"></a>Comentários  
- Essa classe é usada pelo [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) para fornecer a memória COM rotinas de alocação. A classe de contraparte [CCRTAllocator](../../atl/reference/ccrtallocator-class.md), fornece os mesmos métodos usando rotinas de CRT.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlbase. h  
-  
-##  <a name="allocate"></a>  CComAllocator::Allocate  
- Chame essa função estática para alocar memória.  
-  
+```
+
+## <a name="members"></a>Membros
+
+### <a name="public-methods"></a>Métodos Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CComAllocator::Allocate](#allocate)|Chame esse método estático para alocar memória.|
+|[CComAllocator::Free](#free)|Chame esse método estático para liberar a memória alocada.|
+|[CComAllocator::Reallocate](#reallocate)|Chame esse método estático para realocar a memória.|
+
+## <a name="remarks"></a>Comentários
+
+Essa classe é usada pelo [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) para fornecer a memória COM rotinas de alocação. A classe de contraparte [CCRTAllocator](../../atl/reference/ccrtallocator-class.md), fornece os mesmos métodos usando rotinas de CRT.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** atlbase. h
+
+##  <a name="allocate"></a>  CComAllocator::Allocate
+
+Chame essa função estática para alocar memória.
+
 ```
 static void* Allocate(size_t nBytes) throw();
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *nBytes*  
- O número de bytes para alocar.  
-  
-### <a name="return-value"></a>Valor de retorno  
- Retorna um ponteiro nulo para o espaço alocado ou nulo se não houver memória suficiente disponível.  
-  
-### <a name="remarks"></a>Comentários  
- Aloca memória. Ver [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) para obter mais detalhes.  
-  
-##  <a name="free"></a>  CComAllocator::Free  
- Chame essa função estática para liberar a memória alocada.  
-  
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*nBytes*  
+O número de bytes para alocar.
+
+### <a name="return-value"></a>Valor de retorno
+
+Retorna um ponteiro nulo para o espaço alocado ou nulo se não houver memória suficiente disponível.
+
+### <a name="remarks"></a>Comentários
+
+Aloca memória. Ver [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) para obter mais detalhes.
+
+##  <a name="free"></a>  CComAllocator::Free
+
+Chame essa função estática para liberar a memória alocada.
+
 ```
 static void Free(void* p) throw();
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *p*  
- Ponteiro para a memória alocada.  
-  
-### <a name="remarks"></a>Comentários  
- Libera a memória alocada. Ver [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) para obter mais detalhes.  
-  
-##  <a name="reallocate"></a>  CComAllocator::Reallocate  
- Chame essa função estática para realocar a memória.  
-  
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*p*  
+Ponteiro para a memória alocada.
+
+### <a name="remarks"></a>Comentários
+
+Libera a memória alocada. Ver [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) para obter mais detalhes.
+
+##  <a name="reallocate"></a>  CComAllocator::Reallocate
+
+Chame essa função estática para realocar a memória.
+
 ```
 static void* Reallocate(void* p, size_t nBytes) throw();
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *p*  
- Ponteiro para a memória alocada.  
-  
- *nBytes*  
- O número de bytes para realocar.  
-  
-### <a name="return-value"></a>Valor de retorno  
- Retorna um ponteiro nulo para o espaço alocado ou nulo se não houver memória insuficiente  
-  
-### <a name="remarks"></a>Comentários  
- Redimensiona a quantidade de memória alocada. Ver [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc) para obter mais detalhes.  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   
- [Classe CCRTAllocator](../../atl/reference/ccrtallocator-class.md)   
- [Visão geral da classe](../../atl/atl-class-overview.md)
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*p*  
+Ponteiro para a memória alocada.
+
+*nBytes*  
+O número de bytes para realocar.
+
+### <a name="return-value"></a>Valor de retorno
+
+Retorna um ponteiro nulo para o espaço alocado ou nulo se não houver memória insuficiente
+
+### <a name="remarks"></a>Comentários
+
+Redimensiona a quantidade de memória alocada. Ver [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc) para obter mais detalhes.
+
+## <a name="see-also"></a>Consulte também
+
+[Classe CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   
+[Classe CCRTAllocator](../../atl/reference/ccrtallocator-class.md)   
+[Visão geral da classe](../../atl/atl-class-overview.md)

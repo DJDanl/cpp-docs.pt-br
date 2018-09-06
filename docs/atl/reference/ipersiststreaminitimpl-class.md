@@ -25,124 +25,143 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f71ed0ca185d7806c12ce089589ce4fad7a26e61
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b31e8c712ef7c395570912224f75036e6249b431
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202610"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761963"
 ---
 # <a name="ipersiststreaminitimpl-class"></a>Classe IPersistStreamInitImpl
-Essa classe implementa `IUnknown` e fornece uma implementação padrão do [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit) interface.  
-  
+
+Essa classe implementa `IUnknown` e fornece uma implementação padrão do [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit) interface.
+
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
+>  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+
+## <a name="syntax"></a>Sintaxe
+
 ```
 template<class T>  
 class ATL_NO_VTABLE IPersistStreamInitImpl 
    : public IPersistStreamInit
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- *T*  
- Sua classe, derivada de `IPersistStreamInitImpl`.  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-methods"></a>Métodos Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[IPersistStreamInitImpl::GetClassID](#getclassid)|Recupera o CLSID do objeto.|  
-|[IPersistStreamInitImpl::GetSizeMax](#getsizemax)|Recupera o tamanho do fluxo necessário para salvar os dados do objeto. A implementação de ATL retornará E_NOTIMPL.|  
-|[IPersistStreamInitImpl::InitNew](#initnew)|Inicializa um objeto recém-criado.|  
-|[IPersistStreamInitImpl::IsDirty](#isdirty)|Verifica se os dados do objeto foi alterado desde que foi salvo pela última vez.|  
-|[IPersistStreamInitImpl::Load](#load)|Carrega as propriedades do objeto do fluxo especificado.|  
-|[IPersistStreamInitImpl::Save](#save)|Salva as propriedades do objeto no fluxo especificado.|  
-  
-## <a name="remarks"></a>Comentários  
- O [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit) interface permite que um cliente solicite que seu objeto carrega e salva os seus dados persistentes em um único fluxo. Classe `IPersistStreamInitImpl` fornece uma implementação padrão dessa interface e implementa `IUnknown` enviando informações para o despejo de compilações de dispositivo na depuração.  
-  
- **Artigos relacionados** [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md), [criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `IPersistStreamInit`  
-  
- `IPersistStreamInitImpl`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atlcom  
-  
-##  <a name="getclassid"></a>  IPersistStreamInitImpl::GetClassID  
- Recupera o CLSID do objeto.  
-  
+```
+
+#### <a name="parameters"></a>Parâmetros
+
+*T*  
+Sua classe, derivada de `IPersistStreamInitImpl`.
+
+## <a name="members"></a>Membros
+
+### <a name="public-methods"></a>Métodos Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[IPersistStreamInitImpl::GetClassID](#getclassid)|Recupera o CLSID do objeto.|
+|[IPersistStreamInitImpl::GetSizeMax](#getsizemax)|Recupera o tamanho do fluxo necessário para salvar os dados do objeto. A implementação de ATL retornará E_NOTIMPL.|
+|[IPersistStreamInitImpl::InitNew](#initnew)|Inicializa um objeto recém-criado.|
+|[IPersistStreamInitImpl::IsDirty](#isdirty)|Verifica se os dados do objeto foi alterado desde que foi salvo pela última vez.|
+|[IPersistStreamInitImpl::Load](#load)|Carrega as propriedades do objeto do fluxo especificado.|
+|[IPersistStreamInitImpl::Save](#save)|Salva as propriedades do objeto no fluxo especificado.|
+
+## <a name="remarks"></a>Comentários
+
+O [IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit) interface permite que um cliente solicite que seu objeto carrega e salva os seus dados persistentes em um único fluxo. Classe `IPersistStreamInitImpl` fornece uma implementação padrão dessa interface e implementa `IUnknown` enviando informações para o despejo de compilações de dispositivo na depuração.
+
+**Artigos relacionados** [Tutorial da ATL](../../atl/active-template-library-atl-tutorial.md), [criando um projeto ATL](../../atl/reference/creating-an-atl-project.md)
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`IPersistStreamInit`
+
+`IPersistStreamInitImpl`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** atlcom
+
+##  <a name="getclassid"></a>  IPersistStreamInitImpl::GetClassID
+
+Recupera o CLSID do objeto.
+
 ```
 STDMETHOD(GetClassID)(CLSID* pClassID);
-```  
-  
-### <a name="remarks"></a>Comentários  
- Ver [IPersist::GetClassID](/windows/desktop/api/objidl/nf-objidl-ipersist-getclassid) no Windows SDK.  
-  
-##  <a name="getsizemax"></a>  IPersistStreamInitImpl::GetSizeMax  
- Recupera o tamanho do fluxo necessário para salvar os dados do objeto.  
-  
+```
+
+### <a name="remarks"></a>Comentários
+
+Ver [IPersist::GetClassID](/windows/desktop/api/objidl/nf-objidl-ipersist-getclassid) no Windows SDK.
+
+##  <a name="getsizemax"></a>  IPersistStreamInitImpl::GetSizeMax
+
+Recupera o tamanho do fluxo necessário para salvar os dados do objeto.
+
 ```
 STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
- Retornará E_NOTIMPL.  
-  
-### <a name="remarks"></a>Comentários  
- Ver [IPersistStreamInit::GetSizeMax](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-getsizemax) no Windows SDK.  
-  
-##  <a name="initnew"></a>  IPersistStreamInitImpl::InitNew  
- Inicializa um objeto recém-criado.  
-  
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Retornará E_NOTIMPL.
+
+### <a name="remarks"></a>Comentários
+
+Ver [IPersistStreamInit::GetSizeMax](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-getsizemax) no Windows SDK.
+
+##  <a name="initnew"></a>  IPersistStreamInitImpl::InitNew
+
+Inicializa um objeto recém-criado.
+
 ```
 STDMETHOD(InitNew)();
-```  
-  
-### <a name="remarks"></a>Comentários  
- Ver [IPersistStreamInit::InitNew](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) no Windows SDK.  
-  
-##  <a name="isdirty"></a>  IPersistStreamInitImpl::IsDirty  
- Verifica se os dados do objeto foi alterado desde que foi salvo pela última vez.  
-  
+```
+
+### <a name="remarks"></a>Comentários
+
+Ver [IPersistStreamInit::InitNew](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) no Windows SDK.
+
+##  <a name="isdirty"></a>  IPersistStreamInitImpl::IsDirty
+
+Verifica se os dados do objeto foi alterado desde que foi salvo pela última vez.
+
 ```
 STDMETHOD(IsDirty)();
-```  
-  
-### <a name="remarks"></a>Comentários  
- Ver [IPersistStreamInit::IsDirty](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-isdirty) no Windows SDK.  
-  
-##  <a name="load"></a>  IPersistStreamInitImpl::Load  
- Carrega as propriedades do objeto do fluxo especificado.  
-  
+```
+
+### <a name="remarks"></a>Comentários
+
+Ver [IPersistStreamInit::IsDirty](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-isdirty) no Windows SDK.
+
+##  <a name="load"></a>  IPersistStreamInitImpl::Load
+
+Carrega as propriedades do objeto do fluxo especificado.
+
 ```
 STDMETHOD(Load)(LPSTREAM pStm);
-```  
-  
-### <a name="remarks"></a>Comentários  
- ATL usa o mapa de propriedade do objeto para recuperar essas informações.  
-  
- Ver [IPersistStreamInit::Load](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-load) no Windows SDK.  
-  
-##  <a name="save"></a>  IPersistStreamInitImpl::Save  
- Salva as propriedades do objeto no fluxo especificado.  
-  
+```
+
+### <a name="remarks"></a>Comentários
+
+ATL usa o mapa de propriedade do objeto para recuperar essas informações.
+
+Ver [IPersistStreamInit::Load](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-load) no Windows SDK.
+
+##  <a name="save"></a>  IPersistStreamInitImpl::Save
+
+Salva as propriedades do objeto no fluxo especificado.
+
 ```
 STDMETHOD(Save)(LPSTREAM pStm, BOOL fClearDirty);
-```  
-  
-### <a name="remarks"></a>Comentários  
- ATL usa o mapa de propriedade do objeto para armazenar essas informações.  
-  
- Ver [IPersistStreamInit::Save](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-save) no Windows SDK.  
-  
-## <a name="see-also"></a>Consulte também  
- [Fluxos e armazenamentos](/windows/desktop/Stg/storages-and-streams)   
- [Visão geral da classe](../../atl/atl-class-overview.md)
+```
+
+### <a name="remarks"></a>Comentários
+
+ATL usa o mapa de propriedade do objeto para armazenar essas informações.
+
+Ver [IPersistStreamInit::Save](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-save) no Windows SDK.
+
+## <a name="see-also"></a>Consulte também
+
+[Fluxos e armazenamentos](/windows/desktop/Stg/storages-and-streams)   
+[Visão geral da classe](../../atl/atl-class-overview.md)

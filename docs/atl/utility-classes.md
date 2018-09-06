@@ -16,30 +16,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c3803a3b78e5a5a1e08edf1e8b6ca7df0c257ee
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 82b5fe69189ed72758f1fc499d87dec4953588bd
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961770"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43762590"
 ---
 # <a name="utility-classes"></a>Classes de utilitário
-As seguintes classes de utilitário MFC independentes são fornecidas:  
-  
--   [CImage](../atl-mfc-shared/reference/cimage-class.md) aprimorada de fornece suporte de bitmap, incluindo a capacidade de carregar e salvar imagens em JPEG, GIF, BMP, e formatos de elementos gráficos PNG (Portable Network).  
-  
--   [CPoint](../atl-mfc-shared/reference/cpoint-class.md) fornece uma implementação para armazenar pares de coordenadas (x, y).  
-  
--   [CRect](../atl-mfc-shared/reference/crect-class.md) fornece uma implementação para armazenar as coordenadas das áreas retangulares.  
-  
--   [CSize](../atl-mfc-shared/reference/csize-class.md) fornece uma implementação para armazenar a distância, posições relativas ou valores de pares.  
-  
--   [CString](../atl-mfc-shared/reference/cstringt-class.md) fornece uma implementação para armazenar cadeias de caracteres.  
-  
--   [CAdapt](../atl/reference/cadapt-class.md) um modelo simples usado para incluir classes que redefinem o operador address-of.  
-  
--   [U_rect](../atl/reference/u-rect-class.md) uma classe de adaptador de argumento que permite tanto `RECT` ponteiros ou referências a serem passados para uma função que é implementada em termos de ponteiros.  
-  
-## <a name="see-also"></a>Consulte também  
- [Visão geral da classe](../atl/atl-class-overview.md)
+
+As seguintes classes de utilitário MFC independentes são fornecidas:
+
+- [CImage](../atl-mfc-shared/reference/cimage-class.md) aprimorada de fornece suporte de bitmap, incluindo a capacidade de carregar e salvar imagens em JPEG, GIF, BMP, e formatos de elementos gráficos PNG (Portable Network).
+
+- [CPoint](../atl-mfc-shared/reference/cpoint-class.md) fornece uma implementação para armazenar pares de coordenadas (x, y).
+
+- [CRect](../atl-mfc-shared/reference/crect-class.md) fornece uma implementação para armazenar as coordenadas das áreas retangulares.
+
+- [CSize](../atl-mfc-shared/reference/csize-class.md) fornece uma implementação para armazenar a distância, posições relativas ou valores de pares.
+
+- [CString](../atl-mfc-shared/reference/cstringt-class.md) fornece uma implementação para armazenar cadeias de caracteres.
+
+- [CAdapt](../atl/reference/cadapt-class.md) um modelo simples usado para incluir classes que redefinem o operador address-of.
+
+- [U_rect](../atl/reference/u-rect-class.md) uma classe de adaptador de argumento que permite tanto `RECT` ponteiros ou referências a serem passados para uma função que é implementada em termos de ponteiros.
+
+## <a name="see-also"></a>Consulte também
+
+[Visão geral da classe](../atl/atl-class-overview.md)
 
