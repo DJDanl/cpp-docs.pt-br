@@ -1,7 +1,7 @@
 ---
 title: -H (restringir comprimento de nomes externos) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -20,81 +20,81 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0859c6770da56023df7ba7ba24094bea2e889319
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8d178fcd62c39c65d9f4f8958fde3b178a074671
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377555"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895312"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (restringir comprimento de nomes externos)
-Preterido. Restringe o comprimento de nomes externos.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-/Hnumber  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `number`  
- Especifica o comprimento máximo de nomes externos permitido em um programa.  
-  
-## <a name="remarks"></a>Comentários  
- Por padrão, o comprimento de nomes (públicos) externos é 2.047 caracteres. Isso é verdadeiro para programas C e C++. Usando **/H** pode diminuir somente o comprimento máximo permitido de identificadores, não aumentá-lo. Um espaço entre **/H** e `number` é opcional.  
-  
- Se um programa contém nomes externos mais de `number`, os caracteres extras são ignorados. Se você compilar um programa sem **/H** e se um identificador contiver mais de 2.047 caracteres, o compilador gerará [C1064 de Erro Fatal](../../error-messages/compiler-errors-1/fatal-error-c1064.md).  
-  
- O limite no tamanho inclui qualquer criado pelo compilador à esquerda caractere de sublinhado (_) ou sinal de arroba (@). Esses caracteres são parte do identificador e levar a um local significativo.  
-  
--   O compilador adiciona um caractere de sublinhado (_) à esquerda para nomes modificados pelo `__cdecl` (padrão) e `__stdcall` convenções de chamada e um prefixo de sinal de arroba (@) para nomes modificados pelo `__fastcall` convenção de chamada.  
-  
--   O compilador anexa informações de tamanho de argumento para nomes modificados pelo `__fastcall` e `__stdcall` convenções de chamada e adiciona informações de tipo para nomes de C++.  
-  
- Você pode encontrar **/H** úteis:  
-  
--   Quando você cria programas de linguagem mista ou portátil.  
-  
--   Quando você usa ferramentas que limitam o tamanho dos identificadores externos.  
-  
--   Quando você quiser restringir a quantidade de espaço que usam símbolos em uma compilação de depuração.  
-  
- A exemplo a seguir mostra como usar **/H** realmente pode introduzir erros se comprimentos de identificador são muito limitados:  
-  
-```cpp  
-// compiler_option_H.cpp  
-// compile with: /H5  
-// processor: x86  
-// LNK2005 expected  
-void func1(void);  
-void func2(void);  
-  
-int main() { func1(); }  
-  
-void func1(void) {}  
-void func2(void) {}  
-```  
-  
- Você também deve ter cuidado ao usar o **/H** opção devido a identificadores de compilador predefinidos. Se o comprimento máximo do identificador é muito pequeno, determinados identificadores predefinidos serão chamadas de função de biblioteca não resolvidas, bem como certas. Por exemplo, se o `printf` função é usada e a opção **/H5** é especificado em tempo de compilação, o símbolo **_prin** será criado para referenciar `printf`, e isso não será encontrado na biblioteca.  
-  
- O uso de **/H** é incompatível com [/GL (otimização de programa total)](../../build/reference/gl-whole-program-optimization.md).  
-  
- O **/H** opção foi preterida desde o Visual Studio 2005; os limites de comprimento máximo aumentaram e **/H** não é mais necessário. Para obter uma lista de opções do compilador preterido, consulte **preteridos e removidos opções do compilador** na [opções do compilador listadas por categoria](../../build/reference/compiler-options-listed-by-category.md).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
-  
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
-  
-2.  Clique o **C/C++** pasta.  
-  
-3.  Clique o **linha de comando** página de propriedades.  
-  
-4.  Digite a opção de compilador no **opções adicionais** caixa.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
-  
--   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Consulte também  
- [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+
+Preterido. Restringe o comprimento dos nomes externos.
+
+## <a name="syntax"></a>Sintaxe
+
+> **/H**<em>número</em>
+
+## <a name="arguments"></a>Arguments
+
+*número*  
+Especifica o comprimento máximo de nomes externos permitidos em um programa.
+
+## <a name="remarks"></a>Comentários
+
+Por padrão, o comprimento dos nomes (públicos) externos é 2047 caracteres. Isso é verdadeiro para programas em C e C++. Usando o **/H** pode diminuir somente o comprimento máximo permitido de identificadores, não aumentá-lo. Um espaço entre **/H** e *número* é opcional.
+
+Se um programa contém nomes externos maiores que *número*, os caracteres extras serão ignorados. Se você compilar um programa sem **/H** e se um identificador contiver mais de 2047 caracteres, o compilador irá gerar [Fatal C1064 de erro](../../error-messages/compiler-errors-1/fatal-error-c1064.md).
+
+O limite no tamanho inclui qualquer sublinhado inicial criado pelo compilador (**\_**) ou sinal de arroba (**\@**). Esses caracteres são parte do identificador e levar a um local significativo.
+
+- O compilador adiciona um sublinhado à esquerda (**\_**) para nomes modificados pela `__cdecl` (padrão) e `__stdcall` convenções de chamada e uma líder do sinal de arroba (**\@** ) para nomes modificados pelo `__fastcall` convenção de chamada.
+
+- O compilador acrescenta informações de tamanho de argumento para nomes modificados pela `__fastcall` e `__stdcall` convenções de chamada e adiciona informações de tipo para nomes de C++.
+
+Você pode achar **/H** úteis:
+
+- Quando você cria programas de linguagens mistas ou portátil.
+
+- Quando você usa ferramentas que impõem limites na duração do identificadores externos.
+
+- Quando você deseja restringir a quantidade de espaço que usar de símbolos em um build de depuração.
+
+A exemplo a seguir mostra como o uso **/H** realmente pode introduzir erros se comprimentos de identificador são muito limitados:
+
+```cpp
+// compiler_option_H.cpp
+// compile with: /H5
+// processor: x86
+// LNK2005 expected
+void func1(void);
+void func2(void);
+
+int main() { func1(); }
+
+void func1(void) {}
+void func2(void) {}
+```
+
+Você também deve ter cuidado ao usar o **/H** opção por causa de identificadores de compilador predefinidos. Se o comprimento máximo do identificador é muito pequeno, determinados identificadores predefinidos será biblioteca não resolvidas, bem como determinadas chamadas de função. Por exemplo, se o `printf` função é usada e a opção **/H5** é especificado em tempo de compilação, o símbolo **_prin** será criado para fazer referência a `printf`, e isso não será encontrado na biblioteca.
+
+Uso de **/H** é incompatível com [/GL (otimização de programa inteiro)](../../build/reference/gl-whole-program-optimization.md).
+
+O **/H** opção foi preterida desde o Visual Studio 2005; os limites de comprimento máximo aumentaram e **/H** não for mais necessário. Para obter uma lista de opções do compilador preterido, consulte **preteridos e removidos opções do compilador** na [opções de compilador listadas por categoria](../../build/reference/compiler-options-listed-by-category.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
+
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+
+2. Selecione o **propriedades de configuração** > **C/C++** > **linha de comando** página de propriedades.
+
+3. Insira a opção de compilador na **opções adicionais** caixa.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
+
+- Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Consulte também
+
+[Opções do compilador](../../build/reference/compiler-options.md)   
+[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

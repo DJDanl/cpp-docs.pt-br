@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f05d7d3d3d3fd6b40a5477b7765b89409747d3ce
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5789e353a6e15d4da3f5754d9d4d91821359d14
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845860"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42578294"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Introdução ao Visual C++ para usuários do UNIX
 
@@ -37,7 +37,7 @@ Para aproveitar os recursos mais avançados, como o depurador do Visual Studio, 
   
 ## <a name="debugging-your-code"></a>Depurando seu código  
 
-Se você usar a linha de comando e executar seus aplicativos em sua estação de trabalho de desenvolvimento, verá que uma caixa de diálogo para executar o depurador [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] será exibida quando seu código encontrar uma violação de acesso de memória, exceção sem tratamento ou outros erros irrecuperáveis. Se você clicar em **OK**, então o ambiente de desenvolvimento do Visual Studio será iniciado e o depurador será aberto no ponto de falha. É possível depurar seus aplicativos dessa maneira e, nesse caso, seu código-fonte só estaria disponível se você compilasse com a opção [/Z7, /Zi, /ZI (formato de informação de depuração)](../build/reference/z7-zi-zi-debug-information-format.md). Para obter mais informações, consulte [Depurando código nativo](/visualstudio/debugger/debugging-native-code) e [Usando o IDE do Visual Studio para desenvolvimento de área de trabalho do C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
+Se você usar a linha de comando e executar os aplicativos em sua estação de trabalho de desenvolvimento, uma caixa de diálogo para executar o depurador do Visual Studio será exibida quando o código encontrar uma violação de acesso à memória, uma exceção sem tratamento ou outros erros irrecuperáveis. Se você clicar em **OK**, então o ambiente de desenvolvimento do Visual Studio será iniciado e o depurador será aberto no ponto de falha. É possível depurar seus aplicativos dessa maneira e, nesse caso, seu código-fonte só estaria disponível se você compilasse com a opção [/Z7, /Zi, /ZI (formato de informação de depuração)](../build/reference/z7-zi-zi-debug-information-format.md). Para obter mais informações, consulte [Depurando código nativo](/visualstudio/debugger/debugging-native-code) e [Usando o IDE do Visual Studio para desenvolvimento de área de trabalho do C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
 ## <a name="using-the-development-environment"></a>Usando o ambiente de desenvolvimento  
 
@@ -47,7 +47,7 @@ Um aplicativo composto por várias bibliotecas e executáveis, cada um deles cri
   
 ## <a name="importing-your-existing-code"></a>Importando seu código existente 
  
-É possível usar o compilador C++ para compilar o código existente configurado para compilação com ou sem um makefile e colocá-lo em um projeto [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]. Para obter mais informações, consulte [Como criar um projeto do C++ com base no código existente](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
+Você pode usar o compilador do C++ para compilar o código existente que está configurado para compilar com ou sem um makefile e colocá-lo em um projeto do Visual Studio. Para obter mais informações, consulte [Como criar um projeto do C++ com base no código existente](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
   
 ## <a name="creating-a-new-project"></a>Criando um novo projeto  
 
@@ -61,13 +61,13 @@ Quando você cria um projeto, é necessário nomeá-lo. Por padrão, o nome do p
 
 O compilador do Microsoft Visual C++ implementa várias extensões da linguagem de programação C++ padrão para dar suporte à programação para sistemas operacionais Windows. Essas extensões são usadas para especificar atributos de classe de armazenamento, convenções de chamada de função e endereçamento baseado, entre outros. Para obter uma lista completa de todas as extensões do C++ compatíveis, consulte [Modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md).  
   
-É possível desabilitar todas as extensões específicas da Microsoft do C++ usando a opção do compilador **/Za**. Essa opção é recomendada se você desejar escrever um código para ser executado em várias plataformas. Para obter mais informações sobre a opção do compilador **/Za**, consulte [/Za, /Ze (Desabilitar Extensões de Linguagem)](../build/reference/za-ze-disable-language-extensions.md). Para obter mais informações sobre a conformidade do compilador C++, consulte [Conformidade com a linguagem Visual C++](../visual-cpp-language-conformance.md) e [Comportamento não padrão](../cpp/nonstandard-behavior.md).  
+Você pode desabilitar todas as extensões específicas da Microsoft para C++ usando a opção do compilador `/Za`. Essa opção é recomendada se você desejar escrever um código para ser executado em várias plataformas. Para obter mais informações sobre a opção do compilador `/Za`, confira [/Za, /Ze (desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md). Para obter mais informações sobre a conformidade do compilador C++, consulte [Conformidade com a linguagem Visual C++](../visual-cpp-language-conformance.md) e [Comportamento não padrão](../cpp/nonstandard-behavior.md).  
   
 ## <a name="precompiled-headers"></a>Cabeçalhos Pré-compilados  
 
 Os compiladores C e C++ da Microsoft fornecem opções para pré-compilar qualquer código C ou C++, incluindo código embutido. Usando esse recurso de desempenho, é possível compilar um corpo de código estável, armazenar o estado compilado do código em um arquivo e, durante as compilações subsequentes, combinar o código pré-compilado com código que ainda está em desenvolvimento. Cada compilação subsequente é mais rápida, porque o código estável não precisa ser recompilado.  
   
-Por padrão, todo código pré-compilado é especificado nos arquivos **stdafx.h** e **stdafx.cpp**. O assistente **Novo projeto** criará automaticamente esses arquivos para você, a menos que você desmarque a opção **Cabeçalho pré-compilado**. Para obter mais informações sobre cabeçalhos pré-compilados, consulte [Criando arquivos de cabeçalho pré-compilados](../build/reference/creating-precompiled-header-files.md).  
+Por padrão, todo código pré-compilado é especificado nos arquivos stdafx.h e stdafx.cpp. O assistente **Novo projeto** criará automaticamente esses arquivos para você, a menos que você desmarque a opção **Cabeçalho pré-compilado**. Para obter mais informações sobre cabeçalhos pré-compilados, consulte [Criando arquivos de cabeçalho pré-compilados](../build/reference/creating-precompiled-header-files.md).  
   
 ## <a name="related-sections"></a>Seções relacionadas  
 

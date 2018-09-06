@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c148c805cb4ddc5e012e9de5e8e5f7e207f47dc3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c20b9b6e8c1e96736485f302203156f627ef6794
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33839875"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578292"
 ---
 # <a name="porting-data-applications"></a>Portabilidade de aplicativos de dados
 Ao longo dos anos, o Visual C++ forneceu várias maneiras de trabalhar com bancos de dados. Em 2011, a Microsoft anunciou que ele estaria se alinhando com ODBC como a tecnologia preferencial para acessar produtos do SQL Server de código nativo. O ODBC é um padrão do setor e, ao usá-lo, você obtém o máximo de portabilidade de código em várias plataformas e fontes de dados. A maioria dos produtos de banco de dados SQL e muitos produtos NoSQL dão suporte ao ODBC. Você pode usar o ODBC diretamente, chamando as APIs de ODBC de nível inferior, ou você pode usar as classes wrapper de ODBC do MFC ou em uma biblioteca wrapper de C++ de terceiros. 
@@ -36,11 +36,12 @@ O componente SNAC (SQL Native Client), que empacota os drivers OLE DB e ODBC em 
 
 Se você usa C++/CLI, você pode continuar a usar o ADO.NET como sempre. Para obter mais informações, consulte [Acesso a dados usando ADO.NET (C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md) e [Acesso a dados no Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).  
   
--   Além das classes wrapper de ODBC, o MFC também fornece as classes wrapper de DAO (Objetos de Acesso a Dados) para se conectar aos bancos de dados do Access.  No entanto, o DAO está obsoleto. Qualquer código com base em CDaoDatabase ou CDaoRecordset deve ser atualizado. 
+- Além das classes wrapper de ODBC, o MFC também fornece as classes wrapper de DAO (Objetos de Acesso a Dados) para se conectar aos bancos de dados do Access.  No entanto, o DAO está obsoleto. Qualquer código com base em `CDaoDatabase` ou `CDaoRecordset` deve ser atualizado. 
 
 Para obter mais informações sobre o histórico de tecnologias de acesso a dados no Microsoft Windows, consulte [Microsoft Data Access Components (Wikipédia)](https://en.wikipedia.org/wiki/Microsoft_Data_Access_Components).  
 
 ## <a name="see-also"></a>Consulte também  
- [Acesso a dados no Visual C++](../data/data-access-in-cpp.md)  
- [Microsoft ODBC (Open Database Connectivity)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc)  
- [Roteiro das tecnologias de acesso a dados](https://msdn.microsoft.com/en-us/library/ms810810.aspx)  
+ 
+[Acesso a dados no Visual C++](../data/data-access-in-cpp.md)  
+[Microsoft ODBC (Open Database Connectivity)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc)  
+[Roteiro das tecnologias de acesso a dados](https://msdn.microsoft.com/library/ms810810.aspx)  

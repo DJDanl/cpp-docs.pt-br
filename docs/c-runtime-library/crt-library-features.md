@@ -1,7 +1,7 @@
 ---
 title: Recursos da biblioteca CRT | Microsoft Docs
 ms.custom: ''
-ms.date: 03/13/2018
+ms.date: 08/20/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8ba56f0b4fa6d7d6ac56f3f118edeaad03643b5
-ms.sourcegitcommit: 0ce270566769cba76d763dd69b304a55eb375d01
+ms.openlocfilehash: 5785d06a09c823140362fa4afc6a8b12954e5ac3
+ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34799188"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42578259"
 ---
 # <a name="crt-library-features"></a>Funcionalidades da biblioteca CRT
 
@@ -64,6 +64,8 @@ Esta tabela lista as bibliotecas que implementam a biblioteca vcruntime.
 |libvcruntimed.lib|Nenhum|Versão de depuração para vinculação estática. Não redistribuível.|**/MTd**|_MT, _DEBUG|
 |vcruntime.lib|vcruntime\<version>.dll|Biblioteca de importação de DLL do vcruntime.|**/MD**|_MT, _DLL|
 |vcruntimed.lib|vcruntime\<version>d.dll|Biblioteca de importação de DLL do vcruntime de Depuração. Não redistribuível.|**/MDd**|_DEBUG, _MT, _DLL|
+
+Quando a refatoração do UCRT ocorreu, as funções do Tempo de Execução de Simultaneidade foram movidas para concrt140.dll, que faz parte do pacote redistribuível do C++. Essa DLL é necessária para os contêineres e algoritmos paralelos do C++, como `concurrency::parallel_for`. Além disso, a Biblioteca padrão do C++ requer que essa DLL no Windows XP dê suporte a primitivas de sincronização, porque o Windows XP não tem variáveis de condição.
 
 O código que inicializa o CRT está em uma das várias bibliotecas, com base no fato de a biblioteca CRT ser vinculada estática ou dinamicamente ou de o código ser nativo, gerenciado ou misto. Esse código manipula a inicialização, a inicialização interna de dados por thread e o encerramento do CRT. Ele é específico à versão do compilador utilizada. Essa biblioteca é sempre vinculada estaticamente, mesmo ao usar um UCRT vinculado dinamicamente.
 

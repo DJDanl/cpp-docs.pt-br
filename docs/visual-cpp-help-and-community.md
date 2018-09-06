@@ -8,16 +8,16 @@ ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cac05b17d470cdb593f4d7e1e1943f812022906
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d36f56161e352d67838bfaf68c8e2d1dcee0f33e
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33851631"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42583979"
 ---
 # <a name="visual-c-help-and-community"></a>Ajuda e comunidade do Visual C++
 
@@ -34,7 +34,7 @@ Veja como obter informações sobre como escrever código C++ e usar as ferramen
 |Título|Descrição|
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|Contém a referência e a documentação conceitual sobre o Visual C++. Parte da Biblioteca MSDN.|
-|[Centro de Desenvolvedores do Windows](http://go.microsoft.com/fwlink/p/?LinkId=256534)|Contém informações sobre como usar C++ e outras linguagens para desenvolver aplicativos para o [!INCLUDE[win8](build/reference/includes/win8_md.md)]. Parte do Centro de Desenvolvedores Windows; o conteúdo em C++ está no nó Documentação > Referência da linguagem.|
+|[Centro de Desenvolvedores do Windows](http://go.microsoft.com/fwlink/p/?LinkId=256534)|Contém informações sobre como usar o C++ e outras linguagens para desenvolver aplicativos para Windows 8. Parte do Centro de Desenvolvedores Windows; o conteúdo em C++ está no nó Documentação > Referência da linguagem.|
 
 ### <a name="online-and-offline-documentation"></a>Documentação online e offline
 

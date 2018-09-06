@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5eace3ef3cfd07847c995151554ba70ca23f820
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 79814d96bac185e73cc1c42a98be6d7b35e9a75d
+ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337243"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42578128"
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Ferramentas e funcionalidades do Visual C++ em edições do Visual Studio
 
@@ -45,8 +45,8 @@ As tabelas a seguir mostram as funcionalidades do Visual C++ disponíveis no Vis
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |Compilador x86 de 32 bits|X|X|X|X|
 |Compilador cruzado X86_arm|X||X|X|
-|Compilador [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] de 64 bits|||X|X|
-|Compilador cruzado X86_ [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|X|X|X|X|
+|Compilador x64 de 64 bits|||X|X|
+|Compilador cruzado X86_ x64|X|X|X|X|
 
 ## <a name="libraries-and-headers"></a>Bibliotecas e cabeçalhos
 

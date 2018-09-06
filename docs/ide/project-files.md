@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e66d6e94e4938c72adc5aea1a478ce6c0658e56e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9aa8994ebbb9f00afa6858597fce17554f3c3dfc
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327223"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42578610"
 ---
 # <a name="project-files"></a>Os arquivos de projeto
 Um arquivo de projeto do Visual C++ é um arquivo baseado em XML que tem a extensão de nome de arquivo .vcxproj e contém as informações necessárias para compilar um projeto do Visual C++.  
   
 ## <a name="example"></a>Exemplo  
- O arquivo .vcxproj de exemplo a seguir foi produzido pela especificação de um **Aplicativo de Console Win32** na caixa de diálogo **Novo Projeto**. Para processar um arquivo de projeto, use a ferramenta msbuild.exe na linha de comando ou o comando **Build** no [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]. (Essa amostra não pode ser processada porque os arquivos de origem e de cabeçalho necessários não foram fornecidos.) Para obter mais informações sobre os elementos XML em um arquivo de projeto, confira [Referência de esquema do arquivo de projeto](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
+ O arquivo .vcxproj de exemplo a seguir foi produzido pela especificação de um **Aplicativo de Console Win32** na caixa de diálogo **Novo Projeto**. Para processar um arquivo de projeto, use a ferramenta msbuild.exe na linha de comando ou o comando **Build** no IDE. (Essa amostra não pode ser processada porque os arquivos de origem e de cabeçalho necessários não foram fornecidos.) Para obter mais informações sobre os elementos XML em um arquivo de projeto, confira [Referência de esquema do arquivo de projeto](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  

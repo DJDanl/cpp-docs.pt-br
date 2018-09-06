@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e28ba5923d8b62973860c0ba503d13682b3c5e79
-ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
+ms.openlocfilehash: bc231dfb156460a2a0cc383b6d038a98c6e2015b
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458856"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894402"
 ---
 # <a name="filename-macros"></a>Macros de nome de arquivo
-Macros de nome de arquivo são predefinidas como nomes de arquivo especificado na dependência (nome de arquivo completo não especificações no disco). Essas macros não precisam ser colocados entre parênteses quando invocado; Especifique apenas um $ conforme mostrado.  
-  
-|Macro|Significado|  
-|-----------|-------------|  
-|**$@**|Nome completo do destino atual (caminho, nome de base, extensão), como no momento especificado.|  
-|**$$@**|Nome completo do destino atual (caminho, nome de base, extensão), como no momento especificado. Válido apenas como um dependente em uma dependência.|  
-|**$&#42;**|Nome do destino atual de base e o caminho menos extensão de arquivo.|  
-|**$&#42;&#42;**|Todos os dependentes do destino atual.|  
-|**$?**|Todos os dependentes com um carimbo de hora posterior que o destino atual.|  
-|**$<**|Arquivo dependente com um carimbo de hora posterior que o destino atual. Válido somente em comandos em regras de inferência.|  
-  
- Para especificar a parte de uma macro de nome de arquivo predefinido, acrescente um modificador de macro e colocar a macro modificada entre parênteses.  
-  
-|Modificador|Parte do nome de arquivo resultante|  
-|--------------|-----------------------------|  
-|**D**|Unidade e diretório|  
-|**B**|Nome de base|  
-|**F**|Nome de base e de extensão|  
-|**R**|Unidade mais o diretório mais o nome de base|  
-  
-## <a name="see-also"></a>Consulte também  
- [Macros NMAKE especiais](../build/special-nmake-macros.md)
+
+Macros de nome de arquivo são predefinidas, como nomes de arquivo especificado na dependência (nome de arquivo completo não especificações no disco). Essas macros não precisa ser colocada entre parênteses quando invocado; Especifique apenas um $ conforme mostrado.
+
+|Macro|Significado|
+|-----------|-------------|
+|**$\@**|Nome completo do destino atual (caminho, nome de base, extensão), como no momento especificado.|
+|**$$\@**|Nome completo do destino atual (caminho, nome de base, extensão), como no momento especificado. Válido apenas como um dependente em uma dependência.|
+|**$&#42;**|Do destino atual caminho e o nome base menos a extensão de arquivo.|
+|**$&#42;&#42;**|Todos os dependentes do destino atual.|
+|**$?**|Todos os dependentes com um carimbo de hora posterior que o destino atual.|
+|**$<**|Arquivo dependente com um carimbo de hora posterior que o destino atual. Válido somente em comandos nas regras de inferência de tipos.|
+
+Para especificar a parte de uma macro predefinida de nome de arquivo, acrescentar um modificador de macro e coloque a macro modificada entre parênteses.
+
+|Modificador|Parte do nome do arquivo resultante|
+|--------------|-----------------------------|
+|**D**|Unidade e diretório|
+|**B**|Nome de base|
+|**F**|Nome de base e extensão|
+|**R**|Unidade e diretório e nome de base|
+
+## <a name="see-also"></a>Consulte também
+
+[Macros NMAKE especiais](../build/special-nmake-macros.md)

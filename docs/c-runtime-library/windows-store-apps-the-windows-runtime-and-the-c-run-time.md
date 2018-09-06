@@ -12,16 +12,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e1a67ce57e4ddf726ba64923bbe5a95b5b2f1c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78f76b6f61eb5d8e7370e61e9cc1f466bdfb4c43
+ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410834"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42592713"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>Aplicativos UWP, o Windows Runtime e o tempo de execução do C
 
-Os aplicativos UWP (Plataforma Universal do Windows) são programas executados no Windows Runtime que é executado no [!INCLUDE[win8](../build/reference/includes/win8_md.md)]. O Windows Runtime é um ambiente confiável que controla as funções, as variáveis e os recursos disponíveis para um aplicativo UWP. No entanto, o design do Windows Runtime apresenta restrições que impedem o uso da maioria dos recursos da biblioteca em CRT (tempo de execução do C) nos aplicativos UWP.
+Os aplicativos UWP (Plataforma Universal do Windows) são programas executados no Windows Runtime que é executado no Windows 8. O Windows Runtime é um ambiente confiável que controla as funções, as variáveis e os recursos disponíveis para um aplicativo UWP. No entanto, o design do Windows Runtime apresenta restrições que impedem o uso da maioria dos recursos da biblioteca em CRT (tempo de execução do C) nos aplicativos UWP.
 
 O Windows Runtime não tem suporte para os seguintes recursos de CRT:
 

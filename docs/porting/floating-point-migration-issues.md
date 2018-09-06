@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e6578486ada758482b270cd5505338e2acf3eb9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: eb8f7d4835fe50dba2cb7eb6d4e7cb6a54efdbba
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841896"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578532"
 ---
 # <a name="floating-point-migration-issues"></a>Problemas de migração de ponto flutuante  
   
@@ -33,7 +33,7 @@ Quando as funções matemáticas foram movidas para o CRT Universal no Visual St
   
 Muitas das funções da biblioteca de matemática de ponto flutuante têm implementações diferentes para diferentes arquiteturas de CPU. Por exemplo, o CRT x86 de 32 bits pode ter uma implementação diferente do CRT x64 de 64 bits. Além disso, algumas das funções podem ter várias implementações para uma determinada arquitetura de CPU. A implementação mais eficiente é selecionada dinamicamente em tempo de execução dependendo dos conjuntos de instruções com suporte da CPU. Por exemplo, no CRT x86 de 32 bits, algumas funções têm uma implementação x87 e uma implementação SSE2. Quando executado em uma CPU com suporte para SSE2, é usada a implementação SSE2 mais rápida. Quando executado em uma CPU sem suporte para SSE2, é usada a implementação x87 mais lenta. Você poderá ver isso ao migrar o código antigo, porque a opção de arquitetura x86 padrão do compilador foi alterada para [/arch:SSE2](../build/reference/arch-x86.md) no Visual Studio 2012. Uma vez que diferentes implementações das funções da biblioteca de matemática podem usar diferentes instruções de CPU e diferentes algoritmos para produzir seus resultados, as funções podem produzir resultados diferentes em plataformas diferentes. Na maioria dos casos, os resultados são dentro de +/-1 ulp do resultado arredondado corretamente, mas os resultados reais podem variar entre CPUs.  
   
-Melhorias de correção de geração de código em diferentes modos de ponto flutuante no Visual Studio também podem afetar os resultados de operações de ponto flutuante quando o código antigo é comparado com o novo, mesmo ao usar os mesmos sinalizadores de compilador. Por exemplo, o código gerado pelo Visual Studio 2010 quando [/fp:precise](../build/reference/fp-specify-floating-point-behavior.md) (o padrão) ou **/fp:strict** tiver sido especificado pode não ter propagado valores NaN (não é um número) intermediários por meio de expressões corretamente. Portanto, algumas expressões que forneciam um resultado numérico nos compiladores antigos agora podem produzir corretamente um resultado NaN. Também é possível ver diferenças, pois as otimizações de código habilitadas para **/fp:fast** agora aproveitam mais recursos do processador. Essas otimizações podem usar menos instruções, mas podem afetar os resultados gerados, já que algumas operações intermediárias anteriormente visíveis foram removidas.  
+Melhorias de correção de geração de código em diferentes modos de ponto flutuante no Visual Studio também podem afetar os resultados de operações de ponto flutuante quando o código antigo é comparado com o novo, mesmo ao usar os mesmos sinalizadores de compilador. Por exemplo, o código gerado pelo Visual Studio 2010 quando [/fp:precise](../build/reference/fp-specify-floating-point-behavior.md) (o padrão) ou `/fp:strict` foi especificado pode não ter propagado valores intermediários NaN (não é um número) por meio de expressões corretamente. Portanto, algumas expressões que forneciam um resultado numérico nos compiladores antigos agora podem produzir corretamente um resultado NaN. Você também poderá ver diferenças, porque as otimizações de código habilitadas para `/fp:fast` agora aproveitam mais recursos do processador. Essas otimizações podem usar menos instruções, mas podem afetar os resultados gerados, já que algumas operações intermediárias anteriormente visíveis foram removidas.  
   
 ## <a name="how-to-get-identical-results"></a>Como obter resultados idênticos  
   

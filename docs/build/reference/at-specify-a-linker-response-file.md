@@ -1,7 +1,7 @@
 ---
 title: '@ (Especificar um arquivo de resposta de vinculador) | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -20,35 +20,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f182abcb26561bd07d62581b3beb9c0d3497ddb1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4ff031c64ab57373beadd8a88235d018f2e5c0f5
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369075"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894415"
 ---
 # <a name="-specify-a-linker-response-file"></a>@ (especificar um arquivo de resposta do vinculador)
-```  
-@response_file  
-```  
-  
-## <a name="remarks"></a>Comentários  
- em que:  
-  
- `response_file`  
- Um arquivo de texto especificando comandos do vinculador.  
-  
-## <a name="remarks"></a>Comentários  
- Consulte [@ (especificar um arquivo de resposta do compilador)](../../build/reference/at-specify-a-compiler-response-file.md) para obter mais informações.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
-  
-1.  Essa opção de vinculador não está disponível no ambiente de desenvolvimento do Visual Studio.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
-  
-1.  Essa opção de vinculador não pode ser alterada de forma programática.  
-  
-## <a name="see-also"></a>Consulte também  
- [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções do vinculador](../../build/reference/linker-options.md)
+
+Especifica um arquivo de resposta do vinculador.
+
+## <a name="syntax"></a>Sintaxe
+
+> **\@**<em>response_file</em>
+
+## <a name="arguments"></a>Arguments
+
+*response_file*  
+Um arquivo de texto especificando comandos do vinculador.
+
+## <a name="remarks"></a>Comentários
+
+Ver [@ (especificar um arquivo de resposta do compilador)](../../build/reference/at-specify-a-compiler-response-file.md) para obter mais informações.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
+
+- Essa opção de vinculador não está disponível no ambiente de desenvolvimento do Visual Studio.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
+
+- Essa opção de vinculador não pode ser alterada programaticamente.
+
+## <a name="see-also"></a>Consulte também
+
+[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)  
+[Opções do vinculador](../../build/reference/linker-options.md)

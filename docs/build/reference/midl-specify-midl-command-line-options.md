@@ -1,7 +1,7 @@
 ---
 title: -MIDL (especificar opções de linha de comando MIDL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -21,47 +21,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fc5e4b0b3e19f9a71e1ada445181bede68d65a5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e513b0397a41a19c9a8088332eb3d1793b6b6647
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222675"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894584"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (especificar opções de linha de comando MIDL)
-```  
-/MIDL:@file  
-```  
-  
-## <a name="remarks"></a>Comentários  
- em que:  
-  
- `file`  
- O nome do arquivo que contém [opções de linha de comando MIDL](/windows/desktop/Midl/general-midl-command-line-syntax).  
-  
-## <a name="remarks"></a>Comentários  
- Todas as opções para a conversão de um arquivo IDL para um arquivo TLB devem ser fornecidas em `file`; Opções de linha de comando MIDL não podem ser especificadas na linha de comando do vinculador. Se /MIDL não for especificado, o compilador MIDL será invocado com apenas o nome do arquivo IDL e nenhuma outra opção.  
-  
- O arquivo deve conter uma opção de linha de comando de MIDL por linha.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
-  
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).  
-  
-2.  Clique o **vinculador** pasta.  
-  
-3.  Clique o **IDL incorporado** página de propriedades.  
-  
-4.  Modificar a **comandos de MIDL** propriedade.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
-  
--   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MidlCommandFile%2A>.  
-  
-## <a name="see-also"></a>Consulte também  
- [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções do vinculador](../../build/reference/linker-options.md)   
- [/IDLOUT (nomear arquivos de saída MIDL)](../../build/reference/idlout-name-midl-output-files.md)   
- [/IGNOREIDL (não processar atributos em MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
- [/TLBOUT (nome. Arquivo TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)   
- [Compilando um programa atribuído](../../windows/building-an-attributed-program.md)
+
+Especifica um arquivo de resposta para opções de linha de comando MIDL
+
+## <a name="syntax"></a>Sintaxe
+
+> **/ MIDL:\@**<em>arquivo</em>
+
+## <a name="arguments"></a>Arguments
+
+*file*  
+O nome do arquivo que contém [opções de linha de comando MIDL](/windows/desktop/Midl/general-midl-command-line-syntax).
+
+## <a name="remarks"></a>Comentários
+
+Todas as opções para a conversão de um arquivo IDL para um arquivo TLB devem ser fornecidas em *arquivo*; Opções de linha de comando MIDL não podem ser especificadas na linha de comando do vinculador. Se /MIDL não for especificado, o compilador MIDL será invocado com apenas o nome do arquivo IDL e nenhuma outra opção.
+
+O arquivo deve conter uma opção de linha de comando de MIDL por linha.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
+
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
+
+2. Selecione o **propriedades de configuração** > **vinculador** > **IDL incorporado** página de propriedades.
+
+3. Modificar a **comandos de MIDL** propriedade.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
+
+- Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MidlCommandFile%2A>.
+
+## <a name="see-also"></a>Consulte também
+
+[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
+[Opções do vinculador](../../build/reference/linker-options.md)   
+[/IDLOUT (nomear arquivos de saída MIDL)](../../build/reference/idlout-name-midl-output-files.md)   
+[/IGNOREIDL (não processar atributos em MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
+[/TLBOUT (nome. Arquivo TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)   
+[Compilando um programa atribuído](../../windows/building-an-attributed-program.md)

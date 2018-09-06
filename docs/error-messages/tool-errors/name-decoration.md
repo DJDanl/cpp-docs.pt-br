@@ -1,7 +1,7 @@
 ---
 title: Decoração de nome | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e956d0acf9e6debcb183577775e2215e7eccec7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 063464fe58417cfce58160ccba12fbcd514c7320
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323294"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894467"
 ---
 # <a name="name-decoration"></a>Decoração do nome
-Decoração do nome geralmente se refere a convenções de nomenclatura do C++, mas pode ser aplicadas a um número de casos de C também. Por padrão, o C++ usa o nome da função, parâmetros e tipo de retorno para criar um nome de vinculador para a função. Considere a seguinte função:  
-  
-```  
+
+Decoração de nome geralmente se refere a convenções de nomenclatura do C++, mas pode aplicar a um número de casos de C também. Por padrão, o C++ usa o nome da função, parâmetros e tipo de retorno para criar um nome de vinculador para a função. Considere a seguinte função:
+
+```
 void CALLTYPE test(void)  
-```  
-  
- A tabela a seguir mostra o nome do vinculador para várias convenções de chamada.  
-  
-|Convenção de chamada|arquivo de extern "C" ou o. c|. cpp,. cxx ou /TP|  
-|------------------------|---------------------------|------------------------|  
-|Convenção de nomenclatura de C (`__cdecl`)|Test|? @ de teste@ZAXXZ|  
-|Convenção de nomenclatura fastcall (`__fastcall`)|@test@0|? @ de teste@YIXXZ|  
-|Convenção de nomenclatura padrão de chamada (`__stdcall`)|_test@0|? @ de teste@YGXXZ|  
-|Convenção de nomenclatura Vectorcall (`__vectorcall`)|testar @@0|? @ de teste@YQXXZ|  
-  
- Use extern "C" para chamar uma função de C do C++. Extern "C" força o uso da convenção de nomenclatura de C para funções de C++ não classe. Lembre-se de switches de compilador **/Tc** ou **/Tp**, que instrui o compilador a ignorar a extensão de nome de arquivo e compilar o arquivo como C ou C++, respectivamente. Essas opções podem causar nomes que você não espera.  
-  
- Ter protótipos de função que tenha parâmetros incompatíveis também pode causar esse erro. Decoração do nome incorpora o nome da função decorados final os parâmetros de uma função. Chamando uma função com os tipos de parâmetro que não coincide com a declaração da função também pode causar LNK2001.  
-  
- Atualmente, há um padrão de nomeação entre os fornecedores de compilador ou até mesmo entre versões diferentes de um compilador de C++. Vincular, portanto, os arquivos de objeto compilados com outros compiladores talvez não produza o mesmo esquema de nomenclatura e, portanto, faz com que itens externos não resolvidos.  
-  
-## <a name="see-also"></a>Consulte também  
- [Erro das ferramentas de vinculador LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md)
+```
+
+A tabela a seguir mostra o nome do vinculador para várias convenções de chamada.
+
+|Convenção de chamada|arquivo de extern "C" ou o. c|. cpp,. cxx ou /TP|
+|------------------------|---------------------------|------------------------|
+|Convenção de nomenclatura de C (`__cdecl`)|`_test`|`?test@@ZAXXZ`|
+|Convenção de nomenclatura fastcall (`__fastcall`)|`@test@0`|`?test@@YIXXZ`|
+|Convenção de nomenclatura padrão de chamada (`__stdcall`)|`_test@0`|`?test@@YGXXZ`|
+|Convenção de nomenclatura Vectorcall (`__vectorcall`)|`test@@0`|`?test@@YQXXZ`|
+
+Use extern "C" para chamar uma função de C do C++. Extern "C" força o uso da convenção de nomenclatura de C para funções de C++ não classe. Lembre-se de comutadores de compilador **/Tc** ou **/Tp**, que diz ao compilador para ignorar a extensão de nome de arquivo e compile o arquivo como C ou C++, respectivamente. Essas opções podem causar nomes que você não espera.
+
+Ter protótipos de função que têm parâmetros incompatíveis também pode causar esse erro. Decoração de nome incorpora o nome decorado de função final os parâmetros de uma função. Chamar uma função com os tipos de parâmetro que não correspondem na declaração de função também pode causar LNK2001.
+
+Atualmente, há um padrão de nomenclatura entre fornecedores de compilador ou até mesmo entre diferentes versões de um compilador de C++. Arquivos de objeto compilados com outros compiladores de vinculação, portanto, talvez não produza o mesmo esquema de nomenclatura e, portanto, faz com que externos não resolvidos.
+
+## <a name="see-also"></a>Consulte também
+
+[Erro das ferramentas de vinculador LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md)

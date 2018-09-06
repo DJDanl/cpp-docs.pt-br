@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55fbe59128aef6fbc7df20dd14afd102b493f2fd
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: eefb2347cfe3a46dabbf72a46fd46fcb16f57d38
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322492"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578394"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Portando para a Plataforma Universal do Windows (C++)
 
@@ -27,9 +27,9 @@ A documentação do Centro de Desenvolvimento do Windows contém um guia para po
 
 Este tópico contém os procedimentos a seguir para portabilidade de código para a UWP.
 
-1. [Portabilidade de um aplicativo da Windows 8.1 Store para a UWP](#BK_81StoreApp)
+- [Portabilidade de um aplicativo da Windows 8.1 Store para a UWP](#BK_81StoreApp)
 
-2. [Portabilidade de um Componente do Tempo de Execução do Windows 8.1 para a UWP](#BK_81Component)
+- [Portabilidade de um Componente do Tempo de Execução do Windows 8.1 para a UWP](#BK_81Component)
 
 Se você tiver uma DLL de área de trabalho clássica Win32 e desejar chamá-la de um aplicativo da UWP, você poderá fazer isso também. Usando esses procedimentos, você pode criar uma camada da interface do usuário da UWP para um aplicativo C++ da área de trabalho do Windows clássica existente ou seu código C++ padrão de plataforma cruzada. Veja [Como usar o código C++ existente em um aplicativo da Plataforma Universal do Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
 
@@ -41,9 +41,9 @@ Se você tiver um aplicativo da Windows 8.1 Store, você poderá usar este proce
 
 1. Se você ainda não fez isso, abra o projeto de aplicativo do Windows 8.1 no Visual Studio 2017 e siga as instruções para atualizar o arquivo de projeto.
 
-   Você precisa ter instalado as Ferramentas do Windows 8.1 na instalação do Visual Studio. Se você não tem essas ferramentas instaladas, inicie a instalação do Visual Studio na janela programas e recursos, escolha Visual Studio 2017 e, na janela de instalação, escolha **Modificar**. Localize Ferramentas do Windows 8.1, certifique-se de que essa opção está selecionada e escolha OK.
+   Você precisa ter instalado as **Ferramentas do Windows 8.1 na instalação do Visual Studio**. Se essas ferramentas não estiverem instaladas, inicie a instalação do **Visual Studio** pela janela **Programas e Recursos**, escolha **Visual Studio 2017** e, na janela de instalação, escolha **Modificar**. Localize as **Ferramentas do Windows 8.1**, verifique se essa opção está selecionada e escolha **OK**.
 
-2. Abra a janela Propriedades do Projeto e, em C++, Geral, defina o Conjunto de Ferramentas da Plataforma como v141, o conjunto de ferramentas para o Visual Studio 2017.
+2. Abra a janela **Propriedades do Projeto** e, em **C++** > **Geral**, defina o **Conjunto de Ferramentas da Plataforma** como **v141**, o conjunto de ferramentas para o Visual Studio 2017.
 
 3. Compile o projeto como um projeto Windows 8.1 e resolva eventuais erros de build. Quaisquer erros neste estágio são provavelmente devido a alterações interruptivas nas ferramentas de build e bibliotecas. Consulte [Histórico de alterações de 2003 – 2015 do Visual C++](../porting/visual-cpp-change-history-2003-2015.md) para obter uma explicação detalhada das alterações que podem afetar seu código.
 
@@ -51,21 +51,21 @@ Se você tiver um aplicativo da Windows 8.1 Store, você poderá usar este proce
 
 4. Crie um novo projeto de aplicativo Universal do Windows usando o modelo em branco. Você talvez queira dar a ele o mesmo nome do seu projeto existente, embora os projetos precisem estar em diretórios diferentes para que seja possível fazer isso.
 
-5. Feche a solução e, em seguida, usando o Windows Explorer ou a linha de comando, copie os arquivos de código (com extensões .cpp, .h e .xaml) do seu projeto Windows 8.1 na mesma pasta que o arquivo de projeto (.vcxproj) do projeto que você criou na etapa 1. Não copie o arquivo Package.appxmanifest e, se você tiver códigos separados para telefone e área de trabalho do Windows 8.1, escolha um deles para portar primeiro (você precisará trabalhar um pouco mais tarde para adaptar-se ao outro). Certifique-se de copiar todas as subpastas e seus conteúdos. Se solicitado, escolha substituir todos os arquivos com nomes duplicados.
+5. Feche a solução e, em seguida, usando o **Windows Explorer** ou a linha de comando, copie os arquivos de código (com extensões .cpp, .h e .xaml) do projeto do Windows 8.1 para a mesma pasta que o arquivo de projeto (.vcxproj) do projeto que você criou na Etapa 1. Não copie o arquivo Package.appxmanifest e, se você tiver códigos separados para telefone e área de trabalho do Windows 8.1, escolha um deles para portar primeiro (você precisará trabalhar um pouco mais tarde para adaptar-se ao outro). Certifique-se de copiar todas as subpastas e seus conteúdos. Se solicitado, escolha substituir todos os arquivos com nomes duplicados.
 
-6. Reabra a solução e escolha **Adicionar, Item Existente** no menu de atalho para o nó do projeto. Selecione todos os arquivos que você copiou, exceto eventuais arquivos que já sejam parte do projeto.
+6. Reabra a solução e, em seguida, escolha **Adicionar** > **Item Existente** no menu de atalho do nó do projeto. Selecione todos os arquivos que você copiou, exceto eventuais arquivos que já sejam parte do projeto.
 
    Verifique eventuais subpastas e certifique-se de adicionar os arquivos nelas também.
 
-7. Se você não estiver usando o mesmo nome do projeto usado em seu projeto anterior, abra o arquivo Package.appxmanifest e atualize o Ponto de Entrada para refletir o nome do namespace para a classe App.
+7. Se você não estiver usando o mesmo nome do projeto usado em seu projeto anterior, abra o arquivo Package.appxmanifest e atualize o **Ponto de Entrada** para refletir o nome do namespace da classe `App`.
 
-   O campo **Ponto de Entrada** no arquivo Package.appxmanifest contém um nome no escopo para a classe App, o qual inclui o namespace que contém a classe App. Quando você cria um projeto Universal do Windows, o namespace é definido como o nome do projeto. Se isso for diferente do que está nos arquivos copiados de seu projeto antigo, você deverá atualizar um ou outro para que eles correspondam.
+   O campo **Ponto de Entrada** no arquivo Package.appxmanifest contém um nome de escopo para a classe `App`, o qual inclui o namespace que contém a classe `App`. Quando você cria um projeto Universal do Windows, o namespace é definido como o nome do projeto. Se isso for diferente do que está nos arquivos copiados de seu projeto antigo, você deverá atualizar um ou outro para que eles correspondam.
 
 8. Compile o projeto e resolva eventuais erros de build devidos a alterações interruptivas entre as diferentes versões do SDK do Windows.
 
 9. Execute o projeto na área de trabalho local. Verifique se não há nenhum erro de implantação e se o layout do aplicativo parece razoável e se ele funciona corretamente na área de trabalho.
 
-10. Se você tiver arquivos de código separados e .xaml para outro dispositivo, como Windows Phone 8.1, examine esse código e identifique onde ele difere do dispositivo padrão. Se a diferença for apenas no layout, você poderá usar um Gerenciador de Estado Visual no xaml para personalizar a exibição, dependendo do tamanho da tela. Para outras diferenças, você pode usar seções de condições no seu código usando as instruções #if a seguir.
+10. Se você tiver arquivos de código separados e .xaml para outro dispositivo, como Windows Phone 8.1, examine esse código e identifique onde ele difere do dispositivo padrão. Se a diferença for apenas no layout, você poderá usar um **Gerenciador de Estado Visual** no XAML para personalizar a exibição, dependendo do tamanho da tela. Para outras diferenças, você pode usar seções de condições no seu código usando as instruções #if a seguir.
 
     ```cpp
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_PC_APP)

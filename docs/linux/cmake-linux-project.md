@@ -15,12 +15,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 743f15cdb9fe8b0233f5b59ca399c0f47704d441
-ms.sourcegitcommit: b0d6777cf4b580d093eaf6104d80a888706e7578
+ms.openlocfilehash: bbc19b4c8e698c520be2283376ac5297cdae33df
+ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39269534"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42900506"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Configurar um projeto do Linux CMake
 
@@ -30,7 +30,7 @@ Quando você instala a carga de trabalho Linux C++ para Visual Studio, o suporte
 Este tópico pressupõe que você tenha uma familiaridade básica com o suporte ao CMake no Visual Studio. Para saber mais, veja [Ferramentas do CMake no Visual C++](../ide/cmake-tools-for-visual-cpp.md). Para obter mais informações sobre o próprio CMake, consulte [Compilar, testar e empacotar seu software com o CMake](https://cmake.org/).
 
 > [!NOTE]  
-> O suporte ao CMake no Visual Studio requer o suporte do modo de servidor que foi apresentado no CMake 3.8. Se o gerenciador de pacotes fornecer uma versão mais antiga do CMake, [compile o CMake da fonte](#build-a-supported-cmake release-from-source) ou baixe-o na [página oficial de download do CMake](https://cmake.org/download/). Para uma variante do CMake fornecida pela Microsoft compatível com o painel [Exibição de Destinos do CMake](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) no Visual Studio, baixe os binários pré-criados mais recentes em [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
+> O suporte ao CMake no Visual Studio requer o suporte do modo de servidor que foi apresentado no CMake 3.8. Para uma variante do CMake fornecida pela Microsoft compatível com o painel [Exibição de Destinos do CMake](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) no Visual Studio, baixe os binários pré-criados mais recentes em [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases). Se o gerenciador de pacotes fornecer uma versão mais antiga que o CMake 3.8, uma solução alternativa será [criar o CMake da fonte](#build-a-supported-cmake-release-from-source), usar o CMake padrão ou baixá-lo da [página de download do CMake](https://cmake.org/download/) oficial. 
 
 ## <a name="open-a-folder"></a>Abrir uma pasta
 
@@ -87,10 +87,16 @@ Para alterar as configurações de CMake padrão, escolha **CMake | Alterar as c
       "remoteCMakeListsRoot": "/var/tmp/src/${workspaceHash}/${name}",
       "cmakeExecutable": "/usr/local/bin/cmake",
       "buildRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
+      "installRoot": "${env.LOCALAPPDATA}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
       "remoteBuildRoot": "/var/tmp/build/${workspaceHash}/build/${name}",
+      "remoteInstallRoot": "/var/tmp/build/${workspaceHash}/install/${name}",
       "remoteCopySources": true,
       "remoteCopySourcesOutputVerbosity": "Normal",
       "remoteCopySourcesConcurrentCopies": "10",
+      "remoteCopySourcesMethod": "rsync",
+      "remoteCopySourcesExclusionList": [".vs", ".git"],
+      "rsyncCommandArgs" : "-t --delete --delete-excluded",
+      "remoteCopyBuildOutput" : "false",
       "cmakeCommandArgs": "",
       "buildCommandArgs": "",
       "ctestCommandArgs": "",
@@ -98,7 +104,19 @@ Para alterar as configurações de CMake padrão, escolha **CMake | Alterar as c
 }
 ```
 
-O valor `name` pode ser o que você desejar. O valor `remoteMachineName` especifica qual sistema remoto deve ser o destino, caso você tenha mais de um. O IntelliSense está habilitado para este campo para ajudá-lo a selecionar o sistema certo. O campo `remoteCMakeListsRoot` especifica para onde as fontes do projeto serão copiadas no sistema remoto. O campo `remoteBuildRoot` é onde a saída de build será gerada no sistema remoto. Essa saída também é copiada localmente para o local especificado por `buildRoot`.
+O valor `name` pode ser o que você desejar. O valor `remoteMachineName` especifica qual sistema remoto deve ser o destino, caso você tenha mais de um. O IntelliSense está habilitado para este campo para ajudá-lo a selecionar o sistema certo. O campo `remoteCMakeListsRoot` especifica para onde as fontes do projeto serão copiadas no sistema remoto. O campo `remoteBuildRoot` é onde a saída de build será gerada no sistema remoto. Essa saída também é copiada localmente para o local especificado por `buildRoot`. Os campos `remoteInstallRoot` e `installRoot` são semelhantes a `remoteBuildRoot` e `buildRoot`, exceto que eles se aplicam quando uma instalação do cmake é realizada. A entrada `remoteCopySources` controla se suas fontes locais são copiadas para o computador remoto. Defina essa opção como false se houver vários arquivos e você já estiver sincronizando as fontes por conta própria. O valor de `remoteCopyOutputVerbosity` controla o nível de detalhes da etapa de cópia, caso seja necessário diagnosticar erros. A entrada `remoteCopySourcesConcurrentCopies` controla quantos processos são gerados para fazer a cópia. O valor de `remoteCopySourcesMethod` pode ser rsync ou sftp. O campo `remoteCopySourcesExclusionList` permite que você controle o que é copiado para o computador remoto. O valor de `rsyncCommandArgs` permite que você controle o método rsync de cópia. O campo `remoteCopyBuildOutput` controla se a saída do build remoto é copiada para a pasta de build local.
+
+Também há algumas configurações opcionais que você pode usar para obter mais controle:
+
+```json
+{
+      "remotePreBuildCommand": "",
+      "remotePreGenerateCommand": "",
+      "remotePostBuildCommand": "",
+}
+```
+
+Essas opções permitem que você execute comandos na caixa remota antes e depois do build e antes da geração do CMake. Elas podem ser qualquer comando válido na caixa remota. A saída é canalizada para o Visual Studio.
 
 ## <a name="build-a-supported-cmake-release-from-source"></a>Compilar uma versão do CMake com suporte da origem
 

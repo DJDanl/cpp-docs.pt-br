@@ -45,12 +45,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0babb0932fc059a91fd8da79f649039bcaebc457
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 02453ae14ab6e8cd4a75a9f2d8725ce69e2b7f02
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753719"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43895286"
 ---
 # <a name="curl-class"></a>Classe cUrl
 
@@ -116,11 +116,11 @@ class CUrl
 
 `CUrl` permite que você manipule os campos de uma URL, como o número de porta ou caminho. `CUrl` Entenda as URLs da seguinte forma:
 
-\<Esquema > ://\<nome de usuário >:\<senha > @\<nome do host >:\<PortNumber > /\<UrlPath >\<ExtraInfo >
+\<Esquema > ://\<nome de usuário >:\<senha >\@\<nome do host >:\<PortNumber > /\<UrlPath >\<ExtraInfo >
 
 (Alguns campos são opcionais.) Por exemplo, considere esta URL:
 
-http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents
+`http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents`
 
 [CUrl::CrackUrl](#crackurl) analisa-lo da seguinte maneira:
 
@@ -130,7 +130,7 @@ http://someone:secret@www.microsoft.com:80/visualc/stuff.htm#contents
 
 - Senha: "segredo"
 
-- Nome do host: "www.microsoft.com"
+- Nome do host: "`www.microsoft.com`"
 
 - PortNumber: 80
 
@@ -235,7 +235,7 @@ Retorna verdadeiro em caso de êxito, FALSE em caso de falha.
 
 Esse método acrescenta seus campos individuais para construir a cadeia de caracteres de URL completa usando o seguinte formato:
 
-**\<esquema > ://\<usuário >:\<passar > @\<domínio >:\<porta >\<caminho >\<extra >**
+**\<esquema > ://\<usuário >:\<passar >\@\<domínio >:\<porta >\<caminho >\<extra >**
 
 Ao chamar esse método, o *pdwMaxLength* parâmetro deve conter inicialmente o comprimento máximo do buffer de cadeia de caracteres referenciado pela *lpszUrl* parâmetro. O valor de *pdwMaxLength* parâmetro será atualizado com o comprimento real da cadeia de caracteres de URL.
 

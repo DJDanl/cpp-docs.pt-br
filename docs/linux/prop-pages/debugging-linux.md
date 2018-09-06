@@ -12,16 +12,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 55f07d8903d8110410648e352d364151bf6d2a73
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df57a884186fe33d91de78647cc225f3a63a6f9f
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331094"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578175"
 ---
 # <a name="c-debugging-properties-linux-c"></a>Propriedades do depurador C++ (Linux C++)
 
-propriedade | Descrição | Opções
+Propriedade | Descrição | Opções
 --- | ---| ---
 Comando de pré-inicialização | Um comando que é executado no shell antes da depuração ser iniciada e antes do depurador estar em execução. Ele pode ser usado para afetar o ambiente de depuração.
 Programa | O caminho completo para o programa a ser depurado no sistema remoto. É um caminho no sistema remoto. Se for deixado em branco ou inalterado, será assumido como a saída do projeto atual.

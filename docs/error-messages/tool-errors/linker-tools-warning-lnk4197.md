@@ -1,7 +1,7 @@
 ---
-title: Aviso LNK4197 das ferramentas de vinculador | Microsoft Docs
+title: Ferramentas de vinculador LNK4197 aviso | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/05/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfef7f0fe2d9cd50fa6a18ad682c3e4d80df99c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55044ce511e2584e2859b7e8a8d723cbe0976105
+ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300821"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43894480"
 ---
 # <a name="linker-tools-warning-lnk4197"></a>Aviso LNK4197 (Ferramentas de Vinculador)
-Exportar 'exportname' especificado várias vezes; usando primeira especificação  
-  
- Uma exportação é especificada em várias e diferentes maneiras. O vinculador usa a primeira especificação e ignora o resto.  
-  
- Se você estiver recriando a biblioteca de tempo de execução C, você pode ignorar essa mensagem.  
-  
- Se uma exportação for especificada, exatamente da mesma forma, com várias vezes, o vinculador não emitirá um aviso.  
-  
- Por exemplo, o seguinte conteúdo de um arquivo. def poderia causar este aviso:  
-  
-```  
-EXPORTS  
-   functioname      NONAME  
-   functioname      @10  
-```  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
-  
-1.  A exportação mesmo for especificada na linha de comando (por meio da exportação:) e no arquivo. def  
-  
-2.  A exportação mesmo é listada duas vezes no arquivo. def com atributos diferentes.
+
+> Exportar '*exportname*' especificado várias vezes; usando primeira especificação
+
+Uma exportação é especificada em várias e diferentes maneiras. O vinculador usa a primeira especificação e ignora o resto.
+
+Se você estiver recriando a biblioteca de tempo de execução C, você pode ignorar essa mensagem.
+
+Se uma exportação for especificada, exatamente da mesma forma, com várias vezes, o vinculador não emitirá um aviso.
+
+Por exemplo, o seguinte conteúdo de um arquivo. def poderia causar esse aviso:
+
+```
+EXPORTS
+   functioname      NONAME
+   functioname      @10
+```
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
+
+1. A mesma exportação é especificada na linha de comando (por meio de exportação:) e no arquivo. def.
+
+2. A mesma exportação é listada duas vezes no arquivo. def com atributos diferentes.

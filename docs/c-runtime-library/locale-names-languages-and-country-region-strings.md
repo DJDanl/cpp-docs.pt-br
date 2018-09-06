@@ -1,7 +1,7 @@
 ---
 title: Nomes de localidades, idiomas e cadeias de caracteres de país/região | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 08/13/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f28262a1402d81bd5dcd0933f943b420a37f044
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: c072074c24466458ebd19e1335f49169c5c22bd5
+ms.sourcegitcommit: 3b78ddea5fd3e22b7c5cd2d787ec71a518a52223
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39606729"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578435"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>Nomes de localidades, idiomas e cadeias de caracteres de país/região
 
@@ -44,9 +44,9 @@ O formato *language*[_*country_region*[.*code_page*]] é armazenado na configura
 
 A página de código é a página de código ANSI/OEM associada à localidade. A página de código é determinada por você ao especificar uma localidade por idioma ou por idioma e país/região apenas. O valor especial `.ACP` especifica a página de código ANSI para o país/região. O valor especial `.OCP` especifica a página de código OEM para o país/região. Por exemplo, se você especificar `"Greek_Greece.ACP"` como a localidade, a localidade será armazenada como `Greek_Greece.1253` (a página de código ANSI para grego); se você especificar `"Greek_Greece.OCP"` como a localidade, ela será armazenada como `Greek_Greece.737` (a página de código OEM para grego). Para obter mais informações sobre páginas de códigos, consulte [Páginas de código](../c-runtime-library/code-pages.md). Para obter uma lista de páginas de código com suporte no Windows, consulte [Identificadores de páginas de código](/windows/desktop/Intl/code-page-identifiers).
 
-Se você usar somente a página de código para especificar a localidade, o idioma padrão e o país/região do sistema serão usados. Por exemplo, se você especificar `".1254"` (turco ANSI) como a localidade em um sistema que está configurado para inglês (Estados Unidos), a localidade armazenada será `English_United States.1254`. Não recomendamos essa forma, pois isso poderia resultar em comportamento inconsistente.
+Se você usar somente a página de código para especificar a localidade, serão usados o idioma e o país/região padrão do usuário, relatados por [GetUserDefaultLocaleName](/windows/desktop/api/winnls/nf-winnls-getuserdefaultlocalename). Por exemplo, se você especificar `".1254"` (turco ANSI) como a localidade de um usuário que está configurado para inglês (Estados Unidos), a localidade armazenada será `English_United States.1254`. Não recomendamos essa forma, pois isso poderia resultar em comportamento inconsistente.
 
-Um valor do argumento *locale* de `C` especifica o ambiente em conformidade mínima com ANSI para a conversão em C. A localidade `C` pressupõe que cada tipo de dados `char` tem 1 byte e seu valor é sempre menor que 256. Se *locale* apontar para uma cadeia de caracteres vazia, a localidade será o ambiente nativo definido pela implementação.
+Um valor do argumento *locale* de `C` especifica o ambiente em conformidade mínima com ANSI para a conversão em C. A localidade `C` pressupõe que cada tipo de dados **char** tem 1 byte e seu valor é sempre menor que 256. Se *locale* apontar para uma cadeia de caracteres vazia, a localidade será o ambiente nativo definido pela implementação.
 
 Você pode especificar todas as categorias de localidade ao mesmo tempo para as funções `setlocale` e `_wsetlocale` usando a categoria `LC_ALL`. Todas as categorias podem ser definidas para a mesma localidade, ou você pode definir cada categoria individualmente usando um argumento de localidade que tenha esta forma:
 
