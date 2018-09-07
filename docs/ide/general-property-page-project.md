@@ -35,16 +35,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba98f7d9ed14df1e017f8b83e73cf5d318610f9f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a33c6c41b2a9567ef8ed156901b8d04405b6eb46
+ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33336486"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42578155"
 ---
 # <a name="general-property-page-project"></a>Página de propriedade geral (projeto)
 
-Quando você clica com o botão direito do mouse em um nó do projeto no Gerenciador de Soluções e seleciona **Propriedades**, a página de propriedades **Geral** no nó **Propriedades de Configuração** do painel esquerdo exibe duas seções de propriedades:
+Quando você clica com o botão direito do mouse em um nó de projeto no Gerenciador de Soluções e seleciona **Propriedades**, a página de propriedades **Geral** no nó **Propriedades de Configuração** do painel esquerdo exibe duas seções de propriedades:
 
 - Geral
 
