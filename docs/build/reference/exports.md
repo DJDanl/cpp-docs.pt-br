@@ -1,7 +1,7 @@
 ---
 title: EXPORTAÇÕES | Microsoft Docs
 ms.custom: ''
-ms.date: 08/20/2018
+ms.date: 09/07/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 299d300cb3b2247a4dfa698a53c486bcef6164e3
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: f3ea5c28fe54e5d117ef40430912ef3f8ea0efd8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894545"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104284"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -38,9 +38,7 @@ A primeira *definition* pode ser na mesma linha como o `EXPORTS` palavra-chave o
 
 A sintaxe para uma exportação *definição* é:
 
-```DEF
-entryname[=internal_name|other_module.another_exported_name] [@Ordinal [NONAME]] [[PRIVATE] | [DATA]]
-```
+> *Nome_da_entrada*\[__=__*internal_name*|*other_module.exported_name*] \[ **\@** _ordinal_ \[ **NONAME**]] \[ \[ **PRIVADA**] | \[ **Dados**]]
 
 *Nome_da_entrada* é o nome de função ou variável que você deseja exportar. É obrigatório. Se o nome exportado for diferente do nome na DLL, especifique o nome da exportação no DLL usando *internal_name*. Por exemplo, se o DLL exportar uma função `func1` e você desejar que os chamadores a utilizem como `func2`, especifique:
 
@@ -56,18 +54,18 @@ EXPORTS
    func2=other_module.func1
 ```
 
-Se o nome exportado for de outro módulo que exporta por ordinal, especifique a exportação 's ordinal na DLL usando *other_module. #ordinal_number*. Por exemplo, se sua DLL exporta uma função de outro módulo em que é ordinal 42, e você deseja que os chamadores para usá-la como `func2`, você especificaria:
+Se o nome exportado for de outro módulo que exporta por ordinal, especifique a exportação 's ordinal na DLL usando *other_module*.__#__ *ordinal*. Por exemplo, se sua DLL exporta uma função de outro módulo em que é ordinal 42, e você deseja que os chamadores para usá-la como `func2`, você especificaria:
 
 ```DEF
 EXPORTS
    func2=other_module.#42
 ```
 
-Como o compilador do Visual C++ usa decoração de nome para funções C++, você deve usar o nome decorado internal_name ou definir as funções exportadas usando extern "C" no código-fonte. O compilador também decora funções C que usam o [stdcall](../../cpp/stdcall.md) chamando convenção com um sublinhado (\_) prefixo e um sufixo composto o sinal de arroba (\@) seguido pelo número de bytes (em decimais) no lista de argumentos.
+Como o compilador do Visual C++ usa decoração de nome para funções C++, você deve usar o nome decorado *internal_name* ou definir as funções exportadas usando `extern "C"` no código-fonte. O compilador também decora funções C que usam o [stdcall](../../cpp/stdcall.md) chamando convenção com um sublinhado (\_) prefixo e um sufixo composto o sinal de arroba (\@) seguido pelo número de bytes (em decimais) no lista de argumentos.
 
 Para localizar os nomes decorados produzidos pelo compilador, use o [DUMPBIN](../../build/reference/dumpbin-reference.md) ferramenta ou o vinculador [/Map](../../build/reference/map-generate-mapfile.md) opção. Os nomes decorados são específicos do compilador. Se você exportar os nomes decorados no arquivo .DEF, executáveis vinculados ao DLL também devem ser construídos com a mesma versão do compilador. Isso garante que os nomes decorados no chamador correspondam aos nomes exportados no arquivo .DEF.
 
-Você pode usar \@ *ordinal* para especificar que um número e não o nome da função, irá na tabela de exportação da DLL. Muitos DLLs do Windows exportam ordinais para dar suporte a código legado. Era comum usar ordinais em código do Windows de 16 bits, pois isso podia ajudar a minimizar o tamanho de um DLL. Não recomendamos exportar funções por ordinais, a menos que os clientes DLL precisem disso para suporte legado. Como o arquivo .LIB conterá o mapeamento entre o ordinal e a função, é possível usar o nome da função como normalmente se faria em projetos que usam o DLL.
+Você pode usar \@ *ordinal* para especificar que um número e não o nome da função, entra em tabela de exportação da DLL. Muitos DLLs do Windows exportam ordinais para dar suporte a código legado. Era comum usar ordinais em código do Windows de 16 bits, pois isso podia ajudar a minimizar o tamanho de um DLL. Não recomendamos exportar funções por ordinais, a menos que os clientes DLL precisem disso para suporte legado. Como o arquivo .LIB conterá o mapeamento entre o ordinal e a função, é possível usar o nome da função como normalmente se faria em projetos que usam o DLL.
 
 Com o uso opcional **NONAME** palavra-chave, você pode exportar apenas por ordinal e reduzir o tamanho da tabela de exportação no DLL resultante. No entanto, se você quiser usar [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) no DLL, você deve conhecer o ordinal porque o nome não será válido.
 
@@ -88,9 +86,16 @@ Há quatro maneiras de exportar uma definição, listadas na ordem recomendada:
 
 3. Uma [/exportação](../../build/reference/export-exports-a-function.md) especificação em um comando LINK
 
-4. Um [comentário](../../preprocessor/comment-c-cpp.md) diretiva no código-fonte do formulário `#pragma comment(linker, "/export: definition ")`  
+4. Um [comentário](../../preprocessor/comment-c-cpp.md) diretiva no código-fonte do formulário `#pragma comment(linker, "/export: definition ")`. O exemplo a seguir mostra uma diretiva de comentário #pragma antes de uma declaração de função, onde `PlainFuncName` é o nome não decorado, e `_PlainFuncName@4` é o nome decorado da função:
 
-Todos os quatro métodos podem ser usados no mesmo programa. Quando LINK compila um programa que contém exportações, ele também cria uma biblioteca de importação, a menos que um arquivo .EXP seja usado na construção.
+    ```cpp
+    #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")
+    BOOL CALLBACK PlainFuncName( Things * lpParams)
+    ```
+
+A diretiva #pragma é útil se você precisar exportar um nome não decorado de função e ter exportações diferentes dependendo da configuração de build (por exemplo, em compilações de 32 bits ou 64 bits).
+
+Todos os quatro métodos podem ser usados no mesmo programa. Quando LINK compila um programa que contém exportações, ele também cria uma biblioteca de importação, a menos que um arquivo .EXP seja usado na construção. 
 
 Segue um exemplo de seção EXPORTS:
 

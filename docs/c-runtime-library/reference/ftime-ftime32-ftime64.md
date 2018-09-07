@@ -45,12 +45,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fd388e2963a0e28389fbf7cc2c4bd146ac9b61e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8942dbaddcc1f4ab1ec5d571d08d95d8669d302d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401432"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107049"
 ---
 # <a name="ftime-ftime32-ftime64"></a>_ftime, _ftime32, _ftime64
 
@@ -66,24 +66,25 @@ void _ftime64( struct __timeb64 *timeptr );
 
 ### <a name="parameters"></a>Parâmetros
 
-*timeptr* ponteiro para um **timeb**, **__timeb32**, ou **timeb64** estrutura.
+*timeptr*<br/>
+Ponteiro para um **timeb**, **__timeb32**, ou **__timeb64** estrutura.
 
 ## <a name="remarks"></a>Comentários
 
-O **ftime** função obtém a hora local atual e a armazena na estrutura apontada pelo *timeptr*. O **timeb**, **__timeb32**, e **timeb64** estruturas são definidas em \<sys\\timeb.h >. Elas contêm quatro campos, que são listados na tabela a seguir.
+O **ftime** função obtém a hora local atual e a armazena na estrutura apontada por *timeptr*. O **timeb**, **__timeb32**, e **__timeb64** estruturas são definidas no \<sys\\timeb.h >. Elas contêm quatro campos, que são listados na tabela a seguir.
 
 |Campo|Descrição|
 |-|-|
 |**dstflag**|Diferente de zero se o horário de verão estiver em vigor no fuso horário local. (Consulte [_tzset](tzset.md) para obter uma explicação de como o horário de verão é determinado.)|
 |**millitm**|Fração de segundo em milissegundos.|
 |**time**|Tempo, em segundos, desde a meia-noite (00:00:00) de 1º de janeiro de 1970 no horário UTC (Tempo Universal Coordenado).|
-|**timezone**|Diferença em minutos, movendo-se rumo ao oeste, entre o UTC e o horário local. O valor de **fuso horário** é definir o valor da variável global **TimeZone** (consulte **tzset**).|
+|**timezone**|Diferença em minutos, movendo-se rumo ao oeste, entre o UTC e o horário local. O valor de **fuso horário** é definido do valor da variável global **TimeZone** (consulte **tzset**).|
 
-O **ftime64** função, que usa o **timeb64** estrutura, permite que as datas de criação do arquivo a ser expressa backup por meio de 23:59:59, 31 de dezembro de 3000 a UTC; enquanto **ftime32**representa apenas datas até 23:59:59 18 de janeiro de 2038, UTC. Meia-noite de 1º de janeiro de 1970 é o limite inferior do intervalo de datas para todas essas funções.
+O **_ftime64** função, que usa o **__timeb64** estrutura, permite que as datas de criação de arquivo sejam expressas até 23:59:59, 31 de dezembro de 3000, a UTC; enquanto **_ftime32**representa apenas datas até 23:59:59 18 de janeiro de 2038, UTC. Meia-noite de 1º de janeiro de 1970 é o limite inferior do intervalo de datas para todas essas funções.
 
-O **ftime** função é equivalente a **ftime64**, e **timeb** contém um tempo de 64 bits, a menos que **_USE_32BIT_TIME_T** for definida, em Nesse caso, o comportamento antigo está em vigor; **ftime** usa um tempo de 32 bits e **timeb** contém um tempo de 32 bits.
+O **ftime** função é equivalente a **_ftime64**, e **timeb** contém uma hora de 64 bits, a menos que **_USE_32BIT_TIME_T** é definida, no Nesse caso, o comportamento antigo está em vigor. **ftime** usa uma hora de 32 bits e **timeb** contém uma hora de 32 bits.
 
-**ftime** valida seus parâmetros. Se passado um ponteiro nulo como *timeptr*, a função invoca o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, a função define **errno** para **EINVAL**.
+**ftime** valida seus parâmetros. Se passado um ponteiro nulo como *timeptr*, a função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função definirá **errno** à **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 

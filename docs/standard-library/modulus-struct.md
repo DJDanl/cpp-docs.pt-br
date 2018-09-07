@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5b9ae4ae3b7d741624d220ba00006d51a61fd20
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8b277a31eafafa4ae33066653b7a080bb3474408
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962156"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104115"
 ---
 # <a name="modulus-struct"></a>Struct modulus
 
@@ -51,9 +51,11 @@ struct modulus<void>
 
 *Tipo de*, *T*, *U* qualquer tipo que dá suporte a um `operator%` que usa operandos dos tipos especificados ou inferidos.
 
-*Esquerda* o operando esquerdo da operação modulus. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *T*.
+*Esquerda*<br/>
+O operando esquerdo da operação modulus. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *T*.
 
-*Direita* o operando direito da operação modulus. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *U*.
+*Direita*<br/>
+O operando direito da operação modulus. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *U*.
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -115,8 +117,8 @@ int main( )
 The vector v1 = ( 5 10 15 20 25 30 )
 The vector v2 = ( 3 6 9 12 15 18 )
 The element-wise remainders of the modular division
- are: ( 2 4 6 8 10 12 )
- */
+are: ( 2 4 6 8 10 12 )
+*/
 ```
 
 ## <a name="requirements"></a>Requisitos

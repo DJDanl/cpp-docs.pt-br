@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::to_wstring [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6534d93b4f04826188fa13c942efd080e152aebe
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a80749e6eaffe02d748167f462580782a2755f89
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954897"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106730"
 ---
 # <a name="ltstringgt-functions"></a>Funções &lt;de cadeia de caracteres&gt;
 
@@ -85,11 +85,14 @@ basic_istream<Allocator, Traits>& getline(
 
 ### <a name="parameters"></a>Parâmetros
 
-*é* o fluxo de entrada do qual uma cadeia de caracteres deve ser extraído.
+*is*<br/>
+O fluxo de entrada do qual uma cadeia de caracteres será extraída.
 
-*STR* a cadeia de caracteres na qual são lidos os caracteres do fluxo de entrada.
+*str*<br/>
+A cadeia de caracteres na qual são lidos os caracteres do fluxo de entrada.
 
-*Delim* o delimitador de linha.
+*Delim*<br/>
+O delimitador de linha.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -426,9 +429,11 @@ void swap(basic_string<CharType, Traits, Allocator>& left, basic_string<CharType
 
 ### <a name="parameters"></a>Parâmetros
 
-*à esquerda* uma cadeia de caracteres cujos elementos deverão ser trocado pelos de outra cadeia de caracteres.
+*left*<br/>
+Uma cadeia de caracteres cujos elementos devem ser trocado pelos de outra cadeia de caracteres.
 
-*à direita* outra sequência de caracteres cujos elementos deverão ser trocados com a primeira cadeia de caracteres.
+*right*<br/>
+A outra sequência cujos elementos devem ser trocados pela primeira cadeia de caracteres.
 
 ### <a name="remarks"></a>Comentários
 

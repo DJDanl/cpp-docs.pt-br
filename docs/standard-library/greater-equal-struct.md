@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f8b516a3e5f5e19731a372a6531d9f26cb94fa6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b4b99c9b187e80a7c1e0a91badc4ccad06de593f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958910"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104245"
 ---
 # <a name="greaterequal-struct"></a>Struct greater_equal
 
@@ -44,16 +44,18 @@ struct greater_equal<void>
   template <class T, class U>
   auto operator()(T&& Left, U&& Right) const`
     -> decltype(std::forward<T>(Left)>= std::forward<U>(Right));
- };
+};
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *Tipo de*, *T*, *U* qualquer tipo que dá suporte a um `operator>=` que usa operandos dos tipos especificados ou inferidos.
 
-*Esquerda* o operando esquerdo da operação maior que-ou-igual a. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *T*.
+*Esquerda*<br/>
+O operando esquerdo da operação "maior ou igual a". O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *T*.
 
-*Direita* o operando direito da operação maior que-ou-igual a. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *U*.
+*Direita*<br/>
+O operando direito da operação "maior ou igual a". O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *U*.
 
 ## <a name="return-value"></a>Valor de retorno
 

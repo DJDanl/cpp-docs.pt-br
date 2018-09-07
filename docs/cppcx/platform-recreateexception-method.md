@@ -15,14 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dc789ce0eb723410e5c62505183d5d3449d95c5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 28434f6c8c35f2cd4cfc15953f761d28037626e6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754690"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109713"
 ---
 # <a name="platformrecreateexception-method"></a>Método Platform::ReCreateException
+
 Este método é somente para uso interno e não se destina a código de usuário. Use o método Exception:: createexception.
 
 ## <a name="syntax"></a>Sintaxe
@@ -32,9 +33,9 @@ static Exception^ ReCreateException(int hr)
 ```
 
 ### <a name="parameters"></a>Parâmetros
-`hr`
+
+*hr*
 
 ### <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno
 
 Retorna um novo Platform::Exception^, com base no HRESULT especificado.
-

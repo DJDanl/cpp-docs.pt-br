@@ -106,12 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf54b113e5eb3750d02b887945345880dca94775
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ac07884d3ac7390bdb3aba4144c1c436041434f0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960037"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110052"
 ---
 # <a name="array-class-c-standard-library"></a>Classe array (Biblioteca padrão C++)
 
@@ -202,7 +202,8 @@ array(const array& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* objeto ou intervalo a ser inserido.
+*right*<br/>
+Objeto ou intervalo a inserir.
 
 ### <a name="remarks"></a>Comentários
 
@@ -257,7 +258,8 @@ void assign(const Ty& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Val* o valor a atribuir.
+*Val*<br/>
+O valor a atribuir.
 
 ### <a name="remarks"></a>Comentários
 
@@ -313,7 +315,8 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*desativar* posição do elemento para acessar.
+*Desativar*<br/>
+Posição do elemento a acessar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1173,7 +1176,8 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*desativar* posição do elemento para acessar.
+*Desativar*<br/>
+Posição do elemento a acessar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1225,7 +1229,8 @@ array <Value>%  operator=(array <Value>% right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* contêiner a ser copiado.
+*right*<br/>
+O contêiner a ser copiado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1602,7 +1607,8 @@ void swap(array& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* matriz a trocar conteúdo com.
+*right*<br/>
+Matriz com a qual trocar conteúdo.
 
 ### <a name="remarks"></a>Comentários
 

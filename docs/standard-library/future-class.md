@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77b3c96d2c579b9fa3081ad7223ac254a727a88b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e55f5d9759de0993f0202612e237bb778a195602
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956632"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106646"
 ---
 # <a name="future-class"></a>Classe future
 
@@ -94,7 +94,8 @@ future(future&& Other) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outros* um `future` objeto.
+*Outros*<br/>
+Um objeto `future`.
 
 ### <a name="remarks"></a>Comentários
 
@@ -134,7 +135,8 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-*À direita* um `future` objeto.
+*Direita*<br/>
+Um objeto `future`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -191,7 +193,8 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rel_time* um [chrono:: Duration](../standard-library/duration-class.md) objeto que especifica um intervalo de tempo máximo que o thread bloqueia.
+*Rel_time*<br/>
+Um objeto [chrono::duration](../standard-library/duration-class.md) que especifica um intervalo de tempo máximo durante o qual o thread fica bloqueado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -212,7 +215,8 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ### <a name="parameters"></a>Parâmetros
 
-*Abs_time* um [chrono:: time_point](../standard-library/time-point-class.md) objeto que especifica uma hora após o qual o thread pode ser desbloqueado.
+*Abs_time*<br/>
+Um objeto [chrono::time_point](../standard-library/time-point-class.md) que especifica um tempo após o qual o thread pode ser desbloqueado.
 
 ### <a name="return-value"></a>Valor de retorno
 

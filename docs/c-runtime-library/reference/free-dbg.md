@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa485eea6f0ffda05b0ef33a808d5ec837255514
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b68404df0f56a4a75c89b5f3a44ff8c853c5cef4
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400038"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103899"
 ---
 # <a name="freedbg"></a>_free_dbg
 
@@ -56,17 +56,19 @@ void _free_dbg(
 
 ### <a name="parameters"></a>Parâmetros
 
-*userData* ponteiro para o bloco de memória alocada para ser liberado.
+*dados do usuário*<br/>
+Ponteiro para o bloco de memória alocado a ser liberado.
 
-*blockType* tipo de bloco de memória alocada para ser liberado: **client_block**, **normal_block**, ou **ignore_block**.
+*blockType*<br/>
+Tipo de bloco de memória alocado a ser liberado: **client_block**, **normal_block**, ou **ignore_block**.
 
 ## <a name="remarks"></a>Comentários
 
-O **free_dbg** função é uma versão de depuração de [livre](free.md) função. Quando [Debug](../../c-runtime-library/debug.md) não está definida, cada chamada para **free_dbg** é reduzido para uma chamada para **livre**. Ambos **livre** e **free_dbg** liberar um bloco de memória no heap de base, mas **free_dbg** acomoda dois recursos de depuração: bloqueia a capacidade de manter liberado no heap de lista vinculada para simular condições de memória insuficiente e um parâmetro de tipo de bloco para liberar a tipos específicos de alocação.
+O **free_dbg** função é uma versão de depuração de [livre](free.md) função. Quando [Debug](../../c-runtime-library/debug.md) não estiver definido, cada chamada para **free_dbg** é reduzida a uma chamada para **livre**. Ambos **livre** e **free_dbg** liberam um bloco de memória no heap de base, mas **free_dbg** acomoda dois recursos de depuração: a capacidade de manter liberados blocos no heap de lista vinculada para simular condições de memória insuficiente e um parâmetro de tipo de bloco para liberar tipos específicos de alocação.
 
-**free_dbg** executa uma verificação de validade em todos os arquivos especificados e locais de bloco antes de executar a operação livre. O aplicativo não deve fornecer essas informações. Ao liberar um bloco de memória, o gerenciador de heap de depuração verifica automaticamente a integridade dos buffers nos dois lados da parte do usuário e emite um relatório de erro se tiver ocorrido substituição. Se o **crtdbg_delay_free_mem_df** campo de bits de [crtdbgflag](../../c-runtime-library/crtdbgflag.md) sinalizador é definido, o bloco livre é preenchido com o valor 0xDD, atribuído a **free_block** bloquear tipo, e mantidos em lista vinculada do heap de blocos de memória.
+**free_dbg** realiza uma verificação de validade em todos os arquivos especificados e locais de bloco antes de executar a operação livre. O aplicativo não deve fornecer essas informações. Ao liberar um bloco de memória, o gerenciador de heap de depuração verifica automaticamente a integridade dos buffers nos dois lados da parte do usuário e emite um relatório de erro se tiver ocorrido substituição. Se o **crtdbg_delay_free_mem_df** campo de bits a [crtdbgflag](../../c-runtime-library/crtdbgflag.md) sinalizador estiver definido, o bloco liberado é preenchido com o valor 0xDD, atribuído a **free_block** tipo, de bloco e mantidos na lista vinculada do heap de blocos de memória.
 
-Se ocorrer um erro na liberação de memória, **errno** é definida com informações do sistema operacional da natureza da falha. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Se ocorrer um erro liberar a memória **errno** é definido com informações do sistema operacional da natureza da falha. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details). Para obter informações sobre os tipos de blocos de alocação e como eles são usados, consulte [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details) (Tipos de blocos no heap de depuração). Para obter informações sobre as diferenças entre chamar uma função de heap padrão e sua versão de depuração em um build de depuração de um aplicativo, consulte [Versões de depuração das funções de alocação de heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 

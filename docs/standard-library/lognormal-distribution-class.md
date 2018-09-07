@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c2f2351d55a4b4f868021bd0c44a0b942633c68
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fb8a30f8dde14801b89b1e2d36e349ea8e93a5c6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958524"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107095"
 ---
 # <a name="lognormaldistribution-class"></a>Classe lognormal_distribution
 
@@ -78,7 +78,8 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*RealType* padrão é o tipo de resultado de ponto flutuante **duplo**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*RealType*<br/>
+O tipo de resultado de ponto flutuante assume como padrão **duplas**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
@@ -204,11 +205,14 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*m* o `m` parâmetro de distribuição.
+*m*<br/>
+O parâmetro de distribuição `m`.
 
-*s* o `s` parâmetro de distribuição.
+*s*<br/>
+O parâmetro de distribuição `s`.
 
-*parm* o `param_type` estrutura usada para construir a distribuição.
+*parm*<br/>
+A estrutura `param_type` usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
@@ -236,11 +240,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*m* o `m` parâmetro de distribuição.
+*m*<br/>
+O parâmetro de distribuição `m`.
 
-*s* o `s` parâmetro de distribuição.
+*s*<br/>
+O parâmetro de distribuição `s`.
 
-*à direita* o `param_type` estrutura usada para comparar.
+*right*<br/>
+A estrutura `param_type` usada para comparar.
 
 ### <a name="remarks"></a>Comentários
 

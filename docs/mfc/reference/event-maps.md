@@ -16,26 +16,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4522b9ea2f336f5ac88f5444edc0c7df16b5bc6
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 21b9efe8fc1ce5cb7ab90edd30b38253d44dabc0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122383"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106802"
 ---
 # <a name="event-maps"></a>Mapas de evento
 
-Sempre que um controle deseja notificar seu contêiner que alguma ação (determinada pelo desenvolvedor do controle) aconteceu (como uma alteração de estado do controle, clique do mouse ou um pressionamento de tecla), ele chama uma função de acionamento do evento. Essa função notifica o contêiner de controle que alguma ação importante ocorreu ao acionamento do evento relacionado.
+Sempre que um controle deseja notificar seu recipiente que alguma ação (determinada pelo desenvolvedor do controle) aconteceu (como um pressionamento de tecla, clique do mouse ou uma alteração no estado do controle), ele chama uma função de acionamento do evento. Essa função notifica o contêiner de controle que ocorreu alguma ação importante disparando o evento relacionado.
 
-A biblioteca Microsoft Foundation Class oferece um modelo de programação de otimização de eventos acionados. Nesse modelo, "mapas de evento" são usadas para designar quais funções disparar os eventos para um determinado controle. Mapas de evento contém uma macro para cada evento. Por exemplo, um mapa de evento que dispara um estoque clique evento poderia se parecer com:
+A biblioteca Microsoft Foundation Class oferece um modelo de programação com otimização de eventos acionados. Nesse modelo, "evento mapeia" são usadas para designar funções que acionam os eventos para um determinado controle. Mapas de evento contêm uma macro para cada evento. Por exemplo, um mapa de evento que dispara uma ação de clique evento teria esta aparência:
 
 [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]
 
-O `EVENT_STOCK_CLICK` macro indica que o controle será acionada uma ação clique evento sempre que detecta um mouse. Para obter uma lista mais detalhada dos outros eventos de estoque, consulte o artigo [controles ActiveX: eventos](../../mfc/mfc-activex-controls-events.md). Macros também estão disponíveis para indicar eventos personalizados.
+O `EVENT_STOCK_CLICK` macro indica que o controle será disparado um clique de evento sempre que detecta um mouse de clique de ações. Para obter uma lista mais detalhada de outros eventos de estoque, consulte o artigo [controles ActiveX: eventos](../../mfc/mfc-activex-controls-events.md). Macros também estão disponíveis para indicar eventos personalizados.
 
-Embora as macros de mapa de evento são importantes, você geralmente não inseri-los diretamente. Isso ocorre porque a janela Propriedades automaticamente cria entradas de mapa de evento nos arquivos de origem quando você usá-lo para associar a eventos de funções de acionamento do evento. Qualquer momento em que você deseja editar ou adicionar uma entrada de mapa de evento, você pode usar a janela Propriedades.
+Embora as macros de mapa de evento são importantes, você geralmente não inseri-los diretamente. Isso ocorre porque a janela Propriedades cria automaticamente as entradas de mapa de eventos nos arquivos de origem quando usá-lo para associar funções de acionamento do evento de eventos. Sempre que você deseja editar ou adicionar uma entrada de mapa de evento, você pode usar a janela Propriedades.
 
-Para dar suporte a mapas de evento, MFC fornece as seguintes macros:
+Para dar suporte a mapas de evento, o MFC oferece as seguintes macros:
 
 ## <a name="event-map-macros"></a>Macros de mapa de evento
 
@@ -43,27 +43,27 @@ Para dar suporte a mapas de evento, MFC fornece as seguintes macros:
 
 |||
 |-|-|
-|[DECLARE_EVENT_MAP](#declare_event_map)|Declara que um mapa de eventos será usado em uma classe para mapear eventos para funções de acionamento do evento (deve ser usado na declaração da classe).|
-|[BEGIN_EVENT_MAP](#begin_event_map)|Começa a definição de um mapa de evento (deve ser usado na implementação de classe).|
-|[END_EVENT_MAP](#end_event_map)|Finaliza a definição de um mapa de evento (deve ser usado na implementação de classe).|
+|[DECLARE_EVENT_MAP](#declare_event_map)|Declara que um mapa de eventos será usado em uma classe para mapear eventos para funções de acionamento do evento (deve ser usado na declaração de classe).|
+|[BEGIN_EVENT_MAP](#begin_event_map)|Inicia a definição de um mapa de eventos (deve ser usada na implementação da classe).|
+|[END_EVENT_MAP](#end_event_map)|Finaliza a definição de um mapa de evento (deve ser usada na implementação da classe).|
 
-### <a name="event-mapping-macros"></a>Macros de mapeamento de evento
+### <a name="event-mapping-macros"></a>Macros de mapeamento do evento
 
 |||
 |-|-|
-|[EVENT_CUSTOM](#event_custom)|Indica qual função de acionamento do evento irá disparar o evento especificado.|
-|[EVENT_CUSTOM_ID](#event_custom_id)|Indica qual função de acionamento do evento irá disparar o evento especificado, com uma ID de expedição designado.|
+|[EVENT_CUSTOM](#event_custom)|Indica qual função de acionamento do evento será acionado o evento especificado.|
+|[EVENT_CUSTOM_ID](#event_custom_id)|Indica qual função de acionamento do evento será acionado o evento especificado, com uma ID de expedição designado.|
 
 ### <a name="message-mapping-macros"></a>Macros de mapeamento de mensagem
 
 |||
 |-|-|
-|[ON_OLEVERB](#on_oleverb)|Indica um verbo personalizado tratado pelo controle OLE.|
+|[ON_OLEVERB](#on_oleverb)|Indica um verbo personalizado manipulado pelo controle OLE.|
 |[ON_STDOLEVERB](#on_stdoleverb)|Substitui um mapeamento de verbo padrão do controle OLE.|
 
 ##  <a name="declare_event_map"></a>  DECLARE_EVENT_MAP
 
-Cada `COleControl`-classe derivada em seu programa pode fornecer um mapa de evento para especificar os eventos do controle será acionado.
+Cada `COleControl`-classe derivada em seu programa pode fornecer um mapa de eventos para especificar os eventos de seu controle será acionado.
 
 ```cpp
 DECLARE_EVENT_MAP()
@@ -71,7 +71,7 @@ DECLARE_EVENT_MAP()
 
 ### <a name="remarks"></a>Comentários
 
-Use a macro DECLARE_EVENT_MAP no final da sua declaração de classe. Em seguida, no arquivo. cpp que define as funções de membro para a classe, use a macro BEGIN_EVENT_MAP, entradas de macro para cada um dos eventos de controle e a macro END_EVENT_MAP para declarar o final da lista de eventos.
+Use a macro DECLARE_EVENT_MAP no final de sua declaração de classe. Em seguida, no arquivo. cpp que define as funções de membro da classe, use a macro BEGIN_EVENT_MAP, entradas de macro para cada um dos eventos do controle e a macro END_EVENT_MAP para declarar o fim da lista de eventos.
 
 Para obter mais informações sobre mapas de evento, consulte o artigo [controles ActiveX: eventos](../../mfc/mfc-activex-controls-events.md).
 
@@ -81,7 +81,7 @@ Para obter mais informações sobre mapas de evento, consulte o artigo [controle
 
 ## <a name="begin_event_map"></a>  BEGIN_EVENT_MAP
 
-Começa a definição de seu mapa de evento.
+Inicia a definição de seu mapa de evento.
 
 ```cpp
 BEGIN_EVENT_MAP(theClass,  baseClass)
@@ -90,14 +90,14 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 ### <a name="parameters"></a>Parâmetros
 
 *theClass*  
-Especifica o nome da classe de controle cujo evento mapeá-la.
+Especifica o nome da classe do controle cujo evento ser mapeado.
 
 *baseClass*  
-Especifica o nome da classe base do *theClass*.
+Especifica o nome da classe base da *theClass*.
 
 ### <a name="remarks"></a>Comentários
 
-No arquivo de implementação (. cpp) que define as funções de membro para a sua classe, inicie o mapa de evento com a macro BEGIN_EVENT_MAP, em seguida, adicionar entradas de macro para cada um dos seus eventos e concluir o mapa de evento com a macro END_EVENT_MAP.
+No arquivo de implementação (. cpp) que define as funções de membro para a sua classe, iniciar o mapa de evento com a macro BEGIN_EVENT_MAP, em seguida, adicione entradas de macro para cada um dos seus eventos e concluir o mapa de evento com a macro END_EVENT_MAP.
 
 Para obter mais informações sobre mapas de evento e a macro BEGIN_EVENT_MAP, consulte o artigo [controles ActiveX: eventos](../../mfc/mfc-activex-controls-events.md).
 
@@ -107,7 +107,7 @@ Para obter mais informações sobre mapas de evento e a macro BEGIN_EVENT_MAP, c
 
 ##  <a name="end_event_map"></a>  END_EVENT_MAP
 
-Use a macro END_EVENT_MAP para finalizar a definição do mapa de evento.
+Use a macro END_EVENT_MAP para finalizar a definição de seu mapa de evento.
 
 ```cpp
 END_EVENT_MAP()
@@ -119,7 +119,7 @@ END_EVENT_MAP()
 
 ## <a name="event_custom"></a>  EVENT_CUSTOM
 
-Define uma entrada de mapa de evento para um evento personalizado.
+Define uma entrada de mapa de eventos para um evento personalizado.
 
 ```cpp
 EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
@@ -138,15 +138,15 @@ Uma lista separada por espaços de uma ou mais constantes especificando a lista 
 
 ### <a name="remarks"></a>Comentários
 
-O *vtsParams* parâmetro é uma lista separada dos valores a `VTS_` constantes. Um ou mais desses valores separados por espaços (não vírgulas) Especifica a lista de parâmetros da função. Por exemplo:
+O *vtsParams* parâmetro é uma lista separada por espaço de valores da `VTS_` constantes. Um ou mais desses valores separados por espaços (não a vírgula) Especifica a lista de parâmetros da função. Por exemplo:
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
 Especifica a cor de uma lista que contém um inteiro de 32 bits que representa um RGB valor, seguido por um ponteiro para o `IFontDisp` interface de um objeto de fonte OLE.
 
-O `VTS_` constantes e seus significados são os seguintes:
+O `VTS_` constantes e seus significados são da seguinte maneira:
 
-|Símbolo|tipo de parâmetro|
+|Símbolo|Tipo de parâmetro|
 |------------|--------------------|
 |VTS_I2|**short**|
 |VTS_I4|**long**|
@@ -177,7 +177,7 @@ O `VTS_` constantes e seus significados são os seguintes:
 |VTS_YSIZE_HIMETRIC|OLE_YSIZE_HIMETRIC|
 
 > [!NOTE]
-> Constantes variantes adicionais foi definidas para todos os tipos variantes, com exceção do VTS_FONT e VTS_PICTURE, que fornece um ponteiro para a constante de dados variant. Essas constantes são nomeados por meio de `VTS_Pconstantname` convenção. Por exemplo, VTS_PCOLOR é um ponteiro para uma constante VTS_COLOR.
+> Constantes de variant adicionais foram definidos para todos os tipos variantes, com exceção do VTS_FONT e VTS_PICTURE, que fornecem um ponteiro para a constante de dados variant. Essas constantes são nomeadas usando o `VTS_Pconstantname` convenção. Por exemplo, VTS_PCOLOR é um ponteiro para uma constante VTS_COLOR.
 
 ### <a name="requirements"></a>Requisitos
 
@@ -185,7 +185,7 @@ O `VTS_` constantes e seus significados são os seguintes:
 
 ## <a name="event_custom_id"></a>  EVENT_CUSTOM_ID
 
-Define um função para um evento personalizado que pertence à ID de expedição especificada por de acionamento do evento *dispid*.
+Define um evento disparando a função para um evento personalizado que pertence à ID de expedição especificado por *dispid*.
 
 ```cpp
 EVENT_CUSTOM_ID(
@@ -201,17 +201,17 @@ EVENT_CUSTOM_ID(
 O nome do evento.
 
 *DISPID*  
-A ID de expedição usada pelo controle quando o acionamento do evento.
+A ID de expedição usada pelo controle ao acionar o evento.
 
 *pfnFire*  
 O nome da função de acionamento do evento.
 
 *vtsParams*  
-Uma lista de variáveis de parâmetros passados para o contêiner de controle quando o evento é acionado.
+Uma lista de variáveis de parâmetros passada para o contêiner de controle quando o evento é acionado.
 
 ### <a name="remarks"></a>Comentários
 
-O *vtsParams* argumento é uma lista separada dos valores a `VTS_` constantes. Um ou mais desses valores separados por espaços, vírgulas não especifica a lista de parâmetros da função. Por exemplo:
+O *vtsParams* argumento é uma lista separada por espaço de valores da `VTS_` constantes. Um ou mais desses valores separados por espaços, vírgulas não especifica a lista de parâmetros da função. Por exemplo:
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
@@ -225,7 +225,7 @@ Para obter uma lista de `VTS_` constantes, consulte [EVENT_CUSTOM](#event_custom
 
 ## <a name="on_oleverb"></a>  ON_OLEVERB
 
-Esta macro define uma entrada de mapa de mensagem que mapeia um verbo personalizado para uma função de membro específico de seu controle.
+Essa macro define uma entrada de mapa de mensagem que mapeia um verbo personalizado para uma função de membro específico do seu controle.
 
 ```cpp
 ON_OLEVERB(idsVerbName,  memberFxn)
@@ -233,14 +233,15 @@ ON_OLEVERB(idsVerbName,  memberFxn)
 
 ### <a name="parameters"></a>Parâmetros
 
-*idsVerbName* a ID de recurso de cadeia de caracteres do nome do verbo.
+*idsVerbName*<br/>
+A ID de recurso de cadeia de caracteres do nome do verbo.
 
-*memberFxn*  
+*memberFxn*<br/>
 A função chamada pelo framework quando o verbo é invocado.
 
 ### <a name="remarks"></a>Comentários
 
-O editor de recurso pode ser usado para criar nomes de verbos personalizados que são adicionados à sua tabela de cadeia de caracteres.
+O editor de recursos pode ser usado para criar nomes de verbos personalizados que são adicionados à sua tabela de cadeia de caracteres.
 
 O protótipo de função para *memberFxn* é:
 
@@ -251,7 +252,7 @@ BOOL memberFxn(
    LPCRECT  lpRect);
 ```
 
-Os valores a *lpMsg*, *hWndParent*, e *lpRect* parâmetros são tirados os parâmetros correspondentes do `IOleObject::DoVerb` função de membro.
+Os valores da *lpMsg*, *hWndParent*, e *lpRect* parâmetros são tirados os parâmetros correspondentes do `IOleObject::DoVerb` função de membro.
 
 ### <a name="requirements"></a>Requisitos
 
@@ -268,16 +269,16 @@ ON_STDOLEVERB(iVerb, memberFxn)
 ### <a name="parameters"></a>Parâmetros
 
 *iVerb*  
-O índice de verbo padrão para o verbo está sendo substituído.
+O índice do verbo padrão para o verbo que está sendo substituído.
 
 *memberFxn*  
 A função chamada pelo framework quando o verbo é invocado.
 
 ### <a name="remarks"></a>Comentários
 
-O índice de verbo padrão está no formato `OLEIVERB_`, seguido por uma ação. OLEIVERB_SHOW, OLEIVERB_HIDE e OLEIVERB_UIACTIVATE são alguns exemplos de verbos padrão.
+O índice do verbo padrão está no formato `OLEIVERB_`, seguido por uma ação. OLEIVERB_SHOW, OLEIVERB_HIDE e OLEIVERB_UIACTIVATE são alguns exemplos de verbos padrão.
 
-Consulte [ON_OLEVERB](#on_oleverb) para obter uma descrição do protótipo de função a ser usado como o *memberFxn* parâmetro.
+Ver [ON_OLEVERB](#on_oleverb) para obter uma descrição do protótipo da função a ser usado como o *memberFxn* parâmetro.
 
 
 ### <a name="requirements"></a>Requisitos

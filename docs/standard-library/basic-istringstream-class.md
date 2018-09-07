@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53760cd2d69067fd93a76a35b0ba29fcc82a4664
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9580068474eba77bcf50067efefb98b5949d464f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960056"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109882"
 ---
 # <a name="basicistringstream-class"></a>Classe basic_istringstream
 
@@ -44,11 +44,14 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>Parâmetros
 
-*Alocação* a classe do alocador.
+*ALLOC*<br/>
+A classe do alocador.
 
-*Elem* o tipo do elemento básico da cadeia de caracteres.
+*Elem*<br/>
+O tipo do elemento básico da cadeia de caracteres.
 
-*TR* as características de caractere especializadas no elemento básico da cadeia de caracteres.
+*Tr*<br/>
+As características de caractere especializadas no elemento básico da cadeia de caracteres.
 
 ## <a name="remarks"></a>Comentários
 
@@ -112,11 +115,14 @@ basic_istringstream(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Modo* uma das enumerações nos [ios_base:: OpenMode](../standard-library/ios-base-class.md#openmode).
+*Modo*<br/>
+Uma das enumerações em [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*STR* um objeto do tipo `basic_string`.
+*str*<br/>
+Um objeto do tipo `basic_string`.
 
-*à direita* uma referência de rvalue de um `basic_istringstream` objeto.
+*right*<br/>
+Uma referência rvalue de um objeto `basic_istringstream`.
 
 ### <a name="remarks"></a>Comentários
 
@@ -136,7 +142,8 @@ basic_istringstream& operator=(basic_istringstream&& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* uma referência rvalue para um `basic_istringstream` objeto.
+*right*<br/>
+Uma referência rvalue a um objeto `basic_istringstream`.
 
 ### <a name="remarks"></a>Comentários
 
@@ -172,7 +179,8 @@ void str(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Newstr* nova cadeia de caracteres.
+*_Newstr*<br/>
+A nova cadeia de caracteres.
 
 ### <a name="return-value"></a>Valor de retorno
 

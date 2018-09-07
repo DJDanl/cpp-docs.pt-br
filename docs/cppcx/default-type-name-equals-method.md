@@ -13,40 +13,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36bd6e933d4e7bb1563ec6738c7ba3ed314c1cfd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 127f5ee876790fa3cfb8a052c2db6c41cc00f332
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763907"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109013"
 ---
 # <a name="defaulttypenameequals-method"></a>Método default::(type_name)::Equals
-Determina se o objeto especificado é igual ao objeto atual.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-  
-bool Equals(  
-    Object^ obj  
-)  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- obj  
- O objeto a ser comparado.  
-  
-### <a name="return-value"></a>Valor de retorno  
- `true` se os objetos forem iguais; caso contrário, `false`.  
-  
-### <a name="requirements"></a>Requisitos  
- **Mínimo de cliente com suporte:** Windows 8  
-  
- **Mínimo de servidor com suporte:** Windows Server 2012  
-  
- **Namespace:** padrão  
-  
- **Cabeçalho:** vccorlib.h  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace padrão](../cppcx/default-namespace.md)
+
+Determina se o objeto especificado é igual ao objeto atual.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+bool Equals(
+    Object^ obj
+)
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*obj*<br/>
+O objeto a ser comparado.
+
+### <a name="return-value"></a>Valor de retorno
+
+`true` se os objetos forem iguais; caso contrário, `false`.
+
+### <a name="requirements"></a>Requisitos
+
+**Mínimo de cliente com suporte:** Windows 8
+
+**Mínimo de servidor com suporte:** Windows Server 2012
+
+**Namespace:** padrão
+
+**Cabeçalho:** vccorlib.h
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace padrão](../cppcx/default-namespace.md)

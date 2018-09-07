@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6693fe0c4e34ce4749feef05bf0a1fe0213ac866
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: ba1a48fe9a4e7f0f8921861abeab2b76de3169c8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207715"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107361"
 ---
 # <a name="ostreambufiterator-class"></a>Classe ostreambuf_iterator
 
@@ -45,9 +45,11 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="parameters"></a>Parâmetros
 
-*CharType* o tipo que representa o tipo de caractere para ostreambuf_iterator. Esse argumento é opcional e o valor padrão é **char**.
+*CharType*<br/>
+O tipo que representa o tipo de caractere para ostreambuf_iterator. Esse argumento é opcional e o valor padrão é **char**.
 
-*Características* o tipo que representa o tipo de caractere para ostreambuf_iterator. Esse argumento é opcional e o valor padrão é `char_traits`\< *CharType>.*
+*Características*<br/>
+O tipo que representa o tipo de caractere para ostreambuf_iterator. Esse argumento é opcional e o valor padrão é `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Comentários
 
@@ -124,17 +126,17 @@ int main( )
    // elements to the output streambuf:
    cout << "The characters written to the output stream\n"
         << " by charOutBuf are: ";
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;
- *charOutBuf = 'U';
+*charOutBuf = 'U';
    charOutBuf++;
- *charOutBuf = 'T';
+*charOutBuf = 'T';
    charOutBuf++;
    cout << "." << endl;
 }
 \* Output:
 The characters written to the output stream
- by charOutBuf are: OUT.
+by charOutBuf are: OUT.
 *\
 ```
 
@@ -172,9 +174,9 @@ int main( )
 
 *charOut = 'a';
    charOut ++;
- *charOut  = 'b';
+*charOut  = 'b';
    charOut ++;
- *charOut = 'c';
+*charOut = 'c';
    cout << " are characters output individually." << endl;
 
    bool b1 = charOut.failed ( );
@@ -225,10 +227,10 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;   // no effect on iterator position
- *charOutBuf = 'U';
- *charOutBuf = 'T';
+*charOutBuf = 'U';
+*charOutBuf = 'T';
 }
 \* Output:
 Elements written to output stream:
@@ -273,10 +275,10 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;      // No effect on iterator position
- *charOutBuf = 'U';
- *charOutBuf = 'T';
+*charOutBuf = 'U';
+*charOutBuf = 'T';
 }
 \* Output:
 Elements written to output stream:
@@ -294,7 +296,8 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Char* o caractere a ser inserido no buffer de fluxo.
+*_Char*<br/>
+O caractere a ser inserido no buffer de fluxo.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -324,15 +327,15 @@ int main( )
    // Standard iterator interface for writing
    // elements to the output stream
    cout << "Elements written to output stream:" << endl;
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;      // No effect on iterator position
- *charOutBuf = 'U';
- *charOutBuf = 'T';
+*charOutBuf = 'U';
+*charOutBuf = 'T';
 }
-\* Output:
+/* Output:
 Elements written to output stream:
 OUT
-*\
+*/
 ```
 
 ## <a name="ostreambuf_iterator_ostreambuf_iterator"></a>  ostreambuf_iterator::ostreambuf_iterator
@@ -346,9 +349,11 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*strbuf* o objeto de streambuf de saída usado para inicializar o ponteiro de buffer de fluxo de saída.
+*strbuf*<br/>
+O objeto de streambuf de saída usado para inicializar o ponteiro de buffer do fluxo de saída.
 
-*Ostr* o objeto de fluxo de saída usado para inicializar o ponteiro de buffer de fluxo de saída.
+*Ostr*<br/>
+O objeto do fluxo de saída usado para inicializar o ponteiro de buffer do fluxo de saída.
 
 ### <a name="remarks"></a>Comentários
 
@@ -374,9 +379,9 @@ int main( )
 
 *charOut = 'O';
    charOut ++;
- *charOut  = 'U';
+*charOut  = 'U';
    charOut ++;
- *charOut = 'T';
+*charOut = 'T';
    cout << " are characters output individually." << endl;
 
    ostreambuf_iterator<char> strOut ( cout );
@@ -457,17 +462,17 @@ int main( )
    // elements to the output streambuf:
    cout << "The characters written to the output stream\n"
         << " by charOutBuf are: ";
- *charOutBuf = 'O';
+*charOutBuf = 'O';
    charOutBuf++;
- *charOutBuf = 'U';
+*charOutBuf = 'U';
    charOutBuf++;
- *charOutBuf = 'T';
+*charOutBuf = 'T';
    charOutBuf++;
    cout << "." << endl;
 }
 \* Output:
 The characters written to the output stream
- by charOutBuf are: OUT.
+by charOutBuf are: OUT.
 *\
 ```
 

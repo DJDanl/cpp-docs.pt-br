@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a7be40c729faff78c75c4ee751737a7b53592aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 705210881faed70a32c1ddd52d7257b5b5e5f161
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400652"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107434"
 ---
 # <a name="lockfile"></a>_lock_file
 
-Bloqueia um **arquivo** objeto para garantir a consistência de threads acessando o **arquivo** objeto simultaneamente.
+Bloqueia um **arquivo** objeto para garantir a consistência de thread que acessam o **arquivo** objeto simultaneamente.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -53,11 +53,12 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>Parâmetros
 
-*arquivo* identificador de arquivo.
+*file*<br/>
+Identificador de arquivo.
 
 ## <a name="remarks"></a>Comentários
 
-O **lock_file** função bloqueios a **arquivo** o objeto especificado por *arquivo*. O arquivo subjacente não está bloqueado por **lock_file**. Use [unlock_file](unlock-file.md) para liberar o bloqueio no arquivo. Chamadas para **lock_file** e **unlock_file** devem ser iguais em um thread.
+O **lock_file** bloqueios de função a **arquivo** objeto especificado por *arquivo*. O arquivo subjacente não está bloqueado por **lock_file**. Use [unlock_file](unlock-file.md) para liberar o bloqueio no arquivo. Chamadas para **lock_file** e **unlock_file** devem ser iguais em um thread.
 
 ## <a name="requirements"></a>Requisitos
 

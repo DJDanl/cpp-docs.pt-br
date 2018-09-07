@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d50b53f9c06c5edbd159e7e2bac112f6f30432df
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 20566e34200b5c0e89b532d7096821d58a5f564f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954910"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103681"
 ---
 # <a name="queue-class"></a>Classe queue
 
@@ -52,9 +52,11 @@ class queue
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo* tipo de dados do elemento a ser armazenado na fila
+*Tipo*<br/>
+O tipo de dados do elemento a ser armazenado na fila
 
-*Contêiner* o tipo de contêiner subjacente usado para implementar a fila.
+*Contêiner*<br/>
+O tipo do contêiner subjacente usado para implementar a fila.
 
 ## <a name="remarks"></a>Comentários
 
@@ -331,7 +333,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Val* o elemento adicionado à parte de trás da fila.
+*Val*<br/>
+O elemento adicionado na parte final da fila.
 
 ### <a name="remarks"></a>Comentários
 
@@ -381,7 +384,8 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* as **const** contêiner do qual a fila construída será uma cópia.
+*right*<br/>
+O contêiner **const** do qual a fila construída será uma cópia.
 
 ### <a name="remarks"></a>Comentários
 

@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9192f52b35ec50c7acb1672e03ea248d140c7f71
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 999b4bcee00c633184795e22865bc5c75ee64846
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957516"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44109869"
 ---
 # <a name="sharedptr-class"></a>Classe shared_ptr
 
@@ -351,9 +351,11 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>Parâmetros
 
-*SP* o ponteiro compartilhado a ser copiado.
+*SP*<br/>
+O ponteiro compartilhado a ser copiado.
 
-*Pacífico Asiático* o ponteiro automático para copiar.
+*Pacífico Asiático*<br/>
+O ponteiro automático para copiar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -441,7 +443,8 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*PTR* uma `lvalue` referência de para um `shared_ptr` ou um `weak_ptr`.
+*ptr*<br/>
+Uma referência de `lvalue` a um `shared_ptr` ou um `weak_ptr`.
 
 ### <a name="remarks"></a>Comentários
 
@@ -466,17 +469,23 @@ void reset(Other *ptr, D dtor, A alloc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outros* o tipo controlado pelo ponteiro de argumento.
+*Outros*<br/>
+O tipo controlado pelo ponteiro de argumento.
 
-*1!d* o tipo do agente de exclusão.
+*D*<br/>
+O tipo do agente de exclusão.
 
-*PTR* o ponteiro para copiar.
+*ptr*<br/>
+O ponteiro para copiar.
 
-*dtor* o agente de exclusão a copiar.
+*dtor*<br/>
+O agente de exclusão a copiar.
 
-*Um* o tipo do alocador.
+*A*<br/>
+O tipo do alocador.
 
-*alocação* o alocador a copiar.
+*ALLOC*<br/>
+O alocador a copiar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -581,23 +590,32 @@ shared_ptr(const unique_ptr<Other, D>& up) = delete;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outros* o tipo controlado pelo ponteiro de argumento.
+*Outros*<br/>
+O tipo controlado pelo ponteiro de argumento.
 
-*PTR* o ponteiro para copiar.
+*ptr*<br/>
+O ponteiro para copiar.
 
-*1!d* o tipo do agente de exclusão.
+*D*<br/>
+O tipo do agente de exclusão.
 
-*Um* o tipo do alocador.
+*A*<br/>
+O tipo do alocador.
 
-*dtor* o agente de exclusão.
+*dtor*<br/>
+O agente de exclusão.
 
-*ator* o alocador.
+*ator*<br/>
+O alocador.
 
-*SP* o ponteiro inteligente a copiar.
+*SP*<br/>
+O ponteiro inteligente a copiar.
 
-*WP* o ponteiro fraco.
+*wp*<br/>
+O ponteiro fraco.
 
-*Pacífico Asiático* o ponteiro automático para copiar.
+*Pacífico Asiático*<br/>
+O ponteiro automático para copiar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -722,7 +740,8 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*SP* o ponteiro compartilhado com o qual trocar.
+*SP*<br/>
+O ponteiro compartilhado com o qual realizar a troca.
 
 ### <a name="remarks"></a>Comentários
 

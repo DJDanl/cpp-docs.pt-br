@@ -65,12 +65,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28854866824b1750fb1887d5e822d2165034f687
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3abc3c08b46577f7d59b2831a68ded812a5da60a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956837"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110012"
 ---
 # <a name="basicios-class"></a>Classe basic_ios
 
@@ -86,9 +86,11 @@ class basic_ios : public ios_base
 
 ### <a name="parameters"></a>Parâmetros
 
-*Elem* um tipo.
+*Elem*<br/>
+Um tipo.
 
-*Características* uma variável do tipo `char_traits`.
+*Características*<br/>
+Uma variável do tipo `char_traits`.
 
 ## <a name="remarks"></a>Comentários
 
@@ -202,7 +204,8 @@ basic_ios();
 
 ### <a name="parameters"></a>Parâmetros
 
-*SB* buffer padrão para armazenar elementos de entrada ou saídos.
+*sb*<br/>
+Buffer padrão para armazenar elementos de entrada ou saída.
 
 ### <a name="remarks"></a>Comentários
 
@@ -256,7 +259,8 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* o fluxo cujos sinalizadores você deseja copiar.
+*right*<br/>
+O fluxo cujos sinalizadores você deseja copiar.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -338,7 +342,8 @@ void exceptions(io_state Newexcept);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Newexcept* os sinalizadores que você deseja gerar uma exceção.
+*Newexcept*<br/>
+Os sinalizadores que você deseja que gerem uma exceção.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -426,7 +431,8 @@ char_type fill(char_type Char);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Char* o caractere desejado como o caractere de preenchimento.
+*Char*<br/>
+O caractere que você deseja usar como caractere de preenchimento.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -489,7 +495,8 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Loc* uma cadeia de caracteres de localidade.
+*Loc*<br/>
+Uma cadeia de caracteres de localidade.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -531,9 +538,11 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 ### <a name="parameters"></a>Parâmetros
 
-*SB* buffer padrão para armazenar elementos de entrada ou saídos.
+*SB*<br/>
+Buffer padrão para armazenar elementos de entrada ou saída.
 
-*_Isstd* Especifica se este é um fluxo padrão.
+*_Isstd*<br/>
+Especifica se esse é um fluxo padrão.
 
 ### <a name="remarks"></a>Comentários
 
@@ -577,7 +586,8 @@ void move(basic_ios&& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* o `ios_base` objeto qual mover valores.
+*right*<br/>
+O objeto `ios_base` do qual mover valores.
 
 ### <a name="remarks"></a>Comentários
 
@@ -593,9 +603,11 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Char* as **char** para converter.
+*Char*<br/>
+O **char** para converter.
 
-*Padrão* as **char** ser retornado se nenhum equivalente for encontrado.
+*Padrão*<br/>
+O **char** ser retornado se nenhum equivalente for encontrado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -726,7 +738,8 @@ basic_streambuf<Elem, Traits>* _Sb);
 
 ### <a name="parameters"></a>Parâmetros
 
-*SB* um fluxo.
+*SB*<br/>
+Um fluxo.
 
 ### <a name="remarks"></a>Comentários
 
@@ -817,7 +830,8 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Estad_o* sinalizadores adicionais a serem definidos.
+*Estad_o*<br/>
+Sinalizadores adicionais a serem definidos.
 
 ### <a name="remarks"></a>Comentários
 
@@ -866,7 +880,8 @@ basic_streambuf<Elem, Tr>* strbuf)
 
 ### <a name="parameters"></a>Parâmetros
 
-*strbuf* o buffer de fluxo para se tornar o buffer de leitura.
+*strbuf*<br/>
+O buffer de fluxo para se tornar o buffer de leitura.
 
 ### <a name="remarks"></a>Comentários
 
@@ -884,7 +899,8 @@ basic_ostream<Elem, Traits>* str);
 
 ### <a name="parameters"></a>Parâmetros
 
-*STR* um fluxo.
+*str*<br/>
+Um fluxo.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -930,7 +946,8 @@ char_type widen(char Char) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Char* o caractere a ser convertido.
+*Char*<br/>
+O caractere a ser convertido.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -971,7 +988,8 @@ void swap(basic_ios&& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* o `basic_ios` objeto que é usado para trocar valores.
+*right*<br/>
+O objeto `basic_ios` usado para trocar valores.
 
 ### <a name="remarks"></a>Comentários
 

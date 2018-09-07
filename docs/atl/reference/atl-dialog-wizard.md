@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3311e46ea28424717a0274fbe9e956610cdc54
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3a6854a3b11d5c5850d790e749789e91a7cb986a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767706"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110026"
 ---
 # <a name="atl-dialog-wizard"></a>Assistente de caixa de diálogo da ATL
 
@@ -35,7 +35,7 @@ O assistente insere o arquivo de cabeçalho um [mapa de mensagem](../../atl/mess
 **Nome curto**  
 Define o nome abreviado para o objeto de caixa de diálogo do ATL. O nome que você fornece determina o nome de classe e os nomes arquivo (. cpp e. h), a menos que você altere esses campos individualmente.
 
-`Class`  
+**Class**  
 Define o nome da classe a ser criado. Esse nome se baseia o nome fornecido no **Short name**, precedidos pela 'c', o prefixo típico para um nome de classe.
 
 **Arquivo .h**  

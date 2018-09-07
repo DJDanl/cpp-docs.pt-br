@@ -20,176 +20,178 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44beeca9b860e2010b092739d8c39044ad0bb5b1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3fb37261de4bd68a73b27baa6bdab5200b616cd6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680919"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106685"
 ---
 # <a name="platformwriteonlyarray-class"></a>Classe Platform::WriteOnlyArray
-Representa uma matriz unidimensional que é usada como parâmetro de entrada quando o chamador passa uma matriz para o método para preenchimento.  
-  
- Essa classe ref é declarada como particular em vccorlib.h; portanto, não é emitida nos metadados e é somente consumível em C++. Essa classe é destinada somente para uso como um parâmetro de entrada que recebe uma matriz alocada pelo chamador. Ela não pode ser construída a partir do código do usuário. Ela permite que um método C++ grave diretamente nessa matriz — um padrão que é conhecido como o padrão *FillArray* . Para obter mais informações, consulte [matriz e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-private ref class WriteOnlyArray<T, 1>  
-```  
-  
-### <a name="members"></a>Membros  
-  
-### <a name="public-methods"></a>Métodos públicos  
- Esses métodos têm acessibilidade interna — ou seja, eles são acessíveis apenas dentro do aplicativo ou componente C++.  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
 
-|[Writeonlyarray:: Begin](#begin)| Um iterador que aponta para o primeiro elemento da matriz. |  
-|[Writeonlyarray:: data](#data)| Um ponteiro para o buffer de dados. |  
-|[Writeonlyarray:: end](#end)| Um iterador que aponta para logo após o último elemento na matriz. |  
-|[Writeonlyarray:: Fastpass](#fastpass)| Indica se a matriz pode usar o mecanismo FastPass, que é uma otimização executada de forma transparente pelo sistema. Não use isso em seu código |  
-|[Writeonlyarray:: Length](#length)| Retorna o número de elementos na matriz. |  
-|[Writeonlyarray:: set](#set)| Define o elemento especificado para o valor especificado. |  
+Representa uma matriz unidimensional que é usada como parâmetro de entrada quando o chamador passa uma matriz para o método para preenchimento.
 
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `WriteOnlyArray`  
-  
-### <a name="requirements"></a>Requisitos  
- Opção do compilador: **/ZW**  
-  
- **Metadados:** Platform.winmd  
-  
- **Namespace:** Platform  
+Essa classe ref é declarada como particular em vccorlib.h; portanto, não é emitida nos metadados e é somente consumível em C++. Essa classe é destinada somente para uso como um parâmetro de entrada que recebe uma matriz alocada pelo chamador. Ela não pode ser construída a partir do código do usuário. Ela permite que um método C++ grave diretamente nessa matriz — um padrão que é conhecido como o padrão *FillArray* . Para obter mais informações, consulte [matriz e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+private ref class WriteOnlyArray<T, 1>
+```
+
+### <a name="members"></a>Membros
+
+### <a name="public-methods"></a>Métodos públicos
+
+Esses métodos têm acessibilidade interna — ou seja, eles são acessíveis apenas dentro do aplicativo ou componente C++.
+
+|Nome|Descrição|
+|----------|-----------------|
+
+|[Writeonlyarray:: Begin](#begin)| Um iterador que aponta para o primeiro elemento da matriz. | | [Writeonlyarray:: data](#data)| Um ponteiro para o buffer de dados. | | [Writeonlyarray:: end](#end)| Um iterador que aponta para logo após o último elemento na matriz. | | [Writeonlyarray:: Fastpass](#fastpass)| Indica se a matriz pode usar o mecanismo FastPass, que é uma otimização executada de forma transparente pelo sistema. Não use isso em seu código | | [Writeonlyarray:: Length](#length)| Retorna o número de elementos na matriz. | | [Writeonlyarray:: set](#set)| Define o elemento especificado para o valor especificado. |
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`WriteOnlyArray`
+
+### <a name="requirements"></a>Requisitos
+
+Opção do compilador: **/ZW**
+
+**Metadados:** Platform.winmd
+
+**Namespace:** Platform
 
 ## <a name="begin"></a>  Método WriteOnlyArray::begin
-Retorna um ponteiro para o primeiro elemento da matriz.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-T* begin() const;  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o primeiro elemento da matriz.  
-  
-### <a name="remarks"></a>Comentários  
- Esse iterador pode ser usado com algoritmos STL, como `std::sort`, para operar em elementos da matriz.  
-  
 
+Retorna um ponteiro para o primeiro elemento da matriz.
+
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+T* begin() const;
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Um ponteiro para o primeiro elemento da matriz.
+
+### <a name="remarks"></a>Comentários
+
+Esse iterador pode ser usado com algoritmos STL, como `std::sort`, para operar em elementos da matriz.
 
 ## <a name="data"></a>  Propriedade WriteOnlyArray::Data
-Ponteiro para o buffer de dados.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-property T* Data{  
-   T* get() const;  
-}  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para os bytes de matriz brutos.  
-  
 
+Ponteiro para o buffer de dados.
+
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+property T* Data{
+   T* get() const;
+}
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Um ponteiro para os bytes de matriz brutos.
 
 ## <a name="end"></a>  Método WriteOnlyArray::end
-Retorna um ponteiro para após o último elemento da matriz.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-T* end() const;  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
- Um iterador de ponteiro para após o último elemento da matriz.  
-  
-### <a name="remarks"></a>Comentários  
- Esse iterador pode ser usado com algoritmos STL para executar operações como `std::sort` nos elementos da matriz.  
-  
 
+Retorna um ponteiro para após o último elemento da matriz.
+
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+T* end() const;
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Um iterador de ponteiro para após o último elemento da matriz.
+
+### <a name="remarks"></a>Comentários
+
+Esse iterador pode ser usado com algoritmos STL para executar operações como `std::sort` nos elementos da matriz.
 
 ## <a name="fastpass"></a>  Propriedade WriteOnlyArray::FastPass
-Indica se a otimização FastPass interna pode ser executada. Não destinado ao uso por código de usuário.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-property bool FastPass{  
-   bool get() const;  
-}  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
- Um valor booliano que indica se a matriz é FastPass.  
-  
 
+Indica se a otimização FastPass interna pode ser executada. Não destinado ao uso por código de usuário.
+
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+property bool FastPass{
+   bool get() const;
+}
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Um valor booliano que indica se a matriz é FastPass.
 
 ## <a name="get"></a>  Método writeonlyarray:: Get
-Retorna o elemento no índice especificado.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-T& get(  
-   unsigned int indexArg) const;  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- `indexArg`  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
 
+Retorna o elemento no índice especificado.
+
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+T& get(unsigned int indexArg) const;
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*indexArg*<br/>
+O índice a ser usado.
+
+### <a name="return-value"></a>Valor de retorno
 
 ## <a name="length"></a>  Propriedade WriteOnlyArray::Length
-Retorna o número de elementos na matriz alocada pelo chamador.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-property unsigned int Length{  
-   unsigned int get() const;  
-}  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
- O número de elementos na matriz.  
-  
 
+Retorna o número de elementos na matriz alocada pelo chamador.
+
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+property unsigned int Length{
+   unsigned int get() const;
+}
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+O número de elementos na matriz.
 
 ## <a name="set"></a>  Função WriteOnlyArray::set
-Define o valor especificado no índice especificado na matriz.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-T& set(  
-   unsigned int indexArg,  
-   T valueArg);  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- `indexArg`  
- O índice do elemento a ser definido.  
-  
- `valueArg`  
- O valor a ser definido em `indexArg`.  
-  
-### <a name="return-value"></a>Valor de retorno  
- Uma referência ao elemento que acabou de ser definido.  
-  
 
-  
-### <a name="remarks"></a>Comentários  
- Para obter mais informações sobre como interpretar o valor HRESULT, consulte [estrutura de códigos de erro COM](/windows/desktop/com/structure-of-com-error-codes).  
-  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace de plataforma](platform-namespace-c-cx.md)   
- [Criando componentes de tempo de execução do Windows em C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+Define o valor especificado no índice especificado na matriz.
+
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+T& set(
+   unsigned int indexArg,
+   T valueArg);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*indexArg*<br/>
+O índice do elemento a ser definido.
+
+*valueArg*<br/>
+O valor a ser definido em `indexArg`.
+
+### <a name="return-value"></a>Valor de retorno
+
+Uma referência ao elemento que acabou de ser definido.
+
+### <a name="remarks"></a>Comentários
+
+Para obter mais informações sobre como interpretar o valor HRESULT, consulte [estrutura de códigos de erro COM](/windows/desktop/com/structure-of-com-error-codes).
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace de plataforma](platform-namespace-c-cx.md)<br/>
+[Criando componentes de tempo de execução do Windows em C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

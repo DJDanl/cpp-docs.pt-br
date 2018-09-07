@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 875df2d76f10b1d8319df0e82541ddf73e9d8c2c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2c2b4c93604a95b4c2d73c69a834ab6724bd9193
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963531"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103939"
 ---
 # <a name="piecewiseconstantdistribution-class"></a>Classe piecewise_constant_distribution
 
@@ -90,7 +90,8 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*RealType* o tipo de resultado, o padrão é ponto flutuante **duplo**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*RealType*<br/>
+O tipo de resultado, o padrão é ponto flutuante **duplas**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
@@ -258,23 +259,32 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*firstI* um iterador de entrada do primeiro elemento no intervalo de distribuição.
+*firstI*<br/>
+Um iterador de entrada do primeiro elemento no intervalo de distribuição.
 
-*lastI* um iterador de entrada do último elemento no intervalo de distribuição.
+*lastI*<br/>
+Um iterador de entrada do último elemento no intervalo de distribuição.
 
-*firstW* um iterador de entrada do primeiro elemento no intervalo de pesos.
+*firstW*<br/>
+Um iterador de entrada do primeiro elemento no intervalo de pesos.
 
-*intervalos* uma [initializer_list](../cpp/initializers.md) com os intervalos da distribuição.
+*intervals*<br/>
+Uma [initializer_list](../cpp/initializers.md) com os intervalos da distribuição.
 
-*Contagem de* o número de elementos no intervalo de distribuição.
+*count*<br/>
+O número de elementos no intervalo de distribuição.
 
-*xMin* o valor mais baixo no intervalo de distribuição.
+*xmin*<br/>
+O valor mais baixo no intervalo de distribuição.
 
-*xMax* o valor mais alto no intervalo de distribuição. Deve ser maior que *xmin*.
+*xmax*<br/>
+O valor mais alto no intervalo de distribuição. Deve ser maior que *xmin*.
 
-*weightfunc* o objeto que representa a função de probabilidade da distribuição. O parâmetro e o valor de retorno devem ser conversíveis em **duplas**.
+*weightfunc*<br/>
+O objeto que representa a função de probabilidade para a distribuição. O parâmetro e o valor de retorno devem ser conversíveis em **duplas**.
 
-*parm* a estrutura de parâmetro usada para construir a distribuição.
+*parm*<br/>
+A estrutura do parâmetro usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 

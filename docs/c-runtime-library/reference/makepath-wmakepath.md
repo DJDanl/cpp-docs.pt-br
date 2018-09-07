@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20985ce09d301002e6db3164cc3e99f36b03717b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 21cfcfb8a1c82fb351b85b0fb169a94dd3c2c5d4
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204898"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105081"
 ---
 # <a name="makepath-wmakepath"></a>_makepath, _wmakepath
 
@@ -75,15 +75,20 @@ void _wmakepath(
 
 ### <a name="parameters"></a>Parâmetros
 
-*caminho* buffer de caminho completo.
+*path*<br/>
+Buffer de caminho completo.
 
-*unidade* contém uma letra (A, B e assim por diante) correspondente à unidade desejada e um dois-pontos opcional à direita. **makepath** insere os dois-pontos automaticamente no caminho de composição se ele estiver ausente. Se *unidade* é **nulo** ou aponta para uma cadeia de caracteres vazia, nenhuma letra da unidade é exibida na composição *caminho* cadeia de caracteres.
+*Dirigir*<br/>
+Contém uma letra (A, B e assim por diante) correspondente à unidade desejada e um sinal de dois pontos opcional à direita. **makepath** insere os dois-pontos automaticamente no caminho de composição se ele estiver ausente. Se *unidade* é **nulo** ou aponta para uma cadeia de caracteres vazia, nenhuma letra da unidade é exibida na composição *caminho* cadeia de caracteres.
 
-*dir* contém o caminho de diretórios, não incluindo o designador de unidade ou o nome de arquivo real. A barra à direita é opcional e uma barra (/) ou uma barra invertida (\\) ou ambas podem ser usadas em uma única *dir* argumento. Se nenhuma barra à direita (/ ou \\) for especificada, ela será inserida automaticamente. Se *dir* é **nulo** ou apontar para uma cadeia de caracteres vazia, nenhum caminho de diretório é inserido na composição *caminho* cadeia de caracteres.
+*dir*<br/>
+Contém o caminho de diretórios, excluindo o designador da unidade ou o nome de arquivo real. A barra à direita é opcional e uma barra (/) ou uma barra invertida (\\) ou ambas podem ser usadas em uma única *dir* argumento. Se nenhuma barra à direita (/ ou \\) for especificada, ela será inserida automaticamente. Se *dir* é **nulo** ou apontar para uma cadeia de caracteres vazia, nenhum caminho de diretório é inserido na composição *caminho* cadeia de caracteres.
 
-*fname* contém o nome de arquivo base sem qualquer extensão de nome de arquivo. Se *fname* é **nulo** ou apontar para uma cadeia de caracteres vazia, nenhum nome de arquivo é inserido na composição *caminho* cadeia de caracteres.
+*fname*<br/>
+Contém o nome de arquivo base sem qualquer extensão de nome de arquivo. Se *fname* é **nulo** ou apontar para uma cadeia de caracteres vazia, nenhum nome de arquivo é inserido na composição *caminho* cadeia de caracteres.
 
-*ext* contém a extensão de nome de arquivo real, com ou sem um ponto à esquerda (.). **makepath** insere o período automaticamente se ele não aparecer na *ext*. Se *ext* é **nulo** ou aponta para uma cadeia de caracteres vazia, nenhuma extensão será inserido na composição *caminho* cadeia de caracteres.
+*ext*<br/>
+Contém a extensão de nome de arquivo real, com ou sem um ponto à esquerda (.). **makepath** insere o período automaticamente se ele não aparecer na *ext*. Se *ext* é **nulo** ou aponta para uma cadeia de caracteres vazia, nenhuma extensão será inserido na composição *caminho* cadeia de caracteres.
 
 ## <a name="remarks"></a>Comentários
 

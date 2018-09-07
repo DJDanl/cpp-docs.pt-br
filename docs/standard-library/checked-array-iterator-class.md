@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7091ba3c7f4d40a2b16c48afadfd5068bcd794bb
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d74c9930816f353be7594bb67bf5e44b5251aa6c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961734"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106713"
 ---
 # <a name="checkedarrayiterator-class"></a>Classe checked_array_iterator
 
@@ -145,7 +145,7 @@ int main()
     return 0;
 }
 \* Output:
- 0 1 2 3 4 5 6 7 8 9
+0 1 2 3 4 5 6 7 8 9
 *\
 ```
 
@@ -253,11 +253,14 @@ checked_array_iterator(
 
 ### <a name="parameters"></a>Parâmetros
 
-*PTR* um ponteiro para a matriz.
+*ptr*<br/>
+Um ponteiro para a matriz.
 
-*tamanho* o tamanho da matriz.
+*size*<br/>
+O tamanho da matriz.
 
-*índice* (opcional) um elemento na matriz, para inicializar o iterador.  Por padrão, o iterador é inicializado para o primeiro elemento na matriz.
+*index*<br/>
+(Opcional) Um elemento na matriz para inicializar o iterador.  Por padrão, o iterador é inicializado para o primeiro elemento na matriz.
 
 ### <a name="remarks"></a>Comentários
 
@@ -325,7 +328,8 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* o `checked_array_iterator` em relação ao qual verificar quanto à igualdade.
+*right*<br/>
+O `checked_array_iterator` com relação ao qual verificar quanto à igualdade.
 
 ### <a name="remarks"></a>Comentários
 
@@ -380,7 +384,8 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* o `checked_array_iterator` em relação ao qual verificar quanto à desigualdade.
+*right*<br/>
+O `checked_array_iterator` com relação ao qual verificar quanto à desigualdade.
 
 ### <a name="remarks"></a>Comentários
 
@@ -435,7 +440,8 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* o `checked_array_iterator` em relação ao qual verificar quanto à desigualdade.
+*right*<br/>
+O `checked_array_iterator` com relação ao qual verificar quanto à desigualdade.
 
 ### <a name="remarks"></a>Comentários
 
@@ -490,7 +496,8 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* o `checked_array_iterator` a ser comparada.
+*right*<br/>
+O `checked_array_iterator` com o qual comparar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -508,7 +515,8 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* o `checked_array_iterator` a ser comparada.
+*right*<br/>
+O `checked_array_iterator` com o qual comparar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -526,7 +534,8 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* o `checked_array_iterator` a ser comparada.
+*right*<br/>
+O `checked_array_iterator` com o qual comparar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -756,7 +765,8 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off* o deslocamento pelo qual incrementar o iterador.
+*Off*<br/>
+O deslocamento pelo qual incrementar o iterador.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -803,7 +813,8 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off* o deslocamento a ser adicionado ao `checked_array_iterator`.
+*Off*<br/>
+O deslocamento a ser adicionado a `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -850,7 +861,8 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off* o deslocamento pelo qual incrementar o iterador.
+*Off*<br/>
+O deslocamento pelo qual incrementar o iterador.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -900,7 +912,8 @@ difference_type operator-(const checked_array_iterator& right) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off* o deslocamento a ser decrementado do `checked_array_iterator`.
+*Off*<br/>
+O deslocamento a ser decrementado do `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -922,7 +935,8 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off* o deslocamento a partir de `checked_array_iterator` endereço.
+*Off*<br/>
+O deslocamento do endereço `checked_array_iterator`.
 
 ### <a name="return-value"></a>Valor de retorno
 

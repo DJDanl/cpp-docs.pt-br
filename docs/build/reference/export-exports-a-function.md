@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16ec6be15635ebfc085615015b1221231645970d
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 5063eae507ee6c83cbed2ae7fc92679098b91f36
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894788"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44104613"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (exporta uma função)
 
@@ -36,26 +36,35 @@ Exporta uma função por nome ou ordinal ou dados, do seu programa.
 
 ## <a name="remarks"></a>Comentários
 
-Com a opção /EXPORT, você pode exportar uma função de seu programa para que outros programas podem chamar a função. Você também pode exportar os dados. Exportações normalmente são definidas em uma DLL.
+O **/exportação** opção especifica um item de dados ou função para exportar a partir do seu programa para que outros programas que podem chamar a função ou usar os dados. Exportações normalmente são definidas em uma DLL.
 
-O *Nome_da_entrada* é o nome do item de dados ou função como ele deve ser usada pelo programa de chamada. `ordinal` Especifica um índice na tabela de exportações no intervalo de 1 a 65.535; Se você não especificar `ordinal`, LINK atribui um. O **NONAME** palavra-chave exporta a função apenas como um ordinal, sem uma *Nome_da_entrada*.
+O *Nome_da_entrada* é o nome do item de dados ou função como ele deve ser usada pelo programa de chamada. *ordinal* Especifica um índice na tabela de exportações no intervalo de 1 a 65.535; se você não especificar *ordinal*, LINK atribui um. O **NONAME** palavra-chave exporta a função apenas como um ordinal, sem uma *Nome_da_entrada*.
 
 O **dados** palavra-chave especifica que o item exportado é um item de dados. O item de dados no programa cliente deve ser declarado usando **extern __declspec(dllimport)**.
 
-Há três métodos para exportar uma definição, listada na ordem recomendada de uso:
+Há quatro métodos para exportar uma definição, listada na ordem recomendada de uso:
 
 1. [dllexport](../../cpp/dllexport-dllimport.md) no código-fonte
 
-2. Uma [exportações](../../build/reference/exports.md) instrução em um arquivo. def
+1. Uma [exportações](../../build/reference/exports.md) instrução em um arquivo. def
 
-3. Uma especificação /EXPORT em um comando LINK
+1. Uma especificação /EXPORT em um comando LINK
 
-Todos os três métodos podem ser usados no mesmo programa. Quando LINK compila um programa que contém exportações, ele também cria uma biblioteca de importação, a menos que um arquivo. EXP seja usado na compilação.
+1. Um [comentário](../../preprocessor/comment-c-cpp.md) diretiva no código-fonte do formulário `#pragma comment(linker, "/export: definition ")`.
 
-Usos LINK decorados formas de identificadores. O compilador decora um identificador ao criar o arquivo. obj. Se *Nome_da_entrada* é especificado para o vinculador no seu não decorado de formulário (conforme ele aparece no código-fonte), LINK tenta corresponder ao nome. Se ele não é possível localizar uma correspondência exclusiva, o LINK emite uma mensagem de erro. Use o [DUMPBIN](../../build/reference/dumpbin-reference.md) ferramenta para obter o [nomes decorados](../../build/reference/decorated-names.md) forma de um identificador quando você precisa especificá-lo para o vinculador.
+Todos esses métodos podem ser usados no mesmo programa. Quando LINK compila um programa que contém exportações, ele também cria uma biblioteca de importação, a menos que um arquivo. EXP seja usado na compilação.
+
+Usos LINK decorados formas de identificadores. O compilador decora um identificador ao criar o arquivo. obj. Se *Nome_da_entrada* é especificado para o vinculador no seu não decorado de formulário (conforme ele aparece no código-fonte), LINK tenta corresponder ao nome. Se ele não é possível localizar uma correspondência exclusiva, o LINK emite uma mensagem de erro. Use o [DUMPBIN](../../build/reference/dumpbin-reference.md) ferramenta para obter o [nome decorado](../../build/reference/decorated-names.md) forma de um identificador quando você precisa especificá-lo para o vinculador.
 
 > [!NOTE]
 > Não especifique a forma decorada de identificadores de C que são declarados `__cdecl` ou `__stdcall`.
+
+Se você precisar exportar um nome não decorado de função e ter exportações diferentes dependendo da configuração de build (por exemplo, em compilações de 32 bits ou 64 bits), você pode usar diferentes arquivos de definição para cada configuração. (As diretivas de pré-processador condicionais não são permitidas em arquivos DEF.) Como alternativa, você pode usar um `#pragma comment` diretiva antes de uma declaração de função, como mostrado aqui, onde `PlainFuncName` é o nome não decorado, e `_PlainFuncName@4` é o nome decorado da função:
+
+```cpp
+#pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")
+BOOL CALLBACK PlainFuncName( Things * lpParams)
+```
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 

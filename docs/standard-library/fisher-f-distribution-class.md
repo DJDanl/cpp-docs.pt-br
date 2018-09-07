@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ab5c5c790813f57da483878cb6a86fcf2ab0f04
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 51d8a4656cac15da170d221c784105ff939983a5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959645"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108792"
 ---
 # <a name="fisherfdistribution-class"></a>Classe fisher_f_distribution
 
@@ -79,9 +79,11 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*RealType* padrão é o tipo de resultado de ponto flutuante **duplo**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*RealType*<br/>
+O tipo de resultado de ponto flutuante assume como padrão **duplas**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
-*URNG* O mecanismo gerador de números aleatórios uniformes. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*URNG*<br/>
+O uniform aleatório mecanismo gerador de números. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
@@ -257,11 +259,14 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*m* o `m` parâmetro de distribuição.
+*m*<br/>
+O parâmetro de distribuição `m`.
 
-*n* o `n` parâmetro de distribuição.
+*n*<br/>
+O parâmetro de distribuição `n`.
 
-*parm* o `param_type` estrutura usada para construir a distribuição.
+*parm*<br/>
+A estrutura `param_type` usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
@@ -289,11 +294,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*m* o `m` parâmetro de distribuição.
+*m*<br/>
+O parâmetro de distribuição `m`.
 
-*n* o `n` parâmetro de distribuição.
+*n*<br/>
+O parâmetro de distribuição `n`.
 
-*à direita* o `param_type` objeto a ser comparado a este.
+*right*<br/>
+O objeto `param_type` a ser comparado a este.
 
 ### <a name="remarks"></a>Comentários
 

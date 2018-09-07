@@ -38,16 +38,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b527561e312ce9c50dce106a243d7e49a1d303
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7972ddfe6ae9c1d591bdbd4cc5e208d78e826037
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406882"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107412"
 ---
 # <a name="srand"></a>srand
 
-Define o valor de semente inicial para o gerador de números pseudoaleatórios usado pelo **rand** função.
+Define o valor de semente inicial para o gerador de números pseudoaleatório usado pelas **rand** função.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -59,11 +59,12 @@ void srand(
 
 ### <a name="parameters"></a>Parâmetros
 
-*semente* semente para a geração de números pseudoaleatórios
+*Semente*<br/>
+Semente para geração de números pseudoaleatórios
 
 ## <a name="remarks"></a>Comentários
 
-O **srand** função define o ponto de partida para gerar uma série de números pseudoaleatórios inteiros no thread atual. Para reinicializar o gerador para criar a mesma sequência de resultados, chame o **srand** de função e usar o mesmo *semente* argumento novamente. Qualquer outro valor para *semente* define o gerador de outro ponto de partida na sequência de números pseudoaleatórios. **RAND** recupera os números pseudoaleatórios que são gerados. Chamando **rand** antes de qualquer chamada para **srand** gera a mesma sequência de chamada **srand** com *semente* passado como 1.
+O **srand** função define o ponto de partida para gerar uma série de inteiros pseudoaleatórios no thread atual. Para reinicializar o gerador para criar a mesma sequência de resultados, chame o **srand** funcionar e usar o mesmo *semente* argumento novamente. Qualquer outro valor para *semente* define o gerador para um ponto de partida diferente na sequência de números pseudoaleatório. **RAND** recupera os números pseudoaleatórios que são gerados. Chamando **rand** antes de qualquer chamada para **srand** gera a mesma sequência que chamar **srand** com *semente* passado como 1.
 
 ## <a name="requirements"></a>Requisitos
 

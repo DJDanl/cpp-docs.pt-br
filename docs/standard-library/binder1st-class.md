@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8191b572595b8ada96f59357af095baf5d846bc4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a9e53d9344e56f9efc4f20b834ce31bcb05f9fbb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961715"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103968"
 ---
 # <a name="binder1st-class"></a>Classe binder1st
 
@@ -53,11 +53,14 @@ protected:
 
 ### <a name="parameters"></a>Parâmetros
 
-*Func* o objeto de função binária a ser convertido em um objeto de função unária.
+*Func*<br/>
+O objeto de função binária a ser convertido em um objeto de função unária.
 
-*à esquerda* o valor ao qual o primeiro argumento do objeto de função binária deve ser associado.
+*left*<br/>
+O valor ao qual o primeiro argumento do objeto de função binária deve ser associado.
 
-*à direita* o valor do argumento que o objeto binário adaptado compara ao valor fixo do segundo argumento.
+*right*<br/>
+O valor do argumento que o objeto binário adaptado compara ao valor fixo do segundo argumento.
 
 ## <a name="return-value"></a>Valor de retorno
 
