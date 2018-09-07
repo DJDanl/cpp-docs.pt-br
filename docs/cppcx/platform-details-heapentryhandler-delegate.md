@@ -15,33 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3526aed9f8acd4c1d385e5b5b0311200dcfd9b54
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 188155a3c88f2aa4a4276ca58be9d9a86c4888a7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766896"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103743"
 ---
 # <a name="platformdetailsheapentryhandler-delegate"></a>Delegado Platform::Details::HeapEntryHandler
-Esse delegado destina-se somente a uso interno e não se destina a ser usado para desenvolvimento.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-  
-delegate HeapEntryHandler;  
-```  
-  
-### <a name="remarks"></a>Comentários  
- Essa classe é fornecida apenas para fins de integridade, pois pode ser inspecionada com navegadores.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `Platform`  
-  
-### <a name="requirements"></a>Requisitos  
- **Metadados:** platform.winmd  
-  
- **Namespace:** Platform::Details  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace de plataforma](platform-namespace-c-cx.md)
+
+Esse delegado destina-se somente a uso interno e não se destina a ser usado para desenvolvimento.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+delegate HeapEntryHandler;
+```
+
+### <a name="remarks"></a>Comentários
+
+Essa classe é fornecida apenas para fins de integridade, pois pode ser inspecionada com navegadores.
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`Platform`
+
+### <a name="requirements"></a>Requisitos
+
+**Metadados:** platform.winmd
+
+**Namespace:** Platform::Details
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace de plataforma](platform-namespace-c-cx.md)

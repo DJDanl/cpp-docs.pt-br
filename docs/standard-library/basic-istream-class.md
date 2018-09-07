@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4250a2b13740b5aa71ca10300a90560ed615f68e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 51dc841efa3e9f64a106002945c07ce10bcf7565
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200022"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102610"
 ---
 # <a name="basicistream-class"></a>Classe basic_istream
 
@@ -193,11 +193,14 @@ basic_istream(basic_istream&& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*strbuf* um objeto do tipo [basic_streambuf](../standard-library/basic-streambuf-class.md).
+*strbuf*<br/>
+Um objeto do tipo [basic_streambuf](../standard-library/basic-streambuf-class.md).
 
-*_Isstd* **verdadeira** quando se trata de um fluxo padrão; caso contrário, **false**.
+*_Isstd*<br/>
+**Verdadeiro** quando se trata de um fluxo padrão; caso contrário, **falso**.
 
-*à direita* um `basic_istream` objeto a ser copiado.
+*right*<br/>
+Um objeto `basic_istream` a ser copiado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -277,15 +280,20 @@ basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf, Elem Delim);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Contagem* o número de caracteres a serem lidos do `strbuf`.
+*count*<br/>
+O número de caracteres a serem lidos de `strbuf`.
 
-*Delim* o caractere que deve terminar a leitura se for encontrado antes *contagem*.
+*Delim*<br/>
+O caractere que deve terminar a leitura se for encontrado antes *contagem*.
 
-*STR* uma cadeia de caracteres no qual gravar.
+*str*<br/>
+Uma cadeia de caracteres na qual gravar.
 
-*CH* um caractere a ser obtido.
+*CH*<br/>
+Um caractere a obter.
 
-*strbuf* um buffer no qual gravar.
+*strbuf*<br/>
+Um buffer no qual gravar.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -356,11 +364,14 @@ basic_istream<Elem, Tr>& getline(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Contagem* o número de caracteres a serem lidos do `strbuf`.
+*count*<br/>
+O número de caracteres a serem lidos de `strbuf`.
 
-*Delim* o caractere que deve terminar a leitura se for encontrado antes *contagem*.
+*Delim*<br/>
+O caractere que deve terminar a leitura se for encontrado antes *contagem*.
 
-*STR* uma cadeia de caracteres no qual gravar.
+*str*<br/>
+Uma cadeia de caracteres na qual gravar.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -414,9 +425,11 @@ basic_istream<Elem, Tr>& ignore(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Contagem de* o número de elementos para ignorar a atual posição de leitura.
+*count*<br/>
+O número de elementos a ignorar da posição atual de leitura.
 
-*Delim* o elemento que, se encontrado antes da contagem, faz com que `ignore` para retornar e permitindo que todos os elementos após *Delim* a serem lidos.
+*Delim*<br/>
+O elemento que, se encontrado antes da contagem, faz com que `ignore` para retornar e permitindo que todos os elementos após *Delim* a serem lidos.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -474,11 +487,14 @@ basic_istream& operator>>(long double& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Pfn* um ponteiro de função.
+*pfn*<br/>
+Um ponteiro de função.
 
-*strbuf* um objeto do tipo `stream_buf`.
+*strbuf*<br/>
+Um objeto do tipo `stream_buf`.
 
-*Val* o valor a ser lido do fluxo.
+*Val*<br/>
+O valor a ser lido do fluxo.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -584,7 +600,8 @@ basic_istream& operator=(basic_istream&& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* uma `rvalue` fazem referência a um `basic_ifstream` objeto.
+*right*<br/>
+Uma referência `rvalue` a um objeto `basic_ifstream`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -653,7 +670,8 @@ basic_istream<Elem, Tr>& putback(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH* um caractere a ser colocado de volta no fluxo.
+*CH*<br/>
+Um caractere a colocar de volta no fluxo.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -702,9 +720,11 @@ basic_istream<Elem, Tr>& read(
 
 ### <a name="parameters"></a>Parâmetros
 
-*STR* a matriz na qual ler os caracteres.
+*str*<br/>
+A matriz na qual ler os caracteres.
 
-*Contagem de* o número de caracteres a serem lidos.
+*count*<br/>
+O número de caracteres a serem lidos.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -764,9 +784,11 @@ streamsize readsome(
 
 ### <a name="parameters"></a>Parâmetros
 
-*STR* a matriz na qual `readsome` armazena os caracteres que lê.
+*str*<br/>
+A matriz na qual `readsome` armazena os caracteres que lê.
 
-*Contagem de* o número de caracteres a serem lidos.
+*count*<br/>
+O número de caracteres a serem lidos.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -819,11 +841,14 @@ basic_istream<Elem, Tr>& seekg(off_type off, ios_base::seekdir way);
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS* a posição absoluta no qual mover o ponteiro de leitura.
+*POS*<br/>
+A posição absoluta na qual mover o ponteiro de leitura.
 
-*desativar* um deslocamento para mover o ponteiro de leitura relativo *maneira*.
+*Desativar*<br/>
+Um deslocamento para mover o ponteiro de leitura relativo a *maneira*.
 
-*maneira* um dos [ios_base:: seekdir](../standard-library/ios-base-class.md#seekdir) enumerações.
+*forma*<br/>
+Uma das enumerações de [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -887,7 +912,8 @@ void swap(basic_istream& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* uma referência lvalue para um `basic_istream` objeto.
+*right*<br/>
+Uma referência lvalue a um objeto `basic_istream`.
 
 ### <a name="remarks"></a>Comentários
 

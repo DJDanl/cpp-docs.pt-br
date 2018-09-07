@@ -19,105 +19,108 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90194dd72b5192fab71065c2275adb4e066bcb0e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d56cbab412af93bf0a9694cb8f686e14cb9c1937
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767885"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102046"
 ---
 # <a name="platformstathreadattribute-class"></a>Classe Platform::STAThreadAttribute
-Indica que o modelo de threading para um aplicativo é STA (Single-Threaded Apartment).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-public ref class STAThreadAttribute sealed : Attribute  
-```  
-  
-### <a name="members"></a>Membros  
-  
-### <a name="public-constructors"></a>Construtores Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[Construtor STAThreadAttribute 1](#ctor)|Inicializa uma nova instância da classe.|  
-  
-### <a name="public-methods"></a>Métodos públicos  
- O atributo STAThreadAttribute herda [classe Platform:: Object](../cppcx/platform-object-class.md). STAThreadAttribute também sobrecarrega ou possui os seguintes membros:  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[STAThreadAttribute::Equals](#equals)|Determina se o objeto especificado é igual ao objeto atual.|  
-|[STAThreadAttribute::GetHashCode](#gethashcode)|Retorna o código hash para essa instância.|  
-|[STAThreadAttribute::ToString](#tostring)|Retorna uma cadeia de caracteres que representa o objeto atual.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `Platform`  
-  
-### <a name="requirements"></a>Requisitos  
- **Cabeçalho:** collection.h  
-  
- **Namespace:** Platform  
 
+Indica que o modelo de threading para um aplicativo é STA (Single-Threaded Apartment).
 
+## <a name="syntax"></a>Sintaxe
+
+```
+public ref class STAThreadAttribute sealed : Attribute
+```
+
+### <a name="members"></a>Membros
+
+### <a name="public-constructors"></a>Construtores Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[Construtor STAThreadAttribute 1](#ctor)|Inicializa uma nova instância da classe.|
+
+### <a name="public-methods"></a>Métodos públicos
+
+O atributo STAThreadAttribute herda [classe Platform:: Object](../cppcx/platform-object-class.md). STAThreadAttribute também sobrecarrega ou possui os seguintes membros:
+
+|Nome|Descrição|
+|----------|-----------------|
+|[STAThreadAttribute::Equals](#equals)|Determina se o objeto especificado é igual ao objeto atual.|
+|[STAThreadAttribute::GetHashCode](#gethashcode)|Retorna o código hash para essa instância.|
+|[STAThreadAttribute::ToString](#tostring)|Retorna uma cadeia de caracteres que representa o objeto atual.|
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`Platform`
+
+### <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** collection.h
+
+**Namespace:** Platform
 
 ## <a name="ctor"></a> STAThreadAttribute constructor
-Inicializa uma nova instância da classe STAThreadAttribute.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-public:STAThreadAttribute()  
-```  
-  
 
+Inicializa uma nova instância da classe STAThreadAttribute.
+
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+public:STAThreadAttribute();
+```
 
 ## <a name="equals"></a> STAThreadAttribute::Equals
-Determina se o objeto especificado é igual ao objeto atual.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-public:virtual override bool Equals(  Object^ obj)  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- obj  
- O objeto a ser comparado.  
-  
-### <a name="return-value"></a>Valor de retorno  
- `true` se os objetos forem iguais; caso contrário, `false`.  
-  
 
+Determina se o objeto especificado é igual ao objeto atual.
+
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+public:virtual override bool Equals( Object^ obj );
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*obj*<br/>
+O objeto a ser comparado.
+
+### <a name="return-value"></a>Valor de retorno
+
+`true` se os objetos forem iguais; caso contrário, `false`.
 
 ## <a name="gethashcode"></a> STAThreadAttribute::GetHashCode
-Retorna o código hash para essa instância.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-public:int GetHashCode()  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
- O código hash para essa instância.  
-  
 
+Retorna o código hash para essa instância.
+
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+public:int GetHashCode();
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+O código hash para essa instância.
 
 ## <a name="tostring"></a> STAThreadAttribute::ToString
-Retorna uma cadeia de caracteres que representa o objeto atual.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-public:String^ ToString()  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
- Uma cadeia de caracteres que representa o objeto atual.  
-  
 
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace de plataforma](platform-namespace-c-cx.md)
+Retorna uma cadeia de caracteres que representa o objeto atual.
+
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+public:String^ ToString();
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Uma cadeia de caracteres que representa o objeto atual.
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace de plataforma](platform-namespace-c-cx.md)

@@ -9,17 +9,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2fc36582e6ffbff8f7608a5a26cc472687132e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1bd61fd12c555c42f3226d523a519c29f1d09c10
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760972"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102688"
 ---
 # <a name="wrl-integration-ccx"></a>Integração WRL (C++/CX)
 
 Você pode combinar livremente o código de WRL com código de biblioteca de modelos em C++ Windows Runtime (WRL). Na mesma unidade de tradução, você pode usar objetos declarados com WRL handle-to-object (`^`) notação e WRL inteligentes ponteiro (`ComPtr<T>`) notação. No entanto, você deve tratar manualmente os valores de retorno e códigos de erro HRESULT da WRL e exceções do WRL.
-  
+
 ## <a name="wrl-development"></a>Desenvolvimento de WRL
 
 Para obter mais informações sobre criação e consumo de componentes da WRL, consulte [biblioteca de modelos em C++ Windows Runtime (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
@@ -28,13 +28,13 @@ Para obter mais informações sobre criação e consumo de componentes da WRL, c
 
 O trecho de código a seguir demonstra como usar a WRL e WRL para consumir classes de tempo de execução do Windows e examinar um arquivo de metadados.
 
-O exemplo é tirado de um trecho de código no Fórum de aplicativos da Microsoft Store de construção. O autor desse trecho de código oferece os seguintes avisos de isenção de responsabilidade e estipulações:
+O exemplo é tirado de um trecho de código no Fórum de aplicativos da Microsoft Store de construção. O autor desse snippet de código oferece os seguintes avisos de isenção de responsabilidade e estipulações:
 
 1. C++ não fornece APIs específicas para refletir nos tipos de tempo de execução do Windows, mas os arquivos de metadados do Windows (. winmd) para um tipo são totalmente compatíveis com os arquivos de metadados do CLR. O Windows fornece as novas APIs de descoberta de metadados (RoGetMetaDataFile) para acessar o arquivo .winmd de um determinado tipo. No entanto, essas APIs são de uso limitado para os desenvolvedores C++ porque você não pode instanciar uma classe.
 
 1. Após a compilação do código, você também precisará passar Runtimeobject.lib e Rometadata.lib ao Vinculador.
 
-1. Este trecho é apresentado no estado em que se encontra. Embora seja esperado que funcione corretamente, ele pode conter erros.
+1. Este snippet é apresentado no estado em que se encontra. Embora seja esperado que funcione corretamente, ele pode conter erros.
 
 ```cpp
 #include <hstring.h>
@@ -115,9 +115,8 @@ IVector<String^>^ GetTypeMethods(Object^ instance)
     }
     return retVal;
 }
-
 ```
 
 ## <a name="see-also"></a>Consulte também
 
-[Interoperando com outras linguagens](interoperating-with-other-languages-c-cx.md)  
+[Interoperando com outras linguagens](interoperating-with-other-languages-c-cx.md)

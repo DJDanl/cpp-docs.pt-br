@@ -15,34 +15,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b80fe7749fdb2f91e300cff007c01001edfa557
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fe988a7dee7fb358d9454c06811d7baf2cd4ace0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755106"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101957"
 ---
 # <a name="platformcallbackcontext-enumeration"></a>Enumeração Platform::CallbackContext
-Especifica o contexto do thread no qual uma função de retorno de chamada (manipulador de eventos) é executada.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-enum class CallbackContext {};  
-```  
-  
-### <a name="members"></a>Membros  
-  
-|Type Code|Descrição|  
-|---------------|-----------------|  
-|Qualquer|A função de retorno de chamada pode ser executada em qualquer contexto de thread.|  
-|Same|A função de retorno de chamada pode ser executada apenas no contexto de thread que iniciou a operação assíncrona.|  
-  
-### <a name="requirements"></a>Requisitos  
- **Mínimo de cliente com suporte:** Windows 8  
-  
- **Mínimo de servidor com suporte:** Windows Server 2012  
-  
- **Namespace:** Platform  
-  
- **Metadados:** platform.winmd
+
+Especifica o contexto do thread no qual uma função de retorno de chamada (manipulador de eventos) é executada.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+enum class CallbackContext {};
+```
+
+### <a name="members"></a>Membros
+
+|Type Code|Descrição|
+|---------------|-----------------|
+|Qualquer|A função de retorno de chamada pode ser executada em qualquer contexto de thread.|
+|Same|A função de retorno de chamada pode ser executada apenas no contexto de thread que iniciou a operação assíncrona.|
+
+### <a name="requirements"></a>Requisitos
+
+**Mínimo de cliente com suporte:** Windows 8
+
+**Mínimo de servidor com suporte:** Windows Server 2012
+
+**Namespace:** Platform
+
+**Metadados:** platform.winmd

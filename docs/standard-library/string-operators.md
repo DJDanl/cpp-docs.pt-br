@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: 728a0f643a77b47bf857d409517407bec3a1b8b4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0b4ec7d6d79f70423b2d7c30e1de73e05eb04d9c
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966610"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101765"
 ---
 # <a name="ltstringgt-operators"></a>Operadores de &lt;cadeia de caracteres&gt;
 
@@ -107,9 +107,11 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Parâmetros
 
-*à esquerda* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser concatenado.
+*left*<br/>
+Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser concatenado.
 
-*à direita* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser concatenado.
+*right*<br/>
+Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser concatenado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -194,9 +196,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*à esquerda* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*left*<br/>
+Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-*à direita* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*right*<br/>
+Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -283,9 +287,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Parâmetros
 
-*à esquerda* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*left*<br/>
+Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-*à direita* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*right*<br/>
+Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -372,9 +378,11 @@ bool operator<(
 
 ### <a name="parameters"></a>Parâmetros
 
-*à esquerda* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*left*<br/>
+Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-*à direita* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*right*<br/>
+Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -466,9 +474,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*à esquerda* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*left*<br/>
+Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-*à direita* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*right*<br/>
+Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -557,9 +567,11 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Ostr* que estão sendo gravado no fluxo de saída.
+*_Ostr*<br/>
+O fluxo de saída que está sendo gravado.
 
-*STR* a cadeia de caracteres a ser inserido no fluxo de saída.
+*str*<br/>
+A cadeia de caracteres a ser inserida no fluxo de saída.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -592,9 +604,11 @@ bool operator>(
 
 ### <a name="parameters"></a>Parâmetros
 
-*à esquerda* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*left*<br/>
+Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-*à direita* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*right*<br/>
+Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -693,9 +707,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*à esquerda* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*left*<br/>
+Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
-*à direita* uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
+*right*<br/>
+Uma cadeia de caracteres de estilo C ou um objeto do tipo `basic_string` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -784,9 +800,11 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Istr* usado para extrair a sequência de fluxo de entrada
+*_Istr*<br/>
+O fluxo de entrada usado para extrair a sequência
 
-*direito* a cadeia de caracteres que está sendo extraída do fluxo de entrada.
+*right*<br/>
+A cadeia de caracteres que está sendo extraída do fluxo de entrada.
 
 ### <a name="return-value"></a>Valor de retorno
 

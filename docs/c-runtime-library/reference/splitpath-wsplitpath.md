@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69123bfd07d992d96c504e538ded157c49991dab
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 46d29b55e215ce426bbfd465b3d54e1d267a1bb1
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221602"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103912"
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
 
@@ -75,15 +75,20 @@ void _wsplitpath(
 
 ### <a name="parameters"></a>Parâmetros
 
-*caminho* caminho completo.
+*path*<br/>
+Caminho completo.
 
-*unidade* letra da unidade, seguida por dois-pontos (**:**). Você pode passar **nulo** para esse parâmetro se você não precisa ter a letra da unidade.
+*Dirigir*<br/>
+Letra da unidade, seguida por dois-pontos (**:**). Você pode passar **nulo** para esse parâmetro se você não precisa ter a letra da unidade.
 
-*dir* caminho de diretório, incluindo barra à direita. Barras ( **/** ), barras invertidas ( **\\** ), ou ambos podem ser usadas. Você pode passar **nulo** para esse parâmetro se você não precisa o caminho do diretório.
+*dir*<br/>
+Caminho do diretório, incluindo barra à direita. Barras ( **/** ), barras invertidas ( **\\** ), ou ambos podem ser usadas. Você pode passar **nulo** para esse parâmetro se você não precisa o caminho do diretório.
 
-*fname* basear o nome do arquivo (sem extensão). Você pode passar **nulo** para esse parâmetro se o nome do arquivo não é necessário.
+*fname*<br/>
+Nome de arquivo base (sem extensão). Você pode passar **nulo** para esse parâmetro se o nome do arquivo não é necessário.
 
-*ext* extensão de nome de arquivo, incluindo ponto à esquerda (**.**). Você pode passar **nulo** para esse parâmetro se a extensão de nome de arquivo não é necessária.
+*ext*<br/>
+Extensão de nome de arquivo, incluindo ponto à esquerda (**.**). Você pode passar **nulo** para esse parâmetro se a extensão de nome de arquivo não é necessária.
 
 ## <a name="remarks"></a>Comentários
 

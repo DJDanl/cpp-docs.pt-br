@@ -15,33 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9bd4238f9e89a6d9c11f402aa0af2fa6f2418bd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 15d068aea4d9150725649e36ceb059f85b668d3e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755772"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101763"
 ---
 # <a name="platformdetailsheap-class"></a>Classe Platform::Details::Heap
-Essa classe destina-se somente a uso interno e não não se destina ao desenvolvimento.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-  
-ref class Heap sealed;  
-```  
-  
-### <a name="remarks"></a>Comentários  
- Essa classe é fornecida apenas para fins de integridade, pois pode ser inspecionada com navegadores.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `Platform`  
-  
-### <a name="requirements"></a>Requisitos  
- **Metadados:** platform.winmd  
-  
- **Namespace:** Platform::Details  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace de plataforma](platform-namespace-c-cx.md)
+
+Essa classe destina-se somente a uso interno e não não se destina ao desenvolvimento.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+ref class Heap sealed;
+```
+
+### <a name="remarks"></a>Comentários
+
+Essa classe é fornecida apenas para fins de integridade, pois pode ser inspecionada com navegadores.
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`Platform`
+
+### <a name="requirements"></a>Requisitos
+
+**Metadados:** platform.winmd
+
+**Namespace:** Platform::Details
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace de plataforma](platform-namespace-c-cx.md)

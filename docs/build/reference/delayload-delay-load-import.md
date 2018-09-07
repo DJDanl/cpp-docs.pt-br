@@ -20,39 +20,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74d65caa8a0ea140f93bf156e3c14a85232e6e56
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b140aed55bb1a83224bbe1698ff40695c306a693
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372250"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103730"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD (importação de carga com atraso)
-```  
-/DELAYLOAD:dllname  
-```  
-  
-## <a name="parameters"></a>Parâmetros  
- `dllname`  
- O nome de uma DLL que você deseja atrasar a carga.  
-  
-## <a name="remarks"></a>Comentários  
- A opção /DELAYLOAD faz com que a DLL especificada pelo `dllname` seja carregada apenas na primeira chamada pelo programa para uma função nessa DLL. Para obter mais informações, consulte [suporte de vinculador para DLLs Delay-Loaded](../../build/reference/linker-support-for-delay-loaded-dlls.md). Você pode usar essa opção quantas vezes for necessário para especificar quantas DLLs desejar. Você deve usar o Delayimp.lib quando vincular o programa ou pode implementar sua própria função auxiliar de carga com atraso.  
-  
- O [/Delay](../../build/reference/delay-delay-load-import-settings.md) opção especifica a associação e carregando opções para cada DLL carregada com atraso.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
-  
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
-  
-2.  No **vinculador** pasta, selecione o **entrada** página de propriedades.  
-  
-3.  Modificar o **Atrasar DLLs carregadas** propriedade.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
-  
--   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.DelayLoadDLLs%2A>.  
-  
-## <a name="see-also"></a>Consulte também  
- [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções do vinculador](../../build/reference/linker-options.md)
+
+> **/DELAYLOAD:**_dllname_
+
+## <a name="parameters"></a>Parâmetros
+
+*dllname*<br/>
+O nome de uma DLL que você deseja atrasar a carga.
+
+## <a name="remarks"></a>Comentários
+
+A opção /DELAYLOAD faz com que a DLL especificada pelo `dllname` seja carregada apenas na primeira chamada pelo programa para uma função nessa DLL. Para obter mais informações, consulte [suporte do vinculador para DLLs Delay-Loaded](../../build/reference/linker-support-for-delay-loaded-dlls.md). Você pode usar essa opção quantas vezes for necessário para especificar quantas DLLs desejar. Você deve usar o Delayimp.lib quando vincular o programa ou pode implementar sua própria função auxiliar de carga com atraso.
+
+O [/Delay](../../build/reference/delay-delay-load-import-settings.md) opção especifica a associação e carregamento de opções para cada DLL carregadas com atraso.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
+
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+
+2. No **vinculador** pasta, selecione a **entrada** página de propriedades.
+
+3. Modificar a **Atrasar DLLs carregadas** propriedade.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
+
+- Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.DelayLoadDLLs%2A>.
+
+## <a name="see-also"></a>Consulte também
+
+[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
+[Opções do vinculador](../../build/reference/linker-options.md)

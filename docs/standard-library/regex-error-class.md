@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7983857b3814f8ddd9c10ab37676bc2e87e9a59c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 6cdf1f5a3a8477e0af7d6bb04426599df590fffa
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964139"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102675"
 ---
 # <a name="regexerror-class"></a>Classe regex_error
 
@@ -32,7 +32,7 @@ Relata um objeto basic_regex incorreto.
 
 ```cpp
 class regex_error
- : public std::runtime_error {
+: public std::runtime_error {
 public:
     explicit regex_error(regex_constants::error_code error);
 
@@ -111,7 +111,8 @@ regex_error(regex_constants::error_code error);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Erro* o código de erro.
+*error*<br/>
+O código de erro.
 
 ### <a name="remarks"></a>Comentários
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f7c4c748d7328f534aebfb2133c72635bbdc36f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 688252b4b361357f4dba862574ce6698d61b7c86
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953960"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102753"
 ---
 # <a name="istriviallycopyassignable-class"></a>Classe is_trivially_copy_assignable
 
@@ -36,7 +36,8 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>Parâmetros
 
-*T* o tipo de consulta.
+*T*<br/>
+O tipo a ser consultado.
 
 ## <a name="remarks"></a>Comentários
 

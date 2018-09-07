@@ -9,205 +9,204 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8a36573e72b173180e89b48403829a9387d4ee8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b8b94e2c342551d63612155d1d8a5771139e42cb
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757017"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101766"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Obtendo ponteiros para buffers de dados (C++/CX)
-No tempo de execução do Windows a [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) interface fornece um meio com neutralidade de idioma, com base em fluxo para acessar buffers de dados. Em C++, você pode obter um ponteiro bruto para a matriz de bytes subjacente usando a interface IBufferByteAccess da Biblioteca em Tempo de Execução do Windows definida em robuffer.h. Usando essa abordagem, você pode modificar a matriz de bytes in-loco sem fazer cópias desnecessárias dos dados.  
-  
- O diagrama a seguir mostra um elemento de imagem XAML, cuja origem é um [Windows::UI::Xaml::Media::Imaging WriteableBitmap](https://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Um aplicativo cliente escrito em qualquer linguagem pode transmitir uma referência ao `WriteableBitmap` para o código C++, e o C++ pode usar a referência para obter o buffer subjacente. Em um aplicativo de plataforma Universal do Windows que está escrito em C++, você pode usar a função no exemplo a seguir diretamente no código-fonte sem empacotá-la em um componente de tempo de execução do Windows.  
-  
- ![C&#43; &#43; código de acesso a dados de pixel diretamente](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")  
-  
-## <a name="getpointertopixeldata"></a>GetPointerToPixelData  
- O seguinte método aceita uma [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) e retorna um ponteiro bruto à matriz de bytes subjacente. Para chamar a função, transmita um [WriteableBitmap:: Pixelbuffer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) propriedade.  
-  
-```  
-  
-#include <wrl.h>  
-#include <robuffer.h>  
-using namespace Windows::Storage::Streams;  
-using namespace Microsoft::WRL;  
-typedef uint8 byte;  
-// Retrieves the raw pixel data from the provided IBuffer object.  
-// Warning: The lifetime of the returned buffer is controlled by  
-// the lifetime of the buffer object that's passed to this method.  
-// When the buffer has been released, the pointer becomes invalid  
-// and must not be used.  
-byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)  
-{  
-    if (length != nullptr)  
-    {  
-        *length = pixelBuffer ->Length;  
-    }  
-    // Query the IBufferByteAccess interface.  
-    ComPtr<IBufferByteAccess> bufferByteAccess;  
-    reinterpret_cast<IInspectable*>( pixelBuffer)->QueryInterface(IID_PPV_ARGS(&bufferByteAccess));  
-  
-    // Retrieve the buffer data.  
-    byte* pixels = nullptr;  
-    bufferByteAccess->Buffer(&pixels);  
-    return pixels;  
-}  
-```  
-  
-## <a name="complete-example"></a>Exemplo completo  
- As etapas a seguir mostram como criar um aplicativo c# Universal Windows Platform que passa um `WriteableBitmap` para uma DLL do componente de tempo de execução do C++ Windows. O código C++ obtém um ponteiro para o buffer de pixels e executa uma simples modificação in-loco na imagem. Como alternativa, você pode criar o aplicativo cliente no Visual Basic, em JavaScript ou C++ em vez de C#. Se você usar C++, o componente DLL não será necessário; basta adicionar esses métodos diretamente à classe MainPage ou qualquer outra classe que você defina.  
-  
-#### <a name="create-the-client"></a>Criar o cliente  
-  
-1.  Use o modelo de projeto de aplicativo em branco para criar um aplicativo c# Universal Windows Platform.  
-  
-2.  Em MainPage.xaml  
-  
-    -   Use este XAML para substituir o elemento `Grid` :  
-  
-        ```cpp  
-        <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">  
-                <StackPanel HorizontalAlignment="Left" Margin="176,110,0,0" VerticalAlignment="Top" Width="932">  
-                    <Image x:Name="Pic"/>  
-                    <Button Content="Process Image" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="47" Click="Button_Click_1"/>  
-                </StackPanel>  
-            </Grid>  
-        ```  
-  
-3.  Em MainPage.xaml.cs  
-  
-    1.  Adicione estas declarações de namespace:  
-  
-        ```  
-        using Windows.Storage;  
-        using Windows.Storage.FileProperties;  
-        using Windows.UI.Xaml.Media.Imaging;  
-        using Windows.Storage.Streams;  
-        using Windows.Storage.Pickers;  
-        ```  
-  
-    2.  Adicione um variável de membro `WriteableBitmap` à classe `MainPage` com o nome `m_bm`.  
-  
-        ```  
-        private WriteableBitmap m_bm;  
-        ```  
-  
-    3.  Use o código a seguir para substituir o stub do método `OnNavigatedTo` . Isso abrirá o seletor de arquivos quando o aplicativo for iniciado. (Observe que a palavra-chave `async` será adicionada à assinatura da função).  
-  
-        ```c#  
-        async protected override void OnNavigatedTo(NavigationEventArgs e)  
-                {  
-                    FileOpenPicker openPicker = new FileOpenPicker();  
-                    openPicker.ViewMode = PickerViewMode.Thumbnail;  
-                    openPicker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;  
-                    openPicker.FileTypeFilter.Add(".jpg");  
-                    openPicker.FileTypeFilter.Add(".jpeg");  
-                    openPicker.FileTypeFilter.Add(".png");  
-  
-                    StorageFile file = await openPicker.PickSingleFileAsync();  
-                    if (file != null)  
-                    {  
-                        // Get the size of the image for the WriteableBitmap constructor.  
-                        ImageProperties props = await file.Properties.GetImagePropertiesAsync();  
-                        m_bm = new WriteableBitmap((int)props.Height, (int)props.Width);  
-                        m_bm.SetSource(await file.OpenReadAsync());  
-                        Pic.Source = m_bm;  
-                    }  
-                    else  
-                    {  
-                      //  Handle error...  
-                    }  
-                }  
-        ```  
-  
-    4.  Adicione um manipulador de eventos para o clique do botão. (Como a referência ao namespace `ImageManipCPP` ainda não foi criada, é possível que haja um sublinhado ondulado na janela do editor.)  
-  
-        ```  
-        async private void Button_Click_1(object sender, RoutedEventArgs e)  
-                {  
-                    ImageManipCPP.Class1 obj = new ImageManipCPP.Class1();  
-                    await obj.Negativize(m_bm);  
-                    Pic.Source = m_bm;  
-                }  
-        ```  
-  
-#### <a name="create-the-c-component"></a>Criar o componente em C++  
-  
-1.  Adicione um novo componente de tempo de execução do C++ Windows à solução existente e nomeie- `ImageManipCPP`. Adicione uma referência a ele no projeto C# clicando com o botão direito do mouse nesse projeto em **Gerenciador de Soluções** e selecionando **Adicionar**, **Referência**.  
-  
-2.  Em Class1.h  
-  
-    1.  Adicione esse `typedef` à segunda linha, imediatamente depois de `#pragma once`:  
-  
-        ```  
-        typedef uint8 byte;  
-  
-        ```  
-  
-    2.  Adicione o atributo `WebHostHidden` logo acima do início da declaração `Class1` .  
-  
-        ```  
-        [Windows::Foundation::Metadata::WebHostHidden]  
-        ```  
-  
-    3.  Adicione esta assinatura do método público a `Class1`:  
-  
-        ```  
-        Windows::Foundation::IAsyncAction^ Negativize(Windows::UI::Xaml::Media::Imaging::WriteableBitmap^ bm);  
-        ```  
-  
-    4.  Adicione a assinatura do método `GetPointerToPixelData` mostrado no trecho de código anterior. Verifique se esse método é privado.  
-  
-3.  Em Class1.cpp  
-  
-    1.  Adicione estas diretivas `#include` e declarações de namespace:  
-  
-        ```  
-  
-        #include <ppltasks.h>  
-        #include <wrl.h>  
-        #include <robuffer.h>  
-  
-        using namespace Windows::Storage;  
-        using namespace Windows::UI::Xaml::Media::Imaging;  
-        using namespace Windows::Storage::Streams;  
-        using namespace Microsoft::WRL;  
-  
-        ```  
-  
-    2.  Adicione a implementação de `GetPointerToPixelData` do trecho de código anterior.  
-  
-    3.  Adicione a implementação de `Negativize`. Esse método cria um efeito semelhante a um negativo de filme invertendo cada valor de RGB no pixel. Tornamos o método assíncrono porque em imagens maiores ele pode demorar um tempo considerável para ser concluído.  
-  
-        ```  
-        IAsyncAction^ Class1::Negativize(WriteableBitmap^ bm)  
-        {  
-            unsigned int length;  
-            byte* sourcePixels = GetPointerToPixelData(bm->PixelBuffer, &length);  
-            const unsigned int width = bm->PixelWidth;  
-            const unsigned int height = bm->PixelHeight;  
-  
-            return create_async([this, width, height, sourcePixels]  
-            {          
-                byte* temp = sourcePixels;  
-                for(unsigned int k = 0; k < height; k++)  
-                {          
-                    for (unsigned int i = 0; i < (width * 4); i += 4)  
-                    {  
-                        int pos = k * (width * 4) + (i);  
-                        temp[pos] = ~temp[pos];  
-                        temp[pos + 1] = ~temp[pos + 1] / 3;  
-                        temp[pos + 2] = ~temp[pos + 2] / 2;  
-                        temp[pos + 3] = ~temp[pos + 3];  
-                    }  
-                }  
-            });  
-  
-        }  
-        ```  
-  
-        > [!NOTE]
-        >  Esse método pode ser executado mais rapidamente se você usar o AMP ou a Biblioteca de Padrões Paralelos para paralelizar a operação.  
-  
-4.  Verifique se você tem pelo menos uma imagem na pasta de imagens e pressione F5 para compilar e executar o programa.
+
+No tempo de execução do Windows a [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) interface fornece um meio com neutralidade de idioma, com base em fluxo para acessar buffers de dados. Em C++, você pode obter um ponteiro bruto para a matriz de bytes subjacente usando a interface IBufferByteAccess da Biblioteca em Tempo de Execução do Windows definida em robuffer.h. Usando essa abordagem, você pode modificar a matriz de bytes in-loco sem fazer cópias desnecessárias dos dados.
+
+O diagrama a seguir mostra um elemento de imagem XAML, cuja origem é um [Windows::UI::Xaml::Media::Imaging WriteableBitmap](https://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Um aplicativo cliente escrito em qualquer linguagem pode transmitir uma referência ao `WriteableBitmap` para o código C++, e o C++ pode usar a referência para obter o buffer subjacente. Em um aplicativo de plataforma Universal do Windows que está escrito em C++, você pode usar a função no exemplo a seguir diretamente no código-fonte sem empacotá-la em um componente de tempo de execução do Windows.
+
+![C&#43; &#43; código de acesso a dados de pixel diretamente](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")
+
+## <a name="getpointertopixeldata"></a>GetPointerToPixelData
+
+O seguinte método aceita uma [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) e retorna um ponteiro bruto à matriz de bytes subjacente. Para chamar a função, transmita um [WriteableBitmap:: Pixelbuffer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) propriedade.
+
+```cpp
+#include <wrl.h>
+#include <robuffer.h>
+using namespace Windows::Storage::Streams;
+using namespace Microsoft::WRL;
+typedef uint8 byte;
+// Retrieves the raw pixel data from the provided IBuffer object.
+// Warning: The lifetime of the returned buffer is controlled by
+// the lifetime of the buffer object that's passed to this method.
+// When the buffer has been released, the pointer becomes invalid
+// and must not be used.
+byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
+{
+    if (length != nullptr)
+    {
+        *length = pixelBuffer ->Length;
+    }
+    // Query the IBufferByteAccess interface.
+    ComPtr<IBufferByteAccess> bufferByteAccess;
+    reinterpret_cast<IInspectable*>( pixelBuffer)->QueryInterface(IID_PPV_ARGS(&bufferByteAccess));
+
+    // Retrieve the buffer data.
+    byte* pixels = nullptr;
+    bufferByteAccess->Buffer(&pixels);
+    return pixels;
+}
+```
+
+## <a name="complete-example"></a>Exemplo completo
+
+As etapas a seguir mostram como criar um aplicativo c# Universal Windows Platform que passa um `WriteableBitmap` para uma DLL do componente de tempo de execução do C++ Windows. O código C++ obtém um ponteiro para o buffer de pixels e executa uma simples modificação in-loco na imagem. Como alternativa, você pode criar o aplicativo cliente no Visual Basic, em JavaScript ou C++ em vez de C#. Se você usar C++, o componente DLL não será necessário; basta adicionar esses métodos diretamente à classe MainPage ou qualquer outra classe que você defina.
+
+#### <a name="create-the-client"></a>Criar o cliente
+
+1. Use o modelo de projeto de aplicativo em branco para criar um aplicativo c# Universal Windows Platform.
+
+1. Em MainPage.xaml
+
+   - Use este XAML para substituir o elemento `Grid` :
+
+        ```xml
+        <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+            <StackPanel HorizontalAlignment="Left" Margin="176,110,0,0" VerticalAlignment="Top" Width="932">
+                <Image x:Name="Pic"/>
+                <Button Content="Process Image" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="47" Click="Button_Click_1"/>
+            </StackPanel>
+        </Grid>
+        ```
+
+1. Em MainPage.xaml.cs
+
+   1. Adicione estas declarações de namespace:
+
+        ```csharp
+        using Windows.Storage;
+        using Windows.Storage.FileProperties;
+        using Windows.UI.Xaml.Media.Imaging;
+        using Windows.Storage.Streams;
+        using Windows.Storage.Pickers;
+        ```
+
+   1. Adicione um variável de membro `WriteableBitmap` à classe `MainPage` com o nome `m_bm`.
+
+        ```csharp
+        private WriteableBitmap m_bm;
+        ```
+
+   1. Use o código a seguir para substituir o stub do método `OnNavigatedTo` . Isso abrirá o seletor de arquivos quando o aplicativo for iniciado. (Observe que a palavra-chave `async` será adicionada à assinatura da função).
+
+        ```csharp
+        async protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            FileOpenPicker openPicker = new FileOpenPicker();
+            openPicker.ViewMode = PickerViewMode.Thumbnail;
+            openPicker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
+            openPicker.FileTypeFilter.Add(".jpg");
+            openPicker.FileTypeFilter.Add(".jpeg");
+            openPicker.FileTypeFilter.Add(".png");
+
+            StorageFile file = await openPicker.PickSingleFileAsync();
+            if (file != null)
+            {
+                // Get the size of the image for the WriteableBitmap constructor.
+                ImageProperties props = await file.Properties.GetImagePropertiesAsync();
+                m_bm = new WriteableBitmap((int)props.Height, (int)props.Width);
+                m_bm.SetSource(await file.OpenReadAsync());
+                Pic.Source = m_bm;
+            }
+            else
+            {
+                //  Handle error...
+            }
+        }
+        ```
+
+   1. Adicione um manipulador de eventos para o clique do botão. (Como a referência ao namespace `ImageManipCPP` ainda não foi criada, é possível que haja um sublinhado ondulado na janela do editor.)
+
+        ```csharp
+        async private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            ImageManipCPP.Class1 obj = new ImageManipCPP.Class1();
+            await obj.Negativize(m_bm);
+            Pic.Source = m_bm;
+        }
+        ```
+
+#### <a name="create-the-c-component"></a>Criar o componente em C++
+
+1. Adicione um novo componente de tempo de execução do C++ Windows à solução existente e nomeie- `ImageManipCPP`. Adicione uma referência a ele no projeto C# clicando com o botão direito do mouse nesse projeto em **Gerenciador de Soluções** e selecionando **Adicionar**, **Referência**.
+
+1. Em Class1.h
+
+   1. Adicione esse `typedef` à segunda linha, imediatamente depois de `#pragma once`:
+
+        ```cpp
+        typedef uint8 byte;
+        ```
+
+   1. Adicione o atributo `WebHostHidden` logo acima do início da declaração `Class1` .
+
+        ```cpp
+        [Windows::Foundation::Metadata::WebHostHidden]
+        ```
+
+   1. Adicione esta assinatura do método público a `Class1`:
+
+        ```cpp
+        Windows::Foundation::IAsyncAction^ Negativize(Windows::UI::Xaml::Media::Imaging::WriteableBitmap^ bm);
+        ```
+
+   1. Adicione a assinatura do método `GetPointerToPixelData` mostrado no snippet de código anterior. Verifique se esse método é privado.
+
+1. Em Class1.cpp
+
+   1. Adicione estas diretivas `#include` e declarações de namespace:
+
+        ```cpp
+        #include <ppltasks.h>
+        #include <wrl.h>
+        #include <robuffer.h>
+
+        using namespace Windows::Storage;
+        using namespace Windows::UI::Xaml::Media::Imaging;
+        using namespace Windows::Storage::Streams;
+        using namespace Microsoft::WRL;
+        ```
+
+   1. Adicione a implementação de `GetPointerToPixelData` do snippet de código anterior.
+
+   1. Adicione a implementação de `Negativize`. Esse método cria um efeito semelhante a um negativo de filme invertendo cada valor de RGB no pixel. Tornamos o método assíncrono porque em imagens maiores ele pode demorar um tempo considerável para ser concluído.
+
+        ```cpp
+        IAsyncAction^ Class1::Negativize(WriteableBitmap^ bm)
+        {
+            unsigned int length;
+            byte* sourcePixels = GetPointerToPixelData(bm->PixelBuffer, &length);
+            const unsigned int width = bm->PixelWidth;
+            const unsigned int height = bm->PixelHeight;
+
+            return create_async([this, width, height, sourcePixels]
+            {
+                byte* temp = sourcePixels;
+                for(unsigned int k = 0; k < height; k++)
+                {
+                    for (unsigned int i = 0; i < (width * 4); i += 4)
+                    {
+                        int pos = k * (width * 4) + (i);
+                        temp[pos] = ~temp[pos];
+                        temp[pos + 1] = ~temp[pos + 1] / 3;
+                        temp[pos + 2] = ~temp[pos + 2] / 2;
+                        temp[pos + 3] = ~temp[pos + 3];
+                    }
+                }
+            });
+
+        }
+        ```
+
+      > [!NOTE]
+      > Esse método pode ser executado mais rapidamente se você usar o AMP ou a Biblioteca de Padrões Paralelos para paralelizar a operação.
+
+1. Verifique se você tem pelo menos uma imagem na pasta de imagens e pressione F5 para compilar e executar o programa.

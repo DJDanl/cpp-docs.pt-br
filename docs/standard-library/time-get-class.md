@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d0ab896860d1e759b5ad1df6bb23e93f42d28f9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9ff44c6352224b65d712161a62d34b34ee858ad6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960125"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102740"
 ---
 # <a name="timeget-class"></a>Classe time_get
 
@@ -70,10 +70,10 @@ class time_get : public time_base;
 ### <a name="parameters"></a>Parâmetros
 
 *CharType*  
- O tipo usado em um programa para codificar caracteres.
+O tipo usado em um programa para codificar caracteres.
 
 *InputIterator*  
- O iterador do qual os valores de tempo são lidos.
+O iterador do qual os valores de tempo são lidos.
 
 ## <a name="remarks"></a>Comentários
 
@@ -216,7 +216,7 @@ Lê e converte dados de caractere em um valor de tempo. Aceita um especificador 
 ```cpp
 virtual iter_type
     do_get(
- iter_type first,
+iter_type first,
     iter_type last,
     ios_base& iosbase,
     ios_base::iostate& state,
@@ -227,19 +227,26 @@ virtual iter_type
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro* iterador de entrada de um que indica o início da sequência a ser convertido.
+*first*<br/>
+Um iterador de Entrada que indica o início da sequência a ser convertido.
 
-*última* iterador de entrada de um que indica o fim da sequência.
+*last*<br/>
+Um iterador de Entrada que indica o final da sequência.
 
-*iosbase* um objeto de fluxo.
+*iosbase*<br/>
+Um objeto de fluxo.
 
-*estado* um campo em iosbase no qual os elementos de bitmask apropriados são definidos para indicar erros.
+*state*<br/>
+Um campo na iosbase no qual os elementos de bitmask apropriados são definidos para indicar erros.
 
-*ptm* um ponteiro para a estrutura de tempo em que a hora deve ser armazenado.
+*ptm*<br/>
+Um ponteiro para a estrutura de tempo na qual o tempo deve ser armazenado.
 
-*FMT* um caractere de especificador de conversão.
+*FMT*<br/>
+Um caractere especificador de conversão.
 
-*Mod* um caractere modificador opcional.
+*Mod*<br/>
+Um caractere modificador opcional.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -314,19 +321,19 @@ virtual iter_type do_get_date(iter_type first,
 ### <a name="parameters"></a>Parâmetros
 
 *first*  
- Iterador de entrada que trata o início da sequência a ser convertido.
+Iterador de entrada que trata o início da sequência a ser convertido.
 
 *last*  
- Iterador de entrada que trata o fim da sequência a ser convertido.
+Iterador de entrada que trata o fim da sequência a ser convertido.
 
 *iosbase*  
- Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório.
+Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório.
 
 *state*  
- Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
+Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
 *ptm*  
- Um ponteiro para o local em que as informações de data devem ser armazenadas.
+Um ponteiro para o local em que as informações de data devem ser armazenadas.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -365,19 +372,19 @@ virtual iter_type do_get_monthname(iter_type first,
 ### <a name="parameters"></a>Parâmetros
 
 *first*  
- Iterador de entrada que trata o início da sequência a ser convertido.
+Iterador de entrada que trata o início da sequência a ser convertido.
 
 *last*  
- Iterador de entrada que trata o fim da sequência a ser convertido.
+Iterador de entrada que trata o fim da sequência a ser convertido.
 
 *iosbase*  
- Não utilizado.
+Não utilizado.
 
 *state*  
- Um parâmetro de saída que define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
+Um parâmetro de saída que define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
 *ptm*  
- Um ponteiro para o local em que as informações de mês devem ser armazenadas.
+Um ponteiro para o local em que as informações de mês devem ser armazenadas.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -408,19 +415,19 @@ virtual iter_type do_get_time(iter_type first,
 ### <a name="parameters"></a>Parâmetros
 
 *first*  
- Iterador de entrada que trata o início da sequência a ser convertido.
+Iterador de entrada que trata o início da sequência a ser convertido.
 
 *last*  
- Iterador de entrada que trata o fim da sequência a ser convertido.
+Iterador de entrada que trata o fim da sequência a ser convertido.
 
 *iosbase*  
- Não utilizado.
+Não utilizado.
 
 *state*  
- Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
+Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
 *ptm*  
- Um ponteiro para o local em que as informações de data devem ser armazenadas.
+Um ponteiro para o local em que as informações de data devem ser armazenadas.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -459,19 +466,19 @@ virtual iter_type do_get_weekday(iter_type first,
 ### <a name="parameters"></a>Parâmetros
 
 *first*  
- Iterador de entrada que trata o início da sequência a ser convertido.
+Iterador de entrada que trata o início da sequência a ser convertido.
 
 *last*  
- Iterador de entrada que trata o fim da sequência a ser convertido.
+Iterador de entrada que trata o fim da sequência a ser convertido.
 
 *iosbase*  
- Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório.
+Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório.
 
 *state*  
- Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
+Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
 *ptm*  
- Um ponteiro para o local em que as informações de dia da semana devem ser armazenadas.
+Um ponteiro para o local em que as informações de dia da semana devem ser armazenadas.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -502,19 +509,19 @@ virtual iter_type do_get_year(iter_type first,
 ### <a name="parameters"></a>Parâmetros
 
 *first*  
- Iterador de entrada que trata o início da sequência a ser convertido.
+Iterador de entrada que trata o início da sequência a ser convertido.
 
 *last*  
- Iterador de entrada que trata o fim da sequência a ser convertido.
+Iterador de entrada que trata o fim da sequência a ser convertido.
 
 *iosbase*  
- Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório.
+Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório.
 
 *state*  
- Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
+Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
 *ptm*  
- Um ponteiro para o local em que as informações de ano devem ser armazenadas.
+Um ponteiro para o local em que as informações de ano devem ser armazenadas.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -557,31 +564,31 @@ iter_type get(
 ### <a name="parameters"></a>Parâmetros
 
 *first*  
- Iterador de entrada que indica o início da sequência a ser convertido.
+Iterador de entrada que indica o início da sequência a ser convertido.
 
 *last*  
- Iterador de entrada que indica o final da sequência a ser convertido.
+Iterador de entrada que indica o final da sequência a ser convertido.
 
 *iosbase*  
- O fluxo.
+O fluxo.
 
 *state*  
- Os elementos de bitmask apropriados são definidos para o estado de fluxo para indicar erros.
+Os elementos de bitmask apropriados são definidos para o estado de fluxo para indicar erros.
 
 *ptm*  
- Ponteiro para a estrutura de tempo na qual o tempo deve ser armazenado.
+Ponteiro para a estrutura de tempo na qual o tempo deve ser armazenado.
 
 *FMT*  
- Um caractere especificador de conversão.
+Um caractere especificador de conversão.
 
 *Mod*  
- Um caractere modificador opcional.
+Um caractere modificador opcional.
 
 *fmt_first*  
- Aponta para o início das diretivas de formato.
+Aponta para o início das diretivas de formato.
 
 *fmt_last*  
- Aponta para o final das diretivas de formato.
+Aponta para o final das diretivas de formato.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -614,19 +621,19 @@ iter_type get_date(iter_type first,
 ### <a name="parameters"></a>Parâmetros
 
 *first*  
- Iterador de entrada que trata o início da sequência a ser convertido.
+Iterador de entrada que trata o início da sequência a ser convertido.
 
 *last*  
- Iterador de entrada que trata o fim da sequência a ser convertido.
+Iterador de entrada que trata o fim da sequência a ser convertido.
 
 *iosbase*  
- Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório.
+Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório.
 
 *state*  
- Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
+Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
 *ptm*  
- Um ponteiro para o local em que as informações de data devem ser armazenadas.
+Um ponteiro para o local em que as informações de data devem ser armazenadas.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -708,19 +715,19 @@ iter_type get_monthname(iter_type first,
 ### <a name="parameters"></a>Parâmetros
 
 *first*  
- Iterador de entrada que trata o início da sequência a ser convertido.
+Iterador de entrada que trata o início da sequência a ser convertido.
 
 *last*  
- Iterador de entrada que trata o fim da sequência a ser convertido.
+Iterador de entrada que trata o fim da sequência a ser convertido.
 
 *iosbase*  
- Não utilizado.
+Não utilizado.
 
 *state*  
- Um parâmetro de saída que define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
+Um parâmetro de saída que define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
 *ptm*  
- Um ponteiro para o local em que as informações de mês devem ser armazenadas.
+Um ponteiro para o local em que as informações de mês devem ser armazenadas.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -800,19 +807,19 @@ iter_type get_time(iter_type first,
 ### <a name="parameters"></a>Parâmetros
 
 *first*  
- Iterador de entrada que trata o início da sequência a ser convertido.
+Iterador de entrada que trata o início da sequência a ser convertido.
 
 *last*  
- Iterador de entrada que trata o fim da sequência a ser convertido.
+Iterador de entrada que trata o fim da sequência a ser convertido.
 
 *iosbase*  
- Não utilizado.
+Não utilizado.
 
 *state*  
- Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
+Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
 *ptm*  
- Um ponteiro para o local em que as informações de data devem ser armazenadas.
+Um ponteiro para o local em que as informações de data devem ser armazenadas.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -881,19 +888,19 @@ iter_type get_weekday(iter_type first,
 ### <a name="parameters"></a>Parâmetros
 
 *first*  
- Iterador de entrada que trata o início da sequência a ser convertido.
+Iterador de entrada que trata o início da sequência a ser convertido.
 
 *last*  
- Iterador de entrada que trata o fim da sequência a ser convertido.
+Iterador de entrada que trata o fim da sequência a ser convertido.
 
 *iosbase*  
- Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório.
+Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório.
 
 *state*  
- Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
+Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
 *ptm*  
- Um ponteiro para o local em que as informações de dia da semana devem ser armazenadas.
+Um ponteiro para o local em que as informações de dia da semana devem ser armazenadas.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -958,19 +965,19 @@ iter_type get_year(iter_type first,
 ### <a name="parameters"></a>Parâmetros
 
 *first*  
- Iterador de entrada que trata o início da sequência a ser convertido.
+Iterador de entrada que trata o início da sequência a ser convertido.
 
 *last*  
- Iterador de entrada que trata o fim da sequência a ser convertido.
+Iterador de entrada que trata o fim da sequência a ser convertido.
 
 *iosbase*  
- Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório.
+Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório.
 
 *state*  
- Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
+Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
 *ptm*  
- Um ponteiro para o local em que as informações de ano devem ser armazenadas.
+Um ponteiro para o local em que as informações de ano devem ser armazenadas.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1044,7 +1051,7 @@ explicit time_get(size_t refs = 0);
 ### <a name="parameters"></a>Parâmetros
 
 *refs*  
- Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
+Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
 
 ### <a name="remarks"></a>Comentários
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 256ca308160a2e34341c6156ee761473c13142e1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 47efe412dc1e9eb1fa2e68b9f85baa3c7852e8ae
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964477"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44102558"
 ---
 # <a name="matchresults-class"></a>Classe match_results
 
@@ -69,9 +69,11 @@ class match_results {
 
 ### <a name="parameters"></a>Parâmetros
 
-*BidIt* o tipo de iterador para subcorrespondências.
+*BidIt*<br/>
+O tipo de iterador para subcorrespondências.
 
-*Alocação* o tipo de um alocador para gerenciar o armazenamento.
+*ALLOC*<br/>
+O tipo de um distribuidor para gerenciar o armazenamento.
 
 ## <a name="remarks"></a>Comentários
 
@@ -153,7 +155,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -274,7 +276,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -395,7 +397,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -516,7 +518,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -637,7 +639,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -758,7 +760,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -879,7 +881,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -1000,7 +1002,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -1066,13 +1068,17 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>Parâmetros
 
-*OutIt* o tipo de iterador de saída.
+*OutIt*<br/>
+O tipo de iterador de saída.
 
-*out* para gravar no fluxo de saída.
+*out*<br/>
+O fluxo de saída no qual gravar.
 
-*FMT* a cadeia de caracteres de formato.
+*FMT*<br/>
+A cadeia de caracteres de formato.
 
-*sinalizadores de* os sinalizadores de formato.
+*flags*<br/>
+Os sinalizadores de formato.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1138,7 +1144,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -1259,7 +1265,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -1380,7 +1386,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -1441,7 +1447,8 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Sub* o índice da subcorrespondência.
+*sub*<br/>
+O índice da subcorrespondência.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1505,7 +1512,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -1568,9 +1575,11 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*alocação* para armazenar o objeto de alocador.
+*ALLOC*<br/>
+O objeto de alocador a ser armazenado.
 
-*à direita* do objeto para copiar o match_results.
+*right*<br/>
+O objeto match_results a ser copiado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1634,7 +1643,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -1755,7 +1764,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -1816,7 +1825,8 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* do objeto para copiar o match_results.
+*right*<br/>
+O objeto match_results a ser copiado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1880,7 +1890,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -1941,7 +1951,8 @@ const_reference operator[](size_type n) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*n* índice da subcorrespondência.
+*n*<br/>
+Índice da subcorrespondência.
 
 ### <a name="remarks"></a>Comentários
 
@@ -2005,7 +2016,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -2066,7 +2077,8 @@ difference_type position(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Sub* índice da subcorrespondência.
+*sub*<br/>
+Índice da subcorrespondência.
 
 ### <a name="remarks"></a>Comentários
 
@@ -2130,7 +2142,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -2251,7 +2263,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -2372,7 +2384,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -2493,7 +2505,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -2614,7 +2626,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -2675,7 +2687,8 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Sub* índice da subcorrespondência.
+*sub*<br/>
+Índice da subcorrespondência.
 
 ### <a name="remarks"></a>Comentários
 
@@ -2739,7 +2752,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -2860,7 +2873,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -2981,7 +2994,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -3042,7 +3055,8 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* o match_results o objeto a ser trocado.
+*right*<br/>
+O objeto match_results a ser trocado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -3106,7 +3120,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 
@@ -3227,7 +3241,7 @@ int main()
     mr.swap(mr1);
 
     char buf[10];
- *mr.format(&buf[0], "<$0>") = '\0';
+*mr.format(&buf[0], "<$0>") = '\0';
     std::cout << &buf[0] << std::endl;
     std::cout << "empty == " << std::boolalpha << mr.empty() << std::endl;
 

@@ -15,35 +15,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba61baf4b95b33b59c365f110118e539a532ac14
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 54878f232ed8c6f07df6a933ddaa6e40893d98fe
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760800"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101918"
 ---
 # <a name="platformmetadataattribute-attribute"></a>Atributo Platform::Metadata::Attribute
-Representa a classe base de todos os atributos.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-public ref class Attribute abstract : Object  
-```  
-  
-## <a name="inheritance"></a>Herança  
- [Platform::Object](../cppcx/platform-object-class.md)  
-  
- [Platform::Metadata::Attribute](../cppcx/platform-metadata-attribute-attribute.md)  
-  
-### <a name="requirements"></a>Requisitos  
- **Mínimo de cliente com suporte:** Windows 8  
-  
- **Mínimo de servidor com suporte:** Windows Server 2012  
-  
- **Namespace:** Platform::Metadata  
-  
- **Metadados:** platform.winmd  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace Platform::Metadata](../cppcx/platform-metadata-namespace.md)
+
+Representa a classe base de todos os atributos.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+public ref class Attribute abstract : Object
+```
+
+## <a name="inheritance"></a>Herança
+
+[Platform::Object](../cppcx/platform-object-class.md)
+
+[Platform::Metadata::Attribute](../cppcx/platform-metadata-attribute-attribute.md)
+
+### <a name="requirements"></a>Requisitos
+
+**Mínimo de cliente com suporte:** Windows 8
+
+**Mínimo de servidor com suporte:** Windows Server 2012
+
+**Namespace:** Platform::Metadata
+
+**Metadados:** platform.winmd
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace Platform::Metadata](../cppcx/platform-metadata-namespace.md)

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e199df62aa6bc0c3dc670bd2951a7af2667e7faa
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9eccefff291dc509f846bce951cfe9508834876e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758372"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103873"
 ---
 # <a name="platformcollectionsmap-class"></a>Classe Platform::Collections::Map
 
@@ -46,17 +46,16 @@ ref class Map sealed;
 
 ### <a name="parameters"></a>Parâmetros
 
-*K*  
- O tipo de chave em pares chave-valor.
+*K*<br/>
+O tipo de chave em pares chave-valor.
 
-*V*  
+*V*<br/>
 O tipo de valor em pares chave-valor.
 
-*C*  
+*C*<br/>
 Um tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no Map. Por padrão, [std:: Less\<K >](../standard-library/less-struct.md).
 
-*__is_valid_winrt_type()*  
-Uma função gerada pelo compilador que valida o tipo de *K* e *V* e fornece uma mensagem de erro amigável caso o tipo não pode ser armazenado no mapa.
+*__is_valid_winrt_type()* uma função gerada pelo compilador que valida o tipo de *K* e *V* e fornece uma mensagem de erro amigável caso o tipo não pode ser armazenado no mapa.
 
 ### <a name="remarks"></a>Comentários
 
@@ -169,7 +168,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>Parâmetros
 
-*key*  
+*key*<br/>
 A chave usada para localizar o elemento Map. O tipo de *chave* é o typename *K*.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -188,10 +187,10 @@ virtual bool Insert(K key, V value);
 
 ### <a name="parameters"></a>Parâmetros
 
-*key*  
+*key*<br/>
 A porção de chave do par chave-valor. O tipo de *chave* é o typename *K*.
 
-*value*  
+*value*<br/>
 A porção de valor do par chave-valor. O tipo de *valor* é o typename *V*.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -210,7 +209,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>Parâmetros
 
-*key*  
+*key*<br/>
 A chave usada para localizar um elemento em Map. O tipo de *chave* é o typename *K*.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -240,19 +239,19 @@ Map(
 
 ### <a name="parameters"></a>Parâmetros
 
-*InIt*  
+*InIt*<br/>
 O typename do Map atual.
 
-*comp*  
+*comp*<br/>
 Um tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no Map.
 
-*m*  
+*m*<br/>
 Uma referência ou [Lvalues e Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) para um `map Class` que é usado para inicializar o Map atual.
 
-*first*  
+*first*<br/>
 O iterador de entrada do primeiro elemento em um intervalo de elementos usados para inicializar o Map atual.
 
-*last*  
+*last*<br/>
 O iterador de entrada do primeiro elemento após um intervalo de elementos usados para inicializar o Map atual.
 
 ## <a name="mapchanged"></a>  Evento Map:: mapchanged
@@ -285,7 +284,7 @@ virtual void Remove(K key);
 
 ### <a name="parameters"></a>Parâmetros
 
-*key*  
+*key*<br/>
 A porção de chave do par chave-valor. O tipo de *chave* é o typename *K*.
 
 ## <a name="size"></a>  Método Map:: Size
@@ -304,5 +303,5 @@ O número de elementos em Map.
 
 ## <a name="see-also"></a>Consulte também
 
-[Namespace de plataforma](platform-namespace-c-cx.md)  
-[Criando componentes de tempo de execução do Windows em C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  
+[Namespace de plataforma](platform-namespace-c-cx.md)<br/>
+[Criando componentes de tempo de execução do Windows em C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

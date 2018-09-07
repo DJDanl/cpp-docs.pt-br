@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1d2bef607e80e2e972915bd8a8b0517b7c6e5eb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 67fef1231d4488b1714cc2f0f2f0e892737e627d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200661"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101931"
 ---
 # <a name="assert-macro-assert-wassert"></a>assert Macro, _assert, _wassert
 
@@ -69,13 +69,17 @@ void _wassert(
 
 ### <a name="parameters"></a>Parâmetros
 
-*expressão* uma expressão escalar (incluindo expressões de ponteiro) avaliada como não zero (**verdadeira**) ou 0 (**falso**).
+*Expressão*<br/>
+Uma expressão escalar (incluindo expressões de ponteiro) avaliada como não zero (**verdadeira**) ou 0 (**falso**).
 
-*mensagem* a mensagem a ser exibida.
+*message*<br/>
+A mensagem a ser exibida.
 
-*nome do arquivo* o nome da fonte de arquivo Falha na asserção.
+*filename*<br/>
+O nome do arquivo de origem no qual a declaração falhou.
 
-*linha* o número de linha no arquivo de origem da asserção com falha.
+*Linha*<br/>
+O número de linha no arquivo de origem da declaração com falha.
 
 ## <a name="remarks"></a>Comentários
 

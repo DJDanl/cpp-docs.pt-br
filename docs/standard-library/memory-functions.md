@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::uninitialized_fill_n [C++]
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d104d8a64dd60e5aaa7244e5bf5f535343f6e132
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 762cc70c40c2d6e201b42c0c10ed83c981c97ec7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957419"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44101658"
 ---
 # <a name="ltmemorygt-functions"></a>Funções &lt;memory&gt;
 
@@ -113,7 +113,8 @@ T* addressof(T& Val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Val* o objeto ou função para o qual obter o endereço verdadeiro.
+*Val*<br/>
+O objeto ou a função para o qual obter o endereço verdadeiro.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -136,13 +137,17 @@ void* align(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Alinhamento* o limite de alinhamento para tentar.
+*Alinhamento*<br/>
+O limite de alinhamento ser tentado.
 
-*Tamanho* o tamanho em bytes para o armazenamento alinhado.
+*Size*<br/>
+O tamanho em bytes para o armazenamento alinhado.
 
-*PTR* o endereço inicial do pool de armazenamento contíguo disponível para usar. Esse parâmetro também é um parâmetro de saída e é definido para conter o novo endereço inicial se o alinhamento for bem-sucedido. Se `align()` for malsucedido, esse parâmetro não será modificado.
+*PTR*<br/>
+O endereço inicial do pool de armazenamento contíguo disponível a ser usado. Esse parâmetro também é um parâmetro de saída e é definido para conter o novo endereço inicial se o alinhamento for bem-sucedido. Se `align()` for malsucedido, esse parâmetro não será modificado.
 
-*Espaço* o espaço total disponível para `align()` usar para criar o armazenamento alinhado. Esse parâmetro também é um parâmetro de saída e contém o espaço ajustado deixado no buffer de armazenamento após o armazenamento alinhado e qualquer sobrecarga associada é subtraída.
+*Espaço*<br/>
+O espaço total disponível para `align()` a ser usado ao criar o armazenamento alinhado. Esse parâmetro também é um parâmetro de saída e contém o espaço ajustado deixado no buffer de armazenamento após o armazenamento alinhado e qualquer sobrecarga associada é subtraída.
 
 Se `align()` for malsucedido, esse parâmetro não será modificado.
 
@@ -152,7 +157,7 @@ Um ponteiro nulo se o buffer alinhado solicitado não se ajusta ao espaço dispo
 
 ### <a name="remarks"></a>Comentários
 
-Modificado *Ptr* e *espaço* parâmetros permitem que você chame `align()` repetidamente no mesmo buffer, possivelmente com valores diferentes para *alinhamento* e  *Tamanho*. O trecho de código a seguir mostra um uso de `align()`.
+Modificado *Ptr* e *espaço* parâmetros permitem que você chame `align()` repetidamente no mesmo buffer, possivelmente com valores diferentes para *alinhamento* e  *Tamanho*. O snippet de código a seguir mostra um uso de `align()`.
 
 ```cpp
 #include <type_traits> // std::alignment_of()
@@ -189,9 +194,11 @@ allocate_shared(Allocator Alloc, Types&&... Args);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Alocação* o alocador usado para criar objetos.
+*ALLOC*<br/>
+O alocador usado para criar objetos.
 
-*Args* zero ou mais argumentos que se tornam os objetos.
+*Args*<br/>
+O zero ou mais argumentos que se tornam os objetos.
 
 ### <a name="remarks"></a>Comentários
 
@@ -209,11 +216,14 @@ const_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty* o tipo controlado pelo retornado compartilhado ponteiro.
+*Ty*<br/>
+O tipo controlado pelo ponteiro compartilhado retornado.
 
-*Outros* o tipo controlado pelo ponteiro compartilhado de argumento.
+*Outros*<br/>
+O tipo controlado pelo ponteiro compartilhado de argumento.
 
-*Outros* ponteiro compartilhado de argumento.
+*Outros*<br/>
+O ponteiro compartilhado de argumento.
 
 ### <a name="remarks"></a>Comentários
 
@@ -275,7 +285,8 @@ void declare_reachable(void* ptr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*PTR* um ponteiro para uma área de armazenamento acessível, alocada e válida.
+*ptr*<br/>
+Um ponteiro para uma área de armazenamento acessível, alocada e válida.
 
 ### <a name="remarks"></a>Comentários
 
@@ -296,7 +307,8 @@ struct default_delete {
 
 ### <a name="parameters"></a>Parâmetros
 
-*PTR* ponteiro para o objeto a excluir.
+*PTR*<br/>
+Ponteiro para o objeto a ser excluído.
 
 Outros o tipo dos elementos na matriz a ser excluído.
 
@@ -316,11 +328,14 @@ dynamic_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty* o tipo controlado pelo retornado compartilhado ponteiro.
+*Ty*<br/>
+O tipo controlado pelo ponteiro compartilhado retornado.
 
-*Outros* o tipo controlado pelo ponteiro compartilhado de argumento.
+*Outros*<br/>
+O tipo controlado pelo ponteiro compartilhado de argumento.
 
-*SP* ponteiro compartilhado de argumento.
+*SP*<br/>
+O ponteiro compartilhado de argumento.
 
 ### <a name="remarks"></a>Comentários
 
@@ -373,11 +388,14 @@ D* get_deleter(const shared_ptr<Ty>& sp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*1!d* o tipo do agente de exclusão.
+*D*<br/>
+O tipo do agente de exclusão.
 
-*Ty* o tipo controlado pelo ponteiro compartilhado.
+*Ty*<br/>
+O tipo controlado pelo ponteiro compartilhado.
 
-*SP* o ponteiro compartilhado.
+*SP*<br/>
+O ponteiro compartilhado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -451,7 +469,8 @@ pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Contagem de* o número máximo de elementos solicitados para o qual memória é a ser alocado.
+*count*<br/>
+O número máximo de elementos solicitados para o qual a memória deve ser alocada.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -619,15 +638,20 @@ make_unique(Types&&...) = delete;
 
 ### <a name="parameters"></a>Parâmetros
 
-*T* o tipo do objeto que o `unique_ptr` apontará para.
+*T*<br/>
+O tipo do objeto para o qual o `unique_ptr` apontará.
 
-*Tipos* os tipos dos argumentos do construtor especificados por *Args*.
+*Tipos*<br/>
+Os tipos dos argumentos do construtor especificados por *Args*.
 
-*Args* os argumentos a serem passados para o construtor do objeto do tipo *T*.
+*Args*<br/>
+Os argumentos a serem passados para o construtor do objeto do tipo *T*.
 
-*Elem* uma matriz de elementos do tipo *T*.
+*Elem*<br/>
+Uma matriz de elementos do tipo *T*.
 
-*Tamanho* o número de elementos para alocar espaço na nova matriz.
+*Size*<br/>
+O número de elementos para os quais alocar espaço na nova matriz.
 
 ### <a name="remarks"></a>Comentários
 
@@ -684,9 +708,11 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>Parâmetros
 
-*à esquerda* um ponteiro compartilhado ou fraco.
+*à esquerda*<br/>
+Um ponteiro compartilhado ou fraco.
 
-*à direita* um ponteiro compartilhado ou fraco.
+*right*<br/>
+Um ponteiro compartilhado ou fraco.
 
 ### <a name="remarks"></a>Comentários
 
@@ -703,7 +729,8 @@ void return_temporary_buffer(Type* _Pbuf);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Pbuf* um ponteiro para a memória a ser desalocada.
+*_Pbuf*<br/>
+Um ponteiro para a memória a ser desalocada.
 
 ### <a name="remarks"></a>Comentários
 
@@ -744,7 +771,7 @@ int main( )
 ```Output
 The number of integers in the array is: 7.
 The number of elements that the allocated memory
- could store is given by: resultPair.second = 7.
+could store is given by: resultPair.second = 7.
 ```
 
 ## <a name="static_pointer_cast"></a>  static_pointer_cast
@@ -759,11 +786,14 @@ static_pointer_cast(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty* o tipo controlado pelo retornado compartilhado ponteiro.
+*Ty*<br/>
+O tipo controlado pelo ponteiro compartilhado retornado.
 
-*Outros* o tipo controlado pelo ponteiro compartilhado de argumento.
+*Outros*<br/>
+O tipo controlado pelo ponteiro compartilhado de argumento.
 
-*Outros* ponteiro compartilhado de argumento.
+*Outros*<br/>
+O ponteiro compartilhado de argumento.
 
 ### <a name="remarks"></a>Comentários
 
@@ -818,13 +848,17 @@ void swap(weak_ptr<Ty>& left, weak_ptr<Other>& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty* o tipo controlado pelo ponteiro compartilhado/fraco esquerdo.
+*Ty*<br/>
+O tipo controlado pelo ponteiro compartilhado/fraco esquerdo.
 
-*Outros* o tipo controlado pelo ponteiro compartilhado/fraco direito.
+*Outros*<br/>
+O tipo controlado pelo ponteiro compartilhado/fraco direito.
 
-*à esquerda* ponteiro compartilhado/fraco esquerdo.
+*left*<br/>
+O ponteiro compartilhado/fraco esquerdo.
 
-*à direita* o ponteiro compartilhado/fraco direito.
+*right*<br/>
+O ponteiro compartilhado/fraco direito.
 
 ### <a name="remarks"></a>Comentários
 
@@ -927,11 +961,14 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro* um iterador de entrada que trata o primeiro elemento no intervalo de origem.
+*first*<br/>
+Um iterador de entrada que trata o primeiro elemento no intervalo de origem.
 
-*última* um iterador de entrada que trata o último elemento no intervalo de origem.
+*last*<br/>
+Um iterador de entrada que trata o último elemento no intervalo de origem.
 
-*dest* um iterador de avanço que trata o primeiro elemento no intervalo de destino.
+*dest*<br/>
+Um iterador de avanço que trata o primeiro elemento no intervalo de destino.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1032,11 +1069,14 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro* um iterador de entrada que se refere ao objeto a ser copiado.
+*first*<br/>
+Um iterador de entrada que faz referência ao objeto a ser copiado.
 
-*Contagem de* um com sinal ou tipo de inteiro especificando o número de vezes para copiar o objeto.
+*count*<br/>
+Um tipo de inteiro com sinal e sem sinal que especifica o número de vezes que o objeto deve ser copiado.
 
-*dest* um iterador de avanço que se refere a onde ir novas cópias.
+*dest*<br/>
+Um iterador de avanço que faz referência ao local das novas cópias.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1066,11 +1106,14 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro* um iterador de avanço que trata o primeiro elemento no intervalo de destino a ser iniciado.
+*first*<br/>
+Um iterador de avanço que trata o primeiro elemento no intervalo de destino a ser iniciado.
 
-*última* um iterador de avanço que trata o último elemento no intervalo de destino a ser iniciado.
+*last*<br/>
+Um iterador de avanço que trata o último elemento no intervalo de destino a ser iniciado.
 
-*Val* o valor a ser usado para inicializar o intervalo de destino.
+*Val*<br/>
+O valor a ser usado para inicializar o intervalo de destino.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1135,11 +1178,14 @@ void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro* um iterador de avanço que trata o primeiro elemento no intervalo de destino a ser iniciado.
+*first*<br/>
+Um iterador de avanço que trata o primeiro elemento no intervalo de destino a ser iniciado.
 
-*Contagem de* o número de elementos a ser inicializado.
+*count*<br/>
+O número de elementos a ser inicializado.
 
-*Val* o valor a ser usado para inicializar o intervalo de destino.
+*Val*<br/>
+O valor a ser usado para inicializar o intervalo de destino.
 
 ### <a name="remarks"></a>Comentários
 
