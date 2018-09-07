@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb03b35ed792bda7c506fd06d6102dda83c768e6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f868a6f2ec63e38573d49a1dc4b3b7a122f4d8f2
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959265"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100216"
 ---
 # <a name="mersennetwisterengine-class"></a>Classe mersenne_twister_engine
 
@@ -39,23 +39,32 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>Parâmetros
 
-*UIntType* o tipo de resultado de inteiro sem sinal. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*UIntType*<br/>
+O tipo de resultado inteiro sem sinal. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
-*W* **tamanho da palavra**. Tamanho de cada palavra da sequência de estado, em bits. **Pré-condição**: `2u < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**Tamanho da palavra**. Tamanho de cada palavra da sequência de estado, em bits. **Pré-condição**: `2u < W ≤ numeric_limits<UIntType>::digits`
 
-*N* **tamanho do estado**. A quantidade de elementos (valores) presentes na sequência de estado.
+*N*<br/>
+**Tamanho do estado**. A quantidade de elementos (valores) presentes na sequência de estado.
 
-*M* **tamanho do deslocamento**. A quantidade de elementos a serem ignorados a cada mudança. **Pré-condição**: `0 < M ≤ N`
+*M*<br/>
+**Tamanho do deslocamento**. A quantidade de elementos a serem ignorados a cada mudança. **Pré-condição**: `0 < M ≤ N`
 
-*R* **bits da máscara**. **Pré-condição**: `R ≤ W`
+*R*<br/>
+**Bits da máscara**. **Pré-condição**: `R ≤ W`
 
-*Um* **máscara XOR**. **Pré-condição**: `A ≤ (1u<<W) - 1u`
+*A*<br/>
+**Máscara XOR**. **Pré-condição**: `A ≤ (1u<<W) - 1u`
 
-*U*, *S*, *T*, *L* **Tempering parâmetros**. Usados como valores de deslocamento durante a codificação (deformação). Pré-condição: `U,S,T,L ≤ W`
+*U*, *S*, *T*, *L*<br/>
+**Parâmetros de deformação do deslocamento**. Usados como valores de deslocamento durante a codificação (deformação). Pré-condição: `U,S,T,L ≤ W`
 
-*1!d*, *B*, *C* **parâmetros de máscara de bits de Tempering**. Usados como valores da máscara de bits durante a codificação (deformação). Pré-condição: `D,B,C ≤ (1u<<W) - 1u`
+*1!D*, *B*, *C*<br/>
+**Parâmetros de deformação da máscara de bits**. Usados como valores da máscara de bits durante a codificação (deformação). Pré-condição: `D,B,C ≤ (1u<<W) - 1u`
 
-*F* **multiplicador de inicialização**. Usado para ajudar a iniciar a sequência. Pré-condição: `F ≤ (1u<<W) - 1u`
+*F*<br/>
+**Multiplicador de inicialização**. Usado para ajudar a iniciar a sequência. Pré-condição: `F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>Membros
 

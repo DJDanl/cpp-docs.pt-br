@@ -48,12 +48,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31f3f2a4c01645df17af8992cc7f6b92dd57966a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ab9674ffafbf6563f566778d11991f8aa95c44d8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960925"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106464"
 ---
 # <a name="regextraits-class"></a>Classe regex_traits
 
@@ -92,7 +92,8 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*Elem* o tipo de elemento de caractere para descrever.
+*Elem*<br/>
+O tipo de elemento de caractere a ser descrito.
 
 ## <a name="remarks"></a>Comentários
 
@@ -365,7 +366,8 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Loc* para armazenar o objeto de localidade.
+*Loc*<br/>
+O objeto de localidade a ser armazenado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -452,9 +454,11 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH* elemento a ser testado.
+*ch*<br/>
+O elemento para teste.
 
-*CLS* as classes de teste.
+*com CLS*<br/>
+As classes de teste.
 
 ### <a name="remarks"></a>Comentários
 
@@ -541,7 +545,7 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>Parâmetros
 
-*str*
+*str*<br/>
 
 A sequência terminada em nulo.
 
@@ -714,9 +718,11 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro* início da sequência a ser pesquisado.
+*first*<br/>
+Início da sequência a ser pesquisada.
 
-*última* fim da sequência para pesquisar.
+*last*<br/>
+Fim da sequência a ser pesquisada.
 
 ### <a name="remarks"></a>Comentários
 
@@ -808,9 +814,11 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro* início da sequência a ser pesquisado.
+*first*<br/>
+Início da sequência a ser pesquisada.
 
-*última* fim da sequência para pesquisar.
+*last*<br/>
+Fim da sequência a ser pesquisada.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1149,9 +1157,11 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro* início da sequência a ser transformada.
+*first*<br/>
+Início da sequência a ser transformada.
 
-*última* fim da sequência a ser transformado.
+*last*<br/>
+Fim da sequência a ser transformada.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1239,9 +1249,11 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro* início da sequência a ser transformada.
+*first*<br/>
+Início da sequência a ser transformada.
 
-*última* fim da sequência a ser transformado.
+*last*<br/>
+Fim da sequência a ser transformada.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1328,7 +1340,8 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH* elemento a ser convertido.
+*ch*<br/>
+O elemento a ser convertido.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1415,7 +1428,8 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH* elemento a ser convertido.
+*ch*<br/>
+O elemento a ser convertido.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1502,9 +1516,11 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH* elemento a ser convertido.
+*ch*<br/>
+O elemento a ser convertido.
 
-*fracionário* a base para usar aritmética.
+*radix*<br/>
+A base aritmética a ser usada.
 
 ### <a name="remarks"></a>Comentários
 

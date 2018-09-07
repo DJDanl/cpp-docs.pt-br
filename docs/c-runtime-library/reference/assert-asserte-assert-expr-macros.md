@@ -36,16 +36,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa84e5c032cefa49ef3a9d21d3bbfc2073d02e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 254550acf94acb846826bc0efe76ef26753c54b8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399732"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107582"
 ---
 # <a name="assert-asserte-assertexpr-macros"></a>Macros _ASSERT, _ASSERTE, _ASSERT_EXPR
 
-Avaliar uma expressão e gerar um relatório de depuração quando o resultado é **False** (somente versão de depuração).
+Avaliar uma expressão e gerar um relatório de depuração quando o resultado será **falsos** (somente versão de depuração).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -58,19 +58,21 @@ _ASSERTE( booleanExpression );
 
 ### <a name="parameters"></a>Parâmetros
 
-*booleanExpression* uma expressão escalar (incluindo expressões de ponteiro) que é avaliada como zero (verdadeiro) ou 0 (false).
+*booleanExpression*<br/>
+Uma expressão escalar (incluindo expressões de ponteiro) que é avaliada como não zero (verdadeiro) ou 0 (falso).
 
-*mensagem* uma cadeia de caracteres longa para exibir como parte do relatório.
+*message*<br/>
+Uma cadeia de caracteres larga para exibir como parte do relatório.
 
 ## <a name="remarks"></a>Comentários
 
-O **_ASSERT_EXPR**, **Assert** e **asserte** macros fornecem um aplicativo com um mecanismo simple e transparente para fazer suposições durante o processo de depuração. Elas são muito flexíveis porque não precisam ser colocadas em instruções `#ifdef` para impedi-las de serem chamadas em um build comercial de um aplicativo. Essa flexibilidade é obtida usando a macro [_DEBUG](../../c-runtime-library/debug.md). **_ASSERT_EXPR**, **Assert** e **asserte** só estão disponíveis quando **Debug** é definido em tempo de compilação. Quando **Debug** é chamadas para essas macros não definida, são removidas durante o pré-processamento.
+O **assert_expr**, **macros Assert** e **asserte** macros fornecem um aplicativo com um mecanismo simples e limpo para verificar suposições durante o processo de depuração. Elas são muito flexíveis porque não precisam ser colocadas em instruções `#ifdef` para impedi-las de serem chamadas em um build comercial de um aplicativo. Essa flexibilidade é obtida usando a macro [_DEBUG](../../c-runtime-library/debug.md). **Assert_expr**, **macros Assert** e **asserte** só estão disponíveis quando **Debug** é definido em tempo de compilação. Quando **Debug** não é definidos, chamadas para essas macros são removidas durante o pré-processamento.
 
-**_ASSERT_EXPR**, **Assert** e **asserte** avaliar seus *booleanExpression* argumento e quando o resultado é **false**(0), eles imprimem uma mensagem de diagnóstico e chame [CrtDbgReportW](crtdbgreport-crtdbgreportw.md) para gerar um relatório de depuração. O **Assert** macro imprime uma mensagem de diagnóstica simple, **asserte** inclui uma representação de cadeia de caracteres da expressão com falha na mensagem, e **_ASSERT_EXPR** inclui o *mensagem* cadeia de caracteres na mensagem de diagnóstico. Essas macros não fazem nada quando *booleanExpression* é avaliada como zero.
+**Assert_expr**, **macros Assert** e **asserte** avaliar suas *booleanExpression* argumento e quando o resultado é **falso**(0), imprimem uma mensagem de diagnóstico e chame [CrtDbgReportW](crtdbgreport-crtdbgreportw.md) para gerar um relatório de depuração. O **macros Assert** macro imprime uma mensagem de diagnóstico simple **asserte** inclui uma representação de cadeia de caracteres da expressão com falha na mensagem, e **assert_expr** inclui o *mensagem* cadeia de caracteres na mensagem de diagnóstico. Essas macros não fazem nada quando *booleanExpression* é avaliada como diferente de zero.
 
-**_ASSERT_EXPR**, **Assert** e **asserte** invocar **CrtDbgReportW**, que faz com que todas as saídas em caracteres largos. **Asserte** imprime corretamente caracteres Unicode em *booleanExpression* e **_ASSERT_EXPR** imprime caracteres Unicode em *mensagem*.
+**Assert_expr**, **macros Assert** e **asserte** invocar **CrtDbgReportW**, que faz com que todas as saídas estarem em caracteres largos. **Asserte** imprime corretamente caracteres Unicode *booleanExpression* e **assert_expr** imprime caracteres Unicode no *mensagem*.
 
-Porque o **asserte** macro Especifica a expressão com falha, e **_ASSERT_EXPR** permite que você especificar uma mensagem no relatório gerado, elas permitem que os usuários a identificar o problema sem fazer referência à código de origem do aplicativo. No entanto, uma desvantagem existe em que cada *mensagem* impressos por **_ASSERT_EXPR** e cada expressão avaliada por **asserte** está incluído na saída (versão de depuração) arquivo do seu aplicativo como uma constante de cadeia de caracteres. Portanto, se um grande número de chamadas são feitas para **_ASSERT_EXPR** ou **asserte**, essas expressões podem aumentar significativamente o tamanho do seu arquivo de saída.
+Porque o **asserte** macro Especifica a expressão com falha, e **assert_expr** permite que você especificar uma mensagem no relatório gerado, elas permitem que os usuários a identificar o problema sem fazer referência à código de origem do aplicativo. No entanto, há uma desvantagem em que cada *mensagem* impressos por **assert_expr** e todas as expressões avaliadas pelo **asserte** está incluído na saída (versão de depuração) arquivo de seu aplicativo como uma constante de cadeia de caracteres. Portanto, se um grande número de chamadas são feitas para **assert_expr** ou **asserte**, essas expressões podem aumentar significativamente o tamanho do seu arquivo de saída.
 
 A menos que você especifique de outra forma com as funções [_CrtSetReportMode](crtsetreportmode.md) e [_CrtSetReportFile](crtsetreportfile.md), as mensagens aparecerão em uma caixa de diálogo pop-up equivalente à configuração:
 
@@ -78,25 +80,25 @@ A menos que você especifique de outra forma com as funções [_CrtSetReportMode
 _CrtSetReportMode(CRT_ASSERT, _CRTDBG_MODE_WNDW);
 ````
 
-**CrtDbgReportW** gera o relatório de depuração e determina o destino ou os destinos, com base no modo de relatório atual ou modos de arquivo definido para o **_CRT_ASSERT** tipo de relatório. Por padrão, erros e falhas de declaração são direcionados para uma janela de mensagem de depuração. As funções [_CrtSetReportMode](crtsetreportmode.md) e [_CrtSetReportFile](crtsetreportfile.md) são usadas para definir os destinos de cada tipo de relatório.
+**CrtDbgReportW** gera o relatório de depuração e determina seus destinos, com base no modo de relatório atual ou modos e arquivo definido para o **_CRT_ASSERT** tipo de relatório. Por padrão, erros e falhas de declaração são direcionados para uma janela de mensagem de depuração. As funções [_CrtSetReportMode](crtsetreportmode.md) e [_CrtSetReportFile](crtsetreportfile.md) são usadas para definir os destinos de cada tipo de relatório.
 
-Quando o destino é uma janela de mensagem de depuração e o usuário clica o **novamente** botão, **CrtDbgReportW** retorna 1, fazendo com que o **_ASSERT_EXPR**, **_ ASSERT** e **asserte** macros para iniciar o depurador, desde que a depuração just-in-time (JIT) está habilitada.
+Quando o destino é uma janela de mensagem de depuração e o usuário clica o **Repita** botão, **CrtDbgReportW** retorna 1, fazendo com que o **assert_expr**, **_ ASSERT** e **asserte** macros para iniciar o depurador, desde que a depuração just-in-time (JIT) está habilitada.
 
 Para obter mais informações sobre o processo de geração de relatórios, consulte a função [_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md). Para obter mais informações sobre como resolver falhas de declaração e usar essas macros como um mecanismo de tratamento de erro de depuração, consulte [Usando macros para verificação e relatórios](/visualstudio/debugger/macros-for-reporting).
 
-Além de **Assert** macros, o [assert](assert-macro-assert-wassert.md) macro pode ser usada para verificar a lógica do programa. Essa macro está disponível nas versões de depuração e liberação das bibliotecas. As macros de depuração [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) também estão disponíveis para gerar um relatório de depuração, mas não avaliam uma expressão. O **RPT** macros de geram um relatório simples. O **rptf** macros incluem o número de arquivos e linhas de origem onde a macro de relatório foi chamada no relatório gerado. Versões de caractere largo dessas macros estão disponíveis (**rptw**, **rptfw**). As versões de caractere largo são idênticas às versões de caractere estreito, exceto que cadeias de caracteres largos são usadas para todos os parâmetros de cadeia de caracteres e de saída.
+Além de **macros Assert** macros, o [assert](assert-macro-assert-wassert.md) macro pode ser usada para verificar a lógica do programa. Essa macro está disponível nas versões de depuração e liberação das bibliotecas. As macros de depuração [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) também estão disponíveis para gerar um relatório de depuração, mas não avaliam uma expressão. O **macros RPT** macros de geram um relatório simples. O **rptf** macros incluem o número de arquivo e de linha de origem em que a macro de relatório foi chamada no relatório gerado. Versões de caractere largo dessas macros estão disponíveis (**rptw**, **rptfw**). As versões de caractere largo são idênticas às versões de caractere estreito, exceto que cadeias de caracteres largos são usadas para todos os parâmetros de cadeia de caracteres e de saída.
 
-Embora **_ASSERT_EXPR**, **Assert** e **asserte** são macros e estão disponíveis, incluindo \<crtdbg. h >, o aplicativo deve estabelecer um vínculo com um tipo de depuração versão da biblioteca de tempo de execução do C quando **Debug** é definida porque essas macros chamam outras funções de tempo de execução.
+Embora **assert_expr**, **macros Assert** e **asserte** são macros e estão disponíveis, incluindo \<crtdbg. h >, o aplicativo deve ser vinculado a uma depuração versão da biblioteca em tempo de execução C quando **Debug** é definida, pois essas macros chamam outras funções de tempo de execução.
 
 ## <a name="requirements"></a>Requisitos
 
 |Macro|Cabeçalho necessário|
 |-----------|---------------------|
-|**_ASSERT_EXPR**, **ASSERT**, **ASSERTE**|\<crtdbg.h>|
+|**ASSERT_EXPR**, **MACROS ASSERT**, **ASSERTE**|\<crtdbg.h>|
 
 ## <a name="example"></a>Exemplo
 
-Neste programa, as chamadas são feitas para o **Assert** e **asserte** macros para testar a condição `string1 == string2`. Se a condição falhar, essas macros imprimirão uma mensagem de diagnóstico. O **RPT** e **rptf** grupo de macros também é utilizado neste programa, como uma alternativa para o **printf** função.
+Neste programa, as chamadas são feitas para o **macros Assert** e **asserte** macros para testar a condição `string1 == string2`. Se a condição falhar, essas macros imprimirão uma mensagem de diagnóstico. O **macros RPT** e **rptf** grupo de macros também é utilizado neste programa, como uma alternativa para o **printf** função.
 
 ```C
 // crt_ASSERT_macro.c

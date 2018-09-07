@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b7b604fd58c3f320b62c022e6b5d1749c1f3a87
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f6b4faf2ac5f04a2dcc9e1e9112016038fa2fcec
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954884"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44106445"
 ---
 # <a name="messages-class"></a>Classe messages
 
@@ -54,7 +54,8 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CharType* o tipo usado em um programa para codificar caracteres em uma localidade.
+*CharType*<br/>
+O tipo usado em um programa para codificar caracteres em uma localidade.
 
 ## <a name="remarks"></a>Comentários
 
@@ -114,7 +115,8 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Catval* o catálogo a ser fechado.
+*Catval*<br/>
+O catálogo a ser fechado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -130,7 +132,8 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Catval* o catálogo a ser fechado.
+*Catval*<br/>
+O catálogo a ser fechado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -156,13 +159,17 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Catval* o valor de identificação que especifica o catálogo de mensagens a ser pesquisado.
+*Catval*<br/>
+O valor de identificação que especifica o catálogo de mensagens a ser pesquisado.
 
-*Definir* o primeiro identificado usado para localizar uma mensagem em um catálogo de mensagens.
+*Definir*<br/>
+O primeiro identificado usado para localizar uma mensagem em um catálogo de mensagens.
 
-*Mensagem* o segundo identificado usado para localizar uma mensagem em um catálogo de mensagens.
+*Mensagem*<br/>
+O segundo identificado usado para localizar uma mensagem em um catálogo de mensagens.
 
-*_Dfault* a cadeia de caracteres a ser retornado em caso de falha.
+*_Dfault*<br/>
+A cadeia de caracteres a ser retornada em caso de falha.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -188,9 +195,11 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Catname* o nome do catálogo a ser pesquisado.
+*_Catname*<br/>
+O nome do catálogo a ser pesquisado.
 
-*_Loc* a localidade que está sendo pesquisada no catálogo.
+*_Loc*<br/>
+A localidade que está sendo pesquisada no catálogo.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -220,13 +229,17 @@ string_type get(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Catval* o valor de identificação que especifica o catálogo de mensagens a ser pesquisado.
+*Catval*<br/>
+O valor de identificação que especifica o catálogo de mensagens a ser pesquisado.
 
-*Definir* o primeiro identificado usado para localizar uma mensagem em um catálogo de mensagens.
+*Definir*<br/>
+O primeiro identificado usado para localizar uma mensagem em um catálogo de mensagens.
 
-*Mensagem* o segundo identificado usado para localizar uma mensagem em um catálogo de mensagens.
+*Mensagem*<br/>
+O segundo identificado usado para localizar uma mensagem em um catálogo de mensagens.
 
-*_Dfault* a cadeia de caracteres a ser retornado em caso de falha.
+*_Dfault*<br/>
+A cadeia de caracteres a ser retornada em caso de falha.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -251,9 +264,11 @@ protected: messages(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Refs* valor inteiro usado para especificar o tipo de gerenciamento de memória para o objeto.
+*_Refs*<br/>
+Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
 
-*_Locname* o nome da localidade.
+*_Locname*<br/>
+O nome da localidade.
 
 ### <a name="remarks"></a>Comentários
 
@@ -281,9 +296,11 @@ catalog open(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Catname* o nome do catálogo a ser pesquisado.
+*_Catname*<br/>
+O nome do catálogo a ser pesquisado.
 
-*_Loc* a localidade que está sendo pesquisada no catálogo.
+*_Loc*<br/>
+A localidade que está sendo pesquisada no catálogo.
 
 ### <a name="return-value"></a>Valor de retorno
 

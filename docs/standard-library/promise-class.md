@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::promise [C++], swap
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a1ddfd30a1e061426f0a19ac1118aa5ade1de17
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a56e188e581ea5d9dcafaa222ab4367e0b4b33fe
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958542"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100294"
 ---
 # <a name="promise-class"></a>Classe promise
 
@@ -75,7 +75,7 @@ class promise;
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
-`promise`
+*promise*<br/>
 
 ## <a name="requirements"></a>Requisitos
 
@@ -107,7 +107,8 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outros* um `promise` objeto.
+*Outros*<br/>
+Um objeto `promise`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -130,9 +131,11 @@ promise(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Al* um alocador de memória. Consulte [\<allocators>](../standard-library/allocators-header.md) para obter mais informações.
+*Al*<br/>
+Um alocador de memória. Consulte [\<allocators>](../standard-library/allocators-header.md) para obter mais informações.
 
-*Outros* um `promise` objeto.
+*Outros*<br/>
+Um objeto `promise`.
 
 ### <a name="remarks"></a>Comentários
 
@@ -152,7 +155,8 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Exc* uma [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) que é armazenado por esse método como o resultado de exceção.
+*Excl.*<br/>
+Um [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) que é armazenado por esse método como o resultado da exceção.
 
 ### <a name="remarks"></a>Comentários
 
@@ -172,7 +176,8 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Exc* uma [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) que é armazenado por esse método como o resultado de exceção.
+*Excl.*<br/>
+Um [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) que é armazenado por esse método como o resultado da exceção.
 
 ### <a name="remarks"></a>Comentários
 
@@ -195,7 +200,8 @@ void promise<void>::set_value();
 
 ### <a name="parameters"></a>Parâmetros
 
-*Val* o valor a ser armazenado como o resultado.
+*Val*<br/>
+O valor a ser armazenado como o resultado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -226,7 +232,8 @@ void promise<void>::set_value_at_thread_exit();
 
 ### <a name="parameters"></a>Parâmetros
 
-*Val* o valor a ser armazenado como o resultado.
+*Val*<br/>
+O valor a ser armazenado como o resultado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -254,7 +261,8 @@ void swap(promise& Other) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outros* um `promise` objeto.
+*Outros*<br/>
+Um objeto `promise`.
 
 ## <a name="see-also"></a>Consulte também
 

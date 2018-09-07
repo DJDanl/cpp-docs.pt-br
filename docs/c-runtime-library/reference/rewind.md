@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58f8eddd2cae672f2a3677ebc9af87987889d166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37f54ff6b2c3738550c707887f2068986ca4abd6
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406827"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100281"
 ---
 # <a name="rewind"></a>rewind
 
@@ -55,19 +55,20 @@ void rewind(
 
 ### <a name="parameters"></a>Parâmetros
 
-*fluxo* ponteiro para **arquivo** estrutura.
+*fluxo*<br/>
+Ponteiro para a estrutura **FILE**.
 
 ## <a name="remarks"></a>Comentários
 
-O **retroceder** função reposiciona o ponteiro de arquivo associado ao *fluxo* para o início do arquivo. Uma chamada para **rewind** é semelhante a
+O **rewind** função reposiciona o ponteiro de arquivo associado *fluxo* para o início do arquivo. Uma chamada para **rewind** é semelhante a
 
-**fseek (void) (** _fluxo_**, L 0, SEEK_SET);**
+**constantes fseek (void) (** _stream_**, 0 L, SEEK_SET);**
 
-No entanto, diferentemente [fseek](fseek-fseeki64.md), **retroceder** limpa os indicadores de erro para o fluxo, bem como o indicador de fim de arquivo. Além disso, ao contrário de [fseek](fseek-fseeki64.md), **retroceder** não retorna um valor para indicar se o ponteiro foi movido com êxito.
+No entanto, diferentemente [fseek](fseek-fseeki64.md), **rewind** limpa os indicadores de erro para o fluxo, bem como o indicador de final de arquivo. Além disso, ao contrário [fseek](fseek-fseeki64.md), **rewind** não retorna um valor para indicar se o ponteiro foi movido com êxito.
 
-Para limpar o buffer de teclado, use **retroceder** com o fluxo **stdin**, que está associado com o teclado, por padrão.
+Para limpar o buffer de teclado, use **rewind** com o fluxo **stdin**, que está associado com o teclado por padrão.
 
-Se o fluxo é um **nulo** ponteiro, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essa função retorna e **errno** é definido como **EINVAL**.
+Se o fluxo é um **nulo** ponteiro, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retorna e **errno** é definido como **EINVAL**.
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

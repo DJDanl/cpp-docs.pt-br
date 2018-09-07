@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c78355277fbb987d82bed46fb0b5f4ffd848b6a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c4bfc37a53e3b2b4e3c185c101685b7009d9d354
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395296"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105270"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -54,13 +54,14 @@ void clearerr(
 
 ### <a name="parameters"></a>Parâmetros
 
-*fluxo* ponteiro para **arquivo** estrutura.
+*fluxo*<br/>
+Ponteiro para a estrutura **FILE**.
 
 ## <a name="remarks"></a>Comentários
 
-O **clearerr** função redefine o indicador de erro e o indicador de fim de arquivo para *fluxo*. Indicadores de erro não são limpos automaticamente; Quando o indicador de erro para um fluxo especificado estiver definido, as operações no fluxo continuar retornar um valor de erro até **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, ou [retroceder](rewind.md) é chamado.
+O **clearerr** função redefine o indicador de erro e o indicador de fim-de-arquivo para *fluxo*. Indicadores de erro não são removidos automaticamente; Depois que o indicador de erro para um fluxo especificado é definido, as operações naquele fluxo continuam a retornar um valor de erro até **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, ou [rewind](rewind.md) é chamado.
 
-Se *fluxo* é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, esta função define **errno** para **EINVAL** e retorna. Para obter mais informações sobre **errno** e códigos de erro, consulte [constantes errno](../../c-runtime-library/errno-constants.md).
+Se *stream* é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá **errno** à **EINVAL** e retorna. Para obter mais informações sobre **errno** e códigos de erro, consulte [constantes errno](../../c-runtime-library/errno-constants.md).
 
 Uma versão mais segura dessa função está disponível. Consulte [clearerr_s](clearerr-s.md).
 

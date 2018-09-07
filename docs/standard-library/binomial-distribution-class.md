@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0266c33731bdbd70fe9c9fb26a33878fc5d1c495
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: f853ada608b2f70dc0a7c7e3fb78e5fb28d0fa83
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957679"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100866"
 ---
 # <a name="binomialdistribution-class"></a>Classe binomial_distribution
 
@@ -81,9 +81,11 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*IntType* padrão é o tipo de resultado inteiro **int**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*IntType*<br/>
+O tipo de resultado do inteiro assume como padrão **int**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
-*URNG* O mecanismo gerador de números aleatórios uniformes. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*URNG*<br/>
+O uniform aleatório mecanismo gerador de números. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
@@ -250,11 +252,14 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*t* o `t` parâmetro de distribuição.
+*t*<br/>
+O parâmetro de distribuição `t`.
 
-*p* o `p` parâmetro de distribuição.
+*p*<br/>
+O parâmetro de distribuição `p`.
 
-*parm* o `param_type` estrutura usada para construir a distribuição.
+*parm*<br/>
+A estrutura `param_type` usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
@@ -282,11 +287,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*t* o `t` parâmetro de distribuição.
+*t*<br/>
+O parâmetro de distribuição `t`.
 
-*p* o `p` parâmetro de distribuição.
+*p*<br/>
+O parâmetro de distribuição `p`.
 
-*à direita* o `param_type` objeto a ser comparado a este.
+*right*<br/>
+O objeto `param_type` a ser comparado a este.
 
 ### <a name="remarks"></a>Comentários
 

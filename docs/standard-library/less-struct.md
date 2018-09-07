@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c146862a18d4292dd6c375dda83063bbcf4dee4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 231b3f0267f50f68452d4ba0b6cb2f186a07e3e5
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954349"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100931"
 ---
 # <a name="less-struct"></a>Struct less
 
@@ -51,9 +51,11 @@ struct less<void>
 
 *Tipo de*, *T*, *U* qualquer tipo que dá suporte a um `operator<` que usa operandos dos tipos especificados ou inferidos.
 
-*Esquerda* o operando esquerdo da menor-que a operação. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *T*.
+*Esquerda*<br/>
+O operando esquerdo da operação "menor que". O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *T*.
 
-*Direita* o operando direito da menor-que a operação. O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *U*.
+*Direita*<br/>
+O operando direito da operação "menor que". O modelo não especializado usa um argumento de referência de lvalue do tipo *tipo*. O modelo especializado realiza o encaminhamento de lvalue perfeito e inferidos de argumentos de referência de rvalue do tipo *U*.
 
 ## <a name="return-value"></a>Valor de retorno
 
@@ -105,7 +107,7 @@ cout << Iter1->m_i << " ";
    for ( Iter1 = v1.begin() ; Iter1 != v1.end() ; Iter1++ )
 cout << Iter1->m_i << " ";
    cout << ")" << endl;
- }
+}
 ```
 
 ## <a name="output"></a>Saída

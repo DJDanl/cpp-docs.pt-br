@@ -7,12 +7,12 @@ f1_keywords:
 - set/std::swap (map)
 - set/std::swap (multiset)
 ms.assetid: d1277d14-8502-46c0-b820-bcda820f9406
-ms.openlocfilehash: b25194dc1cdc45bc93d9e5188715e3ea01258af4
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0baea9b63bb012396847c6408625bbcc62001d0d
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966326"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110286"
 ---
 # <a name="ltsetgt-functions"></a>Funções &lt;set&gt;
 
@@ -31,9 +31,11 @@ void swap(set<Key, Traits, Allocator>& left, set<Key, Traits, Allocator>& right)
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* o conjunto que fornece os elementos a serem trocados ou o conjunto cujos elementos serão trocados com aqueles do set *esquerdo*.
+*right*<br/>
+O conjunto que fornece os elementos a serem trocados ou o conjunto cujos elementos serão trocados com aqueles do set *esquerdo*.
 
-*à esquerda* o set cujos elementos são trocados por aqueles do set *direito*.
+*left*<br/>
+O set cujos elementos são trocados por aqueles do set *certa*.
 
 ### <a name="remarks"></a>Comentários
 
@@ -58,9 +60,11 @@ void swap(multiset<Key, Traits, Allocator>& left, multiset<Key, Traits, Allocato
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* multiset que fornece os elementos a serem trocados ou o multiset cujos elementos deverão ser trocados com aqueles do multiset *esquerdo*.
+*right*<br/>
+O multiset que fornece os elementos a serem trocados ou o multiset cujos elementos deverão ser trocados com aqueles do multiset *esquerdo*.
 
-*à esquerda* o multiset cujos elementos deverão ser trocados com aqueles do multiset *direito*.
+*left*<br/>
+O multiset cujos elementos deverão ser trocados com aqueles do multiset *certa*.
 
 ### <a name="remarks"></a>Comentários
 

@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5e02f1cfd7b35244c347ef0f07542e61938d7b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 5d4dd1f7b428e3b19f86445bf0b191fb840ecdb9
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960961"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100996"
 ---
 # <a name="regextokeniterator-class"></a>Classe regex_token_iterator
 
@@ -87,11 +87,14 @@ private:
 
 ### <a name="parameters"></a>Parâmetros
 
-*BidIt* o tipo de iterador para subcorrespondências.
+*BidIt*<br/>
+O tipo de iterador para subcorrespondências.
 
-*Elem* o tipo dos elementos para corresponder.
+*Elem*<br/>
+O tipo de elemento a ser correspondido.
 
-*RXtraits* classe de características para elementos.
+*RXtraits*<br/>
+Classe de características para elementos.
 
 ## <a name="remarks"></a>Comentários
 
@@ -335,7 +338,8 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* o iterador a ser comparado.
+*right*<br/>
+O iterador a ser comparado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -679,7 +683,8 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* o iterador a ser comparado.
+*right*<br/>
+O iterador a ser comparado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1144,13 +1149,17 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro* a partir da sequência de correspondência.
+*first*<br/>
+Início da sequência de correspondência.
 
-*última* fim da sequência para corresponder.
+*last*<br/>
+Fim da sequência de correspondência.
 
-*Re* Expressão Regular para correspondências.
+*Re*<br/>
+Expressão regular para correspondências.
 
-*f* sinalizadores de correspondências.
+*f*<br/>
+Sinalizadores de correspondências.
 
 ### <a name="remarks"></a>Comentários
 

@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aad6fdd96df22375e93207e70dfd0f7cf1f44c4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b136dc29431164de195eeebf9085c2377664f869
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405595"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105673"
 ---
 # <a name="qsorts"></a>qsort_s
 
@@ -59,19 +59,24 @@ void qsort_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-*base* início da matriz de destino.
+*base*<br/>
+Início da matriz de destino.
 
-*número* tamanho em elementos de matriz.
+*número*<br/>
+Tamanho da matriz nos elementos.
 
-*largura* tamanho em bytes do elemento.
+*width*<br/>
+Tamanho do elemento em bytes.
 
-*Comparar* na função de comparação. O primeiro argumento é o *contexto* ponteiro. O segundo argumento é um ponteiro para o *chave* para a pesquisa. O terceiro argumento é um ponteiro para o elemento de matriz a ser comparada com *chave*.
+*compare*<br/>
+Função de comparação. O primeiro argumento é o *contexto* ponteiro. O segundo argumento é um ponteiro para o *chave* para a pesquisa. O terceiro argumento é um ponteiro para o elemento da matriz a ser comparado com *chave*.
 
-*contexto* um ponteiro para um contexto, que pode ser qualquer objeto que o *comparar* rotina precisa acessar.
+*context*<br/>
+Um ponteiro para um contexto, que pode ser qualquer objeto que o *comparar* rotina precisa acessar.
 
 ## <a name="remarks"></a>Comentários
 
-O **qsort_s** função implementa um algoritmo de classificação rápida para classificar uma matriz de *número* elementos, cada um dos *largura* bytes. O argumento *base* é um ponteiro para a base da matriz a ser classificada. **qsort_s** substitui essa matriz com os elementos classificados. O argumento *comparar* é um ponteiro para uma rotina fornecido pelo usuário que compara dois elementos de matriz e retorna um valor que especifica sua relação. **qsort_s** chama o *comparar* rotina um ou mais vezes durante a classificação, passando os ponteiros para os dois elementos de matriz em cada chamada:
+O **qsort_s** função implementa um algoritmo de classificação rápida para classificar uma matriz de *número* elementos, cada um dos *largura* bytes. O argumento *base* é um ponteiro para a base da matriz a ser classificado. **qsort_s** substitui essa matriz pelos elementos classificados. O argumento *comparar* é um ponteiro para uma rotina fornecida pelo usuário que compara dois elementos de matriz e retorna um valor que especifica seu relacionamento. **qsort_s** chamadas a *comparar* rotina um ou mais vezes durante a classificação, passando ponteiros para dois elementos de matriz em cada chamada:
 
 ```C
 compare( context, (void *) & elem1, (void *) & elem2 );
@@ -81,13 +86,13 @@ A rotina deve comparar os elementos e, em seguida, retornar um dos seguintes val
 
 |Valor retornado|Descrição|
 |------------------|-----------------|
-|< 0|**elem1** menor **elem2**|
+|< 0|**elem1** menor que **elem2**|
 |0|**elem1** equivalente a **elem2**|
-|> 0|**elem1** maior **elem2**|
+|> 0|**elem1** maior que **elem2**|
 
 A matriz é classificada em ordem crescente, conforme definido pela função de comparação. Para classificar uma matriz em ordem decrescente, inverta o sentido de “maior que” e “menor que” na função de comparação.
 
-Se parâmetros inválidos forem passados para a função, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, a função retorna e **errno** é definido como **EINVAL**. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Se parâmetros inválidos forem passados para a função, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará e **errno** é definido como **EINVAL**. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ### <a name="error-conditions"></a>Condições de Erro
 
@@ -98,7 +103,7 @@ Se parâmetros inválidos forem passados para a função, o manipulador de parâ
 |qualquer|qualquer|qualquer|qualquer|<= 0|**EINVAL**|
 |qualquer|qualquer|**NULL**|qualquer|qualquer|**EINVAL**|
 
-**qsort_s** tem o mesmo comportamento que **qsort** , mas tem o *contexto* parâmetro e conjuntos de **errno**. Passando um *contexto* parâmetro, funções de comparação podem usar um ponteiro de objeto para acessar a funcionalidade de objeto ou outras informações não pode ser acessadas por meio de um ponteiro de elemento. A adição do *contexto* parâmetro torna **qsort_s** mais segura porque *contexto* pode ser usada para evitar bugs reentrância introduzidas com o uso de variáveis estáticas para fazer compartilhado informações disponíveis para o *comparar* função.
+**qsort_s** tem o mesmo comportamento que **qsort** , mas tem o *contexto* parâmetro e define **errno**. Passando um *contexto* parâmetro, funções de comparação podem usar um ponteiro de objeto para acessar a funcionalidade do objeto ou outras informações que não está acessíveis por meio de um ponteiro de elemento. A adição do *contexto* parâmetro torna **qsort_s** mais seguro, pois *contexto* pode ser usado para evitar bugs de reentrância introduzidos ao usar variáveis estáticas para tornar compartilhado informações disponíveis para o *comparar* função.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -112,7 +117,7 @@ Para obter informações adicionais sobre compatibilidade, consulte [Compatibili
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir demonstra como usar o *contexto* parâmetro o **qsort_s** função. O *contexto* parâmetro torna mais fácil executar classificações de thread-safe. Em vez de usar variáveis estáticas que devem ser sincronizados para garantir a segurança do thread, passar um diferente *contexto* parâmetro em cada classificação. Neste exemplo, um objeto de localidade é usado como o *contexto* parâmetro.
+O exemplo a seguir demonstra como usar o *contexto* parâmetro na **qsort_s** função. O *contexto* parâmetro torna mais fácil realizar classificações thread-safe. Em vez de usar variáveis estáticas que devem ser sincronizadas para garantir acesso thread-safe, passe um diferentes *contexto* parâmetro em cada classificação. Neste exemplo, um objeto de localidade é usado como o *contexto* parâmetro.
 
 ```cpp
 // crt_qsort_s.cpp

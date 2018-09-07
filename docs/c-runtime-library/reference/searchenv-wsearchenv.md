@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62e0fea9154801f850640234355af53dc1154160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: afcd461446f98024e04e44e28facae4fba65b0aa
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408909"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100388"
 ---
 # <a name="searchenv-wsearchenv"></a>_searchenv, _wsearchenv
 
@@ -87,25 +87,28 @@ void _wsearchenv(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nome de arquivo* nome do arquivo a ser pesquisado.
+*filename*<br/>
+O nome de arquivo a ser pesquisado.
 
-*varname* ambiente para pesquisar.
+*varname*<br/>
+O ambiente a pesquisar.
 
-*nome de caminho* Buffer para armazenar o caminho completo.
+*pathname*<br/>
+O buffer para armazenar o caminho completo.
 
 ## <a name="remarks"></a>Comentários
 
-O **SEARCHENV** rotina procurará o arquivo de destino no domínio especificado. O *varname* variável pode ser qualquer ambiente ou a variável definida pelo usuário — por exemplo, **caminho**, **LIB**, ou **incluir**— que especifica um lista de caminhos de diretório. Porque **SEARCHENV** diferencia maiusculas de minúsculas, *varname* deve corresponder ao uso da variável de ambiente.
+O **SEARCHENV** rotina procurará o arquivo de destino no domínio especificado. O *varname* variável pode ser qualquer ambiente ou variável definida pelo usuário — por exemplo, **caminho**, **LIB**, ou **INCLUDE**— que especifica um lista de caminhos de diretório. Porque **SEARCHENV** diferencia maiusculas de minúsculas *varname* deve corresponder ao uso de variável de ambiente.
 
 A rotina pesquisa pelo arquivo primeiramente no diretório de trabalho atual. Se não encontrar o arquivo, ela procurará nos diretórios especificados pela variável de ambiente. Se o arquivo de destino estiver em um desses diretórios, o caminho criado recentemente é copiado para *pathname*. Se o *filename* arquivo não for encontrado, *pathname* contém uma cadeia de caracteres vazia terminada em nulo.
 
-O *pathname* buffer deve ser pelo menos **MAX_PATH** caracteres para acomodar o comprimento total do nome do caminho construído. Caso contrário, **SEARCHENV** podem ultrapassar o *pathname* buffer e causar um comportamento inesperado.
+O *pathname* buffer deve ser pelo menos **MAX_PATH** caracteres para acomodar o comprimento total do nome do caminho criado. Caso contrário, **SEARCHENV** poderia causar um estouro de *pathname* armazenar em buffer e causar um comportamento inesperado.
 
-**wsearchenv** é uma versão de caractere largo de **SEARCHENV**e os argumentos para **wsearchenv** são cadeias de caracteres do caractere largo. **wsearchenv** e **SEARCHENV** se comportam de forma idêntica caso contrário.
+**wsearchenv** é uma versão de caractere largo de **SEARCHENV**e os argumentos a serem **wsearchenv** são cadeias de caracteres largos. **wsearchenv** e **SEARCHENV** se comportam de forma idêntica caso contrário.
 
-Se *filename* é uma cadeia de caracteres vazia, essas funções retornam **ENOENT**.
+Se *filename* é uma cadeia de caracteres vazia, essas funções retornarão **ENOENT**.
 
-Se *filename* ou *pathname* é um **nulo** ponteiro, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam -1 e defina **errno** para **EINVAL**.
+Se *filename* ou *pathname* é um **nulo** ponteiro, o manipulador de parâmetro inválido será invocado, conforme descrito no [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão -1 e defina **errno** à **EINVAL**.
 
 Para obter mais informações sobre **errno** e códigos de erro, consulte [constantes errno](../../c-runtime-library/errno-constants.md).
 

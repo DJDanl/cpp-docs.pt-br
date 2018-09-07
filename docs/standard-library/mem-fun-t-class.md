@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27182d6c1b2f3c37353f653235449982e921d692
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a32df3211d77a255421ceb794b6bd891f930733a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956382"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108442"
 ---
 # <a name="memfunt-class"></a>Classe mem_fun_t
 
@@ -41,9 +41,11 @@ class mem_fun_t : public unary_function<Type *, Result> {
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Pm* um ponteiro para a função de membro da classe `Type` a ser convertido em um objeto de função.
+*_Pm*<br/>
+Um ponteiro para a função membro da classe `Type` a ser convertida em um objeto de função.
 
-*Pleft* o objeto que o *_Pm* função de membro é chamada em.
+*Pleft*<br/>
+O objeto que o *_Pm* função de membro é chamada em.
 
 ## <a name="return-value"></a>Valor de retorno
 

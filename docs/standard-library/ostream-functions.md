@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: d30ad23956c978ee47ef447463a0d5422a94d4b9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 494c750ec80000ef9090824e0436f6e443593847
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962316"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107589"
 ---
 # <a name="ltostreamgt-functions"></a>Funções &lt;ostream&gt;
 
@@ -42,11 +42,14 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Elem* o tipo de elemento.
+*Elem*<br/>
+O tipo de elemento.
 
-*Ostr* um objeto do tipo **basic_ostream**.
+*Ostr*<br/>
+Um objeto do tipo **basic_ostream**.
 
-*TR* características de caractere.
+*Tr*<br/>
+Características de caractere.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -86,11 +89,14 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Elem* o tipo de elemento.
+*Elem*<br/>
+O tipo de elemento.
 
-*Ostr* um objeto do tipo `basic_ostream`.
+*Ostr*<br/>
+Um objeto do tipo `basic_ostream`.
 
-*TR* características de caractere.
+*Tr*<br/>
+Características de caractere.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -132,11 +138,14 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Elem* o tipo de elemento.
+*Elem*<br/>
+O tipo de elemento.
 
-*Ostr* um objeto do tipo `basic_ostream`.
+*Ostr*<br/>
+Um objeto do tipo `basic_ostream`.
 
-*TR* características de caractere.
+*Tr*<br/>
+Características de caractere.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -177,13 +186,17 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Elem* o tipo de elemento.
+*Elem*<br/>
+O tipo de elemento.
 
-*TR* características de caractere.
+*Tr*<br/>
+Características de caractere.
 
-*à esquerda* uma referência lvalue para um `basic_ostream` objeto.
+*left*<br/>
+Uma referência lvalue a um objeto `basic_ostream`.
 
-*à direita* uma referência lvalue para um `basic_ostream` objeto.
+*right*<br/>
+Uma referência lvalue a um objeto `basic_ostream`.
 
 ### <a name="remarks"></a>Comentários
 

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 343acc8d23e2b67c1e9f7556ffe2268c94bb3c63
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 34f52d6eb1e93de112176e58a23cf6163ce84a62
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957889"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110104"
 ---
 # <a name="removereference-class"></a>Classe remove_reference
 
@@ -40,7 +40,8 @@ using remove_reference_t = typename remove_reference<T>::type;
 
 ### <a name="parameters"></a>Parâmetros
 
-*T* para modificar o tipo.
+*T*<br/>
+O tipo a ser modificado.
 
 ## <a name="remarks"></a>Comentários
 

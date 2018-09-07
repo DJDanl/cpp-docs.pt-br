@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f13dfb45073a1a21e8d6a7b4585f0dfc5c71b8e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 372dc829810fd08e3cc872abfb769221b2ca2a58
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959742"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100879"
 ---
 # <a name="basicregex-class"></a>Classe basic_regex
 
@@ -84,9 +84,11 @@ class basic_regex {
 
 ### <a name="parameters"></a>Parâmetros
 
-*Elem* o tipo dos elementos para corresponder.
+*Elem*<br/>
+O tipo de elemento a ser correspondido.
 
-*RXtraits* classe de características para elementos.
+*RXtraits*<br/>
+Classe de características para elementos.
 
 ## <a name="remarks"></a>Comentários
 
@@ -148,27 +150,37 @@ basic_regex& assign(
 
 ### <a name="parameters"></a>Parâmetros
 
-*STtraits* classe de características para uma fonte de cadeia de caracteres.
+*STtraits*<br/>
+Classe de características para uma fonte de cadeia de caracteres.
 
-*STalloc* classe de alocador de uma fonte de cadeia de caracteres.
+*STalloc*<br/>
+Classe de alocador de uma fonte de cadeia de caracteres.
 
-*InIt* tipo de iterador para uma fonte de intervalo de entrada.
+*InIt*<br/>
+Tipo de iterador de entrada para uma fonte de intervalo.
 
-*à direita* fonte de Regex a copiar.
+*right*<br/>
+Fonte de regex a copiar.
 
-*PTR* ponteiro para o início da sequência a ser copiado.
+*ptr*<br/>
+Ponteiro para o início da sequência a copiar.
 
-*sinalizadores de* sinalizadores de opção de sintaxe para adicionar ao copiar.
+*flags*<br/>
+Sinalizadores de opção de sintaxe a adicionar ao copiar.
 
 *Len/TD >* comprimento da sequência a copiar.
 
-*STR* cadeia de caracteres a copiar.
+*str*<br/>
+Cadeia de caracteres a copiar.
 
-*primeiro* a partir da sequência a copiar.
+*first*<br/>
+Início da sequência a copiar.
 
-*última* fim da sequência a copiar.
+*last*<br/>
+Fim da sequência a copiar.
 
-*IList* a initializer_list a ser copiada.
+*IList*<br/>
+A initializer_list a ser copiada.
 
 ### <a name="remarks"></a>Comentários
 
@@ -293,27 +305,37 @@ explicit basic_regex(
 
 ### <a name="parameters"></a>Parâmetros
 
-*STtraits* classe de características para uma fonte de cadeia de caracteres.
+*STtraits*<br/>
+Classe de características para uma fonte de cadeia de caracteres.
 
-*STalloc* classe de alocador de uma fonte de cadeia de caracteres.
+*STalloc*<br/>
+Classe de alocador de uma fonte de cadeia de caracteres.
 
-*InIt* tipo de iterador para uma fonte de intervalo de entrada.
+*InIt*<br/>
+Tipo de iterador de entrada para uma fonte de intervalo.
 
-*à direita* fonte de Regex a copiar.
+*right*<br/>
+Fonte de regex a copiar.
 
-*PTR* ponteiro para o início da sequência a ser copiado.
+*ptr*<br/>
+Ponteiro para o início da sequência a copiar.
 
-*sinalizadores de* sinalizadores de opção de sintaxe para adicionar ao copiar.
+*flags*<br/>
+Sinalizadores de opção de sintaxe a adicionar ao copiar.
 
 *Len/TD >* comprimento da sequência a copiar.
 
-*STR* cadeia de caracteres a copiar.
+*str*<br/>
+Cadeia de caracteres a copiar.
 
-*primeiro* a partir da sequência a copiar.
+*first*<br/>
+Início da sequência a copiar.
 
-*última* fim da sequência a copiar.
+*last*<br/>
+Fim da sequência a copiar.
 
-*IList* a initializer_list a ser copiada.
+*IList*<br/>
+A initializer_list a ser copiada.
 
 ### <a name="remarks"></a>Comentários
 
@@ -706,7 +728,8 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Loc* para armazenar o objeto de localidade.
+*Loc*<br/>
+O objeto de localidade a ser armazenado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1006,13 +1029,17 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 ### <a name="parameters"></a>Parâmetros
 
-*STtraits* classe de características para uma fonte de cadeia de caracteres.
+*STtraits*<br/>
+Classe de características para uma fonte de cadeia de caracteres.
 
-*STalloc* classe de alocador de uma fonte de cadeia de caracteres.
+*STalloc*<br/>
+Classe de alocador de uma fonte de cadeia de caracteres.
 
-*à direita* fonte de Regex a copiar.
+*right*<br/>
+Fonte de regex a copiar.
 
-*STR* cadeia de caracteres a copiar.
+*str*<br/>
+Cadeia de caracteres a copiar.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1113,7 +1140,8 @@ void swap(basic_regex& right) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* o objeto de expressão regular com o qual trocar.
+*right*<br/>
+O objeto de expressão regular com o qual trocar.
 
 ### <a name="remarks"></a>Comentários
 

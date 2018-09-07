@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d000dce4c0009341c787a211ed8ef41d1728b51b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63b0950aaea5520849f9a32b2b08ab138cd8099b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407766"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107514"
 ---
 # <a name="unlockfile"></a>_unlock_file
 
@@ -56,11 +56,12 @@ void _unlock_file(
 
 ### <a name="parameters"></a>Parâmetros
 
-*arquivo* identificador de arquivo.
+*file*<br/>
+Identificador de arquivo.
 
 ## <a name="remarks"></a>Comentários
 
-O **unlock_file** função desbloqueia o arquivo especificado por *arquivo*. Desbloquear um arquivo permite o acesso ao arquivo por outros processos. Essa função não deve ser chamada, a menos que **lock_file** foi chamado anteriormente no *arquivo* ponteiro. Chamando **unlock_file** em um arquivo que não esteja bloqueado pode resultar em um deadlock. Para um exemplo, consulte [_lock_file](lock-file.md).
+O **unlock_file** função desbloqueia o arquivo especificado por *arquivo*. Desbloquear um arquivo permite o acesso ao arquivo por outros processos. Essa função não deve ser chamada, a menos que **lock_file** foi chamado anteriormente sobre o *arquivo* ponteiro. Chamando **unlock_file** em um arquivo que não esteja bloqueado pode resultar em um deadlock. Para um exemplo, consulte [_lock_file](lock-file.md).
 
 ## <a name="requirements"></a>Requisitos
 

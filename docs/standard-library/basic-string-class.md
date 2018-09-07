@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c56cdcf59c6dad891029e21e14940598e0cfeae
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9a44cccd38d64f3e6b0c2b7af390d06292f70157
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209078"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105660"
 ---
 # <a name="basicstring-class"></a>Classe basic_string
 
@@ -146,11 +146,14 @@ class basic_string;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CharType* o tipo de dados de um único caractere a ser armazenado na cadeia de caracteres. A biblioteca padrão C++ oferece especializações desta classe de modelo, com as definições de tipo [cadeia de caracteres](../standard-library/string-typedefs.md#string) para elementos do tipo **char**, [wstring](../standard-library/string-typedefs.md#wstring), para **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) para `char16_t`, e [u32string](../standard-library/string-typedefs.md#u32string) para `char32_t`.
+*CharType*<br/>
+O tipo de dados de um único caractere a ser armazenado na cadeia de caracteres. A biblioteca padrão C++ oferece especializações desta classe de modelo, com as definições de tipo [cadeia de caracteres](../standard-library/string-typedefs.md#string) para elementos do tipo **char**, [wstring](../standard-library/string-typedefs.md#wstring), para **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) para `char16_t`, e [u32string](../standard-library/string-typedefs.md#u32string) para `char32_t`.
 
-*Características* várias propriedades importantes dos `CharType` elementos em uma especialização basic_string são descritos pela classe `Traits`. O valor padrão é `char_traits`< `CharType`>.
+*Características*<br/>
+Várias propriedades importantes dos `CharType` elementos em uma especialização basic_string são descritos pela classe `Traits`. O valor padrão é `char_traits`< `CharType`>.
 
-*Alocador* o tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a cadeia de caracteres alocação e desalocação de memória. O valor padrão é **allocator**< `CharType`>.
+*Alocador*<br/>
+O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre a alocação e desalocação de memória da cadeia de caracteres. O valor padrão é **allocator**< `CharType`>.
 
 ### <a name="constructors"></a>Construtores
 
@@ -314,19 +317,26 @@ basic_string<CharType, Traits, Allocator>& append(
 
 ### <a name="parameters"></a>Parâmetros
 
-*PTR* a cadeia de caracteres C a serem acrescentados.
+*ptr*<br/>
+A cadeia de caracteres do C a ser acrescentada.
 
-*STR* a cadeia de caracteres cujos caracteres devem ser acrescentados.
+*str*<br/>
+A cadeia de caracteres cujos caracteres devem ser acrescentados.
 
-*Off* o índice da parte da cadeia de caracteres de origem fornece os caracteres a serem acrescentados.
+*Off*<br/>
+O índice da parte da cadeia de caracteres de origem que fornece os caracteres a serem acrescentados.
 
-*Contagem de* o número de caracteres a serem acrescentados, no máximo, da cadeia de caracteres de origem.
+*count*<br/>
+O número máximo de caracteres a serem acrescentados da cadeia de caracteres de origem.
 
-*CH* o valor do caractere a ser acrescentado.
+*CH*<br/>
+O valor de caractere a ser acrescentados.
 
-*primeiro* um iterador de entrada que trata o primeiro elemento no intervalo a ser acrescentado.
+*first*<br/>
+Um iterador de entrada que trata do primeiro elemento no intervalo a ser acrescentados.
 
-*última* um iterador de entrada, const_pointer ou const_iterator que trata da posição logo após o último elemento no intervalo a ser acrescentado.
+*last*<br/>
+Um iterador de entrada, const_pointer ou const_iterator, que trata da posição logo após o último elemento no intervalo a ser acrescentados.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -468,19 +478,26 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 ### <a name="parameters"></a>Parâmetros
 
-*PTR* um ponteiro para os caracteres da cadeia de caracteres C a ser atribuído à cadeia de caracteres de destino.
+*ptr*<br/>
+Um ponteiro para os caracteres da cadeia de caracteres do C a serem atribuídos à cadeia de caracteres de destino.
 
-*Contagem de* o número de caracteres a ser atribuído da cadeia de caracteres de origem.
+*count*<br/>
+O número de caracteres a ser atribuído da cadeia de caracteres de origem.
 
-*STR* a cadeia de caracteres de origem cujos caracteres devem ser atribuídos à cadeia de caracteres de destino.
+*str*<br/>
+A cadeia de caracteres de origem cujos caracteres devem ser atribuídos à cadeia de caracteres de destino.
 
-*CH* o valor do caractere a ser atribuído.
+*CH*<br/>
+O valor do caractere a ser atribuído.
 
-*primeiro* um iterador de entrada, const_pointer ou const_iterator que trata do primeiro caractere no intervalo da cadeia de caracteres de origem a ser atribuído ao intervalo de destino.
+*first*<br/>
+Um iterador de entrada, const_pointer ou const_iterator, que trata do primeiro caractere no intervalo da cadeia de caracteres de origem a ser atribuído ao intervalo de destino.
 
-*última* um iterador de entrada, const_pointer ou const_iterator endereçamento logo após o último caractere no intervalo da cadeia de caracteres de origem a ser atribuído ao intervalo de destino.
+*last*<br/>
+Um iterador de entrada, const_pointer ou const_iterator, que trata do caractere logo após o último caractere no intervalo da cadeia de caracteres de origem a ser atribuído ao intervalo de destino.
 
-*desativar* a posição em que novos caracteres começarão a ser atribuído.
+*Desativar*<br/>
+A posição em que novos caracteres começarão a ser atribuídos.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -595,7 +612,8 @@ reference at(size_type _Off);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off* o índice da posição do elemento a ser referenciado.
+*Off*<br/>
+O índice da posição do elemento a ser referenciado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -721,12 +739,12 @@ basic_string(
 
 template <class InputIterator>
 basic_string(
- InputIterator first,
+InputIterator first,
     InputIterator last);
 
 template <class InputIterator>
 basic_string(
- InputIterator first,
+InputIterator first,
     InputIterator last,
     const allocator_type& _Al);
 
@@ -741,21 +759,29 @@ basic_string(
 
 ### <a name="parameters"></a>Parâmetros
 
-*PTR* a cadeia de caracteres C cujos caracteres devem ser usados para inicializar o `string` que está sendo construído. Esse valor não pode ser um ponteiro nulo.
+*ptr*<br/>
+A cadeia de caracteres do C cujos caracteres devem ser usados para inicializar a `string` que está sendo construída. Esse valor não pode ser um ponteiro nulo.
 
-*_Al* a classe do alocador de armazenamento para o objeto de cadeia de caracteres que está sendo construído.
+*_Al*<br/>
+A classe do alocador de armazenamento para o objeto de cadeia de caracteres que está sendo criado.
 
-*Contagem de* o número de caracteres a ser inicializado.
+*count*<br/>
+O número de caracteres a serem inicializados.
 
-*direito* a cadeia de caracteres para inicializar a cadeia de caracteres que está sendo construída.
+*right*<br/>
+A cadeia de caracteres para inicializar a cadeia de caracteres que está sendo construída.
 
-*_Roff* o índice de um caractere em uma cadeia de caracteres que é o primeiro a ser usado para inicializar os valores de caractere da cadeia de caracteres que está sendo construído.
+*_Roff*<br/>
+O índice de um caractere em uma cadeia de caracteres que será o primeiro a ser usado para inicializar os valores de caracteres para a cadeia de caracteres que está sendo construída.
 
-*CH* o valor do caractere a ser copiado para a cadeia de caracteres que está sendo construída.
+*CH*<br/>
+O valor de caractere a ser copiado para a cadeia de caracteres que está sendo construída.
 
-*primeiro* um iterador de entrada, const_pointer ou const_iterator trata o primeiro elemento no intervalo de origem a ser inserido.
+*first*<br/>
+Um iterador de entrada, const_pointer ou const_iterator, que trata do primeiro elemento no intervalo de origem a ser inserido.
 
-*última* um iterador de entrada, const_pointer ou const_iterator que trata da posição logo após o último elemento no intervalo de origem a ser inserido.
+*last*<br/>
+Um iterador de entrada, const_pointer ou const_iterator, que trata da posição logo após o último elemento no intervalo de origem a ser inserido.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -851,7 +877,7 @@ int main( ) {
    cout << "The full original string str1 is: " << str1 << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_Iter = 'G';
+*str1_Iter = 'G';
    cout << "The first character of the modified str1 is now: "
         << *str1_Iter << endl;
    cout << "The full modified string str1 is now: " << str1 << endl;
@@ -1148,19 +1174,26 @@ int compare(
 
 ### <a name="parameters"></a>Parâmetros
 
-*STR* a cadeia de caracteres a ser comparado com a cadeia de caracteres do operando.
+*str*<br/>
+A cadeia de caracteres que deve ser comparada com a cadeia de caracteres do operando.
 
-*_Pos1* o índice da cadeia de caracteres operando na qual a comparação começa.
+*_Pos1*<br/>
+O índice da cadeia de caracteres do operando na qual a comparação começa.
 
-*_Num1* o número máximo de caracteres da cadeia de caracteres da operando a ser comparado.
+*_Num1*<br/>
+O número máximo de caracteres da cadeia de caracteres do operando a serem comparados.
 
-*_Num2* o número máximo de caracteres da cadeia de caracteres de parâmetro a ser comparado.
+*_Num2*<br/>
+O número máximo de caracteres da cadeia de caracteres do parâmetro a serem comparados.
 
-*Off* o índice da cadeia de caracteres de parâmetro na qual a comparação começa.
+*Off*<br/>
+O índice da cadeia de caracteres do parâmetro na qual a comparação começa.
 
-*Contagem de* o número máximo de caracteres da cadeia de caracteres de parâmetro a ser comparado.
+*count*<br/>
+O número máximo de caracteres da cadeia de caracteres do parâmetro a serem comparados.
 
-*PTR* a cadeia de caracteres C a ser comparado com a cadeia de caracteres do operando.
+*ptr*<br/>
+A cadeia de caracteres do C a ser comparada com a cadeia de caracteres do operando.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1341,14 +1374,14 @@ The operand string is equal to the parameter string.
 The operand string is: AACAB
 The parameter string is: CAB
 The last three characters of the operand string
- are equal to the parameter string.
+are equal to the parameter string.
 The first three characters of the operand string
- are less than the parameter string.
+are less than the parameter string.
 
 The operand string is: AACAB
 The parameter string is: DCABD
 The three characters from position 2 of the operand string are equal to
- the 3 characters parameter string from position 1.
+the 3 characters parameter string from position 1.
 
 The operand string is: ABC
 The parameter C-string is: DEF
@@ -1357,12 +1390,12 @@ The operand string is less than the parameter C-string.
 The operand string is: AACAB
 The parameter string is: CAB
 The last three characters of the operand string
- are equal to the parameter C-string.
+are equal to the parameter C-string.
 
 The operand string is: AACAB
 The parameter C-string is: ACAB
 The 3 characters from position 2 of the operand string are equal to
- the first 3 characters of the parameter C-string.
+the first 3 characters of the parameter C-string.
 ```
 
 ## <a name="const_iterator"></a>  basic_string::const_iterator
@@ -1470,11 +1503,13 @@ size_type copy(
 
 ### <a name="parameters"></a>Parâmetros
 
-*PTR* a matriz de caracteres de destino para o qual os elementos devem ser copiados.
+*ptr*<br/>
+A matriz de caracteres de destino à qual os elementos devem ser copiados.
 
 _ *Contagem* o número de caracteres a ser copiado, no máximo, da cadeia de caracteres de origem.
 
-*Off* a posição inicial na cadeia de caracteres de origem do qual as cópias devem ser feitas.
+*Off*<br/>
+A posição inicial na cadeia de caracteres de origem da qual as cópias devem ser feitas.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1573,13 +1608,16 @@ size_type _Copy_s(
 
 ### <a name="parameters"></a>Parâmetros
 
-*dest* a matriz de caracteres de destino para o qual os elementos devem ser copiados.
+*dest*<br/>
+A matriz de caracteres de destino à qual os elementos devem ser copiados.
 
-*dest_size* o tamanho de *dest*.
+*dest_size*<br/>
+O tamanho de *dest*.
 
 _ *Contagem* o número de caracteres a ser copiado, no máximo, da cadeia de caracteres de origem.
 
-*Off* a posição inicial na cadeia de caracteres de origem do qual as cópias devem ser feitas.
+*Off*<br/>
+A posição inicial na cadeia de caracteres de origem da qual as cópias devem ser feitas.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1847,7 +1885,7 @@ int main( )
    cout << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_Iter = 'T';
+*str1_Iter = 'T';
    cout << "The last character-letter of the modified str1 is now: "
         << *str1_Iter << endl;
    cout << "The modified string str1 is now: " << str1 << endl;
@@ -1891,15 +1929,20 @@ basic_string<CharType, Traits, Allocator>& erase(
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro* um iterador que trata da posição do primeiro elemento no intervalo a ser apagado.
+*first*<br/>
+Um iterador que trata da posição do primeiro elemento no intervalo a ser apagado.
 
-*última* um iterador que trata da posição logo após o último elemento no intervalo a ser apagado.
+*last*<br/>
+Um iterador que trata da posição logo após o último elemento no intervalo a ser apagado.
 
-*_It* um iterador que trata da posição do elemento na cadeia de caracteres a ser apagado.
+*_It*<br/>
+Um iterador que trata da posição do elemento na cadeia de caracteres a ser apagado.
 
-*POS* o índice do primeiro caractere na cadeia de caracteres a ser removido.
+*POS*<br/>
+O índice do primeiro caractere na cadeia de caracteres a ser removido.
 
-*Contagem* o número de elementos que serão removidos se houver tantos no intervalo do cadeia de caracteres começando com *POS*.
+*count*<br/>
+O número de elementos que serão removidos se houver tantos no intervalo da cadeia de caracteres que comecem com *_Pos*.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1998,15 +2041,20 @@ size_type find(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH* o valor do caractere para o qual a função de membro deve pesquisar.
+*CH*<br/>
+O valor de caractere que a função membro deve pesquisar.
 
-*Off* índice da posição em que a pesquisa deve iniciar.
+*Off*<br/>
+Índice da posição em que a pesquisa deve começar.
 
-*PTR* a cadeia de caracteres C para o qual a função de membro pesquisar.
+*ptr*<br/>
+A cadeia de caracteres do C que a função membro deve pesquisar.
 
-*Contagem de* o número de caracteres, contando a partir do primeiro caractere na cadeia de caracteres C para o qual a função de membro deve pesquisar.
+*count*<br/>
+O número de caracteres, contando a partir do primeiro caractere, na cadeia de caracteres do C que a função membro deve pesquisar.
 
-*STR* cadeia de caracteres para o qual a função de membro deve pesquisar.
+*str*<br/>
+A cadeia de caracteres que a função membro deve pesquisar.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2130,7 +2178,7 @@ The Character 'x' was not found in str1.
 
 The original string str2 is: Let me make this perfectly clear.
 The index of the 1st element of 'perfect' after
- the 5th position in str2 is: 17
+the 5th position in str2 is: 17
 The substring 'imperfect' was not found in str2 .
 
 The original string str3 is: This is a sample string for this program
@@ -2139,7 +2187,7 @@ The index of the next occurrence of 'for' is in str3 begins at: 24
 
 The original string str4 is: clearly this perfectly unclear.
 The index of the 1st element of 'clear' after
- the 5th position in str4 is: 25
+the 5th position in str4 is: 25
 The index of the 1st element of 'clear' in str4 is: 0
 ```
 
@@ -2171,15 +2219,20 @@ size_type find_first_not_of(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH* o valor do caractere para o qual a função de membro deve pesquisar.
+*CH*<br/>
+O valor de caractere que a função membro deve pesquisar.
 
-*Off* índice da posição em que a pesquisa deve iniciar.
+*Off*<br/>
+Índice da posição em que a pesquisa deve começar.
 
-*PTR* a cadeia de caracteres C para o qual a função de membro pesquisar.
+*ptr*<br/>
+A cadeia de caracteres do C que a função membro deve pesquisar.
 
-*Contagem de* o número de caracteres, contando a partir do primeiro caractere na cadeia de caracteres C para o qual a função de membro deve pesquisar.
+*count*<br/>
+O número de caracteres, contando a partir do primeiro caractere, na cadeia de caracteres do C que a função membro deve pesquisar.
 
-*STR* cadeia de caracteres para o qual a função de membro deve pesquisar.
+*str*<br/>
+A cadeia de caracteres que a função membro deve pesquisar.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2312,21 +2365,21 @@ The index of the 'non x' found in str1 is: 1
 
 The original string str2 is: BBB-1111
 Elements of the substring 'B1' were not
- found in str2 after the 6th position.
+found in str2 after the 6th position.
 The index of the 1st element of 'B2' after
- the 0th position in str2 is: 3
+the 0th position in str2 is: 3
 
 The original string str3 is: 444-555-GGG
 The index of the 1st occurrence of an element in str3
- other than one of the characters in '45G' is: 3
+other than one of the characters in '45G' is: 3
 The index of the second occurrence of an element of '45G' in str3
- after the 0th position is: 7
+after the 0th position is: 7
 
 The original string str4 is: 12-ab-12-ab
 The index of the 1st non occurrence of an element of 'ba3' in str4 after
- the 5th position is: 5
+the 5th position is: 5
 The index of the 1st non occurrence of an element of '12' in str4 after
- the 0th position is: 2
+the 0th position is: 2
 ```
 
 ## <a name="find_first_of"></a>  basic_string::find_first_of
@@ -2357,15 +2410,20 @@ size_type find_first_of(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH* o valor do caractere para o qual a função de membro deve pesquisar.
+*CH*<br/>
+O valor de caractere que a função membro deve pesquisar.
 
-*Off* índice da posição em que a pesquisa deve iniciar.
+*Off*<br/>
+Índice da posição em que a pesquisa deve começar.
 
-*PTR* a cadeia de caracteres C para o qual a função de membro pesquisar.
+*ptr*<br/>
+A cadeia de caracteres do C que a função membro deve pesquisar.
 
-*Contagem de* o número de caracteres, contando a partir do primeiro caractere na cadeia de caracteres C para o qual a função de membro deve pesquisar.
+*count*<br/>
+O número de caracteres, contando a partir do primeiro caractere, na cadeia de caracteres do C que a função membro deve pesquisar.
 
-*STR* cadeia de caracteres para o qual a função de membro deve pesquisar.
+*str*<br/>
+A cadeia de caracteres que a função membro deve pesquisar.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2497,21 +2555,21 @@ The character 'x' was not found in str1.
 
 The original string str2 is: ABCD-1234-ABCD-1234
 The index of the 1st occurrence of an element of 'B1' in str2 after
- the 6th position is: 11
+the 6th position is: 11
 The index of the 1st element of 'D2' after
- the 0th position in str2 is: 3
+the 0th position in str2 is: 3
 
 The original string str3 is: 123-abc-123-abc-456-EFG-456-EFG
 The index of the 1st occurrence of an element of '5G' in str3 after
- the 0th position is: 17
+the 0th position is: 17
 The index of the second occurrence of an element of '5G' in str3
- after the 0th position is: 22
+after the 0th position is: 22
 
 The original string str4 is: 12-ab-12-ab
 The index of the 1st occurrence of an element of 'ba3' in str4 after
- the 5th position is: 9
+the 5th position is: 9
 The index of the 1st occurrence of an element of 'a2' in str4 after
- the 0th position is: 1
+the 0th position is: 1
 ```
 
 ## <a name="find_last_not_of"></a>  basic_string::find_last_not_of
@@ -2542,15 +2600,20 @@ size_type find_last_not_of(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH* o valor do caractere para o qual a função de membro deve pesquisar.
+*CH*<br/>
+O valor de caractere que a função membro deve pesquisar.
 
-*Off* índice da posição em que a pesquisa termine.
+*Off*<br/>
+Índice da posição em que a pesquisa deve terminar.
 
-*PTR* a cadeia de caracteres C para o qual a função de membro pesquisar.
+*ptr*<br/>
+A cadeia de caracteres do C que a função membro deve pesquisar.
 
-*Contagem de* o número de caracteres, contando a partir do primeiro caractere na cadeia de caracteres C para o qual a função de membro deve pesquisar.
+*count*<br/>
+O número de caracteres, contando a partir do primeiro caractere, na cadeia de caracteres do C que a função membro deve pesquisar.
 
-*STR* cadeia de caracteres para o qual a função de membro deve pesquisar.
+*str*<br/>
+A cadeia de caracteres que a função membro deve pesquisar.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2680,25 +2743,25 @@ int main( )
 ```Output
 The original string str1 is: dddd-1dd4-abdd
 The index of the last non 'd'
- found before the 7th position in str1 is: 5
+found before the 7th position in str1 is: 5
 The index of the non 'd' found in str1 is: 11
 
 The original string str2 is: BBB-1111
 The index of the last occurrence of a element
- not of 'B1' in str2 before the 6th position is: 3
+not of 'B1' in str2 before the 6th position is: 3
 The elements of the substring 'B-1' were not found in str2 .
 
 The original string str3 is: 444-555-GGG
 The index of the last occurrence of an element in str3
- other than one of the characters in '45G' is: 7
+other than one of the characters in '45G' is: 7
 The index of the penultimate occurrence of an element
- not in '45G' in str3 is: 3
+not in '45G' in str3 is: 3
 
 The original string str4 is: 12-ab-12-ab
 The index of the last occurrence of an element not
- in 'b-a' in str4 before the 5th position is: 1
+in 'b-a' in str4 before the 5th position is: 1
 The index of the last occurrence of an element not in '12'
- in str4 before the end position is: 10
+in str4 before the end position is: 10
 ```
 
 ## <a name="find_last_of"></a>  basic_string::find_last_of
@@ -2729,15 +2792,20 @@ size_type find_last_of(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH* o valor do caractere para o qual a função de membro deve pesquisar.
+*CH*<br/>
+O valor de caractere que a função membro deve pesquisar.
 
-*Off* índice da posição em que a pesquisa termine.
+*Off*<br/>
+Índice da posição em que a pesquisa deve terminar.
 
-*PTR* a cadeia de caracteres C para o qual a função de membro pesquisar.
+*ptr*<br/>
+A cadeia de caracteres do C que a função membro deve pesquisar.
 
-*Contagem de* o número de caracteres, contando a partir do primeiro caractere na cadeia de caracteres C para o qual a função de membro deve pesquisar.
+*count*<br/>
+O número de caracteres, contando a partir do primeiro caractere, na cadeia de caracteres do C que a função membro deve pesquisar.
 
-*STR* cadeia de caracteres para o qual a função de membro deve pesquisar.
+*str*<br/>
+A cadeia de caracteres que a função membro deve pesquisar.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2858,19 +2926,19 @@ The character 'x' was not found in str1.
 
 The original string str2 is: ABCD-1234-ABCD-1234
 The index of the last occurrence of an element of 'B1' in str2 before
- the 12th position is: 11
+the 12th position is: 11
 The index of the last element of 'D2' after
- the 0th position in str2 is: 16
+the 0th position in str2 is: 16
 
 The original string str3 is: 456-EFG-456-EFG
 The index of the last occurrence of an element of '5E' in str3 before
- the 8th position is: 4
+the 8th position is: 4
 
 The original string str4 is: 12-ab-12-ab
 The index of the last occurrence of an element of 'ba3' in str4 before
- the 8th position is: 4
+the 8th position is: 4
 The index of the last occurrence of an element of 'a2' in str4 before
- the 0th position is: 9
+the 0th position is: 9
 ```
 
 ## <a name="front"></a>  basic_string::front
@@ -2992,23 +3060,32 @@ void insert(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_P0* o índice da posição atrás do ponto de inserção de novos caracteres.
+*_P0*<br/>
+O índice da posição atrás do ponto de inserção de novos caracteres.
 
-*PTR* a cadeia de caracteres C a ser totalmente ou parcialmente inserida na cadeia de caracteres.
+*ptr*<br/>
+A cadeia de caracteres do C a ser totalmente ou parcialmente inserida na cadeia de caracteres.
 
-*Contagem de* o número de caracteres a ser inserido.
+*count*<br/>
+O número de caracteres a serem inseridos.
 
-*STR* a cadeia de caracteres a ser totalmente ou parcialmente inserida na cadeia de caracteres de destino.
+*str*<br/>
+A cadeia de caracteres a ser totalmente ou parcialmente inserida na cadeia de caracteres de destino.
 
-*Off* o índice da parte da cadeia de caracteres de origem fornece os caracteres a serem acrescentados.
+*Off*<br/>
+O índice da parte da cadeia de caracteres de origem que fornece os caracteres a serem acrescentados.
 
-*CH* o valor do caractere dos elementos a ser inserido.
+*CH*<br/>
+O valor de caractere dos elementos a serem inseridos.
 
-*_It* um iterador que trata da posição atrás da qual um caractere deve ser inserido.
+*_It*<br/>
+Um iterador que trata da posição atrás da qual um caractere deve ser inserido.
 
-*primeiro* um iterador de entrada, const_pointer ou const_iterator trata o primeiro elemento no intervalo de origem a ser inserido.
+*first*<br/>
+Um iterador de entrada, const_pointer ou const_iterator, que trata do primeiro elemento no intervalo de origem a ser inserido.
 
-*última* um iterador de entrada, const_pointer ou const_iterator que trata da posição logo após o último elemento no intervalo de origem a ser inserido.
+*last*<br/>
+Um iterador de entrada, const_pointer ou const_iterator, que trata da posição logo após o último elemento no intervalo de origem a ser inserido.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -3288,11 +3365,14 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH* o caractere a ser acrescentado.
+*CH*<br/>
+O caractere a ser acrescentado.
 
-*PTR* os caracteres da cadeia de caracteres C a serem acrescentados.
+*ptr*<br/>
+Os caracteres da cadeia de caracteres do C a serem acrescentados.
 
-*à direita* os caracteres da cadeia de caracteres a serem acrescentados.
+*right*<br/>
+Os caracteres da cadeia de caracteres a serem acrescentados.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -3377,11 +3457,14 @@ basic_string<CharType, Traits, Allocator>& operator=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH* o valor do caractere a ser atribuído.
+*CH*<br/>
+O valor do caractere a ser atribuído.
 
-*PTR* um ponteiro para os caracteres da cadeia de caracteres C a ser atribuído à cadeia de caracteres de destino.
+*ptr*<br/>
+Um ponteiro para os caracteres da cadeia de caracteres do C a serem atribuídos à cadeia de caracteres de destino.
 
-*direito* a cadeia de caracteres de origem cujos caracteres devem ser atribuídos à cadeia de caracteres de destino.
+*right*<br/>
+A cadeia de caracteres de origem cujos caracteres devem ser atribuídos à cadeia de caracteres de destino.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -3459,7 +3542,8 @@ reference operator[](size_type _Off);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off* o índice da posição do elemento a ser referenciado.
+*Off*<br/>
+O índice da posição do elemento a ser referenciado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -3575,7 +3659,8 @@ void push_back(value_type _Ch);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH* o caractere a ser adicionado ao final da cadeia de caracteres.
+*CH*<br/>
+O caractere a ser adicionado ao final da cadeia de caracteres.
 
 ### <a name="remarks"></a>Comentários
 
@@ -3667,7 +3752,7 @@ int main( )
    cout << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_rIter = 'A';
+*str1_rIter = 'A';
    cout << "The first character-letter of the modified str1 is now: "
         << *str1_rIter << endl;
    cout << "The full modified reversed string str1 is now:\n ";
@@ -3689,10 +3774,10 @@ int main( )
 ```Output
 The first character-letter of the reversed string str1 is: a
 The full reversed string str1 is:
- ablE was I ere I saw elbA
+ablE was I ere I saw elbA
 The first character-letter of the modified str1 is now: A
 The full modified reversed string str1 is now:
- AblE was I ere I saw elbA
+AblE was I ere I saw elbA
 The string str2 is empty.
 ```
 
@@ -3766,7 +3851,7 @@ int main( )
    cout << endl;
 
    // The dereferenced iterator can be used to modify a character
- *str1_rIter = 'o';
+*str1_rIter = 'o';
    cout << "The last character-letter of the modified str1 is now: "
         << *str1_rIter << endl;
    cout << "The full modified reversed string str1 is now:\n ";
@@ -3788,10 +3873,10 @@ int main( )
 ```Output
 The last character-letter of the reversed string str1 is: A
 The full reversed string str1 is:
- ablE was I ere I saw elbA
+ablE was I ere I saw elbA
 The last character-letter of the modified str1 is now: o
 The full modified reversed string str1 is now:
- ablE was I ere I saw elbo
+ablE was I ere I saw elbo
 The string str2 is empty.
 ```
 
@@ -3873,29 +3958,39 @@ basic_string<CharType, Traits, Allocator>& replace(
 
 ### <a name="parameters"></a>Parâmetros
 
-*STR* a cadeia de caracteres que deve ser uma fonte de caracteres da cadeia de caracteres do operando.
+*str*<br/>
+A cadeia de caracteres que deve ser uma fonte de caracteres para a cadeia de caracteres do operando.
 
-*_Pos1* o índice da cadeia de caracteres operando na qual a substituição começa.
+*_Pos1*<br/>
+O índice da cadeia de caracteres do operando na qual a substituição começa.
 
-*_Num1* o número máximo de caracteres a serem substituídos na cadeia de caracteres do operando.
+*_Num1*<br/>
+O número máximo de caracteres a serem substituídos na cadeia de caracteres do operando.
 
-*_Pos2* o índice da cadeia de caracteres de parâmetro na qual a cópia começa.
+*_Pos2*<br/>
+O índice da cadeia de caracteres do parâmetro na qual a cópia começa.
 
-*_Num2* o número máximo de caracteres a ser usado no parâmetro de cadeia de caracteres C.
+*_Num2*<br/>
+O número máximo de caracteres a serem usados da cadeia de caracteres do C do parâmetro.
 
-*PTR* a cadeia de caracteres C que deve ser uma fonte de caracteres da cadeia de caracteres do operando.
+*ptr*<br/>
+A cadeia de caracteres do C que deve ser uma fonte de caracteres para a cadeia de caracteres do operando.
 
-*CH* o caractere a ser copiado para a cadeia de caracteres do operando.
+*CH*<br/>
+O caractere a ser copiado para a cadeia de caracteres do operando.
 
 * first0 * um iterador que trata do primeiro caractere a ser removido na cadeia de caracteres do operando.
 
 * last0 * um iterador que trata o último caractere a ser removido na cadeia de caracteres do operando.
 
-*primeiro* um iterador, const_pointer ou const_iterator que trata do primeiro caractere a ser copiado na cadeia de caracteres do parâmetro.
+*first*<br/>
+Um iterador, const_pointer ou const_iterator, que trata do primeiro caractere a ser copiado na cadeia de caracteres do parâmetro.
 
-*última* um iterador, const_pointer ou const_iterator que trata do último caractere a ser copiado na cadeia de caracteres do parâmetro.
+*last*<br/>
+Um iterador, const_pointer ou const_iterator, que trata do último caractere a ser copiado na cadeia de caracteres do parâmetro.
 
-*Contagem* o número de vezes *CH* é copiado para a cadeia de caracteres do operando.
+*count*<br/>
+O número de vezes *CH* é copiado para a cadeia de caracteres do operando.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -4039,45 +4134,45 @@ The operand string s1o is: AAAAAAAA
 The parameter string s1p is: BBB
 The parameter C-string cs1p is: CCC
 The result of s1o.replace ( 1 , 3 , s1p )
- is the string: ABBBAAAA.
+is the string: ABBBAAAA.
 The result of s1o.replace ( 5 , 3 , cs1p )
- is the string: ABBBACCC.
+is the string: ABBBACCC.
 
 The operand string s2o is: AAAAAAAA
 The parameter string s1p is: BBB
 The parameter C-string cs2p is: CCC
 The result of s2o.replace (1, 3, s2p, 1, 2)
- is the string: ABBAAAA.
+is the string: ABBAAAA.
 The result of s2o.replace (4 ,3 ,cs2p)
- is the string: ABBAC.
+is the string: ABBAC.
 
 The operand string s3o is: AAAAAAAA
 The parameter character c1p is: C
 The result of s3o.replace(1, 3, 4, ch3p)
- is the string: ACCCCAAAA.
+is the string: ACCCCAAAA.
 
 The operand string s4o is: AAAAAAAA
 The parameter string s4p is: BBB
 The parameter C-string cs4p is: CCC
 The result of s1o.replace (IterF0, IterL0, s4p)
- is the string: BBBAAAAA.
+is the string: BBBAAAAA.
 The result of s4o.replace (IterF0, IterL0, cs4p)
- is the string: CCCAAAAA.
+is the string: CCCAAAAA.
 
 The operand string s5o is: AAAAAAAF
 The parameter C-string cs5p is: CCCBB
 The result of s5o.replace (IterF1, IterL1, cs4p ,4)
- is the string: CCCBAAAF.
+is the string: CCCBAAAF.
 
 The operand string s6o is: AAAAAAAG
 The parameter character ch6p is: q
 The result of s6o.replace (IterF1, IterL1, 4, ch6p)
- is the string: qqqqAAAAG.
+is the string: qqqqAAAAG.
 
 The operand string s7o is: OOOOOOO
 The parameter string s7p is: PPPP
 The result of s7o.replace (IterF3 ,IterL3 ,IterF4 ,IterL4)
- is the string: OPPOOOO.
+is the string: OPPOOOO.
 ```
 
 ## <a name="reserve"></a>  basic_string::reserve
@@ -4090,7 +4185,8 @@ void reserve(size_type count = 0);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Contagem de* o número de caracteres para o qual memória é reservada.
+*count*<br/>
+O número de caracteres para os quais a memória está sendo reservada.
 
 ### <a name="remarks"></a>Comentários
 
@@ -4184,9 +4280,11 @@ void resize(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Contagem de* o novo tamanho da cadeia de caracteres.
+*count*<br/>
+O novo tamanho da cadeia de caracteres.
 
-*CH* o valor para o qual os caracteres acrescentados serão inicializados se forem necessários elementos adicionais.
+*CH*<br/>
+O valor com o qual os caracteres acrescentados serão inicializados se forem necessários elementos adicionais.
 
 ### <a name="remarks"></a>Comentários
 
@@ -4321,15 +4419,20 @@ size_type rfind(
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH* o valor do caractere para o qual a função de membro deve pesquisar.
+*CH*<br/>
+O valor de caractere que a função membro deve pesquisar.
 
-*Off* índice da posição em que a pesquisa deve iniciar.
+*Off*<br/>
+Índice da posição em que a pesquisa deve começar.
 
-*PTR* a cadeia de caracteres C para o qual a função de membro pesquisar.
+*ptr*<br/>
+A cadeia de caracteres do C que a função membro deve pesquisar.
 
-*Contagem de* o número de caracteres, contando a partir do primeiro caractere na cadeia de caracteres C para o qual a função de membro deve pesquisar.
+*count*<br/>
+O número de caracteres, contando a partir do primeiro caractere, na cadeia de caracteres do C que a função membro deve pesquisar.
 
-*STR* cadeia de caracteres para o qual a função de membro deve pesquisar.
+*str*<br/>
+A cadeia de caracteres que a função membro deve pesquisar.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -4454,7 +4557,7 @@ The character 'x' was not found in str1.
 
 The original string str2 is: Let me make this perfectly clear.
 The index of the 1st element of 'perfect' before
- the 30th position in str2 is: 17
+the 30th position in str2 is: 17
 The substring 'imperfect' was not found in str2 .
 
 The original string str3 is: It is a nice day. I am happy.
@@ -4599,9 +4702,11 @@ basic_string<CharType, Traits, Allocator> substr(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off* um índice que localiza o elemento na posição da qual a cópia da cadeia de caracteres é feita, com um valor padrão de 0.
+*Off*<br/>
+Um índice que localiza o elemento na posição da qual é feita a cópia da cadeia de caracteres, com um valor padrão igual a 0.
 
-*Contagem de* o número de caracteres que devem ser copiados se estiverem presentes.
+*count*<br/>
+O número de caracteres que devem ser copiados se estiverem presentes.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -4635,13 +4740,13 @@ int main( )
 
 ```Output
 The original string str1 is:
- Heterological paradoxes are persistent.
+Heterological paradoxes are persistent.
 
 The substring str1 copied is: logical
 
 The default substring str3 is:
- Heterological paradoxes are persistent.
- which is the entire original string.
+Heterological paradoxes are persistent.
+which is the entire original string.
 ```
 
 ## <a name="swap"></a>  basic_string::swap
@@ -4655,7 +4760,8 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*STR* a cadeia de caracteres de origem cujos elementos deverão ser trocados por aqueles na cadeia de caracteres de destino.
+*str*<br/>
+A cadeia de caracteres de origem cujos elementos devem ser trocados com os da cadeia de caracteres de destino.
 
 ### <a name="remarks"></a>Comentários
 
@@ -4697,11 +4803,11 @@ int main( )
 
 ```Output
 Before swapping string s1 and s2:
- The basic_string s1 = Tweedledee.
- The basic_string s2 = Tweedledum.
+The basic_string s1 = Tweedledee.
+The basic_string s2 = Tweedledum.
 After swapping string s1 and s2:
- The basic_string s1 = Tweedledum.
- The basic_string s2 = Tweedledee.
+The basic_string s1 = Tweedledum.
+The basic_string s2 = Tweedledee.
 ```
 
 ## <a name="traits_type"></a>  basic_string::traits_type

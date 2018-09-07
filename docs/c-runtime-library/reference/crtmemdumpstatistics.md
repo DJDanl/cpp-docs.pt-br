@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 688cef94721ac7ea3a36ccd375185b922b23a15f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 655d9be75fa031cc2cbebfd65c4634528f410e85
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395598"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110520"
 ---
 # <a name="crtmemdumpstatistics"></a>_CrtMemDumpStatistics
 
@@ -53,15 +53,16 @@ void _CrtMemDumpStatistics(
 
 ### <a name="parameters"></a>Parâmetros
 
-*estado* ponteiro para o estado de heap de despejo.
+*state*<br/>
+Ponteiro para o estado de heap a ser despejado.
 
 ## <a name="remarks"></a>Comentários
 
-O **crtmemdumpstatistics** função Despeja as informações de cabeçalho de depuração para um estado especificado do heap em um formato legível ao usuário. As estatísticas de despejo podem ser usadas pelo aplicativo para acompanhar as alocações e detectar problemas de memória. O estado de memória pode conter um estado de heap específico ou a diferença entre dois estados. Quando [Debug](../../c-runtime-library/debug.md) não está definido, chamadas para **crtmemdumpstatistics** são removidos durante o pré-processamento.
+O **crtmemdumpstatistics** função Despeja as informações de cabeçalho de depuração para um estado especificado do heap em um formato legível pelo usuário. As estatísticas de despejo podem ser usadas pelo aplicativo para acompanhar as alocações e detectar problemas de memória. O estado de memória pode conter um estado de heap específico ou a diferença entre dois estados. Quando [Debug](../../c-runtime-library/debug.md) não está definido, as chamadas a **crtmemdumpstatistics** são removidas durante o pré-processamento.
 
-O *estado* parâmetro deve ser um ponteiro para um **crtmemstate** estrutura que tenha sido preenchida pelo [crtmemcheckpoint](crtmemcheckpoint.md) ou retornadas por [_ CrtMemDifference](crtmemdifference.md) antes de **crtmemdumpstatistics** é chamado. Se *estado* é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e nenhuma ação será tomada. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+O *estado* parâmetro deve ser um ponteiro para um **crtmemstate** estrutura tenha sido preenchida por [crtmemcheckpoint](crtmemcheckpoint.md) ou retornada por [_ CrtMemDifference](crtmemdifference.md) antes de **crtmemdumpstatistics** é chamado. Se *estado* é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e nenhuma ação será tomada. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Para obter mais informações sobre funções de estado de heap e a **crtmemstate** estrutura, consulte [funções de emissão de relatórios de estado de Heap](/visualstudio/debugger/crt-debug-heap-details). Para obter mais informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap base, consulte [Detalhes do heap de depuração do CRT](/visualstudio/debugger/crt-debug-heap-details).
+Para obter mais informações sobre as funções de estado de heap e o **crtmemstate** estrutura, consulte [funções de relatório de estado de Heap](/visualstudio/debugger/crt-debug-heap-details). Para obter mais informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap base, consulte [Detalhes do heap de depuração do CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Requisitos
 

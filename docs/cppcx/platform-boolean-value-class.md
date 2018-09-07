@@ -15,33 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b368794aa9137144213e3ad485068ea5a9e6b10f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a8870e952b4bcba9455a6c056c9fa21a8178d122
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751362"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100255"
 ---
 # <a name="platformboolean-value-class"></a>Platform::classe de valor booliano
-Representa um valor booliano. O equivalente de `bool`.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-public value struct Boolean  
-```  
-  
-### <a name="members"></a>Membros  
- O booliano possui os métodos Equals(), GetHashCode() e ToString() derivados da [Platform::Object Class](../cppcx/platform-object-class.md)e o método GetTypeCode() derivado da [Platform::Type Class](../cppcx/platform-type-class.md).  
-  
-### <a name="requirements"></a>Requisitos  
- **Mínimo de cliente com suporte:** Windows 8  
-  
- **Mínimo de servidor com suporte:** Windows Server 2012  
-  
- **Namespace:** Platform  
-  
- **Metadados:** platform.winmd  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace Platform](../cppcx/platform-namespace-c-cx.md)
+
+Representa um valor booliano. O equivalente de `bool`.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+public value struct Boolean
+```
+
+### <a name="members"></a>Membros
+
+O booliano possui os métodos Equals(), GetHashCode() e ToString() derivados da [Platform::Object Class](../cppcx/platform-object-class.md)e o método GetTypeCode() derivado da [Platform::Type Class](../cppcx/platform-type-class.md).
+
+### <a name="requirements"></a>Requisitos
+
+**Mínimo de cliente com suporte:** Windows 8
+
+**Mínimo de servidor com suporte:** Windows Server 2012
+
+**Namespace:** Platform
+
+**Metadados:** platform.winmd
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace Platform](../cppcx/platform-namespace-c-cx.md)

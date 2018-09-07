@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81bdbd07e06ef2ec24a5f220fcd11a228b783888
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 19e08d1544a23ad1272bde5066a63f37b1e511fd
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965971"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100918"
 ---
 # <a name="numput-class"></a>Classe num_put
 
@@ -45,9 +45,11 @@ class num_put : public locale::facet;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CharType* o tipo usado em um programa para codificar caracteres em uma localidade.
+*CharType*<br/>
+O tipo usado em um programa para codificar caracteres em uma localidade.
 
-*OutputIterator* o tipo de iterador para o qual as funções put numéricas gravam sua saída.
+*OutputIterator*<br/>
+O tipo de iterador para o qual as funções put numéricas gravam sua saída.
 
 ## <a name="remarks"></a>Comentários
 
@@ -153,13 +155,17 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Parâmetros
 
-*próxima* um iterador que trata o primeiro elemento da cadeia de caracteres inserida.
+*next*<br/>
+Um iterador que trata o primeiro elemento na cadeia de caracteres inserida.
 
-*Iosbase* especificado o fluxo que contém a localidade com a faceta numpunct usada para pontuar a saída e os sinalizadores para a formatação da saída.
+*Iosbase*<br/>
+Foi especificado o fluxo que contém a localidade com a faceta numpunct usada para pontuar a saída e os sinalizadores para a formatação da saída.
 
-*_Fill* um caractere que é usado para espaçamento.
+*_Fill*<br/>
+Um caractere que é usado para espaçamento.
 
-*Val* o número ou tipo booliano que será a saída.
+*Val*<br/>
+O número ou tipo booliano que será a saída.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -318,7 +324,8 @@ explicit num_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Refs* valor inteiro usado para especificar o tipo de gerenciamento de memória para o objeto.
+*_Refs*<br/>
+Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
 
 ### <a name="remarks"></a>Comentários
 
@@ -397,13 +404,17 @@ iter_type put(
 
 ### <a name="parameters"></a>Parâmetros
 
-*dest* um iterador que trata o primeiro elemento da cadeia de caracteres inserida.
+*dest*<br/>
+Um iterador que trata o primeiro elemento na cadeia de caracteres inserida.
 
-*Iosbase* especificado o fluxo que contém a localidade com a faceta numpunct usada para pontuar a saída e os sinalizadores para a formatação da saída.
+*Iosbase*<br/>
+Foi especificado o fluxo que contém a localidade com a faceta numpunct usada para pontuar a saída e os sinalizadores para a formatação da saída.
 
-*_Fill* um caractere que é usado para espaçamento.
+*_Fill*<br/>
+Um caractere que é usado para espaçamento.
 
-*Val* o número ou tipo booliano que será a saída.
+*Val*<br/>
+O número ou tipo booliano que será a saída.
 
 ### <a name="return-value"></a>Valor de retorno
 

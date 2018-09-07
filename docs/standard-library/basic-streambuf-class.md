@@ -104,12 +104,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bacb90052b46b687349e9069fd7c47f825f0221
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6bc4fa8da5d9fa2d15febc3c7b016622e614129a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202786"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100957"
 ---
 # <a name="basicstreambuf-class"></a>Classe basic_streambuf
 
@@ -124,9 +124,11 @@ class basic_streambuf;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Elem* um [char_type](#char_type).
+*Elem*<br/>
+Um [char_type](#char_type).
 
-*TR* o caractere [traits_type](#traits_type).
+*Tr*<br/>
+O caractere [traits_type](#traits_type).
 
 ## <a name="remarks"></a>Comentários
 
@@ -250,7 +252,8 @@ basic_streambuf(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* uma referência lvalue para o `basic_streambuf` que é usado para definir os valores para este objeto `basic_streambuf` objeto.
+*right*<br/>
+Uma referência lvalue para o objeto `basic_streambuf` usada para definir os valores a esse objeto `basic_streambuf`.
 
 ### <a name="remarks"></a>Comentários
 
@@ -312,7 +315,8 @@ void gbump(int count);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Contagem de* a quantidade pela qual Avançar o ponteiro.
+*count*<br/>
+O valor pelo qual avançar o ponteiro.
 
 ## <a name="getloc"></a>  basic_streambuf::getloc
 
@@ -370,7 +374,8 @@ virtual void imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Loc* uma referência a uma localidade.
+*_Loc*<br/>
+Uma referência a uma localidade.
 
 ### <a name="remarks"></a>Comentários
 
@@ -436,7 +441,8 @@ basic_streambuf& operator=(const basic_streambuf& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* uma referência lvalue para o `basic_streambuf` objeto que é usado para atribuir valores a esse objeto.
+*right*<br/>
+Uma referência lvalue para o objeto `basic_streambuf` usada para atribuir valores a esse objeto.
 
 ### <a name="remarks"></a>Comentários
 
@@ -452,7 +458,8 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Meta* o caractere a ser inserido no buffer, ou **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
+*_Meta*<br/>
+O caractere a ser inserido no buffer, ou **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -486,7 +493,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Meta* o caractere a ser inserido no buffer, ou **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
+*_Meta*<br/>
+O caractere a ser inserido no buffer, ou **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -524,7 +532,8 @@ void pbump(int count);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Contagem de* o número de caracteres pelo qual a gravação de mover posição para frente.
+*count*<br/>
+O número de caracteres pelo qual mover a posição de gravação para frente.
 
 ## <a name="pos_type"></a>  basic_streambuf::pos_type
 
@@ -556,7 +565,8 @@ locale pubimbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Loc* uma referência a uma localidade.
+*_Loc*<br/>
+Uma referência a uma localidade.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -582,11 +592,14 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off* a posição para buscar com relação a *Way*.
+*Off*<br/>
+A posição para buscar com relação a *Way*.
 
-*Way* o ponto de partida para operações de deslocamento. Consulte [seekdir](../standard-library/ios-base-class.md#seekdir) para valores possíveis.
+*Way*<br/>
+O ponto de partida para operações de deslocamento. Consulte [seekdir](../standard-library/ios-base-class.md#seekdir) para valores possíveis.
 
-*_Which* Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
+*_Which*<br/>
+Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -606,9 +619,11 @@ pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Sp* a posição pela qual buscar.
+*_Sp*<br/>
+A posição pela qual buscar.
 
-*_Which* Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
+*_Which*<br/>
+Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -630,9 +645,11 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Buffer* um ponteiro para `char_type` para essa instanciação.
+*_Buffer*<br/>
+Um ponteiro para `char_type` para essa instanciação.
 
-*Contagem de* o tamanho do buffer.
+*count*<br/>
+O tamanho do buffer.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -707,11 +724,14 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off* a posição para buscar com relação a *Way*.
+*Off*<br/>
+A posição para buscar com relação a *Way*.
 
-*Way* o ponto de partida para operações de deslocamento. Consulte [seekdir](../standard-library/ios-base-class.md#seekdir) para valores possíveis.
+*Way*<br/>
+O ponto de partida para operações de deslocamento. Consulte [seekdir](../standard-library/ios-base-class.md#seekdir) para valores possíveis.
 
-*_Which* Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
+*_Which*<br/>
+Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -741,9 +761,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Sp* a posição pela qual buscar.
+*_Sp*<br/>
+A posição pela qual buscar.
 
-*_Which* Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
+*_Which*<br/>
+Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -769,9 +791,11 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Buffer* ponteiro para um buffer.
+*_Buffer*<br/>
+Ponteiro para um buffer.
 
-*Contagem de* tamanho do buffer.
+*count*<br/>
+O tamanho do buffer.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -793,11 +817,14 @@ void setg(char_type* _Gbeg,
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Gbeg* um ponteiro para o início do buffer.
+*_Gbeg*<br/>
+Um ponteiro para o início do buffer.
 
-*_Gnext* um ponteiro para algum lugar no meio do buffer.
+*_Gnext*<br/>
+Um ponteiro para algum lugar no meio do buffer.
 
-*_Gend* um ponteiro para o fim do buffer.
+*_Gend*<br/>
+Um ponteiro para o fim do buffer.
 
 ## <a name="setp"></a>  basic_streambuf::setp
 
@@ -809,9 +836,11 @@ void setp(char_type* _Pbeg, char_type* _Pend);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Pbeg* um ponteiro para o início do buffer.
+*_Pbeg*<br/>
+Um ponteiro para o início do buffer.
 
-*_Pend* um ponteiro para o fim do buffer.
+*_Pend*<br/>
+Um ponteiro para o fim do buffer.
 
 ## <a name="sgetc"></a>  basic_streambuf::sgetc
 
@@ -863,9 +892,11 @@ streamsize sgetn(
 
 ### <a name="parameters"></a>Parâmetros
 
-*PTR* o buffer para conter os caracteres extraídos.
+*ptr*<br/>
+O buffer que deve conter os caracteres extraídos.
 
-*Contagem de* o número de elementos a serem lidos.
+*count*<br/>
+O número de elementos a serem lidos.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -967,7 +998,8 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH* o caractere.
+*CH*<br/>
+O caractere.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1014,7 +1046,8 @@ int_type sputc(char_type _Ch);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CH* o caractere.
+*CH*<br/>
+O caractere.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1056,9 +1089,11 @@ streamsize sputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Parâmetros
 
-*PTR* a cadeia de caracteres.
+*ptr*<br/>
+A cadeia de caracteres.
 
-*Contagem de* a contagem de caracteres.
+*count*<br/>
+A contagem de caracteres.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1281,9 +1316,11 @@ virtual streamsize xsgetn(
 
 ### <a name="parameters"></a>Parâmetros
 
-*PTR* o buffer para conter os caracteres extraídos.
+*ptr*<br/>
+O buffer que deve conter os caracteres extraídos.
 
-*Contagem de* o número de elementos a extrair.
+*count*<br/>
+O número de elementos a extrair.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1303,9 +1340,11 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>Parâmetros
 
-*PTR* ponteiro para elementos a ser inserido.
+*ptr*<br/>
+Ponteiro para elementos a inserir.
 
-*Contagem de* número de elementos a serem inseridos.
+*count*<br/>
+Número de elementos a inserir.
 
 ### <a name="return-value"></a>Valor de retorno
 

@@ -13,34 +13,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 915b2e0c15d3afb3f040b59c22b2de40af2aabb5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6f849b18e761fed4daf2c4a336a984242008bfd7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761762"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105179"
 ---
 # <a name="defaulttypenamegettype-method"></a>Método default::(type_name)::GetType
-Retorna um Platform::Type^ que representa o tipo atual.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-  
-Platform::Type^ GetType()  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
- Um objeto [Platform::Type](../cppcx/platform-type-class.md)^ que representa o objeto atual.  
-  
-### <a name="requirements"></a>Requisitos  
- **Mínimo de cliente com suporte:** Windows 8  
-  
- **Mínimo de servidor com suporte:** Windows Server 2012  
-  
- **Namespace:** padrão  
-  
- **Cabeçalho:** vccorlib.h  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace padrão](../cppcx/default-namespace.md)
+
+Retorna um Platform::Type^ que representa o tipo atual.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+Platform::Type^ GetType();
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Um objeto [Platform::Type](../cppcx/platform-type-class.md)^ que representa o objeto atual.
+
+### <a name="requirements"></a>Requisitos
+
+**Mínimo de cliente com suporte:** Windows 8
+
+**Mínimo de servidor com suporte:** Windows Server 2012
+
+**Namespace:** padrão
+
+**Cabeçalho:** vccorlib.h
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace padrão](../cppcx/default-namespace.md)

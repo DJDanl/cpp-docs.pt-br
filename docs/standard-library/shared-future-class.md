@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_until
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f27162b1dfc96b4797184b3fefc1ad8ecc464f55
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c3f59bcb792d17f031b7a8ce7363158630d87506
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954988"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100774"
 ---
 # <a name="sharedfuture-class"></a>Classe shared_future
 
@@ -115,7 +115,8 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*À direita* um `shared_future` objeto.
+*Direita*<br/>
+Um objeto `shared_future`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -140,7 +141,8 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*À direita* um [futuros](../standard-library/future-class.md) ou `shared_future` objeto.
+*Direita*<br/>
+Um objeto [future](../standard-library/future-class.md) ou `shared_future`.
 
 ### <a name="remarks"></a>Comentários
 
@@ -186,7 +188,8 @@ future_status wait_for(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rel_time* um [chrono:: Duration](../standard-library/duration-class.md) objeto que especifica um intervalo de tempo máximo que o thread bloqueia.
+*Rel_time*<br/>
+Um objeto [chrono::duration](../standard-library/duration-class.md) que especifica um intervalo de tempo máximo durante o qual o thread fica bloqueado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -208,7 +211,8 @@ future_status wait_until(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Abs_time* um [chrono:: time_point](../standard-library/time-point-class.md) objeto que especifica uma hora após o qual o thread pode ser desbloqueado.
+*Abs_time*<br/>
+Um objeto [chrono::time_point](../standard-library/time-point-class.md) que especifica um tempo após o qual o thread pode ser desbloqueado.
 
 ### <a name="return-value"></a>Valor de retorno
 

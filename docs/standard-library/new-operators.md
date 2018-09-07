@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 11c4f3d1c994ee7a29ee47e35881d533f8c8715a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 31db26453efbecceb136b614b8eabf178a0cdfea
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216182"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100360"
 ---
 # <a name="ltnewgt-operators"></a>Operadores &lt;new&gt;
 
@@ -39,7 +39,8 @@ void operator delete(void* ptr,
 
 ### <a name="parameters"></a>Parâmetros
 
-*PTR* o ponteiro cujo valor é renderizado como inválido pela exclusão.
+*ptr*<br/>
+O ponteiro cujo valor será renderizado como inválido pela exclusão.
 
 ### <a name="remarks"></a>Comentários
 
@@ -71,7 +72,8 @@ void operator delete[](void* ptr,
 
 ### <a name="parameters"></a>Parâmetros
 
-*PTR* o ponteiro cujo valor é renderizado como inválido pela exclusão.
+*ptr*<br/>
+O ponteiro cujo valor será renderizado como inválido pela exclusão.
 
 ### <a name="remarks"></a>Comentários
 
@@ -101,9 +103,11 @@ void* operator new(std::size_t count,
 
 ### <a name="parameters"></a>Parâmetros
 
-*Contagem de* o número de bytes de armazenamento a ser alocado.
+*count*<br/>
+O número de bytes de armazenamento a ser alocado.
 
-*PTR* o ponteiro a ser retornado.
+*ptr*<br/>
+O ponteiro a ser retornado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -198,9 +202,11 @@ void* operator new[](std::size_t count,
 
 ### <a name="parameters"></a>Parâmetros
 
-*Contagem de* o número de bytes de armazenamento a ser alocado para o objeto de matriz.
+*count*<br/>
+O número de bytes de armazenamento a ser alocado para o objeto de matriz.
 
-*PTR* o ponteiro a ser retornado.
+*ptr*<br/>
+O ponteiro a ser retornado.
 
 ### <a name="return-value"></a>Valor de retorno
 

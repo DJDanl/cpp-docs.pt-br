@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec80db9282bc51106c6beedd42dd05a1ba636c74
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 10c93374a1ed9ed4fa875c78310d9ffa34406b83
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958013"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100826"
 ---
 # <a name="extremevaluedistribution-class"></a>Classe extreme_value_distribution
 
@@ -81,9 +81,11 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*RealType* padrão é o tipo de resultado de ponto flutuante **duplo**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*RealType*<br/>
+O tipo de resultado de ponto flutuante assume como padrão **duplas**. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
-*URNG* O mecanismo gerador de números aleatórios. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*URNG*<br/>
+O mecanismo gerador números aleatórios. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Comentários
 
@@ -200,11 +202,14 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*a_value* o `a` parâmetro de distribuição.
+*a_value*<br/>
+O parâmetro de distribuição `a`.
 
-*b_value* o `b` parâmetro de distribuição.
+*b_value*<br/>
+O parâmetro de distribuição `b`.
 
-*parm* o `param_type` estrutura usada para construir a distribuição.
+*parm*<br/>
+A estrutura `param_type` usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
 
@@ -232,11 +237,14 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*a_value* o `a` parâmetro de distribuição.
+*a_value*<br/>
+O parâmetro de distribuição `a`.
 
-*b_value* o `b` parâmetro de distribuição.
+*b_value*<br/>
+O parâmetro de distribuição `b`.
 
-*à direita* o `param_type` objeto a ser comparado a este.
+*right*<br/>
+O objeto `param_type` a ser comparado a este.
 
 ### <a name="remarks"></a>Comentários
 

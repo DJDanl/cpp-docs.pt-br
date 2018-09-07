@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b782d7d53e5d97f08ebae62fc62d7a49c9f96d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4b534190a4e7243f5192e6d703b056d8bcb327ca
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763650"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110630"
 ---
 # <a name="catlautothreadmodule-class"></a>Classe CAtlAutoThreadModule
 
 Essa classe implementa um servidor COM em pool de thread, o modelo de apartment.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+> Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -46,7 +46,7 @@ Você deve usar o [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-facto
 `CAtlAutoThreadModule _AtlAutoModule; // name is immaterial.`
 
 > [!NOTE]
->  Essa classe substitui o obsoletos [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) classe.
+> Essa classe substitui o obsoletos [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) classe.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 

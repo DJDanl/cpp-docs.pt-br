@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2192ea954df1e7a63157d6deb04c7d34cd42337c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c4cdc26c66c05cda821b43367b806ecc2a2a8168
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966479"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100800"
 ---
 # <a name="enableif-class"></a>Classe enable_if
 
@@ -37,9 +37,11 @@ struct enable_if;
 
 ### <a name="parameters"></a>Parâmetros
 
-*B* o valor que determina a existência do tipo resultante.
+*B*<br/>
+O valor que determina a existência do tipo resultante.
 
-*T* o tipo a instanciar se *B* é verdadeiro.
+*T*<br/>
+O tipo a instanciar se *B* é verdadeiro.
 
 ## <a name="remarks"></a>Comentários
 
@@ -64,12 +66,12 @@ Seguem quatro cenários de exemplo:
     template <your_stuff>
 typename enable_if<your_condition, your_return_type>::type
     yourfunction(args) {// ...
- }
+}
 // The alias template makes it more concise:
     template <your_stuff>
 enable_if_t<your_condition, your_return_type>
 yourfunction(args) {// ...
- }
+}
 ```
 
 - Cenário 2: Adicionando um parâmetro de função com um argumento padrão:
@@ -78,7 +80,7 @@ yourfunction(args) {// ...
     template <your_stuff>
 your_return_type_if_present
     yourfunction(args, enable_if_t<your condition, FOO> = BAR) {// ...
- }
+}
 ```
 
 - Cenário 3: Adicionando um parâmetro de modelo com um argumento padrão:
@@ -95,7 +97,7 @@ rest_of_function_declaration_goes_here
 void your_function(const T& t,
     enable_if_t<is_something<T>::value, const string&>
 s) {// ...
- }
+}
 ```
 
 O Cenário 1 não funciona com construtores e operadores de conversão porque eles não possuem tipos de retorno.

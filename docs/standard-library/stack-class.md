@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b933029f7180292e1c9e392bf2ab09e8dbcb204
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e4f1f34e43f04d19efb38ba32488b43845d42260
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963219"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110406"
 ---
 # <a name="stack-class"></a>Classe de pilha
 
@@ -50,9 +50,11 @@ class stack
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo* tipo de dados do elemento a ser armazenado na pilha.
+*Tipo*<br/>
+O tipo de dados do elemento a ser armazenado na stack.
 
-*Contêiner* o tipo de contêiner subjacente usado para implementar a stack. O valor padrão é a classe `deque`*\<Type>*.
+*Contêiner*<br/>
+O tipo do contêiner subjacente usado para implementar a stack. O valor padrão é a classe `deque`*\<Type>*.
 
 ## <a name="remarks"></a>Comentários
 
@@ -227,7 +229,8 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Val* o elemento adicionado à parte superior da pilha.
+*Val*<br/>
+O elemento adicionado à parte superior da stack.
 
 ### <a name="remarks"></a>Comentários
 
@@ -334,7 +337,8 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* o contêiner do qual a stack construída será uma cópia.
+*right*<br/>
+O contêiner do qual a stack construída será uma cópia.
 
 ### <a name="example"></a>Exemplo
 

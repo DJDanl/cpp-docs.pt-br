@@ -44,12 +44,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&gt;=
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a55109683a18415638cacd9cd15dbcaa3164fc8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bdb2962d2d1dc4e39d2528c89267a9cf8871937a
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846926"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105777"
 ---
 # <a name="directoryentry-class"></a>Classe directory_entry
 
@@ -67,7 +67,44 @@ A classe armazena um objeto do tipo [path](../standard-library/path-class.md). O
 
 Para obter mais informações e exemplos de código, consulte [Navegação do Sistema de Arquivos (C++)](../standard-library/file-system-navigation.md).
 
-## <a name="assign"></a>assign
+### <a name="constructors"></a>Construtores
+
+|Construtor|Descrição|
+|-|-|
+|[directory_entry](#directory_entry)|Os construtores usados como padrão se comportam como esperado. O quarto construtor inicializa `mypath` à *pval*, `mystat` para *stat_arg*, e `mysymstat` para *symstat_arg*.|
+
+### <a name="member-functions"></a>Funções de membro
+
+|Função de membro|Descrição|
+|-|-|
+|[assign](#assign)|A função de membro atribui *pval* à `mypath`, *stat* para `mystat`, e *symstat* para `mysymstat`.|
+|[path](#path)|A função membro retorna `mypath`.|
+|[replace_filename](#replace_filename)|A função membro substitui `mypath` com `mypath.parent_path()`  /  *pval*, `mystat` com *stat_arg*, e `mysymstat` com *symstat_arg*|
+|[status](#status)|Ambas as funções membro retornam `mystat` , possivelmente, primeiro alterado.|
+|[symlink_status](#symlink_status)|Ambas as funções membro retornam `mysymstat` , possivelmente, primeiro alterado.|
+
+### <a name="operators"></a>Operadores
+
+|Operador|Descrição|
+|-|-|
+|[operator!=](#op_neq)|Substitui os elementos da lista por uma cópia de outra lista.|
+|[operator=](#op_as)|Os operadores de atribuição de membro usados como padrão se comportam como esperado.|
+|[operator==](#op_eq)|Retorna `mypath == right.mypath`.|
+|[operator<](#op_lt)|Retorna `mypath < right.mypath`.|
+|[operator<=](#op_lteq)|Retorna `!(right < *this)`.|
+|[operator>](#op_gt)|Retorna `right < *this`.|
+|[operator>=](#op_gteq)|Retorna `!(*this < right)`.|
+|[operador const path_type &](#path_type)|Retorna `mypath`.|
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** \<experimental/filesystem&gt;
+
+**Namespace:** std::experimental::filesystem
+
+## <a name="assign"></a> Atribuir
+
+A função de membro atribui *pval* à `mypath`, *stat_arg* para `mystat`, e *symstat_arg* para `mysymstat`.
 
 ```cpp
 void assign(const std::experimental::filesystem::path& pval,
@@ -75,9 +112,20 @@ void assign(const std::experimental::filesystem::path& pval,
     file_status symstat_arg = file_status());
 ```
 
-A função de membro atribui pval a mypath, stat a mystat e symstat a mysymstat.
+### <a name="parameters"></a>Parâmetros
 
-## <a name="directoryentry"></a>directory_entry
+*PVal*<br/>
+O caminho do nome de arquivo armazenado.  
+
+*stat_arg*<br/>
+O status do nome do arquivo armazenado.  
+
+*symstat_arg*<br/>
+O status do link simbólico do nome do arquivo armazenado.  
+
+## <a name="directory_entry"></a> directory_entry
+
+Os construtores usados como padrão se comportam como esperado. O quarto construtor inicializa `mypath` à *pval*, `mystat` para *stat_arg*, e `mysymstat` para *symstat_arg*.
 
 ```cpp
 directory_entry() = default;
@@ -88,82 +136,128 @@ explicit directory_entry(const std::experimental::filesystem::path& pval,
     file_status symstat_arg = file_status());
 ```
 
-Os construtores usados como padrão se comportam como esperado. O quarto construtor inicializa mypath em pval, mystat em stat_arg e mysymstat em symstat_arg.
+### <a name="parameters"></a>Parâmetros
 
-## <a name="operator"></a>operator!=
+*PVal*<br/>
+O caminho do nome de arquivo armazenado.  
+
+*stat_arg*<br/>
+O status do nome do arquivo armazenado.  
+
+*symstat_arg*<br/>
+O status do link simbólico do nome do arquivo armazenado.  
+
+## <a name="op_neq"></a> operador! =
+
+A função membro retorna `!(*this == right)`.
 
 ```cpp
 bool operator!=(const directory_entry& right) const noexcept;
 ```
 
-A função de membro retorna !(*this == right).
+### <a name="parameters"></a>Parâmetros
 
-## <a name="operator"></a>operator=
+*right*<br/>
+O [directory_entry](../standard-library/directory-entry-class.md) que estão sendo comparados para o `directory_entry`.  
+
+## <a name="op_as"></a> operador =
+
+Os operadores de atribuição de membro usados como padrão se comportam como esperado.
 
 ```cpp
 directory_entry& operator=(const directory_entry&) = default;
 directory_entry& operator=(directory_entry&&) noexcept = default;
 ```
 
-Os operadores de atribuição de membro usados como padrão se comportam como esperado.
+### <a name="parameters"></a>Parâmetros
 
-## <a name="operator"></a>operator==
+*right*<br/>
+O [directory_entry](../standard-library/directory-entry-class.md) que está sendo copiado para o `directory_entry`.  
+
+## <a name="op_eq"></a> operador = =
+
+A função membro retorna `mypath == right.mypath`.
 
 ```cpp
 bool operator==(const directory_entry& right) const noexcept;
 ```
 
-A função de membro retorna mypath == right.mypath.
+### <a name="parameters"></a>Parâmetros
 
-## <a name="operatorlt"></a>Operador&lt;
+*right*<br/>
+O [directory_entry](../standard-library/directory-entry-class.md) que estão sendo comparados para o `directory_entry`.  
+
+## <a name="op_lt"></a> operador&lt;
+
+A função membro retorna `mypath < right.mypath`.
 
 ```cpp
 bool operator<(const directory_entry& right) const noexcept;
 ```
 
-A função de membro retorna mypath &lt; right.mypath.
+### <a name="parameters"></a>Parâmetros
 
-## <a name="operatorlt"></a>operator&lt;=
+*right*<br/>
+O [directory_entry](../standard-library/directory-entry-class.md) que estão sendo comparados para o `directory_entry`.  
+
+## <a name="op_lteq"></a> operador&lt;=
+
+A função membro retorna `!(right < *this)`.
 
 ```cpp
 bool operator&lt;=(const directory_entry& right) const noexcept;
 ```
 
-A função de membro retorna !(right \< *this).
+### <a name="parameters"></a>Parâmetros
 
-## <a name="operatorgt"></a>Operador&gt;
+*right*<br/>
+O [directory_entry](../standard-library/directory-entry-class.md) que estão sendo comparados para o `directory_entry`.  
+
+## <a name="op_gt"></a> operador&gt;
+
+A função membro retorna `right < *this`.
 
 ```cpp
 bool operator&gt;(const directory_entry& right) const noexcept;
 ```
 
-A função de membro retorna right \< *this.
+### <a name="parameters"></a>Parâmetros
 
-## <a name="operatorgt"></a>operator&gt;=
+*right*<br/>
+O [directory_entry](../standard-library/directory-entry-class.md) que estão sendo comparados para o `directory_entry`.  
+
+## <a name="op_gteq"></a> operador&gt;=
+
+A função membro retorna `!(*this < right)`.
 
 ```cpp
 bool operator&gt;=(const directory_entry& right) const noexcept;
 ```
 
-Retorna a função de membro! (* isso \< direito).
+### <a name="parameters"></a>Parâmetros
 
-## <a name="operator-const-pathtype"></a>operator const path_type&
+*right*<br/>
+O [directory_entry](../standard-library/directory-entry-class.md) que estão sendo comparados para o `directory_entry`.  
+
+## <a name="path_type"></a> operador const path_type &
+
+O operador de membro retorna `mypath`.
 
 ```cpp
 operator const std::experimental::filesystem::path&() const;
 ```
 
-O operador de membro retorna mypath.
+## <a name="path"></a> caminho
 
-## <a name="path"></a>path
+A função membro retorna `mypath`.
 
 ```cpp
 const std::experimental::filesystem::path& path() const noexcept;
 ```
 
-A função de membro retorna mypath.
+## <a name="replace_filename"></a> replace_filename
 
-## <a name="replacefilename"></a>replace_filename
+A função membro substitui `mypath` com `mypath.parent_path()`  /  *pval*, `mystat` com *stat_arg*, e `mysymstat` com *symstat_arg*
 
 ```cpp
 void replace_filename(
@@ -172,37 +266,50 @@ void replace_filename(
     file_status symstat_arg = file_status());
 ```
 
-A função de membro substitui mypath por mypath.parent_path() / pval, mystat por stat_arg e mysymstat por symstat_arg
+### <a name="parameters"></a>Parâmetros
 
-## <a name="status"></a>status
+*PVal*<br/>
+O caminho do nome de arquivo armazenado.  
+
+*stat_arg*<br/>
+O status do nome do arquivo armazenado.  
+
+*symstat_arg*<br/>
+O status do link simbólico do nome do arquivo armazenado.  
+
+## <a name="status"></a> status
+
+Ambas as funções membro retornam `mystat` , possivelmente, primeiro alterado da seguinte maneira:
+
+1. Se `status_known(mystat)` , em seguida, não faça nada.
+
+1. Caso contrário, se `!status_known(mysymstat) && !is_symlink(mysymstat)` , em seguida, `mystat = mysymstat`.
 
 ```cpp
 file_status status() const;
 file_status status(error_code& ec) const noexcept;
 ```
 
-Ambas as funções de membro retornam mystat, possivelmente, primeiro alterado da seguinte maneira:
+### <a name="parameters"></a>Parâmetros
 
-1. Se for status_known(mystat), não realizará nenhuma ação.
+*EC*<br/>
+O código de erro de status.  
 
-1. Caso contrário, se for !status_known(mysymstat) && !is_symlink(mysymstat), será mystat = mysymstat.
+## <a name="symlink_status"></a> symlink_status
 
-## <a name="symlinkstatus"></a>symlink_status
+Ambas as funções membro retornam `mysymstat` , possivelmente, primeiro alterado da seguinte maneira: se `status_known(mysymstat)` , em seguida, não faça nada. Caso contrário, `mysymstat = symlink_status(mypval)`.
 
 ```cpp
 file_status symlink_status() const;
 file_status symlink_status(error_code& ec) const noexcept;
 ```
 
-Ambas as funções de membro retornam mysymstat, possivelmente, primeiro alterado da seguinte maneira: se for status_known(mysymstat), nenhuma ação. Caso contrário, mysymstat = symlink_status(mypval).
+### <a name="parameters"></a>Parâmetros
 
-## <a name="requirements"></a>Requisitos
-
-**Cabeçalho:** \<experimental/sistema de arquivos&gt;
-
-**Namespace:** std::experimental::filesystem
+*EC*<br/>
+O código de erro de status.  
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<filesystem&gt;](../standard-library/filesystem.md)<br/>
+[Referência de Arquivos de Cabeçalho](../standard-library/cpp-standard-library-header-files.md)  
+[\<filesystem&gt;](../standard-library/filesystem.md)  

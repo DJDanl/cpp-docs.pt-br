@@ -13,34 +13,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3855da95342098c9ae260dc1d238c77f0fe69b86
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 756fbf28a73314ad4e335f658a48527f90975e55
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752493"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108512"
 ---
 # <a name="defaulttypenametostring-method"></a>Método default::(type_name)::ToString
-Retorna uma cadeia de caracteres que representa o tipo atual.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-  
-String^ ToString()  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
- Uma cadeia de caracteres que representa o objeto atual.  
-  
-### <a name="requirements"></a>Requisitos  
- **Mínimo de cliente com suporte:** Windows 8  
-  
- **Mínimo de servidor com suporte:** Windows Server 2012  
-  
- **Namespace:** padrão  
-  
- **Cabeçalho:** vccorlib.h  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace padrão](../cppcx/default-namespace.md)
+
+Retorna uma cadeia de caracteres que representa o tipo atual.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+String^ ToString();
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Uma cadeia de caracteres que representa o objeto atual.
+
+### <a name="requirements"></a>Requisitos
+
+**Mínimo de cliente com suporte:** Windows 8
+
+**Mínimo de servidor com suporte:** Windows Server 2012
+
+**Namespace:** padrão
+
+**Cabeçalho:** vccorlib.h
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace padrão](../cppcx/default-namespace.md)

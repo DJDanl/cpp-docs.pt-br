@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbe88c460dfc3341832abdcda21698357a649570
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1fe772f1c2925ce28d0e445023ab14d82b9b3f23
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759909"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107686"
 ---
 # <a name="platformwrongthreadexception-class"></a>Classe Platform::WrongThreadException
-Gerada quando um thread chama via um ponteiro de interface, que destina-se a um objeto proxy que não pertence ao apartment do thread.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-public ref class WrongThreadException : COMException,    IException,    IPrintable,    IEquatable  
-```  
-  
-### <a name="remarks"></a>Comentários  
- Para obter mais informações, consulte [COMException](../cppcx/platform-comexception-class.md).  
-  
-### <a name="requirements"></a>Requisitos  
- **Mínimo de cliente com suporte:** Windows 8  
-  
- **Mínimo de servidor com suporte:** Windows Server 2012  
-  
- **Namespace:** Platform  
-  
- **Metadados:** platform.winmd  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe Platform::COMException](../cppcx/platform-comexception-class.md)
+
+Gerada quando um thread chama via um ponteiro de interface, que destina-se a um objeto proxy que não pertence ao apartment do thread.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+public ref class WrongThreadException : COMException,    IException,    IPrintable,    IEquatable
+```
+
+### <a name="remarks"></a>Comentários
+
+Para obter mais informações, consulte [COMException](../cppcx/platform-comexception-class.md).
+
+### <a name="requirements"></a>Requisitos
+
+**Mínimo de cliente com suporte:** Windows 8
+
+**Mínimo de servidor com suporte:** Windows Server 2012
+
+**Namespace:** Platform
+
+**Metadados:** platform.winmd
+
+## <a name="see-also"></a>Consulte também
+
+[Classe Platform::COMException](../cppcx/platform-comexception-class.md)

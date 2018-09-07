@@ -33,12 +33,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ca83a9b9b48302e9ff4974d083d0a95796a1ef3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1418278f4b6756db4e747162f090545c3e9f3ae
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395507"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44107522"
 ---
 # <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
 
@@ -54,17 +54,18 @@ void _CrtMemCheckpoint(
 
 ### <a name="parameters"></a>Parâmetros
 
-*estado* ponteiro para **crtmemstate** estrutura para preencher com o ponto de verificação de memória.
+*state*<br/>
+Ponteiro para **crtmemstate** estrutura a ser preenchido com o ponto de verificação de memória.
 
 ## <a name="remarks"></a>Comentários
 
-O **crtmemcheckpoint** função cria um instantâneo do estado atual do heap de depuração a qualquer momento. Esse instantâneo pode ser usado por outras funções de estado de heap como [_CrtMemDifference](crtmemdifference.md) para ajudar a detectar perdas de memória e outros problemas. Quando [Debug](../../c-runtime-library/debug.md) não está definido, chamadas para **crtmemstate** são removidos durante o pré-processamento.
+O **crtmemcheckpoint** função cria um instantâneo do estado atual do heap de depuração em um determinado momento. Esse instantâneo pode ser usado por outras funções de estado de heap como [_CrtMemDifference](crtmemdifference.md) para ajudar a detectar perdas de memória e outros problemas. Quando [Debug](../../c-runtime-library/debug.md) não está definido, as chamadas a **crtmemstate** são removidas durante o pré-processamento.
 
-O aplicativo deve transmitir um ponteiro para uma instância alocada anteriormente o **crtmemstate** estrutura, definida em crtdbg. h, no *estado* parâmetro. Se **crtmemcheckpoint** encontra um erro durante a criação do ponto de verificação, a função gera uma **_CRT_WARN** depurar relatório que descreve o problema.
+O aplicativo deve passar um ponteiro para uma instância previamente alocada dos **crtmemstate** estrutura, definida em crtdbg. h, nas *estado* parâmetro. Se **crtmemcheckpoint** encontrar um erro durante a criação do ponto de verificação, a função gera uma **_CRT_WARN** depurar relatório descrevendo o problema.
 
-Para obter mais informações sobre funções de estado de heap e a **crtmemstate** estrutura, consulte [funções de emissão de relatórios de estado de Heap](/visualstudio/debugger/crt-debug-heap-details). Para obter mais informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap base, consulte [Detalhes do heap de depuração do CRT](/visualstudio/debugger/crt-debug-heap-details).
+Para obter mais informações sobre as funções de estado de heap e o **crtmemstate** estrutura, consulte [funções de relatório de estado de Heap](/visualstudio/debugger/crt-debug-heap-details). Para obter mais informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap base, consulte [Detalhes do heap de depuração do CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Se *estado* é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) é definido como **EINVAL** e a função retorna.
+Se *estado* é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) é definido como **EINVAL** e a função retorna.
 
 ## <a name="requirements"></a>Requisitos
 

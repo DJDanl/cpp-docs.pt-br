@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::chrono [C++], duration
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4b85fd369e82ceab0a6b5255267e32d864eab67
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: bb4d2c813b53a180f13d5047dc0d78dae98fe59f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956860"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100905"
 ---
 # <a name="duration-class"></a>Classe duration
 
@@ -120,13 +120,17 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rep2* um tipo aritmético para representar o número de tiques.
+*Rep2*<br/>
+Um tipo aritmético para representar o número de tiques.
 
-*Period2* um `std::ratio` especialização de modelo para representar o período de tiques em unidades de segundos.
+*Period2*<br/>
+Uma especialização de modelo `std::ratio` para representar o período de tiques em unidades de segundos.
 
-*R* o número de tiques de período padrão.
+*R*<br/>
+O número de tiques de período padrão.
 
-*Dur* o número de tiques do período especificado por *Period2*.
+*Dur*<br/>
+O número de tiques do período especificado por *Period2*.
 
 ### <a name="remarks"></a>Comentários
 
@@ -202,7 +206,8 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Div* para o primeiro método, *Div* representa uma contagem de tiques. Para o segundo método, *Div* é um `duration` objeto que contém uma contagem de tiques.
+*Div*<br/>
+Para o primeiro método, *Div* representa uma contagem de tiques. Para o segundo método, *Div* é um `duration` objeto que contém uma contagem de tiques.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -218,7 +223,8 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>Parâmetros
 
-*MULT* um valor do tipo especificado pelo `duration::rep`.
+*MULT*<br/>
+Um valor do tipo especificado por `duration::rep`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -234,7 +240,8 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Div* um valor do tipo especificado pelo `duration::rep`.
+*Div*<br/>
+Um valor do tipo especificado por `duration::rep`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -274,7 +281,8 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Dur* um `duration` objeto.
+*Dur*<br/>
+Um objeto `duration`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -290,7 +298,8 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Dur* um `duration` objeto.
+*Dur*<br/>
+Um objeto `duration`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -314,7 +323,8 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Div* o divisor, que é um objeto de duração ou um valor que representa as contagens em escala.
+*Div*<br/>
+O divisor, que é um objeto de duração ou um valor que representa as contagens de tiques.
 
 ### <a name="remarks"></a>Comentários
 

@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96256f71a94f20f126f02b04511c57c831ad2a00
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 783225412b01430d1043dafd4761cb7432eaa1d7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406635"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108313"
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
 
-Habilitar ou desabilitar o suporte do **%n** Formatar [printf, printf_l, and wprintf, wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-as funções da família.
+Habilitar ou desabilitar o suporte do **%n** Formatar [printf, printf_l, wprintf, wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-funções da família.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -55,15 +55,16 @@ int _set_printf_count_output(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Habilitar* um valor diferente de zero para habilitar **%n** suporte, 0 para desabilitar **%n** suporte.
+*enable*<br/>
+Um valor diferente de zero para habilitar **%n** dão suporte a 0 para desabilitar **%n** dão suporte.
 
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/valor de retorno
 
-O estado do **%n** suporte antes de chamar essa função: diferente de zero se **%n** foi habilitado o suporte, 0 se ele foi desabilitado.
+O estado de **%n** suporte antes de chamar essa função: diferente de zero se **%n** suporte tiver sido habilitado, 0 se ele foi desabilitado.
 
 ## <a name="remarks"></a>Comentários
 
-Por motivos de segurança, suporte para o **%n** especificador de formato é desabilitado por padrão em **printf** e todas as suas variantes. Se **%n** é encontrado em uma **printf** especificação de formato, o comportamento padrão é invocar o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Chamando **set_printf_count_output** com um argumento diferente de zero fará com que **printf**-as funções da família interpretar **%n** conforme descrito em [formato Especificação de sintaxe: funções printf e and wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+Por motivos de segurança, suporte para o **%n** especificador de formato é desabilitado por padrão no **printf** e todas as suas variantes. Se **%n** for encontrado em um **printf** especificação de formato, o comportamento padrão é invocar o manipulador de parâmetro inválido conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Chamando **set_printf_count_output** com um argumento diferente de zero fará com que **printf**-funções da família interpretar **%n** conforme descrito em [formato Sintaxe de especificação: funções printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="requirements"></a>Requisitos
 

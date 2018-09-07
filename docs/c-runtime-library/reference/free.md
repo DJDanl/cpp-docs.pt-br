@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc6dfd832d18dbabc1ebc10aec252cc8afe15346
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 35a1ae1a27b08db14673b125ecbc2978fd4738a3
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402511"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100477"
 ---
 # <a name="free"></a>free
 
@@ -53,19 +53,20 @@ void free(
 
 ### <a name="parameters"></a>Parâmetros
 
-*memblock* anteriormente alocado bloco de memória a ser liberado.
+*memblock*<br/>
+Bloqueio de memória anteriormente alocado a ser liberado.
 
 ## <a name="remarks"></a>Comentários
 
-O **livre** função desaloca um bloco de memória (*memblock*) que antes era alocado por uma chamada para **calloc**, **malloc**, ou **realloc**. O número de bytes liberadas equivale ao número de bytes solicitado quando o bloco foi alocado (ou realocada, no caso de **realloc**). Se *memblock* é **nulo**, o ponteiro é ignorado e **livre** retorna imediatamente. Tentativa de liberar um ponteiro inválido (um ponteiro para um bloco de memória que não foi alocado por **calloc**, **malloc**, ou **realloc**) podem afetar as solicitações subsequentes de alocação e causar erros.
+O **livre** função desaloca um bloco de memória (*memblock*) que foi alocado anteriormente por uma chamada a **calloc**, **malloc**, ou **realloc**. O número de bytes liberados é equivalente ao número de bytes solicitados quando o bloco foi alocado (ou realocado, no caso de **realloc**). Se *memblock* é **nulo**, o ponteiro será ignorado e **livre** retorna imediatamente. A tentativa de liberar um ponteiro inválido (um ponteiro para um bloco de memória que não foi alocado por **calloc**, **malloc**, ou **realloc**) pode afetar solicitações posteriores de alocação e causar erros.
 
-Se ocorrer um erro na liberação de memória, **errno** é definida com informações do sistema operacional da natureza da falha. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Se ocorrer um erro liberar a memória **errno** é definido com informações do sistema operacional da natureza da falha. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Após um bloco de memória ter sido liberado, [_heapmin](heapmin.md) minimiza a quantidade de memória livre no heap juntando as regiões não utilizadas e liberando-as para o sistema operacional. A memória liberada que não for liberada para o sistema operacional será restaurada para o pool livre e ficará disponível para alocação novamente.
 
-Quando o aplicativo está vinculado com uma versão de depuração das bibliotecas de tempo de execução do C, **livre** resolve [free_dbg](free-dbg.md). Para obter mais informações sobre como o heap é gerenciado durante o processo de depuração, consulte [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (O heap de depuração do CRT).
+Quando o aplicativo estiver vinculado a uma versão de depuração das bibliotecas de tempo de execução C, **livre** resolve [free_dbg](free-dbg.md). Para obter mais informações sobre como o heap é gerenciado durante o processo de depuração, consulte [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (O heap de depuração do CRT).
 
-**livre** está marcado como `__declspec(noalias)`, que significa que a função é garantia de não modificar variáveis globais. Para obter mais informações, consulte [noalias](../../cpp/noalias.md).
+**livre** está marcado como `__declspec(noalias)`, que significa que a função não é garantido que modifica variáveis globais. Para obter mais informações, consulte [noalias](../../cpp/noalias.md).
 
 Para liberar a memória alocada com [_malloca](malloca.md), use [_freea](freea.md).
 

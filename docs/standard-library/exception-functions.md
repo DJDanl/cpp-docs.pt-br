@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 5734c745f19d22c562f68aa2b518c9b4315ba12e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 9401772e35527c63f47dc10bbb0e501029558825
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962267"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105400"
 ---
 # <a name="ltexceptiongt-functions"></a>Funções &lt;exception&gt;
 
@@ -75,7 +75,8 @@ exception_ptr make_exception_ptr(E Except);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Exceto* a classe com a exceção a ser copiada. Normalmente, você especifica um objeto de [classe de exceção](../standard-library/exception-class.md) como o argumento para a função `make_exception_ptr`, embora qualquer objeto de classe possa ser o argumento.
+*Exceto*<br/>
+A classe com a exceção a ser copiada. Normalmente, você especifica um objeto de [classe de exceção](../standard-library/exception-class.md) como o argumento para a função `make_exception_ptr`, embora qualquer objeto de classe possa ser o argumento.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -97,7 +98,8 @@ void rethrow_exception(exception_ptr P);
 
 ### <a name="parameters"></a>Parâmetros
 
-*P* a exceção capturada para relançamento. Se *P* é um valor nulo [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), a função lançará [std:: bad_exception](../standard-library/bad-exception-class.md).
+*P*<br/>
+A exceção capturada para relançamento. Se *P* é um valor nulo [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), a função lançará [std:: bad_exception](../standard-library/bad-exception-class.md).
 
 ### <a name="remarks"></a>Comentários
 
@@ -121,7 +123,8 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*fnew* a função a ser chamada no encerramento.
+*fnew*<br/>
+A função a ser chamada no encerramento.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -178,7 +181,8 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*fnew* a função a ser chamado quando uma exceção inesperada é encontrada.
+*fnew*<br/>
+A função a ser chamada quando uma exceção inesperada é encontrada.
 
 ### <a name="return-value"></a>Valor de retorno
 

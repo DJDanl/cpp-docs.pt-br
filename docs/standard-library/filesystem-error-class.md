@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1acf34f8478bc075b53780f1e48df125c22608b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6ec0a30a8ee193db362efa375f6e9d0f5746a56f
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845486"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105296"
 ---
 # <a name="filesystemerror-class"></a>Classe filesystem_error
 
@@ -33,9 +33,31 @@ class filesystem_error    : public system_error;
 
 ## <a name="remarks"></a>Comentários
 
-A classe serve como a classe base para todas as exceções geradas para relatar um erro em funções \<filesystem >. Ela armazena um objeto do tipo cadeia de caracteres, chamado mymesg aqui para fins de exposição. Ela também armazena dois objetos do tipo caminho, chamados mypval1 e mypval2.
+A classe serve como a classe base para todas as exceções geradas para relatar um erro em funções \<filesystem >. Ele armazena um objeto do tipo `string`, chamado `mymesg` aqui para fins de explicação. Ele também armazena dois objetos do tipo `path`, chamado `mypval1` e `mypval2`.
 
-## <a name="filesystemerrorfilesystemerror"></a>filesystem_error::filesystem_error
+### <a name="constructors"></a>Construtores
+
+|Construtor|Descrição|
+|-|-|
+|[filesystem_error](#filesystem_error)|Constrói um `filesystem_error` mensagem.|
+
+### <a name="member-functions"></a>Funções de membro
+
+|Função de membro|Descrição|
+|-|-|
+|[path1](#path1)|Retorna `mypval1`|
+|[path2](#path2)|Retorna `mypval2`|
+|[o que](#what)|Retorna um ponteiro para um `NTBS`.|
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** \<filesystem >
+
+**Namespace:** std::experimental::filesystem
+
+## <a name="filesystem_error"></a> filesystem_error:: filesystem_error
+
+O primeiro construtor constrói sua mensagem de *what_arg* e *ec*. O segundo construtor também constrói sua mensagem de *pval1*, que armazena em `mypval1`. O terceiro construtor também constrói sua mensagem de *pval1*, que armazena em `mypval1`e de *pval2*, que armazena em `mypval2`.
 
 ```cpp
 filesystem_error(const string& what_arg,
@@ -51,37 +73,43 @@ filesystem_error(const string& what_arg,
     error_code ec);
 ```
 
-O primeiro construtor constrói sua mensagem de what_arg e ec. O segundo construtor também constrói sua mensagem de pval1, que armazena em mypval1. O terceiro construtor também constrói sua mensagem de pval1, que armazena em mypval1, em de pval2, que armazena em mypval2.
+### <a name="parameters"></a>Parâmetros
 
-## <a name="filesystemerrorpath1"></a>filesystem_error::path1
+*what_arg*<br/>
+Mensagem especificada.
+
+*EC*<br/>
+Código de erro especificado.
+
+*mypval1*<br/>
+Parâmetro adicional de mensagem especificada.
+
+*mypval2*<br/>
+Parâmetro de mensagem especificado ainda mais.
+
+## <a name="path1"></a> filesystem_error::path1
+
+A função membro retorna `mypval1`
 
 ```cpp
 const path& path1() const noexcept;
 ```
 
-A função membro retorna mypval1
+## <a name="path2"></a> filesystem_error::path2
 
-## <a name="filesystemerrorpath2"></a>filesystem_error::path2
+A função membro retorna `mypval2`
 
 ```cpp
 const path& path2() const noexcept;
 ```
 
-A função membro retorna mypval2
+## <a name="what"></a> filesystem_error::What
 
-## <a name="filesystemerrorwhat"></a>filesystem_error::what
+A função membro retorna um ponteiro para um `NTBS`, preferencialmente composto por `runtime_error::what()`, `system_error::what()`, `mymesg`, `mypval1.native_string()`, e `mypval2.native_string()`.
 
 ```cpp
 const char *what() const noexcept;
 ```
-
-A função membro retorna um ponteiro para um NTBS, preferencialmente composto por runtime_error::what(), system_error::what(), mymesg, mypval1.native_string() e mypval2.native_string().
-
-## <a name="requirements"></a>Requisitos
-
-**Cabeçalho:** \<filesystem >
-
-**Namespace:** std::experimental::filesystem
 
 ## <a name="see-also"></a>Consulte também
 

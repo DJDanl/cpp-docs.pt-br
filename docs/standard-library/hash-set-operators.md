@@ -9,12 +9,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: ecc6640dd41fcc6a275de10becf1d9c03128f562
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b9c6fe6b39b771b81b6508c10abd43c71774f9a7
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966648"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108245"
 ---
 # <a name="lthashsetgt-operators"></a>Operadores &lt;hash_set&gt;
 
@@ -36,9 +36,11 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>Parâmetros
 
-*à esquerda* um objeto do tipo `hash_set`.
+*left*<br/>
+Um objeto do tipo `hash_set`.
 
-*à direita* um objeto do tipo `hash_set`.
+*right*<br/>
+Um objeto do tipo `hash_set`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -102,9 +104,11 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>Parâmetros
 
-*à esquerda* um objeto do tipo `hash_set`.
+*left*<br/>
+Um objeto do tipo `hash_set`.
 
-*à direita* um objeto do tipo `hash_set`.
+*right*<br/>
+Um objeto do tipo `hash_set`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -166,9 +170,11 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>Parâmetros
 
-*à esquerda* um objeto do tipo `hash_multiset`.
+*left*<br/>
+Um objeto do tipo `hash_multiset`.
 
-*à direita* um objeto do tipo `hash_multiset`.
+*right*<br/>
+Um objeto do tipo `hash_multiset`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -230,9 +236,11 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Parâmetros
 
-*à esquerda* um objeto do tipo `hash_multiset`.
+*left*<br/>
+Um objeto do tipo `hash_multiset`.
 
-*à direita* um objeto do tipo `hash_multiset`.
+*right*<br/>
+Um objeto do tipo `hash_multiset`.
 
 ### <a name="return-value"></a>Valor de retorno
 

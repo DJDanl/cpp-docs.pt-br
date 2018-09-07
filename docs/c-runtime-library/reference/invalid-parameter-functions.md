@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b0fecd7eefe9ac6a7a479fb12475b2b1c769cf4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26e66b6ad47af521bb5188860d7d987e9d3b5f6b
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405465"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100828"
 ---
 # <a name="invalidparameter-invalidparameternoinfo-invalidparameternoinfonoreturn-invokewatson"></a>_invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
 
@@ -64,35 +64,40 @@ _invoke_watson(
 
 ## <a name="parameters"></a>Parâmetros
 
-*expressão* uma cadeia de caracteres que representa a expressão de parâmetro de código fonte que não é válida.
+*Expressão*<br/>
+Uma cadeia de caracteres que representa a expressão do parâmetro de código-fonte que não é válida.
 
-*function_name* o nome da função que chamou o manipulador.
+*function_name*<br/>
+O nome da função que chamou o manipulador.
 
-*file_name* o arquivo de código fonte em que o manipulador foi chamado.
+*file_name*<br/>
+O arquivo de código-fonte em que o manipulador foi chamado.
 
-*LINE_NUMBER* o número da linha no código-fonte em que o manipulador foi chamado.
+*LINE_NUMBER*<br/>
+O número de linha no código-fonte em que o manipulador foi chamado.
 
-*reservado* não utilizado.
+*reserved*<br/>
+Não utilizado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Essas funções não retornam um valor. O **_invalid_parameter_noinfo_noreturn** e **_invoke_watson** funções não retornam ao chamador e, em alguns casos, **_invalid_parameter** e **_invalid_parameter_noinfo** não pode retornar ao chamador.
+Essas funções não retornam um valor. O **invalid_parameter_noinfo_noreturn** e **_invoke_watson** funções não retornam o chamador e, em alguns casos **invalid_parameter** e **invalid_parameter_noinfo** não pode retornar ao chamador.
 
 ## <a name="remarks"></a>Comentários
 
 Quando funções da biblioteca em tempo de execução do C recebem parâmetros inválidos, as funções da biblioteca chamam um *manipulador de parâmetro inválido*, que é uma função que pode ser especificada pelo programador para realizar várias ações. Por exemplo, ela pode informar o problema para o usuário, gravar em um log, interrompê-lo em um depurador, encerrar o programa ou não fazer nada. Se nenhuma função for especificada pelo programador, um manipulador padrão, **_invoke_watson**, é chamado.
 
-Por padrão, quando um parâmetro não válido é identificado no código de depuração, funções de biblioteca CRT chamam a função **_invalid_parameter** usando parâmetros detalhados. No código sem depuração, o **_invalid_parameter_noinfo** função é chamada, que chama o **_invalid_parameter** função usando parâmetros vazios. Se a função de biblioteca CRT sem depuração requer o encerramento do programa, o **_invalid_parameter_noinfo_noreturn** função é chamada, que chama o **_invalid_parameter** função usando vazio parâmetros, seguido por uma chamada para o **_invoke_watson** função para forçar o encerramento do programa.
+Por padrão, quando um parâmetro inválido é identificado no código de depuração, funções da biblioteca CRT chamam a função **invalid_parameter** usando parâmetros detalhados. No código sem depuração, o **invalid_parameter_noinfo** função é chamada, que chama o **invalid_parameter** funcionam usando parâmetros vazios. Se a função de biblioteca de CRT sem depuração exigir o encerramento do programa, o **invalid_parameter_noinfo_noreturn** função é chamada, que chama o **invalid_parameter** funcionam usando vazio parâmetros, seguido por uma chamada para o **_invoke_watson** função para forçar o encerramento do programa.
 
-O **_invalid_parameter** função verifica se um manipulador de parâmetro inválido definido pelo usuário foi definido e nesse caso, chamá-lo. Por exemplo, se um manipulador local do thread definido pelo usuário tiver sido definido por uma chamada para [set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) no thread atual, ele será chamado e a função será retornada. Caso contrário, se um manipulador de parâmetro inválido global definido pelo usuário tiver sido definido por uma chamada para [set_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md), ele será chamado e a função será retornada. Caso contrário, o manipulador padrão **_invoke_watson** é chamado. O comportamento padrão de **_invoke_watson** encerrar o programa. Manipuladores definidos pelo usuário podem ser encerrados ou retornados. Recomendamos que manipuladores definidos pelo usuário finalizem o programa, a menos que a recuperação seja certa.
+O **invalid_parameter** função verifica se um manipulador de parâmetro inválido definido pelo usuário tiver sido definido e nesse caso, chama. Por exemplo, se um manipulador local do thread definido pelo usuário tiver sido definido por uma chamada para [set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) no thread atual, ele será chamado e a função será retornada. Caso contrário, se um manipulador de parâmetro inválido global definido pelo usuário tiver sido definido por uma chamada para [set_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md), ele será chamado e a função será retornada. Caso contrário, o manipulador padrão **_invoke_watson** é chamado. O comportamento padrão do **_invoke_watson** é encerrar o programa. Manipuladores definidos pelo usuário podem ser encerrados ou retornados. Recomendamos que manipuladores definidos pelo usuário finalizem o programa, a menos que a recuperação seja certa.
 
-Quando o manipulador padrão **_invoke_watson** é chamado, se o processador suporta um [__fastfail](../../intrinsics/fastfail.md) operação, ele é chamado usando um parâmetro de **FAST_FAIL_INVALID_ARG** e o processo será encerrado. Caso contrário, uma exceção de falha rápida será gerada, o que pode ser capturado por um depurador anexado. Se o processo tem permissão para continuar, ele será encerrado por uma chamada para o Windows **TerminateProcess** funcionar com um status de código de exceção de **STATUS_INVALID_CRUNTIME_PARAMETER**.
+Quando o manipulador padrão **_invoke_watson** é chamado, se o processador der suporte a um [fastfail](../../intrinsics/fastfail.md) operação, ele é invocado usando um parâmetro de **FAST_FAIL_INVALID_ARG** e o processo é encerrado. Caso contrário, uma exceção de falha rápida será gerada, o que pode ser capturado por um depurador anexado. Se o processo puder continuar, ele será encerrado por uma chamada para o Windows **TerminateProcess** funcionam usando um status de código de exceção de **STATUS_INVALID_CRUNTIME_PARAMETER**.
 
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho necessário|
 |--------------|------------------|
-|**_invalid_parameter**, **_invalid_parameter_noinfo**, **_invalid_parameter_noinfo_noreturn**, **_invoke_watson**|\<corecrt.h>|
+|**invalid_parameter**, **invalid_parameter_noinfo**, **invalid_parameter_noinfo_noreturn**, **_invoke_watson**|\<corecrt.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

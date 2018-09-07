@@ -31,12 +31,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80cb3dd5d60665fbfb510fb2fddf94f17ef9f171
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 7fc38fe11fa267fe4f14d149d883da4ad5ec02e0
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963788"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100748"
 ---
 # <a name="locale-class"></a>Classe locale
 
@@ -301,7 +301,8 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Loc* a localidade que contém a faceta a ser inserido na localidade de destino.
+*Loc*<br/>
+A localidade que contém a faceta a ser inserida na localidade de destino.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -369,7 +370,8 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Loc* a localidade a ser usado como a localidade padrão pelo programa.
+*Loc*<br/>
+A localidade a ser usada como localidade padrão pelo programa.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -436,15 +438,20 @@ locale(const locale& Loc, const Facet* Fac);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Locname* nome de uma localidade.
+*Locname*<br/>
+Nome de uma localidade.
 
-*Loc* uma localidade que deve ser copiada ao construir nova localidade.
+*Loc*<br/>
+Uma localidade que deve ser copiada ao construir uma nova localidade.
 
-*Outros* uma localidade da qual selecionar uma categoria.
+*Outros*<br/>
+Uma localidade da qual se deve selecionar uma categoria.
 
-*CAT* a categoria a ser substituída na localidade construída.
+*CAT*<br/>
+A categoria a ser substituída na localidade construída.
 
-*Fac* a faceta a ser substituída na localidade construída.
+*PAT*<br/>
+A faceta a ser substituída na localidade construída.
 
 ### <a name="remarks"></a>Comentários
 
@@ -555,7 +562,8 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* uma das localidades a ser testado quanto à desigualdade.
+*right*<br/>
+Uma das localidades que terá sua desigualdade testada.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -600,9 +608,9 @@ int main( )
 
 ```Output
 locales loc1 (German_Germany.1252) and
- loc2 (German_Germany.1252) are equal.
+loc2 (German_Germany.1252) are equal.
 locales loc1 (German_Germany.1252) and
- loc3 (English_United States.1252) are not equal.
+loc3 (English_United States.1252) are not equal.
 ```
 
 ## <a name="op_call"></a>  locale::operator()
@@ -618,9 +626,11 @@ bool operator()(
 
 ### <a name="parameters"></a>Parâmetros
 
-*à esquerda* a cadeia de caracteres à esquerda.
+*left*<br/>
+A cadeia de caracteres à esquerda.
 
-*direito* a cadeia de caracteres à direita.
+*right*<br/>
+A cadeia de caracteres à direita.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -685,7 +695,8 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* uma das localidades a ser testado quanto à igualdade.
+*right*<br/>
+Uma das localidades que terá sua igualdade testada.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -734,9 +745,9 @@ int main( )
 
 ```Output
 locales loc1 (German_Germany.1252)
- and loc2 (German_Germany.1252) are equal.
+and loc2 (German_Germany.1252) are equal.
 locales loc1 (German_Germany.1252)
- and loc3 (English_United States.1252) are not equal.
+and loc3 (English_United States.1252) are not equal.
 ```
 
 ## <a name="see-also"></a>Consulte também

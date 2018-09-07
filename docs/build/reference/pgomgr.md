@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70a0615debabb056110dd9d6f7a6aac86e9d464a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 217346a08f4dc800c3d335baa77c355e0f327336
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198309"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44105309"
 ---
 # <a name="pgomgr"></a>pgomgr
 
@@ -32,7 +32,7 @@ Adiciona dados de perfil de um ou mais arquivos. PGC para o arquivo. PGD.
 
 ### <a name="parameters"></a>Parâmetros
 
-*Opções*<br/>
+*options*<br/>
 As opções a seguir podem ser especificadas para **pgomgr**:
 
 - **/Help** ou **/?** Exibe disponíveis **pgomgr** opções.
@@ -50,7 +50,8 @@ As opções a seguir podem ser especificadas para **pgomgr**:
 *pgcfiles*<br/>
 . PGC um ou mais arquivos cujos dados de perfil que você deseja mesclar com o arquivo. PGD. Você pode especificar um arquivo. PGC único ou vários arquivos. PGC. Se você não especificar todos os arquivos. PGC, **pgomgr** mescla todos os arquivos. PGC cujos nomes de arquivo são os mesmos que o arquivo. PGD.
 
-*pgdfile* o arquivo. PGD para a qual você está mesclando dados do arquivo. PGC ou arquivos.
+*pgdfile*<br/>
+O arquivo. PGD para a qual você está mesclando dados do arquivo. PGC ou arquivos.
 
 ## <a name="remarks"></a>Comentários
 

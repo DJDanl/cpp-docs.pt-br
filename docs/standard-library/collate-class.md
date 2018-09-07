@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 604d8a2082d609e85e4c55f1d4ae3b6d15c4ce22
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 054246ce78601abf61f36d070500845275b61761
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966453"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110367"
 ---
 # <a name="collate-class"></a>Classe collate
 
@@ -52,7 +52,8 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Parâmetros
 
-*CharType* o tipo usado em um programa para codificar caracteres.
+*CharType*<br/>
+O tipo usado em um programa para codificar caracteres.
 
 ## <a name="remarks"></a>Comentários
 
@@ -111,15 +112,17 @@ public:
 
 protected:
     collate(
- const char* _Locname,
+const char* _Locname,
     size_t _Refs = 0);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Refs* valor inteiro usado para especificar o tipo de gerenciamento de memória para o objeto.
+*_Refs*<br/>
+Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
 
-*_Locname* o nome da localidade.
+*_Locname*<br/>
+O nome da localidade.
 
 ### <a name="remarks"></a>Comentários
 
@@ -146,13 +149,17 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1* ponteiro para o primeiro elemento na primeira sequência a ser comparado.
+*first1*<br/>
+Ponteiro para o primeiro elemento na primeira sequência a ser comparada.
 
-*last1* ponteiro para o último elemento na primeira sequência a ser comparado.
+*last1*<br/>
+Ponteiro para o último elemento na primeira sequência a ser comparada.
 
-*first2* ponteiro para o primeiro elemento na segunda sequência a ser comparado.
+*first2*<br/>
+Ponteiro para o primeiro elemento na segunda sequência a ser comparada.
 
-*last2* ponteiro para o último elemento na segunda sequência a ser comparado.
+*last2*<br/>
+Ponteiro para o último elemento na segunda sequência a ser comparada.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -208,13 +215,17 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Parâmetros
 
-*first1* ponteiro para o primeiro elemento na primeira sequência a ser comparado.
+*first1*<br/>
+Ponteiro para o primeiro elemento na primeira sequência a ser comparada.
 
-*last1* ponteiro para o último elemento na primeira sequência a ser comparado.
+*last1*<br/>
+Ponteiro para o último elemento na primeira sequência a ser comparada.
 
-*first2* ponteiro para o primeiro elemento na segunda sequência a ser comparado.
+*first2*<br/>
+Ponteiro para o primeiro elemento na segunda sequência a ser comparada.
 
-*last2* ponteiro para o último elemento na segunda sequência a ser comparado.
+*last2*<br/>
+Ponteiro para o último elemento na segunda sequência a ser comparada.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -244,9 +255,11 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro* um ponteiro para o primeiro caractere na sequência cujo valor deve ser determinada.
+*first*<br/>
+Um ponteiro para o primeiro caractere na sequência cujo valor será determinado.
 
-*última* um ponteiro para o último caractere na sequência cujo valor deve ser determinada.
+*last*<br/>
+Um ponteiro para o último caractere na sequência cujo valor será determinado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -270,9 +283,11 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro* um ponteiro para o primeiro caractere na sequência a ser convertido.
+*first*<br/>
+Um ponteiro para o primeiro caractere na sequência a ser convertida.
 
-*última* um ponteiro para o último caractere na sequência a ser convertido.
+*last*<br/>
+Um ponteiro para o último caractere na sequência a ser convertida.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -296,9 +311,11 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro* um ponteiro para o primeiro caractere na sequência cujo valor deve ser determinada.
+*first*<br/>
+Um ponteiro para o primeiro caractere na sequência cujo valor será determinado.
 
-*última* um ponteiro para o último caractere na sequência cujo valor deve ser determinada.
+*last*<br/>
+Um ponteiro para o último caractere na sequência cujo valor será determinado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -364,9 +381,11 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*primeiro* um ponteiro para o primeiro caractere na sequência a ser convertido.
+*first*<br/>
+Um ponteiro para o primeiro caractere na sequência a ser convertida.
 
-*última* um ponteiro para o último caractere na sequência a ser convertido.
+*last*<br/>
+Um ponteiro para o último caractere na sequência a ser convertida.
 
 ### <a name="return-value"></a>Valor de retorno
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::make_error_code [C++]
 - std::make_error_condition [C++]
 - std::swap [C++]
-ms.openlocfilehash: bbb724747052c6dd636199fd1cabdf97d2bd4045
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 9b4a8b148dc8b72c7dcc1931802c503be783e9ea
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027391"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44108559"
 ---
 # <a name="ltfuturegt-functions"></a>Funções &lt;future&gt;
 
@@ -46,7 +46,8 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>Parâmetros
 
-*diretiva* um [iniciar](../standard-library/future-enums.md#launch) valor.
+*Política*<br/>
+Um valor [launch](../standard-library/future-enums.md#launch).
 
 ### <a name="remarks"></a>Comentários
 
@@ -93,7 +94,8 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Errno* um [future_errc](../standard-library/future-enums.md#future_errc) valor que identifica o erro relatado.
+*errno*<br/>
+Um valor de [future_errc](../standard-library/future-enums.md#future_errc) que identifica o erro relatado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -109,7 +111,8 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Errno* um [future_errc](../standard-library/future-enums.md#future_errc) valor que identifica o erro relatado.
+*errno*<br/>
+Um valor de [future_errc](../standard-library/future-enums.md#future_errc) que identifica o erro relatado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -129,9 +132,11 @@ void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& 
 
 ### <a name="parameters"></a>Parâmetros
 
-*Esquerda* esquerda `promise` objeto.
+*Esquerda*<br/>
+O objeto `promise` à esquerda.
 
-*À direita* direita `promise` objeto.
+*Direita*<br/>
+O objeto `promise` à direita.
 
 ## <a name="see-also"></a>Consulte também
 

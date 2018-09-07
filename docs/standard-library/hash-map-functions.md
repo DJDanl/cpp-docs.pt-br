@@ -7,12 +7,12 @@ f1_keywords:
 - hash_map/std::swap
 - hash_map/std::swap (hash_map)
 ms.assetid: 28748cd0-71f7-41b9-b068-579183645fba
-ms.openlocfilehash: d8ae3102091b9057f45f6b0072e0c272dfb27458
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 12ceb799ccf0944b8f0e8d48975da25c39f22505
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958540"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100944"
 ---
 # <a name="lthashmapgt-functions"></a>Funções &lt;hash_map&gt;
 
@@ -35,9 +35,11 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* hash_map cujos elementos deverão ser trocados por aqueles do mapa *esquerdo*.
+*right*<br/>
+O hash_map cujos elementos deverão ser trocados por aqueles do mapa *esquerdo*.
 
-*à esquerda* hash_map cujos elementos deverão ser trocados por aqueles do mapa *direito*.
+*left*<br/>
+O hash_map cujos elementos deverão ser trocados por aqueles do mapa *certa*.
 
 ### <a name="remarks"></a>Comentários
 
@@ -58,9 +60,11 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*à direita* hash_multimap cujos elementos deverão ser trocados por aqueles do mapa *esquerdo*.
+*right*<br/>
+O hash_multimap cujos elementos deverão ser trocados por aqueles do mapa *esquerdo*.
 
-*à esquerda* hash_multimap cujos elementos deverão ser trocados por aqueles do mapa *direito*.
+*left*<br/>
+O hash_multimap cujos elementos deverão ser trocados por aqueles do mapa *certa*.
 
 ### <a name="remarks"></a>Comentários
 

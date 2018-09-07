@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f8592e8008fa78402ced307b60188ea8610960a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea1c979b261b81f80d95e4219f948dd2a3f5849e
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407308"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44100347"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -54,15 +54,17 @@ void setbuf(
 
 ### <a name="parameters"></a>Parâmetros
 
-*fluxo* ponteiro para **arquivo** estrutura.
+*fluxo*<br/>
+Ponteiro para a estrutura **FILE**.
 
-*buffer* buffer alocado pelo usuário.
+*buffer*<br/>
+Buffer alocado pelo usuário.
 
 ## <a name="remarks"></a>Comentários
 
-O **setbuf** função controles de buffer para *fluxo*. O *fluxo* argumento deve se referir a um arquivo aberto que não foi lido ou gravado. Se o *buffer* argumento é **nulo**, o fluxo é sem buffer. Se não, o buffer deve apontar para uma matriz de caracteres de comprimento **BUFSIZ**, onde **BUFSIZ** é o tamanho do buffer, conforme definido em STDIO. H. O buffer especificado pelo usuário, em vez do buffer alocado do sistema padrão para o fluxo informado, é usado para buffer de E/S. O **stderr** está sem buffer por padrão, mas você pode usar **setbuf** atribuir buffers para **stderr**.
+O **setbuf** controla o buffer para funcionar *fluxo*. O *stream* argumento deve se referir a um arquivo aberto que não foi lido ou gravado. Se o *buffer* argumento é **nulo**, o fluxo é sem buffer. Se não, o buffer deve apontar para uma matriz de caracteres de comprimento **BUFSIZ**, onde **BUFSIZ** é o tamanho do buffer conforme definido em STDIO. H. O buffer especificado pelo usuário, em vez do buffer alocado do sistema padrão para o fluxo informado, é usado para buffer de E/S. O **stderr** fluxo é sem buffer por padrão, mas você pode usar **setbuf** atribuir buffers para **stderr**.
 
-**setbuf** foi substituído pelo [setvbuf](setvbuf.md), que é a rotina preferencial para o novo código. **setbuf** é mantido para compatibilidade com o código existente.
+**setbuf** foi substituído por [setvbuf](setvbuf.md), que é a rotina preferencial para o novo código. **setbuf** é mantido para compatibilidade com o código existente.
 
 ## <a name="requirements"></a>Requisitos
 
