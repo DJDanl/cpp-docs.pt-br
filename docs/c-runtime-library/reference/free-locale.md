@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b74725ddd7884bcc714e1048b28c53f201ebe4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce945499505b7efcaaf010585f27fbfaf42a06b8
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397126"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44103313"
 ---
 # <a name="freelocale"></a>_free_locale
 
@@ -57,13 +57,14 @@ void _free_locale(
 
 ### <a name="parameters"></a>Parâmetros
 
-*localidade* objeto de localidade para liberar.
+*locale*<br/>
+Objeto de localidade a ser liberado.
 
 ## <a name="remarks"></a>Comentários
 
 O **free_locale** função é usada para liberar o objeto de localidade obtido de uma chamada para **get_current_locale** ou **create_locale**.
 
-O nome anterior desta função **free_locale** (com dois sublinhados) foi preterido.
+O nome anterior dessa função, **free_locale** (com dois sublinhados à esquerda) foi preterido.
 
 ## <a name="requirements"></a>Requisitos
 
