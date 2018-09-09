@@ -1,7 +1,7 @@
 ---
-title: Compilador (nível 1) de aviso C4627 | Microsoft Docs
+title: Compilador aviso (nível 1) C4627 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/09/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,17 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcde9e6707465fd95dbcb10e073a852624f0de0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f6be9ba8ba45adecfe5355848126dcb4b3b2fd1
+ms.sourcegitcommit: 592a2f402fef502450a45571a846175cc3ab1ceb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284180"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44249614"
 ---
-# <a name="compiler-warning-level-1-c4627"></a>Compilador C4627 de aviso (nível 1)
-'\<identificador >': ignorada durante a procura de uso de cabeçalho pré-compilado  
+# <a name="compiler-warning-level-1-c4627"></a>Compilador aviso (nível 1) C4627
+
+> '*header_file*': ignorado ao procurar o uso de cabeçalho pré-compilado
+
+Se o arquivo de origem atual tem o [/Yu \(arquivo de cabeçalho pré-compilado do uso)](../../build/reference/yu-use-precompiled-header-file.md) opção conjunto, em seguida, o compilador ignora tudo no arquivo antes que o cabeçalho pré-compilado está incluído. Aviso **C4627** é gerado no Visual Studio 2015 e versões anteriores se *header_file* está incluído para que o arquivo de cabeçalho pré-compilado, e se o cabeçalho pré-compilado também não incluem *header_file*.
+
+## <a name="example"></a>Exemplo
+
+Este exemplo demonstra como o erro pode ocorrer e mostra como corrigi-lo:
+ 
+```cpp
+// c4627.cpp
+#include <iostream>       // C4627 - iostream not included by pch.h
+#include "pch.h"          // precompiled header file that does not include iostream
+// #include <iostream>    // To fix, move the iostream header include here from above
+int main()
+{
+    std::cout << "std::cout is defined!\n";
+}
+```
   
- Ao procurar o local em que um cabeçalho pré-compilado é usado, o compilador encontrou um `#include` diretiva para o  *\<identificador >* incluem o arquivo. O compilador ignora o `#include` diretiva, mas emite o aviso **C4627** se o cabeçalho pré-compilado ainda não contiver o  *\<identificador >* incluem o arquivo.  
-  
-## <a name="see-also"></a>Consulte também  
- [Criando arquivos de cabeçalho pré-compilado](../../build/reference/creating-precompiled-header-files.md)
+## <a name="see-also"></a>Consulte também
+
+[Criando arquivos de cabeçalho pré-compilado](../../build/reference/creating-precompiled-header-files.md)
