@@ -1,5 +1,5 @@
 ---
-title: Recursos de manifesto | Microsoft Docs
+title: Recursos (C++) de manifesto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,24 +8,24 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- manifest resources
-- resources [Visual Studio], manifest
+- manifest resources [C++]
+- resources [C++], manifest
 ms.assetid: 8615334c-22a0-44c0-93e0-5924528c9917
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f06e2d430867d04600547312fbc484ec6257c53
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6d58e89250708f264ff6bb96c75e8124ffa02509
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685146"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316439"
 ---
-# <a name="manifest-resources"></a>Recursos de manifesto
+# <a name="manifest-resources-c"></a>Recursos do manifesto (C++)
 
-Recursos de manifesto são arquivos XML que descrevem as dependências que um aplicativo usa. Por exemplo, no Visual Studio, o arquivo de manifesto gerado pelo assistente MFC define quais do controle comum do Windows DLLs o aplicativo deve usar, versão 5.0 ou 6.0:
+Em projetos do C++ da área de trabalho, recursos de manifesto são arquivos XML que descrevem as dependências que um aplicativo usa. Por exemplo, no Visual Studio, o arquivo de manifesto gerado pelo assistente MFC define quais do controle comum do Windows DLLs o aplicativo deve usar, versão 5.0 ou 6.0:
 
 ```xml
 <description>Your app description here</description>

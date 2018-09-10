@@ -1,5 +1,5 @@
 ---
-title: Imagem (Editor de imagens para ícones) do Menu | Microsoft Docs
+title: Imagem do Menu (C++ Editor de imagens para ícones) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1729f98222d0f5c2d15ae907ac464367bc39a559
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f99e743ccbb8e7eca65c092a85b0cc482226567d
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593942"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315921"
 ---
-# <a name="image-menu-image-editor-for-icons"></a>Menu Imagem (editor de imagens para ícones)
+# <a name="image-menu-c-image-editor-for-icons"></a>Menu imagem (Editor de C++ imagens para ícones)
 
 O **imagem** menu, que é exibido apenas quando o **imagem** editor está ativo, tem comandos para edição de imagens, gerenciando paletas de cores e definindo **Editor de imagens** janela Opções. Além disso, os comandos para o uso de imagens de dispositivo estão disponíveis ao trabalhar com ícones e cursores.
 

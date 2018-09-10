@@ -1,5 +1,5 @@
 ---
-title: Abrindo um recurso para edição binária | Microsoft Docs
+title: Abrindo um recurso para edição binária (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,21 +11,21 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - binary data, editing
-- resources [Visual Studio], opening for binary editing
+- resources [C++], opening for binary editing
 ms.assetid: d3cdb0e4-da66-410d-8e49-b29073ff2929
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4ad125c2931049fe912724b1391c8470f6cb4495
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5c489d1b17df579ecec6c118826a8f770f5664eb
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589271"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316348"
 ---
-# <a name="opening-a-resource-for-binary-editing"></a>Abrindo um recurso para edição binária
+# <a name="opening-a-resource-for-binary-editing-c"></a>Abrindo um recurso para edição binária (C++)
 
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Para abrir um recurso de área de trabalho do Windows para edição binária
 

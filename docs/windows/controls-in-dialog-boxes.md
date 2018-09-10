@@ -1,5 +1,5 @@
 ---
-title: Controles em caixas de diálogo | Microsoft Docs
+title: Controles em caixas de diálogo (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,7 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], dialog boxes
-- dialog box controls, about dialog box controls
+- dialog box controls [C++], about dialog box controls
 - dialog box controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
 author: mikeblome
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70e3bcfb644893f1dc8b41b9c11a3aee5c92103d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d8128859f2b136fb945376eeea8afa0d1ef8e6e1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591952"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317098"
 ---
-# <a name="controls-in-dialog-boxes"></a>Controles em caixas de diálogo
+# <a name="controls-in-dialog-box-ces"></a>Controla a es na caixa de diálogo (C++)
 
 Você pode adicionar controles a uma caixa de diálogo usando o [guia do Editor de caixa de diálogo](../windows/dialog-editor-tab-toolbox.md) na [janela caixa de ferramentas](/visualstudio/ide/reference/toolbox), que permite que você escolha o controle desejado e arraste-o para a caixa de diálogo. Por padrão, a janela de caixa de ferramentas é definida para ocultar automaticamente. Ele aparece como uma guia na margem esquerda da sua solução quando o editor de caixa de diálogo é aberto. No entanto, você pode fixar o **caixa de ferramentas** janela na posição clicando o **ocultar automaticamente** botão no canto superior direito da janela. Para obter mais informações sobre como controlar o comportamento desta janela, consulte [gerenciamento de janela](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 

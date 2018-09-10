@@ -1,5 +1,5 @@
 ---
-title: Guia do Editor de caixa de diálogo, caixa de ferramentas | Microsoft Docs
+title: Guia do Editor de caixa de diálogo, caixa de ferramentas (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,10 +10,10 @@ dev_langs:
 helpviewer_keywords:
 - Toolbox [C++], Dialog Editor tab
 - controls [C++], types
-- syslink controls ino dialog boxes
-- custom controls [Visual Studio], dialog boxes
+- syslink controls in dialog boxes
+- custom controls [C++], dialog boxes
 - controls [C++], standard
-- Dialog editor, creating controls
+- Dialog Editor [C++], creating controls
 - controls [C++], adding to dialog boxes
 ms.assetid: 253885c2-dcb9-4d8e-ac9b-805ea31cbf5e
 author: mikeblome
@@ -21,14 +21,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a528ece23301f707b267ed7cefd30649b34c5e60
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2fa16a2cf15d5004ff80dda3188d79ffcba72ec1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613506"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316205"
 ---
-# <a name="dialog-editor-tab-toolbox"></a>Guia Editor de Caixa de Diálogo, caixa de ferramentas
+# <a name="dialog-editor-tab-toolbox-c"></a>Guia do Editor de caixa de diálogo, caixa de ferramentas (C++)
 
 O **Editor de caixa de diálogo** guia é exibida na [janela caixa de ferramentas](/visualstudio/ide/reference/toolbox) quando você estiver trabalhando no **caixa de diálogo** editor. Para adicionar controles à sua nova caixa de diálogo, arraste os controles do **caixa de ferramentas** à caixa de diálogo que você está criando (para obter mais informações, consulte [adicionando um controle a uma caixa de diálogo](adding-a-control-to-a-dialog-box.md)). Em seguida, você pode mover os controles ou alterar seu tamanho e forma.
 

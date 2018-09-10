@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eb91708545d2303304177093e79ea49e8fa9208
-ms.sourcegitcommit: 894b3b3a91fcd8894b582747b03135c0be450c1f
+ms.openlocfilehash: 6645bb81a1fd4a2b42eb7419a0d008b9ac7692ad
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37850414"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319078"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Avisos do compilador pela versão do compilador
 
@@ -404,7 +404,7 @@ C4694|'*tipo*': uma classe sealed abstract não pode ter uma classe base*tipo*'
 C4720|relatórios de assembler embutido: '*descrição*'
 C4721|'*descrição*': não disponível como um intrínseco
 C4722|'*descrição*': destruidor nunca retorna, potencial perda de memória
-C4726|ARM arch4/4T suporta apenas ' < cpsr_f > ou < spsr_f >' com valor imediato
+C4726|ARM arch4/4T suporta apenas '\<cpsr_f > ou \<spsr_f >' com valor imediato
 C4727|PCH nomeado *nome* com o mesmo carimbo de hora encontrado no *nome* e *nome*.  Usando primeiro PCH.
 C4729|avisos baseados em função muito grande para um gráfico de fluxo
 C4730|'*descrição*': misturar _m64 e expressões podem resultar em um código incorreto de ponto flutuante

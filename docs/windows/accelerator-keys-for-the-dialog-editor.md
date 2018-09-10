@@ -1,5 +1,5 @@
 ---
-title: Teclas de aceleração para o Editor de caixa de diálogo | Microsoft Docs
+title: Teclas de aceleração para o Editor de caixa de diálogo (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,21 +10,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Dialog editor, shortcut keys
+- Dialog Editor [C++], shortcut keys
 ms.assetid: 940270e9-a974-425b-a681-dfeaba0adf66
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c5abfe45cc2f6e73dfe3c7bd8d38a0c783a15e05
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6314d4333254957ea2d8116786128843dafef64a
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685626"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313566"
 ---
-# <a name="accelerator-keys-for-the-dialog-editor"></a>Teclas de aceleração do Editor de Caixa de Diálogo
+# <a name="accelerator-keys-for-the-dialog-editor-c"></a>Teclas de aceleração para o Editor de caixa de diálogo (C++)
 
 Abaixo são o padrão teclas de aceleração para os comandos do editor de caixa de diálogo. Para alterar as teclas de atalho, clique em **opções** na **ferramentas** menu, em seguida, escolha **teclado** sob o **ambiente** pasta. Para obter mais informações, consulte [Identificando e personalizando atalhos de teclado](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 

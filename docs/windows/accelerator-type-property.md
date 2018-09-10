@@ -1,5 +1,5 @@
 ---
-title: Propriedade de tipo de acelerador | Microsoft Docs
+title: Propriedade de tipo de acelerador (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59fae6d0809e32883d5d56e43e64525e23643d91
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d38d5a78eb37a028f29da430a762604b2e50d632
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602320"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315685"
 ---
-# <a name="accelerator-type-property"></a>Propriedade do tipo de acelerador
+# <a name="accelerator-type-property-c"></a>Propriedade de tipo de acelerador (C++)
 
 O acelerador **tipo** propriedade determina se a combinação de teclas de atalho associada com a ID do acelerador é uma combinação de teclas virtual ou um valor de chave ASCII/ANSI:
 

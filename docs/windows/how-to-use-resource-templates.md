@@ -1,5 +1,5 @@
 ---
-title: 'Como: usar modelos de recurso | Microsoft Docs'
+title: 'Como: usar modelos de recurso (C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,27 +8,27 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- language-specific template files
+- language-specific template files [C++]
 - resource templates
-- resources [Visual Studio], creating
-- rct files
+- resources [C++], creating
+- rct files [C++]
 - templates, resource templates
-- resources [Visual Studio], templates
-- .rct files
+- resources [C++], templates
+- .rct files [C++]
 ms.assetid: bdfe7060-f98e-4859-8285-9c8570360e9d
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5bd85dd5c5b6468ca8246fdf11f4068eae928107
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 90c94e87693929c2ae33d65fe3f3a4b2dd55d48b
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602434"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313969"
 ---
-# <a name="how-to-use-resource-templates"></a>Como usar modelos de recurso
+# <a name="how-to-use-resource-templates-c"></a>Como: usar modelos de recurso (C++)
 
 Um modelo de recurso é um recurso personalizado que você salvou como um arquivo. rct. Um modelo de recursos, em seguida, pode servir como um ponto de partida para a criação de outros recursos. Modelos de recursos economizar tempo no desenvolvimento de recursos adicionais ou grupos de recursos que compartilha recursos, como controles padrão e outros elementos repetidos. Por exemplo, talvez você queira incluir um botão de Ajuda e o ícone de um logotipo da empresa em várias caixas de diálogo. Para fazer tão rapidamente, criar um novo modelo de caixa de diálogo e personalizá-lo com o logotipo e o botão Ajuda.
 

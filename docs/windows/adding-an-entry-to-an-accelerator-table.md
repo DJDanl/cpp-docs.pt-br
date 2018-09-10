@@ -1,5 +1,5 @@
 ---
-title: Adicionando uma entrada a uma tabela de aceleradores | Microsoft Docs
+title: Adicionando uma entrada a uma tabela de aceleradores (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d463dc59e88dbd5c302de632d5261f29d8a4aab
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7055c21a2b9e7d0e32f3dac56641513b19953e18
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595561"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315570"
 ---
-# <a name="adding-an-entry-to-an-accelerator-table"></a>Adicionando uma entrada a uma tabela de aceleradores
+# <a name="adding-an-entry-to-an-accelerator-table-c"></a>Adicionando uma entrada a uma tabela de aceleradores (C++)
 
 ### <a name="to-add-an-entry-to-an-accelerator-table"></a>Para adicionar uma entrada para uma tabela de aceleradores
 
-1. Abra a tabela de aceleradores clicando duas vezes em seu ícone no [exibição de recurso](../windows/resource-view-window.md).
+1. Em um projeto de C++, abra a tabela de aceleradores clicando duas vezes em seu ícone no [exibição de recurso](../windows/resource-view-window.md).
 
    > [!NOTE]
    > Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).

@@ -1,5 +1,5 @@
 ---
-title: Carregar paleta de cores (Editor de imagens para ícones) caixa de diálogo | Microsoft Docs
+title: Carregar paleta de cores a caixa de diálogo (C++) (Editor de imagens para ícones) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,23 +11,23 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - color palettes
-- Load Palette Colors dialog box
+- Load Palette Colors dialog box [C++]
 ms.assetid: a1b17203-3e02-4498-91de-4ed089156df1
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1322f4146c4b4f8d497dfe4f7a2c06df18394b7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 24eb04dc07ced27d5ba24e1c8a567facff47bf98
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612110"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316310"
 ---
-# <a name="load-palette-colors-dialog-box-image-editor-for-icons"></a>Caixa de diálogo Carregar Cores de Paleta (editor de imagens para ícones)
+# <a name="load-palette-colors-dialog-box-c-image-editor-for-icons"></a>Carregar a caixa de diálogo de cores de paleta (C++) (Editor de imagens para ícones)
 
-Use essa caixa de diálogo para carregar paletas de cores especiais para usar em seu projeto. Para obter mais informações, consulte [salvando e carregando paletas de cores diferentes](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).
+Use essa caixa de diálogo para carregar paletas de cores especiais para usar no projeto do C++. Para obter mais informações, consulte [salvando e carregando paletas de cores diferentes](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).
 
 ### <a name="look-in"></a>Examinar
 

@@ -1,5 +1,5 @@
 ---
-title: Editor de tecla aceleradora | Microsoft Docs
+title: Editor de aceleradores (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,27 +11,26 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - accelerator tables [C++], editing
-- tables [Visual Studio], accelerator key
-- accelerator keys
-- resource editors, Accelerator editor
+- tables [C++], accelerator key
+- accelerator keys [C++]
+- resource editors [C++], Accelerator editor
 - keyboard shortcuts [C++], Accelerator editor
-- Accelerator editor
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04401180cfcd82f3a699f71ba594523cf0f9cb9b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 42870002ff84b697599443da8ab9b9b88dbbd7ca
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681717"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318780"
 ---
-# <a name="accelerator-editor"></a>Editor de aceleradores
+# <a name="accelerator-editor-c"></a>Editor de aceleradores (C++)
 
-Uma tabela de Aceleradores é um recurso do Windows que contém uma lista de teclas de aceleração (também conhecido como teclas de atalho) e os identificadores de comando que estão associados eles. Um programa pode ter mais de uma tabela de aceleradores.
+Uma tabela de Aceleradores é um recurso do Windows C++ que contém uma lista de teclas de aceleração (também conhecido como teclas de atalho) e os identificadores de comando que estão associados eles. Um programa pode ter mais de uma tabela de aceleradores.
 
 Normalmente, os aceleradores são usados como atalhos de teclado para comandos de programa que também estão disponíveis em um menu ou barra de ferramentas. No entanto, você pode usar a tabela de aceleradores para definir as combinações de teclas para comandos que não têm um objeto de interface do usuário associado a eles.
 

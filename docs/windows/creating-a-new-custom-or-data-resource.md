@@ -1,5 +1,5 @@
 ---
-title: Criando um recurso de dados ou novo personalizado | Microsoft Docs
+title: Criando um novo personalizado ou o recurso de dados (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,21 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - custom resources [C++]
 - data resources [C++]
-- resources [Visual Studio], creating
+- resources [C++], creating
 ms.assetid: 9918bf96-38fa-43a1-a384-572f95d84950
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f820991ed55efccc883fa4454a8f2ee93a82f85
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6a92e7904b3b42422bebf5a80e0f1b03dd818f86
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612573"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314568"
 ---
-# <a name="creating-a-new-custom-or-data-resource"></a>Criando um recurso de dados ou novo personalizado
+# <a name="creating-a-new-custom-or-data-resource-c"></a>Criando um novo personalizado ou o recurso de dados (C++)
 
 Você pode criar um novo recurso personalizado ou dados colocando o recurso em um arquivo separado, usando a sintaxe de arquivo de script (. rc) do recurso normal e, em seguida, incluindo o arquivo clicando com o seu projeto no **Gerenciador de soluções** e clicando em  **Inclui recurso** no menu de atalho.
 

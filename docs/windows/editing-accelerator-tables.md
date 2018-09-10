@@ -1,5 +1,5 @@
 ---
-title: Editando tabelas de aceleradores | Microsoft Docs
+title: Editando tabelas de aceleradores (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c258f691b7dbea814c707cbf1f3825b9db5ba42
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 14f9e82e87d395341dc1f05f1de49a20d58fec52
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596397"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314865"
 ---
-# <a name="editing-accelerator-tables"></a>Editando tabelas de aceleradores
+# <a name="editing-accelerator-tables-c"></a>Editando tabelas de aceleradores (C++)
 
-No Visual C++, você pode editar uma tabela de aceleradores diretamente com a edição in-loco na **Accelerator** editor.
+Em um projeto do C++, você pode editar uma tabela de aceleradores diretamente com a edição in-loco na **Accelerator** editor.
 
 Os procedimentos a seguir se referem ao uso de páginas de propriedades padrão, no entanto, a edição no local e o método de página de propriedade tem o mesmo resultado. As alterações feitas usando páginas de propriedades ou usando a edição in-loco são refletidas imediatamente na tabela de acelerador.
 

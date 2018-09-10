@@ -1,5 +1,5 @@
 ---
-title: Criando uma caixa de diálogo que os usuários não possam sair | Microsoft Docs
+title: Criar uma caixa de diálogo (C++) que os usuários não possam sair | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,8 +8,8 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- dialog boxes, creating
-- modal dialog boxes, logon screens
+- dialog boxes [C++], creating
+- modal dialog boxes [C++], logon screens
 - logon screens
 ms.assetid: 54823c27-1658-4388-bd12-0a1ce8f3899e
 author: mikeblome
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cd3e68d89ce0a2ece83876b6afcd6aa09e59ed93
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f0b9c290cb8e5ced7537fb377d6e7ac52f20d089
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598214"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314541"
 ---
-# <a name="creating-a-dialog-box-that-users-cannot-exit"></a>Criando uma caixa de diálogo da qual usuários não possam sair
+# <a name="creating-a-dialog-box-c-that-users-cannot-exit"></a>Criando uma caixa de diálogo (C++) que os usuários não possam sair
 
 Você pode criar uma caixa de diálogo de tempo de execução que um usuário não pode sair. Esse tipo de caixa de diálogo é útil para logons e para bloqueios de documento ou aplicativo.
 

@@ -1,5 +1,5 @@
 ---
-title: Barra de ferramentas (Editor de imagens para ícones) | Microsoft Docs
+title: Barra de ferramentas (Editor de C++ imagens para ícones) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fbad27020b18bafe2f9fc60ee08282d9101ea5a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9a454d067881a15f6d125430c304f4b5af71b5d1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604130"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314398"
 ---
-# <a name="toolbar-image-editor-for-icons"></a>Barra de ferramentas (editor de imagens para ícones)
+# <a name="toolbar-c-image-editor-for-icons"></a>Barra de ferramentas (Editor de C++ imagens para ícones)
 
 O **Editor de imagens** barra de ferramentas contém ferramentas para desenho, pintura, inserir texto, apagar e manipulação de exibições. Ele também contém um seletor de opção, com a qual você pode selecionar opções para usar cada ferramenta. Por exemplo, você pode escolher entre várias larguras de pincel, fatores de ampliação e estilos de linha.
 

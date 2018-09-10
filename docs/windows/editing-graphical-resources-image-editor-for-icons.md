@@ -1,5 +1,5 @@
 ---
-title: Editando recursos gráficos (Editor de imagens para ícones) | Microsoft Docs
+title: Editando recursos gráficos (C++ Editor de imagens para ícones) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d66345685dbb6780b0ecf11d91d699c8b6866c47
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c46f8391f39d65c84860f8c0ca62f69288d834c8
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608855"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44312630"
 ---
-# <a name="editing-graphical-resources-image-editor-for-icons"></a>Editando recursos gráficos (editor de imagens para ícones)
+# <a name="editing-graphical-resources-c-image-editor-for-icons"></a>Editando recursos gráficos (C++ Editor de imagens para ícones)
 
 Recursos gráficos são as imagens que você define para seu aplicativo. Você pode desenhar à mão livre ou desenhar usando formas. Você pode selecionar partes de uma imagem de edição, inversão ou redimensionamento, ou você pode criar um pincel personalizado de uma parte selecionada de uma imagem e desenhar com esse pincel. Você pode definir propriedades da imagem, salvar imagens em formatos diferentes e converter imagens de um formato para outro.
 

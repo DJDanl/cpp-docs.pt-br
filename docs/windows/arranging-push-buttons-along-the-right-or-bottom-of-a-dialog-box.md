@@ -1,5 +1,5 @@
 ---
-title: Organizando botões de ação ao longo da direita ou inferior de uma caixa de diálogo | Microsoft Docs
+title: Organizando botões de ação ao longo da direita ou inferior de uma caixa de diálogo (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 71e44b8d4fef02101c7b8d8f5878aeaa22a5c528
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e87a600192bbcd3c8c91dd3f400ed67e9fab7ea9
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42608717"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316725"
 ---
-# <a name="arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Organizando botões de ação ao longo da parte direita ou inferior de uma caixa de diálogo
+# <a name="arranging-push-buttons-along-the-right-or-bottom-of-a-dialog-box-c"></a>Organizando botões de ação ao longo da direita ou inferior de uma caixa de diálogo (C++)
 
 ### <a name="to-arrange-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Para organizar os botões de envio por push ao longo da direita ou inferior de uma caixa de diálogo
 

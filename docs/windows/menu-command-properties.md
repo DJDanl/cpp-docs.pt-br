@@ -1,5 +1,5 @@
 ---
-title: Propriedades do comando de menu | Microsoft Docs
+title: Propriedades do comando de menu (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 34fa9944d1daa443850454560f8e5741e881f6f8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 28426e2ca75638f5ad45188a8790d1c281afa99b
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598705"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317909"
 ---
-# <a name="menu-command-properties"></a>Propriedades do comando Menu
+# <a name="menu-command-properties-c"></a>Propriedades do comando de menu (C++)
 
 As informações a seguir são organizadas de acordo com o **menus** as propriedades que aparecem na [janela propriedades](/visualstudio/ide/reference/properties-window) quando você seleciona um comando de menu. Eles estão listados em ordem alfabética, embora a **propriedades** janela também permite que você exibir essas propriedades por categoria.
 

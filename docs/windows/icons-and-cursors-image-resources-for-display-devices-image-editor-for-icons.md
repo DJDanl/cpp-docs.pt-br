@@ -1,5 +1,5 @@
 ---
-title: 'Ícones e cursores: recursos de imagem para exibir dispositivos (Editor de imagens para ícones) | Microsoft Docs'
+title: 'Ícones e cursores: recursos de imagem para exibir dispositivos (C++ Editor de imagens para ícones) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,13 +11,13 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - cursors [C++], creating
-- image resources, display devices
+- image resources [C++], display devices
 - icons [C++], creating
 - cursors [C++], types
 - icons [C++]
 - Image editor [C++], icons and cursors
 - cursors [C++]
-- display devices, creating icons for
+- display devices [C++], creating icons for
 - cursors [C++], hot spots
 - icons [C++], types
 ms.assetid: 8f0809a8-0cf0-4da9-b23d-51f28bf15f5b
@@ -26,14 +26,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9b90337b48c46d335bfccf405b2ba7e0628b9f99
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 03c3b64cfbf93260c1195fa028d05bb8085c9b09
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209486"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44313579"
 ---
-# <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>Ícones e cursores: recursos de imagem para exibir dispositivos (editor de imagens para ícones)
+# <a name="icons-and-cursors-image-resources-for-display-devices-c-image-editor-for-icons"></a>Ícones e cursores: recursos de imagem para exibir dispositivos (C++ Editor de imagens para ícones)
 
 Ícones e cursores são os recursos gráficos que podem conter várias imagens em tamanhos diferentes e esquemas para diferentes tipos de dispositivos de exibição de cores. Além disso, um cursor tem um "ponto de acesso", o local do Windows usa para acompanhar sua posição. Ícones e cursores são criados e editados usando o **imagem** editor, assim como bitmaps e outras imagens.
 

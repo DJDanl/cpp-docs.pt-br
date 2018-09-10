@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15e872faab5beee296e4543c8404141428345842
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1dfc9c50503fcd277f34e8f5dfc4a630d888eebf
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402397"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44318261"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Especificações de exceção (lançar, noexcept) (C++)
 
@@ -43,7 +43,7 @@ A tabela a seguir resume a implementação do Microsoft Visual C++ de especifica
 
 |Especificação de exceção|Significado|
 |-----------------------------|-------------|
-|`noexcept`<br>`noexcept(true)`<br>`throw()`|A função não gera uma exceção. Na [/std: c + + 14](../build/reference/std-specify-language-standard-version.md) modo (o que é o padrão), `noexcept` e `noexcept(true)` são equivalentes. Quando uma exceção é lançada de uma função que é declarada `noexcept` ou `noexcept(true)`, [std:: Terminate](../standard-library/exception-functions.md#terminate) é invocado. Quando uma exceção é lançada de uma função declarada como `throw()` na **/std: c + + 14** modo, o resultado é um comportamento indefinido. Nenhuma função específica é invocada. Isso é uma divergência em relação a c++14 standard, que exigia que o compilador para invocar [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br> **Visual Studio 2017 versão 15.5 e posterior**: no **/std: c + + 17** modo, `noexcept`, `noexcept(true)`, e `throw()` são todas equivalentes. Na **/std: c + + 17** modo `throw()` é um alias para `noexcept(true)`. Na **/std:c++17 + + 17** modo, quando uma exceção é lançada de uma função declarada com qualquer uma dessas especificações [std:: Terminate](../standard-library/exception-functions.md#terminate) é invocado conforme solicitado pelo C++ 17 standard.|
+|`noexcept`<br/>`noexcept(true)`<br/>`throw()`|A função não gera uma exceção. Na [/std: c + + 14](../build/reference/std-specify-language-standard-version.md) modo (o que é o padrão), `noexcept` e `noexcept(true)` são equivalentes. Quando uma exceção é lançada de uma função que é declarada `noexcept` ou `noexcept(true)`, [std:: Terminate](../standard-library/exception-functions.md#terminate) é invocado. Quando uma exceção é lançada de uma função declarada como `throw()` na **/std: c + + 14** modo, o resultado é um comportamento indefinido. Nenhuma função específica é invocada. Isso é uma divergência em relação a c++14 standard, que exigia que o compilador para invocar [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br/> **Visual Studio 2017 versão 15.5 e posterior**: no **/std: c + + 17** modo, `noexcept`, `noexcept(true)`, e `throw()` são todas equivalentes. Na **/std: c + + 17** modo `throw()` é um alias para `noexcept(true)`. Na **/std:c++17 + + 17** modo, quando uma exceção é lançada de uma função declarada com qualquer uma dessas especificações [std:: Terminate](../standard-library/exception-functions.md#terminate) é invocado conforme solicitado pelo C++ 17 standard.|
 |`noexcept(false)`<br/>`throw(...)`<br/>Não há especificação|A função pode gerar uma exceção de qualquer tipo.|
 |`throw(type)`| (**C + + 14 e versões anteriores**) a função pode gerar uma exceção do tipo `type`. O compilador aceita a sintaxe, mas o interpretará como `noexcept(false)`. Na **/std: c + + 17** modo, o compilador emite aviso C5040.|
 

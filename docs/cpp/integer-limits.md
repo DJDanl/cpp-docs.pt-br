@@ -17,18 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b9a516ef366952f9d55e16891dfcb7bb81fac7e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 6f49e224520751e08ba6aa7e37932314e11ef8a5
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406013"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44315178"
 ---
 # <a name="integer-limits"></a>Limites de inteiro
 
 **Seção específica da Microsoft**
 
-Os limites para tipos de inteiros estão listadas na tabela a seguir. Esses limites também são definidos no arquivo de cabeçalho padrão < Limits. h >.
+Os limites para tipos de inteiros estão listadas na tabela a seguir. Esses limites também são definidos no arquivo de cabeçalho padrão \<Limits. h >.
 
 ## <a name="limits-on-integer-constants"></a>Limites em constantes de inteiro
 
@@ -59,4 +59,5 @@ Se um valor exceder a representação do maior inteiro, o compilador da Microsof
 **Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
- [Limites flutuantes](../cpp/floating-limits.md)  
+
+[Limites flutuantes](../cpp/floating-limits.md)

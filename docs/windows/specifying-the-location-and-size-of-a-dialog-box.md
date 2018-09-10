@@ -1,5 +1,5 @@
 ---
-title: Especificando o local e o tamanho de uma caixa de diálogo | Microsoft Docs
+title: Especificando o local e o tamanho de uma caixa de diálogo (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -8,24 +8,24 @@ ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- dialog boxes, size
-- dialog boxes, positioning
+- dialog boxes [C++], size
+- dialog boxes [C++], positioning
 ms.assetid: 2b7c495e-6595-4cfb-9664-80b2826d0851
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: be3db9c689b79edd17af567831d62071d79cad2d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 854e4df84bfc5f75eda8f98fa117c199ba054b3a
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604613"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44316563"
 ---
-# <a name="specifying-the-location-and-size-of-a-dialog-box"></a>Especificando o local e o tamanho de uma caixa de diálogo
+# <a name="specifying-the-location-and-size-of-a-dialog-box-c"></a>Especificando o local e o tamanho de uma caixa de diálogo (C++)
 
-O local e o tamanho de uma caixa de diálogo, bem como o local e tamanho dos controles dentro dele, são medidos em unidades de diálogo. Os valores para controles individuais e a caixa de diálogo aparecer no canto inferior direito do Visual Studio barra de status quando você seleciona.
+O local e o tamanho de uma caixa de diálogo de C++, bem como o local e tamanho dos controles dentro dele, são medidos em unidades de diálogo. Os valores para controles individuais e a caixa de diálogo aparecer no canto inferior direito do Visual Studio barra de status quando você seleciona.
 
 Há três propriedades que podem ser definidas na [janela de propriedades](/visualstudio/ide/reference/properties-window) para especificar onde uma caixa de diálogo será exibida na tela. O **Center** propriedade é booliano; se você definir o valor como **verdadeiro**, a caixa de diálogo será sempre exibido no centro da tela. Se você defini-lo **falso**, em seguida, você pode definir o **XPos** e **YPos** propriedades para definir explicitamente onde na tela de caixa de diálogo será exibida. As propriedades de posição são valores de deslocamento do canto superior esquerdo da área de exibição, que é definida como `{X=0, Y=0}`. A posição também se baseia a **alinhamento absoluto** propriedade: se **verdadeiro**, as coordenadas são em relação à tela; se **False**, as coordenadas são relativas à caixa de diálogo janela do proprietário.
 

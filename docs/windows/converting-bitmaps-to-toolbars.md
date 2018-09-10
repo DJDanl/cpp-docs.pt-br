@@ -1,5 +1,5 @@
 ---
-title: Convertendo Bitmaps em barras de ferramentas | Microsoft Docs
+title: Convertendo Bitmaps em barras de ferramentas (C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -9,7 +9,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - bitmaps [C++], converting to toolbars
-- Toolbar editor, converting bitmaps
+- Toolbar editor [C++], converting bitmaps
 - toolbars [C++], converting bitmaps
 ms.assetid: 971c181b-40f5-44be-843d-677a7c235667
 author: mikeblome
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5524b1d5ecb3fa4de38f46706f26d2a318fe5ef
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ed77f1df88bb3f3572c3ea819ffac5cb9a1f45b1
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602394"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44317220"
 ---
-# <a name="converting-bitmaps-to-toolbars"></a>Convertendo bitmaps em barras de ferramentas
+# <a name="converting-bitmaps-to-toolbars-c"></a>Convertendo Bitmaps em barras de ferramentas (C++)
 
-Você pode criar uma nova barra de ferramentas, convertendo um bitmap. O gráfico a partir do bitmap que converte as imagens de botão para uma barra de ferramentas. Normalmente, o bitmap contém várias imagens de botão em um único bitmap, com uma imagem para cada botão. Imagens podem ser de qualquer tamanho; o padrão é 16 pixels de largura e a altura da imagem. Você pode especificar o tamanho das imagens do botão na [caixa de diálogo novo recurso da barra de ferramentas](../windows/new-toolbar-resource-dialog-box.md) quando você escolhe **barra de ferramentas do Editor** do **imagem** menu enquanto estiver no editor de imagens.
+Você pode criar uma nova barra de ferramentas em um projeto C++, convertendo um bitmap. O gráfico a partir do bitmap que converte as imagens de botão para uma barra de ferramentas. Normalmente, o bitmap contém várias imagens de botão em um único bitmap, com uma imagem para cada botão. Imagens podem ser de qualquer tamanho; o padrão é 16 pixels de largura e a altura da imagem. Você pode especificar o tamanho das imagens do botão na [caixa de diálogo novo recurso da barra de ferramentas](../windows/new-toolbar-resource-dialog-box.md) quando você escolhe **barra de ferramentas do Editor** do **imagem** menu enquanto estiver no editor de imagens.
 
 ### <a name="to-convert-bitmaps-to-a-toolbar"></a>Para converter os bitmaps em uma barra de ferramentas
 

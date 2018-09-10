@@ -50,16 +50,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15038e42b87a9803312df79eb5d235f1add51669
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43c9da102f81654062518ca8e886aab1c49df623
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405010"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44314957"
 ---
 # <a name="mbsnbicmp-mbsnbicmpl"></a>_mbsnbicmp, _mbsnbicmp_l
 
-Compara **n** bytes de caracteres multibyte duas cadeias de caracteres e diferencia maiusculas de minúsculas.
+Compara **n** bytes de caracteres multibyte duas cadeias de caracteres e diferencia maiusculas e minúsculas.
 
 > [!IMPORTANT]
 > Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -88,23 +88,23 @@ O valor retornado indica a relação entre as subcadeias de caracteres.
 
 |Valor retornado|Descrição|
 |------------------|-----------------|
-|< 0|*string1* subcadeia de caracteres menor *string2* subcadeia de caracteres.|
+|< 0|*string1* subcadeia de caracteres menor que *string2* subcadeia de caracteres.|
 |0|*string1* subcadeia de caracteres idêntica à *string2* subcadeia de caracteres.|
 |> 0|*string1* subcadeia de caracteres maior que *string2* subcadeia de caracteres.|
 
-Em um erro, **mbsnbicmp** retorna **_NLSCMPERROR**, que é definido em String.h e Mbstring.h.
+Em um erro **mbsnbicmp** retorna **_NLSCMPERROR**, que é definido em String. h e mbstring.
 
 ## <a name="remarks"></a>Comentários
 
-O **mbsnbicmp** função executa uma comparação ordinal de no máximo a primeira *contagem* bytes de *string1* e *string2*. A comparação é executada pela conversão de cada caractere em minúsculas; [mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) é uma versão de maiusculas e minúsculas do **mbsnbicmp**. A comparação será encerrado se um caractere null de terminação for alcançado na cadeia de caracteres antes de *contagem* caracteres são comparados. Se as cadeias de caracteres forem iguais quando um caractere null de terminação for alcançado na cadeia de caracteres antes de *contagem* caracteres são comparados, a cadeia de caracteres mais curto é menor.
+O **mbsnbicmp** função executa uma comparação ordinal de no máximo os primeiros *contagem* bytes de *string1* e *string2*. A comparação é executada convertendo cada caractere em minúsculas; [mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) é uma versão diferencia maiusculas de minúsculas do **mbsnbicmp**. A comparação termina se um caractere nulo de terminação for atingido na cadeia de caracteres antes de *contagem* caracteres serem comparados. Se as cadeias de caracteres são iguais quando um caractere nulo de terminação for atingido na cadeia de caracteres antes de *contagem* caracteres são comparados, a cadeia de caracteres mais curta será menor.
 
-**mbsnbicmp** é semelhante a [mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), exceto que ela compara cadeias de caracteres até *contagem* bytes em vez de por caracteres.
+**mbsnbicmp** é semelhante ao [mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), exceto que ela compara cadeias de caracteres até *contagem* bytes em vez de por caracteres.
 
-Duas cadeias de caracteres que contêm caracteres localizados entre 'Z' e 'a' na tabela ASCII ('[', '\\', ']', '^', '_' e '\`') são comparadas de modo diferente, dependendo das maiúsculas e minúsculas delas. Por exemplo, as duas cadeias de caracteres "ABCDE" e "ABCD ^" comparar uma maneira de se a comparação for minúsculas ("abcde" > "abcd ^") e a outra maneira ("ABCDE" < "ABCD ^") se ele está em maiusculo.
+Duas cadeias de caracteres que contêm caracteres localizados entre 'Z' e 'a' na tabela ASCII ('[', '\\', ']', '^', '_' e '\`') são comparadas de modo diferente, dependendo das maiúsculas e minúsculas delas. Por exemplo, as duas cadeias de caracteres "ABCDE" e "ABCD ^" comparadas de uma forma se a comparação é minúscula ("abcde" > "abcd ^") e de outra forma ("ABCDE" < "ABCD ^") se ele estiver em maiusculas.
 
 **mbsnbicmp** reconhece sequências de caracteres multibyte de acordo com o [página de código multibyte](../../c-runtime-library/code-pages.md) atualmente em uso. Ela não é afetada pela configuração da localidade atual.
 
-Se qualquer um dos *string1* ou *string2* é um ponteiro nulo, **mbsnbicmp** invoca o manipulador de parâmetro inválido, conforme descrito em [devalidaçãodeparâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, a função retorna **_NLSCMPERROR** e define **errno** para **EINVAL**.
+Se qualquer um dos *string1* ou *string2* é um ponteiro nulo, **mbsnbicmp** invocará o manipulador de parâmetro inválido, conforme descrito em [devalidaçãodeparâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará **_NLSCMPERROR** e define **errno** para **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -117,7 +117,7 @@ Se qualquer um dos *string1* ou *string2* é um ponteiro nulo, **mbsnbicmp** inv
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**_mbsnbicmp**|<mbstring.h>|
+|**_mbsnbicmp**|\<mbstring.h>|
 
 Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
