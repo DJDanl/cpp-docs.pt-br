@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac444680a22a99f292b1728181103789435a150
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 87e9ba6ef9bcb4a909e97466d7ea71ee18374991
+ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404702"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44110184"
 ---
 # <a name="qsort"></a>qsort
 
@@ -59,19 +59,23 @@ void qsort(
 
 ### <a name="parameters"></a>Parâmetros
 
-*base* início da matriz de destino.
+<br/>
+Início da matriz de destino.
 
-*número* tamanho em elementos de matriz.
+*número*<br/>
+Tamanho da matriz nos elementos.
 
-*largura* tamanho em bytes do elemento.
+*width*<br/>
+Tamanho do elemento em bytes.
 
-*Comparar* ponteiro para uma rotina fornecido pelo usuário que compara dois elementos de matriz e retorna um valor que especifica sua relação.
+*compare*<br/>
+Ponteiro para uma rotina fornecida pelo usuário que compara dois elementos de matriz e retorna um valor que especifica seu relacionamento.
 
 ## <a name="remarks"></a>Comentários
 
-O **qsort** função implementa um algoritmo de classificação rápida para classificar uma matriz de *número* elementos, cada um dos *largura* bytes. O argumento *base* é um ponteiro para a base da matriz a ser classificada. **qsort** substitui essa matriz usando os elementos classificados.
+O **qsort** função implementa um algoritmo de classificação rápida para classificar uma matriz de *número* elementos, cada um dos *largura* bytes. O argumento *base* é um ponteiro para a base da matriz a ser classificado. **qsort** substitui essa matriz usando os elementos classificados.
 
-**qsort** chama o *comparar* uma rotina ou mais vezes durante a classificação e passa os ponteiros para dois elementos de matriz em cada chamada.
+**qsort** chamadas a *comparar* uma rotina ou mais vezes durante a classificação e passa ponteiros para dois elementos de matriz em cada chamada.
 
 ```C
 compare( (void *) & elem1, (void *) & elem2 );
@@ -81,13 +85,13 @@ A rotina deve comparar os elementos e retornar um dos valores a seguir.
 
 |Comparar o valor retornado da função|Descrição|
 |-----------------------------------|-----------------|
-|< 0|**elem1** menor **elem2**|
+|< 0|**elem1** menor que **elem2**|
 |0|**elem1** equivalente a **elem2**|
-|> 0|**elem1** maior **elem2**|
+|> 0|**elem1** maior que **elem2**|
 
 A matriz é classificada em ordem crescente, conforme definido pela função de comparação. Para classificar uma matriz em ordem decrescente, inverta o sentido de “maior que” e “menor que” na função de comparação.
 
-Essa função valida seus parâmetros. Se *comparar* ou *número* é **nulo**, ou se *base* é **nulo** e **número* é diferente de zero, ou se *largura* é menor que zero, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, a função retorna e **errno** é definido como **EINVAL**.
+Essa função valida seus parâmetros. Se *compare* ou *número* está **nulo**, ou se *base* é **nulo** e **número* é diferente de zero, ou se *largura* é menor que zero, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará e **errno** é definido como **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 
