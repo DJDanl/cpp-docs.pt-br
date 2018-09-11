@@ -1,7 +1,7 @@
 ---
 title: Classe regex_constants | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/10/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -92,14 +92,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f766df104df31ba2ba154c081338f7a6d1d4a05c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0e330cccb83ad702994b3d31d762cc0203e78de0
+ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107512"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384989"
 ---
-# <a name="regexconstants-class"></a>Classe regex_constants
+# <a name="regexconstants-namespace"></a>namespace regex_constants
 
 Namespace para sinalizadores de expressão regular.
 
@@ -116,6 +116,12 @@ namespace regex_constants {
 ## <a name="remarks"></a>Comentários
 
 O namespace `regex_constants` encapsula vários tipos de sinalizador e seus valores de sinalizador associados.
+
+|||
+|-|-|
+|[error_type](#error_type)|Sinalizadores para relatar erros de sintaxe de expressão regular.|
+|[match_flag_type](#match_flag_type)|Sinalizadores para opções de correspondência de expressões regulares.|
+|[syntax_option_type](#syntax_option_type)|Sinalizadores para a seleção de opções de sintaxe.|
 
 ## <a name="requirements"></a>Requisitos
 
