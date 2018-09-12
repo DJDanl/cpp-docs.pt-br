@@ -1,28 +1,30 @@
 ---
 title: Classe SimpleClassFactory | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/7/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::SimpleClassFactory
+- module/Microsoft::WRL::SimpleClassFactory::CreateInstance
 dev_langs:
 - C++
 helpviewer_keywords:
-- SimpleClassFactory class
+- Microsoft::WRL::SimpleClassFactory class
+- Microsoft::WRL::SimpleClassFactory::CreateInstance method
 ms.assetid: 6edda1b2-4e44-4e14-9364-72f519249962
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: deb100cfcbb8d2af14501b8b5cf90569a90c2d4d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b20cbb906676705113bd1a84884cc5719b8272bf
+ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600485"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44691439"
 ---
 # <a name="simpleclassfactory-class"></a>Classe SimpleClassFactory
 
@@ -44,7 +46,7 @@ Uma classe base.
 
 A classe base deve fornecer um construtor padrão.
 
-O exemplo de código a seguir demonstra como usar **SimpleClassFactory** com o [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) macro.
+O exemplo de código a seguir demonstra como usar `SimpleClassFactory` com o [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) macro.
 
 `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`
 
@@ -54,7 +56,7 @@ O exemplo de código a seguir demonstra como usar **SimpleClassFactory** com o [
 
 |Nome|Descrição|
 |----------|-----------------|
-|[Método SimpleClassFactory::CreateInstance](../windows/simpleclassfactory-createinstance-method.md)|Cria uma instância da interface especificada.|
+|[Método SimpleClassFactory::CreateInstance](#createinstance)|Cria uma instância da interface especificada.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -86,6 +88,35 @@ O exemplo de código a seguir demonstra como usar **SimpleClassFactory** com o [
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Consulte também
+## <a name="createinstance"></a>Método simpleclassfactory:: CreateInstance
 
-[Namespace Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+Cria uma instância da interface especificada.
+
+```cpp
+STDMETHOD( CreateInstance )(
+   _Inout_opt_ IUnknown* pUnkOuter,
+   REFIID riid,
+   _Deref_out_ void** ppvObject
+);
+```
+
+#### <a name="parameters"></a>Parâmetros
+
+*pUnkOuter*  
+Deve ser `nullptr`; caso contrário, o valor retornado é CLASS_E_NOAGGREGATION.
+
+SimpleClassFactory não dá suporte a agregação. Se havia suporte para a agregação e o objeto que está sendo criado fazia parte de uma agregação *pUnkOuter* seria um ponteiro para o controle `IUnknown` interface da agregação.
+
+*riid*  
+ID do objeto para criar a interface.
+
+*ppvObject*  
+Quando essa operação for concluída, ponteiro para uma instância do objeto especificado o *riid* parâmetro.
+
+### <a name="return-value"></a>Valor de retorno
+
+S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro.
+
+### <a name="remarks"></a>Comentários
+
+Se `__WRL_STRICT__` é definido, um erro de asserção será emitido se a classe base especificada no parâmetro de modelo de classe não é derivada da [RuntimeClass](../windows/runtimeclass-class.md), ou não está configurada com o ClassicCom ou WinRtClassicComMix [ RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valor de enumeração.
