@@ -15,26 +15,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd1ce5a214e33fed66aa5f54a57c1cc1d15473e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 193ba8b853fbdbe16f906e1cdf82dd22a40f36bb
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383099"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43759490"
 ---
 # <a name="external-definitions"></a>Definições externas
-*translation-unit*:  
- *external-declaration*  
+
+*translation-unit*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*external-declaration* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*  
   
- *translation-unit external-declaration*  
-  
- *external-declaration*:       /\* permitida apenas no escopo externo (do arquivo) \*/  
- *function-definition*  
-  
- `declaration`  
-  
- *function-definition*:         /\* aqui, o declarador é o declarador de função \*/  
- *declaration-specifiers* opt*declarator declaration-list* opt*compound-statement*  
-  
-## <a name="see-also"></a>Consulte também  
- [Gramática de estrutura de frase](../c-language/phrase-structure-grammar.md)
+*external-declaration*: /\* Permitida apenas no escopo externo (do arquivo) \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*function-definition*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration*
+
+*function-definition*: /\* Aqui, o declarador é o declarador de função \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
+
+## <a name="see-also"></a>Consulte também
+
+[Gramática de estrutura de frase](../c-language/phrase-structure-grammar.md)

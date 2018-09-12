@@ -17,19 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4577ac1a0e1cac90a3436809722978d119c6b557
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5185b3b39ad74381113bd858f9db20ccddfe0fa8
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389628"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752593"
 ---
 # <a name="recommendations-for-choosing-between-functions-and-macros"></a>Recomendações para escolher entre funções e macros
 A maioria das rotinas de biblioteca em tempo de execução da Microsoft são funções compiladas ou montadas, mas algumas rotinas são implementadas como macros. Quando um arquivo de cabeçalho declara uma função e uma versão de macro de uma rotina, a definição de macro tem precedência, porque ele sempre aparece depois da declaração de função. Quando você invoca uma rotina que é implementada como uma função e uma macro, você pode forçar o compilador a usar a versão da função de duas maneiras:  
   
 -   Coloque o nome da rotina entre parênteses.  
   
-    ```  
+    ```C
     #include <ctype.h>  
     a = _toupper(a);    // Use macro version of toupper.  
     a = (_toupper)(a);  // Force compiler to use   
@@ -38,12 +38,12 @@ A maioria das rotinas de biblioteca em tempo de execução da Microsoft são fun
   
 -   "Indefina" a definição da macro com a diretiva `#undef`:  
   
-    ```  
+    ```C
     #include <ctype.h>  
     #undef _toupper  
     ```  
   
- Se você precisa escolher entre uma função e uma implementação de macro de uma rotina de biblioteca, considere as seguintes desvantagens:  
+Se você precisa escolher entre uma função e uma implementação de macro de uma rotina de biblioteca, considere as seguintes desvantagens:  
   
 -   **Velocidade versus tamanho** O principal benefício do uso de macros é o tempo de execução mais rápido. Durante o pré-processamento, uma macro é expandida (substituída pela sua definição) embutida cada vez que for usada. Uma definição de função ocorre apenas uma vez, independentemente de quantas vezes ele é chamada. Macros podem aumentar o tamanho do código, mas não têm a sobrecarga associada às chamadas de função.  
   
@@ -52,4 +52,4 @@ A maioria das rotinas de biblioteca em tempo de execução da Microsoft são fun
 -   **Verificação de tipo** Ao declarar uma função, o compilador pode verificar os tipos de argumento. Como você não pode declarar uma macro, o compilador não pode verificar tipos de argumento de macro; embora ele possa verificar o número de argumentos que você passar para uma macro.  
   
 ## <a name="see-also"></a>Consulte também  
- [Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md)
+[Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md)
