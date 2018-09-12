@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81cfe434397d45ef42b2f8ee3ebceae61098e36f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8ddcaa55e3b88e715428ea8fa44c897ab5f8b4f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384288"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43216092"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>Conversões em e de tipos de ponteiro
 Um ponteiro para um tipo de valor que pode ser convertido em um ponteiro para um tipo diferente. No entanto, o resultado pode ser indefinido devido aos requisitos de alinhamento e aos tamanhos de tipos diferentes em armazenamento. Um ponteiro para um objeto pode ser convertido em um ponteiro para um objeto cujo tipo exige menos alinhamento de armazenamento ou igualmente restrito, e reconverter sem modificação.  
@@ -43,7 +43,7 @@ Um ponteiro para um tipo de valor que pode ser convertido em um ponteiro para um
   
 -   Se o tamanho do tipo integral for diferente do tamanho do tipo de ponteiro, o tipo integral é convertido primeiro no tamanho do ponteiro, usando os caminhos de conversão fornecidos nas tabelas [Conversão de tipos integrais com sinal](../c-language/conversions-from-signed-integral-types.md) e [Conversão de tipos integrais sem sinal](../c-language/conversions-from-unsigned-integral-types.md). Depois é tratado como um valor do ponteiro.  
   
- Uma expressão constante integral com valor 0 ou uma conversão da expressão em tipo **void \*** pode ser convertida por uma conversão de tipo, por atribuição ou por comparação, em um ponteiro de qualquer tipo. Isso gera um ponteiro nulo que é igual a outro ponteiro nulo do mesmo tipo, mas esse ponteiro nulo não é igual a nenhum ponteiro para uma função ou a um objeto. Os números inteiros diferentes da constante 0 podem ser convertidos no tipo de ponteiro, mas o resultado não é portátil.  
+ Uma expressão constante integral com valor 0 ou uma conversão da expressão em tipo **void** <strong>\*</strong> pode ser convertida por uma conversão de tipo, por atribuição ou por comparação, em um ponteiro de qualquer tipo. Isso gera um ponteiro nulo que é igual a outro ponteiro nulo do mesmo tipo, mas esse ponteiro nulo não é igual a nenhum ponteiro para uma função ou a um objeto. Os números inteiros diferentes da constante 0 podem ser convertidos no tipo de ponteiro, mas o resultado não é portátil.  
   
 ## <a name="see-also"></a>Consulte também  
  [Conversões de atribuição](../c-language/assignment-conversions.md)

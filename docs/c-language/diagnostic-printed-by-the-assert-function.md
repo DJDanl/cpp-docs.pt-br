@@ -12,21 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c219669d018dc8c4cb038e90dffd1137877f422
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e824e94f79aa01ab3a82675fb3e8f76059c567d
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382871"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43195546"
 ---
 # <a name="diagnostic-printed-by-the-assert-function"></a>Diagnóstico impresso pela função assert
 **ANSI 4.2** O diagnóstico impresso pela função **assert** e seu comportamento de término  
   
- A função **assert** imprimirá uma mensagem de diagnóstico e chamará a rotina **abort** se a expressão for false (0). A mensagem de diagnóstico tem o formato  
-  
- **Assertion failed**: *expression***, file** *filename***, line** *linenumber*  
-  
- onde nome_de_arquivo é o nome do arquivo de origem e número_de_linha é o número da linha da asserção que falhou no arquivo de origem. Nenhuma ação será executada se a expressão for true (diferente de zero).  
+A função **assert** imprimirá uma mensagem de diagnóstico e chamará a rotina **abort** se a expressão for false (0). A mensagem de diagnóstico tem o formato  
+
+> **Assertion failed**: <em>expressão</em>**, arquivo** <em>nome_de_arquivo</em>**, linha** *número_de_linha*  
+
+em que *nome_de_arquivo* é o nome do arquivo de origem e *número_de_linha* é o número de linha da asserção que falhou no arquivo de origem. Nenhuma ação será executada se a *expressão* for true (diferente de zero).  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções de biblioteca](../c-language/library-functions.md)

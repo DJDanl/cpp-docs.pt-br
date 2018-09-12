@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19a49bf18721f605abe0c6e496d3532012c9c92c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 6e23358e17558c436d82a3226f84c35a59bf63a1
+ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340392"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43694029"
 ---
 # <a name="redistributing-the-mfc-library"></a>Redistribuindo a biblioteca do MFC
 Se você vincular o aplicativo dinamicamente à biblioteca MFC, precisará redistribuir a DLL do MFC correspondente. Por exemplo, se o aplicativo MFC for compilado usando a versão do MFC fornecida com o Visual Studio 2015, você precisará redistribuir mfc140.dll ou mfc140u.dll, dependendo se o aplicativo é compilado para suporte para Unicode ou para caracteres estreitos.  
@@ -36,7 +36,7 @@ Se você vincular o aplicativo dinamicamente à biblioteca MFC, precisará redis
   
  Se o aplicativo usar as classes MFC que implementam o controle WebBrowser (por exemplo, [Classe CHtmlView](../mfc/reference/chtmlview-class.md) ou [Classe CHtmlEditView](../mfc/reference/chtmleditview-class.md)), recomendamos que você também instale a versão atual do Microsoft Internet Explorer, de modo que o computador de destino tenha os arquivos de controle comum mais atuais. (No mínimo, o Internet Explorer 4.0 é necessário.) Mais informações sobre como instalar os componentes do Internet Explorer estão disponíveis em "Artigo 185375: Como criar uma instalação única de EXE do Internet Explorer" no site do Suporte da Microsoft.  
   
- Se o aplicativo usar as classes de banco de dados MFC (por exemplo, [Classe CRecordset](../mfc/reference/crecordset-class.md) e [Classe CRecordView](../mfc/reference/crecordview-class.md)), você precisará redistribuir o ODBC e os drivers ODBC usados pelo aplicativo. Para obter mais informações, confira [Redistribuindo arquivos de suporte de banco de dados](../ide/redistributing-database-support-files.md).  
+ Se o aplicativo usar as classes de banco de dados MFC (por exemplo, [Classe CRecordset](../mfc/reference/crecordset-class.md) e [Classe CRecordView](../mfc/reference/crecordview-class.md)), você precisará redistribuir o ODBC e os drivers ODBC usados pelo aplicativo.  
   
  Se o aplicativo MFC usar controles do Windows Forms, você precisará redistribuir mfcmifc80.dll com o aplicativo. Essa DLL é um assembly .NET assinado com nome forte que pode ser redistribuído com um aplicativo em sua pasta local do aplicativo ou implantando-o no GAC (Cache de Assembly Global) usando o [Gacutil.exe (Ferramenta do Cache de Assembly Global)](/dotnet/framework/tools/gacutil-exe-gac-tool).  
   
@@ -49,7 +49,7 @@ Se você vincular o aplicativo dinamicamente à biblioteca MFC, precisará redis
   
  Os arquivos .msm redistribuíveis contêm as DLLs usadas para localização. Há uma DLL para cada idioma compatível. O processo de instalação instala essas DLLs na pasta %windir%\system32\ no computador de destino.  
   
- Para obter mais informações sobre como localizar aplicativos MFC, confira [TN057: Localização de componentes do MFC](../mfc/tn057-localization-of-mfc-components.md) e também [Artigo 208983: Como usar DLLs LOC do MFC](http://go.microsoft.com/fwlink/p/?linkid=198025) no site do Suporte da Microsoft.  
+ Para obter mais informações sobre como localizar aplicativos de MFC, consulte [TN057: localização de componentes MFC](../mfc/tn057-localization-of-mfc-components.md).
   
  Redistribua DLLs de localização do MFC implantando a DLL do MFC na pasta local do aplicativo. Para obter mais informações sobre como redistribuir bibliotecas do Visual C++, confira [Redistribuindo arquivos do Visual C++](../ide/redistributing-visual-cpp-files.md).  
   

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 521e08b22abb40b6e1b1fedce2375a6e33cc7e73
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 6453d718454f7cfef3bb0211d05eb26a712eaf0f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130778"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218307"
 ---
 # <a name="supported-platforms-visual-c"></a>Plataformas com suporte (Visual C++)
 
@@ -28,8 +28,8 @@ Os aplicativos criados com o Visual Studio podem ser direcionados a várias plat
 
 |Sistema operacional|x86|X64|ARM|
 |----------------------|---------|---------|---------|
-|Windows XP|X*|X*||
-|Windows Server 2003|X*|X*||
+|Windows XP|X\*|X\*||
+|Windows Server 2003|X\*|X\*||
 |Windows Vista|X|X||
 |Windows Server 2008|X|X||
 |Windows 7|X|X||
@@ -37,9 +37,9 @@ Os aplicativos criados com o Visual Studio podem ser direcionados a várias plat
 |Windows 8|X|X|X|
 |Windows 8.1|X|X|X|
 |Windows 10|X|X|X|
-|Android **|X|X|X|
-|iOS **|X|X|X|
-|Linux ***|X|X|X|
+|Android \*\*|X|X|X|
+|iOS \*\*|X|X|X|
+|Linux \*\*\*|X|X|X|
 
 \* Você pode usar o conjunto de ferramentas da plataforma Windows XP incluído no Visual Studio 2017, no Visual Studio 2015, no Visual Studio 2013 e no Visual Studio 2012 com a Atualização 1 ou posteriores para criar projetos do Windows XP e do Windows Server 2003. Para obter informações sobre como usar esse conjunto de ferramentas da plataforma, consulte [Configuring Programs for Windows XP (Configurando programas para Windows XP)](build/configuring-programs-for-windows-xp.md). Para obter mais informações sobre como alterar o conjunto de ferramentas da plataforma, consulte [Como modificar a estrutura de destino e o conjunto de ferramentas da plataforma](build/how-to-modify-the-target-framework-and-platform-toolset.md).
 

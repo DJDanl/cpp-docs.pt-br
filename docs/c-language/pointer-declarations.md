@@ -17,44 +17,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d9600c27f40a43105ae9a8fc2fd1579907891cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f7e5f8933aabe36362938a23c28ed1cd562a579
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391907"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205387"
 ---
 # <a name="pointer-declarations"></a>Declarações de ponteiro
 Uma "declaração de ponteiro" nomeia uma variável de ponteiro e especifica o tipo de objeto para o qual a variável aponta. Uma variável declarada como um ponteiro contém um endereço de memória.  
   
-## <a name="syntax"></a>Sintaxe  
- *declarator*:  
- &nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*  
-  
- *direct-declarator*:  
- &nbsp;&nbsp;*identifier*  
-  
- &nbsp;&nbsp;**(** *declarator* **)**  
-  
- &nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**  
-  
- &nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**  
-  
- &nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**  
-  
- *pointer*:  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub>  
-  
- &nbsp;&nbsp;**\*** *type-qualifier-list*<sub>opt</sub> *pointer*  
-  
- *type-qualifier-list*:  
- &nbsp;&nbsp;*type-qualifier*  
-  
- &nbsp;&nbsp;*type-qualifier-list* *type-qualifier*  
+## <a name="syntax"></a>Sintaxe
+
+*declarator*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*  
+
+*direct-declarator*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  
+&nbsp;&nbsp;&nbsp;&nbsp;**(** *declarator* **)**  
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**  
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**  
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**  
+
+*pointer*:  
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub>  
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub> *pointer*  
+
+*type-qualifier-list*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier*  
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier-list* *type-qualifier*  
   
  O *type-specifier* informa o tipo de objeto, que pode ser qualquer tipo básico, de estrutura ou união. As variáveis de ponteiro também podem apontar para funções, matrizes e outros ponteiros. (Para obter informações sobre como declarar e interpretar tipos de ponteiro mais complexos, consulte [Interpretar declaradores mais complexos](../c-language/interpreting-more-complex-declarators.md).)  
   
- Ao tornar o *type-specifier* **nulo**, é possível atrasar a especificação do tipo ao qual o ponteiro se refere. Esse item é chamado de "ponteiro para **nulo**" e escrito como `void *`. Uma variável declarada como um ponteiro para *nulo* pode ser usada para apontar para um objeto de qualquer tipo. No entanto, para realizar a maioria das operações no ponteiro ou no objeto para o qual ele aponta, o tipo para o qual ele aponta deve ser explicitamente especificado para cada operação. (Variáveis do tipo **char \*** e do tipo **void \*** são compatíveis com a atribuição sem uma conversão de tipo.) Essa conversão pode ser realizada com uma conversão de tipo (consulte [Conversões de tipo](../c-language/type-cast-conversions.md) para obter mais informações).  
+ Ao tornar o *type-specifier* **nulo**, é possível atrasar a especificação do tipo ao qual o ponteiro se refere. Esse item é chamado de "ponteiro para **nulo**" e escrito como `void *`. Uma variável declarada como um ponteiro para *nulo* pode ser usada para apontar para um objeto de qualquer tipo. No entanto, para realizar a maioria das operações no ponteiro ou no objeto para o qual ele aponta, o tipo para o qual ele aponta deve ser explicitamente especificado para cada operação. (Variáveis do tipo **char** <strong>\*</strong> e do tipo **void** <strong>\*</strong> são compatíveis com a atribuição sem uma conversão de tipo.) Essa conversão pode ser realizada com uma conversão de tipo (consulte [Conversões de tipo](../c-language/type-cast-conversions.md) para obter mais informações).  
   
  O *type-qualifier* pode ser **const** ou **volatile** ou ambos. Eles especificam, respectivamente, que o ponteiro não pode ser modificado pelo programa em si (**const**) ou que o ponteiro pode ser legitimamente modificado por algum processo fora do controle do programa (**volatile**). (Consulte [Qualificadores de Tipo](../c-language/type-qualifiers.md) para obter mais informações sobre **const** e **volatile**.)  
   

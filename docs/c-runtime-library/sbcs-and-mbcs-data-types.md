@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccdec81251589ba36209f878f1fa8b727d7d2b98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8cd45a20557eb3a7b2af3b1c2ecba3cc858af503
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409271"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43205254"
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>Tipos de dados SBCS e MBCS
 
@@ -34,7 +34,7 @@ Qualquer rotina de biblioteca em tempo de execução de MBCS da Microsoft que ma
 
 Portanto, é melhor representar um byte de um caractere multibyte como um `unsigned char` de 8 bits. Ou, para evitar um resultado negativo, simplesmente converta um caractere de byte único do tipo **char** em um `unsigned char` antes de convertê-lo em um **int** ou **long**.
 
-Devido a algumas funções de manipulação de cadeia de caracteres de SBCS aceitarem parâmetros **char\*** (assinados), definir **_MBCS** resultará em um aviso do compilador sobre tipos incompatíveis. Há três maneiras de evitar esse aviso, listados em ordem de eficiência:
+Devido a algumas funções de manipulação de cadeia de caracteres de SBCS aceitarem parâmetros **char**<strong>\*</strong> (assinados), definir **_MBCS** resultará em um aviso do compilador sobre tipos incompatíveis. Há três maneiras de evitar esse aviso, listados em ordem de eficiência:
 
 1. Use as funções embutidas fortemente tipadas em TCHAR.H. Este é o comportamento padrão.
 

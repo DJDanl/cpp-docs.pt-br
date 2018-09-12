@@ -15,43 +15,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd8670815b908f66a6e2ed400bc87ca07c369ee4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ac843ef83d2de4f9cf84a44c67859becaead6ec6
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392621"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43218498"
 ---
 # <a name="overview-of-declarations"></a>Visão geral das declarações
 Uma "declaração" especifica a interpretação e os atributos de um conjunto de identificadores. Uma declaração que também causa a reserva do armazenamento para o objeto ou a função nomeada pelo identificador é chamada de uma "definição". As declarações de C para variáveis, funções e tipos têm esta sintaxe:  
   
-## <a name="syntax"></a>Sintaxe  
- `declaration`:  
- *declaration-specifiers* *attribute-seq*opt*init-declarator-list*opt **;**  
-  
- /\* *attribute-seq*opt é específico da Microsoft */  
-  
- *declaration-specifiers*:  
- *storage-class-specifier declaration-specifiers*opt  
-  
- *type-specifier declaration-specifiers*opt  
-  
- *type-qualifier declaration-specifiers*opt  
-  
- *init-declarator-list*:  
- *init-declarator*  
-  
- *init-declarator-list*, *init-declarator*  
-  
- *init-declarator*:  
- *declarator*  
-  
- *declarator*  **=**  *initializer*  
+## <a name="syntax"></a>Sintaxe
+
+*declaration*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub>**;**
+
+/\* *attribute-seq*<sub>opt</sub> é específico da Microsoft */
+
+*declaration-specifiers*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub>  
+&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declaration-specifiers*<sub>opt</sub>  
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>  
+
+*init-declarator-list*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*  
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list* **,** *init-declarator*  
+
+*init-declarator*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator*  
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *initializer*  
   
 > [!NOTE]
->  Esta sintaxe para `declaration` não é repetida nas seções a seguir. A sintaxe nas seguintes seções normalmente inicia com `declarator` não terminal.  
+> Esta sintaxe para *declaration* não é repetida nas seções a seguir. A sintaxe nas seguintes seções normalmente inicia com *declarator* não terminal.  
   
- As declarações na *init-declarator-list* contêm os identificadores que estão sendo nomeados; *init* é uma abreviação para o inicializador. A *init-declarator-list* é uma sequência de declaradores separada por vírgulas, em que cada um pode ter informações adicionais do tipo ou um inicializador ou ambos. O `declarator` contém os identificadores, se houver, sendo declarados. Não terminal *declaration-specifiers* consiste de uma sequência dos especificadores de tipo e classe de armazenamento que indicam vinculação, a duração de armazenamento e ao menos parte do tipo de entidades que os declaradores denotam. Portanto, as declarações são constituídas de uma combinação de especificadores de classe de armazenamento, especificadores de tipo, qualificadores de tipo, declaradores e inicializadores.  
+ As declarações na *init-declarator-list* contêm os identificadores que estão sendo nomeados; *init* é uma abreviação para o inicializador. A *init-declarator-list* é uma sequência de declaradores separada por vírgulas, em que cada um pode ter informações adicionais do tipo ou um inicializador ou ambos. O *declarator* contém os identificadores, caso haja algum, que estão sendo declarados. Não terminal *declaration-specifiers* consiste de uma sequência dos especificadores de tipo e classe de armazenamento que indicam vinculação, a duração de armazenamento e ao menos parte do tipo de entidades que os declaradores denotam. Portanto, as declarações são constituídas de uma combinação de especificadores de classe de armazenamento, especificadores de tipo, qualificadores de tipo, declaradores e inicializadores.  
   
  As declarações podem conter um ou mais dos atributos opcionais listados em *attribute-seq*; *seq* é uma abreviação para sequência. Esses atributos específicos da Microsoft executam uma variedade de funções, que são discutidas em detalhes ao longo deste documento.  
   
@@ -63,7 +60,7 @@ int const *fp;
   
  declara uma variável nomeada `fp` como um ponteiro para um valor (**const**) `int` não modificável. Você pode definir mais de uma variável em uma declaração usando vários declaradores, separados por vírgulas.  
   
- Uma declaração deve ter pelo menos um declarador ou seu especificador de tipo deve declarar uma marca de estrutura, marca de união ou membros de uma enumeração. Os declaradores fornecem toda quaisquer outras informações sobre um identificador. Um declarador é um identificador que pode ser modificado com colchetes (**[ ]**), asteriscos (**\***) ou parênteses ( **( )** ) para declarar uma matriz, ponteiro ou um tipo de função, respectivamente. Quando você declara variáveis simples (como o caractere, inteiro e itens de ponto flutuante), ou estruturas e uniões de variáveis simples, `declarator` é apenas um identificador. Para obter mais informações sobre os declaradores, consulte [Declaradores e declarações de variável](../c-language/declarators-and-variable-declarations.md).  
+ Uma declaração deve ter pelo menos um declarador ou seu especificador de tipo deve declarar uma marca de estrutura, marca de união ou membros de uma enumeração. Os declaradores fornecem toda quaisquer outras informações sobre um identificador. Um declarador é um identificador que pode ser modificado com colchetes (**[ ]**), asteriscos (<strong>\*</strong>) ou parênteses ( **( )** ) para declarar uma matriz, ponteiro ou um tipo de função, respectivamente. Quando você declara variáveis simples (como o caractere, inteiro e itens de ponto flutuante), ou estruturas e uniões de variáveis simples, `declarator` é apenas um identificador. Para obter mais informações sobre os declaradores, consulte [Declaradores e declarações de variável](../c-language/declarators-and-variable-declarations.md).  
   
  Todas as definições são implicitamente declarações, mas nem todas as declarações são definições. Por exemplo, as declarações de variáveis que começam com o especificador de classe de armazenamento `extern` "fazem referência", ao invés de "definir" declarações. Se uma variável externa deve ser chamada antes que tenha sido definida, ou se é definida em outro arquivo de origem do onde é usada, uma declaração `extern` é necessária. O armazenamento não é alocado "referenciando" declarações, nem as variáveis podem ser inicializados em declarações.  
   

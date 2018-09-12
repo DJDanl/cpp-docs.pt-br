@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46062043959c3ea525273e8bcf1a4112a0f42a67
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb5ba3c26355917d993f1d82b945c77bde918b0f
+ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391955"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43206127"
 ---
 # <a name="is-isw-routines"></a>Rotinas is, isw
 |||  
@@ -80,7 +80,7 @@ ms.locfileid: "32391955"
  `__iscsymf`  
  Letra ou sublinhado.  
   
- **isdigit**  
+ `isdigit`  
  Dígito decimal (0 – 9).  
   
  `isgraph`  
@@ -121,17 +121,16 @@ ms.locfileid: "32391955"
  `iswcntrl`  
  Caractere largo de controle.  
   
- **__iswcsym**  
- Qualquer caractere largo para o qual **isalnum** seja true, ou o caractere '_'.  
+ `__iswcsym`  
+ Qualquer caractere largo para o qual `isalnum` seja true, ou o caractere '_'.  
   
- **__iswcsymf**  
+ `__iswcsymf`  
  Qualquer caractere largo para o qual `iswalpha` seja true, ou o caractere '_'.  
   
  `iswctype`  
  O caractere tem uma propriedade especificada pelo argumento `desc`. Para cada valor válido do argumento `desc` de `iswctype`, há uma rotina de classificação de caractere largo equivalente, conforme mostra a tabela a seguir:  
   
- **Equivalência de iswctype (**   
- ***c, desc* ) para outras rotinas de teste isw**  
+ ### <a name="equivalence-of-iswctypec-desc-to-other-isw-testing-routines"></a>Equivalência de iswctype(c, desc) com outras rotinas de teste de isw
   
 |Valor do argumento *desc*|iswctype( *c, desc* ) equivalente|  
 |------------------------------|----------------------------------------|  
