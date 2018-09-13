@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e30fb37be6738b7100b84a1898c02ab4230c41b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 63c4998ae0ff6efc6fa520c66a4cabff2476f0d0
+ms.sourcegitcommit: 6e479e33e8fd8e30ea32801edbff2e3415f31bf7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597567"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45556748"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za, /Ze (desabilitar extensões de linguagem)
 O **/Za** opção de compilador emite um erro para construções de linguagem que não são compatíveis com ANSI C89 ou ISO c++11. O **/Ze** opção de compilador, que é ativado por padrão, permite que extensões da Microsoft.  
@@ -54,8 +54,8 @@ O **/Za** opção de compilador emite um erro para construções de linguagem qu
   
  Recomendamos que você desabilite extensões de linguagem, especificando o **/Za** opção se você planeja transferir seu programa em outros ambientes. Quando **/Za** for especificado, o compilador trata estendidas de palavras-chave como identificadores simples da Microsoft, desabilita as outras extensões da Microsoft e define automaticamente o `__STDC__` macro predefinida para programas em C.  
   
- Usado com outras opções do compilador **/Za** podem afetar como o compilador garante a conformidade com os padrões. Por exemplo, **/Za** e [/fp (Especificar comportamento de ponto flutuante)](../../build/reference/fp-specify-floating-point-behavior.md) pode resultar em comportamento de promoção de tipo de ponto flutuante que não estão em conformidade com ISO C99 ou padrões do C++11.  
-  
+ Usado com outras opções do compilador **/Za** podem afetar como o compilador garante a conformidade com os padrões.
+
  Para obter maneiras especificar as configurações de comportamento específico do compatível com padrões, consulte o [/Zc](../../build/reference/zc-conformance.md) opção de compilador.  
   
  Para obter mais informações sobre problemas de conformidade com o Visual C++, consulte [comportamento não padrão](../../cpp/nonstandard-behavior.md).  
