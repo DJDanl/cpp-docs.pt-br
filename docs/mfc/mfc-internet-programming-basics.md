@@ -1,7 +1,7 @@
 ---
-title: Noções básicas de programação do MFC Internet | Microsoft Docs
+title: Noções básicas de programação do MFC da Internet | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -26,19 +26,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6896daddc0eb900f9e2a29497eb2dd8a1dc78446
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 980822792c3be4bc9c4de93baa20d4b3decb5af9
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255603"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535152"
 ---
 # <a name="mfc-internet-programming-basics"></a>Noções básicas de programação da Internet MFC
-Microsoft oferece várias APIs para programação de aplicativos de cliente e servidor. Muitos novos aplicativos estão sendo gravados para a Internet, e como tecnologias, recursos do navegador e alteração de opções de segurança, os novos tipos de aplicativos serão gravados. Navegadores executados em computadores cliente, fornecendo acesso a World Wide Web e exibir páginas HTML que contém texto, gráficos, controles ActiveX e documentos. Servidores fornecem serviços gopher, HTTP e FTP e executam aplicativos de extensão de servidor usando CGI. Seu aplicativo personalizado pode recuperar as informações e fornecer dados na Internet.  
+
+Microsoft fornece várias APIs para programar aplicativos de cliente e servidor. Muitos aplicativos novos estão sendo gravados para a Internet, e como tecnologias, recursos do navegador e opções de segurança mudam, novos tipos de aplicativos serão gravados. Navegadores executados em computadores cliente, fornecendo acesso a World Wide Web e exibir páginas HTML que contêm texto, gráficos, controles ActiveX e documentos. Servidores fornecem FTP, HTTP e os serviços de gopher e executam aplicativos de extensão de servidor usando CGI. Seu aplicativo personalizado pode recuperar as informações e fornecem dados sobre a Internet.  
+
+>[!IMPORTANT]
+> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações, consulte [controles ActiveX](activex-controls.md).
   
  ![Aplicativos cliente e servidor](../mfc/media/vc38bq1.gif "vc38bq1")  
   
- MFC fornece classes que oferecem suporte a programação da Internet. Você pode usar [COleControl](../mfc/reference/colecontrol-class.md) e [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) e classes do MFC para gravar os controles ActiveX e documentos ativos relacionadas. Você pode usar classes MFC como [CInternetSession](../mfc/reference/cinternetsession-class.md), [CFtpConnection](../mfc/reference/cftpconnection-class.md), e [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) para recuperar arquivos e informações usando protocolos de Internet, como FTP, HTTP e gopher.  
+ O MFC fornece classes que dão suporte à programação da Internet. Você pode usar [COleControl](../mfc/reference/colecontrol-class.md) e [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) e as classes MFC para gravar documentos ativos e controles ActiveX relacionadas. Você pode usar classes do MFC, como [CInternetSession](../mfc/reference/cinternetsession-class.md), [CFtpConnection](../mfc/reference/cftpconnection-class.md), e [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) para recuperar informações usando protocolos de Internet, como FTP e arquivos HTTP e gopher.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -57,8 +61,6 @@ Microsoft oferece várias APIs para programação de aplicativos de cliente e se
 ## <a name="related-sections"></a>Seções relacionadas  
   
 -   [Controles ActiveX na Internet](../mfc/activex-controls-on-the-internet.md)  
-  
--   [Documentos ativos na Internet](../mfc/active-documents-on-the-internet.md)  
   
 -   [Monikers assíncronos na Internet](../mfc/asynchronous-monikers-on-the-internet.md)  
   
@@ -79,12 +81,12 @@ Microsoft oferece várias APIs para programação de aplicativos de cliente e se
 ##  <a name="_core_web_sites_for_more_information"></a> Sites da Web para obter mais informações  
  Para obter informações adicionais sobre a tecnologia de Internet da Microsoft, consulte o [Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/p/?linkid=56322) site da Web. (Links podem ser alteradas sem aviso prévio.)  
   
- Deste site para os desenvolvedores contém informações sobre como usar ferramentas de desenvolvimento da Microsoft e tecnologias e principais histórias sobre conferências recentes e futuras. Nessa página, você pode ir para vários sites de desenvolvedor relacionados, incluindo o .NET e centros de desenvolvedor de XML. Você também pode baixar exemplos e SDKs de beta.  
+ Este site da Web para os desenvolvedores contém informações sobre como usar ferramentas de desenvolvimento da Microsoft e as tecnologias e as principais histórias sobre conferências recentes e futuras. Nessa página, você pode ir para muitos sites relacionados para desenvolvedores, incluindo o .NET e XML Developer Centers. Você também pode baixar exemplos e SDKs de beta.  
   
- O [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37125) publica especificações do HTML, HTTP, CGI e outras tecnologias da World Wide Web.  
+ O [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37125) publica as especificações do HTML, HTTP, CGI e outras tecnologias de World Wide Web.  
   
-##  <a name="_core_more_internet_help"></a> Obter ajuda da Internet  
- A seção OLE do SDK do Windows contém informações adicionais sobre a programação de OLE. Essas informações fornecem detalhes sobre como usar as funções WinInet Win32 diretamente, em vez de por meio das classes MFC. Ele também contém informações de visão geral sobre as tecnologias de Internet.  
+##  <a name="_core_more_internet_help"></a> Mais ajuda da Internet  
+ A seção OLE do SDK do Windows contém informações adicionais sobre a programação de OLE. Essas informações fornecem detalhes sobre como usar as funções Win32 WinInet diretamente, em vez de por meio de classes do MFC. Ele também contém informações de visão geral sobre tecnologias da Internet.  
   
 ## <a name="see-also"></a>Consulte também  
 

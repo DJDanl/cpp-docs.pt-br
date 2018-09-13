@@ -1,7 +1,7 @@
 ---
 title: Identificadores (C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d112e7ca192e56ede21d06e7ff17a775d661d01
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: cad3c53be23d472a8ce40dae9056d73ab1de1c89
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405224"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535139"
 ---
 # <a name="identifiers-c"></a>Identificadores (C++)
 Um identificador é uma sequência de caracteres usados para denotar:  
@@ -104,7 +104,7 @@ int main() {
   
  Os identificadores não podem ter exatamente a mesma grafia e caixa (maiúscula ou minúscula) que as palavras-chave. Os identificadores que contêm palavras-chave são aceitos. Por exemplo, `Pint` é um identificador legal, mesmo que ele contenha **int**, que é uma palavra-chave.  
   
- Uso de dois caracteres sublinhados sequenciais ( **_** ) no início de um identificador ou um único sublinhado à esquerda seguido por uma letra maiuscula, é reservado para implementações de C++ em todos os escopos. Você deve evitar o uso de um sublinhado inicial seguido por uma letra minúscula para nomes com o escopo de arquivo por causa de possíveis conflitos com identificadores reservados atuais ou futuros.  
+ Uso de dois caracteres sublinhados sequenciais ( **_** ) em um identificador ou um único sublinhado à esquerda seguido por uma letra maiuscula, é reservado para implementações de C++ em todos os escopos. Você deve evitar o uso de um sublinhado inicial seguido por uma letra minúscula para nomes com o escopo de arquivo por causa de possíveis conflitos com identificadores reservados atuais ou futuros.  
   
 ## <a name="see-also"></a>Consulte também  
  [Convenções lexicais](../cpp/lexical-conventions.md)

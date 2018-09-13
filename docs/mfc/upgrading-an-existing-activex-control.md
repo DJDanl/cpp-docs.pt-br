@@ -1,7 +1,7 @@
 ---
 title: Atualizando um controle ActiveX existente | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -22,15 +22,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d162aea1d000aa9e65aea253f974c38ffc85bcd
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0bca0cca66f7f8b9c59dcea4911550abfc2024c8
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686180"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535251"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Atualizando um controle ActiveX existente
-Controles ActiveX existente (anteriormente conhecido como controles OLE) pode ser usado na Internet sem modificação. No entanto, você talvez queira modificar controles para melhorar o desempenho. Ao usar o controle em uma página da Web, há considerações adicionais. O arquivo. ocx e todos os arquivos de suporte devem ser no computador de destino ou ser baixados da Internet. Isso torna o tamanho do código e uma consideração importante de tempo de download. Downloads podem ser empacotados em um arquivo. cab assinados. Você pode marcar seu controle como seguros para script e como seguro para inicialização.  
+Controles ActiveX existente (anteriormente conhecido como controles OLE) pode ser usado na Internet sem modificação. No entanto, você talvez queira modificar controles para melhorar o desempenho. 
+
+>[!IMPORTANT]
+> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem as ActiveX, consulte [controles ActiveX](activex-controls.md).
+
+Ao usar o controle em uma página da Web, há considerações adicionais. O arquivo. ocx e todos os arquivos de suporte devem ser no computador de destino ou ser baixados da Internet. Isso torna o tamanho do código e uma consideração importante de tempo de download. Downloads podem ser empacotados em um arquivo. cab assinados. Você pode marcar seu controle como seguros para script e como seguro para inicialização.  
   
  Este artigo discute os seguintes tópicos:  
   

@@ -1,7 +1,7 @@
 ---
-title: 'Controles ActiveX MFC: Implementação da propriedade de Avançado | Microsoft Docs'
+title: 'Controles ActiveX MFC: Avançado implementação da propriedade | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -16,64 +16,67 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb3ba387d4b6fcca7b30cd360dff84b9da4302a
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: e5357354a747dd2ce2487bf66821e8be7d2a04a4
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928358"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534918"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>Controles ActiveX MFC: implementação da propriedade avançada
-Este artigo descreve os tópicos relacionados à implementação de propriedades em um controle ActiveX avançadas:  
+Este artigo descreve os tópicos relacionados à implementação de propriedades em um controle ActiveX avançadas.
+
+>[!IMPORTANT]
+> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem as ActiveX, consulte [controles ActiveX](activex-controls.md).  
   
 -   [Propriedades somente leitura e somente gravação](#_core_read2donly_and_write2donly_properties)  
   
--   [Retornando códigos de erro a partir de uma propriedade](#_core_returning_error_codes_from_a_property)  
+-   [Retornando códigos de erro de uma propriedade](#_core_returning_error_codes_from_a_property)  
   
 ##  <a name="_core_read2donly_and_write2donly_properties"></a> Propriedades somente leitura e somente gravação  
  O Assistente para adicionar propriedade fornece um método rápido e fácil para implementar propriedades somente leitura ou somente gravação para o controle.  
   
-#### <a name="to-implement-a-read-only-or-write-only-property"></a>Para implementar uma propriedade somente leitura ou somente gravação  
+#### <a name="to-implement-a-read-only-or-write-only-property"></a>Implementar uma propriedade somente leitura ou somente gravação  
   
-1.  Carregar projeto do controle.  
+1.  Carregar o projeto do seu controle.  
   
-2.  No modo de exibição de classe, expanda o nó de biblioteca de seu controle.  
+2.  No modo de exibição de classe, expanda o nó de biblioteca do seu controle.  
   
-3.  Para abrir o menu de atalho, clique com botão direito no nó de interface de seu controle (o segundo nó do nó de biblioteca).  
+3.  Para abrir o menu de atalho, clique com botão direito no nó de interface para o seu controle (o segundo nó do nó de biblioteca).  
   
-4.  No menu de atalho, clique em **adicionar** e, em seguida, clique em **adicionar propriedade**.  
+4.  No menu de atalho, clique em **Add** e, em seguida, clique em **adicionar propriedade**.  
   
-     Isso abre o [Assistente para adição de propriedade](../ide/names-add-property-wizard.md).  
+     Isso abre o [Assistente para adicionar de propriedade](../ide/names-add-property-wizard.md).  
   
 5.  No **nome da propriedade** , digite o nome de sua propriedade.  
   
-6.  Para **o tipo de implementação**, clique em **métodos Get/Set**.  
+6.  Para **tipo de implementação**, clique em **métodos Get/Set**.  
   
 7.  No **tipo de propriedade** , selecione o tipo apropriado para a propriedade.  
   
-8.  Se você quiser uma propriedade somente leitura, desmarque o nome da função de conjunto. Se você quiser uma propriedade somente gravação, desmarque o nome da função Get.  
+8.  Se você quiser uma propriedade somente leitura, desmarque o nome da função de conjunto. Se você quiser que uma propriedade somente gravação, desmarque o nome da função Get.  
   
 9. Clique em **Finalizar**.  
   
- Quando você fizer isso, o Assistente para adicionar propriedade insere a função `SetNotSupported` ou `GetNotSupported` na entrada de mapa de expedição no lugar de um normal definir ou obter a função.  
+ Quando você fizer isso, o Assistente para adicionar propriedade insere a função `SetNotSupported` ou `GetNotSupported` na entrada do mapa de expedição no lugar de um normal definem ou obtêm a função.  
   
- Se você quiser alterar uma propriedade existente para ser somente leitura ou somente gravação, você pode editar o mapa de expedição manualmente e remova a função de conjunto ou Get desnecessária da classe de controle.  
+ Se você quiser alterar uma propriedade existente para ser somente leitura ou somente gravação, você pode editar o mapa de expedição manualmente e remova a função Set ou Get desnecessária da classe de controle.  
   
- Se você quiser uma propriedade a ser condicionalmente somente leitura ou somente gravação (por exemplo, somente quando o controle está operando em um modo específico), você pode fornecer a função Set ou Get, como normal e chamar o `SetNotSupported` ou `GetNotSupported` função quando apropriado. Por exemplo:  
+ Se você quiser uma propriedade a ser condicionalmente somente leitura ou somente gravação (por exemplo, somente quando o controle está operando em um determinado modo), você pode fornecer a função Set ou Get, como de costume e chamar o `SetNotSupported` ou `GetNotSupported` funcionar quando apropriado. Por exemplo:  
   
  [!code-cpp[NVC_MFC_AxUI#29](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-property-implementation_1.cpp)]  
   
- Este exemplo de código chama `SetNotSupported` se o `m_bReadOnlyMode` é membro de dados **TRUE**. Se **FALSE**, em seguida, a propriedade é definida para o novo valor.  
+ Este exemplo de código chama `SetNotSupported` se o `m_bReadOnlyMode` é membro de dados **verdadeiro**. Se **falsos**, em seguida, a propriedade é definida para o novo valor.  
   
-##  <a name="_core_returning_error_codes_from_a_property"></a> Retornando códigos de erro a partir de uma propriedade  
- Para indicar que ocorreu um erro ao tentar obter ou definir uma propriedade, use o `COleControl::ThrowError` função, o que leva um SCODE (código de status) como um parâmetro. Você pode usar um SCODE predefinido ou definir seu próprio. Para obter uma lista de predefinidos SCODEs e instruções para definir SCODEs personalizados, consulte [tratamento de erros no controle ActiveX do seu](../mfc/mfc-activex-controls-advanced-topics.md) nos controles do ActiveX artigo: tópicos avançados.  
+##  <a name="_core_returning_error_codes_from_a_property"></a> Retornando códigos de erro de uma propriedade  
+ Para indicar que ocorreu um erro durante a tentativa de obter ou definir uma propriedade, use o `COleControl::ThrowError` função, que leva um SCODE (código de status) como um parâmetro. Você pode usar um SCODE predefinido ou definir um de seus próprios. Para obter uma lista de predefinidos SCODEs e instruções para definir SCODEs personalizados, consulte [Manipulando erros em seu controle de ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) nos controles do ActiveX do artigo: tópicos avançados.  
   
- Funções auxiliares existem para o mais comum predefinidas SCODEs, como [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), e [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
+ Funções auxiliares existem para os mais comuns predefinidos SCODEs, tais como [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), e [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
   
 > [!NOTE]
->  `ThrowError` deve ser usado apenas como um meio de retornar um erro de dentro Get da propriedade ou Set função ou um método de automação. Esses são os únicos vezes que o manipulador de exceção apropriada será presentes na pilha.  
+>  `ThrowError` deve ser usado apenas como um meio de retornar um erro de dentro Get da propriedade ou Set function ou um método de automação. Essas são as únicas vezes que o manipulador de exceção apropriado será presentes na pilha.  
   
- Para obter mais informações sobre relatórios de exceções em outras áreas do código, consulte [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) e a seção [tratamento de erros no controle ActiveX do seu](../mfc/mfc-activex-controls-advanced-topics.md) no artigo controles ActiveX: avançado Tópicos.  
+ Para obter mais informações sobre o relatório de exceções em outras áreas do código, consulte [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) e a seção [Manipulando erros em seu controle de ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) no artigo controles ActiveX: avançado Tópicos.  
   
 ## <a name="see-also"></a>Consulte também  
  [Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)   

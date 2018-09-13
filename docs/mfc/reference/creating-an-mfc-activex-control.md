@@ -1,7 +1,7 @@
 ---
 title: Criando um controle ActiveX do MFC | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -17,15 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96ecae8445368357da3bc7b271156f961c1c1dca
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0278ce0349b24680252100704031645c995fef51
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43687140"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535074"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Criando um controle ActiveX MFC
 Programas de controle ActiveX são programas modulares projetados para dar a um tipo específico de funcionalidade a um aplicativo pai. Por exemplo, você pode criar um controle como um botão para uso em uma caixa de diálogo ou barra de ferramentas para uso em uma página da Web.  
+
+>[!IMPORTANT]
+> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações, consulte [controles ActiveX](../activex-controls.md).
   
  A maneira mais fácil de criar um controle ActiveX do MFC é usar o [Assistente de controle ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md).  
   

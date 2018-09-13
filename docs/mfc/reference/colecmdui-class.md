@@ -1,7 +1,7 @@
 ---
 title: Classe COleCmdUI | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b057620e0ea348559b9c37f55ba7658b7f5270c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 4ece2d45bdce490d09c7195deec380728d79392d
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37851466"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535218"
 ---
 # <a name="colecmdui-class"></a>Classe COleCmdUI
 Implementa um método para MFC atualizar o estado dos objetos de interface do usuário relacionado ao `IOleCommandTarget`-controlado por recursos de seu aplicativo.  
@@ -61,7 +61,7 @@ class COleCmdUI : public CCmdUI
   
  `COleCmdUI` permite que o DocObject receber comandos que se originam na interface do usuário do seu contêiner (por exemplo, FileNew, abrir, imprimir e assim por diante) e permite que um contêiner receber comandos que se originam na interface do usuário do DocObject. Embora `IDispatch` poderia ser usado para distribuir os mesmos comandos, `IOleCommandTarget` fornece uma maneira mais simples de consulta e execute porque ele se baseia em um conjunto padrão de comandos, normalmente sem argumentos, e nenhuma informação de tipo está envolvida. `COleCmdUI` pode ser usado para habilitar, atualizar e definir outras propriedades de DocObject comandos de interface do usuário. Quando você deseja invocar o comando, chame [COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd).  
   
- Para obter mais informações sobre DocObjects, consulte [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) e [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md). Consulte também [primeiras etapas de Internet: documentos ativos](../../mfc/active-documents-on-the-internet.md) e [documentos ativos](../../mfc/active-documents-on-the-internet.md).  
+ Para obter mais informações sobre DocObjects, consulte [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) e [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CCmdUI](../../mfc/reference/ccmdui-class.md)  

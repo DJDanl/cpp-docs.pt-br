@@ -141,7 +141,6 @@
 ### [Escrevendo aplicativos MFC](writing-mfc-applications.md)
 ### [Controles ActiveX na Internet](activex-controls-on-the-internet.md)
 ### [Atualizando um controle ActiveX existente](upgrading-an-existing-activex-control.md)
-### [Documentos ativos na Internet](active-documents-on-the-internet.md)
 ### [Monikers assíncronos na Internet](asynchronous-monikers-on-the-internet.md)
 ### [Testando aplicativos da Internet](testing-internet-applications.md)
 ### [Segurança da Internet (C++)](internet-security-cpp.md)

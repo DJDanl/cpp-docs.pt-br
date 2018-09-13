@@ -1,7 +1,7 @@
 ---
 title: 'Contêineres de controle ActiveX: Habilitando contenção de controle ActiveX manualmente | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -16,31 +16,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fde0ee4dc740826c9efdf7b86cd2f021699f8820
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 845ad544b83f3f73c31eebd00218945c6028a622
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339885"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534970"
 ---
 # <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>Contêineres de controle ActiveX: habilitando contenção de controle ActiveX manualmente
-Se você não habilitou o suporte de controle ActiveX quando você usou o Assistente de aplicativo do MFC para gerar seu aplicativo, você precisará adicionar este suporte manualmente. Este artigo descreve o processo para adicionar manualmente a contenção de controle ActiveX para um aplicativo de contêiner OLE existente. Se você souber de antemão que você deseja que o suporte de controle ActiveX em seu contêiner OLE, consulte o artigo [criando um contêiner de controle ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control-container.md).  
+Se você não tiver habilitado o suporte a controles ActiveX quando você usou o Assistente de aplicativo do MFC para gerar seu aplicativo, você precisará adicionar esse suporte manualmente. Este artigo descreve o processo para adicionar manualmente a contenção de controle ActiveX a um aplicativo de contêiner OLE existente. Se você souber de antemão que você deseja que suporte a controles ActiveX em seu contêiner OLE, consulte o artigo [criando um contêiner de controle ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control-container.md).
+
+>[!IMPORTANT]
+> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem as ActiveX, consulte [controles ActiveX](activex-controls.md).  
   
 > [!NOTE]
->  Este artigo usa um baseado na caixa de diálogo ActiveX controle recipiente projeto chamado recipiente e um controle inserido chamado c como exemplos de procedimentos e código.  
+>  Este artigo usa um baseado em diálogo ActiveX contêiner projeto de controle de contêiner e um controle inserido chamado c como exemplos nos procedimentos e código de chamada.  
   
- Para oferecer suporte a controles ActiveX, você deve adicionar uma linha de código a dois dos arquivos do projeto.  
+ Para dar suporte a controles ActiveX, você deve adicionar uma linha de código para os dois arquivos do seu projeto.  
   
 -   Modificar a caixa de diálogo principal `InitInstance` função (localizada no CONTÊINER. CPP) pelo Assistente de aplicativo MFC fazendo uma chamada para [AfxEnableControlContainer](reference/ole-initialization.md#afxenablecontrolcontainer), conforme mostrado no exemplo a seguir:  
   
      [!code-cpp[NVC_MFCOleContainer#34](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_1.cpp)]  
     [!code-cpp[NVC_MFCOleContainer#35](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_2.cpp)]  
   
--   Adicione o seguinte ao STDAFX do seu projeto. Arquivo de cabeçalho H:  
+-   Adicione o seguinte ao STDAFX seu projeto. Arquivo de cabeçalho H:  
   
      [!code-cpp[NVC_MFCOleContainer#36](../mfc/codesnippet/cpp/activex-control-containers-manually-enabling-activex-control-containment_3.h)]  
   
- Depois de concluir essas etapas, recrie seu projeto clicando **criar** no **criar** menu.  
+ Depois de concluir essas etapas, recompile o projeto clicando **compilar** sobre o **compilar** menu.  
   
 ## <a name="see-also"></a>Consulte também  
  [Contêineres de controle ActiveX](../mfc/activex-control-containers.md)

@@ -1,7 +1,7 @@
 ---
 title: Controles ActiveX do MFC | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -25,15 +25,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f0f0d88274e6804d087f8acf905ba3181d57798
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 64b44afa6f9605c8c10d933b06fcec79b92f7c97
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205836"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535191"
 ---
 # <a name="mfc-activex-controls"></a>Controles ActiveX MFC
-Um controle ActiveX é um componente de software reutilizável baseado no COM (Component Object Model) que dá suporte a uma ampla variedade de funcionalidades OLE e que pode ser personalizado para atender às várias necessidades de software. Controles ActiveX são projetados para uso em contêineres de controle ActiveX comuns e na Internet e, em páginas da Web. Você pode criar controles ActiveX com o MFC, descrito aqui, ou com o [biblioteca ATL (Active Template)](../atl/active-template-library-atl-concepts.md).  
+
+Um controle ActiveX é um componente de software reutilizável baseado no COM (Component Object Model) que dá suporte a uma ampla variedade de funcionalidades OLE e que pode ser personalizado para atender às várias necessidades de software. 
+
+>[!IMPORTANT]
+> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações, consulte [controles ActiveX](activex-controls.md).
+
+Controles ActiveX são projetados para uso em contêineres de controle ActiveX comuns e na Internet e, em páginas da Web. Você pode criar controles ActiveX com o MFC, descrito aqui, ou com o [biblioteca ATL (Active Template)](../atl/active-template-library-atl-concepts.md).  
   
  Um controle ActiveX pode desenhar a próprio em sua própria janela, respondem a eventos (como cliques do mouse) e ser gerenciada por meio de uma interface que inclui propriedades e métodos semelhantes aos descritos em objetos de automação.  
   

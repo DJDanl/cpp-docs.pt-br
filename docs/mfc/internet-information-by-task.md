@@ -1,7 +1,7 @@
 ---
 title: Informações da Internet por tarefa | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -14,15 +14,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87cca4472ebc0cf5f6b31d377fd82f2c51d25946
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: a0e9fc861340f4289e7f50ebc59248b1ed317db3
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677541"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534996"
 ---
 # <a name="internet-information-by-task"></a>Informações da Internet por tarefa
 As tarefas listadas neste tópico são classificadas com base na tarefa que você deseja realizar.  
+
+>[!IMPORTANT]
+> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem as ActiveX, consulte [controles ActiveX](activex-controls.md).
   
  Categorias de tarefas a seguir são listadas neste tópico:  
   
@@ -34,13 +37,9 @@ As tarefas listadas neste tópico são classificadas com base na tarefa que voc�
   
 ###  <a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a> Controles ActiveX, documentos e tarefas de Moniker assíncrona  
   
--   [Saiba mais sobre documentos ativos](../mfc/active-documents-on-the-internet.md)  
-  
 -   [Saiba mais sobre Monikers assíncronos](../mfc/asynchronous-monikers-on-the-internet.md)  
   
 -   [Saiba mais sobre os controles ActiveX no contexto da Internet](../mfc/activex-controls-on-the-internet.md)  
-  
--   [Saiba mais sobre documentos ativos no contexto da Internet](../mfc/active-documents-on-the-internet.md)  
   
 -   [Otimizar um controle ActiveX](../mfc/mfc-activex-controls-optimization.md)  
   

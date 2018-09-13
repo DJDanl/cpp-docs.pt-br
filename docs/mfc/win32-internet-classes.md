@@ -1,7 +1,7 @@
 ---
 title: Classes de Internet Win32 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -19,27 +19,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1fa996ad36970faa97c9c6d248060a8121680a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1e93c2c3ea9efeb8be6ec5d79b9f2ef7729b9e9
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383218"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45534931"
 ---
 # <a name="win32-internet-classes"></a>Classes de Internet Win32
-MFC encapsula a Internet Win32 (WinInet) e a tecnologia de ActiveX para facilitar a programação da Internet.  
+MFC encapsula a Internet Win32 (WinInet) e a tecnologia de ActiveX para facilitar a programação da Internet.
+
+>[!IMPORTANT]
+> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem as ActiveX, consulte [controles ActiveX](activex-controls.md).
+  
   
  [CInternetSession](../mfc/reference/cinternetsession-class.md)  
- Cria e inicia uma sessão de Internet ou de várias sessões simultâneas de Internet e, se necessário, descreve a conexão a um servidor proxy.  
+ Cria e inicializa várias sessões simultâneas da Internet ou uma sessão de Internet e, se necessário, descreve a conexão a um servidor proxy.  
   
  [CInternetConnection](../mfc/reference/cinternetconnection-class.md)  
- Gerencia a conexão a um servidor de Internet.  
+ Gerencia sua conexão a um servidor de Internet.  
   
  [CInternetFile](../mfc/reference/cinternetfile-class.md)  
- Essa classe e suas classes derivadas permitem acesso a arquivos nos sistemas remotos que usam protocolos de Internet.  
+ Essa classe e suas classes derivadas permitem acesso aos arquivos em sistemas remotos que usam protocolos de Internet.  
   
  [CHttpConnection](../mfc/reference/chttpconnection-class.md)  
- Gerencia a conexão a um servidor HTTP.  
+ Gerencia sua conexão a um servidor HTTP.  
   
  [CHttpFile](../mfc/reference/chttpfile-class.md)  
  Fornece a funcionalidade para localizar e ler arquivos em um servidor HTTP.  
@@ -48,22 +52,22 @@ MFC encapsula a Internet Win32 (WinInet) e a tecnologia de ActiveX para facilita
  Fornece a funcionalidade para localizar e ler arquivos em um servidor gopher.  
   
  [CFtpConnection](../mfc/reference/cftpconnection-class.md)  
- Gerencia a conexão a um servidor FTP.  
+ Gerencia sua conexão a um servidor FTP.  
   
  [CGopherConnection](../mfc/reference/cgopherconnection-class.md)  
- Gerencia a conexão a um servidor gopher.  
+ Gerencia sua conexão a um servidor gopher.  
   
  [CFileFind](../mfc/reference/cfilefind-class.md)  
- Executa o local e pesquisas de arquivos da Internet.  
+ Executa o local e pesquisas de arquivos de Internet.  
   
  [CFtpFileFind](../mfc/reference/cftpfilefind-class.md)  
- Recursos em pesquisas de arquivos de Internet de servidores FTP.  
+ Auxílios em pesquisas de arquivos de Internet de servidores FTP.  
   
  [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)  
- Recursos em pesquisas de arquivos de Internet de servidores gopher.  
+ Auxílios em pesquisas de arquivos de Internet de servidores gopher.  
   
  [CGopherLocator](../mfc/reference/cgopherlocator-class.md)  
- Obtém um gopher "localizador" de um servidor gopher, determina o tipo do localizador e disponibiliza o localizador para `CGopherFileFind`.  
+ Obtém um gopher "localizador" de um servidor gopher, determina o tipo de localizador e torna o localizador disponível para `CGopherFileFind`.  
   
  [CInternetException](../mfc/reference/cinternetexception-class.md)  
  Representa uma condição de exceção relacionada a uma operação de Internet.  

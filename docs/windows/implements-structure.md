@@ -1,28 +1,36 @@
 ---
 title: Implementa estrutura | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/11/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Implements
+- implements/Microsoft::WRL::Implements::CanCastTo
+- implements/Microsoft::WRL::Implements::CastToUnknown
+- implements/Microsoft::WRL::Implements::FillArrayWithIid
+- implements/Microsoft::WRL::Implements::IidCount
 dev_langs:
 - C++
 helpviewer_keywords:
-- Implements structure
+- Microsoft::WRL::Implements structure
+- Microsoft::WRL::Implements::CanCastTo method
+- Microsoft::WRL::Implements::CastToUnknown method
+- Microsoft::WRL::Implements::FillArrayWithIid method
+- Microsoft::WRL::Implements::IidCount method
 ms.assetid: 29b13e90-34d4-4a0b-babd-5187c9eb0c36
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 417f384b54833786c68fe2b13dc9e7e53b1bc975
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 18616b1010dfe6a23861c512b1113c30fe5251ce
+ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603282"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45535347"
 ---
 # <a name="implements-structure"></a>Implementa estrutura
 
@@ -104,23 +112,23 @@ Cada *I0* por meio *I9* parâmetro interface deve derivar do `IUnknown`, `IInspe
 
 ### <a name="public-typedefs"></a>Typedefs públicos
 
-|Nome|Descrição|
-|----------|-----------------|
-|`ClassFlags`|Um sinônimo de `RuntimeClassFlags<WinRt>`.|
+| Nome        | Descrição                               |
+| ----------- | ----------------------------------------- |
+| `ClassFlags`| Um sinônimo de `RuntimeClassFlags<WinRt>`. |
 
 ### <a name="protected-methods"></a>Métodos Protegidos
 
-|Nome|Descrição|
-|----------|-----------------|
-|[Método Implements::CanCastTo](../windows/implements-cancastto-method.md)|Obtém um ponteiro para a interface especificada.|
-|[Método Implements::CastToUnknown](../windows/implements-casttounknown-method.md)|Obtém um ponteiro para subjacente `IUnknown` interface.|
-|[Método Implements::FillArrayWithIid](../windows/implements-fillarraywithiid-method.md)|Insere a ID de interface especificada pelo parâmetro de modelo inicial atual para o elemento da matriz especificada.|
+| Nome                                              | Descrição                                                                                                   |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| [Implements:: cancastto](#cancastto)               | Obtém um ponteiro para a interface especificada.                                                                    |
+| [Implements:: casttounknown](#casttounknown)       | Obtém um ponteiro para subjacente `IUnknown` interface.                                                        |
+| [Implements:: fillarraywithiid](#fillarraywithiid) | Insere a ID de interface especificada pelo parâmetro de modelo inicial atual para o elemento da matriz especificada. |
 
 ### <a name="protected-constants"></a>Constantes protegidos
 
-|Nome|Descrição|
-|----------|-----------------|
-|[Constante Implements::IidCount](../windows/implements-iidcount-constant.md)|Contém o número de IDs de interface implementada.|
+| Nome                              | Descrição                                    |
+| --------------------------------- | ---------------------------------------------- |
+| [Implements:: iidcount](#iidcount) | Contém o número de IDs de interface implementada. |
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -142,6 +150,76 @@ Cada *I0* por meio *I9* parâmetro interface deve derivar do `IUnknown`, `IInspe
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Consulte também
+## <a name="cancastto"></a>Implements:: cancastto
 
-[Namespace Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+Obtém um ponteiro para a interface especificada.
+
+```cpp
+__forceinline HRESULT CanCastTo(
+   REFIID riid,
+   _Deref_out_ void **ppv
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*riid*  
+Uma referência a uma ID de interface.
+
+*ppv*  
+Se for bem-sucedido, um ponteiro para a interface especificada por *riid*.
+
+### <a name="return-value"></a>Valor de retorno
+
+S_OK se bem-sucedido; Caso contrário, um HRESULT que indica o erro, como E_NOINTERFACE.
+
+### <a name="remarks"></a>Comentários
+
+Essa é uma função de auxiliar interno que executa uma operação de QueryInterface.
+
+## <a name="casttounknown"></a>Implements:: casttounknown
+
+Obtém um ponteiro para subjacente `IUnknown` interface.
+
+```cpp
+__forceinline IUnknown* CastToUnknown();
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Essa operação for bem-sucedida e retornar sempre o `IUnknown` ponteiro.
+
+### <a name="remarks"></a>Comentários
+
+Função auxiliar interno.
+
+## <a name="fillarraywithiid"></a>Implements:: fillarraywithiid
+
+Insere a ID de interface especificada pelo parâmetro de modelo inicial atual para o elemento da matriz especificada.
+
+```cpp
+__forceinline static void FillArrayWithIid(
+   unsigned long &index,
+   _In_ IID* iids
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*index*  
+Um índice baseado em zero que indica o elemento de matriz inicial para esta operação. Quando essa operação for concluída, *índice* é incrementado em 1.
+
+*IIDs*  
+Uma matriz do tipo IID.
+
+### <a name="remarks"></a>Comentários
+
+Função auxiliar interno.
+
+## <a name="iidcount"></a>Implements:: iidcount
+
+Contém o número de IDs de interface implementada.
+
+```cpp
+static const unsigned long IidCount;
+```
