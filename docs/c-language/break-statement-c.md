@@ -16,25 +16,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 194e4c836f0423e20bb747cc6c3b06645c38a5fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aeec33d61f21c34e52d582ebc3c0ef7313bb511f
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381344"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43755028"
 ---
 # <a name="break-statement-c"></a>Instrução break (C)
 A instrução `break` encerra a execução da instrução delimitadora `do`, `for`, `switch` ou `while` mais próxima em que aparece. O controle passa para a instrução que segue a instrução encerrada.  
   
-## <a name="syntax"></a>Sintaxe  
- *jump-statement*:  
- `break;`  
+## <a name="syntax"></a>Sintaxe
+
+*jump-statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**break ;**
   
- A instrução `break` é frequentemente usada para encerrar o processamento de um caso específico dentro de uma instrução `switch`. A falta de uma instrução interativa delimitadora ou `switch` gera um erro.  
+A instrução `break` é frequentemente usada para encerrar o processamento de um caso específico dentro de uma instrução `switch`. A falta de uma instrução interativa delimitadora ou `switch` gera um erro.  
   
- Em instruções aninhadas, a instrução `break` encerra apenas a instrução `do`, `for`, `switch` ou `while` que a delimita imediatamente. Você pode usar uma instrução `return` ou `goto` para transferir o controle para outro lugar fora da estrutura aninhada.  
+Em instruções aninhadas, a instrução `break` encerra apenas a instrução `do`, `for`, `switch` ou `while` que a delimita imediatamente. Você pode usar uma instrução `return` ou `goto` para transferir o controle para outro lugar fora da estrutura aninhada.  
   
- Este exemplo ilustra a instrução `break`:  
+Este exemplo ilustra a instrução `break`:  
   
 ```  
 #include <stdio.h>  
@@ -52,4 +53,4 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Instrução Break](../cpp/break-statement-cpp.md)
+[Instrução Break](../cpp/break-statement-cpp.md)

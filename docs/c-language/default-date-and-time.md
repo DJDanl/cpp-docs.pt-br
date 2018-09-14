@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5d66059ddabac7edb2001f154173e6367355815
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8646e612505099476b39109c3ef5f9084f7403ab
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382735"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752148"
 ---
 # <a name="default-date-and-time"></a>Data e hora padrão
-**ANSI 3.8.8** As definições para _DATE\_ e _TIME\_ quando, respectivamente, a data e a hora da conversão não estão disponíveis  
+
+**ANSI 3.8.8** As definições para `__DATE__` e `__TIME__` quando, respectivamente, a data e a hora da tradução não estão disponíveis  
   
- Quando o sistema operacional não fornece a data e a hora da translação, os valores padrão para _DATE\_ e _TIME\_ são `May 03 1957` e `17:00:00"`.  
+Quando o sistema operacional não fornece a data e a hora da tradução, os valores padrão para `__DATE__` e `__TIME__` são `May 03 1957` e `17:00:00`.  
   
-## <a name="see-also"></a>Consulte também  
- [Diretivas de pré-processamento](../c-language/preprocessing-directives.md)
+## <a name="see-also"></a>Consulte também
+
+[Diretivas de pré-processamento](../c-language/preprocessing-directives.md)

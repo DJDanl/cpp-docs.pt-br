@@ -17,41 +17,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6814df9d81674e37f4364330e7801399cb4c763
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1aa9c72cbb8724da00b2d370884bd7ddbf7264cc
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389911"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43763234"
 ---
 # <a name="while-statement-c"></a>Instrução while (C)
+
 A instrução `while` permite que você repita uma instrução até que uma expressão especificada seja falsa.  
   
-## <a name="syntax"></a>Sintaxe  
- *iteration-statement*:  
- **while (**  *expression*  **)**  *statement*  
+## <a name="syntax"></a>Sintaxe
+
+*iteration-statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**while (**  *expression*  **)**  *statement*
   
- A *expressão* deve ter o tipo aritmético ou ponteiro. A execução procede da seguinte maneira:  
+A *expressão* deve ter o tipo aritmético ou ponteiro. A execução procede da seguinte maneira:  
   
-1.  A *expressão* é avaliada.  
+1. A *expressão* é avaliada.  
   
-2.  Se a *expressão* for inicialmente falsa, o corpo da instrução `while` nunca será executado e o controle passará da instrução `while` para a próxima instrução do programa.  
-  
-     Se a *expressão* for verdadeira (diferente de zero), o corpo da instrução será executado e o processo será repetido no início da etapa 1.  
-  
- A instrução `while` também pode terminar quando um **break**, `goto` ou `return` for executado dentro do corpo da instrução. Use a instrução **continue** para finalizar uma iteração sem sair do loop de `while`. A instrução **continue** passa o controle para a próxima iteração da instrução `while`.  
-  
- Esse é um exemplo da instrução `while`:  
-  
-```  
-while ( i >= 0 )   
-{  
-    string1[i] = string2[i];  
-    i--;  
-}  
-```  
-  
- Esse exemplo copia caracteres de `string2` para `string1`. Se `i` for maior ou igual a 0, `string2[i]` é atribuído a `string1[i]` e `i` é diminuído. Quando `i` atingir ou ficar abaixo de 0, a execução da instrução `while` termina.  
-  
-## <a name="see-also"></a>Consulte também  
- [Instrução while (C++)](../cpp/while-statement-cpp.md)
+2. Se a *expressão* for inicialmente falsa, o corpo da instrução `while` nunca será executado e o controle passará da instrução `while` para a próxima instrução do programa.
+
+   Se a *expressão* for verdadeira (diferente de zero), o corpo da instrução será executado e o processo será repetido no início da etapa 1.
+
+A instrução `while` também pode terminar quando um **break**, `goto` ou `return` for executado dentro do corpo da instrução. Use a instrução **continue** para finalizar uma iteração sem sair do loop de `while`. A instrução **continue** passa o controle para a próxima iteração da instrução `while`.
+
+Esse é um exemplo da instrução `while`:
+
+```C
+while ( i >= 0 )
+{
+    string1[i] = string2[i];
+    i--;
+}
+```
+
+Esse exemplo copia caracteres de `string2` para `string1`. Se `i` for maior ou igual a 0, `string2[i]` é atribuído a `string1[i]` e `i` é diminuído. Quando `i` atingir ou ficar abaixo de 0, a execução da instrução `while` termina.
+
+## <a name="see-also"></a>Consulte também
+
+[Instrução while (C++)](../cpp/while-statement-cpp.md)

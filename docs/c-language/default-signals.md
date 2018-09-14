@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a9465a51646dae16ae2a487a77206c712fef681
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 78c369665d398d4b326cf8d27ad0944a594fe1a4
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204444"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43758931"
 ---
 # <a name="default-signals"></a>Sinais padrão
-**ANSI 4.7.1.1** Se o equivalente a **signal (**<em>sig</em>**, SIG_DFL)** não for executado antes de uma chamada para o manipulador de sinal, o bloqueio de sinal será executado  
+
+**ANSI 4.7.1.1** Se o equivalente a `signal(sig, SIG_DFL)` não for executado antes de uma chamada para o manipulador de sinal, o bloqueio de sinal será executado
+
+No início da execução do programa, os sinais são definidos em seus status padrão.  
   
- No início da execução do programa, os sinais são definidos em seus status padrão.  
-  
-## <a name="see-also"></a>Consulte também  
- [Funções de biblioteca](../c-language/library-functions.md)
+## <a name="see-also"></a>Consulte também
+
+[Funções de biblioteca](../c-language/library-functions.md)
