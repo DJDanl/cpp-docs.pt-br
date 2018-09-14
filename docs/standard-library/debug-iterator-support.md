@@ -1,7 +1,7 @@
 ---
 title: Suporte ao iterador de depuração | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/13/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 237ce1e956cd05f21a34d0b2b159ba104167ca37
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: ffcd69475d13277884deaf9ee114f3cd8d86516f
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959586"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601464"
 ---
 # <a name="debug-iterator-support"></a>Suporte a Iterador de Depuração
 
@@ -38,7 +38,7 @@ O padrão C++ descreve como funções de membro podem fazer com que iteradores e
 
 - Aumentar o tamanho de um [vector](../standard-library/vector.md) por meio de envio por push ou inserção faz com que os iteradores no `vector` se tornem inválidos.
 
-## <a name="example"></a>Exemplo
+## <a name="invalid-iterators"></a>Iteradores inválidos
 
 Se você compilar esse programa de amostra no modo de depuração, ele será declarado e encerrado em tempo de execução.
 
@@ -49,12 +49,7 @@ Se você compilar esse programa de amostra no modo de depuração, ele será dec
 #include <iostream>
 
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
-
+   std::vector<int> v {10, 15, 20};
    std::vector<int>::iterator i = v.begin();
    ++i;
 
@@ -69,7 +64,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="using-iteratordebuglevel"></a>Usando iterator_debug_level
 
 É possível usar a macro do pré-processador [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) para desligar o recurso do iterador de depuração em um build de depuração. Esse programa não é declarado, mas ainda dispara um comportamento indefinido.
 
@@ -81,11 +76,7 @@ int main() {
 #include <iostream>
 
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
+    std::vector<int> v {10, 15, 20};
 
    std::vector<int>::iterator i = v.begin();
    ++i;
@@ -106,7 +97,7 @@ int main() {
 -572662307
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="unitialized-iterators"></a>Iteradores não inicializados
 
 Uma declaração também ocorrerá se você tentar usar um iterador antes de ele ser inicializado, conforme mostrado aqui:
 
@@ -123,7 +114,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="incompatible-iterators"></a>Iteradores incompatíveis
 
 O exemplo de código a seguir causa uma declaração, pois os dois iteradores do algoritmo [for_each](../standard-library/algorithm-functions.md#for_each) são incompatíveis. Os algoritmos verificam para determinar se os iteradores fornecidos para eles referenciam o mesmo contêiner.
 
@@ -136,14 +127,8 @@ using namespace std;
 
 int main()
 {
-    vector<int> v1;
-    vector<int> v2;
-
-    v1.push_back(10);
-    v1.push_back(20);
-
-    v2.push_back(10);
-    v2.push_back(20);
+    vector<int> v1 {10, 20};
+    vector<int> v2 {10, 20};
 
     // The next line asserts because v1 and v2 are
     // incompatible.
@@ -153,7 +138,7 @@ int main()
 
 Observe que esse exemplo usa a expressão lambda `[] (int& elem) { elem *= 2; }` em vez de um functor. Embora essa escolha não tenha efeito sobre a falha de declaração – um functor semelhante causaria a mesma falha –, lambdas são uma maneira muito útil de realizar tarefas compactas de objeto de função. Para obter mais informações sobre expressões lambda, consulte [Expressões lambda](../cpp/lambda-expressions-in-cpp.md).
 
-## <a name="example"></a>Exemplo
+## <a name="iterators-going-out-of-scope"></a>Iteradores indo fora do escopo
 
 Verificações do iterador de depuração também fazem com que uma variável do iterador declarada em um **para** loop fique fora do escopo quando o **para** término do escopo de loop.
 
@@ -163,11 +148,7 @@ Verificações do iterador de depuração também fazem com que uma variável do
 #include <vector>
 #include <iostream>
 int main() {
-   std::vector<int> v ;
-
-   v.push_back(10);
-   v.push_back(15);
-   v.push_back(20);
+   std::vector<int> v {10, 15, 20};
 
    for (std::vector<int>::iterator i = v.begin(); i != v.end(); ++i)
       ;   // do nothing
@@ -175,9 +156,9 @@ int main() {
 }
 ```
 
-## <a name="example"></a>Exemplo
+## <a name="destructors-for-debug-iterators"></a>Destruidores para iteradores de depuração
 
-Iteradores de depuração têm destruidores não triviais. Se um destruidor não for executado por algum motivo, poderão ocorrer violações de acesso e dados corrompidos. Considere este exemplo:
+Iteradores de depuração têm destruidores não triviais. Se um destruidor não é executado, mas a memória do objeto é liberada, pode ocorrer corrupção de dados e violações de acesso. Considere este exemplo:
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -195,11 +176,10 @@ struct derived : base {
 };
 
 int main() {
-   std::vector<int> vect( 10 );
-   base * pb = new derived( vect.begin() );
-   delete pb;  // doesn't call ~derived()
-   // access violation
-}
+  auto vect = std::vector<int>(10);
+  auto sink = new auto(std::begin(vect));
+  ::operator delete(sink); // frees the memory without calling ~iterator()
+} // access violation
 ```
 
 ## <a name="see-also"></a>Consulte também
