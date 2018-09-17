@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5be60ff1f0aa8b2ceff7517a9af968e0b7690478
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6d3adeff7c0c242d9e83b2e71afff78ec130f950
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214673"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712940"
 ---
 # <a name="diagnostic-services"></a>Serviços de diagnóstico
 A biblioteca Microsoft Foundation Class fornece vários serviços de diagnóstico que tornam a depuração de seus programas mais fácil. Esses serviços de diagnóstico incluem macros e funções globais que permitem que você controle a memória do seu programa alocações, despejar o conteúdo dos objetos durante o tempo de execução e imprimir as mensagens de depuração durante o tempo de execução. As macros e funções globais para serviços de diagnóstico são agrupadas nas seguintes categorias:  
@@ -619,8 +619,8 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bDump*  
- TRUE indica que o despejo de vazamento de memória estiver habilitado; FALSE indica que o despejo de vazamento de memória está desabilitado.  
+*bDump*<br/>
+[in] TRUE indica que o despejo de vazamento de memória estiver habilitado; FALSE indica que o despejo de vazamento de memória está desabilitado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O valor anterior para esse sinalizador.  

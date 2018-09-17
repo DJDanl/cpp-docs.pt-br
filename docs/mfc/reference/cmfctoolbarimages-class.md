@@ -150,12 +150,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 682f4ecbbc4d048f6353be6844bfef042efbc45f
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 95d9da94e2fa7a79db6696649854fafa989941f4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539376"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726265"
 ---
 # <a name="cmfctoolbarimages-class"></a>Classe CMFCToolBarImages
 As imagens em uma barra de ferramentas. O `CMFCToolBarImages` classe gerencia imagens de barra de ferramentas carregadas dos recursos do aplicativo ou de arquivos.  
@@ -282,8 +282,8 @@ void AdaptColors(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *clrBase*  
- [in] *clrTone*  
+*clrBase*<br/>
+[in] [in] *clrTone*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -297,11 +297,11 @@ int AddIcon(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *hIcon*  
- Um identificador para o ícone a ser adicionado.  
+*hIcon*<br/>
+[in] Um identificador para o ícone a ser adicionado.  
   
- [in] *bAlphaBlend*  
- TRUE se este ícone é usado com combinação alfa; Caso contrário, FALSE.  
+*bAlphaBlend*<br/>
+[in] TRUE se este ícone é usado com combinação alfa; Caso contrário, FALSE.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O índice baseado em zero da imagem da barra de ferramentas que foi adicionado se o método for bem-sucedida; Caso contrário,-1.  
@@ -320,17 +320,17 @@ int AddImage(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *hbmp*  
- O identificador para o bitmap para adicionar.  
+*hbmp*<br/>
+[in] O identificador para o bitmap para adicionar.  
   
- [in] *bSetBitPerPixel*  
- TRUE se o `CMFCToolBarImages` objeto usa a intensidade de cor (bits por pixel) da nova imagem. FALSE se o `CMFCToolbarImages` objeto mantém a profundidade de cor atual.  
+*bSetBitPerPixel*<br/>
+[in] TRUE se o `CMFCToolBarImages` objeto usa a intensidade de cor (bits por pixel) da nova imagem. FALSE se o `CMFCToolbarImages` objeto mantém a profundidade de cor atual.  
   
- [in] *imageList*  
- Uma referência a um `CMFCToolbarImages` objeto que contém a imagem a ser adicionada.  
+*ImageList*<br/>
+[in] Uma referência a um `CMFCToolbarImages` objeto que contém a imagem a ser adicionada.  
   
- [in] *nIndex*  
- O índice na fonte de `CMFCToolbarImages` objeto de imagem a ser adicionada.  
+*nIndex*<br/>
+[in] O índice na fonte de `CMFCToolbarImages` objeto de imagem a ser adicionada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O número de barra de ferramentas de imagens que o `CMFCToolBarImages` objeto mantém depois que o novo bitmap foi adicionado com êxito; -1 se a operação falhou.  
@@ -397,8 +397,8 @@ BOOL CreateFromImageList(const CImageList& imageList);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *imageList*  
- A lista de imagens a ser usado como uma fonte para imagens da barra de ferramentas.  
+*ImageList*<br/>
+[in] A lista de imagens a ser usado como uma fonte para imagens da barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Sempre retorna TRUE.  
@@ -416,8 +416,8 @@ static HRGN __stdcall CreateRegionFromImage(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bmp*  
- [in] *clrTransparent*  
+*BMP*<br/>
+[in] [in] *clrTransparent*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -431,8 +431,8 @@ BOOL DeleteImage(int iImage);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iImage*  
- Especifica o índice baseado em zero da imagem a ser excluída.  
+*iImage*<br/>
+[in] Especifica o índice baseado em zero da imagem a ser excluída.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a imagem foi excluída com êxito; FALSE se o índice de imagem é inválido, o `CMFCToolbarImages` objeto é temporário, o `CMFCToolbarImages` objeto não contém imagens definidas pelo usuário, ou se algum outro erro ocorreu.  
@@ -455,35 +455,35 @@ BOOL Draw(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Um ponteiro para um contexto de dispositivo.  
   
- [in] *x*  
- A coordenada X do lado esquerdo do retângulo em que a imagem deve ser desenhada.  
+*x*<br/>
+[in] A coordenada X do lado esquerdo do retângulo em que a imagem deve ser desenhada.  
   
- [in] *y*  
- A coordenada Y da parte superior do retângulo em que a imagem deve ser desenhada.  
+*y*<br/>
+[in] A coordenada Y da parte superior do retângulo em que a imagem deve ser desenhada.  
   
- [in] *iImageIndex*  
- O índice baseado em zero da imagem a ser exibida.  
+*iImageIndex*<br/>
+[in] O índice baseado em zero da imagem a ser exibida.  
   
- [in] *bHilite*  
- TRUE se a imagem precisar ser realçado; Caso contrário, FALSE.  
+*bHilite*<br/>
+[in] TRUE se a imagem precisar ser realçado; Caso contrário, FALSE.  
   
- [in] *bDesabilitado*  
- TRUE se a imagem deve ser desenhada no estilo desabilitado; Caso contrário, FALSE.  
+*bDesabilitado*<br/>
+[in] TRUE se a imagem deve ser desenhada no estilo desabilitado; Caso contrário, FALSE.  
   
- [in] *bIndeterminate*  
- TRUE se a imagem deve ser desenhada no estilo de estado indeterminado; Caso contrário, FALSE.  
+*bIndeterminate*<br/>
+[in] TRUE se a imagem deve ser desenhada no estilo de estado indeterminado; Caso contrário, FALSE.  
   
- [in] *bShadow*  
- TRUE se a imagem deve ser desenhada com uma sombra; Caso contrário, FALSE.  
+*bShadow*<br/>
+[in] TRUE se a imagem deve ser desenhada com uma sombra; Caso contrário, FALSE.  
   
- [in] *bInactive*  
- TRUE se a imagem deve ser desenhada no estilo de estado inativo; Caso contrário, FALSE.  
+*bInactive*<br/>
+[in] TRUE se a imagem deve ser desenhada no estilo de estado inativo; Caso contrário, FALSE.  
   
- [in] *alphaSrc*  
- O valor de canal alfa (opacity). Um valor de 255 significa que a imagem é desenhado opaco. Um valor de 0 significa que a imagem é desenhada transparente. Esse valor é usado apenas para imagens coloridas de 32 bits e para imagens que são exibidos um estilo de vidro do Windows Vista.  
+*alphaSrc*<br/>
+[in] O valor de canal alfa (opacity). Um valor de 255 significa que a imagem é desenhado opaco. Um valor de 0 significa que a imagem é desenhada transparente. Esse valor é usado apenas para imagens coloridas de 32 bits e para imagens que são exibidos um estilo de vidro do Windows Vista.  
   
 ### <a name="return-value"></a>Valor de retorno  
  VERDADEIRO se a imagem especificada foi exibida com êxito; FALSE se o índice de imagem era inválido ou algum outro erro ocorreu.  
@@ -506,14 +506,14 @@ BOOL DrawEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- [in] *rect*  
- [in] *iImageIndex*  
- [in] *horzAlign*  
- [in] *vertAlign*  
- [in] *rectSrc*  
- [in] *0*  
- [in] *0)*  
+*pDC*<br/>
+[in] [in] *rect*  
+*iImageIndex*<br/>
+[in] [in] *horzAlign*  
+*vertAlign*<br/>
+[in] [in] *rectSrc*  
+*0*<br/>
+[in] [in] *0)*  
  [in] *alphaSrc*  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -540,8 +540,8 @@ void EndDrawImage(CAfxDrawState& ds);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *ds*  
- Uma referência para o `CAfxDrawState` objeto que foi passado para o `PrepareDrawImage` método.  
+*DS*<br/>
+[in] Uma referência para o `CAfxDrawState` objeto que foi passado para o `PrepareDrawImage` método.  
   
 ##  <a name="extracticon"></a>  CMFCToolBarImages::ExtractIcon  
  Retorna o ícone que tem um índice de imagem especificada a partir das imagens da barra de ferramentas.  
@@ -551,8 +551,8 @@ HICON ExtractIcon(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nIndex*  
- O índice baseado em zero na lista de imagens no qual a imagem a ser extraída como um ícone está localizada.  
+*nIndex*<br/>
+[in] O índice baseado em zero na lista de imagens no qual a imagem a ser extraída como um ícone está localizada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um identificador para o ícone extraído, ou nulo se *nIndex* está fora do intervalo.  
@@ -567,11 +567,11 @@ static void FillDitheredRect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Um ponteiro para um contexto de dispositivo.  
   
- [in] *rect*  
- As coordenadas de um retângulo para preencher.  
+*Rect*<br/>
+[in] As coordenadas de um retângulo para preencher.  
   
 ### <a name="remarks"></a>Comentários  
  Use esse método para preencher um retângulo com uma cor que é a média das cores do sistema COLOR_BTNFACE e COLOR_BTNHIGHLIGHT. Se o sistema está usando cores de 256 ou menos, o retângulo será preenchido com um padrão de pontilhado dessas duas cores em vez disso.  
@@ -629,8 +629,8 @@ SIZE GetImageSize(BOOL bDest=FALSE) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bDest*  
- TRUE para recuperar o tamanho de destino. FALSE para recuperar o tamanho da imagem de origem.  
+*bDest*<br/>
+[in] TRUE para recuperar o tamanho de destino. FALSE para recuperar o tamanho da imagem de origem.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um `SIZE` estrutura, que especifica o tamanho de uma imagem em pixels.  
@@ -719,8 +719,8 @@ int GetResourceOffset(UINT uiResId) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiResId*  
- Uma ID de recurso de imagem.  
+*uiResId*<br/>
+[in] Uma ID de recurso de imagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Se o método foi bem-sucedido; um índice de imagem -1 se a imagem com a ID do recurso especificado não existe.  
@@ -744,8 +744,8 @@ BOOL GrayImages(int nGrayImageLuminancePercentage);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nGrayImageLuminancePercentage*  
- Porcentagem de luminância.  
+*nGrayImageLuminancePercentage*<br/>
+[in] Porcentagem de luminância.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se as imagens na coleção foram desabilitadas com êxito; Caso contrário, FALSE.  
@@ -844,20 +844,20 @@ BOOL Load(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiResID*  
- A ID de um recurso de bitmap.  
+*uiResID*<br/>
+[in] A ID de um recurso de bitmap.  
   
- [in] *hinstRes*  
- Uma instância da DLL do recurso.  
+*hinstRes*<br/>
+[in] Uma instância da DLL do recurso.  
   
- [in] *bAdicionar*  
- TRUE para adicionar o bitmap carregado para o bitmap existente, ou FALSE para substituir o bitmap existente.  
+*bAdicionar*<br/>
+[in] TRUE para adicionar o bitmap carregado para o bitmap existente, ou FALSE para substituir o bitmap existente.  
   
- [in] *lpszBmpFileName*  
- Um caminho para um arquivo de disco do qual carregar o bitmap.  
+*lpszBmpFileName*<br/>
+[in] Um caminho para um arquivo de disco do qual carregar o bitmap.  
   
- [in] *nMaxFileSize*  
- Número máximo de bytes no arquivo de bitmap; ou 0 para carregar o bitmap, independentemente do tamanho do arquivo. Se o tamanho do arquivo exceder esse tamanho máximo, o método retornará FALSE e não carrega o bitmap.  
+*nMaxFileSize*<br/>
+[in] Número máximo de bytes no arquivo de bitmap; ou 0 para carregar o bitmap, independentemente do tamanho do arquivo. Se o tamanho do arquivo exceder esse tamanho máximo, o método retornará FALSE e não carrega o bitmap.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o bitmap foi carregado com êxito; Caso contrário, FALSE.  
@@ -876,8 +876,8 @@ BOOL LoadStr(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszResourceName*  
- [in] *hinstRes*  
+*lpszResourceName*<br/>
+[in] [in] *hinstRes*  
  [in] *bAdicionar*  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -894,8 +894,8 @@ static COLORREF __stdcall MapFromSysColor(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *cor*  
- [in] *bUseRGBQUAD*  
+*Cor*<br/>
+[in] [in] *bUseRGBQUAD*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -912,8 +912,8 @@ BOOL MapTo3dColors(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bUseRGBQUAD*  
- [in] *clrSrc*  
+*bUseRGBQUAD*<br/>
+[in] [in] *clrSrc*  
  [in] *clrDest*  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -930,8 +930,8 @@ static COLORREF __stdcall MapToSysColor(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *cor*  
- [in] *bUseRGBQUAD*  
+*Cor*<br/>
+[in] [in] *bUseRGBQUAD*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -974,11 +974,11 @@ static BOOL MirrorBitmap(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [no, out] *hbmp*  
- Um identificador para o bitmap para espelhar.  
+*hbmp*<br/>
+[no, out] Um identificador para o bitmap para espelhar.  
   
- [in] *cxImage*  
- Largura da imagem em pixels.  
+*cxImage*<br/>
+[in] Largura da imagem em pixels.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a imagem foi espelhada com êxito; Caso contrário, FALSE.  
@@ -996,8 +996,8 @@ static BOOL __stdcall MirrorBitmapVert(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *hbmp*  
- [in] *cyImage*  
+*hbmp*<br/>
+[in] [in] *cyImage*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -1035,8 +1035,8 @@ BOOL PreMultiplyAlpha(HBITMAP hbmp);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *hbmp*  
- [in] *bAutoCheckPremlt*  
+*hbmp*<br/>
+[in] [in] *bAutoCheckPremlt*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -1066,14 +1066,14 @@ BOOL PrepareDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *ds*  
- Uma referência ao `CAfxDrawState` estrutura, que armazena os recursos alocados entre estágios de processamento de imagem.  
+*DS*<br/>
+[in] Uma referência ao `CAfxDrawState` estrutura, que armazena os recursos alocados entre estágios de processamento de imagem.  
   
- [in] *sizeImageDest*  
- Especifica o tamanho de uma imagem de destino.  
+*sizeImageDest*<br/>
+[in] Especifica o tamanho de uma imagem de destino.  
   
- [in] *bFadeInactive*  
- TRUE se você quiser atenuado inativas imagens a ser desenhado.  
+*bFadeInactive*<br/>
+[in] TRUE se você quiser atenuado inativas imagens a ser desenhado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se os recursos necessários para desenhar a imagem da barra de ferramentas foram alocados com êxito, caso contrário, FALSE.  
@@ -1118,8 +1118,8 @@ static void SetDisabledImageAlpha(BYTE nValue);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *Nvalor*  
- O novo valor do canal alfa.  
+*Nvalor*<br/>
+[in] O novo valor do canal alfa.  
   
 ### <a name="remarks"></a>Comentários  
  Use esse método para definir um valor de alfa personalizado para imagens desabilitados. O valor padrão é de 127, que faz com que as imagens de botão desabilitado para que sejam semitransparentes. Se você definir um valor de 0, desabilitadas imagens será completamente transparentes. Se você definir um valor de 255, imagens desabilitadas será completamente opacas.  
@@ -1146,8 +1146,8 @@ void SetImageSize(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *sizeImage*  
- O novo tamanho das imagens da barra de ferramentas.  
+*sizeImage*<br/>
+[in] O novo tamanho das imagens da barra de ferramentas.  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, o tamanho da imagem da barra de ferramentas é 16 x 15 pixels. Chame esse método se você quiser usar imagens da barra de ferramentas de um tamanho diferente.  
@@ -1205,8 +1205,8 @@ COLORREF SetTransparentColor(COLORREF clrTransparent);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *clrTransparent*  
- Um valor RGB.  
+*clrTransparent*<br/>
+[in] Um valor RGB.  
   
 ### <a name="return-value"></a>Valor de retorno  
  A cor transparente anterior.  
@@ -1224,11 +1224,11 @@ BOOL UpdateImage(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iImage*  
- O índice baseado em zero da imagem a ser atualizada.  
+*iImage*<br/>
+[in] O índice baseado em zero da imagem a ser atualizada.  
   
- [in] *hbmp*  
- Um identificador para o bitmap do qual atualizar a imagem.  
+*hbmp*<br/>
+[in] Um identificador para o bitmap do qual atualizar a imagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a imagem foi atualizada com êxito; FALSE se a lista de imagens não é temporário ou definidas pelo usuário.  

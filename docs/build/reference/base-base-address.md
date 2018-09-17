@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c43e01a1417710751bf0604e5365beaf143a293
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 1f6f287f98b542a3d8eb24f9cc2b5e725e27dceb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895208"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725966"
 ---
 # <a name="base-base-address"></a>/BASE (endereço básico)
 
@@ -60,11 +60,11 @@ Na linha de comando, outra maneira de especificar o endereço básico é usando 
 
 O *chave* é uma cadeia de caracteres alfanuméricos e não diferencia maiusculas de minúsculas. Ele geralmente é o nome de uma DLL, mas ele não precisa ser. O *chave* é seguido por uma base *endereço* na notação decimal, hexadecimal ou de linguagem C e um máximo de opcional *tamanho*. Todos os três argumentos são separados por espaços ou tabulações. O vinculador emitirá um aviso se especificado *tamanho* é menor que o espaço de endereço virtual exigido pelo programa. Um *comentário* é especificado por um ponto e vírgula (**;**) e pode ser na mesma ou em uma linha separada. O vinculador ignora todo o texto da vírgula ao final da linha. Este exemplo mostra parte de um arquivo desse tipo:
 
-```  
+```
 main   0x00010000    0x08000000    ; for PROJECT.exe
 one    0x28000000    0x00100000    ; for DLLONE.DLL
 two    0x28100000    0x00300000    ; for DLLTWO.DLL
-```  
+```
 
 Se o arquivo que contém essas linhas é chamado de DLLs, o comando de exemplo a seguir aplica-se essas informações:
 
@@ -88,5 +88,5 @@ Outra maneira de definir o endereço base é usando o *BASE* argumento em uma [n
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)  
+[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
 [Opções do vinculador](../../build/reference/linker-options.md)

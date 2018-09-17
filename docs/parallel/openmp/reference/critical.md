@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb5747530f4c3aaa7bcfddc7a44c0c8d91e1270
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 90638ad00f120e23e4c9168710d1e099c2c74d09
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691294"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716944"
 ---
 # <a name="critical"></a>critical
-Especifica que código é ser executado somente em um segmento por vez.  
+Especifica que código é ser executado somente em um thread por vez.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,16 +35,15 @@ Especifica que código é ser executado somente em um segmento por vez.
 }  
 ```  
   
+## <a name="arguments"></a>Arguments
+
+*name*<br/>
+(Opcional) Um nome para identificar o código critical. Observe que esse nome deve ser colocado entre parênteses.  
+  
 ## <a name="remarks"></a>Comentários  
- onde,  
+ O **críticos** diretiva dá suporte a nenhuma cláusulas OpenMP.  
   
- (`name`) (opcional)  
- Um nome para identificar o código crítico. Observe que esse nome deve ser incluído entre parênteses.  
-  
-## <a name="remarks"></a>Comentários  
- O **crítico** diretiva dá suporte a nenhuma cláusulas OpenMP.  
-  
- Para obter mais informações, consulte [2.6.2 crítico construir](../../../parallel/openmp/2-6-2-critical-construct.md).  
+ Para obter mais informações, consulte [2.6.2 críticos construir](../../../parallel/openmp/2-6-2-critical-construct.md).  
   
 ## <a name="example"></a>Exemplo  
   

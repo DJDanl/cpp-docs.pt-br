@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1be97919f0f5b55d6e63eca8e59eb15e8ef9dff
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 9841b74d7bef74a117350b84747a606043d05d67
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541152"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707662"
 ---
 # <a name="dataseg"></a>data_seg
 Especifica o segmento de dados em que as variáveis inicializadas são armazenadas no arquivo .obj.  
@@ -34,31 +34,33 @@ Especifica o segmento de dados em que as variáveis inicializadas são armazenad
 #pragma data_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
+### <a name="parameters"></a>Parâmetros
+
+**push**<br/>
+(Opcional) Coloca um registro na pilha interna do compilador. Um **push** pode ter um *identificador* e *nome do segmento*.  
+
+**pop**<br/>
+(Opcional) Remove um registro do topo da pilha interna do compilador.  
+  
+*identifier*<br/>
+(Opcional) Quando usado com **push**, atribui um nome ao registro na pilha interna do compilador. Quando usado com **pop-up**, elimina registros da pilha interna até *identificador* for removido; se *identificador* não for localizado na pilha interna, nada será exibido.  
+  
+*identificador* habilita vários registros a serem exibidos com uma única **pop-up** comando.  
+  
+*"nome do segmento"*<br/>
+(Opcional) O nome de um segmento. Quando usado com **pop-up**, a pilha é exibida e *nome do segmento* se torna o nome do segmento ativo.  
+  
+*"segmento-class"*<br/>
+(Opcional) Incluído para compatibilidade com o C++ antes da versão 2.0. É ignorado.  
+  
 ## <a name="remarks"></a>Comentários 
 
 O significado dos termos *segmento* e *seção* são usados alternadamente neste tópico.  
   
 Arquivos OBJ podem ser exibidos com o [dumpbin](../build/reference/dumpbin-command-line.md) aplicativo. O segmento padrão no arquivo .obj para as variáveis inicializadas é .data. As variáveis que são não inicializadas são consideradas inicializadas em zero e são armazenadas em .bss.  
   
-**data_seg** sem parâmetros redefine o segmento. Data.  
-  
-*envio por push* (opcional)  
-Coloca um registro na pilha interna do compilador. Um *push* pode ter um *identificador* e *nome do segmento*.  
-  
-*pop-up* (opcional)  
-Remove um registro do topo da pilha interna do compilador.  
-  
-*identificador* (opcional)  
-Quando usado com *push*, atribui um nome ao registro na pilha interna do compilador. Quando usado com *pop-up*, elimina registros da pilha interna até *identificador* for removido; se *identificador* não for localizado na pilha interna, nada será exibido.  
-  
-*identificador* habilita vários registros a serem exibidos com uma única *pop-up* comando.  
-  
-*"nome do segmento"*(opcional)  
-O nome de um segmento. Quando usado com *pop-up*, a pilha é exibida e *nome do segmento* se torna o nome do segmento ativo.  
-  
-*"segmento-class"* (opcional)  
-Incluído para compatibilidade com o C++ antes da versão 2.0. É ignorado.  
-  
+**data_seg** sem parâmetros redefine o segmento. Data.
+
 ## <a name="example"></a>Exemplo  
   
 ```cpp  

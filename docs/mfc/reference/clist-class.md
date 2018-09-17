@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7079cf657d1be545f8ddb915815448a1d3b870f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1007a0bc5d63f5836aaf8925bced6b5ef84b020f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339326"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726200"
 ---
 # <a name="clist-class"></a>Classe CList
 Dá suporte a listas ordenadas de objetos não exclusivos acessíveis sequencialmente ou por valor.  
@@ -115,7 +115,7 @@ class CList : public CObject
  *TIPO*  
  Tipo de objeto armazenado na lista.  
   
- *ARG* *_* *TIPO*  
+ *ARG_TYPE*  
  Tipo usado para fazer referência a objetos armazenados na lista. Pode ser uma referência.  
   
 ## <a name="remarks"></a>Comentários  

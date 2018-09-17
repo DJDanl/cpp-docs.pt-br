@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35f186822e00f74552e3bf8d52950f3c4bbe5b45
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 48312e4840436b1e0cc7c3e176d86f1783ff1746
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207386"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714647"
 ---
 # <a name="cshellmanager-class"></a>Classe CShellManager
 Implementa vários métodos que permitem que você trabalhe com ponteiros para listas de identificadores (PIDLs).  
@@ -104,23 +104,23 @@ BOOL BrowseForFolder(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *strOutFolder*  
- A cadeia de caracteres usada pelo método para armazenar o caminho da pasta selecionada.  
+*strOutFolder*<br/>
+[out] A cadeia de caracteres usada pelo método para armazenar o caminho da pasta selecionada.  
   
- [in] *pWndParent*  
- Um ponteiro para a janela pai.  
+*pWndParent*<br/>
+[in] Um ponteiro para a janela pai.  
   
- [in] *lplszInitialFolder*  
- Uma cadeia de caracteres que contém a pasta que é selecionada por padrão, quando a caixa de diálogo é exibida.  
+*lplszInitialFolder*<br/>
+[in] Uma cadeia de caracteres que contém a pasta que é selecionada por padrão, quando a caixa de diálogo é exibida.  
   
- [in] *lpszTitle*  
- O título da caixa de diálogo.  
+*lpszTitle*<br/>
+[in] O título da caixa de diálogo.  
   
- [in] *ulFlags*  
- Sinalizadores que especificam as opções para a caixa de diálogo. Ver [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa) para a descrição detalhada.  
+*ulFlags*<br/>
+[in] Sinalizadores que especificam as opções para a caixa de diálogo. Ver [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-_browseinfoa) para a descrição detalhada.  
   
- [out] *piFolderImage*  
- Um ponteiro para o valor de inteiro em que o método grava o índice de imagem da pasta selecionada.  
+*piFolderImage*<br/>
+[out] Um ponteiro para o valor de inteiro em que o método grava o índice de imagem da pasta selecionada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o usuário seleciona uma pasta na caixa de diálogo; Caso contrário, 0.  
@@ -143,11 +143,11 @@ LPITEMIDLIST ConcatenateItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pidl1*  
- O primeiro item.  
+*pidl1*<br/>
+[in] O primeiro item.  
   
- [in] *pidl2*  
- O segundo item.  
+*pidl2*<br/>
+[in] O segundo item.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para a nova lista de item, se a função for bem-sucedida, caso contrário, nulo.  
@@ -163,8 +163,8 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pidlSource*  
- A lista de item original.  
+*pidlSource*<br/>
+[in] A lista de item original.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para a lista de itens recentemente criado se bem-sucedido; Caso contrário, nulo.  
@@ -180,8 +180,8 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *cbSize*  
- O tamanho da lista de itens.  
+*cbSize*<br/>
+[in] O tamanho da lista de itens.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para a lista de item criado se bem-sucedido; Caso contrário, nulo.  
@@ -204,8 +204,8 @@ void FreeItem(LPITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pidl*  
- Uma lista de itens para excluir.  
+*PIDL*<br/>
+[in] Uma lista de itens para excluir.  
   
 ##  <a name="getitemcount"></a>  CShellManager::GetItemCount  
  Retorna o número de itens em uma lista de itens.  
@@ -215,8 +215,8 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pidl*  
- Um ponteiro para uma lista de itens.  
+*PIDL*<br/>
+[in] Um ponteiro para uma lista de itens.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O número de itens na lista de itens.  
@@ -229,8 +229,8 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pidl*  
- Um ponteiro para uma lista de itens.  
+*PIDL*<br/>
+[in] Um ponteiro para uma lista de itens.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O tamanho da lista de itens.  
@@ -243,8 +243,8 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pidl*  
- A lista de itens para iterar.  
+*PIDL*<br/>
+[in] A lista de itens para iterar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o próximo item na lista.  
@@ -262,11 +262,11 @@ int GetParentItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpidl*  
- Um PIDL cujo pai será recuperado.  
+*lpidl*<br/>
+[in] Um PIDL cujo pai será recuperado.  
   
- [out] *lpidlParent*  
- Uma referência a um PIDL em que o método armazenará o resultado.  
+*lpidlParent*<br/>
+[out] Uma referência a um PIDL em que o método armazenará o resultado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O nível do pai PIDL.  
@@ -284,11 +284,11 @@ HRESULT ItemFromPath(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszPath*  
- Uma cadeia de caracteres que especifica o caminho para o item.  
+*lpszPath*<br/>
+[in] Uma cadeia de caracteres que especifica o caminho para o item.  
   
- [out] *pidl*  
- Uma referência a um PIDL. O método usa esse PIDL para armazenar o ponteiro para seu valor de retorno.  
+*PIDL*<br/>
+[out] Uma referência a um PIDL. O método usa esse PIDL para armazenar o ponteiro para seu valor de retorno.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna NOERROR se bem-sucedido; um valor de erro definidas pelo OLE.  

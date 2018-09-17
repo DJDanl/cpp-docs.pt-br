@@ -1,5 +1,5 @@
 ---
-title: Especificando DLLs para carga com atraso | Microsoft Docs
+title: Especificando DLLs para carregamento com atraso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,32 +17,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7756499ddf24055feb1c540df13fbe8249edf42
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e9becc0a686d3add5db140b239f1997f81a45be
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373716"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722573"
 ---
 # <a name="specifying-dlls-to-delay-load"></a>Especificando DLLs para carga com atraso
-Você pode especificar quais DLLs de atraso de carga com o [/delayload](../../build/reference/delayload-delay-load-import.md):`dllname` opção de vinculador. Se você não planeja usar sua própria versão de uma função auxiliar, você também deve vincular seu programa com delayimp.lib (para aplicativos de área de trabalho) ou dloadhelper.lib (para aplicativos da Windows store).  
-  
- Este é um exemplo simples de uma DLL de carregamento com atraso:  
-  
-```  
-// cl t.cpp user32.lib delayimp.lib  /link /DELAYLOAD:user32.dll  
-#include <windows.h>  
-// uncomment these lines to remove .libs from command line  
-// #pragma comment(lib, "delayimp")  
-// #pragma comment(lib, "user32")  
-  
-int main() {  
-   // user32.dll will load at this point  
-   MessageBox(NULL, "Hello", "Hello", MB_OK);  
-}  
-```  
-  
- Crie a versão de depuração do projeto. Percorrer o código usando o depurador e você observará que User32. dll é carregado apenas quando você fizer a chamada para `MessageBox`.  
-  
-## <a name="see-also"></a>Consulte também  
- [Suporte do vinculador para DLLs carregadas com atraso](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+
+Você pode especificar quais DLLs para atrasar a carga com o [/delayload](../../build/reference/delayload-delay-load-import.md):`dllname` a opção de vinculador. Se você não planeja usar sua própria versão de uma função auxiliar, você também deve vincular o programa com delayimp (para aplicativos da área de trabalho) ou dloadhelper.lib (para aplicativos da store).
+
+Este é um exemplo simples de uma DLL de carregamento com atraso:
+
+```
+// cl t.cpp user32.lib delayimp.lib  /link /DELAYLOAD:user32.dll
+#include <windows.h>
+// uncomment these lines to remove .libs from command line
+// #pragma comment(lib, "delayimp")
+// #pragma comment(lib, "user32")
+
+int main() {
+   // user32.dll will load at this point
+   MessageBox(NULL, "Hello", "Hello", MB_OK);
+}
+```
+
+Compile a versão de depuração do projeto. Percorra o código usando o depurador e você observará que User32. dll é carregada somente quando você fizer a chamada para `MessageBox`.
+
+## <a name="see-also"></a>Consulte também
+
+[Suporte do vinculador para DLLs carregadas com atraso](../../build/reference/linker-support-for-delay-loaded-dlls.md)

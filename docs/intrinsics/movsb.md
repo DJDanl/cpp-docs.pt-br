@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d37405a9853fda79c8717f16abbd931ed947e7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 34fedf8a30a5ed47837f593012e4cd836782bb66
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540944"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720129"
 ---
 # <a name="movsb"></a>__movsb
 **Seção específica da Microsoft**  
@@ -41,14 +41,14 @@ void __movsb(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [out] `Destination`  
- Um ponteiro para o destino da cópia.  
+*Destino*<br/>
+[out] Um ponteiro para o destino da cópia.  
   
- [in] `Source`  
- Um ponteiro para a origem da cópia.  
+*Source*<br/>
+[in] Um ponteiro para a origem da cópia.  
   
- [in] `Count`  
- O número de bytes a serem copiados.  
+*Contagem*<br/>
+[in] O número de bytes a serem copiados.  
   
 ## <a name="requirements"></a>Requisitos  
   

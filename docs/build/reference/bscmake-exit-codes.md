@@ -15,21 +15,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 022fc0e2bcb73e8aad00fd3cb74eb534409384c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fbb5b5f9e61cab7abdd1ba9a8594176680e95f77
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369222"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720857"
 ---
 # <a name="bscmake-exit-codes"></a>Códigos de saída BSCMAKE
-BSCMAKE retorna um código de saída (também chamado de código de retorno ou código de erro) para o sistema operacional ou programa de chamada.  
-  
-|Código|Significado|  
-|----------|-------------|  
-|0|Nenhum erro|  
-|1|Erro de linha de comando|  
-|4|Erro fatal durante a compilação|  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de BSCMAKE](../../build/reference/bscmake-reference.md)
+
+BSCMAKE retorna um código de saída (também chamado de um código de retorno ou o código de erro) para o sistema operacional ou o programa de chamada.
+
+|Código|Significado|
+|----------|-------------|
+|0|Nenhum erro|
+|1|Erro de linha de comando|
+|4|Erro fatal durante a compilação|
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de BSCMAKE](../../build/reference/bscmake-reference.md)

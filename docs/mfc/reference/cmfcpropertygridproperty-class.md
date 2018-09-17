@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00d108bab368b7be57d336aae345df1e25723363
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: bb60681f47a32e40bff744adaecfedfe4b247c64
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540960"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726239"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>Classe CMFCPropertyGridProperty
 Um `CMFCPropertyGridProperty` objeto representa um item de lista em um controle de lista de propriedade.  
@@ -326,11 +326,11 @@ BOOL AddOption(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszOption*  
- O item de lista (opção) para adicionar.  
+*lpszOption*<br/>
+[in] O item de lista (opção) para adicionar.  
   
- [in] *bInsertUnique*  
- TRUE para adicionar a lista de item somente se ele ainda não existir; Caso contrário, FALSE. O valor padrão é TRUE.  
+*bInsertUnique*<br/>
+[in] TRUE para adicionar a lista de item somente se ele ainda não existir; Caso contrário, FALSE. O valor padrão é TRUE.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE, o que significa que o item de lista é adicionado. Caso contrário, FALSE, o que significa que o item de lista não é adicionado porque o *bInsertUnique* parâmetro for TRUE e a lista de item especificada pela *lpszOption* parâmetro já existe.  
@@ -345,8 +345,8 @@ BOOL AddSubItem(CMFCPropertyGridProperty* pProp);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pProp*  
- Ponteiro para uma propriedade a ser adicionada.  
+*pProp*<br/>
+[in] Ponteiro para uma propriedade a ser adicionada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a propriedade especificada for adicionada com êxito como uma propriedade filho. FALSE se a propriedade não for adicionada porque já ocorre na propriedade pai.  
@@ -380,11 +380,11 @@ virtual void AdjustInPlaceEditRect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *rectEdit*  
- Quando este método retorna, um retângulo que especifica os limites da caixa de texto para o valor da propriedade.  
+*rectEdit*<br/>
+[out] Quando este método retorna, um retângulo que especifica os limites da caixa de texto para o valor da propriedade.  
   
- [out] *rectSpin*  
- Quando este método retorna, um retângulo que especifica os limites do controle de botão de rotação para o valor da propriedade. Ou, se a propriedade não dá suporte a um botão de rotação, um retângulo vazio.  
+*rectSpin*<br/>
+[out] Quando este método retorna, um retângulo que especifica os limites do controle de botão de rotação para o valor da propriedade. Ou, se a propriedade não dá suporte a um botão de rotação, um retângulo vazio.  
   
 ### <a name="remarks"></a>Comentários  
  A área de valor de uma propriedade consiste em uma caixa de texto e, possivelmente, uma *botão de opção*, como um controle de botão de rotação. Esse método calcula as dimensões do que o botão de opção e caixa de texto e, em seguida, retorna os valores nos parâmetros especificados.  
@@ -397,8 +397,8 @@ void AllowEdit(BOOL bAllow=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bPermitir*  
- TRUE para tornar a propriedade editável; FALSE para tornar a propriedade somente leitura. O valor padrão é TRUE.  
+*bPermitir*<br/>
+[in] TRUE para tornar a propriedade editável; FALSE para tornar a propriedade somente leitura. O valor padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -423,32 +423,32 @@ CMFCPropertyGridProperty(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *strGroupName*  
- O nome do grupo. Um *grupo* é uma coleção de propriedades relacionadas em um controle de grade de propriedade. Se o controle é exibido hierarquicamente, o *nome do grupo* é exibido como um título de categoria na linha acima do grupo.  
+*strGroupName*<br/>
+[in] O nome do grupo. Um *grupo* é uma coleção de propriedades relacionadas em um controle de grade de propriedade. Se o controle é exibido hierarquicamente, o *nome do grupo* é exibido como um título de categoria na linha acima do grupo.  
   
- [in] *dwData*  
- Dados específicos do aplicativo, como um inteiro ou um ponteiro para outros dados que está associados com a propriedade. O valor padrão é 0.  
+*dwData*<br/>
+[in] Dados específicos do aplicativo, como um inteiro ou um ponteiro para outros dados que está associados com a propriedade. O valor padrão é 0.  
   
- [in] *strName*  
- O nome da propriedade.  
+*strName*<br/>
+[in] O nome da propriedade.  
   
- [in] *varValue*  
- O valor da propriedade.  
+*varValue*<br/>
+[in] O valor da propriedade.  
   
- [in] *lpszDescr*  
- A descrição da propriedade. O valor padrão é NULL.  
+*lpszDescr*<br/>
+[in] A descrição da propriedade. O valor padrão é NULL.  
   
- [in] *lpszEditMask*  
- A máscara de edição, se a propriedade é um controle de edição mascarado. O valor padrão é NULL.  
+*lpszEditMask*<br/>
+[in] A máscara de edição, se a propriedade é um controle de edição mascarado. O valor padrão é NULL.  
   
- [in] *lpszEditTemplate*  
- O modelo de edição, se a propriedade é um controle de edição mascarado. O valor padrão é NULL.  
+*lpszEditTemplate*<br/>
+[in] O modelo de edição, se a propriedade é um controle de edição mascarado. O valor padrão é NULL.  
   
- [in] *lpszValidChars*  
- Uma lista de caracteres válidas, se a propriedade é um controle de edição mascarado. O valor padrão é NULL.  
+*lpszValidChars*<br/>
+[in] Uma lista de caracteres válidas, se a propriedade é um controle de edição mascarado. O valor padrão é NULL.  
   
- [in] *bIsValueList*  
- TRUE se a propriedade representa uma lista de valores; FALSE se a propriedade representa um único valor. O valor padrão é FALSE.  
+*bIsValueList*<br/>
+[in] TRUE se a propriedade representa uma lista de valores; FALSE se a propriedade representa um único valor. O valor padrão é FALSE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -462,11 +462,11 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWndParent*  
- Ponteiro para a janela pai da caixa de combinação.  
+*pWndParent*<br/>
+[in] Ponteiro para a janela pai da caixa de combinação.  
   
- [in] *rect*  
- O retângulo delimitador da caixa de combinação.  
+*Rect*<br/>
+[in] O retângulo delimitador da caixa de combinação.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Ponteiro para uma nova [CComboBox](../../mfc/reference/ccombobox-class.md) objeto.  
@@ -483,11 +483,11 @@ virtual CWnd* CreateInPlaceEdit(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *rectEdit*  
- O retângulo delimitador do controle editável.  
+*rectEdit*<br/>
+[in] O retângulo delimitador do controle editável.  
   
- [in] *bDefaultFormat*  
- TRUE para usar o formato de propriedade padrão para definir o texto do controle editável; Caso contrário, FALSE.  
+*bDefaultFormat*<br/>
+[in] TRUE para usar o formato de propriedade padrão para definir o texto do controle editável; Caso contrário, FALSE.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o controle editável se esse método for bem-sucedida; Caso contrário, nulo.  
@@ -505,8 +505,8 @@ virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *rectSpin*  
- Um retângulo que define onde o controle de botão de rotação editável é criado.  
+*rectSpin*<br/>
+[in] Um retângulo que define onde o controle de botão de rotação editável é criado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para um novo [CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md) objeto que é convertido como um ponteiro para um [CSpinButtonCtrl](../../mfc/reference/cspinbuttonctrl-class.md) objeto.  
@@ -522,8 +522,8 @@ void Enable(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- TRUE para habilitar a propriedade; FALSE para desabilitar a propriedade. Propriedades desabilitadas não respondem ao mouse ou teclado de entrada. O valor padrão é TRUE.  
+*bAtivar*<br/>
+[in] TRUE para habilitar a propriedade; FALSE para desabilitar a propriedade. Propriedades desabilitadas não respondem ao mouse ou teclado de entrada. O valor padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -538,14 +538,14 @@ void EnableSpinControl(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- True para habilitar o controle de botão de rotação; FALSE para desabilitar o controle de botão de rotação. O valor padrão é TRUE.  
+*bAtivar*<br/>
+[in] True para habilitar o controle de botão de rotação; FALSE para desabilitar o controle de botão de rotação. O valor padrão é TRUE.  
   
- [in] *Nmín*  
- O valor mínimo do controle de botão de rotação. O valor padrão é 0.  
+*Nmín*<br/>
+[in] O valor mínimo do controle de botão de rotação. O valor padrão é 0.  
   
- [in] *Nmáx*  
- O valor máximo do controle de botão de rotação. O valor padrão é 0.  
+*Nmáx*<br/>
+[in] O valor máximo do controle de botão de rotação. O valor padrão é 0.  
   
 ### <a name="remarks"></a>Comentários  
  O framework cria automaticamente um controle de botão de rotação quando uma propriedade está prestes a ser editado.  
@@ -560,8 +560,8 @@ void Expand(BOOL bExpand=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bExpand*  
- TRUE para expandir a propriedade; FALSE para recolher a propriedade. O valor padrão é TRUE.  
+*bExpand*<br/>
+[in] TRUE para expandir a propriedade; FALSE para recolher a propriedade. O valor padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -615,7 +615,7 @@ int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *bIncludeHidden*|TRUE para incluir os subelementos ocultos na contagem; Caso contrário, FALSE. O valor padrão é TRUE.|  
+|*bIncludeHidden*|[in] TRUE para incluir os subelementos ocultos na contagem; Caso contrário, FALSE. O valor padrão é TRUE.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  O número de subitens expandidos.  
@@ -734,8 +734,8 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nIndex*  
- O índice baseado em zero da propriedade a recuperar. Esse parâmetro é inválido, se ele for menor que zero ou maior ou igual ao número de subpropriedades.  
+*nIndex*<br/>
+[in] O índice baseado em zero da propriedade a recuperar. Esse parâmetro é inválido, se ele for menor que zero ou maior ou igual ao número de subpropriedades.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para um objeto de propriedade que é um item filho dessa propriedade.  
@@ -810,17 +810,17 @@ CMFCPropertyGridProperty* HitTest(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *ponto*  
- O ponto de teste, nas coordenadas do cliente. Normalmente, esse parâmetro é o local atual do ponteiro do mouse.  
+*ponto*<br/>
+[in] O ponto de teste, nas coordenadas do cliente. Normalmente, esse parâmetro é o local atual do ponteiro do mouse.  
   
- [in] *pt*  
- O ponto de teste, nas coordenadas do cliente.  
+*pt*<br/>
+[in] O ponto de teste, nas coordenadas do cliente.  
   
- [out] *pnArea*  
- Quando este método retorna, indica a área que contém o ponto especificado. Para obter mais informações, consulte Comentários. O valor padrão é NULL.  
+*pnArea*<br/>
+[out] Quando este método retorna, indica a área que contém o ponto especificado. Para obter mais informações, consulte Comentários. O valor padrão é NULL.  
   
- [in] *bPropsOnly*  
- TRUE para qualquer área de teste no controle de propriedade; FALSE para testar apenas a área de descrição. O valor padrão é FALSE.  
+*bPropsOnly*<br/>
+[in] TRUE para qualquer área de teste no controle de propriedade; FALSE para testar apenas a área de descrição. O valor padrão é FALSE.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para um objeto de propriedade ou NULL.  
@@ -951,8 +951,8 @@ BOOL IsSubItem(CMFCPropertyGridProperty* pProp) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pProp*  
- Um ponteiro para uma propriedade.  
+*pProp*<br/>
+[in] Um ponteiro para uma propriedade.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a propriedade especificada é um item de subpropriedades da propriedade atual; Caso contrário, FALSE.  
@@ -1025,8 +1025,8 @@ virtual void OnClickButton(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *ponto*  
- Um ponto, nas coordenadas do cliente.  
+*ponto*<br/>
+[in] Um ponto, nas coordenadas do cliente.  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, esse método não fará nada.  
@@ -1042,7 +1042,7 @@ virtual void OnClickName(CPoint C);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *C*|Um ponto, nas coordenadas do cliente.|  
+|*C*|[in] Um ponto, nas coordenadas do cliente.|  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, esse método não fará nada.  
@@ -1057,11 +1057,11 @@ virtual BOOL OnClickValue(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiMsg*  
- Uma mensagem de mouse.  
+*uiMsg*<br/>
+[in] Uma mensagem de mouse.  
   
- [in] *ponto*  
- Um ponto, nas coordenadas do cliente.  
+*ponto*<br/>
+[in] Um ponto, nas coordenadas do cliente.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a mensagem de mouse especificado é processada por esse método; Caso contrário, FALSE.  
@@ -1088,11 +1088,11 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Ponteiro para um contexto de dispositivo.  
   
- [in] *nCtlColor*  
- (Esse parâmetro não for usado).  
+*nCtlColor*<br/>
+[in] (Esse parâmetro não for usado).  
   
 ### <a name="return-value"></a>Valor de retorno  
  O identificador para um pincel se esse método for bem-sucedida; Caso contrário, nulo.  
@@ -1107,8 +1107,8 @@ virtual BOOL OnDblClk(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *ponto*  
- Um ponto, nas coordenadas do cliente.  
+*ponto*<br/>
+[in] Um ponto, nas coordenadas do cliente.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -1135,11 +1135,11 @@ virtual void OnDrawButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Um ponteiro para um contexto de dispositivo.  
   
- [in] *rectButton*  
- Um retângulo delimitador que especifica o local desenhar um botão.  
+*rectButton*<br/>
+[in] Um retângulo delimitador que especifica o local desenhar um botão.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1153,11 +1153,11 @@ virtual void OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Um ponteiro para um contexto de dispositivo.  
   
- [in] *rect*  
- Um retângulo delimitador que especifica o local desenhar a descrição da propriedade.  
+*Rect*<br/>
+[in] Um retângulo delimitador que especifica o local desenhar a descrição da propriedade.  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, esse método desenha o nome da propriedade e a descrição da fonte usada pelo controle de lista de propriedades pai. A descrição da propriedade é desenhada em estilo normal e o nome da propriedade é desenhado em estilo em negrito.  
@@ -1172,11 +1172,11 @@ virtual void OnDrawExpandBox(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Um ponteiro para um contexto de dispositivo.  
   
- [in] *rectExpand*  
- Um retângulo delimitador que especifica o local desenhar o controle de caixa de expansão.  
+*rectExpand*<br/>
+[in] Um retângulo delimitador que especifica o local desenhar o controle de caixa de expansão.  
   
 ### <a name="remarks"></a>Comentários  
  Clique no controle de caixa de expansão para expandir ou recolher uma lista de subpropriedades. O controle de caixa de expansão é designado por um quadrado que contém um sinal de adição (+) ou de subtração (-). Um sinal indica que a propriedade pode ser expandida para mostrar uma lista de subpropriedades. Um sinal de subtração indica que a lista pode ser recolhida para mostrar apenas a propriedade.  
@@ -1191,11 +1191,11 @@ virtual void OnDrawName(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Um ponteiro para um contexto de dispositivo.  
   
- [in] *rect*  
- Um retângulo delimitador que especifica o local desenhar o nome da propriedade.  
+*Rect*<br/>
+[in] Um retângulo delimitador que especifica o local desenhar o nome da propriedade.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1209,11 +1209,11 @@ virtual void OnDrawValue(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Um ponteiro para um contexto de dispositivo.  
   
- [in] *rect*  
- Um retângulo delimitador que especifica o local desenhar o valor da propriedade.  
+*Rect*<br/>
+[in] Um retângulo delimitador que especifica o local desenhar o valor da propriedade.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1225,8 +1225,8 @@ virtual BOOL OnEdit(LPPOINT lptClick);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lptClick*  
- (Esse parâmetro não for usado). Um ponteiro para um ponto, nas coordenadas do cliente.  
+*lptClick*<br/>
+[in] (Esse parâmetro não for usado). Um ponteiro para um ponto, nas coordenadas do cliente.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a operação de edição é iniciado com êxito; Caso contrário, FALSE.  
@@ -1258,7 +1258,7 @@ virtual BOOL OnKillFocus(CWnd*);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *CWnd*|(Não usado). Ponteiro para uma janela.|  
+|*CWnd*|[in] (Não usado). Ponteiro para uma janela.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  Esse método sempre retorna TRUE.  
@@ -1303,7 +1303,7 @@ virtual void OnRClickName(CPoint C);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *C*|Um ponto, nas coordenadas do cliente.|  
+|*C*|[in] Um ponto, nas coordenadas do cliente.|  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, esse método não fará nada.  
@@ -1321,8 +1321,8 @@ virtual void OnRClickValue(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *C*|Um ponto, nas coordenadas do cliente.|  
-|[in] *B*|Um booliano.|  
+|*C*|[in] Um ponto, nas coordenadas do cliente.|  
+|*B*|[in] Um valor booliano.|  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, esse método não faz nada e o *B* parâmetro não tiver nenhuma finalidade predefinida.  
@@ -1383,8 +1383,8 @@ virtual BOOL PushChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nChar*  
- Um caractere.  
+*nChar*<br/>
+[in] Um caractere.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a operação de edição continua; Caso contrário, FALSE.  
@@ -1421,11 +1421,11 @@ BOOL RemoveSubItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pProp*  
- Ponteiro para um item de subpropriedades da propriedade.  
+*pProp*<br/>
+[in] Ponteiro para um item de subpropriedades da propriedade.  
   
- [in] *bDelete*  
- True para excluir o objeto de propriedade especificado pelo *pProp* parâmetro; caso contrário, FALSE. O valor padrão é TRUE.  
+*bDelete*<br/>
+[in] True para excluir o objeto de propriedade especificado pelo *pProp* parâmetro; caso contrário, FALSE. O valor padrão é TRUE.  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -1449,8 +1449,8 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *dwData*  
- Um valor de 32 bits específicos do aplicativo, como um inteiro ou um ponteiro para outros dados.  
+*dwData*<br/>
+[in] Um valor de 32 bits específicos do aplicativo, como um inteiro ou um ponteiro para outros dados.  
   
 ### <a name="remarks"></a>Comentários  
  Use o [CMFCPropertyGridProperty::GetData](#getdata) método para recuperar o valor DWORD. Use o [CMFCPropertyGridCtrl::FindItemByData](../../mfc/reference/cmfcpropertygridctrl-class.md#finditembydata) método para localizar o item de lista de propriedade que está associado com o valor DWORD especificado.  
@@ -1463,8 +1463,8 @@ void SetDescription(const CString& strDescr);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *strDescr*  
- Texto que descreve a propriedade atual.  
+*strDescr*<br/>
+[in] Texto que descreve a propriedade atual.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1478,11 +1478,11 @@ void SetName(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszName*  
- O nome da propriedade.  
+*lpszName*<br/>
+[in] O nome da propriedade.  
   
- [in] *bRedraw*  
- TRUE para redesenhar a propriedade imediatamente; Caso contrário, FALSE. O valor padrão é TRUE.  
+*bRedraw*<br/>
+[in] TRUE para redesenhar a propriedade imediatamente; Caso contrário, FALSE. O valor padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1494,8 +1494,8 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *varValue*  
- Um valor.  
+*varValue*<br/>
+[in] Um valor.  
   
 ### <a name="remarks"></a>Comentários  
  Use o [CMFCPropertyGridProperty::ResetOriginalValue](#resetoriginalvalue) método para redefinir o valor original de uma propriedade editada.  
@@ -1508,8 +1508,8 @@ virtual void SetValue(const _variant_t& varValue);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *varValue*  
- Uma referência a um valor.  
+*varValue*<br/>
+[in] Uma referência a um valor.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1523,11 +1523,11 @@ void Show(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bMostrar*  
- TRUE para exibir a propriedade atual e seus subelementos; FALSO para ocultar a propriedade atual e seus subelementos. O valor padrão é TRUE.  
+*bMostrar*<br/>
+[in] TRUE para exibir a propriedade atual e seus subelementos; FALSO para ocultar a propriedade atual e seus subelementos. O valor padrão é TRUE.  
   
- [in] *bAdjustLayout*  
- TRUE para recalcular como desenhar o rótulo e o valor de uma propriedade e, em seguida, desenhe a propriedade; FALSE para usar cálculos existentes para desenhar a propriedade. O valor padrão é TRUE.  
+*bAdjustLayout*<br/>
+[in] TRUE para recalcular como desenhar o rótulo e o valor de uma propriedade e, em seguida, desenhe a propriedade; FALSE para usar cálculos existentes para desenhar a propriedade. O valor padrão é TRUE.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   

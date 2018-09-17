@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 423cd4585fa6e9ae5a5fbb16cf7d5c43aaf7c152
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 00ef28954a686dac72c8b7f55b86c88313e74643
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605921"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719714"
 ---
 # <a name="rdx"></a>rdx
 
@@ -43,8 +43,8 @@ Cria uma chave do registro ou modifica uma chave do registro existente.
 *key*  
 O nome da chave a ser criado ou aberto.
 
-*ValueName* (opcional)  
-Especifica o campo de valor a ser definido. Se um campo de valor com esse nome ainda não existir na chave, ele será adicionado.
+*ValueName*  
+(Opcional) Especifica o campo de valor a ser definido. Se um campo de valor com esse nome ainda não existir na chave, ele será adicionado.
 
 *regtype*  
 O tipo de chave do registro que está sendo adicionado. Pode ser uma das seguintes opções: `text`, `dword`, `binary`, ou `CString`.

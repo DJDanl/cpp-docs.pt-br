@@ -12,18 +12,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 205241f2306885800813597568ed9ae8cf3858b3
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2c2b1dc80cec8ba18522d8238752857105993074
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598227"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720715"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configurando programas para Windows XP
 
 Como o Visual Studio oferece suporte a vários conjuntos de ferramentas de plataforma, você pode direcionar os sistemas operacionais e bibliotecas de tempo de execução que não têm suporte pelo conjunto de ferramentas padrão. Por exemplo, alternando o conjunto de ferramentas de plataforma, você pode usar o c++11, c++14 e aprimoramentos de linguagem C + + 17 suportados pelo compilador Visual C++ no Visual Studio para criar aplicativos destinados ao Windows XP e Windows Server 2003. Você pode também usar conjuntos de ferramentas de plataforma mais antigos para manter o código herdado de compatíveis com o binário e ainda aproveitar os recursos mais recentes do IDE do Visual Studio.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Instalar o conjunto de ferramentas de plataforma do Windows XP
+
 Para obter o conjunto de ferramentas de plataforma e componentes de destino Windows XP e Windows Server 2003 no Visual Studio 2017, execute o instalador do Visual Studio. Quando você instala o Visual Studio inicialmente ou quando você escolhe **Modify** para modificar uma instalação existente, certifique-se de que o **desenvolvimento para Desktop com C++** carga de trabalho é selecionada. Na lista de componentes opcionais para essa carga de trabalho, escolha **suporte do Windows XP para C++** e, em seguida, escolha **instalar** ou **modificar**.
 
 ## <a name="windows-xp-targeting-experience"></a>XP do Windows visando a experiência
@@ -72,7 +73,7 @@ Devido às diferenças no suporte de plataforma e de biblioteca, a experiência 
 
 - **Depuração de gráficos do DirectX**
 
-     Porque o depurador de gráficos não oferece suporte a API do Direct3D 9, ele não pode ser usado para depurar aplicativos que usam o Direct3D no Windows XP ou Windows Server 2003. No entanto, se o aplicativo implementa um renderizador alternativo que usa o Direct3D 10 ou as APIs do Direct3D 11, o depurador de gráficos pode ser usado para diagnosticar problemas com o uso dessas APIs.
+   Porque o depurador de gráficos não oferece suporte a API do Direct3D 9, ele não pode ser usado para depurar aplicativos que usam o Direct3D no Windows XP ou Windows Server 2003. No entanto, se o aplicativo implementa um renderizador alternativo que usa o Direct3D 10 ou as APIs do Direct3D 11, o depurador de gráficos pode ser usado para diagnosticar problemas com o uso dessas APIs.
 
 - **Construção HLSL**
 

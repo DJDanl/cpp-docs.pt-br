@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: b828081fea1f9886c1a661323e2d0e0c79d1ae96
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 83958ee300143463a1da9b10d2edb6eb1707ec4f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315022"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703554"
 ---
 # <a name="ltvalarraygt-operators"></a>Operadores &lt;valarray&gt;
 
@@ -78,11 +78,11 @@ operator!=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A primeira das duas valarrays cujos elementos deverão ser testados em relação à desigualdade.
+*left*<br/>
+A primeira das duas valarrays cujos elementos deverão ser testados em relação à desigualdade.
 
-*right*  
- A segunda das duas valarrays cujos elementos deverão ser testados em relação à desigualdade.
+*right*<br/>
+A segunda das duas valarrays cujos elementos deverão ser testados em relação à desigualdade.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -173,11 +173,11 @@ operator%(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- Um valor ou valarray que serve como o dividendo pelo qual outro valor ou valarray deve ser dividido.
+*left*<br/>
+Um valor ou valarray que serve como o dividendo pelo qual outro valor ou valarray deve ser dividido.
 
-*right*  
- Um valor ou valarray que serve como o divisor e que divide outro valor ou valarray.
+*right*<br/>
+Um valor ou valarray que serve como o divisor e que divide outro valor ou valarray.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -256,11 +256,11 @@ operator&(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A primeira das duas valarrays cujos respectivos elementos deverão ser combinados com o `AND` bit a bit ou um valor especificado do tipo de elemento que deverá ser combinado bit a bit com cada elemento de uma valarray.
+*left*<br/>
+A primeira das duas valarrays cujos respectivos elementos deverão ser combinados com o `AND` bit a bit ou um valor especificado do tipo de elemento que deverá ser combinado bit a bit com cada elemento de uma valarray.
 
-*right*  
- A segunda das duas valarrays cujos respectivos elementos deverão ser combinados com o `AND` bit a bit ou um valor especificado do tipo de elemento que deverá ser combinado bit a bit com cada elemento de uma valarray.
+*right*<br/>
+A segunda das duas valarrays cujos respectivos elementos deverão ser combinados com o `AND` bit a bit ou um valor especificado do tipo de elemento que deverá ser combinado bit a bit com cada elemento de uma valarray.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -345,11 +345,11 @@ operator&&(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A primeira das duas valarrays cujos respectivos elementos deverão ser combinados com o `AND` lógico ou um valor especificado do tipo de elemento que deverá ser combinado com cada elemento de uma valarray.
+*left*<br/>
+A primeira das duas valarrays cujos respectivos elementos deverão ser combinados com o `AND` lógico ou um valor especificado do tipo de elemento que deverá ser combinado com cada elemento de uma valarray.
 
-*right*  
- A segunda das duas valarrays cujos respectivos elementos deverão ser combinados com o `AND` lógico ou um valor especificado do tipo de elemento que deverá ser combinado com cada elemento de uma valarray.
+*right*<br/>
+A segunda das duas valarrays cujos respectivos elementos deverão ser combinados com o `AND` lógico ou um valor especificado do tipo de elemento que deverá ser combinado com cada elemento de uma valarray.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -432,11 +432,11 @@ operator>(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A primeira das duas valarrays cujos elementos devem ser comparados ou um valor especificado que deve ser comparado com cada elemento de uma valarray.
+*left*<br/>
+A primeira das duas valarrays cujos elementos devem ser comparados ou um valor especificado que deve ser comparado com cada elemento de uma valarray.
 
-*right*  
- A segunda das duas valarrays cujos elementos devem ser comparados ou um valor especificado a ser comparado com cada elemento de uma valarray.
+*right*<br/>
+A segunda das duas valarrays cujos elementos devem ser comparados ou um valor especificado a ser comparado com cada elemento de uma valarray.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -523,11 +523,11 @@ operator>=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A primeira das duas valarrays cujos elementos devem ser comparados ou um valor especificado que deve ser comparado com cada elemento de uma valarray.
+*left*<br/>
+A primeira das duas valarrays cujos elementos devem ser comparados ou um valor especificado que deve ser comparado com cada elemento de uma valarray.
 
-*right*  
- A segunda das duas valarrays cujos elementos devem ser comparados ou um valor especificado a ser comparado com cada elemento de uma valarray.
+*right*<br/>
+A segunda das duas valarrays cujos elementos devem ser comparados ou um valor especificado a ser comparado com cada elemento de uma valarray.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -614,11 +614,11 @@ operator>>(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- O valor que deve ser deslocado ou a valarray cujos elementos deverão ser deslocados.
+*left*<br/>
+O valor que deve ser deslocado ou a valarray cujos elementos deverão ser deslocados.
 
-*right*  
- O valor que indica a quantidade de deslocamentos para a direita ou a valarray cujos elementos indicam a quantidade elemento a elemento dos deslocamentos para a direita.
+*right*<br/>
+O valor que indica a quantidade de deslocamentos para a direita ou a valarray cujos elementos indicam a quantidade elemento a elemento dos deslocamentos para a direita.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -701,11 +701,11 @@ operator<(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A primeira das duas valarrays cujos elementos devem ser comparados ou um valor especificado que deve ser comparado com cada elemento de uma valarray.
+*left*<br/>
+A primeira das duas valarrays cujos elementos devem ser comparados ou um valor especificado que deve ser comparado com cada elemento de uma valarray.
 
-*right*  
- A segunda das duas valarrays cujos elementos devem ser comparados ou um valor especificado a ser comparado com cada elemento de uma valarray.
+*right*<br/>
+A segunda das duas valarrays cujos elementos devem ser comparados ou um valor especificado a ser comparado com cada elemento de uma valarray.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -792,11 +792,11 @@ operator<=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A primeira das duas valarrays cujos elementos devem ser comparados ou um valor especificado que deve ser comparado com cada elemento de uma valarray.
+*left*<br/>
+A primeira das duas valarrays cujos elementos devem ser comparados ou um valor especificado que deve ser comparado com cada elemento de uma valarray.
 
-*right*  
- A segunda das duas valarrays cujos elementos devem ser comparados ou um valor especificado a ser comparado com cada elemento de uma valarray.
+*right*<br/>
+A segunda das duas valarrays cujos elementos devem ser comparados ou um valor especificado a ser comparado com cada elemento de uma valarray.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -883,11 +883,11 @@ operator<<(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- O valor que deve ser deslocado ou a valarray cujos elementos deverão ser deslocados.
+*left*<br/>
+O valor que deve ser deslocado ou a valarray cujos elementos deverão ser deslocados.
 
-*right*  
- O valor que indica a quantidade de deslocamentos para a esquerda ou a valarray cujos elementos indicam a quantidade elemento a elemento dos deslocamentos para a esquerda.
+*right*<br/>
+O valor que indica a quantidade de deslocamentos para a esquerda ou a valarray cujos elementos indicam a quantidade elemento a elemento dos deslocamentos para a esquerda.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -970,11 +970,11 @@ operator*(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A primeira das duas valarrays cujos elementos devem ser multiplicados ou um valor especificado que deve ser multiplicado pelos elementos individuais de uma valarray.
+*left*<br/>
+A primeira das duas valarrays cujos elementos devem ser multiplicados ou um valor especificado que deve ser multiplicado pelos elementos individuais de uma valarray.
 
-*right*  
- A segunda das duas valarrays cujos elementos devem ser multiplicados ou um valor especificado que deve ser multiplicado pelos elementos individuais de uma valarray.
+*right*<br/>
+A segunda das duas valarrays cujos elementos devem ser multiplicados ou um valor especificado que deve ser multiplicado pelos elementos individuais de uma valarray.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1053,11 +1053,11 @@ operator+(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A primeira das duas valarrays cujos elementos devem ser adicionados ou um valor especificado que deve ser adicionado a cada elemento de uma valarray.
+*left*<br/>
+A primeira das duas valarrays cujos elementos devem ser adicionados ou um valor especificado que deve ser adicionado a cada elemento de uma valarray.
 
-*right*  
- A segunda das duas valarrays cujos elementos devem ser adicionados ou um valor especificado que deve ser adicionado a cada elemento de uma valarray.
+*right*<br/>
+A segunda das duas valarrays cujos elementos devem ser adicionados ou um valor especificado que deve ser adicionado a cada elemento de uma valarray.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1136,11 +1136,11 @@ operator-(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- Um valor ou valarray que serve como o diminuendo do qual devem ser subtraídos os valores ou as valarrays na formação da diferença.
+*left*<br/>
+Um valor ou valarray que serve como o diminuendo do qual devem ser subtraídos os valores ou as valarrays na formação da diferença.
 
-*right*  
- Um valor ou valarray que serve como o subtraendo do qual devem ser subtraídos os outros valores ou valarrays na formação da diferença.
+*right*<br/>
+Um valor ou valarray que serve como o subtraendo do qual devem ser subtraídos os outros valores ou valarrays na formação da diferença.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1225,11 +1225,11 @@ operator/(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- Um valor ou valarray que serve como o dividendo pelo qual outro valor ou valarray deve ser dividido na formação do quociente.
+*left*<br/>
+Um valor ou valarray que serve como o dividendo pelo qual outro valor ou valarray deve ser dividido na formação do quociente.
 
-*right*  
- Um valor ou valarray que serve como o divisor e que divide outro valor ou valarray na formação do quociente.
+*right*<br/>
+Um valor ou valarray que serve como o divisor e que divide outro valor ou valarray na formação do quociente.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1314,11 +1314,11 @@ operator==(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A primeira das duas valarrays cujos elementos deverão ser testados em relação à igualdade.
+*left*<br/>
+A primeira das duas valarrays cujos elementos deverão ser testados em relação à igualdade.
 
-*right*  
- A segunda das duas valarrays cujos elementos deverão ser testados em relação à igualdade.
+*right*<br/>
+A segunda das duas valarrays cujos elementos deverão ser testados em relação à igualdade.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1405,11 +1405,11 @@ operator^(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A primeira das duas valarrays cujos respectivos elementos deverão ser combinados com o **XOR** bit a bit ou um valor especificado do tipo de elemento que deverá ser combinado bit a bit com cada elemento de uma valarray.
+*left*<br/>
+A primeira das duas valarrays cujos respectivos elementos deverão ser combinados com o **XOR** bit a bit ou um valor especificado do tipo de elemento que deverá ser combinado bit a bit com cada elemento de uma valarray.
 
-*right*  
- A segunda das duas valarrays cujos respectivos elementos deverão ser combinados com o **XOR** bit a bit ou um valor especificado do tipo de elemento que deverá ser combinado bit a bit com cada elemento de uma valarray.
+*right*<br/>
+A segunda das duas valarrays cujos respectivos elementos deverão ser combinados com o **XOR** bit a bit ou um valor especificado do tipo de elemento que deverá ser combinado bit a bit com cada elemento de uma valarray.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1498,11 +1498,11 @@ operator|(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A primeira das duas valarrays cujos respectivos elementos deverão ser combinados com o `OR` bit a bit ou um valor especificado do tipo de elemento que deverá ser combinado bit a bit com cada elemento de uma valarray.
+*left*<br/>
+A primeira das duas valarrays cujos respectivos elementos deverão ser combinados com o `OR` bit a bit ou um valor especificado do tipo de elemento que deverá ser combinado bit a bit com cada elemento de uma valarray.
 
-*right*  
- A segunda das duas valarrays cujos respectivos elementos deverão ser combinados com o `OR` bit a bit ou um valor especificado do tipo de elemento que deverá ser combinado bit a bit com cada elemento de uma valarray.
+*right*<br/>
+A segunda das duas valarrays cujos respectivos elementos deverão ser combinados com o `OR` bit a bit ou um valor especificado do tipo de elemento que deverá ser combinado bit a bit com cada elemento de uma valarray.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1591,11 +1591,11 @@ operator||(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A primeira das duas valarrays cujos respectivos elementos deverão ser combinados com o `OR` lógico ou um valor especificado do tipo de elemento que deverá ser combinado com cada elemento de uma valarray.
+*left*<br/>
+A primeira das duas valarrays cujos respectivos elementos deverão ser combinados com o `OR` lógico ou um valor especificado do tipo de elemento que deverá ser combinado com cada elemento de uma valarray.
 
-*right*  
- A segunda das duas valarrays cujos respectivos elementos deverão ser combinados com o `OR` lógico ou um valor especificado do tipo de elemento que deverá ser combinado com cada elemento de uma valarray.
+*right*<br/>
+A segunda das duas valarrays cujos respectivos elementos deverão ser combinados com o `OR` lógico ou um valor especificado do tipo de elemento que deverá ser combinado com cada elemento de uma valarray.
 
 ### <a name="return-value"></a>Valor de retorno
 

@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08c16cd80828e973e4fff2d1a2c36e211e61f361
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 809391ea93c3baacd510df7d81f2000e1d6309b7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211586"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702021"
 ---
 # <a name="hashmap-class"></a>Classe hash_map
 
@@ -125,16 +125,16 @@ class hash_map
 ### <a name="parameters"></a>Parâmetros
 
 *Chave*<br/>
- O tipo de dados da chave a ser armazenado no hash_map.
+O tipo de dados da chave a ser armazenado no hash_map.
 
 *Tipo*<br/>
- O tipo de dados do elemento a ser armazenado no hash_map.
+O tipo de dados do elemento a ser armazenado no hash_map.
 
 *Características*<br/>
- O tipo que inclui dois objetos de função: um da classe compare, para comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa e uma função de hash, que é um predicado unário que mapeia valores chave dos elementos para inteiros sem sinal do tipo `size_t`. Esse argumento é opcional e hash_compare <`Key`, less <`Key`>> é o valor padrão.
+O tipo que inclui dois objetos de função: um da classe compare, para comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa e uma função de hash, que é um predicado unário que mapeia valores chave dos elementos para inteiros sem sinal do tipo `size_t`. Esse argumento é opcional e hash_compare <`Key`, less <`Key`>> é o valor padrão.
 
 *Alocador*<br/>
- O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre a alocação e a desalocação de memória do hash_map. Esse argumento é opcional e o valor padrão é allocator<pair <const `Key`, `Type`>>.
+O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre a alocação e a desalocação de memória do hash_map. Esse argumento é opcional e o valor padrão é allocator<pair <const `Key`, `Type`>>.
 
 ## <a name="remarks"></a>Comentários
 
@@ -649,7 +649,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- O valor de chave dos elementos a serem correspondidos do hash_map.
+O valor de chave dos elementos a serem correspondidos do hash_map.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -940,7 +940,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="emplace_hint"></a>  hash_map::emplace_hint
@@ -1000,7 +1000,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="empty"></a>  hash_map::empty
@@ -1141,7 +1141,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- O valor de chave do argumento a ser comparado com a chave de classificação de um elemento do hash_map que está sendo pesquisado.
+O valor de chave do argumento a ser comparado com a chave de classificação de um elemento do hash_map que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1188,7 +1188,7 @@ int main( )
 
    cout << "A direct call of upper_bound( 2 ) gives "
         << hm1_RcIter -> second << "," << endl
-        << " matching the 2nd element of the pair"
+        << "matching the 2nd element of the pair"
         << " returned by equal_range( 2 )." << endl;
 
    p2 = hm1.equal_range( 4 );
@@ -1208,7 +1208,7 @@ int main( )
 The lower bound of the element with a key of 2 in the hash_map hm1 is: 20.
 The upper bound of the element with a key of 2 in the hash_map hm1 is: 30.
 A direct call of upper_bound( 2 ) gives 30,
- matching the 2nd element of the pair returned by equal_range( 2 ).
+matching the 2nd element of the pair returned by equal_range( 2 ).
 The hash_map hm1 doesn't have an element with a key less than 40.
 ```
 
@@ -1230,16 +1230,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>Parâmetros
 
 *_Where*<br/>
- Posição do elemento a ser removido do hash_map.
+Posição do elemento a ser removido do hash_map.
 
 *first*<br/>
- Posição do primeiro elemento removido do hash_map.
+Posição do primeiro elemento removido do hash_map.
 
 *last*<br/>
- Posição logo após o último elemento removido do hash_map.
+Posição logo após o último elemento removido do hash_map.
 
 *key*<br/>
- O valor de chave dos elementos a serem removidos do hash_map.
+O valor de chave dos elementos a serem removidos do hash_map.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1352,7 +1352,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- O valor da chave a ser correspondido pela chave de classificação de um elemento do hash_map que está sendo pesquisado.
+O valor da chave a ser correspondido pela chave de classificação de um elemento do hash_map que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1525,18 +1525,18 @@ hash_map(
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp);
 
 template <class InputIterator>
 hash_map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp,
     const Allocator& Al
@@ -1893,7 +1893,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- O valor de chave do argumento a ser comparado com a chave de classificação de um elemento do hash_map que está sendo pesquisado.
+O valor de chave do argumento a ser comparado com a chave de classificação de um elemento do hash_map que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2532,7 +2532,7 @@ void swap(hash_map& right);
 ### <a name="parameters"></a>Parâmetros
 
 *right*<br/>
- O hash_map do argumento que fornece os elementos a serem trocados com o hash_map de destino.
+O hash_map do argumento que fornece os elementos a serem trocados com o hash_map de destino.
 
 ### <a name="remarks"></a>Comentários
 
@@ -2608,7 +2608,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- O valor de chave do argumento a ser comparado com o valor da chave de classificação de um elemento do hash_map que está sendo pesquisado.
+O valor de chave do argumento a ser comparado com o valor da chave de classificação de um elemento do hash_map que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 

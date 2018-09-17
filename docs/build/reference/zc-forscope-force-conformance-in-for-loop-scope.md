@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b21c844cd29c7fb45e58f44fdf8eaae427b74235
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bef68f47fe8fdc430138a6961078139b48030b3d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378607"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723587"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (forçar conformidade para escopo de loop)
 
@@ -38,18 +38,18 @@ Usado para implementar o comportamento padrão do C++ para [para](../../cpp/for-
 
 ## <a name="remarks"></a>Comentários
 
-O comportamento padrão é permitir que um **para** inicializador do loop estar fora do escopo após a **para** loop. Em **/Zc:forScope-** e [/Ze](../../build/reference/za-ze-disable-language-extensions.md), o **para** inicializador do loop permanece em escopo até que o escopo local termina.
+Comportamento padrão é permitir que um **para** inicializador do loop saem do escopo após a **para** loop. Sob **/Zc:forScope-** e [/Ze](../../build/reference/za-ze-disable-language-extensions.md), o **para** inicializador do loop permanece no escopo até que o escopo local terminar.
 
-O **/ZC: forScope** opção é ativada por padrão. **/ZC: forScope** não é afetada quando o [/ permissivo-](permissive-standards-conformance.md) opção é especificada.
+O **/ZC: forScope** opção permanece ativada por padrão. **/ZC: forScope** não é afetada quando o [/permissive--](permissive-standards-conformance.md) opção for especificada.
 
-O **/Zc:forScope-** opção é preterida e será removida em uma versão futura. O uso de **/Zc:forScope-** gera um aviso D9035 de substituição.
+O **/Zc:forScope-** opção é preterida e será removida em uma versão futura. Uso de **/Zc:forScope-** gera o aviso D9035 de substituição.
 
-O código a seguir compila em **/Ze** , mas não em **/Za**:
+O código a seguir é compilado em **/Ze** , mas não em **/Za**:
 
 ```cpp
 // zc_forScope.cpp
 // compile by using: cl /Zc:forScope- /Za zc_forScope.cpp
-// C2065, D9035 expected  
+// C2065, D9035 expected
 int main() {
     // Compile by using cl /Zc:forScope- zc_forScope.cpp
     // to compile this non-standard code as-is.
@@ -61,21 +61,21 @@ int main() {
 }
 ```
 
-Se você usar **/Zc:forScope-**, aviso C4288 (desativado por padrão) é gerado se uma variável está no escopo devido a uma declaração que foi feita em um escopo anterior. Para demonstrar isso, remova o `//` caracteres no código de exemplo para declarar `int i`.
+Se você usar **/Zc:forScope-**, aviso C4288 (desativado por padrão) é gerado se uma variável está no escopo devido a uma declaração que foi feita em um escopo anterior. Para demonstrar isso, remova os `//` caracteres no código de exemplo para declarar `int i`.
 
-Você pode modificar o comportamento de tempo de execução **/ZC: forScope** usando o [está de acordo com](../../preprocessor/conform.md) pragma.
+Você pode modificar o comportamento de tempo de execução **/ZC: forScope** usando o [estão em conformidade com](../../preprocessor/conform.md) pragma.
 
-Se você usar **/Zc:forScope-** em um projeto que tem um arquivo. pch existente, um aviso será gerado, **/Zc:forScope-** é ignorado, e a compilação continua usando os arquivos. pch existentes. Se quiser que um novo arquivo. pch gerado, use [/Yc (criar a arquivo de cabeçalho pré-compilado)](../../build/reference/yc-create-precompiled-header-file.md).
+Se você usar **/Zc:forScope-** em um projeto que tem um arquivo. pch existente, um aviso será gerado, **/Zc:forScope-** é ignorado, e a compilação continuará usando os arquivos. pch existentes. Se você quiser um novo arquivo. pch, use [/Yc (criar a arquivo de cabeçalho pré-compilado)](../../build/reference/yc-create-precompiled-header-file.md).
 
 Para obter mais informações sobre problemas de conformidade no Visual C++, consulte [comportamento não padrão](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **C/C++** > **idioma** página de propriedades.
 
-1. Modificar o **forçar conformidade para escopo de Loop** propriedade.
+1. Modificar a **forçar conformidade para escopo de Loop** propriedade.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 

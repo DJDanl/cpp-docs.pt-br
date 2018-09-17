@@ -1,5 +1,5 @@
 ---
-title: liberar (OpenMP) | Microsoft Docs
+title: flush (OpenMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6933c5d74e1277b209d15aefb93a159d55f93dd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5ea89d4feb7a554c2495c11aa8acaeeaa8bc775f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696234"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722053"
 ---
 # <a name="flush-openmp"></a>flush (OpenMP)
 Especifica que todos os threads têm a mesma exibição de memória para todos os objetos compartilhados.  
@@ -32,11 +32,10 @@ Especifica que todos os threads têm a mesma exibição de memória para todos o
 #pragma omp flush [(var)]  
 ```  
   
-## <a name="remarks"></a>Comentários  
- onde,  
-  
- `var` (opcional)  
- Uma lista separada por vírgulas de variáveis que representam os objetos que você deseja sincronizar. Se `var` não for especificado, toda a memória é liberada.  
+## <a name="arguments"></a>Arguments
+
+*var*<br/>
+(Opcional) Uma lista separada por vírgulas de variáveis que representam os objetos que você deseja sincronizar. Se `var` não for especificado, toda a memória é liberada.  
   
 ## <a name="remarks"></a>Comentários  
  O **liberar** diretiva dá suporte a nenhuma cláusulas OpenMP.  

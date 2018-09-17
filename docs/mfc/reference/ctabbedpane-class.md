@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fcf4f2cb2c619b2dfe3dae4b669f6139382b2b4
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 5a73d5bb3ef67469ad1cc12b2a2c2757cf1ce137
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42901005"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712817"
 ---
 # <a name="ctabbedpane-class"></a>Classe CTabbedPane
 
@@ -201,8 +201,8 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *bAtivar*  
-TRUE para habilitar a coloração automática de guias; Caso contrário, FALSE.
+*bAtivar*<br/>
+[in] TRUE para habilitar a coloração automática de guias; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
@@ -224,10 +224,10 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *pBar*  
-[in] *nTabID*  
-[in] *dockMethod*  
-[in] *bHide*  
+*pBar*<br/>
+[in] [in] *nTabID*  
+*dockMethod*<br/>
+[in] [in] *bHide*  
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -245,11 +245,11 @@ virtual void GetTabArea(
 
 ### <a name="parameters"></a>Parâmetros
 
-[out] *rectTabAreaTop*  
-Contém o tamanho e posição, em coordenadas de tela da área da guia superior.
+*rectTabAreaTop*<br/>
+[out] Contém o tamanho e posição, em coordenadas de tela da área da guia superior.
 
-[out] *rectTabAreaBottom*  
-Contém o tamanho e posição, em coordenadas de tela da área da guia inferior.
+*rectTabAreaBottom*<br/>
+[out] Contém o tamanho e posição, em coordenadas de tela da área da guia inferior.
 
 ### <a name="remarks"></a>Comentários
 
@@ -340,8 +340,8 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *arColors*  
-Contém a matriz de cores para definir.
+*arColors*<br/>
+[in] Contém a matriz de cores para definir.
 
 ### <a name="remarks"></a>Comentários
 

@@ -18,17 +18,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e5433e2d1ddf94f23a3f483a8857e3032c27be3
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7e7499bdb615edfb6c03c54ba7fe8272d0fa6b26
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538776"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721117"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
+
 **Seção específica da Microsoft**  
   
- Executa um 128 bits comparação e troca sincronizada.  
+Executa um 128 bits comparação e troca sincronizada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,17 +43,17 @@ unsigned char _InterlockedCompareExchange128(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [in, out] `Destination`  
- Ponteiro para o destino, que é uma matriz de dois inteiros de 64 bits é considerado como um campo de 128 bits. Os dados de destino devem ser de 16 bytes alinhado para evitar uma falha geral de proteção.  
+*Destino*<br/>
+[no, out] Ponteiro para o destino, que é uma matriz de dois inteiros de 64 bits é considerado como um campo de 128 bits. Os dados de destino devem ser de 16 bytes alinhado para evitar uma falha geral de proteção.  
   
- [in] `ExchangeHigh`  
- Um inteiro de 64 bits que pode ser trocado com a parte alta de destino.  
+*ExchangeHigh*<br/>
+[in] Um inteiro de 64 bits que pode ser trocado com a parte alta de destino.  
   
- [in] `ExchangeLow`  
- Um inteiro de 64 bits que pode ser trocado com a parte inferior do destino.  
+*ExchangeLow*<br/>
+[in] Um inteiro de 64 bits que pode ser trocado com a parte inferior do destino.  
   
- [in, out] `ComparandResult`  
- Ponteiro para uma matriz de dois inteiros de 64 bits (considerado como um campo de 128 bits) a ser comparado com o destino.  Na saída, isso será substituído com o valor original de destino.  
+*ComparandResult*<br/>
+[no, out] Ponteiro para uma matriz de dois inteiros de 64 bits (considerado como um campo de 128 bits) a ser comparado com o destino.  Na saída, isso será substituído com o valor original de destino.  
   
 ## <a name="return-value"></a>Valor de retorno  
  1 se o termo de comparação de 128 bits é igual ao valor original do destino. `ExchangeHigh` e `ExchangeLow` substituir o destino de 128 bits.  
@@ -128,8 +129,9 @@ int main(void)
 BigInt.Int[1] = 34, BigInt.Int[0] = 12  
 ```  
   
-**Fim da seção específica da Microsoft**  
- Copyright 2007 por dispositivos Micro avançada, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro dispositivos, Inc.  
+**Fim da seção específica da Microsoft**
+
+Copyright 2007 por dispositivos Micro avançada, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro dispositivos, Inc.  
   
 ## <a name="see-also"></a>Consulte também  
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)   

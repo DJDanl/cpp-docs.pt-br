@@ -18,39 +18,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce4db4403f034a5795237393a8f1465fdf31982b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 98edb5945c2cf01d90cd5dae1a750c0fdd37757f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681075"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723275"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE (opções de informações de depuração)
-A opção /DEBUGTYPE Especifica os tipos de informações de depuração geradas pela opção /DEBUG.  
-  
-```  
-/DEBUGTYPE:[CV | PDATA | FIXUP]  
-```  
-  
-## <a name="arguments"></a>Arguments  
- VC  
- Informa o vinculador para emitir informações de depuração para símbolos, números de linha e outras informações de compilação do objeto no arquivo PDB. Por padrão, essa opção é habilitada quando **/Debug** for especificado e **/DEBUGTYPE** não for especificado.  
-  
- PDATA  
- Instrui o vinculador a adicionar entradas de registro. pData e. XData para as informações de fluxo de depuração no arquivo PDB. Por padrão, essa opção é habilitada quando tanto o **/Debug** e **/DRIVER** opções forem especificadas. Se **/DEBUGTYPE:PDATA** é especificado por si só, o vinculador inclui automaticamente os símbolos no arquivo PDB de depuração. Se **/DEBUGTYPE:PDATA, correção** for especificado, o vinculador não incluir símbolos no arquivo PDB de depuração.  
-  
- CORREÇÃO  
- Instrui o vinculador a adicionar entradas de tabela de realocação para as informações de fluxo de depuração no arquivo PDB. Por padrão, essa opção é habilitada quando tanto o **/Debug** e **/Profile** opções forem especificadas. Se **/DEBUGTYPE:FIXUP** ou **/DEBUGTYPE:FIXUP, PDATA** for especificado, o vinculador não incluir símbolos no arquivo PDB de depuração.  
-  
- Argumentos a serem **/DEBUGTYPE** podem ser combinadas em qualquer ordem, separando-os com uma vírgula. O **/DEBUGTYPE** opção e seus argumentos não diferenciam maiusculas de minúsculas.  
-  
-## <a name="remarks"></a>Comentários  
- Use o **/DEBUGTYPE** opção para especificar a inclusão de informações de cabeçalho realocação tabela dados ou registro. pData e. XData no fluxo de depuração. Isso faz com que o vinculador a incluir informações sobre o código de modo de usuário que é visível em um depurador de kernel quando significativas no código do modo kernel. Para disponibilizar os símbolos de depuração quando **correção** é especificado, inclua o **CV** argumento.  
-  
- Para depurar o código no modo de usuário, que é típico para aplicativos, o **/DEBUGTYPE** opção não é necessária. Por padrão, as opções de compilador que especificam a depuração de saída ([/Z7, /Zi, /ZI](../../build/reference/z7-zi-zi-debug-information-format.md)) emite todas as informações necessárias pelo Visual Studio do depurador. Use **/DEBUGTYPE:PDATA** ou **/debugtype: CV, PDATA, correção** para depurar o código que combina os componentes do modo de usuário e o modo de kernel, como um aplicativo de configuração para um driver de dispositivo. Para obter mais informações sobre os depuradores de modo kernel, consulte [depuração ferramentas para Windows (WinDbg, KD, CDB, NTSD.)](/windows-hardware/drivers/debugger/index)  
-  
-## <a name="see-also"></a>Consulte também  
- [/Debug (gerar informações de depuração)](../../build/reference/debug-generate-debug-info.md)   
- [/DRIVER (Driver de modo de Kernel do Windows NT)](../../build/reference/driver-windows-nt-kernel-mode-driver.md)   
- [/ PERFIL (Profiler de ferramentas de desempenho)](../../build/reference/profile-performance-tools-profiler.md)   
+
+A opção /DEBUGTYPE Especifica os tipos de informações de depuração geradas pela opção /DEBUG.
+
+```
+/DEBUGTYPE:[CV | PDATA | FIXUP]
+```
+
+## <a name="arguments"></a>Arguments
+
+**VC**<br/>
+Informa o vinculador para emitir informações de depuração para símbolos, números de linha e outras informações de compilação do objeto no arquivo PDB. Por padrão, essa opção é habilitada quando **/Debug** for especificado e **/DEBUGTYPE** não for especificado.
+
+**PDATA**<br/>
+Instrui o vinculador a adicionar entradas de registro. pData e. XData para as informações de fluxo de depuração no arquivo PDB. Por padrão, essa opção é habilitada quando tanto o **/Debug** e **/DRIVER** opções forem especificadas. Se **/DEBUGTYPE:PDATA** é especificado por si só, o vinculador inclui automaticamente os símbolos no arquivo PDB de depuração. Se **/DEBUGTYPE:PDATA, correção** for especificado, o vinculador não incluir símbolos no arquivo PDB de depuração.
+
+**CORREÇÃO**<br/>
+Instrui o vinculador a adicionar entradas de tabela de realocação para as informações de fluxo de depuração no arquivo PDB. Por padrão, essa opção é habilitada quando tanto o **/Debug** e **/Profile** opções forem especificadas. Se **/DEBUGTYPE:FIXUP** ou **/DEBUGTYPE:FIXUP, PDATA** for especificado, o vinculador não incluir símbolos no arquivo PDB de depuração.
+
+Argumentos a serem **/DEBUGTYPE** podem ser combinadas em qualquer ordem, separando-os com uma vírgula. O **/DEBUGTYPE** opção e seus argumentos não diferenciam maiusculas de minúsculas.
+
+## <a name="remarks"></a>Comentários
+
+Use o **/DEBUGTYPE** opção para especificar a inclusão de informações de cabeçalho realocação tabela dados ou registro. pData e. XData no fluxo de depuração. Isso faz com que o vinculador a incluir informações sobre o código de modo de usuário que é visível em um depurador de kernel quando significativas no código do modo kernel. Para disponibilizar os símbolos de depuração quando **correção** é especificado, inclua o **CV** argumento.
+
+Para depurar o código no modo de usuário, que é típico para aplicativos, o **/DEBUGTYPE** opção não é necessária. Por padrão, as opções de compilador que especificam a depuração de saída ([/Z7, /Zi, /ZI](../../build/reference/z7-zi-zi-debug-information-format.md)) emite todas as informações necessárias pelo Visual Studio do depurador. Use **/DEBUGTYPE:PDATA** ou **/debugtype: CV, PDATA, correção** para depurar o código que combina os componentes do modo de usuário e o modo de kernel, como um aplicativo de configuração para um driver de dispositivo. Para obter mais informações sobre os depuradores de modo kernel, consulte [depuração ferramentas para Windows (WinDbg, KD, CDB, NTSD.)](/windows-hardware/drivers/debugger/index)
+
+## <a name="see-also"></a>Consulte também
+
+[/Debug (gerar informações de depuração)](../../build/reference/debug-generate-debug-info.md)
+[/DRIVER (Driver de modo de Kernel do Windows NT)](../../build/reference/driver-windows-nt-kernel-mode-driver.md)
+[/PROFILE (Profiler de ferramentas de desempenho)](../../build/reference/profile-performance-tools-profiler.md) 
  [Ferramentas de depuração para Windows (WinDbg, KD, CDB, NTSD.)](/windows-hardware/drivers/debugger/index)

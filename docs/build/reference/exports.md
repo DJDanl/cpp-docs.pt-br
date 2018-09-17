@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3ea5c28fe54e5d117ef40430912ef3f8ea0efd8
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 62b49c20248ca4825bcf2c95b6c7adc956a39025
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104284"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714515"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -30,7 +30,7 @@ Introduz uma seção de uma ou mais definições de exportação que especificam
 ```DEF
 EXPORTS
    definition
-```  
+```
 
 ## <a name="remarks"></a>Comentários
 
@@ -76,7 +76,7 @@ A palavra-chave opcional **dados** Especifica que uma exportação de dados, nã
 ```DEF
 EXPORTS
    exported_global DATA
-```  
+```
 
 Há quatro maneiras de exportar uma definição, listadas na ordem recomendada:
 
@@ -95,7 +95,7 @@ Há quatro maneiras de exportar uma definição, listadas na ordem recomendada:
 
 A diretiva #pragma é útil se você precisar exportar um nome não decorado de função e ter exportações diferentes dependendo da configuração de build (por exemplo, em compilações de 32 bits ou 64 bits).
 
-Todos os quatro métodos podem ser usados no mesmo programa. Quando LINK compila um programa que contém exportações, ele também cria uma biblioteca de importação, a menos que um arquivo .EXP seja usado na construção. 
+Todos os quatro métodos podem ser usados no mesmo programa. Quando LINK compila um programa que contém exportações, ele também cria uma biblioteca de importação, a menos que um arquivo .EXP seja usado na construção.
 
 Segue um exemplo de seção EXPORTS:
 
@@ -106,7 +106,7 @@ EXPORTS
    DllGetClassObject    @4 NONAME   PRIVATE
    DllRegisterServer    @7
    DllUnregisterServer
-```  
+```
 
 Ao exportar uma variável de um DLL usando um arquivo .DEF, não é necessário especificar `__declspec(dllexport)` na variável. Porém, em qualquer arquivo que use o DLL, ainda é preciso usar `__declspec(dllimport)` na declaração de dados.
 

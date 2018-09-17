@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c448c551e7b800301e374fed9a8f6acb7aa7ab1b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 780ccdb7f16ed79ef8205c07e1390e778bc33ef5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110130"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711380"
 ---
 # <a name="uniquelock-class"></a>Classe unique_lock
 
@@ -130,7 +130,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outros*  
+*Outros*<br/>
 Um objeto `unique_lock`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -181,7 +181,7 @@ void swap(unique_lock& Other) noexcept;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outros*  
+*Outros*<br/>
 Um objeto `unique_lock`.
 
 ## <a name="try_lock"></a>  try_lock
@@ -214,7 +214,7 @@ bool try_lock_for(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rel_time*  
+*Rel_time*<br/>
 Um objeto [chrono::duration](../standard-library/duration-class.md) que especifica o tempo máximo que o método tenta obter a propriedade do `mutex`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -240,7 +240,7 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Abs_time*  
+*Abs_time*<br/>
 Um ponto no tempo que especifica o limite após o qual o método não tenta mais obter a propriedade do `mutex`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -283,16 +283,16 @@ unique_lock(mutex_type& Mtx,
 
 ### <a name="parameters"></a>Parâmetros
 
-*Mtx*  
+*Mtx*<br/>
 Um objeto do tipo mutex.
 
-*Rel_time*  
+*Rel_time*<br/>
 Um objeto [chrono::duration](../standard-library/duration-class.md) que especifica o tempo máximo que o método tenta obter a propriedade do `mutex`.
 
-*Abs_time*  
+*Abs_time*<br/>
 Um ponto no tempo que especifica o limite após o qual o método não tenta mais obter a propriedade do `mutex`.
 
-*Outros*  
+*Outros*<br/>
 Um objeto `unique_lock`.
 
 ### <a name="remarks"></a>Comentários

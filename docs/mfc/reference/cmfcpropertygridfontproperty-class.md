@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9e90570e783b2c42081da4854d54a65d1bdb9b6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 33c719ffcba207beb4a5f867192af2b98aef2797
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208860"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719934"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>Classe CMFCPropertyGridFontProperty
 O `CMFCPropertyGridFileProperty` classe dá suporte a um item de controle de lista de propriedade que abre uma caixa de diálogo de seleção de fonte.  
@@ -83,23 +83,23 @@ CMFCPropertyGridFontProperty(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *strName*  
- O nome da propriedade.  
+*strName*<br/>
+[in] O nome da propriedade.  
   
- [in] *lf*  
- Uma estrutura de fonte lógica que especifica os atributos da fonte.  
+*LF*<br/>
+[in] Uma estrutura de fonte lógica que especifica os atributos da fonte.  
   
- [in] *dwFontDialogFlags*  
- Estilos que são aplicados à caixa de diálogo de fonte que é exibida quando você clicar no botão de lista suspensa de valor de propriedade. O valor padrão é a combinação bit a bit (OR) de CF_EFFECTS e CF_SCREENFONTS. Para obter mais informações, consulte o *sinalizadores* parâmetro do [CHOOSEFONT estrutura](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).  
+*dwFontDialogFlags*<br/>
+[in] Estilos que são aplicados à caixa de diálogo de fonte que é exibida quando você clicar no botão de lista suspensa de valor de propriedade. O valor padrão é a combinação bit a bit (OR) de CF_EFFECTS e CF_SCREENFONTS. Para obter mais informações, consulte o *sinalizadores* parâmetro do [CHOOSEFONT estrutura](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).  
   
- [in] *lpszDescr*  
- Descrição da propriedade da fonte. O valor padrão é NULL.  
+*lpszDescr*<br/>
+[in] Descrição da propriedade da fonte. O valor padrão é NULL.  
   
- [in] *dwData*  
- Dados específicos do aplicativo, como um inteiro ou um ponteiro para outros dados que está associados com a propriedade. O valor padrão é 0.  
+*dwData*<br/>
+[in] Dados específicos do aplicativo, como um inteiro ou um ponteiro para outros dados que está associados com a propriedade. O valor padrão é 0.  
   
- [in] *cor*  
- A cor da fonte. O valor padrão é a cor padrão.  
+*Cor*<br/>
+[in] A cor da fonte. O valor padrão é a cor padrão.  
   
 ### <a name="remarks"></a>Comentários  
  Um `CMFCPropertyGridFontProperty` objeto representa uma propriedade de fonte em um controle de fonte de grade de propriedade.  

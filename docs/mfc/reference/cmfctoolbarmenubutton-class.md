@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b582c8b785adb13acce86497d898c183b3128b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d5baebfa1d706bf18b9fc36d706ebe474b6b042d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765925"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721715"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Classe CMFCToolBarMenuButton
 Um botão de barra de ferramentas que contém um menu pop-up.  
@@ -220,23 +220,23 @@ CMFCToolBarMenuButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *src*  
- Um existente `CMFCToolBarMenuButton` o objeto a ser copiado para isso `CMFCToolBarMenuButton` objeto.  
+*src*<br/>
+[in] Um existente `CMFCToolBarMenuButton` o objeto a ser copiado para isso `CMFCToolBarMenuButton` objeto.  
   
- [in] *uiID*  
- A ID do comando a ser executado quando um usuário clica no botão. ou -1 (UINT) para um botão de menu que não executa diretamente um comando.  
+*uiID*<br/>
+[in] A ID do comando a ser executado quando um usuário clica no botão. ou -1 (UINT) para um botão de menu que não executa diretamente um comando.  
   
- [in] *hMenu*  
- Um identificador para um menu. ou nulo se o botão não tem um menu.  
+*hMenu*<br/>
+[in] Um identificador para um menu. ou nulo se o botão não tem um menu.  
   
- [in] *iImage*  
- Índice da imagem do botão; ou -1 se este botão não tem um ícone ou usa o ícone para o comando especificado por *uiID*. O índice é a mesma para cada `CMFCToolBarImages` objeto em seu aplicativo.  
+*iImage*<br/>
+[in] Índice da imagem do botão; ou -1 se este botão não tem um ícone ou usa o ícone para o comando especificado por *uiID*. O índice é a mesma para cada `CMFCToolBarImages` objeto em seu aplicativo.  
   
- [in] *lpszText*  
- O texto do botão de menu da barra de ferramentas.  
+*lpszText*<br/>
+[in] O texto do botão de menu da barra de ferramentas.  
   
- [in] *bUserButton*  
- TRUE se o botão exibe uma imagem definida pelo usuário; FALSE se o botão exibe uma imagem predefinida associada com o comando especificado por *uiID*.  
+*bUserButton*<br/>
+[in] TRUE se o botão exibe uma imagem definida pelo usuário; FALSE se o botão exibe uma imagem predefinida associada com o comando especificado por *uiID*.  
   
 ### <a name="remarks"></a>Comentários  
  Se *uiID* é válido ID do comando, o botão executa esse comando quando o usuário clica nele. Se *hMenu* é um identificador válido do menu, o botão fornece um menu suspenso quando ele for exibido em uma barra de ferramentas ou a um submenu quando ele for exibido em um menu. Se os dois *uiID* e *hMenu* forem válidos, o botão é um botão de divisão com uma parte que executará o comando quando o usuário clica nele e uma parte com uma seta para baixo que será suspensa um menu quando o usuário Quando clica nele. No entanto, se *hMenu* for válido, um usuário não será capaz de clicar no botão para executar um comando quando o botão é inserido em um menu.  
@@ -280,8 +280,8 @@ virtual void CreateFromMenu(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *hMenu*  
- Um identificador para um menu.  
+*hMenu*<br/>
+[in] Um identificador para um menu.  
   
 ### <a name="remarks"></a>Comentários  
  Um botão de menu da barra de ferramentas pode exibir um submenu da lista suspensa.  
@@ -327,14 +327,14 @@ void DrawDocumentIcon(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para o contexto de dispositivo.  
+*pDC*<br/>
+[in] Um ponteiro para o contexto de dispositivo.  
   
- [in] *rectImage*  
- Coordenadas da imagem do retângulo delimitador.  
+*rectImage*<br/>
+[in] Coordenadas da imagem do retângulo delimitador.  
   
- [in] *hIcon*  
- Um identificador para o ícone.  
+*hIcon*<br/>
+[in] Um identificador para o ícone.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método usa um ícone de documento e desenha no botão de menu, centralizado na área especificada por *rectImage*.  
@@ -424,8 +424,8 @@ void GetImageRect(CRect& rectImage);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *rectImage*  
- Uma referência a um `CRect` objeto que recebe as coordenadas da imagem do retângulo delimitador.  
+*rectImage*<br/>
+[out] Uma referência a um `CRect` objeto que recebe as coordenadas da imagem do retângulo delimitador.  
   
 ##  <a name="getpaletterows"></a>  CMFCToolBarMenuButton::GetPaletteRows  
  Retorna o número de linhas no menu suspenso quando o menu estiver no modo de paleta.  
@@ -560,8 +560,8 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- [in] *sizeDefault*  
+*pDC*<br/>
+[in] [in] *sizeDefault*  
  [in] *bHorz*  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -599,8 +599,8 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *Apropriei*  
- [in] *bDelay*  
+*Apropriei*<br/>
+[in] [in] *bDelay*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -651,14 +651,14 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- [in] *rect*  
- [in] *pImages*  
- [in] *bHorz*  
- [in] *bCustomizeMode*  
- [in] *bHighlight*  
- [in] *bDrawBorder*  
- [in] *bGrayDisabledButtons*  
+*pDC*<br/>
+[in] [in] *rect*  
+*pImages*<br/>
+[in] [in] *bHorz*  
+*bCustomizeMode*<br/>
+[in] [in] *bHighlight*  
+*bDrawBorder*<br/>
+[in] [in] *bGrayDisabledButtons*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -673,8 +673,8 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- [in] *rect*  
+*pDC*<br/>
+[in] [in] *rect*  
  [in] *bSelected*  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -689,8 +689,8 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *Apropriei*  
- Especifica a janela que recebe os comandos de menu suspenso. Ele pode ser NULL somente se o botão de menu da barra de ferramentas tem uma janela pai.  
+*Apropriei*<br/>
+[in] Especifica a janela que recebe os comandos de menu suspenso. Ele pode ser NULL somente se o botão de menu da barra de ferramentas tem uma janela pai.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE quando uma [classe CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) objeto foi criado e aberto com êxito; caso contrário, FALSO.  
@@ -759,8 +759,8 @@ void SetMenuOnly(BOOL bMenuOnly);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bMenuOnly*  
- TRUE para mostrar esse botão como um botão de menu quando ele tem uma ID de comando válido e um submenu, FALSE para mostrar esse botão como um botão de divisão, quando ele tem uma ID de comando válido e um submenu.  
+*bMenuOnly*<br/>
+[in] TRUE para mostrar esse botão como um botão de menu quando ele tem uma ID de comando válido e um submenu, FALSE para mostrar esse botão como um botão de divisão, quando ele tem uma ID de comando válido e um submenu.  
   
 ### <a name="remarks"></a>Comentários  
  Normalmente, quando um botão de menu da barra de ferramentas tem um submenu e uma ID de comando, o menu parece ser um botão de divisão que tem um botão principal e um anexado para baixo do botão de seta. Se você chamar esse método e *bMenuOnly* for TRUE, o botão é exibido em vez disso ser um botão de menu único com uma seta para baixo no botão. Quando o usuário clica na seta em qualquer modo, o submenu é exibido, e quando o usuário clica a parte não seta para baixo do botão em qualquer modo, o framework executa o comando.  
@@ -775,11 +775,11 @@ void SetMenuPaletteMode(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bMenuPaletteMode*  
- Especifica se o menu suspenso está no modo de paleta.  
+*bMenuPaletteMode*<br/>
+[in] Especifica se o menu suspenso está no modo de paleta.  
   
- [in] *nPaletteRows*  
- Número de linhas na paleta.  
+*nPaletteRows*<br/>
+[in] Número de linhas na paleta.  
   
 ### <a name="remarks"></a>Comentários  
  No modo de paleta, todos os itens de menu são exibidos como uma paleta de várias colunas. Especificar o número de linhas usando *nPaletteRows*.  
@@ -816,8 +816,8 @@ virtual void SetTearOff(UINT uiBarID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiBarID*  
- Especifica um destacáveis nova barra de ID.  
+*uiBarID*<br/>
+[in] Especifica um destacáveis nova barra de ID.  
   
 ### <a name="remarks"></a>Comentários  
  Chame esse método para especificar a ID para a barra destacável que é criada quando o usuário arrasta o botão de menu em uma barra de menus. Se o *uiBarID* parâmetro for 0, o usuário não é possível separar o botão de menu.  

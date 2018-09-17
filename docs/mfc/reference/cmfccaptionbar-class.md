@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09b7f38926ad3e76de7e5e9bc36425ef77c42d4f
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 5131479af7f34f1cc43cf91adfd0bd3ac52a594b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37338457"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722976"
 ---
 # <a name="cmfccaptionbar-class"></a>Classe CMFCCaptionBar
 Um `CMFCCaptionBar` objeto é uma barra de controle que pode exibir três elementos: um botão, um rótulo de texto e um bitmap. Ele só pode exibir um elemento de cada tipo de cada vez. Você pode alinhar cada elemento às bordas esquerdas ou direita do controle ou ao centro. Você também pode aplicar um estilo plano ou 3D às bordas superior e inferior da barra de legenda.  
@@ -230,8 +230,8 @@ void EnableButton(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- TRUE para habilitar o botão, FALSE para desabilitar o botão.  
+*bAtivar*<br/>
+[in] TRUE para habilitar o botão, FALSE para desabilitar o botão.  
   
 ##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment  
  Retorna o alinhamento do elemento especificado.  
@@ -241,8 +241,8 @@ BarElementAlignment GetAlignment(BarElement elem);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *elem*  
- Um elemento da barra de legenda para o qual recuperar o alinhamento.  
+*Elem*<br/>
+[in] Um elemento da barra de legenda para o qual recuperar o alinhamento.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O alinhamento de um elemento, como um botão, um bitmap, texto ou um ícone.  
@@ -332,11 +332,11 @@ virtual void OnDrawBackground(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para o contexto de dispositivo da barra de legenda.  
+*pDC*<br/>
+[in] Um ponteiro para o contexto de dispositivo da barra de legenda.  
   
- [in] *rect*  
- O retângulo delimitador para preencher.  
+*Rect*<br/>
+[in] O retângulo delimitador para preencher.  
   
 ### <a name="remarks"></a>Comentários  
  O `OnDrawBackground` método é chamado quando o plano de fundo da barra de legenda está prestes a ser preenchido. A implementação padrão preenche a tela de fundo usando o [CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground) cor.  
@@ -353,11 +353,11 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um contexto de dispositivo que é usado para exibir as bordas.  
+*pDC*<br/>
+[in] Um contexto de dispositivo que é usado para exibir as bordas.  
   
- [in] *rect*  
- O retângulo delimitador.  
+*Rect*<br/>
+[in] O retângulo delimitador.  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, as bordas têm o estilo simples.  
@@ -376,17 +376,17 @@ virtual void OnDrawButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para um contexto de dispositivo que é usado para exibir o botão.  
+*pDC*<br/>
+[in] Um ponteiro para um contexto de dispositivo que é usado para exibir o botão.  
   
- [in] *rect*  
- O retângulo delimitador do botão.  
+*Rect*<br/>
+[in] O retângulo delimitador do botão.  
   
- [in] *strButton*  
- Rótulo de texto do botão.  
+*strButton*<br/>
+[in] Rótulo de texto do botão.  
   
- [in] *bAtivado*  
- TRUE se o botão estiver habilitado; FALSE caso contrário.  
+*bAtivado*<br/>
+[in] TRUE se o botão estiver habilitado; FALSE caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua este método em um `CMFCCaptionBar` derivado da classe para personalizar a aparência do botão da barra de legenda.  
@@ -401,11 +401,11 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para um contexto de dispositivo que é usado para exibir a imagem.  
+*pDC*<br/>
+[in] Um ponteiro para um contexto de dispositivo que é usado para exibir a imagem.  
   
- [in] *rect*  
- Especifica o retângulo delimitador da imagem.  
+*Rect*<br/>
+[in] Especifica o retângulo delimitador da imagem.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua este método em um `CMFCCaptionBar` derivado da classe para personalizar a aparência da imagem.  
@@ -421,14 +421,14 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para um contexto de dispositivo que é usado para exibir o botão.  
+*pDC*<br/>
+[in] Um ponteiro para um contexto de dispositivo que é usado para exibir o botão.  
   
- [in] *rect*  
- O retângulo delimitador do texto.  
+*Rect*<br/>
+[in] O retângulo delimitador do texto.  
   
- [in] *strText*  
- A cadeia de caracteres de texto para exibir.  
+*strText*<br/>
+[in] A cadeia de caracteres de texto para exibir.  
   
 ### <a name="remarks"></a>Comentários  
  A implementação padrão exibe o texto usando `CDC::DrawText` e [CMFCCaptionBar::m_clrBarText](#m_clrbartext) cor.  
@@ -485,17 +485,17 @@ void SetBitmap(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *hBitmap*  
- O identificador para o bitmap a ser definido.  
+*hBitmap*<br/>
+[in] O identificador para o bitmap a ser definido.  
   
- [in] *clrTransparent*  
- Um valor RGB que especifica a cor transparente do bitmap.  
+*clrTransparent*<br/>
+[in] Um valor RGB que especifica a cor transparente do bitmap.  
   
- [in] *bStretch*  
- Se for TRUE, o bitmap é esticado se ele não se ajusta à imagem do retângulo delimitador. Caso contrário, o bitmap não está esticado.  
+*bStretch*<br/>
+[in] Se for TRUE, o bitmap é esticado se ele não se ajusta à imagem do retângulo delimitador. Caso contrário, o bitmap não está esticado.  
   
- [in] *bmpAlignment*  
- O alinhamento do bitmap.  
+*bmpAlignment*<br/>
+[in] O alinhamento do bitmap.  
   
 ### <a name="remarks"></a>Comentários  
  Use esse método para definir um bitmap em uma barra de legenda.  
@@ -520,8 +520,8 @@ void SetBorderSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nSize*  
- O novo tamanho, em pixels, da borda da barra de legenda.  
+*nSize*<br/>
+[in] O novo tamanho, em pixels, da borda da barra de legenda.  
   
 ##  <a name="setbutton"></a>  CMFCCaptionBar::SetButton  
  Define o botão de barra de legenda.  
@@ -568,11 +568,11 @@ void SetButtonToolTip(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszToolTip*  
- A legenda de dica de ferramenta.  
+*lpszToolTip*<br/>
+[in] A legenda de dica de ferramenta.  
   
- [in] *lpszDescription*  
- A descrição da dica de ferramenta.  
+*lpszDescription*<br/>
+[in] A descrição da dica de ferramenta.  
   
 ##  <a name="setflatborder"></a>  CMFCCaptionBar::SetFlatBorder  
  Define o estilo de borda da barra de legenda.  
@@ -582,8 +582,8 @@ void SetFlatBorder(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bFlat*  
- TRUE se a borda de uma barra de legenda é simples. FALSE se a borda é 3D.  
+*bFlat*<br/>
+[in] TRUE se a borda de uma barra de legenda é simples. FALSE se a borda é 3D.  
   
 ##  <a name="seticon"></a>  CMFCCaptionBar::SetIcon  
  Define o ícone para uma barra de legenda.  
@@ -595,11 +595,11 @@ void SetIcon(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *hIcon*  
- O identificador para o ícone a ser definido.  
+*hIcon*<br/>
+[in] O identificador para o ícone a ser definido.  
   
- [in] *iconAlignment*  
- O alinhamento do ícone.  
+*iconAlignment*<br/>
+[in] O alinhamento do ícone.  
   
 ### <a name="remarks"></a>Comentários  
  Barras de legenda podem exibir ícones ou bitmaps. Ver [CMFCCaptionBar::SetBitmap](#setbitmap) para saber como exibir um bitmap. Se você definir um ícone e um bitmap, o ícone é exibido sempre. Chame [CMFCCaptionBar::RemoveIcon](#removeicon) para remover um ícone da barra de legenda.  
@@ -624,11 +624,11 @@ void SetImageToolTip(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszToolTip*  
- O texto da dica de ferramenta.  
+*lpszToolTip*<br/>
+[in] O texto da dica de ferramenta.  
   
- [in] *lpszDescription*  
- A descrição da dica de ferramenta.  
+*lpszDescription*<br/>
+[in] A descrição da dica de ferramenta.  
   
 ##  <a name="setmargin"></a>  CMFCCaptionBar::SetMargin  
  Define a distância entre a borda do elemento da barra de legenda e a borda do controle de barra de legenda.  
@@ -638,8 +638,8 @@ void SetMargin(int nMargin);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nMargin*  
- A distância, em pixels, entre a borda dos elementos de barra de legenda e a borda do controle de barra de legenda.  
+*nMargin*<br/>
+[in] A distância, em pixels, entre a borda dos elementos de barra de legenda e a borda do controle de barra de legenda.  
   
 ##  <a name="settext"></a>  CMFCCaptionBar::SetText  
  Define o rótulo de texto para a barra de legenda.  
@@ -651,11 +651,11 @@ void SetText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *strText*  
- A cadeia de caracteres de texto para definir.  
+*strText*<br/>
+[in] A cadeia de caracteres de texto para definir.  
   
- [in] *textAlignment*  
- O alinhamento do texto.  
+*textAlignment*<br/>
+[in] O alinhamento do texto.  
   
 ### <a name="remarks"></a>Comentários  
  O rótulo de texto é alinhado conforme especificado pela *textAlignment* parâmetro. Ele pode ser um dos seguintes `BarElementAlignment` valores:  

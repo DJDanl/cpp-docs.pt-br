@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2dc016dbd2b17552d50dfdedd1208dcd3e6af22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a1a60bde6b522cbd42ac458e79e153450e09030
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333190"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705673"
 ---
 # <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
 **Seção específica da Microsoft**  
@@ -56,11 +56,11 @@ unsigned __int64 __readfsqword(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [in] `Offset`  
- O deslocamento do início do `FS` leiam.  
+*deslocamento*<br/>
+[in] O deslocamento do início do `FS` leiam.  
   
 ## <a name="return-value"></a>Valor de retorno  
- O conteúdo da memória do byte, word, doubleword ou quadword (conforme indicado pelo nome da função chamada) no local `FS:[Offset]`.  
+ O conteúdo da memória do byte, word, palavras duplas ou quadword (conforme indicado pelo nome da função chamada) no local `FS:[Offset]`.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -71,7 +71,7 @@ unsigned __int64 __readfsqword(
 |`__readfsqword`|x86|  
 |`__readfsword`|x86|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
  Essas rotinas estão disponíveis apenas como intrínsecos.  

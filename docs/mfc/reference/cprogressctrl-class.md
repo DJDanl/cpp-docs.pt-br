@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c4ea8cf95298918088f54c3099a8f41d9c16ca9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f20a5f2767da015bb92a8e64491c2e5226f58aa5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690146"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705907"
 ---
 # <a name="cprogressctrl-class"></a>Classe CProgressCtrl
 Fornece a funcionalidade do controle de barra de progresso comuns do Windows.  
@@ -347,7 +347,7 @@ COLORREF SetBarColor(COLORREF clrBar);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *clrBar*|Um [COLORREF](/windows/desktop/gdi/colorref) valor que especifica a nova cor da barra do indicador de progresso. Especifique CLR_DEFAULT para fazer com que a barra de progresso usar sua cor padrão.|  
+|*clrBar*|[in] Um [COLORREF](/windows/desktop/gdi/colorref) valor que especifica a nova cor da barra do indicador de progresso. Especifique CLR_DEFAULT para fazer com que a barra de progresso usar sua cor padrão.|  
   
 ### <a name="return-value"></a>Valor de retorno  
 
@@ -399,8 +399,8 @@ BOOL SetMarquee(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *fMarqueeMode*|True para ativar modo de marca de seleção em, ou FALSE para desativar o modo de marca de seleção.|  
-|[in] *nIntervalo*|Tempo em milissegundos entre as atualizações da animação do letreiro.|  
+|*fMarqueeMode*|[in] True para ativar modo de marca de seleção em, ou FALSE para desativar o modo de marca de seleção.|  
+|*nIntervalo*|[in] Tempo em milissegundos entre as atualizações da animação do letreiro.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  Esse método sempre retorna TRUE.  
@@ -478,7 +478,7 @@ int SetState(int iState);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *iState*|O estado para definir a barra de progresso. Use um dos seguintes valores:<br /><br /> -PBST_NORMAL - em andamento<br />-PBST_ERROR - erro<br />-PBST_PAUSED – em pausa|  
+|*iState*|[in] O estado para definir a barra de progresso. Use um dos seguintes valores:<br /><br /> -PBST_NORMAL - em andamento<br />-PBST_ERROR - erro<br />-PBST_PAUSED – em pausa|  
   
 ### <a name="return-value"></a>Valor de retorno  
  O estado anterior do controle de barra de progresso atual.  

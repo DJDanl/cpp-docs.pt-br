@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79089a7457d1a3f08c58c374ae2501a48feca79d
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 82d1b4c3790f50032ac9775febf920e0e8c6c547
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541720"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700824"
 ---
 # <a name="cmfcpropertygridfileproperty-class"></a>Classe CMFCPropertyGridFileProperty
 O `CMFCPropertyGridFileProperty` classe dá suporte a um item de controle de lista de propriedade que abre uma caixa de diálogo de seleção de arquivo.  
@@ -78,29 +78,29 @@ CMFCPropertyGridFileProperty(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *strName*  
- O nome da propriedade.  
+*strName*<br/>
+[in] O nome da propriedade.  
   
- [in] *bOpenFileDialog*  
- True para abrir um **abrir arquivo** caixa de diálogo. FALSE para abrir um **salvar arquivo** caixa de diálogo.  
+*bOpenFileDialog*<br/>
+[in] True para abrir um **abrir arquivo** caixa de diálogo. FALSE para abrir um **salvar arquivo** caixa de diálogo.  
   
- [in] *strFileName*  
- O nome do arquivo inicial.  
+*strFileName*<br/>
+[in] O nome do arquivo inicial.  
   
- [in] *lpszDefExt*  
- Uma cadeia de caracteres de um ou mais extensões de nome de arquivo. O valor padrão é NULL.  
+*lpszDefExt*<br/>
+[in] Uma cadeia de caracteres de um ou mais extensões de nome de arquivo. O valor padrão é NULL.  
   
- [in] *dwFlags*  
- Sinalizadores de caixa de diálogo. O valor padrão é uma combinação bit a bit (OR) de OFN_HIDEREADONLY e OFN_OVERWRITEPROMPT.  
+*dwFlags*<br/>
+[in] Sinalizadores de caixa de diálogo. O valor padrão é uma combinação bit a bit (OR) de OFN_HIDEREADONLY e OFN_OVERWRITEPROMPT.  
   
- [in] *lpszFilter*  
- Uma cadeia de caracteres de um ou mais filtros de arquivo. O valor padrão é NULL.  
+*lpszFilter*<br/>
+[in] Uma cadeia de caracteres de um ou mais filtros de arquivo. O valor padrão é NULL.  
   
- [in] *lpszDescr*  
- A descrição do item de propriedade. O valor padrão é NULL.  
+*lpszDescr*<br/>
+[in] A descrição do item de propriedade. O valor padrão é NULL.  
   
- [in] *dwData*  
- Dados específicos do aplicativo que está associados com o item de propriedade. Por exemplo, um inteiro de 32 bits ou um ponteiro para outros dados. O valor padrão é 0.  
+*dwData*<br/>
+[in] Dados específicos do aplicativo que está associados com o item de propriedade. Por exemplo, um inteiro de 32 bits ou um ponteiro para outros dados. O valor padrão é 0.  
   
 ### <a name="return-value"></a>Valor de retorno  
   

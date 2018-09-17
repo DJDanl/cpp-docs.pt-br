@@ -128,12 +128,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0e5fe8c9f9eb5f4d09bac28c4ffed3eda95454c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5528e8eb8c7eeb54e221ca6c6167246a6491d7b2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540156"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720064"
 ---
 # <a name="cwinappex-class"></a>Classe CWinAppEx
 `CWinAppEx` Manipula o estado do aplicativo, salva o estado para o registro, carrega o estado do registro, inicializa gerentes de aplicativos e fornece links para esses mesmos gerentes de aplicativos.  
@@ -254,8 +254,8 @@ virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszSectionName*  
- Uma cadeia de caracteres que contém um caminho de uma chave do registro.  
+*lpszSectionName*<br/>
+[in] Uma cadeia de caracteres que contém um caminho de uma chave do registro.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o método foi bem-sucedida; Caso contrário, 0.  
@@ -271,8 +271,8 @@ CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bResourceSmartUpdate*  
- Um parâmetro booliano que especifica se o objeto de espaço de trabalho deve detectar e lidar com atualizações de recursos.  
+*bResourceSmartUpdate*<br/>
+[in] Um parâmetro booliano que especifica se o objeto de espaço de trabalho deve detectar e lidar com atualizações de recursos.  
   
 ### <a name="remarks"></a>Comentários  
  O `CWinAppEx` classe tem os métodos de inicialização, fornece a funcionalidade para salvar e carregar informações do aplicativo no registro e controla as configurações de aplicativo global. Ele também permite que você use gerenciadores globais, como o [classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) e o [classe CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md). Cada aplicativo pode ter apenas uma instância da `CWinAppEx` classe.  
@@ -285,8 +285,8 @@ void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- Especifica se o aplicativo carrega o tamanho inicial e o local da janela do quadro principal do registro.  
+*bAtivar*<br/>
+[in] Especifica se o aplicativo carrega o tamanho inicial e o local da janela do quadro principal do registro.  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, o tamanho e local do quadro principal é carregado do registro junto com outras configurações de aplicativo. Isso ocorre durante [CWinAppEx::LoadState](#loadstate). Se você não deseja carregar o posicionamento de janela inicial do registro, chamar esse método com *bAtivar* definido como FALSE.  
@@ -302,14 +302,14 @@ BOOL EnableTearOffMenus(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszRegEntry*  
- Uma cadeia de caracteres que contém o caminho de uma chave do registro. O aplicativo usa essa chave do registro para armazenar informações para os menus destacáveis.  
+*lpszRegEntry*<br/>
+[in] Uma cadeia de caracteres que contém o caminho de uma chave do registro. O aplicativo usa essa chave do registro para armazenar informações para os menus destacáveis.  
   
- [in] *uiCmdFirst*  
- ID do menu separar primeiro.  
+*uiCmdFirst*<br/>
+[in] ID do menu separar primeiro.  
   
- [in] *uiCmdLast*  
- O menu de separar última ID.  
+*uiCmdLast*<br/>
+[in] O menu de separar última ID.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o `CMenuTearOffManager` é criado e inicializado com êxito; FALSO se ocorrer um erro ou se o `CMenuTearOffManager` já existe.  
@@ -331,23 +331,23 @@ BOOL EnableUserTools(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiCmdToolsDummy*  
- Um inteiro sem sinal de que a estrutura usa como um espaço reservado para a ID de comando do menu de ferramentas do usuário.  
+*uiCmdToolsDummy*<br/>
+[in] Um inteiro sem sinal de que a estrutura usa como um espaço reservado para a ID de comando do menu de ferramentas do usuário.  
   
- [in] *uiCmdFirst*  
- A ID de comando para o primeiro comando de ferramenta do usuário.  
+*uiCmdFirst*<br/>
+[in] A ID de comando para o primeiro comando de ferramenta do usuário.  
   
- [in] *uiCmdLast*  
- A ID de comando para o último comando de ferramenta do usuário.  
+*uiCmdLast*<br/>
+[in] A ID de comando para o último comando de ferramenta do usuário.  
   
- [in] *pToolRTC*  
- A classe que o `CUserToolsManager` usa o objeto para criar novas ferramentas de usuário.  
+*pToolRTC*<br/>
+[in] A classe que o `CUserToolsManager` usa o objeto para criar novas ferramentas de usuário.  
   
- [in] *uArgMenuID*  
- A ID do menu de argumento.  
+*uArgMenuID*<br/>
+[in] A ID do menu de argumento.  
   
- [in] *uInitDirMenuID*  
- A ID de menu para o diretório da ferramenta inicial.  
+*uInitDirMenuID*<br/>
+[in] A ID de menu para o diretório da ferramenta inicial.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o método cria e inicializa um `CUserToolsManager` do objeto; FALSE se o método falhar ou se um `CUserToolsManager` objeto já existe.  
@@ -381,14 +381,14 @@ BOOL GetBinary(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszEntry*  
- Uma cadeia de caracteres que contém o nome de uma chave do registro.  
+*lpszEntry*<br/>
+[in] Uma cadeia de caracteres que contém o nome de uma chave do registro.  
   
- [out] *ppData*  
- Um ponteiro para o buffer que o método preenche com os dados binários.  
+*ppData*<br/>
+[out] Um ponteiro para o buffer que o método preenche com os dados binários.  
   
- [out] *petabytes*  
- Um ponteiro para um inteiro sem sinal que o método usa para gravar o número de bytes lidos.  
+*Petabytes*<br/>
+[out] Um ponteiro para um inteiro sem sinal que o método usa para gravar o número de bytes lidos.  
   
 ### <a name="return-value"></a>Valor de retorno  
  VERDADEIRO se bem-sucedido; FALSE caso contrário.  
@@ -452,11 +452,11 @@ int GetInt(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszEntry*  
- Uma cadeia de caracteres que contém o nome de uma entrada de registro.  
+*lpszEntry*<br/>
+[in] Uma cadeia de caracteres que contém o nome de uma entrada de registro.  
   
- [in] *nConfiguração padrão*  
- O valor padrão que o método retorna, se a entrada do Registro especificada não existe.  
+*nConfiguração padrão*<br/>
+[in] O valor padrão que o método retorna, se a entrada do Registro especificada não existe.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Os dados do registro se o método foi bem-sucedida; Caso contrário, *nConfiguração padrão*.  
@@ -502,11 +502,11 @@ BOOL GetObject(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszEntry*  
- Uma cadeia de caracteres que contém o caminho relativo de uma entrada de registro.  
+*lpszEntry*<br/>
+[in] Uma cadeia de caracteres que contém o caminho relativo de uma entrada de registro.  
   
- [out] *obj*  
- Uma referência a um `CObject`. O método usa essa referência para armazenar os dados do registro.  
+*obj*<br/>
+[out] Uma referência a um `CObject`. O método usa essa referência para armazenar os dados do registro.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o método foi bem-sucedida; Caso contrário, 0.  
@@ -537,8 +537,8 @@ CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *szSectionAdd*  
- Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.  
+*szSectionAdd*<br/>
+[in] Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um `CString` que contém o caminho absoluto de uma chave do registro.  
@@ -558,17 +558,17 @@ BOOL GetSectionBinary(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszSubSection*  
- Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.  
+*lpszSubSection*<br/>
+[in] Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.  
   
- [in] *lpszEntry*  
- Uma cadeia de caracteres que contém o valor a ser lido.  
+*lpszEntry*<br/>
+[in] Uma cadeia de caracteres que contém o valor a ser lido.  
   
- [out] *ppData*  
- Um ponteiro para o buffer no qual o método armazena os dados.  
+*ppData*<br/>
+[out] Um ponteiro para o buffer no qual o método armazena os dados.  
   
- [out] *petabytes*  
- Um ponteiro para um inteiro sem sinal. O método grava o tamanho de *ppData* para esse parâmetro.  
+*Petabytes*<br/>
+[out] Um ponteiro para um inteiro sem sinal. O método grava o tamanho de *ppData* para esse parâmetro.  
   
 ### <a name="return-value"></a>Valor de retorno  
  VERDADEIRO se bem-sucedido; Caso contrário, FALSE.  
@@ -589,14 +589,14 @@ int GetSectionInt(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszSubSection*  
- Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.  
+*lpszSubSection*<br/>
+[in] Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.  
   
- [in] *lpszEntry*  
- Uma cadeia de caracteres que contém o valor a ser lido.  
+*lpszEntry*<br/>
+[in] Uma cadeia de caracteres que contém o valor a ser lido.  
   
- [in] *nConfiguração padrão*  
- O valor padrão para retornar se o valor especificado não existe.  
+*nConfiguração padrão*<br/>
+[in] O valor padrão para retornar se o valor especificado não existe.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Os dados de inteiro que são armazenados no valor do registro especificado; *nConfiguração padrão* se os dados não existe.  
@@ -617,14 +617,14 @@ BOOL GetSectionObject(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszSubSection*  
- Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.  
+*lpszSubSection*<br/>
+[in] Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.  
   
- [in] *lpszEntry*  
- Uma cadeia de caracteres que contém o valor a ser lido.  
+*lpszEntry*<br/>
+[in] Uma cadeia de caracteres que contém o valor a ser lido.  
   
- [out] *obj*  
- Uma referência a um `CObject`. O método usa esse `CObject` para armazenar os dados do registro.  
+*obj*<br/>
+[out] Uma referência a um `CObject`. O método usa esse `CObject` para armazenar os dados do registro.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se bem-sucedido; Caso contrário, 0.  
@@ -645,14 +645,14 @@ CString GetSectionString(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszSubSection*  
- Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.  
+*lpszSubSection*<br/>
+[in] Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.  
   
- [in] *lpszEntry*  
- Uma cadeia de caracteres que contém o valor a ser lido.  
+*lpszEntry*<br/>
+[in] Uma cadeia de caracteres que contém o valor a ser lido.  
   
- [in] *lpszDefault*  
- O valor padrão para retornar se o valor especificado não existe.  
+*lpszDefault*<br/>
+[in] O valor padrão para retornar se o valor especificado não existe.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Os dados de cadeia de caracteres armazenados no valor do Registro especificada se os dados existem. Caso contrário, *lpszDefault*.  
@@ -685,11 +685,11 @@ CString GetString(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszEntry*  
- Uma cadeia de caracteres que contém o nome de uma chave do registro  
+*lpszEntry*<br/>
+[in] Uma cadeia de caracteres que contém o nome de uma chave do registro  
   
- [in] *lpzDefault*  
- O valor padrão que o método retorna, se a entrada do Registro especificada não existe.  
+*lpzDefault*<br/>
+[in] O valor padrão que o método retorna, se a entrada do Registro especificada não existe.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Os dados de cadeia de caracteres armazenados no registro se bem-sucedido; *lpszDefault* caso contrário.  
@@ -819,8 +819,8 @@ BOOL IsStateExists(LPCTSTR lpszSectionName);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszSectionName*  
- Uma cadeia de caracteres que contém um caminho de uma chave do registro.  
+*lpszSectionName*<br/>
+[in] Uma cadeia de caracteres que contém um caminho de uma chave do registro.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se a chave está no registro. Caso contrário, 0.  
@@ -862,14 +862,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pFrame*  
- Um ponteiro para um objeto de janela do quadro. O método aplica-se as informações de estado no registro para essa janela do quadro.  
+*pFrame*<br/>
+[in] Um ponteiro para um objeto de janela do quadro. O método aplica-se as informações de estado no registro para essa janela do quadro.  
   
- [in] *lpszSectionName*  
- Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.  
+*lpszSectionName*<br/>
+[in] Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.  
   
- [in] *pFrameImpl*  
- Um ponteiro para um `CFrameImpl` objeto. O método aplica-se as informações de estado no registro para essa janela do quadro.  
+*pFrameImpl*<br/>
+[in] Um ponteiro para um `CFrameImpl` objeto. O método aplica-se as informações de estado no registro para essa janela do quadro.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se bem-sucedido; Caso contrário, 0.  
@@ -892,14 +892,14 @@ virtual BOOL LoadWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *rectNormalPosition*  
- Um retângulo que contém as coordenadas da janela do quadro principal quando ele está na posição restaurada.  
+*rectNormalPosition*<br/>
+[out] Um retângulo que contém as coordenadas da janela do quadro principal quando ele está na posição restaurada.  
   
- [out] *nFlags*  
- Sinalizadores que controlam a posição da janela minimizada e como o sistema operacional alterna entre uma janela minimizada e uma janela restaurada.  
+*nFlags*<br/>
+[out] Sinalizadores que controlam a posição da janela minimizada e como o sistema operacional alterna entre uma janela minimizada e uma janela restaurada.  
   
- [out] *nShowCmd*  
- Um inteiro que especifica o estado de Mostrar da janela. Para obter mais informações sobre os valores possíveis, consulte [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
+*nShowCmd*<br/>
+[out] Um inteiro que especifica o estado de Mostrar da janela. Para obter mais informações sobre os valores possíveis, consulte [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se bem-sucedido; Caso contrário, 0.  
@@ -929,11 +929,11 @@ virtual void OnAppContextHelp(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWndControl*  
- Um ponteiro para um objeto de janela para o qual o usuário acionasse ajuda de contexto.  
+*pWndControl*<br/>
+[in] Um ponteiro para um objeto de janela para o qual o usuário acionasse ajuda de contexto.  
   
- [in] *[dwHelpIDArray]*  
- Um valor reservado.  
+*[dwHelpIDArray]*<br/>
+[in] Um valor reservado.  
   
 ### <a name="remarks"></a>Comentários  
  Atualmente, esse método é reservado para uso futuro. A implementação padrão não faz nada e ele atualmente não é chamado pelo framework.  
@@ -946,8 +946,8 @@ virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pFrameImpl*  
- Um ponteiro para um `CFrameImpl` objeto.  
+*pFrameImpl*<br/>
+[in] Um ponteiro para um `CFrameImpl` objeto.  
   
 ### <a name="remarks"></a>Comentários  
  A implementação padrão desse método salva o estado da *pFrameImpl*.  
@@ -962,11 +962,11 @@ virtual BOOL OnViewDoubleClick(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *Apropriei*  
- Um ponteiro para um objeto derivado de [classe CView](../../mfc/reference/cview-class.md).  
+*Apropriei*<br/>
+[in] Um ponteiro para um objeto derivado de [classe CView](../../mfc/reference/cview-class.md).  
   
- [in] *iViewId*  
- A ID do modo de exibição.  
+*iViewId*<br/>
+[in] A ID do modo de exibição.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o framework encontra um comando; Caso contrário, FALSE.  
@@ -1016,8 +1016,8 @@ virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pFrame*  
- Um ponteiro para uma janela do quadro.  
+*pFrame*<br/>
+[in] Um ponteiro para uma janela do quadro.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o método foi bem-sucedida; 0 se a carga com falha ou se não houver nenhum dados para carregar.  
@@ -1060,14 +1060,14 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszSectionName*  
- Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.  
+*lpszSectionName*<br/>
+[in] Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.  
   
- [in] *pFrameImpl*  
- Um ponteiro para um `CFrameImpl` objeto. Este quadro é salva no registro do Windows.  
+*pFrameImpl*<br/>
+[in] Um ponteiro para um `CFrameImpl` objeto. Este quadro é salva no registro do Windows.  
   
- [in] *pFrame*  
- Um ponteiro para um objeto de janela do quadro. Este quadro é salva no registro do Windows.  
+*pFrame*<br/>
+[in] Um ponteiro para um objeto de janela do quadro. Este quadro é salva no registro do Windows.  
   
 ### <a name="return-value"></a>Valor de retorno  
  VERDADEIRO se bem-sucedido; FALSE caso contrário.  
@@ -1085,8 +1085,8 @@ LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszSectionName*  
- Uma cadeia de caracteres que contém o caminho de uma chave do registro.  
+*lpszSectionName*<br/>
+[in] Uma cadeia de caracteres que contém o caminho de uma chave do registro.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Uma cadeia de caracteres que contém o caminho do local padrão do registro.  
@@ -1105,14 +1105,14 @@ virtual BOOL ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiMenuResId*  
- Uma ID de recurso de menu.  
+*uiMenuResId*<br/>
+[in] Uma ID de recurso de menu.  
   
- [in] *ponto*  
- Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica a posição do menu em coordenadas da tela.  
+*ponto*<br/>
+[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica a posição do menu em coordenadas da tela.  
   
- [in] *Apropriei*  
- Um ponteiro para a janela que possui um menu pop-up.  
+*Apropriei*<br/>
+[in] Um ponteiro para a janela que possui um menu pop-up.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o menu pop-up é exibido com êxito; Caso contrário, 0.  
@@ -1133,14 +1133,14 @@ virtual BOOL StoreWindowPlacement(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nFlags*  
- Sinalizadores que controlam a posição da janela minimizada e como o sistema operacional alterna entre uma janela minimizada e uma janela restaurada.  
+*nFlags*<br/>
+[in] Sinalizadores que controlam a posição da janela minimizada e como o sistema operacional alterna entre uma janela minimizada e uma janela restaurada.  
   
- [in] *nShowCmd*  
- Um inteiro que especifica o estado de Mostrar da janela. Para obter mais informações sobre os valores possíveis, consulte [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
+*nShowCmd*<br/>
+[in] Um inteiro que especifica o estado de Mostrar da janela. Para obter mais informações sobre os valores possíveis, consulte [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).  
   
- [in] *rectNormalPosition*  
- Um retângulo que contém as coordenadas da janela do quadro principal quando ele está em estado restaurado.  
+*rectNormalPosition*<br/>
+[in] Um retângulo que contém as coordenadas da janela do quadro principal quando ele está em estado restaurado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se bem-sucedido; Caso contrário, 0.  
@@ -1161,14 +1161,14 @@ BOOL WriteBinary(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszEntry*  
- Uma cadeia de caracteres que contém o nome de uma chave do registro.  
+*lpszEntry*<br/>
+[in] Uma cadeia de caracteres que contém o nome de uma chave do registro.  
   
- [in] *pData*  
- Os dados a serem armazenados.  
+*pData*<br/>
+[in] Os dados serem armazenados.  
   
- [in] *nBytes*  
- O tamanho de *pData* em bytes.  
+*nBytes*<br/>
+[in] O tamanho de *pData* em bytes.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -1188,11 +1188,11 @@ BOOL WriteInt(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszEntry*  
- Uma cadeia de caracteres que contém o nome de uma chave do registro.  
+*lpszEntry*<br/>
+[in] Uma cadeia de caracteres que contém o nome de uma chave do registro.  
   
- [in] *Nvalor*  
- Os dados a serem armazenados.  
+*Nvalor*<br/>
+[in] Os dados serem armazenados.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -1212,11 +1212,11 @@ BOOL WriteObject(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszEntry*  
- Uma cadeia de caracteres que contém o valor a ser definido.  
+*lpszEntry*<br/>
+[in] Uma cadeia de caracteres que contém o valor a ser definido.  
   
- [in] *obj*  
- Uma referência ao `CObject` dados que armazenará o método.  
+*obj*<br/>
+[in] Uma referência ao `CObject` dados que armazenará o método.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -1236,17 +1236,17 @@ BOOL WriteSectionBinary(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszSubSection*  
- Uma cadeia de caracteres que contém o nome de uma chave do registro  
+*lpszSubSection*<br/>
+[in] Uma cadeia de caracteres que contém o nome de uma chave do registro  
   
- [in] *lpszEntry*  
- Uma cadeia de caracteres que contém o valor a ser definido.  
+*lpszEntry*<br/>
+[in] Uma cadeia de caracteres que contém o valor a ser definido.  
   
- [in] *pData*  
- Os dados a gravar no registro.  
+*pData*<br/>
+[in] Os dados a gravar no registro.  
   
- [in] *nBytes*  
- O tamanho de *pData* em bytes.  
+*nBytes*<br/>
+[in] O tamanho de *pData* em bytes.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -1267,14 +1267,14 @@ BOOL WriteSectionInt(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszSubSection*  
- Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.  
+*lpszSubSection*<br/>
+[in] Uma cadeia de caracteres que contém o caminho relativo de uma chave do registro.  
   
- [in] *lpszEntry*  
- Uma cadeia de caracteres que contém o valor a ser definido.  
+*lpszEntry*<br/>
+[in] Uma cadeia de caracteres que contém o valor a ser definido.  
   
- [in] *Nvalor*  
- Os dados a gravar no registro.  
+*Nvalor*<br/>
+[in] Os dados a gravar no registro.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -1295,14 +1295,14 @@ BOOL WriteSectionObject(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszSubSection*  
- Uma cadeia de caracteres que contém o nome de uma chave do registro.  
+*lpszSubSection*<br/>
+[in] Uma cadeia de caracteres que contém o nome de uma chave do registro.  
   
- [in] *lpszEntry*  
- Uma cadeia de caracteres que contém o nome do valor a ser definido.  
+*lpszEntry*<br/>
+[in] Uma cadeia de caracteres que contém o nome do valor a ser definido.  
   
- [in] *obj*  
- Os dados a serem armazenados.  
+*obj*<br/>
+[in] Os dados serem armazenados.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -1323,14 +1323,14 @@ BOOL WriteSectionString(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszSubSection*  
- Uma cadeia de caracteres que contém o nome de uma chave do registro.  
+*lpszSubSection*<br/>
+[in] Uma cadeia de caracteres que contém o nome de uma chave do registro.  
   
- [in] *lpszEntry*  
- Uma cadeia de caracteres que contém o valor a ser definido.  
+*lpszEntry*<br/>
+[in] Uma cadeia de caracteres que contém o valor a ser definido.  
   
- [in] *lpszValue*  
- Os dados de cadeia de caracteres a gravar no registro.  
+*lpszValue*<br/>
+[in] Os dados de cadeia de caracteres a gravar no registro.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -1350,11 +1350,11 @@ BOOL WriteString(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszEntry*  
- Uma cadeia de caracteres que contém o nome de uma chave do registro.  
+*lpszEntry*<br/>
+[in] Uma cadeia de caracteres que contém o nome de uma chave do registro.  
   
- [in] *lpszValue*  
- Os dados a serem armazenados.  
+*lpszValue*<br/>
+[in] Os dados serem armazenados.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  

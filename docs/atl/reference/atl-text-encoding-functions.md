@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5043b421d4ca63b22cde0f413e68b3a666a483b3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a5147b8079d694e59141c244a860f12c59f42f7b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757465"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706830"
 ---
 # <a name="atl-text-encoding-functions"></a>Funções de codificação de texto da ATL
 
@@ -494,20 +494,20 @@ inline BOOL QPDecode(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *pbSrcData*  
-O buffer que contém os dados a ser decodificado.
+*pbSrcData*<br/>
+[in] O buffer que contém os dados a ser decodificado.
 
-[in] *nSrcLen*  
-O comprimento em bytes do *pbSrcData*.
+*nSrcLen*<br/>
+[in] O comprimento em bytes do *pbSrcData*.
 
-[out] *szDest*  
-Buffer alocado pelo chamador para receber os dados decodificados.
+*szDest*<br/>
+[out] Buffer alocado pelo chamador para receber os dados decodificados.
 
-[out] *pnDestLen*  
-Ponteiro para uma variável que contém o comprimento em bytes do *szDest*. Se a função for bem-sucedida, a variável recebe o número de bytes gravados no buffer. Se a função falhar, a variável recebe o comprimento necessário em bytes do buffer.
+*pnDestLen*<br/>
+[out] Ponteiro para uma variável que contém o comprimento em bytes do *szDest*. Se a função for bem-sucedida, a variável recebe o número de bytes gravados no buffer. Se a função falhar, a variável recebe o comprimento necessário em bytes do buffer.
 
-[in] *dwFlags*  
-Sinalizadores ATLSMTP_QPENCODE que descreve como a conversão é para ser executada.
+*dwFlags*<br/>
+[in] Sinalizadores ATLSMTP_QPENCODE que descreve como a conversão é para ser executada.
 
 ### <a name="return-value"></a>Valor de retorno
 

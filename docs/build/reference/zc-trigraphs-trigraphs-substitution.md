@@ -19,36 +19,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e465b62944b360d6fdb09da1230f3353658437b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce8c9d13fa062ddac0f31eac0e20fba1266c7a8c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379865"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707727"
 ---
 # <a name="zctrigraphs-trigraphs-substitution"></a>/Zc:trigraphs (substituição de trígrafos)
 
-Quando **/ZC: trigraphs** for especificado, o compilador substitui uma sequência de caracteres trigraph usando um caractere de pontuação correspondente.
+Quando **/ZC: trigraphs** for especificado, o compilador substitui uma sequência de caracteres de trígrafo usando um caractere de pontuação correspondente.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/Zc:trigraphs**[**-**]  
+> **/Zc:trigraphs**[**-**]
 
 ## <a name="remarks"></a>Comentários
 
-Um *trigraph* consiste em dois consecutivas de pontos de interrogação ("?") seguido por um terceiro caractere exclusivo. A padrão de linguagem C oferece suporte a trígrafos para arquivos de origem que usam um conjunto de caracteres que não contém representações gráficas convenientes para alguns caracteres de pontuação. Por exemplo, quando trígrafos estão habilitados, o compilador substitui o "? = "trigraph usando o caractere '#'. Por meio de C++ 14, trígrafos têm suporte em C. O padrão C++ 17 remove trígrafos a linguagem C++. No código C++, o **/ZC: trigraphs** opção de compilador permite a substituição das sequências de trigraph pelo caractere de pontuação correspondente. **/ZC:trigraphs-** desabilita a substituição de trigraph.
+Um *trígrafo* consiste em dois pontos de interrogação consecutivos ("??") seguido por um terceiro caractere exclusivo. O padrão da linguagem C oferece suporte a trígrafos para arquivos de origem que usam um conjunto de caracteres que não contenha representações gráficas convenientes para alguns caracteres de pontuação. Por exemplo, quando trígrafos são habilitados, o compilador substitui o "?? = "trígrafo usando o caractere '#'. Por meio de c++14, os trígrafos tem suporte como em C. O padrão c++17 remove trígrafos da linguagem C++. No código C++, o **/ZC: trigraphs** opção de compilador habilita a substituição de sequências de trígrafo por caractere de pontuação correspondente. **/ZC:trigraphs-** desabilita a substituição de trígrafos.
 
-O **/ZC: trigraphs** opção está desativada por padrão, e a opção não é afetada quando o [/ permissivo-](permissive-standards-conformance.md) opção é especificada.
+O **/ZC: trigraphs** opção está desativada por padrão, e a opção não é afetada quando o [/permissive--](permissive-standards-conformance.md) opção for especificada.
 
 Para obter uma lista de trígrafos C/C++ e um exemplo que mostra como usar trígrafos, consulte [Trígrafos](../../c-language/trigraphs.md).
 
 ## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **C/C++** > **linha de comando** página de propriedades.
 
-1. Modificar o **opções adicionais** propriedade incluir **/ZC: trigraphs** ou **/Zc:trigraphs-** e, em seguida, escolha **Okey**.
+1. Modificar a **opções adicionais** propriedade incluir **/ZC: trigraphs** ou **/Zc:trigraphs-** e, em seguida, escolha **Okey**.
 
 ## <a name="see-also"></a>Consulte também
 

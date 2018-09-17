@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aa6788945a7f36a2b9b478b72e514552cf8d9603
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b83acbc8b4ca6beb3288ed9e02667410b239c6e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315802"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722040"
 ---
 # <a name="text-tool-font-dialog-box-c-image-editor-for-icons"></a>Caixa de diálogo de fonte de ferramenta de texto (C++) (Editor de imagens para ícones)
 
@@ -34,20 +34,25 @@ Use essa caixa de diálogo para:
 
 Para acessar essa caixa de diálogo, clique o **Font** botão na **ferramenta texto** caixa de diálogo.
 
-**Fonte**  
-Lista as fontes disponíveis.
+- **Fonte**
 
-**Estilo da fonte**  
-Lista os estilos disponíveis para a fonte especificada.
+   Lista as fontes disponíveis.
 
-**Size**  
-Lista os tamanhos de ponto disponíveis para a fonte especificada.
+- **Estilo da fonte**
 
-**Amostra**  
-Mostra um exemplo de como o texto será exibido com as configurações de fonte especificada.
+   Lista os estilos disponíveis para a fonte especificada.
 
-**script**  
-Lista os scripts de linguagem disponíveis para a fonte especificada. Quando você seleciona um script de idioma diferente, o conjunto de caracteres desse idioma ficará disponível para a criação de documentos multilíngues.
+- **Size**
+
+   Lista os tamanhos de ponto disponíveis para a fonte especificada.
+
+- **Amostra**
+
+   Mostra um exemplo de como o texto será exibido com as configurações de fonte especificada.
+
+- **script**
+
+   Lista os scripts de linguagem disponíveis para a fonte especificada. Quando você seleciona um script de idioma diferente, o conjunto de caracteres desse idioma ficará disponível para a criação de documentos multilíngues.
 
 ## <a name="requirements"></a>Requisitos
 

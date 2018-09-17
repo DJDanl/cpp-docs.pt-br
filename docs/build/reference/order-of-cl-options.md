@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 165e20eefecd20ad9dec9e01b38c5eaa7926e4eb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3ffe9a440396df14823775db335e52bca6cacdb3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372803"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725010"
 ---
 # <a name="order-of-cl-options"></a>Ordem de opções CL
-Opções podem aparecer em qualquer lugar na linha de comando CL, exceto para a opção /link que deve ocorrer por último. O compilador começa com opções especificadas no [variável de ambiente CL](../../build/reference/cl-environment-variables.md) e lê a linha de comando da esquerda para a direita, processamento de arquivos de comando na ordem encontrá-las. Cada opção se aplica a todos os arquivos na linha de comando. Se CL encontrar opções de conflito, ele usa a opção mais à direita.  
-  
-## <a name="see-also"></a>Consulte também  
- [Sintaxe de linha de comando do compilador](../../build/reference/compiler-command-line-syntax.md)
+
+As opções podem aparecer em qualquer lugar na linha de comando CL, exceto para a opção /link, que deve ocorrer pela última vez. O compilador começa com as opções especificadas na [variável de ambiente CL](../../build/reference/cl-environment-variables.md) e, em seguida, lê a linha de comando da esquerda para direita – processamento de arquivos de comando na ordem encontrá-las. Cada opção se aplica a todos os arquivos na linha de comando. Se o CL encontrar opções conflitantes, ele usa a opção mais à direita.
+
+## <a name="see-also"></a>Consulte também
+
+[Sintaxe de linha de comando do compilador](../../build/reference/compiler-command-line-syntax.md)

@@ -18,121 +18,99 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4554ae6aab9a6d8d488607ab22c26460116c751d
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 28be2caa3477eabc8b717b387c99d65585a9ef19
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571830"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718049"
 ---
-# <a name="dlls-in-visual-c"></a>DLLs no Visual C++  
-  
-No Windows, uma biblioteca de vínculo dinâmico (DLL) é um tipo de arquivo executável que atua como uma biblioteca compartilhada de funções e recursos. A vinculação dinâmica é um recurso de sistema operacional que permite que um executável chamar funções ou usar os recursos armazenados em um arquivo separado. Essas funções e recursos podem ser compilados e implantados separadamente dos executáveis que usá-los. Uma DLL não é um executável autônomo; ele é executado no contexto de um aplicativo que o chama. O sistema operacional pode carregar a DLL no espaço de memória do aplicativo quando o aplicativo é carregado (*vinculação implícita*), ou sob demanda no tempo de execução (*vinculação explícita*). DLLs também facilitam a compartilhar funções e recursos em executáveis. Vários aplicativos podem acessar o conteúdo de uma única cópia de uma DLL na memória ao mesmo tempo.  
-  
-## <a name="differences-between-dynamic-linking-and-static-linking"></a>Diferenças entre a vinculação dinâmica e a vinculação estática  
-  
-Vinculação estática copia todo o código de objeto em uma biblioteca estática para os executáveis que usá-lo quando eles são criados. A vinculação dinâmica inclui apenas as informações necessárias para o Windows em tempo de execução para localizar e carregar a DLL que contém um item de dados ou uma função. Quando você cria uma DLL, você também criar uma biblioteca de importação que contém essas informações. Quando você compila um executável que chama a DLL, o vinculador usa símbolos exportados na biblioteca de importação para armazenar essas informações para o carregador do Windows. Quando o carregador carrega uma DLL, a DLL é mapeada no espaço de memória do seu aplicativo. Se estiver presente, um especial de função na DLL, `DllMain`, é chamado para realizar qualquer inicialização exige que a DLL.  
-  
-<a name="differences-between-applications-and-dlls"></a>  
-  
-## <a name="differences-between-applications-and-dlls"></a>Diferenças entre aplicativos e DLLs  
-  
-Mesmo que os aplicativos e DLLs são os dois módulos executáveis, eles diferem de várias maneiras. Para o usuário final, a diferença mais óbvia é que as DLLs não são aplicativos que podem ser executados diretamente. Do ponto de vista do sistema, há duas diferenças fundamentais entre aplicativos e DLLs:  
-  
--   Um aplicativo pode ter várias instâncias de si mesmo em execução no sistema ao mesmo tempo, enquanto que uma DLL pode ter apenas uma instância.  
-  
--   Um aplicativo pode ser carregado como um processo que pode ter coisas como uma pilha, segmentos de execução, memória global, identificadores de arquivos e uma fila de mensagens, mas não de uma DLL.  
-  
-<a name="advantages-of-using-dlls"></a>  
-  
-## <a name="advantages-of-using-dlls"></a>Vantagens de usar DLLs  
-  
-Vinculação dinâmica em vez de vinculação estática de código e recursos oferece diversas vantagens. Quando você usa DLLs, você pode economizar espaço de memória e reduzem as trocas. Quando vários aplicativos podem usar uma única cópia de uma DLL, você pode economizar espaço em disco e fazer o download de largura de banda. DLLs podem ser implantadas e atualizados separadamente, que permite que você fornecer atualizações de software e suporte pós-mercado sem ter que recompilar e enviar todo o seu código. DLLs são uma maneira conveniente de fornecer recursos específicos da localidade, que podem oferecer suporte a vários idiomas programas e facilitar a criação de versões internacionais dos seus aplicativos. A vinculação explícita pode permitir que seu aplicativo descobrir e carregar DLLs em tempo de execução, como extensões que fornecem novos recursos.  
-  
-A vinculação dinâmica tem as seguintes vantagens:  
-  
--   Vinculação dinâmica economiza memória e reduz a troca. Muitos processos podem usar uma DLL simultaneamente, compartilhando uma única cópia de partes de uma DLL na memória somente leitura. Por outro lado, cada aplicativo que é criado usando uma biblioteca vinculada estaticamente tem uma cópia completa do código de biblioteca Windows devem carregar na memória.  
-  
--   A vinculação dinâmica economiza largura de banda e espaço em disco. Muitos aplicativos podem compartilhar uma única cópia da DLL no disco. Por outro lado, cada aplicativo criado usando uma biblioteca de vínculo estático tem o código de biblioteca vinculado a sua imagem executável, que usa mais espaço em disco e leva mais largura de banda para transferir.  
-  
--   Correções de segurança de manutenção, e os upgrades podem ser mais fácil. Quando seus aplicativos usam funções comuns em uma DLL, em seguida, desde que os argumentos de função e valores de retorno não alterar, você pode implementar correções de bugs e implantar atualizações para a DLL. Quando DLLs são atualizadas, os aplicativos que utilizam não precisarão ser recompilado ou vinculados novamente, e eles usarem a nova DLL assim que ele é implantado. Em contraste, correções feitas no código do objeto vinculado estaticamente exigem que você vincule novamente e reimplantar todos os aplicativos que o utiliza.  
-  
--   Você pode usar DLLs para fornecer suporte pós-mercado. Por exemplo, um DLL do driver de vídeo pode ser modificado para dar suporte a uma exibição que não estava disponível quando o aplicativo foi enviado. Você pode usar a vinculação explícita ao carregar extensões de aplicativo como DLLs e adicionar novas funcionalidades ao seu aplicativo sem recompilar ou reimplantá-lo.  
-  
--   A vinculação dinâmica torna mais fácil dar suporte a aplicativos escritos em linguagens de programação diferentes. Programas escritos em linguagens de programação diferentes podem chamar a mesma função DLL, contanto que os programas siga a convenção de chamada da função. Os programas e a função DLL devem ser compatíveis das seguintes maneiras: a ordem na qual a função espera que seus argumentos para ser enviado para a pilha, se a função ou o aplicativo é responsável pela limpeza da pilha e se os argumentos são passados em registros.  
-  
--   A vinculação dinâmica fornece um mecanismo para estender as classes de biblioteca MFC. Você pode derivar classes de classes existentes do MFC e colocá-los em uma DLL de extensão MFC para uso por aplicativos do MFC.  
-  
--   A vinculação dinâmica facilita a criação de versões internacionais do seu aplicativo. Ao colocar recursos específicos da localidade em uma DLL, é muito mais fácil criar versões internacionais de um aplicativo. Em vez de envio de várias versões localizadas do seu aplicativo, você pode colocar as imagens para cada idioma e cadeias de caracteres em uma DLL de recursos separado e, em seguida, o aplicativo possa carregar os recursos apropriados para essa localidade em tempo de execução.   
-  
- Uma desvantagem em potencial do uso de DLLs é que o aplicativo não é autônomo; ele depende da existência de um módulo DLL separada que você deve implantar ou verificar por conta própria como parte de sua instalação.  
-  
-  
-## <a name="more-information-on-how-to-create-and-use-dlls"></a>Para obter mais informações sobre como criar e usar DLLs  
-  
-Os tópicos a seguir fornecem informações detalhadas sobre como a DLLs de programa em Visual C++.  
-  
- [Instruções passo a passo: criando e usando uma biblioteca de vínculo dinâmico (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)  
- Descreve como criar e usar uma DLL com o Visual Studio.  
-  
- [Tipos de DLLs](../build/kinds-of-dlls.md)  
- Fornece informações sobre os diferentes tipos de DLLs que podem ser compilados.  
-  
- [Perguntas frequentes sobre DLL](../build/dll-frequently-asked-questions.md)  
- Fornece respostas para perguntas frequentes sobre DLLs.  
-  
- [Vincular um executável a uma DLL](../build/linking-an-executable-to-a-dll.md)  
- Descreve a vinculação explícita e implícita a uma DLL.  
-  
- [Inicialize um DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
- Discute o código de inicialização da DLL que deve ser executado quando a DLL é carregada.  
-  
- [Comportamento de DLLs e da biblioteca em tempo de execução do Visual C++](../build/run-time-library-behavior.md)  
- Descreve como a biblioteca em tempo de execução executa a sequência de inicialização da DLL.  
-  
- [LoadLibrary e AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)  
- Discute o uso **LoadLibrary** e `AfxLoadLibrary` para vincular explicitamente para uma DLL em tempo de execução.  
-  
- [GetProcAddress](../build/getprocaddress.md)  
- Discute o uso **GetProcAddress** para obter o endereço de uma função exportada na DLL.  
-  
- [FreeLibrary e AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)  
- Discute o uso **FreeLibrary** e `AfxFreeLibrary` quando o módulo DLL não é mais necessário.  
-  
- [Ordem de pesquisa de biblioteca de vínculo dinâmico](/windows/desktop/Dlls/dynamic-link-library-search-order)  
- Descreve o caminho de pesquisa que o sistema operacional Windows usa para localizar uma DLL no sistema.  
-  
- [Estados de módulo de uma DLL MFC regular vinculada dinamicamente ao MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)  
- Descreve os estados de módulo de uma expressão de que DLL do MFC vinculada dinamicamente ao MFC.  
-  
- [DLLs de extensão de MFC](../build/extension-dlls-overview.md)  
- Explica as DLLs que normalmente implementam classes reutilizáveis derivadas das classes existentes da biblioteca Microsoft Foundation Class.  
-  
- [Criando uma DLL somente de recurso](../build/creating-a-resource-only-dll.md)  
- Descreve uma DLL somente de recurso, que contém apenas recursos, como ícones, bitmaps, cadeias de caracteres e caixas de diálogo.  
-  
- [Recursos localizados em aplicativos MFC: DLLs satélites](../build/localized-resources-in-mfc-applications-satellite-dlls.md)  
- Fornece suporte avançado para DLLs satélite, um recurso que ajuda na criação de aplicativos localizados para vários idiomas.  
-  
- [Importando e exportando](../build/importing-and-exporting.md)  
- Descreve a importação de símbolos públicos para um aplicativo ou a exportação de funções de uma DLL  
-  
- [Tecnologia ativa e DLLs](../build/active-technology-and-dlls.md)  
- Permite que os servidores de objeto a ser implementada dentro de uma DLL.  
-  
- [Automação em uma DLL](../build/automation-in-a-dll.md)  
- Descreve o que a opção de automação no assistente de DLL do MFC fornece.  
-  
- [Convenções de nomenclatura para DLLs do MFC](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)  
- Discute como as DLLs e as bibliotecas incluídas no MFC seguem uma convenção de nomenclatura estruturada.  
-  
- [Chamando funções DLL a partir de aplicativos do Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)  
- Descreve como chamar funções de DLL a partir de aplicativos do Visual Basic.  
-  
-## <a name="related-sections"></a>Seções relacionadas  
-  
- [Usando MFC como parte de uma DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)  
- Descreve DLLs normais do MFC, que permitem que você use a biblioteca do MFC como parte de uma biblioteca de vínculo dinâmico do Windows.  
-  
- [Versão DLL do MFC](../mfc/tn033-dll-version-of-mfc.md)  
- Descreve como você pode usar o compartilhadas e Mfcxxd (onde x é o número de versão do MFC) compartilhado bibliotecas de vínculo dinâmico com aplicativos do MFC e DLLs de extensão do MFC.  
+# <a name="dlls-in-visual-c"></a>DLLs no Visual C++
+
+No Windows, uma biblioteca de vínculo dinâmico (DLL) é um tipo de arquivo executável que atua como uma biblioteca compartilhada de funções e recursos. A vinculação dinâmica é um recurso de sistema operacional que permite que um executável chamar funções ou usar os recursos armazenados em um arquivo separado. Essas funções e recursos podem ser compilados e implantados separadamente dos executáveis que usá-los. Uma DLL não é um executável autônomo; ele é executado no contexto de um aplicativo que o chama. O sistema operacional pode carregar a DLL no espaço de memória do aplicativo quando o aplicativo é carregado (*vinculação implícita*), ou sob demanda no tempo de execução (*vinculação explícita*). DLLs também facilitam a compartilhar funções e recursos em executáveis. Vários aplicativos podem acessar o conteúdo de uma única cópia de uma DLL na memória ao mesmo tempo.
+
+## <a name="differences-between-dynamic-linking-and-static-linking"></a>Diferenças entre a vinculação dinâmica e a vinculação estática
+
+Vinculação estática copia todo o código de objeto em uma biblioteca estática para os executáveis que usá-lo quando eles são criados. A vinculação dinâmica inclui apenas as informações necessárias para o Windows em tempo de execução para localizar e carregar a DLL que contém um item de dados ou uma função. Quando você cria uma DLL, você também criar uma biblioteca de importação que contém essas informações. Quando você compila um executável que chama a DLL, o vinculador usa símbolos exportados na biblioteca de importação para armazenar essas informações para o carregador do Windows. Quando o carregador carrega uma DLL, a DLL é mapeada no espaço de memória do seu aplicativo. Se estiver presente, um especial de função na DLL, `DllMain`, é chamado para realizar qualquer inicialização exige que a DLL.
+
+<a name="differences-between-applications-and-dlls"></a>
+
+## <a name="differences-between-applications-and-dlls"></a>Diferenças entre aplicativos e DLLs
+
+Mesmo que os aplicativos e DLLs são os dois módulos executáveis, eles diferem de várias maneiras. Para o usuário final, a diferença mais óbvia é que as DLLs não são aplicativos que podem ser executados diretamente. Do ponto de vista do sistema, há duas diferenças fundamentais entre aplicativos e DLLs:
+
+- Um aplicativo pode ter várias instâncias de si mesmo em execução no sistema ao mesmo tempo, enquanto que uma DLL pode ter apenas uma instância.
+
+- Um aplicativo pode ser carregado como um processo que pode ter coisas como uma pilha, segmentos de execução, memória global, identificadores de arquivos e uma fila de mensagens, mas não de uma DLL.
+
+<a name="advantages-of-using-dlls"></a>
+
+## <a name="advantages-of-using-dlls"></a>Vantagens de usar DLLs
+
+Vinculação dinâmica em vez de vinculação estática de código e recursos oferece diversas vantagens. Quando você usa DLLs, você pode economizar espaço de memória e reduzem as trocas. Quando vários aplicativos podem usar uma única cópia de uma DLL, você pode economizar espaço em disco e fazer o download de largura de banda. DLLs podem ser implantadas e atualizados separadamente, que permite que você fornecer atualizações de software e suporte pós-mercado sem ter que recompilar e enviar todo o seu código. DLLs são uma maneira conveniente de fornecer recursos específicos da localidade, que podem oferecer suporte a vários idiomas programas e facilitar a criação de versões internacionais dos seus aplicativos. A vinculação explícita pode permitir que seu aplicativo descobrir e carregar DLLs em tempo de execução, como extensões que fornecem novos recursos.
+
+A vinculação dinâmica tem as seguintes vantagens:
+
+- Vinculação dinâmica economiza memória e reduz a troca. Muitos processos podem usar uma DLL simultaneamente, compartilhando uma única cópia de partes de uma DLL na memória somente leitura. Por outro lado, cada aplicativo que é criado usando uma biblioteca vinculada estaticamente tem uma cópia completa do código de biblioteca Windows devem carregar na memória.
+
+- A vinculação dinâmica economiza largura de banda e espaço em disco. Muitos aplicativos podem compartilhar uma única cópia da DLL no disco. Por outro lado, cada aplicativo criado usando uma biblioteca de vínculo estático tem o código de biblioteca vinculado a sua imagem executável, que usa mais espaço em disco e leva mais largura de banda para transferir.
+
+- Correções de segurança de manutenção, e os upgrades podem ser mais fácil. Quando seus aplicativos usam funções comuns em uma DLL, em seguida, desde que os argumentos de função e valores de retorno não alterar, você pode implementar correções de bugs e implantar atualizações para a DLL. Quando DLLs são atualizadas, os aplicativos que utilizam não precisarão ser recompilado ou vinculados novamente, e eles usarem a nova DLL assim que ele é implantado. Em contraste, correções feitas no código do objeto vinculado estaticamente exigem que você vincule novamente e reimplantar todos os aplicativos que o utiliza.
+
+- Você pode usar DLLs para fornecer suporte pós-mercado. Por exemplo, um DLL do driver de vídeo pode ser modificado para dar suporte a uma exibição que não estava disponível quando o aplicativo foi enviado. Você pode usar a vinculação explícita ao carregar extensões de aplicativo como DLLs e adicionar novas funcionalidades ao seu aplicativo sem recompilar ou reimplantá-lo.
+
+- A vinculação dinâmica torna mais fácil dar suporte a aplicativos escritos em linguagens de programação diferentes. Programas escritos em linguagens de programação diferentes podem chamar a mesma função DLL, contanto que os programas siga a convenção de chamada da função. Os programas e a função DLL devem ser compatíveis das seguintes maneiras: a ordem na qual a função espera que seus argumentos para ser enviado para a pilha, se a função ou o aplicativo é responsável pela limpeza da pilha e se os argumentos são passados em registros.
+
+- A vinculação dinâmica fornece um mecanismo para estender as classes de biblioteca MFC. Você pode derivar classes de classes existentes do MFC e colocá-los em uma DLL de extensão MFC para uso por aplicativos do MFC.
+
+- A vinculação dinâmica facilita a criação de versões internacionais do seu aplicativo. Ao colocar recursos específicos da localidade em uma DLL, é muito mais fácil criar versões internacionais de um aplicativo. Em vez de envio de várias versões localizadas do seu aplicativo, você pode colocar as imagens para cada idioma e cadeias de caracteres em uma DLL de recursos separado e, em seguida, o aplicativo possa carregar os recursos apropriados para essa localidade em tempo de execução.
+
+Uma desvantagem em potencial do uso de DLLs é que o aplicativo não é autônomo; ele depende da existência de um módulo DLL separada que você deve implantar ou verificar por conta própria como parte de sua instalação.
+
+## <a name="more-information-on-how-to-create-and-use-dlls"></a>Para obter mais informações sobre como criar e usar DLLs
+
+Os tópicos a seguir fornecem informações detalhadas sobre como a DLLs de programa em Visual C++.
+
+[Passo a passo: Criando e usando uma biblioteca de vínculo dinâmico (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md) descreve como criar e usar uma DLL usando o Visual Studio.
+
+[Tipos de DLLs](../build/kinds-of-dlls.md) fornece informações sobre os diferentes tipos de DLLs que podem ser criados.
+
+[Perguntas frequentes sobre o DLL](../build/dll-frequently-asked-questions.md) fornece respostas para perguntas frequentes sobre DLLs.
+
+[Vincular um executável a uma DLL](../build/linking-an-executable-to-a-dll.md) descreve a vinculação explícita e implícita para uma DLL.
+
+[Inicialize um DLL](../build/run-time-library-behavior.md#initializing-a-dll) código de inicialização da DLL discute que deve ser executado quando a DLL é carregada.
+
+[DLLs e comportamento da biblioteca em tempo de execução Visual C++](../build/run-time-library-behavior.md) descreve como a biblioteca de tempo de execução executa a sequência de inicialização da DLL.
+
+[LoadLibrary e AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md) discute o uso **LoadLibrary** e `AfxLoadLibrary` para vincular explicitamente para uma DLL em tempo de execução.
+
+[GetProcAddress](../build/getprocaddress.md) discute o uso **GetProcAddress** para obter o endereço de uma função exportada na DLL.
+
+[FreeLibrary e AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md) discute o uso **FreeLibrary** e `AfxFreeLibrary` quando o módulo DLL não é mais necessário.
+
+[Ordem de pesquisa de biblioteca de vínculo dinâmico](/windows/desktop/Dlls/dynamic-link-library-search-order) descreve o caminho de pesquisa que o sistema operacional Windows usa para localizar uma DLL no sistema.
+
+[Estados de módulo de um Regular MFC DLL vinculada dinamicamente ao MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md) descreve os estados de módulo de uma expressão de DLL do MFC vinculada dinamicamente ao MFC.
+
+[DLLs de extensão MFC](../build/extension-dlls-overview.md) explica as DLLs que normalmente implementam classes reutilizáveis derivadas de classes existentes da biblioteca Microsoft Foundation Class.
+
+[Criando uma DLL Resource-Only](../build/creating-a-resource-only-dll.md) discute uma DLL somente de recursos, que contém nada além de recursos, como ícones, bitmaps, cadeias de caracteres e caixas de diálogo.
+
+[Recursos localizados em aplicativos MFC: DLLs satélite](../build/localized-resources-in-mfc-applications-satellite-dlls.md) fornece suporte avançado para DLLs satélite, um recurso que ajuda na criação de aplicativos localizados para vários idiomas.
+
+[Importando e exportando](../build/importing-and-exporting.md) descreve importando símbolos públicos para um aplicativo ou exportando funções de uma DLL
+
+[Ativos de tecnologia e DLLs](../build/active-technology-and-dlls.md) permite que os servidores de objeto a ser implementada dentro de uma DLL.
+
+[Automação em uma DLL](../build/automation-in-a-dll.md) descreve o que fornece a opção de automação no Assistente de DLL do MFC.
+
+[Convenções de nomenclatura para DLLs MFC](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions) discute como as DLLs e bibliotecas incluídas no MFC seguem uma convenção de nomenclatura estruturada.
+
+[Chamando funções DLL a partir de aplicativos do Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md) descreve como chamar funções de DLL de aplicativos Visual Basic.
+
+## <a name="related-sections"></a>Seções relacionadas
+
+[Usando MFC como parte de uma DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md) descreve DLLs normais do MFC, que permitem que você use a biblioteca do MFC como parte de uma biblioteca de vínculo dinâmico do Windows.
+
+[Versão de DLL do MFC](../mfc/tn033-dll-version-of-mfc.md) descreve como você pode usar o compartilhadas e Mfcxxd (onde x é o número de versão do MFC) compartilhado bibliotecas de vínculo dinâmico com aplicativos do MFC e DLLs de extensão do MFC.

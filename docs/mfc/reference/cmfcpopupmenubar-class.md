@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9dc88b6b4488115390f4e6be57fbba2caadcc01
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 02806f26f623b2f4ad7f19cd67216018da984e42
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853628"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713694"
 ---
 # <a name="cmfcpopupmenubar-class"></a>Classe CMFCPopupMenuBar
 Uma barra de menus inserida em um menu pop-up.  
@@ -140,8 +140,8 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bRecalcLayout*  
- TRUE para recalcular automaticamente o layout do painel de barra de menus pop-up; Caso contrário, FALSE.  
+*bRecalcLayout*<br/>
+[in] TRUE para recalcular automaticamente o layout do painel de barra de menus pop-up; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -153,8 +153,8 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiMenuResID*  
- Especifica a ID do menu do recurso de menu para carregar.  
+*uiMenuResID*<br/>
+[in] Especifica a ID do menu do recurso de menu para carregar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna TRUE se tiver êxito ou FALSE se não.  
@@ -190,8 +190,8 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *ponto*  
- Um ponto na tela.  
+*ponto*<br/>
+[in] Um ponto na tela.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna um identificador para a barra de ferramentas em que se encontra o ponto, se houver um, ou nulo se não.  
@@ -257,11 +257,11 @@ virtual BOOL ImportFromMenu(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *hMenu*  
- O menu do qual importar os botões de menu pop-up.  
+*hMenu*<br/>
+[in] O menu do qual importar os botões de menu pop-up.  
   
- [in] *bShowAllCommands*  
- TRUE se todos os comandos do menu forem importados, ou FALSE se aqueles usados raramente podem estar oculto.  
+*bShowAllCommands*<br/>
+[in] TRUE se todos os comandos do menu forem importados, ou FALSE se aqueles usados raramente podem estar oculto.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retornará TRUE se os botões de menu foram importados com êxito no menu, ou falso se não.  
@@ -325,8 +325,8 @@ BOOL LoadFromHash(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *hMenu*  
- Um identificador para o menu arquivado para carregar.  
+*hMenu*<br/>
+[in] Um identificador para o menu arquivado para carregar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retornará TRUE se o menu é carregada com êxito ou FALSE se não.  
@@ -364,11 +364,11 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nIndex*  
- O índice baseado em zero do botão de barra de ferramentas cujo estilo deve ser definido.  
+*nIndex*<br/>
+[in] O índice baseado em zero do botão de barra de ferramentas cujo estilo deve ser definido.  
   
- [in] *nStyle*  
- O estilo do botão. Ver [estilos de controle de barra de ferramentas](../../mfc/reference/toolbar-control-styles.md) para a lista de estilos de botão de barra de ferramentas disponíveis.  
+*nStyle*<br/>
+[in] O estilo do botão. Ver [estilos de controle de barra de ferramentas](../../mfc/reference/toolbar-control-styles.md) para a lista de estilos de botão de barra de ferramentas disponíveis.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -380,8 +380,8 @@ void SetOffset(int iOffset);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iOffset*  
- O número de linhas que a barra de menus pop-up deve ser deslocada.  
+*iOffset*<br/>
+[in] O número de linhas que a barra de menus pop-up deve ser deslocada.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -395,11 +395,11 @@ void StartPopupMenuTimer(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pMenuButton*  
- Ponteiro para o botão de menu para o qual definir o temporizador de atraso.  
+*pMenuButton*<br/>
+[in] Ponteiro para o botão de menu para o qual definir o temporizador de atraso.  
   
- [in] *nDelayFactor*  
- Um fator atraso, de igual a pelo menos um, multiplicar pelo tempo de atraso de menu padrão (geralmente entre uma metade de um segundo e cinco segundos).  
+*nDelayFactor*<br/>
+[in] Um fator atraso, de igual a pelo menos um, multiplicar pelo tempo de atraso de menu padrão (geralmente entre uma metade de um segundo e cinco segundos).  
   
 ### <a name="remarks"></a>Comentários  
   

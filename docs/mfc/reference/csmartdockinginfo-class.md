@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a900ab0e0307cd059aaeb6f4333ef6d28f98dad6
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: efd214e4368e122a800e51e9bd90cb72a6a4616b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849809"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725849"
 ---
 # <a name="csmartdockinginfo-class"></a>Classe CSmartDockingInfo
 Define a aparência de marcadores inteligentes de encaixe.  
@@ -119,8 +119,8 @@ void CopyTo(CSmartDockingInfo& params);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *param. autom.*  
- Um objeto do tipo `CSmartDockingInfo` que é preenchida com os parâmetros atuais de encaixe inteligentes.  
+*params*<br/>
+[out] Um objeto do tipo `CSmartDockingInfo` que é preenchida com os parâmetros atuais de encaixe inteligentes.  
   
 ##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading  
  Especifica se deve usar a cor do tema atual quando o framework exibe marcadores inteligentes de encaixe.  

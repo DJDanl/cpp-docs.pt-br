@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 597adf6d7a32b537f31f9a824049dc9ffedf899f
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 6cececaa0380f2e3806348e40debbf9b9ca2c351
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037838"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705231"
 ---
 # <a name="cmfcbasetoolbar-class"></a>Classe CMFCBaseToolBar
 Classe base para as barras de ferramentas.  
@@ -54,7 +54,7 @@ class CMFCBaseToolBar : public CPane
 |`CMFCBaseToolBar::CreateObject`|Usado pelo framework para criar uma instância dinâmica desse tipo de classe.|  
 |[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Retorna o modo de encaixe. (Substitui [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|  
 |[CMFCBaseToolBar::GetMinSize](#getminsize)|Retorna o tamanho mínimo de uma barra de ferramentas. (Substitui [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|  
-|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Chamado pelo framework depois das alterações do pai do painel. (Substitui [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|  
+|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Chamado pelo framework após as alterações do pai do painel. (Substitui [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -90,20 +90,20 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *tamanho*  
- O tamanho mínimo de uma barra de ferramentas.  
+*size*<br/>
+[out] O tamanho mínimo de uma barra de ferramentas.  
   
 ##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent  
- Chamado pelo framework depois das alterações do pai do painel.  
+ Chamado pelo framework após as alterações do pai do painel.  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWndOldParent*  
- Um ponteiro para a janela pai anterior.  
+*pWndOldParent*<br/>
+[in] Um ponteiro para a janela pai anterior.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)

@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f40fbed217bde0cfe0e917100a18bbdea91f0a8f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 142b88cf58369f09be4e06ed47fef94b845dfe71
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200340"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726018"
 ---
 # <a name="hashset-class"></a>Classe hash_set
 
@@ -122,13 +122,13 @@ class hash_set
 ### <a name="parameters"></a>Parâmetros
 
 *Chave*<br/>
- O tipo de dados do elemento a ser armazenado no hash_set.
+O tipo de dados do elemento a ser armazenado no hash_set.
 
 *Características*<br/>
- O tipo que inclui dois objetos de função: um da classe compare que é um predicado binário capaz de comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa e uma função de hash que é um valores de chave de mapeamento de predicado unário dos elementos para sem sinal inteiros do tipo `size_t`. Esse argumento é opcional e o `hash_compare<Key, less<Key> >` é o valor padrão.
+O tipo que inclui dois objetos de função: um da classe compare que é um predicado binário capaz de comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa e uma função de hash que é um valores de chave de mapeamento de predicado unário dos elementos para sem sinal inteiros do tipo `size_t`. Esse argumento é opcional e o `hash_compare<Key, less<Key> >` é o valor padrão.
 
 *Alocador*<br/>
- O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre a alocação e a desalocação de memória do hash_set. Esse argumento é opcional e o valor padrão é `allocator<Key>`.
+O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre a alocação e a desalocação de memória do hash_set. Esse argumento é opcional e o valor padrão é `allocator<Key>`.
 
 ## <a name="remarks"></a>Comentários
 
@@ -563,7 +563,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- O valor dos elementos a serem correspondidos do hash_set.
+O valor dos elementos a serem correspondidos do hash_set.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -731,8 +731,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::diff
 
 ### <a name="remarks"></a>Comentários
 
-
-          `difference_type` é o tipo retornado ao subtrair ou incrementar por meio de iteradores do contêiner. `difference_type` geralmente é usado para representar o número de elementos no intervalo [`first`, `last`) entre os iteradores `first` e `last`, inclui o elemento apontado por `first` e o intervalo de elementos até, mas sem incluir, o elemento apontado por `last`.
+`difference_type` é o tipo retornado ao subtrair ou incrementar por meio de iteradores do contêiner. `difference_type` geralmente é usado para representar o número de elementos no intervalo [`first`, `last`) entre os iteradores `first` e `last`, inclui o elemento apontado por `first` e o intervalo de elementos até, mas sem incluir, o elemento apontado por `last`.
 
 Observe que, embora `difference_type` esteja disponível para todos os iteradores que atendem aos requisitos de um iterador de entrada, que inclui a classe de iteradores bidirecionais com suporte por contêineres reversíveis como conjunto, subtração entre iteradores só tem suporte por iteradores de acesso aleatório fornecidos por um contêiner de acesso aleatório, como vetor ou deque.
 
@@ -1031,7 +1030,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_set que está sendo pesquisado.
+A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_set que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1118,16 +1117,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>Parâmetros
 
 *_Where*<br/>
- Posição do elemento a ser removido do hash_set.
+Posição do elemento a ser removido do hash_set.
 
 *first*<br/>
- Posição do primeiro elemento removido do hash_set.
+Posição do primeiro elemento removido do hash_set.
 
 *last*<br/>
- Posição logo após o último elemento removido do hash_set.
+Posição logo após o último elemento removido do hash_set.
 
 *key*<br/>
- A chave dos elementos a serem removidos do hash_set.
+A chave dos elementos a serem removidos do hash_set.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1236,7 +1235,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- A chave do argumento que deve corresponder à chave de classificação de um elemento do hash_set que está sendo pesquisado.
+A chave do argumento que deve corresponder à chave de classificação de um elemento do hash_set que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1662,7 +1661,7 @@ iterator lower_bound(const Key& key);
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_set que está sendo pesquisado.
+A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_set que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2152,7 +2151,7 @@ void swap(hash_set& right);
 ### <a name="parameters"></a>Parâmetros
 
 *right*<br/>
- O hash_set do argumento que fornece os elementos a serem trocados com o hash_set de destino.
+O hash_set do argumento que fornece os elementos a serem trocados com o hash_set de destino.
 
 ### <a name="remarks"></a>Comentários
 
@@ -2228,7 +2227,7 @@ iterator upper_bound(const Key& key);
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_set que está sendo pesquisado.
+A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_set que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 

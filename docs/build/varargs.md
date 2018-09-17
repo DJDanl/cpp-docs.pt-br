@@ -12,15 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e7b71cd426bc89570f9d394f3e38dc7a002f6e8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8305eaddf87a2e67b797bedff1944dbcbbbdbd41
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380502"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713635"
 ---
 # <a name="varargs"></a>Varargs
-Se os parâmetros são passados por meio de varargs (por exemplo, argumentos de reticências), essencialmente o parâmetro normal passando aplica incluindo derramada os argumentos quinto e subsequentes. Novamente, é responsabilidade do receptor argumentos de despejo que ter seus endereços obtidos. Para valores de ponto flutuante somente, o número inteiro e o registro de ponto flutuante conterá o valor de float caso o chamador espera que o valor nos registradores inteiro.  
-  
-## <a name="see-also"></a>Consulte também  
- [Convenção de chamada](../build/calling-convention.md)
+
+Se os parâmetros são passados por meio de varargs (por exemplo, argumentos de reticências), essencialmente, o parâmetro normal passando aplica incluindo despejar os argumentos subsequentes e quintas. Novamente é responsabilidade do computador chamado argumentos de despejo que ter seus endereços obtidos. Para valores de ponto flutuante somente, o inteiro e o registro de ponto flutuante conterá o valor de float, caso o receptor espera que o valor em registros de inteiros.
+
+## <a name="see-also"></a>Consulte também
+
+[Convenção de chamada](../build/calling-convention.md)

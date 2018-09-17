@@ -248,12 +248,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbd12c98014e2adfe9617f0bdaac891f33ebc600
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 866cdc59157aa39a3c6ecbece225d1789cfec789
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693920"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712563"
 ---
 # <a name="cmfcbasetabctrl-class"></a>Classe CMFCBaseTabCtrl
 Implementa a funcionalidade básica para janelas com guias.  
@@ -436,11 +436,11 @@ void AddIcon(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *hIcon*  
- Um identificador para o ícone a ser adicionado.  
+*hIcon*<br/>
+[in] Um identificador para o ícone a ser adicionado.  
   
- [in] *ícone*  
- O índice baseado em zero do ícone no protegido `CImageList m_Images` membro.  
+*Ícone*<br/>
+[in] O índice baseado em zero do ícone no protegido `CImageList m_Images` membro.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -463,20 +463,20 @@ virtual void AddTab(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pTabWnd*  
- Um ponteiro para a janela que esse método como uma nova guia.  
+*pTabWnd*<br/>
+[in] Um ponteiro para a janela que esse método como uma nova guia.  
   
- [in] *lpszTabLabel*  
- Uma cadeia de caracteres que contém o rótulo para a nova guia.  
+*lpszTabLabel*<br/>
+[in] Uma cadeia de caracteres que contém o rótulo para a nova guia.  
   
- [in] *uiImageId*  
- Uma ID de imagem da lista de imagens. O controle de guia usa essa imagem como o ícone para a nova guia.  
+*uiImageId*<br/>
+[in] Uma ID de imagem da lista de imagens. O controle de guia usa essa imagem como o ícone para a nova guia.  
   
- [in] *uiResTabLabel*  
- A ID de recurso para o rótulo.  
+*uiResTabLabel*<br/>
+[in] A ID de recurso para o rótulo.  
   
- [in] *bDetachable*  
- Um parâmetro booliano que determina se a nova guia é removível.  
+*bDetachable*<br/>
+[in] Um parâmetro booliano que determina se a nova guia é removível.  
   
 ### <a name="remarks"></a>Comentários  
  Se *pTabWnd* aponta para um objeto que não é derivado da [classe CDockablePane](../../mfc/reference/cdockablepane-class.md) e, se *bDetachable* for TRUE, o framework cria automaticamente um wrapper para o *pTabWnd* objeto. O wrapper torna a *pTabWnd* destacável do objeto. Por padrão, o wrapper é uma instância das [classe CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Se a funcionalidade oferecida pelo wrapper padrão for inaceitável, use o [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) método para especificar um wrapper diferente.  
@@ -546,14 +546,14 @@ virtual CWnd* CreateWrapper(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWndToWrap*  
- Um ponteiro para a janela do quadro que é encapsulado.  
+*pWndToWrap*<br/>
+[in] Um ponteiro para a janela do quadro que é encapsulado.  
   
- [in] *lpszTabLabel*  
- Uma cadeia de caracteres que contém o rótulo para a janela.  
+*lpszTabLabel*<br/>
+[in] Uma cadeia de caracteres que contém o rótulo para a janela.  
   
- [in] *bDetachable*  
- Um parâmetro booliano que indica se a janela é removível.  
+*bDetachable*<br/>
+[in] Um parâmetro booliano que indica se a janela é removível.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o wrapper derivado de `CDockablePane` classe se `CreateWrapper` com êxito, cria uma classe wrapper para *pWndToWrap*. Se o método falhar, ele retruns *pWndToWrap*.  
@@ -576,14 +576,14 @@ virtual BOOL DetachTab(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *dockMethod*  
- Um tipo de dados enumerado fornecido pelo [classe CBasePane](../../mfc/reference/cbasepane-class.md). Esse tipo de dados especifica o método que foi usado para desanexar a guia.  
+*dockMethod*<br/>
+[in] Um tipo de dados enumerado fornecido pelo [classe CBasePane](../../mfc/reference/cbasepane-class.md). Esse tipo de dados especifica o método que foi usado para desanexar a guia.  
   
- [in] *nTabNum*  
- O índice baseado em zero da guia a ser desanexado.  
+*nTabNum*<br/>
+[in] O índice baseado em zero da guia a ser desanexado.  
   
- [in] *bHide*  
- Um parâmetro booliano que indica se a estrutura deve ocultar a guia desanexada.  
+*bHide*<br/>
+[in] Um parâmetro booliano que indica se a estrutura deve ocultar a guia desanexada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se bem-sucedido; Caso contrário, 0.  
@@ -611,8 +611,8 @@ void EnableAutoColor(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- Um parâmetro booliano que determina se a estrutura usa cores automáticas.  
+*bAtivar*<br/>
+[in] Um parâmetro booliano que determina se a estrutura usa cores automáticas.  
   
 ### <a name="remarks"></a>Comentários  
  Um controle guia tem uma matriz de várias cores predefinidas. Quando a estrutura usa cores automáticas, cada guia em uma série de guias é atribuído a próxima cor dessa matriz.  
@@ -627,8 +627,8 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- Um booliano que determina se deve usar dicas de ferramenta personalizadas.  
+*bAtivar*<br/>
+[in] Um booliano que determina se deve usar dicas de ferramenta personalizadas.  
   
 ### <a name="return-value"></a>Valor de retorno  
  VERDADEIRO se bem-sucedido; Caso contrário, FALSE.  
@@ -644,8 +644,8 @@ virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- Um parâmetro booliano que especifica se deseja habilitar a edição direta dos rótulos de guia.  
+*bAtivar*<br/>
+[in] Um parâmetro booliano que especifica se deseja habilitar a edição direta dos rótulos de guia.  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, a edição direta dos rótulos de guia está desabilitado para controles guia.  
@@ -664,11 +664,11 @@ virtual BOOL EnableTabDetach(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero de uma guia.  
+*iTab*<br/>
+[in] O índice baseado em zero de uma guia.  
   
- [in] *bAtivar*  
- Um booliano que indica se deve ser feita na guia destacável.  
+*bAtivar*<br/>
+[in] Um booliano que indica se deve ser feita na guia destacável.  
   
 ### <a name="return-value"></a>Valor de retorno  
  VERDADEIRO se bem-sucedido; Caso contrário, FALSE.  
@@ -681,8 +681,8 @@ void EnableTabSwap(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- Um booliano que indica se é para habilitar a alternância de guia.  
+*bAtivar*<br/>
+[in] Um booliano que indica se é para habilitar a alternância de guia.  
   
 ### <a name="remarks"></a>Comentários  
  Quando a troca de guia está habilitado, o usuário pode arrastar uma guia e alterar sua posição relativa no controle guia.  
@@ -695,8 +695,8 @@ virtual BOOL EnsureVisible(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero de uma guia.  
+*iTab*<br/>
+[in] O índice baseado em zero de uma guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se bem-sucedido; Caso contrário, 0.  
@@ -723,8 +723,8 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pt*  
- Coordenadas de um ponto que é definido usando a área de cliente da [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) objeto.  
+*pt*<br/>
+[in] Coordenadas de um ponto que é definido usando a área de cliente da [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para um [CWnd](../../mfc/reference/cwnd-class.md) objeto se for bem-sucedido; caso contrário, NULL.  
@@ -830,11 +830,11 @@ virtual CWnd* GetFirstVisibleTab(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *iTabNum*  
- Uma referência a um número inteiro. Esse método grava o índice baseado em zero da primeira guia visível para esse parâmetro.  
+*iTabNum*<br/>
+[out] Uma referência a um número inteiro. Esse método grava o índice baseado em zero da primeira guia visível para esse parâmetro.  
   
- [in] *iStartFrom*  
- O índice baseado em zero da primeira guia para verificar.  
+*iStartFrom*<br/>
+[in] O índice baseado em zero da primeira guia para verificar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para a primeira guia visível se bem-sucedido; Caso contrário, nulo.  
@@ -935,11 +935,11 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *rectTabAreaTop*  
- Uma referência a um objeto `CRect`. `GetTabArea` usa esse objeto para armazenar o tamanho e posição da área da guia superior.  
+*rectTabAreaTop*<br/>
+[in] Uma referência a um `CRect` objeto. `GetTabArea` usa esse objeto para armazenar o tamanho e posição da área da guia superior.  
   
- [in] *rectTabAreaBottom*  
- Uma referência a um objeto `CRect`. `GetTabArea` usa esse objeto para armazenar o tamanho e posição da área da guia inferior.  
+*rectTabAreaBottom*<br/>
+[in] Uma referência a um `CRect` objeto. `GetTabArea` usa esse objeto para armazenar o tamanho e posição da área da guia inferior.  
   
 ### <a name="remarks"></a>Comentários  
  Após `GetTabArea` retorna, o `CRect` parâmetros contêm o tamanho e posição da área da guia em coordenadas de cliente do controle guia. Se não houver nenhuma área da guia na parte superior ou inferior do controle guia, `rectTabAreaTop` ou `rectTabAreaBottom` estão vazios.  
@@ -954,8 +954,8 @@ virtual COLORREF GetTabBkColor(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero da guia.  
+*iTab*<br/>
+[in] O índice baseado em zero da guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um [COLORREF](/windows/desktop/gdi/colorref) valor que indica a cor do plano de fundo da guia especificada; -1 se *iTab* está fora do intervalo.  
@@ -981,8 +981,8 @@ virtual int GetTabByID(int id) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *id*  
- Uma ID de guia.  
+*id*<br/>
+[in] Uma ID de guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O índice baseado em zero de uma guia se ela for encontrada; -1 se a ID de guia não for encontrada.  
@@ -1009,8 +1009,8 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *hwnd*  
- O identificador de uma janela.  
+*HWND*<br/>
+[in] Um identificador para uma janela.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O índice baseado em zero da guia se for bem-sucedido; -1 se a guia não contém *hwnd*.  
@@ -1023,8 +1023,8 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pt*  
- Um ponto em coordenadas de cliente do controle guia.  
+*pt*<br/>
+[in] Um ponto em coordenadas de cliente do controle guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O índice do guia que contém *pt*; -1 se a guia não contém *pt*.  
@@ -1051,8 +1051,8 @@ virtual HICON GetTabHicon(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero da guia.  
+*iTab*<br/>
+[in] O índice baseado em zero da guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O HICON associado com um rótulo de guia se for bem-sucedido; NULL se não houver nenhum HICON ou se o método falhar.  
@@ -1065,8 +1065,8 @@ virtual UINT GetTabIcon(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero da guia.  
+*iTab*<br/>
+[in] O índice baseado em zero da guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
  A ID de ícone para a guia especificada se bem-sucedido; -1 se o índice é inválido.  
@@ -1082,8 +1082,8 @@ int GetTabID(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero da guia.  
+*iTab*<br/>
+[in] O índice baseado em zero da guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Uma ID de guia ou -1 se *iTab* está fora do intervalo.  
@@ -1098,11 +1098,11 @@ virtual BOOL GetTabLabel(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero da guia.  
+*iTab*<br/>
+[in] O índice baseado em zero da guia.  
   
- [out] *strLabel*  
- Uma referência a um objeto `CString`. Este método armazena o rótulo da guia nesse parâmetro.  
+*strLabel*<br/>
+[out] Uma referência a um `CString` objeto. Este método armazena o rótulo da guia nesse parâmetro.  
   
 ### <a name="return-value"></a>Valor de retorno  
  VERDADEIRO se bem-sucedido; FALSE caso contrário.  
@@ -1122,11 +1122,11 @@ virtual BOOL GetTabRect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero da guia.  
+*iTab*<br/>
+[in] O índice baseado em zero da guia.  
   
- [out] *rect*  
- Uma referência a um objeto `CRect`. Este método armazena o tamanho e posição da guia nesse parâmetro.  
+*Rect*<br/>
+[out] Uma referência a um `CRect` objeto. Este método armazena o tamanho e posição da guia nesse parâmetro.  
   
 ### <a name="return-value"></a>Valor de retorno  
  VERDADEIRO se bem-sucedido; FALSE se o índice de tabulação é inválido.  
@@ -1172,8 +1172,8 @@ virtual COLORREF GetTabTextColor(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero da guia.  
+*iTab*<br/>
+[in] O índice baseado em zero da guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um [COLORREF](/windows/desktop/gdi/colorref) parâmetro que indica a cor do texto da guia especificada; -1 se *iTab* está fora do intervalo.  
@@ -1186,8 +1186,8 @@ virtual CWnd* GetTabWnd(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero de uma guia.  
+*iTab*<br/>
+[in] O índice baseado em zero de uma guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o [CWnd](../../mfc/reference/cwnd-class.md) objeto reside na guia que *iTab* especifica. NULL se *iTab* é inválido.  
@@ -1205,8 +1205,8 @@ virtual CWnd* GetTabWndNoWrapper(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero de uma guia.  
+*iTab*<br/>
+[in] O índice baseado em zero de uma guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o [CWnd](../../mfc/reference/cwnd-class.md) objeto reside na guia especificada. NULL se *iTab* é inválido.  
@@ -1258,8 +1258,8 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bHide*  
- Um booliano que especifica se deseja habilitar ocultar guias únicas.  
+*bHide*<br/>
+[in] Um booliano que especifica se deseja habilitar ocultar guias únicas.  
   
 ### <a name="remarks"></a>Comentários  
  Quando seu aplicativo é configurado para ocultar guias únicas, a estrutura automaticamente exibe as guias, quando uma segunda guia é adicionada ao controle guia.  
@@ -1285,23 +1285,23 @@ virtual void InsertTab(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pNewWnd*  
- Um ponteiro para a janela que esse método adiciona como uma nova guia.  
+*pNewWnd*<br/>
+[in] Um ponteiro para a janela que esse método adiciona como uma nova guia.  
   
- [in] *lpszTabLabel*  
- Uma cadeia de caracteres que contém o rótulo para a nova guia.  
+*lpszTabLabel*<br/>
+[in] Uma cadeia de caracteres que contém o rótulo para a nova guia.  
   
- [in] *nInsertAt*  
- O índice baseado em zero da nova guia.  
+*nInsertAt*<br/>
+[in] O índice baseado em zero da nova guia.  
   
- [in] *uiImageId*  
- Uma ID de imagem da lista de imagens. O controle de guia usa essa imagem como o ícone para a nova guia.  
+*uiImageId*<br/>
+[in] Uma ID de imagem da lista de imagens. O controle de guia usa essa imagem como o ícone para a nova guia.  
   
- [in] *bDetachable*  
- Um parâmetro booliano que determina se a nova guia é removível.  
+*bDetachable*<br/>
+[in] Um parâmetro booliano que determina se a nova guia é removível.  
   
- [in] *uiResTabLabel*  
- A ID de recurso para o rótulo.  
+*uiResTabLabel*<br/>
+[in] A ID de recurso para o rótulo.  
   
 ### <a name="remarks"></a>Comentários  
  Se o objeto indicado por *pNewWnd* não é derivado da [classe CDockablePane](../../mfc/reference/cdockablepane-class.md) e, se o *bDetachable* parâmetro for TRUE, o framework cria um wrapper especial para a nova guia. Por padrão, o wrapper é uma instância das [classe CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Use o [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) método para criar uma classe wrapper diferentes. Qualquer classe de wrapper personalizado precisa ser derivado de `CDockablePaneAdapter`.  
@@ -1435,8 +1435,8 @@ BOOL IsIconAdded(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *hIcon*  
- [in] *ícone*  
+*hIcon*<br/>
+[in] [in] *ícone*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -1500,8 +1500,8 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *ponto*  
- Ponto a ser testado.  
+*ponto*<br/>
+[in] Ponto a ser testado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o ponto está na área da guia; Caso contrário, 0.  
@@ -1539,8 +1539,8 @@ virtual BOOL IsTabDetachable(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero da guia para verificar.  
+*iTab*<br/>
+[in] O índice baseado em zero da guia para verificar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a guia é destacável; FALSE caso contrário.  
@@ -1556,8 +1556,8 @@ virtual BOOL IsTabIconOnly(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero da guia.  
+*iTab*<br/>
+[in] O índice baseado em zero da guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se um rótulo de guia tem apenas ícones; FALSE caso contrário.  
@@ -1586,8 +1586,8 @@ virtual BOOL IsTabVisible(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero da guia para verificar.  
+*iTab*<br/>
+[in] O índice baseado em zero da guia para verificar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se a guia especificada estiver visível; Caso contrário, 0.  
@@ -1633,8 +1633,8 @@ virtual void MoveTab(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *origem*  
- [in] *nDest*  
+*Origem*<br/>
+[in] [in] *nDest*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1660,8 +1660,8 @@ virtual BOOL OnDrop(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *COleDataObject**  
- [in] *DROPEFFECT*  
- [in] *CPoint*  
+*DROPEFFECT*<br/>
+[in] [in] *CPoint*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -1679,8 +1679,8 @@ virtual DROPEFFECT OnDragOver(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *COleDataObject**  
- [in] *DWORD*  
- [in] *CPoint*  
+*DWORD*<br/>
+[in] [in] *CPoint*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -1707,8 +1707,8 @@ virtual DROPEFFECT OnDragEnter(
   
 ### <a name="parameters"></a>Parâmetros  
  [in] *COleDataObject**  
- [in] *DWORD*  
- [in] *CPoint*  
+*DWORD*<br/>
+[in] [in] *CPoint*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -1722,8 +1722,8 @@ virtual BOOL OnRenameTab(int, CString&);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *int*  
- [in] *CString &*  
+*int*<br/>
+[in] [in] *CString &*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -1773,11 +1773,11 @@ virtual BOOL RemoveTab(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero de uma guia.  
+*iTab*<br/>
+[in] O índice baseado em zero de uma guia.  
   
- [in] *bRecalcLayout*  
- Um parâmetro booliano que especifica se é necessário recalcular o layout da guia.  
+*bRecalcLayout*<br/>
+[in] Um parâmetro booliano que especifica se é necessário recalcular o layout da guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o método remove a guia com êxito; Caso contrário, FALSE.  
@@ -1823,8 +1823,8 @@ virtual BOOL SetActiveTab(int iTab) = 0;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero de uma guia `SetActiveTab` torna a guia com este índice de Active Directory.  
+*iTab*<br/>
+[in] O índice baseado em zero de uma guia `SetActiveTab` torna a guia com este índice de Active Directory.  
   
 ### <a name="return-value"></a>Valor de retorno  
  VERDADEIRO se bem-sucedido; Caso contrário, FALSE.  
@@ -1840,8 +1840,8 @@ virtual void SetActiveTabColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *clr*  
- Especifica a nova cor de plano de fundo.  
+*CLR*<br/>
+[in] Especifica a nova cor de plano de fundo.  
   
 ### <a name="remarks"></a>Comentários  
  O framework obtém a cor de fundo padrão para o Active Directory guias dos [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)método.  
@@ -1854,8 +1854,8 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *clr*  
- Um [COLORREF](/windows/desktop/gdi/colorref) parâmetro que especifica a cor do texto novo.  
+*CLR*<br/>
+[in] Um [COLORREF](/windows/desktop/gdi/colorref) parâmetro que especifica a cor do texto novo.  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, o framework obtém a cor do texto do [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor). Substituir essa cor padrão usando o `SetActiveTabTextColor` método.  
@@ -1868,8 +1868,8 @@ void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *arColors*  
- Uma matriz de cores RGB.  
+*arColors*<br/>
+[in] Uma matriz de cores RGB.  
   
 ### <a name="remarks"></a>Comentários  
  Se você fornecer uma matriz personalizada de cores, a matriz de padrão de cores é ignorada. Se o parâmetro *arColors* está vazio, a estrutura será revertido para a matriz de padrão de cores.  
@@ -1884,8 +1884,8 @@ void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pRTC*  
- As informações de classe de tempo de execução para a nova classe de wrapper.  
+*pRTC*<br/>
+[in] As informações de classe de tempo de execução para a nova classe de wrapper.  
   
 ### <a name="remarks"></a>Comentários  
  Adicionar guias a um controle de guia usando os métodos [CMFCBaseTabCtrl::AddTab](#addtab) e [CMFCBaseTabCtrl::InsertTab](#inserttab). Quando você adiciona uma guia, cada controle nessa guia deve ser encaixável. Todos os objetos que não são derivados de `CDockablePane` devem ser encapsuladas. `AddTab` e `InsertTab` criar um wrapper para esses objetos. A classe de wrapper padrão é o [classe CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). O método `SetDockingBarWrapperRTC` permite que você altere a classe que é usada como uma classe wrapper. A classe de wrapper que você fornecer deve ser derivada de `CDockablePaneAdapter`.  
@@ -1900,11 +1900,11 @@ void SetDrawNoPrefix(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bNoPrefix*  
- TRUE se você quiser processar caracteres de prefixo; Caso contrário, FALSE.  
+*bNoPrefix*<br/>
+[in] TRUE se você quiser processar caracteres de prefixo; Caso contrário, FALSE.  
   
- [in] *bRedraw*  
- TRUE se você deseja redesenhar a janela com guias; Caso contrário, FALSE.  
+*bRedraw*<br/>
+[in] TRUE se você deseja redesenhar a janela com guias; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
  Um caractere de prefixo é um caractere mnemônico é precedido por um e comercial (&).  
@@ -1922,17 +1922,17 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiID*  
- Uma ID de recurso de bitmap. `SetImageList` carrega a lista de imagens desse recurso.  
+*uiID*<br/>
+[in] Uma ID de recurso de bitmap. `SetImageList` carrega a lista de imagens desse recurso.  
   
- [in] *cx*  
- A largura de cada imagem em pixels.  
+*CX*<br/>
+[in] A largura de cada imagem em pixels.  
   
- [in] *clrTransp*  
- Um [COLORREF](/windows/desktop/gdi/colorref) parâmetro que indica a cor transparente da imagem.  
+*clrTransp*<br/>
+[in] Um [COLORREF](/windows/desktop/gdi/colorref) parâmetro que indica a cor transparente da imagem.  
   
- [in] *hImageList*  
- Um identificador para uma lista de imagem pré-carregada.  
+*hImageList*<br/>
+[in] Um identificador para uma lista de imagem pré-carregada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o método foi bem-sucedida; Caso contrário, 0.  
@@ -1966,11 +1966,11 @@ virtual BOOL SetTabBkColor(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero da guia.  
+*iTab*<br/>
+[in] O índice baseado em zero da guia.  
   
- [in] *cor*  
- A cor a ser definido.  
+*Cor*<br/>
+[in] A cor a ser definido.  
   
 ### <a name="return-value"></a>Valor de retorno  
  VERDADEIRO se bem-sucedido; FALSE caso contrário.  
@@ -1985,11 +1985,11 @@ virtual void SetTabBorderSize(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nTabBorderSize*  
- O novo tamanho de borda, em pixels.  
+*nTabBorderSize*<br/>
+[in] O novo tamanho de borda, em pixels.  
   
- [in] *bRepaint*  
- Um parâmetro booliano que indica se o framework redesenha o controle.  
+*bRepaint*<br/>
+[in] Um parâmetro booliano que indica se o framework redesenha o controle.  
   
 ##  <a name="settabhicon"></a>  CMFCBaseTabCtrl::SetTabHicon  
  Define o ícone para um rótulo de guia.  
@@ -2001,11 +2001,11 @@ virtual BOOL SetTabHicon(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero de uma guia. Esse método altera o ícone para esta guia.  
+*iTab*<br/>
+[in] O índice baseado em zero de uma guia. Esse método altera o ícone para esta guia.  
   
- [in] *hIcon*  
- Um identificador para um ícone.  
+*hIcon*<br/>
+[in] Um identificador para um ícone.  
   
 ### <a name="return-value"></a>Valor de retorno  
  VERDADEIRO se bem-sucedido; Caso contrário, FALSE.  
@@ -2020,11 +2020,11 @@ virtual BOOL SetTabIcon(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero da guia para atualizar.  
+*iTab*<br/>
+[in] O índice baseado em zero da guia para atualizar.  
   
- [in] *uiIcon*  
- A ID de ícone para o novo ícone. Essa ID faz referência interna [CImageList](../../mfc/reference/cimagelist-class.md) objeto.  
+*uiIcon*<br/>
+[in] A ID de ícone para o novo ícone. Essa ID faz referência interna [CImageList](../../mfc/reference/cimagelist-class.md) objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
  VERDADEIRO se bem-sucedido; Caso contrário, FALSE.  
@@ -2040,14 +2040,14 @@ virtual BOOL SetTabIconOnly(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero da guia para alterar.  
+*iTab*<br/>
+[in] O índice baseado em zero da guia para alterar.  
   
- [in] *bIconOnly*  
- Um parâmetro booliano que determina se devem ser exibidos apenas os ícones.  
+*bIconOnly*<br/>
+[in] Um parâmetro booliano que determina se devem ser exibidos apenas os ícones.  
   
- [in] *bShowTooltipAlways*  
- Um parâmetro booliano que determina se o framework mostra as dicas de ferramenta para um rótulo de guia que exibe apenas os ícones.  
+*bShowTooltipAlways*<br/>
+[in] Um parâmetro booliano que determina se o framework mostra as dicas de ferramenta para um rótulo de guia que exibe apenas os ícones.  
   
 ### <a name="return-value"></a>Valor de retorno  
  VERDADEIRO se bem-sucedido; Caso contrário, FALSE.  
@@ -2065,11 +2065,11 @@ virtual BOOL SetTabLabel(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero da guia para atualizar.  
+*iTab*<br/>
+[in] O índice baseado em zero da guia para atualizar.  
   
- [in] *strLabel*  
- Uma referência a uma cadeia de caracteres que contém o novo texto para o rótulo de guia.  
+*strLabel*<br/>
+[in] Uma referência a uma cadeia de caracteres que contém o novo texto para o rótulo de guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se bem-sucedido; Caso contrário, 0.  
@@ -2091,8 +2091,8 @@ BOOL SetTabsOrder(const CArray<int,int>& arOrder);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *arOrder*  
- Uma matriz de índices com base em zero que define a nova ordem de tabulação.  
+*arOrder*<br/>
+[in] Uma matriz de índices com base em zero que define a nova ordem de tabulação.  
   
 ### <a name="return-value"></a>Valor de retorno  
  VERDADEIRO se bem-sucedido; FALHE caso contrário.  
@@ -2110,11 +2110,11 @@ virtual BOOL SetTabTextColor(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero da guia.  
+*iTab*<br/>
+[in] O índice baseado em zero da guia.  
   
- [in] *cor*  
- Um [COLORREF](/windows/desktop/gdi/colorref) parâmetro que indica a cor do texto novo.  
+*Cor*<br/>
+[in] Um [COLORREF](/windows/desktop/gdi/colorref) parâmetro que indica a cor do texto novo.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se bem-sucedido; Caso contrário, 0.  
@@ -2131,17 +2131,17 @@ virtual BOOL ShowTab(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice da guia que `ShowTab` será mostrar ou ocultar.  
+*iTab*<br/>
+[in] O índice da guia que `ShowTab` será mostrar ou ocultar.  
   
- [in] *bMostrar*  
- Um parâmetro booliano que indica se deve mostrar a guia.  
+*bMostrar*<br/>
+[in] Um parâmetro booliano que indica se deve mostrar a guia.  
   
- [in] *bRecalcLayout*  
- Um parâmetro booliano que indica se é recalcular imediatamente o layout da janela.  
+*bRecalcLayout*<br/>
+[in] Um parâmetro booliano que indica se é recalcular imediatamente o layout da janela.  
   
- [in] *bActivate*  
- Um parâmetro booliano que indica se é necessário selecionar a guia especificada por *iTab*.  
+*bActivate*<br/>
+[in] Um parâmetro booliano que indica se é necessário selecionar a guia especificada por *iTab*.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se bem-sucedido; Caso contrário, 0.  
@@ -2173,8 +2173,8 @@ virtual void SwapTabs(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nFisrtTabID*  
- [in] *nSecondTabID*  
+*nFisrtTabID*<br/>
+[in] [in] *nSecondTabID*  
   
 ### <a name="remarks"></a>Comentários  
   

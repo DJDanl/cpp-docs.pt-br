@@ -22,55 +22,58 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f28051f5d7aaaa4606fffa4d4c94fb2086031419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 527f326d629bc8d41efcd73a938994570bed4d2e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375835"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725906"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (gerar funções intrínsecas)
-Substitui a alguma função chama com formulários intrínsecos ou outra forma especiais da função que ajudam a seu aplicativo é executado mais rapidamente.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-/Oi[-]  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Programas que usam funções intrínsecas são mais rápidos porque não tem a sobrecarga das chamadas de função, mas pode ser maiores devido ao código adicional criado.  
-  
- Consulte [intrínseco](../../preprocessor/intrinsic.md) para obter mais informações, no qual funções têm intrínsecos formulários.  
-  
- **/Oi** é apenas uma solicitação para o compilador para substituir algumas chamadas de função intrínsecos; o compilador pode chamar a função (e não substitua a chamada de função com um intrínseco) se resultará em um melhor desempenho.  
-  
- **x86 específico**  
-  
- As funções de ponto flutuantes intrínsecas não executa nenhuma verificação especial em valores de entrada para trabalhar em intervalos restritos de entrada e ter condições de limite que as rotinas da biblioteca com o mesmo nome e de tratamento de exceção diferente. Usar os formulários intrínsecos true significa perda de tratamento de exceção do IEEE e perda de `_matherr` e `errno` funcionalidade; o último implica perda de conformidade com ANSI. No entanto, os formulários intrínsecos podem acelerar consideravelmente programas intensivos de ponto flutuante e para vários programas, os problemas de conformidade são pouco valor prático.  
-  
- Você pode usar o [Za](../../build/reference/za-ze-disable-language-extensions.md) opção de compilador para substituir a geração das opções de ponto flutuantes intrínsecas true. Nesse caso, as funções são geradas como rotinas de biblioteca que passam argumentos diretamente para o chip de ponto flutuante em vez de enviá-los para a pilha do programa.  
-  
- **Término x86 específico**  
-  
- Você também usar [intrínseco](../../preprocessor/intrinsic.md) para criar funções intrínsecas, ou [função (C/C++)](../../preprocessor/function-c-cpp.md) forçar explicitamente uma chamada de função.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
-  
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
-  
-2.  Clique o **C/C++** pasta.  
-  
-3.  Clique o **otimização** página de propriedades.  
-  
-4.  Modificar o **Habilitar funções intrínsecas** propriedade.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
-  
--   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableIntrinsicFunctions%2A>.  
-  
-## <a name="see-also"></a>Consulte também  
- [/O opções (otimizar código)](../../build/reference/o-options-optimize-code.md)   
- [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)   
- [Intrínsecos do compilador](../../intrinsics/compiler-intrinsics.md)
+
+Substitui algumas chamadas de função com formas intrínsecas ou especiais de outra forma da função que ajudam a seu aplicativo é executado mais rapidamente.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+/Oi[-]
+```
+
+## <a name="remarks"></a>Comentários
+
+Programas que usam funções intrínsecas são mais rápidos porque eles não têm a sobrecarga das chamadas de função, mas podem ser maiores por causa do código adicional criado.
+
+Ver [intrínseco](../../preprocessor/intrinsic.md) para obter mais informações sobre quais funções têm formas intrínsecas.
+
+**/Oi** é apenas uma solicitação para o compilador para substituir algumas chamadas de função com intrínsecos; o compilador pode chamar a função (e não substituir a chamada de função com um intrínseco) se isso resultar em melhor desempenho.
+
+**x86 específico**
+
+As funções de ponto flutuantes intrínsecas não executa nenhuma verificação especiais nos valores de entrada e então funcionam em intervalos restringidos de entrada e tem o tratamento de exceção diferentes e condições de limite que as rotinas da biblioteca com o mesmo nome. Usar as formas intrínsecas reais implica em perda de manipulação de exceção do IEEE e perda de `_matherr` e `errno` funcionalidade; o último implica em perda de conformidade com ANSI. No entanto, as formas intrínsecas podem acelerar consideravelmente programas intensivos de ponto flutuante e, para muitos programas, os problemas de conformidade são pouco valor prático.
+
+Você pode usar o [Za](../../build/reference/za-ze-disable-language-extensions.md) opção de compilador para substituir a geração das opções de ponto flutuantes intrínsecas true. Nesse caso, as funções são geradas como rotinas de biblioteca que passam argumentos diretamente para o chip de ponto flutuante em vez de enviá-los para a pilha do programa.
+
+**END x86 específico**
+
+Você também usar [intrínseco](../../preprocessor/intrinsic.md) para criar funções intrínsecas, ou [função (C/C++)](../../preprocessor/function-c-cpp.md) para forçar explicitamente uma chamada de função.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
+
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+
+1. Clique o **C/C++** pasta.
+
+1. Clique o **otimização** página de propriedades.
+
+1. Modificar a **Habilitar funções intrínsecas** propriedade.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
+
+- Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableIntrinsicFunctions%2A>.
+
+## <a name="see-also"></a>Consulte também
+
+[/O opções (otimizar código)](../../build/reference/o-options-optimize-code.md)
+[opções do compilador](../../build/reference/compiler-options.md)<br/>
+[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
+[Intrínsecos do compilador](../../intrinsics/compiler-intrinsics.md)

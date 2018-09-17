@@ -1,5 +1,5 @@
 ---
-title: Correção de versão de compilação problemas | Microsoft Docs
+title: Versão de correção de problemas na compilação | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,27 +18,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 708bb8f561d2611c2ee778aa4a0c6cbd1cc3dad2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9b304fa6bcc9b0b248719ea44b28e9dae5c76a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372146"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726525"
 ---
 # <a name="fixing-release-build-problems"></a>Corrigindo problemas de build da versão
-Se o seu código gera erros de compilação após a troca de compilação de depuração para compilação de lançamento, há algumas áreas que você deve verificar.  
-  
- Você pode receber avisos do compilador durante uma compilação otimizada (versão) que você não tenha recebido durante uma compilação de depuração.  
-  
--   [Examinar as instruções ASSERT](../../build/reference/using-verify-instead-of-assert.md)  
-  
--   [Substitui o uso de compilação de depuração para verificação de memória](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md)  
-  
--   [Ativar a geração das informações de depuração para a compilação de versão](../../build/reference/how-to-debug-a-release-build.md)  
-  
--   [Verificação de substituição de memória](../../build/reference/checking-for-memory-overwrites.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Compilações de lançamento](../../build/reference/release-builds.md)   
- [Problemas comuns durante a criação de uma compilação de versão](../../build/reference/common-problems-when-creating-a-release-build.md)   
- [Otimizando seu código](../../build/reference/optimizing-your-code.md)
+
+Se seu código gera erros de compilação depois de alternar do build de depuração para o build de lançamento, há algumas áreas que você deve verificar.
+
+Você pode receber avisos do compilador durante uma compilação otimizada (lançamento) que não tenha recebido durante uma compilação de depuração.
+
+- [Examine instruções ASSERT](../../build/reference/using-verify-instead-of-assert.md)
+
+- [Use o Build de depuração para verificar se há memória substitui](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md)
+
+- [Ativar a geração de informações de depuração para o Build de versão](../../build/reference/how-to-debug-a-release-build.md)
+
+- [Verificação de substituição de memória](../../build/reference/checking-for-memory-overwrites.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Builds de versão](../../build/reference/release-builds.md)<br/>
+[Problemas comuns durante a criação de um build de versão](../../build/reference/common-problems-when-creating-a-release-build.md)<br/>
+[Otimizando seu código](../../build/reference/optimizing-your-code.md)

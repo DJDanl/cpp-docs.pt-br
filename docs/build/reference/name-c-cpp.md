@@ -16,24 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a94b82a65cf68d9802d7bf9620e4128ab6b35071
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bc37a96e50c6cd5bae2cc60661db04f3b92d162b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371808"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715748"
 ---
 # <a name="name-cc"></a>NAME (C/C++)
-Especifica um nome para o arquivo de saída principal.  
-  
-```  
-NAME [application][BASE=address]  
-```  
-  
-## <a name="remarks"></a>Comentários  
- É uma maneira equivalente para especificar um nome de arquivo de saída com o [/out](../../build/reference/out-output-file-name.md) é a opção de vinculador e uma maneira equivalente para definir o endereço base com o [/BASE](../../build/reference/base-base-address.md) opção de vinculador. Se ambos forem especificados, OUT substitui **nome**.  
-  
- Se você criar uma DLL, o nome afetará apenas o nome da DLL.  
-  
-## <a name="see-also"></a>Consulte também  
- [Regras para instruções de definição do módulo](../../build/reference/rules-for-module-definition-statements.md)
+
+Especifica um nome para o arquivo de saída principal.
+
+```
+NAME [application][BASE=address]
+```
+
+## <a name="remarks"></a>Comentários
+
+Uma maneira equivalente para especificar um nome de arquivo de saída é com o [/out](../../build/reference/out-output-file-name.md) é a opção de vinculador e uma maneira equivalente para definir o endereço base com o [/base](../../build/reference/base-base-address.md) a opção de vinculador. Se ambos forem especificados, / OUT substitui **nome**.
+
+Se você compilar uma DLL, o nome afetará apenas o nome da DLL.
+
+## <a name="see-also"></a>Consulte também
+
+[Regras para instruções de definição do módulo](../../build/reference/rules-for-module-definition-statements.md)

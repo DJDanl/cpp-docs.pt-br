@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09f086673ba015b168211261bed68db479ef77a9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: efe15f53cda42089b35d620ae9965050595121c7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538381"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720220"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>Classe CMFCDesktopAlertWnd
 O `CMFCDesktopAlertWnd` classe implementa a funcionalidade de uma caixa de diálogo sem janela restrita que aparece na tela para informar ao usuário sobre um evento.  
@@ -166,20 +166,20 @@ virtual BOOL Create(
  [in] [out] *pWndOwner*  
  Especifica o proprietário da janela de alerta. O proprietário receberá todas as notificações para a janela de alerta da área de trabalho. Esse valor não pode ser NULL.  
   
- [in] *uiDlgResID*  
- Especifica a ID do recurso da janela de alerta.  
+*uiDlgResID*<br/>
+[in] Especifica a ID do recurso da janela de alerta.  
   
- [in] *hMenu*  
- Especifica o menu que é exibido quando o usuário clica no botão de menu. Se for NULL, o botão de menu não é exibido.  
+*hMenu*<br/>
+[in] Especifica o menu que é exibido quando o usuário clica no botão de menu. Se for NULL, o botão de menu não é exibido.  
   
- [in] *ptPos*  
- Especifica a posição inicial em que a janela de alerta é exibida, usando coordenadas da tela. Se esse parâmetro for (-1, -1), a janela de alerta é exibida no canto inferior direito da tela.  
+*ptPos*<br/>
+[in] Especifica a posição inicial em que a janela de alerta é exibida, usando coordenadas da tela. Se esse parâmetro for (-1, -1), a janela de alerta é exibida no canto inferior direito da tela.  
   
- [in] *pRTIDlgBar*  
- Informações de classe de tempo de execução para uma classe de caixa de diálogo personalizada que abrange a área de cliente da janela de alerta.  
+*pRTIDlgBar*<br/>
+[in] Informações de classe de tempo de execução para uma classe de caixa de diálogo personalizada que abrange a área de cliente da janela de alerta.  
   
- [in] *param. autom.*  
- Especifica os parâmetros que são usados para criar uma janela de alerta.  
+*params*<br/>
+[in] Especifica os parâmetros que são usados para criar uma janela de alerta.  
   
 ### <a name="return-value"></a>Valor de retorno  
  VERDADEIRO se a janela de alerta foi criada com êxito; Caso contrário, FALSE.  
@@ -311,8 +311,8 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiCmdID*  
- Este parâmetro não é usado.  
+*uiCmdID*<br/>
+[in] Esse parâmetro não é usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Sempre FALSE.  
@@ -330,8 +330,8 @@ virtual BOOL OnCommand(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *wParam*  
- [in] *lParam*  
+*wParam*<br/>
+[in] [in] *lParam*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -371,8 +371,8 @@ void SetAnimationSpeed(UINT nSpeed);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nSpeed*  
- Especifica a velocidade da animação nova, em milissegundos.  
+*nSpeed*<br/>
+[in] Especifica a velocidade da animação nova, em milissegundos.  
   
 ### <a name="remarks"></a>Comentários  
  Chame esse método para definir a velocidade da animação para a janela de alerta. A velocidade da animação padrão é 30 milissegundos.  
@@ -385,8 +385,8 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *tipo*  
- Especifica o tipo de animação.  
+*type*<br/>
+[in] Especifica o tipo de animação.  
   
 ### <a name="remarks"></a>Comentários  
  Chame esse método para definir o tipo de animação. É possível especificar um dos seguintes valores:  
@@ -409,8 +409,8 @@ void SetAutoCloseTime(int nTime);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nIntervalo de tempo*  
- O tempo, em milissegundos, decorrido antes que a janela de alerta é fechado automaticamente.  
+*nIntervalo de tempo*<br/>
+[in] O tempo, em milissegundos, decorrido antes que a janela de alerta é fechado automaticamente.  
   
 ### <a name="remarks"></a>Comentários  
  A janela de alerta é fechada automaticamente após o tempo especificado se o usuário interage com a janela.  
@@ -423,8 +423,8 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bSmallCaption*  
- TRUE para especificar que a janela de alerta exibe uma legenda curta; Caso contrário, FALSE para especificar que a janela de alerta exibe uma legenda de tamanho regular.  
+*bSmallCaption*<br/>
+[in] TRUE para especificar que a janela de alerta exibe uma legenda curta; Caso contrário, FALSE para especificar que a janela de alerta exibe uma legenda de tamanho regular.  
   
 ### <a name="remarks"></a>Comentários  
  Chame esse método para exibir a legenda pequena ou de tamanho regular. Por padrão, a legenda curta é 7 pixels de altura. Você pode obter o tamanho da legenda regular chamando a função de API do Windows `GetSystemMetrics(SM_CYCAPTION)`.  
@@ -437,8 +437,8 @@ void SetTransparency(BYTE nTransparency);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nTransparency*  
- Especifica o nível de transparência. Esse valor deve estar entre 0 e 255, inclusive. Quanto maior o valor, o mais opaco a janela.  
+*nTransparency*<br/>
+[in] Especifica o nível de transparência. Esse valor deve estar entre 0 e 255, inclusive. Quanto maior o valor, o mais opaco a janela.  
   
 ### <a name="remarks"></a>Comentários  
  Chame essa função para definir o nível de transparência da janela pop-up.  

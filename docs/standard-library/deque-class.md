@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c77b232fe87a722194a21d60457a01051827a7e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: afcf2528ba84edd90179ef6eb29d356466372633
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214160"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713300"
 ---
 # <a name="deque-class"></a>Classe deque
 
@@ -119,10 +119,10 @@ class deque
 ### <a name="parameters"></a>Parâmetros
 
 *Tipo*<br/>
- O tipo de dados do elemento a ser armazenado no deque.
+O tipo de dados do elemento a ser armazenado no deque.
 
 *Alocador*<br/>
- O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre a alocação e desalocação de memória do deque. Esse argumento é opcional e o valor padrão é **allocator\<tipo >**.
+O tipo que representa o objeto alocador armazenado que encapsula detalhes sobre a alocação e desalocação de memória do deque. Esse argumento é opcional e o valor padrão é **allocator\<tipo >**.
 
 ## <a name="remarks"></a>Comentários
 
@@ -246,19 +246,19 @@ void assign(initializer_list<Type> IList);
 ### <a name="parameters"></a>Parâmetros
 
 *Primeiro*<br/>
- Posição do elemento primeiro no intervalo de elementos a ser copiado do deque de argumentos.
+Posição do elemento primeiro no intervalo de elementos a ser copiado do deque de argumentos.
 
 *último*<br/>
- Posição do primeiro elemento após o intervalo de elementos a ser copiado do deque de argumentos.
+Posição do primeiro elemento após o intervalo de elementos a ser copiado do deque de argumentos.
 
 *Contagem*<br/>
- O número de cópias de um elemento que está sendo inserido no deque.
+O número de cópias de um elemento que está sendo inserido no deque.
 
 *Val*<br/>
- O valor do elemento que está sendo inserido no deque.
+O valor do elemento que está sendo inserido no deque.
 
 *IList*<br/>
- A initializer_list que está sendo inserida no deque.
+A initializer_list que está sendo inserida no deque.
 
 ### <a name="remarks"></a>Comentários
 
@@ -333,7 +333,7 @@ const_reference at(size_type pos) const;
 ### <a name="parameters"></a>Parâmetros
 
 *POS*<br/>
- O subscrito (ou o número da posição) do elemento a ser referenciado no deque.
+O subscrito (ou o número da posição) do elemento a ser referenciado no deque.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1314,7 +1314,7 @@ int main( )
    cout << "The last integer of c1 is " << *c1_Iter << endl;
 
    c1_Iter--;
- *c1_Iter = 400;
+   *c1_Iter = 400;
    cout << "The new next-to-last integer of c1 is " << *c1_Iter << endl;
 
    // If a const iterator had been declared instead with the line:
@@ -1346,13 +1346,13 @@ iterator erase(iterator first, iterator last);
 ### <a name="parameters"></a>Parâmetros
 
 *_Where*<br/>
- Posição do elemento a ser removido do deque.
+Posição do elemento a ser removido do deque.
 
 *first*<br/>
- Posição do primeiro elemento removido do deque.
+Posição do primeiro elemento removido do deque.
 
 *last*<br/>
- Posição imediatamente após o último elemento removido do deque.
+Posição imediatamente após o último elemento removido do deque.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1603,7 +1603,7 @@ const_reference operator[](size_type pos) const;
 ### <a name="parameters"></a>Parâmetros
 
 *POS*<br/>
- A posição do elemento de deque a ser referenciada.
+A posição do elemento de deque a ser referenciada.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1714,7 +1714,7 @@ int main( )
 
    cout << "     ";
    S<MyDeque&&>::show ( move< MyDeque& > (d1) );
- }
+}
 ```
 
 ## <a name="pointer"></a>  deque::pointer
@@ -1951,7 +1951,7 @@ int main( )
    cout << endl;
 
    c1_rIter = c1.rbegin( );
- *c1_rIter = 40;  // This would have caused an error if a
+   *c1_rIter = 40;  // This would have caused an error if a
                     // const_reverse iterator had been declared as
                     // noted above
    cout << "Last element in deque is now " << *c1_rIter << "." << endl;
@@ -2069,7 +2069,7 @@ int main( )
    c1_rIter = c1.rend( );
    c1_rIter--; // Decrementing the reverse iterator moves it backward
                // in the reversed deque (to the last element here)
- *c1_rIter = 40; // This modification of the last element would
+   *c1_rIter = 40; // This modification of the last element would
                    // have caused an error if a const_reverse
                    // iterator had been declared (as noted above)
    cout << "The modified reversed deque is: ";
@@ -2099,10 +2099,10 @@ void resize(size_type _Newsize, Type val);
 ### <a name="parameters"></a>Parâmetros
 
 *_Newsize*<br/>
- O novo tamanho do deque.
+O novo tamanho do deque.
 
 *Val*<br/>
- O valor dos novos elementos a serem adicionados ao deque se o novo tamanho for maior que o tamanho original. Se o valor for omitido, os novos elementos receberão o valor padrão para a classe.
+O valor dos novos elementos a serem adicionados ao deque se o novo tamanho for maior que o tamanho original. Se o valor for omitido, os novos elementos receberão o valor padrão para a classe.
 
 ### <a name="remarks"></a>Comentários
 
@@ -2278,10 +2278,10 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 ### <a name="parameters"></a>Parâmetros
 
 *right*<br/>
- O deque que fornece os elementos a serem trocados ou o deque cujos elementos deverão ser trocados com aqueles do deque `left`.
+O deque que fornece os elementos a serem trocados ou o deque cujos elementos deverão ser trocados com aqueles do deque `left`.
 
 *left*<br/>
- Um deque cujos elementos deverão ser trocados por aqueles do deque *certa*.
+Um deque cujos elementos deverão ser trocados por aqueles do deque *certa*.
 
 ### <a name="example"></a>Exemplo
 

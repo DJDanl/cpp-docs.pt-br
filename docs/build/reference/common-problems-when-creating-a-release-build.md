@@ -1,5 +1,5 @@
 ---
-title: Problemas comuns durante a criação de uma compilação de versão | Microsoft Docs
+title: Problemas comuns durante a criação de um Build de versão | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,46 +28,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8860783a2cf9fb88b28e24e0bc16eb16c0dd5d77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b423f173bfa2d7fdc3fd8e97fe9eb42cf8e76f3d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373160"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702449"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>Problemas comuns durante a criação de um build de versão
-Durante o desenvolvimento, você geralmente compilar e testar com uma compilação de depuração do projeto. Se você, em seguida, criar seu aplicativo para uma compilação de versão, você pode receber uma violação de acesso.  
-  
- A lista a seguir mostra as principais diferenças entre uma depuração e uma compilação de versão (nondebug). Há outras diferenças, mas a seguir estão as principais diferenças que possam causar um falha do aplicativo em uma versão de compilação quando ele funciona em uma compilação de depuração.  
-  
--   [Layout de heap](#_core_heap_layout)  
-  
--   [Compilação](#_core_compilation)  
-  
--   [Suporte de ponteiro](#_core_pointer_support)  
-  
--   [Otimizações](#_core_optimizations)  
-  
- Consulte o [/GZ (Catch versão-erros de compilação de depuração de compilação)](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md) erros em compilações de depuração de compilação de opção de compilador para obter informações sobre como capturar a versão.  
-  
-##  <a name="_core_heap_layout"></a> Layout de heap  
- Layout de heap será a causa de 90 por cento dos problemas aparentes quando um aplicativo funciona em depuração, mas não a versão.  
-  
- Quando você compila seu projeto para a depuração, você está usando o alocador de memória de depuração. Isso significa que todas as alocações de memória têm bytes de proteção colocados ao redor deles. Esses bytes de protetor detectam uma substituição de memória. Como o layout de heap é diferente entre a versão e depuração versões, uma substituição de memória não podem criar problemas em uma compilação de depuração, mas pode ter efeitos catastróficos em uma compilação de versão.  
-  
- Para obter mais informações, consulte [verificar se há memória substituir](../../build/reference/checking-for-memory-overwrites.md) e [usar a depuração de compilação para seleção para substituir memória](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md).  
-  
-##  <a name="_core_compilation"></a> Compilação  
- Muitas das macros MFC e grande parte das alterações de implementação MFC quando você cria para versão. Em particular, a macro ASSERT avaliada como nada em uma compilação de versão, para que nenhum código de encontrado em declarações será executado. Para obter mais informações, consulte [examinar instruções ASSERT](../../build/reference/using-verify-instead-of-assert.md).  
-  
- Algumas funções são embutidas para aumentar a velocidade na compilação de versão. Otimizações geralmente são ativadas em uma compilação de versão. Um alocador de memória diferentes também está sendo usado.  
-  
-##  <a name="_core_pointer_support"></a> Suporte de ponteiro  
- A falta de informações de depuração remove o preenchimento do seu aplicativo. Em uma versão de compilação, ponteiros perdidos tem uma possibilidade maior de apontar para a memória não inicializada em vez de apontar para informações de depuração.  
-  
-##  <a name="_core_optimizations"></a> Otimizações  
- Dependendo da natureza de determinados segmentos de código, o compilador de otimização pode gerar código inesperado. Essa é a causa menos provável dos problemas de compilação de versão, mas ele ocorrem na ocasião. Para uma solução, consulte [otimizando seu código](../../build/reference/optimizing-your-code.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Compilações de lançamento](../../build/reference/release-builds.md)   
- [Corrigindo problemas do build de versão](../../build/reference/fixing-release-build-problems.md)
+
+Durante o desenvolvimento, você geralmente compilar e testar com um build de depuração do seu projeto. Se você, em seguida, crie seu aplicativo para um build de versão, você poderá receber uma violação de acesso.
+
+A lista a seguir mostra as principais diferenças entre uma depuração e um build de versão (nondebug). Existem outras diferenças, mas a seguir estão as principais diferenças que faria com que um aplicativo falhar em um build de versão quando ela funciona em uma compilação de depuração.
+
+- [Layout de heap](#_core_heap_layout)
+
+- [Compilação](#_core_compilation)
+
+- [Suporte de ponteiro](#_core_pointer_support)
+
+- [otimizações](#_core_optimizations)
+
+Consulte a [/GZ (capturar erros de Build de versão no Build de depuração)](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md) erros em compilações de depuração de compilação de opção de compilador para obter informações sobre como capturar a versão.
+
+##  <a name="_core_heap_layout"></a> Layout de heap
+
+Layout de heap será a causa de noventa por cento dos problemas aparentes quando um aplicativo funciona na depuração, mas não a versão.
+
+Quando você compila seu projeto para depuração, você está usando o alocador de memória de depuração. Isso significa que todas as alocações de memória tem bytes guard colocados ao redor deles. Esses bytes guard detectam uma substituição de memória. Como o layout de heap é diferente entre a versão e depuração versões, uma substituição de memória não pode criar problemas em uma compilação de depuração, mas pode ter efeitos catastróficos em um build de versão.
+
+Para obter mais informações, consulte [verificar se há substituição de memória](../../build/reference/checking-for-memory-overwrites.md) e [usar a depurar Build para verificação de substituição de memória](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md).
+
+##  <a name="_core_compilation"></a> Compilação
+
+Muitas das macros MFC e grande parte das alterações de implementação MFC quando você compila para liberação. Em particular, a macro ASSERT avaliada como nada na compilação de versão, portanto, nenhum código encontrado no ASSERTs será executado. Para obter mais informações, consulte [Examine instruções ASSERT](../../build/reference/using-verify-instead-of-assert.md).
+
+Algumas funções são embutidas para maior velocidade no build de versão. Geralmente, as otimizações estiverem ativadas na compilação de versão. Um alocador de memória diferentes também está sendo usado.
+
+##  <a name="_core_pointer_support"></a> Suporte de ponteiro
+
+A falta de informações de depuração remove o preenchimento do seu aplicativo. Em uma compilação de versão, os ponteiros perdidos têm uma chance maior de que aponta para a memória não inicializada em vez de apontar para informações de depuração.
+
+##  <a name="_core_optimizations"></a> otimizações
+
+Dependendo da natureza de determinados segmentos de código, o compilador de otimização pode gerar código inesperado. Essa é a causa menos provável dos problemas de compilação de versão, mas ele surgir na ocasião. Para uma solução, consulte [otimizando seu código](../../build/reference/optimizing-your-code.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Builds de versão](../../build/reference/release-builds.md)<br/>
+[Corrigindo problemas do build de versão](../../build/reference/fixing-release-build-problems.md)

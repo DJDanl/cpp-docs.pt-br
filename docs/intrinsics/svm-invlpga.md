@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77ada66d0478996eac30c8218793d962e8fcf7ca
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: c2f962ec4a348cca7ffdf43852cb01d673f3fb18
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680082"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706596"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 **Seção específica da Microsoft**  
@@ -41,8 +41,8 @@ void __svm_invlpga(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `Va`|O endereço virtual da página ser invalidada.|  
-|[in] `ASID`|O identificador do espaço de endereço (ASID) da página ser invalidada.|  
+|*VA*|[in] O endereço virtual da página ser invalidada.|  
+|*ASID*|[in] O identificador do espaço de endereço (ASID) da página ser invalidada.|  
   
 ## <a name="remarks"></a>Comentários  
  O `__svm_invlpga` função é equivalente ao `INVLPGA` instruções de máquina. Essa função dá suporte a interação do monitor de máquina virtual do host com um sistema operacional e seus aplicativos de convidado. Para obter mais informações, pesquise o documento "Volume de Manual do programador da arquitetura AMD64 2: programação do sistema," número 24593, 3.11, de revisão de documentos na [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) site.  

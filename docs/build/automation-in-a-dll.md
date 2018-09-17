@@ -15,29 +15,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41c5f31a72cf734296ecb281e0785d415c8043a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cde5d0e400f1bdd3f5a851d47da581380273b04a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360648"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717763"
 ---
 # <a name="automation-in-a-dll"></a>Automação em um DLL
-Quando você escolhe a opção de automação no Assistente de DLL do MFC, o assistente fornece o seguinte:  
-  
--   Uma linguagem de descrição do objeto de início (. Arquivos ODL)  
-  
--   Uma diretiva de inclusão no arquivo Stdafx. h para Afxole.h  
-  
--   Uma implementação de `DllGetClassObject` função, que chama o **AfxDllGetClassObject** função  
-  
--   Uma implementação de `DllCanUnloadNow` função, que chama o **AfxDllCanUnloadNow** função  
-  
--   Uma implementação de `DllRegisterServer` função, que chama o [COleObjectFactory::UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall) função  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?  
-  
--   [Servidores de automação](../mfc/automation-servers.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [DLLs no Visual C++](../build/dlls-in-visual-cpp.md)
+
+Quando você escolhe a opção de automação no Assistente de DLL do MFC, o assistente fornece o seguinte:
+
+- Uma linguagem de descrição do objeto inicial (. Arquivo ODL)
+
+- Uma diretiva de inclusão no arquivo Stdafx. h para Afxole.h
+
+- Uma implementação de `DllGetClassObject` função, que chama o **AfxDllGetClassObject** função
+
+- Uma implementação de `DllCanUnloadNow` função, que chama o **AfxDllCanUnloadNow** função
+
+- Uma implementação de `DllRegisterServer` função, que chama o [COleObjectFactory::UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall) função
+
+## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?
+
+- [Servidores de automação](../mfc/automation-servers.md)
+
+## <a name="see-also"></a>Consulte também
+
+[DLLs no Visual C++](../build/dlls-in-visual-cpp.md)

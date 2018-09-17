@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b5ae46280a537577ae3e3ab0fbdf73f2e449e58
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 71c85d3061da7cf4c87abef9549542900e962f64
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042089"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706999"
 ---
 # <a name="cmfcwindowsmanagerdialog-class"></a>Classe CMFCWindowsManagerDialog
-O `CMFCWindowsManagerDialog` objeto permite que um usuário gerencie janelas filho MDI um aplicativo de MDI.  
+O `CMFCWindowsManagerDialog` objeto permite que um usuário gerencie janelas filho MDI em um aplicativo MDI.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,12 +43,12 @@ class CMFCWindowsManagerDialog : public CDialog
 |[CMFCWindowsManagerDialog::CMFCWindowsManagerDialog](#cmfcwindowsmanagerdialog)|Constrói um objeto `CMFCWindowsManagerDialog`.|  
   
 ## <a name="remarks"></a>Comentários  
- O `CMFCWindowsManagerDialog` contém uma lista de janelas filho MDI que estão abertos no momento no aplicativo. O usuário pode controlar manualmente o estado de janelas filho MDI usando essa caixa de diálogo.  
+ O `CMFCWindowsManagerDialog` contém uma lista de janelas filho MDI que estão abertos no aplicativo. O usuário pode controlar manualmente o estado das janelas filho MDI usando essa caixa de diálogo.  
   
- `CMFCWindowsManagerDialog` incorporado a [CMDIFrameWndEx classe](../../mfc/reference/cmdiframewndex-class.md). O `CMFCWindowsManagerDialog` não é uma classe que você deve criar manualmente. Em vez disso, chame a função [CMDIFrameWndEx::ShowWindowsDialog](../../mfc/reference/cmdiframewndex-class.md#showwindowsdialog), e irá criar e exibir um `CMFCWindowsManagerDialog` objeto.  
+ `CMFCWindowsManagerDialog` é incorporado dentro do [classe CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md). O `CMFCWindowsManagerDialog` não é uma classe que você deve criar manualmente. Em vez disso, chame a função [CMDIFrameWndEx::ShowWindowsDialog](../../mfc/reference/cmdiframewndex-class.md#showwindowsdialog), e irá criar e exibir um `CMFCWindowsManagerDialog` objeto.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como construir um `CMFCWindowsManagerDialog` objeto chamando `CMDIFrameWndEx::ShowWindowsDialog`. Este trecho de código é parte do [exemplo de demonstração do Visual Studio](../../visual-cpp-samples.md).  
+ O exemplo a seguir demonstra como criar uma `CMFCWindowsManagerDialog` objeto chamando `CMDIFrameWndEx::ShowWindowsDialog`. Este trecho de código faz parte do [amostra de demonstração do Visual Studio](../../visual-cpp-samples.md).  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmfcwindowsmanagerdialog-class_1.cpp)]  
   
@@ -67,7 +67,7 @@ class CMFCWindowsManagerDialog : public CDialog
  **Cabeçalho:** afxWindowsManagerDialog.h  
   
 ##  <a name="cmfcwindowsmanagerdialog"></a>  CMFCWindowsManagerDialog::CMFCWindowsManagerDialog  
- Constrói um [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) objeto.  
+ Constrói uma [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) objeto.  
   
 ```  
 CMFCWindowsManagerDialog(
@@ -76,16 +76,16 @@ CMFCWindowsManagerDialog(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pMDIFrame*  
- Um ponteiro para a janela pai ou proprietário.  
+*pMDIFrame*<br/>
+[in] Um ponteiro para a janela pai ou proprietária.  
   
- [in] *bHelpButton*  
- Um parâmetro booleano que especifica se a estrutura exibe um **ajuda** botão.  
+*bHelpButton*<br/>
+[in] Um parâmetro booliano que especifica se o framework exibe uma **ajudar** botão.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações sobre gerenciadores de visual, consulte [Gerenciador de visualização](../../mfc/visualization-manager.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)

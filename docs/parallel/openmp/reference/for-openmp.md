@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f5aebaf586581446293147f56dfbce8bd3519a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 73b840eba35ec4291ffb6e57b17c9002b6c501a2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694856"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721650"
 ---
 # <a name="for-openmp"></a>for (OpenMP)
-Faz com que o trabalho feito um loop dentro de uma região parallel podem ser divididas entre threads.  
+Faz com que o trabalho feito um loop for dentro de uma região paralela para ser dividido entre threads.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,14 +33,13 @@ Faz com que o trabalho feito um loop dentro de uma região parallel podem ser di
    for_statement  
 ```  
   
-## <a name="remarks"></a>Comentários  
- onde,  
+## <a name="arguments"></a>Arguments
+
+*Cláusula*<br/>
+(Opcional) Zero ou mais cláusulas. Consulte a seção comentários para obter uma lista das cláusulas com suporte pelo **para**.  
   
- `clause` (opcional)  
- Zero ou mais cláusulas. Consulte a seção comentários para obter uma lista das cláusulas de suporte **para**.  
-  
- `for_statement`  
- Um loop for. Um comportamento indefinido ocorrerá se o código de usuário na alterações de loop a variável de índice.  
+*for_statement*<br/>
+Um loop for. Um comportamento indefinido resultará se o código do usuário nas alterações de loop a variável de índice.  
   
 ## <a name="remarks"></a>Comentários  
  O **para** diretiva suporta as seguintes cláusulas OpenMP:  
@@ -51,7 +50,7 @@ Faz com que o trabalho feito um loop dentro de uma região parallel podem ser di
   
 -   [nowait](../../../parallel/openmp/reference/nowait.md)  
   
--   [ordenados](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
+-   [Ordenado](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
@@ -61,7 +60,7 @@ Faz com que o trabalho feito um loop dentro de uma região parallel podem ser di
   
  Se **paralela** também for especificado, `clause` pode ser qualquer cláusula aceitos pela **paralela** ou **para** diretivas, exceto **nowait**.  
   
- Para obter mais informações, consulte [2.4.1 para construção de](../../../parallel/openmp/2-4-1-for-construct.md).  
+ Para obter mais informações, consulte [2.4.1 constructo for](../../../parallel/openmp/2-4-1-for-construct.md).  
   
 ## <a name="example"></a>Exemplo  
   

@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c832ee24d500eba28c14713d1c0a092baf90a440
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: c6a980a96198db80f0956895292d37f123d0351c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894610"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723301"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Compilando uma biblioteca de importação e um arquivo de exportação
 
@@ -60,7 +60,7 @@ Esses são os mesmos métodos que você use para especificar exportações ao vi
 
 As opções a seguir se aplicam à criação de uma biblioteca de importação e exportar o arquivo:
 
-> **/ Entrada saída:** *importar*  
+> **/ Entrada saída:** *importar*
 
 Substitui o nome de arquivo de saída padrão para o *importação* biblioteca que está sendo criada. Quando /out sobrescreve não for especificado, o nome padrão é o nome base do primeiro arquivo de objeto ou da biblioteca, o comando LIB e a extensão. lib. O arquivo de exportação recebe o mesmo nome base que a biblioteca de importação e a extensão. exp.
 

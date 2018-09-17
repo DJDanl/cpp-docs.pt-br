@@ -1,5 +1,5 @@
 ---
-title: -HEADERS | Microsoft Docs
+title: -CABEÇALHOS | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94d9b49983ff75af7064e89279209447d099f0d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: afc569f0c0158b1bab327dc0b6c32951fd28e483
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370287"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713603"
 ---
 # <a name="headers"></a>/HEADERS
-```  
-/HEADERS  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Esta opção exibe o cabeçalho do arquivo e o cabeçalho de cada seção. Quando usado com uma biblioteca, ele exibe o cabeçalho para cada objeto de membro.  
-  
- Somente o **/HEADERS** opção DUMPBIN está disponível para uso em arquivos produzidos com o [/GL](../../build/reference/gl-whole-program-optimization.md) opção de compilador.  
-  
-## <a name="see-also"></a>Consulte também  
- [Opções de DUMPBIN](../../build/reference/dumpbin-options.md)
+
+```
+/HEADERS
+```
+
+## <a name="remarks"></a>Comentários
+
+Esta opção exibe o cabeçalho do arquivo e o cabeçalho de cada seção. Quando usado com uma biblioteca, ele exibe o cabeçalho para cada objeto de membro.
+
+Somente o **/HEADERS** opção DUMPBIN está disponível para uso em arquivos produzidos com o [/GL](../../build/reference/gl-whole-program-optimization.md) opção de compilador.
+
+## <a name="see-also"></a>Consulte também
+
+[Opções de DUMPBIN](../../build/reference/dumpbin-options.md)

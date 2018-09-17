@@ -15,16 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01fea585b86114373017b6d73948cb1438b7185e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f3b8de3758daf59a543cdcc9f3b73e1d6c6f0ce8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371678"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720584"
 ---
 # <a name="ilk-files-as-linker-input"></a>Arquivos .Ilk como entrada de vinculador
-Durante a vinculação incremental, o LINK atualiza o arquivo de status. ilk criadas durante o primeiro link incremental. Este arquivo tem o mesmo nome base do arquivo de .exe ou o arquivo. dll, e tem a. ilk de extensão. Durante os links incrementais subsequentes, LINK atualiza o arquivo. ilk. Se o arquivo. ilk estiver ausente, o LINK executa um link completo e cria um novo arquivo. ilk. Se o arquivo. ilk for usado, o LINK executa um link não incrementais. Para obter detalhes sobre a vinculação incremental, consulte o [Link incremental (/incremental)](../../build/reference/incremental-link-incrementally.md) opção.  
-  
-## <a name="see-also"></a>Consulte também  
- [Arquivos de entrada de LINK](../../build/reference/link-input-files.md)   
- [Opções do vinculador](../../build/reference/linker-options.md)
+
+Ao vincular incrementalmente, LINK atualiza o arquivo de status. ilk que criou durante o primeiro link incremental. Este arquivo tem o mesmo nome base que o arquivo de .exe ou o arquivo. dll e tem o. ilk de extensão. Durante os links incrementais subsequentes, o LINK atualiza o arquivo. ilk. Se o arquivo. ilk estiver ausente, o LINK executa uma vinculação completa e cria um novo arquivo. ilk. Se o arquivo. ilk inutilizável, o LINK executa uma vinculação não incremental. Para obter detalhes sobre a vinculação incremental, consulte o [vincular de maneira incremental (/incremental)](../../build/reference/incremental-link-incrementally.md) opção.
+
+## <a name="see-also"></a>Consulte também
+
+[Arquivos de entrada de LINK](../../build/reference/link-input-files.md)<br/>
+[Opções do vinculador](../../build/reference/linker-options.md)

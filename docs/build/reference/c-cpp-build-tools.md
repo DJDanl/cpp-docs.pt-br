@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de compilação do C/C++ | Microsoft Docs
+title: Ferramentas de Build do C/C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce8054d4f58eae6ee11737397cf425733d6f486
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a6a223e092e7ad31dd263142d2a87712eaf556b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369884"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726031"
 ---
 # <a name="cc-build-tools"></a>Ferramentas de build da linguagem C/C++
-Visual C++ fornece as seguintes ferramentas de linha de comando para exibir ou manipular a saída da compilação:  
-  
--   [BSCMAKE. EXE](../../build/reference/bscmake-reference.md) cria um arquivo de informações de procura (. bsc) que contém informações sobre os símbolos (classes, funções, dados, macros e tipos) em seu programa. Você pode exibir essas informações no windows procurar no ambiente de desenvolvimento. (Um arquivo. bsc também pode ser criado no ambiente de desenvolvimento.)  
-  
--   [LIB. EXE](../../build/reference/lib-reference.md) é usado para criar e gerenciar uma biblioteca de arquivos de objeto do formato de arquivo de objeto comum (COFF). Ele também pode ser usado para criar arquivos de exportação e bibliotecas de importação para referência exportada de definições.  
-  
--   [EDITBIN. EXE](../../build/reference/editbin-reference.md) é usado para modificar os arquivos binários COFF.  
-  
--   [DUMPBIN. EXE](../../build/reference/dumpbin-reference.md) exibe informações (como uma tabela de símbolos) sobre os arquivos binários COFF.  
-  
--   [NMAKE](../../build/nmake-reference.md) lê e executa makefiles.  
-  
--   [ERRLOOK](../../build/reference/value-edit-control.md), o utilitário de pesquisa de erro, recupera uma mensagem de erro do sistema ou a mensagem de erro do módulo com base no valor inserido.  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de build do C/C++](../../build/reference/c-cpp-building-reference.md)   
- [Nomes decorados](../../build/reference/decorated-names.md)   
- [Opções do compilador](../../build/reference/compiler-options.md)   
- [Opções do vinculador](../../build/reference/linker-options.md)
+
+Visual C++ fornece as seguintes ferramentas de linha de comando para exibir ou manipular a saída da compilação:
+
+- [BSCMAKE. EXE](../../build/reference/bscmake-reference.md) cria um arquivo de informações de procura (. bsc) que contém informações sobre os símbolos (classes, funções, dados, macros e tipos) em seu programa. Você pode exibir essas informações em janelas de navegação dentro do ambiente de desenvolvimento. (Um arquivo. bsc também pode ser criado no ambiente de desenvolvimento.)
+
+- [LIB. EXE](../../build/reference/lib-reference.md) é usado para criar e gerenciar uma biblioteca de arquivos de objeto comum objeto COFF (File Format). Ele também pode ser usado para criar arquivos de exportação e importe as bibliotecas para referenciar definições exportadas.
+
+- [(EDITBIN). EXE](../../build/reference/editbin-reference.md) é usada para modificar os arquivos binários de COFF.
+
+- [OPÇÃO DUMPBIN. EXE](../../build/reference/dumpbin-reference.md) exibe informações (como uma tabela de símbolo) sobre os arquivos binários de COFF.
+
+- [NMAKE](../../build/nmake-reference.md) lê e executa makefiles.
+
+- [ERRLOOK](../../build/reference/value-edit-control.md), o utilitário de pesquisa de erro, recupera uma mensagem de erro do sistema ou a mensagem de erro do módulo com base no valor inserido.
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de build C/C++](../../build/reference/c-cpp-building-reference.md)<br/>
+[Nomes decorados](../../build/reference/decorated-names.md)<br/>
+[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
+[Opções do vinculador](../../build/reference/linker-options.md)

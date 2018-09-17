@@ -8,12 +8,12 @@ f1_keywords:
 ms.assetid: 6cdcf043-eef6-4330-83f0-4596fb9f968a
 helpviewer_keywords:
 - std::swap [vector]
-ms.openlocfilehash: 29b23ec4afe32d1aa383afd4fdaf3ca280d49161
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 71594b225c950714d8b9aba169e68804033c93a2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955254"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700746"
 ---
 # <a name="ltvectorgt-functions"></a>Funções &lt;vetor&gt;
 
@@ -29,11 +29,11 @@ void swap(vector<Type, Allocator>& left, vector<Type, Allocator>& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*  
- O vetor que fornece os elementos a serem trocados ou um vetor cujos elementos são trocados por aqueles do vetor *esquerdo*.
+*right*<br/>
+O vetor que fornece os elementos a serem trocados ou um vetor cujos elementos são trocados por aqueles do vetor *esquerdo*.
 
-*left*  
- O vetor cujos elementos são trocados por aqueles do vetor *certa*.
+*left*<br/>
+O vetor cujos elementos são trocados por aqueles do vetor *certa*.
 
 ### <a name="remarks"></a>Comentários
 

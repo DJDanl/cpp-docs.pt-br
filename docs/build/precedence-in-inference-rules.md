@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36d462d4222cbfc143dd7487d4cb6b1b8bb3ba3b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b4f2e7ff55e935b7e425b552ba85f47f134c6b80
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368480"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725225"
 ---
 # <a name="precedence-in-inference-rules"></a>Precedência em regras de inferência
-Se uma regra de inferência é definida várias vezes, NMAKE usa a definição de precedência mais alta. A lista a seguir mostra a ordem de prioridade do mais alto ao mais baixo:  
-  
-1.  Uma regra de inferência de tipos definida em um makefile; as definições mais recente tem precedência.  
-  
-2.  Uma regra de inferência de tipos definida em Tools.ini; as definições mais recente tem precedência.  
-  
-3.  Uma regra de inferência de tipos predefinidos.  
-  
-## <a name="see-also"></a>Consulte também  
- [Regras de inferência](../build/inference-rules.md)
+
+Se uma regra de inferência de tipos está definida várias vezes, NMAKE usa a definição de precedência mais alta. A lista a seguir mostra a ordem de precedência da mais alta para a mais baixa:
+
+1. Uma regra de inferência de tipos definida em um makefile; definições de posteriores têm precedência.
+
+1. Uma regra de inferência de tipos definida em Tools. ini; definições de posteriores têm precedência.
+
+1. Uma regra de inferência de tipos predefinidos.
+
+## <a name="see-also"></a>Consulte também
+
+[Regras de inferência](../build/inference-rules.md)

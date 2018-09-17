@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6afd5349595f849e8b7418fa1efb628c200b4b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03c38c5328500394871bee937cbc05395eb44cd5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332020"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715494"
 ---
 # <a name="stosq"></a>__stosq
 **Seção específica da Microsoft**  
@@ -41,14 +41,14 @@ void __stosb(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [out] `Dest`  
- O destino da operação.  
+*dest*<br/>
+[out] O destino da operação.  
   
- [in] `Data`  
- Os dados a serem armazenados.  
+*Dados*<br/>
+[in] Os dados serem armazenados.  
   
- [in] `Count`  
- O comprimento do bloco de quadwords para gravação.  
+*Contagem*<br/>
+[in] O tamanho do bloco de palavras quádruplas escrever.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -56,10 +56,10 @@ void __stosb(
 |---------------|------------------|  
 |`__stosq`|AMD64|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
- O resultado é que o quadword `Data` é gravado em um bloco de `Count` quadwords no `Dest` cadeia de caracteres.  
+ O resultado é que o quadword `Data` é gravado em um bloco de `Count` palavras quádruplas no `Dest` cadeia de caracteres.  
   
  Essa rotina só está disponível como função intrínseca.  
   

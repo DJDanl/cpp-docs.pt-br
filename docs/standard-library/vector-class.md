@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d60d47757bfcf1564d81dcb58c0727b1ca56b3ce
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2fdb8fea78d62202dd460f5dd219f2686bd99c6b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199489"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710223"
 ---
 # <a name="vector-class"></a>Classe vector
 
@@ -116,11 +116,11 @@ class vector
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tipo*  
- O tipo de dados do elemento a ser armazenado no vetor
+*Tipo*<br/>
+O tipo de dados do elemento a ser armazenado no vetor
 
-*Alocador*  
- O tipo que representa o objeto allocator armazenado que encapsula detalhes sobre a alocação e a desalocação de memória do vetor. Esse argumento é opcional e o valor padrão é `allocator<Type>`.
+*Alocador*<br/>
+O tipo que representa o objeto allocator armazenado que encapsula detalhes sobre a alocação e a desalocação de memória do vetor. Esse argumento é opcional e o valor padrão é `allocator<Type>`.
 
 ## <a name="remarks"></a>Comentários
 
@@ -234,20 +234,20 @@ void assign(InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Primeiro*  
- A posição do primeiro elemento no intervalo de elementos a ser copiado.
+*Primeiro*<br/>
+A posição do primeiro elemento no intervalo de elementos a ser copiado.
 
-*último*  
- A posição do primeiro elemento após o intervalo de elementos a ser copiado.
+*último*<br/>
+A posição do primeiro elemento após o intervalo de elementos a ser copiado.
 
-*Contagem*  
- O número de cópias de um elemento sendo inserido no vetor.
+*Contagem*<br/>
+O número de cópias de um elemento sendo inserido no vetor.
 
-*Val*  
- O valor do elemento sendo inserido no vetor.
+*Val*<br/>
+O valor do elemento sendo inserido no vetor.
 
-*IList*  
- A initializer_list que contém os elementos a serem inseridos.
+*IList*<br/>
+A initializer_list que contém os elementos a serem inseridos.
 
 ### <a name="remarks"></a>Comentários
 
@@ -313,8 +313,8 @@ const_reference at(size_type _Pos) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*  
- O número da posição ou subscrito do elemento para referência no vetor.
+*POS*<br/>
+O número da posição ou subscrito do elemento para referência no vetor.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1562,7 +1562,7 @@ void push_back(T&& Val);
 ### <a name="parameters"></a>Parâmetros
 
 *Val*<br/>
- O valor a ser atribuído ao elemento adicionado ao final do vetor.
+O valor a ser atribuído ao elemento adicionado ao final do vetor.
 
 ### <a name="example"></a>Exemplo
 
@@ -1726,8 +1726,8 @@ void reserve(size_type count);
 
 ### <a name="parameters"></a>Parâmetros
 
-*count*  
- O tamanho mínimo de armazenamento a ser alocado para o vetor.
+*count*<br/>
+O tamanho mínimo de armazenamento a ser alocado para o vetor.
 
 ### <a name="example"></a>Exemplo
 
@@ -1768,11 +1768,11 @@ void resize(size_type Newsize, Type Val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Newsize*  
- O novo tamanho do vetor.
+*Newsize*<br/>
+O novo tamanho do vetor.
 
-*Val*  
- O valor de inicialização de novos elementos adicionados ao vetor, caso o novo tamanho seja maior que o tamanho original. Se o valor for omitido, os novos objetos usarão o construtor padrão.
+*Val*<br/>
+O valor de inicialização de novos elementos adicionados ao vetor, caso o novo tamanho seja maior que o tamanho original. Se o valor for omitido, os novos objetos usarão o construtor padrão.
 
 ### <a name="remarks"></a>Comentários
 
@@ -2010,11 +2010,11 @@ friend void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*  
- Um vetor que fornece os elementos a serem trocados ou um vetor cujos elementos são trocados por aqueles do vetor *esquerdo*.
+*right*<br/>
+Um vetor que fornece os elementos a serem trocados ou um vetor cujos elementos são trocados por aqueles do vetor *esquerdo*.
 
-*left*  
- Um vetor cujos elementos são trocados por aqueles do vetor *certa*.
+*left*<br/>
+Um vetor cujos elementos são trocados por aqueles do vetor *certa*.
 
 ### <a name="example"></a>Exemplo
 

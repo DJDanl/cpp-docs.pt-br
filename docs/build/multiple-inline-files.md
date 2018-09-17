@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ee9be15f029c0aaab3ca4bc47fb183e1499c2e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 87d68034c4f0018d65020915d24d0b5c2ec5d61a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368207"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725589"
 ---
 # <a name="multiple-inline-files"></a>Vários arquivos embutidos
-Um comando pode criar mais de um arquivo embutido.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-      command << <<  
-inlinetext  
-<<[KEEP | NOKEEP]  
-inlinetext  
-<<[KEEP | NOKEEP]  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Para cada arquivo, especifique uma ou mais linhas de texto em linha seguido por uma que contém o delimitador de linha de fechamento. Iniciar o texto do segundo arquivo na linha após a linha para o primeiro arquivo de delimitação.  
-  
-## <a name="see-also"></a>Consulte também  
- [Arquivos embutidos em um makefile](../build/inline-files-in-a-makefile.md)
+
+Um comando pode criar mais de um arquivo embutido.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+command << <<
+inlinetext
+<<[KEEP | NOKEEP]
+inlinetext
+<<[KEEP | NOKEEP]
+```
+
+## <a name="remarks"></a>Comentários
+
+Para cada arquivo, especifique uma ou mais linhas de texto embutido seguido por uma que contém o delimitador de linha de fechamento. Comece o texto do segundo arquivo na linha após a linha de delimitação para o primeiro arquivo.
+
+## <a name="see-also"></a>Consulte também
+
+[Arquivos embutidos em um makefile](../build/inline-files-in-a-makefile.md)

@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc7ae6e3d06f29b5f45c321cc7f11c9260f26ed1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 55233bb264231c3ddfd286a8f3d29883ed185a15
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538797"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711172"
 ---
 # <a name="cmfcribbonpanel-class"></a>Classe CMFCRibbonPanel
 Implementa um painel que contém um conjunto de elementos de faixa de opções. Quando o painel é desenhado, ele exibe tantos elementos possível, dado o tamanho do painel.  
@@ -235,8 +235,8 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [no, out] *pElem*  
- Ponteiro para um elemento de faixa de opções.  
+*pElem*<br/>
+[no, out] Ponteiro para um elemento de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -262,17 +262,17 @@ UINT uiDisabledResID = 0);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiToolbarResID*  
- Especifica a ID do recurso da barra de ferramentas para adicionar.  
+*uiToolbarResID*<br/>
+[in] Especifica a ID do recurso da barra de ferramentas para adicionar.  
   
- [in] *uiColdResID*  
- Especifica a ID do recurso de imagens de frio da barra de ferramentas.  
+*uiColdResID*<br/>
+[in] Especifica a ID do recurso de imagens de frio da barra de ferramentas.  
   
- [in] *uiHotResID*  
- Especifica a ID do recurso de imagens de hot da barra de ferramentas.  
+*uiHotResID*<br/>
+[in] Especifica a ID do recurso de imagens de hot da barra de ferramentas.  
   
- [in] *uiDisabledResID*  
- Especifica a ID do recurso de imagens de desabilitado da barra de ferramentas.  
+*uiDisabledResID*<br/>
+[in] Especifica a ID do recurso de imagens de desabilitado da barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Chame esse método para adicionar uma barra de ferramentas para o painel de faixa de opções. A barra de ferramentas será adicionada ao lado do elemento de faixa de opções adicionado pela chamada anterior a [CMFCRibbonPanel::Add](#add).  
@@ -292,14 +292,14 @@ CMFCRibbonPanel(CMFCRibbonGallery* pPaletteButton);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszName*  
- O nome do painel da faixa de opções.  
+*lpszName*<br/>
+[in] O nome do painel da faixa de opções.  
   
- [in] *hIcon*  
- Identificador para o ícone do botão padrão para o painel de faixa de opções.  
+*hIcon*<br/>
+[in] Identificador para o ícone do botão padrão para o painel de faixa de opções.  
   
- [in] *pPaletteButton*  
- Ponteiro para uma galeria da faixa de opções para o painel de faixa de opções.  
+*pPaletteButton*<br/>
+[in] Ponteiro para uma galeria da faixa de opções para o painel de faixa de opções.  
   
 ##  <a name="findbydata"></a>  CMFCRibbonPanel::FindByData  
  Recupera o elemento de faixa de opções que está associado com os dados especificados.  
@@ -309,8 +309,8 @@ CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *dwData*  
- Os dados associados a um elemento de faixa de opções.  
+*dwData*<br/>
+[in] Os dados associados a um elemento de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Ponteiro para um elemento de faixa de opções, se o método foi bem-sucedida; Caso contrário, nulo.  
@@ -325,8 +325,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiCmdID*  
- A ID de comando de um elemento de faixa de opções.  
+*uiCmdID*<br/>
+[in] A ID de comando de um elemento de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O elemento de faixa de opções que é identificado pela ID de comando especificado; Caso contrário, nulo se nenhum elemento de faixa de opções é identificado com a ID de comando especificado.  
@@ -397,8 +397,8 @@ CMFCRibbonBaseElement* GetElement(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nIndex*  
- Especifica o índice baseado em zero do elemento a ser recuperado.  
+*nIndex*<br/>
+[in] Especifica o índice baseado em zero do elemento a ser recuperado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro válido para o elemento de faixa de opções base localizado na posição *nIndex* no painel de faixa de opções, ou nulo se não houver nenhum elemento no índice especificado.  
@@ -411,8 +411,8 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *arElements*  
- Uma matriz a ser preenchido com todos os elementos da faixa de opções que estão contidos no painel de faixa de opções.  
+*arElements*<br/>
+[out] Uma matriz a ser preenchido com todos os elementos da faixa de opções que estão contidos no painel de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -426,11 +426,11 @@ CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiCmdID*  
- ID de comando para um elemento de faixa de opções.  
+*uiCmdID*<br/>
+[in] ID de comando para um elemento de faixa de opções.  
   
- [in] *arElements*  
- Matriz de elementos de faixa de opções.  
+*arElements*<br/>
+[in] Matriz de elementos de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
  Somente os elementos de faixa de opções que estão contidos no painel de faixa de opções são testados.  
@@ -455,8 +455,8 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pElem*  
- Ponteiro para um elemento de faixa de opções.  
+*pElem*<br/>
+[in] Ponteiro para um elemento de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Índice baseado em zero do elemento da faixa de opções especificado se o método foi bem-sucedida; Caso contrário,-1.  
@@ -471,8 +471,8 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *lstItems*  
- A lista de IDs de comando para elementos de faixa de opções que estão contidos no painel de faixa de opções.  
+*lstItems*<br/>
+[out] A lista de IDs de comando para elementos de faixa de opções que estão contidos no painel de faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -528,8 +528,8 @@ virtual BOOL GetPreferedMenuLocation(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *rect*  
- Este parâmetro não é usado.  
+*Rect*<br/>
+[out] Esse parâmetro não é usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Sempre retorna FALSE.  
@@ -569,8 +569,8 @@ BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pElem*  
- Ponteiro para um elemento de faixa de opções.  
+*pElem*<br/>
+[in] Ponteiro para um elemento de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o painel de faixa de opções contém o elemento especificado da faixa de opções; Caso contrário, FALSE.  
@@ -587,11 +587,11 @@ CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bHighlight*  
- TRUE para realçar o painel de faixa de opções; FALSE para o painel de faixa de opções de cancelamento de realce.  
+*bHighlight*<br/>
+[in] TRUE para realçar o painel de faixa de opções; FALSE para o painel de faixa de opções de cancelamento de realce.  
   
- [in] *ponto*  
- As coordenadas x e y do ponteiro, relativa ao canto superior esquerdo da janela.  
+*ponto*<br/>
+[in] As coordenadas x e y do ponteiro, relativa ao canto superior esquerdo da janela.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -605,11 +605,11 @@ BOOL bCheckPanelCaption = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *ponto*  
- As coordenadas x e y do ponteiro, relativa ao canto superior esquerdo da janela.  
+*ponto*<br/>
+[in] As coordenadas x e y do ponteiro, relativa ao canto superior esquerdo da janela.  
   
- [in] *bCheckPanelCaption*  
- TRUE para testar a legenda do painel de faixa de opções; Caso contrário, FALSE.  
+*bCheckPanelCaption*<br/>
+[in] TRUE para testar a legenda do painel de faixa de opções; Caso contrário, FALSE.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Ponteiro para um elemento de faixa de opções, se o ponto especificado está localizado em Caso contrário, nulo.  
@@ -625,8 +625,8 @@ virtual int HitTestEx(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *ponto*  
- As coordenadas x e y do ponteiro, relativa ao canto superior esquerdo da janela.  
+*ponto*<br/>
+[in] As coordenadas x e y do ponteiro, relativa ao canto superior esquerdo da janela.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O índice baseado em zero do elemento de faixa de opções que tem o ponto especificado nele; localizado Caso contrário,-1.  
@@ -644,11 +644,11 @@ int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [no, out] *pElem*  
- Ponteiro para um elemento de faixa de opções.  
+*pElem*<br/>
+[no, out] Ponteiro para um elemento de faixa de opções.  
   
- [in] *nIndex*  
- Valor com base em zero, variando de -1 ao número de elementos de faixa de opções que estão contidos na matriz.  
+*nIndex*<br/>
+[in] Valor com base em zero, variando de -1 ao número de elementos de faixa de opções que estão contidos na matriz.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o elemento de faixa de opções foi inserido com êxito; Caso contrário, FALSE.  
@@ -664,8 +664,8 @@ virtual BOOL InsertSeparator(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nIndex*  
- Especifica o índice baseado em zero no qual o separador é inserido.  
+*nIndex*<br/>
+[in] Especifica o índice baseado em zero no qual o separador é inserido.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o separador foi inserido com êxito; Caso contrário, FALSE.  
@@ -769,11 +769,11 @@ int nHeight);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Ponteiro para um contexto de dispositivo para o painel de faixa de opções.  
+*pDC*<br/>
+[in] Ponteiro para um contexto de dispositivo para o painel de faixa de opções.  
   
- [in] *nHeight*  
- A altura do painel da faixa de opções.  
+*nHeight*<br/>
+[in] A altura do painel da faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
  Um painel de faixa de opções é alterado sua configuração de layout como as alterações de largura disponível.  
@@ -788,11 +788,11 @@ BOOL bDelete = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nIndex*  
- Especifica o índice baseado em zero do elemento que é removido do painel de faixa de opções.  
+*nIndex*<br/>
+[in] Especifica o índice baseado em zero do elemento que é removido do painel de faixa de opções.  
   
- [in] *bDelete*  
- TRUE para excluir o elemento que está sendo removido; Caso contrário, FALSE.  
+*bDelete*<br/>
+[in] TRUE para excluir o elemento que está sendo removido; Caso contrário, FALSE.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o elemento foi removido e excluído (se *bDelete* é TRUE); FALSE se o elemento não foi removido ou se não houver nenhum elemento de faixa de opções localizado em *nIndex*.  
@@ -820,8 +820,8 @@ CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nIndex*  
- Especifica o índice baseado em zero do elemento a ser substituído.  
+*nIndex*<br/>
+[in] Especifica o índice baseado em zero do elemento a ser substituído.  
   
  [in] [out] *pElem*  
  Um ponteiro válido para o elemento que substitui o elemento original.  
@@ -842,8 +842,8 @@ CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiCmdID*  
- Especifica a ID do elemento de comando para substituir.  
+*uiCmdID*<br/>
+[in] Especifica a ID do elemento de comando para substituir.  
   
  [in] [out] *pElem*  
  Um ponteiro válido para o elemento que substituirá o elemento original.  
@@ -862,8 +862,8 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bSet*  
- TRUE para centralizar as posições verticais de elementos de faixa de opções dentro de seu retângulo de exibição; FALSE para desabilitar esse recurso.  
+*bSet*<br/>
+[in] TRUE para centralizar as posições verticais de elementos de faixa de opções dentro de seu retângulo de exibição; FALSE para desabilitar esse recurso.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -875,8 +875,8 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *dwData*  
- Especifica os dados definidos pelo usuário a serem definidos.  
+*dwData*<br/>
+[in] Especifica os dados definidos pelo usuário a serem definidos.  
   
 ### <a name="remarks"></a>Comentários  
  Chame esse método para associar os dados definidos pelo usuário com o painel de faixa de opções.  
@@ -900,20 +900,20 @@ BOOL bRightAlign = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiCmdID*  
- Especifica a ID de comando do elemento de faixa de opções em que o menu é adicionado.  
+*uiCmdID*<br/>
+[in] Especifica a ID de comando do elemento de faixa de opções em que o menu é adicionado.  
   
- [in] *hMenu*  
- Especifica o identificador para o menu do Windows para adicionar ao painel de faixa de opções.  
+*hMenu*<br/>
+[in] Especifica o identificador para o menu do Windows para adicionar ao painel de faixa de opções.  
   
- [in] *bIsDefautCommand*  
- TRUE para especificar que o comando associado ao elemento de faixa de opções deve ser executado se o elemento de faixa de opções é clicado. Nesse caso, o menu apenas é aberto quando o usuário clica na seta ao lado do elemento de faixa de opções. FALSO para especificar que o comando associado ao elemento de faixa de opções não deve ser executado se o elemento de faixa de opções é clicado. Nesse caso, o menu pop-up será exibida, independentemente de onde o usuário clica no elemento.  
+*bIsDefautCommand*<br/>
+[in] TRUE para especificar que o comando associado ao elemento de faixa de opções deve ser executado se o elemento de faixa de opções é clicado. Nesse caso, o menu apenas é aberto quando o usuário clica na seta ao lado do elemento de faixa de opções. FALSO para especificar que o comando associado ao elemento de faixa de opções não deve ser executado se o elemento de faixa de opções é clicado. Nesse caso, o menu pop-up será exibida, independentemente de onde o usuário clica no elemento.  
   
- [in] *bRightAlign*  
- TRUE para especificar que o menu pop-up é alinhado à direita; Caso contrário, FALSE.  
+*bRightAlign*<br/>
+[in] TRUE para especificar que o menu pop-up é alinhado à direita; Caso contrário, FALSE.  
   
- [in] *uiMenuResID*  
- Especifica a ID de recurso do menu para adicionar ao painel de faixa de opções.  
+*uiMenuResID*<br/>
+[in] Especifica a ID de recurso do menu para adicionar ao painel de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o menu foi atribuído ao elemento de faixa de opções; Caso contrário, FALSE.  
@@ -931,8 +931,8 @@ CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nIndex*  
- Especifica o índice baseado em zero do elemento da faixa de opções para adicionar.  
+*nIndex*<br/>
+[in] Especifica o índice baseado em zero do elemento da faixa de opções para adicionar.  
   
  [in] [out] *pRTC*  
  Um ponteiro para as informações de classe de tempo de execução para o elemento de faixa de opções que é adicionado ao painel de faixa de opções.  
@@ -953,8 +953,8 @@ CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiCmdID*  
- Especifica a ID do elemento da faixa de opções de comando para adicionar.  
+*uiCmdID*<br/>
+[in] Especifica a ID do elemento da faixa de opções de comando para adicionar.  
   
  [in] [out] *pRTC*  
  Um ponteiro para as informações de classe de tempo de execução associados ao elemento de faixa de opções que é adicionado ao painel de faixa de opções.  
@@ -999,8 +999,8 @@ void SetJustifyColumns(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bSet*  
- TRUE para ajustar a largura de elementos de faixa de opções na mesma coluna para a largura do maior elemento da faixa de opções da coluna; FALSE para desabilitar esse ajuste de largura.  
+*bSet*<br/>
+[in] TRUE para ajustar a largura de elementos de faixa de opções na mesma coluna para a largura do maior elemento da faixa de opções da coluna; FALSE para desabilitar esse ajuste de largura.  
   
 ### <a name="remarks"></a>Comentários  
  Quando esse recurso está habilitado em um painel de faixa de opções, as larguras de elementos de faixa de opções na mesma coluna são ajustadas para a largura do maior elemento da faixa de opções na mesma coluna.  
@@ -1013,8 +1013,8 @@ void SetKeys(LPCTSTR lpszKeys);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszKeys*  
- A dica de tecla para o botão padrão do painel da faixa de opções.  
+*lpszKeys*<br/>
+[in] A dica de tecla para o botão padrão do painel da faixa de opções.  
   
 ### <a name="remarks"></a>Comentários  
  O botão padrão é exibido quando um painel de faixa de opções tem espaço suficiente para exibir seus elementos de faixa de opções.  
@@ -1027,8 +1027,8 @@ CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pButton*  
- Ponteiro para o botão padrão para o painel de faixa de opções.  
+*pButton*<br/>
+[in] Ponteiro para o botão padrão para o painel de faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Ponteiro para o menu pop-up para o painel de faixa de opções, se o método foi bem-sucedida; Caso contrário, nulo.  

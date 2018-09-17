@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58772f3690a68dc3a0d22c2db863fc7ad4904a1c
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c17a9b6970f612c31ba9491ca2e3483b4a3fa37b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540940"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720545"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>Classe CMFCVisualManagerWindows7
 O `CMFCVisualManagerWindows7` fornece a um aplicativo a aparência de um aplicativo do Windows 7.  
@@ -149,17 +149,17 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pEdit*  
- Um ponteiro para o controle de edição. Esse valor não pode ser NULL.  
+*pEdit*<br/>
+[in] Um ponteiro para o controle de edição. Esse valor não pode ser NULL.  
   
- [out] *bIsHighlighted*  
- Retorna se a caixa da faixa de opções está realçada.  
+*bIsHighlighted*<br/>
+[out] Retorna se a caixa da faixa de opções está realçada.  
   
- [out] *bIsPaneHighlighted*  
- Retorna VERDADEIRO se a faixa de opções do painel que contém *pEdit* é realçado.  
+*bIsPaneHighlighted*<br/>
+[out] Retorna VERDADEIRO se a faixa de opções do painel que contém *pEdit* é realçado.  
   
- [out] *bIsDisabled*  
- Retorna se *pEdit* está desabilitado.  
+*bIsDisabled*<br/>
+[out] Retorna se *pEdit* está desabilitado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  A cor do plano de fundo da caixa de edição *pEdit*.  
@@ -178,17 +178,17 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para o contexto de dispositivo de um botão de menu.  
+*pDC*<br/>
+[in] Um ponteiro para o contexto de dispositivo de um botão de menu.  
   
- [in] *pButton*  
- Um ponteiro para um `CMFCToolBarButton`. O framework preenche a tela de fundo desse botão.  
+*pButton*<br/>
+[in] Um ponteiro para um `CMFCToolBarButton`. O framework preenche a tela de fundo desse botão.  
   
- [in] *rect*  
- Um retângulo que especifica os limites da área de imagem do botão de menu.  
+*Rect*<br/>
+[in] Um retângulo que especifica os limites da área de imagem do botão de menu.  
   
- [in] *estado*  
- O estado do botão.  
+*state*<br/>
+[in] O estado do botão.  
   
 ### <a name="remarks"></a>Comentários  
   

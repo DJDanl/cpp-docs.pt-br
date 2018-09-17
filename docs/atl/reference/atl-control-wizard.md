@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2744777a6f464181f5a9e8734af1d2bb023024dd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 381bb9505745331d2ef470c5fd4e8d55e5e742f8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767172"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705803"
 ---
 # <a name="atl-control-wizard"></a>Assistente de controle ATL
 
@@ -52,49 +52,58 @@ Especifique os nomes para o objeto, a interface e a classes a serem adicionadas 
 
 Fornece informações para a classe C++ criada para implementar o objeto.
 
-**Nome curto**  
-Define o nome abreviado do objeto. O nome que você forneceu determina a classe e **Coclass** nomeia o arquivo (. CPP e. H) nomes de, o nome da interface e o **tipo** nomes, a menos que você altere esses campos individualmente.
+- **Nome curto**
 
-**Class**  
-Define o nome da classe que implementa o objeto. Esse nome é baseado no nome que você fornecer em **Short name**, precedidos pela 'c', o prefixo típico para um nome de classe.
+   Define o nome abreviado do objeto. O nome que você forneceu determina a classe e **Coclass** nomeia o arquivo (. CPP e. H) nomes de, o nome da interface e o **tipo** nomes, a menos que você altere esses campos individualmente.
 
-**Arquivo .h**  
-Define o nome do arquivo de cabeçalho para a nova classe do objeto. Por padrão, esse nome é baseado no nome que você fornecer em **Short name**. Clique no botão de reticências para salvar o nome de arquivo no local de sua escolha, ou para acrescentar a declaração de classe a um arquivo existente. Se você selecionar um arquivo existente, o assistente não salvará no local selecionado até que você clique **concluir**.
+- **Class**
 
-O assistente não substitui um arquivo. Se você selecionar o nome de um arquivo existente, quando clicar em **Concluir**, o assistente solicitará que você indique se a declaração de classe deve ser acrescentada ao conteúdo do arquivo. Clique em **Sim** para acrescentar o arquivo; clique em **Não** para retornar ao assistente e especificar outro nome de arquivo.
+   Define o nome da classe que implementa o objeto. Esse nome é baseado no nome que você fornecer em **Short name**, precedidos pela 'c', o prefixo típico para um nome de classe.
 
-**Arquivo .cpp**  
-Define o nome do arquivo de implementação para a nova classe do objeto. Por padrão, esse nome é baseado no nome que você fornecer em **Short name**. Clique no botão de reticências para salvar o nome de arquivo no local de sua escolha. O arquivo não é salvo no local selecionado até que você clique em **Concluir** no assistente.
+- **Arquivo .h**
 
-O assistente não substitui um arquivo. Se você selecionar o nome de um arquivo existente, quando clicar em **Concluir**, o assistente solicitará que você indique se a implementação de classe deve ser acrescentada ao conteúdo do arquivo. Clique em **Sim** para acrescentar o arquivo; clique em **Não** para retornar ao assistente e especificar outro nome de arquivo.
+   Define o nome do arquivo de cabeçalho para a nova classe do objeto. Por padrão, esse nome é baseado no nome que você fornecer em **Short name**. Clique no botão de reticências para salvar o nome de arquivo no local de sua escolha, ou para acrescentar a declaração de classe a um arquivo existente. Se você selecionar um arquivo existente, o assistente não salvará no local selecionado até que você clique **concluir**.
 
-**Atribuído**  
-Indica se o objeto usa atributos. Se você estiver adicionando um objeto para um projeto ATL atribuído, essa opção é selecionada e não está disponível para alterar. Ou seja, você pode adicionar apenas os objetos atribuídos a um projeto criado com o suporte do atributo.
+   O assistente não substitui um arquivo. Se você selecionar o nome de um arquivo existente, quando clicar em **Concluir**, o assistente solicitará que você indique se a declaração de classe deve ser acrescentada ao conteúdo do arquivo. Clique em **Sim** para acrescentar o arquivo; clique em **Não** para retornar ao assistente e especificar outro nome de arquivo.
 
-Você pode adicionar um objeto atribuído somente a um projeto ATL que usa atributos. Se você selecionar essa opção para um projeto ATL que não tem atributo dão suporte, o assistente solicita que você especifique se deseja adicionar suporte de atributo para o projeto.
+- **Arquivo .cpp**
 
-Por padrão, todos os objetos você adiciona depois de definir essa opção são designados como atribuído (a caixa de seleção está marcada). Você pode desmarcar essa caixa para adicionar um objeto que não usa atributos.
+   Define o nome do arquivo de implementação para a nova classe do objeto. Por padrão, esse nome é baseado no nome que você fornecer em **Short name**. Clique no botão de reticências para salvar o nome de arquivo no local de sua escolha. O arquivo não é salvo no local selecionado até que você clique em **Concluir** no assistente.
 
-Ver [configurações de aplicativo, o ATL Project Wizard](../../atl/reference/application-settings-atl-project-wizard.md) e [mecânica básica de atributos](../../windows/basic-mechanics-of-attributes.md) para obter mais informações.
+   O assistente não substitui um arquivo. Se você selecionar o nome de um arquivo existente, quando clicar em **Concluir**, o assistente solicitará que você indique se a implementação de classe deve ser acrescentada ao conteúdo do arquivo. Clique em **Sim** para acrescentar o arquivo; clique em **Não** para retornar ao assistente e especificar outro nome de arquivo.
+
+- **Atribuído**
+
+   Indica se o objeto usa atributos. Se você estiver adicionando um objeto para um projeto ATL atribuído, essa opção é selecionada e não está disponível para alterar. Ou seja, você pode adicionar apenas os objetos atribuídos a um projeto criado com o suporte do atributo.
+
+   Você pode adicionar um objeto atribuído somente a um projeto ATL que usa atributos. Se você selecionar essa opção para um projeto ATL que não tem atributo dão suporte, o assistente solicita que você especifique se deseja adicionar suporte de atributo para o projeto.
+
+   Por padrão, todos os objetos você adiciona depois de definir essa opção são designados como atribuído (a caixa de seleção está marcada). Você pode desmarcar essa caixa para adicionar um objeto que não usa atributos.
+
+   Ver [configurações de aplicativo, o ATL Project Wizard](../../atl/reference/application-settings-atl-project-wizard.md) e [mecânica básica de atributos](../../windows/basic-mechanics-of-attributes.md) para obter mais informações.
 
 ### <a name="com"></a>COM
 
 Fornece informações sobre a funcionalidade de COM para o objeto.
 
-**Coclass**  
-Define o nome da classe de componente que contém uma lista de interfaces com suporte do objeto.
+- **Coclass**
 
-> [!NOTE]
->  Se você criar seu projeto usando atributos, ou se você indicar nesta página do assistente que o controle usa atributos, você não pode alterar essa opção porque ATL não inclui o **coclass** atributo.
+   Define o nome da classe de componente que contém uma lista de interfaces com suporte do objeto.
 
-**Interface**  
-Define o nome da interface para o objeto. Por padrão, um nome de interface é acrescentado com "I".
+   > [!NOTE]
+   > Se você criar seu projeto usando atributos, ou se você indicar nesta página do assistente que o controle usa atributos, você não pode alterar essa opção porque ATL não inclui o **coclass** atributo.
 
-**Tipo**  
-Define a descrição do objeto que será exibido no registro
+- **Interface**
 
-**ProgID**  
-Define o nome que contêineres podem usar em vez do CLSID do objeto. Este campo não é preenchido automaticamente. Se você não preencher este campo manualmente, o controle pode não estar disponível para outras ferramentas. Por exemplo, os controles ActiveX que são gerados sem um `ProgID` não estão disponíveis em de **Inserir controle ActiveX** caixa de diálogo. Para obter mais informações sobre a caixa de diálogo, consulte [Inserir caixa de diálogo de controle ActiveX](../../windows/insert-activex-control-dialog-box.md).
+   Define o nome da interface para o objeto. Por padrão, um nome de interface é acrescentado com "I".
+
+- **Tipo**
+
+   Define a descrição do objeto que será exibido no registro
+
+- **ProgID**
+
+   Define o nome que contêineres podem usar em vez do CLSID do objeto. Este campo não é preenchido automaticamente. Se você não preencher este campo manualmente, o controle pode não estar disponível para outras ferramentas. Por exemplo, os controles ActiveX que são gerados sem um `ProgID` não estão disponíveis em de **Inserir controle ActiveX** caixa de diálogo. Para obter mais informações sobre a caixa de diálogo, confira [Inserir caixa de diálogo de controle ActiveX](../../windows/insert-activex-control-dialog-box.md).
 
 ## <a name="see-also"></a>Consulte também
 

@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5817d44657fa429bdce19f8641255d7db630eac7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4aa0f8e94e0797badbae2a409ae1ce02caea6e81
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954858"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707507"
 ---
 # <a name="weakptr-class"></a>Classe weak_ptr
 
@@ -77,8 +77,8 @@ public:
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ty*  
- O tipo controlado pelo ponteiro fraco.
+*Ty*<br/>
+O tipo controlado pelo ponteiro fraco.
 
 ## <a name="remarks"></a>Comentários
 
@@ -290,14 +290,14 @@ weak_ptr& operator=(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outros*  
- O tipo controlado pelo ponteiro compartilhado/fraco do argumento.
+*Outros*<br/>
+O tipo controlado pelo ponteiro compartilhado/fraco do argumento.
 
-*wp*  
- O ponteiro fraco a ser copiado.
+*wp*<br/>
+O ponteiro fraco a ser copiado.
 
-*SP*  
- O ponteiro compartilhado a ser copiado.
+*SP*<br/>
+O ponteiro compartilhado a ser copiado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -349,8 +349,8 @@ bool owner_before(const weak_ptr<Other>& ptr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*ptr*  
- Uma referência de `lvalue` a um `shared_ptr` ou um `weak_ptr`.
+*ptr*<br/>
+Uma referência de `lvalue` a um `shared_ptr` ou um `weak_ptr`.
 
 ### <a name="remarks"></a>Comentários
 
@@ -409,8 +409,8 @@ void swap(weak_ptr& wp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*wp*  
- O ponteiro fraco pelo qual deve ser trocado.
+*wp*<br/>
+O ponteiro fraco pelo qual deve ser trocado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -529,14 +529,14 @@ weak_ptr(const shared_ptr<Other>& sp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Outros*  
- O tipo controlado pelo ponteiro compartilhado/fraco do argumento.
+*Outros*<br/>
+O tipo controlado pelo ponteiro compartilhado/fraco do argumento.
 
-*wp*  
- O ponteiro fraco a ser copiado.
+*wp*<br/>
+O ponteiro fraco a ser copiado.
 
-*SP*  
- O ponteiro compartilhado a ser copiado.
+*SP*<br/>
+O ponteiro compartilhado a ser copiado.
 
 ### <a name="remarks"></a>Comentários
 

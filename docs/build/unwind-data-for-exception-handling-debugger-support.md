@@ -1,5 +1,5 @@
 ---
-title: Dados desenrolados para tratamento de exceções, suporte do depurador | Microsoft Docs
+title: Dados desenrolados para tratamento de exceções, suporte ao depurador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,23 +12,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5961159ab87426a26b31afcc09a16fece0a81b2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0196d30f0634d37db976dab9416d7a5d23f8b719
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380427"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707376"
 ---
 # <a name="unwind-data-for-exception-handling-debugger-support"></a>Dados desenrolados para tratamento de exceções, suporte do depurador
-Esta seção discute as estruturas de dados necessárias para manipuladores de exceção e suporte à depuração.  
-  
--   [struct RUNTIME_FUNCTION](../build/struct-runtime-function.md)  
-  
--   [struct UNWIND_INFO](../build/struct-unwind-info.md)  
-  
--   [struct UNWIND_CODE](../build/struct-unwind-code.md)  
-  
--   [Estruturas de informações desenroladas encadeadas](../build/chained-unwind-info-structures.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Tratamento de exceção (x64)](../build/exception-handling-x64.md)
+
+Esta seção discute as estruturas de dados necessárias para a manipulação de exceção e suporte à depuração.
+
+- [struct RUNTIME_FUNCTION](../build/struct-runtime-function.md)
+
+- [struct UNWIND_INFO](../build/struct-unwind-info.md)
+
+- [struct UNWIND_CODE](../build/struct-unwind-code.md)
+
+- [Estruturas de informações desenroladas encadeadas](../build/chained-unwind-info-structures.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Tratamento de exceção (x64)](../build/exception-handling-x64.md)

@@ -96,12 +96,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d3af5911cac27a0ac2bb65e9ee0cdb7b714b41d
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4552fa0462332cacaa8abfd8c42b0de4871dc8d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539936"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720298"
 ---
 # <a name="cdocksite-class"></a>Classe CDockSite
 Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
@@ -189,8 +189,8 @@ CDockingPanesRow* AddRow(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pos*  
- [in] *nHeight*  
+*POS*<br/>
+[in] [in] *nHeight*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -225,8 +225,8 @@ void AlignDockSite(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *rectToAlignBy*  
- [in] *rectResult*  
+*rectToAlignBy*<br/>
+[in] [in] *rectResult*  
  [in] *bMoveImmediately*  
   
 ### <a name="remarks"></a>Comentários  
@@ -241,8 +241,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -276,12 +276,12 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *dwStyleEx*  
- [in] *dwStyle*  
- [in] *rect*  
- [in] *pParentWnd*  
- [in] *dwControlBarStyle*  
- [in] *pContext*  
+*dwStyleEx*<br/>
+[in] [in] *dwStyle*  
+*Rect*<br/>
+[in] [in] *pParentWnd*  
+*dwControlBarStyle*<br/>
+[in] [in] *pContext*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -298,8 +298,8 @@ virtual CDockingPanesRow* CreateRow(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pParentDockBar*  
- [in] *nOffset*  
+*pParentDockBar*<br/>
+[in] [in] *nOffset*  
  [in] *nRowHeight*  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -317,8 +317,8 @@ virtual void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *Apropriei*  
- [in] *dockMethod*  
+*Apropriei*<br/>
+[in] [in] *dockMethod*  
  [in] *lpRect*  
   
 ### <a name="remarks"></a>Comentários  
@@ -363,8 +363,8 @@ CPane* FindPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nID*  
- A ID de comando do painel a ser localizada.  
+*nID*<br/>
+[in] A ID de comando do painel a ser localizada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o painel com o ID de comando especificada ou nulo se o painel não for encontrado.  
@@ -472,8 +472,8 @@ BOOL IsRectWithinDockSite(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *rect*  
- [in] *ptDelta*  
+*Rect*<br/>
+[in] [in] *ptDelta*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -501,8 +501,8 @@ virtual BOOL MovePane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *Apropriei*  
- [in] *nFlags*  
+*Apropriei*<br/>
+[in] [in] *nFlags*  
  [in] *ptOffset*  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -531,8 +531,8 @@ virtual void OnRemoveRow(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pos*  
- [in] *bByShow*  
+*POS*<br/>
+[in] [in] *bByShow*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -546,8 +546,8 @@ virtual int OnResizeRow(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pRowToResize*  
- [in] *nOffset*  
+*pRowToResize*<br/>
+[in] [in] *nOffset*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -565,10 +565,10 @@ virtual void OnSizeParent(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *rectAvailable*  
- [in] *Xplorando o*  
- [in] *bExpand*  
- [in] *nOffset*  
+*rectAvailable*<br/>
+[in] [in] *Xplorando o*  
+*bExpand*<br/>
+[in] [in] *nOffset*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -583,8 +583,8 @@ virtual BOOL OnSetWindowPos(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWndInsertAfter*  
- [in] *rectWnd*  
+*pWndInsertAfter*<br/>
+[in] [in] *rectWnd*  
  [in] *nFlags*  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -601,8 +601,8 @@ virtual void OnShowRow(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pos*  
- [in] *bMostrar*  
+*POS*<br/>
+[in] [in] *bMostrar*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -614,8 +614,8 @@ virtual CPane* PaneFromPoint(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pt*  
- Um ponto em coordenadas da tela, para o painel recuperar.  
+*pt*<br/>
+[in] Um ponto em coordenadas da tela, para o painel recuperar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o painel, localizado no ponto especificado ou nulo se nenhum painel estava presente no ponto especificado.  
@@ -632,8 +632,8 @@ static int __stdcall RectSideFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *rect*  
- [in] *ponto*  
+*Rect*<br/>
+[in] [in] *ponto*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -649,8 +649,8 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *Apropriei*  
- [in] *dockMethod*  
+*Apropriei*<br/>
+[in] [in] *dockMethod*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -676,8 +676,8 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pOldBar*  
- [in] *pNewBar*  
+*pOldBar*<br/>
+[in] [in] *pNewBar*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -705,8 +705,8 @@ void ResizeDockSite(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nNewWidth*  
- [in] *nNewHeight*  
+*nNewWidth*<br/>
+[in] [in] *nNewHeight*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -721,8 +721,8 @@ int ResizeRow(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pRow*  
- [in] *nNewSize*  
+*pRow*<br/>
+[in] [in] *nNewSize*  
  [in] *bAdjustLayout*  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -744,14 +744,14 @@ virtual BOOL ShowPane(
  [in] [out] *pBar*  
  Um ponteiro para o painel para ser mostrado ou ocultado.  
   
- [in] *bMostrar*  
- TRUE para especificar que o painel deve ser exibido; FALSO para especificar que o painel deve ser ocultada.  
+*bMostrar*<br/>
+[in] TRUE para especificar que o painel deve ser exibido; FALSO para especificar que o painel deve ser ocultada.  
   
- [in] *bDelay*  
- TRUE para especificar que o layout do painel deve ser atrasado até que o painel é exibido; Caso contrário, FALSE.  
+*bDelay*<br/>
+[in] TRUE para especificar que o layout do painel deve ser atrasado até que o painel é exibido; Caso contrário, FALSE.  
   
- [in] *bActivate*  
- Este parâmetro não é usado.  
+*bActivate*<br/>
+[in] Esse parâmetro não é usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o painel foi mostrado ou ocultado com êxito. FALSE se o painel especificado não pertence a este site de encaixe.  
@@ -770,8 +770,8 @@ void ShowRow(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pRow*  
- [in] *bMostrar*  
+*pRow*<br/>
+[in] [in] *bMostrar*  
  [in] *bAdjustLayout*  
   
 ### <a name="remarks"></a>Comentários  
@@ -786,8 +786,8 @@ void SwapRows(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pFirstRow*  
- [in] *pSecondRow*  
+*pFirstRow*<br/>
+[in] [in] *pSecondRow*  
   
 ### <a name="remarks"></a>Comentários  
   

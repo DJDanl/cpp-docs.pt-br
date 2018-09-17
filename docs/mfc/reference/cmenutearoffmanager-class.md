@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b05c93bbdfd09bc28288b27a55520c5ac664b723
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0ca3af6aba4c208672038de2ca663efdb2cc9d9a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543072"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700928"
 ---
 # <a name="cmenutearoffmanager-class"></a>Classe CMenuTearOffManager
 Gerencia menus destacáveis. Um menu destacável é um menu na barra de menus. O usuário pode remover um menu destacável da barra de menus, fazendo com que o menu destacável fique flutuando.  
@@ -99,8 +99,8 @@ void Build(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiTearOffBarID*  
- [in] *strText*  
+*uiTearOffBarID*<br/>
+[in] [in] *strText*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -136,14 +136,14 @@ BOOL Initialize(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszRegEntry*  
- Uma cadeia de caracteres que contém o caminho de uma entrada de registro. Seus aplicativos armazena as configurações de barras destacáveis nesta entrada de registro.  
+*lpszRegEntry*<br/>
+[in] Uma cadeia de caracteres que contém o caminho de uma entrada de registro. Seus aplicativos armazena as configurações de barras destacáveis nesta entrada de registro.  
   
- [in] *uiTearOffMenuFirst*  
- A primeira ID de menu para um menu destacável.  
+*uiTearOffMenuFirst*<br/>
+[in] A primeira ID de menu para um menu destacável.  
   
- [in] *uiTearOffMenuLast*  
- A última ID de menu para um menu destacável.  
+*uiTearOffMenuLast*<br/>
+[in] A última ID de menu para um menu destacável.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se bem-sucedido; Caso contrário, 0.  
@@ -201,8 +201,8 @@ void SetInUse(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiCmdId*  
- [in] *bUse*  
+*uiCmdId*<br/>
+[in] [in] *bUse*  
   
 ### <a name="remarks"></a>Comentários  
   

@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da87a87a2e97736d202b7ddb9be2dbec54fed44d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e2b0571e67e7c5d24cf31dce6fce548735cad966
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367193"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721455"
 ---
 # <a name="executing-a-program-in-preprocessing"></a>Executando um programa em pré-processamento
-Para usar o código de saída do comando durante o pré-processamento, especifique o comando, com os argumentos, entre colchetes ([]). Todas as macros são expandidas antes do comando é executado. NMAKE substitui a especificação de comando com o código de saída do comando, que pode ser usado em uma expressão para controlar o pré-processamento.  
-  
-## <a name="see-also"></a>Consulte também  
- [Expressões no pré-processamento de makefile](../build/expressions-in-makefile-preprocessing.md)
+
+Para usar um código de saída comando durante o pré-processamento, especifique o comando, com quaisquer argumentos, dentro de colchetes ([]). Todas as macros são expandidas antes que o comando é executado. NMAKE substitui a especificação de comando com o código de saída do comando, que pode ser usado em uma expressão para controlar o pré-processamento.
+
+## <a name="see-also"></a>Consulte também
+
+[Expressões no pré-processamento de makefile](../build/expressions-in-makefile-preprocessing.md)

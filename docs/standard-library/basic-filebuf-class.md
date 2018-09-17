@@ -50,12 +50,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4594e24ddf88292d311679b64371ac981642bc5d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ee6c74693987c35f37caf210e604835061cbefd6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222715"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715332"
 ---
 # <a name="basicfilebuf-class"></a>Classe basic_filebuf
 
@@ -71,10 +71,10 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
 ### <a name="parameters"></a>Parâmetros
 
 *Elem*<br/>
- O elemento básico no buffer de arquivo.
+O elemento básico no buffer de arquivo.
 
 *Tr*<br/>
- As características do elemento básico no buffer de arquivo (geralmente `char_traits` <  `Elem`>).
+As características do elemento básico no buffer de arquivo (geralmente `char_traits` <  `Elem`>).
 
 ## <a name="remarks"></a>Comentários
 
@@ -413,13 +413,13 @@ basic_filebuf<Elem, Tr> *open(
 ### <a name="parameters"></a>Parâmetros
 
 *Nome de arquivo*<br/>
- O nome do arquivo a ser aberto.
+O nome do arquivo a ser aberto.
 
 *Modo*<br/>
- Uma das enumerações em [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
+Uma das enumerações em [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>
- Proteção, equivalente de abertura de arquivo padrão a *shflag* parâmetro na [fsopen, wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+Proteção, equivalente de abertura de arquivo padrão a *shflag* parâmetro na [fsopen, wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -462,7 +462,7 @@ basic_filebuf& operator=(basic_filebuf&& right);
 ### <a name="parameters"></a>Parâmetros
 
 *right*<br/>
- Uma referência rvalue para um objeto [basic_filebuf](../standard-library/basic-filebuf-class.md).
+Uma referência rvalue para um objeto [basic_filebuf](../standard-library/basic-filebuf-class.md).
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -483,7 +483,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 ### <a name="parameters"></a>Parâmetros
 
 *_Meta*<br/>
- O caractere a ser inserido no buffer ou `traits_type::eof`.
+O caractere a ser inserido no buffer ou `traits_type::eof`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -510,7 +510,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 ### <a name="parameters"></a>Parâmetros
 
 *_Meta*<br/>
- O caractere a ser inserido no buffer ou `traits_type::eof`.
+O caractere a ser inserido no buffer ou `traits_type::eof`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -547,13 +547,13 @@ virtual pos_type seekoff(off_type _Off,
 ### <a name="parameters"></a>Parâmetros
 
 *Off*<br/>
- A posição para buscar com relação a *Way*.
+A posição para buscar com relação a *Way*.
 
 *Way*<br/>
- O ponto de partida para operações de deslocamento. Consulte [seekdir](../standard-library/ios-base-class.md#seekdir) para valores possíveis.
+O ponto de partida para operações de deslocamento. Consulte [seekdir](../standard-library/ios-base-class.md#seekdir) para valores possíveis.
 
 *_Which*<br/>
- Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
+Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -578,10 +578,10 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 ### <a name="parameters"></a>Parâmetros
 
 *_Sp*<br/>
- A posição pela qual buscar.
+A posição pela qual buscar.
 
 *_Which*<br/>
- Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
+Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -608,10 +608,10 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 ### <a name="parameters"></a>Parâmetros
 
 *_Buffer*<br/>
- Ponteiro para um buffer.
+Ponteiro para um buffer.
 
 *count*<br/>
- O tamanho do buffer.
+O tamanho do buffer.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -632,7 +632,7 @@ void swap(basic_filebuf& right);
 ### <a name="parameters"></a>Parâmetros
 
 *right*<br/>
- Um `lvalue` referência a outro `basic_filebuf`.
+Um `lvalue` referência a outro `basic_filebuf`.
 
 ## <a name="sync"></a>  basic_filebuf::sync
 

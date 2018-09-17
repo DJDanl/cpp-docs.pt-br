@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ae4a24424acc4385927e0f7c99735bd50a6d472
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: a2b7abb9cbc3f75c2b4f50f87a1bfdd818e6a3f8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121644"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707337"
 ---
 # <a name="csplitterwndex-class"></a>Classe CSplitterWndEx
 
@@ -53,9 +53,9 @@ class CSplitterWndEx : public CSplitterWnd
 |[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Chamado pelo framework para desenhar uma janela separadora. (Substitui [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|  
   
 ## <a name="remarks"></a>Comentários  
- Substituir o `OnDrawSplitter` método para personalizar a aparência dos componentes de gráfico de uma janela separadora.  
+ Substituir o `OnDrawSplitter` método para personalizar a aparência dos componentes do gráficos de uma janela separadora.  
   
- O `CSplitterWndEx` classe é usada junto com o [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), e [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) métodos, que são implementado por um Gerenciador de visual. Para fazer com que um Gerenciador de visual desenhar uma janela separadora em seu aplicativo, substitua as declarações da `CSplitterWnd` classe com o `CSplitterWndEx` classe. Para aplicativos de janela do quadro, a classe de janela separadora é declarada na classe CMainFrame que está localizada em mainfrm.h. Para obter um exemplo, consulte o `OutlookDemo` exemplo no diretório de exemplos.  
+ O `CSplitterWndEx` classe é usada junto com o [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), e [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) métodos, que são implementado por um Gerenciador de visual. Para fazer com que um gerente desenhar uma janela separadora em seu aplicativo, substitua as declarações do `CSplitterWnd` classe com o `CSplitterWndEx` classe. Para aplicativos de janela de quadro, a classe de janela divisora é declarada na classe CMainFrame que está localizada em mainfrm.h. Por exemplo, consulte o `OutlookDemo` exemplo no diretório de exemplos.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](cobject-class.md)  
@@ -81,19 +81,19 @@ virtual void OnDrawSplitter(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Ponteiro para o contexto de dispositivo. Se esse parâmetro for NULL, o framework redesenha a janela ativa.  
+*pDC*<br/>
+[in] Ponteiro para o contexto de dispositivo. Se esse parâmetro for NULL, o framework redesenha a janela ativa.  
   
- [in] *nType*  
- Uma da `CSplitterWnd::ESplitType` valores de enumeração que especifica o elemento de janela separadora para desenhar. Os valores válidos são `splitBox`, `splitBar`, `splitIntersection` e `splitBorder`.  
+*nType*<br/>
+[in] Um do `CSplitterWnd::ESplitType` valores de enumeração que especifica o elemento de janela divisor para desenhar. Os valores válidos são `splitBox`, `splitBar`, `splitIntersection` e `splitBorder`.  
   
- [in] *rect*  
- Um retângulo que especifica as dimensões e o local para desenhar o elemento de janela de divisão especificada.  
+*Rect*<br/>
+[in] Um retângulo delimitador que especifica as dimensões e o local para desenhar o elemento de janela de divisão especificada.  
   
 ### <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../hierarchy-chart.md)   
+ [Gráfico da hierarquia](../hierarchy-chart.md)   
  [Classes](mfc-classes.md)   
  [Classe CSplitterWnd](csplitterwnd-class.md)   
  [Classe CMFCVisualManager](cmfcvisualmanager-class.md)

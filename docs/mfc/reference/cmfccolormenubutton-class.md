@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40e943fd6c03838c8c14e202026e10d3c7b22ace
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ab793b8c758b95c259c717a794436b59057d4273
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852934"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712979"
 ---
 # <a name="cmfccolormenubutton-class"></a>Classe CMFCColorMenuButton
 O `CMFCColorMenuButton` classe dá suporte a um comando de menu ou um botão de barra de ferramentas que inicia uma caixa de diálogo do seletor de cor.  
@@ -143,14 +143,14 @@ CMFCColorMenuButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiCmdID*  
- Uma ID de comando do botão.  
+*uiCmdID*<br/>
+[in] Uma ID de comando do botão.  
   
- [in] *lpszText*  
- O texto do botão.  
+*lpszText*<br/>
+[in] O texto do botão.  
   
- [in] *pPalette*  
- Um ponteiro para uma paleta de cores do botão.  
+*pPalette*<br/>
+[in] Um ponteiro para uma paleta de cores do botão.  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -167,8 +167,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *src*  
- Botão de origem para copiar.  
+*src*<br/>
+[in] Botão de origem para copiar.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua este método para copiar os objetos que derivam de `CMFCColorMenuButton` objeto.  
@@ -197,14 +197,14 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszLabel*  
- Especifica o texto do botão que é exibido quando o botão se torna automático.  
+*lpszLabel*<br/>
+[in] Especifica o texto do botão que é exibido quando o botão se torna automático.  
   
- [in] *automáticaCor*  
- Especifica uma nova cor automática.  
+*automáticaCor*<br/>
+[in] Especifica uma nova cor automática.  
   
- [in] *bAtivar*  
- Especifica se o botão é automático ou não.  
+*bAtivar*<br/>
+[in] Especifica se o botão é automático ou não.  
   
 ### <a name="remarks"></a>Comentários  
  O botão automático se aplica a cor padrão atual.  
@@ -219,11 +219,11 @@ void EnableDocumentColors(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszLabel*  
- Especifica o texto do botão.  
+*lpszLabel*<br/>
+[in] Especifica o texto do botão.  
   
- [in] *bAtivar*  
- TRUE para exibir cores de documento específico ou falso para exibir cores do sistema.  
+*bAtivar*<br/>
+[in] TRUE para exibir cores de documento específico ou falso para exibir cores do sistema.  
   
 ### <a name="remarks"></a>Comentários  
  Use esse método para exibir as cores do documento atual ou as cores de paleta do sistema quando o usuário clica em um botão de menu de cor.  
@@ -239,14 +239,14 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszLabel*  
- Especifica o texto do botão.  
+*lpszLabel*<br/>
+[in] Especifica o texto do botão.  
   
- [in] *bAltColorDlg*  
- Especifique TRUE para exibir o `CMFCColorDialog` caixa de diálogo, ou falso para exibir a caixa de diálogo de cor padrão do sistema.  
+*bAltColorDlg*<br/>
+[in] Especifique TRUE para exibir o `CMFCColorDialog` caixa de diálogo, ou falso para exibir a caixa de diálogo de cor padrão do sistema.  
   
- [in] *bAtivar*  
- Especifique TRUE para exibir o botão "other"; Caso contrário, FALSE. O padrão é TRUE.  
+*bAtivar*<br/>
+[in] Especifique TRUE para exibir o botão "other"; Caso contrário, FALSE. O padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -261,14 +261,14 @@ void EnableTearOff(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiID*  
- Especifica a ID para o painel destacáveis.  
+*uiID*<br/>
+[in] Especifica a ID para o painel destacáveis.  
   
- [in] *nVertDockColumns*  
- Especifica o número de colunas no painel de cor encaixado na vertical no estado destacáveis.  
+*nVertDockColumns*<br/>
+[in] Especifica o número de colunas no painel de cor encaixado na vertical no estado destacáveis.  
   
- [in] *nHorzDockRows*  
- Especifica o número de linhas para o painel de cores ancorada horizontalmente enquanto estiver no estado destacáveis.  
+*nHorzDockRows*<br/>
+[in] Especifica o número de linhas para o painel de cores ancorada horizontalmente enquanto estiver no estado destacáveis.  
   
 ### <a name="remarks"></a>Comentários  
  Chame esse método para habilitar o recurso "destacáveis" para o painel de cores pop-up quando o `CMFCColorMenuButton` é pressionado.  
@@ -306,8 +306,8 @@ static COLORREF GetColorByCmdID(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiCmdID*  
- Uma ID de comando.  
+*uiCmdID*<br/>
+[in] Uma ID de comando.  
   
 ### <a name="return-value"></a>Valor de retorno  
  A cor que corresponde à ID de comando especificado.  
@@ -336,8 +336,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWndParent*  
- Um ponteiro para a nova janela pai.  
+*pWndParent*<br/>
+[in] Um ponteiro para a nova janela pai.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -357,29 +357,29 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Um ponteiro para um contexto de dispositivo.  
   
- [in] *rect*  
- Um retângulo que delimita a área a ser redesenhado.  
+*Rect*<br/>
+[in] Um retângulo que delimita a área a ser redesenhado.  
   
- [in] *pImages*  
- Aponta para uma lista de imagens da barra de ferramentas.  
+*pImages*<br/>
+[in] Aponta para uma lista de imagens da barra de ferramentas.  
   
- [in] *bHorz*  
- TRUE para especificar que a barra de ferramentas está em um estado de ancoramento horizontal; Caso contrário, FALSE. O padrão é TRUE.  
+*bHorz*<br/>
+[in] TRUE para especificar que a barra de ferramentas está em um estado de ancoramento horizontal; Caso contrário, FALSE. O padrão é TRUE.  
   
- [in] *bCustomizeMode*  
- TRUE para especificar que o aplicativo está no modo de personalização. Caso contrário, FALSE. O padrão é FALSE.  
+*bCustomizeMode*<br/>
+[in] TRUE para especificar que o aplicativo está no modo de personalização. Caso contrário, FALSE. O padrão é FALSE.  
   
- [in] *bHighlight*  
- TRUE para especificar que o botão está realçado; Caso contrário, FALSE. O padrão é FALSE.  
+*bHighlight*<br/>
+[in] TRUE para especificar que o botão está realçado; Caso contrário, FALSE. O padrão é FALSE.  
   
- [in] *bDrawBorder*  
- TRUE para especificar que a borda do botão é exibida; Caso contrário, FALSE. O padrão é TRUE.  
+*bDrawBorder*<br/>
+[in] TRUE para especificar que a borda do botão é exibida; Caso contrário, FALSE. O padrão é TRUE.  
   
- [in] *bGrayDisabledButtons*  
- TRUE para especificar que os botões desabilitados são cinza (esmaecido). Caso contrário, FALSE. O padrão é TRUE.  
+*bGrayDisabledButtons*<br/>
+[in] TRUE para especificar que os botões desabilitados são cinza (esmaecido). Caso contrário, FALSE. O padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -394,14 +394,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Um ponteiro para um contexto de dispositivo.  
   
- [in] *rect*  
- Um retângulo que delimita o botão a ser desenhado.  
+*Rect*<br/>
+[in] Um retângulo que delimita o botão a ser desenhado.  
   
- [in] *bSelected*  
- O valor TRUE Especifica que o botão estiver no estado selecionado; Caso contrário, FALSE.  
+*bSelected*<br/>
+[in] O valor TRUE Especifica que o botão estiver no estado selecionado; Caso contrário, FALSE.  
   
 ### <a name="return-value"></a>Valor de retorno  
  A largura do botão.  
@@ -419,11 +419,11 @@ virtual BOOL OpenColorDialog(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *colorDefault*  
- A cor padrão é selecionada na caixa de diálogo de cor.  
+*colorDefault*<br/>
+[in] A cor padrão é selecionada na caixa de diálogo de cor.  
   
- [out] *colorRes*  
- Retorna a cor que o usuário seleciona na caixa de diálogo de cor.  
+*colorRes*<br/>
+[out] Retorna a cor que o usuário seleciona na caixa de diálogo de cor.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o usuário seleciona uma nova cor. Caso contrário, zero.  
@@ -441,11 +441,11 @@ virtual void SetColor(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *clr*  
- Um valor de cor RGB.  
+*CLR*<br/>
+[in] Um valor de cor RGB.  
   
- [in] *bNotify*  
- TRUE para aplicar a *clr* cor de parâmetro para qualquer botão de menu associado ou botão de barra de ferramentas; caso contrário, FALSE.  
+*bNotify*<br/>
+[in] TRUE para aplicar a *clr* cor de parâmetro para qualquer botão de menu associado ou botão de barra de ferramentas; caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
  Chame esse método para alterar a cor do botão de cor atual. Se o *bNotify* parâmetro é diferente de zero, a cor do botão correspondente em qualquer menu pop-up associado ou a barra de ferramentas é alterada para a cor especificada pela *clr* parâmetro.  
@@ -460,11 +460,11 @@ static void SetColorByCmdID(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiCmdID*  
- A ID de recurso de um botão de menu de cor.  
+*uiCmdID*<br/>
+[in] A ID de recurso de um botão de menu de cor.  
   
- [in] *cor*  
- Um valor de cor RGB.  
+*Cor*<br/>
+[in] Um valor de cor RGB.  
   
 ##  <a name="setcolorname"></a>  CMFCColorMenuButton::SetColorName  
  Define um novo nome para a cor especificada.  
@@ -476,11 +476,11 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *cor*  
- O valor RGB da cor cujo nome é alterado.  
+*Cor*<br/>
+[in] O valor RGB da cor cujo nome é alterado.  
   
- [in] *strName*  
- O novo nome da cor.  
+*strName*<br/>
+[in] O novo nome da cor.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -492,8 +492,8 @@ void SetColumnsNumber(int nColumns);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nColumns*  
- O número de colunas a serem exibidas.  
+*nColumns*<br/>
+[in] O número de colunas a serem exibidas.  
   
 ### <a name="remarks"></a>Comentários  
   

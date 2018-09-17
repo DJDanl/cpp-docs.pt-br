@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2854199796f5d75cc4b24016def3c63327a5d511
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 62bb1ca2cc4ba07e3f3262f6babee3ed4c52caa2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692036"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708208"
 ---
 # <a name="cframewndex-class"></a>Classe CFrameWndEx
 Implementa a funcionalidade de um Windows único sobreposta de interface de documento (SDI) ou a janela de quadro pop-up e fornece membros para gerenciar a janela. Ele estende o [CFrameWnd](../../mfc/reference/cframewnd-class.md) classe.  
@@ -337,11 +337,11 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pControlBar*  
- Um painel da barra de controle para se registrar.  
+*pControlBar*<br/>
+[in] Um painel da barra de controle para se registrar.  
   
- [in] *bTail*  
- TRUE se você deseja adicionar o painel da barra de controle até o final da lista; FALSE caso contrário.  
+*bTail*<br/>
+[in] TRUE se você deseja adicionar o painel da barra de controle até o final da lista; FALSE caso contrário.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a barra de controle foi registrada com êxito; FALSE caso contrário.  
@@ -368,8 +368,8 @@ virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *hMenuAlt*  
- Identificador para um menu alternativo.  
+*hMenuAlt*<br/>
+[in] Identificador para um menu alternativo.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -384,14 +384,14 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pBar*  
- Um ponteiro para a barra de controle encaixado.  
+*pBar*<br/>
+[in] Um ponteiro para a barra de controle encaixado.  
   
- [in] *nDockBarID*  
- A ID do lado da janela do quadro para encaixar.  
+*nDockBarID*<br/>
+[in] A ID do lado da janela do quadro para encaixar.  
   
- [in] *lpRect*  
- Um ponteiro para uma estrutura Rect constante que especifica a posição da tela e o tamanho da janela.  
+*lpRect*<br/>
+[in] Um ponteiro para uma estrutura Rect constante que especifica a posição da tela e o tamanho da janela.  
   
 ### <a name="remarks"></a>Comentários  
  O *nDockBarID* parâmetro pode ter um dos seguintes valores:  
@@ -414,11 +414,11 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pBar*  
- Um ponteiro para o objeto de painel encaixado.  
+*pBar*<br/>
+[in] Um ponteiro para o objeto de painel encaixado.  
   
- [in] *pLeftOf*  
- Um ponteiro para o painel à esquerda do que encaixar o painel especificado por *pBar*.  
+*pLeftOf*<br/>
+[in] Um ponteiro para o painel à esquerda do que encaixar o painel especificado por *pBar*.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se *pBar* está encaixado com êxito. FALSE caso contrário.  
@@ -434,8 +434,8 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *dwDockStyle*  
- Especifica o lado da janela principal do quadro ao qual se encaixar o painel.  
+*dwDockStyle*<br/>
+[in] Especifica o lado da janela principal do quadro ao qual se encaixar o painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se uma barra de painel está encaixado com êxito para o lado da janela de quadro especificado pelo *dwDockStyle*, FALSE caso contrário.  
@@ -459,8 +459,8 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *dwDockStyle*  
- Especifica o lado da janela principal do quadro em que encaixa a barra do painel.  
+*dwDockStyle*<br/>
+[in] Especifica o lado da janela principal do quadro em que encaixa a barra do painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se uma barra de painel pode ser encaixado no lado especificado com êxito. FALSE caso contrário.  
@@ -484,8 +484,8 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bEnableMenu*  
- True para mostrar o menu principal em uma completa de tela modo, FALSE caso contrário.  
+*bEnableMenu*<br/>
+[in] True para mostrar o menu principal em uma completa de tela modo, FALSE caso contrário.  
   
 ##  <a name="enablefullscreenmode"></a>  CFrameWndEx::EnableFullScreenMode  
  Habilita o modo de tela inteira para a janela do quadro.  
@@ -495,8 +495,8 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiFullScreenCmd*  
- A ID de um comando que habilita e desabilita o modo de tela inteira.  
+*uiFullScreenCmd*<br/>
+[in] A ID de um comando que habilita e desabilita o modo de tela inteira.  
   
 ### <a name="remarks"></a>Comentários  
  No modo de tela inteira, todas as barras de controle de encaixe, barras de ferramentas e menu estão ocultos e a exibição ativa é redimensionada para ocupar a tela inteira.  
@@ -513,8 +513,8 @@ void EnableLoadDockState(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- TRUE para habilitar o carregamento do estado de encaixe, FALSE para desabilitar o carregamento do estado de encaixe.  
+*bAtivar*<br/>
+[in] TRUE para habilitar o carregamento do estado de encaixe, FALSE para desabilitar o carregamento do estado de encaixe.  
   
 ##  <a name="enablepanemenu"></a>  CFrameWndEx::EnablePaneMenu  
  Habilita ou desabilita a manipulação automática de menu do painel.  
@@ -530,23 +530,23 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- TRUE para habilitar a manipulação automática do controle de barra de menus pop-up; FALSE para desabilitar a manipulação automática do controle de barra de menus pop-up.  
+*bAtivar*<br/>
+[in] TRUE para habilitar a manipulação automática do controle de barra de menus pop-up; FALSE para desabilitar a manipulação automática do controle de barra de menus pop-up.  
   
- [in] *uiCustomizeCmd*  
- A ID de comando do **personalizar** item de menu.  
+*uiCustomizeCmd*<br/>
+[in] A ID de comando do **personalizar** item de menu.  
   
- [in] *strCustomizeLabel*  
- O rótulo a ser exibido para o **personalizar** item de menu  
+*strCustomizeLabel*<br/>
+[in] O rótulo a ser exibido para o **personalizar** item de menu  
   
- [in] *uiViewToolbarsMenuEntryID*  
- A ID de um item de menu da barra de ferramentas que abre o menu pop-up na barra de controle.  
+*uiViewToolbarsMenuEntryID*<br/>
+[in] A ID de um item de menu da barra de ferramentas que abre o menu pop-up na barra de controle.  
   
- [in] *bContextMenuShowsToolbarsOnly*  
- Se for TRUE, o menu de contexto da barra de controle exibe a lista das barras de ferramentas só. Se for FALSE, o menu exibe a lista de barras de ferramentas e barras de encaixe.  
+*bContextMenuShowsToolbarsOnly*<br/>
+[in] Se for TRUE, o menu de contexto da barra de controle exibe a lista das barras de ferramentas só. Se for FALSE, o menu exibe a lista de barras de ferramentas e barras de encaixe.  
   
- [in] *bViewMenuShowsToolbarsOnly*  
- Se for TRUE, o menu da barra de controle exibe a lista de somente as barras de ferramentas. Se for FALSE, o menu exibe a lista de barras de ferramentas e barras de encaixe.  
+*bViewMenuShowsToolbarsOnly*<br/>
+[in] Se for TRUE, o menu da barra de controle exibe a lista de somente as barras de ferramentas. Se for FALSE, o menu exibe a lista de barras de ferramentas e barras de encaixe.  
   
 ##  <a name="getactivepopup"></a>  CFrameWndEx::GetActivePopup  
  Retorna um ponteiro para o menu pop-up exibido no momento.  
@@ -599,8 +599,8 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nID*  
- A ID do controle.  
+*nID*<br/>
+[in] A ID do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o painel que tem a ID especificada. NULL se tais painel não existe.  
@@ -637,11 +637,11 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pButton*  
- Um ponteiro para um botão de barra de ferramentas.  
+*pButton*<br/>
+[in] Um ponteiro para um botão de barra de ferramentas.  
   
- [in] *strTTText*  
- O texto de dica de ferramenta a ser exibida para o botão.  
+*strTTText*<br/>
+[in] O texto de dica de ferramenta a ser exibida para o botão.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a dica de ferramenta foi exibida. FALSE caso contrário.  
@@ -709,14 +709,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *ponto*  
- A posição do ponto.  
+*ponto*<br/>
+[in] A posição do ponto.  
   
- [out] *dwBarAlignment*  
- Em que o ponto seja alinhado. Consulte a tabela na seção comentários para os valores possíveis.  
+*dwBarAlignment*<br/>
+[out] Em que o ponto seja alinhado. Consulte a tabela na seção comentários para os valores possíveis.  
   
- [out] *bOuterEdge*  
- TRUE se o ponto está localizado perto da borda do quadro; FALSE se o ponto está localizado em uma área de cliente.  
+*bOuterEdge*<br/>
+[out] TRUE se o ponto está localizado perto da borda do quadro; FALSE se o ponto está localizado em uma área de cliente.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o ponto está localizado em uma zona de alinhamento; Caso contrário, FALSE.  
@@ -760,17 +760,17 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nIDResource*  
- A ID de recurso que é usada para carregar todos os recursos do quadro.  
+*nIDResource*<br/>
+[in] A ID de recurso que é usada para carregar todos os recursos do quadro.  
   
- [in] *dwDefaultStyle*  
- O estilo de janela de quadro do padrão.  
+*dwDefaultStyle*<br/>
+[in] O estilo de janela de quadro do padrão.  
   
- [in] *pParentWnd*  
- Ponteiro para a janela pai do quadro.  
+*pParentWnd*<br/>
+[in] Ponteiro para a janela pai do quadro.  
   
- [in] *pContext*  
- Ponteiro para um [estrutura CCreateContext](../../mfc/reference/ccreatecontext-structure.md) classe que é usada pelo framework durante a criação do aplicativo.  
+*pContext*<br/>
+[in] Ponteiro para um [estrutura CCreateContext](../../mfc/reference/ccreatecontext-structure.md) classe que é usada pelo framework durante a criação do aplicativo.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o método foi bem-sucedida; Caso contrário, FALSE.  
@@ -787,11 +787,11 @@ virtual BOOL NegotiateBorderSpace(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nBorderCmd*  
- O comando de negociação de borda. Consulte a seção comentários para os valores possíveis.  
+*nBorderCmd*<br/>
+[in] O comando de negociação de borda. Consulte a seção comentários para os valores possíveis.  
   
- [no, out] *lpRectBorder*  
- Dimensões da borda.  
+*lpRectBorder*<br/>
+[no, out] Dimensões da borda.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o layout precisa ser recalculado; Caso contrário, FALSE.  
@@ -819,14 +819,14 @@ afx_msg void OnActivate(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nState*  
- Se o quadro está ativo ou inativo. Consulte a tabela na seção comentários para os valores possíveis.  
+*nState*<br/>
+[in] Se o quadro está ativo ou inativo. Consulte a tabela na seção comentários para os valores possíveis.  
   
- [in] *pWndOther*  
- Ponteiro para outra janela que está alternando a entrada do usuário com a atual.  
+*pWndOther*<br/>
+[in] Ponteiro para outra janela que está alternando a entrada do usuário com a atual.  
   
- [in] *bMinimized*  
- O estado minimizado do quadro. TRUE se o quadro está minimizado. Caso contrário, FALSE.  
+*bMinimized*<br/>
+[in] O estado minimizado do quadro. TRUE se o quadro está minimizado. Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
  A tabela a seguir lista os possíveis valores para o *nState* parâmetro.  
@@ -850,11 +850,11 @@ afx_msg void OnActivateApp(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bScripts Ativos*  
- TRUE se o aplicativo está selecionado. FALSE se o aplicativo não estiver selecionado.  
+*bScripts Ativos*<br/>
+[in] TRUE se o aplicativo está selecionado. FALSE se o aplicativo não estiver selecionado.  
   
- [in] *dwThreadID*  
- Este parâmetro não é usado.  
+*dwThreadID*<br/>
+[in] Esse parâmetro não é usado.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -868,11 +868,11 @@ afx_msg LRESULT OnChangeVisualManager(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *wParam*  
- Este parâmetro não é usado.  
+*wParam*<br/>
+[in] Esse parâmetro não é usado.  
   
- [in] *lParam*  
- Este parâmetro não é usado.  
+*lParam*<br/>
+[in] Esse parâmetro não é usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Sempre retorna 0.  
@@ -941,17 +941,17 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nID*  
- A ID de comando.  
+*nID*<br/>
+[in] A ID de comando.  
   
- [in] *nCode*  
- Categoria de mensagem de comando.  
+*nCode*<br/>
+[in] Categoria de mensagem de comando.  
   
- [no, out] *pExtra*  
- Ponteiro para um objeto de comando.  
+*pExtra*<br/>
+[no, out] Ponteiro para um objeto de comando.  
   
- [no, out] *pHandlerInfo*  
- Ponteiro para uma estrutura do manipulador de comando.  
+*pHandlerInfo*<br/>
+[no, out] Ponteiro para uma estrutura do manipulador de comando.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a mensagem de comando foi tratada; Caso contrário, FALSE.  
@@ -975,8 +975,8 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpCreateStruct*  
- Um ponteiro para o [estrutura CREATESTRUCT](../../mfc/reference/createstruct-structure.md) para o novo quadro.  
+*lpCreateStruct*<br/>
+[in] Um ponteiro para o [estrutura CREATESTRUCT](../../mfc/reference/createstruct-structure.md) para o novo quadro.  
   
 ### <a name="return-value"></a>Valor de retorno  
  0 para continuar com a criação de quadro; -1 para destruir o quadro.  
@@ -1004,14 +1004,14 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Um ponteiro para um contexto de dispositivo.  
   
- [in] *pMenuButton*  
- Um ponteiro para um botão de menu cuja imagem está sendo renderizada.  
+*pMenuButton*<br/>
+[in] Um ponteiro para um botão de menu cuja imagem está sendo renderizada.  
   
- [in] *rectImage*  
- Um ponteiro para um `Rect` estrutura que especifica a posição da tela e o tamanho da imagem.  
+*rectImage*<br/>
+[in] Um ponteiro para um `Rect` estrutura que especifica a posição da tela e o tamanho da imagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o framework processa com êxito a imagem; FALSE caso contrário.  
@@ -1030,14 +1030,14 @@ virtual void OnDrawMenuLogo(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Um ponteiro para um contexto de dispositivo.  
   
- [in] *pMenu*  
- Um ponteiro para o item de menu.  
+*pMenu*<br/>
+[in] Um ponteiro para o item de menu.  
   
- [in] *rectLogo*  
- Uma referência a uma constante `CRect` estrutura que especifica a posição da tela e o tamanho do logotipo do menu.  
+*rectLogo*<br/>
+[in] Uma referência a uma constante `CRect` estrutura que especifica a posição da tela e o tamanho do logotipo do menu.  
   
 ### <a name="remarks"></a>Comentários  
  Substituir essa função se você quiser exibir um logotipo no menu pop-up que pertence à barra de menus pertencente a `CFrameWndEx` objeto derivado.  
@@ -1052,11 +1052,11 @@ afx_msg LRESULT OnDWMCompositionChanged(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *wp*  
- Este parâmetro não é usado.  
+*wp*<br/>
+[in] Esse parâmetro não é usado.  
   
- [in] *lp*  
- Este parâmetro não é usado.  
+*LP*<br/>
+[in] Esse parâmetro não é usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Sempre retorna 0.  
@@ -1073,11 +1073,11 @@ LRESULT OnExitSizeMove(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *wp*  
- Este parâmetro não é usado.  
+*wp*<br/>
+[in] Esse parâmetro não é usado.  
   
- [in] *lp*  
- Este parâmetro não é usado.  
+*LP*<br/>
+[in] Esse parâmetro não é usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Sempre retorna 0.  
@@ -1092,8 +1092,8 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpMMI*  
- Ponteiro para um [MINMAXINFO](https://msdn.microsoft.com/library/windows/desktop/ms632605) estrutura.  
+*lpMMI*<br/>
+[in] Ponteiro para um [MINMAXINFO](https://msdn.microsoft.com/library/windows/desktop/ms632605) estrutura.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1107,11 +1107,11 @@ afx_msg LRESULT OnIdleUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *wParam*  
- Este parâmetro não é usado.  
+*wParam*<br/>
+[in] Esse parâmetro não é usado.  
   
- [in] *lParam*  
- Este parâmetro não é usado.  
+*lParam*<br/>
+[in] Esse parâmetro não é usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Sempre retorna 0.  
@@ -1128,11 +1128,11 @@ afx_msg void OnLButtonDown(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nFlags*  
- Indica se o usuário pressionou teclas modificadoras. Para os valores possíveis, consulte o parâmetro *wParam* na [WM_LBUTTONDOWN notificação](/windows/desktop/inputdev/wm-lbuttondown).  
+*nFlags*<br/>
+[in] Indica se o usuário pressionou teclas modificadoras. Para os valores possíveis, consulte o parâmetro *wParam* na [WM_LBUTTONDOWN notificação](/windows/desktop/inputdev/wm-lbuttondown).  
   
- [in] *ponto*  
- Especifica a x e coordenadas y do ponteiro, relativo ao canto superior esquerdo da janela.  
+*ponto*<br/>
+[in] Especifica a x e coordenadas y do ponteiro, relativo ao canto superior esquerdo da janela.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1146,11 +1146,11 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nFlags*  
- Indica se o usuário pressionou teclas modificadoras. Para os valores possíveis, consulte o parâmetro *wParam* na [WM_LBUTTONUP notificação](/windows/desktop/inputdev/wm-lbuttonup).  
+*nFlags*<br/>
+[in] Indica se o usuário pressionou teclas modificadoras. Para os valores possíveis, consulte o parâmetro *wParam* na [WM_LBUTTONUP notificação](/windows/desktop/inputdev/wm-lbuttonup).  
   
- [in] *ponto*  
- Especifica a x e coordenadas y do ponteiro, relativo ao canto superior esquerdo da janela.  
+*ponto*<br/>
+[in] Especifica a x e coordenadas y do ponteiro, relativo ao canto superior esquerdo da janela.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1164,11 +1164,11 @@ virtual BOOL OnMenuButtonToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pButton*  
- Um ponteiro para o botão da barra de ferramenta.  
+*pButton*<br/>
+[in] Um ponteiro para o botão da barra de ferramenta.  
   
- [out] *pTI*  
- Um ponteiro para uma estrutura de informações da ferramenta.  
+*pTI*<br/>
+[out] Um ponteiro para uma estrutura de informações da ferramenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o aplicativo preenche o *pTI* parâmetro. FALSE caso contrário.  
@@ -1187,14 +1187,14 @@ afx_msg LRESULT OnMenuChar(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nChar*  
- Código de caractere da tecla pressionada.  
+*nChar*<br/>
+[in] Código de caractere da tecla pressionada.  
   
- [in] *nFlags*  
- Contém o sinalizador MF_POPUP se o menu exibido é um submenu; contém o sinalizador MF_SYSMENU se o menu exibido é um menu de controle.  
+*nFlags*<br/>
+[in] Contém o sinalizador MF_POPUP se o menu exibido é um submenu; contém o sinalizador MF_SYSMENU se o menu exibido é um menu de controle.  
   
- [in] *pMenu*  
- Ponteiro para um menu.  
+*pMenu*<br/>
+[in] Ponteiro para um menu.  
   
 ### <a name="return-value"></a>Valor de retorno  
  A palavra de ordem superior deve ser um dos valores a seguir.  
@@ -1220,11 +1220,11 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nFlags*  
- Indica se um usuário pressionada as teclas modificadoras. Para os valores possíveis, consulte o parâmetro *wParam* na [WM_MOUSEMOVE notificação](/windows/desktop/inputdev/wm-mousemove).  
+*nFlags*<br/>
+[in] Indica se um usuário pressionada as teclas modificadoras. Para os valores possíveis, consulte o parâmetro *wParam* na [WM_MOUSEMOVE notificação](/windows/desktop/inputdev/wm-mousemove).  
   
- [in] *ponto*  
- Especifica a x e y coordenadas do ponteiro relativa ao canto superior esquerdo da janela.  
+*ponto*<br/>
+[in] Especifica a x e y coordenadas do ponteiro relativa ao canto superior esquerdo da janela.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1236,8 +1236,8 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pFrame*  
- Ponteiro para o [classe CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) janela do painel.  
+*pFrame*<br/>
+[in] Ponteiro para o [classe CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) janela do painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a janela do painel não foi ancorada; FALSE se a janela do painel foi encaixada.  
@@ -1252,8 +1252,8 @@ afx_msg BOOL OnNcActivate(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bScripts Ativos*  
- True para desenhar o quadro ativo; FALSE para desenhar o quadro inativo.  
+*bScripts Ativos*<br/>
+[in] True para desenhar o quadro ativo; FALSE para desenhar o quadro inativo.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero para continuar com o processamento padrão; 0 para impedir que a área de cliente não está sendo desativado.  
@@ -1270,11 +1270,11 @@ afx_msg void OnNcCalcSize(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bCalcValidRects*  
- TRUE quando o aplicativo deve especificar uma área de cliente válido; Caso contrário, FALSE.  
+*bCalcValidRects*<br/>
+[in] TRUE quando o aplicativo deve especificar uma área de cliente válido; Caso contrário, FALSE.  
   
- [in] *lpncsp*  
- Ponteiro para um `NCCALCSIZE_PARAMS` estrutura que contém as alterações na dimensão quadro.  
+*lpncsp*<br/>
+[in] Ponteiro para um `NCCALCSIZE_PARAMS` estrutura que contém as alterações na dimensão quadro.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1286,8 +1286,8 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *ponto*  
- O local do ponteiro em coordenadas da tela.  
+*ponto*<br/>
+[in] O local do ponteiro em coordenadas da tela.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Valor enumerado de ocorrência de um ponteiro. Para obter uma lista de valores possíveis, consulte [notificação WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest).  
@@ -1304,11 +1304,11 @@ afx_msg void OnNcMouseMove(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nHitTest*  
- Valor enumerado de ocorrência de um ponteiro. Para obter uma lista de valores possíveis, consulte [notificação WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest).  
+*nHitTest*<br/>
+[in] Valor enumerado de ocorrência de um ponteiro. Para obter uma lista de valores possíveis, consulte [notificação WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest).  
   
- [in] *ponto*  
- O local do ponteiro em coordenadas da tela.  
+*ponto*<br/>
+[in] O local do ponteiro em coordenadas da tela.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1329,8 +1329,8 @@ afx_msg BOOL OnPaneCheck(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nID*  
- ID de controle de um painel.  
+*nID*<br/>
+[in] ID de controle de um painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o comando foi tratado; FALSE para continuar com o processamento do comando.  
@@ -1347,11 +1347,11 @@ afx_msg LRESULT OnPostPreviewFrame(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *wParam*  
- Este parâmetro não é usado.  
+*wParam*<br/>
+[in] Esse parâmetro não é usado.  
   
- [in] *lParam*  
- TRUE quando o quadro estiver no modo de visualização de impressão; FALSE quando o modo de visualização de impressão está desativada.  
+*lParam*<br/>
+[in] TRUE quando o quadro estiver no modo de visualização de impressão; FALSE quando o modo de visualização de impressão está desativada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Sempre retorna 0.  
@@ -1368,11 +1368,11 @@ afx_msg LRESULT OnPowerBroadcast(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *wp*  
- O evento de gerenciamento de energia. Para obter uma lista de valores possíveis, consulte [mensagem WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast).  
+*wp*<br/>
+[in] O evento de gerenciamento de energia. Para obter uma lista de valores possíveis, consulte [mensagem WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast).  
   
- [in] *lp*  
- Este parâmetro não é usado.  
+*LP*<br/>
+[in] Esse parâmetro não é usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O resultado de chamar o procedimento de janela padrão.  
@@ -1391,14 +1391,14 @@ BOOL OnSetMenu(HMENU hmenu);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *wp*  
- Identificador para o novo menu de janela do quadro.  
+*wp*<br/>
+[in] Identificador para o novo menu de janela do quadro.  
   
- [in] *lp*  
- Identificador para o novo menu da janela.  
+*LP*<br/>
+[in] Identificador para o novo menu da janela.  
   
- [in] *hmenu*  
- Identificador para o novo menu de janela do quadro.  
+*HMENU*<br/>
+[in] Identificador para o novo menu de janela do quadro.  
   
 ### <a name="return-value"></a>Valor de retorno  
  LRESULT é o resultado de chamar o procedimento de janela padrão.  
@@ -1417,11 +1417,11 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bPreview*  
- TRUE para habilitar a visualização de impressão; FALSE para desabilitar a visualização de impressão.  
+*bPreview*<br/>
+[in] TRUE para habilitar a visualização de impressão; FALSE para desabilitar a visualização de impressão.  
   
- [in] *pState*  
- Ponteiro para um `CPrintPreviewState` estrutura do estado de quadro.  
+*pState*<br/>
+[in] Ponteiro para um `CPrintPreviewState` estrutura do estado de quadro.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1435,11 +1435,11 @@ afx_msg LRESULT OnSetText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *wParam*  
- Este parâmetro não é usado.  
+*wParam*<br/>
+[in] Esse parâmetro não é usado.  
   
- [in] *lParam*  
- Ponteiro para o texto da janela.  
+*lParam*<br/>
+[in] Ponteiro para o texto da janela.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retornar o valor de uma chamada para [DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca).  
@@ -1456,11 +1456,11 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pMenuPane*  
- Um ponteiro para a rápida personalizar o painel.  
+*pMenuPane*<br/>
+[in] Um ponteiro para a rápida personalizar o painel.  
   
- [in] *uiToolbarID*  
- A ID do controle da barra de ferramentas para personalizar.  
+*uiToolbarID*<br/>
+[in] A ID do controle da barra de ferramentas para personalizar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Esse método sempre retornar TRUE.  
@@ -1476,8 +1476,8 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bMostrar*  
- TRUE se o aplicativo mostra os painéis; FALSE caso contrário.  
+*bMostrar*<br/>
+[in] TRUE se o aplicativo mostra os painéis; FALSE caso contrário.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Esse método sempre retornar FALSE.  
@@ -1497,8 +1497,8 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pMenu*  
- Um ponteiro para um menu pop-up.  
+*pMenu*<br/>
+[in] Um ponteiro para um menu pop-up.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o menu pop-up estiver visível; Caso contrário, FALSE.  
@@ -1517,14 +1517,14 @@ afx_msg void OnSize(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nType*  
- O tipo de redimensionamento. Para os valores possíveis, consulte o parâmetro *wParam* na [WM_SIZE notificação](/windows/desktop/winmsg/wm-size).  
+*nType*<br/>
+[in] O tipo de redimensionamento. Para os valores possíveis, consulte o parâmetro *wParam* na [WM_SIZE notificação](/windows/desktop/winmsg/wm-size).  
   
- [in] *cx*  
- Nova largura do quadro, em pixels.  
+*CX*<br/>
+[in] Nova largura do quadro, em pixels.  
   
- [in] *cy*  
- Nova altura do quadro em pixels.  
+*Cy*<br/>
+[in] Nova altura do quadro em pixels.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1538,11 +1538,11 @@ afx_msg void OnSizing(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *fwSide*  
- A borda do quadro que é movido. Consulte o parâmetro *wParam* na [WM_SIZING notificação](/windows/desktop/winmsg/wm-sizing).  
+*fwSide*<br/>
+[in] A borda do quadro que é movido. Consulte o parâmetro *wParam* na [WM_SIZING notificação](/windows/desktop/winmsg/wm-sizing).  
   
- [no, out] *pRect*  
- Ponteiro para um [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [RECT](../../mfc/reference/rect-structure1.md) estrutura que contém as coordenadas do quadro.  
+*pRect*<br/>
+[no, out] Ponteiro para um [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [RECT](../../mfc/reference/rect-structure1.md) estrutura que contém as coordenadas do quadro.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1565,11 +1565,11 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pMenuPopup*  
- Um ponteiro para um menu pop-up.  
+*pMenuPopup*<br/>
+[in] Um ponteiro para um menu pop-up.  
   
- [in] *pBar*  
- Um ponteiro para uma barra destacável.  
+*pBar*<br/>
+[in] Um ponteiro para uma barra destacável.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o menu pop-up com barra destacável está habilitado; Caso contrário, FALSE.  
@@ -1589,11 +1589,11 @@ afx_msg LRESULT OnToolbarContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *wp*  
- Este parâmetro não é usado.  
+*wp*<br/>
+[in] Esse parâmetro não é usado.  
   
- [in] *lp*  
- Este parâmetro não é usado.  
+*LP*<br/>
+[in] Esse parâmetro não é usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Sempre retorna 1.  
@@ -1610,11 +1610,11 @@ afx_msg LRESULT OnToolbarCreateNew(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *wp*  
- Este parâmetro não é usado.  
+*wp*<br/>
+[in] Esse parâmetro não é usado.  
   
- [in] *lp*  
- Ponteiro para o texto da barra de título da barra de ferramentas.  
+*LP*<br/>
+[in] Ponteiro para o texto da barra de título da barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Ponteiro para a nova barra de ferramentas; ou nulo, se uma barra de ferramentas não foi criada.  
@@ -1626,16 +1626,17 @@ afx_msg LRESULT OnToolbarCreateNew(
   
 ```  
 afx_msg LRESULT OnToolbarDelete(
-    WPARAM, 
+    WPARAM /* unused */, 
     LPARAM lp);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in]  
- Este parâmetro não é usado.  
+
+*não utilizado*<br/>
+[in] Esse parâmetro não é usado.  
   
- [in] *lp*  
- Ponteiro para uma barra de ferramentas.  
+*LP*<br/>
+[in] Ponteiro para uma barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a barra de ferramentas foi excluída; Caso contrário, FALSE.  
@@ -1650,8 +1651,8 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *hMenuAlt*  
- Identificador para o menu de alternativo.  
+*hMenuAlt*<br/>
+[in] Identificador para o menu de alternativo.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1663,8 +1664,8 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAddToTitle*  
- TRUE para adicionar o título do documento ativo para a barra de título de janela de quadro; Caso contrário, FALSE.  
+*bAddToTitle*<br/>
+[in] TRUE para adicionar o título do documento ativo para a barra de título de janela de quadro; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1676,8 +1677,8 @@ afx_msg void OnUpdatePaneMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pCmdUI*  
- Ponteiro para o objeto de interface de usuário do painel.  
+*pCmdUI*<br/>
+[in] Ponteiro para o objeto de interface de usuário do painel.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1689,8 +1690,8 @@ afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpwndpos*  
- Ponteiro para um [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) estrutura que contém o novo tamanho e posição.  
+*lpwndpos*<br/>
+[in] Ponteiro para um [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) estrutura que contém o novo tamanho e posição.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1712,20 +1713,20 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *ponto*  
- As coordenadas de tela do ponto para verificar.  
+*ponto*<br/>
+[in] As coordenadas de tela do ponto para verificar.  
   
- [in] *nSensitivity*  
- Expanda o retângulo delimitador de cada barra de controle, esse valor durante a pesquisa de ponto.  
+*nSensitivity*<br/>
+[in] Expanda o retângulo delimitador de cada barra de controle, esse valor durante a pesquisa de ponto.  
   
- [in] *bExactBar*  
- TRUE para ignorar a *nSensitivity* parâmetro; caso contrário, FALSE.  
+*bExactBar*<br/>
+[in] TRUE para ignorar a *nSensitivity* parâmetro; caso contrário, FALSE.  
   
- [in] *pRTCBarType*  
- Se não for NULL, o método procura somente as barras de controle do tipo especificado.  
+*pRTCBarType*<br/>
+[in] Se não for NULL, o método procura somente as barras de controle do tipo especificado.  
   
- [out] *dwAlignment*  
- Se for bem-sucedido, este parâmetro conterá o lado da barra de controle que está mais próximo ao ponto especificado. Caso contrário, esse parâmetro não foi inicializado.  
+*dwAlignment*<br/>
+[out] Se for bem-sucedido, este parâmetro conterá o lado da barra de controle que está mais próximo ao ponto especificado. Caso contrário, esse parâmetro não foi inicializado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para uma barra de controle que contém o *aponte*; NULL se nenhum controle é encontrado.  
@@ -1743,8 +1744,8 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pMsg*  
- Um ponteiro para um [MSG](../../mfc/reference/msg-structure1.md) estrutura que contém a mensagem a ser processada.  
+*pMsg*<br/>
+[in] Um ponteiro para um [MSG](../../mfc/reference/msg-structure1.md) estrutura que contém a mensagem a ser processada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se a mensagem foi manipulada e não deve ser expedida; 0 se a mensagem não foi tratada e deve ser expedida.  
@@ -1759,8 +1760,8 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bNotify*  
- Especifica se deve notificar o item de cliente OLE sobre a alteração de layout.  
+*bNotify*<br/>
+[in] Especifica se deve notificar o item de cliente OLE sobre a alteração de layout.  
   
 ### <a name="remarks"></a>Comentários  
  Este método é chamado quando o tamanho da janela do quadro foi alterado ou quando as barras de controle são exibidas ou ocultas.  
@@ -1778,20 +1779,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pControlBar*  
- Um ponteiro para o painel da barra de controle a ser removido.  
+*pControlBar*<br/>
+[in] Um ponteiro para o painel da barra de controle a ser removido.  
   
- [in] *bDestroy*  
- TRUE para destruir a barra de controle depois de removê-lo; FALSE caso contrário.  
+*bDestroy*<br/>
+[in] TRUE para destruir a barra de controle depois de removê-lo; FALSE caso contrário.  
   
- [in] *bAdjustLayout*  
- TRUE para ajustar o layout de encaixe; FALSE caso contrário.  
+*bAdjustLayout*<br/>
+[in] TRUE para ajustar o layout de encaixe; FALSE caso contrário.  
   
- [in] *bAutoHide*  
- TRUE se a barra de controle está no modo de ocultamento automático; FALSE caso contrário.  
+*bAutoHide*<br/>
+[in] TRUE se a barra de controle está no modo de ocultamento automático; FALSE caso contrário.  
   
- [in] *pBarReplacement*  
- Um ponteiro para um painel que substitui o painel removido.  
+*pBarReplacement*<br/>
+[in] Um ponteiro para um painel que substitui o painel removido.  
   
 ### <a name="remarks"></a>Comentários  
  Use esse método para remover uma barra de controle de layout de encaixe da janela do quadro.  
@@ -1817,8 +1818,8 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *Apropriei*  
- Ponteiro para uma janela de quadro de visualização de impressão.  
+*Apropriei*<br/>
+[in] Ponteiro para uma janela de quadro de visualização de impressão.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -1833,14 +1834,14 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *menu*  
- Um `CMenu` objeto a ser modificado.  
+*Menu*<br/>
+[in] Um `CMenu` objeto a ser modificado.  
   
- [in] *uiViewUserToolbarCmdFirst*  
- O primeiro comando definido pelo usuário.  
+*uiViewUserToolbarCmdFirst*<br/>
+[in] O primeiro comando definido pelo usuário.  
   
- [in] *uiViewUserToolbarCmdLast*  
- O último comando definido pelo usuário.  
+*uiViewUserToolbarCmdLast*<br/>
+[in] O último comando definido pelo usuário.  
   
 ### <a name="remarks"></a>Comentários  
  O framework armazena comandos definidos pelo usuário em uma lista. Use *uiViewUserToolbarCmdFirst* e *uiViewUserToolbarCmdList* para especificar os índices dos comandos para inserir.  
@@ -1864,17 +1865,17 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pBar*  
- Um ponteiro para a barra de controle para mostrar ou ocultar.  
+*pBar*<br/>
+[in] Um ponteiro para a barra de controle para mostrar ou ocultar.  
   
- [in] *bMostrar*  
- Se for TRUE, o aplicativo mostra a barra de controle. Caso contrário, o aplicativo oculta a barra de controle.  
+*bMostrar*<br/>
+[in] Se for TRUE, o aplicativo mostra a barra de controle. Caso contrário, o aplicativo oculta a barra de controle.  
   
- [in] *bDelay*  
- Se for TRUE, atrasar o ajuste do layout de encaixe até a estrutura chama [CFrameWndEx::AdjustDockingLayout](#adjustdockinglayout). Caso contrário, recalcule o layout de encaixe imediatamente.  
+*bDelay*<br/>
+[in] Se for TRUE, atrasar o ajuste do layout de encaixe até a estrutura chama [CFrameWndEx::AdjustDockingLayout](#adjustdockinglayout). Caso contrário, recalcule o layout de encaixe imediatamente.  
   
- [in] *bActivate*  
- Se for TRUE, ative a barra de controle. Caso contrário, exiba a barra de controle em um estado inativo.  
+*bActivate*<br/>
+[in] Se for TRUE, ative a barra de controle. Caso contrário, exiba a barra de controle em um estado inativo.  
   
 ##  <a name="updatecaption"></a>  CFrameWndEx::UpdateCaption  
  Chamado pelo framework para atualizar a legenda do quadro de janela.  

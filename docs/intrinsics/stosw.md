@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf41c1c91d8c0b5d2d7626d1fc0eee67aa96ff32
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: cf0e6157f184cb91605d9da8bcaea0c22806f03c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539950"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705141"
 ---
 # <a name="stosw"></a>__stosw
 **Seção específica da Microsoft**  
@@ -41,14 +41,14 @@ void __stosw(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [out] `Dest`  
- O destino da operação.  
+*dest*<br/>
+[out] O destino da operação.  
   
- [in] `Data`  
- Os dados a serem armazenados.  
+*Dados*<br/>
+[in] Os dados serem armazenados.  
   
- [in] `Count`  
- O tamanho do bloco de palavras para gravar.  
+*Contagem*<br/>
+[in] O tamanho do bloco de palavras para gravar.  
   
 ## <a name="requirements"></a>Requisitos  
   

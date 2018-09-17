@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b306a104b9f71d536684e62f6dda1cac45b1d9dd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 09bb29b1baa6208f4b7473d8cbbc9a3abbe38e70
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612935"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709577"
 ---
 # <a name="zcauto-deduce-variable-type"></a>/Zc:auto (deduzir tipo variável)
 
@@ -32,7 +32,7 @@ O **/ZC: auto [-]** opção de compilador informa ao compilador como usar o [pal
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/Zc:auto**[**-**]  
+> **/Zc:auto**[**-**]
 
 ## <a name="remarks"></a>Comentários
 

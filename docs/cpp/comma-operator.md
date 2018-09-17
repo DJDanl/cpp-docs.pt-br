@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a139efed1fadd8f7b821363b7cb9cdbf97c9a29
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: d9beadf4f532d24ca1f4023ad95dd8583d653c11
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39409181"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707754"
 ---
 # <a name="comma-operator-"></a>Operador de vírgula: ,
 Permite agrupar duas instruções onde uma é esperado.  
@@ -37,11 +37,7 @@ expression , expression
   
  As vírgulas podem ser usadas como separadores em alguns contextos, como listas de argumentos de função. Não confunda o uso da vírgula como separador com seu uso como operador; os dois usos são completamente diferentes.  
   
- Considere a expressão  
-  
- *E1* , *e2*  
-  
- O tipo e o valor da expressão são o tipo e o valor de *e2*; o resultado da avaliação *e1* é descartado. O resultado será um valor l se o operando à direita for um valor l.  
+ Considere a expressão `e1, e2`. O tipo e o valor da expressão são o tipo e o valor de *e2*; o resultado da avaliação *e1* é descartado. O resultado será um valor l se o operando à direita for um valor l.  
   
  Onde a vírgula é geralmente usada como separador (por exemplo, nos argumentos reais para funções ou inicializadores agregados), o operador vírgula e seus operandos devem ser colocados entre parênteses. Por exemplo:  
   

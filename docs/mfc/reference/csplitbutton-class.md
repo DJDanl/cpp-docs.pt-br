@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38a624aacc302812865a785c537eb906a0489379
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 42f7eb1864c2839ecce88785dfaef8ab62d0b423
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207635"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705270"
 ---
 # <a name="csplitbutton-class"></a>Classe CSplitButton
 O `CSplitButton` classe representa um controle de botão de divisão. O controle de botão de divisão executa um comportamento padrão quando um usuário clica na parte principal do botão e exibe um menu suspenso quando um usuário clica na seta suspensa do botão.  
@@ -101,10 +101,10 @@ virtual BOOL Create(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *dwStyle*|Uma combinação bit a bit (OR) de estilos a serem aplicados ao controle. Para obter mais informações, consulte [estilos de botão](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
-|[in] *rect*|Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém a posição e o tamanho do controle.|  
-|[in] *pParentWnd*|Um ponteiro não nulo para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle.|  
-|[in] *nID*|A ID do controle.|  
+|*dwStyle*|[in] Uma combinação bit a bit (OR) de estilos a serem aplicados ao controle. Para obter mais informações, consulte [estilos de botão](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
+|*Rect*|[in] Uma referência a um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que contém a posição e o tamanho do controle.|  
+|*pParentWnd*|[in] Um ponteiro não nulo para um [CWnd](../../mfc/reference/cwnd-class.md) objeto que é a janela pai do controle.|  
+|*nID*|[in] A ID do controle.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -126,9 +126,9 @@ CSplitButton(CMenu* pMenu)
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *nMenuId*|A ID de recurso da barra de menus.|  
-|[in] *nSubMenuId*|A ID de recurso de um submenu.|  
-|[in] *pMenu*|Um ponteiro para um [CMenu](../../mfc/reference/cmenu-class.md) objeto que especifica um submenu. O `CSplitButton` exclusões de objeto de `CMenu` objeto e seu HMENU associado quando o `CSplitButton` objeto sai do escopo.|  
+|*nMenuId*|[in] A ID de recurso da barra de menus.|  
+|*nSubMenuId*|[in] A ID de recurso de um submenu.|  
+|*pMenu*|[in] Um ponteiro para um [CMenu](../../mfc/reference/cmenu-class.md) objeto que especifica um submenu. O `CSplitButton` exclusões de objeto de `CMenu` objeto e seu HMENU associado quando o `CSplitButton` objeto sai do escopo.|  
   
 ### <a name="remarks"></a>Comentários  
  Use o [CSplitButton::Create](#create) método para criar um controle de botão de divisão e anexá-lo para o `CSplitButton` objeto.  
@@ -146,8 +146,8 @@ afx_msg void OnDropDown(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *pNMHDR*|Ponteiro para um [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) estrutura que contém informações sobre o [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) notificação.|  
-|[out] *pResult*|(Não usado; nenhum valor será retornado). Retornar o valor de [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) notificação.|  
+|*pNMHDR*|[in] Ponteiro para um [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) estrutura que contém informações sobre o [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) notificação.|  
+|*pResult*|[out] (Não usado; nenhum valor será retornado). Retornar o valor de [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) notificação.|  
   
 ### <a name="remarks"></a>Comentários  
  Quando o usuário clica na seta suspensa em um controle de botão de divisão, o sistema envia uma notificação BCN_DROPDOWN da mensagem, que o `OnDropDown` identificadores de método. No entanto, o `CSplitButton` objeto não encaminha a notificação BCN_DROPDOWN para o controle que contém o controle de botão de divisão. Consequentemente, contendo o controle não pode dar suporte a uma ação personalizada em resposta à notificação.  
@@ -178,9 +178,9 @@ void SetDropDownMenu(CMenu* pMenu);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *nMenuId*|A ID de recurso da barra de menus.|  
-|[in] *nSubMenuId*|A ID de recurso de um submenu.|  
-|[in] *pMenu*|Ponteiro para um [CMenu](../../mfc/reference/cmenu-class.md) objeto que especifica um submenu. O `CSplitButton` exclusões de objeto de `CMenu` objeto e seu HMENU associado quando o `CSplitButton` objeto sai do escopo.|  
+|*nMenuId*|[in] A ID de recurso da barra de menus.|  
+|*nSubMenuId*|[in] A ID de recurso de um submenu.|  
+|*pMenu*|[in] Ponteiro para um [CMenu](../../mfc/reference/cmenu-class.md) objeto que especifica um submenu. O `CSplitButton` exclusões de objeto de `CMenu` objeto e seu HMENU associado quando o `CSplitButton` objeto sai do escopo.|  
   
 ### <a name="remarks"></a>Comentários  
  O *nMenuId* parâmetro identifica uma barra de menus, que é uma lista de itens da barra de menu horizontal. O *nSubMenuId* parâmetro é um número de índice baseado em zero que identifica um submenu, que é a lista suspensa de itens de menu associado com cada item da barra de menu. Por exemplo, um aplicativo típico tem um menu que contém os itens de barra de menu, "Arquivo", "Editar" e "Help". O item de barra de menu "Arquivo" tem um submenu que contém os itens de menu "Abrir", "Fechar" e "Exit". Quando a seta suspensa do controle de botão de divisão é clicada, o controle exibe o submenu especificado, não a barra de menus.  

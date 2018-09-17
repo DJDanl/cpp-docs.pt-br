@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e04bcdf797f7036d943219f9d067dcbf786cfa3
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 7d87b7a2a76ea73989a9ab7dd845666625e91aa0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039775"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711588"
 ---
 # <a name="cmfcacceleratorkey-class"></a>Classe CMFCAcceleratorKey
 Uma classe auxiliar que implementa o mapeamento de chave virtual e a formatação.  
@@ -50,16 +50,16 @@ class CMFCAcceleratorKey : public CObject
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CMFCAcceleratorKey::Format](#format)|Converte a estrutura de ACELERAÇÃO em sua representação visual.|  
+|[CMFCAcceleratorKey::Format](#format)|Converte a estrutura da ACELERAÇÃO em sua representação visual.|  
 |[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)|Define a tecla de atalho para o `CMFCAcceleratorKey` objeto.|  
   
 ## <a name="remarks"></a>Comentários  
- Teclas de aceleração também são conhecidas como teclas de atalho. Se você deseja exibir atalhos de teclado que um usuário digita, o [CMFCAcceleratorKeyAssignCtrl classe](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) mapas atalhos de teclado, como Alt + Shift + S para um formato de texto personalizado, como "Alt + Shift + S". Cada `CMFCAcceleratorKey` objeto mapeia uma tecla de atalho único para um formato de texto.  
+ Teclas de aceleração também são conhecidos como teclas de atalho. Se você quiser exibir atalhos de teclado que um usuário digita, o [classe CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) mapas atalhos de teclado, como Alt + Shift + S para um formato de texto personalizado, como "Alt + Shift + S". Cada `CMFCAcceleratorKey` objeto mapeia uma única tecla de atalho para um formato de texto.  
   
- Para obter mais informações sobre como usar as teclas de atalho e tabelas de teclas aceleradoras, consulte [CKeyboardManager classe](../../mfc/reference/ckeyboardmanager-class.md).  
+ Para obter mais informações sobre como usar tabelas de Aceleradores e teclas de atalho, consulte [classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como construir um `CMFCAcceleratorKey` objeto e como usar o `Format` método.  
+ O exemplo a seguir demonstra como criar uma `CMFCAcceleratorKey` objeto e como usar seu `Format` método.  
   
  [!code-cpp[NVC_MFC_RibbonApp#30](../../mfc/reference/codesnippet/cpp/cmfcacceleratorkey-class_1.cpp)]  
   
@@ -72,7 +72,7 @@ class CMFCAcceleratorKey : public CObject
  **Cabeçalho:** afxacceleratorkey.h  
   
 ##  <a name="cmfcacceleratorkey"></a>  CMFCAcceleratorKey::CMFCAcceleratorKey  
- Constrói um [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) objeto.  
+ Constrói uma [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) objeto.  
   
 ```  
 CMFCAcceleratorKey();  
@@ -80,25 +80,25 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpAccel*  
- Um ponteiro para uma tecla de atalho.  
+*lpAccel*<br/>
+[in] Um ponteiro para uma tecla de atalho.  
   
 ### <a name="remarks"></a>Comentários  
- Se você não fornecer uma tecla de atalho quando você cria um `CMFCAccleratorKey`, use o [CMFCAcceleratorKey::SetAccelerator](#setaccelerator) método para associar uma tecla de atalho com seu `CMFCAcceleratorKey` objeto.  
+ Se você não fornecer uma tecla de atalho quando você cria um `CMFCAccleratorKey`, use o [CMFCAcceleratorKey::SetAccelerator](#setaccelerator) método a ser associado a uma tecla de atalho com seu `CMFCAcceleratorKey` objeto.  
   
 ##  <a name="format"></a>  CMFCAcceleratorKey::Format  
- Converte a estrutura de ACELERAÇÃO para o valor de cadeia de caracteres associada.  
+ Converte a estrutura de ACELERAÇÃO para seu valor de cadeia de caracteres associada.  
   
 ```  
 void Format(CString& str) const;  
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *str*  
- Uma referência a um `CString` objeto onde o método grava a tecla de atalho traduzidos.  
+*str*<br/>
+[out] Uma referência a um `CString` objeto em que o método grava a tecla de atalho traduzido.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método retorna o formato de cadeia de caracteres a tecla de atalho associada. Você pode definir o formato de cadeia de caracteres de um [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) usando o método ou o construtor do objeto [CMFCAcceleratorKey::SetAccelerator](#setaccelerator).  
+ Esse método recupera o formato de cadeia de caracteres da chave de atalho associadas. Você pode definir o formato de cadeia de caracteres de um [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) usando o método ou o construtor do objeto [CMFCAcceleratorKey::SetAccelerator](#setaccelerator).  
   
 ##  <a name="setaccelerator"></a>  CMFCAcceleratorKey::SetAccelerator  
  Define a tecla de atalho para o [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) objeto.  
@@ -108,13 +108,13 @@ void SetAccelerator(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpAccel*  
- Um ponteiro para uma tecla de atalho.  
+*lpAccel*<br/>
+[in] Um ponteiro para uma tecla de atalho.  
   
 ### <a name="remarks"></a>Comentários  
- Use esse método para definir a tecla de atalho para um `CMFCAcceleratorKey` se você não fornece uma tecla de atalho quando você criou o `CMFCAcceleratorKey`.  
+ Use esse método para definir a tecla de atalho para um `CMFCAcceleratorKey` se você não forneceu uma tecla de atalho quando você criou o `CMFCAcceleratorKey`.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)

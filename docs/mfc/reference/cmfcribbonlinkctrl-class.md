@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53e9396148a89a4778d7e12066a814f2065bbac6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: c326a13e55ed14f93b35ed486f7ee4596c643758
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538979"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712511"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>Classe CMFCRibbonLinkCtrl
 Implementa um hiperlink que está posicionado em uma faixa de opções. O hiperlink abre uma página da Web quando você clica nele.  
@@ -106,14 +106,14 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nID*  
- Especifica a ID de comando do comando que é executado quando o controle de link é clicado.  
+*nID*<br/>
+[in] Especifica a ID de comando do comando que é executado quando o controle de link é clicado.  
   
- [in] *lpszText*  
- Especifica o rótulo a ser exibido no controle de link.  
+*lpszText*<br/>
+[in] Especifica o rótulo a ser exibido no controle de link.  
   
- [in] *lpszLink*  
- Especifica o hiperlink associado ao controle de link.  
+*lpszLink*<br/>
+[in] Especifica o hiperlink associado ao controle de link.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra como usar o construtor do `CMFCRibbonLinkCtrl` classe. Este trecho de código é parte do [exemplo de Gadgets de faixa de opções](../../visual-cpp-samples.md).  
@@ -263,8 +263,8 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszLink*  
- Especifica o texto do hiperlink.  
+*lpszLink*<br/>
+[in] Especifica o texto do hiperlink.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   

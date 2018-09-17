@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71d89020869db10b45688dbaae71f38711d2667c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 68534770419bd8d688c282b6d837c55983e33c27
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676357"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712069"
 ---
 # <a name="cdockablepaneadapter-class"></a>Classe CDockablePaneAdapter
 Fornece suporte de encaixe para `CWnd`-painéis derivados.  
@@ -90,14 +90,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszProfileName*  
- O nome do perfil.  
+*lpszProfileName*<br/>
+[in] O nome do perfil.  
   
- [in] *nIndex*  
- O índice de perfil.  
+*nIndex*<br/>
+[in] O índice de perfil.  
   
- [in] *uiID*  
- A ID do painel.  
+*uiID*<br/>
+[in] A ID do painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -114,14 +114,14 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszProfileName*  
- O nome do perfil.  
+*lpszProfileName*<br/>
+[in] O nome do perfil.  
   
- [in] *nIndex*  
- O índice do perfil (o padrão é a ID do controle da janela).  
+*nIndex*<br/>
+[in] O índice do perfil (o padrão é a ID do controle da janela).  
   
- [in] *uiID*  
- A ID do painel.  
+*uiID*<br/>
+[in] A ID do painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -135,8 +135,8 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *Apropriei*  
- Um ponteiro para a janela para o adaptador de painel encapsular.  
+*Apropriei*<br/>
+[in] Um ponteiro para a janela para o adaptador de painel encapsular.  
   
 ### <a name="return-value"></a>Valor de retorno  
   

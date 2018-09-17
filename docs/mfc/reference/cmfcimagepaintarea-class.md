@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 449d79119b15e814485f3b7e0c3eb7472d314d19
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ee3bf6b087777bc550a34234a8969e2127c8ec2d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852464"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720243"
 ---
 # <a name="cmfcimagepaintarea-class"></a>Classe CMFCImagePaintArea
 Fornece a área de imagem que você pode usar para modificar uma imagem em uma caixa de diálogo do editor de imagem.  
@@ -98,7 +98,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] *pParentDlg*|Um ponteiro para a caixa de diálogo que é o pai do editor de imagem.|  
+|*pParentDlg*|[in] Um ponteiro para a caixa de diálogo que é o pai do editor de imagem.|  
   
 ##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
  Recupera o modo de desenho atual.  
@@ -122,7 +122,7 @@ void SetBitmap(CBitmap* pBitmap);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] *pBitmap*|A nova imagem de bitmap para exibir.|  
+|*pBitmap*|[in] A nova imagem de bitmap para exibir.|  
   
 ### <a name="remarks"></a>Comentários  
  Se *pBitmap* for NULL, esse método define o tamanho da área de pintura modificável como zero. Caso contrário, ele define o tamanho da área de pintura modificável como o tamanho da imagem bitmap fornecido.  
@@ -139,7 +139,7 @@ void SetColor(COLORREF color);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] *cor*|A nova cor de desenho.|  
+|*Cor*|[in] A nova cor de desenho.|  
   
 ### <a name="remarks"></a>Comentários  
  Quando você seleciona uma cor da barra de paleta do editor de imagem ou seletor de cores, o framework chama esse método para atualizar a cor atual do desenho. A cor inicial do desenho é preta (um valor COLORREF 0).  
@@ -158,7 +158,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] *modo*|Uma [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) valor que especifica o modo de desenho atual.|  
+|*modo*|[in] Uma [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) valor que especifica o modo de desenho atual.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   

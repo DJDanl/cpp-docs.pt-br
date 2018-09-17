@@ -14,29 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b84563c2576f4969acb4162bcaa92d6f62f97c72
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eb123f6ca46841b59d178bba88b97ca44b55f621
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767459"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725875"
 ---
 # <a name="stock-properties-atl-control-wizard"></a>Propriedades de estoque, Assistente de controle ATL
 
 Esta página do assistente identifica as propriedades de estoque com suporte para o controle. Por padrão, nenhuma propriedade é identificada.
 
-**Não tem suporte**  
-Indica as propriedades disponíveis que não têm suporte atualmente para o controle.
+- **Não tem suporte**
 
-**Com suporte**  
-Indica as propriedades que têm suporte atualmente para o controle.
+   Indica as propriedades disponíveis que não têm suporte atualmente para o controle.
+
+- **Com suporte**
+
+   Indica as propriedades que têm suporte atualmente para o controle.
 
 |Botão de transferência|Descrição|
 |---------------------|-----------------|
 |**>**|Adiciona o **com suporte** lista o nome da propriedade selecionado no momento a **não tem suporte** lista.|
 |**>>**|Adiciona o **com suporte** listar todos os nomes de propriedade disponíveis na **não tem suporte** lista.|
-|**<**|Remove o nome da propriedade selecionado no momento a **com suporte** lista.|
-|**<<**|Remove todos os nomes de propriedade listados atualmente na **com suporte** lista.|
+|**\<**|Remove o nome da propriedade selecionado no momento a **com suporte** lista.|
+|**\<\<**|Remove todos os nomes de propriedade listados atualmente na **com suporte** lista.|
 
 ## <a name="see-also"></a>Consulte também
 

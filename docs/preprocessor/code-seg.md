@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 052e9a55d443fa263ecf8443c9e3933baeb1f3b8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b9b9be3cd2de53c957074d2acdee18183d688852
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540138"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719115"
 ---
 # <a name="codeseg"></a>code_seg
 Especifica o segmento de texto onde as funções são armazenadas no arquivo .obj.  
@@ -34,6 +34,25 @@ Especifica o segmento de texto onde as funções são armazenadas no arquivo .ob
 #pragma code_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
+### <a name="paramters"></a>Parâmetros
+  
+**push**<br/>
+(Opcional) Coloca um registro na pilha interna do compilador. Um **push** pode ter um *identificador* e *nome do segmento*.  
+  
+**pop**<br/>
+(Opcional) Remove um registro do topo da pilha interna do compilador.  
+  
+*identifier*<br/>
+(Opcional) Quando usado com **push**, atribui um nome ao registro na pilha interna do compilador. Quando usado com **pop-up**, elimina registros da pilha interna até *identificador* for removido; se *identificador* não for localizado na pilha interna, nada será exibido.  
+  
+*identificador* habilita vários registros a serem exibidos com apenas um **pop-up** comando.  
+  
+"*nome do segmento*"<br/>  
+(Opcional) O nome de um segmento. Quando usado com **pop-up**, a pilha é exibida e *nome do segmento* se torna o nome de segmento de texto ativo.  
+  
+"*classe de segmento*"<br/>
+(Opcional) Ignorado, mas incluído para compatibilidade com versões anteriores à versão 2.0 do C++.  
+  
 ## <a name="remarks"></a>Comentários  
  
 O **code_seg** diretiva de pragma não controla o posicionamento do código de objeto gerado por modelos instanciados, nem o código gerado implicitamente pelo compilador — por exemplo, as funções de membro especial. É recomendável que você use o [__declspec(code_seg(...)) ](../cpp/code-seg-declspec.md) de atributo em vez disso, porque isso lhe dá controle sobre o posicionamento de todo o código de objeto. Isso inclui o código gerado pelo compilador.  
@@ -43,24 +62,7 @@ Um *segmento* em um. obj arquivo é um bloco nomeado de dados que são carregado
 O **code_seg** diretiva de pragma informa ao compilador para colocar todo o código de objeto subsequentes da unidade de tradução em um segmento de texto denominado *nome do segmento*. Por padrão, o segmento de texto usado para funções em um arquivo .obj é denominado .text.  
   
 Um **code_seg** diretiva de pragma sem parâmetros redefine o nome do segmento de texto para o código de objeto subsequente para. Text.  
-  
-*envio por push* (opcional)  
-Coloca um registro na pilha interna do compilador. Um *push* pode ter um *identificador* e *nome do segmento*.  
-  
-*pop-up* (opcional)  
-Remove um registro do topo da pilha interna do compilador.  
-  
-*identificador* (opcional)  
-Quando usado com *push*, atribui um nome ao registro na pilha interna do compilador. Quando usado com *pop-up*, elimina registros da pilha interna até *identificador* for removido; se *identificador* não for localizado na pilha interna, nada será exibido.  
-  
-*identificador* habilita vários registros a serem exibidos com apenas um *pop-up* comando.  
-  
-"*nome do segmento*" (opcional)  
-O nome de um segmento. Quando usado com *pop-up*, a pilha é exibida e *nome do segmento* se torna o nome de segmento de texto ativo.  
-  
-"*classe de segmento*" (opcional)  
-Ignorado, mas incluído para compatibilidade com versões C++ anteriores à versão 2.0.  
-  
+
 Você pode usar o [(DUMPBIN). EXE](../build/reference/dumpbin-command-line.md) aplicativo para exibir os arquivos. obj. As versões de DUMPBIN para cada arquitetura de destino com suporte são incluídas com o Visual Studio.  
   
 ## <a name="example"></a>Exemplo  

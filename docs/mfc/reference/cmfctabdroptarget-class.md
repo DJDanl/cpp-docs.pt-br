@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2991135d7cbb7e2e9df66e871b5d047e69b93d16
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 717be77589e31292fe6adbb4920a704794979a57
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852962"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711627"
 ---
 # <a name="cmfctabdroptarget-class"></a>Classe CMFCTabDropTarget
 Fornece o mecanismo de comunicação entre um controle guia e as bibliotecas OLE.  
@@ -100,10 +100,10 @@ virtual DROPEFFECT OnDragEnter(
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] *Apropriei*|Não utilizado.|  
-|[in] *pDataObject*|Um ponteiro para o objeto que o usuário arrasta.|  
-|[in] *dwKeyState*|Contém o estado das teclas modificadoras. Isso é uma combinação de qualquer número das seguintes opções: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.|  
-|[in] *ponto*|O local do cursor em coordenadas do cliente.|  
+|*Apropriei*|[in] Não utilizado.|  
+|*pDataObject*|[in] Um ponteiro para o objeto que o usuário arrasta.|  
+|*dwKeyState*|[in] Contém o estado das teclas modificadoras. Isso é uma combinação de qualquer número das seguintes opções: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.|  
+|*ponto*|[in] O local do cursor em coordenadas do cliente.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  O efeito dos resultados se a operação de soltar ocorre no local especificado por *aponte*. Ele pode ser um ou mais das seguintes opções:  
@@ -135,7 +135,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] *Apropriei*|Não utilizado.|  
+|*Apropriei*|[in] Não utilizado.|  
   
 ### <a name="remarks"></a>Comentários  
  Este método chama o `CMFCBaseTabCtrl::OnDragLeave` método para executar a operação de arrastar.  
@@ -156,10 +156,10 @@ virtual DROPEFFECT OnDragOver(
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] *Apropriei*|Não utilizado.|  
-|[in] *pDataObject*|Um ponteiro para o objeto que o usuário arrasta.|  
-|[in] *dwKeyState*|Contém o estado das teclas modificadoras. Isso é uma combinação de qualquer número das seguintes opções: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.|  
-|[in] *ponto*|O local do ponteiro do mouse nas coordenadas do cliente.|  
+|*Apropriei*|[in] Não utilizado.|  
+|*pDataObject*|[in] Um ponteiro para o objeto que o usuário arrasta.|  
+|*dwKeyState*|[in] Contém o estado das teclas modificadoras. Isso é uma combinação de qualquer número das seguintes opções: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON.|  
+|*ponto*|[in] O local do ponteiro do mouse nas coordenadas do cliente.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  O efeito dos resultados se a operação de soltar ocorre no local especificado por *aponte*. Ele pode ser um ou mais das seguintes opções:  
@@ -196,11 +196,11 @@ virtual DROPEFFECT OnDropEx(
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] *Apropriei*|Não utilizado.|  
-|[in] *pDataObject*|Um ponteiro para o objeto que o usuário arrasta.|  
-|[in] *dropEffect*|A operação de soltar padrão.|  
-|[in] *lista suspensa*|Não utilizado.|  
-|[in] *ponto*|O local do ponteiro do mouse nas coordenadas do cliente.|  
+|*Apropriei*|[in] Não utilizado.|  
+|*pDataObject*|[in] Um ponteiro para o objeto que o usuário arrasta.|  
+|*dropEffect*|[in] A operação de soltar padrão.|  
+|*lista suspensa*|[in] Não utilizado.|  
+|*ponto*|[in] O local do ponteiro do mouse nas coordenadas do cliente.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  O efeito resultante. Ele pode ser um ou mais das seguintes opções:  
@@ -232,7 +232,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] *pOwner*|O controle de guia para registrar como um destino de soltar.|  
+|*pOwner*|[in] O controle de guia para registrar como um destino de soltar.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o registro foi bem-sucedido; Caso contrário, 0.  

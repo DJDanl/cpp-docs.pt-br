@@ -16,20 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2222f063969ff1c93d68ef8f8fd494c176005529
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 56ea492c6b5295403976133e30667153754dd237
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366930"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701971"
 ---
 # <a name="dependents"></a>Dependentes
-Em uma linha de dependência, especifique zero ou mais dependentes após os dois-pontos (:) ou os dois-pontos duplos (:), usando qualquer nome de arquivo válido ou [pseudotarget](../build/pseudotargets.md). Separe vários dependentes com um ou mais espaços ou guias. Dependentes não diferenciam maiusculas de minúsculas. São permitidos caminhos com nomes de arquivo.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?  
- [Dependentes inferidos](../build/inferred-dependents.md)  
-  
- [Procurar dependentes em demarcadores](../build/search-paths-for-dependents.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Blocos de descrição](../build/description-blocks.md)
+
+Em uma linha de dependência, especifique zero ou mais dependentes após os dois-pontos (:) ou dois-pontos duplos (:), usando qualquer nome de arquivo válido ou [pseudotarget](../build/pseudotargets.md). Separe vários dependentes com um ou mais espaços ou tabulações. Dependentes não diferenciam maiusculas de minúsculas. Caminhos são permitidos com nomes de arquivo.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?
+
+[Dependentes inferidos](../build/inferred-dependents.md)
+
+[Caminhos de pesquisa para dependentes](../build/search-paths-for-dependents.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Blocos de descrição](../build/description-blocks.md)

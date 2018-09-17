@@ -1,5 +1,5 @@
 ---
-title: 'Como: definir LIB. Opções de EXE no ambiente de desenvolvimento do Visual Studio | Microsoft Docs'
+title: 'Como: definir o LIB. Opções do EXE no ambiente de desenvolvimento do Visual Studio | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,23 +14,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38b04fb40c62efdf5a8dd0ae3e3d8b6b4529b017
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8319ac7a40af4b43248c402306040c15f04a225
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372354"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707207"
 ---
 # <a name="how-to-set-libexe-options-in-the-visual-studio-development-environment"></a>Como definir opções de LIB.EXE no ambiente de desenvolvimento do Visual Studio
-### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>Para definir LIB. Opções de EXE no ambiente de desenvolvimento do Visual Studio  
-  
-1.  Acessar o projeto [página de propriedade](../../ide/working-with-project-properties.md) caixa de diálogo.  
-  
-2.  Com um projeto de biblioteca estática ativado, selecione o **bibliotecário** nó.  
-  
-3.  Selecione a página de propriedades geral tanto na entrada e saída.  
-  
-4.  Modifique as propriedades conforme necessário.  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de LIB](../../build/reference/lib-reference.md)
+
+### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>Para definir o LIB. Opções do EXE no ambiente de desenvolvimento do Visual Studio
+
+1. Acessar o projeto [página de propriedades](../../ide/working-with-project-properties.md) caixa de diálogo.
+
+1. Com um projeto de biblioteca estática Active Directory, selecione a **bibliotecário** nó.
+
+1. Selecione a página de propriedades geral ou entrada/saída.
+
+1. Modifique as propriedades conforme necessário.
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de LIB](../../build/reference/lib-reference.md)

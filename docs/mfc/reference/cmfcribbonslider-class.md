@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0816a490a4375504168b11d8055ddbe41dae2109
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 165dbf85e22a6f30089bbf1523068057b972b7e8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543069"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709326"
 ---
 # <a name="cmfcribbonslider-class"></a>Classe CMFCRibbonSlider
 O `CMFCRibbonSlider` classe implementa um controle deslizante que você pode adicionar uma barra de faixa de opções ou na barra de status da faixa de opções. O controle deslizante da faixa de opções lembra os controles deslizantes que aparecem nos aplicativos do Office 2007.  
@@ -112,8 +112,8 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nID*  
- ID do controle deslizante.  
+*nID*<br/>
+[in] ID do controle deslizante.  
   
  [in]. *nWidth*  
  Largura do controle deslizante em pixels.  
@@ -207,11 +207,11 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nPos*  
- Especifica a posição a ser definido para o controle deslizante. A posição é relativo ao início do controle deslizante.  
+*nPos*<br/>
+[in] Especifica a posição a ser definido para o controle deslizante. A posição é relativo ao início do controle deslizante.  
   
- [in] *bRedraw*  
- Se for TRUE, o controle deslizante será redesenhado.  
+*bRedraw*<br/>
+[in] Se for TRUE, o controle deslizante será redesenhado.  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
  Defina o intervalo de valores para o controle deslizante.  
@@ -223,11 +223,11 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *Nmín*  
- Especifica o valor mínimo do controle deslizante.  
+*Nmín*<br/>
+[in] Especifica o valor mínimo do controle deslizante.  
   
- [in] *Nmáx*  
- Especifica o valor máximo do controle deslizante.  
+*Nmáx*<br/>
+[in] Especifica o valor máximo do controle deslizante.  
   
 ### <a name="remarks"></a>Comentários  
  Especifica o intervalo de valores para o controle deslizante, definindo os valores mínimo e máximo.  
@@ -251,8 +251,8 @@ void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nZoomIncrement*  
- Especifica o incremento de zoom do controle deslizante.  
+*nZoomIncrement*<br/>
+[in] Especifica o incremento de zoom do controle deslizante.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   

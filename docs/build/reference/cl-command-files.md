@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a1e2b25330bd326ac32dbe1c1b8abcc37c89d09
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 8458462304a9b739c61997505724d21bb56763f6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894753"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708663"
 ---
 # <a name="cl-command-files"></a>Arquivos de comando CL
 
@@ -37,25 +37,25 @@ Um arquivo de comando é especificado por um sinal de arroba (**\@**) seguido po
 
 Por exemplo, se o comando a seguir está em um arquivo chamado RESP:
 
-```  
+```
 /Og /link LIBC.LIB
-```  
+```
 
 e você especificar o seguinte comando CL:
 
-```  
+```
 CL /Ob2 @RESP MYAPP.C
-```  
+```
 
 o comando para CL é da seguinte maneira:
 
-```  
+```
 CL /Ob2 /Og MYAPP.C /link LIBC.LIB
-```  
+```
 
 Observe que a linha de comando e os comandos do arquivo de comando são combinados com eficiência.
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
-[opções do compilador](../../build/reference/compiler-options.md)
+[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
+[Opções do Compilador](../../build/reference/compiler-options.md)

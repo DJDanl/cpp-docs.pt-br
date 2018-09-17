@@ -1,5 +1,5 @@
 ---
-title: Criar uma DLL somente recurso | Microsoft Docs
+title: Criando uma DLL somente recurso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,48 +15,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5249f4528038771162bb96b714524ed751ff39a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ea6590a57a336740be0a9439c959ebe32239d4e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367541"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703450"
 ---
-# <a name="creating-a-resource-only-dll"></a>Criando uma DLL somente de recurso  
-  
-Uma DLL somente de recursos é uma DLL que contém apenas recursos, como ícones, bitmaps, cadeias de caracteres e caixas de diálogo. Usar uma DLL somente de recursos é uma boa maneira de compartilhar o mesmo conjunto de recursos entre vários programas. Também é uma boa maneira de fornecer um aplicativo com os recursos localizados para vários idiomas (consulte [recursos localizados em aplicativos MFC: DLLs satélite](../build/localized-resources-in-mfc-applications-satellite-dlls.md)).  
-  
-Para criar uma DLL somente de recursos, você cria um novo projeto de DLL Win32 (não MFC) e adicione os recursos para o projeto.  
-  
--   Selecione o projeto do Win32 no **novo projeto** caixa de diálogo caixa e especifique um tipo de projeto DLL no Assistente de projeto Win32.  
-  
--   Criar um novo script de recurso que contém os recursos (como uma cadeia de caracteres ou um menu) para a DLL e salve o arquivo. rc.  
-  
--   Sobre o **projeto** menu, clique em **Add Existing Item**e, em seguida, inserir o novo arquivo. rc no projeto.  
-  
--   Especifique o [/NOENTRY](../build/reference/noentry-no-entry-point.md) opção de vinculador. /NOENTRY impede que o vinculador vincular uma referência para `_main` a DLL; essa opção é necessária para criar uma DLL somente de recursos.  
-  
--   Compile a DLL.  
-  
-O aplicativo que usa a DLL somente de recursos deve chamar [LoadLibrary](../build/loadlibrary-and-afxloadlibrary.md) explicitamente vincular para a DLL. Para acessar os recursos, chame as funções genéricas `FindResource` e `LoadResource`, que funcionam em qualquer tipo de recurso, ou chame uma das seguintes funções específicas do recurso:  
-  
--   `FormatMessage`  
-  
--   `LoadAccelerators`  
-  
--   `LoadBitmap`  
-  
--   `LoadCursor`  
-  
--   `LoadIcon`  
-  
--   `LoadMenu`  
-  
--   `LoadString`  
-  
-O aplicativo deve chamar `FreeLibrary` quando ele for concluído usando os recursos.  
-  
-## <a name="see-also"></a>Consulte também  
-  
-[Trabalhando com arquivos de recurso](../windows/working-with-resource-files.md)  
+# <a name="creating-a-resource-only-dll"></a>Criando uma DLL somente de recurso
+
+Uma DLL somente de recursos é uma DLL que contém nada além de recursos, como ícones, bitmaps, cadeias de caracteres e caixas de diálogo. Uso de uma DLL somente de recursos é uma boa maneira de compartilhar o mesmo conjunto de recursos entre vários programas. Também é uma boa maneira de fornecer um aplicativo com recursos localizados para vários idiomas (consulte [recursos localizados em aplicativos MFC: DLLs satélite](../build/localized-resources-in-mfc-applications-satellite-dlls.md)).
+
+Para criar uma DLL somente de recursos, você cria um novo projeto de DLL do Win32 (não MFC) e adicione seus recursos ao projeto.
+
+- Selecione o projeto do Win32 na **novo projeto** caixa de diálogo caixa e especifique um tipo de projeto DLL no Assistente de projeto do Win32.
+
+- Criar um novo script de recurso que contém os recursos (como uma cadeia de caracteres ou um menu) para a DLL e salve o arquivo. rc.
+
+- Sobre o **Project** menu, clique em **Add Existing Item**e, em seguida, inserir o novo arquivo. rc no projeto.
+
+- Especifique o [/NOENTRY](../build/reference/noentry-no-entry-point.md) a opção de vinculador. /NOENTRY impede que o vinculador vincule uma referência ao `_main` a DLL; essa opção é necessária para criar uma DLL somente recurso.
+
+- Compile a DLL.
+
+O aplicativo que usa a DLL somente de recursos deve chamar [LoadLibrary](../build/loadlibrary-and-afxloadlibrary.md) vincular explicitamente para a DLL. Para acessar os recursos, chame as funções genéricas `FindResource` e `LoadResource`, que funcionam em qualquer tipo de recurso, ou chamar uma das seguintes funções específicas do recurso:
+
+- `FormatMessage`
+
+- `LoadAccelerators`
+
+- `LoadBitmap`
+
+- `LoadCursor`
+
+- `LoadIcon`
+
+- `LoadMenu`
+
+- `LoadString`
+
+O aplicativo deve chamar `FreeLibrary` quando ele for concluído usando os recursos.
+
+## <a name="see-also"></a>Consulte também
+
+[Trabalhando com arquivos de recurso](../windows/working-with-resource-files.md)<br/>
 [DLLs no Visual C++](../build/dlls-in-visual-cpp.md)

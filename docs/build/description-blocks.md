@@ -16,27 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0784f08c479a8c8f3968ef61a01431cd9e0ca71e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d83e010f690f96afa5a57eb89ca1e8f4cf444225
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367102"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699654"
 ---
 # <a name="description-blocks"></a>Blocos de descrição
-Um bloco de descrição é uma linha de dependência opcionalmente seguida por um bloco de comandos:  
-  
-```  
-targets... : dependents...  
-    commands...  
-```  
-  
- Uma linha de dependência Especifica um ou mais destinos e zero ou mais dependentes. Um destino deve estar no início da linha. Destinos separados de dependentes por dois-pontos (:); tabulações ou espaços são permitidas. Para dividir a linha, use uma barra invertida (\) depois de um destino ou dependentes. Se não existir um destino, tem um carimbo de hora anterior de um dependente ou é um [pseudotarget](../build/pseudotargets.md), NMAKE executa os comandos. Se um dependente é um destino em outro lugar e não existe ou está desatualizado em relação à suas própria dependentes, NMAKE atualiza dependente antes de atualizar a dependência atual.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?  
- [Destinos](../build/targets.md)  
-  
- [Dependentes](../build/dependents.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência a NMAKE](../build/nmake-reference.md)
+
+Um bloco de descrição é uma linha de dependência opcionalmente seguida por um bloco de comandos:
+
+```
+targets... : dependents...
+    commands...
+```
+
+Uma linha de dependência Especifica um ou mais destinos e dependentes de zero ou mais. Um destino deve ser no início da linha. Destinos separados de dependentes por dois-pontos (:); tabulações ou espaços são permitidas. Para dividir a linha, use uma barra invertida (\) depois de um destino ou dependente. Se um destino não existir, tem um carimbo de hora anterior que um dependente, ou é um [pseudotarget](../build/pseudotargets.md), NMAKE executa os comandos. Se um dependente é um destino em outro lugar e não existe ou está desatualizado em relação a seus próprios dependentes, NMAKE atualiza o dependente antes de atualizar a dependência atual.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?
+
+[Destinos](../build/targets.md)
+
+[Dependentes](../build/dependents.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Referência a NMAKE](../build/nmake-reference.md)

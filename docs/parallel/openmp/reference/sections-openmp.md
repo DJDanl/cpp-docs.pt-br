@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60bc94685a7e6128e22cc3545ae8702abe6d472e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d3b369cfbd68edd32b644c9a4ec0520329507b6e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692071"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708026"
 ---
 # <a name="sections-openmp"></a>sections (OpenMP)
-Identifica as seções de código para ser dividida entre todos os threads.  
+Identifica as seções de código a ser dividida entre todos os threads.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,12 +39,11 @@ Identifica as seções de código para ser dividida entre todos os threads.
 }  
 ```  
   
-## <a name="remarks"></a>Comentários  
- onde,  
-  
- `clause` (opcional)  
- Zero ou mais cláusulas. Consulte a seção comentários para obter uma lista das cláusulas de suporte **seções**.  
-  
+## <a name="arguments"></a>Arguments
+
+*Cláusula*<br/>
+(Opcional) Zero ou mais cláusulas. Consulte a seção comentários para obter uma lista das cláusulas com suporte pelo **seções**.
+
 ## <a name="remarks"></a>Comentários  
  O **seções** diretiva pode conter zero ou mais **seção** diretivas.  
   

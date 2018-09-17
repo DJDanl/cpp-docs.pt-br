@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cae819ccffae37ca27d1e062ae9a766e7acba1f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 991c8c9505485e84aa4e8e1e0e8955b5ad2ac23a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201745"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712833"
 ---
 # <a name="moneyget-class"></a>Classe money_get
 
@@ -47,10 +47,10 @@ class money_get : public locale::facet;
 ### <a name="parameters"></a>Parâmetros
 
 *CharType*<br/>
- O tipo usado em um programa para codificar caracteres em uma localidade.
+O tipo usado em um programa para codificar caracteres em uma localidade.
 
 *InputIterator*<br/>
- O tipo de iterador do qual as funções get leem sua entrada.
+O tipo de iterador do qual as funções get leem sua entrada.
 
 ## <a name="remarks"></a>Comentários
 
@@ -116,22 +116,22 @@ virtual iter_type do_get(iter_type first,
 ### <a name="parameters"></a>Parâmetros
 
 *first*<br/>
- Iterador de entrada que trata o início da sequência a ser convertido.
+Iterador de entrada que trata o início da sequência a ser convertido.
 
 *last*<br/>
- Iterador de entrada que trata o fim da sequência a ser convertido.
+Iterador de entrada que trata o fim da sequência a ser convertido.
 
 *Intl*<br/>
- Um valor booliano que indica o tipo do símbolo de moeda esperado na sequência: **true** se internacional, **false** se nacional.
+Um valor booliano que indica o tipo do símbolo de moeda esperado na sequência: **true** se internacional, **false** se nacional.
 
 *iosbase*<br/>
- Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório.
+Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório.
 
 *Estado*<br/>
- Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas ou não.
+Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas ou não.
 
 *Val*<br/>
- Uma cadeia de caracteres que armazena a sequência convertida.
+Uma cadeia de caracteres que armazena a sequência convertida.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -198,22 +198,22 @@ iter_type get(iter_type first,
 ### <a name="parameters"></a>Parâmetros
 
 *first*<br/>
- Iterador de entrada que trata o início da sequência a ser convertido.
+Iterador de entrada que trata o início da sequência a ser convertido.
 
 *last*<br/>
- Iterador de entrada que trata o fim da sequência a ser convertido.
+Iterador de entrada que trata o fim da sequência a ser convertido.
 
 *Intl*<br/>
- Um valor booliano que indica o tipo do símbolo de moeda esperado na sequência: **true** se internacional, **false** se nacional.
+Um valor booliano que indica o tipo do símbolo de moeda esperado na sequência: **true** se internacional, **false** se nacional.
 
 *iosbase*<br/>
- Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório
+Um sinalizador de formato que quando definido indica que o símbolo de moeda é opcional; caso contrário, será obrigatório
 
 *Estado*<br/>
- Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
+Define os elementos de bitmask apropriados para o estado de fluxo, dependendo se as operações foram bem-sucedidas.
 
 *Val*<br/>
- Uma cadeia de caracteres que armazena a sequência convertida.
+Uma cadeia de caracteres que armazena a sequência convertida.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -295,7 +295,7 @@ explicit money_get(size_t _Refs = 0);
 ### <a name="parameters"></a>Parâmetros
 
 *_Refs*<br/>
- Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
+Valor inteiro usado para especificar o tipo de gerenciamento de memória do objeto.
 
 ### <a name="remarks"></a>Comentários
 

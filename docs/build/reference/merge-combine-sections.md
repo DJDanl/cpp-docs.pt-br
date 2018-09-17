@@ -1,5 +1,5 @@
 ---
-title: -MESCLAGEM (combinar seções) | Microsoft Docs
+title: -MERGE (combinar seções) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,39 +22,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ece36de793b17b8cc064ec3837ea481a1ce870a9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 01768ffcfd647d3e05c0b96647d544e3d68e77d0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373469"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722652"
 ---
 # <a name="merge-combine-sections"></a>/MERGE (combinar seções)
-```  
-/MERGE:from=to  
-```  
-  
-## <a name="remarks"></a>Comentários  
- A opção /MERGE combina a primeira seção (*de*) com a segunda seção (*para*), nomeando a seção resultante *para*. Por exemplo, `/merge:.rdata=.text`.  
-  
- Se a segunda seção não existir, o LINK renomeia a seção *de* como *para*.  
-  
- A opção /MERGE é útil para criar VxDs e substituindo os nomes de seção gerado pelo compilador.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
-  
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).  
-  
-2.  Clique o **vinculador** pasta.  
-  
-3.  Clique o **avançado** página de propriedades.  
-  
-4.  Modificar o **mesclar seções** propriedade.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
-  
-1.  Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MergeSections%2A>.  
-  
-## <a name="see-also"></a>Consulte também  
- [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções do vinculador](../../build/reference/linker-options.md)
+
+```
+/MERGE:from=to
+```
+
+## <a name="remarks"></a>Comentários
+
+A opção /MERGE combina a primeira seção (*partir*) com a segunda seção (*à*), nomeando a seção resultante *para*. Por exemplo, `/merge:.rdata=.text`.
+
+Se a segunda seção não existir, o LINK renomeia a seção *partir* como *para*.
+
+A opção /MERGE é útil para criar VxDs e substituindo os nomes de seção gerado pelo compilador.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
+
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
+
+1. Clique o **vinculador** pasta.
+
+1. Clique o **avançado** página de propriedades.
+
+1. Modificar a **mesclar seções** propriedade.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
+
+1. Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MergeSections%2A>.
+
+## <a name="see-also"></a>Consulte também
+
+[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
+[Opções do vinculador](../../build/reference/linker-options.md)

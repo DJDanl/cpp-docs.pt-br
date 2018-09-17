@@ -1,5 +1,5 @@
 ---
-title: -RTC (verificações de erro de tempo de execução) | Microsoft Docs
+title: -RTC (verificações de erro em tempo de execução) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -35,96 +35,100 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a135c9c4e32ea7a54c45719eff503ff99509d3e7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29fd7e3ec71b38aec187f60548ce7cededd01c2b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378451"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709382"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (verificações de erro de tempo de execução)
-Usada para habilitar e desabilitar o recurso de verificações de erro de tempo de execução, em conjunto com o [runtime_checks](../../preprocessor/runtime-checks.md) pragma.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-/RTC1  
-/RTCc  
-/RTCs  
-/RTCu  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `1`  
- Equivalente a **/RTC**`su`.  
-  
- `c`  
- Relata quando um valor é atribuído a um tipo de dados menor e resulta em perda de dados. Por exemplo, se um valor do tipo `short 0x101` é atribuído a uma variável do tipo `char`.  
-  
- Essa opção informa situações em que você pretende truncate, por exemplo, se você quiser que os primeiros oito bits de um `int` retornado como um `char`. Porque **/RTC** `c` causa um erro de tempo de execução se qualquer informação é perdida como resultado da atribuição, você pode mascarar desativar as informações necessárias para evitar um erro de tempo de execução como resultado de **/RTC** `c`. Por exemplo:  
-  
-```  
-#include <crtdbg.h>  
-  
-char get8bits(int value, int position) {  
-   _ASSERT(position < 32);  
-   return (char)(value >> position);  
-   // Try the following line instead:  
-   // return (char)((value >> position) & 0xff);  
-}  
-  
-int main() {  
-   get8bits(12341235,3);  
-}  
-```  
-  
- `s`  
- Habilita quadro erro de tempo de execução de verificação de pilha, da seguinte maneira:  
-  
--   Inicialização de variáveis locais para um valor diferente de zero. Isso ajuda a identificar erros que não aparecem quando em execução no modo de depuração. Há uma possibilidade maior de que variáveis de pilha ainda será zero em uma compilação de depuração em comparação comparada uma versão de compilação devido a otimizações do compilador de variáveis de pilha em uma compilação de versão. Depois que um programa usado uma área de pilha, ele nunca é redefinido como 0 pelo compilador. Portanto, variáveis de pilha não inicializada subsequentes que usem a mesma área de pilha podem retornar valores restantes do uso da memória pilha anterior.  
-  
--   Detecção de estouros e falhas de variáveis locais, como matrizes. **/RTC** `s` não irá detectar saturações ao acessar a memória que os resultados de preenchimento de compilador dentro de uma estrutura. O preenchimento pode ocorrer por meio [alinhar](../../cpp/align-cpp.md), [/Zp (alinhamento de membro de Struct)](../../build/reference/zp-struct-member-alignment.md), ou [pacote](../../preprocessor/pack.md), ou se você classificar os elementos de estrutura em forma a exigir o compilador a adicionar preenchimento.  
-  
--   Verificação de ponteiro de pilha, que detecta corrupção do ponteiro de pilha. Corrompimento de ponteiro de pilha pode ser causado por uma incompatibilidade de convenção de chamada. Por exemplo, usando um ponteiro de função, você chama uma função em uma DLL que é exportada como [stdcall](../../cpp/stdcall.md) , mas o ponteiro para a função que você declara [cdecl](../../cpp/cdecl.md).  
-  
- `u`  
- Relata quando uma variável for usada sem ter sido inicializada. Por exemplo, uma instrução que gera `C4701` também pode gerar um erro de tempo de execução em **/RTC**`u`. Qualquer instrução que gera [C4700 de aviso do compilador (nível 1 e nível 4)](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md) gerará um erro de tempo de execução em **/RTC**`u`.  
-  
- No entanto, considere o fragmento de código a seguir:  
-  
-```cpp  
-int a, *b, c;  
-if ( 1 )  
-b = &a;  
-c = a;  // No run-time error with /RTCu  
-```  
-  
- Se uma variável pode ter sido inicializada, ele não será relatado em tempo de execução por **/RTC**`u`. Por exemplo, depois de uma variável é um alias através de um ponteiro, o compilador não rastreará a variável e de relatório usa não inicializada. Na verdade, você pode inicializar uma variável por obter seu endereço. A & operador funciona como um operador de atribuição nessa situação.  
-  
-## <a name="remarks"></a>Comentários  
- Verificações de erro de tempo de execução são uma maneira para localizar problemas em seu código em execução; Para obter mais informações, consulte [como: usar verificações de tempo de execução nativo](/visualstudio/debugger/how-to-use-native-run-time-checks).  
-  
- Se você compilar seu programa na linha de comando usando qualquer um do **/RTC** opções do compilador, qualquer pragma [otimizar](../../preprocessor/optimize.md) instruções em seu código falhará de modo silencioso. Isso ocorre porque as verificações de erro de tempo de execução não são válidas em uma compilação de versão (otimizado).  
-  
- Você deve usar **/RTC** para compilações de desenvolvimento; **/RTC** não deve ser usado para uma versão comercial. **/RTC** não pode ser usado com otimizações do compilador ([/O opções (otimizar código)](../../build/reference/o-options-optimize-code.md)). Uma imagem de programa compilada com **/RTC** será um pouco maior e um pouco mais lenta do que uma imagem criada com **/Od** (até 5 por cento mais lento do que um **/Od** criar).  
-  
- A diretiva de pré-processador msvc_runtime_checks será definida quando você usar qualquer **/RTC** opção ou [/GZ](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
-  
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
-  
-2.  Clique o **C/C++** pasta.  
-  
-3.  Clique o **geração de código** página de propriedades.  
-  
-4.  Modificar uma ou ambas das seguintes propriedades: **verificações de tempo de execução básico** ou **verificação de tipo menor**.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
-  
--   Consulte as propriedades <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BasicRuntimeChecks%2A> e <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.SmallerTypeCheck%2A>.  
-  
-## <a name="see-also"></a>Consulte também  
- [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)   
- [Como usar verificações de tempo de execução nativas](/visualstudio/debugger/how-to-use-native-run-time-checks)
+
+Usada para habilitar e desabilitar o recurso de verificações de erro de tempo de execução, em conjunto com o [runtime_checks](../../preprocessor/runtime-checks.md) pragma.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+/RTC1
+/RTCc
+/RTCs
+/RTCu
+```
+
+## <a name="arguments"></a>Arguments
+
+**1**<br/>
+Equivalente a **/RTC**`su`.
+
+**c**<br/>
+Informa quando um valor é atribuído a um tipo de dados menor e resulta em perda de dados. Por exemplo, se um valor do tipo `short 0x101` é atribuído a uma variável do tipo `char`.
+
+Esta opção relata situações em que você pretende truncar, por exemplo, se você quiser que os primeiros oito bits de um `int` retornado como um `char`. Porque **/RTC** `c` causa um erro de tempo de execução se houver informações perdidas como resultado da atribuição, você pode mascarar as informações necessárias para evitar um erro de tempo de execução como resultado de **/RTC** `c`. Por exemplo:
+
+```
+#include <crtdbg.h>
+
+char get8bits(int value, int position) {
+   _ASSERT(position < 32);
+   return (char)(value >> position);
+   // Try the following line instead:
+   // return (char)((value >> position) & 0xff);
+}
+
+int main() {
+   get8bits(12341235,3);
+}
+```
+
+**s**<br/>
+Permite empilhar quadro tempo de execução verificação de erros, da seguinte maneira:
+
+- Inicialização de variáveis locais para um valor diferente de zero. Isso ajuda a identificar bugs que não aparecem quando em execução no modo de depuração. Há uma chance maior de que variáveis de pilha ainda será zero em uma compilação de depuração em comparação comparada um build de versão devido a otimizações do compilador de variáveis de pilha em um build de versão. Depois que um programa tenha usado uma área de sua pilha, ele nunca é redefinido como 0 pelo compilador. Portanto, as variáveis de pilha subsequentes, não inicializado que usam a mesma área de pilha podem retornar valores restantes do uso anterior dessa memória de pilha.
+
+- Detecção de saturações e falhas de variáveis locais, como matrizes. **/RTC** `s` não irá detectar estouros ao acessar a memória que resulta do preenchimento de compilador dentro de uma estrutura. Preenchimento pode ocorrer por meio [alinhar](../../cpp/align-cpp.md), [/Zp (alinhamento de membro de Struct)](../../build/reference/zp-struct-member-alignment.md), ou [pack](../../preprocessor/pack.md), ou se você ordenar os elementos de estrutura de forma exigir o compilador a adicionar preenchimento.
+
+- Verificação de ponteiro de pilha, que detecta dano do ponteiro de pilha. Corrompimento de ponteiro de pilha pode ser causado por uma incompatibilidade de convenção de chamada. Por exemplo, usando um ponteiro de função, você chama uma função em uma DLL que é exportada como [stdcall](../../cpp/stdcall.md) , mas você declara o ponteiro para a função como [cdecl](../../cpp/cdecl.md).
+
+**u**<br/>
+Informa quando uma variável for usada sem ter sido inicializada. Por exemplo, uma instrução que gera `C4701` também pode gerar um erro de tempo de execução sob **/RTC**`u`. Qualquer instrução que gera [aviso do compilador (nível 1 e nível 4) C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md) gerará um erro de tempo de execução sob **/RTC**`u`.
+
+No entanto, considere o fragmento de código a seguir:
+
+```cpp
+int a, *b, c;
+if ( 1 )
+b = &a;
+c = a;  // No run-time error with /RTCu
+```
+
+Se uma variável pode ter sido inicializada, ele não será relatado em tempo de execução **/RTC**`u`. Por exemplo, depois que uma variável é um alias por meio de um ponteiro, o compilador não rastreará a variável e de relatório usa não inicializada. Na verdade, você pode inicializar uma variável por meio de seu endereço. A & funciona de operador como um operador de atribuição nessa situação.
+
+## <a name="remarks"></a>Comentários
+
+Verificações de erro em tempo de execução são uma maneira de localizar problemas em seu código em execução; Para obter mais informações, consulte [como: usar verificações de tempo de execução nativo](/visualstudio/debugger/how-to-use-native-run-time-checks).
+
+Se você compilar seu programa na linha de comando usando qualquer um dos **/RTC** opções do compilador, qualquer pragma [otimizar](../../preprocessor/optimize.md) instruções em seu código falhará silenciosamente. Isso ocorre porque as verificações de erro em tempo de execução não são válidas em um build de versão (otimizado).
+
+Você deve usar **/RTC** para compilações de desenvolvimento; **/RTC** não deve ser usado para um build de varejo. **/RTC** não pode ser usado com as otimizações do compilador ([/O opções (otimizar código)](../../build/reference/o-options-optimize-code.md)). Imagem de um programa compilado com **/RTC** será um pouco maior e um pouco mais lento do que uma imagem criada com **/Od** (até 5% mais lento do que uma **/Od** compilar).
+
+A diretiva de pré-processador msvc_runtime_checks será definida quando você usar qualquer **/RTC** opção ou [/GZ](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
+
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+
+1. Clique o **C/C++** pasta.
+
+1. Clique o **geração de código** página de propriedades.
+
+1. Modificar uma ou ambas das seguintes propriedades: **verificações básicas de tempo de execução** ou **verificação de tipo menor**.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
+
+- Consulte as propriedades <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BasicRuntimeChecks%2A> e <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.SmallerTypeCheck%2A>.
+
+## <a name="see-also"></a>Consulte também
+
+[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
+[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
+[Como usar verificações de tempo de execução nativas](/visualstudio/debugger/how-to-use-native-run-time-checks)

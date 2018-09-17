@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 132498c5773e4cce1fd178573698b62e874dda48
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: d2349beadb5983c85059be83ee5a933689913886
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691608"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722716"
 ---
 # <a name="submatch-class"></a>Classe sub_match
 
@@ -51,8 +51,8 @@ class sub_match
 
 ## <a name="parameters"></a>Parâmetros
 
-*BidIt*  
- O tipo de iterador para subcorrespondências.
+*BidIt*<br/>
+O tipo de iterador para subcorrespondências.
 
 ## <a name="remarks"></a>Comentários
 
@@ -159,14 +159,14 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*  
- A subcorrespondência com a qual comparar.
+*right*<br/>
+A subcorrespondência com a qual comparar.
 
-*str*  
- A cadeia de caracteres com a qual comparar.
+*str*<br/>
+A cadeia de caracteres com a qual comparar.
 
-*ptr*  
- A sequência com terminação nula com a qual comparar.
+*ptr*<br/>
+A sequência com terminação nula com a qual comparar.
 
 ### <a name="remarks"></a>Comentários
 

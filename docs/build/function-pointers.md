@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57c61dc8599ece5020e854b045f9634c1d732a6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 96bca27f56122f677eb790e4fbc9140a27b01668
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367141"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703452"
 ---
 # <a name="function-pointers"></a>Ponteiros de função
-Ponteiros de função são simplesmente ponteiros para o rótulo da respectiva função. Não há nenhuma tabela de requisitos de sumário para ponteiros de função.  
-  
-## <a name="see-also"></a>Consulte também  
- [Convenção de chamada](../build/calling-convention.md)
+
+Ponteiros de função são simplesmente os ponteiros para o rótulo da respectiva função. Não há nenhuma tabela de requisitos de sumário (TOC) para ponteiros de função.
+
+## <a name="see-also"></a>Consulte também
+
+[Convenção de chamada](../build/calling-convention.md)

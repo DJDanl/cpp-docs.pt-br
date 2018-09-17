@@ -17,16 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71344bb752ff7a328ddd5f718a5de1c1f42b65be
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5a6a572013a29420670a2aef8c91c9c4bc64e871
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370661"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706286"
 ---
 # <a name="res-files-as-linker-input"></a>Arquivos .Res como entrada de vinculador
-Você pode especificar um arquivo. res ao vincular um programa. O arquivo. res é criado pelo compilador de recurso (RC). LINK converte automaticamente os arquivos. res para COFF. A ferramenta CVTRES.exe deve estar no mesmo diretório do LINK.exe ou em um diretório especificado na variável de ambiente PATH.  
-  
-## <a name="see-also"></a>Consulte também  
- [Arquivos de entrada de LINK](../../build/reference/link-input-files.md)   
- [Opções do vinculador](../../build/reference/linker-options.md)
+
+Ao vincular um programa, você pode especificar um arquivo. res. O arquivo. res é criado pelo compilador de recursos (RC). LINK converte automaticamente os arquivos. res para COFF. A ferramenta CVTRES.exe deve estar no mesmo diretório que LINK.exe ou em um diretório especificado na variável de ambiente PATH.
+
+## <a name="see-also"></a>Consulte também
+
+[Arquivos de entrada de LINK](../../build/reference/link-input-files.md)<br/>
+[Opções do vinculador](../../build/reference/linker-options.md)

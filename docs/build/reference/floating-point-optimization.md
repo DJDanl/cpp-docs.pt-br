@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 082cd3a7721f1bc72899130159b724b292e5e217
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6208e425ce4a2e1b5738932b8acaf6b11b7db24b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595042"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706674"
 ---
 # <a name="microsoft-visual-c-floating-point-optimization"></a>Otimização de ponto flutuante do Microsoft Visual C++
 
@@ -757,7 +757,6 @@ float sum = f1 + f2;
 Este tipo de arredondamento adicional pode resultar do uso de uma menor unidade ponto flutuante de precisão, como SSE2, executar alguns dos cálculos intermediários. A precisão de arredondamento /FP: Fast, portanto, é dependente de plataforma; código que compila bem para um processador pode não necessariamente funcionar bem para outro processador. Ele é deixado para o usuário para determinar se os benefícios de velocidade superam os problemas de precisão.
 
 Se a otimização /FP: Fast é especialmente problemática para uma função específica, o modo de ponto flutuante pode ser alternado localmente para fp: preciso usando o `float_control` pragma de compilador.
-
 
 ### <a name="algebraic-transformations-under-fpfast"></a>Transformações algébricas sob /FP: Fast
 

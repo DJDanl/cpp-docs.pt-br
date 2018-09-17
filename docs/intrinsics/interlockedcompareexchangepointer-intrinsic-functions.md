@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18f26f9ac0cd00758d1259ac368b2408a7a2e8cf
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a8ea3976a510817e183271921c6730692e5b0b3c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214615"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711044"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>Funções intrínsecas _InterlockedCompareExchangePointer
 **Seção específica da Microsoft**  
@@ -87,14 +87,14 @@ long _InterlockedCompareExchangePointer_rel (
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [in, out] `Destination`  
- Ponteiro para um ponteiro do valor de destino. O sinal é ignorado.  
+*Destino*<br/>
+[no, out] Ponteiro para um ponteiro para o valor de destino. O sinal é ignorado.  
   
- [in] `Exchange`  
- Ponteiro do Exchange. O sinal é ignorado.  
+*Exchange*<br/>
+[in] Ponteiro do Exchange. O sinal é ignorado.  
   
- [in] `Comparand`  
- Ponteiro a ser comparado ao destino. O sinal é ignorado.  
+*Termo de comparação*<br/>
+[in] Ponteiro para comparado ao destino. O sinal é ignorado.  
   
 ## <a name="return-value"></a>Valor de retorno  
  O valor de retorno é o valor inicial do destino.  

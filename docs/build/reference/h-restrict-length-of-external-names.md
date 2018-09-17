@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d178fcd62c39c65d9f4f8958fde3b178a074671
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 61a931ac5f9793f800157ed02ffcb7ff5071f4df
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895312"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724393"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (restringir comprimento de nomes externos)
 
@@ -37,7 +37,7 @@ Preterido. Restringe o comprimento dos nomes externos.
 
 ## <a name="arguments"></a>Arguments
 
-*número*  
+*número*<br/>
 Especifica o comprimento máximo de nomes externos permitidos em um programa.
 
 ## <a name="remarks"></a>Comentários
@@ -96,5 +96,5 @@ O **/H** opção foi preterida desde o Visual Studio 2005; os limites de comprim
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do compilador](../../build/reference/compiler-options.md)   
+[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
 [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

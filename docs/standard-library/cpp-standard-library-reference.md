@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc6c665309f51044f00b05931500065ed087e774
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dcf760219f06ab71684d9d67240712fa501b3c00
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841200"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722599"
 ---
 # <a name="c-standard-library-reference"></a>Referência da Biblioteca Padrão C++
 
@@ -32,10 +32,10 @@ Para obter mais informações sobre as bibliotecas em tempo de execução Visual
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md) fornece uma visão geral sobre a implementação da Microsoft da biblioteca padrão C++.
+[Visão geral da biblioteca padrão C++](../standard-library/cpp-standard-library-overview.md) fornece uma visão geral da implementação da Microsoft da biblioteca padrão C++.
 
-[iostream programação](../standard-library/iostream-programming.md) fornece uma visão geral da programação iostream.
+[iostream programação](../standard-library/iostream-programming.md) fornece uma visão geral da programação de iostream.
 
-[Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md) fornece links para tópicos de referência discutir os arquivos de cabeçalho da biblioteca padrão C++ com exemplos de código.
+[Referência de arquivos de cabeçalho](../standard-library/cpp-standard-library-header-files.md) fornece links para tópicos de referência que abordam os arquivos de cabeçalho da biblioteca padrão C++, com exemplos de código.
 
 

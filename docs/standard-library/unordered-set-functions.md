@@ -7,12 +7,12 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: f832c31ca1659a9275c6c424ca4fb143574672f0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 28fb028f3383225d89a8366461400bf704c7a4dd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956664"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720077"
 ---
 # <a name="ltunorderedsetgt-functions"></a>Funções &lt;unordered_set&gt;
 
@@ -34,23 +34,23 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*  
- O tipo principal.
+*Chave*<br/>
+O tipo principal.
 
-*hash*  
- O tipo de objeto da função de hash.
+*hash*<br/>
+O tipo de objeto da função de hash.
 
-*Pred*  
- O tipo de objeto da função de comparação de igualdade.
+*Pred*<br/>
+O tipo de objeto da função de comparação de igualdade.
 
-*ALLOC*  
- A classe do alocador.
+*ALLOC*<br/>
+A classe do alocador.
 
-*left*  
- O primeiro contêiner para alternância.
+*left*<br/>
+O primeiro contêiner para alternância.
 
-*right*  
- O segundo contêiner para alternância.
+*right*<br/>
+O segundo contêiner para alternância.
 
 ### <a name="remarks"></a>Comentários
 
@@ -126,23 +126,23 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*  
- O tipo principal.
+*Chave*<br/>
+O tipo principal.
 
-*hash*  
- O tipo de objeto da função de hash.
+*hash*<br/>
+O tipo de objeto da função de hash.
 
-*Pred*  
- O tipo de objeto da função de comparação de igualdade.
+*Pred*<br/>
+O tipo de objeto da função de comparação de igualdade.
 
-*ALLOC*  
- A classe do alocador.
+*ALLOC*<br/>
+A classe do alocador.
 
-*left*  
- O primeiro contêiner para alternância.
+*left*<br/>
+O primeiro contêiner para alternância.
 
-*right*  
- O segundo contêiner para alternância.
+*right*<br/>
+O segundo contêiner para alternância.
 
 ### <a name="remarks"></a>Comentários
 

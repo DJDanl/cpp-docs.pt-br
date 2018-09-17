@@ -18,43 +18,52 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee1d2cac587db64451fbc3622351461d4651b2f8
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 715ed5bf12c424c49e96012c5391dfe334e44db4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318898"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705881"
 ---
 # <a name="custom-color-selector-dialog-box-c-image-editor-for-icons"></a>Caixa de diálogo Seletor de cor personalizada (C++) (Editor de imagens para ícones)
 
 Essa caixa de diálogo permite que você personalize as cores que você pode usar para sua imagem. Para obter mais informações, consulte [personalizando ou alterando cores](../windows/customizing-or-changing-colors-image-editor-for-icons.md).
 
-**Exibição em cores de gradiente**  
-Altera os valores de uma cor selecionada. Posicione a cruz na cor que você deseja alterar. Mova o controle deslizante para cima ou para baixo para alterar a luminosidade ou valores RGB da cor.
+- **Exibição em cores de gradiente**
 
-**Barra de luminosidade**  
-Define a luminosidade para a cor selecionada na **exibição em cores gradiente** caixa. Clique e arraste a seta branca a barra de brilho maior ou para baixo para o menor. Observe que o **cor** caixa exibe a cor que você selecionou e o efeito de luminosidade você definir.
+   Altera os valores de uma cor selecionada. Posicione a cruz na cor que você deseja alterar. Mova o controle deslizante para cima ou para baixo para alterar a luminosidade ou valores RGB da cor.
 
-**Cor**  
-Lista o matiz (valor de roda de cores) da cor que você está definindo. Os valores variam de 0 a 240, onde 0 é vermelho, 60 é amarelo, 120 é verde, 180 é ciano, 200 é magenta e 240 é azul.
+- **Barra de luminosidade**
 
-**Matiz**  
-Lista o matiz (valor de roda de cores) da cor que você está definindo. Os valores variam de 0 a 240, onde 0 é vermelho, 60 é amarelo, 120 é verde, 180 é ciano, 200 é magenta e 240 é azul.
+   Define a luminosidade para a cor selecionada na **exibição em cores gradiente** caixa. Clique e arraste a seta branca a barra de brilho maior ou para baixo para o menor. Observe que o **cor** caixa exibe a cor que você selecionou e o efeito de luminosidade você definir.
 
-**Sáb**  
-Especifica o valor de saturação da cor que você está definindo. A saturação é a quantidade de cor em um matiz especificado. Os valores variam de 0 a 240.
+- **Cor**
 
-**Luminosidade**  
-Lista a luminosidade (brilho) da cor que você está definindo. Os valores variam de 0 a 240.
+   Lista o matiz (valor de roda de cores) da cor que você está definindo. Os valores variam de 0 a 240, onde 0 é vermelho, 60 é amarelo, 120 é verde, 180 é ciano, 200 é magenta e 240 é azul.
 
-**Vermelho**  
-Especifica o valor de vermelho da cor que você está definindo. Os valores variam de 0 a 255.
+- **Matiz**
 
-**Verde**  
-Especifica o valor de verde da cor que você está definindo. Os valores variam de 0 a 255.
+   Lista o matiz (valor de roda de cores) da cor que você está definindo. Os valores variam de 0 a 240, onde 0 é vermelho, 60 é amarelo, 120 é verde, 180 é ciano, 200 é magenta e 240 é azul.
 
-**Azul**  
-Especifica o valor de azul da cor que você está definindo. Os valores variam de 0 a 255.
+- **Sáb**
+
+   Especifica o valor de saturação da cor que você está definindo. A saturação é a quantidade de cor em um matiz especificado. Os valores variam de 0 a 240.
+
+- **Luminosidade**
+
+   Lista a luminosidade (brilho) da cor que você está definindo. Os valores variam de 0 a 240.
+
+- **Vermelho**
+
+   Especifica o valor de vermelho da cor que você está definindo. Os valores variam de 0 a 255.
+
+- **Verde**
+
+   Especifica o valor de verde da cor que você está definindo. Os valores variam de 0 a 255.
+
+- **Azul**
+
+   Especifica o valor de azul da cor que você está definindo. Os valores variam de 0 a 255.
 
 ## <a name="requirements"></a>Requisitos
 

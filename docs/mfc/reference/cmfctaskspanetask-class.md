@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 041a207af69ac65646e1b30672250b84aa3a5d36
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: ee7c04ee4cd581395ff03763c2ebe50b421986d2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853963"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711133"
 ---
 # <a name="cmfctaskspanetask-class"></a>Classe CMFCTasksPaneTask
 O `CMFCTasksPaneTask` é uma classe auxiliar que representa as tarefas para o controle do painel de tarefas ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). O objeto de tarefa representa um item no grupo de tarefas ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Cada tarefa pode ter um comando que a estrutura executa quando um usuário clica na tarefa e um ícone que aparece à esquerda do nome da tarefa.  
@@ -252,11 +252,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pParent*  
- Representa a janela pai da tarefa atual.  
+*pParent*<br/>
+[in] Representa a janela pai da tarefa atual.  
   
- [out] *dados*  
- Um objeto do tipo `CAccessibilityData` que é preenchida com os dados de acessibilidade da tarefa atual.  
+*data*<br/>
+[out] Um objeto do tipo `CAccessibilityData` que é preenchida com os dados de acessibilidade da tarefa atual.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o *dados* parâmetro estava com êxito preenchida com os dados de acessibilidade da tarefa atual; caso contrário, FALSE.  

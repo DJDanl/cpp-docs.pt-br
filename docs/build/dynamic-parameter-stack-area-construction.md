@@ -12,15 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39c5aa2bd844a70848583ef8304cdb2fd57befc6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9c121a2e15f7020db141dc64e9a3dc9735149c65
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572523"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704958"
 ---
 # <a name="dynamic-parameter-stack-area-construction"></a>Construção da área de pilha do parâmetro dinâmico
-Se for usado um ponteiro de quadro, existe a opção para criar dinamicamente a área de pilha do parâmetro. Isso não é feito no momento no x64 compilador.  
-  
-## <a name="see-also"></a>Consulte também  
- [Uso da pilha](../build/stack-usage.md)
+
+Se for usado um ponteiro de quadro, existe a opção para criar dinamicamente a área de pilha do parâmetro. Isso não é feito no momento no x64 compilador.
+
+## <a name="see-also"></a>Consulte também
+
+[Uso da pilha](../build/stack-usage.md)

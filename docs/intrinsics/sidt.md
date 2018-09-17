@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 202e982d30fd0877814fa0c0fe967091057f920f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6731bb6a06f775c06ba16eb4885a3982d934f3cd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685971"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699863"
 ---
 # <a name="sidt"></a>__sidt
 **Seção específica da Microsoft**  
@@ -40,7 +40,7 @@ void __sidt(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] `Destination`|Um ponteiro para o local da memória onde IDTR está armazenado.|  
+|*Destino*|[in] Um ponteiro para o local da memória onde IDTR está armazenado.|  
   
 ## <a name="requirements"></a>Requisitos  
   

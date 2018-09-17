@@ -21,47 +21,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 776d23c0c0c7ce392b1ff0d7a989c3c5503129b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8717be9ee8f754f4e61dbed0211360a0b4f4f780
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32375993"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717219"
 ---
 # <a name="pdb-use-program-database"></a>/PDB (usar banco de dados do programa)
-```  
-/PDB:filename  
-```  
-  
-## <a name="remarks"></a>Comentários  
- em que:  
-  
- *filename*  
- Um nome de usuário especificado para o banco de dados do programa (PDB) que o vinculador cria. Ele substitui o nome padrão.  
-  
-## <a name="remarks"></a>Comentários  
- Por padrão, quando [/Debug](../../build/reference/debug-generate-debug-info.md) for especificado, o vinculador cria um banco de dados do programa (PDB) que contém informações de depuração. O nome de arquivo padrão para o PDB tem o nome base do programa e a extensão. PDB.  
-  
- Use /PDB:*filename* para especificar o nome do arquivo PDB. Se /DEBUG não for especificado, a opção /PDB é ignorada.  
-  
- Um arquivo PDB pode ser de até 2GB.  
-  
- Para obter mais informações, consulte [arquivos. PDB como entrada de vinculador](../../build/reference/dot-pdb-files-as-linker-input.md).  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
-  
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).  
-  
-2.  Clique o **vinculador** pasta.  
-  
-3.  Clique o **depurar** página de propriedades.  
-  
-4.  Modificar o **gerar arquivo de banco de dados do programa** propriedade.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
-  
--   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ProgramDatabaseFile%2A>.  
-  
-## <a name="see-also"></a>Consulte também  
- [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções do vinculador](../../build/reference/linker-options.md)
+
+```
+/PDB:filename
+```
+
+## <a name="arguments"></a>Arguments
+
+*filename*<br/>
+Um nome especificado pelo usuário para o banco de dados do programa (PDB) que o vinculador cria. Ele substitui o nome padrão.
+
+## <a name="remarks"></a>Comentários
+
+Por padrão, quando [/Debug](../../build/reference/debug-generate-debug-info.md) for especificado, o vinculador cria um banco de dados do programa (PDB) que contém informações de depuração. O nome de arquivo padrão para o PDB tem o nome base do programa e a extensão. PDB.
+
+Use /PDB:*filename* para especificar o nome do arquivo PDB. Se a opção /DEBUG não for especificado, a opção /PDB é ignorada.
+
+Um arquivo PDB pode ser de até 2GB.
+
+Para obter mais informações, consulte [arquivos. PDB como entrada de vinculador](../../build/reference/dot-pdb-files-as-linker-input.md).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
+
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
+
+1. Clique o **vinculador** pasta.
+
+1. Clique o **depurar** página de propriedades.
+
+1. Modificar a **gerar arquivo de banco de dados do programa** propriedade.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
+
+- Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ProgramDatabaseFile%2A>.
+
+## <a name="see-also"></a>Consulte também
+
+[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
+[Opções do vinculador](../../build/reference/linker-options.md)

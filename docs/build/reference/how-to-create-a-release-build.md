@@ -1,5 +1,5 @@
 ---
-title: 'Como: criar uma compilação de versão | Microsoft Docs'
+title: 'Como: criar um Build de versão | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 949cfe629332488821da4313c13d40054778ef06
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1221133b55002d49c93d66210c5eae6844b534b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370870"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705596"
 ---
 # <a name="how-to-create-a-release-build"></a>Como criar um build da versão
-### <a name="to-generate-a-release-build-of-your-program"></a>Para gerar uma compilação de versão do programa  
-  
-1.  Selecione **versão** do **configuração de solução** lista suspensa, o que está no **padrão** barra de ferramentas.  
-  
-2.  No **criar** menu, clique em **criar**.  
-  
-## <a name="see-also"></a>Consulte também  
- [Builds de versão](../../build/reference/release-builds.md)
+
+### <a name="to-generate-a-release-build-of-your-program"></a>Para gerar um build de versão do seu programa
+
+1. Selecione **Release** da **configuração da solução** lista suspensa, o que está na **padrão** barra de ferramentas.
+
+1. Sobre o **compilar** menu, clique em **Build**.
+
+## <a name="see-also"></a>Consulte também
+
+[Builds de versão](../../build/reference/release-builds.md)

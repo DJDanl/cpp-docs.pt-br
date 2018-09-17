@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d3e54f13f6b165288402bbb1d783a2f1979f4ac
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: abad906c7fcc5c86a6901757ddfbb5dfeff2ec29
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607693"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704894"
 ---
 # <a name="generic-interfaces-visual-c"></a>Interfaces genéricas (Visual C++)
 
@@ -42,8 +42,8 @@ Para obter mais informações sobre interfaces, consulte [classe de interface](.
 
 ## <a name="remarks"></a>Comentários
 
-*atributos* (opcional)  
-Informações declarativas adicionais. Para obter mais informações sobre atributos e classes de atributos, consulte **atributos**.
+*Atributos*  
+(Opcional) Informações declarativas adicionais. Para obter mais informações sobre atributos e classes de atributos, consulte **atributos**.
 
 *chave de classe*  
 **classe** ou **typename**
@@ -54,20 +54,20 @@ Lista de identificadores separados por vírgulas.
 *tipo de parâmetro-restrições cláusulas*  
 Assume o formato especificado no [restrições em parâmetros de tipo genéricos (C + + c++ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*modificadores de acessibilidade* (opcional)  
-Modificadores de acessibilidade (por exemplo, **público, privado**).
+*modificadores de acessibilidade*  
+(Opcional) Modificadores de acessibilidade (por exemplo, **público, privado**).
 
 *identifier*  
 O nome da interface.
 
-*Base de dados de lista* (opcional)  
-Uma lista que contém um ou mais interfaces base explícitas separadas por vírgulas.
+*Base de dados de lista*  
+(Opcional) Uma lista que contém um ou mais interfaces base explícitas separadas por vírgulas.
 
 *corpo de interface*  
 Declarações de membros de interface.
 
-*declaradores* (opcional)  
-Declarações de variáveis com base nesse tipo.
+*declaradores*  
+(Opcional) Declarações de variáveis com base nesse tipo.
 
 ## <a name="example"></a>Exemplo
 

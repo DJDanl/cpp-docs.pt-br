@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a51544f1e367e1db0b5ae72948af68fbedfa7504
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cc842aa40b732543c496bb209b4b163635a19bb1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209722"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713850"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Operadores multiplicativos e o operador de módulo
 ## <a name="syntax"></a>Sintaxe  
@@ -72,11 +72,13 @@ f / 0.0
 > [!NOTE]
 >  Uma vez que as conversões executadas pelos operadores de multiplicação não fornecem condições de estouro ou estouro negativo, as informações poderão ser perdidas se o resultado de uma operação de multiplicação não puder ser representado no tipo dos operandos após a conversão.  
   
-## <a name="microsoft-specific"></a>Específico da Microsoft  
- No Microsoft C++, o resultado de uma expressão de módulo sempre é igual ao sinal do primeiro operando.  
-  
-**Fim da seção específica da Microsoft**  
- Se a divisão calculada de dois inteiros for inexata e apenas um operando for negativo, o resultado será o interior maior (em magnitude, independentemente do sinal), que é menor que o valor exato que seria gerado pela operação de divisão. Por exemplo, o valor calculado de -11 / 3 é-3.666666666. O resultado dessa divisão integral é -3.  
+**Seção específica da Microsoft**
+
+No Microsoft C++, o resultado de uma expressão de módulo sempre é igual ao sinal do primeiro operando.
+
+**Fim da seção específica da Microsoft**
+
+Se a divisão calculada de dois inteiros for inexata e apenas um operando for negativo, o resultado será o interior maior (em magnitude, independentemente do sinal), que é menor que o valor exato que seria gerado pela operação de divisão. Por exemplo, o valor calculado de -11 / 3 é-3.666666666. O resultado dessa divisão integral é -3.  
   
  A relação entre os operadores de multiplicação é fornecida pela identidade (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*.  
   

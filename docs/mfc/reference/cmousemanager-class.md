@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d99f0b2ea50e84e3eb5e89d1f2e24a181653893c
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 38dcb010df79e0a5c5a54079b4c98021cc406c8d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37852458"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720260"
 ---
 # <a name="cmousemanager-class"></a>Classe CMouseManager
 Permite que um usuário associe comandos diferentes com um determinado [CView](../../mfc/reference/cview-class.md) objeto quando o usuário naquela exibição.  
@@ -93,20 +93,20 @@ BOOL AddView(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iViewId*  
- Uma identificação de exibição.  
+*iViewId*<br/>
+[in] Uma identificação de exibição.  
   
- [in] *uiViewNameResId*  
- Uma ID de cadeia de caracteres de recurso que faz referência ao nome de exibição.  
+*uiViewNameResId*<br/>
+[in] Uma ID de cadeia de caracteres de recurso que faz referência ao nome de exibição.  
   
- [in] *uiIconId*  
- Um ID de ícone do modo de exibição.  
+*uiIconId*<br/>
+[in] Um ID de ícone do modo de exibição.  
   
- [in] *iId*  
- Uma identificação de exibição.  
+*iId*<br/>
+[in] Uma identificação de exibição.  
   
- [in] *lpszViewName*  
- Um nome de exibição.  
+*lpszViewName*<br/>
+[in] Um nome de exibição.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se bem-sucedido; Caso contrário, 0.  
@@ -131,8 +131,8 @@ UINT GetViewDblClickCommand(int iId) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iId*  
- A ID do modo de exibição.  
+*iId*<br/>
+[in] A ID do modo de exibição.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O identificador de comando se o modo de exibição estiver associado um comando; Caso contrário, 0.  
@@ -145,8 +145,8 @@ UINT GetViewIconId(int iViewId) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iViewId*  
- A ID do modo de exibição.  
+*iViewId*<br/>
+[in] A ID do modo de exibição.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um identificador de recurso de ícone se bem-sucedido; Caso contrário, 0.  
@@ -162,8 +162,8 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszName*  
- O nome de exibição.  
+*lpszName*<br/>
+[in] O nome de exibição.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Uma ID de exibição se for bem-sucedido; Caso contrário, 0.  
@@ -179,8 +179,8 @@ void GetViewNames(CStringList& listOfNames) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *listOfNames*  
- Uma referência ao `CStringList` objeto.  
+*listOfNames*<br/>
+[out] Uma referência ao `CStringList` objeto.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método preenche o parâmetro `listOfNames` com os nomes de todos os modos de exibição registrados usando [CMouseManager::AddView](#addview).  
@@ -193,8 +193,8 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszProfileName*  
- Um caminho de uma chave do registro.  
+*lpszProfileName*<br/>
+[in] Um caminho de uma chave do registro.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se bem-sucedido; Caso contrário, 0.  
@@ -212,8 +212,8 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszProfileName*  
- Um caminho de uma chave do registro.  
+*lpszProfileName*<br/>
+[in] Um caminho de uma chave do registro.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se bem-sucedido; Caso contrário, 0.  
@@ -233,11 +233,11 @@ void SetCommandForDblClk(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iViewId*  
- O identificador de modo de exibição.  
+*iViewId*<br/>
+[in] O identificador da exibição.  
   
- [in] *uiCmd*  
- O identificador de comando.  
+*uiCmd*<br/>
+[in] O identificador de comando.  
   
 ### <a name="remarks"></a>Comentários  
  Para associar um comando personalizado um modo de exibição, você deve primeiro registrar o modo de exibição usando o [CMouseManager::AddView](#addview). O `AddView` método exige um identificador de exibição como um parâmetro de entrada. Quando você registra um modo de exibição, você pode chamar `CMouseManager::SetCommandForDblClk` com o mesma exibição identificador parâmetro de entrada que você forneceu para `AddView`. Depois disso, quando o usuário clica duas vezes o mouse no modo de exibição registrado, o aplicativo executará o comando indicado pelo *uiCmd.* Para dar suporte o comportamento de mouse personalizado, você também precisará personalizar o modo de exibição registrado com o Gerenciador de mouse. Para obter mais informações sobre o comportamento de mouse personalizado, consulte [personalização de teclado e Mouse](../keyboard-and-mouse-customization.md).  

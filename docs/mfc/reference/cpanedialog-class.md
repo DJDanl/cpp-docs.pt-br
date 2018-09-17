@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc74f89708132b0895c8980538b852c15087b5e6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 4e987910cf27135858d4fe272bc02da7c90f622f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43682321"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710145"
 ---
 # <a name="cpanedialog-class"></a>Classe CPaneDialog
 O `CPaneDialog` classe dá suporte a uma caixa de diálogo sem modo e encaixável.  
@@ -122,32 +122,32 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszWindowName*  
- O nome da caixa de diálogo de encaixe.  
+*lpszWindowName*<br/>
+[in] O nome da caixa de diálogo de encaixe.  
   
- [in] *pParentWnd*  
- Aponta para a janela pai.  
+*pParentWnd*<br/>
+[in] Aponta para a janela pai.  
   
- [in] *bHasGripper*  
- TRUE para criar a caixa de diálogo de encaixe com uma legenda (garra); Caso contrário, FALSE.  
+*bHasGripper*<br/>
+[in] TRUE para criar a caixa de diálogo de encaixe com uma legenda (garra); Caso contrário, FALSE.  
   
- [in] *lpszTemplateName*  
- O nome do modelo de caixa de diálogo do recurso.  
+*lpszTemplateName*<br/>
+[in] O nome do modelo de caixa de diálogo do recurso.  
   
- [in] *nStyle*  
- O estilo do Windows.  
+*nStyle*<br/>
+[in] O estilo do Windows.  
   
- [in] *nID*  
- A ID do controle.  
+*nID*<br/>
+[in] A ID do controle.  
   
- [in] *nIDTemplate*  
- A ID de recurso do modelo de caixa de diálogo.  
+*nIDTemplate*<br/>
+[in] A ID de recurso do modelo de caixa de diálogo.  
   
- [in] *dwTabbedStyle*  
- O estilo da janela com guias que resulta quando o usuário arrasta o outro painel de controle para a legenda deste painel de controle. O valor padrão é AFX_CBRS_REGULAR_TABS. Para obter mais informações, consulte a seção de comentários do [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) método.  
+*dwTabbedStyle*<br/>
+[in] O estilo da janela com guias que resulta quando o usuário arrasta o outro painel de controle para a legenda deste painel de controle. O valor padrão é AFX_CBRS_REGULAR_TABS. Para obter mais informações, consulte a seção de comentários do [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) método.  
   
- [in] *dwControlBarStyle*  
- Atributos de estilo adicionais. O valor padrão é AFX_DEFAULT_DOCKING_PANE_STYLE. Para obter mais informações, consulte a seção de comentários do [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) método.  
+*dwControlBarStyle*<br/>
+[in] Atributos de estilo adicionais. O valor padrão é AFX_DEFAULT_DOCKING_PANE_STYLE. Para obter mais informações, consulte a seção de comentários do [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex) método.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se este método for bem-sucedido; Caso contrário, FALSE.  
@@ -170,11 +170,11 @@ afx_msg LRESULT HandleInitDialog(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *wParam*  
- Identificador para o controle que deve receber o foco do teclado padrão.  
+*wParam*<br/>
+[in] Identificador para o controle que deve receber o foco do teclado padrão.  
   
- [in] *lParam*  
- Especifica os dados de inicialização adicionais.  
+*lParam*<br/>
+[in] Especifica os dados de inicialização adicionais.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE. Além disso, TRUE, define o foco do teclado para o controle especificado o *wParam* parâmetro; FALSE impede que definir o foco do teclado padrão.  
@@ -190,8 +190,8 @@ virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pOccDialogInfo*  
- Ponteiro para um modelo de caixa de diálogo que é usado para criar o objeto de caixa de diálogo. Subsequentemente, o valor desse parâmetro é passado para o [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) método.  
+*pOccDialogInfo*<br/>
+[in] Ponteiro para um modelo de caixa de diálogo que é usado para criar o objeto de caixa de diálogo. Subsequentemente, o valor desse parâmetro é passado para o [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) método.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Sempre TRUE.  

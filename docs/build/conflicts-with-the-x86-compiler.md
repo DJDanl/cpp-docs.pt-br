@@ -1,5 +1,5 @@
 ---
-title: Está em conflito com x86 compilador | Microsoft Docs
+title: Está em conflito com o x86 compilador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,24 +12,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cd72de4922c297b4a230e0dc0fb606b56a2a473
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f01e65adfb42a5fb3361e75ce34060f7dc1b9f9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32366907"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709664"
 ---
 # <a name="conflicts-with-the-x86-compiler"></a>Conflitos com o compilador x86
-Tipos de dados que são maiores do que 4 bytes não estão alinhados automaticamente na pilha quando você usa o x86 compilador para compilar um aplicativo. Como a arquitetura para x86 compilador é uma pilha de alinhamento 4 bytes, nada mais de 4 bytes, por exemplo, um inteiro de 64 bits, não pode ser alinhada automaticamente a um endereço de 8 bytes.  
-  
- Trabalhando com dados não alinhados tem duas consequências.  
-  
--   Pode levar mais tempo para acessar locais não alinhados que demora para acessar locais alinhados.  
-  
--   Não alinhados locais não podem ser usados em operações integradas.  
-  
- Se você precisar de mais de alinhamento estrito, use `__declspec(align(N)) on your variable declarations`. Isso faz com que o compilador alinhar dinamicamente a pilha para atender às suas especificações. No entanto, ajustar a pilha dinamicamente em tempo de execução pode causar a execução mais lenta do seu aplicativo.  
-  
-## <a name="see-also"></a>Consulte também  
- [Tipos e armazenamento](../build/types-and-storage.md)   
- [align](../cpp/align-cpp.md)
+
+Tipos de dados que são maiores do que 4 bytes não são alinhadas automaticamente na pilha quando você usa o x86 compilador para compilar um aplicativo. Porque a arquitetura para x86 de compilador é uma pilha alinhado de 4 bytes, algo maior do que 4 bytes, por exemplo, um inteiro de 64 bits, não pode ser alinhada automaticamente para um endereço de 8 bytes.
+
+Trabalhar com dados não alinhados tem implicações de dois.
+
+- Pode levar mais tempo para acessar locais não alinhados, que é necessário para acessar locais alinhados.
+
+- Locais não alinhados não podem ser usados em operações interconectadas.
+
+Se você precisar de mais de alinhamento estrito, use `__declspec(align(N)) on your variable declarations`. Isso faz com que o compilador alinhar dinamicamente a pilha para atender às suas especificações. No entanto, ajustar dinamicamente a pilha em tempo de execução pode causar a execução mais lenta do seu aplicativo.
+
+## <a name="see-also"></a>Consulte também
+
+[Tipos e armazenamento](../build/types-and-storage.md)<br/>
+[align](../cpp/align-cpp.md)

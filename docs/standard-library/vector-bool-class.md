@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5f0d38ebd24c38579f73bceea0fff50ab361638
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b158f6bedd2dba2d65f7b0778758eafe08e88851
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962774"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702904"
 ---
 # <a name="vectorltboolgt-class"></a>Classe vector&lt;bool&gt;
 
@@ -293,11 +293,11 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Direita*  
- A referência de elemento cujo valor deve ser atribuído ao bit.
+*Direita*<br/>
+A referência de elemento cujo valor deve ser atribuído ao bit.
 
-*Val*  
- O valor booliano a ser atribuído ao bit.
+*Val*<br/>
+O valor booliano a ser atribuído ao bit.
 
 #### <a name="example"></a>Exemplo
 
@@ -382,11 +382,11 @@ static void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Esquerda*  
- O elemento a ser trocado com o *direita* elemento.
+*Esquerda*<br/>
+O elemento a ser trocado com o *direita* elemento.
 
-*Direita*  
- O elemento a ser trocado com o *esquerda* elemento.
+*Direita*<br/>
+O elemento a ser trocado com o *esquerda* elemento.
 
 ### <a name="remarks"></a>Comentários
 

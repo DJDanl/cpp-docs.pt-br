@@ -23,63 +23,67 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 897ca229ec7312812b6f2bd2991bf519e98c836c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 34030a8ef91e5a25bdb1a13981925c5ddf1f05df
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378321"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721546"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (indefinir símbolos)
-O **/u** remoções de definições de opção de compilador o símbolo do pré-processador especificado. O **/u** os símbolos específicos da Microsoft que define o compilador de remoções de definição de opção de compilador.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-/U[ ]symbol  
-/u  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `symbol`  
- O símbolo do pré-processador a exclua.  
-  
-## <a name="remarks"></a>Comentários  
- Nem o **/u** ou **/u** opção pode cancele um símbolo criado usando o **#define** diretiva.  
-  
- O **/u** opção pode cancele um símbolo que foi anteriormente definido usando o **/D** opção.  
-  
- Por padrão, o compilador define os seguintes símbolos específicos da Microsoft.  
-  
-|Símbolo|Função|  
-|------------|--------------|  
-|CHAR_UNSIGNED|O tipo char padrão é não assinado. Definido quando o [/J](../../build/reference/j-default-char-type-is-unsigned.md) opção é especificada.|  
-|CPPRTTI|Definido para o código compilado com o [/GR](../../build/reference/gr-enable-run-time-type-information.md) opção.|  
-|CPPUNWIND|Definido para o código compilado com o [/EHsc](../../build/reference/eh-exception-handling-model.md) opção.|  
-|DLL|Definido quando o [/MD](../../build/reference/md-mt-ld-use-run-time-library.md) opção é especificada.|  
-|M_IX86|Por padrão, definido como 600 para x86 de destinos.|  
-|MSC_VER|Para obter mais informações, consulte [Macros predefinidas](../../preprocessor/predefined-macros.md).|  
-|WIN32|Definido para aplicativos WIN32. Sempre definido.|  
-|_MT|Definido quando o [/MD ou /MT](../../build/reference/md-mt-ld-use-run-time-library.md) opção é especificada.|  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
-  
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
-  
-2.  Clique o **C/C++** pasta.  
-  
-3.  Clique o **avançado** página de propriedades.  
-  
-4.  Modificar o **exclua definições de pré-processador** ou **cancele todas as definições de pré-processador** propriedades.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
-  
--   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UndefineAllPreprocessorDefinitions%2A> ou <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UndefinePreprocessorDefinitions%2A>.  
-  
-## <a name="see-also"></a>Consulte também  
- [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)   
- [/J (char padrão é de tipo não assinado)](../../build/reference/j-default-char-type-is-unsigned.md)   
- [/GR (Habilitar informações de tipo de tempo de execução)](../../build/reference/gr-enable-run-time-type-information.md)   
- [/EH (modelo de tratamento de exceções)](../../build/reference/eh-exception-handling-model.md)   
- [/MD, /MT, /LD (usar biblioteca de tempo de execução)](../../build/reference/md-mt-ld-use-run-time-library.md)
+
+O **/U** remoções de definições de opção de compilador o símbolo do pré-processador especificado. O **/u** os símbolos de específico da Microsoft que o compilador define remoções de definições de opção de compilador.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+/U[ ]symbol
+/u
+```
+
+## <a name="arguments"></a>Arguments
+
+*Símbolo*<br/>
+O símbolo do pré-processador a excluir.
+
+## <a name="remarks"></a>Comentários
+
+Nem o **/U** ou **/u** opção pode excluir um símbolo criado usando o **#define** diretiva.
+
+O **/U** opção pode excluir um símbolo que foi anteriormente definido usando o **/D** opção.
+
+Por padrão, o compilador define símbolos de específico da Microsoft a seguir.
+
+|Símbolo|Função|
+|------------|--------------|
+|CHAR_UNSIGNED|O tipo char padrão não está assinado. Definido quando o [/J](../../build/reference/j-default-char-type-is-unsigned.md) opção for especificada.|
+|CPPRTTI|Definido para o código compilado com o [/GR](../../build/reference/gr-enable-run-time-type-information.md) opção.|
+|CPPUNWIND|Definido para o código compilado com o [/EHsc](../../build/reference/eh-exception-handling-model.md) opção.|
+|DLL|Definido quando o [/MD](../../build/reference/md-mt-ld-use-run-time-library.md) opção for especificada.|
+|_M_IX86|Por padrão, definido como 600 para x86 de destinos.|
+|MSC_VER|Para obter mais informações, consulte [Macros predefinidas](../../preprocessor/predefined-macros.md).|
+|_WIN32|Definido para aplicativos WIN32. Sempre definido.|
+|_MT|Definido quando o [/MD ou /MT](../../build/reference/md-mt-ld-use-run-time-library.md) opção for especificada.|
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
+
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+
+1. Clique o **C/C++** pasta.
+
+1. Clique o **avançado** página de propriedades.
+
+1. Modificar a **excluir definições de pré-processador** ou **cancele todas as definições de pré-processador** propriedades.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
+
+- Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UndefineAllPreprocessorDefinitions%2A> ou <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UndefinePreprocessorDefinitions%2A>.
+
+## <a name="see-also"></a>Consulte também
+
+[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
+[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
+[/J (char padrão não é do tipo assinado)](../../build/reference/j-default-char-type-is-unsigned.md)
+[/GR (Habilitar informações de tipo em tempo de execução)](../../build/reference/gr-enable-run-time-type-information.md)
+[/EH (modelo de tratamento de exceção)](../../build/reference/eh-exception-handling-model.md) 
+ [/MD, /MT, /LD (usar biblioteca em tempo de execução)](../../build/reference/md-mt-ld-use-run-time-library.md)

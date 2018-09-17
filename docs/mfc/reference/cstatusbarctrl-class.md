@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a555cc26e8857899690852743fa177a706afa0f2
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 94d56a6defbc47a133e3f583daab188921622d84
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677739"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711784"
 ---
 # <a name="cstatusbarctrl-class"></a>Classe CStatusBarCtrl
 Fornece a funcionalidade do controle de barra de status comuns do Windows.  
@@ -261,7 +261,7 @@ HICON GetIcon(int iPart) const;
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *iPart*|O índice baseado em zero da parte que contém o ícone a ser recuperado. Se esse parâmetro for -1, a barra de status é considerada uma barra de status de modo simples.|  
+|*iPart*|[in] O índice baseado em zero da parte que contém o ícone a ser recuperado. Se esse parâmetro for -1, a barra de status é considerada uma barra de status de modo simples.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  O identificador para o ícone se o método bem-sucedida; Caso contrário, nulo.  
@@ -521,8 +521,8 @@ BOOL SetSimple(BOOL bSimple = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bSimple*  
- Sinalizador de tipo de exibição. Se esse parâmetro for TRUE, o controle exibe texto simples; Se for FALSE, ele exibe várias partes.  
+*bSimple*<br/>
+[in] Sinalizador de tipo de exibição. Se esse parâmetro for TRUE, o controle exibe texto simples; Se for FALSE, ele exibe várias partes.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Sempre retorna 0.  

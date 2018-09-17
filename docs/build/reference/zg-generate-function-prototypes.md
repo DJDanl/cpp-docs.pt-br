@@ -20,54 +20,57 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8288da0981878b17ad0c2091bf2a45569b51740d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 27042a66944652508bd9e97110a232175a97233c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380528"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724653"
 ---
 # <a name="zg-generate-function-prototypes"></a>/Zg (gerar protótipos de função)
-Removidos. Cria um protótipo de função para cada função definida no arquivo de origem, mas não compila o arquivo de origem.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-/Zg  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Essa opção de compilador não está mais disponível. Ele foi removido no Visual C++ 2015. Esta página permanece para usuários de versões anteriores do Visual C++.  
-  
- O protótipo de função inclui o tipo de retorno de função e uma lista de tipos de argumento. A lista de tipos de argumento é criada entre os tipos de parâmetros formais da função. Qualquer protótipos de função já está presentes no arquivo de origem são ignorados.  
-  
- A lista de protótipos é gravada para a saída padrão. Essa lista podem ser úteis para verificar se os argumentos reais e parâmetros formais de uma função são compatíveis. Você pode salvar a lista ao redirecionar saída padrão para um arquivo. Em seguida, você pode usar **#include** para fazer a lista de protótipos de função uma parte do seu arquivo de origem. Isso faz com que o compilador realizar a verificação de tipo de argumento.  
-  
- Se você usar o **/Zg** opção e o programa contém parâmetros formais que tenham estrutura, enum, ou tipo de união (ou ponteiros para esses tipos), a declaração de cada estrutura, enum ou tipo de união deve ter uma marca (nome). No exemplo a seguir, o nome da marca é `MyStruct`.  
-  
-```C  
-// Zg_compiler_option.c  
-// compile with: /Zg  
-typedef struct MyStruct { int i; } T2;  
-void f2(T2 * t) {}  
-```  
-  
- O **/Zg** opção foi preterida no Visual Studio 2005 e foi removida no Visual Studio 2015. O compilador do Visual C++ removeu o suporte para código anterior, C-style. Para obter uma lista de opções do compilador preterido, consulte **preteridos e removidos opções do compilador** na [opções do compilador listadas por categoria](../../build/reference/compiler-options-listed-by-category.md).  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
-  
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
-  
-2.  Clique o **C/C++** pasta.  
-  
-3.  Clique o **linha de comando** página de propriedades.  
-  
-4.  Digite a opção de compilador no **opções adicionais** caixa.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
-  
--   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Consulte também  
- [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+
+Removidos. Cria um protótipo de função para cada função definida no arquivo de origem, mas não compila o arquivo de origem.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+/Zg
+```
+
+## <a name="remarks"></a>Comentários
+
+Essa opção do compilador não está mais disponível. Ele foi removido no Visual C++ 2015. Esta página permanece para usuários de versões mais antigas do Visual C++.
+
+O protótipo de função inclui o tipo de retorno de função e uma lista de tipo de argumento. Lista de argumentos de tipo é criada entre os tipos dos parâmetros formais da função. Qualquer protótipos de função já está presentes no arquivo de origem são ignorados.
+
+A lista de protótipos é gravada na saída padrão. Essa lista podem ser úteis para verificar se os argumentos reais e parâmetros formais de uma função são compatíveis. Você pode salvar a lista ao redirecionar saída padrão para um arquivo. Em seguida, você pode usar **#include** para tornar a lista de protótipos de função a uma parte de seu arquivo de origem. Isso faz com que o compilador execute a verificação de tipo de argumento.
+
+Se você usar o **/Zg** opção e o seu programa contiver parâmetros formais que têm o struct, enum, ou tipo de união (ou ponteiros para esses tipos), a declaração de cada struct, enum ou tipo de união deve ter uma marca (nome). No exemplo a seguir, o nome da marca é `MyStruct`.
+
+```C
+// Zg_compiler_option.c
+// compile with: /Zg
+typedef struct MyStruct { int i; } T2;
+void f2(T2 * t) {}
+```
+
+O **/Zg** opção foi preterida no Visual Studio 2005 e foi removida no Visual Studio 2015. O compilador do Visual C++ removeu o suporte para o código mais antigo, estilo C. Para obter uma lista de opções do compilador preterido, consulte **preteridos e removidos opções do compilador** na [opções de compilador listadas por categoria](../../build/reference/compiler-options-listed-by-category.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
+
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+
+1. Clique o **C/C++** pasta.
+
+1. Clique o **linha de comando** página de propriedades.
+
+1. Digite a opção de compilador na **opções adicionais** caixa.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
+
+- Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Consulte também
+
+[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
+[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

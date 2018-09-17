@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b64118753138087bce446a92716c6cb1731c7ea
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5327470057928466c1aede37205ac4f35175b899
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539940"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712212"
 ---
 # <a name="interlockedbittestandset-intrinsic-functions"></a>Funções intrínsecas _interlockedbittestandset
 **Seção específica da Microsoft**  
@@ -82,11 +82,11 @@ unsigned char _interlockedbittestandset64_HLERelease(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [in] `a`  
- Um ponteiro para a memória a examinar.  
+*a*<br/>
+[in] Um ponteiro para a memória a examinar.  
   
- [in] `b`  
- A posição de bit a testar.  
+*b*<br/>
+[in] A posição de bit para testar.  
   
 ## <a name="return-value"></a>Valor de retorno  
  O valor de bit na posição `b` antes que ele seja definido.  

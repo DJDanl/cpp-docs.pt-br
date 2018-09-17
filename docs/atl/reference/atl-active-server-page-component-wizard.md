@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29763bbc06d2f1425cf8a916885137be9719c1e6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 017dac5f9cba676980629109b53f4b2aec4af940
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760530"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713211"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Assistente de página componente Active Server ATL
 
@@ -44,48 +44,56 @@ Se você alterar o **Coclass** na seção de COM, a alteração é refletido na 
 
 Fornece informações para a classe C++ criada para o objeto.
 
-**Nome curto**  
-Define o nome de raiz para o objeto. O nome que você forneceu determina o `Class` e **Coclass** nomes, o **arquivo. cpp** e **arquivo. h** nomes, o **Interface**nome, o **tipo de** nomes e o **ProgID**, a menos que você altere esses campos individualmente.
+- **Nome curto**  
 
-**Arquivo .h**  
-Define o nome do arquivo de cabeçalho para a nova classe do objeto. Por padrão, esse nome é baseado no nome que você fornecer em **Short name**. Clique no botão de reticências para salvar o nome de arquivo no local de sua escolha, ou para acrescentar a declaração de classe a um arquivo existente. Se você selecionar um arquivo existente, o assistente não salvará no local selecionado até que você clique **concluir** no assistente.
+   Define o nome de raiz para o objeto. O nome que você forneceu determina o `Class` e **Coclass** nomes, o **arquivo. cpp** e **arquivo. h** nomes, o **Interface**nome, o **tipo de** nomes e o **ProgID**, a menos que você altere esses campos individualmente.
 
-O assistente não substitui um arquivo. Se você selecionar o nome de um arquivo existente, quando clicar em **Concluir**, o assistente solicitará que você indique se a declaração de classe deve ser acrescentada ao conteúdo do arquivo. Clique em **Sim** para acrescentar o arquivo; clique em **Não** para retornar ao assistente e especificar outro nome de arquivo.
+- **Arquivo .h**  
 
-**Class**  
-Define o nome da classe a ser criado. Esse nome é baseado no nome que você fornecer em **Short name**, precedidos pela 'c', o prefixo típico para um nome de classe.
+   Define o nome do arquivo de cabeçalho para a nova classe do objeto. Por padrão, esse nome é baseado no nome que você fornecer em **Short name**. Clique no botão de reticências para salvar o nome de arquivo no local de sua escolha, ou para acrescentar a declaração de classe a um arquivo existente. Se você selecionar um arquivo existente, o assistente não salvará no local selecionado até que você clique **concluir** no assistente.
 
-**Arquivo .cpp**  
-Define o nome do arquivo de implementação para a nova classe do objeto. Por padrão, esse nome é baseado no nome que você fornecer em **Short name**. Clique no botão de reticências para salvar o nome de arquivo no local de sua escolha. O arquivo não é salvo no local selecionado até que você clique em **Concluir** no assistente.
+   O assistente não substitui um arquivo. Se você selecionar o nome de um arquivo existente, quando clicar em **Concluir**, o assistente solicitará que você indique se a declaração de classe deve ser acrescentada ao conteúdo do arquivo. Clique em **Sim** para acrescentar o arquivo; clique em **Não** para retornar ao assistente e especificar outro nome de arquivo.
 
-O assistente não substitui um arquivo. Se você selecionar o nome de um arquivo existente, quando clicar em **Concluir**, o assistente solicitará que você indique se a implementação de classe deve ser acrescentada ao conteúdo do arquivo. Clique em **Sim** para acrescentar o arquivo; clique em **Não** para retornar ao assistente e especificar outro nome de arquivo.
+- **Class**  
 
-**Atribuído**  
-Indica se o objeto usa atributos. Se você estiver adicionando um objeto para um projeto ATL atribuído, essa opção é selecionada e não está disponível para alterar. Ou seja, você pode adicionar apenas os objetos atribuídos a um projeto criado com o suporte do atributo.
+   Define o nome da classe a ser criado. Esse nome é baseado no nome que você fornecer em **Short name**, precedidos pela 'c', o prefixo típico para um nome de classe.
 
-Se você selecionar essa opção para um projeto ATL que não tem atributo dão suporte, o assistente solicita que você especifique se deseja adicionar suporte de atributo para o projeto.
+- **Arquivo .cpp**  
 
-Por padrão para projetos nonattributed, quaisquer objetos que você adiciona depois de definir essa opção são designados como atribuído (a caixa de seleção está marcada). Você pode desmarcar essa caixa para adicionar um objeto que não usa atributos.
+   Define o nome do arquivo de implementação para a nova classe do objeto. Por padrão, esse nome é baseado no nome que você fornecer em **Short name**. Clique no botão de reticências para salvar o nome de arquivo no local de sua escolha. O arquivo não é salvo no local selecionado até que você clique em **Concluir** no assistente.
 
-Ver [configurações de aplicativo, o ATL Project Wizard](../../atl/reference/application-settings-atl-project-wizard.md) e [mecânica básica de atributos](../../windows/basic-mechanics-of-attributes.md) para obter mais informações.
+   O assistente não substitui um arquivo. Se você selecionar o nome de um arquivo existente, quando clicar em **Concluir**, o assistente solicitará que você indique se a implementação de classe deve ser acrescentada ao conteúdo do arquivo. Clique em **Sim** para acrescentar o arquivo; clique em **Não** para retornar ao assistente e especificar outro nome de arquivo.
+
+- **Atribuído**  
+
+   Indica se o objeto usa atributos. Se você estiver adicionando um objeto para um projeto ATL atribuído, essa opção é selecionada e não está disponível para alterar. Ou seja, você pode adicionar apenas os objetos atribuídos a um projeto criado com o suporte do atributo.
+
+   Se você selecionar essa opção para um projeto ATL que não tem atributo dão suporte, o assistente solicita que você especifique se deseja adicionar suporte de atributo para o projeto.
+
+   Por padrão para projetos nonattributed, quaisquer objetos que você adiciona depois de definir essa opção são designados como atribuído (a caixa de seleção está marcada). Você pode desmarcar essa caixa para adicionar um objeto que não usa atributos.
+
+   Ver [configurações de aplicativo, o ATL Project Wizard](../../atl/reference/application-settings-atl-project-wizard.md) e [mecânica básica de atributos](../../windows/basic-mechanics-of-attributes.md) para obter mais informações.
 
 ### <a name="com"></a>COM
 
 Fornece informações sobre a funcionalidade de COM para o objeto.
 
-**Coclass**  
-Define o nome da classe de componente que contém uma lista de interfaces com suporte do objeto. Se esse objeto ou seu projeto usa atributos, você não pode alterar essa opção porque ATL não inclui o **coclass** atributo.
+- **Coclass**  
 
-**Tipo**  
-Define a descrição do objeto que será exibido no registro para coclass.
+   Define o nome da classe de componente que contém uma lista de interfaces com suporte do objeto. Se esse objeto ou seu projeto usa atributos, você não pode alterar essa opção porque ATL não inclui o **coclass** atributo.
 
-**Interface**  
-Define a interface que você cria para seu objeto. Essa interface contém seus métodos personalizados.
+- **Tipo**  
 
-**ProgID**  
-Define o nome que contêineres podem usar em vez do CLSID do objeto.
+   Define a descrição do objeto que será exibido no registro para coclass.
+
+- **Interface**  
+
+   Define a interface que você cria para seu objeto. Essa interface contém seus métodos personalizados.
+
+- **ProgID**  
+
+   Define o nome que contêineres podem usar em vez do CLSID do objeto.
 
 ## <a name="see-also"></a>Consulte também
 
 [Componente de página de servidor ativo do ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)
-

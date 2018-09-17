@@ -17,23 +17,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f505694cd0efed303558438b2c2ed2fbff888b7
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1e5aff6796804d7868b4d61c94e4a181b88e9ab6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313189"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704828"
 ---
 # <a name="custom-image-dialog-box-c-image-editor-for-icons"></a>Caixa de diálogo imagem personalizada (C++) (Editor de imagens para ícones)
+
 Permite que você crie uma nova imagem com um tamanho personalizado e o número de cores.
- **Largura**  
- Fornece um espaço para que você insira a largura da imagem personalizada em pixels (1-512, o limite de 2048).
+
+- **Largura**
+
+   Fornece um espaço para que você insira a largura da imagem personalizada em pixels (1-512, o limite de 2048).
   
- **Altura**  
- Fornece um espaço para que você insira a altura da imagem personalizada em pixels (1-512, o limite de 2048).
+- **Altura**
+
+   Fornece um espaço para que você insira a altura da imagem personalizada em pixels (1-512, o limite de 2048).
   
- **Cores**  
- Fornece um espaço para você escolher o número de cores para a imagem personalizada: 2, 16 ou 256.
+- **Cores**
+
+   Fornece um espaço para você escolher o número de cores para a imagem personalizada: 2, 16 ou 256.
   
 ## <a name="requirements"></a>Requisitos
  Nenhum

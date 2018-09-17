@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b807f24f03c5880b4b60708d6919052183ec564f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b3c1ec84569058b11b20270ea1006bfc438288cf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605204"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717140"
 ---
 # <a name="safemodulus"></a>SafeModulus
 
@@ -41,14 +41,14 @@ inline bool SafeModulus (
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *t*  
-O divisor. Isso deve ser do tipo `T`.
+*t*<br/>
+[in] O divisor. Isso deve ser do tipo `T`.
 
-[in] *u*  
-O dividendo. Isso deve ser do tipo `U`.
+*u*<br/>
+[in] O dividendo. Isso deve ser do tipo `U`.
 
-[out] *resultado*  
-O parâmetro em que **SafeModulus** armazena o resultado.
+*resultado*<br/>
+[out] O parâmetro em que **SafeModulus** armazena o resultado.
 
 ## <a name="return-value"></a>Valor de retorno
 

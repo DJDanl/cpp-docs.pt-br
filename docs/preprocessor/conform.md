@@ -19,46 +19,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c6204349731222df99683ddb20b2b2d827b3fcd
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: cb14af38c4bffed4b9f5c60d2d89fd84a892025b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540734"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721741"
 ---
 # <a name="conform"></a>conform
 **Específico do C++**  
-  
-Especifica o comportamento de tempo de execução de [/ZC: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) opção de compilador.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-#pragma conform(name [, show ] [, on | off ] [ [, push | pop ] [, identifier ] ] )  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
-*name*  
-Especifica o nome da opção de compilador a ser modificada. Válido somente *nome* é `forScope`.  
-  
-*Mostrar* (opcional)  
-Faz com que a configuração atual da *nome* (true ou false) a ser exibido por meio de uma mensagem de aviso durante a compilação. Por exemplo, `#pragma conform(forScope, show)`.  
-  
-*ativado, desativado*(opcional)  
-Definindo *nome* à *na* permite que o [/ZC: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) opção de compilador. O padrão é *desativar*.  
-  
-*envio por push* (opcional)  
-Envia o valor atual da *nome* para a pilha interna do compilador. Se você especificar *identificador*, você pode especificar o *na* ou *off* valor para *nome* seja enviado por push à pilha. Por exemplo, `#pragma conform(forScope, push, myname, on)`.  
-  
-*pop-up* (opcional)  
-Define o valor de *nome* ao valor na parte superior da pilha interna do compilador e, em seguida, a pilha de pops. Se identifier for especificado com *pop-up*, a pilha será exibida novamente até encontrar o registro com *identificador*, que também será removido; o valor atual para *nome* em o próximo registro na pilha se torna o novo valor para *nome*. Se você especificar pop com um *identificador* que não está em um registro na pilha, o *pop-up* será ignorado.  
-  
-*identificador*(opcional)  
-Pode ser incluído em uma *push* ou *pop-up* comando. Se *identificador* for usado, então um *na* ou *off* especificador também pode ser usado.  
-  
-## <a name="example"></a>Exemplo  
-  
-```cpp  
+
+Especifica o comportamento de tempo de execução de [/ZC: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) opção de compilador.
+
+## <a name="syntax"></a>Sintaxe
+
+> **está em conformidade com #pragma (** *nome* [**, mostrar** ] [**,** { **em** | **off** }] [[**,** { **push** | **pop-up** }] [**,** *identificador* ]] **)**
+
+### <a name="parameters"></a>Parâmetros
+
+*name*<br/>
+Especifica o nome da opção de compilador a ser modificada. Válido somente *nome* é `forScope`.
+
+**programa**<br/>
+(Opcional) Faz com que a configuração atual da *nome* (true ou false) a ser exibido por meio de uma mensagem de aviso durante a compilação. Por exemplo, `#pragma conform(forScope, show)`.
+
+**na**, **desativado**<br/>
+(Opcional) Definindo *nome* à **na** permite que o [/ZC: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) opção de compilador. O padrão é **desativar**.
+
+**push**<br/>
+(Opcional) Envia o valor atual da *nome* para a pilha interna do compilador. Se você especificar *identificador*, você pode especificar o **na** ou **off** valor para *nome* seja enviado por push à pilha. Por exemplo, `#pragma conform(forScope, push, myname, on)`.
+
+**pop**<br/>
+(Opcional) Define o valor de *nome* ao valor na parte superior da pilha interna do compilador e, em seguida, a pilha de pops. Se identifier for especificado com **pop-up**, a pilha será exibida novamente até encontrar o registro com *identificador*, que também será removido; o valor atual para *nome* em o próximo registro na pilha se torna o novo valor para *nome*. Se você especificar **pop-up** com um *identificador* que não está em um registro na pilha, o **pop-up** será ignorado.
+
+*identifier*<br/>
+(Opcional) Pode ser incluído em uma **push** ou **pop-up** comando. Se *identificador* for usado, então um **na** ou **off** especificador também pode ser usado.
+
+## <a name="example"></a>Exemplo
+
+```cpp
 // pragma_directive_conform.cpp  
 // compile with: /W1  
 // C4811 expected  
@@ -72,8 +71,8 @@ Pode ser incluído em uma *push* ou *pop-up* comando. Se *identificador* for usa
 #pragma conform(forScope, show)  
   
 int main() {}  
-```  
-  
-## <a name="see-also"></a>Consulte também  
+```
+
+## <a name="see-also"></a>Consulte também
 
 [Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

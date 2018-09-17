@@ -1,5 +1,5 @@
 ---
-title: Funções intrínsecas interlockedadd | Microsoft Docs
+title: Intrínseco Interlockedadd | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c06e2f2b490aacc424e1c8ad0d31c0011bcf989b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7607083a50d98a1b531d6ea45e04866f253a7dfb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333941"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709521"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>Funções intrínsecas InterlockedAdd
 **Seção específica da Microsoft**  
@@ -86,11 +86,11 @@ __int64 _InterlockedAdd64_rel(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [in, out] `Addend`  
- Ponteiro para o valor a ser adicionado; substituído pelo resultado da adição.  
+*Adendo*<br/>
+[no, out] Ponteiro para o inteiro a ser adicionado; substituído pelo resultado da adição.  
   
- [in] `Value`  
- O valor a ser adicionado.  
+*Value*<br/>
+[in] O valor a ser adicionado.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Ambas as funções retornam o resultado da adição.  
@@ -108,7 +108,7 @@ __int64 _InterlockedAdd64_rel(
 |`_InterlockedAdd64_nf`|ARM|  
 |`_InterlockedAdd64_rel`|ARM|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
  As versões dessas funções com os sufixos `_acq` ou `_rel` executam uma adição sincronizada após a semântica de aquisição ou liberação. A semântica de aquisição significa que o resultado da operação é visível a todos os threads e processadores antes de quaisquer leituras e gravações na memória subsequente. A semântica de aquisição é útil ao inserir uma seção crítica. A semântica de liberação significa que todas as leituras e gravações na memória são obrigadas a ficar visíveis para todos os threads e processadores antes que o resultado da operação fique visível. A liberação é útil ao sair de uma seção crítica. Os intrínsecos com um sufixo `_nf` ("no fence") não funcionam como uma barreira de memória.  

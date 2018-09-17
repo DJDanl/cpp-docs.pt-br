@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f052d8acaceee88b6b9a727e176666180b1bb9d
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bf762718e507309e47d36b06baacf54c6cb01e3e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214174"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713711"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (especificar atributos de seção)
 
@@ -89,7 +89,7 @@ O **ALIGN =**_número_ argumento permite que você especifique um valor de alinh
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
 
 1. Escolha o **propriedades de configuração** > **vinculador** > **linha de comando** página de propriedades.
 
@@ -101,5 +101,5 @@ O **ALIGN =**_número_ argumento permite que você especifique um valor de alinh
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)  
-[Opções do vinculador](../../build/reference/linker-options.md)  
+[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
+[Opções do vinculador](../../build/reference/linker-options.md)

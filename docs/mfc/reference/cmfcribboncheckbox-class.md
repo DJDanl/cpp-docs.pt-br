@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b143311f6326e938e9ac61175b02c82d3c8c2c
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 44ccd0c1625e971fd74e913b9618d7f3ae811be5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027174"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712485"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Classe CMFCRibbonCheckBox
 O `CMFCRibbonCheckBox` classe implementa uma caixa de seleção que você pode adicionar a um menu pop-up, ferramentas de acesso rápido ou painel de faixa de opções.  
@@ -103,11 +103,11 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nID*  
- Especifica a ID de comando.  
+*nID*<br/>
+[in] Especifica a ID de comando.  
   
- [in] *lpszText*  
- Especifica o rótulo de texto.  
+*lpszText*<br/>
+[in] Especifica o rótulo de texto.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Constrói um objeto de caixa de seleção de faixa de opções.  
@@ -125,8 +125,8 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Ponteiro para o CDC associado com a caixa de seleção.  
+*pDC*<br/>
+[in] Ponteiro para o CDC associado com a caixa de seleção.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna um `CSize` objeto que contém o tamanho compacto da caixa de seleção.  
@@ -142,8 +142,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Ponteiro para o CDC associado com esta caixa de seleção.  
+*pDC*<br/>
+[in] Ponteiro para o CDC associado com esta caixa de seleção.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um `CSize` objeto que contém o tamanho intermediário da caixa de seleção.  
@@ -159,8 +159,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Ponteiro para o objeto de CDC associado com esta caixa de seleção.  
+*pDC*<br/>
+[in] Ponteiro para o objeto de CDC associado com esta caixa de seleção.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna um `CSize` objeto que contém o tamanho regular da caixa de seleção.  
@@ -188,8 +188,8 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Ponteiro para o CDC no qual desenhar a caixa de seleção.  
+*pDC*<br/>
+[in] Ponteiro para o CDC no qual desenhar a caixa de seleção.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -204,8 +204,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
  [in] *CDC**  
  Ponteiro para o CDC associado com a caixa de seleção.  
   
- [in] *CRect*  
- Um `CRect` objeto que especifica o retângulo no qual desenhar a imagem do menu.  
+*CRect*<br/>
+[in] Um `CRect` objeto que especifica o retângulo no qual desenhar a imagem do menu.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retorna VERDADEIRO se a imagem foi desenhada, ou falso se não.  
@@ -227,23 +227,23 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Ponteiro para o contexto de dispositivo no qual desenhar a caixa de seleção.  
+*pDC*<br/>
+[in] Ponteiro para o contexto de dispositivo no qual desenhar a caixa de seleção.  
   
- [in] *strText*  
- O texto de exibição.  
+*strText*<br/>
+[in] O texto de exibição.  
   
- [in] *nTextOffset*  
- A distância, em pixels, do lado esquerdo da caixa de listagem para o texto de exibição.  
+*nTextOffset*<br/>
+[in] A distância, em pixels, do lado esquerdo da caixa de listagem para o texto de exibição.  
   
- [in] *rect*  
- O retângulo de exibição da caixa de seleção.  
+*Rect*<br/>
+[in] O retângulo de exibição da caixa de seleção.  
   
- [in] *bIsSelected*  
- TRUE se a caixa de seleção for marcada, ou FALSE se não.  
+*bIsSelected*<br/>
+[in] TRUE se a caixa de seleção for marcada, ou FALSE se não.  
   
- [in] *bHighlighted*  
- TRUE se a caixa de seleção estiver realçada, ou FALSE se não for.  
+*bHighlighted*<br/>
+[in] TRUE se a caixa de seleção estiver realçada, ou FALSE se não for.  
   
 ### <a name="remarks"></a>Comentários  
   

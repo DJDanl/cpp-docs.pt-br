@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfb0c3c0544a9c58801f98567825e7e97e48b13c
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: a956212df2579298f1f947bf2388dec1532dff10
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "43687981"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721728"
 ---
 # <a name="subtractwithcarryengine-class"></a>Classe subtract_with_carry_engine
 
@@ -46,17 +46,17 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Parâmetros
 
-*UIntType*  
- O tipo de resultado inteiro sem sinal. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
+*UIntType*<br/>
+O tipo de resultado inteiro sem sinal. Para encontrar os tipos possíveis, consulte [\<random>](../standard-library/random.md).
 
-*W*  
- **Tamanho da palavra**. Tamanho de cada palavra da sequência de estado, em bits. **Pré-condição**: `0 < W ≤ numeric_limits<UIntType>::digits`
+*W*<br/>
+**Tamanho da palavra**. Tamanho de cada palavra da sequência de estado, em bits. **Pré-condição**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S*  
- **Curto retardo**. Número de valores inteiros. **Pré-condição**: `0 < S < R`
+*S*<br/>
+**Curto retardo**. Número de valores inteiros. **Pré-condição**: `0 < S < R`
 
-*R*  
- **Longo retardo**. Determina a recorrência na série gerada.
+*R*<br/>
+**Longo retardo**. Determina a recorrência na série gerada.
 
 ## <a name="members"></a>Membros
 

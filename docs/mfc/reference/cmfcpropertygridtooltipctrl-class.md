@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: befbf65c8faa74e889d837a0b310eda4bc6fe576
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 227c7d43334419326670dae5fabad28d18ec58a0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43676774"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716157"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>Classe CMFCPropertyGridToolTipCtrl
 Implementa uma dica de ferramenta de controle que o [classe CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) usa para exibir dicas de ferramenta.  
@@ -106,8 +106,8 @@ BOOL Create(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWndParent*  
- Um ponteiro para a janela pai.  
+*pWndParent*<br/>
+[in] Um ponteiro para a janela pai.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a janela foi criada com êxito; Caso contrário, FALSE.  
@@ -130,8 +130,8 @@ void GetLastRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *rect*  
- Contém a última posição do controle de dica de ferramenta.  
+*Rect*<br/>
+[out] Contém a última posição do controle de dica de ferramenta.  
   
 ##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide  
  Oculta o controle de dica de ferramenta.  
@@ -148,8 +148,8 @@ void SetTextMargin(int nTextMargin);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nTextMargin*  
- Especifica o espaçamento entre o texto de dica de ferramenta de controle e a borda da janela de dica de ferramenta. O valor padrão é 10 pixels.  
+*nTextMargin*<br/>
+[in] Especifica o espaçamento entre o texto de dica de ferramenta de controle e a borda da janela de dica de ferramenta. O valor padrão é 10 pixels.  
   
 ##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track  
  Exibe o controle de dica de ferramenta.  
@@ -161,11 +161,11 @@ void Track(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *rect*  
- Especifica a posição e o tamanho do controle de dica de ferramenta.  
+*Rect*<br/>
+[in] Especifica a posição e o tamanho do controle de dica de ferramenta.  
   
- [in] *strText*  
- Especifica o texto a ser mostrado na dica de ferramenta.  
+*strText*<br/>
+[in] Especifica o texto a ser mostrado na dica de ferramenta.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método exibe o controle de dica de ferramenta na posição e tamanho especificado pelo *rect*. Se a posição, tamanho e texto não foram alterados desde a última vez em que esse método foi chamado, esse método não terá efeito.  

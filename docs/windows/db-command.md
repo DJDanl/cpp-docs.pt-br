@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0b34cbd2cebea2b1c4d6bf32e61a7f496b70d7a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 47fcbdb82501744c8155432e4f4cf220ed945dec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596262"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709898"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -99,26 +99,26 @@ TCHAR m_state[3] = 'CA';
 ]
 ```
 
-*nome* (opcional)  
-O nome do identificador que você usa para trabalhar com o conjunto de linhas. Se você especificar *nome*, **db_command** gera uma classe com especificado *nome*, que pode ser usado para percorrer o conjunto de linhas ou para executar várias consultas de ação. Se você não especificar *nome*, não será possível retornar mais de uma linha de resultados para o usuário.
+*name*  
+(Opcional) O nome do identificador que você usa para trabalhar com o conjunto de linhas. Se você especificar *nome*, **db_command** gera uma classe com especificado *nome*, que pode ser usado para percorrer o conjunto de linhas ou para executar várias consultas de ação. Se você não especificar *nome*, não será possível retornar mais de uma linha de resultados para o usuário.
 
-*source_name* (opcional)  
-O `CSession` variável ou instância de uma classe que tem o `db_source` atributo aplicado a ele no qual o comando é executado. Ver [db_source](../windows/db-source.md).
+*source_name*  
+(Opcional) O `CSession` variável ou instância de uma classe que tem o `db_source` atributo aplicado a ele no qual o comando é executado. Ver [db_source](../windows/db-source.md).
 
 **db_command** verificações para garantir que a variável usada para *source_name* for válido, portanto, a variável especificada deve estar no escopo global ou de função.
 
-*HRESULT* (opcional)  
-Identifica a variável que receberá o HRESULT desse comando de banco de dados. Se a variável não existir, ele será automaticamente injetado pelo atributo.
+*HRESULT*  
+(Opcional) Identifica a variável que receberá o HRESULT desse comando de banco de dados. Se a variável não existir, ele será automaticamente injetado pelo atributo.
 
-*associações* (opcional)  
-Permite que você separe os parâmetros de associação do comando OLE DB.
+*Associações*  
+(Opcional) Permite que você separe os parâmetros de associação do comando OLE DB.
 
 Se você especificar um valor para *ligações*, **db_command** analisa o valor associado e não analisará o \[ *bindtype*] parâmetro. Esse uso permite que você use a sintaxe do provedor OLE DB. Para desabilitar a análise, sem a associação de parâmetros, especifique `Bindings=""`.
 
 Se você não especificar um valor para *ligações*, **db_command** analisará o bloco de parâmetro de associação, procurando por '**(**', seguido por **\[** _bindtype_**]** entre colchetes, seguidos por um ou mais declarada anteriormente C++ variáveis-membro, seguido por '**)**'. Todo o texto entre os parênteses será removido do comando resultante, e esses parâmetros serão usados para construir as associações de parâmetro e coluna desse comando.
 
-*bulk_fetch* (opcional)  
-Um valor inteiro que especifica o número de linhas a serem buscadas.
+*bulk_fetch*  
+(Opcional) Um valor inteiro que especifica o número de linhas a serem buscadas.
 
 O valor padrão é 1, que especifica a busca de linha única (o conjunto de linhas será do tipo [CRowset](../data/oledb/crowset-class.md)).
 

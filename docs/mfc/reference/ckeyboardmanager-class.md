@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82447c14209f2f47fb6224df7e1daeb18ed6048e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3026e614b00f48b7668420aee20fd5915c270da2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212885"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707480"
 ---
 # <a name="ckeyboardmanager-class"></a>Classe CKeyboardManager
 Gerencia tabelas de chave de atalho para a janela do quadro principal e janelas filho.  
@@ -134,17 +134,17 @@ static BOOL FindDefaultAccelerator(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiCmd*  
- A ID de comando.  
+*uiCmd*<br/>
+[in] A ID de comando.  
   
- [out] *str*  
- Uma referência a um objeto `CString`.  
+*str*<br/>
+[out] Uma referência a um `CString` objeto.  
   
- [in] *pWndFrame*  
- Um ponteiro para uma janela do quadro.  
+*pWndFrame*<br/>
+[in] Um ponteiro para uma janela do quadro.  
   
- [in] *bIsDefaultFrame*  
- Especifica se a janela do quadro é a janela do quadro padrão.  
+*bIsDefaultFrame*<br/>
+[in] Especifica se a janela do quadro é a janela do quadro padrão.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o atalho for encontrado; Caso contrário, 0.  
@@ -168,10 +168,10 @@ static BOOL __stdcall IsKeyHandled(
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] *nKey*|A tecla a ser verificada.|  
-|[in] *fVirt*|Especifica o comportamento da tecla de atalho. Para obter uma lista de valores possíveis, consulte [estrutura de ACELERAÇÃO](/windows/desktop/api/winuser/ns-winuser-tagaccel).|  
-|[in] *pWndFrame*|Uma janela do quadro. Este método determina se uma tecla de atalho é tratada neste quadro.|  
-|[in] *bIsDefaultFrame*|Um parâmetro booliano que indica se *pWndFrame* é a janela de quadro do padrão.|  
+|*nKey*|[in] A chave para verificar.|  
+|*fVirt*|[in] Especifica o comportamento da tecla de atalho. Para obter uma lista de valores possíveis, consulte [estrutura de ACELERAÇÃO](/windows/desktop/api/winuser/ns-winuser-tagaccel).|  
+|*pWndFrame*|[in] Uma janela do quadro. Este método determina se uma tecla de atalho é tratada neste quadro.|  
+|*bIsDefaultFrame*|[in] Um parâmetro booliano que indica se *pWndFrame* é a janela de quadro do padrão.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a tecla de atalho é manipulada. FALSE se a chave não for tratada ou se *pWndFrame* é NULL.  
@@ -191,7 +191,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] *nChar*|O caractere que esse método verifica.|  
+|*nChar*|[in] O caractere que esse método verifica.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o caractere for imprimível, zero se não for.  
@@ -222,11 +222,11 @@ BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszProfileName*  
- O caminho do registro onde `CKeyboardManager` os dados são salvos.  
+*lpszProfileName*<br/>
+[in] O caminho do registro onde `CKeyboardManager` os dados são salvos.  
   
- [in] *pDefaultFrame*  
- Um ponteiro para uma janela do quadro a ser usado como a janela padrão.  
+*pDefaultFrame*<br/>
+[in] Um ponteiro para uma janela do quadro a ser usado como a janela padrão.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o estado foi carregado com êxito ou 0, caso contrário.  
@@ -256,11 +256,11 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszProfileName*  
- O caminho do registro para salvar o `CKeyboardManager` estado.  
+*lpszProfileName*<br/>
+[in] O caminho do registro para salvar o `CKeyboardManager` estado.  
   
- [in] *pDefaultFrame*  
- Um ponteiro para uma janela do quadro que se torna a janela padrão.  
+*pDefaultFrame*<br/>
+[in] Um ponteiro para uma janela do quadro que se torna a janela padrão.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o estado do Gerenciador de teclado foi salva com êxito, ou caso contrário, 0.  
@@ -280,11 +280,11 @@ static void ShowAllAccelerators(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bShowAll*  
- Se for TRUE, todas as teclas de atalho serão exibidas. Se for FALSE, apenas a primeira chave de atalho será exibida.  
+*bShowAll*<br/>
+[in] Se for TRUE, todas as teclas de atalho serão exibidas. Se for FALSE, apenas a primeira chave de atalho será exibida.  
   
- [in] *lpszDelimiter*  
- Uma cadeia de caracteres a ser inserido entre as teclas de atalho. Este delimitador não tem nenhum efeito se apenas uma tecla de atalho é exibida.  
+*lpszDelimiter*<br/>
+[in] Uma cadeia de caracteres a ser inserido entre as teclas de atalho. Este delimitador não tem nenhum efeito se apenas uma tecla de atalho é exibida.  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, se um comando tiver mais de uma tecla de atalho associada a ele, apenas a primeira chave de atalho será mostrada. Essa função permite que você lista as teclas de atalho associadas a todos os comandos.  
@@ -299,8 +299,8 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nChar*  
- O caractere a ser convertido.  
+*nChar*<br/>
+[in] O caractere a ser convertido.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O caractere que é o registro superior dos parâmetros de entrada.  
@@ -323,20 +323,20 @@ BOOL UpdateAccelTable(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pTemplate*  
- Um ponteiro para um modelo de documento.  
+*pTemplate*<br/>
+[in] Um ponteiro para um modelo de documento.  
   
- [in] *lpAccel*  
- Um ponteiro para a nova chave de atalho.  
+*lpAccel*<br/>
+[in] Um ponteiro para a nova chave de atalho.  
   
- [in] *nSize*  
- O tamanho da nova tabela de atalho.  
+*nSize*<br/>
+[in] O tamanho da nova tabela de atalho.  
   
- [in] *pDefaultFrame*  
- Um ponteiro para a janela do quadro padrão.  
+*pDefaultFrame*<br/>
+[in] Um ponteiro para a janela do quadro padrão.  
   
- [in] *hAccelNew*  
- Um identificador para a nova tabela de atalho.  
+*hAccelNew*<br/>
+[in] Um identificador para a nova tabela de atalho.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o método for bem-sucedido; Caso contrário, 0.  

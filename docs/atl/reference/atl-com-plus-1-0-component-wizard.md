@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77e6b2150b2c8273576b8aedb1ff77c23a80f23b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: dcf97c08680583dde686c68fb7e26f323e22716e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767397"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717894"
 ---
 # <a name="atl-com-10-component-wizard"></a>Assistente para ATL COM+ 1.0 do componente
 
@@ -38,49 +38,58 @@ A partir do Visual Studio 2008, o script de registro produzido por este assisten
 
 Especifique os nomes para o objeto, a interface e a classes a serem adicionadas ao seu projeto. Com exceção de **Short name**, todas as outras caixas que podem ser editadas independentemente dos outros. Se você alterar o texto para **Short name**, a alteração é refletida nos nomes de todas as outras caixas nesta página. Se você alterar o **Coclass** na seção de COM, a alteração é refletido na **tipo** e **ProgID** caixas, mas o **Interface** nome não é alterado. Esse comportamento de nomenclatura é projetado para tornar todos os nomes de fácil identificação para você à medida que desenvolve seu controle.
 
-**Nome curto**  
-Define o nome abreviado do objeto. O nome que você forneceu determina o `Class` e `Coclass` nomes, o **arquivo. cpp** e **arquivo. h** nomes, o **Interface** nome, a **Tipo de** nomes e o **ProgID**, a menos que você altere esses campos individualmente.
+- **Nome curto**
 
-**Arquivo .h**  
-Define o nome do arquivo de cabeçalho para a nova classe do objeto. Por padrão, esse nome é baseado no nome que você fornecer em **Short name**. Clique no botão de reticências para salvar o nome de arquivo no local de sua escolha, ou para acrescentar a declaração de classe a um arquivo existente. Se você escolher um arquivo existente, o assistente não o salvará no local selecionado até que você clique em **Concluir** no assistente.
+   Define o nome abreviado do objeto. O nome que você forneceu determina o `Class` e `Coclass` nomes, o **arquivo. cpp** e **arquivo. h** nomes, o **Interface** nome, a **Tipo de** nomes e o **ProgID**, a menos que você altere esses campos individualmente.
 
-O assistente não substitui um arquivo. Se você selecionar o nome de um arquivo existente, quando clicar em **Concluir**, o assistente solicitará que você indique se a declaração de classe deve ser acrescentada ao conteúdo do arquivo. Clique em **Sim** para acrescentar o arquivo; clique em **Não** para retornar ao assistente e especificar outro nome de arquivo.
+- **Arquivo .h**
 
-**Class**  
-Define o nome da classe a ser criado. Esse nome se baseia o nome fornecido no **Short name**, precedidos pela 'c', o prefixo típico para um nome de classe.
+   Define o nome do arquivo de cabeçalho para a nova classe do objeto. Por padrão, esse nome é baseado no nome que você fornecer em **Short name**. Clique no botão de reticências para salvar o nome de arquivo no local de sua escolha, ou para acrescentar a declaração de classe a um arquivo existente. Se você escolher um arquivo existente, o assistente não o salvará no local selecionado até que você clique em **Concluir** no assistente.
 
-**Arquivo .cpp**  
-Define o nome do arquivo de implementação para a nova classe do objeto. Por padrão, esse nome se baseia o nome fornecido no **Short name**. Clique no botão de reticências para salvar o nome de arquivo no local de sua escolha. O arquivo não é salvo no local selecionado até que você clique em **Concluir** no assistente.
+   O assistente não substitui um arquivo. Se você selecionar o nome de um arquivo existente, quando clicar em **Concluir**, o assistente solicitará que você indique se a declaração de classe deve ser acrescentada ao conteúdo do arquivo. Clique em **Sim** para acrescentar o arquivo; clique em **Não** para retornar ao assistente e especificar outro nome de arquivo.
 
-O assistente não substitui um arquivo. Se você selecionar o nome de um arquivo existente, quando clicar em **Concluir**, o assistente solicitará que você indique se a implementação de classe deve ser acrescentada ao conteúdo do arquivo. Clique em **Sim** para acrescentar o arquivo; clique em **Não** para retornar ao assistente e especificar outro nome de arquivo.
+- **Class**
 
-**Atribuído**  
-Indica se o objeto usa atributos. Se você estiver adicionando um objeto para um projeto ATL atribuído, essa opção é selecionada e não está disponível para alterar. Ou seja, você pode adicionar apenas os objetos atribuídos a um projeto criado com o suporte do atributo.
+   Define o nome da classe a ser criado. Esse nome se baseia o nome fornecido no **Short name**, precedidos pela 'c', o prefixo típico para um nome de classe.
 
-Se você selecionar essa opção para um projeto ATL que não tem atributo dão suporte, o assistente solicita que você especifique se deseja adicionar suporte de atributo para o projeto.
+- **Arquivo .cpp**
 
-Quaisquer objetos que você adicionar essa opção a seguir são designados como atribuído por padrão (a caixa de seleção está marcada). Você pode desmarcar essa caixa para adicionar um objeto que não usa atributos.
+   Define o nome do arquivo de implementação para a nova classe do objeto. Por padrão, esse nome se baseia o nome fornecido no **Short name**. Clique no botão de reticências para salvar o nome de arquivo no local de sua escolha. O arquivo não é salvo no local selecionado até que você clique em **Concluir** no assistente.
 
-Ver [configurações de aplicativo, o ATL Project Wizard](../../atl/reference/application-settings-atl-project-wizard.md) e [mecânica básica de atributos](../../windows/basic-mechanics-of-attributes.md) para obter mais informações.
+   O assistente não substitui um arquivo. Se você selecionar o nome de um arquivo existente, quando clicar em **Concluir**, o assistente solicitará que você indique se a implementação de classe deve ser acrescentada ao conteúdo do arquivo. Clique em **Sim** para acrescentar o arquivo; clique em **Não** para retornar ao assistente e especificar outro nome de arquivo.
+
+- **Atribuído**
+
+   Indica se o objeto usa atributos. Se você estiver adicionando um objeto para um projeto ATL atribuído, essa opção é selecionada e não está disponível para alterar. Ou seja, você pode adicionar apenas os objetos atribuídos a um projeto criado com o suporte do atributo.
+
+   Se você selecionar essa opção para um projeto ATL que não tem atributo dão suporte, o assistente solicita que você especifique se deseja adicionar suporte de atributo para o projeto.
+
+   Quaisquer objetos que você adicionar essa opção a seguir são designados como atribuído por padrão (a caixa de seleção está marcada). Você pode desmarcar essa caixa para adicionar um objeto que não usa atributos.
+
+   Ver [configurações de aplicativo, o ATL Project Wizard](../../atl/reference/application-settings-atl-project-wizard.md) e [mecânica básica de atributos](../../windows/basic-mechanics-of-attributes.md) para obter mais informações.
 
 ### <a name="com"></a>COM
 
 Fornece informações sobre a funcionalidade de COM para o objeto.
 
-**Coclass**  
-Define o nome da classe de componente que contém uma lista de interfaces com suporte do objeto.
+- **Coclass**
+
+   Define o nome da classe de componente que contém uma lista de interfaces com suporte do objeto.
 
 > [!NOTE]
 >  Se você criar seu projeto usando atributos, ou se você indicar nesta página do assistente que o componente COM+ 1.0 usa atributos, você não pode alterar essa opção porque ATL não inclui o `coclass` atributo.
 
-**Tipo**  
-Define a descrição do objeto que será exibido no registro
+- **Tipo**
 
-**Interface**  
-Define a interface que você cria para seu objeto. Essa interface contém seus métodos personalizados.
+   Define a descrição do objeto que será exibido no registro
 
-**ProgID**  
-Define o nome que contêineres podem usar em vez do CLSID do objeto.
+- **Interface**
+
+   Define a interface que você cria para seu objeto. Essa interface contém seus métodos personalizados.
+
+- **ProgID**
+
+   Define o nome que contêineres podem usar em vez do CLSID do objeto.
 
 ## <a name="see-also"></a>Consulte também
 

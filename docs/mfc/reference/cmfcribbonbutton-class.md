@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff14a4d8e013adc401b13daa68ffcb9a739706d8
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2649e7e4cbaa1ba7fe6f2fcc18a5c5e933fc1032
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540540"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712941"
 ---
 # <a name="cmfcribbonbutton-class"></a>Classe CMFCRibbonButton
 O `CMFCRibbonButton` classe implementa botões que você pode posicionar em elementos de barra de faixa de opções, como painéis, barras de ferramentas de acesso rápido e menus pop-up.  
@@ -261,11 +261,11 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pSubItem*  
- Especifica um ponteiro para o novo elemento a ser adicionado.  
+*pSubItem*<br/>
+[in] Especifica um ponteiro para o novo elemento a ser adicionado.  
   
- [in] *nIndex*  
- Especifica o índice no qual adicionar o elemento para a matriz de itens de menu do botão; -1 para adicionar o elemento no final da matriz de itens de menu.  
+*nIndex*<br/>
+[in] Especifica o índice no qual adicionar o elemento para a matriz de itens de menu do botão; -1 para adicionar o elemento no final da matriz de itens de menu.  
   
 ##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched  
 
@@ -318,20 +318,20 @@ CMFCRibbonButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nID*  
- Especifica a ID de comando do botão.  
+*nID*<br/>
+[in] Especifica a ID de comando do botão.  
   
- [in] *lpszText*  
- Especifica o rótulo de texto do botão.  
+*lpszText*<br/>
+[in] Especifica o rótulo de texto do botão.  
   
- [in] *nSmallImageIndex*  
- Especifica um índice baseado em zero da imagem em miniatura do botão na lista de imagens da categoria pai.  
+*nSmallImageIndex*<br/>
+[in] Especifica um índice baseado em zero da imagem em miniatura do botão na lista de imagens da categoria pai.  
   
- [in] *nLargeImageIndex*  
- Especifica um índice baseado em zero da imagem grande do botão na lista de imagens da categoria pai.  
+*nLargeImageIndex*<br/>
+[in] Especifica um índice baseado em zero da imagem grande do botão na lista de imagens da categoria pai.  
   
- [in] *hIcon*  
- Especifica um identificador para o ícone que o aplicativo usa como a imagem do botão.  
+*hIcon*<br/>
+[in] Especifica um identificador para o ícone que o aplicativo usa como a imagem do botão.  
   
 ### <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra como construir um `CMFCRibbonButton` objeto.  
@@ -348,8 +348,8 @@ CSize DrawBottomText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- [in] *bCalcOnly*  
+*pDC*<br/>
+[in] [in] *bCalcOnly*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -366,8 +366,8 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- [in] *tipo*  
+*pDC*<br/>
+[in] [in] *tipo*  
  [in] *rectImage*  
   
 ### <a name="remarks"></a>Comentários  
@@ -385,10 +385,10 @@ virtual int DrawRibbonText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- [in] *strText*  
- [in] *rectText*  
- [in] *uiDTFlags*  
+*pDC*<br/>
+[in] [in] *strText*  
+*rectText*<br/>
+[in] [in] *uiDTFlags*  
  [in] *clrText*  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -403,8 +403,8 @@ int FindSubItemIndexByID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiID*  
- Especifica a ID de comando do item de menu pop-up.  
+*uiID*<br/>
+[in] Especifica a ID de comando do item de menu pop-up.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O índice baseado em zero do subitem que está associado com o *uiID*. -1 se não houver nenhum desses itens de subpastas.  
@@ -456,8 +456,8 @@ int GetImageIndex(BOOL bLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bLargeImage*  
- Se for TRUE, retorna o índice de imagem na lista de imagens que contém as imagens grandes; Caso contrário, retorna o índice de imagem na lista de imagens que contém as imagens pequenas.  
+*bLargeImage*<br/>
+[in] Se for TRUE, retorna o índice de imagem na lista de imagens que contém as imagens grandes; Caso contrário, retorna o índice de imagem na lista de imagens que contém as imagens pequenas.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O índice da imagem do botão na lista de imagens associado.  
@@ -763,8 +763,8 @@ virtual void OnClick(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *ponto*  
- Especifica a posição do mouse, clique em.  
+*ponto*<br/>
+[in] Especifica a posição do mouse, clique em.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua este método em uma classe derivada se você quiser manipular esse evento.  
@@ -822,8 +822,8 @@ BOOL RemoveSubItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nIndex*  
- Especifica o índice baseado em zero do item de menu que você deseja remover.  
+*nIndex*<br/>
+[in] Especifica o índice baseado em zero do item de menu que você deseja remover.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o item especificado foi removido com êxito; Caso contrário, FALSO se *nIndex* for negativo ou exceder o número de itens de menu no menu pop-up.  
@@ -857,8 +857,8 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bSet*  
- Se for TRUE, o botão exibe uma imagem grande. Caso contrário, o botão exibe uma imagem pequena.  
+*bSet*<br/>
+[in] Se for TRUE, o botão exibe uma imagem grande. Caso contrário, o botão exibe uma imagem pequena.  
   
 ##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
  Permite que o comando padrão para o botão da faixa de opções.  
@@ -868,8 +868,8 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bSet*  
- Se for TRUE, o botão pode executar o comando padrão. Se for FALSE, o botão não é possível executar o comando padrão.  
+*bSet*<br/>
+[in] Se for TRUE, o botão pode executar o comando padrão. Se for FALSE, o botão não é possível executar o comando padrão.  
   
 ### <a name="remarks"></a>Comentários  
  *bSet* é relevante apenas quando o botão tem um menu. Se *bSet* for TRUE, o botão pode executar o comando padrão e o menu pop-up atribuído aparece somente quando um usuário clica na seta na borda direita do botão. Caso contrário, o botão não é possível executar o comando padrão e o menu pop-up será exibida, independentemente de qual área do botão o usuário clica.  
@@ -896,11 +896,11 @@ void SetImageIndex(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nIndex*  
- Especifica o índice de imagem.  
+*nIndex*<br/>
+[in] Especifica o índice de imagem.  
   
- [in] *bLargeImage*  
- Se for TRUE, o índice especificado se refere à lista de imagens grandes. Caso contrário, o índice refere-se à lista de imagens pequenas.  
+*bLargeImage*<br/>
+[in] Se for TRUE, o índice especificado se refere à lista de imagens grandes. Caso contrário, o índice refere-se à lista de imagens pequenas.  
   
 ##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
  Atribui um menu pop-up para o botão da faixa de opções.  
@@ -953,8 +953,8 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bSet*  
- Se for TRUE, o menu é alinhado à direita. Caso contrário, o menu é alinhado à esquerda  
+*bSet*<br/>
+[in] Se for TRUE, o menu é alinhado à direita. Caso contrário, o menu é alinhado à esquerda  
   
 ##  <a name="settext"></a>  CMFCRibbonButton::SetText  
 

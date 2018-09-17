@@ -94,12 +94,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d19ede21d90353f9741a5a1250eddf049de71aa6
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 6e4b62bdf31a88c0b8ea11198949de474b2a4eb2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539357"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701539"
 ---
 # <a name="cpanedivider-class"></a>Classe CPaneDivider
 Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
@@ -247,10 +247,10 @@ virtual BOOL AddPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *barContainerManager*  
- [in] *bOuterEdge*  
- [in] *pTargetBar*  
- [in] *dwAlignment*  
+*barContainerManager*<br/>
+[in] [in] *bOuterEdge*  
+*pTargetBar*<br/>
+[in] [in] *dwAlignment*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -283,10 +283,10 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWndToDock*  
- [in] *ptMouse*  
- [in] *rectResult*  
- [in] *bDrawTab*  
+*pWndToDock*<br/>
+[in] [in] *ptMouse*  
+*rectResult*<br/>
+[in] [in] *bDrawTab*  
  [in] *ppTargetBar*  
   
 ### <a name="remarks"></a>Comentários  
@@ -301,8 +301,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -332,8 +332,8 @@ CPaneDivider(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bDefaultSlider*  
- [in] *pParent*  
+*bDefaultSlider*<br/>
+[in] [in] *pParent*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -353,12 +353,12 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *dwStyleEx*  
- [in] *dwStyle*  
- [in] *rect*  
- [in] *pParentWnd*  
- [in] *nID*  
- [in] *pContext*  
+*dwStyleEx*<br/>
+[in] [in] *dwStyle*  
+*Rect*<br/>
+[in] [in] *pParentWnd*  
+*nID*<br/>
+[in] [in] *pContext*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -396,8 +396,8 @@ CPaneContainer* FindPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pBar*  
- [in] *bLeftBar*  
+*pBar*<br/>
+[in] [in] *bLeftBar*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -447,8 +447,8 @@ void GetPaneDividers(CObList& lstSliders);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *lstSliders*  
- Contém a lista de divisores de painel que residem no contêiner do painel.  
+*lstSliders*<br/>
+[out] Contém a lista de divisores de painel que residem no contêiner do painel.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método deve ser chamado para apenas divisores de painel padrão. Um divisor do painel padrão é um divisor que redimensiona o contêiner de todo o painel.  
@@ -472,8 +472,8 @@ void GetPanes(CObList& lstBars);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *lstBars*  
- Contém a lista de painéis que residem no contêiner do painel.  
+*lstBars*<br/>
+[out] Contém a lista de painéis que residem no contêiner do painel.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método deve ser chamado para apenas divisores de painel padrão. Um divisor do painel padrão é um divisor que redimensiona o contêiner de todo o painel.  
@@ -510,8 +510,8 @@ void Init(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bDefaultSlider*  
- [in] *pParent*  
+*bDefaultSlider*<br/>
+[in] [in] *pParent*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -527,10 +527,10 @@ virtual BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pBarToInsert*  
- [in] *pTargetBar*  
- [in] *dwAlignment*  
- [in] *lpRect*  
+*pBarToInsert*<br/>
+[in] [in] *pTargetBar*  
+*dwAlignment*<br/>
+[in] [in] *lpRect*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -586,8 +586,8 @@ virtual void Move(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *ptOffset*  
- [in] *bAdjustLayout*  
+*ptOffset*<br/>
+[in] [in] *bAdjustLayout*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -632,8 +632,8 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pBar*  
- [in] *bMostrar*  
+*pBar*<br/>
+[in] [in] *bMostrar*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -668,8 +668,8 @@ virtual BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pBarToReplace*  
- [in] *pBarToReplaceWith*  
+*pBarToReplace*<br/>
+[in] [in] *pBarToReplaceWith*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -685,8 +685,8 @@ virtual void RepositionPanes(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *rectNew*  
- [in] *hdwp*  
+*rectNew*<br/>
+[in] [in] *hdwp*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -736,8 +736,8 @@ void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDockingBar*  
- [in] *pTabbedBar*  
+*pDockingBar*<br/>
+[in] [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Comentários  
   

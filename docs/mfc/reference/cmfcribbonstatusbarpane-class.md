@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55ef22eec84b4d7e5e4ea27abe611cf2d18f2a1b
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 889a6f083cb4aace6e93d221a33caef29155d7f1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540539"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725004"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Classe CMFCRibbonStatusBarPane
 O `CMFCRibbonStatusBarPane` classe implementa um elemento de faixa de opções que você pode adicionar a uma barra de status da faixa de opções.  
@@ -136,32 +136,32 @@ CMFCRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nCmdID*  
- Especifica a ID de comando do painel.  
+*nCmdID*<br/>
+[in] Especifica a ID de comando do painel.  
   
- [in] *lpszText*  
- Especifica a cadeia de caracteres de texto a ser exibido no painel.  
+*lpszText*<br/>
+[in] Especifica a cadeia de caracteres de texto a ser exibido no painel.  
   
- [in] *bIsStatic*  
- Se for TRUE, o painel de status não pode ser realçado ou selecionado clicando nele.  
+*bIsStatic*<br/>
+[in] Se for TRUE, o painel de status não pode ser realçado ou selecionado clicando nele.  
   
- [in] *hIcon*  
- Especifica um identificador para um ícone a ser exibido no painel.  
+*hIcon*<br/>
+[in] Especifica um identificador para um ícone a ser exibido no painel.  
   
- [in] *lpszAlmostLargeText*  
- Especifica a cadeia de caracteres de texto mais longa que pode ser exibida pelo painel.  
+*lpszAlmostLargeText*<br/>
+[in] Especifica a cadeia de caracteres de texto mais longa que pode ser exibida pelo painel.  
   
- [in] *hBmpAnimationList*  
- Especifica um identificador para uma lista de imagens que é usado para animação.  
+*hBmpAnimationList*<br/>
+[in] Especifica um identificador para uma lista de imagens que é usado para animação.  
   
- [in] *cxAnimation*  
- Especifica a largura, em pixels, do ícone na lista de imagens que é usado para animação.  
+*cxAnimation*<br/>
+[in] Especifica a largura, em pixels, do ícone na lista de imagens que é usado para animação.  
   
- [in] *clrTrnsp*  
- Especifica a cor transparente da imagens na lista de imagens que são usados para animação.  
+*clrTrnsp*<br/>
+[in] Especifica a cor transparente da imagens na lista de imagens que são usados para animação.  
   
- [in] *uiAnimationListResID*  
- Especifica uma ID de recurso de uma lista de imagens que é usada para animação.  
+*uiAnimationListResID*<br/>
+[in] Especifica uma ID de recurso de uma lista de imagens que é usada para animação.  
   
 ##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
  Obtém a cadeia de caracteres de texto mais longa que o painel da barra de status pode exibir.  
@@ -253,8 +253,8 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszAlmostLargeText*  
- Especifica a cadeia de caracteres mais longa que pode ser exibida no painel de barra de status sem truncamento.  
+*lpszAlmostLargeText*<br/>
+[in] Especifica a cadeia de caracteres mais longa que pode ser exibida no painel de barra de status sem truncamento.  
   
 ### <a name="remarks"></a>Comentários  
  A biblioteca calcula o tamanho do texto que *lpszAlmostLargeText* Especifica e redimensiona o painel de acordo. O texto será truncado se ele ainda não se ajustar no painel.  
@@ -275,17 +275,17 @@ BOOL SetAnimationList(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *hBmpAnimationList*  
- Especifica um identificador para uma lista de imagens.  
+*hBmpAnimationList*<br/>
+[in] Especifica um identificador para uma lista de imagens.  
   
- [in] *cxAnimation*  
- Especifica a largura, em pixels, do quadro na lista de imagens.  
+*cxAnimation*<br/>
+[in] Especifica a largura, em pixels, do quadro na lista de imagens.  
   
- [in] *clrTransp*  
- Especifica a cor transparente da lista de imagens.  
+*clrTransp*<br/>
+[in] Especifica a cor transparente da lista de imagens.  
   
- [in] *uiAnimationListResID*  
- Especifica a ID do recurso da lista de imagens.  
+*uiAnimationListResID*<br/>
+[in] Especifica a ID do recurso da lista de imagens.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a lista de imagens é anexada com êxito para o painel da barra de status; FALSE caso contrário.  
@@ -298,8 +298,8 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nAlign*  
- Especifica o alinhamento do texto.  
+*nAlign*<br/>
+[in] Especifica o alinhamento do texto.  
   
 ### <a name="remarks"></a>Comentários  
  *nAlign* pode ter um dos seguintes valores:  
@@ -320,11 +320,11 @@ void StartAnimation(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nFrameDelay*  
- Especifica a taxa de quadros de animação, em milissegundos.  
+*nFrameDelay*<br/>
+[in] Especifica a taxa de quadros de animação, em milissegundos.  
   
- [in] *nDuration*  
- Especifica quanto para reproduzir a animação, em milissegundos. Use -1 para um loop infinito.  
+*nDuration*<br/>
+[in] Especifica quanto para reproduzir a animação, em milissegundos. Use -1 para um loop infinito.  
   
 ### <a name="remarks"></a>Comentários  
  Você deve especificar um identificador para uma lista de imagens antes de chamar `StartAnimation` usando `SetAnimationList`.  

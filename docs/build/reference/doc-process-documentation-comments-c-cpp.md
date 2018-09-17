@@ -21,14 +21,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee09b3fe61c86015d8dc7464ef9925419fc745d9
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 488ee353cf245303b5ea73be139a262aea5be49d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100321"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706570"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (Processar comentários de documentação) (C/C++)
+
 Faz com que o compilador processar comentários de documentação em arquivos de código-fonte e criar um arquivo. XDC para cada arquivo de código de origem que tenha comentários de documentação.
 
 ## <a name="syntax"></a>Sintaxe
@@ -50,7 +51,7 @@ Para usar o arquivo. XML gerado com o IntelliSense, verifique o nome do arquivo 
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **C/C++** > **arquivos de saída** página de propriedades.
 
@@ -62,5 +63,5 @@ Para usar o arquivo. XML gerado com o IntelliSense, verifique o nome do arquivo 
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do compilador](../../build/reference/compiler-options.md)   
+[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
 [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: f0b995c4a966481e02ebd96748b247fd8844f19f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: c9280de6a2fde3ce2758b5884437704a2cdd879f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966401"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712758"
 ---
 # <a name="lttuplegt-functions"></a>Funções &lt;tuple&gt;
 
@@ -64,17 +64,17 @@ template <class T, class... Types>
 
 ### <a name="parameters"></a>Parâmetros
 
-*Índice*  
- O índice do elemento a ser obtido.
+*Índice*<br/>
+O índice do elemento a ser obtido.
 
-*Tipos*  
- A sequência de tipos declarados na tupla, em ordem de declaração.
+*Tipos*<br/>
+A sequência de tipos declarados na tupla, em ordem de declaração.
 
-*T*  
- O tipo do elemento a ser obtido.
+*T*<br/>
+O tipo do elemento a ser obtido.
 
-*Tuple*  
- Um std::tuple que contém qualquer número de elementos.
+*Tuple*<br/>
+Um std::tuple que contém qualquer número de elementos.
 
 ### <a name="remarks"></a>Comentários
 
@@ -122,11 +122,11 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>Parâmetros
 
-*TN*  
- O tipo do enésimo parâmetro de função.
+*TN*<br/>
+O tipo do enésimo parâmetro de função.
 
-*TN*  
- O valor do enésimo parâmetro de função.
+*TN*<br/>
+O valor do enésimo parâmetro de função.
 
 ### <a name="remarks"></a>Comentários
 
@@ -180,8 +180,8 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>Parâmetros
 
-*TN*  
- O tipo de base do enésimo elemento de tupla.
+*TN*<br/>
+O tipo de base do enésimo elemento de tupla.
 
 ### <a name="remarks"></a>Comentários
 

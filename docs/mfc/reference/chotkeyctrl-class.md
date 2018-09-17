@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47acba5c5bb6164dc7a9ac73fa8f777c99226466
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 592deab171a8085e2260a27ae642b3cd5c4af810
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681619"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722235"
 ---
 # <a name="chotkeyctrl-class"></a>Classe CHotKeyCtrl
 Fornece a funcionalidade do controle de tecla hot comuns de Windows.  
@@ -176,11 +176,11 @@ void GetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *wVirtualKeyCode*  
- Código de tecla virtual do atalho de teclado. Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser. h.  
+*wVirtualKeyCode*<br/>
+[out] Código de tecla virtual do atalho de teclado. Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser. h.  
   
- [out] *wModifiers*  
- Uma combinação bit a bit (OR) de sinalizadores que indicam as teclas modificadoras no atalho do teclado.  
+*wModifiers*<br/>
+[out] Uma combinação bit a bit (OR) de sinalizadores que indicam as teclas modificadoras no atalho do teclado.  
   
  Os sinalizadores de modificador são da seguinte maneira:  
   
@@ -245,11 +245,11 @@ void SetHotKey(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *wVirtualKeyCode*  
- Código de tecla virtual do atalho de teclado. Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser. h.  
+*wVirtualKeyCode*<br/>
+[in] Código de tecla virtual do atalho de teclado. Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser. h.  
   
- [in] *wModifiers*  
- Uma combinação bit a bit (OR) de sinalizadores que indicam as teclas modificadoras no atalho do teclado.  
+*wModifiers*<br/>
+[in] Uma combinação bit a bit (OR) de sinalizadores que indicam as teclas modificadoras no atalho do teclado.  
   
  Os sinalizadores de modificador são da seguinte maneira:  
   

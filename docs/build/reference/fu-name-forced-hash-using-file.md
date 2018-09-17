@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acf4afebc7288a953a0f8785e1f18097c21d71e3
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 73edbed02a665d7e66478052c0fee13a227658aa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107364"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720520"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (nome forçado #usando arquivo)
 
@@ -62,6 +62,6 @@ Para obter informações sobre como criar um assembly ou módulo para o common l
 
 ## <a name="see-also"></a>Consulte também
 
-[Arquivo de saída (/ F) opções](../../build/reference/output-file-f-options.md)   
-[Opções do compilador](../../build/reference/compiler-options.md)   
+[Arquivo de saída (/ F) opções](../../build/reference/output-file-f-options.md)
+[opções do compilador](../../build/reference/compiler-options.md)<br/>
 [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

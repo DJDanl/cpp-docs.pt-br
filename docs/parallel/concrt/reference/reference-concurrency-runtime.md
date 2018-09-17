@@ -463,21 +463,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3caa4ed0cb4a14cea913d141a88d9f2dd079f9bb
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d06bac8aef674472b817817fde4191f1d655365e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693446"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723223"
 ---
 # <a name="reference-concurrency-runtime"></a>Referência (Tempo de Execução de Simultaneidade)
 Esta seção contém informações de referência para o tempo de execução de simultaneidade.
-**Observação** padrão de linguagem do C++ a reserva-se o uso de identificadores que começam com um caractere de sublinhado (_) para implantações, como bibliotecas. Não use esses nomes em seu código. O comportamento de elementos de código cujos nomes seguem essa convenção não é garantido e está sujeito a alteração em versões futuras. Por esses motivos, esses elementos de código são omitidos da documentação do tempo de execução de simultaneidade.
+
+> [!Note]
+> O padrão da linguagem C++ reserva o uso de identificadores que começam com um caractere de sublinhado (_) para implementações, como bibliotecas. Não use esses nomes em seu código. O comportamento de elementos de código cujos nomes seguem essa convenção não é garantido e está sujeito a alteração em versões futuras. Por esses motivos, esses elementos de código são omitidos da documentação do tempo de execução de simultaneidade.
 
 ## <a name="in-this-section"></a>Nesta seção
-[simultaneidade Namespace](concurrency-namespace.md) simultaneidade namespace fornece classes e funções que oferecem acessem no tempo de execução de simultaneidade, uma estrutura de programação simultânea para C++. Para obter mais informações, consulte [Tempo de Execução de Simultaneidade](../concurrency-runtime.md).
+
+[Namespace de simultaneidade](concurrency-namespace.md) o namespace de simultaneidade fornece classes e funções que permitem que você acessam no tempo de execução de simultaneidade, uma estrutura de programação simultânea para C++. Para obter mais informações, consulte [Tempo de Execução de Simultaneidade](../concurrency-runtime.md).
 
 [namespace STD](std-namespace.md)
+
 [namespace stdx](stdx-namespace.md)
-
-

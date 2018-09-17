@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee20d07ff37024506ef925fd94363bf85ceb8bc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 49e25fa8a730ea31caf747d07ce30a0622c4bd01
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756880"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714682"
 ---
 # <a name="application-settings-atl-project-wizard"></a>Configurações do aplicativo, ATL Project Wizard
 
@@ -31,32 +31,40 @@ Use o **configurações do aplicativo** página do Assistente de projeto da ATL 
 
 Escolha um dos três tipos de servidor:
 
-**Biblioteca de vínculo dinâmico (DLL)**  
-Selecione para criar um servidor em processo.
+- **Biblioteca de vínculo dinâmico (DLL)**  
 
-**Executável (EXE)**  
-Selecione para criar um servidor local do out-of-process. Essa opção não permite o suporte para MFC ou COM+ 1.0. Ele não permite a mesclagem de código de proxy/stub.
+   Selecione para criar um servidor em processo.
 
-**Serviço (EXE)**  
-Selecione para criar um aplicativo do Windows que é executado em segundo plano quando o Windows é iniciado. Essa opção não permite o suporte para MFC ou COM+ 1.0 ou não permite a mesclagem de código de proxy/stub.
+- **Executável (EXE)**  
+
+   Selecione para criar um servidor local do out-of-process. Essa opção não permite o suporte para MFC ou COM+ 1.0. Ele não permite a mesclagem de código de proxy/stub.
+
+- **Serviço (EXE)**  
+
+   Selecione para criar um aplicativo do Windows que é executado em segundo plano quando o Windows é iniciado. Essa opção não permite o suporte para MFC ou COM+ 1.0 ou não permite a mesclagem de código de proxy/stub.
 
 ## <a name="additional-options"></a>Opções adicionais
 
 > [!NOTE]
->  Todas as opções adicionais estão disponíveis para apenas os projetos DLL.
+> Todas as opções adicionais estão disponíveis para apenas os projetos DLL.
 
-**Permitir mesclagem do código de proxy/stub**  
-Selecione o **Permitir mesclagem do código de proxy/stub** caixa de seleção como uma conveniência ao marshaling de interfaces é necessária. Essa opção coloca o código de proxy e stub gerado pelo MIDL no mesmo executável como o servidor.
+- **Permitir mesclagem do código de proxy/stub**  
 
-**Suporte MFC**  
-Selecione esta opção para especificar que seu objeto inclui suporte do MFC. Esta opção vincula seu projeto para as bibliotecas MFC para que você possa acessar qualquer uma das classes e funções que eles contêm.
+   Selecione o **Permitir mesclagem do código de proxy/stub** caixa de seleção como uma conveniência ao marshaling de interfaces é necessária. Essa opção coloca o código de proxy e stub gerado pelo MIDL no mesmo executável como o servidor.
 
-**Suporte a COM+ 1.0**  
-Selecione esta opção para modificar as configurações de build do projeto para dar suporte a componentes COM+ 1.0. Além da lista padrão de bibliotecas, o assistente adiciona o comsvcs.lib de biblioteca específico do componente COM+ 1.0
+- **Suporte MFC**  
 
-Além disso, o mtxex.dll é atrasar carregada no sistema host, quando seu aplicativo é iniciado.
+   Selecione esta opção para especificar que seu objeto inclui suporte do MFC. Esta opção vincula seu projeto para as bibliotecas MFC para que você possa acessar qualquer uma das classes e funções que eles contêm.
 
-- **Registrador de componentes de suporte** se seu projeto ATL contém suporte para componentes COM+ 1.0, você pode definir essa opção. O registrador de componentes permite que seu objeto COM+ 1.0 obter uma lista de componentes, componentes de registrar ou cancelar o registro de componentes (individualmente ou ao mesmo tempo).
+- **Suporte a COM+ 1.0**  
+
+   Selecione esta opção para modificar as configurações de build do projeto para dar suporte a componentes COM+ 1.0. Além da lista padrão de bibliotecas, o assistente adiciona o comsvcs.lib de biblioteca específico do componente COM+ 1.0
+
+   Além disso, o mtxex.dll é atrasar carregada no sistema host, quando seu aplicativo é iniciado.
+
+- **Registrador de componentes de suporte**
+
+   Se seu projeto ATL contém suporte para componentes COM+ 1.0, você pode definir essa opção. O registrador de componentes permite que seu objeto COM+ 1.0 obter uma lista de componentes, componentes de registrar ou cancelar o registro de componentes (individualmente ou ao mesmo tempo).
 
 ## <a name="see-also"></a>Consulte também
 

@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 522a2fc1f2092c90a9938efee8cf594e2813c5ad
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0b88c9a57b359c6cef7dc8587a4695b5590e69d5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538978"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721871"
 ---
 # <a name="interlockedxor-intrinsic-functions"></a>Funções intrínsecas _InterlockedXor
 **Seção específica da Microsoft**  
@@ -158,11 +158,11 @@ __int64 _InterlockedXor64_rel(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [in, out] `Value`  
- Um ponteiro para o primeiro operando a ser substituído pelo resultado.  
+*Value*<br/>
+[no, out] Um ponteiro para o primeiro operando, a ser substituído pelo resultado.  
   
- [in] `Mask`  
- O segundo operando.  
+*Máscara*<br/>
+[in] O segundo operando.  
   
 ## <a name="return-value"></a>Valor de retorno  
  O valor original do primeiro operando.  

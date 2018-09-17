@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a12e5abcc02017acbd06c841cc9ab62a9d25bdf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 810b59bb85d374b1cf65985a64be32c645e6f3b5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757095"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718063"
 ---
 # <a name="cspinbuttonctrl-class"></a>Classe CSpinButtonCtrl
 Fornece a funcionalidade do controle de botão de rotação comum do Windows.  
@@ -352,9 +352,10 @@ void SetRange32(
     int nUpper);
 ```  
   
-### <a name="parameters"></a>Parâmetros  
- *nLower* e *nUpper*  
- Limites superiores e inferiores para o controle. Para `SetRange`, nenhum limite pode ser maior que UD_MAXVAL ou menor que UD_MINVAL; Além disso, a diferença entre os dois limites não pode exceder UD_MAXVAL. `SetRange32` não coloca nenhuma restrição sobre os limites; Use números inteiros.  
+### <a name="parameters"></a>Parâmetros
+
+*nLower* e *nUpper*<br/>
+Limites superiores e inferiores para o controle. Para `SetRange`, nenhum limite pode ser maior que UD_MAXVAL ou menor que UD_MINVAL; Além disso, a diferença entre os dois limites não pode exceder UD_MAXVAL. `SetRange32` não coloca nenhuma restrição sobre os limites; Use números inteiros.  
   
 ### <a name="remarks"></a>Comentários  
  A função de membro `SetRange32` define o intervalo de 32 bits para o controle de botão de rotação.  

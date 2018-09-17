@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ce0ef6ba923332d03972e2bd8b7ebb1f1cfb9e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2251aefebd6805cfd071d014ad6be30cbea065bb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205697"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711224"
 ---
 # <a name="arm-exception-handling"></a>Tratamento de exceção ARM
 
@@ -175,26 +175,26 @@ Quando o formato de desenrolamento compactado for insuficiente para descrever o 
 1. Um cabeçalho com 1 ou 2 palavras que descreve o tamanho geral da estrutura .xdata e fornece dados de função-chave. A segunda palavra estará presente somente se o *contagem de epílogo* e *código palavras* campos são definidos como 0. Os campos estão divididos nesta tabela:
 
    |Palavra|Bits|Finalidade|
-    |----------|----------|-------------|
-    |0|0-17|*Função comprimento* é um campo de 18 bits que indica o comprimento total da função em bytes dividido por 2. Se uma função tiver mais de 512 KB, então vários registros de .pdata e .xdata deverão ser usados para descrever a função. Para obter detalhes, consulte a seção Funções Grandes neste documento.|
-    |0|18-19|*Vers* é um campo de 2 bits que descreve a versão dos xdata restantes. Apenas a versão 0 está definida atualmente; os valores de 1 a 3 são reservados.|
-    |0|20|*X* é um campo de 1 bit que indica a presença (1) ou a ausência (0) de dados de exceção.|
-    |0|21|*E* é um campo de 1 bit que indica que as informações que descrevem um único epílogo é compactadas no cabeçalho (1) em vez de exigir o escopo adicional palavras posterior (0).|
-    |0|22|*F* é um campo de 1 bit que indica que esse registro descreve um fragmento de função (1) ou uma função completa (0). Um fragmento implica que não há prólogo e que todo o processamento do prólogo deve ser ignorado.|
-    |0|23-27|*Contagem de epílogo* é um campo de 5 bits que tem dois significados, dependendo do estado do *eletrônico* bit:<br /><br /> -Se *eletrônico* é 0, esse campo é uma contagem do número total de escopos de exceção descrita na seção 3. Se mais de 31 escopos existem na função, em seguida, esse campo e o *palavras código* campo deve ser definido como 0 para indicar que uma palavra de extensão é necessária.<br />-Se *eletrônico* é 1, este campo especifica o índice do primeiro código de desenrolamento que descreve o epílogo único.|
-    |0|28-31|*Palavras de código* é um campo de 4 bits que especifica o número de palavras de 32 bits necessário para conter todos os códigos de desenrolamento na seção 4. Se mais de 15 palavras forem necessárias para mais de 63 bytes de código de desenrolamento, esse campo e o *contagem de epílogo* campo deve ser definido como 0 para indicar que uma palavra de extensão é necessária.|
-    |1|0-15|*Estendido a contagem de epílogo* é um campo de 16 bits que fornece mais espaço para codificação de um número excepcionalmente grande de epílogos. A palavra de extensão que contém esse campo estará presente somente se o *contagem de epílogo* e *código palavras* campos da primeira palavra do cabeçalho são definidos como 0.|
-    |1|16-23|*Estendido código palavras* é um campo de 8 bits que fornece mais espaço para codificação de um número excepcionalmente grande de palavras de código de desenrolamento. A palavra de extensão que contém esse campo estará presente somente se o *contagem de epílogo* e *código palavras* campos da primeira palavra do cabeçalho são definidos como 0.|
-    |1|24-31|Reservado|
+   |----------|----------|-------------|
+   |0|0-17|*Função comprimento* é um campo de 18 bits que indica o comprimento total da função em bytes dividido por 2. Se uma função tiver mais de 512 KB, então vários registros de .pdata e .xdata deverão ser usados para descrever a função. Para obter detalhes, consulte a seção Funções Grandes neste documento.|
+   |0|18-19|*Vers* é um campo de 2 bits que descreve a versão dos xdata restantes. Apenas a versão 0 está definida atualmente; os valores de 1 a 3 são reservados.|
+   |0|20|*X* é um campo de 1 bit que indica a presença (1) ou a ausência (0) de dados de exceção.|
+   |0|21|*E* é um campo de 1 bit que indica que as informações que descrevem um único epílogo é compactadas no cabeçalho (1) em vez de exigir o escopo adicional palavras posterior (0).|
+   |0|22|*F* é um campo de 1 bit que indica que esse registro descreve um fragmento de função (1) ou uma função completa (0). Um fragmento implica que não há prólogo e que todo o processamento do prólogo deve ser ignorado.|
+   |0|23-27|*Contagem de epílogo* é um campo de 5 bits que tem dois significados, dependendo do estado do *eletrônico* bit:<br /><br /> -Se *eletrônico* é 0, esse campo é uma contagem do número total de escopos de exceção descrita na seção 3. Se mais de 31 escopos existem na função, em seguida, esse campo e o *palavras código* campo deve ser definido como 0 para indicar que uma palavra de extensão é necessária.<br />-Se *eletrônico* é 1, este campo especifica o índice do primeiro código de desenrolamento que descreve o epílogo único.|
+   |0|28-31|*Palavras de código* é um campo de 4 bits que especifica o número de palavras de 32 bits necessário para conter todos os códigos de desenrolamento na seção 4. Se mais de 15 palavras forem necessárias para mais de 63 bytes de código de desenrolamento, esse campo e o *contagem de epílogo* campo deve ser definido como 0 para indicar que uma palavra de extensão é necessária.|
+   |1|0-15|*Estendido a contagem de epílogo* é um campo de 16 bits que fornece mais espaço para codificação de um número excepcionalmente grande de epílogos. A palavra de extensão que contém esse campo estará presente somente se o *contagem de epílogo* e *código palavras* campos da primeira palavra do cabeçalho são definidos como 0.|
+   |1|16-23|*Estendido código palavras* é um campo de 8 bits que fornece mais espaço para codificação de um número excepcionalmente grande de palavras de código de desenrolamento. A palavra de extensão que contém esse campo estará presente somente se o *contagem de epílogo* e *código palavras* campos da primeira palavra do cabeçalho são definidos como 0.|
+   |1|24-31|Reservado|
 
 2. Depois que os dados de exceção (se o *eletrônico* bit no cabeçalho foi definido como 0) é uma lista de informações sobre escopos de epílogo, que são compactados um para uma palavra e armazenados em ordem crescente de deslocamento inicial. Cada escopo contém estes campos:
 
    |Bits|Finalidade|
-    |----------|-------------|
-    |0-17|*Deslocamento de início do epílogo* é um campo de 18 bits que descreve o deslocamento do epílogo, em bytes dividido por 2, em relação ao início da função.|
-    |18-19|*Res* é um campo de 2 bits reservado para expansão futura. Seu valor deve ser 0.|
-    |20-23|*Condição* é um campo de 4 bits que oferece a condição sob a qual o epílogo é executado. Para epílogos incondicionais, ele deve ser configurado como 0xE, que indica "sempre". (Um epílogo deve ser inteiramente condicional ou inteiramente incondicional, e no modo Posição 2, o epílogo começa com a primeira instrução após o opcode de TI.)|
-    |24-31|*Índice de início do epílogo* é um campo de 8 bits que indica o índice de bytes do primeiro código de desenrolamento que descreve este epílogo.|
+   |----------|-------------|
+   |0-17|*Deslocamento de início do epílogo* é um campo de 18 bits que descreve o deslocamento do epílogo, em bytes dividido por 2, em relação ao início da função.|
+   |18-19|*Res* é um campo de 2 bits reservado para expansão futura. Seu valor deve ser 0.|
+   |20-23|*Condição* é um campo de 4 bits que oferece a condição sob a qual o epílogo é executado. Para epílogos incondicionais, ele deve ser configurado como 0xE, que indica "sempre". (Um epílogo deve ser inteiramente condicional ou inteiramente incondicional, e no modo Posição 2, o epílogo começa com a primeira instrução após o opcode de TI.)|
+   |24-31|*Índice de início do epílogo* é um campo de 8 bits que indica o índice de bytes do primeiro código de desenrolamento que descreve este epílogo.|
 
 3. Após a lista de escopos de epílogo, é fornecida uma matriz de bytes que contém códigos de desenrolamento, que são descritos em detalhes na seção Códigos de Desenrolamento neste artigo. Essa matriz é preenchida no final, o mais próximo possível do limite da palavra completa. Os bytes são armazenados em ordem little-endian para que possam ser buscados diretamente no modo little-endian.
 
@@ -358,16 +358,16 @@ Se um fragmento não tiver prólogo nem epílogo, ele ainda exigirá seu própri
 
 ```asm
 ShrinkWrappedFunction
-     push   {r4, lr}          ; A: save minimal non-volatiles
-     sub    sp, sp, #0x100    ; A: allocate all stack space up front
-     ...                     ; A:
-     add    r0, sp, #0xE4     ; A: prepare to do the inner save
-     stm    r0, {r5-r11}      ; A: save remaining non-volatiles
-     ...                     ; B:
-     add    r0, sp, #0xE4     ; B: prepare to do the inner restore
-     ldm    r0, {r5-r11}      ; B: restore remaining non-volatiles
-     ...                     ; C:
-     pop    {r4, pc}          ; C:
+    push   {r4, lr}          ; A: save minimal non-volatiles
+    sub    sp, sp, #0x100    ; A: allocate all stack space up front
+    ...                      ; A:
+    add    r0, sp, #0xE4     ; A: prepare to do the inner save
+    stm    r0, {r5-r11}      ; A: save remaining non-volatiles
+    ...                      ; B:
+    add    r0, sp, #0xE4     ; B: prepare to do the inner restore
+    ldm    r0, {r5-r11}      ; B: restore remaining non-volatiles
+    ...                      ; C:
+    pop    {r4, pc}          ; C:
 ```
 
 Geralmente espera-se que as funções shrink-wrapping pré-aloquem o espaço para os salvamentos de registros extras no prólogo regular e, em seguida, executem os salvamentos de registros usando `str` ou `stm`, em vez de `push`. Isso mantém toda a manipulação do ponteiro de pilha no prólogo original da função.
@@ -386,14 +386,14 @@ Uma abordagem alternativa pode também funcionar se a manipulação de pilha fei
 
 ```asm
 ShrinkWrappedFunction
-     push   {r4, lr}          ; A: save minimal non-volatile registers
-     sub    sp, sp, #0xE0     ; A: allocate minimal stack space up front
-     ...                     ; A:
-     push   {r4-r9}           ; A: save remaining non-volatiles
-     ...                     ; B:
-     pop    {r4-r9}           ; B: restore remaining non-volatiles
-     ...                     ; C:
-     pop    {r4, pc}          ; C: restore non-volatile registers
+    push   {r4, lr}          ; A: save minimal non-volatile registers
+    sub    sp, sp, #0xE0     ; A: allocate minimal stack space up front
+    ...                      ; A:
+    push   {r4-r9}           ; A: save remaining non-volatiles
+    ...                      ; B:
+    pop    {r4-r9}           ; B: restore remaining non-volatiles
+    ...                      ; C:
+    pop    {r4, pc}          ; C: restore non-volatile registers
 ```
 
 O essencial aqui é que em cada limite de instrução, a pilha seja completamente consistente com os códigos de desenrolamento da região. Se ocorrer um desenrolamento antes do envio por push interno neste exemplo, ele será considerado parte da região A e apenas o prólogo da região A será desenrolado. Se o desenrolamento ocorrer após o envio por push interno, ele é considerado parte da região B, que não possui prólogo, mas possui códigos de desenrolamento que descrevem o envio por push interno e o prólogo original da região de uma lógica semelhante A. é mantida para pop interno.
@@ -749,6 +749,5 @@ Function:
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral das convenções ARM ABI](../build/overview-of-arm-abi-conventions.md)  
-[Problemas de migração ARM do Visual C++ comuns](../build/common-visual-cpp-arm-migration-issues.md)  
-
+[Visão geral das convenções ARM ABI](../build/overview-of-arm-abi-conventions.md)<br/>
+[Problemas de migração ARM do Visual C++ comuns](../build/common-visual-cpp-arm-migration-issues.md)

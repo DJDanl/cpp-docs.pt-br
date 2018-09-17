@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e8a7e2cd3d05795e35b97069491f3fdc57c3f1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c01adc1893d73840ecbec7a2e2251c8e55beb582
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753260"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701721"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Funções globais TypeLib e registro
 
@@ -78,8 +78,8 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 
 ### <a name="parameters"></a>Parâmetros
 
-[out] *pEnabled*  
-VERDADEIRO indica que as informações de registro são direcionadas para o **HKCU** nó; FALSE indica que o aplicativo grava as informações de registro para o nó de padrão. O nó padrão é **HKEY_CLASSES_ROOT** (**HKCR**).
+*pEnabled*<br/>
+[out] VERDADEIRO indica que as informações de registro são direcionadas para o **HKCU** nó; FALSE indica que o aplicativo grava as informações de registro para o nó de padrão. O nó padrão é **HKEY_CLASSES_ROOT** (**HKCR**).
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -309,8 +309,8 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *bAtivar*  
-VERDADEIRO indica que as informações de registro são direcionadas para o **HKCU** nó; FALSE indica que o aplicativo grava as informações de registro para o nó de padrão. O nó padrão é **HKEY_CLASSES_ROOT** (**HKCR**).
+*bAtivar*  
+[in] VERDADEIRO indica que as informações de registro são direcionadas para o **HKCU** nó; FALSE indica que o aplicativo grava as informações de registro para o nó de padrão. O nó padrão é **HKEY_CLASSES_ROOT** (**HKCR**).
 
 ### <a name="return-value"></a>Valor de retorno
 

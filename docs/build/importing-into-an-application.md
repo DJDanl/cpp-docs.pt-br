@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88f41d20191474da3713f061747d5985fd447116
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e88d34ce685e22e561683cc33db25997650ed7fd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368051"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718374"
 ---
 # <a name="importing-into-an-application"></a>Importando para um aplicativo
-Você pode importar as funções em um aplicativo usando dois métodos:  
-  
--   Use as palavras-chave **__declspec(dllimport)** em uma definição de função no aplicativo principal  
-  
--   Usar um arquivo de definição (. def) módulo juntamente com **__declspec(dllimport)**  
-  
-## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?  
-  
--   [Importar para um aplicativo usando __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)  
-  
--   [Chamadas de função de importação usando __declspec(dllimport)](../build/importing-function-calls-using-declspec-dllimport.md)  
-  
--   [Importar dados usando __declspec(dllimport)](../build/importing-data-using-declspec-dllimport.md)  
-  
--   [Importar usando arquivos DEF](../build/importing-using-def-files.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Importando e exportando](../build/importing-and-exporting.md)
+
+Você pode importar funções em um aplicativo usando dois métodos:
+
+- Use as palavras-chave **__declspec(dllimport)** em uma definição de função no aplicativo principal
+
+- Usar um arquivo de definição (. def) do módulo juntamente com **__declspec(dllimport)**
+
+## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?
+
+- [Importação em um aplicativo usando __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+
+- [Chamadas de função de importação usando __declspec(dllimport)](../build/importing-function-calls-using-declspec-dllimport.md)
+
+- [Importar dados usando __declspec(dllimport)](../build/importing-data-using-declspec-dllimport.md)
+
+- [Importar usando arquivos DEF](../build/importing-using-def-files.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Importando e exportando](../build/importing-and-exporting.md)

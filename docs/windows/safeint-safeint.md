@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2ddb7092b1a5556485848d122e21ac54b6efe182
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: de318ab79638f63fae98856987340ad62534f695
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606949"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721339"
 ---
 # <a name="safeintsafeint"></a>SafeInt::SafeInt
 
@@ -56,14 +56,14 @@ SafeInt (
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *eu*  
-O valor para o novo **SafeInt** objeto. Isso deve ser um parâmetro de tipo T ou U, dependendo do construtor.
+*i*<br/>
+[in] O valor para o novo **SafeInt** objeto. Isso deve ser um parâmetro de tipo T ou U, dependendo do construtor.
 
-[in] *b*  
-O valor booliano para a nova **SafeInt** objeto.
+*b*<br/>
+[in] O valor booliano para a nova **SafeInt** objeto.
 
-[in] *u*  
-Um **SafeInt** de u tipo. O novo **SafeInt** objeto terá o mesmo valor de *u*, mas será do tipo T.
+*u*<br/>
+[in] Um **SafeInt** de u tipo. O novo **SafeInt** objeto terá o mesmo valor de *u*, mas será do tipo T.
 
 O tipo de dados armazenados em do U os **SafeInt**. Isso pode ser o tipo de um valor booliano, caractere ou inteiro. Se for um tipo inteiro, pode ser assinado ou não assinado e ter entre 8 e 64 bits.
 

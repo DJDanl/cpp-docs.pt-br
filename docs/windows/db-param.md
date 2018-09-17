@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c3bfa286e253ef634a42fea5a5c926981174c400
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b599e5f25449dfef3b37d7811db572ee4299b241
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612995"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719091"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -47,8 +47,8 @@ Associa a variável de membro especificado com um parâmetro de entrada ou saíd
 *Ordinal*  
 O número da coluna (ordinal DBCOLUMNINFO) correspondente a um campo no conjunto de linhas à qual associar dados.
 
-*paramtype* (opcional)  
-O tipo a ser definido para o parâmetro. Provedores dão suporte a apenas tipos de e/s parâmetros que têm suporte pela fonte de dados subjacente. O tipo é uma combinação de um ou mais valores DBPARAMIOENUM:
+*paramtype*  
+(Opcional) O tipo a ser definido para o parâmetro. Provedores dão suporte a apenas tipos de e/s parâmetros que têm suporte pela fonte de dados subjacente. O tipo é uma combinação de um ou mais valores DBPARAMIOENUM:
 
 - DBPARAMIO_INPUT um parâmetro de entrada.
 
@@ -56,20 +56,20 @@ O tipo a ser definido para o parâmetro. Provedores dão suporte a apenas tipos 
 
 - DBPARAMIO_NOTPARAM o acessador não tem parâmetros. Definindo `eParamIO` para esse valor na linha acessadores lembra ao usuário que os parâmetros são ignorados.
 
-*DbType* (opcional)  
-Um banco de dados OLE [indicador de tipo](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) para a entrada de coluna.
+*DbType*  
+(Opcional) Um banco de dados OLE [indicador de tipo](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) para a entrada de coluna.
 
-*precisão* (opcional)  
-A precisão a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição da `bPrecision` elemento o [estrutura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*precision*  
+(Opcional) A precisão a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição da `bPrecision` elemento o [estrutura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*escala* (opcional)  
-A escala a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição da `bScale` elemento o [estrutura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+*Escala*  
+(Opcional) A escala a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição da `bScale` elemento o [estrutura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*status* (opcional)  
-Uma variável de membro usada para manter o status dessa coluna. O status indica se o valor da coluna é um valor de dados ou algum outro valor, como nulo. Para os valores possíveis, consulte [Status](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) na *referência do programador DB OLE*.
+*status*  
+(Opcional) Uma variável de membro usada para manter o status dessa coluna. O status indica se o valor da coluna é um valor de dados ou algum outro valor, como nulo. Para os valores possíveis, consulte [Status](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) na *referência do programador DB OLE*.
 
-*comprimento* (opcional)  
-Uma variável de membro usada para manter o tamanho da coluna em bytes.
+*length*  
+(Opcional) Uma variável de membro usada para manter o tamanho da coluna em bytes.
 
 ## <a name="remarks"></a>Comentários
 

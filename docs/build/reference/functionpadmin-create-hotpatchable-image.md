@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0a5ecfcc336e198de0adcc2393f740072d70cae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7a82611c453a96e9247e414d6adb777c07320482
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376748"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703983"
 ---
 # <a name="functionpadmin-create-hotpatchable-image"></a>/FUNCTIONPADMIN (Criar imagem hotpatchable)
 
@@ -30,26 +30,26 @@ Prepara uma imagem para patch instantâneo.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/FUNCTIONPADMIN**[**:**_space_]  
+> **/FUNCTIONPADMIN**[**:**_space_]
 
 ### <a name="arguments"></a>Arguments
 
 *space*<br/>
-A quantidade de preenchimento para adicionar ao início de cada função em bytes. X86 o padrão é 5 bytes de preenchimento e em x64, o padrão é 6 bytes. Outros destinos deve ser fornecido um valor.
+A quantidade de preenchimento a ser adicionado ao início de cada função em bytes. Em x86, o padrão será a 5 bytes de preenchimento e em x64, o padrão será a 6 bytes. Em outros destinos, um valor deve ser fornecido.
 
 ## <a name="remarks"></a>Comentários
 
-Em ordem para o vinculador para produzir uma imagem hotpatchable, os arquivos. obj devem foram compilados com [/hotpatch (Criar imagem de Hotpatchable)](../../build/reference/hotpatch-create-hotpatchable-image.md).
+Em ordem para o vinculador produzir uma imagem de hotpatchable, os arquivos. obj devem ter sido compilados com [/hotpatch (Criar imagem de Hotpatchable)](../../build/reference/hotpatch-create-hotpatchable-image.md).
 
-Quando você compilar e vincular uma imagem com uma única chamada de cl.exe, **/hotpatch** implica **/functionpadmin**.
+Quando você compila e vincula uma imagem com uma única chamada de cl.exe, **/hotpatch** implica **/functionpadmin**.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **vinculador** > **linha de comando** página de propriedades.
 
-1. Insira o **/FUNCTIONPADMIN** opção **opções adicionais**. Escolha **Okey** para salvar suas alterações.
+1. Insira o **/FUNCTIONPADMIN** opção **opções adicionais**. Escolher **Okey** para salvar suas alterações.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 

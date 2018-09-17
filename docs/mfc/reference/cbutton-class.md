@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9932f8814855213f133323f2102e0cacf1e69c8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a55623c28ca7114f43f208e5c660b9df38d1242b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196705"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701827"
 ---
 # <a name="cbutton-class"></a>Classe CButton
 Fornece a funcionalidade de controles de botão do Windows.  
@@ -394,8 +394,8 @@ BOOL GetNote(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[out] *lpszNote*|Ponteiro para um buffer, que o chamador é responsável por alocar e desalocar. Se o valor de retorno for TRUE, o buffer contém o texto de anotação que está associado com o controle de link de comando atual; Caso contrário, o buffer é inalterado.|  
-|[no, out] *cchNote*|Um ponteiro para uma variável de inteiro sem sinal.<br /><br /> Quando este método é chamado, a variável contém o tamanho do buffer especificado pelo *lpszNote* parâmetro.<br /><br /> Quando este método retorna, se o valor de retorno for TRUE, a variável contém o tamanho da anotação associado ao controle de link de comando atual. Se o valor de retorno for FALSE, a variável contém o tamanho do buffer necessário para conter a anotação.|  
+|*lpszNote*|[out] Ponteiro para um buffer, que o chamador é responsável por alocar e desalocar. Se o valor de retorno for TRUE, o buffer contém o texto de anotação que está associado com o controle de link de comando atual; Caso contrário, o buffer é inalterado.|  
+|*cchNote*|[no, out] Um ponteiro para uma variável de inteiro sem sinal.<br /><br /> Quando este método é chamado, a variável contém o tamanho do buffer especificado pelo *lpszNote* parâmetro.<br /><br /> Quando este método retorna, se o valor de retorno for TRUE, a variável contém o tamanho da anotação associado ao controle de link de comando atual. Se o valor de retorno for FALSE, a variável contém o tamanho do buffer necessário para conter a anotação.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  Na primeira sobrecarga, uma [CString](../../atl-mfc-shared/using-cstring.md) objeto que contém o texto de anotação associado ao controle de link de comando atual.  
@@ -467,7 +467,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[out] *pInfo*|Ponteiro para um [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) estrutura que recebe informações sobre o controle de botão de divisão atual. O chamador é responsável por alocar a estrutura.|  
+|*pInfo*|[out] Ponteiro para um [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) estrutura que recebe informações sobre o controle de botão de divisão atual. O chamador é responsável por alocar a estrutura.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -488,7 +488,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[out] *pSize*|Ponteiro para um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura que recebe a descrição de um retângulo.|  
+|*pSize*|[out] Ponteiro para um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura que recebe a descrição de um retângulo.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -687,7 +687,7 @@ BOOL SetDropDownState(BOOL fDropDown);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *fDropDown*|TRUE para definir o estado BST_DROPDOWNPUSHED; Caso contrário, FALSE.|  
+|*fDropDown*|[in] TRUE para definir o estado BST_DROPDOWNPUSHED; Caso contrário, FALSE.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -718,7 +718,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *fElevationRequired*|True para definir `elevation required` estado; caso contrário, FALSE.|  
+|*fElevationRequired*|[in] True para definir `elevation required` estado; caso contrário, FALSE.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -790,7 +790,7 @@ BOOL SetNote(LPCTSTR lpszNote);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *lpszNote*|Ponteiro para uma cadeia de caracteres Unicode que é definido como o texto de anotação para o controle de link de comando.|  
+|*lpszNote*|[in] Ponteiro para uma cadeia de caracteres Unicode que é definido como o texto de anotação para o controle de link de comando.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -821,7 +821,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *chGlyph*|Um caractere que especifica o glifo para usar como a seta de lista suspensa do botão de divisão.|  
+|*chGlyph*|[in] Um caractere que especifica o glifo para usar como a seta de lista suspensa do botão de divisão.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -844,7 +844,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *pSplitImageList*|Ponteiro para um [CImageList](../../mfc/reference/cimagelist-class.md) objeto a ser atribuído ao controle de botão de divisão atual.|  
+|*pSplitImageList*|[in] Ponteiro para um [CImageList](../../mfc/reference/cimagelist-class.md) objeto a ser atribuído ao controle de botão de divisão atual.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -865,7 +865,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *pInfo*|Ponteiro para um [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) estrutura que define o controle de botão de divisão atual.|  
+|*pInfo*|[in] Ponteiro para um [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) estrutura que define o controle de botão de divisão atual.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -896,7 +896,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *pSize*|Ponteiro para um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura que descreve um retângulo delimitador.|  
+|*pSize*|[in] Ponteiro para um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura que descreve um retângulo delimitador.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -929,7 +929,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *uSplitStyle*|Uma combinação bit a bit dos estilos de botão de divisão. Para obter mais informações, consulte o `uSplitStyle` membro a [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) estrutura.|  
+|*uSplitStyle*|[in] Uma combinação bit a bit dos estilos de botão de divisão. Para obter mais informações, consulte o `uSplitStyle` membro a [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) estrutura.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af74ab381293e04c08a1fa8c601558edaeacf6c4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0336cb9bd2f0e12c834615647cb4a442ab261316
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689186"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721507"
 ---
 # <a name="cmfcrebar-class"></a>Classe CMFCReBar
 Um `CMFCReBar` objeto é uma barra de controle que fornece o layout, persistência e informações de estado para controles rebar.  
@@ -113,20 +113,20 @@ BOOL AddBar(
  [in] [out] *pBar*  
  Um ponteiro para a janela filho que deve ser inserido no rebar. O objeto referenciado deve ter o **WS_CHILD** estilo da janela.  
   
- [in] *pszText*  
- Especifica o texto para aparecer em rebar. O texto não é parte da janela filho. Em vez disso, ele é exibido em rebar em si.  
+*pszText*<br/>
+[in] Especifica o texto para aparecer em rebar. O texto não é parte da janela filho. Em vez disso, ele é exibido em rebar em si.  
   
  [in] [out] *pbmp*  
  Especifica o bitmap a ser exibido no plano de fundo de rebar.  
   
- [in] *dwStyle*  
- Contém o estilo a ser aplicado para a faixa. Para obter uma lista completa dos estilos de banda, consulte a descrição para o `fStyle` no [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) estrutura na documentação do SDK do Windows.  
+*dwStyle*<br/>
+[in] Contém o estilo a ser aplicado para a faixa. Para obter uma lista completa dos estilos de banda, consulte a descrição para o `fStyle` no [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) estrutura na documentação do SDK do Windows.  
   
- [in] *clrFore*  
- Representa a cor de primeiro plano do rebar.  
+*clrFore*<br/>
+[in] Representa a cor de primeiro plano do rebar.  
   
- [in] *clrBack*  
- Representa a cor do plano de fundo do rebar.  
+*clrBack*<br/>
+[in] Representa a cor do plano de fundo do rebar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a banda foi adicionada com êxito para o rebar; Caso contrário, FALSE.  
@@ -146,14 +146,14 @@ BOOL Create(
  [in] [out] *pParentWnd*  
  Um ponteiro para a janela pai desse controle rebar.  
   
- [in] *dwCtrlStyle*  
- Especifica o estilo do controle rebar. O valor de estilo padrão é **RBS_BANDBORDERS**, que exibe restringir linhas para separar as faixas adjacentes no controle rebar. Para obter uma lista de estilos válidas, consulte [estilos de controle Rebar](/windows/desktop/Controls/rebar-control-styles) na documentação do SDK do Windows.  
+*dwCtrlStyle*<br/>
+[in] Especifica o estilo do controle rebar. O valor de estilo padrão é **RBS_BANDBORDERS**, que exibe restringir linhas para separar as faixas adjacentes no controle rebar. Para obter uma lista de estilos válidas, consulte [estilos de controle Rebar](/windows/desktop/Controls/rebar-control-styles) na documentação do SDK do Windows.  
   
- [in] *dwStyle*  
- O estilo da janela do controle rebar. Para obter uma lista de estilos válidas, consulte [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
+*dwStyle*<br/>
+[in] O estilo da janela do controle rebar. Para obter uma lista de estilos válidas, consulte [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- [in] *nID*  
- ID da janela filho. de rebar  
+*nID*<br/>
+[in] ID da janela filho. de rebar  
   
 ### <a name="return-value"></a>Valor de retorno  
  VERDADEIRO se o rebar foi criado com êxito; Caso contrário, FALSE.  
@@ -183,8 +183,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bStretch*  
- [in] *bHorz*  
+*bStretch*<br/>
+[in] [in] *bHorz*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -248,8 +248,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *ponto*  
- [in] *pTI*  
+*ponto*<br/>
+[in] [in] *pTI*  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -265,8 +265,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pTarget*  
- [in] *bDisableIfNoHndler*  
+*pTarget*<br/>
+[in] [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Comentários  
   

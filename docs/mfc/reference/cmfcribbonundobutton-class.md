@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11c83332c12daa6753add0618367b90f8c759532
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a13c7971e65a926799cc0134c811845c292161d4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848762"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709173"
 ---
 # <a name="cmfcribbonundobutton-class"></a>Classe CMFCRibbonUndoButton
 O `CMFCRibbonUndoButton` classe implementa um botão de lista suspensa que contém os comandos mais recentes do usuário. Os usuários podem selecionar um ou mais dos comandos mais recentes na lista suspensa para refazer ou desfazê-los.  
@@ -89,8 +89,8 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszLabel*  
- O rótulo de ação que será exibido na lista suspensa.  
+*lpszLabel*<br/>
+[in] O rótulo de ação que será exibido na lista suspensa.  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
  Limpa a lista de ação, que é a lista suspensa.  
@@ -117,20 +117,20 @@ CMFCRibbonUndoButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nID*  
- Especifica o identificador de comando.  
+*nID*<br/>
+[in] Especifica o identificador de comando.  
   
- [in] *lpszText*  
- Especifica o rótulo de texto do botão.  
+*lpszText*<br/>
+[in] Especifica o rótulo de texto do botão.  
   
- [in] *nSmallImageIndex*  
- Índice baseado em zero na lista de imagens do objeto pai para a imagem do botão pequeno.  
+*nSmallImageIndex*<br/>
+[in] Índice baseado em zero na lista de imagens do objeto pai para a imagem do botão pequeno.  
   
- [in] *nLargeImageIndex*  
- O índice baseado em zero na lista de imagens do objeto pai para o de imagem grandes do botão.  
+*nLargeImageIndex*<br/>
+[in] O índice baseado em zero na lista de imagens do objeto pai para o de imagem grandes do botão.  
   
- [in] *hIcon*  
- Um identificador para um ícone que você pode usar como imagem de um botão.  
+*hIcon*<br/>
+[in] Um identificador para um ícone que você pode usar como imagem de um botão.  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
  Determina o número de itens que o usuário selecionou na lista suspensa.  

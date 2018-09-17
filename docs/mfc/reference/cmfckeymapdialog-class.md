@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af6e9ce4c252e2d798615292291dcd3e21cbd72a
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 810a375fce13d8628db5ff00d89964d84c83b525
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853664"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45704035"
 ---
 # <a name="cmfckeymapdialog-class"></a>Classe CMFCKeyMapDialog
 O `CMFCKeyMapDialog` classe dá suporte a um controle que mapeia comandos para teclas do teclado.  
@@ -110,11 +110,11 @@ CMFCKeyMapDialog(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWndParentFrame*  
- Um ponteiro para a janela pai do `CMFCKeyMapDialog` objeto.  
+*pWndParentFrame*<br/>
+[in] Um ponteiro para a janela pai do `CMFCKeyMapDialog` objeto.  
   
- [in] *bEnablePrint*  
- TRUE se a lista de teclas de aceleração pode ser impressa; Caso contrário, FALSE. O padrão é FALSE.  
+*bEnablePrint*<br/>
+[in] TRUE se a lista de teclas de aceleração pode ser impressa; Caso contrário, FALSE. O padrão é FALSE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -144,8 +144,8 @@ virtual CString FormatItem(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nItem*  
- O índice baseado em zero de um item na lista interna de mapeamentos de chave.  
+*nItem*<br/>
+[in] O índice baseado em zero de um item na lista interna de mapeamentos de chave.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um `CString` objeto que contém o texto do item formatada.  
@@ -160,8 +160,8 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiCmdID*  
- Uma ID de comando.  
+*uiCmdID*<br/>
+[in] Uma ID de comando.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponto e vírgula delimitado (';') lista de teclas de atalho que está associada com o comando especificado.  
@@ -178,11 +178,11 @@ virtual void OnInsertItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pButton*  
- Um ponteiro para um botão de barra de ferramentas que é usado para mapear uma combinação de teclas do teclado para um nome de comando e uma descrição. O item de mapa de chave é armazenado em um controle de lista interna.  
+*pButton*<br/>
+[in] Um ponteiro para um botão de barra de ferramentas que é usado para mapear uma combinação de teclas do teclado para um nome de comando e uma descrição. O item de mapa de chave é armazenado em um controle de lista interna.  
   
- [in] *nItem*  
- Um índice baseado em zero que especifica o local para inserir o novo item de mapa de chave no controle de lista interno.  
+*nItem*<br/>
+[in] Um índice baseado em zero que especifica o local para inserir o novo item de mapa de chave no controle de lista interno.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -197,14 +197,14 @@ virtual int OnPrintHeader(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *dc*  
- O contexto de dispositivo para a impressora.  
+*dc*<br/>
+[in] O contexto de dispositivo para a impressora.  
   
- [in] *nPage*  
- O número da página para imprimir.  
+*nPage*<br/>
+[in] O número da página para imprimir.  
   
- [in] *cx*  
- O deslocamento horizontal do cabeçalho, em pixels.  
+*CX*<br/>
+[in] O deslocamento horizontal do cabeçalho, em pixels.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Se for bem-sucedido, a altura do texto impresso. Para obter mais informações, consulte a seção de valor de retorno de [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext).  
@@ -225,20 +225,20 @@ virtual int OnPrintItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *dc*  
- O contexto de dispositivo da impressora.  
+*dc*<br/>
+[in] O contexto de dispositivo da impressora.  
   
- [in] *nItem*  
- O índice baseado em zero do item para imprimir.  
+*nItem*<br/>
+[in] O índice baseado em zero do item para imprimir.  
   
- [in] *y*  
- O deslocamento vertical entre a parte superior da página e a posição do item.  
+*y*<br/>
+[in] O deslocamento vertical entre a parte superior da página e a posição do item.  
   
- [in] *cx*  
- O deslocamento horizontal à esquerda da página e a posição do item.  
+*CX*<br/>
+[in] O deslocamento horizontal à esquerda da página e a posição do item.  
   
- [in] *bCalcHeight*  
- TRUE para calcular a altura recomendada para o item de impressão; FALSE para truncar o item de impressão para que ele se adapta o espaço padrão.  
+*bCalcHeight*<br/>
+[in] TRUE para calcular a altura recomendada para o item de impressão; FALSE para truncar o item de impressão para que ele se adapta o espaço padrão.  
   
 ### <a name="return-value"></a>Valor de retorno  
  A altura do item impressa.  

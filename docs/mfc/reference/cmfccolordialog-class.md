@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a1d5c2d7bb2da2ba293ac29a59948f80c1bed59
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3cf85ec6de81ca18f32b8cd6bea015341f78287c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680604"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715347"
 ---
 # <a name="cmfccolordialog-class"></a>Classe CMFCColorDialog
 O `CMFCColorDialog` classe representa uma caixa de diálogo de seleção de cor.  
@@ -125,17 +125,17 @@ CMFCColorDialog(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *clrInit*  
- A seleção de cor padrão. Se nenhum valor for especificado, o padrão é RGB(0,0,0) (preto).  
+*clrInit*<br/>
+[in] A seleção de cor padrão. Se nenhum valor for especificado, o padrão é RGB(0,0,0) (preto).  
   
- [in] *dwFlags*  
- (Reservado).  
+*dwFlags*<br/>
+[in] Reservado.
   
- [in] *pParentWnd*  
- Um ponteiro para a janela do pai ou proprietária da caixa de diálogo.  
+*pParentWnd*<br/>
+[in] Um ponteiro para a janela do pai ou proprietária da caixa de diálogo.  
   
- [in] *hPal*  
- Um identificador para uma paleta de cores.  
+*hPal*<br/>
+[in] Um identificador para uma paleta de cores.  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -182,8 +182,8 @@ void SetCurrentColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *rgb*  
- Um valor de cor RGB  
+*rgb*<br/>
+[in] Um valor de cor RGB  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -195,8 +195,8 @@ void SetNewColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *rgb*  
- Um [COLORREF](/windows/desktop/gdi/colorref) que especifica uma cor RGB.  
+*rgb*<br/>
+[in] Um [COLORREF](/windows/desktop/gdi/colorref) que especifica uma cor RGB.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -211,14 +211,14 @@ void SetPageOne(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *R*  
- Especifica o componente vermelho do valor RGB.  
+*R*<br/>
+[in] Especifica o componente vermelho do valor RGB.  
   
- [in] *G*  
- Especifica o componente verde do valor RGB.  
+*G*<br/>
+[in] Especifica o componente verde do valor RGB.  
   
- [in] *B*  
- Especifica o componente azul do valor RGB.  
+*B*<br/>
+[in] Especifica o componente azul do valor RGB.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -233,14 +233,14 @@ void SetPageTwo(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *R*  
- Especifica um componente vermelho do valor RGB  
+*R*<br/>
+[in] Especifica um componente vermelho do valor RGB  
   
- [in] *G*  
- Especifica um componente verde de um valor RGB  
+*G*<br/>
+[in] Especifica um componente verde de um valor RGB  
   
- [in] *B*  
- Especifica um componente azul de um valor RGB  
+*B*<br/>
+[in] Especifica um componente azul de um valor RGB  
   
 ### <a name="remarks"></a>Comentários  
   

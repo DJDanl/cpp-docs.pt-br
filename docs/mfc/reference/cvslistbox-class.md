@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 946c82d4f558974d548a40af0b14e63f7ccebf4e
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: afabb17847f1c94ce7fae1db05e589f03a79506a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680574"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721247"
 ---
 # <a name="cvslistbox-class"></a>Classe CVSListBox
 O `CVSListBox` classe dá suporte a um controle de lista editável.  
@@ -124,14 +124,14 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *strIext*  
- Uma referência a uma cadeia de caracteres.  
+*strIext*<br/>
+[in] Uma referência a uma cadeia de caracteres.  
   
- [in] *dwData*  
- Um valor de 32 bits específicos do aplicativo que está associado com a cadeia de caracteres. O valor padrão é 0.  
+*dwData*<br/>
+[in] Um valor de 32 bits específicos do aplicativo que está associado com a cadeia de caracteres. O valor padrão é 0.  
   
- [in] *iIndex*  
- O índice baseado em zero da posição que conterá a cadeia de caracteres. Se o *iIndex* parâmetro for -1, a cadeia de caracteres é adicionada ao final da lista. O valor padrão é -1.  
+*iIndex*<br/>
+[in] O índice baseado em zero da posição que conterá a cadeia de caracteres. Se o *iIndex* parâmetro for -1, a cadeia de caracteres é adicionada ao final da lista. O valor padrão é -1.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O índice baseado em zero da posição da cadeia de caracteres no controle de lista.  
@@ -158,8 +158,8 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iIndex*  
- Índice baseado em zero de um item de controle de lista.  
+*iIndex*<br/>
+[in] Índice baseado em zero de um item de controle de lista.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a operação de edição é iniciado com êxito; Caso contrário, FALSE.  
@@ -188,8 +188,8 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iIndex*  
- O índice baseado em zero de um item de controle de lista editável.  
+*iIndex*<br/>
+[in] O índice baseado em zero de um item de controle de lista editável.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O valor de 32 bits que está associado com o item especificado.  
@@ -205,8 +205,8 @@ virtual CString GetItemText(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] `iIndex`  
- O índice baseado em zero de um item de controle de lista editável.  
+*iIndex*<br/>
+[in] O índice baseado em zero de um item de controle de lista editável.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto que contém o texto do item especificado.  
@@ -246,8 +246,8 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iIndex*  
- O índice baseado em zero de um item de controle de lista editável.  
+*iIndex*<br/>
+[in] O índice baseado em zero de um item de controle de lista editável.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o item especificado for removido; Caso contrário, FALSE.  
@@ -262,8 +262,8 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iItem*  
- O índice baseado em zero de um item de controle de lista editável.  
+*iItem*<br/>
+[in] O índice baseado em zero de um item de controle de lista editável.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -281,11 +281,11 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iIndex*  
- O índice baseado em zero de um item de controle de lista editável.  
+*iIndex*<br/>
+[in] O índice baseado em zero de um item de controle de lista editável.  
   
- [in] *dwData*  
- Um valor de 32 bits. Esse valor pode ser um inteiro de específicos do aplicativo ou um ponteiro para outros dados.  
+*dwData*<br/>
+[in] Um valor de 32 bits. Esse valor pode ser um inteiro de específicos do aplicativo ou um ponteiro para outros dados.  
   
 ### <a name="remarks"></a>Comentários  
   

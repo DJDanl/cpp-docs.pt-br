@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08304a42b961f93b7d9e4e6e644e1514e34eb335
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 3c3a80e50bd0b012773a5e5a197674965f73b526
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42544367"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711146"
 ---
 # <a name="bssseg"></a>bss_seg
 Especifica o segmento em que as variáveis não inicializadas são armazenadas no arquivo .obj.  
@@ -35,27 +35,27 @@ Especifica o segmento em que as variáveis não inicializadas são armazenadas n
 ```  
   
 ## <a name="remarks"></a>Comentários  
- 
+
 Arquivos obj podem ser exibidos com o [dumpbin](../build/reference/dumpbin-command-line.md) aplicativo. O segmento padrão no arquivo .obj para os dados não inicializados é .bss. Em alguns casos de uso de **bss_seg** pode acelerar tempos de carregamento, agrupando dados não inicializados em uma seção.  
   
 **bss_seg** sem parâmetros redefine o segmento BSS.  
   
-*envio por push* (opcional)  
-Coloca um registro na pilha interna do compilador. Um *push* pode ter um *identificador* e *nome do segmento*.  
+**push**<br/>
+(Opcional) Coloca um registro na pilha interna do compilador. Um *pu*sh * pode ter um *identificador* e *nome do segmento*.  
   
-*pop-up* (opcional)  
-Remove um registro do topo da pilha interna do compilador.  
+**pop**<br/>
+(Opcional) Remove um registro do topo da pilha interna do compilador.  
   
-*identificador* (opcional)  
-Quando usado com *push*, atribui um nome ao registro na pilha interna do compilador. Quando usado com *pop-up*, elimina registros da pilha interna até *identificador* for removido; se *identificador* não for localizado na pilha interna, nada será exibido.  
+*identifier*<br/>
+(Opcional) Quando usado com **push**, atribui um nome ao registro na pilha interna do compilador. Quando usado com **pop-up**, elimina registros da pilha interna até *identificador* for removido; se *identificador* não for localizado na pilha interna, nada será exibido.  
   
-*identificador* habilita vários registros a serem exibidos com uma única *pop-up* comando.  
+*identificador* habilita vários registros a serem exibidos com uma única **pop-up** comando.  
   
-*"nome do segmento"*(opcional)  
-O nome de um segmento. Quando usado com *pop-up*, a pilha é exibida e *nome do segmento* se torna o nome do segmento ativo.  
+*"nome do segmento"*<br/>
+(Opcional) O nome de um segmento. Quando usado com **pop-up**, a pilha é exibida e *nome do segmento* se torna o nome do segmento ativo.  
   
-*"segmento-class"* (opcional)  
-Incluído para compatibilidade com o C++ antes da versão 2.0. É ignorado.  
+*"segmento-class"*<br/>
+(Opcional) Incluído para compatibilidade com o C++ antes da versão 2.0. É ignorado.  
   
 ## <a name="example"></a>Exemplo  
   

@@ -13,12 +13,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985232af68daebe924cd51300974d614bf6d6756
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: f99df40d5718a450019fb7cd26aa0c00a59c0a48
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42572036"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701852"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opções do compilador listadas em ordem alfabética
 
@@ -173,4 +173,7 @@ Esta é uma lista alfabética abrangente das opções de compilador. Para obter 
 |[/ZW](zw-windows-runtime-compilation.md)|Produz um arquivo de saída para ser executado no tempo de execução do Windows.|
 
 ## <a name="see-also"></a>Consulte também
- [Referência de build do C/C++](c-cpp-building-reference.md) [opções do compilador](compiler-options.md) [definindo opções do compilador](setting-compiler-options.md)
+
+[Referência de build C/C++](c-cpp-building-reference.md)<br/>
+[Opções do Compilador](compiler-options.md)<br/>
+[Definindo opções do compilador](setting-compiler-options.md)

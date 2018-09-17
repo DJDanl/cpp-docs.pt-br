@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de4fa70eb4be67eb9ec29fbd24b7b1476681f7bd
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 3d69497092ba89b91a4dbfaf56ac842fa8e07236
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678558"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707448"
 ---
 # <a name="multimap-class"></a>Classe multimap
 
@@ -120,18 +120,18 @@ class multimap;
 ### <a name="parameters"></a>Parâmetros
 
 *Chave*<br/>
- O tipo de dados da chave a ser armazenado no multimapa.
+O tipo de dados da chave a ser armazenado no multimapa.
 
 *Tipo*<br/>
- O tipo de dados do elemento a ser armazenado no multimapa.
+O tipo de dados do elemento a ser armazenado no multimapa.
 
 *Características*<br/>
- O tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no multimapa. O predicado binário `less<Key>` é o valor padrão.
+O tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no multimapa. O predicado binário `less<Key>` é o valor padrão.
 
 No C++ 14, você pode habilitar a pesquisa heterogênea ao especificar o predicado `std::less<>` ou o `std::greater<>`, que não tem nenhum parâmetro de tipo. Para obter mais informações, consulte [Pesquisa heterogênea em contêineres associativos](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14)
 
 *Alocador*<br/>
- O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação do mapa da memória. Esse argumento é opcional e o valor padrão é `allocator<pair <const Key, Type> >`.
+O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação do mapa da memória. Esse argumento é opcional e o valor padrão é `allocator<pair <const Key, Type> >`.
 
 ## <a name="remarks"></a>Comentários
 
@@ -515,7 +515,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- A chave dos elementos a serem correspondidos do multimap.
+A chave dos elementos a serem correspondidos do multimap.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -916,7 +916,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- A chave do argumento a ser comparada com a chave de classificação de um elemento do multimap que está sendo pesquisado.
+A chave do argumento a ser comparada com a chave de classificação de um elemento do multimap que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1003,16 +1003,16 @@ size_type erase(
 ### <a name="parameters"></a>Parâmetros
 
 *Where*<br/>
- A posição do elemento a ser removido.
+A posição do elemento a ser removido.
 
 *Primeiro*<br/>
- A posição do primeiro elemento a ser removido.
+A posição do primeiro elemento a ser removido.
 
 *último*<br/>
- A posição logo após o último elemento a ser removido.
+A posição logo após o último elemento a ser removido.
 
 *Chave*<br/>
- A chave de elementos a serem removidos.
+A chave de elementos a serem removidos.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1038,7 +1038,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- O valor da chave a ser comparado pela chave de classificação de um elemento do multimap que está sendo pesquisado.
+O valor da chave a ser comparado pela chave de classificação de um elemento do multimap que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1493,7 +1493,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- A chave do argumento a ser comparada com a chave de classificação de um elemento do multimap que está sendo pesquisado.
+A chave do argumento a ser comparada com a chave de classificação de um elemento do multimap que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2189,7 +2189,7 @@ void swap(
 ### <a name="parameters"></a>Parâmetros
 
 *right*<br/>
- O multimap que fornece os elementos que serão trocados ou o multimap cujos elementos deverão ser trocados com aqueles do multimap `left`.
+O multimap que fornece os elementos que serão trocados ou o multimap cujos elementos deverão ser trocados com aqueles do multimap `left`.
 
 ### <a name="remarks"></a>Comentários
 
@@ -2259,7 +2259,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- A chave do argumento a ser comparada com a chave de classificação de um elemento do multimap que está sendo pesquisado.
+A chave do argumento a ser comparada com a chave de classificação de um elemento do multimap que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 

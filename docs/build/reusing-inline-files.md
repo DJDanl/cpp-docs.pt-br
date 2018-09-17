@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 017364061093ef7a3c3e006f58c331c48a8009e8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 37544db8076d40e638b6ddf6f340070298229149
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379894"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722456"
 ---
 # <a name="reusing-inline-files"></a>Reutilizando arquivos embutidos
-Para reutilizar um arquivo embutido, especifique <<*filename* onde o arquivo é definido e usado pela primeira vez, em seguida, reutilize *filename* sem << posterior no mesmo ou em outro comando. O comando para criar o arquivo embutido deve executar antes de todos os comandos que usam o arquivo.  
-  
-## <a name="see-also"></a>Consulte também  
- [Arquivos embutidos em um makefile](../build/inline-files-in-a-makefile.md)
+
+Para reutilizar um arquivo embutido, especifique <<*filename* onde o arquivo é definido e usado pela primeira vez, em seguida, reutilizar *filename* sem << posterior no mesmo ou outro comando. O comando para criar o arquivo embutido deve ser executado antes de todos os comandos que usam o arquivo.
+
+## <a name="see-also"></a>Consulte também
+
+[Arquivos embutidos em um makefile](../build/inline-files-in-a-makefile.md)

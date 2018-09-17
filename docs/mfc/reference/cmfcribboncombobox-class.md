@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2ccefbc435cac5b48cd2c9509831699dcec70af
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 68746d76c9c7842e9fc8c16addeca2cb44f31211
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849656"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701734"
 ---
 # <a name="cmfcribboncombobox-class"></a>Classe CMFCRibbonComboBox
 O `CMFCRibbonComboBox` classe implementa um controle de caixa de combinação que você pode adicionar uma barra de faixa de opções, um painel de faixa de opções ou um menu pop-up de faixa de opções.  
@@ -127,11 +127,11 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszItem*  
- A cadeia de caracteres do item a ser adicionado.  
+*lpszItem*<br/>
+[in] A cadeia de caracteres do item a ser adicionado.  
   
- [in] *dwData*  
- Os dados associados com o item a ser adicionado.  
+*dwData*<br/>
+[in] Os dados associados com o item a ser adicionado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O índice baseado em zero do item acrescentado.  
@@ -153,20 +153,20 @@ CMFCRibbonComboBox();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nID*  
- A ID da caixa de combinação.  
+*nID*<br/>
+[in] A ID da caixa de combinação.  
   
- [in] *bHasEditBox*  
- TRUE se você quiser uma caixa de edição dentro do controle; FALSE caso contrário.  
+*bHasEditBox*<br/>
+[in] TRUE se você quiser uma caixa de edição dentro do controle; FALSE caso contrário.  
   
- [in] *nWidth*  
- Largura da caixa de combinação em pixels; ou -1 para a largura padrão.  
+*nWidth*<br/>
+[in] Largura da caixa de combinação em pixels; ou -1 para a largura padrão.  
   
- [in] *lpszLabel*  
- O rótulo de exibição da caixa de combinação.  
+*lpszLabel*<br/>
+[in] O rótulo de exibição da caixa de combinação.  
   
- [in] *Nimagem*  
- O índice de imagem em miniatura da caixa de combinação.  
+*Nimagem*<br/>
+[in] O índice de imagem em miniatura da caixa de combinação.  
   
 ### <a name="remarks"></a>Comentários  
  A largura padrão é 108 pixels.  
@@ -182,14 +182,14 @@ BOOL DeleteItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iIndex*  
- O índice baseado em zero do item a ser excluído.  
+*iIndex*<br/>
+[in] O índice baseado em zero do item a ser excluído.  
   
- [in] *dwData*  
- Os dados associados ao item a ser excluído.  
+*dwData*<br/>
+[in] Os dados associados ao item a ser excluído.  
   
- [in] *lpszText*  
- A cadeia de caracteres do item a ser excluído. Se houver vários itens com a mesma cadeia de caracteres, o primeiro item é excluído.  
+*lpszText*<br/>
+[in] A cadeia de caracteres do item a ser excluído. Se houver vários itens com a mesma cadeia de caracteres, o primeiro item é excluído.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o item especificado foi excluído; Caso contrário, FALSE.  
@@ -204,8 +204,8 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- True para habilitar o redimensionamento; FALSE para desabilitar o redimensionamento.  
+*bAtivar*<br/>
+[in] True para habilitar o redimensionamento; FALSE para desabilitar o redimensionamento.  
   
 ### <a name="remarks"></a>Comentários  
  Quando o redimensionamento é habilitado, a caixa de listagem será alterar o tamanho de acordo com os itens que ele exibe.  
@@ -218,8 +218,8 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszText*  
- A cadeia de caracteres de um item na caixa de listagem.  
+*lpszText*<br/>
+[in] A cadeia de caracteres de um item na caixa de listagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O índice baseado em zero do item; ou -1 se o item não for encontrado.  
@@ -268,8 +268,8 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Ponteiro para um contexto de dispositivo para a caixa de combinação.  
+*pDC*<br/>
+[in] Ponteiro para um contexto de dispositivo para a caixa de combinação.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O tamanho da caixa de combinação.  
@@ -285,8 +285,8 @@ LPCTSTR GetItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iIndex*  
- O índice baseado em zero de um item na caixa de listagem.  
+*iIndex*<br/>
+[in] O índice baseado em zero de um item na caixa de listagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para a cadeia de caracteres que está associado com o item; Caso contrário, nulo se o parâmetro de índice é inválido, ou se o parâmetro index é -1 e não há nenhum item selecionado na caixa de combinação.  
@@ -301,8 +301,8 @@ DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iIndex*  
- O índice baseado em zero de um item na caixa de listagem.  
+*iIndex*<br/>
+[in] O índice baseado em zero de um item na caixa de listagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Os dados associados com o item; ou 0 se o item não existe ou se o parâmetro index é -1 e não há nenhum item selecionado na caixa de listagem.  
@@ -340,8 +340,8 @@ virtual void OnSelectItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nItem*  
- O índice do item selecionado.  
+*nItem*<br/>
+[in] O índice do item selecionado.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua este método se você quiser processar uma seleção de entrada do usuário.  
@@ -366,14 +366,14 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iIndex*  
- O índice baseado em zero de um item na caixa de listagem.  
+*iIndex*<br/>
+[in] O índice baseado em zero de um item na caixa de listagem.  
   
- [in] *dwData*  
- Os dados associados a um item na caixa de listagem.  
+*dwData*<br/>
+[in] Os dados associados a um item na caixa de listagem.  
   
- [in] *lpszText*  
- A cadeia de caracteres de um item na caixa de listagem.  
+*lpszText*<br/>
+[in] A cadeia de caracteres de um item na caixa de listagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o método foi bem-sucedida; Caso contrário, FALSE.  
@@ -388,8 +388,8 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nHeight*  
- A altura, em pixels, da caixa de listagem.  
+*nHeight*<br/>
+[in] A altura, em pixels, da caixa de listagem.  
   
 ### <a name="remarks"></a>Comentários  
  A altura padrão é 150 pixels.  

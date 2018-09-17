@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae300569c4aa04a313f44a23fe988f1de7b826a1
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: eb253ab776565339aeaeade26d6d355b4f6a742b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540370"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699993"
 ---
 # <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
 **Seção específica da Microsoft**  
@@ -39,11 +39,11 @@ __m128 _mm_cvtsi64x_ss(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [in] `a`  
- Um `__m128` estrutura que contém quatro valores de ponto flutuante de precisão simples.  
+*a*<br/>
+[in] Um `__m128` estrutura que contém quatro valores de ponto flutuante de precisão simples.  
   
- [in] `b`  
- Um inteiro de 64 bits a ser convertido em um valor de ponto flutuante.  
+*b*<br/>
+[in] Um inteiro de 64 bits a ser convertido em um valor de ponto flutuante.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Um `__m128` estrutura cujo primeiro valor de ponto flutuante é o resultado da conversão. Os três valores são copiados sem alterações de `a`.  

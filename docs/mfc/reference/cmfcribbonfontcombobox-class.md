@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a53dd239d2c6cdba77f977cc94642828c5e91b7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 79facf2498769c0f4385f6dbc84133c3773fe0e7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216468"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705677"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>Classe CMFCRibbonFontComboBox
 Implementa uma caixa de combinação que contém uma lista de fontes. Você pode colocar a caixa de combinação em um painel de faixa de opções.  
@@ -106,14 +106,14 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nFontType*  
- Especifica o tipo de fonte das fontes para adicionar.  
+*nFontType*<br/>
+[in] Especifica o tipo de fonte das fontes para adicionar.  
   
- [in] *nCharSet*  
- Especifica o conjunto de caracteres das fontes para adicionar.  
+*nCharSet*<br/>
+[in] Especifica o conjunto de caracteres das fontes para adicionar.  
   
- [in] *nPitchAndFamily*  
- Especifica a densidade e a família de fontes para adicionar.  
+*nPitchAndFamily*<br/>
+[in] Especifica a densidade e a família de fontes para adicionar.  
   
 ##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
  Constrói e inicializa um [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md) objeto.  
@@ -128,20 +128,20 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nID*  
- A ID de comando do comando que é executado quando o usuário seleciona um item da caixa de combinação.  
+*nID*<br/>
+[in] A ID de comando do comando que é executado quando o usuário seleciona um item da caixa de combinação.  
   
- [in] *nFontType*  
- Especifica os tipos de qual fonte para exibir na caixa de combinação. As opções válidas são DEVICE_FONTTYPE, RASTER_FONTTYPE e TRUETYPE_FONTTYPE ou uma combinação bit a bit disso.  
+*nFontType*<br/>
+[in] Especifica os tipos de qual fonte para exibir na caixa de combinação. As opções válidas são DEVICE_FONTTYPE, RASTER_FONTTYPE e TRUETYPE_FONTTYPE ou uma combinação bit a bit disso.  
   
- [in] *nCharSet*  
- Filtra as fontes na caixa de combinação para aqueles que pertencem ao conjunto de caracteres especificado...  
+*nCharSet*<br/>
+[in] Filtra as fontes na caixa de combinação para aqueles que pertencem ao conjunto de caracteres especificado...  
   
- [in] *nPitchAndFamily*  
- Especifica a densidade e a família de fontes que são exibidos na caixa de combinação.  
+*nPitchAndFamily*<br/>
+[in] Especifica a densidade e a família de fontes que são exibidos na caixa de combinação.  
   
- [in] *nWidth*  
- Especifica a largura, em pixels, da caixa de combinação.  
+*nWidth*<br/>
+[in] Especifica a largura, em pixels, da caixa de combinação.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações sobre possíveis *nFontType* valores de parâmetro, consulte [EnumFontFamProc](https://msdn.microsoft.com/library/windows/desktop/dd162621) na documentação do SDK do Windows.  

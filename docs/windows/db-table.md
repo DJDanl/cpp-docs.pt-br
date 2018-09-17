@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab2dd3b359806aa6b5d54e476ec3581f7bb31d02
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6e084a0f876d0b2598a5317e15057162c602474a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201773"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717113"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -44,14 +44,14 @@ Abre uma tabela de OLE DB.
 *db_table*  
 Uma cadeia de caracteres especificando o nome de uma tabela de banco de dados (por exemplo, "produtos").
 
-*nome* (opcional)  
-O nome do identificador que você usa para trabalhar com a tabela. Você deve especificar esse parâmetro se você quiser retornar mais de uma linha de resultados. **db_table** gera uma variável com o especificado *nome* que pode ser usado para percorrer o conjunto de linhas ou executar várias consultas de ação.
+*name*  
+(Opcional) O nome do identificador que você usa para trabalhar com a tabela. Você deve especificar esse parâmetro se você quiser retornar mais de uma linha de resultados. **db_table** gera uma variável com o especificado *nome* que pode ser usado para percorrer o conjunto de linhas ou executar várias consultas de ação.
 
-*source_name* (opcional)  
-O `CSession` variável ou instância de uma classe que tem o `db_source` atributo aplicado a ele no qual o comando é executado. Ver [db_source](../windows/db-source.md).
+*source_name*  
+(Opcional) O `CSession` variável ou instância de uma classe que tem o `db_source` atributo aplicado a ele no qual o comando é executado. Ver [db_source](../windows/db-source.md).
 
-*HRESULT* (opcional)  
-Identifica a variável que receberá o HRESULT desse comando de banco de dados. Se a variável não existir, ele será automaticamente injetado pelo atributo.
+*HRESULT*  
+(Opcional) Identifica a variável que receberá o HRESULT desse comando de banco de dados. Se a variável não existir, ele será automaticamente injetado pelo atributo.
 
 ## <a name="remarks"></a>Comentários
 

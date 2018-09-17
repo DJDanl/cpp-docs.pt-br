@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85db49f138cc733326e47a3008e79bae5ab4b7cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7451ea6afee81cc296fb091705bde48041ef5d1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360774"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722482"
 ---
 # <a name="bitfields"></a>Campos de bits
-Campos de bits de estrutura são limitados a 64 bits e podem ser de tipo assinado int, int não assinado, int64 ou int64 não assinados. Campos de bits que cruzam o limite de tipo ignorará o bits para alinhar o campo de bits para o próximo alinhamento de tipo. Por exemplo, campos de bits de inteiro não podem ultrapassar um limite de 32 bits.  
-  
-## <a name="see-also"></a>Consulte também  
- [Tipos e armazenamento](../build/types-and-storage.md)
+
+Campos de bits da estrutura são limitados a 64 bits e pode ser do tipo assinado int, int sem sinal, int64 ou int64 sem sinal. Os campos de bits que cruzam o limite de tipo ignorará o bits para alinhar o campo de bits para o alinhamento do tipo Avançar. Por exemplo, os campos de bits de inteiro não podem cruzar um limite de 32 bits.
+
+## <a name="see-also"></a>Consulte também
+
+[Tipos e armazenamento](../build/types-and-storage.md)

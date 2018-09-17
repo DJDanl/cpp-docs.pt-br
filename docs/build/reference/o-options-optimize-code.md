@@ -19,42 +19,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83ddebec9db7a02db40ef31c89c7ff48a66cf665
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c77fd91d63ec79fca87e11a4a02eca157eddf84
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376794"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717529"
 ---
 # <a name="o-options-optimize-code"></a>/O opções (otimizar código)
 
-O **/O** opções controlam várias otimizações que ajudarão a criar o código para velocidade máxima ou tamanho mínimo.
+O **/O** opções controlam várias otimizações que ajudam você a criar código para velocidade máxima ou tamanho mínimo.
 
-- [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md) define uma combinação de otimizações que geram um código de tamanho mínimo.
+- [/ O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md) define uma combinação de otimizações que geram código de tamanho mínimo.
 
 - [/ O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md) define uma combinação de otimizações que otimiza o código para velocidade máxima.
 
 - [/OB](../../build/reference/ob-inline-function-expansion.md) controla a expansão de função embutida.
 
-- [/Od](../../build/reference/od-disable-debug.md) desabilita a otimização, a fim de acelerar a compilação e a simplificar a depuração.
+- [/Od](../../build/reference/od-disable-debug.md) desabilita a otimização para acelerar a compilação e simplificar a depuração.
 
-- [/Og](../../build/reference/og-global-optimizations.md) habilita as otimizações globais.
+- [/Og](../../build/reference/og-global-optimizations.md) permite otimizações globais.
 
 - [/Oi](../../build/reference/oi-generate-intrinsic-functions.md) gera funções intrínsecas para chamadas de função apropriada.
 
-- [/Os](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) informa ao compilador a favorecer otimizações para tamanho sobre otimizações para maior velocidade.
+- [/Os](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) informa ao compilador a favorecer otimizações para tamanho sobre otimizações de velocidade.
 
-- [/OT](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) (uma configuração padrão) instrui o compilador a favorecer otimizações para velocidade sobre otimizações de tamanho.
+- [/OT](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) (uma configuração padrão) instrui o compilador a favorecer as otimizações de velocidade sobre otimizações de tamanho.
 
-- [/OX](../../build/reference/ox-full-optimization.md) é uma opção de combinação que seleciona várias otimizações com ênfase na velocidade. É um subconjunto restrito do **/O2** otimizações.
+- [/OX](../../build/reference/ox-full-optimization.md) é uma opção de combinação que seleciona várias das otimizações com ênfase na velocidade. É um subconjunto estrito dos **/O2** otimizações.
 
-- [/Oy](../../build/reference/oy-frame-pointer-omission.md) suprime a criação de ponteiros de quadros na pilha de chamadas para chamadas de função mais rápidas.
+- [/Oy](../../build/reference/oy-frame-pointer-omission.md) suprime a criação de ponteiros de quadro na pilha de chamadas para chamadas de função mais rápidas.
 
 ## <a name="remarks"></a>Comentários
 
-Você pode combinar vários **/O** opções em uma instrução única opção. Por exemplo, **/Odi** é o mesmo que **/Oi /Od**. Algumas opções são mutuamente exclusivas e causam um erro do compilador se usados em conjunto. Consulte o indivíduo **/O** opções para obter mais informações.
+Você pode combinar vários **/O** opções em uma instrução única opção. Por exemplo, **/Odi** é o mesmo que **/Od /Oi**. Algumas opções são mutuamente exclusivas e causam um erro do compilador se usado em conjunto. Consulte o indivíduo **/O** opções para obter mais informações.
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do compilador](../../build/reference/compiler-options.md)   
+[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
 [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

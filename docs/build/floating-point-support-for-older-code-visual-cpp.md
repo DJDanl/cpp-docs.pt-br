@@ -12,15 +12,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd7cbf955fbf795d06d9cd2448d0736dc435f3b5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7285325bf1a934afcef337da318d019ec6fe375c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367154"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706804"
 ---
 # <a name="floating-point-support-for-older-code-visual-c"></a>Suporte de ponto flutuante para código anterior (Visual C++)
-Os registros de pilha de ponto flutuante (MM0-MM7/ST0-ST7) e MMX são preservados em alternâncias de contexto.  Não há nenhum convenção de chamada explícita para esses registros.  O uso de um desses registros é proibido no código em modo kernel.  
-  
-## <a name="see-also"></a>Consulte também  
- [Convenção de chamada](../build/calling-convention.md)
+
+O MMX e os registros de pilha de ponto flutuante (MM0-MM7/ST0-ST7) são preservados entre alternâncias de contexto.  Não há nenhum convenção de chamada explícita para esses registros.  O uso desses registros é estritamente proibido no código em modo kernel.
+
+## <a name="see-also"></a>Consulte também
+
+[Convenção de chamada](../build/calling-convention.md)

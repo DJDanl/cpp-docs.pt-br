@@ -18,38 +18,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40adadb2e9f0c06fc9164537656f7eec3b7527af
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0ac24a1dcbf873ad818d9921c311efd318dd34c4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373017"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702878"
 ---
 # <a name="output-file-f-options"></a>Opções do arquivo de saída (/F)
-As opções de arquivo de saída criar ou renomeiam arquivos de saída. Eles afetam todos os arquivos de origem C ou C++ especificados na variável de ambiente CL, na linha de comando ou em qualquer arquivo de comando.  
-  
--   [/FA, /Fa (arquivo de listagem)](../../build/reference/fa-fa-listing-file.md)  
-  
--   [Especificando o nome de caminho](../../build/reference/specifying-the-pathname.md)  
-  
--   [/FD (arquivo PDB do nome)](../../build/reference/fd-program-database-file-name.md)  
-  
--   [/Fe (nomear arquivo EXE)](../../build/reference/fe-name-exe-file.md)  
-  
--   [/FI (nomear arquivo de inclusão forçada)](../../build/reference/fi-name-forced-include-file.md)  
-  
--   [/Fm (nomear mapfile)](../../build/reference/fm-name-mapfile.md)  
-  
--   [/FO (nome de arquivo de objeto)](../../build/reference/fo-object-file-name.md)  
-  
--   [/FP (nomear o arquivo. pch)](../../build/reference/fp-name-dot-pch-file.md)  
-  
--   [/FR, /Fr (criar arquivo. SBR)](../../build/reference/fr-fr-create-dot-sbr-file.md)  
-  
--   [/FU (nomear arquivo #using forçado)](../../build/reference/fu-name-forced-hash-using-file.md)  
-  
--   [/Fx (mesclar código inserido)](../../build/reference/fx-merge-injected-code.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+
+As opções de arquivo de saída criar ou renomear arquivos de saída. Elas afetam todos os arquivos de origem C ou C++ especificados na variável de ambiente CL, na linha de comando ou em qualquer arquivo de comando.
+
+- [/FA, /Fa (arquivo de listagem)](../../build/reference/fa-fa-listing-file.md)
+
+- [Especificando o nome de caminho](../../build/reference/specifying-the-pathname.md)
+
+- [/FD (nomear arquivo PDB)](../../build/reference/fd-program-database-file-name.md)
+
+- [/Fe (nomear arquivo EXE)](../../build/reference/fe-name-exe-file.md)
+
+- [/FI (nomear arquivo de inclusão forçada)](../../build/reference/fi-name-forced-include-file.md)
+
+- [/Fm (nomear mapfile)](../../build/reference/fm-name-mapfile.md)
+
+- [/FO (nomear arquivo de objeto)](../../build/reference/fo-object-file-name.md)
+
+- [/FP (nomear o arquivo. pch)](../../build/reference/fp-name-dot-pch-file.md)
+
+- [/FR, /Fr (criar arquivo. SBR)](../../build/reference/fr-fr-create-dot-sbr-file.md)
+
+- [/FU (nomear arquivo #using forçado)](../../build/reference/fu-name-forced-hash-using-file.md)
+
+- [/Fx (mesclar código inserido)](../../build/reference/fx-merge-injected-code.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
+[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

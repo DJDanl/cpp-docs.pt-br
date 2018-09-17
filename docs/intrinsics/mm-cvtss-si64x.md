@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 947c9bf0892da52b44a99486b3ff0f1d59bc6fee
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 1cba221f0944f840f9cdf76da86ec7ce37f37ca8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42541524"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713767"
 ---
 # <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
 **Seção específica da Microsoft**  
@@ -38,8 +38,8 @@ __int64 _mm_cvtss_si64x(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [in] `value`  
- Um `__m128` estrutura que contém valores de ponto flutuante.  
+*value*<br/>
+[in] Um `__m128` estrutura que contém valores de ponto flutuante.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Um inteiro de 64 bits, o resultado da conversão do primeiro valor de ponto flutuante para um número inteiro.  

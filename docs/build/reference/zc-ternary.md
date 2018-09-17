@@ -1,5 +1,5 @@
 ---
-title: /ZC:ternary (Aplicar regras de operador condicional) | Microsoft Docs
+title: '/ZC: ternary (Aplicar regras de operador condicional) | Microsoft Docs'
 ms.date: 3/06/2018
 ms.technology:
 - cpp-tools
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - -Zc:ternary
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 613381795fb962e1f10ec01598748b617b7543aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a8cd0a4034b07d170bc9ca531d60cce508681a2a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380817"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717815"
 ---
-# <a name="zcternary-enforce-conditional-operator-rules"></a>/ZC:ternary (Aplicar regras de operador condicional)
+# <a name="zcternary-enforce-conditional-operator-rules"></a>/ZC: ternary (Aplicar regras de operador condicional)
 
-Habilite a imposição de regras de C++ padrão para os tipos e const ou volátil qualificação (VC) do segundo e terceiro operandos em uma expressão de operador condicional.
+Habilite a imposição de regras padrão do C++ para os tipos e const ou volatile qualificação (VC) do segundo e terceiro operandos em uma expressão de operador condicional.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,13 +31,13 @@ Habilite a imposição de regras de C++ padrão para os tipos e const ou voláti
 
 ## <a name="remarks"></a>Comentários
 
-Visual Studio versão 15,3 habilita o suporte de compilador para operador condicional (ou Ternário) padrão do C++ (**?:**) comportamento. O padrão C++ requer operandos para ser do mesmo tipo e VC-qualificação, ou apenas um operando ser inequivocamente conversível para o mesmo tipo e VC-qualificação como o outro ou para um ou ambos os operandos ser uma expressão throw. Nas versões anteriores do Visual Studio versão 15,5, o compilador permitidas conversões que são considerados ambíguos por padrão. Quando o **/Zc:ternary** opção for especificada, o compilador está de acordo com o padrão e rejeita o código que não satisfazem as regras para tipos correspondentes e VC-qualificação de segundo e terceiro operandos.
+Visual Studio versão 15.3 habilita o suporte de compilador para operador condicional (ou Ternário) padrão do C++ (**?:**) comportamento. O padrão C++ requer que ambos os operandos para ser do mesmo tipo e qualificação de cv, ou apenas um operando ser inequivocamente conversível para o mesmo tipo e qualificação de cv como o outro ou para um ou ambos os operandos ser uma expressão de lançamento. Nas versões anteriores do Visual Studio versão 15.5, o compilador permitia conversões que são consideradas ambíguas pelo padrão. Quando o **/ZC: ternary** opção for especificada, o compilador esteja de acordo com o padrão e rejeita o código que não satisfazem as regras para tipos correspondentes e qualificação de cv-os segundo e terceiro operandos.
 
-O **/Zc:ternary** opção está desativada por padrão. Use **/Zc:ternary** para habilitar o comportamento de conformidade, ou **/Zc:ternary-** para especificar explicitamente o comportamento do compilador não conformes anterior. O [/ permissivo-](permissive-standards-conformance.md) opção implicitamente habilita essa opção, mas ele pode ser substituído usando **/Zc:ternary-**.
+O **/ZC: ternary** opção está desativada por padrão. Use **/ZC: ternary** para habilitar o comportamento de conformidade, ou **/Zc:ternary-** para especificar explicitamente o comportamento do compilador anterior não conformes. O [/permissive--](permissive-standards-conformance.md) opção implicitamente habilita essa opção, mas ele pode ser substituído usando **/Zc:ternary-**.
 
 ### <a name="examples"></a>Exemplos
 
-Este exemplo mostra como uma classe que fornece os dois inicialização não explícita de um tipo e a conversão para um tipo pode levar a conversões ambíguas. Esse código é aceita pelo compilador por padrão, mas rejeitada quando **/Zc:ternary** ou **/ permissivo-** for especificado.
+Este exemplo mostra como uma classe que fornece os dois não explícita a inicialização de um tipo e a conversão para um tipo pode levar a conversões ambíguas. Esse código é aceito pelo compilador, por padrão, mas rejeitado quando **/ZC: ternary** ou **/permissive--** for especificado.
 
 ```cpp
 // zcternary1.cpp
@@ -61,9 +61,9 @@ int main()
 }
 ```
 
-A correção necessária é fazer uma conversão explícita para o tipo preferencial de comuns, ou impedir que uma direção de conversão de participação na pesquisa de compilador para um tipo de correspondência, tornando a conversão explícita.
+É a correção necessária fazer uma conversão explícita para o tipo preferencial de comum ou impedir uma direção de conversão da participação na pesquisa de compilador para que uma correspondência de tipo ao fazer a conversão explícita.
 
-Uma exceção a esse padrão comum é quando o tipo dos operandos é um dos tipos de cadeia de caracteres terminada em nulo, como `const char*`, `const char16_t*`e assim por diante. Você também pode reproduzir isso com tipos de matriz e os tipos de ponteiro para que eles decay. O comportamento quando o operando real de segundo ou de terceiro para?: é um literal de cadeia de caracteres do tipo correspondente depende do idioma padrão usado. C++ 17 foi alterado semântica para esse caso de C + + 14. Como resultado, o código no exemplo a seguir é aceito em **/std:c + + 14** (o padrão do compilador), mas é rejeitada quando **/std:c + + 17** for especificado.
+Uma exceção importante para esse padrão comum é quando o tipo dos operandos é um dos tipos de cadeia de caracteres terminada em nulo, tais como `const char*`, `const char16_t*`e assim por diante. Você também pode reproduzir isso com tipos de matriz e eles decay para os tipos de ponteiro. O comportamento quando o operando de segundo ou terceiro real para?: é um literal de cadeia de caracteres de tipo correspondente depende do idioma padrão usado. C++17 mudou a semântica para esse caso de C + + 14. Como resultado, o código no exemplo a seguir é aceito em **/std:c++17 + + 14** (o padrão do compilador), mas é rejeitada quando **/std: c + + 17** for especificado.
 
 ```cpp
 // zcternary2.cpp
@@ -85,7 +85,7 @@ int main()
 
 Para corrigir esse código, converta um dos operandos explicitamente.
 
-Em **/Zc:ternary**, os operadores condicionais de compilador rejeita onde um dos argumentos é do tipo nulo e o outro não é uma expressão throw. Um uso comum deles está em macros de declaração:
+Sob **/ZC: ternary**, os operadores condicionais de compilador rejeita onde um dos argumentos é do tipo void e o outro não é uma expressão de lançamento. Um uso comum desses está nas macros de declaração:
 
 ```cpp
 // zcternary3.cpp
@@ -102,9 +102,9 @@ int main()
 }
 ```
 
-A solução típica é simplesmente substitua o argumento não void void().
+A solução típica é simplesmente substituir o argumento não nulo com void().
 
-Este exemplo mostra o código que gera um erro em ambos **/Zc:ternary** e **/Zc:ternary-**:
+Este exemplo mostra o código que gera um erro em ambos **/ZC: ternary** e **/Zc:ternary-**:
 
 ```cpp
 // zcternary4.cpp
@@ -119,14 +119,14 @@ int main() {
 }
 ```
 
-Esse código fornecido anteriormente este erro:
+Esse código anteriormente deu a esse erro:
 
 ```Output
 error C2446: ':': no conversion from 'foo::<lambda_f6cd18702c42f6cd636bfee362b37033>' to 'foo::<lambda_717fca3fc65510deea10bc47e2b06be4>'
 note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
 ```
 
-Com **/Zc:ternary** o motivo da falha se torna mais claro; arquiteturas onde qualquer uma das várias convenções de chamada definido pela implementação pode ser usado para gerar cada lambda, o compilador expressa sem preferência entre eles que pode resolver a ambiguidade as assinaturas de lambda possíveis. A nova saída terá esta aparência:
+Com o **/ZC: ternary** o motivo da falha se torna mais claro; em arquiteturas em que qualquer uma das várias convenções de chamada definido pela implementação pode ser usado para gerar cada lambda, o compilador não expressa nenhuma preferência entre eles que pode resolver a ambiguidade as assinaturas de lambda possíveis. A nova saída tem esta aparência:
 
 ```Output
 error C2593: 'operator ?' is ambiguous
@@ -137,7 +137,7 @@ note: or       'built-in C++ operator?(bool (__vectorcall *)(int,int), bool (__v
 note: while trying to match the argument list '(foo::<lambda_717fca3fc65510deea10bc47e2b06be4>, foo::<lambda_f6cd18702c42f6cd636bfee362b37033>)'
 ```
 
-Uma fonte comum de problemas relacionados a adoção de **/Zc:ternary** vêm com o uso do operador condicional no modelo metaprogramação, como alguns dos tipos de resultado altera de acordo com essa opção. O exemplo a seguir demonstra dois casos onde **/Zc:ternary** altera o tipo de resultado de uma expressão condicional em um contexto de programação de metadados:
+Uma fonte comum de problemas relacionados à adoção **/ZC: ternary** vem do uso do operador condicional no modelo metaprogramação, conforme alguns dos tipos result alteram sob essa opção. O exemplo a seguir demonstra dois casos em que **/ZC: ternary** altera o tipo de resultado de uma expressão condicional em um contexto de programação de meta:
 
 ```cpp
 // zcternary5.cpp
@@ -152,18 +152,18 @@ int main(int argc, char**) {
 }
 ```
 
-A resolução típica nesses casos é aplicar uma `std::remove_reference` característica no resultado de tipo quando for necessário para preservar o comportamento antigo.
+A resolução comum nesses casos é aplicar um `std::remove_reference` onde for necessário para preservar o comportamento antigo de tipo de característica no resultado.
 
 Para obter mais informações sobre problemas de conformidade no Visual C++, consulte [comportamento não padrão](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **C/C++** > **linha de comando** página de propriedades.
 
-1. Modificar o **opções adicionais** propriedade incluir **/Zc:ternary** ou **/Zc:ternary-** e, em seguida, escolha **Okey**.
+1. Modificar a **opções adicionais** propriedade incluir **/ZC: ternary** ou **/Zc:ternary-** e, em seguida, escolha **Okey**.
 
 ## <a name="see-also"></a>Consulte também
 
-[/Zc (conformidade)](../../build/reference/zc-conformance.md)  
+[/Zc (conformidade)](../../build/reference/zc-conformance.md)

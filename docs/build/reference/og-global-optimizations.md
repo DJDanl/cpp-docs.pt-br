@@ -23,16 +23,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03ef87f31e478bfbc8691b7e678186dd1a0621e5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8443ae8111476cdd3339982c8df0b4b7e3e9c475
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377151"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722521"
 ---
 # <a name="og-global-optimizations"></a>/Og (otimizações globais)
 
-Preterido. Fornece otimizações de locais e globais, alocação de registro automático e otimização de loop. Recomendamos que você use um [/O1 (minimizar tamanho)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) ou [/O2 (maximizar velocidade)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) em vez disso.
+Preterido. Fornece otimizações de locais e globais, alocação o registro automático e a otimização de loop. É recomendável que você use um [/O1 (minimizar tamanho)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) ou [/O2 (maximizar velocidade)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) em vez disso.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -40,13 +40,13 @@ Preterido. Fornece otimizações de locais e globais, alocação de registro aut
 
 ## <a name="remarks"></a>Comentários
 
-**/Og** foi preterido. Geralmente, essas otimizações agora estão habilitadas por padrão. Para obter mais informações sobre otimizações, consulte [/O1, /O2 (minimizar tamanho, maximizar velocidade)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) ou [/Ox (habilitar mais velocidade otimizações)](../../build/reference/ox-full-optimization.md).
+**/Og** foi preterido. Geralmente, essas otimizações agora estão habilitadas por padrão. Para obter mais informações sobre as otimizações, consulte [/O1, / O2 (minimizar tamanho, maximizar velocidade)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) ou [/Ox (habilitar mais otimizações de velocidade)](../../build/reference/ox-full-optimization.md).
 
-As otimizações a seguir estão disponíveis em **/Og**:
+As seguintes otimizações estão disponíveis sob **/Og**:
 
-- Eliminação de subexpressão comum locais e globais
+- Eliminação de subexpressão comum global e local
 
-     Nessa otimização, o valor de uma subexpressão comum é calculado uma vez. No exemplo a seguir, se os valores de `b` e `c` não alterar entre as três expressões, o compilador pode atribuir o cálculo de `b + c` em uma variável temporária e substitua a variável `b + c`:
+   Dessa otimização, o valor de uma subexpressão comum é calculado uma vez. No exemplo a seguir, se os valores de `b` e `c` não alterar entre as três expressões, o compilador pode atribuir o cálculo da `b + c` a uma variável temporária e substitua a variável para `b + c`:
 
     ```C
     a = b + c;
@@ -54,15 +54,15 @@ As otimizações a seguir estão disponíveis em **/Og**:
     e = b + c;
     ```
 
-     Para a otimização de subexpressão comum local, o compilador examina curtas seções de código para subexpressões comuns. Para a otimização de subexpressão comum global, o compilador pesquisa funções inteiras para subexpressões comuns.
+   Para a otimização de subexpressão comum local, o compilador examina curtas seções de código para subexpressões comuns. Para a otimização de subexpressão comum global, o compilador procura funções inteiras para subexpressões comuns.
 
 - Alocação de registro automático
 
-     Essa otimização permite que o compilador subexpressões e variáveis de armazenamento usado com frequência nos registros; o `register` palavra-chave é ignorado.
+   Essa otimização permite que o compilador repositório usado frequentemente variáveis e subexpressões em registros; o `register` palavra-chave é ignorado.
 
 - Otimização de loop
 
-     Essa otimização remove subexpressões invariáveis do corpo de um loop. Um loop ideal contém somente as expressões cujos valores são alterados por meio de cada execução do loop. No exemplo a seguir, a expressão `x + y` não é alterado no corpo do loop:
+   Essa otimização remove subexpressões invariáveis do corpo de um loop. Um loop ideal contém somente as expressões cujos valores são alterados por meio de cada execução do loop. No exemplo a seguir, a expressão `x + y` não é alterado no corpo do loop:
 
     ```C
     i = -100;
@@ -71,7 +71,7 @@ As otimizações a seguir estão disponíveis em **/Og**:
     }
     ```
 
-     Depois da otimização, `x + y` é calculada uma vez, em vez de toda vez que o loop é executado:
+   Depois da otimização, `x + y` é calculada uma vez em vez de toda vez que o loop é executado:
 
     ```C
     i = -100;
@@ -81,22 +81,22 @@ As otimizações a seguir estão disponíveis em **/Og**:
     }
     ```
 
-     Otimização de loop é muito mais eficaz quando o compilador não pode assumir nenhum alias, definido com [Restrict](../../cpp/extension-restrict.md), [noalias](../../cpp/noalias.md), ou [restringir](../../cpp/restrict.md).
+   Otimização de loop é muito mais eficaz quando o compilador não pode presumir nenhuma criação de alias, você pode definir com [Restrict](../../cpp/extension-restrict.md), [noalias](../../cpp/noalias.md), ou [restringir](../../cpp/restrict.md).
 
-    > [!NOTE]
-    > Você pode habilitar ou desabilitar a otimização global em uma base por função de função usando o `optimize` pragma junto com o `g` opção.
+   > [!NOTE]
+   > Você pode habilitar ou desabilitar a otimização global em uma base de função por função usando o `optimize` pragma junto com o `g` opção.
 
- Para obter informações relacionadas, consulte [/Oi (gerar funções intrínsecas)](../../build/reference/oi-generate-intrinsic-functions.md) e [/Ox (habilitar mais velocidade otimizações)](../../build/reference/ox-full-optimization.md).
+Para obter informações relacionadas, consulte [/Oi (gerar funções intrínsecas)](../../build/reference/oi-generate-intrinsic-functions.md) e [/Ox (habilitar mais otimizações de velocidade)](../../build/reference/ox-full-optimization.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
 
 1. Clique o **C/C++** pasta.
 
 1. Clique o **linha de comando** página de propriedades.
 
-1. Insira a opção de compilador no **opções adicionais** caixa.
+1. Insira a opção de compilador na **opções adicionais** caixa.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 

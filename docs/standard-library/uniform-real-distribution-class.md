@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9a9661bc61d59d6ca5b0aff1889a6bb736a1001
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 24a750afa3f4cbc84b4fbfe306c1f97be23200d7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103221"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710795"
 ---
 # <a name="uniformrealdistribution-class"></a>Classe uniform_real_distribution
 
@@ -200,13 +200,13 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*a*  
+*a*<br/>
 O limite inferior para valor aleatório (inclusivo).
 
-*b*  
+*b*<br/>
 O limite superior para valor aleatório (exclusivo).
 
-*parm*  
+*parm*<br/>
 A estrutura `param_type` usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
@@ -235,13 +235,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*a*  
+*a*<br/>
 O limite inferior para valor aleatório (inclusivo).
 
-*b*  
+*b*<br/>
 O limite superior para valor aleatório (exclusivo).
 
-*right*  
+*right*<br/>
 O objeto `param_type` a ser comparado a este.
 
 ### <a name="remarks"></a>Comentários

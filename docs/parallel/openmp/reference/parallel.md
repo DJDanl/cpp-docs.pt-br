@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0436dbbc75690d38b5930a491b7058ee095341
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1c8b1466eae343b6c644b6ecfbd919c3241259bf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692279"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705959"
 ---
 # <a name="parallel"></a>parallel
-Define uma região parallel, que é o código que será executado por vários threads em paralelo.  
+Define uma região paralela, que é um código que será executado por vários threads em paralelo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,11 +35,10 @@ Define uma região parallel, que é o código que será executado por vários th
 }  
 ```  
   
-## <a name="remarks"></a>Comentários  
- onde,  
-  
- `clause` (opcional)  
- Zero ou mais cláusulas.  Consulte a seção comentários para obter uma lista das cláusulas de suporte **paralela**.  
+## <a name="arguments"></a>Arguments
+
+*Cláusula*<br/>
+(Opcional) Zero ou mais cláusulas.  Consulte a seção comentários para obter uma lista das cláusulas com suporte pelo **paralela**.  
   
 ## <a name="remarks"></a>Comentários  
  O **paralela** diretiva suporta as seguintes cláusulas OpenMP:  
@@ -60,12 +59,12 @@ Define uma região parallel, que é o código que será executado por vários th
   
 -   [shared](../../../parallel/openmp/reference/shared-openmp.md)  
   
- **paralelo** também pode ser usado com o [seções](../../../parallel/openmp/reference/sections-openmp.md) e [para](../../../parallel/openmp/reference/for-openmp.md) diretivas.  
+ **Parallel** também pode ser usado com o [seções](../../../parallel/openmp/reference/sections-openmp.md) e [para](../../../parallel/openmp/reference/for-openmp.md) diretivas.  
   
  Para obter mais informações, consulte [2.3 construto parallel](../../../parallel/openmp/2-3-parallel-construct.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como definir o número de threads e uma região parallel. Por padrão, o número de threads é igual ao número de processadores lógicos no computador. Por exemplo, se você tiver um computador com um processador físico com hyperthreading habilitado, ele terá dois processadores lógicos e, portanto, dois segmentos.  
+ O exemplo a seguir mostra como definir o número de threads e definir uma região paralela. Por padrão, o número de threads é igual ao número de processadores lógicos no computador. Por exemplo, se você tiver um computador com um processador físico que tem o hyperthreading habilitado, ele terá dois processadores lógicos e, portanto, dois threads.  
   
 ```  
 // omp_parallel.cpp  
@@ -90,7 +89,7 @@ Hello from thread 3
 ```  
   
 ## <a name="comment"></a>Comentário  
- Observe que a ordem de saída pode variar em máquinas diferentes.  
+ Observe que a ordem de saída pode variar em computadores diferentes.  
   
 ## <a name="see-also"></a>Consulte também  
  [Diretivas](../../../parallel/openmp/reference/openmp-directives.md)

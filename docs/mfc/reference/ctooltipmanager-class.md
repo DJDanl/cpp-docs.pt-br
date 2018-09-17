@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9de39d2054f3c75e00e8827ebb4aaefac9970d59
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 81e027108d0f7b62ba707718c5396432396bdc5e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543073"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711874"
 ---
 # <a name="ctooltipmanager-class"></a>Classe CTooltipManager
 Mantém informações de tempo de execução sobre dicas de ferramenta. O `CTooltipManager` classe é instanciada uma vez por aplicativo.  
@@ -76,14 +76,14 @@ static BOOL CreateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *pToolTip*  
- Uma referência a um ponteiro de dica de ferramenta. Ele é definido para apontar para a dica de ferramenta criada recentemente quando a função retorna.  
+*pToolTip*<br/>
+[out] Uma referência a um ponteiro de dica de ferramenta. Ele é definido para apontar para a dica de ferramenta criada recentemente quando a função retorna.  
   
- [in] *pWndParent*  
- Pai da dica de ferramenta.  
+*pWndParent*<br/>
+[in] Pai da dica de ferramenta.  
   
- [in] *nType*  
- Tipo de dica de ferramenta.  
+*nType*<br/>
+[in] Tipo de dica de ferramenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se uma dica de ferramenta foi criada com êxito.  
@@ -117,8 +117,8 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [no, out] *pToolTip*  
- Uma referência a um ponteiro para uma dica de ferramenta a ser destruído.  
+*pToolTip*<br/>
+[no, out] Uma referência a um ponteiro para uma dica de ferramenta a ser destruído.  
   
 ### <a name="remarks"></a>Comentários  
  Chame esse método para cada [classe CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) que foi criado por [CTooltipManager::CreateToolTip](#createtooltip). O controle pai deve chamar esse método de seu `OnDestroy` manipulador. Isso é necessário para remover corretamente a dica de ferramenta do framework. Esse método define *pToolTip* para nulo antes de retornar.  
@@ -134,14 +134,14 @@ void SetTooltipParams(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nTypes*  
- Especifica os tipos de controle.  
+*nTypes*<br/>
+[in] Especifica os tipos de controle.  
   
- [in] *pRTC*  
- Classe de tempo de execução de dica de ferramenta personalizada.  
+*pRTC*<br/>
+[in] Classe de tempo de execução de dica de ferramenta personalizada.  
   
- [in] *pParams*  
- Parâmetros de dica de ferramenta.  
+*pParams*<br/>
+[in] Parâmetros de dica de ferramenta.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método define a classe de tempo de execução e os parâmetros iniciais que o [CToolTipManager](../../mfc/reference/ctooltipmanager-class.md) usa quando ele cria as dicas de ferramenta. Quando um controle chama [CTooltipManager::CreateToolTip](#createtooltip) e passa em uma dica de ferramenta tipo que é um dos tipos de indicado pelo *nTypes*, o Gerenciador de dica de ferramenta cria um controle de dica de ferramenta que é uma instância das classe de tempo de execução especificado por *pRTC* e passa os parâmetros especificados pelo *pParams* à nova dica de ferramenta.  
@@ -168,20 +168,20 @@ static void SetTooltipText(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pTI*  
- Um ponteiro para um objeto TOOLINFO.  
+*pTI*<br/>
+[in] Um ponteiro para um objeto TOOLINFO.  
   
- [no, out] *pToolTip*  
- Um ponteiro para o controle de dica de ferramenta para o qual definir o texto e a descrição.  
+*pToolTip*<br/>
+[no, out] Um ponteiro para o controle de dica de ferramenta para o qual definir o texto e a descrição.  
   
- [in] *nType*  
- Especifica o tipo de controle ao qual esta dica de ferramenta está associada.  
+*nType*<br/>
+[in] Especifica o tipo de controle ao qual esta dica de ferramenta está associada.  
   
- [in] *strText*  
- O texto a ser definido como o texto de dica de ferramenta.  
+*strText*<br/>
+[in] O texto a ser definido como o texto de dica de ferramenta.  
   
- [in] *lpszDescr*  
- Um ponteiro para a descrição da dica de ferramenta. Pode ser NULL.  
+*lpszDescr*<br/>
+[in] Um ponteiro para a descrição da dica de ferramenta. Pode ser NULL.  
   
 ### <a name="remarks"></a>Comentários  
  O valor de *nType* deve ser o mesmo valor que o *nType* parâmetro do [CTooltipManager::CreateToolTip](#createtooltip) quando criou a dica de ferramenta.  

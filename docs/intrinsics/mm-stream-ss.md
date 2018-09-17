@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5058ac6c415f155b6a7cab712002d4769983d1f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef5910f47fdf9c058cfb4493c9df486749da18fc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339482"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714383"
 ---
 # <a name="mmstreamss"></a>_mm_stream_ss  
   
 **Seção específica da Microsoft**  
   
- Grava dados de 32 bits em um local de memória sem polua caches.  
+ Grava dados de 32 bits em um local de memória sem poluir os caches.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,11 +41,11 @@ void _mm_stream_ss(
   
 #### <a name="parameters"></a>Parâmetros  
   
- [out] `Dest`  
- Um ponteiro para o local onde os dados de origem são gravados.  
+*dest*<br/>
+[out] Um ponteiro para o local onde os dados de origem são gravados.  
   
- [in] `Source`  
- Um número de 128 bits que contém o `float` valor a ser gravado no seu inferior de 32 bits.  
+*Source*<br/>
+[in] Um número de 128 bits que contém o `float` valor a ser gravado em sua parte inferior de 32 bits...  
   
 ## <a name="return-value"></a>Valor de retorno  
   
@@ -57,13 +57,13 @@ void _mm_stream_ss(
 |---------------|------------------|  
 |`_mm_stream_ss`|SSE4a|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
   
-Nesse intrínsecas gera o `movntss` instrução. Para determinar o suporte de hardware para essa instrução, chame o `__cpuid` intrínseco com `InfoType=0x80000001` e verifique o bit 6 de `CPUInfo[2] (ECX)`. Esse bit for 1 quando há suporte para a instrução e 0, caso contrário.  
+Esse intrínseco gera o `movntss` instrução. Para determinar o suporte de hardware para essa instrução, chame o `__cpuid` intrínseco com `InfoType=0x80000001` e marque 6 bits de `CPUInfo[2] (ECX)`. Esse bit é 1 quando a instrução é compatível e 0 caso contrário.  
   
-Se você executar o código que usa o `_mm_stream_ss` intrínseco no hardware que não oferece suporte a `movntss` instrução, os resultados são imprevisíveis.  
+Se você executar o código que usa o `_mm_stream_ss` intrínseco no hardware que não oferece suporte a `movntss` instrução, os resultados serão imprevisíveis.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -99,7 +99,7 @@ f[2] = -3, f[3] = 3
   
 **Fim da seção específica da Microsoft**  
 
-Copyright 2007 Advanced Micro dispositivos, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro Devices, Inc.  
+Copyright 2007 por dispositivos Micro avançada, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro dispositivos, Inc.  
   
 ## <a name="see-also"></a>Consulte também  
  [_mm_stream_sd](../intrinsics/mm-stream-sd.md)   

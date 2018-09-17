@@ -1,5 +1,5 @@
 ---
-title: Vinculando | Microsoft Docs
+title: Vinculação | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,23 +12,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28b0e9aae66742febca84c7707c4818e1910a9a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c29e7320a96b8d0fb1beda50e4a8e5f8f0bcb0d7
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372410"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707779"
 ---
 # <a name="linking"></a>Vinculação
-Para obter informações sobre como usar o vinculador, consulte as seções a seguir:  
-  
--   [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)  
-  
--   [Opções do vinculador](../../build/reference/linker-options.md)  
-  
--   [Arquivos de definição de módulo (. def)](../../build/reference/module-definition-dot-def-files.md)  
-  
--   [Suporte do vinculador para DLLs carregadas com atraso](../../build/reference/linker-support-for-delay-loaded-dlls.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de build C/C++](../../build/reference/c-cpp-building-reference.md)
+
+Para obter informações sobre como usar o vinculador, consulte as seções a seguir:
+
+- [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)
+
+- [Opções do vinculador](../../build/reference/linker-options.md)
+
+- [Arquivos de definição de módulo (. def)](../../build/reference/module-definition-dot-def-files.md)
+
+- [Suporte do vinculador para DLLs carregadas com atraso](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de build C/C++](../../build/reference/c-cpp-building-reference.md)

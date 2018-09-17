@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9b5bc8568c3655d8c038d70d78f3887b2c3becc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 775fbe39edc9478b1fce3afb39ee2bf1f6d5ed36
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607519"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714305"
 ---
 # <a name="interface-class--c-component-extensions"></a>classe de interface (Extensões de Componentes C++)
 
@@ -50,8 +50,8 @@ O nome da interface.
 *inherit_access*  
 A acessibilidade de *base_interface*.  Os únicos permitidos acessibilidade para uma interface de base está **pública** (o padrão).
 
-*base_interface* (opcional)  
-Uma interface base para a interface *nome*.
+*base_interface*  
+(Opcional) Uma interface base para a interface *nome*.
 
 ### <a name="remarks"></a>Comentários
 

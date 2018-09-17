@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd5ebd1b70476fd4248d3e309dec967ea471cf0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2f839b6c9b87bb37564951d1c15935ad573e1b46
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197391"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719284"
 ---
 # <a name="hook"></a>__hook
 
@@ -75,8 +75,8 @@ Um ponteiro para o método do manipulador de eventos a ser enganchado a um event
 
 - Eventos gerenciados: *ReceiverClass* é a classe de receptor de evento e `HandlerMethod` é o manipulador.
 
-*receptor* (opcional)<br/>
-Um ponteiro para uma instância da classe do receptor de eventos. Se você não especificar um receptor, o padrão é a classe do receptor ou estrutura na qual **hook** é chamado.
+*Receptor*<br/>
+(Opcional) Um ponteiro para uma instância da classe do receptor de evento. Se você não especificar um receptor, o padrão é a classe do receptor ou estrutura na qual **hook** é chamado.
 
 ## <a name="usage"></a>Uso
 

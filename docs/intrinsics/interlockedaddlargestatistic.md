@@ -18,17 +18,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 602cfb415c17c9e57d9fc1e932777cd1929e5f40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ee14f187545e09bbdca81f760b85e771fba3936d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331391"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703905"
 ---
 # <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
 **Seção específica da Microsoft**  
   
- Executa uma adição interlocked em que o primeiro operando é um valor de 64 bits.  
+ Executa uma adição sincronizada em que o primeiro operando é um valor de 64 bits.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,11 +40,11 @@ long _InterlockedAddLargeStatistic(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [in, out] `Addend`  
- Um ponteiro para o primeiro operando com a operação de adição. O valor apontado é substituído pelo resultado da adição.  
+*Adendo*<br/>
+[no, out] Um ponteiro para o primeiro operando com a operação de adição. O valor apontado é substituído pelo resultado da adição.  
   
- [in] `Value`  
- O segundo operando; valor a ser adicionado para o primeiro operando.  
+*Value*<br/>
+[in] O segundo operando; valor a ser adicionado para o primeiro operando.  
   
 ## <a name="return-value"></a>Valor de retorno  
  O valor do segundo operando.  
@@ -55,10 +55,10 @@ long _InterlockedAddLargeStatistic(
 |---------------|------------------|  
 |`_InterlockedAddLargeStatistic`|x86|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
- Nesse intrínseco não é atômico porque ele é implementado como dois separam instruções bloqueadas. Uma leitura de 64 bits atômica que ocorre em outro thread durante a execução deste intrínseco pode resultar em um valor inconsistente sendo lido.  
+ Esse intrínseco não é atômico porque ele é implementado como dois separados instruções bloqueadas. Uma leitura de 64-bit atômica que ocorre em outro thread durante a execução desse intrínseco pode resultar em um valor inconsistente que está sendo lido.  
   
  Essa função se comporta como uma barreira de leitura / gravação. Para obter mais informações, consulte [readwritebarrier](../intrinsics/readwritebarrier.md).  
   

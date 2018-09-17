@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 709992c42cf7fd489fbe8fe8d4ebf40bf92a989e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0ea0bf6ed8361419af3519a41edbe6bb3c4b4a77
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849959"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725654"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>Classe CMFCColorPickerCtrl
 O `CMFCColorPickerCtrl` classe fornece funcionalidade para um controle que é usado para selecionar cores.  
@@ -158,11 +158,11 @@ virtual void DrawCursor(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Ponteiro para um contexto de dispositivo.  
   
- [in] *rect*  
- Especifica uma área retangular ao redor da cor selecionada.  
+*Rect*<br/>
+[in] Especifica uma área retangular ao redor da cor selecionada.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua este método quando você precisar alterar a forma do cursor que aponta para a cor selecionada.  
@@ -190,14 +190,14 @@ void GetHLS(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *matiz*  
- Ponteiro para uma variável do tipo duplo que recebe informações de matiz.  
+*Matiz*<br/>
+[out] Ponteiro para uma variável do tipo duplo que recebe informações de matiz.  
   
- [out] *luminância*  
- Ponteiro para uma variável do tipo duplo que recebe informações de luminância.  
+*luminância*<br/>
+[out] Ponteiro para uma variável do tipo duplo que recebe informações de luminância.  
   
- [out] *saturação*  
- Ponteiro para uma variável do tipo duplo que recebe informações de saturação.  
+*saturação*<br/>
+[out] Ponteiro para uma variável do tipo duplo que recebe informações de saturação.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -253,20 +253,20 @@ BOOL SelectCellHexagon(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *R*  
- O componente de cor vermelha.  
+*R*<br/>
+[in] O componente de cor vermelha.  
   
- [in] *G*  
- O componente de cor verde.  
+*G*<br/>
+[in] O componente de cor verde.  
   
- [in] *B*  
- O componente de cor azul.  
+*B*<br/>
+[in] O componente de cor azul.  
   
- [in] *x*  
- A coordenada x do cursor, que aponta para um hexágono de célula.  
+*x*<br/>
+[in] A coordenada x do cursor, que aponta para um hexágono de célula.  
   
- [in] *y*  
- A coordenada y do cursor, que aponta para um hexágono de célula.  
+*y*<br/>
+[in] A coordenada y do cursor, que aponta para um hexágono de célula.  
   
 ### <a name="return-value"></a>Valor de retorno  
  A segunda sobrecarga desse método sempre retorna FALSE.  
@@ -284,8 +284,8 @@ void SetColor(COLORREF Color);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *Cor*  
- Um valor de cor RGB.  
+*Cor*<br/>
+[in] Um valor de cor RGB.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -301,17 +301,17 @@ void SetHLS(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *matiz*  
- Um valor de matiz.  
+*Matiz*<br/>
+[in] Um valor de matiz.  
   
- [in] *luminância*  
- Um valor de luminância.  
+*luminância*<br/>
+[in] Um valor de luminância.  
   
- [in] *saturação*  
- Um valor de saturação.  
+*saturação*<br/>
+[in] Um valor de saturação.  
   
- [in] *bInvalidate*  
- TRUE para forçar a janela para atualizar imediatamente para a nova cor; Caso contrário, FALSE. O padrão é TRUE.  
+*bInvalidate*<br/>
+[in] TRUE para forçar a janela para atualizar imediatamente para a nova cor; Caso contrário, FALSE. O padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -323,8 +323,8 @@ void SetHue(double Hue);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *Matiz*  
- Um valor de matiz.  
+*Matiz*<br/>
+[in] Um valor de matiz.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -336,8 +336,8 @@ void SetLuminance(double Luminance);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *Luminância*  
- Um valor de luminância.  
+*Luminância*<br/>
+[in] Um valor de luminância.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -349,8 +349,8 @@ void SetLuminanceBarWidth(int w);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *w*  
- A largura da barra de luminosidade medida em pixels.  
+*w*<br/>
+[in] A largura da barra de luminosidade medida em pixels.  
   
 ### <a name="remarks"></a>Comentários  
  Use esse método para redimensionar a barra de luminosidade, que está na **personalizado** guia do controle de seletor de cor. O *w* parâmetro especifica a nova largura da barra de luminância. O valor de largura é ignorado se ele exceder três-quartos da largura da área do cliente.  
@@ -363,8 +363,8 @@ void SetOriginalColor(COLORREF ref);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *ref*  
- Um valor de cor RGB.  
+*ref*<br/>
+[in] Um valor de cor RGB.  
   
 ### <a name="remarks"></a>Comentários  
  Chame esse método quando o controle de seletor de cor é inicializado.  
@@ -377,8 +377,8 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pPalette*  
- Ponteiro para uma paleta de cores.  
+*pPalette*<br/>
+[in] Ponteiro para uma paleta de cores.  
   
 ### <a name="remarks"></a>Comentários  
  A paleta de cores define a matriz de cores que é apresentada no controle do seletor de cor.  
@@ -391,8 +391,8 @@ void SetSaturation(double Saturation);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *Saturação*  
- Um valor de saturação.  
+*Saturação*<br/>
+[in] Um valor de saturação.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -404,8 +404,8 @@ void SetType(COLORTYPE colorType);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *colorType*  
- Um tipo de controle de seletor de cor.  
+*colorType*<br/>
+[in] Um tipo de controle de seletor de cor.  
   
  Os tipos são definidos pelo `CMFCColorPickerCtrl::COLORTYPE` enumeração. Os possíveis tipos são LUMINÂNCIA, SELETOR, HEX e HEX_GREYSCALE. O tipo padrão é o SELETOR.  
   

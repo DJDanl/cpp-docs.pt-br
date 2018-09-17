@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5782cf051fe680cb99dcd99c8e9c2d050c4184cc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7bfa501834102e37c14de11ee1af84a21e82c35f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758125"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703840"
 ---
 # <a name="ccomgitptr-class"></a>Classe CComGITPtr
 
@@ -130,17 +130,17 @@ CComGITPtr(CComGITPtr&& rv);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *p*  
-Um ponteiro de interface a ser armazenado na tabela de interface global (GIT).
+*p*<br/>
+[in] Um ponteiro de interface a ser armazenado na tabela de interface global (GIT).
 
-[in] *git*  
-Uma referência a um existente `CComGITPtr` objeto.
+*Git*<br/>
+[in] Uma referência a um existente `CComGITPtr` objeto.
 
-[in] *dwCookie*  
-Um cookie usado para identificar o ponteiro de interface.
+*dwCookie*<br/>
+[in] Um cookie usado para identificar o ponteiro de interface.
 
-[in] *rv*  
-A fonte `CComGITPtr` objeto mover dados do.
+*rv*<br/>
+[in] A fonte `CComGITPtr` objeto mover dados do.
 
 ### <a name="remarks"></a>Comentários
 
@@ -238,17 +238,17 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *p*  
-Um ponteiro para uma interface.
+*p*<br/>
+[in] Um ponteiro para uma interface.
 
-[in] *git*  
-Uma referência a um objeto `CComGITPtr`.
+*Git*<br/>
+[in] Uma referência a um `CComGITPtr` objeto.
 
-[in] *dwCookie*  
-Um cookie usado para identificar o ponteiro de interface.
+*dwCookie*<br/>
+[in] Um cookie usado para identificar o ponteiro de interface.
 
-[in] *rv*  
-O `CComGITPtr` para mover dados do.
+*rv*<br/>
+[in] O `CComGITPtr` para mover dados do.
 
 ### <a name="return-value"></a>Valor de retorno
 

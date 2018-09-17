@@ -17,17 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e8a65066ad19b78319867782255d70da8d5b721
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2fb8608e03a514228ecdbaf321124c17a00aeb5c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333138"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700161"
 ---
 # <a name="mmstreamsd"></a>_mm_stream_sd
+
 **Seção específica da Microsoft**  
   
- Grava dados de 64 bits em um local de memória sem polua caches.  
+ Grava dados de 64 bits em um local de memória sem poluir os caches.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,11 +40,11 @@ void _mm_stream_sd(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [out] `Dest`  
- Um ponteiro para o local onde os dados de origem serão gravados.  
+*dest*<br/>
+[out] Um ponteiro para o local onde os dados de origem serão gravados.  
   
- [in] `Source`  
- Um valor de 128 bits que contém o `double` valor a ser gravado no seu inferior de 64 bits.  
+*Source*<br/>
+[in] Um valor de 128 bits que contém o `double` valor a ser gravado em sua parte inferior de 64 bits...  
   
 ## <a name="return-value"></a>Valor de retorno  
  nenhuma.  
@@ -54,12 +55,12 @@ void _mm_stream_sd(
 |---------------|------------------|  
 |`_mm_stream_sd`|SSE4a|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
- Nesse intrínsecas gera o `movntsd` instrução. Para determinar o suporte de hardware para essa instrução, chame o `__cpuid` intrínseco com `InfoType=0x80000001` e verifique o bit 6 de `CPUInfo[2] (ECX)`. Esse bit for 1, se o hardware der suporte a essa instrução e 0 caso contrário.  
+ Esse intrínseco gera o `movntsd` instrução. Para determinar o suporte de hardware para essa instrução, chame o `__cpuid` intrínseco com `InfoType=0x80000001` e marque 6 bits de `CPUInfo[2] (ECX)`. Esse bit for 1, se o hardware dá suporte a essa instrução e 0 caso contrário.  
   
- Se você executar o código que usa o `_mm_stream_sd` intrínseco no hardware que não oferece suporte a `movntsd` instrução, os resultados são imprevisíveis.  
+ Se você executar o código que usa o `_mm_stream_sd` intrínseco no hardware que não oferece suporte a `movntsd` instrução, os resultados serão imprevisíveis.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -89,7 +90,8 @@ d[0] = -1, d[1] = 1
 ```  
   
 **Fim da seção específica da Microsoft**  
- Copyright 2007 Advanced Micro dispositivos, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro Devices, Inc.  
+
+Copyright 2007 por dispositivos Micro avançada, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro dispositivos, Inc.  
   
 ## <a name="see-also"></a>Consulte também  
  [_mm_stream_ss](../intrinsics/mm-stream-ss.md)   

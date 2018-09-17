@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 878fa1f530a73a9d872a1b094d0ea0ee1b822971
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 81feb345c25ea1c1e9d15dba8dceebb7a2cdb418
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756357"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709794"
 ---
 # <a name="idispatchimpl-class"></a>Classe IDispatchImpl
 
@@ -52,23 +52,23 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 
 #### <a name="parameters"></a>Parâmetros
 
-[in] *T*  
-Uma interface dupla.
+*T*<br/>
+[in] Uma interface dupla.
 
-[in] *piid*  
-Um ponteiro para o IID da *T*.
+*piid*<br/>
+[in] Um ponteiro para o IID da *T*.
 
-[in] *plibid*  
-Um ponteiro para o LIBID da biblioteca de tipos que contém informações sobre a interface. Por padrão, a biblioteca de tipos de nível de servidor é passada.
+*plibid*<br/>
+[in] Um ponteiro para o LIBID da biblioteca de tipos que contém informações sobre a interface. Por padrão, a biblioteca de tipos de nível de servidor é passada.
 
-[in] *wMajor*  
-A versão principal da biblioteca de tipos. Por padrão, o valor é 1.
+*wMajor*<br/>
+[in] A versão principal da biblioteca de tipos. Por padrão, o valor é 1.
 
-[in] *wMinor*  
-A versão secundária da biblioteca de tipos. Por padrão, o valor é 0.
+*wMinor*<br/>
+[in] A versão secundária da biblioteca de tipos. Por padrão, o valor é 0.
 
-[in] *tihclass*  
-A classe usada para gerenciar as informações de tipo de *T*. Por padrão, o valor é `CComTypeInfoHolder`.
+*tihclass*<br/>
+[in] A classe usada para gerenciar as informações de tipo de *T*. Por padrão, o valor é `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Membros
 

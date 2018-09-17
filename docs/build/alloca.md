@@ -12,17 +12,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f58d0c959008196798087d139b44715a67f567b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e0c73abcb52b991ee6bd4de839861aa4ef684181
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360414"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702740"
 ---
 # <a name="alloca"></a>alloca
-[alloca](../c-runtime-library/reference/alloca.md) deve ser de 16 bytes alinhados e Além disso, exigido para usar um ponteiro de quadro.  
-  
- A pilha alocada precisa incluir espaço abaixo dele para parâmetros de funções de chamada posteriormente, conforme discutido em [alocação da pilha](../build/stack-allocation.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Uso da pilha](../build/stack-usage.md)
+
+[alloca](../c-runtime-library/reference/alloca.md) deve ser de 16 bytes alinhado e adicionalmente necessários para usar um ponteiro de quadro.
+
+A pilha é alocada precisa incluir o espaço abaixo dela para parâmetros de funções, subsequentemente, chamadas, conforme discutido em [alocação da pilha](../build/stack-allocation.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Uso da pilha](../build/stack-usage.md)

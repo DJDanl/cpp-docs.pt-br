@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb6010d47be6fe2c771ac407bff26729c772f14
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: a35d65509de75e117bdbeef679618b8d49ef37a2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678401"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711614"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 
@@ -1680,11 +1680,11 @@ virtual void CalcWindowRect(
 
 ### <a name="parameters"></a>Parâmetros
 
-[no, out] *lpClientRect*  
-Ponteiro para uma estrutura em retângulo. Na entrada, essa estrutura contém o retângulo do cliente. Depois que o método for concluído, essa estrutura contém o retângulo de janela que pode conter o retângulo do cliente especificado.
+*lpClientRect*<br/>
+[no, out] Ponteiro para uma estrutura em retângulo. Na entrada, essa estrutura contém o retângulo do cliente. Depois que o método for concluído, essa estrutura contém o retângulo de janela que pode conter o retângulo do cliente especificado.
 
-[in] *nAdjustType*  
-Use `CWnd::adjustBorder` para calcular as coordenadas da janela sem o estilo WS_EX_CLIENTEDGE; caso contrário, use `CWnd::adjustOutside`.
+*nAdjustType*<br/>
+[in] Use `CWnd::adjustBorder` para calcular as coordenadas da janela sem o estilo WS_EX_CLIENTEDGE; caso contrário, use `CWnd::adjustOutside`.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1924,26 +1924,26 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *lpszClassName*  
-Ponteiro para uma cadeia de caracteres terminada em nulo que contém o nome de uma classe de janela do sistema registrados; ou o nome de uma classe de janela de sistema predefinidos.
+*lpszClassName*<br/>
+[in] Ponteiro para uma cadeia de caracteres terminada em nulo que contém o nome de uma classe de janela do sistema registrados; ou o nome de uma classe de janela de sistema predefinidos.
 
-[in] *lpszWindowName*  
-Ponteiro para uma cadeia de caracteres terminada em nulo que contém a janela Exibir nome; Caso contrário, nulo para nenhum nome de exibição da janela.
+*lpszWindowName*<br/>
+[in] Ponteiro para uma cadeia de caracteres terminada em nulo que contém a janela Exibir nome; Caso contrário, nulo para nenhum nome de exibição da janela.
 
-[in] *dwStyle*  
-Combinação bit a bit (OR) de [estilos de janela](styles-used-by-mfc.md#window-styles). A opção WS_POPUP não é um estilo válido.
+*dwStyle*<br/>
+[in] Combinação bit a bit (OR) de [estilos de janela](styles-used-by-mfc.md#window-styles). A opção WS_POPUP não é um estilo válido.
 
-[in] *rect*  
-O tamanho e local da janela em relação ao canto superior esquerdo da janela pai.
+*Rect*<br/>
+[in] O tamanho e local da janela em relação ao canto superior esquerdo da janela pai.
 
-[in] *pParentWnd*  
-Ponteiro para a janela pai.
+*pParentWnd*<br/>
+[in] Ponteiro para a janela pai.
 
-[in] *nID*  
-ID da janela.
+*nID*<br/>
+[in] ID da janela.
 
-[in] *pContext*  
-Ponteiro para um [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) estrutura que é usada para personalizar a arquitetura de exibição de documento para o aplicativo.
+*pContext*<br/>
+[in] Ponteiro para um [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) estrutura que é usada para personalizar a arquitetura de exibição de documento para o aplicativo.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -5985,10 +5985,10 @@ afx_msg void OnAppCommand(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *Apropriei*|Ponteiro para um `CWnd` objeto que representa a janela em que o usuário clicou no botão de comando ou pressionou a tecla de comando. Esta janela pode ser uma janela filho da janela de recebimento da mensagem.|
-|[in] *nCmd*|Indica que o comando do aplicativo. Para obter uma lista de valores possíveis, consulte os comandos na *cmd* seção o *lParam* parâmetro do [WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand).|
-|[in] *nDevice*|O dispositivo de entrada que gerou o evento de entrada. Para obter uma lista de valores possíveis, consulte os dispositivos sob o *uDevice* seção o *lParam* parâmetro do [WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand).|
-|[in] *nKey*|Indica as chaves virtuais que estiverem desativados, como a tecla CTRL ou o botão esquerdo do mouse. Para obter uma lista de valores possíveis, consulte as chaves sob a *dwKeys* seção o *lParam* parâmetro do [WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand). Para obter mais informações, consulte o subtítulo "Parâmetros de mensagem" em [sobre a entrada do Mouse](/windows/desktop/inputdev/about-mouse-input).|
+|*Apropriei*|[in] Ponteiro para um `CWnd` objeto que representa a janela em que o usuário clicou no botão de comando ou pressionou a tecla de comando. Esta janela pode ser uma janela filho da janela de recebimento da mensagem.|
+|*nCmd*|[in] Indica que o comando do aplicativo. Para obter uma lista de valores possíveis, consulte os comandos na *cmd* seção o *lParam* parâmetro do [WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand).|
+|*nDevice*|[in] O dispositivo de entrada que gerou o evento de entrada. Para obter uma lista de valores possíveis, consulte os dispositivos sob o *uDevice* seção o *lParam* parâmetro do [WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand).|
+|*nKey*|[in] Indica as chaves virtuais que estiverem desativados, como a tecla CTRL ou o botão esquerdo do mouse. Para obter uma lista de valores possíveis, consulte as chaves sob a *dwKeys* seção o *lParam* parâmetro do [WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand). Para obter mais informações, consulte o subtítulo "Parâmetros de mensagem" em [sobre a entrada do Mouse](/windows/desktop/inputdev/about-mouse-input).|
 
 ### <a name="remarks"></a>Comentários
 
@@ -6273,8 +6273,8 @@ afx_msg void OnColorizationColorChanged(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *dwColorizationColor*|Especifica a cor de colorização de novo.<br /><br /> O formato de cor é um número hexadecimal do 0xAARRGGBB formulário, em que cada um dos quatro componentes varia de 0x00 a 0xFF. O componente de AA é o valor alfa, RR é a cor vermelha, GG é verde e BB é azul.|
-|[in] *bOpacity*|TRUE se a nova cor é combinada com opacidade; FALSE se não for.|
+|*dwColorizationColor*|[in] Especifica a cor de colorização de novo.<br /><br /> O formato de cor é um número hexadecimal do 0xAARRGGBB formulário, em que cada um dos quatro componentes varia de 0x00 a 0xFF. O componente de AA é o valor alfa, RR é a cor vermelha, GG é verde e BB é azul.|
+|*bOpacity*|[in] TRUE se a nova cor é combinada com opacidade; FALSE se não for.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -7127,9 +7127,9 @@ afx_msg void OnHotKey(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *nHotKeyId*|Identificador para a tecla de atalho que gerou a mensagem. Se a mensagem foi gerada por uma tecla de acesso definida pelo sistema, este parâmetro será um dos seguintes valores:<br /><br /> Tecla de acesso - IDHOT_SNAPDESKTOP - a área de trabalho snap foi pressionada.<br />Tecla de acesso - IDHOT_SNAPWINDOW - janela snap foi pressionada.|
-|[in] *nKey1*|Uma combinação bit a bit (OR) de sinalizadores que indicam as chaves que foram pressionadas em combinação com a chave especificada o *nKey2* parâmetro. Os valores possíveis são:<br /><br /> -MOD_ALT - a tecla ALT foi pressionada.<br />-MOD_CONTROL - a tecla CTRL foi pressionada.<br />-MOD_SHIFT - a tecla SHIFT foi pressionada.<br />-MOD_WIN - qualquer tecla do WINDOWS foi pressionado. Essas chaves são rotuladas com o logotipo do Microsoft Windows.|
-|[in] *nKey2*|O código de tecla virtual da tecla de atalho.|
+|*nHotKeyId*|[in] Identificador para a tecla de atalho que gerou a mensagem. Se a mensagem foi gerada por uma tecla de acesso definida pelo sistema, este parâmetro será um dos seguintes valores:<br /><br /> Tecla de acesso - IDHOT_SNAPDESKTOP - a área de trabalho snap foi pressionada.<br />Tecla de acesso - IDHOT_SNAPWINDOW - janela snap foi pressionada.|
+|*nKey1*|[in] Uma combinação bit a bit (OR) de sinalizadores que indicam as chaves que foram pressionadas em combinação com a chave especificada o *nKey2* parâmetro. Os valores possíveis são:<br /><br /> -MOD_ALT - a tecla ALT foi pressionada.<br />-MOD_CONTROL - a tecla CTRL foi pressionada.<br />-MOD_SHIFT - a tecla SHIFT foi pressionada.<br />-MOD_WIN - qualquer tecla do WINDOWS foi pressionado. Essas chaves são rotuladas com o logotipo do Microsoft Windows.|
+|*nKey2*|[in] O código de tecla virtual da tecla de atalho.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -7321,7 +7321,7 @@ afx_msg void OnInputDeviceChange(unsigned short uFlag);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *uFlag*|Este sinalizador pode conter os seguintes valores:<br /><br /> -GIDC_ARRIVAL - um novo dispositivo foi adicionado ao sistema.<br />-GIDC_REMOVAL – um dispositivo foi removido do sistema.|
+|*uFlag*|[in] Este sinalizador pode conter os seguintes valores:<br /><br /> -GIDC_ARRIVAL - um novo dispositivo foi adicionado ao sistema.<br />-GIDC_REMOVAL – um dispositivo foi removido do sistema.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -7344,8 +7344,8 @@ afx_msg void OnInputLangChange(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *nCharSet*|O conjunto de caracteres da nova localidade. Para obter mais informações, consulte o *lfCharSet* parâmetro do [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) estrutura.|
-|[in] *nLocaleId*|O identificador de localidade de entrada. Para obter mais informações, consulte [cadeias de caracteres e constantes de identificador de idioma](/windows/desktop/Intl/language-identifier-constants-and-strings).|
+|*nCharSet*|[in] O conjunto de caracteres da nova localidade. Para obter mais informações, consulte o *lfCharSet* parâmetro do [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) estrutura.|
+|*nLocaleId*|[in] O identificador de localidade de entrada. Para obter mais informações, consulte [cadeias de caracteres e constantes de identificador de idioma](/windows/desktop/Intl/language-identifier-constants-and-strings).|
 
 ### <a name="remarks"></a>Comentários
 
@@ -7368,8 +7368,8 @@ afx_msg void OnInputLangChangeRequest(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *nFlags*|Uma combinação de (OR) bit a bit de sinalizadores que indicam o novo código de idioma foi selecionado da localidade anterior ou seguinte na lista de localidades instalada ou que o layout de teclado da localidade de entrada nova pode ser usado com o conjunto de caracteres do sistema.<br /><br /> Os valores possíveis são INPUTLANGCHANGE_BACKWARD, INPUTLANGCHANGE_FORWARD e INPUTLANGCHANGE_SYSCHARSET.|
-|[in] *nLocaleId*|O identificador de localidade de entrada. Para obter mais informações, consulte [cadeias de caracteres e constantes de identificador de idioma](/windows/desktop/Intl/language-identifier-constants-and-strings).|
+|*nFlags*|[in] Uma combinação de (OR) bit a bit de sinalizadores que indicam o novo código de idioma foi selecionado da localidade anterior ou seguinte na lista de localidades instalada ou que o layout de teclado da localidade de entrada nova pode ser usado com o conjunto de caracteres do sistema.<br /><br /> Os valores possíveis são INPUTLANGCHANGE_BACKWARD, INPUTLANGCHANGE_FORWARD e INPUTLANGCHANGE_SYSCHARSET.|
+|*nLocaleId*|[in] O identificador de localidade de entrada. Para obter mais informações, consulte [cadeias de caracteres e constantes de identificador de idioma](/windows/desktop/Intl/language-identifier-constants-and-strings).|
 
 ### <a name="remarks"></a>Comentários
 
@@ -7800,8 +7800,8 @@ afx_msg UINT OnMenuDrag(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *nPos*|A posição de índice do item de menu quando a operação de arrastar começa.|
-|[in] *pMenu*|Ponteiro para o [CMenu](../../mfc/reference/cmenu-class.md) objeto que contém o item de menu.|
+|*nPos*|[in] A posição de índice do item de menu quando a operação de arrastar começa.|
+|*pMenu*|[in] Ponteiro para o [CMenu](../../mfc/reference/cmenu-class.md) objeto que contém o item de menu.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -7829,7 +7829,7 @@ afx_msg UINT OnMenuGetObject(MENUGETOBJECTINFO* pMenuGetObjectInfo);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *pMenu*|Ponteiro para um [MENUGETOBJECTINFO](/windows/desktop/api/winuser/ns-winuser-tagmenugetobjectinfo) é de estrutura que contém informações sobre o menu de arrastar e soltar o cursor do mouse em.|
+|*pMenu*|[in] Ponteiro para um [MENUGETOBJECTINFO](/windows/desktop/api/winuser/ns-winuser-tagmenugetobjectinfo) é de estrutura que contém informações sobre o menu de arrastar e soltar o cursor do mouse em.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -7859,8 +7859,8 @@ afx_msg void OnMenuRButtonUp(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *nPos*|A posição de índice do item de menu quando o botão direito do mouse foi liberado.|
-|[in] *pMenu*|Ponteiro para o [CMenu](../../mfc/reference/cmenu-class.md) objeto que contém o item de menu.|
+|*nPos*|[in] A posição de índice do item de menu quando o botão direito do mouse foi liberado.|
+|*pMenu*|[in] Ponteiro para o [CMenu](../../mfc/reference/cmenu-class.md) objeto que contém o item de menu.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -7977,8 +7977,8 @@ afx_msg void OnMouseHover(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *nFlags*|Uma combinação bit a bit (OR) de sinalizadores que indicam quais teclas modificadoras são pressionadas. Por exemplo, o sinalizador MK_CONTROL indica que a tecla CTRL está pressionada.|
-|[in] *ponto*|Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da área de cliente.|
+|*nFlags*|[in] Uma combinação bit a bit (OR) de sinalizadores que indicam quais teclas modificadoras são pressionadas. Por exemplo, o sinalizador MK_CONTROL indica que a tecla CTRL está pressionada.|
+|*ponto*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da área de cliente.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -8014,9 +8014,9 @@ afx_msg void OnMouseHWheel(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *nFlags*|Uma combinação bit a bit (OR) de sinalizadores que indicam quais teclas modificadoras são pressionadas. Por exemplo, o sinalizador MK_CONTROL indica que a tecla CTRL está pressionada.<br /><br /> Para obter uma lista dos sinalizadores, consulte o subtítulo "Parâmetros de mensagem" em [sobre a entrada do Mouse](/windows/desktop/inputdev/about-mouse-input).|
-|[in] *zDelta*|Indica a distância que a roda for girada, expresso em múltiplos ou divisões de WHEEL_DELTA, que é 120. Um valor positivo indica que o botão de rolagem foi girada para a direita; um valor negativo indica que o botão de rolagem foi girada à esquerda.|
-|[in] *pt*|Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da área de cliente.|
+|*nFlags*|[in] Uma combinação bit a bit (OR) de sinalizadores que indicam quais teclas modificadoras são pressionadas. Por exemplo, o sinalizador MK_CONTROL indica que a tecla CTRL está pressionada.<br /><br /> Para obter uma lista dos sinalizadores, consulte o subtítulo "Parâmetros de mensagem" em [sobre a entrada do Mouse](/windows/desktop/inputdev/about-mouse-input).|
+|*zDelta*|[in] Indica a distância que a roda for girada, expresso em múltiplos ou divisões de WHEEL_DELTA, que é 120. Um valor positivo indica que o botão de rolagem foi girada para a direita; um valor negativo indica que o botão de rolagem foi girada à esquerda.|
+|*pt*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da área de cliente.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -8441,8 +8441,8 @@ afx_msg void OnNcMouseHover(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *nHitTest*|O valor de teste de clique retornado pela [CWnd::DefWindowProc](#defwindowproc) funcionar como resultado do processamento de [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) mensagem.|
-|[in] *ponto*|Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da tela.|
+|*nHitTest*|[in] O valor de teste de clique retornado pela [CWnd::DefWindowProc](#defwindowproc) funcionar como resultado do processamento de [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) mensagem.|
+|*ponto*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da tela.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -8586,7 +8586,7 @@ afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *bIsRendering*|TRUE se a renderização do Gerenciador de janelas da área de trabalho (DWM) está habilitada para a área não cliente da janela. FALSE se a renderização é desabilitada.|
+|*bIsRendering*|[in] TRUE se a renderização do Gerenciador de janelas da área de trabalho (DWM) está habilitada para a área não cliente da janela. FALSE se a renderização é desabilitada.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -8610,9 +8610,9 @@ void OnNcXButtonDblClk(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *nHitTest*|O valor de teste de clique retornado pela [CWnd::DefWindowProc](#defwindowproc) funcionar como resultado do processamento de [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) mensagem.|
-|[in] *nButton*|Um valor de XBUTTON1 se o primeiro botão do Microsoft Intellimouse X é clicado duas vezes ou XBUTTON2 se o segundo botão X é clicado duas vezes.|
-|[in] *ponto*|Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da área de cliente.|
+|*nHitTest*|[in] O valor de teste de clique retornado pela [CWnd::DefWindowProc](#defwindowproc) funcionar como resultado do processamento de [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) mensagem.|
+|*nButton*|[in] Um valor de XBUTTON1 se o primeiro botão do Microsoft Intellimouse X é clicado duas vezes ou XBUTTON2 se o segundo botão X é clicado duas vezes.|
+|*ponto*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da área de cliente.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -8636,9 +8636,9 @@ afx_msg void OnNcXButtonDown(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *nHitTest*|O valor de teste de clique retornado pela [CWnd::DefWindowProc](#defwindowproc) funcionar como resultado do processamento de [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) mensagem.|
-|[in] *nButton*|Um valor de XBUTTON1 se o primeiro botão X do mouse é pressionado ou XBUTTON2 se o segundo botão X é pressionado.|
-|[in] *ponto*|Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da tela.|
+|*nHitTest*|[in] O valor de teste de clique retornado pela [CWnd::DefWindowProc](#defwindowproc) funcionar como resultado do processamento de [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) mensagem.|
+|*nButton*|[in] Um valor de XBUTTON1 se o primeiro botão X do mouse é pressionado ou XBUTTON2 se o segundo botão X é pressionado.|
+|*ponto*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da tela.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -8662,9 +8662,9 @@ afx_msg void OnNcXButtonUp(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *nHitTest*|O valor de teste de clique retornado pela [CWnd::DefWindowProc](#defwindowproc) funcionar como resultado do processamento de [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) mensagem.|
-|[in] *nButton*|Um valor de XBUTTON1 se o primeiro botão X do mouse é liberado, ou XBUTTON2 se o segundo botão X é liberado.|
-|[in] *ponto*|Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da tela.|
+|*nHitTest*|[in] O valor de teste de clique retornado pela [CWnd::DefWindowProc](#defwindowproc) funcionar como resultado do processamento de [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) mensagem.|
+|*nButton*|[in] Um valor de XBUTTON1 se o primeiro botão X do mouse é liberado, ou XBUTTON2 se o segundo botão X é liberado.|
+|*ponto*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da tela.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -8687,8 +8687,8 @@ afx_msg void OnNextMenu(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *nKey*|Uma combinação bit a bit (OR) de sinalizadores que indicam quais teclas modificadoras são pressionadas. Por exemplo, o sinalizador MK_CONTROL indica que a tecla CTRL está pressionada.<br /><br /> Para obter uma lista dos sinalizadores, consulte o subtítulo "Parâmetros de mensagem" em [sobre a entrada do Mouse](/windows/desktop/inputdev/about-mouse-input).|
-|[in] *lpMdiNextMenu*|Ponteiro para um [MDINEXTMENU](/windows/desktop/api/winuser/ns-winuser-tagmdinextmenu) estrutura que contém informações sobre o menu a ser ativado.|
+|*nKey*|[in] Uma combinação bit a bit (OR) de sinalizadores que indicam quais teclas modificadoras são pressionadas. Por exemplo, o sinalizador MK_CONTROL indica que a tecla CTRL está pressionada.<br /><br /> Para obter uma lista dos sinalizadores, consulte o subtítulo "Parâmetros de mensagem" em [sobre a entrada do Mouse](/windows/desktop/inputdev/about-mouse-input).|
+|*lpMdiNextMenu*|[in] Ponteiro para um [MDINEXTMENU](/windows/desktop/api/winuser/ns-winuser-tagmdinextmenu) estrutura que contém informações sobre o menu a ser ativado.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -8745,8 +8745,8 @@ afx_msg UINT OnNotifyFormat(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *Apropriei*|Um ponteiro para um `CWnd` objeto que representa o envio de janela de [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) mensagem.<br /><br /> Esse parâmetro é o ponteiro para um controle se o *Ncomando* parâmetro for NF_QUERY ou o ponteiro para a janela pai de um controle se *Ncomando* é NF_REQUERY.|
-|[in] *Ncomando*|Um valor de comando que especializa a mensagem WM_NOTIFY. Os valores possíveis são:<br /><br /> -NF_QUERY-<br />     A mensagem é uma consulta para determinar se as estruturas ANSI ou Unicode devem ser usadas em mensagens WM_NOTIFY. Esta mensagem é enviada de um controle à sua janela pai durante a criação de um controle e, em resposta ao formulário NF_REQUERY desta mensagem.<br />-NF_REQUERY-<br />     A mensagem é uma solicitação para um controle para enviar o formulário NF_QUERY dessa mensagem para sua janela pai. Essa solicitação é enviada a partir da janela pai e solicita que o controle para o pai sobre o tipo de estrutura para usar nas mensagens WM_NOTIFY repetir a consulta. Se o *Ncomando* parâmetro for NF_REQUERY, o valor de retorno é o resultado da operação de repetição da consulta.|
+|*Apropriei*|[in] Um ponteiro para um `CWnd` objeto que representa o envio de janela de [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) mensagem.<br /><br /> Esse parâmetro é o ponteiro para um controle se o *Ncomando* parâmetro for NF_QUERY ou o ponteiro para a janela pai de um controle se *Ncomando* é NF_REQUERY.|
+|*Ncomando*|[in] Um valor de comando que especializa a mensagem WM_NOTIFY. Os valores possíveis são:<br /><br /> -NF_QUERY-<br />     A mensagem é uma consulta para determinar se as estruturas ANSI ou Unicode devem ser usadas em mensagens WM_NOTIFY. Esta mensagem é enviada de um controle à sua janela pai durante a criação de um controle e, em resposta ao formulário NF_REQUERY desta mensagem.<br />-NF_REQUERY-<br />     A mensagem é uma solicitação para um controle para enviar o formulário NF_QUERY dessa mensagem para sua janela pai. Essa solicitação é enviada a partir da janela pai e solicita que o controle para o pai sobre o tipo de estrutura para usar nas mensagens WM_NOTIFY repetir a consulta. Se o *Ncomando* parâmetro for NF_REQUERY, o valor de retorno é o resultado da operação de repetição da consulta.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -8910,8 +8910,8 @@ afx_msg UINT OnPowerBroadcast(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *nPowerEvent*|O evento de gerenciamento de energia.|
-|[in] *nEventData*|Dados de eventos específicos.|
+|*nPowerEvent*|[in] O evento de gerenciamento de energia.|
+|*nEventData*|[in] Dados de eventos específicos.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -9022,8 +9022,8 @@ afx_msg void OnRawInput(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *nInputCode*|Código de entrada que indica se a entrada ocorreu enquanto o aplicativo estava em primeiro plano ou não. Em ambos os casos, o aplicativo deve chamar [CWnd::DefWindowProc](#defwindowproc) para que o sistema pode executar a limpeza.<br /><br /> Esse parâmetro pode ser um dos seguintes valores:<br /><br /> Entrada - RIM_INPUT - ocorreu enquanto o aplicativo estava em primeiro plano.<br />Entrada - RIM_INPUTSINK - ocorreu enquanto o aplicativo não estava no primeiro plano.|
-|[in] *hRawInput*|Identificador para um [RAWINPUT](https://msdn.microsoft.com/library/windows/desktop/ms645562) estrutura que contém a entrada bruta do dispositivo.|
+|*nInputCode*|[in] Código de entrada que indica se a entrada ocorreu enquanto o aplicativo estava em primeiro plano ou não. Em ambos os casos, o aplicativo deve chamar [CWnd::DefWindowProc](#defwindowproc) para que o sistema pode executar a limpeza.<br /><br /> Esse parâmetro pode ser um dos seguintes valores:<br /><br /> Entrada - RIM_INPUT - ocorreu enquanto o aplicativo estava em primeiro plano.<br />Entrada - RIM_INPUTSINK - ocorreu enquanto o aplicativo não estava no primeiro plano.|
+|*hRawInput*|[in] Identificador para um [RAWINPUT](https://msdn.microsoft.com/library/windows/desktop/ms645562) estrutura que contém a entrada bruta do dispositivo.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -9208,8 +9208,8 @@ afx_msg void OnSessionChange(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *nSessionState*|Um código de status descreve a alteração de estado de sessão.|
-|[in] *nId*|Um identificador de sessão.|
+|*nSessionState*|[in] Um código de status descreve a alteração de estado de sessão.|
+|*nId*|[in] Um identificador de sessão.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -9973,9 +9973,9 @@ afx_msg void OnUniChar(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *nChar*|Especifica o código de caractere da tecla pressionada.|
-|[in] *nRepCnt*|Especifica a contagem de repetição para a mensagem atual. O valor é o número de vezes que o pressionamento de tecla é autorepeated como resultado do usuário, mantendo a tecla pressionada. Se o pressionamento de tecla é mantido por tempo suficiente, várias mensagens são enviadas. No entanto, a contagem de repetições não é cumulativa.|
-|[in] *nFlags*|Sinalizadores que especificam o código de verificação, estendido de chave, código de contexto, estado-chave anterior e estado de transição, conforme mostrado na tabela a seguir:<br /><br /> **0-7:** Especifica o código de verificação. O valor depende do fabricante original do equipamento (OEM).<br /><br /> **8:** Especifica uma chave estendida, como as teclas ALT e CTRL direita que aparecem em um teclado de 101 ou 102 teclas avançado. O sinalizador será 1 se a chave é uma chave estendida; Caso contrário, é 0.<br /><br /> **9-12:** usado internamente pelo Windows.<br /><br /> **13:** Especifica o código de contexto. O sinalizador será 1 se a tecla ALT está pressionada enquanto a tecla é pressionada; Caso contrário, o valor é 0.<br /><br /> **14:** Especifica o estado da chave anterior. O sinalizador é 1 se a tecla está pressionada antes que a mensagem é enviada, ou 0 se a chave estiver em execução.<br /><br /> **15:** Especifica o estado de transição. O sinalizador é 1 se a chave está sendo lançada, ou 0 se a chave está sendo pressionada.|
+|*nChar*|[in] Especifica o código de caractere da tecla pressionada.|
+|*nRepCnt*|[in] Especifica a contagem de repetição para a mensagem atual. O valor é o número de vezes que o pressionamento de tecla é autorepeated como resultado do usuário, mantendo a tecla pressionada. Se o pressionamento de tecla é mantido por tempo suficiente, várias mensagens são enviadas. No entanto, a contagem de repetições não é cumulativa.|
+|*nFlags*|[in] Sinalizadores que especificam o código de verificação, estendido de chave, código de contexto, estado-chave anterior e estado de transição, conforme mostrado na tabela a seguir:<br /><br /> **0-7:** Especifica o código de verificação. O valor depende do fabricante original do equipamento (OEM).<br /><br /> **8:** Especifica uma chave estendida, como as teclas ALT e CTRL direita que aparecem em um teclado de 101 ou 102 teclas avançado. O sinalizador será 1 se a chave é uma chave estendida; Caso contrário, é 0.<br /><br /> **9-12:** usado internamente pelo Windows.<br /><br /> **13:** Especifica o código de contexto. O sinalizador será 1 se a tecla ALT está pressionada enquanto a tecla é pressionada; Caso contrário, o valor é 0.<br /><br /> **14:** Especifica o estado da chave anterior. O sinalizador é 1 se a tecla está pressionada antes que a mensagem é enviada, ou 0 se a chave estiver em execução.<br /><br /> **15:** Especifica o estado de transição. O sinalizador é 1 se a chave está sendo lançada, ou 0 se a chave está sendo pressionada.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -9998,8 +9998,8 @@ afx_msg void OnUnInitMenuPopup(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *pMenu*|Ponteiro para o [CMenu](../../mfc/reference/cmenu-class.md) objeto que representa o menu ou submenu.|
-|[in] *nFlags*|O menu foi destruído. Atualmente, ele só pode ser o menu de janela, MF_SYSMENU.|
+|*pMenu*|[in] Ponteiro para o [CMenu](../../mfc/reference/cmenu-class.md) objeto que representa o menu ou submenu.|
+|*nFlags*|[in] O menu foi destruído. Atualmente, ele só pode ser o menu de janela, MF_SYSMENU.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -10196,7 +10196,7 @@ afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *bIsMaximized*|TRUE se a janela atual é maximizada e FALSE se não for.|
+|*bIsMaximized*|[in] TRUE se a janela atual é maximizada e FALSE se não for.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -10324,9 +10324,9 @@ afx_msg void OnXButtonDblClk(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *nFlags*|Uma combinação bit a bit (OR) de sinalizadores que indicam quais teclas modificadoras são pressionadas. Por exemplo, o sinalizador MK_CONTROL indica que a tecla CTRL está pressionada.|
-|[in] *nButton*|Um valor de XBUTTON1 se o primeiro botão do Microsoft Intellimouse X é clicado duas vezes ou XBUTTON2 se o segundo botão X é clicado duas vezes.|
-|[in] *ponto*|Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da área de cliente.|
+|*nFlags*|[in] Uma combinação bit a bit (OR) de sinalizadores que indicam quais teclas modificadoras são pressionadas. Por exemplo, o sinalizador MK_CONTROL indica que a tecla CTRL está pressionada.|
+|*nButton*|[in] Um valor de XBUTTON1 se o primeiro botão do Microsoft Intellimouse X é clicado duas vezes ou XBUTTON2 se o segundo botão X é clicado duas vezes.|
+|*ponto*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da área de cliente.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -10362,9 +10362,9 @@ afx_msg void OnXButtonDown(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *nFlags*|Uma combinação bit a bit (OR) de sinalizadores que indicam quais teclas modificadoras são pressionadas. Por exemplo, o sinalizador MK_CONTROL indica que a tecla CTRL está pressionada.|
-|[in] *nButton*|Um valor de XBUTTON1 se o primeiro botão Microsoft Intellimouse X foi clicado ou XBUTTON2 se o segundo botão X foi clicado.|
-|[in] *ponto*|Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da área de cliente.|
+|*nFlags*|[in] Uma combinação bit a bit (OR) de sinalizadores que indicam quais teclas modificadoras são pressionadas. Por exemplo, o sinalizador MK_CONTROL indica que a tecla CTRL está pressionada.|
+|*nButton*|[in] Um valor de XBUTTON1 se o primeiro botão Microsoft Intellimouse X foi clicado ou XBUTTON2 se o segundo botão X foi clicado.|
+|*ponto*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da área de cliente.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -10400,9 +10400,9 @@ afx_msg void OnXButtonUp(
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|[in] *nFlags*|Uma combinação bit a bit (OR) de sinalizadores que indicam quais teclas modificadoras são pressionadas. Por exemplo, o sinalizador MK_CONTROL indica que a tecla CTRL está pressionada.|
-|[in] *nButton*|Um valor de XBUTTON1 se o primeiro botão Microsoft Intellimouse X foi clicado duas vezes ou XBUTTON2 se o segundo botão X foi clicado duas vezes.|
-|[in] *ponto*|Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da área de cliente.|
+|*nFlags*|[in] Uma combinação bit a bit (OR) de sinalizadores que indicam quais teclas modificadoras são pressionadas. Por exemplo, o sinalizador MK_CONTROL indica que a tecla CTRL está pressionada.|
+|*nButton*|[in] Um valor de XBUTTON1 se o primeiro botão Microsoft Intellimouse X foi clicado duas vezes ou XBUTTON2 se o segundo botão X foi clicado duas vezes.|
+|*ponto*|[in] Um [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que especifica a *x* e *y* coordenadas do cursor relativas ao canto superior esquerdo da área de cliente.|
 
 ### <a name="remarks"></a>Comentários
 

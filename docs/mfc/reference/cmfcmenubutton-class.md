@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77762fe12ed74f11f0b7e633f2a0c77523a7efaa
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: aae4caaa73970818a4c3deee9a82b94260629e17
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849783"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700902"
 ---
 # <a name="cmfcmenubutton-class"></a>Classe CMFCMenuButton
 Um botão que exibe um menu pop-up e relata de seleções de menu do usuário.  
@@ -167,8 +167,8 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pMsg*  
- Aponta para um [MSG](../../mfc/reference/msg-structure1.md) estrutura que contém a mensagem a ser processada.  
+*pMsg*<br/>
+[in] Aponta para um [MSG](../../mfc/reference/msg-structure1.md) estrutura que contém a mensagem a ser processada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se a mensagem foi traduzida e não deve ser expedida; 0 se a mensagem não foi traduzida e deve ser expedida.  
@@ -183,8 +183,8 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bCalcOnly*  
- Um parâmetro booliano que indica se esse método é redimensionado no botão.  
+*bCalcOnly*<br/>
+[in] Um parâmetro booliano que indica se esse método é redimensionado no botão.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto que especifica o novo tamanho do botão.  

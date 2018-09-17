@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: 6c97e44e5110108351ac9c47f47434b828193fc7
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 304aba4513ceb526f9a288db6f255b4c47f5c593
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44099623"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701591"
 ---
 # <a name="ltutilitygt-operators"></a>Operadores &lt;utility&gt;
 
@@ -48,10 +48,10 @@ constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
+*left*<br/>
 Um objeto do tipo `pair`.
 
-*right*  
+*right*<br/>
 Um objeto do tipo `pair`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -183,10 +183,10 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
+*left*<br/>
 Um objeto do tipo `pair` ao lado esquerdo do operador.
 
-*right*  
+*right*<br/>
 Um objeto do tipo `pair` ao lado direito do operador.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -260,10 +260,10 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
+*left*<br/>
 Um objeto do tipo `pair` ao lado esquerdo do operador.
 
-*right*  
+*right*<br/>
 Um objeto do tipo `pair` ao lado direito do operador.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -345,10 +345,10 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
+*left*<br/>
 Um objeto do tipo `pair` ao lado esquerdo do operador.
 
-*right*  
+*right*<br/>
 Um objeto do tipo `pair` ao lado direito do operador.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -432,10 +432,10 @@ constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
+*left*<br/>
 Um objeto do tipo `pair` ao lado esquerdo do operador.
 
-*right*  
+*right*<br/>
 Um objeto do tipo `pair` ao lado direito do operador.
 
 ### <a name="return-value"></a>Valor de retorno

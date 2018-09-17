@@ -14,15 +14,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74a8ab3259560cbc99a509f3b7cf6075aacc7036
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7dc18065499773d0646bde2bc63cb5c8e1d6076
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371441"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717945"
 ---
 # <a name="look-up-button"></a>Botão Pesquisar
-Clique em **consultar** para recuperar a mensagem de erro que corresponde ao valor de sistema ou módulo digitados. Valores podem ser inseridos no formato hexadecimal ou decimal (incluindo valores negativos de decimais). Módulos listados no **módulos adicionais para a pesquisa de erro** caixa de diálogo também são pesquisados.  
-  
-## <a name="see-also"></a>Consulte também  
- [Controle de edição de valor](../../build/reference/value-edit-control.md)
+
+Clique em **consultar** para recuperar a mensagem de erro que corresponde ao valor de sistema ou o módulo inserido. Valores podem ser inseridos no formulário hexadecimal ou decimal (incluindo valores negativos de decimais). Módulos listados na **módulos adicionais para busca de erros** caixa de diálogo também são pesquisados.
+
+## <a name="see-also"></a>Consulte também
+
+[Controle de edição de valor](../../build/reference/value-edit-control.md)

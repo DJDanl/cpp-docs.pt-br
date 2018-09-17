@@ -54,12 +54,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a30a09b9feae0d5c7e0d24967c133f076286f2fc
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 2bf3f35b4de412125fcaf1c801a044c1b72e3233
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42540159"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716255"
 ---
 # <a name="interlockeddecrement-intrinsic-functions"></a>Funções intrínsecas _InterlockedDecrement
 **Seção específica da Microsoft**  
@@ -108,8 +108,8 @@ __int64 _InterlockedDecrement64_nf(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [in, out] `lpAddend`  
- Ponteiro para a variável a ser diminuída.  
+*lpAddend*<br/>
+[no, out] Ponteiro para a variável a ser diminuída.  
   
 ## <a name="return-value"></a>Valor de retorno  
  O valor retornado é o valor diminuído resultante.  

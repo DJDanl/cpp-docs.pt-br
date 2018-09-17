@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b227f9d2fdd43b576f89b74f43e4cdce8476bf9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 23ca73629208e0ac80f7c516f8249e83ae0d41a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692377"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719232"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>Classe CMFCDropDownToolBar
 Uma barra de ferramentas que aparece quando o usuário pressiona e mantém um botão de barra de ferramentas de nível superior.  
@@ -133,23 +133,23 @@ virtual BOOL LoadBitmap(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiResID*  
- A ID de recurso do bitmap que se refere às imagens da barra de ferramentas ativa.  
+*uiResID*<br/>
+[in] A ID de recurso do bitmap que se refere às imagens da barra de ferramentas ativa.  
   
- [in] *uiColdResID*  
- A ID de recurso do bitmap que se refere às imagens da barra de ferramentas frio.  
+*uiColdResID*<br/>
+[in] A ID de recurso do bitmap que se refere às imagens da barra de ferramentas frio.  
   
- [in] *uiMenuResID*  
- A ID de recurso do bitmap que se refere às imagens do menu comum.  
+*uiMenuResID*<br/>
+[in] A ID de recurso do bitmap que se refere às imagens do menu comum.  
   
- [in] *bloqueado*  
- TRUE para bloquear a barra de ferramentas. Caso contrário, FALSE.  
+*Bloqueado*<br/>
+[in] TRUE para bloquear a barra de ferramentas. Caso contrário, FALSE.  
   
- [in] *uiDisabledResID*  
- A ID de recurso do bitmap que se refere às imagens da barra de ferramentas desabilitado.  
+*uiDisabledResID*<br/>
+[in] A ID de recurso do bitmap que se refere às imagens da barra de ferramentas desabilitado.  
   
- [in] *uiMenuDisabledResID*  
- A ID de recurso do bitmap que se refere às imagens de menu desabilitados.  
+*uiMenuDisabledResID*<br/>
+[in] A ID de recurso do bitmap que se refere às imagens de menu desabilitados.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o método for bem-sucedido; Caso contrário, 0.  
@@ -174,12 +174,12 @@ virtual BOOL LoadToolBar(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiResID*  
- [in] *uiColdResID*  
- [in] *uiMenuResID*  
- [in] *BOOL*  
- [in] *uiDisabledResID*  
- [in] *uiMenuDisabledResID*  
+*uiResID*<br/>
+[in] [in] *uiColdResID*  
+*uiMenuResID*<br/>
+[in] [in] *BOOL*  
+*uiDisabledResID*<br/>
+[in] [in] *uiMenuDisabledResID*  
  [in] *uiHotResID*  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -196,8 +196,8 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nFlags*  
- [in] *ponto*  
+*nFlags*<br/>
+[in] [in] *ponto*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -211,8 +211,8 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nFlags*  
- [in] *ponto*  
+*nFlags*<br/>
+[in] [in] *ponto*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -240,8 +240,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pTarget*  
- [in] *bDisableIfNoHndler*  
+*pTarget*<br/>
+[in] [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>Comentários  
   

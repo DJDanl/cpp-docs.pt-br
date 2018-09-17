@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ec8840e4a379ce50b9474c114f0a2879d2e7bca
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e0294a16c13941d74ccd3955f78e22e33ef8fc7a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686151"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725163"
 ---
 # <a name="cmfcfontcombobox-class"></a>Classe CMFCFontComboBox
 O `CMFCFontComboBox` classe cria um controle de caixa de combinação que contém uma lista de fontes.  
@@ -132,14 +132,14 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *apresentado a pDesc*  
- Aponta para um objeto de descrição da fonte.  
+*apresentado a pDesc*<br/>
+[in] Aponta para um objeto de descrição da fonte.  
   
- [in] *lpszName*  
- Especifica um nome de fonte.  
+*lpszName*<br/>
+[in] Especifica um nome de fonte.  
   
- [in] *nCharSet*  
- Especifica um conjunto de caracteres. O valor padrão é DEFAULT_CHARSET. Para obter mais informações, consulte o `lfCharSet` membro a [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) estrutura.  
+*nCharSet*<br/>
+[in] Especifica um conjunto de caracteres. O valor padrão é DEFAULT_CHARSET. Para obter mais informações, consulte o `lfCharSet` membro a [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) estrutura.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o objeto de descrição da fonte especificada ou o nome e o conjunto de caracteres; corresponde a um item na caixa de combinação de fonte Caso contrário, FALSE.  
@@ -164,14 +164,14 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nFontType*  
- Especifica o tipo de fonte. O valor padrão é a combinação bit a bit (OR) de DEVICE_FONTTYPE, RASTER_FONTTYPE e TRUETYPE_FONTTYPE.  
+*nFontType*<br/>
+[in] Especifica o tipo de fonte. O valor padrão é a combinação bit a bit (OR) de DEVICE_FONTTYPE, RASTER_FONTTYPE e TRUETYPE_FONTTYPE.  
   
- [in] *nCharSet*  
- Especifica o conjunto de caracteres da fonte. O valor padrão é DEFAULT_CHARSET.  
+*nCharSet*<br/>
+[in] Especifica o conjunto de caracteres da fonte. O valor padrão é DEFAULT_CHARSET.  
   
- [in] *nPitchAndFamily*  
- Especifica a densidade de fonte e a família. O valor padrão é DEFAULT_PITCH.  
+*nPitchAndFamily*<br/>
+[in] Especifica a densidade de fonte e a família. O valor padrão é DEFAULT_PITCH.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a caixa de combinação de fonte foi inicializada com êxito; Caso contrário, FALSE.  

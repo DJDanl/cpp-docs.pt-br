@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b0d2972c7d6b1f7211d5f43fa0248a8b2980f10
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a54f8e21c253c46c6a6a086fd10d193a18b7e59e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538380"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718257"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>Classe CMFCOutlookBarTabCtrl
 Um controle guia que tem a aparência visual do **painel de navegação** no Microsoft Outlook.  
@@ -148,20 +148,20 @@ void AddControl(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWndCtrl*  
- Um ponteiro para um controle a ser adicionado.  
+*pWndCtrl*<br/>
+[in] Um ponteiro para um controle a ser adicionado.  
   
- [in] *lpszName*  
- Especifica o nome da guia.  
+*lpszName*<br/>
+[in] Especifica o nome da guia.  
   
- [in] *bDetachable*  
- Se for TRUE, a página será criada como destacável.  
+*bDetachable*<br/>
+[in] Se for TRUE, a página será criada como destacável.  
   
- [in] *nImageID*  
- Índice de imagem na lista de imagem interna para a imagem a ser exibido na nova guia.  
+*nImageID*<br/>
+[in] Índice de imagem na lista de imagem interna para a imagem a ser exibido na nova guia.  
   
- [in] *dwControlBarStyle*  
- Especifica o estilo AFX_ CBRS_ * para painéis de encaixe encapsulados.  
+*dwControlBarStyle*<br/>
+[in] Especifica o estilo AFX_ CBRS_ * para painéis de encaixe encapsulados.  
   
 ### <a name="remarks"></a>Comentários  
  Use essa função para adicionar um controle como uma nova página de uma barra do outlook.  
@@ -212,14 +212,14 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *rect*  
- Especifica o tamanho inicial e a posição, em pixels.  
+*Rect*<br/>
+[in] Especifica o tamanho inicial e a posição, em pixels.  
   
- [in] *pParentWnd*  
- Aponta para a janela pai. Não deve ser NULL.  
+*pParentWnd*<br/>
+[in] Aponta para a janela pai. Não deve ser NULL.  
   
- [in] *nID*  
- A ID do controle.  
+*nID*<br/>
+[in] A ID do controle.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o controle tiver sido criado com êxito; Caso contrário, 0.  
@@ -235,8 +235,8 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- Especifica se a animação deve ser habilitada ou desabilitada.  
+*bAtivar*<br/>
+[in] Especifica se a animação deve ser habilitada ou desabilitada.  
   
 ### <a name="remarks"></a>Comentários  
  Chame essa função para habilitar e desabilitar a animação. Quando o usuário abre uma página da guia, legenda da página desliza para cima ou para baixo se a animação está habilitada. Se a animação está desabilitada, a página se torne ativa imediatamente.  
@@ -268,14 +268,14 @@ void EnableScrollButtons(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- Determina se os botões de rolagem são exibidos.  
+*bAtivar*<br/>
+[in] Determina se os botões de rolagem são exibidos.  
   
- [in] *bIsUp*  
- Determina se a barra de rolagem superior é exibida.  
+*bIsUp*<br/>
+[in] Determina se a barra de rolagem superior é exibida.  
   
- [in] *bIsDown*  
- Determina se a barra de rolagem inferior é exibida.  
+*bIsDown*<br/>
+[in] Determina se a barra de rolagem inferior é exibida.  
   
 ### <a name="remarks"></a>Comentários  
  Permite a exibição dos botões de rolagem. Este método é chamado pelo framework quando a guia ativa é alterado para restaurar os botões de rolagem.  
@@ -367,8 +367,8 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero de uma guia a ser aberto.  
+*iTab*<br/>
+[in] O índice baseado em zero de uma guia a ser aberto.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se a guia especificada tiver sido aberta com êxito; Caso contrário, 0.  
@@ -384,8 +384,8 @@ void SetBorderSize(int nBorderSize);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nBorderSize*  
- Especifica o novo tamanho da borda em pixels.  
+*nBorderSize*<br/>
+[in] Especifica o novo tamanho da borda em pixels.  
   
 ### <a name="remarks"></a>Comentários  
  Define o novo tamanho de borda e recalcula o layout de janela do outlook.  
@@ -400,11 +400,11 @@ void SetPageButtonTextAlign(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiAlign*  
- Especifica o alinhamento do texto.  
+*uiAlign*<br/>
+[in] Especifica o alinhamento do texto.  
   
- [in] *bRedraw*  
- Se for TRUE, a janela do outlook será redesenhada.  
+*bRedraw*<br/>
+[in] Se for TRUE, a janela do outlook será redesenhada.  
   
 ### <a name="remarks"></a>Comentários  
  Use essa função para alterar o alinhamento de texto para botões de página.  
@@ -430,14 +430,14 @@ BOOL SetToolbarImageList(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiID*  
- Especifica a ID do recurso da imagem para carregar.  
+*uiID*<br/>
+[in] Especifica a ID do recurso da imagem para carregar.  
   
- [in] *cx*  
- Especifica a largura de uma imagem na lista de imagens, em pixels.  
+*CX*<br/>
+[in] Especifica a largura de uma imagem na lista de imagens, em pixels.  
   
- [in] *clrTransp*  
- Um valor RGB que especifica a cor transparente.  
+*clrTransp*<br/>
+[in] Um valor RGB que especifica a cor transparente.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Retornará TRUE se bem-sucedido; Caso contrário, retornará FALSE.  

@@ -14,41 +14,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f8f51e448aab0978d6a7eb39a753c2274d2cae6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e56acaecd038b7580423e078459e39994391052a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369322"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722352"
 ---
 # <a name="calculating-necessary-values"></a>Calculando valores necessários
-Duas informações fundamentais precisam ser calculado pela rotina auxiliar atraso. Para esse fim, há duas funções embutidas em delayhlp.cpp para calcular a essas informações.  
-  
--   O primeiro calcula o índice da importação atual em três tabelas diferentes (Importar tabela de endereço (IAT), a tabela de endereço de importação associado (BIAT) e a tabela de endereço de importação não associado (UIAT)).  
-  
--   A segunda conta o número de importações em um IAT válido.  
-  
-```  
-// utility function for calculating the index of the current import  
-// for all the tables (INT, BIAT, UIAT, and IAT).  
-__inline unsigned  
-IndexFromPImgThunkData(PCImgThunkData pitdCur, PCImgThunkData pitdBase) {  
-    return pitdCur - pitdBase;  
-    }  
-  
-// utility function for calculating the count of imports given the base  
-// of the IAT. NB: this only works on a valid IAT!  
-__inline unsigned  
-CountOfImports(PCImgThunkData pitdBase) {  
-    unsigned        cRet = 0;  
-    PCImgThunkData  pitd = pitdBase;  
-    while (pitd->u1.Function) {  
-        pitd++;  
-        cRet++;  
-        }  
-    return cRet;  
-    }  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Noções básicas sobre a função auxiliar](understanding-the-helper-function.md)
+
+Duas partes críticas de informações precisam ser calculado pela rotina do auxiliar de atraso. Para esse fim, há duas funções embutidas no delayhlp.cpp para calcular essas informações.
+
+- O primeiro calcula o índice da importação atual nas três tabelas diferentes (importação de endereço IAT (tabela), a tabela de endereços de importação associado (BIAT) e a tabela de endereços de importação não associado (UIAT)).
+
+- A segunda conta o número de importações em uma IAT válida.
+
+```cpp
+// utility function for calculating the index of the current import
+// for all the tables (INT, BIAT, UIAT, and IAT).
+__inline unsigned
+IndexFromPImgThunkData(PCImgThunkData pitdCur, PCImgThunkData pitdBase) {
+    return pitdCur - pitdBase;
+    }
+
+// utility function for calculating the count of imports given the base
+// of the IAT. NB: this only works on a valid IAT!
+__inline unsigned
+CountOfImports(PCImgThunkData pitdBase) {
+    unsigned        cRet = 0;
+    PCImgThunkData  pitd = pitdBase;
+    while (pitd->u1.Function) {
+        pitd++;
+        cRet++;
+        }
+    return cRet;
+    }
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Noções básicas sobre a função auxiliar](understanding-the-helper-function.md)

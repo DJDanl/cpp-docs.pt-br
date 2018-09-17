@@ -40,15 +40,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01fec88a49852ba46c8feb68f18842d2a1de437f
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 42fd0c5df1731ded5e48bda74cb280b282e6b0cb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37078994"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702605"
 ---
 # <a name="crecentdocksiteinfo-class"></a>Classe CRecentDockSiteInfo
-O `CRecentDockSiteInfo` classe é uma classe auxiliar que armazena informações de estado recentes para o [CPane classe](../../mfc/reference/cpane-class.md).  
+O `CRecentDockSiteInfo` é uma classe auxiliar que armazena informações de estado recente o [classe CPane](../../mfc/reference/cpane-class.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -83,9 +83,9 @@ class CRecentDockSiteInfo : public CObject
 |[CRecentDockSiteInfo::StoreDockInfo](#storedockinfo)||  
   
 ## <a name="remarks"></a>Comentários  
- O `CRecentDockSiteInfo` classe é uma classe de gerenciamento de dados. Controla o último estado de um `CPane` como ela faz a transição entre sendo encaixado e flutuante. Quando um usuário clicar duas vezes um painel encaixável flutuante, ela fica ancorada. O painel encaixado de clicando duas vezes retorna ao seu local anterior, o tamanho e o estado. Da mesma forma, quando o painel estiver encaixado novamente volta ao seu local de encaixe anterior. Essa classe de dados é o que torna isso possível. Como os membros dessa classe de armazenam informações de estado para o painel encaixado, eles não devem ser diretamente modificados por seu aplicativo.  
+ O `CRecentDockSiteInfo` é uma classe de gerenciamento de dados. Ele controla o último estado de um `CPane` conforme ela passa entre o que está sendo encaixado e flutuante. Quando um usuário clica duas vezes um painel encaixável flutuante, ela se torna encaixada. O painel encaixado de clicando duas vezes retorna ao seu local anterior, o tamanho e o estado. Da mesma forma, quando o painel estiver encaixado novamente ele retorna ao seu local de encaixe anterior. Essa classe de dados é o que torna isso possível. Já que os membros dessa classe armazenam informações de estado para o painel encaixado, eles não devem ser diretamente modificados pelo seu aplicativo.  
   
- Um `CRecentDockSiteInfo` objeto é criado toda vez que um painel é criado. Cada `CPane` objeto tem uma variável de membro, [CPane::m_recentDockInfo](../../mfc/reference/cpane-class.md#m_recentdockinfo), para armazenar essas informações.  
+ Um `CRecentDockSiteInfo` objeto é criado sempre que um painel é criado. Cada `CPane` objeto tem uma variável de membro [CPane::m_recentDockInfo](../../mfc/reference/cpane-class.md#m_recentdockinfo), para armazenar essas informações.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -244,8 +244,8 @@ void SaveListOfRecentPanes(CList<HWND,
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *CList < HWND*  
- [in] *lstOrg*  
+*CList < HWND*<br/>
+[in] [in] *lstOrg*  
  [in] *bForSlider*  
   
 ### <a name="remarks"></a>Comentários  
@@ -260,8 +260,8 @@ virtual void SetInfo(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bForSlider*  
- [in] *srcInfo*  
+*bForSlider*<br/>
+[in] [in] *srcInfo*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -275,12 +275,12 @@ virtual void StoreDockInfo(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pRecentContainer*  
- [in] *pTabbedBar*  
+*pRecentContainer*<br/>
+[in] [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CDockSite](../../mfc/reference/cdocksite-class.md)

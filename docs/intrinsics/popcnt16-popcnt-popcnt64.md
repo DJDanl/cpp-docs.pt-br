@@ -21,17 +21,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a639091bd7c5c263a3f09067858cd0fe4ac631cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34063223addb433a94c877ad56cf410f189e6681
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329190"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724721"
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
+
 **Seção específica da Microsoft**  
   
- Conta o número de um bits (contagem de população) em um 16, 32 ou inteiro não assinado de 64 bytes.  
+ Conta o número de um bits (contagem de população) em um 16, 32 ou inteiro sem sinal de 64 bytes.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,26 +49,26 @@ unsigned __int64 __popcnt64(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [in] `value`  
- A 16, 32 ou inteiro não assinado de 64 bits para os quais queremos que a contagem de população.  
+*value*<br/>
+[in] A 16, 32 ou inteiro sem sinal de 64 bits para os quais queremos que a contagem de população.  
   
 ## <a name="return-value"></a>Valor de retorno  
- O número de bits um o `value` parâmetro.  
+ O número de bits de um no `value` parâmetro.  
   
 ## <a name="requirements"></a>Requisitos  
   
 |Intrínseco|Arquitetura|  
 |---------------|------------------|  
-|`__popcnt16`|Manipulação de bits avançadas|  
-|`__popcnt`|Manipulação de bits avançadas|  
-|`__popcnt64`|Manipulação de bits avançadas no modo de 64 bits.|  
+|`__popcnt16`|Manipulação de bits avançada|  
+|`__popcnt`|Manipulação de bits avançada|  
+|`__popcnt64`|Manipulação de Bit avançado no modo de 64 bits.|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
- Cada um desses intrínsecos gera o `popcnt` instrução.  O tamanho do valor que o `popcnt` instrução retorna é o mesmo que o tamanho do argumento.  Em modo de 32 bits são sem 64-bit para fins gerais registros, portanto, não de 64 bits `popcnt`.  
+ Cada um desses intrínsecos gera o `popcnt` instrução.  O tamanho do valor que o `popcnt` instrução retorna é o mesmo que o tamanho do seu argumento.  No modo de 32 bits não há nenhum 64-bit registros de uso geral, portanto, não de 64 bits `popcnt`.  
   
- Para determinar o suporte de hardware para o `popcnt` instrução, chamada de `__cpuid` intrínseco com `InfoType=0x00000001` e verifique se o bit 23 de `CPUInfo[2] (ECX)`. Esse bit for 1 se a instrução tiver suporte e 0, caso contrário. Se você executar o código que usa nesse intrínseco no hardware que não oferece suporte a `popcnt` instrução, os resultados são imprevisíveis.  
+ Para determinar o suporte de hardware para o `popcnt` instrução, a chamada a `__cpuid` intrínseco com `InfoType=0x00000001` e marque pouco 23 de `CPUInfo[2] (ECX)`. Esse bit é 1 se a instrução for compatível e 0, caso contrário. Se você executar o código que usa esse intrínseco no hardware que não oferece suporte a `popcnt` instrução, os resultados serão imprevisíveis.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -107,7 +108,8 @@ __popcnt(0xffffffff) = 32
 ```  
   
 **Fim da seção específica da Microsoft**  
- Copyright 2007 Advanced Micro dispositivos, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro Devices, Inc.  
+
+Copyright 2007 por dispositivos Micro avançada, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro dispositivos, Inc.  
   
 ## <a name="see-also"></a>Consulte também  
  [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

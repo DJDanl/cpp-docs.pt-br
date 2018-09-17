@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b0f4660e9221855c93835a0a5ba5e0557178a66
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b46f61ef727c1b283137bb3d537d2dbad416c1d8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109856"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703814"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (compilação do Common Language Runtime)
 
@@ -40,7 +40,7 @@ Permite que aplicativos e componentes usem recursos do CLR (Common Language Runt
 
 ## <a name="arguments"></a>Arguments
 
-*options*  
+*options*<br/>
 Uma ou mais das seguintes opções, separados por vírgulas.
 
 - nenhum
@@ -140,5 +140,5 @@ Se você tiver o código que usa extensões gerenciadas para C++, é recomendáv
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do compilador](../../build/reference/compiler-options.md)   
+[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
 [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

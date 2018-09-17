@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4c2b4a9e185f709ff829a3b88ea9cb67741fa1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 08a9948bb986ae57e42e37253b3b54737cf4d3f9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330240"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714214"
 ---
 # <a name="addfsbyte-addfsword-addfsdword"></a>__addfsbyte, __addfsword, __addfsdword
 **Seção específica da Microsoft**  
@@ -53,11 +53,11 @@ void __addfsdword(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [in] `Offset`  
- O deslocamento do início do `FS`.  
+*deslocamento*<br/>
+[in] O deslocamento do início do `FS`.  
   
- [in] `Data`  
- O valor a ser adicionado para o local de memória.  
+*Dados*<br/>
+[in] O valor a ser adicionado ao local da memória.  
   
 ## <a name="requirements"></a>Requisitos  
   

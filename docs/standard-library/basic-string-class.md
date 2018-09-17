@@ -126,12 +126,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a44cccd38d64f3e6b0c2b7af390d06292f70157
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e6c22d91bafc45699371dd40d317b66cf3d1ca11
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105660"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706609"
 ---
 # <a name="basicstring-class"></a>Classe basic_string
 
@@ -3979,9 +3979,11 @@ A cadeia de caracteres do C que deve ser uma fonte de caracteres para a cadeia d
 *CH*<br/>
 O caractere a ser copiado para a cadeia de caracteres do operando.
 
-* first0 * um iterador que trata do primeiro caractere a ser removido na cadeia de caracteres do operando.
+*first0*<br/>
+Um iterador que trata do primeiro caractere a ser removido na cadeia de caracteres do operando.
 
-* last0 * um iterador que trata o último caractere a ser removido na cadeia de caracteres do operando.
+*last0*<br/>
+Um iterador que trata do último caractere a ser removido na cadeia de caracteres do operando.
 
 *first*<br/>
 Um iterador, const_pointer ou const_iterator, que trata do primeiro caractere a ser copiado na cadeia de caracteres do parâmetro.

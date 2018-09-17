@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9e4d2bc62ffadb59565ba64e28311cd1283cb5d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: bae44c3d92c2e27802c3c1b0849fa23266e2f753
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43691430"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723522"
 ---
 # <a name="cmfcpropertysheet-class"></a>Classe CMFCPropertySheet
 O `CMFCPropertySheet` classe dá suporte a uma folha de propriedades em que cada página de propriedades é indicada por uma guia de página, um botão de barra de ferramentas, um nó de controle de árvore ou um item de lista.  
@@ -151,8 +151,8 @@ void AddPage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *página*  
- Ponteiro para um objeto de página. Esse parâmetro não pode ser NULL.  
+*Página*<br/>
+[in] Ponteiro para um objeto de página. Esse parâmetro não pode ser NULL.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método adiciona a página de propriedade especificada como a guia mais à direita na folha de propriedades. Portanto, use esse método para adicionar páginas em ordem da esquerda para a direita.  
@@ -171,17 +171,17 @@ void AddPageToTree(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pCategory*  
- Ponteiro para um nó de árvore pai ou nulo para associar a página especificada com o nó de nível superior. Chame o [CMFCPropertySheet::AddTreeCategory](#addtreecategory) método para obter esse ponteiro.  
+*pCategory*<br/>
+[in] Ponteiro para um nó de árvore pai ou nulo para associar a página especificada com o nó de nível superior. Chame o [CMFCPropertySheet::AddTreeCategory](#addtreecategory) método para obter esse ponteiro.  
   
- [in] *página*  
- Ponteiro para um objeto de página de propriedade.  
+*Página*<br/>
+[in] Ponteiro para um objeto de página de propriedade.  
   
- [in] *nIconNum*  
- Índice baseado em zero de um ícone ou -1 se nenhum ícone for usado. O ícone é exibido ao lado da página de propriedade de controle de árvore quando a página não estiver selecionada. O valor padrão é -1.  
+*nIconNum*<br/>
+[in] Índice baseado em zero de um ícone ou -1 se nenhum ícone for usado. O ícone é exibido ao lado da página de propriedade de controle de árvore quando a página não estiver selecionada. O valor padrão é -1.  
   
- [in] *nSelIconNum*  
- Índice baseado em zero de um ícone ou -1 se nenhum ícone for usado. O ícone é exibido ao lado da página de propriedade de controle de árvore quando a página está selecionada. O valor padrão é -1.  
+*nSelIconNum*<br/>
+[in] Índice baseado em zero de um ícone ou -1 se nenhum ícone for usado. O ícone é exibido ao lado da página de propriedade de controle de árvore quando a página está selecionada. O valor padrão é -1.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método adiciona uma página de propriedades como uma folha de um controle de árvore. Para adicionar uma página de propriedades, crie uma `CMFCPropertySheet` do objeto, chame o [CMFCPropertySheet::SetLook](#setlook) método com o *parecer* parâmetro definido como `CMFCPropertySheet::PropSheetLook_Tree`e, em seguida, usar esse método para adicionar a página de propriedade .  
@@ -198,17 +198,17 @@ CMFCPropertySheetCategoryInfo* AddTreeCategory(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszLabel*  
- O nome do nó.  
+*lpszLabel*<br/>
+[in] O nome do nó.  
   
- [in] *nIconNum*  
- Índice baseado em zero de um ícone ou -1 se nenhum ícone for usado. O ícone é exibido ao lado da página de propriedade de controle de árvore quando a página não estiver selecionada. O valor padrão é -1.  
+*nIconNum*<br/>
+[in] Índice baseado em zero de um ícone ou -1 se nenhum ícone for usado. O ícone é exibido ao lado da página de propriedade de controle de árvore quando a página não estiver selecionada. O valor padrão é -1.  
   
- [in] *nSelectedIconNum*  
- Índice baseado em zero de um ícone ou -1 se nenhum ícone for usado. O ícone é exibido ao lado da página de propriedade de controle de árvore quando a página está selecionada. O valor padrão é -1.  
+*nSelectedIconNum*<br/>
+[in] Índice baseado em zero de um ícone ou -1 se nenhum ícone for usado. O ícone é exibido ao lado da página de propriedade de controle de árvore quando a página está selecionada. O valor padrão é -1.  
   
- [in] *pParentCategory*  
- Ponteiro para um nó de árvore pai ou nulo para associar a página especificada com o nó de nível superior. Defina esse parâmetro com o [CMFCPropertySheet::AddTreeCategory](#addtreecategory) método.  
+*pParentCategory*<br/>
+[in] Ponteiro para um nó de árvore pai ou nulo para associar a página especificada com o nó de nível superior. Defina esse parâmetro com o [CMFCPropertySheet::AddTreeCategory](#addtreecategory) método.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o novo nó no controle de árvore.  
@@ -234,17 +234,17 @@ CMFCPropertySheet(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pszCaption*  
- Uma cadeia de caracteres que contém a legenda da folha de propriedade. Não pode ser NULL.  
+*pszCaption*<br/>
+[in] Uma cadeia de caracteres que contém a legenda da folha de propriedade. Não pode ser NULL.  
   
- [in] *nIDCaption*  
- Uma ID de recurso que contém a legenda da folha de propriedade.  
+*nIDCaption*<br/>
+[in] Uma ID de recurso que contém a legenda da folha de propriedade.  
   
- [in] *pParentWnd*  
- Ponteiro para a janela pai da folha de propriedades, ou nulo se a janela pai é a janela principal do aplicativo. O valor padrão é NULL.  
+*pParentWnd*<br/>
+[in] Ponteiro para a janela pai da folha de propriedades, ou nulo se a janela pai é a janela principal do aplicativo. O valor padrão é NULL.  
   
- [in] *iSelectPage*  
- O índice baseado em zero da página de propriedades principais. O valor padrão é 0.  
+*iSelectPage*<br/>
+[in] O índice baseado em zero da página de propriedades principais. O valor padrão é 0.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte os parâmetros para o [CPropertySheet::CPropertySheet](../../mfc/reference/cpropertysheet-class.md#cpropertysheet) construtor.  
@@ -257,8 +257,8 @@ void EnablePageHeader(int nHeaderHeight);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nHeaderHeight*  
- A altura do cabeçalho, em pixels.  
+*nHeaderHeight*<br/>
+[in] A altura do cabeçalho, em pixels.  
   
 ### <a name="remarks"></a>Comentários  
  Para usar o valor da *nHeaderHeight* substituição de parâmetro para desenhar um cabeçalho personalizado, o [CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader) método.  
@@ -334,8 +334,8 @@ virtual void OnActivatePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *página*  
- Ponteiro para um objeto de página de propriedade que representa a página de propriedade enabled.  
+*Página*<br/>
+[in] Ponteiro para um objeto de página de propriedade que representa a página de propriedade enabled.  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, esse método garante que a página de propriedade enabled é colocada na exibição. Se o estilo da folha de propriedades atual contiver um painel do Microsoft Outlook, esse método define o botão correspondente do Outlook para o estado de ativação.  
@@ -351,14 +351,14 @@ virtual void OnDrawPageHeader(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Ponteiro para um contexto de dispositivo.  
   
- [in] *nPage*  
- O número de página de propriedade com base em zero.  
+*nPage*<br/>
+[in] O número de página de propriedade com base em zero.  
   
- [in] *rectHeader*  
- Um retângulo delimitador que especifica o local desenhar o cabeçalho.  
+*rectHeader*<br/>
+[in] Um retângulo delimitador que especifica o local desenhar o cabeçalho.  
   
 ### <a name="remarks"></a>Comentários  
  Por padrão, esse método não fará nada. Se você substituir esse método, chame o [CMFCPropertySheet::EnablePageHeader](#enablepageheader) método antes que a estrutura chama esse método.  
@@ -371,8 +371,8 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *página*  
- Ponteiro para um objeto de página de propriedade que representa a página de propriedade a ser removido.  
+*Página*<br/>
+[in] Ponteiro para um objeto de página de propriedade que representa a página de propriedade a ser removido.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -385,8 +385,8 @@ void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pCategory*  
- Ponteiro para uma categoria (nó) a ser removido.  
+*pCategory*<br/>
+[in] Ponteiro para uma categoria (nó) a ser removido.  
   
 ### <a name="remarks"></a>Comentários  
  Use esse método para remover um nó, que também é conhecido como uma categoria de um controle de árvore. Use o [CMFCPropertySheet::AddTreeCategory](#addtreecategory) método para adicionar um nó a um controle de árvore.  
@@ -400,11 +400,11 @@ void RemovePage(int nPage);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *página*  
- Ponteiro para objeto de página de propriedade que representa a página de propriedade a ser removido. Não pode ser NULL.  
+*Página*<br/>
+[in] Ponteiro para objeto de página de propriedade que representa a página de propriedade a ser removido. Não pode ser NULL.  
   
- [in] *nPage*  
- Índice baseado em zero da página a ser removido.  
+*nPage*<br/>
+[in] Índice baseado em zero da página a ser removido.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método remove a página de propriedade especificada e destrói sua janela associada. A página de propriedades do objeto que o *página* parâmetro especifica não será destruído até que o [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) janela é fechada.  
@@ -421,17 +421,17 @@ void SetIconsList(HIMAGELIST hIcons);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiImageListResID*  
- A ID de recurso de uma lista de imagens.  
+*uiImageListResID*<br/>
+[in] A ID de recurso de uma lista de imagens.  
   
- [in] *cx*  
- A largura, em pixels, dos ícones na lista de imagens.  
+*CX*<br/>
+[in] A largura, em pixels, dos ícones na lista de imagens.  
   
- [in] *clrTransparent*  
- A cor da imagem transparente. As partes da imagem que têm essa cor será transparentes. O valor padrão é a cor magenta RGB(255,0,255).  
+*clrTransparent*<br/>
+[in] A cor da imagem transparente. As partes da imagem que têm essa cor será transparentes. O valor padrão é a cor magenta RGB(255,0,255).  
   
- [in] *hIcons*  
- Um identificador para uma lista de imagens existente.  
+*hIcons*<br/>
+[in] Um identificador para uma lista de imagens existente.  
   
 ### <a name="return-value"></a>Valor de retorno  
  No primeiro método de sobrecarga sintaxe, TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -451,11 +451,11 @@ void SetLook(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *procurar*  
- Um dos valores de enumeração que especifica a aparência da folha de propriedades. O estilo padrão para uma folha de propriedades é `CMFCPropertySheet::PropSheetLook_Tabs`. Para obter mais informações, consulte a tabela na seção Comentários deste tópico.  
+*aparência*<br/>
+[in] Um dos valores de enumeração que especifica a aparência da folha de propriedades. O estilo padrão para uma folha de propriedades é `CMFCPropertySheet::PropSheetLook_Tabs`. Para obter mais informações, consulte a tabela na seção Comentários deste tópico.  
   
- [in] *nNavControlWidth*  
- A largura do controle de navegação, em pixels. O valor padrão é 100.  
+*nNavControlWidth*<br/>
+[in] A largura do controle de navegação, em pixels. O valor padrão é 100.  
   
 ### <a name="remarks"></a>Comentários  
  Para exibir uma folha de propriedades em um estilo diferente do padrão, chame esse método antes de criar a janela de folha de propriedades.  

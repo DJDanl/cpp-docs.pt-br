@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49d67f9a2e91e3a2e0a2731e61fc0e1c2ec55679
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: cc115fbc77ac68c774b85bb86fd0cf9eac1fa51b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028536"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716632"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Visão geral das convenções de ABI ARM64
 
@@ -173,7 +173,7 @@ Para cada argumento na lista as seguintes regras são aplicadas por sua vez até
 
 11. O NGRN é definido como 8.
 
-12. O NSAA é arredondado para o maior dos 8 ou o alinhamento Natural do tipo do argumento... 
+12. O NSAA é arredondado para o maior dos 8 ou o alinhamento Natural do tipo do argumento...
 
 13. Se o argumento for um tipo composto, em seguida, o argumento é copiado para a memória no NSAA ajustado. O NSAA é incrementado pelo tamanho do argumento. O argumento foi alocado.
 
@@ -189,7 +189,7 @@ Funções que usam um número variável de argumentos são tratadas de maneira d
 
 2. SIMD e registra de ponto flutuante não serão usado.
 
-Efetivamente, isso equivale a C.12–C.15 para alocar os argumentos para uma pilha imaginário, onde os primeiros 64 bytes da pilha são carregados no x7 x0 e quaisquer argumentos de pilha restantes são colocados normalmente regras a seguir. 
+Efetivamente, isso equivale a C.12–C.15 para alocar os argumentos para uma pilha imaginário, onde os primeiros 64 bytes da pilha são carregados no x7 x0 e quaisquer argumentos de pilha restantes são colocados normalmente regras a seguir.
 
 ## <a name="return-values"></a>Valores de retorno
 
@@ -231,5 +231,5 @@ Observe que o contador de ciclo aqui é um verdadeiro contador de ciclo, não um
 
 ## <a name="see-also"></a>Consulte também
 
-[Problemas de migração ARM do Visual C++ comuns](../build/common-visual-cpp-arm-migration-issues.md)  
-[Tratamento de exceção ARM64](../build/arm64-exception-handling.md)  
+[Problemas de migração ARM do Visual C++ comuns](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+[Tratamento de exceção ARM64](../build/arm64-exception-handling.md)

@@ -1,5 +1,5 @@
 ---
-title: /ZC:twoPhase-(desabilitar pesquisa de nome em duas fases) | Microsoft Docs
+title: /ZC:twoPhase-(desabilitar a pesquisa de nome em duas fases) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
@@ -19,16 +19,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5653959b25105f10ae98768217524dc0ff0cbe2a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 30647ab07984c393b10d7c0fb74d0e2be35cdf26
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389095"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723288"
 ---
-# <a name="zctwophase--disable-two-phase-name-lookup"></a>/ZC:twoPhase-(pesquisa de nome em duas fases disable)
+# <a name="zctwophase--disable-two-phase-name-lookup"></a>/ZC:twoPhase-(desabilitar a pesquisa de nome em duas fases)
 
-Quando o **/Zc:twoPhase-** opção for especificada, o compilador analisa e instancia os modelos de classe e de função da mesma maneira que as versões do Visual Studio antes do Visual Studio 2017 versão 15,3 não conforme. 
+Quando o **/Zc:twoPhase-** opção for especificada, o compilador analisa e cria uma instância de modelos de classe e modelos de função da mesma forma que as versões do Visual Studio anteriores ao Visual Studio 2017 versão 15.3 não conformes.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,31 +36,31 @@ Quando o **/Zc:twoPhase-** opção for especificada, o compilador analisa e inst
 
 ## <a name="remarks"></a>Comentários
 
-No Visual Studio 2017 versão 15,3 e versões posteriores, por padrão, o compilador usa a pesquisa de nome em duas fases para resolução de nome de modelo. Se **/Zc:twoPhase-** for especificado, o compilador reverterá ao seu não conformes classe modelo e a função modelo nome resolução e substituição comportamento anterior.
+No Visual Studio 2017 versão 15.3 e posterior, por padrão, o compilador usa a pesquisa de nome em duas fases para resolução de nome de modelo. Se **/Zc:twoPhase-** for especificado, o compilador será revertido para seu anterior não conformes modelo e a função modelo nome resolução e substituição de comportamento da classe.
 
-O **/Zc:twoPhase-** opção para habilitar o comportamento não conformes não está definida por padrão. O [/ permissivo-](permissive-standards-conformance.md) opção implicitamente define o comportamento do compilador pesquisa em duas fases em conformidade, mas ele pode ser substituído usando **/Zc:twoPhase-**.
+O **/Zc:twoPhase-** opção para habilitar o comportamento não conformes não é definida por padrão. O [/permissive--](permissive-standards-conformance.md) opção define implicitamente o comportamento do compilador pesquisa em duas fases em conformidade, mas ele pode ser substituído usando **/Zc:twoPhase-**.
 
-Os arquivos de cabeçalho do SDK do Windows na versão 10.0.15063.0 (criadores de atualização ou Redstone 2) e versões anteriores não funcionam corretamente no modo de conformidade. Você deve usar **/Zc:twoPhase-** para compilar o código para essas versões do SDK quando você usar a versão do Visual Studio de 2017 15,3 e versões posteriores. Versões do SDK do Windows, começando com a versão 10.0.15254.0 (3 Redstone ou queda criadores de atualização) funcionam corretamente no modo de conformidade e não requerem o **/Zc:twoPhase-** opção.
+Os arquivos de cabeçalho do SDK do Windows na versão 10.0.15063.0 (atualização para criadores ou Redstone 2) e versões anteriores não funcionam corretamente no modo de conformidade. Você deve usar **/Zc:twoPhase-** para compilar o código para essas versões do SDK quando você usa o Visual Studio 2017 versão 15.3 e versões posteriores. Versões do SDK do Windows, começando com a versão 10.0.15254.0 (3 Redstone ou Fall Creators Update) funcionam corretamente no modo de conformidade e não exigem o **/Zc:twoPhase-** opção.
 
-Use **/Zc:twoPhase-** se seu código requer o comportamento antigo para compilar corretamente. Considere seriamente atualizar seu código para estar de acordo com o padrão.
+Use **/Zc:twoPhase-** se seu código exigir o comportamento antigo para compilar corretamente. Considere seriamente atualizar seu código para estar em conformidade com o padrão.
 
 ### <a name="compiler-behavior-under-zctwophase-"></a>Comportamento do compilador em /Zc:twoPhase-
 
-Em versões do compilador antes do Visual Studio 2017 versão 15,3 e quando **/Zc:twoPhase-** for especificado, o compilador usa esse comportamento:
+Nas versões do compilador antes do Visual Studio 2017 versão 15.3 e quando **/Zc:twoPhase-** for especificado, o compilador usa esse comportamento:
 
-- Ele analisa somente a declaração de modelo, o cabeçalho de classe e a lista de classes base. Corpo do modelo é capturado como um fluxo do token. Nenhum corpo de função, inicializadores, argumentos padrão ou argumentos noexcept são analisados. O modelo de classe é instanciada pseudo em um tipo de tentativa para validar se as declarações no modelo de classe estão corretas. Considere este modelo de classe:
+- Ele analisa somente a declaração de modelo, o cabeçalho de classe e a lista de classes base. Corpo do modelo é capturado como um fluxo do token. Não há corpos de função, inicializadores, os argumentos padrão ou noexcept argumentos são analisados. O modelo de classe é instanciada pseudo em um tipo provisório para validar que as declarações no modelo de classe estão corretas. Considere este modelo de classe:
 
    ```cpp
    template <typename T> class Derived : public Base<T> { ... }
    ```
 
-   A declaração de modelo, `template <typename T`>, o cabeçalho de classe `class Derived`e a lista de classe base `public Base<T>` são analisados, mas o corpo do modelo é capturado como um fluxo do token.
+   A declaração de modelo `template <typename T`>, título da classe `class Derived`e a lista de classe base `public Base<T>` são analisados, mas o corpo do modelo é capturado como um fluxo do token.
 
-- Ao analisar um modelo de função, o compilador analisa somente a assinatura de função. O corpo da função nunca é analisado. Em vez disso, ele é capturado como um fluxo do token.
+- Ao analisar um modelo de função, o compilador analisa somente a assinatura de função. O corpo da função nunca é analisado. Em vez disso, ela é capturada como um fluxo do token.
 
-Como resultado, se o corpo de modelo tem erros de sintaxe e o modelo nunca é instanciado, os erros são nunca diagnosticados.
+Como resultado, se o corpo do modelo tem erros de sintaxe e o modelo nunca é instanciado, os erros nunca são diagnosticados.
 
-Outro efeito desse comportamento é na resolução de sobrecarga. Por causa da forma que o fluxo do token é expandido no site da instanciação, símbolos que não eram visíveis a declaração de modelo podem ser visíveis no ponto de instanciação e participar de resolução de sobrecarga. Isso pode levar a modelos que alteram o comportamento com base no código que não estava visível quando o modelo foi definido, ao contrário do padrão.
+Outro efeito desse comportamento é na resolução de sobrecarga. Por causa da maneira que o fluxo do token é expandido no site da instanciação, símbolos que não eram visíveis a declaração de modelo podem ser visíveis no ponto de instanciação e participa da resolução de sobrecarga. Isso pode levar a modelos que alteram o comportamento com base no código que não estava visível quando o modelo tiver sido definido, ao contrário do padrão.
 
 Por exemplo, pense neste código:
 
@@ -76,15 +76,15 @@ template<typename T> void g(T x)
 
 void func(int) { std::puts("The call resolves to int"); }
 
-int main() 
+int main()
 {
     g(3.14);
 }
 ```
 
-Quando compilado no **/Zc:twoPhase-**, este programa imprime "chamada resolve para int". No modo de conformidade em **/ permissivo-**, este programa imprime "resolve a chamada para void *", porque a segunda sobrecarga de `func` não fica visível quando o compilador encontra o modelo.
+Quando compilado com **/Zc:twoPhase-**, esse programa imprime "a chamada resolve para int". No modo de conformidade sob **/permissive--**, esse programa imprime "resolve a chamada para void *", porque a segunda sobrecarga do `func` não fica visível quando o compilador encontra o modelo.
 
-*Nomes de dependente*, nomes que dependem de um parâmetro de modelo tem o comportamento de pesquisa que também é diferente em **/Zc:twoPhase-**. No modo de conformidade, os nomes de dependente não são vinculados no ponto da definição do modelo. Em vez disso, esses nomes são pesquisados quando o modelo é instanciado. Para chamadas de função com um nome de função dependente, o nome está associado ao conjunto de funções que são visíveis no ponto de chamada na definição do modelo, como acima. Sobrecargas adicionais de pesquisa dependente de argumento são adicionadas no ponto da definição do modelo e o ponto de onde o modelo é instanciado. As duas fases de pesquisa em duas fases são a pesquisa de nomes de dependente não no momento da definição de modelo e a pesquisa de nomes de dependente no momento da instanciação do modelo. Em **/Zc:twoPhase-**, o compilador não pesquisa dependente de argumento separadamente da pesquisa comum, não qualificada (ou seja, ele não faz pesquisa em duas fases), portanto, os resultados da resolução de sobrecarga podem ser diferentes.
+*Nomes de dependente*, os nomes que dependem de um parâmetro de modelo, têm o comportamento de pesquisa que também é diferente em **/Zc:twoPhase-**. No modo de conformidade, os nomes dependentes não estão associados no ponto de definição do modelo. Em vez disso, esses nomes são pesquisados quando o modelo é instanciado. Para chamadas de função com um nome de função dependente, o nome é associado ao conjunto de funções que são visíveis no ponto de chamada na definição do modelo, como mostrado acima. Sobrecargas adicionais de pesquisa dependente de argumento são adicionadas no ponto da definição do modelo e o ponto de onde o modelo é instanciado. As duas fases de pesquisa em duas fases são a pesquisa para nomes não dependentes no momento da definição de modelo e pesquisa para nomes dependentes no momento da instanciação do modelo. Sob **/Zc:twoPhase-**, o compilador não faz pesquisa dependente de argumento separadamente de pesquisa comum, não qualificada (ou seja, ele não faz pesquisa em duas fases), portanto, os resultados da resolução de sobrecarga podem ser diferentes.
 
 Aqui está outro exemplo:
 
@@ -130,21 +130,21 @@ func(int)
 NS::func(NS::S)
 ```
 
-No modo de conformidade em **/ permissivo-**, a chamada `tfunc(1729)` resolve para o `void func(long)` sobrecarga, não `void func(int)` sobrecarga no **/Zc:twoPhase-**, pois o não qualificado `func(int)` é declarado depois da definição do modelo e não localizados por meio de pesquisa dependente de argumento. Mas `void func(S)` participar pesquisa dependente de argumento, portanto, é adicionado para a sobrecarga definido para a chamada `tfunc(s)` mesmo que é declarado após a função do modelo.
+No modo de conformidade sob **/permissive--**, a chamada `tfunc(1729)` resolve para o `void func(long)` sobrecarga, não `void func(int)` sobrecarregar como nas **/Zc:twoPhase-**, pois não qualificada `func(int)` é declarada após a definição do modelo e não foi encontrado por meio de pesquisa dependente de argumento. Mas `void func(S)` participa na pesquisa dependente de argumento, para que ele seja adicionado para a sobrecarga definido para a chamada `tfunc(s)` , mesmo que ela é declarada após a função de modelo.
 
-### <a name="update-your-code-for-two-phase-conformance"></a>Atualize seu código para conformidade de duas fases
+### <a name="update-your-code-for-two-phase-conformance"></a>Atualizar seu código para conformidade de duas fases
 
-Versões mais antigas do compilador não exigem as palavras-chave `template` e `typename` everywhere C++ padrão requê-los. Essas palavras-chave é necessários em algumas posições para resolver a ambiguidade como compiladores devem analisar um nome dependente durante a primeira fase da pesquisa. Por exemplo:
+Versões mais antigas do compilador não exigem as palavras-chave `template` e `typename` em todos os lugares, o padrão C++ requê-los. Essas palavras-chave é necessárias algumas posições para resolver a ambiguidade como compiladores devem analisar um nome dependente durante a primeira fase da pesquisa. Por exemplo:
 
 `T::Foo<a || b>(c);`
 
-Analisa um compilador de conformidade `Foo` como uma variável no escopo do `T`, que significa que esse código é uma lógica- ou uma expressão com `T::foo < a` como o operando esquerdo e `b > (c)` como operando à direita. Se deseja usar `Foo` como um modelo de função, você deve indicar que este é um modelo adicionando o `template` palavra-chave:
+Analisa um compilador em conformidade `Foo` como uma variável no escopo de `T`, que significa que esse código é uma lógica- ou expressão com `T::foo < a` como o operando esquerdo e `b > (c)` como o operando à direita. Se você pretende usar `Foo` como um modelo de função, você deve indicar que este é um modelo adicionando o `template` palavra-chave:
 
 `T::template Foo<a || b>(c);`
 
-Em versões anteriores do Visual Studio 2017 versão 15,3 e quando **/Zc:twoPhase-** for especificado, o compilador permite que esse código sem o `template` palavra-chave e o interpreta como uma chamada para um modelo de função com um argumento de `a || b`, pois ele analisa a modelos de maneira muito limitada. O código acima não é analisado em todos os na primeira etapa. Durante a segunda fase há contexto suficiente para informar que `T::Foo` é um modelo, em vez de uma variável para o compilador não impõe o uso da palavra-chave.
+Em versões anteriores do Visual Studio 2017 versão 15.3 e quando **/Zc:twoPhase-** for especificado, o compilador permite que esse código sem o `template` palavra-chave e o interpreta como uma chamada para um modelo de função com um argumento `a || b`, pois ele analisa os modelos de maneira muito limitado. O código acima não é analisado em todos os na primeira fase. Durante a segunda fase não há contexto suficiente para dizer que `T::Foo` é um modelo em vez de uma variável para que o compilador não imponha o uso da palavra-chave.
 
-Esse comportamento também pode ser visto, eliminando a palavra-chave `typename` antes de nomes no corpo do modelo de função, inicializadores, argumentos padrão e noexcept argumentos. Por exemplo:
+Esse comportamento também pode ser visto, eliminando a palavra-chave `typename` antes de nomes em corpos de modelo de função, inicializadores, os argumentos padrão e argumentos de noexcept. Por exemplo:
 
 ```cpp
 template<typename T>
@@ -154,7 +154,7 @@ typename T::TYPE func(typename T::TYPE*)
 }
 ```
 
-Se você não usar a palavra-chave `typename` no corpo da função, esse código é compilado em **/Zc:twoPhase-**, mas não em **/ permissivo-**. O `typename` palavra-chave é necessário para indicar que o `TYPE` é dependente. O corpo não é analisada em **/Zc:twoPhase-**, o compilador does't requer a palavra-chave. Em **/ permissivo-** modo de conformidade, o código sem o `typename` palavra-chave gera erros. Para migrar seu código para Visual Studio 2017 versão 15,3 e fora dela, inserir o `typename` palavra-chave onde ele está ausente.
+Se você não usar a palavra-chave `typename` no corpo da função, esse código é compilado em **/Zc:twoPhase-**, mas não está **/permissive--**. O `typename` palavra-chave é necessário para indicar que o `TYPE` é dependente. Porque o corpo não é analisado em **/Zc:twoPhase-**, o compilador does't exigem a palavra-chave. Na **/permissive--** modo de conformidade, o código sem o `typename` palavra-chave gera erros. Para migrar seu código para Visual Studio 2017 versão 15.3 e posteriores, inserir o `typename` palavra-chave onde ele está ausente.
 
 Da mesma forma, considere este exemplo de código:
 
@@ -166,17 +166,17 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 }
 ```
 
-Em **/Zc:twoPhase-** e compiladores mais antigos, o compilador só requer a `template` palavra-chave na linha 2. Por padrão e no modo de conformidade, o compilador agora também requer o `template` palavra-chave na linha 4 para indicar que `T::X<T>` é um modelo. Procure o código que está faltando a palavra-chave e fornecê-lo para tornar o código de acordo com o padrão.
+Sob **/Zc:twoPhase-** e nos compiladores antigos, o compilador só requer a `template` palavra-chave na linha 2. Por padrão e no modo de conformidade, o compilador agora também requer o `template` palavra-chave na linha 4 para indicar que `T::X<T>` é um modelo. Procure o código que está faltando a palavra-chave this e fornecê-lo para tornar seu código de acordo com o padrão.
 
-Para obter mais informações sobre problemas de conformidade, consulte [melhorias de conformidade C++ no Visual Studio](../../cpp-conformance-improvements-2017.md) e [comportamento não padrão](../../cpp/nonstandard-behavior.md).
+Para obter mais informações sobre problemas de conformidade, consulte [aprimoramentos de conformidade do C++ no Visual Studio](../../cpp-conformance-improvements-2017.md) e [comportamento não padrão](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **C/C++** > **linha de comando** página de propriedades.
 
-1. Modificar o **opções adicionais** propriedade incluir **/Zc:twoPhase-** e, em seguida, escolha **Okey**.
+1. Modificar a **opções adicionais** propriedade incluir **/Zc:twoPhase-** e, em seguida, escolha **Okey**.
 
 ## <a name="see-also"></a>Consulte também
 

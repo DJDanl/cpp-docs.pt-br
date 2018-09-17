@@ -14,26 +14,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c271d2f39a4d81776c06a107616170192e82d40d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 55a94001e2f912049518120911c25ae64afa24da
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380167"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721405"
 ---
 # <a name="special-characters-in-macros"></a>Caracteres especiais em macros
-Um número entrar (#) depois que uma definição especifica um comentário. Para especificar um sinal numérico literal em uma macro, use um acento circunflexo (^), como em ^ #.  
-  
- Um sinal de cifrão ($) especifica uma invocação de macro. Para especificar um $ literal, use $$.  
-  
- Para estender uma definição para uma nova linha, finalizar a linha com uma barra invertida (\\). Quando a macro é chamada, o caractere de barra invertida e a nova linha é substituído por um espaço. Para especificar uma barra invertida literal no final da linha, preceda-o com um sinal de intercalação (^) ou segui-la com um especificador de comentário (#).  
-  
- Para especificar um caractere literal, terminar com a linha com um sinal de intercalação (^), como:  
-  
-```  
-CMDS = cls^  
-dir  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Definindo uma macro NMAKE](../build/defining-an-nmake-macro.md)
+
+Um número assinar (#), depois de uma definição especifica um comentário. Para especificar um sinal numérico literal em uma macro, use um acento circunflexo (^), como em ^ #.
+
+Um sinal de cifrão ($) especifica uma invocação de macro. Para especificar um $ literal, use $$.
+
+Para estender uma definição para uma nova linha, terminar a linha com uma barra invertida (\\). Quando a macro é invocada, o caractere de barra invertida e a nova linha é substituído por um espaço. Para especificar uma barra invertida literal no final da linha, preceda-o com um acento circunflexo (^) ou segui-lo com um especificador de comentário (#).
+
+Para especificar um caractere de nova linha literal, o final da linha com um acento circunflexo (^), como em:
+
+```
+CMDS = cls^
+dir
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Definindo uma macro NMAKE](../build/defining-an-nmake-macro.md)

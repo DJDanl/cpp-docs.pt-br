@@ -1,5 +1,5 @@
 ---
-title: Rápida compilação | Microsoft Docs
+title: Rápida de compilação | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d29ea4684e5f29374f11cf75dec94756ddde84
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 926c63d3d556d1aa9b85a7ce97e93b60e7c2ea23
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371860"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722261"
 ---
 # <a name="fast-compilation"></a>Compilação rápida
-Para aumentar a velocidade de seu compila:  
-  
--   Use [recompilação mínima](../../build/reference/gm-enable-minimal-rebuild.md), no qual o compilador do C++ recompila um arquivo de origem somente se ele é dependente de alterações a uma classe em um arquivo de cabeçalho.  
-  
--   [Criar arquivos de cabeçalho pré-compilado](../../build/reference/creating-precompiled-header-files.md) e usar o [opções de cabeçalho pré-compilado](../../build/reference/yc-create-precompiled-header-file.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+
+Para aumentar a velocidade de suas compilações:
+
+- Use [recompilação mínima](../../build/reference/gm-enable-minimal-rebuild.md), no qual o compilador C++ recompila um arquivo de origem somente se ele for depende de alterações para uma classe em um arquivo de cabeçalho.
+
+- [Criar arquivos de cabeçalho pré-compilados](../../build/reference/creating-precompiled-header-files.md) e usar o [pré-compilado opções de cabeçalho](../../build/reference/yc-create-precompiled-header-file.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
+[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

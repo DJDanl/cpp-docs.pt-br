@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e24a86ead18cde836fd52df4e0c279f69b4c67a1
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: e2fe0b0523fb411b8ef4700a7dea7832c1cdfc52
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "43687929"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726280"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary e AfxLoadLibrary
 
@@ -39,7 +39,7 @@ Para aplicativos MFC que carregam DLLs de extensão do MFC, é recomendável que
 
 Se o Windows não é possível carregar a DLL, o processo pode tentar recuperar do erro. Por exemplo, o processo pode notificar o usuário sobre o erro e solicitar que o usuário especifique outro caminho para a DLL.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Certifique-se de especificar o caminho completo de todas as DLLs. O diretório atual é pesquisado primeiro quando arquivos são carregados. Se você não qualificar o caminho do arquivo, talvez seja possível carregar um arquivo que não seja o pretendido. Outra maneira de evitar isso é usando o [/DEPENDENTLOADFLAG](../build/reference/dependentloadflag.md) a opção de vinculador.
 
 ## <a name="what-do-you-want-to-do"></a>O que você deseja fazer?

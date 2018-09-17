@@ -1,7 +1,7 @@
 ---
 title: pacote | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bcbd8dcc64d26f124a7b6443a79f01aa4329414
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d75b62716066d1df94b0072b00254dc96ec450df
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207486"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720610"
 ---
 # <a name="pack"></a>pack
 Especifica o alinhamento de empacotamento da estrutura, união e membros da classe.  
@@ -34,29 +34,31 @@ Especifica o alinhamento de empacotamento da estrutura, união e membros da clas
 #pragma pack( [ show ] | [ push | pop ] [, identifier ] , n  )  
 ```  
   
+### <a name="parameters"></a>Parâmetros
+
+**programa**<br/>
+(Opcional) Exibe o valor atual de bytes para alinhamento de empacotamento. O valor é exibido por uma mensagem de aviso.  
+
+**push**<br/>
+(Opcional) Valor de alinhamento de empacotamento atual de envios por push na pilha interna do compilador e define o valor de alinhamento de empacotamento atual para *n*. Se *n* não for especificado, o atual valor de alinhamento de empacotamento é enviada por push.  
+  
+**pop**<br/>
+(Opcional) Remove o registro do topo da pilha interna do compilador. Se *n* não for especificado com **pop-up**, em seguida, o valor de empacotamento associado ao registro resultante na parte superior da pilha é o novo valor de alinhamento de empacotamento. Se *n* for especificado, por exemplo, `#pragma pack(pop, 16)`, *n* se torna o novo valor de alinhamento de empacotamento. Se você exibir com *identificador*, por exemplo, `#pragma pack(pop, r1)`, em seguida, todos os registros na pilha são exibidos até o registro que tem *identificador* for encontrado. Esse registro é exibido e o valor de empacotamento associado ao registro resultante na parte superior da pilha é o novo valor do alinhamento de empacotamento. Se você exibir com um *identificador* não for encontrado em nenhum registro na pilha, em seguida, a **pop-up** será ignorado.  
+  
+*identifier*<br/>
+(Opcional) Quando usado com *push*, atribui um nome ao registro na pilha interna do compilador. Quando usado com **pop-up**, elimina registros da pilha interna até *identificador* for removido; se *identificador* não for localizado na pilha interna, nada será exibido.  
+  
+*n*<br/>
+(Opcional) Especifica o valor, em bytes, para ser usado para o empacotamento. Se a opção de compilador [/Zp](../build/reference/zp-struct-member-alignment.md) não está definido para o módulo, o valor padrão de *n* é 8. Os valores válidos são 1, 2, 4, 8 e 16. O alinhamento de um membro será em um limite que seja um múltiplo de *n* ou um múltiplo do tamanho do membro, o que for menor.  
+  
+`#pragma pack(pop, identifier, n)` é indefinido.  
+  
 ## <a name="remarks"></a>Comentários  
 
 Para empacotar uma classe é colocar seus membros diretamente após a outra na memória, o que pode significar que alguns ou todos os membros podem ser alinhados em um limite menor do que o alinhamento padrão a arquitetura de destino. **pacote de** proporciona controle no nível de declaração de dados. Isso é diferente da opção de compilador [/Zp](../build/reference/zp-struct-member-alignment.md), que fornece apenas o controle de nível de módulo. **Pack** entra em vigor na primeira **struct**, **união**, ou **classe** declaração após o pragma. **pacote de** não tem nenhum efeito nas definições. Chamando **pack** sem argumentos define *n* como um valor definido na opção de compilador `/Zp`. Se a opção de compilador não for definida, o valor padrão é 8.  
   
-Se você alterar o alinhamento de uma estrutura, isso pode não usar tanto espaço na memória, mas você pode passar por uma redução de desempenho ou mesmo uma exceção gerada por hardware devido ao acesso não alinhado.  Você pode modificar esse comportamento de exceção usando [SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621).  
-  
-*Mostrar* (opcional)  
-Exibe o valor atual de byte para o alinhamento de empacotamento. O valor é exibido por uma mensagem de aviso.  
-  
-*envio por push* (opcional)  
-Valor de alinhamento de empacotamento atual de envios por push na pilha interna do compilador e define o valor de alinhamento de empacotamento atual para *n*. Se *n* não for especificado, o atual valor de alinhamento de empacotamento é enviada por push.  
-  
-*pop-up* (opcional)  
-Remove o registro do topo da pilha interna do compilador. Se *n* não for especificado com *pop-up*, em seguida, o valor de empacotamento associado ao registro resultante na parte superior da pilha é o novo valor de alinhamento de empacotamento. Se *n* for especificado, por exemplo, `#pragma pack(pop, 16)`, *n* se torna o novo valor de alinhamento de empacotamento. Se você exibir com *identificador*, por exemplo, `#pragma pack(pop, r1)`, em seguida, todos os registros na pilha são exibidos até o registro que tem *identificador* for encontrado. Esse registro é exibido e o valor de empacotamento associado ao registro resultante na parte superior da pilha é o novo valor do alinhamento de empacotamento. Se você exibir com um *identificador* não for encontrado em nenhum registro na pilha, em seguida, a *pop-up* será ignorado.  
-  
-*identificador* (opcional)  
-Quando usado com *push*, atribui um nome ao registro na pilha interna do compilador. Quando usado com *pop-up*, elimina registros da pilha interna até *identificador* for removido; se *identificador* não for localizado na pilha interna, nada será exibido.  
-  
-*n* (opcional)  
-Especifica o valor, em bytes, a ser usado para empacotamento. Se a opção de compilador [/Zp](../build/reference/zp-struct-member-alignment.md) não está definido para o módulo, o valor padrão de *n* é 8. Os valores válidos são 1, 2, 4, 8 e 16. O alinhamento de um membro será em um limite que seja um múltiplo de *n* ou um múltiplo do tamanho do membro, o que for menor.  
-  
-`#pragma pack(pop, identifier, n)` é indefinido.  
-  
+Se você alterar o alinhamento de uma estrutura, isso pode não usar tanto espaço na memória, mas você pode passar por uma redução de desempenho ou mesmo uma exceção gerada por hardware devido ao acesso não alinhado.  Você pode modificar esse comportamento de exceção usando [SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621).
+
 Para obter mais informações sobre como modificar o alinhamento, consulte estes tópicos:  
   
 - [__alignof](../cpp/alignof-operator.md)  
@@ -67,8 +69,8 @@ Para obter mais informações sobre como modificar o alinhamento, consulte estes
   
 - [Exemplos de alinhamento da estrutura](../build/examples-of-structure-alignment.md) (específico para x64)  
   
-    > [!WARNING]
-    > Observe que, no Visual Studio 2015 e posterior pode usar os operadores de alignof e alignas padrão que, diferentemente `__alignof` e `declspec( align )` são portáteis entre os compiladores. O padrão C++ não aborda o empacotamento, portanto, você ainda deve usar **pack** (ou a extensão correspondente nos outros compiladores) para especificar os alinhamentos menores do que o tamanho de palavras da arquitetura de destino.  
+   > [!WARNING]
+   > Observe que, no Visual Studio 2015 e posterior pode usar os operadores de alignof e alignas padrão que, diferentemente `__alignof` e `declspec( align )` são portáteis entre os compiladores. O padrão C++ não aborda o empacotamento, portanto, você ainda deve usar **pack** (ou a extensão correspondente nos outros compiladores) para especificar os alinhamentos menores do que o tamanho de palavras da arquitetura de destino.  
   
 ## <a name="examples"></a>Exemplos
 

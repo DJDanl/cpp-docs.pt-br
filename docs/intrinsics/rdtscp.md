@@ -18,14 +18,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a98f1e84f3ef09d3cef5d45028374b93887fc6d4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 3702dcafbc93e34852d5d8fd4a0f1d3c222ea1a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42544391"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706947"
 ---
 # <a name="rdtscp"></a>__rdtscp
+
 **Seção específica da Microsoft**  
   
  Gera o `rdtscp` instrução, grava `TSC_AUX[31:0`] à memória e retorna o contador de carimbo de data / hora 64-bit (`TSC)` resultado.  
@@ -39,8 +40,8 @@ unsigned __int64 __rdtscp(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [out] `Aux`  
- Ponteiro para um local que conterá o conteúdo do registro específicas do computador `TSC_AUX[31:0]`.  
+*AUX*<br/>
+[out] Ponteiro para um local que conterá o conteúdo do registro específicas do computador `TSC_AUX[31:0]`.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Uma contagem de tiques do inteiro sem sinal de 64 bits.  
@@ -84,7 +85,8 @@ TSC_AUX was 0
 ```  
   
 **Fim da seção específica da Microsoft**  
- Copyright 2007 por dispositivos Micro avançada, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro dispositivos, Inc.  
+
+Copyright 2007 por dispositivos Micro avançada, Inc. Todos os direitos reservados. Reproduzido com a permissão do Advanced Micro dispositivos, Inc.  
   
 ## <a name="see-also"></a>Consulte também  
  [__rdtsc](../intrinsics/rdtsc.md)   

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d941b112047dc8f90a8cdc4686e422f028b6d7e
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: a3fa9720e519336b39299e84e3061860f34cf24a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335952"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716294"
 ---
 # <a name="cdialogex-class"></a>Classe CDialogEx
 O `CDialogEx` classe especifica a cor de plano de fundo e a imagem de plano de fundo de uma caixa de diálogo.  
@@ -90,17 +90,17 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nIDTemplate*  
- A ID de recurso de um modelo de caixa de diálogo.  
+*nIDTemplate*<br/>
+[in] A ID de recurso de um modelo de caixa de diálogo.  
   
- [in] *lpszTemplateName*  
- O nome do recurso de um modelo de caixa de diálogo.  
+*lpszTemplateName*<br/>
+[in] O nome do recurso de um modelo de caixa de diálogo.  
   
- [in] *pParent*  
- Um ponteiro para a janela pai. O valor padrão é NULL.  
+*pParent*<br/>
+[in] Um ponteiro para a janela pai. O valor padrão é NULL.  
   
- [in] *pParentWnd*  
- Um ponteiro para a janela pai. O valor padrão é NULL.  
+*pParentWnd*<br/>
+[in] Um ponteiro para a janela pai. O valor padrão é NULL.  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -116,11 +116,11 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *cor*  
- Um valor de cor RGB.  
+*Cor*<br/>
+[in] Um valor de cor RGB.  
   
- [in] *bRepaint*  
- TRUE para atualizar imediatamente a tela; Caso contrário, FALSE. O valor padrão é TRUE.  
+*bRepaint*<br/>
+[in] TRUE para atualizar imediatamente a tela; Caso contrário, FALSE. O valor padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -142,20 +142,20 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *hBitmap*  
- Um identificador para a imagem de plano de fundo.  
+*hBitmap*<br/>
+[in] Um identificador para a imagem de plano de fundo.  
   
- [in] *uiBmpResId*  
- A ID de recurso da imagem de plano de fundo.  
+*uiBmpResId*<br/>
+[in] A ID de recurso da imagem de plano de fundo.  
   
- [in] *local*  
- Um do `CDialogEx::BackgroundLocation` valores que especificam o local da imagem. Os valores válidos incluem BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT e BACKGR_BOTTOMRIGHT. O valor padrão é BACKGR_TILE.  
+*Local*<br/>
+[in] Um do `CDialogEx::BackgroundLocation` valores que especificam o local da imagem. Os valores válidos incluem BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT e BACKGR_BOTTOMRIGHT. O valor padrão é BACKGR_TILE.  
   
- [in] *bAutoDestroy*  
- TRUE para destruir automaticamente a imagem de plano de fundo; Caso contrário, FALSE.  
+*bAutoDestroy*<br/>
+[in] TRUE para destruir automaticamente a imagem de plano de fundo; Caso contrário, FALSE.  
   
- [in] *bRepaint*  
- TRUE para redesenhar imediatamente a caixa de diálogo; Caso contrário, FALSE.  
+*bRepaint*<br/>
+[in] TRUE para redesenhar imediatamente a caixa de diálogo; Caso contrário, FALSE.  
   
 ### <a name="return-value"></a>Valor de retorno  
  No segundo método de sobrecarga sintaxe, TRUE se o método for bem-sucedida; Caso contrário, FALSE.  

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3ca2c389b00126ff477b8e184d690afce07c484
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 57846bab53e50f1644dcdc3ec817472e47793840
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539361"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725199"
 ---
 # <a name="shiftleft128"></a>__shiftleft128
 **Seção específica da Microsoft**  
@@ -39,14 +39,14 @@ unsigned __int64 __shiftleft128(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [in] `LowPart`  
- Os 64 bits baixos da quantidade de 128 bits a deslocar.  
+*Dinâmaico*<br/>
+[in] Os 64 bits baixos da quantidade de 128 bits a deslocar.  
   
- [in] `HighPart`  
- Os 64 bits altos da quantidade de 128 bits a deslocar.  
+*HighPart*<br/>
+[in] Os 64 bits altos da quantidade de 128 bits a deslocar.  
   
- [in] `Shift`  
- O número de bits a deslocar.  
+*Shift*<br/>
+[in] O número de bits a deslocar.  
   
 ## <a name="return-value"></a>Valor de retorno  
  64 bits altos do resultado.  

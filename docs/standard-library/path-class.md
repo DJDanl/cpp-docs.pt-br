@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e47310a93a3901f072330a57619c2655aefb7ff5
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: fd8fa524d0c41d437575a61ff4e4456fd9933404
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691504"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725303"
 ---
 # <a name="path-class"></a>Classe path
 
@@ -638,7 +638,7 @@ Para `template<class InIt> path(InIt first, InIt last, const locale& loc)` vale 
 
 ## <a name="preferred_separator"></a> path::preferred_separator
 
-O objeto constante fornece o caractere preferencial para separar os componentes do caminho, dependendo do sistema operacional do host. 
+O objeto constante fornece o caractere preferencial para separar os componentes do caminho, dependendo do sistema operacional do host.
 
 ```cpp
 #if _WIN32_C_LIB
@@ -654,7 +654,7 @@ Observe que é igualmente permitido na maioria dos contextos no Windows usar L'/
 
 ## <a name="relative_path"></a> path:: RELATIVE_PATH
 
-Retorna o componente de caminho relativo do `myname`. 
+Retorna o componente de caminho relativo do `myname`.
 
 ```cpp
 path relative_path() const;
@@ -674,7 +674,7 @@ path& remove_filename();
 
 ## <a name="replace_extension"></a> path:: replace_extension
 
-Substitui a extensão de `myname`. 
+Substitui a extensão de `myname`.
 
 ```cpp
 path& replace_extension(const path& newext = path());
@@ -715,7 +715,7 @@ return (*this);
 
 ## <a name="root_directory"></a> path:: root_directory
 
-Retorna o componente do diretório raiz do `myname`. 
+Retorna o componente do diretório raiz do `myname`.
 
 ```cpp
 path root_directory() const;
@@ -727,7 +727,7 @@ O componente pode estar vazio.
 
 ## <a name="root_name"></a> path:: root_name
 
-Retorna o componente de nome raiz do `myname`. 
+Retorna o componente de nome raiz do `myname`.
 
 ```cpp
 path root_name() const;

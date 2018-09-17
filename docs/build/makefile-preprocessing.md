@@ -15,20 +15,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4b304276f20f66e02808f3894e5b948dd994cbb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 11bd2b74a17e5fd7b2507a531fda6da0a31e53c8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368220"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722872"
 ---
 # <a name="makefile-preprocessing"></a>Pré-processamento de makefile
-Você pode controlar a sessão NMAKE usando diretivas de pré-processamento e expressões. Instruções de pré-processamento pode ser colocado em makefile ou em Tools.ini. Usando diretivas, você pode condicionalmente processar seu makefile, exibir mensagens de erro, incluir outros makefiles, exclua uma macro e ativar ou desativar o determinadas opções.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?  
- [Diretivas de pré-processamento de makefile](../build/makefile-preprocessing-directives.md)  
-  
- [Expressões no pré-processamento de makefile](../build/expressions-in-makefile-preprocessing.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência a NMAKE](../build/nmake-reference.md)
+
+Você pode controlar a sessão NMAKE usando diretivas de pré-processamento e expressões. Instruções de pré-processamento pode ser colocado no makefile ou em Tools. ini. Diretivas de uso, você pode condicionalmente processar o makefile, exibir mensagens de erro, incluir outras makefiles, excluir definições de macro e ativar ou desativar a determinadas opções.
+
+## <a name="what-do-you-want-to-know-more-about"></a>Que mais você deseja saber?
+
+[Diretivas de pré-processamento de makefile](../build/makefile-preprocessing-directives.md)
+
+[Expressões no pré-processamento de makefile](../build/expressions-in-makefile-preprocessing.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Referência a NMAKE](../build/nmake-reference.md)

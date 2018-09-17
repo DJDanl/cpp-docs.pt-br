@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf4cc0ce245b6b80165ced5a9649586f9214639
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 853666f6dee7bae68b03ccc1d9d9c23ce765925b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539756"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699954"
 ---
 # <a name="mulh"></a>__mulh
 **Seção específica da Microsoft**  
@@ -38,11 +38,11 @@ __int64 __mulh(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [in] `a`  
- O primeiro número a multiplicar.  
+*a*<br/>
+[in] O primeiro número a multiplicar.  
   
- [in] `b`  
- O segundo número a multiplicar.  
+*b*<br/>
+[in] O segundo número a multiplicar.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Os 64 bits altos do resultado da multiplicação de 128 bits.  

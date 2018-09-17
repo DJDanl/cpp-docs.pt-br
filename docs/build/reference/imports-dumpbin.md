@@ -18,30 +18,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af3b9a1bbcf1769e87715e46566dee9c53a96747
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c5b3b1e3a74fea278bc142d02f793308b6b0e054
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373433"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713564"
 ---
 # <a name="imports-dumpbin"></a>/IMPORTS (DUMPBIN)
-```  
-/IMPORTS[:file]  
-```  
-  
- Essa opção exibe a lista de DLLs (ambos estaticamente vinculada e [atraso carregado](../../build/reference/linker-support-for-delay-loaded-dlls.md)) que são importados para um arquivo executável ou DLL e todas as importações individuais de cada um desses DLLs.  
-  
- Opcional `file` especificação permite que você especifique que o importa somente dessa dll será exibido. Por exemplo:  
-  
-```  
-dumpbin /IMPORTS:msvcrt.dll  
-```  
-  
-## <a name="remarks"></a>Comentários  
- A saída exibida por essa opção é semelhante de [/EXPORTA](../../build/reference/dash-exports.md) saída.  
-  
- Somente o [/HEADERS](../../build/reference/headers.md) opção DUMPBIN está disponível para uso em arquivos produzidos com o [/GL](../../build/reference/gl-whole-program-optimization.md) opção de compilador.  
-  
-## <a name="see-also"></a>Consulte também  
- [Opções de DUMPBIN](../../build/reference/dumpbin-options.md)
+
+```
+/IMPORTS[:file]
+```
+
+Essa opção exibe a lista de DLLs (ambos vinculados estaticamente e [atrasar carregada](../../build/reference/linker-support-for-delay-loaded-dlls.md)) que são importadas para um arquivo executável ou DLL e todas as importações individuais de cada uma dessas DLLs.
+
+Opcional `file` especificação permite que você especifique que as importações de DLL só serão exibidas. Por exemplo:
+
+```
+dumpbin /IMPORTS:msvcrt.dll
+```
+
+## <a name="remarks"></a>Comentários
+
+A saída exibida por essa opção é semelhante para o [/EXPORTA](../../build/reference/dash-exports.md) saída.
+
+Somente o [/HEADERS](../../build/reference/headers.md) opção DUMPBIN está disponível para uso em arquivos produzidos com o [/GL](../../build/reference/gl-whole-program-optimization.md) opção de compilador.
+
+## <a name="see-also"></a>Consulte também
+
+[Opções de DUMPBIN](../../build/reference/dumpbin-options.md)

@@ -21,35 +21,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c65a3c546b808b9a899280933c813422a967f78a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f52e044962007c4a820bf234d45b5cb9ffd584f6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373355"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723080"
 ---
 # <a name="mapinfo-include-information-in-mapfile"></a>/MAPINFO (incluir informações em mapfile)
-```  
-/MAPINFO:EXPORTS  
-```  
-  
-## <a name="remarks"></a>Comentários  
- A opção /MAPINFO informa o vinculador para incluir as informações especificadas em um arquivo de mapa, que é criado se você especificar o [/MAPEAR](../../build/reference/map-generate-mapfile.md) opção.  Exportações informa o vinculador para incluir funções exportadas.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
-  
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).  
-  
-2.  Clique o **vinculador** pasta.  
-  
-3.  Clique o **depurar** página de propriedades.  
-  
-4.  Modificar do **exportações de mapa** propriedades:  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
-  
--   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapExports%2A>.  
-  
-## <a name="see-also"></a>Consulte também  
- [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções do vinculador](../../build/reference/linker-options.md)
+
+```
+/MAPINFO:EXPORTS
+```
+
+## <a name="remarks"></a>Comentários
+
+A opção /MAPINFO informa o vinculador a incluir as informações especificadas em um arquivo de mapa, que é criado se você especificar o [/Map](../../build/reference/map-generate-mapfile.md) opção.  Exportações instrui o vinculador a incluir funções exportadas.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
+
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
+
+1. Clique o **vinculador** pasta.
+
+1. Clique o **depurar** página de propriedades.
+
+1. Modificar do **exportações de mapa** propriedades:
+
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
+
+- Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapExports%2A>.
+
+## <a name="see-also"></a>Consulte também
+
+[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
+[Opções do vinculador](../../build/reference/linker-options.md)

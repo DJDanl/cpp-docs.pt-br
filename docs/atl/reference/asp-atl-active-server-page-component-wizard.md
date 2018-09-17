@@ -16,24 +16,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63f945f90f6a862a3b16cd3dcc41859b0c21b984
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 10a57271c143a42f9bafaef5fa53f780fa03164f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761937"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700642"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, o Assistente de componente de página de servidor ativo do ATL
 
 Use esta página do Assistente de componentes do ATL Active Server página para especificar configurações opcionais para lidar com informações e estado relacionado para seu componente ASP.
 
-**Métodos opcionais**  
-Adiciona os métodos opcionais do ASP, **OnStartPage** e **OnEndPage**, para seu objeto. Essa opção deve ser selecionada para definir quaisquer objetos intrínsecos do Active Server Pages. Por padrão, ele é selecionado.
+- **Métodos opcionais**  
 
-- **OnStartPage/OnEndPage** [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) é chamado na primeira vez em que o script tenta acessar o objeto. **OnEndPage** é chamado quando o objeto é concluído o script de processamento.
+   Adiciona os métodos opcionais do ASP, **OnStartPage** e **OnEndPage**, para seu objeto. Essa opção deve ser selecionada para definir quaisquer objetos intrínsecos do Active Server Pages. Por padrão, ele é selecionado.
 
-**Objeto intrínseco**  
-Você deve selecionar o **OnStartPage/OnEndPage** opção de definir quaisquer objetos intrínsecos de ASP.
+- **OnStartPage/OnEndPage**
+
+   [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) é chamado na primeira vez em que o script tenta acessar o objeto. **OnEndPage** é chamado quando o objeto é concluído o script de processamento.
+
+- **Objeto intrínseco**  
+
+   Você deve selecionar o **OnStartPage/OnEndPage** opção de definir quaisquer objetos intrínsecos de ASP.
 
 |Opção|Descrição|
 |------------|-----------------|

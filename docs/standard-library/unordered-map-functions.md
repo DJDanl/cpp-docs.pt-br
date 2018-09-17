@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::swap (unordered_map/multimap)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76210e9ae860f8a7de0f22db2b7108e90e09e5be
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3a6d8a925f493a8299cf1afd8e851456277a68e9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965546"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715513"
 ---
 # <a name="ltunorderedmapgt-functions"></a>Funções &lt;unordered_map&gt;
 
@@ -42,26 +42,26 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*  
- O tipo principal.
+*Chave*<br/>
+O tipo principal.
 
-*Ty*  
- O tipo mapeado.
+*Ty*<br/>
+O tipo mapeado.
 
-*hash*  
- O tipo de objeto da função de hash.
+*hash*<br/>
+O tipo de objeto da função de hash.
 
-*Pred*  
- O tipo de objeto da função de comparação de igualdade.
+*Pred*<br/>
+O tipo de objeto da função de comparação de igualdade.
 
-*ALLOC*  
- A classe do alocador.
+*ALLOC*<br/>
+A classe do alocador.
 
-*left*  
- O primeiro contêiner para alternância.
+*left*<br/>
+O primeiro contêiner para alternância.
 
-*right*  
- O segundo contêiner para alternância.
+*right*<br/>
+O segundo contêiner para alternância.
 
 ### <a name="remarks"></a>Comentários
 
@@ -136,26 +136,26 @@ void swap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Chave*  
- O tipo principal.
+*Chave*<br/>
+O tipo principal.
 
-*Ty*  
- O tipo mapeado.
+*Ty*<br/>
+O tipo mapeado.
 
-*hash*  
- O tipo de objeto da função de hash.
+*hash*<br/>
+O tipo de objeto da função de hash.
 
-*Pred*  
- O tipo de objeto da função de comparação de igualdade.
+*Pred*<br/>
+O tipo de objeto da função de comparação de igualdade.
 
-*ALLOC*  
- A classe do alocador.
+*ALLOC*<br/>
+A classe do alocador.
 
-*left*  
- O primeiro contêiner para alternância.
+*left*<br/>
+O primeiro contêiner para alternância.
 
-*right*  
- O segundo contêiner para alternância.
+*right*<br/>
+O segundo contêiner para alternância.
 
 ### <a name="remarks"></a>Comentários
 

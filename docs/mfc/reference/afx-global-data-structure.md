@@ -65,12 +65,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60b38ae134d761ea186b50545f9886275700dbc3
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0f5297b6764ba29805b842329403557ad2aa4c3b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677451"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701916"
 ---
 # <a name="afxglobaldata-structure"></a>Estrutura AFX_GLOBAL_DATA
 O `AFX_GLOBAL_DATA` estrutura contém campos e métodos que são usados para gerenciar a estrutura ou personalizar a aparência e comportamento do seu aplicativo.  
@@ -220,14 +220,14 @@ BOOL DrawParentBackground(
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- [in] *Apropriei*  
- Ponteiro para uma janela do controle.  
+*Apropriei*<br/>
+[in] Ponteiro para uma janela do controle.  
   
- [in] *pDC*  
- Ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Ponteiro para um contexto de dispositivo.  
   
- [in] *lpRect*  
- Ponteiro para um retângulo que delimita a área na qual desenhar. O valor padrão é NULL.  
+*lpRect*<br/>
+[in] Ponteiro para um retângulo que delimita a área na qual desenhar. O valor padrão é NULL.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -250,36 +250,36 @@ BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- [in] *hTheme*  
- Identificador para os dados de tema de uma janela ou NULL. A estrutura usa o tema especificado para desenhar o texto se esse parâmetro não for nulo e temas são suportados. Caso contrário, o framework não usa um tema para desenhar o texto.  
+*hTheme*<br/>
+[in] Identificador para os dados de tema de uma janela ou NULL. A estrutura usa o tema especificado para desenhar o texto se esse parâmetro não for nulo e temas são suportados. Caso contrário, o framework não usa um tema para desenhar o texto.  
   
  Use o [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata) método para criar um HTHEME.  
   
- [in] *pDC*  
- Ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Ponteiro para um contexto de dispositivo.  
   
- [in] *iPartId*  
- A parte do controle que tem a aparência do texto desejado. Para obter mais informações, consulte a coluna de partes da tabela no [partes e estados](https://msdn.microsoft.com/library/windows/desktop/bb773210). Se esse valor for 0, o texto é desenhado em uma fonte selecionada no contexto de dispositivo ou a fonte padrão.  
+*iPartId*<br/>
+[in] A parte do controle que tem a aparência do texto desejado. Para obter mais informações, consulte a coluna de partes da tabela no [partes e estados](https://msdn.microsoft.com/library/windows/desktop/bb773210). Se esse valor for 0, o texto é desenhado em uma fonte selecionada no contexto de dispositivo ou a fonte padrão.  
   
- [in] *iStateId*  
- O estado do controle que tem a aparência do texto desejado. Para obter mais informações, consulte a coluna de estados da tabela no [partes e estados](https://msdn.microsoft.com/library/windows/desktop/bb773210).  
+*iStateId*<br/>
+[in] O estado do controle que tem a aparência do texto desejado. Para obter mais informações, consulte a coluna de estados da tabela no [partes e estados](https://msdn.microsoft.com/library/windows/desktop/bb773210).  
   
- [in] *strText*  
- O texto a ser desenhado.  
+*strText*<br/>
+[in] O texto a ser desenhado.  
   
- [in] *rect*  
- O limite da área na qual o texto especificado é desenhado.  
+*Rect*<br/>
+[in] O limite da área na qual o texto especificado é desenhado.  
   
- [in] *dwFlags*  
- Uma combinação bit a bit (OR) de sinalizadores que especificam como o texto especificado é desenhado.  
+*dwFlags*<br/>
+[in] Uma combinação bit a bit (OR) de sinalizadores que especificam como o texto especificado é desenhado.  
   
  Se o *hTheme* parâmetro é `NULL` ou se os temas não são tem suporte e habilitados, o *nFormat* parâmetro do [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) método descreve válidos sinalizadores. Se houver suporte para temas, o *dwFlags* parâmetro do [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex) método descreve os sinalizadores válidos.  
   
- [in] *nGlowSize*  
- O tamanho de um efeito de brilho é desenhado no plano de fundo antes de desenhar o texto especificado. O valor padrão é 0.  
+*nGlowSize*<br/>
+[in] O tamanho de um efeito de brilho é desenhado no plano de fundo antes de desenhar o texto especificado. O valor padrão é 0.  
   
- [in] *clrText*  
- A cor em que o texto especificado é desenhado. O valor padrão é a cor padrão.  
+*clrText*<br/>
+[in] A cor em que o texto especificado é desenhado. O valor padrão é a cor padrão.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se um tema é usado para desenhar o texto especificado; Caso contrário, FALSE.  
@@ -305,8 +305,8 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- [in] *bAtivar*  
- TRUE para habilitar o suporte de acessibilidade; FALSE para desabilitar o suporte de acessibilidade. O valor padrão é TRUE.  
+*bAtivar*<br/>
+[in] TRUE para habilitar o suporte de acessibilidade; FALSE para desabilitar o suporte de acessibilidade. O valor padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
  Acessibilidade ativa é uma tecnologia baseada em COM que melhora os maneira como os programas e o trabalho de sistema operacional do Windows junto com produtos de tecnologia assistencial. Ele fornece métodos confiáveis para expor informações sobre os elementos de interface do usuário. No entanto, um modelo de acessibilidade mais recente, chamado de automação de interface do usuário da Microsoft agora está disponível. Para obter uma comparação das duas tecnologias, consulte [automação de interface do usuário e o Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).  
@@ -331,17 +331,17 @@ BOOL ExcludeTag(
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- [in] *strBuffer*  
- Um buffer de texto.  
+*strBuffer*<br/>
+[in] Um buffer de texto.  
   
- [in] *lpszTag*  
- O nome de um par de abertura e fechamento de marcas XML.  
+*lpszTag*<br/>
+[in] O nome de um par de abertura e fechamento de marcas XML.  
   
- [out] *strTag*  
- Quando este método retorna, o *strTag* parâmetro contém o texto que está entre a abertura e fechamento XML marcas que são nomeadas, o *lpszTag* parâmetro. Nenhum espaço em branco à esquerda ou à direita é retirado do resultado.  
+*strTag*<br/>
+[out] Quando este método retorna, o *strTag* parâmetro contém o texto que está entre a abertura e fechamento XML marcas que são nomeadas, o *lpszTag* parâmetro. Nenhum espaço em branco à esquerda ou à direita é retirado do resultado.  
   
- [in] *bIsCharsList*  
- True para símbolos de converter para caracteres de escape na *strTag* parâmetro em caracteres de escape real; FALSO para não realizar a conversão. O valor padrão é FALSE. Para obter mais informações, consulte Comentários.  
+*bIsCharsList*<br/>
+[in] True para símbolos de converter para caracteres de escape na *strTag* parâmetro em caracteres de escape real; FALSO para não realizar a conversão. O valor padrão é FALSE. Para obter mais informações, consulte Comentários.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -370,8 +370,8 @@ COLORREF GetColor(int nColor);
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- [in] *nColor*  
- Um valor que especifica um elemento de interface do usuário cuja cor é recuperado. Para obter uma lista de valores válidos, consulte o *nIndex* parâmetro do [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) método.  
+*nColor*<br/>
+[in] Um valor que especifica um elemento de interface do usuário cuja cor é recuperado. Para obter uma lista de valores válidos, consulte o *nIndex* parâmetro do [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) método.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O valor de cor RGB do elemento de interface do usuário especificado. Para obter mais informações, consulte Comentários.  
@@ -416,8 +416,8 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- [no, out] *informações*  
- Um [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175) estrutura que contém as métricas escalonáveis associadas com a área não cliente de uma janela não minimizada.  
+*Informações de*<br/>
+[no, out] Um [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175) estrutura que contém as métricas escalonáveis associadas com a área não cliente de uma janela não minimizada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se este método for bem-sucedido; Caso contrário, FALSE.  
@@ -435,8 +435,8 @@ int GetTextHeight(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- [in] *bHorz*  
- TRUE para recuperar a altura dos caracteres quando o texto é executado horizontalmente; FALSE para recuperar a altura dos caracteres quando o texto é executado verticalmente. O valor padrão é TRUE.  
+*bHorz*<br/>
+[in] TRUE para recuperar a altura dos caracteres quando o texto é executado horizontalmente; FALSE para recuperar a altura dos caracteres quando o texto é executado verticalmente. O valor padrão é TRUE.  
   
 ### <a name="return-value"></a>Valor de retorno  
  A altura da fonte atual, que é medida da sua ascender até seu descendente.  
@@ -693,8 +693,8 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- [in] *lpszClassNamePrefix*  
- O nome da classe de janela para registrar.  
+*lpszClassNamePrefix*<br/>
+[in] O nome da classe de janela para registrar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O nome qualificado da classe registrado se esse método for bem-sucedida; Caso contrário, uma [exceção de recurso](exception-processing.md#afxthrowresourceexception).  
@@ -733,17 +733,17 @@ BOOL SetLayeredAttrib(
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- [in] *hwnd*  
- Identificador da janela em camadas.  
+*HWND*<br/>
+[in] Identificador da janela em camadas.  
   
- [in] *crKey*  
- A cor de transparência da chave que o [Gerenciador de janelas da área de trabalho](/windows/desktop/dwm/dwm-overview) usa para compor a janela em camadas.  
+*crKey*<br/>
+[in] A cor de transparência da chave que o [Gerenciador de janelas da área de trabalho](/windows/desktop/dwm/dwm-overview) usa para compor a janela em camadas.  
   
- [in] *bAlpha*  
- O valor alfa é usado para descrever a opacidade da janela em camadas.  
+*bAlpha*<br/>
+[in] O valor alfa é usado para descrever a opacidade da janela em camadas.  
   
- [in] *dwFlags*  
- Uma combinação bit a bit (OR) de sinalizadores que especificam quais parâmetros de método para usar. Especifique LWA_COLORKEY para usar o *crKey* parâmetro como a cor de transparência. Especifique LWA_ALPHA para usar o *bAlpha* parâmetro para determinar a opacidade da janela em camadas.  
+*dwFlags*<br/>
+[in] Uma combinação bit a bit (OR) de sinalizadores que especificam quais parâmetros de método para usar. Especifique LWA_COLORKEY para usar o *crKey* parâmetro como a cor de transparência. Especifique LWA_ALPHA para usar o *bAlpha* parâmetro para determinar a opacidade da janela em camadas.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se este método for bem-sucedido; Caso contrário, FALSE.   
@@ -763,11 +763,11 @@ BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>Parâmetros   
- [in] *lpLogFont*  
- Ponteiro para uma estrutura que contém os atributos de uma fonte.  
+*lpLogFont*<br/>
+[in] Ponteiro para uma estrutura que contém os atributos de uma fonte.  
   
- [in] *bHorz*  
- TRUE para especificar que o texto é executado horizontalmente; FALSO para especificar que o texto é executado verticalmente.  
+*bHorz*<br/>
+[in] TRUE para especificar que o texto é executado horizontalmente; FALSO para especificar que o texto é executado verticalmente.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se este método for bem-sucedido; Caso contrário, FALSE. No modo de depuração, esse método declara se este método não for bem-sucedida.  

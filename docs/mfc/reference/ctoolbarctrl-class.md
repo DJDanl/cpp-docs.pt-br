@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0801fab2ef5cec0da42cb40e28cd5124141c1007
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1f97559dd962fefbb4e727c0e75d0102898c8f13
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686079"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45724068"
 ---
 # <a name="ctoolbarctrl-class"></a>Classe CToolBarCtrl
 Fornece a funcionalidade do controle de comum de barra de ferramentas do Windows.  
@@ -532,8 +532,8 @@ BOOL ChangeBitmap(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *idButton*|Identificador do comando do botão que deve receber um novo bitmap.|  
-|[in] *iBitmap*|Índice baseado em zero de uma imagem na lista de imagens do controle de barra de ferramentas atual.|  
+|*idButton*|[in] Identificador do comando do botão que deve receber um novo bitmap.|  
+|*iBitmap*|[in] Índice baseado em zero de uma imagem na lista de imagens do controle de barra de ferramentas atual.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -841,7 +841,7 @@ CString GetButtonText(int idButton) const;
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *idButton*|O identificador para o botão cujo texto de exibição é recuperado.|  
+|*idButton*|[in] O identificador para o botão cujo texto de exibição é recuperado.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um [CString](../../atl-mfc-shared/using-cstring.md) que contém o texto de exibição do botão especificado.  
@@ -860,7 +860,7 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[out] *lpColorScheme*|Ponteiro para um [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) estrutura que recebe as informações de esquema de cores. Quando este método retorna, a estrutura descreve a cor de realce e a cor da sombra do controle de barra de ferramentas.|  
+|*lpColorScheme*|[out] Ponteiro para um [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) estrutura que recebe as informações de esquema de cores. Quando este método retorna, a estrutura descreve a cor de realce e a cor da sombra do controle de barra de ferramentas.|  
   
 ### <a name="return-value"></a>Valor de retorno  
 TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -1053,8 +1053,8 @@ BOOL GetPadding(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[out] *pnHorzPadding*|Um inteiro que recebe o preenchimento horizontal do controle da barra de ferramentas, em pixels.|  
-|[out] *pnVertPadding*|Um inteiro que recebe o preenchimento vertical do controle da barra de ferramentas, em pixels.|  
+|*pnHorzPadding*|[out] Um inteiro que recebe o preenchimento horizontal do controle da barra de ferramentas, em pixels.|  
+|*pnVertPadding*|[out] Um inteiro que recebe o preenchimento vertical do controle da barra de ferramentas, em pixels.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -1349,8 +1349,8 @@ BOOL IsButtonHighlighted(int nID) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nID*  
- A ID de comando para o botão de barra de ferramentas.  
+*nID*<br/>
+[in] A ID de comando para o botão de barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um inteiro positivo se o botão é realçado, 0 se o botão não é realçado, ou -1 se um erro ocorrerá.  
@@ -1363,8 +1363,8 @@ BOOL IsButtonIndeterminate(int nID) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nID*  
- Identificador do comando do botão na barra de ferramentas.  
+*nID*<br/>
+[in] Identificador do comando do botão na barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Número inteiro positivo se o botão é indeterminado, zero se o botão não é indeterminado ou -1 se ocorrer um erro.  
@@ -1491,11 +1491,11 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nID*  
- Identificador do botão pressiona ou libera o comando.  
+*nID*<br/>
+[in] Identificador do botão pressiona ou libera o comando.  
   
- [in] *bPress*  
- TRUE para pressionar o botão especificado; FALSE para liberar o botão especificado. O valor padrão é TRUE.  
+*bPress*<br/>
+[in] TRUE para pressionar o botão especificado; FALSE para liberar o botão especificado. O valor padrão é TRUE.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o método for bem-sucedido; Caso contrário, FALSE.  
@@ -1516,7 +1516,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *pReplaceBitmap*|Ponteiro para um [TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap) estrutura que descreve o bitmap a ser substituído e o novo bitmap.|  
+|*pReplaceBitmap*|[in] Ponteiro para um [TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap) estrutura que descreve o bitmap a ser substituído e o novo bitmap.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -1593,8 +1593,8 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *fAnchor*  
- Especifica se o realce de âncora está habilitado ou desabilitado. Se esse valor for diferente de zero, o realce de âncora será habilitada. Se esse valor for zero, o realce de âncora será desabilitado  
+*fAnchor*<br/>
+[in] Especifica se o realce de âncora está habilitado ou desabilitado. Se esse valor for diferente de zero, o realce de âncora será habilitada. Se esse valor for zero, o realce de âncora será desabilitado  
   
 ### <a name="return-value"></a>Valor de retorno  
  A configuração de âncora anterior. Se o realce foi habilitado, esse valor é diferente de zero. Se o realce não tiver sido habilitado, esse valor é zero.  
@@ -1729,7 +1729,7 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *lpColorScheme*|Ponteiro para um [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) estrutura que descreve a cor de realce e a cor da sombra do controle de barra de ferramentas.|  
+|*lpColorScheme*|[in] Ponteiro para um [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) estrutura que descreve a cor de realce e a cor da sombra do controle de barra de ferramentas.|  
   
 ### <a name="remarks"></a>Comentários  
  Esse método não tem efeito se um tema visual do Windows Vista for definido.  
@@ -1952,8 +1952,8 @@ DWORD SetPadding(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *nHorzPadding*|Especifica o preenchimento horizontal do controle da barra de ferramentas, em pixels.|  
-|[in] *nVertPadding*|Especifica o preenchimento vertical do controle da barra de ferramentas, em pixels.|  
+|*nHorzPadding*|[in] Especifica o preenchimento horizontal do controle da barra de ferramentas, em pixels.|  
+|*nVertPadding*|[in] Especifica o preenchimento vertical do controle da barra de ferramentas, em pixels.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um DWORD cuja palavra inferior contém o valor de preenchimento horizontal anterior e cuja palavra alta contém o valor de preenchimento vertical anterior. Os valores de preenchimento são medidos em pixels.  
@@ -1979,8 +1979,8 @@ CImagelist* SetPressedImageList(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *iImageID*|O índice baseado em zero da lista de imagens. Defina esse parâmetro como zero, se você usar apenas uma lista de imagens.|  
-|[in] *pImageList*|Ponteiro para um [CImageList](../../mfc/reference/cimagelist-class.md) que contém a nova lista de imagens.|  
+|*iImageID*|[in] O índice baseado em zero da lista de imagens. Defina esse parâmetro como zero, se você usar apenas uma lista de imagens.|  
+|*pImageList*|[in] Ponteiro para um [CImageList](../../mfc/reference/cimagelist-class.md) que contém a nova lista de imagens.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  Ponteiro para um [CImageList](../../mfc/reference/cimagelist-class.md) que contém a lista de imagens anteriores para o controle atual ou nulo se nenhuma lista como essa imagem foi definida.  

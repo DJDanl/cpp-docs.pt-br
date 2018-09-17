@@ -26,17 +26,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85749ff1325c3535c265a445ce76d37522bc252a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77791bdf33f38417d38ebdec3c73b83d96bde36f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338296"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718465"
 ---
 # <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte, __writefsdword, __writefsqword, __writefsword
 **Seção específica da Microsoft**  
   
- Grave memória para um local especificado por um deslocamento relativo ao início do segmento FS.  
+ Gravar a memória para um local especificado por um deslocamento relativo ao início do segmento FS.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,11 +60,11 @@ void __writefsqword(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [in] `Offset`  
- O deslocamento do início do FS gravar.  
+*deslocamento*<br/>
+[in] O deslocamento do início do FS a gravar.  
   
- [in] `Data`  
- O valor a ser gravado.  
+*Dados*<br/>
+[in] O valor a ser gravado.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -75,7 +75,7 @@ void __writefsqword(
 |`__writefsdword`|x86|  
 |`__writefsqword`|x86|  
   
- **Arquivo de cabeçalho** \<intrin.h >  
+ **Arquivo de cabeçalho** \<intrin. h >  
   
 ## <a name="remarks"></a>Comentários  
  Essas rotinas estão disponíveis apenas como intrínsecos.  

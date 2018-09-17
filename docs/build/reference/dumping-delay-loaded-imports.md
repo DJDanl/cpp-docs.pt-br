@@ -1,5 +1,5 @@
 ---
-title: Despejando importações carregadas com atraso | Microsoft Docs
+title: Despejando importações carregadas com atraso com | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,15 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f832f0ea7aaf7b766141ce7df4f83f21e1cdca
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29f2faecb29da93729b0be0f40c00c18b82f6344
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372861"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720870"
 ---
 # <a name="dumping-delay-loaded-imports"></a>Despejando importações carregadas com atraso
-Importações carregadas com atraso podem ser despejadas usando [dumpbin /imports](../../build/reference/imports-dumpbin.md) e mostram informações ligeiramente diferentes que importa padrão. Elas são separadas em sua própria seção do /imports despejar e explicitamente são rotuladas como importações carregadas com atraso. Se houver descarregar informações presentes na imagem, que está disponível. Se não houver informações de associação presentes, o carimbo de data/hora do destino da DLL é registrado junto com os endereços associados de imports.  
-  
-## <a name="see-also"></a>Consulte também  
- [Suporte do vinculador para DLLs carregadas com atraso](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+
+Importações carregadas com atraso podem ser despejadas usando [/imports (DUMPBIN)](../../build/reference/imports-dumpbin.md) e aparecer com informações ligeiramente diferentes, que importa padrão. Eles são separados em sua própria seção do /imports despejar e explicitamente são rotulados como importações carregadas com atraso. Se não houver descarregar as informações presentes na imagem, que é indicada. Se não houver informações de ligação presentes, o carimbo de data/hora do destino da DLL é observado juntamente com os endereços associados de importações.
+
+## <a name="see-also"></a>Consulte também
+
+[Suporte do vinculador para DLLs carregadas com atraso](../../build/reference/linker-support-for-delay-loaded-dlls.md)

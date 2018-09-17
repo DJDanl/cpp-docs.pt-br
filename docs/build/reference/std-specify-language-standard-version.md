@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b3254d61295e0cfe0fc398e4aa2a2f2a926dbb1
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 80c501c74d0e36d7a1c564e107101782468708c3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43130904"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709057"
 ---
 # <a name="std-specify-language-standard-version"></a>/STD (especificar versão de idioma padrão)
 
@@ -46,27 +46,27 @@ O padrão **/std: c + + 14** opção permite que o conjunto de recursos do c++14
 - [literais de caracteres U8](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4267.html)
 
 Para obter mais informações sobre quais C + + 14 e C + + 17 recursos estão habilitados quando **/std:c++17 + + 14** é especificado, consulte as notas na [conformidade com a linguagem Visual C++](../../visual-cpp-language-conformance.md).
-  
-O **/std: c + + 17** opção habilita o conjunto completo de recursos do c++17 implementado pelo compilador do Visual C++. Essa opção desabilita o suporte ao compilador e à biblioteca padrão para funcionalidades alteradas ou novas nas versões das atualizações de defeito e de rascunho de trabalho do C++ Standard após o C++17.  
-  
-O **/std:c++17 + + mais recente** opção permite que o conjunto de recursos de linguagem e biblioteca do C++ implementado pelo Visual C++ para acompanhar a maior parte C + + 20 defeito e rascunho de trabalho atualizações recentes do C++ Standard que não estão incluídas no c++17. Use essa opção para obter o pós-recursos de linguagem C + + 17 compatíveis com o compilador e a biblioteca padrão. Para obter uma lista de idiomas com suporte e recursos de biblioteca, consulte [o que há de novo para o Visual C++](../../what-s-new-for-visual-cpp-in-visual-studio.md). O **/std:c++17 + + mais recente** opção não permite recursos protegidos pela **/ experimental** alternar.  
-  
+
+O **/std: c + + 17** opção habilita o conjunto completo de recursos do c++17 implementado pelo compilador do Visual C++. Essa opção desabilita o suporte ao compilador e à biblioteca padrão para funcionalidades alteradas ou novas nas versões das atualizações de defeito e de rascunho de trabalho do C++ Standard após o C++17.
+
+O **/std:c++17 + + mais recente** opção permite que o conjunto de recursos de linguagem e biblioteca do C++ implementado pelo Visual C++ para acompanhar a maior parte C + + 20 defeito e rascunho de trabalho atualizações recentes do C++ Standard que não estão incluídas no c++17. Use essa opção para obter o pós-recursos de linguagem C + + 17 compatíveis com o compilador e a biblioteca padrão. Para obter uma lista de idiomas com suporte e recursos de biblioteca, consulte [o que há de novo para o Visual C++](../../what-s-new-for-visual-cpp-in-visual-studio.md). O **/std:c++17 + + mais recente** opção não permite recursos protegidos pela **/ experimental** alternar.
+
 O **/std** opção em vigor durante a compilação de C++ pode ser detectada pelo uso das [ \_MSVC\_LANG](../../preprocessor/predefined-macros.md) macro do pré-processador. Para obter mais informações, consulte [Macros de pré-processador](../../preprocessor/predefined-macros.md).
 
 O **/std:c++17 + + 14** e **/std: c + + mais recente** opções estão disponíveis no Visual C++ 2015 atualização 3. O **/std: c + + 17** opção está disponível a partir no Visual C++ 2017 versão 15.3. Conforme observado acima, algumas padrão c++17 comportamento é habilitado pela **/std:c++17 + + 14** opção, mas todos os outros recursos do c++17 são habilitadas por **/std: c + + 17**.
-  
+
 > [!NOTE]
-> Dependendo do Visual C++ versão ou atualização do nível do compilador, determinados C + + 14 ou C + + 17 recursos talvez não estejam totalmente implementados ou totalmente compatível com quando você especifica o **/std:c++17 + + 14** ou **/std:c++17 + + 17** opções. Por exemplo, o compilador Visual C++ 2017 RTM não suporta totalmente C + + 14-compatível com `constexpr`, expressão SFINAE ou pesquisa de nome de fase 2. Para uma visão geral de conformidade com a linguagem C++ no Visual C++ por versão de lançamento, consulte [conformidade com a linguagem Visual C++](../../visual-cpp-language-conformance.md). 
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
-  
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).  
-  
-2.  Selecione **propriedades de configuração**, **C/C++**, **idioma**.  
-  
-3.  Na **padrão de linguagem C++**, escolha o padrão de linguagem para dar suporte a partir do controle de lista suspensa, em seguida, escolha **Okey** ou **aplicar** para salvar suas alterações.  
-  
-## <a name="see-also"></a>Consulte também  
-  
-[Opções do compilador](../../build/reference/compiler-options.md)   
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)   
+> Dependendo do Visual C++ versão ou atualização do nível do compilador, determinados C + + 14 ou C + + 17 recursos talvez não estejam totalmente implementados ou totalmente compatível com quando você especifica o **/std:c++17 + + 14** ou **/std:c++17 + + 17** opções. Por exemplo, o compilador Visual C++ 2017 RTM não suporta totalmente C + + 14-compatível com `constexpr`, expressão SFINAE ou pesquisa de nome de fase 2. Para uma visão geral de conformidade com a linguagem C++ no Visual C++ por versão de lançamento, consulte [conformidade com a linguagem Visual C++](../../visual-cpp-language-conformance.md).
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
+
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+
+1. Selecione **propriedades de configuração**, **C/C++**, **idioma**.
+
+1. Na **padrão de linguagem C++**, escolha o padrão de linguagem para dar suporte a partir do controle de lista suspensa, em seguida, escolha **Okey** ou **aplicar** para salvar suas alterações.
+
+## <a name="see-also"></a>Consulte também
+
+[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
+[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

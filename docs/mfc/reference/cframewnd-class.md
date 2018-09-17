@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 991b8c55c02272613ce329be9a053ff0110f1926
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 817c828c56fe2e95756e517c3d930d365714ad99
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764869"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701708"
 ---
 # <a name="cframewnd-class"></a>Classe CFrameWnd
 Fornece a funcionalidade de uma janela de quadro pop-up, juntamente com os membros para gerenciar a janela ou Windows interface SDI (SDI) sobreposta.  
@@ -986,7 +986,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *nState*|Especifica se deseja exibir ou ocultar o menu. O *nState* parâmetro pode ter os seguintes valores:<br /><br /> -AFX_MBS_VISIBLE (0x01) - exibe o menu, se ele está oculto, mas não tem nenhum efeito se ele estiver visível.<br />-AFX_MBS_HIDDEN (0x02) – oculta o menu, se ele estiver visível, mas não tem nenhum efeito se ele está oculto.|  
+|*nState*|[in] Especifica se deseja exibir ou ocultar o menu. O *nState* parâmetro pode ter os seguintes valores:<br /><br /> -AFX_MBS_VISIBLE (0x01) - exibe o menu, se ele está oculto, mas não tem nenhum efeito se ele estiver visível.<br />-AFX_MBS_HIDDEN (0x02) – oculta o menu, se ele estiver visível, mas não tem nenhum efeito se ele está oculto.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método com êxito altera o estado de menu; Caso contrário, FALSE.  
@@ -1005,7 +1005,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *nStyle*|Especifica se o menu é por padrão, ocultada, ou estiver visível e tem o foco. O *nStyle* parâmetro pode ter os seguintes valores:<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01)-<br />     O menu é exibido em todos os momentos e por padrão não tem o foco.<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     O menu está oculto por padrão. Se o menu estiver oculto, pressione a tecla ALT para exibir o menu e dê a ele o foco. Se o menu é exibido, pressione a tecla ALT ou ESC para ocultar o menu.<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (combinação bit a bit (OR)) - menu está oculto por padrão. Se o menu estiver oculto, pressione a tecla F10 para exibir o menu e dê a ele o foco. Se o menu é exibido, pressione a tecla F10 para alternar o foco ou desativar o menu. O menu é exibido até que você pressionar a tecla ALT ou ESC para ocultá-la.|  
+|*nStyle*|[in] Especifica se o menu é por padrão, ocultada, ou estiver visível e tem o foco. O *nStyle* parâmetro pode ter os seguintes valores:<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01)-<br />     O menu é exibido em todos os momentos e por padrão não tem o foco.<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     O menu está oculto por padrão. Se o menu estiver oculto, pressione a tecla ALT para exibir o menu e dê a ele o foco. Se o menu é exibido, pressione a tecla ALT ou ESC para ocultar o menu.<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (combinação bit a bit (OR)) - menu está oculto por padrão. Se o menu estiver oculto, pressione a tecla F10 para exibir o menu e dê a ele o foco. Se o menu é exibido, pressione a tecla F10 para alternar o foco ou desativar o menu. O menu é exibido até que você pressionar a tecla ALT ou ESC para ocultá-la.|  
   
 ### <a name="remarks"></a>Comentários  
  Se o valor de *nStyle* parâmetro não é válido, esse método declara no modo de depuração e gera [CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md) no modo de versão. No caso de outros erros de tempo de execução, esse método asserções in no modo de depuração e gera uma exceção derivada de [CException](../../mfc/reference/cexception-class.md) classe.  

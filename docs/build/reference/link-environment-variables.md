@@ -19,28 +19,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 076e427e50520651f30cde20c764ff1124a6f953
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e88ac63ace95ac0b9874dc3376210f3f5b4af320
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372692"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716645"
 ---
 # <a name="link-environment-variables"></a>Variáveis de ambiente LINK
 
-A ferramenta LINK usa as seguintes variáveis de ambiente:  
-  
--   LINK e \_LINK\_, se definido. A ferramenta LINK precede as opções e argumentos definidos na variável de ambiente LINK e acrescenta as opções e argumentos definidos no \_LINK\_ variável de ambiente para os argumentos de linha de comando antes do processamento.  
-  
--   LIB, se definido. As ferramentas LINK usa o caminho de biblioteca ao procurar um objeto, a biblioteca ou a outro arquivo especificado na linha de comando ou pelo [/BASE](../../build/reference/base-base-address.md) opção. Ele também usa o caminho de biblioteca para localizar um arquivo. PDB chamado em um objeto. A variável LIB pode conter uma ou mais especificações de caminho, separadas por ponto e vírgula. Um caminho deve apontar para o subdiretório \lib da instalação do Visual C++.  
-  
--   CAMINHO, se a ferramenta precisa executar CVTRES e não é possível localizar o arquivo no mesmo diretório que o próprio LINK. (LINK requer CVTRES vincular um arquivo. res). PATH deve apontar para o subdiretório \bin da instalação do Visual C++.  
-  
--   TMP, para especificar um diretório ao vincular arquivos OMF ou. res.  
-  
-## <a name="see-also"></a>Consulte também  
+A ferramenta LINK usa as seguintes variáveis de ambiente:
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
-[Opções do vinculador](../../build/reference/linker-options.md)   
-[Compilar código C/C++ na linha de comando](../../build/building-on-the-command-line.md)  
+- LINK e \_LINK\_, se definido. A ferramenta LINK precede as opções e argumentos definidos na variável de ambiente LINK e acrescenta as opções e argumentos definidos na \_LINK\_ variável de ambiente para os argumentos de linha de comando antes do processamento.
+
+- LIB, se definido. As ferramentas LINK usa o caminho do LIB ao pesquisar por um objeto, biblioteca ou outro arquivo especificado na linha de comando ou pelo [/base](../../build/reference/base-base-address.md) opção. Ele também usa o caminho do LIB para localizar um arquivo. PDB chamado em um objeto. A variável LIB pode conter uma ou mais especificações de caminho, separadas por ponto e vírgula. Um caminho deve apontar para o subdiretório \lib de sua instalação do Visual C++.
+
+- CAMINHO, se a ferramenta precisa ser executado CVTRES e não é possível localizar o arquivo no mesmo diretório que o próprio LINK. (O LINK exige CVTRES vincular um arquivo. res). CAMINHO deve apontar para o subdiretório \bin de sua instalação do Visual C++.
+
+- TMP, especifique um diretório ao vincular arquivos OMF ou. res.
+
+## <a name="see-also"></a>Consulte também
+
+[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
+[Opções do vinculador](../../build/reference/linker-options.md)<br/>
+[Compilar código C/C++ na linha de comando](../../build/building-on-the-command-line.md)<br/>
 [Definir o caminho e variáveis de ambiente para builds de linha de comando](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)

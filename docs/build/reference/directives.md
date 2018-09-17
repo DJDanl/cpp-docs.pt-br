@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 455e1dba4c2ef4e77ee0542617f9dff707a9487c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f7375db4929d48be443aba97f0ea9e47ff355419
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369910"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707701"
 ---
 # <a name="directives"></a>/DIRECTIVES
-```  
-/DIRECTIVES  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Essa opção seção .drective gerado pelo compilador de uma imagem de despejos de memória.  
-  
- Somente o [/HEADERS](../../build/reference/headers.md) opção DUMPBIN está disponível para uso em arquivos produzidos com o [/GL](../../build/reference/gl-whole-program-optimization.md) opção de compilador.  
-  
-## <a name="see-also"></a>Consulte também  
- [Opções de DUMPBIN](../../build/reference/dumpbin-options.md)
+
+```
+/DIRECTIVES
+```
+
+## <a name="remarks"></a>Comentários
+
+Essa opção descarta a seção .drective gerado pelo compilador de uma imagem.
+
+Somente o [/HEADERS](../../build/reference/headers.md) opção DUMPBIN está disponível para uso em arquivos produzidos com o [/GL](../../build/reference/gl-whole-program-optimization.md) opção de compilador.
+
+## <a name="see-also"></a>Consulte também
+
+[Opções de DUMPBIN](../../build/reference/dumpbin-options.md)

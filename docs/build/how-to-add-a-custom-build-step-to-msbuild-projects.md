@@ -1,5 +1,5 @@
 ---
-title: 'Como: adicionar uma etapa de compilação personalizada a projetos MSBuild | Microsoft Docs'
+title: 'Como: adicionar uma etapa de compilação personalizada a projetos do MSBuild | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,50 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa8d433b782d8436f6211ab9efe55fcaad3492ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ca8206024f4fbaf38b8161a9e12672782551db83
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367986"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45712162"
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Como adicionar uma etapa de build personalizada a projetos MSBuild
-Uma etapa de compilação personalizada é uma etapa definido pelo usuário em uma compilação. Uma etapa de compilação personalizada se comporta como qualquer outro *ferramenta de comando* etapa, como a etapa de ferramenta de compilação ou link padrão.  
-  
- Especifique uma etapa de compilação personalizada no arquivo de projeto (. vcxproj). A etapa pode especificar uma linha de comando a ser executado, nenhuma entrada adicional ou arquivos de saída e uma mensagem a ser exibida. Se **MSBuild** determina que os arquivos de saída estão desatualizados em relação a seus arquivos de entrada, ele exibe a mensagem e executa o comando.  
-  
- Para especificar o local de compilação personalizada etapa na sequência de destinos de compilação, use um ou ambos os `CustomBuildAfterTargets` e `CustomBuildBeforeTargets` elementos XML no arquivo de projeto. Por exemplo, você pode especificar que a etapa de compilação personalizada é executado após o destino de link de ferramenta e antes do destino da ferramenta de manifesto. O conjunto real de destinos disponíveis depende de sua compilação específica.  
-  
- Especifique o `CustomBuildBeforeTargets` elemento para executar a etapa de compilação personalizada para um destino específico é executado, o `CustomBuildAfterTargets` elemento para executar a etapa após a execução de um destino específico, ou ambos os elementos para executar a etapa entre dois destinos adjacentes. Se nenhum elemento for especificado, a ferramenta de compilação personalizada executa no local padrão, após o **Link** destino.  
-  
- Etapas de compilação personalizada e as ferramentas de compilação personalizada compartilham as informações especificadas no `CustomBuildBeforeTargets` e `CustomBuildAfterTargets` elementos XML. Portanto, especifica os destinos apenas uma vez no arquivo de projeto.  
-  
-### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>Para definir o que é executado pela etapa de compilação personalizada  
-  
-1.  Adicione um grupo de propriedades para o arquivo de projeto. Nesse grupo de propriedade, especifique o comando, suas entradas e saídas e uma mensagem, conforme mostrado no exemplo a seguir. Este exemplo cria um arquivo. cab do arquivo main.cpp criado na [passo a passo: usando MSBuild para criar um projeto Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).  
-  
-    ```  
-    <ItemDefinitionGroup>  
-      <CustomBuildStep>  
-        <Command>makecab.exe $(ProjectDir)main.cpp $(TargetName).cab</Command>  
-        <Outputs>$(TargetName).cab</Outputs>  
-        <Inputs>$(TargetFileName)</Inputs>  
-      </CustomBuildStep>  
-    </ItemDefinitionGroup>  
-    ```  
-  
-### <a name="to-define-where-in-the-build-the-custom-build-step-will-execute"></a>Para definir onde na compilação de etapa de compilação personalizada será executado  
-  
-1.  Adicione o seguinte grupo de propriedade para o arquivo de projeto. Você pode especificar ambos os destinos, ou você pode omitir um se você quiser apenas a etapa personalizada a ser executada antes ou depois de um destino específico. Este exemplo informa **MSBuild** para executar a etapa personalizada após a etapa de compilação, mas antes da etapa de link.  
-  
-    ```  
-    <PropertyGroup>  
-      <CustomBuildAfterTargets>ClCompile</CustomBuildAfterTargets>  
-      <CustomBuildBeforeTargets>Link</CustomBuildBeforeTargets>  
-    </PropertyGroup>  
-    ```  
-  
-## <a name="see-also"></a>Consulte também  
- [Passo a passo: Usando MSBuild para criar um projeto do Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)   
- [Como: usar eventos de Build em projetos de MSBuild](../build/how-to-use-build-events-in-msbuild-projects.md)   
- [Como adicionar ferramentas de build personalizadas a projetos MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)
+
+Uma etapa de compilação personalizada é uma etapa definidos pelo usuário em uma compilação. Uma etapa de compilação personalizada se comporta como qualquer outro *ferramenta de comando* etapa, como a etapa de ferramenta de compilação ou de link padrão.
+
+Especifique uma etapa de compilação personalizada no arquivo de projeto (. vcxproj). A etapa pode especificar uma linha de comando para execução, nenhuma entrada adicional ou arquivos de saída e uma mensagem a ser exibida. Se **MSBuild** determina que os arquivos de saída estão desatualizados em relação a seus arquivos de entrada, ele exibe a mensagem e executa o comando.
+
+Para especificar o local da compilação personalizada etapa na sequência de destinos de compilação, use uma ou ambas as `CustomBuildAfterTargets` e `CustomBuildBeforeTargets` elementos XML no arquivo de projeto. Por exemplo, você poderia especificar que a etapa de compilação personalizado é executado após o destino da ferramenta de link e antes do destino da ferramenta de manifesto. O conjunto real de destinos disponíveis depende da sua compilação específica.
+
+Especifique o `CustomBuildBeforeTargets` elemento para executar a etapa de compilação personalizado antes de executa um destino específico, o `CustomBuildAfterTargets` elemento para executar a etapa após a execução de um destino específico, ou ambos os elementos para executar a etapa entre dois destinos adjacentes. Se nenhum elemento for especificado, a ferramenta de compilação personalizada é executado no local padrão, que é posterior a **Link** destino.
+
+Etapas de compilação personalizada e ferramentas de build personalizadas compartilham as informações especificadas na `CustomBuildBeforeTargets` e `CustomBuildAfterTargets` elementos XML. Portanto, especifica os destinos apenas uma vez no arquivo de projeto.
+
+### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>Para definir o que é executado pela etapa de compilação personalizada
+
+1. Adicione um grupo de propriedades para o arquivo de projeto. Nesse grupo de propriedade, especifique o comando, suas entradas e saídas e uma mensagem, conforme mostrado no exemplo a seguir. Este exemplo cria um arquivo. cab do arquivo cpp criado na [instruções passo a passo: usando o MSBuild para criar um projeto do Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
+
+    ```
+    <ItemDefinitionGroup>
+      <CustomBuildStep>
+        <Command>makecab.exe $(ProjectDir)main.cpp $(TargetName).cab</Command>
+        <Outputs>$(TargetName).cab</Outputs>
+        <Inputs>$(TargetFileName)</Inputs>
+      </CustomBuildStep>
+    </ItemDefinitionGroup>
+    ```
+
+### <a name="to-define-where-in-the-build-the-custom-build-step-will-execute"></a>Para definir onde na compilação de etapa de compilação personalizada será executada
+
+1. Adicione o grupo de propriedades a seguir ao arquivo de projeto. Você pode especificar ambos os destinos, ou você pode omitir um se você quiser apenas a etapa personalizada a ser executada antes ou depois de um destino específico. Este exemplo informa **MSBuild** para executar a etapa personalizada após a etapa de compilação, mas antes da etapa de link.
+
+    ```
+    <PropertyGroup>
+      <CustomBuildAfterTargets>ClCompile</CustomBuildAfterTargets>
+      <CustomBuildBeforeTargets>Link</CustomBuildBeforeTargets>
+    </PropertyGroup>
+    ```
+
+## <a name="see-also"></a>Consulte também
+
+[Instruções passo a passo: usando MSBuild para criar um projeto do Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[Como usar eventos de build em projetos do MSBuild](../build/how-to-use-build-events-in-msbuild-projects.md)<br/>
+[Como adicionar ferramentas de build personalizadas a projetos MSBuild](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)

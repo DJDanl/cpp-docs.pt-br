@@ -18,27 +18,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af4a9f3d898d0087f0e8e861ccfe72e4adadb1de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0ce0a33ebb0b8b9ba34ac241c8335e9524dec08b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368909"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715566"
 ---
 # <a name="allowbind"></a>/ALLOWBIND
-Especifica se uma DLL pode ser associada.  
-  
-```  
-  
-/ALLOWBIND[:NO]  
-```  
-  
-## <a name="remarks"></a>Comentários  
- O **/ALLOWBIND** opção define um bit no cabeçalho de uma DLL que indica para Bind.exe que a imagem pode ser associado. Associação pode permitir que uma imagem a ser carregado mais rapidamente quando o carregador não tem rebase e executar a correção de endereço para cada DLL referenciado. Talvez não seja um DLL ser associada caso ele tenha sido assinado digitalmente — associação invalida a assinatura. Associação não tem nenhum efeito se aleatória de layout de espaço de endereço (ASLR) está habilitada para a imagem usando **/DYNAMICBASE** em versões do Windows que oferecem suporte a ASLR.  
-  
- Use **/allowbind: no** para impedir que a DLL de associação Bind.exe.  
-  
- Para obter mais informações, consulte o [/ALLOWBIND](../../build/reference/allowbind-prevent-dll-binding.md) opção de vinculador.  
-  
-## <a name="see-also"></a>Consulte também  
- [Opções de EDITBIN](../../build/reference/editbin-options.md)
+
+Especifica se uma DLL pode ser associada.
+
+```
+
+/ALLOWBIND[:NO]
+```
+
+## <a name="remarks"></a>Comentários
+
+O **/ALLOWBIND** opção define um bit no cabeçalho de uma DLL que indica a Bind.exe que a imagem tem permissão para ser associado. Associação pode permitir que uma imagem a ser carregado mais rapidamente quando o carregador não precisa trocar base e realizar o ajuste de endereço para cada DLL referenciada. Talvez você não queira uma DLL seja vinculada caso ela tenha sido assinada digitalmente — associação invalida a assinatura. Associação não tem nenhum efeito se randomização de layout de espaço de endereço (ASLR) estiver habilitada para a imagem por meio **/DYNAMICBASE** em versões do Windows que dão suporte a ASLR.
+
+Use **/allowbind: no** para impedir que Bind.exe a DLL de associação.
+
+Para obter mais informações, consulte o [/ALLOWBIND](../../build/reference/allowbind-prevent-dll-binding.md) a opção de vinculador.
+
+## <a name="see-also"></a>Consulte também
+
+[Opções de EDITBIN](../../build/reference/editbin-options.md)

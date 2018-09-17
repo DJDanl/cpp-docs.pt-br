@@ -21,66 +21,68 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 712c22bec1d6ce2d67208de9a139dff7621ad4cd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea6ea90460f3fd28724ee1fd34dfdeb3f6ae80b2
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376553"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711770"
 ---
 # <a name="using-verify-instead-of-assert"></a>Usando VERIFY em vez de ASSERT
-Suponha que, quando você executa a versão de depuração do seu aplicativo MFC, não há nenhum problema. No entanto, a versão de lançamento do mesmo aplicativo falha, retorna resultados incorretos e/ou exibe alguns outros comportamento anormal.  
-  
- Esse problema pode ser causado quando você coloca código importantes em uma instrução ASSERT para verificar que ele seja executado corretamente. Porque as instruções de declaração são comentadas em uma compilação de versão de um programa MFC, o código não é executado em uma compilação de versão.  
-  
- Se você estiver usando ASSERT para confirmar se uma chamada de função foi bem-sucedida, considere o uso de [verificar](../../mfc/reference/diagnostic-services.md#verify) em vez disso. A macro VERIFY avalia seus próprios argumentos em ambos os depuração e compilações de versão do aplicativo.  
-  
- Outra preferência técnica é atribuir o valor de retorno da função em uma variável temporária e, em seguida, teste a variável em uma instrução ASSERT.  
-  
- Examine o fragmento de código a seguir:  
-  
-```  
-enum {  
-    sizeOfBuffer = 20  
-};  
-char *buf;  
-ASSERT(buf = (char *) calloc(sizeOfBuffer, sizeof(char) ));  
-strcpy_s( buf, sizeOfBuffer, "Hello, World" );  
-free( buf );  
-```  
-  
- Esse código é executado perfeitamente em uma versão de depuração de um aplicativo do MFC. Se a chamada para `calloc( )` falhar, uma mensagem de diagnóstico que inclui o arquivo e número de linha aparece. No entanto, em uma versão comercial de um aplicativo MFC:  
-  
--   a chamada para `calloc( )` nunca ocorrer, deixando `buf` não inicializado, ou  
-  
--   `strcpy_s( )` cópias "`Hello, World`" em uma parte aleatória de memória, possivelmente, travando o aplicativo ou fazendo com que o sistema parar de responder, ou  
-  
--   `free()` tentativas liberar a memória que nunca foi alocada.  
-  
- Para usar ASSERT corretamente, o exemplo de código deve ser alterado para o seguinte:  
-  
-```  
-enum {  
-    sizeOfBuffer = 20  
-};  
-char *buf;  
-buf = (char *) calloc(sizeOfBuffer, sizeof(char) );  
-ASSERT( buf != NULL );  
-strcpy_s( buf, sizeOfBuffer, "Hello, World" );  
-free( buf );  
-```  
-  
- Ou, você pode usar em vez disso, verifique se:  
-  
-```  
-enum {  
-    sizeOfBuffer = 20  
-};  
-char *buf;  
-VERIFY(buf = (char *) calloc(sizeOfBuffer, sizeof(char) ));  
-strcpy_s( buf, sizeOfBuffer, "Hello, World" );  
-free( buf );  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Corrigindo problemas do build de versão](../../build/reference/fixing-release-build-problems.md)
+
+Suponha que, quando você executa a versão de depuração do seu aplicativo do MFC, não há nenhum problema. No entanto, a versão de lançamento do mesmo aplicativo falha, retorna resultados incorretos e/ou exibe alguns outros comportamentos anormais.
+
+Esse problema pode ser causado quando você coloca o código importantes em uma instrução ASSERT para verificar que ele seja executado corretamente. Como instruções ASSERT são comentadas na compilação de versão de um programa MFC, o código não é executado em um build de versão.
+
+Se você estiver usando o ASSERT para confirmar que uma chamada de função foi bem-sucedida, considere o uso [VERIFY](../../mfc/reference/diagnostic-services.md#verify) em vez disso. A macro VERIFY avalia seus próprios argumentos em ambos os depuração e libere compilações do aplicativo.
+
+Outra preferência técnica é atribuir o valor de retorno da função a uma variável temporária e, em seguida, teste a variável em uma instrução ASSERT.
+
+Examine o seguinte fragmento de código:
+
+```
+enum {
+    sizeOfBuffer = 20
+};
+char *buf;
+ASSERT(buf = (char *) calloc(sizeOfBuffer, sizeof(char) ));
+strcpy_s( buf, sizeOfBuffer, "Hello, World" );
+free( buf );
+```
+
+Esse código é executado perfeitamente em uma versão de depuração de um aplicativo do MFC. Se a chamada para `calloc( )` falhar, uma mensagem de diagnóstico que inclui o arquivo e número de linha aparece. No entanto, em um build de varejo de um aplicativo do MFC:
+
+- a chamada para `calloc( )` nunca ocorrer, deixando `buf` não inicializado, ou
+
+- `strcpy_s( )` cópias "`Hello, World`" em uma parte aleatória de memória, falhando, possivelmente, o aplicativo ou fazendo com que o sistema pare de responder, ou
+
+- `free()` tenta liberar a memória que nunca foi alocado.
+
+Para usar ASSERT corretamente, o exemplo de código deve ser alterado para o seguinte:
+
+```
+enum {
+    sizeOfBuffer = 20
+};
+char *buf;
+buf = (char *) calloc(sizeOfBuffer, sizeof(char) );
+ASSERT( buf != NULL );
+strcpy_s( buf, sizeOfBuffer, "Hello, World" );
+free( buf );
+```
+
+Ou, você pode usar em vez disso, verifique se:
+
+```
+enum {
+    sizeOfBuffer = 20
+};
+char *buf;
+VERIFY(buf = (char *) calloc(sizeOfBuffer, sizeof(char) ));
+strcpy_s( buf, sizeOfBuffer, "Hello, World" );
+free( buf );
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Corrigindo problemas do build de versão](../../build/reference/fixing-release-build-problems.md)

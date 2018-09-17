@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4fc2eb252c81e903174d99d4a55b2f3c1eed321
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4b0226e38b34268217b4f21a1f5262cd1f1afbec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205281"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702085"
 ---
 # <a name="ccombobox-class"></a>Classe CComboBox
 Fornece a funcionalidade de uma caixa de combinação do Windows.  
@@ -612,8 +612,8 @@ BOOL GetCueBanner(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[out] *lpszText*|Ponteiro para um buffer que recebe o texto da faixa de indicação.|  
-|[in] *cchText*|Tamanho do buffer que o *lpszText* parâmetro aponta.|  
+|*lpszText*|[out] Ponteiro para um buffer que recebe o texto da faixa de indicação.|  
+|*cchText*|[in] Tamanho do buffer que o *lpszText* parâmetro aponta.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  Na primeira sobrecarga, uma [CString](../../atl-mfc-shared/using-cstring.md) objeto que contém o texto da faixa de indicação se existir; caso contrário, um `CString` objeto que tem comprimento zero.  
@@ -1048,7 +1048,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *lpszText*|Ponteiro para um buffer de terminação nula que contém o texto de indicação.|  
+|*lpszText*|[in] Ponteiro para um buffer de terminação nula que contém o texto de indicação.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o método for bem-sucedido; Caso contrário, FALSE.  
@@ -1291,7 +1291,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *iMinVisible*|Especifica o número mínimo de itens visíveis.|  
+|*iMinVisible*|[in] Especifica o número mínimo de itens visíveis.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  

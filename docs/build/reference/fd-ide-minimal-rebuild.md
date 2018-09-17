@@ -18,19 +18,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18e31955b131e4ca22d23013565e53f83493275d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 74fb35ec25bed808e2165498c00b65723aba5bac
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373394"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702436"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD (recompilação mínima de IDE)
-**/FD** não é exposto a usuários, exceto de [linha de comando](../../ide/command-line-property-pages.md) página de propriedades de um projeto de C++ **páginas de propriedade** caixa de diálogo se e somente se [/GM (habilitar mínimo recriar)demanual](../../build/reference/gm-enable-minimal-rebuild.md) também não está selecionado. **/FD** não tem nenhum efeito diferente do ambiente de desenvolvimento. **/FD** não é exposta na saída de **cl /?**.  
-  
- Se você não habilitar **/GM manual** no ambiente de desenvolvimento, **/FD** será usado. **/FD** garante que o arquivo .idb tem informações suficientes de dependência. **/FD** só é usado pelo ambiente de desenvolvimento, e não deve ser usado da linha de comando ou um script de compilação.  
-  
-## <a name="see-also"></a>Consulte também  
- [Arquivo de saída (/ F) opções](../../build/reference/output-file-f-options.md)   
- [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+
+**/FD** não é exposto a usuários, exceto em de [linha de comando](../../ide/command-line-property-pages.md) página de propriedades de um projeto de C++ **páginas de propriedades** caixa de diálogo se e somente se [/Gm (habilitar recompilação mínima)](../../build/reference/gm-enable-minimal-rebuild.md) também não está selecionado. **/FD** não tem nenhum efeito diferente do ambiente de desenvolvimento. **/FD** não é exposto na saída do **cl /?**.
+
+Se você não habilitar **/Gm** no ambiente de desenvolvimento **/FD** será usado. **/FD** garante que o arquivo. IDB tem informações suficientes de dependência. **/FD** só é usada pelo ambiente de desenvolvimento, e não deve ser usado da linha de comando ou um script de compilação.
+
+## <a name="see-also"></a>Consulte também
+
+[Arquivo de saída (/ F) opções](../../build/reference/output-file-f-options.md)
+[opções do compilador](../../build/reference/compiler-options.md)<br/>
+[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

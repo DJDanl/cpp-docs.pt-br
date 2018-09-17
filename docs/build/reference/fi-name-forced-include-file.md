@@ -22,41 +22,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b85bfaebe09203f7aad76c24e8f8fbccfe009d80
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa06eaf8f16a80b849ce911468fc0001366b9e29
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373368"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725459"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (Arquivo de inclusão forçado do nome)
-Faz com que o pré-processador ao processar o arquivo de cabeçalho especificado.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-/FI[ ]pathname  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Essa opção tem o mesmo efeito que a especificação do arquivo com aspas duplas em uma `#include` diretiva na primeira linha de cada arquivo de origem especificado na linha de comando, na variável de ambiente CL ou em um arquivo de comando. Se você usar várias **/FI** opções, de arquivos estão incluídas na ordem em que eles são processados pelo CL.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
-  
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
-  
-2.  Clique o **C/C++** pasta.  
-  
-3.  Clique o **avançado** página de propriedades.  
-  
-4.  Modificar o **Force inclui** propriedade.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
-  
--   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForcedIncludeFiles%2A>.  
-  
-## <a name="see-also"></a>Consulte também  
- [Arquivo de saída (/ F) opções](../../build/reference/output-file-f-options.md)   
- [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)   
- [Especificando o nome de caminho](../../build/reference/specifying-the-pathname.md)
+
+Faz com que o pré-processador processar o arquivo de cabeçalho especificado.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+/FI[ ]pathname
+```
+
+## <a name="remarks"></a>Comentários
+
+Essa opção tem o mesmo efeito que especificar o arquivo com aspas duplas em um `#include` diretiva na primeira linha de cada arquivo de origem especificado na linha de comando, na variável de ambiente CL, ou em um arquivo de comando. Se você usar várias **/FI** opções, os arquivos são incluídas na ordem em que eles são processados pelo CL.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
+
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+
+1. Clique o **C/C++** pasta.
+
+1. Clique o **avançado** página de propriedades.
+
+1. Modificar a **Force inclui** propriedade.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
+
+- Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForcedIncludeFiles%2A>.
+
+## <a name="see-also"></a>Consulte também
+
+[Arquivo de saída (/ F) opções](../../build/reference/output-file-f-options.md)
+[opções do compilador](../../build/reference/compiler-options.md)<br/>
+[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
+[Especificando o nome de caminho](../../build/reference/specifying-the-pathname.md)

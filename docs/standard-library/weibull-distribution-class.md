@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f684ad5e6487378e8f85aa1c30af0ae9d9038075
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9229aa162c032198595e78344157748d250b4288
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109843"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713759"
 ---
 # <a name="weibulldistribution-class"></a>Classe weibull_distribution
 
@@ -233,13 +233,13 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Parâmetros
 
-*a*  
+*a*<br/>
 O parâmetro de distribuição `a`.
 
-*b*  
+*b*<br/>
 O parâmetro de distribuição `b`.
 
-*parm*  
+*parm*<br/>
 A estrutura `param_type` usada para construir a distribuição.
 
 ### <a name="remarks"></a>Comentários
@@ -268,13 +268,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Parâmetros
 
-*a*  
+*a*<br/>
 O parâmetro de distribuição `a`.
 
-*b*  
+*b*<br/>
 O parâmetro de distribuição `b`.
 
-*right*  
+*right*<br/>
 O objeto `param_type` a ser comparado a este.
 
 ### <a name="remarks"></a>Comentários

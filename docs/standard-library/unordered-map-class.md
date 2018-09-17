@@ -148,12 +148,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28fbbce7c63e60bfdeb75c32b3c919b4f38b2b2a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9082e4a8269e692bf9e1d9b8a27f61291b2707a9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107433"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726226"
 ---
 # <a name="unorderedmap-class"></a>Classe unordered_map
 
@@ -561,7 +561,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*nbucket*  
+*nbucket*<br/>
 O número de bucket.
 
 ### <a name="remarks"></a>Comentários
@@ -925,7 +925,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*keyval*  
+*keyval*<br/>
 O valor chave a ser pesquisado.
 
 ### <a name="remarks"></a>Comentários
@@ -1190,7 +1190,7 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*keyval*  
+*keyval*<br/>
 O valor chave a ser pesquisado.
 
 ### <a name="remarks"></a>Comentários
@@ -1260,16 +1260,16 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Where*  
+*Where*<br/>
 A posição do elemento a ser removido.
 
-*Primeiro*  
+*Primeiro*<br/>
 A posição do primeiro elemento a ser removido.
 
-*último*  
+*último*<br/>
 A posição logo após o último elemento a ser removido.
 
-*Chave*  
+*Chave*<br/>
 O valor de chave dos elementos a serem removidos.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1292,7 +1292,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*keyval*  
+*keyval*<br/>
 O valor chave a ser pesquisado.
 
 ### <a name="remarks"></a>Comentários
@@ -2009,7 +2009,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parâmetros
 
-*factor*  
+*factor*<br/>
 O novo fator de carga máxima.
 
 ### <a name="remarks"></a>Comentários
@@ -2381,7 +2381,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nbuckets*  
+*nbuckets*<br/>
 O número solicitado de buckets.
 
 ### <a name="remarks"></a>Comentários
@@ -2565,7 +2565,7 @@ void swap(unordered_map& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*  
+*right*<br/>
 O contêiner para alternância.
 
 ### <a name="remarks"></a>Comentários

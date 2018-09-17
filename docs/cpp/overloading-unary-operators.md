@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c00f9d40fedd084afa2da6e2e7bfaf0ee831b3a9
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 54529bed25fc60815f80ea8660bcf5786cb2887c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39401874"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700669"
 ---
 # <a name="overloading-unary-operators"></a>Operadores unários de sobrecarga
 Os operadores unários que podem ser sobrecarregados são os seguintes:  
@@ -55,15 +55,15 @@ Os operadores unários que podem ser sobrecarregados são os seguintes:
   
  As regras a seguir são verdadeiras para todos os outros operadores unários. Para declarar uma função de operador unário como um membro não estático, você deve declará-la na forma:  
   
- `ret-type operator``op``()`  
+> *RET-type* **operador** *op* **)**  
   
- em que `ret-type` é o tipo de retorno e `op` é um dos operadores listados na tabela anterior.  
+ em que *ret-type* é o tipo de retorno e *op* é um dos operadores listado na tabela anterior.  
   
  Para declarar uma função de operador unário como uma função global, você deve declará-la na forma:  
   
- `ret-type operator` `op` (`arg` )  
+> *RET-type* **operador** *op* **(** *arg* **)**  
   
- em que `ret-type` e `op` são conforme descritos para funções de operador de membro e `arg` é um argumento do tipo de classe no qual operar.  
+ em que *ret-type* e *op* são descritos para funções de operador de membro e o *arg* é um argumento de tipo de classe no qual operar.  
   
 > [!NOTE]
 >  Não há nenhuma restrição quanto aos tipos de retorno dos operadores unários. Por exemplo, faz sentido para NOT lógico (`!`) retornar um valor integral, mas isso não é imposto.  

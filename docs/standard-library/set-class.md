@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a04710d900aa9eb5889c19fbdc419a3b7f3cbc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b3b697901ac564a88f48cdbc3154f29089c23acc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204604"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706154"
 ---
 # <a name="set-class"></a>Classe set
 
@@ -119,15 +119,15 @@ class set
 ### <a name="parameters"></a>Parâmetros
 
 *Chave*<br/>
- O tipo de dados do elemento a ser armazenado no conjunto.
+O tipo de dados do elemento a ser armazenado no conjunto.
 
 *Características*<br/>
- O tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no conjunto. Esse argumento é opcional e o predicado binário **less** *\<Key>* é o valor padrão.
+O tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no conjunto. Esse argumento é opcional e o predicado binário **less** *\<Key>* é o valor padrão.
 
 No C++ 14, você pode habilitar a pesquisa heterogênea ao especificar o predicado `std::less<>` ou o `std::greater<>`, que não tem nenhum parâmetro de tipo. Para obter mais informações, consulte [Pesquisa heterogênea em contêineres associativos](../standard-library/stl-containers.md#sequence_containers)
 
 *Alocador*<br/>
- O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação do conjunto da memória. Esse argumento é opcional e o valor padrão é `allocator<Key>`.
+O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação do conjunto da memória. Esse argumento é opcional e o valor padrão é `allocator<Key>`.
 
 ## <a name="remarks"></a>Comentários
 
@@ -488,7 +488,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- A chave dos elementos do set a serem correspondidos.
+A chave dos elementos do set a serem correspondidos.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -934,7 +934,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- A chave do argumento a ser comparada com a chave de classificação de um elemento do set que está sendo pesquisado.
+A chave do argumento a ser comparada com a chave de classificação de um elemento do set que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1019,16 +1019,16 @@ size_type erase(
 ### <a name="parameters"></a>Parâmetros
 
 *Where*<br/>
- A posição do elemento a ser removido.
+A posição do elemento a ser removido.
 
 *Primeiro*<br/>
- A posição do primeiro elemento a ser removido.
+A posição do primeiro elemento a ser removido.
 
 *último*<br/>
- A posição logo após o último elemento a ser removido.
+A posição logo após o último elemento a ser removido.
 
 *Chave*<br/>
- O valor de chave dos elementos a serem removidos.
+O valor de chave dos elementos a serem removidos.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1131,7 +1131,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- O valor da chave a ser comparado pela chave de classificação de um elemento do conjunto que está sendo pesquisado.
+O valor da chave a ser comparado pela chave de classificação de um elemento do conjunto que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1595,7 +1595,7 @@ iterator lower_bound(const Key& key);
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- A chave do argumento a ser comparada com a chave de classificação de um elemento do set que está sendo pesquisado.
+A chave do argumento a ser comparada com a chave de classificação de um elemento do set que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2215,7 +2215,7 @@ void swap(
 ### <a name="parameters"></a>Parâmetros
 
 *right*<br/>
- O set de argumentos que fornece os elementos a serem trocados com o set de destino.
+O set de argumentos que fornece os elementos a serem trocados com o set de destino.
 
 ### <a name="remarks"></a>Comentários
 
@@ -2284,7 +2284,7 @@ iterator upper_bound(const Key& key);
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- A chave do argumento a ser comparada com a chave de classificação de um elemento do set que está sendo pesquisado.
+A chave do argumento a ser comparada com a chave de classificação de um elemento do set que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 

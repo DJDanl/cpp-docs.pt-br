@@ -1,5 +1,5 @@
 ---
-title: Inferir dependentes e regras | Microsoft Docs
+title: Inferido dependentes e regras | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aae09fd756e0eb4eab3031beb5b4cba8c4d35a40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c13ae7784ff40b39642ce26fd062a1aab80f2d4c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368038"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707545"
 ---
 # <a name="inferred-dependents-and-rules"></a>Dependentes inferidos e regras
-NMAKE assume um dependentes inferidos para um destino se existe uma regra de inferência aplicável. Uma regra se aplica se:  
-  
--   *toext* coincide com a extensão do destino.  
-  
--   *fromext* correspondências a extensão de um arquivo que tem o nome de base do destino e se existe no diretório atual ou especificado.  
-  
--   *fromext* está em [. SUFIXOS](../build/dot-directives.md); nenhum outro *fromext* em uma regra de correspondência tem um maior **. SUFIXOS** prioridade.  
-  
--   Nenhum dependente explícita tem uma maior **. SUFIXOS** prioridade.  
-  
- Dependentes inferidos podem causar efeitos colaterais inesperados. Se o bloco de descrição do destino contém comandos, NMAKE executa os comandos em vez dos comandos na regra.  
-  
-## <a name="see-also"></a>Consulte também  
- [Regras de inferência](../build/inference-rules.md)
+
+NMAKE pressupõe um dependente inferido para um destino se existe uma regra de inferência de tipos aplicáveis. Uma regra se aplica se:
+
+- *toext* corresponde à extensão de destino.
+
+- *fromext* correspondências a extensão de um arquivo que tem o nome do destino base e que existe no diretório atual ou especificado.
+
+- *fromext* está em [. SUFIXOS](../build/dot-directives.md); nenhuma outra *fromext* em uma regra de correspondência tem uma maior **. SUFIXOS** prioridade.
+
+- Nenhum dependente explícita tem uma maior **. SUFIXOS** prioridade.
+
+Dependentes inferidos podem causar efeitos colaterais inesperados. Se o bloco de descrição do destino contém comandos, NMAKE executa esses comandos em vez de comandos na regra.
+
+## <a name="see-also"></a>Consulte também
+
+[Regras de inferência](../build/inference-rules.md)

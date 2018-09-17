@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40d9ad442e4838ee837c93ada0352f230fc0cbed
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 3ae77e769672dcc88a9dd41c901424c8c8150e6b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894428"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709352"
 ---
 # <a name="special-characters-in-a-makefile"></a>Caracteres especiais em um makefile
 
 Para usar um caractere especial de NMAKE como um caractere literal, coloque um acento circunflexo (^) na frente dele. NMAKE ignora acentos circunflexos que precedem outros caracteres. Os caracteres especiais são:
 
-`:  ;  #  (  )  $  ^  \  {  }  !  @  —`  
+`:  ;  #  (  )  $  ^  \  {  }  !  @  —`
 
 Um acento circunflexo (^) dentro de uma cadeia de caracteres entre aspas é tratado como um caractere de acento circunflexo literal. Um cursor no final de uma linha insere um caractere de nova linha literal em uma cadeia de caracteres ou uma macro.
 

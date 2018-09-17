@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e5ee2ddc29c2a014aceb8ac6356cae9e42a916d
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: def07f92cc05828c132ba7d34d3dcc06d4aecf50
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39027317"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721442"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Visão geral das convenções ABI ARM32
 
@@ -64,16 +64,16 @@ O uso de Instruções de IT em código Thumb-2 não é permitido, exceto para es
 - A instrução de destino deve ser uma das seguintes:
 
    |Opcodes de 16 bits|Classe|Restrições|
-    |---------------------|-----------|------------------|
-    |MOV, MVN|Mover|Rm != PC, Rd != PC|
-    |LDR, LDR[S]B, LDR[S]H|Carregar da memória|Mas não formulários literais LDR|
-    |STR, STRB, STRH|Armazenar na memória||
-    |ADD, ADC, RSB, SBC, SUB|Somar ou subtrair|Mas não formulários ADD/SUB SP, SP, imm7<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
-    |CMP, CMN|Comparar|Rm != PC, Rn != PC|
-    |MUL|Multiplicar||
-    |ASR, LSL, LSR, ROR|Deslocamento de bits||
-    |AND, BIC, EOR, ORR, TST|Aritmética de bits||
-    |BX|Ramificar para registrar|Rm != PC|
+   |---------------------|-----------|------------------|
+   |MOV, MVN|Mover|Rm != PC, Rd != PC|
+   |LDR, LDR[S]B, LDR[S]H|Carregar da memória|Mas não formulários literais LDR|
+   |STR, STRB, STRH|Armazenar na memória||
+   |ADD, ADC, RSB, SBC, SUB|Somar ou subtrair|Mas não formulários ADD/SUB SP, SP, imm7<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
+   |CMP, CMN|Comparar|Rm != PC, Rn != PC|
+   |MUL|Multiplicar||
+   |ASR, LSL, LSR, ROR|Deslocamento de bits||
+   |AND, BIC, EOR, ORR, TST|Aritmética de bits||
+   |BX|Ramificar para registrar|Rm != PC|
 
 Apesar de CPUs ARMv7 atuais não poderem relatar o uso de formulários de instrução não permitidos, é esperado que as gerações futuras poderão. Se esses formulários forem detectados, qualquer programa que os utilizam podem ser fechados com uma exceção de instrução indefinida.
 
@@ -233,5 +233,5 @@ O contador é um verdadeiro contador de ciclo, não um relógio; portanto, a fre
 
 ## <a name="see-also"></a>Consulte também
 
-[Problemas de migração ARM do Visual C++ comuns](../build/common-visual-cpp-arm-migration-issues.md)  
-[Tratamento de exceção do ARM](../build/arm-exception-handling.md)  
+[Problemas de migração ARM do Visual C++ comuns](../build/common-visual-cpp-arm-migration-issues.md)<br/>
+[Tratamento de exceção do ARM](../build/arm-exception-handling.md)

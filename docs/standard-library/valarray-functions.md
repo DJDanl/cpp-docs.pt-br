@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 855b58c9a970b569da533d84ffb21728bdf90157
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a770e240f28dbd8e904a288beb10a9a6abe7431c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962458"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715670"
 ---
 # <a name="ltvalarraygt-functions"></a>Funções &lt;valarray&gt;
 
@@ -69,8 +69,8 @@ valarray<Type> abs(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A valarray de entrada cujos elementos devem ser operados pela função membro.
+*left*<br/>
+A valarray de entrada cujos elementos devem ser operados pela função membro.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -124,8 +124,8 @@ valarray<Type> acos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A valarray de entrada cujos elementos devem ser operados pela função membro.
+*left*<br/>
+A valarray de entrada cujos elementos devem ser operados pela função membro.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -197,8 +197,8 @@ valarray<Type> asin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A valarray de entrada cujos elementos devem ser operados pela função membro.
+*left*<br/>
+A valarray de entrada cujos elementos devem ser operados pela função membro.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -270,8 +270,8 @@ valarray<Type> atan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A valarray de entrada cujos elementos devem ser operados pela função membro.
+*left*<br/>
+A valarray de entrada cujos elementos devem ser operados pela função membro.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -352,11 +352,11 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- O tipo de dados numéricos constantes ou a valarray de entrada cujos elementos fornecem os valores da coordenada Y do argumento do arco tangente.
+*left*<br/>
+O tipo de dados numéricos constantes ou a valarray de entrada cujos elementos fornecem os valores da coordenada Y do argumento do arco tangente.
 
-*right*  
- O tipo de dados numéricos constantes ou a valarray de entrada cujos elementos fornecem os valores da coordenada X do argumento do arco tangente.
+*right*<br/>
+O tipo de dados numéricos constantes ou a valarray de entrada cujos elementos fornecem os valores da coordenada X do argumento do arco tangente.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -440,8 +440,8 @@ valarray<Type> cos(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A valarray de entrada cujos elementos devem ser operados pela função membro.
+*left*<br/>
+A valarray de entrada cujos elementos devem ser operados pela função membro.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -517,8 +517,8 @@ valarray<Type> cosh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A valarray de entrada cujos elementos devem ser operados pela função membro.
+*left*<br/>
+A valarray de entrada cujos elementos devem ser operados pela função membro.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -600,8 +600,8 @@ valarray<Type> exp(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A valarray de entrada cujos elementos devem ser operados pela função membro.
+*left*<br/>
+A valarray de entrada cujos elementos devem ser operados pela função membro.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -663,8 +663,8 @@ valarray<Type> log(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A valarray de entrada cujos elementos devem ser operados pela função membro.
+*left*<br/>
+A valarray de entrada cujos elementos devem ser operados pela função membro.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -726,8 +726,8 @@ valarray<Type> log10(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A valarray de entrada cujos elementos devem ser operados pela função membro.
+*left*<br/>
+A valarray de entrada cujos elementos devem ser operados pela função membro.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -806,11 +806,11 @@ pow(
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A valarray de entrada cujos elementos fornecem a base para cada elemento a ser submetido à exponenciação.
+*left*<br/>
+A valarray de entrada cujos elementos fornecem a base para cada elemento a ser submetido à exponenciação.
 
-*right*  
- A valarray de entrada cujos elementos fornecem a potência para cada elemento a submetido à exponenciação.
+*right*<br/>
+A valarray de entrada cujos elementos fornecem a potência para cada elemento a submetido à exponenciação.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -888,8 +888,8 @@ valarray<Type> sin(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A valarray de entrada cujos elementos devem ser operados pela função membro.
+*left*<br/>
+A valarray de entrada cujos elementos devem ser operados pela função membro.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -965,8 +965,8 @@ valarray<Type> sinh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A valarray de entrada cujos elementos devem ser operados pela função membro.
+*left*<br/>
+A valarray de entrada cujos elementos devem ser operados pela função membro.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1048,8 +1048,8 @@ valarray<Type> sqrt(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A valarray de entrada cujos elementos devem ser operados pela função membro.
+*left*<br/>
+A valarray de entrada cujos elementos devem ser operados pela função membro.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1124,8 +1124,8 @@ valarray<Type> tan(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A valarray de entrada cujos elementos devem ser operados pela função membro.
+*left*<br/>
+A valarray de entrada cujos elementos devem ser operados pela função membro.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1201,8 +1201,8 @@ valarray<Type> tanh(const valarray<Type>& left);
 
 ### <a name="parameters"></a>Parâmetros
 
-*left*  
- A valarray de entrada cujos elementos devem ser operados pela função membro.
+*left*<br/>
+A valarray de entrada cujos elementos devem ser operados pela função membro.
 
 ### <a name="return-value"></a>Valor de retorno
 

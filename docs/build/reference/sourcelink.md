@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 876373b5646790f9f8de0042442b2ab56d9d2971
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: dff53f7a4db12e32bca2494ba99f5b3b8203d48f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40242853"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706661"
 ---
 # <a name="sourcelink-include-sourcelink-file-in-pdb"></a>/ SOURCELINK (Sourcelink incluem arquivos PDB)
 
@@ -33,7 +33,7 @@ Especifica um arquivo de configuração SourceLink para incluir no arquivo PDB g
 
 ## <a name="arguments"></a>Arguments
 
-*filename*  
+*filename*<br/>
 Especifica um formato JSON arquivo de configuração que contém um mapeamento simples de caminhos de arquivo local a URLs onde o arquivo de origem pode ser recuperado para exibição pelo depurador. Para obter mais informações sobre o formato desse arquivo, consulte [esquema de JSON do Link de origem](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md#source-link-json-schema).
 
 ## <a name="remarks"></a>Comentários
@@ -48,11 +48,11 @@ SourceLink é um sistema de controle de origem e de linguagem independente para 
 
 1. No **opções adicionais** caixa, adicione **/SOURCELINK:**_filename_ e, em seguida, escolha **Okey** ou **aplicar**para salvar suas alterações.
 
-### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
-  
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
+
 - Essa opção não tem um equivalente programático.
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)  
-[Opções do vinculador](../../build/reference/linker-options.md)  
+[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
+[Opções do vinculador](../../build/reference/linker-options.md)

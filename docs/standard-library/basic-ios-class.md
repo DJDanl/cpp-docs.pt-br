@@ -65,12 +65,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3abc3c08b46577f7d59b2831a68ded812a5da60a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 175d7895331ec960244354870c6bd6845baf37d1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110012"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725316"
 ---
 # <a name="basicios-class"></a>Classe basic_ios
 
@@ -230,9 +230,11 @@ void clear(io_state state);
 
 ### <a name="parameters"></a>Parâmetros
 
-*estado* (opcional) os sinalizadores que você deseja definir após limpeza de todos os sinalizadores. Assume o padrão de `goodbit`.
+*state*<br/>
+(Opcional) Os sinalizadores que você deseja definir após limpeza de todos os sinalizadores. Assume o padrão de `goodbit`.
 
-*reraise* (opcional) Especifica se a exceção deve ser gerada novamente. O padrão é **falsos** (não irá gerar novamente a exceção).
+*reraise*<br/>
+(Opcional) Especifica se a exceção deve ser gerada novamente. O padrão é **falsos** (não irá gerar novamente a exceção).
 
 ### <a name="remarks"></a>Comentários
 

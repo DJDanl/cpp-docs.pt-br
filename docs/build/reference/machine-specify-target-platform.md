@@ -1,5 +1,5 @@
 ---
-title: -MÁQUINA (especificar plataforma de destino) | Microsoft Docs
+title: -MACHINE (especificar plataforma de destino) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,37 +21,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e82cc0fec843dede07f474e1ad5bbdfcc2958f2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e159fe15b0aed441b1a96047a3ffb035077d6266
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374015"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708611"
 ---
 # <a name="machine-specify-target-platform"></a>/MACHINE (especificar plataforma de destino)
-```  
-/MACHINE:{ARM|EBC|X64|X86}  
-```  
-  
-## <a name="remarks"></a>Comentários  
- A opção /MACHINE Especifica a plataforma de destino para o programa.  
-  
- Normalmente, você não precisa especificar a opção /MACHINE. LINK infere o tipo de computador dos arquivos. obj. No entanto, em algumas circunstâncias, o LINK não é possível determinar o tipo de máquina e problemas de um [ferramentas de vinculador LNK1113 de erro](../../error-messages/tool-errors/linker-tools-error-lnk1113.md). Se esse erro ocorrer, especifique /MACHINE.  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio  
-  
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).  
-  
-2.  Clique o **vinculador** pasta.  
-  
-3.  Clique o **avançado** página de propriedades.  
-  
-4.  Modificar o **máquina destino** propriedade.  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação  
-  
-1.  Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TargetMachine%2A>.  
-  
-## <a name="see-also"></a>Consulte também  
- [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
- [Opções do vinculador](../../build/reference/linker-options.md)
+
+```
+/MACHINE:{ARM|EBC|X64|X86}
+```
+
+## <a name="remarks"></a>Comentários
+
+A opção /MACHINE Especifica a plataforma de destino para o programa.
+
+Normalmente, você não precisa especificar a opção /MACHINE. LINK infere o tipo de máquina de arquivos. obj. No entanto, em algumas circunstâncias, o LINK não é possível determinar o tipo de máquina e problemas de um [das LNK1113 de erro das ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-error-lnk1113.md). Se ocorrer um erro, especifique /MACHINE.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
+
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
+
+1. Clique o **vinculador** pasta.
+
+1. Clique o **avançado** página de propriedades.
+
+1. Modificar a **computador de destino** propriedade.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
+
+1. Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TargetMachine%2A>.
+
+## <a name="see-also"></a>Consulte também
+
+[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
+[Opções do vinculador](../../build/reference/linker-options.md)

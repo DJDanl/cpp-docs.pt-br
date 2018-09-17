@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28342c71602409f3d62023e6d7923d49ca63a96f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 25116b0750016fdbb4ffd792d0b16efb6c6c1793
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766237"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711927"
 ---
 # <a name="options-atl-control-wizard"></a>Opções, Assistente de controle ATL
 
@@ -31,10 +31,11 @@ Use esta página do Assistente para definir o tipo de controle que você está c
 
 ## <a name="uielement-list"></a>Lista UIElement
 
-**Tipo de controle**  
+### <a name="control-type"></a>Tipo de controle
+
 O tipo de controle que você deseja criar.
 
-- **Controle padrão: um controle ActiveX.**
+- **Controle padrão**: um controle ActiveX.
 
 - **Controle de composição**: um controle ActiveX que pode conter (semelhante a uma caixa de diálogo) outros controles ActiveX ou controles do Windows. Um controle composto inclui o seguinte:
 
@@ -54,10 +55,12 @@ O tipo de controle que você deseja criar.
 
      Para obter mais informações, consulte [identificando os elementos do projeto de controle DHTML](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 
-**Controle mínimo**  
+### <a name="minimal-control"></a>Controle mínimo
+
 Dá suporte a apenas as interfaces que são absolutamente necessários para a maioria dos contêineres. Você pode definir **controle mínimo** para qualquer um dos tipos de controle: você pode criar um controle padrão mínimo, um controle de composição mínimo ou um controle DHTML mínimo.
 
-**Agregação**  
+### <a name="aggregation"></a>Agregação
+
 Adiciona o suporte de agregação para o controle que você está criando. Para obter mais informações, consulte [agregação](../../atl/aggregation.md).
 
 - **Sim**: criar um controle que pode ser agregado.
@@ -66,25 +69,28 @@ Adiciona o suporte de agregação para o controle que você está criando. Para 
 
 - **Somente**: criar um controle que pode ser instanciado apenas por meio de agregação.
 
-**Modelo de Threading**  
+### <a name="threading-model"></a>Modelo de Threading
+
 Especifica que o modelo de threading usado pelo controle.
 
 - **Único**: O controle será executado somente no thread COM primário.
 
 - **Apartment**: O controle pode ser criado em qualquer apartment de thread único. O padrão.
 
-**Interface**  
+### <a name="interface"></a>Interface
+
 O tipo de interface que para o contêiner expõe a esse controle.
 
 - **Dupla**: cria uma interface que expõe propriedades e métodos por meio de `IDispatch` e diretamente por meio de VTBL.
 
 - **Personalizado**: cria uma interface que expõe métodos diretamente por meio de um VTBL.
 
-     Se você selecionar **personalizado**, em seguida, você pode especificar que o controle está **compatível com a automação**. Se você selecionar **compatível com a automação**, em seguida, o assistente adiciona as [oleautomation](../../windows/oleautomation.md) de atributo na interface em IDL, e a interface pode ser empacotada pelo empacotador universal em oleaut32.dll. Ver [Marshaling detalhes](/windows/desktop/com/marshaling-details) no SDK do Windows para obter mais informações.
+   Se você selecionar **personalizado**, em seguida, você pode especificar que o controle está **compatível com a automação**. Se você selecionar **compatível com a automação**, em seguida, o assistente adiciona as [oleautomation](../../windows/oleautomation.md) de atributo na interface em IDL, e a interface pode ser empacotada pelo empacotador universal em oleaut32.dll. Ver [Marshaling detalhes](/windows/desktop/com/marshaling-details) no SDK do Windows para obter mais informações.
 
-     Além disso, se você selecionar **compatível com a automação**, em seguida, todos os parâmetros para todos os métodos no controle devem ser VARIANT compatível.
+   Além disso, se você selecionar **compatível com a automação**, em seguida, todos os parâmetros para todos os métodos no controle devem ser VARIANT compatível.
 
-**Suporte**  
+### <a name="support"></a>Suporte
+
 Define o suporte a diverso adicional para o controle.
 
 - **Pontos de Conexão**: permite que os pontos de conexão para seu objeto, fazendo a classe do seu objeto derivam [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) e permitindo que ele expõe uma interface de origem.

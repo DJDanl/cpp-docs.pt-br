@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 855bc48da10e8ca4dd83cf091e155746450a33f1
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 0d9b730e9cb1ca78b5247ea09f1f24a9bb8c307c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37848513"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45709781"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>Classe CMFCRibbonButtonsGroup
 O `CMFCRibbonButtonsGroup` classe permite que você organize um conjunto de botões de faixa de opções em um grupo. Todos os botões no grupo são diretamente adjacentes uns aos outros horizontalmente e colocado em uma borda.  
@@ -106,8 +106,8 @@ void AddButton(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pButton*  
- Um ponteiro para um botão para adicionar.  
+*pButton*<br/>
+[in] Um ponteiro para um botão para adicionar.  
   
 ##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons  
  Adiciona uma lista de botões a um grupo.  
@@ -118,8 +118,8 @@ void AddButtons(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lstButtons*  
- Uma lista de ponteiros para os botões que você deseja adicionar.  
+*lstButtons*<br/>
+[in] Uma lista de ponteiros para os botões que você deseja adicionar.  
   
 ##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
  Constrói um objeto `CMFCRibbonButtonsGroup`.  
@@ -130,8 +130,8 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pButton*  
- Especifica um botão para adicionar ao recém-criado `CMFCRibbonButtonsGroup` objeto.  
+*pButton*<br/>
+[in] Especifica um botão para adicionar ao recém-criado `CMFCRibbonButtonsGroup` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -145,8 +145,8 @@ CMFCRibbonBaseElement* GetButton(int i) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *eu*  
- Um índice baseado em zero de um botão para retornar.  
+*i*<br/>
+[in] Um índice baseado em zero de um botão para retornar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o botão que está localizado no índice especificado. NULL se o índice especificado está fora do intervalo.  
@@ -183,8 +183,8 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Ponteiro para o contexto de dispositivo do grupo da faixa de opções.  
+*pDC*<br/>
+[in] Ponteiro para o contexto de dispositivo do grupo da faixa de opções.  
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -214,17 +214,17 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Ponteiro para o contexto de dispositivo do `CMFCRibbonButtonsGroup` objeto.  
+*pDC*<br/>
+[in] Ponteiro para o contexto de dispositivo do `CMFCRibbonButtonsGroup` objeto.  
   
- [in] *rectImage*  
- O retângulo no qual desenhar a imagem.  
+*rectImage*<br/>
+[in] O retângulo no qual desenhar a imagem.  
   
- [in] *pButton*  
- O botão para o qual desenhar a imagem.  
+*pButton*<br/>
+[in] O botão para o qual desenhar a imagem.  
   
- [in] *nImageIndex*  
- O índice da imagem a ser desenhado no botão (em uma das matrizes três imagem botões normal, realçado ou desabilitado).  
+*nImageIndex*<br/>
+[in] O índice da imagem a ser desenhado no botão (em uma das matrizes três imagem botões normal, realçado ou desabilitado).  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -248,14 +248,14 @@ void SetImages(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pImages*  
- Imagens normais.  
+*pImages*<br/>
+[in] Imagens normais.  
   
- [in] *pHotImages*  
- Imagens quentes.  
+*pHotImages*<br/>
+[in] Imagens quentes.  
   
- [in] *pDisabledImages*  
- Imagens desabilitadas.  
+*pDisabledImages*<br/>
+[in] Imagens desabilitadas.  
   
 ### <a name="remarks"></a>Comentários  
  Chamar `SetImages` antes de adicionar botões a um grupo. O número de imagens deve ser maior ou igual ao número de botões a serem adicionados ao grupo.  
@@ -271,8 +271,8 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pCategory*  
- Ponteiro para a categoria pai para definir (os grupos com guias em controles de faixa de opções são chamados de categorias).  
+*pCategory*<br/>
+[in] Ponteiro para a categoria pai para definir (os grupos com guias em controles de faixa de opções são chamados de categorias).  
   
 ### <a name="remarks"></a>Comentários  
   

@@ -15,16 +15,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e7828154501a067c6b236929a18c51724d3f6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5afb165b33dfa7911e01c1c4368946fd91915a35
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32370521"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710268"
 ---
 # <a name="def-files-as-linker-input"></a>Arquivos .Def como entrada de vinculador
-Consulte [arquivos de definição de módulo (. def)](../../build/reference/module-definition-dot-def-files.md) para obter mais informações. Use o [/DEF](../../build/reference/def-specify-module-definition-file.md) opção para especificar o nome do arquivo. def.  
-  
-## <a name="see-also"></a>Consulte também  
- [Arquivos de entrada de LINK](../../build/reference/link-input-files.md)   
- [Opções do vinculador](../../build/reference/linker-options.md)
+
+Ver [arquivos de definição de módulo (. def)](../../build/reference/module-definition-dot-def-files.md) para obter mais informações. Use o [/DEF](../../build/reference/def-specify-module-definition-file.md) opção para especificar o nome do arquivo. def.
+
+## <a name="see-also"></a>Consulte também
+
+[Arquivos de entrada de LINK](../../build/reference/link-input-files.md)<br/>
+[Opções do vinculador](../../build/reference/linker-options.md)

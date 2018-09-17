@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 625b99751c570c47456aad4903de5b8c4049ac42
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 72c312bdec9248cdc38150163d914b2ac7036ab8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207596"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711081"
 ---
 # <a name="enum-class--c-component-extensions"></a>classe enum (Extensões de Componentes C++)
 
@@ -101,11 +101,11 @@ Uma lista separada por vírgula dos identificadores (enumeradores) na enumeraç�
 *name*  
 O nome da enumeração. Enumerações gerenciadas anônimas não são permitidas.
 
-*tipo* (opcional)  
-O tipo subjacente dos *identificadores*. Isso pode ser qualquer tipo escalar, como as versões com ou sem sinal de **int**, **curto**, ou **longo**.  **bool** ou **char** também é permitido.
+*type*  
+(Opcional) O tipo subjacente dos *identificadores*. Isso pode ser qualquer tipo escalar, como as versões com ou sem sinal de **int**, **curto**, ou **longo**.  **bool** ou **char** também é permitido.
 
-*var* (opcional)  
-O nome de uma variável do tipo de enumeração.
+*var*  
+(Opcional) O nome de uma variável do tipo de enumeração.
 
 ### <a name="remarks"></a>Comentários
 

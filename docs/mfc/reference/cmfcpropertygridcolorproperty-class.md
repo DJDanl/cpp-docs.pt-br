@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 164e54ccbd9365e7e4fb2c1989f84891e5813c2f
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 7b1023ff59af0f64d5205447e6e7b17ead1f5186
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849155"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705829"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>Classe CMFCPropertyGridColorProperty
 O `CMFCPropertyGridColorProperty` classe dá suporte a um item de controle de lista de propriedade que abre uma caixa de diálogo de seleção de cor.  
@@ -103,20 +103,20 @@ CMFCPropertyGridColorProperty(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *strName*  
- O nome da propriedade.  
+*strName*<br/>
+[in] O nome da propriedade.  
   
- [in] *cor*  
- O valor da propriedade de cor.  
+*Cor*<br/>
+[in] O valor da propriedade de cor.  
   
- [in] *pPalette*  
- Ponteiro para uma paleta de cores. O valor padrão é NULL.  
+*pPalette*<br/>
+[in] Ponteiro para uma paleta de cores. O valor padrão é NULL.  
   
- [in] *lpszDescr*  
- A descrição da propriedade. O valor padrão é NULL.  
+*lpszDescr*<br/>
+[in] A descrição da propriedade. O valor padrão é NULL.  
   
- [in] *dwData*  
- Dados específicos do aplicativo, como um inteiro ou um ponteiro para outros dados que está associados com a propriedade. O valor padrão é 0.  
+*dwData*<br/>
+[in] Dados específicos do aplicativo, como um inteiro ou um ponteiro para outros dados que está associados com a propriedade. O valor padrão é 0.  
   
 ##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
  Permite que o *automática* botão na caixa de diálogo de seleção de cor. (O botão automático padrão é rotulado **automática**.)  
@@ -129,14 +129,14 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszLabel*  
- O texto do rótulo do botão automático.  
+*lpszLabel*<br/>
+[in] O texto do rótulo do botão automático.  
   
- [in] *automáticaCor*  
- O valor de cor RGB da cor automático (padrão).  
+*automáticaCor*<br/>
+[in] O valor de cor RGB da cor automático (padrão).  
   
- [in] *bAtivar*  
- TRUE para habilitar o botão automático; Caso contrário, FALSE. O valor padrão é TRUE.  
+*bAtivar*<br/>
+[in] TRUE para habilitar o botão automático; Caso contrário, FALSE. O valor padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -151,14 +151,14 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszLabel*  
- O texto do rótulo do botão outro.  
+*lpszLabel*<br/>
+[in] O texto do rótulo do botão outro.  
   
- [in] *bAltColorDlg*  
- True para exibir o `CMFCColorDialog` caixa de diálogo. FALSE para exibir a caixa de diálogo de seleção de cores padrão. O valor padrão é TRUE.  
+*bAltColorDlg*<br/>
+[in] True para exibir o `CMFCColorDialog` caixa de diálogo. FALSE para exibir a caixa de diálogo de seleção de cores padrão. O valor padrão é TRUE.  
   
- [in] *bAtivar*  
- TRUE para exibir o botão; Caso contrário, FALSE.  O valor padrão é TRUE.  
+*bAtivar*<br/>
+[in] TRUE para exibir o botão; Caso contrário, FALSE.  O valor padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -182,8 +182,8 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *cor*  
- Um valor de cor RGB.  
+*Cor*<br/>
+[in] Um valor de cor RGB.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -195,8 +195,8 @@ void SetColumnsNumber(int nColumnsNumber);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nColumnsNumber*  
- O número preferido de colunas na grade de propriedade de cor.  
+*nColumnsNumber*<br/>
+[in] O número preferido de colunas na grade de propriedade de cor.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método define o valor da `m_nColumnsNumber` protegido membro de dados.  
@@ -209,8 +209,8 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *varValue*  
- Um valor.  
+*varValue*<br/>
+[in] Um valor.  
   
 ### <a name="remarks"></a>Comentários  
  Use o [CMFCPropertyGridProperty::ResetOriginalValue](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue) método para redefinir o valor original de uma propriedade editada.  

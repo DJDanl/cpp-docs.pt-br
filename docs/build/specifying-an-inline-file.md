@@ -16,24 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c0d85436aef5ed48c0a8787f8bce330bf6d3e96
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73983094f10088920100b4fbbb8d870aee13f05e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380099"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720558"
 ---
 # <a name="specifying-an-inline-file"></a>Especificando um arquivo embutido
-Especificar dois colchetes angulares (<<) no comando onde *filename* deve aparecer. Os colchetes não pode ser uma expansão de macro.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-<<[filename]  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Quando o comando é executado, os colchetes são substituídos por *filename*, se especificado, ou por um nome exclusivo gerado NMAKE. Se especificado, *filename* devem seguir colchetes sem um espaço ou tabulação. Um caminho é permitido. Nenhuma extensão é necessário ou assumido. Se *filename* for especificado, o arquivo é criado no atual ou o diretório especificado, substituindo qualquer arquivo com esse nome; caso contrário, ele é criado no diretório TMP (ou o diretório atual, se a variável de ambiente TMP não é definido). Se um anterior *filename* é reutilizado, NMAKE substituirá o arquivo anterior.  
-  
-## <a name="see-also"></a>Consulte também  
- [Arquivos embutidos em um makefile](../build/inline-files-in-a-makefile.md)
+
+Especificar dois colchetes angulares (<<) no comando onde *filename* deve ser exibido. Os colchetes angulares não pode ser uma expansão de macro.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+<<[filename]
+```
+
+## <a name="remarks"></a>Comentários
+
+Quando o comando é executado, os colchetes angulares são substituídos por *filename*, se especificado, ou por um nome exclusivo gerado pelo NMAKE. Se especificado, *filename* deve seguir sem um espaço ou tabulação colchetes angulares. Um caminho é permitido. Nenhuma extensão é necessária ou supõe-se. Se *filename* for especificado, o arquivo é criado no atual ou o diretório especificado, substituindo qualquer arquivo com esse nome; caso contrário, ele é criado no diretório TMP (ou o diretório atual, se a variável de ambiente TMP não é definido). Se um anterior *filename* é reutilizado, NMAKE substituirá o arquivo anterior.
+
+## <a name="see-also"></a>Consulte também
+
+[Arquivos embutidos em um makefile](../build/inline-files-in-a-makefile.md)

@@ -43,12 +43,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc7d2b959bd8ad3ed89ae270e1f7d93406526695
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2a0dd4f32f8c7b3a9e859e23fcc26e668fa87cdb
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218380"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726356"
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
 
@@ -61,12 +61,12 @@ Cria um pipe e executa um comando.
 
 ```C
 FILE *_popen(
-const char *command,
-const char *mode
+    const char *command,
+    const char *mode
 );
 FILE *_wpopen(
-const wchar_t *command,
-const wchar_t *mode
+    const wchar_t *command,
+    const wchar_t *mode
 );
 ```
 
@@ -88,13 +88,12 @@ Para obter informações sobre esses e outros códigos de erro, consulte [_doser
 
 O **popen** função cria um pipe e executa uma cópia gerada do processador de comando com a cadeia de caracteres especificada de forma assíncrona *comando*. A cadeia de caracteres *mode* especifica o tipo de acesso solicitado da seguinte maneira.
 
-**"r"** o processo de chamada pode ler a saída do padrão do comando gerado usando o fluxo retornado.
-
-**"w"** o processo de chamada pode gravar a entrada de padrão do comando gerado usando o fluxo retornado.
-
-**"b"** aberto no modo binário.
-
-**"t"** aberto no modo de texto.
+|Modo de Acesso|Descrição|
+|-|-|
+|**"r"**|O processo de chamada pode ler a saída padrão do comando gerado usando o fluxo retornado.|
+|**"w"**|O processo de chamada pode gravar na entrada padrão do comando gerado usando o fluxo retornado.|
+|**"b"**|Abrir no modo binário.|
+|**"t"**|Abrir no modo de texto.|
 
 > [!NOTE]
 > Se usado em um programa do Windows, o **popen** função retorna um ponteiro de arquivo inválido que faz com que o programa pare de responder indefinidamente. **popen** funciona corretamente em um aplicativo de console. Para criar um aplicativo do Windows que redireciona a entrada e saída, consulte [criando um processo filho com entrada e saída redirecionadas](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output) no SDK do Windows.

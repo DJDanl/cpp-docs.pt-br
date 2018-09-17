@@ -1,5 +1,5 @@
 ---
-title: Pesquisar caminhos dependentes | Microsoft Docs
+title: Caminhos de pesquisa para dependentes | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,24 +15,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 577fc7e44bfff35cf7efdcff20dc4cdca1c7001e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d1fd407f99abb98fb949b6d5bcc45b10c6ff9121
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380479"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706284"
 ---
 # <a name="search-paths-for-dependents"></a>Procurar dependentes em demarcadores
-Cada dependente tem um caminho de pesquisa opcional especificado da seguinte maneira:  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-{directory[;directory...]}dependent  
-```  
-  
-## <a name="remarks"></a>Comentários  
- NMAKE procura um dependente primeiro no diretório atual e, em seguida, nos diretórios na ordem especificada. Uma macro pode especificar parte ou todo um caminho de pesquisa. Coloque nomes de diretórios entre chaves ({}); Separe vários diretórios com um ponto e vírgula (;). Nenhum tabulações ou espaços são permitidas.  
-  
-## <a name="see-also"></a>Consulte também  
- [Dependentes](../build/dependents.md)
+
+Cada dependente tem um caminho de pesquisa opcional especificado da seguinte maneira:
+
+## <a name="syntax"></a>Sintaxe
+
+```
+{directory[;directory...]}dependent
+```
+
+## <a name="remarks"></a>Comentários
+
+NMAKE procura um dependente primeiro no diretório atual e, em seguida, nos diretórios na ordem especificada. Uma macro pode especificar parte ou todo um caminho de pesquisa. Coloque os nomes de diretório entre chaves ({}); Separe vários diretórios com um ponto e vírgula (;). Não há espaços ou tabulações são permitidas.
+
+## <a name="see-also"></a>Consulte também
+
+[Dependentes](../build/dependents.md)

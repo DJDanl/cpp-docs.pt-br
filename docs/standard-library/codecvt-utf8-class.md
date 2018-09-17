@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58551874227bde5d158946c7df9c77bcc0ff3ef3
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 5dce174d9c6edca45946ba8ad60165e62e3591fd
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108339"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718478"
 ---
 # <a name="codecvtutf8"></a>codecvt_utf8
 
@@ -36,8 +36,10 @@ class codecvt_utf8 : public std::codecvt<Elem, char, StateType>
 
 *Elem*<br/>
 O tipo de elemento de caractere largo.
+
 *Maxcode*<br/>
 O número máximo de caracteres da faceta de localidade.
+
 *Modo*<br/>
 Informações de configuração para a faceta de localidade.
 
@@ -48,4 +50,5 @@ O fluxo de bytes pode ser gravado em um arquivo binário ou em um arquivo de tex
 ## <a name="requirements"></a>Requisitos
 
 Cabeçalho: \<codecvt > \
+
 Namespace: std

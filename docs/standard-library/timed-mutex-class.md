@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::timed_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7181b4c5c1c74d5726fd37e98366225aecf7f63a
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4ed4f12e127c6ceef212ffefc512e764dd53fb19
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962654"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706544"
 ---
 # <a name="timedmutex-class"></a>Classe timed_mutex
 
@@ -129,8 +129,8 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rel_time*  
- Um objeto [chrono::duration](../standard-library/duration-class.md) que especifica o tempo máximo que o método tenta obter a propriedade do `mutex`.
+*Rel_time*<br/>
+Um objeto [chrono::duration](../standard-library/duration-class.md) que especifica o tempo máximo que o método tenta obter a propriedade do `mutex`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -153,8 +153,8 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Abs_time*  
- Um ponto no tempo que especifica o limite após o qual o método não tenta mais obter a propriedade do `mutex`.
+*Abs_time*<br/>
+Um ponto no tempo que especifica o limite após o qual o método não tenta mais obter a propriedade do `mutex`.
 
 ### <a name="return-value"></a>Valor de retorno
 

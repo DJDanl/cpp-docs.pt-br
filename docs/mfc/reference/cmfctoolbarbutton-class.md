@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb6cc740577dfcb5921332c24e3cec2d2d6cb100
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 18a260e0ea0283489d074e937011722cec2d570b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210844"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702566"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Classe CMFCToolBarButton
 Fornece a funcionalidade do botão em barras de ferramentas.  
@@ -315,8 +315,8 @@ virtual BOOL CanBeDropped(CMFCToolBar* pToolbar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pToolbar*  
- Não utilizado.  
+*pToolbar*<br/>
+[in] Não utilizado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Esse método retornará TRUE.  
@@ -371,20 +371,20 @@ CMFCToolBarButton(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiID*  
- A ID de comando do botão.  
+*uiID*<br/>
+[in] A ID de comando do botão.  
   
- [in] *iImage*  
- O índice da imagem do botão na coleção de imagens.  
+*iImage*<br/>
+[in] O índice da imagem do botão na coleção de imagens.  
   
- [in] *lpszText*  
- O rótulo de texto do botão. Pode ser NULL.  
+*lpszText*<br/>
+[in] O rótulo de texto do botão. Pode ser NULL.  
   
- [in] *bUserButton*  
- Um valor booliano que determina se o botão é definida pelo usuário. Se esse parâmetro for TRUE, o botão é definida pelo usuário. Caso contrário, a imagem do botão é carregada de um recurso.  
+*bUserButton*<br/>
+[in] Um valor booliano que determina se o botão é definida pelo usuário. Se esse parâmetro for TRUE, o botão é definida pelo usuário. Caso contrário, a imagem do botão é carregada de um recurso.  
   
- [in] *bloqueado*  
- Um valor booliano que determina se o botão pode ser personalizado. Se esse parâmetro for TRUE, o botão não pode ser personalizado. Caso contrário, o botão pode ser personalizado.  
+*Bloqueado*<br/>
+[in] Um valor booliano que determina se o botão pode ser personalizado. Se esse parâmetro for TRUE, o botão não pode ser personalizado. Caso contrário, o botão pode ser personalizado.  
   
 ##  <a name="comparewith"></a>  CMFCToolBarButton::CompareWith  
  Compara essa instância fornecido `CMFCToolBarButton` objeto.  
@@ -394,8 +394,8 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *outros*  
- Referência para o objeto a ser comparado com essa instância.  
+*other*<br/>
+[in] Referência para o objeto a ser comparado com essa instância.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o objeto fornecido é igual ao valor dessa instância; Caso contrário, 0.  
@@ -411,8 +411,8 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *src*  
- Uma referência para o botão de origem da qual copiar.  
+*src*<br/>
+[in] Uma referência para o botão de origem da qual copiar.  
   
 ### <a name="remarks"></a>Comentários  
  Chame esse método para copiar de outro botão de barra de ferramentas para este botão de barra de ferramentas.  
@@ -425,8 +425,8 @@ static CMFCToolBarButton* __stdcall CreateFromOleData(COleDataObject* pDataObjec
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDataObject*  
- O objeto de dados do código-fonte OLE.  
+*pDataObject*<br/>
+[in] O objeto de dados do código-fonte OLE.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O objeto `CMFCToolBarButton` criado.  
@@ -442,8 +442,8 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- Defina esse parâmetro para True para habilitar entrada ou como FALSE para desabilitar a entrada.  
+*bAtivar*<br/>
+[in] Defina esse parâmetro para True para habilitar entrada ou como FALSE para desabilitar a entrada.  
   
 ### <a name="remarks"></a>Comentários  
  Este método chama o `EnableWindow` função para habilitar ou desabilitar a entrada. Para obter mais informações, consulte [EnableWindow](https://msdn.microsoft.com/library/windows/desktop/ms646291) no SDK do Windows.  
@@ -456,8 +456,8 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *botão de menu*  
- Uma referência para o botão de menu de destino.  
+*Botão de menu*<br/>
+[in] Uma referência para o botão de menu de destino.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Esse método retornará TRUE.  
@@ -742,8 +742,8 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *hwnd*  
- Um identificador de janela.  
+*HWND*<br/>
+[in] Um identificador de janela.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o botão é o proprietário do identificador de janela fornecido; Caso contrário, 0.  
@@ -891,8 +891,8 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iNotifyCode*  
- A mensagem de notificação que está associada com o comando.  
+*iNotifyCode*<br/>
+[in] A mensagem de notificação que está associada com o comando.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Esse método retornará FALSE.  
@@ -935,8 +935,8 @@ virtual BOOL OnBeforeDrop(CMFCToolBar* pTarget);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pTarget*  
- O destino da operação de arrastar e soltar.  
+*pTarget*<br/>
+[in] O destino da operação de arrastar e soltar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o botão pode ser levado na barra de ferramentas de destino fornecido. Caso contrário, FALSE.  
@@ -957,14 +957,14 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- O contexto de dispositivo que exibe o botão.  
+*pDC*<br/>
+[in] O contexto de dispositivo que exibe o botão.  
   
- [in] *sizeDefault*  
- O tamanho padrão do botão.  
+*sizeDefault*<br/>
+[in] O tamanho padrão do botão.  
   
- [in] *bHorz*  
- O estado de encaixe da barra de ferramentas pai. Esse parâmetro é TRUE se a barra de ferramentas é encaixada horizontalmente ou for flutuante, ou FALSE se a barra de ferramentas é encaixada verticalmente.  
+*bHorz*<br/>
+[in] O estado de encaixe da barra de ferramentas pai. Esse parâmetro é TRUE se a barra de ferramentas é encaixada horizontalmente ou for flutuante, ou FALSE se a barra de ferramentas é encaixada verticalmente.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um `SIZE` estrutura que contém as dimensões do botão, em pixels.  
@@ -994,8 +994,8 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWndParent*  
- A nova janela pai.  
+*pWndParent*<br/>
+[in] A nova janela pai.  
   
 ### <a name="remarks"></a>Comentários  
  O botão é inserido em uma barra de ferramentas, por exemplo, quando o usuário arrasta-o de uma barra de ferramentas para outra barra de ferramentas.  
@@ -1012,11 +1012,11 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *Apropriei*  
- A janela pai do botão de barra de ferramentas.  
+*Apropriei*<br/>
+[in] A janela pai do botão de barra de ferramentas.  
   
- [in] *bDelay*  
- TRUE se a mensagem deve ser tratada com um atraso.  
+*bDelay*<br/>
+[in] TRUE se a mensagem deve ser tratada com um atraso.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Esse método retornará FALSE.  
@@ -1049,8 +1049,8 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *Apropriei*  
- A janela pai do botão de barra de ferramentas.  
+*Apropriei*<br/>
+[in] A janela pai do botão de barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Esse método retornará FALSE.  
@@ -1070,11 +1070,11 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- O contexto de dispositivo que exibe o botão.  
+*pDC*<br/>
+[in] O contexto de dispositivo que exibe o botão.  
   
- [in] *nCtlColor*  
- A notificação de cor específico.  
+*nCtlColor*<br/>
+[in] A notificação de cor específico.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um identificador para o objeto de pincel que a estrutura usa para pintar a tela de fundo do botão.  
@@ -1094,8 +1094,8 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pMenu*  
- Menu para personalizar.  
+*pMenu*<br/>
+[in] Menu para personalizar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Esse método retornará FALSE.  
@@ -1111,8 +1111,8 @@ virtual void OnDblClk(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *Apropriei*  
- -   A janela pai do botão.  
+*Apropriei*<br/>
+[in] - a janela pai do botão.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método é chamado pelo `CMFCToolBar::OnLButtonDblClk` método quando a barra de ferramentas pai lida com um [WM_LBUTTONDBLCLK](/windows/desktop/inputdev/wm-lbuttondblclk) mensagem.  
@@ -1135,29 +1135,29 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- O contexto de dispositivo que exibe o botão.  
+*pDC*<br/>
+[in] O contexto de dispositivo que exibe o botão.  
   
- [in] *rect*  
- O retângulo delimitador do botão.  
+*Rect*<br/>
+[in] O retângulo delimitador do botão.  
   
- [in] *pImages*  
- A coleção de imagens da barra de ferramentas que está associada com o botão.  
+*pImages*<br/>
+[in] A coleção de imagens da barra de ferramentas que está associada com o botão.  
   
- [in] *bHorz*  
- O estado de encaixe da barra de ferramentas pai. Esse parâmetro é verdadeiro quando o botão está ancorado horizontalmente e FALSE quando o botão estiver encaixado verticalmente.  
+*bHorz*<br/>
+[in] O estado de encaixe da barra de ferramentas pai. Esse parâmetro é verdadeiro quando o botão está ancorado horizontalmente e FALSE quando o botão estiver encaixado verticalmente.  
   
- [in] *bCustomizeMode*  
- Especifica se a barra de ferramentas está no modo de personalização. Esse parâmetro é verdadeiro quando a barra de ferramentas está no modo de personalização e FALSE quando a barra de ferramentas não está no modo de personalização.  
+*bCustomizeMode*<br/>
+[in] Especifica se a barra de ferramentas está no modo de personalização. Esse parâmetro é verdadeiro quando a barra de ferramentas está no modo de personalização e FALSE quando a barra de ferramentas não está no modo de personalização.  
   
- [in] *bHighlight*  
- Especifica se o botão está realçado. Esse parâmetro é verdadeiro quando o botão está realçado e FALSE quando o botão não esteja realçado.  
+*bHighlight*<br/>
+[in] Especifica se o botão está realçado. Esse parâmetro é verdadeiro quando o botão está realçado e FALSE quando o botão não esteja realçado.  
   
- [in] *bDrawBorder*  
- Especifica se o botão deve exibir sua borda. Esse parâmetro é verdadeiro quando o botão deve exibir sua borda e FALSE quando o botão não deve exibir sua borda.  
+*bDrawBorder*<br/>
+[in] Especifica se o botão deve exibir sua borda. Esse parâmetro é verdadeiro quando o botão deve exibir sua borda e FALSE quando o botão não deve exibir sua borda.  
   
- [in] *bGrayDisabledButtons*  
- Especifica se deve sombrear botões desabilitados ou usar a coleção de imagens desabilitado. Esse parâmetro é verdadeiro quando botões desabilitados devem ser sombreadas e FALSE quando este método deve usar a coleção de imagens desabilitado.  
+*bGrayDisabledButtons*<br/>
+[in] Especifica se deve sombrear botões desabilitados ou usar a coleção de imagens desabilitado. Esse parâmetro é verdadeiro quando botões desabilitados devem ser sombreadas e FALSE quando este método deve usar a coleção de imagens desabilitado.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua este método para personalizar o desenho do botão de barra de ferramentas.  
@@ -1173,14 +1173,14 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- O contexto de dispositivo que exibe o botão.  
+*pDC*<br/>
+[in] O contexto de dispositivo que exibe o botão.  
   
- [in] *rect*  
- O retângulo delimitador do botão.  
+*Rect*<br/>
+[in] O retângulo delimitador do botão.  
   
- [in] *bSelected*  
- Especifica se o botão é selecionado. Se esse parâmetro for TRUE, o botão é selecionado. Se esse parâmetro for FALSE, o botão não está selecionado.  
+*bSelected*<br/>
+[in] Especifica se o botão é selecionado. Se esse parâmetro for TRUE, o botão é selecionado. Se esse parâmetro for FALSE, o botão não está selecionado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  A largura, em pixels, do botão no contexto de dispositivo especificado.  
@@ -1200,8 +1200,8 @@ virtual BOOL OnGetCustomToolTipText(CString& strToolTip);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *strToolTip*  
- Um `CString` objeto que recebe o texto de dica de ferramenta personalizada.  
+*strToolTip*<br/>
+[out] Um `CString` objeto que recebe o texto de dica de ferramenta personalizada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Esse método retornará FALSE.  
@@ -1239,8 +1239,8 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bMostrar*  
- Especifica se o botão está visível. Se esse parâmetro for TRUE, o botão está visível. Caso contrário, o botão não está visível.  
+*bMostrar*<br/>
+[in] Especifica se o botão está visível. Se esse parâmetro for TRUE, o botão está visível. Caso contrário, o botão não está visível.  
   
 ### <a name="remarks"></a>Comentários  
  A implementação padrão desse método não fará nada. Substitua este método para atualizar a visibilidade do botão.  
@@ -1253,8 +1253,8 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iSize*  
- A nova largura do botão.  
+*iSize*<br/>
+[in] A nova largura do botão.  
   
 ### <a name="remarks"></a>Comentários  
  A implementação padrão desse método não fará nada. Substitua este método para redimensionar o botão quando o tamanho ou posição da barra de ferramentas pai é alterado.  
@@ -1269,11 +1269,11 @@ virtual BOOL OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *Apropriei*  
- A janela pai do botão. Pode ser NULL.  
+*Apropriei*<br/>
+[in] A janela pai do botão. Pode ser NULL.  
   
- [in] *pTI*  
- Um `TOOLINFO` estrutura que contém informações sobre uma ferramenta em um controle de dica de ferramenta.  
+*pTI*<br/>
+[in] Um `TOOLINFO` estrutura que contém informações sobre uma ferramenta em um controle de dica de ferramenta.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O resultado de `OnMenuButtonToolHitTest` se o botão pode recuperar um ponteiro para a janela do quadro pai; caso contrário, FALSE.  
@@ -1299,17 +1299,17 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWndParent*  
- A janela pai.  
+*pWndParent*<br/>
+[in] A janela pai.  
   
- [in] *iButtonIndex*  
- O índice baseado em zero do botão na coleção de botões de pai.  
+*iButtonIndex*<br/>
+[in] O índice baseado em zero do botão na coleção de botões de pai.  
   
- [in] *wndToolTip*  
- O controle que exibe o texto de dica de ferramenta.  
+*wndToolTip*<br/>
+[in] O controle que exibe o texto de dica de ferramenta.  
   
- [out] *str*  
- Um `CString` objeto que recebe o texto de dica de ferramenta atualizada.  
+*str*<br/>
+[out] Um `CString` objeto que recebe o texto de dica de ferramenta atualizada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Esse método retornará FALSE.  
@@ -1325,8 +1325,8 @@ virtual BOOL PrepareDrag(COleDataSource& srcItem);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *srcItem*  
- Um `COleDataSource` objeto que armazena informações de estado sobre a operação de arrastar e soltar.  
+*srcItem*<br/>
+[in] Um `COleDataSource` objeto que armazena informações de estado sobre a operação de arrastar e soltar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a operação for bem-sucedida; Caso contrário, FALSE.  
@@ -1380,8 +1380,8 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *ar*  
- O `CArchive` objeto do qual ou para a qual serializar.  
+*ar*<br/>
+[in] O `CArchive` objeto do qual ou para a qual serializar.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método dá suporte a processos de transferência de dados, como a área de transferência ou operações de arrastar e soltar. Ele lê ou grava as propriedades do botão, como a ID, o rótulo de texto e a ID da imagem de ou para fornecido `CArchive` objeto.  
@@ -1398,11 +1398,11 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pParent*  
- A janela pai do botão de barra de ferramentas.  
+*pParent*<br/>
+[in] A janela pai do botão de barra de ferramentas.  
   
- [in] *dados*  
- Um `CAccessibilityData` objeto que é preenchido com os dados de acessibilidade do botão de barra de ferramentas.  
+*data*<br/>
+[in] Um `CAccessibilityData` objeto que é preenchido com os dados de acessibilidade do botão de barra de ferramentas.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Esse método retornará TRUE.  
@@ -1418,8 +1418,8 @@ static void __stdcall SetClipboardFormatName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszName*  
- O novo nome do formato da área de transferência global. Não pode ser NULL.  
+*lpszName*<br/>
+[in] O novo nome do formato da área de transferência global. Não pode ser NULL.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método torna possível que operações de arrastar e soltar ocorrer entre vários aplicativos. Cada aplicativo deve fornecer o mesmo nome de formato de área de transferência.  
@@ -1434,8 +1434,8 @@ virtual void SetImage(int iImage);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iImage*  
- O índice da imagem na coleção de imagens da barra de ferramentas.  
+*iImage*<br/>
+[in] O índice da imagem na coleção de imagens da barra de ferramentas.  
   
 ### <a name="remarks"></a>Comentários  
  Se o botão de barra de ferramentas é um separador *iImage* refere-se para a nova largura do botão de separador.  
@@ -1450,8 +1450,8 @@ static void SetProtectedCommands(const CList<UINT,UINT>& lstCmds);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lstCmds*  
- A lista de comandos protegidos.  
+*lstCmds*<br/>
+[in] A lista de comandos protegidos.  
   
 ### <a name="remarks"></a>Comentários  
  No modo de personalização, o framework desabilita comandos de botão de barra de ferramentas que estão protegidos. O usuário não é possível executar o arrastar e soltar e editar operações nos botões de barra de ferramentas desabilitado.  
@@ -1476,8 +1476,8 @@ void SetRect(const CRect rect);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *rect*  
- O novo retângulo delimitador do botão.  
+*Rect*<br/>
+[in] O novo retângulo delimitador do botão.  
   
 ### <a name="remarks"></a>Comentários  
  Este método chama o [CMFCToolBarButton::OnMove](#onmove) método depois que ele define o novo retângulo delimitador.  
@@ -1490,8 +1490,8 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nStyle*  
- O novo estilo do botão.  
+*nStyle*<br/>
+[in] O novo estilo do botão.  
   
 ### <a name="remarks"></a>Comentários  
  Os conjuntos de implementação do padrão de [CMFCToolBarButton::m_nStyle](#m_nstyle) membro de dados para *nStyle*. Substitua este método se você quiser executar processamento adicional para lidar com a alteração no estilo. Ver [estilos de controle de barra de ferramentas](toolbar-control-styles.md) para obter uma lista dos sinalizadores de estilo válido.  
@@ -1504,8 +1504,8 @@ void SetVisible(BOOL bShow=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bMostrar*  
- Um valor booliano que especifica se deve mostrar ou ocultar o botão. Se esse parâmetro for TRUE, o botão é mostrado. Se o parâmetro for FALSE, o botão permanece oculto.  
+*bMostrar*<br/>
+[in] Um valor booliano que especifica se deve mostrar ou ocultar o botão. Se esse parâmetro for TRUE, o botão é mostrado. Se o parâmetro for FALSE, o botão permanece oculto.  
   
 ### <a name="remarks"></a>Comentários  
  Use esta função para ocultar ou mostrar um botão de barra de ferramentas específico. Chame o [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate) método depois de chamar esse método.  
@@ -1518,8 +1518,8 @@ void Show(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bMostrar*  
- Um valor booliano que especifica se deve mostrar ou ocultar o botão. Se esse parâmetro for TRUE, o botão é mostrado. Se o parâmetro for FALSE, o botão permanece oculto.  
+*bMostrar*<br/>
+[in] Um valor booliano que especifica se deve mostrar ou ocultar o botão. Se esse parâmetro for TRUE, o botão é mostrado. Se o parâmetro for FALSE, o botão permanece oculto.  
   
 ### <a name="remarks"></a>Comentários  
  O framework chama esse método para atualizar a visibilidade dos botões da barra de ferramentas quando sua barra de ferramentas pai for redimensionada. A estrutura chama esse método com *bMostrar* definido como FALSE quando o botão não se encaixa dentro dos limites da barra de ferramentas. A estrutura chama esse método com *bMostrar* definida como TRUE quando depois de redimensionar o botão novamente se encaixa dentro dos limites da barra de ferramentas.  

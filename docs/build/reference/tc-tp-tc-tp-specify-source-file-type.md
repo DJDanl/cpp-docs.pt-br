@@ -1,5 +1,5 @@
 ---
-title: /TC, /Tp, /TC, /TP (especificar tipo de arquivo de origem) | Microsoft Docs
+title: /TC, /Tp, /TC, /TP (especificar tipo de fonte de arquivo) | Microsoft Docs
 ms.date: 1/11/2018
 ms.technology:
 - cpp-tools
@@ -23,44 +23,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cb612d5c26fd4db51222c480539867d5e506b70
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c6c264a11e4cec478502fbd0e1837ceba450ba9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378100"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714292"
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc, /Tp, /TC, /TP (especificar tipo de arquivo de origem)
 
-O **/Tc** opção especifica que o argumento de nome de arquivo é um arquivo de origem C, mesmo se ele não tem uma extensão. c. O **/Tp** opção especifica que o argumento de nome de arquivo é um arquivo de origem do C++, mesmo se ele não tem uma extensão. cpp ou. cxx. Um espaço entre a opção e o nome do arquivo é opcional. Cada opção especifica um arquivo. para especificar arquivos adicionais, repita a opção.
+O **/Tc** opção especifica que o argumento de nome de arquivo é um arquivo de origem de C, mesmo se ele não tem uma extensão. c. O **/Tp** opção especifica que o argumento de nome de arquivo é um arquivo de origem do C++, mesmo se ele não tem uma extensão. cpp ou. cxx. Um espaço entre a opção e o nome do arquivo é opcional. Cada opção especifica um arquivo; para especificar arquivos adicionais, repita a opção.
 
-**/TC** e **/TP** global variantes de **/Tc** e **/Tp**. Eles especificam para o compilador trate todos os arquivos nomeados na linha de comando, como arquivos de origem C (**/TC**) ou arquivos de origem do C++ (**/TP**), independentemente do local na linha de comando em relação a opção. Essas opções global podem ser substituídas em um único arquivo por meio de **/Tc** ou **/Tp**.
+**/TC** e **/TP** são variantes globais dos **/Tc** e **/Tp**. Ele especificar para o compilador trate todos os arquivos nomeados na linha de comando, como arquivos de origem de C (**/TC**) ou arquivos de origem do C++ (**/TP**), independentemente do local na linha de comando em relação a opção. Essas opções globais podem ser substituídas em um único arquivo por meio da **/Tc** ou **/Tp**.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **/Tc** _filename_  
-> **/Tp** _filename_  
-> **/TC**  
-> **/TP**  
+> **/TC** _filename_
+>  **/Tp** _filename_
+>  **/TC** 
+>  **/TP**
 
 ## <a name="arguments"></a>Arguments
 
-*filename*  
+*filename*<br/>
 Um arquivo de origem C ou C++.
 
 ## <a name="remarks"></a>Comentários
 
-Por padrão, **CL** pressupõe que arquivos com a extensão. c são arquivos de origem C e arquivos com o. cpp ou. cxx extensão são arquivos de origem do C++.
+Por padrão, **CL** pressupõe que os arquivos com a extensão. c são arquivos de origem C e arquivos com o. cpp ou. cxx extensão são arquivos de origem C++.
 
-Quando ambos os **TC** ou **Tc** opção for especificada, qualquer especificação do [/ZC: (wchar_t é do tipo nativo)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) opção será ignorada.
+Quando ambos os **TC** ou **Tc** opção for especificada, qualquer especificação da [/ZC: wchar_t (wchar_t Is Native Type)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) opção será ignorada.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **C/C++** > **avançado** página de propriedades.
 
-1. Modificar o **compilar como** propriedade. Escolha **Okey** ou **aplicar** para aplicar as alterações.
+1. Modificar a **compilar como** propriedade. Escolher **Okey** ou **aplicar** para aplicar suas alterações.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 
@@ -68,15 +68,15 @@ Quando ambos os **TC** ou **Tc** opção for especificada, qualquer especificaç
 
 ## <a name="examples"></a>Exemplos
 
-Esta linha de comando CL Especifica que MAIN.c, TEST.prg e COLLATE.prg são todos os arquivos de origem C. CL não reconhecerá PRINT.prg.
+Essa linha de comando CL Especifica que o Main. c, TEST.prg e COLLATE.prg são todos os arquivos de origem de C. CL não reconhecerá PRINT.prg.
 
-> CL PRINCIPAL. C /TcTEST.PRG /TcCOLLATE.PRG impressão. PRG
+> CL MAIN. C /TcTEST.PRG /TcCOLLATE.PRG PRINT. PRG
 
-Esta linha de comando CL Especifica que TEST1.c, TEST2.cxx, TEST3.huh e TEST4.o são compilados como arquivos C++ e TEST5.z é compilado como um arquivo de C.
+Essa linha de comando CL Especifica que TEST1.c, TEST2.cxx, TEST3.huh e TEST4.o são compilados como arquivos de C++ e TEST5.z é compilado como um arquivo de C.
 
-> CL TEST1. C TEST2. REALIZADO NO MERCADO3 CXX. NÃO É TEST4. O /Tc TEST5. /TP Z
+> CL TEST1. C TEST2. CXX TEST3. NÉ TEST4. TEST5 de /Tc e S. /TP Z
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções do Compilador](../../build/reference/compiler-options.md)  
-[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)  
+[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
+[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

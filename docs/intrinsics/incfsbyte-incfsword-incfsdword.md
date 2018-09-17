@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2813fd6d06d69ee346e234b73c96b8b2e782b95b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a80dc66f9626c87cef78a79b1c46a62afd0957d3
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330977"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719349"
 ---
 # <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte, __incfsword, __incfsdword
 **Seção específica da Microsoft**  
@@ -50,8 +50,8 @@ void __incfsdword(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [in] `Offset`  
- O deslocamento do início do `FS`.  
+*deslocamento*<br/>
+[in] O deslocamento do início do `FS`.  
   
 ## <a name="requirements"></a>Requisitos  
   
@@ -62,7 +62,7 @@ void __incfsdword(
 |`__incfsdword`|x86|  
   
 ## <a name="remarks"></a>Comentários  
- Esses intrínsecos só estão disponíveis no modo kernel e as rotinas só estão disponíveis como intrínsecos.  
+ Esses intrínsecos só estão disponíveis no modo kernel, e as rotinas somente estão disponíveis como intrínsecos.  
   
 **Fim da seção específica da Microsoft**  
   

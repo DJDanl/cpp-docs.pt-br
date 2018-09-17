@@ -98,12 +98,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8265b8c179f9e317fa3e2a66df4797660528f444
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 60c2b85c3a5c1ca5e2da9b0ef3b42148510b59e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107366"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45711042"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Funções do namespace Concurrency:: precise_math
 ||||
@@ -1564,8 +1564,8 @@ inline double modf(
 `_X`  
 Valor de ponto flutuante
 
-`_Iptr` (parâmetro out)  
-A parte inteira do `_X`, como um valor de ponto flutuante.
+`_Iptr`  
+[out] A parte inteira do `_X`, como um valor de ponto flutuante.
 
 ### <a name="return-value"></a>Valor de retorno
 A parte fracionária com sinal de `_X`.
@@ -1891,8 +1891,8 @@ O primeiro argumento de ponto flutuante.
 `_Y`  
 O segundo argumento de ponto flutuante.
 
-`_Quo` (parâmetro out)  
-O endereço de um inteiro que é usado para retornar o quociente dos bits fracionários de `_X` dividido pelos bits fracionários de `_Y`.
+`_Quo`  
+[out] O endereço de um inteiro que é usado para retornar o quociente dos bits fracionários de `_X` dividido pelos bits fracionários de `_Y`.
 
 ### <a name="return-value"></a>Valor de retorno
 Retorna o resto da `_X` dividido por `_Y`.
@@ -1914,8 +1914,8 @@ O primeiro argumento de ponto flutuante.
 `_Y`  
 O segundo argumento de ponto flutuante.
 
-`_Quo` (parâmetro out)  
-O endereço de um inteiro que é usado para retornar o quociente dos bits fracionários de `_X` dividido pelos bits fracionários de `_Y`.
+`_Quo`  
+[out] O endereço de um inteiro que é usado para retornar o quociente dos bits fracionários de `_X` dividido pelos bits fracionários de `_Y`.
 
 ### <a name="return-value"></a>Valor de retorno
 Retorna o resto da `_X` dividido por `_Y`.

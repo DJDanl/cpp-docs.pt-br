@@ -19,40 +19,48 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 064fb9adce8b41c13709819f7ce0b7c515fea12a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 09d34d0247f7fd039bca3ea9b643802856734926
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313163"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719297"
 ---
 # <a name="resource-symbols-dialog-box-c"></a>Caixa de diálogo símbolos do recurso (C++)
 
 O **símbolos de recurso** caixa de diálogo C++ permite que você adicione novos símbolos de recurso, altere os símbolos que são exibidos, ou pular para o local no código-fonte em que um símbolo está em uso.
 
-**Nome**  
-Exibe o nome do símbolo. Para obter mais informações, consulte [restrições de nome de símbolo](../windows/symbol-name-restrictions.md).
+- **Nome**
 
-**Value**  
-Exibe o valor numérico do símbolo. Para obter mais informações, consulte [restrições de valor de símbolo](../windows/symbol-value-restrictions.md).
+   Exibe o nome do símbolo. Para obter mais informações, consulte [restrições de nome de símbolo](../windows/symbol-name-restrictions.md).
 
-**Em uso**  
-Quando selecionado, especifica que o símbolo está sendo usado por um ou mais recursos. Um ou mais recursos são listados na usado pela caixa.
+- **Value**
 
-**Mostrar símbolos somente leitura**  
-Quando selecionado, exibe recursos somente leitura. Por padrão, o **símbolo de recurso** caixa de diálogo exibe somente os recursos pode ser modificados no arquivo de script de recurso, mas com essa opção selecionada, os recursos modificáveis aparecem em negrito e os recursos de somente leitura são exibidos em texto sem formatação.
+   Exibe o valor numérico do símbolo. Para obter mais informações, consulte [restrições de valor de símbolo](../windows/symbol-value-restrictions.md).
 
-**Usado por**  
-Exibe um ou mais recursos usando o símbolo selecionado na lista de símbolos. Para mover para o editor para um determinado recurso, selecione o recurso nas **usado por** caixa e clique em **Exibir uso**. Para obter mais informações, consulte [abrindo o Editor de recursos para um símbolo dado](../windows/opening-the-resource-editor-for-a-given-symbol.md).
+- **Em uso**
 
-**Novo**  
-Abre o **novo símbolo** caixa de diálogo que permite que você defina o nome e, se necessário, um valor para um novo identificador simbólico do recurso. Para obter mais informações, consulte [criando novos símbolos](../windows/creating-new-symbols.md).
+   Quando selecionado, especifica que o símbolo está sendo usado por um ou mais recursos. Um ou mais recursos são listados na usado pela caixa.
 
-**Alteração**  
-Abre o **alterar símbolo** caixa de diálogo que permite que você altere o nome ou o valor de um símbolo. Se o símbolo for para um controle ou recurso em uso, o símbolo pode ser alterado somente de editor de recursos correspondente. Para obter mais informações, consulte [alterando símbolos não atribuídos](../windows/changing-unassigned-symbols.md).
+- **Mostrar símbolos somente leitura**
 
-**Exibir uso**  
-Abre o recurso que contém o símbolo no editor de recurso correspondente. Para obter mais informações, consulte [abrindo o Editor de recursos para um símbolo dado](../windows/opening-the-resource-editor-for-a-given-symbol.md).
+   Quando selecionado, exibe recursos somente leitura. Por padrão, o **símbolo de recurso** caixa de diálogo exibe somente os recursos pode ser modificados no arquivo de script de recurso, mas com essa opção selecionada, os recursos modificáveis aparecem em negrito e os recursos de somente leitura são exibidos em texto sem formatação.
+
+- **Usado por**
+
+   Exibe um ou mais recursos usando o símbolo selecionado na lista de símbolos. Para mover para o editor para um determinado recurso, selecione o recurso nas **usado por** caixa e clique em **Exibir uso**. Para obter mais informações, consulte [abrindo o Editor de recursos para um símbolo dado](../windows/opening-the-resource-editor-for-a-given-symbol.md).
+
+- **Novo**
+
+   Abre o **novo símbolo** caixa de diálogo que permite que você defina o nome e, se necessário, um valor para um novo identificador simbólico do recurso. Para obter mais informações, consulte [criando novos símbolos](../windows/creating-new-symbols.md).
+
+- **Alteração**
+
+   Abre o **alterar símbolo** caixa de diálogo que permite que você altere o nome ou o valor de um símbolo. Se o símbolo for para um controle ou recurso em uso, o símbolo pode ser alterado somente de editor de recursos correspondente. Para obter mais informações, consulte [alterando símbolos não atribuídos](../windows/changing-unassigned-symbols.md).
+
+- **Exibir uso**
+
+   Abre o recurso que contém o símbolo no editor de recurso correspondente. Para obter mais informações, consulte [abrindo o Editor de recursos para um símbolo dado](../windows/opening-the-resource-editor-for-a-given-symbol.md).
 
 ## <a name="requirements"></a>Requisitos
 

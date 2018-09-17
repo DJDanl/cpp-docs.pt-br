@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 789a8165a12977d11220d299e2c99549121dba64
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ef348275059fd2623ca83b40730f010a7d18d6d5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539954"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45721169"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Classe CMFCRibbonMiniToolBar
 Implementa uma barra de ferramentas pop-up contextual.  
@@ -98,11 +98,11 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pRibbonBar*  
- A barra de faixa de opções que a Minibarra de ferramentas de pesquisa para os botões Exibir.  
+*pRibbonBar*<br/>
+[in] A barra de faixa de opções que a Minibarra de ferramentas de pesquisa para os botões Exibir.  
   
- [in] *lstCommands*  
- A lista de comandos a ser exibido na Minibarra de ferramentas. Todas as categorias de faixa de opções são pesquisadas para localizar os botões associados.  
+*lstCommands*<br/>
+[in] A lista de comandos a ser exibido na Minibarra de ferramentas. Todas as categorias de faixa de opções são pesquisadas para localizar os botões associados.  
   
 ### <a name="remarks"></a>Comentários  
  Use essa função para definir a lista de comandos a serem exibidos no Minibarra de ferramentas.  
@@ -122,11 +122,11 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *x*  
- Especifica a posição horizontal da Minibarra de ferramentas em coordenadas da tela.  
+*x*<br/>
+[in] Especifica a posição horizontal da Minibarra de ferramentas em coordenadas da tela.  
   
- [in] *y*  
- Especifica a posição vertical da Minibarra de ferramentas em coordenadas da tela.  
+*y*<br/>
+[in] Especifica a posição vertical da Minibarra de ferramentas em coordenadas da tela.  
   
 ### <a name="return-value"></a>Valor de retorno  
  VERDADEIRO se a Minibarra de ferramentas foi exibido com êxito; Caso contrário, FALSE.  
@@ -143,17 +143,17 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *x*  
- Especifica a posição horizontal do menu de contexto em coordenadas da tela.  
+*x*<br/>
+[in] Especifica a posição horizontal do menu de contexto em coordenadas da tela.  
   
- [in] *y*  
- Especifica a posição vertical do menu de contexto em coordenadas da tela.  
+*y*<br/>
+[in] Especifica a posição vertical do menu de contexto em coordenadas da tela.  
   
- [in] *uiMenuResID*  
- Especifica a ID de recurso do menu de contexto para exibir.  
+*uiMenuResID*<br/>
+[in] Especifica a ID de recurso do menu de contexto para exibir.  
   
- [in] *pWndOwner*  
- Identifica a janela que recebe mensagens do menu de contexto.  
+*pWndOwner*<br/>
+[in] Identifica a janela que recebe mensagens do menu de contexto.  
   
 ### <a name="return-value"></a>Valor de retorno  
  VERDADEIRO se o menu de contexto foi exibido com êxito; Caso contrário, FALSE.  

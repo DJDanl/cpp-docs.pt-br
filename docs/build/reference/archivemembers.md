@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c63d50364e761b7c0f10c3ce713e2d502bf6356
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e1923dc5fd5f9188f71d37ab2417746f71cdb6c1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32369013"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719661"
 ---
 # <a name="archivemembers"></a>/ARCHIVEMEMBERS
-```  
-/ARCHIVEMEMBERS  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Esta opção exibe um mínimo de informações sobre objetos de membro em uma biblioteca.  
-  
- Somente o [/HEADERS](../../build/reference/headers.md) opção DUMPBIN está disponível para uso em arquivos produzidos com o [/GL](../../build/reference/gl-whole-program-optimization.md) opção de compilador.  
-  
-## <a name="see-also"></a>Consulte também  
- [Opções de DUMPBIN](../../build/reference/dumpbin-options.md)
+
+```
+/ARCHIVEMEMBERS
+```
+
+## <a name="remarks"></a>Comentários
+
+Esta opção exibe informações mínimas sobre objetos de membro em uma biblioteca.
+
+Somente o [/HEADERS](../../build/reference/headers.md) opção DUMPBIN está disponível para uso em arquivos produzidos com o [/GL](../../build/reference/gl-whole-program-optimization.md) opção de compilador.
+
+## <a name="see-also"></a>Consulte também
+
+[Opções de DUMPBIN](../../build/reference/dumpbin-options.md)

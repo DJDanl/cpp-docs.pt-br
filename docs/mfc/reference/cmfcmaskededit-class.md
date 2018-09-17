@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b903946a2e907b67d70e5008bff602670f1751e
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a0bb29fdaff72370ec197fc9b3f651b5ff574c32
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849465"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45717425"
 ---
 # <a name="cmfcmaskededit-class"></a>Classe CMFCMaskedEdit
 O `CMFCMaskedEdit` classe dá suporte a um controle de edição mascarado, que valida a entrada do usuário em relação a uma máscara e exibe os resultados validados de acordo com um modelo.  
@@ -132,8 +132,8 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- TRUE para especificar que o [CMFCMaskedEdit::GetWindowText](#getwindowtext) método retrieve apenas mascarado caracteres; FALSO para especificar que o método de recuperar o texto inteiro. O valor padrão é TRUE.  
+*bAtivar*<br/>
+[in] TRUE para especificar que o [CMFCMaskedEdit::GetWindowText](#getwindowtext) método retrieve apenas mascarado caracteres; FALSO para especificar que o método de recuperar o texto inteiro. O valor padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
  Use esse método para habilitar a recuperar caracteres mascarados. Em seguida, crie um controle de edição mascarado que corresponde ao número de telefone, como (425) 555-0187. Se você chamar o `GetWindowText` método, ele retorna "4255550187". Se você desabilitar a recuperar caracteres mascarados, o `GetWindowText` método retorna o texto que é exibido no controle de edição, por exemplo "(425) 555-0187".  
@@ -150,17 +150,17 @@ void EnableMask(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszMask*  
- Uma cadeia de caracteres de máscara que especifica o tipo de caractere que pode ser exibido em cada posição na entrada do usuário. O comprimento do *lpszInputTemplate* e *lpszMask* cadeias de caracteres do parâmetro devem ser o mesmo. Consulte a seção de comentários para obter mais detalhes sobre os caracteres de máscara.  
+*lpszMask*<br/>
+[in] Uma cadeia de caracteres de máscara que especifica o tipo de caractere que pode ser exibido em cada posição na entrada do usuário. O comprimento do *lpszInputTemplate* e *lpszMask* cadeias de caracteres do parâmetro devem ser o mesmo. Consulte a seção de comentários para obter mais detalhes sobre os caracteres de máscara.  
   
- [in] *lpszInputTemplate*  
- Uma cadeia de caracteres de modelo de máscara que especifica que o literal de caracteres que pode ser exibido em cada posição na entrada do usuário. Use o caractere de sublinhado ('_') como um espaço reservado de caractere. O comprimento do *lpszInputTemplate* e *lpszMask* cadeias de caracteres do parâmetro devem ser o mesmo.  
+*lpszInputTemplate*<br/>
+[in] Uma cadeia de caracteres de modelo de máscara que especifica que o literal de caracteres que pode ser exibido em cada posição na entrada do usuário. Use o caractere de sublinhado ('_') como um espaço reservado de caractere. O comprimento do *lpszInputTemplate* e *lpszMask* cadeias de caracteres do parâmetro devem ser o mesmo.  
   
- [in] *chMaskInputTemplate*  
- Um caractere de padrão que o framework substitui cada caractere inválido na entrada do usuário. O valor padrão desse parâmetro é o caractere de sublinhado ('_').  
+*chMaskInputTemplate*<br/>
+[in] Um caractere de padrão que o framework substitui cada caractere inválido na entrada do usuário. O valor padrão desse parâmetro é o caractere de sublinhado ('_').  
   
- [in] *lpszValid*  
- Uma cadeia de caracteres que contém um conjunto de caracteres válidos. NULL indica que todos os caracteres são válidos. O valor padrão desse parâmetro é NULL.  
+*lpszValid*<br/>
+[in] Uma cadeia de caracteres que contém um conjunto de caracteres válidos. NULL indica que todos os caracteres são válidos. O valor padrão desse parâmetro é NULL.  
   
 ### <a name="remarks"></a>Comentários  
  Use esse método para criar a máscara para o controle de edição mascarado. Derive uma classe do `CMFCMaskedEdit` de classe e substituir o [CMFCMaskedEdit::IsMaskedChar](#ismaskedchar) método para usar seu próprio código para o processamento da máscara personalizada.  
@@ -186,8 +186,8 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- TRUE para selecionar apenas grupos; FALSE para selecionar o texto inteiro. O valor padrão é TRUE.  
+*bAtivar*<br/>
+[in] TRUE para selecionar apenas grupos; FALSE para selecionar o texto inteiro. O valor padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
  Use essa função para especificar se o controle de edição mascarado permite ao usuário selecionar por grupo ou o texto inteiro.  
@@ -218,8 +218,8 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- TRUE para validar a entrada em relação a apenas mascarado caracteres; do usuário FALSE para validar contra a máscara inteira. O valor padrão é TRUE.  
+*bAtivar*<br/>
+[in] TRUE para validar a entrada em relação a apenas mascarado caracteres; do usuário FALSE para validar contra a máscara inteira. O valor padrão é TRUE.  
   
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
  Recupera validado o texto do controle de edição mascarado.  
@@ -233,14 +233,14 @@ void GetWindowText(CString& rstrString) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *lpszStringBuf*  
- Um ponteiro para um buffer que recebe o texto do controle de edição.  
+*lpszStringBuf*<br/>
+[out] Um ponteiro para um buffer que recebe o texto do controle de edição.  
   
- [in] *nMaxCount*  
- O número máximo de caracteres a receber.  
+*nMaxCount*<br/>
+[in] O número máximo de caracteres a receber.  
   
- [out] *rstrString*  
- Uma referência ao objeto de cadeia de caracteres que recebe o texto do controle de edição.  
+*rstrString*<br/>
+[out] Uma referência ao objeto de cadeia de caracteres que recebe o texto do controle de edição.  
   
 ### <a name="return-value"></a>Valor de retorno  
  A primeira sobrecarga de método retorna o número de bytes da cadeia de caracteres que é copiado para o *lpszStringBuf* buffers de parâmetro; 0 se o controle de edição mascarado não possui um texto.  
@@ -260,11 +260,11 @@ virtual BOOL IsMaskedChar(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *chChar*  
- O caractere a ser validado.  
+*chChar*<br/>
+[in] O caractere a ser validado.  
   
- [in] *chMaskChar*  
- O caractere correspondente da cadeia de caracteres de máscara.  
+*chMaskChar*<br/>
+[in] O caractere correspondente da cadeia de caracteres de máscara.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o *chChar* parâmetro é o tipo de caractere permitido pela *chMaskChar* parâmetro; caso contrário, FALSE.  
@@ -280,8 +280,8 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszValid*  
- Uma cadeia de caracteres que contém o conjunto de caracteres de entrada válidos. NULL significa que todos os caracteres são válidos. O valor padrão desse parâmetro é NULL.  
+*lpszValid*<br/>
+[in] Uma cadeia de caracteres que contém o conjunto de caracteres de entrada válidos. NULL significa que todos os caracteres são válidos. O valor padrão desse parâmetro é NULL.  
   
 ### <a name="remarks"></a>Comentários  
  Use esse método para definir uma lista de caracteres válidas. Se um caractere de entrada não estiver nessa lista, o controle de edição mascarado não aceitá-lo.  
@@ -298,8 +298,8 @@ void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszString*  
- Aponta para uma cadeia de caracteres terminada em nulo que será usado como um prompt.  
+*lpszString*<br/>
+[in] Aponta para uma cadeia de caracteres terminada em nulo que será usado como um prompt.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método define o texto do controle.  

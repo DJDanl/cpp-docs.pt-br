@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27a96082f620a09687102dd3fd42e6253968f2f7
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8a0da6941a3076b23eb127cdcb87fee2953a80b9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693966"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45707447"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Classe CMFCEditBrowseCtrl
 O `CMFCEditBrowseCtrl` classe dá suporte a controle de navegação de edição, que é uma caixa de texto editável que opcionalmente contém um botão de procura. Quando o usuário clica no botão Procurar, o controle executa uma ação personalizada ou exibe uma caixa de diálogo padrão que contém um navegador de arquivos ou um navegador de pasta.  
@@ -84,14 +84,17 @@ class CMFCEditBrowseCtrl : public CEdit
   
  O `CMFCEditBrowseCtrl` classe dá suporte a modos a seguir.  
   
- **modo personalizado**  
- Uma ação personalizada é executada quando o usuário clica no botão Procurar. Por exemplo, você pode exibir uma caixa de diálogo específicas do aplicativo.  
+- **modo personalizado**
+
+   Uma ação personalizada é executada quando o usuário clica no botão Procurar. Por exemplo, você pode exibir uma caixa de diálogo específicas do aplicativo.  
   
- **modo de arquivo**  
- Uma caixa de diálogo de seleção de arquivo padrão é exibida quando o usuário clica no botão Procurar.  
+- **modo de arquivo**
+
+   Uma caixa de diálogo de seleção de arquivo padrão é exibida quando o usuário clica no botão Procurar.  
   
- **modo de pasta**  
- Uma caixa de diálogo de seleção de pasta padrão é exibida quando o usuário clica no botão Procurar.  
+- **modo de pasta**
+
+   Uma caixa de diálogo de seleção de pasta padrão é exibida quando o usuário clica no botão Procurar.  
   
 ## <a name="how-to-specify-an-edit-browse-control"></a>Como: Especificar um controle de navegação de edição  
  Execute as seguintes etapas para incorporar um controle de edição de procurar em seu aplicativo:  

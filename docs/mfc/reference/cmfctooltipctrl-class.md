@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4d0f45498015006141591f7132ef38af52751f9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9f395ae726725507bf27f5033b20a4ece2a226a6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42543083"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715657"
 ---
 # <a name="cmfctooltipctrl-class"></a>Classe CMFCToolTipCtrl
 Uma implementação estendida da dica de ferramenta com base nas [classe CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md). Uma dica de ferramenta com base no `CMFCToolTipCtrl` classe pode exibir um ícone, um rótulo e uma descrição. Você pode personalizar sua aparência visual usando um preenchimento gradual, cores de borda e texto personalizado, texto em negrito, cantos arredondados ou um estilo de balão.  
@@ -204,14 +204,14 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Ponteiro para um contexto de dispositivo.  
   
- [in] *rect*  
- O retângulo delimitador da dica de ferramenta.  
+*Rect*<br/>
+[in] O retângulo delimitador da dica de ferramenta.  
   
- [in] *clrLine*  
- Cor da borda.  
+*clrLine*<br/>
+[in] Cor da borda.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua este método em uma classe derivada para personalizar a aparência da borda da dica de ferramenta.  
@@ -227,8 +227,8 @@ virtual CSize OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- [in] *rect*  
+*pDC*<br/>
+[in] [in] *rect*  
  [in] *bCalcOnly*  
   
 ### <a name="return-value"></a>Valor de retorno  
@@ -245,11 +245,11 @@ virtual BOOL OnDrawIcon(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Um ponteiro para um contexto de dispositivo.  
   
- [in] *rectImage*  
- Coordenadas do ícone.  
+*rectImage*<br/>
+[in] Coordenadas do ícone.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o ícone de ter sido desenhado. Caso contrário, FALSE.  
@@ -268,14 +268,14 @@ virtual CSize OnDrawLabel(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Um ponteiro para um contexto de dispositivo.  
   
- [in] *rect*  
- Retângulo delimitador da área de rótulo.  
+*Rect*<br/>
+[in] Retângulo delimitador da área de rótulo.  
   
- [in] *bCalcOnly*  
- Se for TRUE, o rótulo não será desenhado.  
+*bCalcOnly*<br/>
+[in] Se for TRUE, o rótulo não será desenhado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Tamanho do rótulo, em pixels.  
@@ -295,17 +295,17 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Um ponteiro para um contexto de dispositivo.  
   
- [in] *x1*  
- Coordenada horizontal da extremidade esquerda do separador.  
+*x1*<br/>
+[in] Coordenada horizontal da extremidade esquerda do separador.  
   
- [in] *x2*  
- Coordenada horizontal da extremidade direita do separador.  
+*X2*<br/>
+[in] Coordenada horizontal da extremidade direita do separador.  
   
- [in] *Y*  
- Coordenada vertical do separador.  
+*Y*<br/>
+[in] Coordenada vertical do separador.  
   
 ### <a name="remarks"></a>Comentários  
  A implementação padrão desenha uma linha do ponto (x1, y) para o ponto (x2, y).  
@@ -324,17 +324,17 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Um ponteiro para um contexto de dispositivo.  
   
- [in] *rect*  
- Especifica o retângulo delimitador da área a ser preenchida.  
+*Rect*<br/>
+[in] Especifica o retângulo delimitador da área a ser preenchida.  
   
- [in] *clrText*  
- Cor de primeiro plano da dica de ferramenta.  
+*clrText*<br/>
+[in] Cor de primeiro plano da dica de ferramenta.  
   
- [in] *clrLine*  
- Cor das bordas e a linha de delimitador entre o rótulo e uma descrição.  
+*clrLine*<br/>
+[in] Cor das bordas e a linha de delimitador entre o rótulo e uma descrição.  
   
 ### <a name="remarks"></a>Comentários  
  A implementação padrão preenche o retângulo especificado por *rect* com a cor ou padrão especificado pela chamada a mais recente [CMFCToolTipCtrl::SetParams](#setparams).  
@@ -349,8 +349,8 @@ virtual void SetDescription(const CString strDesrciption);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *strDesrciption*  
- Texto de descrição.  
+*strDesrciption*<br/>
+[in] Texto de descrição.  
   
 ### <a name="remarks"></a>Comentários  
  O texto de descrição é exibido na dica de ferramenta sob o separador.  
@@ -365,8 +365,8 @@ void SetFixedWidth(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nWidthRegular*  
- [in] *nWidthLargeImage*  
+*nWidthRegular*<br/>
+[in] [in] *nWidthLargeImage*  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -402,8 +402,8 @@ void SetParams(CMFCToolTipInfo* pParams);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pParams*  
- Ponteiro para um [classe CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) objeto que contém os parâmetros de exibição.  
+*pParams*<br/>
+[in] Ponteiro para um [classe CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) objeto que contém os parâmetros de exibição.  
   
 ### <a name="remarks"></a>Comentários  
  Sempre que a dica de ferramenta é exibida, ela é desenhada usando as cores e estilos visuais que *pParams* especifica. O valor de *pParams* é armazenado no membro protegido `m_Params`, que pode ser acessado por uma classe derivada que substitui [CMFCToolTipCtrl::OnDrawBorder](#ondrawborder), [CMFCToolTipCtrl: : OnDrawIcon](#ondrawicon), [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel), [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator), ou [CMFCToolTipCtrl::OnFillBackground](#onfillbackground)para manter a aparência especificada.  

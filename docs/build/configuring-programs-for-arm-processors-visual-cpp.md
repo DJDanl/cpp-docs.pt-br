@@ -12,35 +12,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dd54543f4fc35a204aaa349ce2ac8f41f912caf
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 3ce0e7e1f7c0936daed0fa6a51f6e254403205e0
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39026313"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714955"
 ---
 # <a name="configure-visual-c-for-arm-processors"></a>Configurar o Visual C++ para processadores ARM
 
-Esta seção da documentação contém informações sobre como utilizar as ferramentas de compilação do Visual C++ para destinar hardware ARM.  
-  
-## <a name="in-this-section"></a>Nesta seção  
+Esta seção da documentação contém informações sobre como utilizar as ferramentas de compilação do Visual C++ para destinar hardware ARM.
 
-[Visão geral das convenções ARM ABI](../build/overview-of-arm-abi-conventions.md)  
-Descreve a interface binária do aplicativo usada pelo Windows em ARM para registrar uso, convenções de chamada e tratamento de exceções.  
-  
-[Visão geral das convenções ABI ARM64](../build/arm64-windows-abi-conventions.md)  
-Descreve a interface binária de aplicativo usado pelo Windows arm64 para registrar uso, convenções de chamada e tratamento de exceção.  
-  
-[Problemas de migração ARM do Visual C++ comuns](../build/common-visual-cpp-arm-migration-issues.md)  
-Descreve elementos de código C++ que são comumente considerados como portáteis entre arquiteturas, porém, que produzem resultados diferentes para ARM do que em x86 ou x64.  
-  
-[Tratamento de exceção do ARM](../build/arm-exception-handling.md)  
-Descreve o esquema de codificação para desenrolamento de pilha durante tratamento de exceções estruturado no Windows em ARM.  
+## <a name="in-this-section"></a>Nesta seção
 
-[ARM64 Tratamento de exceção](../build/arm64-exception-handling.md)  
-Descreve o esquema de codificação para desenrolamento de pilha durante manipulação de exceção estruturada no Windows arm64.  
+[Visão geral das convenções do ARM ABI](../build/overview-of-arm-abi-conventions.md) descreve a interface binária de aplicativo usado pelo Windows em ARM para registrar uso, convenções de chamada e tratamento de exceção.
 
-## <a name="related-sections"></a>Seções relacionadas  
-  
-[Intrínsecos do ARM](../intrinsics/arm-intrinsics.md)  
-Descreve intrínsecas do compilador para processadores que usam a arquitetura ARM.  
+[Visão geral das convenções de ABI ARM64](../build/arm64-windows-abi-conventions.md) descreve a interface binária de aplicativo usado pelo Windows arm64 para registrar uso, convenções de chamada e tratamento de exceção.
+
+[Problemas comuns de migração de ARM do C++ de Visual](../build/common-visual-cpp-arm-migration-issues.md) elementos de código C++ descreve que são comumente considerados como portáteis entre arquiteturas, mas que produzem resultados diferentes para ARM que para x86 e x64.
+
+[Tratamento de exceção ARM](../build/arm-exception-handling.md) descreve o esquema de codificação para desenrolamento de pilha durante tratamento no Windows em ARM de exceções estruturado.
+
+[Tratamento de exceções ARM64](../build/arm64-exception-handling.md) descreve o esquema de codificação para desenrolamento de pilha durante tratamento no Windows arm64 de exceções estruturado.
+
+## <a name="related-sections"></a>Seções relacionadas
+
+[Intrínsecos ARM](../intrinsics/arm-intrinsics.md) descreve intrínsecas do compilador para processadores que usam a arquitetura ARM.

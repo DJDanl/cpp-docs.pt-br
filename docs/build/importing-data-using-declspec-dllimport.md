@@ -19,51 +19,53 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9877c5a229c3cabcb7703dd2617d1d57e3512f0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a024d7488eb1683f40548839ab843da1e56f65e8
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32368506"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45710210"
 ---
 # <a name="importing-data-using-declspecdllimport"></a>Importando dados usando __declspec(dllimport)
-No caso de dados, usando **__declspec(dllimport)** é um item de conveniência que remove uma camada de indireção. Quando você importa dados de uma DLL, você ainda precisa percorrer a tabela de endereço de importação. Antes de **__declspec(dllimport)**, isso significa que você precisava Lembre-se de fazer um nível extra de indireção ao acessar dados exportados da DLL:  
-  
-```  
-// project.h  
-#ifdef _DLL   // If accessing the data from inside the DLL  
-   ULONG ulDataInDll;  
-  
-#else         // If accessing the data from outside the DLL  
-   ULONG *ulDataInDll;  
-#endif  
-```  
-  
- Você pode salvar os dados no seu. Arquivo de definição:  
-  
-```  
-// project.def  
-LIBRARY project  
-EXPORTS  
-   ulDataInDll   CONSTANT  
-```  
-  
- e acessá-lo fora da DLL:  
-  
-```  
-if (*ulDataInDll == 0L)   
-{  
-   // Do stuff here  
-}  
-```  
-  
- Quando você marca os dados como **__declspec(dllimport)**, o compilador gera o código de indireção automaticamente para você. Você não precisa se preocupar sobre as etapas acima. Como mencionado anteriormente, não use **__declspec(dllimport)** declaração nos dados durante a criação da DLL. Funções de DLL não usam a tabela de endereço de importação para acessar o objeto de dados; Portanto, você não terá o nível extra de indireção presente.  
-  
- Para exportar os dados automaticamente da DLL, use essa declaração:  
-  
-```  
-__declspec(dllexport) ULONG ulDataInDLL;  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Importando para um aplicativo](../build/importing-into-an-application.md)
+
+No caso de dados, usando **__declspec(dllimport)** é um item de conveniência que remove uma camada de indireção. Quando você importa dados de uma DLL, você precisa percorrer a tabela de endereços de importação. Antes de **__declspec(dllimport)**, isso significava que você tinha que não se esqueça de fazer um nível extra de indireção ao acessar dados exportadas da DLL:
+
+```
+// project.h
+#ifdef _DLL   // If accessing the data from inside the DLL
+   ULONG ulDataInDll;
+
+#else         // If accessing the data from outside the DLL
+   ULONG *ulDataInDll;
+#endif
+```
+
+Você poderia, em seguida, exportar os dados no seu. Arquivo DEF:
+
+```
+// project.def
+LIBRARY project
+EXPORTS
+   ulDataInDll   CONSTANT
+```
+
+e acessá-lo fora da DLL:
+
+```
+if (*ulDataInDll == 0L)
+{
+   // Do stuff here
+}
+```
+
+Quando você marca os dados como **__declspec(dllimport)**, o compilador gera automaticamente o código de indireção para você. Você não precisa se preocupar sobre as etapas acima. Conforme mencionado anteriormente, não use **__declspec(dllimport)** declaração sobre os dados ao criar a DLL. Funções dentro da DLL não usam a tabela de endereços de importação para acessar o objeto de dados; Portanto, você não terá o nível extra de indireção presente.
+
+Para exportar os dados automaticamente da DLL, use essa declaração:
+
+```
+__declspec(dllexport) ULONG ulDataInDLL;
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Importando para um aplicativo](../build/importing-into-an-application.md)

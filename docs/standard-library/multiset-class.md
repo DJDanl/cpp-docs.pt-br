@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27bdcea6f7ebd51f000310f4916f16bfec7840e5
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8d45b08ee356fd217207b625ffe7bf4fb0abffec
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686621"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45708689"
 ---
 # <a name="multiset-class"></a>Classe multiset
 
@@ -117,15 +117,15 @@ class multiset
 ### <a name="parameters"></a>Parâmetros
 
 *Chave*<br/>
- O tipo de dados do elemento a ser armazenado no multiset.
+O tipo de dados do elemento a ser armazenado no multiset.
 
 *Compare*<br/>
- O tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no multiset. O predicado binário **less**\<Key> é o valor padrão.
+O tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no multiset. O predicado binário **less**\<Key> é o valor padrão.
 
 No C++ 14, você pode habilitar a pesquisa heterogênea ao especificar o predicado `std::less<>` ou o `std::greater<>`, que não tem nenhum parâmetro de tipo. Para obter mais informações, consulte [Pesquisa heterogênea em contêineres associativos](../standard-library/stl-containers.md#sequence_containers)
 
 *Alocador*<br/>
- O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação do multiset da memória. O valor padrão é `allocator<Key>`.
+O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação do multiset da memória. O valor padrão é `allocator<Key>`.
 
 ## <a name="remarks"></a>Comentários
 
@@ -482,7 +482,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- A chave dos elementos a serem correspondidos do multiset.
+A chave dos elementos a serem correspondidos do multiset.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -878,7 +878,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- A chave do argumento a ser comparada com a chave de classificação de um elemento do multiset que está sendo pesquisado.
+A chave do argumento a ser comparada com a chave de classificação de um elemento do multiset que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -963,16 +963,16 @@ size_type erase(
 ### <a name="parameters"></a>Parâmetros
 
 *Where*<br/>
- A posição do elemento a ser removido.
+A posição do elemento a ser removido.
 
 *Primeiro*<br/>
- A posição do primeiro elemento a ser removido.
+A posição do primeiro elemento a ser removido.
 
 *último*<br/>
- A posição logo após o último elemento a ser removido.
+A posição logo após o último elemento a ser removido.
 
 *Chave*<br/>
- O valor de chave dos elementos a serem removidos.
+O valor de chave dos elementos a serem removidos.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -998,7 +998,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- O valor da chave a ser comparado pela chave de classificação de um elemento do multiconjunto que está sendo pesquisado.
+O valor da chave a ser comparado pela chave de classificação de um elemento do multiconjunto que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1441,7 +1441,7 @@ iterator lower_bound(const Key& key);
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- A chave do argumento a ser comparada com a chave de classificação de um elemento do multiset que está sendo pesquisado.
+A chave do argumento a ser comparada com a chave de classificação de um elemento do multiset que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2048,7 +2048,7 @@ void swap(
 ### <a name="parameters"></a>Parâmetros
 
 *right*<br/>
- O multiset do argumento que fornece os elementos a serem trocados com o multiset de destino.
+O multiset do argumento que fornece os elementos a serem trocados com o multiset de destino.
 
 ### <a name="remarks"></a>Comentários
 
@@ -2117,7 +2117,7 @@ iterator upper_bound(const Key& key);
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- A chave do argumento a ser comparada com a chave de classificação de um elemento do multiset que está sendo pesquisado.
+A chave do argumento a ser comparada com a chave de classificação de um elemento do multiset que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 

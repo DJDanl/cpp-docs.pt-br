@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66291391ed38c27ce7446eccc6fca227c7c2c2d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ae096c502cdc94d47a516caf4c29ac4f3eceb4b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32373108"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705543"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (driver de modo Kernel do Windows NT)
 
@@ -35,33 +35,33 @@ ms.locfileid: "32373108"
 
 Use o **/DRIVER** opção de vinculador para criar um driver de modo de kernel do Windows NT.
 
-**/Driver: uponly** faz com que o vinculador adicionar o **IMAGE_FILE_UP_SYSTEM_ONLY** bit nas características no cabeçalho de saída para especificar que ele é um uniprocessador (UP) do driver. O sistema operacional irá recusar carregar um driver UP em um sistema de multiprocessador (MP).
+**/Driver: uponly** faz com que o vinculador adicionar o **image_file_up_system_only nas** bit características no cabeçalho de saída para especificar que ele é um uniprocessador (UP) do driver. O sistema operacional irá recusar carregar um driver UP em um sistema de multiprocessador (MP).
 
-**/Driver: WDM** faz com que o vinculador definir o **IMAGE_DLLCHARACTERISTICS_WDM_DRIVER** bit no campo de DllCharacteristics do cabeçalho opcional.
+**/Driver: WDM** faz com que o vinculador defina o **IMAGE_DLLCHARACTERISTICS_WDM_DRIVER** bit no campo DllCharacteristics do cabeçalho opcional.
 
 Se **/DRIVER** não for especificado, esses bits não são definidos pelo vinculador.
 
 Se **/DRIVER** for especificado:
 
-- **/Fixed:** está em vigor. Para obter mais informações, consulte [/FIXED (Endereço Básico Fixo)](../../build/reference/fixed-fixed-base-address.md).
+- **/Fixed: no** está em vigor. Para obter mais informações, consulte [/FIXED (Endereço Básico Fixo)](../../build/reference/fixed-fixed-base-address.md).
 
-- A extensão do arquivo de saída é definida como sys. Use **/out** para alterar o nome de arquivo padrão e a extensão. Para obter mais informações, consulte [/OUT (Nome do Arquivo de Saída)](../../build/reference/out-output-file-name.md).
+- A extensão do arquivo de saída é definida como. sys. Use **/out** para alterar o nome de arquivo padrão e a extensão. Para obter mais informações, consulte [/OUT (Nome do Arquivo de Saída)](../../build/reference/out-output-file-name.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
 
 1. Clique o **vinculador** pasta.
 
 1. Clique o **sistema** página de propriedades.
 
-1. Modificar o **Driver** propriedade.
+1. Modificar a **Driver** propriedade.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 
-- Consulte [VCLinkerTool.driver propriedade](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver?view=visualstudiosdk-2017#Microsoft_VisualStudio_VCProjectEngine_VCLinkerTool_driver).
+- Ver [VCLinkerTool.driver propriedade](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver?view=visualstudiosdk-2017#Microsoft_VisualStudio_VCProjectEngine_VCLinkerTool_driver).
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
+[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
 [Opções do vinculador](../../build/reference/linker-options.md)

@@ -34,16 +34,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb7c31dca2d95232850140576be3ddc0ac695cac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6755025ff07d79b7e6086fc8c8a59a3bdebdb777
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377826"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725251"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (expansão de função embutida)
 
-Expressão embutida de controles de funções.
+Controla a expansão embutida de funções.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -51,35 +51,35 @@ Expressão embutida de controles de funções.
 
 ## <a name="arguments"></a>Arguments
 
-**0**  
-Desabilita expansões embutida. Por padrão, expansão ocorre ao julgamento do compilador em todas as funções, conhecida como *automática inlining*.
+**0**<br/>
+Desabilita expansões embutido. Por padrão, expansão ocorre, a critério do compilador em todas as funções, geralmente denominados *automática inlining*.
 
-**1**  
-Permite expansão apenas de funções assinaladas como [embutido](../../cpp/inline-functions-cpp.md), `__inline`, ou `__forceinline`, ou em uma função de membro de C++ definidas em uma declaração de classe.
+**1**<br/>
+Permite expansão apenas das funções marcadas [embutido](../../cpp/inline-functions-cpp.md), `__inline`, ou `__forceinline`, ou em uma função de membro C++ definidos em uma declaração de classe.
 
-**2**  
-O valor padrão. Permite que a expansão das funções assinaladas como `inline`, `__inline`, ou `__forceinline`e qualquer outra função que o compilador escolha.
+**2**<br/>
+O valor padrão. Permite a expansão das funções marcadas como `inline`, `__inline`, ou `__forceinline`e qualquer outra função que o compilador escolhe.
 
-**/Ob2** está em vigor quando [/O1, /O2 (minimizar tamanho, maximizar velocidade)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) ou [/Ox (habilitar mais velocidade otimizações)](../../build/reference/ox-full-optimization.md) é usado.
+**/ Ob2** está em vigor quando [/O1, / O2 (minimizar tamanho, maximizar velocidade)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) ou [/Ox (habilitar mais otimizações de velocidade)](../../build/reference/ox-full-optimization.md) é usado.
 
-Essa opção requer que você habilite otimizações usando **/O1**, **/O2**, **/Ox**, ou **/Og**.  
+Essa opção exige que você habilite otimizações usando **/O1**, **/O2**, **/Ox**, ou **/Og**.
 
 ## <a name="remarks"></a>Comentários
 
-O compilador trata as opções de expansão embutida e as palavras-chave como sugestões. Não há nenhuma garantia de qualquer função linha expandida. Você pode desabilitar expansões embutida, mas não é possível forçar o compilador embutido uma determinada função, mesmo ao usar o `__forceinline` palavra-chave.
+O compilador trata as opções de expansão embutida e as palavras-chave como sugestões. Não há nenhuma garantia de que todas as funções serão embutidas expandidas. Você pode desabilitar expansões embutido, mas você não pode forçar o compilador a embutir uma função específica, mesmo ao usar o `__forceinline` palavra-chave.
 
-Você pode usar o `#pragma` [auto_inline](../../preprocessor/auto-inline.md) diretiva para excluir funções da consideração como candidatos para expansão embutida. Consulte também o `#pragma` [intrínseco](../../preprocessor/intrinsic.md) diretiva.
+Você pode usar o `#pragma` [auto_inline](../../preprocessor/auto-inline.md) diretiva para excluir funções da consideração como candidatos para a expansão embutida. Consulte também o `#pragma` [intrínseco](../../preprocessor/intrinsic.md) diretiva.
 
 > [!NOTE]
-> Informações coletadas de execuções de teste de criação de perfil substituem otimizações que estariam em vigor se você especificar **/Ob**, **/Os**, ou **/Ot**. Para obter mais informações, consulte [Profile-Guided otimizações](../../build/reference/profile-guided-optimizations.md).
+> Informações coletadas de execuções de teste de criação de perfil substituem as otimizações que seriam em vigor se você especificar **/Ob**, **/Os**, ou **/Ot**. Para obter mais informações, consulte [otimizações guiadas pelo perfil](../../build/reference/profile-guided-optimizations.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
 
-1. Expanda **propriedades de configuração**, **C/C++** e selecione **otimização**.
+1. Expandir **propriedades de configuração**, **C/C++** e selecione **otimização**.
 
-1. Modificar o **expansão de função embutida** propriedade.
+1. Modificar a **expansão embutida de função** propriedade.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 
@@ -87,6 +87,6 @@ Você pode usar o `#pragma` [auto_inline](../../preprocessor/auto-inline.md) dir
 
 ## <a name="see-also"></a>Consulte também
 
-[Opções /O (otimizar código)](../../build/reference/o-options-optimize-code.md)  
-[Opções do Compilador](../../build/reference/compiler-options.md)  
+[/O opções (otimizar código)](../../build/reference/o-options-optimize-code.md)
+[opções do compilador](../../build/reference/compiler-options.md)<br/>
 [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

@@ -19,15 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ebca4a94fa48feb4ff5fb897293303a395ac4eb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f57db502be6e34d275e3aba0e7705992b3c4d0d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33133773"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701617"
 ---
 # <a name="marshalas"></a>marshal_as
-Este método converte dados entre ambientes gerenciados e nativos.  
+Esse método converte os dados entre ambientes nativos e gerenciados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,18 +38,18 @@ To_Type marshal_as<To_Type>(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [in] `input`  
- O valor que você deseja empacotar um `To_Type` variável.  
+*input*<br/>
+[in] O valor que você deseja realizar marshaling para um `To_Type` variável.  
   
 ## <a name="return-value"></a>Valor de retorno  
  Uma variável do tipo `To_Type` que é o valor convertido de `input`.  
   
 ## <a name="remarks"></a>Comentários  
- Esse método é uma maneira simplificada para converter os dados entre os tipos nativos e gerenciados. Para determinar quais tipos de dados têm suporte, consulte [visão geral de Marshaling no C++](../dotnet/overview-of-marshaling-in-cpp.md). Algumas conversões de dados exigem um contexto. Você pode converter esses tipos de dados usando o [classe marshal_context](../dotnet/marshal-context-class.md).  
+ Esse método é uma maneira simplificada de converter dados entre tipos nativos e gerenciados. Para determinar quais tipos de dados têm suporte, consulte [visão geral de Marshaling no C++](../dotnet/overview-of-marshaling-in-cpp.md). Algumas conversões de dados exigem um contexto. Você pode converter esses tipos de dados usando o [classe marshal_context](../dotnet/marshal-context-class.md).  
   
- Se você tentar realizar marshaling de um par de tipos de dados que não são suportados, `marshal_as` irá gerar um erro [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) em tempo de compilação. Leia a mensagem fornecida com este erro para obter mais informações. O `C4996` erro pode ser gerado para as funções mais de apenas preteridas. Um exemplo disso é tentar realizar marshaling de um par de tipos de dados que não são suportados.  
+ Se você tentar realizar marshaling de um par de tipos de dados que não são suportados `marshal_as` irá gerar um erro [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) em tempo de compilação. Leia a mensagem fornecida com este erro para obter mais informações. O `C4996` erro pode ser gerado para funções preteridas mais de apenas. Um exemplo disso está tentando realizar marshaling de um par de tipos de dados que não têm suporte.  
   
- A biblioteca de marshaling consiste em vários arquivos de cabeçalho. Qualquer conversão requer apenas um arquivo, mas você pode incluir arquivos adicionais se você precisa para outras conversões. Para ver quais conversões estão associados com os arquivos, veja na tabela `Marshaling Overview`. O requisito de espaço para nome independentemente de qual conversão você deseja fazer, está sempre em vigor.  
+ A biblioteca de marshaling consiste em vários arquivos de cabeçalho. Qualquer conversão requer apenas um arquivo, mas você pode incluir arquivos adicionais, se você precisar de outras conversões. Para ver quais conversões são associados a quais arquivos, examine a tabela no `Marshaling Overview`. O requisito de espaço para nome independentemente de quais conversão você deseja fazer, está sempre em vigor.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo realiza marshaling de uma `const char*` para um `System::String` tipo de variável.  
@@ -78,5 +78,5 @@ int main() {
  **Namespace:** msclr::interop  
   
 ## <a name="see-also"></a>Consulte também  
- [Visão geral de Marshaling em C++](../dotnet/overview-of-marshaling-in-cpp.md)   
+ [Visão geral de Marshaling no C++](../dotnet/overview-of-marshaling-in-cpp.md)   
  [Classe marshal_context](../dotnet/marshal-context-class.md)

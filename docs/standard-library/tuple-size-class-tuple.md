@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c03c47502fdd9309b3d6553c3f46f9685d4eaa9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 883e7bdefe4bc1424dfea343d8d473015e6387d6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38958260"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700213"
 ---
 # <a name="tuplesize-class"></a>Classe tuple_size;
 
@@ -66,22 +66,22 @@ template <class Tuple>
 
 ### <a name="parameters"></a>Parâmetros
 
-*Tuple*  
+*Tuple*<br/>
 O tipo da tupla.
 
-*Elem*  
+*Elem*<br/>
 O tipo dos elementos da matriz.
 
-*Size*  
+*Size*<br/>
 O tamanho da matriz.
 
-*T1*  
+*T1*<br/>
 O tipo do primeiro membro do par.
 
-*T2*  
+*T2*<br/>
 O tipo do segundo membro do par.
 
-*Tipos*  
+*Tipos*<br/>
 Os tipos dos elementos da tupla.
 
 ## <a name="remarks"></a>Comentários

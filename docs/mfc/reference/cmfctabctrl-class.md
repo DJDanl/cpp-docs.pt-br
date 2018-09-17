@@ -114,12 +114,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 758b2039168825ec95a14b84b1c4c589618e7c24
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ad50deb1cb500abb532acac8c3c0d035c37b87ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680098"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726434"
 ---
 # <a name="cmfctabctrl-class"></a>Classe CMFCTabCtrl
 O `CMFCTabCtrl` classe fornece funcionalidade para um controle guia. O controle de guia exibe uma janela encaixável com guias planas ou tridimensionais na parte superior ou inferior. As guias podem exibir texto e imagem e podem alterar a cor quando ativos.  
@@ -265,8 +265,8 @@ void ActivateMDITab(int nTab = -1);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nTab*  
- O índice baseado em zero de uma guia para exibir ou -1 para especificar a guia ativa no momento.  
+*nTab*<br/>
+[in] O índice baseado em zero de uma guia para exibir ou -1 para especificar a guia ativa no momento.  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
  Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
@@ -288,8 +288,8 @@ void AutoSizeWindow(BOOL bAutoSize = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAutoSize*  
- TRUE para redimensionar automaticamente o windows de controle de guia; Caso contrário, FALSE. O valor padrão é TRUE.  
+*bAutoSize*<br/>
+[in] TRUE para redimensionar automaticamente o windows de controle de guia; Caso contrário, FALSE. O valor padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -307,23 +307,23 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *estilo*  
- O estilo do controle guia. Para obter mais informações, consulte Comentários.  
+*style*<br/>
+[in] O estilo do controle guia. Para obter mais informações, consulte Comentários.  
   
- [in] *rect*  
- Um retângulo que delimita o controle de guia.  
+*Rect*<br/>
+[in] Um retângulo que delimita o controle de guia.  
   
- [in] *pParentWnd*  
- Um ponteiro para uma janela pai. Não deve ser NULL.  
+*pParentWnd*<br/>
+[in] Um ponteiro para uma janela pai. Não deve ser NULL.  
   
- [in] *nID*  
- A ID do controle guia.  
+*nID*<br/>
+[in] A ID do controle guia.  
   
- [in] *local*  
- O local das guias. O valor padrão é LOCATION_BOTTOM. Para obter mais informações, consulte Comentários.  
+*Local*<br/>
+[in] O local das guias. O valor padrão é LOCATION_BOTTOM. Para obter mais informações, consulte Comentários.  
   
- [in] *bCloseBtn*  
- TRUE para exibir um botão Fechar na guia. Caso contrário, FALSE. O valor padrão é FALSE.  
+*bCloseBtn*<br/>
+[in] TRUE para exibir um botão Fechar na guia. Caso contrário, FALSE. O valor padrão é FALSE.  
   
 ### <a name="return-value"></a>Valor de retorno  
  VERDADEIRO se bem-sucedido; Caso contrário, FALSE.  
@@ -362,8 +362,8 @@ virtual void CalcRectEdit(CRect& rectEdit);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *rectEdit*  
- Um retângulo que especifica a área de uma guia.  
+*rectEdit*<br/>
+[in] Um retângulo que especifica a área de uma guia.  
   
 ### <a name="remarks"></a>Comentários  
  Este método é chamado quando você altera o rótulo de uma guia. Esse método esvazia os lados esquerdo e direito do retângulo especificado pela metade a altura da guia atual e compacta os superior e inferior de uma unidade.  
@@ -376,8 +376,8 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- TRUE para exibir o botão Fechar na guia ativa. FALSE para exibir o botão Fechar no canto superior direito da área da guia. O valor padrão é TRUE.  
+*bAtivar*<br/>
+[in] TRUE para exibir o botão Fechar na guia ativa. FALSE para exibir o botão Fechar no canto superior direito da área da guia. O valor padrão é TRUE.  
   
 ##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit  
  Habilita ou desabilita os rótulos de guia editável.  
@@ -387,8 +387,8 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- TRUE para ativar rótulos de guia editável; FALSE para desativar os rótulos de guia editável.  
+*bAtivar*<br/>
+[in] TRUE para ativar rótulos de guia editável; FALSE para desativar os rótulos de guia editável.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -400,8 +400,8 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- TRUE para exibir um menu pop-up de rótulos de janela com guias; FALSE para exibir botões de rolagem para frente e para trás. O valor padrão é TRUE.  
+*bAtivar*<br/>
+[in] TRUE para exibir um menu pop-up de rótulos de janela com guias; FALSE para exibir botões de rolagem para frente e para trás. O valor padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
  Quando o usuário clica em um rótulo de guia, o framework exibe a janela com guias correspondente. Se o rótulo de guia estiver visível, a janela com guias é aberta sem alterar sua posição. Se o usuário seleciona um documento no menu pop-up e a janela com guias correspondente está fora da tela, a janela com guias torna-se a primeira guia.  
@@ -414,8 +414,8 @@ virtual BOOL EnsureVisible(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- O índice baseado em zero de uma guia.  
+*iTab*<br/>
+[in] O índice baseado em zero de uma guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se for bem-sucedida; FALSE se o *iTab* índice do parâmetro é inválido.  
@@ -431,8 +431,8 @@ static HICON __stdcall GetDocumentIcon(UINT nCmdID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nCmdID*  
- A ID de comando de uma guia em um menu pop-up das janelas com guias.  
+*nCmdID*<br/>
+[in] A ID de comando de uma guia em um menu pop-up das janelas com guias.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O identificador de uma imagem de bitmap.  
@@ -483,11 +483,11 @@ void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *rectTabAreaTop*  
- Quando este método retorna, esta referência contém um retângulo que delimita a área de rótulo da guia superior. O retângulo é nas coordenadas do cliente. Essa referência é vazia se não existe nenhuma área de rótulo de guia na parte superior do controle guia.  
+*rectTabAreaTop*<br/>
+[out] Quando este método retorna, esta referência contém um retângulo que delimita a área de rótulo da guia superior. O retângulo é nas coordenadas do cliente. Essa referência é vazia se não existe nenhuma área de rótulo de guia na parte superior do controle guia.  
   
- [out] *rectTabAreaBottom*  
- Quando este método retorna, esta referência contém um retângulo que delimita a área de rótulo de guia inferior. O retângulo é nas coordenadas do cliente. Essa referência é vazia se não existe nenhuma área de rótulo de guia na parte inferior do controle guia.  
+*rectTabAreaBottom*<br/>
+[out] Quando este método retorna, esta referência contém um retângulo que delimita a área de rótulo de guia inferior. O retângulo é nas coordenadas do cliente. Essa referência é vazia se não existe nenhuma área de rótulo de guia na parte inferior do controle guia.  
   
 ### <a name="remarks"></a>Comentários  
  Use esse método para determinar o tamanho e posição da área da guia na janela com guias.  
@@ -523,8 +523,8 @@ virtual void GetTabsRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *rect*  
- Quando este método retorna, o *rect* parâmetro contém um retângulo que delimita a área da guia.  
+*Rect*<br/>
+[out] Quando este método retorna, o *rect* parâmetro contém um retângulo que delimita a área da guia.  
   
 ##  <a name="getwndarea"></a>  CMFCTabCtrl::GetWndArea  
  Recupera os limites da área de cliente do controle guia atual.  
@@ -534,8 +534,8 @@ void GetWndArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [no, out] *rect*  
- Quando este método retorna, este parâmetro conterá um retângulo que delimita o controle de guia atual.  
+*Rect*<br/>
+[no, out] Quando este método retorna, este parâmetro conterá um retângulo que delimita o controle de guia atual.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -557,8 +557,8 @@ void HideInactiveWindow(BOOL bHide = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bHide*  
- TRUE para não exibir uma janela inativa. FALSE para exibir uma janela inativa. O valor padrão é TRUE.  
+*bHide*<br/>
+[in] TRUE para não exibir uma janela inativa. FALSE para exibir uma janela inativa. O valor padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -570,8 +570,8 @@ void HideNoTabs(BOOL bHide=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bHide*  
- TRUE para habilitar a área da guia; de desenho FALSE para desabilitar o desenho. O valor padrão é TRUE.  
+*bHide*<br/>
+[in] TRUE para habilitar a área da guia; de desenho FALSE para desabilitar o desenho. O valor padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -583,8 +583,8 @@ virtual void HideSingleTab(BOOL bHide=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bHide*  
- TRUE para não desenhar uma guia para uma única janela com guias; FALSE para desenhar uma única guia. O valor padrão é TRUE.  
+*bHide*<br/>
+[in] TRUE para não desenhar uma guia para uma única janela com guias; FALSE para desenhar uma única guia. O valor padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -749,8 +749,8 @@ BOOL ModifyTabStyle(Style style);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *estilo*  
- Um dos valores de enumeração que especifica a aparência do controle guia. Para obter mais informações, consulte a tabela em comentários.  
+*style*<br/>
+[in] Um dos valores de enumeração que especifica a aparência do controle guia. Para obter mais informações, consulte a tabela em comentários.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Sempre TRUE.  
@@ -780,14 +780,14 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDataObject*  
- Aponta para um objeto de dados que contém dados que o usuário arrasta.  
+*pDataObject*<br/>
+[in] Aponta para um objeto de dados que contém dados que o usuário arrasta.  
   
- [in] *dwKeyState*  
- Contém o estado das teclas modificadoras. Esse parâmetro é uma combinação bit a bit (OR) dos seguintes valores: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Para obter mais informações, consulte o **parâmetros de mensagem** seção [sobre entradas de Mouse](/windows/desktop/inputdev/about-mouse-input).  
+*dwKeyState*<br/>
+[in] Contém o estado das teclas modificadoras. Esse parâmetro é uma combinação bit a bit (OR) dos seguintes valores: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Para obter mais informações, consulte o **parâmetros de mensagem** seção [sobre entradas de Mouse](/windows/desktop/inputdev/about-mouse-input).  
   
- [in] *ponto*  
- Contém o local atual do cursor em coordenadas do cliente.  
+*ponto*<br/>
+[in] Contém o local atual do cursor em coordenadas do cliente.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Sempre DROPEFFECT_NONE, que significa que o destino de soltar não pode aceitar os dados.  
@@ -808,14 +808,14 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDataObject*  
- Ponteiro para um [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto que está sendo arrastado sobre o destino de soltar.  
+*pDataObject*<br/>
+[in] Ponteiro para um [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto que está sendo arrastado sobre o destino de soltar.  
   
- [in] *dwKeyState*  
- O estado das teclas modificadoras, que é uma combinação bit a bit (OR) de MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Para obter mais informações, consulte "Parâmetros de mensagem" em [sobre a entrada do Mouse](/windows/desktop/inputdev/about-mouse-input).  
+*dwKeyState*<br/>
+[in] O estado das teclas modificadoras, que é uma combinação bit a bit (OR) de MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON e MK_RBUTTON. Para obter mais informações, consulte "Parâmetros de mensagem" em [sobre a entrada do Mouse](/windows/desktop/inputdev/about-mouse-input).  
   
- [in] *ponto*  
- A posição atual do mouse.  
+*ponto*<br/>
+[in] A posição atual do mouse.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Sempre DROPEFFECT_NONE.  
@@ -831,8 +831,8 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *ponto*  
- As coordenadas do onde exibir o menu pop-up.  
+*ponto*<br/>
+[in] As coordenadas do onde exibir o menu pop-up.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -844,8 +844,8 @@ void SetActiveInMDITabGroup(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bScripts Ativos*  
- TRUE para tornar a guia ativa; a guia atual FALSE para tornar a guia atual inativa.  
+*bScripts Ativos*<br/>
+[in] TRUE para tornar a guia ativa; a guia atual FALSE para tornar a guia atual inativa.  
   
 ### <a name="remarks"></a>Comentários  
  Você pode organizar várias janelas de documento em qualquer um dos grupos de guias verticais ou horizontais e embaralhar os documentos com facilidade de um grupo de guias para outro.  
@@ -858,8 +858,8 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTab*  
- Especifica o índice baseado em zero da guia para ativar.  
+*iTab*<br/>
+[in] Especifica o índice baseado em zero da guia para ativar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a guia especificada tiver sido feita ativa; FALSE se especificado *iTab* o valor do parâmetro é inválido.  
@@ -877,8 +877,8 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bIsBold*  
- TRUE para usar uma fonte em negrito para exibir o rótulo da guia Active Directory; FALSE para usar a fonte padrão para exibir o rótulo. O valor padrão é TRUE.  
+*bIsBold*<br/>
+[in] TRUE para usar uma fonte em negrito para exibir o rótulo da guia Active Directory; FALSE para usar a fonte padrão para exibir o rótulo. O valor padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -890,8 +890,8 @@ void SetDrawFrame(BOOL bDraw=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bDraw*  
- TRUE para exibir um retângulo de quadro em torno de uma barra embedded; Caso contrário, FALSE. O valor padrão é TRUE.  
+*bDraw*<br/>
+[in] TRUE para exibir um retângulo de quadro em torno de uma barra embedded; Caso contrário, FALSE. O valor padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -905,11 +905,11 @@ void SetFlatFrame(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bFlat*  
- TRUE para desenhar um quadro simples (2D) ao redor da área da guia; FALSE para desenhar um quadro de tridimensional (3D). O valor padrão é TRUE.  
+*bFlat*<br/>
+[in] TRUE para desenhar um quadro simples (2D) ao redor da área da guia; FALSE para desenhar um quadro de tridimensional (3D). O valor padrão é TRUE.  
   
- [in] *bRepaint*  
- TRUE para redesenhar a janela imediatamente; Caso contrário, FALSE. O valor padrão é TRUE.  
+*bRepaint*<br/>
+[in] TRUE para redesenhar a janela imediatamente; Caso contrário, FALSE. O valor padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -926,17 +926,17 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiID*  
- A ID de um recurso de bitmap que contém a lista de imagens.  
+*uiID*<br/>
+[in] A ID de um recurso de bitmap que contém a lista de imagens.  
   
- [in] *cx*  
- A largura de cada imagem, em pixels. O valor padrão é 15.  
+*CX*<br/>
+[in] A largura de cada imagem, em pixels. O valor padrão é 15.  
   
- [in] *clrTransp*  
- A cor da imagem transparente. As partes da imagem que têm essa cor será transparentes. O valor padrão é a cor magenta RGB(255,0,255).  
+*clrTransp*<br/>
+[in] A cor da imagem transparente. As partes da imagem que têm essa cor será transparentes. O valor padrão é a cor magenta RGB(255,0,255).  
   
- [in] *hImageList*  
- Um identificador para uma lista de imagem pré-carregada.  
+*hImageList*<br/>
+[in] Um identificador para uma lista de imagem pré-carregada.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se este método for bem-sucedido. FALSE se o controle de guia é criado usando um estilo simples ou se a primeira sobrecarga de método não é possível carregar o bitmap que é especificado pela *uiID* parâmetro.  
@@ -954,8 +954,8 @@ void SetResizeMode(ResizeMode resizeMode);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *resizeMode*  
- Um do `CMFCTabCtrl::ResizeMode` valores de enumeração que especifica como o controle de guia pode ser redimensionado. Para obter uma lista de valores possíveis, consulte a tabela em comentários.  
+*resizeMode*<br/>
+[in] Um do `CMFCTabCtrl::ResizeMode` valores de enumeração que especifica como o controle de guia pode ser redimensionado. Para obter uma lista de valores possíveis, consulte a tabela em comentários.  
   
 ### <a name="remarks"></a>Comentários  
  O *resizeMode* parâmetro pode ser um dos seguintes `ResizeMode` valores de enumeração.  
@@ -974,8 +974,8 @@ void SetTabMaxWidth(int nTabMaxWidth);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nTabMaxWidth*  
- A largura máxima do guia, em pixels.  
+*nTabMaxWidth*<br/>
+[in] A largura máxima do guia, em pixels.  
   
 ### <a name="remarks"></a>Comentários  
  Use esse método para limitar a largura de cada guia em uma janela com guias. Esse método é útil se as guias têm rótulos muito longos. O [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md) construtor da classe inicializa a largura máxima de guia como 0, o que realmente significa que a largura não é limitada.  
@@ -988,8 +988,8 @@ void StopResize(BOOL bCancel);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bCancelar*  
- TRUE para abandonar a operação de redimensionamento atual; FALSE para concluir as operação de redimensionamento atual. Em ambos os casos, o framework para desenhar o retângulo de redimensionamento.  
+*bCancelar*<br/>
+[in] TRUE para abandonar a operação de redimensionamento atual; FALSE para concluir as operação de redimensionamento atual. Em ambos os casos, o framework para desenhar o retângulo de redimensionamento.  
   
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar  
  Desenha uma barra de rolagem horizontal em um controle guia que exibe as guias de planas.  
@@ -999,8 +999,8 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *pScrollInfo*  
- Ponteiro para um [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) estrutura ou NULL. Quando este método retorna, e se esse parâmetro não for nulo, a estrutura contém todos os parâmetros da barra de rolagem. O valor padrão é NULL.  
+*pScrollInfo*<br/>
+[out] Ponteiro para um [SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo) estrutura ou NULL. Quando este método retorna, e se esse parâmetro não for nulo, a estrutura contém todos os parâmetros da barra de rolagem. O valor padrão é NULL.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se este método for bem-sucedido; Caso contrário, FALSE.  

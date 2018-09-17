@@ -1,5 +1,5 @@
 ---
-title: -vmm, - vms, - /vmv (representação de finalidade geral) | Microsoft Docs
+title: -vmm, - vms, - vmv (representação de finalidade geral) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -29,50 +29,53 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd2f79238c890d43678332203acbe9d935a54102
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d4e790281cd23ba43987ec6ab003787c115150be
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379556"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701295"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (representação de finalidade geral)
-Usado quando [/vmb, /vmg (método de representação)](../../build/reference/vmb-vmg-representation-method.md) é selecionado como o [método de representação](../../build/reference/vmb-vmg-representation-method.md). Essas opções indicarem o modelo de herança da definição de classe ainda não encontrado.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-/vmm  
-/vms  
-/vmv  
-```  
-  
-## <a name="remarks"></a>Comentários  
- As opções são descritas na tabela a seguir.  
-  
-|Opção|Descrição|  
-|------------|-----------------|  
-|**/vmm**|Especifica a representação mais geral de um ponteiro para um membro de uma classe para que usa várias heranças.<br /><br /> O correspondente [palavra-chave de herança](../../cpp/inheritance-keywords.md) e argumento [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) é **multiple_inheritance**.<br /><br /> Essa representação é maior do que o necessário para herança única.<br /><br /> Se o modelo de herança de uma definição de classe para o qual um ponteiro para um membro é declarado é virtual, o compilador gerará um erro.|  
-|**/vms**|Especifica a representação mais geral de um ponteiro para um membro de uma classe para que não usa herança única ou nenhuma herança.<br /><br /> O correspondente [palavra-chave de herança](../../cpp/inheritance-keywords.md) e argumento [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) é **single_inheritance**.<br /><br /> Esta é a menor representação possíveis de um ponteiro para um membro de uma classe.<br /><br /> Se o modelo de herança de uma definição de classe para o qual um ponteiro para um membro é declarado for múltipla ou virtual, o compilador gerará um erro.|  
-|**/vmv**|Especifica a representação mais geral de um ponteiro para um membro de uma classe para que usa herança virtual. Ele nunca faz com que um erro e é o padrão.<br /><br /> O correspondente [palavra-chave de herança](../../cpp/inheritance-keywords.md) e argumento [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) é **virtual_inheritance**.<br /><br /> Essa opção requer um ponteiro maior e o código adicional para interpretar o ponteiro que as outras opções.|  
-  
- Quando você especificar uma dessas opções de modelo de herança, esse modelo é usado para todos os ponteiros para membros de classe, independentemente de seu tipo de herança ou se o ponteiro é declarado antes ou depois da classe. Portanto, se você sempre pode usar classes de herança simples, você pode reduzir o tamanho de código ao compilar com **/vms**; no entanto, se você quiser usar o caso mais geral (às custas de maior representação de dados), compile com **/vmv**.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
-  
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
-  
-2.  Clique o **C/C++** pasta.  
-  
-3.  Clique o **linha de comando** página de propriedades.  
-  
-4.  Digite a opção de compilador no **opções adicionais** caixa.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
-  
--   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Consulte também  
- [/vmb, /vmg (método de representação)](../../build/reference/vmb-vmg-representation-method.md)   
- [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+
+Usado quando [/vmb, /vmg (método de representação)](../../build/reference/vmb-vmg-representation-method.md) está selecionado como o [método de representação](../../build/reference/vmb-vmg-representation-method.md). Essas opções indicam o modelo de herança da definição de classe ainda não encontrado.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+/vmm
+/vms
+/vmv
+```
+
+## <a name="remarks"></a>Comentários
+
+As opções são descritas na tabela a seguir.
+
+|Opção|Descrição|
+|------------|-----------------|
+|**/vmm**|Especifica a representação mais geral de um ponteiro para um membro de uma classe para ser um que usa herança múltipla.<br /><br /> Correspondente [palavra-chave de herança](../../cpp/inheritance-keywords.md) e o argumento [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) está **multiple_inheritance**.<br /><br /> Essa representação é maior do que o necessário para a herança única.<br /><br /> Se o modelo de herança de uma definição de classe para a qual um ponteiro para um membro é declarado é virtual, o compilador gera um erro.|
+|**/vms**|Especifica a representação mais geral de um ponteiro para um membro de uma classe para ser um que não usa herança única ou nenhuma herança.<br /><br /> Correspondente [palavra-chave de herança](../../cpp/inheritance-keywords.md) e o argumento [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) está **single_inheritance**.<br /><br /> Isso é a menor representação possível de um ponteiro para um membro de uma classe.<br /><br /> Se o modelo de herança de uma definição de classe para a qual um ponteiro para um membro é declarado é múltiplo ou virtual, o compilador gera um erro.|
+|**/vmv**|Especifica a representação mais geral de um ponteiro para um membro de uma classe para ser um que usa herança virtual. Ele nunca faz com que um erro e é o padrão.<br /><br /> Correspondente [palavra-chave de herança](../../cpp/inheritance-keywords.md) e o argumento [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) está **virtual_inheritance**.<br /><br /> Essa opção requer um ponteiro maior e o código adicional para interpretar o ponteiro que as outras opções.|
+
+Quando você especificar uma dessas opções de modelo de herança, esse modelo é usado para todos os ponteiros para membros de classe, independentemente de seu tipo de herança ou se o ponteiro é declarado antes ou depois da classe. Portanto, se você sempre usar classes de herança simples, você pode reduzir o tamanho de código compilando com **/vms**; no entanto, se você quiser usar o caso mais geral (a custa a representação de dados maior), compilar com **/vmv**.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
+
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+
+1. Clique o **C/C++** pasta.
+
+1. Clique o **linha de comando** página de propriedades.
+
+1. Digite a opção de compilador na **opções adicionais** caixa.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
+
+- Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Consulte também
+
+[/vmb, /vmg (método de representação)](../../build/reference/vmb-vmg-representation-method.md)
+[opções do compilador](../../build/reference/compiler-options.md)<br/>
+[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

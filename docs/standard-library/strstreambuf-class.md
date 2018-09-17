@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7f52e0e62a831a77a7a00dc50aeecac45cd0fe9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2424ce23c0a376156bbb78869a2e33e501958e73
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960548"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719128"
 ---
 # <a name="strstreambuf-class"></a>Classe strstreambuf
 
@@ -103,8 +103,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Freezeit*  
- Um **bool** que indica se você deseja que o fluxo seja congelado.
+*_Freezeit*<br/>
+Um **bool** que indica se você deseja que o fluxo seja congelado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -191,8 +191,8 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Meta*  
- O caractere a ser inserido no buffer ou `EOF`.
+*_Meta*<br/>
+O caractere a ser inserido no buffer ou `EOF`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -216,8 +216,8 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Meta*  
- O caractere a ser inserido no buffer ou `EOF`.
+*_Meta*<br/>
+O caractere a ser inserido no buffer ou `EOF`.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -280,14 +280,14 @@ virtual streampos seekoff(streamoff _Off,
 
 ### <a name="parameters"></a>Parâmetros
 
-*Off*  
- A posição para buscar com relação a *Way*.
+*Off*<br/>
+A posição para buscar com relação a *Way*.
 
-*Way*  
- O ponto de partida para operações de deslocamento. Consulte [seekdir](../standard-library/ios-base-class.md#seekdir) para valores possíveis.
+*Way*<br/>
+O ponto de partida para operações de deslocamento. Consulte [seekdir](../standard-library/ios-base-class.md#seekdir) para valores possíveis.
 
-*_Which*  
- Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
+*_Which*<br/>
+Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -319,11 +319,11 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Sp*  
- A posição pela qual buscar.
+*_Sp*<br/>
+A posição pela qual buscar.
 
-*_Which*  
- Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
+*_Which*<br/>
+Especifica o modo para a posição do ponteiro. O padrão é permitir que você modifique as posições de leitura e gravação.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -389,20 +389,20 @@ strstreambuf(const unsigned char* _Getptr,
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Allocfunc*  
- A função usada para alocar memória do buffer.
+*_Allocfunc*<br/>
+A função usada para alocar memória do buffer.
 
-*count*  
- Determina o tamanho do buffer apontado por *_Getptr*. Se *_Getptr* não é um argumento (primeira forma do construtor), uma alocação sugerida de tamanho para os buffers.
+*count*<br/>
+Determina o tamanho do buffer apontado por *_Getptr*. Se *_Getptr* não é um argumento (primeira forma do construtor), uma alocação sugerida de tamanho para os buffers.
 
-*_Freefunc*  
- A função usada para liberar memória do buffer.
+*_Freefunc*<br/>
+A função usada para liberar memória do buffer.
 
-*_Getptr*  
- Um buffer usado para a entrada.
+*_Getptr*<br/>
+Um buffer usado para a entrada.
 
-*_Putptr*  
- Um buffer usado para a saída.
+*_Putptr*<br/>
+Um buffer usado para a saída.
 
 ### <a name="remarks"></a>Comentários
 

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44172ffdf7985b7ab304e232eb03b859313df6bc
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: a1e28b9c28823e77244bc6e686db163e5110a8fa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853758"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719960"
 ---
 # <a name="cmfccmdusagecount-class"></a>Classe CMFCCmdUsageCount
 Rastreia a contagem de uso de mensagens do Windows, como quando o usuário seleciona um item em um menu.  
@@ -104,7 +104,7 @@ void AddCmd(UINT uiCmd);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] *uiCmd*|Especifica o contador de comando para incrementar.|  
+|*uiCmd*|[in] Especifica o contador de comando para incrementar.|  
   
 ### <a name="remarks"></a>Comentários  
  Esse método adiciona uma nova entrada para a estrutura do mapa de contagens de comando, `m_CmdUsage`, se a entrada ainda não existir.  
@@ -129,7 +129,7 @@ UINT GetCount(UINT uiCmd) const;
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] *uiCmd*|A ID do contador de comando para recuperar.|  
+|*uiCmd*|[in] A ID do contador de comando para recuperar.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  A contagem de utilização que está associada com a ID do comando fornecido.  
@@ -161,7 +161,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] *uiCmd*|Especifica o comando para verificar.|  
+|*uiCmd*|[in] Especifica o comando para verificar.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se o comando é usado com frequência; Caso contrário, 0.  
@@ -193,7 +193,7 @@ virtual void Serialize(CArchive& ar);
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] *ar*|Um `CArchive` objeto a ser serializado de ou para o.|  
+|*ar*|[in] Um `CArchive` objeto a ser serializado de ou para o.|  
   
 ### <a name="remarks"></a>Comentários  
  Esse método serializa a estrutura do mapa de contagens de comando `m_CmdUsage`e o uso do comando total, `m_nTotalUsage`, contador de ou para o arquivo especificado.  
@@ -214,8 +214,8 @@ static BOOL __stdcall SetOptions(
 |||  
 |-|-|  
 |Parâmetro|Descrição|  
-|[in] *nStartCount*|A nova contagem inicial de comandos todos rastreados.|  
-|[in] *nMinUsagePercentage*|A porcentagem de uso mínimo de novo.|  
+|*nStartCount*|[in] A nova contagem inicial de comandos todos rastreados.|  
+|*nMinUsagePercentage*|[in] A porcentagem de uso mínimo de novo.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o método for bem-sucedido, FALSO se o *nMinUsagePercentage* parâmetro é maior que ou igual a 100.  

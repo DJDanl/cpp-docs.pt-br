@@ -17,41 +17,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8565022a77742a1a8c7ed1f243a192d94c8627fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b332782cb9bcd929bcd67d4d81b7a7d0259f53cc
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32374785"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45714591"
 ---
 # <a name="fs-force-synchronous-pdb-writes"></a>/FS (Forçar gravações PDB síncronas)
-Força grava o arquivo de programa (PDB) de banco de dados — criado por [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) ou [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)— a ser serializado por meio de MSPDBSRV. EXE.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-/FS  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Por padrão, quando **/Zi** ou **/ZI** for especificado, o compilador bloqueia arquivos PDB para gravar informações de tipo e informações simbólicas de depuração. Isso pode reduzir significativamente o tempo necessário ao compilador para gerar informações de tipo quando o número de tipos é grande. Se outro processo bloquear temporariamente o arquivo PDB — por exemplo, um programa antivírus — gravações pelo compilador poderão falhar e pode ocorrer um erro fatal. Esse problema também pode ocorrer quando várias cópias de cl.exe acessar o mesmo arquivo PDB — por exemplo, se sua solução tiver independente projetos que usam o mesmo intermediário de pastas ou diretórios de saída e compilações paralelas estão habilitadas. O **/FS** opção de compilador impede que o compilador bloqueando o arquivo PDB e forçará as gravações percorrer MSPDBSRV. EXE, que serializa o acesso. Isso pode tornar builds significativamente maiores, e ela não impede que todos os erros que podem ocorrer quando várias instâncias do cl.exe acessarem o arquivo PDB ao mesmo tempo. É recomendável que você altere sua solução para que os projetos independentes escreva separar intermediário e locais de saída, ou que você faça um dos projetos depende do outro para compilações de projeto de equipe serializado.  
-  
- O [/MP](../../build/reference/mp-build-with-multiple-processes.md) opção habilita **/FS** por padrão.  
-  
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio  
-  
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).  
-  
-2.  Selecione o **C/C++** pasta.  
-  
-3.  Selecione o **linha de comando** página de propriedades.  
-  
-4.  Modificar o **opções adicionais** propriedade incluir `/FS` e, em seguida, escolha **Okey**.  
-  
-### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação  
-  
--   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## <a name="see-also"></a>Consulte também  
- [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+
+Força grava no arquivo de banco de dados (PDB) do programa — criados pelo [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) ou [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)— a ser serializado por meio de MSPDBSRV. EXE.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+/FS
+```
+
+## <a name="remarks"></a>Comentários
+
+Por padrão, quando **/Zi** ou **/ZI** for especificado, o compilador bloqueia arquivos PDB para gravar informações de tipo e informações de depuração simbólicas. Isso pode reduzir significativamente o tempo que leva o compilador gerar informações de tipo quando o número de tipos é grande. Se outro processo bloquear temporariamente o arquivo PDB — por exemplo, um programa antivírus — gravações pelo compilador podem falhar e pode ocorrer um erro fatal. Esse problema também pode ocorrer quando várias cópias de cl.exe acessar o mesmo arquivo PDB — por exemplo, se sua solução tiver independentes diretórios de saída ou intermediário diretórios de projetos que usam o mesmo e compilações paralelas estão habilitadas. O **/FS** opção do compilador impede que o compilador está bloqueando o arquivo PDB e forçará as gravações para ir por meio de MSPDBSRV. EXE, que serializa o acesso. Isso pode tornar builds significativamente maiores, e ele não impede que todos os erros que podem ocorrer quando várias instâncias do cl.exe acessarem o arquivo PDB ao mesmo tempo. É recomendável que você altere sua solução para que os projetos independentes escreva separar intermediário e locais de saída, ou que você faça um dos projetos depende do outro para compilações de projetos de força serializada.
+
+O [/MP](../../build/reference/mp-build-with-multiple-processes.md) opção habilita **/FS** por padrão.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
+
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
+
+1. Selecione o **C/C++** pasta.
+
+1. Selecione o **linha de comando** página de propriedades.
+
+1. Modificar a **opções adicionais** propriedade incluir `/FS` e, em seguida, escolha **Okey**.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
+
+- Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>Consulte também
+
+[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
+[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

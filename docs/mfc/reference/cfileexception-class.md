@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d67f4fb4fdb6a46d00ef8cdf21559cf6043932e2
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 1339b291c92879beb7606b0dabe77904ad9f462e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37336514"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45713590"
 ---
 # <a name="cfileexception-class"></a>Classe CFileException
 Representa uma condição de exceção relacionada ao arquivo.  
@@ -148,14 +148,14 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [no, out] *lpszError*  
- Ponteiro para um buffer que recebe uma mensagem de erro.  
+*lpszError*<br/>
+[no, out] Ponteiro para um buffer que recebe uma mensagem de erro.  
   
- [in] *nMaxError*  
- O número máximo de caracteres que o buffer especificado pode conter. Isso inclui o caractere nulo de terminação.  
+*nMaxError*<br/>
+[in] O número máximo de caracteres que o buffer especificado pode conter. Isso inclui o caractere nulo de terminação.  
   
- [no, out] *pnHelpContext*  
- Ponteiro para um inteiro sem sinal que recebe a ID do contexto de Ajuda. Se `NULL`, nenhuma ID é retornado.  
+*pnHelpContext*<br/>
+[no, out] Ponteiro para um inteiro sem sinal que recebe a ID do contexto de Ajuda. Se `NULL`, nenhuma ID é retornado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o método foi bem-sucedida; Caso contrário, FALSE.  

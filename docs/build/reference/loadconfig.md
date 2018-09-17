@@ -18,22 +18,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83f418d0aaf82dbc9fefba5cbdc1bbf8b2c8bf94
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 582a8d666570b974ed97aea5ce2c882e29e4be44
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32372026"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45723632"
 ---
 # <a name="loadconfig"></a>/LOADCONFIG
-```  
-/LOADCONFIG  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Essa opção despejos de memória da estrutura IMAGE_LOAD_CONFIG_DIRECTORY, uma estrutura opcional que é usada pelo carregador do Windows NT e definida em WINNT. H.  
-  
- Somente o [/HEADERS](../../build/reference/headers.md) opção DUMPBIN está disponível para uso em arquivos produzidos com o [/GL](../../build/reference/gl-whole-program-optimization.md) opção de compilador.  
-  
-## <a name="see-also"></a>Consulte também  
- [Opções de DUMPBIN](../../build/reference/dumpbin-options.md)
+
+```
+/LOADCONFIG
+```
+
+## <a name="remarks"></a>Comentários
+
+Essa opção descarta a estrutura IMAGE_LOAD_CONFIG_DIRECTORY, uma estrutura opcional que é usada pelo carregador do Windows NT e definida em WINNT. H.
+
+Somente o [/HEADERS](../../build/reference/headers.md) opção DUMPBIN está disponível para uso em arquivos produzidos com o [/GL](../../build/reference/gl-whole-program-optimization.md) opção de compilador.
+
+## <a name="see-also"></a>Consulte também
+
+[Opções de DUMPBIN](../../build/reference/dumpbin-options.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b39a6889dfd8a28d65aebcab04881d4bc28ce1e
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: b86c2c4031e1257e2a8a8e0f7b504686ea1c4588
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403661"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701683"
 ---
 # <a name="inline-functions-c"></a>Funções embutidas (C++)
 Uma função definida no corpo de uma declaração de classe é uma função embutida.  
@@ -156,7 +156,8 @@ private:
   
  Funções recursivas podem ser substituídas embutidas até uma profundidade especificada pelo [inline_depth](../preprocessor/inline-depth.md) pragma, até um máximo de 16 chamadas. Após essa profundidade, as chamadas de função recursivas são tratadas como chamadas a uma instância da função.  A profundidade até a qual as funções recursivas são examinadas por heurística embutida não pode exceder 16. O [inline_recursion](../preprocessor/inline-recursion.md) pragma controla a expansão embutida de uma função atualmente abaixo da expansão. Consulte a [expansão embutida de função](../build/reference/ob-inline-function-expansion.md) (/ Ob) a opção de compilador para obter informações relacionadas.  
   
-**Fim da seção específica da Microsoft**  
+**Fim da seção específica da Microsoft**
+
  Para obter mais informações sobre como usar o **embutido** especificador, consulte:  
   
 -   [Funções de membro de classe embutidas](../cpp/inline-functions-cpp.md)  

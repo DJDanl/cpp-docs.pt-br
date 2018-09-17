@@ -1,5 +1,5 @@
 ---
-title: -Zp (alinhamento de membro de Struct) | Microsoft Docs
+title: -Zp (alinhamento de membro do Struct) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/30/2018
 ms.technology:
@@ -21,16 +21,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1666da40f748d18c762eae19595692addcdbf78a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0268f5c5d5d34d8fa244dc6260889bea6b1e837a
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380856"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715904"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (alinhamento de membro do Struct)
 
-Controla como os membros de uma estrutura são incluídos em memória e especifica a remessa mesmo para todas as estruturas em um módulo.
+Controla como os membros de uma estrutura são empacotados na memória e especifica o empacotamento mesmo para todas as estruturas em um módulo.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,7 +38,7 @@ Controla como os membros de uma estrutura são incluídos em memória e especifi
 
 ## <a name="remarks"></a>Comentários
 
-Quando você especifica o **/Zp**_n_ opção, cada membro da estrutura depois que o primeiro é armazenado no tamanho do tipo de membro ou *n*-limites de bytes (onde *n* é 1, 2, 4, 8 ou 16), o que for menor.
+Quando você especifica o **/Zp**_n_ opção, cada membro da estrutura depois do primeiro é armazenado no tamanho do tipo de membro ou *n*-limites de bytes (em que *n* é 1, 2, 4, 8 ou 16), o que for menor.
 
 Os valores de remessa disponíveis são descritos na tabela a seguir:
 
@@ -50,12 +50,12 @@ Os valores de remessa disponíveis são descritos na tabela a seguir:
 |8|Empacota estruturas em limites de 8 bytes (padrão).|
 |16| Empacota estruturas em limites de 16 bytes.|
 
-Você não deve usar essa opção, a menos que você tem requisitos específicos de alinhamento.
+Você não deve usar essa opção, a menos que você tenha requisitos de alinhamento específico.
 
-> [!WARNING]  
-> Suponha que os cabeçalhos de C++ no SDK do Windows **/Zp8** de remessa. Memória corrupção pode ocorrer se o **/Zp** configuração é alterada quando o uso de cabeçalhos do SDK do Windows.
+> [!WARNING]
+> Suponha que os cabeçalhos de C++ no SDK do Windows **/zp8** de remessa. Memória corrupção pode ocorrer se o **/Zp** configuração é alterada quando o uso de cabeçalhos do SDK do Windows.
 
-Você também pode usar [pacote](../../preprocessor/pack.md) a remessa de estrutura de controle. Para obter mais informações sobre alinhamento, consulte:
+Você também pode usar [pack](../../preprocessor/pack.md) a empacotamento de estrutura de controle. Para obter mais informações sobre alinhamento, consulte:
 
 - [align](../../cpp/align-cpp.md)
 
@@ -67,17 +67,17 @@ Você também pode usar [pacote](../../preprocessor/pack.md) a remessa de estrut
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do compilador no ambiente de desenvolvimento do Visual Studio
 
-1.  Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [trabalhar com propriedades do projeto](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
 
 1. Selecione o **C/C++** > **geração de código** página de propriedades.
 
-1. Modificar o **alinhamento de membro de Struct** propriedade.
+1. Modificar a **alinhamento de membro de Struct** propriedade.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 
--   Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StructMemberAlignment%2A>.
+- Consulte <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StructMemberAlignment%2A>.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Opções do Compilador](../../build/reference/compiler-options.md)   
+- [Opções do Compilador](../../build/reference/compiler-options.md)
 - [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

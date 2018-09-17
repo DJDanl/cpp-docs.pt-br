@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d64d503c4bad0d452be174064e2932ed100d7de
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: ce47dc5fc0a1d05d2f7200539718fb11c60d810e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121751"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718855"
 ---
 # <a name="ctabview-class"></a>Classe CTabView
 O `CTabView` classe simplifica o uso da classe de controle de guia ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) em aplicativos que usam a arquitetura de documento/exibição do MFC.  
@@ -54,7 +54,7 @@ class CTabbedView : public CView
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CTabView::AddView](#addview)|Adiciona um novo modo de exibição para o controle de tabulação.|  
+|[CTabView::AddView](#addview)|Adiciona um novo modo de exibição para o controle de guia.|  
 |[CTabView::FindTab](#findtab)|Retorna o índice da exibição especificada no controle guia.|  
 |[CTabView::GetActiveView](#getactiveview)|Retorna um ponteiro para a exibição ativa no momento|  
 |[CTabView::GetTabControl](#gettabcontrol)|Retorna uma referência para o controle de guia associado com o modo de exibição.|  
@@ -65,13 +65,13 @@ class CTabbedView : public CView
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[CTabView::IsScrollBar](#isscrollbar)|Chamado pelo framework durante a criação de um modo de exibição da guia para determinar se o modo de exibição da guia tem uma barra de rolagem horizontal compartilhado.|  
-|[CTabView::OnActivateView](#onactivateview)|Chamado pelo framework quando o modo de exibição da guia fica ativo ou inativo.|  
+|[CTabView::IsScrollBar](#isscrollbar)|Chamado pelo framework durante a criação de um modo de exibição de guia para determinar se o modo de exibição da guia tem uma barra de rolagem horizontal compartilhado.|  
+|[CTabView::OnActivateView](#onactivateview)|Chamado pelo framework quando o modo de exibição de guia é feito ativo ou inativo.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa classe facilita colocar uma exibição com guias em um aplicativo de exibição de documentos. `CTabView` é um `CView`-derivado da classe que contém um embedded `CMFCTabCtrl` objeto. `CTabView` trata todas as mensagens necessárias para dar suporte a `CMFCTabCtrl` objeto. Simplesmente derive uma classe de `CTabView` e conectá-lo ao seu aplicativo, em seguida, adicionar `CView`-classes derivadas usando o `AddView` método. O controle de guia exibirá esses modos de exibição como guias.  
+ Essa classe facilita a colocar uma exibição com guias em um aplicativo de documento/exibição. `CTabView` é um `CView`-derivado da classe que contém um embedded `CMFCTabCtrl` objeto. `CTabView` manipula todas as mensagens necessárias para dar suporte a `CMFCTabCtrl` objeto. Simplesmente derive uma classe de `CTabView` e conectá-lo ao seu aplicativo e, em seguida, adicione `CView`-as classes derivadas usando o `AddView` método. O controle de guia exibirá esses modos de exibição como guias.  
   
- Por exemplo, você pode ter um documento que pode ser representado de formas diferentes: como uma planilha, um gráfico, um formulário editável e assim por diante. Você pode criar exibições individuais desenhar os dados conforme necessário, inseri-los em seu `CTabView`-objeto derivado e exibi-los com guias sem nenhuma codificação adicional.  
+ Por exemplo, você pode ter um documento que pode ser representado de formas diferentes: como uma planilha, um gráfico, um formulário editável e assim por diante. Você pode criar exibições individuais, os dados de desenho, conforme necessário, inseri-los em seu `CTabView`-objeto derivado e tê-las com guias sem qualquer codificação adicional.  
   
  [Exemplo TabbedView: Aplicativo de exibição com guias MFC](../../visual-cpp-samples.md) ilustra o uso de `CTabView`.  
   
@@ -84,7 +84,7 @@ class CTabbedView : public CView
  **Cabeçalho:** afxTabView.h  
   
 ##  <a name="addview"></a>  CTabView::AddView  
- Adiciona uma exibição para o controle de tabulação.  
+ Adiciona um modo de exibição para o controle de guia.  
   
 ```  
 int AddView(
@@ -95,23 +95,23 @@ int AddView(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pViewClass*  
- Um ponteiro para uma classe de tempo de execução do modo de exibição inserida.  
+*pViewClass*<br/>
+[in] Um ponteiro para uma classe de tempo de execução do modo de exibição inserida.  
   
- [in] *strViewLabel*  
- Especifica o texto da guia.  
+*strViewLabel*<br/>
+[in] Especifica o texto da guia.  
   
- [in] *iIndex*  
- Especifica a posição de base zero no qual inserir o modo de exibição. Se a posição é -1, que a nova guia é inserida no final.  
+*iIndex*<br/>
+[in] Especifica a posição de base zero no qual inserir o modo de exibição. Se a posição é -1, que a nova guia é inserida no final.  
   
- [in] *pContext*  
- Um ponteiro para o `CCreateContext` do modo de exibição.  
+*pContext*<br/>
+[in] Um ponteiro para o `CCreateContext` do modo de exibição.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um índice de exibição se esse método for bem-sucedido. Caso contrário, retornará -1.  
+ Um índice de exibição se esse método for bem-sucedido. Caso contrário, -1.  
   
 ### <a name="remarks"></a>Comentários  
- Chame essa função para adicionar uma exibição para o controle de guia é inserido em um quadro.  
+ Chame essa função para adicionar um modo de exibição para o controle de guia que está inserido em um quadro.  
   
 ##  <a name="findtab"></a>  CTabView::FindTab  
  Retorna o índice da exibição especificada no controle guia.  
@@ -121,14 +121,14 @@ int FindTab(HWND hWndView) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *hWndView*  
- O identificador da exibição.  
+*hWndView*<br/>
+[in] O identificador da exibição.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O índice da exibição se ela for encontrada; Caso contrário, retornará -1.  
+ O índice da exibição se ela for encontrada; Caso contrário, -1.  
   
 ### <a name="remarks"></a>Comentários  
- Chame essa função para recuperar o índice de uma exibição que tenha um identificador especificado.  
+ Chame essa função para recuperar o índice de uma exibição que tem um identificador especificado.  
   
 ##  <a name="getactiveview"></a>  CTabView::GetActiveView  
  Retorna um ponteiro para a exibição ativa no momento.  
@@ -138,7 +138,7 @@ CView* GetActiveView() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro válido para a exibição ativa, ou nulo se não houver nenhum modo de exibição ativo.  
+ Um ponteiro válido para o modo de exibição ativo, ou nulo se não houver nenhum modo de exibição ativo.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -153,33 +153,33 @@ DECLARE_DYNCREATE CMFCTabCtrl& GetTabControl();
  Uma referência para o controle de guia associado com o modo de exibição.  
   
 ##  <a name="isscrollbar"></a>  CTabView::IsScrollBar  
- Chamado pelo framework durante a criação de um modo de exibição da guia para determinar se o modo de exibição da guia tem uma barra de rolagem horizontal compartilhado.  
+ Chamado pelo framework durante a criação de um modo de exibição de guia para determinar se o modo de exibição da guia tem uma barra de rolagem horizontal compartilhado.  
   
 ```  
 virtual BOOL IsScrollBar() const;  
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- TRUE se o modo de exibição de guia deve ser criado com uma barra de rolagem compartilhado. Caso contrário, FALSE.  
+ TRUE se o modo de exibição de guia deve ser criado junto com uma barra de rolagem compartilhado. Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
  O framework chama esse método quando um *CTabView* objeto está sendo criado.  
   
- Substituir o *IsScrollBar* método em um *CTabView*-classe derivada e retorna verdadeiro se você deseja criar uma exibição que tenha uma barra de rolagem horizontal compartilhado.  
+ Substituir a *IsScrollBar* método em um *CTabView*-classe derivada e retornar TRUE, se você quiser criar uma exibição que tem uma barra de rolagem horizontal compartilhado.  
   
 ##  <a name="onactivateview"></a>  CTabView::OnActivateView  
- Chamado pelo framework quando o modo de exibição da guia fica ativo ou inativo.  
+ Chamado pelo framework quando o modo de exibição de guia é feito ativo ou inativo.  
   
 ```  
 virtual void OnActivateView(CView* view);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *exibição*  
- Um ponteiro para o modo de exibição.  
+*modo de exibição*<br/>
+[in] Um ponteiro para o modo de exibição.  
   
 ### <a name="remarks"></a>Comentários  
- A implementação padrão não fará nada. Substitua este método em um `CTabView`-derivado da classe para processar essa notificação.  
+ A implementação padrão não faz nada. Substitua este método em um `CTabView`-derivado da classe para processar essa notificação.  
   
 ##  <a name="removeview"></a>  CTabView::RemoveView  
  Remove a exibição do controle guia.  
@@ -189,11 +189,11 @@ BOOL RemoveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTabNum*  
- O índice da exibição a ser removida.  
+*iTabNum*<br/>
+[in] O índice da exibição a ser removida.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O índice da exibição removido se esse método for bem-sucedido. Caso contrário, retornará-1.  
+ O índice da exibição removido se esse método for bem-sucedido. Caso contrário,-1.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -205,17 +205,17 @@ BOOL SetActiveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iTabNum*  
- O índice baseado em zero da exibição de guia.  
+*iTabNum*<br/>
+[in] O índice baseado em zero da exibição de guia.  
   
 ### <a name="return-value"></a>Valor de retorno  
- TRUE se a exibição especificada foi feita ativa, FALSO se o índice da exibição é inválido.  
+ TRUE se o modo de exibição especificado tiver sido feito ativo, FALSO se o índice da exibição é inválido.  
   
 ### <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab).  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)   
  [Classe CView](../../mfc/reference/cview-class.md)

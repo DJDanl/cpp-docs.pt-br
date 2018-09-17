@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 456772306c854d4450a7be3996285e90a1d5783f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1435d5fc286349efb2d44eeba65c3ee2231d111f
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679458"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703892"
 ---
 # <a name="cdockablepane-class"></a>Classe CDockablePane
 Implementa um painel que pode ser encaixado em um local de encaixe ou incluído em um painel com guias.  
@@ -332,14 +332,14 @@ virtual CDockablePane* AttachToTabWnd(
  [in] [out] *pTabControlBarAttachTo*  
  Especifica que o painel atual anexa ao painel de destino. O painel de destino deve ser um painel encaixável.  
   
- [in] *dockMethod*  
- Especifica o método de encaixe.  
+*dockMethod*<br/>
+[in] Especifica o método de encaixe.  
   
- [in] *bSetActive*  
- TRUE para ativar o painel com guias após a operação de anexação; Caso contrário, FALSE.  
+*bSetActive*<br/>
+[in] TRUE para ativar o painel com guias após a operação de anexação; Caso contrário, FALSE.  
   
- [out] *ppTabbedControlBar*  
- Contém o painel com guias que resulta da operação de anexação.  
+*ppTabbedControlBar*<br/>
+[out] Contém o painel com guias que resulta da operação de anexação.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o painel atual, se não for um painel com guias; Caso contrário, um ponteiro para o painel com guias que resulta da operação de anexação. O valor retornado é NULL se o painel atual não pode ser anexado, ou se ocorrer um erro.  
@@ -375,11 +375,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bStretch*  
- Não usado.  
+*bStretch*<br/>
+[in] Não usado.  
   
- [in] *bHorz*  
- Não usado.  
+*bHorz*<br/>
+[in] Não usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um `CSize` objeto que contém o tamanho do retângulo de painel.  
@@ -392,8 +392,8 @@ virtual BOOL CanAcceptMiniFrame(CPaneFrameWnd* pMiniFrame) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pMiniFrame*  
- Ponteiro para um `CPaneFrameWnd` objeto.  
+*pMiniFrame*<br/>
+[in] Ponteiro para um `CPaneFrameWnd` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se *pMiniFrame* pode ser encaixado ao painel; caso contrário, FALSE.  
@@ -406,8 +406,8 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pBar*  
- Especifica o painel para encaixar o painel atual.  
+*pBar*<br/>
+[in] Especifica o painel para encaixar o painel atual.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o painel especificado pode ser encaixado para esse painel; Caso contrário, FALSE.  
@@ -469,8 +469,8 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bActiveTabOnly*  
- Quando você converte um `CTabbedPane`, especificar TRUE para converter somente a guia ativa. Especifique FALSE para converter todas as guias no painel.  
+*bActiveTabOnly*<br/>
+[in] Quando você converte um `CTabbedPane`, especificar TRUE para converter somente a guia ativa. Especifique FALSE para converter todas as guias no painel.  
   
 ##  <a name="checkautohidecondition"></a>  CDockablePane::CheckAutoHideCondition  
  Determina se o painel de encaixe é oculto (também conhecido como modo de ocultar automaticamente).  
@@ -495,8 +495,8 @@ virtual BOOL CheckStopSlideCondition(BOOL bDirection);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bDirection*  
- TRUE se o painel estiver visível; FALSE se o painel está oculto.  
+*bDirection*<br/>
+[in] TRUE se o painel estiver visível; FALSE se o painel está oculto.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a condição de parada for atendida; Caso contrário, FALSE.  
@@ -514,8 +514,8 @@ virtual void CopyState(CDockablePane* pOrgBar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pOrgBar*  
- Um ponteiro para um painel encaixável.  
+*pOrgBar*<br/>
+[in] Um ponteiro para um painel encaixável.  
   
 ### <a name="remarks"></a>Comentários  
  `CDockablePane::CopyState` Copia o estado de *pOrgBar* para o painel atual chamando os métodos a seguir:  
@@ -558,38 +558,38 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszCaption*  
- Especifica o nome da janela.  
+*lpszCaption*<br/>
+[in] Especifica o nome da janela.  
   
  [in] [out] *pParentWnd*  
  Especifica a janela pai.  
   
- [in] *rect*  
- Especifica o tamanho e posição da janela, em coordenadas do cliente do *pParentWnd*.  
+*Rect*<br/>
+[in] Especifica o tamanho e posição da janela, em coordenadas do cliente do *pParentWnd*.  
   
- [in] *bHasGripper*  
- TRUE para criar o painel com uma legenda; Caso contrário, FALSE.  
+*bHasGripper*<br/>
+[in] TRUE para criar o painel com uma legenda; Caso contrário, FALSE.  
   
- [in] *nID*  
- Especifica a ID da janela filho. Esse valor deve ser exclusivo, se você deseja salvar o estado de encaixe para esse painel de encaixe.  
+*nID*<br/>
+[in] Especifica a ID da janela filho. Esse valor deve ser exclusivo, se você deseja salvar o estado de encaixe para esse painel de encaixe.  
   
- [in] *dwStyle*  
- Especifica os atributos de estilo de janela.  
+*dwStyle*<br/>
+[in] Especifica os atributos de estilo de janela.  
   
- [in] *dwTabbedStyle*  
- Especifica o estilo com guias de uma janela com guias que é criado quando o usuário arrasta um painel na legenda de nesse painel.  
+*dwTabbedStyle*<br/>
+[in] Especifica o estilo com guias de uma janela com guias que é criado quando o usuário arrasta um painel na legenda de nesse painel.  
   
- [in] *dwControlBarStyle*  
- Especifica atributos de estilo adicionais.  
+*dwControlBarStyle*<br/>
+[in] Especifica atributos de estilo adicionais.  
   
  [in] [out] *pContext*  
  Especifica o contexto de criação da janela.  
   
- [in] *lpszWindowName*  
- Especifica o nome da janela.  
+*lpszWindowName*<br/>
+[in] Especifica o nome da janela.  
   
- [in] *sizeDefault*  
- Especifica o tamanho da janela.  
+*sizeDefault*<br/>
+[in] Especifica o tamanho da janela.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o painel encaixável é criado com êxito; Caso contrário, FALSE.  
@@ -612,14 +612,14 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *dwAlignment*  
- Especifica o lado do quadro principal ao qual o painel está encaixado. Se *dwAlignment* contém o sinalizador CBRS_ALIGN_LEFT ou CBRS_ALIGN_RIGHT, esse método cria uma vertical (`CPaneDivider::SS_VERT`) divisor; caso contrário, esse método cria um horizontal (`CPaneDivider::SS_HORZ`) divisor.  
+*dwAlignment*<br/>
+[in] Especifica o lado do quadro principal ao qual o painel está encaixado. Se *dwAlignment* contém o sinalizador CBRS_ALIGN_LEFT ou CBRS_ALIGN_RIGHT, esse método cria uma vertical (`CPaneDivider::SS_VERT`) divisor; caso contrário, esse método cria um horizontal (`CPaneDivider::SS_HORZ`) divisor.  
   
- [in] *pParent*  
- Ponteiro para o quadro principal.  
+*pParent*<br/>
+[in] Ponteiro para o quadro principal.  
   
- [in] *pSliderRTC*  
- Não usado.  
+*pSliderRTC*<br/>
+[in] Não usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Esse método retorna um ponteiro para o divisor recém-criado ou nulo se a falha na criação do divisor.  
@@ -652,32 +652,32 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *dwStyleEx*  
- Especifica os atributos de estilo estendido para a nova janela.  
+*dwStyleEx*<br/>
+[in] Especifica os atributos de estilo estendido para a nova janela.  
   
- [in] *lpszCaption*  
- Especifica o nome da janela.  
+*lpszCaption*<br/>
+[in] Especifica o nome da janela.  
   
  [in] [out] *pParentWnd*  
  Especifica a janela pai.  
   
- [in] *rect*  
- Especifica o tamanho e posição da janela, em coordenadas do cliente do *pParentWnd*.  
+*Rect*<br/>
+[in] Especifica o tamanho e posição da janela, em coordenadas do cliente do *pParentWnd*.  
   
- [in] *bHasGripper*  
- TRUE para criar o painel com uma legenda; Caso contrário, FALSE.  
+*bHasGripper*<br/>
+[in] TRUE para criar o painel com uma legenda; Caso contrário, FALSE.  
   
- [in] *nID*  
- Especifica a ID da janela filho. Esse valor deve ser exclusivo, se você deseja salvar o estado de encaixe para esse painel de encaixe.  
+*nID*<br/>
+[in] Especifica a ID da janela filho. Esse valor deve ser exclusivo, se você deseja salvar o estado de encaixe para esse painel de encaixe.  
   
- [in] *dwStyle*  
- Especifica os atributos de estilo de janela.  
+*dwStyle*<br/>
+[in] Especifica os atributos de estilo de janela.  
   
- [in] *dwTabbedStyle*  
- Especifica o estilo com guias de uma janela com guias que é criado quando o usuário arrasta um painel na legenda de nesse painel.  
+*dwTabbedStyle*<br/>
+[in] Especifica o estilo com guias de uma janela com guias que é criado quando o usuário arrasta um painel na legenda de nesse painel.  
   
- [in] *dwControlBarStyle*  
- Especifica os atributos de estilo adicionais.  
+*dwControlBarStyle*<br/>
+[in] Especifica os atributos de estilo adicionais.  
   
  [in] [out] *pContext*  
  Especifica o contexto de criação da janela.  
@@ -720,14 +720,14 @@ virtual BOOL DockPaneContainer(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *barContainerManager*  
- Uma referência ao Gerenciador de contêiner do contêiner que está sendo encaixado.  
+*barContainerManager*<br/>
+[in] Uma referência ao Gerenciador de contêiner do contêiner que está sendo encaixado.  
   
- [in] *dwAlignment*  
- DWORD que especifica o lado do painel ao qual o contêiner está sendo encaixado.  
+*dwAlignment*<br/>
+[in] DWORD que especifica o lado do painel ao qual o contêiner está sendo encaixado.  
   
- [in] *dockMethod*  
- Não usado.  
+*dockMethod*<br/>
+[in] Não usado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o contêiner foi encaixado com êxito para o painel; Caso contrário, FALSE.  
@@ -750,8 +750,8 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bWasDocked*  
- Quando o método retorna, esse valor conterá TRUE se o painel foi encaixado com êxito; Caso contrário, ele contém FALSE.  
+*bWasDocked*<br/>
+[in] Quando o método retorna, esse valor conterá TRUE se o painel foi encaixado com êxito; Caso contrário, ele contém FALSE.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Se o painel foi encaixado uma janela com guias, ou se uma janela com guias foi criada como resultado de encaixe, esse método retorna um ponteiro para a janela com guias. Se o painel tenha sido encaixado com êxito, esse método retorna o **isso** ponteiro. Se encaixe falhou, esse método retornará nulo.  
@@ -783,11 +783,11 @@ virtual BOOL DockToWindow(
  [in] [out] *pTargetWindow*  
  Especifica o painel encaixável para encaixar deste painel para.  
   
- [in] *dwAlignment*  
- Especifica o alinhamento de encaixe do painel. Pode ser um dos CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM ou CBRS_ALIGN_ANY. (Definido em afxres. h).  
+*dwAlignment*<br/>
+[in] Especifica o alinhamento de encaixe do painel. Pode ser um dos CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM ou CBRS_ALIGN_ANY. (Definido em afxres. h).  
   
- [in] *lpRect*  
- Especifica o retângulo de encaixe do painel.  
+*lpRect*<br/>
+[in] Especifica o retângulo de encaixe do painel.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o painel foi encaixado com êxito; Caso contrário, FALSE.  
@@ -805,11 +805,11 @@ virtual void DrawCaption(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Representa o contexto de dispositivo usado para o desenho.  
+*pDC*<br/>
+[in] Representa o contexto de dispositivo usado para o desenho.  
   
- [in] *rectCaption*  
- Especifica o retângulo delimitador da legenda do painel.  
+*rectCaption*<br/>
+[in] Especifica o retângulo delimitador da legenda do painel.  
   
 ### <a name="remarks"></a>Comentários  
  O framework chama esse método para desenhar a legenda de um painel encaixável.  
@@ -824,8 +824,8 @@ void EnableAutohideAll(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- TRUE para habilitar o ocultar automaticamente todos os recursos para o painel encaixável; Caso contrário, FALSE.  
+*bAtivar*<br/>
+[in] TRUE para habilitar o ocultar automaticamente todos os recursos para o painel encaixável; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
  Quando um usuário segura a **Ctrl** chave e clica no botão de pin para exibir um painel para o modo de ocultar automaticamente, todos os outros painéis no mesmo contêiner também são alternadas para o modo de ocultar automaticamente.  
@@ -840,8 +840,8 @@ virtual void EnableGripper(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- TRUE para habilitar a legenda; Caso contrário, FALSE.  
+*bAtivar*<br/>
+[in] TRUE para habilitar a legenda; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
  Quando a estrutura cria painéis encaixáveis, eles não têm o estilo da janela WS_STYLE, mesmo se especificado. Isso significa que legenda do painel é uma área de cliente não é controlada pela estrutura, mas essa área difere da legenda de janela padrão.  
@@ -908,11 +908,11 @@ virtual AFX_CS_STATUS GetDockingStatus(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pt*  
- O local do ponteiro em coordenadas da tela.  
+*pt*<br/>
+[in] O local do ponteiro em coordenadas da tela.  
   
- [in] *nSensitivity*  
- A distância, em pixels, da borda de um retângulo o ponteiro deve ser para habilitar o encaixe.  
+*nSensitivity*<br/>
+[in] A distância, em pixels, da borda de um retângulo o ponteiro deve ser para habilitar o encaixe.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um dos valores de status a seguir:  
@@ -964,11 +964,11 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *rectTabAreaTop*  
- `GetTabArea` preenche essa variável com a área da guia se as guias estão localizadas na parte superior do painel. Se as guias estão localizadas na parte inferior do painel, essa variável é preenchida com um retângulo vazio.  
+*rectTabAreaTop*<br/>
+[in] `GetTabArea` preenche essa variável com a área da guia se as guias estão localizadas na parte superior do painel. Se as guias estão localizadas na parte inferior do painel, essa variável é preenchida com um retângulo vazio.  
   
- [in] *rectTabAreaBottom*  
- `GetTabArea` preenche essa variável com a área da guia se as guias estão localizadas na parte inferior do painel. Se as guias estão localizadas na parte superior do painel, essa variável é preenchida com um retângulo vazio.  
+*rectTabAreaBottom*<br/>
+[in] `GetTabArea` preenche essa variável com a área da guia se as guias estão localizadas na parte inferior do painel. Se as guias estão localizadas na parte superior do painel, essa variável é preenchida com um retângulo vazio.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método é usado apenas em classes derivadas de `CDockablePane` e têm as guias. Para obter mais informações, consulte [CTabbedPane::GetTabArea](../../mfc/reference/ctabbedpane-class.md#gettabarea) e [CMFCOutlookBar::GetTabArea](../../mfc/reference/cmfcoutlookbar-class.md#gettabarea).  
@@ -1011,11 +1011,11 @@ virtual int HitTest(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *ponto*  
- Especifica o ponto a ser testado.  
+*ponto*<br/>
+[in] Especifica o ponto a ser testado.  
   
- [in] *bDetectCaption*  
- TRUE se HTCAPTION deve ser retornado se o ponto está em uma legenda do painel Caso contrário, FALSE.  
+*bDetectCaption*<br/>
+[in] TRUE se HTCAPTION deve ser retornado se o ponto está em uma legenda do painel Caso contrário, FALSE.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um dos seguintes valores:  
@@ -1228,11 +1228,11 @@ virtual void OnBeforeChangeParent(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pWndNewParent*  
- Um ponteiro para a nova janela pai.  
+*pWndNewParent*<br/>
+[in] Um ponteiro para a nova janela pai.  
   
- [in] *bDelay*  
- BOOLIANO que especifica se deseja atrasar o recálculo de layout de encaixe, se o painel estiver desencaixado. Para obter mais informações, consulte [CDockablePane::UndockPane](#undockpane).  
+*bDelay*<br/>
+[in] BOOLIANO que especifica se deseja atrasar o recálculo de layout de encaixe, se o painel estiver desencaixado. Para obter mais informações, consulte [CDockablePane::UndockPane](#undockpane).  
   
 ### <a name="remarks"></a>Comentários  
  Se o painel estiver encaixado e o novo pai não permite o encaixe, esse método desencaixa o painel.  
@@ -1249,11 +1249,11 @@ virtual BOOL OnBeforeFloat(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *rectFloat*  
- Especifica a posição e o tamanho do painel quando ele está no estado flutuante.  
+*rectFloat*<br/>
+[in] Especifica a posição e o tamanho do painel quando ele está no estado flutuante.  
   
- [in] *dockMethod*  
- Especifica o método de encaixe. Ver [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) para obter uma lista de valores possíveis.  
+*dockMethod*<br/>
+[in] Especifica o método de encaixe. Ver [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) para obter uma lista de valores possíveis.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o painel pode ser flutuante; Caso contrário, FALSE.  
@@ -1269,8 +1269,8 @@ virtual void OnPressButtons(UINT nHit);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nHit*  
- Este parâmetro não é usado.  
+*nHit*<br/>
+[in] Esse parâmetro não é usado.  
   
 ### <a name="remarks"></a>Comentários  
  Se você adicionar um botão personalizado para a legenda de um painel encaixável, substitua este método para receber notificações quando um usuário pressiona o botão.  
@@ -1283,8 +1283,8 @@ virtual void OnSlide(BOOL bSlideOut);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bSlideOut*  
- TRUE para mostrar o painel; FALSO para ocultar o painel.  
+*bSlideOut*<br/>
+[in] TRUE para mostrar o painel; FALSO para ocultar o painel.  
   
 ### <a name="remarks"></a>Comentários  
  Substitua este método em uma classe derivada para implementar os efeitos de ocultar automaticamente personalizado.  
@@ -1310,14 +1310,14 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pBarToReplaceWith*  
- Um ponteiro para um painel encaixável.  
+*pBarToReplaceWith*<br/>
+[in] Um ponteiro para um painel encaixável.  
   
- [in] *dockMethod*  
- Não usado.  
+*dockMethod*<br/>
+[in] Não usado.  
   
- [in] *bRegisterWithFrame*  
- Se for TRUE, o novo painel está registrado com o Gerenciador de encaixe do pai do painel de dados antigo. O novo painel é inserido no índice do painel antigo na lista de painéis que é mantida pelo Gerenciador de encaixe.  
+*bRegisterWithFrame*<br/>
+[in] Se for TRUE, o novo painel está registrado com o Gerenciador de encaixe do pai do painel de dados antigo. O novo painel é inserido no índice do painel antigo na lista de painéis que é mantida pelo Gerenciador de encaixe.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a substituição foi bem-sucedida; Caso contrário, FALSE.  
@@ -1344,17 +1344,17 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bMode*  
- TRUE para habilitar o modo de ocultar automaticamente; FALSE para habilitar o modo de encaixe regular.  
+*bMode*<br/>
+[in] TRUE para habilitar o modo de ocultar automaticamente; FALSE para habilitar o modo de encaixe regular.  
   
- [in] *dwAlignment*  
- Especifica o alinhamento do painel de ocultar automaticamente para criar.  
+*dwAlignment*<br/>
+[in] Especifica o alinhamento do painel de ocultar automaticamente para criar.  
   
  [in] [out] *pCurrAutoHideBar*  
  Um ponteiro para a barra de ferramentas atual ocultar automaticamente. Pode ser NULL.  
   
- [in] *bUseTimer*  
- Especifica se deve usar o efeito de ocultar automaticamente quando o usuário alterna o painel para o modo de ocultar automaticamente ou ocultar o painel imediatamente.  
+*bUseTimer*<br/>
+[in] Especifica se deve usar o efeito de ocultar automaticamente quando o usuário alterna o painel para o modo de ocultar automaticamente ou ocultar o painel imediatamente.  
   
 ### <a name="return-value"></a>Valor de retorno  
  A barra de ferramentas de ocultar automaticamente que foi criada como resultado de alternar para modo de ocultar automaticamente, ou nulo.  
@@ -1374,11 +1374,11 @@ void SetAutoHideParents(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pToolBar*  
- Ponteiro para uma barra de ferramentas de ocultação automática.  
+*pToolBar*<br/>
+[in] Ponteiro para uma barra de ferramentas de ocultação automática.  
   
- [in] *pBtn*  
- Ponteiro para um botão de ocultamento automático.  
+*pBtn*<br/>
+[in] Ponteiro para um botão de ocultamento automático.  
   
 ##  <a name="setlastpercentinpanecontainer"></a>  CDockablePane::SetLastPercentInPaneContainer  
  Define a porcentagem de espaço que um painel ocupa no seu contêiner.  
@@ -1388,8 +1388,8 @@ void SetLastPercentInPaneContainer(int n);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *n*  
- Uma **int** que especifica a porcentagem de espaço que o painel ocupa em seu contêiner.  
+*n*<br/>
+[in] Uma **int** que especifica a porcentagem de espaço que o painel ocupa em seu contêiner.  
   
 ### <a name="remarks"></a>Comentários  
  O framework ajusta o painel para usar o novo valor quando o layout é recalculado.  
@@ -1402,8 +1402,8 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *hRestoredSlider*  
- Um identificador para um divisor do painel (controle deslizante).  
+*hRestoredSlider*<br/>
+[in] Um identificador para um divisor do painel (controle deslizante).  
   
 ### <a name="remarks"></a>Comentários  
  Um divisor do painel padrão restaurada é obtido quando um painel é desserializado. Para obter mais informações, consulte [CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider).  
@@ -1416,8 +1416,8 @@ void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pRTC*  
- As informações de classe de tempo de execução para o painel com guias.  
+*pRTC*<br/>
+[in] As informações de classe de tempo de execução para o painel com guias.  
   
 ### <a name="remarks"></a>Comentários  
  Chame esse método para definir as informações de classe de tempo de execução para painéis com guias que são criados dinamicamente. Isso pode ocorrer quando um usuário arrasta um painel para a legenda de outro painel, ou se você chamar o [CDockablePane::AttachToTabWnd](#attachtotabwnd) método para criar programaticamente um painel com guias de dois painéis encaixáveis.  
@@ -1443,14 +1443,14 @@ virtual void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bMostrar*  
- TRUE para mostrar o painel; FALSO para ocultar o painel.  
+*bMostrar*<br/>
+[in] TRUE para mostrar o painel; FALSO para ocultar o painel.  
   
- [in] *bDelay*  
- True para atraso ajustando o layout de encaixe; FALSE para ajustar o layout de encaixe imediatamente.  
+*bDelay*<br/>
+[in] True para atraso ajustando o layout de encaixe; FALSE para ajustar o layout de encaixe imediatamente.  
   
- [in] *bActivate*  
- TRUE para ativar o painel quando mostradas; Caso contrário, FALSE.  
+*bActivate*<br/>
+[in] TRUE para ativar o painel quando mostradas; Caso contrário, FALSE.  
   
 ### <a name="remarks"></a>Comentários  
  Chame esse método em vez do [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow) ao mostrar ou ocultar painéis encaixáveis.  
@@ -1465,11 +1465,11 @@ virtual void Slide(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bSlideOut*  
- TRUE para mostrar o painel; FALSO para ocultar o painel.  
+*bSlideOut*<br/>
+[in] TRUE para mostrar o painel; FALSO para ocultar o painel.  
   
- [in] *bUseTimer*  
- TRUE para mostrar ou ocultar o painel com o efeito de ocultar automaticamente; FALSE para mostrar ou ocultar o painel imediatamente.  
+*bUseTimer*<br/>
+[in] TRUE para mostrar ou ocultar o painel com o efeito de ocultar automaticamente; FALSE para mostrar ou ocultar o painel imediatamente.  
   
 ### <a name="remarks"></a>Comentários  
  O framework chama esse método para animar um painel que está no modo de ocultar automaticamente.  
@@ -1494,8 +1494,8 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bDelay*  
- True para atraso Calculando o layout de encaixe; FALSE para recalcular o layout de encaixe imediatamente.  
+*bDelay*<br/>
+[in] True para atraso Calculando o layout de encaixe; FALSE para recalcular o layout de encaixe imediatamente.  
   
 ### <a name="remarks"></a>Comentários  
  Chame esse método para desencaixar um painel da janela do quadro principal ou de um contêiner de janela de multi-miniquadros (um painel é flutuante em uma janela de miniquadros único com outros painéis).  

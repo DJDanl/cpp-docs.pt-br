@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2eb6baf664c2cac7bfc1ed2c95a5fbd204d289b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ccab97a7ac1fd0ad073a3f507dfa6687f311efc4
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686793"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45703918"
 ---
 # <a name="map-class"></a>Classe map
 
@@ -124,18 +124,18 @@ class map;
 ### <a name="parameters"></a>Parâmetros
 
 *Chave*<br/>
- O tipo de dados da chave a ser armazenado no mapa.
+O tipo de dados da chave a ser armazenado no mapa.
 
 *Tipo*<br/>
- O tipo de dados do elemento a ser armazenado no mapa.
+O tipo de dados do elemento a ser armazenado no mapa.
 
 *Características*<br/>
- O tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no mapa. Esse argumento é opcional e o predicado binário `less<Key>` é o valor padrão.
+O tipo que fornece um objeto de função que pode comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa no mapa. Esse argumento é opcional e o predicado binário `less<Key>` é o valor padrão.
 
 No C++ 14, você pode habilitar a pesquisa heterogênea ao especificar o predicado std::less<>, que não tem nenhum parâmetro de tipo. Para obter mais informações, consulte [Pesquisa heterogênea em contêineres associativos](../standard-library/stl-containers.md#sequence_containers)
 
 *Alocador*<br/>
- O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação do mapa da memória. Esse argumento é opcional e o valor padrão é `allocator<pair<const Key, Type> >`.
+O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação do mapa da memória. Esse argumento é opcional e o valor padrão é `allocator<pair<const Key, Type> >`.
 
 ## <a name="remarks"></a>Comentários
 
@@ -577,7 +577,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- O valor de chave dos elementos a serem correspondidos do mapa.
+O valor de chave dos elementos a serem correspondidos do mapa.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1041,7 +1041,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- O valor de chave do argumento a ser comparado com a chave de classificação de um elemento do mapa que está sendo pesquisado.
+O valor de chave do argumento a ser comparado com a chave de classificação de um elemento do mapa que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1128,16 +1128,16 @@ size_type erase(
 ### <a name="parameters"></a>Parâmetros
 
 *Where*<br/>
- A posição do elemento a ser removido.
+A posição do elemento a ser removido.
 
 *Primeiro*<br/>
- A posição do primeiro elemento a ser removido.
+A posição do primeiro elemento a ser removido.
 
 *último*<br/>
- A posição logo após o último elemento a ser removido.
+A posição logo após o último elemento a ser removido.
 
 *Chave*<br/>
- O valor de chave dos elementos a serem removidos.
+O valor de chave dos elementos a serem removidos.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1240,7 +1240,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- O valor da chave a ser correspondido pela chave de classificação de um elemento do mapa que está sendo pesquisado.
+O valor da chave a ser correspondido pela chave de classificação de um elemento do mapa que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1702,7 +1702,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- O valor de chave do argumento a ser comparado com a chave de classificação de um elemento do mapa que está sendo pesquisado.
+O valor de chave do argumento a ser comparado com a chave de classificação de um elemento do mapa que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2492,7 +2492,7 @@ void swap(
 ### <a name="parameters"></a>Parâmetros
 
 *right*<br/>
- O mapa de argumentos que fornece os elementos a serem trocados com o mapa de destino.
+O mapa de argumentos que fornece os elementos a serem trocados com o mapa de destino.
 
 ### <a name="remarks"></a>Comentários
 
@@ -2563,7 +2563,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- O valor de chave do argumento a ser comparado com o valor da chave de classificação de um elemento do mapa que está sendo pesquisado.
+O valor de chave do argumento a ser comparado com o valor da chave de classificação de um elemento do mapa que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 

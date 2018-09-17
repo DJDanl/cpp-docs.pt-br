@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9fd8c983e0133644b6531e87f5fc1dec0fdc7b7
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 0ee9ee6a600e4a552e90cd5901340c3759d52a59
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37041799"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702774"
 ---
 # <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>Classe CMFCRibbonQuickAccessToolBarDefaultState
 Uma classe auxiliar que gerencia o estado padrão para a barra de ferramentas de acesso rápido que é posicionado na barra de faixa de opções ( [classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)).  
@@ -57,13 +57,13 @@ class CMFCRibbonQuickAccessToolBarDefaultState
 |[CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll](#removeall)|Remove todos os comandos da barra de ferramentas de acesso rápido. Isso não altera a barra de ferramentas em si.|  
   
 ## <a name="remarks"></a>Comentários  
- Depois de criar a barra de ferramentas de acesso rápido em seu aplicativo, é recomendável que você defina o estado padrão chamando [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate). Esse estado padrão é restaurado quando um usuário clica o **redefinir** botão o **personalizar** página do seu aplicativo **opções** caixa de diálogo.  
+ Depois de criar a barra de ferramentas de acesso rápido em seu aplicativo, é recomendável que você defina seu estado padrão chamando [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate). Esse estado padrão é restaurado quando um usuário clica o **redefina** botão a **personalizar** página do seu aplicativo **opções** caixa de diálogo.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  [CMFCRibbonQuickAccessToolBarDefaultState](../../mfc/reference/cmfcribbonquickaccesstoolbardefaultstate-class.md)  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como construir um objeto de `CMFCRibbonQuickAccessToolbarDefaultState` classe e como adicionar um comando para o estado padrão para a barra de ferramentas de acesso rápido.  
+ O exemplo a seguir demonstra como construir um objeto do `CMFCRibbonQuickAccessToolbarDefaultState` classe e como adicionar um comando para o estado padrão para a barra de ferramentas de acesso rápido.  
   
  [!code-cpp[NVC_MFC_RibbonApp#21](../../mfc/reference/codesnippet/cpp/cmfcribbonquickaccesstoolbardefaultstate-class_1.cpp)]  
   
@@ -87,7 +87,7 @@ void AddCommand(
  Define a visibilidade do comando quando a barra de ferramentas de acesso rápido está no estado padrão.  
   
 ### <a name="remarks"></a>Comentários  
- Adicionar um comando para o CMFCRibbonQuickAccessToolBarDefaultState realiza três resultados. Primeiro, cada comando adicionado está listado na lista suspensa à direita da barra de ferramentas de acesso rápido. Dessa maneira, um usuário pode adicionar ou remover facilmente comando da barra de ferramentas de acesso rápido. Em segundo lugar, a barra de ferramentas de acesso rápido é redefinida para mostrar somente os comandos que são listados como visível no estado padrão quando o usuário clica o **redefinir** no botão de **personalizar** caixa de diálogo. Terceiro, se você não tiver chamado [CMFCRibbonBar::SetQuickAccessCommands](../../mfc/reference/cmfcribbonbar-class.md#setquickaccesscommands), a barra de ferramentas de acesso rápido usa os comandos visíveis na lista como comandos visíveis padrão na primeira vez que um usuário executa o aplicativo. Depois de ter adicionado todos os comandos que você deseja, chame [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate) definir essa instância como o estado padrão para a barra de ferramentas de acesso rápido da barra de faixa de opções.  
+ Adicionando um comando para o CMFCRibbonQuickAccessToolBarDefaultState realiza três resultados. Em primeiro lugar, cada comando adicionado é listado na lista suspensa no lado direito da barra de ferramentas de acesso rápido. Dessa forma, um usuário pode facilmente adicionar ou Remover comando de ferramentas de acesso rápido. Em segundo lugar, a barra de ferramentas de acesso rápido é redefinida para mostrar somente os comandos que são listados como visível no estado padrão quando o usuário clica o **redefina** botão na **personalizar** caixa de diálogo. Terceiro, se você não tiver chamado [CMFCRibbonBar::SetQuickAccessCommands](../../mfc/reference/cmfcribbonbar-class.md#setquickaccesscommands), a barra de ferramentas de acesso rápido usa os comandos visíveis dessa lista como comandos visíveis padrão na primeira vez que um usuário executa seu aplicativo. Depois de ter adicionado todos os comandos que você deseja, chame [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate) definir essa instância como o estado padrão para a barra de ferramentas de acesso rápido da barra de faixa de opções.  
   
 ##  <a name="copyfrom"></a>  CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom  
  Copia as propriedades de uma barra de ferramentas de acesso rápido para outro.  
@@ -97,11 +97,11 @@ void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *src*  
- Uma referência à fonte de `CMFCRibbonQuickAccessToolBarDefaultState` objeto do qual copiar.  
+*src*<br/>
+[in] Uma referência à fonte de `CMFCRibbonQuickAccessToolBarDefaultState` objeto do qual copiar.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método copia cada comando da origem do `CMFCRibbonQuickAccessToolBarDefaultState` objeto para esse objeto usando o [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) método.  
+ Esse método copia cada comando da origem `CMFCRibbonQuickAccessToolBarDefaultState` objeto com esse objeto usando o [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) método.  
   
 ##  <a name="cmfcribbonquickaccesstoolbardefaultstate"></a>  CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState  
  Constrói o objeto de estado de padrão de ferramentas de acesso rápido.  
@@ -121,9 +121,9 @@ void RemoveAll();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Esta função remove essa instância todos os comandos que as chamadas anteriores para [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) adicionado.  
+ Essa função remove essa instância todos os comandos que as chamadas anteriores ao [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) adicionado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classes](../../mfc/reference/mfc-classes.md)   
  [Classe CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)

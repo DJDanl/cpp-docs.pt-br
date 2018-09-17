@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23fb39a614854912a8de52ac606009f3de19b497
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a8868b455c135d12d2fffaf0ae5ab5632c51a324
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32371171"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45700588"
 ---
 # <a name="editbin-command-line"></a>Linha de comando EDITBIN
-Para executar EDITBIN, use a seguinte sintaxe:  
-  
-```  
-EDITBIN [options] files...  
-```  
-  
- Especifique um ou mais arquivos para os objetos ou imagens a serem alterados e uma ou mais opções para alterar os arquivos.  
-  
- Quando você digita o comando `editbin` sem qualquer outra entrada de linha de comando EDITBIN exibe uma instrução de uso que resume as opções.  
-  
-## <a name="see-also"></a>Consulte também  
- [Ferramentas de compilação do C/C++](../../build/reference/c-cpp-build-tools.md)   
- [Referência de EDITBIN](../../build/reference/editbin-reference.md)
+
+Para executar (editbin), use a seguinte sintaxe:
+
+```
+EDITBIN [options] files...
+```
+
+Especifique um ou mais arquivos para os objetos ou imagens a ser alterado e uma ou mais opções para alterar os arquivos.
+
+Quando você digita o comando `editbin` sem qualquer outra entrada de linha de comando EDITBIN exibirá uma instrução de uso que resume as suas opções.
+
+## <a name="see-also"></a>Consulte também
+
+[Ferramentas de build de C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+[Referência de EDITBIN](../../build/reference/editbin-reference.md)

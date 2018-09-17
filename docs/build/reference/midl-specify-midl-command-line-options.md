@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e513b0397a41a19c9a8088332eb3d1793b6b6647
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: ce4c5159a66963268ae83e0c0adfdc082dfcc81c
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894584"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706934"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (especificar opções de linha de comando MIDL)
 
@@ -38,7 +38,7 @@ Especifica um arquivo de resposta para opções de linha de comando MIDL
 
 ## <a name="arguments"></a>Arguments
 
-*file*  
+*file*<br/>
 O nome do arquivo que contém [opções de linha de comando MIDL](/windows/desktop/Midl/general-midl-command-line-syntax).
 
 ## <a name="remarks"></a>Comentários
@@ -61,9 +61,9 @@ O arquivo deve conter uma opção de linha de comando de MIDL por linha.
 
 ## <a name="see-also"></a>Consulte também
 
-[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)   
-[Opções do vinculador](../../build/reference/linker-options.md)   
-[/IDLOUT (nomear arquivos de saída MIDL)](../../build/reference/idlout-name-midl-output-files.md)   
-[/IGNOREIDL (não processar atributos em MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
-[/TLBOUT (nome. Arquivo TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)   
+[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
+[Opções do vinculador](../../build/reference/linker-options.md)<br/>
+[/IDLOUT (nomear arquivos de saída MIDL)](../../build/reference/idlout-name-midl-output-files.md)
+[/IGNOREIDL (não processar atributos em MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
+[/TLBOUT (nome. O arquivo TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)
 [Compilando um programa atribuído](../../windows/building-an-attributed-program.md)

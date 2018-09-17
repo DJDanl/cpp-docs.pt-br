@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca4b4a7dc2d20442bacc34c7af0a9341e601b3da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e82d880dbb523a37c34e4b42d223345121e8b9a9
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377532"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715345"
 ---
 # <a name="y-precompiled-headers"></a>/Y (cabeçalhos pré-compilados)
-As opções do compilador afetam a geração e o uso de cabeçalhos pré-compilados:  
-  
--   [/Y- (ignorar opções de cabeçalho pré-compilado)](../../build/reference/y-ignore-precompiled-header-options.md)  
-  
--   [/Yc (criar arquivo de cabeçalho pré-compilado)](../../build/reference/yc-create-precompiled-header-file.md)  
-  
--   [/Yd (colocar informações de depuração no arquivo-objeto)](../../build/reference/yd-place-debug-information-in-object-file.md)  
-  
--   [/Yl (inserir referência ao PCH para a biblioteca de depuração)](../../build/reference/yl-inject-pch-reference-for-debug-library.md)  
-  
--   [/Yu (usar arquivo de cabeçalho pré-compilado)](../../build/reference/yu-use-precompiled-header-file.md)  
-  
- Para obter detalhes sobre como trabalhar com cabeçalhos pré-compilados, consulte [criando arquivos de cabeçalho pré-compilado](../../build/reference/creating-precompiled-header-files.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Opções do compilador](../../build/reference/compiler-options.md)   
- [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)
+
+As opções do compilador afetam a geração e o uso de cabeçalhos pré-compilados:
+
+- [/Y- (ignorar opções de cabeçalho pré-compilado)](../../build/reference/y-ignore-precompiled-header-options.md)
+
+- [/Yc (criar arquivo de cabeçalho pré-compilado)](../../build/reference/yc-create-precompiled-header-file.md)
+
+- [/Yd (colocar informações de depuração no arquivo-objeto)](../../build/reference/yd-place-debug-information-in-object-file.md)
+
+- [/Yl (inserir referência ao PCH para a biblioteca de depuração)](../../build/reference/yl-inject-pch-reference-for-debug-library.md)
+
+- [/Yu (usar arquivo de cabeçalho pré-compilado)](../../build/reference/yu-use-precompiled-header-file.md)
+
+Para obter detalhes sobre como trabalhar com cabeçalhos pré-compilados, consulte [criando arquivos de cabeçalho pré-compilado](../../build/reference/creating-precompiled-header-files.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
+[Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

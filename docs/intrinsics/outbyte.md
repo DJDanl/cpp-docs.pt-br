@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70aa643d7d8f81cca0ff74a3016badd6551c11a0
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: cff8c2e8abfff713b4044ce58104c58b0a96da12
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42544392"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45719258"
 ---
 # <a name="outbyte"></a>__outbyte
 **Seção específica da Microsoft**  
@@ -39,11 +39,11 @@ void __outbyte(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- [in] `Port`  
- A porta para enviar os dados.  
+*Porta*<br/>
+[in] A porta para enviar os dados.  
   
- [in] `Data`  
- O byte sejam enviadas a porta especificada.  
+*Dados*<br/>
+[in] O byte sejam enviadas a porta especificada.  
   
 ## <a name="requirements"></a>Requisitos  
   

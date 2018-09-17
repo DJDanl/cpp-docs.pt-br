@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97e0a81fc5e317f018924efd3d564d39618cb2b5
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 36817eba04d630ea4e56140af582bf49fa6f54ce
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37850076"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718114"
 ---
 # <a name="cmfcheaderctrl-class"></a>Classe CMFCHeaderCtrl
 O `CMFCHeaderCtrl` classe dá suporte à classificação de várias colunas em um controle de cabeçalho.  
@@ -137,8 +137,8 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- TRUE para habilitar o modo de classificação de coluna vários; FALSE para desabilitar o modo de classificar várias colunas e remover todas as colunas da lista de colunas classificadas. O valor padrão é TRUE.  
+*bAtivar*<br/>
+[in] TRUE para habilitar o modo de classificação de coluna vários; FALSE para desabilitar o modo de classificar várias colunas e remover todas as colunas da lista de colunas classificadas. O valor padrão é TRUE.  
   
 ### <a name="remarks"></a>Comentários  
  Use esse método para habilitar ou desabilitar o modo de classificar várias colunas. Duas ou mais colunas podem participar em uma classificação, se o controle de cabeçalho estiver no modo de classificação de coluna vários.  
@@ -151,8 +151,8 @@ int GetColumnState(int iColumn) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iColumn*  
- O índice baseado em zero de uma coluna.  
+*iColumn*<br/>
+[in] O índice baseado em zero de uma coluna.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um valor que indicam o status de classificação da coluna especificada. A tabela a seguir lista os valores possíveis:  
@@ -227,20 +227,20 @@ virtual void OnDrawItem(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Um ponteiro para um contexto de dispositivo.  
   
- [in] *iItem*  
- O índice baseado em zero do item a ser desenhado.  
+*iItem*<br/>
+[in] O índice baseado em zero do item a ser desenhado.  
   
- [in] *rect*  
- O retângulo delimitador do item a ser desenhado.  
+*Rect*<br/>
+[in] O retângulo delimitador do item a ser desenhado.  
   
- [in] *bIsPressed*  
- TRUE para desenhar o item no estado pressionado; Caso contrário, FALSE.  
+*bIsPressed*<br/>
+[in] TRUE para desenhar o item no estado pressionado; Caso contrário, FALSE.  
   
- [in] *bIsHighlighted*  
- TRUE para desenhar o item em um estado realçado; Caso contrário, FALSE.  
+*bIsHighlighted*<br/>
+[in] TRUE para desenhar o item em um estado realçado; Caso contrário, FALSE.  
   
 ##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow  
  Chamado pelo framework para desenhar a seta de classificação.  
@@ -252,11 +252,11 @@ virtual void OnDrawSortArrow(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Um ponteiro para um contexto de dispositivo.  
   
- [in] *rectArrow*  
- O retângulo delimitador da seta de classificação.  
+*rectArrow*<br/>
+[in] O retângulo delimitador da seta de classificação.  
   
 ##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground  
  Chamado pelo framework para preencher a tela de fundo de uma coluna do controle de cabeçalho.  
@@ -266,8 +266,8 @@ virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pDC*  
- Um ponteiro para um contexto de dispositivo.  
+*pDC*<br/>
+[in] Um ponteiro para um contexto de dispositivo.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -279,8 +279,8 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iColumn*  
- O índice baseado em zero da coluna a ser removida.  
+*iColumn*<br/>
+[in] O índice baseado em zero da coluna a ser removida.  
   
 ##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn  
  Define a ordem de classificação de uma coluna especificada em um controle de cabeçalho.  
@@ -293,14 +293,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *iColumn*  
- O índice baseado em zero de uma coluna do controle de cabeçalho. Se esse parâmetro é menor que zero, esse método Remove todas as colunas da lista de colunas de classificação.  
+*iColumn*<br/>
+[in] O índice baseado em zero de uma coluna do controle de cabeçalho. Se esse parâmetro é menor que zero, esse método Remove todas as colunas da lista de colunas de classificação.  
   
- [in] *bAscending*  
- Especifica a ordem de classificação da coluna que o *iColumn* parâmetro especifica. TRUE para definir a ordem crescente; FALSE para definir a ordem decrescente. O valor padrão é TRUE.  
+*bAscending*<br/>
+[in] Especifica a ordem de classificação da coluna que o *iColumn* parâmetro especifica. TRUE para definir a ordem crescente; FALSE para definir a ordem decrescente. O valor padrão é TRUE.  
   
- [in] *bAdicionar*  
- True para definir a ordem de classificação da coluna que o *iColumn* parâmetro especifica.  
+*bAdicionar*<br/>
+[in] True para definir a ordem de classificação da coluna que o *iColumn* parâmetro especifica.  
   
  Se o controle de cabeçalho atual está no *classificação de várias colunas* modo, esse método adiciona a coluna especificada à lista de colunas de classificação. Use [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) para definir o modo de classificar várias colunas.  
   

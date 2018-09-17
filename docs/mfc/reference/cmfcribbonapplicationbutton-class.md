@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eddce134c3cda27e57a6a20d709bc4eab08d6e80
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 17efa63488a736089c988e6cfbb7bd97330816aa
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37849009"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701383"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>Classe CMFCRibbonApplicationButton
 Implementa um botão especial localizado no canto superior esquerdo da janela do aplicativo. Quando clicado, o botão abre um menu que geralmente contém comuns **arquivo** comandos como **abra**, **salvar**, e **Exit**.  
@@ -98,11 +98,11 @@ void SetImage(HBITMAP hBmp);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *uiBmpResID*  
- A ID de recurso da imagem a ser exibido no botão de aplicativo.  
+*uiBmpResID*<br/>
+[in] A ID de recurso da imagem a ser exibido no botão de aplicativo.  
   
- [in] *hBmp*  
- Um identificador para um bitmap a ser exibido no botão de aplicativo.  
+*hBmp*<br/>
+[in] Um identificador para um bitmap a ser exibido no botão de aplicativo.  
   
 ### <a name="remarks"></a>Comentários  
  Use esse método para atribuir uma nova imagem para o botão da faixa de opções do aplicativo depois de criar o botão. O botão do aplicativo está localizado no canto superior esquerdo da janela do aplicativo.  

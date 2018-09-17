@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a86ed1a8fe6c97ae11af50f59cb639ef6fd7c1da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 631c5631b60f0e05dd1f1541facc767f35944d3d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367892"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45701474"
 ---
 # <a name="inferred-dependents"></a>Dependentes inferidos
-Um dependente deduzido é derivado de uma regra de inferência e é avaliado antes dependentes explícitas. Se um dependentes inferidos está desatualizado em relação ao seu destino, NMAKE invoca o bloco de comandos para a dependência. Se um dependentes inferidos não existem ou está desatualizado em relação à suas própria dependentes, NMAKE atualiza primeiro deduzido dependente. Para obter mais informações sobre dependentes inferidos, consulte [regras de inferência](../build/inference-rules.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Dependentes](../build/dependents.md)
+
+Um dependentes inferidos é derivada de uma regra de inferência de tipos e é avaliado antes dependentes explícitas. Se um dependentes inferidos estiver desatualizado com relação ao seu destino, NMAKE invoca o bloco de comandos para a dependência. Se um dependentes inferidos não existe ou está desatualizado em relação a seus próprios dependentes, NMAKE primeiro atualiza os dependentes inferidos. Para obter mais informações sobre dependentes inferidos, consulte [regras de inferência](../build/inference-rules.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Dependentes](../build/dependents.md)
