@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b103e2409da08dc67a55aae8ba8c5f49f377434
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: cc9965371de0ea75ece0cb31c7ec5187b9279cef
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677685"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726707"
 ---
 # <a name="cmdichildwndex-class"></a>Classe CMDIChildWndEx
 O `CMDIChildWndEx` classe fornece a funcionalidade de um Windows vários janela filho da MDI (interface MDI) documento. Ela estende a funcionalidade do [classe CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md). A estrutura exige essa classe quando um aplicativo MDI usa determinadas classes do MFC.  
@@ -239,11 +239,11 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pControlBar*  
- Um ponteiro para o painel.  
+*pControlBar*<br/>
+[in] Um ponteiro para o painel.  
   
- [in] *bTail*  
- TRUE para adicionar o painel ao final da lista de painéis para o Gerenciador de encaixe; Caso contrário, FALSE.  
+*bTail*<br/>
+[in] TRUE para adicionar o painel ao final da lista de painéis para o Gerenciador de encaixe; Caso contrário, FALSE.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o painel foi registrado com êxito com o Gerenciador do encaixe. Caso contrário, FALSE.  
@@ -256,8 +256,8 @@ void AddTabbedPane(CDockablePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pControlBar*  
- Um ponteiro para o painel.  
+*pControlBar*<br/>
+[in] Um ponteiro para o painel.  
   
 ##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout  
  Ajusta o layout de encaixe.  
@@ -267,8 +267,8 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *hdwp*  
- Identificador para uma estrutura de posição da janela adiada.  
+*hdwp*<br/>
+[in] Identificador para uma estrutura de posição da janela adiada.  
   
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
 
@@ -305,14 +305,14 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pBar*  
- Um ponteiro para o painel.  
+*pBar*<br/>
+[in] Um ponteiro para o painel.  
   
- [in] *nDockBarID*  
- A ID do painel.  
+*nDockBarID*<br/>
+[in] A ID do painel.  
   
- [in] *lpRect*  
- Um ponteiro para um retângulo.  
+*lpRect*<br/>
+[in] Um ponteiro para um retângulo.  
   
 ### <a name="remarks"></a>Comentários  
  O *lpRect* parâmetro não for usado.  
@@ -349,8 +349,8 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *dwDockStyle*  
- Especifica os lados da janela do quadro principal que está habilitado. Use um ou mais dos seguintes sinalizadores.  
+*dwDockStyle*<br/>
+[in] Especifica os lados da janela do quadro principal que está habilitado. Use um ou mais dos seguintes sinalizadores.  
   
 - CBRS_ALIGN_LEFT  
   
@@ -371,8 +371,8 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *dwDockStyle*  
- Especifica o alinhamento de encaixe para habilitar.  
+*dwDockStyle*<br/>
+[in] Especifica o alinhamento de encaixe para habilitar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o método for bem-sucedido; Caso contrário, FALSE.  
@@ -453,8 +453,8 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *nID*  
- A ID do painel de controle para localizar.  
+*nID*<br/>
+[in] A ID do painel de controle para localizar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o painel, se encontrado, caso contrário, nulo.  
@@ -506,14 +506,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pControlBar*  
- Um ponteiro para o painel a ser inserido.  
+*pControlBar*<br/>
+[in] Um ponteiro para o painel a ser inserido.  
   
- [in] *pTarget*  
- Um ponteiro para o painel adjacente.  
+*pTarget*<br/>
+[in] Um ponteiro para o painel adjacente.  
   
- [in] *bDepois*  
- Se for TRUE, *pControlBar* é inserido após *pTarget*. Se for FALSE, *pControlBar* é inserido antes *pTarget*.  
+*bDepois*<br/>
+[in] Se for TRUE, *pControlBar* é inserido após *pTarget*. Se for FALSE, *pControlBar* é inserido antes *pTarget*.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o método tiver êxito, FALSE caso contrário.  
@@ -529,14 +529,14 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *ponto*  
- O ponto especificado.  
+*ponto*<br/>
+[in] O ponto especificado.  
   
- [in] *dwBarAlignment*  
- Especifica que o ponto está próximo de borda. Os valores possíveis são CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP e CBRS_ALIGN_BOTTOM  
+*dwBarAlignment*<br/>
+[in] Especifica que o ponto está próximo de borda. Os valores possíveis são CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP e CBRS_ALIGN_BOTTOM  
   
- [in] *bOuterEdge*  
- TRUE se o ponto está próximo a borda externa do local de encaixe; FALSE caso contrário.  
+*bOuterEdge*<br/>
+[in] TRUE se o ponto está próximo a borda externa do local de encaixe; FALSE caso contrário.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o ponto é quase o local de encaixe; Caso contrário, FALSE.  
@@ -580,8 +580,8 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pFrame*  
- Um ponteiro para uma janela com minimoldura.  
+*pFrame*<br/>
+[in] Um ponteiro para uma janela com minimoldura.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o método for bem-sucedido, caso contrário, FALSE.  
@@ -596,11 +596,11 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bPreview*  
- Se for TRUE, entre no modo de visualização de impressão. Se for FALSE, sair do modo de visualização de impressão.  
+*bPreview*<br/>
+[in] Se for TRUE, entre no modo de visualização de impressão. Se for FALSE, sair do modo de visualização de impressão.  
   
- [in] *pState*  
- Um ponteiro para a estrutura de estado de visualização de impressão.  
+*pState*<br/>
+[in] Um ponteiro para a estrutura de estado de visualização de impressão.  
   
 ##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
  Chamado pelo framework para atualizar o título do quadro.  
@@ -610,8 +610,8 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAddToTitle*  
- Se for TRUE, adicione o nome do documento ao título.  
+*bAddToTitle*<br/>
+[in] Se for TRUE, adicione o nome do documento ao título.  
   
 ##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
  Retorna o painel que contém o ponto especificado.  
@@ -631,20 +631,20 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *ponto*  
- Especifica o ponto em coordenadas da tela, para verificar.  
+*ponto*<br/>
+[in] Especifica o ponto em coordenadas da tela, para verificar.  
   
- [in] *nSensitivity*  
- Aumente a área de pesquisa, essa quantidade. Um painel satisfaz os critérios de pesquisa se o determinado ponto está na área de aumento.  
+*nSensitivity*<br/>
+[in] Aumente a área de pesquisa, essa quantidade. Um painel satisfaz os critérios de pesquisa se o determinado ponto está na área de aumento.  
   
- [in] *bExactBar*  
- TRUE para ignorar a *nSensitivity* parâmetro; caso contrário, FALSE.  
+*bExactBar*<br/>
+[in] TRUE para ignorar a *nSensitivity* parâmetro; caso contrário, FALSE.  
   
- [in] *pRTCBarType*  
- Se não for NULL, o método procura apenas os painéis do tipo especificado.  
+*pRTCBarType*<br/>
+[in] Se não for NULL, o método procura apenas os painéis do tipo especificado.  
   
- [in] *dwAlignment*  
- Se um painel for encontrado no ponto especificado, este parâmetro conterá o lado do painel que foi mais próximo ao ponto especificado. Para obter mais informações, consulte a seção Comentários.  
+*dwAlignment*<br/>
+[in] Se um painel for encontrado no ponto especificado, este parâmetro conterá o lado do painel que foi mais próximo ao ponto especificado. Para obter mais informações, consulte a seção Comentários.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o `CBasePane`-objeto derivado que contém o ponto especificado ou nulo se nenhum painel foi encontrado.  
@@ -662,8 +662,8 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bNotify*  
- Se for TRUE, o item ativo in-loco para a janela recebe notificação de alteração de layout.  
+*bNotify*<br/>
+[in] Se for TRUE, o item ativo in-loco para a janela recebe notificação de alteração de layout.  
   
 ##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
  Remove um painel do Gerenciador de encaixe.  
@@ -678,20 +678,20 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pControlBar*  
- Um ponteiro para o painel a ser removido.  
+*pControlBar*<br/>
+[in] Um ponteiro para o painel a ser removido.  
   
- [in] *bDestroy*  
- Se for TRUE, o painel removido é destruído.  
+*bDestroy*<br/>
+[in] Se for TRUE, o painel removido é destruído.  
   
- [in] *bAdjustLayout*  
- Se for TRUE, ajuste o layout de encaixe imediatamente.  
+*bAdjustLayout*<br/>
+[in] Se for TRUE, ajuste o layout de encaixe imediatamente.  
   
- [in] *bAutoHide*  
- Se for TRUE, o layout de encaixe está relacionado à lista de barras de ocultar automaticamente. Se for FALSE, o layout de encaixe está relacionado à lista de painéis regulares.  
+*bAutoHide*<br/>
+[in] Se for TRUE, o layout de encaixe está relacionado à lista de barras de ocultar automaticamente. Se for FALSE, o layout de encaixe está relacionado à lista de painéis regulares.  
   
- [in] *pBarReplacement*  
- Um ponteiro para um painel que substitui o painel removido.  
+*pBarReplacement*<br/>
+[in] Um ponteiro para um painel que substitui o painel removido.  
   
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
 
@@ -717,10 +717,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pBar*  
- [in] *bMostrar*  
- [in] *bDelay*  
- [in] *bActivate*  
+*pBar*<br/>
+[in] [in] *bMostrar*  
+*bDelay*<br/>
+[in] [in] *bActivate*  
   
 ### <a name="remarks"></a>Comentários  
   

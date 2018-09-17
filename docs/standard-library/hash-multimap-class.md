@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 857c0614288240aeaf3001d03aa5d6372ccee1c9
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ca81fa18bb5f63f57c057eaa9e64c35df01e33f1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196299"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726759"
 ---
 # <a name="hashmultimap-class"></a>Classe hash_multimap
 
@@ -123,16 +123,16 @@ class hash_multimap
 ### <a name="parameters"></a>Parâmetros
 
 *Chave*<br/>
- O tipo de dados da chave a ser armazenado no hash_multimap.
+O tipo de dados da chave a ser armazenado no hash_multimap.
 
 *Tipo*<br/>
- O tipo de dados do elemento a ser armazenado no hash_multimap.
+O tipo de dados do elemento a ser armazenado no hash_multimap.
 
 *Características*<br/>
- O tipo que inclui dois objetos de função, um da classe *Traits* que é capaz de comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa e uma função de hash que é um unário predicado de mapeamento de valores de chave dos elementos a serem inteiros do tipo sem sinal `size_t`. Esse argumento é opcional e o `hash_compare<Key, less<Key>>` é o valor padrão.
+O tipo que inclui dois objetos de função, um da classe *Traits* que é capaz de comparar dois valores de elemento como chaves de classificação para determinar sua ordem relativa e uma função de hash que é um unário predicado de mapeamento de valores de chave dos elementos a serem inteiros do tipo sem sinal `size_t`. Esse argumento é opcional e o `hash_compare<Key, less<Key>>` é o valor padrão.
 
 *Alocador*<br/>
- O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação de memória do hash_multimap. Esse argumento é opcional e o valor padrão é `allocator<pair <const Key, Type>>`.
+O tipo que representa o objeto de alocador armazenado que encapsula detalhes sobre a alocação e a desalocação de memória do hash_multimap. Esse argumento é opcional e o valor padrão é `allocator<pair <const Key, Type>>`.
 
 ## <a name="remarks"></a>Comentários
 
@@ -600,7 +600,7 @@ size_type count(const Key& key) const;
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- O valor dos elementos a serem correspondidos do hash_multimap.
+O valor dos elementos a serem correspondidos do hash_multimap.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -779,8 +779,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::di
 
 ### <a name="remarks"></a>Comentários
 
-
-          `difference_type` é o tipo retornado ao subtrair ou incrementar por meio de iteradores do contêiner. `difference_type` é geralmente usado para representar o número de elementos no intervalo *[ first, last)* entre os iteradores `first` e `last`, inclui o elemento apontado por `first` e o intervalo de elementos até, mas sem incluir, o elemento apontado por `last`.
+`difference_type` é o tipo retornado ao subtrair ou incrementar por meio de iteradores do contêiner. `difference_type` é geralmente usado para representar o número de elementos no intervalo *[ first, last)* entre os iteradores `first` e `last`, inclui o elemento apontado por `first` e o intervalo de elementos até, mas sem incluir, o elemento apontado por `last`.
 
 Observe que, embora `difference_type` esteja disponível para todos os iteradores que atendem aos requisitos de um iterador de entrada, que inclui a classe de iteradores bidirecionais com suporte pelos contêineres reversíveis, como conjunto, a subtração entre iteradores só tem suporte pelos iteradores de acesso aleatório fornecidos por um contêiner de acesso aleatório, como vetor.
 
@@ -896,7 +895,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="emplace_hint"></a>  hash_multimap::emplace_hint
@@ -956,7 +955,7 @@ int main()
 
 ```Output
 After the emplace insertion, hm1 contains:
- 1 => a
+1 => a
 ```
 
 ## <a name="empty"></a>  hash_multimap::empty
@@ -1097,7 +1096,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_multimap que está sendo pesquisado.
+A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_multimap que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1188,16 +1187,16 @@ size_type erase(const key_type& key);
 ### <a name="parameters"></a>Parâmetros
 
 *_Where*<br/>
- Posição do elemento a ser removido do hash_multimap.
+Posição do elemento a ser removido do hash_multimap.
 
 *first*<br/>
- Posição do primeiro elemento removido do hash_multimap.
+Posição do primeiro elemento removido do hash_multimap.
 
 *last*<br/>
- Posição logo após o último elemento removido do hash_multimap.
+Posição logo após o último elemento removido do hash_multimap.
 
 *key*<br/>
- A chave dos elementos a serem removidos do hash_multimap.
+A chave dos elementos a serem removidos do hash_multimap.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1312,7 +1311,7 @@ const_iterator find(const Key& key) const;
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- A chave a ser correspondida pela chave de classificação de um elemento do hash_multimap que está sendo pesquisado.
+A chave a ser correspondida pela chave de classificação de um elemento do hash_multimap que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1506,18 +1505,18 @@ hash_multimap(
 
 template <class InputIterator>
 hash_multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 hash_multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Compare& Comp);
 
 template <class InputIterator>
 hash_multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Compare& Comp,
     const Allocator& Al);
@@ -1763,7 +1762,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_multimap que está sendo pesquisado.
+A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_multimap que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -2317,7 +2316,7 @@ void swap(hash_multimap& right);
 ### <a name="parameters"></a>Parâmetros
 
 *right*<br/>
- O hash_multimap que fornece os elementos a serem trocados ou o hash_multimap cujos elementos deverão ser trocados pelos do hash_multimap.
+O hash_multimap que fornece os elementos a serem trocados ou o hash_multimap cujos elementos deverão ser trocados pelos do hash_multimap.
 
 ### <a name="remarks"></a>Comentários
 
@@ -2391,7 +2390,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="parameters"></a>Parâmetros
 
 *key*<br/>
- A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_multimap que está sendo pesquisado.
+A chave do argumento a ser comparada com a chave de classificação de um elemento do hash_multimap que está sendo pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
 

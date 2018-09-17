@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3c7f9e1d638c547b2b340a610a52af9318c714
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: e8442f771cda2b7130a60148582288a31977fa59
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535399"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726629"
 ---
 # <a name="cedit-class"></a>Classe CEdit
 Fornece a funcionalidade de um controle de edição do Windows.  
@@ -445,11 +445,11 @@ CString GetCueBanner() const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [out] *lpszText*  
- Um ponteiro para uma cadeia de caracteres que contém o texto de indicação.  
+*lpszText*<br/>
+[out] Um ponteiro para uma cadeia de caracteres que contém o texto de indicação.  
   
- [in] *cchText*  
- O número de caracteres que pode ser recebido. Esse número inclui o caractere nulo de terminação.  
+*cchText*<br/>
+[in] O número de caracteres que pode ser recebido. Esse número inclui o caractere nulo de terminação.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Para a primeira sobrecarga, TRUE se o método for bem-sucedido; Caso contrário, FALSE.  
@@ -513,8 +513,8 @@ BOOL GetHighlight(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[out] *pichStart*|Índice baseado em zero do primeiro caractere no intervalo de texto que está realçado.|  
-|[out] *pichEnd*|Índice baseado em zero do último caractere no intervalo de texto que está realçado.|  
+|*pichStart*|[out] Índice baseado em zero do primeiro caractere no intervalo de texto que está realçado.|  
+|*pichEnd*|[out] Índice baseado em zero do último caractere no intervalo de texto que está realçado.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -917,11 +917,11 @@ BOOL SetCueBanner(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *lpszText*  
- Ponteiro para uma cadeia de caracteres que contém a indicação para exibir no controle de edição.  
+*lpszText*<br/>
+[in] Ponteiro para uma cadeia de caracteres que contém a indicação para exibir no controle de edição.  
   
- [in] *fDrawWhenFocused*  
- Se for FALSE, a faixa de indicação não é desenhada quando o usuário clica no controle de edição e fornece o foco de controle.  
+*fDrawWhenFocused*<br/>
+[in] Se for FALSE, a faixa de indicação não é desenhada quando o usuário clica no controle de edição e fornece o foco de controle.  
   
  Se for TRUE, a faixa de indicação é desenhada, mesmo quando o controle tem foco. A faixa de indicação desaparece quando o usuário começa a digitar no controle.  
   
@@ -981,8 +981,8 @@ void SetHighlight(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *ichStart*|Índice baseado em zero do primeiro caractere no intervalo de texto para realçar.|  
-|[in] *ichEnd*|Índice baseado em zero do último caractere no intervalo de texto para realçar.|  
+|*ichStart*|[in] Índice baseado em zero do primeiro caractere no intervalo de texto para realçar.|  
+|*ichEnd*|[in] Índice baseado em zero do último caractere no intervalo de texto para realçar.|  
   
 ### <a name="remarks"></a>Comentários  
  Esse método envia o [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) mensagem, que é descrita no SDK do Windows.  Esse método envia o [EM_SETHILITE](/windows/desktop/Controls/em-sethilite) mensagem, que é descrita no SDK do Windows. Ambos `SetHighlight` e `GetHighlight` estão habilitados para UNICODE apenas compilações. 
@@ -1245,10 +1245,10 @@ BOOL ShowBalloonTip(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *pEditBalloonTip*|Ponteiro para um [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) estrutura que descreve a dica de balão.|  
-|[in] *lpszTitle*|Ponteiro para uma cadeia de caracteres Unicode que contém o título da dica de balão.|  
-|[in] *lpszText*|Ponteiro para uma cadeia de caracteres Unicode que contém o texto de dica de balão.|  
-|[in] *ttiIcon*|Uma **INT** que especifica o tipo de ícone a ser associado com a dica de balão. O valor padrão é TTI_NONE. Para obter mais informações, consulte o `ttiIcon` membro a [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) estrutura.|  
+|*pEditBalloonTip*|[in] Ponteiro para um [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) estrutura que descreve a dica de balão.|  
+|*lpszTitle*|[in] Ponteiro para uma cadeia de caracteres Unicode que contém o título da dica de balão.|  
+|*lpszText*|[in] Ponteiro para uma cadeia de caracteres Unicode que contém o texto de dica de balão.|  
+|*ttiIcon*|[in] Uma **INT** que especifica o tipo de ícone a ser associado com a dica de balão. O valor padrão é TTI_NONE. Para obter mais informações, consulte o `ttiIcon` membro a [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) estrutura.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  

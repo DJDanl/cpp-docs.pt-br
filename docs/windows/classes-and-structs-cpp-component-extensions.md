@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e29b141ff89a37cee59f55624d7fecadbe6acc4c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 04a632e657b57519d02c013d9c03e558b9aec8e1
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215864"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726616"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>Classes e Estruturas (Extensões de Componentes C++)
 
@@ -46,20 +46,20 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ### <a name="parameters"></a>Parâmetros
 
-*class_access* (opcional)  
-A acessibilidade de classe ou struct fora do assembly. Os valores possíveis são **pública** e **privada** (**privada** é o padrão). Classes aninhadas ou structs não podem ter uma *class_access* especificador.
+*class_access*  
+(Opcional) A acessibilidade de classe ou struct fora do assembly. Os valores possíveis são **pública** e **privada** (**privada** é o padrão). Classes aninhadas ou structs não podem ter uma *class_access* especificador.
 
 *name*  
 O nome da classe ou struct.
 
-*modificador* (opcional)  
-[abstrato](../windows/abstract-cpp-component-extensions.md) e [lacrado](../windows/sealed-cpp-component-extensions.md) são os modificadores válidos.
+*Modificador*  
+(Opcional) [abstrata](../windows/abstract-cpp-component-extensions.md) e [lacrado](../windows/sealed-cpp-component-extensions.md) são os modificadores válidos.
 
-*inherit_access* (opcional)  
-A acessibilidade de *base_type*. É a única acessibilidade permitida **pública** (**público** é o padrão).
+*inherit_access*  
+(Opcional) A acessibilidade de *base_type*. É a única acessibilidade permitida **pública** (**público** é o padrão).
 
-*base_type* (opcional)  
-Um tipo base. No entanto, um tipo de valor não pode atuar como um tipo base.
+*base_type*  
+(Opcional) Um tipo base. No entanto, um tipo de valor não pode atuar como um tipo base.
 
 Para obter mais informações, consulte as descrições de idioma específico desse parâmetro em tempo de execução do Windows e Runtimesections de linguagem comum.
 
@@ -97,8 +97,8 @@ Ver [classes e estruturas Ref](../cppcx/ref-classes-and-structs-c-cx.md) e [clas
 
 ### <a name="parameters"></a>Parâmetros
 
-*base_type* (opcional)  
-Um tipo base. Um **classe ref** ou **ref struct** pode herdar de zero ou mais interfaces e zero ou uma **ref** tipos. Um **classe de valor** ou **struct de valor** só pode herdar de zero ou mais interfaces.
+*base_type*  
+(Opcional) Um tipo base. Um **classe ref** ou **ref struct** pode herdar de zero ou mais interfaces e zero ou uma **ref** tipos. Um **classe de valor** ou **struct de valor** só pode herdar de zero ou mais interfaces.
 
 Quando você declarar um objeto usando o **classe ref** ou **ref struct** palavras-chave, o objeto é acessado por um identificador para um objeto, ou seja, um ponteiro de contador de referência para o objeto. Quando a variável declarada sai do escopo, o compilador exclui automaticamente o objeto subjacente. Quando o objeto é usado como um parâmetro em uma chamada ou é armazenado em uma variável, um identificador para o objeto é passado, na verdade, ou armazenado.
 
@@ -116,8 +116,8 @@ A tabela a seguir lista as diferenças de sintaxe mostrada na **todos os tempos 
 
 ### <a name="parameters"></a>Parâmetros
 
-*base_type* (opcional)  
-Um tipo base. Um **classe ref** ou **ref struct** pode herdar de zero ou mais gerenciados interfaces e zero ou tipos de uma ref. Um **classe de valor** ou **struct de valor** só pode herdar de zero ou mais interfaces gerenciadas.
+*base_type*  
+(Opcional) Um tipo base. Um **classe ref** ou **ref struct** pode herdar de zero ou mais gerenciados interfaces e zero ou tipos de uma ref. Um **classe de valor** ou **struct de valor** só pode herdar de zero ou mais interfaces gerenciadas.
 
 O **classe ref** e **ref struct** palavras-chave dizer ao compilador que a classe ou estrutura deve ser alocado no heap. Quando o objeto é usado como um parâmetro em uma chamada ou é armazenado em uma variável, uma referência ao objeto é passada, na verdade, ou armazenada.
 

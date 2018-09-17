@@ -144,12 +144,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf2179666943dd5ad26f173368edd809fdf17bcd
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2ce2228c5ee81fc6974f2a60ccbdf0a7e4d53901
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954832"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726681"
 ---
 # <a name="unorderedset-class"></a>Classe unordered_set
 
@@ -373,8 +373,8 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*keyval*  
- O valor de chave a ser mapeado.
+*keyval*<br/>
+O valor de chave a ser mapeado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -513,8 +513,8 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*nbucket*  
- O número de bucket.
+*nbucket*<br/>
+O número de bucket.
 
 ### <a name="remarks"></a>Comentários
 
@@ -865,8 +865,8 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*keyval*  
- O valor chave a ser pesquisado.
+*keyval*<br/>
+O valor chave a ser pesquisado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1175,8 +1175,8 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*keyval*  
- O valor chave a ser pesquisado.
+*keyval*<br/>
+O valor chave a ser pesquisado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1243,17 +1243,17 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Where*  
- A posição do elemento a ser removido.
+*Where*<br/>
+A posição do elemento a ser removido.
 
-*Primeiro*  
- A posição do primeiro elemento a ser removido.
+*Primeiro*<br/>
+A posição do primeiro elemento a ser removido.
 
-*último*  
- A posição logo após o último elemento a ser removido.
+*último*<br/>
+A posição logo após o último elemento a ser removido.
 
-*Chave*  
- O valor de chave dos elementos a serem removidos.
+*Chave*<br/>
+O valor de chave dos elementos a serem removidos.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1275,8 +1275,8 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*keyval*  
- O valor chave a ser pesquisado.
+*keyval*<br/>
+O valor chave a ser pesquisado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1874,8 +1874,8 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Parâmetros
 
-*factor*  
- O novo fator de carga máxima.
+*factor*<br/>
+O novo fator de carga máxima.
 
 ### <a name="remarks"></a>Comentários
 
@@ -2148,8 +2148,8 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nbuckets*  
- O número solicitado de buckets.
+*nbuckets*<br/>
+O número solicitado de buckets.
 
 ### <a name="remarks"></a>Comentários
 
@@ -2326,8 +2326,8 @@ void swap(unordered_set& right);
 
 ### <a name="parameters"></a>Parâmetros
 
-*right*  
- O contêiner para alternância.
+*right*<br/>
+O contêiner para alternância.
 
 ### <a name="remarks"></a>Comentários
 

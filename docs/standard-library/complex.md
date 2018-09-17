@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e6a8364c6f0491344eef7faf381d701944f66d9
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 84f94e4e7a3486f036af47f0444d85d0f2fe4446
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965663"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726694"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -54,11 +54,7 @@ O conjunto de números complexos com as operações de adição e multiplicaçã
 
 Por que representa um número complexo *z* = (*um*, *b*) na forma *z* = *um*  +  *bi*, onde *eu*<sup>2</sup> = -1, as regras de álgebra do conjunto de números reais pode ser aplicada ao conjunto de números complexos e aos seus componentes. Por exemplo:
 
-   (1 + 2*i*) \* (2 + 3*i*)  
-   = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*)  
-   = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>)  
-   = (2 - 6) + (3 + 4)*i*  
-   = -4 + 7*i*
+   (1 + 2*eu*) \* (2 + 3*eu*) = 1 \* (2 + 3*eu*) + 2*eu* \* (2 + 3*i*) = (2 + 3*eu*) + (4*eu* + 6*eu*<sup>2</sup>) = (2 a 6) + (3 + 4)*eu* = -4 + 7*eu*
 
 O sistema de números complexos é um campo, mas não é um campo ordenado. Não há nenhuma ordenação dos números complexos como há para o campo de números reais e seus subconjuntos para que as desigualdades não podem ser aplicadas a números complexos como estão em números reais.
 

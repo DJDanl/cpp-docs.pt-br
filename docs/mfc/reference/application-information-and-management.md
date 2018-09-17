@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6793cbb120b44456a880a47ffd114c346662376
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a3aee777cf7d003beb2d1f76d57bf029d358aba6
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208879"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726785"
 ---
 # <a name="application-information-and-management"></a>Informações e gerenciamento do aplicativo
 Quando você escreve um aplicativo, você cria uma única [CWinApp](../../mfc/reference/cwinapp-class.md)-objeto derivado. Às vezes, você talvez queira obter informações sobre esse objeto de fora a `CWinApp`-objeto derivado. Ou você pode precisar de acesso a outros objetos globais "Manager".
@@ -406,8 +406,8 @@ Determina se a determinada janela é um objeto de quadros estendida.
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );  
 ```
 ### <a name="parameters"></a>Parâmetros  
- [in] *Apropriei*  
- Um ponteiro para um objeto que é derivado de `CWnd`.  
+*Apropriei*<br/>
+[in] Um ponteiro para um objeto que é derivado de `CWnd`.  
    
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a janela fornecido é um objeto de quadros estendida; Caso contrário, FALSE.  
@@ -442,8 +442,8 @@ Determina se a determinada janela é um objeto de barra de ferramentas.
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);  
 ```
 ### <a name="parameters"></a>Parâmetros  
- [in] *Apropriei*  
- Um ponteiro para um objeto que é derivado de `CWnd`.  
+*Apropriei*<br/>
+[in] Um ponteiro para um objeto que é derivado de `CWnd`.  
    
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se a janela fornecido for um objeto de barra de ferramentas; Caso contrário, FALSE.  
@@ -636,8 +636,8 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *bAtivar*  
- VERDADEIRO indica que as informações de registro são direcionadas para o nó HKCU; FALSE indica que o aplicativo grava as informações de registro para o nó de padrão. O nó padrão é **HKEY_CLASSES_ROOT** ( **HKCR**).  
+*bAtivar*<br/>
+[in] VERDADEIRO indica que as informações de registro são direcionadas para o nó HKCU; FALSE indica que o aplicativo grava as informações de registro para o nó de padrão. O nó padrão é **HKEY_CLASSES_ROOT** ( **HKCR**).  
   
 ### <a name="remarks"></a>Comentários  
 

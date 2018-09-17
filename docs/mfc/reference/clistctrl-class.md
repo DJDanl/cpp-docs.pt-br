@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 094cf61c2535ef40991d2ab6ab9a1bc4a9dff014
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f1e869fd70fb8f2d0b52d69dedb555c600fd390b
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684951"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45726811"
 ---
 # <a name="clistctrl-class"></a>Classe CListCtrl
 Encapsula a funcionalidade de um "controle de exibição lista," que exibe uma coleção de itens, cada uma consistindo em um ícone (de uma lista de imagens) e um rótulo.  
@@ -1276,8 +1276,8 @@ BOOL GetGroupInfoByIndex(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *iIndex*|Índice baseado em zero de um grupo.|  
-|[out] *pGroup*|Ponteiro para um [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) estrutura que recebe informações sobre o grupo especificado pela *iIndex* parâmetro.<br /><br /> O chamador é responsável por inicializar os membros de [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) estrutura. Defina a `cbSize` membro para o tamanho da estrutura e os sinalizadores do `mask` membro para especificar as informações a serem recuperadas.|  
+|*iIndex*|[in] Índice baseado em zero de um grupo.|  
+|*pGroup*|[out] Ponteiro para um [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) estrutura que recebe informações sobre o grupo especificado pela *iIndex* parâmetro.<br /><br /> O chamador é responsável por inicializar os membros de [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) estrutura. Defina a `cbSize` membro para o tamanho da estrutura e os sinalizadores do `mask` membro para especificar as informações a serem recuperadas.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -1353,9 +1353,9 @@ BOOL GetGroupRect(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *iGroupId*|Especifica um grupo.|  
-|[no, out] *lpRect*|Ponteiro para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura. Se esse método for bem-sucedido, a estrutura recebe as coordenadas do retângulo do grupo especificado por *iGroupId*.|  
-|[in] *iCoords*|Especifica as coordenadas do retângulo para recuperar. Use um destes valores:<br /><br /> -LVGGR_GROUP - coordenadas (padrão) de todo o grupo expandido.<br />-LVGGR_HEADER - coordenadas de apenas o cabeçalho (grupo recolhido).<br />-LVGGR_SUBSETLINK - coordenadas do somente o link de subconjunto (subconjunto de marcação).|  
+|*iGroupId*|[in] Especifica um grupo.|  
+|*lpRect*|[no, out] Ponteiro para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura. Se esse método for bem-sucedido, a estrutura recebe as coordenadas do retângulo do grupo especificado por *iGroupId*.|  
+|*iCoords*|[in] Especifica as coordenadas do retângulo para recuperar. Use um destes valores:<br /><br /> -LVGGR_GROUP - coordenadas (padrão) de todo o grupo expandido.<br />-LVGGR_HEADER - coordenadas de apenas o cabeçalho (grupo recolhido).<br />-LVGGR_SUBSETLINK - coordenadas do somente o link de subconjunto (subconjunto de marcação).|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -1406,8 +1406,8 @@ UINT GetGroupState(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *iGroupId*|Índice baseado em zero de um grupo.|  
-|[in] *dwMask*|Máscara que especifica o valor de estado para recuperar para o grupo especificado. Para obter mais informações, consulte o `mask` membro a [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) estrutura.|  
+|*iGroupId*|[in] Índice baseado em zero de um grupo.|  
+|*dwMask*|[in] Máscara que especifica o valor de estado para recuperar para o grupo especificado. Para obter mais informações, consulte o `mask` membro a [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) estrutura.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  O estado solicitado para o grupo especificado, ou 0 se o grupo não pode ser encontrado.  
@@ -1660,10 +1660,10 @@ BOOL GetItemIndexRect(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *pItemIndex*|Ponteiro para um [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) estrutura para o item pai do subitem.<br /><br /> O chamador é responsável por alocar e definir os membros de [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) estrutura. Esse parâmetro não pode ser NULL.|  
-|[in] *iColumn*|Índice baseado em zero de uma coluna no controle.|  
-|[in] *rectType*|Parte do subitem de exibição de lista para o qual o retângulo delimitador é recuperado. Especifique um dos seguintes valores:<br /><br /> LVIR_BOUNDS - retorna o retângulo delimitador do subitem inteiro, incluindo o ícone e o rótulo.<br /><br /> LVIR_ICON - retorna o retângulo delimitador do ícone ou ícone pequeno do subitem.<br /><br /> LVIR_LABEL - retorna o retângulo delimitador do texto do subitem.|  
-|[out] *pRect*|Ponteiro para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que recebe informações sobre o retângulo delimitador do subitem.<br /><br /> O chamador é responsável por alocar o [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura. Esse parâmetro não pode ser NULL.|  
+|*pItemIndex*|[in] Ponteiro para um [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) estrutura para o item pai do subitem.<br /><br /> O chamador é responsável por alocar e definir os membros de [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) estrutura. Esse parâmetro não pode ser NULL.|  
+|*iColumn*|[in] Índice baseado em zero de uma coluna no controle.|  
+|*rectType*|[in] Parte do subitem de exibição de lista para o qual o retângulo delimitador é recuperado. Especifique um dos seguintes valores:<br /><br /> LVIR_BOUNDS - retorna o retângulo delimitador do subitem inteiro, incluindo o ícone e o rótulo.<br /><br /> LVIR_ICON - retorna o retângulo delimitador do ícone ou ícone pequeno do subitem.<br /><br /> LVIR_LABEL - retorna o retângulo delimitador do texto do subitem.|  
+|*pRect*|[out] Ponteiro para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que recebe informações sobre o retângulo delimitador do subitem.<br /><br /> O chamador é responsável por alocar o [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura. Esse parâmetro não pode ser NULL.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -1821,9 +1821,9 @@ BOOL GetItemSpacing(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *fSmall*|Modo de exibição para o qual recuperar o espaçamento de item. Especifique TRUE para o modo de exibição de ícone pequeno, ou FALSE para exibição de ícones.|  
-|[out] *pnHorzSpacing*|Contém o espaçamento horizontal entre itens.|  
-|[out] *pnVertSpacing*|Contém o espaçamento vertical entre os itens.|  
+|*fSmall*|[in] Modo de exibição para o qual recuperar o espaçamento de item. Especifique TRUE para o modo de exibição de ícone pequeno, ou FALSE para exibição de ícones.|  
+|*pnHorzSpacing*|[out] Contém o espaçamento horizontal entre itens.|  
+|*pnVertSpacing*|[out] Contém o espaçamento vertical entre os itens.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -1944,8 +1944,8 @@ BOOL GetNextItemIndex(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[no, out] *pItemIndex*|Ponteiro para o [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) estrutura que descreve o item no qual a pesquisa será iniciada, ou -1 para localizar o primeiro item que coincide com os sinalizadores na *nFlags* parâmetro.<br /><br /> Se esse método for bem-sucedida, o `LVITEMINDEX` estrutura descreve o item encontrado pela pesquisa.|  
-|[in] *nFlags*|Uma combinação bit a bit (OR) de sinalizadores que especificam como executar a pesquisa.<br /><br /> A pesquisa pode depender do índice, o estado ou a aparência do item de destino ou a posição física do item de destino em relação ao item especificado pela *pItemIndex* parâmetro. Para obter mais informações, consulte o *sinalizadores* parâmetro na [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) mensagem.|  
+|*pItemIndex*|[no, out] Ponteiro para o [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) estrutura que descreve o item no qual a pesquisa será iniciada, ou -1 para localizar o primeiro item que coincide com os sinalizadores na *nFlags* parâmetro.<br /><br /> Se esse método for bem-sucedida, o `LVITEMINDEX` estrutura descreve o item encontrado pela pesquisa.|  
+|*nFlags*|[in] Uma combinação bit a bit (OR) de sinalizadores que especificam como executar a pesquisa.<br /><br /> A pesquisa pode depender do índice, o estado ou a aparência do item de destino ou a posição física do item de destino em relação ao item especificado pela *pItemIndex* parâmetro. Para obter mais informações, consulte o *sinalizadores* parâmetro na [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) mensagem.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -2647,7 +2647,7 @@ BOOL IsItemVisible(int index) const;
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *índice*|Índice baseado em zero de um item no controle de exibição de lista atual.|  
+|*index*|[in] Índice baseado em zero de um item no controle de exibição de lista atual.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o item especificado estiver visível; caso contrário, FALSE.  
@@ -2666,7 +2666,7 @@ UINT MapIDToIndex(UINT id) const;
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *id*|A ID exclusiva de um item.|  
+|*id*|[in] A ID exclusiva de um item.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  O índice atual para a ID especificada.  
@@ -2689,7 +2689,7 @@ UINT MapIndexToID(UINT index) const;
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *índice*|O índice baseado em zero de um item.|  
+|*index*|[in] O índice baseado em zero de um item.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  Uma ID exclusiva para o item especificado.  
@@ -2773,11 +2773,11 @@ void MoveItemToGroup(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *idItemFrom*  
- O índice do item a ser movido.  
+*idItemFrom*<br/>
+[in] O índice do item a ser movido.  
   
- [in] *idGroupTo*  
- O identificador do grupo de item será movido para.  
+*idGroupTo*<br/>
+[in] O identificador do grupo de item será movido para.  
   
 ### <a name="remarks"></a>Comentários  
   
@@ -3496,9 +3496,9 @@ BOOL SetItemIndexState(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *pItemIndex*|Ponteiro para um [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) estrutura que descreve um item. O chamador é responsável por alocar esta estrutura e definindo seus membros.|  
-|[in] *dwState*|O estado para definir o item, que é uma combinação bit a bit de [estados de item de exibição de lista](/windows/desktop/Controls/list-view-item-states). Especifique zero para a redefinição ou um para definir um estado.|  
-|[in] *dwMask*|Uma máscara de bits válidas de estado especificado pelo *dwState* parâmetro. Especifica uma combinação bit a bit (OR) de [estados de item de exibição de lista](/windows/desktop/Controls/list-view-item-states).|  
+|*pItemIndex*|[in] Ponteiro para um [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) estrutura que descreve um item. O chamador é responsável por alocar esta estrutura e definindo seus membros.|  
+|*dwState*|[in] O estado para definir o item, que é uma combinação bit a bit de [estados de item de exibição de lista](/windows/desktop/Controls/list-view-item-states). Especifique zero para a redefinição ou um para definir um estado.|  
+|*dwMask*|[in] Uma máscara de bits válidas de estado especificado pelo *dwState* parâmetro. Especifica uma combinação bit a bit (OR) de [estados de item de exibição de lista](/windows/desktop/Controls/list-view-item-states).|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
@@ -3838,13 +3838,13 @@ BOOL SortItems(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- [in] *pfnCompare*  
- Endereço da função de comparação definido pelo aplicativo.  
+*pfnCompare*<br/>
+[in] Endereço da função de comparação definido pelo aplicativo.  
   
  A operação de classificação chama a função de comparação sempre que a ordem relativa de dois itens de lista precisa ser determinado. A função de comparação deve ser um membro estático de uma classe ou uma função autônoma que não é um membro de qualquer classe.  
   
- [in] *dwData*  
- Valor definido pelo aplicativo passado para a função de comparação.  
+*dwData*<br/>
+[in] Valor definido pelo aplicativo passado para a função de comparação.  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se o método bem-sucedida; Caso contrário, FALSE.  
@@ -3899,8 +3899,8 @@ BOOL SortItemsEx(
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|[in] *pfnCompare*|Endereço da função de comparação definido pelo aplicativo.<br /><br /> A operação de classificação chama a função de comparação sempre que a ordem relativa de dois itens de lista precisa ser determinado. A função de comparação deve ser um membro estático de uma classe ou uma função autônoma que não é um membro de qualquer classe.|  
-|[in] *dwData*|Valor definido pelo aplicativo passado para a função de comparação.|  
+|*pfnCompare*|[in] Endereço da função de comparação definido pelo aplicativo.<br /><br /> A operação de classificação chama a função de comparação sempre que a ordem relativa de dois itens de lista precisa ser determinado. A função de comparação deve ser um membro estático de uma classe ou uma função autônoma que não é um membro de qualquer classe.|  
+|*dwData*|[in] Valor definido pelo aplicativo passado para a função de comparação.|  
   
 ### <a name="return-value"></a>Valor de retorno  
  TRUE se esse método for bem-sucedida; Caso contrário, FALSE.  
