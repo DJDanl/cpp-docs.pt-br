@@ -1,5 +1,5 @@
 ---
-title: C2272 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2272 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e969e7cadadf1102dadfb8089a847046731b568f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e17765ee0acbf20d76e631bf7fccfb3413c5dc1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171761"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040304"
 ---
-# <a name="compiler-error-c2272"></a>C2272 de erro do compilador
-'function': modificadores não permitidos em funções membro static  
-  
- Um `static` função de membro é declarada com um especificador de modelo de memória, como [const](../../cpp/const-cpp.md) ou [volátil](../../cpp/volatile-cpp.md), e esses modificadores não são permitidos em `static` funções de membro.  
-  
- O exemplo a seguir gera C2272:  
-  
-```  
-// C2272.cpp  
-// compile with: /c  
-class CMyClass {  
-public:  
-   static void func1() const volatile;   // C2272  func1 is static  
-   void func2() const volatile;   // OK  
-};  
+# <a name="compiler-error-c2272"></a>Erro do compilador C2272
+
+'function': modificadores não permitidos em funções de membro estático
+
+Um `static` função de membro é declarada com um especificador de modelo de memória, como [const](../../cpp/const-cpp.md) ou [volátil](../../cpp/volatile-cpp.md), e esses modificadores não são permitidos em `static` funções de membro.
+
+O exemplo a seguir gera C2272:
+
+```
+// C2272.cpp
+// compile with: /c
+class CMyClass {
+public:
+   static void func1() const volatile;   // C2272  func1 is static
+   void func2() const volatile;   // OK
+};
 ```

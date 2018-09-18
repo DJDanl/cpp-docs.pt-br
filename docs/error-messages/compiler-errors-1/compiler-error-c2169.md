@@ -1,5 +1,5 @@
 ---
-title: C2169 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2169 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bd0666f264d204c75fd74edbdffce17ecf2529a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e352d32193e6de287c845a451407927c29123fc2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166313"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030593"
 ---
-# <a name="compiler-error-c2169"></a>C2169 de erro do compilador
-'function': função intrínseca, não pode ser definido  
-  
- Uma definição de função é exibido para uma função que já declarada `intrinsic`.
+# <a name="compiler-error-c2169"></a>Erro do compilador C2169
+
+'function': função intrínseca, não podem ser definidos.
+
+Uma definição de função é exibido para uma função declarada já `intrinsic`.

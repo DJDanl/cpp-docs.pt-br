@@ -1,5 +1,5 @@
 ---
-title: C2647 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2647 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca5de79746876a60cc9a64c4bf8f91e468b4d379
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14187f7b74096a3a863798053ab260177d2f378b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232614"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045881"
 ---
-# <a name="compiler-error-c2647"></a>C2647 de erro do compilador
-'operator': não é possível desreferenciar 'type1' em 'type2'  
-  
- O operando esquerdo de um operador de ponteiro para membro ( `->*` ou `.*` ) não pode ser convertido implicitamente em um tipo relacionado ao operador à direita.  
-  
- O exemplo a seguir gera C2647:  
-  
-```  
-// C2647.cpp  
-class C {};  
-class D {};  
-  
-int main() {  
-   D d, *pd;  
-   C c, *pc = 0;  
-   int C::*pmc = 0;  
-   pd->*pmc = 0;   // C2647  
-   d.*pmc = 0;   // C2647  
-  
-   // OK  
-   pc->*pmc = 0;  
-   c.*pmc = 0;  
-}  
+# <a name="compiler-error-c2647"></a>Erro do compilador C2647
+
+'operator': não é possível desreferenciar um 'type1' em 'type2'
+
+O operando esquerdo de um operador de ponteiro para membro ( `->*` ou `.*` ) não pode ser convertido implicitamente em um tipo relacionado ao operador à direita.
+
+O exemplo a seguir gera C2647:
+
+```
+// C2647.cpp
+class C {};
+class D {};
+
+int main() {
+   D d, *pd;
+   C c, *pc = 0;
+   int C::*pmc = 0;
+   pd->*pmc = 0;   // C2647
+   d.*pmc = 0;   // C2647
+
+   // OK
+   pc->*pmc = 0;
+   c.*pmc = 0;
+}
 ```

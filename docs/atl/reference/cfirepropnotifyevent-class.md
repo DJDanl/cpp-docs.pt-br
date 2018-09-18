@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88c816fecf71b94d25ac676f8169eeb26a2982fc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e667f943d2630d78880d49f18015bdac95e571ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760211"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026511"
 ---
 # <a name="cfirepropnotifyevent-class"></a>Classe CFirePropNotifyEvent
 
@@ -72,10 +72,10 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pUnk*  
+*pUnk*<br/>
 [in] Ponteiro para o `IUnknown` do objeto que está enviando a notificação.
 
-*dispID*  
+*dispID*<br/>
 [in] Identificador da propriedade que foi alterado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -96,10 +96,10 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pUnk*  
+*pUnk*<br/>
 [in] Ponteiro para o `IUnknown` do objeto que está enviando a notificação.
 
-*dispID*  
+*dispID*<br/>
 [in] Identificador da propriedade prestes a ser alterada.
 
 ### <a name="return-value"></a>Valor de retorno

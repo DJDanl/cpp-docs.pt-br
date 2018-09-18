@@ -1,5 +1,5 @@
 ---
-title: C2616 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2616 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ad7163522fb1155f540293622689fbc0388733f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a983f8cd1083fa05499c334ad776a220441db61a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233663"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047415"
 ---
-# <a name="compiler-error-c2616"></a>C2616 de erro do compilador
-'conversão de ': não é possível converter implicitamente um não lvalue 'type1' em 'type2' que não seja const  
-  
- Uma referência não pode ser inicializada de não lvalue.  
-  
- Este é um erro em compatibilidade ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) e um aviso em extensões da Microsoft (**/Ze**).
+# <a name="compiler-error-c2616"></a>Erro do compilador C2616
+
+'conversion': não é possível converter implicitamente um não lvalue 'type1' em 'type2' que não seja const
+
+Uma referência não pode ser inicializada de não lvalue.
+
+Este é um erro em compatibilidade com ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) e um aviso em extensões da Microsoft (**/Ze**).

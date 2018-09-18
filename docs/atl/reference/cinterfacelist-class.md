@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9b0eb225f9da88db356fc4f04d25d2219876604
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1ac378e0a923e2a906bf99995432bfc87e39b8d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752743"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032426"
 ---
 # <a name="cinterfacelist-class"></a>Classe CInterfaceList
 
@@ -32,7 +32,7 @@ Essa classe fornece métodos úteis ao construir uma lista de ponteiros de inter
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template<class I, const IID* piid =& __uuidof(I)>  
+template<class I, const IID* piid =& __uuidof(I)>
 class CInterfaceList 
    : public CAtlList<ATL::CComQIPtr<I, piid>,
                      CComQIPtrElementTraits<I, piid>>
@@ -40,10 +40,10 @@ class CInterfaceList
 
 #### <a name="parameters"></a>Parâmetros
 
-*I*  
+*I*<br/>
 Uma interface COM especificando o tipo de ponteiro a ser armazenado.
 
-*piid*  
+*piid*<br/>
 Um ponteiro para o IID da *eu*.
 
 ## <a name="members"></a>Membros
@@ -80,7 +80,7 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*nBlockSize*  
+*nBlockSize*<br/>
 O tamanho do bloco, com um padrão de 10.
 
 ### <a name="remarks"></a>Comentários
@@ -89,7 +89,7 @@ O tamanho do bloco é uma medida da quantidade de memória alocada quando um nov
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CAtlList](../../atl/reference/catllist-class.md)   
-[Classe CComQIPtr](../../atl/reference/ccomqiptr-class.md)   
-[Classe CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)   
+[Classe CAtlList](../../atl/reference/catllist-class.md)<br/>
+[Classe CComQIPtr](../../atl/reference/ccomqiptr-class.md)<br/>
+[Classe CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

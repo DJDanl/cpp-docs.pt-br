@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4391 | Microsoft Docs
+title: Compilador aviso (nível 1) C4391 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0152d6e04d40e3e0389cf51ba7bdf71de4cd4791
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d0b3873beb635afe81cee3030a78d2b1223197a7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277862"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047077"
 ---
-# <a name="compiler-warning-level-1-c4391"></a>Compilador C4391 de aviso (nível 1)
-'assinatura': tipo de retorno incorreto para função intrínseca, esperado 'type'  
-  
- Uma declaração de função para um intrínseco do compilador tinha o tipo de retorno incorreto. A imagem resultante pode não funcionar corretamente.  
-  
- Para corrigir esse aviso, corrija a declaração ou excluir a declaração e simplesmente #include arquivo de cabeçalho adequado.  
-  
- O exemplo a seguir gera C4391:  
-  
-```  
-// C4391.cpp  
-// compile with: /W1  
-// processor: x86  
-// uncomment the following line and delete the line that  
-// generated the warning to resolve  
-// #include "xmmintrin.h"  
-  
-#ifdef  __cplusplus  
-extern "C" {  
-#endif  
-  
-extern void _mm_load_ss(float *p);   // C4391  
-  
-#ifdef  __cplusplus  
-}  
-#endif  
-  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-1-c4391"></a>Compilador aviso (nível 1) C4391
+
+'assinatura': tipo de retorno incorreto para função intrínseca, esperado 'type'
+
+Uma declaração de função para um intrínseco de compilador tinha o tipo de retorno incorreto. A imagem resultante pode não funcionar corretamente.
+
+Para corrigir este aviso, corrija a declaração ou excluir a declaração e simplesmente #include do arquivo de cabeçalho apropriado.
+
+O exemplo a seguir gera C4391:
+
+```
+// C4391.cpp
+// compile with: /W1
+// processor: x86
+// uncomment the following line and delete the line that
+// generated the warning to resolve
+// #include "xmmintrin.h"
+
+#ifdef  __cplusplus
+extern "C" {
+#endif
+
+extern void _mm_load_ss(float *p);   // C4391
+
+#ifdef  __cplusplus
+}
+#endif
+
+int main()
+{
+}
 ```

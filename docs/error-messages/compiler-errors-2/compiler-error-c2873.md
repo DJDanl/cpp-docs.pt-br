@@ -1,5 +1,5 @@
 ---
-title: C2873 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2873 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a04d650729bdda949754c5070a6c307d390929
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf0cc5663d81d6c1e7ad6a9f1a5f7ca167f12909
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244372"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049898"
 ---
-# <a name="compiler-error-c2873"></a>C2873 de erro do compilador
-'symbol': símbolo não pode ser usado em uma declaração de using  
-  
- Um `using` diretiva está falta um [namespace](../../cpp/namespaces-cpp.md) palavra-chave. Isso faz com que o compilador a interpretar incorretamente o código como um [usando declaração](../../cpp/using-declaration.md) em vez de [usando diretiva](../../cpp/namespaces-cpp.md#using_directives).
+# <a name="compiler-error-c2873"></a>Erro do compilador C2873
+
+'symbol': símbolo não pode ser usado em uma declaração using
+
+Um `using` diretiva está falta um [namespace](../../cpp/namespaces-cpp.md) palavra-chave. Isso faz com que o compilador a interpretar incorretamente o código como um [usando a declaração](../../cpp/using-declaration.md) em vez de uma [diretiva using](../../cpp/namespaces-cpp.md#using_directives).

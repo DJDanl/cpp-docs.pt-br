@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75caf648b0c62827e9532fa3776def1a4e459a64
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4a502cbf61f3542c010a89b82131a95f94856cda
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764004"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042878"
 ---
 # <a name="cregkey-class"></a>Classe CRegKey
 
@@ -153,7 +153,7 @@ void Attach(HKEY hKey) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*hKey*  
+*hKey*<br/>
 O identificador de uma chave do registro.
 
 ### <a name="remarks"></a>Comentários
@@ -189,25 +189,25 @@ LONG Create(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hKeyParent*  
+*hKeyParent*<br/>
 O identificador de uma chave aberta.
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Especifica o nome de uma chave a ser criado ou aberto. Esse nome deve ser uma subchave de *hKeyParent*.
 
-*lpszClass*  
+*lpszClass*<br/>
 Especifica a classe da chave a ser criado ou aberto. O valor padrão é {1&gt;REG_NONE&lt;1.
 
-*dwOptions*  
+*dwOptions*<br/>
 Opções para a chave. O valor padrão é REG_OPTION_NON_VOLATILE. Para obter uma lista de possíveis valores e descrições, consulte [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) no SDK do Windows.
 
-*samDesired*  
+*samDesired*<br/>
 O acesso de segurança para a chave. O valor padrão é KEY_READ &#124; KEY_WRITE. Para obter uma lista de possíveis valores e descrições, consulte `RegCreateKeyEx`.
 
-*lpSecAttr*  
+*lpSecAttr*<br/>
 Um ponteiro para um [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) estrutura que indica se o identificador da chave pode ser herdado por um processo filho. Por padrão, esse parâmetro é NULL (o que significa que o identificador não pode ser herdado).
 
-*lpdwDisposition*  
+*lpdwDisposition*<br/>
 [out] Se não for nulo, recupera REG_CREATED_NEW_KEY (se a chave não existia e foi criada) ou REG_OPENED_EXISTING_KEY (se a chave existia e foi aberta).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -231,13 +231,13 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*key*  
+*key*<br/>
 Uma referência a um objeto `CRegKey`.
 
-*hKey*  
+*hKey*<br/>
 Um identificador para uma chave do registro.
 
-*pTM*  
+*pTM*<br/>
 Ponteiro para objeto CAtlTransactionManager
 
 ### <a name="remarks"></a>Comentários
@@ -266,7 +266,7 @@ LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpszSubKey*  
+*lpszSubKey*<br/>
 Especifica o nome da chave a excluir. Esse nome deve ser uma subchave de [m_hKey](#m_hkey).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -287,7 +287,7 @@ LONG DeleteValue(LPCTSTR lpszValue) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpszValue*  
+*lpszValue*<br/>
 Especifica o campo de valor a ser removido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -320,16 +320,16 @@ LONG EnumKey(
 
 ### <a name="parameters"></a>Parâmetros
 
-*iIndex*  
+*iIndex*<br/>
 O índice de subchaves. Esse parâmetro deve ser zero para a primeira chamada e, em seguida, é incrementado para chamadas subsequentes
 
-*pszName*  
+*pszName*<br/>
 Ponteiro para um buffer que recebe o nome da subchave, incluindo o caractere nulo de terminação. Somente o nome da subchave é copiado para o buffer, não a hierarquia de chave completo.
 
-*pnNameLength*  
+*pnNameLength*<br/>
 Ponteiro para uma variável que especifica o tamanho, em TCHARs, do buffer especificado o *pszName* parâmetro. Esse tamanho deve incluir o caractere nulo de terminação. Quando o método retornar, a variável apontada por *pnNameLength* contém o número de caracteres armazenados em buffer. A contagem retornada não inclui o caractere nulo de terminação.
 
-*pftLastWriteTime*  
+*pftLastWriteTime*<br/>
 Ponteiro para uma variável que recebe o tempo a subchave enumerada foi gravada pela última vez.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -369,13 +369,13 @@ LONG GetKeySecurity(
 
 ### <a name="parameters"></a>Parâmetros
 
-*si*  
+*si*<br/>
 O [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) valor que indica as informações de segurança solicitado.
 
-*PSD*  
+*PSD*<br/>
 Um ponteiro para um buffer que recebe uma cópia do descritor de segurança solicitado.
 
-*pnBytes*  
+*pnBytes*<br/>
 O tamanho, em bytes, do buffer apontado por *psd*.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -418,10 +418,10 @@ LONG NotifyChangeKeyValue(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bWatchSubtree*  
+*bWatchSubtree*<br/>
 Especifica um sinalizador que indica se é relatar as alterações na chave especificada e todas as suas subchaves ou somente na chave especificada. Se esse parâmetro for TRUE, o método relata as alterações na chave e suas subchaves. Se o parâmetro for FALSE, o método relata alterações apenas na chave.
 
-*dwNotifyFilter*  
+*dwNotifyFilter*<br/>
 Especifica um conjunto de sinalizadores que controlam quais alterações deve ser relatado. Esse parâmetro pode ser uma combinação dos seguintes valores:
 
 |Valor|Significado|
@@ -431,10 +431,10 @@ Especifica um conjunto de sinalizadores que controlam quais alterações deve se
 |REG_NOTIFY_CHANGE_LAST_SET|Notificar o chamador de alterações para um valor da chave. Isso pode incluir adicionar ou excluir um valor ou alterar um valor existente.|
 |REG_NOTIFY_CHANGE_SECURITY|Notificar o chamador de alterações para o descritor de segurança da chave.|
 
-*hEvent*  
+*hEvent*<br/>
 Manipular um evento. Se o *bAsync* parâmetro for TRUE, o método retorna imediatamente e as alterações são relatadas por meio da sinalização esse evento. Se *bAsync* é FALSE, o *hEvent* será ignorado.
 
-*bAsync*  
+*bAsync*<br/>
 Especifica um sinalizador que indica como o método relata as alterações. Se esse parâmetro for TRUE, o método retorna imediatamente e relata alterações por meio da sinalização do evento especificado. Quando esse parâmetro for FALSE, o método não retorna até que uma alteração ocorreu. Se *hEvent* não especifica um evento válido, o *bAsync* parâmetro não pode ser TRUE.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -461,13 +461,13 @@ LONG Open(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hKeyParent*  
+*hKeyParent*<br/>
 O identificador de uma chave aberta.
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Especifica o nome de uma chave a ser criado ou aberto. Esse nome deve ser uma subchave de *hKeyParent*.
 
-*samDesired*  
+*samDesired*<br/>
 O acesso de segurança para a chave. O valor padrão é KEY_ALL_ACCESS. Para obter uma lista de possíveis valores e descrições, consulte [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) no SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -484,7 +484,7 @@ Diferentemente [CRegKey::Create](#create), `Open` não criará a chave especific
 
 Converte um `CRegKey` objeto para um HKEY.
 
-```  
+```
 operator HKEY() const throw();
 ```
 
@@ -498,7 +498,7 @@ CRegKey& operator= (CRegKey& key) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*key*  
+*key*<br/>
 A chave para copiar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -522,13 +522,13 @@ LONG QueryBinaryValue(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszValueName*  
+*pszValueName*<br/>
 Ponteiro para uma cadeia de caracteres terminada em nulo que contém o nome do valor a consulta.
 
-*pValue*  
+*pValue*<br/>
 Ponteiro para um buffer que recebe os dados do valor.
 
-*pnBytes*  
+*pnBytes*<br/>
 Ponteiro para uma variável que especifica o tamanho, em bytes, do buffer apontado pela *pValue* parâmetro. Quando o método retorna, essa variável contém o tamanho dos dados copiados para o buffer.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -554,10 +554,10 @@ LONG QueryDWORDValue(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszValueName*  
+*pszValueName*<br/>
 Ponteiro para uma cadeia de caracteres terminada em nulo que contém o nome do valor a consulta.
 
-*dwValue*  
+*dwValue*<br/>
 Ponteiro para um buffer que recebe o valor DWORD.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -583,10 +583,10 @@ LONG QueryGUIDValue(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszValueName*  
+*pszValueName*<br/>
 Ponteiro para uma cadeia de caracteres terminada em nulo que contém o nome do valor a consulta.
 
-*guidValue*  
+*guidValue*<br/>
 Ponteiro para uma variável que recebe o GUID.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -613,13 +613,13 @@ LONG QueryMultiStringValue(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszValueName*  
+*pszValueName*<br/>
 Ponteiro para uma cadeia de caracteres terminada em nulo que contém o nome do valor a consulta.
 
-*pszValue*  
+*pszValue*<br/>
 Ponteiro para um buffer que recebe os dados de cadeia de caracteres múltiplas. Uma cadeia de caracteres múltipla é uma matriz de cadeias de caracteres terminada em nulo, terminada por dois caracteres nulos.
 
-*pnChars*  
+*pnChars*<br/>
 O tamanho, em TCHARs, do buffer apontado por *pszValue*. Quando o método retorna, *pnChars* contém o tamanho, em TCHARs, da cadeia de caracteres múltipla recuperado, incluindo um caractere nulo de terminação.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -645,10 +645,10 @@ LONG QueryQWORDValue(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszValueName*  
+*pszValueName*<br/>
 Ponteiro para uma cadeia de caracteres terminada em nulo que contém o nome do valor a consulta.
 
-*qwValue*  
+*qwValue*<br/>
 Ponteiro para um buffer que recebe o QWORD.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -675,13 +675,13 @@ LONG QueryStringValue(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszValueName*  
+*pszValueName*<br/>
 Ponteiro para uma cadeia de caracteres terminada em nulo que contém o nome do valor a consulta.
 
-*pszValue*  
+*pszValue*<br/>
 Ponteiro para um buffer que recebe os dados de cadeia de caracteres.
 
-*pnChars*  
+*pnChars*<br/>
 O tamanho, em TCHARs, do buffer apontado por *pszValue*. Quando o método retorna, *pnChars* contém o tamanho, em TCHARs, da cadeia de caracteres recuperados, incluindo um caractere nulo de terminação.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -718,28 +718,28 @@ ATL_DEPRECATED LONG QueryValue(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszValueName*  
+*pszValueName*<br/>
 Ponteiro para uma cadeia de caracteres terminada em nulo que contém o nome do valor a consulta. Se *pszValueName* é nulo ou uma cadeia de caracteres vazia "", o método recupera o tipo e dados para a chave sem nome ou valor padrão, se houver.
 
-*pdwType*  
+*pdwType*<br/>
 Ponteiro para uma variável que recebe um código que indica o tipo de dados armazenados no valor especificado. O *pdwType* parâmetro pode ser NULL se o código de tipo não for necessário.
 
-*pData*  
+*pData*<br/>
 Ponteiro para um buffer que recebe os dados do valor. Esse parâmetro pode ser NULL se os dados não forem necessários.
 
-*pnBytes*  
+*pnBytes*<br/>
 Ponteiro para uma variável que especifica o tamanho, em bytes, do buffer apontado pela *pData* parâmetro. Quando o método retorna, essa variável contém o tamanho dos dados copiados para *pData.*
 
-*dwValue*  
+*dwValue*<br/>
 Dados numéricos do campo de valor.
 
-*lpszValueName*  
+*lpszValueName*<br/>
 Especifica o campo de valor a ser consultado.
 
-*szValue*  
+*szValue*<br/>
 Dados de cadeia de caracteres do campo de valor.
 
-*pdwCount*  
+*pdwCount*<br/>
 O tamanho dos dados de cadeia de caracteres. Seu valor é inicialmente definido como o tamanho do *szValue* buffer.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -765,7 +765,7 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpszKey*  
+*lpszKey*<br/>
 Especifica o nome da chave a excluir. Esse nome deve ser uma subchave de [m_hKey](#m_hkey).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -789,13 +789,13 @@ LONG SetBinaryValue(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszValueName*  
+*pszValueName*<br/>
 Ponteiro para uma cadeia de caracteres que contém o nome do valor a ser definido. Se um valor com este nome já não estiver presente, o método o adiciona à chave.
 
-*pValue*  
+*pValue*<br/>
 Ponteiro para um buffer que contém os dados a serem armazenados com o nome do valor especificado.
 
-*nBytes*  
+*nBytes*<br/>
 Especifica o tamanho, em bytes, das informações apontada para o *pValue* parâmetro.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -816,10 +816,10 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszValueName*  
+*pszValueName*<br/>
 Ponteiro para uma cadeia de caracteres que contém o nome do valor a ser definido. Se um valor com este nome já não estiver presente, o método o adiciona à chave.
 
-*dwValue*  
+*dwValue*<br/>
 Os dados DWORD a serem armazenados com o nome do valor especificado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -840,10 +840,10 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszValueName*  
+*pszValueName*<br/>
 Ponteiro para uma cadeia de caracteres que contém o nome do valor a ser definido. Se um valor com este nome já não estiver presente, o método o adiciona à chave.
 
-*guidValue*  
+*guidValue*<br/>
 Referência para o GUID a ser armazenado com o nome do valor especificado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -867,13 +867,13 @@ LONG SetKeyValue(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Especifica o nome da chave a ser criado ou aberto. Esse nome deve ser uma subchave de [m_hKey](#m_hkey).
 
-*lpszValue*  
+*lpszValue*<br/>
 Especifica os dados a serem armazenados. Esse parâmetro deve ser não nulo.
 
-*lpszValueName*  
+*lpszValueName*<br/>
 Especifica o campo de valor a ser definido. Se um campo de valor com esse nome ainda não existir na chave, ele será adicionado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -894,7 +894,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*si*  
+*si*<br/>
 Especifica os componentes do descritor de segurança para definir. O valor pode ser uma combinação dos seguintes valores:
 
 |Valor|Significado|
@@ -904,7 +904,7 @@ Especifica os componentes do descritor de segurança para definir. O valor pode 
 |OWNER_SECURITY_INFORMATION|Define o proprietário da chave SID. A chave deve ter acesso WRITE_OWNER ou o processo de chamada deve ser o proprietário do objeto ou ter o privilégio SE_TAKE_OWNERSHIP_NAME habilitado.|
 |SACL_SECURITY_INFORMATION|Define a lista de controle de acesso de sistema da chave (SACL). A chave deve ter acesso ACCESS_SYSTEM_SECURITY. O modo adequado para obter esse acesso é habilitar o SE_SECURITY_NAME [privilégio](https://msdn.microsoft.com/library/windows/desktop/aa379306) no token de acesso atual do chamador, abrir o identificador para o acesso ACCESS_SYSTEM_SECURITY e, em seguida, desabilite o privilégio.|
 
-*PSD*  
+*PSD*<br/>
 Ponteiro para um [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) estrutura que especifica os atributos de segurança a ser definido para a chave especificada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -925,10 +925,10 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszValueName*  
+*pszValueName*<br/>
 Ponteiro para uma cadeia de caracteres que contém o nome do valor a ser definido. Se um valor com este nome já não estiver presente, o método o adiciona à chave.
 
-*pszValue*  
+*pszValue*<br/>
 Ponteiro para os dados de cadeia de caracteres múltiplas a serem armazenados com o nome do valor especificado. Uma cadeia de caracteres múltipla é uma matriz de cadeias de caracteres terminada em nulo, terminada por dois caracteres nulos.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -949,10 +949,10 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszValueName*  
+*pszValueName*<br/>
 Ponteiro para uma cadeia de caracteres que contém o nome do valor a ser definido. Se um valor com este nome já não estiver presente, o método o adiciona à chave.
 
-*qwValue*  
+*qwValue*<br/>
 Os dados QWORD a serem armazenados com o nome do valor especificado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -976,13 +976,13 @@ LONG SetStringValue(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszValueName*  
+*pszValueName*<br/>
 Ponteiro para uma cadeia de caracteres que contém o nome do valor a ser definido. Se um valor com este nome já não estiver presente, o método o adiciona à chave.
 
-*pszValue*  
+*pszValue*<br/>
 Ponteiro para os dados de cadeia de caracteres a serem armazenados com o nome do valor especificado.
 
-*dwType*  
+*dwType*<br/>
 O tipo de cadeia de caracteres para escrever no registro: REG_SZ (o padrão) ou REG_EXPAND_SZ (para várias cadeias de caracteres).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1023,37 +1023,37 @@ ATL_DEPRECATED LONG SetValue(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszValueName*  
+*pszValueName*<br/>
 Ponteiro para uma cadeia de caracteres que contém o nome do valor a ser definido. Se um valor com este nome já não estiver presente na chave, o método o adiciona à chave. Se *pszValueName* é nulo ou uma cadeia de caracteres vazia "", o método define o tipo e dados para a chave sem nome ou valor padrão.
 
-*dwType*  
+*dwType*<br/>
 Especifica um código que indica o tipo de dados apontados para o *pValue* parâmetro.
 
-*pValue*  
+*pValue*<br/>
 Ponteiro para um buffer que contém os dados a serem armazenados com o nome do valor especificado.
 
-*nBytes*  
+*nBytes*<br/>
 Especifica o tamanho, em bytes, das informações apontada para o *pValue* parâmetro. Se os dados forem do tipo REG_SZ, REG_EXPAND_SZ ou REG_MULTI_SZ *nBytes* deve incluir o tamanho do caractere de terminação nula.
 
-*hKeyParent*  
+*hKeyParent*<br/>
 O identificador de uma chave aberta.
 
-*lpszKeyName*  
+*lpszKeyName*<br/>
 Especifica o nome de uma chave a ser criado ou aberto. Esse nome deve ser uma subchave de *hKeyParent*.
 
-*lpszValue*  
+*lpszValue*<br/>
 Especifica os dados a serem armazenados. Esse parâmetro deve ser não nulo.
 
-*lpszValueName*  
+*lpszValueName*<br/>
 Especifica o campo de valor a ser definido. Se um campo de valor com esse nome ainda não existir na chave, ele será adicionado.
 
-*dwValue*  
+*dwValue*<br/>
 Especifica os dados a serem armazenados.
 
-*bMulti*  
+*bMulti*<br/>
 Se for falso, indica que a cadeia de caracteres é do tipo REG_SZ. Se for true, indica que a cadeia de caracteres é uma cadeia de caracteres múltipla do tipo REG_MULTI_SZ.
 
-*nValueLen*  
+*nValueLen*<br/>
 Se *bMulti* for true, *nValueLen* é o comprimento de *lpszValue* cadeia de caracteres em caracteres. Se *bMulti* for false, um valor de -1 indica que o método calcula o comprimento automaticamente.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1068,5 +1068,5 @@ As chamadas de método terceiro [RegSetValueEx](/windows/desktop/api/winreg/nf-w
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo DCOM](../../visual-cpp-samples.md)   
+[Exemplo DCOM](../../visual-cpp-samples.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

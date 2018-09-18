@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5eb784c8a368b5f5836deaff17d07542519ba980
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99ca94a47925a64c91077ad5b363e953def186b1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290329"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041318"
 ---
-# <a name="compiler-warning-level-3-c4018"></a>Compilador C4018 de aviso (nível 3)
-'expression': incompatibilidade assinada/não assinada  
-  
- Comparando um número assinado e necessário ao compilador para converter o valor assinado em não assinado.  
-  
- Esse aviso pode ser corrigido, se você converter um dos dois tipos ao testar tipos assinados e não assinados.  
-  
- O exemplo a seguir gera C4018:  
-  
-```  
-// C4018.cpp  
-// compile with: /W3  
-int main() {  
-   unsigned int uc = 0;  
-   int c = 0;  
-   unsigned int c2 = 0;  
-  
-   if (uc < c) uc = 0;   // C4018  
-  
-   // OK  
-   if (uc == c2) uc = 0;  
-}  
+# <a name="compiler-warning-level-3-c4018"></a>Compilador aviso (nível 3) C4018
+
+'expression': incompatibilidade de signed/unsigned
+
+Comparando um número assinado e exigia que o compilador para converter o valor com sinal em sem sinal.
+
+Esse aviso pode ser corrigido se você converter um dos dois tipos, quando o teste de tipos assinados e não assinados.
+
+O exemplo a seguir gera C4018:
+
+```
+// C4018.cpp
+// compile with: /W3
+int main() {
+   unsigned int uc = 0;
+   int c = 0;
+   unsigned int c2 = 0;
+
+   if (uc < c) uc = 0;   // C4018
+
+   // OK
+   if (uc == c2) uc = 0;
+}
 ```

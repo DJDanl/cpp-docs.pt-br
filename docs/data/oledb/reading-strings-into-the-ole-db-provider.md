@@ -15,22 +15,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7554e7ee59f1d25344c61bd208fd0341add797a9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 4e052de60234b065a137c5528c77d2d6c97490e8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572796"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034844"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Lendo cadeias de caracteres no provedor de banco de dados OLE
+
 O `RMyProviderRowset::Execute` função abre um arquivo e lê as cadeias de caracteres. O consumidor transmite o nome do arquivo para o provedor, chamando [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757\(v=vs.85\)). O provedor recebe o nome do arquivo e o armazena na variável de membro `m_szCommandText`. `Execute` lê o nome do arquivo de `m_szCommandText`. Se o nome do arquivo é inválido ou não estiver disponível, o arquivo `Execute` retornará um erro. Caso contrário, ele abre o arquivo e chama `fgets` para recuperar as cadeias de caracteres. Para cada conjunto de cadeias de caracteres-leituras, `Execute` cria uma instância de registro do usuário (`CAgentMan`) e o coloca em uma matriz.  
   
- Se o arquivo não pode ser aberto, `Execute` deve retornar DB_E_NOTABLE. Se ele retornar E_FAIL em vez disso, o provedor não funcionará com muitos consumidores e não passa do OLE DB [testes de conformidade](../../data/oledb/testing-your-provider.md).  
+Se o arquivo não pode ser aberto, `Execute` deve retornar DB_E_NOTABLE. Se ele retornar E_FAIL em vez disso, o provedor não funcionará com muitos consumidores e não passa do OLE DB [testes de conformidade](../../data/oledb/testing-your-provider.md).  
   
 ## <a name="example"></a>Exemplo  
   
 ### <a name="description"></a>Descrição  
- O editado `Execute` função tem esta aparência:  
+
+O editado `Execute` função tem esta aparência:  
   
 ### <a name="code"></a>Código  
   
@@ -107,4 +109,5 @@ public:
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Implementando o provedor somente leitura simples](../../data/oledb/implementing-the-simple-read-only-provider.md)
+
+[Implementando o provedor somente leitura simples](../../data/oledb/implementing-the-simple-read-only-provider.md)

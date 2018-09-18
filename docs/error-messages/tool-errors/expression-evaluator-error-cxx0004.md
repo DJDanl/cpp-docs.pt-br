@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8791159e4357b003da38f58a669400bfed7c290e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cafc9d1976ea7e68266e56ac8c58c37be422d70e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301402"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057113"
 ---
 # <a name="expression-evaluator-error-cxx0004"></a>Erro CXX0004 (avaliador de expressão)
-Erro de sintaxe  
-  
- A sintaxe da expressão está incorreta.  
-  
- Digite novamente a expressão com a sintaxe correta.  
-  
- Esse erro é idêntico ao CAN0004.
+
+Erro de sintaxe
+
+A sintaxe da expressão está incorreta.
+
+Digite novamente a expressão com a sintaxe correta.
+
+Esse erro é idêntico ao CAN0004.

@@ -1,5 +1,5 @@
 ---
-title: C2589 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2589 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c15589358979f554a9c17114f7d78b05dd83c472
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2db5dde898a3e5918eed62b2b32231b5d7ed014f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230747"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046050"
 ---
-# <a name="compiler-error-c2589"></a>C2589 de erro do compilador
-'Identificador': token inválido no lado direito de ':: '  
-  
- Se uma classe, estrutura ou união nome aparece à esquerda do operador de resolução do escopo (dois-pontos duplos), o token da direita deve ser uma classe, estrutura ou membro de união. Caso contrário, qualquer identificador global pode aparecer à direita.  
-  
- O operador de resolução do escopo não pode estar sobrecarregado.  
-  
- O exemplo a seguir gera C2589:  
-  
-```  
-// C2589.cpp  
-void Test(){}  
-class A {};  
-void operator :: ();   // C2589  
-  
-int main() {  
-   ::Test();  
-}  
+# <a name="compiler-error-c2589"></a>Erro do compilador C2589
+
+'identifier': token inválido no lado direito de ':: '
+
+Se uma classe, estrutura ou união nome aparece à esquerda do operador de resolução de escopo (dois-pontos duplo), o token à direita deve ser uma classe, estrutura ou membro de união. Caso contrário, qualquer identificador global pode aparecer à direita.
+
+O operador de resolução de escopo não pode ser sobrecarregado.
+
+O exemplo a seguir gera C2589:
+
+```
+// C2589.cpp
+void Test(){}
+class A {};
+void operator :: ();   // C2589
+
+int main() {
+   ::Test();
+}
 ```

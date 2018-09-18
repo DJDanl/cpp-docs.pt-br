@@ -1,5 +1,5 @@
 ---
-title: Operadores de namespace de simultaneidade (AMP) | Microsoft Docs
+title: Operadores do namespace de simultaneidade (AMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,14 +10,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d3bb77599fc81fa29f2c8155a6fd491ed2d639c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d6e8d2a198105e9cd63581dd8ed8445b681da2e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686702"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026927"
 ---
-# <a name="concurrency-namespace-operators-amp"></a>Operadores de namespace de simultaneidade (AMP)
+# <a name="concurrency-namespace-operators-amp"></a>Operadores do namespace de simultaneidade (AMP)
 ||||  
 |-|-|-|  
 |[operator!=](#operator_neq)|[operator%](#operator_mod)|[operator*](#operator_star)|  
@@ -38,17 +38,17 @@ bool operator== (
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Rank`  
- A ordem dos argumentos de tupla.  
+*_Rank*<br/>
+A classificação dos argumentos de tuple.  
   
- `_Lhs`  
- Uma das tuplas a ser comparado.  
+*_Lhs*<br/>
+Um dos tuples para comparar.  
   
- `_Rhs`  
- Uma das tuplas a ser comparado.  
+*_Rhs*<br/>
+Um dos tuples para comparar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true` Se as tuplas forem iguais; Caso contrário, `false`.  
+ `true` Se os tuples forem iguais; Caso contrário, `false`.  
   
 ##  <a name="operator_neq"></a>  operator!=   
  Determina se os argumentos especificados não são iguais.  
@@ -64,21 +64,21 @@ bool operator!= (
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Rank`  
- A ordem dos argumentos de tupla.  
+*_Rank*<br/>
+A classificação dos argumentos de tuple.  
   
- `_Lhs`  
- Uma das tuplas a ser comparado.  
+*_Lhs*<br/>
+Um dos tuples para comparar.  
   
- `_Rhs`  
- Uma das tuplas a ser comparado.  
+*_Rhs*<br/>
+Um dos tuples para comparar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `true` Se as tuplas não forem iguais; Caso contrário, `false`.  
   
 ##  <a name="operator_add"></a>  operator+   
 
- Calcula a soma de component-wise dos argumentos especificados.  
+ Calcula a soma em todo componente dos argumentos especificados.  
   
 ```  
 template <
@@ -109,21 +109,21 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Rank`  
- A ordem dos argumentos de tupla.  
+*_Rank*<br/>
+A classificação dos argumentos de tuple.  
   
- `_Lhs`  
- Um dos argumentos para adicionar.  
+*_Lhs*<br/>
+Um dos argumentos a serem adicionados.  
   
- `_Rhs`  
- Um dos argumentos para adicionar.  
+*_Rhs*<br/>
+Um dos argumentos a serem adicionados.  
   
 ### <a name="return-value"></a>Valor de retorno  
- A soma de component-wise dos argumentos especificados.  
+ A soma em todo componente dos argumentos especificados.  
   
 ##  <a name="operator-"></a>  operator-   
 
- Calcula a diferença component-wise entre os argumentos especificados.  
+ Calcula a diferença em entre os argumentos especificados.  
   
 ```  
 template <
@@ -154,21 +154,21 @@ _Tuple_type<_Rank>   operator-(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Rank`  
- A ordem dos argumentos de tupla.  
+*_Rank*<br/>
+A classificação dos argumentos de tuple.  
   
- `_Lhs`  
- O argumento deve ser subtraído.  
+*_Lhs*<br/>
+O argumento a ser subtraído.  
   
- `_Rhs`  
- O argumento para subtrair.  
+*_Rhs*<br/>
+O argumento a ser subtraído.  
   
 ### <a name="return-value"></a>Valor de retorno  
- A diferença component-wise entre os argumentos especificados.  
+ A diferença em todo componente entre os argumentos especificados.  
   
 ##  <a name="operator_star"></a>  operator*   
 
- Calcula o produto component-wise dos argumentos especificados.  
+ Calcula o produto em todo componente dos argumentos especificados.  
   
 ```  
 template <
@@ -190,21 +190,21 @@ _Tuple_type<_Rank>   operator*(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Rank`  
- A ordem dos argumentos de tupla.  
+*_Rank*<br/>
+A classificação dos argumentos de tuple.  
   
- `_Lhs`  
- Uma das tuplas multiplicar.  
+*_Lhs*<br/>
+Um dos tuples para multiplicar.  
   
- `_Rhs`  
- Uma das tuplas multiplicar.  
+*_Rhs*<br/>
+Um dos tuples para multiplicar.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O produto component-wise dos argumentos especificados.  
+ O produto em todo componente dos argumentos especificados.  
   
 
 ##  <a name="operator_div"></a>  operator/   
- Calcula o quociente component-wise dos argumentos especificados.  
+ Calcula o quociente em todo componente dos argumentos especificados.  
   
 ```  
 template <
@@ -226,17 +226,17 @@ _Tuple_type<_Rank>   operator/(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Rank`  
- A ordem dos argumentos de tupla.  
+*_Rank*<br/>
+A classificação dos argumentos de tuple.  
   
- `_Lhs`  
- A tupla a ser dividida.  
+*_Lhs*<br/>
+A tupla a ser dividida.  
   
- `_Rhs`  
- A tupla pelo qual dividir.  
+*_Rhs*<br/>
+A tupla pela qual dividir.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O quociente component-wise dos argumentos especificados.  
+ O quociente em todo componente dos argumentos especificados.  
   
 ##  <a name="operator_mod"></a> operator%   
 
@@ -262,17 +262,17 @@ _Tuple_type<_Rank>   operator%(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Rank`  
- A ordem dos argumentos de tupla.  
+*_Rank*<br/>
+A classificação dos argumentos de tuple.  
   
- `_Lhs`  
- A tupla do qual o módulo é calculado.  
+*_Lhs*<br/>
+A tupla da qual o modulo é calculado.  
   
- `_Rhs`  
- A tupla ao módulo por.  
+*_Rhs*<br/>
+A tupla a módulo por.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O resultado do módulo do argumento especificado primeiro o segundo argumento especificado.  
+ O resultado do primeiro argumento especificado modula o segundo argumento especificado.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade ](concurrency-namespace-cpp-amp.md)

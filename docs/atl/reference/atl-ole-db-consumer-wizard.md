@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6c778c46998ba8e324fcf97c209598cc2f99dd
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1fcaffc3eba3711accdfa13d311f5284e564b703
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315361"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020427"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Assistente de consumidor OLE DB da ATL
 
@@ -193,6 +193,6 @@ Este assistente define uma classe de consumidor do OLE DB com as associações d
 
 ## <a name="see-also"></a>Consulte também
 
-[Consumidor do OLE DB da ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)
-[adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)
-[cadeias de caracteres de Conexão e Links de dados (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))
+[Consumidor do OLE DB da ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
+[Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Cadeias de caracteres de Conexão e Links de dados (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))

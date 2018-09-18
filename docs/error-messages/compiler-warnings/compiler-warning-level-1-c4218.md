@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4218 | Microsoft Docs
+title: Compilador aviso (nível 1) C4218 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88b27af84c390760274bb20665eec4452c8e7072
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1970dd1bd231716f59508a7cca9f82d3e13151ae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279744"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074039"
 ---
-# <a name="compiler-warning-level-1-c4218"></a>Compilador C4218 de aviso (nível 1)
-extensão não padrão usada: deve especificar pelo menos uma classe de armazenamento ou um tipo  
-  
- Com as extensões do Microsoft padrão (/Ze), você pode declarar uma variável sem especificar uma classe de armazenamento ou do tipo. O tipo padrão é `int`.  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// C4218.c  
-// compile with: /W4  
-i;  // C4218  
-  
-int main()  
-{  
-}  
-```  
-  
- Essas declarações são inválidas em compatibilidade ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+# <a name="compiler-warning-level-1-c4218"></a>Compilador aviso (nível 1) C4218
+
+extensão não padrão usada: deve especificar pelo menos uma classe de armazenamento ou um tipo
+
+Com as extensões da Microsoft padrão (/Ze), você pode declarar uma variável sem especificar uma classe de armazenamento ou do tipo. O tipo padrão é `int`.
+
+## <a name="example"></a>Exemplo
+
+```
+// C4218.c
+// compile with: /W4
+i;  // C4218
+
+int main()
+{
+}
+```
+
+Essas declarações são inválidas para a compatibilidade com ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

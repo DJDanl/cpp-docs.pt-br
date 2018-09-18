@@ -1,5 +1,5 @@
 ---
-title: Aviso LNK4098 das ferramentas de vinculador | Microsoft Docs
+title: Ferramentas de vinculador LNK4098 aviso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aadf25d968d6d457f891cab49a43591455b9d12
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2068534d51ae1350510a349f875c1977299edb1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301701"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019140"
 ---
 # <a name="linker-tools-warning-lnk4098"></a>Aviso LNK4098 (Ferramentas de Vinculador)
-conflitos de 'library' defaultlib com o usam de outras bibliotecas; Use /NODEFAULTLIB: Library  
-  
- Você está tentando se vincular com bibliotecas incompatíveis.  
-  
+
+conflitos do defaultlib 'library' com o usam de outras bibliotecas; Use /NODEFAULTLIB: Library
+
+Você está tentando vincular com bibliotecas incompatíveis.
+
 > [!NOTE]
->  Agora, as bibliotecas de tempo de execução contém diretivas para evitar misturar tipos diferentes. Você receberá esse aviso se você tentar usar tipos diferentes ou depurar e versões de depuração não da biblioteca de tempo de execução no mesmo programa. Por exemplo, se você compilou um arquivo para usar uma biblioteca de tipo de tempo de execução e outro arquivo para usar outro tipo (por exemplo, single-threaded versus multithread) e tentaram vinculá-los, você receberá esse aviso. Você deve compilar todos os arquivos de origem para usar a mesma biblioteca de tempo de execução. Consulte o [usar a biblioteca de tempo de execução](../../build/reference/md-mt-ld-use-run-time-library.md) (**/MD**, **/MT**, **/LD**) opções do compilador para obter mais informações.  
-  
- Você pode usar o vinculador [/verbose: lib](../../build/reference/verbose-print-progress-messages.md) switch para determinar quais bibliotecas o vinculador está procurando. Se você receber LNK4098 e desejar criar um arquivo executável que usa, por exemplo, o thread único, bibliotecas de tempo de execução sem depuração, use o **/verbose: lib** opção para descobrir o que está procurando o vinculador de bibliotecas. O vinculador deve imprimir LIBC.lib e não LIBCMT.lib, MSVCRT.lib, LIBCD.lib, LIBCMTD.lib ou MSVCRTD.lib como as bibliotecas pesquisadas. Você pode informar o vinculador para ignorar as bibliotecas de tempo de execução incorretas usando [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) para cada biblioteca que você deseja ignorar.  
-  
- A tabela a seguir mostra quais bibliotecas devem ser ignoradas dependendo de qual biblioteca de tempo de execução você deseja usar.  
-  
-|Para usar essa biblioteca de tempo de execução|Ignorar essas bibliotecas|  
-|-----------------------------------|----------------------------|  
-|Single-threaded (libc.lib)|libcmt.lib, msvcrt.lib, libcd.lib, libcmtd.lib, msvcrtd.lib|  
-|Multithread (libcmt.lib)|libc.lib, msvcrt.lib, libcd.lib, libcmtd.lib, msvcrtd.lib|  
-|Multithread usando DLL (msvcrt.lib)|libc.lib, libcmt.lib, libcd.lib, libcmtd.lib, msvcrtd.lib|  
-|Depurar Single-threaded (libcd.lib)|libc.lib, libcmt.lib, msvcrt.lib, libcmtd.lib, msvcrtd.lib|  
-|Depuração com multithread (libcmtd.lib)|libc.lib, libcmt.lib, msvcrt.lib, libcd.lib, msvcrtd.lib|  
-|Depurar Multithreaded usando DLL (msvcrtd.lib)|libc.lib, libcmt.lib, msvcrt.lib, libcd.lib, libcmtd.lib|  
-  
- Por exemplo, se você recebeu esse aviso e você deseja criar um arquivo executável que usa a versão de não-debug, single-threaded das bibliotecas de tempo de execução, você pode usar as seguintes opções com o vinculador:  
-  
-```  
-/NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:msvcrt.lib /NODEFAULTLIB:libcd.lib /NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:msvcrtd.lib  
+>  Agora, as bibliotecas de tempo de execução contêm diretivas para evitar misturar tipos diferentes. Você receberá esse aviso se você tentar usar tipos diferentes ou depurar e versões de não depuração da biblioteca de tempo de execução no mesmo programa. Por exemplo, se você compilou um arquivo para usar uma biblioteca de tipo de tempo de execução e outro arquivo para usar outro tipo (por exemplo, single-thread versus multithread) e tentou vinculá-los, você receberá esse aviso. Você deve compilar todos os arquivos de origem para usar a mesma biblioteca de tempo de execução. Consulte a [usar a biblioteca de tempo de execução](../../build/reference/md-mt-ld-use-run-time-library.md) (**/MD**, **/MT**, **/LD**) opções do compilador para obter mais informações.
+
+Você pode usar o vinculador [/verbose: lib](../../build/reference/verbose-print-progress-messages.md) switch para determinar quais bibliotecas que o vinculador está procurando. Se você receber LNK4098 e desejar criar um arquivo executável que usa, por exemplo, o thread único, bibliotecas de tempo de execução sem depuração, use o **/verbose: lib** opção para descobrir quais bibliotecas que o vinculador está procurando. O vinculador deve imprimir libc. lib e não libcmt. lib, Msvcrt. lib, libcd, Libcmtd. lib ou Msvcrtd. lib como as bibliotecas pesquisadas. Você pode informar ao vinculador para ignorar as bibliotecas de tempo de execução incorretas usando [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) para cada biblioteca que você deseja ignorar.
+
+A tabela a seguir mostra quais bibliotecas devem ser ignoradas, dependendo de qual biblioteca de tempo de execução você deseja usar.
+
+|Para usar esta biblioteca de tempo de execução|Ignorar essas bibliotecas|
+|-----------------------------------|----------------------------|
+|Single-thread (libc. lib)|libcmt. lib, Msvcrt. lib, libcd, Libcmtd. lib, Msvcrtd. lib|
+|Multithreaded (libcmt. lib)|libc. lib, Msvcrt. lib, libcd, Libcmtd. lib, Msvcrtd. lib|
+|Multithreaded usando DLL (Msvcrt. lib)|libc. lib, libcmt. lib, libcd, Libcmtd. lib, Msvcrtd. lib|
+|Depurar Single-threaded (libcd)|libc. lib, libcmt. lib, Msvcrt. lib, Libcmtd. lib, Msvcrtd. lib|
+|Depuração multithread (Libcmtd. lib)|libc. lib, libcmt. lib, Msvcrt. lib, Msvcrtd. lib e libcd|
+|Depurar Multithreaded usando DLL (Msvcrtd. lib)|libc. lib, libcmt. lib, Msvcrt. lib, Libcmtd. lib e libcd|
+
+Por exemplo, se você recebeu esse aviso, e você deseja criar um arquivo executável que usa a versão sem depuração, single-thread das bibliotecas de tempo de execução, você pode usar as opções a seguir com a opção de vinculador:
+
+```
+/NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:msvcrt.lib /NODEFAULTLIB:libcd.lib /NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:msvcrtd.lib
 ```

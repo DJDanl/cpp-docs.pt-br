@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac6e8215cc46fd190703981869a065df8d46b18d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8ad44aaaf22adce58cfdf01d108f172dc7cdf372
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690465"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043931"
 ---
 # <a name="ctabctrl-class"></a>Classe CTabCtrl
 Fornece a funcionalidade de controle de guia comum do Windows.  
@@ -391,30 +391,34 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
 ### <a name="remarks"></a>Comentários  
  Quando a mensagem é enviada, o `mask` membro especifica quais atributos retornam. Se o `mask` membro Especifica o valor TCIF_TEXT, o `pszText` membro deve conter o endereço do buffer que recebe o texto do item e o `cchTextMax` membro deve especificar o tamanho do buffer.  
   
- `mask`  
- Valor que especifica qual `TCITEM` membros para recuperar ou definir da estrutura. Esse membro pode ser zero ou uma combinação dos seguintes valores:  
+- `mask`
+
+   Valor que especifica qual `TCITEM` membros para recuperar ou definir da estrutura. Esse membro pode ser zero ou uma combinação dos seguintes valores:  
   
-- TCIF_TEXT o `pszText` membro é válido.  
+   - TCIF_TEXT o `pszText` membro é válido.  
   
-- TCIF_IMAGE o `iImage` membro é válido.  
+   - TCIF_IMAGE o `iImage` membro é válido.  
   
-- TCIF_PARAM o `lParam` membro é válido.  
+   - TCIF_PARAM o `lParam` membro é válido.  
   
-- TCIF_RTLREADING o texto de `pszText` é exibido usando a ordem de leitura da direita para a esquerda nos sistemas hebraico ou árabe.  
+   - TCIF_RTLREADING o texto de `pszText` é exibido usando a ordem de leitura da direita para a esquerda nos sistemas hebraico ou árabe.  
   
-- TCIF_STATE o `dwState` membro é válido.  
+   - TCIF_STATE o `dwState` membro é válido.  
   
- `pszText`  
- Ponteiro para uma cadeia de caracteres terminada em nulo que contém o texto da guia se a estrutura contém informações sobre uma guia. Se a estrutura é receber informações, esse membro Especifica o endereço do buffer que recebe o texto da guia.  
+- `pszText`  
+
+   Ponteiro para uma cadeia de caracteres terminada em nulo que contém o texto da guia se a estrutura contém informações sobre uma guia. Se a estrutura é receber informações, esse membro Especifica o endereço do buffer que recebe o texto da guia.  
   
- `cchTextMax`  
- Tamanho do buffer apontado por `pszText`. Esse membro será ignorado se a estrutura não está recebendo informações.  
+- `cchTextMax`  
+
+   Tamanho do buffer apontado por `pszText`. Esse membro será ignorado se a estrutura não está recebendo informações.  
   
- `iImage`  
+- `iImage`  
  Indexar o controle de guia lista de imagens, ou - 1 se não houver nenhuma imagem da guia.  
   
- lParam  
- Dados definidos pelo aplicativo associados com a guia. Se houver mais de quatro bytes de dados definido pelo aplicativo por tabulação, um aplicativo deve definir uma estrutura e usá-lo em vez do `TCITEM` estrutura. O primeiro membro da estrutura definida pelo aplicativo deve ser um [TCITEMHEADER](/windows/desktop/api/commctrl/ns-commctrl-tagtcitemheadera)estrutura. O `TCITEMHEADER` estrutura é idêntica de `TCITEM` estrutura, mas sem o `lParam` membro. A diferença entre o tamanho da sua estrutura e o tamanho do `TCITEMHEADER` estrutura deve ser igual ao número de bytes adicionais por guia.  
+- `lParam`  
+
+   Dados definidos pelo aplicativo associados com a guia. Se houver mais de quatro bytes de dados definido pelo aplicativo por tabulação, um aplicativo deve definir uma estrutura e usá-lo em vez do `TCITEM` estrutura. O primeiro membro da estrutura definida pelo aplicativo deve ser um [TCITEMHEADER](/windows/desktop/api/commctrl/ns-commctrl-tagtcitemheadera)estrutura. O `TCITEMHEADER` estrutura é idêntica de `TCITEM` estrutura, mas sem o `lParam` membro. A diferença entre o tamanho da sua estrutura e o tamanho do `TCITEMHEADER` estrutura deve ser igual ao número de bytes adicionais por guia.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  

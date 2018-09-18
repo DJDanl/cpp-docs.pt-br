@@ -1,5 +1,5 @@
 ---
-title: C2112 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2112 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f050a4b9e8b188c5c44534972e9c94d89020351
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9bbb2a2cc65ae5b9216344e5d2e1a6cc3e13b93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164639"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018542"
 ---
-# <a name="compiler-error-c2112"></a>C2112 de erro do compilador
-'-': subtração de ponteiros requer operando integral ou ponteiro  
-  
- Foi feita uma tentativa para subtrair ponteiros que apontam para tipos diferentes.
+# <a name="compiler-error-c2112"></a>Erro do compilador C2112
+
+'-': subtração de ponteiros requer operando integral ou ponteiro
+
+Foi feita uma tentativa para subtrair ponteiros que apontam para tipos diferentes.

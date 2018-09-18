@@ -15,17 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4368f52bebf9bb171fd4b0956dfccf9794f91356
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69b4522fe2bbb49a19dc703f36b6e98d31d1a8fb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104276"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021233"
 ---
 # <a name="schema-rowsets"></a>Conjuntos de linhas do esquema
-Esquema (ou metadados) é todas as informações sobre a estrutura ou organização, como informações sobre o provedor de conjunto de linhas, tabela, colunas, um banco de dados ou outras informações além do conteúdo do banco de dados real. OLE DB permite que você obtenha essas informações sem abrir o conjunto de linhas usando conjuntos de linhas de esquema.  
+
+Esquema (ou metadados) são qualquer informação sobre a estrutura ou organização, como informações sobre o provedor de conjunto de linhas, tabela, colunas, um banco de dados ou outras informações além do conteúdo do banco de dados real. OLE DB permite que você obtenha essas informações sem abrir o conjunto de linhas usando conjuntos de linhas de esquema.  
   
- Para obter informações sobre como usar conjuntos de linhas de esquema, consulte [obtendo metadados com conjuntos de linhas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).  
+Para obter informações sobre como usar conjuntos de linhas de esquema, consulte [obtendo metadados com conjuntos de linhas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+
+[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

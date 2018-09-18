@@ -1,5 +1,5 @@
 ---
-title: C3062 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3062 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da507511cb5f091d5d9432bbfeb36951e3f43c6f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95f2e58cada0b1b825fb0f065b461db6350de9fc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250560"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067162"
 ---
-# <a name="compiler-error-c3062"></a>C3062 de erro do compilador
-'enum': enumerador requer valor porque o tipo subjacente é 'type'  
-  
- Você pode especificar um tipo subjacente para uma enumeração. No entanto, alguns tipos exigem atribuir valores para cada enumerador.  
-  
- Para obter mais informações sobre enumerações, consulte [classe enum](../../windows/enum-class-cpp-component-extensions.md).  
-  
- O exemplo a seguir gera C3062:  
-  
-```  
-// C3062.cpp  
-// compile with: /clr  
-  
-enum class MyEnum : bool { a };   // C3062  
-enum class MyEnum2 : bool { a = true};   // OK  
+# <a name="compiler-error-c3062"></a>Erro do compilador C3062
+
+'enum': enumerador requer valor porque o tipo subjacente é 'type'
+
+Você pode especificar um tipo subjacente para uma enumeração. No entanto, alguns tipos exigem que você atribuir valores para cada enumerador.
+
+Para obter mais informações sobre enums, consulte [classe enum](../../windows/enum-class-cpp-component-extensions.md).
+
+O exemplo a seguir gera C3062:
+
+```
+// C3062.cpp
+// compile with: /clr
+
+enum class MyEnum : bool { a };   // C3062
+enum class MyEnum2 : bool { a = true};   // OK
 ```

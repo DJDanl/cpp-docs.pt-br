@@ -38,15 +38,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82197c785c8b27e2d4f2607cd677141b219c90ca
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ff3c05f1a96dd4717371d48b60cca6a549a94a7d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686640"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019947"
 ---
 # <a name="float2-class"></a>Classe float_2
-Representa um vetor curto de dois flutuações.  
+Representa um vetor curto de dois floats.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -66,7 +66,7 @@ class float_2;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor float_2](#ctor)|Sobrecarregado. Padrão construtor inicializa todos os elementos com 0.|  
+|[Construtor float_2](#ctor)|Sobrecarregado. Padrão construtor, inicializa todos os elementos com 0.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -121,13 +121,13 @@ class float_2;
  `float_2`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** amp_short_vectors.h  
+ **Cabeçalho:** amp_short_vectors. h  
   
  **Namespace:** Concurrency:: Graphics  
   
 ##  <a name="ctor"></a> float_2 
 
- Padrão construtor inicializa todos os elementos com 0.  
+ Padrão construtor, inicializa todos os elementos com 0.  
   
 ```  
 float_2() restrict(amp,
@@ -176,17 +176,17 @@ explicit inline float_2(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_V0`  
- O valor para inicializar o elemento 0.  
+*_V0*<br/>
+O valor para inicializar o elemento 0.  
   
- `_V1`  
- O valor para inicializar o elemento 1.  
+*V1*<br/>
+O valor para inicializar o elemento 1.  
   
- `_V`  
- O valor para a inicialização.  
+*_V*<br/>
+O valor para a inicialização.  
   
- `_Other`  
- O objeto usado para inicializar.  
+*Outro*<br/>
+O objeto usado para inicializar.  
   
 ##  <a name="float_2__size"></a> Tamanho 
 

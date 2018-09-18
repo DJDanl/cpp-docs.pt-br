@@ -1,5 +1,5 @@
 ---
-title: C3232 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3232 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a770613c2cd851d48d7424166a90ed8183e5e536
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e7b3e8c306b8e883fd3edb0b2781b297842bb0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246549"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018360"
 ---
-# <a name="compiler-error-c3232"></a>C3232 de erro do compilador
-'param': um parâmetro de tipo genérico não pode ser usado em um nome qualificado  
-  
- Um parâmetro de tipo genérico foi usado incorretamente.  
-  
- O exemplo a seguir gera C3232:  
-  
-```  
-// C3232.cpp  
-// compile with: /clr  
-generic <class T>  
-ref class C {  
-   typename T::TYPE t;   // C3232  
-};  
+# <a name="compiler-error-c3232"></a>Erro do compilador C3232
+
+'param': um parâmetro de tipo genérico não pode ser usado em um nome qualificado
+
+Um parâmetro de tipo genérico foi usado incorretamente.
+
+O exemplo a seguir gera C3232:
+
+```
+// C3232.cpp
+// compile with: /clr
+generic <class T>
+ref class C {
+   typename T::TYPE t;   // C3232
+};
 ```

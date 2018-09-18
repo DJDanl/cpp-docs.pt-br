@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 4) de aviso C4131 | Microsoft Docs
+title: Compilador aviso (nível 4) C4131 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6563d5faf3a9f050deb3cb7831c1a908739c8532
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43de917b2a6aff38602a6118e599c0d9df262a70
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291984"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033180"
 ---
-# <a name="compiler-warning-level-4-c4131"></a>Compilador C4131 de aviso (nível 4)
-'function': usa Declarador de estilo antigo  
-  
- A declaração da função especificada não está na forma de protótipo.  
-  
- Declarações de função de estilo antigo devem ser convertidas em forma de protótipo.  
-  
- O exemplo a seguir mostra uma declaração de função de estilo antigo:  
-  
-```  
-// C4131.c  
-// compile with: /W4 /c  
-void addrec( name, id ) // C4131 expected  
-char *name;  
-int id;  
-{ }  
-```  
-  
- O exemplo a seguir mostra um formulário de protótipo:  
-  
-```  
-void addrec( char *name, int id )  
-{ }  
+# <a name="compiler-warning-level-4-c4131"></a>Compilador aviso (nível 4) C4131
+
+'function': usa Declarador de estilo antigo
+
+A declaração da função especificada não está na forma de protótipo.
+
+Declarações de função antiga devem ser convertidas em forma de protótipo.
+
+O exemplo a seguir mostra uma declaração de função de estilo antigo:
+
+```
+// C4131.c
+// compile with: /W4 /c
+void addrec( name, id ) // C4131 expected
+char *name;
+int id;
+{ }
+```
+
+O exemplo a seguir mostra um formulário de protótipo:
+
+```
+void addrec( char *name, int id )
+{ }
 ```

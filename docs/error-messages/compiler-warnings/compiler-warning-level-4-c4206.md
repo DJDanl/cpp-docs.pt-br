@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 4) de aviso C4206 | Microsoft Docs
+title: Compilador aviso (nível 4) C4206 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6db7069f9d1ad242f0c79f8c6f490f4632162e6d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 746fbc4c8752afcd9d02b9985373d669c3aacc5f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293888"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048650"
 ---
-# <a name="compiler-warning-level-4-c4206"></a>Compilador C4206 de aviso (nível 4)
-**extensão não padrão usada: unidade de tradução está vazia**  
-  
- O arquivo estava vazio após pré-processamento.  
-  
- Esta extensão pode impedir que seu código portátil para outros compiladores. Ele gera um erro em compatibilidade ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) e só se aplica ao código-fonte C.
+# <a name="compiler-warning-level-4-c4206"></a>Compilador aviso (nível 4) C4206
+
+**extensão não padrão usada: unidade de tradução está vazia**
+
+O arquivo estava vazio após o pré-processamento.
+
+Esta extensão pode impedir que seu código portátil para outros compiladores. Ele gera um erro em compatibilidade com ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) e se aplica apenas ao código-fonte C.

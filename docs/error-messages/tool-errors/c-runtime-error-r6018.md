@@ -1,5 +1,5 @@
 ---
-title: R6018 de erro de tempo de execução C | Microsoft Docs
+title: C R6018 de erro de tempo de execução | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4946e3a8341963ee1a1ca2c3ad65d64cfbad8080
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9265c54175236d96391c64e343771c896de1c744
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302822"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031711"
 ---
-# <a name="c-runtime-error-r6018"></a>R6018 de erro de tempo de execução do C
-Erro inesperado de heap  
-  
+# <a name="c-runtime-error-r6018"></a>C R6018 de erro de tempo de execução
+
+Erro inesperado de heap
+
 > [!NOTE]
->  Se você receber essa mensagem de erro durante a execução de um aplicativo, o aplicativo foi desligado porque ele tem um problema interno. Há várias razões possíveis para esse erro, mas geralmente é causado por uma falha no código do aplicativo.  
->   
->  Você pode tentar corrigir esse erro com estas etapas:  
->   
->  -   Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para reparar ou reinstalar o programa.  
-> -   Verificar **Windows Update** no **painel de controle** para atualizações de software.  
-> -   Verifique se há uma versão atualizada do aplicativo. Se o problema persistir, entre em contato com o fornecedor do aplicativo.  
-  
- **Informações para os programadores**  
-  
- O programa encontrou um erro inesperado ao executar uma operação de gerenciamento de memória.  
-  
- Esse erro normalmente ocorre se o programa inadvertidamente altera os dados de heap de tempo de execução. No entanto, ele também pode ser causado por um erro interno no tempo de execução ou código de sistema operacional.  
-  
- Para corrigir esse problema, verifique se há erros de corrupção de heap em seu código. Para obter mais informações e exemplos, consulte [detalhes de Heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details). Em seguida, verifique que você está usando o redistribuíveis mais recentes para sua implantação do aplicativo. Para obter informações, consulte [implantação no Visual C++](../../ide/deployment-in-visual-cpp.md).
+>  Se você encontrar esta mensagem de erro durante a execução de um aplicativo, o aplicativo foi encerrado porque ele tem um problema interno. Há várias razões possíveis para esse erro, mas geralmente é causado por um defeito no código do aplicativo.
+>
+>  Você pode tentar corrigir esse erro com estas etapas:
+>
+>  -   Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para reparar ou reinstalar o programa.
+> -   Verifique **Windows Update** na **painel de controle** para atualizações de software.
+> -   Verifique se há uma versão atualizada do aplicativo. Se o problema persistir, entre em contato com o fornecedor do aplicativo.
+
+**Informações para programadores**
+
+O programa encontrou um erro inesperado ao executar uma operação de gerenciamento de memória.
+
+Esse erro geralmente ocorre se o programa inadvertidamente altera os dados de heap do tempo de execução. No entanto, ele também pode ser causado por um erro interno no tempo de execução ou código do sistema operacional.
+
+Para corrigir esse problema, verifique se há bugs de corrupção de heap no seu código. Para obter mais informações e exemplos, consulte [detalhes do Heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details). Em seguida, verifique que você está usando os redistribuíveis mais recentes para sua implantação do aplicativo. Para obter informações, consulte [implantação no Visual C++](../../ide/deployment-in-visual-cpp.md).

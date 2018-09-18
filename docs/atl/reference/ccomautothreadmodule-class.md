@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0934a3c6690b75ffa2eca18f1fd38662bc2a9fd9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9e747386c37e760793ceaa0396f217304cbe621d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756984"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022676"
 ---
 # <a name="ccomautothreadmodule-class"></a>Classe CComAutoThreadModule
 
@@ -44,13 +44,13 @@ A partir do ATL 7.0 `CComAutoThreadModule` é obsoleto: ver [Classes de módulo 
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template <class ThreadAllocator = CComSimpleThreadAllocator>  
+template <class ThreadAllocator = CComSimpleThreadAllocator>
 class CComAutoThreadModule : public CComModule
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-`ThreadAllocator`  
+*ThreadAllocator*<br/>
 [in] A classe de gerenciamento de seleção de thread. O valor padrão é [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).
 
 ## <a name="members"></a>Membros
@@ -122,13 +122,13 @@ HRESULT CreateInstance(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pfnCreateInstance*  
+*pfnCreateInstance*<br/>
 [in] Um ponteiro para uma função de criador.
 
-*riid*  
+*riid*<br/>
 [in] O IID da interface solicitada.
 
-*ppvObj*  
+*ppvObj*<br/>
 [out] Um ponteiro para o ponteiro de interface identificado pelo *riid*. Se o objeto não dá suporte a essa interface, *ppvObj* é definido como NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -181,16 +181,16 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*  
+*p*<br/>
 [in] Um ponteiro para uma matriz de entradas de mapa de objeto.
 
-*h*  
+*h*<br/>
 [in] O HINSTANCE passado para `DLLMain` ou `WinMain`.
 
-*plibid*  
+*plibid*<br/>
 [in] Um ponteiro para o LIBID da biblioteca de tipos associado ao projeto.
 
-*nThreads*  
+*nThreads*<br/>
 [in] O número de threads a ser criado. Por padrão, *nThreads* é o valor retornado por [GetDefaultThreads](#getdefaultthreads).
 
 ### <a name="remarks"></a>Comentários
@@ -269,5 +269,5 @@ Quando a contagem de bloqueios do módulo chega a zero, o módulo pode ser desca
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral da classe](../../atl/atl-class-overview.md)   
+[Visão geral da classe](../../atl/atl-class-overview.md)<br/>
 [Classes de módulo](../../atl/atl-module-classes.md)

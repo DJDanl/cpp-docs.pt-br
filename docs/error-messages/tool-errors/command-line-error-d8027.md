@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc93edb939001a1e1bed5d3f7a4113e8483e81dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8234835d3bb0545c8a72bf35cfb55b2e18bc7da2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296114"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070373"
 ---
 # <a name="command-line-error-d8027"></a>Erro D8027 (linha de comando)
-não é possível executar 'componente'  
-  
- O compilador não pôde executar o componente de determinado compilador ou vinculador.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
-  
-1.  Não há memória suficiente para carregar o componente. Se NMAKE chamado o compilador, execute o compilador fora makefile.  
-  
-2.  O sistema operacional atual não foi possível executar o componente. Verifique se o caminho aponta para os arquivos executáveis apropriado para seu sistema operacional.  
-  
-3.  O componente foi corrompido. Copie o componente a partir dos discos de distribuição, usando o programa de instalação.  
-  
-4.  Uma opção foi especificada incorretamente. Por exemplo:  
-  
-    ```  
-    cl /B1 file1.c  
+
+não é possível executar 'componente'
+
+O compilador não pôde executar o componente determinado compilador ou vinculador.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
+
+1. Não há memória suficiente para carregar o componente. Se NMAKE invocado o compilador, execute o compilador fora o makefile.
+
+1. O sistema operacional atual não pôde executar o componente. Verifique se o caminho aponta para os arquivos executáveis apropriado para seu sistema operacional.
+
+1. O componente estava corrompido. Copiar novamente o componente a partir dos discos de distribuição, usando o programa de instalação.
+
+1. Uma opção foi especificada incorretamente. Por exemplo:
+
+    ```
+    cl /B1 file1.c
     ```

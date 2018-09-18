@@ -16,75 +16,77 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3dda90592fe5bc874a3052fc472b77f8ce414a49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 47694923067b40582530601e36808dc1083f1705
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33094163"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053551"
 ---
 # <a name="use-mfc-odbc-recordsets"></a>Usar conjuntos de registros ODBC MFC
+
 Estes tópicos explicam como trabalhar com conjuntos de registros ODBC por meio do MFC.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-### <a name="general-recordset-tasks"></a>Tarefas do conjunto de registros gerais  
+### <a name="general-recordset-tasks"></a>Tarefas de conjunto de registros gerais  
   
--   [Escolha um tipo de conjunto de registros ODBC](../../data/odbc/recordset-odbc.md)  
+- [Escolha um tipo de conjunto de registros ODBC](../../data/odbc/recordset-odbc.md)  
   
--   [Repetir um conjunto de registros](../../data/odbc/recordset-requerying-a-recordset-odbc.md)  
+- [Repetir um conjunto de registros](../../data/odbc/recordset-requerying-a-recordset-odbc.md)  
   
--   [Declarar uma classe de conjunto de registros para uma tabela](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)  
+- [Declarar uma classe de conjunto de registros para uma tabela](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)  
   
--   [Declarar uma classe de conjunto de registros para uma consulta predefinida](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)  
+- [Declarar uma classe de conjunto de registros para uma consulta predefinida](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)  
   
 ### <a name="recordset-design-and-implementation"></a>Conjunto de registros de Design e implementação  
   
--   [Saiba mais sobre a troca de campos de registro (RFX)](../../data/odbc/record-field-exchange-rfx.md)  
+- [Saiba mais sobre registrar troca de campos (RFX)](../../data/odbc/record-field-exchange-rfx.md)  
   
--   [Trocar dados entre um banco de dados e um objeto de conjunto de registros](../../data/odbc/record-field-exchange-using-rfx.md)  
+- [Trocar dados entre um banco de dados e um objeto recordset](../../data/odbc/record-field-exchange-using-rfx.md)  
   
--   [Personalizar produzido pelos assistentes de código de conjunto de registros](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)  
+- [Personalizar o código do conjunto de registros produzido pelos assistentes](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)  
   
--   [Use as funções do exchange (RFX) campos de registro](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)  
+- [Use as funções do exchange (RFX) de campos de registro](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)  
   
-### <a name="recordset-performance-and-convenience"></a>Conveniência e o desempenho do conjunto de registros  
+### <a name="recordset-performance-and-convenience"></a>Conveniência e desempenho do conjunto de registros  
   
--   [Adicionar registros em massa com um conjunto de registros](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)  
+- [Adicionar registros em massa com um conjunto de registros](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)  
   
--   [Filtrar registros em um conjunto de registros](../../data/odbc/recordset-filtering-records-odbc.md)  
+- [Filtrar registros em um conjunto de registros](../../data/odbc/recordset-filtering-records-odbc.md)  
   
 ### <a name="recordset-operations"></a>Operações de conjunto de registros  
   
--   [Adicionar registros em massa com um conjunto de registros](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)  
+- [Adicionar registros em massa com um conjunto de registros](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)  
   
--   [Repetir um conjunto de registros](../../data/odbc/recordset-requerying-a-recordset-odbc.md)  
+- [Repetir um conjunto de registros](../../data/odbc/recordset-requerying-a-recordset-odbc.md)  
   
--   [Filtrar registros em um conjunto de registros](../../data/odbc/recordset-filtering-records-odbc.md)  
+- [Filtrar registros em um conjunto de registros](../../data/odbc/recordset-filtering-records-odbc.md)  
   
--   [Classificar registros em um conjunto de registros](../../data/odbc/recordset-sorting-records-odbc.md)  
+- [Classificar os registros em um conjunto de registros](../../data/odbc/recordset-sorting-records-odbc.md)  
   
--   [Parâmetros de um conjunto de registros](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)  
+- [Parametrizar um conjunto de registros](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)  
   
--   [Passar valores de parâmetro para um conjunto de registros em tempo de execução](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)  
+- [Passar valores de parâmetro para um conjunto de registros em tempo de execução](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)  
   
--   [Executar uma junção com um conjunto de registros](../../data/odbc/recordset-performing-a-join-odbc.md)  
+- [Executar uma junção com um conjunto de registros](../../data/odbc/recordset-performing-a-join-odbc.md)  
   
--   [Registros de bloqueio em um conjunto de registros](../../data/odbc/recordset-locking-records-odbc.md)  
+- [Registros de bloqueio em um conjunto de registros](../../data/odbc/recordset-locking-records-odbc.md)  
   
--   [Trabalhar com itens de dados grande em um conjunto de registros](../../data/odbc/recordset-working-with-large-data-items-odbc.md)  
+- [Trabalhar com itens de dados grande em um conjunto de registros](../../data/odbc/recordset-working-with-large-data-items-odbc.md)  
   
--   [Obter somas e outros resultados agregados em um conjunto de registros](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)  
+- [Obter SUMs e outros resultados agregados em um conjunto de registros](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)  
   
-### <a name="recordset-selection-and-sql"></a>SQL e seleção de conjunto de registros  
+### <a name="recordset-selection-and-sql"></a>SQL e a seleção de conjunto de registros  
   
--   [Selecionar os registros de uma fonte de dados ODBC](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)  
+- [Selecione os registros de uma fonte de dados ODBC](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)  
   
--   [Personalizar a cadeia de caracteres SQL para um conjunto de registros](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)  
+- [Personalizar a cadeia de caracteres SQL para um conjunto de registros](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)  
   
 ### <a name="dynamic-binding-of-recordsets"></a>Associação dinâmica de conjuntos de registros  
   
--   [Associar colunas de dados em um conjunto de registros dinamicamente em tempo de execução](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)  
+- [Associar colunas de dados em um conjunto de registros dinamicamente em tempo de execução](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)
+
+[ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)

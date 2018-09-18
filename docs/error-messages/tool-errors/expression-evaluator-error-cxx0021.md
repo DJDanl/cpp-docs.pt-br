@@ -17,20 +17,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 996fc46982d809da5e0b37b83f2940102892167e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ef765286d022b26aeed0ca98c9f43f94f5d17f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299361"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025770"
 ---
 # <a name="expression-evaluator-error-cxx0021"></a>Erro CXX0021 (avaliador de expressão)
-struct ou união usados como escalar  
-  
- Uma estrutura ou união foi usada em uma expressão, mas nenhum elemento foi especificado.  
-  
- Ao manipular uma estrutura ou união variável, o nome da variável pode aparecer por si só, sem um qualificador de campo. Se uma estrutura ou união é usado em uma expressão, ele deve ser qualificado com o elemento específico desejado.  
-  
- Especifique o elemento cujo valor é a ser usado na expressão.  
-  
- Esse erro é idêntico ao CAN0021.
+
+struct ou União usada como escalar
+
+Uma estrutura ou união foi usado em uma expressão, mas nenhum elemento foi especificado.
+
+Ao manipular uma estrutura ou variável de união, o nome da variável pode aparecer por si só, sem um qualificador de campo. Se uma estrutura ou união é usado em uma expressão, ele deve ser qualificado com o elemento específico desejado.
+
+Especifica o elemento cujo valor deve ser usado na expressão.
+
+Esse erro é idêntico ao CAN0021.

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d3463b9eaad5134f68fbe533e50431ef3a91cf5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c33c3524d0fb6b39208e2cb7be57805a3ff043f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761193"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046752"
 ---
 # <a name="cautoptrlist-class"></a>Classe CAutoPtrList
 
@@ -35,14 +35,14 @@ Essa classe fornece métodos úteis ao construir uma lista de ponteiros intelige
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template<typename E>  
-class CAutoPtrList : 
+template<typename E>
+class CAutoPtrList :
    public CAtlList<ATL::CAutoPtr<E>, CAutoPtrElementTraits<E>>
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*E*  
+*E*<br/>
 O tipo de ponteiro.
 
 ## <a name="members"></a>Membros
@@ -79,7 +79,7 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*nBlockSize*  
+*nBlockSize*<br/>
 O tamanho do bloco, com um padrão de 10.
 
 ### <a name="remarks"></a>Comentários
@@ -88,6 +88,6 @@ O tamanho do bloco é uma medida da quantidade de memória alocada quando um nov
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CAtlList](../../atl/reference/catllist-class.md)   
-[Classe CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)   
+[Classe CAtlList](../../atl/reference/catllist-class.md)<br/>
+[Classe CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

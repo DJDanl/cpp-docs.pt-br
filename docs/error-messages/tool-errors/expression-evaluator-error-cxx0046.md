@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3f8092f5233d1a0e1501c3c0ea16164b96c137e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28cffba8a424d5a8cf2160dd6a5f8718259a54b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296644"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022481"
 ---
 # <a name="expression-evaluator-error-cxx0046"></a>Erro CXX0046 (avaliador de expressão)
-lista de argumentos necessária para função de membro  
-  
- Uma expressão de chamada de função de membro, mas não especificou nenhum parâmetro real.  
-  
- Esse erro é idêntico ao CAN0046.
+
+lista de argumentos necessária para a função de membro
+
+Uma expressão de chamada de função de membro, mas não especificou nenhum parâmetro real.
+
+Esse erro é idêntico ao CAN0046.

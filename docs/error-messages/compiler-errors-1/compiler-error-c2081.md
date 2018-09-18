@@ -1,5 +1,5 @@
 ---
-title: C2081 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2081 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 165217b3ea4d50dc965927419786a01a6cc92af3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48f2cdecaea38beed14735bb3f94c8422a28c747
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166855"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030450"
 ---
-# <a name="compiler-error-c2081"></a>C2081 de erro do compilador
-'Identificador': nome ilegal da lista de parâmetros formais  
-  
- O identificador causou um erro de sintaxe.  
-  
- Esse erro pode ser causado por meio de estilo antigo para a lista de parâmetros formais. Você deve especificar o tipo de parâmetros formais na lista de parâmetros formais.  
-  
- O exemplo a seguir gera C2081:  
-  
-```  
-// C2081.c  
-void func( int i, j ) {}  // C2081, no type specified for j  
-```  
-  
- Possível solução:  
-  
-```  
-// C2081b.c  
-// compile with: /c  
-void func( int i, int j ) {}  
+# <a name="compiler-error-c2081"></a>Erro do compilador C2081
+
+'identifier': nome ilegal da lista de parâmetros formais
+
+O identificador causou um erro de sintaxe.
+
+Esse erro pode ser causado por usando o estilo antigo para a lista de parâmetros formais. Você deve especificar o tipo dos parâmetros formais na lista de parâmetros formais.
+
+O exemplo a seguir gera C2081:
+
+```
+// C2081.c
+void func( int i, j ) {}  // C2081, no type specified for j
+```
+
+Solução possível:
+
+```
+// C2081b.c
+// compile with: /c
+void func( int i, int j ) {}
 ```

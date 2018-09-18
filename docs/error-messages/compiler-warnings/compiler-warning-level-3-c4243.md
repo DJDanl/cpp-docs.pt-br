@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3e3f616e9eec1785f586b019b0faa752a578f0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b407939b58d1025698f7c3d82bbe1921b33f90a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290810"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025679"
 ---
-# <a name="compiler-warning-level-3-c4243"></a>Compilador C4243 de aviso (nível 3)
-conversão de 'tipo de conversão' existe a partir de 'type1' em 'type2', mas é inacessível  
-  
- Um ponteiro para uma classe derivada é convertido em um ponteiro para uma classe base, mas a classe derivada herda da classe base com acesso particular ou protegido.  
-  
- O exemplo a seguir gera C4243:  
-  
-```  
-// C4243.cpp  
-// compile with: /W3  
-// C4243 expected  
-struct B {  
-   int f() {  
-      return 0;  
-   };  
-};  
-  
-struct D : private B {};  
-struct E : public B {};  
-  
-int main() {  
-   // Delete the following 2 lines to resolve.  
-   int (D::* d)() = (int(D::*)()) &B::f;   
-   d;  
-  
-   int (E::* e)() = (int(E::*)()) &B::f; // OK  
-   e;  
-}  
+# <a name="compiler-warning-level-3-c4243"></a>Compilador aviso (nível 3) C4243
+
+conversão de 'tipo de conversão' existe de 'type1' em 'type2', mas está inacessível
+
+Um ponteiro para uma classe derivada é convertido em um ponteiro para uma classe base, mas a classe derivada herda a classe base com acesso particular ou protegido.
+
+O exemplo a seguir gera C4243:
+
+```
+// C4243.cpp
+// compile with: /W3
+// C4243 expected
+struct B {
+   int f() {
+      return 0;
+   };
+};
+
+struct D : private B {};
+struct E : public B {};
+
+int main() {
+   // Delete the following 2 lines to resolve.
+   int (D::* d)() = (int(D::*)()) &B::f;
+   d;
+
+   int (E::* e)() = (int(E::*)()) &B::f; // OK
+   e;
+}
 ```

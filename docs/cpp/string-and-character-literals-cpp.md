@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de3dffbbacd69d19b2a3fc5ba1fac360712db19e
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: f34bd3f1594a49737f4298316b5eb3fe08b866a3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895247"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038549"
 ---
 # <a name="string-and-character-literals--c"></a>Cadeia de caracteres e literais de caracteres (C++)
 
@@ -41,8 +41,8 @@ C++ oferece suporte a vários tipos de cadeia de caracteres e caracteres e forne
 #include <string>
 using namespace std::string_literals; // enables s-suffix for std::string literals
 
-int main()  
-{  
+int main()
+{
     // Character literals
     auto c0 =   'A'; // char
     auto c1 = u8'A'; // char
@@ -51,16 +51,16 @@ int main()
     auto c4 =  U'A'; // char32_t
 
     // String literals
-    auto s0 =   "hello"; // const char*  
+    auto s0 =   "hello"; // const char*
     auto s1 = u8"hello"; // const char*, encoded as UTF-8
-    auto s2 =  L"hello"; // const wchar_t*  
+    auto s2 =  L"hello"; // const wchar_t*
     auto s3 =  u"hello"; // const char16_t*, encoded as UTF-16
     auto s4 =  U"hello"; // const char32_t*, encoded as UTF-32
 
     // Raw string literals containing unescaped \ and "
-    auto R0 =   R"("Hello \ world")"; // const char*  
+    auto R0 =   R"("Hello \ world")"; // const char*
     auto R1 = u8R"("Hello \ world")"; // const char*, encoded as UTF-8
-    auto R2 =  LR"("Hello \ world")"; // const wchar_t*  
+    auto R2 =  LR"("Hello \ world")"; // const wchar_t*
     auto R3 =  uR"("Hello \ world")"; // const char16_t*, encoded as UTF-16
     auto R4 =  UR"("Hello \ world")"; // const char32_t*, encoded as UTF-32
 
@@ -72,13 +72,13 @@ int main()
     auto S4 =  U"hello"s; // std::u32string
 
     // Combining raw string literals with standard s-suffix
-    auto S5 =   R"("Hello \ world")"s; // std::string from a raw const char*  
+    auto S5 =   R"("Hello \ world")"s; // std::string from a raw const char*
     auto S6 = u8R"("Hello \ world")"s; // std::string from a raw const char*, encoded as UTF-8
-    auto S7 =  LR"("Hello \ world")"s; // std::wstring from a raw const wchar_t*  
+    auto S7 =  LR"("Hello \ world")"s; // std::wstring from a raw const wchar_t*
     auto S8 =  uR"("Hello \ world")"s; // std::u16string from a raw const char16_t*, encoded as UTF-16
     auto S9 =  UR"("Hello \ world")"s; // std::u32string from a raw const char32_t*, encoded as UTF-32
-}  
-```  
+}
+```
 
 Literais de cadeia de caracteres não podem ter nenhum prefixo, ou `u8`, `L`, `u`, e `U` prefixos para denotar restringir caractere (byte único ou vários byte), o caractere UTF-8, largo (UCS-2 ou UTF-16), o UTF-16 e codificações UTF-32, respectivamente. Um literal de cadeia bruto pode ter `R`, `u8R`, `LR`, `uR` e `UR` prefixos para os equivalentes de versão bruta essas codificações.  Para criar valores temporários ou estático std:: String, você pode usar literais de cadeia de caracteres ou literais de cadeia de caracteres bruta com um `s` sufixo. Para obter mais informações, consulte a seção de literais de cadeia de caracteres abaixo. Para obter mais informações sobre o caractere de origem básicos definido, nomes de caracteres universais e uso de caracteres de páginas de código estendidas em seu código-fonte, consulte [conjuntos de caracteres](../cpp/character-sets.md).
 
@@ -86,15 +86,15 @@ Literais de cadeia de caracteres não podem ter nenhum prefixo, ou `u8`, `L`, `u
 
 Um *literal de caractere* é composto de uma constante de caractere. Ele é representado pelo caractere entre aspas simples. Há cinco tipos de literais de caracteres:
 
--   Literais de caractere comum do tipo **char**, por exemplo `'a'`  
+- Literais de caractere comum do tipo **char**, por exemplo `'a'`
 
--   Literais de caracteres UTF-8, do tipo **char**, por exemplo `u8'a'`  
+- Literais de caracteres UTF-8, do tipo **char**, por exemplo `u8'a'`
 
--   Literais de caractere largo do tipo `wchar_t`, por exemplo `L'a'`  
+- Literais de caractere largo do tipo `wchar_t`, por exemplo `L'a'`
 
--   Literais de caractere UTF-16 do tipo `char16_t`, por exemplo `u'a'`  
+- Literais de caractere UTF-16 do tipo `char16_t`, por exemplo `u'a'`
 
--   Literais de caractere UTF-32 do tipo `char32_t`, por exemplo `U'a'`  
+- Literais de caractere UTF-32 do tipo `char32_t`, por exemplo `U'a'`
 
 O caractere usado para um literal de caractere pode ser qualquer caractere, exceto caracteres reservados barra invertida ('\\'), aspas simples (') ou nova linha. Caracteres reservados podem ser especificados usando uma sequência de escape. Caracteres podem ser especificados por meio de nomes de caractere universal, desde que o tipo é grande o suficiente para conter o caractere.
 
@@ -132,7 +132,7 @@ O código a seguir mostra alguns exemplos de caracteres de escape usando literai
 #include <iostream>
 using namespace std;
 
-int main() {  
+int main() {
     char newline = '\n';
     char tab = '\t';
     char backspace = '\b';
@@ -145,24 +145,24 @@ int main() {
     cout << "Backspace character: " << backspace << "ending" << endl; // Backspace character : ending
     cout << "Backslash character: " << backslash << "ending" << endl; // Backslash character : \ending
     cout << "Null character: " << nullChar << "ending" << endl; //Null character:  ending
-}  
-```  
+}
+```
 
-**Seção específica da Microsoft**  
+**Seção específica da Microsoft**
 
 Para criar um valor de um literal de caractere comum (aqueles sem um prefixo), o compilador converte o caractere ou cadeia de caracteres entre aspas em valores de 8 bits em um inteiro de 32 bits. Vários caracteres no literal preencher bytes correspondentes, conforme a necessidade de ordem superior de ordem inferior. Para criar uma **char** valor, o compilador usa o byte de ordem inferior. Para criar uma **wchar_t** ou `char16_t` valor, o compilador usa a palavra de ordem inferior. O compilador avisa que o resultado será truncado se todos os bits são definidos acima do byte atribuído ou word.
 
 ```cpp
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'
 wchar_t w0 = 'abcd';    // C4305, C4309, truncates to '\x6364'
-```  
+```
 
 Uma sequência de escape octal é uma barra invertida seguida por uma sequência de até 3 dígitos octais. O comportamento de uma sequência de escape octal que parece conter mais de três dígitos é tratado como uma sequência de 3 dígitos octa seguida por dígitos subsequentes como caracteres; Isso pode gerar resultados surpreendentes. Por exemplo:
 
 ```cpp
 char c1 = '\100';   // '@'
 char c2 = '\1000';  // C4305, C4309, truncates to '0'
-```  
+```
 
 Sequências de escape que parecem conter caracteres não octais são avaliadas como uma octal sequência até o último caractere octal, seguido pelos caracteres restantes. Por exemplo:
 
@@ -170,14 +170,14 @@ Sequências de escape que parecem conter caracteres não octais são avaliadas c
 char c3 = '\009';   // '9'
 char c4 = '\089';   // C4305, C4309, truncates to '9'
 char c5 = '\qrs';   // C4129, C4305, C4309, truncates to 's'
-```  
+```
 
 Uma sequência de escape hexadecimal é uma barra invertida, seguida pelo caractere `x`, seguido por uma sequência de dígitos hexadecimais. Uma sequência de escape que não contém nenhum dígito hexadecimal causa o erro do compilador C2153: "literais hexadecimais devem possuir pelo menos um dígito hex". Zeros à esquerda são ignorados. Uma sequência de escape que parece ter caracteres hexadecimal e não hexadecimais é avaliada como uma sequência de escape hexadecimal até o último caractere hexadecimal, seguido pelos caracteres não hexadecimal.   Em um caractere comum ou o prefixo de u8 literal, o valor hexadecimal mais alto é 0xFF. Em um L-o prefixo ou o prefixo de u literal de caractere largo, o valor hexadecimal mais alto é 0xFFFF. Em um prefixado por U literal de caractere largo, o valor hexadecimal mais alto é 0xFFFFFFFF.
 
 ```cpp
 char c6 = '\x0050'; // 'P'
 char c7 = '\x0pqr'; // C4305, C4309, truncates to 'r'
-```  
+```
 
 Se um literal de caractere largo prefixadas com `L` contém mais de um caractere, o valor é obtido a partir do primeiro caractere. Os caracteres subsequentes são ignorados, ao contrário do comportamento do literal de caractere comum equivalente.
 
@@ -189,9 +189,9 @@ wchar_t w4 = L'\089';   // C4066 L'\0', 89 ignored
 wchar_t w5 = L'\qrs';   // C4129, C4066 L'q' escape, rs ignored
 wchar_t w6 = L'\x0050'; // L'P'
 wchar_t w7 = L'\x0pqr'; // C4066 L'\0', pqr ignored
-```  
+```
 
-**Fim da seção específica da Microsoft**  
+**Fim da seção específica da Microsoft**
 
 O caractere de barra invertida (\\) é um caractere de continuação de linha quando ele é colocado no final de uma linha. Se desejar que um caractere de barra invertida seja exibido como uma literal de caractere, você deve digitar duas barras invertidas em uma linha (`\\`). Para obter mais informações sobre o caractere de continuação de linha, consulte [fases de conversão](../preprocessor/phases-of-translation.md).
 
@@ -205,7 +205,7 @@ char u2 = '\101';       // octal, 'A'
 char u3 = '\x41';       // hexadecimal, 'A'
 char u4 = '\u0041';     // \u UCN 'A'
 char u5 = '\U00000041'; // \U UCN 'A'
-```  
+```
 
 #### <a name="surrogate-pairs"></a>Pares substitutos
 
@@ -226,7 +226,7 @@ const char *narrow = "abcd";
 
 // represents the string: yes\no
 const char *escaped = "yes\\no";
-```  
+```
 
 #### <a name="utf-8-encoded-strings"></a>Cadeias de caracteres codificados em UTF-8
 
@@ -235,7 +235,7 @@ Uma cadeia de caracteres codificada em UTF-8 é uma matriz de delimitado termina
 ```cpp
 const char* str1 = u8"Hello World";
 const char* str2 = u8"\U0001F607 is O:-)";
-```  
+```
 
 ### <a name="wide-string-literals"></a>Literais de cadeia de caracteres largos
 
@@ -244,16 +244,16 @@ Uma cadeia de caracteres largo literal é uma matriz terminada em nulo da consta
 ```cpp
 const wchar_t* wide = L"zyxw";
 const wchar_t* newline = L"hello\ngoodbye";
-```  
+```
 
-#### <a name="char16t-and-char32t-c11"></a>char16_t e char32_t (c++11)  
+#### <a name="char16t-and-char32t-c11"></a>char16_t e char32_t (c++11)
 
 C++11 introduz o portable `char16_t` (Unicode de 16 bits) e `char32_t` (Unicode de 32 bits) tipos de caracteres:
 
 ```cpp
-auto s3 = u"hello"; // const char16_t*  
-auto s4 = U"hello"; // const char32_t*  
-```  
+auto s3 = u"hello"; // const char16_t*
+auto s4 = U"hello"; // const char32_t*
+```
 
 ### <a name="raw-string-literals-c11"></a>Literais de cadeia de caracteres bruta (c++11)
 
@@ -273,13 +273,13 @@ Um delimitador é uma sequência definida pelo usuário, com até 16 caracteres,
 ```cpp
 // meant to represent the string: )"
 const char* bad_parens = R"()")";  // error C2059
-```  
+```
 
 Mas um delimitador resolve essa sintaxe:
 
 ```cpp
 const char* good_parens = R"xyz()")xyz";
-```  
+```
 
 Você pode construir uma literal de cadeia de caracteres bruta em que há uma nova linha (não o caractere de escape) na origem:
 
@@ -288,7 +288,7 @@ Você pode construir uma literal de cadeia de caracteres bruta em que há uma no
 //goodbye
 const wchar_t* newline = LR"(hello
 goodbye)";
-```  
+```
 
 ### <a name="stdstring-literals-c14"></a>std:: string literais (c++14)
 
@@ -302,13 +302,13 @@ string str2{ u8"Hello World" };
 wstring str3{ L"hello"s };
 u16string str4{ u"hello"s };
 u32string str5{ U"hello"s };
-```  
+```
 
 O sufixo s também pode ser usado em literais de cadeia de caracteres bruta:
 
 ```cpp
 u32string str6{ UR"(She said "hello.")"s };
-```  
+```
 
 literais de std:: string são definidos no namespace `std::literals::string_literals` no \<cadeia de caracteres > arquivo de cabeçalho. Porque `std::literals::string_literals`, e `std::literals` são declarados como [namespaces embutidos](../cpp/namespaces-cpp.md), `std::literals::string_literals` é tratado automaticamente como se ele pertencesse diretamente no namespace `std`.
 
@@ -319,7 +319,7 @@ Para o caractere ANSI\* cadeias de caracteres e outras codificações de byte ú
 ```cpp
 const wchar_t* str = L"Hello!";
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
-```  
+```
 
 Observe que `strlen()` e `wcslen()` não incluem o tamanho do caractere nulo de terminação, cujo tamanho é igual ao tamanho do elemento do tipo cadeia de caracteres: um byte em um char\* cadeia de caracteres, dois bytes em wchar_t\* ou char16_t\*cadeias de caracteres e quatro bytes no char32_t\* cadeias de caracteres.
 
@@ -336,14 +336,14 @@ No Visual C++, você pode usar um literal de cadeia de caracteres para inicializ
 ```cpp
 wchar_t* str = L"hello";
 str[2] = L'a'; // run-time error: access violation
-```  
+```
 
 Você pode fazer com que o compilador emita um erro quando um literal de cadeia de caracteres é convertida em um ponteiro de caractere non_const ao definir a [/ZC: strictstrings (desabilitar conversão de tipo literal de cadeia de caracteres)](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) opção de compilador. É recomendável para código portátil compatível com os padrões. Também é uma boa prática usar a **automática** palavra-chave para declarar ponteiros inicializados por literais, a cadeia de caracteres porque ele resolve para o tipo correto (const). Por exemplo, este exemplo de código mostra uma tentativa de gravar em uma cadeia de caracteres literal no tempo de compilação:
 
 ```cpp
 auto str = L"hello";
 str[2] = L'a'; // C3892: you cannot assign to a variable that is const.
-```  
+```
 
 Em alguns casos, literais de cadeias de caracteres idênticas podem ser agrupadas para economizar espaço no arquivo executável. Em pools de literais de cadeias de caracteres, o compilador faz com que todas as referências a uma literal de cadeia de caracteres específica apontem para o mesmo local na memória, em vez de cada referência apontar para uma instância separada da literal. Para habilitar o pooling de cadeia de caracteres, use o [/GF](../build/reference/gf-eliminate-duplicate-strings.md) opção de compilador.
 
@@ -355,33 +355,33 @@ Literais de cadeia de caracteres largos ou estreitos adjacentes são concatenado
 
 ```cpp
 char str[] = "12" "34";
-```  
+```
 
 é idêntica a esta declaração:
 
 ```cpp
 char atr[] = "1234";
-```  
+```
 
 e a esta declaração:
 
 ```cpp
 char atr[] =  "12\
 34";
-```  
+```
 
 Usando os códigos de escape hexadecimais inseridos para especificar literais de cadeia de caracteres pode causar resultados inesperados. O exemplo a seguir visa criar uma literal de cadeia de caracteres que contenha o caractere ASCII 5, seguido pelos caracteres "f", "i", "v" e "e":
 
 ```cpp
 "\x05five"
-```  
+```
 
 O resultado real é um 5F hexadecimal, que é o código ASCII de um sublinhado, seguido pelos caracteres i, v e e. Para obter o resultado correto, você pode usar uma destas opções:
 
 ```cpp
 "\005five"     // Use octal literal.
 "\x05" "five"  // Use string splicing.
-```  
+```
 
 literais de std:: String, porque eles são tipos de std:: String, podem ser concatenados com o operador está definido para + [basic_string](../standard-library/basic-string-class.md) tipos. Eles também podem ser concatenados da mesma forma como os literais de cadeia de caracteres adjacentes. Em ambos os casos, a codificação de cadeia de caracteres e o sufixo devem corresponder ao:
 
@@ -390,7 +390,7 @@ auto x1 = "hello" " " " world"; // OK
 auto x2 = U"hello" " " L"world"; // C2308: disagree on prefix
 auto x3 = u8"hello" " "s u8"world"s; // OK, agree on prefixes and suffixes
 auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
-```  
+```
 
 ### <a name="string-literals-with-universal-character-names"></a>Literais de cadeia de caracteres com nomes de caracteres universais
 
@@ -400,21 +400,21 @@ Literais de cadeia de caracteres nativo (não bruto) podem usar nomes de caracte
 // ASCII smiling face
 const char*     s1 = ":-)";
 
-// UTF-16 (on Windows) encoded WINKING FACE (U+1F609)  
+// UTF-16 (on Windows) encoded WINKING FACE (U+1F609)
 const wchar_t*  s2 = L"😉 = \U0001F609 is ;-)";
 
-// UTF-8  encoded SMILING FACE WITH HALO (U+1F607)  
+// UTF-8  encoded SMILING FACE WITH HALO (U+1F607)
 const char*     s3 = u8"😇 = \U0001F607 is O:-)";
 
-// UTF-16 encoded SMILING FACE WITH OPEN MOUTH (U+1F603)  
+// UTF-16 encoded SMILING FACE WITH OPEN MOUTH (U+1F603)
 const char16_t* s4 = u"😃 = \U0001F603 is :-D";
 
-// UTF-32 encoded SMILING FACE WITH SUNGLASSES (U+1F60E)  
+// UTF-32 encoded SMILING FACE WITH SUNGLASSES (U+1F60E)
 const char32_t* s5 = U"😎 = \U0001F60E is B-)";
-```  
+```
 
 ## <a name="see-also"></a>Consulte também
 
-[Conjuntos de caracteres](../cpp/character-sets.md)   
-[Numérico, booliano e literais de ponteiro](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
+[Conjuntos de caracteres](../cpp/character-sets.md)<br/>
+[Literais de ponteiro, numéricos e boolianos](../cpp/numeric-boolean-and-pointer-literals-cpp.md)<br/>
 [Literais definidos pelo usuário](../cpp/user-defined-literals-cpp.md)

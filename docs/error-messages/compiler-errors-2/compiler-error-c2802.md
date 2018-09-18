@@ -1,5 +1,5 @@
 ---
-title: C2802 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2802 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe069b93c8dc6bb098927925e93f10cec2dbc4c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95b4f64aad9cb14151ca6128bedebcd15ece17ed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236651"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061247"
 ---
-# <a name="compiler-error-c2802"></a>C2802 de erro do compilador
-membro static 'operator operador' não possui parâmetros formais  
-  
- Um operador declarada por um `static` função de membro deve ter pelo menos um parâmetro.  
-  
- O exemplo a seguir gera C2802:  
-  
-```  
-// C2802.cpp  
-// compile with: /clr /c  
-ref class A {  
-   static operator+ ();   // C2802  
-   static operator+ (A^, A^);   // OK  
-};  
+# <a name="compiler-error-c2802"></a>Erro do compilador C2802
+
+membro static 'operator operador' não possui parâmetros formais
+
+Um operador declarado por um `static` função de membro deve ter pelo menos um parâmetro.
+
+O exemplo a seguir gera C2802:
+
+```
+// C2802.cpp
+// compile with: /clr /c
+ref class A {
+   static operator+ ();   // C2802
+   static operator+ (A^, A^);   // OK
+};
 ```

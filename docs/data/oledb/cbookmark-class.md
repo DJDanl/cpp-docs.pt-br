@@ -78,14 +78,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9bd662c827650112d0e9bcf1d59086f4205aea58
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 7a2eaaf273bb2c0ae4f3ab297fe444a41e81c873
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337612"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058049"
 ---
 # <a name="cbookmark-class"></a>Classe CBookmark
+
 Contém um valor de indicador em seu buffer.  
   
 ## <a name="syntax"></a>Sintaxe
@@ -99,11 +100,13 @@ class CBookmark< 0 > : public CBookmarkBase
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *nSize*  
- O tamanho do buffer indicador em bytes. Quando *nSize* for zero, o buffer indicador será criado dinamicamente em tempo de execução.  
+
+*nSize*<br/>
+O tamanho do buffer indicador em bytes. Quando *nSize* for zero, o buffer indicador será criado dinamicamente em tempo de execução.  
 
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atldbcli.h  
+
+**Cabeçalho:** atldbcli.h  
   
 ## <a name="members"></a>Membros  
   
@@ -123,9 +126,11 @@ class CBookmark< 0 > : public CBookmarkBase
 |[operador =](#operator)|Atribui um `CBookmark` classe para outra.|  
   
 ## <a name="remarks"></a>Comentários  
- `CBookmark<0>` é uma especialização de modelo de `CBookmark`; o buffer é criado dinamicamente em tempo de execução.  
+
+`CBookmark<0>` é uma especialização de modelo de `CBookmark`; o buffer é criado dinamicamente em tempo de execução.  
 
 ## <a name="cbookmark"></a> Cbookmark:: Cbookmark
+
 O construtor.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -137,16 +142,19 @@ CBookmark(DBLENGTH nSize);
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *nSize*  
- [in] Tamanho do buffer indicador em bytes.  
+
+*nSize*<br/>
+[in] Tamanho do buffer indicador em bytes.  
   
 ### <a name="remarks"></a>Comentários  
- A primeira função define o buffer NULL e o tamanho do buffer como 0. A segunda função define o tamanho do buffer para *nSize*e o buffer para uma matriz de bytes *nSize* bytes.  
+
+A primeira função define o buffer NULL e o tamanho do buffer como 0. A segunda função define o tamanho do buffer para *nSize*e o buffer para uma matriz de bytes *nSize* bytes.  
   
 > [!NOTE]
 >  Essa função só está disponível no `CBookmark<0>`. 
   
 ## <a name="getbuffer"></a> Cbookmark:: Getbuffer
+
 Recupera o ponteiro para o buffer de indicador.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -156,9 +164,11 @@ virtual BYTE* GetBuffer() const throw();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o buffer de indicador. 
+
+Um ponteiro para o buffer de indicador. 
 
 ## <a name="getsize"></a> Cbookmark:: GetSize
+
 Recupera o tamanho do buffer indicador.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -168,9 +178,11 @@ virtual DBLENGTH GetSize() const throw();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- O tamanho do buffer em bytes.  
+
+O tamanho do buffer em bytes.  
 
 ## <a name="setbookmark"></a> Cbookmark:: Setbookmark
+
 Copia o valor de indicador referenciado pelo *pBuffer* para o `CBookmark` armazenar em buffer e define o tamanho do buffer para *nSize*.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -180,19 +192,23 @@ HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *nSize*  
- [in] O tamanho do buffer indicador.  
+
+*nSize*<br/>
+[in] O tamanho do buffer indicador.  
   
- *pBuffer*  
- [in] Um ponteiro para a matriz de bytes que contém o valor do indicador.  
+*pBuffer*<br/>
+[in] Um ponteiro para a matriz de bytes que contém o valor do indicador.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um HRESULT padrão.  
+
+Um HRESULT padrão.  
   
 ### <a name="remarks"></a>Comentários  
- Essa função só está disponível no `CBookmark<0>`. 
+
+Essa função só está disponível no `CBookmark<0>`. 
 
 ## <a name="operator"></a> Cbookmark:: Operator =
+
 Atribui um `CBookmark` objeto para outro.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -202,8 +218,10 @@ CBookmark& operator =(const CBookmark& bookmark) throw();
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Esse operador é necessária somente em `CBookmark<0>`.   
+
+Esse operador é necessária somente em `CBookmark<0>`.   
 
 ## <a name="see-also"></a>Consulte também  
- [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

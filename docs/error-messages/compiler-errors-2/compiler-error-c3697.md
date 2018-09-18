@@ -1,5 +1,5 @@
 ---
-title: C3697 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3697 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4689365859ec121c716e5fb060d2985647bba30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6cb5755cc737c0cc5524cb6abd980b70d08b6cf8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263808"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050652"
 ---
-# <a name="compiler-error-c3697"></a>C3697 de erro do compilador
-'qualifier': não é possível usar este qualificador em ' ^'  
-  
- O identificador de rastreamento (^) foi aplicado a um qualificador para o qual não foi criado.  
-  
- O exemplo a seguir gera C3697:  
-  
-```  
-// C3697.cpp  
-// compile with: /clr  
-using namespace System;  
-int main() {  
-   String ^__restrict s;   // C3697  
-   String ^ s2;   // OK  
-}  
+# <a name="compiler-error-c3697"></a>Erro do compilador C3697
+
+'qualificador': não é possível usar este qualificador em ' ^'
+
+A manipulação de rastreamento (^) foi aplicada a um qualificador para o qual ele não foi projetado.
+
+O exemplo a seguir gera C3697:
+
+```
+// C3697.cpp
+// compile with: /clr
+using namespace System;
+int main() {
+   String ^__restrict s;   // C3697
+   String ^ s2;   // OK
+}
 ```

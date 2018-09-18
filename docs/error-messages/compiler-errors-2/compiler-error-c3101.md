@@ -1,5 +1,5 @@
 ---
-title: C3101 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3101 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8e10d3b22e7120789b9e1b6bb48fca097fcfddb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69f881206528d83dc298fd262dd54c1dd84a7308
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247450"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049822"
 ---
-# <a name="compiler-error-c3101"></a>C3101 de erro do compilador
-expressão inválida para o campo' argumento de atributo nomeado'  
-  
- Ao inicializar um argumento de atributo nomeado, o valor deve ser uma constante de tempo de compilação.  
-  
- Para obter mais informações sobre atributos, consulte [atributos definidos pelo usuário](../../windows/user-defined-attributes-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C3101.  
-  
-```  
-// C3101.cpp  
-// compile with: /clr /c  
-ref class AAttribute : System::Attribute {  
-public:  
-   int Field;  
-};  
-  
-extern int i;  
-  
-[assembly:A(Field = i)];   // C3101  
-[assembly:A(Field = 0)];   // OK  
+# <a name="compiler-error-c3101"></a>Erro do compilador C3101
+
+expressão inválida para o campo' argumento de atributo nomeado'
+
+Ao inicializar um argumento de atributo nomeado, o valor deve ser uma constante de tempo de compilação.
+
+Para obter mais informações sobre atributos, consulte [atributos definidos pelo usuário](../../windows/user-defined-attributes-cpp-component-extensions.md).
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C3101.
+
+```
+// C3101.cpp
+// compile with: /clr /c
+ref class AAttribute : System::Attribute {
+public:
+   int Field;
+};
+
+extern int i;
+
+[assembly:A(Field = i)];   // C3101
+[assembly:A(Field = 0)];   // OK
 ```

@@ -1,5 +1,5 @@
 ---
-title: C2645 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2645 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0330f9f678da58648c2fd445f7a291b02c167a89
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ada345b79c061c71bc716bf7baf96116444bcc7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229141"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076821"
 ---
-# <a name="compiler-error-c2645"></a>C2645 de erro do compilador
-Nenhum nome qualificado a ponteiro para membro (encontrado ':: *')  
-  
- A declaração de um ponteiro para membro não especifica uma classe.  
-  
- O exemplo a seguir gera C2645:  
-  
-```  
-// C2645.cpp  
-class A {};  
-int main() {  
-   int B::* bp;   // C2645 B not defined  
-   int A::* ap;   // OK  
-}  
+# <a name="compiler-error-c2645"></a>Erro do compilador C2645
+
+Nenhum nome qualificado de ponteiro para membro (encontrado ':: *')
+
+A declaração de um ponteiro para membro não especifica uma classe.
+
+O exemplo a seguir gera C2645:
+
+```
+// C2645.cpp
+class A {};
+int main() {
+   int B::* bp;   // C2645 B not defined
+   int A::* ap;   // OK
+}
 ```

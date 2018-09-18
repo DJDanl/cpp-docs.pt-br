@@ -17,17 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: be948293947d4f007d151e4a89e0ff87fc897bbd
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: d3a0b2d2da67e4db55dbf3a3f5b23c0c88797dd7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338932"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065317"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Usando um conjunto de registros ADO existente
+
 Para combinar modelos de consumidor OLE DB e o Active Directory Data Objects (ADO), use o ADO para abrir um conjunto de registros (correspondente a um conjunto de linhas em que os modelos de consumidor de banco de dados OLE). Quando você tem um conjunto de registros, faça o seguinte para se conectar a um conjunto de linhas do OLE DB:  
   
-1.  Chame `QueryInterface` para o `IRowset` e `IAccessor` ponteiros.  
+1. Chame `QueryInterface` para o `IRowset` e `IAccessor` ponteiros.  
   
     ```cpp  
     IRowset* lpRowset = NULL;  
@@ -39,7 +40,7 @@ Para combinar modelos de consumidor OLE DB e o Active Directory Data Objects (AD
     > [!NOTE]
     >  *lpUnk* aponta para o `IUnknown` objeto do conjunto de registros ADO.  
   
-2.  Anexe o conjunto de linhas e o acessador às suas classes de modelo de consumidor OLE DB apropriados.  
+1. Anexe o conjunto de linhas e o acessador às suas classes de modelo de consumidor OLE DB apropriados.  
   
     ```cpp  
     CRowset rs;  
@@ -51,4 +52,5 @@ Para combinar modelos de consumidor OLE DB e o Active Directory Data Objects (AD
     ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Usando acessadores](../../data/oledb/using-accessors.md)
+
+[Usando acessadores](../../data/oledb/using-accessors.md)

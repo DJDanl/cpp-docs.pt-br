@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f97559dd962fefbb4e727c0e75d0102898c8f13
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 93752aa124bc144e42a337f757c9d9cdc9a226ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724068"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047922"
 ---
 # <a name="ctoolbarctrl-class"></a>Classe CToolBarCtrl
 Fornece a funcionalidade do controle de comum de barra de ferramentas do Windows.  
@@ -410,65 +410,66 @@ BOOL AddButtons(
 ### <a name="remarks"></a>Comentários  
  O *lpButtons* ponteiro aponta para uma matriz de `TBBUTTON` estruturas. Cada `TBBUTTON` estrutura associa o botão que está sendo adicionado com o estilo do botão, imagens e/ou a cadeia de caracteres, ID de comando, estado e dados definidos pelo usuário:  
   
- `typedef struct _TBBUTTON {`  
-  
- `int iBitmap;// zero-based index of button image`  
-  
- `int idCommand;  // command to be sent when button pressed`  
-  
- `BYTE fsState;   // button state--see below`  
-  
- `BYTE fsStyle;   // button style--see below`  
-  
- `DWORD dwData;   // application-defined value`  
-  
- `int iString;// zero-based index of button label string`  
-  
- `} TBBUTTON;`  
+```cpp
+typedef struct _TBBUTTON {
+    int iBitmap;    // zero-based index of button image
+    int idCommand;  // command to be sent when button pressed
+    BYTE fsState;   // button state--see below
+    BYTE fsStyle;   // button style--see below
+    DWORD dwData;   // application-defined value
+    int iString;    // zero-based index of button label string
+} TBBUTTON;
+```
   
  Os membros são da seguinte maneira:  
   
- `iBitmap`  
- Índice baseado em zero da imagem do botão, -1 se nenhuma imagem para que esse botão.  
+- `iBitmap`  
+
+   Índice baseado em zero da imagem do botão, -1 se nenhuma imagem para que esse botão.  
   
- `idCommand`  
- Identificador do comando associado ao botão. Esse identificador é enviado em uma mensagem WM_COMMAND, quando o botão for escolhido. Se o `fsStyle` membro tem o valor TBSTYLE_SEP, esse membro deve ser zero.  
+-  `idCommand`  
+
+   Identificador do comando associado ao botão. Esse identificador é enviado em uma mensagem WM_COMMAND, quando o botão for escolhido. Se o `fsStyle` membro tem o valor TBSTYLE_SEP, esse membro deve ser zero.  
   
- `fsState`  
- Sinalizadores de estado do botão. Ele pode ser uma combinação dos valores listados abaixo:  
+-  `fsState`  
+
+   Sinalizadores de estado do botão. Ele pode ser uma combinação dos valores listados abaixo:  
   
-- TBSTATE_CHECKED o botão tem o estilo TBSTYLE_CHECKED e está sendo pressionado.  
+   - TBSTATE_CHECKED o botão tem o estilo TBSTYLE_CHECKED e está sendo pressionado.  
   
-- O botão TBSTATE_ENABLED aceita entrada do usuário. Um botão que não tem esse estado não aceita entrada do usuário e ficará indisponível.  
+   - O botão TBSTATE_ENABLED aceita entrada do usuário. Um botão que não tem esse estado não aceita entrada do usuário e ficará indisponível.  
   
-- TBSTATE_HIDDEN o botão não estiver visível e não pode receber entrada do usuário.  
+   - TBSTATE_HIDDEN o botão não estiver visível e não pode receber entrada do usuário.  
   
-- TBSTATE_INDETERMINATE o botão ficará esmaecido.  
+   - TBSTATE_INDETERMINATE o botão ficará esmaecido.  
   
-- TBSTATE_PRESSED está sendo pressionado o botão.  
+   - TBSTATE_PRESSED está sendo pressionado o botão.  
   
-- Quebra de linha de um TBSTATE_WRAP segue o botão. O botão também deve ter o estado TBSTATE_ENABLED.  
+   - Quebra de linha de um TBSTATE_WRAP segue o botão. O botão também deve ter o estado TBSTATE_ENABLED.  
   
- `fsStyle`  
- Estilo de botão. Ele pode ser uma combinação dos valores listados abaixo:  
+- `fsStyle`  
+
+   Estilo de botão. Ele pode ser uma combinação dos valores listados abaixo:  
   
-- TBSTYLE_BUTTON cria um botão de ação padrão.  
+   - TBSTYLE_BUTTON cria um botão de ação padrão.  
   
-- TBSTYLE_CHECK cria um botão que alterna entre os estados pressionados e não pressionados cada vez que o usuário clica nele. O botão tem uma cor de plano de fundo diferente quando está no estado pressionado.  
+   - TBSTYLE_CHECK cria um botão que alterna entre os estados pressionados e não pressionados cada vez que o usuário clica nele. O botão tem uma cor de plano de fundo diferente quando está no estado pressionado.  
   
-- TBSTYLE_CHECKGROUP cria um botão de seleção permanece pressionado até que outro botão no grupo é pressionado.  
+   - TBSTYLE_CHECKGROUP cria um botão de seleção permanece pressionado até que outro botão no grupo é pressionado.  
   
-- TBSTYLE_GROUP cria um botão que permanece pressionado até que outro botão no grupo é pressionado.  
+   - TBSTYLE_GROUP cria um botão que permanece pressionado até que outro botão no grupo é pressionado.  
   
-- TBSTYLE_SEP cria um separador, fornecendo um pequeno intervalo entre grupos de botões. Um botão que tem esse estilo não recebe entrada do usuário.  
+   - TBSTYLE_SEP cria um separador, fornecendo um pequeno intervalo entre grupos de botões. Um botão que tem esse estilo não recebe entrada do usuário.  
   
- `dwData`  
- Dados definidos pelo usuário.  
+- `dwData`  
+
+   Dados definidos pelo usuário.  
   
- `iString`  
- O índice baseado em zero da cadeia de caracteres a ser usado como o botão do rótulo, -1 se não houver nenhuma cadeia de caracteres para este botão.  
+- `iString`  
+
+   O índice baseado em zero da cadeia de caracteres a ser usado como o botão do rótulo, -1 se não houver nenhuma cadeia de caracteres para este botão.  
   
- A imagem e/ou a cadeia de caracteres cujo índice você fornecer deve anteriormente foram adicionado para o controle de barra de ferramentas lista usando [AddBitmap](#addbitmap), [AddString](#addstring), e/ou [AddStrings](#addstrings).  
+A imagem e/ou a cadeia de caracteres cujo índice você fornecer deve anteriormente foram adicionado para o controle de barra de ferramentas lista usando [AddBitmap](#addbitmap), [AddString](#addstring), e/ou [AddStrings](#addstrings).  
   
 ##  <a name="addstring"></a>  CToolBarCtrl::AddString  
  Adiciona uma nova cadeia de caracteres passada como uma ID de recurso para a lista interna da barra de ferramentas de cadeias de caracteres.  

@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d052a1fa6124aa1518cddec00566e14668fe111d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83131119e360bcf8193c2d6c8ca5a3cd09341516
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290082"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054177"
 ---
-# <a name="compiler-warning-level-3-c4390"></a>Compilador C4390 de aviso (nível 3)
-';': vazio instrução controlada encontrada; Isso é a intenção?  
-  
- Um ponto e vírgula foi encontrado após uma instrução de controle que não contém instruções.  
-  
- Se você obtiver C4390 devido a uma macro, você deve usar o [aviso](../../preprocessor/warning.md) pragma desabilitar C4390 no módulo que contém a macro.  
-  
- O exemplo a seguir gera C4390:  
-  
-```  
-// C4390.cpp  
-// compile with: /W3  
-int main() {  
-   int i = 0;  
-   if (i);   // C4390  
-      i++;  
-}  
+# <a name="compiler-warning-level-3-c4390"></a>Compilador aviso (nível 3) C4390
+
+';': esvaziar instrução controlada encontrada; Isso é a intenção?
+
+Um ponto e vírgula foi encontrado após uma instrução de controle que não contém instruções.
+
+Se você receber C4390 devido a uma macro, você deve usar o [aviso](../../preprocessor/warning.md) pragma para desabilitar C4390 no módulo que contém a macro.
+
+O exemplo a seguir gera C4390:
+
+```
+// C4390.cpp
+// compile with: /W3
+int main() {
+   int i = 0;
+   if (i);   // C4390
+      i++;
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: C3859 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3859 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2f8c51f25c09881e10e980276fc2035a6a70aed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ac06a09a6ad66384fd2b5423e3df046771f7653
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272298"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053382"
 ---
-# <a name="compiler-error-c3859"></a>C3859 de erro do compilador
-intervalo de memória virtual para PCH excedido; recompile com uma opção de linha de comando de '-Zmvalue' ou maior  
-  
- O cabeçalho pré-compilado é muito pequeno para a quantidade de dados que o compilador está tentando inserir dentro dele. Use o **/Zm** sinalizador do compilador para especificar um valor maior para o arquivo de cabeçalho pré-compilado. Para obter mais informações, consulte [/Zm (especificar pré-compilado cabeçalho alocação de limite de memória)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).
+# <a name="compiler-error-c3859"></a>Erro do compilador C3859
+
+intervalo de memória virtual para PCH excedido; recompile com uma opção de linha de comando de '-Zmvalue' ou superior
+
+O cabeçalho pré-compilado é muito pequeno para a quantidade de dados que o compilador está tentando colocar nele. Use o **/Zm** sinalizador do compilador para especificar um valor maior para o arquivo de cabeçalho pré-compilado. Para obter mais informações, consulte [/Zm (especificar pré-compilado cabeçalho alocação de limite de memória)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).

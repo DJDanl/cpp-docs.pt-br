@@ -82,15 +82,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfa05f5895c21f5ffdf00020efe1d1b1b881fec4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fe59fc6f956c0e88cae1e5c737d3fe33d10d10b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689071"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052667"
 ---
 # <a name="uint3-class"></a>Classe uint_3
-Representa um vetor curto de três inteiros sem sinal.  
+Representa um vetor curto de três números inteiros sem sinal.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -110,7 +110,7 @@ class uint_3;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor uint_3](#ctor)|Sobrecarregado. Padrão construtor inicializa todos os elementos com 0.|  
+|[Construtor uint_3](#ctor)|Sobrecarregado. Padrão construtor, inicializa todos os elementos com 0.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -217,13 +217,13 @@ class uint_3;
  `uint_3`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** amp_short_vectors.h  
+ **Cabeçalho:** amp_short_vectors. h  
   
  **Namespace:** Concurrency:: Graphics  
   
 ##  <a name="ctor"></a> uint_3 
 
- Padrão construtor inicializa todos os elementos com 0.  
+ Padrão construtor, inicializa todos os elementos com 0.  
   
 ```  
 uint_3() restrict(amp,
@@ -273,20 +273,20 @@ explicit inline uint_3(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_V0`  
- O valor para inicializar o elemento 0.  
+*_V0*<br/>
+O valor para inicializar o elemento 0.  
   
- `_V1`  
- O valor para inicializar o elemento 1.  
+*V1*<br/>
+O valor para inicializar o elemento 1.  
   
- `_V2`  
- O valor para inicializar o elemento 2.  
+*_V2*<br/>
+O valor para inicializar o elemento 2.  
   
- `_V`  
- O valor para a inicialização.  
+*_V*<br/>
+O valor para a inicialização.  
   
- `_Other`  
- O objeto usado para inicializar.  
+*Outro*<br/>
+O objeto usado para inicializar.  
   
 ##  <a name="uint_3__size"></a> Tamanho 
 

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43581995e8979ec733d8c82374896009c843166b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2359bb3909c803e4df1efdeef9058a3553908ff9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766640"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074045"
 ---
 # <a name="cstringelementtraits-class"></a>Classe CStringElementTraits
 
@@ -38,13 +38,13 @@ Essa classe fornece funções estáticas usadas pelas classes de coleção armaz
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template <typename T>  
+template <typename T>
 class CStringElementTraits
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 O tipo de dados a serem armazenados na coleção.
 
 ## <a name="members"></a>Membros
@@ -86,10 +86,10 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
 
 ### <a name="parameters"></a>Parâmetros
 
-*str1*  
+*str1*<br/>
 O primeiro elemento da cadeia de caracteres.
 
-*str2*  
+*str2*<br/>
 O segundo elemento de cadeia de caracteres.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -106,10 +106,10 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
 
 ### <a name="parameters"></a>Parâmetros
 
-*str1*  
+*str1*<br/>
 O primeiro elemento da cadeia de caracteres.
 
-*str2*  
+*str2*<br/>
 O segundo elemento de cadeia de caracteres.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -129,13 +129,13 @@ static void CopyElements(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pDest*  
+*pDest*<br/>
 Ponteiro para o primeiro elemento que receberá os dados copiados.
 
-*pSrc*  
+*pSrc*<br/>
 Ponteiro para o primeiro elemento para copiar.
 
-*nElements*  
+*nElements*<br/>
 O número de elementos a serem copiados.
 
 ### <a name="remarks"></a>Comentários
@@ -152,7 +152,7 @@ static ULONG Hash(INARGTYPE str);
 
 ### <a name="parameters"></a>Parâmetros
 
-*str*  
+*str*<br/>
 O elemento de cadeia de caracteres.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -188,13 +188,13 @@ static void RelocateElements(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pDest*  
+*pDest*<br/>
 Ponteiro para o primeiro elemento que receberá os dados realocados.
 
-*pSrc*  
+*pSrc*<br/>
 Ponteiro para o primeiro elemento para realocar.
 
-*nElements*  
+*nElements*<br/>
 O número de elementos para realocar.
 
 ### <a name="remarks"></a>Comentários
@@ -203,6 +203,6 @@ Chama a função estática [memmove](../../c-runtime-library/reference/memmove-w
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)   
-[Classe CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)   
+[Classe CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)<br/>
+[Classe CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

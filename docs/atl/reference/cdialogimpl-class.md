@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1780a4f77cce4812ebdb03ebc89936da0dc0d5d0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ba47b7f78e372f05a851d2180590bbc68a8c61ca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767049"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068425"
 ---
 # <a name="cdialogimpl-class"></a>Classe CDialogImpl
 
@@ -51,10 +51,10 @@ template <class T,
 
 #### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 Sua classe, derivada de `CDialogImpl`.
 
-*Tdígitos de base*  
+*Tdígitos de base*<br/>
 A classe base da sua nova classe. A classe base padrão é [CWindow](../../atl/reference/cwindow-class.md).
 
 ## <a name="members"></a>Membros
@@ -113,7 +113,7 @@ em que `MyDlg` é o **nome curto** inserida no Assistente de **nomes** página.
 
 Cria uma caixa de diálogo sem janela restrita.
 
-```  
+```
 HWND Create(
     HWND hWndParent,  
     LPARAM dwInitParam = NULL );  
@@ -121,18 +121,17 @@ HWND Create(
 HWND Create(
     HWND hWndParent,  
     RECT&, 
-    LPARAM dwInitParam = NULL); 
+    LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] O identificador para a janela do proprietário.
 
-**RECT &** *rect*  
-[in] Um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que especifica o tamanho e a posição da caixa de diálogo.
+**RECT &** *rect* [in] um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura que especifica o tamanho e a posição da caixa de diálogo.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Especifica o valor para passar para a caixa de diálogo do *lParam* parâmetro da mensagem WM_INITDIALOG.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -173,16 +172,16 @@ static LRESULT CALLBACK DialogProc(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWnd*  
+*hWnd*<br/>
 [in] O identificador para a caixa de diálogo.
 
-*uMsg*  
+*uMsg*<br/>
 [in] A mensagem enviada para a caixa de diálogo.
 
-*wParam*  
+*wParam*<br/>
 [in] Obter informações adicionais específicas de mensagem.
 
-*lParam*  
+*lParam*<br/>
 [in] Obter informações adicionais específicas de mensagem.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -199,18 +198,18 @@ Você pode substituir `DialogProc` para fornecer um mecanismo diferente para lid
 
 Cria uma caixa de diálogo modal.
 
-```   
+```
 INT_PTR DoModal(  
     HWND hWndParent = ::GetActiveWindow(),   
-    LPARAM dwInitParam = NULL); 
+    LPARAM dwInitParam = NULL);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] O identificador para a janela do proprietário. O valor padrão é o valor de retorno de [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) função do Win32.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 [in] Especifica o valor para passar para a caixa de diálogo do *lParam* parâmetro da mensagem WM_INITDIALOG.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -227,13 +226,13 @@ Para criar uma caixa de diálogo sem janela restrita, chame [criar](#create).
 
 Destrói uma caixa de diálogo modal.
 
-```   
-BOOL EndDialog(int nRetCode); 
+```
+BOOL EndDialog(int nRetCode);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*nRetCode*  
+*nRetCode*<br/>
 [in] O valor a ser retornado por [CDialogImpl::DoModal](#domodal).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -251,8 +250,8 @@ TRUE se a caixa de diálogo é destruída; Caso contrário, FALSE.
 
 Retorna `DialogProc`, o procedimento de caixa de diálogo atual.
 
-```   
-virtual WNDPROC GetDialogProc(); 
+```
+virtual WNDPROC GetDialogProc();
 ```
 
 ### <a name="return-value"></a>Valor de retorno
@@ -267,13 +266,13 @@ Substitua este método para substituir o procedimento de caixa de diálogo com s
 
 Converte as unidades (maps) as unidades de caixa de diálogo do retângulo especificado para a tela (pixels).
 
-```   
-BOOL MapDialogRect(LPRECT lpRect); 
+```
+BOOL MapDialogRect(LPRECT lpRect);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpRect*  
+*lpRect*<br/>
 Aponta para um `CRect` objeto ou [RECT](../../mfc/reference/rect-structure1.md) estrutura que receberá as coordenadas do cliente da atualização que inclui a região de atualização.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -288,13 +287,13 @@ A função substitui as coordenadas especificado no `RECT` estrutura com as coor
 
 Chamado após o recebimento da última mensagem (normalmente `WM_NCDESTROY`).
 
-```   
-virtual void OnFinalMessage(HWND hWnd); 
+```
+virtual void OnFinalMessage(HWND hWnd);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWnd*  
+*hWnd*<br/>
 [in] Um identificador para a janela que está sendo destruído.
 
 ### <a name="remarks"></a>Comentários
@@ -305,26 +304,26 @@ Observe que se você quiser excluir automaticamente seu objeto após a destruiç
 
 Chamado apenas uma vez, quando a primeira mensagem é recebida, para processar as mensagens enviadas para a caixa de diálogo.
 
-```   
+```
 static LRESULT CALLBACK StartDialogProc(
     HWND hWnd,  
     UINT uMsg,  
     WPARAM wParam,  
-    LPARAM lParam); 
+    LPARAM lParam);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWnd*  
+*hWnd*<br/>
 [in] O identificador para a caixa de diálogo.
 
-*uMsg*  
+*uMsg*<br/>
 [in] A mensagem enviada para a caixa de diálogo.
 
-*wParam*  
+*wParam*<br/>
 [in] Obter informações adicionais específicas de mensagem.
 
-*lParam*  
+*lParam*<br/>
 [in] Obter informações adicionais específicas de mensagem.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -337,5 +336,5 @@ Após a chamada inicial para `StartDialogProc`, `DialogProc` for definido como u
 
 ## <a name="see-also"></a>Consulte também
 
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

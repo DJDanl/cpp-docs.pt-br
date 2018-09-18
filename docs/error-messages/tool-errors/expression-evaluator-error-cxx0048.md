@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dca56b5114e8c0ec98d65e43edaca19a7e23663
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07877215a2b230a7ef2f75d83b71b7d03e4e7d34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295942"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031841"
 ---
 # <a name="expression-evaluator-error-cxx0048"></a>Erro CXX0048 (avaliador de expressão)
-sequência de chamada não tem suportada  
-  
- Uma função especificada na expressão usa uma sequência de chamada não tem suportada pelo avaliador de expressão C. Você não pode chamar essa função em uma expressão de janela inspeção.  
-  
- Esse erro é idêntico ao CAN0048.
+
+sequência de chamada não tem suportada
+
+Uma função especificada na expressão usa uma sequência de chamada não tem suportada pelo avaliador de expressão C. Você não pode chamar essa função em uma expressão da janela de inspeção.
+
+Esse erro é idêntico ao CAN0048.

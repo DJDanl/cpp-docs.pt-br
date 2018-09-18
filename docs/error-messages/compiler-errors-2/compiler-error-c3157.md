@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 156315e0e1892d9ef92020e56992d6dec51356aa
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b72f3364ee4a79fc00868b25a4c5a0b3f63501c1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220148"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063301"
 ---
 # <a name="compiler-error-c3157"></a>Erro do compilador C3157
-Atributo ParamArray só pode ser aplicado ao último parâmetro  
-  
- O [ParamArray](https://msdn.microsoft.com/library/system.paramarrayattribute.aspx) atributo foi aplicado ao parâmetro errado.
+
+Atributo ParamArray só pode ser aplicado ao último parâmetro
+
+O [ParamArray](https://msdn.microsoft.com/library/system.paramarrayattribute.aspx) atributo foi aplicado ao parâmetro errado.

@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4618 | Microsoft Docs
+title: Compilador aviso (nível 1) C4618 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e53f8542983a6e15f353ff181efa280815fea9d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ff6080d6315156a1dbaeb89fae1d5cb10865405
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33282516"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074260"
 ---
-# <a name="compiler-warning-level-1-c4618"></a>Compilador C4618 de aviso (nível 1)
-parâmetros de pragma incluíram uma cadeia de caracteres vazia; pragma ignorado  
-  
- Uma cadeia de caracteres nula foi fornecida como um argumento para um **#pragma**.  
-  
- O pragma foi processado sem o argumento.  
-  
- O exemplo a seguir gera C4618:  
-  
-```  
-// C4618.cpp  
-// compile with: /W1 /LD  
-#pragma code_seg("")   // C4618  
+# <a name="compiler-warning-level-1-c4618"></a>Compilador aviso (nível 1) C4618
+
+parâmetros de pragma incluíram uma cadeia de caracteres vazia; pragma ignorado
+
+Uma cadeia de caracteres nula foi fornecida como um argumento para uma **#pragma**.
+
+O pragma foi processado sem o argumento.
+
+O exemplo a seguir gera C4618:
+
+```
+// C4618.cpp
+// compile with: /W1 /LD
+#pragma code_seg("")   // C4618
 ```

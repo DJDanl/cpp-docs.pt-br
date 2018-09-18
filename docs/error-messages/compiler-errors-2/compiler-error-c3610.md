@@ -1,5 +1,5 @@
 ---
-title: C3610 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3610 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f58d66e9d3dacfa2c0b38eb84fe51e0813a892d3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b46b3669978ff3735d5a16015ca0a01e65f07ae9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252426"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037847"
 ---
-# <a name="compiler-error-c3610"></a>C3610 de erro do compilador
-'valuetype': tipo de valor deve ser 'boxed' antes do método 'method' pode ser chamado  
-  
- Por padrão, um tipo de valor não é no heap gerenciado. Antes de chamar métodos das classes de tempo de execução do .NET, como `Object`, você precisa mover o tipo de valor para o heap gerenciado.  
-  
- C3610 só está acessível usando a opção de compilador obsoleto **/CLR: oldSyntax**.  
+# <a name="compiler-error-c3610"></a>Erro do compilador C3610
+
+'valuetype': tipo de valor deve ser 'boxed' antes do método 'method' pode ser chamado
+
+Por padrão, um tipo de valor não está no heap gerenciado. Antes de chamar métodos das classes de tempo de execução do .NET, como `Object`, você precisará mover o tipo de valor para o heap gerenciado.
+
+C3610 só está acessível usando a opção de compilador obsoletos **/CLR: oldSyntax**.

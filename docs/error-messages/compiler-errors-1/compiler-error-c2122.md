@@ -1,5 +1,5 @@
 ---
-title: C2122 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2122 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6651bda63ab011fd7ef50eb6f71c3df27bb95ccd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4eab9412be46949845e1ed16bb701ae8621fac42
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166173"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072232"
 ---
-# <a name="compiler-error-c2122"></a>C2122 de erro do compilador
-'Identificador': parâmetro de protótipo na lista de nomes inválido  
-  
- O parâmetro não é um tipo válido. ANSI C não oferece suporte a tipos definidos pelo usuário.
+# <a name="compiler-error-c2122"></a>Erro do compilador C2122
+
+'identifier': parâmetro de protótipo na lista de nomes inválido
+
+O parâmetro não é um tipo válido. ANSI C não oferece suporte a tipos definidos pelo usuário.

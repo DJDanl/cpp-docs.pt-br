@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39b712b44c2908df1163380a76909884e4ab87d8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 788188814de37214f397632161de55b54a28421e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755737"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073259"
 ---
 # <a name="default-atl-project-configurations"></a>Configurações de projeto padrão da ATL
 
@@ -34,8 +34,8 @@ A ATL Project Wizard cria duas configurações de projeto por padrão:
 
 ## <a name="see-also"></a>Consulte também
 
-[Programando com código de tempo de execução de C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)   
-[Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md)   
-[Caixa de diálogo do Configuration Manager](/visualstudio/ide/understanding-build-configurations)   
+[Programando com código de tempo de execução C e da ATL](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Trabalhando com Propriedades do Projeto](../../ide/working-with-project-properties.md)<br/>
+[Caixa de diálogo do Configuration Manager](/visualstudio/ide/understanding-build-configurations)<br/>
 [Compilando e criando](/visualstudio/ide/compiling-and-building-in-visual-studio)
 

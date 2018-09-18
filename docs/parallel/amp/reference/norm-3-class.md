@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822ef062dbde18dcdb285d2358d10f4a6ae2b566
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fe4852313d6eb445b3ea242f13e5dc5f6e90def2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688655"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074377"
 ---
 # <a name="norm3-class"></a>Classe norm_3
 Representa um vetor curto de três números normais.  
@@ -110,7 +110,7 @@ class norm_3;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor norm_3](#ctor)|Sobrecarregado. Padrão construtor inicializa todos os elementos com 0.|  
+|[Construtor norm_3](#ctor)|Sobrecarregado. Padrão construtor, inicializa todos os elementos com 0.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -211,12 +211,12 @@ class norm_3;
  `norm_3`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** amp_short_vectors.h  
+ **Cabeçalho:** amp_short_vectors. h  
   
  **Namespace:** Concurrency:: Graphics  
 
 ## <a name="ctor"></a> Construtor norm_3
-Padrão construtor inicializa todos os elementos com 0.  
+Padrão construtor, inicializa todos os elementos com 0.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -264,20 +264,20 @@ explicit inline norm_3(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `_V0`  
- O valor para inicializar o elemento 0.  
+*_V0*<br/>
+O valor para inicializar o elemento 0.  
   
- `_V1`  
- O valor para inicializar o elemento 1.  
+*V1*<br/>
+O valor para inicializar o elemento 1.  
   
- `_V2`  
- O valor para inicializar o elemento 2.  
+*_V2*<br/>
+O valor para inicializar o elemento 2.  
   
- `_V`  
- O valor para a inicialização.  
+*_V*<br/>
+O valor para a inicialização.  
   
- `_Other`  
- O objeto usado para inicializar.  
+*Outro*<br/>
+O objeto usado para inicializar.  
   
 ## <a name="a-namesize-size-constant"></a><a name="size"> tamanho constante
 ### <a name="syntax"></a>Sintaxe  

@@ -16,31 +16,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c592607732eb5558ce74edb7b71adbc023b2ae52
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: f63d81fa8550bd9cbb7c051803c0d1e891cefe15
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402277"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031048"
 ---
 # <a name="comerrorguid"></a>_com_error::GUID
-**Seção específica da Microsoft**  
-  
- Chama a função `IErrorInfo::GetGUID`.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-GUID GUID( ) const throw( );  
-```  
-  
-## <a name="return-value"></a>Valor de retorno  
- Retorna o resultado da `IErrorInfo::GetGUID` para o `IErrorInfo` registrado no `_com_error` objeto. Se nenhum `IErrorInfo` é registrado, ele retorna `GUID_NULL`.  
-  
-## <a name="remarks"></a>Comentários  
- Qualquer falha ao chamar o `IErrorInfo::GetGUID` método é ignorado.  
-  
- **Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe _com_error](../cpp/com-error-class.md)
+
+**Seção específica da Microsoft**
+
+Chama a função `IErrorInfo::GetGUID`.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+GUID GUID( ) const throw( );
+```
+
+## <a name="return-value"></a>Valor de retorno
+
+Retorna o resultado da `IErrorInfo::GetGUID` para o `IErrorInfo` registrado no `_com_error` objeto. Se nenhum `IErrorInfo` é registrado, ele retorna `GUID_NULL`.
+
+## <a name="remarks"></a>Comentários
+
+Qualquer falha ao chamar o `IErrorInfo::GetGUID` método é ignorado.
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Classe _com_error](../cpp/com-error-class.md)

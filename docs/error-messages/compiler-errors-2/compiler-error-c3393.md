@@ -1,5 +1,5 @@
 ---
-title: C3393 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3393 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db8e60df6c6f8f1d19b55d78b527cca2755f4ca4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ceb6875484a3afe1d13f13990334434a6c1b086
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254128"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022650"
 ---
-# <a name="compiler-error-c3393"></a>C3393 de erro do compilador
-Erro de sintaxe em cláusula de restrição: 'Identificador' não é um tipo  
-  
- O identificador passado para uma restrição, que deve ser um tipo, não era um tipo.  Para obter mais informações, consulte [restrições em parâmetros de tipo genérico (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C3393:  
-  
-```  
-// C3393.cpp  
-// compile with: /clr /c  
-void MyInterface() {}  
-interface class MyInterface2 {};  
-  
-generic<typename T>  
-where T : MyInterface   // C3393  
-// try the following line instead  
-// where T : MyInterface2  
-ref class R {};  
+# <a name="compiler-error-c3393"></a>Erro do compilador C3393
+
+Erro de sintaxe em cláusula de restrição: 'identifier' não é um tipo
+
+O identificador passado para uma restrição, que deve ser um tipo, não era um tipo.  Para obter mais informações, consulte [restrições em parâmetros de tipo genéricos (C + + / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C3393:
+
+```
+// C3393.cpp
+// compile with: /clr /c
+void MyInterface() {}
+interface class MyInterface2 {};
+
+generic<typename T>
+where T : MyInterface   // C3393
+// try the following line instead
+// where T : MyInterface2
+ref class R {};
 ```

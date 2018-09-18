@@ -1,5 +1,5 @@
 ---
-title: C2917 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2917 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecc5f8634505dc8b63cb4cbdbbb9aa31973e7475
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d2747b001cc81da4edde21f201cd34392c2dcba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254544"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020882"
 ---
-# <a name="compiler-error-c2917"></a>C2917 de erro do compilador
-'name': parâmetro de modelo inválido  
-  
- Uma lista de parâmetros de modelo contém um identificador que não é um parâmetro de modelo.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C2917.  
-  
-```  
-// C2917.cpp  
-// compile with: /c  
-template<class T> class Vector {  
-   void sort();  
-};  
-  
-template<class T*> void Vector<T>::sort() {}   // C2917  
-// try the following line instead  
-// template<class T> void Vector<T>::sort() {}  
+# <a name="compiler-error-c2917"></a>Erro do compilador C2917
+
+'name': parâmetro de modelo inválido
+
+Uma lista de parâmetros de modelo contém um identificador que não era um parâmetro de modelo.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C2917.
+
+```
+// C2917.cpp
+// compile with: /c
+template<class T> class Vector {
+   void sort();
+};
+
+template<class T*> void Vector<T>::sort() {}   // C2917
+// try the following line instead
+// template<class T> void Vector<T>::sort() {}
 ```

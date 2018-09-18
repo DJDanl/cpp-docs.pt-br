@@ -1,5 +1,5 @@
 ---
-title: C2298 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2298 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,70 +16,73 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d469c00998d849c21db652f1f5033c5a9b46c8a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31dde7ee3b1de221fae78c5b6d3398fe743c6fc9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171875"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064419"
 ---
-# <a name="compiler-error-c2298"></a>C2298 de erro do compilador
-'operação de ': operação ilegal no ponteiro para a expressão de função de membro  
-  
- Um ponteiro para a expressão de função de membro deve chamar a função de membro.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C2298.  
-  
-```  
-// C2298.cpp  
-#include <stdio.h>  
-  
-struct X {  
-   void mf() {  
-      puts("in X::mf");  
-   }  
-  
-   void mf2() {  
-      puts("in X::mf2");  
-   }  
-};  
-  
-X x;  
-// pointer to member functions with no params and void return in X  
-typedef void (X::*pmf_t)();   
-  
-// a pointer to member function X::mf  
-void (X::*pmf)() = &X::mf;  
-  
-int main() {  
-   int (*pf)();  
-   pf = x.*pmf;   // C2298  
-   +(x.*pmf);     // C2298  
-  
-   pmf_t pf2 = &X::mf2;  
-   (x.*pf2)();   // uses X::mf2  
-   (x.*pmf)();   // uses X::mf  
-}  
-```  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C2298.  
-  
-```  
-// C2298_b.cpp  
-// compile with: /c  
-void F() {}  
-  
-class Measure {  
-public:  
-   void SetTrackingFunction(void (Measure::*fnc)()) {  
-      TrackingFunction = this->*fnc;   // C2298  
-      TrackingFunction = fnc;   // OK  
-      GlobalTracker = F;   // OK  
-   }  
-private:  
-   void (Measure::*TrackingFunction)(void);  
-   void (*GlobalTracker)(void);  
-};  
+# <a name="compiler-error-c2298"></a>Erro do compilador C2298
+
+'operation': operação inválida no ponteiro para a expressão de função de membro
+
+Um ponteiro para a expressão de função de membro deve chamar a função de membro.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C2298.
+
+```
+// C2298.cpp
+#include <stdio.h>
+
+struct X {
+   void mf() {
+      puts("in X::mf");
+   }
+
+   void mf2() {
+      puts("in X::mf2");
+   }
+};
+
+X x;
+// pointer to member functions with no params and void return in X
+typedef void (X::*pmf_t)();
+
+// a pointer to member function X::mf
+void (X::*pmf)() = &X::mf;
+
+int main() {
+   int (*pf)();
+   pf = x.*pmf;   // C2298
+   +(x.*pmf);     // C2298
+
+   pmf_t pf2 = &X::mf2;
+   (x.*pf2)();   // uses X::mf2
+   (x.*pmf)();   // uses X::mf
+}
+```
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C2298.
+
+```
+// C2298_b.cpp
+// compile with: /c
+void F() {}
+
+class Measure {
+public:
+   void SetTrackingFunction(void (Measure::*fnc)()) {
+      TrackingFunction = this->*fnc;   // C2298
+      TrackingFunction = fnc;   // OK
+      GlobalTracker = F;   // OK
+   }
+private:
+   void (Measure::*TrackingFunction)(void);
+   void (*GlobalTracker)(void);
+};
 ```

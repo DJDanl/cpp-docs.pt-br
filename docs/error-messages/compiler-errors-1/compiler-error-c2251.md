@@ -1,5 +1,5 @@
 ---
-title: C2251 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2251 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5017494e5b16363a970d2ac0bef8bcf1c088b413
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62e27fd7c028e059aa04cc3ff9f4b278cd1a120e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169849"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048286"
 ---
-# <a name="compiler-error-c2251"></a>C2251 de erro do compilador
-o namespace 'namespace' não tem um membro 'member' - você quis dizer 'member'?  
-  
- O compilador não pôde encontrar um identificador no namespace especificado.  
-  
- O exemplo a seguir gera C2251:  
-  
-```  
-// C2251.cpp  
-// compile with: /c  
-namespace A {  
-   namespace B {  
-      void f1();  
-   }  
-  
-   using namespace B;  
-}  
-  
-void A::f1() {}   // C2251  
-void A::B::f1() {}   // OK  
+# <a name="compiler-error-c2251"></a>Erro do compilador C2251
+
+o namespace 'namespace' não tem um membro 'member' - você quis dizer 'member'?
+
+O compilador não pôde localizar um identificador no namespace especificado.
+
+O exemplo a seguir gera C2251:
+
+```
+// C2251.cpp
+// compile with: /c
+namespace A {
+   namespace B {
+      void f1();
+   }
+
+   using namespace B;
+}
+
+void A::f1() {}   // C2251
+void A::B::f1() {}   // OK
 ```

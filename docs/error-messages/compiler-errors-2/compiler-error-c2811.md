@@ -1,5 +1,5 @@
 ---
-title: C2811 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2811 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef9c608f19be28dbbeeca89c5f6672149e0ac4f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e7e3b2d7bb76989b2028846efee6b18d10e1b0ad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236073"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059609"
 ---
-# <a name="compiler-error-c2811"></a>C2811 de erro do compilador
-'type1': não é possível herdar de 'type2', uma referência de classe só pode herdar de uma classe ref ou classe de interface  
-  
- Você tentou usar uma classe não gerenciada como uma classe base para uma classe gerenciada.  
-  
- O exemplo a seguir gera C2811:  
-  
-```  
-// C2811.cpp  
-// compile with: /clr /c  
-struct S{};  
-ref struct T {};  
-ref class C : public S {};   // C2811  
-ref class D : public T {};   // OK  
+# <a name="compiler-error-c2811"></a>Erro do compilador C2811
+
+'type1': não pode herdar de 'type2', uma referência de classe pode herdar apenas de uma classe ref ou classe de interface
+
+Você tentou usar uma classe não gerenciada como uma classe base para uma classe gerenciada.
+
+O exemplo a seguir gera C2811:
+
+```
+// C2811.cpp
+// compile with: /clr /c
+struct S{};
+ref struct T {};
+ref class C : public S {};   // C2811
+ref class D : public T {};   // OK
 ```

@@ -1,5 +1,5 @@
 ---
-title: C3246 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3246 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb7feedafc4c965912bcb8ee022601e52d0c0f3a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a588067fa21e0aeee54516bcec28cdf3648ac9f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253246"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047805"
 ---
-# <a name="compiler-error-c3246"></a>C3246 de erro do compilador
-'class': não pode herdar de 'type', pois ele foi declarado como 'sealed'  
-  
-Uma classe que está marcada como [lacrado](../../windows/sealed-cpp-component-extensions.md) não pode ser a classe base para outras classes.  
-  
-O exemplo a seguir gera C3246:  
-  
-```  
-// C3246_2.cpp  
-// compile with: /clr /LD  
-ref class X sealed {};  
-  
-ref class Y : public X {}; // C3246  
-```  
+# <a name="compiler-error-c3246"></a>Erro do compilador C3246
+
+'class': não pode herdar de 'type', pois ele foi declarado como 'sealed'
+
+Uma classe que está marcada como [lacrado](../../windows/sealed-cpp-component-extensions.md) não pode ser a classe base para todas as outras classes.
+
+O exemplo a seguir gera C3246:
+
+```
+// C3246_2.cpp
+// compile with: /clr /LD
+ref class X sealed {};
+
+ref class Y : public X {}; // C3246
+```

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a8b36c3238d75d9a6cb03972023a6d85d3097a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 302b66ba9935f2024a30f8c89340b5f6731aad6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756542"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065498"
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>Classe CComMultiThreadModelNoCS
 
@@ -135,7 +135,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*  
+*p*<br/>
 [in] Ponteiro para a variável a ser diminuída.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -156,7 +156,7 @@ static ULONG WINAPI Increment(LPLONG p) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*  
+*p*<br/>
 [in] Ponteiro para a variável a ser incrementado.
 
 ### <a name="return-value"></a>Valor de retorno

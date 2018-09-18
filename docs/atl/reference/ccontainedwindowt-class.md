@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc9ac9fc7e638655b7b6b812d347ac26b8cf6967
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c64db5a041845bbd068bab1a72ad461740170b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755795"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040473"
 ---
 # <a name="ccontainedwindowt-class"></a>Classe CContainedWindowT
 
@@ -49,16 +49,16 @@ Essa classe implementa uma janela contida dentro de outro objeto.
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template <class TBase = CWindow, class TWinTraits = CControlWinTraits>  
+template <class TBase = CWindow, class TWinTraits = CControlWinTraits>
 class CContainedWindowT : public TBase
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*Tdígitos de base*  
+*Tdígitos de base*<br/>
 A classe base da sua nova classe. A classe base padrão é `CWindow`.
 
-*TWinTraits*  
+*TWinTraits*<br/>
 Uma classe de características que define os estilos para a sua janela. O padrão é `CControlWinTraits`.
 
 > [!NOTE]
@@ -148,13 +148,13 @@ CContainedWindowT(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpszClassName*  
+*lpszClassName*<br/>
 [in] O nome de uma classe de janela existente no qual a janela contida será baseada.
 
-*pObject*  
+*pObject*<br/>
 [in] Um ponteiro para o objeto recipiente que declara o mapa da mensagem. Classe do objeto deve derivar de [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Identifica o mapa de mensagem que irá processar mensagens da janela contido. O valor padrão, 0, especifica o mapa de mensagem padrão declarado com [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Para usar um mapa de mensagens alternativos declarado com [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), passe `msgMapID`.
 
 ### <a name="remarks"></a>Comentários
@@ -211,34 +211,34 @@ HWND Create(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpszClassName*  
+*lpszClassName*<br/>
 [in] O nome de uma classe de janela existente no qual a janela contida será baseada.
 
-*pObject*  
+*pObject*<br/>
 [in] Um ponteiro para o objeto recipiente que declara o mapa da mensagem. Classe do objeto deve derivar de [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] Identifica o mapa de mensagem que irá processar mensagens da janela contido. O valor padrão, 0, especifica o mapa de mensagem padrão declarado com [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Para usar um mapa de mensagens alternativos declarado com [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), passe `msgMapID`.
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] O identificador para a janela pai ou proprietária.
 
-*Rect*  
+*Rect*<br/>
 [in] Um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) especificando a posição da janela de estrutura. O `RECT` pode ser passada por um ponteiro ou referência.
 
-*szWindowName*  
+*szWindowName*<br/>
 [in] Especifica o nome da janela. O valor padrão é NULL.
 
-*dwStyle*  
+*dwStyle*<br/>
 [in] O estilo da janela. O valor padrão é WS_CHILD &#124; WS_VISIBLE. Para obter uma lista de valores possíveis, consulte [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) no SDK do Windows.
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in] O estilo de janela estendidos. O valor padrão é 0, indicando que nenhum estilo estendido. Para obter uma lista de valores possíveis, consulte [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) no SDK do Windows.
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in] Para uma janela filho, o identificador de janela. Para uma janela de nível superior, um identificador de menu da janela. O valor padrão é **0U**.
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 [in] Um ponteiro para dados de criação da janela. Para obter uma descrição completa, consulte a descrição para o parâmetro final [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -269,13 +269,13 @@ LRESULT DefWindowProc(
 
 ### <a name="parameters"></a>Parâmetros
 
-*uMsg*  
+*uMsg*<br/>
 [in] A mensagem enviada para a janela.
 
-*wParam*  
+*wParam*<br/>
 [in] Obter informações adicionais específicas de mensagem.
 
-*lParam*  
+*lParam*<br/>
 [in] Obter informações adicionais específicas de mensagem.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -382,7 +382,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWnd*  
+*hWnd*<br/>
 [in] O identificador para a janela que está sendo uma subclasse.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -406,7 +406,7 @@ void SwitchMessageMap(DWORD dwMsgMapID);
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] O identificador de mapa de mensagem. Para usar o mapa de mensagem padrão declarado com [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), transmitir zero. Para usar um mapa de mensagens alternativos declarado com [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), passe `msgMapID`.
 
 ### <a name="remarks"></a>Comentários
@@ -425,7 +425,7 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bForce*  
+*bForce*<br/>
 [in] Defina como True para forçar o procedimento de janela original a ser restaurado, mesmo se o procedimento de janela para este `CContainedWindowT` objeto não está ativo no momento. Se *bForce* é definido como FALSE e o procedimento de janela para este `CContainedWindowT` objeto não está ativo no momento, o procedimento de janela original não será restaurado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -450,16 +450,16 @@ static LRESULT CALLBACK WindowProc(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWnd*  
+*hWnd*<br/>
 [in] O identificador para a janela.
 
-*uMsg*  
+*uMsg*<br/>
 [in] A mensagem enviada para a janela.
 
-*wParam*  
+*wParam*<br/>
 [in] Obter informações adicionais específicas de mensagem.
 
-*lParam*  
+*lParam*<br/>
 [in] Obter informações adicionais específicas de mensagem.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -472,9 +472,9 @@ O resultado do processamento da mensagem.
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CWindow](../../atl/reference/cwindow-class.md)   
-[Classe CWindowImpl](../../atl/reference/cwindowimpl-class.md)   
-[Classe CMessageMap](../../atl/reference/cmessagemap-class.md)   
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
+[Classe CWindow](../../atl/reference/cwindow-class.md)<br/>
+[Classe CWindowImpl](../../atl/reference/cwindowimpl-class.md)<br/>
+[Classe CMessageMap](../../atl/reference/cmessagemap-class.md)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

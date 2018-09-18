@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a73acafab54c5448eaa9fbf0887a9e124311a654
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e00759ae0d987a04d60fd5f32ca0a7d18f3832c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317005"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053837"
 ---
 # <a name="resource-compiler-error-rc2017"></a>Erro RC2017 (compilador de recurso)
-sequência de escape ilegal  
-  
- Uma sequência de escape apareceu onde um não era esperado.  
-  
- Uma sequência de escape — uma barra invertida ( **\\** ) seguido por um número ou uma letra, pode ocorrer apenas em um caractere ou uma cadeia de caracteres constante.
+
+sequência de escape ilegal
+
+Uma sequência de escape apareceu no qual não esperava um.
+
+Uma sequência de escape — uma barra invertida ( **\\** ) seguido por um número ou uma letra, pode ocorrer apenas em um caractere ou uma cadeia de caracteres constante.

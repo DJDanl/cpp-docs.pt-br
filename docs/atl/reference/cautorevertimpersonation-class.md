@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99f0615dc37070311428ec12894bcaeea8febe8d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 45a14f8c742393c60a026f7c58217407715ef282
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760611"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052723"
 ---
 # <a name="cautorevertimpersonation-class"></a>Classe CAutoRevertImpersonation
 
@@ -77,7 +77,7 @@ void Attach(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*pAT*  
+*pAT*<br/>
 O endereço do [CAccessToken](../../atl/reference/caccesstoken-class.md) objeto a ser revertida automaticamente
 
 ### <a name="remarks"></a>Comentários
@@ -94,7 +94,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*pAT*  
+*pAT*<br/>
 O endereço do [CAccessToken](../../atl/reference/caccesstoken-class.md) objeto a ser revertido automaticamente.
 
 ### <a name="remarks"></a>Comentários
@@ -147,6 +147,6 @@ Se esse método é chamado para fins que incluem a reversão de uma representaç
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo de ATLSecurity](../../visual-cpp-samples.md)   
-[Tokens de acesso](/windows/desktop/SecAuthZ/access-tokens)   
+[Exemplo de ATLSecurity](../../visual-cpp-samples.md)<br/>
+[Tokens de acesso](/windows/desktop/SecAuthZ/access-tokens)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

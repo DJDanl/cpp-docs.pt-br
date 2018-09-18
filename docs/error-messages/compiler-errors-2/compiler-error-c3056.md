@@ -1,5 +1,5 @@
 ---
-title: C3056 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3056 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,45 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52ec97865a1aa9c8b6da9b109bf100eb62824a9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0495bc9c31df3aa3ff47ef860e8e47ea6f7c2248
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249161"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063574"
 ---
-# <a name="compiler-error-c3056"></a>C3056 de erro do compilador
-'symbol': símbolo não está no mesmo escopo da diretiva 'threadprivate'  
-  
- Um símbolo usado em uma [threadprivate](../../parallel/openmp/reference/threadprivate.md) cláusula deve estar no mesmo escopo de `threadprivate` cláusula.  
-  
- O exemplo a seguir gera C3056:  
-  
-```  
-// C3056.cpp  
-// compile with: /openmp  
-int x, y;  
-void test() {  
-   #pragma omp threadprivate(x, y)   // C3056  
-   #pragma omp parallel copyin(x, y)  
-   {  
-      x = y;  
-   }  
-}  
-```  
-  
- Possível solução:  
-  
-```  
-// C3056b.cpp  
-// compile with: /openmp /LD  
-int x, y;  
-#pragma omp threadprivate(x, y)  
-void test() {  
-   #pragma omp parallel copyin(x, y)  
-   {  
-      x = y;  
-   }  
-}  
+# <a name="compiler-error-c3056"></a>Erro do compilador C3056
+
+'symbol': símbolo não está no mesmo escopo com a diretiva 'threadprivate'
+
+Um símbolo usado em uma [threadprivate](../../parallel/openmp/reference/threadprivate.md) cláusula deve estar no mesmo escopo que o `threadprivate` cláusula.
+
+O exemplo a seguir gera C3056:
+
+```
+// C3056.cpp
+// compile with: /openmp
+int x, y;
+void test() {
+   #pragma omp threadprivate(x, y)   // C3056
+   #pragma omp parallel copyin(x, y)
+   {
+      x = y;
+   }
+}
+```
+
+Solução possível:
+
+```
+// C3056b.cpp
+// compile with: /openmp /LD
+int x, y;
+#pragma omp threadprivate(x, y)
+void test() {
+   #pragma omp parallel copyin(x, y)
+   {
+      x = y;
+   }
+}
 ```

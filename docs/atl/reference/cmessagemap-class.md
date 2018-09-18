@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be04510f7967b431b7e7c4a3b11aef6f51afe8d8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3f09347fdfaaf20e465e5be05ce446dfec449526
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763221"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024374"
 ---
 # <a name="cmessagemap-class"></a>Classe CMessageMap
 
@@ -80,22 +80,22 @@ virtual BOOL ProcessWindowMessage(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWnd*  
+*hWnd*<br/>
 [in] O identificador para a janela de recebimento da mensagem.
 
-*uMsg*  
+*uMsg*<br/>
 [in] A mensagem enviada para a janela.
 
-*wParam*  
+*wParam*<br/>
 [in] Obter informações adicionais específicas de mensagem.
 
-*lParam*  
+*lParam*<br/>
 [in] Obter informações adicionais específicas de mensagem.
 
-*lResult*  
+*lResult*<br/>
 [out] O resultado do processamento da mensagem.
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] O identificador do mapa de mensagens que processará a mensagem. O mapa da mensagem padrão declarado com [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), é identificado por 0. Um mapa de mensagens alternativos, declarado com [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), é identificado por `msgMapID`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -108,7 +108,7 @@ Chamada pelo procedimento de janela de um [CContainedWindow](../../atl/reference
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CDynamicChain](../../atl/reference/cdynamicchain-class.md)   
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
+[Classe CDynamicChain](../../atl/reference/cdynamicchain-class.md)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

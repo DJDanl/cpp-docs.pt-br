@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8af4a1b2ee763dfc28288058d27b1b08721fd97
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3bef300671894e054ddf9b1ca0ab9dcf3b135370
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756058"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019401"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Funções globais de relatório de erros e depuração
 
@@ -63,7 +63,7 @@ AtlHresultFromWin32(DWORD error);
 
 ### <a name="parameters"></a>Parâmetros
 
-*error*  
+*error*<br/>
 O valor de erro a ser convertido.
 
 ### <a name="remarks"></a>Comentários
@@ -129,28 +129,28 @@ HRESULT WINAPI AtlReportError(
 
 ### <a name="parameters"></a>Parâmetros
 
-*clsid*  
+*clsid*<br/>
 [in] O CLSID do objeto relatando o erro.
 
-*lpszDesc*  
+*lpszDesc*<br/>
 [in] A cadeia de caracteres que descreve o erro. As versões Unicode especificam que *lpszDesc* é do tipo LPCOLESTR; a versão ANSI Especifica um tipo de LPCSTR.
 
-*IID*  
+*IID*<br/>
 [in] O IID da interface definindo o erro ou GUID_NULL se o erro é definido pelo sistema operacional.
 
-*hRes*  
+*hRes*<br/>
 [in] O HRESULT que você deseja é retornado ao chamador.
 
-*nID*  
+*nID*<br/>
 [in] O identificador de recurso em que a cadeia de caracteres de descrição de erro é armazenada. Esse valor deve ficar entre 0x0200 e 0xFFFF, inclusive. Em compilações de depuração, uma **ASSERT** resultará se *nID* não indexa uma cadeia de caracteres válida. Em compilações de versão, a cadeia de caracteres de descrição de erro será definida como "Erro desconhecido".
 
-*dwHelpID*  
+*dwHelpID*<br/>
 [in] O identificador de contexto de ajuda para o erro.
 
-*lpszHelpFile*  
+*lpszHelpFile*<br/>
 [in] O caminho e nome do arquivo de Ajuda que descreve o erro.
 
-*hInst*  
+*hInst*<br/>
 [in] O identificador para o recurso. Por padrão, esse parâmetro é `__AtlBaseModuleModule::GetResourceInstance`, onde `__AtlBaseModuleModule` é a instância global do [CAtlBaseModule](../../atl/reference/catlbasemodule-class.md) ou a uma classe derivada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -182,7 +182,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hr*  
+*hr*<br/>
 Valor padrão de HRESULT.
 
 ### <a name="remarks"></a>Comentários
@@ -233,6 +233,6 @@ Se _ATL_NO_EXCEPTIONS for definida, a função faz com que uma falha de asserç�
 
 ## <a name="see-also"></a>Consulte também
 
-[Funções](../../atl/reference/atl-functions.md)   
+[Funções](../../atl/reference/atl-functions.md)<br/>
 [Macros de relatórios de erros e depuração](../../atl/reference/debugging-and-error-reporting-macros.md)
 

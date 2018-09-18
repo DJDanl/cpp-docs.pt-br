@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf679abbeb1134332d98ef0bd2ba8f2b845d30a4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5df2ad30fca410a71bc6333e34948bc938ca38d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688681"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039979"
 ---
 # <a name="schedulegroup-class"></a>Classe ScheduleGroup
-Representa uma abstração para um grupo de agendamento. Organizam os grupos de agendamento de um conjunto de trabalho relacionados que se beneficia de ser agendado próximas temporariamente, por outra tarefa em execução no mesmo grupo antes de passar para outro grupo ou espacialmente, executando vários itens dentro do mesmo grupo no mesmo Nó NUMA ou soquete físico.  
+Representa uma abstração para um grupo de agendas. Grupos de agendas organizam um conjunto de trabalho relacionados que se beneficiam de ser agendados em datas próximas temporariamente, por executando outra tarefa no mesmo grupo antes de passar para outro grupo ou espaçadamente, executando vários itens dentro do mesmo grupo no mesmo Nó NUMA ou soquete físico.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,33 +49,33 @@ class ScheduleGroup;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Id](#id)|Retorna um identificador para o grupo de agenda que é exclusivo no Agendador ao qual pertence o grupo.|  
+|[Id](#id)|Retorna um identificador para o grupo de agendas que é exclusivo dentro do Agendador ao qual pertence o grupo.|  
 |[Referência](#reference)|Incrementa a contagem de referência do grupo de agendamento.|  
-|[Versão](#release)|Diminui a Agendador grupo contagem de referência.|  
-|[ScheduleTask](#scheduletask)|Agenda uma tarefa leve dentro do grupo de agendamento.|  
+|[Versão](#release)|Diminui a referência de grupo do Agendador contagem.|  
+|[ScheduleTask](#scheduletask)|Agenda uma tarefa leve no grupo.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `ScheduleGroup`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** concrt.h  
+ **Cabeçalho:** concrt. h  
   
  **Namespace:** simultaneidade  
   
 ##  <a name="id"></a> Id 
 
- Retorna um identificador para o grupo de agenda que é exclusivo no Agendador ao qual pertence o grupo.  
+ Retorna um identificador para o grupo de agendas que é exclusivo dentro do Agendador ao qual pertence o grupo.  
   
 ```
 virtual unsigned int Id() const = 0;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um identificador para o grupo de agenda que é exclusivo no Agendador ao qual pertence o grupo.  
+ Um identificador para o grupo de agendas que é exclusivo dentro do Agendador ao qual pertence o grupo.  
   
 ##  <a name="operator_delete"></a> operador delete 
 
- Um `ScheduleGroup` objeto é destruído internamente pelo tempo de execução quando todas as referências externas a ele são liberadas. Ele não pode ser excluído explicitamente.  
+ Um `ScheduleGroup` objeto é destruído internamente pelo tempo de execução quando todas as referências externas a ele são liberadas. Ele não pode ser explicitamente excluído.  
   
 ```
 void operator delete(
@@ -89,8 +89,8 @@ void operator delete(
 ```    
   
 ### <a name="parameters"></a>Parâmetros  
- `_PObject`  
- Um ponteiro para o objeto a ser excluído.  
+*_PObject*<br/>
+Um ponteiro para o objeto a ser excluído.  
   
 ##  <a name="reference"></a> Referência 
 
@@ -104,23 +104,23 @@ virtual unsigned int Reference() = 0;
  A contagem de referência recentemente incrementado.  
   
 ### <a name="remarks"></a>Comentários  
- Isso normalmente é usado para gerenciar o tempo de vida do grupo de agendamento de composição. Quando a contagem de referência de um grupo de agendamento cair para zero, o grupo de agendamento é excluído pelo tempo de execução. Um grupo de agendamento criado usando o [: Createschedulegroup](currentscheduler-class.md#createschedulegroup) método, ou o [: createschedulegroup](scheduler-class.md#createschedulegroup) método começa com uma contagem de referência de um.  
+ Isso normalmente é usado para gerenciar o tempo de vida do grupo de agendamento para a composição. Quando a contagem de referência de um grupo de agendas cai para zero, o grupo de agendas é excluído pelo tempo de execução. Um grupo de agendamento criado usando o [currentscheduler:: Createschedulegroup](currentscheduler-class.md#createschedulegroup) método, ou o [Scheduler:: createschedulegroup](scheduler-class.md#createschedulegroup) método começa com uma contagem de referência de um.  
   
 ##  <a name="release"></a> versão 
 
- Diminui a Agendador grupo contagem de referência.  
+ Diminui a referência de grupo do Agendador contagem.  
   
 ```
 virtual unsigned int Release() = 0;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- A contagem de referência recentemente diminuído.  
+ A contagem de referência recentemente decrementado.  
   
 ### <a name="remarks"></a>Comentários  
- Isso normalmente é usado para gerenciar o tempo de vida do grupo de agendamento de composição. Quando a contagem de referência de um grupo de agendamento cair para zero, o grupo de agendamento é excluído pelo tempo de execução. Depois de ter chamado o `Release` o número específico de vezes para remover a criação do método fazem referência contagem e as referências adicionais inseridas usando o `Reference` método, você não pode utilizar o grupo de programação. Isso resultará em um comportamento indefinido.  
+ Isso normalmente é usado para gerenciar o tempo de vida do grupo de agendamento para a composição. Quando a contagem de referência de um grupo de agendas cai para zero, o grupo de agendas é excluído pelo tempo de execução. Depois de ter chamado a `Release` o número específico de vezes para remover a criação de método referência contagem e todas as referências adicionais colocadas, usando o `Reference` método, não é possível utilizar o grupo de agendas. Isso resultará em um comportamento indefinido.  
   
- Um grupo de agendamento está associado uma instância específica do Agendador. Certifique-se de que todas as referências para o grupo de agendamento são liberadas antes de todas as referências para o Agendador são lançadas, porque o último pode resultar no Agendador de destruição. Fazendo resulta em um comportamento indefinido.  
+ Um grupo de agendamento está associado uma instância de Agendador específico. Você deve garantir que todas as referências para o grupo de agendas são liberadas antes de todas as referências para o Agendador são lançadas, porque a última opção pode resultar no Agendador que está sendo destruído. Fazendo caso contrário, resulta em um comportamento indefinido.  
   
 ##  <a name="dtor"></a> ~ ScheduleGroup 
 
@@ -130,7 +130,7 @@ virtual ~ScheduleGroup();
   
 ##  <a name="scheduletask"></a> ScheduleTask 
 
- Agenda uma tarefa leve dentro do grupo de agendamento.  
+ Agenda uma tarefa leve no grupo.  
   
 ```
 virtual void ScheduleTask(
@@ -139,14 +139,14 @@ virtual void ScheduleTask(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Proc`  
- Um ponteiro para a função a ser executada para executar o corpo da tarefa leve.  
+*_Proc*<br/>
+Um ponteiro para a função a ser executada para executar o corpo da tarefa leve.  
   
- `_Data`  
- Um ponteiro nulo para os dados que serão passados como um parâmetro para o corpo da tarefa.  
+*Data*<br/>
+Um ponteiro nulo para os dados que serão passados como um parâmetro ao corpo da tarefa.  
   
 ### <a name="remarks"></a>Comentários  
- Chamar o `ScheduleTask` método implicitamente coloca uma contagem de referência no grupo de agenda que foi removido pelo tempo de execução em um momento apropriado depois que a tarefa será executada.  
+ Chamar o `ScheduleTask` implicitamente o método coloca uma contagem de referência no grupo de agenda que é removido pelo tempo de execução em um momento apropriado depois que a tarefa será executada.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   

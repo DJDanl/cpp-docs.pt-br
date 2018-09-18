@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 226c0b0d0f1fc316d5b78884a4d6e260296c52f9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a5b025e29c93cffe9c600646a2475f7e3230fd03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752187"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039537"
 ---
 # <a name="connection-point-macros"></a>Macros de ponto de Conexão
 
@@ -49,7 +49,7 @@ BEGIN_CONNECTION_POINT_MAP(x)
 
 ### <a name="parameters"></a>Parâmetros
 
-*x*  
+*x*<br/>
 [in] O nome da classe que contém os pontos de conexão.
 
 ### <a name="remarks"></a>Comentários
@@ -73,10 +73,10 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*  
+*IID*<br/>
 [in] O GUID da interface que está sendo adicionado ao mapa de ponto de conexão. 
 
-*piid*  
+*piid*<br/>
 [in] Ponteiro para o GUID da interface que está sendo adde.
 
 ### <a name="remarks"></a>Comentários
@@ -111,5 +111,5 @@ Para obter mais informações sobre pontos de conexão na ATL, consulte o artigo
 
 ## <a name="see-also"></a>Consulte também
 
-[Macros](../../atl/reference/atl-macros.md)   
+[Macros](../../atl/reference/atl-macros.md)<br/>
 [Funções globais de ponto de conexão](../../atl/reference/connection-point-global-functions.md)

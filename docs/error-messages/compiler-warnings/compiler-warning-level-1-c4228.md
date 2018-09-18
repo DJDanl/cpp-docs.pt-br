@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4228 | Microsoft Docs
+title: Compilador aviso (nível 1) C4228 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 023bf60930a53b6bd881680caebb78c151406df4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dab568ef6622bfa10f0e10566ec92dfaee71d22c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276784"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047948"
 ---
-# <a name="compiler-warning-level-1-c4228"></a>Compilador C4228 de aviso (nível 1)
-extensão não padrão usada: qualificadores após a vírgula na lista de declaradores são ignorados  
-  
- Como o uso de qualificadores **const** ou `volatile` depois de uma vírgula ao declarar variáveis é uma extensão da Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// C4228.cpp  
-// compile with: /W1  
-int j, const i = 0;  // C4228  
-int k;  
-int const m = 0;  // ok  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-1-c4228"></a>Compilador aviso (nível 1) C4228
+
+extensão não padrão usada: qualificadores após a vírgula na lista de declaradores são ignorados
+
+Como uso de qualificadores **const** ou `volatile` depois que uma vírgula ao declarar variáveis é uma extensão da Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
+
+## <a name="example"></a>Exemplo
+
+```
+// C4228.cpp
+// compile with: /W1
+int j, const i = 0;  // C4228
+int k;
+int const m = 0;  // ok
+int main()
+{
+}
 ```

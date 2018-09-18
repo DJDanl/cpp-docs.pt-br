@@ -1,5 +1,5 @@
 ---
-title: C2770 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2770 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c54ae3c559d0a523bc25831fa71e37531295489
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b206f7667855e61bfb3fe5e53cdd82444597162
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233574"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027005"
 ---
-# <a name="compiler-error-c2770"></a>C2770 de erro do compilador
-argumentos inválidos template_or_generic explícita para 'template'  
-  
- Candidatos do modelo de função com o modelo explícito ou argumentos genéricos resultaram em tipos de função não permitido.  
-  
- O exemplo a seguir gera C2770:  
-  
-```  
-// C2770.cpp  
-#include <stdio.h>  
-template <class T>  
-int f(typename T::B*);   // expects type with member B  
-  
-struct Err {};  
-  
-int main() {  
-   f<int>(0);   // C2770 int has no B  
-   // try the following line instead  
-   f<OK>(0);  
-}  
+# <a name="compiler-error-c2770"></a>Erro do compilador C2770
+
+argumento (s) de template_or_generic explícita inválida para 'template'
+
+Candidatos do modelo de função com modelo explícito ou argumentos genéricos resultaram em tipos de função não permitidos.
+
+O exemplo a seguir gera C2770:
+
+```
+// C2770.cpp
+#include <stdio.h>
+template <class T>
+int f(typename T::B*);   // expects type with member B
+
+struct Err {};
+
+int main() {
+   f<int>(0);   // C2770 int has no B
+   // try the following line instead
+   f<OK>(0);
+}
 ```

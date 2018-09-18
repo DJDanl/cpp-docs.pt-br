@@ -1,5 +1,5 @@
 ---
-title: C2419 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2419 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a456a4844c596a7cacad6ca85af8923d23d480f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fa3e6c562fe526df506a0f3aaf6944850f303b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33223728"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041331"
 ---
-# <a name="compiler-error-c2419"></a>C2419 de erro do compilador
-Mod por zero em 'contexto'  
-  
- O parâmetro à direita do `MOD` operador é zero neste contexto.
+# <a name="compiler-error-c2419"></a>Erro do compilador C2419
+
+Mod por zero em 'context'
+
+O parâmetro à direita do `MOD` operador é zero neste contexto.

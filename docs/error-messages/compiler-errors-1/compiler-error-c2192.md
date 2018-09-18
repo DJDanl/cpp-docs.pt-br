@@ -1,5 +1,5 @@
 ---
-title: C2192 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2192 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a97b0885dd626c992ab55703038838aa743e30d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d6cea2b4ce805c8f7d966ee9d2b3c27f8a901c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168692"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023508"
 ---
-# <a name="compiler-error-c2192"></a>C2192 de erro do compilador
-declaração de 'número' de parâmetro diferente  
-  
- Uma função de C foi declarada uma segunda vez com uma lista de parâmetros diferentes. C não oferece suporte a funções sobrecarregadas.  
-  
- O exemplo a seguir gera C2192:  
-  
-```  
-// C2192.c  
-// compile with: /Za /c  
-void func( float, int );  
-void func( int, float );   // C2192, different parameter list  
-void func2( int, float );   // OK  
+# <a name="compiler-error-c2192"></a>Erro do compilador C2192
+
+declaração de 'número' de parâmetro diferente
+
+Uma função C foi declarada uma segunda vez com uma lista de parâmetros diferentes. C não oferece suporte a funções sobrecarregadas.
+
+O exemplo a seguir gera C2192:
+
+```
+// C2192.c
+// compile with: /Za /c
+void func( float, int );
+void func( int, float );   // C2192, different parameter list
+void func2( int, float );   // OK
 ```

@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a2637013bacaecfa3e0d812177c12ce227d19be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d1dd62059697b7f5c50a9fe7863f62ebbe6bf56c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316524"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050504"
 ---
 # <a name="profile-guided-optimization-warning-pg1039"></a>Aviso PG1039 (otimização guiada por perfil)
-Falha ao aguardar o tempo de espera para varredura.  
-  
- O aplicativo não permitiu [pgosweep](../../build/reference/pgosweep.md) para executar.  Se possível, execute pgosweep quando o aplicativo está em um estado ocioso.
+
+Falha na espera para tempo de espera para varredura.
+
+O aplicativo não permitiu [pgosweep](../../build/reference/pgosweep.md) para ser executado.  Se possível, execute pgosweep quando o aplicativo está em um estado ocioso.

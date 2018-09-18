@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a6835cb1f8fb6365149b91c30881b4966b4b644
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 40dddf2bb1619bd896ecf50008f80fca968ef8c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765652"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075703"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>Classe CComCachedTearOffObject
 
@@ -49,7 +49,7 @@ public CComObjectRootEx<contained
 
 #### <a name="parameters"></a>Parâmetros
 
-`contained`  
+*contido*<br/>
 Sua classe destacável, derivada de `CComTearOffObjectBase` e as interfaces que você deseja que o seu objeto destacáveis para dar suporte.
 
 ## <a name="members"></a>Membros
@@ -121,7 +121,7 @@ CComCachedTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Parâmetros
 
-*VP*  
+*VP*<br/>
 [in] Ponteiro para o `IUnknown` do `CComCachedTearOffObject`.
 
 ### <a name="remarks"></a>Comentários
@@ -170,7 +170,7 @@ CcomContainedObject <contained> m_contained;
 
 ### <a name="parameters"></a>Parâmetros
 
-*contido*  
+*contido*<br/>
 [in] Sua classe destacável, derivada de `CComTearOffObjectBase` e as interfaces que você deseja que o seu objeto destacáveis para dar suporte.
 
 ### <a name="remarks"></a>Comentários
@@ -187,10 +187,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*  
+*IID*<br/>
 [in] O GUID da interface que está sendo solicitado.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Um ponteiro para o ponteiro de interface identificado pelo *iid*, ou nulo se a interface não foi encontrada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -215,6 +215,6 @@ Em compilações sem depuração, sempre retorna 0. Em compilações de depuraç
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CComTearOffObject](../../atl/reference/ccomtearoffobject-class.md)   
-[Classe CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
+[Classe CComTearOffObject](../../atl/reference/ccomtearoffobject-class.md)<br/>
+[Classe CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

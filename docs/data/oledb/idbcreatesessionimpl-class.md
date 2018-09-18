@@ -23,14 +23,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d934e9ae5494b934acb0779665ba4471dfc4c2b7
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 7f148176b8d5d0c85f3e899cfd117bbb381794b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572620"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047389"
 ---
 # <a name="idbcreatesessionimpl-class"></a>Classe IDBCreateSessionImpl
+
 Fornece uma implementação para o [IDBCreateSession](/previous-versions/windows/desktop/ms724076\(v=vs.85\)) interface.  
   
 ## <a name="syntax"></a>Sintaxe
@@ -42,14 +43,16 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *T*  
- SUA CLASSE, DERIVADA DE  
+
+*T*<br/>
+SUA CLASSE, DERIVADA DE  
   
- *SessionClass*  
- O objeto de sessão.  
+*SessionClass*<br/>
+O objeto de sessão.  
 
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atldb.h 
+
+**Cabeçalho:** atldb.h 
   
 ## <a name="members"></a>Membros  
   
@@ -60,9 +63,11 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
 |[CreateSession](#createsession)|Cria uma nova sessão do objeto de fonte de dados e retorna a interface solicitada a sessão recém-criada.|  
   
 ## <a name="remarks"></a>Comentários  
- Uma interface obrigatória em objetos de fonte de dados.  
+
+Uma interface obrigatória em objetos de fonte de dados.  
 
 ## <a name="createsession"></a> Idbcreatesessionimpl:: CreateSession
+
 Cria uma nova sessão do objeto de fonte de dados e retorna a interface solicitada a sessão recém-criada.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -74,8 +79,10 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [idbcreatesession::](/previous-versions/windows/desktop/ms714942\(v=vs.85\)) na *referência do programador do OLE DB*.   
+
+Ver [idbcreatesession::](/previous-versions/windows/desktop/ms714942\(v=vs.85\)) na *referência do programador do OLE DB*.   
   
 ## <a name="see-also"></a>Consulte também  
- [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

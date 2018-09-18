@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53e2d5ba1c8fd4d8afd4af88c45069b34717a66c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ab180a5f52a7645b7ce6cc0f8a04e2ea506f8aa4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695909"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016605"
 ---
 # <a name="invalidschedulerpolicythreadspecification-class"></a>Classe invalid_scheduler_policy_thread_specification
 Esta classe descreve uma exceção gerada quando é feita uma tentativa de definir os limites de simultaneidade de um `SchedulerPolicy` objeto, de modo que o valor da `MinConcurrency` chave é menor que o valor da `MaxConcurrency` chave.  
@@ -38,7 +38,7 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-value-class.md#ctor|Sobrecarregado. Constrói uma `invalid_scheduler_policy_value` objeto.|  
+|[invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-value-class.md#ctor|Sobrecarregado. Constrói um `invalid_scheduler_policy_value` objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `exception`  
@@ -46,12 +46,12 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
  `invalid_scheduler_policy_thread_specification`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** concrt.h  
+ **Cabeçalho:** concrt. h  
   
  **Namespace:** simultaneidade  
 ##  <a name="ctor"></a> invalid_scheduler_policy_thread_specification 
 
- Constrói uma `invalid_scheduler_policy_value` objeto.  
+ Constrói um `invalid_scheduler_policy_value` objeto.  
   
 ```
 explicit _CRTIMP invalid_scheduler_policy_thread_specification(_In_z_ const char* _Message) throw();
@@ -60,8 +60,8 @@ invalid_scheduler_policy_thread_specification() throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Message`  
- Uma mensagem descritiva do erro.  
+*Mensagem*<br/>
+Uma mensagem descritiva do erro.  
 
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   

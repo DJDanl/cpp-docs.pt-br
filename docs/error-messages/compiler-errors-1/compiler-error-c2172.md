@@ -1,5 +1,5 @@
 ---
-title: C2172 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2172 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21dbef0cccd2cbd5221854972ca030e601695e3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d71acb91503900733ea805225670ce9e979e6d84
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166735"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060090"
 ---
-# <a name="compiler-error-c2172"></a>C2172 de erro do compilador
-'function': parâmetro real não é um ponteiro: o número do parâmetro  
-  
- Parâmetro `number` não é um ponteiro. A função espera um ponteiro.
+# <a name="compiler-error-c2172"></a>Erro do compilador C2172
+
+'function': parâmetro real não for um ponteiro: número do parâmetro
+
+Parâmetro `number` não for um ponteiro. A função espera um ponteiro.

@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41a75132f77fab59aa8ac5646269b2d7e6c4cef4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fe86335415e0e7df9da6831cf0bb097e2342074
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317681"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039927"
 ---
 # <a name="resource-compiler-error-rc2169"></a>Erro RC2169 (compilador de recurso)
-nome do arquivo de recurso não está no formato 2,03  
-  
- O recurso especificado usado em um formato anterior à versão 2.03. O arquivo de recurso deve ser convertido ou recriados usando o formato de versão 3,00 ou posterior.
+
+nome de arquivo de recurso do arquivo não está no formato 2,03
+
+O recurso especificado usado em um formato anterior à versão 2.03. O arquivo de recurso deve ser convertido ou recriado usando o formato de versão 3,00 ou posterior.

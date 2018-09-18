@@ -1,5 +1,5 @@
 ---
-title: C2279 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2279 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1eb468ccf5d099745c5d4a30eaec2f38f015a58
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d1b194476e6400618045324a14c9e4781f9ec8f0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172271"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067942"
 ---
-# <a name="compiler-error-c2279"></a>C2279 de erro do compilador
-especificação de exceção não pode aparecer em uma declaração de typedef  
-  
- Em **/Za**, [especificações de exceção](../../cpp/exception-specifications-throw-cpp.md) não são permitidas em uma declaração de typedef.  
-  
- O exemplo a seguir gera C2279:  
-  
-```  
-// C2279.cpp  
-// compile with: /Za /c  
-typedef int (*xy)() throw(...);   // C2279  
-typedef int (*xyz)();   // OK  
+# <a name="compiler-error-c2279"></a>Erro do compilador C2279
+
+especificação de exceção não pode aparecer em uma declaração de typedef
+
+Sob **/Za**, [especificações de exceção](../../cpp/exception-specifications-throw-cpp.md) não são permitidos em uma declaração de typedef.
+
+O exemplo a seguir gera C2279:
+
+```
+// C2279.cpp
+// compile with: /Za /c
+typedef int (*xy)() throw(...);   // C2279
+typedef int (*xyz)();   // OK
 ```

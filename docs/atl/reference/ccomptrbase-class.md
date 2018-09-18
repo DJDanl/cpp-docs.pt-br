@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1941f08d13fb8aef9b5b281ce4b2bc1c61bf98fe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 70ba26e5893b21393a3466ae7cf1c6cea43b81ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766581"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070152"
 ---
 # <a name="ccomptrbase-class"></a>Classe CComPtrBase
 
@@ -41,13 +41,13 @@ Essa classe fornece uma base para classes de ponteiro inteligente usando memóri
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template <class T>  
+template <class T>
 class CComPtrBase
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 O tipo de objeto a ser referenciado pelo ponteiro inteligente.
 
 ## <a name="members"></a>Membros
@@ -111,13 +111,13 @@ HRESULT Advise(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pUnk*  
+*pUnk*<br/>
 Um ponteiro para o cliente `IUnknown`.
 
-*IID*  
+*IID*<br/>
 O GUID do ponto de conexão. Normalmente, isso é o mesmo que a interface de saída gerenciada pelo ponto de conexão.
 
-*PDW*  
+*PDW*<br/>
 Um ponteiro para o cookie que identifica exclusivamente a conexão.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -138,7 +138,7 @@ void Attach(T* p2) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*P2*  
+*P2*<br/>
 O `CComPtrBase` objeto assumirá a propriedade do ponteiro this.
 
 ### <a name="remarks"></a>Comentários
@@ -175,16 +175,16 @@ HRESULT CoCreateInstance(
 
 ### <a name="parameters"></a>Parâmetros
 
-*szProgID*  
+*szProgID*<br/>
 Ponteiro para um ProgID, usado para recuperar o CLSID.
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 Se for NULL, indica que o objeto não está sendo criado como parte de uma agregação. Se não-nulo, é um ponteiro para o objeto agregado `IUnknown` interface (o controlando `IUnknown`).
 
-*dwClsContext*  
+*dwClsContext*<br/>
 Contexto no qual o código que gerencia o objeto recém-criado será executado.
 
-*rclsid*  
+*rclsid*<br/>
 CLSID associado a dados e o código que será usado para criar o objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -207,7 +207,7 @@ HRESULT CopyTo(T** ppT) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*ppT*  
+*ppT*<br/>
 Endereço da variável que receberá o `CComPtrBase` ponteiro.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -246,7 +246,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*pOther*  
+*pOther*<br/>
 O `IUnknown *` de comparação.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -301,7 +301,7 @@ bool operator== (T* pT) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*pT*  
+*pT*<br/>
 Um ponteiro para um objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -334,7 +334,7 @@ bool operator<(T* pT) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*pT*  
+*pT*<br/>
 Um ponteiro para um objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -345,7 +345,7 @@ Retorna VERDADEIRO se o ponteiro gerenciado pelo objeto atual é menor que o pon
 
 O operador cast.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -376,10 +376,10 @@ template <class Q> HRESULT QueryInterface(Q
 
 ### <a name="parameters"></a>Parâmetros
 
-*Q*  
+*Q*<br/>
 O tipo de objeto cujo ponteiro de interface é necessário.
 
-*PP*  
+*PP*<br/>
 Endereço da variável de saída que recebe o ponteiro de interface solicitado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -414,7 +414,7 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*punkParent*  
+*punkParent*<br/>
 Um ponteiro para o `IUnknown` interface do pai.
 
 ### <a name="return-value"></a>Valor de retorno

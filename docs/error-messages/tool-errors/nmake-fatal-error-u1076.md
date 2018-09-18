@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7b63902bba469affa68104591d36296998e75e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ad5f9f884c4b98370b98c6f1f1c7e6c5a7c4359
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322296"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017216"
 ---
 # <a name="nmake-fatal-error-u1076"></a>Erro fatal U1076 (NMAKE)
-nome muito longo  
-  
- Uma cadeia de caracteres excedeu um dos seguintes limites:  
-  
--   1024 caracteres para um nome de macro.  
-  
--   256 caracteres para um nome de caminho de destino.  
-  
--   2048 caracteres para um comando.
+
+nome longo demais
+
+Uma cadeia de caracteres excedeu um dos limites a seguir:
+
+- 1024 caracteres para um nome de macro.
+
+- 256 caracteres para um nome de caminho de destino.
+
+- 2048 caracteres para um comando.

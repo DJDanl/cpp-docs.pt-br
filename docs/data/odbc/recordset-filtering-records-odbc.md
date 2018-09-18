@@ -19,25 +19,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1196bc41022a3202a55ad1ba5c208b8a8fdbbcc5
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 5feb97d2bf3cbd3787ed2253b3b2dd4a257b5315
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340606"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040785"
 ---
 # <a name="recordset-filtering-records-odbc"></a>Conjunto de registros: filtrando registros (ODBC)
+
 Este tópico se aplica às classes ODBC do MFC.  
   
- Este tópico explica como filtrar um conjunto de registros para que ele seleciona apenas um subconjunto específico de registros disponíveis. Por exemplo, você talvez queira selecionar apenas as seções de classe para um curso específico, como MATH101. Um filtro é um critério de pesquisa definido pelo conteúdo de um SQL **onde** cláusula. Quando o framework acrescenta à instrução de SQL do conjunto de registros, o **onde** cláusula restringe a seleção.  
+Este tópico explica como filtrar um conjunto de registros para que ele seleciona apenas um subconjunto específico de registros disponíveis. Por exemplo, você talvez queira selecionar apenas as seções de classe para um curso específico, como MATH101. Um filtro é um critério de pesquisa definido pelo conteúdo de um SQL **onde** cláusula. Quando o framework acrescenta à instrução de SQL do conjunto de registros, o **onde** cláusula restringe a seleção.  
   
- Você deve estabelecer o filtro do conjunto de registros de um objeto depois de construir o objeto, mas antes de chamar seus `Open` função de membro (ou antes de chamar o `Requery` função de membro para um conjunto de registros existente do objeto cuja `Open` tem de função de membro foi chamado anteriormente).  
+Você deve estabelecer o filtro do conjunto de registros de um objeto depois de construir o objeto, mas antes de chamar seus `Open` função de membro (ou antes de chamar o `Requery` função de membro para um conjunto de registros existente do objeto cuja `Open` tem de função de membro foi chamado anteriormente).  
   
 #### <a name="to-specify-a-filter-for-a-recordset-object"></a>Para especificar um filtro para um objeto recordset  
   
-1.  Criar um novo objeto de conjunto de registros (ou se prepare para chamar `Requery` para um objeto existente).  
+1. Criar um novo objeto de conjunto de registros (ou se prepare para chamar `Requery` para um objeto existente).  
   
-2.  Definir o valor do objeto [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) membro de dados.  
+1. Definir o valor do objeto [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) membro de dados.  
   
      O filtro é uma cadeia de caracteres terminada em nulo que contém o conteúdo do SQL **onde** cláusula, mas não a palavra-chave **onde**. Por exemplo, use:  
   
@@ -54,9 +55,9 @@ Este tópico se aplica às classes ODBC do MFC.
     > [!NOTE]
     >  A cadeia de caracteres literal "MATH101" é mostrada com aspas simples acima. Na especificação do ODBC SQL, aspas simples são usadas para indicar um literal de cadeia de caracteres. Verifique a documentação do driver ODBC para os requisitos de aspas do DBMS nessa situação. Essa sintaxe também é discutido mais perto do final deste tópico.  
   
-3.  Defina quaisquer outras opções que você precisa, como ordem de classificação, o modo de bloqueio ou parâmetros. Especificando um parâmetro é especialmente útil. Para obter informações sobre a parametrização de seu filtro, consulte [conjunto de registros: parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
+1. Defina quaisquer outras opções que você precisa, como ordem de classificação, o modo de bloqueio ou parâmetros. Especificando um parâmetro é especialmente útil. Para obter informações sobre a parametrização de seu filtro, consulte [conjunto de registros: parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
   
-4.  Chame `Open` para o novo objeto (ou `Requery` para um objeto aberto anteriormente).  
+1. Chame `Open` para o novo objeto (ou `Requery` para um objeto aberto anteriormente).  
   
 > [!TIP]
 >  Usar parâmetros em seu filtro potencialmente é o método mais eficiente para recuperação de registros.  
@@ -64,7 +65,7 @@ Este tópico se aplica às classes ODBC do MFC.
 > [!TIP]
 >  Filtros de conjunto de registros são úteis para [unindo](../../data/odbc/recordset-performing-a-join-odbc.md) tabelas e para usar [parâmetros](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) com base nas informações obtidas ou calculados em tempo de execução.  
   
- O conjunto de registros seleciona somente os registros que atendem à condição de pesquisa especificado. Por exemplo especificar o filtro de curso descrita acima (supondo que uma variável `strCourseID` definido no momento, por exemplo, para "MATH101"), faça o seguinte:  
+O conjunto de registros seleciona somente os registros que atendem à condição de pesquisa especificado. Por exemplo especificar o filtro de curso descrita acima (supondo que uma variável `strCourseID` definido no momento, por exemplo, para "MATH101"), faça o seguinte:  
   
 ```  
 // Using the recordset pointed to by m_pSet  
@@ -78,28 +79,29 @@ if ( m_pSet->Open( CRecordset::snapshot, NULL, CRecordset::readOnly ) )
 // Use the recordset  
 ```  
   
- O conjunto de registros contém registros para todas as seções de classe para MATH101.  
+O conjunto de registros contém registros para todas as seções de classe para MATH101.  
   
- Observe como a cadeia de caracteres de filtro foi definida no exemplo acima, usando uma variável de cadeia de caracteres. Este é o uso típico. Mas suponha que você queira especificar o valor literal 100 para a ID do curso. O código a seguir mostra como definir a cadeia de caracteres de filtro corretamente com um valor literal:  
+Observe como a cadeia de caracteres de filtro foi definida no exemplo acima, usando uma variável de cadeia de caracteres. Este é o uso típico. Mas suponha que você queira especificar o valor literal 100 para a ID do curso. O código a seguir mostra como definir a cadeia de caracteres de filtro corretamente com um valor literal:  
   
 ```  
 m_strFilter = "StudentID = '100'";   // correct  
 ```  
   
- Observe o uso de caracteres de aspas simples; Se você definir a cadeia de caracteres de filtro diretamente, a cadeia de caracteres de filtro é **não**:  
+Observe o uso de caracteres de aspas simples; Se você definir a cadeia de caracteres de filtro diretamente, a cadeia de caracteres de filtro é **não**:  
   
 ```  
 m_strFilter = "StudentID = 100";   // incorrect for some drivers  
 ```  
   
- A delimitação mostrado acima está em conformidade com a especificação de ODBC, mas alguns DBMSs podem exigir outros caracteres de aspas. Para obter mais informações, consulte [SQL: SQL instrução (ODBC Personalizando seu conjunto de registros)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).  
+A delimitação mostrado acima está em conformidade com a especificação de ODBC, mas alguns DBMSs podem exigir outros caracteres de aspas. Para obter mais informações, consulte [SQL: SQL instrução (ODBC Personalizando seu conjunto de registros)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).  
   
 > [!NOTE]
 >  Se você optar por substituir a cadeia de caracteres do conjunto de registros padrão SQL passando sua própria cadeia de caracteres SQL para `Open`, você não deve definir um filtro se sua cadeia de caracteres personalizada tem uma **onde** cláusula. Para obter mais informações sobre como substituir o padrão SQL, consulte [SQL: SQL instrução (ODBC Personalizando seu conjunto de registros)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)   
- [Conjunto de registros: Classificando registros (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)   
- [Conjunto de registros: Como conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)   
- [Conjunto de registros: Como conjuntos de registros atualizam registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)   
- [Conjunto de registros: bloqueando registros (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+
+[Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
+[Conjunto de registros: classificando registros (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
+[Conjunto de registros: como conjuntos de registros selecionam registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Conjunto de registros: como conjuntos de registros atualizam registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[Conjunto de registros: bloqueando registros (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

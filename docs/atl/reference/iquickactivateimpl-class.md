@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96e165fcd4d38c9d263b48ee2c559394770a52a1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f65df09ffba45f61b967080e4bfd61ec3d2f912a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765714"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052772"
 ---
 # <a name="iquickactivateimpl-class"></a>Classe IQuickActivateImpl
 
@@ -40,13 +40,13 @@ Essa classe combina a inicialização dos contêineres de controle em uma única
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 Sua classe, derivada de `IQuickActivateImpl`.
 
 ## <a name="members"></a>Membros
@@ -121,5 +121,5 @@ Ver [IQuickActivate::SetContentExtent](/windows/desktop/api/ocidl/nf-ocidl-iquic
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CComControl](../../atl/reference/ccomcontrol-class.md)   
+[Classe CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

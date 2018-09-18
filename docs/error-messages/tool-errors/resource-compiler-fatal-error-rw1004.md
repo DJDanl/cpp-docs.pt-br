@@ -1,5 +1,5 @@
 ---
-title: Recurso compilador Erro Fatal RW1004 | Microsoft Docs
+title: Erro Fatal do compilador de recurso RW1004 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8a4b5f25678f3bb3fa961ffe794cdb0cf57977c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73f97c1ecf95adfe64cfa08967f4067f42fbae59
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329714"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016229"
 ---
 # <a name="resource-compiler-fatal-error-rw1004"></a>Erro fatal RW1004 (compilador de recurso)
-Fim inesperado do arquivo  
-  
- Esse erro pode ser causado pela falta de avanço de linha e caracteres de retorno de carro na última linha de um arquivo de texto.
+
+Fim inesperado do arquivo
+
+Esse erro pode ser causado por falta de avanço de linha e caracteres de retorno de carro na última linha de um arquivo de texto.

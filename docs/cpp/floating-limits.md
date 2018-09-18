@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85a31aea113514651fc3e81ac147b5ea2974920c
-ms.sourcegitcommit: 4586bfc32d8bc37ab08b24816d7fad5df709bfa3
+ms.openlocfilehash: 2ea52c91391800b25ab9a71d977300dd1705fb51
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39604288"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025523"
 ---
 # <a name="floating-limits"></a>Limites flutuantes
 
 **Seção específica da Microsoft**
 
-A tabela a seguir lista os limites nos valores de constantes de ponto flutuante. Esses limites também são definidos no arquivo de cabeçalho padrão \<float. h >.  
+A tabela a seguir lista os limites nos valores de constantes de ponto flutuante. Esses limites também são definidos no arquivo de cabeçalho padrão \<float. h >.
 
 ## <a name="limits-on-floating-point-constants"></a>Limites em constantes de ponto flutuante
 
@@ -57,4 +57,4 @@ A tabela a seguir lista os limites nos valores de constantes de ponto flutuante.
 
 ## <a name="see-also"></a>Consulte também
 
-[Limites de inteiros](../cpp/integer-limits.md)  
+[Limites de inteiros](../cpp/integer-limits.md)

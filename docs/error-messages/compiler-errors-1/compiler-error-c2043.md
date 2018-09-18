@@ -1,5 +1,5 @@
 ---
-title: C2043 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2043 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23a71e00fa86b506b4b5dd5b059c778f5dc8749
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d29298a11e0984120a8902b08b96699724669f58
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166696"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030517"
 ---
-# <a name="compiler-error-c2043"></a>C2043 de erro do compilador
-interrupção ilegal  
-  
- Um [quebra](../../cpp/break-statement-cpp.md) é válido somente dentro de um `do`, `for`, `while`, ou `switch` instrução.
+# <a name="compiler-error-c2043"></a>Erro do compilador C2043
+
+break inválido
+
+Um [quebra](../../cpp/break-statement-cpp.md) é permitido apenas dentro de uma `do`, `for`, `while`, ou `switch` instrução.

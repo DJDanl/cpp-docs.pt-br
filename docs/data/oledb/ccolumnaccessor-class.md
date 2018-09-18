@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4c55b2e10112c38835bb1f230970db56a6f53d4e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: b1843b6279cb7c86762cc6d975a2a7e67d3d278d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39341056"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055631"
 ---
 # <a name="ccolumnaccessor-class"></a>Classe CColumnAccessor
+
 Gera o código injetado de consumidor.  
   
 ## <a name="syntax"></a>Sintaxe
@@ -36,29 +37,32 @@ class CColumnAccessor : public CAccessorBase
 ```  
   
 ## <a name="remarks"></a>Comentários  
- No código injetado, cada coluna é associada como um acessador separado. Você deve estar ciente de que essa classe é usada no código injetado (por exemplo, você pode encontrá-lo ao depuração), mas normalmente você nunca precisará usá-la ou seus métodos diretamente.  
+
+No código injetado, cada coluna é associada como um acessador separado. Você deve estar ciente de que essa classe é usada no código injetado (por exemplo, você pode encontrá-lo ao depuração), mas normalmente você nunca precisará usá-la ou seus métodos diretamente.  
   
- `CColumnAccessor` implementa os seguintes métodos de stub, cada um dos quais correspondem na funcionalidade para outros métodos de classe de acessador:  
+`CColumnAccessor` implementa os seguintes métodos de stub, cada um dos quais correspondem na funcionalidade para outros métodos de classe de acessador:  
   
--   `CColumnAccessor` O construtor; cria uma instância e inicializa o `CColumnAccessor` objeto.  
+- `CColumnAccessor` O construtor; cria uma instância e inicializa o `CColumnAccessor` objeto.  
   
--   `CreateAccessor` Aloca memória para a coluna de estruturas de associação e inicializa os membros de dados de coluna.  
+- `CreateAccessor` Aloca memória para a coluna de estruturas de associação e inicializa os membros de dados de coluna.  
   
--   `BindColumns` Associa as colunas para acessadores.  
+- `BindColumns` Associa as colunas para acessadores.  
   
--   `SetParameterBuffer` Aloca buffers para parâmetros.  
+- `SetParameterBuffer` Aloca buffers para parâmetros.  
   
--   `AddParameter` Adiciona uma entrada de parâmetro para as estruturas de entrada de parâmetro.  
+- `AddParameter` Adiciona uma entrada de parâmetro para as estruturas de entrada de parâmetro.  
   
--   `HasOutputColumns` Determina se o acessador de colunas de saída  
+- `HasOutputColumns` Determina se o acessador de colunas de saída  
   
--   `HasParameters` Determina se o acessador possui parâmetros.  
+- `HasParameters` Determina se o acessador possui parâmetros.  
   
--   `BindParameters` Associa os parâmetros criados para colunas.  
+- `BindParameters` Associa os parâmetros criados para colunas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atldbcli.h  
+
+**Cabeçalho:** atldbcli.h  
   
 ## <a name="see-also"></a>Consulte também  
- [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

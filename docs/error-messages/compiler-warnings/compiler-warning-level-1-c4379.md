@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4379 | Microsoft Docs
+title: Compilador aviso (nível 1) C4379 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df04a034d646692fb461a2f8b19455635a922750
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 172f042bd221299e90a2185e3c04fe19560831e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279078"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042644"
 ---
-# <a name="compiler-warning-level-1-c4379"></a>Compilador C4379 de aviso (nível 1)
-Não há suporte para a versão do common language runtime por este compilador. Usando esta versão pode causar resultados inesperados.  
-  
- Você tem uma versão anterior do common language runtime em seu computador, mas não a versão atual. Para resolver C4379, instale a versão do common language runtime fornecido com o compilador.
+# <a name="compiler-warning-level-1-c4379"></a>Compilador aviso (nível 1) C4379
+
+Versão de versão do common language runtime não é suportada por este compilador. Usando essa versão pode causar resultados inesperados.
+
+Você tem uma versão anterior do common language runtime em seu computador, mas não a versão atual. Para resolver C4379, instale a versão do common language runtime fornecido com o compilador.

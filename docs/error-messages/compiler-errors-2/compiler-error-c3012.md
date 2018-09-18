@@ -1,5 +1,5 @@
 ---
-title: C3012 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3012 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d30a7fbb50a984c8cec6b45a0ab4759a0578de7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99bdac5ffb75978479ae7ef420a48b3d1b2f8e64
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245440"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063665"
 ---
-# <a name="compiler-error-c3012"></a>C3012 de erro do compilador
-  
-> '*intrínseco*': função intrínseca não permitida diretamente dentro de uma região parallel  
-  
- Um [intrínseco do compilador](../../intrinsics/compiler-intrinsics.md) função não é permitida em um `omp parallel` região. Para corrigir esse problema, mover intrínsecos fora da região ou substituí-las por equivalentes intrínsecos.   
-  
-## <a name="example"></a>Exemplo  
-  
- O exemplo a seguir gera C3012 e mostra uma maneira de corrigir isso:  
-  
-```cpp  
-// C3012.cpp  
-// compile with: /openmp  
-#ifdef __cplusplus  
-extern "C" {  
-#endif  
-void* _ReturnAddress();  
-#ifdef __cplusplus  
-}  
-#endif  
-  
-int main()  
-{  
-   #pragma omp parallel  
-   {  
-      _ReturnAddress();   // C3012  
-   }  
-   _ReturnAddress();      // OK  
-}  
+# <a name="compiler-error-c3012"></a>Erro do compilador C3012
+
+> '*intrínseco*': função intrínseca não permitida diretamente dentro de uma região parallel
+
+Um [intrínseco de compilador](../../intrinsics/compiler-intrinsics.md) função não é permitida em um `omp parallel` região. Para corrigir esse problema, mova intrínsecos fora da região, ou substituí-los com equivalentes intrínsecos.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C3012 e mostra uma maneira de corrigir isso:
+
+```cpp
+// C3012.cpp
+// compile with: /openmp
+#ifdef __cplusplus
+extern "C" {
+#endif
+void* _ReturnAddress();
+#ifdef __cplusplus
+}
+#endif
+
+int main()
+{
+   #pragma omp parallel
+   {
+      _ReturnAddress();   // C3012
+   }
+   _ReturnAddress();      // OK
+}
 ```

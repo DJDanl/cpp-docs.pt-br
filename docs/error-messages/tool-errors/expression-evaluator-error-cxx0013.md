@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f12c9266e4693007d52a41624f11adafe92df56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d06379c5b5163712fe3c82aefd0efb7521169736
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299478"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063678"
 ---
 # <a name="expression-evaluator-error-cxx0013"></a>Erro CXX0013 (avaliador de expressão)
-operador ausente  
-  
- Um operador era esperado na expressão, mas não foi encontrado. Verifique a sintaxe da expressão.  
-  
- Esse erro é idêntico ao CAN0013.
+
+operador ausente
+
+Um operador era esperado na expressão, mas não foi encontrado. Verifique a sintaxe da expressão.
+
+Esse erro é idêntico ao CAN0013.

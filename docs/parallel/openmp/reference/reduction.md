@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2b90ef2eeca60a305cd8836e09dc81940392d2c
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e004c129fb5482ed1bb50d091c8e4e53becbf20b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42540362"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059089"
 ---
 # <a name="reduction"></a>reduction
 Especifica que uma ou mais variáveis que são particulares para cada thread são o assunto de uma operação de redução no final da região paralela.  
@@ -32,14 +32,13 @@ Especifica que uma ou mais variáveis que são particulares para cada thread sã
 reduction(operation:var)  
 ```  
   
-## <a name="remarks"></a>Comentários  
- onde,  
+### <a name="parameters"></a>Parâmetros
   
- `operation`  
- O operador para a operação para executar em variáveis (`var`) no final da região paralela.  
+*operação*<br/>
+O operador para a operação para executar em variáveis (`var`) no final da região paralela.  
   
- `var`  
- Uma ou mais variáveis na qual executar a redução escalar. Se mais de uma variável for especificada, separe os nomes de variável com uma vírgula.  
+*var*<br/>
+Uma ou mais variáveis na qual executar a redução escalar. Se mais de uma variável for especificada, separe os nomes de variável com uma vírgula.  
   
 ## <a name="remarks"></a>Comentários  
  `reduction` aplica-se para as seguintes diretivas:  

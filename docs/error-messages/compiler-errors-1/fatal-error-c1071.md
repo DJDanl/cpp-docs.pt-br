@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cef64c327c0fd3b668947de52f2776cca2833c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1b4487de60148e1da7668bc44c996c5dfb955a9d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227187"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032998"
 ---
 # <a name="fatal-error-c1071"></a>Erro fatal C1071
-fim de arquivo inesperado encontrado no comentário  
-  
- O compilador chegou ao fim do arquivo durante a verificação de um comentário.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
-  
-1.  Falta o terminador de comentário (* /).  
-  
-2.  Caractere de nova linha ausente após um comentário na última linha de um arquivo de origem.  
-  
- O exemplo a seguir gera C1071:  
-  
-```  
-// C1071.cpp  
-int main() {  
-}  
-  
-/* this comment is fine */  
-/* forgot the closing tag        // C1071  
+
+fim de arquivo inesperado encontrado no comentário
+
+O compilador atingiu o fim do arquivo ao examinar um comentário.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
+
+1. Falta o terminador de comentário (* /).
+
+1. Caractere de nova linha ausente após um comentário na última linha de um arquivo de origem.
+
+O exemplo a seguir gera C1071:
+
+```
+// C1071.cpp
+int main() {
+}
+
+/* this comment is fine */
+/* forgot the closing tag        // C1071
 ```

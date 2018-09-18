@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3875a2cbd065fd5ad887267bcc80748fa9845d0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 822d1ac0cc1e6b3e728d43b816e7a0a15eee9958
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298844"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063681"
 ---
 # <a name="command-line-warning-d9025"></a>Aviso D9025 (linha de comando)
-substituindo a opção ' 1' com 'option2'  
-  
- O *opção 1* opção foi especificada, mas, em seguida, foi substituída pelo *option2*. O *option2* opção foi usada.  
-  
- Se duas opções especificam diretivas contraditórias ou incompatíveis, a diretiva especificada ou implícita na opção mais à direita na linha de comando é usada.  
-  
- Se você receber esse aviso durante a compilação do ambiente de desenvolvimento e não estiver certo de que as opções conflitantes são provenientes, considere o seguinte:  
-  
--   Uma opção pode ser especificada no código ou nas configurações de projeto do projeto. Se você observar o compilador [páginas de propriedade de linha de comando](../../ide/command-line-property-pages.md) e se você ver as opções conflitantes no **todas as opções** , em seguida, as opções são definidas nas páginas de propriedades do projeto, caso contrário, as opções de campo são definidos no código-fonte.  
-  
-     Se as opções são definidas nas páginas de propriedades do projeto, procure na página de propriedade de pré-processador do compilador (com o nó do projeto selecionado no Gerenciador de soluções).  Se você não vir a opção definido lá, verifique as configurações de página de propriedade pré-processador para cada arquivo de código fonte (no Gerenciador de soluções) para verificar se ele não é adicionado existe.  
-  
-     Se as opções são definidas no código pode ser definida no código ou nos cabeçalhos do windows.  Você pode tentar criar um arquivo pré-processados ([/p](../../build/reference/p-preprocess-to-a-file.md)) e pesquisá-lo para o símbolo.
+
+substituindo a opção ' 1' com 'option2'
+
+O *option1* opção foi especificada, mas, em seguida, foi substituída pelo *option2*. O *option2* opção foi usada.
+
+Se duas opções especificam diretivas incompatíveis ou contraditórias, a diretiva especificada ou implícita na opção mais à direita na linha de comando é usada.
+
+Se você recebe esse aviso durante a compilação do ambiente de desenvolvimento e não estiver certo de onde as opções conflitantes vêm, considere o seguinte:
+
+- Uma opção pode ser especificada no código ou nas configurações de projeto do projeto. Se você examinar o compilador [páginas de propriedades de linha de comando](../../ide/command-line-property-pages.md) e você vê as opções em conflito na **todas as opções** e em seguida, as opções são definidas nas páginas de propriedades do projeto, caso contrário, as opções de campo são definidas no código-fonte.
+
+     Se as opções são definidas nas páginas de propriedades do projeto, procure na página de propriedade de pré-processador do compilador (com o nó do projeto selecionado no Gerenciador de soluções).  Se você não vir a opção definida lá, verifique as configurações de página de propriedades de pré-processador para cada arquivo de código de origem (no Gerenciador de soluções) se não for adicionado lá.
+
+     Se as opções são definidas no código, ele poderia ser definido no código ou nos cabeçalhos do windows.  Você pode tentar criar um arquivo pré-processado ([/p](../../build/reference/p-preprocess-to-a-file.md)) e pesquisá-lo para o símbolo.

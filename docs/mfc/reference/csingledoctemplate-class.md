@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: efdd8f5b806b7e5745aed0091a2638c8592a6ecc
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: ea133213b8d1d91a6c0932c7f0b7a94c5d5a368a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079055"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026759"
 ---
 # <a name="csingledoctemplate-class"></a>Classe CSingleDocTemplate
 Define um modelo de documento que implementa a interface de documento único (SDI).  
@@ -47,13 +47,13 @@ class CSingleDocTemplate : public CDocTemplate
   
 -   Uma classe de documento, que derivam de `CDocument`.  
   
--   Uma classe de exibição, que exibe dados de classe de documento listado acima. Você pode derivar dessa classe de `CView`, `CScrollView`, `CFormView`, ou `CEditView`. (Você também pode usar `CEditView` diretamente.)  
+-   Uma classe de exibição, que exibe dados de classe de documento listada acima. Você pode derivar desta classe de `CView`, `CScrollView`, `CFormView`, ou `CEditView`. (Você também pode usar `CEditView` diretamente.)  
   
--   Uma classe de janela de quadro, que contém a exibição. Para um modelo de documento SDI, você pode derivar dessa classe de `CFrameWnd`janela do quadro; se você não precisa personalizar o comportamento do principal, você pode usar `CFrameWnd` diretamente sem derivando sua própria classe.  
+-   Uma classe de janela de quadro, que contém a exibição. Para um modelo de documento de SDI, você pode derivar desta classe de `CFrameWnd`janela de quadro; se você não precisa personalizar o comportamento da janela principal, você pode usar `CFrameWnd` diretamente sem sua própria classe.  
   
  Um aplicativo SDI geralmente oferece suporte a um tipo de documento, portanto, tem apenas um `CSingleDocTemplate` objeto. Apenas um documento pode ser aberto por vez.  
   
- Você não precisa chamadas de funções de qualquer membro `CSingleDocTemplate` exceto o construtor. Os identificadores de framework `CSingleDocTemplate` objetos internamente.  
+ Você não precisa chamar qualquer função de membro `CSingleDocTemplate` , exceto o construtor. Os identificadores de framework `CSingleDocTemplate` objetos internamente.  
   
  Para obter mais informações sobre como usar `CSingleDocTemplate`, consulte [modelos de documento e o processo de criação de documento/exibição](../../mfc/document-templates-and-the-document-view-creation-process.md).  
   
@@ -67,7 +67,7 @@ class CSingleDocTemplate : public CDocTemplate
  `CSingleDocTemplate`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxwin.h  
+ **Cabeçalho:** afxwin. h  
   
 ##  <a name="csingledoctemplate"></a>  CSingleDocTemplate::CSingleDocTemplate  
  Constrói um objeto `CSingleDocTemplate`.  
@@ -82,35 +82,33 @@ CSingleDocTemplate(
   
 ### <a name="parameters"></a>Parâmetros  
  *nIDResource*  
- Especifica a ID dos recursos usados com o tipo de documento. Isso pode incluir recursos de cadeia de caracteres, ícone, tabela de Aceleradores e menu.  
+ Especifica a identificação dos recursos usados com o tipo de documento. Isso pode incluir recursos de cadeia de caracteres, ícone, tabela de Aceleradores e menu.  
   
- O recurso de cadeia de caracteres consiste em subcadeias de caracteres até sete separadas pelo caractere '\n' (o caractere '\n' é necessário como um espaço reservado, se uma subcadeia de caracteres não estiver incluída; no entanto, não são necessários caracteres à direita de '\n'); Esses subcadeias de caracteres descrevem o tipo de documento. Para obter informações sobre as subcadeias de caracteres, consulte [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Esse recurso de cadeia de caracteres foi encontrado no arquivo de recurso do aplicativo. Por exemplo:  
+ O recurso de cadeia de caracteres consiste em subcadeias de caracteres até sete separadas pelo caractere '\n' (o caractere '\n' é necessário como um espaço reservado, se uma subcadeia de caracteres não for incluída; no entanto, não são necessários de caracteres à direita de '\n'); Esses subcadeias de caracteres descrevem o tipo de documento. Para obter informações sobre as subcadeias de caracteres, consulte [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). Esse recurso de cadeia de caracteres for encontrado no arquivo de recurso do aplicativo. Por exemplo:  
   
- `// MYCALC.RC`  
+```RC
+// MYCALC.RC
+STRINGTABLE PRELOAD DISCARDABLE
+BEGIN
+  IDR_MAINFRAME "MyCalc Windows Application\nSheet\nWorksheet\n Worksheets (*.myc)\n.myc\nMyCalcSheet\n MyCalc Worksheet"
+END
+```
   
- `STRINGTABLE PRELOAD DISCARDABLE`  
+ Você pode editar essa cadeia de caracteres usando o editor de cadeia de caracteres; a cadeia de caracteres inteira é exibido como uma única entrada no Editor de cadeia de caracteres, não como sete entradas separadas.  
   
- `BEGIN`  
-  
- `IDR_MAINFRAME "MyCalc Windows Application\nSheet\nWorksheet\n Worksheets (*.myc)\n.myc\nMyCalcSheet\n MyCalc Worksheet"`  
-  
- `END`  
-  
- Você pode editar essa cadeia de caracteres usando o editor de cadeia de caracteres; a cadeia de caracteres inteira é exibida como uma única entrada no Editor de cadeia de caracteres, não como sete entradas separadas.  
-  
- Para obter mais informações sobre esses tipos de recursos, consulte o [Editor de cadeia de caracteres](../../windows/string-editor.md).  
+ Para obter mais informações sobre esses tipos de recursos, consulte a [Editor de cadeia de caracteres](../../windows/string-editor.md).  
   
  *pDocClass*  
- Aponta para o `CRuntimeClass` objeto da classe do documento. Essa classe é um `CDocument`-definir para representar documentos de classe derivada.  
+ Aponta para o `CRuntimeClass` objeto da classe do documento. Essa classe é um `CDocument`-derivado da classe que você define para representar seus documentos.  
   
  *pFrameClass*  
  Aponta para o `CRuntimeClass` objeto da classe de janela do quadro. Essa classe pode ser um `CFrameWnd`-classe derivada, ou pode ser `CFrameWnd` em si, se você quiser o comportamento padrão para a janela do quadro principal.  
   
  *pViewClass*  
- Aponta para o `CRuntimeClass` objeto da classe de exibição. Essa classe é um `CView`-definir para exibir seus documentos de classe derivada.  
+ Aponta para o `CRuntimeClass` objeto da classe de exibição. Essa classe é um `CView`-derivado da classe que você define para exibir seus documentos.  
   
 ### <a name="remarks"></a>Comentários  
- Alocar dinamicamente um `CSingleDocTemplate` de objeto e passá-lo para `CWinApp::AddDocTemplate` do `InitInstance` a função de membro da classe do aplicativo.  
+ Alocar dinamicamente um `CSingleDocTemplate` do objeto e passá-lo para `CWinApp::AddDocTemplate` do `InitInstance` função de membro de sua classe de aplicativo.  
   
 ### <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFCDocViewSDI#13](../../mfc/codesnippet/cpp/csingledoctemplate-class_1.cpp)]  
@@ -120,7 +118,7 @@ CSingleDocTemplate(
 ## <a name="see-also"></a>Consulte também  
  [Exemplo MFC DOCKTOOL](../../visual-cpp-samples.md)   
  [Classe CDocTemplate](../../mfc/reference/cdoctemplate-class.md)   
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
+ [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
  [Classe CDocTemplate](../../mfc/reference/cdoctemplate-class.md)   
  [Classe CDocument](../../mfc/reference/cdocument-class.md)   
  [Classe CFrameWnd](../../mfc/reference/cframewnd-class.md)   

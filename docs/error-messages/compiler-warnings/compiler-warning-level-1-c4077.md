@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4077 | Microsoft Docs
+title: Compilador aviso (nível 1) C4077 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a558ff0ae3c33f25c4f07dc642607fd8a840c70c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6bf2b8f6f70db3d9cf385c87d1c9e71b4df05920
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275324"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044815"
 ---
-# <a name="compiler-warning-level-1-c4077"></a>Compilador C4077 de aviso (nível 1)
-opção de check_stack desconhecido  
-  
- A forma antiga de **check_stack** pragma é usado com um argumento desconhecido. O argumento deve ser `+`, `-`, `(on)`, `(off)`, ou vazio.  
-  
- O compilador ignora o pragma e deixa a verificação da pilha inalterado.  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// C4077.cpp  
-// compile with: /W1 /LD  
-#pragma check_stack yes // C4077  
-#pragma check_stack +    // Correct old form  
-#pragma check_stack (on) // Correct new form  
+# <a name="compiler-warning-level-1-c4077"></a>Compilador aviso (nível 1) C4077
+
+opção de check_stack desconhecida
+
+A forma antiga de **check_stack** pragma é usado com um argumento desconhecido. O argumento deve ser `+`, `-`, `(on)`, `(off)`, ou está vazio.
+
+O compilador ignora o pragma e deixa a verificação da pilha inalterado.
+
+## <a name="example"></a>Exemplo
+
+```
+// C4077.cpp
+// compile with: /W1 /LD
+#pragma check_stack yes // C4077
+#pragma check_stack +    // Correct old form
+#pragma check_stack (on) // Correct new form
 ```

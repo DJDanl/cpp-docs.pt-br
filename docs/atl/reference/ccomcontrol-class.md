@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bc4004be27a057c96d9c10e7e7f261d8a5ddebe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bb2d345e0bb8be8f5150d48237df9845acf451dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761346"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036159"
 ---
 # <a name="ccomcontrol-class"></a>Classe CComControl
 
@@ -46,17 +46,17 @@ Essa classe fornece métodos para criar e gerenciar os controles ATL.
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template <class T, class WinBase = CWindowImpl<T>>  
+template <class T, class WinBase = CWindowImpl<T>>
 class ATL_NO_VTABLE CComControl : public CComControlBase,
     public WinBase;
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 A classe de implementação do controle.
 
-*WinBase*  
+*WinBase*<br/>
 A classe base que implementa as funções de janela. O padrão é [CWindowImpl](../../atl/reference/cwindowimpl-class.md).
 
 ## <a name="members"></a>Membros
@@ -119,10 +119,10 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*  
+*IID*<br/>
 [in] O GUID da interface que está sendo solicitado.
 
-*ppv*  
+*ppv*<br/>
 [out] Um ponteiro para o ponteiro de interface identificado pelo *iid*, ou nulo se a interface não foi encontrada.
 
 ### <a name="remarks"></a>Comentários
@@ -143,10 +143,10 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] Identificador da janela pai ou proprietária. Um identificador de janela válido deve ser fornecido. A janela de controle está confinada à área da sua janela pai.
 
-*rcPos*  
+*rcPos*<br/>
 [in] O tamanho inicial e a posição da janela a ser criado.
 
 ### <a name="remarks"></a>Comentários
@@ -167,7 +167,7 @@ HRESULT FireOnChanged(DISPID dispID);
 
 ### <a name="parameters"></a>Parâmetros
 
-*dispID*  
+*dispID*<br/>
 [in] Identificador da propriedade que foi alterado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -194,7 +194,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 
 ### <a name="parameters"></a>Parâmetros
 
-*dispID*  
+*dispID*<br/>
 [in] Identificador da propriedade prestes a ser alterada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -203,7 +203,7 @@ Um dos valores HRESULT padrão.
 
 ### <a name="remarks"></a>Comentários
 
-Se sua classe de controle deriva [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), este método chama [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) notificar todos conectados `IPropertyNotifySink` interfaces que especificado propriedade de controle está prestes a ser alterada. Se sua classe de controle não é derivado de `IPropertyNotifySink`, esse método retorna S_OK.  
+Se sua classe de controle deriva [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), este método chama [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) notificar todos conectados `IPropertyNotifySink` interfaces que especificado propriedade de controle está prestes a ser alterada. Se sua classe de controle não é derivado de `IPropertyNotifySink`, esse método retorna S_OK.
 
 Esse método é seguro chamar o mesmo que o controle não dá suporte a pontos de conexão.
 
@@ -224,13 +224,13 @@ int MessageBox(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpszText*  
+*lpszText*<br/>
 O texto a ser exibido na caixa de mensagem.
 
-*lpszCaption*  
+*lpszCaption*<br/>
 O título da caixa de diálogo. Se NULL (o padrão), o título "Error" é usado.
 
-*nType*  
+*nType*<br/>
 Especifica o conteúdo e o comportamento da caixa de diálogo. Consulte a [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) entrada na documentação do SDK do Windows para obter uma lista das caixas de mensagem diferentes disponíveis. O padrão fornece um simples **Okey** botão.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -243,7 +243,7 @@ Retorna um valor inteiro especificando um dos valores de item de menu listados n
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CWindowImpl](../../atl/reference/cwindowimpl-class.md)   
-[Visão geral da classe](../../atl/atl-class-overview.md)   
-[Classe CComControlBase](../../atl/reference/ccomcontrolbase-class.md)   
+[Classe CWindowImpl](../../atl/reference/cwindowimpl-class.md)<br/>
+[Visão geral da classe](../../atl/atl-class-overview.md)<br/>
+[Classe CComControlBase](../../atl/reference/ccomcontrolbase-class.md)<br/>
 [Classe CComCompositeControl](../../atl/reference/ccomcompositecontrol-class.md)

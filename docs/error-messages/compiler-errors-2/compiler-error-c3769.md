@@ -1,5 +1,5 @@
 ---
-title: C3769 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3769 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5258c3dadd7ede384520b76e95c1b8e691882f8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da57a883bcf66535a531e98e23b5927d37cadccd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266966"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042221"
 ---
-# <a name="compiler-error-c3769"></a>C3769 de erro do compilador
-'type': uma classe aninhada não pode ter o mesmo nome que a classe delimitadora  
-  
- Uma classe aninhada não pode ter o mesmo nome que a classe delimitadora.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C3769.  
-  
-```  
-// C3769.cpp  
-// compile with: /c  
-class x {  
-   class x {};   // C3769  
-   class y {  
-      class x{};   // OK  
-   };  
-};  
+# <a name="compiler-error-c3769"></a>Erro do compilador C3769
+
+'type': uma classe aninhada não pode ter o mesmo nome que a classe delimitadora
+
+Uma classe aninhada não pode ter o mesmo nome que a classe delimitadora.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C3769.
+
+```
+// C3769.cpp
+// compile with: /c
+class x {
+   class x {};   // C3769
+   class y {
+      class x{};   // OK
+   };
+};
 ```

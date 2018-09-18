@@ -1,5 +1,5 @@
 ---
-title: C2460 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2460 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4220be654f93ecd79d196efc14657ca7346411f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb2d85ffbc7aa799f0688fbb10021a04ef9455ad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197774"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022586"
 ---
-# <a name="compiler-error-c2460"></a>C2460 de erro do compilador
-'identifier1': usa 'identifier2', que está sendo definido  
-  
- Uma classe ou estrutura (`identifier2`) é declarada como um membro de si mesmo (`identifier1`). Não são permitidas definições de recursiva de classes e estruturas.  
-  
- O exemplo a seguir gera C2460:  
-  
-```  
-// C2460.cpp  
-class C {  
-   C aC;    // C2460  
-};  
-```  
-  
- Em vez disso, use uma referência de ponteiro na classe.  
-  
-```  
-// C2460.cpp  
-class C {  
-   C * aC;    // OK  
-};  
+# <a name="compiler-error-c2460"></a>Erro do compilador C2460
+
+'identifier1': usa 'identifier2', que está sendo definido
+
+Uma classe ou estrutura (`identifier2`) é declarada como um membro de si mesmo (`identifier1`). Não são permitidas definições de recursiva de classes e estruturas.
+
+O exemplo a seguir gera C2460:
+
+```
+// C2460.cpp
+class C {
+   C aC;    // C2460
+};
+```
+
+Em vez disso, use uma referência de ponteiro na classe.
+
+```
+// C2460.cpp
+class C {
+   C * aC;    // OK
+};
 ```

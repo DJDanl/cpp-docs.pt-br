@@ -17,26 +17,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7964eac628fa89695d1757cff8b7b329fd7fe713
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b16133484af5a2225f79c5d293a2c8edd948bdb2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302130"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025887"
 ---
 # <a name="expression-evaluator-error-cxx0064"></a>Erro CXX0064 (avaliador de expressão)
-não é possível definir o ponto de interrupção na função de membro virtual associada  
-  
- Um ponto de interrupção foi definido em uma função de membro virtual por meio de um ponteiro para um objeto, como:  
-  
-```  
-pClass->vfunc( int );  
-```  
-  
- Um ponto de interrupção pode ser definido em uma função virtual inserindo a classe, como:  
-  
-```  
-Class::vfunc( int );  
-```  
-  
- Esse erro é idêntico ao CAN0064.
+
+não é possível definir o ponto de interrupção na função de membro virtual ligada
+
+Um ponto de interrupção foi definido em uma função de membro virtual por meio de um ponteiro para um objeto, como:
+
+```
+pClass->vfunc( int );
+```
+
+Um ponto de interrupção pode ser definido em uma função virtual inserindo a classe, como:
+
+```
+Class::vfunc( int );
+```
+
+Esse erro é idêntico ao CAN0064.

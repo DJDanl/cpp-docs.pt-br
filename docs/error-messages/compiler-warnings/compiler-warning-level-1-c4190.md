@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4190 | Microsoft Docs
+title: Compilador aviso (nível 1) C4190 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e62f6bcfaa499338d5fde1d09cb91574241ce8a0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d398331c159c6fc639160dbe54d6ab5f969d3dbd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277888"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063730"
 ---
-# <a name="compiler-warning-level-1-c4190"></a>Compilador C4190 de aviso (nível 1)
-'identifier1' possui vínculo a C especificado, mas retorna UDT 'identifier2', que é incompatível com C  
-  
- Uma função ou um ponteiro para função tem um UDT (tipo definido por usuário, que é uma classe, estrutura, enum ou união) como tipo de retorno e `extern` ligação "C". Isso é válido se:  
-  
--   Todas as chamadas para essa função ocorrerem de C++.  
-  
--   É a definição da função em C++.  
-  
-## <a name="example"></a>Exemplo  
-  
-```cpp  
-// C4190.cpp  
-// compile with: /W1 /LD  
-struct X  
-{  
-   int i;  
-   X ();  
-   virtual ~X ();  
-};  
-  
-extern "C" X func ();   // C4190  
+# <a name="compiler-warning-level-1-c4190"></a>Compilador aviso (nível 1) C4190
+
+'identifier1' possui vínculo a C especificado, mas retorna UDT 'identifier2', que é incompatível com C
+
+Uma função ou um ponteiro para função tem um UDT (definido pelo usuário type, que é uma classe, estrutura, enumeração ou união) como tipo de retorno e `extern` vínculo "C". Isso é legal se:
+
+- Todas as chamadas para essa função ocorrerem do C++.
+
+- É a definição da função em C++.
+
+## <a name="example"></a>Exemplo
+
+```cpp
+// C4190.cpp
+// compile with: /W1 /LD
+struct X
+{
+   int i;
+   X ();
+   virtual ~X ();
+};
+
+extern "C" X func ();   // C4190
 ```

@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 4) de aviso C4434 | Microsoft Docs
+title: Compilador aviso (nível 4) C4434 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c639fa1cc89266fd9cc2935d88132ceae225a85e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec0d9e4cfbed2d2871e35631df918f17a342f653
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293407"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025757"
 ---
-# <a name="compiler-warning-level-4-c4434"></a>Compilador C4434 de aviso (nível 4)
-um construtor de classe deve possuir acessibilidade private; alterando para acesso privado  
-  
- C4434 indica que o compilador alterado a acessibilidade de um construtor estático. Construtores estáticos devem ter acessibilidade privada, como eles só devem ser chamado pelo common language runtime. Para obter mais informações, consulte [construtores estáticos](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Static_constructors).  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C4434.  
-  
-```  
-// C4434.cpp  
-// compile with: /W4 /c /clr  
-public ref struct R {  
-   static R(){}   // C4434  
-};  
+# <a name="compiler-warning-level-4-c4434"></a>Compilador aviso (nível 4) C4434
+
+um construtor de classe deve possuir acessibilidade private; alterando para acesso privado
+
+C4434 indica que o compilador alterou a acessibilidade de um construtor estático. Construtores estáticos devem ter acessibilidade privada, pois eles só devem ser chamado pelo common language runtime. Para obter mais informações, consulte [construtores estáticos](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Static_constructors).
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C4434.
+
+```
+// C4434.cpp
+// compile with: /W4 /c /clr
+public ref struct R {
+   static R(){}   // C4434
+};
 ```

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5d4dc98c4fb411a4d63fdfad5049cf0df723bec
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6d4a1b76966216a6dc7b2e7249bddb1ac629376f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686559"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016761"
 ---
 # <a name="progressreporter-class"></a>Classe progress_reporter
 A classe de relator de andamento permite criar relatórios de notificações de andamento de um tipo específico. Cada objeto progress_reporter está associado a uma determinada ação ou operação assíncrona.  
@@ -37,8 +37,8 @@ class progress_reporter;
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `_ProgressType`  
- O tipo de carga de cada notificação de andamento relatada pelo relator de andamento.  
+*_ProgressType*<br/>
+O tipo de carga de cada notificação de andamento relatada pelo relator de andamento.  
   
 ## <a name="members"></a>Membros  
   
@@ -55,13 +55,13 @@ class progress_reporter;
 |[report](#report)|Envia um relatório de andamento para a ação ou operação assíncrona à qual este relator de andamento está associado.|  
   
 ## <a name="remarks"></a>Comentários  
- Este tipo só está disponível para aplicativos de tempo de execução do Windows.  
+ Esse tipo só está disponível para aplicativos do Windows Runtime.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `progress_reporter`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** ppltasks  
+ **Cabeçalho:** ppltasks. h  
   
  **Namespace:** simultaneidade  
   
@@ -71,7 +71,7 @@ class progress_reporter;
 progress_reporter();
 ```  
   
-##  <a name="report"></a> Relatório 
+##  <a name="report"></a> relatório 
 
  Envia um relatório de andamento para a ação ou operação assíncrona à qual este relator de andamento está associado.  
   
@@ -80,8 +80,8 @@ void report(const _ProgressType& val) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `val`  
- A carga de relatório por meio de uma notificação de progresso.  
+*Val*<br/>
+A carga de relatório por meio de uma notificação de progresso.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)

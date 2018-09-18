@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 216474bbb7a67cb3c435770ab418ab4b7f4e5c4f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 687708db71eedf9b8f62dc88efc1bfe473cde1d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297317"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017008"
 ---
 # <a name="expression-evaluator-error-cxx0029"></a>Erro CXX0029 (avaliador de expressão)
-ponteiro de struct não  
-  
- O operador de seleção de membro (**->**) foi aplicado a uma expressão que não é um ponteiro para uma estrutura.  
-  
- Verifique se toda a expressão está entre parênteses corretamente ou que tipo converter a expressão de endereço para o tipo de ponteiro de estrutura apropriada.  
-  
- Esse erro é idêntico ao CAN0029.
+
+não um ponteiro de estrutura
+
+O operador de seleção de membros (**->**) foi aplicado a uma expressão que não é um ponteiro para uma estrutura.
+
+Verifique se toda a expressão está entre parênteses corretamente ou a expressão de endereço para o tipo de ponteiro de estrutura apropriada de tipo de conversão.
+
+Esse erro é idêntico ao CAN0029.

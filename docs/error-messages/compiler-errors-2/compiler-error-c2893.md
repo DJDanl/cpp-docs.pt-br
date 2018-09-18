@@ -1,5 +1,5 @@
 ---
-title: C2893 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2893 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,44 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db3b71a05ece6b79672d47699dc68e0eb5bb1f60
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73d4f838f030db3667b08295006c2ea1df94c87b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246692"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026173"
 ---
-# <a name="compiler-error-c2893"></a>C2893 de erro do compilador
-Falha ao especializar template de função 'nome do modelo'  
-  
- Falha do compilador especializar um modelo de função. Pode haver várias causas para esse erro.  
-  
- Em geral, a maneira de resolver um erro C2893 é examinar a assinatura da função e certificar-se de que você pode criar uma instância de cada tipo de.  
-  
-## <a name="example"></a>Exemplo  
- C2893 ocorre porque `f`do parâmetro de modelo `T` é deduzido seja `std::map<int,int>`, mas `std::map<int,int>` não tem nenhum membro `data_type` (`T::data_type` não pode ser instanciado com `T = std::map<int,int>`.). O exemplo a seguir gera C2893.  
-  
-```  
-// C2893.cpp  
-// compile with: /c /EHsc  
-#include<map>  
-using namespace std;  
-class MyClass {};  
-  
-template<class T>   
-inline typename T::data_type  
-// try the following line instead  
-// inline typename  T::mapped_type  
-f(T const& p1, MyClass const& p2);  
-  
-template<class T>  
-void bar(T const& p1) {  
-    MyClass r;  
-    f(p1,r);   // C2893  
-}  
-  
-int main() {  
-   map<int,int> m;  
-   bar(m);  
-}  
+# <a name="compiler-error-c2893"></a>Erro do compilador C2893
+
+Falha ao especializar template de função 'nome do modelo'
+
+O compilador Falha ao especializar um modelo de função. Pode haver várias causas para esse erro.
+
+Em geral, a maneira de resolver um erro de C2893 é examinar a assinatura da função e verifique se que você pode criar uma instância de todos os tipos.
+
+## <a name="example"></a>Exemplo
+
+C2893 ocorre porque `f`do parâmetro de modelo `T` é deduzida como sendo `std::map<int,int>`, mas `std::map<int,int>` não tem nenhum membro `data_type` (`T::data_type` não pode ser instanciado com `T = std::map<int,int>`.). O exemplo a seguir gera C2893.
+
+```
+// C2893.cpp
+// compile with: /c /EHsc
+#include<map>
+using namespace std;
+class MyClass {};
+
+template<class T>
+inline typename T::data_type
+// try the following line instead
+// inline typename  T::mapped_type
+f(T const& p1, MyClass const& p2);
+
+template<class T>
+void bar(T const& p1) {
+    MyClass r;
+    f(p1,r);   // C2893
+}
+
+int main() {
+   map<int,int> m;
+   bar(m);
+}
 ```

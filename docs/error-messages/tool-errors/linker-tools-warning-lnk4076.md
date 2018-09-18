@@ -1,5 +1,5 @@
 ---
-title: Aviso LNK4076 das ferramentas de vinculador | Microsoft Docs
+title: Ferramentas de vinculador LNK4076 aviso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f0e9a85237a47515925a5867b0f26b7321e778c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de96bdbbc9752cd68ca78728395ad4bfdb4b01a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301925"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018517"
 ---
 # <a name="linker-tools-warning-lnk4076"></a>Aviso LNK4076 (Ferramentas de Vinculador)
-arquivo de status incremental inválido 'filename'; vinculação não incremental  
-  
- LINK não é possível gravar o arquivo de status incremental (. ilk). O `filename` está corrompido ou não é um banco de dados de vinculação incremental. Remova o arquivo e vincular novamente.
+
+arquivo de status incremental inválido 'filename'; vinculação não incremental
+
+LINK não é possível gravar o arquivo de status incremental (. ilk). Qualquer um dos `filename` está corrompido ou não é um banco de dados de vinculação incremental. Remova o arquivo e vincular novamente.

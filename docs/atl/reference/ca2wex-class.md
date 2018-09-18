@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9ac0528f383f1d379699c153a87507a1a292e21
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eff9e2211d0ddf9cf2d9c4bb0c10040ae20a53e6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767498"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020245"
 ---
 # <a name="ca2wex-class"></a>Classe CA2WEX
 
@@ -43,7 +43,7 @@ class CA2WEX
 
 #### <a name="parameters"></a>Parâmetros
 
-*t_nBufferLength*  
+*t_nBufferLength*<br/>
 O tamanho do buffer usado no processo de tradução. O comprimento padrão é 128 bytes.
 
 ## <a name="members"></a>Membros
@@ -113,10 +113,10 @@ CA2WEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>Parâmetros
 
-*psz*  
+*psz*<br/>
 A cadeia de caracteres de texto a ser convertido.
 
-*nCodePage*  
+*nCodePage*<br/>
 A página de código usada para realizar a conversão. Consulte a discussão de parâmetro de página de código para a função do SDK do Windows [MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar) para obter mais detalhes.
 
 ### <a name="remarks"></a>Comentários
@@ -155,7 +155,7 @@ wchar_t m_szBuffer[t_nBufferLength];
 
 Operador de conversão.
 
-```  
+```
 operator LPWSTR() const throw();
 ```
 
@@ -165,9 +165,9 @@ Retorna a cadeia de caracteres de texto enquanto digita LPWSTR.
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CA2AEX](../../atl/reference/ca2aex-class.md)   
-[Classe CA2CAEX](../../atl/reference/ca2caex-class.md)   
-[Classe CW2AEX](../../atl/reference/cw2aex-class.md)   
-[Classe CW2CWEX](../../atl/reference/cw2cwex-class.md)   
-[Classe CW2WEX](../../atl/reference/cw2wex-class.md)   
+[Classe CA2AEX](../../atl/reference/ca2aex-class.md)<br/>
+[Classe CA2CAEX](../../atl/reference/ca2caex-class.md)<br/>
+[Classe CW2AEX](../../atl/reference/cw2aex-class.md)<br/>
+[Classe CW2CWEX](../../atl/reference/cw2cwex-class.md)<br/>
+[Classe CW2WEX](../../atl/reference/cw2wex-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

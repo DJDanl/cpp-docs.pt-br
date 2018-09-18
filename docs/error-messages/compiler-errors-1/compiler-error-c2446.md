@@ -1,5 +1,5 @@
 ---
-title: C2446 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2446 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0274aaf606d039cc4dcf4482f5d8ea1e3ef8e86d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7eeeab46bd7ed5be5b820d1740dd4ff8d377633a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196656"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062794"
 ---
-# <a name="compiler-error-c2446"></a>C2446 de erro do compilador
-'operator': nenhuma conversão de 'type1' em 'type2'  
-  
- Não é possível converter o compilador `type1` para `type2`. A conversão não pode fazer sentido porque viola a semântica do C/C++.
+# <a name="compiler-error-c2446"></a>Erro do compilador C2446
+
+'operator': nenhuma conversão de 'type1' em 'type2'
+
+O compilador não é possível converter `type1` para `type2`. A conversão não pode fazer sentido, porque ele viola a semântica de C/C++.

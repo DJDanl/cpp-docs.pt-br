@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 308f909e2a863f2d08feb6ff688cddf61b0347b6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c653130079870c885e5bb758a0ae2d953cca5b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165146"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052173"
 ---
 # <a name="swap-function-autogcroot"></a>Função swap (auto_gcroot)
-Alterna a objetos entre um `auto_gcroot` e outro.  
+Troca os objetos entre um `auto_gcroot` e outro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,11 +39,11 @@ void swap(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `_left`  
- Um `auto_gcroot`.  
+*à esquerda*<br/>
+Um `auto_gcroot`.  
   
- `_right`  
- Outro `auto_gcroot`.  
+*à direita*<br/>
+Outro `auto_gcroot`.  
   
 ## <a name="example"></a>Exemplo  
   

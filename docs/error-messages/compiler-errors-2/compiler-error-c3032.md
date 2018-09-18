@@ -1,5 +1,5 @@
 ---
-title: C3032 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3032 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4882887964ef707c955f5b7532aa13eec0077e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 611867002157928f4bc0ec67f77cc8c49af87e15
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244179"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037886"
 ---
-# <a name="compiler-error-c3032"></a>C3032 de erro do compilador
-'var': variável em cláusula ' da ' não pode ter tipo incompleto 'type'  
-  
- Tipos passados para determinados cláusulas devem ser totalmente visíveis para o compilador.  
-  
- O exemplo a seguir gera C3032:  
-  
-```  
-// C3032.cpp  
-// compile with: /openmp /link vcomps.lib  
-#include "omp.h"  
-  
-struct Incomplete;  
-extern struct Incomplete inc;  
-  
-int main() {  
-   int i = 9;  
-   #pragma omp parallel private(inc)   // C3032  
-      ;  
-  
-   #pragma omp parallel private(i)     // OK  
-      ;  
-  
-}  
+# <a name="compiler-error-c3032"></a>Erro do compilador C3032
+
+'var': variável em cláusula 'cláusula' não pode possuir tipo incompleto 'type'
+
+Tipos passados para determinados cláusulas devem ser totalmente visíveis para o compilador.
+
+O exemplo a seguir gera C3032:
+
+```
+// C3032.cpp
+// compile with: /openmp /link vcomps.lib
+#include "omp.h"
+
+struct Incomplete;
+extern struct Incomplete inc;
+
+int main() {
+   int i = 9;
+   #pragma omp parallel private(inc)   // C3032
+      ;
+
+   #pragma omp parallel private(i)     // OK
+      ;
+
+}
 ```

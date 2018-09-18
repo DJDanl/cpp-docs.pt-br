@@ -17,31 +17,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 310f0c6d3b36f63d4ba9d1f165c808b6d417c321
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 10c5a4fd9b7f15e5f6532bbaf6b5d8af4d3c86ba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33087787"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067974"
 ---
 # <a name="odbc-driver-list"></a>Lista de drivers ODBC
+
 Visual C++ fornece drivers ODBC para os bancos de dados a seguir:  
   
--   SQL Server  
+- SQL Server  
   
--   Microsoft Access  
+- Microsoft Access  
   
--   Microsoft Excel  
+- Microsoft Excel  
   
--   dBASE  
+- dBASE  
   
--   Paradox  
+- Paradox  
   
--   Microsoft Oracle ODBC  
+- Microsoft Oracle ODBC  
   
--   Arquivos de texto  
+- Arquivos de texto  
   
- Para obter informações sobre drivers ODBC disponíveis da Microsoft e outras empresas, incluindo o pacote de Driver ODBC, entre em contato com o Microsoft Product Support Services.  
+Para obter informações sobre drivers ODBC disponíveis da Microsoft e outras empresas, incluindo o pacote de Driver ODBC, entre em contato com o Microsoft Product Support Services.  
   
 ## <a name="see-also"></a>Consulte também  
- [ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)
+
+[ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)

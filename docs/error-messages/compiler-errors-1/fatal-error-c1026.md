@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c034d45b7f8b222471094f4580902ae1b8dc66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db9167383df48dad274ef8941defaa53f51d3bfa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198099"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068982"
 ---
 # <a name="fatal-error-c1026"></a>Erro fatal C1026
-estouro de pilha do analisador, programa muito complexo  
-  
- O espaço necessário para analisar o programa causou um estouro de pilha do compilador.  
-  
- Reduza a complexidade das expressões por:  
-  
--   Diminuindo o aninhamento em `for` e `switch` instruções. Colocar instruções mais profundamente aninhadas em funções separadas.  
-  
--   Dividindo expressões longas que envolvem operadores de vírgula ou chamadas de função.
+
+estouro de pilha do analisador, programa muito complexo
+
+O espaço necessário para analisar o programa causou um estouro de pilha do compilador.
+
+Reduza a complexidade de expressões por:
+
+- Diminuindo o aninhamento `for` e `switch` instruções. Colocar instruções mais profundamente aninhadas em funções separadas.
+
+- Dividir expressões longas que envolvem operadores de vírgulas ou chamadas de função.

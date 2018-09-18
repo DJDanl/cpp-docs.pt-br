@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 122a60496a92b3844f4e439e40650c429035dc33
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d5bda0dd4b756ba9228fac8cc5b0de70b6d71f7a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689669"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053642"
 ---
 # <a name="cancellationtokensource-class"></a>Classe cancellation_token_source
-O `cancellation_token_source` classe representa a capacidade de cancelar uma operação cancelável.  
+O `cancellation_token_source` classe representa a capacidade de cancelar qualquer operação anulável.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,16 +43,16 @@ class cancellation_token_source;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[cancellation_token_source](#ctor)|Sobrecarregado. Constrói um novo `cancellation_token_source`. A fonte pode ser usada para sinalizar o cancelamento de alguma operação cancelável.|  
+|[cancellation_token_source](#ctor)|Sobrecarregado. Constrói um novo `cancellation_token_source`. A fonte pode ser usada para sinalizar o cancelamento de qualquer operação anulável.|  
 |[~ cancellation_token_source destruidor](#dtor)||  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[cancel](#cancel)|Cancela o token. Qualquer `task_group`, `structured_task_group`, ou `task` que utiliza o token será cancelado após essa chamada e gerará uma exceção no próximo ponto de interrupção.|  
+|[cancel](#cancel)|Cancela o token. Qualquer `task_group`, `structured_task_group`, ou `task` que usa o token será cancelado nessa chamada e gerar uma exceção no próximo ponto de interrupção.|  
 |[create_linked_source](#create_linked_source)|Sobrecarregado. Cria um `cancellation_token_source` que é cancelado quando o token fornecido é cancelado.|  
-|[get_token](#get_token)|Retorna um token de cancelamento associado a essa fonte. O token retornado pode ser controlado de cancelamento ou forneça um retorno de chamada se e quando o cancelamento ocorre.|  
+|[get_token](#get_token)|Retorna um token de cancelamento associado a essa fonte. O token retornado pode ser pesquisado para cancelamento ou fornecer um retorno de chamada se o cancelamento ocorrer e quando.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -66,7 +66,7 @@ class cancellation_token_source;
  `cancellation_token_source`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** pplcancellation_token.h  
+ **Cabeçalho:** pplcancellation_token. h  
   
  **Namespace:** simultaneidade  
   
@@ -78,7 +78,7 @@ class cancellation_token_source;
   
 ##  <a name="cancel"></a> Cancelar 
 
- Cancela o token. Qualquer `task_group`, `structured_task_group`, ou `task` que utiliza o token será cancelado após essa chamada e gerará uma exceção no próximo ponto de interrupção.  
+ Cancela o token. Qualquer `task_group`, `structured_task_group`, ou `task` que usa o token será cancelado nessa chamada e gerar uma exceção no próximo ponto de interrupção.  
   
 ```
 void cancel() const;
@@ -86,7 +86,7 @@ void cancel() const;
   
 ##  <a name="ctor"></a> cancellation_token_source 
 
- Constrói um novo `cancellation_token_source`. A fonte pode ser usada para sinalizar o cancelamento de alguma operação cancelável.  
+ Constrói um novo `cancellation_token_source`. A fonte pode ser usada para sinalizar o cancelamento de qualquer operação anulável.  
   
 ```
 cancellation_token_source();
@@ -97,7 +97,8 @@ cancellation_token_source(cancellation_token_source&& _Src);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Src`  
+*_Src*<br/>
+Para copiar ou mover o objeto.  
   
 ##  <a name="create_linked_source"></a> create_linked_source 
 
@@ -112,22 +113,24 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Iter`  
- `_Src`  
- Um token cujo cancelamento fará com que o cancelamento da origem do token retornado. Observe que a origem do token retornada também pode ser cancelada independentemente de origem contida nesse parâmetro.  
+*_Iter*<br/>
+Tipo de iterador.
+
+*_Src*<br/>
+Um token cujo cancelamento causará o cancelamento da origem do token retornado. Observe que a origem do token retornado também pode ser cancelada independentemente da origem contida neste parâmetro.  
   
- `_Begin`  
- O iterador da biblioteca padrão C++ correspondente ao início do intervalo de tokens para ouvir o cancelamento da.  
+*Iniciar*<br/>
+O iterador de biblioteca padrão C++ correspondente ao início do intervalo de tokens para escuta do cancelamento.  
   
- `_End`  
- O iterador de biblioteca padrão C++ correspondente para o final do intervalo de tokens para ouvir o cancelamento da.  
+*Encerrar*<br/>
+O iterador de biblioteca padrão C++ corresponde ao final do intervalo de tokens para escuta do cancelamento.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um `cancellation_token_source` que é cancelado quando o token fornecido pelo `_Src` parâmetro será cancelado.  
   
 ##  <a name="get_token"></a> get_token 
 
- Retorna um token de cancelamento associado a essa fonte. O token retornado pode ser controlado de cancelamento ou forneça um retorno de chamada se e quando o cancelamento ocorre.  
+ Retorna um token de cancelamento associado a essa fonte. O token retornado pode ser pesquisado para cancelamento ou fornecer um retorno de chamada se o cancelamento ocorrer e quando.  
   
 ```
 cancellation_token get_token() const;
@@ -143,7 +146,8 @@ bool operator!= (const cancellation_token_source& _Src) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Src`  
+*_Src*<br/>
+Operando.
   
 ### <a name="return-value"></a>Valor de retorno  
   
@@ -156,8 +160,9 @@ cancellation_token_source& operator= (cancellation_token_source&& _Src);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Src`  
-  
+*_Src*<br/>
+Operando.
+
 ### <a name="return-value"></a>Valor de retorno  
   
 ##  <a name="operator_eq_eq"></a> operador = = 
@@ -167,7 +172,8 @@ bool operator== (const cancellation_token_source& _Src) const;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Src`  
+*_Src*<br/>
+Operando.
   
 ### <a name="return-value"></a>Valor de retorno  
   

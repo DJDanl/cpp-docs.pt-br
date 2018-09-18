@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5614006ed60d088a2749ab13417de23054e64ee
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bba9e3cce5424fdba86c05c0fd94cb3a0d08a5bb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761391"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030918"
 ---
 # <a name="ccomptr-class"></a>Classe CComPtr
 
@@ -32,13 +32,13 @@ Uma classe de ponteiro inteligente para gerenciar os ponteiros de interface COM.
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template<class T>  
+template<class T>
 class CComPtr
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 Uma interface COM especificando o tipo de ponteiro a ser armazenado.
 
 ## <a name="members"></a>Membros
@@ -89,10 +89,10 @@ CComPtr (const CComPtr<T>& lp) throw ();
 
 ### <a name="parameters"></a>Parâmetros
 
-*LP*  
+*LP*<br/>
 Usado para inicializar o ponteiro de interface.
 
-*T*  
+*T*<br/>
 Uma interface COM.
 
 ##  <a name="operator_eq"></a>  CComPtr::operator =
@@ -114,6 +114,6 @@ Esta operação AddRefs o novo objeto e versões existe o objeto existente, se h
 
 ## <a name="see-also"></a>Consulte também
 
-[CComPtr::CComPtr](#ccomptr)   
-[CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)   
+[CComPtr::CComPtr](#ccomptr)<br/>
+[CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

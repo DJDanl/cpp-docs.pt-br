@@ -1,5 +1,5 @@
 ---
-title: C3068 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3068 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f378a60c79defed4fb1738515ca5b65b2851056
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdea26e204032c27f00639ee46a928c7bf084a4e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256549"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035611"
 ---
-# <a name="compiler-error-c3068"></a>C3068 de erro do compilador
-'function': uma função 'naked' não pode conter objetos que possam requerer liberação caso uma exceção de C++  
-  
- O compilador não pôde executar o desenrolamento de pilha em uma [naked](../../cpp/naked-cpp.md) função que gerou uma exceção porque um objeto temporário foi criado na função e tratamento de exceções C++ ([/EHsc](../../build/reference/eh-exception-handling-model.md)) foi especificado.  
-  
- Para resolver esse erro, faça pelo menos um dos seguintes:  
-  
--   Não compile com /EHsc.  
-  
--   Não marque-a como `naked`.  
-  
--   Não crie um objeto temporário na função.  
-  
- Se uma função cria um objeto temporário na pilha, se a função gera uma exceção, e se o tratamento de exceções C++ estiver habilitado, o compilador limpará a pilha se uma exceção for lançada.  
-  
- Quando uma exceção é gerada, compilador gerado código, chamado de prólogo e epílogo e que não estão presentes em uma função naked, é executado para uma função.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C3068:  
-  
-```  
-// C3068.cpp  
-// compile with: /EHsc  
-// processor: x86  
-class A {  
-public:  
-   A(){}  
-   ~A(){}  
-};  
-  
-void b(A){}  
-  
-__declspec(naked) void c() {  
-   b(A());   // C3068   
-};  
+# <a name="compiler-error-c3068"></a>Erro do compilador C3068
+
+'function': uma função 'naked' não pode conter objetos que possam requerer liberação caso uma exceção de C++
+
+O compilador não pôde executar o desenrolamento de pilha em um [naked](../../cpp/naked-cpp.md) função que gerou uma exceção porque um objeto temporário foi criado a função e o tratamento de exceções C++ ([/EHsc](../../build/reference/eh-exception-handling-model.md)) foi especificado.
+
+Para resolver esse erro, faça pelo menos um dos seguintes:
+
+- Não compile com /EHsc.
+
+- Não marcar a função como `naked`.
+
+- Não crie um objeto temporário na função.
+
+Se uma função cria um objeto temporário na pilha, se a função lançará uma exceção, e se o tratamento de exceções C++ estiver habilitado, o compilador limpará a pilha se uma exceção é lançada.
+
+Quando uma exceção é lançada, o compilador gerou o código, chamado de prólogo e epílogo e que não estão presentes em uma função naked, é executado para uma função.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C3068:
+
+```
+// C3068.cpp
+// compile with: /EHsc
+// processor: x86
+class A {
+public:
+   A(){}
+   ~A(){}
+};
+
+void b(A){}
+
+__declspec(naked) void c() {
+   b(A());   // C3068
+};
 ```

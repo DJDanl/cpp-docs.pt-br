@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1a977a2e8f3b9f36832b5f96c6c911966cac7d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b894579c56368e953c1d60aa5d2940d8c9c79f65
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316641"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019361"
 ---
 # <a name="nmake-fatal-error-u1078"></a>Erro fatal U1078 (NMAKE)
-estouro de constante em 'expression'  
-  
- A expressão fornecida continha uma constante que excederam o intervalo de-2.147.483.648 a 2.147.483.647. A constante é exibido em uma das seguintes situações:  
-  
--   Uma expressão especificada com uma diretiva de pré-processamento  
-  
--   Um nível de erro especificado com um traço (**-**) modificador de comando
+
+estouro constante em 'expression'
+
+A expressão fornecida continha uma constante que excederam o intervalo de-2.147.483.648 a 2.147.483.647. A constante é exibida em uma das seguintes situações:
+
+- Uma expressão especificada com uma diretiva de pré-processamento
+
+- Um nível de erro especificado com o traço (**-**) modificador de comando

@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6e32ec0e474f901818618af662a91e3e46efed
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3ce6099b904c088399dcb43635a1b254567e8320
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763692"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024900"
 ---
 # <a name="message-map-macros-atl"></a>Macros de mapa de mensagem (ATL)
 
@@ -109,7 +109,7 @@ ALT_MSG_MAP(msgMapID)
 
 ### <a name="parameters"></a>Parâmetros
 
-*msgMapID*  
+*msgMapID*<br/>
 [in] O identificador de mapa de mensagem.
 
 ### <a name="remarks"></a>Comentários
@@ -148,7 +148,7 @@ BEGIN_MSG_MAP(theClass)
 
 ### <a name="parameters"></a>Parâmetros
 
-*theClass*  
+*theClass*<br/>
 [in] O nome da classe que contém o mapa de mensagem.
 
 ### <a name="remarks"></a>Comentários
@@ -227,10 +227,10 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
 
 ### <a name="parameters"></a>Parâmetros
 
-*theChainClass*  
+*theChainClass*<br/>
 [in] O nome da classe base que contém o mapa de mensagem.
 
-*msgMapID*  
+*msgMapID*<br/>
 [in] O identificador de mapa de mensagem.
 
 ### <a name="remarks"></a>Comentários
@@ -256,10 +256,10 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
 
 ### <a name="parameters"></a>Parâmetros
 
-*theChainMember*  
+*theChainMember*<br/>
 [in] O nome do membro de dados que contém o mapa de mensagem.
 
-*msgMapID*  
+*msgMapID*<br/>
 [in] O identificador de mapa de mensagem.
 
 ### <a name="remarks"></a>Comentários
@@ -285,7 +285,7 @@ CHAIN_MSG_MAP(theChainClass)
 
 ### <a name="parameters"></a>Parâmetros
 
-*theChainClass*  
+*theChainClass*<br/>
 [in] O nome da classe base que contém o mapa de mensagem.
 
 ### <a name="remarks"></a>Comentários
@@ -323,7 +323,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 
 ### <a name="parameters"></a>Parâmetros
 
-*dynaChainID*  
+*dynaChainID*<br/>
 [in] O identificador exclusivo para o mapa de mensagens de um objeto.
 
 ### <a name="remarks"></a>Comentários
@@ -349,7 +349,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
 
 ### <a name="parameters"></a>Parâmetros
 
-*theChainMember*  
+*theChainMember*<br/>
 [in] O nome do membro de dados que contém o mapa de mensagem.
 
 ### <a name="remarks"></a>Comentários
@@ -387,10 +387,10 @@ COMMAND_CODE_HANDLER(code, func)
 
 ### <a name="parameters"></a>Parâmetros
 
-*Código*  
+*Código*<br/>
 [in] O código de notificação.
 
-*func*  
+*func*<br/>
 [in] O nome da função de manipulador de mensagens.
 
 ### <a name="requirements"></a>Requisitos
@@ -407,13 +407,13 @@ COMMAND_HANDLER(id, code, func)
 
 ### <a name="parameters"></a>Parâmetros
 
-*id*  
+*id*<br/>
 [in] O identificador do controle, item de menu ou acelerador.
 
-*Código*  
+*Código*<br/>
 [in] O código de notificação.
 
-*func*  
+*func*<br/>
 [in] O nome da função de manipulador de mensagens.
 
 ### <a name="remarks"></a>Comentários
@@ -449,10 +449,10 @@ COMMAND_ID_HANDLER(id, func)
 
 ### <a name="parameters"></a>Parâmetros
 
-*id*  
+*id*<br/>
 [in] O identificador do item de menu, do controle ou do acelerador de envio da mensagem.
 
-*func*  
+*func*<br/>
 [in] O nome da função de manipulador de mensagens.
 
 ### <a name="requirements"></a>Requisitos
@@ -469,16 +469,16 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 
 ### <a name="parameters"></a>Parâmetros
 
-*idFirst*  
+*idFirst*<br/>
 [in] Marca o início de um intervalo contíguo de identificadores de controle.
 
-*idLast*  
+*idLast*<br/>
 [in] Marca o fim de um intervalo contíguo de identificadores de controle.
 
-*Código*  
+*Código*<br/>
 [in] O código de notificação.
 
-*func*  
+*func*<br/>
 [in] O nome da função de manipulador de mensagens.
 
 ### <a name="remarks"></a>Comentários
@@ -499,13 +499,13 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 
 ### <a name="parameters"></a>Parâmetros
 
-*idFirst*  
+*idFirst*<br/>
 [in] Marca o início de um intervalo contíguo de identificadores de controle.
 
-*idLast*  
+*idLast*<br/>
 [in] Marca o fim de um intervalo contíguo de identificadores de controle.
 
-*func*  
+*func*<br/>
 [in] O nome da função de manipulador de mensagens.
 
 ### <a name="remarks"></a>Comentários
@@ -598,10 +598,10 @@ MESSAGE_HANDLER( msg, func )
 
 ### <a name="parameters"></a>Parâmetros
 
-*msg*  
+*msg*<br/>
 [in] A mensagem do Windows.
 
-*func*  
+*func*<br/>
 [in] O nome da função de manipulador de mensagens.
 
 ### <a name="remarks"></a>Comentários
@@ -639,13 +639,13 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 
 ### <a name="parameters"></a>Parâmetros
 
-*msgFirst*  
+*msgFirst*<br/>
 [in] Marca o início de um intervalo contíguo de mensagens.
 
-*msgLast*  
+*msgLast*<br/>
 [in] Marca o fim de um intervalo contíguo de mensagens.
 
-*func*  
+*func*<br/>
 [in] O nome da função de manipulador de mensagens.
 
 ### <a name="requirements"></a>Requisitos
@@ -662,10 +662,10 @@ NOTIFY_CODE_HANDLER(cd, func)
 
 ### <a name="parameters"></a>Parâmetros
 
-*CD*  
+*CD*<br/>
 [in] O código de notificação.
 
-*func*  
+*func*<br/>
 [in] O nome da função de manipulador de mensagens.
 
 ### <a name="requirements"></a>Requisitos
@@ -682,13 +682,13 @@ NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>Parâmetros
 
-*id*  
+*id*<br/>
 [in] O identificador do controle que está enviando a mensagem.
 
-*CD*  
+*CD*<br/>
 [in] O código de notificação.
 
-*func*  
+*func*<br/>
 [in] O nome da função de manipulador de mensagens.
 
 ### <a name="remarks"></a>Comentários
@@ -726,10 +726,10 @@ NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>Parâmetros
 
-*id*  
+*id*<br/>
 [in] O identificador do controle que está enviando a mensagem.
 
-*func*  
+*func*<br/>
 [in] O nome da função de manipulador de mensagens.
 
 ### <a name="requirements"></a>Requisitos
@@ -746,16 +746,16 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 
 ### <a name="parameters"></a>Parâmetros
 
-*idFirst*  
+*idFirst*<br/>
 [in] Marca o início de um intervalo contíguo de identificadores de controle.
 
-*idLast*  
+*idLast*<br/>
 [in] Marca o fim de um intervalo contíguo de identificadores de controle.
 
-*CD*  
+*CD*<br/>
 [in] O código de notificação.
 
-*func*  
+*func*<br/>
 [in] O nome da função de manipulador de mensagens.
 
 ### <a name="remarks"></a>Comentários
@@ -776,13 +776,13 @@ NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>Parâmetros
 
-*idFirst*  
+*idFirst*<br/>
 [in] Marca o início de um intervalo contíguo de identificadores de controle.
 
-*idLast*  
+*idLast*<br/>
 [in] Marca o fim de um intervalo contíguo de identificadores de controle.
 
-*func*  
+*func*<br/>
 [in] O nome da função de manipulador de mensagens.
 
 ### <a name="remarks"></a>Comentários
@@ -819,10 +819,10 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 
 ### <a name="parameters"></a>Parâmetros
 
-*Código*  
+*Código*<br/>
 [in] O código de notificação.
 
-*func*  
+*func*<br/>
 [in] O nome da função de manipulador de mensagens.  
 
 ### <a name="requirements"></a>Requisitos
@@ -839,13 +839,13 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 
 ### <a name="parameters"></a>Parâmetros
 
-*id*  
+*id*<br/>
 [in] O identificador do controle, item de menu ou acelerador.
 
-*Código*  
+*Código*<br/>
 [in] O código de notificação.
 
-*func*  
+*func*<br/>
 [in] O nome da função de manipulador de mensagens.  
 
 ### <a name="requirements"></a>Requisitos
@@ -862,10 +862,10 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>Parâmetros
 
-*id*  
+*id*<br/>
 [in] O identificador do controle, item de menu ou acelerador.
 
-*func*  
+*func*<br/>
 [in] O nome da função de manipulador de mensagens.  
 
 ### <a name="requirements"></a>Requisitos
@@ -882,16 +882,16 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 
 ### <a name="parameters"></a>Parâmetros
 
-*idFirst*  
+*idFirst*<br/>
 [in] Marca o início de um intervalo contíguo de identificadores de controle.
 
-*idLast*  
+*idLast*<br/>
 [in] Marca o fim de um intervalo contíguo de identificadores de controle.
 
-*Código*  
+*Código*<br/>
 [in] O código de notificação.
 
-*func*  
+*func*<br/>
 [in] O nome da função de manipulador de mensagens.  
 
 ### <a name="requirements"></a>Requisitos
@@ -908,13 +908,13 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>Parâmetros
 
-*idFirst*  
+*idFirst*<br/>
 [in] Marca o início de um intervalo contíguo de identificadores de controle.
 
-*idLast*  
+*idLast*<br/>
 [in] Marca o fim de um intervalo contíguo de identificadores de controle.
 
-*func*  
+*func*<br/>
 [in] O nome da função de manipulador de mensagens.  
 
 ### <a name="requirements"></a>Requisitos
@@ -931,10 +931,10 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 
 ### <a name="parameters"></a>Parâmetros
 
-*CD*  
+*CD*<br/>
 [in] O código de notificação.
 
-*func*  
+*func*<br/>
 [in] O nome da função de manipulador de mensagens.  
 
 ### <a name="requirements"></a>Requisitos
@@ -951,13 +951,13 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>Parâmetros
 
-*id*  
+*id*<br/>
 [in] O identificador do controle, item de menu ou acelerador.
 
-*CD*  
+*CD*<br/>
 [in] O código de notificação.
 
-*func*  
+*func*<br/>
 [in] O nome da função de manipulador de mensagens.  
 
 ### <a name="requirements"></a>Requisitos
@@ -974,10 +974,10 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>Parâmetros
 
-*id*  
+*id*<br/>
 [in] O identificador do controle, item de menu ou acelerador.
 
-*func*  
+*func*<br/>
 [in] O nome da função de manipulador de mensagens.  
 
 ### <a name="requirements"></a>Requisitos
@@ -994,16 +994,16 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 
 ### <a name="parameters"></a>Parâmetros
 
-*idFirst*  
+*idFirst*<br/>
 [in] Marca o início de um intervalo contíguo de identificadores de controle.
 
-*idLast*  
+*idLast*<br/>
 [in] Marca o fim de um intervalo contíguo de identificadores de controle.
 
-*CD*  
+*CD*<br/>
 [in] O código de notificação.
 
-*func*  
+*func*<br/>
 [in] O nome da função de manipulador de mensagens.
 
 ### <a name="requirements"></a>Requisitos
@@ -1020,13 +1020,13 @@ REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 
 ### <a name="parameters"></a>Parâmetros
 
-*idFirst*  
+*idFirst*<br/>
 [in] Marca o início de um intervalo contíguo de identificadores de controle.
 
-*idLast*  
+*idLast*<br/>
 [in] Marca o fim de um intervalo contíguo de identificadores de controle.
 
-*func*  
+*func*<br/>
 [in] O nome da função de manipulador de mensagens.
 
 ## <a name="see-also"></a>Consulte também

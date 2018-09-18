@@ -1,5 +1,5 @@
 ---
-title: C3883 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3883 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,51 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6841a0ab5b5f1c61159b11d2aa559863189580e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4387eacb4e35c82af5c2617771b8c887dae42c4e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268847"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045465"
 ---
-# <a name="compiler-error-c3883"></a>C3883 de erro do compilador
-'var': um membro de dados estáticos initonly deve ser inicializado  
-  
- Uma variável é marcado com [initonly](../../dotnet/initonly-cpp-cli.md) não foi inicializado corretamente.  
-  
- O exemplo a seguir gera C3883:  
-  
-```  
-// C3883.cpp  
-// compile with: /clr  
-ref struct Y1 {  
-   initonly  
-   static int staticConst1;   // C3883  
-};  
-```  
-  
- O exemplo a seguir demonstra uma possível resolução:  
-  
-```  
-// C3883b.cpp  
-// compile with: /clr /c  
-ref struct Y1 {  
-   initonly  
-   static int staticConst2 = 0;  
-};  
-```  
-  
- O exemplo a seguir mostra como inicializar em um construtor estático:  
-  
-```  
-// C3883c.cpp  
-// compile with: /clr /LD  
-ref struct Y1 {  
-   initonly  
-   static int staticConst1;  
-  
-   static Y1() {  
-      staticConst1 = 0;  
-   }  
-};  
+# <a name="compiler-error-c3883"></a>Erro do compilador C3883
+
+'var': um membro de dados estáticos initonly deve ser inicializado
+
+Uma variável marcadas com [initonly](../../dotnet/initonly-cpp-cli.md) não foi inicializado corretamente.
+
+O exemplo a seguir gera C3883:
+
+```
+// C3883.cpp
+// compile with: /clr
+ref struct Y1 {
+   initonly
+   static int staticConst1;   // C3883
+};
+```
+
+O exemplo a seguir demonstra uma possível resolução:
+
+```
+// C3883b.cpp
+// compile with: /clr /c
+ref struct Y1 {
+   initonly
+   static int staticConst2 = 0;
+};
+```
+
+O exemplo a seguir mostra como inicializar em um construtor estático:
+
+```
+// C3883c.cpp
+// compile with: /clr /LD
+ref struct Y1 {
+   initonly
+   static int staticConst1;
+
+   static Y1() {
+      staticConst1 = 0;
+   }
+};
 ```

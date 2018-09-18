@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 4) de aviso C4255 | Microsoft Docs
+title: Compilador aviso (nível 4) C4255 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff68feb5f926a3c2cf8bbb85acfa18e8e1ecfa29
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 72e07cc1077993e1bb22c5d8af4ce4445d38321b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296777"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032374"
 ---
-# <a name="compiler-warning-level-4-c4255"></a>Compilador C4255 de aviso (nível 4)
-'function': nenhum protótipo de função fornecido: convertendo '()' para '(void)'  
-  
- O compilador não encontrou uma lista explícita de argumentos para uma função. Esse aviso é para o compilador C somente.  
-  
- Esse aviso é desativada por padrão. Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.  
-  
- O exemplo a seguir gera C4255:  
-  
-```  
-// C4255.c  
-// compile with: /W4 /WX  
-#pragma warning (default : 4255)  
-  
-void f()  { // C4255  
-// try the following line instead  
-//void f(void) {  
-}  
-  
-int main(int argc, char *argv[]) {  
-   f();  
-}  
+# <a name="compiler-warning-level-4-c4255"></a>Compilador aviso (nível 4) C4255
+
+'function': nenhum protótipo de função fornecido: convertendo '()' para '(void)'
+
+O compilador não encontrou uma lista de argumentos para uma função explícita. Esse aviso é para o compilador de C.
+
+Esse aviso é desativado por padrão. Ver [compilador avisos que são desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.
+
+O exemplo a seguir gera C4255:
+
+```
+// C4255.c
+// compile with: /W4 /WX
+#pragma warning (default : 4255)
+
+void f()  { // C4255
+// try the following line instead
+//void f(void) {
+}
+
+int main(int argc, char *argv[]) {
+   f();
+}
 ```

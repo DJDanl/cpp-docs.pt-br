@@ -1,5 +1,5 @@
 ---
-title: C3715 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3715 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9412592ac177fb49f065975db469c9f77b98e8c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 63ae3486b4db21a3aa241d5ebdbbfa0cdc6806f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265890"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026550"
 ---
-# <a name="compiler-error-c3715"></a>C3715 de erro do compilador
-'ponteiro': deve ser um ponteiro para 'class'  
-  
- Você especificou um ponteiro em [hook](../../cpp/hook.md) ou [unhook](../../cpp/unhook.md) que não apontou para uma classe válida. Para corrigir esse erro, certifique-se de que seu `__hook` e `__unhook` chamadas especificar ponteiros para classes válidos.
+# <a name="compiler-error-c3715"></a>Erro do compilador C3715
+
+'ponteiro': deve ser um ponteiro para o 'class'
+
+Você especificou um ponteiro na [hook](../../cpp/hook.md) ou [unhook](../../cpp/unhook.md) que não apontou para uma classe válida. Para corrigir esse erro, certifique-se de que seu `__hook` e `__unhook` chamadas especificam ponteiros para classes válidos.

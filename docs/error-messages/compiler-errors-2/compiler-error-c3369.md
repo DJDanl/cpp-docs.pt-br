@@ -1,5 +1,5 @@
 ---
-title: C3369 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3369 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a15a8e52b7bf311f20883c6ebc5635e86c6a7ffd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b111889c6a4203f5b63a7a644adbc7a51d8a810a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248708"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017997"
 ---
-# <a name="compiler-error-c3369"></a>C3369 de erro do compilador
-nome do módulo: idl_module já definido  
-  
- O [idl_module](../../windows/idl-module.md) onde você define a DLL de uso somente pode ocorrer uma vez em um programa.  
-  
- O exemplo a seguir gera C3369:  
-  
-```  
-// C3369.cpp  
-// compile with: /c  
-[idl_module(name="name1", dllname="x.dll")]; // C3369  
-[idl_module(name="name1", dllname="x.dll")];  
+# <a name="compiler-error-c3369"></a>Erro do compilador C3369
+
+'module name': idl_module já definido
+
+O [idl_module](../../windows/idl-module.md) uso onde você define a DLL pode ocorrer apenas uma vez em um programa.
+
+O exemplo a seguir gera C3369:
+
+```
+// C3369.cpp
+// compile with: /c
+[idl_module(name="name1", dllname="x.dll")]; // C3369
+[idl_module(name="name1", dllname="x.dll")];
 ```

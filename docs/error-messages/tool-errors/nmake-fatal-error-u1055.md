@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f99681ff7219c46820da4c909a6f4eddccdabf6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50103f7445096e553a510da6272dd4be1886b710
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320876"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017920"
 ---
 # <a name="nmake-fatal-error-u1055"></a>Erro fatal U1055 (NMAKE)
-sem espaço de ambiente  
-  
- O sistema operacional ficou sem espaço para variáveis de ambiente.  
-  
- Aumente o espaço de ambiente ou definir variáveis de ambiente menos.
+
+sem espaço de ambiente
+
+O sistema operacional ficou sem espaço para as variáveis de ambiente.
+
+Aumente o espaço de ambiente ou definir variáveis de ambiente menos.

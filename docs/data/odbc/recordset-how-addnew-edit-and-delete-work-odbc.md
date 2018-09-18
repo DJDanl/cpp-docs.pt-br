@@ -28,50 +28,51 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 52b469a53d48dcde8c28c0a0c984598875684778
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 4f15e593300c45cf5bbc24b85eacee107dafca58
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338308"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052225"
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Conjunto de registros: como AddNew, editar e excluir trabalho (ODBC)
+
 Este tópico se aplica às classes ODBC do MFC.  
   
- Este tópico explica como o `AddNew`, `Edit`, e `Delete` funções de membro de classe `CRecordset` funcione. Os tópicos abordados incluem:  
+Este tópico explica como o `AddNew`, `Edit`, e `Delete` funções de membro de classe `CRecordset` funcione. Os tópicos abordados incluem:  
   
--   [Como a adição de registros funciona](#_core_adding_a_record)  
+- [Como a adição de registros funciona](#_core_adding_a_record)  
   
--   [Visibilidade de registros adicionados](#_core_visibility_of_added_records)  
+- [Visibilidade de registros adicionados](#_core_visibility_of_added_records)  
   
--   [Como funciona a edição de registros](#_core_editing_an_existing_record)  
+- [Como funciona a edição de registros](#_core_editing_an_existing_record)  
   
--   [Como a exclusão de registros funciona](#_core_deleting_a_record)  
+- [Como a exclusão de registros funciona](#_core_deleting_a_record)  
   
 > [!NOTE]
 >  Este tópico se aplica a objetos derivados de `CRecordset` em qual linha em massa buscando não foi implementado. Se você estiver usando a busca de linhas em massa, consulte [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Como um suplemento, você talvez queira ler [troca de campos do registro: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), que descreve a função correspondente do RFX em operações de atualização.  
+Como um suplemento, você talvez queira ler [troca de campos do registro: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), que descreve a função correspondente do RFX em operações de atualização.  
   
 ##  <a name="_core_adding_a_record"></a> Adicionar um registro  
 
- Adicionar um novo registro para um conjunto de registros envolve chamar o conjunto de registros [AddNew](../../mfc/reference/crecordset-class.md#addnew) função de membro, definindo os valores de membros de dados de campo do novo registro e, em seguida, chamar o [atualização](../../mfc/reference/crecordset-class.md#update) função de membro para gravar o registro para a fonte de dados.  
+Adicionar um novo registro para um conjunto de registros envolve chamar o conjunto de registros [AddNew](../../mfc/reference/crecordset-class.md#addnew) função de membro, definindo os valores de membros de dados de campo do novo registro e, em seguida, chamar o [atualização](../../mfc/reference/crecordset-class.md#update) função de membro para gravar o registro para a fonte de dados.  
   
- Como uma pré-condição para chamar `AddNew`, o conjunto de registros deve não ter sido aberto como somente leitura. O `CanUpdate` e `CanAppend` funções de membro permitem determinar essas condições.  
+Como uma pré-condição para chamar `AddNew`, o conjunto de registros deve não ter sido aberto como somente leitura. O `CanUpdate` e `CanAppend` funções de membro permitem determinar essas condições.  
   
- Quando você chama `AddNew`:  
+Quando você chama `AddNew`:  
   
--   O registro no buffer de edição é armazenado, seu conteúdo pode ser restaurado se a operação for cancelada.  
+- O registro no buffer de edição é armazenado, seu conteúdo pode ser restaurado se a operação for cancelada.  
   
--   Os membros de dados de campo são sinalizados para que seja possível detectar alterações em-los mais tarde. Os dados também são membros do campo Limpar (inalterada) e definido como um valor nulo.  
+- Os membros de dados de campo são sinalizados para que seja possível detectar alterações em-los mais tarde. Os dados também são membros do campo Limpar (inalterada) e definido como um valor nulo.  
   
- Depois de chamar `AddNew`, o buffer de edição representa um novo, vazio registro, pronto para ser preenchido com valores. Para fazer isso, você definir manualmente os valores, atribuindo a eles. Em vez de especificar um valor de dados reais de um campo, você pode chamar `SetFieldNull` para especificar o valor Null.  
+Depois de chamar `AddNew`, o buffer de edição representa um novo, vazio registro, pronto para ser preenchido com valores. Para fazer isso, você definir manualmente os valores, atribuindo a eles. Em vez de especificar um valor de dados reais de um campo, você pode chamar `SetFieldNull` para especificar o valor Null.  
   
- Para confirmar suas alterações, você deve chamar `Update`. Quando você chama `Update` para o novo registro:  
+Para confirmar suas alterações, você deve chamar `Update`. Quando você chama `Update` para o novo registro:  
   
--   Se o driver ODBC dá suporte a `::SQLSetPos` função de API do ODBC, o MFC usa a função para adicionar o registro na fonte de dados. Com `::SQLSetPos`, MFC pode adicionar um registro com mais eficiência porque ele não precisa construir e processar uma instrução SQL.  
+- Se o driver ODBC dá suporte a `::SQLSetPos` função de API do ODBC, o MFC usa a função para adicionar o registro na fonte de dados. Com `::SQLSetPos`, MFC pode adicionar um registro com mais eficiência porque ele não precisa construir e processar uma instrução SQL.  
   
--   Se `::SQLSetPos` não pode ser usado, o MFC faz o seguinte:  
+- Se `::SQLSetPos` não pode ser usado, o MFC faz o seguinte:  
   
     1.  Se nenhuma alteração seja detectada, `Update` não faz nada e retornará 0.  
   
@@ -92,35 +93,37 @@ Este tópico se aplica às classes ODBC do MFC.
     >  Para detectar quando o valor de alterar os membros de dados do conjunto de registros, o MFC usa um valor PSEUDO_NULL apropriado para cada tipo de dados que você pode armazenar em um conjunto de registros. Se você deve definir explicitamente um campo para o valor PSEUDO_NULL e o campo já acontece para ser marcados como Null, você também deve chamar `SetFieldNull`, passando o endereço do campo no primeiro parâmetro e FALSE no segundo parâmetro.  
   
 ##  <a name="_core_visibility_of_added_records"></a> Visibilidade de registros adicionados  
- Quando um registro adicionado é visível para o conjunto de registros? Registros adicionados às vezes aparecem e algumas vezes não são visíveis, dependendo das duas coisas:  
+
+Quando um registro adicionado é visível para o conjunto de registros? Registros adicionados às vezes aparecem e algumas vezes não são visíveis, dependendo das duas coisas:  
   
--   O que o driver é capaz de.  
+- O que o driver é capaz de.  
   
--   O que o framework pode aproveitar.  
+- O que o framework pode aproveitar.  
   
- Se o driver ODBC dá suporte a `::SQLSetPos` função de API do ODBC, o MFC usa a função para adicionar registros. Com `::SQLSetPos`, adicionados registros são visíveis para qualquer conjunto de registros atualizável do MFC. Sem suporte para a função, adicionada registros não são visíveis, e você deve chamar `Requery` para vê-los. Usando `::SQLSetPos` também é mais eficiente.  
+Se o driver ODBC dá suporte a `::SQLSetPos` função de API do ODBC, o MFC usa a função para adicionar registros. Com `::SQLSetPos`, adicionados registros são visíveis para qualquer conjunto de registros atualizável do MFC. Sem suporte para a função, adicionada registros não são visíveis, e você deve chamar `Requery` para vê-los. Usando `::SQLSetPos` também é mais eficiente.  
   
 ##  <a name="_core_editing_an_existing_record"></a> Editando um registro existente  
- A edição de um registro existente em um conjunto de registros envolve a rolagem para o registro, o conjunto de registros de chamada [edite](../../mfc/reference/crecordset-class.md#edit) função de membro, definindo os valores de membros de dados de campo do novo registro e, em seguida, chamar o [atualizar](../../mfc/reference/crecordset-class.md#update)função de membro para gravar o registro alterado para a fonte de dados.  
+
+A edição de um registro existente em um conjunto de registros envolve a rolagem para o registro, o conjunto de registros de chamada [edite](../../mfc/reference/crecordset-class.md#edit) função de membro, definindo os valores de membros de dados de campo do novo registro e, em seguida, chamar o [atualizar](../../mfc/reference/crecordset-class.md#update)função de membro para gravar o registro alterado para a fonte de dados.  
   
- Como uma pré-condição para chamar `Edit`, o conjunto de registros deve ser atualizável e em um registro. O `CanUpdate` e `IsDeleted` funções de membro permitem determinar essas condições. O registro atual também não já tenham sido excluído, e deve haver registros no conjunto de registros (ambos `IsBOF` e `IsEOF` retornam 0).  
+Como uma pré-condição para chamar `Edit`, o conjunto de registros deve ser atualizável e em um registro. O `CanUpdate` e `IsDeleted` funções de membro permitem determinar essas condições. O registro atual também não já tenham sido excluído, e deve haver registros no conjunto de registros (ambos `IsBOF` e `IsEOF` retornam 0).  
   
- Quando você chama `Edit`, o registro no buffer de edição (o registro atual) é armazenado. Os valores do registro armazenado posteriormente são usados para detectar se todos os campos foram alterados.  
+Quando você chama `Edit`, o registro no buffer de edição (o registro atual) é armazenado. Os valores do registro armazenado posteriormente são usados para detectar se todos os campos foram alterados.  
   
- Depois de chamar `Edit`, o buffer de edição ainda representa o registro atual, mas agora está pronto para aceitar as alterações para os membros de dados do campo. Para alterar o registro, você definir manualmente os valores de quaisquer membros de dados de campo que você deseja editar. Em vez de especificar um valor de dados reais de um campo, você pode chamar `SetFieldNull` para especificar o valor Null. Para confirmar suas alterações, chame `Update`.  
+Depois de chamar `Edit`, o buffer de edição ainda representa o registro atual, mas agora está pronto para aceitar as alterações para os membros de dados do campo. Para alterar o registro, você definir manualmente os valores de quaisquer membros de dados de campo que você deseja editar. Em vez de especificar um valor de dados reais de um campo, você pode chamar `SetFieldNull` para especificar o valor Null. Para confirmar suas alterações, chame `Update`.  
   
 > [!TIP]
 >  Para tirar proveito do `AddNew` ou `Edit` modo, chame `Move` com o parâmetro *AFX_MOVE_REFRESH*.  
   
- Como uma pré-condição para chamar `Update`, o conjunto de registros não pode estar vazio e o registro atual não tenham sido excluído. `IsBOF`, `IsEOF`, e `IsDeleted` devem todas retornar 0.  
+Como uma pré-condição para chamar `Update`, o conjunto de registros não pode estar vazio e o registro atual não tenham sido excluído. `IsBOF`, `IsEOF`, e `IsDeleted` devem todas retornar 0.  
   
- Quando você chama `Update` para o registro editado:  
+Quando você chama `Update` para o registro editado:  
   
--   Se o driver ODBC dá suporte a `::SQLSetPos` função de API do ODBC, o MFC usa a função para atualizar o registro na fonte de dados. Com `::SQLSetPos`, o driver comparará seu buffer de edição com o registro correspondente no servidor, atualizando o registro no servidor se os dois forem diferentes. Com `::SQLSetPos`, MFC pode atualizar um registro com mais eficiência porque ele não precisa construir e processar uma instrução SQL.  
+- Se o driver ODBC dá suporte a `::SQLSetPos` função de API do ODBC, o MFC usa a função para atualizar o registro na fonte de dados. Com `::SQLSetPos`, o driver comparará seu buffer de edição com o registro correspondente no servidor, atualizando o registro no servidor se os dois forem diferentes. Com `::SQLSetPos`, MFC pode atualizar um registro com mais eficiência porque ele não precisa construir e processar uma instrução SQL.  
   
      -ou-  
   
--   Se `::SQLSetPos` não pode ser usado, o MFC faz o seguinte:  
+- Se `::SQLSetPos` não pode ser usado, o MFC faz o seguinte:  
   
     1.  Se não houve nenhuma alteração `Update` não faz nada e retornará 0.  
   
@@ -137,17 +140,18 @@ Este tópico se aplica às classes ODBC do MFC.
     >  Se você chamar `AddNew` ou `Edit` depois de ter chamado a qualquer função anteriormente, mas antes de chamar `Update`, o buffer de edição é atualizado com o registro armazenado, substituindo o registro novo ou editado em andamento. Esse comportamento oferece uma maneira para anular uma `AddNew` ou `Edit` e iniciar uma nova: se você determinar que o registro em andamento está com defeito, simplesmente chame `Edit` ou `AddNew` novamente.  
   
 ##  <a name="_core_deleting_a_record"></a> Excluindo um registro  
- Excluir um registro de um conjunto de registros envolve a rolagem para o registro e o conjunto de registros de chamada [excluir](../../mfc/reference/crecordset-class.md#delete) função de membro. Diferentemente `AddNew` e `Edit`, `Delete` não requer uma chamada correspondente para `Update`.  
+
+Excluir um registro de um conjunto de registros envolve a rolagem para o registro e o conjunto de registros de chamada [excluir](../../mfc/reference/crecordset-class.md#delete) função de membro. Diferentemente `AddNew` e `Edit`, `Delete` não requer uma chamada correspondente para `Update`.  
   
- Como uma pré-condição para chamar `Delete`, o conjunto de registros deve ser atualizável e ele deve estar em um registro. O `CanUpdate`, `IsBOF`, `IsEOF`, e `IsDeleted` funções de membro permitem determinar essas condições.  
+Como uma pré-condição para chamar `Delete`, o conjunto de registros deve ser atualizável e ele deve estar em um registro. O `CanUpdate`, `IsBOF`, `IsEOF`, e `IsDeleted` funções de membro permitem determinar essas condições.  
   
- Quando você chama `Delete`:  
+Quando você chama `Delete`:  
   
--   Se o driver ODBC dá suporte a `::SQLSetPos` função de API do ODBC, o MFC usa a função para excluir o registro na fonte de dados. Usando `::SQLSetPos` é geralmente mais eficiente do que usando o SQL.  
+- Se o driver ODBC dá suporte a `::SQLSetPos` função de API do ODBC, o MFC usa a função para excluir o registro na fonte de dados. Usando `::SQLSetPos` é geralmente mais eficiente do que usando o SQL.  
   
      -ou-  
   
--   Se `::SQLSetPos` não pode ser usado, o MFC faz o seguinte:  
+- Se `::SQLSetPos` não pode ser usado, o MFC faz o seguinte:  
   
     1.  O registro atual no buffer de edição não é feito como na `AddNew` e `Edit`.  
   
@@ -162,9 +166,10 @@ Este tópico se aplica às classes ODBC do MFC.
     > [!NOTE]
     >  Depois de excluir um registro, você deve rolar para outro registro para preencher novamente o buffer de edição com os novos dados do registro. É um erro ao chamar `Delete` novamente ou chamar `Edit`.  
   
- Para obter informações sobre instruções SQL usada em operações de atualização, consulte [SQL](../../data/odbc/sql.md).  
+Para obter informações sobre instruções SQL usada em operações de atualização, consulte [SQL](../../data/odbc/sql.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)   
- [Conjunto de registros: Mais sobre atualizações (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)   
- [RFX (troca de campo de registro)](../../data/odbc/record-field-exchange-rfx.md)
+
+[Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
+[Conjunto de registros: mais sobre atualizações (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
+[RFX (troca de campo de registro)](../../data/odbc/record-field-exchange-rfx.md)

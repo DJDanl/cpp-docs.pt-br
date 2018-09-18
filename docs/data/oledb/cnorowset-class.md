@@ -21,14 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e92c9bfb49bbb64faca633f04bb87f40028b6e1e
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: a838bc904a4f09f72962ce7c991bab8e5ac8fcbf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339556"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074832"
 ---
 # <a name="cnorowset-class"></a>Classe CNoRowset
+
 Pode ser usado como um argumento de modelo (`TRowset`) para [CCommand](../../data/oledb/ccommand-class.md) ou [CTable](../../data/oledb/ctable-class.md).  
   
 ## <a name="syntax"></a>Sintaxe
@@ -39,31 +40,35 @@ class CNoRowset
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *TAccessor*  
- Uma classe de acessador. O padrão é `CAccessorBase`.  
+
+*TAccessor*<br/>
+Uma classe de acessador. O padrão é `CAccessorBase`.  
   
 ## <a name="remarks"></a>Comentários  
- Use `CNoRowset` como um argumento de modelo se o comando não retornar um conjunto de linhas.  
+
+Use `CNoRowset` como um argumento de modelo se o comando não retornar um conjunto de linhas.  
   
- `CNoRowset` implementa os seguintes métodos de stub, cada um dos quais correspondem aos outros métodos de classe de acessador:  
+`CNoRowset` implementa os seguintes métodos de stub, cada um dos quais correspondem aos outros métodos de classe de acessador:  
   
--   `BindFinished` -Indica quando a associação for concluída (retorna `S_OK`).  
+- `BindFinished` -Indica quando a associação for concluída (retorna `S_OK`).  
   
--   `Close` -Libera linhas e a interface IRowset atual.  
+- `Close` -Libera linhas e a interface IRowset atual.  
   
--   `GetIID` -Recupera a ID de interface de um ponto de conexão.  
+- `GetIID` -Recupera a ID de interface de um ponto de conexão.  
   
--   `GetInterface` -Recupera uma interface.  
+- `GetInterface` -Recupera uma interface.  
   
--   `GetInterfacePtr` -Recupera um ponteiro de interface encapsulado.  
+- `GetInterfacePtr` -Recupera um ponteiro de interface encapsulado.  
   
--   `SetAccessor` -Define um ponteiro para o acessador.  
+- `SetAccessor` -Define um ponteiro para o acessador.  
   
--   `SetupOptionalRowsetInterfaces` -Configura interfaces opcionais para o conjunto de linhas.  
+- `SetupOptionalRowsetInterfaces` -Configura interfaces opcionais para o conjunto de linhas.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atldbcli.h  
+
+**Cabeçalho:** atldbcli.h  
   
 ## <a name="see-also"></a>Consulte também  
- [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

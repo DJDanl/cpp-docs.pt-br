@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4935 | Microsoft Docs
+title: Compilador aviso (nível 1) C4935 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a43b791dea84bbda8cdebdcbb603a52fb190e32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db481531dc13433ac0ca4ef6ceca6ab284a859b2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290511"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027585"
 ---
-# <a name="compiler-warning-level-1-c4935"></a>Compilador C4935 de aviso (nível 1)
-especificador de acesso de assembly modificado de 'access'  
-  
-A visibilidade do assembly de um tipo foi modificada. O compilador usa o especificador de última que ele encontrar. Por exemplo, a visibilidade do assembly de uma declaração de encaminhamento pode ser diferente do que a visibilidade do assembly da definição de classe.  
-  
-C4935 só está acessível usando a opção de compilador obsoleto **/CLR: oldSyntax**.  
+# <a name="compiler-warning-level-1-c4935"></a>Compilador aviso (nível 1) C4935
+
+especificador de acesso de assembly modificado do 'access'
+
+A visibilidade do assembly de um tipo foi modificada. O compilador usa o especificador de último encontra. Por exemplo, a visibilidade do assembly de uma declaração de encaminhamento pode ser diferente do que a visibilidade do assembly da definição de classe.
+
+C4935 só está acessível usando a opção de compilador obsoletos **/CLR: oldSyntax**.

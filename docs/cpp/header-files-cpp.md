@@ -16,25 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be194095b6461eaedd9e814c6130801b431fef5d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7d1e477b04421f7e8920bba47b2eba4e73df34cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602407"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028526"
 ---
 # <a name="header-files-c"></a>Arquivos de cabeçalho (C++)
 
-Os nomes dos elementos do programa, como variáveis, funções, classes e assim por diante devem ser declarados antes que possam ser usados. Por exemplo, você não pode gravar apenas `x = 42` sem primeiro declarar 'x'. 
+Os nomes dos elementos do programa, como variáveis, funções, classes e assim por diante devem ser declarados antes que possam ser usados. Por exemplo, você não pode gravar apenas `x = 42` sem primeiro declarar 'x'.
 
 ```cpp
 int x; // declaration
 x = 42; // use x
 ```
 
- A declaração informa ao compilador se é um **int**, um **duplo**, um **função**, um **classe** ou alguma outra coisa.  Além disso, cada nome deve ser declarado (direta ou indiretamente) em todos os arquivos. cpp no qual ele é usado. Quando você compila um programa, cada arquivo. cpp é compilado de forma independente em uma unidade de compilação. O compilador não tem conhecimento de que nomes são declarados em outras unidades de compilação. Isso significa que, se você definir uma classe ou função ou variável global, você deve fornecer uma declaração dessa coisa em cada arquivo. cpp adicionais que o utiliza. Cada declaração de lá o que deve ser exatamente idêntica em todos os arquivos. Uma inconsistência de pequena causará erros ou um comportamento não intencional, quando o vinculador tenta mesclar todas as unidades de compilação em um único programa.
+A declaração informa ao compilador se é um **int**, um **duplo**, um **função**, um **classe** ou alguma outra coisa.  Além disso, cada nome deve ser declarado (direta ou indiretamente) em todos os arquivos. cpp no qual ele é usado. Quando você compila um programa, cada arquivo. cpp é compilado de forma independente em uma unidade de compilação. O compilador não tem conhecimento de que nomes são declarados em outras unidades de compilação. Isso significa que, se você definir uma classe ou função ou variável global, você deve fornecer uma declaração dessa coisa em cada arquivo. cpp adicionais que o utiliza. Cada declaração de lá o que deve ser exatamente idêntica em todos os arquivos. Uma inconsistência de pequena causará erros ou um comportamento não intencional, quando o vinculador tenta mesclar todas as unidades de compilação em um único programa.
 
-Para minimizar o potencial para erros, o C++ adotou a convenção de uso *arquivos de cabeçalho* para conter as declarações. Você fazer as declarações em um arquivo de cabeçalho e usar o #include diretiva em todos os arquivos. cpp ou outro arquivo de cabeçalho requer essa declaração. O #include diretiva insere uma cópia do arquivo de cabeçalho diretamente no arquivo. cpp antes da compilação. 
+Para minimizar o potencial para erros, o C++ adotou a convenção de uso *arquivos de cabeçalho* para conter as declarações. Você fazer as declarações em um arquivo de cabeçalho e usar o #include diretiva em todos os arquivos. cpp ou outro arquivo de cabeçalho requer essa declaração. O #include diretiva insere uma cópia do arquivo de cabeçalho diretamente no arquivo. cpp antes da compilação.
 
 ## <a name="example"></a>Exemplo
 
@@ -91,7 +91,7 @@ Depois que o compilador conclusão da compilação de cada arquivo. cpp em arqui
 
 ## <a name="include-guards"></a>Incluir protege
 
-Normalmente, os arquivos de cabeçalho têm um *incluem guard* ou um `#pragma once` diretiva para garantir que eles não são inseridos várias vezes em um arquivo. cpp único. 
+Normalmente, os arquivos de cabeçalho têm um *incluem guard* ou um `#pragma once` diretiva para garantir que eles não são inseridos várias vezes em um arquivo. cpp único.
 
 ```cpp
 // my_class.h
@@ -115,20 +115,20 @@ namespace N
 Como um arquivo de cabeçalho potencialmente pode ser incluído por vários arquivos, ele não pode conter definições que podem produzir várias definições de mesmo nome. O exemplo a seguir não é permitidas ou é considerados muito boa prática:
 
 - definições de tipo interno no namespace ou escopo global
-- definições de função não embutida 
+- definições de função não embutida
 - definições de variável não const
 - definições de agregação
 - namespaces sem nome
 - usando diretivas
 
-Usar o **usando** diretiva não necessariamente causará um erro, mas potencialmente pode causar um problema porque ele traz o namespace no escopo em todos os arquivos. cpp que direta ou indiretamente, inclua esse cabeçalho. 
+Usar o **usando** diretiva não necessariamente causará um erro, mas potencialmente pode causar um problema porque ele traz o namespace no escopo em todos os arquivos. cpp que direta ou indiretamente, inclua esse cabeçalho.
 
 ## <a name="sample-header-file"></a>Arquivo de cabeçalho de exemplo
 
 O exemplo a seguir mostra os vários tipos de declarações e definições que são permitidas em um arquivo de cabeçalho:
 
 ```cpp
-#pragma once 
+#pragma once
 #include <vector> // #include directive
 #include <string>
 
@@ -157,7 +157,7 @@ namespace N  // namespace declaration
     void print_to_log();
 #endif
 
-    class my_class   // regular class definition, 
+    class my_class   // regular class definition,
     {                // but no non-inline function definitions
 
         friend class other_class;

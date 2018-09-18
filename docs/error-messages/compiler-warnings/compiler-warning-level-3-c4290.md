@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f03d35e1a3756979d8936647255e2b65afef56d9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a6f09d8f3396381f34a0fbe3c7150b5948cee01
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289887"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46015959"
 ---
-# <a name="compiler-warning-level-3-c4290"></a>Compilador C4290 de aviso (nível 3)
-Especificação de exceção de C++ ignorada exceto to indicar que a função não é nothrow  
-  
- Uma função é declarada usando a especificação de exceção, que aceita do Visual C++, mas não implementa. Código com a exceção especificações são ignoradas durante a compilação precisa ser recompilado e vinculado para ser reutilizado em futuras versões com suporte de especificações de exceção.  
-  
- Para obter mais informações, consulte [especificações de exceção (lançar)](../../cpp/exception-specifications-throw-cpp.md) .  
-  
- Você pode evitar esse aviso usando o [aviso](../../preprocessor/warning.md) pragma:  
-  
-```  
-#pragma warning( disable : 4290 )  
-```  
-  
- O exemplo de código a seguir gera C4290:  
-  
-```  
-// C4290.cpp  
-// compile with: /EHs /W3 /c  
-void f1(void) throw(int) {}   // C4290  
-  
-// OK  
-void f2(void) throw() {}  
-void f3(void) throw(...) {}  
+# <a name="compiler-warning-level-3-c4290"></a>Compilador aviso (nível 3) C4290
+
+Especificação de exceção de C++ ignorada, exceto to indicam uma função não é __declspec(nothrow)
+
+Uma função é declarada usando a especificação de exceção, o que o Visual C++ aceita, mas não implementa. Codifique com exceção de especificações que são ignoradas durante a compilação precisa ser recompilado e vinculado para ser reutilizado em futuras versões que dão suporte a especificações de exceção.
+
+Para obter mais informações, consulte [especificações de exceção (lançar)](../../cpp/exception-specifications-throw-cpp.md) .
+
+Você pode evitar esse aviso usando o [aviso](../../preprocessor/warning.md) pragma:
+
+```
+#pragma warning( disable : 4290 )
+```
+
+O exemplo de código a seguir gera C4290:
+
+```
+// C4290.cpp
+// compile with: /EHs /W3 /c
+void f1(void) throw(int) {}   // C4290
+
+// OK
+void f2(void) throw() {}
+void f3(void) throw(...) {}
 ```

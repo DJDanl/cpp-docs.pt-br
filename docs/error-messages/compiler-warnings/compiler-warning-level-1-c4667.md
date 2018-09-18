@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4667 | Microsoft Docs
+title: Compilador aviso (nível 1) C4667 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af88dc89fce0d95ec252a9cbca4c7a37955244dc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f6b341998caa519874e066bcc5e6a25651f0d47
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33280758"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025458"
 ---
-# <a name="compiler-warning-level-1-c4667"></a>Compilador C4667 de aviso (nível 1)
-'function': nenhum modelo de função definido que corresponda à instanciação forçada  
-  
- Não é possível instanciar um modelo de função que não foi declarado.  
-  
- O exemplo a seguir fará com que C4667:  
-  
-```  
-// C4667a.cpp  
-// compile with: /LD /W1  
-template  
-void max(const int &, const int &); // C4667 expected  
-```  
-  
- Para evitar este aviso, primeiro declare o modelo de função:  
-  
-```  
-// C4667b.cpp  
-// compile with: /LD  
-// Declare the function template  
-template<typename T>  
-const T &max(const T &a, const T &b) {  
-   return (a > b) ? a : b;  
-}  
-// Then forcibly instantiate it with a desired type ... i.e. 'int'  
-//  
-template  
-const int &max(const int &, const int &);  
+# <a name="compiler-warning-level-1-c4667"></a>Compilador aviso (nível 1) C4667
+
+'function': nenhum template de função definido que corresponda à instanciação de forçada
+
+Você não pode instanciar um modelo de função não foi declarado.
+
+O exemplo a seguir fará com que C4667:
+
+```
+// C4667a.cpp
+// compile with: /LD /W1
+template
+void max(const int &, const int &); // C4667 expected
+```
+
+Para evitar esse aviso, primeiro declare o modelo de função:
+
+```
+// C4667b.cpp
+// compile with: /LD
+// Declare the function template
+template<typename T>
+const T &max(const T &a, const T &b) {
+   return (a > b) ? a : b;
+}
+// Then forcibly instantiate it with a desired type ... i.e. 'int'
+//
+template
+const int &max(const int &, const int &);
 ```

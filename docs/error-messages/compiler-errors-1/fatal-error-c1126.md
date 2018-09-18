@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a3ff02d69679074186e593d5e1c16bdf56d1052
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f014aafc60a36bfbb4edad50e7e3ceede6e3c8b2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225908"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062469"
 ---
 # <a name="fatal-error-c1126"></a>Erro fatal C1126
-'Identificador': alocação automática excede o tamanho  
-  
- Espaço alocado para variáveis locais de uma função (mais uma quantidade limitada de espaço usado pelo compilador, como um extra 20 bytes para funções swappable) excede o limite.  
-  
- Para corrigir esse erro, use `malloc` ou `new` para alocar uma grande quantidade de dados.
+
+'identifier': a alocação automática excede o tamanho
+
+Espaço alocado para variáveis locais de uma função (mais uma quantidade limitada de espaço usado pelo compilador, como um extra de 20 bytes para funções swappable) excede o limite.
+
+Para corrigir esse erro, use `malloc` ou `new` alocar grandes quantidades de dados.

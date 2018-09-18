@@ -18,21 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1dca3cc2d51f0e165e9b17d9fe630752a427590f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 05cfcb59100f1778b0266636fb3930fd9489e917
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339150"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067071"
 ---
 # <a name="fetching-data"></a>Recuperando dados
+
 Depois de abrir a fonte de dados, sessão e objetos de conjunto de linhas, você pode buscar dados. Dependendo do tipo de acessador que você está usando, você precisará associar colunas.  
   
 ### <a name="to-fetch-data"></a>Para buscar dados  
   
-1.  Abra o conjunto de linhas usando apropriado **abrir** comando.  
+1. Abra o conjunto de linhas usando apropriado **abrir** comando.  
   
-2.  Se você estiver usando `CManualAccessor`, associar as colunas de saída, se você ainda não fez isso. Para associar as colunas, chame `GetColumnInfo`e, em seguida, crie um acessador com as associações, conforme mostrado no exemplo a seguir:  
+1. Se você estiver usando `CManualAccessor`, associar as colunas de saída, se você ainda não fez isso. Para associar as colunas, chame `GetColumnInfo`e, em seguida, crie um acessador com as associações, conforme mostrado no exemplo a seguir:  
   
     ```cpp  
     // From the DBViewer Sample CDBTreeView::OnQueryEdit  
@@ -49,7 +50,7 @@ Depois de abrir a fonte de dados, sessão e objetos de conjunto de linhas, você
     rs.Bind();  
     ```  
   
-3.  Gravar um `while` loop para recuperar os dados. No loop, chame `MoveNext` para avançar o cursor e testar o valor de retorno com S_OK, conforme mostrado no exemplo a seguir:  
+1. Gravar um `while` loop para recuperar os dados. No loop, chame `MoveNext` para avançar o cursor e testar o valor de retorno com S_OK, conforme mostrado no exemplo a seguir:  
   
     ```cpp  
     while (rs.MoveNext() == S_OK)  
@@ -59,7 +60,7 @@ Depois de abrir a fonte de dados, sessão e objetos de conjunto de linhas, você
     }  
     ```  
   
-4.  Dentro de `while` loop, você pode buscar os dados de acordo com seu tipo de acessador.  
+1. Dentro de `while` loop, você pode buscar os dados de acordo com seu tipo de acessador.  
   
     -   Se você usar o [CAccessor](../../data/oledb/caccessor-class.md) classe, você deve ter um registro de usuário que contém membros de dados. Você pode acessar seus dados usando os membros de dados, conforme mostrado no exemplo a seguir:  
   
@@ -101,4 +102,5 @@ Depois de abrir a fonte de dados, sessão e objetos de conjunto de linhas, você
         ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhando com modelos de consumidor do OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[Trabalhando com modelos de consumidor do OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

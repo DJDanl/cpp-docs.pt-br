@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d16df0d314aa5039d0fc495c1b934e647a40c62
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d954e06bfe0ca6b6d94347c6f847242ec549cf80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330782"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041383"
 ---
 # <a name="math-error-m6107"></a>Erro M6107 (Math)
-unemulated  
-  
- Foi feita uma tentativa de executar uma instrução coprocessador que é inválido ou não é suportada pelo emulador.  
-  
- Programa será encerrado com código de saída 135.
+
+unemulated
+
+Foi feita uma tentativa de executar uma instrução de coprocessador que é inválido ou não é compatível com o emulador.
+
+Programa é encerrado com código de saída 135.

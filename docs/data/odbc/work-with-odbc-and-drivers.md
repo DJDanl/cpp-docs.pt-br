@@ -15,27 +15,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7d49fa24c6cb27bc54e8cc3dc6bba674cb12ae57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 37888b735e76c42aaca20b3519efe381f3d7578c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33095109"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038783"
 ---
 # <a name="work-with-odbc-and-drivers"></a>Trabalhar com ODBC e drivers
-ODBC permite escrever aplicativos que não são dependentes em apenas um sistema de gerenciamento de banco de dados (DBMS). Você pode escrever um aplicativo que pode operar em vários DBMSs para que os usuários tiverem o driver ODBC do DBMS específico correto.  
+
+ODBC permite que você escreva aplicativos que não são dependentes em apenas um sistema de gerenciamento de banco de dados (DBMS). Você pode escrever um aplicativo que pode operar em vários DBMSs para os quais os usuários têm o driver ODBC específicos de DBMS correto.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Determinar o esquema de uma fonte de dados ODBC em tempo de execução](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)  
+- [Determinar o esquema de uma fonte de dados ODBC em tempo de execução](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)  
   
--   [Obter uma descrição do driver usando o administrador ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
+- [Obter uma descrição de driver usando o administrador ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
   
--   [Obter ajuda online para o driver ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
+- [Obter ajuda online para o driver ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
   
--   [Criar uma tabela programaticamente em uma fonte de dados ODBC](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)  
+- [Criar programaticamente uma tabela em uma fonte de dados ODBC](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)  
   
--   [Chamar funções de API ODBC diretamente em MFC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
+- [Chamar funções API ODBC diretamente no MFC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)
+
+[ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)

@@ -1,5 +1,5 @@
 ---
-title: Erro de Build prj0006 no projeto | Microsoft Docs
+title: Erro de Build prj0006 do projeto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 151c22bf13c13de21e89a5c96185cf1c4c1ca349
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 264b2f90a2d778b1545117ce5c3b1272626ebad6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317473"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073246"
 ---
 # <a name="project-build-error-prj0006"></a>Erro de Build PRJ0006 no Projeto
-Não foi possível abrir o arquivo temporário 'file'. Verifique se o arquivo existe e se o diretório não está protegido contra gravação.  
-  
- Visual C++ não foi possível criar um arquivo temporário durante o processo de compilação. Motivos para isso:  
-  
--   Nenhum diretório temp.  
-  
--   Diretório temp de somente leitura.  
-  
--   Sem espaço em disco.  
-  
--   A pasta $ (IntDir) é somente leitura ou que contém os arquivos temporários que são somente leitura.  
-  
- Esse erro também ocorrerá após erro prj0007 no: não foi possível criar o diretório' diretório de saída'. Erro prj0007 no significa que não foi possível criar o diretório $ (IntDir), indicando a criação de arquivos temporariamente também falharão.  
-  
- Arquivos temporários são criados sempre que você especificar:  
-  
--   Um arquivo de resposta.  
-  
--   Uma etapa de compilação personalizada.  
-  
--   Um evento de compilação.
+
+Não foi possível abrir o arquivo temporário 'arquivo'. Verifique se o arquivo existe e que o diretório não está protegido contra gravação.
+
+Visual C++ não foi possível criar um arquivo temporário durante o processo de compilação. Motivos para isso:
+
+- Nenhum diretório temporário.
+
+- Diretório temporário de somente leitura.
+
+- Espaço em disco.
+
+- A pasta $ (IntDir) é somente leitura ou contém arquivos temporários que são somente leitura.
+
+Esse erro também ocorrerá erro prj0007 na seguir: não foi possível criar o diretório de saída 'diretório'. Erro prj0007 no significa que não foi possível criar o diretório $ (IntDir), indicando a criação de arquivos temporariamente também falharão.
+
+Arquivos temporários são criados sempre que você especificar:
+
+- Um arquivo de resposta.
+
+- Uma etapa de compilação personalizada.
+
+- Um evento de build.

@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d793da98b2ca4d9d86227177d3782908ef536b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5c4d9095eef3e37aaa487ebec9ae271bcd48c74f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289757"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075521"
 ---
-# <a name="compiler-warning-level-3-c4538"></a>Compilador C4538 de aviso (nível 3)
-'type': não há suporte para qualificadores const/volatile neste tipo  
-  
- Uma palavra-chave qualificador incorretamente foi aplicada a uma matriz. Para obter mais informações, consulte [matriz](../../windows/arrays-cpp-component-extensions.md).  
-  
- O exemplo a seguir gera C4538:  
-  
-```  
-// C4538.cpp  
-// compile with: /clr /W3 /LD  
-const array<int> ^f1();   // C4538  
-array<const int> ^f2();   // OK  
+# <a name="compiler-warning-level-3-c4538"></a>Compilador aviso (nível 3) C4538
+
+'type': não há suporte para qualificadores const/volatile neste tipo
+
+Uma palavra-chave qualificador foi aplicada a uma matriz incorretamente. Para obter mais informações, consulte [matriz](../../windows/arrays-cpp-component-extensions.md).
+
+O exemplo a seguir gera C4538:
+
+```
+// C4538.cpp
+// compile with: /clr /W3 /LD
+const array<int> ^f1();   // C4538
+array<const int> ^f2();   // OK
 ```

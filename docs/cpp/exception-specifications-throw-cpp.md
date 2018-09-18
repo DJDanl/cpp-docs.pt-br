@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dfc9c50503fcd277f34e8f5dfc4a630d888eebf
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4cc44672fe30af8b6521b617228fb70b88e61f83
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318261"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040929"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Especificações de exceção (lançar, noexcept) (C++)
 
-Especificações de exceção são um recurso da linguagem C++ que indicam a intenção do programador sobre os tipos de exceção que podem ser propagadas por uma função. Você pode especificar que uma função pode ou não pode sair por uma exceção usando uma *especificação de exceção*. O compilador pode usar essas informações para otimizar as chamadas para a função e encerrar o programa se uma exceção inesperada ignora a função. 
+Especificações de exceção são um recurso da linguagem C++ que indicam a intenção do programador sobre os tipos de exceção que podem ser propagadas por uma função. Você pode especificar que uma função pode ou não pode sair por uma exceção usando uma *especificação de exceção*. O compilador pode usar essas informações para otimizar as chamadas para a função e encerrar o programa se uma exceção inesperada ignora a função.
 
 Antes do c++17, havia dois tipos de especificação de exceção. O *especificação noexcept* era nova no c++11. Especifica se o conjunto de exceções possíveis que podem escapar a função está vazio. O *especificação de exceção dinâmica*, ou `throw(optional_type_list)` especificação, foi preterido no c++11 e removidos em c++17, exceto para `throw()`, que é um alias para `noexcept(true)`. Essa especificação de exceção foi projetada para fornecer informações de resumo sobre quais exceções podem ser lançadas fora de uma função, mas na prática foi encontrado para ser um problema. Uma especificação de exceção dinâmica que provou ser um pouco útil era a incondicional `throw()` especificação. Por exemplo, a declaração de função:
 
@@ -138,5 +138,6 @@ in handler
 ```
 
 ## <a name="see-also"></a>Consulte também
- [Instruções try, throw e catch (C++)](../cpp/try-throw-and-catch-statements-cpp.md)  
- [Tratamento de exceções em C++](../cpp/cpp-exception-handling.md)
+
+[Instruções try, throw e catch (C++)](../cpp/try-throw-and-catch-statements-cpp.md)<br/>
+[Tratamento de exceções em C++](../cpp/cpp-exception-handling.md)

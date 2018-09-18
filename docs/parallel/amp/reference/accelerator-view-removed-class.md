@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0426dd44cfcb8f655f3981802dfe23adcd436a0d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f1c8963fee0fa7718c6ea8fe67904613b2dca8ad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688148"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020246"
 ---
 # <a name="acceleratorviewremoved-class"></a>Classe accelerator_view_removed
-A exceção que é lançada quando uma chamada de DirectX subjacente falhar porque o mecanismo de detecção e recuperação de tempo limite do Windows.  
+A exceção que é lançada quando uma chamada subjacente de DirectX falha devido ao mecanismo de detecção e recuperação de tempo limite do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,7 +47,7 @@ class accelerator_view_removed : public runtime_exception;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[get_view_removed_reason](#get_view_removed_reason)|Retorna um código de erro HRESULT que indica a causa o `accelerator_view` remoção do objeto.|  
+|[get_view_removed_reason](#get_view_removed_reason)|Retorna um código de erro HRESULT que indica a causa do `accelerator_view` remoção do objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `exception`  
@@ -57,13 +57,13 @@ class accelerator_view_removed : public runtime_exception;
  `out_of_memory`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** amprt.h  
+ **Cabeçalho:** amprt. h  
   
  **Namespace:** Simultaneidade  
 
 ## <a name="ctor"></a> accelerator_view_removed 
 
-Inicializa uma nova instância do [accelerator_view_removed](accelerator-view-removed-class.md) classe.  
+Inicializa uma nova instância dos [accelerator_view_removed](accelerator-view-removed-class.md) classe.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -77,18 +77,18 @@ explicit accelerator_view_removed(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Message`  
- Uma descrição do erro.  
+*Mensagem*<br/>
+Uma descrição do erro.  
   
- `_View_removed_reason`  
- Um código de erro HRESULT que indica a causa da remoção de `accelerator_view` objeto.  
+*_View_removed_reason*<br/>
+Um código de erro HRESULT que indica a causa da remoção do `accelerator_view` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Uma nova instância da classe accelerator_view_removed.  
   
 ## <a name="get_view_removed_reason_method"></a> get_view_removed_reason 
 
-Retorna um código de erro HRESULT que indica a causa o `accelerator_view` remoção do objeto.  
+Retorna um código de erro HRESULT que indica a causa do `accelerator_view` remoção do objeto.  
   
 ### <a name="syntax"></a>Sintaxe  
   

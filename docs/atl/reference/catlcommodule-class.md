@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f87f5b9f8295b49b9c1c4bec45cad96e3dec0872
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f4c035fad1fd675fd36fef73d405c63aab3be739
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760052"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040798"
 ---
 # <a name="catlcommodule-class"></a>Classe CAtlComModule
 
@@ -107,10 +107,10 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 TRUE se a biblioteca de tipos deve ser registrado. O valor padrão é FALSE.
 
-*pCLSID*  
+*pCLSID*<br/>
 Aponta para o CLSID do objeto a ser registrado. Se NULL (o valor padrão), todos os objetos no mapa de objetos será registrado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -132,7 +132,7 @@ HRESULT RegisterTypeLib();
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Cadeia de caracteres no formato "\\\N", onde N é o índice de inteiro do recurso TYPELIB.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -155,10 +155,10 @@ HRESULT UnregisterServer(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 TRUE se a biblioteca de tipos deve ser cancelado. O valor padrão é FALSE.
 
-*pCLSID*  
+*pCLSID*<br/>
 Aponta para o CLSID do objeto a ser cancelado. Se NULL (o valor padrão), todos os objetos no mapa de objetos será cancelado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -180,7 +180,7 @@ HRESULT UnRegisterTypeLib();
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpszIndex*  
+*lpszIndex*<br/>
 Cadeia de caracteres no formato "\\\N", onde N é o índice de inteiro do recurso TYPELIB.
 
 ### <a name="remarks"></a>Comentários
@@ -193,5 +193,5 @@ Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
 
 ## <a name="see-also"></a>Consulte também
 
-[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)   
+[_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

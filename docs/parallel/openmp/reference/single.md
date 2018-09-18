@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ff1a255933b79d39b6eedbb9362ff76a34e0f8a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8a57d93d8d2be84a470dd48d1ca6f9b04010182f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716983"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020973"
 ---
 # <a name="single"></a>single
 Permite que você especifique que uma seção de código deve ser executada em um único thread, não necessariamente o thread mestre.  
@@ -37,7 +37,7 @@ Permite que você especifique que uma seção de código deve ser executada em u
   
 #### <a name="parameters"></a>Parâmetros  
 
-`clause`  
+*Cláusula*<br/>
 (Opcional) Zero ou mais cláusulas. Consulte a seção comentários para obter uma lista das cláusulas com suporte pelo **único**.  
   
 ## <a name="remarks"></a>Comentários  
@@ -51,13 +51,13 @@ Permite que você especifique que uma seção de código deve ser executada em u
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
- O [mestre](../../../parallel/openmp/reference/master.md) diretiva permite que você especifique que uma seção de código deve ser executada somente no thread mestre.  
+O [mestre](../../../parallel/openmp/reference/master.md) diretiva permite que você especifique que uma seção de código deve ser executada somente no thread mestre.  
   
  Para obter mais informações, consulte [2.4.3 único construir](../../../parallel/openmp/2-4-3-single-construct.md).  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // omp_single.cpp  
 // compile with: /openmp   
 #include <stdio.h>  

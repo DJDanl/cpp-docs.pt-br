@@ -1,5 +1,5 @@
 ---
-title: C2767 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2767 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5ac628d1e02c53b0ed0872873ef23ef708df982
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6301471b4797bf3a1cb6f3936e54ab8bfb536b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234777"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051887"
 ---
-# <a name="compiler-error-c2767"></a>C2767 de erro do compilador
-gerenciado ou WinRTarray dimensão incompatibilidade: esperado argumentos de N - M fornecido  
-  
- Um gerenciado ou declaração de matriz WinRT ill foi formada. Para obter mais informações, consulte [matriz](../../windows/arrays-cpp-component-extensions.md).  
-  
- O exemplo a seguir gera C2767 e mostra como corrigi-lo:  
-  
-```  
-// C2767.cpp  
-// compile with: /clr  
-int main() {  
-   array<int> ^p1 = new array<int>(2,3); // C2767  
-   array<int> ^p2 = new array<int>(2);   // OK  
-}  
+# <a name="compiler-error-c2767"></a>Erro do compilador C2767
+
+gerenciado ou incompatibilidade de dimensão WinRTarray: esperado argumento (s) de N - M fornecido
+
+Um gerenciado ou declaração de matriz do WinRT ill foi formada. Para obter mais informações, consulte [matriz](../../windows/arrays-cpp-component-extensions.md).
+
+O exemplo a seguir gera C2767 e mostra como corrigi-lo:
+
+```
+// C2767.cpp
+// compile with: /clr
+int main() {
+   array<int> ^p1 = new array<int>(2,3); // C2767
+   array<int> ^p2 = new array<int>(2);   // OK
+}
 ```

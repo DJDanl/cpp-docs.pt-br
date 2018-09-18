@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9d9f0507f0e71e9417c6b0e577d8626c63c402e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 247282e7371ab79f40bfdb99031348100ee25d6d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320272"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037392"
 ---
 # <a name="resource-compiler-error-rc2015"></a>Erro RC2015 (compilador de recurso)
-muitos caracteres na constante  
-  
- Uma constante de caractere continha mais de dois caracteres.  
-  
- Constantes de caractere são limitadas a um caractere (constantes de caractere padrão) ou dois caracteres (constantes de caracteres longa).  
-  
- Observe que uma sequência de escape (por exemplo, \t de tabulação) é convertida em um único caractere.
+
+número excessivo de caracteres na constante
+
+Uma constante de caractere continha mais de dois caracteres.
+
+Constantes de caractere são limitadas a um caractere (constantes de caractere padrão) ou dois caracteres (constantes de caracteres longa).
+
+Observe que uma sequência de escape (por exemplo, \t para tabulação) é convertida em um único caractere.

@@ -1,5 +1,5 @@
 ---
-title: C3505 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3505 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e0ea8edd3237db2085365450f43b4b955d36f33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d6af1b96f23332b5eed82fab2c24c93e2d53dee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257650"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054968"
 ---
-# <a name="compiler-error-c3505"></a>C3505 de erro do compilador
+# <a name="compiler-error-c3505"></a>Erro do compilador C3505
 
-> não é possível carregar a biblioteca de tipos '*guid*'  
-  
-C3505 pode ocorrer se você estiver executando o de 32 bits, hospedado x86 compilador cruzado para 64 bits, x64 destinos em 64 bits do computador, porque o compilador está em execução em WOW64 e só podem ler o hive de registro de 32 bits.  
-  
-Você pode resolver esse erro, a criação de versões de 32 bits e 64 bits da biblioteca de tipos que você está tentando importar e, em seguida, registre-os.  Ou você pode usar o compilador de 64 bits nativo, o que exige que você altere seu **diretórios VC + +** propriedade no IDE para apontar para o compilador de 64 bits.  
-  
-Para obter mais informações, consulte  
-  
--   [Como habilitar um conjunto de ferramentas Visual C++ de 64 bits na linha de comando](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)  
-  
--   [Como configurar projetos do Visual C++ para terem plataformas x64 de 64 bits como destino](../../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
+> não é possível carregar a biblioteca de tipos '*guid*'
+
+C3505 pode ser causado se você estiver executando o 32 bits, hospedados em x86 compilador cruzado de 64 bits, x64 destinos em 64 bits da máquina, porque o compilador está em execução no WOW64 e só podem ler o hive do registro de 32 bits.
+
+Você pode resolver esse erro, criando versões de 32 bits e 64 bits da biblioteca de tipos que você está tentando importar e, em seguida, registre-os.  Ou você pode usar o compilador nativo de 64 bits, que exige que você altere seu **diretórios VC + +** propriedade no IDE para apontar para o compilador de 64 bits.
+
+Para obter mais informações, consulte
+
+- [Como habilitar um conjunto de ferramentas Visual C++ de 64 bits na linha de comando](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
+
+- [Como configurar projetos do Visual C++ para terem plataformas x64 de 64 bits como destino](../../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)

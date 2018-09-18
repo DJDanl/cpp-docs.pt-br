@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 213d72e39575b447787c3e0ead7910baedc8e815
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe457f9a6181fa11b34dd615ad4d5b9637c8bddc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289991"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045166"
 ---
-# <a name="compiler-warning-level-3-c4023"></a>Compilador C4023 de aviso (nível 3)
-'symbol': ponteiro baseado transmitido para uma função sem protótipo: o número do parâmetro  
-  
- Transmitindo um ponteiro com base em uma função sem protótipo faz com que o ponteiro ser normalizados, com resultados imprevisíveis.  
-  
- Esse aviso pode ser corrigido, se você usar funções de protótipo que são passadas ponteiros com base.
+# <a name="compiler-warning-level-3-c4023"></a>Compilador aviso (nível 3) C4023
+
+'symbol': ponteiro baseado transmitido para uma função sem protótipo: número do parâmetro
+
+Passando um ponteiro baseado para uma função sem protótipo faz com que o ponteiro para ser normalizados, com resultados imprevisíveis.
+
+Esse aviso pode ser corrigido se você usar funções de protótipo que são passadas ponteiros com base.

@@ -1,5 +1,5 @@
 ---
-title: C2927 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2927 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee2d9057019c073035dfc07399e8c56580c8052d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c37b45cb86793c3c4ca7066f9d7adc047188f658
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241717"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026329"
 ---
-# <a name="compiler-error-c2927"></a>C2927 de erro do compilador
-'function': um modelo de função deve ser chamado com pelo menos um argumento  
-  
- Não é possível chamar uma função de modelo sem argumentos. O tipo dos argumentos de modelo determina qual versão da função para gerar.
+# <a name="compiler-error-c2927"></a>Erro do compilador C2927
+
+'function': um modelo de função deve ser chamado com pelo menos um argumento
+
+Você não pode chamar uma função de modelo sem argumentos. O tipo dos argumentos do modelo determina qual versão da função para gerar.

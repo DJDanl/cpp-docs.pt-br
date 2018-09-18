@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e49a63fc4bc8d31583478ee6f61fe7b374bb9f0b
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 5af33e7223f245325d3b4835a1599034778cd04f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691008"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027694"
 ---
 # <a name="ompsetnestlock"></a>omp_set_nest_lock
-Blocos de thread de execução até que um bloqueio esteja disponível.  
+Blocos de execução de thread até que um bloqueio esteja disponível.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,17 +34,16 @@ void omp_set_nest_lock(
 );  
 ```  
   
-## <a name="remarks"></a>Comentários  
- onde,  
+### <a name="parameters"></a>Parâmetros
   
- `lock`  
- Uma variável do tipo [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) que foi inicializado com [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md).  
+*lock*<br/>
+Uma variável do tipo [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) que foi inicializado com [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md).  
   
 ## <a name="remarks"></a>Comentários  
  Para obter mais informações, consulte [3.2.3 funções omp_set_lock e omp_set_nest_lock](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md).  
   
 ## <a name="examples"></a>Exemplos  
- Consulte [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md) para obter um exemplo de como usar `omp_set_nest_lock`.  
+ Ver [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md) para obter um exemplo de como usar `omp_set_nest_lock`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções](../../../parallel/openmp/reference/openmp-functions.md)

@@ -17,22 +17,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 945dbda4759fa2989acb0411d1a3216a5e9a036c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1aa37a2cc7208063ce4cfa786de196842ab42b45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297603"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050810"
 ---
 # <a name="expression-evaluator-error-cxx0015"></a>Erro CXX0015 (avaliador de expressão)
-expressão muito complexa (estouro de pilha)  
-  
- A expressão inserida era muito complexa ou aninhadas muito profundamente para a quantidade de armazenamento disponível para o avaliador de expressão C.  
-  
- Estouro geralmente ocorre devido a muitos cálculos pendentes.  
-  
- Reorganize a expressão para que cada componente da expressão pode ser avaliada como ele é encontrado, em vez de ter que esperar para outras partes da expressão deve ser calculado.  
-  
- Divida a expressão em vários comandos.  
-  
- Esse erro é idêntico ao CAN0015.
+
+expressão muito complexa (estouro de pilha)
+
+A expressão inserida era muito complexo ou aninhados muito profundamente para a quantidade de armazenamento disponível para o avaliador de expressão de C.
+
+Estouro normalmente ocorre devido a muitos cálculos pendentes.
+
+Reorganize a expressão para que cada componente da expressão pode ser avaliada como ele é encontrado, em vez de ter que esperar para outras partes da expressão deve ser calculado.
+
+Divida a expressão em vários comandos.
+
+Esse erro é idêntico ao CAN0015.

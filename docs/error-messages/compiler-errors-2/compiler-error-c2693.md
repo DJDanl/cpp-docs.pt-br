@@ -1,5 +1,5 @@
 ---
-title: C2693 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2693 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bed9c0dcad60febf343357ee3e0762ab3d93ef6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ecf51f5fdbe7d1c6b5d5070e048c69bfc840460
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232768"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051250"
 ---
-# <a name="compiler-error-c2693"></a>C2693 de erro do compilador
-'operator': comparação inválida para referências a um serviço ou uma matriz de WinRT  
-  
- Não é possível testar gerenciada ou uma matriz de WinRT para qualquer tipo de desigualdade. Por exemplo, você pode testar para ver se gerenciado matrizes são iguais, mas você não pode testar para ver se uma matriz é maior ou menor que outro conjunto.  
+# <a name="compiler-error-c2693"></a>Erro do compilador C2693
+
+'operator': comparação inválida para referências a um gerenciado ou uma matriz de WinRT
+
+Não é possível testar um gerenciado ou uma matriz de WinRT para qualquer tipo de desigualdade. Por exemplo, você pode testar para ver se gerenciado matrizes são iguais, mas não é possível testar para ver se uma matriz é maior ou menor que a outra matriz.

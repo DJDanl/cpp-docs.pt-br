@@ -1,5 +1,5 @@
 ---
-title: C2185 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2185 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 078860f39ff75c9475678a95adabfdc8ba1a91c7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29d7fd5a94122de9950ea6bcec3888a70b743c74
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172139"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063938"
 ---
-# <a name="compiler-error-c2185"></a>C2185 de erro do compilador
-'Identificador': alocação based inválida  
-  
- Uma variável do registro ou a variável automática (local) é declarado `__based`. Somente variáveis globais podem ser declaradas `__based`.
+# <a name="compiler-error-c2185"></a>Erro do compilador C2185
+
+'identifier': alocação based inválida
+
+Uma variável do registro ou a variável automática (local) é declarado `__based`. Somente as variáveis globais podem ser declaradas `__based`.

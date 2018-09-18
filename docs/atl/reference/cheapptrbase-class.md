@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 849e7ced8889cb46195946cca68243c37e1299a2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f2a6ab9e03a44f48acca9b949193ceec85eb3ef6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760117"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063106"
 ---
 # <a name="cheapptrbase-class"></a>Classe CHeapPtrBase
 
@@ -40,16 +40,16 @@ Essa classe constitui a base para várias classes de ponteiro inteligente de hea
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template <class T, class Allocator = CCRTAllocator>  
+template <class T, class Allocator = CCRTAllocator>
 class CHeapPtrBase
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 O tipo de objeto a ser armazenado no heap.
 
-*Alocador*  
+*Alocador*<br/>
 A classe de alocação de memória para usar. Por padrão, as rotinas de CRT são usadas para alocar e liberar memória.
 
 ## <a name="members"></a>Membros
@@ -102,7 +102,7 @@ bool AllocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*nBytes*  
+*nBytes*<br/>
 O número de bytes de memória para alocar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -123,7 +123,7 @@ void Attach(T* pData) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*pData*  
+*pData*<br/>
 O `CHeapPtrBase` objeto assumirá a propriedade do ponteiro this.
 
 ### <a name="remarks"></a>Comentários
@@ -216,7 +216,7 @@ Use este operador para chamar um método em uma classe apontada pelo `CHeapPtrBa
 
 O operador cast.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -234,7 +234,7 @@ bool ReallocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*nBytes*  
+*nBytes*<br/>
 A nova quantidade de memória para alocar, em bytes.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -243,6 +243,6 @@ Retorna VERDADEIRO se a memória com êxito é alocado, false caso contrário.
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CHeapPtr](../../atl/reference/cheapptr-class.md)   
-[Classe CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   
+[Classe CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
+[Classe CComHeapPtr](../../atl/reference/ccomheapptr-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

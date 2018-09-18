@@ -1,5 +1,5 @@
 ---
-title: C2512 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2512 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/09/2018
 ms.technology:
@@ -16,24 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 286be19ca407039a77d51503a34c7a27da1c3d5b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba1fbba98237879927fd82d6535c0c2688c1c304
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230467"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036911"
 ---
-# <a name="compiler-error-c2512"></a>C2512 de erro do compilador
+# <a name="compiler-error-c2512"></a>Erro do compilador C2512
 
-> '*identificador*': nenhum construtor padrão apropriado disponível  
+> '*identificador*': nenhum construtor padrão apropriado disponível
 
-Um *construtor padrão*, um construtor que não exige argumentos, não está disponível para a classe especificada, estrutura ou união. O compilador fornece um construtor padrão somente se nenhum construtor definido pelo usuário é fornecidas.
+Um *construtor padrão*, um construtor que não requer nenhum argumento, não está disponível para a classe especificada, estrutura ou união. O compilador fornece um construtor padrão somente se nenhum construtor definido pelo usuário é fornecidas.
 
-Se você fornecer um construtor que aceita um parâmetro não nulo, e para permitir que sua classe a ser criado sem parâmetros (por exemplo, como os elementos de uma matriz), você também deve fornecer um construtor padrão. O construtor padrão pode ser um construtor com valores padrão para todos os parâmetros.
+Se você fornecer um construtor que aceita um parâmetro não nulo e para permitir que sua classe a ser criado sem parâmetros (por exemplo, como os elementos de uma matriz), você também deve fornecer um construtor padrão. O construtor padrão pode ser um construtor com valores padrão para todos os parâmetros.
 
 ## <a name="example"></a>Exemplo
 
-Uma causa comum de erro C2512 é quando você define um construtor de classe ou estrutura que aceita argumentos e, em seguida, tentar declarar uma instância de sua classe ou struct sem argumentos. Por exemplo, `struct B` a seguir declara um construtor que exige um `char *` argumento, mas não uma que não aceita argumentos. Em `main`, uma instância de B é declarada, mas nenhum argumento for fornecido. O compilador gera C2512 porque ele não é possível localizar um construtor padrão para B.
+Uma causa comum de erro C2512 é quando você define um construtor de classe ou struct que aceita argumentos e, em seguida, tentar declarar uma instância de sua classe ou struct sem nenhum argumento. Por exemplo, `struct B` a seguir declara um construtor que exige um `char *` argumento, mas não uma que não usa argumentos. No `main`, uma instância de B é declarada, mas nenhum argumento for fornecido. O compilador gera C2512 porque ele não é possível encontrar um construtor padrão para o B.
 
 ```cpp
 // C2512.cpp

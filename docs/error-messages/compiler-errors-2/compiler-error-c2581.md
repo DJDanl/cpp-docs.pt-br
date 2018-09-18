@@ -1,5 +1,5 @@
 ---
-title: C2581 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2581 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cb826519ad9137a0e980fd1734b57e8a715f438
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0763db5d6284942ff3f8104eaabf705305f86e1f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231188"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018660"
 ---
-# <a name="compiler-error-c2581"></a>C2581 de erro do compilador
-'type': estático ' operador =' função é inválida  
-  
- A atribuição (`=`) operador incorretamente é declarado como `static`. Operadores de atribuição não podem ser `static`. Para obter mais informações, consulte [operadores definidos pelo usuário (C + + CLI)](../../dotnet/user-defined-operators-cpp-cli.md).  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C2581.  
-  
-```  
-// C2581.cpp  
-// compile with: /clr /c  
-ref struct Y {  
-   static Y ^ operator = (Y^ me, int i);   // C2581  
-   Y^ operator =(int i);   // OK  
-};  
+# <a name="compiler-error-c2581"></a>Erro do compilador C2581
+
+'type': estático ' operador =' função é ilegal
+
+A atribuição (`=`) operador incorretamente é declarado como `static`. Operadores de atribuição não podem ser `static`. Para obter mais informações, consulte [operadores definidos pelo usuário (C + + / CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C2581.
+
+```
+// C2581.cpp
+// compile with: /clr /c
+ref struct Y {
+   static Y ^ operator = (Y^ me, int i);   // C2581
+   Y^ operator =(int i);   // OK
+};
 ```

@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c194dc7ecd4af0092dd304b17a8230cda6a8598
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2b3f33cf98adc011d872a7d71246e6b94afaf4cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692893"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059778"
 ---
 # <a name="iexecutioncontext-structure"></a>Estrutura IExecutionContext
-Uma interface para um contexto de execução que pode executar em um determinado processador virtual e ser trabalhem de forma alternado do contexto.  
+Uma interface para um contexto de execução que pode ser executado em um determinado processador virtual e ser cooperativamente contexto alternado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,11 +44,11 @@ struct IExecutionContext;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[IExecutionContext::Dispatch](#dispatch)|O método é chamado quando um proxy de thread inicia a execução de um contexto de execução específica. Isso deve ser a rotina de trabalho principal para o Agendador.|  
+|[IExecutionContext::Dispatch](#dispatch)|O método é chamado quando um proxy de thread inicia a execução de um contexto de execução específico. Isso deve ser a rotina de trabalho principal para o seu Agendador.|  
 |[IExecutionContext::GetId](#getid)|Retorna um identificador exclusivo para o contexto de execução.|  
-|[IExecutionContext::GetProxy](#getproxy)|Retorna uma interface para o proxy de thread que está em execução neste contexto.|  
+|[IExecutionContext::GetProxy](#getproxy)|Retorna uma interface para o proxy de thread que está sendo executado nesse contexto.|  
 |[IExecutionContext::GetScheduler](#getscheduler)|Retorna uma interface para o Agendador neste contexto de execução pertence.|  
-|[IExecutionContext::SetProxy](#setproxy)|Associa um proxy de thread neste contexto de execução. O proxy de thread associado chama esse direito método antes de começar a execução do contexto `Dispatch` método.|  
+|[IExecutionContext::SetProxy](#setproxy)|Associa um proxy de thread este contexto de execução. O proxy de thread associado invoca esse direito de método antes de começar a executar o contexto `Dispatch` método.|  
   
 ## <a name="remarks"></a>Comentários  
  Se você estiver implementando um agendador personalizado que faz interface com o Gerenciador de recursos do tempo de execução de simultaneidade, você precisará implementar o `IExecutionContext` interface. Os threads criados pelo Gerenciador de recursos executam o trabalho em nome de seu Agendador executando o `IExecutionContext::Dispatch` método.  
@@ -57,22 +57,22 @@ struct IExecutionContext;
  `IExecutionContext`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** concrtrm.h  
+ **Cabeçalho:** concrtrm. h  
   
  **Namespace:** simultaneidade  
   
-##  <a name="dispatch"></a>  Método Iexecutioncontext:  
- O método é chamado quando um proxy de thread inicia a execução de um contexto de execução específica. Isso deve ser a rotina de trabalho principal para o Agendador.  
+##  <a name="dispatch"></a>  Método iexecutioncontext:: Dispatch  
+ O método é chamado quando um proxy de thread inicia a execução de um contexto de execução específico. Isso deve ser a rotina de trabalho principal para o seu Agendador.  
   
 ```
 virtual void Dispatch(_Inout_ DispatchState* pDispatchState) = 0;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pDispatchState`  
- Um ponteiro para o estado sob a qual este contexto de execução está sendo enviado. Para obter mais informações sobre o estado de expedição, consulte [DispatchState](dispatchstate-structure.md).  
+*pDispatchState*<br/>
+Um ponteiro para o estado sob a qual este contexto de execução está sendo despachado. Para obter mais informações sobre o estado de expedição, consulte [DispatchState](dispatchstate-structure.md).  
   
-##  <a name="getid"></a>  Método Iexecutioncontext:  
+##  <a name="getid"></a>  Método iexecutioncontext:: GetID  
  Retorna um identificador exclusivo para o contexto de execução.  
   
 ```
@@ -83,24 +83,24 @@ virtual unsigned int GetId() const = 0;
  Um identificador inteiro exclusivo.  
   
 ### <a name="remarks"></a>Comentários  
- Você deve usar o método `GetExecutionContextId` para obter um identificador exclusivo para o objeto que implementa o `IExecutionContext` interface, antes de você usar a interface como um parâmetro para métodos fornecidos pelo Gerenciador de recursos. Você deve retornar o mesmo identificador quando a `GetId` função é invocada.  
+ Você deve usar o método `GetExecutionContextId` para obter um identificador exclusivo para o objeto que implementa o `IExecutionContext` interface, antes de usar a interface como um parâmetro para métodos fornecidos pelo Gerenciador de recursos. Você deve retornar o mesmo identificador quando o `GetId` função é invocada.  
   
- Um identificador obtido de uma fonte diferente pode resultar em um comportamento indefinido.  
+ Um identificador obtido de uma fonte diferente poderá resultar em comportamento indefinido.  
   
-##  <a name="getproxy"></a>  Método Iexecutioncontext:  
- Retorna uma interface para o proxy de thread que está em execução neste contexto.  
+##  <a name="getproxy"></a>  Método iexecutioncontext:: Getproxy  
+ Retorna uma interface para o proxy de thread que está sendo executado nesse contexto.  
   
 ```
 virtual IThreadProxy* GetProxy() = 0;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Uma interface `IThreadProxy`. Se o proxy de thread do contexto de execução não foi inicializada com uma chamada para `SetProxy`, a função deve retornar `NULL`.  
+ Uma interface `IThreadProxy`. Se o proxy de thread do contexto de execução não foi inicializado com uma chamada para `SetProxy`, a função deve retornar `NULL`.  
   
 ### <a name="remarks"></a>Comentários  
- Invocará o Gerenciador de recursos de `SetProxy` método em um contexto de execução, com um `IThreadProxy` interface como um parâmetro, antes de entrar no `Dispatch` método no no contexto. Você deve armazenar esse argumento e retorná-la em chamadas para `GetProxy()`.  
+ Invocará o Gerenciador de recursos a `SetProxy` método em um contexto de execução, com um `IThreadProxy` interface como um parâmetro, antes de entrar a `Dispatch` método no no contexto. Você deve armazenar esse argumento e retorná-la em chamadas para `GetProxy()`.  
   
-##  <a name="getscheduler"></a>  Método: Getscheduler  
+##  <a name="getscheduler"></a>  Método iexecutioncontext:: Getscheduler  
  Retorna uma interface para o Agendador neste contexto de execução pertence.  
   
 ```
@@ -111,21 +111,21 @@ virtual IScheduler* GetScheduler() = 0;
  Uma interface `IScheduler`.  
   
 ### <a name="remarks"></a>Comentários  
- Você deve inicializar o contexto de execução com uma validade `IScheduler` interface antes de usá-lo como um parâmetro para métodos fornecidos pelo Gerenciador de recursos.  
+ São necessárias para inicializar o contexto de execução com uma validade `IScheduler` interface antes de usá-lo como um parâmetro para métodos fornecidos pelo Gerenciador de recursos.  
   
-##  <a name="setproxy"></a>  Método: Setproxy  
- Associa um proxy de thread neste contexto de execução. O proxy de thread associado chama esse direito método antes de começar a execução do contexto `Dispatch` método.  
+##  <a name="setproxy"></a>  Método iexecutioncontext:: Setproxy  
+ Associa um proxy de thread este contexto de execução. O proxy de thread associado invoca esse direito de método antes de começar a executar o contexto `Dispatch` método.  
   
 ```
 virtual void SetProxy(_Inout_ IThreadProxy* pThreadProxy) = 0;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pThreadProxy`  
- Uma interface para o proxy de thread que está prestes a entrar o `Dispatch` método neste contexto de execução.  
+*pThreadProxy*<br/>
+Uma interface para o proxy de thread que está prestes a entrar o `Dispatch` método nesse contexto de execução.  
   
 ### <a name="remarks"></a>Comentários  
- Você deve salvar o parâmetro `pThreadProxy` e retorná-lo em uma chamada para o `GetProxy` método. O Gerenciador de recursos garante que o proxy de thread associado ao contexto de execução não será alterada enquanto o proxy de thread está em execução o `Dispatch` método.  
+ Você deve salvar o parâmetro `pThreadProxy` e retorná-lo em uma chamada para o `GetProxy` método. O Gerenciador de recursos garante que o proxy de thread associado com o contexto de execução não será alterada enquanto o proxy de thread está em execução o `Dispatch` método.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   
