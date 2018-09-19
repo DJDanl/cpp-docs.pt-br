@@ -1,5 +1,5 @@
 ---
-title: C3197 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3197 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f362cad07af1192e9a67a7348ad7a0ad2cad354
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83003a1538496d98dcc29d7a9954a68fb19c920e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250147"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022608"
 ---
-# <a name="compiler-error-c3197"></a>C3197 de erro do compilador
-'palavra-chave': só pode ser usado em definições  
-  
- Uma palavra-chave foi usada em uma declaração, mas só é válida em uma definição.  
-  
- O exemplo a seguir gera C3197:  
-  
-```  
-// C3197.cpp  
-// compile with: /clr /c  
-ref struct R abstract;   // C3197  
-ref struct R abstract {};   // OK  
-  
-public ref class MyObject;   // C3197  
-ref class MyObject;   // OK  
-public ref class MyObject {};   // OK  
+# <a name="compiler-error-c3197"></a>Erro do compilador C3197
+
+'palavra-chave': só pode ser usado em definições
+
+Uma palavra-chave foi usada em uma declaração, mas só é válida em uma definição.
+
+O exemplo a seguir gera C3197:
+
+```
+// C3197.cpp
+// compile with: /clr /c
+ref struct R abstract;   // C3197
+ref struct R abstract {};   // OK
+
+public ref class MyObject;   // C3197
+ref class MyObject;   // OK
+public ref class MyObject {};   // OK
 ```

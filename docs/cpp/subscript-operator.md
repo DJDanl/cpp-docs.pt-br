@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb54752efb23db7599538e6dc2b71ea3bf5eb3a3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cf12d517647e36c8a0d9428b818f3812bfea2e1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197329"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020602"
 ---
 # <a name="subscript-operator-"></a>Operador subscrito]
 
@@ -64,7 +64,7 @@ Uma expressão subscrita também pode ter vários subscritos, como segue:
 
 *Expression1* **[** *expression2* **] [** *expression3* **]** ...
 
-As expressões subscritas são associadas da esquerda para a direita. A expressão Subscrita mais à esquerda, *expression1* **[** *expression2* **]**, é avaliado primeiro. O endereço resultante da adição de *expression1* e *expression2* forma uma expressão do ponteiro; *expression3* é adicionada a essa expressão de ponteiro para formar uma nova expressão de ponteiro e assim por diante até que a última expressão subscrita seja adicionada. O operador de indireção (<strong>\*</strong>) é aplicado depois que a última expressão Subscrita é avaliada, a menos que o valor do ponteiro final resolve um tipo de matriz.
+As expressões subscritas são associadas da esquerda para a direita. A expressão subscrita mais à esquerda, *expression1* **[** *expression2* **]**, é avaliada primeiro. O endereço resultante da adição de *expression1* e *expression2* forma uma expressão do ponteiro; *expression3* é adicionada a essa expressão de ponteiro para formar uma nova expressão de ponteiro e assim por diante até que a última expressão subscrita seja adicionada. O operador de indireção (<strong>\*</strong>) é aplicado depois que a última expressão Subscrita é avaliada, a menos que o valor do ponteiro final resolve um tipo de matriz.
 
 As expressões com vários subscritos referem-se aos elementos de matrizes multidimensionais. Uma matriz multidimensional é uma matriz cujos elementos são matrizes. Por exemplo, o primeiro elemento de uma matriz tridimensional é uma matriz com duas dimensões. O exemplo a seguir declara e inicializa uma matriz bidimensional simples de caracteres:
 
@@ -120,6 +120,6 @@ O operador subscrito é comutativo. Portanto, as expressões *array*[*índice*] 
 
 [Expressões pós-fixadas](../cpp/postfix-expressions.md)<br/>
 [Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[Matrizes](../cpp/arrays-cpp.md)
-[matrizes unidimensionais](../c-language/one-dimensional-arrays.md)<br/>
+[Matrizes](../cpp/arrays-cpp.md)<br/>
+[Matrizes unidimensionais](../c-language/one-dimensional-arrays.md)<br/>
 [Matrizes multidimensionais](../c-language/multidimensional-arrays-c.md)<br/>

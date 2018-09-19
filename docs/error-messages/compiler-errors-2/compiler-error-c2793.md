@@ -1,5 +1,5 @@
 ---
-title: C2793 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2793 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea378b2a875542eab431cf9cc30217f50c971af6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5b9f350a3d3845649c9423a412ed5286cb13723
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236286"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026199"
 ---
-# <a name="compiler-error-c2793"></a>C2793 de erro do compilador
-'token': token inesperado após ':: ', identificador ou palavra-chave 'operator' esperados  
-  
- Os únicos tokens que podem seguir `__super::` são um identificador ou a palavra-chave `operator`.  
-  
- O exemplo a seguir gera C2793  
-  
-```  
-// C2793.cpp  
-struct B {  
-   void mf();  
-};  
-  
-struct D : B {  
-   void mf() {  
-      __super::(); // C2793  
-   }  
-};  
+# <a name="compiler-error-c2793"></a>Erro do compilador C2793
+
+'token': token inesperado após ':: ', identificador ou palavra-chave 'operator' esperado
+
+Os únicos tokens que podem seguir `__super::` são um identificador ou a palavra-chave `operator`.
+
+O exemplo a seguir gera C2793
+
+```
+// C2793.cpp
+struct B {
+   void mf();
+};
+
+struct D : B {
+   void mf() {
+      __super::(); // C2793
+   }
+};
 ```

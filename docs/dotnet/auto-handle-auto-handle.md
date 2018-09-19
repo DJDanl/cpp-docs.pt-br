@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: af9ca3d472aa3c942b86d338a6b6f8f25a573ca8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67cc2393feff127e2b4278f5a5257ea2be102237
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104426"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018594"
 ---
 # <a name="autohandleautohandle"></a>auto_handle::auto_handle
 O `auto_handle` construtor.  
@@ -47,11 +47,11 @@ auto_handle(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `_ptr`  
- O objeto a própria.  
+*PTR*<br/>
+O objeto a própria.  
   
- `_right`  
- Um `auto_handle` existente.  
+*à direita*<br/>
+Um `auto_handle` existente.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -125,5 +125,5 @@ done
   
 ## <a name="see-also"></a>Consulte também  
  [Membros auto_handle](../dotnet/auto-handle-members.md)   
- [auto_handle:: =](../dotnet/auto-handle-operator-assign.md)   
+ [auto_handle:: Operator =](../dotnet/auto-handle-operator-assign.md)   
  [auto_handle::~auto_handle](../dotnet/auto-handle-tilde-auto-handle.md)

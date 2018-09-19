@@ -1,5 +1,5 @@
 ---
-title: C3360 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3360 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc8e361b81a2b61f2695a9d47dbcca39bec367bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c2ec9d43d9849e07010ac56989466c17ce37a93e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253873"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022858"
 ---
-# <a name="compiler-error-c3360"></a>C3360 de erro do compilador
-'string': não é possível criar nome  
-  
- O valor passado para o [uuid](../../windows/uuid-cpp-attributes.md) atributo não era válido.  
-  
- O exemplo a seguir gera C3360:  
-  
-```  
-// C3360.cpp  
-[ uuid("1") ]  
-// try this line instead  
-// [ uuid("12341234-1234-1234-1234-123412341234") ]  
-struct A   // C3360  
-{  
-};  
-  
-int main()  
-{  
-}  
+# <a name="compiler-error-c3360"></a>Erro do compilador C3360
+
+'string': não é possível criar nome
+
+O valor que foi passado para o [uuid](../../windows/uuid-cpp-attributes.md) atributo não era válido.
+
+O exemplo a seguir gera C3360:
+
+```
+// C3360.cpp
+[ uuid("1") ]
+// try this line instead
+// [ uuid("12341234-1234-1234-1234-123412341234") ]
+struct A   // C3360
+{
+};
+
+int main()
+{
+}
 ```

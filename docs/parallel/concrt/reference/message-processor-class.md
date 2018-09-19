@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95e95cc84ca999402e0d64c0699750bb92203cef
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f720ad2590a731792f79ef66a68dd2894a15517d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689383"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026914"
 ---
 # <a name="messageprocessor-class"></a>Classe message_processor
-O `message_processor` classe é a classe base abstrata para processamento de `message` objetos. Não há nenhuma garantia sobre a ordem das mensagens.  
+O `message_processor` classe é a classe base abstrata para o processamento de `message` objetos. Não há nenhuma garantia sobre a ordenação das mensagens.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,8 +39,8 @@ class message_processor;
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `T`  
- O tipo de dados da carga mensagens tratadas por este `message_processor` objeto.  
+*T*<br/>
+O tipo de dados da carga mensagens manipuladas por este `message_processor` objeto.  
   
 ## <a name="members"></a>Membros  
   
@@ -54,42 +54,42 @@ class message_processor;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[async_send](#async_send)|Quando substituído em uma classe derivada, armazena as mensagens no bloco de forma assíncrona.|  
-|[sync_send](#sync_send)|Quando substituído em uma classe derivada, armazena as mensagens no bloco de forma síncrona.|  
-|[wait](#wait)|Quando substituído em uma classe derivada, aguarda a todas as operações assíncronas concluir.|  
+|[async_send](#async_send)|Quando substituído em uma classe derivada, coloca as mensagens no bloco de forma assíncrona.|  
+|[sync_send](#sync_send)|Quando substituído em uma classe derivada, coloca as mensagens no bloco de forma síncrona.|  
+|[wait](#wait)|Quando substituído em uma classe derivada, aguarda todas as operações assíncronas concluir.|  
   
 ### <a name="protected-methods"></a>Métodos Protegidos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[process_incoming_message](#process_incoming_message)|Quando substituído em uma classe derivada, executa o processamento de encaminhamento de mensagens em um bloco. Chamado uma vez sempre é adicionada uma nova mensagem e a fila é encontrada em branco.|  
+|[process_incoming_message](#process_incoming_message)|Quando substituído em uma classe derivada, executa o processamento de encaminhamento de mensagens em um bloco. Chamado uma vez sempre que uma nova mensagem for adicionada e a fila é encontrada para ficar vazio.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `message_processor`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** agents.h  
+ **Cabeçalho:** Agents. h  
   
  **Namespace:** simultaneidade  
   
 ##  <a name="async_send"></a> async_send 
 
- Quando substituído em uma classe derivada, armazena as mensagens no bloco de forma assíncrona.  
+ Quando substituído em uma classe derivada, coloca as mensagens no bloco de forma assíncrona.  
   
 ```
 virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Msg`  
- Um `message` objeto a ser enviado de forma assíncrona.  
+*_Msg*<br/>
+Um `message` objeto a ser enviado de forma assíncrona.  
   
 ### <a name="remarks"></a>Comentários  
- Implementações de processador devem substituir este método.  
+ Implementações do processador devem substituir este método.  
   
 ##  <a name="process_incoming_message"></a> process_incoming_message 
 
- Quando substituído em uma classe derivada, executa o processamento de encaminhamento de mensagens em um bloco. Chamado uma vez sempre é adicionada uma nova mensagem e a fila é encontrada em branco.  
+ Quando substituído em uma classe derivada, executa o processamento de encaminhamento de mensagens em um bloco. Chamado uma vez sempre que uma nova mensagem for adicionada e a fila é encontrada para ficar vazio.  
   
 ```
 virtual void process_incoming_message() = 0;
@@ -100,29 +100,29 @@ virtual void process_incoming_message() = 0;
   
 ##  <a name="sync_send"></a> sync_send 
 
- Quando substituído em uma classe derivada, armazena as mensagens no bloco de forma síncrona.  
+ Quando substituído em uma classe derivada, coloca as mensagens no bloco de forma síncrona.  
   
 ```
 virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Msg`  
- Um `message` objeto a ser enviado de forma síncrona.  
+*_Msg*<br/>
+Um `message` objeto a ser enviado de forma síncrona.  
   
 ### <a name="remarks"></a>Comentários  
- Implementações de processador devem substituir este método.  
+ Implementações do processador devem substituir este método.  
   
 ##  <a name="wait"></a> Aguarde 
 
- Quando substituído em uma classe derivada, aguarda a todas as operações assíncronas concluir.  
+ Quando substituído em uma classe derivada, aguarda todas as operações assíncronas concluir.  
   
 ```
 virtual void wait() = 0;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Implementações de processador devem substituir este método.  
+ Implementações do processador devem substituir este método.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   

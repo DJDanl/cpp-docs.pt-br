@@ -82,15 +82,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b1372a273f0296b8dc309068c83ffe2607d038f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6ecc1939faab978c84f786d90c8693b036d2e938
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688668"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027746"
 ---
 # <a name="double3-class"></a>Classe double_3
-Representa um vetor curto de três dobras.  
+Representa um vetor curto de três doubles.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -110,7 +110,7 @@ class double_3;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor double_3](#ctor)|Sobrecarregado. Padrão construtor inicializa todos os elementos com 0.|  
+|[Construtor double_3](#ctor)|Sobrecarregado. Padrão construtor, inicializa todos os elementos com 0.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -160,9 +160,9 @@ class double_3;
 |double_3::Operator-||  
 |double_3::operator--||  
 |double_3::Operator * =||  
-|double_3::Operator / =||  
-|double_3::Operator + +||  
-|+ double_3::Operator =||  
+|double_3::Operator =||  
+|double_3::Operator++||  
+|double_3::Operator+ =||  
 |double_3::operator=||  
 |double_3::operator-=||  
   
@@ -211,13 +211,13 @@ class double_3;
  `double_3`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** amp_short_vectors.h  
+ **Cabeçalho:** amp_short_vectors. h  
   
  **Namespace:** Concurrency:: Graphics  
   
 ##  <a name="ctor"></a> double_3 
 
- Padrão construtor inicializa todos os elementos com 0.  
+ Padrão construtor, inicializa todos os elementos com 0.  
   
 ```  
 double_3() restrict(amp,
@@ -267,20 +267,20 @@ explicit inline double_3(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_V0`  
- O valor para inicializar o elemento 0.  
+*_V0*<br/>
+O valor para inicializar o elemento 0.  
   
- `_V1`  
- O valor para inicializar o elemento 1.  
+*V1*<br/>
+O valor para inicializar o elemento 1.  
   
- `_V2`  
- O valor para inicializar o elemento 2.  
+*_V2*<br/>
+O valor para inicializar o elemento 2.  
   
- `_V`  
- O valor para a inicialização.  
+*_V*<br/>
+O valor para a inicialização.  
   
- `_Other`  
- O objeto usado para inicializar.  
+*Outro*<br/>
+O objeto usado para inicializar.  
   
 ##  <a name="double_3__size"></a> Tamanho 
 

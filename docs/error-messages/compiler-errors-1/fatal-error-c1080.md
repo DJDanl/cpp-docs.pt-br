@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1400478dc1bbef4ab435f96eaa75c9a6637b6bb5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdd3ad247bcdbfa30213eba57cdbbbc411438e79
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225401"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029930"
 ---
 # <a name="fatal-error-c1080"></a>Erro fatal C1080
-limite do compilador: limite excedido para a opção de linha de comando do número de caracteres  
-  
- Um argumento passado para o compilador excede 256 caracteres.
+
+limite do compilador: limite excedido para a opção de linha de comando do número de caracteres
+
+Um argumento passado para o compilador excede 256 caracteres.

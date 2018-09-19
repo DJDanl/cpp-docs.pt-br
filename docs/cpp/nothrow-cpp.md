@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0261ed9d1e84849f408c3d764693cb95ac7019d2
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 65b8a0420bc996812eed5996757e05d50aafc030
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408060"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023521"
 ---
 # <a name="nothrow-c"></a>nothrow (C++)
 
@@ -30,8 +30,8 @@ ms.locfileid: "39408060"
 
 Um **declspec** atributo estendido que pode ser usado na declaração de funções.
 
-## <a name="syntax"></a>Sintaxe  
-  
+## <a name="syntax"></a>Sintaxe
+
 > *tipo de retorno* __declspec(nothrow) [*convenção de chamada*] *nome da função* ([*lista de argumentos*])
 
 ## <a name="remarks"></a>Comentários
@@ -57,6 +57,7 @@ O `void __stdcall f3() throw();` declaração usa a sintaxe definida pelo padrã
 **Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
- [__declspec](../cpp/declspec.md)  
- [noexcept](noexcept-cpp.md)  
- [Palavras-chave](../cpp/keywords-cpp.md)  
+
+[__declspec](../cpp/declspec.md)<br/>
+[noexcept](noexcept-cpp.md)<br/>
+[Palavras-chave](../cpp/keywords-cpp.md)

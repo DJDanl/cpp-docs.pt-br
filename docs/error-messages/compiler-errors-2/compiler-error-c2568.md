@@ -1,5 +1,5 @@
 ---
-title: C2568 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2568 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 480d0ba97417476b192a962321ff4e9d0d18a617
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a9d03f0dd5a1d7029028b7e5f0d17a5e90e2891
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228718"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021649"
 ---
-# <a name="compiler-error-c2568"></a>C2568 de erro do compilador
-'identifier1': não é possível resolver sobrecarga de função  
-  
- O compilador não pode determinar qual sobrecarregado função a ser chamada. Reais parâmetros passados para a função devem ser convertidos para corresponder aos parâmetros formais para uma função sobrecarregada, mas não há uma correspondência é inequivocamente melhor do que todos os outros.
+# <a name="compiler-error-c2568"></a>Erro do compilador C2568
+
+'identifier1': não é possível resolver sobrecarga de função
+
+O compilador não pode determinar qual sobrecarregado função a ser chamada. Reais parâmetros passados para a função devem ser convertidos de acordo com os parâmetros formais para uma das função sobrecarregada, mas não há uma correspondência é inequivocamente melhor do que todos os outros.

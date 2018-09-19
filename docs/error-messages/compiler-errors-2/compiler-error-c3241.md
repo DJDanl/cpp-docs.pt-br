@@ -1,5 +1,5 @@
 ---
-title: C3241 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3241 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1a3849dd404c82811eee9176fe87861cfd4a435
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f78346c91d7f103d1392081a90d982f3d99b493
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250304"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020220"
 ---
-# <a name="compiler-error-c3241"></a>C3241 de erro do compilador
-'method': este método não foi introduzido por 'interface'  
-  
- Quando você substituir uma função explicitamente, a assinatura de função deve corresponder exatamente a declaração da função que você está substituindo.  
-  
- O exemplo a seguir gera C3241:  
-  
-```  
-// C3241.cpp  
-#pragma warning(disable:4199)  
-  
-__interface IX12A {  
-   void mf();  
-};  
-  
-__interface IX12B {  
-   void mf(int);  
-};  
-  
-class CX12 : public IX12A, public IX12B { // C3241  
-   void IX12A::mf(int);  
-};  
+# <a name="compiler-error-c3241"></a>Erro do compilador C3241
+
+'method': esse método não foi introduzido por 'interface'
+
+Quando você substitui explicitamente uma função, a assinatura de função deve corresponder exatamente a declaração para a função que você está substituindo.
+
+O exemplo a seguir gera C3241:
+
+```
+// C3241.cpp
+#pragma warning(disable:4199)
+
+__interface IX12A {
+   void mf();
+};
+
+__interface IX12B {
+   void mf(int);
+};
+
+class CX12 : public IX12A, public IX12B { // C3241
+   void IX12A::mf(int);
+};
 ```

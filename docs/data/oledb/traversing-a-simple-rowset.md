@@ -19,14 +19,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6ba5262577fc9176669916a7fc30d299d06770a8
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 9a127b5cd611177c28e6e434b04060edf3bdcb55
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336648"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028630"
 ---
 # <a name="traversing-a-simple-rowset"></a>Percorrendo um conjunto de linhas simples
+
 O exemplo a seguir mostra um acesso de banco de dados rápida e fácil que envolvem comandos. O seguinte código de consumidor, em um projeto ATL, recupera os registros de uma tabela chamada *artistas* no Microsoft Access de banco de dados usando o Microsoft OLE DB Provider para ODBC. O código cria uma [CTable](../../data/oledb/ctable-class.md) objeto de tabela com um acessador com base na classe de registro de usuário `CArtists`. Ele abre uma conexão, abre uma sessão em que a conexão e abre a tabela na sessão.  
   
 ```cpp  
@@ -53,7 +54,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- O registro do usuário, `CArtists`, semelhante ao seguinte:  
+O registro do usuário, `CArtists`, semelhante ao seguinte:  
   
 ```cpp  
 class CArtists  
@@ -73,4 +74,5 @@ END_COLUMN_MAP()
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhando com modelos de consumidor do OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+
+[Trabalhando com modelos de consumidor do OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

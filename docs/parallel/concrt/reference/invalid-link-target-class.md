@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e718bd1a15df98487d0e9437c217c1750bfa5f5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2120f274dd783da00a43106338476c43cc0a9dad
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695779"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021740"
 ---
 # <a name="invalidlinktarget-class"></a>Classe invalid_link_target
-Esta classe descreve uma exceção gerada quando o `link_target` método de um bloco de mensagens é chamado e o bloco de mensagens não pode vincular ao destino. Isso pode ser o resultado de exceder o número de links para que o bloco de mensagens é permitido ou tentar vincular a um destino específico duas vezes para a mesma fonte.  
+Esta classe descreve uma exceção gerada quando o `link_target` método de um bloco de mensagens é chamado e o bloco de mensagens é não foi possível vincular ao destino. Isso pode ser o resultado de exceder o número de links que o bloco de mensagens é permitido ou tentar vincular a um destino específico duas vezes para a mesma fonte.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +40,7 @@ class invalid_link_target : public std::exception;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[invalid_link_target](#ctor)|Sobrecarregado. Constrói uma `invalid_link_target` objeto.|  
+|[invalid_link_target](#ctor)|Sobrecarregado. Constrói um `invalid_link_target` objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `exception`  
@@ -48,13 +48,13 @@ class invalid_link_target : public std::exception;
  `invalid_link_target`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** concrt.h  
+ **Cabeçalho:** concrt. h  
   
  **Namespace:** simultaneidade  
   
 ##  <a name="ctor"></a> invalid_link_target 
 
- Constrói uma `invalid_link_target` objeto.  
+ Constrói um `invalid_link_target` objeto.  
   
 ```
 explicit _CRTIMP invalid_link_target(_In_z_ const char* _Message) throw();
@@ -63,8 +63,8 @@ invalid_link_target() throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Message`  
- Uma mensagem descritiva do erro.  
+*Mensagem*<br/>
+Uma mensagem descritiva do erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   

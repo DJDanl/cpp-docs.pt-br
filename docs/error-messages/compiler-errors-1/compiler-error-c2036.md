@@ -1,5 +1,5 @@
 ---
-title: C2036 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2036 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 244d99635585b21efc6218402277947eb265761e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 105fcbaacbc35c003720cf8b1337a52e5264b26e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170343"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025341"
 ---
-# <a name="compiler-error-c2036"></a>C2036 de erro do compilador
-'Identificador': tamanho desconhecido  
-  
- Uma operação em `identifier` requer que o tamanho do objeto de dados não pode ser determinado.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C2036.  
-  
-```  
-// C2036.c  
-// a C program  
-struct A* pA;  
-struct B { int i; } *pB;  
-int main() {  
-   pA++;   // C2036, size of A not known  
-   ((char*)pA)++;   // OK  
-  
-   pB++;   // OK  
-}  
-```  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C2036.  
-  
-```  
-// C2036_2.cpp  
-// a C++ program  
-struct A* pA;  
-int main() {  
-   pA++;   // C2036, size of A not known  
-   ((char*&)pA)++;   // OK, if sizeof(A) == sizeof(char)  
-}  
+# <a name="compiler-error-c2036"></a>Erro do compilador C2036
+
+'identifier': tamanho desconhecido
+
+Uma operação em `identifier` requer que o tamanho do objeto de dados, que não pode ser determinado.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C2036.
+
+```
+// C2036.c
+// a C program
+struct A* pA;
+struct B { int i; } *pB;
+int main() {
+   pA++;   // C2036, size of A not known
+   ((char*)pA)++;   // OK
+
+   pB++;   // OK
+}
+```
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C2036.
+
+```
+// C2036_2.cpp
+// a C++ program
+struct A* pA;
+int main() {
+   pA++;   // C2036, size of A not known
+   ((char*&)pA)++;   // OK, if sizeof(A) == sizeof(char)
+}
 ```

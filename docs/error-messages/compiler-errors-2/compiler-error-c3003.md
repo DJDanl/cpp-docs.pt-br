@@ -1,5 +1,5 @@
 ---
-title: C3003 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3003 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48e3cdcb4df846414cc231999f85da05e3bb9995
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 749199401e399a21b4b8c2c98532aa5449f2cce1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241302"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027876"
 ---
-# <a name="compiler-error-c3003"></a>C3003 de erro do compilador
-'diretiva': nome de diretiva de OpenMP não permitido após cláusulas de diretiva  
-  
- Um nome de diretiva de OpenMP não pode seguir uma cláusula de diretiva de OpenMP.  
-  
- O exemplo a seguir gera C3003:  
-  
-```  
-// C3003.c  
-// compile with: /openmp  
-int main()  
-{  
-   int x, y, z;  
-   #pragma omp parallel shared(x, y, z) for   // C3003  
-}  
+# <a name="compiler-error-c3003"></a>Erro do compilador C3003
+
+'diretiva': nome de diretiva de OpenMP não permitido após cláusulas de diretiva
+
+Um nome de diretiva de OpenMP não pode seguir uma cláusula de diretiva de OpenMP.
+
+O exemplo a seguir gera C3003:
+
+```
+// C3003.c
+// compile with: /openmp
+int main()
+{
+   int x, y, z;
+   #pragma omp parallel shared(x, y, z) for   // C3003
+}
 ```

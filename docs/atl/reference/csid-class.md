@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97c88b73499948db4e8fc0645b2d59f7b92b3cfe
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 77e7cd29c38706078dbcb2cc9718827d8c8cc583
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753172"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022988"
 ---
 # <a name="csid-class"></a>Classe CSid
 
@@ -156,22 +156,22 @@ explicit CSid(
 
 ### <a name="parameters"></a>Parâmetros
 
-*rhs*  
+*rhs*<br/>
 Um existente `CSid` objeto ou `SID` estrutura (identificador de segurança).
 
-*IdentifierAuthority*  
+*IdentifierAuthority*<br/>
 A autoridade.
 
-*nSubAuthorityCount*  
+*nSubAuthorityCount*<br/>
 A contagem de subautoridade.
 
-*pszAccountName*  
+*pszAccountName*<br/>
 O nome da conta.
 
-*pszSystem*  
+*pszSystem*<br/>
 O nome do sistema. Essa cadeia de caracteres pode ser o nome de um computador remoto. Se essa cadeia de caracteres for NULL, o sistema local é usado em vez disso.
 
-*pSid*  
+*pSid*<br/>
 Um ponteiro para um `SID` estrutura.
 
 ### <a name="remarks"></a>Comentários
@@ -233,7 +233,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*rhs*  
+*rhs*<br/>
 O `SID` estrutura (identificador de segurança) ou `CSid` objeto a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -300,7 +300,7 @@ DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*nSubAuthority*  
+*nSubAuthority*<br/>
 Subautoridade.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -363,13 +363,13 @@ bool LoadAccount(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszAccountName*  
+*pszAccountName*<br/>
 O nome da conta.
 
-*pszSystem*  
+*pszSystem*<br/>
 O nome do sistema. Essa cadeia de caracteres pode ser o nome de um computador remoto. Se essa cadeia de caracteres for NULL, o sistema local é usado em vez disso.
 
-*pSid*  
+*pSid*<br/>
 Um ponteiro para um [SID](/windows/desktop/api/winnt/ns-winnt-_sid) estrutura.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -385,13 +385,13 @@ Retorna verdadeiro em caso de êxito, FALSE em caso de falha. Para obter outras 
 Operador de atribuição.
 
 ```
-CSid& operator= (const CSid& rhs) throw(...);  
+CSid& operator= (const CSid& rhs) throw(...);
 CSid& operator= (const SID& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*rhs*  
+*rhs*<br/>
 O `SID` (identificador de segurança) ou `CSid` para atribuir ao `CSid` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -410,10 +410,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Parâmetros
 
-*LHS*  
+*LHS*<br/>
 O `SID` (identificador de segurança) ou `CSid` que aparece no lado esquerdo do operador = =.
 
-*rhs*  
+*rhs*<br/>
 O `SID` (identificador de segurança) ou `CSid` que aparece no lado direito do operador = =.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -432,10 +432,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*LHS*  
+*LHS*<br/>
 O `SID` (identificador de segurança) ou `CSid` que aparece no lado esquerdo da! = operador.
 
-*rhs*  
+*rhs*<br/>
 O `SID` (identificador de segurança) ou `CSid` que aparece no lado direito da! = operador.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -454,10 +454,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parâmetros
 
-*LHS*  
+*LHS*<br/>
 O `SID` (identificador de segurança) ou `CSid` que aparece no lado esquerdo da! = operador.
 
-*rhs*  
+*rhs*<br/>
 O `SID` (identificador de segurança) ou `CSid` que aparece no lado direito da! = operador.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -476,10 +476,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*LHS*  
+*LHS*<br/>
 O `SID` (identificador de segurança) ou `CSid` que aparece no lado esquerdo da! = operador.
 
-*rhs*  
+*rhs*<br/>
 O `SID` (identificador de segurança) ou `CSid` que aparece no lado direito da! = operador.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -498,10 +498,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parâmetros
 
-*LHS*  
+*LHS*<br/>
 O `SID` (identificador de segurança) ou `CSid` que aparece no lado esquerdo da! = operador.
 
-*rhs*  
+*rhs*<br/>
 O `SID` (identificador de segurança) ou `CSid` que aparece no lado direito da! = operador.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -520,10 +520,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*LHS*  
+*LHS*<br/>
 O `SID` (identificador de segurança) ou `CSid` que aparece no lado esquerdo da! = operador.
 
-*rhs*  
+*rhs*<br/>
 O `SID` (identificador de segurança) ou `CSid` que aparece no lado direito da! = operador.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -534,7 +534,7 @@ TRUE se *lhs* é maior que ou igual a *rhs*, caso contrário, FALSE.
 
 Conversões de um `CSid` objeto em um ponteiro para um `SID` estrutura (identificador de segurança).
 
-```  
+```
 operator const SID *() const throw(...);
 ```
 
@@ -584,7 +584,7 @@ Chame [CSid::LoadAccount](#loadaccount) para atualizar o `CSid` objeto antes de 
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo de segurança](../../visual-cpp-samples.md)   
-[Visão geral da classe](../../atl/atl-class-overview.md)   
-[Funções globais de segurança](../../atl/reference/security-global-functions.md)   
+[Exemplo de segurança](../../visual-cpp-samples.md)<br/>
+[Visão geral da classe](../../atl/atl-class-overview.md)<br/>
+[Funções globais de segurança](../../atl/reference/security-global-functions.md)<br/>
 [Operadores](../../atl/reference/atl-operators.md)

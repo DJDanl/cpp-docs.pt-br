@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7dd57950d083c4f89ee2aa5962ad1e07a55a9a8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d3485d534cf279863b241abcd26195cdde7fea19
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691880"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016280"
 ---
 # <a name="numthreads"></a>num_threads
-Define o número de segmentos em uma equipe de thread.  
+Define o número de threads em uma equipe de thread.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,11 +32,10 @@ Define o número de segmentos em uma equipe de thread.
 num_threads(num)  
 ```  
   
-## <a name="remarks"></a>Comentários  
- onde,  
+### <a name="parameters"></a>Parâmetros
   
- `num`  
- O número de threads  
+*num*<br/>
+O número de threads  
   
 ## <a name="remarks"></a>Comentários  
  O `num_threads` cláusula tem a mesma funcionalidade que o [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) função.  
@@ -52,7 +51,7 @@ num_threads(num)
  Para obter mais informações, consulte [2.3 construto parallel](../../../parallel/openmp/2-3-parallel-construct.md).  
   
 ## <a name="example"></a>Exemplo  
- Consulte [paralela](../../../parallel/openmp/reference/parallel.md) para obter um exemplo do uso de `num_threads` cláusula.  
+ Ver [paralelas](../../../parallel/openmp/reference/parallel.md) para obter um exemplo de como usar `num_threads` cláusula.  
   
 ## <a name="see-also"></a>Consulte também  
  [Cláusulas](../../../parallel/openmp/reference/openmp-clauses.md)

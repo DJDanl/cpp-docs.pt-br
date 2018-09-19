@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78ff500d050fbb646dd97fc898279712fb750d9e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c18d6f9b502e818992097c3042689cf66457792
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197605"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024769"
 ---
 # <a name="fatal-error-c1045"></a>Erro fatal C1045
-limite do compilador: especificações de vinculação com aninhamento muito profundo  
-  
- Externos aninhados excederem o limite do compilador. Externos aninhados são permitidos com o tipo de ligação externa, como `extern` "C++". Reduza o número de itens aninhados externos para resolver o erro.
+
+limite do compilador: especificações de vinculação com aninhamento muito profundo
+
+Externals aninhadas excederem o limite do compilador. Externals aninhados são permitidos com o tipo de vinculação externa, como `extern` "C++". Reduza o número de itens aninhados externos para resolver o erro.

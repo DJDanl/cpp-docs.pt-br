@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 4) de aviso C4918 | Microsoft Docs
+title: Compilador aviso (nível 4) C4918 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4ca1d8a33ac811a23fbb0ac3e438eeeb9c1acf8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb4cc66359c28ffc23afa64da1e5bdbaadd8fb9b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296790"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023222"
 ---
-# <a name="compiler-warning-level-4-c4918"></a>Compilador C4918 de aviso (nível 4)
-'character': caractere inválido na lista de otimização de pragma  
-  
- Um caractere desconhecido foi encontrado na lista de otimização de um [otimizar](../../preprocessor/optimize.md) pragma instrução.  
-  
- Por exemplo, a instrução a seguir gera C4918:  
-  
-```  
-// C4918.cpp  
-// compile with: /W4  
-#pragma optimize("X", on) // C4918 expected  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-4-c4918"></a>Compilador aviso (nível 4) C4918
+
+'character': caractere inválido na lista de otimização do pragma
+
+Um caractere desconhecido foi encontrado na lista de otimização de um [otimizar](../../preprocessor/optimize.md) instrução pragma.
+
+Por exemplo, a instrução a seguir gera C4918:
+
+```
+// C4918.cpp
+// compile with: /W4
+#pragma optimize("X", on) // C4918 expected
+int main()
+{
+}
 ```

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bd6675f725e2a987a85cc73d6eec92f2b496df09
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0bddacec4e416173fc60ceb1c2c6ee71b3a198e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103272"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029709"
 ---
 # <a name="autohandle-class"></a>Classe auto_handle
 Gerenciamento automático de recursos que pode ser usado para inserir um identificador virtual em um tipo gerenciado.  
@@ -36,8 +36,8 @@ ref class auto_handle;
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `_element_type`  
- O tipo gerenciado a ser inserido.  
+*_element_type*<br/>
+O tipo gerenciado a ser inserido.  
   
 ## <a name="requirements"></a>Requisitos  
  **Arquivo de cabeçalho** \<msclr\auto_handle.h >  

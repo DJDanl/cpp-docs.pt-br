@@ -1,5 +1,5 @@
 ---
-title: C2150 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2150 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dc7a84ff666fdc17f0abeec690a548f216ce975
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef0920c98fe59fe5bca49bba4c62a486a61c0a55
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170142"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024704"
 ---
-# <a name="compiler-error-c2150"></a>C2150 de erro do compilador
-  
-> '*identificador*': campo de bits deve possuir tipo 'int', 'signed int' ou 'unsigned int'  
-  
- O tipo base para um campo de bits deve ser `int`, `signed int`, ou `unsigned int`.  
-  
-## <a name="example"></a>Exemplo  
-  
- Este exemplo mostra como você pode encontrar C2150 e como corrigi-lo:  
-  
-```cpp  
-// C2150.cpp  
-// compile with: /c  
-struct A {  
-   float a : 8;    // C2150  
-   int i : 8;      // OK  
-};  
+# <a name="compiler-error-c2150"></a>Erro do compilador C2150
+
+> '*identificador*': campo de bits deve possuir tipo 'int', 'signed int' ou 'unsigned int'
+
+O tipo base para um campo de bits é necessário para ser `int`, `signed int`, ou `unsigned int`.
+
+## <a name="example"></a>Exemplo
+
+Este exemplo mostra como você pode encontrar C2150 e como corrigi-lo:
+
+```cpp
+// C2150.cpp
+// compile with: /c
+struct A {
+   float a : 8;    // C2150
+   int i : 8;      // OK
+};
 ```

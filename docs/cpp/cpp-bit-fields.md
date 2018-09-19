@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc13eb70dd2efc479cef7185ee0cdfa147ec507
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 69411a727c3f590e9a45a46ecb4ea2eb0eab05c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408034"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029462"
 ---
 # <a name="c-bit-fields"></a>Campos de bit C++
 
@@ -38,7 +38,7 @@ As classes e as estruturas podem conter membros que ocupam menos armazenamento d
 > [!NOTE]
 > Um campo de bits não nomeado de largura 0 força o alinhamento do próximo campo de bits para a próxima **tipo** limite, em que **tipo** é o tipo do membro.
 
- O exemplo a seguir declara uma estrutura que contém campos de bits:
+O exemplo a seguir declara uma estrutura que contém campos de bits:
 
 ```cpp
 // bit_fields1.cpp
@@ -94,4 +94,5 @@ A lista a seguir detalha as operações erradas em campos de bits:
 - Inicializando um não -**const** referência com um campo de bits.
 
 ## <a name="see-also"></a>Consulte também
- [Classes e Structs](../cpp/classes-and-structs-cpp.md)
+
+[Classes e Structs](../cpp/classes-and-structs-cpp.md)

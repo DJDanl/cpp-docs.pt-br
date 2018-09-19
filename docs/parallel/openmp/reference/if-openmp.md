@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2467c295c4f2724ec6d258e844f2bdaa84cfe29
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 83e1920ab2cb44815e9547e4f7f4a07999c1c588
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692225"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020947"
 ---
 # <a name="if-openmp"></a>if (OpenMP)
-Especifica se um loop deve ser executado em paralelo ou em série.  
+Especifica se deve ser executado um loop em paralelo ou em série.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,11 +32,10 @@ Especifica se um loop deve ser executado em paralelo ou em série.
 if(expression)  
 ```  
   
-## <a name="remarks"></a>Comentários  
- onde,  
+### <a name="parameters"></a>Parâmetros
   
- `expression`  
- Uma expressão de inteiro que, se ela é avaliada como true (diferente de zero), faz com que o código na região paralela para executar em paralelo. Se a expressão for avaliada como false (zero), a região paralela é executado em série (por um único thread).  
+*Expressão*<br/>
+Uma expressão integral que, se ele for avaliado como true (diferente de zero), faz com que o código na região paralela para executar em paralelo. Se a expressão for avaliada como false (zero), a região paralela é executado em série (por um único thread).  
   
 ## <a name="remarks"></a>Comentários  
  `if` aplica-se para as seguintes diretivas:  

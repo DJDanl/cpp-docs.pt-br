@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae4aaffc76e12734038b0d325e7b540393c6cc6d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e760bab6fb3ad420fc6fe0f5c8a2ea6addc652ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754924"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019402"
 ---
 # <a name="iobjectsafetyimpl-class"></a>Classe IObjectSafetyImpl
 
@@ -40,16 +40,16 @@ Essa classe fornece uma implementação padrão da `IObjectSafety` interface par
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template <class T,DWORD dwSupportedSafety>  
+template <class T,DWORD dwSupportedSafety>
 class IObjectSafetyImpl
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 Sua classe, derivada de `IObjectSafetyImpl`.
 
-*dwSupportedSafety*  
+*dwSupportedSafety*<br/>
 Especifica as opções de segurança com suporte para o controle. pode ser um dos seguintes valores:
 
 - INTERFACESAFE_FOR_UNTRUSTED_CALLER a interface identificada pelo [SetInterfaceSafetyOptions](#setinterfacesafetyoptions) parâmetro `riid` deve ser feita seguros para script.
@@ -139,5 +139,5 @@ Ver [IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/librar
 
 ## <a name="see-also"></a>Consulte também
 
-[Interface IObjectSafety](https://msdn.microsoft.com/library/aa768224.aspx)   
+[Interface IObjectSafety](https://msdn.microsoft.com/library/aa768224.aspx)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

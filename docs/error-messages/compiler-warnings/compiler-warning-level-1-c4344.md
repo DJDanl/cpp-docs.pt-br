@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4344 | Microsoft Docs
+title: Compilador aviso (nível 1) C4344 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a203288b5becde41704e0ab59dbb03e2bccef7e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9505f7773a129430e5bdc7122e947c88fa57bb6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271364"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025601"
 ---
-# <a name="compiler-warning-level-1-c4344"></a>Compilador C4344 de aviso (nível 1)
-alteração de comportamento: uso de resultados de argumentos de template explícitos na chamada para 'function'  
-  
- Uma chamada para uma função usando argumentos de template explícitos chama uma função diferente do que seria se argumentos explícitos não tiveram sido especificados
+# <a name="compiler-warning-level-1-c4344"></a>Compilador aviso (nível 1) C4344
+
+alteração de comportamento: uso dos resultados de argumentos de modelo explícitos na chamada para 'function'
+
+Uma chamada para uma função usando argumentos de modelo explícitos chama uma função diferente que seria se argumentos explícitos não tinham sido especificados

@@ -1,5 +1,5 @@
 ---
-title: C2384 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2384 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce139166e2378a26a91bc66db134ec6098aedbdc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3aa9ec8a6a94f53123c443a1149df7cdbc95c83
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33194925"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020453"
 ---
-# <a name="compiler-error-c2384"></a>C2384 de erro do compilador
-'member': não é possível aplicar __declspec(thread) a um membro de um gerenciado ou classe WinRT  
-  
- O [thread](../../cpp/thread.md) `__declspec` modificador não pode ser usado em uma classe de tempo de execução do Windows ou um membro de um gerenciado.  
-  
- DLLs carregadas de thread estático armazenamento local no código gerenciado só pode ser usado para estaticamente — a DLL deve ser carregada estaticamente ao iniciar o processo. Tempo de execução do Windows não oferece suporte a armazenamento local de thread.  
-  
- A linha a seguir gera C2384 e mostra como corrigi-lo em C + + código:  
-  
-```  
-// C2384.cpp  
-// compile with: /clr /c  
-public ref class B {  
-public:  
-   __declspec( thread ) static int tls_i = 1;   // C2384  
-  
-   // OK - declare with attribute instead  
-   [System::ThreadStaticAttribute]  
-   static int tls_j;  
-};  
+# <a name="compiler-error-c2384"></a>Erro do compilador C2384
+
+'member': não é possível aplicar __declspec(thread) a um membro de um ou a classe de WinRT
+
+O [thread](../../cpp/thread.md) `__declspec` modificador não pode ser usado em uma classe de tempo de execução do Windows ou um membro de um.
+
+DLLs carregadas de thread estático armazenamento local no código gerenciado pode somente ser usado para estaticamente — a DLL deve ser carregada estaticamente quando o processo é iniciado. Tempo de execução do Windows não oferece suporte a armazenamento local de thread.
+
+A linha a seguir gera C2384 e mostra como corrigi-lo no C + + c++ /CLI código CLI:
+
+```
+// C2384.cpp
+// compile with: /clr /c
+public ref class B {
+public:
+   __declspec( thread ) static int tls_i = 1;   // C2384
+
+   // OK - declare with attribute instead
+   [System::ThreadStaticAttribute]
+   static int tls_j;
+};
 ```

@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d11160eea5e978a0c1ef67255d4e96b48fe2d101
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0adfa7eed25f1902300fa2378b8ffc19eb8dfafd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199505"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023794"
 ---
 # <a name="fatal-error-c1852"></a>Erro fatal C1852
-'filename' não é um arquivo de cabeçalho pré-compilado válido  
-  
- O arquivo não é um cabeçalho pré-compilado.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
-  
-1.  Arquivo inválido especificado com **/Yu** ou **#pragma hdrstop**.  
-  
-2.  O compilador assumirá uma extensão de arquivo de. pch se você não especifique o contrário.
+
+'filename' não é um arquivo de cabeçalho pré-compilado válido
+
+O arquivo não é um cabeçalho pré-compilado.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
+
+1. Arquivo inválido especificado com **/Yu** ou **#pragma hdrstop**.
+
+1. O compilador pressupõe uma extensão de arquivo de. pch, se você não especifique o contrário.

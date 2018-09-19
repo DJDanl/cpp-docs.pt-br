@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220a02fca7a8de67d1f35743fa9f56e8499c88e0
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: d3be0a32de4e0e5b57471722ffa2cf8fcea5fd6c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690040"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027850"
 ---
 # <a name="ithreadproxy-structure"></a>Estrutura IThreadProxy
 Uma abstração para um thread de execução. Dependendo do `SchedulerType` chave de política do Agendador, você cria, o Gerenciador de recursos concederá a você um proxy de thread que é apoiado por um thread do Win32 regular ou em um thread (UMS) agendáveis do modo de usuário. Threads UMS são com suporte em sistemas operacionais de 64 bits com a versão do Windows 7 e superior.  
@@ -77,8 +77,8 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `switchState`  
- Indica o estado do proxy de thread que está executando a opção. O parâmetro é do tipo `SwitchingProxyState`.  
+*switchState*<br/>
+Indica o estado do proxy de thread que está executando a opção. O parâmetro é do tipo `SwitchingProxyState`.  
   
 ### <a name="remarks"></a>Comentários  
  Use `SwitchOut` se você precisar dissociar um contexto da raiz do processador virtual que está sendo executado, por qualquer motivo. Dependendo do valor você passa para o parâmetro `switchState`, e se ele está em execução em uma raiz virtual do processador, a chamada irá retornar imediatamente ou bloquear o proxy de thread associado ao contexto. É um erro ao chamar `SwitchOut` com o parâmetro definido como `Idle`. Isso resultará em uma [invalid_argument](../../../standard-library/invalid-argument-class.md) exceção.  
@@ -103,11 +103,11 @@ virtual void SwitchTo(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pContext`  
- O contexto de execução cooperativamente alternar para.  
+*pContext*<br/>
+O contexto de execução cooperativamente alternar para.  
   
- `switchState`  
- Indica o estado do proxy de thread que está executando a opção. O parâmetro é do tipo `SwitchingProxyState`.  
+*switchState*<br/>
+Indica o estado do proxy de thread que está executando a opção. O parâmetro é do tipo `SwitchingProxyState`.  
   
 ### <a name="remarks"></a>Comentários  
  Use esse método para alternar do contexto de execução de um para outro, do [iexecutioncontext:: Dispatch](iexecutioncontext-structure.md#dispatch) método do contexto de execução primeiro. O método associa o contexto de execução `pContext` com um proxy de thread se ele não ainda estiver associado a um. A propriedade de proxy de thread atual é determinada pelo valor especificado para o `switchState` argumento.  

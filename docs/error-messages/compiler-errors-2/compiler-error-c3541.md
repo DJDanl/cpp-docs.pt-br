@@ -1,5 +1,5 @@
 ---
-title: C3541 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3541 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2440d1ab91cda00240d99d2188365754bd34fb3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0f9cb18089bcf8ce1688cabb261f91f868da247
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255104"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021714"
 ---
-# <a name="compiler-error-c3541"></a>C3541 de erro do compilador
-'type': typeid não pode ser aplicado a um tipo que contém 'auto'  
-  
- O [typeid](../../windows/typeid-cpp-component-extensions.md) operador não pode ser aplicado para o tipo indicado porque ele contém o `auto` especificador.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir produz C3541.  
-  
-```  
-// C3541.cpp  
-// Compile with /Zc:auto  
-#include <typeinfo>  
-int main() {  
-    auto x = 123;  
-    typeid(x);    // OK  
-    typeid(auto); // C3541  
-    return 0;  
-}  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [palavra-chave auto](../../cpp/auto-keyword.md)   
- [/ZC: auto (deduzir tipo variável)](../../build/reference/zc-auto-deduce-variable-type.md)   
- [TypeId](../../windows/typeid-cpp-component-extensions.md)
+# <a name="compiler-error-c3541"></a>Erro do compilador C3541
+
+'type': typeid não pode ser aplicado a um tipo que contenha 'auto'
+
+O [typeid](../../windows/typeid-cpp-component-extensions.md) operador não pode ser aplicado para o tipo indicado, porque ela contém o `auto` especificador.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir produz C3541.
+
+```
+// C3541.cpp
+// Compile with /Zc:auto
+#include <typeinfo>
+int main() {
+    auto x = 123;
+    typeid(x);    // OK
+    typeid(auto); // C3541
+    return 0;
+}
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Palavra-chave auto](../../cpp/auto-keyword.md)<br/>
+[/Zc:auto (deduzir tipo de variável)](../../build/reference/zc-auto-deduce-variable-type.md)<br/>
+[TypeId](../../windows/typeid-cpp-component-extensions.md)

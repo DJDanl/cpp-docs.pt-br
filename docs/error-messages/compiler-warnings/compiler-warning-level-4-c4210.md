@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 4) de aviso C4210 | Microsoft Docs
+title: Compilador aviso (nível 4) C4210 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1a376eb8bb9c5dffe5cfd4bc34c720c7e0acf41
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2cd9bf209d7d9f48ac2ff0aae4663dc9088199df
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292481"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017710"
 ---
-# <a name="compiler-warning-level-4-c4210"></a>Compilador C4210 de aviso (nível 4)
-extensão não padrão usada: função de escopo de arquivo especificada  
-  
- Com as extensões do Microsoft padrão ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)), declarações de função tem o escopo de arquivo.  
-  
-```  
-// C4210.c  
-// compile with: /W4 /c  
-void func1()  
-{  
-   extern int func2( double );   // C4210 expected  
-}  
-  
-int main()  
-{  
-   func2( 4 );   //  /Ze passes 4 as type double  
-}                //  /Za passes 4 as type int  
-```  
-  
- Esta extensão pode impedir que seu código portátil para outros compiladores.
+# <a name="compiler-warning-level-4-c4210"></a>Compilador aviso (nível 4) C4210
+
+extensão não padrão usada: função de escopo de arquivo especificada
+
+Com as extensões da Microsoft padrão ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)), as declarações de função têm escopo de arquivo.
+
+```
+// C4210.c
+// compile with: /W4 /c
+void func1()
+{
+   extern int func2( double );   // C4210 expected
+}
+
+int main()
+{
+   func2( 4 );   //  /Ze passes 4 as type double
+}                //  /Za passes 4 as type int
+```
+
+Esta extensão pode impedir que seu código portátil para outros compiladores.

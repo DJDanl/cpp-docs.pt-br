@@ -1,5 +1,5 @@
 ---
-title: C2585 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2585 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ab812a4b6621acb28a4df636056598047f5c21e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ec7b1e9c1e5e7894740cc80f9c030fa1ee26ec0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230155"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028838"
 ---
-# <a name="compiler-error-c2585"></a>C2585 de erro do compilador
-conversão explícita para 'type' é ambíguo  
-  
- A conversão de tipo pode produzir mais de um resultado.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
-  
-1.  Conversão de um tipo de classe ou estrutura com base em várias heranças. Se o tipo herda a mesma classe base mais de uma vez, o operador ou função de conversão deve usar resolução de escopo (`::`) para especificar que as classes herdadas para usar na conversão.  
-  
-2.  Um operador de conversão e um construtor foram definidas fazer a mesma conversão.
+# <a name="compiler-error-c2585"></a>Erro do compilador C2585
+
+conversão explícita para 'type' é ambíguo
+
+A conversão de tipo pode produzir mais de um resultado.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
+
+1. Convertendo de um tipo de classe ou estrutura com base na herança múltipla. Se o tipo herda a mesma classe base mais de uma vez, a função de conversão ou um operador deve usar resolução de escopo (`::`) para especificar quais as classes herdadas para usar na conversão.
+
+1. Um operador de conversão e um construtor foram definidos a mesma conversão.

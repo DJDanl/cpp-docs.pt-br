@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 2) do aviso C4302 | Microsoft Docs
+title: Compilador aviso (nível 2) C4302 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f9a94e75b0d2ce522c2ec9f45d8a2386e85b136
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31ff3bebf07d87b507a18998658966b2c5a789b8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291798"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025575"
 ---
-# <a name="compiler-warning-level-2-c4302"></a>Compilador C4302 de aviso (nível 2)
-'conversão de ': truncamento de 'type 1' para 'type 2'  
-  
- O compilador detectou uma conversão de um tipo maior em um tipo menor. Informações podem ser perdidas.  
-  
- Esse aviso é desativada por padrão. Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.  
-  
- O exemplo a seguir gera C4302:  
-  
-```  
-// C4302.cpp  
-// compile with: /W2  
-#pragma warning(default : 4302)  
-int main() {  
-   int i;  
-   char c = (char) &i;     // C4302  
-   short s = (short) &i;   // C4302  
-}  
+# <a name="compiler-warning-level-2-c4302"></a>Compilador aviso (nível 2) C4302
+
+'conversion': truncamento de 'type 1' para 'type 2'
+
+O compilador detectou uma conversão de um tipo de maior em um tipo menor. Informações podem ser perdidas.
+
+Esse aviso é desativado por padrão. Ver [compilador avisos que são desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.
+
+O exemplo a seguir gera C4302:
+
+```
+// C4302.cpp
+// compile with: /W2
+#pragma warning(default : 4302)
+int main() {
+   int i;
+   char c = (char) &i;     // C4302
+   short s = (short) &i;   // C4302
+}
 ```

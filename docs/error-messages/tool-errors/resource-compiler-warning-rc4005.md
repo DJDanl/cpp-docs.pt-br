@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 724764e443d4ab999c1df1247e9f5572ebdb2078
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 589fd008b3927887a8144b2fc63d2cbbde2af913
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322478"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028513"
 ---
 # <a name="resource-compiler-warning-rc4005"></a>Aviso RC4005 (compilador de recurso)
-'Identificador': redefinição de macro  
-  
- O identificador está definido duas vezes. O compilador usado a segunda definição de macro.  
-  
- Esse aviso pode ser causado por definindo uma macro na linha de comando e no código com um `#define` diretiva. Ele também pode ser causado por macros importadas de arquivos de inclusão.  
-  
- Para eliminar o aviso, remova uma das definições ou use um `#undef` diretiva antes da definição de segundo.
+
+'identifier': redefinição de macro
+
+O identificador está definido duas vezes. O compilador usado a segunda definição de macro.
+
+Esse aviso pode ser causado por definindo uma macro na linha de comando e no código com um `#define` diretiva. Ele também pode ser causado por macros importadas de arquivos de inclusão.
+
+Para eliminar o aviso, remova uma das definições ou use um `#undef` diretiva antes da definição de segundo.

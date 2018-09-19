@@ -1,5 +1,5 @@
 ---
-title: C2361 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2361 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,46 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9223916543119c16fc5d8c19bf5cb9ae38e77909
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d91ee8b004e2f485326378eb2e1611f217f745c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222274"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029787"
 ---
-# <a name="compiler-error-c2361"></a>C2361 de erro do compilador
-inicialização de 'Identificador' é ignorada por rótulo 'default'  
-  
- A inicialização de `identifier` pode ser ignorado em um `switch` instrução. Você não pode ir além de uma declaração com um inicializador, a menos que a declaração é incluída em um bloco. (A menos que ela é declarada dentro de um bloco, a variável está no escopo até o término do `switch` instrução.)  
-  
- O exemplo a seguir gera C2361:  
-  
-```  
-// C2361.cpp  
-void func( void ) {  
-   int x;  
-   switch (x) {  
-   case 0 :  
-      int i = 1;  
-      { int j = 1; }  
-   default :   // C2361 error  
-      int k = 1;  
-   }  
-}  
-```  
-  
- Possível solução:  
-  
-```  
-// C2361b.cpp  
-// compile with: /c  
-void func( void ) {  
-   int x = 0;  
-   switch (x) {  
-   case 0 :  
-      { int j = 1; int i = 1;}  
-   default :  
-      int k = 1;  
-   }  
-}  
+# <a name="compiler-error-c2361"></a>Erro do compilador C2361
+
+inicialização de 'identifier' é ignorada por rótulo 'default'
+
+A inicialização de `identifier` pode ser ignorada em um `switch` instrução. Você não pode ir após uma declaração com um inicializador, a menos que a declaração é incluída em um bloco. (A menos que ela é declarada dentro de um bloco, a variável está dentro do escopo até o final do `switch` instrução.)
+
+O exemplo a seguir gera C2361:
+
+```
+// C2361.cpp
+void func( void ) {
+   int x;
+   switch (x) {
+   case 0 :
+      int i = 1;
+      { int j = 1; }
+   default :   // C2361 error
+      int k = 1;
+   }
+}
+```
+
+Solução possível:
+
+```
+// C2361b.cpp
+// compile with: /c
+void func( void ) {
+   int x = 0;
+   switch (x) {
+   case 0 :
+      { int j = 1; int i = 1;}
+   default :
+      int k = 1;
+   }
+}
 ```

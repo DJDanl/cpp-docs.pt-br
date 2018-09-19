@@ -1,5 +1,5 @@
 ---
-title: BSCMAKE erro BK1507 | Microsoft Docs
+title: Erro de BSCMAKE BK1507 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce8f7b931f81d53dd156f8442994229f20d4bc9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34352b35c1938e2374666a00777d4a125982006f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294980"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024782"
 ---
 # <a name="bscmake-error-bk1507"></a>Erro BK1507 (BSCMAKE)
-não é possível abrir o arquivo temporário 'filename' [: motivo]  
-  
- BSCMAKE não é possível abrir um arquivo temporário.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
-  
-1.  O **TMP** variável de ambiente não é definida como uma unidade válida e um diretório.  
-  
-2.  Um disco cheio.
+
+não é possível abrir o arquivo temporário 'filename' [: motivo]
+
+BSCMAKE não é possível abrir um arquivo temporário.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
+
+1. O **TMP** variável de ambiente não está definida como uma unidade válida e o diretório.
+
+1. Um disco cheio.

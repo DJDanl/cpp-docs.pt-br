@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cb05f61d3cd90177fe5e44ce432430ba8f74dd5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: af215609ac9579a357539a0d2d0a85c78f6dbc13
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754807"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017957"
 ---
 # <a name="cdynamicchain-class"></a>Classe CDynamicChain
 
@@ -104,22 +104,22 @@ BOOL CallChain(
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwChainID*  
+*dwChainID*<br/>
 [in] O identificador exclusivo associado com o objeto encadeado e seu mapa de mensagem.
 
-*hWnd*  
+*hWnd*<br/>
 [in] O identificador para a janela de recebimento da mensagem.
 
-*uMsg*  
+*uMsg*<br/>
 [in] A mensagem enviada para a janela.
 
-*wParam*  
+*wParam*<br/>
 [in] Obter informações adicionais específicas de mensagem.
 
-*lParam*  
+*lParam*<br/>
 [in] Obter informações adicionais específicas de mensagem.
 
-*lResult*  
+*lResult*<br/>
 [out] O resultado do processamento da mensagem.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -162,7 +162,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwChainID*  
+*dwChainID*<br/>
 [in] O identificador exclusivo associado com o objeto encadeado e seu mapa de mensagem. Originalmente, você define esse valor por meio de uma chamada para [SetChainEntry](#setchainentry).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -182,13 +182,13 @@ BOOL SetChainEntry(
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwChainID*  
+*dwChainID*<br/>
 [in] O identificador exclusivo associado com o objeto encadeado e seu mapa de mensagem.
 
-*pObject*  
+*pObject*<br/>
 [in] Um ponteiro para o objeto encadeado declarando o mapa da mensagem. Esse objeto deve ser derivado de [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
-*dwMsgMapID*  
+*dwMsgMapID*<br/>
 [in] O identificador do mapa de mensagens no objeto encadeado. O valor padrão é 0, que identifica o mapa de mensagem padrão declarado com [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Para especificar um mapa de mensagens alternativos declarado com [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), passe `msgMapID`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -201,5 +201,5 @@ Se o *dwChainID* valor já existe na coleção, seu objeto associado e mapa de m
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CWindowImpl](../../atl/reference/cwindowimpl-class.md)   
+[Classe CWindowImpl](../../atl/reference/cwindowimpl-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

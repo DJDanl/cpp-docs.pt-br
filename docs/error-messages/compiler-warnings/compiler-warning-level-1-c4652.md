@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4652 | Microsoft Docs
+title: Compilador aviso (nível 1) C4652 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a584e521e6fc1aeeaba94c5f74597d86bee16707
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09299c821410a476ccff7f788206af050e6a865a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285636"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026589"
 ---
-# <a name="compiler-warning-level-1-c4652"></a>Compilador C4652 de aviso (nível 1)
-opção de compilador 'option' inconsistente com cabeçalho pré-compilado; opção de linha de comando atual substituirá a definida no cabeçalho pré-compilado  
-  
- A opção de linha de comando fornecida é diferente da que é atribuído quando o cabeçalho pré-compilado (. pch) foi criado. A opção especificada na linha de comando atual foi usada.  
-  
- Esse aviso pode ser evitado regenerar o cabeçalho pré-compilado com a opção de linha de comando fornecida.
+# <a name="compiler-warning-level-1-c4652"></a>Compilador aviso (nível 1) C4652
+
+opção de compilador 'option' inconsistente com cabeçalho pré-compilado; opção de linha de comando atual substituirá a definida no cabeçalho pré-compilado
+
+A opção de linha de comando fornecida é diferente daquele fornecido quando o cabeçalho pré-compilado (. pch) foi criado. A opção especificada na linha de comando atual foi usada.
+
+Esse aviso pode ser evitado pela regeneração de cabeçalho pré-compilado com a opção de linha de comando fornecida.

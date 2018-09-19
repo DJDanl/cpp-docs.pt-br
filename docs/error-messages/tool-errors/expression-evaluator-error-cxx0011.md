@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9840b805960f3ebb571dd9cb6a35895364099d3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d6a9409728f5dbcbb003ecb8d2d9e4f98bc57ede
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294866"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026836"
 ---
 # <a name="expression-evaluator-error-cxx0011"></a>Erro CXX0011 (avaliador de expressão)
-colchete direito ausente  
-  
- A expressão contém desbalanceadas colchetes. Digite novamente a expressão entre colchetes equilibradas.  
-  
- Esse erro é idêntico ao CAN0011.
+
+colchete direito ausente
+
+A expressão contém colchetes desbalanceados. Digite novamente a expressão entre colchetes equilibradas.
+
+Esse erro é idêntico ao CAN0011.

@@ -1,5 +1,5 @@
 ---
-title: C3183 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3183 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4520922550dfcb5050c5e8a122910acf4b124934
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76822882f1b0ac2da2e18131b47d5730820f4751
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252465"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020180"
 ---
-# <a name="compiler-error-c3183"></a>C3183 de erro do compilador
-não é possível definir sem nome de classe, struct ou união 'type' do tipo de WinRT ou dentro de gerenciado  
-  
-Um tipo que é inserido em um gerenciado ou WinRT tipo deve ser nomeado.  
-  
-O exemplo a seguir gera C3183:  
-  
-```  
-// C3183a.cpp  
-// compile with: /clr /c  
-ref class Test  
-{  
-   ref class  
-   {  // C3183, delete class or name it  
-      int a;  
-      int b;  
-   };  
-};  
-```  
+# <a name="compiler-error-c3183"></a>Erro do compilador C3183
+
+não é possível definir sem nome de classe, struct ou união dentro de gerenciados ou 'type' do tipo de WinRT
+
+Um tipo que é inserido em um gerenciado ou WinRT tipo deve ser nomeado.
+
+O exemplo a seguir gera C3183:
+
+```
+// C3183a.cpp
+// compile with: /clr /c
+ref class Test
+{
+   ref class
+   {  // C3183, delete class or name it
+      int a;
+      int b;
+   };
+};
+```

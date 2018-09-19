@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0622e939d1c0cb93579baeb5fa35e11be516e5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5940461a16dcb86fbb062937fe7330c1b6e04f75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756568"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021129"
 ---
 # <a name="ccomcompositecontrol-class"></a>Classe CComCompositeControl
 
@@ -43,13 +43,13 @@ Essa classe fornece os métodos necessários para implementar um controle compos
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template <class T>  
+template <class T>
 class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), bem como de outras interfaces que você desejar dar suporte para controle de composição.
 
 ## <a name="members"></a>Membros
@@ -122,28 +122,19 @@ HRESULT AdviseSinkMap(bool bAdvise);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bAdvise*  
+*bAdvise*<br/>
 True se todos os controles devem ser avisado; Caso contrário, false.
 
 ### <a name="return-value"></a>Valor de retorno
 
-S_OK  
-Todos os controles no caso de mapa coletor foram conectado ou desconectado de sua origem de evento com êxito.
-
-E_FAIL  
-Nem todos os controles no caso de mapa coletor pode ser conectado ou desconectado de sua origem de evento com êxito.
-
-E_POINTER  
-Esse erro geralmente indica um problema com uma entrada no mapa de coletor de evento do controle ou um problema com um argumento de modelo usado em uma `IDispEventImpl` ou `IDispEventSimpleImpl` classe base.
-
-CONNECT_E_ADVISELIMIT  
-O ponto de conexão já atingiu seu limite de conexões e não pode aceitar mais nenhuma.
-
-CONNECT_E_CANNOTCONNECT  
-O coletor não oferece suporte a interface necessária por esse ponto de conexão.
-
-CONNECT_E_NOCONNECTION  
-O valor do cookie não representa uma conexão válida. Esse erro geralmente indica um problema com uma entrada no mapa de coletor de evento do controle ou um problema com um argumento de modelo usado em uma `IDispEventImpl` ou `IDispEventSimpleImpl` classe base.
+|||
+|-|-|
+|S_OK  |Todos os controles no caso de mapa coletor foram conectado ou desconectado de sua origem de evento com êxito.|
+|E_FAIL  |Nem todos os controles no caso de mapa coletor pode ser conectado ou desconectado de sua origem de evento com êxito.|
+|E_POINTER  |Esse erro geralmente indica um problema com uma entrada no mapa de coletor de evento do controle ou um problema com um argumento de modelo usado em uma `IDispEventImpl` ou `IDispEventSimpleImpl` classe base.|
+|CONNECT_E_ADVISELIMIT  |O ponto de conexão já atingiu seu limite de conexões e não pode aceitar mais nenhuma.|
+|CONNECT_E_CANNOTCONNECT  |O coletor não oferece suporte a interface necessária por esse ponto de conexão.|
+|CONNECT_E_NOCONNECTION  |O valor do cookie não representa uma conexão válida. Esse erro geralmente indica um problema com uma entrada no mapa de coletor de evento do controle ou um problema com um argumento de modelo usado em uma `IDispEventImpl` ou `IDispEventSimpleImpl` classe base.|
 
 ### <a name="remarks"></a>Comentários
 
@@ -159,7 +150,7 @@ BOOL CalcExtent(SIZE& size);
 
 ### <a name="parameters"></a>Parâmetros
 
-*size*  
+*size*<br/>
 Uma referência a um `SIZE` estrutura a ser preenchida por este método.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -183,13 +174,13 @@ HWND Create(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWndParent*  
+*hWndParent*<br/>
 Um identificador para a janela pai do controle.
 
-*rcPos*  
+*rcPos*<br/>
 Reservado.
 
-*dwInitParam*  
+*dwInitParam*<br/>
 Dados a serem passados para o controle durante a criação do controle. Os dados passados como *dwInitParam* será exibida como o parâmetro LPARAM do [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) mensagem, que será enviada ao controle de composição quando ela é criada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -236,10 +227,10 @@ virtual HWND CreateControlWindow(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWndParent*  
+*hWndParent*<br/>
 Um identificador para a janela pai do controle.
 
-*rcPos*  
+*rcPos*<br/>
 O retângulo de posição do controle de composição no cliente coordena relativo a *hWndParent*.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -280,6 +271,6 @@ Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CComControl](../../atl/reference/ccomcontrol-class.md)   
-[Fundamentos do controle composto](../../atl/atl-composite-control-fundamentals.md)   
+[Classe CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
+[Fundamentos do controle composto](../../atl/atl-composite-control-fundamentals.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: C2404 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2404 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0f9636b593999695d145fe163c48a877e32ea25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 54b1f76223f118a9a25dda6252fc74dbdc90f1a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225755"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021961"
 ---
-# <a name="compiler-error-c2404"></a>C2404 de erro do compilador
-'Identificador': registro inválido em 'contexto'  
-  
- Este registro é inválido neste contexto.
+# <a name="compiler-error-c2404"></a>Erro do compilador C2404
+
+'identifier': registro inválido em 'context'
+
+Esse registro é inválido neste contexto.

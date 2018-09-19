@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ef92816c157d6bbc72d7c7539f2d0644c70082b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 444d2bc25c2eddd5ea9a0170272bd3e71b61f94f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199360"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018516"
 ---
 # <a name="fatal-error-c1211"></a>Erro fatal C1211
-Não há suporte para o atributo personalizado TypeForwardedTo pela versão do tempo de execução instalada  
-  
- C1211 ocorre quando você tiver um compilador para a versão atual, mas um tempo de execução de linguagem comum de uma versão anterior.  
-  
- Algumas funcionalidades do compilador não podem funcionar em uma versão anterior do tempo de execução.  
-  
- Para resolver C1211 instalar o common language runtime que acompanha o compilador você está usando.  
-  
- Para obter mais informações, consulte [encaminhamento de tipo (C + + CLI)](../../windows/type-forwarding-cpp-cli.md).
+
+Não há suporte para o atributo personalizado TypeForwardedTo pela versão do tempo de execução instalado
+
+C1211 ocorre quando você tem um compilador para a versão atual, mas um common language runtime de uma versão anterior.
+
+Algumas funcionalidades do compilador podem não funcionar em uma versão anterior do tempo de execução.
+
+Para resolver C1211 instalar o common language runtime que acompanham o compilador você está usando.
+
+Para obter mais informações, consulte [encaminhamento de tipo (C + + / CLI)](../../windows/type-forwarding-cpp-cli.md).

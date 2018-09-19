@@ -1,5 +1,5 @@
 ---
-title: C3023 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3023 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ddae81dbad5f828b754c97247527a891e8c0e2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3941af133d03b3cc4eae11785b8f870e8058809f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242151"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026056"
 ---
-# <a name="compiler-error-c3023"></a>C3023 de erro do compilador
-'value': token inesperado encontrado no argumento para cláusula de 'cláusula' OpenMP  
-  
- Os valores passados para uma cláusula não eram válidos.  
-  
- O exemplo a seguir gera C3023:  
-  
-```  
-// C3023.cpp  
-// compile with: /openmp /link vcomps.lib  
-#include <stdio.h>  
-#include "omp.h"  
-  
-int main() {  
-   int i;  
-  
-   #pragma omp parallel for schedule(dynamic 10)   // C3023  
-   for (i = 0; i < 10; ++i) ;  
-  
-   #pragma omp parallel for schedule(dynamic;10)   // C3023  
-   for (i = 0; i < 10; ++i) ;  
-  
-   // OK  
-   #pragma omp parallel for schedule(dynamic, 10)  
-   for (i = 0; i < 10; ++i)  
-   ;  
-}  
+# <a name="compiler-error-c3023"></a>Erro do compilador C3023
+
+'value': token inesperado encontrado no argumento para cláusula 'cláusula' de OpenMP
+
+Os valores passados para uma cláusula não são válidos.
+
+O exemplo a seguir gera C3023:
+
+```
+// C3023.cpp
+// compile with: /openmp /link vcomps.lib
+#include <stdio.h>
+#include "omp.h"
+
+int main() {
+   int i;
+
+   #pragma omp parallel for schedule(dynamic 10)   // C3023
+   for (i = 0; i < 10; ++i) ;
+
+   #pragma omp parallel for schedule(dynamic;10)   // C3023
+   for (i = 0; i < 10; ++i) ;
+
+   // OK
+   #pragma omp parallel for schedule(dynamic, 10)
+   for (i = 0; i < 10; ++i)
+   ;
+}
 ```

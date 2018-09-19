@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e24d6333faee842227edb09ea05aa6a1f8b0d9a0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 490084ef16afb1f00f05bea07f95d13209661343
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763595"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46024341"
 ---
 # <a name="connection-points-classes"></a>Classes de pontos de Conexão
 
@@ -52,7 +52,7 @@ As classes a seguir fornecem suporte para pontos de conexão:
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral da classe](../atl/atl-class-overview.md)   
-[Macros de ponto de Conexão](../atl/reference/connection-point-macros.md)   
+[Visão geral da classe](../atl/atl-class-overview.md)<br/>
+[Macros de ponto de conexão](../atl/reference/connection-point-macros.md)<br/>
 [Funções globais de ponto de conexão](../atl/reference/connection-point-global-functions.md)
 

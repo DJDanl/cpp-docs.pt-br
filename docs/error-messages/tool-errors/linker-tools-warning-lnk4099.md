@@ -1,5 +1,5 @@
 ---
-title: Aviso LNK4099 das ferramentas de vinculador | Microsoft Docs
+title: Ferramentas de vinculador LNK4099 aviso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22764705b35b2e882c5a03e819c9812d084dc118
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50bdceaba2e72312febec4819b96df334b5398c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300807"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025991"
 ---
 # <a name="linker-tools-warning-lnk4099"></a>Aviso LNK4099 (Ferramentas de Vinculador)
-PDB 'filename' não foi encontrado com o 'objeto/biblioteca' ou 'path'; Vinculando objeto quando sem informação de depuração  
-  
- O vinculador não pôde localizar o arquivo. PDB. Copiá-lo para o diretório que contém `object/library`.  
-  
- Para localizar o nome do arquivo. PDB associado ao arquivo de objeto:  
-  
-1.  Extrair um arquivo de objeto de biblioteca com [lib](../../build/reference/lib-reference.md) **/extract:**`objectname`**. obj** `xyz` **. lib**.  
-  
-2.  Verifique o caminho para o arquivo. PDB com **dumpbin /section:.debug$ T /rawdata** `objectname` **. obj**.  
-  
- Você também pode compilar com [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md), portanto, o pdb não precisa ser usado, ou remova o [/Debug](../../build/reference/debug-generate-debug-info.md) opção de vinculador se você não tem arquivos. PDB para os objetos que você está vinculando.
+
+PDB 'filename' não foi encontrado com '/ Biblioteca de objetos' ou 'caminho'; Vinculando objeto quando sem informação de depuração
+
+O vinculador não pôde localizar o arquivo. PDB. Copiá-lo para o diretório que contém `object/library`.
+
+Para localizar o nome do arquivo. PDB associado com o arquivo de objeto:
+
+1. Extrair um arquivo de objeto da biblioteca com o [lib](../../build/reference/lib-reference.md) **/extract:**`objectname`**obj** `xyz` **. lib**.
+
+1. Verifique o caminho para o arquivo. PDB com **dumpbin /section:.debug$ T /rawdata** `objectname` **obj**.
+
+Você também pode compilar com [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md), de modo que o pdb não precisa ser usado, ou remova a [/Debug](../../build/reference/debug-generate-debug-info.md) se você não tem arquivos. PDB para os objetos que você está vinculando a opção de vinculador.

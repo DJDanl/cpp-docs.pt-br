@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f68c22ff88ac92357dabfef8076c160271a76378
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 12976bcf796466f959807f7ac2fb52257889454b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756484"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46025536"
 ---
 # <a name="connection-point-global-functions"></a>Funções globais de ponto de Conexão
 
@@ -59,16 +59,16 @@ HRESULT    AtlAdvise(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pUnkCP*  
+*pUnkCP*<br/>
 [in] Um ponteiro para o `IUnknown` do objeto cliente deseja se conectar com.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Um ponteiro para o cliente `IUnknown`.
 
-*IID*  
+*IID*<br/>
 [in] O GUID do ponto de conexão. Normalmente, isso é o mesmo que a interface de saída gerenciada pelo ponto de conexão.
 
-*PDW*  
+*PDW*<br/>
 [out] Um ponteiro para o cookie que identifica exclusivamente a conexão.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -99,13 +99,13 @@ HRESULT    AtlUnadvise(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pUnkCP*  
+*pUnkCP*<br/>
 [in] Um ponteiro para o `IUnknown` do objeto que o cliente está conectado com.
 
-*IID*  
+*IID*<br/>
 [in] O GUID do ponto de conexão. Normalmente, isso é o mesmo que a interface de saída gerenciada pelo ponto de conexão.
 
-*dw*  
+*dw*<br/>
 [in] O cookie que identifica exclusivamente a conexão.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -129,10 +129,10 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pT*  
+*pT*<br/>
 [in] Um ponteiro para o objeto que contém o mapa de coletor.
 
-*bAdvise*  
+*bAdvise*<br/>
 [in] TRUE se todas as entradas de coletor devem ser avisado; FALSE se todas as entradas de coletor devem ser unadvised.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -145,5 +145,5 @@ Um valor padrão de HRESULT.
 
 ## <a name="see-also"></a>Consulte também
 
-[Funções](../../atl/reference/atl-functions.md)   
+[Funções](../../atl/reference/atl-functions.md)<br/>
 [Macros de ponto de conexão](../../atl/reference/connection-point-macros.md)

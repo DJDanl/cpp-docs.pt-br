@@ -1,5 +1,5 @@
 ---
-title: Erro de Build prj0044 no projeto | Microsoft Docs
+title: Erro de Build prj0044 do projeto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,19 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7091025f49343ce0054d6033dc54a3397318b37a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ac5ac11ae8622e2f153effd2cfb5ab0055414331
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33324532"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028476"
 ---
 # <a name="project-build-error-prj0044"></a>Erro de Build PRJ0044 no Projeto
-A propriedade 'Additional Dependencies' para a regra de compilação personalizada 'rule' atribuída ao arquivo 'file' é inválida. A propriedade continha 'string', que é avaliado como 'value'.  
-  
- O **dependências adicionais** propriedade avaliada para uma cadeia de caracteres vazia ou uma cadeia de caracteres continha caracteres inválidos (qualquer caractere que não pode ser um nome de arquivo ou diretório). Personalizado necessidade de regras de saída de compilação a ação de compilação.  
-  
- Para obter mais informações, consulte [especificando ferramentas de compilação personalizada](../../ide/specifying-custom-build-tools.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Erros e avisos de build do projeto (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)
+
+A propriedade 'Additional Dependencies' para a regra de compilação personalizada 'rule' atribuída ao arquivo 'file' é inválida. A propriedade continha 'string', que é avaliada como 'value'.
+
+O **dependências adicionais** propriedade avaliada para uma cadeia de caracteres vazia ou uma cadeia de caracteres que continha caracteres inválidos (qualquer caractere que não pode ser um nome de arquivo ou diretório). De compilação personalizada necessidade de regras de saída da ação de compilação.
+
+Para obter mais informações, consulte [especificando ferramentas de Build personalizado](../../ide/specifying-custom-build-tools.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Erros e avisos de build do projeto (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)

@@ -1,5 +1,5 @@
 ---
-title: C2883 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2883 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc3119db27127521f5078a5753bb82c82da381ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50cc5b2abb34fae21bea78aa146e74b9aa9491c4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244941"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019257"
 ---
-# <a name="compiler-error-c2883"></a>C2883 de erro do compilador
-'name': declaração da função está em conflito com 'Identificador' introduzido por declaração de using  
-  
- Você tentou definir uma função de mais de uma vez. A primeira definição foi feita de um namespace com um `using` declaração. A segunda é uma definição de local.  
-  
- O exemplo a seguir gera C2883:  
-  
-```  
-// C2883.cpp  
-namespace A {  
-   void z(int);  
-}  
-  
-int main() {  
-   using A::z;  
-   void z(int);   // C2883  z is already defined  
-}  
+# <a name="compiler-error-c2883"></a>Erro do compilador C2883
+
+'name': declaração de função está em conflito com 'identifier' introduzido por declaração using
+
+Você tentou definir uma função mais de uma vez. A primeira definição foi feita de um namespace com um `using` declaração. A segunda era uma definição de local.
+
+O exemplo a seguir gera C2883:
+
+```
+// C2883.cpp
+namespace A {
+   void z(int);
+}
+
+int main() {
+   using A::z;
+   void z(int);   // C2883  z is already defined
+}
 ```

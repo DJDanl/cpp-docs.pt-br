@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65198998666391763ef32a55cd12e86529e619ed
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 189d4b4084958c2572a0a3165509acd3be6e8d23
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693917"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028292"
 ---
 # <a name="ischedulerproxy-structure"></a>Estrutura ISchedulerProxy
-A interface pela qual agendadores se comunicar com o Gerenciador de recursos do tempo de execução de simultaneidade para negociar a alocação de recursos.  
+A interface pela qual agendadores de se comunicar com o Gerenciador de recursos do tempo de execução de simultaneidade para negociar a alocação de recursos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,85 +45,85 @@ struct ISchedulerProxy;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[ISchedulerProxy::BindContext](#bindcontext)|Associa um contexto de execução com um proxy de thread, se ainda não estiver associada a um.|  
-|[ISchedulerProxy::CreateOversubscriber](#createoversubscriber)|Cria uma nova raiz de processador virtual no thread de hardware associado a um recurso de execução existente.|  
-|[ISchedulerProxy::RequestInitialVirtualProcessors](#requestinitialvirtualprocessors)|Solicita uma alocação inicial de raízes do processador virtual. Cada raiz do processador virtual representa a capacidade de executar um thread que pode executar o trabalho para o Agendador.|  
+|[ISchedulerProxy::BindContext](#bindcontext)|Associa um contexto de execução com um proxy de thread, se ele não ainda estiver associado a um.|  
+|[ISchedulerProxy::CreateOversubscriber](#createoversubscriber)|Cria uma nova raiz de processador virtual em que o thread de hardware associado a um recurso de execução existente.|  
+|[ISchedulerProxy::RequestInitialVirtualProcessors](#requestinitialvirtualprocessors)|Solicita uma alocação inicial de raízes de processador virtual. Cada raiz de processador virtual representa a capacidade de executar um thread que pode executar o trabalho para o Agendador.|  
 |[ISchedulerProxy::Shutdown](#shutdown)|Notifica o Gerenciador de recursos que o Agendador está sendo desligado. Isso fará com que o Gerenciador de recursos para recuperar todos os recursos concedidos para o Agendador.|  
 |[ISchedulerProxy::SubscribeCurrentThread](#subscribecurrentthread)|Registra o thread atual com o Gerenciador de recursos, associando-o este agendador.|  
-|[ISchedulerProxy::UnbindContext](#unbindcontext)|Desassocia um proxy de thread do contexto de execução especificado pelo `pContext` parâmetro e o retorna ao pool livre da fábrica de proxy de thread. Esse método pode ser chamado apenas em um contexto de execução que foi associado através de [: Bindcontext](#bindcontext) método e ainda não foi iniciada via sendo o `pContext` parâmetro de um [: Switchto ](ithreadproxy-structure.md#switchto) chamada de método.|  
+|[ISchedulerProxy::UnbindContext](#unbindcontext)|Desassocia um proxy de thread do contexto de execução especificado pelo `pContext` parâmetro e o retorna ao pool da fábrica de proxy de thread livre. Esse método pode ser chamado apenas em um contexto de execução que estava associado por meio de [ischedulerproxy:: Bindcontext](#bindcontext) método e ainda não foi iniciado por meio do que está sendo a `pContext` parâmetro de um [ithreadproxy:: Switchto ](ithreadproxy-structure.md#switchto) chamada de método.|  
   
 ## <a name="remarks"></a>Comentários  
- O Gerenciador de recursos passa um `ISchedulerProxy` interface para cada Agendador que registra com ele usando o [: Registerscheduler](iresourcemanager-structure.md#registerscheduler) método.  
+ O Gerenciador de recursos passa um `ISchedulerProxy` interface para cada Agendador que registra com ele usando o [iresourcemanager:: Registerscheduler](iresourcemanager-structure.md#registerscheduler) método.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `ISchedulerProxy`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** concrtrm.h  
+ **Cabeçalho:** concrtrm. h  
   
  **Namespace:** simultaneidade  
   
-##  <a name="bindcontext"></a>  Método: Bindcontext  
- Associa um contexto de execução com um proxy de thread, se ainda não estiver associada a um.  
+##  <a name="bindcontext"></a>  Método ischedulerproxy:: Bindcontext  
+ Associa um contexto de execução com um proxy de thread, se ele não ainda estiver associado a um.  
   
 ```
 virtual void BindContext(_Inout_ IExecutionContext* pContext) = 0;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pContext`  
- Uma interface para o contexto de execução para associar um proxy de thread.  
+*pContext*<br/>
+Uma interface para o contexto de execução a ser associado a um proxy de thread.  
   
 ### <a name="remarks"></a>Comentários  
- Normalmente, o [: Switchto](ithreadproxy-structure.md#switchto) método associará um proxy de thread a um contexto de execução sob demanda. No entanto, há circunstâncias em que é necessário associar um contexto com antecedência para garantir que o `SwitchTo` método alterna a um contexto já está associado. Esse é o caso em um contexto de agendamento, pois ele não é possível chamar métodos para alocar a memória UMS e associação de um proxy do thread pode envolver a alocação de memória se um proxy de thread não está disponível no pool livre de fábrica de proxy de thread.  
+ Normalmente, o [ithreadproxy:: Switchto](ithreadproxy-structure.md#switchto) método irá vincular um proxy de thread para um contexto de execução sob demanda. No entanto, há circunstâncias em que é necessário associar um contexto de antecedência para garantir que o `SwitchTo` método alterna para um contexto já está associado. Esse é o caso em um contexto de agendamento, pois ele não é possível chamar métodos que alocam memória UMS e um proxy de thread de associação pode envolver a alocação de memória, se um proxy de thread não está prontamente disponível no pool da fábrica de proxy de thread livre.  
   
  `invalid_argument` será gerada se o parâmetro `pContext` tem o valor `NULL`.  
   
-##  <a name="createoversubscriber"></a>  Método: Createoversubscriber  
- Cria uma nova raiz de processador virtual no thread de hardware associado a um recurso de execução existente.  
+##  <a name="createoversubscriber"></a>  Método ischedulerproxy:: Createoversubscriber  
+ Cria uma nova raiz de processador virtual em que o thread de hardware associado a um recurso de execução existente.  
   
 ```
 virtual IVirtualProcessorRoot* CreateOversubscriber(_Inout_ IExecutionResource* pExecutionResource) = 0;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pExecutionResource`  
- Um `IExecutionResource` interface que representa o segmento de hardware que você deseja subscrever.  
+*pExecutionResource*<br/>
+Um `IExecutionResource` interface que representa o thread de hardware que você deseja substituir.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Uma interface `IVirtualProcessorRoot`.  
   
 ### <a name="remarks"></a>Comentários  
- Use esse método quando quiser que o Agendador subscrever um thread de hardware específica para uma quantidade limitada de tempo. Quando terminar com a raiz de processador virtual, você deve retorná-lo para o Gerenciador de recursos chamando o [remover](iexecutionresource-structure.md#remove) método sobre o `IVirtualProcessorRoot` interface.  
+ Use esse método quando quiser que seu Agendador de subscrever um thread de hardware específico para uma quantidade limitada de tempo. Quando terminar com a raiz do processador virtual, você deve retorná-lo para o Gerenciador de recursos chamando o [remover](iexecutionresource-structure.md#remove) método o `IVirtualProcessorRoot` interface.  
   
- Você mesmo pode subscrever uma raiz de processador virtual existente, porque o `IVirtualProcessorRoot` interface herda o `IExecutionResource` interface.  
+ Você pode até mesmo substituir uma raiz de processador virtual existente, porque o `IVirtualProcessorRoot` interface herda o `IExecutionResource` interface.  
   
-##  <a name="requestinitialvirtualprocessors"></a>  Método: Requestinitialvirtualprocessors  
- Solicita uma alocação inicial de raízes do processador virtual. Cada raiz do processador virtual representa a capacidade de executar um thread que pode executar o trabalho para o Agendador.  
+##  <a name="requestinitialvirtualprocessors"></a>  Método ischedulerproxy:: Requestinitialvirtualprocessors  
+ Solicita uma alocação inicial de raízes de processador virtual. Cada raiz de processador virtual representa a capacidade de executar um thread que pode executar o trabalho para o Agendador.  
   
 ```
 virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurrentThread) = 0;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `doSubscribeCurrentThread`  
- Se assinar o thread atual e conta durante a alocação de recursos.  
+*doSubscribeCurrentThread*<br/>
+Se deseja assinar o thread atual e da conta para ele durante a alocação de recursos.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O `IExecutionResource` a interface para o thread atual, se o parâmetro `doSubscribeCurrentThread` tem o valor `true`. Se o valor for `false`, o método retornará `NULL`.  
+ O `IExecutionResource` da interface para o thread atual, se o parâmetro `doSubscribeCurrentThread` tem o valor `true`. Se o valor for `false`, o método retorna `NULL`.  
   
 ### <a name="remarks"></a>Comentários  
- Antes de um agendador executa qualquer trabalho, ele deve usar esse método para solicitar as raízes de processador virtual do Gerenciador de recursos. O Gerenciador de recursos acessará a política do Agendador usando [: Getpolicy](ischeduler-structure.md#getpolicy) e usar os valores para as chaves de política `MinConcurrency`, `MaxConcurrency` e `TargetOversubscriptionFactor` para determinar quantos threads de hardware para atribuir à Agendador inicialmente e quantos raízes de processador virtual para criar para cada thread de hardware. Para obter mais informações sobre como as políticas de Agendador são usadas para determinar a alocação inicial do Agendador, consulte [PolicyElementKey](concurrency-namespace-enums.md).  
+ Antes de um agendador executa qualquer trabalho, ele deve usar esse método para solicitar as raízes de processador virtual do Gerenciador de recursos. O Gerenciador de recursos acessará a política do Agendador usando [ischeduler:: Getpolicy](ischeduler-structure.md#getpolicy) e use os valores para as chaves de política `MinConcurrency`, `MaxConcurrency` e `TargetOversubscriptionFactor` para determinar quantos threads de hardware para atribuir à Agendador inicialmente e quantos raízes de processador virtual para criar para cada thread de hardware. Para obter mais informações sobre como as políticas de Agendador são usadas para determinar a alocação inicial do Agendador, consulte [PolicyElementKey](concurrency-namespace-enums.md).  
   
- O Gerenciador de recursos concede recursos para um agendador chamando o método [: Addvirtualprocessors](ischeduler-structure.md#addvirtualprocessors) com uma lista de raízes de processador virtual. O método é invocado um retorno de chamada para o Agendador antes que este método retorna.  
+ O Gerenciador de recursos concede recursos para um agendador chamando o método [ischeduler:: Addvirtualprocessors](ischeduler-structure.md#addvirtualprocessors) com uma lista de raízes de processador virtual. O método é invocado como um retorno de chamada para o Agendador antes desse método retorna.  
   
- Se o Agendador solicitados assinatura para o thread atual, definindo o parâmetro `doSubscribeCurrentThread` para `true`, o método retorna um `IExecutionResource` interface. A assinatura deve ser terminada posteriormente usando o [Iexecutionresource](iexecutionresource-structure.md#remove) método.  
+ Se o Agendador solicitou a assinatura para o thread atual, definindo o parâmetro `doSubscribeCurrentThread` à `true`, o método retorna um `IExecutionResource` interface. A assinatura deve ser terminada em um momento posterior, usando o [iexecutionresource:: remove](iexecutionresource-structure.md#remove) método.  
   
- Ao determinar quais segmentos de hardware são selecionados, o Gerenciador de recursos tenta otimizar para afinidade de processador. Se a assinatura for solicitada para o thread atual, é uma indicação de que o thread atual pretende participar do trabalho atribuído a este agendador. Nesse caso, as raízes de processadores virtuais alocados estão localizadas no nó de processador que o thread atual está em execução, se possível.  
+ Ao determinar quais segmentos de hardware são selecionados, o Gerenciador de recursos tentará otimizar para afinidade de nó do processador. Se a assinatura é solicitada para o thread atual, é uma indicação de que o thread atual pretende participar o trabalho atribuído a este agendador. Nesse caso, as raízes de processadores virtuais alocados estão localizadas no nó de processador que o thread atual está sendo executado, se possível.  
   
- O ato de assinar um thread aumenta o nível de assinatura do thread de hardware subjacentes por um. O nível de assinatura é reduzido por um quando a assinatura for encerrada. Para obter mais informações sobre níveis de assinatura, consulte [: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
+ O ato de assinar um thread aumenta o nível de assinatura do thread de hardware subjacentes por um. O nível de assinatura é reduzido por um quando a assinatura será encerrada. Para obter mais informações sobre os níveis de assinatura, consulte [iexecutionresource:: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
-##  <a name="shutdown"></a>  Método Ischedulerproxy:  
+##  <a name="shutdown"></a>  Método ischedulerproxy:: Shutdown  
  Notifica o Gerenciador de recursos que o Agendador está sendo desligado. Isso fará com que o Gerenciador de recursos para recuperar todos os recursos concedidos para o Agendador.  
   
 ```
@@ -131,13 +131,13 @@ virtual void Shutdown() = 0;
 ```  
   
 ### <a name="remarks"></a>Comentários  
- Todos os `IExecutionContext` interfaces Agendador recebido como resultado de um thread externo usando os métodos de assinatura `ISchedulerProxy::RequestInitialVirtualProcessors` ou `ISchedulerProxy::SubscribeCurrentThread` devem ser retornados para o Gerenciador de recursos usando `IExecutionResource::Remove` antes de um agendador desliga em si.  
+ Todos os `IExecutionContext` interfaces o Agendador recebido como resultado de um thread externo usando os métodos de assinatura `ISchedulerProxy::RequestInitialVirtualProcessors` ou `ISchedulerProxy::SubscribeCurrentThread` deve ser retornado para o Resource Manager usando `IExecutionResource::Remove` antes de um agendador se desliga.  
   
- Se o Agendador tinha qualquer desativado raízes de processador virtual, você deve ativá-los usando [Ivirtualprocessorroot](ivirtualprocessorroot-structure.md#activate)e ter os proxies do thread executando neles deixar o `Dispatch` método de execução contextos, eles são expedir antes de você chamar `Shutdown` em um proxy do Agendador.  
+ Se seu Agendador tinha qualquer desativado raízes de processador virtual, você deve ativá-los usando [ivirtualprocessorroot:: Activate](ivirtualprocessorroot-structure.md#activate)e ter os proxies de thread em execução neles deixar o `Dispatch` método da execução eles são expedição antes de invocar de contextos `Shutdown` em um proxy do Agendador.  
   
- Não é necessário para o Agendador para individualmente retornar todas as raízes de processador virtual concedido a ele por meio de chamadas para o Gerenciador de recursos de `Remove` método porque todas as raízes de processadores virtuais serão retornadas para o Gerenciador de recursos durante o desligamento.  
+ Não é necessário para o Agendador para individualmente retornar todas as raízes de processador virtual concedido a ele por meio de chamadas para o Gerenciador de recursos de `Remove` método porque todas as raízes de processadores virtuais serão retornadas para o Gerenciador de recursos no desligamento.  
   
-##  <a name="subscribecurrentthread"></a>  Método: Subscribecurrentthread  
+##  <a name="subscribecurrentthread"></a>  Método ischedulerproxy:: Subscribecurrentthread  
  Registra o thread atual com o Gerenciador de recursos, associando-o este agendador.  
   
 ```
@@ -148,22 +148,22 @@ virtual IExecutionResource* SubscribeCurrentThread() = 0;
  O `IExecutionResource` em uma interface que representa o thread atual no tempo de execução.  
   
 ### <a name="remarks"></a>Comentários  
- Use esse método se você quiser que o Gerenciador de recursos durante a alocação de recursos para o Agendador e outros agendadores de conta para o thread atual. É especialmente útil quando os planos de thread participem do trabalho em fila para o Agendador, juntamente com as raízes de processador virtual que Agendador recebe do Gerenciador de recursos. O Gerenciador de recursos usa informações para evitar excesso de assinatura desnecessário de threads de hardware do sistema.  
+ Use esse método se você quiser que o Gerenciador de recursos para levar em conta o thread atual durante a alocação de recursos para seu Agendador e outros agendadores. Ele é especialmente útil quando os planos de thread participem do trabalho na fila para o Agendador, juntamente com as raízes de processador virtual que o Agendador recebe do Gerenciador de recursos. O Gerenciador de recursos usa informações para evitar o excesso de assinatura desnecessário de segmentos de hardware no sistema.  
   
- O recurso de execução recebido por esse método deve ser retornado para o Gerenciador de recursos usando o [Iexecutionresource](iexecutionresource-structure.md#remove) método. O thread que chama o `Remove` método deve ser o mesmo thread que anteriormente chamado de `SubscribeCurrentThread` método.  
+ O recurso de execução recebido por esse método deve ser retornado para o Resource Manager usando o [iexecutionresource:: remove](iexecutionresource-structure.md#remove) método. O thread que chama o `Remove` método deve ser o mesmo thread que chamou anteriormente a `SubscribeCurrentThread` método.  
   
- O ato de assinar um thread aumenta o nível de assinatura do thread de hardware subjacentes por um. O nível de assinatura é reduzido por um quando a assinatura for encerrada. Para obter mais informações sobre níveis de assinatura, consulte [: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
+ O ato de assinar um thread aumenta o nível de assinatura do thread de hardware subjacentes por um. O nível de assinatura é reduzido por um quando a assinatura será encerrada. Para obter mais informações sobre os níveis de assinatura, consulte [iexecutionresource:: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel).  
   
-##  <a name="unbindcontext"></a>  Método: Unbindcontext  
- Desassocia um proxy de thread do contexto de execução especificado pelo `pContext` parâmetro e o retorna ao pool livre da fábrica de proxy de thread. Esse método pode ser chamado apenas em um contexto de execução que foi associado através de [: Bindcontext](#bindcontext) método e ainda não foi iniciada via sendo o `pContext` parâmetro de um [: Switchto ](ithreadproxy-structure.md#switchto) chamada de método.  
+##  <a name="unbindcontext"></a>  Método ischedulerproxy:: Unbindcontext  
+ Desassocia um proxy de thread do contexto de execução especificado pelo `pContext` parâmetro e o retorna ao pool da fábrica de proxy de thread livre. Esse método pode ser chamado apenas em um contexto de execução que estava associado por meio de [ischedulerproxy:: Bindcontext](#bindcontext) método e ainda não foi iniciado por meio do que está sendo a `pContext` parâmetro de um [ithreadproxy:: Switchto ](ithreadproxy-structure.md#switchto) chamada de método.  
   
 ```
 virtual void UnbindContext(_Inout_ IExecutionContext* pContext) = 0;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pContext`  
- O contexto de execução para desassociar a partir do seu proxy de thread.  
+*pContext*<br/>
+O contexto de execução para desassociar a partir de seu proxy de thread.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   

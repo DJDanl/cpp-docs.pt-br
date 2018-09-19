@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd1df20ab022df9ce1321c2f6de77bf7591fec3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a320fb08eaf19b5ed53000ffecd17d747e7a3000
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33304720"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019699"
 ---
 # <a name="expression-evaluator-error-cxx0032"></a>Erro CXX0032 (avaliador de expressão)
-divisão por 0  
-  
- A expressão contém um divisor de zero, o que é inválido. Esse divisor pode ser o número de literal de zero, ou pode ser uma expressão que é avaliada como zero.  
-  
- Esse erro é idêntico ao CAN0032.
+
+dividir por 0
+
+A expressão contém um divisor de zero, o que é ilegal. Esse divisor pode ser o número de literal de zero, ou pode ser uma expressão que é avaliada como zero.
+
+Esse erro é idêntico ao CAN0032.

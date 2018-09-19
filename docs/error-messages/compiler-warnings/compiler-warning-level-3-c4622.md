@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b82e87f37b50b8df727d043889cb35ca02d3f78
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d91e3c914d6c3feeb9d2326c94efe2bc54ac98f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291535"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023235"
 ---
-# <a name="compiler-warning-level-3-c4622"></a>Compilador C4622 de aviso (nível 3)
-substituindo informação de depuração formada durante a criação do cabeçalho pré-compilado no arquivo de objeto: 'file'  
-  
- Informações do CodeView no arquivo especificado eram perdidas quando ele foi compilado com o [/Yu](../../build/reference/yu-use-precompiled-header-file.md) opção (usar cabeçalhos pré-compilados).  
-  
- Renomeie o arquivo de objeto (usando [/Fo](../../build/reference/fo-object-file-name.md)) ao criar ou usando o cabeçalho pré-compilado de arquivo e vincular a usar o novo arquivo de objeto.
+# <a name="compiler-warning-level-3-c4622"></a>Compilador aviso (nível 3) C4622
+
+substituindo informação de depuração formada durante a criação de cabeçalho pré-compilado no arquivo de objeto: 'file'
+
+Informações de CodeView no arquivo especificado foram perdidas quando ele foi compilado com o [/Yu](../../build/reference/yu-use-precompiled-header-file.md) opção (usar cabeçalho pré-compilado).
+
+Renomeie o arquivo de objeto (usando [/Fo](../../build/reference/fo-object-file-name.md)) ao criar ou usando o cabeçalho pré-compilado do arquivo e fornecer um link usando o novo arquivo de objeto.

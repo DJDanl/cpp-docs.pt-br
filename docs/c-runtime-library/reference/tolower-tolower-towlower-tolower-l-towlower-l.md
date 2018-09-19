@@ -53,14 +53,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e399cb38fee83fee23f88732bb2186c4b501c152
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49b52bd65439165ef8dd83917a0d75926caba518
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412616"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023660"
 ---
 # <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
+
 Converte um caractere em minúsculo.
 
 ## <a name="syntax"></a>Sintaxe
@@ -95,13 +96,13 @@ Localidade a ser usada para conversão específica de localidade.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas rotinas converte uma cópia do *c* em letras minúsculas, se a conversão é possível e retorna o resultado. Não há valor retornado reservado para indicar um erro.
+Todas essas rotinas convertem uma cópia do *c* em letras minúsculas se a conversão for possível e retorna o resultado. Não há valor retornado reservado para indicar um erro.
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas rotinas converte determinada letra maiúscula em minúscula, se for possível e relevante. A conversão de maiusculas e minúsculas de **towlower** é específico da localidade. Somente caracteres relevantes à localidade atual são alterados quanto a maiúsculas e minúsculas. As funções sem o **_l** sufixo usar atualmente definida localidade. As versões dessas funções que têm o **_l** sufixo levar a localidade como um parâmetro e use-o em vez de atualmente definida localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+Cada uma dessas rotinas converte determinada letra maiúscula em minúscula, se for possível e relevante. A conversão de maiusculas e minúsculas de **towlower** é específica da localidade. Somente caracteres relevantes à localidade atual são alterados quanto a maiúsculas e minúsculas. As funções sem o **l** sufixo usam atualmente definida localidade. As versões dessas funções que têm o **l** sufixo usam a localidade como um parâmetro e usá-lo em vez de definida atualmente localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Para que **ToLower** para fornecer os resultados esperados, [isascii](isascii-isascii-iswascii.md) e [isupper](isupper-isupper-l-iswupper-iswupper-l.md) devem ambos retornam diferente de zero.
+Para que **ToLower** para fornecer os resultados esperados, [isascii](isascii-isascii-iswascii.md) e [isupper](isupper-isupper-l-iswupper-iswupper-l.md) devem retornar diferente de zero.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -111,7 +112,7 @@ Para que **ToLower** para fornecer os resultados esperados, [isascii](isascii-is
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
-> **tolower_l** e **towlower_l** não ter nenhuma dependência de localidade e não deve ser chamado diretamente. Eles são fornecidos para uso interno por **_totlower_l**.
+> **tolower_l** e **towlower_l** não têm nenhuma dependência de localidade e não se destinam a serem chamadas diretamente. Eles são fornecidos para uso interno pela **_totlower_l**.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -19,15 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c2e588021b1600b1b3ac6e04f91ab07649755a2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67658f6edadd7723789288ab268b97cecdd611d2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096816"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017346"
 ---
 # <a name="cnomultipleresults-class"></a>Classe CNoMultipleResults
-Usado como um argumento de modelo (*TMultiple*) para [CCommand](../../data/oledb/ccommand-class.md) criar um comando otimizado que manipula um único resultado definido.  
+
+Usado como um argumento de modelo (*TMultiple*) para [CCommand](../../data/oledb/ccommand-class.md) criar um comando otimizado que lida com um único resultado definido.  
   
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,11 +37,14 @@ class CNoMultipleResults
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Se você deseja que um comando para lidar com vários conjuntos de resultados, use [CMultipleResults](../../data/oledb/cmultipleresults-class.md) em vez disso.  
+
+Se você quiser um comando para lidar com vários conjuntos de resultados, use [CMultipleResults](../../data/oledb/cmultipleresults-class.md) em vez disso.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atldbcli.h  
+
+**Cabeçalho:** atldbcli.h  
   
 ## <a name="see-also"></a>Consulte também  
- [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

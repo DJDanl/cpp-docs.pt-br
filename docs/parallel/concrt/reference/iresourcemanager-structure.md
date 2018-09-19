@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afd87a71c8f5d41e38f6a1b18be96a7bab8f3bb8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4d1032b2db7d1552beb40eb724b9953142b9b2ac
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33693491"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027408"
 ---
 # <a name="iresourcemanager-structure"></a>Estrutura IResourceManager
-Uma interface para o Gerenciador de recursos do tempo de execução de simultaneidade. Essa é a interface pela qual os agendadores se comunicar com o Gerenciador de recursos.  
+Uma interface para o Gerenciador de recursos do tempo de execução de simultaneidade. Essa é a interface pela qual agendadores de se comunicar com o Gerenciador de recursos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,26 +52,26 @@ struct IResourceManager;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[IResourceManager::CreateNodeTopology](#createnodetopology)|Presente somente em depuração compilações do tempo de execução, esse método é um gancho de teste desenvolvido para facilitar o teste do Gerenciador de recursos em variáveis de topologias de hardware, sem a necessidade de correspondência a configuração de hardware real. Com compilações para venda do tempo de execução, esse método retornará sem executar nenhuma ação.|  
+|[IResourceManager::CreateNodeTopology](#createnodetopology)|Compilações de presente apenas na depuração de tempo de execução, esse método é um gancho de teste projetado para facilitar os testes do Gerenciador de recursos em variáveis de topologias de hardware, sem a necessidade de correspondência a configuração de hardware real. Com compilações para venda do tempo de execução, esse método retornará sem executar nenhuma ação.|  
 |[IResourceManager::GetAvailableNodeCount](#getavailablenodecount)|Retorna o número de nós disponíveis para o Gerenciador de recursos.|  
 |[IResourceManager::GetFirstNode](#getfirstnode)|Retorna o primeiro nó na ordem de enumeração, conforme definido pelo Gerenciador de recursos.|  
 |[IResourceManager::Reference](#reference)|Incrementa a contagem de referência na instância do Gerenciador de recursos.|  
-|[IResourceManager::RegisterScheduler](#registerscheduler)|Registra um agendador com o Gerenciador de recursos. Quando o Agendador é registrado, ele deve se comunicar com o Gerenciador de recursos usando o `ISchedulerProxy` interface que é retornado.|  
+|[IResourceManager::RegisterScheduler](#registerscheduler)|Registra um agendador com o Gerenciador de recursos. Depois que o Agendador é registrado, ele deve se comunicar com o Gerenciador de recursos usando o `ISchedulerProxy` interface que é retornado.|  
 |[IResourceManager::Release](#release)|Diminui a contagem de referência na instância do Gerenciador de recursos. O Gerenciador de recursos é destruído quando sua contagem de referência chegar a `0`.|  
   
 ## <a name="remarks"></a>Comentários  
- Use o [CreateResourceManager](concurrency-namespace-functions.md) função para obter uma interface para a instância do Gerenciador de recursos de singleton. O método incrementa a contagem de referência no Gerenciador de recursos, e você deve chamar o [Iresourcemanager](#release) método para liberar a referência ao terminar com o Gerenciador de recursos. Normalmente, cada Agendador que você criar serão invocar esse método durante a criação e liberar a referência para o Gerenciador de recursos, depois que ela é desligada.  
+ Use o [CreateResourceManager](concurrency-namespace-functions.md) função para obter uma interface para a instância do Gerenciador de recursos de singleton. O método incrementa uma contagem de referência no Gerenciador de recursos, e você deve invocar o [iresourcemanager:: Release](#release) método para liberar a referência quando você terminar com o Resource Manager. Normalmente, cada Agendador que você cria será invocar esse método durante a criação e liberar a referência para o Gerenciador de recursos, depois que ela é desligada.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `IResourceManager`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** concrtrm.h  
+ **Cabeçalho:** concrtrm. h  
   
  **Namespace:** simultaneidade  
   
-##  <a name="createnodetopology"></a>  Método: Createnodetopology  
- Presente somente em depuração compilações do tempo de execução, esse método é um gancho de teste desenvolvido para facilitar o teste do Gerenciador de recursos em variáveis de topologias de hardware, sem a necessidade de correspondência a configuração de hardware real. Com compilações para venda do tempo de execução, esse método retornará sem executar nenhuma ação.  
+##  <a name="createnodetopology"></a>  Método iresourcemanager:: Createnodetopology  
+ Compilações de presente apenas na depuração de tempo de execução, esse método é um gancho de teste projetado para facilitar os testes do Gerenciador de recursos em variáveis de topologias de hardware, sem a necessidade de correspondência a configuração de hardware real. Com compilações para venda do tempo de execução, esse método retornará sem executar nenhuma ação.  
   
 ```
 virtual void CreateNodeTopology(
@@ -82,24 +82,24 @@ virtual void CreateNodeTopology(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `nodeCount`  
- O número de nós de processador que está sendo simulada.  
+*nodeCount*<br/>
+O número de nós de processador que está sendo simulado.  
   
- `pCoreCount`  
- Uma matriz que especifica o número de núcleos em cada nó.  
+*pCoreCount*<br/>
+Uma matriz que especifica o número de núcleos em cada nó.  
   
- `pNodeDistance`  
- Uma matriz que especifica a distância do nó entre quaisquer dois nós. Esse parâmetro pode ter o valor `NULL`.  
+*pNodeDistance*<br/>
+Uma matriz que especifica a distância do nó entre quaisquer dois nós. Esse parâmetro pode ter o valor `NULL`.  
   
- `pProcessorGroups`  
- Uma matriz que especifica o grupo de processador cada nó pertence.  
+*pProcessorGroups*<br/>
+Uma matriz que especifica o grupo de processador cada nó pertence.  
   
 ### <a name="remarks"></a>Comentários  
- [invalid_argument](../../../standard-library/invalid-argument-class.md) é gerada se o parâmetro `nodeCount` tem o valor `0` foi passado, ou se o parâmetro `pCoreCount` tem o valor `NULL`.  
+ [invalid_argument](../../../standard-library/invalid-argument-class.md) será lançada se o parâmetro `nodeCount` tem o valor `0` foi passado, ou se o parâmetro `pCoreCount` tem o valor `NULL`.  
   
- [invalid_operation](invalid-operation-class.md) é gerada se esse método é chamado, enquanto outros agendadores existem no processo.  
+ [invalid_operation](invalid-operation-class.md) será lançada se esse método é chamado enquanto outros agendadores existem no processo.  
   
-##  <a name="getavailablenodecount"></a>  Método: Getavailablenodecount  
+##  <a name="getavailablenodecount"></a>  Método iresourcemanager:: Getavailablenodecount  
  Retorna o número de nós disponíveis para o Gerenciador de recursos.  
   
 ```
@@ -109,7 +109,7 @@ virtual unsigned int GetAvailableNodeCount() const = 0;
 ### <a name="return-value"></a>Valor de retorno  
  O número de nós disponíveis para o Gerenciador de recursos.  
   
-##  <a name="getfirstnode"></a>  Método: Getfirstnode  
+##  <a name="getfirstnode"></a>  Método iresourcemanager:: Getfirstnode  
  Retorna o primeiro nó na ordem de enumeração, conforme definido pelo Gerenciador de recursos.  
   
 ```
@@ -126,7 +126,7 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 enum OSVersion;
 ```  
   
-##  <a name="reference"></a>  Método Iresourcemanager::  
+##  <a name="reference"></a>  Método iresourcemanager:: Reference  
  Incrementa a contagem de referência na instância do Gerenciador de recursos.  
   
 ```
@@ -136,8 +136,8 @@ virtual unsigned int Reference() = 0;
 ### <a name="return-value"></a>Valor de retorno  
  A contagem de referência resultante.  
   
-##  <a name="registerscheduler"></a>  Método: Registerscheduler  
- Registra um agendador com o Gerenciador de recursos. Quando o Agendador é registrado, ele deve se comunicar com o Gerenciador de recursos usando o `ISchedulerProxy` interface que é retornado.  
+##  <a name="registerscheduler"></a>  Método iresourcemanager:: Registerscheduler  
+ Registra um agendador com o Gerenciador de recursos. Depois que o Agendador é registrado, ele deve se comunicar com o Gerenciador de recursos usando o `ISchedulerProxy` interface que é retornado.  
   
 ```
 virtual ISchedulerProxy *RegisterScheduler(
@@ -146,21 +146,21 @@ virtual ISchedulerProxy *RegisterScheduler(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `pScheduler`  
- Um `IScheduler` interface para o Agendador para ser registrado.  
+*pScheduler*<br/>
+Um `IScheduler` interface para o Agendador para ser registrado.  
   
- `version`  
- A versão da interface de comunicação que o Agendador está usando para se comunicar com o Gerenciador de recursos. Usando uma versão permite que o Gerenciador de recursos para desenvolver a interface de comunicação permitindo agendadores obter acesso a recursos para mais antigos. Agendadores que deseja usar os recursos do Gerenciador de recursos presentes no Visual Studio 2010 devem usar a versão `CONCRT_RM_VERSION_1`.  
+*version*<br/>
+A versão da interface de comunicação que o Agendador está usando para se comunicar com o Gerenciador de recursos. Usando uma versão permite que o Gerenciador de recursos para desenvolver a interface de comunicação, permitindo que os agendadores obter acesso a recursos mais antigos para. Os agendadores que desejam usar os recursos do Gerenciador de recursos presentes no Visual Studio 2010 devem usar a versão `CONCRT_RM_VERSION_1`.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O `ISchedulerProxy` interface o Gerenciador de recursos associado seu Agendador. O Agendador deve usar essa interface para se comunicar com o Gerenciador de recursos a partir deste ponto em.  
+ O `ISchedulerProxy` interface o Gerenciador de recursos associado com seu Agendador. O Agendador deve usar essa interface para se comunicar com o Resource Manager desse ponto em.  
   
 ### <a name="remarks"></a>Comentários  
- Use esse método para iniciar a comunicação com o Gerenciador de recursos. Associa o método de `IScheduler` interface para o Agendador com um `ISchedulerProxy` interface e ponteiros-lo de volta para você. Você pode usar a interface retornada para solicitar recursos de execução para uso pelo seu Agendador ou para inscrever-se com o Gerenciador de recursos de threads. O Gerenciador de recursos usará os elementos da política da política de Agendador retornado pelo [: Getpolicy](ischeduler-structure.md#getpolicy) método para determinar que tipo de threads que o Agendador precisa executar o trabalho. Se seu `SchedulerKind` chave de política tem o valor `UmsThreadDefault` e o valor é lido novamente a política como o valor `UmsThreadDefault`, o `IScheduler` passado para o método de interface deve ser um `IUMSScheduler` interface.  
+ Use esse método para iniciar a comunicação com o Gerenciador de recursos. Associa o método as `IScheduler` interface para seu Agendador com um `ISchedulerProxy` interface e mãos-lo de volta para você. Você pode usar a interface retornada para solicitar recursos de execução para uso pelo seu Agendador ou inscrever-se com o Gerenciador de recursos de threads. O Gerenciador de recursos usará elementos de diretiva da política de Agendador retornado pela [ischeduler:: Getpolicy](ischeduler-structure.md#getpolicy) método para determinar que tipo de threads que o Agendador será preciso executar o trabalho. Se sua `SchedulerKind` chave de política tem o valor `UmsThreadDefault` e o valor é lido novamente a política como o valor `UmsThreadDefault`, o `IScheduler` passado para o método de interface deve ser um `IUMSScheduler` interface.  
   
- O método gera uma `invalid_argument` exceção se o parâmetro `pScheduler` tem o valor `NULL` ou se o parâmetro `version` não é uma versão válida para a interface de comunicação.  
+ O método lança um `invalid_argument` exceção se o parâmetro `pScheduler` tem o valor `NULL` ou, se o parâmetro `version` não é uma versão válida para a interface de comunicação.  
   
-##  <a name="release"></a>  Método Iresourcemanager:  
+##  <a name="release"></a>  Método iresourcemanager:: Release  
  Diminui a contagem de referência na instância do Gerenciador de recursos. O Gerenciador de recursos é destruído quando sua contagem de referência chegar a `0`.  
   
 ```

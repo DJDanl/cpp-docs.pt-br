@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33b285cb55e04bcae2fd7f65ef5e94686e88e5e6
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: d7ee8fa674174d95c3e538889f6d5538be049b70
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208982"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020714"
 ---
 # <a name="taskgroup-class"></a>Classe task_group
 O `task_group` classe representa uma coleção de trabalho paralelo que pode ser cancelada ou aguardada.  
@@ -127,17 +127,17 @@ void run(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Function`  
- O tipo do objeto de função que será chamado para executar o corpo do identificador de tarefa.  
+*_Function*<br/>
+O tipo do objeto de função que será chamado para executar o corpo do identificador de tarefa.  
   
- `_Func`  
- Uma função que será chamada para invocar o corpo da tarefa. Isso pode ser uma expressão lambda ou outro objeto que dá suporte a uma versão do operador de chamada de função com a assinatura `void operator()()`.  
+*_Func*<br/>
+Uma função que será chamada para invocar o corpo da tarefa. Isso pode ser uma expressão lambda ou outro objeto que dá suporte a uma versão do operador de chamada de função com a assinatura `void operator()()`.  
   
- `_Placement`  
- Uma referência para o local em que a tarefa representada pelo `_Func` parâmetro deve ser executada.  
+*Posicionamento*<br/>
+Uma referência para o local em que a tarefa representada pelo `_Func` parâmetro deve ser executada.  
   
- `_Task_handle`  
- Um identificador para o trabalho agendado. Observe que o chamador tem responsabilidade pelo tempo de vida deste objeto. O tempo de execução continuará esperá-lo útil até que o `wait` ou `run_and_wait` método foi chamado neste `task_group` objeto.  
+*_Task_handle*<br/>
+Um identificador para o trabalho agendado. Observe que o chamador tem responsabilidade pelo tempo de vida deste objeto. O tempo de execução continuará esperá-lo útil até que o `wait` ou `run_and_wait` método foi chamado neste `task_group` objeto.  
   
 ### <a name="remarks"></a>Comentários  
  O tempo de execução agenda a função de trabalho fornecida para ser executado em um momento posterior, o que pode ser após retorna da função de chamada. Esse método usa um [task_handle](task-handle-class.md) objeto para manter uma cópia da função de trabalho fornecida. Portanto, as alterações de estado que ocorrem em um objeto de função que você passa para esse método não aparecerá na sua cópia desse objeto de função. Além disso, certifique-se de que o tempo de vida de todos os objetos que passam por ponteiro ou referência para a função de trabalho permaneça válido até que a função de trabalho retorna.  
@@ -167,14 +167,14 @@ task_group_status run_and_wait(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Function`  
- O tipo do objeto de função que será chamado para executar o corpo da tarefa.  
+*_Function*<br/>
+O tipo do objeto de função que será chamado para executar o corpo da tarefa.  
   
- `_Task_handle`  
- Um identificador para a tarefa que será executada embutida no contexto de chamada. Observe que o chamador tem responsabilidade pelo tempo de vida deste objeto. O tempo de execução continuará esperar que ele live até o `run_and_wait` método conclui a execução.  
+*_Task_handle*<br/>
+Um identificador para a tarefa que será executada embutida no contexto de chamada. Observe que o chamador tem responsabilidade pelo tempo de vida deste objeto. O tempo de execução continuará esperar que ele live até o `run_and_wait` método conclui a execução.  
   
- `_Func`  
- Uma função que será chamada para invocar o corpo do trabalho. Isso pode ser uma expressão lambda ou outro objeto que dá suporte a uma versão do operador de chamada de função com a assinatura `void operator()()`.  
+*_Func*<br/>
+Uma função que será chamada para invocar o corpo do trabalho. Isso pode ser uma expressão lambda ou outro objeto que dá suporte a uma versão do operador de chamada de função com a assinatura `void operator()()`.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Uma indicação de se a espera foi atendida ou o grupo de tarefas foi cancelado, devido a uma operação de cancelamento explícito ou uma exceção é lançada de uma das suas tarefas. Para obter mais informações, consulte [task_group_status](concurrency-namespace-enums.md#task_group_status).  
@@ -202,8 +202,8 @@ task_group(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_CancellationToken`  
- Um token de cancelamento para associar a esse grupo de tarefas. O grupo de tarefas será cancelado quando o token é cancelado.  
+*_CancellationToken*<br/>
+Um token de cancelamento para associar a esse grupo de tarefas. O grupo de tarefas será cancelado quando o token é cancelado.  
   
 ### <a name="remarks"></a>Comentários  
  O construtor que usa um token de cancelamento cria um `task_group` que serão canceladas quando o código-fonte associado ao token é cancelado. Fornecer um token de cancelamento explícito também isola a esse grupo de trabalho da participação em um cancelamento implícito de um grupo pai, com um token diferente ou nenhum.  

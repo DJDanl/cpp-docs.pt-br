@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de vinculador LNK2017 erro | Microsoft Docs
+title: Erro das LNK2017 das ferramentas de vinculador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 095423b5f2d86cef309ed4316ff72d195b11eb26
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80af2bb6475fc37b7feba5b29bfe9c1292740286
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313066"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022444"
 ---
 # <a name="linker-tools-error-lnk2017"></a>Erro das Ferramentas de Vinculador LNK2017
-realocação 'symbol' para 'segmento' inválido sem /LARGEADDRESSAWARE: no  
-  
- Você está tentando criar uma imagem de 64 bits com endereços de 32 bits. Para fazer isso, você deve:  
-  
--   Use um endereço de carga fixa.  
-  
--   Restringir a imagem a 3 GB.  
-  
--   Especifique [/LARGEADDRESSAWARE: no](../../build/reference/largeaddressaware-handle-large-addresses.md).
+
+realocação de 'symbol' para 'segmento' inválida sem /LARGEADDRESSAWARE: no
+
+Você está tentando criar uma imagem de 64 bits com endereços de 32 bits. Para fazer isso, faça o seguinte:
+
+- Use um endereço de carga fixa.
+
+- Restringir a imagem para 3 GB.
+
+- Especificar [/LARGEADDRESSAWARE: no](../../build/reference/largeaddressaware-handle-large-addresses.md).

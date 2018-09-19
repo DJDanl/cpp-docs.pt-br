@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18521113125eb49fa413568b6a62472bb50a7924
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c3e8ac574ce304238affbab41acc415e1d8de697
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691944"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026901"
 ---
 # <a name="ompsetdynamic"></a>omp_set_dynamic
-Indica que o número de threads disponíveis na região parallel subsequente pode ser ajustado por tempo de execução.  
+Indica que o número de threads disponíveis na região paralela subsequente pode ser ajustado pelo tempo de execução.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,18 +34,17 @@ void omp_set_dynamic(
 );  
 ```  
   
+### <a name="parameters"></a>Parâmetros
+  
+*Val*<br/>
+Um valor que indica se o número de threads disponíveis na região paralela subsequente pode ser ajustado pelo tempo de execução.  Se for diferente de zero, que o tempo de execução pode ajustar o número de threads, se for zero, o tempo de execução será não ajustar dinamicamente o número de threads.  
+  
 ## <a name="remarks"></a>Comentários  
- onde,  
+ O número de threads nunca excederá o valor definido por [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) ou pelo [OMP_NUM_THREADS](../../../parallel/openmp/reference/omp-num-threads.md).  
   
- `val`  
- Um valor que indica se o número de threads disponíveis na região parallel subsequente pode ser ajustado pelo tempo de execução.  Se for diferente de zero, que o tempo de execução pode ajustar o número de threads, se for zero, o tempo de execução não dinamicamente ajustará o número de threads.  
+ Use [omp_get_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md) para exibir a configuração atual da `omp_set_dynamic`.  
   
-## <a name="remarks"></a>Comentários  
- O número de threads nunca excederá o valor definido por [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) ou [OMP_NUM_THREADS](../../../parallel/openmp/reference/omp-num-threads.md).  
-  
- Use [omp_get_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md) para exibir a configuração atual de `omp_set_dynamic`.  
-  
- A configuração de `omp_set_dynamic` substituirá a configuração do [OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md) variável de ambiente.  
+ A configuração para `omp_set_dynamic` substituirá a configuração do [OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md) variável de ambiente.  
   
  Para obter mais informações, consulte [3.1.7 função omp_set_dynamic](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).  
   

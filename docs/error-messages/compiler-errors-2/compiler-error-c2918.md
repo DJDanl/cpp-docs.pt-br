@@ -1,5 +1,5 @@
 ---
-title: C2918 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2918 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49d724d3e6d88935421d3770115ebfc2186e3cd7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec2b330598c1a88f0fa4399aae862d1109e72255
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262460"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46029163"
 ---
-# <a name="compiler-error-c2918"></a>C2918 de erro do compilador
-'name': propriedades indexadas não podem ser usadas na superfície publicada de um tipo WinRT  
-  
- Não há suporte para propriedades indexadas na superfície publicada de um tipo WinRT.
+# <a name="compiler-error-c2918"></a>Erro do compilador C2918
+
+'name': propriedades indexadas não podem ser usadas na superfície publicada de um tipo WinRT
+
+Não há suporte para propriedades indexadas na superfície publicada de um tipo WinRT.

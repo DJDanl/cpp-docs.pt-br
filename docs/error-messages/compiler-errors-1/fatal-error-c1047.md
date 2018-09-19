@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce88321173ee2c8cc286f18d8ab8f1bf5ec98e13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1983fa0a18667d98f84dfe5049afd4e872d87d93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198619"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46021584"
 ---
 # <a name="fatal-error-c1047"></a>Erro fatal C1047
-O arquivo de objeto ou de biblioteca 'file' foi criado com um compilador mais antigo que os demais objetos; recriar os objetos e bibliotecas antigas  
-  
- C1047 é causado quando os arquivos de objeto ou bibliotecas criados com **/LTCG** são vinculados juntos, mas onde esses arquivos de objeto ou bibliotecas são criadas com versões diferentes do conjunto de ferramentas do Visual C++.  
-  
- Isso pode acontecer se você começar a usar uma nova versão do compilador, mas não faça uma recompilação limpa os arquivos existentes do objeto ou bibliotecas.  
-  
- Para resolver C1047, reconstrua todos os arquivos de objeto ou bibliotecas.
+
+O arquivo de biblioteca ou objeto 'file' foi criado com um compilador mais antigo que os demais objetos; recriar os objetos e bibliotecas antigas
+
+C1047 é causado quando os arquivos de objeto ou bibliotecas criados com **/LTCG** são vinculados juntos, mas onde esses arquivos de objeto ou bibliotecas são criadas com versões diferentes do conjunto de ferramentas do Visual C++.
+
+Isso pode acontecer se você começar a usar uma nova versão do compilador, mas não faça uma nova recompilação de arquivos de objeto existente ou bibliotecas.
+
+Para resolver C1047, recompile todos os arquivos de objeto ou bibliotecas.

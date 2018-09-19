@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff10cb3958ffa82e3ef2bb70d8370d1a52c4a929
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8f0cd5e025e8f8b442c47cb5e115766478ff1d4f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695740"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019882"
 ---
 # <a name="runtimeexception-class"></a>Classe runtime_exception
-O tipo base para exceções na biblioteca do C++ Accelerated grandes paralelismo (AMP).  
+O tipo base para exceções na biblioteca do C++ Accelerated maciça Parallelism (AMP).  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +42,7 @@ class runtime_exception : public std::exception;
 |Nome|Descrição|  
 |----------|-----------------|  
 |[Construtor de runtime_exception](#ctor)|Inicializa uma nova instância da classe `runtime_exception`.|  
-|[~ runtime_exception destruidor](#dtor)|Destrói a `runtime_exception` objeto.|  
+|[~ runtime_exception destruidor](#dtor)|Destrói o `runtime_exception` objeto.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -55,7 +55,7 @@ class runtime_exception : public std::exception;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Copia o conteúdo de especificado `runtime_exception` deste objeto.|  
+|[operator=](#operator_eq)|Copia o conteúdo especificado `runtime_exception` esse objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `exception`  
@@ -63,7 +63,7 @@ class runtime_exception : public std::exception;
  `runtime_exception`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** amprt.h  
+ **Cabeçalho:** amprt. h  
   
  **Namespace:** Simultaneidade  
 
@@ -85,14 +85,14 @@ runtime_exception(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Message`  
- Uma descrição do erro que causou a exceção.  
+*Mensagem*<br/>
+Uma descrição do erro que causou a exceção.  
   
- `_Hresult`  
- O HRESULT de erro que causou a exceção.  
+*_Hresult*<br/>
+O HRESULT do erro que causou a exceção.  
   
- `_Other`  
- O `runtime_exception` objeto a ser copiado.  
+*Outro*<br/>
+O `runtime_exception` objeto a ser copiado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O objeto `runtime_exception`.  
@@ -116,10 +116,10 @@ HRESULT get_error_code() const throw();
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- O HRESULT de erro que causou a exceção.  
+ O HRESULT do erro que causou a exceção.  
   
 ## <a name="runtime_exception__operator_eq"></a>  operator=   
-  Copia o conteúdo de especificado `runtime_exception` deste objeto.  
+  Copia o conteúdo especificado `runtime_exception` esse objeto.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -128,8 +128,8 @@ runtime_exception & operator= (    const runtime_exception & _Other ) throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Other`  
- O `runtime_exception` objeto a ser copiado.  
+*Outro*<br/>
+O `runtime_exception` objeto a ser copiado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Uma referência a este `runtime_exception` objeto.  

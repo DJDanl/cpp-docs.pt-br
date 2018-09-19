@@ -1,5 +1,5 @@
 ---
-title: C3609 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3609 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b0f3ec99e5d528967fb7b02bc9d198402b16e18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0048d1493a540bfb460d03ae514b6b191ead39d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258290"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016904"
 ---
-# <a name="compiler-error-c3609"></a>C3609 de erro do compilador
-'member': uma função sealed ou final deve ser virtual  
-  
- O [lacrado](../../windows/sealed-cpp-component-extensions.md) e [final](../../cpp/final-specifier.md) palavras-chave só são permitidas em uma função de class, struct ou membro marcado como `virtual`.  
-  
- O exemplo a seguir gera C3609:  
-  
-```  
-// C3609.cpp  
-// compile with: /clr /c  
-ref class C {  
-   int f() sealed;   // C3609  
-   virtual int f2() sealed;   // OK  
-};  
-```  
+# <a name="compiler-error-c3609"></a>Erro do compilador C3609
+
+'member': uma função selada ou final deve ser virtual
+
+O [lacrado](../../windows/sealed-cpp-component-extensions.md) e [final](../../cpp/final-specifier.md) palavras-chave são permitidas apenas em uma função de classe, struct ou membro marcada `virtual`.
+
+O exemplo a seguir gera C3609:
+
+```
+// C3609.cpp
+// compile with: /clr /c
+ref class C {
+   int f() sealed;   // C3609
+   virtual int f2() sealed;   // OK
+};
+```

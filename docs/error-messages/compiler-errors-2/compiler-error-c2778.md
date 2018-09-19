@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d68180e2fc0c7c33e742f0ffdb3776baa50976f6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6106832ea82531a6f6915417ac56d53504db882e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209707"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46022156"
 ---
 # <a name="compiler-error-c2778"></a>Erro do compilador C2778
-GUID formado incorretamente em __declspec(uuid())  
-  
- Um GUID incorreto é fornecido para o [uuid](../../cpp/uuid-cpp.md) atributo estendido.  
-  
- O GUID deve ser uma cadeia de caracteres de números hexadecimais com o seguinte formato:  
-  
-```  
-// C2778a.cpp  
-// compile with: /c  
-struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};  
-struct __declspec(uuid("{00000000-0000-0000-0000-000000000000}")) B{};  
-```  
-  
- O `uuid` atributo estendido aceita cadeias de caracteres reconhecidas pelo [CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring), com ou sem delimitadores.  
-  
- O exemplo a seguir gera C2778:  
-  
-```  
-// C2778b.cpp  
-struct __declspec(uuid(" 00000000-0000-0000-0000-000000000000 ")) C { };   // C2778  
-struct __declspec(uuid("00000000000000000000000000000000")) D { };   // C2778  
+
+GUID formado incorretamente em __declspec(uuid())
+
+Um GUID incorreto é fornecido para o [uuid](../../cpp/uuid-cpp.md) atributo estendido.
+
+O GUID deve ser uma cadeia de caracteres de números hexadecimais com o seguinte formato:
+
+```
+// C2778a.cpp
+// compile with: /c
+struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
+struct __declspec(uuid("{00000000-0000-0000-0000-000000000000}")) B{};
+```
+
+O `uuid` atributo estendido aceita cadeias de caracteres reconhecidas pelo [CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring), com ou sem delimitadores.
+
+O exemplo a seguir gera C2778:
+
+```
+// C2778b.cpp
+struct __declspec(uuid(" 00000000-0000-0000-0000-000000000000 ")) C { };   // C2778
+struct __declspec(uuid("00000000000000000000000000000000")) D { };   // C2778
 ```

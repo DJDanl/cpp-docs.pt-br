@@ -1,5 +1,5 @@
 ---
-title: C2010 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2010 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c1f1a042881420c85670020e05ded3684a91268
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4be71136d02a563d4dde5d720fe5ae51e0c3c5b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163920"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028955"
 ---
-# <a name="compiler-error-c2010"></a>C2010 de erro do compilador
-'character': inesperado na lista de parâmetros formais de macro  
-  
- O caractere é usado incorretamente na lista de parâmetros formais de uma definição de macro. Remova o caractere para resolver o erro.  
-  
- O exemplo a seguir gera C2010:  
-  
-```  
-// C2010.cpp  
-// compile with: /c  
-#define mymacro(a|) (2*a)   // C2010  
-#define mymacro(a) (2*a)   // OK  
+# <a name="compiler-error-c2010"></a>Erro do compilador C2010
+
+'character': inesperado na lista de parâmetros formais de macro
+
+O caractere é usado incorretamente em lista de parâmetros formais de uma definição de macro. Remova o caractere para resolver o erro.
+
+O exemplo a seguir gera C2010:
+
+```
+// C2010.cpp
+// compile with: /c
+#define mymacro(a|) (2*a)   // C2010
+#define mymacro(a) (2*a)   // OK
 ```
