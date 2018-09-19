@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0cd8b4a4a1140a1a34e0148756cdb23b2f8069cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f4df3e8059a56b137b2a4750177af1269cb6a5c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161467"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107020"
 ---
 # <a name="ptrptr"></a>ptr::ptr
 Constrói um `com::ptr` para encapsular um objeto COM.  
@@ -40,18 +40,18 @@ ptr(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `P`  
- Um ponteiro de interface COM.  
+*P*<br/>
+Um ponteiro de interface COM.  
   
 ## <a name="remarks"></a>Comentários  
- O construtor sem argumentos atribui `nullptr` para o identificador de objeto subjacente. As chamadas subsequentes para o `com::ptr` será validar o objeto interno e silenciosamente falhar até que um objeto é realmente criado ou anexado.  
+ O construtor sem argumentos atribui `nullptr` para o identificador de objeto subjacente. As chamadas subsequentes para o `com::ptr` validará o objeto interno e silenciosamente falhar até que um objeto, na verdade, é criado ou anexado.  
   
- Adiciona uma referência ao objeto COM o construtor de um argumento, mas não libera a referência do chamador, o chamador deve chamar `Release` no objeto COM realmente abram mão do controle. Quando o `com::ptr`do destruidor é chamado liberará automaticamente suas referências no objeto COM.  
+ O construtor de um argumento adiciona uma referência ao objeto COM, mas não libera a referência do chamador, portanto, o chamador deve chamar `Release` no objeto COM verdadeiramente abram mão do controle. Quando o `com::ptr`do destruidor é chamado liberará automaticamente suas referências no objeto COM.  
   
  Passando `NULL` para esse construtor é o mesmo que chamar a versão sem argumentos.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo implementa uma classe CLR que usa um `com::ptr` para incluir o membro privado `IXMLDOMDocument` objeto. Ele demonstra o uso de ambas as versões do construtor.  
+ Este exemplo implementa uma classe CLR que usa um `com::ptr` encapsular seu membro privado `IXMLDOMDocument` objeto. Ele demonstra o uso de ambas as versões do construtor.  
   
 ```  
 // comptr_ptr.cpp  

@@ -15,79 +15,79 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddab1bacc5e474493cbb2e153b1203926ed90b4e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d99306fe806c29d224289d70ee7ea42555aa1e98
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760855"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105421"
 ---
 # <a name="atl-macros"></a>Macros de ATL
 
 Para localizar uma macro de ATL por categoria, consulte os tópicos a seguir.
 
-[Macros de fábrica de classes e agregação](../../atl/reference/aggregation-and-class-factory-macros.md)  
+[Macros de fábrica de classes e agregação](../../atl/reference/aggregation-and-class-factory-macros.md)<br/>
 Fornecem maneiras de controlar a agregação e de declaração de fábricas de classes.
 
-[Macros de categoria](../../atl/reference/category-macros.md)  
+[Macros de categoria](../../atl/reference/category-macros.md)<br/>
 Defina categoria mapas.
 
-[Macros de mapa COM](../../atl/reference/com-map-macros.md)  
+[Macros de mapa COM](../../atl/reference/com-map-macros.md)<br/>
 Defina os mapas de interface COM.
 
-[Macros de opções do compilador](../../atl/reference/compiler-options-macros.md)  
+[Macros de opções do compilador](../../atl/reference/compiler-options-macros.md)<br/>
 Recursos de controle de compilador específica.
 
-[Macros de controle de composição](../../atl/reference/composite-control-macros.md)  
+[Macros de controle de composição](../../atl/reference/composite-control-macros.md)<br/>
 Defina entradas e mapas de coleta de eventos.
 
-[Macros de ponto de conexão](../../atl/reference/connection-point-macros.md)  
+[Macros de ponto de conexão](../../atl/reference/connection-point-macros.md)<br/>
 Defina entradas e mapas de ponto de conexão.
 
-[Macros de relatórios de erros e depuração](../../atl/reference/debugging-and-error-reporting-macros.md)  
+[Macros de relatórios de erros e depuração](../../atl/reference/debugging-and-error-reporting-macros.md)<br/>
 Fornece recursos úteis de depuração e rastreamento.
 
-[Macros de tratamento de exceção](../../atl/reference/exception-handling-macros.md)  
+[Macros de tratamento de exceção](../../atl/reference/exception-handling-macros.md)<br/>
 Fornece suporte para manipulação de exceção.
 
-[Macros de mapa de mensagem](../../atl/reference/message-map-macros-atl.md)  
+[Macros de mapa de mensagem](../../atl/reference/message-map-macros-atl.md)<br/>
 Defina entradas e mapas de mensagem.
 
-[Macros de mapa de objeto](../../atl/reference/object-map-macros.md)  
+[Macros de mapa de objeto](../../atl/reference/object-map-macros.md)<br/>
 Defina entradas e mapas de objeto.
 
-[Macros de status do objeto](../../atl/reference/object-status-macros.md)  
+[Macros de status do objeto](../../atl/reference/object-status-macros.md)<br/>
 Define os sinalizadores que pertencem aos controles ActiveX.
 
-[Macros de mapa de propriedade](../../atl/reference/property-map-macros.md)  
+[Macros de mapa de propriedade](../../atl/reference/property-map-macros.md)<br/>
 Defina entradas e mapas de propriedade.
 
-[Macros de troca de dados de Registro](../../atl/reference/registry-data-exchange-macros.md)  
+[Macros de troca de dados de Registro](../../atl/reference/registry-data-exchange-macros.md)<br/>
 Execute operações de troca de dados de registro.
 
-[Macros de Registro](../../atl/reference/registry-macros.md)  
+[Macros de Registro](../../atl/reference/registry-macros.md)<br/>
 Defina os recursos de biblioteca e o registro do tipo útil.
 
-[Macros do mapa de serviço](../../atl/reference/service-map-macros.md)  
+[Macros do mapa de serviço](../../atl/reference/service-map-macros.md)<br/>
 Defina entradas e mapas de serviço.
 
-[Macros de snap-in do objeto](../../atl/reference/snap-in-object-macros.md)  
+[Macros de snap-in do objeto](../../atl/reference/snap-in-object-macros.md)<br/>
 Fornece suporte para extensões de snap-in.
 
-[Macros de conversão de cadeia de caracteres](string-conversion-macros.md)  
+[Macros de conversão de cadeia de caracteres](string-conversion-macros.md)<br/>
 Fornece recursos de conversão de cadeia de caracteres.
 
-[Macros de classe de janela](../../atl/reference/window-class-macros.md)  
+[Macros de classe de janela](../../atl/reference/window-class-macros.md)<br/>
 Defina os utilitários de classe de janela.
 
-[Macros de mensagens do Windows](../../atl/reference/windows-messages-macros.md)  
+[Macros de mensagens do Windows](../../atl/reference/windows-messages-macros.md)<br/>
 Encaminhar mensagens de janela.
 
 ## <a name="see-also"></a>Consulte também
 
-[Componentes de área de trabalho COM da ATL](../../atl/atl-com-desktop-components.md)   
-[Funções](../../atl/reference/atl-functions.md)   
-[Variáveis globais](../../atl/reference/atl-global-variables.md)   
-[Classes e structs](../../atl/reference/atl-classes.md)  
+[Componentes de área de trabalho COM da ATL](../../atl/atl-com-desktop-components.md)<br/>
+[Funções](../../atl/reference/atl-functions.md)<br/>
+[Variáveis globais](../../atl/reference/atl-global-variables.md)<br/>
+[Classes e structs](../../atl/reference/atl-classes.md)<br/>
 [Typedefs](../../atl/reference/atl-typedefs.md)   
 

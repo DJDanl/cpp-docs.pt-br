@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 903a24a6007eb8693584cfd4eed96bd12ef3cdda
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 19a4a150b2cdf067802a1220a77640f20a1fea51
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695594"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106188"
 ---
 # <a name="improperlock-class"></a>Classe improper_lock
 Esta classe descreve uma exceção gerada quando um bloqueio é adquirido incorretamente.  
@@ -43,7 +43,7 @@ class improper_lock : public std::exception;
 |[improper_lock](#ctor)|Sobrecarregado. Constrói um `improper_lock exception`.|  
   
 ## <a name="remarks"></a>Comentários  
- Normalmente, essa exceção é lançada quando é feita uma tentativa de adquirir um bloqueio de não reentrante recursivamente no mesmo contexto.  
+ Normalmente, essa exceção é lançada quando é feita uma tentativa para adquirir um bloqueio de não reentrante recursivamente no mesmo contexto.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `exception`  
@@ -51,7 +51,7 @@ class improper_lock : public std::exception;
  `improper_lock`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** concrt.h  
+ **Cabeçalho:** concrt. h  
   
  **Namespace:** simultaneidade  
   
@@ -66,8 +66,8 @@ improper_lock() throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Message`  
- Uma mensagem descritiva do erro.  
+*Mensagem*<br/>
+Uma mensagem descritiva do erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   

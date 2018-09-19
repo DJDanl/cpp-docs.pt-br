@@ -1,5 +1,5 @@
 ---
-title: C2532 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2532 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78138de907b77d0a770cd606d805f60091ce0fc6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68a621b093eaf0e706249161dd2b1b4a3fd282be
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198450"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106985"
 ---
-# <a name="compiler-error-c2532"></a>C2532 de erro do compilador
-'Identificador': modificador inválido para referência  
-  
- A referência foi alterada. As referências não podem ser modificadas para fazer referência a outro objeto. Use um ponteiro.
+# <a name="compiler-error-c2532"></a>Erro do compilador C2532
+
+'identifier': modificador inválido para referência
+
+A referência foi alterada. Referências não podem ser modificadas para fazer referência a outro objeto. Use um ponteiro em vez disso.

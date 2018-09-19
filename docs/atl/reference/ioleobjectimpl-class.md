@@ -59,12 +59,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b82aa22c3cc1c217ba4dfd332c43f6663c94638e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fe5f3234738a16b4c072b667982d36032e30f7dd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761869"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107111"
 ---
 # <a name="ioleobjectimpl-class"></a>Classe IOleObjectImpl
 
@@ -76,13 +76,13 @@ Essa classe implementa `IUnknown` e é a principal interface por meio do qual um
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 Sua classe, derivada de `IOleObjectImpl`.
 
 ## <a name="members"></a>Membros
@@ -219,10 +219,10 @@ HRESULT DoVerbDiscardUndo(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parâmetros
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Ponteiro para o contêiner de retângulo deseja desenhar o controle.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Identificador da janela que contém o controle.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -239,10 +239,10 @@ HRESULT DoVerbHide(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parâmetros
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Ponteiro para o contêiner de retângulo deseja desenhar o controle.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Identificador da janela que contém o controle. Não é usado na implementação do ATL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -259,10 +259,10 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parâmetros
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Ponteiro para o contêiner de retângulo deseja desenhar o controle.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Identificador da janela que contém o controle. Não é usado na implementação do ATL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -283,10 +283,10 @@ HRESULT DoVerbOpen(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parâmetros
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Ponteiro para o contêiner de retângulo deseja desenhar o controle.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Identificador da janela que contém o controle.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -303,10 +303,10 @@ HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
 
 ### <a name="parameters"></a>Parâmetros
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Ponteiro para o contêiner de retângulo deseja desenhar o controle.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Identificador da janela que contém o controle.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -327,10 +327,10 @@ HRESULT DoVerbShow(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parâmetros
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Ponteiro para o contêiner de retângulo deseja desenhar o controle.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Identificador da janela que contém o controle. Não é usado na implementação do ATL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -347,10 +347,10 @@ HRESULT DoVerbUIActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 ### <a name="parameters"></a>Parâmetros
 
-*prcPosRec*  
+*prcPosRec*<br/>
 [in] Ponteiro para o contêiner de retângulo deseja desenhar o controle.
 
-*hwndParent*  
+*hwndParent*<br/>
 [in] Identificador da janela que contém o controle. Não é usado na implementação do ATL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -833,6 +833,6 @@ Ver [IOleObject::Update](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-update
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CComControl](../../atl/reference/ccomcontrol-class.md)   
-[Interfaces de controles ActiveX](/windows/desktop/com/activex-controls-interfaces)   
+[Classe CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
+[Interfaces de controles ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

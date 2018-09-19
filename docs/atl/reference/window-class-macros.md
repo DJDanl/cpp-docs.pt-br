@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985289041f1461ef9486a55fedd9816c1ebb3f35
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5650707f9c08c144d2f5832744117dfdd06acc08
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752557"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106896"
 ---
 # <a name="window-class-macros"></a>Macros de classe de janela
 
@@ -29,8 +29,8 @@ Essas macros definem os utilitários de classe de janela.
 
 |||
 |-|-|
-|[DECLARE_WND_CLASS](#declare_wnd_class)|Permite que você especifique o nome de uma nova classe de janela.| 
-|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017) Permite que você especifique o nome da classe delimitadora cujo procedimento de janela usará a nova classe e de uma nova classe de janela.| 
+|[DECLARE_WND_CLASS](#declare_wnd_class)|Permite que você especifique o nome de uma nova classe de janela.|
+|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017) Permite que você especifique o nome da classe delimitadora cujo procedimento de janela usará a nova classe e de uma nova classe de janela.|
 |[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|Permite que você especifique o nome de uma classe de janela existente no qual uma nova classe de janela será baseada.|
 |[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|Permite que você especifique os parâmetros de uma classe.|  
 
@@ -48,7 +48,7 @@ DECLARE_WND_CLASS( WndClassName )
 
 ### <a name="parameters"></a>Parâmetros
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] O nome da nova classe de janela. Se for NULL, o ATL irá gerar um nome de classe de janela.
 
 ### <a name="remarks"></a>Comentários
@@ -83,10 +83,10 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 
 ### <a name="parameters"></a>Parâmetros
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] O nome da nova classe de janela. Se for NULL, o ATL irá gerar um nome de classe de janela. 
 
-*EnclosingClass*  
+*EnclosingClass*<br/>
 [in] O nome da classe de janela que inclui a nova classe de janela. Não pode ser NULL.
 
 ### <a name="remarks"></a>Comentários
@@ -104,10 +104,10 @@ DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
 
 ### <a name="parameters"></a>Parâmetros
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] O nome da janela de classe que será superclasse *OrigWndClassName*. Se for NULL, o ATL irá gerar um nome de classe de janela.
 
-*OrigWndClassName*  
+*OrigWndClassName*<br/>
 [in] O nome de uma classe de janela existente.
 
 ### <a name="remarks"></a>Comentários
@@ -134,13 +134,13 @@ DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
 
 ### <a name="parameters"></a>Parâmetros
 
-*WndClassName*  
+*WndClassName*<br/>
 [in] O nome da nova classe de janela. Se for NULL, o ATL irá gerar um nome de classe de janela.
 
-*style*  
+*style*<br/>
 [in] O estilo da janela.
 
-*plano de fundo*  
+*plano de fundo*<br/>
 [in] A cor do plano de fundo da janela.
 
 ### <a name="remarks"></a>Comentários

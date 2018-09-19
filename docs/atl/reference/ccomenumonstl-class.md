@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5938785d7d9fdccae73048392b74cc5bb34f6680
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a4821ba572d2719ebba6c693cc39b96971002512
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753549"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106318"
 ---
 # <a name="ccomenumonstl-class"></a>Classe CComEnumOnSTL
 
@@ -32,7 +32,7 @@ Essa classe define um objeto de enumerador COM base em uma coleção de bibliote
 
 ```
 template <class Base,
-    const IID* piid, class T, class Copy, class CollType, class ThreadModel = CComObjectThreadModel>  
+    const IID* piid, class T, class Copy, class CollType, class ThreadModel = CComObjectThreadModel>
 class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
 T,
     Copy,
@@ -42,19 +42,19 @@ CollType>,
 
 #### <a name="parameters"></a>Parâmetros
 
-*Base de dados de*  
+*Base de dados de*<br/>
 Um enumerador de COM. Ver [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) para obter um exemplo.
 
-*piid*  
+*piid*<br/>
 Um ponteiro para a ID de interface da interface do enumerador.
 
-*T*  
+*T*<br/>
 O tipo de item exposto pela interface do enumerador.
 
-*Copiar*  
+*Copiar*<br/>
 Um [copiar política](../../atl/atl-copy-policy-classes.md) classe.
 
-*CollType*  
+*CollType*<br/>
 Uma classe de contêiner da biblioteca padrão C++.
 
 ## <a name="remarks"></a>Comentários
@@ -111,9 +111,9 @@ Esse código cria uma **typedef** para `CComEnumOnSTL` que expõe um vetor de `C
 
 ## <a name="see-also"></a>Consulte também
 
-[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)   
-[Exemplo de ATLCollections: Demonstra Classes de política de cópia personalizada de ICollectionOnSTLImpl e CComEnumOnSTL](../../visual-cpp-samples.md)   
-[Visão geral da classe](../../atl/atl-class-overview.md)   
-[Classe CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
-[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)   
+[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)<br/>
+[Exemplo de ATLCollections: Demonstra Classes de política de cópia personalizada de ICollectionOnSTLImpl e CComEnumOnSTL](../../visual-cpp-samples.md)<br/>
+[Visão geral da classe](../../atl/atl-class-overview.md)<br/>
+[Classe CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>
 [Classe IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4272f5f8c5e19b32b295c1028de7ab30b22684bb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 99d8cd4b076e5de35ffcb957a05f3c680bc82214
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757283"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106799"
 ---
 # <a name="chandle-class"></a>Classe CHandle
 
@@ -90,7 +90,7 @@ void Attach(HANDLE h) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*h*  
+*h*<br/>
 `CHandle` assumirá a propriedade do identificador *h*.
 
 ### <a name="remarks"></a>Comentários
@@ -109,7 +109,7 @@ explicit CHandle(HANDLE h) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*h*  
+*h*<br/>
 Um identificador existente ou `CHandle`.
 
 ### <a name="remarks"></a>Comentários
@@ -174,7 +174,7 @@ CHandle& operator=(CHandle& h) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*h*  
+*h*<br/>
 `CHandle` assumirá a propriedade do identificador *h*.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -189,7 +189,7 @@ Se o `CHandle` objeto contém um identificador no momento, ela será fechada. O 
 
 Retorna o valor do identificador armazenado.
 
-```  
+```
 operator HANDLE() const throw();
 ```
 

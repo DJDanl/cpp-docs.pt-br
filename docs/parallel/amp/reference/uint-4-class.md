@@ -278,12 +278,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 490242014a907455a9511cd54f5e46a809318691
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: fa93e1b7c406e1799946b56e29b9fa32a39b1996
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694388"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106292"
 ---
 # <a name="uint4-class"></a>Classe uint_4
 Representa um vetor curto de quatro inteiros sem sinal.  
@@ -306,7 +306,7 @@ class uint_4;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor uint_4](#uint_4__ctor) |Sobrecarregado. Padrão construtor inicializa todos os elementos com 0.|  
+|[Construtor uint_4](#uint_4__ctor) |Sobrecarregado. Padrão construtor, inicializa todos os elementos com 0.|  
 
   
 ### <a name="public-methods"></a>Métodos públicos  
@@ -458,8 +458,8 @@ class uint_4;
 |uint_4::operator--||  
 |uint_4::operator*=||  
 |uint_4::operator/=||  
-|uint_4::Operator + +||  
-|+ uint_4::Operator =||  
+|uint_4::Operator++||  
+|uint_4::Operator+ =||  
 |uint_4::operator=||  
 |uint_4::operator-=||  
   
@@ -607,13 +607,13 @@ class uint_4;
  `uint_4`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** amp_short_vectors.h  
+ **Cabeçalho:** amp_short_vectors. h  
   
  **Namespace:** Concurrency:: Graphics  
   
 ## <a name="uint_4__ctor"></a> uint_4 
 
-Padrão construtor inicializa todos os elementos com 0.
+Padrão construtor, inicializa todos os elementos com 0.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -649,23 +649,23 @@ explicit inline uint_4(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `_V0`  
- O valor para inicializar o elemento 0.  
+*_V0*<br/>
+O valor para inicializar o elemento 0.  
   
- `_V1`  
- O valor para inicializar o elemento 1.  
+*V1*<br/>
+O valor para inicializar o elemento 1.  
   
- `_V2`  
- O valor para inicializar o elemento 2.  
+*_V2*<br/>
+O valor para inicializar o elemento 2.  
   
- `_V3`  
- O valor para inicializar o elemento 3.  
+*_V3*<br/>
+O valor para inicializar o elemento 3.  
   
- `_V`  
- O valor para a inicialização.  
+*_V*<br/>
+O valor para a inicialização.  
   
- `_Other`  
- O objeto usado para inicializar.  
+*Outro*<br/>
+O objeto usado para inicializar.  
   
 ## <a name=""></a> Tamanho 
 

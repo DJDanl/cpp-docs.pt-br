@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a8689254120416e5b2bf5de617fc3f3ef466abb1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 707ee9476ce26de9325337f6f2130e41d19faa3a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111280"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105239"
 ---
 # <a name="callinappdomain-function"></a>Função call_in_appdomain
 Executa uma função em um domínio de aplicativo especificado.  
@@ -49,17 +49,17 @@ RetType call_in_appdomain(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `appdomainId`  
- O appdomain de chamada de função.  
+*appdomainId*<br/>
+O appdomain no qual chamar a função.  
   
- `voidFunc`  
- Ponteiro para uma `void` função que usa parâmetros de N (0 < = N < = 15).  
+*voidFunc*<br/>
+Ponteiro para um `void` função que usa parâmetros de N (0 < = N < = 15).  
   
- `nonvoidFunc`  
- Ponteiro para não`void` função que usa parâmetros de N (0 < = N < = 15).  
+*nonvoidFunc*<br/>
+Ponteiro para um não -`void` função que usa parâmetros de N (0 < = N < = 15).  
   
- `arg1...argN`  
- Zero a 15 parâmetros a serem passados para `voidFunc` ou `nonvoidFunc` em outro appdomain.  
+*arg1... argN*<br/>
+Zero a 15 parâmetros a serem passados para `voidFunc` ou `nonvoidFunc` em outro appdomain.  
   
 ## <a name="return-value"></a>Valor de retorno  
  O resultado da execução `voidFunc` ou `nonvoidFunc` no domínio do aplicativo especificado.  

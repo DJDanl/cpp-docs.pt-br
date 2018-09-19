@@ -1,5 +1,5 @@
 ---
-title: C2845 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2845 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e0d74548ff546993c5c8f752709de7418c62965
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4314a6e79a5052d3e9e05aa453ce3ae842ded74c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243235"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107768"
 ---
-# <a name="compiler-error-c2845"></a>C2845 de erro do compilador
-'operator': não é permitida neste tipo de aritmética de ponteiro  
-  
- Não é possível incrementar o ponteiro para uma classe gerenciada.  
+# <a name="compiler-error-c2845"></a>Erro do compilador C2845
+
+'operator': não é permitida neste tipo de aritmética de ponteiro
+
+É possível incrementar o ponteiro para uma classe gerenciada.

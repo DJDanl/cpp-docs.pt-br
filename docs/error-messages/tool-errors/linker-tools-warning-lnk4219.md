@@ -1,5 +1,5 @@
 ---
-title: Aviso LNK4219 das ferramentas de vinculador | Microsoft Docs
+title: Ferramentas de vinculador LNK4219 aviso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59cb7376957b7985b7ae2335ea472171d490ff42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: daf097cd8715a7c523e6e8a2ea46714481ca7d2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301129"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105194"
 ---
 # <a name="linker-tools-warning-lnk4219"></a>Aviso LNK4219 (Ferramentas de Vinculador)
-estouro de conserto de nome de correção. O destino 'nome do símbolo de destino' está fora do intervalo, inserindo conversão  
-  
- O vinculador inserida uma conversão em uma situação em que o endereço ou o deslocamento não pôde ajustar em determinada instrução porque o símbolo de destino é muito distante do local da instrução.  
-  
- Talvez você queira reordenar a imagem (usando o [/ORDER](../../build/reference/order-put-functions-in-order.md) opção, por exemplo) para evitar o nível extra de indireção.
+
+estouro de conserto de nome de correção. Destino de 'nome do símbolo de destino' está fora do intervalo, inserindo conversão
+
+O vinculador inserido uma conversão em uma situação em que o endereço ou o deslocamento não pôde ajustar na instrução de determinado porque o símbolo de destino está muito longe do local da instrução.
+
+Talvez você queira reordenar a imagem (usando o [/ORDER](../../build/reference/order-put-functions-in-order.md) opção, por exemplo) para evitar o nível extra de indireção.

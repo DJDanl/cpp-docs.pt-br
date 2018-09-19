@@ -1,5 +1,5 @@
 ---
-title: C2919 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2919 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5e2eb2a32f1a906814f5b347ba1ebf13eba71ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d6ee01e32cd1855855fa6ac071af159be8bac0d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245796"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106825"
 ---
-# <a name="compiler-error-c2919"></a>C2919 de erro do compilador
-'type': operadores não podem ser usados na superfície publicada de um tipo WinRT  
-  
- O sistema de tipos do tempo de execução do Windows não oferece suporte a funções de membro do operador na superfície publicada de um tipo. Isso ocorre porque nem todos os idiomas podem consumir funções de membro do operador. Você pode criar funções de membro que podem ser chamadas de código C++ na mesma unidade de compilação ou a classe do operador privada ou interna.  
-  
- Para corrigir esse problema, remova a função de membro do operador na interface pública ou alterá-la para uma função de membro nomeado. Por exemplo, em vez de `operator==`, nomear a função de membro `Equals`.
+# <a name="compiler-error-c2919"></a>Erro do compilador C2919
+
+'type': operadores não podem ser usados na superfície publicada de um tipo WinRT
+
+O sistema de tipo de tempo de execução do Windows não oferece suporte a funções de membro do operador na superfície publicada de um tipo. Isso ocorre porque nem todas as linguagens podem consumir funções de membro do operador. Você pode criar funções de membro que podem ser chamadas do código C++ na mesma unidade de compilação ou de classe do operador particular ou interno.
+
+Para corrigir esse problema, remova a função de operador de membro da interface pública ou alterá-lo para uma função de membro nomeadas. Por exemplo, em vez de `operator==`, nomeie a função de membro `Equals`.
