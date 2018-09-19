@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f360cd075ac4a86c39f5c33391e974e62f481455
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 29976d0535d29fce926d7a12b920234548c8a98d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613476"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017283"
 ---
 # <a name="windows-platforms-crt"></a>Plataformas Windows (CRT)
 
@@ -37,4 +37,4 @@ As bibliotecas de tempo de execução do C para Visual Studio dão suporte às v
 
 ## <a name="see-also"></a>Consulte também
 
-[Compatibilidade](../c-runtime-library/compatibility.md)  
+[Compatibilidade](../c-runtime-library/compatibility.md)

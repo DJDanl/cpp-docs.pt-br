@@ -18,23 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e06da627d18fa643cb64fda870c986264c573641
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 606ff0197f73a697aa3dad3bea779de80b060705
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387233"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46020830"
 ---
 # <a name="type-conversions-c"></a>Conversões de tipo (C)
-As conversões de tipos dependem do operador especificado e do tipo de operando ou dos operadores. As conversões de tipo são executadas nos seguintes casos:  
-  
--   Quando um valor de um tipo é atribuído a uma variável de um tipo diferente ou um operador converte o tipo do seu operando ou operandos antes de executar uma operação  
-  
--   Quando um valor de um tipo é explicitamente convertido em um tipo diferente  
-  
--   Quando um valor é passado como um argumento para uma função ou quando um tipo é retornado de uma função  
-  
- Um caractere, inteiro curto ou campo de bit de inteiro, todos assinados ou não, ou um objeto de tipo de enumeração, podem ser usados em uma expressão sempre que um inteiro puder ser usado. Se `int` puder representar todos os valores do tipo original, o valor será convertido em `int`; caso contrário, ele será convertido em `unsigned int`. Esse processo é chamado de “promoção de integral”. As promoções de integral preservam os valores. Ou seja, o valor após a promoção tem a garantia de ser o mesmo que antes de promoção. Consulte [Conversões aritméticas usuais](../c-language/usual-arithmetic-conversions.md) para obter mais informações.  
-  
-## <a name="see-also"></a>Consulte também  
- [Expressões e atribuições](../c-language/expressions-and-assignments.md)
+
+As conversões de tipos dependem do operador especificado e do tipo de operando ou dos operadores. As conversões de tipo são executadas nos seguintes casos:
+
+- Quando um valor de um tipo é atribuído a uma variável de um tipo diferente ou um operador converte o tipo do seu operando ou operandos antes de executar uma operação
+
+- Quando um valor de um tipo é explicitamente convertido em um tipo diferente
+
+- Quando um valor é passado como um argumento para uma função ou quando um tipo é retornado de uma função
+
+Um caractere, inteiro curto ou campo de bit de inteiro, todos assinados ou não, ou um objeto de tipo de enumeração, podem ser usados em uma expressão sempre que um inteiro puder ser usado. Se `int` puder representar todos os valores do tipo original, o valor será convertido em `int`; caso contrário, ele será convertido em `unsigned int`. Esse processo é chamado de “promoção de integral”. As promoções de integral preservam os valores. Ou seja, o valor após a promoção tem a garantia de ser o mesmo que antes de promoção. Consulte [Conversões aritméticas usuais](../c-language/usual-arithmetic-conversions.md) para obter mais informações.
+
+## <a name="see-also"></a>Consulte também
+
+[Expressões e atribuições](../c-language/expressions-and-assignments.md)

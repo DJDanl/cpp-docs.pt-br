@@ -14,27 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12fee7eadecbd81e3c4e410d254de50bcf3a9ac0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7da654321dfae520f458374654a21a9e8ebb98f5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208820"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706637"
 ---
 # <a name="idl-attributes-add-property-wizard"></a>Atributos IDL, Assistente para Adicionar Propriedade
 Use esta página do Assistente de Adição de Propriedade para especificar as configurações de linguagem IDL para a propriedade.  
   
- **id**  
- Define a ID numérica que identifica a propriedade. Essa opção não está disponível para propriedades de interfaces personalizadas. Confira [id](/windows/desktop/Midl/id) na *Referência de MIDL*.  
+- **id**
+
+   Define a ID numérica que identifica a propriedade. Essa opção não está disponível para propriedades de interfaces personalizadas. Confira [id](/windows/desktop/Midl/id) na *Referência de MIDL*.  
   
- **helpcontext**  
- Especifica uma ID de contexto que permite ao usuário exibir informações sobre essa propriedade no arquivo de Ajuda. Confira [helpcontext](/windows/desktop/Midl/helpcontext) na *Referência de MIDL*.  
+- **helpcontext**
+
+   Especifica uma ID de contexto que permite ao usuário exibir informações sobre essa propriedade no arquivo de Ajuda. Confira [helpcontext](/windows/desktop/Midl/helpcontext) na *Referência de MIDL*.  
   
- **helpstring**  
- Especifica uma cadeia de caracteres que é usada para descrever o elemento ao qual ela se aplica. Por padrão, ela é definida como "property *Nome da propriedade*." Confira [helpstring](/windows/desktop/Midl/helpstring) na *Referência de MIDL*.  
+- **helpstring**
+
+   Especifica uma cadeia de caracteres que é usada para descrever o elemento ao qual ela se aplica. Por padrão, ela é definida como "property *Nome da propriedade*." Confira [helpstring](/windows/desktop/Midl/helpstring) na *Referência de MIDL*.  
   
 ## <a name="other-options"></a>Outras opções  
- Nem todas as opções estão disponíveis para todos os tipos de propriedade.  
+
+Nem todas as opções estão disponíveis para todos os tipos de propriedade.  
   
 |Opção|Descrição|  
 |------------|-----------------|  

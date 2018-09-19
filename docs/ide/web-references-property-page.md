@@ -19,31 +19,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dac300f08a9b02ce6e9f4aec66618350b46af952
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0ff2a9ccec1dac6be41727b4a829bf4e63669f40
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692194"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699641"
 ---
 # <a name="web-references-property-page"></a>Página de propriedades Referências Web
 A página de propriedades de **Referências Web** especifica como a classe proxy do serviço Web XML será gerada. Uma classe proxy do serviço Web XML será gerada se você adicionar uma referência Web ao projeto.  
   
  A página de propriedades de **Referência Web** contém as seguintes propriedades:  
   
- **Arquivo de saída**  
- O nome do arquivo para conter a classe proxy do serviço Web XML.  
+- **Arquivo de saída**
+
+   O nome do arquivo para conter a classe proxy do serviço Web XML.  
   
- **Suprimir Faixa de Inicialização**  
- Não exibe a faixa para a Ferramenta da linguagem WSDL (Wsdl.exe).  
+- **Suprimir Faixa de Inicialização**
+
+   Não exibe a faixa para a Ferramenta da linguagem WSDL (Wsdl.exe).  
   
- **Namespace**  
- Especifica o nome do proxy Web gerado.  
+- **Namespace**
+
+   Especifica o nome do proxy Web gerado.  
   
- **Referências Adicionais**  
- Especifica as DLLs adicionais referenciadas pela DLL proxy.  
+- **Referências Adicionais**
+
+   Especifica as DLLs adicionais referenciadas pela DLL proxy.  
   
- Para obter informações sobre como acessar a página de propriedades de **Referência Web**, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).  
+Para obter informações sobre como acessar a página de propriedades de **Referência Web**, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Páginas de propriedade](../ide/property-pages-visual-cpp.md)

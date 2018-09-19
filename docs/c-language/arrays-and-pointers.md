@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea2cac91af5c6a999fc75aa01470b06da110bda1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: def974e39760fffacaa2147fade785e3f4b9dfa6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32380869"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016566"
 ---
 # <a name="arrays-and-pointers"></a>Matrizes e ponteiros
--   [Maior tamanho da matriz](../c-language/largest-array-size.md)  
-  
--   [Subtração de ponteiro](../c-language/pointer-subtraction.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Comportamento definido pela implementação](../c-language/implementation-defined-behavior.md)
+
+- [Maior tamanho da matriz](../c-language/largest-array-size.md)
+
+- [Subtração de ponteiro](../c-language/pointer-subtraction.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Comportamento definido pela implementação](../c-language/implementation-defined-behavior.md)

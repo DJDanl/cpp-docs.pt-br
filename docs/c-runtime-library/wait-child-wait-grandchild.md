@@ -22,30 +22,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e0f195bebd43ced767f05a7c6073a6d6e9db61
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7dd7b3fab51c382413c507831572afedd824c3f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408013"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018334"
 ---
 # <a name="waitchild-waitgrandchild"></a>_WAIT_CHILD, _WAIT_GRANDCHILD
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-#include <process.h>  
-  
-```  
-  
-## <a name="remarks"></a>Comentários  
- A função `_cwait` pode ser usada por qualquer processo para aguardar algum outro processo (se a ID do processo for conhecida). O argumento de ação pode ser um dos seguintes valores:  
-  
-|Constante|Significado|  
-|--------------|-------------|  
-|`_WAIT_CHILD`|O processo de chamada aguarda até que o novo processo especificado seja encerrado.|  
-|`_WAIT_GRANDCHILD`|O processo de chamada aguarda até que o novo processo especificado e todos os processos criados pelo novo processo sejam encerrados.|  
-  
-## <a name="see-also"></a>Consulte também  
- [_cwait](../c-runtime-library/reference/cwait.md)   
- [Constantes globais](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Sintaxe
+
+```
+
+#include <process.h>
+
+```
+
+## <a name="remarks"></a>Comentários
+
+A função `_cwait` pode ser usada por qualquer processo para aguardar algum outro processo (se a ID do processo for conhecida). O argumento de ação pode ser um dos seguintes valores:
+
+|Constante|Significado|
+|--------------|-------------|
+|`_WAIT_CHILD`|O processo de chamada aguarda até que o novo processo especificado seja encerrado.|
+|`_WAIT_GRANDCHILD`|O processo de chamada aguarda até que o novo processo especificado e todos os processos criados pelo novo processo sejam encerrados.|
+
+## <a name="see-also"></a>Consulte também
+
+[_cwait](../c-runtime-library/reference/cwait.md)<br/>
+[Constantes globais](../c-runtime-library/global-constants.md)

@@ -18,24 +18,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b12c53f2793f7ac083ca06143be18aa6234f1de
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a86489e18220e674f48222ef1590b61d7c5defcf
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201578"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45716505"
 ---
 # <a name="advanced-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Caixa de diálogo Avançado, Ferramenta de Manifesto, Propriedades de Configuração, Páginas de Propriedades de &lt;Projectname&gt;
 Use essa caixa de diálogo para especificar opções avançadas para [Mt.exe](https://msdn.microsoft.com/library/aa375649).  
   
  Para acessar essa caixa de diálogo da página de propriedades, abra as páginas de propriedades do projeto ou da folha de propriedades. Expanda o nó **Ferramenta de Manifesto** em **Propriedades de Configuração** e, em seguida, selecione **Avançado**.  
   
-## <a name="uielement-list"></a>Lista UIElement  
- **Atualizar Hashes de Arquivo**  
- Usa a opção /hashupdate para especificar que a ferramenta de manifesto calculará o hash dos arquivos especificados em elementos `<file>` e, em seguida, atualizará os atributos de hash com o valor calculado.  
+## <a name="uielement-list"></a>Lista UIElement
+
+- **Atualizar Hashes de Arquivo**
+
+   Usa a opção /hashupdate para especificar que a ferramenta de manifesto calculará o hash dos arquivos especificados em elementos `<file>` e, em seguida, atualizará os atributos de hash com o valor calculado.  
   
- **Atualizar Caminho de Pesquisa de Hashes de Arquivo**  
- Especifica o caminho de pesquisa para arquivos referenciados em elementos `<file>`. Essa opção também usa a opção /hashupdate.  
+- **Atualizar Caminho de Pesquisa de Hashes de Arquivo**
+
+   Especifica o caminho de pesquisa para arquivos referenciados em elementos `<file>`. Essa opção também usa a opção /hashupdate.  
   
 ## <a name="see-also"></a>Consulte também  
  [\<Elemento file>](/visualstudio/deployment/file-element-clickonce-application)   

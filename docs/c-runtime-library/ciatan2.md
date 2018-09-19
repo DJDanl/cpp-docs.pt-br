@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33abe3dd332bdb55decde308d67d0e1af13e13f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbeca42c9b00558823e36463eab39d5caabec632
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387139"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46016385"
 ---
 # <a name="ciatan2"></a>_CIatan2
-Calcula o arco tangente de *x* / *y*, em que *x* e *y* são valores na parte superior da pilha.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void __cdecl _CIatan2();  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Esta versão da função `atan2` tem uma convenção de chamada especializada que o compilador compreende. Ele acelera a execução porque ele evita que cópias sejam geradas e ajuda na alocação de registro.  
-  
- O valor resultante é colocado na parte superior da pilha.  
-  
-## <a name="requirements"></a>Requisitos  
- **Plataforma:** x86  
-  
-## <a name="see-also"></a>Consulte também  
- [Alphabetical Function Reference](../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
- [atan, atanf, atanl, atan2, atan2f, atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)
+
+Calcula o arco tangente de *x* / *y*, em que *x* e *y* são valores na parte superior da pilha.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+void __cdecl _CIatan2();
+```
+
+## <a name="remarks"></a>Comentários
+
+Esta versão da função `atan2` tem uma convenção de chamada especializada que o compilador compreende. Ele acelera a execução porque ele evita que cópias sejam geradas e ajuda na alocação de registro.
+
+O valor resultante é colocado na parte superior da pilha.
+
+## <a name="requirements"></a>Requisitos
+ **Plataforma:** x86
+
+## <a name="see-also"></a>Consulte também
+
+[Referência da Função Alfabética](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[atan, atanf, atanl, atan2, atan2f, atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)

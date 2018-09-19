@@ -16,36 +16,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 544ce4cd0f4ed9a7f3592e5ec1691fb3734b8772
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4c2ff441fc38d460e27039d7825753a2011dac3e
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33340002"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45702761"
 ---
 # <a name="event-handler-wizard"></a>Assistente de Manipulador de Eventos
 Este assistente adiciona um manipulador de eventos a um controle de caixa de diálogo para a classe de sua escolha. Se você adicionar um manipulador de eventos por meio da [janela Propriedades](/visualstudio/ide/reference/properties-window), adicione-o somente para a classe que implementa a caixa de diálogo. Confira [Adicionando manipuladores de eventos a controles de caixa de diálogo](../windows/adding-event-handlers-for-dialog-box-controls.md) para obter mais informações.  
   
- **Nome do comando**  
- Identifica o controle selecionado, ao qual o manipulador de eventos é adicionado. Essa caixa não fica disponível.  
+- **Nome do comando**
+
+   Identifica o controle selecionado, ao qual o manipulador de eventos é adicionado. Essa caixa não fica disponível.  
   
- **Tipo de mensagem**  
- Exibe a lista de possíveis manipuladores de mensagens atuais para o controle selecionado.  
+- **Tipo de mensagem**
+
+   Exibe a lista de possíveis manipuladores de mensagens atuais para o controle selecionado.  
   
- **Nome do manipulador de funções**  
- Exibe o nome da função que é adicionada para manipular o evento. Por padrão, o nome se baseia no tipo de mensagem e no comando, precedido por "On". Por exemplo, para o botão chamado `IDC_BUTTON1`, o tipo de mensagem `BN_CLICKED` exibe o nome do manipulador de funções `OnBnClickedButton1`.  
+- **Nome do manipulador de funções**
+
+   Exibe o nome da função que é adicionada para manipular o evento. Por padrão, o nome se baseia no tipo de mensagem e no comando, precedido por "On". Por exemplo, para o botão chamado `IDC_BUTTON1`, o tipo de mensagem `BN_CLICKED` exibe o nome do manipulador de funções `OnBnClickedButton1`.  
   
- **Lista de classes**  
- Exibe as classes disponíveis às quais você pode adicionar um manipulador de eventos. A classe para a caixa de diálogo selecionada é exibida em vermelho.  
+- **Lista de classes**
+
+   Exibe as classes disponíveis às quais você pode adicionar um manipulador de eventos. A classe para a caixa de diálogo selecionada é exibida em vermelho.  
   
- **Descrição do manipulador**  
- Fornece uma descrição para o item selecionado na caixa **Tipo de mensagem**. Essa caixa não fica disponível.  
+- **Descrição do manipulador**
+
+   Fornece uma descrição para o item selecionado na caixa **Tipo de mensagem**. Essa caixa não fica disponível.  
   
- **Adicionar e editar**  
- Adiciona o manipulador de mensagens à classe ou ao objeto selecionado e, em seguida, abre o editor de texto na nova função, de modo que você possa adicionar o código do manipulador de notificações de controle.  
+- **Adicionar e editar**
+
+   Adiciona o manipulador de mensagens à classe ou ao objeto selecionado e, em seguida, abre o editor de texto na nova função, de modo que você possa adicionar o código do manipulador de notificações de controle.  
   
- **Editar código**  
- Abre o editor de texto na função selecionada, de modo que você possa adicionar ou editar o código do manipulador de notificações de controle.  
+- **Editar código**
+
+   Abre o editor de texto na função selecionada, de modo que você possa adicionar ou editar o código do manipulador de notificações de controle.  
   
 ## <a name="see-also"></a>Consulte também  
  [Adicionando um manipulador de eventos](../ide/adding-an-event-handler-visual-cpp.md)

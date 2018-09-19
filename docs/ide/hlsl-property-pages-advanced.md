@@ -15,22 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58dca91d5ab3bf0cf28d30a04d33ae8bf5819401
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: edcc84e8c12fab7149bbf6db2baf1f86e8635eb5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33321188"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45725475"
 ---
 # <a name="hlsl-property-pages-advanced"></a>Páginas de propriedade HLSL: avançado
 Para configurar as propriedades a seguir do compilador HLSL (fxc.exe), use a página de propriedades **Avançado**. Para obter informações sobre como acessar a página de propriedades **Avançado** na pasta HLSL, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).  
   
-## <a name="uielement-list"></a>Lista UIElement  
- **Suprimir Faixa de Inicialização**  
- **Sim (/nologo)** para suprimir a exibição da faixa de inicialização e da mensagem informativa; caso contrário, **Não**. Por padrão, o valor é **Sim (/nologo)**.  
+## <a name="uielement-list"></a>Lista UIElement
+
+- **Suprimir Faixa de Inicialização**
+
+   **Sim (/nologo)** para suprimir a exibição da faixa de inicialização e da mensagem informativa; caso contrário, **Não**. Por padrão, o valor é **Sim (/nologo)**.  
   
- **Tratar Avisos como Erros**  
- **Sim (/WX)** para tratar todos os avisos do compilador como erros; caso contrário, **Não**.  
+- **Tratar Avisos como Erros**
+
+   **Sim (/WX)** para tratar todos os avisos do compilador como erros; caso contrário, **Não**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Páginas de propriedades de HLSL](../ide/hlsl-property-pages.md)   
