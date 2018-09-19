@@ -28,33 +28,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e91c03f619be1d0f1d8ad23f3b8d60e1be30cfb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f610b26c79201f3431b6263a002b59df7456cfe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388059"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082437"
 ---
 # <a name="pcommode"></a>__p__commode
-Aponta para a variável global `_commode`, que especifica o *modo de confirmação de arquivos* padrão para operações de E/S de arquivo.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-int * __p__commode(  
-   );  
-```  
-  
-## <a name="return-value"></a>Valor retornado  
- Ponteiro para a variável global `_commode`.  
-  
-## <a name="remarks"></a>Comentários  
- A função `__p__commode` destina-se apenas ao uso interno e não deve ser chamada do código do usuário.  
-  
- O modo de confirmação de arquivo especifica quando os dados críticos são gravados no disco. Para obter mais informações, consulte [fflush](../c-runtime-library/reference/fflush.md).  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
+
+Aponta para a variável global `_commode`, que especifica o *modo de confirmação de arquivos* padrão para operações de E/S de arquivo.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+int * __p__commode(
+   );
+```
+
+## <a name="return-value"></a>Valor retornado
+
+Ponteiro para a variável global `_commode`.
+
+## <a name="remarks"></a>Comentários
+
+A função `__p__commode` destina-se apenas ao uso interno e não deve ser chamada do código do usuário.
+
+O modo de confirmação de arquivo especifica quando os dados críticos são gravados no disco. Para obter mais informações, consulte [fflush](../c-runtime-library/reference/fflush.md).
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
 |__p\__commode|internal.h|

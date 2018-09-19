@@ -31,29 +31,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eafe81dc684300cb7fdf65137c2f7e45010285b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 14c8483671e806adb9170429f2e17d4487de0cfd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388109"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090484"
 ---
 # <a name="storage-of-basic-types"></a>Armazenamento de tipos básicos
-A tabela a seguir resume o armazenamento associado a cada tipo básico.  
-  
-### <a name="sizes-of-fundamental-types"></a>Tamanhos de tipos fundamentais  
-  
-|Tipo|Armazenamento|  
-|----------|-------------|  
-|`char`, `unsigned char`, **signed char**|1 byte|  
-|**short**, **unsigned short**|2 bytes|  
-|`int`, `unsigned int`|4 bytes|  
-|**long**, `unsigned long`|4 bytes|  
-|**float**|4 bytes|  
-|**double**|8 bytes|  
-|`long double`|8 bytes|  
-  
- Os tipos de dados C se enquadram nas categorias gerais. Os “tipos integrais” incluem `char`, `int`, **short**, **long**, **signed**, `unsigned` e `enum`. Os “tipos flutuantes” incluem **float**, **double** e `long double`. Os “tipos aritméticos” incluem todos os tipos flutuantes e integrais.  
-  
-## <a name="see-also"></a>Consulte também  
- [Declarações e tipos](../c-language/declarations-and-types.md)
+
+A tabela a seguir resume o armazenamento associado a cada tipo básico.
+
+### <a name="sizes-of-fundamental-types"></a>Tamanhos de tipos fundamentais
+
+|Tipo|Armazenamento|
+|----------|-------------|
+|`char`, `unsigned char`, **signed char**|1 byte|
+|**short**, **unsigned short**|2 bytes|
+|`int`, `unsigned int`|4 bytes|
+|**long**, `unsigned long`|4 bytes|
+|**float**|4 bytes|
+|**double**|8 bytes|
+|`long double`|8 bytes|
+
+Os tipos de dados C se enquadram nas categorias gerais. Os “tipos integrais” incluem `char`, `int`, **short**, **long**, **signed**, `unsigned` e `enum`. Os “tipos flutuantes” incluem **float**, **double** e `long double`. Os “tipos aritméticos” incluem todos os tipos flutuantes e integrais.
+
+## <a name="see-also"></a>Consulte também
+
+[Declarações e tipos](../c-language/declarations-and-types.md)

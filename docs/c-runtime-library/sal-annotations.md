@@ -57,17 +57,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb935285c8c90c238baf59cd11a1232fa33d895
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 363d7ff6de4c808c3c7b8d37a9a9f95bf069723c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409378"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107488"
 ---
 # <a name="sal-annotations"></a>Anotações de SAL
-Se você examinar os arquivos de cabeçalho de biblioteca, notará algumas anotações incomuns, como por exemplo, `_In_z` e `_Out_z_cap_(_Size)`. Estes são exemplos de SAL (linguagem de anotação de código-fonte) da Microsoft, que fornece um conjunto de anotações para descrever como uma função usa seus parâmetros, por exemplo, as suposições que ela faz sobre eles e as garantias obtidas ao concluir. O arquivo de cabeçalho \<sal.h> define as anotações.  
-  
- Para obter mais informações sobre como usar anotações de SAL no Visual Studio, consulte [Usando Anotações de SAL para reduzir defeitos de código C/C++](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).  
-  
-## <a name="see-also"></a>Consulte também  
- [Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md)
+
+Se você examinar os arquivos de cabeçalho de biblioteca, notará algumas anotações incomuns, como por exemplo, `_In_z` e `_Out_z_cap_(_Size)`. Estes são exemplos de SAL (linguagem de anotação de código-fonte) da Microsoft, que fornece um conjunto de anotações para descrever como uma função usa seus parâmetros, por exemplo, as suposições que ela faz sobre eles e as garantias obtidas ao concluir. O arquivo de cabeçalho \<sal.h> define as anotações.
+
+Para obter mais informações sobre como usar anotações de SAL no Visual Studio, consulte [Usando Anotações de SAL para reduzir defeitos de código C/C++](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+
+## <a name="see-also"></a>Consulte também
+
+[Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md)

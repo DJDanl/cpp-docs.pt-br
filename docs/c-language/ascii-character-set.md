@@ -12,20 +12,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c1612dc683145a58fba57bc420e5615d3f151f0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1df65608e22d5d034a66a9259f237c2300649162
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381116"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098459"
 ---
 # <a name="ascii-character-set"></a>Conjunto de caracteres ASCII
-**ANSI 2.2.1** Membros de conjuntos de caracteres de origem e de execução  
-  
- O conjunto de caracteres de origem é o conjunto de caracteres válidos que podem aparecer nos arquivos de origem. Para o Microsoft C, o conjunto de caracteres de origem é o conjunto de caracteres ASCII padrão.  
-  
+
+**ANSI 2.2.1** Membros de conjuntos de caracteres de origem e de execução
+
+O conjunto de caracteres de origem é o conjunto de caracteres válidos que podem aparecer nos arquivos de origem. Para o Microsoft C, o conjunto de caracteres de origem é o conjunto de caracteres ASCII padrão.
+
 > [!NOTE]
->  **Aviso** Como os drivers de teclado e de console podem remapear o conjunto de caracteres, os programas destinados à distribuição internacional devem verificar o código do país/região.  
-  
-## <a name="see-also"></a>Consulte também  
- [Caracteres](../c-language/characters.md)
+>  **Aviso** Como os drivers de teclado e de console podem remapear o conjunto de caracteres, os programas destinados à distribuição internacional devem verificar o código do país/região.
+
+## <a name="see-also"></a>Consulte também
+
+[Caracteres](../c-language/characters.md)

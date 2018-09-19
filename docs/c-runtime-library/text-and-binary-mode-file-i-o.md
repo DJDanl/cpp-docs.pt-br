@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4be1a3619fcd441dbcca53b0a1c369e30f9fb678
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 133f62347998ad8238c3136c3de03b08ba41346d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411478"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116250"
 ---
 # <a name="text-and-binary-mode-file-io"></a>E/S de texto e arquivo de modo binário
 
@@ -47,4 +47,4 @@ Quando você chama uma função de abertura de arquivo, como [_open](../c-runtim
 ## <a name="see-also"></a>Consulte também
 
 [Entrada e saída](../c-runtime-library/input-and-output.md)<br/>
- [Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

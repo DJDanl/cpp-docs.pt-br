@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98f7edcf115a6fadc741c7f1bcde8f240c93abcc
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: db047c2b16eb67f086bc26976783e829189d4266
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895117"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095099"
 ---
 # <a name="is-isw-routines"></a>Rotinas is, isw
 
@@ -61,75 +61,75 @@ O valor de saída é afetado pela configuração da categoria `LC_CTYPE` da loca
 
 Na localidade "C", as condições de teste para as rotinas **is** são as seguintes:
 
-`isalnum`  
+`isalnum`<br/>
 Alfanuméricos (A – Z, a – z ou 0 – 9).
 
-`isalpha`  
+`isalpha`<br/>
 Alfabéticos (A – Z ou a – z).
 
-`__isascii`  
+`__isascii`<br/>
 Caracteres ASCII (0x00 – 0x7F).
 
-`isblank`  
+`isblank`<br/>
 Tabulação horizontal ou caractere de espaço (0x09 ou 0x20).
 
-`iscntrl`  
+`iscntrl`<br/>
 Caractere de controle (0x00 – 0x1F ou 0x7F).
 
-`__iscsym`  
+`__iscsym`<br/>
 Letra, sublinhado ou dígito.
 
-`__iscsymf`  
+`__iscsymf`<br/>
 Letra ou sublinhado.
 
-`isdigit`  
+`isdigit`<br/>
 Dígito decimal (0 – 9).
 
-`isgraph`  
+`isgraph`<br/>
 Caractere imprimível, exceto espaço ( ).
 
-`islower`  
+`islower`<br/>
 Letra minúscula (a – z).
 
-`isprint`  
+`isprint`<br/>
 Caracteres imprimíveis, incluindo espaço (0x20 – 0x7E).
 
-`ispunct`  
+`ispunct`<br/>
 Caractere de pontuação.
 
-`isspace`  
+`isspace`<br/>
 Caractere de espaço em branco (0x09 – 0x0D ou 0x20).
 
-`isupper`  
+`isupper`<br/>
 Letra maiúscula (A – Z).
 
-`isxdigit`  
+`isxdigit`<br/>
 Dígito hexadecimal (A – F, a – f ou 0 – 9).
 
 Para as rotinas **isw**, o resultado do teste para a condição especificada é independente da localidade. As condições de teste para as funções **isw** são as seguintes:
 
-`iswalnum`  
+`iswalnum`<br/>
 `iswalpha` ou `iswdigit`.
 
-`iswalpha`  
+`iswalpha`<br/>
 Qualquer caractere largo que faça parte de um conjunto definido pela implementação para o qual nenhum dos `iswcntrl`, `iswdigit`, `iswpunct` ou `iswspace` é diferente de zero. `iswalpha` retorna não zero somente para caracteres largos para os quais `iswupper` ou `iswlower` é diferente de zero.
 
-`iswascii`  
+`iswascii`<br/>
 Representação de caractere largo de caractere ASCII (0x0000 – 0x007F).
 
-`iswblank`  
+`iswblank`<br/>
 Caracteres largos que correspondem ao caractere de espaço padrão, ou que seja de um conjunto de caracteres largos definidos pela implementação para os quais `iswalnum` é false. Os caracteres em branco padrão são espaço (L' ') e tabulação horizontal (L'\t').
 
-`iswcntrl`  
+`iswcntrl`<br/>
 Caractere largo de controle.
 
-`__iswcsym`  
+`__iswcsym`<br/>
 Qualquer caractere largo para o qual `isalnum` seja true, ou o caractere '_'.
 
-`__iswcsymf`  
+`__iswcsymf`<br/>
 Qualquer caractere largo para o qual `iswalpha` seja true, ou o caractere '_'.
 
-`iswctype`  
+`iswctype`<br/>
 O caractere tem uma propriedade especificada pelo argumento `desc`. Para cada valor válido do argumento `desc` de `iswctype`, há uma rotina de classificação de caractere largo equivalente, conforme mostra a tabela a seguir:
 
 ### <a name="equivalence-of-iswctypec-desc-to-other-isw-testing-routines"></a>Equivalência de iswctype(c, desc) com outras rotinas de teste de isw
@@ -150,28 +150,28 @@ O caractere tem uma propriedade especificada pelo argumento `desc`. Para cada va
 |**_UPPER**|**iswupper(** `c` **)**|
 |**_HEX**|**iswxdigit(** `c` **)**|
 
-`iswdigit`  
+`iswdigit`<br/>
 Caractere largo correspondente a um caractere de dígito decimal.
 
-`iswgraph`  
+`iswgraph`<br/>
 Caractere largo imprimível exceto caractere largo de espaço (L' ').
 
-`iswlower`  
+`iswlower`<br/>
 Letra minúscula, ou uma que faça parte de um conjunto de caracteres largos definidos pela implementação para o qual nenhum dos `iswcntrl`, `iswdigit`, `iswpunct` ou `iswspace` é diferente de zero. `iswlower` retorna zero somente para caracteres largos que correspondem a letras minúsculas.
 
-`iswprint`  
+`iswprint`<br/>
 Caractere largo imprimível, incluindo caractere de espaço largo (L' ').
 
-`iswpunct`  
+`iswpunct`<br/>
 Caractere largo imprimível que não é um caractere largo de espaço (L' ') ou um caractere largo para o qual `iswalnum` é diferente de zero.
 
-`iswspace`  
+`iswspace`<br/>
 Caracteres largo que corresponde ao caractere de espaço em branco padrão, ou que seja de um conjunto de caracteres largos definido pela implementação para o qual `iswalnum` é false. Os caracteres de espaço em branco padrão são: espaço (L' '), tabulação (L'\f'), nova linha (L'\n'), retorno de carro (L'\r'), tabulação horizontal (L'\t') e tabulação vertical (L'\v').
 
-`iswupper`  
+`iswupper`<br/>
 Caractere largo maiúsculo ou um que faça parte de um conjunto de caracteres largos definidos pela implementação para o qual nenhum dos `iswcntrl`, `iswdigit`, `iswpunct` ou `iswspace` é diferente de zero. `iswupper` retorna não zero somente para caracteres largos que correspondem a caracteres maiúsculos.
 
-`iswxdigit`  
+`iswxdigit`<br/>
 Caractere largo que corresponde a um caractere de dígito hexadecimal.
 
 ## <a name="example"></a>Exemplo
@@ -181,16 +181,16 @@ Caractere largo que corresponde a um caractere de dígito hexadecimal.
 /* This program tests all characters between 0x0
 * and 0x7F, then displays each character with abbreviations
 * for the character-type codes that apply.
-*/  
+*/
 
 #include <stdio.h>
 #include <ctype.h>
 
-int main( void )  
-{  
+int main( void )
+{
    int ch;
-   for( ch = 0; ch <= 0x7F; ch++ )  
-   {  
+   for( ch = 0; ch <= 0x7F; ch++ )
+   {
       printf( "%.2x  ", ch );
       printf( " %c", isprint( ch )  ? ch   : ' ' );
       printf( "%4s", isalnum( ch )  ? "AN" : "" );
@@ -208,9 +208,9 @@ int main( void )
       printf( "%3s", isupper( ch )  ? "U"  : "" );
       printf( "%3s", isxdigit( ch ) ? "X"  : "" );
       printf( ".\n" );
-   }  
-}  
-```  
+   }
+}
+```
 
 ## <a name="output"></a>Saída
 
@@ -347,8 +347,8 @@ int main( void )
 
 ## <a name="see-also"></a>Consulte também
 
-[Classificação de caracteres](../c-runtime-library/character-classification.md)   
-[Localidade](../c-runtime-library/locale.md)   
-[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
-[Interpretação de sequências de caracteres multibyte](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
+[Classificação de caracteres](../c-runtime-library/character-classification.md)<br/>
+[Localidade](../c-runtime-library/locale.md)<br/>
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[Interpretação de sequências de caracteres multibyte](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [Funções to](../c-runtime-library/to-functions.md)

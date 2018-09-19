@@ -12,29 +12,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a5a3e5a24e8b03a0d4b65d177fda7f06cbd9b1e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b9ed315352fc804acfd598bbe203de8be2abe49
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385000"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105429"
 ---
 # <a name="organization-of-the-c-language-reference"></a>Organização da referência da linguagem C
--   [Elementos de C](../c-language/elements-of-c.md)  
-  
--   [Estrutura do Programa](../c-language/program-structure.md)  
-  
--   [Declarações e tipos](../c-language/declarations-and-types.md)  
-  
--   [Expressões e atribuições](../c-language/expressions-and-assignments.md)  
-  
--   [Instruções](../c-language/statements-c.md)  
-  
--   [Funções](../c-language/functions-c.md)  
-  
--   [Resumo da sintaxe da linguagem C](../c-language/c-language-syntax-summary.md)  
-  
--   [Comportamento definido pela implementação](../c-language/implementation-defined-behavior.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência da linguagem C](../c-language/c-language-reference.md)
+
+- [Elementos de C](../c-language/elements-of-c.md)
+
+- [Estrutura do Programa](../c-language/program-structure.md)
+
+- [Declarações e tipos](../c-language/declarations-and-types.md)
+
+- [Expressões e atribuições](../c-language/expressions-and-assignments.md)
+
+- [Instruções](../c-language/statements-c.md)
+
+- [Funções](../c-language/functions-c.md)
+
+- [Resumo da sintaxe da linguagem C](../c-language/c-language-syntax-summary.md)
+
+- [Comportamento definido pela implementação](../c-language/implementation-defined-behavior.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Referência da linguagem C](../c-language/c-language-reference.md)

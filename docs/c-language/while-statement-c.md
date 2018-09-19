@@ -17,26 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1aa9c72cbb8724da00b2d370884bd7ddbf7264cc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4dfda5807aab0c9930780b8374ffc934dde001c0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763234"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096802"
 ---
 # <a name="while-statement-c"></a>Instrução while (C)
 
-A instrução `while` permite que você repita uma instrução até que uma expressão especificada seja falsa.  
-  
+A instrução `while` permite que você repita uma instrução até que uma expressão especificada seja falsa.
+
 ## <a name="syntax"></a>Sintaxe
 
 *iteration-statement*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**while (**  *expression*  **)**  *statement*
-  
-A *expressão* deve ter o tipo aritmético ou ponteiro. A execução procede da seguinte maneira:  
-  
-1. A *expressão* é avaliada.  
-  
+
+A *expressão* deve ter o tipo aritmético ou ponteiro. A execução procede da seguinte maneira:
+
+1. A *expressão* é avaliada.
+
 2. Se a *expressão* for inicialmente falsa, o corpo da instrução `while` nunca será executado e o controle passará da instrução `while` para a próxima instrução do programa.
 
    Se a *expressão* for verdadeira (diferente de zero), o corpo da instrução será executado e o processo será repetido no início da etapa 1.

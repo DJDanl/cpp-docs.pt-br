@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ee1c3be0ecc06dd2ccfb28882b6dc99912d7e13
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d776adab3404bf1244c7365e905866b4d041fc00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762470"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091901"
 ---
 # <a name="array-declarations"></a>Declarações de matriz
 
@@ -48,9 +48,9 @@ Uma "declaração de matriz" nomeia a matriz e especifica o tipo dos respectivos
 
 Como *constant-expression* é opcional, a sintaxe tem dois formatos:
 
--   O primeiro formato define uma variável de matriz. O argumento *constant-expression* entre colchetes especifica o número de elementos na matriz. O *constant-expression*, se estiver presente, deve ter um tipo integral e um valor maior que zero. Cada elemento tem o tipo indicado por *type-specifier*, que pode ser qualquer tipo exceto `void`. Um elemento de matriz não pode ser um tipo de função.
+- O primeiro formato define uma variável de matriz. O argumento *constant-expression* entre colchetes especifica o número de elementos na matriz. O *constant-expression*, se estiver presente, deve ter um tipo integral e um valor maior que zero. Cada elemento tem o tipo indicado por *type-specifier*, que pode ser qualquer tipo exceto `void`. Um elemento de matriz não pode ser um tipo de função.
 
--   O segundo formato declara uma variável que foi definida em outro lugar. Ele omite o argumento *constant-expression* entre colchetes, mas não os colchetes. Você só poderá usar esse formato se tiver inicializado a matriz anteriormente, se a tiver declarado como um parâmetro ou se a tiver declarado como uma referência a uma matriz definida explicitamente em outro lugar no programa.
+- O segundo formato declara uma variável que foi definida em outro lugar. Ele omite o argumento *constant-expression* entre colchetes, mas não os colchetes. Você só poderá usar esse formato se tiver inicializado a matriz anteriormente, se a tiver declarado como um parâmetro ou se a tiver declarado como uma referência a uma matriz definida explicitamente em outro lugar no programa.
 
 Nos dois formatos, *direct-declarator* nomeia a variável e pode modificar o tipo dela. Os colchetes (**[ ]**) depois de *direct-declarator* modificam o declarador para um tipo de matriz.
 
@@ -75,6 +75,7 @@ As três colunas da primeira linha são armazenadas primeiro, seguidas pelas tr�
 Para fazer referência a um elemento individual de uma matriz, use uma expressão de subscrito, conforme descrito em [Operadores pós-fixados](../c-language/postfix-operators.md).
 
 ## <a name="examples"></a>Exemplos
+
 Estes exemplos ilustram declarações de matrizes:
 
 ```C

@@ -22,23 +22,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d75dbc61ae2c9b0c30217a782519ba4e826d2b98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60487a502fd304be39f973659cb5fd3432ec7a1d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390772"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096789"
 ---
 # <a name="freeentry-usedentry"></a>_FREEENTRY, _USEDENTRY
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-#include <malloc.h>  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Essas constantes representam valores atribuídos pelas rotinas `_heapwalk` ao elemento **_useflag** da estrutura **_HEAPINFO**. Eles indicam o status da entrada de heap.  
-  
-## <a name="see-also"></a>Consulte também  
- [_heapwalk](../c-runtime-library/reference/heapwalk.md)   
- [Constantes globais](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Sintaxe
+
+```
+#include <malloc.h>
+```
+
+## <a name="remarks"></a>Comentários
+
+Essas constantes representam valores atribuídos pelas rotinas `_heapwalk` ao elemento **_useflag** da estrutura **_HEAPINFO**. Eles indicam o status da entrada de heap.
+
+## <a name="see-also"></a>Consulte também
+
+[_heapwalk](../c-runtime-library/reference/heapwalk.md)<br/>
+[Constantes globais](../c-runtime-library/global-constants.md)

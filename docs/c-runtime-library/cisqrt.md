@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef9ebf20a365b48058bc7e5cf4dc0556d917ef44
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 04c628dec2c2fd7e0b0b5a61aa20abf9266ca416
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386196"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084439"
 ---
 # <a name="cisqrt"></a>_CIsqrt
-Calcula a raiz quadrada do valor superior na pilha.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void __cdecl _CIsqrt();  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Esta versão da função `sqrt` tem uma convenção de chamada especializada que o compilador compreende. Ele acelera a execução porque ele evita que cópias sejam geradas e ajuda na alocação de registro.  
-  
- O valor resultante é colocado na parte superior da pilha.  
-  
-## <a name="requirements"></a>Requisitos  
- **Plataforma:** x86  
-  
-## <a name="see-also"></a>Consulte também  
- [Alphabetical Function Reference](../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
- [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)
+
+Calcula a raiz quadrada do valor superior na pilha.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+void __cdecl _CIsqrt();
+```
+
+## <a name="remarks"></a>Comentários
+
+Esta versão da função `sqrt` tem uma convenção de chamada especializada que o compilador compreende. Ele acelera a execução porque ele evita que cópias sejam geradas e ajuda na alocação de registro.
+
+O valor resultante é colocado na parte superior da pilha.
+
+## <a name="requirements"></a>Requisitos
+ **Plataforma:** x86
+
+## <a name="see-also"></a>Consulte também
+
+[Referência da Função Alfabética](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)

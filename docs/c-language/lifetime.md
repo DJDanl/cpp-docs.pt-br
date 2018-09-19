@@ -27,29 +27,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1030bf3f0ef907f3904bca92da4e43646d0e1a8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 34873681d0bc33cede9cda994aa9684e04a689e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387477"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113767"
 ---
 # <a name="lifetime"></a>Tempo de vida
-O “tempo de vida” é o período durante a execução de um programa em que uma variável ou uma função existe. A duração de armazenamento de identificador determina seu tempo de vida.  
-  
- Um identificador declarado com *storage-class-specifier* **static** tem duração de armazenamento estático. Os identificadores com a duração de armazenamento estático (também chamados de “globais”) têm o armazenamento e um valor definido para a duração de um programa. O armazenamento é reservado e o valor armazenado do identificador é inicializado apenas uma vez, antes da inicialização do programa. Um identificador declarado com vinculação externa ou interna também tem duração de armazenamento estático (consulte [Vinculação](../c-language/linkage.md)).  
-  
- Um identificador declarado sem o especificador de classe de armazenamento **static** tem duração de armazenamento automático se declarada na função. Um identificador com duração automática de armazenamento (um "identificador local") tem armazenamento e um valor definido apenas dentro do bloco no qual que o identificador está definido ou declarado. Um identificador automático é alocado ao novo armazenamento sempre que o programa entrar nesse bloco, e perde seu armazenamento (e seu valor) quando o programa sai do bloco. Os identificadores declarados em uma função sem vinculação também têm a duração automática de armazenamento.  
-  
- As regras a seguir especificam se um identificador tem tempo de vida global (estático) ou local (automático):  
-  
--   Todas as funções têm tempo de vida estático. Portanto, elas existem em sempre durante a execução do programa. Os identificadores declarados no nível externo (ou seja, fora de todos os blocos no programa no mesmo nível das definições de função) sempre têm o tempo de vida global (estático).  
-  
--   Se uma variável local tiver um inicializador, a variável será inicializada sempre que for criada (a menos que seja declarada como **static**). Os parâmetros de função também têm o tempo de vida local. É possível especificar o tempo de vida global de um identificador dentro de um bloco incluindo o especificador de classe de armazenamento **static** em sua declaração. Quando declarada como **static**, a variável retém seu valor de uma entrada do bloco para a próxima.  
-  
- Embora um identificador com tempo de vida global exista durante a execução do programa de origem (por exemplo, uma variável declarada externamente ou uma variável local declarada com a palavra-chave **static**), ele pode não ficar visível em todas as partes do programa. Consulte [Escopo e visibilidade](../c-language/scope-and-visibility.md) para obter informações sobre visibilidade; consulte [Classes de armazenamento](../c-language/c-storage-classes.md) para visualizar uma discussão do não terminal *storage-class-specifier*.  
-  
- A memória pode ser alocada conforme necessário (dinâmica) se criada com o uso de rotinas de biblioteca especiais como `malloc`. Como a alocação de memória dinâmica usa rotinas de biblioteca, não é considerado como parte da linguagem. Consulte a função [malloc](../c-runtime-library/reference/malloc.md) na *Referência da biblioteca em tempo de execução*.  
-  
-## <a name="see-also"></a>Consulte também  
- [Tempo de vida, escopo, visibilidade e vinculação](../c-language/lifetime-scope-visibility-and-linkage.md)
+
+O “tempo de vida” é o período durante a execução de um programa em que uma variável ou uma função existe. A duração de armazenamento de identificador determina seu tempo de vida.
+
+Um identificador declarado com *storage-class-specifier* **static** tem duração de armazenamento estático. Os identificadores com a duração de armazenamento estático (também chamados de “globais”) têm o armazenamento e um valor definido para a duração de um programa. O armazenamento é reservado e o valor armazenado do identificador é inicializado apenas uma vez, antes da inicialização do programa. Um identificador declarado com vinculação externa ou interna também tem duração de armazenamento estático (consulte [Vinculação](../c-language/linkage.md)).
+
+Um identificador declarado sem o especificador de classe de armazenamento **static** tem duração de armazenamento automático se declarada na função. Um identificador com duração automática de armazenamento (um "identificador local") tem armazenamento e um valor definido apenas dentro do bloco no qual que o identificador está definido ou declarado. Um identificador automático é alocado ao novo armazenamento sempre que o programa entrar nesse bloco, e perde seu armazenamento (e seu valor) quando o programa sai do bloco. Os identificadores declarados em uma função sem vinculação também têm a duração automática de armazenamento.
+
+As regras a seguir especificam se um identificador tem tempo de vida global (estático) ou local (automático):
+
+- Todas as funções têm tempo de vida estático. Portanto, elas existem em sempre durante a execução do programa. Os identificadores declarados no nível externo (ou seja, fora de todos os blocos no programa no mesmo nível das definições de função) sempre têm o tempo de vida global (estático).
+
+- Se uma variável local tiver um inicializador, a variável será inicializada sempre que for criada (a menos que seja declarada como **static**). Os parâmetros de função também têm o tempo de vida local. É possível especificar o tempo de vida global de um identificador dentro de um bloco incluindo o especificador de classe de armazenamento **static** em sua declaração. Quando declarada como **static**, a variável retém seu valor de uma entrada do bloco para a próxima.
+
+Embora um identificador com tempo de vida global exista durante a execução do programa de origem (por exemplo, uma variável declarada externamente ou uma variável local declarada com a palavra-chave **static**), ele pode não ficar visível em todas as partes do programa. Consulte [Escopo e visibilidade](../c-language/scope-and-visibility.md) para obter informações sobre visibilidade; consulte [Classes de armazenamento](../c-language/c-storage-classes.md) para visualizar uma discussão do não terminal *storage-class-specifier*.
+
+A memória pode ser alocada conforme necessário (dinâmica) se criada com o uso de rotinas de biblioteca especiais como `malloc`. Como a alocação de memória dinâmica usa rotinas de biblioteca, não é considerado como parte da linguagem. Consulte a função [malloc](../c-runtime-library/reference/malloc.md) na *Referência da biblioteca em tempo de execução*.
+
+## <a name="see-also"></a>Consulte também
+
+[Tempo de vida, escopo, visibilidade e vinculação](../c-language/lifetime-scope-visibility-and-linkage.md)

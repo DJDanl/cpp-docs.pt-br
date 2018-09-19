@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75afd44b8c0a31d9f3731a4c6f9fb86c15de4328
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 618a8053bea59896615d23514c2cf8aff29bea93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389414"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087468"
 ---
 # <a name="indirection-and-address-of-operators"></a>Operadores de indireção e endereço de
 
@@ -52,7 +52,6 @@ O operador unário address-of (**&**) fornece o endereço de seu operando. O ope
 
 Se o operando for o resultado de um operador unário __&#42;__, o operador não será avaliado e o resultado omitirá ambos. O resultado não é um lvalue e as restrições ainda se aplicam aos operadores. Se o operando for o resultado de um operador __&#91;&#93;__, o operador __&__ e o operador unário __&#42;__ implícito no __&#91;&#93;__ não serão avaliados. O resultado tem o mesmo efeito de remover o operador __&__ e alterar o operador __&#91;&#93;__ para um operador __+__. Caso contrário, o resultado será um ponteiro para o objeto ou função designado pelo operando.
 
-
 ## <a name="examples"></a>Exemplos
 
 Os exemplos a seguir usam estas declarações comuns:
@@ -65,7 +64,7 @@ double d;
 
 Esta instrução usa o operador address-of (**&**) para utilizar o endereço do sexto elemento da matriz `a`. O resultado é armazenado na variável de ponteiro `pa`:
 
-```C  
+```C
 pa = &a[5];
 ```
 
@@ -89,11 +88,11 @@ int roundup( void );     /* Function declaration */
 int  *proundup  = roundup;
 int  *pround  = &roundup;
 assert( pround == proundup );
-```  
+```
 
 Uma vez que a função `roundup` é declarada, dois ponteiros para `roundup` são declarados e inicializados. O primeiro ponteiro, `proundup`, é inicializado usando apenas o nome da função, enquanto o segundo, `pround`, usa o operador address-of na inicialização. As inicializações são equivalentes.
 
 ## <a name="see-also"></a>Consulte também
 
-[Operador de indireção: &#42;](../cpp/indirection-operator-star.md)  
-[Operador address-of: &](../cpp/address-of-operator-amp.md)  
+[Operador de indireção: &#42;](../cpp/indirection-operator-star.md)<br/>
+[Operador address-of: &](../cpp/address-of-operator-amp.md)

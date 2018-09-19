@@ -22,20 +22,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 203467eea055927ac7eb8d5ccf8a90242c62d33a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a81b358a89f3ed16747d27bc6401c01ad194680
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388611"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113715"
 ---
 # <a name="code-pages"></a>Páginas de código
 
 Uma *página de código* é um conjunto de caracteres, que pode incluir números, marcas de pontuação e outros glifos. Localidades e idiomas diferentes usam diferentes páginas de código. Por exemplo, a página de código ANSI 1252 é usada para inglês e a maioria dos idiomas europeus; a página de código OEM 932 é usada para japonês kanji.
 
- Uma página de código pode ser representada em uma tabela como mapeamento de caracteres para valores de byte único ou multibyte. Muitas páginas de código compartilham o conjunto de caracteres ASCII no intervalo 0x00 – 0x7F.
+Uma página de código pode ser representada em uma tabela como mapeamento de caracteres para valores de byte único ou multibyte. Muitas páginas de código compartilham o conjunto de caracteres ASCII no intervalo 0x00 – 0x7F.
 
- A biblioteca em tempo de execução da Microsoft usa os seguintes tipos de página de código:
+A biblioteca em tempo de execução da Microsoft usa os seguintes tipos de página de código:
 
 - Página de código ANSI padrão do sistema. Por padrão, na inicialização, o sistema de tempo de execução define automaticamente a página de código multibyte para a página de código ANSI padrão do sistema, que é obtida do sistema operacional. A chamada:
 
@@ -54,4 +54,4 @@ Uma *página de código* é um conjunto de caracteres, que pode incluir números
 ## <a name="see-also"></a>Consulte também
 
 [Internacionalização](../c-runtime-library/internationalization.md)<br/>
- [Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

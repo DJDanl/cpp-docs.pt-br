@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba98340f9670229e7be0d56beac482d7ad994fb6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a7af5e89e66b179b4527fd35a042caf8ddb1c644
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765779"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100572"
 ---
 # <a name="typedef-declarations"></a>Declarações typedef
+
 Uma declaração de typedef é uma declaração com typedef como a classe de armazenamento. O declarador se torna um novo tipo. Você pode usar declarações de typedef para construir nomes mais curtos ou significativos para os tipos já definidos por C ou para os tipos que você declarou. Os nomes de typedef permitem que você encapsule os detalhes da implementação que podem ser alterados.
 
 Uma declaração de typedef é interpretada da mesma maneira que uma declaração de variável ou de função, mas o identificador, em vez de assumir o tipo especificado pela declaração, se tornará um sinônimo para o tipo.
@@ -113,6 +114,7 @@ pfv signal( int, pfv );    /* Uses typedef type */
 ```
 
 ## <a name="examples"></a>Exemplos
+
 Os exemplos a seguir ilustram as declarações de typedef:
 
 ```C

@@ -33,36 +33,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25118792500d679d243f55e5d87e62a4994eaa0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 791509a7c67f5fa47128fda97688c43e592724ed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389924"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115171"
 ---
 # <a name="heap-constants"></a>Constantes de heap
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-#include <malloc.h>  
-  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Essas constantes informam o valor retornado que indica o status do heap.  
-  
-|Constante|Significado|  
-|--------------|-------------|  
-|`_HEAPBADBEGIN`|As informações do cabeçalho inicial não foram encontradas ou são inválidas.|  
-|`_HEAPBADNODE`|Foi encontrado um nó inválido ou o heap está danificado.|  
-|`_HEAPBADPTR`|O campo **_pentry** da estrutura **_HEAPINFO** não contém um ponteiro válido para o heap (somente a rotina `_heapwalk`).|  
-|`_HEAPEMPTY`|O heap não foi inicializado.|  
-|`_HEAPEND`|O fim do heap foi alcançado com êxito (somente a rotina `_heapwalk`).|  
-|`_HEAPOK`|O heap é consistente (somente as rotinas `_heapset` e `_heapchk`). Nenhum erro até o momento; a estrutura **_HEAPINFO** contém informações a respeito da próxima entrada (somente a rotina `_heapwalk`).|  
-  
-## <a name="see-also"></a>Consulte também  
- [_heapchk](../c-runtime-library/reference/heapchk.md)   
- [_heapset](../c-runtime-library/heapset.md)   
- [_heapwalk](../c-runtime-library/reference/heapwalk.md)   
- [Constantes globais](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Sintaxe
+
+```
+
+#include <malloc.h>
+
+```
+
+## <a name="remarks"></a>Comentários
+
+Essas constantes informam o valor retornado que indica o status do heap.
+
+|Constante|Significado|
+|--------------|-------------|
+|`_HEAPBADBEGIN`|As informações do cabeçalho inicial não foram encontradas ou são inválidas.|
+|`_HEAPBADNODE`|Foi encontrado um nó inválido ou o heap está danificado.|
+|`_HEAPBADPTR`|O campo **_pentry** da estrutura **_HEAPINFO** não contém um ponteiro válido para o heap (somente a rotina `_heapwalk`).|
+|`_HEAPEMPTY`|O heap não foi inicializado.|
+|`_HEAPEND`|O fim do heap foi alcançado com êxito (somente a rotina `_heapwalk`).|
+|`_HEAPOK`|O heap é consistente (somente as rotinas `_heapset` e `_heapchk`). Nenhum erro até o momento; a estrutura **_HEAPINFO** contém informações a respeito da próxima entrada (somente a rotina `_heapwalk`).|
+
+## <a name="see-also"></a>Consulte também
+
+[_heapchk](../c-runtime-library/reference/heapchk.md)<br/>
+[_heapset](../c-runtime-library/heapset.md)<br/>
+[_heapwalk](../c-runtime-library/reference/heapwalk.md)<br/>
+[Constantes globais](../c-runtime-library/global-constants.md)

@@ -20,22 +20,22 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 638d4fbe6fd4dfce1fb3eeb246ef85c5b60fada0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f3bf660b2e1c8301e9c6c8ba1bd1e11fa3956de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392504"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082216"
 ---
 # <a name="locale"></a>Localidade
 
 *Localidade* refere-se às configurações de país/região e idioma que você pode usar para personalizar o seu programa. Algumas categorias dependentes da localidade incluem os formatos de exibição para datas e valores monetários. Para saber mais, veja [Localidade](../c-runtime-library/locale-categories.md).
 
- Use a função [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) para alterar ou consultar algumas ou todas as informações atuais de localidade de thread ou de programa durante o uso de funções sem o sufixo **_l**. As funções com o sufixo **_l** usarão o parâmetro de localidade passado para suas informações de localidade durante a execução dessa função específica apenas. Para criar uma localidade para uso com uma função com um sufixo **_l**, use [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md). Para liberar essa localidade, use [free_locale](../c-runtime-library/reference/free-locale.md). Para obter a localidade atual, use [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).
+Use a função [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) para alterar ou consultar algumas ou todas as informações atuais de localidade de thread ou de programa durante o uso de funções sem o sufixo **_l**. As funções com o sufixo **_l** usarão o parâmetro de localidade passado para suas informações de localidade durante a execução dessa função específica apenas. Para criar uma localidade para uso com uma função com um sufixo **_l**, use [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md). Para liberar essa localidade, use [free_locale](../c-runtime-library/reference/free-locale.md). Para obter a localidade atual, use [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).
 
- Use [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) para controlar se cada thread tem sua própria localidade ou se todos os threads em um programa compartilham a mesma localidade. Para saber mais, veja [Localidade e páginas de código](../text/locales-and-code-pages.md).
+Use [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) para controlar se cada thread tem sua própria localidade ou se todos os threads em um programa compartilham a mesma localidade. Para saber mais, veja [Localidade e páginas de código](../text/locales-and-code-pages.md).
 
- As versões mais seguras das funções na tabela a seguir estão disponíveis, indicadas pelo sufixo **_s** ("secure"). Para obter mais informações, consulte [Recursos de segurança no CRT](../c-runtime-library/security-features-in-the-crt.md).
+As versões mais seguras das funções na tabela a seguir estão disponíveis, indicadas pelo sufixo **_s** ("secure"). Para obter mais informações, consulte [Recursos de segurança no CRT](../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="locale-dependent-routines"></a>Rotinas dependentes de localidade
 
@@ -82,4 +82,4 @@ ms.locfileid: "32392504"
 ## <a name="see-also"></a>Consulte também
 
 [Internacionalização](../c-runtime-library/internationalization.md)<br/>
- [Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

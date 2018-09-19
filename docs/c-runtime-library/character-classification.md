@@ -17,20 +17,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 262479a4538843cef2af61be0ec56347c7afc75f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: f4c194432c3d7442677a78046ac893e5e3e2a7ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222442"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101339"
 ---
 # <a name="character-classification"></a>Classificação de caractere
 
 Todas essas rotinas testam um caractere de byte único especificado, caractere largo ou caracteres multibyte para satisfação de uma condição. (Por definição, o caractere ASCII definido entre 0 e 127 são um subconjunto de todos os conjuntos de caracteres multibyte. Por exemplo, o katakana japonês inclui ASCII, bem como caracteres não ASCII.)
 
- As condições de teste são afetadas pela configuração de categoria **LC_CTYPE** da localidade. Consulte [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar.
+As condições de teste são afetadas pela configuração de categoria **LC_CTYPE** da localidade. Consulte [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar.
 
- Geralmente, essas rotinas executam mais rápido do que testes, você pode gravar e deve ser favorecido. Por exemplo, o código a seguir executa mais lentamente do que uma chamada para `isalpha(c)`:
+Geralmente, essas rotinas executam mais rápido do que testes, você pode gravar e deve ser favorecido. Por exemplo, o código a seguir executa mais lentamente do que uma chamada para `isalpha(c)`:
 
 ```C
 if ((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z'))

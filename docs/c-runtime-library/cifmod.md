@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bde7a170eb499a9b179a909bfb95e75f8fc89518
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 46bcc0fa01a05b3942bb1588153ee35b5d6d25e3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386551"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090458"
 ---
 # <a name="cifmod"></a>_CIfmod
-Calcula o restante do ponto flutuante dos dois valores superiores na pilha.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void __cdecl _CIfmod();  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Esta versão da função `fmod` tem uma convenção de chamada especializada que o compilador compreende. Ele acelera a execução porque ele evita que cópias sejam geradas e ajuda na alocação de registro.  
-  
- O valor resultante é colocado na parte superior da pilha.  
-  
-## <a name="requirements"></a>Requisitos  
- **Plataforma:** x86  
-  
-## <a name="see-also"></a>Consulte também  
- [Alphabetical Function Reference](../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
- [fmod, fmodf](../c-runtime-library/reference/fmod-fmodf.md)
+
+Calcula o restante do ponto flutuante dos dois valores superiores na pilha.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+void __cdecl _CIfmod();
+```
+
+## <a name="remarks"></a>Comentários
+
+Esta versão da função `fmod` tem uma convenção de chamada especializada que o compilador compreende. Ele acelera a execução porque ele evita que cópias sejam geradas e ajuda na alocação de registro.
+
+O valor resultante é colocado na parte superior da pilha.
+
+## <a name="requirements"></a>Requisitos
+ **Plataforma:** x86
+
+## <a name="see-also"></a>Consulte também
+
+[Referência da Função Alfabética](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[fmod, fmodf](../c-runtime-library/reference/fmod-fmodf.md)

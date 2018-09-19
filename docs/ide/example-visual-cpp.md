@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cefd38a18447d0e8c9121d61c0ba963e9da39187
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7c6be247c6c756557e7173c4b295197d9e4267cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33321425"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110959"
 ---
 # <a name="ltexamplegt-visual-c"></a>&lt;example&gt; (Visual C++)
 A marca \<example> permite especificar um exemplo de como usar um método ou outro membro da biblioteca. Normalmente, isso envolve também o uso da marcação [\<code>](../ide/code-visual-cpp.md).  
@@ -35,8 +35,8 @@ A marca \<example> permite especificar um exemplo de como usar um método ou out
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `description`  
- Uma descrição do exemplo de código.  
+*description*<br/>
+Uma descrição do exemplo de código.  
   
 ## <a name="remarks"></a>Comentários  
  Compile com [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação em um arquivo.  

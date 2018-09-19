@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94dffb5f52d84027cd59762478bd7d6b5f6738d6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2037d64aba025b9acf8279a3da9073611d11ce8e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751762"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107874"
 ---
 # <a name="conditional-expression-operator"></a>Operador de expressão condicional
+
 C tem um operador ternário: o operador de expressão condicional (**?:**).
 
 ## <a name="syntax"></a>Sintaxe
@@ -34,23 +35,23 @@ C tem um operador ternário: o operador de expressão condicional (**?:**).
 
 A *logical-OR-expression* deve ter um tipo integral, de flutuação ou ponteiro. Ela é avaliada em termos de sua equivalência a 0. Um ponto de sequência vem após a *logical-OR-expression*. A avaliação dos operandos acontece da seguinte maneira:
 
--   Se a *logical-OR-expression* não for igual a 0, a *expression* será avaliada. O resultado da avaliação da expressão é determinado pela *expression* não terminal. (Isso significa que a *expression* será avaliada apenas se a *logical-OR-expression* for verdadeira.)
+- Se a *logical-OR-expression* não for igual a 0, a *expression* será avaliada. O resultado da avaliação da expressão é determinado pela *expression* não terminal. (Isso significa que a *expression* será avaliada apenas se a *logical-OR-expression* for verdadeira.)
 
--   Se a *logical-OR-expression* for igual a 0, a *conditional-expression* será avaliada. O resultado da expressão será o valor da *conditional-expression*. (Isso significa que a *conditional-expression* será avaliada apenas se a *logical-OR-expression* for falsa.)
+- Se a *logical-OR-expression* for igual a 0, a *conditional-expression* será avaliada. O resultado da expressão será o valor da *conditional-expression*. (Isso significa que a *conditional-expression* será avaliada apenas se a *logical-OR-expression* for falsa.)
 
 Observe que apenas a *expression* ou a *conditional-expression* é avaliada, mas não ambas.
 
 O tipo de resultado de uma operação condicional depende do tipo do operando da *expression* ou *conditional-expression*, da seguinte maneira:
 
--   Se a *expression* ou *conditional-expression* tiver o tipo integral ou flutuante (seus tipos podem ser diferentes), o operador executa conversões aritméticas comuns. O tipo do resultado é o tipo dos operandos após conversão.
+- Se a *expression* ou *conditional-expression* tiver o tipo integral ou flutuante (seus tipos podem ser diferentes), o operador executa conversões aritméticas comuns. O tipo do resultado é o tipo dos operandos após conversão.
 
--   Se a *expression* e a *conditional-expression* tiverem a mesma estrutura, união ou tipo de ponteiro, o tipo de resultado é a mesma estrutura, união ou tipo de ponteiro.
+- Se a *expression* e a *conditional-expression* tiverem a mesma estrutura, união ou tipo de ponteiro, o tipo de resultado é a mesma estrutura, união ou tipo de ponteiro.
 
--   Se ambos os operandos tiverem o tipo `void`, o resultado tem o tipo `void`.
+- Se ambos os operandos tiverem o tipo `void`, o resultado tem o tipo `void`.
 
--   Se qualquer operando for um ponteiro para um objeto de qualquer tipo e o outro operando for um ponteiro para `void`, o ponteiro para o objeto será convertido em um ponteiro para `void` e o resultado será um ponteiro para `void`.
+- Se qualquer operando for um ponteiro para um objeto de qualquer tipo e o outro operando for um ponteiro para `void`, o ponteiro para o objeto será convertido em um ponteiro para `void` e o resultado será um ponteiro para `void`.
 
--   Se a *expression* ou *conditional-expression* for um ponteiro e o outro operando for uma expressão constante com o valor 0, o tipo de resultado será o tipo de ponteiro.
+- Se a *expression* ou *conditional-expression* for um ponteiro e o outro operando for uma expressão constante com o valor 0, o tipo de resultado será o tipo de ponteiro.
 
 Na comparação do tipo para ponteiros, qualquer qualificador de tipo (**const** ou `volatile`) no tipo para o qual o ponteiro aponta é insignificante, mas o tipo de resultado herda os qualificadores de ambos os componentes da condicional.
 

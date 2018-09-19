@@ -21,18 +21,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 704e8defa8aac640ce5011e5789d4af36380b7a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2bb5a6b1f184775b3e67a03b9544e609b33673ba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384987"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46106112"
 ---
 # <a name="function-declarations-and-definitions"></a>Declarações de função e definições
-Os protótipos de função estabelecem o nome da função, seu tipo de retorno, o tipo e o número de seus parâmetros formais. Uma definição de função inclui o corpo da função.  
-  
-## <a name="remarks"></a>Comentários  
- As declarações de função e de variável podem aparecer dentro ou fora de uma definição de função. Qualquer declaração dentro de uma definição de função é dita aparecer no nível “interno” ou “local”. Uma declaração fora de todas as definições de função é dita aparecer como “externa”, “global”, ou no nível do “escopo de arquivo”. As definições de variáveis, como declarações, podem aparecer no nível interno (dentro de uma definição de função) ou no nível externo (fora de todas as definições de função). As definições de função sempre ocorrem no nível externo. As definições de função são abordadas em mais detalhes em [Definições de função](../c-language/c-function-definitions.md). Os protótipos de função são abordados em [Protótipos de função](../c-language/function-prototypes.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Arquivos e programas de origem](../c-language/source-files-and-source-programs.md)
+
+Os protótipos de função estabelecem o nome da função, seu tipo de retorno, o tipo e o número de seus parâmetros formais. Uma definição de função inclui o corpo da função.
+
+## <a name="remarks"></a>Comentários
+
+As declarações de função e de variável podem aparecer dentro ou fora de uma definição de função. Qualquer declaração dentro de uma definição de função é dita aparecer no nível “interno” ou “local”. Uma declaração fora de todas as definições de função é dita aparecer como “externa”, “global”, ou no nível do “escopo de arquivo”. As definições de variáveis, como declarações, podem aparecer no nível interno (dentro de uma definição de função) ou no nível externo (fora de todas as definições de função). As definições de função sempre ocorrem no nível externo. As definições de função são abordadas em mais detalhes em [Definições de função](../c-language/c-function-definitions.md). Os protótipos de função são abordados em [Protótipos de função](../c-language/function-prototypes.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Arquivos e programas de origem](../c-language/source-files-and-source-programs.md)

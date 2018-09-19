@@ -19,16 +19,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c0781f286d054d9a4baeedf9460fa460bf39c5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59dfba20e2bf55bb314cd97d860a741a6d830957
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388988"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089730"
 ---
 # <a name="global-variables-and-standard-types"></a>Variáveis globais e tipos padrão
-A biblioteca em tempo de execução da Microsoft contém definições para [variáveis globais](../c-runtime-library/global-variables.md), [sinalizadores de controle](../c-runtime-library/control-flags.md) e [tipos padrão](../c-runtime-library/standard-types.md) usadas por rotinas de biblioteca. Acesse essas variáveis, sinalizadores e tipos declarando-os em seu programa ou incluindo os arquivos de cabeçalho apropriado.  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência da biblioteca em tempo de execução do C](../c-runtime-library/c-run-time-library-reference.md)   
- [Constantes globais](../c-runtime-library/global-constants.md)
+
+A biblioteca em tempo de execução da Microsoft contém definições para [variáveis globais](../c-runtime-library/global-variables.md), [sinalizadores de controle](../c-runtime-library/control-flags.md) e [tipos padrão](../c-runtime-library/standard-types.md) usadas por rotinas de biblioteca. Acesse essas variáveis, sinalizadores e tipos declarando-os em seu programa ou incluindo os arquivos de cabeçalho apropriado.
+
+## <a name="see-also"></a>Consulte também
+
+[Referência da biblioteca em tempo de execução C](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[Constantes globais](../c-runtime-library/global-constants.md)
