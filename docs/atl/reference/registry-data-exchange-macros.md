@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1864fb953c53cba562856fed24a44b6157a03603
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a8a4ac19f9ead379b66d93a7be031bb53bc50fe5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764209"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109334"
 ---
 # <a name="registry-data-exchange-macros"></a>Macros de troca de dados de registro
 
@@ -89,19 +89,19 @@ RDX_BINARY(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ROOTKEY*  
+*ROOTKEY*<br/>
 A chave raiz do registro.
 
-*subchave*  
+*subchave*<br/>
 A subchave do registro.
 
-*ValueName*  
+*ValueName*<br/>
 A chave do registro.
 
-*Membro*  
+*Membro*<br/>
 A variável de membro para associar a entrada do registro especificado.
 
-*member_size*  
+*member_size*<br/>
 O tamanho, em bytes, da variável de membro.
 
 ### <a name="remarks"></a>Comentários
@@ -123,19 +123,19 @@ RDX_CSTRING_TEXT(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ROOTKEY*  
+*ROOTKEY*<br/>
 A chave raiz do registro.
 
-*subchave*  
+*subchave*<br/>
 A subchave do registro.
 
-*ValueName*  
+*ValueName*<br/>
 A chave do registro.
 
-*Membro*  
+*Membro*<br/>
 A variável de membro para associar a entrada do registro especificado.
 
-*member_size*  
+*member_size*<br/>
 O tamanho, em bytes, da variável de membro.
 
 ### <a name="remarks"></a>Comentários
@@ -157,19 +157,19 @@ RDX_DWORD(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ROOTKEY*  
+*ROOTKEY*<br/>
 A chave raiz do registro.
 
-*subchave*  
+*subchave*<br/>
 A subchave do registro.
 
-*ValueName*  
+*ValueName*<br/>
 A chave do registro.
 
-*Membro*  
+*Membro*<br/>
 A variável de membro para associar a entrada do registro especificado.
 
-*member_size*  
+*member_size*<br/>
 O tamanho, em bytes, da variável de membro.
 
 ### <a name="remarks"></a>Comentários
@@ -191,19 +191,19 @@ RDX_TEXT(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ROOTKEY*  
+*ROOTKEY*<br/>
 A chave raiz do registro.
 
-*subchave*  
+*subchave*<br/>
 A subchave do registro.
 
-*ValueName*  
+*ValueName*<br/>
 A chave do registro.
 
-*Membro*  
+*Membro*<br/>
 A variável de membro para associar a entrada do registro especificado.
 
-*member_size*  
+*member_size*<br/>
 O tamanho, em bytes, da variável de membro.
 
 ### <a name="remarks"></a>Comentários
@@ -212,6 +212,6 @@ Essa macro é usada em conjunto com as macros BEGIN_RDX_MAP e END_RDX_MAP para a
 
 ## <a name="see-also"></a>Consulte também
 
-[Macros](../../atl/reference/atl-macros.md)   
+[Macros](../../atl/reference/atl-macros.md)<br/>
 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)
 

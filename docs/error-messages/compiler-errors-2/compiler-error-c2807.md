@@ -1,5 +1,5 @@
 ---
-title: C2807 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2807 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 538cdfe6ce8c199a213077e26c16fce65e55b9b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a0f1627e19ad3368ad99559b6b576d165347643
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237010"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110530"
 ---
-# <a name="compiler-error-c2807"></a>C2807 de erro do compilador
-o segundo parâmetro formal para o sufixo 'operador operator' deve ser 'int'  
-  
- O segundo parâmetro para um operador de sufixo tem tipo errado.  
-  
- O exemplo a seguir gera C2807:  
-  
-```  
-// C2807.cpp  
-// compile with: /c  
-class X {  
-public:  
-   X operator++ ( X );   // C2807 nonvoid parameter  
-   X operator++ ( int );   // OK, int parameter  
-};  
+# <a name="compiler-error-c2807"></a>Erro do compilador C2807
+
+o segundo parâmetro formal para sufixo 'operador operator' deve ser 'int'
+
+O segundo parâmetro para um operador de sufixo tem o tipo errado.
+
+O exemplo a seguir gera C2807:
+
+```
+// C2807.cpp
+// compile with: /c
+class X {
+public:
+   X operator++ ( X );   // C2807 nonvoid parameter
+   X operator++ ( int );   // OK, int parameter
+};
 ```

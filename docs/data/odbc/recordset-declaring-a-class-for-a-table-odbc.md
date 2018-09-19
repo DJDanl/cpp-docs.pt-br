@@ -16,26 +16,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 460b09d32b46bb9f15a95bcb976afa63519b8263
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea4a816053a548ac8e3292d0416fe68da2dc4296
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33089939"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107626"
 ---
 # <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Conjunto de registros: declarando uma classe para uma tabela (ODBC)
-Este tópico se aplica às classes MFC ODBC.  
+
+Este tópico se aplica às classes ODBC do MFC.  
   
- A classe de conjunto de registros mais comuns é aberto em uma única tabela. Para declarar uma classe de conjunto de registros para uma única tabela, use o [Assistente de consumidor ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) de **Adicionar classe** e escolha a cada coluna que você deseja ao nomear um membro de dados de campo correspondente do conjunto de registros.  
+A classe de conjunto de registros mais comuns é aberta em uma única tabela. Para declarar uma classe de conjunto de registros para uma única tabela, use o [Assistente de consumidor ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) de **Adicionar classe** e escolha a cada coluna que você deseja ao nomear um membro de dados de campo de conjunto de registros correspondentes.  
   
- Outros usos para conjuntos de registros incluem:  
+Outros usos para conjuntos de registros incluem:  
   
--   Unir duas ou mais tabelas.  
+- Unir duas ou mais tabelas.  
   
--   Que contém os resultados de uma consulta predefinida.  
+- Que contém os resultados de uma consulta predefinida.  
   
 ## <a name="see-also"></a>Consulte também  
- [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)   
- [Conjunto de registros: Criando e fechando conjuntos de registros (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)   
- [Conjunto de registros: Declarando uma classe para uma consulta predefinida (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
- [Conjunto de registros: realizando uma junção (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+
+[Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
+[Conjunto de registros: criando e fechando conjuntos de registros (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>
+[Conjunto de registros: declarando uma classe para uma consulta predefinida (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
+[Conjunto de registros: realizando uma junção (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

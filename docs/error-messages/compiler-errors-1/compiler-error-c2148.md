@@ -1,5 +1,5 @@
 ---
-title: C2148 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2148 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f64f11f94c5a0c5d223d97b6b597f89b89aa160b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8e76228ff585f47a2cbe210ac3eb96d5d281a93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170694"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114014"
 ---
-# <a name="compiler-error-c2148"></a>C2148 de erro do compilador
-tamanho total da matriz não deve exceder 0x7fffffff bytes  
-  
- Uma matriz excede o limite. Reduza o tamanho da matriz.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C2148:  
-  
-```  
-// C2148.cpp  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( ) {  
-   char MyArray[0x7ffffffff];   // C2148  
-   char * MyArray2 = (char *)malloc(0x7fffffff);  
-  
-   if (MyArray2)  
-      printf_s("It worked!");  
-   else  
-      printf_s("It didn't work.");  
-}  
+# <a name="compiler-error-c2148"></a>Erro do compilador C2148
+
+tamanho total da matriz não deve exceder 0x7fffffff bytes
+
+Uma matriz excede o limite. Reduza o tamanho da matriz.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C2148:
+
+```
+// C2148.cpp
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( ) {
+   char MyArray[0x7ffffffff];   // C2148
+   char * MyArray2 = (char *)malloc(0x7fffffff);
+
+   if (MyArray2)
+      printf_s("It worked!");
+   else
+      printf_s("It didn't work.");
+}
 ```

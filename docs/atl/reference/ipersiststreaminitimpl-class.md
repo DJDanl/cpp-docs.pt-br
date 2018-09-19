@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b31e8c712ef7c395570912224f75036e6249b431
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 85e772b9222f2066259042e551fa393758559ab2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761963"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115861"
 ---
 # <a name="ipersiststreaminitimpl-class"></a>Classe IPersistStreamInitImpl
 
@@ -42,14 +42,14 @@ Essa classe implementa `IUnknown` e fornece uma implementação padrão do [IPer
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template<class T>  
+template<class T>
 class ATL_NO_VTABLE IPersistStreamInitImpl 
    : public IPersistStreamInit
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 Sua classe, derivada de `IPersistStreamInitImpl`.
 
 ## <a name="members"></a>Membros
@@ -163,5 +163,5 @@ Ver [IPersistStreamInit::Save](/windows/desktop/api/ocidl/nf-ocidl-ipersiststrea
 
 ## <a name="see-also"></a>Consulte também
 
-[Fluxos e armazenamentos](/windows/desktop/Stg/storages-and-streams)   
+[Fluxos e armazenamentos](/windows/desktop/Stg/storages-and-streams)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

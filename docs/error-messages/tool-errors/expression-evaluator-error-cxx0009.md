@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d579c22ee72992b16cd39a2cedb82e1219972c5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95c2706f4b1eb758eea24cc16ea16f4b561155c2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295438"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109789"
 ---
 # <a name="expression-evaluator-error-cxx0009"></a>Erro CXX0009 (avaliador de expressão)
-ausente ' após constante de caractere  
-  
- A aspa simples esperada ao fim da constante de caractere estava ausente. Digite novamente a expressão, colocando a constante de caractere entre aspas simples.  
-  
- Esse erro é idêntico ao CAN0009.
+
+faltando ' após a constante de caractere
+
+A aspa simples esperada no final da constante de caractere estava ausente. Digite novamente a expressão, colocando a constante de caractere entre aspas simples.
+
+Esse erro é idêntico ao CAN0009.

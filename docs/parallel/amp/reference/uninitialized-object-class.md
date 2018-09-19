@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b9b10af535b0739d480326d616ee7587318bb5a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 821f3c25d195a2c92ac04fdf5f9e5a59b493c257
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696169"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113832"
 ---
 # <a name="uninitializedobject-class"></a>Classe uninitialized_object
-A exceção que é lançada quando é usado um objeto não inicializado.  
+A exceção que é lançada quando um objeto não inicializado é usado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,12 +51,12 @@ class uninitialized_object : public runtime_exception;
  `uninitialized_object`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** amprt.h  
+ **Cabeçalho:** amprt. h  
   
  **Namespace:** Simultaneidade  
 ## <a name="uninitialized_object__ctor"></a> unsupported_feature 
 
-Constrói uma nova instância da exceção unsupported_feature.  
+Constrói uma nova instância da exceção de unsupported_feature.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -68,8 +68,8 @@ unsupported_feature() throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Message`  
- Uma descrição do erro.  
+*Mensagem*<br/>
+Uma descrição do erro.  
   
 ### <a name="return-value"></a>Valor de retorno  
  O objeto `unsupported_feature`. 

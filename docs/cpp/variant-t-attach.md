@@ -19,32 +19,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 567a3387e79244443b784549d6223a14f78103ce
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: e680f4f42881ea89510048f43d657d1579686527
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464672"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109256"
 ---
 # <a name="varianttattach"></a>_variant_t::Attach
-**Seção específica da Microsoft**  
-  
- Anexa uma `VARIANT` do objeto para o **variant_t** objeto.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void Attach(VARIANT& varSrc);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- *varSrc*  
- Um `VARIANT` o objeto a ser anexado a este **variant_t** objeto.  
-  
-## <a name="remarks"></a>Comentários  
- Se apropria do `VARIANT` , encapsulando-lo. Essa função de membro libera qualquer encapsulado existente `VARIANT`, em seguida, copia fornecido `VARIANT`e define seu `VARTYPE` como VT_EMPTY para garantir que seus recursos só podem ser liberados pelo **variant_t** destruidor.  
-  
- **Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe _variant_t](../cpp/variant-t-class.md)
+
+**Seção específica da Microsoft**
+
+Anexa uma `VARIANT` do objeto para o **variant_t** objeto.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+void Attach(VARIANT& varSrc);
+```
+
+#### <a name="parameters"></a>Parâmetros
+
+*varSrc*<br/>
+Um `VARIANT` o objeto a ser anexado a este **variant_t** objeto.
+
+## <a name="remarks"></a>Comentários
+
+Se apropria do `VARIANT` , encapsulando-lo. Essa função de membro libera qualquer encapsulado existente `VARIANT`, em seguida, copia fornecido `VARIANT`e define seu `VARTYPE` como VT_EMPTY para garantir que seus recursos só podem ser liberados pelo **variant_t** destruidor.
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Classe _variant_t](../cpp/variant-t-class.md)

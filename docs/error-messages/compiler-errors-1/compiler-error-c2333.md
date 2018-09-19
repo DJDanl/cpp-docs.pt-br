@@ -1,5 +1,5 @@
 ---
-title: C2333 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2333 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1613d560ef22c33ca1a19ac63584138a18c19c4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 850ad69a84100106c7a29608aaf85ecf5d592cde
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195276"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114118"
 ---
-# <a name="compiler-error-c2333"></a>C2333 de erro do compilador
-'function': erro na declaração de função; Ignorando o corpo da função  
-  
- Esse erro ocorre após o outro erro, para funções de membro definido dentro de sua classe.  
-  
- O exemplo a seguir gera C2333:  
-  
-```  
-// C2333.cpp  
-struct s1 {  
-   s1(s1) {}   // C2333  
-};  
+# <a name="compiler-error-c2333"></a>Erro do compilador C2333
+
+'function': erro na declaração de função; Ignorando o corpo da função
+
+Esse erro ocorre após o outro erro, para funções de membro definida dentro de sua classe.
+
+O exemplo a seguir gera C2333:
+
+```
+// C2333.cpp
+struct s1 {
+   s1(s1) {}   // C2333
+};
 ```

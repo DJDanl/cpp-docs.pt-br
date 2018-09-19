@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bae9b7af95de94b8f667cb09710af21044f8b80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 671a8c83dcadcaa89372e53b6c3d677c5810b4a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291408"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114404"
 ---
-# <a name="compiler-warning-level-3-c4192"></a>Compilador C4192 de aviso (nível 3)
-excluindo automaticamente 'name' durante a importação de biblioteca de tipos 'library'  
-  
- Um `#import` biblioteca contém um item, *nome*, que é também definido nos cabeçalhos de sistema do Win32. Devido às limitações das bibliotecas de tipo, nomes, como **IUnknown** ou GUID geralmente são definidas em uma biblioteca de tipos, duplicar a definição de cabeçalhos de sistema. `#import` detectará esses itens e recusar incorporá-las nos arquivos de cabeçalho. TLH e .tli.  
-  
- Para substituir esse comportamento, use `#import` atributos [no_auto_exclude](../../preprocessor/no-auto-exclude.md) e [include()](../../preprocessor/include-parens.md).
+# <a name="compiler-warning-level-3-c4192"></a>Compilador aviso (nível 3) C4192
+
+excluindo automaticamente 'name' durante a importação de biblioteca de tipos 'library'
+
+Um `#import` biblioteca contém um item *nome*, que é também definida nos cabeçalhos do sistema de Win32. Devido a limitações de bibliotecas de tipos, nomes, como **IUnknown** ou GUID geralmente são definidos em uma biblioteca de tipos, duplicar a definição dos cabeçalhos do sistema. `#import` detecta esses itens e se recusar a incorporá-las nos arquivos de cabeçalho. TLH e. TLI.
+
+Para substituir esse comportamento, use `#import` atributos [no_auto_exclude](../../preprocessor/no-auto-exclude.md) e [include ()](../../preprocessor/include-parens.md).

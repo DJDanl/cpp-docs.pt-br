@@ -1,5 +1,5 @@
 ---
-title: C3896 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3896 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcc60c09d6fd99e56f0261409099e56713604a76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6714d356fa2f09bdfce2750ff31432b5b4e14461
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269732"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109724"
 ---
-# <a name="compiler-error-c3896"></a>C3896 de erro do compilador
-'member': inicializador inadequado: este membro de dados literal só pode ser inicializado com 'nullptr'  
-  
- Um [literal](../../windows/literal-cpp-component-extensions.md) membro de dados foi inicializado incorretamente.  Consulte [nullptr](../../windows/nullptr-cpp-component-extensions.md) para obter mais informações.  
-  
- O exemplo a seguir gera C3896:  
-  
-```  
-// C3896.cpp  
-// compile with: /clr /c  
-ref class R{};  
-  
-value class V {  
-   literal R ^ r = "test";   // C3896  
-   literal R ^ r2 = nullptr;   // OK  
-};  
+# <a name="compiler-error-c3896"></a>Erro do compilador C3896
+
+'member': inicializador inadequado: este membro de dados literal só pode ser inicializado com 'nullptr'
+
+Um [literal](../../windows/literal-cpp-component-extensions.md) membro de dados foi inicializado incorretamente.  Ver [nullptr](../../windows/nullptr-cpp-component-extensions.md) para obter mais informações.
+
+O exemplo a seguir gera C3896:
+
+```
+// C3896.cpp
+// compile with: /clr /c
+ref class R{};
+
+value class V {
+   literal R ^ r = "test";   // C3896
+   literal R ^ r2 = nullptr;   // OK
+};
 ```

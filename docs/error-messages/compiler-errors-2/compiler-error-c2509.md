@@ -1,5 +1,5 @@
 ---
-title: C2509 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2509 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dc6ed32246b662282bf6fa385f648df3635f3e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7870ce7d1959ed849542f01c15ce647de472575e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199762"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108321"
 ---
-# <a name="compiler-error-c2509"></a>C2509 de erro do compilador
-'Identificador': função membro não declarada em 'class'  
-  
- A função não é declarada na classe especificada.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C2509.  
-  
-```  
-// C2509.cpp  
-// compile with: /c  
-struct A {  
-   virtual int vfunc() = 0;  
-   virtual int vfunc2() = 0;  
-};  
-  
-struct B : private A {  
-   using A::vfunc;  
-   virtual int vfunc2();  
-};  
-  
-int B::vfunc() { return 1; }   // C2509  
-int B::vfunc2() { return 1; }   // OK  
+# <a name="compiler-error-c2509"></a>Erro do compilador C2509
+
+'identifier': função de membro não declarada em 'class'
+
+A função não é declarada na classe especificada.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C2509.
+
+```
+// C2509.cpp
+// compile with: /c
+struct A {
+   virtual int vfunc() = 0;
+   virtual int vfunc2() = 0;
+};
+
+struct B : private A {
+   using A::vfunc;
+   virtual int vfunc2();
+};
+
+int B::vfunc() { return 1; }   // C2509
+int B::vfunc2() { return 1; }   // OK
 ```

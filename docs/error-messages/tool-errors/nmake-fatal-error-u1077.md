@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 144fa1d85e4dd63fdb9a381fd4285ba905817851
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31a1164ecd8ce17aec7058525598c68d312f14e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316258"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113026"
 ---
 # <a name="nmake-fatal-error-u1077"></a>Erro fatal U1077 (NMAKE)
-'programa': 'value' do código de retorno  
-  
- O comando fornecido ou o programa chamado pelo NMAKE falhou e retornou o código de saída específico.  
-  
- Para suprimir esse erro e continuar a sessão NMAKE, use a opção/i, o **. Ignorar** diretiva ponto ou um traço (**-**) modificador de comando. Para continuar a sessão NMAKE para partes não relacionadas a árvore de dependência, use a opção /K.
+
+'programa': 'value' de código de retorno
+
+O comando especificado ou um programa chamado pelo NMAKE falhou e retornou o código de saída determinada.
+
+Para suprimir esse erro e continuar a sessão NMAKE, use a opção /I, o **. Ignorar** diretiva ponto ou traço (**-**) modificador de comando. Para continuar a sessão NMAKE para partes não relacionadas a árvore de dependência, use a opção /K.

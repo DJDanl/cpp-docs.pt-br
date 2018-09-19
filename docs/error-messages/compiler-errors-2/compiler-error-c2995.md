@@ -1,5 +1,5 @@
 ---
-title: C2995 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2995 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5afd073e8877e2e28d5163d9c2e5ae72b9b7d4e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b63028629dd23d3bae20da0b1470cf3239c00306
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242004"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109342"
 ---
-# <a name="compiler-error-c2995"></a>C2995 de erro do compilador
-'function': template de função já foi definido  
-  
- Certifique-se de que há apenas uma definição para cada função de membro de uma classe de modelo.  
-  
- O exemplo a seguir gera C2995:  
-  
-```  
-// C2995.cpp  
-// compile with: /c  
-template <class T>  
-void Test(T x){}  
-  
-template <class T> void Test(T x){}   // C2995  
-template <class T> void Test2(T x){}   // OK  
+# <a name="compiler-error-c2995"></a>Erro do compilador C2995
+
+'function': template de função já foi definido
+
+Certifique-se de que há apenas uma definição para cada função de membro de uma classe de modelo.
+
+O exemplo a seguir gera C2995:
+
+```
+// C2995.cpp
+// compile with: /c
+template <class T>
+void Test(T x){}
+
+template <class T> void Test(T x){}   // C2995
+template <class T> void Test2(T x){}   // OK
 ```

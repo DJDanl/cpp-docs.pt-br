@@ -1,5 +1,5 @@
 ---
-title: C2624 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2624 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9edeb5bdef57663d29bb4cfe5427e5bc3f43b7d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4db17508d9335439e861cf5489bddfab366dec1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230658"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109113"
 ---
-# <a name="compiler-error-c2624"></a>C2624 de erro do compilador
-classes locais não podem ser usadas para declarar variáveis de 'extern'  
-  
- Uma estrutura ou classe local não pode ser usada para declarar `extern` variáveis.  
-  
- O exemplo a seguir gera C2624:  
-  
-```  
-// C2624.cpp  
-int main() {  
-   struct C {};  
-   extern C ac;   // C2624  
-}  
+# <a name="compiler-error-c2624"></a>Erro do compilador C2624
+
+as classes locais não podem ser usadas para declarar as variáveis 'extern'
+
+Uma classe local ou uma estrutura não pode ser usada para declarar `extern` variáveis.
+
+O exemplo a seguir gera C2624:
+
+```
+// C2624.cpp
+int main() {
+   struct C {};
+   extern C ac;   // C2624
+}
 ```

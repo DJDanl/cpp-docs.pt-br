@@ -1,5 +1,5 @@
 ---
-title: C3632 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3632 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a7f41465cf8181b7f19aa4267fd680e49a04b98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdacb6463e99d4cb125199a32dfc5ef01ea76e9f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269061"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110075"
 ---
-# <a name="compiler-error-c3632"></a>C3632 de erro do compilador
-'event': estilo inválido de evento para a construção  
-  
- [Event](../../cpp/event.md) declarações não são válidas em todas as compilações.  
-  
- C3632 só está acessível usando a opção de compilador obsoleto **/CLR: oldSyntax**.  
+# <a name="compiler-error-c3632"></a>Erro do compilador C3632
+
+'event': estilo inválido de evento para construct
+
+[Event](../../cpp/event.md) declarações não são válidas em todas as compilações.
+
+C3632 só está acessível usando a opção de compilador obsoletos **/CLR: oldSyntax**.

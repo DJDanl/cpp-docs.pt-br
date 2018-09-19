@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f94a698d9e23d0481daf940fc55fa99616104aa
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7f7707b3babc84075d84e57a2b610f06225e79e6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763452"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109802"
 ---
 # <a name="modifying-the-atl-project"></a>Modificando o projeto da ATL
 
@@ -33,6 +33,6 @@ Para lidar com todos os eventos necessários dos controles ActiveX, consulte [ad
 
 ## <a name="see-also"></a>Consulte também
 
-[Fundamentos do controle composto](../atl/atl-composite-control-fundamentals.md)   
+[Fundamentos do controle composto](../atl/atl-composite-control-fundamentals.md)<br/>
 [Como criar um arquivo de script de recurso](../windows/how-to-create-a-resource-script-file.md)
 

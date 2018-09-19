@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0e63d93134d48b1f429b097562805c967911e608
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7596829cc89dcfa335b38d24a57666a430507e27
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103698"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111713"
 ---
 # <a name="autohandlereset"></a>auto_handle::reset
-Destruir o objeto de propriedade atual e, opcionalmente, tomar posse de um novo objeto.  
+Destruir o objeto atual de propriedade e, opcionalmente, tomar posse de um novo objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,8 +40,8 @@ void reset();
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `_new_ptr`  
- (Opcional) O novo objeto.  
+*_new_ptr*<br/>
+(Opcional) O novo objeto.  
   
 ## <a name="example"></a>Exemplo  
   

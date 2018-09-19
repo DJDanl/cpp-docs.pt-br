@@ -1,5 +1,5 @@
 ---
-title: C2710 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2710 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfc182527aeb349fb91d098133c4545b95a93ac2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94b95ce0a87a2ba894dde2ba41c0e7d704c477b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233074"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112792"
 ---
-# <a name="compiler-error-c2710"></a>C2710 de erro do compilador
-'Criar': '__declspec(modifier)' só pode ser aplicado a uma função que retorne um ponteiro  
-  
- Uma função cujo valor de retorno é um ponteiro é a construção somente para o qual `modifier` podem ser aplicadas.  
-  
- O exemplo a seguir gera C2710:  
-  
-```  
-// C2710.cpp  
-__declspec(restrict) void f();   // C2710  
-// try the following line instead  
-__declspec(restrict) int * g();  
+# <a name="compiler-error-c2710"></a>Erro do compilador C2710
+
+'Criar': '__declspec(modifier)' só pode ser aplicado a uma função que retorna um ponteiro
+
+Uma função cujo valor de retorno é um ponteiro é a construção somente para o qual `modifier` podem ser aplicadas.
+
+O exemplo a seguir gera C2710:
+
+```
+// C2710.cpp
+__declspec(restrict) void f();   // C2710
+// try the following line instead
+__declspec(restrict) int * g();
 ```

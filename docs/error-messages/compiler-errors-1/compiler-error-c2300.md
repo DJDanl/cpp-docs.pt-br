@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94133b45b4836888a3a0ef7075058cfc57b87cd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4a521e9eefff501656c5d6192a98b95a35926b84
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168562"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111895"
 ---
 # <a name="compiler-error-c2300"></a>Erro do compilador C2300
-'Identificador': classe não tem um destruidor chamado ' ~ Identificador '  
-  
- A classe não tem um destruidor com o nome necessário.
+
+'identifier': classe não tem um destruidor chamado ' ~ Identificador '
+
+A classe não tem um destruidor com o nome necessário.

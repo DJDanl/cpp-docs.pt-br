@@ -1,5 +1,5 @@
 ---
-title: C3816 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3816 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be09db4d91b511583b3119f03df8abc61a0153e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bfc0cf864caeefd5b19e3d40383724909575d4df
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269087"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115886"
 ---
-# <a name="compiler-error-c3816"></a>C3816 de erro do compilador
-'declaration' foi declarado ou definido com diferentes gerenciados ou WinRTmodifier  
-  
- Uma declaração de encaminhamento e uma declaração real exigem que não haver conflitos ou inconsistências na declaração de atributos.  
-  
- O exemplo a seguir gera C3816 e mostra como corrigi-lo:  
-  
-```  
-// C3816a.cpp  
-// compile with: /clr /c  
-class C1;  
-// try the following line instead  
-// ref class C1;  
-  
-ref class C1{  // C3816, forward declaration does not use ref  
-};  
+# <a name="compiler-error-c3816"></a>Erro do compilador C3816
+
+'declaração de ' foi declarada ou definida com um gerenciado diferente ou WinRTmodifier
+
+Uma declaração de encaminhamento e uma declaração real exigem que não haver conflitos ou inconsistências na declaração de atributos.
+
+O exemplo a seguir gera C3816 e mostra como corrigi-lo:
+
+```
+// C3816a.cpp
+// compile with: /clr /c
+class C1;
+// try the following line instead
+// ref class C1;
+
+ref class C1{  // C3816, forward declaration does not use ref
+};
 ```

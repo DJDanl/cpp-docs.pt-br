@@ -12,27 +12,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3dfc57e1d6af11628b37823f2452ee2b65f8a7f
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: 9a1fc13df342b4282ee63c185205c2f2b12ca003
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42571754"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110608"
 ---
 # <a name="microsoft-specific-modifiers"></a>Modificadores específicos da Microsoft
-Esta seção descreve extensões específicas da Microsoft para C++ nas seguintes áreas:  
-  
--   [Endereçamento com base em](based-addressing.md), a prática de usar um ponteiro como base da qual outros ponteiros podem ser deslocados  
-  
--   [Convenções de chamada de função](calling-conventions.md)  
-  
--   Estendida de atributos de classe de armazenamento declarados com o [declspec](declspec.md) palavra-chave  
-  
--   O [__w64](w64.md) palavra-chave  
 
-### <a name="microsoft-specific-keywords"></a>Palavras-chave específicas da Microsoft  
+Esta seção descreve extensões específicas da Microsoft para C++ nas seguintes áreas:
 
-Várias das palavras-chave específicas da Microsoft podem ser usadas para modificar declaradores para formar tipos derivados. Para obter mais informações sobre declaradores, consulte [declaradores](overview-of-declarators.md).  
+- [Endereçamento com base em](based-addressing.md), a prática de usar um ponteiro como base da qual outros ponteiros podem ser deslocados
+
+- [Convenções de chamada de função](calling-conventions.md)
+
+- Estendida de atributos de classe de armazenamento declarados com o [declspec](declspec.md) palavra-chave
+
+- O [__w64](w64.md) palavra-chave
+
+### <a name="microsoft-specific-keywords"></a>Palavras-chave específicas da Microsoft
+
+Várias das palavras-chave específicas da Microsoft podem ser usadas para modificar declaradores para formar tipos derivados. Para obter mais informações sobre declaradores, consulte [declaradores](overview-of-declarators.md).
 
 |Palavra-chave|Significado|Usada para formar tipos derivados?|   
 |-------------|-------------|---------------------------------|
@@ -47,4 +48,5 @@ Várias das palavras-chave específicas da Microsoft podem ser usadas para modif
 |[__vectorcall](vectorcall.md)|O nome que segue declara uma função que usa registros, incluindo registros SSE, quando disponíveis, em vez da pilha para passar argumentos.|Sim|      
     
 ## <a name="see-also"></a>Consulte também     
- [Referência da linguagem C++](cpp-language-reference.md)
+
+[Referência da linguagem C++](cpp-language-reference.md)

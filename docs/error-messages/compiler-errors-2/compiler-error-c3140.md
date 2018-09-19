@@ -1,5 +1,5 @@
 ---
-title: C3140 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3140 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2c8c9e47020fe53e87b985b5db6192cd26098fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a40cec364af10f4b61c19b9a28646279a8efca43
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246898"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111727"
 ---
-# <a name="compiler-error-c3140"></a>C3140 de erro do compilador
-não é possível ter vários atributos de 'module' na mesma unidade de compilação  
-  
- O [módulo](../../windows/module-cpp.md) atributo só pode ser definido uma vez por projeto.  
-  
- O exemplo a seguir gera C3140:  
-  
-```  
-// C3140.cpp  
-// compile with: /c  
-[emitidl];  
-[module(name = "MyLibrary")];  
-[module(name = "MyLibrary2")];   // C3140  
+# <a name="compiler-error-c3140"></a>Erro do compilador C3140
+
+não é possível ter vários atributos 'module' na mesma unidade de compilação
+
+O [módulo](../../windows/module-cpp.md) atributo só pode ser definido uma vez por projeto.
+
+O exemplo a seguir gera C3140:
+
+```
+// C3140.cpp
+// compile with: /c
+[emitidl];
+[module(name = "MyLibrary")];
+[module(name = "MyLibrary2")];   // C3140
 ```

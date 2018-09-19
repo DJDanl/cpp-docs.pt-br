@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4048 | Microsoft Docs
+title: Compilador aviso (nível 1) C4048 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 303c9922575bca905378a61d43c14ac630ed6566
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e705d570522cdd645ee8d72159b74be750c147a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279429"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112441"
 ---
-# <a name="compiler-warning-level-1-c4048"></a>Compilador C4048 de aviso (nível 1)
-diferente de subscritos de matriz declarada: 'identifier1' e 'identifier2'  
-  
- Uma expressão envolve ponteiros para matrizes de tamanho diferente. Os ponteiros são usados sem conversão.  
-  
- Esse aviso pode ser corrigido, se você converter explicitamente as matrizes para o tipo igual ou equivalente.
+# <a name="compiler-warning-level-1-c4048"></a>Compilador aviso (nível 1) C4048
+
+diferentes declarado subscritos de matriz: 'identifier1' e 'identifier2'
+
+Uma expressão envolve ponteiros para matrizes de tamanho diferente. Os ponteiros são usados sem conversão.
+
+Esse aviso pode ser corrigido se você converter explicitamente as matrizes para o tipo igual ou equivalente.

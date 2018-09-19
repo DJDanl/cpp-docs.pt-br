@@ -1,5 +1,5 @@
 ---
-title: C2459 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2459 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6013720b55892ffd34e1faf132a69842e4bceb50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b67c5ba4c714b096da58b1e4d837840dc6b5fd2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198502"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113208"
 ---
-# <a name="compiler-error-c2459"></a>C2459 de erro do compilador
-'Identificador': está sendo definido; não é possível adicionar como um membro anônimo  
-  
- Uma classe, estrutura ou união será redefinido em seu próprio escopo por um membro da união anônima.  
-  
- O exemplo a seguir gera C2459:  
-  
-```  
-// C2459.cpp  
-// compile with: /c  
-class C {  
-   union { int C; };   // C2459  
-   union { int D; };  
-};  
+# <a name="compiler-error-c2459"></a>Erro do compilador C2459
+
+'identifier': está sendo definido; não é possível adicionar como um membro anônimo
+
+Uma classe, estrutura ou união é redefinida em seu próprio escopo por um membro de uma união anônima.
+
+O exemplo a seguir gera C2459:
+
+```
+// C2459.cpp
+// compile with: /c
+class C {
+   union { int C; };   // C2459
+   union { int D; };
+};
 ```

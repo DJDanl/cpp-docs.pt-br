@@ -37,14 +37,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d07c0e64e969e599393a657d4c41a8dd544901c9
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 542c97c1e13d5979290772668b6dccebe1ece9f9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572232"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113156"
 ---
 # <a name="irowsetinfoimpl-class"></a>Classe IRowsetInfoImpl
+
 Fornece uma implementação para o [IRowsetInfo](/previous-versions/windows/desktop/ms724541\(v=vs.85\)) interface.  
   
 ## <a name="syntax"></a>Sintaxe
@@ -57,14 +58,16 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *T*  
- Sua classe, derivada de `IRowsetInfoImpl`.  
+
+*T*<br/>
+Sua classe, derivada de `IRowsetInfoImpl`.  
   
- *PropClass*  
- Uma classe de propriedade definidos pelo usuário que assume como padrão *T*. 
+*PropClass*<br/>
+Uma classe de propriedade definidos pelo usuário que assume como padrão *T*. 
 
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** altdb.h   
+
+**Cabeçalho:** altdb.h   
   
 ## <a name="members"></a>Membros  
   
@@ -77,9 +80,11 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 |[GetSpecification](#getspecification)|Retorna um ponteiro de interface no objeto (comando ou sessão) que criou esse conjunto de linhas.|  
   
 ## <a name="remarks"></a>Comentários  
- Uma interface obrigatória em conjuntos de linhas. Essa classe implementa as propriedades do conjunto de linhas usando o [mapa de conjunto de propriedade](../../data/oledb/begin-propset-map.md) definidos em sua classe de comando. Embora a classe de conjunto de linhas é exibida para estar usando a propriedade a classe de comando conjuntos, o conjunto de linhas é fornecido com sua própria cópia das propriedades do tempo de execução, quando ele é criado por um objeto de comando ou sessão.  
+
+Uma interface obrigatória em conjuntos de linhas. Essa classe implementa as propriedades do conjunto de linhas usando o [mapa de conjunto de propriedade](../../data/oledb/begin-propset-map.md) definidos em sua classe de comando. Embora a classe de conjunto de linhas é exibida para estar usando a propriedade a classe de comando conjuntos, o conjunto de linhas é fornecido com sua própria cópia das propriedades do tempo de execução, quando ele é criado por um objeto de comando ou sessão.  
   
 ## <a name="getproperties"></a> Irowsetinfoimpl:: GetProperties
+
 Retorna as configurações atuais para as propriedades no `DBPROPSET_ROWSET` grupo.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -92,9 +97,11 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [irowsetinfo:: GetProperties](/previous-versions/windows/desktop/ms719611\(v=vs.85\)) na *referência do programador do OLE DB*. 
+
+Ver [irowsetinfo:: GetProperties](/previous-versions/windows/desktop/ms719611\(v=vs.85\)) na *referência do programador do OLE DB*. 
 
 ## <a name="getreferencedrowset"></a> Irowsetinfoimpl:: Getreferencedrowset
+
 Retorna um ponteiro de interface para o conjunto de linhas ao qual se aplica a um indicador.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -106,9 +113,11 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145\(v=vs.85\)) na *referência do programador do OLE DB*. O *iOrdinal* parâmetro deve ser uma coluna de indicador. 
+
+Ver [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145\(v=vs.85\)) na *referência do programador do OLE DB*. O *iOrdinal* parâmetro deve ser uma coluna de indicador. 
 
 ## <a name="getspecification"></a> Irowsetinfoimpl:: Getspecification
+
 Retorna um ponteiro de interface no objeto (comando ou sessão) que criou esse conjunto de linhas.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -119,11 +128,14 @@ STDMETHOD (GetSpecification )(REFIID riid,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746\(v=vs.85\)) na *referência do programador do OLE DB*.  
+
+Ver [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746\(v=vs.85\)) na *referência do programador do OLE DB*.  
   
 ### <a name="remarks"></a>Comentários  
- Use esse método com [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) para recuperar as propriedades do objeto de fonte de dados.  
+
+Use esse método com [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) para recuperar as propriedades do objeto de fonte de dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

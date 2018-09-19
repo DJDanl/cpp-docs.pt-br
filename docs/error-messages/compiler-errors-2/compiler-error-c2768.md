@@ -1,5 +1,5 @@
 ---
-title: C2768 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2768 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ee0fd3fa213639e70199cfe5653ee2034bc39b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c76173f99dbc2fb415b60212109242845501694
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233377"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109100"
 ---
-# <a name="compiler-error-c2768"></a>C2768 de erro do compilador
-'function': uso inválido de argumentos de template explícitos  
-  
- O compilador não pôde determinar se uma definição de função deveria para ser uma especialização explícita de um modelo de função ou se a definição da função deveria ser para uma nova função.  
-  
- Esse erro foi introduzido no Visual Studio .NET 2003, como parte dos aprimoramentos de conformidade do compilador.  
-  
- O exemplo a seguir gera C2768:  
-  
-```  
-// C2768.cpp  
-template<typename T>  
-void f(T) {}  
-  
-void f<int>(int) {}   // C2768  
-  
-// an explicit specialization  
-template<>  
-void f<int>(int) {}   
-  
-// global nontemplate function overload  
-void f(int) {}  
+# <a name="compiler-error-c2768"></a>Erro do compilador C2768
+
+'function': uso inválido de argumentos de modelo explícitos
+
+O compilador não pôde determinar se uma definição de função deveria para ser uma especialização explícita de um modelo de função ou se a definição da função deveria para ser para uma nova função.
+
+Esse erro foi introduzido no Visual Studio .NET 2003, como parte dos aprimoramentos de conformidade do compilador.
+
+O exemplo a seguir gera C2768:
+
+```
+// C2768.cpp
+template<typename T>
+void f(T) {}
+
+void f<int>(int) {}   // C2768
+
+// an explicit specialization
+template<>
+void f<int>(int) {}
+
+// global nontemplate function overload
+void f(int) {}
 ```

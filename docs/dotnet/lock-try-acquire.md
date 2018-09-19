@@ -21,15 +21,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 25b5ec1ab7bb5c429538f312ee3b598d3d1d83ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce9e13e56728216c4a4b16246d4e99117199878c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137504"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115951"
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
-Adquire um bloqueio em um objeto, aguardando um período de tempo especificado e retornar um `bool` para informar o sucesso da aquisição em vez de gerar uma exceção.  
+Adquire um bloqueio em um objeto, aguardando um período de tempo especificado e retornando um `bool` para relatar o sucesso da aquisição em vez de gerar uma exceção.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,8 +43,8 @@ bool try_acquire(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `_timeout`  
- Valor de tempo limite em milissegundos, ou como um <xref:System.TimeSpan>.  
+*tempo limite*<br/>
+Valor de tempo limite em milissegundos, ou como um <xref:System.TimeSpan>.  
   
 ## <a name="return-value"></a>Valor de retorno  
  `true` Se o bloqueio foi adquirido, `false` caso contrário.  
@@ -53,7 +53,7 @@ bool try_acquire(
  Se já tiver sido adquirido um bloqueio, essa função não faz nada.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa uma única instância de uma classe em vários threads.  A classe usa um bloqueio em si mesmo para garantir que acessa a seus dados internos é consistente para cada thread.  O thread principal do aplicativo usa um bloqueio na mesma instância da classe Verifique periodicamente para ver se qualquer threads de trabalho ainda existem e esperas para sair até que todos os threads de trabalho concluir suas tarefas.  
+ Este exemplo usa uma única instância de uma classe entre vários threads.  A classe usa um bloqueio em si mesmo para garantir que os acessos a seus dados internos são consistentes para cada thread.  O thread do aplicativo principal usa um bloqueio na mesma instância da classe para verificar periodicamente para ver se os threads de trabalho ainda existem e esperas para sair até que todos os threads de trabalho concluir suas tarefas.  
   
 ```  
 // msl_lock_try_acquire.cpp  
@@ -147,5 +147,5 @@ All threads completed.
  **Namespace** msclr  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de bloqueio](../dotnet/lock-members.md)   
+ [Membros Lock](../dotnet/lock-members.md)   
  [lock::acquire](../dotnet/lock-acquire.md)

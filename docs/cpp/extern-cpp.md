@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aaf699f2130c94729b8db9cc21dd17b9699d66c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7b090875b9656fec52e50cb68caf9c2c047d055b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606452"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114248"
 ---
 # <a name="extern-c"></a>extern (C++)
 
@@ -88,9 +88,9 @@ extern constexpr __declspec(selectany) int x = 10;
 
 ## <a name="extern-c-and-extern-c-function-declarations"></a>declarações de função extern "C" e extern "C++"
 
- No C++, quando usado com uma cadeia de caracteres **extern** Especifica que as convenções de vinculação de outra linguagem estão sendo usadas para os declaradores. As funções C e os dados podem ser acessados somente se forem declarados anteriormente como tendo vinculação C. No entanto, devem ser definidos em uma unidade de conversão compilada separadamente.
+No C++, quando usado com uma cadeia de caracteres **extern** Especifica que as convenções de vinculação de outra linguagem estão sendo usadas para os declaradores. As funções C e os dados podem ser acessados somente se forem declarados anteriormente como tendo vinculação C. No entanto, devem ser definidos em uma unidade de conversão compilada separadamente.
 
- Microsoft C++ suporta as cadeias de caracteres **"C"** e **"C++"** no *literal de cadeia de caracteres* campo. Todas as do padrão incluem o uso de arquivos a **extern** sintaxe "C" para permitir que as funções da biblioteca de tempo de execução a ser usado em programas C++.
+Microsoft C++ suporta as cadeias de caracteres **"C"** e **"C++"** no *literal de cadeia de caracteres* campo. Todas as do padrão incluem o uso de arquivos a **extern** sintaxe "C" para permitir que as funções da biblioteca de tempo de execução a ser usado em programas C++.
 
 ## <a name="example"></a>Exemplo
 
@@ -114,7 +114,7 @@ extern "C" {
     char GetChar(void);
 }
 
-//  Define the two functions 
+//  Define the two functions
 //  ShowChar and GetChar with C linkage.
 extern "C" char ShowChar(char ch) {
     putchar(ch);
@@ -131,7 +131,7 @@ extern "C" char GetChar(void) {
 extern "C" int errno;
 ```
 
- Se uma função tiver mais de uma especificação de vinculação, elas devem concordar; é errado declarar funções como tendo o vínculos de C e C++. Além disso, se duas declarações para uma função ocorrem em um programa — uma com uma especificação de vinculação e a outra sem — a declaração com a especificação de vinculação deve ser a primeira. Todas as declarações redundantes de funções que já têm a especificação de vinculação são atribuídas a uma vinculação especificada na primeira declaração. Por exemplo:
+Se uma função tiver mais de uma especificação de vinculação, elas devem concordar; é errado declarar funções como tendo o vínculos de C e C++. Além disso, se duas declarações para uma função ocorrem em um programa — uma com uma especificação de vinculação e a outra sem — a declaração com a especificação de vinculação deve ser a primeira. Todas as declarações redundantes de funções que já têm a especificação de vinculação são atribuídas a uma vinculação especificada na primeira declaração. Por exemplo:
 
 ```cpp
 extern "C" int CFunc1();
@@ -147,8 +147,9 @@ extern "C" int CFunc2(); // Error: not the first declaration of
 ```
 
 ## <a name="see-also"></a>Consulte também
- [Palavras-chave](../cpp/keywords-cpp.md)  
- [Programa e ligação](program-and-linkage-cpp.md)  
- [Especificador de classe de armazenamento em C externa](../c-language/extern-storage-class-specifier.md)  
- [Comportamento de identificadores em C](../c-language/behavior-of-identifiers.md)  
- [Ligação em C](../c-language/linkage.md)
+
+[Palavras-chave](../cpp/keywords-cpp.md)<br/>
+[Programa e ligação](program-and-linkage-cpp.md)<br/>
+[Especificador de classe de armazenamento em C externa](../c-language/extern-storage-class-specifier.md)<br/>
+[Comportamento de identificadores em C](../c-language/behavior-of-identifiers.md)<br/>
+[Ligação em C](../c-language/linkage.md)

@@ -1,5 +1,5 @@
 ---
-title: C2388 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2388 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38ce3de47355dea18f2c2deca8cfe07cde4d313f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b6bcec4f5f218a52981a7770f5fa6e600494d9a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198658"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114144"
 ---
-# <a name="compiler-error-c2388"></a>C2388 de erro do compilador
-'symbol': um símbolo não pode ser declarado com ambos os __declspec(appdomain) e \__declspec(process)  
-  
- O `appdomain` e `process` `__declspec` modificadores não podem ser usados no mesmo símbolo. O armazenamento de uma variável existe por processo ou por domínio de aplicativo.  
-  
- Para obter mais informações, consulte [appdomain](../../cpp/appdomain.md) e [processo](../../cpp/process.md).  
-  
- O exemplo a seguir gera C2388:  
-  
-```  
-// C2388.cpp  
-// compile with: /clr /c  
-__declspec(process) __declspec(appdomain) int i;   // C2388  
-__declspec(appdomain) int i;   // OK  
+# <a name="compiler-error-c2388"></a>Erro do compilador C2388
+
+'symbol': um símbolo não pode ser declarado com ambos os __declspec(appdomain) e \__declspec(process)
+
+O `appdomain` e `process` `__declspec` modificadores não podem ser usados no mesmo símbolo. O armazenamento para uma variável existe por processo ou por domínio de aplicativo.
+
+Para obter mais informações, consulte [appdomain](../../cpp/appdomain.md) e [processo](../../cpp/process.md).
+
+O exemplo a seguir gera C2388:
+
+```
+// C2388.cpp
+// compile with: /clr /c
+__declspec(process) __declspec(appdomain) int i;   // C2388
+__declspec(appdomain) int i;   // OK
 ```

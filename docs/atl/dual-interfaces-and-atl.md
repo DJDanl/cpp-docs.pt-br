@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebe6ac2e3d19d16e2147411df436a976526ea2ff
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f59e43bbc1d5f11d1582bad577cc0d8eb971d121
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765129"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108580"
 ---
 # <a name="dual-interfaces-and-atl"></a>Interfaces duplas e ATL
 
@@ -29,21 +29,21 @@ Uma interface dupla permite que seus métodos ser acessada como métodos dispint
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Implementando uma interface dupla](../atl/implementing-a-dual-interface.md)  
+[Implementando uma interface dupla](../atl/implementing-a-dual-interface.md)<br/>
 Discute as classes e os assistentes envolvidos na implementação de uma interface dupla.
 
-[Múltiplas interfaces duplas](../atl/multiple-dual-interfaces.md)  
+[Múltiplas interfaces duplas](../atl/multiple-dual-interfaces.md)<br/>
 Discute como expor interfaces duplas vários em um único objeto.
 
-[O atributo nonextensible](../atl/nonextensible-attribute.md)  
+[O atributo nonextensible](../atl/nonextensible-attribute.md)<br/>
 Descreve quando usar o **nonextensible** atributo em sua definição de interface.
 
-[Interfaces duplas e eventos](../atl/dual-interfaces-and-events.md)  
+[Interfaces duplas e eventos](../atl/dual-interfaces-and-events.md)<br/>
 Discute os motivos para não fazer com que um evento de uma interface dupla da interface de design.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Fornece links para tópicos conceituais sobre como programar usando o Active Template Library.
 
 ## <a name="see-also"></a>Consulte também

@@ -1,5 +1,5 @@
 ---
-title: C2415 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2415 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ad06cdf891c9b958f6cf08e724f4003a8507c2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd889880997828396521ddba638bb606552e7d92
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198541"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112571"
 ---
-# <a name="compiler-error-c2415"></a>C2415 de erro do compilador
-tipo de operando inadequada  
-  
- O opcode não usa operandos desse tipo.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
-  
-1.  O código de operação não oferece suporte para o número de operandos usados. Verificar um manual de referência de linguagem de assembly para determinar o número correto de operandos.  
-  
-2.  Um processador mais recente der suporte à instrução com tipos adicionais. Ajustar o [/arch (arquitetura mínima de CPU)](../../build/reference/arch-minimum-cpu-architecture.md) opção para usar o processador posterior.
+# <a name="compiler-error-c2415"></a>Erro do compilador C2415
+
+tipo de operando inadequado
+
+O opcode não usa operandos desse tipo.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
+
+1. O opcode não oferece suporte para o número de operandos usados. Verifique um manual de referência de linguagem de assembly para determinar o número correto de operandos.
+
+1. Um processador mais recente oferece suporte a instrução com tipos adicionais. Ajustar a [/arch (arquitetura mínima de CPU)](../../build/reference/arch-minimum-cpu-architecture.md) opção para usar o processador posterior.

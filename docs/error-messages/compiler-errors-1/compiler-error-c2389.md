@@ -1,5 +1,5 @@
 ---
-title: C2389 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2389 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eaf2907238294ea34c8dbcd51609434b3328d88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73809d0fdd94871ad282042cef22a233ced19a32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33195939"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113234"
 ---
-# <a name="compiler-error-c2389"></a>C2389 de erro do compilador
-'operator': operando inválido 'nullptr'  
-  
- `nullptr` não pode ser um operando.  
-  
- O exemplo a seguir gera C2389:  
-  
-```  
-// C2389.cpp  
-// compile with: /clr  
-int main() {  
-   throw nullptr;   // C2389  
-}  
+# <a name="compiler-error-c2389"></a>Erro do compilador C2389
+
+'operator': operando inválido 'nullptr'
+
+`nullptr` não pode ser um operando.
+
+O exemplo a seguir gera C2389:
+
+```
+// C2389.cpp
+// compile with: /clr
+int main() {
+   throw nullptr;   // C2389
+}
 ```

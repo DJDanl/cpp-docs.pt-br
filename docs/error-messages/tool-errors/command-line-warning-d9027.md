@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfe2493290c4e4cc5b744136b8e7036c6559220a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 105ebbf62027ac3d9377c513c4f7c59e261b983d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301444"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112519"
 ---
 # <a name="command-line-warning-d9027"></a>Aviso D9027 (linha de comando)
-arquivo de origem '\<filename >' ignorado  
-  
- CL.exe ignorado o arquivo de fonte de entrada.  
-  
- Esse aviso pode ser causado por um espaço entre a opção /Fo e um nome de arquivo de saída em uma linha de comando com a opção /c. Por exemplo:  
-  
-```  
-cl /c /Fo output.obj input.c   
-```  
-  
- Porque há um espaço entre /Fo e `output.obj`, CL.exe usa `output.obj` como o nome do arquivo de entrada. Para corrigir o problema, remova o espaço:  
-  
-```  
-cl /c /Fooutput.obj input.c   
+
+arquivo de origem '\<filename >' ignorado
+
+CL.exe ignorado o arquivo de fonte de entrada.
+
+Esse aviso pode ser causado por um espaço entre a opção /Fo e um nome de arquivo de saída em uma linha de comando com a opção /c. Por exemplo:
+
+```
+cl /c /Fo output.obj input.c
+```
+
+Porque há um espaço entre /Fo e `output.obj`, usa CL.exe `output.obj` como o nome do arquivo de entrada. Para corrigir o problema, remova o espaço:
+
+```
+cl /c /Fooutput.obj input.c
 ```

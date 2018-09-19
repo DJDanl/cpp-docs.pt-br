@@ -1,5 +1,5 @@
 ---
-title: C3631 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3631 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da206faed773c89ec9c3b64f962d8569d1d87bb2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 146358f9653acd36c855fa74f202e37d0656ad00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265965"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111318"
 ---
-# <a name="compiler-error-c3631"></a>C3631 de erro do compilador
-'function': não é possível sobrecarregar gerenciados ou eventos do WinRT  
-  
- Um gerenciado ou evento WinRT não pode estar sobrecarregado.  
-  
- C3631 só está acessível usando a opção de compilador obsoleto **/CLR: oldSyntax**.  
+# <a name="compiler-error-c3631"></a>Erro do compilador C3631
+
+'function': não é possível sobrecarregar gerenciado ou eventos de WinRT
+
+Um gerenciado ou evento do WinRT não pode ser sobrecarregado.
+
+C3631 só está acessível usando a opção de compilador obsoletos **/CLR: oldSyntax**.

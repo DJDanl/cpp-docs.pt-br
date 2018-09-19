@@ -1,5 +1,5 @@
 ---
-title: C3055 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3055 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,47 +16,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 309ebcbd2b13baa78e0ef814be244a1c1ddaee33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fa27d9c6230c2cdebae4f718904ddd7cc1a7208
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249840"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111076"
 ---
-# <a name="compiler-error-c3055"></a>C3055 de erro do compilador
-'symbol': símbolo não pode ser referenciado antes de ser usado na diretiva 'threadprivate'  
-  
- Um símbolo foi referenciado e, em seguida, usado em uma [threadprivate](../../parallel/openmp/reference/threadprivate.md) cláusula, que não é permitida.  
-  
- O exemplo a seguir gera C3055:  
-  
-```  
-// C3055.cpp  
-// compile with: /openmp  
-int x, y;  
-int z = x;  
-#pragma omp threadprivate(x, y)   // C3055  
-  
-void test() {  
-   #pragma omp parallel copyin(x, y)  
-   {  
-      x = y;  
-   }  
-}  
-```  
-  
- Possível solução:  
-  
-```  
-// C3055b.cpp  
-// compile with: /openmp /LD  
-int x, y, z;  
-#pragma omp threadprivate(x, y)  
-  
-void test() {  
-   #pragma omp parallel copyin(x, y)  
-   {  
-      x = y;  
-   }  
-}  
+# <a name="compiler-error-c3055"></a>Erro do compilador C3055
+
+'symbol': símbolo não pode ser referenciado antes de ser usada na diretiva 'threadprivate'
+
+Um símbolo foi referenciado e, em seguida, usado em uma [threadprivate](../../parallel/openmp/reference/threadprivate.md) cláusula, que não é permitida.
+
+O exemplo a seguir gera C3055:
+
+```
+// C3055.cpp
+// compile with: /openmp
+int x, y;
+int z = x;
+#pragma omp threadprivate(x, y)   // C3055
+
+void test() {
+   #pragma omp parallel copyin(x, y)
+   {
+      x = y;
+   }
+}
+```
+
+Solução possível:
+
+```
+// C3055b.cpp
+// compile with: /openmp /LD
+int x, y, z;
+#pragma omp threadprivate(x, y)
+
+void test() {
+   #pragma omp parallel copyin(x, y)
+   {
+      x = y;
+   }
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: C2708 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2708 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d30b2e5c1856a604ae314316cd71d6acc00a7c74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0accd68881cccad5e34530a6c157a4e8179b283
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234754"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111089"
 ---
-# <a name="compiler-error-c2708"></a>C2708 de erro do compilador
-'Identificador': comprimento em bytes de parâmetros reais difere da chamada anterior ou referência  
-  
- Um [stdcall](../../cpp/stdcall.md) função deve ser precedida por um protótipo. Caso contrário, o compilador interpreta a primeira chamada para a função como um protótipo e esse erro ocorre quando o compilador encontra uma chamada que não corresponde.  
-  
- Para corrigir esse erro adicionar um protótipo de função.
+# <a name="compiler-error-c2708"></a>Erro do compilador C2708
+
+'identifier': comprimento em bytes de parâmetros reais difere da chamada anterior ou referência
+
+Um [stdcall](../../cpp/stdcall.md) função deve ser precedida por um protótipo. Caso contrário, o compilador interpreta a primeira chamada para a função como um protótipo e esse erro ocorre quando o compilador encontra uma chamada que não corresponde.
+
+Para corrigir esse erro adicione um protótipo de função.

@@ -1,5 +1,5 @@
 ---
-title: C2353 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2353 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6d5adf36760252a95502f38d2d7d64f9e090729
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3685db97a213f6347fccedefdaeebfdeaaffb7bc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222196"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109269"
 ---
-# <a name="compiler-error-c2353"></a>C2353 de erro do compilador
-não é permitida a especificação de exceção  
-  
- Especificações de exceção não são permitidas em funções de membro de classes gerenciadas.  
-  
- O exemplo a seguir gera C2353:  
-  
-```  
-// C2353.cpp  
-// compile with: /clr /c  
-ref class X {  
-   void f() throw(int);   // C2353  
-   void f();   // OK  
-};  
+# <a name="compiler-error-c2353"></a>Erro do compilador C2353
+
+especificação de exceção não é permitida
+
+Especificações de exceção não são permitidas em funções de membro de classes gerenciadas.
+
+O exemplo a seguir gera C2353:
+
+```
+// C2353.cpp
+// compile with: /clr /c
+ref class X {
+   void f() throw(int);   // C2353
+   void f();   // OK
+};
 ```

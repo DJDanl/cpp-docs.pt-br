@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8349aa14de6aec96fa1b526cbcffbe79036f804d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a15f3f1237df9e4b706a2c2048dddd6d5db395d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323466"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109776"
 ---
 # <a name="resource-compiler-error-rc2151"></a>Erro RC2151 (compilador de recurso)
-não é possível reutilizar a constantes de cadeia de caracteres  
-  
- Você está usando o mesmo valor duas vezes em um **STRINGTABLE** instrução. Verifique se que você está misturando não sobrepostos valores decimais e hexadecimais.  
-  
- Cada ID em um **STRINGTABLE** devem ser exclusivos. Para máxima eficiência use contíguas constantes com início em um múltiplo de 16.
+
+não é possível usar novamente as constantes de cadeia de caracteres
+
+Você estiver usando o mesmo valor de duas vezes em uma **STRINGTABLE** instrução. Verifique se que você está misturando não sobrepostos valores decimais e hexadecimais.
+
+Cada ID em um **STRINGTABLE** deve ser exclusivo. Para obter eficiência máxima use contíguos constantes com início em um múltiplo de 16.

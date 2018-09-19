@@ -1,5 +1,5 @@
 ---
-title: C3638 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3638 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3edb1a05323187b4a5dfcc2356da4a1ff8b874de
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f1d135dd69155de39b097d59cf139eb47354d4f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267084"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107638"
 ---
-# <a name="compiler-error-c3638"></a>C3638 de erro do compilador
-'operator': a conversão boxing padrão e os operadores de conversão unboxing não podem ser redefinidos  
-  
- O compilador define um operador de conversão para cada classe gerenciada para dar suporte à conversão boxing implícita. Este operador não pode ser redefinido.  
-  
- Para obter mais informações, consulte [conversão Boxing implícita](../../windows/boxing-cpp-component-extensions.md).  
-  
- O exemplo a seguir gera C3638:  
-  
-```  
-// C3638.cpp  
-// compile with: /clr  
-value struct V {  
-   V(){}  
-   static operator V^(V);   // C3638  
-};  
-  
-int main() {  
-   V myV;  
-   V ^ pmyV = myV;   // operator supports implicit boxing  
-}  
+# <a name="compiler-error-c3638"></a>Erro do compilador C3638
+
+'operator': a conversão boxing padrão e os operadores de conversão unboxing não podem ser redefinidos
+
+O compilador define um operador de conversão para cada classe gerenciada para dar suporte à conversão boxing implícita. Este operador não pode ser redefinido.
+
+Para obter mais informações, consulte [conversão Boxing implícita](../../windows/boxing-cpp-component-extensions.md).
+
+O exemplo a seguir gera C3638:
+
+```
+// C3638.cpp
+// compile with: /clr
+value struct V {
+   V(){}
+   static operator V^(V);   // C3638
+};
+
+int main() {
+   V myV;
+   V ^ pmyV = myV;   // operator supports implicit boxing
+}
 ```

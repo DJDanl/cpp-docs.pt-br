@@ -1,5 +1,5 @@
 ---
-title: Consumidores do OLE DB e provedores | Microsoft Docs
+title: Os consumidores do OLE DB e provedores | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 170f45a3581846dc588abf06aec170d66aa0d545
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b37a06ec89f0e2e21c4332a480e58c605f0d161f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111384"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110712"
 ---
 # <a name="ole-db-consumers-and-providers"></a>Consumidores e provedores de banco de dados OLE
-A arquitetura OLE DB usa o modelo de consumidores e provedores. Um consumidor faz solicitações de dados. Um provedor responde a essas solicitações colocando os dados em um formato tabular e retorná-lo para o consumidor. Qualquer chamada que o consumidor pode fazer deve ser implementada no provedor.  
+
+Arquitetura do OLE DB usa o modelo de consumidores e provedores. Um consumidor faz as solicitações de dados. Um provedor responde a essas solicitações colocando dados em um formato tabular e retorná-lo para o consumidor. Qualquer chamada que o consumidor pode fazer deve ser implementada no provedor.  
   
- Tecnicamente definido, um consumidor é qualquer aplicativo ou sistema código (não necessariamente um componente de banco de dados OLE) que acessa dados por meio das interfaces do OLE DB. As interfaces são implementadas em um provedor. Assim, um provedor é qualquer componente de software que implementa as interfaces do OLE DB para encapsular o acesso a dados e expô-lo a outros objetos (ou seja, os consumidores).  
+Um consumidor definidas tecnicamente, é qualquer aplicativo ou sistema de código (não necessariamente um componente de banco de dados OLE) que acessa dados por meio de interfaces do OLE DB. As interfaces são implementadas em um provedor. Portanto, um provedor é qualquer componente de software que implementa as interfaces OLE DB para encapsular o acesso aos dados e expô-lo a outros objetos (ou seja, os consumidores).  
   
- Em termos de funções, um consumidor chama métodos em interfaces de OLE DB; um provedor OLE DB implementa as interfaces necessárias do OLE DB.  
+Em termos de funções, um consumidor chama métodos em interfaces de OLE DB; um provedor OLE DB implementa as interfaces de OLE DB necessárias.  
   
- OLE DB evita termos de cliente e servidor, porque essas funções não sempre faz sentido, especialmente em uma situação de n camadas. Como um consumidor pode ser um componente em uma camada que serve a outro componente, para chamá-lo em um cliente de componente seria confuso. Além disso, um provedor, às vezes, age mais como um driver de banco de dados de um servidor.  
+OLE DB evita termos de cliente e servidor, porque essas funções não sempre faz sentido, especialmente em uma situação de n camadas. Como um consumidor pode ser um componente em uma camada que serve a outro componente, para chamá-lo um cliente componente seria confuso. Além disso, um provedor, às vezes, atua mais como um driver de banco de dados que um servidor.  
   
 ## <a name="see-also"></a>Consulte também  
- [Programação de banco de dados OLE](../../data/oledb/ole-db-programming.md)   
- [Visão geral da programação do OLE DB](../../data/oledb/ole-db-programming-overview.md)
+
+[Programação do OLE DB](../../data/oledb/ole-db-programming.md)<br/>
+[Visão geral da programação do OLE DB](../../data/oledb/ole-db-programming-overview.md)

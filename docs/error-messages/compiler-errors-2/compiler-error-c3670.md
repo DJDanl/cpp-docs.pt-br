@@ -1,5 +1,5 @@
 ---
-title: C3670 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3670 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed70f364ad72160ddc3b9e875d8b1f3b6ee67e3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1129a25e628710121d667a44022eec5a0450b092
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266231"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115327"
 ---
-# <a name="compiler-error-c3670"></a>C3670 de erro do compilador
-'override': não é possível substituir o método de classe base inacessível 'method'  
-  
- Uma substituição só podem ocorrer em uma função cujo nível de acesso disponibiliza em um tipo derivado. Para obter mais informações, consulte [substituições explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).  
-  
- O exemplo a seguir gera C3670:  
-  
-```  
-// C3670.cpp  
-// compile with: /clr /c  
-public ref class C {  
-// Uncomment the following line to resolve.  
-// public:  
-   virtual void g() { }  
-};  
-  
-public ref class D : public C {  
-public:  
-   virtual void f() new sealed = C::g {};   // C3670  
-};  
+# <a name="compiler-error-c3670"></a>Erro do compilador C3670
+
+'override': não é possível substituir o método de classe base inacessível 'method'
+
+Uma substituição só podem ocorrer em uma função cujo nível de acesso torna disponível em um tipo derivado. Para obter mais informações, consulte [substituições explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).
+
+O exemplo a seguir gera C3670:
+
+```
+// C3670.cpp
+// compile with: /clr /c
+public ref class C {
+// Uncomment the following line to resolve.
+// public:
+   virtual void g() { }
+};
+
+public ref class D : public C {
+public:
+   virtual void f() new sealed = C::g {};   // C3670
+};
 ```

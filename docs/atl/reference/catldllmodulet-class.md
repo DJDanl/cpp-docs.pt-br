@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec36cddae835d46c5db6245f85e4294aa52225e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 170f46424e8eb4db4c38c91f01a89b53d5cbce0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766568"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46107821"
 ---
 # <a name="catldllmodulet-class"></a>Classe CAtlDllModuleT
 
@@ -38,13 +38,13 @@ Essa classe representa o módulo para uma DLL.
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template <class T>  
+template <class T>
 class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 Sua classe derivada de `CAtlDllModuleT`.
 
 ## <a name="members"></a>Membros
@@ -128,13 +128,13 @@ HRESULT DllGetClassObject(
 
 ### <a name="parameters"></a>Parâmetros
 
-*rclsid*  
+*rclsid*<br/>
 O CLSID do objeto a ser criado.
 
-*riid*  
+*riid*<br/>
 O IID da interface solicitada.
 
-*ppv*  
+*ppv*<br/>
 Um ponteiro para o ponteiro de interface identificado pelo *riid*. Se o objeto não dá suporte a essa interface, *ppv* é definido como NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -151,10 +151,10 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwReason*  
+*dwReason*<br/>
 Se definido como chamadas de notificação DLL_PROCESS_ATTACH, DLL_THREAD_ATTACH e DLL_THREAD_DETACH frequentes está desabilitado.
 
-*lpReserved*  
+*lpReserved*<br/>
 Reservado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -175,7 +175,7 @@ HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 TRUE se a biblioteca de tipos deve ser registrado. O valor padrão é TRUE.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -192,7 +192,7 @@ HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 TRUE se a biblioteca de tipos deve ser removido do registro. O valor padrão é TRUE.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -212,13 +212,13 @@ HRESULT GetClassObject(
 
 ### <a name="parameters"></a>Parâmetros
 
-*rclsid*  
+*rclsid*<br/>
 O CLSID do objeto a ser criado.
 
-*riid*  
+*riid*<br/>
 O IID da interface solicitada.
 
-*ppv*  
+*ppv*<br/>
 Um ponteiro para o ponteiro de interface identificado pelo *riid*. Se o objeto não dá suporte a essa interface, *ppv* é definido como NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -231,7 +231,7 @@ Esse método é chamado pelo [CAtlDllModuleT::DllGetClassObject](#dllgetclassobj
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CAtlModuleT](../../atl/reference/catlmodulet-class.md)   
-[Classe CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)   
-[Visão geral da classe](../../atl/atl-class-overview.md)   
+[Classe CAtlModuleT](../../atl/reference/catlmodulet-class.md)<br/>
+[Classe CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)<br/>
+[Visão geral da classe](../../atl/atl-class-overview.md)<br/>
 [Classes de módulo](../../atl/atl-module-classes.md)

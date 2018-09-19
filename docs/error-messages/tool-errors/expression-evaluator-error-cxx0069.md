@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14cf468ebd2d8d40f306a2fa80a0331d7667d0d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a3efb6432f536ecb929c8ff8670d31030b569b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299660"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112727"
 ---
 # <a name="expression-evaluator-error-cxx0069"></a>Erro CXX0069 (avaliador de expressão)
-a variável necessita de quadro de pilha  
-  
- O avaliador de expressão não é possível avaliar a variável porque ele não ocorre em um quadro de pilha. Isso pode ser causado por variáveis declaradas como parte de uma função embutida.
+
+precisa de variável de quadro de pilha
+
+O avaliador de expressão não é possível avaliar a variável porque ela não ocorre em um quadro de pilha. Isso pode ser causado por variáveis declaradas como parte de uma função embutida.

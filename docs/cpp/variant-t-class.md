@@ -20,48 +20,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9315c2bb946cd80dd68153543ad6ae532ec9b7a0
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: dd9e7347b1ba85f34587b3ce9e94963efb23efd8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460860"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110621"
 ---
 # <a name="variantt-class"></a>Classe _variant_t
-**Seção específica da Microsoft**  
-  
- Um **variant_t** objeto encapsula o `VARIANT` tipo de dados. A classe gerencia a alocação de recursos e a desalocação e faz chamadas de função `VariantInit` e `VariantClear` conforme apropriado.  
-  
-### <a name="construction"></a>Construção  
-  
-|||  
-|-|-|  
-|[_variant_t](../cpp/variant-t-variant-t.md)|Constrói uma **variant_t** objeto.|  
-  
-### <a name="operations"></a>Operações  
-  
-|||  
-|-|-|  
-|[Anexar](../cpp/variant-t-attach.md)|Anexa uma `VARIANT` do objeto para o **variant_t** objeto.|  
-|[Limpar](../cpp/variant-t-clear.md)|Limpa encapsulado `VARIANT` objeto.|  
-|[ChangeType](../cpp/variant-t-changetype.md)|Altera o tipo dos **variant_t** objeto a ser indicado `VARTYPE`.|  
-|[Desanexar](../cpp/variant-t-detach.md)|Desanexa encapsulado `VARIANT` objeto desta **variant_t** objeto.|  
-|[SetString](../cpp/variant-t-setstring.md)|Atribui uma cadeia de caracteres a este **variant_t** objeto.|  
-  
-### <a name="operators"></a>Operadores  
-  
-|||  
-|-|-|  
-|[operador =](../cpp/variant-t-operator-equal.md)|Atribui um novo valor a um existente **variant_t** objeto.|  
-|[operador = =,! =](../cpp/variant-t-relational-operators.md)|Comparar duas **variant_t** objetos para igualdade ou desigualdade.|  
-|[Extratores](../cpp/variant-t-extractors.md)|Extrair dados de encapsulado `VARIANT` objeto.|  
-  
-**Fim da seção específica da Microsoft**  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** \<comutil. h >  
-  
- **Lib:** comsuppw. lib ou comsuppwd (consulte [/ZC: wchar_t (wchar_t Is Native Type)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obter mais informações)  
-  
-## <a name="see-also"></a>Consulte também  
- [Classes de suporte COM do compilador](../cpp/compiler-com-support-classes.md)
+
+**Seção específica da Microsoft**
+
+Um **variant_t** objeto encapsula o `VARIANT` tipo de dados. A classe gerencia a alocação de recursos e a desalocação e faz chamadas de função `VariantInit` e `VariantClear` conforme apropriado.
+
+### <a name="construction"></a>Construção
+
+|||
+|-|-|
+|[_variant_t](../cpp/variant-t-variant-t.md)|Constrói uma **variant_t** objeto.|
+
+### <a name="operations"></a>Operações
+
+|||
+|-|-|
+|[Anexar](../cpp/variant-t-attach.md)|Anexa uma `VARIANT` do objeto para o **variant_t** objeto.|
+|[Limpar](../cpp/variant-t-clear.md)|Limpa encapsulado `VARIANT` objeto.|
+|[ChangeType](../cpp/variant-t-changetype.md)|Altera o tipo dos **variant_t** objeto a ser indicado `VARTYPE`.|
+|[Desanexar](../cpp/variant-t-detach.md)|Desanexa encapsulado `VARIANT` objeto desta **variant_t** objeto.|
+|[SetString](../cpp/variant-t-setstring.md)|Atribui uma cadeia de caracteres a este **variant_t** objeto.|
+
+### <a name="operators"></a>Operadores
+
+|||
+|-|-|
+|[operador =](../cpp/variant-t-operator-equal.md)|Atribui um novo valor a um existente **variant_t** objeto.|
+|[operador = =,! =](../cpp/variant-t-relational-operators.md)|Comparar duas **variant_t** objetos para igualdade ou desigualdade.|
+|[Extratores](../cpp/variant-t-extractors.md)|Extrair dados de encapsulado `VARIANT` objeto.|
+
+**Fim da seção específica da Microsoft**
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** \<comutil. h >
+
+**Lib:** comsuppw. lib ou comsuppwd (consulte [/ZC: wchar_t (wchar_t Is Native Type)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para obter mais informações)
+
+## <a name="see-also"></a>Consulte também
+
+[Classes de suporte COM do compilador](../cpp/compiler-com-support-classes.md)

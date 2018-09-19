@@ -1,5 +1,5 @@
 ---
-title: Aviso LNK4092 das ferramentas de vinculador | Microsoft Docs
+title: Ferramentas de vinculador LNK4092 aviso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72edd9e75dbc781355396e38f767a64c1ded3aa9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9b47b347e11e640425bc7840a0f78a33e9e3b7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302575"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113416"
 ---
 # <a name="linker-tools-warning-lnk4092"></a>Aviso LNK4092 (Ferramentas de Vinculador)
-seção compartilhada 'seção' contém realocações; imagem pode não ser executada corretamente  
-  
- O vinculador emite esse aviso sempre que houver uma seção compartilhada para avisá-lo de um problema potencialmente grave.  
-  
- É uma maneira de compartilhar dados entre vários processos marcar uma seção como "compartilhado". No entanto, a marcação de uma seção como compartilhada pode causar problemas. Por exemplo, você tem uma DLL que contém declarações assim em uma seção de dados compartilhado:  
-  
-```  
-int var = 1;  
-int *pvar = &var;  
-```  
-  
- Não é possível resolver o vinculador `pvar` como seu valor depende de onde a DLL é carregada na memória, portanto ele coloca um registro de realocação na DLL. Quando a DLL é carregada na memória, o endereço do `var` podem ser resolvidos e `pvar` atribuído. Se outro processo carrega a DLL do mesmo, mas não pode carregá-lo no mesmo endereço, a realocação para o endereço do `var` serão atualizados para o processo de segundo e o espaço de endereço do processo primeiro apontará para o endereço errado.
+
+seção compartilhada 'seção' contém realocações; imagem não pode ser executada corretamente
+
+O vinculador emite esse aviso sempre que houver uma seção compartilhada para avisá-lo de um problema potencialmente grave.
+
+Uma maneira de compartilhar dados entre vários processos é para marcar uma seção como "compartilhado". No entanto, a marcação de uma seção como compartilhado pode causar problemas. Por exemplo, você tem uma DLL que contém as declarações como esta em uma seção de dados compartilhada:
+
+```
+int var = 1;
+int *pvar = &var;
+```
+
+O vinculador não pode resolver `pvar` porque seu valor depende de onde a DLL é carregada na memória, portanto, ele coloca um registro de realocação na DLL. Quando a DLL é carregada na memória, o endereço do `var` pode ser resolvido e `pvar` atribuído. Se outro processo carrega a DLL mesma, mas não é possível carregá-lo no mesmo endereço, a realocação para o endereço do `var` será atualizado para o processo de segundo e o espaço de endereço do primeiro processo apontará para o endereço incorreto.

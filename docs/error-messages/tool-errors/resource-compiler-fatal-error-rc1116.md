@@ -1,5 +1,5 @@
 ---
-title: Recurso compilador Erro Fatal RC1116 | Microsoft Docs
+title: RC1116 de Erro Fatal do compilador de recurso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9494f81c01a0bbad01015ecc7d0c171eedd637e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4aff49918751e94e08cd7d6c229bfa1d27116210
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316089"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46110582"
 ---
 # <a name="resource-compiler-fatal-error-rc1116"></a>Erro fatal RC1116 (compilador de recurso)
-RC encerrado depois de erros do pré-processador  
-  
- O compilador de recurso foi interrompido devido a outros erros. Corrija outros erros e recompilar.
+
+RC encerrado depois de erros do pré-processador
+
+O compilador de recurso foi interrompido devido a outros erros. Corrija os outros erros e recompile.

@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72b27036ffe84ff915bfcda0205469ef79e00255
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 46e3926f31ec7d12da539d868cacb37e18134e96
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757082"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109672"
 ---
 # <a name="cwindow-class"></a>Classe CWindow
 
@@ -410,7 +410,7 @@ void Attach(HWND hWndNew) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWndNew*  
+*hWndNew*<br/>
 [in] O identificador para uma janela.
 
 ### <a name="example"></a>Exemplo
@@ -459,7 +459,7 @@ BOOL CenterWindow(HWND hWndCenter = NULL) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWndCenter*  
+*hWndCenter*<br/>
 [in] O identificador para a janela em relação a qual centralizar. Se esse parâmetro for NULL (o valor padrão), o método definirá *hWndCenter* a janela do pai da janela se ela for uma janela filho. Caso contrário, ele será definido *hWndCenter* à janela do proprietário da janela.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -566,28 +566,28 @@ HWND Create(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpstrWndClass*  
+*lpstrWndClass*<br/>
 [in] Um ponteiro para a classe da janela.
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] O identificador para a janela pai ou proprietária.
 
-*Rect*  
+*Rect*<br/>
 [in] Uma variável do tipo [u_rect](../../atl/reference/u-rect-class.md) especificando a posição da janela. O valor padrão é NULL. Quando esse parâmetro é NULL, o valor de `CWindow::rcDefault` é usado.
 
-*szWindowName*  
+*szWindowName*<br/>
 [in] Especifica o nome da janela. O valor padrão é NULL.
 
-*dwStyle*  
+*dwStyle*<br/>
 [in] O estilo da janela. O valor padrão é 0, que significa que nenhum estilo é especificado. Para obter uma lista de valores possíveis, consulte [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) no SDK do Windows.
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in] O estilo de janela estendidos. O valor padrão é 0, que significa que nenhum estilo estendido é especificado. Para obter uma lista de valores possíveis, consulte [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) no SDK do Windows.
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in] Uma variável do tipo [u_menuorid](../../atl/reference/u-menuorid-class.md) especificando um identificador para um menu ou um identificador de janela. O valor padrão é 0U.
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 Um ponteiro para os dados de criação da janela contidos em um [CREATESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632603) estrutura.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -652,7 +652,7 @@ CWindow(HWND hWnd = NULL) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWnd*  
+*hWnd*<br/>
 [in] O identificador para uma janela.
 
 ### <a name="remarks"></a>Comentários
@@ -911,7 +911,7 @@ HWND GetDescendantWindow(int nID) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*nID*  
+*nID*<br/>
 [in] O identificador da janela descendente a ser recuperado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -935,13 +935,13 @@ HRESULT GetDlgControl(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nID*  
+*nID*<br/>
 [in] A ID de recurso do controle que está sendo recuperado.
 
-*IID*  
+*IID*<br/>
 [in] A ID da interface que você gostaria de obter do controle.
 
-*ppCtrl*  
+*ppCtrl*<br/>
 [out] O ponteiro para a interface.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -977,13 +977,13 @@ HRESULT GetDlgHost(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nID*  
+*nID*<br/>
 [in] A ID de recurso do controle que está sendo recuperado.
 
-*IID*  
+*IID*<br/>
 [in] A ID da interface que você gostaria de obter do controle.
 
-*ppHost*  
+*ppHost*<br/>
 [out] O ponteiro para a interface.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1098,7 +1098,7 @@ HICON GetIcon(BOOL bBigIcon = TRUE) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*bBigIcon*  
+*bBigIcon*<br/>
 [in] Se for TRUE (o valor padrão) o método retorna o ícone grande. Caso contrário, ele retorna o ícone pequeno.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1448,16 +1448,16 @@ int GetWindowText(CSimpleString& strText) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpszStringBuf*  
+*lpszStringBuf*<br/>
 Um buffer no qual gravar o texto da janela.
 
-*nMaxCount*  
+*nMaxCount*<br/>
 O tamanho do buffer em caracteres; também é o número máximo de caracteres a serem gravados.
 
-*bstrText*  
+*bstrText*<br/>
 Um BSTR no qual armazenar o texto da janela.
 
-*strText*  
+*strText*<br/>
 Um `CString` no qual armazenar o texto da janela.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1761,7 +1761,7 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*Bloco*  
+*Bloco*<br/>
 [in] Se TRUE (o valor padrão), a janela será bloqueada. Caso contrário, ele será desbloqueado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1833,13 +1833,13 @@ BOOL ModifyStyle(
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwRemove*  
+*dwRemove*<br/>
 [in] Especifica os estilos de janela a ser removido durante a modificação do estilo.
 
-*dwAdd*  
+*dwAdd*<br/>
 [in] Especifica os estilos de janela a ser adicionada durante a modificação do estilo.
 
-*nFlags*  
+*nFlags*<br/>
 [in] Sinalizadores de posicionamento de janela. Para obter uma lista de valores possíveis, consulte o [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) função no SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1879,13 +1879,13 @@ BOOL ModifyStyleEx(
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwRemove*  
+*dwRemove*<br/>
 [in] Especifica os estilos estendidos a serem removidos durante a modificação do estilo.
 
-*dwAdd*  
+*dwAdd*<br/>
 [in] Especifica os estilos estendidos a serem adicionados durante a modificação do estilo.
 
-*nFlags*  
+*nFlags*<br/>
 [in] Sinalizadores de posicionamento de janela. Para obter uma lista de valores possíveis, consulte o [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) função no SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1963,7 +1963,7 @@ Ver [OpenClipboard](/windows/desktop/api/winuser/nf-winuser-openclipboard) no Wi
 
 Converte um `CWindow` objeto para um HWND.
 
-```  
+```
 operator HWND() const throw();
 ```
 
@@ -2018,10 +2018,10 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*hDC*  
+*hDC*<br/>
 [in] O identificador para um contexto de dispositivo.
 
-*dwFlags*  
+*dwFlags*<br/>
 [in] Especifica as opções de desenho. Você pode combinar uma ou mais dos seguintes sinalizadores:
 
 - PRF_CHECKVISIBLE desenhar a janela somente se ele está visível.
@@ -2046,10 +2046,10 @@ void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*hDC*  
+*hDC*<br/>
 [in] O identificador para um contexto de dispositivo.
 
-*dwFlags*  
+*dwFlags*<br/>
 [in] Especifica opções de desenho. Você pode combinar uma ou mais dos seguintes sinalizadores:
 
 - PRF_CHECKVISIBLE desenhar a janela somente se ele está visível.
@@ -2122,13 +2122,13 @@ BOOL ResizeClient(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nWidth*  
+*nWidth*<br/>
 Nova largura da janela em pixels.
 
-*nHeight*  
+*nHeight*<br/>
 Nova altura da janela em pixels.
 
-*bRedraw*  
+*bRedraw*<br/>
 Um sinalizador que indica se deseja redesenhar a alterações. Padrão é FALSE, indicando que a janela não atualiza as alterações.
 
 ##  <a name="screentoclient"></a>  CWindow::ScreenToClient
@@ -2236,16 +2236,16 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>Parâmetros
 
-*message*  
+*message*<br/>
 [in] A mensagem a ser enviada.
 
-*wParam*  
+*wParam*<br/>
 [in] Obter informações adicionais específicas de mensagem.
 
-*lParam*  
+*lParam*<br/>
 [in] Obter informações adicionais específicas de mensagem.
 
-*bDeep*  
+*bDeep*<br/>
 [in] Se for TRUE (o valor padrão), a mensagem será enviada para todas as janelas descendentes; Caso contrário, ele será enviado somente para as janelas filho imediato.
 
 ### <a name="remarks"></a>Comentários
@@ -2319,7 +2319,7 @@ int SetDlgCtrlID(int nID) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*nID*  
+*nID*<br/>
 [in] O novo valor a ser definido para o identificador da janela.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2379,10 +2379,10 @@ void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*hFont*  
+*hFont*<br/>
 [in] O identificador para a nova fonte.
 
-*bRedraw*  
+*bRedraw*<br/>
 [in] Se TRUE (o valor padrão), a janela é redesenhada. Caso contrário, ele não é.
 
 ##  <a name="sethotkey"></a>  CWindow::SetHotKey
@@ -2395,10 +2395,10 @@ int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*wVirtualKeyCode*  
+*wVirtualKeyCode*<br/>
 [in] O código de tecla virtual da tecla de atalho. Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser. h.
 
-*wModifiers*  
+*wModifiers*<br/>
 [in] Os modificadores da tecla de acesso. Para obter uma lista de valores possíveis, consulte WM_SETHOTKEY no SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2415,10 +2415,10 @@ HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*hIcon*  
+*hIcon*<br/>
 [in] O identificador para um novo ícone.
 
-*bBigIcon*  
+*bBigIcon*<br/>
 [in] Se TRUE (o valor padrão), o método define um ícone grande. Caso contrário, ele define um ícone pequeno.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -2467,7 +2467,7 @@ void SetRedraw(BOOL bRedraw = TRUE) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*bRedraw*  
+*bRedraw*<br/>
 [in] Especifica o estado do sinalizador redesenho. Se TRUE (o valor padrão), o sinalizador de redesenho estiver definido; Se for FALSE, o sinalizador estiver desmarcado.
 
 ### <a name="remarks"></a>Comentários

@@ -1,5 +1,5 @@
 ---
-title: C2078 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2078 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab44fd94f34f80623b58dea01eee4e0143b6dbc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8de17341bfb1ad5031be04e977ab68ae4ed1bcb5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167064"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111505"
 ---
-# <a name="compiler-error-c2078"></a>C2078 de erro do compilador
-número excessivo de inicializadores  
-  
- O número de inicializadores excede o número de objetos a ser inicializado.  
-  
- O compilador pode deduzir a atribuição correta de inicializadores de objetos e objetos internos quando chaves internas são omitidos da lista de inicializador. Braçadeiras completa também elimina a ambiguidade e resulta em atribuição correta. Braçadeiras parcial podem causar C2078 devido à ambiguidade na atribuição de inicializadores de objetos.  
-  
- O exemplo a seguir gera C2078 e mostra como corrigi-lo:  
-  
-```  
-// C2078.cpp  
-// Compile by using: cl /c /W4 C2078.cpp  
-struct S {  
-   struct {  
-      int x, y;  
-   } z[2];  
-};  
-  
-int main() {  
-   int d[2] = {1, 2, 3};   // C2078  
-   int e[2] = {1, 2};      // OK  
-  
-   char a[] = {"a", "b"};  // C2078  
-   char *b[] = {"a", "b"}; // OK  
-   char c[] = {'a', 'b'};  // OK  
-  
-   S s1{1, 2, 3, 4};       // OK  
-   S s2{{1, 2}, {3, 4}};   // C2078  
-   S s3{{1, 2, 3, 4}};     // OK  
-   S s4{{{1, 2}, {3, 4}}}; // OK  
-}  
-  
+# <a name="compiler-error-c2078"></a>Erro do compilador C2078
+
+Muitos inicializadores
+
+O número de inicializadores excede o número de objetos sejam inicializados.
+
+O compilador pode deduzir a atribuição correta de inicializadores de objetos e objetos internos quando chaves internas estiverem omitidas da lista de inicializadores. Braçadeiras completa também elimina a ambiguidade e resulta na atribuição correta. Braçadeiras parcial podem causar C2078 devido à ambiguidade na atribuição de inicializadores de objetos.
+
+O exemplo a seguir gera C2078 e mostra como corrigi-lo:
+
+```
+// C2078.cpp
+// Compile by using: cl /c /W4 C2078.cpp
+struct S {
+   struct {
+      int x, y;
+   } z[2];
+};
+
+int main() {
+   int d[2] = {1, 2, 3};   // C2078
+   int e[2] = {1, 2};      // OK
+
+   char a[] = {"a", "b"};  // C2078
+   char *b[] = {"a", "b"}; // OK
+   char c[] = {'a', 'b'};  // OK
+
+   S s1{1, 2, 3, 4};       // OK
+   S s2{{1, 2}, {3, 4}};   // C2078
+   S s3{{1, 2, 3, 4}};     // OK
+   S s4{{{1, 2}, {3, 4}}}; // OK
+}
+
 ```

@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fb2d51d9b6c228d0f0fe245cd9788a329a6e11c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f414e98315a0fc43f3f4d4d21b93c1d0cd714aaf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198840"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108372"
 ---
 # <a name="fatal-error-c1353"></a>Erro fatal C1353
-Falha na operação de metadados: tempo de execução não instalado ou versão incompatível  
-  
- Reinstale o CLR ou o Visual Studio.
+
+Falha na operação de metadados: tempo de execução não instalado ou incompatibilidade de versão
+
+Reinstale o CLR ou o Visual Studio.

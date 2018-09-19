@@ -16,33 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea8413971353e7ffbe6579412d0eed9c735b91b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f44e94868f6a7b379fb1a2f75bbd28ce011b54c9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291431"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112103"
 ---
-# <a name="compiler-warning-level-3-c4641"></a>Compilador C4641 de aviso (nível 3)
-Comentário de documento XML tem uma referência cruzada ambígua  
-  
- O compilador não pôde resolver inequivocamente uma referência. Para resolver este aviso, especifique as informações de parâmetro necessárias para liberar a referência não ambígua.  
-  
- Para obter mais informações, consulte [documentação XML](../../ide/xml-documentation-visual-cpp.md).  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C4641.  
-  
-```  
-// C4641.cpp  
-// compile with: /W3 /doc /clr /c  
-  
-/// <see cref="f" />   // C4641  
-// try the following line instead  
-// /// <see cref="f(int)" />  
-public ref class GR {  
-public:  
-   void f( int ) {}  
-   void f( char ) {}  
-};  
+# <a name="compiler-warning-level-3-c4641"></a>Compilador aviso (nível 3) C4641
+
+Comentário de documento XML tem uma referência cruzada ambígua
+
+O compilador não pôde resolver inequivocamente uma referência. Para resolver este aviso, especifique as informações de parâmetro necessárias para fazer a referência não ambígua.
+
+Para obter mais informações, consulte [documentação XML](../../ide/xml-documentation-visual-cpp.md).
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C4641.
+
+```
+// C4641.cpp
+// compile with: /W3 /doc /clr /c
+
+/// <see cref="f" />   // C4641
+// try the following line instead
+// /// <see cref="f(int)" />
+public ref class GR {
+public:
+   void f( int ) {}
+   void f( char ) {}
+};
 ```

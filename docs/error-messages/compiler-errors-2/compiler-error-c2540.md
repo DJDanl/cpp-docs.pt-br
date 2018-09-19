@@ -1,5 +1,5 @@
 ---
-title: C2540 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2540 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a618df6422c68b9fac04ef46192c176b9aa8b30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a6ec3945cf49598b57c92e5c0e6a5e48466f1e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199492"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112376"
 ---
-# <a name="compiler-error-c2540"></a>C2540 de erro do compilador
-expressão não constante como limite de matriz  
-  
- Uma matriz deve ter uma constante associada.  
-  
- O exemplo a seguir gera C2540:  
-  
-```  
-// C2540.cpp  
-void func(int n, int pC[]) {  
-   int i = ((int [n])pC)[1];   // C2540  
-}  
-  
-void func2(int n, int pC[]) {  
-   int i = (pC)[1];   // OK  
-}  
-  
-int main() {  
-   int pC[100];  
-   func(100, pC);  
-   func2(100, pC);  
-}  
+# <a name="compiler-error-c2540"></a>Erro do compilador C2540
+
+expressão não constante como limite da matriz
+
+Uma matriz deve ter uma constante associada.
+
+O exemplo a seguir gera C2540:
+
+```
+// C2540.cpp
+void func(int n, int pC[]) {
+   int i = ((int [n])pC)[1];   // C2540
+}
+
+void func2(int n, int pC[]) {
+   int i = (pC)[1];   // OK
+}
+
+int main() {
+   int pC[100];
+   func(100, pC);
+   func2(100, pC);
+}
 ```

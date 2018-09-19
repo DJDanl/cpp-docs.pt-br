@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4144 | Microsoft Docs
+title: Compilador aviso (nível 1) C4144 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b84e8a062871bfaa1d83da50175e3485f2d8bd2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba9c1210247ad537f8fa1224c30b1c88d9c6b721
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281333"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109659"
 ---
-# <a name="compiler-warning-level-1-c4144"></a>Compilador C4144 de aviso (nível 1)
-'expression': expressão relacional como expressão de switch  
-  
- Expressão relacional especificada foi usada como expressão de controle de um [alternar](../../cpp/switch-statement-cpp.md) instrução. As instruções casos associadas terá valores booleanos. O exemplo a seguir gera C4144:  
-  
-```  
-// C4144.cpp  
-// compile with: /W1  
-int main()  
-{  
-   int i = 0;  
-   switch(!i) {   // C4144, remove the ! to resolve  
-      case 1:  
-         break;  
-      default:  
-         break;  
-   }  
-}  
+# <a name="compiler-warning-level-1-c4144"></a>Compilador aviso (nível 1) C4144
+
+'expression': expressão relacional como expressão de switch
+
+Expressão relacional especificada foi usado como a expressão de controle de um [alternar](../../cpp/switch-statement-cpp.md) instrução. As instruções case associadas serão oferecidas valores boolianos. O exemplo a seguir gera C4144:
+
+```
+// C4144.cpp
+// compile with: /W1
+int main()
+{
+   int i = 0;
+   switch(!i) {   // C4144, remove the ! to resolve
+      case 1:
+         break;
+      default:
+         break;
+   }
+}
 ```

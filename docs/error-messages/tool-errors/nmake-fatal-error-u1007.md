@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 988438b952aa1a06be3ec0da1d7337793c704133
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a1c74cdfe4113cf1fafd242993df27081eb1d28
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322374"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112298"
 ---
 # <a name="nmake-fatal-error-u1007"></a>Erro fatal U1007 (NMAKE)
-aspas duplas não são permitidas no nome  
-  
- O nome de destino especificado ou o nome de arquivo contidos aspas duplas (**"**).  
-  
- Aspas duplas podem envolver um nome de arquivo, mas não podem ser contidas nele.
+
+aspas duplas não são permitidas no nome
+
+O nome de destino especificado ou o nome do arquivo continha uma marca de aspas duplas (**"**).
+
+As aspas duplas podem envolver um nome de arquivo, mas não podem ser contidas nele.

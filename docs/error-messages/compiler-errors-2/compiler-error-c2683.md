@@ -1,5 +1,5 @@
 ---
-title: C2683 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2683 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35619d93200c2f0e61dbf903f56a70bbe0c48d73
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c13836c845e1efc33c409939bdbec49b25c84e63
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233640"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46027583"
 ---
-# <a name="compiler-error-c2683"></a>C2683 de erro do compilador
-'cast': 'type' não é um tipo polimórfico  
-  
- Não é possível usar [dynamic_cast](../../cpp/dynamic-cast-operator.md) para converter de uma classe não é polimórfico (uma classe com nenhuma função virtual).  
-  
- Você pode usar [static_cast](../../cpp/static-cast-operator.md) para realizar conversões de tipos não polimórficas. No entanto, `static_cast` não executa uma verificação de tempo de execução.  
-  
- O exemplo a seguir gera C2683:  
-  
-```  
-// C2683.cpp  
-// compile with: /c  
-class B { };  
-class D : public B { };  
-  
-void f(B* pb) {  
-   D* pd1 = dynamic_cast<D*>(pb);  // C2683  
-   D* pd1 = static_cast<D*>(pb);   // OK  
-}  
+# <a name="compiler-error-c2683"></a>Erro do compilador C2683
+
+'cast': 'type' não é um tipo polimórfico
+
+Não é possível usar [dynamic_cast](../../cpp/dynamic-cast-operator.md) para converter de uma classe não é polimórfico (uma classe com nenhuma função virtual).
+
+Você pode usar [static_cast](../../cpp/static-cast-operator.md) para realizar conversões de tipos não polimórficos. No entanto, `static_cast` não realiza uma verificação de tempo de execução.
+
+O exemplo a seguir gera C2683:
+
+```
+// C2683.cpp
+// compile with: /c
+class B { };
+class D : public B { };
+
+void f(B* pb) {
+   D* pd1 = dynamic_cast<D*>(pb);  // C2683
+   D* pd1 = static_cast<D*>(pb);   // OK
+}
 ```

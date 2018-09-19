@@ -1,5 +1,5 @@
 ---
-title: C3920 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3920 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ced0a0f8fa2b6694de4dd901d71f6721e12493b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b85638907f350eb3545a858f1319e56b2459f09
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270274"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46112701"
 ---
-# <a name="compiler-error-c3920"></a>C3920 de erro do compilador
-' operador ': não é possível definir um incremento/decremento de sufixo WinRT ou um operador CLR chamando o sufixo prefixo correspondente será chamada de operador de WinRT ou CLR WinRT ou CLR operador (op_Increment/op_Decrement), mas com semântica de pós-fixo  
-  
- O tempo de execução do Windows e o CLR não dão suporte para o operador de sufixo e operadores de sufixo definida pelo usuário não são permitidas.  Você pode definir um operador de prefixo e o operador de prefixo que será usado para operações de pré e pós-incrementos.  
-  
- O exemplo a seguir gera C3920 e mostra como corrigi-lo:  
-  
-```  
-// C3920.cpp  
-// compile with: /clr /LD  
-public value struct V {  
-   static V operator ++(V me, int)  
-   // try the following line instead  
-   // static V operator ++(V me)  
-   {   // C3920  
-      me.m_i++;  
-      return me;  
-   }  
-  
-   int m_i;  
-};  
-  
+# <a name="compiler-error-c3920"></a>Erro do compilador C3920
+
+' operador ': não é possível definir um incremento/decremento de sufixo WinRT ou chamar o sufixo de operador CLR operador WinRT ou CLR chamará o prefixo correspondente WinRT ou CLR operador (op_Increment/op_Decrement), mas com semântica de pós-fixo
+
+O tempo de execução do Windows e o CLR não têm suporte para o operador de sufixo e operadores de sufixo definida pelo usuário não são permitidos.  Você pode definir um operador de prefixo e o operador de prefixo que será usado para operações de pré e pós-incremento.
+
+O exemplo a seguir gera C3920 e mostra como corrigi-lo:
+
+```
+// C3920.cpp
+// compile with: /clr /LD
+public value struct V {
+   static V operator ++(V me, int)
+   // try the following line instead
+   // static V operator ++(V me)
+   {   // C3920
+      me.m_i++;
+      return me;
+   }
+
+   int m_i;
+};
+
 ```

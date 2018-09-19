@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3934e39cd87bd41432e90af1b7053815e5e44ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 72f09dec61cec9870627682e9413d98e0d623188
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318006"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46109750"
 ---
 # <a name="nmake-fatal-error-u1088"></a>Erro fatal U1088 (NMAKE)
-separador inválido ':: ' na regra de inferência  
-  
- Uma regra de inferência deve ser seguida por dois-pontos único (**:**).
+
+separador inválido ':: ' em regra de inferência
+
+Uma regra de inferência de tipos deve ser seguida por um único dois pontos (**:**).

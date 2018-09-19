@@ -1,5 +1,5 @@
 ---
-title: C3627 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3627 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7b32ac9234690c1203bdbd3097c1f6ac830e886
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f799007fffae3f8841b91de71001b5daf48b96f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265059"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111661"
 ---
-# <a name="compiler-error-c3627"></a>C3627 de erro do compilador
-Somente um tipo de valor pode ser boxed  
-  
-Classes de valor só podem ser demarcadas.  
+# <a name="compiler-error-c3627"></a>Erro do compilador C3627
+
+Somente um tipo de valor pode ser boxed
+
+Somente as classes de valor podem ser convertidas.

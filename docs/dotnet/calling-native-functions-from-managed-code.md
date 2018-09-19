@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3ef47e3aeb8cfb18dd1eb6497c593d8cec26081b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 002093a6a9044c65e5780035ad6c19db35d6b648
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678444"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116735"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Chamando funções nativas a partir do código gerenciado
 O common language runtime fornece serviços de invocação de plataforma, ou PInvoke, que permite que código gerenciado chame funções de estilo C em nativas bibliotecas de vínculo dinâmico (DLLs). Os mesmo empacotamento de dados são usados para a interoperabilidade COM o tempo de execução e para o mecanismo IJW, ou "Simplesmente funciona".  
@@ -105,7 +105,7 @@ int main() {
   
  Neste exemplo, um programa do Visual C++ interopera com a função MessageBox que faz parte da API do Win32.  
   
-```  
+```cpp  
 // platform_invocation_services_4.cpp  
 // compile with: /clr /c  
 using namespace System;  
@@ -132,16 +132,17 @@ int main() {
   
  Se usarmos PInvoke em um aplicativo do Visual C++, nós podemos escrever algo semelhante ao seguinte:  
   
- `[DllImport("mylib")]`  
-  
- `extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);`  
+```cpp
+[DllImport("mylib")]
+extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);
+```
   
  A dificuldade aqui é que nós não podemos excluir a memória para a cadeia de caracteres não gerenciada retornada por MakeSpecial. Outras funções chamadas por meio do PInvoke retornam um ponteiro para um buffer interno que não precisa ser desalocada pelo usuário. Nesse caso, usando o recurso IJW é a opção óbvia.  
   
 ## <a name="limitations-of-pinvoke"></a>Limitações de PInvoke  
  Você não pode retornar o mesmo ponteiro exato de uma função nativa que você recebe como um parâmetro. Se uma função nativa retorna o ponteiro que foi empacotado a ela pelo PInvoke, corrupção de memória e exceções podem surgir.  
   
-```  
+```cpp  
 __declspec(dllexport)  
 char* fstringA(char* param) {  
    return param;  

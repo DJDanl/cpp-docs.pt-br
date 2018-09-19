@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cca3c2a139e1109746f3a690cfb3f31509a9fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b1ca04b17ebdb9d48bc94032482caf48ad4aa00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322426"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46111557"
 ---
 # <a name="resource-compiler-warning-rc4093"></a>Aviso RC4093 (compilador de recurso)
-sem escape newline em constante de caractere no código inativo  
-  
- A expressão de constante de um `#if`, `#elif`, **#ifdef**, ou **#ifndef** diretiva de pré-processamento é avaliada como zero, tornando o código que segue inativo. Em que o código inativo, um caractere de nova linha aparece dentro de um conjunto de aspas simples ou duplas.  
-  
- Todo o texto até o próximo aspas duplas foi considerado dentro de uma constante de caractere.
+
+sem escape newline em constante de caractere no código inativo
+
+A expressão de constante de um `#if`, `#elif`, **#ifdef**, ou **#ifndef** diretiva de pré-processador foi avaliada como zero, tornando o código que segue inativo. Dentro desse código inativo, um caractere de nova linha aparecia dentro de um conjunto de aspas simples ou duplas.
+
+Todo o texto até a próxima marca de aspas duplas foi considerado dentro de uma constante de caractere.

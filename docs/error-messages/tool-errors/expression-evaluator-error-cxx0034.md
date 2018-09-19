@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 936f63c0015f21b3683333d5153cffa07b2b1677
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7afc09a3334b284208ec077023427c67757afac3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33303918"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113039"
 ---
 # <a name="expression-evaluator-error-cxx0034"></a>Erro CXX0034 (avaliador de expressão)
-**tipos incompatíveis com o operador**  
-  
- Os tipos de operando especificados não serão válidos para a operação.  
-  
- Por exemplo, um ponteiro não pode ser multiplicado por qualquer valor.  
-  
- Talvez seja necessário digitar converter operandos de um tipo compatível com o operador.
+
+**tipos incompatíveis com o operador**
+
+Os tipos de operando especificados não são válidos para a operação.
+
+Por exemplo, um ponteiro não pode ser multiplicado por qualquer valor.
+
+Talvez seja necessário para o tipo convertido operandos de um tipo compatível com o operador.

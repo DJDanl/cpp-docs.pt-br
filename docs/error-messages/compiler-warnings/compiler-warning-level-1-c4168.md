@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4168 | Microsoft Docs
+title: Compilador aviso (nível 1) C4168 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84f361dfd86cc32d246cb749da14d79543dd494e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8e76f5e59e91639514ccd05a71b1cefc4154040
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270363"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46113403"
 ---
-# <a name="compiler-warning-level-1-c4168"></a>Compilador C4168 de aviso (nível 1)
-limite do compilador: sem tipos de depurador, excluir o banco de dados do programa 'database' e recompile  
-  
- O arquivo de banco de dados do programa deve ser recriado para acomodar todos os tipos no programa.
+# <a name="compiler-warning-level-1-c4168"></a>Compilador aviso (nível 1) C4168
+
+limite do compilador: sem tipos de depurador, excluir o banco de dados do programa 'do banco de dados' e recompile
+
+O arquivo de banco de dados do programa deve ser recriado para acomodar todos os tipos no programa.

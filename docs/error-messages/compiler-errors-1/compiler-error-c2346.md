@@ -1,5 +1,5 @@
 ---
-title: C2346 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2346 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,45 +16,47 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9459d7330738180e92776e93fcba9a07bfd39640
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5ec916bcdce1a43c597d8cfae10e5393cbeb99ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222287"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46108606"
 ---
-# <a name="compiler-error-c2346"></a>C2346 de erro do compilador
-'function' não pode ser compilado como nativo: motivo  
-  
- O compilador não pôde compilar uma função para MSIL.  
-  
- Para obter mais informações, consulte [gerenciado, não gerenciado](../../preprocessor/managed-unmanaged.md) e [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).  
-  
-### <a name="to-correct-this-error"></a>Para corrigir este erro  
-  
-1.  Remova o código na função que não pode ser compilada para MSIL.  
-  
-2.  O não compilar o módulo com **/clr**, ou marcar a função como não gerenciado com o pragma não gerenciado.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C2346.  
-  
-```  
-// C2346.cpp  
-// processor: x86  
-// compile with: /clr   
-// C2346 expected  
-struct S  
-{  
-   S()  
-   {  
-      { __asm { nop } }  
-   }  
-   virtual __clrcall ~S() { }  
-};  
-  
-void main()  
-{  
-   S s;  
-}  
+# <a name="compiler-error-c2346"></a>Erro do compilador C2346
+
+'function' não pode ser compilada como nativa: motivo
+
+O compilador não pôde compilar uma função para MSIL.
+
+Para obter mais informações, consulte [gerenciado, não gerenciado](../../preprocessor/managed-unmanaged.md) e [/clr (compilação de tempo de execução de linguagem comum)](../../build/reference/clr-common-language-runtime-compilation.md).
+
+### <a name="to-correct-this-error"></a>Para corrigir este erro
+
+1. Remova o código na função que não pode ser compilada para MSIL.
+
+1. A não compilar o módulo com **/clr**, ou marcar a função como não gerenciados com o pragma não gerenciado.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C2346.
+
+```
+// C2346.cpp
+// processor: x86
+// compile with: /clr
+// C2346 expected
+struct S
+{
+   S()
+   {
+      { __asm { nop } }
+   }
+   virtual __clrcall ~S() { }
+};
+
+void main()
+{
+   S s;
+}
 ```
