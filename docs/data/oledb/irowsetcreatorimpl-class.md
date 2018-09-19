@@ -30,14 +30,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f2fb70149c6f1c02d2b28d50e370480b027186bf
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 51534ffb027e35bbab5a9473cf4190c14b384808
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222033"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118124"
 ---
 # <a name="irowsetcreatorimpl-class"></a>Classe IRowsetCreatorImpl
+
 Executa as mesmas funções como `IObjectWithSite` , mas também permite que as propriedades de OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`.  
   
 ## <a name="syntax"></a>Sintaxe
@@ -49,11 +50,13 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *T*  
- Uma classe derivada de `IRowsetCreator`.  
+
+*T*<br/>
+Uma classe derivada de `IRowsetCreator`.  
 
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atldb.h  
+
+**Cabeçalho:** atldb.h  
   
 ## <a name="members"></a>Membros  
   
@@ -64,9 +67,11 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 |[SetSite](#setsite)|Define o site que contém o objeto de conjunto de linhas.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa classe herda de [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) e substitui [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite). Quando um objeto de comando ou sessão do provedor cria um conjunto de linhas, ele chama `QueryInterface` no objeto de conjunto de linhas procurando `IObjectWithSite` e chama `SetSite` passando o objeto de conjunto de linhas `IUnkown` interface como a interface de site.  
+
+Essa classe herda de [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) e substitui [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite). Quando um objeto de comando ou sessão do provedor cria um conjunto de linhas, ele chama `QueryInterface` no objeto de conjunto de linhas procurando `IObjectWithSite` e chama `SetSite` passando o objeto de conjunto de linhas `IUnkown` interface como a interface de site.  
 
 ## <a name="setsite"></a> Irowsetcreatorimpl:: SetSite
+
 Define o site que contém o objeto de conjunto de linhas. Para obter mais informações, consulte [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite).  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -76,15 +81,19 @@ STDMETHOD(SetSite )(IUnknown* pCreator);
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *pCreator*  
- [in] Ponteiro para o `IUnknown` ponteiro de interface do site Gerenciando o objeto de conjunto de linhas.  
+
+*pCreator*<br/>
+[in] Ponteiro para o `IUnknown` ponteiro de interface do site Gerenciando o objeto de conjunto de linhas.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um HRESULT padrão.  
+
+Um HRESULT padrão.  
   
 ### <a name="remarks"></a>Comentários  
- Além disso, `IRowsetCreatorImpl::SetSite` permite que o OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS` propriedades. 
+
+Além disso, `IRowsetCreatorImpl::SetSite` permite que o OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS` propriedades. 
 
 ## <a name="see-also"></a>Consulte também  
- [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

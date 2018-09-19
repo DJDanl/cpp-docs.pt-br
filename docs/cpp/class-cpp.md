@@ -17,137 +17,141 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a3c3defdfb882db69f7789c97feba11d346e540
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1e5807b529ca56613cfe0021762a0191e4038df0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405579"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118733"
 ---
 # <a name="class-c"></a>class (C++)
-O **classe** palavra-chave declara um tipo de classe ou define um objeto de um tipo de classe.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-[template-spec]  
-class [ms-decl-spec] [tag [: base-list ]]  
-{  
-   member-list  
-} [declarators];  
-[ class ] tag declarators;  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- *especificações de modelo*  
- Especificações de modelo opcionais. Para obter mais informações, consulte [modelos](templates-cpp.md).  
-  
- *class*  
- O **classe** palavra-chave.  
-  
- *MS-decl-spec*  
- Especificação de classe de armazenamento opcional. Para obter mais informações, consulte o [declspec](../cpp/declspec.md) palavra-chave.  
-  
- *Marca*  
- O nome do tipo dado à classe. A marca se torna uma palavra reservada no escopo da classe. A marca é opcional. Se omitida, uma classe anônima será definida. Para obter mais informações, consulte [tipos de classe anônima](../cpp/anonymous-class-types.md).  
-  
- *Base de dados de lista*  
- A lista opcional de classes ou estruturas da qual esta classe derivará seus membros. Ver [Classes Base](../cpp/base-classes.md) para obter mais informações. Cada nome de classe ou estrutura de base pode ser precedido por um especificador de acesso ([pública](../cpp/public-cpp.md), [privada](../cpp/private-cpp.md), [protegido](../cpp/protected-cpp.md)) e o [virtual](../cpp/virtual-cpp.md) palavra-chave. Consulte a tabela de acesso de membro [controlando o acesso a membros de classe](member-access-control-cpp.md) para obter mais informações.  
-  
- *lista de membros*  
- Lista de membros da classe. Consulte a [visão geral de membros de classe](../cpp/class-member-overview.md) para obter mais informações.  
-  
- *declaradores*  
- Lista de declaradores que especifica os nomes de uma ou mais instâncias do tipo da classe. Os declaradores podem incluir listas de inicializadores se todos os membros de dados da classe estiverem **público**. Isso é mais comum em estruturas, cujos membros de dados são **pública** por padrão, que em classes. Ver [visão geral dos declaradores](../cpp/overview-of-declarators.md) para obter mais informações.  
-  
-## <a name="remarks"></a>Comentários  
- Para obter mais informações sobre as classes em geral, consulte um dos seguintes tópicos:  
-  
--   [struct](../cpp/struct-cpp.md)  
-  
--   [union](../cpp/unions.md)  
-  
--   [multiple_inheritance](../cpp/inheritance-keywords.md)  
-  
--   [Single_Inheritance](../cpp/inheritance-keywords.md)  
-  
--   [virtual_inheritance](../cpp/inheritance-keywords.md)  
-  
- Para obter informações sobre classes e estruturas gerenciadas, consulte [Classes e Structs](../windows/classes-and-structs-cpp-component-extensions.md)  
-  
-## <a name="example"></a>Exemplo  
-  
-```cpp 
-// class.cpp  
-// compile with: /EHsc  
-// Example of the class keyword  
-// Exhibits polymorphism/virtual functions.  
-  
-#include <iostream>  
-#include <string>  
-#define TRUE = 1  
-using namespace std;  
-  
-class dog  
-{  
-public:  
-   dog()  
-   {  
-      _legs = 4;  
-      _bark = true;  
-   }  
-  
-   void setDogSize(string dogSize)  
-   {  
-      _dogSize = dogSize;  
-   }  
-   virtual void setEars(string type)      // virtual function  
-   {  
-      _earType = type;  
-   }  
-  
-private:  
-   string _dogSize, _earType;  
-   int _legs;  
-   bool _bark;  
-  
-};  
-  
-class breed : public dog  
-{  
-public:  
-   breed( string color, string size)  
-   {  
-      _color = color;  
-      setDogSize(size);  
-   }  
-  
-   string getColor()  
-   {  
-      return _color;  
-   }  
-  
-   // virtual function redefined  
-   void setEars(string length, string type)  
-   {  
-      _earLength = length;  
-      _earType = type;  
-   }  
-  
-protected:  
-   string _color, _earLength, _earType;  
-};  
-  
-int main()  
-{  
-   dog mongrel;  
-   breed labrador("yellow", "large");  
-   mongrel.setEars("pointy");  
-   labrador.setEars("long", "floppy");  
-   cout << "Cody is a " << labrador.getColor() << " labrador" << endl;  
-}  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Palavras-chave](../cpp/keywords-cpp.md)   
- [Classes e Structs](../cpp/classes-and-structs-cpp.md)
+
+O **classe** palavra-chave declara um tipo de classe ou define um objeto de um tipo de classe.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+[template-spec]
+class [ms-decl-spec] [tag [: base-list ]]
+{
+   member-list
+} [declarators];
+[ class ] tag declarators;
+```
+
+#### <a name="parameters"></a>Parâmetros
+
+*especificações de modelo*<br/>
+Especificações de modelo opcionais. Para obter mais informações, consulte [modelos](templates-cpp.md).
+
+*class*<br/>
+O **classe** palavra-chave.
+
+*MS-decl-spec*<br/>
+Especificação de classe de armazenamento opcional. Para obter mais informações, consulte o [declspec](../cpp/declspec.md) palavra-chave.
+
+*Marca*<br/>
+O nome do tipo dado à classe. A marca se torna uma palavra reservada no escopo da classe. A marca é opcional. Se omitida, uma classe anônima será definida. Para obter mais informações, consulte [tipos de classe anônima](../cpp/anonymous-class-types.md).
+
+*Base de dados de lista*<br/>
+A lista opcional de classes ou estruturas da qual esta classe derivará seus membros. Ver [Classes Base](../cpp/base-classes.md) para obter mais informações. Cada nome de classe ou estrutura de base pode ser precedido por um especificador de acesso ([pública](../cpp/public-cpp.md), [privada](../cpp/private-cpp.md), [protegido](../cpp/protected-cpp.md)) e o [virtual](../cpp/virtual-cpp.md) palavra-chave. Consulte a tabela de acesso de membro [controlando o acesso a membros de classe](member-access-control-cpp.md) para obter mais informações.
+
+*lista de membros*<br/>
+Lista de membros da classe. Consulte a [visão geral de membros de classe](../cpp/class-member-overview.md) para obter mais informações.
+
+*declaradores*<br/>
+Lista de declaradores que especifica os nomes de uma ou mais instâncias do tipo da classe. Os declaradores podem incluir listas de inicializadores se todos os membros de dados da classe estiverem **público**. Isso é mais comum em estruturas, cujos membros de dados são **pública** por padrão, que em classes. Ver [visão geral dos declaradores](../cpp/overview-of-declarators.md) para obter mais informações.
+
+## <a name="remarks"></a>Comentários
+
+Para obter mais informações sobre as classes em geral, consulte um dos seguintes tópicos:
+
+- [struct](../cpp/struct-cpp.md)
+
+- [union](../cpp/unions.md)
+
+- [multiple_inheritance](../cpp/inheritance-keywords.md)
+
+- [Single_Inheritance](../cpp/inheritance-keywords.md)
+
+- [virtual_inheritance](../cpp/inheritance-keywords.md)
+
+Para obter informações sobre classes e estruturas gerenciadas, consulte [Classes e Structs](../windows/classes-and-structs-cpp-component-extensions.md)
+
+## <a name="example"></a>Exemplo
+
+```cpp
+// class.cpp
+// compile with: /EHsc
+// Example of the class keyword
+// Exhibits polymorphism/virtual functions.
+
+#include <iostream>
+#include <string>
+#define TRUE = 1
+using namespace std;
+
+class dog
+{
+public:
+   dog()
+   {
+      _legs = 4;
+      _bark = true;
+   }
+
+   void setDogSize(string dogSize)
+   {
+      _dogSize = dogSize;
+   }
+   virtual void setEars(string type)      // virtual function
+   {
+      _earType = type;
+   }
+
+private:
+   string _dogSize, _earType;
+   int _legs;
+   bool _bark;
+
+};
+
+class breed : public dog
+{
+public:
+   breed( string color, string size)
+   {
+      _color = color;
+      setDogSize(size);
+   }
+
+   string getColor()
+   {
+      return _color;
+   }
+
+   // virtual function redefined
+   void setEars(string length, string type)
+   {
+      _earLength = length;
+      _earType = type;
+   }
+
+protected:
+   string _color, _earLength, _earType;
+};
+
+int main()
+{
+   dog mongrel;
+   breed labrador("yellow", "large");
+   mongrel.setEars("pointy");
+   labrador.setEars("long", "floppy");
+   cout << "Cody is a " << labrador.getColor() << " labrador" << endl;
+}
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Palavras-chave](../cpp/keywords-cpp.md)<br/>
+[Classes e Structs](../cpp/classes-and-structs-cpp.md)

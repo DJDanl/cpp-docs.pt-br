@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4747 | Microsoft Docs
+title: Compilador aviso (nível 1) C4747 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 203943f3741d07e278652a7032a6dcdcb305a384
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d3eb5b83fedc7455cbf1b97119296a6eb6a1ab1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285818"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118473"
 ---
-# <a name="compiler-warning-level-1-c4747"></a>Compilador C4747 de aviso (nível 1)
-Chamar 'entrypoint' gerenciado: código gerenciado não pode ser executado sob bloqueio do carregador, incluindo o ponto de entrada DLL e chamadas acessadas do ponto de entrada DLL  
-  
- O compilador encontrar um ponto de entrada DLL (provável) compilado para MSIL.  Devido a possíveis problemas com o carregamento de uma DLL cujo ponto de entrada foi compilado para MSIL, são altamente desaconselhável compilação de uma função de ponto de entrada DLL para MSIL.  
-  
- Para obter mais informações, consulte [inicialização de Assemblies mistos](../../dotnet/initialization-of-mixed-assemblies.md) e [LNK1306 de erro de ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-error-lnk1306.md).  
-  
-### <a name="to-correct-this-error"></a>Para corrigir este erro  
-  
-1.  Não compilar o módulo com **/clr**.  
-  
-2.  Marcar a função de ponto de entrada com `#pragma unmanaged`.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C4747.  
-  
-```  
-// C4747.cpp  
-// compile with: /clr /c /W1  
-// C4747 expected  
-#include <windows.h>  
-  
-// Uncomment the following line to resolve.  
-// #pragma unmanaged  
-  
-BOOL WINAPI DllMain(HANDLE hInstance, ULONG Command, LPVOID Reserved) {  
-   return TRUE;  
-};  
+# <a name="compiler-warning-level-1-c4747"></a>Compilador aviso (nível 1) C4747
+
+Chamar 'entrypoint' gerenciado: código gerenciado não pode ser executado sob bloqueio do carregador, incluindo o ponto de entrada da DLL e chamadas acessadas do ponto de entrada DLL
+
+O compilador encontra um ponto de entrada DLL (provável) compilado para MSIL.  Devido a problemas potenciais com o carregamento de uma DLL cujo ponto de entrada tiver sido compilado em MSIL, você é altamente desaconselhável de compilar uma função de ponto de entrada da DLL para MSIL.
+
+Para obter mais informações, consulte [inicialização de Assemblies mistos](../../dotnet/initialization-of-mixed-assemblies.md) e [erro das ferramentas de vinculador LNK1306](../../error-messages/tool-errors/linker-tools-error-lnk1306.md).
+
+### <a name="to-correct-this-error"></a>Para corrigir este erro
+
+1. Não compilar o módulo com **/clr**.
+
+1. Marcar a função de ponto de entrada com `#pragma unmanaged`.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C4747.
+
+```
+// C4747.cpp
+// compile with: /clr /c /W1
+// C4747 expected
+#include <windows.h>
+
+// Uncomment the following line to resolve.
+// #pragma unmanaged
+
+BOOL WINAPI DllMain(HANDLE hInstance, ULONG Command, LPVOID Reserved) {
+   return TRUE;
+};
 ```

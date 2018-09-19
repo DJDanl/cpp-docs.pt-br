@@ -1,5 +1,5 @@
 ---
-title: Aviso LNK4229 das ferramentas de vinculador | Microsoft Docs
+title: Ferramentas de vinculador LNK4229 aviso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c82599d414ddfcd3bd75097a32d8bfce31752cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0837942c7701f8349983f4651005123b5ba89232
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302744"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118876"
 ---
 # <a name="linker-tools-warning-lnk4229"></a>Aviso LNK4229 (Ferramentas de Vinculador)
-/directive de diretiva inválido encontrado; ignorado  
-  
- Uma diretiva passado por meio de [comentário](../../preprocessor/comment-c-cpp.md) pragma não era válido. Ignora o vinculador `/directive`.
+
+/directive de diretiva inválido encontrado; ignorado
+
+Uma diretiva passados por meio de [comentário](../../preprocessor/comment-c-cpp.md) pragma não era válido. Ignora o vinculador `/directive`.

@@ -8,12 +8,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c573f3e170929df1b988bf3e74535dd12b83a2f8
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: f2a6ef80edc5f6bbeaf43bbc5851336b67d8cf36
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131793"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118824"
 ---
 # <a name="attributes-in-c"></a>Atributos em C++
 
@@ -45,7 +45,7 @@ Atributos que representam uma alternativa padronizada para extensões específic
 
 - `[[carries_dependency]]` Especifica que a função propaga ordenação em relação à sincronização de threads de dependência de dados. O atributo pode ser aplicado a um ou mais parâmetros para especificar que o argumento transmitido carrega uma dependência no corpo da função. O atributo pode ser aplicado à função em si, para especificar que o valor de retorno apresenta uma dependência da função. O compilador pode usar essas informações para gerar um código mais eficiente.
 
-- `[[deprecated]]` **Visual Studio 2015 e posterior:** Especifica que uma função não se destina a ser usada e podem não existir em futuras versões de uma interface de biblioteca. O compilador pode usar isso para gerar uma mensagem informativa ao detectar tentativas de código do cliente chamar a função. Pode ser aplicado a declaração de uma classe, um nome de typedef, uma variável, um membro de dados não estático, uma função, um namespace, uma enumeração, um enumerador ou uma especialização de modelo.  
+- `[[deprecated]]` **Visual Studio 2015 e posterior:** Especifica que uma função não se destina a ser usada e podem não existir em futuras versões de uma interface de biblioteca. O compilador pode usar isso para gerar uma mensagem informativa ao detectar tentativas de código do cliente chamar a função. Pode ser aplicado a declaração de uma classe, um nome de typedef, uma variável, um membro de dados não estático, uma função, um namespace, uma enumeração, um enumerador ou uma especialização de modelo.
 
 - `[[fallthrough]]` **Visual Studio 2017 e posterior:** (disponível com [/std:c++17 + + 17](../build/reference/std-specify-language-standard-version.md)) a `[[fallthrough]]` atributo pode ser usado no contexto do [alternar](switch-statement-cpp.md) instruções como uma dica para o compilador (ou qualquer pessoa que leia o código) que se destina o comportamento de fallthrough. O compilador do Visual C++ no momento não avisa sobre o comportamento de fallthrough, para que esse atributo não tem nenhum comportamento do compilador em vigor.
 

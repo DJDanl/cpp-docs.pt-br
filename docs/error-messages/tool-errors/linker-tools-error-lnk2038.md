@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de vinculador LNK2038 erro | Microsoft Docs
+title: Erro das LNK2038 das ferramentas de vinculador | Microsoft Docs
 ms.custom: ''
 ms.date: 12/15/2017
 ms.technology:
@@ -15,44 +15,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f97f65bbe31e51e5083b34949b47a6963696ee37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 009644f18068454b0c765118b29c009cd33241a9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301662"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118109"
 ---
 # <a name="linker-tools-error-lnk2038"></a>Erro das Ferramentas de Vinculador LNK2038
 
-> incompatibilidade detectada para '*nome*': valor '*value_1*'não corresponde o valor'*value_2*' em *filename.obj*
+> incompatibilidade detectada para '*nome*': valor '*value_1*'não corresponde ao valor'*value_2*' em *filename. obj*
 
-Foi detectada uma incompatibilidade de símbolo pelo vinculador. Esse erro indica que diferentes partes de um aplicativo, incluindo bibliotecas ou em outro objeto de código que os links de aplicativo, use definições conflitantes do símbolo. O [detectar incompatibilidade](../../preprocessor/detect-mismatch.md) pragma é usado para definir esses símbolos e detectar os valores conflitantes.
+Foi detectada uma incompatibilidade de símbolo pelo vinculador. Esse erro indica que diferentes partes de um aplicativo, incluindo bibliotecas ou outro objeto de código que os links do aplicativo, use definições conflitantes do símbolo. O [detectar incompatibilidade de](../../preprocessor/detect-mismatch.md) pragma é usado para definir esses símbolos e detectar seus valores conflitante.
 
 ## <a name="possible-causes-and-solutions"></a>Possíveis causas e soluções
 
-Esse erro pode ocorrer quando um arquivo de objeto em seu projeto está desatualizado. Antes de tentar outras soluções para esse erro, execute uma compilação limpa para garantir que os arquivos de objeto atuais.
+Esse erro pode ocorrer quando um arquivo de objeto em seu projeto está desatualizado. Antes de tentar outras soluções para esse erro, execute uma compilação limpa para garantir que os arquivos de objeto sejam atuais.
 
-O Visual Studio define os símbolos a seguir para evitar a vinculação de código incompatível, o que pode causar erros de tempo de execução ou outro comportamento inesperado.
+O Visual Studio define os símbolos a seguir para evitar vincular códigos incompatíveis, que pode causar erros de tempo de execução ou outro comportamento inesperado.
 
-- `_MSC_VER`  
-   Indica os números de versão primária e secundária do compilador Visual C++ que é usado para criar um aplicativo ou uma biblioteca. Código que é compilado, usando uma versão do compilador Visual C++ é incompatível com o código que é compilado, usando uma versão com números de versão principal e secundário diferentes. Para obter mais informações, consulte `_MSC_VER` na [Macros predefinidas](../../preprocessor/predefined-macros.md).
+- `_MSC_VER` Indica os números de versão principal e secundária do compilador Visual C++ que é usado para compilar um aplicativo ou biblioteca. Código que é compilado usando uma versão do compilador do Visual C++ é compatível com o código é compilado usando uma versão que tem números de versão principal e secundário diferentes. Para obter mais informações, consulte `_MSC_VER` na [Macros predefinidas](../../preprocessor/predefined-macros.md).
 
-   Se você está vinculando uma biblioteca que não é compatível com a versão do compilador Visual C++ que você está usando, e você não pode adquirir ou criar uma versão compatível da biblioteca, você pode usar uma versão anterior do compilador para compilar o projeto: alterar o <C1/>conjunto de ferramentas de plataforma** propriedade do projeto para o conjunto de ferramentas anterior. Para obter mais informações, consulte [como: modificar a estrutura de destino e o conjunto de ferramentas de plataforma](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
+   Se você estiver vinculando a uma biblioteca que não é compatível com a versão do compilador do Visual C++ que você está usando, e você não pode adquirir ou compilar uma versão compatível da biblioteca, você pode usar uma versão anterior do compilador para compilar seu projeto: alterar o <C1/>conjunto de ferramentas de plataforma** propriedade do projeto para o conjunto de ferramentas anterior. Para obter mais informações, consulte [como: modificar a estrutura de destino e o conjunto de ferramentas de plataforma](../../build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
-- `_ITERATOR_DEBUG_LEVEL`  
-   Indica o nível de segurança e recursos de depuração que estão habilitados na biblioteca C++ padrão. Esses recursos podem alterar a representação de determinados objetos de biblioteca padrão C++ e, portanto, torná-los incompatíveis com os diferentes que use a segurança e recursos de depuração. Para obter mais informações, consulte [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md).
+- `_ITERATOR_DEBUG_LEVEL` Indica o nível de segurança e funcionalidades de depuração que estão habilitadas na biblioteca padrão C++. Esses recursos podem alterar a representação de determinados objetos de biblioteca padrão C++ e, portanto, torná-los incompatíveis com aqueles que use a segurança diferentes e recursos de depuração. Para obter mais informações, consulte [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md).
 
-- `RuntimeLibrary`  
-   Indica a versão do tempo de execução C e de biblioteca padrão C++ que é usada por um aplicativo ou uma biblioteca. O código que usa uma versão do tempo de execução C ou de biblioteca padrão C++ é incompatível com o código que usa uma versão diferente. Para obter mais informações, consulte [/MD, /MT, /LD (usar biblioteca em tempo de execução)](../../build/reference/md-mt-ld-use-run-time-library.md).
+- `RuntimeLibrary` Indica a versão do tempo de execução do C e de biblioteca padrão C++ que é usado por um aplicativo ou uma biblioteca. Código que usa uma versão de tempo de execução do C ou C++ Standard Library é compatível com o código que usa uma versão diferente. Para obter mais informações, consulte [/MD, /MT, /LD (usar biblioteca em tempo de execução)](../../build/reference/md-mt-ld-use-run-time-library.md).
 
-- `_PPLTASKS_WITH_WINRT`  
-   Indica que o código que usa o [biblioteca de padrões paralelos (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) está vinculado a objetos compilados usando uma configuração diferente para o [/ZW](../../build/reference/zw-windows-runtime-compilation.md) opção de compilador. (**/ZW** dá suporte a C + + CX.) Código que usa ou depende PPL deve ser compilado usando o mesmo **/ZW** configuração que é usada no restante do aplicativo.
+- `_PPLTASKS_WITH_WINRT` Indica que o código que usa o [biblioteca de padrões paralelos (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) está vinculado a objetos compilados usando uma configuração diferente para o [/ZW](../../build/reference/zw-windows-runtime-compilation.md) opção de compilador. (**/ZW** dá suporte a C + + c++ /CLI CX.) Código que usa ou depende PPL deve ser compilado usando o mesmo **/ZW** configuração que é usada no restante do aplicativo.
 
-Verifique se os valores desses símbolos estão consistentes em toda os projetos em sua solução do Visual Studio e também que estão consistentes com as bibliotecas e de código que tem um link para seu aplicativo.
+Certifique-se de que os valores desses símbolos sejam consistentes em todos os projetos na solução do Visual Studio e que também são consistentes com o código e bibliotecas que seu aplicativo é vinculado.
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>Problemas de biblioteca de terceiros e Vcpkg
 
-Se você vir esse erro quando você está tentando configurar uma biblioteca de terceiros como parte de sua compilação, considere o uso de [Vcpkg](../../vcpkg.md), o Gerenciador de pacote Visual C++, para instalar e criar a biblioteca. Vcpkg oferece suporte a um grande e crescente [lista de bibliotecas de terceiros](https://github.com/Microsoft/vcpkg/tree/master/ports)e define todas as propriedades de configuração e dependências necessárias para compilações com êxito como parte de seu projeto. Para obter mais informações, consulte o relacionado [Blog do Visual C++](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/) post.
+Se você vir esse erro quando você está tentando configurar uma biblioteca de terceiros como parte da compilação, considere o uso [Vcpkg](../../vcpkg.md), o Visual C++ Gerenciador de pacotes para instalar e criar a biblioteca. Vcpkg dá suporte a um grande e crescente [lista de bibliotecas de terceiros](https://github.com/Microsoft/vcpkg/tree/master/ports)e define todas as propriedades de configuração e dependências necessárias para compilações bem-sucedidas como parte do seu projeto. Para obter mais informações, consulte relacionado [Blog do Visual C++](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/) lançar.
 
 ## <a name="see-also"></a>Consulte também
 

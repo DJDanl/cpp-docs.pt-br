@@ -31,14 +31,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 16ced0ce1d6c5531b7210231315f001cda4c0bc4
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 58e9d70079dce96153076b03acc1aeca87c50433
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337207"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136187"
 ---
 # <a name="cxmlaccessor-class"></a>Classe CXMLAccessor
+
 Permite que você acessar fontes de dados como dados de cadeia de caracteres quando você não possui conhecimento do esquema do repositório de dados (estrutura subjacente).  
   
 ## <a name="syntax"></a>Sintaxe
@@ -48,7 +49,8 @@ class CXMLAccessor : public CDynamicStringAccessorW
 ```  
 
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho**: atldbcli.h  
+
+**Cabeçalho**: atldbcli.h  
   
 ## <a name="members"></a>Membros  
   
@@ -60,16 +62,19 @@ class CXMLAccessor : public CDynamicStringAccessorW
 |[GetXMLRowData](#getxmlrowdata)|Recupera todo o conteúdo de uma tabela por linhas.|  
   
 ## <a name="remarks"></a>Comentários  
- No entanto, `CXMLAccessor` difere `CDynamicStringAccessorW` em que ele converte todos os dados acessados do armazenamento de dados como XML formatado (marcados) dados. Isso é especialmente útil para a saída para páginas de Web com suporte a XML. Os nomes de marca XML corresponderá a nomes de coluna do repositório de dados mais próximo possível.  
+
+No entanto, `CXMLAccessor` difere `CDynamicStringAccessorW` em que ele converte todos os dados acessados do armazenamento de dados como XML formatado (marcados) dados. Isso é especialmente útil para a saída para páginas de Web com suporte a XML. Os nomes de marca XML corresponderá a nomes de coluna do repositório de dados mais próximo possível.  
   
- Use `CDynamicAccessor` métodos para obter informações de coluna. Você pode usar essas informações de coluna para criar um acessador dinamicamente em tempo de execução.  
+Use `CDynamicAccessor` métodos para obter informações de coluna. Você pode usar essas informações de coluna para criar um acessador dinamicamente em tempo de execução.  
   
- As informações de coluna são armazenadas em um buffer criadas e gerenciadas por esta classe. Obter informações de coluna usando [GetXMLColumnData](#getxmlcolumndata) ou obter dados de coluna por linhas usando [GetXMLRowData](#getxmlrowdata).  
+As informações de coluna são armazenadas em um buffer criadas e gerenciadas por esta classe. Obter informações de coluna usando [GetXMLColumnData](#getxmlcolumndata) ou obter dados de coluna por linhas usando [GetXMLRowData](#getxmlrowdata).  
   
 ## <a name="example"></a>Exemplo  
- [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]  
+
+[!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]  
 
 ## <a name="getxmlcolumndata"></a> Cxmlaccessor:: Getxmlcolumndata
+
 Recupera as informações de tipo de coluna de uma tabela como dados de cadeia de caracteres formatada em XML, por coluna.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -79,22 +84,26 @@ HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *strOutput*  
- [out] Uma referência para um buffer de cadeia de caracteres que contém as informações de tipo de coluna a ser recuperado. A cadeia de caracteres é formatada com nomes de marca XML que correspondem aos nomes de coluna do repositório de dados.  
+
+*strOutput*<br/>
+[out] Uma referência para um buffer de cadeia de caracteres que contém as informações de tipo de coluna a ser recuperado. A cadeia de caracteres é formatada com nomes de marca XML que correspondem aos nomes de coluna do repositório de dados.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um dos valores HRESULT padrão.  
+
+Um dos valores HRESULT padrão.  
   
 ### <a name="remarks"></a>Comentários  
- O exemplo a seguir mostra como as informações de tipo de coluna são formatadas em XML. `type` Especifica o tipo de dados da coluna. Observe que os tipos de dados são baseados em tipos de dados OLE DB, não aquelas do banco de dados que está sendo acessado.  
+
+O exemplo a seguir mostra como as informações de tipo de coluna são formatadas em XML. `type` Especifica o tipo de dados da coluna. Observe que os tipos de dados são baseados em tipos de dados OLE DB, não aquelas do banco de dados que está sendo acessado.  
   
- `<columninfo>`  
+`<columninfo>`  
   
- `<column type = I2/> ColumnName`  
+`<column type = I2/> ColumnName`  
   
- `</columninfo>` 
+`</columninfo>` 
 
 ## <a name="getxmlrowdata"></a> Cxmlaccessor:: Getxmlrowdata
+
 Recupera todo o conteúdo de uma tabela como dados de cadeia de caracteres formatada em XML, por linha.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -105,31 +114,35 @@ HRESULT GetXMLRowData(CSimpleStringW& strOutput,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *strOutput*  
- [out] Uma referência a um buffer que contém os dados da tabela a ser recuperado. Os dados são formatados como dados de cadeia de caracteres com os nomes de marca XML que correspondem aos nomes de coluna do repositório de dados.  
+
+*strOutput*<br/>
+[out] Uma referência a um buffer que contém os dados da tabela a ser recuperado. Os dados são formatados como dados de cadeia de caracteres com os nomes de marca XML que correspondem aos nomes de coluna do repositório de dados.  
   
- *bAppend*  
- [in] Um valor booliano que especifica se deve acrescentar uma cadeia de caracteres ao final dos dados de saída.  
+*bAppend*<br/>
+[in] Um valor booliano que especifica se deve acrescentar uma cadeia de caracteres ao final dos dados de saída.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um dos valores HRESULT padrão.  
+
+Um dos valores HRESULT padrão.  
   
 ### <a name="remarks"></a>Comentários  
- O exemplo a seguir mostra como os dados da linha são formatados em XML. `DATA` abaixo representa os dados da linha. Use mover métodos para mover para a linha desejada.  
+
+O exemplo a seguir mostra como os dados da linha são formatados em XML. `DATA` abaixo representa os dados da linha. Use mover métodos para mover para a linha desejada.  
   
- `<row>`  
+`<row>`  
   
- `<column name>DATA</column name>`  
+`<column name>DATA</column name>`  
   
- `</row>`   
+`</row>`   
   
 ## <a name="see-also"></a>Consulte também  
- [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [Classe CAccessor](../../data/oledb/caccessor-class.md)   
- [Classe CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)   
- [Classe CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)   
- [Classe CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)   
- [Classe CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md)   
- [Classe CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md)   
- [Classe CManualAccessor](../../data/oledb/cmanualaccessor-class.md)
+
+[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Classe CAccessor](../../data/oledb/caccessor-class.md)<br/>
+[Classe CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)<br/>
+[Classe CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[Classe CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)<br/>
+[Classe CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md)<br/>
+[Classe CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md)<br/>
+[Classe CManualAccessor](../../data/oledb/cmanualaccessor-class.md)

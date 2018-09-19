@@ -1,5 +1,5 @@
 ---
-title: C3273 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3273 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81f238c905b5a3257ef15da311c95efdfcac5c9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a23e9643dd302836b00c18c0c44c87ee1cfd2cfe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244700"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118385"
 ---
-# <a name="compiler-error-c3273"></a>C3273 de erro do compilador
-Finally não pode ser usado em um bloco de exceção no código não gerenciado.  
-  
- O exemplo a seguir gera C3273:  
-  
-```  
-// C3273.cpp  
-// compile with: /GX  
-int main()  
-{     
-   try  
-   {  
-   }  
-   catch (int)  
-   {  
-   }  
-   __finally   // C3273, remove __finally clause  
-   {  
-   }  
-}  
+# <a name="compiler-error-c3273"></a>Erro do compilador C3273
+
+Finally não pode ser usado em um bloco de exceção no código não gerenciado.
+
+O exemplo a seguir gera C3273:
+
+```
+// C3273.cpp
+// compile with: /GX
+int main()
+{
+   try
+   {
+   }
+   catch (int)
+   {
+   }
+   __finally   // C3273, remove __finally clause
+   {
+   }
+}
 ```

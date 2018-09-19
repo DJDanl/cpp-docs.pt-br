@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4163 | Microsoft Docs
+title: Compilador aviso (nível 1) C4163 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d39297a17c5e7c7b6b95fd0e43f33849c092fa1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 677264a557b8d95adc99f7fa804ebaa26e53fd6e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275535"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118211"
 ---
-# <a name="compiler-warning-level-1-c4163"></a>Compilador C4163 de aviso (nível 1)
-'Identificador': não disponível como uma função intrínseca  
-  
- A função especificada não pode ser usada como um [intrínseco](../../preprocessor/intrinsic.md) função. O compilador ignora o nome de função inválido.  
-  
- O exemplo a seguir gera C4163:  
-  
-```  
-// C4163.cpp  
-// compile with: /W1 /LD  
-#include <math.h>  
-#pragma intrinsic(mysin)   // C4163  
-// try the following line instead  
-// #pragma intrinsic(sin)  
+# <a name="compiler-warning-level-1-c4163"></a>Compilador aviso (nível 1) C4163
+
+'identifier': não disponível como uma função intrínseca
+
+A função especificada não pode ser usada como um [intrínseco](../../preprocessor/intrinsic.md) função. O compilador ignora o nome de função inválido.
+
+O exemplo a seguir gera C4163:
+
+```
+// C4163.cpp
+// compile with: /W1 /LD
+#include <math.h>
+#pragma intrinsic(mysin)   // C4163
+// try the following line instead
+// #pragma intrinsic(sin)
 ```

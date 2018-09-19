@@ -32,32 +32,34 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 84288a5da836661bfda5720872008adf248fb246
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 07c888550cbe0d46443147ac9052872df2ab3181
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338321"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118122"
 ---
 # <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>Conjunto de registros: indicadores e posições absolutas (ODBC)
+
 Este tópico se aplica às classes ODBC do MFC.  
   
- Ao navegar por meio de um conjunto de registros, muitas vezes você precisa de uma maneira de retornar a um determinado registro. Indicador e a posição absoluta de um registro fornecem dois métodos.  
+Ao navegar por meio de um conjunto de registros, muitas vezes você precisa de uma maneira de retornar a um determinado registro. Indicador e a posição absoluta de um registro fornecem dois métodos.  
   
- Este tópico explica:  
+Este tópico explica:  
   
--   [Como usar indicadores](#_core_bookmarks_in_mfc_odbc).  
+- [Como usar indicadores](#_core_bookmarks_in_mfc_odbc).  
   
--   [Como definir o registro atual usando as posições absolutas](#_core_absolute_positions_in_mfc_odbc).  
+- [Como definir o registro atual usando as posições absolutas](#_core_absolute_positions_in_mfc_odbc).  
   
 ##  <a name="_core_bookmarks_in_mfc_odbc"></a> Indicadores no ODBC do MFC  
- Um indicador identifica exclusivamente um registro. Quando você navega por meio de um conjunto de registros, você não pode sempre contar a posição absoluta de um registro porque os registros podem ser excluídos do conjunto de registros. O modo seguro para controlar a posição de um registro é usar seu indicador. Classe `CRecordset` fornece funções de membro para:  
+
+Um indicador identifica exclusivamente um registro. Quando você navega por meio de um conjunto de registros, você não pode sempre contar a posição absoluta de um registro porque os registros podem ser excluídos do conjunto de registros. O modo seguro para controlar a posição de um registro é usar seu indicador. Classe `CRecordset` fornece funções de membro para:  
   
--   Obtendo o indicador do registro atual, portanto, você pode salvá-lo em uma variável ([GetBookmark](../../mfc/reference/crecordset-class.md#getbookmark)).  
+- Obtendo o indicador do registro atual, portanto, você pode salvá-lo em uma variável ([GetBookmark](../../mfc/reference/crecordset-class.md#getbookmark)).  
   
--   Mover rapidamente para um determinado registro especificando seu indicador, o que você salvou anteriormente em uma variável ([SetBookmark](../../mfc/reference/crecordset-class.md#setbookmark)).  
+- Mover rapidamente para um determinado registro especificando seu indicador, o que você salvou anteriormente em uma variável ([SetBookmark](../../mfc/reference/crecordset-class.md#setbookmark)).  
   
- O exemplo a seguir ilustra como usar essas funções de membro para marcar o registro atual e retornar posteriormente a ele:  
+O exemplo a seguir ilustra como usar essas funções de membro para marcar o registro atual e retornar posteriormente a ele:  
   
 ```cpp  
 // rs is a CRecordset or  
@@ -72,23 +74,25 @@ rs.GetBookmark( varRecordToReturnTo );
 rs.SetBookmark( varRecordToReturnTo );  
 ```  
   
- Você não precisa extrair o tipo de dados subjacente dos [classe CDBVariant](../../mfc/reference/cdbvariant-class.md) objeto. Atribua o valor com `GetBookmark` e retornar para esse indicador com `SetBookmark`.  
+Você não precisa extrair o tipo de dados subjacente dos [classe CDBVariant](../../mfc/reference/cdbvariant-class.md) objeto. Atribua o valor com `GetBookmark` e retornar para esse indicador com `SetBookmark`.  
   
 > [!NOTE]
 >  Dependendo do driver ODBC e o tipo de conjunto de registros, os indicadores podem não ter suporte. Você pode determinar facilmente se os indicadores são compatíveis com chamando [CRecordset::CanBookmark](../../mfc/reference/crecordset-class.md#canbookmark). Além disso, se houver suporte para indicadores, é necessário escolher explicitamente para implementá-los, especificando o `CRecordset::useBookmarks` opção a [{1&gt;crecordset::Open&lt;1](../../mfc/reference/crecordset-class.md#open) função de membro. Você também deve verificar a persistência de indicadores depois de determinadas operações de conjunto de registros. Por exemplo, se você `Requery` um conjunto de registros, indicadores talvez não sejam mais válidos. Chame [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) para verificar se você pode chamar com segurança `SetBookmark`.  
   
 ##  <a name="_core_absolute_positions_in_mfc_odbc"></a> Posições absolutas em MFC ODBC  
- Além de indicadores, classe `CRecordset` permite que você defina o registro atual, especificando uma posição ordinal. Isso é chamado de posicionamento absoluto.  
+
+Além de indicadores, classe `CRecordset` permite que você defina o registro atual, especificando uma posição ordinal. Isso é chamado de posicionamento absoluto.  
   
 > [!NOTE]
 >  O posicionamento absoluto não está disponível em conjuntos de registros somente de encaminhamento. Para obter mais informações sobre conjuntos de registros somente encaminhamento, consulte [conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md).  
   
- Para mover o ponteiro de registro atual usando a posição absoluta, chame [CRecordset::SetAbsolutePosition](../../mfc/reference/crecordset-class.md#setabsoluteposition). Quando você passa um valor para `SetAbsolutePosition`, o registro correspondente a posição ordinal torna-se o registro atual.  
+Para mover o ponteiro de registro atual usando a posição absoluta, chame [CRecordset::SetAbsolutePosition](../../mfc/reference/crecordset-class.md#setabsoluteposition). Quando você passa um valor para `SetAbsolutePosition`, o registro correspondente a posição ordinal torna-se o registro atual.  
   
 > [!NOTE]
 >  A posição absoluta de um registro é potencialmente não confiável. Se o usuário exclui registros do conjunto de registros, altera a posição ordinal de qualquer registro subsequente. Os indicadores são o método recomendado para mover o registro atual. Para obter mais informações, consulte [indicadores em MFC ODBC](#_core_bookmarks_in_mfc_odbc).  
   
- Para obter mais informações sobre navegação de conjunto de registros, consulte [conjunto de registros: rolando (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
+Para obter mais informações sobre navegação de conjunto de registros, consulte [conjunto de registros: rolando (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)
+
+[Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)

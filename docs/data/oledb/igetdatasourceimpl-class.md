@@ -25,14 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aee6122e8dbcf85f882e5b78475a2c332b855721
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 9ecc830937e36e213177205549ee4dd4e989e0ed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572026"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118694"
 ---
 # <a name="igetdatasourceimpl-class"></a>Classe IGetDataSourceImpl
+
 Fornece uma implementação de [IGetDataSource](/previous-versions/windows/desktop/ms709721\(v=vs.85\)) objeto.  
   
 ## <a name="syntax"></a>Sintaxe
@@ -43,11 +44,13 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *T*  
- Sua classe, derivada de `IGetDataSourceImpl`.  
+
+*T*<br/>
+Sua classe, derivada de `IGetDataSourceImpl`.  
 
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atldb.h  
+
+**Cabeçalho:** atldb.h  
   
 ## <a name="members"></a>Membros  
   
@@ -58,9 +61,11 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 |[GetDataSource](#getdatasource)|Retorna um ponteiro de interface no objeto de fonte de dados que criou a sessão.|  
   
 ## <a name="remarks"></a>Comentários  
- Isso é uma interface obrigatória na sessão para a obtenção de um ponteiro de interface para o objeto de fonte de dados.  
+
+Isso é uma interface obrigatória na sessão para a obtenção de um ponteiro de interface para o objeto de fonte de dados.  
 
 ## <a name="getdatasource"></a> Igetdatasourceimpl:: Getdatasource
+
 Retorna um ponteiro de interface no objeto de fonte de dados que criou a sessão.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -71,11 +76,14 @@ STDMETHOD(GetDataSource)(REFIID riid,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443\(v=vs.85\)) na *referência do programador do OLE DB*.  
+
+Ver [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443\(v=vs.85\)) na *referência do programador do OLE DB*.  
   
 ### <a name="remarks"></a>Comentários  
- É útil se você precisar acessar as propriedades no objeto de fonte de dados.  
+
+É útil se você precisar acessar as propriedades no objeto de fonte de dados.  
   
 ## <a name="see-also"></a>Consulte também  
- [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

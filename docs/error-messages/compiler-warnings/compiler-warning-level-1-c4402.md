@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4402 | Microsoft Docs
+title: Compilador aviso (nível 1) C4402 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 019171730d81697676a935bf3745eb29083fe88a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 395fe8a9621923bbb4e4667921bce2540bfef8b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274327"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118369"
 ---
-# <a name="compiler-warning-level-1-c4402"></a>Compilador C4402 de aviso (nível 1)
-deve usar operador PTR  
-  
- Um tipo é usado em um operando sem um operador PTR quando referir-se a ou a conversão para um tipo de código de assembly embutido.  
-  
- O compilador assumirá que o operador PTR.
+# <a name="compiler-warning-level-1-c4402"></a>Compilador aviso (nível 1) C4402
+
+deve usar operador PTR
+
+Um tipo é usado em um operando sem um operador PTR quando referindo-se a ou de conversão para um tipo no código de assembly embutido.
+
+O compilador pressupõe que o operador PTR.

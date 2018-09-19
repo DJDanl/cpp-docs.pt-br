@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4dc1e95b60b36b42d8617611a15aff966386c33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06a76aaf4878b9238da6d34de66ef40a260a5a5e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290056"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118525"
 ---
-# <a name="compiler-warning-level-3-c4523"></a>Compilador C4523 de aviso (nível 3)
-'class': vários destruidores especificados  
-  
- A classe tem vários destruidores.
+# <a name="compiler-warning-level-3-c4523"></a>Compilador aviso (nível 3) C4523
+
+'class': vários destruidores especificados
+
+A classe tem vários destruidores.
