@@ -20,20 +20,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0657b05619a966ed171630d00adcd9303af7e18b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6691e4935d46b32bc8f433823888bb7f53a36890
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347023"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398827"
 ---
 # <a name="oncmdmsg-handler"></a>Manipulador OnCmdMsg
-Para fazer o roteamento de comandos, cada destino do comando chama o `OnCmdMsg` a função de membro do próximo destino de comando na sequência. Comando destina-se usar `OnCmdMsg` para determinar se eles possam lidar com um comando e encaminhá-lo para outro destino de comando se ele não podem lidar com eles.  
-  
- Cada classe de destino do comando pode substituir o `OnCmdMsg` função de membro. As substituições permitem que os comandos de rota cada classe para um destino específico de Avançar. Uma janela do quadro, por exemplo, sempre rotas comandos à sua janela filho atual ou o modo de exibição, conforme mostrado na tabela [rota de comando padrão](../mfc/command-routing.md).  
-  
- O padrão `CCmdTarget` implementação de `OnCmdMsg` usa o mapa de mensagem da classe de destino de comando para procurar uma função de manipulador para cada mensagem de comando que recebe — da mesma forma que as mensagens padrão são pesquisadas. Se ele encontrar uma correspondência, ele chama o manipulador. Pesquisa de mapa de mensagem é explicado em [como o Framework pesquisa mapas de mensagem](../mfc/how-the-framework-searches-message-maps.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Como o Framework chama um manipulador](../mfc/how-the-framework-calls-a-handler.md)
+
+Para fazer o roteamento de comandos, cada destino do comando chama o `OnCmdMsg` função de membro de destino do comando Avançar na sequência. Comando destina-se usar `OnCmdMsg` para determinar se eles podem lidar com um comando e encaminhá-lo para outro destino de comando se ele não podem lidar com eles.
+
+Cada classe de destino do comando pode substituir o `OnCmdMsg` função de membro. As substituições permitem que os comandos de rota cada classe para um destino específico de Avançar. Uma janela do quadro, por exemplo, sempre roteia comandos em sua janela filho da atual ou o modo de exibição, conforme mostrado na tabela [rota de comando padrão](../mfc/command-routing.md).
+
+O padrão `CCmdTarget` implementação de `OnCmdMsg` usa o mapa da mensagem da classe de destino de comando para procurar por uma função de manipulador para cada mensagem de comando, ele recebe — da mesma forma que as mensagens padrão serão pesquisadas. Se ele encontrar uma correspondência, ele chama o manipulador. Pesquisa de mapa de mensagem é explicado em [como o Framework pesquisa mapas de mensagem](../mfc/how-the-framework-searches-message-maps.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Como o Framework chama um manipulador](../mfc/how-the-framework-calls-a-handler.md)
 

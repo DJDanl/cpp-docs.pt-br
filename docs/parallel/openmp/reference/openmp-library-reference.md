@@ -12,24 +12,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45f6206960b023bac7b99b867966703a210d7b1e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f3812f698f034b5610f90c57b94b56f0b8648417
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694427"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403793"
 ---
 # <a name="openmp-library-reference"></a>OpenMP Referência de biblioteca
-Fornece links para construções usadas na API do OpenMP.  
-  
- A implementação do Visual C++ do padrão OpenMP inclui as seguintes construções.  
-  
-|Constructo|Descrição|  
-|---------------|-----------------|  
-|[Bibliotecas](../../../parallel/openmp/reference/openmp-libraries.md)|Discute os arquivos. lib que compõem as bibliotecas de tempo de execução de OpenMP no Visual C++.|  
-|[Tipos de Dados](../../../parallel/openmp/reference/openmp-data-types.md)|Fornece links para os tipos de dados usados na API do OpenMP.|  
-|[Variáveis de ambiente](../../../parallel/openmp/reference/openmp-environment-variables.md)|Fornece links para variáveis de ambiente usadas na API do OpenMP.|  
-|[Funções](../../../parallel/openmp/reference/openmp-functions.md)|Fornece links para funções usadas na API do OpenMP.|  
-  
-## <a name="see-also"></a>Consulte também  
- [OpenMP](../../../parallel/openmp/openmp-in-visual-cpp.md)
+
+Fornece links para construções usadas na API OpenMP.
+
+A implementação do Visual C++ do OpenMP padrão inclui as seguintes construções.
+
+|Constructo|Descrição|
+|---------------|-----------------|
+|[Bibliotecas](../../../parallel/openmp/reference/openmp-libraries.md)|Discute os arquivos. lib que compõem as bibliotecas de tempo de execução OpenMP no Visual C++.|
+|[Tipos de Dados](../../../parallel/openmp/reference/openmp-data-types.md)|Fornece links para os tipos de dados usados na API OpenMP.|
+|[Variáveis de ambiente](../../../parallel/openmp/reference/openmp-environment-variables.md)|Fornece links para as variáveis de ambiente usadas na API OpenMP.|
+|[Funções](../../../parallel/openmp/reference/openmp-functions.md)|Fornece links para as funções usadas na API OpenMP.|
+
+## <a name="see-also"></a>Consulte também
+
+[OpenMP](../../../parallel/openmp/openmp-in-visual-cpp.md)

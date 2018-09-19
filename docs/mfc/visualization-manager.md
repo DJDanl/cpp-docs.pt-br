@@ -14,40 +14,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 590c21c3a628af3d8e4c7fc3e5cb0330a0af439a
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: fce4b036c6a6ae3692353ae02e7d36eb5ddfd1e1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37123338"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398476"
 ---
 # <a name="visualization-manager"></a>Gerenciador de visualização
 
-O Gerenciador de visual é um objeto que controla a aparência de um aplicativo inteiro. Ele atua como uma única classe onde você pode colocar todo o código de desenho para seu aplicativo. A biblioteca do MFC inclui vários gerenciadores de visual. Se você quiser criar uma exibição personalizada para seu aplicativo, você também pode criar seu próprio Gerenciador de visual. As imagens a seguir mostram o mesmo aplicativo quando diferentes gerenciadores visuais estão habilitados:
+O Gerenciador visual é um objeto que controla a aparência de todo o aplicativo. Ele atua como uma única classe em que você pode colocar todo o código de desenho para seu aplicativo. A biblioteca MFC inclui vários gerenciadores de visual. Você também pode criar seu próprio Gerenciador visual se você quiser criar uma exibição personalizada para seu aplicativo. As imagens a seguir mostram o mesmo aplicativo quando os diferentes gerentes visuais estão habilitados:
 
- ![MyApp quando processado por CMFCVisualManagerWindows](../mfc/media/vmwindows.png "vmwindows") MyApp que usa o Gerenciador de visual CMFCVisualManagerWindows
+![MyApp conforme renderizado pelo CMFCVisualManagerWindows](../mfc/media/vmwindows.png "vmwindows") MyApp que usa o Gerenciador de visual CMFCVisualManagerWindows
 
- ![MyApp quando processado por CMFCVisualManagerVS2005](../mfc/media/vmvs2005.png "vmvs2005") MyApp que usa o Gerenciador de visual CMFCVisualManagerVS2005
+![MyApp conforme renderizado pelo CMFCVisualManagerVS2005](../mfc/media/vmvs2005.png "vmvs2005") MyApp que usa o Gerenciador de visual CMFCVisualManagerVS2005
 
- ![MyApp quando processado por CMFCVisualManagerOfficeXP](../mfc/media/vmofficexp.png "vmofficexp") MyApp que usa o Gerenciador de visual CMFCVisualManagerOfficeXP
+![MyApp conforme renderizado pelo CMFCVisualManagerOfficeXP](../mfc/media/vmofficexp.png "vmofficexp") MyApp que usa o Gerenciador de visual CMFCVisualManagerOfficeXP
 
- ![MyApp quando processado por CMFCVisualManagerOffice2003](../mfc/media/vmoffice2003.png "vmoffice2003") MyApp que usa o Gerenciador de visual CMFCVisualManagerOffice2003
+![MyApp conforme renderizado pelo CMFCVisualManagerOffice2003](../mfc/media/vmoffice2003.png "vmoffice2003") MyApp que usa o Gerenciador de visual CMFCVisualManagerOffice2003
 
- ![MyApp quando processado por CMFCVisualManagerOffice2007](../mfc/media/msoffice2007.png "msoffice2007") MyApp que usa o Gerenciador de visual CMFCVisualManagerOffice2007
+![MyApp conforme renderizado pelo CMFCVisualManagerOffice2007](../mfc/media/msoffice2007.png "msoffice2007") MyApp que usa o Gerenciador de visual CMFCVisualManagerOffice2007
 
-Por padrão, o Gerenciador de visual mantém o código de desenho de vários elementos de interface gráfica do usuário. Para fornecer elementos de interface do usuário personalizados, você precisa substituir os métodos de desenho relacionados do Gerenciador de visual. Para obter a lista desses métodos, consulte [CMFCVisualManager classe](../mfc/reference/cmfcvisualmanager-class.md). Os métodos que você pode substituir para fornecer uma aparência personalizada são todos os métodos que começam com `OnDraw`.
+Por padrão, o Gerenciador visual mantém o código de desenho para vários elementos de interface gráfica do usuário. Para fornecer elementos de interface do usuário personalizados, você precisa substituir os métodos de desenho relacionados do Gerenciador visual. Para obter a lista desses métodos, consulte [classe CMFCVisualManager](../mfc/reference/cmfcvisualmanager-class.md). Os métodos que você pode substituir para fornecer uma aparência personalizada são todos os métodos que começam com `OnDraw`.
 
-O aplicativo pode ter apenas um `CMFCVisualManager` objeto. Para obter um ponteiro para o Gerenciador de visual para o seu aplicativo, chame a função estática [CMFCVisualManager::GetInstance](../mfc/reference/cmfcvisualmanager-class.md#getinstance). Como todos os gerenciadores de visual herdam de `CMFCVisualManager`, o `CMFCVisualManager::GetInstance` método obter um ponteiro para o gerente visual, mesmo se você criar um Gerenciador de visual personalizado.
+Seu aplicativo pode ter apenas um `CMFCVisualManager` objeto. Para obter um ponteiro para o Gerenciador visual para seu aplicativo, chame a função estática [CMFCVisualManager::GetInstance](../mfc/reference/cmfcvisualmanager-class.md#getinstance). Como todos os gerenciadores de visual herdam de `CMFCVisualManager`, o `CMFCVisualManager::GetInstance` método receberá um ponteiro para o Gerenciador visual apropriado, mesmo se você criar um Gerenciador de visual personalizado.
 
-Se você quiser criar um Gerenciador de visual personalizado, ele deve ser derivado de um Gerenciador de visual que já existe. A classe padrão derivar é `CMFCVisualManager`. No entanto, você pode usar um Gerenciador de visual diferente se lembra melhor o que você deseja para seu aplicativo. Por exemplo, se você quiser usar o `CMFCVisualManagerOffice2007` visual gerente, mas queira apenas alterar a aparência dos separadores, você pode derivar de sua classe personalizada de `CMFCVisualManagerOffice2007`. Nesse cenário, você deve substituir apenas os métodos para desenhar separadores.
+Se você quiser criar um Gerenciador de visual personalizado, você deve derivá-lo de um gerente que já existe. A classe derive de padrão é `CMFCVisualManager`. No entanto, você pode usar um Gerenciador de visual diferente se lembra melhor o que você deseja para seu aplicativo. Por exemplo, se você quiser usar o `CMFCVisualManagerOffice2007` Gerenciador visual, mas queria apenas alterar a aparência de separadores, você pode derivar sua classe personalizada de `CMFCVisualManagerOffice2007`. Nesse cenário, você deve substituir apenas os métodos para desenhar separadores.
 
-Há duas maneiras de usar um Gerenciador de visual específico para seu aplicativo. É uma maneira chamar o [CMFCVisualManager:: SetDefaultManager](../mfc/reference/cmfcvisualmanager-class.md#setdefaultmanager) método e o gerente de visual como um parâmetro de passagem. O exemplo de código a seguir mostra como você usaria o `CMFCVisualManagerVS2005` manager visual com este método:
+Há duas maneiras possíveis de usar um Gerenciador visual específico para seu aplicativo. É uma maneira de chamar o [CMFCVisualManager::](../mfc/reference/cmfcvisualmanager-class.md#setdefaultmanager) método e passar o Gerenciador visual apropriado como parâmetro. O exemplo de código a seguir mostra como você usaria o `CMFCVisualManagerVS2005` Gerenciador visual com esse método:
 
 ```cpp
 CMFCVisualManager::SetDefaultManager (RUNTIME_CLASS (CMFCVisualManagerVS2005));
 ```
 
-A outra maneira de usar um Gerenciador de visual em seu aplicativo é criá-lo manualmente. O aplicativo, em seguida, usará este novo Gerenciador de visual para todo o processamento. No entanto, como pode haver apenas um `CMFCVisualManager` objeto por aplicativo, você terá que excluir o Gerenciador de visual atual antes de criar um novo. No exemplo a seguir, `CMyVisualManager` é um Gerenciador de visual personalizado que é derivado de `CMFCVisualManager`. O método a seguir alterará o Gerenciador visual é usado para exibir seu aplicativo, dependendo de um índice:
+A outra maneira de usar um Gerenciador de visual em seu aplicativo é criá-lo manualmente. O aplicativo, em seguida, usará esse novo Gerenciador visual para todas as a renderização. No entanto, porque pode haver apenas um `CMFCVisualManager` objeto por aplicativo, você precisará excluir o Gerenciador visual atual antes de criar um novo. No exemplo a seguir `CMyVisualManager` é um Gerenciador de visual personalizado que é derivado de `CMFCVisualManager`. O método a seguir alterará o Gerenciador visual usado para exibir seu aplicativo, dependendo de um índice:
 
 ```cpp
 void CMyApp::SetSkin (int index)
@@ -59,7 +59,7 @@ void CMyApp::SetSkin (int index)
 
     switch (index)
     {
-    case DEFAULT_STYLE: 
+    case DEFAULT_STYLE:
         // The following statement creates a new CMFCVisualManager
         CMFCVisualManager::GetInstance();
         break;
@@ -79,5 +79,5 @@ void CMyApp::SetSkin (int index)
 
 ## <a name="see-also"></a>Consulte também
 
-[Elementos da Interface do usuário](../mfc/user-interface-elements-mfc.md)  
-[Classe CMFCVisualManager](../mfc/reference/cmfcvisualmanager-class.md)  
+[Elementos da Interface do usuário](../mfc/user-interface-elements-mfc.md)<br/>
+[Classe CMFCVisualManager](../mfc/reference/cmfcvisualmanager-class.md)

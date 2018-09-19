@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 286e71b427bd39df6c493c7727b66ef27b72c766
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: e3b85faff95e3053ea46edcedef7443cdab445d3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314333"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422216"
 ---
 # <a name="changing-image-properties-image-editor-for-icons"></a>Alterando propriedades da imagem (editor de imagens para ícones)
 
@@ -52,6 +52,6 @@ Nenhum
 
 ## <a name="see-also"></a>Consulte também
 
-[Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)  
-[Editando recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[Editando recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Editor de imagens para ícones](../windows/image-editor-for-icons.md)

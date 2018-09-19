@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9b85a10c68b7379f0e59bf859b3d8badf7413195
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a20815972f595a15097a057537d6cb5cdca4fb4b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208335"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408319"
 ---
 # <a name="inspectableclass-macro"></a>Macro InspectableClass
 
@@ -36,10 +36,10 @@ InspectableClass(
 
 ### <a name="parameters"></a>Parâmetros
 
-*runtimeClassName*  
+*runtimeClassName*<br/>
 O nome textual completo da classe de tempo de execução.
 
-*trustLevel*  
+*trustLevel*<br/>
 Um dos [TrustLevel](https://msdn.microsoft.com/library/br224625.aspx) valores enumerados.
 
 ## <a name="remarks"></a>Comentários

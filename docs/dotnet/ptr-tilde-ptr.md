@@ -21,93 +21,98 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c3449adef6da61b7e671c8441ef4f1b51440fd96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3457bb4bda5e08de676488d6100795b5c04b61a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33160442"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399568"
 ---
 # <a name="ptrptr"></a>ptr::~ptr
-Destructs um `com::ptr`.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-~ptr();  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Na destruição, o `com::ptr` libera todas as referências que possui seu objeto COM. Supondo que não existem outras referências mantidas para o objeto COM, o objeto COM será excluído e sua memória liberada.  
-  
-## <a name="example"></a>Exemplo  
- Este exemplo implementa uma classe CLR que usa um `com::ptr` para incluir o membro privado `IXMLDOMDocument` objeto.  No `main` função, os dois `XmlDocument` destruidores objetos serão chamados quando saem do escopo do `try` bloco, resultando em subjacente `com::ptr` destruidor sendo chamado, liberando propriedade todas as referências para o COM objeto.  
-  
-```  
-// comptr_dtor.cpp  
-// compile with: /clr /link msxml2.lib  
-#include <msxml2.h>  
-#include <msclr\com\ptr.h>  
-  
-#import <msxml3.dll> raw_interfaces_only  
-  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-using namespace msclr;  
-  
-// a ref class that uses a com::ptr to contain an   
-// IXMLDOMDocument object  
-ref class XmlDocument {  
-public:  
-   // construct the internal com::ptr with a null interface  
-   // and use CreateInstance to fill it  
-   XmlDocument(String^ progid) {  
-      m_ptrDoc.CreateInstance(progid);     
-   }  
-  
-   // construct the internal com::ptr with a COM object  
-   XmlDocument(IXMLDOMDocument* pDoc) : m_ptrDoc(pDoc) {}  
-  
-   // note that the destructor will call the com::ptr destructor  
-   // and automatically release the reference to the COM object  
-  
-private:  
-   com::ptr<IXMLDOMDocument> m_ptrDoc;  
-};  
-  
-// use the ref class to handle an XML DOM Document object  
-int main() {  
-   IXMLDOMDocument* pDoc = NULL;  
-  
-   try {  
-      // create an XML DOM document object  
-      Marshal::ThrowExceptionForHR(CoCreateInstance(CLSID_DOMDocument30, NULL,   
-         CLSCTX_ALL, IID_IXMLDOMDocument, (void**)&pDoc));  
-      // construct the ref class with the COM object  
-      XmlDocument doc1(pDoc);  
-  
-      // or create the class from a progid string  
-      XmlDocument doc2("Msxml2.DOMDocument.3.0");  
-   }  
-   // doc1 and doc2 destructors are called when they go out of scope  
-   // and the internal com::ptr releases its reference to the COM object  
-   catch (Exception^ e) {  
-      Console::WriteLine(e);     
-   }  
-   finally {  
-      if (NULL != pDoc) {  
-         pDoc->Release();        
-      }  
-   }  
-}  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Arquivo de cabeçalho** \<msclr\com\ptr.h >  
-  
- **Namespace** msclr::com  
-  
-## <a name="see-also"></a>Consulte também  
- [Membros PTR](../dotnet/ptr-members.md)   
- [PTR::PTR](../dotnet/ptr-ptr.md)   
- [ptr::CreateInstance](../dotnet/ptr-createinstance.md)
+
+Destructs um `com::ptr`.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+~ptr();
+```
+
+## <a name="remarks"></a>Comentários
+
+Na destruição, o `com::ptr` libera todas as referências que possui a seu objeto COM. Supondo que não há nenhuma outra referência mantida para o objeto COM, o objeto COM será excluído e sua memória liberada.
+
+## <a name="example"></a>Exemplo
+
+Este exemplo implementa uma classe CLR que usa um `com::ptr` encapsular seu membro privado `IXMLDOMDocument` objeto.  No `main` função, os dois `XmlDocument` destruidores de objetos serão chamados quando eles saem do escopo a `try` bloco, resultando em subjacente `com::ptr` destructor seja chamado, liberando possuídas todas as referências para o COM objeto.
+
+```
+// comptr_dtor.cpp
+// compile with: /clr /link msxml2.lib
+#include <msxml2.h>
+#include <msclr\com\ptr.h>
+
+#import <msxml3.dll> raw_interfaces_only
+
+using namespace System;
+using namespace System::Runtime::InteropServices;
+using namespace msclr;
+
+// a ref class that uses a com::ptr to contain an
+// IXMLDOMDocument object
+ref class XmlDocument {
+public:
+   // construct the internal com::ptr with a null interface
+   // and use CreateInstance to fill it
+   XmlDocument(String^ progid) {
+      m_ptrDoc.CreateInstance(progid);
+   }
+
+   // construct the internal com::ptr with a COM object
+   XmlDocument(IXMLDOMDocument* pDoc) : m_ptrDoc(pDoc) {}
+
+   // note that the destructor will call the com::ptr destructor
+   // and automatically release the reference to the COM object
+
+private:
+   com::ptr<IXMLDOMDocument> m_ptrDoc;
+};
+
+// use the ref class to handle an XML DOM Document object
+int main() {
+   IXMLDOMDocument* pDoc = NULL;
+
+   try {
+      // create an XML DOM document object
+      Marshal::ThrowExceptionForHR(CoCreateInstance(CLSID_DOMDocument30, NULL,
+         CLSCTX_ALL, IID_IXMLDOMDocument, (void**)&pDoc));
+      // construct the ref class with the COM object
+      XmlDocument doc1(pDoc);
+
+      // or create the class from a progid string
+      XmlDocument doc2("Msxml2.DOMDocument.3.0");
+   }
+   // doc1 and doc2 destructors are called when they go out of scope
+   // and the internal com::ptr releases its reference to the COM object
+   catch (Exception^ e) {
+      Console::WriteLine(e);
+   }
+   finally {
+      if (NULL != pDoc) {
+         pDoc->Release();
+      }
+   }
+}
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Arquivo de cabeçalho** \<msclr\com\ptr.h >
+
+**Namespace** msclr::com
+
+## <a name="see-also"></a>Consulte também
+
+[Membros ptr](../dotnet/ptr-members.md)<br/>
+[ptr::ptr](../dotnet/ptr-ptr.md)<br/>
+[ptr::CreateInstance](../dotnet/ptr-createinstance.md)

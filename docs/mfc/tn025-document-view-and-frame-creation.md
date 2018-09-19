@@ -17,62 +17,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97db14dcb8c0b8b5b71823cf39d6bf36f0d19f25
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 75530d8133806357dba7a30862095ea08bd022b9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956688"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422006"
 ---
 # <a name="tn025-document-view-and-frame-creation"></a>TN025: documento, exibição e criação de quadro
+
 > [!NOTE]
->  A Observação técnica a seguir não foi atualizada desde que ele foi incluído primeiro na documentação online. Como resultado, alguns procedimentos e tópicos podem estar desatualizadas ou incorretas. Para obter as informações mais recentes, é recomendável que você pesquise o tópico de interesse no índice da documentação on-line.  
-  
- Esta anotação descreve os problemas de criação e a propriedade de WINAPPS Word, DocTemplates, documentos, quadros e modos de exibição.  
-  
-## <a name="winapp"></a>WinApp  
- Há um `CWinApp` objeto do sistema.  
-  
- Estaticamente é criada e inicializada, a implementação interna da estrutura de `WinMain`. Você deve derivar de `CWinApp` fazer nada útil (exceção: DLLs de extensão do MFC não devem ter um `CWinApp` instância — é feita na `DllMain` em vez disso).  
-  
- O `CWinApp` objeto possui uma lista de modelos de documento (um `CPtrList`). Há um ou mais o modelo de documento por aplicativo. DocTemplates geralmente são carregados do arquivo de recurso (ou seja, uma matriz de cadeia de caracteres) em `CWinApp::InitInstance`.  
-  
-```  
+>  A nota técnica a seguir não foi atualizada desde que foi incluído pela primeira vez na documentação online. Como resultado, alguns procedimentos e tópicos podem estar desatualizadas ou incorretas. Para obter as informações mais recentes, é recomendável que você pesquise o tópico de interesse no índice da documentação online.
+
+Essa observação descreve os problemas de criação e a propriedade para WINAPPS Word, DocTemplates, documentos, quadros e modos de exibição.
+
+## <a name="winapp"></a>WinApp
+
+Há um `CWinApp` objeto no sistema.
+
+Ele estaticamente é criado e inicializado pela implementação interna da estrutura de `WinMain`. Você deve derivar de `CWinApp` fazer alguma coisa útil (exceção: extensão de MFC não deve ter um `CWinApp` instância — é feita na `DllMain` em vez disso).
+
+Aquele `CWinApp` objeto possui uma lista de modelos de documento (um `CPtrList`). Há um ou mais o modelo de documento por aplicativo. DocTemplates geralmente são carregados do arquivo de recurso (ou seja, uma matriz de cadeia de caracteres) em `CWinApp::InitInstance`.
+
+```
 pTemplate = new CDocTemplate(IDR_MYDOCUMENT, ...);
 
 AddDocTemplate(pTemplate);
-```  
-  
- O `CWinApp` objeto possui todas as janelas de quadro no aplicativo. A janela do quadro principal para o aplicativo deve ser armazenada em `CWinApp::m_pMainWnd`; normalmente você definir *m_pMainWnd* no `InitInstance` implementação se você não tem que AppWizard fazê-lo para você. Para a interface de documento único (SDI) esse é um `CFrameWnd` que serve como a janela do quadro principal do aplicativo, bem como a janela do quadro de documento somente. Para a interface de documentos múltiplos (MDI), este é um quadro MDI (classe `CMDIFrameWnd`) que serve como a janela do quadro principal do aplicativo que contém todos os filhos `CFrameWnd`s. Cada janela filho é da classe `CMDIChildWnd` (derivado de `CFrameWnd`) e serve como um potencialmente muitas janelas de quadro do documento.  
-  
-## <a name="doctemplates"></a>DocTemplates  
- O `CDocTemplate` é o criador e o Gerenciador de documentos. Ele possui os documentos que ele cria. Se seu aplicativo usa a abordagem baseada em recursos descrita abaixo, não será necessário derivar de `CDocTemplate`.  
-  
- Para um aplicativo SDI, a classe `CSingleDocTemplate` mantém o controle de um documento aberto. Para um aplicativo MDI, a classe `CMultiDocTemplate` mantém uma lista (um `CPtrList`) de todos os documentos abertos criados a partir desse modelo. `CDocTemplate::AddDocument` e `CDocTemplate::RemoveDocument` fornecem o membro virtual funções para adicionar ou remover um documento do modelo. `CDocTemplate` é um amigo do `CDocument` forma podemos definir protegido `CDocument::m_pDocTemplate` retorno que apontam para o modelo de documento que criou o documento.  
-  
- `CWinApp` manipula o padrão `OnFileOpen` implementação, que por sua vez consultará todos os modelos de documento. A implementação inclui procurando documentos já abertos e decidir qual formato para abrir novos documentos no.  
-  
- `CDocTemplate` gerencia a associação de interface do usuário para documentos e quadros.  
-  
- `CDocTemplate` mantém uma contagem do número de documentos sem nome.  
-  
-## <a name="cdocument"></a>CDocument  
- Um `CDocument` pertence a um `CDocTemplate`.  
-  
- Documentos tem uma lista de abertos exibições (derivado de `CView`) que está exibindo o documento (um `CPtrList`).  
-  
- Documentos não criar/destruir os modos de exibição, mas eles são conectados uns aos outros após serem criadas. Quando um documento é fechado (ou seja, a arquivo/fechar), todas as exibições anexadas serão fechadas. O documento será fechado quando a última exibição em um documento é fechada (ou seja, janela/Fechar).  
-  
- O `CDocument::AddView`, `RemoveView` interface é usada para manter a lista de exibição. `CDocument` é um amigo do `CView` forma podemos definir o `CView::m_pDocument` retorno.  
-  
-## <a name="cframewnd"></a>CFrameWnd  
- Um `CFrameWnd` (também conhecido como um quadro) desempenha a mesma função de MFC 1.0, mas agora o `CFrameWnd` classe foi projetada para ser usado em muitos casos sem derivar uma nova classe. As classes derivadas `CMDIFrameWnd` e `CMDIChildWnd` também foram aprimorados para muitos comandos padrão já são implementados.  
-  
- O `CFrameWnd` é responsável pela criação do windows na área cliente do quadro. Normalmente, há uma janela principal que preenche a área cliente do quadro.  
-  
- Para uma janela de quadro MDI, a área do cliente é preenchida com o controle MDICLIENT que por sua vez é o pai de todas as janelas de quadro filho MDI. Para uma janela de quadro SDI ou uma janela filho MDI do quadro, a área de cliente geralmente é preenchida com um `CView`-janela objeto derivado. No caso de `CSplitterWnd`, a área do cliente do modo de exibição é preenchida com o `CSplitterWnd` objeto de janela e o `CView`-objetos de janela derivadas (um por painel de divisão) são criados como janelas filho do `CSplitterWnd`.  
-  
-## <a name="see-also"></a>Consulte também  
- [Observações técnicas por número](../mfc/technical-notes-by-number.md)   
- [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
+```
+
+Aquele `CWinApp` objeto possui todas as janelas de quadro no aplicativo. A janela do quadro principal para o aplicativo deve ser armazenada em `CWinApp::m_pMainWnd`; geralmente você define *m_pMainWnd* no `InitInstance` implementação se você não tem que AppWizard fazê-lo para você. Para a interface de documento único (SDI) Este é um `CFrameWnd` que serve como a janela do quadro principal do aplicativo, bem como a janela de quadro único documento. Para a interface de documentos múltiplos (MDI), isso é um quadro MDI (classe `CMDIFrameWnd`) que serve como a janela do quadro principal do aplicativo que contém todos os filhos `CFrameWnd`s. Cada janela filho é da classe `CMDIChildWnd` (derivado de `CFrameWnd`) e serve como uma das janelas de quadro possivelmente de vários documentos.
+
+## <a name="doctemplates"></a>DocTemplates
+
+O `CDocTemplate` é o criador e o Gerenciador de documentos. Ele possui os documentos que ele cria. Se seu aplicativo usa a abordagem baseada em recursos descrita abaixo, ele não será necessário derivar de `CDocTemplate`.
+
+Para um aplicativo SDI, a classe `CSingleDocTemplate` mantém o controle de um documento aberto. Para um aplicativo MDI, a classe `CMultiDocTemplate` mantém uma lista (um `CPtrList`) de todos os documentos abertos no momento criados a partir desse modelo. `CDocTemplate::AddDocument` e `CDocTemplate::RemoveDocument` fornecem funções de membro virtual para a adição ou remoção de um documento do modelo. `CDocTemplate` é um amigo `CDocument` portanto, podemos definir protegido `CDocument::m_pDocTemplate` ponteiro para voltar para apontar de volta para o modelo de documento que criou o documento.
+
+`CWinApp` lida com o padrão `OnFileOpen` implementação, que por sua vez consultará todos os modelos de documento. A implementação inclui a procura de documentos já está abertos e decidir qual formato para abrir novos documentos no.
+
+`CDocTemplate` gerencia a associação de interface do usuário para documentos e quadros.
+
+`CDocTemplate` mantém uma contagem do número de documentos sem nome.
+
+## <a name="cdocument"></a>CDocument
+
+Um `CDocument` pertencente a um `CDocTemplate`.
+
+Documentos têm uma lista de abertos em modos de exibição (derivado de `CView`) que está exibindo o documento (um `CPtrList`).
+
+Documentos não criar/destruir os modos de exibição, mas eles estão conectados uns aos outros depois que eles são criados. Quando um documento é fechado (isto é, por meio das arquivo/de fechamento), todos os modos de exibição anexados serão fechados. O documento será fechado quando a última exibição em um documento é fechada (ou seja, janela/de fechamento).
+
+O `CDocument::AddView`, `RemoveView` interface é usada para manter a lista de exibição. `CDocument` é um amigo `CView` portanto, podemos definir o `CView::m_pDocument` ponteiro para voltar.
+
+## <a name="cframewnd"></a>CFrameWnd
+
+Um `CFrameWnd` (também conhecido como um quadro) desempenha a mesma função como no MFC 1.0, mas agora o `CFrameWnd` classe é projetada para ser usado em muitos casos, sem derivar uma nova classe. As classes derivadas `CMDIFrameWnd` e `CMDIChildWnd` também foram aprimorados para que muitos comandos padrão já sejam implementados.
+
+O `CFrameWnd` é responsável por criar janelas na área de cliente do quadro. Normalmente, há uma janela principal, preenchendo a área de cliente do quadro.
+
+Para uma janela de quadro MDI, a área de cliente é preenchida com o controle MDICLIENT que por sua vez é o pai de todas as janelas de quadro MDI filho. Para uma janela de quadro SDI ou uma janela do quadro filho MDI, a área de cliente geralmente é preenchida com um `CView`-derivados do objeto de janela. No caso de `CSplitterWnd`, a área de cliente do modo de exibição é preenchida com o `CSplitterWnd` objeto de janela e o `CView`-objetos de janela derivadas (um por painel de divisão) são criados como janelas filho do `CSplitterWnd`.
+
+## <a name="see-also"></a>Consulte também
+
+[Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
+[Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
 

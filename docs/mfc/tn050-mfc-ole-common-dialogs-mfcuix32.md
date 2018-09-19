@@ -1,5 +1,5 @@
 ---
-title: 'TN050: Caixas de comuns MFC OLE (MFCUIx32) | Microsoft Docs'
+title: 'TN050: Diálogos de comuns MFC-OLE (MFCUIx32) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4307c1a28ffcc6de7b4607f22b7be65935c54f4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb48bca667de56a05a38843f339c11dd7e2a74b4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380897"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410709"
 ---
 # <a name="tn050-mfcole-common-dialogs-mfcuix32"></a>TN050: caixas de diálogo comuns MFC/OLE (MFCUIx32)
-Esta anotação originalmente coberto alguns problemas e o futuro das OLE caixas de diálogo comuns fornecidos e usados pelo MFC. As caixas de diálogo comuns OLE agora são fornecidas como um componente interno do sistema (OLEDLG. DLL) e são totalmente documentados na documentação do produto.  
-  
-## <a name="see-also"></a>Consulte também  
- [Observações técnicas por número](../mfc/technical-notes-by-number.md)   
- [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
+
+Essa observação originalmente abordado alguns problemas e o futuro das OLE caixas de diálogo comuns fornecidos e usados pelo MFC. As caixas de diálogo comuns OLE agora são fornecidas como um componente interno do sistema (OLEDLG. DLL) e são totalmente documentados na documentação do produto.
+
+## <a name="see-also"></a>Consulte também
+
+[Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
+[Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
 

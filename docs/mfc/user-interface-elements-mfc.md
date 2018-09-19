@@ -16,78 +16,81 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba237173c3bca8f2b8246044257d1eb2022541c6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5713c15a07bb90a94f1d8301ad1eb575dd910fdb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383234"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403494"
 ---
 # <a name="user-interface-elements-mfc"></a>Elementos da interface do usuário (MFC)
-Para obter informações sobre como criar a interface do usuário para seu aplicativo usando a biblioteca Microsoft Foundation Class (MFC), consulte os tópicos a seguir.  
-  
-## <a name="in-this-section"></a>Nesta seção  
- [Controles ActiveX](../mfc/activex-controls.md)  
- Descreve como usar o componente de software reutilizável com base no componente Object Model (COM), que oferece suporte a uma ampla variedade de funcionalidades OLE e podem ser personalizadas para atender às várias necessidades de software  
-  
- [Área de transferência](../mfc/clipboard.md)  
- Descreve como implementar o suporte para a área de transferência do Windows em aplicativos MFC.  
-  
- [Controles](../mfc/controls-mfc.md)  
- Descreve os controles comuns do Windows, incluindo controles desenhados pelo proprietário, controles ActiveX e outras classes de controle fornecidos pela biblioteca do MFC.  
-  
- [Barras de controle](../mfc/control-bars.md)  
- Descreve a funcionalidade de barras de ferramentas, barras de status e barras da caixa de diálogo.  
-  
- [Barras da caixa de diálogo](../mfc/dialog-bars.md)  
- Descreve um tipo de barra de controle que pode conter qualquer tipo de controle.  
-  
- [Caixas de diálogo](../mfc/dialog-boxes.md)  
- Descreve como criar caixas de diálogo usando os assistentes de código e editores.  
-  
- [Arquitetura de documento/exibição](../mfc/document-view-architecture.md)  
- Descreve o gerenciamento de dados em MFC.  
-  
- [Modos de exibição de formulário](../mfc/form-views-mfc.md)  
- Descreve como adicionar suporte de formulários para seu aplicativo.  
-  
- [Ajuda em HTML: ajuda contextual para os programas](../mfc/html-help-context-sensitive-help-for-your-programs.md)  
- Descreve como adicionar uma ajuda contextual para seus aplicativos usando a Ajuda em HTML.  
-  
- [Grupos com guias da MDI](../mfc/mdi-tabbed-groups.md)  
- Permite que vários aplicativos de interface (MDI) do documento exibir uma ou mais janelas com guias (ou grupos do windows com guias, que são conhecidos como *grupos com guias*) na área do cliente MDI.  
-  
- [Menus](../mfc/menus-mfc.md)  
- Descreve como adicionar menus à sua interface de usuário.  
-  
- [OLE](../mfc/ole-mfc.md)  
- Fornece links para tópicos que abordam o objeto de vinculação e inserção.  
-  
- [Impressão e visualização de impressão](../mfc/printing-and-print-preview.md)  
- Descreve o suporte do MFC para impressão e visualização de impressão de seus aplicativos.  
-  
- [Folhas de propriedade](../mfc/property-sheets-mfc.md)  
- Descreve como usar folhas de propriedades para gerenciar um grande número de controle em uma caixa de diálogo.  
-  
- [Designer da faixa de opções (MFC)](../mfc/ribbon-designer-mfc.md)  
- Descreve o suporte do MFC para criar e modificar recursos de interface do usuário da faixa de opções.  
-  
- [Barras de status](../mfc/status-bars.md)  
- Descreve como usar barras de status em seus aplicativos.  
-  
- [Dicas de ferramenta](../mfc/tool-tips.md)  
- Descreve como implementar dicas de ferramenta para ajudar os usuários a usar seus aplicativos.  
-  
- [Barras de ferramentas](../mfc/toolbars.md)  
- Descreve os conceitos básicos sobre como usar barras de ferramentas do MFC.  
-  
- [Gerenciador de visualização](../mfc/visualization-manager.md)  
- Atua como uma classe em que você pode colocar todo o código de desenho para seu aplicativo.  
-  
- [Windows](../mfc/windows.md)  
- Descreve os conceitos básicos sobre como usar o windows em MFC.  
-  
-## <a name="related-sections"></a>Seções relacionadas  
- [Aplicativos da área de trabalho MFC](../mfc/mfc-desktop-applications.md)  
- Fornece material de referência para a biblioteca do MFC. MFC é um conjunto de classes que constituem uma estrutura de aplicativo, que é a estrutura de um aplicativo escrito para a API do Windows.
+
+Para obter informações sobre como criar a interface do usuário para seu aplicativo usando a biblioteca Microsoft Foundation Class (MFC), consulte os tópicos a seguir.
+
+## <a name="in-this-section"></a>Nesta seção
+
+[Controles ActiveX](../mfc/activex-controls.md)<br/>
+Descreve como usar o componente reutilizável de software com base na COM Component Object Model (), que dá suporte a uma ampla variedade de funcionalidades OLE e pode ser personalizado para atender às necessidades de software muitos
+
+[Área de transferência](../mfc/clipboard.md)<br/>
+Descreve como implementar o suporte para a área de transferência do Windows em aplicativos MFC.
+
+[Controles](../mfc/controls-mfc.md)<br/>
+Descreve os controles comuns do Windows, incluindo controles desenhados pelo proprietário, controles ActiveX e outras classes de controle fornecidos pela biblioteca do MFC.
+
+[Barras de controle](../mfc/control-bars.md)<br/>
+Descreve a funcionalidade de barras de ferramentas, barras de status e as barras de caixa de diálogo.
+
+[Barras da caixa de diálogo](../mfc/dialog-bars.md)<br/>
+Descreve um tipo de barra de controle que pode conter qualquer tipo de controle.
+
+[Caixas de diálogo](../mfc/dialog-boxes.md)<br/>
+Descreve como criar caixas de diálogo usando os assistentes de código e editores.
+
+[Arquitetura de documento/exibição](../mfc/document-view-architecture.md)<br/>
+Descreve o gerenciamento de dados no MFC.
+
+[Modos de exibição de formulário](../mfc/form-views-mfc.md)<br/>
+Descreve como adicionar suporte de formulários ao seu aplicativo.
+
+[Ajuda em HTML: ajuda contextual para os programas](../mfc/html-help-context-sensitive-help-for-your-programs.md)<br/>
+Descreve como adicionar uma ajuda contextual a seus aplicativos usando a Ajuda em HTML.
+
+[Grupos com guias da MDI](../mfc/mdi-tabbed-groups.md)<br/>
+Permite que vários aplicativos MDI (interface MDI) de documento exibir um ou mais janelas com guias (ou grupos de janelas com guias, que são conhecidos como *grupos com guias*) na área de cliente do MDI.
+
+[Menus](../mfc/menus-mfc.md)<br/>
+Descreve como adicionar menus a sua interface do usuário.
+
+[OLE](../mfc/ole-mfc.md)<br/>
+Fornece links para tópicos que discutem a vinculação e incorporação de objeto.
+
+[Impressão e visualização de impressão](../mfc/printing-and-print-preview.md)<br/>
+Descreve o suporte do MFC para impressão e visualização de impressão de seus aplicativos.
+
+[Folhas de propriedades](../mfc/property-sheets-mfc.md)<br/>
+Descreve como usar folhas de propriedades para gerenciar um grande número de controle em uma caixa de diálogo.
+
+[Designer da faixa de opções (MFC)](../mfc/ribbon-designer-mfc.md)<br/>
+Descreve o suporte do MFC para criar e modificar recursos de interface do usuário da faixa de opções.
+
+[Barras de status](../mfc/status-bars.md)<br/>
+Descreve como usar as barras de status em seus aplicativos.
+
+[Dicas de ferramenta](../mfc/tool-tips.md)<br/>
+Descreve como implementar dicas de ferramenta para ajudar os usuários a usar seus aplicativos.
+
+[Barras de ferramentas](../mfc/toolbars.md)<br/>
+Descreve os conceitos básicos sobre como usar as barras de ferramentas no MFC.
+
+[Gerenciador de visualização](../mfc/visualization-manager.md)<br/>
+Atua como uma classe em que você pode colocar todo o código de desenho para seu aplicativo.
+
+[Windows](../mfc/windows.md)<br/>
+Descreve os conceitos básicos sobre como usar o windows no MFC.
+
+## <a name="related-sections"></a>Seções relacionadas
+
+[Aplicativos da área de trabalho MFC](../mfc/mfc-desktop-applications.md)<br/>
+Fornece material de referência para a biblioteca do MFC. O MFC é um conjunto de classes que constituem uma estrutura de aplicativo, que é a estrutura de um aplicativo escrito para a API do Windows.
 

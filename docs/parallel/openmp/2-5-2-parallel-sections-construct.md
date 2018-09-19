@@ -12,30 +12,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6f7a84e322cb273733c6a724ee2563928df8362
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 073d0561fe4bfbb96ed88681a077da6fc985c963
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689474"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402324"
 ---
 # <a name="252-parallel-sections-construct"></a>2.5.2 Constructo parallel sections
-O **paralelo seções** diretiva fornece um formulário de atalho para especificar um **paralela** região que contém um único **seções** diretiva. A semântica é idêntica para especificar explicitamente um **paralela** diretiva seguida imediatamente por um **seções** diretiva. A sintaxe do **paralelo seções** diretiva é da seguinte maneira:  
-  
-```  
-#pragma omp parallel sections  [clause[[,] clause] ...] new-line  
-   {  
-   [#pragma omp section new-line]  
-      structured-block  
-   [#pragma omp section new-linestructured-block  ]  
-   ...  
-}  
-```  
-  
- O *cláusula* pode ser uma das cláusulas aceitas pela **paralela** e **seções** diretivas, exceto o **nowait** cláusula.  
-  
-## <a name="cross-references"></a>Entre referências:  
-  
--   **paralelo** diretiva, consulte [seção 2.3](../../parallel/openmp/2-3-parallel-construct.md) na página de 8.  
-  
--   **seções** diretiva, consulte [seção 2.4.2](../../parallel/openmp/2-4-2-sections-construct.md) na 14 da página.
+
+O **seções em paralelo** diretiva fornece um formulário de atalho para especificar um **paralela** região que contém um único **seções** diretiva. A semântica é idêntica à explicitamente especificando um **paralelas** diretiva seguida imediatamente por um **seções** diretiva. A sintaxe do **seções em paralelo** diretiva é da seguinte maneira:
+
+```
+#pragma omp parallel sections  [clause[[,] clause] ...] new-line
+   {
+   [#pragma omp section new-line]
+      structured-block
+   [#pragma omp section new-linestructured-block  ]
+   ...
+}
+```
+
+O *cláusula* pode ser uma das cláusulas aceitas pela **paralela** e **seções** diretivas, exceto o **nowait** cláusula.
+
+## <a name="cross-references"></a>Entre as referências:
+
+- **Parallel** diretiva, consulte [seção 2.3](../../parallel/openmp/2-3-parallel-construct.md) na página de 8.
+
+- **seções** diretiva, consulte [seção 2.4.2](../../parallel/openmp/2-4-2-sections-construct.md) na página 14.

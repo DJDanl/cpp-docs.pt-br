@@ -12,18 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1de0e32e16d889acb8f1339d783bc194b3508dda
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9d1a545f1c505f9f578cad682399c8d69a882824
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695688"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400140"
 ---
 # <a name="2724-shared"></a>2.7.2.4 shared
-Essa cláusula compartilha variáveis que aparecem no *lista variável* entre todos os threads em uma equipe. Área de armazenamento para acesso a todos os threads em uma equipe **compartilhado** variáveis.  
-  
- A sintaxe do **compartilhado** cláusula é o seguinte:  
-  
-```  
-shared(variable-list)  
+
+Essa cláusula compartilha as variáveis que aparecem na *lista variável* entre todos os threads em uma equipe. Todos os threads em uma equipe de acessem a área de armazenamento para **compartilhado** variáveis.
+
+A sintaxe do **compartilhado** cláusula é da seguinte maneira:
+
+```
+shared(variable-list)
 ```

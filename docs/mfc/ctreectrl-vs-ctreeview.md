@@ -20,21 +20,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d71048b6f03f7f1b4400c0a88c178d1b97acdf2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8acaecbdfb99b8ae0b27023145a0ef6aee1f219
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342027"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399140"
 ---
 # <a name="ctreectrl-vs-ctreeview"></a>CTreeCtrl vs. CTreeView
-MFC fornece duas classes que encapsulam os controles em árvore: [CTreeCtrl](../mfc/reference/ctreectrl-class.md) e [CTreeView](../mfc/reference/ctreeview-class.md). Cada classe é útil em situações diferentes.  
-  
- Use `CTreeCtrl` quando você precisa de um controle de janela filho simples; por exemplo, em uma caixa de diálogo. Especialmente iria querer usar `CTreeCtrl` se houver outros controles filho na janela, como uma caixa de diálogo típico.  
-  
- Use `CTreeView` quando você quiser que o controle de árvore para atuar como uma janela de exibição na arquitetura de documento/exibição, bem como um controle de árvore. Um `CTreeView` ocupará toda a área cliente de uma janela do quadro ou janela separadora. Ele será automaticamente redimensionado quando sua janela pai for redimensionada e que pode processar mensagens de comando de barras de ferramentas, menus e teclas de aceleração. Como um controle de árvore contém os dados necessários para exibir a árvore, o objeto de documento correspondente não precisa ser complicado — você pode até usar [CDocument](../mfc/reference/cdocument-class.md) como o tipo de documento em seu modelo de documento.  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Controles](../mfc/controls-mfc.md)
+
+MFC fornece classes que encapsulam os controles de árvore: [CTreeCtrl](../mfc/reference/ctreectrl-class.md) e [CTreeView](../mfc/reference/ctreeview-class.md). Cada classe é útil em situações diferentes.
+
+Use `CTreeCtrl` quando precisar de um controle de janela filho simples; por exemplo, em uma caixa de diálogo. Especialmente iria querer usar `CTreeCtrl` se haverá outros controles filho na janela, como em uma caixa de diálogo comum.
+
+Use `CTreeView` quando deseja que o controle de árvore para atuar como uma janela de exibição na arquitetura de documento/exibição, bem como um controle de árvore. Um `CTreeView` ocupará toda a área cliente de uma janela de quadro ou janela separadora. Ele será redimensionado automaticamente quando sua janela pai for redimensionada, e ele pode processar mensagens de comando de menus, teclas de aceleração e barras de ferramentas. Como um controle de árvore contém os dados necessários para exibir a árvore, o objeto de documento correspondente não precisa ser complicado — você pode até usar [CDocument](../mfc/reference/cdocument-class.md) como o tipo de documento em seu modelo de documento.
+
+## <a name="see-also"></a>Consulte também
+
+[Usando CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
+[Controles](../mfc/controls-mfc.md)
 
