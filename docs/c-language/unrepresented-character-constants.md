@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3932195fe115038b9e065b4121636fdbdb82e78
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 924af1a31cccea117ee8cd2cf909c2947c6dc3b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385706"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064159"
 ---
 # <a name="unrepresented-character-constants"></a>Constantes de caracteres sem representação
-**ANSI 3.1.3.4** O valor de uma constante de caractere inteiro que contém um caractere ou uma sequência de escape não representada no conjunto de caracteres de execução básico ou no conjunto de caracteres estendido para uma constante de caractere largo  
-  
- Todas as constantes de caractere ou sequências de escape podem ser representadas no conjunto de caracteres estendido.  
-  
-## <a name="see-also"></a>Consulte também  
- [Caracteres](../c-language/characters.md)
+
+**ANSI 3.1.3.4** O valor de uma constante de caractere inteiro que contém um caractere ou uma sequência de escape não representada no conjunto de caracteres de execução básico ou no conjunto de caracteres estendido para uma constante de caractere largo
+
+Todas as constantes de caractere ou sequências de escape podem ser representadas no conjunto de caracteres estendido.
+
+## <a name="see-also"></a>Consulte também
+
+[Caracteres](../c-language/characters.md)

@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31914118283c9d0c5c502e3426ba12e86d7c7680
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ff4e032e205680da84369075514e3177fa5fb33e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385163"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051016"
 ---
 # <a name="simple-assignment-c"></a>Atribuição simples (C)
-O operador de atribuição simples atribui o operando à direita ao operando à esquerda. O valor do operando à direita é convertido no tipo da expressão de atribuição e substituir o valor armazenado no objeto designado pelo operando à esquerda. As regras de conversão para a atribuição se aplicam (consulte [Conversões de atribuição](../c-language/assignment-conversions.md)).  
-  
-```  
-double x;  
-int y;  
-  
-x = y;  
-```  
-  
- Neste exemplo, o valor de `y` é convertido para o tipo **double** e é atribuído a `x`.  
-  
-## <a name="see-also"></a>Consulte também  
- [Operadores de atribuição C](../c-language/c-assignment-operators.md)
+
+O operador de atribuição simples atribui o operando à direita ao operando à esquerda. O valor do operando à direita é convertido no tipo da expressão de atribuição e substituir o valor armazenado no objeto designado pelo operando à esquerda. As regras de conversão para a atribuição se aplicam (consulte [Conversões de atribuição](../c-language/assignment-conversions.md)).
+
+```
+double x;
+int y;
+
+x = y;
+```
+
+Neste exemplo, o valor de `y` é convertido para o tipo **double** e é atribuído a `x`.
+
+## <a name="see-also"></a>Consulte também
+
+[Operadores de atribuição C](../c-language/c-assignment-operators.md)

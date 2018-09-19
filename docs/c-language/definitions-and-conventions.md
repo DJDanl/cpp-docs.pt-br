@@ -14,34 +14,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74a29acfcdc58b068ebabe9bc1c9b033cf801c21
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7abaa67ce9bdee0b2f9a69fa11260c2b6bbfcf45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760400"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034402"
 ---
 # <a name="definitions-and-conventions"></a>Definições e convenções
-Os terminais são pontos de extremidade em uma definição de sintaxe. Nenhuma outra resolução é possível. Os terminais incluem o conjunto de palavras reservadas e identificadores definidos pelo usuário.  
-  
-Os não terminais são espaços reservados na sintaxe e são definidos em outra parte deste resumo da sintaxe. As definições podem ser recursivas.  
-  
-Um componente opcional é indicado pelo <sub>opt</sub> subscrito. Por exemplo,  
-  
+
+Os terminais são pontos de extremidade em uma definição de sintaxe. Nenhuma outra resolução é possível. Os terminais incluem o conjunto de palavras reservadas e identificadores definidos pelo usuário.
+
+Os não terminais são espaços reservados na sintaxe e são definidos em outra parte deste resumo da sintaxe. As definições podem ser recursivas.
+
+Um componente opcional é indicado pelo <sub>opt</sub> subscrito. Por exemplo,
+
 > **{** *expression*<sub>opt</sub> **}**
-  
-indica uma expressão opcional entre chaves.  
-  
-As convenções de sintaxe usam atributos diferentes de fonte para componentes diferentes de sintaxe. Os símbolos e as fontes são os seguintes:  
-  
-|Atributo|Descrição|  
-|---------------|-----------------|  
-|*nonterminal*|O tipo em itálico indica não terminais.|  
-|**const**|Os terminais de tipo em negrito são palavras reservadas a literais e símbolos que devem ser inseridos como mostrado. Os caracteres nesse contexto sempre diferenciam maiúsculas de minúsculas.|  
-|<sub>opt</sub>|Não terminais seguidos por <sub>opt</sub> são sempre opcionais.|  
-|default typeface|Os caracteres no conjunto listados ou descritos nesta face de tipos podem ser usados como terminais em instruções de C.|  
-  
-Um sinal de dois pontos (**:**) depois de um não terminal introduz sua definição. Definições alternativas estão listadas em linhas separadas, exceto quando prefaciadas com as palavras "um de".  
-  
-## <a name="see-also"></a>Consulte também  
+
+indica uma expressão opcional entre chaves.
+
+As convenções de sintaxe usam atributos diferentes de fonte para componentes diferentes de sintaxe. Os símbolos e as fontes são os seguintes:
+
+|Atributo|Descrição|
+|---------------|-----------------|
+|*nonterminal*|O tipo em itálico indica não terminais.|
+|**const**|Os terminais de tipo em negrito são palavras reservadas a literais e símbolos que devem ser inseridos como mostrado. Os caracteres nesse contexto sempre diferenciam maiúsculas de minúsculas.|
+|<sub>opt</sub>|Não terminais seguidos por <sub>opt</sub> são sempre opcionais.|
+|default typeface|Os caracteres no conjunto listados ou descritos nesta face de tipos podem ser usados como terminais em instruções de C.|
+
+Um sinal de dois pontos (**:**) depois de um não terminal introduz sua definição. Definições alternativas estão listadas em linhas separadas, exceto quando prefaciadas com as palavras "um de".
+
+## <a name="see-also"></a>Consulte também
+
 [Resumo da sintaxe da linguagem C](../c-language/c-language-syntax-summary.md)

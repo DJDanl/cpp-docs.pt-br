@@ -16,23 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 804039142e63af838ddd7e8a899d616657596f66
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 08b92dcf1e51a58255254f36df5c140ea36343f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383436"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023365"
 ---
 # <a name="operands-and-expressions"></a>Operandos e expressões
-Um “operando” é uma entidade em que um operador atua. Uma “expressão” é uma sequência de operadores e de operandos que executa qualquer combinação destas ações:  
-  
--   Computa um valor  
-  
--   Designa um objeto ou uma função  
-  
--   Gera efeitos colaterais  
-  
- Os operandos em C incluem constantes, identificadores, cadeias de caracteres, chamadas de função, expressões subscritas, expressões de seleção de membros e expressões complexas formadas combinando operandos com operadores ou incluindo operandos entre parênteses. A sintaxe desses operandos é determinada em [Expressões primárias](../c-language/c-primary-expressions.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Expressões e atribuições](../c-language/expressions-and-assignments.md)
+
+Um “operando” é uma entidade em que um operador atua. Uma “expressão” é uma sequência de operadores e de operandos que executa qualquer combinação destas ações:
+
+- Computa um valor
+
+- Designa um objeto ou uma função
+
+- Gera efeitos colaterais
+
+Os operandos em C incluem constantes, identificadores, cadeias de caracteres, chamadas de função, expressões subscritas, expressões de seleção de membros e expressões complexas formadas combinando operandos com operadores ou incluindo operandos entre parênteses. A sintaxe desses operandos é determinada em [Expressões primárias](../c-language/c-primary-expressions.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Expressões e atribuições](../c-language/expressions-and-assignments.md)

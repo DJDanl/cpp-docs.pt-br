@@ -29,42 +29,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 588c286cbad5e0097394a38eed34c09fc04af3ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: abf776ab72d692be6d573803353f35946df145ec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389963"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031904"
 ---
 # <a name="locking-constants"></a>Constantes (_locking)
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-#include <sys/locking.h>  
-  
-```  
-  
-## <a name="remarks"></a>Comentários  
- O argumento *mode* na chamada para a função `_locking` especifica a ação de bloqueio que será executada.  
-  
- O argumento *mode* deve ser uma das constantes de manifesto a seguir.  
-  
- `_LK_LOCK`  
- Bloqueia os bytes especificados. Se os bytes não puderem ser bloqueados, a função tentará novamente após 1 segundo. Se, após 10 tentativas, os bytes não puderem ser bloqueados, a função retornará um erro.  
-  
- `_LK_RLCK`  
- Mesmo que `_LK_LOCK`.  
-  
- `_LK_NBLCK`  
- Bloqueia os bytes especificados. Se os bytes não puderem ser bloqueados, a função retornará um erro.  
-  
- `_LK_NBRLCK`  
- Mesmo que `_LK_NBLCK`.  
-  
- `_LK_UNLCK`  
- Desbloqueia os bytes especificados. (Os bytes devem ter sido protegidos anteriormente.)  
-  
-## <a name="see-also"></a>Consulte também  
- [_locking](../c-runtime-library/reference/locking.md)   
- [Constantes globais](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Sintaxe
+
+```
+#include <sys/locking.h>
+```
+
+## <a name="remarks"></a>Comentários
+
+O argumento *mode* na chamada para a função `_locking` especifica a ação de bloqueio que será executada.
+
+O argumento *mode* deve ser uma das constantes de manifesto a seguir.
+
+|||
+|-|-|
+| `_LK_LOCK`  | Bloqueia os bytes especificados. Se os bytes não puderem ser bloqueados, a função tentará novamente após 1 segundo. Se, após 10 tentativas, os bytes não puderem ser bloqueados, a função retornará um erro.  |
+| `_LK_RLCK`  | Mesmo que `_LK_LOCK`.  |
+|`_LK_NBLCK`  | Bloqueia os bytes especificados. Se os bytes não puderem ser bloqueados, a função retornará um erro.  |
+| `_LK_NBRLCK`  | Mesmo que `_LK_NBLCK`.  |
+| `_LK_UNLCK`  | Desbloqueia os bytes especificados. (Os bytes devem ter sido protegidos anteriormente.)  |
+
+## <a name="see-also"></a>Consulte também
+
+[_locking](../c-runtime-library/reference/locking.md)<br/>
+[Constantes globais](../c-runtime-library/global-constants.md)

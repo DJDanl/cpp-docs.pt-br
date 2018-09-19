@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54e0ba354e76996d03503e116008aa200b0905b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a471d6743da0cf803de72a9f257dfa67bc0dcbd1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199351"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036352"
 ---
 # <a name="file-handling"></a>Manipulação de arquivos
 
@@ -86,7 +86,7 @@ Essas rotinas fornecem uma maneira de alterar a representação do arquivo entre
 |[_get_osfhandle](../c-runtime-library/reference/get-osfhandle.md)|Retornar identificador de arquivo do sistema operacional associado ao descritor de arquivo de tempo de execução C existente|
 |[_open_osfhandle](../c-runtime-library/reference/open-osfhandle.md)|Associa o descritor de arquivo de tempo de execução C com um identificador de arquivo do sistema operacional existente.|
 
- As seguintes funções do Win32 também abrem arquivos e pipes:
+As seguintes funções do Win32 também abrem arquivos e pipes:
 
 - [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea)
 

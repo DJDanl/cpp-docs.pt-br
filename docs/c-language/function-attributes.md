@@ -17,19 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff628dc0d4cca2d42401a1cc83a89926e42404e4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0a2d1ff03041f83a3106553d69b6c111fb6f4a36
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382936"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066902"
 ---
 # <a name="function-attributes"></a>Atributos de função
-**Seção específica da Microsoft**  
-  
- O não terminal *attribute-seq* opcional permite que você selecione uma convenção de chamada em uma base por função. Você também pode especificar funções como `__fastcall` ou `__inline`.  
-  
- **Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Definições de função C](../c-language/c-function-definitions.md)
+
+**Seção específica da Microsoft**
+
+O não terminal *attribute-seq* opcional permite que você selecione uma convenção de chamada em uma base por função. Você também pode especificar funções como `__fastcall` ou `__inline`.
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Definições de função C](../c-language/c-function-definitions.md)

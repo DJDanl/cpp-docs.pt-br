@@ -19,25 +19,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df262ab37c8b7e565a947819c2340c310711fa0c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cde4759b6148894a0ca963a7266355c5939c3051
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381181"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063197"
 ---
 # <a name="c-language-reference"></a>Referência da linguagem C
-A *referência da linguagem C* descreve a linguagem de programação C como implementada em Microsoft C. A organização do manual baseia-se no padrão ANSI C (às vezes conhecido como C89) com material adicional sobre as extensões da Microsoft para o padrão ANSI C.  
-  
--   [Organização da referência da linguagem C](../c-language/organization-of-the-c-language-reference.md)  
-  
-Para material de referência adicional sobre C++ e o pré-processador, consulte:  
-  
--   [Referência da linguagem C++](../cpp/cpp-language-reference.md)  
-  
--   [Referência do pré-processador](../preprocessor/c-cpp-preprocessor-reference.md)  
-  
-As opções do compilador e do vinculador estão documentadas na [Referência de compilação C/C++](../build/reference/c-cpp-building-reference.md).  
-  
-## <a name="see-also"></a>Consulte também  
-[Referência da linguagem C++](../cpp/cpp-language-reference.md)   
+
+A *referência da linguagem C* descreve a linguagem de programação C como implementada em Microsoft C. A organização do manual baseia-se no padrão ANSI C (às vezes conhecido como C89) com material adicional sobre as extensões da Microsoft para o padrão ANSI C.
+
+- [Organização da referência da linguagem C](../c-language/organization-of-the-c-language-reference.md)
+
+Para material de referência adicional sobre C++ e o pré-processador, consulte:
+
+- [Referência da linguagem C++](../cpp/cpp-language-reference.md)
+
+- [Referência do pré-processador](../preprocessor/c-cpp-preprocessor-reference.md)
+
+As opções do compilador e do vinculador estão documentadas na [Referência de compilação C/C++](../build/reference/c-cpp-building-reference.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Referência da linguagem C++](../cpp/cpp-language-reference.md)

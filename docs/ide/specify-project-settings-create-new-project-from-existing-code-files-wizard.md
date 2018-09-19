@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0f59b802b5a24c1b449f78cccee4744538a5a0e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a75bb6034c8f4c5a80bb64238c26ea599395ff96
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33338940"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45705598"
 ---
 # <a name="specify-project-settings-create-new-project-from-existing-code-files-wizard"></a>Especificar configurações do projeto, Assistente para Criar Novo Projeto de Arquivos de Código Existentes
 Use esta página do Assistente para Criar Novo Projeto com base em Arquivos de Código Existentes para especificar:  
@@ -31,47 +31,60 @@ Use esta página do Assistente para Criar Novo Projeto com base em Arquivos de C
 -   Configurações de build para corresponder a um tipo específico de novo projeto a ser gerado  
   
 ## <a name="task-list"></a>Lista de Tarefas  
- [Como criar um projeto do C++ a partir do código existente](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
+
+[Como criar um projeto do C++ a partir do código existente](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
 ## <a name="uielement-list"></a>Lista UIElement  
- **Usar o Visual Studio**  
- Especifica o uso das ferramentas de build incluídas no Visual Studio para compilar o novo projeto. Essa opção é habilitada por padrão.  
+- **Usar o Visual Studio**
+
+   Especifica o uso das ferramentas de build incluídas no Visual Studio para compilar o novo projeto. Essa opção é habilitada por padrão.  
   
- **Tipo de Projeto**  
- Especifica o tipo de projeto que será gerado pelo assistente.  
+- **Tipo de Projeto**
+
+   Especifica o tipo de projeto que será gerado pelo assistente.  
   
- **Projeto de aplicativo do Windows**  
- Indica que o assistente gerará um projeto para um aplicativo executável do Windows. Essa opção está disponível na caixa de listagem suspensa **Tipo de Projeto**.  
+- **Projeto de aplicativo do Windows**
+
+   Indica que o assistente gerará um projeto para um aplicativo executável do Windows. Essa opção está disponível na caixa de listagem suspensa **Tipo de Projeto**.  
   
- **Projeto de aplicativo de console**  
- Indica que o assistente gerará um projeto para um aplicativo de console. Essa opção está disponível na caixa de listagem suspensa **Tipo de Projeto**.  
+- **Projeto de aplicativo de console**
+
+   Indica que o assistente gerará um projeto para um aplicativo de console. Essa opção está disponível na caixa de listagem suspensa **Tipo de Projeto**.  
   
- **Projeto de DLL (biblioteca de vínculo dinâmico)**  
- Indica que o assistente gerará um projeto para um aplicativo de biblioteca de vínculo dinâmico vazio. Essa opção está disponível na caixa de listagem suspensa **Tipo de Projeto**.  
+- **Projeto de DLL (biblioteca de vínculo dinâmico)**
+
+   Indica que o assistente gerará um projeto para um aplicativo de biblioteca de vínculo dinâmico vazio. Essa opção está disponível na caixa de listagem suspensa **Tipo de Projeto**.  
   
- **Projeto de LIB (biblioteca estática)**  
- Indica que o assistente gerará um projeto para um aplicativo de biblioteca estática. Essa opção está disponível na caixa de listagem suspensa **Tipo de Projeto**.  
+- **Projeto de LIB (biblioteca estática)**
+
+   Indica que o assistente gerará um projeto para um aplicativo de biblioteca estática. Essa opção está disponível na caixa de listagem suspensa **Tipo de Projeto**.  
   
- **Adicionar suporte para ATL**  
- Adiciona o suporte para ATL ao novo projeto.  
+- **Adicionar suporte para ATL**
+
+   Adiciona o suporte para ATL ao novo projeto.  
   
- **Adicionar suporte para MFC**  
- Adiciona o suporte para MFC ao novo projeto.  
+- **Adicionar suporte para MFC**
+
+   Adiciona o suporte para MFC ao novo projeto.  
   
- **Adicionar suporte para o Common Language Runtime**  
- Adiciona o suporte para a programação CLR ao novo projeto.  
+- **Adicionar suporte para o Common Language Runtime**
+
+   Adiciona o suporte para a programação CLR ao novo projeto.  
   
- **Common Language Runtime**  
- Especifica que o novo projeto esteja em conformidade com as funcionalidades de CLR.  
+- **Common Language Runtime**
+
+   Especifica que o novo projeto esteja em conformidade com as funcionalidades de CLR.  
   
- **Common Language Runtime (sintaxe antiga)**  
- Especifica que o novo projeto esteja em conformidade com a sintaxe do Managed Extensions for C++, que é a sintaxe de programação CLR anterior ao Visual C++ 2005.  
+- **Common Language Runtime (sintaxe antiga)**
+
+   Especifica que o novo projeto esteja em conformidade com a sintaxe do Managed Extensions for C++, que é a sintaxe de programação CLR anterior ao Visual C++ 2005.  
   
- **Usar sistema de build externo**  
- Especifica o uso das ferramentas de build não incluídas no Visual Studio para compilar o novo projeto. Quando essa opção é selecionada, você pode especificar as linhas de comando de build nas páginas **Especificar Definições de Configuração de Depuração** e **Especificar Configurações de Versão**.  
+- **Usar sistema de build externo**
+
+   Especifica o uso das ferramentas de build não incluídas no Visual Studio para compilar o novo projeto. Quando essa opção é selecionada, você pode especificar as linhas de comando de build nas páginas **Especificar Definições de Configuração de Depuração** e **Especificar Configurações de Versão**.  
   
-> [!NOTE]
->  Quando a opção **Usar sistema de build externo** é marcada, o IDE não compila o novo projeto e, portanto, as opções /D, /I, /FI, /AI ou /FU não são necessárias para a compilação. No entanto, essas opções precisam ser definidas corretamente para o funcionamento correto do IntelliSense.  
+   > [!NOTE]
+   > Quando a opção **Usar sistema de build externo** é marcada, o IDE não compila o novo projeto e, portanto, as opções /D, /I, /FI, /AI ou /FU não são necessárias para a compilação. No entanto, essas opções precisam ser definidas corretamente para o funcionamento correto do IntelliSense.  
   
 ## <a name="see-also"></a>Consulte também  
  [Especificar Definições de Configuração de Depuração, Assistente para Criar Novo Projeto com base em Arquivos de Código Existentes](../ide/specify-debug-configuration-settings.md)   

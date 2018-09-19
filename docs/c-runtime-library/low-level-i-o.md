@@ -20,18 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ce75fa9670f28079774f4ba564657d0b4614ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d263d1d61a6dcc6921d6918db2b89386e918551
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391276"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018308"
 ---
 # <a name="low-level-io"></a>E/S de nível inferior
 
 Essas funções invocam o sistema operacional diretamente para a operação de nível mais baixo do que o fornecido pelo fluxo de E/S. As chamadas de entrada e saída de nível inferior não fazem buffer nem formatam dados.
 
- As rotinas de nível inferior podem acessar os fluxos padrão abertos na inicialização do programa, usando os seguintes descritores de arquivo predefinidos.
+As rotinas de nível inferior podem acessar os fluxos padrão abertos na inicialização do programa, usando os seguintes descritores de arquivo predefinidos.
 
 |Fluxo|Descritor de arquivo|
 |------------|---------------------|
@@ -39,7 +39,7 @@ Essas funções invocam o sistema operacional diretamente para a operação de n
 |**stdout**|1|
 |**stderr**|2|
 
- As rotinas de E/S de nível inferior definem a variável global [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) quando ocorre um erro. Será necessário incluir STDIO.H ao usar funções de nível inferior somente se seu programa exigir uma constante que está definida no STDIO.H, como o indicador de fim do arquivo (**EOF**).
+As rotinas de E/S de nível inferior definem a variável global [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) quando ocorre um erro. Será necessário incluir STDIO.H ao usar funções de nível inferior somente se seu programa exigir uma constante que está definida no STDIO.H, como o indicador de fim do arquivo (**EOF**).
 
 ## <a name="low-level-io-functions"></a>Funções de E/S de nível inferior
 
@@ -64,5 +64,5 @@ Essas funções invocam o sistema operacional diretamente para a operação de n
 ## <a name="see-also"></a>Consulte também
 
 [Entrada e saída](../c-runtime-library/input-and-output.md)<br/>
- [Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
- [Chamadas do sistema](../c-runtime-library/system-calls.md)<br/>
+[Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Chamadas do sistema](../c-runtime-library/system-calls.md)<br/>

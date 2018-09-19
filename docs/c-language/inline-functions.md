@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be5afa2dc4980f9393deb498c7a5decdc56aece5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 127438da4929e58e07e10701dd64869b084fe4c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387366"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078576"
 ---
 # <a name="inline-functions"></a>Funções embutidas
 
@@ -45,7 +45,7 @@ O uso de funções embutidas gera código mais rápido e às vezes pode gerar c�
 
 As funções que usam `__inline` não devem ser confundidas com o código de assembler embutido. Consulte [Assembler embutido](../c-language/inline-assembler-c.md) para obter mais informações.
 
-**Fim da seção específica da Microsoft**  
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

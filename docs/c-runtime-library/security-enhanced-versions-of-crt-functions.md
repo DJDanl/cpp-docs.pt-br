@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825551f04dc4cf026d4d1e124a42b279ee20fadf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd9bb058220a2e84c98069e8804473ef0da1a422
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418530"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056359"
 ---
 # <a name="security-enhanced-versions-of-crt-functions"></a>Versões aprimoradas de segurança de funções CRT
 
@@ -110,4 +110,5 @@ Estão disponíveis versões mais seguras de rotinas de biblioteca de tempo de e
 |[wctomb, _wctomb_l](../c-runtime-library/reference/wctomb-wctomb-l.md)|[wctomb_s, _wctomb_s_l](../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)|Converter um caractere largo no caractere multibyte correspondente|
 
 ## <a name="see-also"></a>Consulte também
- [Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md)
+
+[Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md)

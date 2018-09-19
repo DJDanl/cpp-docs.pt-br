@@ -15,21 +15,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d892aac81efa8c2628c8662558b52cc1eb2e21c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5fe77d3775c489399bb8b9032e645eee17d70b0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386505"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076587"
 ---
 # <a name="storage-of-addresses"></a>Armazenamento de endereços
-A quantidade de armazenamento necessária para um endereço e o significado do endereço dependem da implementação do compilador. Não há garantia de que ponteiros para tipos diferentes tenham o mesmo tamanho. Portanto, **sizeof(char \*)** não é necessariamente igual a **sizeof(int \*)**.  
-  
- **Seção específica da Microsoft**  
-  
- Para o compilador Microsoft C, **sizeof(char \*)** é igual a **sizeof(int \*)**.  
-  
- **Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Declarações de ponteiro](../c-language/pointer-declarations.md)
+
+A quantidade de armazenamento necessária para um endereço e o significado do endereço dependem da implementação do compilador. Não há garantia de que ponteiros para tipos diferentes tenham o mesmo tamanho. Portanto, **sizeof(char \*)** não é necessariamente igual a **sizeof(int \*)**.
+
+**Seção específica da Microsoft**
+
+Para o compilador Microsoft C, **sizeof(char \*)** é igual a **sizeof(int \*)**.
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Declarações de ponteiro](../c-language/pointer-declarations.md)

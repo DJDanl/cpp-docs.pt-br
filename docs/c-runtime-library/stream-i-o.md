@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fba53f16fad9321701e641020ed01349b13a5c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ab13141c573ad302528a09b74cb3a5e2aaa0382
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418088"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035198"
 ---
 # <a name="stream-io"></a>E/S de fluxo
 
@@ -89,23 +89,23 @@ Essas funções processam os dados em diferentes tamanhos e formatos, desde cara
 |[_vsnprintf, _vsnwprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md), [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)|Gravar dados formatados de comprimento especificado no buffer|
 |[vsprintf, vswprintf](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md), [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)|Gravar dados formatados no buffer|
 
- Quando um programa começa a execução, o código de inicialização abre automaticamente vários fluxos: entrada padrão (apontada por **stdin**), saída padrão (apontada por **stdout**) e o erro padrão (apontado por **stderr**). Esses fluxos são direcionados ao console (tela e teclado) por padrão. Use **freopen** para redirecionar **stdin**, **stdout** ou **stderr** para um arquivo de disco ou um dispositivo.
+Quando um programa começa a execução, o código de inicialização abre automaticamente vários fluxos: entrada padrão (apontada por **stdin**), saída padrão (apontada por **stdout**) e o erro padrão (apontado por **stderr**). Esses fluxos são direcionados ao console (tela e teclado) por padrão. Use **freopen** para redirecionar **stdin**, **stdout** ou **stderr** para um arquivo de disco ou um dispositivo.
 
- Por padrão, os arquivos abertos usando as rotinas de fluxo serão armazenados em buffer. As funções **stdout** e **stderr** são liberadas sempre que estão cheias ou, caso você esteja gravando em um dispositivo de caractere, após cada chamada de biblioteca. Se um programa for encerrado de forma anormal, talvez os buffers de saída não esvaziem, resultando na perda de dados. Use **fflush** ou **_flushall** para garantir que o buffer associado a um arquivo especificado, ou todos os buffers abertos, seja liberado para o sistema operacional, que pode armazenar dados em cache antes de gravar no disco. O recurso de confirmação em disco garante que o conteúdo liberado do buffer não seja perdido em caso de falha do sistema.
+Por padrão, os arquivos abertos usando as rotinas de fluxo serão armazenados em buffer. As funções **stdout** e **stderr** são liberadas sempre que estão cheias ou, caso você esteja gravando em um dispositivo de caractere, após cada chamada de biblioteca. Se um programa for encerrado de forma anormal, talvez os buffers de saída não esvaziem, resultando na perda de dados. Use **fflush** ou **_flushall** para garantir que o buffer associado a um arquivo especificado, ou todos os buffers abertos, seja liberado para o sistema operacional, que pode armazenar dados em cache antes de gravar no disco. O recurso de confirmação em disco garante que o conteúdo liberado do buffer não seja perdido em caso de falha do sistema.
 
- Há duas maneiras de confirmar o conteúdo do buffer no disco:
+Há duas maneiras de confirmar o conteúdo do buffer no disco:
 
--   Vincular com o arquivo COMMODE.OBJ para definir um sinalizador de confirmação global. A configuração padrão do sinalizador global é **n**, para "sem confirmação".
+- Vincular com o arquivo COMMODE.OBJ para definir um sinalizador de confirmação global. A configuração padrão do sinalizador global é **n**, para "sem confirmação".
 
--   Defina o sinalizador de modo **c** com **fopen** ou **_fdopen**.
+- Defina o sinalizador de modo **c** com **fopen** ou **_fdopen**.
 
- Qualquer arquivo aberto especificamente com o sinalizador **c** ou **n** se comportará de acordo com o sinalizador, independentemente do estado do sinalizador de confirmação/sem confirmação global.
+Qualquer arquivo aberto especificamente com o sinalizador **c** ou **n** se comportará de acordo com o sinalizador, independentemente do estado do sinalizador de confirmação/sem confirmação global.
 
- Se o seu programa não fechar explicitamente um fluxo, ele será automaticamente fechado quando o programa for encerrado. No entanto, é necessário fechar um fluxo quando seu programa deixar de usá-lo, pois o número de fluxos que podem ser abertos ao mesmo tempo é limitado. Confira [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) para obter informações sobre esse limite.
+Se o seu programa não fechar explicitamente um fluxo, ele será automaticamente fechado quando o programa for encerrado. No entanto, é necessário fechar um fluxo quando seu programa deixar de usá-lo, pois o número de fluxos que podem ser abertos ao mesmo tempo é limitado. Confira [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) para obter informações sobre esse limite.
 
- A entrada pode seguir a saída diretamente apenas com uma chamada intermediária para **fflush** ou para uma função de posicionamento de arquivos (**fseek**, **fsetpos** ou **rewind**). A saída pode seguir a entrada sem uma chamada intermediária para uma função de posicionamento de arquivo se a operação de entrada encontrar o final do arquivo.
+A entrada pode seguir a saída diretamente apenas com uma chamada intermediária para **fflush** ou para uma função de posicionamento de arquivos (**fseek**, **fsetpos** ou **rewind**). A saída pode seguir a entrada sem uma chamada intermediária para uma função de posicionamento de arquivo se a operação de entrada encontrar o final do arquivo.
 
 ## <a name="see-also"></a>Consulte também
 
 [Entrada e saída](../c-runtime-library/input-and-output.md)<br/>
- [Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Rotinas de tempo de execução C universais por categoria](../c-runtime-library/run-time-routines-by-category.md)<br/>

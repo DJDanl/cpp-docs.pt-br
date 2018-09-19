@@ -17,28 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69d7a9fc75e23a03e4db232bc798c89f89083e62
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d78b23f81b72d04e9299616b0273bc97bb7a4e0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383625"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078147"
 ---
 # <a name="expanding-wildcard-arguments"></a>Expandindo argumentos de curinga
-**Seção específica da Microsoft**  
-  
- Ao executar um programa C, você pode usar qualquer um dos dois caracteres curinga — o ponto de interrogação (?) e o asterisco (*) — para especificar argumentos de nome de arquivo e caminho na linha de comando.  
-  
- Por padrão, os curingas não são expandidos em argumentos de linha de comando. Você pode substituir o vetor de argumento normal `argv` carregando a rotina com uma versão que expande curingas por meio da vinculação com o arquivo setargv.obj ou wsetargv.obj. Se seu programa usa uma função `main`, faça um link com setargv.obj. Se seu programa usa uma função `wmain`, faça um link com wsetargv.obj. Ambos têm comportamento equivalente.  
-  
- Para vinculá-lo a Setargv.obj ou a wsetargv.obj, use a opção **/link**. Por exemplo:  
-  
- **cl example.c /link setargv.obj**  
-  
- Os caracteres curinga são expandidos da mesma maneira que os comandos do sistema operacional. (Consulte o guia do usuário do sistema operacional se você não estiver familiarizado com os caracteres curinga.)  
-  
- **Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Opções de link](../c-runtime-library/link-options.md)   
- [Função main e execução do programa](../c-language/main-function-and-program-execution.md)
+
+**Seção específica da Microsoft**
+
+Ao executar um programa C, você pode usar qualquer um dos dois caracteres curinga — o ponto de interrogação (?) e o asterisco (*) — para especificar argumentos de nome de arquivo e caminho na linha de comando.
+
+Por padrão, os curingas não são expandidos em argumentos de linha de comando. Você pode substituir o vetor de argumento normal `argv` carregando a rotina com uma versão que expande curingas por meio da vinculação com o arquivo setargv.obj ou wsetargv.obj. Se seu programa usa uma função `main`, faça um link com setargv.obj. Se seu programa usa uma função `wmain`, faça um link com wsetargv.obj. Ambos têm comportamento equivalente.
+
+Para vinculá-lo a Setargv.obj ou a wsetargv.obj, use a opção **/link**. Por exemplo:
+
+**cl example.c /link setargv.obj**
+
+Os caracteres curinga são expandidos da mesma maneira que os comandos do sistema operacional. (Consulte o guia do usuário do sistema operacional se você não estiver familiarizado com os caracteres curinga.)
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Opções de link](../c-runtime-library/link-options.md)<br/>
+[Função main e execução do programa](../c-language/main-function-and-program-execution.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bfd0715acd7eb18c4ccc83d496a1e9a98084fdf
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8a58338d980db5acd8f41c71e23c37c1700a0761
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757943"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055111"
 ---
 # <a name="initializing-aggregate-types"></a>Inicializando tipos agregados
 
@@ -109,13 +109,13 @@ triplet nlist[2][3] =
 
 Neste exemplo, `nlist` é declarado como uma matriz de estruturas 2-por-3, cada estrutura com três membros. A linha 1 da inicialização atribui valores à primeira linha de `nlist`, como segue:
 
-1.  A primeira chave à esquerda na linha 1 sinaliza ao compilador que a inicialização do primeiro membro da agregação de `nlist` (isto é, `nlist[0]`) foi iniciada.
+1. A primeira chave à esquerda na linha 1 sinaliza ao compilador que a inicialização do primeiro membro da agregação de `nlist` (isto é, `nlist[0]`) foi iniciada.
 
-2.  A segunda chave à esquerda indica a inicialização do primeiro membro da agregação de `nlist[0]` (isto é, a estrutura em `nlist[0][0]`) foi iniciada.
+1. A segunda chave à esquerda indica a inicialização do primeiro membro da agregação de `nlist[0]` (isto é, a estrutura em `nlist[0][0]`) foi iniciada.
 
-3.  A primeira chave à direita termina a inicialização da estrutura `nlist[0][0]`; a chave à esquerda a seguir inicia a inicialização de `nlist[0][1]`.
+1. A primeira chave à direita termina a inicialização da estrutura `nlist[0][0]`; a chave à esquerda a seguir inicia a inicialização de `nlist[0][1]`.
 
-4.  O processo continua até o final da linha, onde a chave de fechamento à direita encerra a inicialização de `nlist[0]`.
+1. O processo continua até o final da linha, onde a chave de fechamento à direita encerra a inicialização de `nlist[0]`.
 
 A linha 2 atribui valores à segunda linha de `nlist` de forma semelhante. Observe que os conjuntos de chaves externos que delimitam os inicializadores nas linhas 1 e 2 são obrigatórios. A construção a seguir, que omite as chaves externas, provocará um erro:
 

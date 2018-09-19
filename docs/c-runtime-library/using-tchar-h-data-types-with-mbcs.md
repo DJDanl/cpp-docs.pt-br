@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 066459593be4970fde141333a6f22f0846f8bbc4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc14f5831904e2fea9bfa7ef7607f2085d1f0e58
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412645"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061253"
 ---
 # <a name="using-tcharh-data-types-with-mbcs"></a>Usando tipos de dados TCHAR.H com _MBCS
 
@@ -35,7 +35,7 @@ Como indica a tabela de mapeamentos de rotina de texto genérico (consulte [Mape
 
 - Uma rotina específica do MBCS. Nesse caso, os argumentos de cadeia de caracteres devem ser do tipo __unsigned char&#42;__. Por exemplo, **_tcsrev** mapeia para **_mbsrev**, que espera e retorna uma cadeia de caracteres do tipo __unsigned char&#42;__. Novamente, se você usar o tipo de dados de texto genérico **_TCHAR** para seus tipos de cadeia de caracteres, haverá um possível conflito de tipo porque **_TCHAR** mapeará para o tipo **char**.
 
- A seguir estão três soluções para evitar esse conflito de tipo (e os avisos do compilador C ou erros do compilador C++ que resultariam):
+A seguir estão três soluções para evitar esse conflito de tipo (e os avisos do compilador C ou erros do compilador C++ que resultariam):
 
 - Use o comportamento padrão. TCHAR. H fornece protótipos de rotina de texto genérico para rotinas nas bibliotecas de tempo de execução, como no exemplo a seguir.
 

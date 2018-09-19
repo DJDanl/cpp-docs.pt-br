@@ -16,27 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 335c8e6f73236b96330c32c4b3106aec3cf66a73
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8bfd7db4692b162ea603d91d7ca6174dddf4a3db
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677322"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722879"
 ---
 # <a name="application-settings-makefile-project-wizard"></a>Configurações do aplicativo, Assistente de Projeto de Makefile
 Forneça as informações para o projeto. As opções especificadas são refletidas na [página de propriedades](../ide/working-with-project-properties.md) do projeto. Depois de criar o projeto, exiba e edite cada uma das opções a seguir na página **Nmake** da página de propriedades do projeto.  
   
- **Linha de comando de Build**  
- Especifica a linha de comando a ser executada quando o usuário seleciona **Compilar** no menu **Build**. Exibida no campo **Linha de comando de Build** na página **Nmake** da página de propriedades do projeto.  
+- **Linha de comando de Build**
+
+   Especifica a linha de comando a ser executada quando o usuário seleciona **Compilar** no menu **Build**. Exibida no campo **Linha de comando de Build** na página **Nmake** da página de propriedades do projeto.  
   
- **Saída**  
- Especifica o nome do arquivo de saída que conterá a saída da linha de comando. Por padrão, essa opção baseia-se no nome do projeto. Exibida no campo **Saída** na página **Nmake** da página de propriedades do projeto.  
+- **Saída**
+
+   Especifica o nome do arquivo de saída que conterá a saída da linha de comando. Por padrão, essa opção baseia-se no nome do projeto. Exibida no campo **Saída** na página **Nmake** da página de propriedades do projeto.  
   
- **Comandos de Limpar**  
- Especifica a linha de comando a ser executada quando o usuário seleciona **Limpar** no menu **Build**. Exibida no campo **Linha de comando de Limpar** na página **Nmake** da página de propriedades do projeto.  
+- **Comandos de Limpar**
+
+   Especifica a linha de comando a ser executada quando o usuário seleciona **Limpar** no menu **Build**. Exibida no campo **Linha de comando de Limpar** na página **Nmake** da página de propriedades do projeto.  
   
- **Linha de comando de Recompilar**  
- Especifica a linha de comando a ser executada quando o usuário seleciona **Recompilar** no menu **Build**. Exibida no campo **Linha de comando de Recompilar tudo** na página **Nmake** da página de propriedades do projeto.  
+- **Linha de comando de Recompilar**
+
+   Especifica a linha de comando a ser executada quando o usuário seleciona **Recompilar** no menu **Build**. Exibida no campo **Linha de comando de Recompilar tudo** na página **Nmake** da página de propriedades do projeto.  
   
 ## <a name="see-also"></a>Consulte também  
  [Assistente de Projeto Makefile](../ide/makefile-project-wizard.md)   

@@ -19,22 +19,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fef1a50b1446b9bff0eafc982e77a1bd6db568cc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cee175eb7f12952dfe7e30ef79842ee03a96fbb1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407646"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019673"
 ---
 # <a name="tmpmax-ltmpnam"></a>TMP_MAX, L_tmpnam
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-#include <stdio.h>  
-```  
-  
-## <a name="remarks"></a>Comentários  
- `TMP_MAX` é o número máximo de nomes de arquivo exclusivos que a função `tmpnam` pode gerar. `L_tmpnam` é o comprimento dos nomes de arquivo temporários gerados por `tmpnam`.  
-  
-## <a name="see-also"></a>Consulte também  
- [Constantes globais](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Sintaxe
+
+```
+#include <stdio.h>
+```
+
+## <a name="remarks"></a>Comentários
+
+`TMP_MAX` é o número máximo de nomes de arquivo exclusivos que a função `tmpnam` pode gerar. `L_tmpnam` é o comprimento dos nomes de arquivo temporários gerados por `tmpnam`.
+
+## <a name="see-also"></a>Consulte também
+
+[Constantes globais](../c-runtime-library/global-constants.md)

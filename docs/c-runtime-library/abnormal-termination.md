@@ -27,34 +27,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f70520b60ccfaf1af5b223bcb4ea1a90639aa484
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e311c27d61eca82019f8069b0984557af02c74a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385547"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028201"
 ---
 # <a name="abnormaltermination"></a>_abnormal_termination
-Indica se o bloco `__finally` de uma [instrução try-finally](../cpp/try-finally-statement.md) é inserido enquanto o sistema está executado uma lista interna de manipuladores de término.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-int   _abnormal_termination(  
-   );  
-```  
-  
-## <a name="return-value"></a>Valor retornado  
- `true` se o sistema estiver *desenrolando* a pilha, caso contrário, `false`.  
-  
-## <a name="remarks"></a>Comentários  
- É uma função interna usada para gerenciar o desenrolamento de exceções e não tem o objetivo de ser chamado no código do usuário.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
-|_abnormal_termination|excpt. h|  
-  
-## <a name="see-also"></a>Consulte também  
- [Instrução try-finally](../cpp/try-finally-statement.md)
+
+Indica se o bloco `__finally` de uma [instrução try-finally](../cpp/try-finally-statement.md) é inserido enquanto o sistema está executado uma lista interna de manipuladores de término.
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+int   _abnormal_termination(
+   );
+```
+
+## <a name="return-value"></a>Valor retornado
+
+`true` se o sistema estiver *desenrolando* a pilha, caso contrário, `false`.
+
+## <a name="remarks"></a>Comentários
+
+É uma função interna usada para gerenciar o desenrolamento de exceções e não tem o objetivo de ser chamado no código do usuário.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
+|_abnormal_termination|excpt. h|
+
+## <a name="see-also"></a>Consulte também
+
+[Instrução try-finally](../cpp/try-finally-statement.md)

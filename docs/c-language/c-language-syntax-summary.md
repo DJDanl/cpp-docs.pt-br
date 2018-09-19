@@ -17,18 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58a4d6618aeea9cc07731ba814644cf31b4a6941
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 73bbc4d8c80b6fa617710344f570da3498f3a94a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381923"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062014"
 ---
 # <a name="c-language-syntax-summary"></a>Resumo da sintaxe da linguagem C
-Esta seção fornece a descrição completa dos recursos da linguagem C e da linguagem C específica da Microsoft. Você pode usar a notação de sintaxe nesta seção para determinar a sintaxe exata de qualquer componente da linguagem. A explicação da sintaxe aparece na seção deste manual em que um tópico é discutido.  
-  
+
+Esta seção fornece a descrição completa dos recursos da linguagem C e da linguagem C específica da Microsoft. Você pode usar a notação de sintaxe nesta seção para determinar a sintaxe exata de qualquer componente da linguagem. A explicação da sintaxe aparece na seção deste manual em que um tópico é discutido.
+
 > [!NOTE]
->  Este resumo da sintaxe não faz parte do padrão ANSI C, mas é incluído apenas para fins informativos. A sintaxe específica da Microsoft é indicada em comentários depois da sintaxe.  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência da linguagem C](../c-language/c-language-reference.md)
+>  Este resumo da sintaxe não faz parte do padrão ANSI C, mas é incluído apenas para fins informativos. A sintaxe específica da Microsoft é indicada em comentários depois da sintaxe.
+
+## <a name="see-also"></a>Consulte também
+
+[Referência da linguagem C](../c-language/c-language-reference.md)

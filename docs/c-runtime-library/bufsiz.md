@@ -16,24 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39a3337598947e0487529549d76e6e7ac43d3b46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bd455f5efa9b67d8da2f856f12ec82f3847d83d5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386177"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46019933"
 ---
 # <a name="bufsiz"></a>BUFSIZ
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-#include <stdio.h>  
-```  
-  
-## <a name="remarks"></a>Comentários  
- `BUFSIZ` é o buffer alocado pelo usuário necessário para a rotina [setvbuf](../c-runtime-library/reference/setvbuf.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [E/S de fluxo](../c-runtime-library/stream-i-o.md)   
- [Constantes globais](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Sintaxe
+
+```
+
+#include <stdio.h>
+```
+
+## <a name="remarks"></a>Comentários
+
+`BUFSIZ` é o buffer alocado pelo usuário necessário para a rotina [setvbuf](../c-runtime-library/reference/setvbuf.md).
+
+## <a name="see-also"></a>Consulte também
+
+[E/S de fluxo](../c-runtime-library/stream-i-o.md)<br/>
+[Constantes globais](../c-runtime-library/global-constants.md)

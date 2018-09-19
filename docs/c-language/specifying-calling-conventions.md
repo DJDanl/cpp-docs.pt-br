@@ -12,19 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27e92a5caf620bdd0b2f6379021b1fd4d5e0ba07
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8d76d81687ed143e1e834b706012b68b6f1f52a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387946"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023443"
 ---
 # <a name="specifying-calling-conventions"></a>Especificando convenções de chamada
-**Seção específica da Microsoft**  
-  
- Para obter informações sobre as convenções de chamada, consulte [Tópicos de Convenções de Chamada](../cpp/calling-conventions.md).  
-  
- **Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Atributos de função](../c-language/function-attributes.md)
+
+**Seção específica da Microsoft**
+
+Para obter informações sobre as convenções de chamada, consulte [Tópicos de Convenções de Chamada](../cpp/calling-conventions.md).
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Atributos de função](../c-language/function-attributes.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69e2950fcc0b29fb819445f3216ef262a2657e4a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e88890917986e54b3b912d50e97da77032abab34
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686415"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078784"
 ---
 # <a name="ltparamgt-visual-c"></a>&lt;param&gt; (Visual C++)
 A marca \<param> deve ser usada no comentário para uma declaração de método para descrever um dos parâmetros do método.  
@@ -35,11 +35,11 @@ A marca \<param> deve ser usada no comentário para uma declaração de método 
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `name`  
- O nome do parâmetro de um método.  Coloque o nome entre aspas simples ou duplas.  O compilador emite um aviso se não encontra `name`.  
+*name*<br/>
+O nome do parâmetro de um método.  Coloque o nome entre aspas simples ou duplas.  O compilador emite um aviso se não encontra `name`.  
   
- `description`  
- Uma descrição do parâmetro.  
+*description*<br/>
+Uma descrição do parâmetro.  
   
 ## <a name="remarks"></a>Comentários  
  O texto da marcação \<param> será exibido no IntelliSense, no [Pesquisador de Objetos](/visualstudio/ide/viewing-the-structure-of-code) e no relatório Web de comentários sobre código.  
@@ -48,7 +48,7 @@ A marca \<param> deve ser usada no comentário para uma declaração de método 
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // xml_param_tag.cpp  
 // compile with: /clr /doc /LD  
 // post-build command: xdcmake xml_param_tag.dll  

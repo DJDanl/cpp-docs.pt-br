@@ -14,25 +14,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4d22df877ab757134ee6da86a5ff22ec106f958
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: a2394516773f428ae62fb9e8e39dd78dd790bebd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208569"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033908"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Delimitadores de marcações de documentação para o Visual C++
 O uso de marcas de documentação exige delimitadores, que indicam ao compilador o local em que um comentário da documentação começa e termina.  
   
  Você pode usar os seguintes tipos de delimitadores com as marcas de documentação XML:  
+|||
+|-|-|
+|`///`  | Esse é o formulário mostrado nos exemplos de documentação e usado pelos modelos de projeto do Visual C++.  |
+| `/** */`  | Veja abaixo os delimitadores multilinha.  |
   
- `///`  
- Esse é o formulário mostrado nos exemplos de documentação e usado pelos modelos de projeto do Visual C++.  
-  
- `/** */`  
- Veja abaixo os delimitadores multilinha.  
-  
- Há algumas regras de formatação no uso dos delimitadores `/** */`:  
+Há algumas regras de formatação no uso dos delimitadores `/** */`:  
   
 -   Na linha que contém o delimitador `/**`, se o restante da linha é um espaço em branco, a linha não é processada para comentários. Se o primeiro caractere é um espaço em branco, esse caractere de espaço em branco é ignorado e o restante da linha é processado. Caso contrário, todo o texto da linha após o delimitador `/**` é processado como parte do comentário.  
   
@@ -40,7 +38,7 @@ O uso de marcas de documentação exige delimitadores, que indicam ao compilador
   
 -   Nas linhas após aquela que começa com o delimitador `/**`, o compilador procura um padrão comum no início de cada linha que consiste em um espaço em branco opcional e um asterisco (`*`), seguido por mais um espaço em branco opcional. Se o compilador encontrar um conjunto comum de caracteres no início de cada linha, ele ignorará esse padrão em todas as linhas após o delimitador `/**`, até e, possivelmente, incluindo a linha que contém o delimitador `*/`.  
   
- Alguns exemplos:  
+Alguns exemplos:  
   
 -   A única parte do comentário a seguir que será processada é a linha que começa com `<summary>`. Os dois seguintes formatos de marcação produzirão os mesmos comentários:  
   

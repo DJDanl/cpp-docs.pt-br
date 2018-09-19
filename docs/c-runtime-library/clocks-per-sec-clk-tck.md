@@ -18,24 +18,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbcc64419a34ff763f3e116474687fbadf055f42
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c3c7eac1db91abf7a84e424f7166402f346d3e4e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387395"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033570"
 ---
 # <a name="clockspersec-clktck"></a>CLOCKS_PER_SEC, CLK_TCK
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-  
-#include <time.h>  
-```  
-  
-## <a name="remarks"></a>Comentários  
- O tempo em segundos é o valor retornado pela função `clock`, dividido por `CLOCKS_PER_SEC`. `CLK_TCK` é equivalente, mas considerada obsoleta.  
-  
-## <a name="see-also"></a>Consulte também  
- [relógio](../c-runtime-library/reference/clock.md)   
- [Constantes globais](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>Sintaxe
+
+```
+
+#include <time.h>
+```
+
+## <a name="remarks"></a>Comentários
+
+O tempo em segundos é o valor retornado pela função `clock`, dividido por `CLOCKS_PER_SEC`. `CLK_TCK` é equivalente, mas considerada obsoleta.
+
+## <a name="see-also"></a>Consulte também
+
+[clock](../c-runtime-library/reference/clock.md)<br/>
+[Constantes globais](../c-runtime-library/global-constants.md)

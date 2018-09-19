@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef20e1649b2592c29482dd0204c1daf6ffcb01d8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2700d7ffa59a14e96f175e4e81933924a4bf5912
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381802"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034259"
 ---
 # <a name="character-constants-and-conditional-inclusion"></a>Constantes de caractere e inclusão condicional
-**ANSI 3.8.1** Se o valor de uma constante de caractere único em uma expressão constante que controla a inclusão condicional corresponde ao valor da mesma constante de caractere no conjunto de caracteres de execução. Se essa constante de caractere pode ter um valor negativo  
-  
- O conjunto de caracteres usado em instruções do pré-processador é igual ao conjunto de caracteres de execução. O pré-processador reconhece valores negativos de caracteres.  
-  
-## <a name="see-also"></a>Consulte também  
- [Diretivas de pré-processamento](../c-language/preprocessing-directives.md)
+
+**ANSI 3.8.1** Se o valor de uma constante de caractere único em uma expressão constante que controla a inclusão condicional corresponde ao valor da mesma constante de caractere no conjunto de caracteres de execução. Se essa constante de caractere pode ter um valor negativo
+
+O conjunto de caracteres usado em instruções do pré-processador é igual ao conjunto de caracteres de execução. O pré-processador reconhece valores negativos de caracteres.
+
+## <a name="see-also"></a>Consulte também
+
+[Diretivas de pré-processamento](../c-language/preprocessing-directives.md)

@@ -1,5 +1,5 @@
 ---
-title: Aviso PRJ0041 de Build do projeto | Microsoft Docs
+title: Aviso PRJ0041 de projeto | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e845967b0a7116d6edade98b571de5bc1bcd9a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7677c5718783065f64e52f98f7ddbed76e905d2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318055"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038133"
 ---
 # <a name="project-build-warning-prj0041"></a>Aviso PRJ0041 de Build de Projeto
-Não é possível localizar ausente dependência dependência para o arquivo 'file'. Seu projeto ainda pode ser compilado, mas talvez continue aparecendo desatualizado até que esse arquivo é encontrado.  
-  
- Um arquivo (arquivo de recurso ou arquivo.idl/.odl, por exemplo, continha uma instrução que o sistema do projeto não foi possível resolver.  
-  
- Como o sistema do projeto não processar instruções do pré-processador (#if, por exemplo), a instrução inválida não pode, na verdade, ser parte da compilação.  
-  
- Para resolver este aviso, exclua todo o código em arquivos. rc desnecessário ou adicionar arquivos de espaço reservado de nome apropriado.
+
+Não é possível encontrar a dependência 'dependência' arquivo 'arquivo'. Seu projeto ainda pode ser compilado, mas talvez continue aparecendo desatualizado até que esse arquivo é encontrado.
+
+Um arquivo (arquivo.idl/.odl, ou arquivo de recurso, por exemplo, continha uma instrução de inclusão que o sistema de projeto não foi possível resolver.
+
+Como o sistema de projeto não processa as instruções do pré-processador (#if, por exemplo), a instrução incorreta pode não, na verdade, ser parte da compilação.
+
+Para resolver este aviso, exclua todo o código desnecessário em arquivos. rc ou adicione arquivos de espaço reservado de nome apropriado.

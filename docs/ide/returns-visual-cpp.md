@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b9956299370b4a41ce725cf903ff2aefe55bf53
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ed871ee2148b6b731ab9354cd45c2e178b4d85a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33336730"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056073"
 ---
 # <a name="ltreturnsgt-visual-c"></a>&lt;returns&gt; (Visual C++)
 A marca \<returns> deve ser usada no comentário para uma declaração de método descrever o valor retornado.  
@@ -35,8 +35,8 @@ A marca \<returns> deve ser usada no comentário para uma declaração de métod
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `description`  
- Uma descrição do valor retornado.  
+*description*<br/>
+Uma descrição do valor retornado.  
   
 ## <a name="remarks"></a>Comentários  
  Compile com [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação em um arquivo.  
