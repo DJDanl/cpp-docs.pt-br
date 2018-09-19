@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822e07c9173d9010bb8ab63b6ca4837b9c52e066
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bf067a1024b8ac344c1490bc9ec25b0b7d57540
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297648"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082346"
 ---
 # <a name="expression-evaluator-error-cxx0022"></a>Erro CXX0022 (avaliador de expressão)
-chamada de função antes de Main  
-  
- O avaliador de expressão C não é possível avaliar uma função antes do depurador entrou a função **Main**. O programa não foi inicializado corretamente até **Main** foi chamado.  
-  
- Esse erro é idêntico ao CAN0022.
+
+chamada de função antes de Main
+
+O avaliador de expressão C não é possível avaliar uma função antes do depurador tiver inserido a função **Main**. O programa não foi inicializado corretamente até **Main** foi chamado.
+
+Esse erro é idêntico ao CAN0022.

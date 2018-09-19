@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45880594a3a9aa64fd62099b5b1eea342107e3dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31e372db05d39bb7559fc3ee4390b8886e070b46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227415"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091927"
 ---
 # <a name="fatal-error-c1192"></a>Erro fatal C1192
-\#usando falhou em 'arquivo'  
-  
- Apenas um arquivo no formato Microsoft Intermediate Language (MSIL) pode ser passado para um [#using](../../preprocessor/hash-using-directive-cpp.md) diretiva. O [/clr](../../build/reference/clr-common-language-runtime-compilation.md) opção de compilador permite que você crie um arquivo de saída do MSIL. Outros idiomas do Visual Studio também produzem arquivos MSIL.
+
+\#Using falhou em 'file'
+
+Apenas um arquivo no formato Microsoft Intermediate Language (MSIL) pode ser passado para um [#using](../../preprocessor/hash-using-directive-cpp.md) diretiva. O [/clr](../../build/reference/clr-common-language-runtime-compilation.md) opção de compilador permite que você crie um arquivo de saída do MSIL. Outras linguagens do Visual Studio também produzem arquivos MSIL.

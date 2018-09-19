@@ -1,5 +1,5 @@
 ---
-title: C2166 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2166 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b0be5dbf9326618826fb8daca062c8a09060b99
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9902110832c3c8c8126fcb45e21881449206941c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167184"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096854"
 ---
-# <a name="compiler-error-c2166"></a>C2166 de erro do compilador
-l-value Especifica objeto const  
-  
- Código de tentativas de modificar um item declarado `const`.  
-  
- O exemplo a seguir gera C2166:  
-  
-```  
-// C2166.cpp  
-int f();  
-int main() {  
-   ( (const int&) 1 ) = 5;   // C2166  
-}  
+# <a name="compiler-error-c2166"></a>Erro do compilador C2166
+
+l-value Especifica objeto const
+
+Código tenta modificar um item declarado `const`.
+
+O exemplo a seguir gera C2166:
+
+```
+// C2166.cpp
+int f();
+int main() {
+   ( (const int&) 1 ) = 5;   // C2166
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: C2654 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2654 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b28fb3de46d9071c9ee19711344c5b41e337934
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1181cbab40739617343f8d2a2e5e26540f01e82f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232874"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080835"
 ---
-# <a name="compiler-error-c2654"></a>C2654 de erro do compilador
-'Identificador': tentativa de acesso a membro fora de uma função de membro  
-  
- Um membro é acessado em uma declaração. Dados de membro podem ser acessados apenas em funções de membro.  
-  
- Esse erro pode ocorrer ao tentar inicializar variáveis em uma declaração. Use um construtor para essa finalidade.
+# <a name="compiler-error-c2654"></a>Erro do compilador C2654
+
+'identifier': tentativa de acesso a membro fora de uma função de membro
+
+Um membro é acessado em uma declaração. Dados de membro podem ser acessados apenas em funções de membro.
+
+Esse erro pode ser causado ao tentar inicializar as variáveis em uma declaração. Use um construtor para essa finalidade.

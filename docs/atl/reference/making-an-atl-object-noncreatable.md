@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a77ed656d39888e85e607ee4fdd96b384d0d250
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cf2b3d047a6618326e69dcb51f143f77fc10c8a6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761450"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099532"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>Tornando um Noncreatable de objeto do ATL
 
@@ -46,10 +46,10 @@ Você pode alterar os atributos de um objeto COM baseados em ATL para que um cli
 
 ## <a name="see-also"></a>Consulte também
 
-[ATL Project Wizard](../../atl/reference/atl-project-wizard.md)   
-[Tipos de projeto do Visual C++](../../ide/visual-cpp-project-types.md)   
-[Criando projetos da área de trabalho com assistentes de aplicativo](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
-[Programando com código de tempo de execução de C e ATL](../../atl/programming-with-atl-and-c-run-time-code.md)   
-[Conceitos básicos de objetos COM da ATL](../../atl/fundamentals-of-atl-com-objects.md)   
+[Assistente de Projeto da ATL](../../atl/reference/atl-project-wizard.md)<br/>
+[Tipos de projeto do Visual C++](../../ide/visual-cpp-project-types.md)<br/>
+[Criando projetos para área de trabalho com Assistentes de Aplicativo](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Programando com código de tempo de execução C e da ATL](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Princípios básicos de objetos COM da ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Configurações de projeto padrão da ATL](../../atl/reference/default-atl-project-configurations.md)
 

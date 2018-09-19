@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32d5510c0db76cc688c850538d9bd5f75c653151
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34b5bde82eff004628073f1ec6d8b372bd02afc0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296088"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095412"
 ---
 # <a name="expression-evaluator-error-cxx0050"></a>Erro CXX0050 (avaliador de expressão)
-lado esquerdo de:: deve ser classe/struct/união  
-  
- O símbolo no lado esquerdo do operador de resolução do escopo (`::`) não era uma classe, estrutura ou união.  
-  
- Esse erro é idêntico ao CAN0050.
+
+lado esquerdo da:: deve ser a classe/struct/union
+
+O símbolo no lado esquerdo do operador de resolução de escopo (`::`) não era uma classe, estrutura ou união.
+
+Esse erro é idêntico ao CAN0050.

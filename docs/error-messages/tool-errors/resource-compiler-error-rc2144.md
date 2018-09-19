@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b6f83f937e881cdee16c22120e6ac1839f7ad76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62f9eb2b25919a2336c36a459ef41eece447a490
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320480"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080487"
 ---
 # <a name="resource-compiler-error-rc2144"></a>Erro RC2144 (compilador de recurso)
-ID DE IDIOMA PRIMÁRIO não é um número  
-  
- A ID DE IDIOMA PRIMÁRIO deve ser uma ID de idioma hexadecimal. Consulte [cadeias de caracteres de país/região e idioma](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) no *referência da biblioteca de tempo de execução* para obter uma lista de IDs de idioma válido.  
-  
- Esse erro também pode ocorrer se os recursos forem adicionados e excluídos do arquivo .RC usando uma ferramenta. Para corrigir esse problema, abra o arquivo .RC em um editor de texto e limpe quaisquer recursos não usados manualmente.
+
+ID DE IDIOMA PRIMÁRIO não é um número
+
+A ID DE IDIOMA PRIMÁRIO deve ser uma ID de idioma hexadecimal. Ver [cadeias de caracteres de país/região e idioma](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) na *referência de biblioteca de tempo de execução* para obter uma lista de IDs de idioma válido.
+
+Esse erro também pode ocorrer se os recursos forem adicionados e excluídos do arquivo .RC usando uma ferramenta. Para corrigir esse problema, abra o arquivo .RC em um editor de texto e limpe quaisquer recursos não usados manualmente.

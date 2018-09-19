@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de vinculador LNK1277 erro | Microsoft Docs
+title: Erro das LNK1277 das ferramentas de vinculador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec8f00793fcda748c60d9d8ea775611e3d025cd9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542c48bd23b3f84ab301404987c77d964f51823e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298724"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082502"
 ---
 # <a name="linker-tools-error-lnk1277"></a>Erro das Ferramentas de Vinculador LNK1277
-registro de objeto não encontrado no pgd (nome de arquivo)  
-  
- Ao usar [/LTCG:PGOPTIMZE](../../build/reference/ltcg-link-time-code-generation.md), o caminho de um dos arquivos de entrada. lib, def ou. obj for diferente do caminho no qual eles foram encontrados durante a /LTCG:PGINSTRUMENT. Isso pode ser explicado por uma alteração na variável de ambiente LIB após /LTCG:PGINSTRUMENT. O caminho completo para os arquivos de entrada é armazenado no arquivo. PGD.  
-  
- /LTCG:PGOPTIMIZE requer que as entradas sejam idênticos para a fase de /LTCG:PGINSTRUMENT.  
-  
- Para resolver este aviso, siga um destes procedimentos:  
-  
--   Executar /LTCG:PGINSTRUMENT, refazer todas as execuções de teste e executar /LTCG:PGOPTIMIZE.  
-  
--   Altere a variável de ambiente LIB para qual ela era quando você executou /LTCG:PGINSTRUMENT.  
-  
- Não é recomendável que você trabalhe em torno de LNK1277 usando /LTCG:PGUPDATE.
+
+registro de objeto não encontrado no pgd (filename)
+
+Ao usar [/LTCG:PGOPTIMZE](../../build/reference/ltcg-link-time-code-generation.md), o caminho de um dos arquivos de entrada. lib, def ou. obj era diferente do caminho no qual eles foram encontrados durante a /LTCG:PGINSTRUMENT. Isso pode ser explicado por uma alteração na variável de ambiente LIB após /LTCG:PGINSTRUMENT. O caminho completo para os arquivos de entrada é armazenado no arquivo. PGD.
+
+/LTCG:PGOPTIMIZE requer que as entradas sejam idênticos à fase de /LTCG:PGINSTRUMENT.
+
+Para resolver este aviso, siga um destes procedimentos:
+
+- Executar /LTCG:PGINSTRUMENT, refazer todas as execuções de teste e execute /LTCG:PGOPTIMIZE.
+
+- Altere a variável de ambiente LIB ao que era quando você executou /LTCG:PGINSTRUMENT.
+
+Não é recomendável que você trabalhe em torno das LNK1277 usando /LTCG:PGUPDATE.

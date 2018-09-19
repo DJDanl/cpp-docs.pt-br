@@ -16,35 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed4b14ae2f3af3218909d6cd4609f1f45d3d7cc2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5a19c27731192a5fe2930aec3e78fb66d790484
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293628"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090900"
 ---
-# <a name="compiler-warning-level-3-c4800"></a>Aviso (nível 3) do compilador C4800  
-  
-> '*tipo*': forçando valor para bool 'true' ou 'false' (aviso de desempenho)  
-  
-Esse aviso é gerado quando um valor que não seja `bool` atribuído ou imposto para o tipo `bool`. Normalmente, essa mensagem é exibida, atribuindo `int` variáveis de `bool` variáveis onde o `int` variável contém apenas valores **true** e **false**e pode ser declarado novamente como tipo `bool`. Se você não pode reescrever a expressão para usar o tipo `bool`, em seguida, você pode adicionar "`!=0`" à expressão, que fornece o tipo da expressão `bool`. Converter a expressão para o tipo `bool` não desabilita o aviso, que é por design.  
-  
-Esse aviso não é gerado no Visual Studio de 2017.  
-  
+# <a name="compiler-warning-level-3-c4800"></a>Aviso (nível 3) do compilador C4800
+
+> '*tipo*': forçando o valor booliano 'true' ou 'false' (aviso de desempenho)
+
+Esse aviso é gerado quando um valor que não é `bool` atribuído ou imposto para o tipo `bool`. Normalmente, essa mensagem é causada por meio da atribuição `int` variáveis a serem `bool` variáveis em que o `int` variável contém apenas valores **true** e **false**e pode ser declarado novamente como tipo `bool`. Se você não é possível reescrever a expressão para usar o tipo `bool`, em seguida, você pode adicionar "`!=0`" à expressão, que fornece o tipo de expressão `bool`. A expressão para o tipo de conversão `bool` não desabilita o aviso, o que acontece por design.
+
+Esse aviso não é mais gerado no Visual Studio 2017.
+
 ## <a name="example"></a>Exemplo
-  
- O exemplo a seguir gera C4800 e mostra como corrigi-lo:  
-  
-```cpp  
-// C4800.cpp  
-// compile with: /W3  
-int main() {  
-   int i = 0;  
-  
-   // To fix, instead try:  
-   // bool i = 0;  
-  
-   bool j = i;   // C4800  
-   j++;  
-}  
+
+O exemplo a seguir gera C4800 e mostra como corrigi-lo:
+
+```cpp
+// C4800.cpp
+// compile with: /W3
+int main() {
+   int i = 0;
+
+   // To fix, instead try:
+   // bool i = 0;
+
+   bool j = i;   // C4800
+   j++;
+}
 ```

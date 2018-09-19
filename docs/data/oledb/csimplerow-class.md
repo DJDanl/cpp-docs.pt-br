@@ -46,14 +46,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d5d824529e80319d95e00b6a3831af90a9506a03
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: aa4953c5ba879f5fa0fe8c5b892f91dfa8d15dc9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42573117"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095203"
 ---
 # <a name="csimplerow-class"></a>Classe CSimpleRow
+
 Fornece uma implementação padrão para o identificador de linha, que é usado na [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) classe.  
   
 ## <a name="syntax"></a>Sintaxe
@@ -63,7 +64,8 @@ class CSimpleRow
 ```  
 
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atldb.h  
+
+**Cabeçalho:** atldb.h  
 
 ## <a name="members"></a>Membros  
   
@@ -84,9 +86,11 @@ class CSimpleRow
 |[m_iRowset](#irowset)|Um índice ao conjunto de linhas que representa o cursor.|  
   
 ## <a name="remarks"></a>Comentários  
- Um identificador de linha é logicamente uma marca exclusiva para uma linha de resultado. `IRowsetImpl` cria um novo `CSimpleRow` para todas as linhas solicitadas no [irowsetimpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` também pode ser substituído por sua própria implementação da alça da linha, pois é um argumento de modelo padrão para `IRowsetImpl`. O único requisito para substituir essa classe é ter a classe de substituição a fornecer um construtor que aceita um único parâmetro do tipo **longo**.  
+
+Um identificador de linha é logicamente uma marca exclusiva para uma linha de resultado. `IRowsetImpl` cria um novo `CSimpleRow` para todas as linhas solicitadas no [irowsetimpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` também pode ser substituído por sua própria implementação da alça da linha, pois é um argumento de modelo padrão para `IRowsetImpl`. O único requisito para substituir essa classe é ter a classe de substituição a fornecer um construtor que aceita um único parâmetro do tipo **longo**.  
 
 ## <a name="addrefrow"></a> Csimplerow:: Addrefrow
+
 Adiciona uma contagem de referência para um identificador de linha existente em uma forma thread-safe.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -96,6 +100,7 @@ DWORD AddRefRow();
 ```  
 
 ## <a name="compare"></a> Csimplerow:: Compare
+
 Compara duas linhas para ver se eles se referem à mesma instância de linha.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -105,13 +110,16 @@ HRESULT Compare(CSimpleRow* pRow);
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *pRow*  
- Um ponteiro para um `CSimpleRow` objeto.  
+
+*pRow*<br/>
+Um ponteiro para um `CSimpleRow` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um valor HRESULT, geralmente S_OK, indicando que as duas linhas são a mesma instância de linha ou S_FALSE, indicando as duas linhas são diferentes. Ver [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) na *referência do programador DB OLE* para outro possíveis valores de retorno. 
+
+Um valor HRESULT, geralmente S_OK, indicando que as duas linhas são a mesma instância de linha ou S_FALSE, indicando as duas linhas são diferentes. Ver [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) na *referência do programador DB OLE* para outro possíveis valores de retorno. 
 
 ## <a name="csimplerow"></a> Csimplerow:: Csimplerow
+
 O construtor.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -121,13 +129,16 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *iRowsetCur*  
- [in] Índice ao conjunto de linhas atual.  
+
+*iRowsetCur*<br/>
+[in] Índice ao conjunto de linhas atual.  
   
 ### <a name="remarks"></a>Comentários  
- Conjuntos [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) à *iRowsetCur*. 
+
+Conjuntos [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) à *iRowsetCur*. 
 
 ## <a name="releaserow"></a> Csimplerow:: Releaserow
+
 Libera linhas em uma forma thread-safe.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -137,6 +148,7 @@ DWORD ReleaseRow();
 ```  
 
 ## <a name="dwref"></a> Csimplerow:: M_dwref
+
 Contagem de referência deve ser um identificador de linha existente.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -146,6 +158,7 @@ DWORD m_dwRef;
 ```  
 
 ## <a name="irowset"></a> Csimplerow:: M_irowset
+
 Índice para o conjunto de linhas que representa o cursor.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -155,6 +168,7 @@ KeyType m_iRowset;
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitetura do modelo de provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
- [Classe IRowsetImpl](../../data/oledb/irowsetimpl-class.md)
+
+[Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[Classe IRowsetImpl](../../data/oledb/irowsetimpl-class.md)

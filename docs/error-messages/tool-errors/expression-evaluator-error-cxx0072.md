@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e28fe0f27834b1ec18236ab8734b24601baef72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ae9ef1017068fb2c515949110905a65e822d93a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295711"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074438"
 ---
 # <a name="expression-evaluator-error-cxx0072"></a>Erro CXX0072 (avaliador de expressão)
-Erro: tipo de informações ausentes ou desconhecidas  
-  
- O arquivo. pch não obter vinculado ou o código tem uma referência a um tipo que está em um módulo não compilado com /Zi.  
-  
- Esse erro é idêntico ao CAN0067.
+
+Erro: tipo de informações ausentes ou desconhecido
+
+O arquivo. pch não obter vinculado ou o código tem uma referência a um tipo que está em um módulo não compilado com /Zi.
+
+Esse erro é idêntico ao CAN0067.

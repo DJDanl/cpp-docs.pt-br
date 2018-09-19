@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53b3759a5fec4b072f9a9b300670d61cb0d101c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d93aa28d0cef3c07fd469349d485c4009fa4771d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226665"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091056"
 ---
 # <a name="fatal-error-c1311"></a>Erro fatal C1311
-Formato COFF não pode inicializar estaticamente 'var' com número bytes de um endereço  
-  
- Um endereço cujo valor não é conhecido em tempo de compilação não pode ser atribuído estaticamente a uma variável cujo tipo tem o armazenamento de menos de quatro bytes.  
-  
- Esse erro pode ocorrer em código que seja C++ válido.  
-  
- O exemplo a seguir mostra uma condição que pode causar C1311.  
-  
-```  
-char c = (char)"Hello, world";   // C1311  
-char *d = (char*)"Hello, world";   // OK  
+
+Formato COFF estaticamente não é possível inicializar 'var' com número bytes de um endereço
+
+Um endereço cujo valor não é conhecido em tempo de compilação não pode ser atribuído estaticamente a uma variável cujo tipo tem um armazenamento de menos de quatro bytes.
+
+Esse erro pode ocorrer no código que não C++ válido.
+
+O exemplo a seguir mostra uma condição que possa causar C1311.
+
+```
+char c = (char)"Hello, world";   // C1311
+char *d = (char*)"Hello, world";   // OK
 ```

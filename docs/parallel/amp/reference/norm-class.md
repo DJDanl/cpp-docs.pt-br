@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f23ea5d40ecca7ee47d7eae659bfd3da286d8831
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 71e9baa101eb87ac10171722fa76fc462a154ad2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705387"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087469"
 ---
 # <a name="norm-class"></a>Classe norm
-Representa um número de modelo. Cada elemento é um flutuante ponto número no intervalo [-1.0 f, 1.0 f].  
+Representa um número de norma. Cada elemento é flutuante número de ponto no intervalo de [-1.0f, 1.0f].  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,7 +38,7 @@ class norm;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[NORM construtor](#ctor)|Sobrecarregado. Construtor padrão. Inicialize 0.0 f.|  
+|[NORM construtor](#ctor)|Sobrecarregado. Construtor padrão. Inicialize a 0.0f.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
@@ -46,9 +46,9 @@ class norm;
 |----------|-----------------|  
 |NORM::Operator-||  
 |norm::operator--||  
-|NORM::operator float|Operador de conversão. Converter o número de modelo para um flutuante valor de ponto.|  
+|NORM::operator float|Operador de conversão. Converter o número de norma para flutuante valor de ponto.|  
 |NORM::Operator * =||  
-|NORM::Operator / =||  
+|NORM::Operator =||  
 |NORM::Operator + +||  
 |+ NORM::Operator =||  
 |norm::operator=||  
@@ -58,13 +58,13 @@ class norm;
  `norm`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** amp_short_vectors.h  
+ **Cabeçalho:** amp_short_vectors. h  
   
  **Namespace:** Concurrency:: Graphics  
   
 ##  <a name="ctor"></a> NORM 
 
- Construtor padrão. Inicialize 0.0 f.  
+ Construtor padrão. Inicialize a 0.0f.  
   
 ```  
 norm(
@@ -103,11 +103,11 @@ norm(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_V`  
- O valor usado para inicializar.  
+*_V*<br/>
+O valor usado para inicializar.  
   
- `_Other`  
- O objeto usado para inicializar.  
+*Outro*<br/>
+O objeto usado para inicializar.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace Concurrency::graphics](concurrency-graphics-namespace.md)

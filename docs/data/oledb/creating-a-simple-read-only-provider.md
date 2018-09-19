@@ -16,21 +16,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2662a071f443967b921c4a8db27713bc7c3e8bb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9f951fba45b23b7e4dde92fc11f2faabb53bd43d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096932"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101560"
 ---
 # <a name="creating-a-simple-read-only-provider"></a>Criando um provedor somente leitura simples
-Quando você tiver criado um provedor OLE DB usando o Assistente de projeto de ATL e ATL OLE DB Provider assistente, você pode adicionar outra funcionalidade que você deseja dar suporte. Começar a criar seu provedor examinando o tipo de dados que você está enviando para o consumidor e sob que condições. É especialmente importante determinar se é necessário dar suporte a comandos, transações e outros objetos opcionais. Um bom design adiantado irão acelerar a implementação e teste.  
+
+Quando você tiver criado um provedor OLE DB usando o Assistente da ATL OLE DB Provider e o ATL Project Wizard, você pode adicionar outras funcionalidades que você deseja dar suporte. Começar a projetar seu provedor, examinando o tipo de dados que você está enviando para o consumidor e sob quais condições. É especialmente importante determinar se é necessário dar suporte a comandos, transações e outros objetos opcionais. Um bom design com antecedência irá acelerar a implementação e teste.  
   
- O exemplo é apresentado em duas partes:  
+O exemplo é apresentado em duas partes:  
   
--   O primeiro mostra parte como [criar um provedor somente leitura simples](../../data/oledb/implementing-the-simple-read-only-provider.md) que lê um par de cadeias de caracteres.  
+- O primeiro mostra parte como [criar um provedor somente leitura simples](../../data/oledb/implementing-the-simple-read-only-provider.md) que lê um par de cadeias de caracteres.  
   
--   O segundo mostra parte como [aprimorar o provedor somente leitura simples](../../data/oledb/enhancing-the-simple-read-only-provider.md) adicionando o `IRowsetLocate` interface.  
+- O segundo mostra parte como [aprimorar o provedor somente leitura simples](../../data/oledb/enhancing-the-simple-read-only-provider.md) adicionando o `IRowsetLocate` interface.  
   
 ## <a name="see-also"></a>Consulte também  
- [Criando um provedor do OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+
+[Criando um provedor do OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

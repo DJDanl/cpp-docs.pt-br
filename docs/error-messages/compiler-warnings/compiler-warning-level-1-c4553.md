@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4553 | Microsoft Docs
+title: Compilador aviso (nível 1) C4553 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8633a9cf3eb8f825f1bfd131db6c1dfd2f8d6159
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 17c5887b550ea3181ac51d23ee24928502da1003
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277875"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096425"
 ---
-# <a name="compiler-warning-level-1-c4553"></a>Compilador C4553 de aviso (nível 1)
-'operator': operador não tem nenhum efeito; Você pretendia usar 'operator'?  
-  
- Se uma instrução de expressão com um operador com nenhum efeito colateral como a parte superior da expressão, provavelmente é um erro.  
-  
- O exemplo a seguir gera C4553:  
-  
-```  
-// C4553.cpp  
-// compile with: /W1  
-int func()  
-{  
-   return 0;  
-}  
-  
-int main()  
-{  
-   int i;  
-   i == func();   // C4553  
-   // try the following line instead  
-   // i = func();  
-}  
+# <a name="compiler-warning-level-1-c4553"></a>Compilador aviso (nível 1) C4553
+
+'operator': operador não tem nenhum efeito; Você pretendia 'operator'?
+
+Se uma instrução de expressão tem um operador com nenhum efeito colateral, como a parte superior da expressão, ele é provavelmente um erro.
+
+O exemplo a seguir gera C4553:
+
+```
+// C4553.cpp
+// compile with: /W1
+int func()
+{
+   return 0;
+}
+
+int main()
+{
+   int i;
+   i == func();   // C4553
+   // try the following line instead
+   // i = func();
+}
 ```

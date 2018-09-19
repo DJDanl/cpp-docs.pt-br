@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 914619c2790a904530f6efe2324549402d9b6785
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fa3f3356cf3fdddeeb4245986549fa1bd2e12ae7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758151"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085219"
 ---
 # <a name="cominterfaceentry-macros"></a>Macros COM_INTERFACE_ENTRY  
 
@@ -72,7 +72,8 @@ COM_INTERFACE_ENTRY( x )
 ```
 ### <a name="parameters"></a>Parâmetros
 
-x [in] o nome de uma interface seu objeto de classe deriva diretamente.
+*x*<br/>
+[in] O nome de uma interface que seu objeto de classe deriva diretamente.
 
 ### <a name="remarks"></a>Comentários
 
@@ -101,10 +102,10 @@ COM_INTERFACE_ENTRY2(x, x2)
 
 ### <a name="parameters"></a>Parâmetros
 
-*x*  
+*x*<br/>
 [in] O nome de uma interface que você deseja expor de seu objeto.
 
-*X2*  
+*X2*<br/>
 [in] O nome do branch de herança do qual *x* é exposto.
 
 ### <a name="remarks"></a>Comentários
@@ -125,10 +126,10 @@ COM_INTERFACE_ENTRY_IID(iid, x)
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*  
+*IID*<br/>
 [in] O GUID da interface exposta.
 
-*x*  
+*x*<br/>
 [in] O nome da classe cuja vtable será exposta como a interface identificada pelo *iid*.
 
 ### <a name="example"></a>Exemplo
@@ -145,13 +146,13 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*  
+*IID*<br/>
 [in] O GUID que você está especificando para a interface.
 
-*x*  
+*x*<br/>
 [in] O nome de uma interface que seu objeto de classe deriva diretamente.
 
-*X2*  
+*X2*<br/>
 [in] O nome de uma segunda interface que seu objeto de classe deriva diretamente.
 
 ##  <a name="com_interface_entry_aggregate"></a>  COM_INTERFACE_ENTRY_AGGREGATE
@@ -164,10 +165,10 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*  
+*IID*<br/>
 [in] O GUID da interface consultado.
 
-*punk*  
+*punk*<br/>
 [in] O nome de um `IUnknown` ponteiro.
 
 ### <a name="remarks"></a>Comentários
@@ -188,7 +189,7 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
 
 ### <a name="parameters"></a>Parâmetros
 
-*punk*  
+*punk*<br/>
 [in] O nome de um `IUnknown` ponteiro.
 
 ### <a name="remarks"></a>Comentários
@@ -209,13 +210,13 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*  
+*IID*<br/>
 [in] O GUID da interface consultado.
 
-*punk*  
+*punk*<br/>
 [in] O nome de um `IUnknown` ponteiro. Deve ser um membro da classe que contém o mapa COM.
 
-*clsid*  
+*clsid*<br/>
 [in] O identificador de agregação que será criado se *punk* é NULL.
 
 ### <a name="remarks"></a>Comentários
@@ -234,10 +235,10 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 
 ### <a name="parameters"></a>Parâmetros
 
-*punk*  
+*punk*<br/>
 [in] O nome de um `IUnknown` ponteiro. Deve ser um membro da classe que contém o mapa COM.
 
-*clsid*  
+*clsid*<br/>
 [in] O identificador de agregação que será criado se *punk* é NULL.
 
 ### <a name="remarks"></a>Comentários
@@ -258,7 +259,7 @@ COM_INTERFACE_ENTRY_BREAK(x)
 
 ### <a name="parameters"></a>Parâmetros
 
-*x*  
+*x*<br/>
 [in] Texto usado para construir o identificador de interface.
 
 ### <a name="remarks"></a>Comentários
@@ -275,13 +276,13 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*  
+*IID*<br/>
 [in] O GUID da interface destacáveis.
 
-*x*  
+*x*<br/>
 [in] O nome da classe que implementa a interface.
 
-*punk*  
+*punk*<br/>
 [in] O nome de um `IUnknown` ponteiro. Deve ser um membro da classe que contém o mapa COM. Devem ser inicializadas como NULL no construtor do objeto de classe.
 
 ### <a name="remarks"></a>Comentários
@@ -302,10 +303,10 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*  
+*IID*<br/>
 [in] O GUID da interface destacáveis.
 
-*x*  
+*x*<br/>
 [in] O nome da classe que implementa a interface.
 
 ### <a name="remarks"></a>Comentários
@@ -326,7 +327,7 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 
 ### <a name="parameters"></a>Parâmetros
 
-*classname*  
+*classname*<br/>
 [in] Uma classe base do objeto atual.
 
 ### <a name="remarks"></a>Comentários
@@ -349,13 +350,13 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*  
+*IID*<br/>
 [in] O GUID da interface exposta.
 
-*dw*  
+*dw*<br/>
 [in] Um parâmetro passado para o *func*.
 
-*func*  
+*func*<br/>
 [in] O ponteiro de função que retornará *iid*.
 
 ### <a name="remarks"></a>Comentários
@@ -376,10 +377,10 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 
 ### <a name="parameters"></a>Parâmetros
 
-*dw*  
+*dw*<br/>
 [in] Um parâmetro passado para o *func*.
 
-*func*  
+*func*<br/>
 [in] A função que é chamada quando esta entrada no mapa de COM é processada.
 
 ### <a name="remarks"></a>Comentários
@@ -396,7 +397,7 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 
 ### <a name="parameters"></a>Parâmetros
 
-*x*  
+*x*<br/>
 [in] Texto usado para construir o identificador de interface.
 
 ### <a name="remarks"></a>Comentários

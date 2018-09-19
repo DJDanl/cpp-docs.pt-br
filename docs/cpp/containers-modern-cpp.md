@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d740bb36c1d574e474058c05d900d605c71e55f0
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1a05eada2b5828cfc654496355bddcabcafc8d60
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39406328"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086142"
 ---
 # <a name="containers-modern-c"></a>Contêineres (C++ moderno)
 
@@ -48,6 +48,7 @@ Não use matrizes C-style. Para APIs mais antigas que precisa de acesso direto a
 Para obter mais informações sobre contêineres, consulte [contêineres da biblioteca padrão C++](../standard-library/stl-containers.md).
 
 ## <a name="see-also"></a>Consulte também
- [Bem-vindo outra vez ao C++](../cpp/welcome-back-to-cpp-modern-cpp.md)  
- [Referência da linguagem C++](../cpp/cpp-language-reference.md)  
- [Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)  
+
+[Bem-vindo outra vez ao C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
+[Biblioteca Padrão do C++](../standard-library/cpp-standard-library-reference.md)

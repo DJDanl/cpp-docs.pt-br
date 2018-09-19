@@ -16,19 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 17750a61675f9b208be69b86ec7b044b6b19f1bb
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: bf12ffedca5140193564dc6a9a49203ced6d870a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39336671"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087988"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>Dando suporte ao thread livre no provedor
+
 Todas as classes de provedor OLE DB são thread-safe e entradas do registro serão definidas de acordo. É uma boa ideia para dar suporte a threading livre para ajudar a fornecer um alto nível de desempenho em situações de multiusuários. Para ajudar a manter seu provedor de thread-safe, você deve verificar que seu código está bloqueado corretamente. Sempre que você escreve ou armazena dados, você deve bloquear o acesso com seções críticas.  
   
- Cada objeto de modelo de provedor do OLE DB tem sua própria seção crítica. Para tornar mais fácil de bloqueio, cada nova classe que você cria deve ser uma classe de modelo usando a classe pai nome como um argumento.  
+Cada objeto de modelo de provedor do OLE DB tem sua própria seção crítica. Para tornar mais fácil de bloqueio, cada nova classe que você cria deve ser uma classe de modelo usando a classe pai nome como um argumento.  
   
- O exemplo a seguir mostra como bloquear o seu código:  
+O exemplo a seguir mostra como bloquear o seu código:  
   
 ```cpp  
 template <class T>  
@@ -47,9 +48,10 @@ HRESULT MyObject::MyMethod(void)
 }  
 ```  
   
- Para obter mais informações sobre como proteger seções críticas com `Lock` e `Unlock`, consulte [Multithreading: como usar as Classes de sincronização](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
+Para obter mais informações sobre como proteger seções críticas com `Lock` e `Unlock`, consulte [Multithreading: como usar as Classes de sincronização](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
- Você também deve verificar todos os métodos que você substituir (como `Execute`) são thread-safe.  
+Você também deve verificar todos os métodos que você substituir (como `Execute`) são thread-safe.  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhando com modelos de provedor do OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+[Trabalhando com modelos de provedor do OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

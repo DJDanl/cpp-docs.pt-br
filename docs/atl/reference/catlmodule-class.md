@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7d7b8ee240b94fe6a9b05d5c06c960ab8857ed6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 88c8ee576af3c50317b86b7016ac198fefdcbaa9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753130"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093435"
 ---
 # <a name="catlmodule-class"></a>Classe CAtlModule
 
@@ -106,7 +106,7 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pRegistrar*  
+*pRegistrar*<br/>
 Reservado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -129,10 +129,10 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*pFunc*  
+*pFunc*<br/>
 Ponteiro para a função para adicionar.
 
-*dw*  
+*dw*<br/>
 Dados definidos pelo usuário, passados para a função.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -173,7 +173,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*ppGIT*  
+*ppGIT*<br/>
 Ponteiro para a variável que receberá o ponteiro para a tabela de Interface Global.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -270,16 +270,16 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpszRes*  
+*lpszRes*<br/>
 Um nome de recurso.
 
-*nResID*  
+*nResID*<br/>
 Uma ID de recurso.
 
-*bRegistre-se participar*  
+*bRegistre-se participar*<br/>
 TRUE se o objeto deve ser registrado; FALSE caso contrário.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 Um ponteiro para o mapa de substituição armazenar valores associados com parâmetros substituíveis do script. ATL usa automaticamente o módulo %. Para usar parâmetros substituíveis adicionais, consulte [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). Caso contrário, use o valor padrão NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -307,13 +307,13 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpszRes*  
+*lpszRes*<br/>
 Um nome de recurso.
 
-*bRegistre-se participar*  
+*bRegistre-se participar*<br/>
 Indica se o objeto deve ser registrado.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 Um ponteiro para o mapa de substituição armazenar valores associados com parâmetros substituíveis do script. ATL usa automaticamente o módulo %. Para usar parâmetros substituíveis adicionais, consulte [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). Caso contrário, use o valor padrão NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -342,16 +342,16 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nResID*  
+*nResID*<br/>
 Uma ID de recurso.
 
-*lpszRes*  
+*lpszRes*<br/>
 Um nome de recurso.
 
-*bRegistre-se participar*  
+*bRegistre-se participar*<br/>
 Indica se o script de recurso deve ser registrado.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 Um ponteiro para o mapa de substituição armazenar valores associados com parâmetros substituíveis do script. ATL usa automaticamente o módulo %. Para usar parâmetros substituíveis adicionais, consulte [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements). Caso contrário, use o valor padrão NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -364,7 +364,7 @@ Semelhante ao [CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresou
 
 ## <a name="see-also"></a>Consulte também
 
-[_ATL_MODULE](atl-typedefs.md#_atl_module)   
-[Visão geral da classe](../../atl/atl-class-overview.md)   
-[Classes de módulo](../../atl/atl-module-classes.md)   
+[_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
+[Visão geral da classe](../../atl/atl-class-overview.md)<br/>
+[Classes de módulo](../../atl/atl-module-classes.md)<br/>
 [Componente de registro (Registrar)](../../atl/atl-registry-component-registrar.md)  

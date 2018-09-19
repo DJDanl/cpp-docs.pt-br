@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 4) de aviso C4672 | Microsoft Docs
+title: Compilador aviso (nível 4) C4672 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d084a85a57afc530536c7e5dc6305b4390dc6cd0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc31e2bad7a7d00f137611327f818341d28fbae1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292734"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075196"
 ---
-# <a name="compiler-warning-level-4-c4672"></a>Compilador C4672 de aviso (nível 4)
-'identifier1': ambíguo. Visto primeiro como 'identifier2'  
-  
- O objeto especificado a ser lançado um **tente** bloco é ambíguo. O objeto não pode ter a ambiguidade removido se ela é gerada.
+# <a name="compiler-warning-level-4-c4672"></a>Compilador aviso (nível 4) C4672
+
+'identifier1': ambíguo. Visto primeiro como 'identifier2'
+
+O objeto especificado para ser lançada em um **tente** bloco é ambíguo. O objeto não pode ser sem ambiguidade se ele for lançado.

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41068a81d52c0e30ef95cf364d759f35a39140c9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 414a37d51d39c94e022c726a5c8ede20504de5eb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760010"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095736"
 ---
 # <a name="class-factories-classes"></a>Classes de fábricas de classe
 
@@ -40,6 +40,6 @@ As seguintes classes implementam ou dar suporte a uma fábrica de classes:
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral da classe](../atl/atl-class-overview.md)   
+[Visão geral da classe](../atl/atl-class-overview.md)<br/>
 [Macros de fábrica de classes e agregação](../atl/reference/aggregation-and-class-factory-macros.md)
 

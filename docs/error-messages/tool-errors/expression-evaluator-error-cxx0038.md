@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa0b47313e367f73b241ae94c5e022b45e57587d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5695b00dc52737ab3247d59e363a42aecf001ffa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297096"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098817"
 ---
 # <a name="expression-evaluator-error-cxx0038"></a>Erro CXX0038 (avaliador de expressão)
-incompatibilidade de contagem de e/ou tipo de argumento de função  
-  
- A chamada de função, conforme especificado não coincide com o protótipo para a função.  
-  
- Digite novamente a chamada com o número correto de argumentos. Tipo de conversão cada argumento para corresponder o protótipo, conforme necessário.  
-  
- Esse erro é idêntico ao CAN0038.
+
+incompatibilidade de contagem de e/ou tipo de argumento de função
+
+A chamada de função, conforme especificado não coincide com o protótipo da função.
+
+Digite novamente a chamada com o número correto de argumentos. Tipo de conversão cada argumento de acordo com o protótipo, conforme necessário.
+
+Esse erro é idêntico ao CAN0038.

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0600d675d37e2fed1d318645daaedcce5f80ed89
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e7a6f4f014d609e8b650951d459c23b07fd4a006
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752365"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085440"
 ---
 # <a name="ccomobject-class"></a>Classe CComObject
 
@@ -36,13 +36,13 @@ Essa classe implementa `IUnknown` para um objeto não agregado.
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template<class Base>  
+template<class Base>
 class CComObject : public Base
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*Base de dados de*  
+*Base de dados de*<br/>
 Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como bem como de outras interfaces que você deseja oferecer suporte no objeto.
 
 ## <a name="members"></a>Membros
@@ -101,7 +101,7 @@ CComObject(void* = NULL);
 
 ### <a name="parameters"></a>Parâmetros
 
-<em>void\*</em>  
+<em>void\*</em><br/>
 [in] Esse parâmetro sem nome não é usado. Ele existe para obter simetria com outros `CComXXXObjectXXX` construtores.
 
 ### <a name="remarks"></a>Comentários
@@ -132,7 +132,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*PP*  
+*PP*<br/>
 [out] Um ponteiro para um **CComObject <** `Base` **>** ponteiro. Se `CreateInstance` não for bem-sucedida, *pp* é definido como NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -157,19 +157,19 @@ Recupera um ponteiro para a interface solicitada.
 
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
-template <class Q>  
+template <class Q>
 HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*  
+*IID*<br/>
 [in] O identificador da interface que está sendo solicitado.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Um ponteiro para o ponteiro de interface identificado pelo *iid*. Se o objeto não dá suporte a essa interface, *ppvObject* é definido como NULL.
 
-*PP*  
+*PP*<br/>
 [out] Um ponteiro para o ponteiro de interface identificado pelo tipo `Q`. Se o objeto não dá suporte a essa interface, *pp* é definido como NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -190,8 +190,8 @@ Essa função retorna a nova contagem de referência decrementado no objeto. Em 
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CComAggObject](../../atl/reference/ccomaggobject-class.md)   
-[Classe CComPolyObject](../../atl/reference/ccompolyobject-class.md)   
-[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
-[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
+[Classe CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
+[Classe CComPolyObject](../../atl/reference/ccompolyobject-class.md)<br/>
+[DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
+[DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

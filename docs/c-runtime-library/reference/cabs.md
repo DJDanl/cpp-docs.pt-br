@@ -38,12 +38,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80ea966b748407d51283823073a0c10a40717cf5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cad3c873dd7e0bab2a7b75e785fb91c704e616de
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393531"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085272"
 ---
 # <a name="cabs"></a>_cabs
 
@@ -68,7 +68,7 @@ Número complexo.
 
 ## <a name="remarks"></a>Comentários
 
-O **CABs** função calcula o valor absoluto de um número complexo, que deve ser uma estrutura de tipo [Complex](../../c-runtime-library/standard-types.md). A estrutura *z* é composto de um componente real *x* e um componente imaginário *y*. Uma chamada para **CABs** produz um valor equivalente a que a expressão `sqrt( z.x * z.x + z.y * z.y )`.
+O **CABs** função calcula o valor absoluto de um número complexo, que deve ser uma estrutura do tipo [Complex](../../c-runtime-library/standard-types.md). A estrutura *z* é composto de um componente real *x* e um componente imaginário *y*. Uma chamada para **CABs** produz um valor equivalente da expressão `sqrt( z.x * z.x + z.y * z.y )`.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -107,4 +107,4 @@ The absolute value of 3.000000 + 4.000000i is 5.000000
 
 [Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
-[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)   
+[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)

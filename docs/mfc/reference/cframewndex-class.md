@@ -188,12 +188,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62bb1ca2cc4ba07e3f3262f6babee3ed4c52caa2
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: db4e6a01fbf7384cfbc2e1ef2b3c5ed48991998d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708208"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095414"
 ---
 # <a name="cframewndex-class"></a>Classe CFrameWndEx
 Implementa a funcionalidade de um Windows único sobreposta de interface de documento (SDI) ou a janela de quadro pop-up e fornece membros para gerenciar a janela. Ele estende o [CFrameWnd](../../mfc/reference/cframewnd-class.md) classe.  
@@ -1198,17 +1198,12 @@ afx_msg LRESULT OnMenuChar(
   
 ### <a name="return-value"></a>Valor de retorno  
  A palavra de ordem superior deve ser um dos valores a seguir.  
-  
- `0`  
- A estrutura deve ignorar o pressionamento de tecla.  
-  
- `1`  
- A estrutura deve fechar o menu.  
-  
- `2`  
- A estrutura deve selecionar um dos itens exibidos no menu. A palavra de ordem inferior contém a ID do comando Selecionar.  
-  
-### <a name="remarks"></a>Comentários  
+
+|||
+|-|-|
+ `0` | A estrutura deve ignorar o pressionamento de tecla.  
+ `1`  | A estrutura deve fechar o menu.  
+ `2`  | A estrutura deve selecionar um dos itens exibidos no menu. A palavra de ordem inferior contém a ID do comando Selecionar.  
   
 ##  <a name="onmousemove"></a>  CFrameWndEx::OnMouseMove  
  O framework chama esse método quando o ponteiro se move.  

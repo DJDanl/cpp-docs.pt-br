@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c56f8fe711980e038281baca7618bff08f0d3d9b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 042fe1a446137546654c8f0cfd5ee9be8072dcee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764937"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091823"
 ---
 # <a name="csnapinitemimpl-class"></a>Classe CSnapInItemImpl
 
@@ -54,16 +54,16 @@ Essa classe fornece métodos para a implementação de um objeto de snap-in do n
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template <class T, BOOL bIsExtension = FALSE>  
+template <class T, BOOL bIsExtension = FALSE>
 class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 Sua classe, derivada de `CSnapInItemImpl`.
 
-*bIsExtension*  
+*bIsExtension*<br/>
 TRUE se o objeto é uma extensão do snap-in; Caso contrário, FALSE.
 
 ## <a name="members"></a>Membros
@@ -127,10 +127,10 @@ AddMenuItems(
 
 ### <a name="parameters"></a>Parâmetros
 
-*piCallback*  
+*piCallback*<br/>
 [in] Ponteiro para o `IContextMenuCallback` que pode adicionar itens ao menu de contexto.
 
-*pInsertionAllowed*  
+*pInsertionAllowed*<br/>
 [no, out] Identifica definidos pelo Microsoft Management Console MMC, item de menu pontos de inserção que podem ser usados. Isso pode ser uma combinação dos sinalizadores a seguir:
 
 - CCM_INSERTIONALLOWED_TOP itens podem ser inseridos na parte superior de um menu de contexto.
@@ -141,7 +141,7 @@ AddMenuItems(
 
 - CCM_INSERTIONALLOWED_VIEW itens podem ser inseridos no menu de exibição da barra de ferramentas ou no submenu de modo de exibição do menu de contexto do painel de resultados.
 
-*type*  
+*type*<br/>
 [in] Especifica o tipo de objeto. Ele pode ter um dos seguintes valores:
 
 - Objeto de dados de CCT_SCOPE para o contexto do painel de escopo.
@@ -162,10 +162,10 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 
 ### <a name="parameters"></a>Parâmetros
 
-*lCommandID*  
+*lCommandID*<br/>
 [in] Especifica o identificador de comando do item de menu.
 
-*type*  
+*type*<br/>
 [in] Especifica o tipo de objeto. Ele pode ter um dos seguintes valores:
 
 - Objeto de dados de CCT_SCOPE para o contexto do painel de escopo.
@@ -190,16 +190,16 @@ CreatePropertyPages(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpProvider*  
+*lpProvider*<br/>
 [in] Ponteiro para o `IPropertySheetCallback` interface.
 
-*Identificador*  
+*Identificador*<br/>
 [in] Especifica o identificador usado para rotear a mensagem de notificação MMCN_PROPERTY_CHANGE para a classe de dados apropriado.
 
-*pUnk*  
+*pUnk*<br/>
 [in] Ponteiro para o `IExtendPropertySheet` interface no objeto que contém informações sobre o nó de contexto.
 
-*type*  
+*type*<br/>
 [in] Especifica o tipo de objeto. Ele pode ter um dos seguintes valores:
 
 - Objeto de dados de CCT_SCOPE para o contexto do painel de escopo.
@@ -228,10 +228,10 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 
 ### <a name="parameters"></a>Parâmetros
 
-*CF*  
+*CF*<br/>
 [in] O formato (texto, RTF ou com itens OLE em rich text) da área de transferência.
 
-*pStream*  
+*pStream*<br/>
 [in] Um ponteiro para o fluxo que contém os dados do objeto.
 
 ### <a name="remarks"></a>Comentários
@@ -250,10 +250,10 @@ GetResultViewType(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ppViewType*  
+*ppViewType*<br/>
 [out] Ponteiro para o endereço do tipo retornado de modo de exibição.
 
-*pViewOptions*  
+*pViewOptions*<br/>
 [out] Ponteiro para a enumeração de MMC_VIEW_OPTIONS, que fornece o console com as opções especificadas pelo proprietário snap-in. Esse valor pode ser um dos seguintes:
 
 - MMC_VIEW_OPTIONS_NOLISTVIEWS = 0x00000001 informa ao console para desistir de apresentar as opções de exibição de lista padrão no **exibição** menu. Permite que o snap-in exibir seus próprios modos de exibição personalizados somente no painel de exibição de resultado. Isso é o único sinalizador de opção definido neste momento.
@@ -270,7 +270,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pScopeDataItem*  
+*pScopeDataItem*<br/>
 [out] Um ponteiro para o `SCOPEDATAITEM` estrutura do `CSnapInItemImpl` objeto.
 
 ##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo
@@ -283,7 +283,7 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pResultDataItem*  
+*pResultDataItem*<br/>
 [out] Um ponteiro para o `RESULTDATAITEM` estrutura do `CSnapInItemImpl` objeto.
 
 ##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName
@@ -326,7 +326,7 @@ STDMETHOD(Notify)(
 
 ### <a name="parameters"></a>Parâmetros
 
-*event*  
+*event*<br/>
 [in] Identifica uma ação executada por um usuário. As seguintes notificações são possíveis:
 
 - MMCN_ACTIVATE enviado quando uma janela está sendo ativado e desativado.
@@ -357,19 +357,19 @@ STDMETHOD(Notify)(
 
 - MMCN_VIEW_CHANGE enviado quando o snap-in pode atualizar todos os modos de exibição quando ocorre uma alteração.
 
-*arg*  
+*arg*<br/>
 [in] Depende do tipo de notificação.
 
-*param*  
+*param*<br/>
 [in] Depende do tipo de notificação.
 
-*pComponentData*  
+*pComponentData*<br/>
 [out] Um ponteiro para o objeto que implementa `IComponentData`. Esse parâmetro será nulo se a notificação não está sendo encaminhada de `IComponentData::Notify`.
 
-*pComponent*  
+*pComponent*<br/>
 [out] Um ponteiro para o objeto que implementa `IComponent`. Esse parâmetro será nulo se a notificação não está sendo encaminhada de `IComponent::Notify`.
 
-*type*  
+*type*<br/>
 [in] Especifica o tipo de objeto. Ele pode ter um dos seguintes valores:
 
 - Objeto de dados de CCT_SCOPE para o contexto do painel de escopo.
@@ -400,10 +400,10 @@ void SetMenuInsertionFlags(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bBeforeInsertion*  
+*bBeforeInsertion*<br/>
 [in] Diferente de zero se a função deve ser chamada antes de itens são adicionados ao menu de contexto; Caso contrário, 0.
 
-*pInsertionAllowed*  
+*pInsertionAllowed*<br/>
 [no, out] Identifica definidos pelo Microsoft Management Console MMC, item de menu pontos de inserção que podem ser usados. Isso pode ser uma combinação dos sinalizadores a seguir:
 
 - CCM_INSERTIONALLOWED_TOP itens podem ser inseridos na parte superior de um menu de contexto.
@@ -433,10 +433,10 @@ void SetToolbarButtonInfo(
 
 ### <a name="parameters"></a>Parâmetros
 
-*id*  
+*id*<br/>
 [in] A ID do botão da barra de ferramentas a ser definido.
 
-*fsState*  
+*fsState*<br/>
 [in] Os sinalizadores de estado do botão. Pode ser um ou mais destes procedimentos:
 
 - TBSTATE_CHECKED o botão tem o estilo TBSTYLE_CHECKED e está sendo pressionado.
@@ -451,7 +451,7 @@ void SetToolbarButtonInfo(
 
 - Quebra de linha de um TBSTATE_WRAP segue o botão. O botão também deve ter o TBSTATE_ENABLED.
 
-*fsType*  
+*fsType*<br/>
 [in] Os sinalizadores de estado do botão. Pode ser um ou mais destes procedimentos:
 
 - TBSTYLE_BUTTON cria um botão de ação padrão.
@@ -477,13 +477,13 @@ void UpdateMenuState(
 
 ### <a name="parameters"></a>Parâmetros
 
-*id*  
+*id*<br/>
 [in] A ID do item de menu a ser definido.
 
-*pBuf*  
+*pBuf*<br/>
 [in] Um ponteiro para a cadeia de caracteres para o item de menu a ser atualizada.
 
-*flags*  
+*flags*<br/>
 [in] Especifica os sinalizadores de estado novo. Isso pode ser uma combinação dos sinalizadores a seguir:
 
 - MF_POPUP Especifica que se trata de um submenu no menu de contexto. Itens de menu, pontos de inserção e ainda mais submenus podem ser adicionados para esse submenu usando seus `lCommandID` como seus `IInsertionPointID`.
@@ -524,10 +524,10 @@ BOOL UpdateToolbarButton(UINT id, BYTE fsState);
 
 ### <a name="parameters"></a>Parâmetros
 
-*id*  
+*id*<br/>
 Especifica a ID do botão do botão de barra de ferramentas a ser atualizada.
 
-*fsState*  
+*fsState*<br/>
 Especifica um estado do botão de barra de ferramentas. Se esse estado deve ser definido, retorne TRUE. Isso pode ser uma combinação dos sinalizadores a seguir:
 
 - HABILITADO o botão aceita entrada do usuário. Um botão que não tem esse estado não aceita entrada do usuário e ficará indisponível.

@@ -1,5 +1,5 @@
 ---
-title: C2091 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2091 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c115ea47f87a59c7412ed057675ccf893467cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c47d7e99099632313fd561a4e08af52644693c95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166355"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077003"
 ---
-# <a name="compiler-error-c2091"></a>C2091 de erro do compilador
-função retorna a função  
-  
- Uma função não pode retornar uma função. Em vez disso, retorne um ponteiro para uma função.
+# <a name="compiler-error-c2091"></a>Erro do compilador C2091
+
+função retorna função
+
+Uma função não pode retornar uma função. Em vez disso, retorne um ponteiro para uma função.

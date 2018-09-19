@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36ff770877333042319b2a91dc5006e2ceb4118f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ad9a96aaf15294a1404de54f276eb5309a09357
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291210"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086767"
 ---
-# <a name="compiler-warning-level-3-c4646"></a>Compilador C4646 de aviso (nível 3)
-função declarada com __declspec(noreturn) tem o tipo de retorno não void  
-  
- Uma função é marcada com o [noreturn](../../cpp/noreturn.md) `__declspec` modificador deve ter uma [void](../../cpp/void-cpp.md) tipo de retorno.  
-  
- O exemplo a seguir gera C4646:  
-  
-```  
-// C4646.cpp  
-// compile with: /W3 /WX  
-int __declspec(noreturn) TestFunction()  
-{   // C4646  make return type void  
-}  
+# <a name="compiler-warning-level-3-c4646"></a>Compilador aviso (nível 3) C4646
+
+função declarada com __declspec(noreturn) tem o tipo de retorno não nulo
+
+Uma função marcada com o [noreturn](../../cpp/noreturn.md) `__declspec` modificador deve ter uma [void](../../cpp/void-cpp.md) tipo de retorno.
+
+O exemplo a seguir gera C4646:
+
+```
+// C4646.cpp
+// compile with: /W3 /WX
+int __declspec(noreturn) TestFunction()
+{   // C4646  make return type void
+}
 ```

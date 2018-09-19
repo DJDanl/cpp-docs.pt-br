@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d584811e056995e19cac0ec68cb58f25ccc921e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f800fc37d41102044c0b8b88921d8bad216d5984
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321994"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101118"
 ---
 # <a name="resource-compiler-warning-rw4003"></a>Aviso RW4003 (compilador de recurso)
-SHIFT ou CONTROL usado sem VIRTKEY  
-  
- Em um recurso de tabela de teclas aceleradoras, SHIFT ou CONTROL requer VIRTKEY. Porque o turno e controle são indicadas como bits de sinalizador em um acelerador de tipo VIRTKEY, eles não podem existir independente de um VIRTKEY.
+
+SHIFT ou CONTROL usado sem VIRTKEY
+
+Em um recurso de tabela do acelerador, SHIFT ou CONTROL requer VIRTKEY. Como SHIFT e controle são indicados como bits de sinalizador em um acelerador de tipo VIRTKEY, eles não podem existir independente de um VIRTKEY.

@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 4) de aviso C4985 | Microsoft Docs
+title: Compilador aviso (nível 4) C4985 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,25 +14,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8f0b62a72d61ee061fd996f93638acba9e7ebb0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d67b7394ef9bd38409ca45abe6ed7d347f5a37d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301084"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092655"
 ---
-# <a name="compiler-warning-level-4-c4985"></a>Compilador C4985 de aviso (nível 4)
-nome do símbolo: atributos não presentes em declaração anterior.  
-  
- As anotações de linguagem (SAL) de anotação do código-fonte código na declaração do método atual ou definição diferem das anotações em uma declaração anterior. As anotações de SAL mesmo devem ser usadas na definição e as declarações de um método.  
-  
- O SAL fornece um conjunto de anotações que você pode usar para descrever como uma função usa os parâmetros, as suposições faz sobre eles e as garantias faz em Concluir. As anotações são definidas no arquivo de cabeçalho de sal.  
-  
- Observe que as macros SAL não expandirá a menos que o projeto tenha a [/ANALYZE](../../build/reference/analyze-code-analysis.md) sinalizador especificado. Quando você especifica **/ANALYZE**, o compilador pode gerar C4985, mesmo se nenhum aviso ou erro apareceu sem **/ANALYZE**.  
-  
-### <a name="to-correct-this-error"></a>Para corrigir este erro  
-  
-1.  Use as anotações de SAL mesmo na definição de um método e todas as suas declarações.  
-  
-## <a name="see-also"></a>Consulte também  
- [Anotações de SAL](../../c-runtime-library/sal-annotations.md)
+# <a name="compiler-warning-level-4-c4985"></a>Compilador aviso (nível 4) C4985
+
+'nome do símbolo': atributos não presentes em declaração anterior.
+
+As anotações de SAL (linguagem) de anotação do código-fonte código na definição ou declaração de método atual diferem das anotações em uma declaração anterior. As anotações de SAL mesmas devem ser usadas na definição e as declarações de um método.
+
+O SAL fornece um conjunto de anotações que você pode usar para descrever como uma função usa seus parâmetros, as premissas faz sobre eles e as garantias terminar. As anotações são definidas no arquivo de cabeçalho de sal.
+
+Observe que as macros SAL não expandirá a menos que o projeto tem o [/ANALYZE](../../build/reference/analyze-code-analysis.md) sinalizador especificado. Quando você especifica **/ANALYZE**, o compilador pode gerar C4985, mesmo se nenhum aviso ou erro apareceu sem **/ANALYZE**.
+
+### <a name="to-correct-this-error"></a>Para corrigir este erro
+
+1. Use as anotações de SAL mesmas na definição de um método e todas as suas declarações.
+
+## <a name="see-also"></a>Consulte também
+
+[Anotações de SAL](../../c-runtime-library/sal-annotations.md)

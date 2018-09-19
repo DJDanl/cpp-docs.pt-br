@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec4fa860387068dd345c19467583922ebaeb49ab
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ef1469c40de8aae06460f1874905c53e91a47ca1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763667"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079330"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Classe CAtlPreviewCtrlImpl
 
@@ -144,10 +144,10 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWndParent*  
+*hWndParent*<br/>
 Um identificador para a janela de host fornecido pelo Shell para visualização avançada.
 
-*República Popular da China*  
+*República Popular da China*<br/>
 Especifica o tamanho inicial e a posição da janela.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -176,7 +176,7 @@ virtual void DoPaint(HDC hdc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hDC*  
+*hDC*<br/>
 Um identificador para um contexto de dispositivo para pintura.
 
 ### <a name="remarks"></a>Comentários
@@ -235,16 +235,16 @@ LRESULT OnPaint(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nMsg*  
+*nMsg*<br/>
 Defina como WM_PAINT.
 
-*wParam*  
+*wParam*<br/>
 Este parâmetro não é usado.
 
-*lParam*  
+*lParam*<br/>
 Este parâmetro não é usado.
 
-*bHandled*  
+*bHandled*<br/>
 Quando essa função retorna, ele contém TRUE.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -273,7 +273,7 @@ virtual void SetHost(HWND hWndParent);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWndParent*  
+*hWndParent*<br/>
 Um identificador para a nova janela pai.
 
 ### <a name="remarks"></a>Comentários
@@ -291,13 +291,13 @@ virtual void SetPreviewVisuals(
 
 ### <a name="parameters"></a>Parâmetros
 
-*clrBack*  
+*clrBack*<br/>
 Cor do plano de fundo da janela de visualização.
 
-*clrText*  
+*clrText*<br/>
 Cor do texto da janela de visualização.
 
-*plf*  
+*plf*<br/>
 Fonte usada para exibir texto na janela de visualização.
 
 ### <a name="remarks"></a>Comentários
@@ -312,10 +312,10 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 
 ### <a name="parameters"></a>Parâmetros
 
-*República Popular da China*  
+*República Popular da China*<br/>
 Especifica o novo tamanho e posição do controle de versão prévia.
 
-*bRedraw*  
+*bRedraw*<br/>
 Especifica se o controle deve ser redesenhado.
 
 ### <a name="remarks"></a>Comentários

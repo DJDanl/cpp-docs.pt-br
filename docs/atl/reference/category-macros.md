@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8f07a559c6353bb66a210bf450c15376720cdac
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cc13285549543eeab07bed6372f8f7d529f90a32
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753029"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078693"
 ---
 # <a name="category-macros"></a>Macros de categoria
 
@@ -67,7 +67,7 @@ BEGIN_CATEGORY_MAP(theClass)
 
 ### <a name="parameters"></a>Parâmetros
 
-*theClass*  
+*theClass*<br/>
 [in] O nome da classe que contém o mapa de categoria.
 
 ### <a name="remarks"></a>Comentários
@@ -109,7 +109,7 @@ IMPLEMENTED_CATEGORY(catID)
 
 ### <a name="parameters"></a>Parâmetros
 
-*catID*  
+*catID*<br/>
 [in] Uma constante CATID ou variável que contém o identificador global exclusivo (GUID) para a categoria de implementado. O endereço do *catID* serão tomadas e adicionada ao mapa. Consulte a tabela abaixo para uma seleção de categorias de estoque.
 
 ### <a name="remarks"></a>Comentários
@@ -146,7 +146,7 @@ REQUIRED_CATEGORY( catID )
 
 ### <a name="parameters"></a>Parâmetros
 
-*catID*  
+*catID*<br/>
 [in] Uma constante CATID ou variável que contém o identificador global exclusivo (GUID) para a categoria desejada. O endereço do *catID* serão tomadas e adicionada ao mapa. Consulte a tabela abaixo para uma seleção de categorias de estoque.
 
 ### <a name="remarks"></a>Comentários

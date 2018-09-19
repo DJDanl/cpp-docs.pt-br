@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9693fdc524953c9fa1070ec5e286cb2a999f5a0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9182241b1d33c63aae523cae0c2c9602466e4c2e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767719"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090419"
 ---
 # <a name="windows-support-classes"></a>Classes de suporte do Windows
 
@@ -64,7 +64,7 @@ As classes a seguir fornecem suporte para windows:
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral da classe](../atl/atl-class-overview.md)   
-[Macros de Mapa de Mensagens](../atl/reference/message-map-macros-atl.md)   
+[Visão geral da classe](../atl/atl-class-overview.md)<br/>
+[Macros de mapa de mensagem](../atl/reference/message-map-macros-atl.md)<br/>
 [Macros de classe de janela](../atl/reference/window-class-macros.md)
 

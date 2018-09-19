@@ -1,5 +1,5 @@
 ---
-title: C3065 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3065 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7a6bb966fd973a9ede675e98761e8649ca20c27
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35867da62dad9e399e4b4672f84478e4ea9688a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246951"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104922"
 ---
-# <a name="compiler-error-c3065"></a>C3065 de erro do compilador
-declaração de propriedade em escopo diferente de classe não é permitida  
-  
- O [propriedade](../../cpp/property-cpp.md) modificador declspec foi usado fora de uma classe.  Uma propriedade só pode ser declarada dentro de uma classe.  
-  
- O exemplo a seguir gera C3065:  
-  
-```  
-// C3065.cpp  
-// compile with: /c  
-__declspec(property(get=get_i)) int i;   // C3065  
-  
-class x {  
-public:  
-   __declspec(property(get=get_i)) int i;   // OK  
-};  
+# <a name="compiler-error-c3065"></a>Erro do compilador C3065
+
+declaração de propriedade em escopo diferente de classe não é permitida
+
+O [propriedade](../../cpp/property-cpp.md) modificador declspec foi usada fora de uma classe.  Uma propriedade só pode ser declarada dentro de uma classe.
+
+O exemplo a seguir gera C3065:
+
+```
+// C3065.cpp
+// compile with: /c
+__declspec(property(get=get_i)) int i;   // C3065
+
+class x {
+public:
+   __declspec(property(get=get_i)) int i;   // OK
+};
 ```

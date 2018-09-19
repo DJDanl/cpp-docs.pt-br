@@ -1,5 +1,5 @@
 ---
-title: Recurso compilador Erro Fatal RC1203 | Microsoft Docs
+title: RC1203 de Erro Fatal do compilador de recurso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5267011eea32929b85e6ca60fb26ea34b2c371
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 638af9b85aecdd4eaba712cee68bf4ec96f3ab56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321500"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081449"
 ---
 # <a name="resource-compiler-fatal-error-rc1203"></a>Erro fatal RC1203 (compilador de recurso)
-ID de idioma padrão hexadecimal inválido especificado.  
-  
- O idioma padrão especificar (/ l) opção foi seguida por uma ID de idioma hexadecimal inválido. Consulte [cadeias de caracteres de país/região e idioma](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) no *referência da biblioteca de tempo de execução* para obter uma lista de IDs de idioma válido.
+
+ID de idioma padrão hexadecimal inválido especificado.
+
+O idioma padrão especificar (/ l) opção foi seguida por uma ID de idioma hexadecimal inválido. Ver [cadeias de caracteres de país/região e idioma](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) na *referência de biblioteca de tempo de execução* para obter uma lista de IDs de idioma válido.

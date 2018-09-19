@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 242c83ce7a22d56d3c584b50ec93c941b45213ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ddd11cf6c9fbc1b0a032a609f1315e581290c01
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106486"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074975"
 ---
 # <a name="autogcrootattach"></a>auto_gcroot::attach
 Anexar `auto_gcroot` a um objeto.  
@@ -46,8 +46,8 @@ auto_gcroot<_element_type> & attach(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `_right`  
- O objeto a ser anexado, ou um `auto_gcroot` que contém o objeto para anexar.  
+*à direita*<br/>
+O objeto a ser anexado, ou um `auto_gcroot` que contém o objeto a ser anexado.  
   
 ## <a name="return-value"></a>Valor de retorno  
  O `auto_gcroot` atual.  
@@ -127,5 +127,5 @@ in ClassA destructor:fourth
   
 ## <a name="see-also"></a>Consulte também  
  [Membros auto_gcroot](../dotnet/auto-gcroot-members.md)   
- [auto_gcroot:: =](../dotnet/auto-gcroot-operator-assign.md)   
+ [auto_gcroot:: Operator =](../dotnet/auto-gcroot-operator-assign.md)   
  [auto_gcroot::release](../dotnet/auto-gcroot-release.md)

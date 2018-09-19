@@ -1,5 +1,5 @@
 ---
-title: C2147 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2147 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60047795428aad2da94b117882f351375fed4545
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 786d47e23986962575567b8afdc2eefd5aac5be6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167977"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082424"
 ---
-# <a name="compiler-error-c2147"></a>C2147 de erro do compilador
-Erro de sintaxe: 'Identificador' é uma palavra-chave new  
-  
- Foi usado um identificador que agora é uma palavra reservada no idioma.  
-  
- O exemplo a seguir gera C2147:  
-  
-```  
-// C2147.cpp  
-// compile with: /clr  
-int main() {  
-   int gcnew = 0;   // C2147  
-   int i = 0;   // OK  
-}  
+# <a name="compiler-error-c2147"></a>Erro do compilador C2147
+
+Erro de sintaxe: 'identifier' é uma nova palavra-chave
+
+Foi usado um identificador que é agora uma palavra-chave reservada no idioma.
+
+O exemplo a seguir gera C2147:
+
+```
+// C2147.cpp
+// compile with: /clr
+int main() {
+   int gcnew = 0;   // C2147
+   int i = 0;   // OK
+}
 ```

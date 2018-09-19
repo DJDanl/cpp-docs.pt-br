@@ -1,5 +1,5 @@
 ---
-title: C3254 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3254 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e58976b1562e6cca9aa343401b5d2c3f856de1a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9e42071c55ef3c7a4fc950b1b25656cf68d4024
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255602"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081176"
 ---
-# <a name="compiler-error-c3254"></a>C3254 de erro do compilador
-'substituição explícita': classe contém substituição explícita 'override', mas não deriva de uma interface que contém a declaração da função  
-  
- Quando você [substituir explicitamente](../../cpp/explicit-overrides-cpp.md) um método, a classe que contém a substituição deve derivar, direta ou indiretamente, do tipo que contém a função que você está substituindo.  
-  
- O exemplo a seguir gera C3254:  
-  
-```  
-// C3254.cpp  
-__interface I  
-{  
-   void f();  
-};  
-  
-__interface I1 : I  
-{  
-};  
-  
-struct A /* : I1 */  
-{  
-   void I1::f()  
-   {   // C3254, uncomment : I1 to resolve this C3254  
-   }  
-};  
-  
-int main()  
-{  
-}  
+# <a name="compiler-error-c3254"></a>Erro do compilador C3254
+
+'substituição explícita': classe contém substituição explícita 'override', mas não deriva de uma interface que contém a declaração da função
+
+Quando você [substituir explicitamente](../../cpp/explicit-overrides-cpp.md) um método, a classe que contém a substituição deve derivam, direta ou indiretamente, do tipo que contém a função que você está substituindo.
+
+O exemplo a seguir gera C3254:
+
+```
+// C3254.cpp
+__interface I
+{
+   void f();
+};
+
+__interface I1 : I
+{
+};
+
+struct A /* : I1 */
+{
+   void I1::f()
+   {   // C3254, uncomment : I1 to resolve this C3254
+   }
+};
+
+int main()
+{
+}
 ```

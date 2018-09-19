@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4c5d7ad570d9745e10107f0df09faccd9eb42e3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c000175c031868136aad44e59644d0fa122d213e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761547"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084504"
 ---
 # <a name="atlwinmodule70-structure"></a>Estrutura _ATL_WIN_MODULE70
 
@@ -43,16 +43,16 @@ struct _ATL_WIN_MODULE70 {
 
 ## <a name="members"></a>Membros
 
-`cbSize`  
+`cbSize`<br/>
 O tamanho da estrutura, usado para controle de versão.
 
-`m_csWindowCreate`  
+`m_csWindowCreate`<br/>
 Usado para serializar o acesso ao código de registro de janela. Usado internamente pelo ATL.
 
-`m_pCreateWndList`  
+`m_pCreateWndList`<br/>
 Usado para ligar o windows para seus objetos. Usado internamente pelo ATL.
 
-`m_rgWindowClassAtoms`  
+`m_rgWindowClassAtoms`<br/>
 Usado para acompanhar os registros de classe de janela para que eles possam ser cancelados corretamente no encerramento. Usado internamente pelo ATL.
 
 ## <a name="remarks"></a>Comentários

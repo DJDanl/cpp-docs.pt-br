@@ -1,5 +1,5 @@
 ---
-title: C2667 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2667 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5458bc5dc9500ea7850833b073d40d66bfc6e2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d6d14cf04ae399b10cbaa393d9e9fcc7133f274
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232350"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095242"
 ---
-# <a name="compiler-error-c2667"></a>C2667 de erro do compilador
-'function': nenhuma das sobrecargas número tem uma conversão melhor  
-  
- Uma chamada de função sobrecarregada é ambígua e não pode ser resolvida.  
-  
- A conversão necessária para corresponder aos parâmetros reais na chamada de função para uma das funções sobrecarregadas deve ser estritamente melhor do que as conversões necessárias por todas as outras funções sobrecarregadas.  
-  
- Consulte o artigo da Base de dados de Conhecimento Q240869 para obter mais informações sobre a ordenação parcial de modelos de função.
+# <a name="compiler-error-c2667"></a>Erro do compilador C2667
+
+'function': nenhuma das sobrecargas número possui uma conversão melhor
+
+Uma chamada de função sobrecarregada é ambígua e não pode ser resolvida.
+
+A conversão necessária para corresponder aos parâmetros na chamada de função para uma das funções sobrecarregadas reais deve ser estritamente melhor do que as conversões necessárias por todas as outras funções sobrecarregadas.
+
+Consulte o artigo da Base de dados de Conhecimento Q240869 para obter mais informações sobre ordenação parcial de modelos de função.

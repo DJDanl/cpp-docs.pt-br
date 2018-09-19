@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e608745f4c10d915ee0fc8a2cdad2f372f81046c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1bed2202c8dc7f6372a102eb3926ac49d568793a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302536"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096698"
 ---
 # <a name="command-line-errors-d8000-through-d9999"></a>Erros de linha de comando D8000 até D9999
 
@@ -63,4 +63,4 @@ Os artigos nesta seção fornecem uma referência para os erros de linha de coma
 
 ## <a name="see-also"></a>Consulte também
 
-[Erros de build do C/C++](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)  
+[Erros de build do C/C++](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)

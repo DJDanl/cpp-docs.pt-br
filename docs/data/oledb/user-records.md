@@ -26,19 +26,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8e9549070acf08e566110ea30f4a0259caeca047
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 4389fdd35c36a8f7708361176889111b1665f2c6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39339666"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073637"
 ---
 # <a name="user-records"></a>Registros de usuário
+
 Para usar um acessador estática (ou seja, um acessador é derivada de `CAccessor`), o consumidor deve ter um registro de usuário. O registro do usuário é uma classe C++ que contém os elementos de dados para o identificador de entrada ou saída. O ATL OLE DB consumidor assistente gera um registro de usuário para que o consumidor. Você pode adicionar métodos para o registro do usuário para tarefas opcionais, como tratamento de comandos.  
   
- O código a seguir mostra um registro de exemplo que manipula os comandos. No registro de usuário, BEGIN_COLUMN_MAP representa um conjunto de linhas de dados passado para o consumidor de um provedor. BEGIN_PARAM_MAP representa um conjunto de parâmetros de comando. Este exemplo usa uma [CCommand](../../data/oledb/ccommand-class.md) classe para lidar com os parâmetros de comando. Os membros de dados nas entradas de mapa representam deslocamentos em um bloco contíguo de memória para cada instância da classe. As macros COLUMN_ENTRY correspondem às macros PROVIDER_COLUMN_ENTRY no lado do provedor.  
+O código a seguir mostra um registro de exemplo que manipula os comandos. No registro de usuário, BEGIN_COLUMN_MAP representa um conjunto de linhas de dados passado para o consumidor de um provedor. BEGIN_PARAM_MAP representa um conjunto de parâmetros de comando. Este exemplo usa uma [CCommand](../../data/oledb/ccommand-class.md) classe para lidar com os parâmetros de comando. Os membros de dados nas entradas de mapa representam deslocamentos em um bloco contíguo de memória para cada instância da classe. As macros COLUMN_ENTRY correspondem às macros PROVIDER_COLUMN_ENTRY no lado do provedor.  
   
- Para obter mais informações sobre as macros COLUMN_MAP e PARAM_MAP, consulte [Macros para OLE DB modelos de consumidor](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
+Para obter mais informações sobre as macros COLUMN_MAP e PARAM_MAP, consulte [Macros para OLE DB modelos de consumidor](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   
 ```cpp  
 class CArtists  
@@ -64,12 +65,14 @@ END_PARAM_MAP()
 ```  
   
 ## <a name="wizard-generated-user-records"></a>Registros de usuário gerado pelo Assistente  
- Se você usar a ATL OLE DB Assistente de consumidor para gerar um consumidor, você tem a opção de usar modelos OLE DB ou atributos do OLE DB. O código gerado é diferente em cada caso. Para obter mais informações sobre esse código, consulte [Consumer Wizard-Generated Classes](../../data/oledb/consumer-wizard-generated-classes.md).  
+
+Se você usar a ATL OLE DB Assistente de consumidor para gerar um consumidor, você tem a opção de usar modelos OLE DB ou atributos do OLE DB. O código gerado é diferente em cada caso. Para obter mais informações sobre esse código, consulte [Consumer Wizard-Generated Classes](../../data/oledb/consumer-wizard-generated-classes.md).  
   
 ## <a name="user-record-support-for-multiple-accessors"></a>Suporte ao registro de usuário para vários acessadores  
- Para obter uma discussão detalhada sobre os cenários em que você precisa usar vários acessadores, consulte [usando vários acessadores em um conjunto de linhas](../../data/oledb/using-multiple-accessors-on-a-rowset.md).  
+
+Para obter uma discussão detalhada sobre os cenários em que você precisa usar vários acessadores, consulte [usando vários acessadores em um conjunto de linhas](../../data/oledb/using-multiple-accessors-on-a-rowset.md).  
   
- O exemplo a seguir mostra o registro de usuário modificado para dar suporte a vários acessadores em um conjunto de linhas. Em vez de BEGIN_COLUMN_MAP e END_COLUMN_MAP, ele usa [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) e [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) cada acessador. A macro BEGIN_ACCESSOR Especifica o número de acessador (deslocamento de zero) e se o acessador é uma autoaccessor. Chamada de Autoaccessors `GetData` para recuperar os dados automaticamente em uma chamada para [MoveNext](../../data/oledb/crowset-movenext.md). Acessadores nonautomatic exigem que você explicitamente recuperar os dados. Use um acessador nonautomatic se você estiver associando a um campo de dados grandes (como uma imagem de bitmap) que você talvez não queira recuperar para cada registro.  
+O exemplo a seguir mostra o registro de usuário modificado para dar suporte a vários acessadores em um conjunto de linhas. Em vez de BEGIN_COLUMN_MAP e END_COLUMN_MAP, ele usa [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) e [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) cada acessador. A macro BEGIN_ACCESSOR Especifica o número de acessador (deslocamento de zero) e se o acessador é uma autoaccessor. Chamada de Autoaccessors `GetData` para recuperar os dados automaticamente em uma chamada para [MoveNext](../../data/oledb/crowset-movenext.md). Acessadores nonautomatic exigem que você explicitamente recuperar os dados. Use um acessador nonautomatic se você estiver associando a um campo de dados grandes (como uma imagem de bitmap) que você talvez não queira recuperar para cada registro.  
   
 ```cpp  
 class CMultiArtists  
@@ -94,4 +97,5 @@ END_ACCESSOR_MAP()
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+
+[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

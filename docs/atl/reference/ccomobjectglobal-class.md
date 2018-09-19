@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4198e08a4c126a180006a088d4fc1509643824f6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 141940ef5d5c7d23ea3cf049e64e9f4c6974fce0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764924"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076652"
 ---
 # <a name="ccomobjectglobal-class"></a>Classe CComObjectGlobal
 
@@ -42,7 +42,7 @@ class CComObjectGlobal : public Base
 
 #### <a name="parameters"></a>Parâmetros
 
-*Base de dados de*  
+*Base de dados de*<br/>
 Sua classe, derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como bem como qualquer outra interface para o qual você deseja dar suporte no objeto.
 
 ## <a name="members"></a>Membros
@@ -142,10 +142,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*  
+*IID*<br/>
 [in] O GUID da interface que está sendo solicitado.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Um ponteiro para o ponteiro de interface identificado pelo iid ou nulo se a interface não for encontrada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -174,7 +174,7 @@ Por padrão, `Release` chamadas `_Module::Unlock`, onde `_Module` é a instânci
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CComObjectStack](../../atl/reference/ccomobjectstack-class.md)   
-[Classe CComAggObject](../../atl/reference/ccomaggobject-class.md)   
-[Classe CComObject](../../atl/reference/ccomobject-class.md)   
+[Classe CComObjectStack](../../atl/reference/ccomobjectstack-class.md)<br/>
+[Classe CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
+[Classe CComObject](../../atl/reference/ccomobject-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

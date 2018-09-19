@@ -17,15 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b03bfb65bd10787f41d30c63117fec54e8dc30ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe348043d991aa04652eae02ba0f2efa393bcf5f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103444"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098128"
 ---
 # <a name="record-mfc-data-access"></a>Registro (Acesso a dados MFC)
+
 Um registro é um conjunto de dados sobre uma única entidade, como uma conta ou um cliente, armazenados em uma tabela (linha da tabela). Um registro consiste em um grupo de colunas contíguas (às vezes chamadas de campos) que contêm dados de vários tipos. Um conjunto de registros selecionados de uma fonte de dados – geralmente, chamado de conjunto de resultados em termos de banco de dados – e no MFC é chamado de um conjunto de registros. Para obter mais informações, consulte [conjunto de registros (ODBC)](../data/odbc/recordset-odbc.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Acesso a dados (MFC/ATL) de programação](../data/data-access-programming-mfc-atl.md)
+
+[Acesso a dados (MFC/ATL) de programação](../data/data-access-programming-mfc-atl.md)

@@ -1,5 +1,5 @@
 ---
-title: C2113 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2113 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92ad712fa27d6350b672a7bfc1636d0fb3b80b7b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 94dd75ad7df782a92dfe359ebabf0abe1175ad75
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166329"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096165"
 ---
-# <a name="compiler-error-c2113"></a>C2113 de erro do compilador
-'-': ponteiro só pode ser subtraído de outro ponteiro  
-  
- O operando à direita em uma operação de subtração era um ponteiro, mas o operando esquerdo não era.
+# <a name="compiler-error-c2113"></a>Erro do compilador C2113
+
+'-': ponteiro só pode ser subtraído de outro ponteiro
+
+O operando à direita em uma operação de subtração é um ponteiro, mas o operando esquerdo não era.

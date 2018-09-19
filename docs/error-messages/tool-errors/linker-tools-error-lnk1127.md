@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de vinculador LNK1127 erro | Microsoft Docs
+title: Erro das LNK1127 das ferramentas de vinculador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 900eb55b1f0ac834a361bd434d41192fa63e1dad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3412905ed2ec5b8fbf7d5adc5aeae3f108ea0736
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294762"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081878"
 ---
 # <a name="linker-tools-error-lnk1127"></a>Erro das Ferramentas de Vinculador LNK1127
-biblioteca está corrompida  
-  
- O arquivo de biblioteca está corrompido. Recompile a biblioteca.
+
+biblioteca está corrompida
+
+O arquivo de biblioteca está corrompido. Recompile a biblioteca.

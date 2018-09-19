@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dd25661fc14cb9539d4b8e68f42c29895ce0d70e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a3416f057d32a003eba1b9776456a60d915de95
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33160960"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090133"
 ---
 # <a name="ptrqueryinterface"></a>ptr::QueryInterface
 O objeto COM propriedade de uma interface de consulta e anexa o resultado para outro `com::ptr`.  
@@ -40,17 +40,17 @@ void QueryInterface(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `other`  
- O `com::ptr` que receberá a interface.  
+*other*<br/>
+O `com::ptr` que receberá a interface.  
   
 ## <a name="exceptions"></a>Exceções  
  Internamente, `QueryInterface` é chamado no objeto COM propriedade e qualquer erro `HRESULT` é convertido em uma exceção por <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
   
 ## <a name="remarks"></a>Comentários  
- Use esse método para criar um wrapper de COM para uma interface diferente do objeto COM wrapper atual de propriedade. Este método chama `QueryInterface` por meio do objeto COM propriedade para solicitar um ponteiro para uma interface específica de COM do objeto e anexa o ponteiro de interface retornado ao passado `com::ptr`.  
+ Use esse método para criar um invólucro COM para uma interface diferente do objeto COM propriedade wrapper atual. Este método chama `QueryInterface` por meio do objeto COM propriedade para solicitar um ponteiro para uma interface específica do COM do objeto e anexa o ponteiro de interface devolvido ao passado `com::ptr`.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo implementa uma classe CLR que usa um `com::ptr` para incluir o membro privado `IXMLDOMDocument` objeto. O `WriteTopLevelNode` usa a função de membro `QueryInterface` para preencher um local `com::ptr` com um `IXMLDOMNode` e, em seguida, passa o `com::ptr` (pela referência de rastreamento) para uma função de membro privado que grava as propriedades name e text do nó no console.  
+ Este exemplo implementa uma classe CLR que usa um `com::ptr` encapsular seu membro privado `IXMLDOMDocument` objeto. O `WriteTopLevelNode` função de membro usa `QueryInterface` para preencher uma local `com::ptr` com um `IXMLDOMNode` e, em seguida, passa o `com::ptr` (pela referência de rastreamento) para uma função de membro privado que grava as propriedades de nome e o texto do nó no console.  
   
 ```  
 // comptr_queryinterface.cpp  

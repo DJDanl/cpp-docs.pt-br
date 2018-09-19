@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 338612527555dff6331ceaeef5e3b3dba0949d51
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1438473ff4fa45bf4000cb273ad3817d5673f219
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33300092"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094410"
 ---
 # <a name="command-line-error-d8022"></a>Erro D8022 (linha de comando)
-não é possível abrir 'messagefile'  
-  
- O arquivo especificado era não no diretório atual ou em um diretório especificado na variável de ambiente PATH. O arquivo de mensagem contém um resumo de sintaxe de linha de comando do compilador e as opções.  
-  
- Mova esse arquivo para o diretório atual ou um diretório no caminho atual. Se esse arquivo não pode ser encontrado, execute o programa de instalação para copiá-lo a partir dos discos de distribuição.
+
+não é possível abrir 'messagefile'
+
+O arquivo fornecido era não no diretório atual ou em um diretório especificado na variável de ambiente PATH. O arquivo de mensagem contém um breve resumo da sintaxe de linha de comando do compilador e as opções.
+
+Mova esse arquivo para o diretório atual ou um diretório no caminho atual. Se esse arquivo não for encontrado, execute o programa de instalação para copiá-lo a partir dos discos de distribuição.

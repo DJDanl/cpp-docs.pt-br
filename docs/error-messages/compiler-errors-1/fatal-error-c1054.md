@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9daac4944c57dbf08fe0ebcbc95993a97838585
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 439019b1f510127ae54e77d445d59e86be09a49b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198892"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101963"
 ---
 # <a name="fatal-error-c1054"></a>Erro fatal C1054
-limite do compilador: inicializadores com aninhamento muito profundo  
-  
- O código excede o limite de aninhamento em inicializadores (níveis de 10 a 15, dependendo da combinação de tipos está sendo inicializado).  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir usando as seguintes soluções possíveis  
-  
-1.  Simplifica os tipos de dados que está sendo inicializados para reduzir o aninhamento.  
-  
-2.  Inicialize variáveis em instruções separadas após a declaração.
+
+limite do compilador: inicializadores com aninhamento muito profundo
+
+O código excede o limite de aninhamento inicializadores (10 a 15 níveis, dependendo da combinação de tipos que está sendo inicializado).
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir usando as seguintes soluções possíveis
+
+1. Simplifique os tipos de dados que está sendo inicializados para reduzir o aninhamento.
+
+1. Inicialize variáveis em instruções separadas depois da declaração.

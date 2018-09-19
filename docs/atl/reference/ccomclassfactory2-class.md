@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45e4b8fe74355d99258677fd4746ad2461f508d3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 05fcef5ee1141de8261bc4ecc813cd573fb8f901
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757797"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099493"
 ---
 # <a name="ccomclassfactory2-class"></a>Classe CComClassFactory2
 
@@ -36,7 +36,7 @@ Essa classe implementa a [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-ic
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template <class license>  
+template <class license>
 class CComClassFactory2 : public IClassFactory2,
     public CComObjectRootEx<CComGlobalsThreadModel>,
     public license
@@ -44,7 +44,7 @@ class CComClassFactory2 : public IClassFactory2,
 
 #### <a name="parameters"></a>Parâmetros
 
-*licença*  
+*licença*<br/>
 Uma classe que implementa as funções estáticas a seguir:
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -105,13 +105,13 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in] Se o objeto está sendo criado como parte de uma agregação, em seguida *pUnkOuter* deve ser o externo desconhecido. Caso contrário, *pUnkOuter* deve ser NULL.
 
-*riid*  
+*riid*<br/>
 [in] O IID da interface solicitada. Se *pUnkOuter* não for nulo, *riid* deve ser `IID_IUnknown`.
 
-*ppvObj*  
+*ppvObj*<br/>
 [out] Um ponteiro para o ponteiro de interface identificado pelo *riid*. Se o objeto não dá suporte a essa interface, *ppvObj* é definido como NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -138,19 +138,19 @@ STDMETHOD(CreateInstanceLic)(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in] Se o objeto está sendo criado como parte de uma agregação, em seguida *pUnkOuter* deve ser o externo desconhecido. Caso contrário, *pUnkOuter* deve ser NULL.
 
-*pUnkReserved*  
+*pUnkReserved*<br/>
 [in] Não usado. Deve ser NULL.
 
-*riid*  
+*riid*<br/>
 [in] O IID da interface solicitada. Se *pUnkOuter* não for nulo, *riid* deve ser `IID_IUnknown`.
 
-*bstrKey*  
+*bstrKey*<br/>
 [in] A chave de licença de tempo de execução obtido anteriormente de uma chamada para `RequestLicKey`. Essa chave é necessária para criar o objeto.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Um ponteiro para o ponteiro de interface especificado por *riid*. Se o objeto não dá suporte a essa interface, *ppvObject* é definido como NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -171,7 +171,7 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pLicInfo*  
+*pLicInfo*<br/>
 [out] Ponteiro para um `LICINFO` estrutura.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -192,7 +192,7 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Usam*  
+*Usam*<br/>
 [in] Se for TRUE, a contagem de bloqueio é aumentada. Caso contrário, a contagem de bloqueio é reduzida.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -215,10 +215,10 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwReserved*  
+*dwReserved*<br/>
 [in] Não usado. Deve ser zero.
 
-*pbstrKey*  
+*pbstrKey*<br/>
 [out] Ponteiro para a chave de licença.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -233,8 +233,8 @@ Chame [GetLicInfo](#getlicinfo) para recuperar o valor de `fRuntimeKeyAvail`.
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)   
-[Classe CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)   
-[Classe CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+[Classe CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)<br/>
+[Classe CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)<br/>
+[Classe CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

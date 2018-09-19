@@ -1,5 +1,5 @@
 ---
-title: C3455 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3455 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61f48f16164327645eb0c1982e9e11e8ea394276
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d26a8f3e404eaa19a102be4cb3f11350c4fe674
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253374"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089353"
 ---
-# <a name="compiler-error-c3455"></a>C3455 de erro do compilador
-'attribute': nenhum dos construtores de atributo corresponde aos argumentos  
-  
- Um valor inválido foi usado para declarar um atributo.  Consulte [atributo](../../windows/attribute.md) para obter mais informações.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C3455.  
-  
-```  
-// C3455.cpp  
-// compile with: /clr /c  
-using namespace System;  
-  
-[attribute("MyAt")]   // C3455  
-// try the following line instead  
-// [attribute(All)]  
-ref struct MyAttr {  
-   MyAttr() {}  
-};  
+# <a name="compiler-error-c3455"></a>Erro do compilador C3455
+
+'attribute': nenhum dos construtores de atributo corresponderam aos argumentos
+
+Um valor inválido foi usado para declarar um atributo.  Ver [atributo](../../windows/attribute.md) para obter mais informações.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C3455.
+
+```
+// C3455.cpp
+// compile with: /clr /c
+using namespace System;
+
+[attribute("MyAt")]   // C3455
+// try the following line instead
+// [attribute(All)]
+ref struct MyAttr {
+   MyAttr() {}
+};
 ```

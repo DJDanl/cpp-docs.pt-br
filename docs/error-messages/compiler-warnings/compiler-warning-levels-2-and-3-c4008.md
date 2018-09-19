@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cdc88f222f9e5ce3829a63c131c955ce2abdd7d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd052b8dd6a0b70dd90ca076d0085675b33dc621
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294252"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091173"
 ---
-# <a name="compiler-warning-levels-2-and-3-c4008"></a>Compilador C4008 de aviso (níveis 2 e 3)
-'Identificador': atributo ' atributo ' ignorado  
-  
- O compilador ignorado o `__fastcall`, **estático**, ou **embutido** atributo para uma função (aviso de nível 3) ou os dados (aviso de nível 2).  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
-  
-1.  `__fastcall` atributo com dados.  
-  
-2.  **estático** ou **embutido** atributo com **principal** função.
+# <a name="compiler-warning-levels-2-and-3-c4008"></a>Compilador aviso (níveis 2 e 3) C4008
+
+'identifier': atributo ' atributo ' ignorado
+
+O compilador ignorado a `__fastcall`, **estáticos**, ou **embutido** atributo para uma função (aviso de nível 3) ou os dados (aviso de nível 2).
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
+
+1. `__fastcall` atributo com os dados.
+
+1. **estática** ou **embutido** atributo com **principal** função.

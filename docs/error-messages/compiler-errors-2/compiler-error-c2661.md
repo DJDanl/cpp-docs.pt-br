@@ -1,5 +1,5 @@
 ---
-title: C2661 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2661 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcab577ae9cfd84c757ceb194d4a59ee63057993
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8443e21db273aa7def879bd82ab823afb8a508a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231025"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074390"
 ---
-# <a name="compiler-error-c2661"></a>C2661 de erro do compilador
-'function': nenhuma função sobrecarregada recebe parâmetros de número  
-  
- Possíveis causas:  
-  
-1.  Parâmetros reais incorretos na chamada de função.  
-  
-2.  Declaração de função ausente.  
-  
- O exemplo a seguir gera C2661:  
-  
-```  
-// C2661.cpp  
-void func( int ){}  
-void func( int, int ){}  
-int main() {  
-   func( );   // C2661 func( void ) was not declared  
-   func( 1 );   // OK func( int ) was declared  
-}  
+# <a name="compiler-error-c2661"></a>Erro do compilador C2661
+
+'function': nenhuma função sobrecarregada recebe parâmetros de número
+
+Possíveis causas:
+
+1. Parâmetros reais incorretos na chamada de função.
+
+1. Declaração de função ausente.
+
+O exemplo a seguir gera C2661:
+
+```
+// C2661.cpp
+void func( int ){}
+void func( int, int ){}
+int main() {
+   func( );   // C2661 func( void ) was not declared
+   func( 1 );   // OK func( int ) was declared
+}
 ```

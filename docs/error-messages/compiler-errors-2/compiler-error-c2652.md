@@ -1,5 +1,5 @@
 ---
-title: C2652 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2652 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 576aef31268c0cdce09162fc367358e0ed044429
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 37b7b259b8eb42692641883c8d69578542cce06e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232193"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076613"
 ---
-# <a name="compiler-error-c2652"></a>C2652 de erro do compilador
-'Identificador': construtor de cópia inválido: primeiro parâmetro não deve ser um identificador  
-  
- O primeiro parâmetro do construtor de cópia tem o mesmo tipo de classe, estrutura ou união para o qual ela está definida. O primeiro parâmetro pode ser uma referência para o tipo, mas não o próprio tipo.  
-  
- O exemplo a seguir gera C2651:  
-  
-```  
-// C2652.cpp  
-// compile with: /c  
-class A {  
-   A( A );   // C2652 takes an A  
-};  
-class B {  
-   B( B& );   // OK, reference to B  
-};  
+# <a name="compiler-error-c2652"></a>Erro do compilador C2652
+
+'identifier': construtor de cópia inválido: primeiro parâmetro não deve ser um identificador
+
+O primeiro parâmetro no construtor de cópia tem o mesmo tipo que a classe, estrutura ou união para o qual ele está definido. O primeiro parâmetro pode ser uma referência para o tipo, mas não o próprio tipo.
+
+O exemplo a seguir gera C2651:
+
+```
+// C2652.cpp
+// compile with: /c
+class A {
+   A( A );   // C2652 takes an A
+};
+class B {
+   B( B& );   // OK, reference to B
+};
 ```

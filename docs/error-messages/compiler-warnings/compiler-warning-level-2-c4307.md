@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 2) do aviso C4307 | Microsoft Docs
+title: Compilador aviso (nível 2) C4307 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52914fc5825bda5647308c006b853538f3d6225e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ed18c213b35e79aaae98efa5932ac404a8d84bff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292026"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079187"
 ---
-# <a name="compiler-warning-level-2-c4307"></a>Compilador C4307 de aviso (nível 2)
-'operator': estouro de constante integral  
-  
- O operador é usado em uma expressão que resulta em uma constante inteira ultrapassar os limites de espaço alocado para ele. Talvez seja necessário usar um tipo maior para a constante. Um **assinado int** contém um valor menor que um `unsigned int` porque o **assinado int** usa um bit para representar o logon.  
-  
- O exemplo a seguir gera C4307:  
-  
-```  
-// C4307.cpp  
-// compile with: /W2  
-int i = 2000000000 + 2000000000;   // C4307  
-int j = (unsigned)2000000000 + 2000000000;   // OK  
-  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-2-c4307"></a>Compilador aviso (nível 2) C4307
+
+'operator': estouro de constante integral
+
+O operador é usado em uma expressão que resulta em uma constante de inteiro estourar o espaço alocado para ele. Talvez você precise usar um tipo maior para a constante. Um **assinado int** contém um valor menor que um `unsigned int` porque o **assinado int** usa um bit para representar o sinal.
+
+O exemplo a seguir gera C4307:
+
+```
+// C4307.cpp
+// compile with: /W2
+int i = 2000000000 + 2000000000;   // C4307
+int j = (unsigned)2000000000 + 2000000000;   // OK
+
+int main()
+{
+}
 ```

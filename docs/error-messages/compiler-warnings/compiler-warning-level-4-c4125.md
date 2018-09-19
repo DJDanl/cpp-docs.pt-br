@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 4) de aviso C4125 | Microsoft Docs
+title: Compilador aviso (nível 4) C4125 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af7fdd16925f080137be386cb3d2dd0dd3d8b446
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7042dd8689bf5a9bafc35d6bdaa6028f0c52df2a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293839"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087234"
 ---
-# <a name="compiler-warning-level-4-c4125"></a>Compilador C4125 de aviso (nível 4)
-dígito decimal encerra sequência de escape octal  
-  
- O compilador avalia o número octal sem o dígito decimal e assume que o dígito decimal é um caractere.  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// C4125a.cpp  
-// compile with: /W4  
-char array1[] = "\709"; // C4125  
-int main()  
-{  
-}  
-```  
-  
- Se o dígito 9 destina-se como um caractere, corrija o exemplo da seguinte maneira:  
-  
-```  
-// C4125b.cpp  
-// compile with: /W4  
-char array[] = "\0709";  // C4125 String containing "89"  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-4-c4125"></a>Compilador aviso (nível 4) C4125
+
+dígito decimal encerra sequência de escape octal
+
+O compilador avalia o número octal sem o dígito decimal e pressupõe que o dígito decimal é um caractere.
+
+## <a name="example"></a>Exemplo
+
+```
+// C4125a.cpp
+// compile with: /W4
+char array1[] = "\709"; // C4125
+int main()
+{
+}
+```
+
+Se o dígito 9 destina-se como um caractere, o exemplo correto da seguinte maneira:
+
+```
+// C4125b.cpp
+// compile with: /W4
+char array[] = "\0709";  // C4125 String containing "89"
+int main()
+{
+}
 ```

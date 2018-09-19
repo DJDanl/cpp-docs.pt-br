@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 4) de aviso C4202 | Microsoft Docs
+title: Compilador aviso (nível 4) C4202 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dea55835c75a0ac1d5646a542675eefa2c5e5254
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4fd44b436369e908d471ff56d193f3afab97a769
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293004"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103302"
 ---
-# <a name="compiler-warning-level-4-c4202"></a>Compilador C4202 de aviso (nível 4)
-extensão não padrão usada: '...': parâmetro de protótipo na lista de nomes inválido  
-  
- Uma definição de função de estilo antigo contém argumentos de variável. Essas definições de geram um erro em compatibilidade ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// C4202.c  
-// compile with: /W4  
-void func( a, b, ...)   // C4202  
-int a, b;  
-{}  
-  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-4-c4202"></a>Compilador aviso (nível 4) C4202
+
+extensão não padrão usada: '...': parâmetro de protótipo na lista de nomes inválido
+
+Uma definição de função de estilo antigo contém argumentos variáveis. Essas definições de geram um erro de compatibilidade com ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+
+## <a name="example"></a>Exemplo
+
+```
+// C4202.c
+// compile with: /W4
+void func( a, b, ...)   // C4202
+int a, b;
+{}
+
+int main()
+{
+}
 ```

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b22b77affd41aa60769543ae2bea2ed495084ae
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 71dd2ba071f345622d4058b9fb687dcdeaa50a62
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687875"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088989"
 ---
 # <a name="taskcompletionevent-class"></a>Classe task_completion_event
 A classe `task_completion_event` permite atrasar a execução de uma tarefa até que uma condição seja atendida, ou iniciar uma tarefa em resposta a um evento externo.  
@@ -41,10 +41,9 @@ class task_completion_event<void>;
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `_ResultType`  
- O tipo de resultado desta classe `task_completion_event`.  
-  
- `T`  
+*_ResultType*<br/>
+O tipo de resultado desta classe `task_completion_event`.  
+
   
 ## <a name="members"></a>Membros  
   
@@ -72,7 +71,7 @@ class task_completion_event<void>;
  `task_completion_event`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** ppltasks  
+ **Cabeçalho:** ppltasks. h  
   
  **Namespace:** simultaneidade  
   
@@ -87,14 +86,14 @@ bool set() const ;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Result`  
- O resultado para definir esse evento com.  
+*_Result*<br/>
+O resultado para definir este evento.  
   
 ### <a name="return-value"></a>Valor de retorno  
- O método retorna `true` se ela foi bem-sucedida na configuração de evento. Ele retorna `false` se o evento já está definido.  
+ O método retorna `true` se tiver sido bem-sucedido na configuração do evento. Ele retorna `false` se o evento já está definido.  
   
 ### <a name="remarks"></a>Comentários  
- Na presença de várias chamadas simultâneas para ou `set`, somente a primeira chamada será bem-sucedida e seu resultado (se houver) será armazenado no evento de conclusão de tarefas. Os conjuntos restantes são ignorados e o método retornará false. Quando você define um evento de conclusão de tarefas, todas as tarefas criada do que evento será concluída imediatamente, e seus continuações, se houver, serão agendadas. Tarefa de objetos de conclusão que têm um `_ResultType` diferente de `void` irá passar o valor para seus continuações.  
+ Na presença de vários ou chamadas simultâneas para `set`, somente a primeira chamada terá êxito e seu resultado (se houver) será armazenado no evento de conclusão de tarefa. Os conjuntos restantes são ignorados e o método retornará false. Quando você definir um evento de conclusão de tarefas, todas as tarefas criadas do que o evento serão concluídas imediatamente, e suas continuações, se houver, serão agendadas. Tarefa de objetos de conclusão que têm uma `_ResultType` diferente de `void` passará o valor para suas continuações.  
   
 ##  <a name="set_exception"></a> set_exception 
 
@@ -108,9 +107,14 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_E`  
- `_Except`  
- `_ExceptionPtr`  
+*_E*<br/>
+O tipo de exceção.
+
+*Except*<br/>
+A exceção a ser definido.
+
+*_ExceptionPtr*<br/>
+O ponteiro de exceção definido.
   
 ### <a name="return-value"></a>Valor de retorno  
   

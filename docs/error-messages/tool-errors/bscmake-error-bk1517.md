@@ -1,5 +1,5 @@
 ---
-title: BSCMAKE erro BK1517 | Microsoft Docs
+title: Erro de BSCMAKE BK1517 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6f5619a7c2a6ccf671845b27bbedf93d8eb2d69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 941773fbcf65a3b1c1a6041a1e7a067cfc286823
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298545"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097049"
 ---
 # <a name="bscmake-error-bk1517"></a>Erro BK1517 (BSCMAKE)
-arquivo de origem para sbrfile compilado com ambos /Yc e /Yu  
-  
- O arquivo. SBR refere-se a mesmo. Ele provavelmente foi recompilado com /Yu após a compilação com /Yc. Redefinir a opção de compilador para o arquivo de origem para /Yc e selecione **recriar** para gerar novos arquivos. SBR. Não recompile o arquivo de origem com /Yu.
+
+arquivo de origem para sbrfile compilado com /Yc e /Yu
+
+O arquivo. SBR refere-se a mesmo. Ele provavelmente foi recompilado com /Yu após a compilação com /Yc. Redefinir a opção de compilador para o arquivo de origem com /Yc, em seguida, selecione **recompilar** gere novos arquivos. SBR. Não recompile o arquivo de origem com /Yu.

@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb135fc68e11a5af86fdccde949b8e1761160625
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: faf3080c6363ef0227b71e550ff658b1790d37b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753273"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090692"
 ---
 # <a name="ccommodule-class"></a>Classe CComModule
 
@@ -144,13 +144,13 @@ HRESULT GetClassObject(
 
 ### <a name="parameters"></a>Parâmetros
 
-*rclsid*  
+*rclsid*<br/>
 [in] O CLSID do objeto a ser criado.
 
-*riid*  
+*riid*<br/>
 [in] O IID da interface solicitada.
 
-*ppv*  
+*ppv*<br/>
 [out] Um ponteiro para o ponteiro de interface identificado pelo *riid*. Se o objeto não dá suporte a essa interface, *ppv* é definido como NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -224,13 +224,13 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*  
+*p*<br/>
 [in] Um ponteiro para uma matriz de entradas de mapa de objeto.
 
-*h*  
+*h*<br/>
 [in] O HINSTANCE passado para `DLLMain` ou `WinMain`.
 
-*plibid*  
+*plibid*<br/>
 [in] Um ponteiro para o LIBID da biblioteca de tipos associado ao projeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -350,19 +350,19 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
 
 ### <a name="parameters"></a>Parâmetros
 
-*clsid*  
+*clsid*<br/>
 [in] O CLSID do objeto a ser registrado.
 
-*lpszProgID*  
+*lpszProgID*<br/>
 [in] O ProgID associado ao objeto.
 
-*lpszVerIndProgID*  
+*lpszVerIndProgID*<br/>
 [in] O ProgID independente de versão associado ao objeto.
 
-*nDescID*  
+*nDescID*<br/>
 [in] O identificador de um recurso de cadeia de caracteres para a descrição do objeto.
 
-*dwFlags*  
+*dwFlags*<br/>
 [in] Especifica o modelo de threading para entrar no registro. Os valores possíveis são THREADFLAGS_APARTMENT, THREADFLAGS_BOTH ou AUTPRXFLAG.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -385,10 +385,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwClsContext*  
+*dwClsContext*<br/>
 [in] Especifica o contexto no qual o objeto de classe deve ser executado. Os valores possíveis são CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER ou CLSCTX_LOCAL_SERVER. Para obter uma descrição desses valores, consulte [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) no SDK do Windows.
 
-*dwFlags*  
+*dwFlags*<br/>
 [in] Determina os tipos de conexão para o objeto de classe. Os valores possíveis são REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE ou REGCLS_MULTI_SEPARATE. Para obter uma descrição desses valores, consulte [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) no SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -411,10 +411,10 @@ HRESULT RegisterServer(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bRegTypeLib*  
+*bRegTypeLib*<br/>
 [in] Indica se a biblioteca de tipos será registrada. O valor padrão é FALSE.
 
-*pCLSID*  
+*pCLSID*<br/>
 [in] Aponta para o CLSID do objeto a ser registrado. Se NULL (o valor padrão), todos os objetos no mapa de objetos será registrado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -442,7 +442,7 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpszIndex*  
+*lpszIndex*<br/>
 [in] Cadeia de caracteres no formato `"\\N"`, onde `N` é o índice de inteiro do recurso TYPELIB.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -496,13 +496,13 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
 
 ### <a name="parameters"></a>Parâmetros
 
-*clsid*  
+*clsid*<br/>
 [in] O CLSID do objeto a ser cancelado.
 
-*lpszProgID*  
+*lpszProgID*<br/>
 [in] O ProgID associado ao objeto.
 
-*lpszVerIndProgID*  
+*lpszVerIndProgID*<br/>
 [in] O ProgID independente de versão associado ao objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -526,10 +526,10 @@ inline HRESULT UnregisterServer(BOOL bUnRegTypeLib, const CLSID* pCLSID = NULL) 
 
 ### <a name="parameters"></a>Parâmetros
 
-*bUnRegTypeLib*  
+*bUnRegTypeLib*<br/>
 Se for TRUE, a biblioteca de tipos também foi cancelada.
 
-*pCLSID*  
+*pCLSID*<br/>
 Aponta para o CLSID do objeto a ser cancelado. Se NULL (o valor padrão), todos os objetos no mapa de objetos será cancelado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -568,25 +568,25 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
 
 ### <a name="parameters"></a>Parâmetros
 
-*clsid*  
+*clsid*<br/>
 O CLSID do objeto a ser registrado ou cancelado.
 
-*lpszProgID*  
+*lpszProgID*<br/>
 O ProgID associado ao objeto.
 
-*lpszVerIndProgID*  
+*lpszVerIndProgID*<br/>
 O ProgID independente de versão associado ao objeto.
 
-*nDescID*  
+*nDescID*<br/>
 O identificador do recurso de cadeia de caracteres para a descrição do objeto.
 
-*szDesc*  
+*szDesc*<br/>
 Uma cadeia de caracteres que contém a descrição do objeto.
 
-*dwFlags*  
+*dwFlags*<br/>
 Especifica o modelo de threading para entrar no registro. Os valores possíveis são THREADFLAGS_APARTMENT, THREADFLAGS_BOTH ou AUTPRXFLAG.
 
-*bRegistre-se participar*  
+*bRegistre-se participar*<br/>
 Indica se o objeto deve ser registrado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -621,16 +621,16 @@ virtual HRESULT UpdateRegistryFromResourceD(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpszRes*  
+*lpszRes*<br/>
 [in] Um nome de recurso.
 
-*nResID*  
+*nResID*<br/>
 [in] Uma ID de recurso.
 
-*bRegistre-se participar*  
+*bRegistre-se participar*<br/>
 [in] Indica se o objeto deve ser registrado.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 [in] Um ponteiro para o mapa de substituição armazenar valores associados com parâmetros substituíveis do script. Usa automaticamente o ATL `%MODULE%`. Para usar parâmetros substituíveis adicionais, consulte os comentários para obter detalhes. Caso contrário, use o valor padrão NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -671,16 +671,16 @@ virtual HRESULT UpdateRegistryFromResourceS(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpszRes*  
+*lpszRes*<br/>
 [in] Um nome de recurso.
 
-*nResID*  
+*nResID*<br/>
 [in] Uma ID de recurso.
 
-*bRegistre-se participar*  
+*bRegistre-se participar*<br/>
 [in] Indica se o script de recurso deve ser registrado.
 
-*pMapEntries*  
+*pMapEntries*<br/>
 [in] Um ponteiro para o mapa de substituição armazenar valores associados com parâmetros substituíveis do script. Usa automaticamente o ATL `%MODULE%`. Para usar parâmetros substituíveis adicionais, consulte os comentários para obter detalhes. Caso contrário, use o valor padrão NULL.
 
 ### <a name="return-value"></a>Valor de retorno

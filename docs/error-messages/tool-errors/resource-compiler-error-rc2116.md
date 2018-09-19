@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63ba6a62610e4cc22a7b1e49695e3b730ee20957
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4e28be01c0f38579f09204a9b1312fdfe287851
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321448"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097114"
 ---
 # <a name="resource-compiler-error-rc2116"></a>Erro RC2116 (compilador de recurso)
-esperando o número de identificação  
-  
- Esperado um número para o `id` campo de uma instrução de controle no **diálogo** instrução. Verifique se você tem um número ou `#define` instrução para a ID do controle.
+
+Esperando que o número de ID
+
+Esperando um número para o `id` campo de uma instrução de controle em de **caixa de diálogo** instrução. Verifique se você tem um número ou `#define` instrução para a ID do controle.

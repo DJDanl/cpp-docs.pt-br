@@ -16,21 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7be7709baadff35c10cec861b4a0bca94c8cbe5f
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 681aa3ef5a1434ab191854f23a9e7bc908b65728
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39337158"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082411"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementando um consumidor simples
+
 Os tópicos a seguir mostram como editar os arquivos criados pelo Assistente de aplicativo do MFC e ATL OLE DB Assistente de consumidor para criar um consumidor simples. Este exemplo tem as seguintes partes:  
   
--   "Recuperação de dados com o consumidor" mostra como implementar o código no consumidor que lê todos os dados, linha por linha, de uma tabela de banco de dados.  
+- "Recuperação de dados com o consumidor" mostra como implementar o código no consumidor que lê todos os dados, linha por linha, de uma tabela de banco de dados.  
   
--   "Adicionando suporte de indicador para o consumidor" mostra como adicionar suporte a indicadores para o consumidor.  
+- "Adicionando suporte de indicador para o consumidor" mostra como adicionar suporte a indicadores para o consumidor.  
   
--   "Adicionando suporte a XML para o consumidor" mostra como modificar o código de consumidor para os dados recuperados do conjunto de linhas como dados XML de saída.  
+- "Adicionando suporte a XML para o consumidor" mostra como modificar o código de consumidor para os dados recuperados do conjunto de linhas como dados XML de saída.  
   
 > [!NOTE]
 >  Você pode usar o aplicativo do consumidor descrito nesta seção para testar os provedores de exemplo MyProv e provedor.  
@@ -45,7 +46,7 @@ Os tópicos a seguir mostram como editar os arquivos criados pelo Assistente de 
   
 #### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Para modificar o aplicativo de console para usar o consumidor do OLE DB  
   
-1.  No MyCons.cpp, altere o código principal inserindo o texto em negrito, da seguinte maneira:  
+1. No MyCons.cpp, altere o código principal inserindo o texto em negrito, da seguinte maneira:  
   
     ```cpp  
     // MyCons.cpp : Defines the entry point for the console application.  
@@ -73,30 +74,31 @@ Os tópicos a seguir mostram como editar os arquivos criados pelo Assistente de 
     ```  
   
 ## <a name="adding-bookmark-support-to-the-consumer"></a>Adicionando suporte a indicadores ao consumidor  
- Um indicador é uma coluna que identifica exclusivamente linhas na tabela. Geralmente é a coluna de chave, mas nem sempre; ele é específico do provedor. Esta seção mostra como adicionar suporte a indicadores. Para fazer isso, você precisa fazer o seguinte na classe de registro de usuário:  
+
+Um indicador é uma coluna que identifica exclusivamente linhas na tabela. Geralmente é a coluna de chave, mas nem sempre; ele é específico do provedor. Esta seção mostra como adicionar suporte a indicadores. Para fazer isso, você precisa fazer o seguinte na classe de registro de usuário:  
   
--   Criar uma instância de indicadores. Esses são objetos do tipo [CBookmark](../../data/oledb/cbookmark-class.md).  
+- Criar uma instância de indicadores. Esses são objetos do tipo [CBookmark](../../data/oledb/cbookmark-class.md).  
   
--   Solicitar uma coluna de indicador do provedor definindo o `DBPROP_IRowsetLocate` propriedade.  
+- Solicitar uma coluna de indicador do provedor definindo o `DBPROP_IRowsetLocate` propriedade.  
   
--   Adicionar uma entrada de indicador no mapa coluna usando o [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) macro.  
+- Adicionar uma entrada de indicador no mapa coluna usando o [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) macro.  
   
- As etapas anteriores oferecem suporte a indicadores e um objeto de indicador com o qual trabalhar. Este exemplo de código demonstra um indicador da seguinte maneira:  
+As etapas anteriores oferecem suporte a indicadores e um objeto de indicador com o qual trabalhar. Este exemplo de código demonstra um indicador da seguinte maneira:  
   
--   Abra um arquivo para gravação.  
+- Abra um arquivo para gravação.  
   
--   Dados do conjunto de linhas de saída para o arquivo linha por linha.  
+- Dados do conjunto de linhas de saída para o arquivo linha por linha.  
   
--   Mover o cursor de conjunto de linhas para o indicador chamando [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).  
+- Mover o cursor de conjunto de linhas para o indicador chamando [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md).  
   
--   A linha marcada com indicador, acrescentando-o ao final do arquivo de saída.  
+- A linha marcada com indicador, acrescentando-o ao final do arquivo de saída.  
   
 > [!NOTE]
 >  Se você usar esse aplicativo de consumidor para testar o aplicativo de provedor de exemplo do provedor, deixe o suporte a indicadores descrito nesta seção.  
   
 #### <a name="to-instantiate-the-bookmark"></a>Para instanciar o indicador  
   
-1.  O acessador deve conter um objeto do tipo [CBookmark](../../data/oledb/cbookmark-class.md). O *nSize* parâmetro especifica o tamanho do buffer indicador em bytes (normalmente 4 para plataformas de 32 bits) e 8 para plataformas de 64 bits. Adicione a seguinte declaração para os membros de dados de coluna na classe de registro de usuário:  
+1. O acessador deve conter um objeto do tipo [CBookmark](../../data/oledb/cbookmark-class.md). O *nSize* parâmetro especifica o tamanho do buffer indicador em bytes (normalmente 4 para plataformas de 32 bits) e 8 para plataformas de 64 bits. Adicione a seguinte declaração para os membros de dados de coluna na classe de registro de usuário:  
   
     ```cpp  
     //////////////////////////////////////////////////////////////////////  
@@ -111,7 +113,7 @@ Os tópicos a seguir mostram como editar os arquivos criados pelo Assistente de 
   
 #### <a name="to-request-a-bookmark-column-from-the-provider"></a>Para solicitar uma coluna de indicador do provedor  
   
-1.  Adicione o seguinte código no `GetRowsetProperties` método na classe de registro de usuário:  
+1. Adicione o seguinte código no `GetRowsetProperties` método na classe de registro de usuário:  
   
     ```cpp  
     // Set the DBPROP_IRowsetLocate property.  
@@ -125,7 +127,7 @@ Os tópicos a seguir mostram como editar os arquivos criados pelo Assistente de 
   
 #### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Para adicionar uma entrada de indicador para o mapa de coluna  
   
-1.  Adicione a seguinte entrada no mapa de coluna na classe de registro de usuário:  
+1. Adicione a seguinte entrada no mapa de coluna na classe de registro de usuário:  
   
     ```cpp  
     // Set a bookmark entry in the column map.  
@@ -139,7 +141,7 @@ Os tópicos a seguir mostram como editar os arquivos criados pelo Assistente de 
   
 #### <a name="to-use-a-bookmark-in-your-main-code"></a>Para usar um indicador em seu código principal  
   
-1.  No arquivo MyCons.cpp do aplicativo de console que você criou anteriormente, altere o código principal para ler o seguinte. Para usar indicadores, o código principal precisa instanciar seu próprio objeto de indicador (`myBookmark`); isso é um indicador diferente no acessador (`m_bookmark`).  
+1. No arquivo MyCons.cpp do aplicativo de console que você criou anteriormente, altere o código principal para ler o seguinte. Para usar indicadores, o código principal precisa instanciar seu próprio objeto de indicador (`myBookmark`); isso é um indicador diferente no acessador (`m_bookmark`).  
   
     ```cpp  
     ///////////////////////////////////////////////////////////////////////  
@@ -208,14 +210,15 @@ Os tópicos a seguir mostram como editar os arquivos criados pelo Assistente de 
     }  
     ```  
   
- Para obter mais informações sobre os indicadores, consulte [usando indicadores](../../data/oledb/using-bookmarks.md). Exemplos de indicadores também são mostrados na [atualizando conjuntos de linhas](../../data/oledb/updating-rowsets.md).  
+Para obter mais informações sobre os indicadores, consulte [usando indicadores](../../data/oledb/using-bookmarks.md). Exemplos de indicadores também são mostrados na [atualizando conjuntos de linhas](../../data/oledb/updating-rowsets.md).  
   
 ## <a name="adding-xml-support-to-the-consumer"></a>Adicionando suporte a XML para o consumidor  
- Conforme discutido em [acessando os dados XML](../../data/oledb/accessing-xml-data.md), para recuperar dados XML de uma fonte de dados de duas maneiras: usando [CStreamRowset](../../data/oledb/cstreamrowset-class.md) ou usando [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). Este exemplo usa `CStreamRowset`, que é mais eficiente, mas exige que você tenha o SQL Server 2000 em execução no computador no qual você executa esse aplicativo de exemplo.  
+
+Conforme discutido em [acessando os dados XML](../../data/oledb/accessing-xml-data.md), para recuperar dados XML de uma fonte de dados de duas maneiras: usando [CStreamRowset](../../data/oledb/cstreamrowset-class.md) ou usando [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). Este exemplo usa `CStreamRowset`, que é mais eficiente, mas exige que você tenha o SQL Server 2000 em execução no computador no qual você executa esse aplicativo de exemplo.  
   
 #### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>Para modificar a classe de comando para herdar de CStreamRowset  
   
-1.  No aplicativo de consumidor que você criou anteriormente, altere sua `CCommand` declaração para especificar `CStreamRowset` como o conjunto de linhas de classe da seguinte maneira:  
+1. No aplicativo de consumidor que você criou anteriormente, altere sua `CCommand` declaração para especificar `CStreamRowset` como o conjunto de linhas de classe da seguinte maneira:  
   
     ```cpp  
     class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
@@ -223,7 +226,7 @@ Os tópicos a seguir mostram como editar os arquivos criados pelo Assistente de 
   
 #### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>Para modificar o código principal para recuperar e os dados XML de saída  
   
-1.  No arquivo MyCons.cpp do aplicativo de console que você criou anteriormente, altere o código principal para ler o seguinte:  
+1. No arquivo MyCons.cpp do aplicativo de console que você criou anteriormente, altere o código principal para ler o seguinte:  
   
     ```cpp  
     ///////////////////////////////////////////////////////////////////////  
@@ -279,4 +282,5 @@ Os tópicos a seguir mostram como editar os arquivos criados pelo Assistente de 
     ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Criando um consumidor do OLE DB usando um assistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+
+[Criando um consumidor do OLE DB usando um assistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38a3bb405fac71a651b37fd6d6098c0d0f0263b0
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 0cbb7f3bc7263165a988a910f0311d3d2c368e0c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539541"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104316"
 ---
 # <a name="assume"></a>__assume
 **Seção específica da Microsoft**  
@@ -38,8 +38,8 @@ __assume(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `expression`  
- Qualquer expressão supostamente avaliada como verdadeira.  
+*Expressão*<br/>
+Qualquer expressão supostamente avaliada como verdadeira.  
   
 ## <a name="remarks"></a>Comentários  
  O otimizador presume que a condição representada por `expression` é verdadeira no ponto em que a palavra-chave aparece e permanece verdadeira até que a `expression` seja modificada (por exemplo, atribuindo a uma variável). O uso seletivo de dicas passadas para o otimizador por `__assume` pode melhorar a otimização.  

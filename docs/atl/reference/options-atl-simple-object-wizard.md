@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 548b75a3cee974538450534e25a091c56ae35014
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d337d31150b6da1a1556589d63fd60d63842efce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707415"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46098778"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Opções, ATL Simple Object Wizard
 
@@ -75,7 +75,7 @@ Para obter mais informações sobre projetos ATL e classes COM da ATL, consulte 
 
 ## <a name="see-also"></a>Consulte também
 
-[ATL Simple Object Wizard](../../atl/reference/atl-simple-object-wizard.md)   
-[Objeto simples da ATL](../../atl/reference/adding-an-atl-simple-object.md)   
+[Assistente de objeto simples da ATL](../../atl/reference/atl-simple-object-wizard.md)<br/>
+[Objeto ATL Simples](../../atl/reference/adding-an-atl-simple-object.md)<br/>
 [Problemas de Threading do servidor em processo](/windows/desktop/com/in-process-server-threading-issues)
 

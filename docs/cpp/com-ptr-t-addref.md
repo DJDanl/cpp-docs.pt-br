@@ -16,28 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bf56e87b8b7949048b1e6006d3aa32f00af1462
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: b66f4944d9ccdfb36587817c5f856c127513784e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404253"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087689"
 ---
 # <a name="comptrtaddref"></a>_com_ptr_t::AddRef
-**Seção específica da Microsoft**  
-  
- Chamadas a `AddRef` função de membro de `IUnknown` no ponteiro de interface encapsulado.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void AddRef( );  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Chamadas `IUnknown::AddRef` no ponteiro de interface encapsulado, gerando um `E_POINTER` erro se o ponteiro é NULL.  
-  
- **Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe _com_ptr_t](../cpp/com-ptr-t-class.md)
+
+**Seção específica da Microsoft**
+
+Chamadas a `AddRef` função de membro de `IUnknown` no ponteiro de interface encapsulado.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+void AddRef( );
+```
+
+## <a name="remarks"></a>Comentários
+
+Chamadas `IUnknown::AddRef` no ponteiro de interface encapsulado, gerando um `E_POINTER` erro se o ponteiro é NULL.
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Classe _com_ptr_t](../cpp/com-ptr-t-class.md)

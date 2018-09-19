@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7973da83716e4dc99dc98b199421ab9d840a8380
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f28096fccae4f24b236631b3c27178bda7e22771
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705179"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103978"
 ---
 # <a name="messagenotfound-class"></a>Classe message_not_found
-Esta classe descreve uma exceção lançada quando um bloco de mensagens não pode localizar uma mensagem solicitada.  
+Esta classe descreve uma exceção gerada quando um bloco de mensagens não conseguir encontrar uma mensagem solicitada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +48,7 @@ class message_not_found : public std::exception;
  `message_not_found`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** concrt.h  
+ **Cabeçalho:** concrt. h  
   
  **Namespace:** simultaneidade  
   
@@ -63,8 +63,8 @@ message_not_found() throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Message`  
- Uma mensagem descritiva do erro.  
+*Mensagem*<br/>
+Uma mensagem descritiva do erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   

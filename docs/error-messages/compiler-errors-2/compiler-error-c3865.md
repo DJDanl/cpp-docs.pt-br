@@ -1,5 +1,5 @@
 ---
-title: C3865 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3865 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99a872d4cf7ed285a0798461c77adf904cfa3e71
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fd5c83d922601ca4cdffe0f3772723b31e630b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275493"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46090835"
 ---
-# <a name="compiler-error-c3865"></a>C3865 de erro do compilador
-'calling_convention': só pode ser usada em funções membro nativas  
-  
- Uma convenção de chamada foi usada em uma função que foi a uma função global ou em uma função de membro gerenciado. A convenção de chamada só pode ser usada em uma função de membro (não gerenciado) nativo.  
-  
- Para obter mais informações, consulte [convenções de chamada](../../cpp/calling-conventions.md).  
-  
- O exemplo a seguir gera C3865:  
-  
-```  
-// C3865.cpp  
-// compile with: /clr  
-// processor: x86  
-void __thiscall Func(){}   // C3865  
-  
-// OK  
-struct MyType {  
-   void __thiscall Func(){}  
-};  
+# <a name="compiler-error-c3865"></a>Erro do compilador C3865
+
+'calling_convention': só pode ser usada em funções membro nativas
+
+Uma convenção de chamada foi usada em uma função que foi a uma função global ou em uma função de membro gerenciado. A convenção de chamada só pode ser usada em uma função de membro (não gerenciado) nativo.
+
+Para obter mais informações, consulte [convenções de chamada](../../cpp/calling-conventions.md).
+
+O exemplo a seguir gera C3865:
+
+```
+// C3865.cpp
+// compile with: /clr
+// processor: x86
+void __thiscall Func(){}   // C3865
+
+// OK
+struct MyType {
+   void __thiscall Func(){}
+};
 ```

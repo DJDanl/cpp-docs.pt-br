@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c1095df6caae94cac86e5e205507e0ed9eeb98e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 564ff010756a2afa9210fc71dd47fce2b72dcbca
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755080"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075716"
 ---
 # <a name="catlmap-class"></a>Classe CAtlMap
 
@@ -70,15 +70,16 @@ class CAtlMap
 
 #### <a name="parameters"></a>Parâmetros
 
-*K*  
+*K*<br/>
 O tipo de elemento-chave.
 
-*V* o tipo de elemento de valor.
+*V*<br/>
+O tipo de elemento de valor.
 
-*KTraits*  
+*KTraits*<br/>
 O código usado para copiar ou mover elementos-chave. Ver [classe CElementTraits](../../atl/reference/celementtraits-class.md) para obter mais detalhes.
 
-*VTraits*  
+*VTraits*<br/>
 O código usado para copiar ou mover elementos de valor.
 
 ## <a name="members"></a>Membros
@@ -195,19 +196,19 @@ CAtlMap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nBins*  
+*nBins*<br/>
 O número de compartimentos fornece ponteiros para os elementos armazenados. Consulte comentários mais adiante neste tópico para obter uma explicação de compartimentos.
 
-*fOptimalLoad*  
+*fOptimalLoad*<br/>
 A taxa de carga ideal.
 
-*fLoThreshold*  
+*fLoThreshold*<br/>
 O limite inferior para a taxa de carga.
 
-*fHiThreshold*  
+*fHiThreshold*<br/>
 O limite superior para a taxa de carga.
 
-*nBlockSize*  
+*nBlockSize*<br/>
 O tamanho do bloco.
 
 ### <a name="remarks"></a>Comentários
@@ -297,13 +298,13 @@ CPair* GetAt(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*  
+*POS*<br/>
 O contador de posição, retornado por uma chamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
-*key*  
+*key*<br/>
 Parâmetro de modelo especificando o tipo de chave do mapa.
 
-*value*  
+*value*<br/>
 Parâmetro de modelo que especifica o tipo de valor do mapa.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -352,7 +353,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*  
+*POS*<br/>
 O contador de posição, retornado por uma chamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -374,7 +375,7 @@ const CPair* GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*  
+*POS*<br/>
 O contador de posição, retornado por uma chamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -394,13 +395,13 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*  
+*POS*<br/>
 O contador de posição, retornado por uma chamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
-*key*  
+*key*<br/>
 Parâmetro de modelo especificando o tipo de chave do mapa.
 
-*value*  
+*value*<br/>
 Parâmetro de modelo que especifica o tipo de valor do mapa.
 
 ### <a name="remarks"></a>Comentários
@@ -417,7 +418,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*  
+*POS*<br/>
 O contador de posição, retornado por uma chamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -439,7 +440,7 @@ const V& GetNextValue(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*  
+*POS*<br/>
 O contador de posição, retornado por uma chamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -488,7 +489,7 @@ const V& GetValueAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*  
+*POS*<br/>
 O contador de posição, retornado por uma chamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -507,10 +508,10 @@ bool InitHashTable(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nBins*  
+*nBins*<br/>
 O número de compartimentos usado pela tabela de hash. Ver [CAtlMap::CAtlMap](#catlmap) para obter uma explicação.
 
-*bAllocNow*  
+*bAllocNow*<br/>
 Uma indicação de sinalizador, quando a memória deve ser alocada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -567,10 +568,10 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*key*  
+*key*<br/>
 Especifica a chave que identifica o elemento a ser pesquisado.
 
-*value*  
+*value*<br/>
 Variável que recebe o valor pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -591,7 +592,7 @@ V& operator[](kinargtype key) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*key*  
+*key*<br/>
 A chave do elemento para adicionar ou substituir.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -612,7 +613,7 @@ void Rehash(UINT nBins = 0);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nBins*  
+*nBins*<br/>
 O novo número de compartimentos para usar na tabela de hash. Ver [CAtlMap::CAtlMap](#catlmap) para obter uma explicação.
 
 ### <a name="remarks"></a>Comentários
@@ -641,7 +642,7 @@ void RemoveAtPos(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*  
+*POS*<br/>
 O contador de posição, retornado por uma chamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="remarks"></a>Comentários
@@ -658,7 +659,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*key*  
+*key*<br/>
 A chave correspondente para o par de elementos que você deseja remover.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -681,10 +682,10 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>Parâmetros
 
-*key*  
+*key*<br/>
 O valor da chave para adicionar ao `CAtlMap` objeto.
 
-*value*  
+*value*<br/>
 O valor a ser adicionado para o `CAtlMap` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -709,16 +710,16 @@ void SetOptimalLoad(
 
 ### <a name="parameters"></a>Parâmetros
 
-*fOptimalLoad*  
+*fOptimalLoad*<br/>
 A taxa de carga ideal.
 
-*fLoThreshold*  
+*fLoThreshold*<br/>
 O limite inferior para a taxa de carga.
 
-*fHiThreshold*  
+*fHiThreshold*<br/>
 O limite superior para a taxa de carga.
 
-*bRehashNow*  
+*bRehashNow*<br/>
 Sinalizador que indica se a tabela de hash deve ser recalculada.
 
 ### <a name="remarks"></a>Comentários
@@ -737,10 +738,10 @@ void SetValueAt(
 
 ### <a name="parameters"></a>Parâmetros
 
-*POS*  
+*POS*<br/>
 O contador de posição, retornado por uma chamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) ou [CAtlMap::GetStartPosition](#getstartposition).
 
-*value*  
+*value*<br/>
 O valor a ser adicionado para o `CAtlMap` objeto.
 
 ### <a name="remarks"></a>Comentários
@@ -773,7 +774,7 @@ const K m_key;
 
 ### <a name="parameters"></a>Parâmetros
 
-*K*  
+*K*<br/>
 O tipo de elemento-chave.
 
 ##  <a name="m_value"></a>  CAtlMap::CPair::m_value
@@ -786,11 +787,11 @@ V  m_value;
 
 ### <a name="parameters"></a>Parâmetros
 
-*V*  
+*V*<br/>
 O tipo de elemento de valor.
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo de letreiro](../../visual-cpp-samples.md)   
-[Exemplo de UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)   
+[Exemplo de letreiro](../../visual-cpp-samples.md)<br/>
+[Exemplo de UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

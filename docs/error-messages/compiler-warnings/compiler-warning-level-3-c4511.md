@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 602b92d52860429a70b2339f35093ab85934fc89
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8432b4aff0c4ac3526f99ba4faaf669e7c69ee72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293852"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102574"
 ---
-# <a name="compiler-warning-level-3-c4511"></a>Compilador C4511 de aviso (nível 3)
-'class': não foi possível gerar o construtor de cópia  
-  
- O compilador não foi possível gerar um construtor de cópia padrão para uma classe. uma classe base pode ter um construtor de cópia particular.
+# <a name="compiler-warning-level-3-c4511"></a>Compilador aviso (nível 3) C4511
+
+'class': não foi possível gerar o construtor de cópia
+
+O compilador não foi possível gerar um construtor de cópia padrão para uma classe; uma classe base pode ter um construtor particular de cópia.

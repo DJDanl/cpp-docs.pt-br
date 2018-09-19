@@ -46,12 +46,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b783ee6e4a5ea511a26068ffb89fcc09236f20b1
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 1380a6e56ce444e80feccf3e8306a0a589c98d01
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39408122"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085258"
 ---
 # <a name="abs-labs-llabs-abs64"></a>abs, labs, llabs, _abs64
 
@@ -76,7 +76,7 @@ float abs( float n );   // C++ only
 
 ### <a name="parameters"></a>Parâmetros
 
-*n*  
+*n*<br/>
 Valor numérico.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -157,8 +157,8 @@ _abs64(_I64_MIN) returns 0x8000000000000000
 
 ## <a name="see-also"></a>Consulte também
 
-[Conversão de Dados](../../c-runtime-library/data-conversion.md)  
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)  
-[_cabs](cabs.md)  
-[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)  
-[imaxabs](imaxabs.md)  
+[Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
+[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[_cabs](cabs.md)<br/>
+[fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
+[imaxabs](imaxabs.md)

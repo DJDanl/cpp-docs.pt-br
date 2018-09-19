@@ -18,15 +18,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c616a391db07a9c6116c96c1b0242714a0ad958b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 66416bf19a154a5ea1f4a52728f97bbfbd3477f8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163953"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103213"
 ---
 # <a name="swap-function-autohandle"></a>Função swap (auto_handle)
-Alterna a objetos entre um `auto_handle` e outro.  
+Troca os objetos entre um `auto_handle` e outro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,11 +39,11 @@ void swap(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `_left`  
- Um `auto_handle`.  
+*à esquerda*<br/>
+Um `auto_handle`.  
   
- `_right`  
- Outro `auto_handle`.  
+*à direita*<br/>
+Outro `auto_handle`.  
   
 ## <a name="example"></a>Exemplo  
   

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ebd514b0135de4ac438b406201dc069257d1bce
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e34b6d3764c0096e30c0e1f27c36194fd5d44110
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752461"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088820"
 ---
 # <a name="atl-encoding-reference"></a>Referência de codificação ATL
 
@@ -54,6 +54,6 @@ Codificação em uma variedade de padrões de Internet comuns como uuencode, hex
 
 ## <a name="see-also"></a>Consulte também
 
-[Conceitos](../atl/active-template-library-atl-concepts.md)   
+[Conceitos](../atl/active-template-library-atl-concepts.md)<br/>
 [Componentes de área de trabalho COM da ATL](../atl/atl-com-desktop-components.md)
 

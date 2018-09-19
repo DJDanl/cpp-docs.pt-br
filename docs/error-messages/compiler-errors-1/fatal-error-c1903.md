@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f4f89abd2d2a59efa7c028321fd9a6ff82cc206
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4d9374f5e5c8b65956a7864406c86927b0daf604
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226141"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102210"
 ---
 # <a name="fatal-error-c1903"></a>Erro fatal C1903
-não é possível recuperar de erros anteriores; interrompendo compilação  
-  
- O compilador encontrado erros demais para continuar. Corrija os erros e recompilar.
+
+não é possível recuperar de erro (s) anterior; interrompendo compilação
+
+O compilador não encontrou erros demais para continuar. Corrija os erros e recompile.

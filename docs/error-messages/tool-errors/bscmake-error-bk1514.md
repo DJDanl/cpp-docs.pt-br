@@ -1,5 +1,5 @@
 ---
-title: BSCMAKE erro BK1514 | Microsoft Docs
+title: Erro de BSCMAKE BK1514 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23f1c72760f0597709de430588052445366e434d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20f66c5c48547e92aef00568d5488a6293303be1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302270"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094709"
 ---
 # <a name="bscmake-error-bk1514"></a>Erro BK1514 (BSCMAKE)
-tudo. Arquivos SBR truncados, nada encontrado em nome de arquivo  
-  
- Nenhum dos arquivos. SBR especificados para uma atualização eram parte do arquivo de informações (. bsc) procurar original. Para localizar os nomes dos arquivos. SBR que causou este erro, leia o [BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md) avisos que o precedem.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
-  
-1.  Nome de arquivo incorreto especificado para. SBR ou. bsc.  
-  
-2.  Arquivo. bsc corrompido necessário BSCMAKE para recriá-lo.
+
+todos os. Arquivos SBR truncados, nada encontrado em nome de arquivo
+
+Nenhum dos arquivos. SBR especificados para uma atualização faziam parte do arquivo de informações (. bsc) procura original. Para obter os nomes dos arquivos. SBR que causou este erro, leia as [BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md) avisos que o precedem.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
+
+1. Nome de arquivo incorreto especificado para. SBR ou. bsc.
+
+1. Arquivo. bsc corrompido necessário BSCMAKE para recriá-lo.

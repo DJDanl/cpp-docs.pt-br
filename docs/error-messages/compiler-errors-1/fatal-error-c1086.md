@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22dcb904da7ab2f3c20948b12181af91cb46a1be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 170098d146eb4b2c83fedfd4787879b39ede3184
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225071"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102626"
 ---
 # <a name="fatal-error-c1086"></a>Erro fatal C1086
-Não é possível buscar o arquivo de tipo de arquivo: 'file': mensagem  
-  
- O compilador não pode concluir uma operação de e/s.
+
+Não é possível buscar o arquivo do tipo de arquivo: 'file': mensagem
+
+O compilador não pode concluir uma operação de e/s.

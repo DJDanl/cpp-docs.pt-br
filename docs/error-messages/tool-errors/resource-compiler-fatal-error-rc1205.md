@@ -1,5 +1,5 @@
 ---
-title: Recurso compilador Erro Fatal RC1205 | Microsoft Docs
+title: RC1205 de Erro Fatal do compilador de recurso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e162f315b950718d5a7e2f602159fb0e8661669
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62c6538e77d3b21c088a5a48f9870a743ea9c5d3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322228"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093942"
 ---
 # <a name="resource-compiler-fatal-error-rc1205"></a>Erro fatal RC1205 (compilador de recurso)
-página de código inválido  
-  
- Especificar a página de código (/c) opção foi seguida por uma página de código inválido. Consulte [páginas de código](../../c-runtime-library/code-pages.md) no *referência da biblioteca de tempo de execução* para obter mais informações.
+
+página de código inválido
+
+Especificar a página de código (/c) opção foi seguida por uma página de código inválido. Ver [páginas de código](../../c-runtime-library/code-pages.md) na *referência de biblioteca de tempo de execução* para obter mais informações.

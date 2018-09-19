@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d10e18eef4691c0a018feb583ffb93499e86ccb6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b78bf8e9eb9ebe86dae75856ea3c0b6f5d34a26
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320200"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075898"
 ---
 # <a name="resource-compiler-error-rc2148"></a>Erro RC2148 (compilador de recurso)
-ID de SUBIDIOMA muito grande  
-  
- O valor de ID de SUBIDIOMA estava fora do intervalo.  
-  
- O **idioma** instrução deve usar a seguinte sintaxe:  
-  
- **IDIOMA** *primary_language_ID*,*secondary_language_ID*  
-  
- IDs de SUBIDIOMA válidas são definidas como **SUBLANG_** constantes no arquivo Winnt. h.
+
+ID de SUBIDIOMA muito grande
+
+O valor da ID de SUBIDIOMA estava fora do intervalo.
+
+O **LINGUAGEM** instrução deve usar a sintaxe a seguir:
+
+**LINGUAGEM** *primary_language_ID*,*secondary_language_ID*
+
+IDs de SUBIDIOMA válidas são definidas como **SUBLANG_** constantes no arquivo de Winnt. h.

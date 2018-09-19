@@ -18,23 +18,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4798b4bac8cc6f94e5199502a926eb084cc7534a
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 483523db7452c9c1adda38114e69f246e18856ea
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340235"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093019"
 ---
 # <a name="resource-pooling-in-your-ole-db-application"></a>Pooling de recursos no aplicativo de banco de dados OLE
+
 Para aproveitar o pool em seu aplicativo, certifique-se de serviços do OLE DB são invocados por meio da sua fonte de dados por meio de obtenção `IDataInitialize` ou `IDBPromptInitialize`. Se você usar diretamente `CoCreateInstance` para invocar o provedor com base no CLSID do provedor, sem serviços do OLE DB são invocados.  
   
- Os serviços de OLE DB mantêm pools de fontes de dados conectadas, desde que uma referência a `IDataInitialize` ou `IDBPromptInitialize` é retido ou, desde que haja uma conexão em uso. Pools também são mantidos automaticamente dentro de um ambiente de serviços do COM+ 1.0 ou o Internet Information Services (IIS). Se seu aplicativo se beneficia de pooling fora de um ambiente de serviços do COM+ 1.0 ou o IIS, você deve manter uma referência ao `IDataInitialize` ou `IDBPromptInitialize` ou mantenha pelo menos uma conexão. Para certificar-se de que o pool destruído quando a última conexão é liberado pelo aplicativo, manter a referência ou manter a conexão para o tempo de vida do seu aplicativo.  
+Os serviços de OLE DB mantêm pools de fontes de dados conectadas, desde que uma referência a `IDataInitialize` ou `IDBPromptInitialize` é retido ou, desde que haja uma conexão em uso. Pools também são mantidos automaticamente dentro de um ambiente de serviços do COM+ 1.0 ou o Internet Information Services (IIS). Se seu aplicativo se beneficia de pooling fora de um ambiente de serviços do COM+ 1.0 ou o IIS, você deve manter uma referência ao `IDataInitialize` ou `IDBPromptInitialize` ou mantenha pelo menos uma conexão. Para certificar-se de que o pool destruído quando a última conexão é liberado pelo aplicativo, manter a referência ou manter a conexão para o tempo de vida do seu aplicativo.  
   
- Serviços do OLE DB identificam o pool do qual a conexão é desenhado no momento em que `Initialize` é chamado. Depois que a conexão é desenhada de um pool, ele não pode ser movido para um pool diferente. Portanto, evite fazer as coisas em seu aplicativo que alterar as informações de inicialização, por exemplo, chamar `UnInitialize` ou chamar `QueryInterface` para uma interface específica do provedor antes de chamar `Initialize`. Além disso, as conexões estabelecidas com um valor prompt diferente DBPROMPT_NOPROMPT não são agrupadas. No entanto, a cadeia de caracteres de inicialização recuperada de uma conexão estabelecida por meio de solicitando que pode ser usada para estabelecer conexões em pool adicionais à mesma fonte de dados.  
+Serviços do OLE DB identificam o pool do qual a conexão é desenhado no momento em que `Initialize` é chamado. Depois que a conexão é desenhada de um pool, ele não pode ser movido para um pool diferente. Portanto, evite fazer as coisas em seu aplicativo que alterar as informações de inicialização, por exemplo, chamar `UnInitialize` ou chamar `QueryInterface` para uma interface específica do provedor antes de chamar `Initialize`. Além disso, as conexões estabelecidas com um valor prompt diferente DBPROMPT_NOPROMPT não são agrupadas. No entanto, a cadeia de caracteres de inicialização recuperada de uma conexão estabelecida por meio de solicitando que pode ser usada para estabelecer conexões em pool adicionais à mesma fonte de dados.  
   
- Alguns provedores devem fazer uma conexão separada para cada sessão. Essas conexões adicionais devem ser inscrito separadamente na transação distribuída, se houver. Serviços do OLE DB armazena em cache e reutiliza uma única sessão por fonte de dados, mas se o aplicativo solicitar mais de uma sessão em vez de uma única fonte de dados, o provedor pode acabar fazendo conexões adicionais e fazer inscrições em transações adicionais que são não em pool. Ele é, na verdade, mais eficiente para criar uma fonte de dados separado para cada sessão em um ambiente em pool que criar várias sessões de uma única fonte de dados.  
+Alguns provedores devem fazer uma conexão separada para cada sessão. Essas conexões adicionais devem ser inscrito separadamente na transação distribuída, se houver. Serviços do OLE DB armazena em cache e reutiliza uma única sessão por fonte de dados, mas se o aplicativo solicitar mais de uma sessão em vez de uma única fonte de dados, o provedor pode acabar fazendo conexões adicionais e fazer inscrições em transações adicionais que são não em pool. Ele é, na verdade, mais eficiente para criar uma fonte de dados separado para cada sessão em um ambiente em pool que criar várias sessões de uma única fonte de dados.  
   
- Por fim, porque ADO automaticamente faz uso de OLE DB services, você pode usar o ADO para estabelecer conexões e o pool e a inscrição ocorrem automaticamente.  
+Por fim, porque ADO automaticamente faz uso de OLE DB services, você pode usar o ADO para estabelecer conexões e o pool e a inscrição ocorrem automaticamente.  
   
 ## <a name="see-also"></a>Consulte também  
- [Pooling de recursos e serviços do OLE DB](../../data/oledb/ole-db-resource-pooling-and-services.md)
+
+[Pooling de recursos e serviços do OLE DB](../../data/oledb/ole-db-resource-pooling-and-services.md)

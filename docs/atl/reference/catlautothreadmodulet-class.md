@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebf3ba07ac5608a47f4e2bbbe853cb37c033e5f7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 46198390ce25cb655b94c0ca4769321fc3e9362d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757609"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099688"
 ---
 # <a name="catlautothreadmodulet-class"></a>Classe CAtlAutoThreadModuleT
 
@@ -35,21 +35,21 @@ Essa classe fornece métodos para implementar um servidor COM em pool de thread,
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template <class T, 
+template <class T,
          class ThreadAllocator = CComSimpleThreadAllocator,
-         DWORD dwWait = INFINITE>  
+         DWORD dwWait = INFINITE>
 class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 A classe que implementará o servidor COM.
 
-*ThreadAllocator*  
+*ThreadAllocator*<br/>
 A classe de gerenciamento de seleção de thread. O valor padrão é [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md).
 
-*dwWait*  
+*dwWait*<br/>
 Especifica o intervalo de tempo limite em milissegundos. O padrão é infinito, o que significa que o intervalo de tempo limite do método nunca tiver decorrido.
 
 ## <a name="members"></a>Membros
@@ -95,7 +95,7 @@ Substitua este método se você quiser usar um método diferente para calcular o
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe de IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
-[Visão geral da classe](../../atl/atl-class-overview.md)   
-[Classe de IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)   
+[Classe de IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)<br/>
+[Visão geral da classe](../../atl/atl-class-overview.md)<br/>
+[Classe de IAtlAutoThreadModule](../../atl/reference/iatlautothreadmodule-class.md)<br/>
 [Classes de módulo](../../atl/atl-module-classes.md)

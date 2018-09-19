@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 828c3881771aa37181822859cc54894e8771c2cb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: eddeb6467dfb3bf578c0287161de989e8ba12483
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767588"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097465"
 ---
 # <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Usando parâmetros substituíveis (registrador de&#39;s pré-processador)
 
@@ -36,8 +36,8 @@ O [Assistente de controle ATL](../atl/reference/atl-control-wizard.md) automatic
 
 Outro uso do pré-processador é concatenar dados de tempo de execução com os dados de script. Por exemplo, suponha que uma entrada é necessário que contém um caminho completo para um módulo com a cadeia de caracteres "`, 1`" acrescentado ao final. Primeiro, defina a expansão do seguinte:
 
-```  
-'MySampleKey' = s '%MODULE%, 1'  
+```
+'MySampleKey' = s '%MODULE%, 1'
 ```
 
 Em seguida, antes de chamar um dos scripts processamento métodos listados na [invocar Scripts](../atl/invoking-scripts.md), adicione uma substituição para o mapa:
@@ -53,8 +53,8 @@ Durante a análise do script, o registrador expande `'%MODULE%, 1'` para `c:\myc
 >  Para substituir valores de substituição em tempo de execução, remova a chamada no script para o [DECLARE_REGISTRY_RESOURCE](../atl/reference/registry-macros.md#declare_registry_resource) ou [DECLARE_REGISTRY_RESOURCEID](../atl/reference/registry-macros.md#declare_registry_resourceid) macro. Em vez disso, substitua-o com seus próprios `UpdateRegistry` método que chama [CAtlModule::UpdateRegistryFromResourceD](../atl/reference/catlmodule-class.md#updateregistryfromresourced) ou [CAtlModule::UpdateRegistryFromResourceS](../atl/reference/catlmodule-class.md#updateregistryfromresources)e passar a matriz de _ATL_REGMAP_ Estruturas de entrada. Sua matriz de _ATL_REGMAP_ENTRY deve ter pelo menos uma entrada é definida como {NULL, NULL}, e essa entrada deve ser sempre a última entrada. Caso contrário, um erro de violação de acesso será gerado quando `UpdateRegistryFromResource` é chamado.
 
 > [!NOTE]
->  Ao criar um projeto que produz um executável, ATL adiciona automaticamente aspas ao redor do nome de caminho criado no tempo de execução com o **módulo %** parâmetro do script de registrador. Se você não quiser que o nome do caminho para incluir as aspas, use a nova **MODULE_RAW %** parâmetro em vez disso.  
->   
+>  Ao criar um projeto que produz um executável, ATL adiciona automaticamente aspas ao redor do nome de caminho criado no tempo de execução com o **módulo %** parâmetro do script de registrador. Se você não quiser que o nome do caminho para incluir as aspas, use a nova **MODULE_RAW %** parâmetro em vez disso.
+>
 >  Ao compilar um projeto que gera uma DLL, ATL não adicionará aspas para o nome do caminho se **% % do módulo** ou **MODULE_RAW %** é usado.
 
 ## <a name="see-also"></a>Consulte também

@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79bb609b051def4f84924c1d9ebbcd9574d2ce77
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5bf30112e152c473c4f88a98f5f1073b789216e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289666"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086740"
 ---
-# <a name="compiler-warning-level-3-c4357"></a>Compilador C4357 de aviso (nível 3)
-argumento de matriz de parâmetro na lista de argumentos formais para delegate 'del' ignorada ao gerar 'function'  
-  
- O `ParamArray` atributo foi ignorado, e `function` não pode ser chamado com argumentos de variável.  
-  
- O exemplo a seguir gera C4357:  
-  
-```  
-// C4357.cpp  
-// compile with: /clr /W3 /c  
-using namespace System;  
-public delegate void f(int i, ... array<Object^>^ varargs);   // C4357  
-  
-public delegate void g(int i, array<Object^>^ varargs);   // OK  
+# <a name="compiler-warning-level-3-c4357"></a>Compilador aviso (nível 3) C4357
+
+argumento param array na lista de argumentos formais para delegar 'del' ignorada ao gerar 'function'
+
+O `ParamArray` atributo foi ignorado, e `function` não pode ser chamado com argumentos variáveis.
+
+O exemplo a seguir gera C4357:
+
+```
+// C4357.cpp
+// compile with: /clr /W3 /c
+using namespace System;
+public delegate void f(int i, ... array<Object^>^ varargs);   // C4357
+
+public delegate void g(int i, array<Object^>^ varargs);   // OK
 ```

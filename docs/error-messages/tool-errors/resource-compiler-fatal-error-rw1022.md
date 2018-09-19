@@ -1,5 +1,5 @@
 ---
-title: Recurso compilador Erro Fatal RW1022 | Microsoft Docs
+title: RW1022 de Erro Fatal do compilador de recurso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57bb435d17cf1d539d558b5dead9c299f83494a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: caaefc045a31ca64aa9843927d550ef66285cb2e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319176"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099832"
 ---
 # <a name="resource-compiler-fatal-error-rw1022"></a>Erro fatal RW1022 (compilador de recurso)
-**Erro ao gravar arquivo de e/s**  
-  
- O compilador de recurso não foi possível gravar em um arquivo.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
-  
-1.  Espaço em disco insuficiente. Espaço livre deve ser igual a pelo menos duas vezes o tamanho do arquivo executável que você está criando.  
-  
-2.  O volume é somente leitura.  
-  
-3.  Setor inválido.  
-  
-4.  Violação de compartilhamento.
+
+**Erro ao gravar arquivo de e/s**
+
+O compilador de recurso não foi possível gravar em um arquivo.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
+
+1. Espaço em disco insuficiente. Espaço livre deve ser igual a pelo menos duas vezes o tamanho do arquivo executável que você está criando.
+
+1. Volume é somente leitura.
+
+1. Setor defeituoso.
+
+1. Violação de compartilhamento.

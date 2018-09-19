@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3faf350fa14156a82218fed506f50e45084501dc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77e5db3859e0ada60999f329fddc82926b607579
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295695"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081033"
 ---
 # <a name="expression-evaluator-error-cxx0002"></a>Erro CXX0002 (avaliador de expressão)
-Erro ao acessar a memória do usuário  
-  
- A expressão tenta fazer referência a memória não alocada para o programa que está sendo depurado.  
-  
- Esse erro é idêntico ao CAN0002.
+
+Erro ao acessar a memória do usuário
+
+A expressão tenta fazer referência a memória não alocada para o programa que está sendo depurado.
+
+Esse erro é idêntico ao CAN0002.

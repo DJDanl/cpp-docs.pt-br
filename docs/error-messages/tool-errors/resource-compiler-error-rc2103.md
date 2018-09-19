@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c70c89c927dca59f9bc242245d19f91e9e4a3894
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4bfdfefa0ee66093708ea7f839d7fbe8630ffe81
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332085"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093461"
 ---
 # <a name="resource-compiler-error-rc2103"></a>Erro RC2103 (compilador de recurso)
-fim de arquivo inesperado na cadeia de caracteres literal  
-  
- Foi encontrado um fim de arquivo antes do final de uma cadeia de caracteres. A cadeia provavelmente não possui aspas duplas de fechamento (**"**).
+
+fim inesperado do arquivo na cadeia de caracteres literal
+
+Um final de arquivo foi encontrado antes do final de uma cadeia de caracteres. A cadeia de caracteres provavelmente não tem uma marca de aspas duplas de fechamento (**"**).

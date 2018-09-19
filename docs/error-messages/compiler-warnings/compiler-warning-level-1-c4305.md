@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4305 | Microsoft Docs
+title: Compilador aviso (nível 1) C4305 | Microsoft Docs
 ms.custom: ''
 ms.date: 1/17/2018
 ms.technology:
@@ -15,16 +15,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7694c511f57b6907227d62f969b61218f836cb14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 88ae0fb38b7e6af14525906e90486a68ce22ee56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277817"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086818"
 ---
-# <a name="compiler-warning-level-1-c4305"></a>Compilador C4305 de aviso (nível 1)
+# <a name="compiler-warning-level-1-c4305"></a>Compilador aviso (nível 1) C4305
 
-> '*contexto*': truncamento de '*type1*'para'*type2*'  
+> '*contexto*': truncamento de '*type1*'para'*type2*'
 
 ## <a name="remarks"></a>Comentários
 
@@ -51,4 +51,4 @@ int main()
 }
 ```
 
-Para corrigir esse problema, inicializar usando um valor do tipo correto, ou use uma conversão explícita para o tipo correto. Por exemplo, usar um **float** literal como 2.71828f em vez de um **duplo** (o tipo padrão para literais de ponto flutuantes) para inicializar um **float** variável, ou para passar para um construtor que usa um **float** argumento.
+Para corrigir esse problema, inicializar usando um valor do tipo correto ou use uma conversão explícita para o tipo correto. Por exemplo, usar um **float** literal, como 2.71828f em vez de uma **duplo** (o tipo padrão para literais de ponto flutuantes) para inicializar um **float** variável, ou para passar para um construtor que usa um **float** argumento.

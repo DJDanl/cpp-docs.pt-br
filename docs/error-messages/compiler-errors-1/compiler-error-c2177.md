@@ -1,5 +1,5 @@
 ---
-title: C2177 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2177 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21c8ae5621fd52a6f126f287f72493839ee0f281
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 42d002b2264c9ce6b5e8d09dcda322c33b18fd05
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167041"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096128"
 ---
-# <a name="compiler-error-c2177"></a>C2177 de erro do compilador
-constante muito grande  
-  
- Um valor constante é muito grande para o tipo de variável que é atribuída.  
-  
- O exemplo a seguir gera C2177:  
-  
-```  
-// C2177.cpp  
-int main() {  
-   int a=18446744073709551616;   // C2177  
-   int b=18446744073709551615;   // OK  
-}  
+# <a name="compiler-error-c2177"></a>Erro do compilador C2177
+
+constante muito grande
+
+Um valor constante é muito grande para o tipo de variável que é atribuído.
+
+O exemplo a seguir gera C2177:
+
+```
+// C2177.cpp
+int main() {
+   int a=18446744073709551616;   // C2177
+   int b=18446744073709551615;   // OK
+}
 ```

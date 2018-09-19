@@ -19,23 +19,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e540b68b820234ee6d30295b40c7e0f4cb7c806d
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: 21e6511a66129cb172ff10fedfa563bc4d663d19
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39338584"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078511"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>Transação: como as transações afetam atualizações (ODBC)
+
 Atualizações para o [fonte de dados](../../data/odbc/data-source-odbc.md) são gerenciados durante as transações com o uso de um buffer de edição (o mesmo método usado fora de transações). Os membros de dados do campo de um conjunto de registros coletivamente servem como um buffer de edição que contém o registro atual, o que o conjunto de registros faz backup temporariamente durante um `AddNew` ou `Edit`. Durante um `Delete` operação, o registro atual não é feita em uma transação. Para obter mais informações sobre como atualizações de armazenam o registro atual e o buffer de edição, consulte [conjunto de registros: como conjuntos de registros atualizam registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  
   
 > [!NOTE]
 >  Se você tiver implementado a busca de linhas em massa, você não pode chamar `AddNew`, `Edit`, ou `Delete`. Em vez disso, você deve escrever suas próprias funções para executar atualizações à fonte de dados. Para obter mais informações sobre a busca de linhas em massa, consulte [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Durante as transações, `AddNew`, `Edit`, e `Delete` operações podem ser confirmadas ou revertidas. Os efeitos das `CommitTrans` e `Rollback` pode fazer com que o registro atual a não ser restaurado para o buffer de edição. Para certificar-se de que o registro atual é restaurado corretamente, é importante entender como o `CommitTrans` e `Rollback` funções de membro `CDatabase` funcionam com as funções de atualização de `CRecordset`.  
+Durante as transações, `AddNew`, `Edit`, e `Delete` operações podem ser confirmadas ou revertidas. Os efeitos das `CommitTrans` e `Rollback` pode fazer com que o registro atual a não ser restaurado para o buffer de edição. Para certificar-se de que o registro atual é restaurado corretamente, é importante entender como o `CommitTrans` e `Rollback` funções de membro `CDatabase` funcionam com as funções de atualização de `CRecordset`.  
   
 ##  <a name="_core_how_committrans_affects_updates"></a> Como CommitTrans afeta as atualizações  
- A tabela a seguir explica os efeitos da `CommitTrans` em transações.  
+
+A tabela a seguir explica os efeitos da `CommitTrans` em transações.  
   
 ### <a name="how-committrans-affects-updates"></a>Como CommitTrans afeta as atualizações  
   
@@ -48,7 +50,8 @@ Atualizações para o [fonte de dados](../../data/odbc/data-source-odbc.md) são
 |`Delete` Em seguida `CommitTrans`|Registros excluídos da fonte de dados.|  
   
 ##  <a name="_core_how_rollback_affects_updates"></a> Como afeta a reversão de transações  
- A tabela a seguir explica os efeitos da `Rollback` em transações.  
+
+A tabela a seguir explica os efeitos da `Rollback` em transações.  
   
 ### <a name="how-rollback-affects-transactions"></a>Como afeta a reversão de transações  
   
@@ -61,8 +64,9 @@ Atualizações para o [fonte de dados](../../data/odbc/data-source-odbc.md) são
 |`Delete` Em seguida `Rollback`|Conteúdo do registro atual é excluído.|Chamar `Requery` para restaurar o conteúdo do registro atual da fonte de dados.|Exclusão de dados da fonte de dados é revertida.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Transação (ODBC)](../../data/odbc/transaction-odbc.md)   
- [Transação (ODBC)](../../data/odbc/transaction-odbc.md)   
- [Transação: Realizando uma transação em um conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)   
- [Classe CDatabase](../../mfc/reference/cdatabase-class.md)   
- [Classe CRecordset](../../mfc/reference/crecordset-class.md)
+
+[Transação (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
+[Transação (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
+[Transação: realizando uma transação em um conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)<br/>
+[Classe CDatabase](../../mfc/reference/cdatabase-class.md)<br/>
+[Classe CRecordset](../../mfc/reference/crecordset-class.md)

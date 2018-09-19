@@ -1,5 +1,5 @@
 ---
-title: C4867 de aviso do compilador | Microsoft Docs
+title: Aviso do compilador C4867 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b46bf4866791ec82ac5984132903e22ab16e07ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b444156ae87e43b068521a3ad6687abe71df293f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270879"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074312"
 ---
-# <a name="compiler-warning-c4867"></a>C4867 de aviso do compilador
-'function': chamada de função faltando lista de argumentos; Use 'chamar' para criar um ponteiro para membro  
-  
- Um ponteiro para função de membro foi inicializado incorretamente.  
-  
- Esse aviso pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual C++ 2005: conformidade aprimorada de ponteiro-para-membro.  Código compilado antes do Visual C++ 2005 agora irá gerar C4867.  
-  
- Esse aviso é emitido sempre como um erro. Use o [aviso](../../preprocessor/warning.md) pragma para desabilitar esse aviso. Para obter mais informações sobre C4867 e MFC/ATL, consulte [_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning).  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C4867.  
-  
-```  
-// C4867.cpp  
-// compile with: /c  
-class A {  
-public:  
-   void f(int) {}  
-  
-   typedef void (A::*TAmtd)(int);  
-  
-   struct B {  
-      TAmtd p;  
-   };  
-  
-   void g() {  
-      B b = {f};   // C4867  
-      B b2 = {&A::f};   // OK  
-   }  
-};  
+# <a name="compiler-warning-c4867"></a>Aviso do compilador C4867
+
+'function': chamada de função faltando lista de argumentos; Use 'chamar' para criar um ponteiro para membro
+
+Um ponteiro para função de membro foi inicializado incorretamente.
+
+Esse aviso pode ser gerado como resultado do trabalho de conformidade do compilador que foi feito para o Visual C++ 2005: conformidade aprimorada do ponteiro para membro.  O código compilado antes do Visual C++ 2005 agora irá gerar C4867.
+
+Esse aviso é emitido sempre como um erro. Use o [aviso](../../preprocessor/warning.md) pragma para desabilitar esse aviso. Para obter mais informações sobre C4867 e MFC/ATL, consulte [_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning).
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C4867.
+
+```
+// C4867.cpp
+// compile with: /c
+class A {
+public:
+   void f(int) {}
+
+   typedef void (A::*TAmtd)(int);
+
+   struct B {
+      TAmtd p;
+   };
+
+   void g() {
+      B b = {f};   // C4867
+      B b2 = {&A::f};   // OK
+   }
+};
 ```

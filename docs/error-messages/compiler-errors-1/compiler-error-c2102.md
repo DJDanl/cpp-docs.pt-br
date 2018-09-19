@@ -1,5 +1,5 @@
 ---
-title: C2102 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2102 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1f5b5bf0c1acca3b85a3cf2059919abf45b33cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da6ca4739acecf3d8c27af7e4b6baff5aa1d6602
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164782"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089587"
 ---
-# <a name="compiler-error-c2102"></a>C2102 de erro do compilador
-' &' requer valor l  
-  
- Operador address-of ( `&` ) deve ter um valor de l como operando.
+# <a name="compiler-error-c2102"></a>Erro do compilador C2102
+
+' &' requer l-value
+
+O operador address-of ( `&` ) deve ter um l-value como operando.

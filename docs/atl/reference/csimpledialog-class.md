@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a476daeb680048c7bbb21565014487f6b937c78
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f58efa7b7ba5c0452f2418a2dbbc27c94eedaca6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754885"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087949"
 ---
 # <a name="csimpledialog-class"></a>Classe CSimpleDialog
 
@@ -35,7 +35,7 @@ Essa classe implementa uma caixa de diálogo modal básico.
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template <WORD t_wDlgTemplateID, BOOL t_bCenter = TRUE>  
+template <WORD t_wDlgTemplateID, BOOL t_bCenter = TRUE>
 class CSimpleDialog : public CDialogImplBase
 ```
 
@@ -45,7 +45,7 @@ class CSimpleDialog : public CDialogImplBase
 
 A ID de recurso do recurso de modelo de caixa de diálogo.
 
-*t_bCenter*  
+*t_bCenter*<br/>
 TRUE se o objeto de caixa de diálogo será centralizado na janela do proprietário; Caso contrário, FALSE.
 
 ## <a name="members"></a>Membros
@@ -84,7 +84,7 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWndParent*  
+*hWndParent*<br/>
 Um identificador para o pai da caixa de diálogo. Se nenhum valor for fornecido, o pai é definido para a janela ativa atual.
 
 ### <a name="return-value"></a>Valor de retorno

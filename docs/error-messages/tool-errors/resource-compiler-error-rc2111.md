@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5c47c83c75a9bdb62bf0cb6594399e5a551bb76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8e0e0f153b5eed21f906dd228072a4239dec63e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317123"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076444"
 ---
 # <a name="resource-compiler-error-rc2111"></a>Erro RC2111 (compilador de recurso)
-tipo de controle inválido  
-  
- Cada instrução de controle em um **diálogo** instrução deve ser um dos seguintes: 3STATE, AUTO3, AUTOCHECK, AUTORADIO, BEDITAR, caixa de seleção, caixa de COMBINAÇÃO, controle, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, HEDIT, ícone, IEDIT, LISTBOX, LTEXT, PUSHBOX, BOTÃO DE AÇÃO, RADIOBUTTON, RTEXT, BARRA DE ROLAGEM, USERBUTTON.  
-  
- Verifique se que essas instruções de controle estão escritas corretamente.
+
+Tipo de controle inválido
+
+Cada instrução de controle em uma **caixa de diálogo** instrução deve ser um dos seguintes: 3STATE, AUTO3, AUTOCHECK, AUTORADIO, BEDITAR, caixa de seleção, caixa de COMBINAÇÃO, controle, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, HEDIT, ícone, IEDIT, LISTBOX, LTEXT, PUSHBOX, PUSHBUTTON, RADIOBUTTON, RTEXT, BARRA DE ROLAGEM, USERBUTTON.
+
+Verifique se que essas instruções de controle foram escritas corretamente.

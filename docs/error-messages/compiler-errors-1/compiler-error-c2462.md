@@ -1,5 +1,5 @@
 ---
-title: C2462 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2462 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ce82ed15bdb8844f69abc260446c1af2fd4a0f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65df7f4fe7f3822f2723a1709751e3b9b0f23ade
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198554"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082841"
 ---
-# <a name="compiler-error-c2462"></a>C2462 de erro do compilador
-'Identificador': não é possível definir um tipo em uma 'new-expression'  
-  
- Não é possível definir um tipo no campo de operando a `new` operador. Coloque a definição de tipo em uma instrução separada.  
-  
- O exemplo a seguir gera C2462:  
-  
-```  
-// C2462.cpp  
-int main() {  
-   new struct S { int i; };   // C2462  
-}  
+# <a name="compiler-error-c2462"></a>Erro do compilador C2462
+
+'identifier': não é possível definir um tipo em um 'new-expression'
+
+Você não pode definir um tipo no campo de operando a `new` operador. Colocar a definição de tipo em uma instrução separada.
+
+O exemplo a seguir gera C2462:
+
+```
+// C2462.cpp
+int main() {
+   new struct S { int i; };   // C2462
+}
 ```

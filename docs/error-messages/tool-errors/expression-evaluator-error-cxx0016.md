@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cace3caf930c2b51bb1306b02bb7126373ddfe74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e03b0567b77b1ef3f64e5cf98cbe11dab502e1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297483"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075405"
 ---
 # <a name="expression-evaluator-error-cxx0016"></a>Erro CXX0016 (avaliador de expressão)
-constante muito grande  
-  
- O avaliador de expressão C não pode aceitar uma constante de número inteiro sem sinal maior que 4.294.967.295 (0FFFFFFFF hexadecimal) ou uma constante de ponto flutuante cuja magnitude seja maior do que aproximadamente 1.8E + 308.  
-  
- Esse erro é idêntico ao CAN0016.
+
+constante muito grande
+
+O avaliador de expressão C não pode aceitar uma constante de inteiro sem sinal maior que 4.294.967.295 (0FFFFFFFF hexadecimal) ou uma constante de ponto flutuante cuja magnitude seja maior do que aproximadamente 1.8E + 308.
+
+Esse erro é idêntico ao CAN0016.

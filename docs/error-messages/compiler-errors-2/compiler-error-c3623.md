@@ -1,5 +1,5 @@
 ---
-title: C3623 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3623 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,32 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 231826dbcb38bb6bdae490c2f86954e1a56c2b77
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90198a3ea7cfb96b75717550b551c55915187211
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254891"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085297"
 ---
-# <a name="compiler-error-c3623"></a>C3623 de erro do compilador
-'variável': não há suporte para campos de bits no gerenciados ou tipos de WinRT  
-  
- O uso de campos de bits não é permitido em uma classe de WinRT ou variáveis em um gerenciado.  
-  
- O exemplo a seguir gera C3623:  
-  
-```  
-// C3623.cpp  
-// compile with: /clr  
-using namespace System;  
-ref class CMyClass {  
-public:  
-   int i : 1;   // C3623  
-};  
-  
-int main() {  
-   CMyClass^ pMyClass = gcnew CMyClass();  
-   pMyClass->i = 3;  
-   Console::Out->WriteLine(pMyClass->i);  
-}  
-```  
+# <a name="compiler-error-c3623"></a>Erro do compilador C3623
+
+'variable': não há suporte para os campos de bits em gerenciado ou tipos WinRT
+
+O uso de campos de bit não é permitido em variáveis em um gerenciado ou classe do WinRT.
+
+O exemplo a seguir gera C3623:
+
+```
+// C3623.cpp
+// compile with: /clr
+using namespace System;
+ref class CMyClass {
+public:
+   int i : 1;   // C3623
+};
+
+int main() {
+   CMyClass^ pMyClass = gcnew CMyClass();
+   pMyClass->i = 3;
+   Console::Out->WriteLine(pMyClass->i);
+}
+```

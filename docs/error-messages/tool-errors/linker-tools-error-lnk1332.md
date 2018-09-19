@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de vinculador LNK1332 erro | Microsoft Docs
+title: Erro das LNK1332 das ferramentas de vinculador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8558ae80fa3c21d01f276e010409dd9d47a67af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b256c61b9e9de6bf19e754054de1f55fcdec5f0b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299780"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094514"
 ---
 # <a name="linker-tools-error-lnk1332"></a>Erro das Ferramentas de Vinculador LNK1332
-detectado\<contagem > tipos de Windows Runtime importados em um módulo e definido em outro módulo  
-  
- Quando ela produziu o destino atual, o vinculador detectado <`count`> tipos de tempo de execução do Windows, cada um deles é importada em um módulo e também é definida em outro módulo.  
-  
-### <a name="to-correct-this-error"></a>Para corrigir este erro  
-  
--   Corrija cada um dos erros LNK2039 na compilação de acordo com a sugestão na mensagem de erro.  
-  
-## <a name="see-also"></a>Consulte também  
- [LNK2039 de erro de ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-error-lnk2039.md)   
- [Erros e avisos das ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)
+
+detectado\<contagem > tipos de tempo de execução do Windows importados em um módulo e definido em outro módulo
+
+Quando ele produzida destino atual, o vinculador detectada <`count`> tipos de tempo de execução do Windows, cada um deles é importada em um módulo e também é definida em outro módulo.
+
+### <a name="to-correct-this-error"></a>Para corrigir este erro
+
+- Corrigi cada um dos erros das LNK2039 na compilação de acordo com a sugestão na mensagem de erro.
+
+## <a name="see-also"></a>Consulte também
+
+[Erro das ferramentas de vinculador LNK2039](../../error-messages/tool-errors/linker-tools-error-lnk2039.md)<br/>
+[Erros e avisos das ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)

@@ -1,5 +1,5 @@
 ---
-title: C2145 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2145 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faccc0cc6c592df877517c6fd99ff539a1d65828
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7eaaed259448fc55e28211a5eab69a129729433e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167990"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083113"
 ---
-# <a name="compiler-error-c2145"></a>C2145 de erro do compilador
-Erro de sintaxe: token antes do identificador não tem  
-  
- O compilador esperado `token` e encontrados em vez disso, o identificador.  
-  
- Esse erro pode ser causado por um ponto e vírgula ausente após a última declaração em um bloco.
+# <a name="compiler-error-c2145"></a>Erro do compilador C2145
+
+Erro de sintaxe: faltando 'token' antes do identificador
+
+O compilador esperado `token` e encontradas em vez disso, o identificador.
+
+Esse erro pode ser causado por um ponto e vírgula ausente após a última declaração em um bloco.

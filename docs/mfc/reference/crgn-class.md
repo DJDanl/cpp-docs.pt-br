@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4ac334221f22dcd80434c1be2f59998709aae5e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dcf5cbf6522d90b6338b817eebac434c81bf7c9a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204874"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080682"
 ---
 # <a name="crgn-class"></a>Classe CRgn
 Encapsula uma região de interface (GDI) do dispositivo de gráficos Windows.  
@@ -326,13 +326,12 @@ BOOL CreatePolygonRgn(
  *lpPoints*  
  Aponta para uma matriz de `POINT` estruturas ou uma matriz de `CPoint` objetos. Cada estrutura Especifica a coordenada x e a coordenada y de um vértice do polígono. O `POINT` estrutura tem a seguinte forma:  
   
- `typedef struct tagPOINT {`  
-  
- `int x;`  
-  
- `int y;`  
-  
- `} POINT;`  
+```cpp
+typedef struct tagPOINT {
+    int x;
+    int y;
+} POINT;
+```
   
  *nCount*  
  Especifica o número de `POINT` estruturas ou `CPoint` objetos na matriz apontado por *lpPoints*.  
@@ -372,13 +371,12 @@ BOOL CreatePolyPolygonRgn(
  *lpPoints*  
  Aponta para uma matriz de `POINT` estruturas ou uma matriz de `CPoint` objetos que define os vértices dos polígonos. Cada polígono deve ser explicitamente fechado porque o sistema não fechá-los automaticamente. Os polígonos são especificados consecutivamente. O `POINT` estrutura tem a seguinte forma:  
   
- `typedef struct tagPOINT {`  
-  
- `int x;`  
-  
- `int y;`  
-  
- `} POINT;`  
+```cpp
+typedef struct tagPOINT {
+    int x;
+    int y;
+} POINT;
+```
   
  *lpPolyCounts*  
  Aponta para uma matriz de inteiros. O primeiro inteiro Especifica o número de vértices do polígono no primeiro a *lpPoints* matriz, o segundo inteiro Especifica o número de vértices no polígono segundo e assim por diante.  
@@ -453,17 +451,14 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
  *lpRect*  
  Aponta para um `RECT` estrutura ou `CRect` objeto que contém as coordenadas lógicas dos cantos superior esquerdo e inferior direito da região. O `RECT` estrutura tem a seguinte forma:  
   
- `typedef struct tagRECT {`  
-  
- `int left;`  
-  
- `int top;`  
-  
- `int right;`  
-  
- `int bottom;`  
-  
- `} RECT;`  
+```cpp
+typedef struct tagRECT {
+    int left;
+    int top;
+    int right;
+    int bottom;
+} RECT;
+```
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se a operação for bem-sucedida; Caso contrário, 0.  
@@ -715,17 +710,14 @@ BOOL RectInRegion(LPCRECT lpRect) const;
  *lpRect*  
  Aponta para um `RECT` estrutura ou `CRect` objeto. O `RECT` estrutura tem a seguinte forma:  
   
- `typedef struct tagRECT {`  
-  
- `int left;`  
-  
- `int top;`  
-  
- `int right;`  
-  
- `int bottom;`  
-  
- `} RECT;`  
+```cpp
+typedef struct tagRECT {
+    int left;
+    int top;
+    int right;
+    int bottom;
+} RECT;
+```
   
 ### <a name="return-value"></a>Valor de retorno  
  Diferente de zero se qualquer parte do retângulo especificado está dentro dos limites de região. Caso contrário, 0.  

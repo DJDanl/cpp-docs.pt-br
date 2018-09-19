@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 4) de aviso C4289 | Microsoft Docs
+title: Compilador aviso (nível 4) C4289 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f7f09bd85d3740d43b6e4b6a80ed562f8cc2261
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 35cb22c767c0ea64a1536bd4d02ad8653bb94250
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292601"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102834"
 ---
-# <a name="compiler-warning-level-4-c4289"></a>Compilador C4289 de aviso (nível 4)
-extensão não padrão usada: 'var': variável de controle de loop declarada no loop for é usada fora do escopo do loop for  
-  
- Ao compilar com [/Ze](../../build/reference/za-ze-disable-language-extensions.md) e **/Zc:forScope-**, uma variável declarada em um [para](../../cpp/for-statement-cpp.md) loop foi usado após o **para**-loop de escopo.  
-  
- Consulte [/ZC: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) para obter informações sobre como especificar o comportamento padrão em **para** loops com **/Ze**.  
-  
- Esse aviso é desativada por padrão. Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.  
-  
- O exemplo a seguir gera C4289:  
-  
-```  
-// C4289.cpp  
-// compile with: /W4 /Zc:forScope-  
-#pragma warning(default:4289)  
-int main() {  
-   for (int i = 0 ; ; )   // C4289  
-      break;  
-   i++;  
-}  
+# <a name="compiler-warning-level-4-c4289"></a>Compilador aviso (nível 4) C4289
+
+extensão não padrão usada: 'var': variável de controle de loop declarada no loop for é usada fora do escopo do loop for
+
+Ao compilar com [/Ze](../../build/reference/za-ze-disable-language-extensions.md) e **/Zc:forScope-**, uma variável declarada em um [para](../../cpp/for-statement-cpp.md) loop foi usado após o **para**-escopo de loop.
+
+Ver [/ZC: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) para obter informações sobre como especificar o comportamento padrão no **para** faz um loop com **/Ze**.
+
+Esse aviso é desativado por padrão. Ver [compilador avisos que são desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.
+
+O exemplo a seguir gera C4289:
+
+```
+// C4289.cpp
+// compile with: /W4 /Zc:forScope-
+#pragma warning(default:4289)
+int main() {
+   for (int i = 0 ; ; )   // C4289
+      break;
+   i++;
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: C3006 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3006 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3019a4017170b13da21820931a572370db1862e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 098a39fa6a2918a6a168c28ce322544fe944a1c6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258194"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103160"
 ---
-# <a name="compiler-error-c3006"></a>C3006 de erro do compilador
-'cláusula': cláusula de OpenMP 'diretiva' diretiva não tem um argumento esperado  
-  
- Uma diretiva de OpenMP não tinha um argumento esperado.  
-  
- O exemplo a seguir gera C3006:  
-  
-```  
-// C3006.c  
-// compile with: /openmp  
-int main()  
-{  
-   #pragma omp parallel shared   // C3006  
-   // Try the following line instead:  
-   // #pragma omp parallel shared(x) {}  
-  
-}  
+# <a name="compiler-error-c3006"></a>Erro do compilador C3006
+
+'cláusula': cláusula de OpenMP 'diretiva' diretiva não tem um argumento esperado
+
+Uma diretiva de OpenMP não tinha um argumento esperado.
+
+O exemplo a seguir gera C3006:
+
+```
+// C3006.c
+// compile with: /openmp
+int main()
+{
+   #pragma omp parallel shared   // C3006
+   // Try the following line instead:
+   // #pragma omp parallel shared(x) {}
+
+}
 ```

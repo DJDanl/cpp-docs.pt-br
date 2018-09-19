@@ -1,5 +1,5 @@
 ---
-title: C2959 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2959 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce13a340812bce7cd6e5a0e4f8b2601b530fd3a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f225dccc917e34fba690064d66cf1cda36219877
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243787"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078966"
 ---
-# <a name="compiler-error-c2959"></a>C2959 de erro do compilador
-uma classe genérica ou função não pode ser um membro de um modelo  
-  
- Para obter mais informações, consulte [Windows Runtime e modelos gerenciados](../../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md) e [genéricos](../../windows/generics-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C2959.  
-  
-```  
-// C2959.cpp  
-// compile with: /clr /c  
-template <class T> ref struct S {  
-   generic <class U> ref struct GR1;   // C2959  
-};  
+# <a name="compiler-error-c2959"></a>Erro do compilador C2959
+
+uma classe genérica ou uma função não pode ser um membro de um modelo
+
+Para obter mais informações, consulte [tempo de execução do Windows e modelos gerenciados](../../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md) e [genéricos](../../windows/generics-cpp-component-extensions.md).
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C2959.
+
+```
+// C2959.cpp
+// compile with: /clr /c
+template <class T> ref struct S {
+   generic <class U> ref struct GR1;   // C2959
+};
 ```

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3814dacff2861bf78800adb8a019b696ce2756b7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ecbf2b415b93526fe856e21411431eb1f20b4c42
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752756"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089574"
 ---
 # <a name="ccomtearoffobject-class"></a>Classe CComTearOffObject
 
@@ -45,7 +45,7 @@ class CComTearOffObject : public Base
 
 #### <a name="parameters"></a>Parâmetros
 
-*Base de dados de*  
+*Base de dados de*<br/>
 Sua classe destacável, derivada de `CComTearOffObjectBase` e as interfaces que você deseja que o seu objeto destacáveis para dar suporte.
 
 ATL implementa suas interfaces destacáveis em duas fases — o `CComTearOffObjectBase` métodos lidam com a contagem de referência e `QueryInterface`, enquanto `CComTearOffObject` implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown).
@@ -123,7 +123,7 @@ CComTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Parâmetros
 
-*VP*  
+*VP*<br/>
 [in] Ponteiro será convertido em um ponteiro para um `CComObject<Owner>` objeto.
 
 ### <a name="remarks"></a>Comentários
@@ -164,7 +164,7 @@ CComObject<Owner>* m_pOwner;
 
 ### <a name="parameters"></a>Parâmetros
 
-*Proprietário*  
+*Proprietário*<br/>
 [in] A classe para o qual um destacável está sendo implementado.
 
 ### <a name="remarks"></a>Comentários
@@ -181,10 +181,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*  
+*IID*<br/>
 [in] O IID da interface que está sendo solicitado.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] Um ponteiro para o ponteiro de interface identificado pelo *iid*, ou nulo se a interface não foi encontrada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -209,5 +209,5 @@ Em compilações sem depuração, sempre retornará zero. Em compilações de de
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)   
+[Classe CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

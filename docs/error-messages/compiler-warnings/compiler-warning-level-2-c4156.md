@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 2) do aviso C4156 | Microsoft Docs
+title: Compilador aviso (nível 2) C4156 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 249d90712b4a8b02f10deaa4d87cdbb7a7c17ae3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eddce0944152fe95aa4ef2fd98ec30a793a90978
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296443"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084491"
 ---
-# <a name="compiler-warning-level-2-c4156"></a>Compilador C4156 de aviso (nível 2)
-exclusão de uma expressão de matriz sem o uso da forma matricial de 'delete'; forma matricial substituída  
-  
- A forma de não-matriz de **excluir** não é possível excluir uma matriz. O compilador convertido **excluir** para o formulário de matriz.  
-  
- Este aviso ocorre apenas sob extensões da Microsoft (/Ze).  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// C4156.cpp  
-// compile with: /W2  
-int main()  
-{  
-   int (*array)[ 10 ] = new int[ 5 ][ 10 ];  
-   delete array; // C4156, changed by compiler to "delete [] array;"  
-}  
+# <a name="compiler-warning-level-2-c4156"></a>Compilador aviso (nível 2) C4156
+
+exclusão de uma expressão de matriz sem o uso da forma matricial de 'delete'; forma matricial substituída
+
+Forma de não-matriz **excluir** não é possível excluir uma matriz. O compilador traduziu **excluir** para o formato da matriz.
+
+Este aviso ocorre apenas sob extensões da Microsoft (/Ze).
+
+## <a name="example"></a>Exemplo
+
+```
+// C4156.cpp
+// compile with: /W2
+int main()
+{
+   int (*array)[ 10 ] = new int[ 5 ][ 10 ];
+   delete array; // C4156, changed by compiler to "delete [] array;"
+}
 ```

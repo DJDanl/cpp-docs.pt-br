@@ -25,14 +25,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e176cc20dc3f6f13eb868133b99c0ce7e86d25c4
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: ed4eefe8c05e2b5b027ba1d7c1fec022c9e44409
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571543"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104914"
 ---
 # <a name="iconverttypeimpl-class"></a>Classe IConvertTypeImpl
+
 Fornece uma implementação de [IConvertType](/previous-versions/windows/desktop/ms715926\(v=vs.85\)) interface.  
   
 ## <a name="syntax"></a>Sintaxe
@@ -44,11 +45,13 @@ class ATL_NO_VTABLE IConvertTypeImpl
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *T*  
- Sua classe, derivada de `IConvertTypeImpl`.  
+
+*T*<br/>
+Sua classe, derivada de `IConvertTypeImpl`.  
 
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atldb.h  
+
+**Cabeçalho:** atldb.h  
   
 ## <a name="members"></a>Membros  
   
@@ -59,9 +62,11 @@ class ATL_NO_VTABLE IConvertTypeImpl
 |[CanConvert](#canconvert)|Fornece informações sobre a disponibilidade de conversões de tipo em um comando ou em um conjunto de linhas.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa interface é obrigatória em comandos, conjuntos de linhas e conjuntos de linhas do índice. `IConvertTypeImpl` implementa a interface delegando para o objeto de conversão fornecido pelo OLE DB.  
+
+Essa interface é obrigatória em comandos, conjuntos de linhas e conjuntos de linhas do índice. `IConvertTypeImpl` implementa a interface delegando para o objeto de conversão fornecido pelo OLE DB.  
 
 ## <a name="canconvert"></a> Iconverttypeimpl:: Canconvert
+
 Fornece informações sobre a disponibilidade de conversões de tipo em um comando ou em um conjunto de linhas.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -73,11 +78,14 @@ STDMETHOD(CanConvert)(DBTYPE wFromType,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224\(v=vs.85\)) na *referência do programador do OLE DB*.  
+
+Ver [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224\(v=vs.85\)) na *referência do programador do OLE DB*.  
   
 ### <a name="remarks"></a>Comentários  
- Usa a conversão de dados OLE DB em `MSADC.DLL`.  
+
+Usa a conversão de dados OLE DB em `MSADC.DLL`.  
   
 ## <a name="see-also"></a>Consulte também  
- [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

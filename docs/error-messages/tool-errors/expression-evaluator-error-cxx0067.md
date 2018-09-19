@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c257c83330c8ece085d49b1680cc554c6843613e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a49b2ba4372cc8ffe10ef27bd4a79dc31d237aa8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301379"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105018"
 ---
 # <a name="expression-evaluator-error-cxx0067"></a>Erro CXX0067 (avaliador de expressão)
-avaliação de função não tem suportada  
-  
- A expressão continha uma chamada de função. Alguns avaliadores de expressão não dão suporte a chamadas de função.  
-  
- Esse erro é idêntico ao CAN0067.
+
+avaliação da função não tem suportada
+
+A expressão continha uma chamada de função. Alguns avaliadores de expressão não dão suporte a chamadas de função.
+
+Esse erro é idêntico ao CAN0067.

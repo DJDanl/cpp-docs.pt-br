@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bce9ebf0281981264c3abeb1485cdffb89410e68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e518cacdeb8db133ff6378e6569ee868312b8333
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227887"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081488"
 ---
 # <a name="fatal-error-c1209"></a>Erro fatal C1209
-Friend assemblies não suportados pela versão do tempo de execução instalada  
-  
- C1208 ocorre quando você tiver um compilador para a versão atual, mas um tempo de execução de linguagem comum de uma versão anterior.  
-  
- Algumas funcionalidades do compilador não podem funcionar em uma versão anterior do tempo de execução.  
-  
- Para resolver C1209, instale o common language runtime fornecido com o compilador que você está usando.  
-  
- Para obter mais informações, consulte [Friend Assemblies (C++)](../../dotnet/friend-assemblies-cpp.md).
+
+Friend assemblies não suportados pela versão do tempo de execução instalado
+
+C1208 ocorre quando você tem um compilador para a versão atual, mas um common language runtime de uma versão anterior.
+
+Algumas funcionalidades do compilador podem não funcionar em uma versão anterior do tempo de execução.
+
+Para resolver C1209, instale o common language runtime fornecido com o compilador que você está usando.
+
+Para obter mais informações, consulte [Assemblies de amigo (C++)](../../dotnet/friend-assemblies-cpp.md).

@@ -1,5 +1,5 @@
 ---
-title: R6019 de erro de tempo de execução C | Microsoft Docs
+title: C R6019 de erro de tempo de execução | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95950254d4a0611d9690b8636eb50f2fc1f0f264
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95bc763ab39df16c1cfc1b05689560edecf70570
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314223"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093293"
 ---
-# <a name="c-runtime-error-r6019"></a>R6019 de erro de tempo de execução do C
-não é possível abrir o dispositivo do console  
-  
+# <a name="c-runtime-error-r6019"></a>C R6019 de erro de tempo de execução
+
+não é possível abrir o dispositivo do console
+
 > [!NOTE]
->  Se você receber essa mensagem de erro durante a execução de um aplicativo, o aplicativo foi desligado porque ele tentou acessar o console, mas ele não tem permissão suficiente. Há várias razões possíveis para esse erro, mas é normalmente porque o programa deve ser executado como um administrador, ou há um bug no programa.  
->   
->  Você pode tentar corrigir esse erro com estas etapas:  
->   
->  -   Execute o programa como administrador.  
-> -   Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para reparar ou reinstalar o programa.  
-> -   Verificar **Windows Update** no **painel de controle** para atualizações de software.  
-> -   Verifique se há uma versão atualizada do aplicativo. Se o problema persistir, entre em contato com o fornecedor do aplicativo.  
-  
- **Informações para os programadores**  
-  
- Esse erro ocorre porque o aplicativo de chamada de função de console, mas o sistema operacional não conceder acesso ao console. Exceto no modo de depuração, console funções geralmente não são permitidas em aplicativos da Microsoft Store. Se seu aplicativo requer privilégios de administrador para executar, verifique se que ele é instalado para ser executado como administrador, por padrão.
+>  Se você encontrar esta mensagem de erro durante a execução de um aplicativo, o aplicativo foi encerrado porque ele tentou acessar o console, mas ele não tinha permissão suficiente. Há várias razões possíveis para esse erro, mas é normalmente porque o programa deve ser executado como um administrador, ou há um bug no programa.
+>
+>  Você pode tentar corrigir esse erro com estas etapas:
+>
+>  -   Execute o programa como administrador.
+> -   Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para reparar ou reinstalar o programa.
+> -   Verifique **Windows Update** na **painel de controle** para atualizações de software.
+> -   Verifique se há uma versão atualizada do aplicativo. Se o problema persistir, entre em contato com o fornecedor do aplicativo.
+
+**Informações para programadores**
+
+Esse erro ocorre porque o aplicativo de chamada de função de console, mas o sistema operacional não conceder acesso ao console. Exceto no modo de depuração, console funções geralmente não são permitidas em aplicativos da Microsoft Store. Se seu aplicativo requer privilégios de administrador para ser executado, verifique se que ele é instalado para ser executado como administrador por padrão.

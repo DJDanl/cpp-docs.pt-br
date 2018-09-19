@@ -1,5 +1,5 @@
 ---
-title: C2022 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2022 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47e13dddc1cba93afe8c51b2bca3efdd58e75f85
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc92e683c3def2378912db5011049924696b7f59
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165604"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089652"
 ---
-# <a name="compiler-error-c2022"></a>C2022 de erro do compilador
-'número': muito grande para caractere  
-  
- O número octal seguindo uma barra invertida (\\) em um caractere ou constante de cadeia de caracteres é muito grande para representar um caractere.
+# <a name="compiler-error-c2022"></a>Erro do compilador C2022
+
+'número': muito grande para caractere
+
+O número octal seguindo uma barra invertida (\\) em um caractere ou constante de cadeia de caracteres é grande demais para representar um caractere.

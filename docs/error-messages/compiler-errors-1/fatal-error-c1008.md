@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 633045581d16bece84b2fe51d7b91d8d42b124ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 44dd4198d57366e06a62e795f98eae3a08851791
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197020"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085168"
 ---
 # <a name="fatal-error-c1008"></a>Erro fatal C1008
-Nenhum arquivo de entrada especificado  
-  
- O compilador não foi fornecido um arquivo de origem C ou C++ para compilar. Verifique o **CL** linha de comando e a variável de ambiente para especificações de nome de arquivo.
+
+Nenhum arquivo de entrada especificado
+
+O compilador não foi fornecido um arquivo de origem C ou C++ para compilar. Verifique as **CL** linha de comando e a variável de ambiente para as especificações de nome de arquivo.

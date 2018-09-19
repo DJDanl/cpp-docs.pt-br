@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4297 | Microsoft Docs
+title: Compilador aviso (nível 1) C4297 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2c37f82b646902d08c8fc2ce633948969d0755f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f615df5933cfc93918b05758f042c8cf47aa92f1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281970"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099428"
 ---
-# <a name="compiler-warning-level-1-c4297"></a>Compilador C4297 de aviso (nível 1)
-'function': função não deveria para lançar uma exceção, mas não  
-  
- Uma declaração de função contém um (possivelmente implícita) `noexcept` especificador, vazio `throw` especificador de exceção, ou um [nothrow](../../cpp/nothrow-cpp.md) atributo e a definição contém um ou mais [throw ](../../cpp/try-throw-and-catch-statements-cpp.md) instruções. Para resolver C4297, não tente gerar exceções em funções que são declaradas `__declspec(nothrow)`, `noexcept(true)` ou `throw()`. Como alternativa, remova o `noexcept`, `throw()`, ou `__declspec(nothrow)` especificação.  
-  
- Por padrão, o compilador gera implícita `noexcept(true)` especificadores de funções de desalocador e destruidores definido pelo usuário e funções de membro especial gerada pelo compilador. Isso segue o padrão C++ 11 ISO. Para evitar a geração de especificadores não exceção implícita e reverter o compilador para o comportamento não padrão do Visual Studio 2013, use o **/Zc:implicitNoexcept-** opção de compilador. Para obter mais informações, consulte [/ZC: implicitnoexcept (especificadores de exceção implícitos)](../../build/reference/zc-implicitnoexcept-implicit-exception-specifiers.md).  
-  
- Para obter mais informações sobre as especificações de exceção, consulte [especificações de exceção (lançar)](../../cpp/exception-specifications-throw-cpp.md). Além disso, consulte [/EH (modelo de tratamento de exceção)](../../build/reference/eh-exception-handling-model.md) para obter informações sobre como modificar o comportamento em tempo de compilação de tratamento de exceção.  
-  
- Esse aviso também é gerado para declspec ([dllexport](../../cpp/dllexport-dllimport.md)) funções marcado extern "C", mesmo se eles são funções C++.  
-  
- O exemplo a seguir gera C4297:  
-  
-```  
-// C4297.cpp  
-// compile with: /W1 /LD  
-void __declspec(nothrow) f1()   // declared nothrow  
-// try the following line instead  
-// void f1()  
-{  
-   throw 1;   // C4297  
-}  
+# <a name="compiler-warning-level-1-c4297"></a>Compilador aviso (nível 1) C4297
+
+'function': função não deveria para lançar uma exceção, mas não
+
+Uma declaração de função contém uma (possivelmente implícita) `noexcept` especificador, vazia `throw` especificador de exceção, ou um [__declspec(nothrow)](../../cpp/nothrow-cpp.md) atributo e a definição contém um ou mais [throw ](../../cpp/try-throw-and-catch-statements-cpp.md) instruções. Para resolver C4297, não tente gerar exceções em funções que são declaradas `__declspec(nothrow)`, `noexcept(true)` ou `throw()`. Como alternativa, remova os `noexcept`, `throw()`, ou `__declspec(nothrow)` especificação.
+
+Por padrão, o compilador gera implícita `noexcept(true)` especificadores para funções de desalocador e destruidores definidos pelo usuário e funções de membro especial gerado pelo compilador. Isso está de acordo com o ISO c++11 standard. Para evitar a geração de especificadores de noexcept implícita e reverter o compilador para o comportamento não padrão do Visual Studio 2013, use o **/Zc:implicitNoexcept-** opção de compilador. Para obter mais informações, consulte [/ZC: implicitnoexcept (especificadores de exceção implícitos)](../../build/reference/zc-implicitnoexcept-implicit-exception-specifiers.md).
+
+Para obter mais informações sobre especificações de exceção, consulte [especificações de exceção (lançar)](../../cpp/exception-specifications-throw-cpp.md). Consulte também [/EH (modelo de tratamento de exceção)](../../build/reference/eh-exception-handling-model.md) para obter informações sobre como modificar o comportamento em tempo de compilação de tratamento de exceção.
+
+Esse aviso também é gerado para declspec ([dllexport](../../cpp/dllexport-dllimport.md)) funções marcadas extern "C", mesmo se eles são funções de C++.
+
+O exemplo a seguir gera C4297:
+
+```
+// C4297.cpp
+// compile with: /W1 /LD
+void __declspec(nothrow) f1()   // declared nothrow
+// try the following line instead
+// void f1()
+{
+   throw 1;   // C4297
+}
 ```

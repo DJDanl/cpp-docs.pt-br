@@ -1,5 +1,5 @@
 ---
-title: C2180 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2180 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a43c179b837e840f800a6c468efdd9cdd6a6604b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c74912b92162cbfcada3630ed6a6845b67045d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171530"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084140"
 ---
-# <a name="compiler-error-c2180"></a>C2180 de erro do compilador
-expressão de controle possui tipo 'type'  
-  
- A expressão de controle em um `if`, `while`, `for`, ou `do` instrução for uma expressão, convertida em `void`. Para corrigir esse problema, altere a expressão de controle para um que produz um `bool` ou um tipo que pode ser convertido em `bool`.  
-  
- O exemplo a seguir gera C2180:  
-  
-```  
-// C2180.c  
-  
-int main() {  
-   while ((void)1)   // C2180  
-      return 1;  
-   while (1)         // OK  
-      return 0;  
-}  
+# <a name="compiler-error-c2180"></a>Erro do compilador C2180
+
+expressão de controle possui tipo 'type'
+
+A expressão de controle em uma `if`, `while`, `for`, ou `do` instrução é uma expressão convertida em `void`. Para corrigir esse problema, altere a expressão de controle para um que produz um `bool` ou um tipo que pode ser convertido em `bool`.
+
+O exemplo a seguir gera C2180:
+
+```
+// C2180.c
+
+int main() {
+   while ((void)1)   // C2180
+      return 1;
+   while (1)         // OK
+      return 0;
+}
 ```

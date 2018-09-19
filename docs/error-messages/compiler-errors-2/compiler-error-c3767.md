@@ -1,5 +1,5 @@
 ---
-title: C3767 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3767 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,72 +16,73 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e7e5e422206f3ee58b95024a3b96244d848e1b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e4e5f73016060ccc17dfe0218d8b518b2f5dbdbd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273599"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46081436"
 ---
-# <a name="compiler-error-c3767"></a>C3767 de erro do compilador
-funções de candidato 'function' não está acessíveis  
-  
- Uma função friend definida em uma classe não deve ser tratado como se fosse definido e declarada no escopo de namespace global. Ele pode, no entanto, ser encontrados pela pesquisa dependente de argumento.  
-  
- C3767 também pode ser causado por uma alteração significativa: tipos nativos agora são private por padrão em um **/clr** compilação; consulte [visibilidade de tipo](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) para obter mais informações.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C3767:  
-  
-```  
-// C3767a.cpp  
-// compile with: /clr  
-using namespace System;  
-public delegate void TestDel();  
-  
-public ref class MyClass {  
-public:  
-   static event TestDel^ MyClass_Event;  
-};  
-  
-public ref class MyClass2 : public MyClass {  
-public:  
-   void Test() {  
-      MyClass^ patient = gcnew MyClass;  
-      patient->MyClass_Event();  
-    }  
-};  
-  
-int main() {  
-   MyClass^ x = gcnew MyClass;  
-   x->MyClass_Event();   // C3767  
-  
-   // OK  
-   MyClass2^ y = gcnew MyClass2();  
-   y->Test();  
-};  
-```  
-  
- O exemplo a seguir gera C3767:  
-  
-```  
-// C3767c.cpp  
-// compile with: /clr /c  
-  
-ref class Base  {  
-protected:  
-   void Method() {  
-      System::Console::WriteLine("protected");  
-   }  
-};  
-  
-ref class Der : public Base {  
-   void Method() {  
-      ((Base^)this)->Method();   // C3767  
-      // try the following line instead  
-      // Base::Method();  
-   }  
-};  
-```  
-  
- 
+# <a name="compiler-error-c3767"></a>Erro do compilador C3767
+
+candidatas 'function' não está acessíveis
+
+Uma função friend definida em uma classe não deve ser tratado como se fosse definido e declarado no escopo de namespace global. Ele pode, no entanto, ser encontrados pela pesquisa dependente de argumento.
+
+C3767 também pode ser causado por uma alteração significativa: tipos nativos agora são private por padrão em uma **/clr** compilação; consulte [visibilidade de tipo](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) para obter mais informações.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C3767:
+
+```
+// C3767a.cpp
+// compile with: /clr
+using namespace System;
+public delegate void TestDel();
+
+public ref class MyClass {
+public:
+   static event TestDel^ MyClass_Event;
+};
+
+public ref class MyClass2 : public MyClass {
+public:
+   void Test() {
+      MyClass^ patient = gcnew MyClass;
+      patient->MyClass_Event();
+    }
+};
+
+int main() {
+   MyClass^ x = gcnew MyClass;
+   x->MyClass_Event();   // C3767
+
+   // OK
+   MyClass2^ y = gcnew MyClass2();
+   y->Test();
+};
+```
+
+O exemplo a seguir gera C3767:
+
+```
+// C3767c.cpp
+// compile with: /clr /c
+
+ref class Base  {
+protected:
+   void Method() {
+      System::Console::WriteLine("protected");
+   }
+};
+
+ref class Der : public Base {
+   void Method() {
+      ((Base^)this)->Method();   // C3767
+      // try the following line instead
+      // Base::Method();
+   }
+};
+```
+

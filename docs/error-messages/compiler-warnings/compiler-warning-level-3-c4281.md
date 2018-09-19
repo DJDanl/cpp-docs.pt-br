@@ -16,45 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5511d82b250ec1e568752bf7bf7993dee003f335
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 106269be7d63126854aa1396bd6045532b4102ed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302442"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46079135"
 ---
-# <a name="compiler-warning-level-3-c4281"></a>Compilador C4281 de aviso (nível 3)
-recursão 'operator ->' Ocorreu através do tipo 'type'  
-  
- Permite que seu código **operador ->** para chamar a mesmo.  
-  
- O exemplo a seguir gera C4281:  
-  
-```  
-// C4281.cpp  
-// compile with: /W3 /WX  
-struct A;  
-struct B;  
-struct C;  
-  
-struct A  
-{  
-   int z;  
-   B& operator->();  
-};  
-  
-struct B  
-{  
-   C& operator->();  
-};  
-  
-struct C  
-{  
-   A& operator->();  
-};  
-  
-void f(A p)  
-{  
-   int i = p->z; // C4281  
-}  
+# <a name="compiler-warning-level-3-c4281"></a>Compilador aviso (nível 3) C4281
+
+recursão 'operator ->' Ocorreu através do tipo 'type'
+
+Permite que seu código **operator ->** chamar a mesmo.
+
+O exemplo a seguir gera C4281:
+
+```
+// C4281.cpp
+// compile with: /W3 /WX
+struct A;
+struct B;
+struct C;
+
+struct A
+{
+   int z;
+   B& operator->();
+};
+
+struct B
+{
+   C& operator->();
+};
+
+struct C
+{
+   A& operator->();
+};
+
+void f(A p)
+{
+   int i = p->z; // C4281
+}
 ```

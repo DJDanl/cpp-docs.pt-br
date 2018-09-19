@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cf8c27d118984422ec3a78f442a3f11f13e1c75
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bee312cd5e7a88dd0798778d5f8385df265d78a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766026"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099750"
 ---
 # <a name="iaxwinhostwindow-interface"></a>Interface IAxWinHostWindow
 
@@ -79,10 +79,10 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pUnkControl*  
+*pUnkControl*<br/>
 [in] Um ponteiro para o `IUnknown` interface do controle a ser anexado ao objeto de host.
 
-*hWnd*  
+*hWnd*<br/>
 [in] Um identificador para a janela a ser usado para a hospedagem.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -102,13 +102,13 @@ STDMETHOD(CreateControl)(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in] Uma cadeia de caracteres que identifica o controle para criar. Pode ser um (deve incluir as chaves) de CLSID, ProgID, URL ou HTML bruto (antecedidos **MSHTML:**).
 
-*hWnd*  
+*hWnd*<br/>
 [in] Um identificador para a janela a ser usado para a hospedagem.
 
-*pStream*  
+*pStream*<br/>
 [in] Um ponteiro de interface para um fluxo que contém dados de inicialização para o controle. Pode ser NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -139,22 +139,22 @@ STDMETHOD(CreateControlEx)(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpTricsData*  
+*lpTricsData*<br/>
 [in] Uma cadeia de caracteres que identifica o controle para criar. Pode ser um (deve incluir as chaves) de CLSID, ProgID, URL ou HTML bruto (prefixados com **MSHTML:**).
 
-*hWnd*  
+*hWnd*<br/>
 [in] Um identificador para a janela a ser usado para a hospedagem.
 
-*pStream*  
+*pStream*<br/>
 [in] Um ponteiro de interface para um fluxo que contém dados de inicialização para o controle. Pode ser NULL.
 
-*ppUnk*  
+*ppUnk*<br/>
 [out] O endereço de um ponteiro que receberá o `IUnknown` interface do controle criado. Pode ser NULL.
 
-*riidAdvise*  
+*riidAdvise*<br/>
 [in] O identificador de interface de uma interface de saída o objeto contido. Pode ser IID_NULL.
 
-*punkAdvise*  
+*punkAdvise*<br/>
 [in] Um ponteiro para o `IUnknown` interface do objeto coletor a ser conectado ao ponto de conexão no objeto independente especificado pelo `iidSink`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -179,10 +179,10 @@ STDMETHOD(QueryControl)(
 
 ### <a name="parameters"></a>Parâmetros
 
-*riid*  
+*riid*<br/>
 [in] A ID de uma interface no controle que está sendo solicitado.
 
-*ppvObject*  
+*ppvObject*<br/>
 [out] O endereço de um ponteiro que receberá a interface especificada do controle criado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -199,7 +199,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pDisp*  
+*pDisp*<br/>
 [in] Um ponteiro para um `IDispatch` interface.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -216,7 +216,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pDisp*  
+*pDisp*<br/>
 [in] Um ponteiro para um `IDocHostUIHandlerDispatch` interface.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -229,7 +229,7 @@ Essa função é usada por controles (como o controle de navegador da Web) que c
 
 ## <a name="see-also"></a>Consulte também
 
-[Interface IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)   
-[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
+[Interface IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
+[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
 

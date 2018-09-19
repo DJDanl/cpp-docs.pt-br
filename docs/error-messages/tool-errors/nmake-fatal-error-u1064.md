@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5573943fc2c274d48768933a634b2c052361a8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4240bf2c553957e73d5ead0bdd03ea129450645b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332134"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092986"
 ---
 # <a name="nmake-fatal-error-u1064"></a>Erro fatal U1064 (NMAKE)
-MAKEFILE não encontrado e nenhum destino especificado  
-  
- A linha de comando NMAKE não especificou um makefile ou destino e a pasta atual não contém um arquivo chamado MAKEFILE.  
-  
- NMAKE requer um makefile ou um destino de linha de comando (ou ambos). Para disponibilizar um makefile para NMAKE, especifique a opção /F ou colocar um arquivo chamado MAKEFILE no diretório atual. NMAKE pode criar um destino de linha de comando usando uma regra de inferência se não for fornecido um makefile.
+
+MAKEFILE não encontrado e nenhum destino especificado
+
+A linha de comando NMAKE não especificou um makefile ou destino e o diretório atual não contém um arquivo chamado MAKEFILE.
+
+NMAKE exige um makefile ou um destino de linha de comando (ou ambos). Para disponibilizar um makefile para NMAKE, especifique a opção /F ou colocar um arquivo chamado MAKEFILE no diretório atual. NMAKE pode criar um destino de linha de comando usando uma regra de inferência se não for fornecido um makefile.

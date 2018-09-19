@@ -1,5 +1,5 @@
 ---
-title: C2208 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2208 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24377d17735fc63e9dc0541dfd9fb432eb0e0cda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6721166efad2fc214ccf2c2a45ec2342b67c39e4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172103"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101704"
 ---
-# <a name="compiler-error-c2208"></a>C2208 de erro do compilador
-'type': nenhum membro definido usando este tipo  
-  
- É um identificador resolver para um nome de tipo em uma declaração de agregação, mas o compilador não pode declarar um membro.  
-  
- O exemplo a seguir gera C2208:  
-  
-```  
-// C2208.cpp  
-class C {  
-   C;   // C2208  
-   C(){}   // OK  
-};  
+# <a name="compiler-error-c2208"></a>Erro do compilador C2208
+
+'type': nenhum membro definido usando esse tipo
+
+Um identificador de resolução para um nome de tipo é em uma declaração de agregação, mas o compilador não pode declarar um membro.
+
+O exemplo a seguir gera C2208:
+
+```
+// C2208.cpp
+class C {
+   C;   // C2208
+   C(){}   // OK
+};
 ```

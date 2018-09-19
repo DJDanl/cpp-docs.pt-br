@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ac7084e92f7f2ed496a4c1572e94a4fa46862f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f267e58617fbc68835fd3a387c4b635de4fd0530
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229086"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077666"
 ---
 # <a name="fatal-error-c1067"></a>Erro fatal C1067
-limite do compilador: limite de 64K para tamanho de um registro de tipo foi excedido  
-  
- Esse erro pode ocorrer se um símbolo tiver um nome decorado exceder 247 caracteres.  Para resolver, diminua o nome do símbolo.  
-  
- Quando o compilador gera informações de depuração, ele emite registros de tipo para definir tipos encontrados no código-fonte.  Por exemplo, registros de tipo incluem estruturas simples e listas de argumentos de funções.  Alguns desses registros de tipo podem ser listas grandes.  
-  
- Há um limite de 64K para o tamanho de qualquer tipo de registro.  Se esse limite de 64K for excedido, este erro ocorrerá.  
-  
- C1067 também pode ocorrer se houver muitos símbolos com nomes longos ou se uma classe, struct ou união muitos membros.
+
+limite do compilador: limite de 64 mil em tamanho de um registro de tipo foi excedido
+
+Esse erro pode ocorrer se um símbolo tiver um nome decorado excedendo 247 caracteres.  Para resolver, encurte o nome do símbolo.
+
+Quando o compilador gera informações de depuração, ele emite os registros do tipo para definir tipos encontrados no código-fonte.  Por exemplo, registros de tipo incluem estruturas simples e listas de argumentos de funções.  Alguns desses registros do tipo podem ser listas grandes.
+
+Há um limite de 64K no tamanho de qualquer tipo de registro.  Se esse limite de 64K for excedido, em seguida, esse erro ocorrerá.
+
+C1067 também pode ocorrer se houver vários símbolos com nomes longos ou se uma classe, struct ou união tem muitos membros.

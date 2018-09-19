@@ -1,5 +1,5 @@
 ---
-title: C2083 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2083 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39bc842e62254db7e524071970cb8f8c65e4a321
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adf2787f8aea3611abd9eeac054df6bb054d802a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33166514"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103265"
 ---
-# <a name="compiler-error-c2083"></a>C2083 de erro do compilador
-comparação de struct/união ilegal  
-  
- Uma estrutura ou união é comparado diretamente com outro tipo definido pelo usuário. Isso não é permitido a menos que um operador de comparação foi definido ou existe uma conversão para um tipo escalar.
+# <a name="compiler-error-c2083"></a>Erro do compilador C2083
+
+comparação de struct/union inválida
+
+Uma estrutura ou união é comparado diretamente com outro tipo definido pelo usuário. Isso não é permitido a menos que um operador de comparação foi definido ou há uma conversão para um tipo escalar.

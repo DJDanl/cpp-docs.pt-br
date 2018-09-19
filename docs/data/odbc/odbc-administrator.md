@@ -22,44 +22,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 47b301e054f2bcd0a37e0ea8e5e71730fafb9ef7
-ms.sourcegitcommit: 889a75be1232817150be1e0e8d4d7f48f5993af2
+ms.openlocfilehash: c0a0c0cc8817d40b325ceb7a96769dfe971b60c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39340518"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097803"
 ---
 # <a name="odbc-administrator"></a>Administrador ODBC
+
 Administrador de ODBC registra e configura o [fontes de dados](../../data/odbc/data-source-odbc.md) disponíveis para você localmente ou em uma rede. Os assistentes usam as informações fornecidas pelo administrador de ODBC para criar código em seus aplicativos que se conecta os usuários às fontes de dados.  
   
- Para configurar uma fonte de dados ODBC para uso com as classes MFC ODBC ou as classes de objeto de acesso a dados MFC (DAO), você deve primeiro registrar e configurar a fonte de dados. Use o administrador de ODBC para adicionar e remover fontes de dados. Dependendo do driver ODBC, você também pode criar novas fontes de dados.  
+Para configurar uma fonte de dados ODBC para uso com as classes MFC ODBC ou as classes de objeto de acesso a dados MFC (DAO), você deve primeiro registrar e configurar a fonte de dados. Use o administrador de ODBC para adicionar e remover fontes de dados. Dependendo do driver ODBC, você também pode criar novas fontes de dados.  
   
- Administrador de ODBC é instalado durante a instalação. Se você escolheu **personalizado** instalação e não tenha selecionado a todos os drivers ODBC na **opções de banco de dados** caixa de diálogo, você precisa executar a instalação novamente para instalar os arquivos necessários.  
+Administrador de ODBC é instalado durante a instalação. Se você escolheu **personalizado** instalação e não tenha selecionado a todos os drivers ODBC na **opções de banco de dados** caixa de diálogo, você precisa executar a instalação novamente para instalar os arquivos necessários.  
   
- Durante a instalação, você deve selecionar os drivers ODBC que você deseja instalar. Posteriormente, você pode instalar drivers adicionais que são fornecidos com o Visual C++ usando o programa de instalação do Visual C++.  
+Durante a instalação, você deve selecionar os drivers ODBC que você deseja instalar. Posteriormente, você pode instalar drivers adicionais que são fornecidos com o Visual C++ usando o programa de instalação do Visual C++.  
   
- Se você quiser instalar os drivers ODBC não são fornecidas com o Visual C++, você deve executar o programa de instalação que acompanha o driver.  
+Se você quiser instalar os drivers ODBC não são fornecidas com o Visual C++, você deve executar o programa de instalação que acompanha o driver.  
   
 #### <a name="to-install-odbc-drivers-that-ship-with-visual-c"></a>Para instalar drivers ODBC que são fornecidos com o Visual C++  
   
-1.  Execute a instalação do CD de distribuição do Visual C++.  
+1. Execute a instalação do CD de distribuição do Visual C++.  
   
      Abrir a caixa de diálogo do programa de instalação é aparece.  
   
-2.  Clique em **próxima** em cada caixa de diálogo até que o **opções de instalação** caixa de diálogo. Selecione **personalizado**e, em seguida, clique em **próxima**.  
+1. Clique em **próxima** em cada caixa de diálogo até que o **opções de instalação** caixa de diálogo. Selecione **personalizado**e, em seguida, clique em **próxima**.  
   
-3.  Desmarque todas as caixas de seleção na **instalação do Microsoft Visual C++** caixa de diálogo, exceto o **opções de banco de dados** caixa de seleção e, em seguida, clique em **detalhes** para exibir o **Opções de banco de dados** caixa de diálogo.  
+1. Desmarque todas as caixas de seleção na **instalação do Microsoft Visual C++** caixa de diálogo, exceto o **opções de banco de dados** caixa de seleção e, em seguida, clique em **detalhes** para exibir o **Opções de banco de dados** caixa de diálogo.  
   
-4.  Desmarque a **objetos do Microsoft Data Access** caixas de seleção a **Drivers ODBC da Microsoft** caixa de seleção e, em seguida, clique em **detalhes**.  
+1. Desmarque a **objetos do Microsoft Data Access** caixas de seleção a **Drivers ODBC da Microsoft** caixa de seleção e, em seguida, clique em **detalhes**.  
   
      O **Drivers ODBC da Microsoft** caixa de diálogo é exibida.  
   
-5.  Selecione os drivers que você deseja instalar e, em seguida, clique em **Okey** duas vezes.  
+1. Selecione os drivers que você deseja instalar e, em seguida, clique em **Okey** duas vezes.  
   
-6.  Clique em **próxima** nas caixas de diálogo restantes para iniciar a instalação. Instalação notifica você quando a instalação for concluída.  
+1. Clique em **próxima** nas caixas de diálogo restantes para iniciar a instalação. Instalação notifica você quando a instalação for concluída.  
   
- Quando os drivers são instalados, você pode configurar a fonte de dados usando o administrador ODBC. Você encontrará o ícone do ODBC no painel de controle.  
+Quando os drivers são instalados, você pode configurar a fonte de dados usando o administrador ODBC. Você encontrará o ícone do ODBC no painel de controle.  
   
 ## <a name="see-also"></a>Consulte também  
- [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
- [Fonte de dados (ODBC)](../../data/odbc/data-source-odbc.md)
+
+[ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
+[Fonte de dados (ODBC)](../../data/odbc/data-source-odbc.md)

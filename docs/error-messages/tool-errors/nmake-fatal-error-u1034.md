@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86b8442ffcab4a800902a634ddb015c7bcb4b91c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a8f6f64f3f24ebb6294f16c451a1fb6027ec1f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322673"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46105076"
 ---
 # <a name="nmake-fatal-error-u1034"></a>Erro fatal U1034 (NMAKE)
-Erro de sintaxe: separador ausente  
-  
- Os dois-pontos (**:**) que separa os destinos e dependentes está ausente.
+
+Erro de sintaxe: separador ausente
+
+Os dois-pontos (**:**) que separa os destinos e dependentes está ausente.

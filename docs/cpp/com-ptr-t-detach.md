@@ -16,28 +16,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf38e433f7042707b502a4cba2088db9412adb29
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a7f2f44df96ca339e5d8e4b251b5f2d259cb606b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405828"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092135"
 ---
 # <a name="comptrtdetach"></a>_com_ptr_t::Detach
-**Seção específica da Microsoft**  
-  
- Extrai e retorna o ponteiro de interface encapsulado.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-Interface* Detach( ) throw( );  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Extrai e retorna o ponteiro de interface encapsulado e, em seguida, limpa o armazenamento de ponteiro encapsulado como NULL. Isso remove o ponteiro de interface do encapsulamento. Cabe a você chamar `Release` no ponteiro de interface retornado.  
-  
- **Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe _com_ptr_t](../cpp/com-ptr-t-class.md)
+
+**Seção específica da Microsoft**
+
+Extrai e retorna o ponteiro de interface encapsulado.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+Interface* Detach( ) throw( );
+```
+
+## <a name="remarks"></a>Comentários
+
+Extrai e retorna o ponteiro de interface encapsulado e, em seguida, limpa o armazenamento de ponteiro encapsulado como NULL. Isso remove o ponteiro de interface do encapsulamento. Cabe a você chamar `Release` no ponteiro de interface retornado.
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Classe _com_ptr_t](../cpp/com-ptr-t-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4274 | Microsoft Docs
+title: Compilador aviso (nível 1) C4274 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39b941fc0cb32e268e33d3b0e1ae66079e8decaf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f6db0ee96674beda51ab02c8651e6f4960a0bf8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286140"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094672"
 ---
-# <a name="compiler-warning-level-1-c4274"></a>Compilador C4274 de aviso (nível 1)
-\#ident ignorado; Consulte a documentação para #pragma comment (exestr, 'string')  
-  
- O `#ident` diretiva, que insere uma cadeia de caracteres especificada pelo usuário no objeto ou arquivo executável, foi preterida. Consequentemente, o compilador ignora a diretiva.  
-  
+# <a name="compiler-warning-level-1-c4274"></a>Compilador aviso (nível 1) C4274
+
+\#ident ignorado; Consulte a documentação para #pragma comment (exestr, 'string')
+
+O `#ident` diretiva, que insere uma cadeia de caracteres especificada pelo usuário no objeto ou arquivo executável, foi preterida. Consequentemente, o compilador ignora a diretiva.
+
 > [!CAUTION]
->  Aviso C4274 aconselha a usar o [#pragma comment (exestr, 'string')](../../preprocessor/comment-c-cpp.md) diretiva. No entanto, esse aviso é preterido e será revisado em uma versão futura do compilador. Se você usar o `#pragma` diretiva, a ferramenta do vinculador (LINK.exe) ignora o produzido pela diretiva de registro de comentário e emite o aviso [LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md). Em vez da `#ident` diretiva, é recomendável que você use uma cadeia de caracteres de recurso de versão do arquivo em seu aplicativo.  
-  
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
-  
--   Remover o `#ident "` *cadeia de caracteres* `"` diretiva.  
-  
-## <a name="see-also"></a>Consulte também  
- [comentário (C/C++)](../../preprocessor/comment-c-cpp.md)   
- [Aviso LNK4229 ferramentas de vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)   
- [Trabalhando com arquivos de recurso](../../windows/working-with-resource-files.md)
+>  Aviso C4274 aconselham a usar o [#pragma comment (exestr, 'string')](../../preprocessor/comment-c-cpp.md) diretiva. No entanto, esse conselho é preterido e será revisado em uma versão futura do compilador. Se você usar o `#pragma` diretiva, a ferramenta do vinculador (LINK.exe) ignora o produzido pela diretiva de registro de comentário e emite o aviso [LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md). Em vez da `#ident` diretiva, é recomendável que você use uma cadeia de caracteres do recurso de versão do arquivo em seu aplicativo.
+
+## <a name="to-correct-this-error"></a>Para corrigir este erro
+
+- Remover o `#ident "` *cadeia de caracteres* `"` diretiva.
+
+## <a name="see-also"></a>Consulte também
+
+[comment (C/C++)](../../preprocessor/comment-c-cpp.md)<br/>
+[Aviso das ferramentas de vinculador LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)<br/>
+[Trabalhando com arquivos de recurso](../../windows/working-with-resource-files.md)

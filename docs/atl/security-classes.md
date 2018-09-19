@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 930e27e870b281eabf484dcc318c0203c3fc158d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 859fe416d9152e294f8edac5f703c721de7570f0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764960"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086521"
 ---
 # <a name="security-classes"></a>Classes de segurança
 
@@ -47,6 +47,6 @@ Essas classes são wrappers para classes comuns de segurança de Win32 e objetos
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral da classe](../atl/atl-class-overview.md)   
+[Visão geral da classe](../atl/atl-class-overview.md)<br/>
 [Funções globais de segurança](../atl/reference/security-global-functions.md)
 

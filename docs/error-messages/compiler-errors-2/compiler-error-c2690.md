@@ -1,5 +1,5 @@
 ---
-title: C2690 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2690 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59ee25501b621ca48648cdc00edaf927b6792428
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c48a4bfdf93a8b897b6f5e861a9031859fe39f5f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231516"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096171"
 ---
-# <a name="compiler-error-c2690"></a>C2690 de erro do compilador
-'operator': não é possível executar operações aritméticas com gerenciada de ponteiro ou matriz de WinRT  
-  
- Aritmética de ponteiro não é permitida em um gerenciado ou WinRT matriz. Use a notação de índice de matriz para atravessar a matriz.  
+# <a name="compiler-error-c2690"></a>Erro do compilador C2690
+
+'operator': não é possível executar operações aritméticas com gerenciado de ponteiro ou matriz de WinRT
+
+Aritmética de ponteiro não é permitida em um gerenciado ou WinRT matriz. Use a notação de índice de matriz para percorrer a matriz.

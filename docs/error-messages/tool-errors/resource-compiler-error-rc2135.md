@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14600b00b1347f7fe63c0bc8b6d1ab5c70b68fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8bd510aa4a6045b3e691ba89d05b327d35818b8b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318019"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092980"
 ---
 # <a name="resource-compiler-error-rc2135"></a>Erro RC2135 (compilador de recurso)
-arquivo não encontrado: nome de arquivo  
-  
- O arquivo especificado na linha de comando do compilador de recurso não foi encontrado. Verifique se o arquivo foi movido para outro diretório e se o nome do arquivo e o caminho estão digitados corretamente.  
-  
- Arquivos são pesquisados para usar o **incluir** variável de ambiente ou o Visual C++ **incluir** configuração.
+
+arquivo não encontrado: nome de arquivo
+
+O arquivo especificado na linha de comando do compilador de recurso não foi encontrado. Verifique se o arquivo foi movido para outro diretório e se o nome de arquivo e caminho são digitou corretamente.
+
+Arquivos são pesquisados para usar o **INCLUDE** variável de ambiente ou o Visual C++ **INCLUDE** configuração.

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74bc3326c50f1b460fc212074b7ca34dec518c76
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6cc489850ea8e8d2704c92d1c2a671557a4db67a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765629"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084322"
 ---
 # <a name="csimplearrayequalhelperfalse-class"></a>Classe CSimpleArrayEqualHelperFalse
 
@@ -32,13 +32,13 @@ Essa classe é um auxiliar para o [CSimpleArray](../../atl/reference/csimplearra
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template <class T>  
+template <class T>
 class CSimpleArrayEqualHelperFalse
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 Uma classe derivada.
 
 ## <a name="members"></a>Membros
@@ -75,5 +75,5 @@ Esse método sempre retorna false e chamará `ATLASSERT` com um argumento FALSO 
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)   
+[Classe CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

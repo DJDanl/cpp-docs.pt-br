@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c8081b5a85b09f513152861cb09758b61df8d9b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d3b10648a3251a705085e31559a98b6ee4957c72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763247"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088469"
 ---
 # <a name="cwin32heap-class"></a>Classe CWin32Heap
 
@@ -101,7 +101,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*nBytes*  
+*nBytes*<br/>
 O número solicitado de bytes no novo bloco de memória.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -124,10 +124,10 @@ void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*hHeap*  
+*hHeap*<br/>
 Um identificador de heap existente.
 
-*bTakeOwnership*  
+*bTakeOwnership*<br/>
 Um que indica se do sinalizador de `CWin32Heap` é apropriar-se sobre os recursos do heap de objeto.
 
 ### <a name="remarks"></a>Comentários
@@ -149,16 +149,16 @@ CWin32Heap(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hHeap*  
+*hHeap*<br/>
 Um objeto existente do heap.
 
-*dwFlags*  
+*dwFlags*<br/>
 Sinalizadores usados na criação do heap.
 
-*nInitialSize*  
+*nInitialSize*<br/>
 O tamanho inicial do heap.
 
-*nMaxSize*  
+*nMaxSize*<br/>
 O tamanho máximo do heap.
 
 ### <a name="remarks"></a>Comentários
@@ -213,7 +213,7 @@ virtual void Free(void* p) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*  
+*p*<br/>
 Ponteiro para o bloco de memória para liberar. NULL é um valor válido e não faz nada.
 
 ##  <a name="getsize"></a>  CWin32Heap::GetSize
@@ -226,7 +226,7 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*  
+*p*<br/>
 Ponteiro para o bloco de memória cujo tamanho que o método obterá. Esse é um ponteiro retornado por [CWin32Heap::Allocate](#allocate) ou [CWin32Heap::Reallocate](#reallocate).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -263,10 +263,10 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*  
+*p*<br/>
 Ponteiro para o bloco de memória para realocar.
 
-*nBytes*  
+*nBytes*<br/>
 O novo tamanho em bytes do bloco alocado. O bloco pode ficar maior ou menor.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -279,9 +279,9 @@ Se *p* for NULL, supõe-se que o bloco de memória ainda não foi alocado e [CWi
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral da classe](../../atl/atl-class-overview.md)   
-[Classe IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)   
-[Classe CLocalHeap](../../atl/reference/clocalheap-class.md)   
-[Classe CGlobalHeap](../../atl/reference/cglobalheap-class.md)   
-[Classe de CCRTHeap](../../atl/reference/ccrtheap-class.md)   
+[Visão geral da classe](../../atl/atl-class-overview.md)<br/>
+[Classe IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)<br/>
+[Classe CLocalHeap](../../atl/reference/clocalheap-class.md)<br/>
+[Classe CGlobalHeap](../../atl/reference/cglobalheap-class.md)<br/>
+[Classe de CCRTHeap](../../atl/reference/ccrtheap-class.md)<br/>
 [Classe CComHeap](../../atl/reference/ccomheap-class.md)

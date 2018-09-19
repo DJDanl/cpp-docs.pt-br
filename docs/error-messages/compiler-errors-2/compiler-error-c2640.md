@@ -1,5 +1,5 @@
 ---
-title: C2640 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2640 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6951d6d56fa0e93e75725c5ce5b13fec7f3d78f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad39b2a9e3397f97ddc4a900bc45d1983ebbf574
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228869"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085271"
 ---
-# <a name="compiler-error-c2640"></a>C2640 de erro do compilador
-'Identificador': based modificador inválido em referência  
-  
- O `__based` modificador pode ser usado em ponteiros somente.  
-  
- O exemplo a seguir gera C2640:  
-  
-```  
-// C2640.cpp  
-void f(int i) {  
-    void *vp;  
-    int _based(vp) &vr = I;  // C2640  
-}  
+# <a name="compiler-error-c2640"></a>Erro do compilador C2640
+
+'identifier': based modificador inválido em referência
+
+O `__based` modificador pode ser usado em ponteiros apenas.
+
+O exemplo a seguir gera C2640:
+
+```
+// C2640.cpp
+void f(int i) {
+    void *vp;
+    int _based(vp) &vr = I;  // C2640
+}
 ```

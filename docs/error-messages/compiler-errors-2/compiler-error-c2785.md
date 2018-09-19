@@ -1,5 +1,5 @@
 ---
-title: C2785 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2785 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc0ca6235e0fd4bdd22330e807464e96280ae461
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cfae8a58d9c42c9ddc3ef7779fc86f7157ba41b0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234023"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46080851"
 ---
-# <a name="compiler-error-c2785"></a>C2785 de erro do compilador
-'declaration1' e 'declaration2' têm tipos diferentes de retorno  
-  
- O tipo de retorno de especialização de modelo de função é diferente do tipo de retorno do modelo de função primária.  
-  
-### <a name="to-correct-this-error"></a>Para corrigir este erro  
-  
-1.  Verifique se todas as especializações do modelo de função para manter a consistência.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C2785:  
-  
-```  
-// C2785.cpp  
-// compile with: /c  
-template<class T> void f(T);  
-  
-template<> int f(int); // C2785  
-template<> void f(int); // OK  
+# <a name="compiler-error-c2785"></a>Erro do compilador C2785
+
+'declaration1' e 'declaration2' têm diferentes tipos de retorno
+
+O tipo de retorno de especialização de modelo de função é diferente do tipo de retorno do modelo da função primária.
+
+### <a name="to-correct-this-error"></a>Para corrigir este erro
+
+1. Verifique se todas as especializações do modelo da função para manter a consistência.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C2785:
+
+```
+// C2785.cpp
+// compile with: /c
+template<class T> void f(T);
+
+template<> int f(int); // C2785
+template<> void f(int); // OK
 ```

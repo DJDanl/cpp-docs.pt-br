@@ -17,37 +17,40 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ebebb7f69239b62cf276e955fd6e54ef0cf37ea4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 71e693c09d59643a272a0b2736a5a229ef444aa9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684284"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078888"
 ---
 # <a name="ole-db-provider-template-architecture"></a>Arquitetura de modelo do provedor de banco de dados OLE
+
 ## <a name="data-sources-and-sessions"></a>Origens de dados e sessões  
- A arquitetura do provedor OLE DB inclui um objeto de fonte de dados e uma ou mais sessões. O objeto de fonte de dados é o objeto inicial que deve criar uma instância de cada provedor. Quando um aplicativo de consumidor precisa de dados, ele conjunta cria o objeto de fonte de dados para iniciar o provedor. O objeto de fonte de dados cria um objeto de sessão (usando o `IDBCreateSession` interface) por meio do qual o consumidor conecta-se ao objeto de fonte de dados. Programadores ODBC podem pensar que o objeto de fonte de dados como sendo o equivalente para o `HENV` e o objeto de sessão como equivalente ao `HDBC`.  
+
+A arquitetura do provedor OLE DB inclui um objeto de fonte de dados e uma ou mais sessões. O objeto de fonte de dados é o objeto inicial que deve criar uma instância de cada provedor. Quando um aplicativo de consumidor precisa de dados, ele conjunta cria o objeto de fonte de dados para iniciar o provedor. O objeto de fonte de dados cria um objeto de sessão (usando o `IDBCreateSession` interface) por meio do qual o consumidor conecta-se ao objeto de fonte de dados. Programadores ODBC podem pensar que o objeto de fonte de dados como sendo o equivalente para o `HENV` e o objeto de sessão como equivalente ao `HDBC`.  
   
- ![Arquitetura de provedor](../../data/oledb/media/vc4twb1.gif "vc4twb1")  
+![Arquitetura de provedor](../../data/oledb/media/vc4twb1.gif "vc4twb1")  
   
- Junto com os arquivos de origem criados pelo OLE DB Provider assistente, os modelos OLE DB implementam um objeto de fonte de dados. Uma sessão é um objeto que corresponde ao OLE DB `TSession`.  
+Junto com os arquivos de origem criados pelo OLE DB Provider assistente, os modelos OLE DB implementam um objeto de fonte de dados. Uma sessão é um objeto que corresponde ao OLE DB `TSession`.  
   
 ## <a name="mandatory-and-optional-interfaces"></a>Interfaces obrigatórias e opcionais  
- Os modelos de provedor do OLE DB oferecem implementações pré-empacotados para todas as interfaces necessárias. As interfaces obrigatórias e opcionais são definidas por OLE DB para vários tipos de objetos:  
+
+Os modelos de provedor do OLE DB oferecem implementações pré-empacotados para todas as interfaces necessárias. As interfaces obrigatórias e opcionais são definidas por OLE DB para vários tipos de objetos:  
   
--   [Fonte de dados](../../data/oledb/data-source-object-interfaces.md)  
+- [Fonte de dados](../../data/oledb/data-source-object-interfaces.md)  
   
--   [Sessão](../../data/oledb/session-object-interfaces.md)  
+- [Sessão](../../data/oledb/session-object-interfaces.md)  
   
--   [Rowset](../../data/oledb/rowset-object-interfaces.md)  
+- [Rowset](../../data/oledb/rowset-object-interfaces.md)  
   
--   [Comando](../../data/oledb/command-object-interfaces.md)  
+- [Comando](../../data/oledb/command-object-interfaces.md)  
   
--   [Transação](../../data/oledb/transaction-object-interfaces.md)  
+- [Transação](../../data/oledb/transaction-object-interfaces.md)  
   
- Observe que os modelos de provedor do OLE DB não implementam os objetos de armazenamento e de linha.  
+Observe que os modelos de provedor do OLE DB não implementam os objetos de armazenamento e de linha.  
   
- A tabela a seguir lista as interfaces obrigatórias e opcionais para os objetos listados acima, acordo com o [OLE DB 2.6 documentação do SDK](/previous-versions/windows/desktop/ms722784\(v=vs.85\)).  
+A tabela a seguir lista as interfaces obrigatórias e opcionais para os objetos listados acima, acordo com o [OLE DB 2.6 documentação do SDK](/previous-versions/windows/desktop/ms722784\(v=vs.85\)).  
   
 |Componente|Interface|Comentário|  
 |---------------|---------------|-------------|  
@@ -57,12 +60,13 @@ ms.locfileid: "43684284"
 |[Comando](../../data/oledb/command-object-interfaces.md) ([CCommand](ccommand-class.md))|[obrigatório] `IAccessor`<br /><br /> [obrigatório] `IColumnsInfo`<br /><br /> [obrigatório] `ICommand`<br /><br /> [obrigatório] `ICommandProperties`<br /><br /> [obrigatório] `ICommandText`<br /><br /> [obrigatório] `IConvertType`<br /><br /> [opcional] `IColumnsRowset`<br /><br /> [opcional] `ICommandPersist`<br /><br /> [opcional] `ICommandPrepare`<br /><br /> [opcional] `ICommandWithParameters`<br /><br /> [opcional] `ISupportErrorInfo`<br /><br /> [opcional] `ICommandStream`|O objeto de comando manipula operações nos dados, como consultas. Ele pode lidar com as instruções com parâmetros ou sem parâmetros.<br /><br /> O objeto de comando também é responsável por gerenciar associações de parâmetros e colunas de saída. Uma associação é uma estrutura que contém informações sobre como uma coluna, em um conjunto de linhas deve ser recuperada. Ele contém informações como status, tipo de dados, comprimento e ordinal.|  
 |[Transação](../../data/oledb/transaction-object-interfaces.md) (opcional)|[obrigatório] `IConnectionPointContainer`<br /><br /> [obrigatório] `ITransaction`<br /><br /> [opcional] `ISupportErrorInfo`|O objeto de transação define uma unidade atômica de trabalho em uma fonte de dados e determina como as unidades de trabalho se relacionam entre si. Esse objeto não é compatível diretamente pelos modelos de provedor do OLE DB (ou seja, você cria seu próprio objeto).|  
   
- Para mais informações, consulte os seguintes tópicos:  
+Para mais informações, consulte os seguintes tópicos:  
   
--   [Mapas de propriedade](../../data/oledb/property-maps.md)  
+- [Mapas de propriedade](../../data/oledb/property-maps.md)  
   
--   [O registro do usuário](../../data/oledb/user-record.md)  
+- [O registro do usuário](../../data/oledb/user-record.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Interfaces OLE DB](/previous-versions/windows/desktop/ms709709\(v=vs.85\))
+
+[Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Interfaces OLE DB](/previous-versions/windows/desktop/ms709709\(v=vs.85\))

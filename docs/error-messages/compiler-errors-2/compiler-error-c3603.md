@@ -1,5 +1,5 @@
 ---
-title: C3603 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3603 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eec4b4b1df536a176fa05ea9095878ab5e1492cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67adc99491a15503ee5580df37a612eb73013686
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253361"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075874"
 ---
-# <a name="compiler-error-c3603"></a>C3603 de erro do compilador
-'Symbol': tipo 'Type' ainda não tem suporte  
-  
- Você tentou usar um tipo de dados que ainda não é suportado pelo tempo de execução .NET em um objeto gerenciado.
+# <a name="compiler-error-c3603"></a>Erro do compilador C3603
+
+'Symbol': tipo 'Type' ainda não tem suporte
+
+Você tentou usar um tipo de dados que ainda não é compatível com o tempo de execução do .NET em um objeto gerenciado.

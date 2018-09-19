@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de vinculador LNK2008 erro | Microsoft Docs
+title: Erro das LNK2008 das ferramentas de vinculador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4ee6a8a4c4cc6d33f47d5335daa9fccd4e5fd99
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18eda06e7f133ada4de1b7ec28ac21be205a71f7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299559"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086805"
 ---
 # <a name="linker-tools-error-lnk2008"></a>Erro das Ferramentas de Vinculador LNK2008
-O alvo da correção não está alinhado 'symbol_name'  
-  
- LINK encontrado um destino de correção no arquivo de objeto que não foi alinhado corretamente.  
-  
- Esse erro pode ser causado por um alinhamento personalizado secton (por exemplo, #pragma [pacote](../../preprocessor/pack.md)), [alinhar](../../cpp/align-cpp.md) modificador, ou usando o código de linguagem assembly que modifica secton alinhamento.  
-  
- Se seu código não usar qualquer um dos itens acima, isso pode ser causado pelo compilador.
+
+O alvo da correção não está alinhado 'symbol_name'
+
+LINK encontrado um alvo da correção em seu arquivo de objeto não foi devidamente alinhado.
+
+Esse erro pode ser causado pelo alinhamento secton personalizado (#pragma, por exemplo, [pack](../../preprocessor/pack.md)), [alinhar](../../cpp/align-cpp.md) modificador, ou usando o código de linguagem assembly que modifica secton alinhamento.
+
+Se seu código não usa nenhuma das opções acima, isso pode ser causado pelo compilador.

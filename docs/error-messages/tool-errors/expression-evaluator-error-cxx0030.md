@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 669c585c637129c1fb6a480d91b31e5a1264fd22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb2921013d116b7d8f02e1e29380ca3cd14086b9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298110"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102797"
 ---
 # <a name="expression-evaluator-error-cxx0030"></a>Erro CXX0030 (avaliador de expressão)
-expressão não evaluatable  
-  
- O avaliador de expressão do depurador não pôde obter um valor para a expressão como escrito. Uma causa provável é que a expressão se refere a memória que está fora do espaço de endereço do programa (referência de um ponteiro nulo é um exemplo). O Windows não permite acesso à memória que está fora do espaço de endereço do programa.  
-  
- Talvez você queira reescreva a expressão usar parênteses para controlar a ordem de avaliação.  
-  
- Esse erro é idêntico ao CAN0030.
+
+expressão não evaluatable
+
+O avaliador de expressão do depurador não foi possível obter um valor para a expressão como escrito. Uma causa provável é que a expressão se refere a memória que está fora do espaço de endereço do programa (desreferenciar um ponteiro nulo é um exemplo). Windows não permitem acesso à memória que está fora do espaço de endereço do programa.
+
+Você talvez queira reescrever seu usando parênteses para controlar a ordem de avaliação de expressão.
+
+Esse erro é idêntico ao CAN0030.

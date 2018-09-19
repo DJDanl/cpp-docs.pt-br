@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de vinculador LNK1264 erro | Microsoft Docs
+title: Erro das LNK1264 das ferramentas de vinculador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ed21327028fc9849f6e0694bb82ae34c6084842
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8232e83774dc53755b77ad9c8b3bbb2a0bcc6ae6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301457"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46102731"
 ---
 # <a name="linker-tools-error-lnk1264"></a>Erro das Ferramentas de Vinculador LNK1264
-/LTCG:PGINSTRUMENT especificado mas não há geração de código necessária; falhado de instrumentação  
-  
- **/LTCG:PGINSTRUMENT** foi especificado mas. obj não foram encontrados arquivos que foram compilados com [/GL](../../build/reference/gl-whole-program-optimization.md). Não é possível definir a instrumentação local e o link de falha. Deve haver pelo menos um arquivo. obj na linha de comando que é compilado com **/GL** para que seja feita a instrumentação.  
-  
- Otimização Guiada do perfil (PGO) só está disponível no compiladores de 64 bits.
+
+/LTCG:PGINSTRUMENT especificado, mas não há geração de código necessária; falhado de instrumentação
+
+**/LTCG:PGINSTRUMENT** foi especificado mas. obj não foram encontrados arquivos que foram compiladas com [/GL](../../build/reference/gl-whole-program-optimization.md). Não é possível obter a instrumentação local e o link falhou. Deve haver pelo menos um arquivo. obj na linha de comando que é compilado com **/GL** para que a instrumentação possa ocorrer.
+
+Otimização Guiada de perfil (PGO) só está disponível nos compiladores de 64 bits.

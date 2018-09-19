@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc7aefdac322ca8b34bccd2e377534ed1eca47e8
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: d55f3066f2c42737170bdd8d87df95a8ad4a22d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39402706"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078082"
 ---
 # <a name="abort"></a>abort
 
@@ -124,13 +124,13 @@ File could not be opened: No such file or directory
 
 ## <a name="see-also"></a>Consulte também
 
-[Usando abort](../../cpp/using-abort.md)  
-[Função abort](../../c-language/abort-function-c.md)  
-[Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)  
-[Funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)  
-[exit, _Exit, _exit](exit-exit-exit.md)  
-[raise](raise.md)  
-[signal](signal.md)  
-[Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)  
-[_DEBUG](../../c-runtime-library/debug.md)  
-[_set_abort_behavior](set-abort-behavior.md)  
+[Usando abort](../../cpp/using-abort.md)<br/>
+[Função abort](../../c-language/abort-function-c.md)<br/>
+[Controle de processo e de ambiente](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Funções _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[exit, _Exit, _exit](exit-exit-exit.md)<br/>
+[raise](raise.md)<br/>
+[signal](signal.md)<br/>
+[Funções _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_DEBUG](../../c-runtime-library/debug.md)<br/>
+[_set_abort_behavior](set-abort-behavior.md)

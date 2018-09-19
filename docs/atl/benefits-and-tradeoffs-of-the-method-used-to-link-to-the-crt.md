@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b90259a942ea785cfbfee4bfda803d9d7b568d4
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1962b2db987e34a1f0d18fa863473a20f9da7c9d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753871"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084257"
 ---
 # <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>Vantagens e desvantagens do método usado para vincular ao CRT
 
@@ -34,7 +34,7 @@ O tópico [vinculando ao CRT em seu projeto de ATL](../atl/linking-to-the-crt-in
 
 ## <a name="see-also"></a>Consulte também
 
-[Programando com código de tempo de execução de C e ATL](../atl/programming-with-atl-and-c-run-time-code.md)   
-[DLLs e comportamento da biblioteca em tempo de execução Visual C++](../build/run-time-library-behavior.md)   
+[Programando com código de tempo de execução C e da ATL](../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Comportamento de DLLs e da biblioteca em tempo de execução do Visual C++](../build/run-time-library-behavior.md)<br/>
 [Recursos da biblioteca CRT](../c-runtime-library/crt-library-features.md)
 

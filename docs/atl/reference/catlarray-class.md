@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f09bafd0bbda8a64b7a60fe6cacf996106385787
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c08387d5c1a2a9b9b757bab7a8112783a3810065
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753006"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097790"
 ---
 # <a name="catlarray-class"></a>Classe CAtlArray
 
@@ -55,10 +55,10 @@ class CAtlArray
 
 #### <a name="parameters"></a>Parâmetros
 
-*E*  
+*E*<br/>
 O tipo de dados a serem armazenados na matriz.
 
-*ETraits*  
+*ETraits*<br/>
 O código usado para copiar ou mover elementos.
 
 ## <a name="members"></a>Membros
@@ -124,7 +124,7 @@ size_t Add();
 
 ### <a name="parameters"></a>Parâmetros
 
-*Elemento*  
+*Elemento*<br/>
 O elemento a ser adicionado à matriz.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -149,7 +149,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*aSrc*  
+*aSrc*<br/>
 A matriz a ser acrescentado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -222,7 +222,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*aSrc*  
+*aSrc*<br/>
 A origem dos elementos a serem copiados para uma matriz.
 
 ### <a name="remarks"></a>Comentários
@@ -265,7 +265,7 @@ E& GetAt(size_t iElement) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*iElement*  
+*iElement*<br/>
 O valor de índice do elemento da matriz para retornar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -335,10 +335,10 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 
 ### <a name="parameters"></a>Parâmetros
 
-*iStart*  
+*iStart*<br/>
 O índice no qual a matriz deve ser inserido.
 
-*paNew*  
+*paNew*<br/>
 A matriz a ser inserido.
 
 ### <a name="remarks"></a>Comentários
@@ -364,13 +364,13 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 
 ### <a name="parameters"></a>Parâmetros
 
-*iElement*  
+*iElement*<br/>
 O índice no qual o elemento ou elementos devem ser inseridos.
 
-*Elemento*  
+*Elemento*<br/>
 O valor do elemento ou elementos a serem inseridos.
 
-*nCount*  
+*nCount*<br/>
 O número de elementos a serem adicionados.
 
 ### <a name="remarks"></a>Comentários
@@ -414,7 +414,7 @@ const E& operator[](size_t ielement) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*iElement*  
+*iElement*<br/>
 O valor de índice do elemento da matriz para retornar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -463,10 +463,10 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 
 ### <a name="parameters"></a>Parâmetros
 
-*iElement*  
+*iElement*<br/>
 O índice do primeiro elemento a ser removido.
 
-*nCount*  
+*nCount*<br/>
 O número de elementos a serem removidos.
 
 ### <a name="remarks"></a>Comentários
@@ -489,10 +489,10 @@ void SetAt(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>Parâmetros
 
-*iElement*  
+*iElement*<br/>
 O índice que aponta para o elemento de matriz a ser definido.
 
-*Elemento*  
+*Elemento*<br/>
 O novo valor do elemento especificado.
 
 ### <a name="remarks"></a>Comentários
@@ -513,10 +513,10 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nNewSize*  
+*nNewSize*<br/>
 O tamanho necessário da matriz.
 
-*nGrowBy*  
+*nGrowBy*<br/>
 Um valor usado para determinar como grande para tornar o buffer. Um valor -1 faz com que um valor calculado internamente a ser usado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -543,10 +543,10 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ### <a name="parameters"></a>Parâmetros
 
-*iElement*  
+*iElement*<br/>
 O índice que aponta para o elemento de matriz a ser definido.
 
-*Elemento*  
+*Elemento*<br/>
 O novo valor do elemento especificado.
 
 ### <a name="remarks"></a>Comentários
@@ -559,9 +559,9 @@ Substitui o valor do elemento apontado pelo índice. Se *iElement* é maior do q
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo de MMXSwarm](../../visual-cpp-samples.md)   
-[Exemplo de DynamicConsumer](../../visual-cpp-samples.md)   
-[Exemplo de UpdatePV](../../visual-cpp-samples.md)   
-[Exemplo de letreiro](../../visual-cpp-samples.md)   
-[Classe CArray](../../mfc/reference/carray-class.md)   
+[Exemplo de MMXSwarm](../../visual-cpp-samples.md)<br/>
+[Exemplo de DynamicConsumer](../../visual-cpp-samples.md)<br/>
+[Exemplo de UpdatePV](../../visual-cpp-samples.md)<br/>
+[Exemplo de letreiro](../../visual-cpp-samples.md)<br/>
+[Classe CArray](../../mfc/reference/carray-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

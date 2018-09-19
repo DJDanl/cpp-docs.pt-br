@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac922526abec73d7219f64cb1004319e9547fef6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 815a276cb07a91da73acb68a32cceef4b2138325
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757875"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093826"
 ---
 # <a name="idispeventimpl-class"></a>Classe IDispEventImpl
 
@@ -45,31 +45,31 @@ template <UINT nID, class T,
     const GUID* plibid = &GUID_NULL,
     WORD wMajor = 0,
     WORD wMinor = 0, 
-    class tihclass = CcomTypeInfoHolder>  
+    class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*nID*  
+*nID*<br/>
 Um identificador exclusivo para o objeto de origem. Quando `IDispEventImpl` é a classe base para um controle de composição, use a ID de recurso do controle independente desejado para esse parâmetro. Em outros casos, use um inteiro positivo arbitrário.
 
-*T*  
+*T*<br/>
 A classe do usuário, que é derivada de `IDispEventImpl`.
 
-*pdiid*  
+*pdiid*<br/>
 O ponteiro para o IID da dispinterface de eventos implementada por esta classe. Essa interface deve ser definida na biblioteca de tipos, indicada por *plibid*, *wMajor*, e *wMinor*.
 
-*plibid*  
+*plibid*<br/>
 Um ponteiro para a biblioteca de tipos que define a interface de expedição apontada por *pdiid*. Se **& GUID_NULL**, a biblioteca de tipos será carregada a partir do objeto de fornecimento de eventos.
 
-*wMajor*  
+*wMajor*<br/>
 A versão principal da biblioteca de tipos. O valor padrão é 0.
 
-*wMinor*  
+*wMinor*<br/>
 A versão secundária da biblioteca de tipos. O valor padrão é 0.
 
-*tihclass*  
+*tihclass*<br/>
 A classe usada para gerenciar as informações de tipo de *T*. O valor padrão é uma classe do tipo `CComTypeInfoHolder`; no entanto, você pode substituir esse parâmetro de modelo, fornecendo uma classe de um tipo diferente de `CComTypeInfoHolder`.
 
 ## <a name="members"></a>Membros
@@ -143,16 +143,16 @@ HRESULT GetFuncInfoFromId(
 
 ### <a name="parameters"></a>Parâmetros
 
-*IID*  
+*IID*<br/>
 [in] Uma referência para a ID da função.
 
-*dispidMember*  
+*dispidMember*<br/>
 [in] A ID de expedição da função.
 
-*lcid*  
+*lcid*<br/>
 [in] O contexto de localidade da ID da função.
 
-*Informações de*  
+*Informações de*<br/>
 [in] A estrutura que indica como a função é chamada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -213,10 +213,10 @@ VARTYPE GetUserDefinedType(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pTI*  
+*pTI*<br/>
 [in] Um ponteiro para o [ITypeInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interface que contém o tipo definido pelo usuário.
 
-*hrt*  
+*hrt*<br/>
 [in] Um identificador para a descrição do tipo a ser recuperado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -249,10 +249,10 @@ Por padrão, a classe é `CComTypeInfoHolder`. `CComTypeInfoHolder` gerencia as 
 
 ## <a name="see-also"></a>Consulte também
 
-[Estrutura atl_func_info](../../atl/reference/atl-func-info-structure.md)   
-[Classe IDispatchImpl](../../atl/reference/idispatchimpl-class.md)   
-[Classe IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)   
-[SINK_ENTRY](composite-control-macros.md#sink_entry)   
-[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)   
-[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)   
+[Estrutura _ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)<br/>
+[Classe IDispatchImpl](../../atl/reference/idispatchimpl-class.md)<br/>
+[Classe IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)<br/>
+[SINK_ENTRY](composite-control-macros.md#sink_entry)<br/>
+[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)<br/>
+[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

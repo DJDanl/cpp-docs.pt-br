@@ -1,5 +1,5 @@
 ---
-title: C2414 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2414 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22710e0056a7dea65130a65a3ccb9c5310f1c39f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 642cb00605ed13146288edf5d39cb5d0c14c6e9f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226157"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089912"
 ---
-# <a name="compiler-error-c2414"></a>C2414 de erro do compilador
-número de operandos inválido  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
-  
-1.  O código de operação não oferece suporte para o número de operandos usados. Verificar um manual de referência de linguagem de assembly para determinar o número correto de operandos.  
-  
-2.  Um processador mais recente der suporte à instrução com um número diferente de operandos. Ajustar o [/arch (arquitetura mínima de CPU)](../../build/reference/arch-minimum-cpu-architecture.md) opção para usar o processador posterior.
+# <a name="compiler-error-c2414"></a>Erro do compilador C2414
+
+número de operandos inválido
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
+
+1. O opcode não oferece suporte para o número de operandos usados. Verifique um manual de referência de linguagem de assembly para determinar o número correto de operandos.
+
+1. Um processador mais recente oferece suporte a instrução com um número diferente de operandos. Ajustar a [/arch (arquitetura mínima de CPU)](../../build/reference/arch-minimum-cpu-architecture.md) opção para usar o processador posterior.

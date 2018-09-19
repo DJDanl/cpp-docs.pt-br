@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 476dd8b3eeb7174c7584a58ccb5d53bf251adbcc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b6a2e6c334016c79f02dc43e9790d7dfc4645212
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43768002"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075612"
 ---
 # <a name="programming-with-ccombstr-atl"></a>Programando com o CComBSTR (ATL)
 
@@ -88,8 +88,8 @@ Observe que o mesmo código não causará um vazamento de se o parâmetro da fun
 
 ## <a name="see-also"></a>Consulte também
 
-[Conceitos](../atl/active-template-library-atl-concepts.md)   
-[Classe CStringT](../atl-mfc-shared/reference/cstringt-class.md)   
-[wstring](../standard-library/basic-string-class.md)   
+[Conceitos](../atl/active-template-library-atl-concepts.md)<br/>
+[Classe CStringT](../atl-mfc-shared/reference/cstringt-class.md)<br/>
+[wstring](../standard-library/basic-string-class.md)<br/>
 [Macros de conversão de cadeia de caracteres](../atl/reference/string-conversion-macros.md)
 

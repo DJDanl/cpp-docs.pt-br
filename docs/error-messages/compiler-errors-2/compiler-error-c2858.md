@@ -1,5 +1,5 @@
 ---
-title: C2858 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2858 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eabeb17a437b0267e659e2bae74489a22a3551e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cc87f8ceda2daa9a1129b401a20314c082b6452b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245398"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095606"
 ---
-# <a name="compiler-error-c2858"></a>C2858 de erro do compilador
-opção de linha de comando ' /Yc (/ Fdfilename)' inconsistente com cabeçalho pré-compilado, que usado ' / Fdfilename'  
-  
- O banco de dados do programa especificado pelo cabeçalho pré-compilado Use ([/Yu](../../build/reference/yu-use-precompiled-header-file.md)) opção não é especificado pelo anterior criar cabeçalho pré-compilado ([/Yc](../../build/reference/yc-create-precompiled-header-file.md)) opção.
+# <a name="compiler-error-c2858"></a>Erro do compilador C2858
+
+opção de linha de comando ' /Yc (/ Fdfilename)' inconsistente com cabeçalho pré-compilado, que é usado ' / Fdfilename'
+
+O banco de dados do programa especificado pelo cabeçalho pré-compilado Use ([/Yu](../../build/reference/yu-use-precompiled-header-file.md)) opção não é aquele especificado pelo anterior criar cabeçalho pré-compilado ([/Yc](../../build/reference/yc-create-precompiled-header-file.md)) opção.

@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54677e573f36fca65cc46dc5207e8812e4fa4fa6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d2045a6c14a37d270d895a5eeb4fa455711e7354
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752924"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097673"
 ---
 # <a name="ccombstr-class"></a>Classe CComBSTR
 
@@ -141,16 +141,16 @@ HRESULT Append(LPCOLESTR lpsz, int nLen) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3*  
+*1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3*<br/>
 [in] Um `CComBSTR` objeto a ser acrescentado.
 
-*ch*  
+*ch*<br/>
 [in] Um caractere a ser acrescentado.
 
-*lpsz*  
+*lpsz*<br/>
 [in] Uma cadeia de caracteres terminada em zero para acrescentar. Você pode passar uma cadeia de caracteres Unicode por meio da cadeia de caracteres ANSI por meio da versão LPCSTR ou a sobrecarga LPCOLESTR.
 
-*nLen*  
+*nLen*<br/>
 [in] O número de caracteres a partir *lpsz* para acrescentar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -175,7 +175,7 @@ HRESULT AppendBSTR(BSTR p) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*  
+*p*<br/>
 [in] Um BSTR para acrescentar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -200,10 +200,10 @@ HRESULT AppendBytes(const char* lpsz, int nLen) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpsz*  
+*lpsz*<br/>
 [in] Um ponteiro para uma matriz de bytes a ser acrescentado.
 
-*p*  
+*p*<br/>
 [in] O número de bytes a ser acrescentado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -224,7 +224,7 @@ HRESULT ArrayToBSTR(const SAFEARRAY* pSrc) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*pSrc*  
+*pSrc*<br/>
 [in] O safearray que contém os elementos usados para criar a cadeia de caracteres.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -241,7 +241,7 @@ HRESULT AssignBSTR(const BSTR bstrSrc) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3*  
+*1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3*<br/>
 [in] Um BSTR para atribuir a atual `CComBSTR` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -258,7 +258,7 @@ void Attach(BSTR src) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*src*  
+*src*<br/>
 [in] O BSTR para anexar ao objeto.
 
 ### <a name="remarks"></a>Comentários
@@ -282,7 +282,7 @@ HRESULT BSTRToArray(LPSAFEARRAY* ppArray) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*ppArray*  
+*ppArray*<br/>
 [out] O ponteiro para o safearray usado para armazenar os resultados da função.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -315,31 +315,31 @@ O construtor. Construtor padrão define o [m_str](#m_str) membro como NULL.
 
 ```
 CComBSTR() throw();
-CComBSTR(const CComBSTR& src);  
-CComBSTR(REFGUID  guid);  
-CComBSTR(int nSize);  
-CComBSTR(int nSize, LPCOLESTR sz);  
-CComBSTR(int nSize, LPCSTR sz);  
-CComBSTR(LPCOLESTR pSrc);  
-CComBSTR(LPCSTR pSrc);  
+CComBSTR(const CComBSTR& src);
+CComBSTR(REFGUID  guid);
+CComBSTR(int nSize);
+CComBSTR(int nSize, LPCOLESTR sz);
+CComBSTR(int nSize, LPCSTR sz);
+CComBSTR(LPCOLESTR pSrc);
+CComBSTR(LPCSTR pSrc);
 CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*nSize*  
+*nSize*<br/>
 [in] O número de caracteres a serem copiados da *sz* ou o tamanho inicial em caracteres para o `CComBSTR`.
 
-*SZ*  
+*SZ*<br/>
 [in] Uma cadeia de caracteres a serem copiados. A versão Unicode Especifica um LPCOLESTR; a versão ANSI Especifica um LPCSTR.
 
-*pSrc*  
+*pSrc*<br/>
 [in] Uma cadeia de caracteres a serem copiados. A versão Unicode Especifica um LPCOLESTR; a versão ANSI Especifica um LPCSTR.
 
-*src*  
+*src*<br/>
 [in] Um `CComBSTR` objeto.
 
-*guid*  
+*guid*<br/>
 [in] Uma referência a um `GUID` estrutura.
 
 ### <a name="remarks"></a>Comentários
@@ -396,10 +396,10 @@ HRESULT CopyTo(VARIANT* pvarDest) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*pbstr*  
+*pbstr*<br/>
 [out] O endereço do BSTR no qual retornar a cadeia de caracteres alocada por esse método.
 
-*pvarDest*  
+*pvarDest*<br/>
 [out] O endereço de uma VARIANTE no qual retornar a cadeia de caracteres alocada por esse método.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -499,7 +499,7 @@ BSTR m_str;
 
 Converte um `CComBSTR` objeto para um BSTR.
 
-```  
+```
 operator BSTR() const throw();
 ```
 
@@ -544,13 +544,13 @@ bool operator!= (int nNull) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3*  
+*1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3*<br/>
 [in] Um `CComBSTR` objeto.
 
-*pszSrc*  
+*pszSrc*<br/>
 [in] Uma cadeia de caracteres terminada em zero.
 
-*nNull*  
+*nNull*<br/>
 [in] Deve ser NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -586,16 +586,16 @@ Essa asserção não está habilitada por padrão. Defina ATL_CCOMBSTR_ADDRESS_O
 Acrescenta uma cadeia de caracteres para o `CComBSTR` objeto.
 
 ```
-CComBSTR& operator+= (const CComBSTR& bstrSrc);  
+CComBSTR& operator+= (const CComBSTR& bstrSrc);
 CComBSTR& operator+= (const LPCOLESTR pszSrc);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3*  
+*1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3*<br/>
 [in] Um `CComBSTR` objeto a ser acrescentado.
 
-*pszSrc*  
+*pszSrc*<br/>
 [in] Uma cadeia terminada em zero para acrescentar.
 
 ### <a name="remarks"></a>Comentários
@@ -629,8 +629,8 @@ A comparação é realizada usando a localidade do usuário padrão.
 Conjuntos de [m_str](#m_str) membro a uma cópia do *pSrc* ou para uma cópia do membro do BSTR *src*. O operador de atribuição de movimentação move `src` sem copiá-lo.
 
 ```
-CComBSTR& operator= (const CComBSTR& src);  
-CComBSTR& operator= (LPCOLESTR pSrc);  
+CComBSTR& operator= (const CComBSTR& src);
+CComBSTR& operator= (LPCOLESTR pSrc);
 CComBSTR& operator= (LPCSTR pSrc);
 CComBSTR& operator= (CComBSTR&& src) throw(); // (Visual Studio 2017)
 ```
@@ -656,13 +656,13 @@ bool operator== (int nNull) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3*  
+*1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3*<br/>
 [in] Um `CComBSTR` objeto.
 
-*pszSrc*  
+*pszSrc*<br/>
 [in] Uma cadeia de caracteres terminada em zero.
 
-*nNull*  
+*nNull*<br/>
 [in] Deve ser NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -699,7 +699,7 @@ HRESULT ReadFromStream(IStream* pStream) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*pStream*  
+*pStream*<br/>
 [in] Um ponteiro para o [IStream](/windows/desktop/api/objidl/nn-objidl-istream) interface no fluxo que contém os dados.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -756,7 +756,7 @@ HRESULT WriteToStream(IStream* pStream) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*pStream*  
+*pStream*<br/>
 [in] Um ponteiro para o [IStream](/windows/desktop/api/objidl/nn-objidl-istream) interface em um fluxo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -773,5 +773,5 @@ Você pode recriar um BSTR do conteúdo de fluxo usando o [ReadFromStream](#read
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral da classe](../../atl/atl-class-overview.md)   
+[Visão geral da classe](../../atl/atl-class-overview.md)<br/>
 [ATL e Macros de conversão de cadeia de caracteres MFC](string-conversion-macros.md)

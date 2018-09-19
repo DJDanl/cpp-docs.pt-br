@@ -1,5 +1,5 @@
 ---
-title: C2582 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2582 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8a926297f9b0762c629f031da6e12cbe528e87
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 11a78b03794da1e8178c7a65bb0ca5f3cc50867b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228807"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46083984"
 ---
-# <a name="compiler-error-c2582"></a>C2582 de erro do compilador
-função 'function' não está disponível em 'type'  
-  
- Foi feita uma tentativa para atribuir a um objeto que não tem um operador de atribuição.  
-  
- O exemplo a seguir gera C2582:  
-  
-```  
-// C2582.cpp  
-// compile with: /clr  
-using namespace System;  
-  
-struct N {};  
-ref struct O {};  
-ref struct R {  
-   property O prop;   // C2582  
-   property O ^ prop2;   // OK  
-};  
-  
-int main() {  
-   String ^ st1 = gcnew String("");  
-   ^st1 = gcnew String("");   // C2582  
-   st1 = "xxx";   // OK  
-}  
+# <a name="compiler-error-c2582"></a>Erro do compilador C2582
+
+função 'function' não está disponível em 'type'
+
+Foi feita uma tentativa para atribuir a um objeto que não tem um operador de atribuição.
+
+O exemplo a seguir gera C2582:
+
+```
+// C2582.cpp
+// compile with: /clr
+using namespace System;
+
+struct N {};
+ref struct O {};
+ref struct R {
+   property O prop;   // C2582
+   property O ^ prop2;   // OK
+};
+
+int main() {
+   String ^ st1 = gcnew String("");
+   ^st1 = gcnew String("");   // C2582
+   st1 = "xxx";   // OK
+}
 ```

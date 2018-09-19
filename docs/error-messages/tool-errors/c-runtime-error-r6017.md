@@ -1,5 +1,5 @@
 ---
-title: R6017 de erro de tempo de execução C | Microsoft Docs
+title: C R6017 de erro de tempo de execução | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f726f1e01acc20899085f8f1b84f74265843bbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f2437e33610222183aa03a22cf6638156aaaa5e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302718"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46077029"
 ---
-# <a name="c-runtime-error-r6017"></a>R6017 de erro de tempo de execução do C
-Erro inesperado de bloqueio multithread  
-  
+# <a name="c-runtime-error-r6017"></a>C R6017 de erro de tempo de execução
+
+Erro de bloqueio inesperado de multithread
+
 > [!NOTE]
->  Se você receber essa mensagem de erro durante a execução de um aplicativo, o aplicativo foi desligado porque ele tem um problema interno. Há várias razões possíveis para esse erro, mas geralmente é causado por uma falha no código do aplicativo.  
->   
->  Você pode tentar corrigir esse erro com estas etapas:  
->   
->  -   Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para reparar ou reinstalar o programa.  
-> -   Verificar **Windows Update** no **painel de controle** para atualizações de software.  
-> -   Verifique se há uma versão atualizada do aplicativo. Se o problema persistir, entre em contato com o fornecedor do aplicativo.  
-  
- **Informações para os programadores**  
-  
- O processo recebeu um erro inesperado ao tentar acessar um bloqueio de vários threads de tempo de execução C em um recurso do sistema. Esse erro normalmente ocorre se o processo inadvertidamente altera os dados de heap de tempo de execução. No entanto, ele também pode ser causado por um erro interno na biblioteca de tempo de execução ou código de sistema operacional.  
-  
- Para corrigir esse problema, verifique se há erros de corrupção de heap em seu código. Para obter mais informações e exemplos, consulte [detalhes de Heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details). Em seguida, verifique que você está usando o redistribuíveis mais recentes para sua implantação do aplicativo. Para obter informações, consulte [implantação no Visual C++](../../ide/deployment-in-visual-cpp.md).
+>  Se você encontrar esta mensagem de erro durante a execução de um aplicativo, o aplicativo foi encerrado porque ele tem um problema interno. Há várias razões possíveis para esse erro, mas geralmente é causado por um defeito no código do aplicativo.
+>
+>  Você pode tentar corrigir esse erro com estas etapas:
+>
+>  -   Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para reparar ou reinstalar o programa.
+> -   Verifique **Windows Update** na **painel de controle** para atualizações de software.
+> -   Verifique se há uma versão atualizada do aplicativo. Se o problema persistir, entre em contato com o fornecedor do aplicativo.
+
+**Informações para programadores**
+
+O processo recebeu um erro inesperado ao tentar acessar um bloqueio de vários threads de tempo de execução do C em um recurso do sistema. Esse erro geralmente ocorre se o processo inadvertidamente altera os dados de heap do tempo de execução. No entanto, ele também pode ser causado por um erro interno na biblioteca de tempo de execução ou código do sistema operacional.
+
+Para corrigir esse problema, verifique se há bugs de corrupção de heap no seu código. Para obter mais informações e exemplos, consulte [detalhes do Heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details). Em seguida, verifique que você está usando os redistribuíveis mais recentes para sua implantação do aplicativo. Para obter informações, consulte [implantação no Visual C++](../../ide/deployment-in-visual-cpp.md).

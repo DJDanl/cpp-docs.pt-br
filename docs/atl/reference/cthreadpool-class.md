@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9753599f08d1e8ee238097027c501a0b56e40300
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9a5541613bddd1e6a4fbac3a5555e54ce30fb94c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757388"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091693"
 ---
 # <a name="cthreadpool-class"></a>Classe CThreadPool
 
@@ -44,16 +44,16 @@ Essa classe fornece um pool de threads de trabalho que processam uma fila de ite
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template <class Worker, class ThreadTraits = DefaultThreadTraits>  
+template <class Worker, class ThreadTraits = DefaultThreadTraits>
 class CThreadPool : public IThreadPoolConfig
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*Trabalhador*  
+*Trabalhador*<br/>
 A classe em conformidade com o [arquétipo de trabalhador](../../atl/reference/worker-archetype.md) fornecendo o código usado para processar itens em fila no pool de threads de trabalho.
 
-*ThreadTraits*  
+*ThreadTraits*<br/>
 A classe que fornece a função usada para criar os threads no pool.
 
 ## <a name="members"></a>Membros
@@ -180,7 +180,7 @@ HRESULT STDMETHODCALLTYPE GetSize(int* pnNumThreads) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*pnNumThreads*  
+*pnNumThreads*<br/>
 [out] Endereço da variável que, em caso de sucesso, recebe o número de threads no pool.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -197,7 +197,7 @@ HRESULT STDMETHODCALLTYPE GetTimeout(DWORD* pdwMaxWait) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*pdwMaxWait*  
+*pdwMaxWait*<br/>
 [out] Endereço da variável que, em caso de sucesso, recebe o tempo máximo em milissegundos que o pool de threads irá esperar por um segmento para desligar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -222,20 +222,20 @@ HRESULT Initialize(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pvWorkerParam*  
+*pvWorkerParam*<br/>
 O parâmetro de trabalho a serem passados para o objeto de thread de trabalho `Initialize`, `Execute`, e `Terminate` métodos.
 
-*nNumThreads*  
+*nNumThreads*<br/>
 O número solicitado de threads no pool.
 
 Se *nNumThreads* é negativo, seu valor absoluto será multiplicado pelo número de processadores no computador para obter o número total de threads.
 
 Se *nNumThreads* for zero, ATLS_DEFAULT_THREADSPERPROC será multiplicado pelo número de processadores no computador para obter o número total de threads.  O padrão é 2 threads por processador. Se necessário, você pode definir seu próprio valor de número inteiro positivo para esse símbolo antes de incluir atlutil.
 
-*dwStackSize*  
+*dwStackSize*<br/>
 O tamanho da pilha para cada thread no pool.
 
-*hCompletion*  
+*hCompletion*<br/>
 O identificador de um objeto para associar a porta de conclusão.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -264,7 +264,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*Solicitação*  
+*Solicitação*<br/>
 A solicitação a ser enfileirado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -301,7 +301,7 @@ HRESULT STDMETHODCALLTYPE SetSizeint nNumThreads) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*nNumThreads*  
+*nNumThreads*<br/>
 O número solicitado de threads no pool.
 
 Se *nNumThreads* é negativo, seu valor absoluto será multiplicado pelo número de processadores no computador para obter o número total de threads.
@@ -326,7 +326,7 @@ HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 O tempo máximo solicitado em milissegundos que o pool de threads irá esperar por um segmento para desligar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -349,7 +349,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwMaxWait*  
+*dwMaxWait*<br/>
 O tempo máximo solicitado em milissegundos que o pool de threads irá esperar por um segmento para desligar. Se 0 ou nenhum valor for fornecido, esse método usará o tempo limite definido [CThreadPool::SetTimeout](#settimeout).
 
 ### <a name="remarks"></a>Comentários
@@ -358,6 +358,6 @@ Esse método envia uma solicitação de desligamento para todos os threads no po
 
 ## <a name="see-also"></a>Consulte também
 
-[Interface IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)   
-[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
+[Interface IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)<br/>
+[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
 [Classes](../../atl/reference/atl-classes.md)

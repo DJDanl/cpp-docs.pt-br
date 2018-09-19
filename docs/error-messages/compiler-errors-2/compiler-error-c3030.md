@@ -1,5 +1,5 @@
 ---
-title: C3030 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3030 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,43 +16,44 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97e49f413b850237998c9427be7982b36ec4146c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec0bf25c05ed58076bf374b3dcbbf63c62c43555
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245690"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46093760"
 ---
-# <a name="compiler-error-c3030"></a>C3030 de erro do compilador
-'var': variável em cláusula/diretiva 'reduction' não pode ter o tipo de referência  
-  
- Você só pode passar parâmetros de valor para determinados cláusulas, como a cláusula de redução.  
-  
- O exemplo a seguir gera C3030:  
-  
-```  
-// C3030.cpp  
-// compile with: /openmp /link vcomps.lib  
-#include "omp.h"  
-  
-void test(int &r) {  
-   #pragma omp parallel reduction(+ : r)   // C3030  
-      ;  
-}  
-  
-void test2(int r) {  
-   #pragma omp parallel reduction(+ : r)   // OK  
-      ;  
-}  
-  
-int main(int argc, char** argv) {  
-   int& r = *((int*)argv);  
-   int s = *((int*)argv);  
-  
-   #pragma omp parallel reduction(+ : r)   // C3030  
-      ;  
-  
-   #pragma omp parallel reduction(+ : s)   // OK  
-      ;  
-}  
+# <a name="compiler-error-c3030"></a>Erro do compilador C3030
+
+'var': variável em cláusula/diretiva 'reduction' não pode ter o tipo de referência
+
+Você só pode passar parâmetros de valor para determinados cláusulas, como a cláusula de redução.
+
+O exemplo a seguir gera C3030:
+
+```
+// C3030.cpp
+// compile with: /openmp /link vcomps.lib
+#include "omp.h"
+
+void test(int &r) {
+   #pragma omp parallel reduction(+ : r)   // C3030
+      ;
+}
+
+void test2(int r) {
+   #pragma omp parallel reduction(+ : r)   // OK
+      ;
+}
+
+int main(int argc, char** argv) {
+   int& r = *((int*)argv);
+   int s = *((int*)argv);
+
+   #pragma omp parallel reduction(+ : r)   // C3030
+      ;
+
+   #pragma omp parallel reduction(+ : s)   // OK
+      ;
+}
 ```

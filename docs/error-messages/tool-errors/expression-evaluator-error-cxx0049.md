@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d40a823ebcac377198254555181d9821320a848
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea9193363ca5d2fa03ad585816ee618e3c194a16
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295575"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097063"
 ---
 # <a name="expression-evaluator-error-cxx0049"></a>Erro CXX0049 (avaliador de expressão)
-OMF obsoleto - vincule novamente o programa  
-  
- O programa usado um OMF antigo (formato de módulo de objeto).  
-  
- Vincular novamente o programa usando a versão atual do vinculador.  
-  
- Esse erro é idêntico ao CAN0049.
+
+OMF obsoleto - vincule novamente o programa
+
+O programa usado um OMF antigo (formato de módulo de objeto).
+
+Vincular novamente o programa usando a versão atual do vinculador.
+
+Esse erro é idêntico ao CAN0049.

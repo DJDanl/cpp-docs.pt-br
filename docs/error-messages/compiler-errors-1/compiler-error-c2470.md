@@ -1,5 +1,5 @@
 ---
-title: C2470 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2470 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcd0a8d0d860bb4c3514d31099626cc578339149
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8f494f550393bf1fb1a1a17b522b73945a7581e6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196708"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089145"
 ---
-# <a name="compiler-error-c2470"></a>C2470 de erro do compilador
-'function': parece com uma definição de função, mas não há nenhuma lista de parâmetros; Ignorando corpo aparente  
-  
- Uma definição de função está faltando a lista de argumentos.  
-  
- O exemplo a seguir gera C2470:  
-  
-```  
-// C2470.cpp  
-int MyFunc {};  // C2470  
-void MyFunc2() {};  //OK  
-  
-int main(){  
-   MyFunc();  
-   MyFunc2();  
-}  
+# <a name="compiler-error-c2470"></a>Erro do compilador C2470
+
+'function': parece com uma definição de função, mas não há nenhuma lista de parâmetros; Ignorando corpo aparente
+
+Uma definição de função não tem sua lista de argumentos.
+
+O exemplo a seguir gera C2470:
+
+```
+// C2470.cpp
+int MyFunc {};  // C2470
+void MyFunc2() {};  //OK
+
+int main(){
+   MyFunc();
+   MyFunc2();
+}
 ```

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d9f9359bb6dfa1204c32e6902e12c62423291db
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9e3c7c930df13c09afc48f17e7042f2fe846b095
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765871"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075274"
 ---
 # <a name="composite-controls-classes"></a>Classes de controles de composição
 
@@ -36,7 +36,7 @@ A classe a seguir fornece suporte para a criação de controles de composição
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral da classe](../atl/atl-class-overview.md)   
-[Macros de controle de composição](../atl/reference/composite-control-macros.md)   
+[Visão geral da classe](../atl/atl-class-overview.md)<br/>
+[Macros de controle de composição](../atl/reference/composite-control-macros.md)<br/>
 [Funções globais do controle de composição](../atl/reference/composite-control-global-functions.md)
 

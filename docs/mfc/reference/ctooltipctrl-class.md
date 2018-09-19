@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4708f180a1a1f5e936a6b30650a6432d48878d53
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 148bb42b7dc6b650bb85860b0bcce3b70c61318e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726746"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46099866"
 ---
 # <a name="ctooltipctrl-class"></a>Classe CToolTipCtrl
 Encapsula a funcionalidade de um "controle dica de ferramenta," uma pequena janela pop-up que exibe uma única linha de texto que descreve a finalidade de uma ferramenta em um aplicativo.  
@@ -573,24 +573,25 @@ BOOL HitTest(
   
  O `TTHITTESTINFO` estrutura é definida da seguinte maneira:  
   
- `typedef struct _TT_HITTESTINFO { // tthti`  
+```cpp
+typedef struct _TT_HITTESTINFO { // tthti
+    HWND hwnd;   // handle of tool or window with tool
+    POINT pt;    // client coordinates of point to test
+    TOOLINFO ti; // receives information about the tool
+} TTHITTESTINFO, FAR * LPHITTESTINFO;
+```
   
- `HWND hwnd;   // handle of tool or window with tool`  
+- `hwnd`  
+
+   Especifica o identificador da ferramenta.  
   
- `POINT pt;    // client coordinates of point to test`  
+- `pt`  
+
+   Especifica as coordenadas de um ponto, se o ponto está na ferramenta de retângulo delimitador.  
   
- `TOOLINFO ti; // receives information about the tool`  
-  
- `} TTHITTESTINFO, FAR * LPHITTESTINFO;`  
-  
- `hwnd`  
- Especifica o identificador da ferramenta.  
-  
- `pt`  
- Especifica as coordenadas de um ponto, se o ponto está na ferramenta de retângulo delimitador.  
-  
- `ti`  
- Informações sobre a ferramenta. Para obter mais informações sobre o `TOOLINFO` estrutura, consulte [CToolTipCtrl::GetToolInfo](#gettoolinfo).  
+- `ti`  
+
+   Informações sobre a ferramenta. Para obter mais informações sobre o `TOOLINFO` estrutura, consulte [CToolTipCtrl::GetToolInfo](#gettoolinfo).  
   
 ##  <a name="pop"></a>  CToolTipCtrl::Pop  
  Remove uma janela de dica de ferramenta exibido da exibição.  

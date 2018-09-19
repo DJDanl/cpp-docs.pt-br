@@ -23,63 +23,65 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 587ce3800be5c58e4882b6ac3239de614739bcb8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 75f882fe924ba825a5f3ec641a98175104635e92
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219655"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085805"
 ---
 # <a name="raising-software-exceptions"></a>Acionando exceções de software
-Algumas das origens mais comuns de erros do programa não são sinalizadas como exceções pelo sistema. Por exemplo, se você tenta alocar um bloco de memória, mas não há memória suficiente, o tempo de execução ou a função de API não geram uma exceção, mas retornam um código de erro.  
-  
- No entanto, você pode tratar qualquer condição como uma exceção detectando essa condição em seu código e em seguida, o relatório por meio da chamada a [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552) função. Ao sinalizar erros dessa maneira, você aproveitas as vantagens de manipulação de exceções estruturada em qualquer tipo de erro de tempo de execução.  
-  
- Para usar a manipulação de exceção estruturada com erros:  
-  
--   Defina seu próprio código de exceção para o evento.  
-  
--   Chamar `RaiseException` quando detectar um problema.  
-  
--   Use filtros de manipulação de exceções para testar o código de exceção definido.  
-  
- O \<Winerror. h > arquivo mostra o formato para códigos de exceção. Para verificar se você não definiu um código em conflito com um código de exceção existente, defina o terceiro bit mais significativo como 1. Os quatro bit mais significativos devem ser definidos como mostrado na tabela a seguir.  
-  
-|Bits|Configuração binária recomendada|Descrição|  
-|----------|--------------------------------|-----------------|  
-|31-30|11|Esses dois bits descrevem o status básico de código:  11 = erro, 00 = êxito, 01 = informativo, 10 = aviso.|  
-|29|1|Bit cliente. Definido como 1 para códigos definidos pelo usuário.|  
-|28|0|Bit reservado. (Deixe definido como 0.)|  
-  
- Você pode definir os dois primeiros bits com uma configuração diferente do 11 binário se você desejar, embora a configuração de “erro” seja apropriada para a maioria das exceções. É importante lembrar de definir os bits 29 e 28 conforme mostrado na tabela anterior.  
-  
- O código de erro resultante, portanto, deve ter os quatro bits maiores definido com e hexadecimal. Por exemplo, as definições a seguir definem códigos de exceção que não entrem em conflito com os códigos de exceção do Windows. (No entanto, talvez seja necessário verificar se os códigos são usados por DLL de terceiros.)  
-  
-```cpp 
-#define STATUS_INSUFFICIENT_MEM       0xE0000001  
-#define STATUS_FILE_BAD_FORMAT        0xE0000002  
-```  
-  
- Depois que você tiver definido um código de exceção, poderá usá-lo para gerar uma exceção. Por exemplo, o código a seguir gera o `STATUS_INSUFFICIENT_MEM` exceção em resposta a um problema de alocação de memória:  
-  
-```cpp 
-lpstr = _malloc( nBufferSize );  
-if (lpstr == NULL)  
-    RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);  
-```  
-  
- Se você quiser simplesmente gerar uma exceção, pode definir os últimos três parâmetros como 0. Os últimos três parâmetros são úteis para passar informações adicionais e definir um sinalizador que impeça manipuladores de continuarem a execução. Consulte a [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552) função no SDK do Windows para obter mais informações.  
-  
- Em seus filtros de manipulação de exceções, você pode testar os códigos que você definiu. Por exemplo:  
-  
-```cpp 
-__try {  
-    ...  
-}  
-__except (GetExceptionCode() == STATUS_INSUFFICIENT_MEM ||  
-        GetExceptionCode() == STATUS_FILE_BAD_FORMAT )  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Escrevendo um manipulador de exceção](../cpp/writing-an-exception-handler.md)   
- [Tratamento de exceções estruturado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+
+Algumas das origens mais comuns de erros do programa não são sinalizadas como exceções pelo sistema. Por exemplo, se você tenta alocar um bloco de memória, mas não há memória suficiente, o tempo de execução ou a função de API não geram uma exceção, mas retornam um código de erro.
+
+No entanto, você pode tratar qualquer condição como uma exceção detectando essa condição em seu código e em seguida, o relatório por meio da chamada a [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552) função. Ao sinalizar erros dessa maneira, você aproveitas as vantagens de manipulação de exceções estruturada em qualquer tipo de erro de tempo de execução.
+
+Para usar a manipulação de exceção estruturada com erros:
+
+- Defina seu próprio código de exceção para o evento.
+
+- Chamar `RaiseException` quando detectar um problema.
+
+- Use filtros de manipulação de exceções para testar o código de exceção definido.
+
+O \<Winerror. h > arquivo mostra o formato para códigos de exceção. Para verificar se você não definiu um código em conflito com um código de exceção existente, defina o terceiro bit mais significativo como 1. Os quatro bit mais significativos devem ser definidos como mostrado na tabela a seguir.
+
+|Bits|Configuração binária recomendada|Descrição|
+|----------|--------------------------------|-----------------|
+|31-30|11|Esses dois bits descrevem o status básico de código:  11 = erro, 00 = êxito, 01 = informativo, 10 = aviso.|
+|29|1|Bit cliente. Definido como 1 para códigos definidos pelo usuário.|
+|28|0|Bit reservado. (Deixe definido como 0.)|
+
+Você pode definir os dois primeiros bits com uma configuração diferente do 11 binário se você desejar, embora a configuração de “erro” seja apropriada para a maioria das exceções. É importante lembrar de definir os bits 29 e 28 conforme mostrado na tabela anterior.
+
+O código de erro resultante, portanto, deve ter os quatro bits maiores definido com e hexadecimal. Por exemplo, as definições a seguir definem códigos de exceção que não entrem em conflito com os códigos de exceção do Windows. (No entanto, talvez seja necessário verificar se os códigos são usados por DLL de terceiros.)
+
+```cpp
+#define STATUS_INSUFFICIENT_MEM       0xE0000001
+#define STATUS_FILE_BAD_FORMAT        0xE0000002
+```
+
+Depois que você tiver definido um código de exceção, poderá usá-lo para gerar uma exceção. Por exemplo, o código a seguir gera o `STATUS_INSUFFICIENT_MEM` exceção em resposta a um problema de alocação de memória:
+
+```cpp
+lpstr = _malloc( nBufferSize );
+if (lpstr == NULL)
+    RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);
+```
+
+Se você quiser simplesmente gerar uma exceção, pode definir os últimos três parâmetros como 0. Os últimos três parâmetros são úteis para passar informações adicionais e definir um sinalizador que impeça manipuladores de continuarem a execução. Consulte a [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552) função no SDK do Windows para obter mais informações.
+
+Em seus filtros de manipulação de exceções, você pode testar os códigos que você definiu. Por exemplo:
+
+```cpp
+__try {
+    ...
+}
+__except (GetExceptionCode() == STATUS_INSUFFICIENT_MEM ||
+        GetExceptionCode() == STATUS_FILE_BAD_FORMAT )
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Escrevendo um manipulador de exceção](../cpp/writing-an-exception-handler.md)<br/>
+[Tratamento de exceções estruturado (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

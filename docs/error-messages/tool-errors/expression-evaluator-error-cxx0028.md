@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffb894a9960e74fe2b6c2569aab01b66a0de077e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 023c43f33491d17d4500b8d7e668ed9bce5013bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298831"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087418"
 ---
 # <a name="expression-evaluator-error-cxx0028"></a>Erro CXX0028 (avaliador de expressão)
-elemento não struct/união  
-  
- Foi especificada uma expressão do formulário 'Struct.Member' ou 'pStruct -> membro', mas \<membro > não é um elemento da estrutura.  
-  
- A expressão não pode ser corretamente entre parênteses.  
-  
- Esse erro é idêntico ao CAN0028.
+
+elemento não estrutura/união
+
+Foi especificada uma expressão do formulário 'Struct.Member' ou 'pStruct -> membro', mas \<membro > não é um elemento da estrutura.
+
+A expressão não pode ser corretamente entre parênteses.
+
+Esse erro é idêntico ao CAN0028.

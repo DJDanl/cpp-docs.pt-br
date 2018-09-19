@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de vinculador LNK1189 erro | Microsoft Docs
+title: Erro das LNK1189 das ferramentas de vinculador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 220c54181c042d51dc0a3317c81978b25b33d936
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9527c7a741c34f9f75967d9d5465b65cbd1dcfe5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301431"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087923"
 ---
 # <a name="linker-tools-error-lnk1189"></a>Erro das Ferramentas de Vinculador LNK1189
-LIBTOOMANYMEMBERS:: foi excedido o limite do número de objetos na biblioteca  
-  
- O limite de 65535 objetos ou membros em uma biblioteca foi excedido.  
-  
- Para corrigir esse problema, divida sua biblioteca em duas ou mais bibliotecas com menos objetos ou membros.
+
+LIBTOOMANYMEMBERS:: foi excedido o limite do número de objetos na biblioteca
+
+O limite de 65535 objetos ou membros em uma biblioteca foi excedido.
+
+Para corrigir esse problema, divida sua biblioteca em duas ou mais bibliotecas com menos objetos ou membros.

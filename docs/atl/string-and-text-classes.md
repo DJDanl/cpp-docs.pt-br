@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ad1a7e3d55b8ded5722c41a0af0d5d7bd9a25b3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ee52c8cd0c6259f9ad5d0aae23eb03188417057c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751355"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085310"
 ---
 # <a name="string-and-text-classes"></a>Cadeia de caracteres e Classes de texto
 
@@ -44,6 +44,6 @@ Essas classes fornecem suporte para cadeias de caracteres e conversões de cadei
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral da classe](../atl/atl-class-overview.md)   
+[Visão geral da classe](../atl/atl-class-overview.md)<br/>
 [ATL e Macros de conversão de cadeia de caracteres MFC](reference/string-conversion-macros.md)
 

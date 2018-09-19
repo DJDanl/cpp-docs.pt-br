@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08ea48b13b92959652f67c39c05a6ced30e77b2c
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 7dd5a76e08d85e75f7e48e63927ef7b07e85fb40
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337987"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089249"
 ---
 # <a name="cmapwordtoptr-class"></a>Classe CMapWordToPtr
 Dá suporte a mapas de ponteiros nulos fechados por palavras de 16 bits.  
@@ -63,9 +63,7 @@ class CMapWordToPtr : public CObject
 ## <a name="members"></a>Membros  
  As funções membro da `CMapWordToPtr` são semelhantes às funções de membro da classe [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Devido a essa semelhança, é possível usar a documentação de referência da `CMapStringToOb` para obter a função específica de membro. Onde quer que você vê uma `CObject` ponteiro como um parâmetro de função ou um valor de retorno, substitua um ponteiro para **void**. Onde quer que você vê uma `CString` ou um **const** ponteiro para **char** como um parâmetro de função ou um valor de retorno, substitua o WORD.  
   
- `BOOL CMapStringToOb::Lookup( const char* <key>,`  
-  
- `CObject*& <rValue> ) const;`  
+ `BOOL CMapStringToOb::Lookup( const char* <key>, CObject*& <rValue> ) const;`  
   
  por exemplo, traduz para  
   

@@ -1,5 +1,5 @@
 ---
-title: 'PTR:: = | Microsoft Docs'
+title: 'PTR:: Operator = | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c4f9e54ce2bcd6ff402e6ad239b269a3e314286d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8a8b87afba71836876554e1abbe04014cb09772
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33161025"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075067"
 ---
 # <a name="ptroperator"></a>ptr::operator=
 Anexa um objeto COM um `com::ptr`.  
@@ -39,22 +39,22 @@ ptr<_interface_type> % operator=(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `_right`  
- O ponteiro de interface COM para anexar.  
+*à direita*<br/>
+O ponteiro de interface COM para anexar.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Uma referência de controle sobre o `com::ptr`.  
+ Uma referência de rastreamento sobre o `com::ptr`.  
   
 ## <a name="exceptions"></a>Exceções  
  Se o `com::ptr` já possui uma referência a um objeto COM, `operator=` lança <xref:System.InvalidOperationException>.  
   
 ## <a name="remarks"></a>Comentários  
- Atribuição de um objeto COM um `com::ptr` faz referência ao objeto COM, mas não libera a referência do chamador a ele.  
+ Atribuindo um objeto COM um `com::ptr` faz referência ao objeto COM, mas não libera a referência do chamador a ele.  
   
- Este operador tem o mesmo efeito que `Attach`.  
+ Esse operador tem o mesmo efeito que `Attach`.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo implementa uma classe CLR que usa um `com::ptr` para incluir o membro privado `IXMLDOMDocument` objeto.  O `ReplaceDocument` primeiro chamadas de função de membro `Release` em qualquer pertenciam a objeto e, em seguida, usa `operator=` para anexar um novo objeto de documento.  
+ Este exemplo implementa uma classe CLR que usa um `com::ptr` encapsular seu membro privado `IXMLDOMDocument` objeto.  O `ReplaceDocument` chamadas de função de membro primeiro `Release` em qualquer anteriormente pertencentes a objeto e, em seguida, usa `operator=` para anexar um novo objeto de documento.  
   
 ```  
 // comptr_op_assign.cpp  

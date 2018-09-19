@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47089a580285a7d2d0f49848e7e8e5ad90f32616
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dae28f28a07049fa19b56af7efcf43285b2a751b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296907"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092658"
 ---
 # <a name="command-line-warning-d9024"></a>Aviso D9024 (linha de comando)
-fonte não reconhecido 'filename' tipo de arquivo, object assumido de arquivo  
-  
- A extensão do arquivo especificado não foi reconhecida. O arquivo foi considerado como um arquivo de objeto e foi passado para o vinculador.  
-  
- As seguintes extensões são reconhecidas:  
-  
--   c (arquivo de origem C)  
-  
--   . cxx (arquivo de origem C++)  
-  
--   . cpp (arquivo de origem C++)  
-  
--   obj (arquivo de objeto)  
-  
--   . lib (arquivo de biblioteca)  
-  
--   . def (arquivo de definição de módulo)  
-  
--   . EXP (vinculador exporta o arquivo, criado pelo LINK /LIB)
+
+código-fonte não reconhecido 'filename' tipo de arquivo, supõe-se do arquivo de objeto
+
+A extensão do arquivo especificado não foi reconhecida. O arquivo foi considerado como um arquivo de objeto e foi passado para o vinculador.
+
+As seguintes extensões são reconhecidas:
+
+- . c (arquivo de origem de C)
+
+- . cxx (arquivo de origem do C++)
+
+- . cpp (arquivo de origem do C++)
+
+- . obj (arquivo de objeto)
+
+- . lib (arquivo de biblioteca)
+
+- . def (arquivo de definição de módulo)
+
+- . EXP (vinculador exporta o arquivo, criado pelo LINK /LIB)

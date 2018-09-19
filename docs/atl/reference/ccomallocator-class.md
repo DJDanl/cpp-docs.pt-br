@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a35579cc29e2ec964998c3c126c7aadb17de57e0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f867d3a7ca81d190ee363c7539e56a62004eb377
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757832"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088937"
 ---
 # <a name="ccomallocator-class"></a>Classe CComAllocator
 
@@ -65,7 +65,7 @@ static void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*nBytes*  
+*nBytes*<br/>
 O número de bytes para alocar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -86,7 +86,7 @@ static void Free(void* p) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*  
+*p*<br/>
 Ponteiro para a memória alocada.
 
 ### <a name="remarks"></a>Comentários
@@ -103,10 +103,10 @@ static void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*  
+*p*<br/>
 Ponteiro para a memória alocada.
 
-*nBytes*  
+*nBytes*<br/>
 O número de bytes para realocar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -119,6 +119,6 @@ Redimensiona a quantidade de memória alocada. Ver [CoTaskMemRealloc](/windows/d
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CComHeapPtr](../../atl/reference/ccomheapptr-class.md)   
-[Classe CCRTAllocator](../../atl/reference/ccrtallocator-class.md)   
+[Classe CComHeapPtr](../../atl/reference/ccomheapptr-class.md)<br/>
+[Classe CCRTAllocator](../../atl/reference/ccrtallocator-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

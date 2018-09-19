@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3b11a548bc98c44697de45c628205dc3e720971
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9ede37cec7b654c2d5ead32f117e4fe76f28fa60
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686679"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101690"
 ---
 # <a name="schedulerresourceallocationerror-class"></a>Classe scheduler_resource_allocation_error
 Esta classe descreve uma exceção gerada devido a uma falha ao adquirir um recurso crítico no tempo de execução de simultaneidade.  
@@ -50,7 +50,7 @@ class scheduler_resource_allocation_error : public std::exception;
 |[get_error_code](#get_error_code)|Retorna o código de erro que causou a exceção.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa exceção normalmente é lançada quando uma chamada para o sistema operacional de dentro do tempo de execução de simultaneidade falhar. O código de erro que normalmente seria retornado de uma chamada ao método Win32 `GetLastError` é convertido em um valor do tipo `HRESULT` e podem ser recuperados usando o `get_error_code` método.  
+ Essa exceção normalmente é lançada quando a falha de uma chamada para o sistema operacional de dentro do tempo de execução de simultaneidade. O código de erro que normalmente seria retornado de uma chamada para o método do Win32 `GetLastError` é convertido em um valor do tipo `HRESULT` e pode ser recuperado usando o `get_error_code` método.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `exception`  
@@ -58,7 +58,7 @@ class scheduler_resource_allocation_error : public std::exception;
  `scheduler_resource_allocation_error`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** concrt.h  
+ **Cabeçalho:** concrt. h  
   
  **Namespace:** simultaneidade  
   
@@ -87,11 +87,11 @@ explicit _CRTIMP scheduler_resource_allocation_error(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Message`  
- Uma mensagem descritiva do erro.  
+*Mensagem*<br/>
+Uma mensagem descritiva do erro.  
   
- `_Hresult`  
- O `HRESULT` valor do erro que causou a exceção.  
+*_Hresult*<br/>
+O `HRESULT` valor do erro que causou a exceção.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)

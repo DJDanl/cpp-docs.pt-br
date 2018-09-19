@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3582f3fff0ee683889e1b0403554c59835293889
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 39a0938f6faadc05b2fdb3d716417a56512768b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756100"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084544"
 ---
 # <a name="cwindowimpl-class"></a>Classe CWindowImpl
 
@@ -45,19 +45,19 @@ Fornece métodos para criar ou uma janela de subclasses.
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template <class T, class TBase = CWindow, class TWinTraits = CControlWinTraits>  
+template <class T, class TBase = CWindow, class TWinTraits = CControlWinTraits>
 class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 Sua nova classe, derivada de `CWindowImpl`.
 
-*Tdígitos de base*  
+*Tdígitos de base*<br/>
 A classe base da sua classe. Por padrão, é a classe base [CWindow](../../atl/reference/cwindow-class.md).
 
-*TWinTraits*  
+*TWinTraits*<br/>
 Um [classe de características](../../atl/understanding-window-traits.md) que define estilos para a sua janela. O padrão é `CControlWinTraits`.
 
 ## <a name="members"></a>Membros
@@ -153,25 +153,25 @@ HWND Create(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWndParent*  
+*hWndParent*<br/>
 [in] O identificador para a janela pai ou proprietária.
 
-*Rect*  
+*Rect*<br/>
 [in] Um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) especificando a posição da janela de estrutura. O `RECT` pode ser passada por um ponteiro ou referência.
 
-*szWindowName*  
+*szWindowName*<br/>
 [in] Especifica o nome da janela. O valor padrão é NULL.
 
-*dwStyle*  
+*dwStyle*<br/>
 [in] O estilo da janela. Esse valor é combinado com o estilo fornecido pela classe de características da janela. O valor padrão fornece as características de controle completo sobre o estilo de classe. Para obter uma lista de valores possíveis, consulte [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) no SDK do Windows.
 
-*dwExStyle*  
+*dwExStyle*<br/>
 [in] O estilo de janela estendidos. Esse valor é combinado com o estilo fornecido pela classe de características da janela. O valor padrão fornece as características de controle completo sobre o estilo de classe. Para obter uma lista de valores possíveis, consulte [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) no SDK do Windows.
 
-*MenuOrID*  
+*MenuOrID*<br/>
 [in] Para uma janela filho, o identificador de janela. Para uma janela de nível superior, um identificador de menu da janela. O valor padrão é **0U**.
 
-*lpCreateParam*  
+*lpCreateParam*<br/>
 [in] Um ponteiro para dados de criação da janela. Para obter uma descrição completa, consulte a descrição para o parâmetro final [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -205,13 +205,13 @@ LRESULT DefWindowProc();
 
 ### <a name="parameters"></a>Parâmetros
 
-*uMsg*  
+*uMsg*<br/>
 [in] A mensagem enviada para a janela.
 
-*wParam*  
+*wParam*<br/>
 [in] Obter informações adicionais específicas de mensagem.
 
-*lParam*  
+*lParam*<br/>
 [in] Obter informações adicionais específicas de mensagem.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -300,7 +300,7 @@ virtual void OnFinalMessage(HWND hWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWnd*  
+*hWnd*<br/>
 [in] Um identificador para a janela que está sendo destruído.
 
 ### <a name="remarks"></a>Comentários
@@ -317,7 +317,7 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWnd*  
+*hWnd*<br/>
 [in] O identificador para a janela que está sendo uma subclasse.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -357,16 +357,16 @@ static LRESULT CALLBACK WindowProc(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hWnd*  
+*hWnd*<br/>
 [in] O identificador para a janela.
 
-*uMsg*  
+*uMsg*<br/>
 [in] A mensagem enviada para a janela.
 
-*wParam*  
+*wParam*<br/>
 [in] Obter informações adicionais específicas de mensagem.
 
-*lParam*  
+*lParam*<br/>
 [in] Obter informações adicionais específicas de mensagem.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -387,6 +387,6 @@ Você pode substituir `WindowProc` para fornecer um mecanismo diferente para lid
 
 ## <a name="see-also"></a>Consulte também
 
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
-[Classe CComControl](../../atl/reference/ccomcontrol-class.md)   
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
+[Classe CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

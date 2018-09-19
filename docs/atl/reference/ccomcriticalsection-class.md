@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f6009af2026f10ff25983544e6724385246a42f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4678acbe251086f3a42e3544e155a191a5847f11
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755736"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101391"
 ---
 # <a name="ccomcriticalsection-class"></a>Classe CComCriticalSection
 
@@ -157,6 +157,6 @@ Para obter a propriedade pela primeira vez, o thread deve chamar o [bloqueio](#l
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)   
-[Visão geral da classe](../../atl/atl-class-overview.md)   
+[Classe CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)<br/>
+[Visão geral da classe](../../atl/atl-class-overview.md)<br/>
 [Classe CComCritSecLock](../../atl/reference/ccomcritseclock-class.md)

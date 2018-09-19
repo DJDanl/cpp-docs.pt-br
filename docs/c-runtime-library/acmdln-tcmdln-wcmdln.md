@@ -32,30 +32,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 141e261af618cc6058a2a731b70e824582be303b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c9dd8af9b55ab022277737f2349b27eb257810f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386489"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135861"
 ---
 # <a name="acmdln-tcmdln-wcmdln"></a>_acmdln, _tcmdln, _wcmdln
-Variável interna de CRT global. A linha de comando.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-char * _acmdln;  
-wchar_t * _wcmdln;  
-  
-#ifdef WPRFLAG  
-   #define _tcmdln _wcmdln  
-#else  
-   #define _tcmdln _acmdln  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Essas variáveis internas de CRT armazenam toda a linha de comando. Elas ficam expostas nos símbolos exportados para o CRT, mas não devem ser usadas no seu código. `_acmdln` armazena os dados como uma cadeia de caracteres. `_wcmdln` armazena os dados como uma cadeia de caracteres larga. `_tcmdln` pode ser definido como `_acmdln` ou `_wcmdln`, conforme apropriado.  
-  
-## <a name="see-also"></a>Consulte também  
- [Variáveis globais](../c-runtime-library/global-variables.md)
+
+Variável interna de CRT global. A linha de comando.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+char * _acmdln;
+wchar_t * _wcmdln;
+
+#ifdef WPRFLAG
+   #define _tcmdln _wcmdln
+#else
+   #define _tcmdln _acmdln
+```
+
+## <a name="remarks"></a>Comentários
+
+Essas variáveis internas de CRT armazenam toda a linha de comando. Elas ficam expostas nos símbolos exportados para o CRT, mas não devem ser usadas no seu código. `_acmdln` armazena os dados como uma cadeia de caracteres. `_wcmdln` armazena os dados como uma cadeia de caracteres larga. `_tcmdln` pode ser definido como `_acmdln` ou `_wcmdln`, conforme apropriado.
+
+## <a name="see-also"></a>Consulte também
+
+[Variáveis globais](../c-runtime-library/global-variables.md)

@@ -17,17 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 17e2f5ce1ec78b150e6569fb571f9c08e39efe0e
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 2d3c66fdb15a27b027be656ab07152e74d848526
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42572027"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086896"
 ---
 # <a name="retrieving-a-blob"></a>Recuperando um BLOB
+
 Você pode recuperar um objeto binário grande (BLOB) de várias maneiras. Você pode usar `DBTYPE_BYTES` para recuperar o BLOB como uma sequência de bytes ou usar uma interface como `ISequentialStream`. Para obter mais informações, consulte [BLOBS e objetos OLE](/previous-versions/windows/desktop/ms711511\(v=vs.85\)) na *referência do programador DB OLE*.  
   
- O código a seguir mostra como recuperar um BLOB usando `ISequentialStream`. A macro [BLOB_ENTRY](../../data/oledb/blob-entry.md) permite que você especifique a interface e os sinalizadores usados para a interface. Depois de abrir a tabela, o código chama `Read` repetidamente em `ISequentialStream` para ler os bytes do BLOB. O código chama `Release` descartar o ponteiro de interface antes de chamar `MoveNext` para obter o próximo registro.  
+O código a seguir mostra como recuperar um BLOB usando `ISequentialStream`. A macro [BLOB_ENTRY](../../data/oledb/blob-entry.md) permite que você especifique a interface e os sinalizadores usados para a interface. Depois de abrir a tabela, o código chama `Read` repetidamente em `ISequentialStream` para ler os bytes do BLOB. O código chama `Release` descartar o ponteiro de interface antes de chamar `MoveNext` para obter o próximo registro.  
   
 ```cpp  
 class CCategories  
@@ -57,8 +58,9 @@ while (categories.MoveNext() == S_OK)
 }  
 ```  
   
- Para obter mais informações sobre as macros que lidam com dados BLOB, consulte "Macros de mapa de coluna" na [Macros e funções globais para OLE DB modelos de consumidor](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
+Para obter mais informações sobre as macros que lidam com dados BLOB, consulte "Macros de mapa de coluna" na [Macros e funções globais para OLE DB modelos de consumidor](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Usando acessadores](../../data/oledb/using-accessors.md)   
- [Macros e funções globais para modelos de consumidor do OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)
+
+[Usando acessadores](../../data/oledb/using-accessors.md)<br/>
+[Macros e funções globais para modelos de consumidor do OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)

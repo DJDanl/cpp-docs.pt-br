@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de vinculador LNK1103 erro | Microsoft Docs
+title: Erro das LNK1103 das ferramentas de vinculador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8211ef39b3524dbb1c0c3e8d25cabb84ee5f6b5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3abb7472e37edbec80381bbf6b4329d9da718d19
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298214"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095411"
 ---
 # <a name="linker-tools-error-lnk1103"></a>Erro das Ferramentas de Vinculador LNK1103
-informação de depuração corrompida; Recompile o módulo  
-  
- Esse erro pode ocorrer porque a compilação foi encerrada antes de um arquivo de objeto válido foi criado.  
-  
- Recompile o arquivo de objeto em questão. Se a recompilação não corrigir o problema, observe as circunstâncias do erro, tente isolar o problema e criar um caso de teste pode ser reproduzido. Em seguida, consulte o arquivo de Ajuda do suporte técnico ou seção de suporte técnico de sua manuais.
+
+depurando informações corrompidas; Recompile o módulo
+
+Esse erro pode ser causado porque a compilação foi encerrada antes de um arquivo de objeto válido foi criado.
+
+Recompile o arquivo de objeto fornecido. Se a recompilação não corrigir o problema, observe as circunstâncias do erro, tente isolar o problema e criar um caso de teste pode ser reproduzido. Em seguida, consulte o arquivo de Ajuda do suporte técnico, ou na seção de suporte técnico em um dos seus manuais.

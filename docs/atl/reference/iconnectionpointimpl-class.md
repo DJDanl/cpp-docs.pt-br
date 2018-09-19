@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b3e7a0589c0da4d41cab419fa68039e4f0b62c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4b8d3155dd63afa6deb84349c11b0b086d039c4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763348"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091316"
 ---
 # <a name="iconnectionpointimpl-class"></a>Classe IConnectionPointImpl
 
@@ -38,19 +38,19 @@ Essa classe implementa um ponto de conexão.
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template<class T, const IID* piid, class CDV = CComDynamicUnkArray>  
+template<class T, const IID* piid, class CDV = CComDynamicUnkArray>
 class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 Sua classe, derivada de `IConnectionPointImpl`.
 
-*piid*  
+*piid*<br/>
 Um ponteiro para o IID da interface representada pelo objeto de ponto de conexão.
 
-*CDV*  
+*CDV*<br/>
 Uma classe que gerencia as conexões. O valor padrão é [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), que permite conexões ilimitadas. Você também pode usar [CComUnkArray](../../atl/reference/ccomunkarray-class.md), que especifica um número fixo de conexões.
 
 ## <a name="members"></a>Membros
@@ -167,5 +167,5 @@ Ver [IConnectionPoint:: UnAdvise](/windows/desktop/api/ocidl/nf-ocidl-iconnectio
 
 ## <a name="see-also"></a>Consulte também
 
-[IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint)   
+[IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

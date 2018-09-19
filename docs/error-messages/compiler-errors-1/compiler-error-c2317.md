@@ -1,5 +1,5 @@
 ---
-title: C2317 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2317 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82ff1155db69833cad45d9e5df4ccdf016e661e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: adf536fa1fd8976e3e3251514b3b7486eb57456c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33196134"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085362"
 ---
-# <a name="compiler-error-c2317"></a>C2317 de erro do compilador
-bloco 'try' começando na linha 'número' não possui manipuladores catch  
-  
- Um `try` bloco deve ter pelo menos um manipulador catch.  
-  
- O exemplo a seguir gera C2317:  
-  
-```  
-// C2317.cpp  
-// compile with: /EHsc  
-#include <eh.h>  
-int main() {  
-   try {  
-      throw "throw an exception";  
-   }  
-   // C2317, no catch handler  
-}  
-```  
-  
- Possível solução:  
-  
-```  
-// C2317b.cpp  
-// compile with: /EHsc  
-#include <eh.h>  
-int main() {  
-   try {  
-      throw "throw an exception";  
-   }  
-   catch(char*) {}  
-}  
+# <a name="compiler-error-c2317"></a>Erro do compilador C2317
+
+bloco 'try' começando na linha 'number' não possui manipuladores catch
+
+Um `try` bloco deve ter pelo menos um manipulador de catch.
+
+O exemplo a seguir gera C2317:
+
+```
+// C2317.cpp
+// compile with: /EHsc
+#include <eh.h>
+int main() {
+   try {
+      throw "throw an exception";
+   }
+   // C2317, no catch handler
+}
+```
+
+Solução possível:
+
+```
+// C2317b.cpp
+// compile with: /EHsc
+#include <eh.h>
+int main() {
+   try {
+      throw "throw an exception";
+   }
+   catch(char*) {}
+}
 ```

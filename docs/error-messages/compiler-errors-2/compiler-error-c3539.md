@@ -1,5 +1,5 @@
 ---
-title: C3539 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3539 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f704bd283ab5228a8988d587707e978aa5b49e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b2f78b69e00290dcc283e3fc340d25a4a071776
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256396"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091875"
 ---
-# <a name="compiler-error-c3539"></a>C3539 de erro do compilador
-'type': um argumento de template não pode ser um tipo que contenha 'auto'  
-  
- O tipo de argumento de modelo indicado não pode conter um uso do `auto` palavra-chave.  
-  
-### <a name="to-correct-this-error"></a>Para corrigir este erro  
-  
-1.  Não especifique o argumento de modelo com o `auto` palavra-chave.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir produz C3539.  
-  
-```  
-// C3539.cpp  
-// Compile with /Zc:auto  
-template<class T> class C{};  
-int main()  
-{  
-   C<auto> c;   // C3539  
-   return 0;  
-}  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Palavra-chave auto](../../cpp/auto-keyword.md)
+# <a name="compiler-error-c3539"></a>Erro do compilador C3539
+
+'type': um argumento de modelo não pode ser um tipo que contenha 'auto'
+
+O tipo de argumento de modelo indicado não pode conter um uso do `auto` palavra-chave.
+
+### <a name="to-correct-this-error"></a>Para corrigir este erro
+
+1. Não especifique o argumento de modelo com o `auto` palavra-chave.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir produz C3539.
+
+```
+// C3539.cpp
+// Compile with /Zc:auto
+template<class T> class C{};
+int main()
+{
+   C<auto> c;   // C3539
+   return 0;
+}
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Palavra-chave auto](../../cpp/auto-keyword.md)

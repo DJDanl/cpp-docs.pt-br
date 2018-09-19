@@ -1,5 +1,5 @@
 ---
-title: C3666 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3666 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4672cad0f1c0b67b58233c6394e98324a9c32aaf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8637caadbe439b2da3b64593655ddd75177f353b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33264807"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46084075"
 ---
-# <a name="compiler-error-c3666"></a>C3666 de erro do compilador
-'construtor': especificador 'palavra-chave' não é permitido em um construtor de substituição  
-  
- Um especificador de substituição foi usado em um construtor e que não é permitido. Para obter mais informações, consulte [especificadores de substituição](../../windows/override-specifiers-cpp-component-extensions.md).  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C3666.  
-  
-```  
-// C3666.cpp  
-// compile with: /clr /c  
-ref struct R {  
-   R() new {}   // C3666  
-   R(int i) {}   // OK  
-};  
+# <a name="compiler-error-c3666"></a>Erro do compilador C3666
+
+'construtor': especificador 'palavra-chave' não é permitido em um construtor de substituição
+
+Um especificador de substituição foi usado em um construtor, e que não é permitido. Para obter mais informações, consulte [especificadores de substituição](../../windows/override-specifiers-cpp-component-extensions.md).
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C3666.
+
+```
+// C3666.cpp
+// compile with: /clr /c
+ref struct R {
+   R() new {}   // C3666
+   R(int i) {}   // OK
+};
 ```

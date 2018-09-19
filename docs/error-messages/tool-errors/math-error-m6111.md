@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b03937ed442b169b960d573b44c0eb6ebca9660
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95a55ec6b7cdf0b6e4c15bd283dde77c610698fa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317990"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46074819"
 ---
 # <a name="math-error-m6111"></a>Erro M6111 (Math)
-estouro de pilha  
-  
- Uma operação de ponto flutuante resultou em um estouro de pilha no coprocessador 287/8087/387 ou o emulador.  
-  
- Esse erro geralmente é causado por uma chamada para um `long double` função que não retorna um valor. Por exemplo, a seguir gera este erro quando compilado e executado:  
-  
-```  
-long double ld() {};  
-main ()  
-{  
-  ld();  
-}  
-```  
-  
- Programa será encerrado com código de saída 139.
+
+estouro negativo de pilha
+
+Uma operação de ponto flutuante resultou em um estouro de pilha em coprocessador 8087/287/387 ou no emulador.
+
+Esse erro geralmente é causado por uma chamada para um `long double` função que retorna um valor. Por exemplo, a seguir gera este erro quando compilado e executado:
+
+```
+long double ld() {};
+main ()
+{
+  ld();
+}
+```
+
+Programa é encerrado com código de saída 139.

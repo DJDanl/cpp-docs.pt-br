@@ -1,5 +1,5 @@
 ---
-title: C3812 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3812 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37747ebb68b5e965c15ef9763731e0b4d56ac57e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83de08dfb0ea42e99a7ef7185fb3b8fc492bdec8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265818"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101365"
 ---
-# <a name="compiler-error-c3812"></a>C3812 de erro do compilador
-'property' deve ser o primeiro token em uma declaração de propriedade  
-  
- Ao declarar uma propriedade, o `__property` palavra-chave deve ser o primeiro token na linha.  
-  
- C3812 só está acessível usando a opção de compilador obsoleto **/CLR: oldSyntax**.  
+# <a name="compiler-error-c3812"></a>Erro do compilador C3812
+
+'property' deve ser o primeiro token em uma declaração de propriedade
+
+Ao declarar uma propriedade, o `__property` palavra-chave deve ser o primeiro token na linha.
+
+C3812 só está acessível usando a opção de compilador obsoletos **/CLR: oldSyntax**.

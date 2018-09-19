@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4684 | Microsoft Docs
+title: Compilador aviso (nível 1) C4684 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cba83467e4705323eaecd990a7c5c32777990ffb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c640239ef0436c6f76e8658fc4dc8a4403418de8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33280982"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46087845"
 ---
-# <a name="compiler-warning-level-1-c4684"></a>Compilador C4684 de aviso (nível 1)
-'attribute': aviso!! atributo pode causar a geração de código inválido: use com cuidado  
-  
- Você usou um atributo que normalmente não deve ser usado.  
-  
- O exemplo a seguir gera C4684:  
-  
-```  
-// C4684.cpp  
-// compile with: /W1 /LD  
- [module(name="xx")]; // C4684 expected  
-[no_injected_text];  
+# <a name="compiler-warning-level-1-c4684"></a>Compilador aviso (nível 1) C4684
+
+'attribute': aviso!! atributo pode causar a geração de código inválido: use com cuidado
+
+Você usou um atributo que não deve ser usado com frequência.
+
+O exemplo a seguir gera C4684:
+
+```
+// C4684.cpp
+// compile with: /W1 /LD
+[module(name="xx")]; // C4684 expected
+[no_injected_text];
 ```

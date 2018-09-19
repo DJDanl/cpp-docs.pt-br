@@ -1,5 +1,5 @@
 ---
-title: C2167 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2167 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22abe4d25f6f8fe9b8d07195a2fd23b44dd7b19e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0dee381be72124d69a17fd6e3026066bbadfac13
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33167171"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088378"
 ---
-# <a name="compiler-error-c2167"></a>C2167 de erro do compilador
-'function': muitos parâmetros reais para função intrínseca  
-  
- Uma referência a um `intrinsic` função possui muitos parâmetros.
+# <a name="compiler-error-c2167"></a>Erro do compilador C2167
+
+'function': muitos parâmetros reais para função intrínseca
+
+Uma referência a um `intrinsic` função possui muitos parâmetros.

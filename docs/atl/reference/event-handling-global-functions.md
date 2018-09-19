@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcdf854eeeceb1aa3648ff984e3a2c956d973eeb
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: acc8aeb54e98e531756d71d6be389dca8a494f4c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754645"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091446"
 ---
 # <a name="event-handling-global-functions"></a>Funções globais de tratamento de evento
 
@@ -52,7 +52,7 @@ BOOL AtlWaitWithMessageLoop(HANDLE hEvent);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hEvent*  
+*hEvent*<br/>
 [in] O identificador do objeto para aguardar.
 
 ### <a name="return-value"></a>Valor de retorno

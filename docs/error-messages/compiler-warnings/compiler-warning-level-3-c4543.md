@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8434f6ce0a1f57e144bd4f58d2f19c4f3639fb66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2f0c076da0beb765a84485968dd57f72abb9824
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301886"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46075436"
 ---
-# <a name="compiler-warning-level-3-c4543"></a>Compilador C4543 de aviso (nível 3)
-Texto injetado suprimido por atributo 'no_injected_text'  
-  
- O [no_injected_text](../../windows/no-injected-text.md) atributo eram exibidos no código-fonte, que significa que o compilador impedirá atributos de injeção de código.  
-  
- Esse aviso é para lembrá-lo que atributos não poderá inserir um código.
+# <a name="compiler-warning-level-3-c4543"></a>Compilador aviso (nível 3) C4543
+
+Texto injetado suprimido por atributo 'no_injected_text'
+
+O [no_injected_text](../../windows/no-injected-text.md) atributo apareceu no código-fonte, que significa que o compilador impedirá que atributos de injeção de código.
+
+Esse aviso é para lembrá-lo que atributos não poderá injetar código.

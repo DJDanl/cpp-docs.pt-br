@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: df9650c5a013d6308869de002919c33a08b2ae04
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc168596c43c4ea8f26da5157656822b862bdc1e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33105823"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100435"
 ---
 # <a name="autogcrootautogcroot"></a>auto_gcroot::auto_gcroot
 O `auto_gcroot` construtor.  
@@ -46,14 +46,14 @@ auto_gcroot(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `_ptr`  
- O objeto a própria.  
+*PTR*<br/>
+O objeto a própria.  
   
- `_right`  
- Um `auto_gcroot` existente.  
+*à direita*<br/>
+Um `auto_gcroot` existente.  
   
 ## <a name="remarks"></a>Comentários  
- Ao construir um `auto_gcroot` de uma já existente `auto_gcroot`, existente `auto_gcroot` libera o objeto antes de transferir a propriedade do objeto para o novo `auto_gcroot`.  
+ Ao construir um `auto_gcroot` de uma já existente `auto_gcroot`, o existente `auto_gcroot` libera seu objeto antes de transferir a propriedade do objeto para o novo `auto_gcroot`.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -150,5 +150,5 @@ done
 ## <a name="see-also"></a>Consulte também  
  [Membros auto_gcroot](../dotnet/auto-gcroot-members.md)   
  [auto_gcroot::Attach](../dotnet/auto-gcroot-attach.md)   
- [auto_gcroot:: =](../dotnet/auto-gcroot-operator-assign.md)   
+ [auto_gcroot:: Operator =](../dotnet/auto-gcroot-operator-assign.md)   
  [auto_gcroot::~auto_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)

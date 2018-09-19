@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4964 | Microsoft Docs
+title: Compilador aviso (nível 1) C4964 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98226b2da465d2301356939273d370d76edcb64e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f1644e4603bae36ec9d407294dea78a27e60539
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290310"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46086662"
 ---
-# <a name="compiler-warning-level-1-c4964"></a>Compilador C4964 de aviso (nível 1)
-Nenhuma opção de otimização foi especificada; informações de perfil não serão coletadas  
-  
- [/GL](../../build/reference/gl-whole-program-optimization.md) e [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) foram especificadas, mas nenhum otimizações foram solicitados, para que nenhum arquivo. PGC será gerado e, portanto, não será possível nenhuma Otimização Guiada por perfil.  
-  
- Se desejar que os arquivos. PGC para ser gerado quando você executar o aplicativo, especifique uma da [/O](../../build/reference/o-options-optimize-code.md) opções do compilador.  
-  
- O exemplo a seguir gera C4964:  
-  
-```  
-// C4964.cpp  
-// compile with: /W1 /GL /link /ltcg:pgi  
-// C4964 expected  
-// Add /O2, for example, to the command line to resolve this warning.  
-int main() {  
-   int i;  
-}  
+# <a name="compiler-warning-level-1-c4964"></a>Compilador aviso (nível 1) C4964
+
+Não há opções de otimização foram especificadas; informações de perfil não serão coletadas
+
+[/GL](../../build/reference/gl-whole-program-optimization.md) e [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) foram especificados, mas sem otimizações foram solicitados, portanto, nenhum arquivo. PGC será gerado e, portanto, não será possível nenhuma Otimização Guiada por perfil.
+
+Se você quiser arquivos. PGC para ser gerado quando você executar o aplicativo, especifique um dos [/O](../../build/reference/o-options-optimize-code.md) opções do compilador.
+
+O exemplo a seguir gera C4964:
+
+```
+// C4964.cpp
+// compile with: /W1 /GL /link /ltcg:pgi
+// C4964 expected
+// Add /O2, for example, to the command line to resolve this warning.
+int main() {
+   int i;
+}
 ```

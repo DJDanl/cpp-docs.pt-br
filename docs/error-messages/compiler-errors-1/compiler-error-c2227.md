@@ -1,5 +1,5 @@
 ---
-title: C2227 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2227 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a23d055dec45693f292978039c5c5108e34e7a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f446cc09ab8799714141aefb45fa4aefc8b940e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169082"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46078446"
 ---
-# <a name="compiler-error-c2227"></a>C2227 de erro do compilador
-esquerda de '-> membro' deve apontar para o tipo de classe/struct/union/generic  
-  
- O operando à esquerda do `->` não é um ponteiro para uma classe, estrutura ou união.  
-  
- O exemplo a seguir gera C2227:  
-  
-```  
-// C2227.cpp  
-int *pInt;  
-struct S {  
-public:  
-    int member;  
-} s, *pS = &s;  
-  
-int main() {  
-   pInt->member = 0;   // C2227 pInt points to an int  
-   pS->member = 0;   // OK  
-}  
+# <a name="compiler-error-c2227"></a>Erro do compilador C2227
+
+esquerda de '-> membro' deve apontar para o tipo de classe/struct/union/generic
+
+O operando à esquerda do `->` não é um ponteiro para uma classe, estrutura ou união.
+
+O exemplo a seguir gera C2227:
+
+```
+// C2227.cpp
+int *pInt;
+struct S {
+public:
+    int member;
+} s, *pS = &s;
+
+int main() {
+   pInt->member = 0;   // C2227 pInt points to an int
+   pS->member = 0;   // OK
+}
 ```

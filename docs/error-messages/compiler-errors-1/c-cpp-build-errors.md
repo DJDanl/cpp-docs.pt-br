@@ -310,20 +310,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65a6eb5fe80c25912c76e3446efb1ee00413fff1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 14529f9246572299fc6629ec13ff4eab837bb5fd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171266"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095840"
 ---
 # <a name="cc-build-errors"></a>Erros de build do C/C++
 
-Os artigos nesta seção da documentação explicam diagnóstico mensagens de erro e aviso geradas pelas ferramentas de compilação.
+Os artigos nesta seção da documentação explicam o diagnóstico de erro e mensagens de aviso que são geradas por ferramentas de compilação.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência de build do C/C++](../../build/reference/c-cpp-building-reference.md)   
+[Referência de build C/C++](../../build/reference/c-cpp-building-reference.md)<br/>
 [Depurando no Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)

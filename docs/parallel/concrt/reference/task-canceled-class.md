@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f535a4cce75d388437025967b9c0c9b1ae0fd7a
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1e3351700d9e7e7ea466b667e47b105a7229f3d8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690241"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082996"
 ---
 # <a name="taskcanceled-class"></a>Classe task_canceled
-Esta classe descreve uma exceção gerada pela camada de tarefas PPL para forçar a cancelamento da tarefa atual. Ele também é gerado pelo `get()` método [tarefa](/visualstudio/extensibility/debugger/task-class-internal-members), para uma tarefa cancelada.  
+Esta classe descreve uma exceção acionada pela camada de tarefas de PPL para forçar a cancelamento da tarefa atual. Ele também é gerado pela `get()` método no [tarefa](/visualstudio/extensibility/debugger/task-class-internal-members), para uma tarefa cancelada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +48,7 @@ class task_canceled : public std::exception;
  `task_canceled`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** concrt.h  
+ **Cabeçalho:** concrt. h  
   
  **Namespace:** simultaneidade  
   
@@ -63,8 +63,8 @@ task_canceled() throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Message`  
- Uma mensagem descritiva do erro.  
+*Mensagem*<br/>
+Uma mensagem descritiva do erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)

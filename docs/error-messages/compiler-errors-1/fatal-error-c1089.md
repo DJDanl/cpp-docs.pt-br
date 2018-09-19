@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37f60097b1075756a0a44247d40fe2f0ba8a4d9d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8deac0579cedcd369211b3624dc004ca995dc8f4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225804"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46085557"
 ---
 # <a name="fatal-error-c1089"></a>Erro fatal C1089
-Não é possível truncar o arquivo de tipo de arquivo: 'file': mensagem  
-  
- O compilador não é possível reduzir um arquivo para o comprimento de zero.
+
+Não é possível truncar o arquivo do tipo de arquivo: 'file': mensagem
+
+O compilador não é possível reduzir um arquivo para o comprimento de zero.

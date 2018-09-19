@@ -1,5 +1,5 @@
 ---
-title: C3176 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3176 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fedeb9861d725e9c955bb55903b49ef9fefa586
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa2ec269061531688620b89279a9670982c72578
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248463"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104175"
 ---
-# <a name="compiler-error-c3176"></a>C3176 de erro do compilador
-'type': não é possível declarar tipo value local  
-  
- Uma classe só pode ser declarada como um tipo de valor no escopo global.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C3176.  
-  
-```  
-// C3176.cpp  
-// compile with: /clr  
-int main () {  
-   enum class C {};   // C3176  
-}  
+# <a name="compiler-error-c3176"></a>Erro do compilador C3176
+
+'type': não é possível declarar tipo value local
+
+Uma classe somente pode ser declarada como um tipo de valor no escopo global.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C3176.
+
+```
+// C3176.cpp
+// compile with: /clr
+int main () {
+   enum class C {};   // C3176
+}
 ```

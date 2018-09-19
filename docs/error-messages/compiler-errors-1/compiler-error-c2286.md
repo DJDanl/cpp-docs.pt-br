@@ -1,5 +1,5 @@
 ---
-title: C2286 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2286 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ddfb523252572fb985b660f1d4dbf5b1d790df1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e4c3b8a71b29d0d1db5f3bc1eac642122844c22
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171920"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46089119"
 ---
-# <a name="compiler-error-c2286"></a>C2286 de erro do compilador
-ponteiros para membros de representação 'Identificador' já está definida como 'herança' - declaração ignorada  
-  
- Existem duas representações diferentes de ponteiro para membros para a classe.  
-  
- Para obter mais informações, consulte [palavras-chave de herança](../../cpp/inheritance-keywords.md).  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C2286:  
-  
-```  
-// C2286.cpp  
-// compile with: /c  
-class __single_inheritance X;  
-class __multiple_inheritance X;   // C2286  
-class  __multiple_inheritance Y;   // OK  
+# <a name="compiler-error-c2286"></a>Erro do compilador C2286
+
+ponteiros para membros de representação 'identifier' já está definido como 'herança' - declaração ignorada
+
+Existem duas representações diferentes de membros do ponteiro para a classe.
+
+Para obter mais informações, consulte [palavras-chave de herança](../../cpp/inheritance-keywords.md).
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C2286:
+
+```
+// C2286.cpp
+// compile with: /c
+class __single_inheritance X;
+class __multiple_inheritance X;   // C2286
+class  __multiple_inheritance Y;   // OK
 ```

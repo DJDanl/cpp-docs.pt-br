@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c48c9dca72bddc844e94fb7978cb6414aa8fecf5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e93c2e6c26f8704e700465fb706867129847a460
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226201"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46104226"
 ---
 # <a name="fatal-error-c1091"></a>Erro fatal C1091
-limite do compilador: cadeia de caracteres excede 'comprimento' bytes de comprimento  
-  
- Uma constante de cadeia de caracteres excedeu o limite atual de comprimento de cadeias de caracteres.  
-  
- Você talvez queira dividir a cadeia de caracteres estática em duas (ou mais) variáveis e usar [strcpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) para unir o resultado como parte da declaração ou durante o tempo de execução.
+
+limite do compilador: cadeia de caracteres excede bytes 'length' de comprimento
+
+Uma constante de cadeia de caracteres excedeu o limite atual de comprimento de cadeias de caracteres.
+
+Você talvez queira dividir a cadeia de caracteres estática em variáveis de dois (ou mais) e usar [strcpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) para unir o resultado como parte da declaração ou durante o tempo de execução.
