@@ -18,20 +18,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65278571fabf24011960ad577461347f1dfebf73
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ddfe6660854ae4cbdba2398aa4102fd612d17ddc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200512"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114573"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Manipulando notificação TTN_NEEDTEXT para dicas de ferramenta
 Como parte da [habilitando dicas de ferramenta](../mfc/enabling-tool-tips.md), você lidar com as **TTN_NEEDTEXT** mensagem adicionando a seguinte entrada ao mapa de mensagem da janela do proprietário:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_1.cpp)]  
   
- `memberFxn`  
- A função de membro a ser chamado quando o texto é necessário para que esse botão.  
+*memberFxn*<br/>
+A função de membro a ser chamado quando o texto é necessário para que esse botão.  
   
  Observe que a ID de uma dica de ferramenta é sempre 0.  
   
@@ -41,14 +41,14 @@ Como parte da [habilitando dicas de ferramenta](../mfc/enabling-tool-tips.md), v
   
  onde estão os parâmetros em itálico:  
   
- `id`  
- Identificador do controle que enviou a notificação. Não usado. A id do controle é obtida dos **NMHDR** estrutura.  
+*id*<br/>
+Identificador do controle que enviou a notificação. Não usado. A id do controle é obtida dos **NMHDR** estrutura.  
   
- `pNMHDR`  
- Um ponteiro para o [NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa) estrutura. Essa estrutura também é discutida mais detalhadamente em [a estrutura TOOLTIPTEXT](../mfc/tooltiptext-structure.md).  
+*pNMHDR*<br/>
+Um ponteiro para o [NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa) estrutura. Essa estrutura também é discutida mais detalhadamente em [a estrutura TOOLTIPTEXT](../mfc/tooltiptext-structure.md).  
   
- `pResult`  
- Um ponteiro para o código de resultado que você pode definir antes de retornar. **TTN_NEEDTEXT** manipuladores podem ignorar o *pResult* parâmetro.  
+*pResult*<br/>
+Um ponteiro para o código de resultado que você pode definir antes de retornar. **TTN_NEEDTEXT** manipuladores podem ignorar o *pResult* parâmetro.  
   
  Como um exemplo de um manipulador de notificação de exibição de formulário:  
   

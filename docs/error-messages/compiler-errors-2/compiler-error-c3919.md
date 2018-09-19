@@ -1,5 +1,5 @@
 ---
-title: C3919 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3919 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c210e85d9f53ae037852e880e12f3015c925642e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 565146e714e0aa9a3598e4fe5fdeea361454ec78
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270984"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136108"
 ---
-# <a name="compiler-error-c3919"></a>C3919 de erro do compilador
-'event_method': função deve ter o tipo 'type'  
-  
- Um método de acessador de evento não foi declarado corretamente.  
-  
- Para obter mais informações sobre eventos, consulte [evento](../../windows/event-cpp-component-extensions.md).  
-  
- O exemplo a seguir gera C3919:  
-  
-```  
-// C3919.cpp  
-// compile with: /clr /c  
-using namespace System;  
-delegate void D(String^);  
-ref class R {  
-   event D^ e {  
-      int add(int);   // C3919  
-      int remove(int);   // C3919  
-  
-      void add(D^);   // OK  
-      void remove(D^);   // OK  
-   }  
-};  
+# <a name="compiler-error-c3919"></a>Erro do compilador C3919
+
+'event_method': função deve ter o tipo 'type'
+
+Um método de acessador de evento não foi declarado corretamente.
+
+Para obter mais informações sobre eventos, consulte [evento](../../windows/event-cpp-component-extensions.md).
+
+O exemplo a seguir gera C3919:
+
+```
+// C3919.cpp
+// compile with: /clr /c
+using namespace System;
+delegate void D(String^);
+ref class R {
+   event D^ e {
+      int add(int);   // C3919
+      int remove(int);   // C3919
+
+      void add(D^);   // OK
+      void remove(D^);   // OK
+   }
+};
 ```

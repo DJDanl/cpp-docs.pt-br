@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c21ce766ed809a93ccf617ab1f76c438ac5be829
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: a4a62f6e569e123b9612e922e2d7c70787371afc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540368"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136173"
 ---
 # <a name="context-class"></a>Classe Context
 Representa uma abstração para um contexto de execução.  
@@ -210,8 +210,8 @@ void operator delete(void* _PObject);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_PObject`  
- Um ponteiro para o objeto a ser excluído.  
+*_PObject*<br/>
+Um ponteiro para o objeto a ser excluído.  
   
 ##  <a name="oversubscribe"></a> Subscrever 
 
@@ -222,8 +222,8 @@ static void __cdecl Oversubscribe(bool _BeginOversubscription);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_BeginOversubscription`  
- Se `true`, uma indicação de que um processador virtual adicional deve ser adicionado durante o excesso de assinatura. Se `false`, uma indicação de que o excesso de assinatura deve terminar e o processador virtual adicionado anteriormente deve ser removido.  
+*_BeginOversubscription*<br/>
+Se `true`, uma indicação de que um processador virtual adicional deve ser adicionado durante o excesso de assinatura. Se `false`, uma indicação de que o excesso de assinatura deve terminar e o processador virtual adicionado anteriormente deve ser removido.  
   
 ##  <a name="schedulegroupid"></a> ScheduleGroupId 
 

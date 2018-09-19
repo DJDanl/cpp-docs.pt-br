@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07456ebf093f12c7ca418e56f183ceb792460b72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f1ca04ec78d5c8baa2b69f3ec0c05fe84b7bc5f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198411"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115834"
 ---
 # <a name="fatal-error-c1601"></a>Erro fatal C1601
-opcode de assembly embutido não suportado  
-  
- Esse erro indica uma incompatibilidade nos arquivos de .exe de compilador, o que pode ter ocorrido devido a uma instalação incompleta. Por exemplo, você pode ter instalado um service pack, mas não o pacote de processador. Instale todos os produtos necessários.
+
+opcode de assembly embutido não suportado
+
+Esse erro indica uma incompatibilidade nos seus arquivos de .exe do compilador, que pode ter ocorrido devido a uma instalação incompleta. Por exemplo, você pode ter instalado um service pack, mas não o pacote de processador. Instale todos os produtos necessários.

@@ -1,5 +1,5 @@
 ---
-title: C2863 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2863 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 272697a43f99993565fe9af13cde7de29289a93d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4df5c82a14d24a8da1d296ff6f04dd4adcd98a0f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262407"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136030"
 ---
-# <a name="compiler-error-c2863"></a>C2863 de erro do compilador
-'interface': uma interface não pode possuir friends  
-  
- Declarar amigos em uma interface não é permitido.  
-  
- O exemplo a seguir gera C2863:  
-  
-```  
-// C2863.cpp  
-// compile with: /c  
-#include <unknwn.h>  
-  
-class CMyClass {  
-   void *f();  
-};   
-  
-__interface IMyInterface {  
-   void g();  
-  
-   friend int h();   // 2863  
-   friend interface IMyInterface1;  // C2863  
-   friend void *CMyClass::f();  // C2863  
-};  
+# <a name="compiler-error-c2863"></a>Erro do compilador C2863
+
+'interface': uma interface não pode possuir friends
+
+Declarar amigos em uma interface não é permitido.
+
+O exemplo a seguir gera C2863:
+
+```
+// C2863.cpp
+// compile with: /c
+#include <unknwn.h>
+
+class CMyClass {
+   void *f();
+};
+
+__interface IMyInterface {
+   void g();
+
+   friend int h();   // 2863
+   friend interface IMyInterface1;  // C2863
+   friend void *CMyClass::f();  // C2863
+};
 ```

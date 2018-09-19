@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 077c5a52cf7ac8383fa3b917b3d53867e19ca370
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9c81b62cee3a8c26b0d4ace61b8104f6eaee9db6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686419"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114378"
 ---
 # <a name="schedulerworkercreationerror-class"></a>Classe scheduler_worker_creation_error
 Esta classe descreve uma exceção gerada devido a uma falha ao criar um contexto de execução do trabalho no tempo de execução de simultaneidade.  
@@ -43,7 +43,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
 |[scheduler_worker_creation_error](#ctor)|Sobrecarregado. Constrói um objeto `scheduler_worker_creation_error`.|  
   
 ## <a name="remarks"></a>Comentários  
- Essa exceção normalmente é lançada quando uma chamada para o sistema operacional para criar contextos de execução de dentro do tempo de execução de simultaneidade falhar. Contextos de execução são threads que executam tarefas em tempo de execução de simultaneidade. O código de erro que normalmente seria retornado de uma chamada ao método Win32 `GetLastError` é convertido em um valor do tipo `HRESULT` e podem ser recuperados usando o método da classe base `get_error_code`.  
+ Essa exceção normalmente é lançada quando a falha de uma chamada para o sistema operacional para criar os contextos de execução de dentro do tempo de execução de simultaneidade. Contextos de execução são threads que executam tarefas no tempo de execução de simultaneidade. O código de erro que normalmente seria retornado de uma chamada para o método do Win32 `GetLastError` é convertido em um valor do tipo `HRESULT` e pode ser recuperado usando o método de classe base `get_error_code`.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `exception`  
@@ -53,7 +53,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
  `scheduler_worker_creation_error`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** concrt.h  
+ **Cabeçalho:** concrt. h  
   
  **Namespace:** simultaneidade  
   
@@ -71,11 +71,11 @@ explicit _CRTIMP scheduler_worker_creation_error(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Message`  
- Uma mensagem descritiva do erro.  
+*Mensagem*<br/>
+Uma mensagem descritiva do erro.  
   
- `_Hresult`  
- O `HRESULT` valor do erro que causou a exceção.  
+*_Hresult*<br/>
+O `HRESULT` valor do erro que causou a exceção.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)

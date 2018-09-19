@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59ac4e878ee67e03498d4d29efe7c91d34c1b4c7
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3d0a0606e531b4343bf8b5569daa5034c827dcb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688577"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46114547"
 ---
 # <a name="tiledextent-class"></a>Classe tiled_extent
-Um `tiled_extent` objeto é um `extent` objeto de um a três dimensões que subdivide o espaço de extensão em uma, duas ou blocos tridimensionais.  
+Um `tiled_extent` objeto é um `extent` objeto de um a três dimensões que subdividem o espaço de extensão em uma, duas ou blocos.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -56,14 +56,14 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Dim0`  
- O comprimento da dimensão mais significativo.  
+*_Dim0*<br/>
+O comprimento da dimensão mais significativa.  
   
- `_Dim1`  
- O comprimento da dimensão próximo ao mais significativo.  
+*_Dim1*<br/>
+O comprimento da dimensão Avançar mais significativa.  
   
- `_Dim2`  
- O comprimento da dimensão menos significativo.  
+*_Dim2*<br/>
+O comprimento da dimensão menos significativa.  
   
 ## <a name="members"></a>Membros  
   
@@ -78,31 +78,31 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[get_tile_extent](#get_tile_extent)|Retorna um `extent` que captura os valores do objeto de `tiled_extent` argumentos de template `_Dim0`, `_Dim1`, e `_Dim2`.|  
-|[pad](#pad)|Retorna um novo `tiled_extent` objeto com extensões ajustada a ser divisível por dimensões lado a lado.|  
-|[Truncar](#truncate)|Retorna um novo `tiled_extent` objeto com extensões ajustada para baixo para ser divisível por dimensões lado a lado.|  
+|[get_tile_extent](#get_tile_extent)|Retorna um `extent` que captura os valores do objeto de `tiled_extent` argumentos do modelo `_Dim0`, `_Dim1`, e `_Dim2`.|  
+|[pad](#pad)|Retorna um novo `tiled_extent` objeto com as extensões ajustadas para ser igualmente divisível pelas dimensões do bloco.|  
+|[Truncar](#truncate)|Retorna um novo `tiled_extent` objeto com as extensões ajustadas para baixo para ser igualmente divisível pelas dimensões do bloco.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Copia o conteúdo de especificado `tiled_index` deste objeto.|  
+|[operator=](#operator_eq)|Copia o conteúdo especificado `tiled_index` esse objeto.|  
 
   
 ### <a name="public-constants"></a>Constantes públicas  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Constante tile_dim0](#tile_dim0)|Armazena o comprimento da dimensão mais significativo.|  
-|[Constante tile_dim1](#tile_dim1)|Armazena o comprimento da dimensão próximo ao mais significativo.|  
-|[Constante tile_dim2](#tile_dim2)|Armazena o comprimento da dimensão menos significativo.|  
+|[Constante tile_dim0](#tile_dim0)|Armazena o comprimento da dimensão mais significativa.|  
+|[Constante tile_dim1](#tile_dim1)|Armazena o comprimento da dimensão Avançar mais significativa.|  
+|[Constante tile_dim2](#tile_dim2)|Armazena o comprimento da dimensão menos significativa.|  
 
   
 ### <a name="public-data-members"></a>Membros de Dados Públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[tile_extent](#tile_extent)|Obtém um `extent` que captura os valores do objeto de `tiled_extent` argumentos de template `_Dim0`, `_Dim1`, e `_Dim2`.|  
+|[tile_extent](#tile_extent)|Obtém uma `extent` que captura os valores do objeto de `tiled_extent` argumentos do modelo `_Dim0`, `_Dim1`, e `_Dim2`.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `extent`  
@@ -110,7 +110,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
  `tiled_extent`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** amp.h  
+ **Cabeçalho:** amp. h  
   
  **Namespace:** Simultaneidade  
 
@@ -130,14 +130,14 @@ tiled_extent(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Other`  
- O `extent` ou `tiled_extent` objeto a ser copiado.  
+*Outro*<br/>
+O `extent` ou `tiled_extent` objeto a ser copiado.  
   
 
   
 
 ## <a name="get_tile_extent"> </a>  get_tile_extent   
-Retorna um `extent` que captura os valores do objeto de `tiled_extent` argumentos de template `_Dim0`, `_Dim1`, e `_Dim2`.  
+Retorna um `extent` que captura os valores do objeto de `tiled_extent` argumentos do modelo `_Dim0`, `_Dim1`, e `_Dim2`.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -146,11 +146,11 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um `extent` que captura as dimensões desse objeto `tiled_extent` instância.  
+ Uma `extent` objeto que captura as dimensões dessa `tiled_extent` instância.  
   
 
 ## <a name="pad"> </a>  pad   
-Retorna um novo `tiled_extent` objeto com extensões ajustada a ser divisível por dimensões lado a lado.  
+Retorna um novo `tiled_extent` objeto com as extensões ajustadas para ser igualmente divisível pelas dimensões do bloco.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -159,9 +159,9 @@ tiled_extent pad() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- O novo `tiled_extent` objeto, por valor. 
+ O novo `tiled_extent` objeto por valor. 
 ## <a name="truncate"> </a>  Truncar   
-Retorna um novo `tiled_extent` objeto com extensões ajustada para baixo para ser divisível por dimensões lado a lado.  
+Retorna um novo `tiled_extent` objeto com as extensões ajustadas para baixo para ser igualmente divisível pelas dimensões do bloco.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -170,10 +170,10 @@ tiled_extent truncate() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- Retorna um novo `tiled_extent` objeto com extensões ajustada para baixo para ser divisível por dimensões lado a lado.  
+ Retorna um novo `tiled_extent` objeto com as extensões ajustadas para baixo para ser igualmente divisível pelas dimensões do bloco.  
 
 ## <a name="operator_eq"> </a>  operator=   
-Copia o conteúdo de especificado `tiled_index` deste objeto.  
+Copia o conteúdo especificado `tiled_index` esse objeto.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -183,14 +183,14 @@ tiled_extent&  operator= (
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Other`  
- O `tiled_index` objeto do qual copiar.  
+*Outro*<br/>
+O `tiled_index` objeto do qual copiar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Uma referência a este `tiled_index` instância.  
 
 ## <a name="tile_dim0"> </a>  tile_dim0   
-Armazena o comprimento da dimensão mais significativo.  
+Armazena o comprimento da dimensão mais significativa.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -199,7 +199,7 @@ static const int tile_dim0 = _Dim0;
 ```  
   
 ## <a name="tile_dim1"> </a>  tile_dim1   
-Armazena o comprimento da dimensão próximo ao mais significativo.  
+Armazena o comprimento da dimensão Avançar mais significativa.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -207,7 +207,7 @@ Armazena o comprimento da dimensão próximo ao mais significativo.
 static const int tile_dim1 = _Dim1;  
 ```  
 ## <a name="tile_dim2"> </a>  tile_dim2   
-Armazena o comprimento da dimensão menos significativo.  
+Armazena o comprimento da dimensão menos significativa.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -215,7 +215,7 @@ Armazena o comprimento da dimensão menos significativo.
 static const int tile_dim2 = _Dim2;  
 ```  
 ## <a name="tile_extent"> </a>  tile_extent   
-  Obtém um `extent` que captura os valores do objeto de `tiled_extent` argumentos de template `_Dim0`, `_Dim1`, e `_Dim2`.  
+  Obtém uma `extent` que captura os valores do objeto de `tiled_extent` argumentos do modelo `_Dim0`, `_Dim1`, e `_Dim2`.  
   
 ### <a name="syntax"></a>Sintaxe  
   

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656ede7c36fae4619cd356421a302b142a08ff19
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 352f3e5ebd9606cc355ea9af65739c3e17894298
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761882"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136290"
 ---
 # <a name="composite-control-macros"></a>Macros de controle de composição
 
@@ -34,7 +34,7 @@ Essas macros definem os mapas de coleta de eventos e entradas.
 |[BEGIN_SINK_MAP](#begin_sink_map)|Marca o início do mapa do coletor de eventos para o controle composto.|
 |[END_SINK_MAP](#end_sink_map)|Marca o fim do mapa do coletor de eventos para o controle composto.|
 |[SINK_ENTRY](#sink_entry)|Entrada no mapa de coletor de eventos.|
-|[SINK_ENTRY_EX](#sink_entry_ex)|Entrada no mapa de coletor de eventos com um parâmetro adicional.| 
+|[SINK_ENTRY_EX](#sink_entry_ex)|Entrada no mapa de coletor de eventos com um parâmetro adicional.|
 |[SINK_ENTRY_EX_P](#sink_entry_ex)| (Visual Studio 2017) Semelhante ao SINK_ENTRY_EX, exceto que assume um ponteiro para um iid.|
 |[SINK_ENTRY_INFO](#sink_entry_info)|Entrada no mapa de coletor de eventos com informações de tipo fornecido manualmente para uso com [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md).|
 |[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017) Semelhante ao SINK_ENTRY_INFO, exceto que assume um ponteiro para um iid.|
@@ -53,7 +53,7 @@ BEGIN_SINK_MAP(_class)
 
 ### <a name="parameters"></a>Parâmetros
 
-*classe*  
+*classe*<br/>
 [in] Especifica o controle.
 
 ### <a name="example"></a>Exemplo
@@ -90,13 +90,13 @@ SINK_ENTRY( id, dispid, fn )
 
 ### <a name="parameters"></a>Parâmetros
 
-*id*  
+*id*<br/>
 [in] Identifica o controle.
 
-*DISPID*  
+*DISPID*<br/>
 [in] Identifica o evento especificado.
 
-*Fn*  
+*Fn*<br/>
 [in] Nome da função de manipulador de eventos. Essa função deve usar o `_stdcall` convenção de chamada e ter a assinatura de estilo de dispinterface apropriado.
 
 ### <a name="example"></a>Exemplo
@@ -118,19 +118,19 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parâmetros
 
-*id*  
+*id*<br/>
 [in] Identifica o controle.
 
-*IID*  
+*IID*<br/>
 [in] Identifica a interface de expedição.  
 
-*piid*  
+*piid*<br/>
 [in] Ponteiro para a interface de expedição.
 
-*DISPID*  
+*DISPID*<br/>
 [in] Identifica o evento especificado.
 
-*Fn*  
+*Fn*<br/>
 [in] Nome da função de manipulador de eventos. Essa função deve usar o `_stdcall` convenção de chamada e ter a assinatura de estilo de dispinterface apropriado.
 
 ### <a name="example"></a>Exemplo
@@ -152,22 +152,22 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Parâmetros
 
-*id*  
+*id*<br/>
 [in] Inteiro sem sinal de identificar a origem do evento. Esse valor deve corresponder a *nID* parâmetro de modelo usado na relacionado [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) classe base.
 
-*IID*  
+*IID*<br/>
 [in] IID que identifica a interface de expedição.  
 
-*piid*  
+*piid*<br/>
 [in] Ponteiro para um IID que identifica a interface de expedição.
 
-*DISPID*  
+*DISPID*<br/>
 [in] DISPID identifica o evento especificado.
 
-*Fn*  
+*Fn*<br/>
 [in] Nome da função de manipulador de eventos. Essa função deve usar o `_stdcall` convenção de chamada e ter a assinatura de estilo de dispinterface apropriado.
 
-*Informações de*  
+*Informações de*<br/>
 [in] Informações de tipo para a função de manipulador de eventos. Essas informações de tipo são fornecidas na forma de um ponteiro para um `_ATL_FUNC_INFO` estrutura. CC_CDECL é a única opção com suporte no Windows CE para o campo conv do `_ATL_FUNC_INFO` estrutura. Não há suporte para qualquer outro valor, portanto, seu comportamento é indefinido.
 
 ### <a name="remarks"></a>Comentários
@@ -176,5 +176,5 @@ Os parâmetros de quatro primeiros macro são os mesmos para o [SINK_ENTRY_EX](#
 
 ## <a name="see-also"></a>Consulte também
 
-[Macros](../../atl/reference/atl-macros.md)   
+[Macros](../../atl/reference/atl-macros.md)<br/>
 [Funções globais do controle de composição](../../atl/reference/composite-control-global-functions.md)

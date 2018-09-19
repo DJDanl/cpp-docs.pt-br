@@ -1,5 +1,5 @@
 ---
-title: Recurso compilador Erro Fatal RW1025 | Microsoft Docs
+title: RW1025 de Erro Fatal do compilador de recurso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ba216e63cb0cae92b4541800493a2fb6195553a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2bf7bdeed320c004ffb75fa1d25d9b89147b0c13
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320008"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117394"
 ---
 # <a name="resource-compiler-fatal-error-rw1025"></a>Erro fatal RW1025 (compilador de recurso)
-Sem memória heap distante  
-  
- Verifique se há software residentes na memória que pode ser ocupando muito espaço. Use o programa CHKDSK para saber quanta memória você tiver.  
-  
- Se você estiver criando um arquivo de recurso grande, divida o script de recurso em dois arquivos. Depois de criar dois arquivos. res, use a linha de comando MS-DOS para reuni-las:  
-  
-```  
-copy first.res /b + second.res /b full.res  
+
+Falta de memória de heap distante
+
+Verifique se há software residente na memória que pode ser ocupando muito espaço. Use o programa CHKDSK para descobrir quanta memória você tiver.
+
+Se você estiver criando um arquivo de recursos grandes, dividir o script de recurso em dois arquivos. Depois de criar dois arquivos. res, use a linha de comando do MS-DOS para reuni-las:
+
+```
+copy first.res /b + second.res /b full.res
 ```

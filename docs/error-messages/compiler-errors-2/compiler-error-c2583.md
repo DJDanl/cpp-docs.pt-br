@@ -1,5 +1,5 @@
 ---
-title: C2583 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2583 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae9ef120d3dba9bc3c337d02aac302fce85f3905
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3aad4a818d0c8869681f9a2f4c4ace0edb63cd02
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228296"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117524"
 ---
-# <a name="compiler-error-c2583"></a>C2583 de erro do compilador
-'Identificador': ' const/volatile' ponteiro 'this' é inválido para construtores/destrutores  
-  
- Um construtor ou destruidor é declarado `const` ou `volatile`. Isso não é permitido.  
-  
- O exemplo a seguir gera C2583:  
-  
-```  
-// C2583.cpp  
-// compile with: /c  
-class A {  
-public:  
-   int i;  
-   A() const;   // C2583  
-  
-   // try the following line instead  
-   // A();  
-};  
+# <a name="compiler-error-c2583"></a>Erro do compilador C2583
+
+'identifier': ' const/volatile' ponteiro 'this' é inválido para construtores/destrutores
+
+Um construtor ou destruidor for declarado `const` ou `volatile`. Isso não é permitido.
+
+O exemplo a seguir gera C2583:
+
+```
+// C2583.cpp
+// compile with: /c
+class A {
+public:
+   int i;
+   A() const;   // C2583
+
+   // try the following line instead
+   // A();
+};
 ```

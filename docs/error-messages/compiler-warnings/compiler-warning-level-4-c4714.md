@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 4) de aviso C4714 | Microsoft Docs
+title: Compilador aviso (nível 4) C4714 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,55 +16,56 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0f327e7ffc5d2fe00abe3c0845af10a846243bf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ecb9ecb1c73373ae96c92c911988a512e2173cec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295412"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136095"
 ---
-# <a name="compiler-warning-level-4-c4714"></a>Compilador C4714 de aviso (nível 4)
-função 'function' marcada como forceinline não embutida  
-  
- A função fornecida foi selecionada para expansão embutida, mas o compilador não executou o inlining.  
-  
- Embora `__forceinline` é uma indicação mais forte para o compilador que `__inline`, inlining ainda é realizada a critério do compilador, mas nenhum heurística é usadas para determinar os benefícios de inlining essa função.  
-  
- Em alguns casos, o compilador será embutido não uma função específica por motivos mecânicos. Por exemplo, o compilador vai não embutido:  
-  
--   Uma função se resultaria em combinação SEH e C++ EH.  
-  
--   Algumas funções de cópia construído objetos passados por valor quando o /EHS / - GX//EHa está ativado.  
-  
--   Funções que retornam um objeto unwindable por valor quando o /EHS / - GX//EHa está ativado.  
-  
--   Funções com assembly embutido ao compilar sem - Og/Ox/O1/O2.  
-  
--   Funções com uma lista de argumentos variável.  
-  
--   Uma função com um **tente** instrução (tratamento de exceções C++).  
-  
- O exemplo a seguir gera C4714:  
-  
-```  
-// C4714.cpp  
-// compile with: /Ob1 /GX /W4  
-__forceinline void func1()  
-{  
-   try  
-   {  
-   }  
-   catch (...)  
-   {  
-   }  
-}  
-  
-void func2()  
-{  
-   func1();   // C4714  
-}  
-  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-4-c4714"></a>Compilador aviso (nível 4) C4714
+
+função 'function' marcada como forceinline não embutida
+
+A função fornecida foi selecionada para expansão embutida, mas o compilador não executou o inlining.
+
+Embora `__forceinline` é uma indicação mais forte para o compilador que `__inline`, inlining ainda é executada, a critério do compilador, mas nenhum heurística é usada para determinar os benefícios de inlining essa função.
+
+Em alguns casos, o compilador não embutirá uma função específica por motivos de mecânicos. Por exemplo, o compilador não embutirá:
+
+- Uma função se resultaria na combinação de SEH e C++ EH.
+
+- Algumas funções de cópia construído objetos passados por valor quando EHs / - GX//EHa está ativado.
+
+- Funções que retornam um objeto liberáveis por valor quando EHs / - GX//EHa está ativado.
+
+- Funções com assembly embutido ao compilar sem - Og/Ox/O1/O2.
+
+- Funções com uma lista de argumentos variável.
+
+- Uma função com um **tente** instrução (tratamento de exceções do C++).
+
+O exemplo a seguir gera C4714:
+
+```
+// C4714.cpp
+// compile with: /Ob1 /GX /W4
+__forceinline void func1()
+{
+   try
+   {
+   }
+   catch (...)
+   {
+   }
+}
+
+void func2()
+{
+   func1();   // C4714
+}
+
+int main()
+{
+}
 ```

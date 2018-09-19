@@ -242,12 +242,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db46ca389272674da215801c0da83f38e7a3ef2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a0200f15ab7a5c97699165a34d52ec6ce1f239e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703879"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136329"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Classe CMFCRibbonBaseElement
 O `CMFCRibbonBaseElement` classe é a classe base para todos os elementos que você pode adicionar a um [barra de faixa de opções](../../mfc/reference/cmfcribbonbar-class.md). Exemplos de elementos de faixa de opções são a faixa de opções como botões, caixas de seleção de faixa de opções e caixas de combinação da faixa de opções.  
@@ -568,12 +568,11 @@ virtual void DrawImage(
  Por padrão, esse método não fará nada. Substitua este método em uma classe derivada para desenhar a imagem para o elemento de faixa de opções.  
   
  A tabela a seguir lista os possíveis valores para o *tipo* parâmetro:  
-  
- `RibbonImageLarge`  
- Tamanho da imagem grande 32 x 32 pixels.  
-  
- `RibbonImageSmall`  
- Tamanho da imagem pequena 16 x 16 pixels.  
+
+|||
+|-|-|
+| `RibbonImageLarge`  | Tamanho da imagem grande 32 x 32 pixels.  |
+| `RibbonImageSmall`  | Tamanho da imagem pequena 16 x 16 pixels.  |
   
 ##  <a name="find"></a>  CMFCRibbonBaseElement::Find  
  Retorna o ponteiro especificado se ele apontar para o objeto atual.  

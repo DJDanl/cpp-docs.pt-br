@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8964a373378c0959c2836cca4de309853f29c077
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: af30dd9d7ff6ac64d6c0659520a6e7a15f2d0d93
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689396"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116627"
 ---
 # <a name="operationtimedout-class"></a>Classe operation_timed_out
 Esta classe descreve uma exceção gerada quando uma operação foi atingido.  
@@ -40,7 +40,7 @@ class operation_timed_out : public std::exception;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[operation_timed_out](#ctor)|Sobrecarregado. Constrói uma `operation_timed_out` objeto.|  
+|[operation_timed_out](#ctor)|Sobrecarregado. Constrói um `operation_timed_out` objeto.|  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `exception`  
@@ -48,13 +48,13 @@ class operation_timed_out : public std::exception;
  `operation_timed_out`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** concrt.h  
+ **Cabeçalho:** concrt. h  
   
  **Namespace:** simultaneidade  
   
 ##  <a name="ctor"></a> operation_timed_out 
 
- Constrói uma `operation_timed_out` objeto.  
+ Constrói um `operation_timed_out` objeto.  
   
 ```
 explicit _CRTIMP operation_timed_out(_In_z_ const char* _Message) throw();
@@ -63,8 +63,8 @@ operation_timed_out() throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Message`  
- Uma mensagem descritiva do erro.  
+*Mensagem*<br/>
+Uma mensagem descritiva do erro.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)

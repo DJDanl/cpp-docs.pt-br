@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4999 | Microsoft Docs
+title: Compilador aviso (nível 1) C4999 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 980f6c4a3d1f6e05009dfe7531f1233b210002f1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3f74b124c414bc2efc43c953cb3c6bccb9f731a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296514"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135926"
 ---
-# <a name="compiler-warning-level-1-c4999"></a>Compilador C4999 de aviso (nível 1)
-Menu desconhecido aviso de Ajuda, escolha o comando de suporte técnico ou abrir o arquivo de Ajuda do suporte técnico para obter mais informações  
-  
- Observe as circunstâncias do erro, tente isolar o problema e criar um caso de teste pode ser reproduzido, em seguida, entre em contato com [Microsoft Product Support Services](/visualstudio/ide/talk-to-us).
+# <a name="compiler-warning-level-1-c4999"></a>Compilador aviso (nível 1) C4999
+
+DESCONHECIDO aviso do menu de Ajuda, escolha o comando de suporte técnico ou abrir o arquivo de Ajuda do suporte técnico para obter mais informações
+
+Observe as circunstâncias do erro, tente isolar o problema e criar um caso de teste pode ser reproduzido, em seguida, entre em contato com [Microsoft Product Support Services](/visualstudio/ide/talk-to-us).

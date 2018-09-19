@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da0db5c678b257e3039644627e958bd67b8e4e0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fe111f84a5ebf056cb0a806e90cb660060bbf3b4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226390"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135913"
 ---
 # <a name="fatal-error-c1053"></a>Erro fatal C1053
-'\<identificador >': função muito grande  
-  
- A função é muito grande para compilar.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir usando as seguintes soluções possíveis  
-  
-1.  Tente compilar sem otimizações.  
-  
-2.  Divida a função em funções menores.  
-  
-3.  Reduza as chamadas para funções embutidas.
+
+'\<identificador >': função muito grande
+
+A função é muito grande para compilar.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir usando as seguintes soluções possíveis
+
+1. Tente compilar sem otimizações.
+
+1. Divida a função em funções menores.
+
+1. Reduza as chamadas para funções embutidas.

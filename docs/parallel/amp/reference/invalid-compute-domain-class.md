@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 588f12e04f3a2833da6d67c07ab41929d916a4b5
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: def102ecb8063f82d90d41b2b678ff22638b1f8b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705205"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116003"
 ---
 # <a name="invalidcomputedomain-class"></a>Classe invalid_compute_domain
-A exceção que é lançada quando o tempo de execução não pode iniciar um kernel usando o domínio de computação especificado no [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) site de chamada.  
+A exceção que é lançada quando o tempo de execução não pode iniciar um kernel usando o domínio de cálculo especificado na [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) site de chamada.  
 
   
 ## <a name="syntax"></a>Sintaxe  
@@ -52,7 +52,7 @@ class invalid_compute_domain : public runtime_exception;
  `invalid_compute_domain`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** amprt.h  
+ **Cabeçalho:** amprt. h  
   
  **Namespace:** Simultaneidade  
 
@@ -70,11 +70,11 @@ invalid_compute_domain() throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Message`  
- Uma descrição do erro.  
+*Mensagem*<br/>
+Uma descrição do erro.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Uma instância do `invalid_compute_domain` classe  
+ Uma instância da `invalid_compute_domain` classe  
     
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade (C++ AMP)](concurrency-namespace-cpp-amp.md)

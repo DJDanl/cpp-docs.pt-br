@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07f0dc0e8dca08e8b0de47b73516d3fdfa21435b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6960d8168bd818e4d1baa30e5e54940e6e4dc2e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225336"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115444"
 ---
 # <a name="fatal-error-c1055"></a>Erro fatal C1055
-limite do compilador: sem chaves  
-  
- O arquivo de origem contém um número excessivo de símbolos. O compilador insuficiente de chaves de hash para a tabela de símbolos.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir usando as seguintes soluções possíveis  
-  
-1.  Divida o arquivo de origem em arquivos menores.  
-  
-2.  Elimine arquivos de cabeçalho desnecessários.  
-  
-3.  Reutilize variáveis globais e temporários em vez de criar novos.
+
+limite do compilador: sem chaves
+
+O arquivo de origem contém muitos símbolos. O compilador ficou sem as chaves de hash para a tabela de símbolo.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir usando as seguintes soluções possíveis
+
+1. Divida o arquivo de origem em arquivos menores.
+
+1. Elimine arquivos de cabeçalho desnecessários.
+
+1. Reutilize variáveis temporárias e globais, em vez de criar novos.

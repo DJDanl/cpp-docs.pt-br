@@ -1,5 +1,5 @@
 ---
-title: C3262 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3262 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,54 +16,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd5e593e41a6a2b81b2326978542c61ff2468d4e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 928ab2f6d12abb757d904417d28bd86e25be94a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247342"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46115860"
 ---
-# <a name="compiler-error-c3262"></a>C3262 de erro do compilador
-indexação de array inválida: dimensões '#' especificado para '#'-dimensional 'tipo de matriz'  
-  
-Uma matriz foi incorretamente subscrito. O número de índices não pode coincidir com o número de dimensões da matriz.  
-  
-O exemplo a seguir gera C3262:  
-  
-```  
-// C3262.cpp  
-// compile with: /clr  
-#using <mscorlib.dll>  
-using namespace System;  
-  
-#define ARRAY_SIZE 2  
-  
-ref class MyClass {  
-public:  
-   int m_i;  
-};  
-  
-// returns a multidimensional managed array of a reference type  
-array<MyClass^, 2>^ Test0() {  
-   int i, j;  
-   array< MyClass^, 2 >^ local = new array< MyClass^, 2 >  
-      (ARRAY_SIZE, ARRAY_SIZE);  
-  
-   for (i = 0 ; i < ARRAY_SIZE ; i++)  
-      for (j = 0 ; j < ARRAY_SIZE ; j++) {  
-         local[i][j] = new MyClass;   // C3262  
-         // try the following line instead  
-         // local[i,j] = new MyClass;     
-         local[i,j] -> m_i = i;  
-      }  
-  
-      return local;  
-}  
-  
-int main() {     
-   int i, j;  
-  
-   array< MyClass^, 2 >^ MyClass0;  
-   MyClass0 = Test0();  
-}  
-```  
+# <a name="compiler-error-c3262"></a>Erro do compilador C3262
+
+indexação de array inválida: '#' dimensão (ões) especificada para '#'-dimensional 'tipo de matriz'
+
+Uma matriz era incorretamente subscrita. O número de índices pode não corresponder ao número de dimensões na matriz.
+
+O exemplo a seguir gera C3262:
+
+```
+// C3262.cpp
+// compile with: /clr
+#using <mscorlib.dll>
+using namespace System;
+
+#define ARRAY_SIZE 2
+
+ref class MyClass {
+public:
+   int m_i;
+};
+
+// returns a multidimensional managed array of a reference type
+array<MyClass^, 2>^ Test0() {
+   int i, j;
+   array< MyClass^, 2 >^ local = new array< MyClass^, 2 >
+      (ARRAY_SIZE, ARRAY_SIZE);
+
+   for (i = 0 ; i < ARRAY_SIZE ; i++)
+      for (j = 0 ; j < ARRAY_SIZE ; j++) {
+         local[i][j] = new MyClass;   // C3262
+         // try the following line instead
+         // local[i,j] = new MyClass;
+         local[i,j] -> m_i = i;
+      }
+
+      return local;
+}
+
+int main() {
+   int i, j;
+
+   array< MyClass^, 2 >^ MyClass0;
+   MyClass0 = Test0();
+}
+```

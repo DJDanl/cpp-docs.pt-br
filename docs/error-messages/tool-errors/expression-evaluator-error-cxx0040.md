@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb71bad9fd6f6e1de1bd10b204e720bfee036abc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ff0f0d446094ad7a0f9a96ed73c2c6c5e5af209
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295425"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46117550"
 ---
 # <a name="expression-evaluator-error-cxx0040"></a>Erro CXX0040 (avaliador de expressão)
-função requer conversão implícita  
-  
- O avaliador de expressão C não oferece suporte a conversões implícitas que envolvem chamadas de construtor.  
-  
- Esse erro é idêntico ao CAN0040.
+
+função requer conversão implícita
+
+O avaliador de expressão C não oferece suporte a conversões implícitas que envolvem chamadas do construtor.
+
+Esse erro é idêntico ao CAN0040.

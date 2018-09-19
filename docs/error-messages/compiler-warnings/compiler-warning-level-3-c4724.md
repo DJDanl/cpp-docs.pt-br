@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 351a859dc557e862ee4c22b3a78f8de289bdb053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31c65f3ab2dd5e9bfb5c1acd9f183892feebea56
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295263"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135875"
 ---
-# <a name="compiler-warning-level-3-c4724"></a>Compilador C4724 de aviso (nível 3)
-possível mod por 0  
-  
- O segundo operando em uma operação de restante é avaliada como zero em tempo de compilação, fornecendo resultados indefinidos.
+# <a name="compiler-warning-level-3-c4724"></a>Compilador aviso (nível 3) C4724
+
+possível mod por 0
+
+O segundo operando em uma operação restante avaliada como zero em tempo de compilação, fornecendo resultados indefinidos.

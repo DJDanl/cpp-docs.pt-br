@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef417232d62c664b4943a2198ae351a5c443b089
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8fc187cea874d16522955dcd46c2ceac34d29098
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763741"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46136148"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de depuração e relatório de erros
 
@@ -97,7 +97,7 @@ ATLASSERT(booleanExpression);
 
 ### <a name="parameters"></a>Parâmetros
 
-*booleanExpression*  
+*booleanExpression*<br/>
 Expressão (incluindo ponteiros) avaliada como diferente de zero ou igual a 0.
 
 ### <a name="remarks"></a>Comentários
@@ -119,10 +119,10 @@ ATLENSURE_THROW(booleanExpression, hr);
 
 ### <a name="parameters"></a>Parâmetros
 
-*booleanExpression*  
+*booleanExpression*<br/>
 Especifica uma expressão booleana a ser testado.
 
-*hr*  
+*hr*<br/>
 Especifica um código de erro para retornar.
 
 ### <a name="remarks"></a>Comentários
@@ -155,7 +155,7 @@ ATLTRACENOTIMPL(funcname);
 
 ### <a name="parameters"></a>Parâmetros
 
-*funcname*  
+*funcname*<br/>
 [in] Uma cadeia de caracteres que contém o nome da função que não está implementado.
 
 ### <a name="remarks"></a>Comentários
@@ -185,16 +185,16 @@ ATLTRACE(
 
 ### <a name="parameters"></a>Parâmetros
 
-*exp*  
+*exp*<br/>
 [in] A cadeia de caracteres e variáveis a serem enviadas para a janela de saída do Visual C++ ou qualquer aplicativo que intercepta essas mensagens.
 
-*category*  
+*category*<br/>
 [in] Tipo de evento ou método no qual a relatório. Consulte os comentários para obter uma lista de categorias.
 
-*Nível*  
+*Nível*<br/>
 [in] O nível de rastreamento para o relatório. Consulte os comentários para obter detalhes.
 
-*lpszFormat*  
+*lpszFormat*<br/>
 [in] A cadeia de caracteres formatada para enviar para o dispositivo de despejo.
 
 ### <a name="remarks"></a>Comentários
@@ -216,16 +216,16 @@ ATLTRACE2(
 
 ### <a name="parameters"></a>Parâmetros
 
-*exp*  
+*exp*<br/>
 [in] A cadeia de caracteres para enviar para a janela de saída do Visual C++ ou qualquer aplicativo que intercepta essas mensagens.
 
-*category*  
+*category*<br/>
 [in] Tipo de evento ou método no qual a relatório. Consulte os comentários para obter uma lista de categorias.
 
-*Nível*  
+*Nível*<br/>
 [in] O nível de rastreamento para o relatório. Consulte os comentários para obter detalhes.
 
-*lpszFormat*  
+*lpszFormat*<br/>
 [in] O `printf`-cadeia de caracteres de formato usar para criar uma cadeia de caracteres para enviar para o dispositivo de despejo de estilo.
 
 ### <a name="remarks"></a>Comentários
@@ -295,5 +295,5 @@ ATLTRACE e ATLTRACE2 têm o mesmo comportamento, ATLTRACE é incluído para comp
 
 ## <a name="see-also"></a>Consulte também
 
-[Macros](../../atl/reference/atl-macros.md)   
+[Macros](../../atl/reference/atl-macros.md)<br/>
 [Funções globais de relatório de erros e depuração](../../atl/reference/debugging-and-error-reporting-global-functions.md)

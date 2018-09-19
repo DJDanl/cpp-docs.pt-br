@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f985d206a342611dfccb4f05347b0ecc9e9521b0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 80beb5e840e182396f519b6b827dd8d727252d61
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314646"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116237"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>Inicialização uniforme e delegação de construtores
+
 No C++ moderno, você pode usar *chave de inicialização* para qualquer tipo, sem o sinal de igual. Além disso, você pode usar construtores de delegação para simplificar o seu código quando você tem vários construtores que executam um trabalho semelhante.
 
 ## <a name="brace-initialization"></a>Inicialização da chave
+
 Você pode usar a inicialização da chave para qualquer classe, struct ou união. Se um tipo tem um construtor padrão, implícita ou explicitamente declarado, você pode usar a inicialização da chave padrão (com chaves vazias). Por exemplo, a classe a seguir pode ser inicializada usando o padrão e a inicialização da chave não padrão:
 
 ```cpp
@@ -99,6 +101,7 @@ return { 4.5 };
 ```
 
 ## <a name="initializerlist-constructors"></a>initializer_list construtores
+
 O [classe initializer_list](../standard-library/initializer-list-class.md) representa uma lista de objetos de um tipo especificado que pode ser usado em um construtor e em outros contextos. Você pode construir um initializer_list, usando a inicialização da chave:
 
 ```cpp
@@ -127,6 +130,7 @@ regex rgx{'x', 'y', 'z'};
 ```
 
 ## <a name="delegating-constructors"></a>Construtores de delegação
+
 Muitas classes de tem vários construtores que fazem coisas semelhantes — por exemplo, validar parâmetros:
 
 ```cpp

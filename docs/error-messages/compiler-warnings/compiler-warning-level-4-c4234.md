@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 4) de aviso C4234 | Microsoft Docs
+title: Compilador aviso (nível 4) C4234 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8d5b7a2999b77c0b34ee925f5dd85a0a27c63f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6ce6ba622cb480096144706589a01dee7326f38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293511"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118226"
 ---
-# <a name="compiler-warning-level-4-c4234"></a>Compilador C4234 de aviso (nível 4)
-extensão não padrão usada: palavra-chave de 'palavra-chave' reservada para uso futuro  
-  
- O compilador ainda não implementa a palavra-chave que você usou.  
-  
- Esse aviso é promovido automaticamente a um erro. Se você quiser modificar esse comportamento, use [#pragma aviso](../../preprocessor/warning.md). Por exemplo, para tornar um problema do aviso de nível 4, C4234  
-  
-```  
-#pragma warning(2:4234)  
-```  
-  
- no arquivo de código fonte.
+# <a name="compiler-warning-level-4-c4234"></a>Compilador aviso (nível 4) C4234
+
+extensão não padrão usada: palavra-chave de 'palavra-chave' reservada para uso futuro
+
+O compilador ainda não implementa a palavra-chave que você usou.
+
+Esse aviso é promovido automaticamente a um erro. Se você quiser modificar esse comportamento, use [#pragma aviso](../../preprocessor/warning.md). Por exemplo, para tornar um problema de aviso de nível 4, C4234
+
+```
+#pragma warning(2:4234)
+```
+
+no arquivo de código fonte.

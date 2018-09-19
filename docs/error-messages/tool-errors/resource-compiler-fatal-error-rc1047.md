@@ -1,5 +1,5 @@
 ---
-title: Recurso compilador Erro Fatal RC1047 | Microsoft Docs
+title: RC1047 de Erro Fatal do compilador de recurso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9d2451c9ec7bf5217b3f2e559b7a604a7aa65f4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a7c2e1fe8437e4d187033f8ffceaf6506e71d20
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318634"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135848"
 ---
 # <a name="resource-compiler-fatal-error-rc1047"></a>Erro fatal RC1047 (compilador de recurso)
-"opções de muitos opção, 'string'"  
-  
- A opção de determinada foi especificada várias vezes. A cadeia de caracteres fornecida é o argumento para a opção que causou o erro.
+
+"opções de muitos opção, 'string'"
+
+A opção de determinado foi especificada várias vezes. Cadeia de caracteres especificada é o argumento para a opção que causou o erro.

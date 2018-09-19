@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3c6db8a46e0b0e8d490019b18fc67dc7bf1e226
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b6eb8c7ed32e780ddaf31dfd6167f59fd55de9da
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763439"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46116770"
 ---
 # <a name="ccomcurrency-class"></a>Classe CComCurrency
 
@@ -118,45 +118,45 @@ CComCurrency() throw();
 CComCurrency(const CComCurrency& curSrc) throw();
 CComCurrency(CURRENCY cySrc) throw();
 CComCurrency(DECIMAL dSrc);
-CComCurrency(ULONG ulSrc);  
-CComCurrency(USHORT usSrc);  
-CComCurrency(CHAR cSrc);  
-CComCurrency(DOUBLE dSrc);  
-CComCurrency(FLOAT fSrc);  
-CComCurrency(LONG lSrc);  
-CComCurrency(SHORT sSrc);  
-CComCurrency(BYTE bSrc);  
-CComCurrency(LONGLONG nInteger, SHORT nFraction);  
-explicit CComCurrency(LPDISPATCH pDispSrc);  
-explicit CComCurrency(const VARIANT& varSrc);  
-explicit CComCurrency(LPCWSTR szSrc);  
+CComCurrency(ULONG ulSrc);
+CComCurrency(USHORT usSrc);
+CComCurrency(CHAR cSrc);
+CComCurrency(DOUBLE dSrc);
+CComCurrency(FLOAT fSrc);
+CComCurrency(LONG lSrc);
+CComCurrency(SHORT sSrc);
+CComCurrency(BYTE bSrc);
+CComCurrency(LONGLONG nInteger, SHORT nFraction);
+explicit CComCurrency(LPDISPATCH pDispSrc);
+explicit CComCurrency(const VARIANT& varSrc);
+explicit CComCurrency(LPCWSTR szSrc);
 explicit CComCurrency(LPCSTR szSrc);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*curSrc*  
+*curSrc*<br/>
 Um objeto `CComCurrency` existente.
 
-*1&gt;Operator=(&lt;1}{2&gt;cysrc&lt;2}{3&gt;)&lt;3*  
+*1&gt;Operator=(&lt;1}{2&gt;cysrc&lt;2}{3&gt;)&lt;3*<br/>
 Uma variável do tipo de moeda.
 
-*bSrc*, *dSrc*, *fSrc*, *lSrc*, *1&gt;Operator=(&lt;1}{2&gt;SSRC&lt;2}{3&gt;)&lt;3*, *ulSrc, usSrc*  
+*bSrc*, *dSrc*, *fSrc*, *lSrc*, *1&gt;Operator=(&lt;1}{2&gt;SSRC&lt;2}{3&gt;)&lt;3*, *ulSrc, usSrc*<br/>
 O valor inicial fornecido para a variável de membro `m_currency`.
 
-*cSrc*  
+*cSrc*<br/>
 Um caractere que contém o valor inicial fornecido para a variável de membro `m_currency`.
 
-*nInteger*, *nFraction*  
+*nInteger*, *nFraction*<br/>
 O número inteiro e componentes fracionários do valor monetário inicial. Consulte a [CComCurrency](../../atl/reference/ccomcurrency-class.md) visão geral para obter mais informações.
 
-*1&gt;Operator=(&lt;1}{2&gt;pdispsrc&lt;2}{3&gt;)&lt;3*  
+*1&gt;Operator=(&lt;1}{2&gt;pdispsrc&lt;2}{3&gt;)&lt;3*<br/>
 Um `IDispatch` ponteiro.
 
-*varSrc*  
+*varSrc*<br/>
 Uma variável do tipo VARIANT. A localidade do thread atual será usada para executar a conversão.
 
-*szSrc*  
+*szSrc*<br/>
 Uma cadeia Unicode ou ANSI, que contém o valor inicial. A localidade do thread atual será usada para executar a conversão.
 
 ### <a name="remarks"></a>Comentários
@@ -238,7 +238,7 @@ CComCurrency operator-(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*cur*  
+*cur*<br/>
 Um objeto `CComCurrency`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -259,7 +259,7 @@ bool operator!= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*cur*  
+*cur*<br/>
 O objeto `CComCurrency` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -281,10 +281,10 @@ CComCurrency operator*(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*nOperand*  
+*nOperand*<br/>
 O multiplicador.
 
-*cur*  
+*cur*<br/>
 O `CComCurrency` objeto usado como o multiplicador.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -306,10 +306,10 @@ const CComCurrency& operator*= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nOperand*  
+*nOperand*<br/>
 O multiplicador.
 
-*cur*  
+*cur*<br/>
 O `CComCurrency` objeto usado como o multiplicador.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -330,7 +330,7 @@ CComCurrency operator/(long nOperand) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*nOperand*  
+*nOperand*<br/>
 O divisor.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -351,7 +351,7 @@ const CComCurrency& operator/= (long nOperand);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nOperand*  
+*nOperand*<br/>
 O divisor.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -372,7 +372,7 @@ CComCurrency operator+(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*cur*  
+*cur*<br/>
 O `CComCurrency` objeto a ser adicionado ao objeto original.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -393,7 +393,7 @@ const CComCurrency& operator+= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>Parâmetros
 
-*cur*  
+*cur*<br/>
 O objeto `CComCurrency`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -414,7 +414,7 @@ bool operator<(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*cur*  
+*cur*<br/>
 Um objeto `CComCurrency`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -435,7 +435,7 @@ bool operator<= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*cur*  
+*cur*<br/>
 Um objeto `CComCurrency`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -466,13 +466,13 @@ const CComCurrency& operator= (DECIMAL dSrc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*curSrc*  
+*curSrc*<br/>
 Um objeto `CComCurrency`.
 
-*1&gt;Operator=(&lt;1}{2&gt;cysrc&lt;2}{3&gt;)&lt;3*  
+*1&gt;Operator=(&lt;1}{2&gt;cysrc&lt;2}{3&gt;)&lt;3*<br/>
 Uma variável do tipo de moeda.
 
-*1&gt;Operator=(&lt;1}{2&gt;SSRC&lt;2}{3&gt;)&lt;3*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc* , *ulSrc*, *dSrc*  
+*1&gt;Operator=(&lt;1}{2&gt;SSRC&lt;2}{3&gt;)&lt;3*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc* , *ulSrc*, *dSrc*<br/>
 O valor numérico para atribuir ao `CComCurrency` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -493,7 +493,7 @@ const CComCurrency& operator-= (const CComCurrency& cur);
 
 ### <a name="parameters"></a>Parâmetros
 
-*cur*  
+*cur*<br/>
 Um objeto `CComCurrency`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -514,7 +514,7 @@ bool operator== (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*cur*  
+*cur*<br/>
 O objeto `CComCurrency` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -535,7 +535,7 @@ bool operator>(const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*cur*  
+*cur*<br/>
 Um objeto `CComCurrency`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -556,7 +556,7 @@ bool operator>= (const CComCurrency& cur) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*cur*  
+*cur*<br/>
 Um objeto `CComCurrency`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -571,7 +571,7 @@ Retornará TRUE se o primeiro objeto é maior que ou igual ao segundo, e FALSE c
 
 Esses operadores são usados para converter um `CComCurrency` objeto para um tipo de dados de moeda.
 
-```  
+```
 operator CURRENCY&() throw();
 operator const CURRENCY&() const throw();
 ```
@@ -594,7 +594,7 @@ HRESULT Roundint nDecimals);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nDecimals*  
+*nDecimals*<br/>
 O número de dígitos para o qual `m_currency` será arredondado, no intervalo de 0 a 4.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -615,7 +615,7 @@ HRESULT SetFraction(SHORT nFraction);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nFraction*  
+*nFraction*<br/>
 O valor a ser atribuído para o componente fracionário do `m_currency` membro de dados. O sinal de que o componente fracionário deve ser o mesmo que o componente de número inteiro, e o valor deve estar no intervalo (CY_MIN_FRACTION) de-9999 a +9999 (CY_MAX_FRACTION).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -636,7 +636,7 @@ HRESULT SetInteger(LONGLONG nInteger);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nInteger*  
+*nInteger*<br/>
 O valor a ser atribuído ao componente de número inteiro de `m_currency` membro de dados. O sinal do componente inteiro deve corresponder ao sinal de que o componente fracionário existente.
 
 *nInteger* deve estar no intervalo CY_MIN_INTEGER para CY_MAX_INTEGER inclusivo. Esses valores são definidos em atlcur.h.
@@ -651,6 +651,6 @@ Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe COleCurrency](../../mfc/reference/colecurrency-class.md)   
-[MOEDA](/windows/desktop/api/wtypes/ns-wtypes-tagcy)   
+[Classe COleCurrency](../../mfc/reference/colecurrency-class.md)<br/>
+[MOEDA](/windows/desktop/api/wtypes/ns-wtypes-tagcy)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7043eaf6654670935301c1f49ba88aed5745a96
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 024811c13fb27cb2da88bdddc9965d8a124e341a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297024"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46135900"
 ---
 # <a name="expression-evaluator-error-cxx0012"></a>Erro CXX0012 (avaliador de expressão)
-chave esquerda ausente  
-  
- A expressão contém uma chave de fechamento faltando. Digite novamente a expressão com equilibrada entre chaves.  
-  
- Esse erro é idêntico ao CAN0012.
+
+chave esquerda ausente
+
+A expressão contém uma chave de abertura desbalanceada. Digite novamente a expressão com equilibrada entre chaves.
+
+Esse erro é idêntico ao CAN0012.
