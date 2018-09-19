@@ -15,26 +15,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523ac16a647116f4d18da7e516adb4f0e6bb7fc4
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 8ad4689c15e14ba0bbac61c8c3b28148536b9057
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33324029"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45715462"
 ---
 # <a name="general-property-page-file"></a>Página de propriedade geral (arquivo)
 
 Quando um arquivo é selecionado no **Gerenciador de Soluções**, a página de propriedades **Geral** no nó **Propriedades de Configuração** contém as seguintes propriedades:
 
-**Excluir do Build**  
-Especifica se o arquivo deve estar no build da configuração atual.
+- **Excluir do Build**
 
-Para acessar essa propriedade de forma programática, confira <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
+   Especifica se o arquivo deve estar no build da configuração atual.
 
-**Ferramenta**  
-A ferramenta que será usada para compilar esse arquivo. Confira [Especificando ferramentas de build personalizadas](../ide/specifying-custom-build-tools.md) para obter mais informações.
+   Para acessar essa propriedade de forma programática, confira <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
 
-Para acessar essa propriedade de forma programática, confira <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>.
+- **Ferramenta**
+
+   A ferramenta que será usada para compilar esse arquivo. Confira [Especificando ferramentas de build personalizadas](../ide/specifying-custom-build-tools.md) para obter mais informações.
+
+   Para acessar essa propriedade de forma programática, confira <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>.
 
 Para obter informações sobre como acessar a página de propriedades **Geral** no nó **Propriedades de Configuração**, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).
 
