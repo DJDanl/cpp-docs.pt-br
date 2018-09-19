@@ -16,59 +16,63 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f28ae7b7cb8bdcf335757c58d5e744974f4c7cad
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: e382bd75a734b205389b83455e3ab020f54ca6d3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405951"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066226"
 ---
 # <a name="final-specifier"></a>especificador final
-Você pode usar o **final** palavra-chave para designar funções virtuais que não podem ser substituídas em uma classe derivada. Também é possível usá-la para designar classes que não podem ser herdadas.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-function-declaration final;  
-class class-name final base-classes  
-```  
-  
-## <a name="remarks"></a>Comentários  
- **final** é contextual e tem um significado especial somente quando ele é usado após uma declaração de função ou nome de classe; caso contrário, ele não é uma palavra-chave reservada.  
-  
- Quando **final** é usado em declarações de classe, `base-classes` é uma parte opcional da declaração.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir usa o **final** palavra-chave para especificar que uma função virtual não pode ser substituída.  
-  
-```cpp  
-class BaseClass  
-{  
-    virtual void func() final;  
-};  
-  
-class DerivedClass: public BaseClass  
-{  
-    virtual void func(); // compiler error: attempting to   
-                         // override a final function  
-};  
-```  
-  
- Para obter informações sobre como especificar que as funções de membro podem ser substituídas, consulte [especificador de substituição](../cpp/override-specifier.md).  
-  
- O próximo exemplo usa o **final** palavra-chave para especificar que uma classe não pode ser herdada.  
-  
-```cpp  
-class BaseClass final   
-{  
-};  
-  
-class DerivedClass: public BaseClass // compiler error: BaseClass is   
-                                     // marked as non-inheritable  
-{  
-};  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Palavras-chave](../cpp/keywords-cpp.md)   
- [Especificador override](../cpp/override-specifier.md)
+
+Você pode usar o **final** palavra-chave para designar funções virtuais que não podem ser substituídas em uma classe derivada. Também é possível usá-la para designar classes que não podem ser herdadas.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+function-declaration final;
+class class-name final base-classes
+```
+
+## <a name="remarks"></a>Comentários
+
+**final** é contextual e tem um significado especial somente quando ele é usado após uma declaração de função ou nome de classe; caso contrário, ele não é uma palavra-chave reservada.
+
+Quando **final** é usado em declarações de classe, `base-classes` é uma parte opcional da declaração.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir usa o **final** palavra-chave para especificar que uma função virtual não pode ser substituída.
+
+```cpp
+class BaseClass
+{
+    virtual void func() final;
+};
+
+class DerivedClass: public BaseClass
+{
+    virtual void func(); // compiler error: attempting to
+                         // override a final function
+};
+```
+
+Para obter informações sobre como especificar que as funções de membro podem ser substituídas, consulte [especificador de substituição](../cpp/override-specifier.md).
+
+O próximo exemplo usa o **final** palavra-chave para especificar que uma classe não pode ser herdada.
+
+```cpp
+class BaseClass final
+{
+};
+
+class DerivedClass: public BaseClass // compiler error: BaseClass is
+                                     // marked as non-inheritable
+{
+};
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Palavras-chave](../cpp/keywords-cpp.md)<br/>
+[Especificador override](../cpp/override-specifier.md)

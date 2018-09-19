@@ -1,5 +1,5 @@
 ---
-title: C2490 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2490 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc366178c31f900b031aacca278e39cc0c2eb493
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36e4a44a6a2288ce712c77538edbd710f22f5315
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198697"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071790"
 ---
-# <a name="compiler-error-c2490"></a>C2490 de erro do compilador
-'palavra-chave' não é permitido em função com atributo 'naked'  
-  
- Uma função definida como [naked](../../cpp/naked-cpp.md) não é possível usar tratamento estruturado de exceções.  
-  
- O exemplo a seguir gera C2490:  
-  
-```  
-// C2490.cpp  
-// processor: x86  
-__declspec( naked ) int func() {  
-   __try{}   // C2490, structured exception handling  
-}  
+# <a name="compiler-error-c2490"></a>Erro do compilador C2490
+
+'palavra-chave' não é permitido em função com atributo 'naked'
+
+Uma função definida como [naked](../../cpp/naked-cpp.md) não é possível usar o tratamento de exceções estruturado.
+
+O exemplo a seguir gera C2490:
+
+```
+// C2490.cpp
+// processor: x86
+__declspec( naked ) int func() {
+   __try{}   // C2490, structured exception handling
+}
 ```

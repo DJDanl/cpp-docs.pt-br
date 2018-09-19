@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fa72ed19a691015214fe263033e07f8d6a74c34
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: f93bd91453b6edc27e9e68413e1944b258a91757
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688200"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059739"
 ---
 # <a name="taskhandle-class"></a>Classe task_handle
-O `task_handle` classe representa um item de trabalho paralelas individual. Ele encapsula as instruções e os dados necessários para executar um trabalho.  
+O `task_handle` classe representa um item de trabalho paralelas individuais. Ele encapsula as instruções e os dados necessários para executar um trabalho.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,8 +38,8 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `_Function`  
- O tipo do objeto de função que será chamado para executar o trabalho representado pelo `task_handle` objeto.  
+*_Function*<br/>
+O tipo do objeto de função que será chamado para executar o trabalho representado pelo `task_handle` objeto.  
   
 ## <a name="members"></a>Membros  
   
@@ -48,22 +48,22 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 |Nome|Descrição|  
 |----------|-----------------|  
 |[task_handle](#ctor)|Constrói um novo objeto `task_handle`. O trabalho da tarefa é executado invocando a função especificada como um parâmetro para o construtor.|  
-|[~ task_handle destruidor](#dtor)|Destrói a `task_handle` objeto.|  
+|[~ task_handle destruidor](#dtor)|Destrói o `task_handle` objeto.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[operator()](#task_handle__operator_call)|O operador de chamada de função que invoca o tempo de execução para executar o trabalho do identificador de tarefa.|  
+|[operator()](#task_handle__operator_call)|O operador de chamada de função que o tempo de execução invoca para realizar o trabalho do identificador de tarefa.|  
   
 ## <a name="remarks"></a>Comentários  
- `task_handle` objetos podem ser usados em conjunto com um `structured_task_group` ou um mais geral `task_group` objeto decompor o trabalho em tarefas paralelas. Para obter mais informações, consulte [paralelismo de tarefa](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
+ `task_handle` objetos podem ser usados em conjunto com um `structured_task_group` ou um mais geral `task_group` objeto, decompor o trabalho em tarefas paralelas. Para obter mais informações, consulte [paralelismo de tarefas](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
- Observe que o criador de uma `task_handle` objeto é responsável por manter o tempo de vida de criaram `task_handle` objeto até que ele não é exigido pelo tempo de execução de simultaneidade. Normalmente, isso significa que o `task_handle` objeto não deve destruct até que o `wait` ou `run_and_wait` método do `task_group` ou `structured_task_group` para que ele é enfileirado foi chamado.  
+ Observe que o criador de um `task_handle` objeto é responsável por manter o tempo de vida de criado `task_handle` objeto até que ele não é exigido pelo tempo de execução de simultaneidade. Normalmente, isso significa que o `task_handle` objeto não deve destruir até que o `wait` ou `run_and_wait` método da `task_group` ou `structured_task_group` para que ele está na fila tiver sido chamado.  
   
- `task_handle` Normalmente, os objetos são usados em conjunto com lambdas de C++. Porque você não souber o tipo true de lambda, o [make_task](concurrency-namespace-functions.md#make_task) função geralmente é usada para criar um `task_handle` objeto.  
+ `task_handle` Normalmente, os objetos são usados em conjunto com lambdas de C++. Porque você não souber o tipo true de lambda, o [make_task](concurrency-namespace-functions.md#make_task) função normalmente é usada para criar um `task_handle` objeto.  
   
- O tempo de execução cria uma cópia da função de trabalho que você passa para um `task_handle` objeto. Portanto, qualquer alteração de estado que ocorrem em uma função do objeto que você passar para um `task_handle` objeto não aparecerá na sua cópia do objeto de função.  
+ O tempo de execução cria uma cópia da função de trabalho que você passa para um `task_handle` objeto. Portanto, as alterações de estado que ocorrem em uma função de objeto que você passar para um `task_handle` objeto não aparecerá na sua cópia desse objeto de função.  
   
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
  `task_handle`  
@@ -75,7 +75,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
 ##  <a name="task_handle__operator_call"></a> Operator) 
 
- O operador de chamada de função que invoca o tempo de execução para executar o trabalho do identificador de tarefa.  
+ O operador de chamada de função que o tempo de execução invoca para realizar o trabalho do identificador de tarefa.  
   
 ```  
 void operator()() const;
@@ -92,15 +92,15 @@ task_handle(const _Function& _Func);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Func`  
- A função que será chamada para executar o trabalho representado pelo `task_handle` objeto. Isso pode ser um functor lambda, um ponteiro para uma função, ou qualquer objeto que dá suporte a uma versão do operador de chamada de função com a assinatura `void operator()()`.  
+*_Func*<br/>
+A função que será invocada para executar o trabalho representado pelo `task_handle` objeto. Isso pode ser um funtor lambda, um ponteiro para uma função, ou qualquer objeto que dá suporte a uma versão do operador de chamada de função com a assinatura `void operator()()`.  
   
 ### <a name="remarks"></a>Comentários  
- O tempo de execução cria uma cópia da função de trabalho que você passa para o construtor. Portanto, qualquer alteração de estado que ocorrem em uma função do objeto que você passar para um `task_handle` objeto não aparecerá na sua cópia do objeto de função.  
+ O tempo de execução cria uma cópia da função de trabalho que você passa ao construtor. Portanto, as alterações de estado que ocorrem em uma função de objeto que você passar para um `task_handle` objeto não aparecerá na sua cópia desse objeto de função.  
   
 ##  <a name="dtor"></a> ~ task_handle 
 
- Destrói a `task_handle` objeto.  
+ Destrói o `task_handle` objeto.  
   
 ```  
 ~task_handle();

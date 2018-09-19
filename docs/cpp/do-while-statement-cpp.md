@@ -19,52 +19,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5db832a7c6c380e43fcf5edb3f36ce1a1bf692e6
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 37155be11caaee9c609a0e11ddbfeb5d62856903
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404711"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071192"
 ---
 # <a name="do-while-statement-c"></a>Instrução do-while (C++)
-Executa um *instrução* repetidamente até que a condição de término especificada (o *expressão*) é avaliada como zero.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-do  
-   statement  
-while ( expression ) ;  
-```  
-  
-## <a name="remarks"></a>Comentários  
- O teste da condição de término é realizado após cada execução do loop; Portanto, uma **fazer-enquanto** loop é executado uma ou mais vezes, dependendo do valor da expressão de término. O **fazer-Embora** instrução também pode terminar quando um [quebra](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), ou [retornar](../cpp/return-statement-cpp.md) instrução é executada dentro do corpo da instrução.  
-  
- A *expressão* deve ter o tipo aritmético ou ponteiro. A execução procede da seguinte maneira:  
-  
-1.  O corpo da instrução é executado.  
-  
-2.  Em seguida, a *expressão* é avaliada. Se *expressão* é false, o **fazer-enquanto** instrução finaliza e o controle passará para a próxima instrução no programa. Se a *expressão* for verdadeira (diferente de zero), o processo será repetido, começando da etapa 1.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra a **fazer-enquanto** instrução:  
-  
-```cpp 
-// do_while_statement.cpp  
-#include <stdio.h>  
-int main()  
-{  
-    int i = 0;  
-    do  
-    {  
-        printf_s("\n%d",i++);  
-    } while (i < 3);  
-}  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Instruções de Iteração](../cpp/iteration-statements-cpp.md)   
- [Palavras-chave](../cpp/keywords-cpp.md)   
- [Instrução while (C++)](../cpp/while-statement-cpp.md)   
- [Instrução for (C++)](../cpp/for-statement-cpp.md)   
- [Instrução for baseada intervalo (C++)](../cpp/range-based-for-statement-cpp.md)
+
+Executa um *instrução* repetidamente até que a condição de término especificada (o *expressão*) é avaliada como zero.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+do
+   statement
+while ( expression ) ;
+```
+
+## <a name="remarks"></a>Comentários
+
+O teste da condição de término é realizado após cada execução do loop; Portanto, uma **fazer-enquanto** loop é executado uma ou mais vezes, dependendo do valor da expressão de término. A instrução **do-while** também pode terminar quando uma instrução [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md) ou [return](../cpp/return-statement-cpp.md) é executada no corpo da instrução.
+
+A *expressão* deve ter o tipo aritmético ou ponteiro. A execução procede da seguinte maneira:
+
+1. O corpo da instrução é executado.
+
+1. Em seguida, a *expressão* é avaliada. Se a *expressão* for falsa, a instrução **do-while** será finalizada e o controle será passado para a próxima instrução no programa. Se a *expressão* for verdadeira (diferente de zero), o processo será repetido, começando da etapa 1.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir demonstra a **fazer-enquanto** instrução:
+
+```cpp
+// do_while_statement.cpp
+#include <stdio.h>
+int main()
+{
+    int i = 0;
+    do
+    {
+        printf_s("\n%d",i++);
+    } while (i < 3);
+}
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Instruções de iteração](../cpp/iteration-statements-cpp.md)<br/>
+[Palavras-chave](../cpp/keywords-cpp.md)<br/>
+[Instrução while (C++)](../cpp/while-statement-cpp.md)<br/>
+[Instrução for (C++)](../cpp/for-statement-cpp.md)<br/>
+[Instrução for baseada intervalo (C++)](../cpp/range-based-for-statement-cpp.md)

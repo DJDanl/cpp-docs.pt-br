@@ -1,5 +1,5 @@
 ---
-title: Recurso compilador Erro Fatal RW1016 | Microsoft Docs
+title: RW1016 de Erro Fatal do compilador de recurso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cff607f6b9e4b1bf74ff1c82c513737f0e20bba6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a2e2ac26b15529b86dc0e209b361feec6bf3d4a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318032"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046102"
 ---
 # <a name="resource-compiler-fatal-error-rw1016"></a>Erro fatal RW1016 (compilador de recurso)
-RC encerrado depois de erros do pré-processador  
-  
- O compilador de recurso foi interrompido devido a outros erros. Corrija outros erros e recompilar.
+
+RC encerrado depois de erros do pré-processador
+
+O compilador de recurso foi interrompido devido a outros erros. Corrija os outros erros e recompile.

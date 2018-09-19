@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37564920e2ffb4c2526631cd04864db1971a6f02
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4a2434257290c673ca4e18be2e5ec70877e72e67
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757205"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039082"
 ---
 # <a name="messagehandler"></a>MessageHandler
 
@@ -39,16 +39,16 @@ LRESULT MessageHandler(
 
 ### <a name="parameters"></a>Parâmetros
 
-*uMsg*  
+*uMsg*<br/>
 Especifica a mensagem.
 
-*wParam*  
+*wParam*<br/>
 Obter informações adicionais específicas de mensagem.
 
-*lParam*  
+*lParam*<br/>
 Obter informações adicionais específicas de mensagem.
 
-*bHandled*  
+*bHandled*<br/>
 Os conjuntos de mapa de mensagem *bHandled* como TRUE antes `MessageHandler` é chamado. Se `MessageHandler` não consegue tratar por completo a mensagem, ela deverá definir *bHandled* como FALSE para indicar que a mensagem precisa de processamento adicional.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -61,6 +61,6 @@ Para obter um exemplo de como usar este manipulador de mensagens em um mapa de m
 
 ## <a name="see-also"></a>Consulte também
 
-[Implementando uma janela](../atl/implementing-a-window.md)   
-[Mapas de Mensagens](../atl/message-maps-atl.md)   
+[Implementando uma janela](../atl/implementing-a-window.md)<br/>
+[Mapas de mensagem](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)

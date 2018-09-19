@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf700db0e415fd7886cd8ba845f06a2d8f6c3249
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: daefec7c89fc98d056963c4f761b7298d6e491cc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226331"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062963"
 ---
 # <a name="fatal-error-c1191"></a>Erro fatal C1191
-'dll' só pode ser importado no escopo global  
-  
- As instruções para importar mscorlib.dll em um programa que usa a programação /clr não podem aparecer em um namespace ou uma função, mas devem aparecer no escopo global.  
-  
- O exemplo a seguir gera C1191:  
-  
-```  
-// C1191.cpp  
-// compile with: /clr  
-namespace sample {  
-   #using <mscorlib.dll>   // C1191 not at global scope  
-}  
-```  
-  
- Possível solução:  
-  
-```  
-// C1191b.cpp  
-// compile with: /clr /c  
-#using <mscorlib.dll>  
-namespace sample {}  
+
+'dll' só pode ser importado no escopo global
+
+As instruções para importar mscorlib. dll em um programa que usa a programação de /clr não podem aparecer em um namespace ou uma função, mas devem aparecer no escopo global.
+
+O exemplo a seguir gera C1191:
+
+```
+// C1191.cpp
+// compile with: /clr
+namespace sample {
+   #using <mscorlib.dll>   // C1191 not at global scope
+}
+```
+
+Solução possível:
+
+```
+// C1191b.cpp
+// compile with: /clr /c
+#using <mscorlib.dll>
+namespace sample {}
 ```

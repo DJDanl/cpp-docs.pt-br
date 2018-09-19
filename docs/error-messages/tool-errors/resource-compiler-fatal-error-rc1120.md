@@ -1,5 +1,5 @@
 ---
-title: Recurso compilador Erro Fatal RC1120 | Microsoft Docs
+title: RC1120 de Erro Fatal do compilador de recurso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d117f7b106e14cde2def5477fab5ad0fc92a6411
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62f28e381d4eac0bfd1f010ef3919452635a1b96
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321929"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056996"
 ---
 # <a name="resource-compiler-fatal-error-rc1120"></a>Erro fatal RC1120 (compilador de recurso)
-sem memória, necessário bytes de números  
-  
- O compilador de recurso insuficiente de armazenamento para os itens que ele armazena na pilha. Geralmente, isso é o resultado de ter muitos símbolos.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir usando as seguintes soluções possíveis  
-  
-1.  Aumente o espaço de arquivo de permuta do Windows. Para obter mais informações sobre como aumentar o espaço de arquivo de permuta, consulte memória virtual na Ajuda do Windows.  
-  
-2.  Eliminar desnecessário incluem arquivos, especialmente desnecessários `#define`s protótipos de função.  
-  
-3.  Dividir o arquivo atual em dois ou mais arquivos e compilá-los separadamente.  
-  
-4.  Remova outros programas ou drivers em execução no sistema, o que poderia ser consumindo uma quantidade significativa de memória.
+
+sem memória, bytes de números de necessário
+
+O compilador de recurso insuficiente de armazenamento para os itens que ele armazena em seu heap. Normalmente, esse é o resultado de ter muitos símbolos.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir usando as seguintes soluções possíveis
+
+1. Aumente o espaço de arquivo de permuta do Windows. Para obter mais informações sobre como aumentar o espaço de arquivo de permuta, consulte memória virtual na Ajuda do Windows.
+
+1. Eliminar desnecessário incluir arquivos, especialmente desnecessários `#define`s protótipos de função.
+
+1. Dividir o arquivo atual em dois ou mais arquivos e compilá-los separadamente.
+
+1. Remova outros programas ou drivers em execução no sistema, o que poderia estar consumindo quantidades significativas de memória.

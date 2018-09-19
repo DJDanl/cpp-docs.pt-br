@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e108fee9b73e1fa66b8ca9a45e67eeb0ea93d290
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c26e5199c3839069a938d34daf13408ce76e99b5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198320"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042839"
 ---
 # <a name="fatal-error-c1602"></a>Erro fatal C1602
-sem suporte intrínseco  
-  
- Esse erro indica uma incompatibilidade nos arquivos de .exe de compilador, o que pode ter ocorrido devido a uma instalação incompleta. Por exemplo, você pode ter instalado um service pack, mas não o pacote de processador. Instale todos os produtos necessários.
+
+intrínseco não suportado
+
+Esse erro indica uma incompatibilidade nos seus arquivos de .exe do compilador, que pode ter ocorrido devido a uma instalação incompleta. Por exemplo, você pode ter instalado um service pack, mas não o pacote de processador. Instale todos os produtos necessários.

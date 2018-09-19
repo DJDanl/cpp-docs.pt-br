@@ -1,5 +1,5 @@
 ---
-title: C2874 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2874 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aebe8054c68e1474a2597da5bda7bb985eb205dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da285053507865d88fef31fac485c2a77a918d52
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243281"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031087"
 ---
-# <a name="compiler-error-c2874"></a>C2874 de erro do compilador
-declaração de Using causa uma declaração múltipla de 'symbol'  
-  
- A declaração faz com que o mesmo item a ser definido duas vezes.  
-  
- O exemplo a seguir gera C2874:  
-  
-```  
-// C2874.cpp  
-namespace Z {  
-   int i;  
-}  
-  
-int main() {  
-   int i;  
-   using Z::i;   // C2874, i already declared  
-}  
+# <a name="compiler-error-c2874"></a>Erro do compilador C2874
+
+declaração de Using causa uma declaração múltipla de 'symbol'
+
+A declaração faz com que o mesmo item seja definido duas vezes.
+
+O exemplo a seguir gera C2874:
+
+```
+// C2874.cpp
+namespace Z {
+   int i;
+}
+
+int main() {
+   int i;
+   using Z::i;   // C2874, i already declared
+}
 ```

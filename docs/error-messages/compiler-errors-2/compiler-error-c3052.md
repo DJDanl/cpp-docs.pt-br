@@ -1,5 +1,5 @@
 ---
-title: C3052 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3052 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96db942b0ed50114378843b9f88fd77b2d24d771
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2d292087aefcc7bb99e505aefd0534dd018b2725
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244192"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049209"
 ---
-# <a name="compiler-error-c3052"></a>C3052 de erro do compilador
-'var': variável não aparece em uma cláusula de compartilhamento de dados em uma cláusula default (none)  
-  
- Se [default (none)](../../parallel/openmp/reference/default-openmp.md) é usada, qualquer variável usado no bloco estruturado deve ser especificado explicitamente como [compartilhado](../../parallel/openmp/reference/shared-openmp.md) ou [particular](../../parallel/openmp/reference/private-openmp.md).  
-  
- O exemplo a seguir gera C3052:  
-  
-```  
-// C3052.cpp  
-// compile with: /openmp /c  
-int main() {  
-   int n1 = 1;  
-  
-   #pragma omp parallel default(none) // shared(n1) private(n1)  
-   {  
-      n1 = 0;   // C3052 use either a shared or private clause  
-   }  
-}  
+# <a name="compiler-error-c3052"></a>Erro do compilador C3052
+
+'var': variável não aparece em uma cláusula de compartilhamento de dados em uma cláusula default (none)
+
+Se [default (none)](../../parallel/openmp/reference/default-openmp.md) é usada, qualquer variável usada no bloco estruturado deve ser explicitamente especificado como um [compartilhado](../../parallel/openmp/reference/shared-openmp.md) ou [privada](../../parallel/openmp/reference/private-openmp.md).
+
+O exemplo a seguir gera C3052:
+
+```
+// C3052.cpp
+// compile with: /openmp /c
+int main() {
+   int n1 = 1;
+
+   #pragma omp parallel default(none) // shared(n1) private(n1)
+   {
+      n1 = 0;   // C3052 use either a shared or private clause
+   }
+}
 ```

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08cfa128ecb598d4960c0d5527e66a9cb81266c2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 70b99ac7790477df88a0e685afd5652a35c06233
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752437"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047519"
 ---
 # <a name="winmodule-global-functions"></a>Funções globais WinModule
 
@@ -51,13 +51,13 @@ ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pWinModule*  
+*pWinModule*<br/>
 Ponteiro para um módulo [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) estrutura.
 
-*pData*  
+*pData*<br/>
 Ponteiro para o [atlcreatewnddata](../../atl/reference/atlcreatewnddata-structure.md) estrutura a ser inicializado e adicionados ao módulo atual.
 
-*pObject*  
+*pObject*<br/>
 Ponteiro para um objeto **isso** ponteiro.
 
 ### <a name="remarks"></a>Comentários
@@ -74,7 +74,7 @@ ATLINLINE ATLAPI_(void*) AtlWinModuleExtractCreateWndData(_ATL_WIN_MODULE* pWinM
 
 ### <a name="parameters"></a>Parâmetros
 
-*pWinModule*  
+*pWinModule*<br/>
 Ponteiro para um módulo [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md) estrutura.
 
 ### <a name="return-value"></a>Valor de retorno

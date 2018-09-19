@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 524b0bf5d25953c5c38cbe0e23dc5c7d9f3cb7be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f4f1f062e11651e4d851231e16569412f95b90d4
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226813"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042930"
 ---
 # <a name="fatal-error-c1352"></a>Erro fatal C1352
-MSIL inválido ou corrompido na função 'function' do módulo 'file'  
-  
- Um. netmodule foi passado para o compilador, mas o compilador a corrupção detectada no arquivo.  Peça à pessoa que produziu o. netmodule para investigar.  
-  
- O compilador não verifica arquivos. netmodule para todos os tipos de danos.  No entanto, ele, verifica que todos os caminhos de controle em uma função contém uma instrução return.  
-  
- Para obter mais informações, consulte [. netmodule arquivos como entrada de vinculador](../../build/reference/netmodule-files-as-linker-input.md).
+
+MSIL inválido ou corrompido na função 'function' do módulo 'file'
+
+Um. netmodule foi passado para o compilador, mas o compilador detectou corrupção no arquivo.  Peça à pessoa que produziu o. netmodule para investigar.
+
+O compilador não verifica os arquivos. netmodule para todos os tipos de corrupção.  No entanto, ele, verifique todos os caminhos de controle em uma função contêm uma instrução return.
+
+Para obter mais informações, consulte [arquivos. netmodule como entrada de vinculador](../../build/reference/netmodule-files-as-linker-input.md).

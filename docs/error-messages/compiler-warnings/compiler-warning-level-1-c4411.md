@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4411 | Microsoft Docs
+title: Compilador aviso (nível 1) C4411 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb2a826103bd7055a9655c75b82a58fcf53b1d42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eff4520c86332b3d547568fd643debdcdb61bf45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278149"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060818"
 ---
-# <a name="compiler-warning-level-1-c4411"></a>Compilador C4411 de aviso (nível 1)
-'Identificador': símbolo resolve para registro de deslocamento  
-  
- O identificador é um símbolo de local que resolve para um registro de deslocamento e, portanto, pode ser usado em um operando com outro símbolo.
+# <a name="compiler-warning-level-1-c4411"></a>Compilador aviso (nível 1) C4411
+
+'identifier': símbolo resolve para registro de deslocamento
+
+O identificador é um símbolo local que resolve para um registro de deslocamento e, portanto, pode ser usado em um operando com outro símbolo.

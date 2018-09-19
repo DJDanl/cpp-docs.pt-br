@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4606 | Microsoft Docs
+title: Compilador aviso (nível 1) C4606 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf9f0a954b48e2c8bd036651efa3e8a3e65b8e68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcdaba046f495dc3a29a7c9228edc561674f568f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279452"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035988"
 ---
-# <a name="compiler-warning-level-1-c4606"></a>Compilador C4606 de aviso (nível 1)
-\#Aviso de Pragma: 'warning_number' ignorado; Avisos da análise de código não estão associados com níveis de aviso  
-  
- Avisos de análise de código, apenas `error`, `once`, e `default` são compatíveis com o [aviso](../../preprocessor/warning.md) pragma.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C4606.  
-  
-```  
-// C4606.cpp  
-// compile with: /c /W1  
-#pragma warning(1: 6001)   // C4606  
-#pragma warning(once: 6001)   // OK  
+# <a name="compiler-warning-level-1-c4606"></a>Compilador aviso (nível 1) C4606
+
+\#Aviso de Pragma: 'warning_number' ignorado; Avisos da análise de código não estão associados com níveis de aviso
+
+Avisos de análise de código, apenas `error`, `once`, e `default` são compatíveis com o [aviso](../../preprocessor/warning.md) pragma.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C4606.
+
+```
+// C4606.cpp
+// compile with: /c /W1
+#pragma warning(1: 6001)   // C4606
+#pragma warning(once: 6001)   // OK
 ```

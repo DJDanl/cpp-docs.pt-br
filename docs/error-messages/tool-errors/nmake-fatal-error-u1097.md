@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0abfecf605dfba95643e455d7f9523ca046b3002
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 352964f92c6475aa860dc8b0a73cd9e95a8b56ed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319228"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043827"
 ---
 # <a name="nmake-fatal-error-u1097"></a>Erro fatal U1097 (NMAKE)
-sintaxe de partes de nome de arquivo exige dependente  
-  
- A dependência atual não tem um dependente explícita ou um dependente implícita. Sintaxe de partes de nome de arquivo, que usa a porcentagem (`%`) especificador, representa os componentes do primeiro dependente do destino atual.
+
+sintaxe de partes do nome de arquivo exige dependente
+
+A dependência atual não tem um dependente explícita ou um dependente implícita. Sintaxe de partes de nome de arquivo, que usa a porcentagem (`%`) especificador, representa os componentes do primeiro dependente do destino atual.

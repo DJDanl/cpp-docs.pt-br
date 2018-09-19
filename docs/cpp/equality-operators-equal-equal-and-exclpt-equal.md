@@ -24,52 +24,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 073e642b99dea4eb6f77fd1e79731713748f1f61
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: d1072892c4ad69396c62a728f7e828e9c683d155
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39403109"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068475"
 ---
 # <a name="equality-operators--and-"></a>Operadores de igualdade: == e !=
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-expression == expression  
-expression != expression  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Operadores de igualdade binários comparam seus operandos em buscar de igualdades ou desigualdades estritas.  
-  
- Os operadores de igualdade, igual a (`==`) e diferente de (`!=`), têm precedência mais baixa do que os operadores relacionais, mas se comportam de maneira semelhante. É o tipo de resultado desses operadores **bool**.  
-  
- O operador igual a (`==`) retorna **verdadeira** (1) se os dois operandos tiverem o mesmo valor; caso contrário, retornará **falso** (0). O operador de não-igual a (`!=`) retorna **verdadeira** se os operandos não tiverem o mesmo valor; caso contrário, retornará **false**.  
-  
-## <a name="operator-keyword-for-"></a>Palavra-chave do operador para !=  
- O operador `not_eq` é o equivalente de texto de `!=`. Há duas maneiras para acessar o `not_eq` operador em seus programas: incluir o arquivo de cabeçalho `iso646.h`, ou compilando com o [/Za](../build/reference/za-ze-disable-language-extensions.md) opção do compilador (desabilitar extensões de linguagem).  
-  
-## <a name="example"></a>Exemplo  
-  
-```cpp 
-// expre_Equality_Operators.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-  
-using namespace std;  
-  
-int main() {  
-   cout  << boolalpha  
-         << "The true expression 3 != 2 yields: "  
-         << (3 != 2) << endl  
-         << "The false expression 20 == 10 yields: "  
-         << (20 == 10) << endl;  
-}  
-```  
-  
- Os operadores de igualdade podem comparar ponteiros a membros do mesmo tipo. Em comparação, conversões de ponteiro para membro são executadas. Os ponteiros para membros também podem ser comparados a uma expressão constante que é avaliada como 0.  
-  
-## <a name="see-also"></a>Consulte também  
- [Expressões com operadores binários](../cpp/expressions-with-binary-operators.md)   
- [Operadores C++ internos, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [Operadores relacionais e de igualdade C](../c-language/c-relational-and-equality-operators.md)
+
+## <a name="syntax"></a>Sintaxe
+
+```
+expression == expression
+expression != expression
+```
+
+## <a name="remarks"></a>Comentários
+
+Operadores de igualdade binários comparam seus operandos em buscar de igualdades ou desigualdades estritas.
+
+Os operadores de igualdade, igual a (`==`) e diferente de (`!=`), têm precedência mais baixa do que os operadores relacionais, mas se comportam de maneira semelhante. É o tipo de resultado desses operadores **bool**.
+
+O operador igual a (`==`) retorna **verdadeira** (1) se os dois operandos tiverem o mesmo valor; caso contrário, retornará **falso** (0). O operador de não-igual a (`!=`) retorna **verdadeira** se os operandos não tiverem o mesmo valor; caso contrário, retornará **false**.
+
+## <a name="operator-keyword-for-"></a>Palavra-chave do operador para !=
+
+O operador `not_eq` é o equivalente de texto de `!=`. Há duas maneiras para acessar o `not_eq` operador em seus programas: incluir o arquivo de cabeçalho `iso646.h`, ou compilando com o [/Za](../build/reference/za-ze-disable-language-extensions.md) opção do compilador (desabilitar extensões de linguagem).
+
+## <a name="example"></a>Exemplo
+
+```cpp
+// expre_Equality_Operators.cpp
+// compile with: /EHsc
+#include <iostream>
+
+using namespace std;
+
+int main() {
+   cout  << boolalpha
+         << "The true expression 3 != 2 yields: "
+         << (3 != 2) << endl
+         << "The false expression 20 == 10 yields: "
+         << (20 == 10) << endl;
+}
+```
+
+Os operadores de igualdade podem comparar ponteiros a membros do mesmo tipo. Em comparação, conversões de ponteiro para membro são executadas. Os ponteiros para membros também podem ser comparados a uma expressão constante que é avaliada como 0.
+
+## <a name="see-also"></a>Consulte também
+
+[Expressões com operadores binários](../cpp/expressions-with-binary-operators.md)<br/>
+[Operadores internos, precedência e associatividade C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Operadores relacionais e de igualdade C](../c-language/c-relational-and-equality-operators.md)

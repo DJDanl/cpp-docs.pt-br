@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e9e12409320bd82e25f94c02cba83b946252fff
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d3c5f68d35c4cf77073de3f8d2e6090f62a6dae2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196433"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050093"
 ---
 # <a name="colecontrol-class"></a>Classe COleControl
 Uma classe base poderosa para desenvolvimento de controles OLE.
@@ -1692,17 +1692,14 @@ enum ControlFlags {
 
 Por padrão, `GetControlFlags` retorna `fastBeginPaint | clipPaintDC`.
 
-`fastBeginPaint` Se definido, função usa uma lata de begin adaptado para controles OLE em vez do [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) API (definido por padrão).
-
-`clipPaintDC` Se não for definido, desabilita a chamada para `IntersectClipRect` feitas pelo `COleControl` e ganha uma vantagem da velocidade de pequenos. Se você estiver usando a ativação sem janelas, o sinalizador não tem efeito.
-
-`pointerInactive` Se definido, fornece a interação do mouse enquanto o controle estiver inativo, permitindo `COleControl`da implementação do `IPointerInactive` interface, que é desabilitado por padrão.
-
-`noFlickerActivate` Se definido, elimina a cintilação de visual que acompanha este artigo e de operações de desenho extra. Use quando seu controle se desenha identicamente nos estados ativos e inativos. Se você estiver usando a ativação sem janelas, o sinalizador não tem efeito.
-
-`windowlessActivate` Se configurado, indica que o controle usará a ativação sem janelas.
-
-`canOptimizeDraw` Se configurado, indica que o controle irá executar o desenho otimizado, se o contêiner dá suporte a ele.
+|||
+|-|-|
+|`fastBeginPaint`|Se definido, função usa uma lata de begin adaptado para controles OLE em vez do [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) API (definido por padrão).|
+|`clipPaintDC`|Se não for definido, desabilita a chamada para `IntersectClipRect` feitas pelo `COleControl` e ganha uma vantagem da velocidade de pequenos. Se você estiver usando a ativação sem janelas, o sinalizador não tem efeito.|
+|`pointerInactive`|Se definido, fornece a interação do mouse enquanto o controle estiver inativo, permitindo `COleControl`da implementação do `IPointerInactive` interface, que é desabilitado por padrão.|
+|`noFlickerActivate`|Se definido, elimina a cintilação de visual que acompanha este artigo e de operações de desenho extra. Use quando seu controle se desenha identicamente nos estados ativos e inativos. Se você estiver usando a ativação sem janelas, o sinalizador não tem efeito.|
+|`windowlessActivate`|Se configurado, indica que o controle usará a ativação sem janelas.|
+|`canOptimizeDraw`|Se configurado, indica que o controle irá executar o desenho otimizado, se o contêiner dá suporte a ele.|
 
 Para obter mais informações sobre `GetControlFlags` e outras otimizações de controles OLE, consulte [controles ActiveX: otimização](../../mfc/mfc-activex-controls-optimization.md).
 

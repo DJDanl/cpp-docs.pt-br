@@ -1,5 +1,5 @@
 ---
-title: C2601 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2601 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49598223c3f68271065cc6212da19767020c51e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 522abe9c3cb4b9922a6b307055a3d85f40253793
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230819"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062950"
 ---
-# <a name="compiler-error-c2601"></a>C2601 de erro do compilador
-'function': definições de função local são inválidas  
-  
- Código tenta definir uma função dentro de uma função.  
-  
- Ou então, pode haver uma chave extra no seu código-fonte antes do local do erro C2601.  
-  
- O exemplo a seguir gera C2601:  
-  
-```  
-// C2601.cpp  
-int main() {  
-   int i = 0;  
-  
-   void funcname(int j) {   // C2601  
-      j++;  
-   }  
-}  
+# <a name="compiler-error-c2601"></a>Erro do compilador C2601
+
+'function': definições de função local são inválidas
+
+Código tenta definir uma função dentro de uma função.
+
+Ou, pode haver uma chave extra em seu código-fonte antes do local do erro C2601.
+
+O exemplo a seguir gera C2601:
+
+```
+// C2601.cpp
+int main() {
+   int i = 0;
+
+   void funcname(int j) {   // C2601
+      j++;
+   }
+}
 ```

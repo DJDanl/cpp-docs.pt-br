@@ -1,5 +1,5 @@
 ---
-title: C2758 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2758 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34cce7840f888a4377440299a4dc5ac38ee6a1d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ffa6d33dba70a463d789f3b0f016dc1d157eb65
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233961"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072921"
 ---
-# <a name="compiler-error-c2758"></a>C2758 de erro do compilador
-'member': um membro de tipo de referência deve ser inicializado  
-  
- Erro de compilador C2758 é causado quando o construtor não inicializar um membro de tipo de referência em uma lista de inicializadores. O compilador deixa o membro indefinido. Membro de referência devem variáveis inicializado quando declarados ou receberá um valor na lista de inicialização do construtor.  
-  
- O exemplo a seguir gera C2758:  
-  
-```  
-// C2758.cpp  
-// Compile by using: cl /W3 /c C2758.cpp  
-struct A {  
-   const int i;  
-  
-   A(int n) { };   // C2758  
-   // try the following line instead  
-   // A(int n) : i{n} {};  
-};  
+# <a name="compiler-error-c2758"></a>Erro do compilador C2758
+
+'member': um membro de tipo de referência deve ser inicializado
+
+Erro do compilador C2758 é causado quando o construtor não inicializar um membro do tipo de referência em uma lista de inicializadores. O compilador deixa o membro indefinido. Membro de referência devem variáveis inicializado quando declarados ou receber um valor na lista de inicialização do construtor.
+
+O exemplo a seguir gera C2758:
+
+```
+// C2758.cpp
+// Compile by using: cl /W3 /c C2758.cpp
+struct A {
+   const int i;
+
+   A(int n) { };   // C2758
+   // try the following line instead
+   // A(int n) : i{n} {};
+};
 ```

@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 27adaa2d91bac38c587ee7e4ec9c805c102d4883
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3cd5b4115d50f9e2db9b1e3dc8a03818e2c8252f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33108256"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066721"
 ---
 # <a name="comptr-class"></a>Classe com::ptr
-Um wrapper para um objeto COM que pode ser usado como um membro de uma classe CLR.  O wrapper também automatiza o gerenciamento de tempo de vida do objeto COM, liberando propriedade todas as referências no objeto quando seu destruidor é chamado. Semelhante a [classe CComPtr](../atl/reference/ccomptr-class.md).  
+Um wrapper para um objeto COM que pode ser usado como um membro de uma classe CLR.  O wrapper também automatiza o gerenciamento de tempo de vida do objeto COM, liberando referências de todas as propriedade no objeto quando seu destruidor é chamado. Análogo à [classe CComPtr](../atl/reference/ccomptr-class.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,18 +38,18 @@ ref class ptr;
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `_interface_type`  
- Interface COM.  
+*_interface_type*<br/>
+Interface COM.  
   
 ## <a name="remarks"></a>Comentários  
- Um `com::ptr` também pode ser usado como uma variável de função local para simplificar as tarefas COM várias e para automatizar o gerenciamento de vida útil.  
+ Um `com::ptr` também pode ser usado como uma variável de função local para simplificar as tarefas COM vários e para automatizar o gerenciamento de tempo de vida.  
   
- Um `com::ptr` não pode ser usado diretamente como um parâmetro de função; use um [operador de referência de rastreamento](../windows/tracking-reference-operator-cpp-component-extensions.md) ou um [operador Handle to Object (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) em vez disso.  
+ Um `com::ptr` não pode ser usado diretamente como um parâmetro de função; use um [operador de referência de rastreamento](../windows/tracking-reference-operator-cpp-component-extensions.md) ou uma [operador Handle to Object (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) em vez disso.  
   
  Um `com::ptr` não pode ser retornado diretamente de uma função; use um identificador em seu lugar.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo implementa uma classe CLR que usa um `com::ptr` para incluir o membro privado `IXMLDOMDocument` objeto.  Chamar os métodos públicos dos resultados da classe em chamadas para o contido `IXMLDOMDocument` objeto.  O exemplo cria uma instância de um documento XML, preenche-o com alguns XML simples; faz uma movimentação simplificada de nós na árvore do documento analisado para imprimir o XML para o console.  
+ Este exemplo implementa uma classe CLR que usa um `com::ptr` encapsular seu membro privado `IXMLDOMDocument` objeto.  Chamando os métodos públicos da classe resulta em chamadas para independente `IXMLDOMDocument` objeto.  O exemplo cria uma instância de um documento XML, preenche-o com algum XML simple e faz uma movimentação simplificada de nós na árvore do documento analisado para imprimir o XML no console.  
   
 ```  
 // comptr.cpp  

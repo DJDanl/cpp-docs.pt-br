@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f121310318cbb91b1f983ec240b42d5d9ea34b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9c533ada388f876443021fbf159320f171a07a5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299956"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041838"
 ---
 # <a name="command-line-error-d8036"></a>Erro D8036 (linha de comando)
-'opção' não permitido com vários arquivos de origem  
-  
- Essas opções de compilador não podem ser usadas com vários arquivos de origem:  
-  
--   Listagem de arquivos do assembly de nome (/ Fa)  
-  
--   Renomeie o arquivo de objeto (/ Fo)  
-  
--   Criar fonte de informação de navegador sem variáveis locais (/ Fr)  
-  
--   Criar informações de navegador de origem que incluem variáveis locais (/ FR)
+
+'/ opção' não permitido com vários arquivos de origem
+
+Essas opções do compilador não podem ser usadas com vários arquivos de origem:
+
+- Listagem de arquivos do assembly de nome (/ Fa)
+
+- Renomeie o arquivo de objeto (/ Fo)
+
+- Criar informações de navegador de origem sem variáveis locais (/ Fr)
+
+- Criar informações de navegador de origem que incluem as variáveis locais (/ FR)

@@ -1,5 +1,5 @@
 ---
-title: C3354 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3354 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,37 +16,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b4bcc36580a453932068350f01b53c5f09f2d69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 40f86702be19259bed7899cdbc5106346d6c6594
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257345"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058530"
 ---
-# <a name="compiler-error-c3354"></a>C3354 de erro do compilador
-'function': a função usada para criar um delegate não pode ter tipo de retorno 'type'  
-  
- Os tipos a seguir são inválidos como tipos de retorno para um `delegate`:  
-  
--   Ponteiro para função  
-  
--   Ponteiro para membro  
-  
--   Ponteiro para função de membro  
-  
--   Referência à função  
-  
--   Referência à função de membro  
-  
- O exemplo a seguir gera C3354:  
-  
-```  
-// C3354_2.cpp  
-// compile with: /clr /c  
-using namespace System;  
-typedef void ( *VoidPfn )();  
-  
-delegate VoidPfn func(); // C3354  
-// try the following line instead  
-// delegate  void func();  
-```  
+# <a name="compiler-error-c3354"></a>Erro do compilador C3354
+
+'function': a função usada para criar um delegado não pode ter tipo de retorno 'type'
+
+Os seguintes tipos são inválidos como tipos de retorno para um `delegate`:
+
+- Ponteiro para função
+
+- Ponteiro para membro
+
+- Ponteiro para função de membro
+
+- Referência à função
+
+- Referência à função de membro
+
+O exemplo a seguir gera C3354:
+
+```
+// C3354_2.cpp
+// compile with: /clr /c
+using namespace System;
+typedef void ( *VoidPfn )();
+
+delegate VoidPfn func(); // C3354
+// try the following line instead
+// delegate  void func();
+```

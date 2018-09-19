@@ -1,5 +1,5 @@
 ---
-title: R6031 de erro de tempo de execução C | Microsoft Docs
+title: C R6031 de erro de tempo de execução | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66d75fb0095b1de0fe1572d8c946823a89791740
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83dbcdc433ea731e6ddf0765b4b3a55d5707f429
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33303940"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059492"
 ---
-# <a name="c-runtime-error-r6031"></a>R6031 de erro de tempo de execução do C
-Tentativa de inicializar o CRT mais de uma vez. Isso indica um bug em seu aplicativo.  
-  
+# <a name="c-runtime-error-r6031"></a>C R6031 de erro de tempo de execução
+
+Tentativa de inicializar o CRT mais de uma vez. Isso indica um bug em seu aplicativo.
+
 > [!NOTE]
->  Se você receber essa mensagem de erro durante a execução de um aplicativo, o aplicativo foi desligado porque ele tem um problema interno. Isso pode ser causado bug no aplicativo ou por um bug em um complemento ou uma extensão que usa o aplicativo.  
->   
->  Você pode tentar corrigir esse erro com estas etapas:  
->   
->  -   Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para reparar ou reinstalar o programa.  
-> -   Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para remover, repare ou reinstale os programas de complemento ou extensão usados pelo aplicativo.  
-> -   Verificar **Windows Update** no **painel de controle** para atualizações de software.  
-> -   Verifique se há uma versão atualizada do aplicativo. Se o problema persistir, entre em contato com o fornecedor do aplicativo.  
-  
- **Informações para os programadores**  
-  
- Este diagnóstico indica que as instruções da MSIL estavam em execução durante o bloqueio do carregador. Para obter mais informações, consulte [inicialização de Assemblies mistos](../../dotnet/initialization-of-mixed-assemblies.md).
+>  Se você encontrar esta mensagem de erro durante a execução de um aplicativo, o aplicativo foi encerrado porque ele tem um problema interno. Isso pode ser causado bug no aplicativo ou por um bug em um complemento ou extensão que o aplicativo usa.
+>
+>  Você pode tentar corrigir esse erro com estas etapas:
+>
+>  -   Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para reparar ou reinstalar o programa.
+> -   Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para remover, reparar ou reinstalar todos os programas de complemento ou extensão usados pelo aplicativo.
+> -   Verifique **Windows Update** na **painel de controle** para atualizações de software.
+> -   Verifique se há uma versão atualizada do aplicativo. Se o problema persistir, entre em contato com o fornecedor do aplicativo.
+
+**Informações para programadores**
+
+Este diagnóstico indica que instruções MSIL estavam em execução durante o bloqueio do carregador. Para obter mais informações, consulte [inicialização de Assemblies mistos](../../dotnet/initialization-of-mixed-assemblies.md).

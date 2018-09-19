@@ -1,5 +1,5 @@
 ---
-title: C3493 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3493 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,49 +16,53 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aec62bfff59396ec73141746193e4e3f16d84fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad3c46117e77d432af27321165f1e1ab93d2ef3c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257310"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045101"
 ---
-# <a name="compiler-error-c3493"></a>C3493 de erro do compilador
-'var' não pode ser capturado implicitamente porque nenhum modo de captura padrão foi especificado  
-  
- A captura de expressão lambda vazio, `[]`, especifica que a expressão lambda não não explicitamente ou implicitamente capturar todas as variáveis.  
-  
-### <a name="to-correct-this-error"></a>Para corrigir este erro  
-  
--   Fornecer um modo de captura padrão, ou  
-  
--   Capture explicitamente uma ou mais variáveis.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C3493 porque ela modifica uma variável externa, mas Especifica a cláusula de captura vazia:  
-  
-```  
-// C3493a.cpp  
-  
-int main()  
-{  
-   int m = 55;  
-   [](int n) { m = n; }(99); // C3493  
-}  
-```  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir elimina C3493 especificando por referência como o modo de captura padrão.  
-  
-```  
-// C3493b.cpp  
-  
-int main()  
-{  
-   int m = 55;  
-   [&](int n) { m = n; }(99);  
-}  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Expressões Lambda](../../cpp/lambda-expressions-in-cpp.md)
+# <a name="compiler-error-c3493"></a>Erro do compilador C3493
+
+'var' não pode ser capturado implicitamente porque nenhum modo de captura padrão foi especificado
+
+A captura de expressão lambda vazio, `[]`, especifica que a expressão lambda faz não explicitamente ou implicitamente capturar todas as variáveis.
+
+### <a name="to-correct-this-error"></a>Para corrigir este erro
+
+- Fornecer um modo de captura padrão, ou
+
+- Capture explicitamente uma ou mais variáveis.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C3493 porque ele modifica uma variável externa, mas Especifica a cláusula capture vazia:
+
+```
+// C3493a.cpp
+
+int main()
+{
+   int m = 55;
+   [](int n) { m = n; }(99); // C3493
+}
+```
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir resolve C3493 especificando por referência como o modo de captura padrão.
+
+```
+// C3493b.cpp
+
+int main()
+{
+   int m = 55;
+   [&](int n) { m = n; }(99);
+}
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Expressões Lambda](../../cpp/lambda-expressions-in-cpp.md)

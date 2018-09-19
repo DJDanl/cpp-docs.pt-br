@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dbd0944eabe57dc3dd1cc224da220ee7f6435c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55fc60014bdc408d581ed8299715aad139ef9862
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295854"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050457"
 ---
 # <a name="expression-evaluator-error-cxx0059"></a>Erro CXX0059 (avaliador de expressão)
-operando da esquerda é a classe não é um nome de função  
-  
- O operando esquerdo de uma chamada de função foi um nome de classe e não pôde ser resolvido para uma chamada de função. Omitir o nome de uma função de membro em uma expressão pode causar esse erro.  
-  
- Esse erro é idêntico ao CAN0059.
+
+operando esquerdo é a classe não é um nome de função
+
+O operando esquerdo de uma chamada de função era um nome de classe e não pôde ser resolvido para uma chamada de função. Omitindo o nome de uma função de membro em uma expressão pode causar esse erro.
+
+Esse erro é idêntico ao CAN0059.

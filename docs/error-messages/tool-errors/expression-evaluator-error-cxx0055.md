@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dce01ecbc6913c844cadcf2d3f761cfe815f68a2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ee5fc5467e656bd811c89f78ecf7d36f6df1b54
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301522"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066364"
 ---
 # <a name="expression-evaluator-error-cxx0055"></a>Erro CXX0055 (avaliador de expressão)
-símbolo ambíguo em operador de contexto  
-  
- Um símbolo do operador de contexto (**{}**) mais de um símbolo no programa de chamada.  
-  
- O operador de resolução do escopo (`::`) pode ser capaz de resolver a ambiguidade.  
-  
- Esse erro é idêntico ao CAN0055.
+
+símbolo ambíguo no operador de contexto
+
+Um símbolo no operador de contexto (**{}**) chamado mais de um símbolo no programa.
+
+O operador de resolução de escopo (`::`) pode ser capaz de resolver a ambiguidade.
+
+Esse erro é idêntico ao CAN0055.

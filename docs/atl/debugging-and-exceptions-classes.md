@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ee17d8c944fa41bcca9b255c12cc4c2b0c3f565
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 3750b26643bc2ceb33e49723d1586ba5350fe4db
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753809"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055202"
 ---
 # <a name="debugging-and-exceptions-classes"></a>Classes de depuração e exceções
 
@@ -31,7 +31,7 @@ Essas classes fornecem suporte para manipulação de exceção e depuração.
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral da classe](../atl/atl-class-overview.md)   
-[Funções globais de relatório de erros e depuração](../atl/reference/debugging-and-error-reporting-global-functions.md)   
+[Visão geral da classe](../atl/atl-class-overview.md)<br/>
+[Funções globais de relatório de erros e depuração](../atl/reference/debugging-and-error-reporting-global-functions.md)<br/>
 [Macros de relatórios de erros e depuração](../atl/reference/debugging-and-error-reporting-macros.md)
 

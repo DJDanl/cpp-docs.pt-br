@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc3102f18021c16663bdf61dcde6df5e6893d46c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0d2e637c73482b1a59034d6a269ea2240445bdef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197082"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046896"
 ---
 # <a name="compiler-warning-level-1-c4138"></a>Compilador aviso (nível 1) C4138
-' * /' encontrado fora de comentário  
-  
- O delimitador de comentário de fechamento não é precedido por um delimitador de comentário de abertura. O compilador pressupõe um espaço entre o asterisco (<strong>\*</strong>) e uma barra (/).  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// C4138a.cpp  
-// compile with: /W1  
-int */*comment*/ptr;   // C4138 Ambiguous first delimiter causes warning  
-int main()  
-{  
-}  
-```  
-  
- Esse aviso pode ser causado pela tentativa de aninhar comentários.  
-  
- Esse aviso pode ser resolvido se você comentar seções de código que contêm comentários, coloque o código em um **#if / #endif** bloquear e definir a expressão de controle como zero:  
-  
-```  
-// C4138b.cpp  
-// compile with: /W1  
-#if 0  
-int my_variable;   /* Declaration currently not needed */  
-#endif  
-int main()  
-{  
-}  
+
+' * /' encontrado fora de comentário
+
+O delimitador de comentário de fechamento não é precedido por um delimitador de comentário de abertura. O compilador pressupõe um espaço entre o asterisco (<strong>\*</strong>) e uma barra (/).
+
+## <a name="example"></a>Exemplo
+
+```
+// C4138a.cpp
+// compile with: /W1
+int */*comment*/ptr;   // C4138 Ambiguous first delimiter causes warning
+int main()
+{
+}
+```
+
+Esse aviso pode ser causado pela tentativa de aninhar comentários.
+
+Esse aviso pode ser resolvido se você comentar seções de código que contêm comentários, coloque o código em um **#if / #endif** bloquear e definir a expressão de controle como zero:
+
+```
+// C4138b.cpp
+// compile with: /W1
+#if 0
+int my_variable;   /* Declaration currently not needed */
+#endif
+int main()
+{
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: BSCMAKE erro BK1503 | Microsoft Docs
+title: Erro de BSCMAKE BK1503 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,21 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06d4a05a8f2d04c3f8a991d4444b35295408a7b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 16bf228804cb24f4fe7a2428dc581116d4cec91d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294788"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064652"
 ---
 # <a name="bscmake-error-bk1503"></a>Erro BK1503 (BSCMAKE)
-não é possível gravar no arquivo 'filename' [: motivo]  
-  
- BSCMAKE combina os arquivos. SBR gerados durante a compilação em um banco de dados do navegador. Se o banco de dados do navegador resultante exceder 64 MB, ou se o número de arquivos de entrada (. SBR) excede 4092, esse erro será emitido.  
-  
- Se o problema é causado por arquivos de mais de 4092. SBR, você deve reduzir o número de arquivos de entrada. De dentro do Visual Studio, isso pode ser feito por [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) o projeto inteiro, em seguida, nova verificação em uma base de arquivo por arquivo.  
-  
- Se o problema é causado por um arquivo. bsc maior que 64MB, reduzindo o número de arquivos. SBR como entrada irá diminuir o tamanho do arquivo. bsc resultante. Além disso, a quantidade de informações de pesquisa pode ser reduzida com o uso de /Em (Excluir Macro expandido símbolos), /El (excluir variáveis locais) e /Es (excluir arquivos do sistema).  
-  
-## <a name="see-also"></a>Consulte também  
- [Opções de BSCMAKE](../../build/reference/bscmake-options.md)
+
+não é possível gravar no arquivo 'filename' [: motivo]
+
+BSCMAKE combina arquivos. SBR gerados durante a compilação em um banco de dados do navegador. Se o banco de dados resultante do navegador excede 64 MB, ou se o número de arquivos de entrada (. SBR) excede 4092, esse erro será emitido.
+
+Se o problema é causado por arquivos de mais de 4092. SBR, você deve reduzir o número de arquivos de entrada. De dentro do Visual Studio, isso pode ser feito [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) seu projeto inteiro, em seguida, verificar novamente em uma base de arquivo por arquivo.
+
+Se o problema é causado por um arquivo. bsc maior que 64MB, reduzindo o número de arquivos. SBR como entrada diminuirá o tamanho do arquivo. bsc resultante. Além disso, a quantidade de informações de pesquisa pode ser reduzida com o uso de /Em (Excluir Macro expandida símbolos), /El (excluir variáveis locais) e /Es (excluir arquivos do sistema).
+
+## <a name="see-also"></a>Consulte também
+
+[Opções de BSCMAKE](../../build/reference/bscmake-options.md)

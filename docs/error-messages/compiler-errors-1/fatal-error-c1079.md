@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 285994620225f5752ec9a32c510add71593c11f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9b9ba2a0e7fb984468d0d6e9d75fc10cdbad3c80
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225323"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062521"
 ---
 # <a name="fatal-error-c1079"></a>Erro fatal C1079
-limite do compilador: limite de tamanho de arquivo PCH excedido  
-  
- O arquivo PCH excede o limite de tamanho de 4 GB.
+
+limite do compilador: limite de tamanho de arquivo PCH excedido
+
+O arquivo PCH excede o limite de tamanho de 4 GB.

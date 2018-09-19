@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4630 | Microsoft Docs
+title: Compilador aviso (nível 1) C4630 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d3db4e42e4bd54e1d2bd5af0eb6b19ce0fea1e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dadfd4cd38d1b1d0e67e49e81102135a8ced1d00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33283306"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054721"
 ---
-# <a name="compiler-warning-level-1-c4630"></a>Compilador C4630 de aviso (nível 1)
-'symbol': especificador de classe de armazenamento de 'extern' inválido na definição de membro  
-  
- Um membro de dados ou uma função de membro é definida como `extern`. Membros não podem ser externos, embora podem objetos inteiros. O compilador ignora o `extern` palavra-chave. O exemplo a seguir gera C4630:  
-  
-```  
-// C4630.cpp  
-// compile with: /W1 /LD  
-class A {  
-   void func();  
-};  
-  
-extern void A::func() {   // C4630, remove 'extern' to resolve  
-}  
+# <a name="compiler-warning-level-1-c4630"></a>Compilador aviso (nível 1) C4630
+
+'symbol': especificador de classe de armazenamento de 'extern' inválido em definição de membro
+
+Um membro de dados ou uma função de membro é definida como `extern`. Membros não podem ser externos, embora podem objetos inteiros. O compilador ignora o `extern` palavra-chave. O exemplo a seguir gera C4630:
+
+```
+// C4630.cpp
+// compile with: /W1 /LD
+class A {
+   void func();
+};
+
+extern void A::func() {   // C4630, remove 'extern' to resolve
+}
 ```

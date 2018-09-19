@@ -1,5 +1,5 @@
 ---
-title: C3255 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3255 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 740deb9a2981839a12d2570328369daf741a8da9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f77ad1530b59c01d36a7144e2074a4b1731a9db3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251589"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043476"
 ---
-# <a name="compiler-error-c3255"></a>C3255 de erro do compilador
-tipo de valor: não é possível alocar dinamicamente este objeto de tipo value em heap nativo  
-  
- Instâncias de um tipo de valor (consulte [Classes e estruturas](../../windows/classes-and-structs-cpp-component-extensions.md)) que contêm membros gerenciados podem ser criados na pilha, mas não no heap.  
-  
- O exemplo a seguir gera C3255:  
-  
-```  
-// C3255.cpp  
-// compile with: /clr  
-using namespace System;  
-value struct V {  
-   Object^ o;  
-};  
-  
-value struct V2 {  
-   int i;  
-};  
-  
-int main() {  
-   V* pv = new V;   // C3255  
-   V2* pv2 = new V2;  
-   V v2;  
-}  
-```  
+# <a name="compiler-error-c3255"></a>Erro do compilador C3255
+
+tipo de valor: não é possível alocar dinamicamente este objeto de tipo value em heap nativo
+
+Instâncias de um tipo de valor (consulte [Classes e Structs](../../windows/classes-and-structs-cpp-component-extensions.md)) que contêm membros gerenciados podem ser criados na pilha, mas não no heap.
+
+O exemplo a seguir gera C3255:
+
+```
+// C3255.cpp
+// compile with: /clr
+using namespace System;
+value struct V {
+   Object^ o;
+};
+
+value struct V2 {
+   int i;
+};
+
+int main() {
+   V* pv = new V;   // C3255
+   V2* pv2 = new V2;
+   V v2;
+}
+```

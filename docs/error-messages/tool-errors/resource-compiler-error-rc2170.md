@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a421f57ca5ab896669c653b5031cc528a9aea87
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea3213c01ce86f6d78a9d7b6f4cf81fe17495c72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321633"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038199"
 ---
 # <a name="resource-compiler-error-rc2170"></a>Erro RC2170 (compilador de recurso)
-o nome de arquivo do arquivo de bitmap não está no formato 3.00  
-  
- Bitmaps usando o formato Windows versão 2.x não podem ser usados em arquivos de recursos de versão 3.x.  
-  
- Para corrigir esse problema, converta ou emita novamente o bitmap para o formato 3.x.
+
+o nome de arquivo do arquivo de bitmap não está no formato 3.00
+
+Bitmaps usando o formato Windows versão 2.x não podem ser usados em arquivos de recursos de versão 3.x.
+
+Para corrigir esse problema, converta ou emita novamente o bitmap para o formato 3.x.

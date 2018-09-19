@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de vinculador LNK1200 erro | Microsoft Docs
+title: Erro das LNK1200 das ferramentas de vinculador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab32939c55dce5e27f907f3d23e639b24741cdc3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 03ecd51142bf30230b6b177a36e007345e93bf2c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298818"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059310"
 ---
 # <a name="linker-tools-error-lnk1200"></a>Erro das Ferramentas de Vinculador LNK1200
-Erro ao ler o banco de dados do programa 'filename'  
-  
- Não foi possível ler o banco de dados do programa (PDB).  
-  
- Esse erro pode ser causado por corrupção de arquivo.  
-  
- Se `filename` é o PDB para um arquivo de objeto, recompilar o arquivo de objeto usando [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md).  
-  
- Se `filename` é o PDB para o arquivo de saída principal, e esse erro ocorreu durante um link incremental, exclua o PDB e vincular novamente.
+
+Erro ao ler o banco de dados do programa 'filename'
+
+Não foi possível ler o banco de dados do programa (PDB).
+
+Esse erro pode ser causado por corrupção de arquivo.
+
+Se `filename` é o PDB para um arquivo de objeto, recompile o arquivo de objeto usando [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md).
+
+Se `filename` é o PDB para o arquivo de saída principal, e esse erro ocorreu durante uma vinculação incremental, exclua o PDB e vincular novamente.

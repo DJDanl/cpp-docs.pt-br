@@ -1,5 +1,5 @@
 ---
-title: CVTRES Erro Fatal CVT1103 | Microsoft Docs
+title: Erro Fatal CVT1103 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c357714eb4118caa989fb86eb7d733518b7fd873
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a5c9f77d15b77ff55abf500b626ff23328639a0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294090"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050367"
 ---
 # <a name="cvtres-fatal-error-cvt1103"></a>Erro fatal CVT1103 (CVTRES)
-não é possível ler o nome de arquivo  
-  
- Erro irrecuperável quando CVTRES tentativa de ler o arquivo especificado.  
-  
- Esse erro pode ser causado por corrupção de arquivo.
+
+não é possível ler o nome de arquivo
+
+Erro irrecuperável ao CVTRES tentou ler o arquivo especificado.
+
+Esse erro pode ser causado por corrupção de arquivo.

@@ -17,35 +17,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fffc1ceef1f67dadde61190ccb12ce1cd5b7ba9b
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: cbf1c696a66024ec1d3b3022b1e3a03445e9b6fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42573309"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043294"
 ---
 # <a name="creating-an-updatable-provider"></a>Criando um provedor atualizável
 
 Visual C++ oferece suporte a provedores atualizáveis ou os provedores que podem atualizar (gravar) o repositório de dados. Este tópico discute como criar provedores atualizáveis usando modelos OLE DB.  
   
- Este tópico pressupõe que você está começando com um provedor viável. Há duas etapas para criar um provedor atualizável. Primeiro você deve decidir como o provedor será fazer alterações ao repositório de dados; Especificamente, se as alterações devem ser feito imediatamente ou adiada até que um comando update é emitido. A seção "[tornando provedores atualizáveis](#vchowmakingprovidersupdatable)" descreve as alterações e configurações que você precisa fazer no código do provedor.  
+Este tópico pressupõe que você está começando com um provedor viável. Há duas etapas para criar um provedor atualizável. Primeiro você deve decidir como o provedor será fazer alterações ao repositório de dados; Especificamente, se as alterações devem ser feito imediatamente ou adiada até que um comando update é emitido. A seção "[tornando provedores atualizáveis](#vchowmakingprovidersupdatable)" descreve as alterações e configurações que você precisa fazer no código do provedor.  
   
- Em seguida, você deve verificar se que seu provedor contém toda a funcionalidade para dar suporte a qualquer coisa que o consumidor pode solicitar dele. Se o consumidor deseja atualizar o armazenamento de dados, o provedor deve conter código que persiste os dados para o armazenamento de dados. Por exemplo, você pode usar a biblioteca de tempo de execução do C ou o MFC para realizar operações em sua fonte de dados. A seção "[escrevendo para a fonte de dados](#vchowwritingtothedatasource)" descreve como gravar na fonte de dados, lidar com valores nulos e padrão e definir sinalizadores de coluna.  
+Em seguida, você deve verificar se que seu provedor contém toda a funcionalidade para dar suporte a qualquer coisa que o consumidor pode solicitar dele. Se o consumidor deseja atualizar o armazenamento de dados, o provedor deve conter código que persiste os dados para o armazenamento de dados. Por exemplo, você pode usar a biblioteca de tempo de execução do C ou o MFC para realizar operações em sua fonte de dados. A seção "[escrevendo para a fonte de dados](#vchowwritingtothedatasource)" descreve como gravar na fonte de dados, lidar com valores nulos e padrão e definir sinalizadores de coluna.  
   
 > [!NOTE]
 >  [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) é um exemplo de um provedor atualizável. UpdatePV é o mesmo que MyProv, mas com suporte atualizável.  
   
 ##  <a name="vchowmakingprovidersupdatable"></a> Tornando provedores atualizáveis  
 
- A chave para tornar um provedor atualizável é entender as operações que você deseja que o provedor para executar no armazenamento de dados e como você deseja que o provedor para executar essas operações. Especificamente, o grande problema é se as atualizações para o armazenamento de dados devem ser feito imediatamente ou adiada (agrupados) até que um comando update é emitido.  
+A chave para tornar um provedor atualizável é entender as operações que você deseja que o provedor para executar no armazenamento de dados e como você deseja que o provedor para executar essas operações. Especificamente, o grande problema é se as atualizações para o armazenamento de dados devem ser feito imediatamente ou adiada (agrupados) até que um comando update é emitido.  
   
- Primeiro você deve decidir se deseja herdar `IRowsetChangeImpl` ou `IRowsetUpdateImpl` em sua classe de conjunto de linhas. Dependendo de qual deles você optar por implementar, a funcionalidade dos três métodos será afetada: `SetData`, `InsertRows`, e `DeleteRows`.  
+Primeiro você deve decidir se deseja herdar `IRowsetChangeImpl` ou `IRowsetUpdateImpl` em sua classe de conjunto de linhas. Dependendo de qual deles você optar por implementar, a funcionalidade dos três métodos será afetada: `SetData`, `InsertRows`, e `DeleteRows`.  
   
 - Se você herda de [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md), esses três métodos de chamada imediatamente altera o armazenamento de dados.  
   
 - Se você herda de [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md), os métodos de adiar as alterações ao repositório de dados até que você chame `Update`, `GetOriginalData`, ou `Undo`. Se a atualização envolver várias alterações, elas são executadas no modo de lote (Observe que o envio em lote de alterações pode adicionar sobrecarga considerável de memória).  
   
- Observe que `IRowsetUpdateImpl` deriva `IRowsetChangeImpl`. Portanto, `IRowsetUpdateImpl` dá a você alterar a funcionalidade além da funcionalidade de lote.  
+Observe que `IRowsetUpdateImpl` deriva `IRowsetChangeImpl`. Portanto, `IRowsetUpdateImpl` dá a você alterar a funcionalidade além da funcionalidade de lote.  
   
 #### <a name="to-support-updatability-in-your-provider"></a>Para dar suporte à capacidade de atualização no provedor  
   
@@ -72,21 +72,21 @@ Visual C++ oferece suporte a provedores atualizáveis ou os provedores que podem
     > [!NOTE]
     >  Você deve remover o `IRowsetChangeImpl` linha de sua cadeia de herança. Essa única exceção à diretiva mencionada anteriormente deve incluir o código para `IRowsetChangeImpl`.  
   
-2.  Adicione o seguinte ao seu mapa COM (`BEGIN_COM_MAP ... END_COM_MAP`):  
+1. Adicione o seguinte ao seu mapa COM (`BEGIN_COM_MAP ... END_COM_MAP`):  
   
     |Se você implementar|Adicionar ao mapa COM|  
     |----------------------|--------------------|  
     |`IRowsetChangeImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)`|  
     |`IRowsetUpdateImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)COM_INTERFACE_ENTRY(IRowsetUpdate)`|  
   
-3.  Em seu comando, adicione o seguinte ao seu mapa de conjunto de propriedade (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`):  
+1. Em seu comando, adicione o seguinte ao seu mapa de conjunto de propriedade (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`):  
   
     |Se você implementar|Adicionar ao mapa de conjunto de propriedade|  
     |----------------------|-----------------------------|  
     |`IRowsetChangeImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`|  
     |`IRowsetUpdateImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)`|  
   
-4.  Em seu mapa de conjunto de propriedade, você também deve incluir todas as configurações a seguir conforme elas aparecem abaixo:  
+1. Em seu mapa de conjunto de propriedade, você também deve incluir todas as configurações a seguir conforme elas aparecem abaixo:  
   
     ```cpp  
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |   
@@ -145,7 +145,8 @@ Visual C++ oferece suporte a provedores atualizáveis ou os provedores que podem
         >  Se você oferecer suporte a notificações, você também pode ter algumas outras propriedades também; Consulte a seção sobre `IRowsetNotifyCP` para esta lista.  
   
 ##  <a name="vchowwritingtothedatasource"></a> Escrevendo para a fonte de dados  
- Para ler da fonte de dados, chame o `Execute` função. Para gravar a fonte de dados, chame o `FlushData` função. (Em um sentido geral, liberação meios para salvar as modificações feitas a uma tabela ou índice em disco).  
+
+Para ler da fonte de dados, chame o `Execute` função. Para gravar a fonte de dados, chame o `FlushData` função. (Em um sentido geral, liberação meios para salvar as modificações feitas a uma tabela ou índice em disco).  
 
 ```cpp
 
@@ -158,6 +159,7 @@ O identificador de linha (HROW) e os argumentos do identificador (HACCESSOR) de 
 O `FlushData` método grava dados no formato em que foi originalmente armazenado. Se você não substituir essa função, seu provedor funcionarão corretamente, mas as alterações não serão liberadas para o armazenamento de dados.
 
 ### <a name="when-to-flush"></a>Quando você liberar
+
 Os modelos de provedor chamar FlushData sempre que dados precisam ser gravados no armazenamento de dados; Isso normalmente (mas nem sempre) ocorre como resultado de chamadas para as seguintes funções:
 
 - `IRowsetChange::DeleteRows`
@@ -312,6 +314,7 @@ Como desenvolvedor do provedor, você deve considerar como você irá armazenar 
 Examinar o código no exemplo UpdatePV; Ele ilustra como um provedor pode lidar com dados nulos. UpdatePV, o provedor armazena dados nulos, escrevendo a cadeia de caracteres "NULL" no repositório de dados. Quando ele lê os dados nulos do armazenamento de dados, ele vê essa cadeia de caracteres e, em seguida, esvazia o buffer, criando uma cadeia de caracteres nula. Ele também tem uma substituição do `IRowsetImpl::GetDBStatus` no qual ele retorna DBSTATUS_S_ISNULL se esse valor de dados está vazia.
 
 ### <a name="marking-nullable-columns"></a>Marcar colunas anuláveis
+
 Se você implementar também a conjuntos de linhas de esquema (consulte `IDBSchemaRowsetImpl`), sua implementação deve especificar no conjunto de linhas DBSCHEMA_COLUMNS (geralmente marcado no seu provedor por CxxxSchemaColSchemaRowset) que a coluna é anulável.
 
 Você também precisará especificar que todas as colunas que permitem valor nulas contenham o valor DBCOLUMNFLAGS_ISNULLABLE na sua versão do `GetColumnInfo`.
@@ -441,4 +444,5 @@ m_rgRowData.Add(trData[0]);
 Esse código especifica, entre outras coisas, a coluna dá suporte a um valor padrão de 0, que pode ser gravável, e se todos os dados na coluna tem o mesmo tamanho. Se você quiser que os dados em uma coluna tenha um comprimento variável, não definiria esse sinalizador.
 
 ## <a name="see-also"></a>Consulte também
+
 [Criando um provedor do OLE DB](creating-an-ole-db-provider.md)

@@ -1,5 +1,5 @@
 ---
-title: C2561 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2561 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,41 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f8ece9a3d9347a5179844cbfca3425870c25e2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8611af23ab884a853fc751ae82c636753993495b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230897"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070698"
 ---
-# <a name="compiler-error-c2561"></a>C2561 de erro do compilador
-'Identificador': função deve retornar um valor  
-  
- A função foi declarada como retornar um valor, mas a definição da função não tem um `return` instrução.  
-  
- Esse erro pode ser causado por um protótipo de função incorreto:  
-  
-1.  Se a função não retorna um valor, declare a função com o tipo de retorno [void](../../cpp/void-cpp.md).  
-  
-2.  Verifique se todas as possíveis ramificações da função retornam um valor do tipo declarado no protótipo.  
-  
-3.  Funções C++ que contém rotinas de assembly embutido que armazena o valor de retorno de `AX` registro terá uma instrução return. Copie o valor no `AX` em uma variável temporária e variável de retorno da função.  
-  
- O exemplo a seguir gera C2561:  
-  
-```  
-// C2561.cpp  
-int Test(int x) {  
-   if (x) {  
-      return;   // C2561  
-      // try the following line instead  
-      // return 1;  
-   }  
-   return 0;  
-}  
-  
-int main() {  
-   Test(1);  
-}  
+# <a name="compiler-error-c2561"></a>Erro do compilador C2561
+
+'identifier': função deve retornar um valor
+
+A função foi declarada como retornando um valor, mas a definição de função não contém um `return` instrução.
+
+Esse erro pode ser causado por um protótipo de função incorreto:
+
+1. Se a função não retornar um valor, declare a função com o tipo de retorno [void](../../cpp/void-cpp.md).
+
+1. Verifique se todas as possíveis ramificações da função retornam um valor do tipo declarado no protótipo.
+
+1. Funções de C++ que contém rotinas de assembly embutido que armazenam o valor de retorno de `AX` register pode precisar de uma instrução return. Copie o valor no `AX` a uma variável temporária e essa variável de retorno da função.
+
+O exemplo a seguir gera C2561:
+
+```
+// C2561.cpp
+int Test(int x) {
+   if (x) {
+      return;   // C2561
+      // try the following line instead
+      // return 1;
+   }
+   return 0;
+}
+
+int main() {
+   Test(1);
+}
 ```

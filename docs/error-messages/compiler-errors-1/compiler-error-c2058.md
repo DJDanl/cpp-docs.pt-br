@@ -1,5 +1,5 @@
 ---
-title: C2058 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2058 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 456aa7a2766f2460ee914c625b63f67bda132c87
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb59a50ec324f81dedc9d784514b397ebc351dfe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33163092"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046635"
 ---
-# <a name="compiler-error-c2058"></a>C2058 de erro do compilador
-expressão de constante não é integral  
-  
- O contexto requer uma expressão de constante de número inteiro.
+# <a name="compiler-error-c2058"></a>Erro do compilador C2058
+
+expressão de constante não é integral
+
+O contexto requer uma expressão constante inteira.

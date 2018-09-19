@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4584 | Microsoft Docs
+title: Compilador aviso (nível 1) C4584 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df3f92142fe42451ca7ae8272463d9347a263121
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9db97bf35034f7ca628f860924bfb9a1fccc942f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281158"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036248"
 ---
-# <a name="compiler-warning-level-1-c4584"></a>Compilador C4584 de aviso (nível 1)
-'class1': classe base 'class2' já é uma classe base de 'class3'  
-  
- A classe que você definiu herda de duas classes, uma que herda de outra. Por exemplo:  
-  
-```  
-// C4584.cpp  
-// compile with: /W1 /LD  
-class A {  
-};  
-  
-class B : public A {  
-};  
-  
-class C : public A, public B { // C4584  
-};  
-```  
-  
- Nesse caso, um aviso será emitido na classe C porque ele herda da classe e a classe B, que também herda da classe A. Esse aviso serve como um lembrete de que você deve qualificar totalmente o uso de membros dessas classes base ou será gerado um erro do compilador devido à ambiguidade sobre qual membro de classe que você consulte.
+# <a name="compiler-warning-level-1-c4584"></a>Compilador aviso (nível 1) C4584
+
+'class1': classe base 'class2' já é uma classe base de 'class3'
+
+A classe definida por você herda de duas classes, uma que herda de outra. Por exemplo:
+
+```
+// C4584.cpp
+// compile with: /W1 /LD
+class A {
+};
+
+class B : public A {
+};
+
+class C : public A, public B { // C4584
+};
+```
+
+Nesse caso, um aviso seria emitido na classe C porque ele herda da classe e de classe B, que também herda a classe A. Esse aviso serve como um lembrete de que você deve qualificar totalmente o uso de membros a partir dessas classes base ou um erro do compilador será gerado devido à ambiguidade sobre qual membro de classe se referem.

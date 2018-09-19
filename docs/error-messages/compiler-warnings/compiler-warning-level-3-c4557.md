@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1065d412a2f977e1784ba739d1226d08e28bc8ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97423da084c005e427b21043e75ebe850623c63b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289952"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055264"
 ---
-# <a name="compiler-warning-level-3-c4557"></a>Compilador C4557 de aviso (nível 3)
-'__assume' contém efeito 'effect'  
-  
- O valor passado para um [__assume](../../intrinsics/assume.md) statement2 foi modificada.  
-  
- Esse aviso é desativada por padrão. Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.  
-  
- O exemplo a seguir gera C4557:  
-  
-```  
-// C4557.cpp  
-// compile with: /W3  
-#pragma warning(default : 4557)  
-int main()  
-{  
-   int i;  
-   __assume(i++);   // C4557  
-}  
+# <a name="compiler-warning-level-3-c4557"></a>Compilador aviso (nível 3) C4557
+
+'__assume' contém efeito 'effect'
+
+O valor passado para um [assume](../../intrinsics/assume.md) statement2 foi modificada.
+
+Esse aviso é desativado por padrão. Ver [compilador avisos que são desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.
+
+O exemplo a seguir gera C4557:
+
+```
+// C4557.cpp
+// compile with: /W3
+#pragma warning(default : 4557)
+int main()
+{
+   int i;
+   __assume(i++);   // C4557
+}
 ```

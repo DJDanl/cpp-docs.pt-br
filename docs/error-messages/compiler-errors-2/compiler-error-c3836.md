@@ -1,5 +1,5 @@
 ---
-title: C3836 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3836 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45a2eda2567e63771ed4c8919945e34ee41be1cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a1349ff88c00f8091a8187bb963f4fb683b694e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33267388"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046024"
 ---
-# <a name="compiler-error-c3836"></a>C3836 de erro do compilador
-construtor estático não pode ter uma lista de inicializador de membro  
-  
- Uma classe gerenciada não pode ter um construtor estático que também tem uma lista de inicialização de membro. Construtores de classe estáticos são chamados pelo common language runtime para a classe de inicialização, membros de dados estáticos de inicialização.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C3836:  
-  
-```  
-// C3836a.cpp  
-// compile with: /clr  
-ref class M  
-{  
-   static int s_i;  
-  
-public:  
-   static M() :  s_i(1234)   // C3836, delete initializer to resolve  
-   {  
-   }  
-};  
-  
-int main()  
-{  
-}  
-```  
+# <a name="compiler-error-c3836"></a>Erro do compilador C3836
+
+construtor estático não tem permissão para ter uma lista de inicializadores de membro
+
+Uma classe gerenciada não pode ter um construtor estático que também tem uma lista de inicialização de membro. Construtores de classe estáticos são chamados pelo common language runtime para a classe de inicialização, ao inicializar membros de dados estáticos.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C3836:
+
+```
+// C3836a.cpp
+// compile with: /clr
+ref class M
+{
+   static int s_i;
+
+public:
+   static M() :  s_i(1234)   // C3836, delete initializer to resolve
+   {
+   }
+};
+
+int main()
+{
+}
+```

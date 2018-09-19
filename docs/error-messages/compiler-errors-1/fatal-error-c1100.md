@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89890fdaa5c2188aff279e22ff25dfa9868382c0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b5567f1aad0d74bd42059e3458f4655781f30d16
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220040"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054097"
 ---
 # <a name="fatal-error-c1100"></a>Erro fatal C1100
-não foi possível inicializar OLE: mensagem de erro do sistema  
-  
- O compilador não pode inicializar a biblioteca de modelo de objeto de componente (COM). Ver [CoInitialize](/windows/desktop/api/objbase/nf-objbase-coinitialize).
+
+não foi possível inicializar OLE: mensagem de erro do sistema
+
+O compilador não pode inicializar a biblioteca de modelo de objeto de componente (COM). Ver [CoInitialize](/windows/desktop/api/objbase/nf-objbase-coinitialize).

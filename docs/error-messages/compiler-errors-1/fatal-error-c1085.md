@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9affdfab4650402d210cea94457075d2e129e308
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab28c633ac7579e39f89d94d1c50e20cc156004a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226391"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043723"
 ---
 # <a name="fatal-error-c1085"></a>Erro fatal C1085
-Não é possível gravar o arquivo de tipo de arquivo: 'file': mensagem  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
-  
-1.  A unidade é somente leitura.  
-  
-2.  Unidade está cheia.  
-  
-3.  Violação de compartilhamento.  
-  
-4.  Se a mensagem diz "número de arquivo incorreto", o arquivo pode ter foi fechando em primeiro plano durante a compilação em segundo plano.
+
+Não é possível gravar o arquivo de tipo de arquivo: 'file': mensagem
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
+
+1. Unidade é somente leitura.
+
+1. Unidade está cheia.
+
+1. Violação de compartilhamento.
+
+1. Se a mensagem indicar "número de arquivo incorreto", o arquivo pode estar sendo fechado em primeiro plano durante a compilação em segundo plano.

@@ -29,15 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bacbdaa4af141101863b4d6d81d114d43aced9f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 795e5b43adfb71a25eafe0f373b14bc77d8bc41a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696273"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069931"
 ---
 # <a name="singleassignment-class"></a>Classe single_assignment
-Um `single_assignment` bloco de mensagens é um multi-destino de várias fontes, ordenada `propagator_block` capaz de armazenar uma única gravação-depois de `message`.  
+Um `single_assignment` bloco de mensagem é um destino de vários várias fontes, ordenada `propagator_block` capaz de armazenar uma única gravação-depois que `message`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,8 +47,8 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `T`  
- O tipo de carga da mensagem armazenados e propagada pelo buffer.  
+*T*<br/>
+O tipo de carga da mensagem armazenada e propagada pelo buffer.  
   
 ## <a name="members"></a>Membros  
   
@@ -56,32 +56,32 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[single_assignment](#ctor)|Sobrecarregado. Constrói um `single_assignment` bloco de mensagens.|  
-|[~ single_assignment destruidor](#dtor)|Destrói a `single_assignment` bloco de mensagens.|  
+|[single_assignment](#ctor)|Sobrecarregado. Constrói um `single_assignment` bloco de mensagem.|  
+|[~ single_assignment destruidor](#dtor)|Destrói o `single_assignment` bloco de mensagem.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
 |[has_value](#has_value)|Verifica se este `single_assignment` bloco de mensagens foi inicializado com um valor ainda.|  
-|[value](#value)|Obtém uma referência para a carga atual da mensagem que está sendo armazenada na `single_assignment` bloco de mensagens.|  
+|[value](#value)|Obtém uma referência ao conteúdo atual da mensagem que está sendo armazenada no `single_assignment` bloco de mensagem.|  
   
 ### <a name="protected-methods"></a>Métodos Protegidos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[accept_message](#accept_message)|Aceita uma mensagem que foi fornecida por esse `single_assignment` bloco de mensagens, retornando uma cópia da mensagem para o chamador.|  
-|[consume_message](#consume_message)|Consome uma mensagem anteriormente oferecida pelo `single_assignment` e reservado pelo destino, retornando uma cópia da mensagem para o chamador.|  
-|[link_target_notification](#link_target_notification)|Um retorno de chamada que notifica que um novo destino foi vinculado a este `single_assignment` bloco de mensagens.|  
-|[propagate_message](#propagate_message)|Assincronamente transmite uma mensagem de um `ISource` blocos a este `single_assignment` bloco de mensagens. Ele é invocado com o `propagate` método, quando chamado por um bloco de código-fonte.|  
-|[propagate_to_any_targets](#propagate_to_any_targets)|Locais de `message _PMessage` neste `single_assignment` bloco de mensagens e oferece a todos os destinos vinculados.|  
+|[accept_message](#accept_message)|Aceita uma mensagem que era oferecida por este `single_assignment` bloco de mensagens, retornando uma cópia da mensagem para o chamador.|  
+|[consume_message](#consume_message)|Consome uma mensagem anteriormente oferecida pelos `single_assignment` e reservado pelo destino, retornando uma cópia da mensagem para o chamador.|  
+|[link_target_notification](#link_target_notification)|Um retorno de chamada que notifica que um novo destino foi vinculado a este `single_assignment` bloco de mensagem.|  
+|[propagate_message](#propagate_message)|Passa assincronamente uma mensagem de um `ISource` bloco a este `single_assignment` bloco de mensagem. Ele é invocado pelo `propagate` método, quando chamado por um bloco de código-fonte.|  
+|[propagate_to_any_targets](#propagate_to_any_targets)|Coloca o `message _PMessage` desta `single_assignment` bloco de mensagens e oferecê-la para todos os destinos vinculados.|  
 |[release_message](#release_message)|Libera uma reserva de mensagem anterior. (Substitui [source_block:: release_message](source-block-class.md#release_message).)|  
-|[reserve_message](#reserve_message)|Reserva uma mensagem anteriormente oferecida por este `single_assignment` bloco de mensagens. (Substitui [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
+|[reserve_message](#reserve_message)|Reserva uma mensagem anteriormente oferecida por este `single_assignment` bloco de mensagem. (Substitui [source_block:: reserve_message](source-block-class.md#reserve_message).)|  
 |[resume_propagation](#resume_propagation)|Retoma a propagação depois de uma reserva foi liberada. (Substitui [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|  
-|[send_message](#send_message)|Modo síncrono transmite uma mensagem de um `ISource` blocos a este `single_assignment` bloco de mensagens. Ele é invocado com o `send` método, quando chamado por um bloco de código-fonte.|  
+|[send_message](#send_message)|Forma síncrona transmite uma mensagem de um `ISource` bloco a este `single_assignment` bloco de mensagem. Ele é invocado pelo `send` método, quando chamado por um bloco de código-fonte.|  
   
 ## <a name="remarks"></a>Comentários  
- Um `single_assignment` bloco de mensagens propaga cópias de sua mensagem para cada destino.  
+ Um `single_assignment` bloco de mensagem propaga cópias da sua mensagem para cada destino.  
   
  Para obter mais informações, consulte [blocos de mensagens assíncronas](../../../parallel/concrt/asynchronous-message-blocks.md).  
   
@@ -97,42 +97,42 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
  `single_assignment`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** agents.h  
+ **Cabeçalho:** Agents. h  
   
  **Namespace:** simultaneidade  
   
 ##  <a name="accept_message"></a> accept_message 
 
- Aceita uma mensagem que foi fornecida por esse `single_assignment` bloco de mensagens, retornando uma cópia da mensagem para o chamador.  
+ Aceita uma mensagem que era oferecida por este `single_assignment` bloco de mensagens, retornando uma cópia da mensagem para o chamador.  
   
 ```
 virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_MsgId`  
- O `runtime_object_identity` do que o oferecido `message` objeto.  
+*_MsgId*<br/>
+O `runtime_object_identity` do que o oferecido `message` objeto.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o `message` que o chamador agora tem a propriedade do objeto.  
+ Um ponteiro para o `message` do objeto que o chamador agora tem a propriedade do.  
   
 ### <a name="remarks"></a>Comentários  
- O `single_assignment` bloco retorna cópias da mensagem para seus destinos de mensagens, em vez de transferir a propriedade da mensagem mantida atualmente.  
+ O `single_assignment` bloco retorna cópias da mensagem para seus destinos de mensagens, em vez de transferir a propriedade da mensagem atualmente mantida.  
   
 ##  <a name="consume_message"></a> consume_message 
 
- Consome uma mensagem anteriormente oferecida pelo `single_assignment` e reservado pelo destino, retornando uma cópia da mensagem para o chamador.  
+ Consome uma mensagem anteriormente oferecida pelos `single_assignment` e reservado pelo destino, retornando uma cópia da mensagem para o chamador.  
   
 ```
 virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_MsgId`  
- O `runtime_object_identity` do `message` do objeto que está sendo consumido.  
+*_MsgId*<br/>
+O `runtime_object_identity` do `message` do objeto que está sendo consumido.  
   
 ### <a name="return-value"></a>Valor de retorno  
- Um ponteiro para o `message` que o chamador agora tem a propriedade do objeto.  
+ Um ponteiro para o `message` do objeto que o chamador agora tem a propriedade do.  
   
 ### <a name="remarks"></a>Comentários  
  Semelhante ao `accept`, mas sempre é precedido por uma chamada para `reserve`.  
@@ -146,23 +146,23 @@ bool has_value() const;
 ```  
   
 ### <a name="return-value"></a>Valor de retorno  
- `true` Se o bloco recebeu um valor de `false` caso contrário.  
+ `true` Se o bloco tiver recebido um valor, `false` caso contrário.  
   
 ##  <a name="link_target_notification"></a> link_target_notification 
 
- Um retorno de chamada que notifica que um novo destino foi vinculado a este `single_assignment` bloco de mensagens.  
+ Um retorno de chamada que notifica que um novo destino foi vinculado a este `single_assignment` bloco de mensagem.  
   
 ```
 virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_PTarget`  
- Um ponteiro para o destino recentemente vinculado.  
+*_PTarget*<br/>
+Um ponteiro para o destino vinculado recentemente.  
   
 ##  <a name="propagate_message"></a> propagate_message 
 
- Assincronamente transmite uma mensagem de um `ISource` blocos a este `single_assignment` bloco de mensagens. Ele é invocado com o `propagate` método, quando chamado por um bloco de código-fonte.  
+ Passa assincronamente uma mensagem de um `ISource` bloco a este `single_assignment` bloco de mensagem. Ele é invocado pelo `propagate` método, quando chamado por um bloco de código-fonte.  
   
 ```
 virtual message_status propagate_message(
@@ -171,26 +171,26 @@ virtual message_status propagate_message(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_PMessage`  
- Um ponteiro para o `message` objeto.  
+*_PMessage*<br/>
+Um ponteiro para o `message` objeto.  
   
- `_PSource`  
- Um ponteiro para o bloco de código-fonte oferta a mensagem.  
+*_PSource*<br/>
+Um ponteiro para o bloco de código-fonte, oferecendo a mensagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um [message_status](concurrency-namespace-enums.md) indicação de que o destino decidiu fazer com a mensagem.  
   
 ##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets 
 
- Locais de `message` `_PMessage` neste `single_assignment` bloco de mensagens e oferece a todos os destinos vinculados.  
+ Coloca o `message` `_PMessage` desta `single_assignment` bloco de mensagens e oferecê-la para todos os destinos vinculados.  
   
 ```
 virtual void propagate_to_any_targets(_Inout_opt_ message<T>* _PMessage);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_PMessage`  
- Um ponteiro para um `message` que este `single_assignment` tem assumir a propriedade do bloco de mensagens.  
+*_PMessage*<br/>
+Um ponteiro para um `message` que este `single_assignment` tem assumiu a propriedade do bloco de mensagem.  
   
 ##  <a name="release_message"></a> release_message 
 
@@ -201,26 +201,26 @@ virtual void release_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_MsgId`  
- O `runtime_object_identity` do `message` do objeto que está sendo liberado.  
+*_MsgId*<br/>
+O `runtime_object_identity` do `message` do objeto que está sendo lançada.  
   
 ##  <a name="reserve_message"></a> reserve_message 
 
- Reserva uma mensagem anteriormente oferecida por este `single_assignment` bloco de mensagens.  
+ Reserva uma mensagem anteriormente oferecida por este `single_assignment` bloco de mensagem.  
   
 ```
 virtual bool reserve_message(runtime_object_identity _MsgId);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_MsgId`  
- O `runtime_object_identity` do `message` do objeto que está sendo reservado.  
+*_MsgId*<br/>
+O `runtime_object_identity` do `message` do objeto que está sendo reservado.  
   
 ### <a name="return-value"></a>Valor de retorno  
  `true` Se a mensagem foi reservada com êxito, `false` caso contrário.  
   
 ### <a name="remarks"></a>Comentários  
- Depois de `reserve` é chamado, se ele retorna `true`, `consume` ou `release` deve ser chamado para executar ou liberar a propriedade da mensagem.  
+ Após `reserve` é chamado, se ele retornar `true`, ambos `consume` ou `release` deve ser chamado para executar ou liberar a propriedade da mensagem.  
   
 ##  <a name="resume_propagation"></a> resume_propagation 
 
@@ -232,7 +232,7 @@ virtual void resume_propagation();
   
 ##  <a name="send_message"></a> send_message 
 
- Modo síncrono transmite uma mensagem de um `ISource` blocos a este `single_assignment` bloco de mensagens. Ele é invocado com o `send` método, quando chamado por um bloco de código-fonte.  
+ Forma síncrona transmite uma mensagem de um `ISource` bloco a este `single_assignment` bloco de mensagem. Ele é invocado pelo `send` método, quando chamado por um bloco de código-fonte.  
   
 ```
 virtual message_status send_message(
@@ -241,18 +241,18 @@ virtual message_status send_message(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_PMessage`  
- Um ponteiro para o `message` objeto.  
+*_PMessage*<br/>
+Um ponteiro para o `message` objeto.  
   
- `_PSource`  
- Um ponteiro para o bloco de código-fonte oferta a mensagem.  
+*_PSource*<br/>
+Um ponteiro para o bloco de código-fonte, oferecendo a mensagem.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um [message_status](concurrency-namespace-enums.md) indicação de que o destino decidiu fazer com a mensagem.  
   
 ##  <a name="ctor"></a> single_assignment 
 
- Constrói um `single_assignment` bloco de mensagens.  
+ Constrói um `single_assignment` bloco de mensagem.  
   
 ```
 single_assignment();
@@ -276,23 +276,23 @@ single_assignment(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Filter`  
- Uma função de filtro que determina se as mensagens oferecidas devem ser aceita.  
+*Filtro*<br/>
+Uma função de filtro que determina se as mensagens oferecidas devem ser aceitas.  
   
- `_PScheduler`  
- O `Scheduler` objeto dentro do qual a propagação de tarefas para o `single_assignment` bloco de mensagens está agendado.  
+*_PScheduler*<br/>
+O `Scheduler` objeto dentro do qual a tarefa de propagação para o `single_assignment` bloco de mensagem está agendado.  
   
- `_PScheduleGroup`  
- O `ScheduleGroup` objeto dentro do qual a propagação de tarefas para o `single_assignment` bloco de mensagens está agendado. O `Scheduler` objeto usado é indicado pelo grupo de agendamento.  
+*_PScheduleGroup*<br/>
+O `ScheduleGroup` objeto dentro do qual a tarefa de propagação para o `single_assignment` bloco de mensagem está agendado. O `Scheduler` objeto usado é inferido pelo grupo agendado.  
   
 ### <a name="remarks"></a>Comentários  
- O tempo de execução usa o agendador padrão se você não especificar o `_PScheduler` ou `_PScheduleGroup` parâmetros.  
+ O tempo de execução usa o agendador padrão, se você não especificar o `_PScheduler` ou `_PScheduleGroup` parâmetros.  
   
- O tipo `filter_method` é um functor com assinatura `bool (T const &)` que é invocado por este `single_assignment` bloco de mensagens para determinar se ele deve aceitar uma mensagem oferecida.  
+ O tipo `filter_method` é um funtor com assinatura `bool (T const &)` que é invocado por este `single_assignment` bloco de mensagem para determinar se ele deve aceitar uma mensagem oferecida.  
   
 ##  <a name="dtor"></a> ~ single_assignment 
 
- Destrói a `single_assignment` bloco de mensagens.  
+ Destrói o `single_assignment` bloco de mensagem.  
   
 ```
 ~single_assignment();
@@ -300,7 +300,7 @@ single_assignment(
   
 ##  <a name="value"></a> Valor 
 
- Obtém uma referência para a carga atual da mensagem que está sendo armazenada na `single_assignment` bloco de mensagens.  
+ Obtém uma referência ao conteúdo atual da mensagem que está sendo armazenada no `single_assignment` bloco de mensagem.  
   
 ```
 T const& value();
@@ -310,7 +310,7 @@ T const& value();
  A carga da mensagem armazenada.  
   
 ### <a name="remarks"></a>Comentários  
- Esse método aguardará até que uma mensagem chega se nenhuma mensagem estiver atualmente armazenada na `single_assignment` bloco de mensagens.  
+ Esse método aguardará até que uma mensagem chega se nenhuma mensagem estiver atualmente armazenada no `single_assignment` bloco de mensagem.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace de simultaneidade](concurrency-namespace.md)   

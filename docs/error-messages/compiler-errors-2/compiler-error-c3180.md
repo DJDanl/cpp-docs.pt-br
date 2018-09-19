@@ -1,5 +1,5 @@
 ---
-title: C3180 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3180 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e08b46dda1d9d350ca955ecd0f05cac4f484cea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e200a75164c0d7fdb0c6804d084630cc6e6007e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254849"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048364"
 ---
-# <a name="compiler-error-c3180"></a>C3180 de erro do compilador
-nome do tipo: nome excede o limite de metadados de '' limite de caracteres  
-  
- O compilador truncado o nome de um tipo gerenciado nos metadados. O truncamento será inutilizar o tipo com o `#using` diretiva (ou equivalente em outro idioma).  
-  
- O nome do tipo de limite inclui qualquer qualificações de namespace.
+# <a name="compiler-error-c3180"></a>Erro do compilador C3180
+
+'type name': nome excede o limite de metadados de caracteres 'limit'
+
+O compilador truncado o nome de um tipo gerenciado nos metadados. O truncamento será inutilizar o tipo com o `#using` diretiva (ou o equivalente em outro idioma).
+
+O limite de nome de tipo inclui qualquer as qualificações do namespace.

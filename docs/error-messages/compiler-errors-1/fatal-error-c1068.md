@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fe67aa85acbab4cb175b6062a7a36ea91c7c815
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 783e4fffa73dd22a5f93254a30b57e1788baed47
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33197111"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031555"
 ---
 # <a name="fatal-error-c1068"></a>Erro fatal C1068
-não é possível abrir o arquivo 'file'  
-  
- Certifique-se de que `file` não está em uso por outro programa.
+
+não é possível abrir o arquivo 'file'
+
+Certifique-se de que `file` não está em uso por outro programa.

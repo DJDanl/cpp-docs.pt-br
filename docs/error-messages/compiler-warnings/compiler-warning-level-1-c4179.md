@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4179 | Microsoft Docs
+title: Compilador aviso (nível 1) C4179 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/25/2018
 ms.technology:
@@ -16,15 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a47c8da89df03e9c33e968574e81bef304a00dd
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 0a5f51e334062badafed5a78c675442e9805d20c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122024"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032166"
 ---
-# <a name="compiler-warning-level-1-c4179"></a>Compilador C4179 de aviso (nível 1)
+# <a name="compiler-warning-level-1-c4179"></a>Compilador aviso (nível 1) C4179
 
-> ' / / *': analisado como '/' e ' /\*': confusão com padrão ' / /' comentários  
-  
+> ' / / *': analisado como '/' e ' /\*': confusão com padrão ' / /' comentários
+
 __//\*__ é um delimitador de comentário incorreta. Use __//__ ou __/ \*__ em vez disso.

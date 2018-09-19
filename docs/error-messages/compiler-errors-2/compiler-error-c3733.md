@@ -1,5 +1,5 @@
 ---
-title: C3733 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3733 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7d5531bf9eb7352f1866bc0800734a78261b585
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b8aa8d3d952f84b9fee0c00b5cfcb7c5e5c45d9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266624"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051294"
 ---
-# <a name="compiler-error-c3733"></a>C3733 de erro do compilador
-'event': sintaxe inadequada ao especificar evento COM; Você esqueceu interface'?  
-  
- A sintaxe incorreta foi usada para um evento de COM. Para corrigir esse erro, altere o tipo de evento ou corrija a sintaxe de acordo com as regras de evento COM.  
-  
- O exemplo a seguir gera C3733:  
-  
-```  
-#define _ATL_ATTRIBUTES 1  
-#include "atlbase.h"  
-#include "atlcom.h"  
-  
-[coclass, event_source(com), // change 'com' to 'native' to resolve  
-uuid("00000000-0000-0000-0000-000000000001")]  
-class A  
-{  
-   __event void func();   // C3733  
-};  
-  
-int main()  
-{  
-}  
+# <a name="compiler-error-c3733"></a>Erro do compilador C3733
+
+'event': sintaxe inadequada ao especificar evento COM; Você esqueceu interface'?
+
+A sintaxe incorreta foi usada para um evento COM. Para corrigir esse erro, altere o tipo de evento ou corrija a sintaxe para estar em conformidade com as regras de evento do COM.
+
+O exemplo a seguir gera C3733:
+
+```
+#define _ATL_ATTRIBUTES 1
+#include "atlbase.h"
+#include "atlcom.h"
+
+[coclass, event_source(com), // change 'com' to 'native' to resolve
+uuid("00000000-0000-0000-0000-000000000001")]
+class A
+{
+   __event void func();   // C3733
+};
+
+int main()
+{
+}
 ```

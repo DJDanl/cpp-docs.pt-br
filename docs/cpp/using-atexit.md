@@ -16,15 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4acd81a5420f9fe2685e7570f26fea61691b845
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 9d5164394853d2ac4f18efc94863b8fc3fa5ba78
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467398"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053122"
 ---
 # <a name="using-atexit"></a>Usando atexit
-Com o [atexit](../c-runtime-library/reference/atexit.md) função, você pode especificar uma função de processamento de saída que é executado antes do encerramento do programa. Nenhum objeto estático global inicializado antes da chamada para **atexit** são destruídos antes da execução da função de processamento de saída.  
-  
-## <a name="see-also"></a>Consulte também  
- [Considerações de término adicionais](../cpp/additional-termination-considerations.md)
+
+Com o [atexit](../c-runtime-library/reference/atexit.md) função, você pode especificar uma função de processamento de saída que é executado antes do encerramento do programa. Nenhum objeto estático global inicializado antes da chamada para **atexit** são destruídos antes da execução da função de processamento de saída.
+
+## <a name="see-also"></a>Consulte também
+
+[Considerações de término adicionais](../cpp/additional-termination-considerations.md)

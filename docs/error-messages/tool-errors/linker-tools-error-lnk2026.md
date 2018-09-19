@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de vinculador LNK2026 erro | Microsoft Docs
+title: Erro das LNK2026 das ferramentas de vinculador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8b4a296379ab6e4ac8ad3b70668508303e2779d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b76c5533e79c75d06594d42464ca32104eb065ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299572"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046219"
 ---
 # <a name="linker-tools-error-lnk2026"></a>Erro das Ferramentas de Vinculador LNK2026
-módulo inseguro para imagem SAFESEH  
-  
- [/SafeSEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md) foi especificado, mas um módulo não era compatível com o recurso de manipulação de exceções seguro. Se você quiser usar este módulo com **/SAFESEH**, em seguida, você precisará recompilar o módulo.
+
+módulo não seguro para imagem SAFESEH
+
+[/SafeSEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md) foi especificado, mas um módulo não era compatível com a recurso de manipulação de exceção segura. Se você quiser usar este módulo com **/SAFESEH**, em seguida, você precisará recompilar o módulo.

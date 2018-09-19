@@ -15,21 +15,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4e68aacb013cb7f91d0225094cfd941eae5e2c30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4ef6d5d54bb3d6ed55ec2837a2300d8a1dcb03e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096685"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034070"
 ---
 # <a name="creating-an-ole-db-consumer"></a>Criando um consumidor de banco de dados OLE
-Você pode criar um consumidor de modelos OLE DB com ou sem o ATL OLE DB Assistente de consumidor, embora o uso do assistente é o método recomendado. Um consumidor pode operar em qualquer aplicativo que ofereça suporte ATL.  
+
+Você pode criar um consumidor de modelos OLE DB, com ou sem o Assistente da ATL OLE DB consumidor, embora o uso do assistente é o método recomendado. Um consumidor pode operar em qualquer aplicativo que dá suporte a ATL.  
   
- Esta seção abrange os seguintes tópicos:  
+Esta seção abrange os seguintes tópicos:  
   
--   [Criando um consumidor do OLE DB usando um assistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)  
+- [Criando um consumidor do OLE DB usando um assistente](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)  
   
--   [Criando um consumidor OLE DB sem usar um assistente](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)  
+- [Criando um consumidor do OLE DB sem usar um assistente](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+
+[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

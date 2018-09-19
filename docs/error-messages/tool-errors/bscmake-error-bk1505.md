@@ -1,5 +1,5 @@
 ---
-title: BSCMAKE erro BK1505 | Microsoft Docs
+title: Erro de BSCMAKE BK1505 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d74f5781a3387ee1df57bcf7989cb9e526b8616
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 749dca190ca09ad86b3313e1678eeea65ab434ef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33295399"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034935"
 ---
 # <a name="bscmake-error-bk1505"></a>Erro BK1505 (BSCMAKE)
-não é possível ler do arquivo 'nome do arquivo' [: motivo]  
-  
- BSCMAKE não pode ler o arquivo.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
-  
-1.  Corrupção de arquivo.  
-  
-2.  Arquivo de truncamento para o compilador ficando sem espaço em disco ou que está sendo interrompida ao criar o arquivo. SBR.
+
+não é possível ler do arquivo 'filename' [: motivo]
+
+BSCMAKE não é possível ler o arquivo.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
+
+1. Arquivo corrompido.
+
+1. Para o compilador ficando sem espaço em disco ou que está sendo interrompido enquanto cria o arquivo. SBR o truncamento de arquivos.

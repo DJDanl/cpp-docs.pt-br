@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32c05f2c4740e978d58540727067ea0d76d95871
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 95811d262dc674a75ded45c621212c5f4c506213
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712147"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068399"
 ---
 # <a name="schedule"></a>agenda
 Aplica-se para o [para](../../../parallel/openmp/reference/for-openmp.md) diretiva.  
@@ -33,8 +33,8 @@ schedule(type[,size])
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `type`  
- O tipo de agendamento:  
+*type*<br/>
+O tipo de agendamento:  
   
 -   `dynamic`  
   
@@ -52,7 +52,7 @@ schedule(type[,size])
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```cpp  
 // omp_schedule.cpp  
 // compile with: /openmp   
 #include <windows.h>  

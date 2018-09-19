@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de vinculador LNK1223 erro | Microsoft Docs
+title: Erro das LNK1223 das ferramentas de vinculador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e50d29af6ac563fadd3a52e5b1d3d15201289083
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8639919c74559829367108b36d62594e2a83a91a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298646"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067969"
 ---
 # <a name="linker-tools-error-lnk1223"></a>Erro das Ferramentas de Vinculador LNK1223
-arquivo inválido ou corrompido: o arquivo contém contribuições .pdata inválidas  
-  
- Para plataformas RISC que usam pdata, este erro ocorrerá se o compilador tiver emitido uma seção .pdata com entradas não classificadas.  
-  
- Para corrigir esse problema, tente compilar sem [/GL (otimização de programa total)](../../error-messages/tool-errors/linker-tools-error-lnk1223.md) habilitado. Corpos de função vazios também podem causar este erro em alguns casos.
+
+arquivo inválido ou corrompido: o arquivo contém contribuições .pdata inválidas
+
+Para plataformas RISC que usam pdata, este erro ocorrerá se o compilador tiver emitido uma seção .pdata com entradas não classificadas.
+
+Para corrigir esse problema, tente compilar sem [/GL (otimização de programa inteiro)](../../error-messages/tool-errors/linker-tools-error-lnk1223.md) habilitado. Corpos de função vazios também podem causar este erro em alguns casos.

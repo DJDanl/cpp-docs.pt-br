@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b977875655182f1cbc822540cf021635f525f7e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7cab0ea4ecf4bfabede365b9e0fbc9d4a02e2515
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756412"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057439"
 ---
 # <a name="ccomunkarray-class"></a>Classe CComUnkArray
 
@@ -45,7 +45,7 @@ class CComUnkArray
 
 #### <a name="parameters"></a>Parâmetros
 
-*nMaxSize*  
+*nMaxSize*<br/>
 O número máximo de `IUnknown` ponteiros que podem ser mantidos na matriz estática.
 
 ## <a name="members"></a>Membros
@@ -92,7 +92,7 @@ DWORD Add(IUnknown* pUnk);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pUnk*  
+*pUnk*<br/>
 Chame este método para adicionar um `IUnknown` ponteiro para a matriz.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -159,7 +159,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 
 ### <a name="parameters"></a>Parâmetros
 
-*ppFind*  
+*ppFind*<br/>
 O `IUnknown` ponteiro para o qual o cookie associado é necessário.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -180,7 +180,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwCookie*  
+*dwCookie*<br/>
 O cookie para o qual associado `IUnknown` ponteiro é necessário.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -197,7 +197,7 @@ BOOL Remove(DWORD dwCookie);
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwCookie*  
+*dwCookie*<br/>
 O cookie referenciando o `IUnknown` ponteiro a ser removido da matriz.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -206,5 +206,5 @@ Retorna TRUE se o ponteiro for removido, FALSE caso contrário.
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)   
+[Classe CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

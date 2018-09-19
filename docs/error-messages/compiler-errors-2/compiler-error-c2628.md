@@ -1,5 +1,5 @@
 ---
-title: C2628 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2628 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3f9813f103f59e61093ab82366e50a7ef6dae46
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43a7d0515013158932f627b883ab36a2793ab5bd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230221"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051341"
 ---
-# <a name="compiler-error-c2628"></a>C2628 de erro do compilador
-'type1' seguido de 'type2' é inválido (você esqueceu um ';'?)  
-  
- Um ponto e vírgula pode estar faltando.  
-  
- O exemplo a seguir gera C2628:  
-  
-```  
-// C2628.cpp  
-class CMyClass {}  
-int main(){}   // C2628 error  
-```  
-  
- Possível solução:  
-  
-```  
-// C2628b.cpp  
-class CMyClass {};  
-int main(){}  
+# <a name="compiler-error-c2628"></a>Erro do compilador C2628
+
+'type1' seguido de 'type2' é inválido (você esqueceu um ';'?)
+
+Um ponto e vírgula pode estar ausente.
+
+O exemplo a seguir gera C2628:
+
+```
+// C2628.cpp
+class CMyClass {}
+int main(){}   // C2628 error
+```
+
+Solução possível:
+
+```
+// C2628b.cpp
+class CMyClass {};
+int main(){}
 ```

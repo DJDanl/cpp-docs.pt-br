@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12c6720219a638d15b1b7bf684531dfe4d752d49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8091eb7316531c6bdda9bf714ec7a195b5406182
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198086"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047675"
 ---
 # <a name="fatal-error-c1037"></a>Erro fatal C1037
-não é possível abrir o arquivo de objeto  
-  
- O arquivo de objeto especificado por [/Fo](../../build/reference/fo-object-file-name.md) não pode ser aberto.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
-  
-1.  O nome de arquivo inválido.  
-  
-2.  Memória insuficiente para abrir o arquivo.  
-  
-3.  Outro processo está usando o arquivo.  
-  
-4.  Um arquivo somente leitura tem o mesmo nome.  
-  
+
+não é possível abrir o arquivo de objeto filename
+
+O arquivo de objeto especificado por [/Fo](../../build/reference/fo-object-file-name.md) não pode ser aberto.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
+
+1. O nome de arquivo inválido.
+
+1. Memória insuficiente para abrir o arquivo.
+
+1. Outro processo está usando o arquivo.
+
+1. Um arquivo somente leitura tem o mesmo nome.
+

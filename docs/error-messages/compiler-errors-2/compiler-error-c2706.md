@@ -1,5 +1,5 @@
 ---
-title: C2706 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2706 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92f64ddab93fb6815e3ff7a98ac39a842042bfeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 560edb9953d4f7c751f4ab4102fd544fb09bb86d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232640"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066005"
 ---
-# <a name="compiler-error-c2706"></a>C2706 de erro do compilador
-EXCEPT inválido sem correspondência \__try (faltando '}' na \__try bloco?)  
-  
- O compilador não encontrou uma chave de fechamento para um `__try` bloco.  
-  
- O exemplo a seguir gera C2706:  
-  
-```  
-// C2706.cpp  
-int main() {  
-   __try {  
-      void f();  
-   // C2706  } missing here  
-   __except(GetExceptionCode() == 0x0) {  
-   }  
-}  
+# <a name="compiler-error-c2706"></a>Erro do compilador C2706
+
+EXCEPT inválido sem correspondência \__try (faltando '}' no \_bloco _try?)
+
+O compilador não encontrou uma chave de fechamento para um `__try` bloco.
+
+O exemplo a seguir gera C2706:
+
+```
+// C2706.cpp
+int main() {
+   __try {
+      void f();
+   // C2706  } missing here
+   __except(GetExceptionCode() == 0x0) {
+   }
+}
 ```

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f5027fa4b84d84bf07766c7ac4e75f140706f0c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0741cd65924a2c968153333aa1a557c31f429d45
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103686"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039771"
 ---
 # <a name="atl-operators"></a>Operadores ATL
 
@@ -42,16 +42,16 @@ Esta seção contém os tópicos de referência para os operadores globais da AT
 
 Compara `CSid` objetos ou `SID` estruturas (identificador de segurança) quanto à igualdade.
 
-```   
+```
 bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*LHS*  
+*LHS*<br/>
 A primeira `CSid` objeto ou `SID` estrutura a ser comparada.
 
-*rhs*  
+*rhs*<br/>
 A segunda `CSid` objeto ou `SID` estrutura a ser comparada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -62,16 +62,16 @@ Retornará TRUE se os objetos forem iguais, FALSO se não forem iguais.
 
 Compara `CSid` objetos ou `SID` estruturas (identificador de segurança) quanto à desigualdade.
 
-```   
+```
 bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*LHS*  
+*LHS*<br/>
 A primeira `CSid` objeto ou `SID` estrutura a ser comparada.
 
-*rhs*  
+*rhs*<br/>
 A segunda `CSid` objeto ou `SID` estrutura a ser comparada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -82,16 +82,16 @@ Retornará TRUE se os objetos não forem iguais, FALSE se eles forem iguais.
 
 Testa se o `CSid` objeto ou `SID` estrutura no lado esquerdo do operador é menor do que o `CSid` objeto ou `SID` estrutura no lado direito (para compatibilidade de biblioteca padrão C++).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*LHS*  
+*LHS*<br/>
 A primeira `CSid` objeto ou `SID` estrutura a ser comparada.
 
-*rhs*  
+*rhs*<br/>
 A segunda `CSid` objeto ou `SID` estrutura a ser comparada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -106,16 +106,16 @@ Esse operador atua no endereço do `CSid` objeto ou `SID` estrutura e é impleme
 
 Testa se o `CSid` objeto ou `SID` estrutura no lado esquerdo do operador é maior que o `CSid` objeto ou `SID` estrutura no lado direito (para compatibilidade de biblioteca padrão C++).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*LHS*  
+*LHS*<br/>
 A primeira `CSid` objeto ou `SID` estrutura a ser comparada.
 
-*rhs*  
+*rhs*<br/>
 A segunda `CSid` objeto ou `SID` estrutura a ser comparada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -130,16 +130,16 @@ Esse operador atua no endereço do `CSid` objeto ou `SID` estrutura e é impleme
 
 Testa se o `CSid` objeto ou `SID` estrutura no lado esquerdo do operador é menor que ou igual a `CSid` objeto ou `SID` estrutura no lado direito (para compatibilidade de biblioteca padrão C++).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*LHS*  
+*LHS*<br/>
 A primeira `CSid` objeto ou `SID` estrutura a ser comparada.
 
-*rhs*  
+*rhs*<br/>
 A segunda `CSid` objeto ou `SID` estrutura a ser comparada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -154,16 +154,16 @@ Esse operador atua no endereço do `CSid` objeto ou `SID` estrutura e é impleme
 
 Testa se o `CSid` objeto ou `SID` estrutura no lado esquerdo do operador é maior que ou igual a `CSid` objeto ou `SID` estrutura no lado direito (para compatibilidade de biblioteca padrão C++).
 
-```   
+```
 bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*LHS*  
+*LHS*<br/>
 A primeira `CSid` objeto ou `SID` estrutura a ser comparada.
 
-*rhs*  
+*rhs*<br/>
 A segunda `CSid` objeto ou `SID` estrutura a ser comparada.
 
 ### <a name="return-value"></a>Valor de retorno

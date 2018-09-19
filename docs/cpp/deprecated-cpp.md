@@ -17,66 +17,70 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77748cd69a3424bb4b2e209a0a447d39eae25147
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: f2d35f8d5f263125cd6a5e0a5e34105c3424f87b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39466898"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070269"
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
+
 Este tópico é sobre específicos da Microsoft preterido declspec declaração. Para obter informações sobre o c++14 `[[deprecated]]` atributo e diretrizes sobre quando usar esse atributo versus o declspec específico da Microsoft ou o pragma, consulte [atributos padrão do C++](attributes.md).
 
-Com as exceções indicadas abaixo, o **preterido** declaração oferece a mesma funcionalidade que o [preterida](../preprocessor/deprecated-c-cpp.md) pragma:  
-  
--   O **preterido** declaração permite especificar formatos específicos de sobrecargas de função como preteridos, enquanto que o formato do pragma se aplica a todos os formatos sobrecarregados de um nome de função.  
-  
--   O **preterido** declaração permite que você especifique uma mensagem que será exibido no tempo de compilação. O texto da mensagem pode ser de uma macro.  
-  
--   Macros podem ser marcadas como preteridas com o **preterido** pragma.  
-  
- Se o compilador encontra o uso de um identificador preterido ou a standard [ `[[deprecated]]` ](attributes.md) atributo, uma [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) aviso é gerado.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como marcar funções como preteridas e como especificar uma mensagem que será exibida no tempo de compilação, quando a função preterida for usada.  
-  
-```cpp 
-// deprecated.cpp  
-// compile with: /W3  
-#define MY_TEXT "function is deprecated"  
-void func1(void) {}  
-__declspec(deprecated) void func1(int) {}  
-__declspec(deprecated("** this is a deprecated function **")) void func2(int) {}  
-__declspec(deprecated(MY_TEXT)) void func3(int) {}  
-  
-int main() {  
-   func1();  
-   func1(1);   // C4996  
-   func2(1);   // C4996  
-   func3(1);   // C4996  
-}  
-```  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como marcar classes como preteridas e como especificar uma mensagem que será exibida no tempo de compilação, quando a classe preterida for usada.  
-  
-```cpp 
-// deprecate_class.cpp  
-// compile with: /W3  
-struct __declspec(deprecated) X {  
-   void f(){}  
-};  
-  
-struct __declspec(deprecated("** X2 is deprecated **")) X2 {  
-   void f(){}  
-};  
-  
-int main() {  
-   X x;   // C4996  
-   X2 x2;   // C4996  
-}  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [__declspec](../cpp/declspec.md)   
- [Palavras-chave](../cpp/keywords-cpp.md)
+Com as exceções indicadas abaixo, o **preterido** declaração oferece a mesma funcionalidade que o [preterida](../preprocessor/deprecated-c-cpp.md) pragma:
+
+- O **preterido** declaração permite especificar formatos específicos de sobrecargas de função como preteridos, enquanto que o formato do pragma se aplica a todos os formatos sobrecarregados de um nome de função.
+
+- O **preterido** declaração permite que você especifique uma mensagem que será exibido no tempo de compilação. O texto da mensagem pode ser de uma macro.
+
+- Macros podem ser marcadas como preteridas com o **preterido** pragma.
+
+Se o compilador encontra o uso de um identificador preterido ou a standard [ `[[deprecated]]` ](attributes.md) atributo, uma [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) aviso é gerado.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir mostra como marcar funções como preteridas e como especificar uma mensagem que será exibida no tempo de compilação, quando a função preterida for usada.
+
+```cpp
+// deprecated.cpp
+// compile with: /W3
+#define MY_TEXT "function is deprecated"
+void func1(void) {}
+__declspec(deprecated) void func1(int) {}
+__declspec(deprecated("** this is a deprecated function **")) void func2(int) {}
+__declspec(deprecated(MY_TEXT)) void func3(int) {}
+
+int main() {
+   func1();
+   func1(1);   // C4996
+   func2(1);   // C4996
+   func3(1);   // C4996
+}
+```
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir mostra como marcar classes como preteridas e como especificar uma mensagem que será exibida no tempo de compilação, quando a classe preterida for usada.
+
+```cpp
+// deprecate_class.cpp
+// compile with: /W3
+struct __declspec(deprecated) X {
+   void f(){}
+};
+
+struct __declspec(deprecated("** X2 is deprecated **")) X2 {
+   void f(){}
+};
+
+int main() {
+   X x;   // C4996
+   X2 x2;   // C4996
+}
+```
+
+## <a name="see-also"></a>Consulte também
+
+[__declspec](../cpp/declspec.md)<br/>
+[Palavras-chave](../cpp/keywords-cpp.md)

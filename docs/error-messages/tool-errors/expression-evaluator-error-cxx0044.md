@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7499c970396ce907a79fa5a666dd7dc1ab1e8c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34adab6500683d8b78a4ce9c990eaf04c143e424
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297889"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064705"
 ---
 # <a name="expression-evaluator-error-cxx0044"></a>Erro CXX0044 (avaliador de expressão)
-requer o uso de ponteiro _based(void): > operador  
-  
- Um ponteiro com base em `void` não pode ser usada diretamente. Você deve formar um ponteiro completo usando o **: >** operador.  
-  
- Esse erro é idêntico ao CAN0044.
+
+requer o uso de ponteiro _based(void): > operador
+
+Um ponteiro com base em `void` não pode ser usado diretamente. Você deve formar um ponteiro completo usando o **: >** operador.
+
+Esse erro é idêntico ao CAN0044.

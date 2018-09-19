@@ -17,21 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0ba2e8452defef14816993a2c1851de58bf624f
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: a22b97e730a40e8ebe71ea766919f946ac4dcb84
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39407277"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064349"
 ---
 # <a name="program-termination"></a>Término do programa
-No C++, há várias maneiras de sair do programa:  
-  
--   Chame o [sair](../cpp/exit-function.md) função.  
-  
--   Chame o [anular](../cpp/abort-function.md) função.  
-  
--   Executar uma [retornar](../cpp/return-statement-in-program-termination-cpp.md) instrução from `main`.  
-  
-## <a name="see-also"></a>Consulte também  
- [main: inicialização do programa](../cpp/main-program-startup.md)
+
+No C++, há várias maneiras de sair do programa:
+
+- Chame o [sair](../cpp/exit-function.md) função.
+
+- Chame o [anular](../cpp/abort-function.md) função.
+
+- Executar uma [retornar](../cpp/return-statement-in-program-termination-cpp.md) instrução from `main`.
+
+## <a name="see-also"></a>Consulte também
+
+[main: inicialização do programa](../cpp/main-program-startup.md)

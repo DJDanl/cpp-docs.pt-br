@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 665d868aeacbaf5c62bf59a4400baa2b31569972
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1fbd8994be6fd86a764db400d8761a5d697079b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198723"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037327"
 ---
 # <a name="fatal-error-c1009"></a>Erro fatal C1009
-limite do compilador: macros com aninhamento muito profundo  
-  
- O compilador tentar expandir macros muitas ao mesmo tempo. O compilador tem um limite de 256 níveis de macros aninhadas. Divida macros aninhadas em macros mais simples.
+
+limite do compilador: macros com aninhamento muito profundo
+
+O compilador tentou expandir muitas macros ao mesmo tempo. O compilador tem um limite de 256 níveis de macros aninhadas. Divida macros aninhadas em macros mais simples.

@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a1c25f87913de312ca766b05edbac39f7191ff0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c642c678c7db29b9826449731f07ad90bc865294
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318981"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062053"
 ---
 # <a name="project-build-error-prj0027"></a>Erro de Build PRJ0027 no Projeto
-Mensagem de log Unicode 'conteúdo' apresenta conteúdo que não pôde ser convertido na página de código ANSI do usuário.  
-  
- Você normalmente só verá este aviso em conjunto com erros na criação de arquivos em lotes e/ou resposta.  
-  
- A resolução para esse erro é atualizar o conteúdo do log de compilação para usar ANSI ou para instalar a página de código em seu computador e defina-o como o padrão do sistema.
+
+Mensagem de log Unicode 'conteúdo' apresenta conteúdo que não pôde ser convertido na página de código ANSI do usuário.
+
+Você normalmente só verá esse aviso em conjunto com erros na criação de arquivos de lote e/ou resposta.
+
+A resolução para esse erro é atualizar o conteúdo do log de compilação para usar ANSI ou para instalar a página de código em seu computador e defini-lo como o padrão do sistema.

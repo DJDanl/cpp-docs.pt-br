@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d90a3f4b2cbacb3071dcd552fd88f6cb11bb5d43
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 08200320e30816ac45e6c91a14dc41508430cfae
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131836"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069112"
 ---
 # <a name="constructors-c"></a>Construtores (C++)
 
@@ -88,7 +88,7 @@ Usar uma lista de inicializador de membro é preferível atribuindo valores no c
     {}
 ```
 
-O identificador deve se referir a um membro de classe; ele é inicializado com o valor do argumento. O argumento pode ser um dos parâmetros do construtor, uma chamada de função ou um [std:: initializer_list\<T >](../standard-library/initializer-list-class.md). 
+O identificador deve se referir a um membro de classe; ele é inicializado com o valor do argumento. O argumento pode ser um dos parâmetros do construtor, uma chamada de função ou um [std:: initializer_list\<T >](../standard-library/initializer-list-class.md).
 
 **Const** membros e membros de tipo de referência devem ser inicializados na lista de inicializadores de membro.
 
@@ -96,7 +96,7 @@ Chamadas para construtores de classe base com parâmetros devem ser feitas na li
 
 ## <a name="default_constructors"></a> Construtores padrão
 
- *Padrão de construtores* normalmente não têm parâmetros, mas eles podem ter parâmetros com valores padrão.
+*Padrão de construtores* normalmente não têm parâmetros, mas eles podem ter parâmetros com valores padrão.
 
 ```cpp
 class Box {
@@ -216,6 +216,7 @@ Você pode impedir que seu objeto sendo copiados, definindo o construtor de cóp
 A tentativa de copiar o objeto produz o erro *C2280: tentativa de fazer referência a uma função excluída*.
 
 ## <a name="move_constructors"></a> Construtores de movimentação
+
 Um *construtor de movimentação* é uma função de membro especial que move a propriedade dos dados de um objeto existente a uma nova variável sem copiar os dados originais. Ele utiliza uma referência de rvalue como seu primeiro parâmetro e quaisquer parâmetros adicionais devem ter valores padrão. Construtores de movimentação podem aumentar significativamente a eficiência do seu programa ao passar em torno de objetos grandes. Um construtor de movimentação usa uma referência de rvalue como seu primeiro parâmetro. Todos os outros parâmetros devem ter valores padrão.
 
 ```cpp

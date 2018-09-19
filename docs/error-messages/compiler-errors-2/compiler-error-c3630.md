@@ -1,5 +1,5 @@
 ---
-title: C3630 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3630 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8e38e06f2a32e9a95421ac113cdd0b5f1371334
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53d7b895c25a847e8abe1b9db11b8b413d3342d0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33265201"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066109"
 ---
-# <a name="compiler-error-c3630"></a>C3630 de erro do compilador
-Erro ao processar o token 'token'  
-  
- Um token no código-fonte não pôde ser processado.
+# <a name="compiler-error-c3630"></a>Erro do compilador C3630
+
+Erro ao processar o token 'token'
+
+Não foi possível processar um token no código-fonte.

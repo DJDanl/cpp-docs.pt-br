@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df584fd95921594562cf4c1fb912986343b30c4c
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 47d56641209ea1fe192bf0c32ace7701a1e579dc
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42541545"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054526"
 ---
 # <a name="fatal-error-c1084"></a>Erro fatal C1084
-Não é possível ler o arquivo do tipo de arquivo: 'file': mensagem  
-  
- Esse erro costuma ser resultado de uma falha na chamada à API do sistema interna feita pelo compilador. A mensagem mostrada quando esse erro for encontrado, geralmente é gerada por um [wcserror_s](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) ou [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage).  
-  
- A reprodução das seguintes etapas pode ajudar a resolver C1084:  
-  
--   Verifique se o arquivo especificado existe.  
-  
--   Verifique se as permissões apropriadas estão definidas para acessar o arquivo especificado.  
-  
--   Verifique se a sintaxe de linha de comando respeita as regras descritas em [sintaxe de linha de comando do compilador](../../build/reference/compiler-command-line-syntax.md).  
-  
--   Verifique se as variáveis de ambiente **TMP** e **TEMP** estão corretamente conjunto, bem como as permissões apropriadas para acessar os diretórios, consultem essas variáveis de ambiente. Além disso, verifique as unidades mencionadas pela **TMP** e **TEMP** variáveis de ambiente contêm uma quantidade suficiente de espaço livre.  
-  
--   Se a mensagem indicar "número de arquivo incorreto", o arquivo especificado pode estar sendo fechado em primeiro plano durante a compilação em segundo plano.  
-  
- Depois de realizar o diagnóstico acima, realize uma compilação limpa.
+
+Não é possível ler o arquivo do tipo de arquivo: 'file': mensagem
+
+Esse erro costuma ser resultado de uma falha na chamada à API do sistema interna feita pelo compilador. A mensagem mostrada quando esse erro for encontrado, geralmente é gerada por um [wcserror_s](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md) ou [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage).
+
+A reprodução das seguintes etapas pode ajudar a resolver C1084:
+
+- Verifique se o arquivo especificado existe.
+
+- Verifique se as permissões apropriadas estão definidas para acessar o arquivo especificado.
+
+- Verifique se a sintaxe de linha de comando respeita as regras descritas em [sintaxe de linha de comando do compilador](../../build/reference/compiler-command-line-syntax.md).
+
+- Verifique se as variáveis de ambiente **TMP** e **TEMP** estão corretamente conjunto, bem como as permissões apropriadas para acessar os diretórios, consultem essas variáveis de ambiente. Além disso, verifique as unidades mencionadas pela **TMP** e **TEMP** variáveis de ambiente contêm uma quantidade suficiente de espaço livre.
+
+- Se a mensagem indicar "número de arquivo incorreto", o arquivo especificado pode estar sendo fechado em primeiro plano durante a compilação em segundo plano.
+
+Depois de realizar o diagnóstico acima, realize uma compilação limpa.

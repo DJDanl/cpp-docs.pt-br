@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4293 | Microsoft Docs
+title: Compilador aviso (nível 1) C4293 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ad588b69db1a0b46efa708b472bfc2218d17c0c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a29a42d5e06ededbcc4f16224b3e4332d56dbe03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33277121"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050197"
 ---
-# <a name="compiler-warning-level-1-c4293"></a>Compilador C4293 de aviso (nível 1)
-'operator': shift Contagem negativa ou muito grande, comportamento indefinido  
-  
- Se uma contagem de deslocamentos é negativa ou muito grande, o comportamento da imagem resultante é indefinido.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C4293:  
-  
-```  
-// C4293.cpp  
-// compile with: /c /W1  
-unsigned __int64 combine (unsigned lo, unsigned hi) {  
-  
-   return (hi << 32) | lo;   // C4293  
-  
-   // try the following line instead  
-   // return ( (unsigned __int64)hi << 32) | lo;  
-}  
+# <a name="compiler-warning-level-1-c4293"></a>Compilador aviso (nível 1) C4293
+
+'operator': shift Contagem negativa ou muito grande, comportamento indefinido
+
+Se a contagem de deslocamento é negativa ou muito grande, o comportamento da imagem resultante será indefinido.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C4293:
+
+```
+// C4293.cpp
+// compile with: /c /W1
+unsigned __int64 combine (unsigned lo, unsigned hi) {
+
+   return (hi << 32) | lo;   // C4293
+
+   // try the following line instead
+   // return ( (unsigned __int64)hi << 32) | lo;
+}
 ```

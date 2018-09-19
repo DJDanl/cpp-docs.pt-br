@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9998e7ad9605d6d2e32bcaff6204fb09dcbca2a5
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 2ef0f08efbcdf09420d53710a3f16326381f13c3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405552"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056775"
 ---
 # <a name="program-and-linkage-c"></a>Programa e ligação (C++)
 
@@ -45,11 +45,11 @@ No entanto, em alguns casos, pode ser necessário declarar uma variável global 
 
 ## <a name="linkage-vs-scope"></a>Vinculação versus escopo
 
-O conceito de *vinculação* refere-se a visibilidade dos símbolos globais (por exemplo, variáveis, nomes de tipos e nomes de função) dentro do programa como um todo nas unidades de conversão. O conceito de *escopo* refere-se aos símbolos são declarados dentro de um bloco, como um namespace, classe ou corpo da função. Esses símbolos são visíveis somente dentro do escopo no qual eles são definidos; o conceito de vinculação não se aplica a eles. 
+O conceito de *vinculação* refere-se a visibilidade dos símbolos globais (por exemplo, variáveis, nomes de tipos e nomes de função) dentro do programa como um todo nas unidades de conversão. O conceito de *escopo* refere-se aos símbolos são declarados dentro de um bloco, como um namespace, classe ou corpo da função. Esses símbolos são visíveis somente dentro do escopo no qual eles são definidos; o conceito de vinculação não se aplica a eles.
 
 ## <a name="external-vs-internal-linkage"></a>Externo versus vinculação interna
 
-Um *livre função* é uma função que é definida no global ou escopo de namespace. Variáveis globais de non-const e funções gratuitas por padrão têm *vinculação externa*; estão visíveis de qualquer unidade de conversão no programa. Portanto, nenhum objeto outro global (variável, definição de classe, etc.) pode ter esse nome. Um símbolo com *vinculação interna* ou *nenhuma vinculação* é visível somente dentro da unidade de tradução na qual ela é declarada. Quando um nome tem vinculação interna, o mesmo nome pode existir em outra unidade de tradução. As variáveis declaradas com definições de classe ou corpos de função não têm nenhuma vinculação. 
+Um *livre função* é uma função que é definida no global ou escopo de namespace. Variáveis globais de non-const e funções gratuitas por padrão têm *vinculação externa*; estão visíveis de qualquer unidade de conversão no programa. Portanto, nenhum objeto outro global (variável, definição de classe, etc.) pode ter esse nome. Um símbolo com *vinculação interna* ou *nenhuma vinculação* é visível somente dentro da unidade de tradução na qual ela é declarada. Quando um nome tem vinculação interna, o mesmo nome pode existir em outra unidade de tradução. As variáveis declaradas com definições de classe ou corpos de função não têm nenhuma vinculação.
 
 Você pode forçar um nome global ter vinculação interna, declarando explicitamente como **estático**. Isso limita sua visibilidade na mesma unidade de tradução na qual ela é declarada. Observe que, neste contexto **estático** significa algo diferente de quando aplicados a variáveis locais.
 
@@ -68,4 +68,5 @@ extern const int value = 42;
 Ver [extern](extern-cpp.md) para obter mais informações.
 
 ## <a name="see-also"></a>Consulte também
- [Conceitos básicos](../cpp/basic-concepts-cpp.md)
+
+[Conceitos básicos](../cpp/basic-concepts-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 4) de aviso C4343 | Microsoft Docs
+title: Compilador aviso (nível 4) C4343 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 300bab652c88322ef7e3b28cbf2cafe304d361d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6bb524afda167333d4df97089402040496a7a944
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302328"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071049"
 ---
-# <a name="compiler-warning-level-4-c4343"></a>Compilador C4343 de aviso (nível 4)
-\#pragma optimize("g",off) substitui opção /Og  
-  
- Este aviso, somente válido no compilador família de processador Itanium (IPF), informa que um pragma [otimizar](../../preprocessor/optimize.md) substitui um [/Og](../../build/reference/og-global-optimizations.md) opção de compilador.  
-  
- O exemplo a seguir gera C4343:  
-  
-```  
-// C4343.cpp  
-// compile with: /Og /W4 /LD  
-// processor: IPF  
-#pragma optimize ("g", off)   // C4343  
+# <a name="compiler-warning-level-4-c4343"></a>Compilador aviso (nível 4) C4343
+
+\#pragma optimize("g",off) substitui opção /Og
+
+Este aviso, somente válido no compilador Itanium Processor Family (IPF), relata que um pragma [otimizar](../../preprocessor/optimize.md) substituiu um [/Og](../../build/reference/og-global-optimizations.md) opção de compilador.
+
+O exemplo a seguir gera C4343:
+
+```
+// C4343.cpp
+// compile with: /Og /W4 /LD
+// processor: IPF
+#pragma optimize ("g", off)   // C4343
 ```

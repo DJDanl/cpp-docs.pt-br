@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f5d78ea68606513b2fe8491137e29fb45afb36e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d3069762810aebae516d6d02ce69da215a2847c1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761492"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038926"
 ---
 # <a name="event-handling-and-atl"></a>Manipulação de eventos e ATL
 
@@ -29,24 +29,24 @@ Para obter informações sobre como disparar eventos e implementar pontos de con
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Princípios de manipulação de eventos](../atl/event-handling-principles.md)  
+[Princípios de manipulação de eventos](../atl/event-handling-principles.md)<br/>
 Discute as etapas comuns para manipulação de todos os eventos.
 
-[Implementando a interface de manipulação de eventos](../atl/implementing-the-event-handling-interface.md)  
+[Implementando a interface de manipulação de eventos](../atl/implementing-the-event-handling-interface.md)<br/>
 Discute as classes devem ser usadas para implementar a interface de eventos.
 
-[Usando IDispEventImpl](../atl/using-idispeventimpl.md)  
+[Usando IDispEventImpl](../atl/using-idispeventimpl.md)<br/>
 Lista as etapas para usar `IDispEventImpl` e mostra um exemplo de código.
 
-[Usando IDispEventSimpleImpl](../atl/using-idispeventsimpleimpl.md)  
+[Usando IDispEventSimpleImpl](../atl/using-idispeventsimpleimpl.md)<br/>
 Lista as etapas para usar `IDispEventSimpleImpl` e mostra um exemplo de código.
 
-[Resumo da manipulação de eventos da ATL](../atl/atl-event-handling-summary.md)  
+[Resumo da manipulação de eventos da ATL](../atl/atl-event-handling-summary.md)<br/>
 Resume, uso de tabelas, as principais maneiras para implementar uma interface de eventos e aconselhá e unadvising a origem do evento usando ATL.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Fornece links para tópicos conceituais sobre como programar usando o Active Template Library.
 
 ## <a name="see-also"></a>Consulte também

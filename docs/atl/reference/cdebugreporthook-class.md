@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00a7bfd149bb83dc31327e3ea235479532213e03
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: fb0bf24657a47cbe1cf1129f0202d120fb1d017e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760826"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039045"
 ---
 # <a name="cdebugreporthook-class"></a>Classe CDebugReportHook
 
@@ -84,13 +84,13 @@ CDebugReportHook(
 
 ### <a name="parameters"></a>Parâmetros
 
-*szMachineName*  
+*szMachineName*<br/>
 O nome da máquina para o qual a saída de depuração deve ser enviada. O padrão é o computador local.
 
-*szPipeName*  
+*szPipeName*<br/>
 O nome do pipe nomeado para o qual a saída de depuração deve ser enviada.
 
-*dwTimeout*  
+*dwTimeout*<br/>
 O tempo em milissegundos que essa classe irá esperar para o pipe nomeado para se tornar disponível.
 
 ##  <a name="dtor"></a>  CDebugReportHook:: ~ CDebugReportHook
@@ -114,13 +114,13 @@ static int __cdecl CDebugReportHookProc(
 
 ### <a name="parameters"></a>Parâmetros
 
-*reportType*  
+*reportType*<br/>
 O tipo de relatório (_CRT_WARN, crt_error ou _CRT_ASSERT).
 
-*message*  
+*message*<br/>
 A cadeia de caracteres da mensagem.
 
-*returnValue*  
+*returnValue*<br/>
 O valor que deve ser retornado por [crtdbgreport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).
 
 ### <a name="return-value"></a>Valor de retorno
@@ -169,10 +169,10 @@ BOOL SetPipeName(
 
 ### <a name="parameters"></a>Parâmetros
 
-*szMachineName*  
+*szMachineName*<br/>
 O nome da máquina para o qual a saída de depuração deve ser enviada.
 
-*szPipeName*  
+*szPipeName*<br/>
 O nome do pipe nomeado para o qual a saída de depuração deve ser enviada.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -189,7 +189,7 @@ void SetTimeout(DWORD dwTimeout);
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwTimeout*  
+*dwTimeout*<br/>
 O tempo em milissegundos que essa classe irá esperar para o pipe nomeado para se tornar disponível.
 
 ## <a name="see-also"></a>Consulte também

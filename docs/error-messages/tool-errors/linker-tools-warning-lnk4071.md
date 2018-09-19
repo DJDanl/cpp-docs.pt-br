@@ -1,5 +1,5 @@
 ---
-title: Aviso LNK4071 das ferramentas de vinculador | Microsoft Docs
+title: Ferramentas de vinculador LNK4071 aviso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cb0d4b8d78eb8c7cf1812abb1a7981c605f2c4e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d11247c823a93604359b4cab6995b694bcf5a2f3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299894"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064653"
 ---
 # <a name="linker-tools-warning-lnk4071"></a>Aviso LNK4071 (Ferramentas de Vinculador)
-não pode ser vinculado incrementalmente em links subsequentes  
-  
- LINK encontrado várias definições para um ou mais símbolos, mas [/Force](../../build/reference/force-force-file-output.md) ou **/Force: Multiple** foi usado para criar um arquivo de saída, independentemente de erros. LINK excluído o arquivo de status incremental (. ilk).
+
+não pode ser vinculado incrementalmente em links subsequentes
+
+O LINK localizado várias definições para um ou mais símbolos, mas [/Force](../../build/reference/force-force-file-output.md) ou **Multiple** foi usado para criar um arquivo de saída, independentemente de erros. LINK excluído o arquivo de status incremental (. ilk).

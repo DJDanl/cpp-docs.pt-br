@@ -17,22 +17,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 720b1aec6c9be16879119bc0e8148a301507577a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04f37b53c30d36a43d339132bfd9baca3e5ec70c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299494"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057191"
 ---
 # <a name="expression-evaluator-error-cxx0033"></a>Erro CXX0033 (avaliador de expressão)
-Erro ao obter informações do tipo OMF  
-  
- O arquivo executável não tinha um formato de módulo de objeto válido (OMF) para depuração.  
-  
- Esse erro é idêntico ao CAN0033.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
-  
-1.  O arquivo executável não foi criado com o vinculador lançado com essa versão do Visual C++. Vincular novamente o código de objeto usando a versão atual do LINK.exe.  
-  
-2.  O arquivo .exe pode ter sido corrompido. Recompilar e vincular novamente o programa.
+
+Erro nas informações de tipo OMF
+
+O arquivo executável não tinha um formato de módulo de objeto válido (OMF) para depuração.
+
+Esse erro é idêntico ao CAN0033.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
+
+1. O arquivo executável não foi criado com a opção de vinculador lançada com esta versão do Visual C++. Vincular novamente o código de objeto usando a versão atual do LINK.exe.
+
+1. O arquivo .exe pode ter sido corrompido. Recompile e vincular novamente o programa.

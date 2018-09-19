@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b937212f49bd09f6498ebcda934e1aa362d959e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ea8d1dcb0d5d3a59eb5f2899baffed18e7d1663f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755516"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054747"
 ---
 # <a name="creating-an-atl-project"></a>Criando um projeto ATL
 
@@ -47,6 +47,6 @@ Depois que o projeto é criado, você pode exibir os arquivos criados na **Geren
 
 ## <a name="see-also"></a>Consulte também
 
-[Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+[Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Páginas de propriedade](../../ide/property-pages-visual-cpp.md)   
 

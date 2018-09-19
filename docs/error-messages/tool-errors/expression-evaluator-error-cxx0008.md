@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17c7136d98d9d0502b2118b8e093b10bd8e82b88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7491e6bd60b98fbed82cace18f98e8483a221b14
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315562"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050600"
 ---
 # <a name="expression-evaluator-error-cxx0008"></a>Erro CXX0008 (avaliador de expressão)
-**"no final da cadeia de caracteres**  
-  
- As aspas duplas é esperada no fim da cadeia de caracteres literal estava ausente. Digite novamente a expressão, colocando a cadeia de caracteres literal entre aspas duplas.  
-  
- Esse erro é idêntico ao CAN0008.
+
+**ausente "no final da cadeia de caracteres**
+
+A esperado no final da cadeia de caracteres literal de aspas duplas estava ausente. Digite novamente a expressão, colocando a cadeia de caracteres literal entre aspas duplas.
+
+Esse erro é idêntico ao CAN0008.

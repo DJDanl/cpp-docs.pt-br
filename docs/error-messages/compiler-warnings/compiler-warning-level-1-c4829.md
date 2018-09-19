@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4829 | Microsoft Docs
+title: Compilador aviso (nível 1) C4829 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c27ca268a3c873474cd4ed79a2b843642087c34
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f4210e8074360d5b3d5e5ca84e0326caf3303136
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286533"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065030"
 ---
-# <a name="compiler-warning-level-1-c4829"></a>Compilador C4829 de aviso (nível 1)
-Parâmetros possivelmente incorretos para a função principal. Considere ' intmain (Platform:: array\<Platform:: String ^ > ^ argv)'  
-  
- Determinadas funções, como principal, não é possível fazer referência parâmetros de tipo. Enquanto a compilação terá êxito, a imagem resultante provavelmente não será executado.  
-  
- O exemplo a seguir gera C4829:  
-  
-```  
-// C4829.cpp  
-// compile by using: cl /EHsc /ZW /W4 /c C4829.cpp  
-int main(Platform::String ^ s) {}   // C4829  
-  
+# <a name="compiler-warning-level-1-c4829"></a>Compilador aviso (nível 1) C4829
+
+Parâmetros possivelmente incorretos para função principal. Considere ' intmain (Platform:: array\<Platform:: String ^ > ^ argv)'
+
+Determinadas funções, como o principal, não é possível levar referência de parâmetros de tipo. Enquanto a compilação terá êxito, a imagem resultante provavelmente não será executado.
+
+O exemplo a seguir gera C4829:
+
+```
+// C4829.cpp
+// compile by using: cl /EHsc /ZW /W4 /c C4829.cpp
+int main(Platform::String ^ s) {}   // C4829
+
 ```

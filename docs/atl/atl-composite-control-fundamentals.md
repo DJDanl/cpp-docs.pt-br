@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d44abba005295fbc328f005c48a16611a2b5f25
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 16358128c2da3c021b392bb4b461996ad38320e8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765824"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045556"
 ---
 # <a name="atl-composite-control-fundamentals"></a>Fundamentos do controle composto ATL
 
@@ -39,7 +39,7 @@ O Assistente de projeto de ATL e **Adicionar classe** caixa de diálogo automati
 
 ## <a name="see-also"></a>Consulte também
 
-[Conceitos](../atl/active-template-library-atl-concepts.md)   
-[Funções globais de controle de composição](../atl/reference/composite-control-global-functions.md)   
+[Conceitos](../atl/active-template-library-atl-concepts.md)<br/>
+[Funções globais do controle de composição](../atl/reference/composite-control-global-functions.md)<br/>
 [Macros de controle de composição](../atl/reference/composite-control-macros.md)
 

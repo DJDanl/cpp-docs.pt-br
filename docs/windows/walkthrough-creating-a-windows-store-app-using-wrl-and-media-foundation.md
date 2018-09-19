@@ -1,7 +1,7 @@
 ---
 title: 'Passo a passo: Criando um aplicativo UWP usando WRL e Media Foundation | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2775e0348f6bfe1e7fe960a105ebf0c31fcaae96
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3eb82c5c86411af63ea79a4dbcf2e54d2d3ce5f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214825"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038295"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Passo a passo: Criando um aplicativo UWP usando WRL e Media Foundation
 
@@ -101,7 +101,7 @@ Na maioria dos casos, você pode usar C + + c++ /CX para criar o tempo de execu�
 
    1. Sob **entrada**, para o **arquivo de definição de módulo**, especifique `GrayScaleTransform.def`.
 
-   2. Também no **entrada**, adicione `runtimeobject.lib`, `mfuuid.lib`, e `mfplatf.lib` para o **dependências adicionais** propriedade.
+   2. Também no **entrada**, adicione `runtimeobject.lib`, `mfuuid.lib`, e `mfplat.lib` para o **dependências adicionais** propriedade.
 
    3. Sob **metadados do Windows**, defina **gerar metadados do Windows** para **Sim (/ WINMD)**.
 

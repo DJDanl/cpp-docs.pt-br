@@ -1,5 +1,5 @@
 ---
-title: C2420 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2420 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e951c1007ccdd0885e19a6ef3b483128fcfc2a92
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a85e638edc5710c8db13b324d58a5485df31819
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33194899"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053070"
 ---
-# <a name="compiler-error-c2420"></a>C2420 de erro do compilador
-'Identificador': símbolo inválido no contexto  
-  
- O identificador é inválido neste contexto.
+# <a name="compiler-error-c2420"></a>Erro do compilador C2420
+
+'identifier': símbolo inválido em contexto
+
+O identificador é inválido neste contexto.

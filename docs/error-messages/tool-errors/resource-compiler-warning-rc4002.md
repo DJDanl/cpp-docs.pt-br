@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04c932b5f120f540f34cd0d6bdfef51be99bfbb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 400d748f0ce9cafa4d11690f1d6c9fbfa4af90e7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322764"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058985"
 ---
 # <a name="resource-compiler-warning-rc4002"></a>Aviso RC4002 (compilador de recurso)
-Muitos parâmetros reais para 'Identificador de macro'  
-  
- O número de parâmetros reais especificado com o identificador fornecido era maior que o número de parâmetros formais fornecido na definição de macro do identificador.  
-  
- Os parâmetros reais adicionais foram coletados mas ignorados durante a expansão de macro.
+
+Muitos parâmetros reais para 'identifier' macro
+
+O número de parâmetros reais especificados com o identificador fornecido era maior que o número de parâmetros formais fornecido na definição da macro do identificador.
+
+Os parâmetros adicionais de reais foram coletados, mas ignorados durante a expansão da macro.

@@ -1,5 +1,5 @@
 ---
-title: C2220 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2220 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23476de35e0af45b46a775683ba8673b4959346
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f4179b396e732ceeea20aeb9428d841a357a6d1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171487"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051315"
 ---
-# <a name="compiler-error-c2220"></a>C2220 de erro do compilador
-Aviso tratado como erro - nenhum arquivo de objeto gerado  
-  
- [/WX](../../build/reference/compiler-option-warning-level.md) informa ao compilador trate todos os avisos como erros. Porque ocorreu um erro, nenhum objeto ou arquivo executável foi gerado.  
-  
- Esse erro aparece somente quando o **/WX** sinalizador é definido e ocorrer um aviso durante a compilação. Para corrigir esse erro, você deve eliminar cada aviso em seu projeto.  
-  
-### <a name="to-fix-use-one-of-the-following-techniques"></a>Para corrigir, use uma das seguintes técnicas  
-  
--   Corrija os problemas que causam avisos em seu projeto.  
-  
--   Em um nível inferior do aviso de compilação — por exemplo, use **/W3** em vez de **/W4**.  
-  
--   Use um [aviso](../../preprocessor/warning.md) pragma para desabilitar ou suprimir um aviso específico.  
-  
--   Não use **/WX** para compilar.
+# <a name="compiler-error-c2220"></a>Erro do compilador C2220
+
+Aviso tratado como erro - nenhum arquivo de objeto gerado
+
+[/WX](../../build/reference/compiler-option-warning-level.md) instrui o compilador a tratar todos os avisos como erros. Porque ocorreu um erro, nenhum objeto ou arquivo executável foi gerado.
+
+Esse erro aparece somente quando o **/WX** sinalizador está definido e ocorrer um aviso durante a compilação. Para corrigir esse erro, você deve eliminar cada aviso em seu projeto.
+
+### <a name="to-fix-use-one-of-the-following-techniques"></a>Para corrigir, use uma das seguintes técnicas
+
+- Corrija os problemas que causam avisos em seu projeto.
+
+- Compilar em um nível inferior do aviso — por exemplo, use **/w3** em vez de **/W4**.
+
+- Use uma [aviso](../../preprocessor/warning.md) pragma para desabilitar ou suprimir um aviso específico.
+
+- Não use **/WX** para compilar.

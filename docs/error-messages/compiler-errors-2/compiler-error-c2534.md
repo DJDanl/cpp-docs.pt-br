@@ -1,5 +1,5 @@
 ---
-title: C2534 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2534 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae52374e09852ffb68c5807353155d9928924eb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2febeeeb3b6c0e394070339f2310a22c1326ab5c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228226"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049027"
 ---
-# <a name="compiler-error-c2534"></a>C2534 de erro do compilador
-'Identificador': construtor não pode retornar um valor  
-  
- Um construtor não pode retornar um valor ou têm um tipo de retorno (nem mesmo uma `void` tipo de retorno).  
-  
- Esse erro pode ser corrigido, removendo o `return` instrução da definição de construtor.  
-  
- O exemplo a seguir gera C2534:  
-  
-```  
-// C2534.cpp  
-class A {  
-public:  
-   int i;  
-   A() { return i; }   // C2534  
-};  
+# <a name="compiler-error-c2534"></a>Erro do compilador C2534
+
+'identifier': construtor não pode retornar um valor
+
+Um construtor não pode retornar um valor ou têm um tipo de retorno (nem mesmo uma `void` tipo de retorno).
+
+Esse erro pode ser corrigido, removendo o `return` instrução da definição de construtor.
+
+O exemplo a seguir gera C2534:
+
+```
+// C2534.cpp
+class A {
+public:
+   int i;
+   A() { return i; }   // C2534
+};
 ```

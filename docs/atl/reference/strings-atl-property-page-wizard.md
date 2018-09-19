@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27a67430b82e1badc2beb5fecd72c55802e690cd
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6e63745a75b5aec644ae49931015e27b74eba91b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724354"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033531"
 ---
 # <a name="strings-atl-property-page-wizard"></a>Cadeias de caracteres, o Assistente de página de propriedades ATL
 
@@ -41,6 +41,6 @@ Fornece o texto associado à página de propriedade.
 
 ## <a name="see-also"></a>Consulte também
 
-[Assistente de página de propriedades da ATL](../../atl/reference/atl-property-page-wizard.md)   
+[Assistente de página de propriedades da ATL](../../atl/reference/atl-property-page-wizard.md)<br/>
 [Opções, Assistente de página de propriedades da ATL](../../atl/reference/options-atl-property-page-wizard.md)
 

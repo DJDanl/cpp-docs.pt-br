@@ -1,5 +1,5 @@
 ---
-title: C2814 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2814 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75215a0df53606c8807cc275e86616c1ae8c6b42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef85e143b13ea5184235676179e33b387f751aa8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237145"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046570"
 ---
-# <a name="compiler-error-c2814"></a>C2814 de erro do compilador
-'member': um tipo nativo não pode ser aninhado dentro de um gerenciado ou WinRT ' tipo '  
-  
-## <a name="example"></a>Exemplo  
- Um tipo nativo não pode ser aninhado em um tipo CLR ou WinRT. O exemplo a seguir gera C2814 e mostra como corrigi-lo.  
-  
-```  
-// C2814.cpp  
-// compile with: /clr /c  
-ref class A {  
-   class B {};   // C2814  
-   ref class C {};   // OK  
-};  
-```  
+# <a name="compiler-error-c2814"></a>Erro do compilador C2814
+
+'member': um tipo nativo não pode ser aninhado dentro de um gerenciado ou WinRT tipo 'type'
+
+## <a name="example"></a>Exemplo
+
+Um tipo nativo não pode ser aninhado em um tipo CLR ou WinRT. O exemplo a seguir gera C2814 e mostra como corrigi-lo.
+
+```
+// C2814.cpp
+// compile with: /clr /c
+ref class A {
+   class B {};   // C2814
+   ref class C {};   // OK
+};
+```

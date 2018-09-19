@@ -1,5 +1,5 @@
 ---
-title: C3202 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3202 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,33 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6f7f059173e88bf9e76dde3f8448de218400a31
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 254843386943b677be6df2c1ab7f1da56265e1d8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246885"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070272"
 ---
-# <a name="compiler-error-c3202"></a>C3202 de erro do compilador
-'arg name': argumento padrão inválido para parâmetro de modelo 'parameter', esperado um modelo de classe  
-  
- Passou um argumento padrão inválido para um parâmetro de modelo.  
-  
- O exemplo a seguir gera C3202:  
-  
-```  
-// C3202.cpp  
-template<typename T>  
-class X  
-{  
-};  
-  
-class Z  
-{  
-};  
-  
-template<template<typename U> class T1 = Z, typename T2> // C3202  
-class Y  
-{  
-};  
+# <a name="compiler-error-c3202"></a>Erro do compilador C3202
+
+'arg name': argumento padrão inválido para parâmetro de modelo 'parameter', esperado um modelo de classe
+
+Você passou um argumento padrão inválido para um parâmetro de modelo.
+
+O exemplo a seguir gera C3202:
+
+```
+// C3202.cpp
+template<typename T>
+class X
+{
+};
+
+class Z
+{
+};
+
+template<template<typename U> class T1 = Z, typename T2> // C3202
+class Y
+{
+};
 ```

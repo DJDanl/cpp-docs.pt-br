@@ -14,38 +14,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b4636333861cc853130a777956ca4b88114f3c6
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 1c6a48067ebc145c907a81212a9acca55c3f4665
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131393"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066590"
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>expressões lambda constexpr em C++
-**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): uma expressão lambda pode ser declarada como **constexpr** ou usado em uma expressão da constante quando a inicialização de cada membro de dados que ele captura ou apresenta é permitido dentro de uma expressão constante.  
+
+**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): uma expressão lambda pode ser declarada como **constexpr** ou usado em uma expressão da constante quando a inicialização de cada membro de dados que ele captura ou apresenta é permitido dentro de uma expressão constante.
 
 ```cpp
     int y = 32;
-    auto answer = [y]() constexpr 
+    auto answer = [y]() constexpr
     {
         int x = 10;
-        return y + x; 
+        return y + x;
     };
 
-    constexpr int Increment(int n) 
+    constexpr int Increment(int n)
     {
         return [n] { return n + 1; }();
     }
-``` 
+```
 Um lambda é implicitamente **constexpr** se o seu resultado satisfaz os requisitos de um **constexpr** função:
 ```cpp
-    auto answer = [](int n) 
+    auto answer = [](int n)
     {
-        return 32 + n; 
+        return 32 + n;
     };
 
     constexpr int response = answer(10);
-``` 
+```
 Se uma lambda é implicitamente ou explicitamente **constexpr**e convertê-lo para um ponteiro de função, a função resultante é também **constexpr**:
 
 ```cpp
@@ -56,9 +57,10 @@ Se uma lambda é implicitamente ou explicitamente **constexpr**e convertê-lo pa
 
     constexpr int(*inc)(int) = Increment;
 ```
-  
-## <a name="see-also"></a>Consulte também  
- [Referência da linguagem C++](../cpp/cpp-language-reference.md)   
- [Objetos de função na biblioteca padrão C++](../standard-library/function-objects-in-the-stl.md)   
- [Chamada de função](../cpp/function-call-cpp.md)   
- [for_each](../standard-library/algorithm-functions.md#for_each)
+
+## <a name="see-also"></a>Consulte também
+
+[Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
+[Objetos de função na Biblioteca Padrão C++](../standard-library/function-objects-in-the-stl.md)<br/>
+[Chamada de função](../cpp/function-call-cpp.md)<br/>
+[for_each](../standard-library/algorithm-functions.md#for_each)

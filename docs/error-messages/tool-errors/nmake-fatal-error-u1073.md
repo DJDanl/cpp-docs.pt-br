@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dde9ca2f4a15edf6599dcc31b39d9411645f2a6f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c309ed94cd1c984406e0d21f0139e35c6e41d7d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316300"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053928"
 ---
 # <a name="nmake-fatal-error-u1073"></a>Erro fatal U1073 (NMAKE)
-Não sei como tornar 'targetname'  
-  
- O destino especificado não existe e não há nenhum comando a ser executado ou a regra de inferência para aplicar.  
-  
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir usando as seguintes soluções possíveis  
-  
-1.  Verifique a ortografia do nome do destino.  
-  
-2.  Se *targetname* é um pseudotarget especificá-lo como um destino em outro bloco de descrição.  
-  
-3.  Se *targetname* é uma invocação de macro, certifique-se de que ele não se expandir para uma cadeia de caracteres nula.
+
+não sabe como tornar 'targetname'
+
+O destino especificado não existe e não há nenhum comando para executar ou a regra de inferência para aplicar.
+
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Para corrigir usando as seguintes soluções possíveis
+
+1. Verifique a ortografia do nome do destino.
+
+1. Se *targetname* é um pseudotarget, especifique-o como um destino em outro bloco de descrição.
+
+1. Se *targetname* é uma invocação de macro, certifique-se de que não expande para uma cadeia de caracteres nula.

@@ -1,5 +1,5 @@
 ---
-title: C3218 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3218 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6938768211a78ca2a72c78ebb03a8972e0a86a74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a21050e49a05980a4e4a644fa9f08bc42f23310
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248262"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46030814"
 ---
-# <a name="compiler-error-c3218"></a>C3218 de erro do compilador
-'type': não é permitido como uma restrição de tipo  
-  
- Para um tipo para ser uma restrição, ele deve ser um tipo de valor ou uma referência a uma interface ou classe gerenciada.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C3218.  
-  
-```  
-// C3218.cpp  
-// compile with: /clr /c  
-class A {};  
-ref class B {};  
-  
-// Delete the following 3 lines to resolve.  
-generic <class T>  
-where T : A   // C3218  
-ref class C {};  
-  
-// OK  
-generic <class T>  
-where  T : B  
-ref class D {};  
+# <a name="compiler-error-c3218"></a>Erro do compilador C3218
+
+'type': não é permitido como uma restrição de tipo
+
+Para um tipo seja uma restrição, ele deve ser um tipo de valor ou uma referência a uma classe gerenciada ou interface.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C3218.
+
+```
+// C3218.cpp
+// compile with: /clr /c
+class A {};
+ref class B {};
+
+// Delete the following 3 lines to resolve.
+generic <class T>
+where T : A   // C3218
+ref class C {};
+
+// OK
+generic <class T>
+where  T : B
+ref class D {};
 ```

@@ -15,26 +15,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d94acdfff2fdea2cc35d0856940270ba82e131af
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: f026a91846196e34f97b4d2cbcfa2c9fa749e8b7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405250"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058595"
 ---
 # <a name="expression-statement"></a>Instrução de expressão
-Instruções de expressão fazem com as expressões sejam avaliadas. Nenhuma transferência de controle ou iteração ocorre como resultado de uma instrução de expressão.  
-  
- A sintaxe da instrução de expressão é simplesmente  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-[expression ] ;  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Todas as expressões em uma instrução de expressão são avaliadas e todos os efeitos colaterais são concluídos antes que a próxima instrução seja executada. As instruções de expressão mais comuns são atribuições e chamadas de função.  Uma vez que a expressão é opcional, um ponto e vírgula sozinho é considerado uma instrução expression vazia, conhecida como o [nulo](../cpp/null-statement.md) instrução.  
-  
-## <a name="see-also"></a>Consulte também  
- [Visão geral das instruções C++](../cpp/overview-of-cpp-statements.md)
+
+Instruções de expressão fazem com as expressões sejam avaliadas. Nenhuma transferência de controle ou iteração ocorre como resultado de uma instrução de expressão.
+
+A sintaxe da instrução de expressão é simplesmente
+
+## <a name="syntax"></a>Sintaxe
+
+```
+[expression ] ;
+```
+
+## <a name="remarks"></a>Comentários
+
+Todas as expressões em uma instrução de expressão são avaliadas e todos os efeitos colaterais são concluídos antes que a próxima instrução seja executada. As instruções de expressão mais comuns são atribuições e chamadas de função.  Uma vez que a expressão é opcional, um ponto e vírgula sozinho é considerado uma instrução expression vazia, conhecida como o [nulo](../cpp/null-statement.md) instrução.
+
+## <a name="see-also"></a>Consulte também
+
+[Visão geral das instruções C++](../cpp/overview-of-cpp-statements.md)

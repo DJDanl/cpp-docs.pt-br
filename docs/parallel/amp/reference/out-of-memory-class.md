@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ab3285e0b37b8af93803a1a2752e25b6d91ab2f
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b57e27647f61b551f8ea5c2770290e1ae9627014
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695289"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070907"
 ---
 # <a name="outofmemory-class"></a>Classe out_of_memory
-A exceção que é lançada quando um método falhar devido a uma falta de memória de sistema ou dispositivo.  
+A exceção que é lançada quando um método falhar devido à falta de memória do sistema ou do dispositivo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,7 +50,7 @@ class out_of_memory : public runtime_exception;
  `out_of_memory`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** amprt.h  
+ **Cabeçalho:** amprt. h  
   
  **Namespace:** Simultaneidade  
 ## <a name="ctor"></a> out_of_memory 
@@ -67,8 +67,8 @@ out_of_memory () throw();
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Message`  
- Uma descrição do erro.  
+*Mensagem*<br/>
+Uma descrição do erro.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Uma nova instância da classe `out_of_memory`.  

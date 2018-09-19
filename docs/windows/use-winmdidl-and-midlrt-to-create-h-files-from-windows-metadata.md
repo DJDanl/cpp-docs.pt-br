@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 41859ae16ecd7f4c3261d644ce37d86fe416ec94
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dcc942bc69ebb37a7aba59e722b1a4cebbbab3ff
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589636"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071348"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Como usar winmdidl.exe e midlrt.exe para criar arquivos .h a partir de metadados do Windows
 
@@ -42,24 +42,25 @@ Por padrão em [Windows 8.1, winmdidl.exe e midlrt.exe estão localizados em C:\
 Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:file] [/utf8] Winmdfile
 ```
 
-`/nologo`  
+**/nologo**<br/>
 Impede a exibição do console do winmdidl mensagem de direitos autorais e o número de versão.
 
-`/supressversioncheck`  
+**/supressversioncheck**<br/>
 Não usado.
 
-`/time`  
+**/ hora**<br/>
 Exibe o tempo de execução total na saída do console.
 
-/outdir:\<dir > especifica um diretório de saída. Se o caminho contiver espaços, use aspas. O diretório de saída padrão é  *\<unidade >*: \Users\\*\<username >* \AppData\Local\VirtualStore\Program arquivos (x86) \Microsoft Visual Studio 12.0\\.
+**/outdir:**<em>dir</em><br/>
+Especifica um diretório de saída. Se o caminho contiver espaços, use aspas. O diretório de saída padrão é  *\<unidade >*: \Users\\*\<username >* \AppData\Local\VirtualStore\Program arquivos (x86) \Microsoft Visual Studio 12.0\\.
 
-`/banner:<file>`  
+**/ banner:**<em>arquivo</em><br/>
 Especifica um arquivo que contém o texto personalizado a ser precedido de mensagem de direitos autorais do padrão e o número de versão de winmdidl na parte superior do arquivo. idl gerado. Se o caminho contiver espaços, use aspas.
 
-`/utf8`  
+**/utf8**<br/>
 Faz com que o arquivo a ser formatado como UTF-8.
 
-`Winmdfile`  
+*Winmdfile*<br/>
 O nome do arquivo. winmd para analisar. Se o caminho contiver espaços, use aspas.
 
 ## <a name="midlrt-command-line-arguments"></a>Argumentos de linha de comando do Midlrt

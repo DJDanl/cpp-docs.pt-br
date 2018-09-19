@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c64980cbdfeec92f0029828183c8f56b390dd85
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: d3e7603bfe2074022cdaa0e99024627c32452b46
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535308"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072791"
 ---
 # <a name="activex-controls-on-the-internet"></a>Controles ActiveX na Internet
 
@@ -174,33 +174,21 @@ Os controles são uma arquitetura principal para o desenvolvimento de componente
 ## <a name="displaying-a-control-on-a-web-page"></a>Exibição de um controle em uma página da Web  
  Aqui está um exemplo de uma marca de objeto e atributos para a inserção de um controle em uma página da Web.  
   
- `<OBJECT`  
-  
- `CLASSID="clsid:FC25B780-75BE-11CF-8B01-444553540000"`  
-  
- `CODEBASE="/ie/download/activex/iechart.ocx"`  
-  
- `ID=chart1`  
-  
- `WIDTH=400`  
-  
- `HEIGHT=200`  
-  
- `ALIGN=center`  
-  
- `HSPACE=0`  
-  
- `VSPACE=0`  
-  
- `>`  
-  
- `<PARAM NAME="BackColor" value="#ffffff">`  
-  
- `<PARAM NAME="ForeColor" value="#0000ff">`  
-  
- `<PARAM NAME="url" VALUE="/ie/controls/chart/mychart.txt">`  
-  
- `</OBJECT>`  
+```xml
+<OBJECT
+  CLASSID="clsid:FC25B780-75BE-11CF-8B01-444553540000"
+  CODEBASE="/ie/download/activex/iechart.ocx"
+  ID=chart1
+  WIDTH=400
+  HEIGHT=200
+  ALIGN=center
+  HSPACE=0
+  VSPACE=0>
+  <PARAM NAME="BackColor" value="#ffffff"/>
+  <PARAM NAME="ForeColor" value="#0000ff"/>
+  <PARAM NAME="url" VALUE="/ie/controls/chart/mychart.txt"/>
+</OBJECT>
+```
   
 ## <a name="updating-an-existing-ole-control-to-use-new-activex-control-features"></a>Atualizando um controle OLE existente para usar novos recursos de controle ActiveX  
  Se seu controle OLE foi criado com uma versão do Visual C++ antes do 4.2, há etapas que você pode executar para melhorar seu desempenho e aprimorar sua funcionalidade. Para obter uma discussão detalhada sobre essas alterações, consulte [controles ActiveX: otimização](../mfc/mfc-activex-controls-optimization.md).  

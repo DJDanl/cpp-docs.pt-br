@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2893644dc4dbec2d1ebc25be42ba4b30fbd19cb1
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e96b9d70e48b63eafb8cb3c6f4938f962114fd39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42538201"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059479"
 ---
 # <a name="currentscheduler-class"></a>Classe CurrentScheduler
 Representa uma abstração para o Agendador atual associado com o contexto de chamada.  
@@ -80,8 +80,8 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Policy`  
- A política de agendador que descreve o comportamento do Agendador recém-criado.  
+*Política*<br/>
+A política de agendador que descreve o comportamento do Agendador recém-criado.  
   
 ### <a name="remarks"></a>Comentários  
  O anexo do Agendador para o contexto de chamada implicitamente coloca uma contagem de referência no Agendador.  
@@ -103,8 +103,8 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Placement`  
- Uma referência a um local em que as tarefas dentro do grupo de agendamento serão ser mais adequadas para execução em.  
+*Posicionamento*<br/>
+Uma referência a um local em que as tarefas dentro do grupo de agendamento serão ser mais adequadas para execução em.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Um ponteiro para o grupo de agenda recém-criada. Isso `ScheduleGroup` objeto tem uma contagem de referência inicial colocada sobre ele.  
@@ -198,8 +198,8 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Placement`  
- Uma referência para o local para fazer consultas sobre o Agendador atual.  
+*Posicionamento*<br/>
+Uma referência para o local para fazer consultas sobre o Agendador atual.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Uma indicação de se ou não o local especificado pelo `_Placement` argumento está disponível no Agendador atual.  
@@ -218,8 +218,8 @@ static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_ShutdownEvent`  
- Um identificador para um objeto de evento do Windows que será sinalizado pelo tempo de execução quando o Agendador associado ao contexto atual é desligado e destrói em si.  
+*_ShutdownEvent*<br/>
+Um identificador para um objeto de evento do Windows que será sinalizado pelo tempo de execução quando o Agendador associado ao contexto atual é desligado e destrói em si.  
   
 ### <a name="remarks"></a>Comentários  
  Se não houver nenhum Agendador anexado ao contexto de chamada, a chamada desse método resultará em um [scheduler_not_attached](scheduler-not-attached-class.md) exceção sendo lançada.  
@@ -240,14 +240,14 @@ static void __cdecl ScheduleTask(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Proc`  
- Um ponteiro para a função a ser executada para executar o corpo da tarefa leve.  
+*_Proc*<br/>
+Um ponteiro para a função a ser executada para executar o corpo da tarefa leve.  
   
- `_Data`  
- Um ponteiro nulo para os dados que serão passados como um parâmetro ao corpo da tarefa.  
+*Data*<br/>
+Um ponteiro nulo para os dados que serão passados como um parâmetro ao corpo da tarefa.  
   
- `_Placement`  
- Uma referência a um local em que a tarefa leve será ser mais adequada para execução em.  
+*Posicionamento*<br/>
+Uma referência a um local em que a tarefa leve será ser mais adequada para execução em.  
   
 ### <a name="remarks"></a>Comentários  
  Esse método resultará no Agendador de padrão do processo que está sendo criado e/ou anexados ao contexto de chamada, se não houver nenhum agendador associado atualmente com o contexto de chamada.  

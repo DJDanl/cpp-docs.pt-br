@@ -1,5 +1,5 @@
 ---
-title: C3384 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3384 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab09df08edb9f1d5808f2214535c76b20fda62b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75c904556951838de0308aea499980132440cbdb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251400"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061598"
 ---
-# <a name="compiler-error-c3384"></a>C3384 de erro do compilador
-'type_parameter': a restrição de valor e a restrição ref são mutuamente exclusivos  
-  
- Não é possível restringir um tipo genérico para ambos `value class` e `ref class`.  
-  
- Consulte [restrições em parâmetros de tipo genérico (C + + CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) para obter mais informações.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C3384.  
-  
-```  
-// C3384.cpp  
-// compile with: /c /clr  
-generic <typename T>  
-where T : ref class  
-where T : value class   // C3384  
-ref class List {};  
+# <a name="compiler-error-c3384"></a>Erro do compilador C3384
+
+'type_parameter': a restrição de valor e a restrição ref são mutuamente exclusivas
+
+Não é possível restringir um tipo genérico para ambos `value class` e `ref class`.
+
+Ver [restrições em parâmetros de tipo genéricos (C + + c++ CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) para obter mais informações.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C3384.
+
+```
+// C3384.cpp
+// compile with: /c /clr
+generic <typename T>
+where T : ref class
+where T : value class   // C3384
+ref class List {};
 ```

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92a6bb4cbd80cf0fa36b65d81a327b822493e264
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e2c3e0eb625c492cb9f0e9a1234d33149ac201a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752691"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040226"
 ---
 # <a name="cworkerthread-class"></a>Classe CWorkerThread
 
@@ -42,13 +42,13 @@ Essa classe cria um thread de trabalho ou usa um existente, espera por um ou mai
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template <class ThreadTraits = DefaultThreadTraits>  
+template <class ThreadTraits = DefaultThreadTraits>
 class CWorkerThread
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*ThreadTraits*  
+*ThreadTraits*<br/>
 A classe que fornece a função de criação de thread, como [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) ou [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md).
 
 ## <a name="members"></a>Membros
@@ -115,13 +115,13 @@ HRESULT AddHandle(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hObject*  
+*hObject*<br/>
 O identificador para um objeto de espera.
 
-*pClient*  
+*pClient*<br/>
 O ponteiro para o [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) interface no objeto a ser chamado quando o identificador é sinalizado.
 
-*dwParam*  
+*dwParam*<br/>
 O parâmetro a ser passado para [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) quando o identificador é sinalizado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -146,16 +146,16 @@ HRESULT AddTimer(
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwInterval*  
+*dwInterval*<br/>
 Especifica o período do temporizador em milésimos de segundo.
 
-*pClient*  
+*pClient*<br/>
 O ponteiro para o [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) interface no objeto a ser chamado quando o identificador é sinalizado.
 
-*dwParam*  
+*dwParam*<br/>
 O parâmetro a ser passado para [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) quando o identificador é sinalizado.
 
-*phTimer*  
+*phTimer*<br/>
 [out] Endereço da variável de identificador que, em caso de sucesso, recebe o identificador para o temporizador recém-criado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -224,7 +224,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*Pthreads*  
+*Pthreads*<br/>
 Um thread de trabalho existente.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -249,7 +249,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*hObject*  
+*hObject*<br/>
 O identificador a ser removido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -270,7 +270,7 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwWait*  
+*dwWait*<br/>
 O tempo em milissegundos para aguardar o thread de trabalho desligar. ATL_WORKER_THREAD_WAIT padrão é 10 segundos. Se necessário, você pode definir seu próprio valor para esse símbolo antes de incluir atlutil.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -285,7 +285,7 @@ Observe que a chamada `Shutdown` em um objeto inicializado com um ponteiro para 
 
 ## <a name="see-also"></a>Consulte também
 
-[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
-[Classes](../../atl/reference/atl-classes.md)   
-[Multithreading: Criando Threads de trabalho](../../parallel/multithreading-creating-worker-threads.md)   
+[DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
+[Classes](../../atl/reference/atl-classes.md)<br/>
+[Multithreading: criando threads de trabalho](../../parallel/multithreading-creating-worker-threads.md)<br/>
 [Interface IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)

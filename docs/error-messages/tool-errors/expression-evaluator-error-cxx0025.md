@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 843de39120cee18b01d17d88fb2759bebb9d2dc9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd89faa4de7b296d6a6771f857f3d16dbe2f94f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302835"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043697"
 ---
 # <a name="expression-evaluator-error-cxx0025"></a>Erro CXX0025 (avaliador de expressão)
-o operador necessita de struct/união  
-  
- Um operador que usa uma expressão de `struct` ou **união** tipo foi aplicado a uma expressão que não é um `struct` ou **união**.  
-  
- Componentes de classe, estrutura ou união variáveis devem ter um nome totalmente qualificado. Componentes não podem ser inseridos sem especificação completa.  
-  
- Esse erro é idêntico ao CAN0025.
+
+operador precisa struct/union
+
+Um operador que usa uma expressão de `struct` ou **união** tipo foi aplicado a uma expressão que não seja um `struct` ou **união**.
+
+Componentes de classe, estrutura ou união variáveis devem ter um nome totalmente qualificado. Componentes não podem ser inseridos sem a especificação completa.
+
+Esse erro é idêntico ao CAN0025.

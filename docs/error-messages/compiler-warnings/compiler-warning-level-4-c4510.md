@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 4) de aviso C4510 | Microsoft Docs
+title: Compilador aviso (nível 4) C4510 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b280a15381f53b6836b321e25717cbed19c7271
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f2aaf7286c2e900629a18d7df5824ef4b7af1f5f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297275"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048962"
 ---
-# <a name="compiler-warning-level-4-c4510"></a>Compilador C4510 de aviso (nível 4)
-'class': não foi possível gerar um construtor padrão  
-  
- O compilador não pode gerar um construtor padrão para a classe especificada e nenhum construtor definido pelo usuário foi criada. Você não poderá criar objetos desse tipo.  
-  
- Há várias situações que impedem que o compilador gere um construtor padrão, incluindo:  
-  
--   Um membro de dados constante.  
-  
--   Um membro de dados que é uma referência.  
-  
- Você precisa criar um construtor padrão definido pelo usuário para a classe que inicializa esses membros.  
-  
- O exemplo a seguir gera C4510:  
-  
-```  
-// C4510.cpp  
-// compile with: /W4  
-struct A {  
-   const int i;  
-   int &j;  
-   A& operator=( const A& ); // C4510 expected  
-   // uncomment the following line to resolve this C4510  
-   // A(int ii, int &jj) : i(ii), j(jj) {}  
-};   // C4510  
-  
-int main() {  
-}  
+# <a name="compiler-warning-level-4-c4510"></a>Compilador aviso (nível 4) C4510
+
+'class': não foi possível gerar um construtor padrão
+
+O compilador não pode gerar um construtor padrão para a classe especificada e nenhum construtor definido pelo usuário foi criado. Você não poderá criar objetos desse tipo.
+
+Há várias situações que impedem que o compilador gere um construtor padrão, incluindo:
+
+- Um membro de dados const.
+
+- Um membro de dados que é uma referência.
+
+Você precisa criar um construtor padrão definido pelo usuário para a classe que inicializa esses membros.
+
+O exemplo a seguir gera C4510:
+
+```
+// C4510.cpp
+// compile with: /W4
+struct A {
+   const int i;
+   int &j;
+   A& operator=( const A& ); // C4510 expected
+   // uncomment the following line to resolve this C4510
+   // A(int ii, int &jj) : i(ii), j(jj) {}
+};   // C4510
+
+int main() {
+}
 ```

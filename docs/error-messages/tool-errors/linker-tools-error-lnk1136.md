@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de vinculador LNK1136 erro | Microsoft Docs
+title: Erro das LNK1136 das ferramentas de vinculador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53cab76b186ce6fdc3aa9a5a5d581044c65616e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b70d5e7cb302430561e6092e47e07091e0d8c4d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296855"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043060"
 ---
 # <a name="linker-tools-error-lnk1136"></a>Erro das Ferramentas de Vinculador LNK1136
-arquivo inválido ou corrompido  
-  
- O arquivo de entrada tem um cabeçalho danificado ou for zero, tamanho ou pequeno de forma anormal.  
-  
- LNK1136 também pode ser causado se o arquivo foi especificado incorretamente como uma dependência adicional.
+
+arquivo inválido ou corrompido
+
+O arquivo de entrada tem um cabeçalho corrompido ou for zero, tamanho ou pequeno de maneira anormal.
+
+Das LNK1136 também pode ser causado se o arquivo foi especificado incorretamente como uma dependência adicional.

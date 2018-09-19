@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b5a5a01458c4117fb6cb49c967cc8ca94a77226
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5ef826dcdb439a28630221bdc9b4a90e9f6f324f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319963"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072960"
 ---
 # <a name="resource-compiler-error-rc2109"></a>Erro RC2109 (compilador de recurso)
-constante de caixa de diálogo numérico esperado  
-  
- Um **diálogo** instrução requer valores inteiros para o *x, y, largura*, e *altura* campos. Verifique se esses valores forem incluídos após o **diálogo** palavra-chave e que eles não sejam negativos.
+
+esperada constante numérica da caixa de diálogo
+
+Um **caixa de diálogo** instrução requer valores inteiros para o *x, y, largura*, e *altura* campos. Verifique se esses valores são incluídos após o **caixa de diálogo** palavra-chave e que não são negativos.

@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09b36d7210a3ed81b7049c1ab011a38c64f7d196
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 391414365549b462952045a7d9efe080097f3af6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198385"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036742"
 ---
 # <a name="fatal-error-c1506"></a>Erro fatal C1506
-Erro de escopo de bloco irrecuperável  
-  
- O bloco era muito grande para compilar.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
-  
-1.  Chaves não correspondentes  
-  
-2.  Função muito grande ou classe
+
+Erro de escopo de bloco irrecuperável
+
+O bloco era muito grande para compilar.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
+
+1. Chaves não correspondentes
+
+1. Função extraordinariamente grande ou classe

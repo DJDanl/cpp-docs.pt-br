@@ -1,5 +1,5 @@
 ---
-title: C2660 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2660 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,161 +16,168 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9868dc7e5702b901b4e08593624d06f879e4a710
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 389e56c778a626572d0254324791af17a3108622
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235952"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042457"
 ---
-# <a name="compiler-error-c2660"></a>C2660 de erro do compilador
-'function': função não aceita parâmetros de número  
-  
- A função é chamada com um número incorreto de parâmetros.  
-  
- C2660 pode ocorrer se você acidentalmente chamar uma função de API do Windows em vez de uma função de membro do MFC de mesmo nome. Para resolver esse problema:  
-  
--   Ajuste a chamada de função de acordo com o formato da chamada de função de membro.  
-  
--   Use o operador de resolução do escopo (`::`) para informar ao compilador para procurar o nome da função no espaço de nome global.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C2660.  
-  
-```  
-// C2660.cpp  
-void func( int, int ) {}  
-  
-int main() {  
-   func( 1 );   // C2660 func( int ) not declared  
-   func( 1, 0 );   // OK  
-}  
-```  
-  
-## <a name="example"></a>Exemplo  
- C2660 também poderá ocorrer se você tentar chamar diretamente o método Dispose de um tipo gerenciado. Para obter mais informações, consulte [destruidores e finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). O exemplo a seguir gera C2660.  
-  
-```  
-// C2660_a.cpp  
-// compile with: /clr  
-using namespace System;  
-using namespace System::Threading;  
-  
-void CheckStatus( Object^ stateInfo ) {}  
-  
-int main() {  
-   ManualResetEvent^ event = gcnew ManualResetEvent( false );     
-   TimerCallback^ timerDelegate = gcnew TimerCallback( &CheckStatus );  
-   Timer^ stateTimer = gcnew Timer( timerDelegate, event, 1000, 250 );  
-  
-   stateTimer->Dispose();   // C2660  
-   stateTimer->~Timer();   // OK  
-}  
-```  
-  
-## <a name="example"></a>Exemplo  
- C2660 ocorrerá se uma classe derivada oculta uma função.  
-  
-```  
-// C2660b.cpp  
-// C2660 expected  
-#include <stdio.h>  
-  
-class f {  
-public:  
-   void bar() {  
-      printf_s("in f::bar\n");  
-    }  
-};  
-  
-class f2 : public f {  
-public:  
-   void bar(int i){printf("in f2::bar\n");}  
-   // Uncomment the following line to resolve.  
-   // using f::bar;   // - using declaration added  
-   // or  
-   // void bar(){__super::bar();}  
-};  
-  
-int main() {  
-   f2 fObject;  
-   fObject.bar();  
-}  
-```  
-  
-## <a name="example"></a>Exemplo  
- C2660 pode ocorrer se você invocar uma propriedade indexada incorretamente.  
-  
-```  
-// C2660c.cpp  
-// compile with: /clr  
-ref class X {  
-   double d;  
-public:  
-   X() : d(1.9) {}  
-   property double MyProp[] {  
-      double get(int i) {  
-         return d;  
-      }  
-   }   // end MyProp definition  
-};  
-  
-int main() {  
-   X ^ MyX = gcnew X();  
-   System::Console::WriteLine(MyX->MyProp(1));   // C2660  
-   System::Console::WriteLine(MyX->MyProp[1]);   // OK  
-}  
-```  
-  
-## <a name="example"></a>Exemplo  
- C2660 pode ocorrer se você invocar uma propriedade indexada incorretamente.  
-  
-```  
-// C2660d.cpp  
-// compile with: /clr  
-ref class A{  
-public:  
-   property int default[int,int] {  
-      int get(int a, int b) {  
-         return a + b;  
-      }  
-   }  
-};  
-  
-int main() {  
-   A^ a = gcnew A;  
-   int x = a[3][5];   // C2660  
-   int x2 = a[3,5];   // OK  
-}  
-```  
-  
-## <a name="example"></a>Exemplo  
- C2660 pode ocorrer se você definir um novo operador em uma classe de modelo, mas onde o novo operador cria um objeto cujo tipo é diferente do tipo de delimitador.  
-  
-```  
-// C2660e.cpp  
-// compile with: /c  
-#include <malloc.h>  
-  
-template <class T> class CA {  
-private:  
-    static T** line;  
-   void* operator new (size_t, int i) {   
-      return 0;  
-   }  
-   void operator delete(void* pMem, int i) {  
-      free(pMem);  
-   }  
-  
-public:  
-   CA () { new (1) T(); }   // C2660  
-   // try the following line instead  
-   // CA () { new (1) CA<int>(); }  
-};  
-  
-typedef CA <int> int_CA;  
-  
-void AAA() {  
-   int_CA  list;  
-}  
+# <a name="compiler-error-c2660"></a>Erro do compilador C2660
+
+'function': função não aceita parâmetros de número
+
+A função é chamada com um número incorreto de parâmetros.
+
+C2660 pode ocorrer se você acidentalmente chamar uma função da API do Windows em vez de uma função de membro MFC de mesmo nome. Para resolver esse problema:
+
+- Ajuste a chamada de função em conformidade com o formato da chamada de função de membro.
+
+- Use o operador de resolução de escopo (`::`) para indicar ao compilador para buscar o nome da função no espaço para nome global.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C2660.
+
+```
+// C2660.cpp
+void func( int, int ) {}
+
+int main() {
+   func( 1 );   // C2660 func( int ) not declared
+   func( 1, 0 );   // OK
+}
+```
+
+## <a name="example"></a>Exemplo
+
+C2660 também pode ocorrer se você tentar chamar diretamente o método Dispose de um tipo gerenciado. Para obter mais informações, consulte [destruidores e finalizadores](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers). O exemplo a seguir gera C2660.
+
+```
+// C2660_a.cpp
+// compile with: /clr
+using namespace System;
+using namespace System::Threading;
+
+void CheckStatus( Object^ stateInfo ) {}
+
+int main() {
+   ManualResetEvent^ event = gcnew ManualResetEvent( false );
+   TimerCallback^ timerDelegate = gcnew TimerCallback( &CheckStatus );
+   Timer^ stateTimer = gcnew Timer( timerDelegate, event, 1000, 250 );
+
+   stateTimer->Dispose();   // C2660
+   stateTimer->~Timer();   // OK
+}
+```
+
+## <a name="example"></a>Exemplo
+
+C2660 ocorrerá se uma classe derivada oculta uma função.
+
+```
+// C2660b.cpp
+// C2660 expected
+#include <stdio.h>
+
+class f {
+public:
+   void bar() {
+      printf_s("in f::bar\n");
+    }
+};
+
+class f2 : public f {
+public:
+   void bar(int i){printf("in f2::bar\n");}
+   // Uncomment the following line to resolve.
+   // using f::bar;   // - using declaration added
+   // or
+   // void bar(){__super::bar();}
+};
+
+int main() {
+   f2 fObject;
+   fObject.bar();
+}
+```
+
+## <a name="example"></a>Exemplo
+
+C2660 pode ocorrer se você chamar uma propriedade indexada incorretamente.
+
+```
+// C2660c.cpp
+// compile with: /clr
+ref class X {
+   double d;
+public:
+   X() : d(1.9) {}
+   property double MyProp[] {
+      double get(int i) {
+         return d;
+      }
+   }   // end MyProp definition
+};
+
+int main() {
+   X ^ MyX = gcnew X();
+   System::Console::WriteLine(MyX->MyProp(1));   // C2660
+   System::Console::WriteLine(MyX->MyProp[1]);   // OK
+}
+```
+
+## <a name="example"></a>Exemplo
+
+C2660 pode ocorrer se você chamar uma propriedade indexada incorretamente.
+
+```
+// C2660d.cpp
+// compile with: /clr
+ref class A{
+public:
+   property int default[int,int] {
+      int get(int a, int b) {
+         return a + b;
+      }
+   }
+};
+
+int main() {
+   A^ a = gcnew A;
+   int x = a[3][5];   // C2660
+   int x2 = a[3,5];   // OK
+}
+```
+
+## <a name="example"></a>Exemplo
+
+C2660 pode ocorrer se você definir um novo operador em uma classe de modelo, mas onde o novo operador cria um objeto cujo tipo é diferente de um tipo delimitador.
+
+```
+// C2660e.cpp
+// compile with: /c
+#include <malloc.h>
+
+template <class T> class CA {
+private:
+    static T** line;
+   void* operator new (size_t, int i) {
+      return 0;
+   }
+   void operator delete(void* pMem, int i) {
+      free(pMem);
+   }
+
+public:
+   CA () { new (1) T(); }   // C2660
+   // try the following line instead
+   // CA () { new (1) CA<int>(); }
+};
+
+typedef CA <int> int_CA;
+
+void AAA() {
+   int_CA  list;
+}
 ```

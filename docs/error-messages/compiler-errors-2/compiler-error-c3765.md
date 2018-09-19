@@ -1,5 +1,5 @@
 ---
-title: C3765 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3765 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb8370a5c9c25fee211636214a82f22c05ccb311
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cac3930e4f5ec42587a9f557adc7a82d750b3819
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274762"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042124"
 ---
-# <a name="compiler-error-c3765"></a>C3765 de erro do compilador
-'event': não é possível definir um evento em uma classe/struct 'type' marcada como um event_receiver  
-  
- Se uma classe está marcada com o [event_receiver](../../windows/event-receiver.md) atributo, a classe não pode conter um [Event](../../cpp/event.md) declaração.  
-  
- O exemplo a seguir gera C3765:  
-  
-```  
-// C3765.cpp  
-[event_receiver(native)]  
-struct ER2 {  
-   __event void f();   // C3765  
-   __event void b(int);   // C3765  
-};  
+# <a name="compiler-error-c3765"></a>Erro do compilador C3765
+
+'event': não é possível definir um evento em uma classe/struct 'type' marcada como um event_receiver
+
+Se uma classe é marcada com o [event_receiver](../../windows/event-receiver.md) atributo, a classe não pode conter um [Event](../../cpp/event.md) declaração.
+
+O exemplo a seguir gera C3765:
+
+```
+// C3765.cpp
+[event_receiver(native)]
+struct ER2 {
+   __event void f();   // C3765
+   __event void b(int);   // C3765
+};
 ```

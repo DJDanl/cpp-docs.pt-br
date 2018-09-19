@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 4) de aviso C4718 | Microsoft Docs
+title: Compilador aviso (nível 4) C4718 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a92ab7a32babd181f282c799568e3a9dea436c49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8736902f4c3a1cfac7313806fde65d1b253716b3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294028"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054227"
 ---
-# <a name="compiler-warning-level-4-c4718"></a>Compilador C4718 de aviso (nível 4)
-chamada de função: chamada recursiva não tem efeitos colaterais, excluindo  
-  
- Uma função contém uma chamada recursiva, mas, caso contrário, não tem efeitos colaterais. Uma chamada para essa função está sendo excluída. A exatidão do programa não é afetada, mas o comportamento é. Enquanto deixa a chamada no pode resultar em uma exceção de estouro de pilha do tempo de execução, a chamada a exclusão remove essa possibilidade.
+# <a name="compiler-warning-level-4-c4718"></a>Compilador aviso (nível 4) C4718
+
+chamada de função: chamada recursiva não tem efeitos colaterais, excluindo
+
+Uma função contém uma chamada recursiva, mas caso contrário, não tem efeitos colaterais. Uma chamada para essa função está sendo excluída. A correção do programa não é afetada, mas é o comportamento. Enquanto deixando a chamada no pode resultar em uma exceção de estouro de pilha de tempo de execução, a chamada a exclusão remove essa possibilidade.

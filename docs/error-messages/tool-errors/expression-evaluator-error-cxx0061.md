@@ -17,16 +17,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67e5edff0556b5105a57d3cb8de1c644959d65a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13f6954ce13c1a4b52b6d52e5f381f8732cc7b1a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315601"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047376"
 ---
 # <a name="expression-evaluator-error-cxx0061"></a>Erro CXX0061 (avaliador de expressão)
-profundidade de aninhamento de função excedida  
-  
- A expressão contém uma função maior que o limite de profundidade de aninhamento. Modifique a expressão para reduzir a profundidade de aninhamento.  
-  
- Esse erro é idêntico ao CAN0061.
+
+profundidade de aninhamento de função excedida
+
+A expressão contém uma função maior do que o limite de profundidade de aninhamento. Modifique a expressão para reduzir a profundidade de aninhamento.
+
+Esse erro é idêntico ao CAN0061.

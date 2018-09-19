@@ -1,5 +1,5 @@
 ---
-title: C2859 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2859 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9fa80b858494ab2a89e82a40f2c295d05cb1294
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9d143624ae7312cfefc724471681d697394a1566
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245184"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037028"
 ---
-# <a name="compiler-error-c2859"></a>C2859 de erro do compilador
-nome de arquivo não é o arquivo de tipo que foi usado quando esse cabeçalho pré-compilado foi criado, recrie o cabeçalho pré-compilado.  
-  
- O banco de dados do projeto e arquivos de cabeçalho pré-compilado devem ser criados em conjunto para garantir que informações consistentes. Recompile o projeto para recriar o cabeçalho pré-compilado.  
-  
- Para obter informações sobre cabeçalhos pré-compilados, consulte [/Y (cabeçalhos pré-compilados)](../../build/reference/y-precompiled-headers.md).
+# <a name="compiler-error-c2859"></a>Erro do compilador C2859
+
+nome do arquivo não é o arquivo de tipo que foi usado quando esse cabeçalho pré-compilado foi criado, recrie o cabeçalho pré-compilado.
+
+Os arquivos de cabeçalho pré-compilado e o banco de dados do projeto devem ser criados em conjunto para garantir que informações consistentes. Recompile o projeto para recriar o cabeçalho pré-compilado.
+
+Para obter informações sobre cabeçalhos pré-compilados, consulte [/Y (cabeçalhos pré-compilados)](../../build/reference/y-precompiled-headers.md).

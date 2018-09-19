@@ -19,31 +19,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42fc4bd5186ade5efaa9c4fa8e9f567f37509039
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 4ab1e4f83025dcc3e4bc65274746e0617cf31b5b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42571457"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46065017"
 ---
 # <a name="varianttdetach"></a>_variant_t::Detach
-**Seção específica da Microsoft**  
-  
- Desanexa encapsulado `VARIANT` objeto deste `_variant_t` objeto.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-VARIANT Detach( );  
-```  
-  
-## <a name="return-value"></a>Valor de retorno  
- Encapsulado `VARIANT`.  
-  
-## <a name="remarks"></a>Comentários  
- Extrai e retorna encapsulado `VARIANT`, em seguida, limpa esse `_variant_t` objeto sem destruí-lo. Essa função membro remove os `VARIANT` do encapsulamento e define o `VARTYPE` isso `_variant_t` objeto como VT_EMPTY. Cabe a você liberar retornado `VARIANT` chamando o [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear) função.  
-  
- **Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe _variant_t](../cpp/variant-t-class.md)
+
+**Seção específica da Microsoft**
+
+Desanexa encapsulado `VARIANT` objeto deste `_variant_t` objeto.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+VARIANT Detach( );
+```
+
+## <a name="return-value"></a>Valor de retorno
+
+Encapsulado `VARIANT`.
+
+## <a name="remarks"></a>Comentários
+
+Extrai e retorna encapsulado `VARIANT`, em seguida, limpa esse `_variant_t` objeto sem destruí-lo. Essa função membro remove os `VARIANT` do encapsulamento e define o `VARTYPE` isso `_variant_t` objeto como VT_EMPTY. Cabe a você liberar retornado `VARIANT` chamando o [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear) função.
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Classe _variant_t](../cpp/variant-t-class.md)

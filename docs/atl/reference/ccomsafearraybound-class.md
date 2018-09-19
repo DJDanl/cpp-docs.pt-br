@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 457c880f7f7eb6c011637b438fa3bcc25d57303b
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 190716877090f53aa48023d493cded9793839380
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758268"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039557"
 ---
 # <a name="ccomsafearraybound-class"></a>Classe CComSafeArrayBound
 
@@ -78,10 +78,10 @@ CComSafeArrayBound(ULONG ulCount = 0, LONG lLowerBound = 0) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*ulCount*  
+*ulCount*<br/>
 O número de elementos na matriz.
 
-*lLowerBound*  
+*lLowerBound*<br/>
 O limite inferior do qual a matriz é numerada.
 
 ### <a name="remarks"></a>Comentários
@@ -143,10 +143,10 @@ CComSafeArrayBound& operator= (ULONG ulCount) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*associado*  
+*associado*<br/>
 Um objeto `CComSafeArrayBound`.
 
-*ulCount*  
+*ulCount*<br/>
 O número de elementos.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -167,7 +167,7 @@ ULONG SetCount(ULONG ulCount) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*ulCount*  
+*ulCount*<br/>
 O número de elementos.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -184,7 +184,7 @@ LONG SetLowerBound(LONG lLowerBound) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*lLowerBound*  
+*lLowerBound*<br/>
 O limite inferior.
 
 ### <a name="return-value"></a>Valor de retorno

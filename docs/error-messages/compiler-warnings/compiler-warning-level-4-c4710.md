@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 4) de aviso C4710 | Microsoft Docs
+title: Compilador aviso (nível 4) C4710 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c1cc77d8ee5393fe600ceadd9c1335d76e32efe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1f6de17f7005db3834bfcfc93aff03f12f0293ce
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296381"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046089"
 ---
-# <a name="compiler-warning-level-4-c4710"></a>Compilador C4710 de aviso (nível 4)
-'function': função não embutida  
-  
- A função fornecida foi selecionada para expansão embutida, mas o compilador não executou o inlining.  
-  
- Inlining é executada a critério do compilador. O **embutido** palavra-chave, como o **registrar** palavra-chave é usada como uma dica para o compilador. O compilador usa heurística para determinar se deveria embutido uma função específica para acelerar o código durante a compilação para a velocidade ou se deveria embutido uma função específica para diminuir o código durante a compilação de espaço. O compilador será apenas embutido muito pequenas funções durante a compilação de espaço.  
-  
- Em alguns casos, o compilador será embutido não uma função específica por motivos mecânicos. Consulte [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) para obter uma lista dos motivos que o compilador pode embutido uma função.  
-  
- Esse aviso é desativada por padrão. Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.
+# <a name="compiler-warning-level-4-c4710"></a>Compilador aviso (nível 4) C4710
+
+'function': função não embutida
+
+A função fornecida foi selecionada para expansão embutida, mas o compilador não executou o inlining.
+
+Inlining é executada, a critério do compilador. O **embutido** palavra-chave, como o **registrar** palavra-chave, é usado como uma dica para o compilador. O compilador usa heurística para determinar se deveria embutir uma função específica para acelerar o código durante a compilação para velocidade, ou se ele deve embutir uma função específica para diminuir o código durante a compilação para o espaço. O compilador criará somente embutido muito pequenas funções durante a compilação para o espaço.
+
+Em alguns casos, o compilador não embutirá uma função específica por motivos de mecânicos. Ver [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) para obter uma lista dos motivos, o compilador pode embutir uma função.
+
+Esse aviso é desativado por padrão. Ver [compilador avisos que são desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.

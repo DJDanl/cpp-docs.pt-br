@@ -19,45 +19,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4aea3a0125e2712203eb668197d42bd850aef5e
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: e55788e280eb60f176a286cf9d1693e93447a077
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131885"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031437"
 ---
 # <a name="if-else-statement-c"></a>Instrução if-else (C++)
+
 Controla a ramificação condicional. As instruções na *bloco if* são executados somente se o *expressão if* é avaliada como um valor diferente de zero (ou TRUE). Se o valor de *expressão* for diferente de zero *instrução1* e quaisquer outras instruções no bloco são executadas e o-bloco else, se presente, será ignorado. Se o valor de *expressão* for zero, em seguida, o bloco de if é ignorado e o-bloco else, se presente, é executado. São expressões que são avaliadas como diferente de zero
 - TRUE
 - um ponteiro não nulo,
-- qualquer valor aritmético diferente de zero, ou 
-- tipo de um tipo de classe que define uma conversão inequívoca para uma aritmética, booliano ou ponteiro. (Para obter informações sobre conversões, consulte [conversões padrão](../cpp/standard-conversions.md).)   
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-if ( expression )  
+- qualquer valor aritmético diferente de zero, ou
+- tipo de um tipo de classe que define uma conversão inequívoca para uma aritmética, booliano ou ponteiro. (Para obter informações sobre conversões, consulte [conversões padrão](../cpp/standard-conversions.md).)
+
+## <a name="syntax"></a>Sintaxe
+
+```
+if ( expression )
 {
    statement1;
-   ...  
+   ...
 }
 else  // optional
 {
    statement2;
    ...
-} 
+}
 
 // Visual Studio 2017 version 15.3 and later:
-if ( initialization; expression )  
+if ( initialization; expression )
 {
    statement1;
-   ...  
+   ...
 }
 else  // optional
 {
    statement2;
    ...
-}  
+}
 
 // Visual Studio 2017 version 15.3 and later:
 if constexpr (expression)
@@ -69,13 +70,13 @@ else  // optional
 {
    statement2;
    ...
-} 
-```  
+}
+```
 
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>Exemplo
 
-```cpp  
-// if_else_statement.cpp  
+```cpp
+// if_else_statement.cpp
 #include <iostream>
 
 using namespace std;
@@ -103,10 +104,10 @@ int main()
   // no else statement
     if (x == 10)
     {
-        x = 0; 
+        x = 0;
     }
     
-  
+
     C* c;
   init(c);
     if (c)
@@ -118,13 +119,14 @@ int main()
         cout << "c is null!\n";
     }
 }
-```  
+```
 ## <a name="if_with_init"></a> Se a instrução com um inicializador
 
-**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): uma **se** instrução também pode conter uma expressão que declara e inicializa uma variável nomeada. Use este formulário da instrução if quando a variável é necessária somente dentro do escopo do bloco if. 
+**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): uma **se** instrução também pode conter uma expressão que declara e inicializa uma variável nomeada. Use este formulário da instrução if quando a variável é necessária somente dentro do escopo do bloco if.
 
 ```cpp
-## Example  
+## Example
+
 #include <iostream>
 #include <mutex>
 #include <map>
@@ -166,12 +168,13 @@ int main()
 }
 ```
 
- Em todas as formas dos **se** instrução *expressão*, que pode ter qualquer valor exceto uma estrutura, é avaliada, inclusive todos os efeitos colaterais. Controle passa do **se** instrução para a próxima instrução no programa, a menos que um dos *instrução*s contém um [quebra](../cpp/break-statement-cpp.md), [continuar](../cpp/continue-statement-cpp.md), ou [goto](../cpp/goto-statement-cpp.md).  
-  
- O **else** cláusula de uma `if...else` instrução está associada com o mais próximo anterior **se** instrução no mesmo escopo que não tem um correspondente **else** instrução.   
+Em todas as formas dos **se** instrução *expressão*, que pode ter qualquer valor exceto uma estrutura, é avaliada, inclusive todos os efeitos colaterais. Controle passa do **se** instrução para a próxima instrução no programa, a menos que um dos *instrução*s contém um [quebra](../cpp/break-statement-cpp.md), [continuar](../cpp/continue-statement-cpp.md), ou [goto](../cpp/goto-statement-cpp.md).
+
+O **else** cláusula de uma `if...else` instrução está associada com o mais próximo anterior **se** instrução no mesmo escopo que não tem um correspondente **else** instrução.
 
 ## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> Se as instruções de constexpr
-**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): em modelos de função, você pode usar um **se constexpr** instrução para tomar decisões de ramificação de tempo de compilação sem precisar recorrer a várias sobrecargas de função. Por exemplo, você pode escrever uma única função esse parâmetro de identificadores desempacotar (nenhuma sobrecarga de parâmetro de zero é necessária): 
+
+**Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): em modelos de função, você pode usar um **se constexpr** instrução para tomar decisões de ramificação de tempo de compilação sem precisar recorrer a várias sobrecargas de função. Por exemplo, você pode escrever uma única função esse parâmetro de identificadores desempacotar (nenhuma sobrecarga de parâmetro de zero é necessária):
 
 ```cpp
 template <class T, class... Rest>
@@ -181,9 +184,9 @@ void f(T&& t, Rest&&... r)
    do_something(t);
 
    // handle r conditionally
-   if constexpr (sizeof...(r)) 
+   if constexpr (sizeof...(r))
    {
-      f(r...); 
+      f(r...);
    }
    else
    {
@@ -192,7 +195,8 @@ void f(T&& t, Rest&&... r)
 }
 ```
 
-## <a name="see-also"></a>Consulte também  
- [Instruções de seleção](../cpp/selection-statements-cpp.md)   
- [Palavras-chave](../cpp/keywords-cpp.md)   
- [Instrução switch (C++)](../cpp/switch-statement-cpp.md)
+## <a name="see-also"></a>Consulte também
+
+[Instruções de seleção](../cpp/selection-statements-cpp.md)<br/>
+[Palavras-chave](../cpp/keywords-cpp.md)<br/>
+[Instrução switch (C++)](../cpp/switch-statement-cpp.md)

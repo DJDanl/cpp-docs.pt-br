@@ -20,17 +20,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 758208de2ee27dba64808c60b1d94bed5bdeafa4
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 88b6884ff8543b3aa6ec329330563fbe1ad27b8e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194568"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071582"
 ---
 # <a name="transaction-object-interfaces"></a>Interfaces de objeto da transação
+
 O objeto de transação define uma unidade atômica de trabalho em uma fonte de dados e determina como as unidades de trabalho se relacionam entre si. Esse objeto não é compatível diretamente pelos modelos de provedor do OLE DB (ou seja, você deverá criar seu próprio objeto).  
   
- A tabela a seguir mostra as interfaces obrigatórias e opcionais definidas por OLE DB para um objeto de transação.  
+A tabela a seguir mostra as interfaces obrigatórias e opcionais definidas por OLE DB para um objeto de transação.  
   
 |Interface|Necessário?|Implementado por modelos OLE DB?|  
 |---------------|---------------|--------------------------------------|  
@@ -39,4 +40,5 @@ O objeto de transação define uma unidade atômica de trabalho em uma fonte de 
 |[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Opcional|Não|  
   
 ## <a name="see-also"></a>Consulte também  
- [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

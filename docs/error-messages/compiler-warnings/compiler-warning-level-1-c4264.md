@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4264 | Microsoft Docs
+title: Compilador aviso (nível 1) C4264 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1aed17c9465d3d209e3ff027b6a03bddb6cec57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0985ff20e52910bbe8ddbe788a16b8e85a6d7d7e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276536"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067581"
 ---
-# <a name="compiler-warning-level-1-c4264"></a>Compilador C4264 de aviso (nível 1)
-'virtual_function': nenhuma substituição disponível para a função de membro virtual de base 'class'; função é ocultada  
-  
- C4264 sempre é gerado após [C4263](../../error-messages/compiler-warnings/compiler-warning-level-4-c4263.md).  
-  
- Esse aviso é desativada por padrão. Consulte [compilador avisos que está desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.
+# <a name="compiler-warning-level-1-c4264"></a>Compilador aviso (nível 1) C4264
+
+'virtual_function': nenhuma substituição disponível para função membro virtual da 'classe' base; função é ocultada
+
+C4264 sempre é gerado após [C4263](../../error-messages/compiler-warnings/compiler-warning-level-4-c4263.md).
+
+Esse aviso é desativado por padrão. Ver [compilador avisos que são desativado por padrão](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para obter mais informações.

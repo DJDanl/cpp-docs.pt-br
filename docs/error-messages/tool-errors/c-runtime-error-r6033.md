@@ -1,5 +1,5 @@
 ---
-title: R6033 de erro de tempo de execução C | Microsoft Docs
+title: C R6033 de erro de tempo de execução | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed66dec4f4eb17378c9901439be2ad1449597a93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb107dcd2bd044ad6fb933869319bb7afd5aab72
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299988"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049794"
 ---
-# <a name="c-runtime-error-r6033"></a>R6033 de erro de tempo de execução do C
-Tentativa de usar código MSIL desse assembly durante a inicialização de código nativo. Isso indica um bug em seu aplicativo. Provavelmente é o resultado da chamada de uma compilação MSIL (/ clr) de um construtor nativo ou de DllMain de função.  
-  
+# <a name="c-runtime-error-r6033"></a>C R6033 de erro de tempo de execução
+
+Tentativa de usar o código MSIL desse assembly durante a inicialização do código nativo. Isso indica um bug em seu aplicativo. Provavelmente é o resultado da chamada de uma compilação de MSIL (/ clr) a partir de um construtor nativo ou DllMain de função.
+
 > [!NOTE]
->  Se você receber essa mensagem de erro durante a execução de um aplicativo, o aplicativo foi desligado porque ele tem um problema interno. Esse erro pode ser causado por um bug no aplicativo ou por um bug em um suplemento ou extensão que ele usa.  
->   
->  Você pode tentar corrigir esse erro com estas etapas:  
->   
->  -   Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para reparar ou reinstalar o programa.  
-> -   Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para remover, repare ou reinstale o qualquer extensão ou suplementos.  
-> -   Verificar **Windows Update** no **painel de controle** para atualizações de software.  
-> -   Verifique se há uma versão atualizada do aplicativo. Se o problema persistir, entre em contato com o fornecedor do aplicativo.  
-  
- **Informações para os programadores**  
-  
- Este diagnóstico indica que as instruções da MSIL estavam em execução durante o bloqueio do carregador. Isso pode ocorrer se você tiver compilado C++ nativo usando o sinalizador /clr. Use somente o sinalizador /clr em módulos que contêm o código gerenciado. Para obter mais informações, consulte [inicialização de Assemblies mistos](../../dotnet/initialization-of-mixed-assemblies.md).
+>  Se você encontrar esta mensagem de erro durante a execução de um aplicativo, o aplicativo foi encerrado porque ele tem um problema interno. Esse erro pode ser causado por um bug no aplicativo ou por um bug em um suplemento ou uma extensão que ele usa.
+>
+>  Você pode tentar corrigir esse erro com estas etapas:
+>
+>  -   Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para reparar ou reinstalar o programa.
+> -   Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para remover, reparar ou reinstalar todos os suplementos ou extensões.
+> -   Verifique **Windows Update** na **painel de controle** para atualizações de software.
+> -   Verifique se há uma versão atualizada do aplicativo. Se o problema persistir, entre em contato com o fornecedor do aplicativo.
+
+**Informações para programadores**
+
+Este diagnóstico indica que instruções MSIL estavam em execução durante o bloqueio do carregador. Isso pode ocorrer se você tiver compilado o C++ nativo usando o sinalizador de /clr. Use somente o sinalizador de /clr em módulos que contêm código gerenciado. Para obter mais informações, consulte [inicialização de Assemblies mistos](../../dotnet/initialization-of-mixed-assemblies.md).

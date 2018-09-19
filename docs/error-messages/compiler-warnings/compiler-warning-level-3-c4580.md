@@ -16,32 +16,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ad08af77b62cd0992e9415e2df8b31233e4e0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a9d25a77b6936a3b5b741a1da927c6beb24cbb1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290976"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072219"
 ---
-# <a name="compiler-warning-level-3-c4580"></a>Compilador C4580 de aviso (nível 3)
-[attribute] é preterido; em vez disso, especifique System::Attribute ou Platform:: Metadata como uma classe base  
-  
-[[atributo](../../windows/attribute.md)] não é mais a sintaxe preferencial para criar atributos definidos pelo usuário. Para obter mais informações, consulte [atributos definidos pelo usuário](../../windows/user-defined-attributes-cpp-component-extensions.md). Para o código CLR, derivar os atributos `System::Attribute`. Código de tempo de execução do Windows, derivar os atributos `Platform::Metadata`.  
-  
-## <a name="example"></a>Exemplo  
-O exemplo a seguir gera C3454 e mostra como corrigi-lo.  
-  
-```cpp  
-// C4580.cpp  
-// compile with: /W3 /c /clr  
-[attribute]   // C4580  
-public ref class Attr {  
-public:  
-   int m_t;  
-};  
-  
-public ref class Attr2 : System::Attribute {  
-public:  
-   int m_t;  
-};  
+# <a name="compiler-warning-level-3-c4580"></a>Compilador aviso (nível 3) C4580
+
+[attribute] é preterido; em vez disso, especifique System::Attribute ou Platform:: Metadata como uma classe base
+
+[[atributo](../../windows/attribute.md)] não é mais a sintaxe preferencial para a criação de atributos definidos pelo usuário. Para obter mais informações, consulte [atributos definidos pelo usuário](../../windows/user-defined-attributes-cpp-component-extensions.md). Para o código do CLR, derivar atributos de `System::Attribute`. Para o código de tempo de execução do Windows, derivar atributos de `Platform::Metadata`.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C3454 e mostra como corrigi-lo.
+
+```cpp
+// C4580.cpp
+// compile with: /W3 /c /clr
+[attribute]   // C4580
+public ref class Attr {
+public:
+   int m_t;
+};
+
+public ref class Attr2 : System::Attribute {
+public:
+   int m_t;
+};
 ```

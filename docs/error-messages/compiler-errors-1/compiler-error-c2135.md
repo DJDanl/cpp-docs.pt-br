@@ -1,5 +1,5 @@
 ---
-title: C2135 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2135 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8029738e18af87b8c6a9f3e6ee9d9d2e3f6a46f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4945753bec1ab8d315c8f8028bf10513dcb21c1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33168471"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070061"
 ---
-# <a name="compiler-error-c2135"></a>C2135 de erro do compilador
-'bit operator': operação de campo de bits inválida  
-  
- Operador address-of (`&`) não pode ser aplicado a um campo de bits.  
-  
- O exemplo a seguir gera C2135:  
-  
-```  
-// C2135.cpp  
-struct S {  
-   int i : 1;  
-};  
-  
-struct T {  
-   int j;  
-};  
-int main() {  
-   &S::i;   // C2135 address of a bit field  
-   &T::j;   // OK  
-}  
+# <a name="compiler-error-c2135"></a>Erro do compilador C2135
+
+'bit operator': operação de campo de bits inválida
+
+O operador address-of (`&`) não pode ser aplicado a um campo de bits.
+
+O exemplo a seguir gera C2135:
+
+```
+// C2135.cpp
+struct S {
+   int i : 1;
+};
+
+struct T {
+   int j;
+};
+int main() {
+   &S::i;   // C2135 address of a bit field
+   &T::j;   // OK
+}
 ```

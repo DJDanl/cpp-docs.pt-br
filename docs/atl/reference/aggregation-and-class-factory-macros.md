@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba2c1b96a1ce4db7c16695c51d946ecb98827271
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9a9cc4a142a0aefc4937df493fa87552464b4294
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752782"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043411"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Macros de classe de fábrica e agregação
 
@@ -67,7 +67,7 @@ DECLARE_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parâmetros
 
-*x*  
+*x*<br/>
 [in] O nome da classe que você está definindo como agregável.
 
 ### <a name="remarks"></a>Comentários
@@ -131,7 +131,7 @@ DECLARE_CLASSFACTORY_EX( cf )
 
 ### <a name="parameters"></a>Parâmetros
 
-*CF*  
+*CF*<br/>
 [in] O nome da classe que implementa o objeto de fábrica de classe.
 
 ### <a name="remarks"></a>Comentários
@@ -154,7 +154,7 @@ DECLARE_CLASSFACTORY2( lic )
 
 ### <a name="parameters"></a>Parâmetros
 
-*lic.*  
+*lic.*<br/>
 [in] Uma classe que implementa `VerifyLicenseKey`, `GetLicenseKey`, e `IsLicenseValid`.
 
 ### <a name="remarks"></a>Comentários
@@ -178,7 +178,7 @@ class  CComClassFactory2 : public IClassFactory2,
 
 ### <a name="parameters"></a>Parâmetros
 
-*licença*  
+*licença*<br/>
 Uma classe que implementa as funções estáticas a seguir:
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -249,7 +249,7 @@ DECLARE_CLASSFACTORY_SINGLETON( obj )
 
 ### <a name="parameters"></a>Parâmetros
 
-*obj*  
+*obj*<br/>
 [in] O nome do seu objeto de classe.
 
 ### <a name="remarks"></a>Comentários
@@ -274,7 +274,7 @@ class CComClassFactorySingleton : public CComClassFactory
 
 ### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 Sua classe.
 
 `CComClassFactorySingleton` deriva [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) e usa [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) para construir um único objeto. Cada chamada para o `CreateInstance` método simplesmente consulta esse objeto para um ponteiro de interface.
@@ -307,7 +307,7 @@ DECLARE_NOT_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parâmetros
 
-*x*  
+*x*<br/>
 [in] O nome do objeto da classe que você está definindo como não agregável.
 
 ### <a name="remarks"></a>Comentários
@@ -330,7 +330,7 @@ DECLARE_ONLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parâmetros
 
-*x*  
+*x*<br/>
 [in] O nome do objeto da classe que você está definindo como somente agregável.
 
 ### <a name="remarks"></a>Comentários
@@ -353,7 +353,7 @@ DECLARE_POLY_AGGREGATABLE( x )
 
 ### <a name="parameters"></a>Parâmetros
 
-*x*  
+*x*<br/>
 [in] O nome do objeto da classe que você está definindo como agregável ou não agregável.
 
 ### <a name="remarks"></a>Comentários
@@ -382,7 +382,7 @@ DECLARE_VIEW_STATUS( statusFlags )
 
 ### <a name="parameters"></a>Parâmetros
 
-*statusFlags*  
+*statusFlags*<br/>
 [in] Os sinalizadores de exibir status. Ver [VIEWSTATUS](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) para obter uma lista dos sinalizadores.
 
 ### <a name="example"></a>Exemplo

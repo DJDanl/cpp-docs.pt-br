@@ -1,5 +1,5 @@
 ---
-title: C2550 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2550 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d215f708513fd7313e0ff82f5b8853b1e00835af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd132184a993f27ec04a913cfef2aed07f8bd4a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228008"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062508"
 ---
-# <a name="compiler-error-c2550"></a>C2550 de erro do compilador
-'Identificador': listas de inicializadores de construtor só são permitidas em definições de construtor  
-  
- Uma lista de inicializador de classe base é usada na definição de uma função que não é um construtor.  
-  
- O exemplo a seguir gera C2550:  
-  
-```  
-// C2550.cpp  
-// compile with: /c  
-class C {  
-public:  
-   C();  
-};  
-  
-class D : public C {  
-public:  
-   D();  
-   void func();  
-};  
-  
-void D::func() : C() {}  // C2550  
-D::D() : C() {}   // OK  
+# <a name="compiler-error-c2550"></a>Erro do compilador C2550
+
+'identifier': listas de inicializadores de construtor são permitidas apenas em definições de construtor
+
+Uma lista de inicializadores de classe base é usada na definição de uma função que não é um construtor.
+
+O exemplo a seguir gera C2550:
+
+```
+// C2550.cpp
+// compile with: /c
+class C {
+public:
+   C();
+};
+
+class D : public C {
+public:
+   D();
+   void func();
+};
+
+void D::func() : C() {}  // C2550
+D::D() : C() {}   // OK
 ```

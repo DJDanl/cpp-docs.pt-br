@@ -1,5 +1,5 @@
 ---
-title: C2518 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2518 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1e44a99ad49945e441e1560f296dc66568ae3f3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 202d93e4ff466ddb1509c3d30ad3a326c07d0861
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228058"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051146"
 ---
-# <a name="compiler-error-c2518"></a>C2518 de erro do compilador
-palavra-chave 'palavra-chave' inválida na lista de classe base. ignorado  
-  
- As palavras-chave `class` e `struct` não devem aparecer em uma lista de classes base.  
-  
- O exemplo a seguir gera C2518:  
-  
-```  
-// C2518.cpp  
-// compile with: /c  
-class B {};  
-class C : public class B {};   // C2518  
-class D: public B {};   // OK  
+# <a name="compiler-error-c2518"></a>Erro do compilador C2518
+
+palavra-chave 'palavra-chave' inválido na lista de classes base; ignorado
+
+As palavras-chave `class` e `struct` não devem aparecer em uma lista de classes base.
+
+O exemplo a seguir gera C2518:
+
+```
+// C2518.cpp
+// compile with: /c
+class B {};
+class C : public class B {};   // C2518
+class D: public B {};   // OK
 ```

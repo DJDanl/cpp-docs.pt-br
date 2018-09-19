@@ -19,15 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c2b4f147943e09c0203f863d7514566de8466acf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3dc76e7d3557f777bb8d521de968671defdde8d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33096214"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071556"
 ---
 # <a name="cmultipleresults-class"></a>Classe CMultipleResults
-Se você deseja que um comando para lidar com vários conjuntos de resultados, use `CMultipleResults` para o `CCommand` argumento de modelo *TMultiple*.  
+
+Se você quiser um comando para lidar com vários conjuntos de resultados, use `CMultipleResults` para o `CCommand` argumento de modelo *TMultiple*.  
   
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,11 +37,14 @@ class CMultipleResults
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Para lidar com resultados múltiplos conjuntos, [CCommand](../../data/oledb/ccommand-class.md) deve herdar dessa classe.  
+
+Para lidar com resultados múltiplos conjuntos, [CCommand](../../data/oledb/ccommand-class.md) deve herdar desta classe.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atldbcli  
+
+**Cabeçalho:** atldbcli  
   
 ## <a name="see-also"></a>Consulte também  
- [Modelos de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+
+[Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

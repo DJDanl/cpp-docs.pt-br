@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b5ea18ff3f2714d9621d4372cf541be2f9b225a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b34f2f19a0bb8770ea9292fef120c415c0fb255a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230516"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060519"
 ---
 # <a name="fatal-error-c1081"></a>Erro fatal C1081
-'symbol': nome de arquivo muito longo  
-  
- O comprimento de um caminho de arquivo excede `_MAX_PATH` (definido por STDLIB.h como 260 caracteres). Encurte o nome do arquivo.  
-  
- Se você chamar CL.exe com um nome de arquivo curto, o compilador talvez seja necessário gerar um nome de caminho completo. Por exemplo, `cl -c myfile.cpp` pode fazer com que o compilador gere:  
-  
-```  
-D:\<very-long-directory-path>\myfile.cpp  
+
+'symbol': nome de arquivo muito longo
+
+O comprimento de um nome de caminho do arquivo excede `_MAX_PATH` (definido pelo stdlib. h como 260 caracteres). Encurte o nome do arquivo.
+
+Se você chamar CL.exe com um nome de arquivo curto, o compilador pode precisar gerar um nome de caminho completo. Por exemplo, `cl -c myfile.cpp` pode fazer com que o compilador gere:
+
+```
+D:\<very-long-directory-path>\myfile.cpp
 ```

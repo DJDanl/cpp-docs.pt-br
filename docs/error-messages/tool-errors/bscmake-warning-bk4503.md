@@ -1,5 +1,5 @@
 ---
-title: BSCMAKE aviso BK4503 | Microsoft Docs
+title: Aviso de BSCMAKE BK4503 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d75fe2390872255e283d718caae15f7326677f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 84310ff2d647a5ee1dc8ba0c4a4832aaf0cde594
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293446"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046583"
 ---
 # <a name="bscmake-warning-bk4503"></a>Aviso BK4503 (BSCMAKE)
-Erro secundário no nome de arquivo do arquivo SBR ignorado  
-  
- O arquivo .sbr continha um erro que não interrompia a compilação, mas o arquivo .bsc resultante pode estar incorreto. Para corrigir esse problema, recompile para criar um novo .sbr.
+
+Erro secundário no nome de arquivo do arquivo SBR ignorado
+
+O arquivo .sbr continha um erro que não interrompia a compilação, mas o arquivo .bsc resultante pode estar incorreto. Para corrigir esse problema, recompile para criar um novo .sbr.

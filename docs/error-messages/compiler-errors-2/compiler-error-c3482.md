@@ -1,5 +1,5 @@
 ---
-title: C3482 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3482 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad7ea983d13f03add2772da173062b1ad5652d3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9921c25575888ab2db1c092f9325002d1becb921
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258628"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053369"
 ---
-# <a name="compiler-error-c3482"></a>C3482 de erro do compilador
-'this' só pode ser usado como uma captura de lambda dentro de uma função de membro não estático  
-  
- Você não pode passar `this` à lista de captura de uma expressão lambda que é declarada em um método estático ou uma função global.  
-  
-### <a name="to-correct-this-error"></a>Para corrigir este erro  
-  
--   Converter a função delimitador para um método não estático, ou  
-  
--   Remover o `this` ponteiro da lista de captura da expressão lambda.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C3482:  
-  
-```  
-// C3482.cpp  
-// compile with: /c  
-  
-class C  
-{  
-public:  
-   static void staticMethod()  
-   {  
-      [this] {}(); // C3482  
-   }  
-};  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Expressões Lambda](../../cpp/lambda-expressions-in-cpp.md)
+# <a name="compiler-error-c3482"></a>Erro do compilador C3482
+
+'this' só pode ser usado como uma captura de lambda dentro de uma função de membro não estático
+
+Não é possível passar `this` à lista de captura de uma expressão lambda que é declarada em um método estático ou uma função global.
+
+### <a name="to-correct-this-error"></a>Para corrigir este erro
+
+- Converter função em um método não estático, ou
+
+- Remover o `this` ponteiro da lista de captura da expressão lambda.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C3482:
+
+```
+// C3482.cpp
+// compile with: /c
+
+class C
+{
+public:
+   static void staticMethod()
+   {
+      [this] {}(); // C3482
+   }
+};
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Expressões Lambda](../../cpp/lambda-expressions-in-cpp.md)

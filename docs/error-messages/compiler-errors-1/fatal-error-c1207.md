@@ -16,18 +16,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b28db2573ac58ee46b9ac5466d341a4a1690fc3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8042782477b402f2e09d1d67c8fd5c126647285
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227389"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072622"
 ---
 # <a name="fatal-error-c1207"></a>Erro fatal C1207
-Templates gerenciados não suportados pela versão do tempo de execução instalada  
-  
- C1207 ocorre quando você tiver um compilador para a versão atual, mas um tempo de execução de linguagem comum de uma versão anterior.  
-  
- Algumas funcionalidades do compilador não podem funcionar em uma versão anterior do tempo de execução.  
-  
- Para resolver C1207 instalar a versão de tempo de execução de linguagem comum que é destinada para uso com o compilador.
+
+Templates gerenciados não suportados pela versão do tempo de execução instalado
+
+C1207 ocorre quando você tem um compilador para a versão atual, mas um common language runtime de uma versão anterior.
+
+Algumas funcionalidades do compilador podem não funcionar em uma versão anterior do tempo de execução.
+
+Para resolver C1207 instale a versão common language runtime que é destinado para uso com o compilador.

@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4049 | Microsoft Docs
+title: Compilador aviso (nível 1) C4049 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eea293ff64ed8fe2bf4bf0d38d897eb82223802
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68a89d02129e5e8fbedb0649fff0cfe3813304c5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276823"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053512"
 ---
-# <a name="compiler-warning-level-1-c4049"></a>Compilador C4049 de aviso (nível 1)
-limite do compilador: encerrando emissão de número de linha  
-  
- O arquivo contém mais de 16.777.215 (2<sup>24</sup>-1) linhas de origem. O compilador para de numeração em 16.777.215.  
-  
- Para o código após a linha 16.777.215:  
-  
--   A imagem não conterá nenhuma informação de depuração para números de linha.  
-  
--   Alguns diagnósticos podem ser relatados com números de linha incorreta.  
-  
--   listagens. ASM (/ FAs) pode ter números de linha incorreta.
+# <a name="compiler-warning-level-1-c4049"></a>Compilador aviso (nível 1) C4049
+
+limite do compilador: encerrando emissão de número de linha
+
+O arquivo contém mais de 16.777.215 (2<sup>24</sup>-1) linhas de origem. O compilador interrompe a numeração em 16.777.215.
+
+Para o código após a linha 16.777.215:
+
+- A imagem não conterá nenhuma informação de depuração para números de linha.
+
+- Alguns diagnósticos podem ser relatados com números de linha incorreto.
+
+- listagens. ASM (/ FAs) podem ter números de linha incorreto.

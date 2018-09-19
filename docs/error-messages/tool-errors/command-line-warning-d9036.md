@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c382f971c12b9ffb54c6e98c8b1f4609d7aadad4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6c8f3030e1ee59b92b32d340e89e909f9da4fd8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33296010"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46039758"
 ---
 # <a name="command-line-warning-d9036"></a>Aviso D9036 (linha de comando)
-option_2 em vez de 'option_1'  
-  
- Aviso D9036 é uma continuação de [de linha de comando aviso D9035](../../error-messages/tool-errors/command-line-warning-d9035.md).
+
+option_2 em vez de 'option_1'
+
+Aviso D9036 é uma continuação do [D9035 de aviso de linha de comando](../../error-messages/tool-errors/command-line-warning-d9035.md).

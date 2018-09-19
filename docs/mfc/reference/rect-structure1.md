@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b61c794b8fa383eeea62459a5a83948ef2efe10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e71459a1c22b9295c5c88ce29da9e494660fa26
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372587"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046297"
 ---
 # <a name="rect-structure1"></a>Estrutura RECT 1
-O `RECT` estrutura define as coordenadas dos cantos superior esquerdo e direito inferior de um retângulo.  
+O `RECT` estrutura define as coordenadas dos cantos superior esquerdo e inferior direito de um retângulo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,17 +40,17 @@ typedef struct tagRECT {
 ```  
   
 ## <a name="members"></a>Membros  
- `left`  
- Especifica a coordenada x do canto superior esquerdo de um retângulo.  
+`left`<br/>
+Especifica a coordenada x do canto superior esquerdo de um retângulo.  
   
- `top`  
- Especifica a coordenada y do canto superior esquerdo de um retângulo.  
+`top`<br/>
+Especifica a coordenada y do canto superior esquerdo de um retângulo.  
   
- `right`  
- Especifica a coordenada x do canto inferior direito de um retângulo.  
+`right`<br/>
+Especifica a coordenada x do canto inferior direito de um retângulo.  
   
- `bottom`  
- Especifica a coordenada y do canto inferior direito de um retângulo.  
+`bottom`<br/>
+Especifica a coordenada y do canto inferior direito de um retângulo.  
   
 ## <a name="example"></a>Exemplo  
  [!code-cpp[NVC_MFC_Utilities#38](../../mfc/codesnippet/cpp/rect-structure1_1.cpp)]  

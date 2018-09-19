@@ -1,5 +1,5 @@
 ---
-title: C2410 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2410 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c2a2df0941130c4f2416806a05ce0378373eb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba4c2b57bcae062ccf811e33cf1deaea45f83737
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226424"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052446"
 ---
-# <a name="compiler-error-c2410"></a>C2410 de erro do compilador
-'Identificador': nome de membro ambíguo em 'contexto'  
-  
- O identificador é um membro de mais de uma estrutura ou união neste contexto.  
-  
- Use um especificador de estrutura ou união no operando que causou o erro. Um especificador de estrutura ou união é um identificador de tipo `struct` ou `union` (um `typedef` nome ou uma variável do mesmo tipo que a estrutura ou união que está sendo referenciado). O especificador deve ser o operando esquerdo do operador de seleção de membro (.) primeiro usar o operando.
+# <a name="compiler-error-c2410"></a>Erro do compilador C2410
+
+'identifier': nome de membro ambíguo em 'context'
+
+O identificador é um membro de mais de uma estrutura ou união neste contexto.
+
+Use um especificador de estrutura ou união no operando que causou o erro. Um especificador de estrutura ou união é um identificador do tipo `struct` ou `union` (um `typedef` nome ou uma variável do mesmo tipo que a estrutura ou união que está sendo referenciado). O especificador deve ser o operando esquerdo do operador de seleção de membro (.) primeiro para usar o operando.

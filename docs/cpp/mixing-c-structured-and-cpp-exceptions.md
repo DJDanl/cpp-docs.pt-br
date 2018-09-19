@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 580fb4c96db70b612135ac48e30bd9c0d45c4d1c
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: 1edd35ac9f32a28a19c4ea54b7e9fba2820d6095
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42573207"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031620"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>Combinando C (estruturada) e exceções do C++
 
@@ -47,10 +47,10 @@ Se você combinar a estruturadas e exceções do C++, esteja ciente desses probl
 
   Veja mais informações sobre o uso de `setjmp` e `longjmp` em programas C++.
 
-- [Tratar exceções estruturadas em C++](../cpp/exception-handling-differences.md)
+- [Tratar exceções estruturadas no C++](../cpp/exception-handling-differences.md)
 
   Consulte exemplos dos modos que você pode usar C++ para manipular estruturado de exceções.
 
 ## <a name="see-also"></a>Consulte também
 
-[Tratamento de exceções em C++](../cpp/cpp-exception-handling.md)  
+[Tratamento de exceções em C++](../cpp/cpp-exception-handling.md)

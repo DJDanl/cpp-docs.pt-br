@@ -42,12 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81ace9c9fe5cf21d93f7e7dd4a8b5f2f2c5d726
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 73abd8ef0ca29ee9e7f2312cc44a8178fc464261
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451531"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064617"
 ---
 # <a name="chdir-wchdir"></a>_chdir, _wchdir
 
@@ -71,17 +71,17 @@ Caminho do novo diretório de trabalho.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Essas funções retornarão um valor de 0 se forem bem-sucedidas. Um valor de retorno de -1 indica falha. Se o caminho especificado não pôde ser encontrado, **errno** é definido como **ENOENT**. Se *dirname* é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e a função retornará -1.
+Essas funções retornarão um valor de 0 se forem bem-sucedidas. Um valor de retorno de -1 indica falha. Se o caminho especificado não pôde ser encontrado, **errno** é definido como **ENOENT**. Se *dirname* é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e a função retornará -1.
 
 ## <a name="remarks"></a>Comentários
 
-O **chdir** função altera o diretório de trabalho atual para o diretório especificado por *dirname*. O *dirname* parâmetro deve se referir a um diretório existente. Essa função pode mudar o diretório de trabalho atual em qualquer unidade. Se uma nova letra da unidade especificada no *dirname*, a letra da unidade padrão também mudou. Por exemplo, se A for a letra da unidade padrão e \BIN for o diretório de trabalho atual, a chamada a seguir alterará o diretório de trabalho atual para a unidade C e estabelecerá C como a nova unidade padrão:
+O **chdir** função altera o diretório de trabalho atual para o diretório especificado por *dirname*. O *dirname* parâmetro deve se referir a um diretório existente. Essa função pode mudar o diretório de trabalho atual em qualquer unidade. Se uma nova letra da unidade for especificada na *dirname*, a letra da unidade padrão mudará também. Por exemplo, se A for a letra da unidade padrão e \BIN for o diretório de trabalho atual, a chamada a seguir alterará o diretório de trabalho atual para a unidade C e estabelecerá C como a nova unidade padrão:
 
 ```C
 _chdir("c:\temp");
 ```
 
-Quando você usa o caractere de barra invertida opcional (**&#92;**) em caminhos, é necessário colocar duas barras invertidas (**&#92;&#92;**) em uma cadeia de caracteres C literal para representar uma barra invertida ( **&#92;**).
+Quando você usa o caractere de barra invertida opcional (**&#92;**) em caminhos, você deve colocar duas barras invertidas (**&#92;&#92;**) em uma cadeia de caracteres do C literal a representar uma única barra invertida ( **&#92;**).
 
 **wchdir** é uma versão de caractere largo de **chdir**; o *dirname* argumento **wchdir** é uma cadeia de caracteres largos. **wchdir** e **chdir** se comportam de forma idêntica caso contrário.
 
@@ -137,10 +137,10 @@ int main( int argc, char *argv[] )
 ```
 
 ```Output
- Volume in drive C has no label.
- Volume Serial Number is 2018-08A1
+Volume in drive C has no label.
+Volume Serial Number is 2018-08A1
 
- Directory of c:\windows
+Directory of c:\windows
 
 08/29/2002  04:00 AM         1,004,032 explorer.exe
 12/17/2002  04:43 PM            10,752 hh.exe

@@ -18,31 +18,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c6258ddd3fd4317c608cb20486c364918fb5c73a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5552b9c3d3d697b322b8c1d71eaf0e71630fac38
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33106383"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040160"
 ---
 # <a name="debugging-your-provider"></a>Depurando o provedor
+
 Há duas maneiras para depurar seu provedor:  
   
--   Como provedores são criados no processo, você pode criar um código de consumidor usando os modelos de consumidor OLE DB e a etapa no provedor normalmente.  
+- Como provedores são criados no processo, você pode criar um código de consumidor usando os modelos de consumidor OLE DB e a etapa no provedor de normalmente.  
   
--   Você pode usar o utilitário ITEST que vem com o Visual C++.  
+- Você pode usar o utilitário ITEST que vem com o Visual C++.  
   
 ### <a name="to-use-the-itest-utility"></a>Usar o utilitário ITEST  
   
-1.  Abra o projeto de provedor.  
+1. Abra o projeto de provedor.  
   
-2.  Sobre o **projetos** menu, clique em **configurações**.  
+1. Sobre o **projetos** menu, clique em **configurações**.  
   
-3.  No **páginas de propriedade** caixa de diálogo, clique o **depurar** guia.  
+1. No **páginas de propriedades** caixa de diálogo, clique o **depurar** guia.  
   
-4.  No **executável para sessão de depuração** , selecione o aplicativo ITEST.  
+1. No **Executable for Debug Session** , selecione o aplicativo ITEST.  
   
-5.  Definir pontos de interrupção e, em seguida, depuração normalmente.  
+1. Definir pontos de interrupção e, em seguida, depure como de costume.  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhando com modelos de provedor do OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+[Trabalhando com modelos de provedor do OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

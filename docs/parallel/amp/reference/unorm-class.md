@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e235930b73c4e9c2bc110d142ad734669f9c6ccc
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1d0769697dfbb0c43be9fb7326a5ad4361a2aecd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695675"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071218"
 ---
 # <a name="unorm-class"></a>Classe unorm
-Representa um número unorm. Cada elemento é um flutuante ponto número no intervalo de [0.0 f, 1.0 f].  
+Representa um número unorm. Cada elemento é flutuante número de ponto no intervalo de [0.0f, 1.0f].  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,14 +38,14 @@ class unorm;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor de unorm](#ctor)|Sobrecarregado. Construtor padrão. Inicialize 0.0 f.|  
+|[Construtor de unorm](#ctor)|Sobrecarregado. Construtor padrão. Inicialize a 0.0f.|  
   
 ### <a name="public-operators"></a>Operadores públicos  
   
 |Nome|Descrição|  
 |----------|-----------------|  
 |unorm::operator--||  
-|unorm::operator float|Operador de conversão. Converter o número de unorm um flutuante valor de ponto.|  
+|unorm::operator float|Operador de conversão. Converta o número de unorm em flutuante valor de ponto.|  
 |unorm::Operator * =||  
 |unorm::operator/=||  
 |unorm::Operator + +||  
@@ -57,13 +57,13 @@ class unorm;
  `unorm`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** amp_short_vectors.h  
+ **Cabeçalho:** amp_short_vectors. h  
   
  **Namespace:** Concurrency:: Graphics  
   
 ##  <a name="ctor"></a> unorm 
 
- Construtor padrão. Inicialize 0.0 f.  
+ Construtor padrão. Inicialize a 0.0f.  
   
 ```  
 unorm(
@@ -102,11 +102,11 @@ inline explicit unorm(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_V`  
- O valor usado para inicializar.  
+*_V*<br/>
+O valor usado para inicializar.  
   
- `_Other`  
- O objeto de modelo usado para inicializar.  
+*Outro*<br/>
+O objeto de norma usado para inicializar.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace Concurrency::graphics](concurrency-graphics-namespace.md)

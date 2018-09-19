@@ -82,15 +82,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b93fbce07aa50e9b0a9f01ec762690ce21b78c02
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7e10653eb4eb6ebb57215baceb1e3b67d7e1f8cf
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688369"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042514"
 ---
 # <a name="unorm3-class"></a>Classe unorm_3
-Representa um vetor curto de três números normais não assinados.  
+Representa um vetor curto de três números normais sem sinal.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -110,7 +110,7 @@ class unorm_3;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor unorm_3](#ctor)|Sobrecarregado. Padrão construtor inicializa todos os elementos com 0.|  
+|[Construtor unorm_3](#ctor)|Sobrecarregado. Padrão construtor, inicializa todos os elementos com 0.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -210,13 +210,13 @@ class unorm_3;
  `unorm_3`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** amp_short_vectors.h  
+ **Cabeçalho:** amp_short_vectors. h  
   
  **Namespace:** Concurrency:: Graphics  
   
 ##  <a name="ctor"></a> unorm_3 
 
- Padrão construtor inicializa todos os elementos com 0.  
+ Padrão construtor, inicializa todos os elementos com 0.  
   
 ```  
 unorm_3() restrict(amp,
@@ -278,20 +278,20 @@ explicit inline unorm_3(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_V0`  
- O valor para inicializar o elemento 0.  
+*_V0*<br/>
+O valor para inicializar o elemento 0.  
   
- `_V1`  
- O valor para inicializar o elemento 1.  
+*V1*<br/>
+O valor para inicializar o elemento 1.  
   
- `_V2`  
- O valor para inicializar o elemento 2.  
+*_V2*<br/>
+O valor para inicializar o elemento 2.  
   
- `_V`  
- O valor para a inicialização.  
+*_V*<br/>
+O valor para a inicialização.  
   
- `_Other`  
- O objeto usado para inicializar.  
+*Outro*<br/>
+O objeto usado para inicializar.  
   
 ##  <a name="unorm_3__size"></a> Tamanho 
 

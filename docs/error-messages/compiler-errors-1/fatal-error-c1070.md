@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99650b93819c4bc0192d612b0f1344e1b99671d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e7e871b69bb189140a4001d574736a255eefaf61
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228168"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055618"
 ---
 # <a name="fatal-error-c1070"></a>Erro fatal C1070
-incompatível #if #endif par em File 'filename'  
-  
- Um `#if`, `#ifdef`, ou `#ifndef` diretiva não tem correspondente `#endif`.  
-  
- O exemplo a seguir gera C1070:  
-  
-```  
-// C1070.cpp  
-#define TEST  
-  
-#ifdef TEST  
-  
-#ifdef TEST  
-#endif  
-// C1070  
-```  
-  
- Possível solução:  
-  
-```  
-// C1070b.cpp  
-// compile with: /c  
-#define TEST  
-  
-#ifdef TEST  
-#endif  
-  
-#ifdef TEST  
-#endif  
+
+incompatíveis #if / par #endif no arquivo 'filename'
+
+Uma `#if`, `#ifdef`, ou `#ifndef` diretiva não tem correspondente `#endif`.
+
+O exemplo a seguir gera C1070:
+
+```
+// C1070.cpp
+#define TEST
+
+#ifdef TEST
+
+#ifdef TEST
+#endif
+// C1070
+```
+
+Solução possível:
+
+```
+// C1070b.cpp
+// compile with: /c
+#define TEST
+
+#ifdef TEST
+#endif
+
+#ifdef TEST
+#endif
 ```

@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b68513b497b97c78d31264a565dadc9b1fe95a98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b8e7c80ca3a184135da3784e7744ae1528517a8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227868"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070685"
 ---
 # <a name="fatal-error-c1109"></a>Erro fatal C1109
-não é possível localizar o 'ponto de entrada ' na DLL 'dll'  
-  
- Um ponto de entrada em um [DLL carregada com atraso](../../build/reference/linker-support-for-delay-loaded-dlls.md) exigido pelo compilador não pôde ser encontrado.
+
+não é possível localizar o 'ponto de entrada ' na DLL 'dll'
+
+Um ponto de entrada em uma [-DLL carregada com atraso](../../build/reference/linker-support-for-delay-loaded-dlls.md) exigido pelo compilador não pôde ser encontrado.

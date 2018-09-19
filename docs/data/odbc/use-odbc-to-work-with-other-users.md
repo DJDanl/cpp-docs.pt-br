@@ -15,17 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 40a5fe161f76076025fbfecfa053bc35ee853627
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d87ec365f6e6dbdf913d9e1f66de871f74de3d5d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093514"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052420"
 ---
 # <a name="use-odbc-to-work-with-other-users"></a>Usar ODBC para trabalhar com outros usuários
+
 Use o ODBC em ambientes onde vários usuários estão trabalhando com o mesmo banco de dados ODBC.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
 ## <a name="see-also"></a>Consulte também  
- [ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)
+
+[ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)

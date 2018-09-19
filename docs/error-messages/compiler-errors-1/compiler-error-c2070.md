@@ -1,5 +1,5 @@
 ---
-title: C2070 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2070 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,36 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8eaf9ee345543fe838358c345e68874eecadd72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b23daf8a8c25e132aa0717715a742352537010c8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33165172"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044074"
 ---
-# <a name="compiler-error-c2070"></a>C2070 de erro do compilador
-'type': operando de sizeof inválido  
-  
- O [sizeof](../../cpp/sizeof-operator.md) operador requer um nome de tipo ou expressão.  
-  
- O exemplo a seguir gera C2070:  
-  
-```  
-// C2070.cpp  
-void func() {}  
-int main() {  
-   int a;  
-   a = sizeof(func);   // C2070  
-}  
-```  
-  
- Possível solução:  
-  
-```  
-// C2070b.cpp  
-void func() {}  
-int main() {  
-   int a;  
-   a = sizeof(a);  
-}  
+# <a name="compiler-error-c2070"></a>Erro do compilador C2070
+
+'type': operando de sizeof inválido
+
+O [sizeof](../../cpp/sizeof-operator.md) operador requer um nome de tipo ou expressão.
+
+O exemplo a seguir gera C2070:
+
+```
+// C2070.cpp
+void func() {}
+int main() {
+   int a;
+   a = sizeof(func);   // C2070
+}
+```
+
+Solução possível:
+
+```
+// C2070b.cpp
+void func() {}
+int main() {
+   int a;
+   a = sizeof(a);
+}
 ```

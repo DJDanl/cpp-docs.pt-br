@@ -17,18 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6da4067766eddab40bac75ee73d825dc5886dd0f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d9db21b7531f71ba40be64018b71c4e2e3e555e2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33088271"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064965"
 ---
 # <a name="data-source-determining-the-schema-of-the-data-source-odbc"></a>Fonte de dados: determinando o esquema da fonte de dados (ODBC)
-Este tópico se aplica às classes MFC ODBC.  
+
+Este tópico se aplica às classes ODBC do MFC.  
   
- Para configurar os membros de dados em seu `CRecordset` objetos, você precisa saber o esquema da fonte de dados ao qual você está se conectando. Determinando o esquema de fonte de dados envolve obter uma lista de tabelas na fonte de dados, uma lista de colunas em cada tabela, o tipo de dados de cada coluna e a existência de todos os índices.  
+Para configurar os membros de dados em seu `CRecordset` objetos, você precisa saber o esquema da fonte de dados ao qual você está se conectando. Determinando o esquema de uma fonte de dados envolve a obtenção de uma lista de tabelas na fonte de dados, uma lista de colunas em cada tabela, o tipo de dados de cada coluna e a existência de todos os índices.  
   
 ## <a name="see-also"></a>Consulte também  
- [Fonte de dados (ODBC)](../../data/odbc/data-source-odbc.md)   
- [Fonte de dados: gerenciando conexões (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)
+
+[Fonte de dados (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
+[Fonte de dados: gerenciando conexões (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)

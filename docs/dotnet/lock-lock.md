@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: df35eed8711e83174316ac9912f7ba535ef9ebf9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 128a86b59ebf43ab87b0f4f4bcb7e9c684e4ad07
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33135021"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051809"
 ---
 # <a name="locklock"></a>lock::lock
-Constrói uma `lock` objeto, opcionalmente, esperando para adquirir o bloqueio para sempre, por um certo período de tempo ou não.  
+Constrói um `lock` objeto, opcionalmente, aguardando para adquirir o bloqueio para sempre, para uma quantidade especificada de tempo, ou não de forma alguma.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -51,26 +51,26 @@ template<class T> lock(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `_object`  
- O objeto a ser bloqueada.  
+*Object*<br/>
+O objeto a ser bloqueado.  
   
- `_timeout`  
- Valor de tempo limite em milissegundos, ou como um <xref:System.TimeSpan>.  
+*tempo limite*<br/>
+Valor de tempo limite em milissegundos, ou como um <xref:System.TimeSpan>.  
   
 ## <a name="exceptions"></a>Exceções  
- Gera <xref:System.ApplicationException> se aquisição de bloqueio não ocorrerá antes do tempo limite.  
+ Gera <xref:System.ApplicationException> se a aquisição do bloqueio não ocorrerá antes do tempo limite.  
   
 ## <a name="remarks"></a>Comentários  
- Os três primeiros formulários do construtor tentam adquirir um bloqueio em `_object` dentro do período de tempo limite especificado (ou <xref:System.Threading.Timeout.Infinite> se nenhum for especificado).  
+ Os primeiros três formulários do construtor tentam adquirir um bloqueio em `_object` dentro do período de tempo limite especificado (ou <xref:System.Threading.Timeout.Infinite> se nenhum for especificado).  
   
- O quarto formulário do construtor não adquirir um bloqueio em `_object`. `lock_later` é um membro do [lock_when Enum](../dotnet/lock-when-enum.md). Use [lock::acquire](../dotnet/lock-acquire.md) ou [lock::try_acquire](../dotnet/lock-try-acquire.md) para adquirir o bloqueio nesse caso.  
+ O quarto formulário do construtor não adquirir um bloqueio em `_object`. `lock_later` é um membro do [Enum lock_when](../dotnet/lock-when-enum.md). Use [lock::acquire](../dotnet/lock-acquire.md) ou [lock::try_acquire](../dotnet/lock-try-acquire.md) para adquirir o bloqueio neste caso.  
   
  O bloqueio será liberado automaticamente quando o destruidor é chamado.  
   
- `_object` não pode ser <xref:System.Threading.ReaderWriterLock>.  Se for, isso resultará em um erro do compilador.  
+ `_object` não pode ser <xref:System.Threading.ReaderWriterLock>.  Se for, ocorrerá um erro de compilador.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa uma única instância de uma classe em vários threads.  A classe usa um bloqueio em si mesmo para garantir que acessa a seus dados internos é consistente para cada thread.  O thread principal do aplicativo usa um bloqueio na mesma instância da classe Verifique periodicamente para ver se qualquer threads de trabalho ainda existem e esperas para sair até que todos os threads de trabalho concluir suas tarefas.  
+ Este exemplo usa uma única instância de uma classe entre vários threads.  A classe usa um bloqueio em si mesmo para garantir que os acessos a seus dados internos são consistentes para cada thread.  O thread do aplicativo principal usa um bloqueio na mesma instância da classe para verificar periodicamente para ver se os threads de trabalho ainda existem e esperas para sair até que todos os threads de trabalho concluir suas tarefas.  
   
 ```  
 // msl_lock_lock.cpp  
@@ -164,7 +164,7 @@ All threads completed.
  **Namespace** msclr  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de bloqueio](../dotnet/lock-members.md)   
+ [Membros Lock](../dotnet/lock-members.md)   
  [bloqueio:: ~ lock](../dotnet/lock-tilde-lock.md)   
  [Lock::acquire](../dotnet/lock-acquire.md)   
  [lock::try_acquire](../dotnet/lock-try-acquire.md)

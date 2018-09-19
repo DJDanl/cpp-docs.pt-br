@@ -1,5 +1,5 @@
 ---
-title: C2579 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2579 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5761f475d12375baccad9c19a597215c9c6fc3cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c15351e694e6e26671f50a1d3efb266f4a667029
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227292"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056008"
 ---
-# <a name="compiler-error-c2579"></a>C2579 de erro do compilador
-não é possível resolver o tipo 'type' (deslocamento). É esperado no arquivo  
-  
- C2579 sempre segue C4691. Para obter mais informações, consulte [C4691 de aviso do compilador (nível 1)](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md).
+# <a name="compiler-error-c2579"></a>Erro do compilador C2579
+
+não é possível resolver o tipo 'type' (deslocamento). Espera-se no arquivo
+
+C2579 sempre segue C4691. Para obter mais informações, consulte [aviso do compilador (nível 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md).

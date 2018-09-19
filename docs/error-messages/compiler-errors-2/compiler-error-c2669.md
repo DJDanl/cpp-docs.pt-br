@@ -1,5 +1,5 @@
 ---
-title: C2669 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2669 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 642d2dd99c93b5af021503ffbb4975d1ff3c0db4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04363816e69dd560acc0497128f13d92c9878005
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233400"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46050691"
 ---
-# <a name="compiler-error-c2669"></a>C2669 de erro do compilador
-função de membro não permitida em union anônima  
-  
-[Uniões anônimas](../../cpp/unions.md#anonymous_unions) não pode ter funções de membro.  
-  
-## <a name="example"></a>Exemplo  
-O exemplo a seguir gera C2669:  
-  
-```cpp  
-// C2669.cpp  
-struct X {  
-   union {  
-      int i;  
-      void f() {   // C2669, remove function  
-         i = 0;   
-      }  
-   };  
-};  
-```  
-  
+# <a name="compiler-error-c2669"></a>Erro do compilador C2669
+
+função de membro não permitida em union anônima
+
+[Uniões anônimas](../../cpp/unions.md#anonymous_unions) não pode ter funções de membro.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C2669:
+
+```cpp
+// C2669.cpp
+struct X {
+   union {
+      int i;
+      void f() {   // C2669, remove function
+         i = 0;
+      }
+   };
+};
+```

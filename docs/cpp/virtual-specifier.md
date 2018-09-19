@@ -15,12 +15,13 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01b569bd4a752eed66f2af138a7136032b092f51
-ms.sourcegitcommit: 51f804005b8d921468775a0316de52ad39b77c3e
+ms.openlocfilehash: 580952727023593da23fd2740da4be23406724b6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39464964"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053499"
 ---
 # <a name="virtual-specifier"></a>Especificador virtual
-O [virtual](../cpp/virtual-cpp.md) palavra-chave pode ser aplicado somente a funções de membro de classe não estática. Significa que a associação de chamadas à função é adiada até o tempo de execução. Para obter mais informações, consulte [funções virtuais](../cpp/virtual-functions.md).  
+
+O [virtual](../cpp/virtual-cpp.md) palavra-chave pode ser aplicado somente a funções de membro de classe não estática. Significa que a associação de chamadas à função é adiada até o tempo de execução. Para obter mais informações, consulte [funções virtuais](../cpp/virtual-functions.md).

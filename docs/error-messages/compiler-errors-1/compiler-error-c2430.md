@@ -1,5 +1,5 @@
 ---
-title: C2430 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2430 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,25 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56e1817cf9c5291114af0d94f92e01071d0f7190
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 102e7082a3fc1cfd96db5c38832e3ebb91ee742c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224570"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054448"
 ---
-# <a name="compiler-error-c2430"></a>C2430 de erro do compilador
-registrar mais de um índice em 'Identificador'  
-  
- Mais de um registro é dimensionado. O compilador dá suporte à indexação em escala, mas você só pode dimensionar um registro.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C2430.  
-  
-```  
-// C2430.cpp  
-// processor: x86  
-int main() {  
-   _asm mov eax, [ebx*2+ecx*4] // C2430  
-}  
+# <a name="compiler-error-c2430"></a>Erro do compilador C2430
+
+Registre-se de mais de um índice em 'identifier'
+
+Mais de um registro é dimensionado. O compilador dá suporte à indexação em escala, mas você só pode dimensionar um registro.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C2430.
+
+```
+// C2430.cpp
+// processor: x86
+int main() {
+   _asm mov eax, [ebx*2+ecx*4] // C2430
+}
 ```

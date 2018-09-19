@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcb1e32843c7c8c47589d4b75fd2613a1d73f135
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e70be77c224b8c1c6039a908d38e8e482ab36259
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230076"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035559"
 ---
 # <a name="fatal-error-c1205"></a>Erro fatal C1205
-Genéricos não são suportados pela versão do tempo de execução instalada  
-  
- A versão do common language runtime que está usando o compilador não é uma versão de tempo de execução com suporte pelo compilador atual.  Por exemplo, o recurso genéricos requer um tempo de execução que corresponde ao compilador.  
-  
- A especificação de caminho pode precisar ser modificado.
+
+Generics não são suportados pela versão do tempo de execução instalado
+
+A versão do common language runtime que o compilador está usando não é uma versão do tempo de execução com suporte pelo compilador atual.  Por exemplo, o recurso genéricos requer um tempo de execução que é correspondido para o compilador.
+
+A especificação de caminho talvez precise ser modificado.

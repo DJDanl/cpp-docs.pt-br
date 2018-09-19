@@ -1,5 +1,5 @@
 ---
-title: C2503 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2503 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db11113b7f6061a7e3464cc69ae1f397fc7a4753
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b57ce28851d3948db5c14889fceb3594dbe2617a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33198866"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048923"
 ---
-# <a name="compiler-error-c2503"></a>C2503 de erro do compilador
-'class': classes de base não podem conter matrizes de tamanho zero  
-  
- Uma classe base ou a estrutura contém uma matriz de tamanho zero. Uma matriz em uma classe deve ter pelo menos um elemento.  
-  
- O exemplo a seguir gera C2503:  
-  
-```  
-// C2503.cpp  
-// compile with: /c  
-class A {  
-   public:  
-   int array [];  
-};  
-  
-class B : A {};    // C2503  
-  
-class C {  
-public:  
-   int array [10];  
-};  
-  
-class D : C {};  
+# <a name="compiler-error-c2503"></a>Erro do compilador C2503
+
+'class': classes base não podem conter matrizes de tamanho zero
+
+Uma classe base ou a estrutura contém uma matriz de tamanho zero. Uma matriz em uma classe deve ter pelo menos um elemento.
+
+O exemplo a seguir gera C2503:
+
+```
+// C2503.cpp
+// compile with: /c
+class A {
+   public:
+   int array [];
+};
+
+class B : A {};    // C2503
+
+class C {
+public:
+   int array [10];
+};
+
+class D : C {};
 ```

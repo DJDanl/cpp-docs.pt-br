@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 4) de aviso C4515 | Microsoft Docs
+title: Compilador aviso (nível 4) C4515 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42bdf6edbd55f533a01c5c430ed328ded7e71dde
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ae4fde16336b3bcd06b344641207b70279c7416
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33291454"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46037223"
 ---
-# <a name="compiler-warning-level-4-c4515"></a>Compilador C4515 de aviso (nível 4)
-'namespace': namespace usa a mesmo  
-  
- Um namespace é usado recursivamente.  
-  
- O exemplo a seguir gera C4515:  
-  
-```  
-// C4515.cpp  
-// compile with: /W4  
-namespace A  
-{  
-   using namespace A; // C4515  
-}  
-  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-4-c4515"></a>Compilador aviso (nível 4) C4515
+
+'namespace': namespace usa a mesmo
+
+Um namespace é usado recursivamente.
+
+O exemplo a seguir gera C4515:
+
+```
+// C4515.cpp
+// compile with: /W4
+namespace A
+{
+   using namespace A; // C4515
+}
+
+int main()
+{
+}
 ```

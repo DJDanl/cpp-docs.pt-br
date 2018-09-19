@@ -1,5 +1,5 @@
 ---
-title: Lock::! = | Microsoft Docs
+title: 'Lock:: Operator! = | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6b34eb410e05bd102f7a10205e57b3731b8f476d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca39249a73df4519c741182827036158169fd3ee
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33130341"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043008"
 ---
 # <a name="lockoperator"></a>lock::operator!=
 Operador de desigualdade.  
@@ -39,11 +39,11 @@ template<class T> bool operator!=(
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `t`  
- O objeto a ser comparado para fins de desigualdade.  
+*t*<br/>
+O objeto a ser comparado quanto à desigualdade.  
   
 ## <a name="return-value"></a>Valor de retorno  
- Retorna `true` se `t` difere do objeto do bloqueio, `false` caso contrário.  
+ Retorna `true` se `t` é diferente do objeto do bloqueio, `false` caso contrário.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -76,5 +76,5 @@ Inequal!
  **Namespace** msclr  
   
 ## <a name="see-also"></a>Consulte também  
- [Membros de bloqueio](../dotnet/lock-members.md)   
+ [Membros Lock](../dotnet/lock-members.md)   
  [lock::operator==](../dotnet/lock-operator-equality.md)

@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de vinculador LNK1245 erro | Microsoft Docs
+title: Erro das LNK1245 das ferramentas de vinculador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47a1c2e5f7bf66946dcc5816d7a20fd485b59b45
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef7bace5cec937399d7a2ed440e21b9b751f4141
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299234"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041786"
 ---
 # <a name="linker-tools-error-lnk1245"></a>Erro das Ferramentas de Vinculador LNK1245
-subsistema inválido 'subsistema' especificado. / O subsistema deve ser WINDOWS, WINDOWSCE ou CONSOLE  
-  
- [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) foi usado para compilar o objeto e uma das condições a seguir foi verdadeira:  
-  
--   Um ponto de entrada personalizado foi definido ([/ENTRY](../../build/reference/entry-entry-point-symbol.md)), de modo que o vinculador não foi possível deduzir um subsistema.  
-  
--   Foi passado um valor para o [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) opção de vinculador que não é válida para /clr objetos.  
-  
- Para ambas as situações, a resolução é especificar um valor válido para a opção de vinculador /SUBSYSTEM.
+
+subsistema inválido 'subsistema' especificado; / O subsistema deve ser WINDOWS, WINDOWSCE ou CONSOLE
+
+[/CLR](../../build/reference/clr-common-language-runtime-compilation.md) foi usado para compilar o objeto e uma das condições a seguir era true:
+
+- Um ponto de entrada personalizado foi definido ([/ENTRY](../../build/reference/entry-entry-point-symbol.md)), de modo que o vinculador não foi possível deduzir um subsistema.
+
+- Um valor que foi passado para o [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) opção de vinculador que não é válida para /clr objetos.
+
+Para ambas as situações, a resolução é especificar um valor válido para a opção de vinculador /SUBSYSTEM.

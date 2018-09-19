@@ -1,5 +1,5 @@
 ---
-title: Ferramentas de vinculador LNK1166 erro | Microsoft Docs
+title: Erro das LNK1166 das ferramentas de vinculador | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 474d4ad146edf4411bd9734a6ec4482273c065dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6aa86a9fd3c2d6d19482ba5ce5c866ab660e742e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33298146"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46073077"
 ---
 # <a name="linker-tools-error-lnk1166"></a>Erro das Ferramentas de Vinculador LNK1166
-não é possível ajustar o código no deslocamento = deslocamento, va = valor  
-  
- LINK foi capaz de acrescentar o código conforme necessário.  
-  
- Determinadas instruções não podem ultrapassar os limites de página em alguns processadores. LINK tenta adicionar preenche para corrigir essa situação. Nesse caso, o LINK não poderia funcionar alternativa para o problema.
+
+não é possível ajustar o código no deslocamento = deslocamento, va = valor
+
+LINK não conseguiu preencher o código conforme necessário.
+
+Determinadas instruções não são permitidas para cruzar os limites de página em alguns processadores. LINK tenta adicionar painéis para corrigir essa situação. Nesse caso, o LINK não pode funcionar em todo o problema.

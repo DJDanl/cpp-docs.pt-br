@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f5e71fbf1a24a38b0a18e70ce7d0fa044ad4ec5
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: db7903dccfd851bb4bf76f1990424f887686d344
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767872"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070100"
 ---
 # <a name="cacl-class"></a>Classe CAcl
 
@@ -161,7 +161,7 @@ CAcl(const CAcl& rhs) throw(...);
 
 ### <a name="parameters"></a>Parâmetros
 
-*rhs*  
+*rhs*<br/>
 Um objeto `CAcl` existente.
 
 ### <a name="remarks"></a>Comentários
@@ -206,16 +206,16 @@ void GetAclEntries(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pSids*  
+*pSids*<br/>
 Um ponteiro para uma matriz de [CSid](../../atl/reference/csid-class.md) objetos.
 
-*pAccessMasks*  
+*pAccessMasks*<br/>
 As máscaras de acesso.
 
-*pAceTypes*  
+*pAceTypes*<br/>
 Os tipos ACE (entrada) do controle de acesso.
 
-*pAceFlags*  
+*pAceFlags*<br/>
 Os sinalizadores da ACE.
 
 ### <a name="remarks"></a>Comentários
@@ -243,25 +243,25 @@ void GetAclEntry(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nIndex*  
+*nIndex*<br/>
 Índice para a entrada ACL para recuperar.
 
-*pSid*  
+*pSid*<br/>
 O [CSid](../../atl/reference/csid-class.md) do objeto ao qual a entrada ACL se aplica.
 
-*pMask*  
+*pMask*<br/>
 A máscara especificando permissões para conceder ou negar acesso.
 
-*PDigite*  
+*PDigite*<br/>
 O tipo ACE.
 
-*pFlags*  
+*pFlags*<br/>
 Os sinalizadores da ACE.
 
-*pObjectType*  
+*pObjectType*<br/>
 O tipo de objeto. Isso será definido para GUID_NULL se o tipo de objeto não for especificado na ACE, ou se a ACE não é uma ACE de objeto.
 
-*pInheritedObjectType*  
+*pInheritedObjectType*<br/>
 O tipo de objeto herdado. Isso será definido para GUID_NULL se o tipo de objeto herdado não for especificado na ACE, ou se a ACE não é uma ACE de objeto.
 
 ### <a name="remarks"></a>Comentários
@@ -322,7 +322,7 @@ Retorna VERDADEIRO se o `CAcl` objeto for nulo, FALSO caso contrário.
 
 Conversões de um `CAcl` do objeto para um `ACL` estrutura (lista de controle de acesso).
 
-```  
+```
 operator const ACL *() const throw(...);
 ```
 
@@ -340,7 +340,7 @@ CAcl& operator= (const CAcl& rhs) throw(...);
 
 ### <a name="parameters"></a>Parâmetros
 
-*rhs*  
+*rhs*<br/>
 O `CAcl` para atribuir ao objeto existente.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -357,7 +357,7 @@ void RemoveAce(UINT nIndex) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*nIndex*  
+*nIndex*<br/>
 Índice para a entrada do ACE a ser removido.
 
 ### <a name="remarks"></a>Comentários
@@ -374,7 +374,7 @@ bool RemoveAces(const CSid& rSid) throw(...)
 
 ### <a name="parameters"></a>Parâmetros
 
-*rSid*  
+*rSid*<br/>
 Uma referência a um objeto `CSid`.
 
 ##  <a name="setempty"></a>  CAcl::SetEmpty
@@ -403,5 +403,5 @@ O `CAcl` pode ser definido como vazio ou como NULL: os dois estados são diferen
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral da classe](../../atl/atl-class-overview.md)   
+[Visão geral da classe](../../atl/atl-class-overview.md)<br/>
 [Funções globais de segurança](../../atl/reference/security-global-functions.md)

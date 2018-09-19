@@ -1,5 +1,5 @@
 ---
-title: C2955 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2955 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/28/2017
 ms.technology:
@@ -16,75 +16,77 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 686fb51d1e72f0835a673d00c05ade21a7580515
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c9d9817a2b78638868242c5c5642a89fb41d93c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245943"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051939"
 ---
-# <a name="compiler-error-c2955"></a>C2955 de erro do compilador
-'Identificador': uso do modelo de classe ou alias genérico requer o modelo ou a lista de argumentos genéricos  
-  
- Você não pode usar uma classe genérica ou um modelo de classe como um identificador sem um modelo ou uma lista de argumentos genéricos.  
-  
- Para obter mais informações, consulte [modelos de classe](../../cpp/class-templates.md).  
-  
- O exemplo a seguir gera C2955 e mostra como corrigi-lo:  
-  
-```  
-// C2955.cpp  
-// compile with: /c  
-template<class T>   
-class X {};  
-  
-X x1;   // C2955  
-X<int> x2;   // OK - this is how to fix it.  
-```  
-  
- C2955 também pode ocorrer durante a tentativa de uma definição de fora de linha para uma função declarada em um modelo de classe:  
-  
-```  
-// C2955_b.cpp  
-// compile with: /c  
-template <class T>  
-class CT {  
-public:  
-   void CTFunc();  
-   void CTFunc2();  
-};  
-  
-void CT::CTFunc() {}   // C2955  
-  
-// OK - this is how to fix it  
-template <class T>  
-void CT<T>::CTFunc2() {}  
-  
-```  
-  
- C2955 também pode ocorrer ao usar genéricos:  
-  
-```  
-// C2955_c.cpp  
-// compile with: /clr  
-generic <class T>   
-ref struct GC {   
-   T t;  
-};  
-  
-int main() {  
-   GC^ g;   // C2955  
-   GC <int>^ g;  
-}  
+# <a name="compiler-error-c2955"></a>Erro do compilador C2955
+
+'identifier': uso do modelo de classe ou alias genérico requer o modelo ou a lista de argumentos genéricos
+
+Você não pode usar um modelo de classe ou a classe genérica como um identificador sem um modelo ou uma lista de argumentos genéricos.
+
+Para obter mais informações, consulte [modelos de classe](../../cpp/class-templates.md).
+
+O exemplo a seguir gera C2955 e mostra como corrigi-lo:
+
+```
+// C2955.cpp
+// compile with: /c
+template<class T>
+class X {};
+
+X x1;   // C2955
+X<int> x2;   // OK - this is how to fix it.
+```
+
+C2955 também pode ocorrer durante a tentativa de uma definição fora de linha para uma função declarada em um modelo de classe:
+
+```
+// C2955_b.cpp
+// compile with: /c
+template <class T>
+class CT {
+public:
+   void CTFunc();
+   void CTFunc2();
+};
+
+void CT::CTFunc() {}   // C2955
+
+// OK - this is how to fix it
+template <class T>
+void CT<T>::CTFunc2() {}
+
+```
+
+C2955 também podem ocorrer ao usar genéricos:
+
+```
+// C2955_c.cpp
+// compile with: /clr
+generic <class T>
+ref struct GC {
+   T t;
+};
+
+int main() {
+   GC^ g;   // C2955
+   GC <int>^ g;
+}
 ```
 
 ## <a name="example"></a>Exemplo
-**Visual Studio 2017 e posterior:** o compilador corretamente diagnostica listas de argumentos de modelo ausente quando o modelo é exibido em uma lista de parâmetros de modelo (por exemplo, como parte de um argumento de template padrão ou um parâmetro de modelo sem tipo). O código a seguir é compilado no Visual Studio 2015, mas produz um erro no Visual Studio 2017.
+
+**Visual Studio 2017 e posterior:** o compilador corretamente diagnostica listas de argumentos de modelo ausentes quando o modelo é exibido em uma lista de parâmetros de modelo (por exemplo, como parte de um argumento de modelo padrão ou um parâmetro de modelo sem tipo). O código a seguir é compilado no Visual Studio 2015, mas produz um erro no Visual Studio 2017.
 
 ```
 template <class T> class ListNode;
 template <class T> using ListNodeMember = ListNode<T> T::*;
-template <class T, ListNodeMember M> class ListHead; // C2955: 'ListNodeMember': use of alias 
+template <class T, ListNodeMember M> class ListHead; // C2955: 'ListNodeMember': use of alias
                                                      // template requires template argument list
 
 // correct:  template <class T, ListNodeMember<T> M> class ListHead;

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98fb1c50b6bdd46cc6cf0efe7739e8ada60f3274
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9acbb55f09df3912ff61a54557cb013e86c48834
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762629"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036625"
 ---
 # <a name="ctokenprivileges-class"></a>Classe CTokenPrivileges
 
@@ -98,19 +98,19 @@ Para obter uma introdução ao modelo de controle de acesso no Windows, consulte
 Adiciona um ou mais privilégios para o `CTokenPrivileges` objeto de token de acesso.
 
 ```
-bool Add(LPCTSTR pszPrivilege, bool bEnable) throw(...);  
+bool Add(LPCTSTR pszPrivilege, bool bEnable) throw(...);
 void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do privilégio, conforme definido em WINNT. Arquivo de cabeçalho de H.
 
-*bAtivar*  
+*bAtivar*<br/>
 Se for true, o privilégio está habilitado. Se for false, o privilégio está desabilitado.
 
-*rPrivileges*  
+*rPrivileges*<br/>
 Referência a um [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) estrutura. Os privilégios e atributos são copiados a partir dessa estrutura e adicionados ao `CTokenPrivileges` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -123,16 +123,16 @@ O construtor.
 
 ```
 CTokenPrivileges() throw();
-CTokenPrivileges(const CTokenPrivileges& rhs) throw(... );  
+CTokenPrivileges(const CTokenPrivileges& rhs) throw(... );
 CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*rhs*  
+*rhs*<br/>
 O `CTokenPrivileges` objeto para atribuir ao novo objeto.
 
-*rPrivileges*  
+*rPrivileges*<br/>
 O [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) estrutura para atribuir ao novo `CTokenPrivileges` objeto.
 
 ### <a name="remarks"></a>Comentários
@@ -161,7 +161,7 @@ bool Delete(LPCTSTR pszPrivilege) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do privilégio, conforme definido em WINNT. Arquivo de cabeçalho de H. Por exemplo, esse parâmetro pode especificar a constante SE_SECURITY_NAME, ou sua cadeia de caracteres correspondente, "SeSecurityPrivilege".
 
 ### <a name="return-value"></a>Valor de retorno
@@ -194,7 +194,7 @@ void GetDisplayNames(CNames* pDisplayNames) const throw(...);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pDisplayNames*  
+*pDisplayNames*<br/>
 Um ponteiro para uma matriz de objetos `CString`. `CNames` é definido como um typedef: `CTokenPrivileges::CAtlArray<CString>`.
 
 ### <a name="remarks"></a>Comentários
@@ -239,10 +239,10 @@ void GetLuidsAndAttributes(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pPrivileges*  
+*pPrivileges*<br/>
 Ponteiro para uma matriz de [LUID](/windows/desktop/api/winnt/ns-winnt-_luid) objetos. `CLUIDArray` um typedef que é definido como `CAtlArray<LUID> CLUIDArray`.
 
-*pAttributes*  
+*pAttributes*<br/>
 Ponteiro para uma matriz de objetos DWORD. Se esse parâmetro for omitido ou nulo, os atributos não são recuperados. `CAttributes` um typedef que é definido como `CAtlArray <DWORD> CAttributes`.
 
 ### <a name="remarks"></a>Comentários
@@ -261,10 +261,10 @@ void GetNamesAndAttributes(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pNames*  
+*pNames*<br/>
 Ponteiro para uma matriz de `CString` objetos. `CNames` um typedef que é definido como `CAtlArray <CString> CNames`.
 
-*pAttributes*  
+*pAttributes*<br/>
 Ponteiro para uma matriz de objetos DWORD. Se esse parâmetro for omitido ou nulo, os atributos não são recuperados. `CAttributes` um typedef que é definido como `CAtlArray <DWORD> CAttributes`.
 
 ### <a name="remarks"></a>Comentários
@@ -297,10 +297,10 @@ bool LookupPrivilege(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszPrivilege*  
+*pszPrivilege*<br/>
 Ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do privilégio, conforme definido em WINNT. Arquivo de cabeçalho de H. Por exemplo, esse parâmetro pode especificar a constante SE_SECURITY_NAME, ou sua cadeia de caracteres correspondente, "SeSecurityPrivilege".
 
-*pdwAttributes*  
+*pdwAttributes*<br/>
 Ponteiro para uma variável que recebe os atributos.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -312,16 +312,16 @@ Retorna VERDADEIRO se o atributo for recuperada com sucesso, false caso contrár
 Operador de atribuição.
 
 ```
-CTokenPrivileges& operator= (const TOKEN_PRIVILEGES& rPrivileges) throw(...);  
+CTokenPrivileges& operator= (const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*rPrivileges*  
+*rPrivileges*<br/>
 O [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) estrutura para atribuir ao `CTokenPrivileges` objeto.
 
-*rhs*  
+*rhs*<br/>
 O `CTokenPrivileges` objeto a ser atribuído ao objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -332,7 +332,7 @@ Retorna o atualizada `CTokenPrivileges` objeto.
 
 Converte um valor para um ponteiro para o `TOKEN_PRIVILEGES` estrutura.
 
-```  
+```
 operator const TOKEN_PRIVILEGES *() const throw(...);
 ```
 
@@ -342,9 +342,9 @@ Converte um valor para um ponteiro para o [TOKEN_PRIVILEGES](/windows/desktop/ap
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo de segurança](../../visual-cpp-samples.md)   
-[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)   
-[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)   
-[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)   
-[Visão geral da classe](../../atl/atl-class-overview.md)   
+[Exemplo de segurança](../../visual-cpp-samples.md)<br/>
+[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)<br/>
+[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)<br/>
+[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)<br/>
+[Visão geral da classe](../../atl/atl-class-overview.md)<br/>
 [Funções globais de segurança](../../atl/reference/security-global-functions.md)

@@ -17,28 +17,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52e1679374e105ab06ce245ba68cfe92706689e1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3fba76b75c640917b3b99cd41500d682cb1b32f0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302484"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031800"
 ---
 # <a name="expression-evaluator-error-cxx0019"></a>Erro CXX0019 (avaliador de expressão)
-conversão de tipo incorreto  
-  
- O avaliador de expressão C não é possível executar a conversão como escrito de tipo.  
-  
- Esse erro é idêntico ao CAN0019.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
-  
-1.  O tipo especificado é desconhecido.  
-  
-2.  Havia muitos níveis de tipos de ponteiro. Por exemplo, a conversão de tipos  
-  
-    ```  
-    (char **)h_message  
-    ```  
-  
+
+conversão de tipo incorreto
+
+O avaliador de expressão C não é possível executar a conversão como escrito de tipos.
+
+Esse erro é idêntico ao CAN0019.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
+
+1. O tipo especificado é desconhecido.
+
+1. Havia muitos níveis de tipos de ponteiro. Por exemplo, a conversão de tipos
+
+    ```
+    (char **)h_message
+    ```
+
      não pode ser avaliada pelo avaliador de expressão C.

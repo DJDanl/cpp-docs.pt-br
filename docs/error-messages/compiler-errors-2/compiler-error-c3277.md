@@ -1,5 +1,5 @@
 ---
-title: C3277 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3277 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd38ccc8a4f812a458073c429d83cebe5dff151b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a346f6b2abce22a1238a1f9bc6f8ea9f961cb43
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250010"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059051"
 ---
-# <a name="compiler-error-c3277"></a>C3277 de erro do compilador
-não é possível definir um enum não gerenciado 'enum' em 'type' gerenciado  
-  
- Uma enumeração foi definida incorretamente dentro de um tipo gerenciado.  
-  
- O exemplo a seguir gera C3277:  
-  
-```  
-// C3277a.cpp  
-// compile with: /clr  
-ref class A  
-{  
-   enum E {e1,e2};   // C3277  
-   // try the following line instead  
-   // enum class E {e1,e2};  
-};  
-  
-int main()  
-{  
-}  
-```  
+# <a name="compiler-error-c3277"></a>Erro do compilador C3277
+
+não é possível definir uma enumeração não gerenciada 'enum' dentro de 'tipo' gerenciado
+
+Uma enumeração estava definida incorretamente dentro de um tipo gerenciado.
+
+O exemplo a seguir gera C3277:
+
+```
+// C3277a.cpp
+// compile with: /clr
+ref class A
+{
+   enum E {e1,e2};   // C3277
+   // try the following line instead
+   // enum class E {e1,e2};
+};
+
+int main()
+{
+}
+```

@@ -1,5 +1,5 @@
 ---
-title: C3228 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3228 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c949aef15e9049f47b68094ae89b297bee1fc700
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1818cbae07af904a468447e16fcb95384e5dcd17
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248990"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054682"
 ---
-# <a name="compiler-error-c3228"></a>C3228 de erro do compilador
-'function': argumento de tipo genérico para 'param' não pode ser 'type', ele deve ser um tipo valuetype ou identificador  
-  
- Um tipo incorreto foi passado como um argumento de tipo genérico.  
-  
- O exemplo a seguir gera C3228:  
-  
-```  
-// C3228.cpp  
-// compile with: /clr  
-class A {};  
-  
-value class B {};  
-  
-generic <class T>  
-void Test() {}  
-  
-ref class C {  
-public:  
-   generic <class T>  
-   static void f() {}  
-};  
-  
-int main() {  
-   C::f<A>();   // C3228  
-   C::f<B>();   // OK  
-  
-   Test<C>();   // C3228  
-   Test<C ^>();   // OK  
-}  
+# <a name="compiler-error-c3228"></a>Erro do compilador C3228
+
+'function': argumento de tipo genérico para o 'parâmetro' não pode ser 'type', ele deve ser um tipo de identificador valuetype
+
+Um tipo incorreto foi passado como um argumento de tipo genérico.
+
+O exemplo a seguir gera C3228:
+
+```
+// C3228.cpp
+// compile with: /clr
+class A {};
+
+value class B {};
+
+generic <class T>
+void Test() {}
+
+ref class C {
+public:
+   generic <class T>
+   static void f() {}
+};
+
+int main() {
+   C::f<A>();   // C3228
+   C::f<B>();   // OK
+
+   Test<C>();   // C3228
+   Test<C ^>();   // OK
+}
 ```

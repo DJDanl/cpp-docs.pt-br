@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 4) de aviso C4610 | Microsoft Docs
+title: Compilador aviso (nível 4) C4610 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0a329ae6e58043f3a615a46ef5bb4bfe4f15a2e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2f45b216f240b2c51382d6fd4054f2b959c19088
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294912"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051562"
 ---
-# <a name="compiler-warning-level-4-c4610"></a>Compilador C4610 de aviso (nível 4)
-o objeto 'class' nunca pode ser instanciado - construtor definido pelo usuário é necessária  
-  
- A classe padrão construtores ou não tem nenhum definido pelo usuário. Nenhum instanciação é executada. O exemplo a seguir gera C4610:  
-  
-```  
-// C4610.cpp  
-// compile with: /W4  
-struct A {  
-   int &j;  
-  
-   A& A::operator=( const A& );  
-};   // C4610  
-  
-/* use this structure definition to resolve the warning  
-struct B {  
-   int &k;  
-  
-   B(int i = 0) : k(i) {  
-   }  
-  
-   B& B::operator=( const B& );  
-} b;  
-*/  
-  
-int main() {  
-}  
+# <a name="compiler-warning-level-4-c4610"></a>Compilador aviso (nível 4) C4610
+
+o objeto 'class' nunca pode ser instanciado - construtor definido pelo usuário necessário
+
+A classe padrão construtores ou não tem nenhum definido pelo usuário. Sem instanciação é executada. O exemplo a seguir gera C4610:
+
+```
+// C4610.cpp
+// compile with: /W4
+struct A {
+   int &j;
+
+   A& A::operator=( const A& );
+};   // C4610
+
+/* use this structure definition to resolve the warning
+struct B {
+   int &k;
+
+   B(int i = 0) : k(i) {
+   }
+
+   B& B::operator=( const B& );
+} b;
+*/
+
+int main() {
+}
 ```

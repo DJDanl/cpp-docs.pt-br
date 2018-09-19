@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fa2f2f1749aef354963689ca62cd7551bc112e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 622c9941613c97a494455f689183eb095fc1b2cd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319332"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046310"
 ---
 # <a name="resource-compiler-error-rc2007"></a>Erro RC2007 (compilador de recurso)
-\#definir a sintaxe  
-  
- Um identificador era esperado após `#define` em uma diretiva de pré-processamento.
+
+\#definir a sintaxe
+
+Um identificador era esperado após `#define` em uma diretiva de pré-processamento.

@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4403 | Microsoft Docs
+title: Compilador aviso (nível 1) C4403 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33796737e8e9aef031a321364baf4896337c024a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 458e52b86b2ec0cd118343f33c0eede60a0d9ada
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274468"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035612"
 ---
-# <a name="compiler-warning-level-1-c4403"></a>Compilador C4403 de aviso (nível 1)
-operador PTR inválido  
-  
- Um operador PTR inadequadamente é usado no código do assembler embutido.  
-  
- O compilador ignorado o operador PTR.
+# <a name="compiler-warning-level-1-c4403"></a>Compilador aviso (nível 1) C4403
+
+operador PTR inválido
+
+Um operador PTR inadequadamente é usado no código de assembler embutido.
+
+O compilador ignorava o operador PTR.

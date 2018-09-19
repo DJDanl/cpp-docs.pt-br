@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4172 | Microsoft Docs
+title: Compilador aviso (nível 1) C4172 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,30 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 746442638820d0c81144611a678996dc4c8483b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 56f606b48fb060472dd67d34800c06946bc41712
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276653"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043502"
 ---
-# <a name="compiler-warning-level-1-c4172"></a>Compilador C4172 de aviso (nível 1)
-retornando o endereço da variável local ou temporário  
-  
- Uma função retorna o endereço de um objeto temporário ou variável local. Variáveis locais e objetos temporários são destruídos quando uma função retorna, para que o endereço retornado não é válido.  
-  
- Recrie a função de forma que ele não retorna o endereço de um objeto local.  
-  
- O exemplo a seguir gera C4172:  
-  
-```  
-// C4172.cpp  
-// compile with: /W1 /LD  
-float f = 10;  
-  
-const double& bar() {  
-// try the following line instead  
-// const float& bar() {  
-   return f;   // C4172  
-}  
+# <a name="compiler-warning-level-1-c4172"></a>Compilador aviso (nível 1) C4172
+
+retornando o endereço de variável local ou temporário
+
+Uma função retorna o endereço de um objeto temporário ou variável local. Objetos temporários e variáveis locais são destruídos quando uma função retornar, portanto, o endereço retornado não é válido.
+
+Recrie a função para que ela não retorna o endereço de um objeto local.
+
+O exemplo a seguir gera C4172:
+
+```
+// C4172.cpp
+// compile with: /W1 /LD
+float f = 10;
+
+const double& bar() {
+// try the following line instead
+// const float& bar() {
+   return f;   // C4172
+}
 ```

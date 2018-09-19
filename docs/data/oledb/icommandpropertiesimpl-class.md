@@ -27,14 +27,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c2f3f4c32e2e87fdd905949ffd6cebac89a5023a
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: b31a023e39241a5393fbb9f36177ca42f88fd57e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42571918"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070893"
 ---
 # <a name="icommandpropertiesimpl-class"></a>Classe ICommandPropertiesImpl
+
 Fornece uma implementação de [ICommandProperties](/previous-versions/windows/desktop/ms723044\(v=vs.85\)) interface.  
   
 ## <a name="syntax"></a>Sintaxe
@@ -46,14 +47,16 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- *T*  
- Sua classe, derivada de  
+
+*T*<br/>
+Sua classe, derivada de  
   
- *PropClass*  
- Sua classe de propriedades.  
+*PropClass*<br/>
+Sua classe de propriedades.  
 
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** atldb.h  
+
+**Cabeçalho:** atldb.h  
   
 ## <a name="members"></a>Membros  
   
@@ -65,9 +68,11 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 |[SetProperties](#setproperties)|Define propriedades no grupo de propriedades do conjunto de linhas.|  
   
 ## <a name="remarks"></a>Comentários  
- Isso é obrigatório em comandos. A implementação é fornecida por uma função estática definida pela [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) macro.  
+
+Isso é obrigatório em comandos. A implementação é fornecida por uma função estática definida pela [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) macro.  
 
 ## <a name="getproperties"></a> Icommandpropertiesimpl:: GetProperties
+
 Retorna todos os conjuntos de propriedade solicitada usando o mapa de propriedade do comando.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -80,12 +85,15 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [icommandproperties:: GetProperties](/previous-versions/windows/desktop/ms723119\(v=vs.85\)) na *referência do programador do OLE DB*.  
+
+Ver [icommandproperties:: GetProperties](/previous-versions/windows/desktop/ms723119\(v=vs.85\)) na *referência do programador do OLE DB*.  
   
 ### <a name="remarks"></a>Comentários  
- Ver [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
+
+Ver [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
   
 ## <a name="setproperties"></a> Icommandpropertiesimpl:: SetProperties
+
 Define propriedades para o objeto de comando.  
   
 ### <a name="syntax"></a>Sintaxe  
@@ -96,8 +104,10 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- Ver [icommandproperties:: SetProperties](/previous-versions/windows/desktop/ms711497\(v=vs.85\)) na *referência do programador do OLE DB*.  
+
+Ver [icommandproperties:: SetProperties](/previous-versions/windows/desktop/ms711497\(v=vs.85\)) na *referência do programador do OLE DB*.  
   
 ## <a name="see-also"></a>Consulte também  
- [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+
+[Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

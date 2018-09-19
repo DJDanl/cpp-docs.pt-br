@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf6f830441482e17bd45c331f4281cb49312337
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ebf8112650cf1908225d0fc2c79d61d26dd606fe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765093"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46051003"
 ---
 # <a name="ccomclassfactory-class"></a>Classe CComClassFactory
 
@@ -79,13 +79,13 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 [in] Se o objeto está sendo criado como parte de uma agregação, em seguida *pUnkOuter* deve ser o externo desconhecido. Caso contrário, *pUnkOuter* deve ser NULL.
 
-*riid*  
+*riid*<br/>
 [in] O IID da interface solicitada. Se *pUnkOuter* não for nulo, *riid* deve ser `IID_IUnknown`.
 
-*ppvObj*  
+*ppvObj*<br/>
 [out] Um ponteiro para o ponteiro de interface identificado pelo *riid*. Se o objeto não dá suporte a essa interface, *ppvObj* é definido como NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -102,7 +102,7 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Usam*  
+*Usam*<br/>
 [in] Se for TRUE, a contagem de bloqueio é aumentada. Caso contrário, a contagem de bloqueio é reduzida.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -117,6 +117,6 @@ Chamar `LockServer` permite que um cliente retenham uma fábrica de classes para
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
+[Classe CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

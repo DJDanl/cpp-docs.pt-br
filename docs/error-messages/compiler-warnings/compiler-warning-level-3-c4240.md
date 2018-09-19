@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f0691230454ffd935d67c99f58b857cdc1ce0f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2f3c059e63bcca9bbde9e863cc17c9e240e4f78
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292695"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057009"
 ---
-# <a name="compiler-warning-level-3-c4240"></a>Compilador C4240 de aviso (nível 3)
-extensão não padrão usada: acesso a 'classname' agora definido como 'especificador de acesso,' anteriormente foi definido para ser o especificador de acesso  
-  
- Em compatibilidade ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)), você não pode alterar o acesso a uma classe aninhada. Sob as extensões do Microsoft padrão (/Ze), você pode, com este aviso.  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// C4240.cpp  
-// compile with: /W3  
-class X  
-{  
-private:  
-   class N;  
-public:  
-   class N  
-   {   // C4240  
-   };  
-};  
-  
-int main()  
-{  
-}  
+# <a name="compiler-warning-level-3-c4240"></a>Compilador aviso (nível 3) C4240
+
+extensão não padrão usada: acesso a 'classname' agora definido como 'especificador de acesso,' anteriormente era definido como o especificador de acesso
+
+Sob a compatibilidade com ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)), você não pode alterar o acesso a uma classe aninhada. Sob as extensões da Microsoft padrão (/Ze), você pode, com este aviso.
+
+## <a name="example"></a>Exemplo
+
+```
+// C4240.cpp
+// compile with: /W3
+class X
+{
+private:
+   class N;
+public:
+   class N
+   {   // C4240
+   };
+};
+
+int main()
+{
+}
 ```

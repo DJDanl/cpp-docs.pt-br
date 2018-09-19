@@ -1,5 +1,5 @@
 ---
-title: C3236 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3236 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bdcbab59744fcaac88836656639a0fa777aefb6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ad012c067a5698eefa3f8a91e85252aef93d3e5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248164"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044386"
 ---
-# <a name="compiler-error-c3236"></a>C3236 de erro do compilador
-instanciação explícita de um genérico não é permitida  
-  
- O compilador não permite a instanciação explícita de classes genéricas.  
-  
- O exemplo a seguir gera C3236:  
-  
-```  
-// C3236.cpp  
-// compile with: /clr  
-generic<class T>  
-public ref class X {};  
-  
-generic ref class X<int>;   // C3236  
-```  
-  
- O exemplo a seguir demonstra uma possível resolução:  
-  
-```  
-// C3236b.cpp  
-// compile with: /clr /c  
-generic<class T>  
-public ref class X {};  
+# <a name="compiler-error-c3236"></a>Erro do compilador C3236
+
+instanciação explícita de um genérico não é permitida
+
+O compilador não permite a instanciação explícita de classes genéricas.
+
+O exemplo a seguir gera C3236:
+
+```
+// C3236.cpp
+// compile with: /clr
+generic<class T>
+public ref class X {};
+
+generic ref class X<int>;   // C3236
+```
+
+O exemplo a seguir demonstra uma possível resolução:
+
+```
+// C3236b.cpp
+// compile with: /clr /c
+generic<class T>
+public ref class X {};
 ```

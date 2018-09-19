@@ -1,5 +1,5 @@
 ---
-title: C2019 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2019 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8f9f36bef278edc4c40c732b86c012180535f74
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e6f1ae1b22cca0d00e990f64ccaf469359563f8e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33164234"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038692"
 ---
-# <a name="compiler-error-c2019"></a>C2019 de erro do compilador
-diretiva de pré-processamento esperada, encontrada 'character'  
-  
- O caractere seguido um `#` sinal, mas não é a primeira letra de uma diretiva de pré-processamento.  
-  
- O exemplo a seguir gera C2019:  
-  
-```  
-// C2019.cpp  
-#!define TRUE 1   // C2019  
-```  
-  
- Possível solução:  
-  
-```  
-// C2019b.cpp  
-// compile with: /c  
-#define TRUE 1  
+# <a name="compiler-error-c2019"></a>Erro do compilador C2019
+
+esperada diretiva de pré-processador, encontrado 'character'
+
+O caractere seguido um `#` logon, mas isso não é a primeira letra de uma diretiva de pré-processador.
+
+O exemplo a seguir gera C2019:
+
+```
+// C2019.cpp
+#!define TRUE 1   // C2019
+```
+
+Solução possível:
+
+```
+// C2019b.cpp
+// compile with: /c
+#define TRUE 1
 ```

@@ -1,5 +1,5 @@
 ---
-title: C2229 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2229 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,39 +16,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c61708e7e67db39f85b1ff782e8945facc2b9568
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b235b5fae84ba605ecec5419f9334ccfa0a4be6e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33172182"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035585"
 ---
-# <a name="compiler-error-c2229"></a>C2229 de erro do compilador
-o tipo 'Identificador' tem uma matriz de tamanho zero ilegal  
-  
- Um membro de um campo de bits ou de estrutura contém uma matriz de tamanho zero não é o último membro.  
-  
- Como você pode ter uma matriz de tamanho zero como o último membro de struct, você deve especificar seu tamanho ao alocar a estrutura.  
-  
- Se a matriz de tamanho zero não é o último membro da estrutura, o compilador não pode calcular o deslocamento para os campos restantes.  
-  
- O exemplo a seguir gera C2229:  
-  
-```  
-// C2229.cpp  
-struct S {  
-   int a[0];  // C2229  zero-sized array  
-   int b[1];  
-};  
-  
-struct S2 {  
-   int a;  
-   int b[0];  
-};  
-  
-int main() {  
-   // allocate 7 elements for b field  
-   S2* s2 = (S2*)new int[sizeof(S2) + 7*sizeof(int)];  
-   s2->b[6] = 100;  
-}  
+# <a name="compiler-error-c2229"></a>Erro do compilador C2229
+
+o tipo 'identifier' tem uma matriz de tamanho zero ilegal
+
+Um membro de um campo de bits ou de estrutura contém uma matriz de tamanho zero não é o último membro.
+
+Como você pode ter uma matriz de tamanho zero como o último membro de struct, você deve especificar seu tamanho ao alocar o struct.
+
+Se a matriz de tamanho zero não é o último membro de struct, o compilador não pode calcular o deslocamento para os campos restantes.
+
+O exemplo a seguir gera C2229:
+
+```
+// C2229.cpp
+struct S {
+   int a[0];  // C2229  zero-sized array
+   int b[1];
+};
+
+struct S2 {
+   int a;
+   int b[0];
+};
+
+int main() {
+   // allocate 7 elements for b field
+   S2* s2 = (S2*)new int[sizeof(S2) + 7*sizeof(int)];
+   s2->b[6] = 100;
+}
 ```

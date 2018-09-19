@@ -278,12 +278,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3df6a0cb46985b90b6b8098d7355c33439143949
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4a2b5c47f6283f4a4b9fefb5683c8e7be0c4bdb3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33694037"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058088"
 ---
 # <a name="norm4-class"></a>Classe norm_4
 Representa um vetor curto de quatro números normais.  
@@ -306,7 +306,7 @@ class norm_4;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor norm_4](#ctor)|Sobrecarregado. Padrão construtor inicializa todos os elementos com 0.|  
+|[Construtor norm_4](#ctor)|Sobrecarregado. Padrão construtor, inicializa todos os elementos com 0.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -456,9 +456,9 @@ class norm_4;
 |norm_4::Operator-||  
 |norm_4::operator--||  
 |norm_4::Operator * =||  
-|norm_4::Operator / =||  
-|norm_4::Operator + +||  
-|+ norm_4::Operator =||  
+|norm_4::Operator =||  
+|norm_4::Operator++||  
+|norm_4::Operator+ =||  
 |norm_4::operator=||  
 |norm_4::operator-=||  
   
@@ -605,13 +605,13 @@ class norm_4;
  `norm_4`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** amp_short_vectors.h  
+ **Cabeçalho:** amp_short_vectors. h  
   
  **Namespace:** Concurrency:: Graphics  
   
 ##  <a name="ctor"></a> norm_4 
 
- Padrão construtor inicializa todos os elementos com 0.  
+ Padrão construtor, inicializa todos os elementos com 0.  
   
 ```  
 norm_4() restrict(amp,
@@ -683,23 +683,23 @@ explicit inline norm_4(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_V0`  
- O valor para inicializar o elemento 0.  
+*_V0*<br/>
+O valor para inicializar o elemento 0.  
   
- `_V1`  
- O valor para inicializar o elemento 1.  
+*V1*<br/>
+O valor para inicializar o elemento 1.  
   
- `_V2`  
- O valor para inicializar o elemento 2.  
+*_V2*<br/>
+O valor para inicializar o elemento 2.  
   
- `_V3`  
- O valor para inicializar o elemento 3.  
+*_V3*<br/>
+O valor para inicializar o elemento 3.  
   
- `_V`  
- O valor para a inicialização.  
+*_V*<br/>
+O valor para a inicialização.  
   
- `_Other`  
- O objeto usado para inicializar.  
+*Outro*<br/>
+O objeto usado para inicializar.  
   
 ##  <a name="norm_4__size"></a> Tamanho 
 

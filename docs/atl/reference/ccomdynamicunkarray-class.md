@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b36f19cc6e3deddbd5984e63b70c61a0ca8ea8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e776fd88799999ce175ba2efc137fc0353cbe65a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762763"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068462"
 ---
 # <a name="ccomdynamicunkarray-class"></a>Classe CComDynamicUnkArray
 
@@ -93,7 +93,7 @@ DWORD Add(IUnknown* pUnk);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pUnk*  
+*pUnk*<br/>
 O `IUnknown` ponteiro para adicionar à matriz.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -174,7 +174,7 @@ IUnknown* GetAt(int nIndex);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nIndex*  
+*nIndex*<br/>
 O índice do elemento a ser recuperado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -191,7 +191,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 
 ### <a name="parameters"></a>Parâmetros
 
-*ppFind*  
+*ppFind*<br/>
 O `IUnknown` ponteiro para o qual o cookie associado é necessário.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -224,7 +224,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwCookie*  
+*dwCookie*<br/>
 O cookie para o qual associado `IUnknown` ponteiro é necessário.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -241,7 +241,7 @@ BOOL Remove(DWORD dwCookie);
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwCookie*  
+*dwCookie*<br/>
 O cookie referenciando o `IUnknown` ponteiro a ser removido da matriz.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -250,5 +250,5 @@ Retornará TRUE se o ponteiro for removido; Caso contrário, FALSE.
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CComUnkArray](../../atl/reference/ccomunkarray-class.md)   
+[Classe CComUnkArray](../../atl/reference/ccomunkarray-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daa4a34915547b726494ea9f461b7eba24c617dd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8d60a7f40fc90d5586d7a8a7d41cab81a4d97c85
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755717"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054474"
 ---
 # <a name="cautovectorptr-class"></a>Classe CAutoVectorPtr
 
@@ -40,13 +40,13 @@ Essa classe representa um objeto de ponteiro inteligente usando o vetor novo e e
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template<typename T>  
+template<typename T>
 class CAutoVectorPtr
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-`T`  
+*T*<br/>
 O tipo de ponteiro.
 
 ## <a name="members"></a>Membros
@@ -82,7 +82,7 @@ O tipo de ponteiro.
 
 ## <a name="remarks"></a>Comentários
 
-Essa classe fornece métodos para criar e gerenciar um ponteiro inteligente, o que ajudará a proteger contra vazamentos de memória por meio de liberação de recursos automaticamente quando ele sai do escopo. `CAutoVectorPtr` é semelhante à `CAutoPtr`, a única diferença sendo que `CAutoVectorPtr` usa [vetor novo&#91; &#93; ](../../standard-library/new-operators.md#op_new_arr) e [exclusão de vetor&#91; &#93; ](../../standard-library/new-operators.md#op_delete_arr) para alocar e liberar memória em vez do C++ **novos** e **excluir** operadores. Ver [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) se as classes de coleção de `CAutoVectorPtr` são necessários.  
+Essa classe fornece métodos para criar e gerenciar um ponteiro inteligente, o que ajudará a proteger contra vazamentos de memória por meio de liberação de recursos automaticamente quando ele sai do escopo. `CAutoVectorPtr` é semelhante à `CAutoPtr`, a única diferença sendo que `CAutoVectorPtr` usa [vetor novo&#91; &#93; ](../../standard-library/new-operators.md#op_new_arr) e [exclusão de vetor&#91; &#93; ](../../standard-library/new-operators.md#op_delete_arr) para alocar e liberar memória em vez do C++ **novos** e **excluir** operadores. Ver [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) se as classes de coleção de `CAutoVectorPtr` são necessários.
 
 Ver [CAutoPtr](../../atl/reference/cautoptr-class.md) para obter um exemplo do uso de uma classe de ponteiro inteligente.
 
@@ -100,7 +100,7 @@ bool Allocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*nElements*  
+*nElements*<br/>
 O número de elementos na matriz.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -121,7 +121,7 @@ void Attach(T* p) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*  
+*p*<br/>
 O `CAutoVectorPtr` objeto assumirá a propriedade do ponteiro this.
 
 ### <a name="remarks"></a>Comentários
@@ -142,7 +142,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*  
+*p*<br/>
 Um ponteiro existente.
 
 ### <a name="remarks"></a>Comentários
@@ -211,7 +211,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*  
+*p*<br/>
 Um ponteiro.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -226,7 +226,7 @@ O operador de atribuição desanexa o `CAutoVectorPtr` objeto a partir de qualqu
 
 O operador cast.
 
-```  
+```
 operator T*() const throw();
 ```
 
@@ -236,5 +236,5 @@ Retorna um ponteiro para o tipo de dados de objeto definido no modelo de classe.
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CAutoPtr](../../atl/reference/cautoptr-class.md)   
+[Classe CAutoPtr](../../atl/reference/cautoptr-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

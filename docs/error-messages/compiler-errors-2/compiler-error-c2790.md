@@ -1,5 +1,5 @@
 ---
-title: C2790 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2790 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11f1c90fed93666fad7513e2b4186a5baa2aa406
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc2c6b238fab7e42c0754e613b62756a86a5bb31
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232811"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069567"
 ---
-# <a name="compiler-error-c2790"></a>C2790 de erro do compilador
-'super': esta palavra-chave só pode ser usado no corpo da função de membro de classe  
-  
- Essa mensagem de erro será exibida se o usuário tentar usa a palavra-chave [super](../../cpp/super.md) fora do contexto de uma função de membro.  
-  
- O exemplo a seguir gera C2790:  
-  
-```  
-// C2790.cpp  
-void f() {  
-   __super::g();   // C2790  
-}  
+# <a name="compiler-error-c2790"></a>Erro do compilador C2790
+
+'super': esta palavra-chave só pode ser usado dentro do corpo da função de membro de classe
+
+Essa mensagem de erro será exibida se o usuário nunca tenta usa a palavra-chave [super](../../cpp/super.md) fora do contexto de uma função de membro.
+
+O exemplo a seguir gera C2790:
+
+```
+// C2790.cpp
+void f() {
+   __super::g();   // C2790
+}
 ```

@@ -18,21 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 71750507d6b3c6cf14a721971d809347f8adfd3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdaf290cde69f6d269b4bf055c70171800aa1489
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33092940"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053955"
 ---
 # <a name="working-with-documents-and-views"></a>Trabalhando com documentos e exibições
-A biblioteca Microsoft Foundation Classes (MFC) se baseia em uma arquitetura de documento/exibição para muitos de seus recursos. Normalmente, um documento armazena seus dados e um modo de exibição exibe dentro da área cliente de uma janela do quadro e gerencia a interação do usuário com os dados. O modo de exibição se comunica com o documento para obter e atualizar os dados. Você pode usar as classes de banco de dados com a estrutura ou sem ele.  
+
+A biblioteca Microsoft Foundation Classes (MFC) se baseia em uma arquitetura de documento/exibição para muitos de seus recursos. Normalmente, um documento armazena seus dados e um modo de exibição exibe-o dentro da área de cliente de uma janela de quadro e gerencia a interação do usuário com os dados. O modo de exibição se comunica com o documento para obter e atualizar os dados. Você pode usar as classes de banco de dados com a estrutura ou sem ele.  
   
- Para obter mais informações sobre como usar as classes de banco de dados do Framework, consulte [MFC: usando Classes de banco de dados com documentos e exibições](../../data/mfc-using-database-classes-with-documents-and-views.md).  
+Para obter mais informações sobre como usar classes de banco de dados na estrutura, consulte [MFC: usando Classes de banco de dados com documentos e exibições](../../data/mfc-using-database-classes-with-documents-and-views.md).  
   
- Por padrão, o Assistente de aplicativo MFC cria um aplicativo de esqueleto sem suporte do banco de dados. No entanto, você pode selecionar opções para incluir suporte mínimo de banco de dados ou suporte mais completo com base em formulário. Para obter mais informações sobre as opções do Assistente de aplicativo, consulte [suporte de banco de dados, o Assistente de aplicativo MFC](../../mfc/reference/database-support-mfc-application-wizard.md).  
+Por padrão, o Assistente de aplicativo MFC cria um aplicativo de esqueleto sem suporte de banco de dados. No entanto, você pode selecionar opções para incluir suporte mínimo de banco de dados ou o mais completo suporte baseado em formulário. Para obter mais informações sobre as opções do Assistente de aplicativo, consulte [suporte de banco de dados, o Assistente de aplicativo MFC](../../mfc/reference/database-support-mfc-application-wizard.md).  
   
- Você também pode usar as classes de banco de dados sem usar a arquitetura de documento/exibição completa. Para obter mais informações, consulte [MFC: usando Classes de banco de dados sem documentos e exibições](../../data/mfc-using-database-classes-without-documents-and-views.md).  
+Você também pode usar as classes de banco de dados sem usar a arquitetura de documento/exibição completa. Para obter mais informações, consulte [MFC: usando Classes de banco de dados sem documentos e exibições](../../data/mfc-using-database-classes-without-documents-and-views.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [ODBC e MFC](../../data/odbc/odbc-and-mfc.md)
+
+[ODBC e MFC](../../data/odbc/odbc-and-mfc.md)

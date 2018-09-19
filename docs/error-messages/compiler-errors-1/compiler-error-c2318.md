@@ -1,5 +1,5 @@
 ---
-title: C2318 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2318 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d20c3dfe8122b8795238d09ab2b376dcd91d437
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c2d76a2d6f1a9f2342edfc6e174938816759cb8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222339"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035702"
 ---
-# <a name="compiler-error-c2318"></a>C2318 de erro do compilador
-nenhum bloco try associado a este manipulador catch  
-  
- Um `catch` manipulador é definido, mas não precedido por um `try` bloco.  
-  
- O exemplo a seguir gera C2318:  
-  
-```  
-// C2318.cpp  
-// compile with: /EHsc  
-#include <eh.h>  
-int main() {  
-   // no try block  
-   catch( int ) {}   // C2318  
-}  
-```  
-  
- Possível solução:  
-  
-```  
-// C2318b.cpp  
-// compile with: /EHsc  
-#include <eh.h>  
-int main() {  
-   try{}  
-   catch( int ) {}  
-}  
+# <a name="compiler-error-c2318"></a>Erro do compilador C2318
+
+nenhum bloco try associado com este manipulador catch
+
+Um `catch` manipulador está definido, mas não é precedido por um `try` bloco.
+
+O exemplo a seguir gera C2318:
+
+```
+// C2318.cpp
+// compile with: /EHsc
+#include <eh.h>
+int main() {
+   // no try block
+   catch( int ) {}   // C2318
+}
+```
+
+Solução possível:
+
+```
+// C2318b.cpp
+// compile with: /EHsc
+#include <eh.h>
+int main() {
+   try{}
+   catch( int ) {}
+}
 ```

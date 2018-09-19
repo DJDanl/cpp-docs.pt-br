@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96b1516970afb8729dc4e35c2226eb6ff00f5c2e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1f698114fc1f2285cdcdb91ec1e8317ad1585a6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692932"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071127"
 ---
 # <a name="copyprivate"></a>copyprivate
-Especifica que uma ou mais variáveis devem ser compartilhados entre todos os threads.  
+Especifica que uma ou mais variáveis devem ser compartilhadas entre todos os threads.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,11 +32,10 @@ Especifica que uma ou mais variáveis devem ser compartilhados entre todos os th
 copyprivate(var)  
 ```  
   
-## <a name="remarks"></a>Comentários  
- onde,  
+### <a name="parameters"></a>Parâmetros
   
- `var`  
- Uma ou mais variáveis para compartilhar. Se mais de uma variável for especificada, separe os nomes de variável com uma vírgula.  
+*var*<br/>
+Uma ou mais variáveis para compartilhar. Se mais de uma variável for especificada, separe os nomes de variável com uma vírgula.  
   
 ## <a name="remarks"></a>Comentários  
  `copyprivate` aplica-se para o [único](../../../parallel/openmp/reference/single.md) diretiva.  

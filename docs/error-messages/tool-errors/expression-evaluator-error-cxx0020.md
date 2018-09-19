@@ -17,18 +17,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d00bfda6aa058690aed1441f6eec84fe6552d76c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3846bb5fca3e3590069f6183dabdca7a7ca5453
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297674"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032452"
 ---
 # <a name="expression-evaluator-error-cxx0020"></a>Erro CXX0020 (avaliador de expressão)
-tipos de operando incorretos para esta operação  
-  
- Um operador foi aplicado a uma expressão com um tipo inválido para esse operador.  
-  
- Por exemplo, não é válido para obter o endereço de um registro ou uma matriz com uma expressão de ponto flutuante de subscrito.  
-  
- Esse erro é idêntico ao CAN0020.
+
+tipos de operando inválidos para esta operação
+
+Um operador foi aplicado a uma expressão com um tipo inválido para esse operador.
+
+Por exemplo, não é válido para tomar o endereço de um registro ou uma matriz com uma expressão de ponto flutuante de subscrito.
+
+Esse erro é idêntico ao CAN0020.

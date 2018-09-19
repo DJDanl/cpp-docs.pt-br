@@ -15,14 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a9011912b0c187d9aa9e75dd9e484c4688e3c0
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 9dd92d321f0452c24de04fb94427aa2499677155
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39405903"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064810"
 ---
 # <a name="lexical-conventions"></a>Convenções lexicais
+
 Esta seção apresenta os elementos fundamentais de um programa em C++. Você usa esses elementos, chamados de "elementos léxicos" ou "tokens", para construir instruções, definições, declarações etc. que são usadas para construir programas completos. Os elementos léxicos a seguir são abordados nesta seção:
 
 - [Visão geral da translação de arquivo](overview-of-file-translation.md)
@@ -45,5 +46,6 @@ Esta seção apresenta os elementos fundamentais de um programa em C++. Você us
 - [Literais definidos pelo usuário](../cpp/user-defined-literals-cpp.md)
 
 ## <a name="see-also"></a>Consulte também
- [Referência da linguagem C++](../cpp/cpp-language-reference.md)  
- [Programa e ligação](program-and-linkage-cpp.md)
+
+[Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
+[Programa e ligação](program-and-linkage-cpp.md)

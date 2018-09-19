@@ -1,5 +1,5 @@
 ---
-title: C2493 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2493 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 336378894f5bc6d4e0dc061b630f8517b97e89c7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf65e17aa44746fea51d50cdb7c2a6e8be60cca2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225375"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047987"
 ---
-# <a name="compiler-error-c2493"></a>C2493 de erro do compilador
-forma inválida de based  
-  
- Um `__based` expressão deve ser baseada em um ponteiro.  
-  
- O exemplo a seguir gera C2493:  
-  
-```  
-// C2493.cpp  
-// compile with: /c  
-char mybase;  
-int __based(mybase) ptr;   // C2493  
-  
-// OK  
-char * mybase;  
-int __based(mybase) * ptr;  
+# <a name="compiler-error-c2493"></a>Erro do compilador C2493
+
+forma inválida de based
+
+Um `__based` expressão deve ser baseada em um ponteiro.
+
+O exemplo a seguir gera C2493:
+
+```
+// C2493.cpp
+// compile with: /c
+char mybase;
+int __based(mybase) ptr;   // C2493
+
+// OK
+char * mybase;
+int __based(mybase) * ptr;
 ```

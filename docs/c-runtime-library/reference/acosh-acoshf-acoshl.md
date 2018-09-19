@@ -40,12 +40,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 546006fcf1c559317b4afff424976db8109442e7
-ms.sourcegitcommit: 2b9e8af9b7138f502ffcba64e2721f7ef52af23b
+ms.openlocfilehash: 368f32de049aa7bed83a9bb80e650ef212d07778
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39404746"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052160"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -66,7 +66,7 @@ long double acosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Parâmetros
 
-*x*  
+*x*<br/>
 Valor de ponto flutuante.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -120,9 +120,9 @@ acosh( 1.324609 ) = 0.785398
 
 ## <a name="see-also"></a>Consulte também
 
-[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)  
-[asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)  
-[atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)  
-[cosh, coshf, coshl](cosh-coshf-coshl.md)  
-[sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)  
-[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)  
+[Suporte a ponto flutuante](../../c-runtime-library/floating-point-support.md)<br/>
+[asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
+[atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
+[cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>
+[sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)<br/>
+[tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)

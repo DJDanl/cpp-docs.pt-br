@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2068f3a735a14662e10f00af3fc5f81efd037592
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 56e93bf1485cefed9a44e0e6260358650ab8b296
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220755"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032582"
 ---
 # <a name="bitmap-structure"></a>Estrutura BITMAP
 O **BITMAP** estrutura define a altura, largura, formato de cor e valores de bit de um bitmap lógico **.**  
@@ -67,19 +67,15 @@ typedef struct tagBITMAP {  /* bm */
   
  Verificações são organizadas da seguinte maneira para um bitmap monocromático da altura *n*:  
   
- `Scan 0`  
-  
- `Scan 1`  
-  
- `.`  
-  
- `.`  
-  
- `.`  
-  
- `Scan n-2`  
-  
- `Scan n-1`  
+```
+Scan 0
+Scan 1
+.
+.
+.
+Scan n-2
+Scan n-1
+```
   
  Os pixels em um dispositivo monocromático são ambos preto ou branco. Se o bit correspondente no bitmap é 1, o pixel é ativado (branco). Se o bit correspondente no bitmap for 0, o pixel é desativado (preto).  
   

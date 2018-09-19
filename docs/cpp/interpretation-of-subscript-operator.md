@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eeb8d4232fae16cfaa588341a54bf4318483b92
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6e1457744747ee3638d7f0b9485ac12af60e5cdd
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213425"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46058335"
 ---
 # <a name="interpretation-of-subscript-operator"></a>Interpretação do operador subscrito
 
@@ -34,8 +34,8 @@ Como em qualquer adição que envolve tipos do ponteiro, o dimensionamento é ex
 
 De maneira semelhante, para matrizes multidimensionais, o endereço é derivado usando o seguinte método:
 
-((*nome da matriz*) + (*subscrito*1 \* *max*2 \* *máxima*3 \* ... \* *max*n) + (*subscrito*2 \* *max*3 \* ... \* *max*n) +... + *subscrito*n))  
-  
+((*nome da matriz*) + (*subscrito*1 \* *max*2 \* *máxima*3 \* ... \* *max*n) + (*subscrito*2 \* *max*3 \* ... \* *max*n) +... + *subscrito*n))
+
 ## <a name="see-also"></a>Consulte também
 
 [Matrizes](../cpp/arrays-cpp.md)<br/>

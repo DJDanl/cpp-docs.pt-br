@@ -15,17 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d6bc5d1b6c47d2ffa26bffa98d47b930d6ed193
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f50459550c91f07c12f6f18b3fbbaa5622ab7408
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33093540"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032387"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Adicionando uma interface ao provedor
-Determine qual objeto que você deseja adicionar a interface para (geralmente dados fonte, conjunto de linhas, comando ou sessão objetos criados pelo OLE DB Provider Assistente). É possível que o objeto que você precisa adicionar a interface é aquele que seu provedor não oferece suporte. Nesse caso, execute o ATL OLE DB Provider Assistente para criar o objeto. Clique com botão direito no projeto no modo de exibição de classe, clique em **Adicionar classe** do **adicionar** menu e clique **ATL OLE DB Provider**. Você talvez queira colocar o código de interface em um diretório separado e, em seguida, copiar os arquivos para o projeto de provedor.  
+
+Determine qual objeto você deseja adicionar a interface para (geralmente código-fonte, conjunto de linhas, comando ou sessão de objetos de dados criados pelo Assistente do provedor de banco de dados OLE). É possível que o objeto que você precisa adicionar a interface é que seu provedor não dá suporte atualmente. Nesse caso, execute o ATL OLE DB Provider Assistente para criar o objeto. Clique com botão direito no projeto no modo de exibição de classe, clique em **Add Class** da **Add** menu e, em seguida, clique **ATL OLE DB Provider**. Você talvez queira colocar o código da interface em um diretório separado e, em seguida, copie os arquivos para seu projeto de provedor.  
   
- Se você criou uma nova classe para oferecer suporte à interface, torne o objeto herdar dessa classe. Por exemplo, você pode adicionar a classe **IRowsetIndexImpl** para um objeto de conjunto de linhas:  
+Se você criou uma nova classe para oferecer suporte à interface, tornar o objeto que herdam dessa classe. Por exemplo, você pode adicionar a classe **IRowsetIndexImpl** a um objeto de conjunto de linhas:  
   
 ```cpp  
 template <class Creator>  
@@ -34,7 +35,7 @@ class CAgentRowset :
     public IRowsetIndexImpl< ... >   
 ```  
   
- Adicionar a interface para **COM_MAP** no objeto usando a macro COM_INTERFACE_ENTRY. Se não houver nenhum mapa, crie um. Por exemplo:  
+Adicionar o adaptador **COM_MAP** no objeto usando a macro COM_INTERFACE_ENTRY. Se não há nenhum mapa, crie um. Por exemplo:  
   
 ```cpp  
 BEGIN_COM_MAP(CAgentRowset)  
@@ -42,7 +43,7 @@ BEGIN_COM_MAP(CAgentRowset)
 END_COM_MAP()  
 ```  
   
- Para o objeto de conjunto de linhas, a cadeia de mapa de seu pai do objeto para que o objeto pode delegar a classe pai. Neste exemplo, adicione a macro COM_INTERFACE_ENTRY_CHAIN ao mapa:  
+Para o objeto de conjunto de linhas, cadeia o mapa de seu pai do objeto para que o objeto possa delegar para a classe pai. Neste exemplo, adicione a macro COM_INTERFACE_ENTRY_CHAIN no mapa:  
   
 ```cpp  
 BEGIN_COM_MAP(CAgentRowset)  
@@ -52,4 +53,5 @@ END_COM_MAP()
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Trabalhando com modelos de provedor do OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+
+[Trabalhando com modelos de provedor do OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

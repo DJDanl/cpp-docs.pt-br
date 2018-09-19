@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a17b690111edc220f6310963e5f606e2a9c869c9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7444cfe152d964318ea9786f4e4f7718e11d71cb
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756035"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069801"
 ---
 # <a name="idataobjectimpl-class"></a>Classe IDataObjectImpl
 
@@ -47,13 +47,13 @@ Essa classe fornece métodos para dar suporte a transferência uniforme de dados
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template<class T>  
+template<class T>
 class IDataObjectImpl
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 Sua classe, derivada de `IDataObjectImpl`.
 
 ## <a name="members"></a>Membros

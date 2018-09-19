@@ -1,5 +1,5 @@
 ---
-title: C3135 de erro do compilador | Microsoft Docs
+title: Erro do compilador C3135 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 524435d95e085b0e5014eed21877b6d351e4ca75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1a1158de2768cd5aea025627caf2fe40ef53e2ba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245729"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048455"
 ---
-# <a name="compiler-error-c3135"></a>C3135 de erro do compilador
-'property': uma propriedade não pode ter uma 'const' ou 'volatile' de tipo  
-  
- O [const](../../cpp/const-cpp.md) e [volátil](../../cpp/volatile-cpp.md) palavras-chave não são permitidas em Propriedades.
+# <a name="compiler-error-c3135"></a>Erro do compilador C3135
+
+'property': uma propriedade não pode ter 'const' ou 'volatile' de tipo
+
+O [const](../../cpp/const-cpp.md) e [volátil](../../cpp/volatile-cpp.md) palavras-chave não são permitidas em Propriedades.

@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 4) de aviso C4238 | Microsoft Docs
+title: Compilador aviso (nível 4) C4238 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06dbec01da8d1b47cb7b93c90a22ae5266e9b4c8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f4d5f358d08f81e6b8097140ad47d54f4b3b3fed
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292430"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46057022"
 ---
-# <a name="compiler-warning-level-4-c4238"></a>Compilador C4238 de aviso (nível 4)
-extensão não padrão usada: classe rvalue usada como lvalue  
-  
- Para compatibilidade com versões anteriores do Visual C++, extensões da Microsoft (**/Ze**) permitem que você use um tipo de classe como um rvalue em um contexto que implicitamente ou explicitamente usa seu endereço. Em alguns casos, como o exemplo a seguir, isso pode ser perigoso.  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// C4238.cpp  
-// compile with: /W4 /c  
-struct C {  
-   C() {}  
-};  
-  
-C * pC = &C();   // C4238  
-```  
-  
- Esse uso causa um erro em compatibilidade ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+# <a name="compiler-warning-level-4-c4238"></a>Compilador aviso (nível 4) C4238
+
+extensão não padrão usada: classe rvalue usada como lvalue
+
+Para compatibilidade com versões anteriores do Visual C++, extensões da Microsoft (**/Ze**) permitem que você use um tipo de classe como um rvalue em um contexto que implicitamente ou explicitamente usa seu endereço. Em alguns casos, como no exemplo abaixo, isso pode ser perigoso.
+
+## <a name="example"></a>Exemplo
+
+```
+// C4238.cpp
+// compile with: /W4 /c
+struct C {
+   C() {}
+};
+
+C * pC = &C();   // C4238
+```
+
+Esse uso causa um erro em compatibilidade com ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

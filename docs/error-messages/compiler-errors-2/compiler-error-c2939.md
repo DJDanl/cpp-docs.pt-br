@@ -1,5 +1,5 @@
 ---
-title: C2939 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2939 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,42 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85b4cc897c5d24b841e7ad5c8428cd10d9a36961
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7d397eff2cfe561ace6f29b00601941779ef2b2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245751"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46053136"
 ---
-# <a name="compiler-error-c2939"></a>C2939 de erro do compilador
-'class': tipo de id de classe redefinido como uma variável de dados local  
-  
- Você não pode usar uma classe genérica ou modelo como uma variável de dados local.  
-  
- Esse erro pode ocorrer se as chaves são combinadas incorretamente.  
-  
- O exemplo a seguir gera C2939:  
-  
-```  
-// C2939.cpp  
-template<class T>  
-struct TC { };   
-int main() {  
-   int TC<int>;   // C2939  
-   int TC;   // OK  
-}  
-```  
-  
- C2939 também pode ocorrer ao usar genéricos:  
-  
-```  
-// C2939b.cpp  
-// compile with: /clr  
-generic<class T>  
-ref struct GC { };  
-  
-int main() {  
-   int GC<int>;   // C2939  
-   int GC;   // OK  
-}  
+# <a name="compiler-error-c2939"></a>Erro do compilador C2939
+
+'class': id de classe de tipo é redefinida como uma variável de dados local
+
+Você não pode usar uma classe genérica ou o modelo como uma variável de dados local.
+
+Esse erro pode ser causado se as chaves são correspondidas incorretamente.
+
+O exemplo a seguir gera C2939:
+
+```
+// C2939.cpp
+template<class T>
+struct TC { };
+int main() {
+   int TC<int>;   // C2939
+   int TC;   // OK
+}
+```
+
+C2939 também podem ocorrer ao usar genéricos:
+
+```
+// C2939b.cpp
+// compile with: /clr
+generic<class T>
+ref struct GC { };
+
+int main() {
+   int GC<int>;   // C2939
+   int GC;   // OK
+}
 ```

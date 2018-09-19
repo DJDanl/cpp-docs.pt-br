@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4187 | Microsoft Docs
+title: Compilador aviso (nível 1) C4187 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef80cda402cd52ae503a0e69046bcbfa09a398bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e065afba508cf4c532f33924fd89cb1fef1fd5a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33276549"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064718"
 ---
-# <a name="compiler-warning-level-1-c4187"></a>Compilador C4187 de aviso (nível 1)
-\#atributos de importação 'attribute1' e 'attribute2' são incompatíveis; ambos ignorados  
-  
- Um [#import](../../preprocessor/hash-import-directive-cpp.md) instrução especificada `no_implementation` e `implementation_only` atributos. Ambos são ignoradas.
+# <a name="compiler-warning-level-1-c4187"></a>Compilador aviso (nível 1) C4187
+
+\#atributos de importação 'attribute1' e 'attribute2' são incompatíveis; ambos ignorados
+
+Um [#import](../../preprocessor/hash-import-directive-cpp.md) instrução especificada `no_implementation` e `implementation_only` atributos. Ambos são ignoradas.

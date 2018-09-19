@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 243ff6d2336d3e293d009f82ba4a39243e076f94
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6b0b7b796ce5db6cfe23eea3608db171ff38e263
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690680"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46059050"
 ---
 # <a name="ompunsetlock"></a>omp_unset_lock
 Libera um bloqueio.  
@@ -34,17 +34,16 @@ void omp_unset_lock(
 );  
 ```  
   
-## <a name="remarks"></a>Comentários  
- onde,  
+### <a name="parameters"></a>Parâmetros
   
- `lock`  
- Uma variável do tipo [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md) que foi inicializado com [omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md), o segmento pertence e em execução na função.  
+*lock*<br/>
+Uma variável do tipo [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md) que foi inicializado com [funções omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md), possuídas por thread e em execução na função.  
   
 ## <a name="remarks"></a>Comentários  
- Para obter mais informações, consulte [3.2.4 funções omp_unset_lock e omp_unset_nest_lock](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md).  
+ Para obter mais informações, consulte [3.2.4 funções omp_unset_lock e omp_unset_nest_lock funções](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md).  
   
 ## <a name="example"></a>Exemplo  
- Consulte [omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md) para obter um exemplo de como usar `omp_unset_lock`.  
+ Ver [funções omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md) para obter um exemplo de como usar `omp_unset_lock`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções](../../../parallel/openmp/reference/openmp-functions.md)

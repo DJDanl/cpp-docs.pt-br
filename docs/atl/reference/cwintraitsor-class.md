@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e837e15f934e53f7b1d06a94efb4a320f2e8407
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 48303c6115ac1d2314e3038556b8f98330a6182e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757888"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062664"
 ---
 # <a name="cwintraitsor-class"></a>Classe CWinTraitsOR
 
@@ -45,10 +45,10 @@ class CWinTraitsOR
 
 #### <a name="parameters"></a>Parâmetros
 
-*t_dwStyle*  
+*t_dwStyle*<br/>
 Estilos de janela padrão.
 
-*t_dwExStyle*  
+*t_dwExStyle*<br/>
 Estilos de janela estendidos por padrão.
 
 ## <a name="members"></a>Membros
@@ -82,7 +82,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwStyle*  
+*dwStyle*<br/>
 Estilos usados para criação de uma janela.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -99,7 +99,7 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwExStyle*  
+*dwExStyle*<br/>
 Estilos estendidos usados para a criação de uma janela.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -108,6 +108,6 @@ Uma combinação de estilos estendidos que são passados *dwExStyle* e o padrão
 
 ## <a name="see-also"></a>Consulte também
 
-[Visão geral da classe](../../atl/atl-class-overview.md)   
+[Visão geral da classe](../../atl/atl-class-overview.md)<br/>
 [Noções básicas sobre as características da janela](../../atl/understanding-window-traits.md)
 

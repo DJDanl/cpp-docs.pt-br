@@ -1,5 +1,5 @@
 ---
-title: C2152 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2152 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e241f918191547812854de9734995b9f0b10770
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3a2215e43573b08a69501edfbd0c7c86897fdd3
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169667"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46064887"
 ---
-# <a name="compiler-error-c2152"></a>C2152 de erro do compilador
-'Identificador': ponteiros para funções com atributos diferentes  
-  
- Um ponteiro para uma função com uma convenção de chamada (`__cdecl`, `__stdcall`, ou `__fastcall`) é atribuído a um ponteiro para uma função com convenção de chamada de outra.
+# <a name="compiler-error-c2152"></a>Erro do compilador C2152
+
+'identifier': ponteiros para funções com atributos diferentes
+
+Um ponteiro para uma função com uma convenção de chamada (`__cdecl`, `__stdcall`, ou `__fastcall`) é atribuído a um ponteiro para uma função com outra convenção de chamada.

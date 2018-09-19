@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34a6b019c2e3f71b70253ad2c15bc4b2758eeae7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8ea4fd429395fc78f36d1f9b3244068c737be49a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762074"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033973"
 ---
 # <a name="cheapptr-class"></a>Classe CHeapPtr
 
@@ -37,16 +37,16 @@ Uma classe de ponteiro inteligente para gerenciar os ponteiros de pilha.
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template<typename T, class Allocator=CCRTAllocator>  
+template<typename T, class Allocator=CCRTAllocator>
 class CHeapPtr : public CHeapPtrBase<T, Allocator>
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 O tipo de objeto a ser armazenado no heap.
 
-*Alocador*  
+*Alocador*<br/>
 A classe de alocação de memória para usar.
 
 ## <a name="members"></a>Membros
@@ -94,7 +94,7 @@ bool Allocate(size_t nElements = 1) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*nElements*  
+*nElements*<br/>
 O número de elementos usados para calcular a quantidade de memória para alocar. O valor padrão é 1.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -121,7 +121,7 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*  
+*p*<br/>
 Um ponteiro de heap existente ou `CHeapPtr`.
 
 ### <a name="remarks"></a>Comentários
@@ -143,7 +143,7 @@ CHeapPtr<T, Allocator>& operator=(
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*  
+*p*<br/>
 Um objeto `CHeapPtr` existente.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -164,7 +164,7 @@ bool Reallocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*nElements*  
+*nElements*<br/>
 O novo número de elementos usados para calcular a quantidade de memória para alocar.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -177,6 +177,6 @@ Retorna VERDADEIRO se a memória tiver sido alocada, falso em caso de falha.
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)   
-[Classe CCRTAllocator](../../atl/reference/ccrtallocator-class.md)   
+[Classe CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)<br/>
+[Classe CCRTAllocator](../../atl/reference/ccrtallocator-class.md)<br/>
 [Visão geral da classe](../../atl/atl-class-overview.md)

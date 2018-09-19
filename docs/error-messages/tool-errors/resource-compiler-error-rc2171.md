@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f61400ad53d6fcc208b22067bbce62e886d0299
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ab575cc03905cc4405c221e27eec5b36776b4a0a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322855"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056970"
 ---
 # <a name="resource-compiler-error-rc2171"></a>Erro RC2171 (compilador de recurso)
-formato desconhecido de cabeçalho DIB  
-  
- O cabeçalho de bitmap não é um **BITMAPCOREHEADER** ou **BITMAPINFOHEADER** estrutura.
+
+formato desconhecido de cabeçalho DIB
+
+O cabeçalho de bitmap não é um **BITMAPCOREHEADER** ou **BITMAPINFOHEADER** estrutura.

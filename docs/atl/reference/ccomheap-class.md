@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf09696f6a13c11fbb37fa6e89ccb9b1241cadd0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b38aabbb418a355f85917a2d287c2f473cb2e7df
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751537"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46062911"
 ---
 # <a name="ccomheap-class"></a>Classe CComHeap
 
@@ -80,7 +80,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*nBytes*  
+*nBytes*<br/>
 O número solicitado de bytes no novo bloco de memória.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -103,7 +103,7 @@ virtual void Free(void* p) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*  
+*p*<br/>
 Ponteiro de memória alocado anteriormente por este Gerenciador de memória. NULL é um valor válido e não faz nada.
 
 ### <a name="remarks"></a>Comentários
@@ -120,7 +120,7 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*  
+*p*<br/>
 Ponteiro de memória alocado anteriormente por este Gerenciador de memória.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -141,10 +141,10 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*p*  
+*p*<br/>
 Ponteiro de memória alocado anteriormente por este Gerenciador de memória.
 
-*nBytes*  
+*nBytes*<br/>
 O número solicitado de bytes no novo bloco de memória.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -159,10 +159,10 @@ Implementado usando [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combas
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo de DynamicConsumer](../../visual-cpp-samples.md)   
-[Visão geral da classe](../../atl/atl-class-overview.md)   
-[Classe CWin32Heap](../../atl/reference/cwin32heap-class.md)   
-[Classe CLocalHeap](../../atl/reference/clocalheap-class.md)   
-[Classe CGlobalHeap](../../atl/reference/cglobalheap-class.md)   
-[Classe de CCRTHeap](../../atl/reference/ccrtheap-class.md)   
+[Exemplo de DynamicConsumer](../../visual-cpp-samples.md)<br/>
+[Visão geral da classe](../../atl/atl-class-overview.md)<br/>
+[Classe CWin32Heap](../../atl/reference/cwin32heap-class.md)<br/>
+[Classe CLocalHeap](../../atl/reference/clocalheap-class.md)<br/>
+[Classe CGlobalHeap](../../atl/reference/cglobalheap-class.md)<br/>
+[Classe de CCRTHeap](../../atl/reference/ccrtheap-class.md)<br/>
 [Classe IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)

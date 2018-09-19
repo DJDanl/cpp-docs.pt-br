@@ -16,17 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c736fbb5180edb26eda6a557a4e8e45a3ffc881
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9bc1e7e3d3996eedd0fe464832c1ee91986e302f
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202020"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052654"
 ---
 # <a name="fatal-error-c1093"></a>Erro fatal C1093
 
-> Chamada à API '*nome da função*'com falha'*local da chamada*': '*texto de tempo de execução*'  
-  
-Falha ao chamar uma função do .NET. O *texto de tempo de execução* cadeia de caracteres pode ou não pode ser fornecida pelo tempo de execução COM.  
-  
+> Chamada à API '*nome da função*'com falha'*local da chamada*': '*texto de tempo de execução*'
+
+Falha ao chamar uma função do .NET. O *texto de tempo de execução* cadeia de caracteres pode ou não pode ser fornecida pelo tempo de execução COM.
+
 Para obter mais informações sobre mensagens de erro do sistema, consulte o arquivo de sistema de Winerror. h, e [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage).

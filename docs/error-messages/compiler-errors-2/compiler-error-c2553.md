@@ -1,5 +1,5 @@
 ---
-title: C2553 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2553 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cfb09f2701b418ab5570641a78c465ff72ed943
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38fb61b7281dd0371c546fd7b7bc960232cf2e00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232528"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46043983"
 ---
-# <a name="compiler-error-c2553"></a>C2553 de erro do compilador
-'base_function': função virtual de substituição retornar tipo difere de 'override_function'  
-  
- Uma função em uma classe derivada tentou substituir uma função virtual em uma classe base, mas a função de classe derivada não tem o mesmo tipo de retorno da função da classe base.  Uma assinatura de função de substituição deve corresponder à assinatura da função que está sendo substituída.  
-  
- O exemplo a seguir gera C2553:  
-  
-```  
-// C2553.cpp  
-// compile with: /clr /c  
-ref struct C {  
-   virtual void f();  
-};  
-  
-ref struct D : C {  
-   virtual int f() override ;   // C2553   
-  
-   // try the following line instead  
-   // virtual void f() override;  
-};  
+# <a name="compiler-error-c2553"></a>Erro do compilador C2553
+
+'base_function': função virtual de substituição retornar o tipo é diferente de 'override_function'
+
+Tentativa de uma função em uma classe derivada substituir uma função virtual em uma classe base, mas a função de classe derivada não tinha o mesmo tipo de retorno da função de classe base.  Uma assinatura de função de substituição deve corresponder à assinatura da função que está sendo substituída.
+
+O exemplo a seguir gera C2553:
+
+```
+// C2553.cpp
+// compile with: /clr /c
+ref struct C {
+   virtual void f();
+};
+
+ref struct D : C {
+   virtual int f() override ;   // C2553
+
+   // try the following line instead
+   // virtual void f() override;
+};
 ```

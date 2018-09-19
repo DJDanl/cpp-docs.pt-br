@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 4) de aviso C4564 | Microsoft Docs
+title: Compilador aviso (nível 4) C4564 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f0cf68eb75d420a0d23c04687d4f9492910b53f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea8d392251c8168490d7841ad590731b5a08e7f5
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33293667"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031828"
 ---
-# <a name="compiler-warning-level-4-c4564"></a>Compilador C4564 de aviso (nível 4)
-método de método da classe 'class' define parâmetro padrão não suportado 'parameter'  
-  
- O compilador detectou um método com um ou mais parâmetros com valores padrão. Os valores padrão para os parâmetros serão ignorados quando o método é invocado; Especifica explicitamente valores para esses parâmetros. Se você não especificar explicitamente valores para esses parâmetros, o compilador do C++ gerará um erro.  
-  
- Fornecido o seguinte arquivo. dll criado com o Visual Basic, que permite que os parâmetros padrão em argumentos de método:  
-  
-```  
-' C4564.vb  
-' compile with: vbc /t:library C4564.vb  
-Public class TestClass  
-   Public Sub MyMethod (a as Integer, _  
-                        Optional c as Integer=1)  
-   End Sub  
-End class  
-```  
-  
- O seguinte exemplo de C++ que usa o arquivo. dll criado com o Visual Basic, e  
-  
-```  
-// C4564.cpp  
-// compile with: /clr /W4 /WX  
-#using <C4564.dll>  
-  
-int main() {  
-   TestClass ^ myx = gcnew TestClass();   // C4564  
-   myx->MyMethod(9);  
-   // try the following line instead, to avoid an error  
-   // myx->MyMethod(9, 1);  
-}  
+# <a name="compiler-warning-level-4-c4564"></a>Compilador aviso (nível 4) C4564
+
+método 'method' da classe 'class' define parâmetro padrão não suportado 'parameter'
+
+O compilador detectou um método com um ou mais parâmetros com valores padrão. Os valores padrão para os parâmetros serão ignorados quando o método é invocado; Especifica explicitamente valores para esses parâmetros. Se você não especificar explicitamente valores para esses parâmetros, o compilador do C++ gerará um erro.
+
+Dado o seguinte arquivo. dll criado com o Visual Basic, que permite que os parâmetros padrão em argumentos de método:
+
+```
+' C4564.vb
+' compile with: vbc /t:library C4564.vb
+Public class TestClass
+   Public Sub MyMethod (a as Integer, _
+                        Optional c as Integer=1)
+   End Sub
+End class
+```
+
+E o seguinte exemplo do C++ que usa o arquivo. dll criado com o Visual Basic
+
+```
+// C4564.cpp
+// compile with: /clr /W4 /WX
+#using <C4564.dll>
+
+int main() {
+   TestClass ^ myx = gcnew TestClass();   // C4564
+   myx->MyMethod(9);
+   // try the following line instead, to avoid an error
+   // myx->MyMethod(9, 1);
+}
 ```

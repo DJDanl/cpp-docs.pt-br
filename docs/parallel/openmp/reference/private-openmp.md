@@ -1,5 +1,5 @@
 ---
-title: privada (OpenMP) | Microsoft Docs
+title: privado (OpenMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4af88f450ce6c77a6b0753917516719331199dfd
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7bd5b85e563f8160dd4490b650caf4f146a09410
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33692672"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071231"
 ---
 # <a name="private-openmp"></a>private (OpenMP)
 Especifica que cada thread deve ter sua própria instância de uma variável.  
@@ -32,14 +32,13 @@ Especifica que cada thread deve ter sua própria instância de uma variável.
 private(var)  
 ```  
   
-## <a name="remarks"></a>Comentários  
- onde,  
+### <a name="parameters"></a>Parâmetros
   
- `var`  
- A variável para ter instâncias em cada thread.  
+*var*<br/>
+A variável tiver instâncias em cada thread.  
   
 ## <a name="remarks"></a>Comentários  
- **privada** se aplica às seguintes diretivas:  
+ **privada** aplica-se para as seguintes diretivas:  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
@@ -49,11 +48,11 @@ private(var)
   
 -   [single](../../../parallel/openmp/reference/single.md)  
   
- Para obter mais informações, consulte [2.7.2.1 particular](../../../parallel/openmp/2-7-2-1-private.md).  
+ Para obter mais informações, consulte [2.7.2.1 privada](../../../parallel/openmp/2-7-2-1-private.md).  
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```C  
 // openmp_private.c  
 // compile with: /openmp  
 #include <windows.h>  

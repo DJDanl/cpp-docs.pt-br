@@ -1,5 +1,5 @@
 ---
-title: C2613 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2613 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b86737654a8b3643b473703e6d5f3acece3e29db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 590171fb3a7927e205494dd88bb3351756e75fe7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228829"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46041890"
 ---
-# <a name="compiler-error-c2613"></a>C2613 de erro do compilador
-à direita ',' inválida na lista de classes base  
-  
- Uma vírgula é exibida após a última base em uma lista de classes base.
+# <a name="compiler-error-c2613"></a>Erro do compilador C2613
+
+à direita ',' inválido na lista de classes base
+
+Uma vírgula é exibida após a última base em uma lista de classes base.

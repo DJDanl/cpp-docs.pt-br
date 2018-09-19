@@ -1,5 +1,5 @@
 ---
-title: C2879 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2879 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,24 +16,25 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba1738da7d349ecafd9f10f31d8f05ac1f12df0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 632142ea0efd8a9d009f18b898213cfa92514b16
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243157"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042463"
 ---
-# <a name="compiler-error-c2879"></a>C2879 de erro do compilador
-'symbol': apenas um namespace existente pode ser dado um nome alternativo por uma definição de alias de namespace  
-  
- Não é possível criar um [alias de namespace](../../cpp/namespaces-cpp.md#namespace_aliases) a um símbolo diferente de um namespace.  
-  
- O exemplo a seguir gera C2879:  
-  
-```  
-// C2879.cpp  
-int main() {  
-   int i;  
-   namespace A = i;   // C2879 i is not a namespace  
-}  
+# <a name="compiler-error-c2879"></a>Erro do compilador C2879
+
+'symbol': apenas um namespace existente pode ser dado um nome alternativo por uma definição de alias de namespace
+
+Não é possível criar uma [alias de namespace](../../cpp/namespaces-cpp.md#namespace_aliases) a um símbolo que não seja um namespace.
+
+O exemplo a seguir gera C2879:
+
+```
+// C2879.cpp
+int main() {
+   int i;
+   namespace A = i;   // C2879 i is not a namespace
+}
 ```

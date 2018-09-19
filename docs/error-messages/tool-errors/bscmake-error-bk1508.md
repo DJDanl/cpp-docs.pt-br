@@ -1,5 +1,5 @@
 ---
-title: BSCMAKE erro BK1508 | Microsoft Docs
+title: Erro de BSCMAKE BK1508 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,20 +16,21 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2ae57caba0d6dfda1fa188beee2137a011c1ef3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd27f649563cc750787a4c767a8e359bd7e95b86
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294369"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045322"
 ---
 # <a name="bscmake-error-bk1508"></a>Erro BK1508 (BSCMAKE)
-não é possível excluir o arquivo temporário 'filename' [: motivo]  
-  
- BSCMAKE não é possível excluir um dos seus arquivos temporários.  
-  
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir  
-  
-1.  Outro processo tem o arquivo aberto.  
-  
-2.  Um erro de hardware.
+
+não é possível excluir o arquivo temporário 'filename' [: motivo]
+
+BSCMAKE não é possível excluir um dos seus arquivos temporários.
+
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Para corrigir verificando as possíveis causas a seguir
+
+1. Outro processo tem o arquivo aberto.
+
+1. Um erro de hardware.

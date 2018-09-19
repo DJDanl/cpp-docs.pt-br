@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6b1bc5c90fd837f56dbd98eddb37f624e78080b
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 65e4895af0903008e17b75a38981c169f07fc1c7
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695399"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047742"
 ---
 # <a name="writeonlytextureview-class"></a>Classe writeonly_texture_view
-Fornece acesso writeonly com uma textura.  
+Fornece acesso somente escrita para uma textura.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,11 +45,11 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `value_type`  
- O tipo dos elementos na textura.  
+*value_type*<br/>
+O tipo dos elementos na textura.  
   
- `_Rank`  
- A classificação da textura.  
+*_Rank*<br/>
+A classificação da textura.  
   
 ## <a name="members"></a>Membros  
   
@@ -65,7 +65,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 |Nome|Descrição|  
 |----------|-----------------|  
 |[Construtor de writeonly_texture_view](#ctor)|Inicializa uma nova instância da classe `writeonly_texture_view`.|  
-|[~ writeonly_texture_view destruidor](#ctor)|Destrói a `writeonly_texture_view` objeto.|  
+|[~ writeonly_texture_view destruidor](#ctor)|Destrói o `writeonly_texture_view` objeto.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -77,7 +77,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Copia especificado `writeonly_texture_view` deste objeto.|  
+|[operator=](#operator_eq)|Copia especificado `writeonly_texture_view` objeto para esse outro.|  
   
 ### <a name="public-constants"></a>Constantes públicas  
   
@@ -91,13 +91,13 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
  `writeonly_texture_view`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** amp_graphics.h  
+ **Cabeçalho:** amp_graphics. h  
   
  **Namespace:** Concurrency:: Graphics  
   
 ##  <a name="dtor"></a> ~ writeonly_texture_view 
 
- Destrói a `writeonly_texture_view` objeto.  
+ Destrói o `writeonly_texture_view` objeto.  
   
 ```  
 ~writeonly_texture_view() restrict(amp,cpu);
@@ -105,7 +105,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 ##  <a name="operator_eq"></a> operador = 
 
- Copia especificado `writeonly_texture_view` deste objeto.  
+ Copia especificado `writeonly_texture_view` objeto para esse outro.  
   
 ```  
 writeonly_texture_view<value_type, _Rank>& operator= (
@@ -113,13 +113,13 @@ writeonly_texture_view<value_type, _Rank>& operator= (
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Other`  
- `writeonly_texture_view` objeto do qual copiar.  
+*Outro*<br/>
+`writeonly_texture_view` objeto do qual copiar.  
   
 ### <a name="return-value"></a>Valor de retorno  
  Uma referência a este `writeonly_texture_view` objeto.  
   
-##  <a name="rank"></a> Classificação 
+##  <a name="rank"></a> classificação 
 
  Obtém a classificação do `writeonly_texture_view` objeto.  
   
@@ -138,11 +138,11 @@ void set(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Index`  
- O índice do elemento.  
+*Index*<br/>
+O índice do elemento.  
   
- `value`  
- O novo valor do elemento.  
+*value*<br/>
+O novo valor do elemento.  
   
 ##  <a name="ctor"></a> writeonly_texture_view 
 
@@ -160,14 +160,14 @@ writeonly_texture_view(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_Rank`  
- A classificação da textura.  
+*_Rank*<br/>
+A classificação da textura.  
   
- `value_type`  
- O tipo dos elementos na textura.  
+*value_type*<br/>
+O tipo dos elementos na textura.  
   
- `_Src`  
- A textura que é usada para criar o `writeonly_texture_view`.  
+*_Src*<br/>
+A textura que é usada para criar o `writeonly_texture_view`.  
   
 ## <a name="see-also"></a>Consulte também  
  [Namespace Concurrency::graphics](concurrency-graphics-namespace.md)

@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4348 | Microsoft Docs
+title: Compilador aviso (nível 1) C4348 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86367be7e44e0e50a7c1f8fa309dec50a8399313
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 95d868f9e3a3cebf5b6374b1aa899d812a273b6b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272449"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46049703"
 ---
-# <a name="compiler-warning-level-1-c4348"></a>Compilador C4348 de aviso (nível 1)
-'type': redefinição do parâmetro padrão: número do parâmetro  
-  
- Um parâmetro de modelo foi redefinido.  
-  
- O exemplo a seguir gera C4348:  
-  
-```  
-// C4348.cpp  
-// compile with: /LD /W1  
-template <class T=int> struct A;   // forward declaration  
-  
-template <class T=int> struct A { };   
-// C4348, redefinition of default parameter  
-// try the following line instead  
-// template <class T> struct A { };  
+# <a name="compiler-warning-level-1-c4348"></a>Compilador aviso (nível 1) C4348
+
+'type': redefinição do parâmetro padrão: número do parâmetro
+
+Um parâmetro de modelo foi redefinido.
+
+O exemplo a seguir gera C4348:
+
+```
+// C4348.cpp
+// compile with: /LD /W1
+template <class T=int> struct A;   // forward declaration
+
+template <class T=int> struct A { };
+// C4348, redefinition of default parameter
+// try the following line instead
+// template <class T> struct A { };
 ```

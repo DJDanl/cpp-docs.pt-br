@@ -42,12 +42,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 864bba5b88c7e52b55bd86a61edaaac2d22b0346
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cdd7b68ac9e3bf55f64b9a68f7b8075eab640faa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402303"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056814"
 ---
 # <a name="futime-futime32-futime64"></a>_futime, _futime32, _futime64
 
@@ -80,13 +80,13 @@ Ponteiro para a estrutura que contém a nova data de modificação.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna 0 se for bem-sucedido. Se ocorrer um erro, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, a função retornará -1 e **errno** é definido como **EBADF**, indicando um descritor de arquivo inválido ou **EINVAL**, indicando um inválido parâmetro.
+Retorna 0 se for bem-sucedido. Se ocorrer um erro, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará -1 e **errno** é definido como **EBADF**, que indica um descritor de arquivo inválido, ou **EINVAL**, indicando um inválido parâmetro.
 
 ## <a name="remarks"></a>Comentários
 
-O **futime** rotina define a data de modificação e o tempo de acesso no arquivo aberto associado *fd*. **futime** é idêntico ao [utime](utime-utime32-utime64-wutime-wutime32-wutime64.md), exceto que o argumento é o descritor de arquivo de um arquivo aberto, em vez do nome de um arquivo ou um caminho para um arquivo. O **utimbuf** estrutura contém campos para a nova data de modificação e a hora de acesso. Os dois campos devem conter valores válidos. **_utimbuf32** e **_utimbuf64** são idênticos aos **utimbuf** , exceto para o uso dos tipos de tempo de 32 bits e 64 bits, respectivamente. **futime** e **utimbuf** usar um tipo de tempo de 64 bits e **futime** é idêntico em comportamento **futime64**. Se você precisar forçar o comportamento antigo, definir **_USE_32BIT_TIME_T**. Fazer isso faz com que **futime** ser idêntico em comportamento ao **futime32** e faz com que o **utimbuf** estrutura para usar o tipo de tempo de 32 bits, tornando-a equivalente a **__utimbuf32**.
+O **futime** rotina define a data de modificação e a hora de acesso no arquivo aberto associado *fd*. **futime** é idêntica à [utime](utime-utime32-utime64-wutime-wutime32-wutime64.md), exceto que o argumento é o descritor de arquivo de um arquivo aberto, em vez do nome de um arquivo ou um caminho para um arquivo. O **utimbuf** estrutura contém campos para a nova data de modificação e a hora de acesso. Os dois campos devem conter valores válidos. **_utimbuf32** e **_utimbuf64** são idênticas às **utimbuf** exceto para o uso dos tipos de tempo de 32 bits e 64 bits, respectivamente. **futime** e **utimbuf** usar um tipo de tempo de 64 bits e **futime** é idêntico ao comportamento **_futime64**. Se você precisar forçar o comportamento antigo, defina **_USE_32BIT_TIME_T**. Fazer isso faz com que **futime** seja idêntico ao comportamento **_futime32** e faz com que o **utimbuf** estrutura para usar o tipo de tempo de 32 bits, tornando-o equivalente ao **__utimbuf32**.
 
-**futime64**, que usa o **utimbuf64** estrutura, pode ler e modificar as datas de arquivo até 23:59:59, 31 de dezembro de 3000 a UTC; enquanto uma chamada para **futime32** falhará se a data em que o arquivo é Depois de 23:59:59 18 de janeiro de 2038, UTC. Meia-noite de 1º de janeiro de 1970 é o limite inferior do intervalo de datas para essas funções.
+**_futime64**, que usa o **__utimbuf64** estrutura, que pode ler e modificar datas de arquivo por meio do 23:59:59, 31 de dezembro de 3000, a UTC; enquanto uma chamada para **_futime32** falhará se a data em que o arquivo é mais tarde do que 23:59:59 18 de janeiro de 2038, UTC. Meia-noite de 1º de janeiro de 1970 é o limite inferior do intervalo de datas para essas funções.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -143,20 +143,20 @@ Arbitrary file contents.
 ### <a name="sample-output"></a>Saída de Exemplo
 
 ```Output
- Volume in drive Z has no label.
- Volume Serial Number is 5C68-57C1
+Volume in drive Z has no label.
+Volume Serial Number is 5C68-57C1
 
- Directory of Z:\crt
+Directory of Z:\crt
 
- 03/25/2004  10:40 AM                24 crt_futime.c_input
+03/25/2004  10:40 AM                24 crt_futime.c_input
                1 File(s)             24 bytes
                0 Dir(s)  24,268,476,416 bytes free
- Volume in drive Z has no label.
- Volume Serial Number is 5C68-57C1
+Volume in drive Z has no label.
+Volume Serial Number is 5C68-57C1
 
- Directory of Z:\crt
+Directory of Z:\crt
 
- 03/25/2004  10:41 AM                24 crt_futime.c_input
+03/25/2004  10:41 AM                24 crt_futime.c_input
                1 File(s)             24 bytes
                0 Dir(s)  24,268,476,416 bytes free
 File time modified

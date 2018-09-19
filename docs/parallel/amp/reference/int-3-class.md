@@ -82,15 +82,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26add4a57fac2cb2dfed2a5bd32f2fe0a477e938
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2d1f0f26856d6da002f5ba74bbfa8e98f27e4f02
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688941"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042579"
 ---
 # <a name="int3-class"></a>Classe int_3
-Representa um vetor curto de três inteiros.  
+Representa um vetor curto de três números inteiros.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -110,7 +110,7 @@ class int_3;
   
 |Nome|Descrição|  
 |----------|-----------------|  
-|[Construtor int_3](#ctor)|Sobrecarregado. Padrão construtor inicializa todos os elementos com 0.|  
+|[Construtor int_3](#ctor)|Sobrecarregado. Padrão construtor, inicializa todos os elementos com 0.|  
   
 ### <a name="public-methods"></a>Métodos públicos  
   
@@ -218,13 +218,13 @@ class int_3;
  `int_3`  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** amp_short_vectors.h  
+ **Cabeçalho:** amp_short_vectors. h  
   
  **Namespace:** Concurrency:: Graphics  
 
 ## <a name="ctor"></a> int_3 
 
-Padrão construtor inicializa todos os elementos com 0.  
+Padrão construtor, inicializa todos os elementos com 0.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -259,20 +259,20 @@ explicit inline int_3(
 ```  
   
 ### <a name="parameters"></a>Parâmetros  
- `_V0`  
- O valor para inicializar o elemento 0.  
+*_V0*<br/>
+O valor para inicializar o elemento 0.  
   
- `_V1`  
- O valor para inicializar o elemento 1.  
+*V1*<br/>
+O valor para inicializar o elemento 1.  
   
- `_V2`  
- O valor para inicializar o elemento 2.  
+*_V2*<br/>
+O valor para inicializar o elemento 2.  
   
- `_V`  
- O valor para a inicialização.  
+*_V*<br/>
+O valor para a inicialização.  
   
- `_Other`  
- O objeto usado para inicializar.  
+*Outro*<br/>
+O objeto usado para inicializar.  
   
 ## <a name="size"></a> Tamanho 
 

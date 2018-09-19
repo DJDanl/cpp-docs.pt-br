@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5746fb3a4e704d866ce6e929de832d783e7afc8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 60d8d81e772a6da66254d6e777c0cafa4fc8a296
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757036"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46069268"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL e marshaler livre de threads
 
@@ -37,9 +37,9 @@ Ao usar essa opção, as classes devem assumir a responsabilidade para o acesso 
 
 ## <a name="see-also"></a>Consulte também
 
-[Conceitos](../atl/active-template-library-atl-concepts.md)   
-[CoCreateFreeThreadedMarshaler](/windows/desktop/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)   
-[IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal)   
-[Quando usar a tabela de Interface Global](/windows/desktop/com/when-to-use-the-global-interface-table)   
+[Conceitos](../atl/active-template-library-atl-concepts.md)<br/>
+[CoCreateFreeThreadedMarshaler](/windows/desktop/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)<br/>
+[IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal)<br/>
+[Quando usar a tabela de Interface Global](/windows/desktop/com/when-to-use-the-global-interface-table)<br/>
 [Problemas de Threading do servidor em processo](/windows/desktop/com/in-process-server-threading-issues)
 

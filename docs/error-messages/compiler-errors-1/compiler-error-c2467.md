@@ -1,5 +1,5 @@
 ---
-title: C2467 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2467 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ed9b1b50c63852ed830c2072d7cd8fce668a671
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8bab320bfdba9fcbd408771b7859a22fc85fa06e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225637"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46048767"
 ---
-# <a name="compiler-error-c2467"></a>C2467 de erro do compilador
-declaração inválida de anônimo '-tipo definido pelo usuário '  
-  
- Um tipo aninhado definido pelo usuário foi declarado. Este é um erro durante a compilação do código-fonte C com a opção de compatibilidade de ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) habilitado.  
-  
- O exemplo a seguir gera C2467:  
-  
-```  
-//C2467.c  
-// compile with: /Za   
-int main() {  
-   struct X {  
-      union { int i; };   // C2467, nested declaration  
-   };  
-}  
+# <a name="compiler-error-c2467"></a>Erro do compilador C2467
+
+declaração inválida de anônimo '-tipo definido pelo usuário '
+
+Um tipo aninhado definido pelo usuário foi declarado. Este é um erro ao compilar o código-fonte com a opção de compatibilidade de ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) habilitado.
+
+O exemplo a seguir gera C2467:
+
+```
+//C2467.c
+// compile with: /Za
+int main() {
+   struct X {
+      union { int i; };   // C2467, nested declaration
+   };
+}
 ```

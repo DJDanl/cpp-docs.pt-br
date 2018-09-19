@@ -20,15 +20,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6ab5f7309da1a037f7066d44815cafc934b162cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a55425c891999142fe32ae08125cce22728daffa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111937"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040682"
 ---
 # <a name="for-each-in"></a>for each, in
-Itera por meio de uma matriz ou coleção. Essa palavra-chave não padrão está disponível em projetos em C++/CLI e nativos em C++. No entanto, seu uso não é recomendado. Considere o uso de um padrão [com base em intervalo de instrução (C++)](../cpp/range-based-for-statement-cpp.md) em vez disso.  
+Itera por meio de uma matriz ou coleção. Essa palavra-chave não padrão está disponível em projetos em C++/CLI e nativos em C++. No entanto, seu uso não é recomendado. Considere o uso de um padrão [de instrução (C++) baseado em intervalo](../cpp/range-based-for-statement-cpp.md) em vez disso.  
   
 ## <a name="all-runtimes"></a>Todos os Tempos de Execução  
  **Sintaxe**  
@@ -43,17 +43,17 @@ Itera por meio de uma matriz ou coleção. Essa palavra-chave não padrão está
   
  **Parâmetros**  
   
- `type`  
- O tipo de `identifier`.  
+*type*<br/>
+O tipo de `identifier`.  
   
- `identifier`  
- A variável de iteração que representa o elemento da coleção.  Quando `identifier` é um [operador de referência de rastreamento](../windows/tracking-reference-operator-cpp-component-extensions.md), você pode modificar o elemento.  
+*identifier*<br/>
+A variável de iteração que representa o elemento da coleção.  Quando `identifier` é um [operador de referência de acompanhamento](../windows/tracking-reference-operator-cpp-component-extensions.md), você pode modificar o elemento.  
   
- `expression`  
- Uma expressão ou coleção de matriz. O elemento de coleção deve permitir que o compilador converta-o no tipo `identifier`.  
+*Expressão*<br/>
+Uma expressão ou coleção de matriz. O elemento de coleção deve permitir que o compilador converta-o no tipo `identifier`.  
   
- `statements`  
- Uma ou mais instruções a serem executadas.  
+*Instruções*<br/>
+Uma ou mais instruções a serem executadas.  
   
  **Comentários**  
   
@@ -61,7 +61,7 @@ Itera por meio de uma matriz ou coleção. Essa palavra-chave não padrão está
   
  O *instruções* são executadas para cada elemento da matriz ou coleção. Após a iteração ter sido concluída para todos os elementos na coleção, o controle é transferido para a próxima instrução que segue o bloco `for each`.  
   
- `for each` e `in` são [palavras-chave contextuais](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ `for each` e `in` estão [palavras-chave contextuais](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
  Para saber mais:  
   
@@ -118,12 +118,12 @@ Testing
 ## <a name="common-language-runtime"></a>Common Language Runtime 
  **Comentários**  
   
- A sintaxe CLR é o mesmo que o **todos os tempos de execução** sintaxe, exceto da seguinte maneira.  
+ A sintaxe CLR é igual a **todos os tempos de execução** sintaxe, exceto pelo seguinte:.  
   
  *Expressão*  
- Uma expressão de matriz gerenciada ou coleção. O elemento de coleção deve ser, de modo que o compilador pode convertê-lo de <xref:System.Object> para o *identificador* tipo.  
+ Uma expressão de matriz gerenciada ou coleção. O elemento de coleção deve ser, de modo que o compilador poderá convertê-lo partir <xref:System.Object> para o *identificador* tipo.  
   
- *expressão* é avaliada como um tipo que implementa <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, ou um tipo que define uma `GetEnumerator` método que retorna um tipo que implementa <xref:System.Collections.IEnumerator> ou declara todos os métodos que são definidos em `IEnumerator`.  
+ *expressão* é avaliada como um tipo que implementa <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, ou um tipo que define uma `GetEnumerator` método que retorna um tipo que implementa <xref:System.Collections.IEnumerator> ou declara todos os métodos que são definidos no `IEnumerator`.  
   
 ### <a name="requirements"></a>Requisitos  
  Opção de compilador: **/clr**  

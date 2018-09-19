@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32085c4c37c82567eb78f46b52bcc4a6c41daae5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 18a5508301c54637fb34a751c8f1c4e307e47d50
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33302653"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068956"
 ---
 # <a name="cvtres-fatal-error-cvt1100"></a>Erro fatal CVT1100 (CVTRES)
-recurso duplicado —: tipo, nome:, idiomas:, sinalizadores: sinalizadores, tamanho:  
-  
- Determinado recurso foi especificado mais de uma vez.  
-  
- Você pode obter esse erro se o vinculador está criando uma biblioteca de tipos e você não especificar [/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md) e um recurso em seu projeto já utiliza 1. Nesse caso, especifique /TLBID e outro número até 65535.
+
+Duplicar o recurso, tipo: tipo, nome: nome, idiomas: idiomas, sinalizadores: sinalizadores, tamanho: tamanho
+
+O recurso determinado foi especificado mais de uma vez.
+
+Você pode obter esse erro se o vinculador é criando uma biblioteca de tipos e você não especificou [/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md) e um recurso em seu projeto já usa 1. Nesse caso, especifique /TLBID e outro número até 65535.

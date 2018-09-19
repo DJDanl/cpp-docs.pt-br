@@ -16,14 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98a6c4803138a0f4fbfc71f17ed4e963478af684
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 530bcc0dab9182d0c194f23f6aa5575e431edb03
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33299182"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46060597"
 ---
 # <a name="linker-tools-warning-lnk4194"></a>Aviso LNK4194 (Ferramentas de Vinculador)
-Nome do /DELAYLOAD:dll ignorado  
-  
- Não é possível o vinculador [carga com atraso](../../build/reference/delayload-delay-load-import.md) DLL solicitado.
+
+Nome de /DELAYLOAD:dll ignorado
+
+O vinculador não pode [carregamento de atraso](../../build/reference/delayload-delay-load-import.md) DLL solicitado.

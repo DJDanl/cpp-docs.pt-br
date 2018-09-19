@@ -1,5 +1,5 @@
 ---
-title: Compilador erro C3170 | Microsoft Docs
+title: Erro do compilador C3170 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb077bcad95de0be17e630803b5d4ea9825be61
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e7a193abcd59c3e9454eec1108f1e3bbb66efcc8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255907"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070360"
 ---
-# <a name="compiler-error-c3170"></a>C3170 de erro do compilador
-não é possível ter identificadores de módulo diferentes em um projeto  
-  
- [módulo](../../windows/module-cpp.md) atributos com nomes diferentes foram encontrados em dois dos arquivos em uma compilação. Somente um único `module` atributo pode ser especificado por compilação.  
-  
- Idêntico `module` atributos podem ser especificados em mais de um arquivo de código fonte.  
-  
- Por exemplo, se os atributos de módulo a seguir foram encontrados:  
-  
-```  
-// C3170.cpp  
-[ module(name="MyModule", uuid="373a1a4e-469b-11d3-a6b0-00c04f79ae8f") ];  
-int main() {}  
-```  
-  
- E, em seguida,  
-  
-```  
-// C3170b.cpp  
-// compile with: C3170.cpp  
-// C3170 expected  
-[ module(name="MyModule1", uuid="373a1a4e-469b-11d3-a6b0-00c04f79ae8f") ];  
-```  
-  
- o compilador gere C3170 (Observe os nomes diferentes).
+# <a name="compiler-error-c3170"></a>Erro do compilador C3170
+
+não é possível ter identificadores de módulo diferentes em um projeto
+
+[módulo](../../windows/module-cpp.md) atributos com nomes diferentes foram encontrados em dois dos arquivos em uma compilação. Somente um exclusivo `module` atributo pode ser especificado por compilação.
+
+Idêntico `module` atributos podem ser especificados em mais de um arquivo de código de origem.
+
+Por exemplo, se os atributos de módulo a seguir foram encontrados:
+
+```
+// C3170.cpp
+[ module(name="MyModule", uuid="373a1a4e-469b-11d3-a6b0-00c04f79ae8f") ];
+int main() {}
+```
+
+E, em seguida,
+
+```
+// C3170b.cpp
+// compile with: C3170.cpp
+// C3170 expected
+[ module(name="MyModule1", uuid="373a1a4e-469b-11d3-a6b0-00c04f79ae8f") ];
+```
+
+o compilador geraria C3170 (Observe os nomes diferentes).

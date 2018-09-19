@@ -1,5 +1,5 @@
 ---
-title: C2808 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2808 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,27 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 357dda3a6726fce3055f0d1eb2192ac4d135e8bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e4d256fd07f717137f6afe890884f3c1f54944ec
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33235617"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055917"
 ---
-# <a name="compiler-error-c2808"></a>C2808 de erro do compilador
-unário 'operator operador' possui muitos parâmetros formais  
-  
- O operador unário tem uma lista de parâmetros nonvoid.  
-  
- O exemplo a seguir gera C2808:  
-  
-```  
-// C2808.cpp  
-// compile with: /c  
-class X {  
-public:  
-   X operator! ( X );   // C2808 nonvoid parameter list  
-   X operator! ( void );   // OK  
-};  
-  
+# <a name="compiler-error-c2808"></a>Erro do compilador C2808
+
+unário 'operator operador' tem muitos parâmetros formais
+
+O operador unário tem uma lista de parâmetros nonvoid.
+
+O exemplo a seguir gera C2808:
+
+```
+// C2808.cpp
+// compile with: /c
+class X {
+public:
+   X operator! ( X );   // C2808 nonvoid parameter list
+   X operator! ( void );   // OK
+};
+
 ```

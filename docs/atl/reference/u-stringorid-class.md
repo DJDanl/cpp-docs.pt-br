@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c465e5da4d3822782bd9c7b81e497ea544e3bd1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 000e43926a83bdd7457c33c656383ae44dce6259
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759948"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46046271"
 ---
 # <a name="ustringorid-class"></a>Classe u_stringorid
 
@@ -76,16 +76,16 @@ LPCTSTR m_lpstr;
 O construtor UINT converte seu argumento em um tipo de recurso compatível com funções de gerenciamento de recursos do Windows usando a macro MAKEINTRESOURCE e o resultado é armazenado no membro de dados único da classe, [m_lpstr](#_u_stringorid__m_lpstr).
 
 ```
-_U_STRINGorID(UINT nID);  
+_U_STRINGorID(UINT nID);
 _U_STRINGorID(LPCTSTR lpString);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*nID*  
+*nID*<br/>
 Uma ID de recurso.
 
-*lpString*  
+*lpString*<br/>
 Um nome de recurso.
 
 ### <a name="remarks"></a>Comentários

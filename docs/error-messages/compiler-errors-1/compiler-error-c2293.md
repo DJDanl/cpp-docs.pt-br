@@ -1,5 +1,5 @@
 ---
-title: C2293 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2293 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6b3f395199a1621d507683aa6c79b1212888145
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c5a24be3c51f17d12712b950babe5e723f1633c
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171188"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46031165"
 ---
-# <a name="compiler-error-c2293"></a>C2293 de erro do compilador
-'Identificador': inválido ter uma variável de membro como um especificador based  
-  
- Especificadores de `__based` modificador deve ser ponteiros não membro.  
-  
- O exemplo a seguir gera C2293:  
-  
-```  
-// C2293.cpp  
-// compile with: /c  
-class A {  
-   static int *i;  
-   void __based(i) *bp;   // C2293  
-   void *bp2;   // OK  
-};  
+# <a name="compiler-error-c2293"></a>Erro do compilador C2293
+
+'identifier': ilegal para ter uma variável de membro como um especificador based
+
+Os especificadores de `__based` modificador deve ser ponteiros de não membro.
+
+O exemplo a seguir gera C2293:
+
+```
+// C2293.cpp
+// compile with: /c
+class A {
+   static int *i;
+   void __based(i) *bp;   // C2293
+   void *bp2;   // OK
+};
 ```

@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 244f3c4a5cf5b34e75ad9d94a167648abdba38a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef739da3bc106a654e11c4a13bae7be59d35fc90
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301535"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46044126"
 ---
 # <a name="command-line-warning-d9028"></a>Aviso D9028 (linha de comando)
-Falha na recompilação mínima, revertendo para compilação normal  
-  
- O arquivo de .idb de projeto está corrompido. Exclua o arquivo e recompilar.  
-  
- Para obter mais informações sobre as recriações de mínimo e o arquivo .idb, consulte o [opção de compilador /Gm](../../build/reference/gm-enable-minimal-rebuild.md).
+
+Falha na recompilação mínima, revertendo para compilação normal
+
+O arquivo. IDB do projeto está corrompido. Exclua o arquivo e recompile.
+
+Para obter mais informações sobre as recompilações mínimo e o arquivo. IDB, consulte o [opção de compilador /Gm](../../build/reference/gm-enable-minimal-rebuild.md).

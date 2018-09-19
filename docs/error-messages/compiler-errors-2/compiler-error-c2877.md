@@ -1,5 +1,5 @@
 ---
-title: C2877 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2877 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96ab91d64806e7d4ca28bf43e812640790b78e87
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e2f293cefdc37c4adb2882f52d6676dcd912cfef
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245006"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46047532"
 ---
-# <a name="compiler-error-c2877"></a>C2877 de erro do compilador
-'symbol' não é acessível de 'class'  
-  
- Derivada de uma classe base de todos os membros devem estar acessíveis na classe derivada.  
-  
- O exemplo a seguir gera C2877:  
-  
-```  
-// C2877.cpp  
-// compile with: /c  
-class A {  
-private:  
-   int a;  
-};  
-  
-class B : public A {  
-   using A::a;   // C2877  
-};  
+# <a name="compiler-error-c2877"></a>Erro do compilador C2877
+
+'symbol' não é acessível de 'class'
+
+Todos os membros derivados de uma classe base devem ser acessíveis na classe derivada.
+
+O exemplo a seguir gera C2877:
+
+```
+// C2877.cpp
+// compile with: /c
+class A {
+private:
+   int a;
+};
+
+class B : public A {
+   using A::a;   // C2877
+};
 ```

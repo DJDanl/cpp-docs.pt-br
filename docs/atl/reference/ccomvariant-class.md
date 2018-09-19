@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf9fbd4967bbd3091d734f9b70aed9350d63a25e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 89b1dbfe9dcf00582f5f8736a4706a18439b51c6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753188"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46042540"
 ---
 # <a name="ccomvariant-class"></a>Classe CComVariant
 
@@ -43,9 +43,8 @@ Essa classe encapsula o tipo de VARIANTE, fornecendo um membro que indica o tipo
 
 ## <a name="syntax"></a>Sintaxe
 
-```  
-cpp
-class CComVariant : public tagVARIANT  
+```cpp
+class CComVariant : public tagVARIANT
 ```
 
 ## <a name="members"></a>Membros
@@ -108,7 +107,7 @@ HRESULT Attach(VARIANT* pSrc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pSrc*  
+*pSrc*<br/>
 [in] Aponta para o [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) a ser anexado ao objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -151,39 +150,39 @@ CComVariant(const CComBSTR& bstrSrc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*varSrc*  
+*varSrc*<br/>
 [in] O `CComVariant` ou VARIANTE usado para inicializar o `CComVariant` objeto. O conteúdo da variante de fonte é copiado para o destino sem conversão.
 
-*lpszSrc*  
+*lpszSrc*<br/>
 [in] A cadeia de caracteres usada para inicializar o `CComVariant` objeto. Você pode passar uma cadeia de caracteres terminada em zero larga (Unicode) para a versão LPCOLESTR do construtor ou uma cadeia de caracteres ANSI para a versão LPCSTR. Em ambos os casos a cadeia de caracteres é convertida para um BSTR alocado usando Unicode `SysAllocString`. O tipo do `CComVariant` objeto será VT_BSTR.
 
-*bSrc*  
+*bSrc*<br/>
 [in] O **bool** usado para inicializar o `CComVariant` objeto. O **bool** argumento é convertido para um VARIANT_BOOL antes de serem armazenados. O tipo do `CComVariant` objeto será VT_BOOL.
 
-*nSrc*  
+*nSrc*<br/>
 [in] O **int**, **bytes**, **curto**, **longo**, LONGLONG, ULONGLONG, **unsigned short**, **unsigned long**, ou **int sem sinal** usado para inicializar o `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_I4, VT_UI1, VT_I2, VT_I4, VT_I8, VT_UI8, VT_UI4, VT_UI2 ou VT_UI4, respectivamente.
 
-*vtSrc*  
+*vtSrc*<br/>
 [in] O tipo da variante. Quando o primeiro parâmetro é **int**, os tipos válidos são VT_I4 e VT_INT. Quando o primeiro parâmetro é **longo**, os tipos válidos são VT_I4 e VT_ERROR. Quando o primeiro parâmetro é **duplas**, os tipos válidos são VT_R8 e VT_DATE. Quando o primeiro parâmetro é **unsigned int**, os tipos válidos são VT_UI4 e VT_UINT.
 
-*{1&gt;fltsrc*  
+*{1&gt;fltsrc*<br/>
 [in] O **float** usado para inicializar o `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_R4.
 
-*dblsrc&lt;1}*  
+*dblsrc&lt;1}*<br/>
 [in] O **duplas** usado para inicializar o `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_R8.
 
-*1&gt;Operator=(&lt;1}{2&gt;cysrc&lt;2}{3&gt;)&lt;3*  
+*1&gt;Operator=(&lt;1}{2&gt;cysrc&lt;2}{3&gt;)&lt;3*<br/>
 [in] O `CY` usado para inicializar o `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_CY.
 
-*pSrc*  
+*pSrc*<br/>
 [in] O `IDispatch` ou `IUnknown` ponteiro usado para inicializar o `CComVariant` objeto. `AddRef` será chamado no ponteiro de interface. O tipo do `CComVariant` objeto será VT_DISPATCH ou VT_UNKNOWN, respectivamente.
 
 Ou, o ponteiro SAFERRAY usado para inicializar o `CComVariant` objeto. Uma cópia de um SAFEARRAY de é armazenada no `CComVariant` objeto. O tipo do `CComVariant` objeto será uma combinação do tipo original do SAFEARRAY e VT_ARRAY.
 
-*cSrc*  
+*cSrc*<br/>
 [in] O **char** usado para inicializar o `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_I1.
 
-*1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3*  
+*1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3*<br/>
 [in] O BSTR é usado para inicializar o `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_BSTR.
 
 ### <a name="remarks"></a>Comentários
@@ -212,10 +211,10 @@ HRESULT ChangeType(VARTYPE vtNew, const VARIANT* pSrc = NULL);
 
 ### <a name="parameters"></a>Parâmetros
 
-*vtNew*  
+*vtNew*<br/>
 [in] O novo tipo para o `CComVariant` objeto.
 
-*pSrc*  
+*pSrc*<br/>
 [in] Um ponteiro para a VARIANTE cujo valor será convertido para o novo tipo. O valor padrão é NULL, o que significa o `CComVariant` objeto será convertido em vigor.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -252,7 +251,7 @@ HRESULT Copy(const VARIANT* pSrc);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pSrc*  
+*pSrc*<br/>
 [in] Um ponteiro para o [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) a serem copiados.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -269,7 +268,7 @@ HRESULT CopyTo(BSTR* pstrDest);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pstrDest*  
+*pstrDest*<br/>
 Aponta para um BSTR que receberá uma cópia do conteúdo do `CComVariant` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -290,7 +289,7 @@ HRESULT Detach(VARIANT* pDest);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pDest*  
+*pDest*<br/>
 [out] Retorna o valor de VARIANTE subjacente do objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -352,36 +351,36 @@ CComVariant& operator=(char cSrc) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*varSrc*  
+*varSrc*<br/>
 [in] O `CComVariant` ou [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) a ser atribuído ao `CComVariant` objeto. O conteúdo da variante de fonte é copiado para o destino sem conversão.
 
-*1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3*  
+*1&gt;Operator=(&lt;1}{2&gt;bstrsrc&lt;2}{3&gt;)&lt;3*<br/>
 [in] O BSTR a ser atribuído ao `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_BSTR.
 
-*lpszSrc*  
+*lpszSrc*<br/>
 [in] A cadeia de caracteres a ser atribuída ao `CComVariant` objeto. Você pode passar uma cadeia de caracteres terminada em zero larga (Unicode) para a versão LPCOLESTR do operador ou uma cadeia de caracteres ANSI para a versão LPCSTR. Em ambos os casos, a cadeia de caracteres é convertida para um BSTR alocado usando Unicode `SysAllocString`. O tipo do `CComVariant` objeto será VT_BSTR.
 
-*bSrc*  
+*bSrc*<br/>
 [in] O **bool** a ser atribuído ao `CComVariant` objeto. O **bool** argumento é convertido para um VARIANT_BOOL antes de serem armazenados. O tipo do `CComVariant` objeto será VT_BOOL.
 
-*nSrc*  
+*nSrc*<br/>
 [in] O **int**, BYTE, **curto**, **longo**, LONGLONG, ULONGLONG, **unsigned short**, **unsigned long**, ou **int sem sinal** a ser atribuído ao `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_I4, VT_UI1, VT_I2, VT_I4, VT_I8, VT_UI8, VT_UI4, VT_UI2 ou VT_UI4, respectivamente.
 
-*{1&gt;fltsrc*  
+*{1&gt;fltsrc*<br/>
 [in] O **float** a ser atribuído ao `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_R4.
 
-*dblsrc&lt;1}*  
+*dblsrc&lt;1}*<br/>
 [in] O **duplas** a ser atribuído ao `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_R8.
 
-*1&gt;Operator=(&lt;1}{2&gt;cysrc&lt;2}{3&gt;)&lt;3*  
+*1&gt;Operator=(&lt;1}{2&gt;cysrc&lt;2}{3&gt;)&lt;3*<br/>
 [in] O `CY` a ser atribuído ao `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_CY.
 
-*pSrc*  
+*pSrc*<br/>
 [in] O `IDispatch` ou `IUnknown` ponteiro a ser atribuído ao `CComVariant` objeto. `AddRef` será chamado no ponteiro de interface. O tipo do `CComVariant` objeto será VT_DISPATCH ou VT_UNKNOWN, respectivamente.
 
 Ou, um ponteiro SAFEARRAY a ser atribuído ao `CComVariant` objeto. Uma cópia de um SAFEARRAY de é armazenada no `CComVariant` objeto. O tipo do `CComVariant` objeto será uma combinação do tipo original do SAFEARRAY e VT_ARRAY.
 
-*cSrc*  
+*cSrc*<br/>
 [in] O caractere a ser atribuído ao `CComVariant` objeto. O tipo do `CComVariant` objeto será VT_I1.
 
 ##  <a name="operator_eq_eq"></a>  CComVariant::operator = =
@@ -446,7 +445,7 @@ HRESULT ReadFromStream(IStream* pStream);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pStream*  
+*pStream*<br/>
 [in] Um ponteiro para o [IStream](/windows/desktop/api/objidl/nn-objidl-istream) interface no fluxo que contém os dados.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -468,10 +467,10 @@ void SetByRef(T* pT) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 O tipo de VARIANTE, por exemplo, BSTR, **int**, ou **char**.
 
-*pT*  
+*pT*<br/>
 O ponteiro usado para inicializar o `CComVariant` objeto.
 
 ### <a name="remarks"></a>Comentários
@@ -490,7 +489,7 @@ HRESULT WriteToStream(IStream* pStream);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pStream*  
+*pStream*<br/>
 [in] Um ponteiro para o [IStream](/windows/desktop/api/objidl/nn-objidl-istream) interface em um fluxo.
 
 ### <a name="return-value"></a>Valor de retorno

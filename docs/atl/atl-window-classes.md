@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e67849da9eebf9f150c4363e05a6f3fdcb943c0d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a13ec85cc393b1d7bff39f26866e48525e46d336
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756383"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46071023"
 ---
 # <a name="atl-window-classes"></a>Classes de janela ATL
 
@@ -35,29 +35,29 @@ Esta seção descreve as classes de janela ATL e explica como usá-los.
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Introdução às classes de janela da ATL](../atl/introduction-to-atl-window-classes.md)  
+[Introdução às classes de janela da ATL](../atl/introduction-to-atl-window-classes.md)<br/>
 Descreve cada classe de janela ATL rapidamente e fornece links para o material de referência sobre eles.
 
-[Usando uma janela](../atl/using-a-window.md)  
+[Usando uma janela](../atl/using-a-window.md)<br/>
 Discute como usar `CWindow` para manipular uma janela.
 
-[Implementando uma janela](../atl/implementing-a-window.md)  
+[Implementando uma janela](../atl/implementing-a-window.md)<br/>
 Discute os manipuladores de mensagens, mapas de mensagem e usando `CWindowImpl`. Inclui detalhes sobre superclassing e criação de subclasses.
 
-[Implementando uma caixa de diálogo](../atl/implementing-a-dialog-box.md)  
+[Implementando uma caixa de diálogo](../atl/implementing-a-dialog-box.md)<br/>
 Aborda os dois métodos para adicionar uma classe de caixa de diálogo e mostra um exemplo de código.
 
-[Usando janelas independentes](../atl/using-contained-windows.md)  
+[Usando janelas independentes](../atl/using-contained-windows.md)<br/>
 Discute o windows independentes em ATL, que são janelas que delegam suas mensagens para um objeto de contêiner em vez de tratá-los em sua própria classe.
 
-[Noções básicas sobre as características da janela](../atl/understanding-window-traits.md)  
+[Noções básicas sobre as características da janela](../atl/understanding-window-traits.md)<br/>
 Discute as classes de características de janela em ATL. Essas classes fornecem um método simples para padronizar os estilos usados para a criação de um objeto de janela.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[ATL](../atl/active-template-library-atl-concepts.md)  
+[ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Fornece links para tópicos conceituais sobre como programar usando o Active Template Library.
 
-[Classes de suporte ao Windows](../atl/windows-support-classes.md)  
+[Classes de suporte ao Windows](../atl/windows-support-classes.md)<br/>
 Lista de classes adicionais de ATL que dão suporte ao windows e mapas de mensagem em ATL.
 

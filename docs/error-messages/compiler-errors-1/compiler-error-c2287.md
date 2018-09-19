@@ -1,5 +1,5 @@
 ---
-title: C2287 de erro do compilador | Microsoft Docs
+title: Erro do compilador C2287 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,28 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b78dd6d7ffc44822cdff383f88b11a6cd899adf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a57d2738ba55d4964274c3c25038b8ebf248b24
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33170262"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46072570"
 ---
-# <a name="compiler-error-c2287"></a>C2287 de erro do compilador
-'class': representação de herança: 'representation1' é menos geral do que o necessário 'representation2'  
-  
- Uma classe é declarada com uma representação mais simples do que o necessário.  
-  
- O exemplo a seguir gera C2287:  
-  
-```  
-// C2287.cpp  
-// compile with: /vmg /c  
-class __single_inheritance X;  
-class __single_inheritance Y;  
-  
-struct A { };  
-struct B { };  
-struct X : A, B { };  // C2287  X uses multiple inheritance  
-struct Y : A { };  // OK  
+# <a name="compiler-error-c2287"></a>Erro do compilador C2287
+
+'class': representação de herança: 'representation1' é menos geral do que o 'representation2' necessária
+
+Uma classe é declarada com uma representação mais simples do que o necessário.
+
+O exemplo a seguir gera C2287:
+
+```
+// C2287.cpp
+// compile with: /vmg /c
+class __single_inheritance X;
+class __single_inheritance Y;
+
+struct A { };
+struct B { };
+struct X : A, B { };  // C2287  X uses multiple inheritance
+struct Y : A { };  // OK
 ```

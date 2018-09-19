@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 1) de aviso C4441 | Microsoft Docs
+title: Compilador aviso (nível 1) C4441 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,31 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c2abf64be0e9b80bb4158b0ed163906adc09945
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a505c47ea348175a16c91c309646428f1222d091
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33278223"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46033427"
 ---
-# <a name="compiler-warning-level-1-c4441"></a>Compilador C4441 de aviso (nível 1)
-convenção de chamada de 'cc1' ignorado; 'cc2' usado em vez disso  
-  
- Funções de membro em tipos gerenciados definidos pelo usuário e genéricos de função global devem usar o [clrcall](../../cpp/clrcall.md) convenção de chamada.  O compilador usado `__clrcall`.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir gera C4441.  
-  
-```  
-// C4441.cpp  
-// compile with: /clr /W1 /c  
-generic <class ItemType>  
-void __cdecl Test(ItemType item) {}   // C4441  
-// try the following line instead  
-// void Test(ItemType item) {}  
-  
-ref struct MyStruct {  
-   void __cdecl Test(){}   // C4441  
-   void Test2(){}   // OK  
-};  
+# <a name="compiler-warning-level-1-c4441"></a>Compilador aviso (nível 1) C4441
+
+convenção de chamada de 'cc1' ignorado; 'cc2' usado em vez disso
+
+Funções de membro em tipos gerenciados definidos pelo usuário e genéricos de função global devem usar o [clrcall](../../cpp/clrcall.md) convenção de chamada.  O compilador usado `__clrcall`.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir gera C4441.
+
+```
+// C4441.cpp
+// compile with: /clr /W1 /c
+generic <class ItemType>
+void __cdecl Test(ItemType item) {}   // C4441
+// try the following line instead
+// void Test(ItemType item) {}
+
+ref struct MyStruct {
+   void __cdecl Test(){}   // C4441
+   void Test2(){}   // OK
+};
 ```

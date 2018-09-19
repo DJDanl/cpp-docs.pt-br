@@ -1,5 +1,5 @@
 ---
-title: Compilador (nível 2) do aviso C4653 | Microsoft Docs
+title: Compilador aviso (nível 2) C4653 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c312b7530fa11bb734dc99a872b36e926890f658
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 376da24d4619eacc3e6b3defe8fdfc582800a898
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33290989"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46045972"
 ---
-# <a name="compiler-warning-level-2-c4653"></a>Compilador C4653 de aviso (nível 2)
-opção de compilador 'option' inconsistente com cabeçalho pré-compilado; opção de linha de comando atual ignorada  
-  
- Uma opção especificada com a usar cabeçalhos pré-compilados ([/Yu](../../build/reference/yu-use-precompiled-header-file.md)) opção estava inconsistente com as opções especificadas quando o cabeçalho pré-compilado foi criado. Esta compilação usado a opção especificada quando o cabeçalho pré-compilado foi criado.  
-  
- Esse aviso pode ocorrer quando um valor diferente para a opção de estruturas de pacote ([/Zp](../../build/reference/zp-struct-member-alignment.md)) foi especificado durante a compilação do cabeçalho pré-compilado.
+# <a name="compiler-warning-level-2-c4653"></a>Compilador aviso (nível 2) C4653
+
+opção de compilador 'option' inconsistente com cabeçalho pré-compilado; opção de linha de comando atual ignorada
+
+Uma opção especificada com os cabeçalhos pré-compilados de uso ([/Yu](../../build/reference/yu-use-precompiled-header-file.md)) opção estava inconsistente com as opções especificadas quando o cabeçalho pré-compilado foi criado. Esta compilação usou a opção especificada quando o cabeçalho pré-compilado foi criado.
+
+Esse aviso pode ocorrer quando um valor diferente para a opção de estruturas de pacote ([/Zp](../../build/reference/zp-struct-member-alignment.md)) foi especificado durante a compilação de cabeçalho pré-compilado.
