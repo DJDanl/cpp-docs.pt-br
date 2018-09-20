@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a9613dbc28b3e1f263133c15ae88d20294962e9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 94b6d94b59e1088501a22f44a219177b926dd02e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702527"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440869"
 ---
 # <a name="generic-delegates-visual-c"></a>Delegados genéricos (Visual C++)
 
@@ -39,25 +39,25 @@ generic < [class | typename] type-parameter-identifiers>
 
 ### <a name="parameters"></a>Parâmetros
 
-*Atributos*  
+*Atributos*<br/>
 (Opcional) Informações declarativas adicionais. Para obter mais informações sobre atributos e classes de atributos, consulte atributos.
 
-*tipo-parâmetro-identificador (es)*  
+*tipo-parâmetro-identificador (es)*<br/>
 Lista separada por vírgulas de identificadores para os parâmetros de tipo.
 
-*tipo de parâmetro-restrições cláusulas*  
+*tipo de parâmetro-restrições cláusulas*<br/>
 Assume o formato especificado no [restrições em parâmetros de tipo genéricos (C + + c++ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*modificadores de acessibilidade*  
+*modificadores de acessibilidade*<br/>
 (Opcional) Modificadores de acessibilidade (por exemplo, **pública**, **privada**).
 
-*result-type*  
+*result-type*<br/>
 O tipo de retorno do delegado.
 
-*identifier*  
+*identifier*<br/>
 O nome do delegado.
 
-*parâmetros formais*  
+*parâmetros formais*<br/>
 (Opcional) A lista de parâmetros do delegado.
 
 ## <a name="example"></a>Exemplo

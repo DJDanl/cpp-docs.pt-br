@@ -16,45 +16,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b06b270c4971239b91fa81b9ad35d8fef52b7e76
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 2178eddef2dcf7c2f48a5667930bc639781628fb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33696299"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425347"
 ---
 # <a name="schedulerinterface-structure"></a>Estrutura scheduler_interface
-Interface do Agendador  
-  
-## <a name="syntax"></a>Sintaxe  
-  
+
+Interface de Agendador
+
+## <a name="syntax"></a>Sintaxe
+
 ```
 struct __declspec(novtable) scheduler_interface;
-```  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-methods"></a>Métodos Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[scheduler_interface::schedule](#schedule)||  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `scheduler_interface`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** pplinterface.h  
-  
- **Namespace:** simultaneidade  
-  
-##  <a name="schedule"></a>  scheduler_interface:: método Schedule  
-  
+```
+
+## <a name="members"></a>Membros
+
+### <a name="public-methods"></a>Métodos Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[scheduler_interface::schedule](#schedule)||
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`scheduler_interface`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** pplinterface. h
+
+**Namespace:** simultaneidade
+
+##  <a name="schedule"></a>  scheduler_interface:: Schedule método
+
 ```
 virtual void schedule(
     TaskProc_t,
- void*) = 0;
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace de simultaneidade](concurrency-namespace.md)
+void*) = 0;
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace de simultaneidade](concurrency-namespace.md)

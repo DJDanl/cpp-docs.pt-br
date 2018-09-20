@@ -16,35 +16,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daf1565c2fe2d7a4620f83b765671fea80502102
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 08b16c59f155864a781feccbfd08842380cccd01
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335809"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433790"
 ---
 # <a name="hseversioninfo-structure"></a>Estrutura HSE_VERSION_INFO
-Essa estrutura é apontada pelo *objasperror* parâmetro no `CHttpServer::GetExtensionVersion` função de membro. Ele fornece o número de versão do ISA e uma descrição de texto do ISA.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-typedef struct _HSE_VERSION_INFO {  
-    DWORD dwExtensionVersion;  
-    CHAR lpszExtensionDesc[HSE_MAX_EXT_DLL_NAME_LEN];  
-} HSE_VERSION_INFO, *LPHSE_VERSION_INFO;  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- *dwExtensionVersion*  
- O número de versão dos ISA.  
-  
- *lpszExtensionDesc*  
- Texto de descrição do ISA. A implementação padrão fornece o texto do espaço reservado; substituir `CHttpServer::GetExtensionVersion` para fornecer sua própria descrição.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** httpext.h  
-  
-## <a name="see-also"></a>Consulte também  
- [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+
+Essa estrutura é apontada pelo *objasperror* parâmetro no `CHttpServer::GetExtensionVersion` função de membro. Ele fornece o número de versão do ISA e uma descrição de texto do ISA.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+typedef struct _HSE_VERSION_INFO {
+    DWORD dwExtensionVersion;
+    CHAR lpszExtensionDesc[HSE_MAX_EXT_DLL_NAME_LEN];
+} HSE_VERSION_INFO, *LPHSE_VERSION_INFO;
+```
+
+#### <a name="parameters"></a>Parâmetros
+
+*dwExtensionVersion*<br/>
+O número de versão dos ISA.
+
+*lpszExtensionDesc*<br/>
+Texto de descrição do ISA. A implementação padrão fornece o texto do espaço reservado; substituir `CHttpServer::GetExtensionVersion` para fornecer sua própria descrição.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** httpext.h
+
+## <a name="see-also"></a>Consulte também
+
+[Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 

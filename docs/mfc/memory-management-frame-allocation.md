@@ -28,26 +28,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56eff6cede20508ea59463039b4f0e41d416cac1
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ca2d98898c232cdb65d3ac5d1288b06aca403772
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43686346"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398112"
 ---
 # <a name="memory-management-frame-allocation"></a>Gerenciamento de memória: alocação do quadro
-Alocação de quadro recebe seu nome do "quadro de pilha" que é definido sempre que uma função é chamada. O quadro de pilha é uma área de memória que armazena temporariamente os argumentos para a função, bem como todas as variáveis que são definidas locais à função. Variáveis do quadro geralmente são chamadas de variáveis "automáticas" porque o compilador automaticamente aloca o espaço para eles.  
-  
- Há duas características principais de alocações de quadro. Primeiro, quando você define uma variável local, suficiente espaço é alocado no quadro da pilha para manter a variável de inteira, mesmo se for uma matriz grande ou a estrutura de dados. Em segundo lugar, variáveis do quadro são excluídas automaticamente quando eles saem do escopo:  
-  
- [!code-cpp[NVC_MFC_Utilities#10](../mfc/codesnippet/cpp/memory-management-frame-allocation_1.cpp)]  
-  
- Para variáveis de função local, essa transição de escopo acontece quando a função sai, mas o escopo de uma variável de quadro pode ser menor do que uma função se chaves aninhadas são usadas. Essa exclusão automática de variáveis do quadro é muito importante. No caso de tipos primitivos simples (como **int** ou **bytes**), matrizes, ou estruturas de dados, a exclusão automática simplesmente recupera a memória usada pela variável. Uma vez que a variável tiver saído do escopo, ele não pode ser acessado de qualquer forma. No entanto, no caso de objetos de C++, o processo de exclusão automática é um pouco mais complicado.  
-  
- Quando um objeto é definido como uma variável de quadro, seu construtor é invocado automaticamente no ponto em que a definição for encontrada. Quando o objeto sai do escopo, seu destruidor é invocado automaticamente antes que a memória para o objeto seja recuperada. Essa construção automática e a destruição podem ser muito útil, mas você deve estar ciente das chamadas automático, especialmente para o destruidor.  
-  
- A principal vantagem de alocação de objetos no quadro é que eles são excluídos automaticamente. Quando você alocar seus objetos no quadro, você não precisa se preocupar sobre objetos esquecidos causar vazamentos de memória. (Para obter detalhes sobre vazamentos de memória, consulte o artigo [detectando vazamentos de memória no MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476\(v=vs.100\)).) Uma desvantagem de alocação do quadro é que as variáveis do quadro não podem ser usadas fora de seu escopo. Outro fator na escolha de alocação do quadro em comparação com a alocação de heap é que para estruturas grandes e objetos, geralmente é melhor usar o heap em vez da pilha para o armazenamento, pois o espaço de pilha é geralmente limitado.  
-  
-## <a name="see-also"></a>Consulte também  
- [Gerenciamento de memória](../mfc/memory-management.md)
+
+Alocação de quadro recebe seu nome do "quadro de pilha" que é definido sempre que uma função é chamada. O quadro de pilha é uma área de memória que armazena temporariamente os argumentos para a função, bem como todas as variáveis que são definidas locais à função. Variáveis do quadro geralmente são chamadas de variáveis "automáticas" porque o compilador automaticamente aloca o espaço para eles.
+
+Há duas características principais de alocações de quadro. Primeiro, quando você define uma variável local, suficiente espaço é alocado no quadro da pilha para manter a variável de inteira, mesmo se for uma matriz grande ou a estrutura de dados. Em segundo lugar, variáveis do quadro são excluídas automaticamente quando eles saem do escopo:
+
+[!code-cpp[NVC_MFC_Utilities#10](../mfc/codesnippet/cpp/memory-management-frame-allocation_1.cpp)]
+
+Para variáveis de função local, essa transição de escopo acontece quando a função sai, mas o escopo de uma variável de quadro pode ser menor do que uma função se chaves aninhadas são usadas. Essa exclusão automática de variáveis do quadro é muito importante. No caso de tipos primitivos simples (como **int** ou **bytes**), matrizes, ou estruturas de dados, a exclusão automática simplesmente recupera a memória usada pela variável. Uma vez que a variável tiver saído do escopo, ele não pode ser acessado de qualquer forma. No entanto, no caso de objetos de C++, o processo de exclusão automática é um pouco mais complicado.
+
+Quando um objeto é definido como uma variável de quadro, seu construtor é invocado automaticamente no ponto em que a definição for encontrada. Quando o objeto sai do escopo, seu destruidor é invocado automaticamente antes que a memória para o objeto seja recuperada. Essa construção automática e a destruição podem ser muito útil, mas você deve estar ciente das chamadas automático, especialmente para o destruidor.
+
+A principal vantagem de alocação de objetos no quadro é que eles são excluídos automaticamente. Quando você alocar seus objetos no quadro, você não precisa se preocupar sobre objetos esquecidos causar vazamentos de memória. (Para obter detalhes sobre vazamentos de memória, consulte o artigo [detectando vazamentos de memória no MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476\(v=vs.100\)).) Uma desvantagem de alocação do quadro é que as variáveis do quadro não podem ser usadas fora de seu escopo. Outro fator na escolha de alocação do quadro em comparação com a alocação de heap é que para estruturas grandes e objetos, geralmente é melhor usar o heap em vez da pilha para o armazenamento, pois o espaço de pilha é geralmente limitado.
+
+## <a name="see-also"></a>Consulte também
+
+[Gerenciamento de memória](../mfc/memory-management.md)
 

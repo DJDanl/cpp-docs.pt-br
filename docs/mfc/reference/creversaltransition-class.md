@@ -22,88 +22,99 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21ec3a9491054ac6ecd0cdb4aad0c4c91d13dbd6
-ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
+ms.openlocfilehash: 393c0ed7c9d1c5715528468e0c611ae399fbadf6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37079035"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46431496"
 ---
 # <a name="creversaltransition-class"></a>Classe CReversalTransition
-Encapsula uma transição de reversão.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-class CReversalTransition : public CBaseTransition;  
-```  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-constructors"></a>Construtores Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CReversalTransition::CReversalTransition](#creversaltransition)|Constrói um objeto de transição de reversão e inicializa sua duração.|  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CReversalTransition::Create](#create)|Chama a biblioteca de transição para criar o objeto de transição encapsulados COM. (Substitui [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
-  
-### <a name="public-data-members"></a>Membros de Dados Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CReversalTransition::m_duration](#m_duration)|A duração da transição.|  
-  
-## <a name="remarks"></a>Comentários  
- Uma transição de reversão perfeitamente altera a direção em um período especificado. O valor final será o mesmo que o valor inicial e final velocidade será negativo da velocidade inicial. Como todas as transições são limpos automaticamente, é recomendável para alocado-los usando o operador novo. O objeto de IUIAnimationTransition COM encapsulados é criado pela CAnimationController::AnimateGroup, até que é NULL. Alterar as variáveis de membro após a criação do objeto COM não tem nenhum efeito.  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
-  
- [CReversalTransition](../../mfc/reference/creversaltransition-class.md)  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxanimationcontroller.h  
-  
-##  <a name="create"></a>  CReversalTransition::Create  
- Chama a biblioteca de transição para criar o objeto de transição encapsulados COM.  
-  
-```  
+
+Encapsula uma transição inversa.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+class CReversalTransition : public CBaseTransition;
+```
+
+## <a name="members"></a>Membros
+
+### <a name="public-constructors"></a>Construtores Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CReversalTransition::CReversalTransition](#creversaltransition)|Constrói um objeto de transição de estorno e inicializa sua duração.|
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CReversalTransition::Create](#create)|Chama a biblioteca de transição para criar o objeto encapsulado transição COM. (Substitui [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+
+### <a name="public-data-members"></a>Membros de Dados Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CReversalTransition::m_duration](#m_duration)|A duração da transição.|
+
+## <a name="remarks"></a>Comentários
+
+Uma transição inversa suavemente altera a direção em um determinado período. O valor final será o mesmo que o valor inicial e a velocidade final será o negativo da velocidade inicial. Como todas as transições são limpas automaticamente, é recomendável para alocado-los usando o operador novo. O objeto de IUIAnimationTransition COM encapsulado é criado pelo CAnimationController::AnimateGroup, até então é NULL. Alterando as variáveis de membro após a criação deste objeto COM não tem nenhum efeito.
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+
+[CReversalTransition](../../mfc/reference/creversaltransition-class.md)
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** afxanimationcontroller.h
+
+##  <a name="create"></a>  CReversalTransition::Create
+
+Chama a biblioteca de transição para criar o objeto encapsulado transição COM.
+
+```
 virtual BOOL Create(
-    IUIAnimationTransitionLibrary* pLibrary,  
+    IUIAnimationTransitionLibrary* pLibrary,
     IUIAnimationTransitionFactory* \*not used*\);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *pLibrary*  
- Um ponteiro para a biblioteca de transição, que é responsável pela criação de transições padrão.  
-  
-### <a name="return-value"></a>Valor de retorno  
- TRUE se a transição será criada com êxito; Caso contrário, FALSE.  
-  
-##  <a name="creversaltransition"></a>  CReversalTransition::CReversalTransition  
- Constrói um objeto de transição de reversão e inicializa sua duração.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*pLibrary*<br/>
+Um ponteiro para a biblioteca de transição, que é responsável pela criação de transições padrão.
+
+### <a name="return-value"></a>Valor de retorno
+
+TRUE se a transição é criada com êxito; Caso contrário, FALSE.
+
+##  <a name="creversaltransition"></a>  CReversalTransition::CReversalTransition
+
+Constrói um objeto de transição de estorno e inicializa sua duração.
+
+```
 CReversalTransition(UI_ANIMATION_SECONDS duration);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *Duração*  
- A duração da transição.  
-  
-##  <a name="m_duration"></a>  CReversalTransition::m_duration  
- A duração da transição.  
-  
-```  
-UI_ANIMATION_SECONDS m_duration;  
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Classes](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*duração*<br/>
+A duração da transição.
+
+##  <a name="m_duration"></a>  CReversalTransition::m_duration
+
+A duração da transição.
+
+```
+UI_ANIMATION_SECONDS m_duration;
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Classes](../../mfc/reference/mfc-classes.md)

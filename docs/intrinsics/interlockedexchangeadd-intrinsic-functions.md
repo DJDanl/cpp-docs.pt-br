@@ -65,139 +65,145 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d438d31088c6ded53df3137e76ebc6a2953890e6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7ce2417af10ba5f76c1d4170e41e0c037b07419c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700904"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406003"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>Funções intrínsecas _InterlockedExchangeAdd
-**Seção específica da Microsoft**  
-  
- Fornece suporte intrínseco ao compilador para o SDK do Windows Win32 [interlockedexchangeadd funções intrínsecas](../intrinsics/interlockedexchangeadd-intrinsic-functions.md) função.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-long _InterlockedExchangeAdd(  
-   long volatile * Addend,  
-   long Value  
-);  
-long _InterlockedExchangeAdd_acq(  
-   long volatile * Addend,  
-   long Value  
-);  
-long _InterlockedExchangeAdd_rel(  
-   long volatile * Addend,  
-   long Value  
-);  
-long _InterlockedExchangeAdd_nf(  
-   long volatile * Addend,  
-   long Value  
-);  
-long _InterlockedExchangeAdd_HLEAcquire(  
-   long volatile * Addend,  
-   long Value  
-);  
-long _InterlockedExchangeAdd_HLERelease(  
-   long volatile * Addend,  
-   long Value  
-);  
-char _InterlockedExchangeAdd8(  
-   char volatile * Addend,  
-   char Value  
-);  
-char _InterlockedExchangeAdd8_acq(  
-   char volatile * Addend,  
-   char Value  
-);  
-char _InterlockedExchangeAdd8_rel(  
-   char volatile * Addend,  
-   char Value  
-);  
-char _InterlockedExchangeAdd8_nf(  
-   char volatile * Addend,  
-   char Value  
-);  
-short _InterlockedExchangeAdd16(  
-   short volatile * Addend,  
-   short Value  
-);  
-short _InterlockedExchangeAdd16_acq(  
-   short volatile * Addend,  
-   short Value  
-);  
-short _InterlockedExchangeAdd16_rel(  
-   short volatile * Addend,  
-   short Value  
-);  
-short _InterlockedExchangeAdd16_nf(  
-   short volatile * Addend,  
-   short Value  
-);  
-__int64 _InterlockedExchangeAdd64(  
-   __int64 volatile * Addend,  
-   __int64 Value  
-);  
-__int64 _InterlockedExchangeAdd64_acq(  
-   __int64 volatile * Addend,  
-   __int64 Value  
-);  
-__int64 _InterlockedExchangeAdd64_rel(  
-   __int64 volatile * Addend,  
-   __int64 Value  
-);  
-__int64 _InterlockedExchangeAdd64_nf(  
-   __int64 volatile * Addend,  
-   __int64 Value  
-);  
-__int64 _InterlockedExchangeAdd64_HLEAcquire(  
-   __int64 volatile * Addend,  
-   __int64 Value  
-);  
-__int64 _InterlockedExchangeAdd64_HLERelease(  
-   __int64 volatile * Addend,  
-   __int64 Value  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
+
+**Seção específica da Microsoft**
+
+Fornece suporte intrínseco ao compilador para o SDK do Windows Win32 [interlockedexchangeadd funções intrínsecas](../intrinsics/interlockedexchangeadd-intrinsic-functions.md) função.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+long _InterlockedExchangeAdd(
+   long volatile * Addend,
+   long Value
+);
+long _InterlockedExchangeAdd_acq(
+   long volatile * Addend,
+   long Value
+);
+long _InterlockedExchangeAdd_rel(
+   long volatile * Addend,
+   long Value
+);
+long _InterlockedExchangeAdd_nf(
+   long volatile * Addend,
+   long Value
+);
+long _InterlockedExchangeAdd_HLEAcquire(
+   long volatile * Addend,
+   long Value
+);
+long _InterlockedExchangeAdd_HLERelease(
+   long volatile * Addend,
+   long Value
+);
+char _InterlockedExchangeAdd8(
+   char volatile * Addend,
+   char Value
+);
+char _InterlockedExchangeAdd8_acq(
+   char volatile * Addend,
+   char Value
+);
+char _InterlockedExchangeAdd8_rel(
+   char volatile * Addend,
+   char Value
+);
+char _InterlockedExchangeAdd8_nf(
+   char volatile * Addend,
+   char Value
+);
+short _InterlockedExchangeAdd16(
+   short volatile * Addend,
+   short Value
+);
+short _InterlockedExchangeAdd16_acq(
+   short volatile * Addend,
+   short Value
+);
+short _InterlockedExchangeAdd16_rel(
+   short volatile * Addend,
+   short Value
+);
+short _InterlockedExchangeAdd16_nf(
+   short volatile * Addend,
+   short Value
+);
+__int64 _InterlockedExchangeAdd64(
+   __int64 volatile * Addend,
+   __int64 Value
+);
+__int64 _InterlockedExchangeAdd64_acq(
+   __int64 volatile * Addend,
+   __int64 Value
+);
+__int64 _InterlockedExchangeAdd64_rel(
+   __int64 volatile * Addend,
+   __int64 Value
+);
+__int64 _InterlockedExchangeAdd64_nf(
+   __int64 volatile * Addend,
+   __int64 Value
+);
+__int64 _InterlockedExchangeAdd64_HLEAcquire(
+   __int64 volatile * Addend,
+   __int64 Value
+);
+__int64 _InterlockedExchangeAdd64_HLERelease(
+   __int64 volatile * Addend,
+   __int64 Value
+);
+
+```
+
+#### <a name="parameters"></a>Parâmetros
+
 *Adendo*<br/>
-[no, out] O valor a ser adicionado; substituído pelo resultado da adição.  
-  
+[no, out] O valor a ser adicionado; substituído pelo resultado da adição.
+
 *Value*<br/>
-[in] O valor a ser adicionado.  
-  
-## <a name="return-value"></a>Valor de retorno  
- O valor retornado é o valor inicial da variável que aponta para o parâmetro `Addend`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Intrínseco|Arquitetura|Cabeçalho|  
-|---------------|------------------|------------|  
-|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|x86, ARM, x64|\<intrin.h>|  
-|`_InterlockedExchangeAdd_acq`, `_InterlockedExchangeAdd_rel`, `_InterlockedExchangeAdd_nf`, `_InterlockedExchangeAdd8_acq`, `_InterlockedExchangeAdd8_rel`, `_InterlockedExchangeAdd8_nf`,`_InterlockedExchangeAdd16_acq`, `_InterlockedExchangeAdd16_rel`, `_InterlockedExchangeAdd16_nf`, `_InterlockedExchangeAdd64_acq`, `_InterlockedExchangeAdd64_rel`, `_InterlockedExchangeAdd64_nf`|ARM|\<intrin.h>|  
-|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86, x64|\<immintrin.h>|  
-  
-## <a name="remarks"></a>Comentários  
- Há diversas variações em `_InterlockedExchangeAdd` que têm base no tipo de dados que envolvem e se a semântica acquire ou release é usada.  
-  
- Enquanto a função `_InterlockedExchangeAdd` opera em valores inteiros de 32 bits, `_InterlockedExchangeAdd8` opera em valores inteiros de 8 bits, `_InterlockedExchangeAdd16` opera em valores inteiros de 16 bits e `_InterlockedExchangeAdd64` opera em valores inteiros de 64 bits.  
-  
- Em plataformas ARM, use intrínsecos com os sufixos `_acq` e `_rel` para semântica de aquisição e liberação, como no início e no final de uma seção crítica. Os intrínsecos com um sufixo `_nf` ("no fence") não funcionam como uma barreira de memória.  
-  
- Em plataformas Intel que suportam instruções HLE (Elisão de Bloqueio de Hardware), intrínsecos com os sufixos `_HLEAcquire` e `_HLERelease` incluem uma dica para o processador que pode acelerar o desempenho, eliminando uma etapa de gravação de bloqueio no hardware. Se esses intrínsecos forem chamados em plataformas que não dão suporte a HLE, a dica será ignorada.  
-  
- Essas rotinas somente estão disponíveis como intrínsecos. Assim, eles são intrínsecos se ou não [/Oi](../build/reference/oi-generate-intrinsic-functions.md) ou [#pragma intrínseco](../preprocessor/intrinsic.md) é usado. Não é possível usar [#pragma função](../preprocessor/function-c-cpp.md) nesses intrínsecos.  
-  
-## <a name="example"></a>Exemplo  
- Para obter um exemplo de como usar `_InterlockedExchangeAdd`, consulte [interlockeddecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
-  
-**Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)   
- [Palavras-chave](../cpp/keywords-cpp.md)   
- [conflitos com o compilador x86](../build/conflicts-with-the-x86-compiler.md)
+[in] O valor a ser adicionado.
+
+## <a name="return-value"></a>Valor de retorno
+
+O valor retornado é o valor inicial da variável que aponta para o parâmetro `Addend`.
+
+## <a name="requirements"></a>Requisitos
+
+|Intrínseco|Arquitetura|Cabeçalho|
+|---------------|------------------|------------|
+|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|x86, ARM, x64|\<intrin.h>|
+|`_InterlockedExchangeAdd_acq`, `_InterlockedExchangeAdd_rel`, `_InterlockedExchangeAdd_nf`, `_InterlockedExchangeAdd8_acq`, `_InterlockedExchangeAdd8_rel`, `_InterlockedExchangeAdd8_nf`,`_InterlockedExchangeAdd16_acq`, `_InterlockedExchangeAdd16_rel`, `_InterlockedExchangeAdd16_nf`, `_InterlockedExchangeAdd64_acq`, `_InterlockedExchangeAdd64_rel`, `_InterlockedExchangeAdd64_nf`|ARM|\<intrin.h>|
+|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86, x64|\<immintrin.h>|
+
+## <a name="remarks"></a>Comentários
+
+Há diversas variações em `_InterlockedExchangeAdd` que têm base no tipo de dados que envolvem e se a semântica acquire ou release é usada.
+
+Enquanto a função `_InterlockedExchangeAdd` opera em valores inteiros de 32 bits, `_InterlockedExchangeAdd8` opera em valores inteiros de 8 bits, `_InterlockedExchangeAdd16` opera em valores inteiros de 16 bits e `_InterlockedExchangeAdd64` opera em valores inteiros de 64 bits.
+
+Em plataformas ARM, use intrínsecos com os sufixos `_acq` e `_rel` para semântica de aquisição e liberação, como no início e no final de uma seção crítica. Os intrínsecos com um sufixo `_nf` ("no fence") não funcionam como uma barreira de memória.
+
+Em plataformas Intel que suportam instruções HLE (Elisão de Bloqueio de Hardware), intrínsecos com os sufixos `_HLEAcquire` e `_HLERelease` incluem uma dica para o processador que pode acelerar o desempenho, eliminando uma etapa de gravação de bloqueio no hardware. Se esses intrínsecos forem chamados em plataformas que não dão suporte a HLE, a dica será ignorada.
+
+Essas rotinas somente estão disponíveis como intrínsecos. Assim, eles são intrínsecos se ou não [/Oi](../build/reference/oi-generate-intrinsic-functions.md) ou [#pragma intrínseco](../preprocessor/intrinsic.md) é usado. Não é possível usar [#pragma função](../preprocessor/function-c-cpp.md) nesses intrínsecos.
+
+## <a name="example"></a>Exemplo
+
+Para obter um exemplo de como usar `_InterlockedExchangeAdd`, consulte [interlockeddecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
+[Palavras-chave](../cpp/keywords-cpp.md)<br/>
+[conflitos com o compilador x86](../build/conflicts-with-the-x86-compiler.md)

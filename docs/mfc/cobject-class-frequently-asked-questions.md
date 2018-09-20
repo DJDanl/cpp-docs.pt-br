@@ -16,21 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7487d8fdc016642e56a469d45c8063e764823ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 987ae71b556abea1279605f42f5c633083221554
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343561"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433931"
 ---
 # <a name="cobject-class-frequently-asked-questions"></a>Classe CObject: perguntas frequentes
-Esta seção aborda as perguntas na classe `CObject`.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
-  
--   [Preciso derivar novas classes de CObject](do-i-have-to-derive-new-classes-from-cobject-q.md)  
-  
--   [Quanto custa o mim para derivar uma classe de CObject](what-does-it-cost-me-to-derive-a-class-from-cobject-q.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando CObject](../mfc/using-cobject.md)
+
+Esta seção aborda perguntas sobre a classe `CObject`.
+
+## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+
+- [Preciso derivar novas classes de CObject](do-i-have-to-derive-new-classes-from-cobject-q.md)
+
+- [Quanto custa-me para derivar uma classe de CObject](what-does-it-cost-me-to-derive-a-class-from-cobject-q.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Usando CObject](../mfc/using-cobject.md)

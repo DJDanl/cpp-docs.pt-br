@@ -12,22 +12,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa66d9fb8a0a9af2fc33497690bfe67a3ea5d717
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7b83c3dfc13b231a1314343a1dff496acf7a99b6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690339"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412191"
 ---
 # <a name="266-ordered-construct"></a>2.6.6 Constructo ordered
-O seguinte bloco estruturado um **ordenados** diretiva é executada na ordem iterações seriam executadas em um loop sequencial. A sintaxe do **ordenados** diretiva é da seguinte maneira:  
-  
-```  
-#pragma omp ordered new-linestructured-block  
-```  
-  
- Um **ordenados** diretiva deve estar dentro a extensão dinâmica de um **para** ou **paralelo para** construir. O **para** ou **paralelo para** diretiva para o qual o **ordenados** construção associa deve ter uma **ordenados** cláusula especificada conforme descrito em [Seção 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) na página 11. Na execução de um **para** ou **paralelo para** construir com um **ordenados** cláusula, **ordenados** construções são executadas em estritamente a ordem na qual eles seriam executados em uma execução sequencial do loop.  
-  
- Restrições para o **ordenados** diretiva são da seguinte maneira:  
-  
--   Uma iteração de um loop com um **para** construção não deve executar a mesma diretiva ordenada mais de uma vez e não deve executar mais de um **ordenados** diretiva.
+
+O seguinte bloco estruturado uma **ordenados** diretiva é executada na ordem em que iterações seriam executadas em um loop sequencial. A sintaxe do **ordenados** diretiva é da seguinte maneira:
+
+```
+#pragma omp ordered new-linestructured-block
+```
+
+Uma **ordenados** diretiva deve estar dentro da extensão dinâmica de uma **para** ou **paralela para** construir. O **para** ou **paralela para** diretiva para o qual o **ordenados** associa constructo deve ter uma **ordenados** cláusula especificada conforme descrito em [Seção 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) na página de 11. Na execução de um **para** ou **paralela para** construir com um **ordenados** cláusula, **ordenados** construções são executadas de forma estritamente no ordem em que eles fossem executados em uma execução sequencial do loop.
+
+Restrições para o **ordenados** diretiva são da seguinte maneira:
+
+- Uma iteração de um loop com um **para** constructo não deve executar a mesma diretiva ordenada mais de uma vez e não devem executar mais de uma **ordenados** diretiva.

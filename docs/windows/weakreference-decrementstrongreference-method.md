@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b3620a4b82aabb0058773f68938f545119f90791
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9a73608bd2faa8de2c5e23eff84290e7dd5fae11
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605592"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417183"
 ---
 # <a name="weakreferencedecrementstrongreference-method"></a>Método WeakReference::DecrementStrongReference
 
@@ -52,5 +52,5 @@ A contagem de referência forte decrementado.
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe WeakReference](../windows/weakreference-class1.md)  
+[Classe WeakReference](../windows/weakreference-class1.md)<br/>
 [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

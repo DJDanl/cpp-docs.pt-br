@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 687fd4f4bd77043bd0b74c7bcc39fb6a496b60be
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: e8a1dcd96ab42f48c91bbed2057475fa412c8925
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601451"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432796"
 ---
 # <a name="ftmbase-class"></a>Classe FtmBase
 
@@ -106,7 +106,7 @@ static HRESULT CreateGlobalInterfaceTable(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Git*  
+*Git*<br/>
 Quando essa operação for concluída, um ponteiro para uma tabela de interface global.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -129,7 +129,7 @@ STDMETHODIMP DisconnectObject(
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwReserved*  
+*dwReserved*<br/>
 Reservado para uso futuro; deve ser zero.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -161,26 +161,26 @@ STDMETHODIMP GetMarshalSizeMax(
 
 ### <a name="parameters"></a>Parâmetros
 
-*riid*  
+*riid*<br/>
 Referência ao identificador da interface a ser empacotado.
 
-*VP*  
+*VP*<br/>
 Ponteiro de interface para ser empacotado; pode ser NULL.
 
-*dwDestContext*  
+*dwDestContext*<br/>
 Contexto de destino onde a interface especificada deve ser desempacotada.
 
 Especifique um ou mais valores de enumeração MSHCTX.
 
 Atualmente, o unmarshaling pode ocorrer em outra apartment do processo atual (MSHCTX_INPROC) ou em outro processo no mesmo computador que o processo atual (MSHCTX_LOCAL).
 
-*pvDestContext*  
+*pvDestContext*<br/>
 Reservado para uso futuro; deve ser NULL.
 
-*mshlflags*  
+*mshlflags*<br/>
 Sinalizador que indica se os dados a ser empacotado deve ser transmitido de volta para o processo do cliente — o caso comum — ou gravados em uma tabela global, onde ela pode ser recuperada por vários clientes. Especifique um ou mais valores de enumeração MSHLFLAGS.
 
-*pSize*  
+*pSize*<br/>
 Quando essa operação for concluída, ponteiro para o limite superior na quantidade de dados a serem gravados no fluxo de marshaling.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -204,23 +204,23 @@ STDMETHODIMP GetUnmarshalClass(
 
 ### <a name="parameters"></a>Parâmetros
 
-*riid*  
+*riid*<br/>
 Referência ao identificador da interface a ser empacotado.
 
-*VP*  
+*VP*<br/>
 Ponteiro para a interface a ser empacotado; pode ser NULL se o chamador não tem um ponteiro para a interface desejada.
 
-*dwDestContext*  
+*dwDestContext*<br/>
 Contexto de destino onde a interface especificada deve ser desempacotada.
 
 Especifique um ou mais valores de enumeração MSHCTX.
 
 Unmarshaling pode ocorrer em outra apartment do processo atual (MSHCTX_INPROC) ou em outro processo no mesmo computador que o processo atual (MSHCTX_LOCAL).
 
-*pvDestContext*  
+*pvDestContext*<br/>
 Reservado para uso futuro; deve ser NULL.
 
-*mshlflags*  
+*mshlflags*<br/>
 Quando essa operação for concluída, ponteiro para o CLSID para ser usado para criar um proxy no processo de cliente.
 
 *pCid*
@@ -246,26 +246,26 @@ STDMETHODIMP MarshalInterface(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pStm*  
+*pStm*<br/>
 Ponteiro para o fluxo a ser usado durante o marshaling.
 
-*riid*  
+*riid*<br/>
 Referência ao identificador da interface a ser empacotado. Essa interface deve ser derivada de `IUnknown` interface.
 
-*VP*  
+*VP*<br/>
 Ponteiro para o ponteiro de interface para ser empacotado; pode ser NULL se o chamador não tem um ponteiro para a interface desejada.
 
-*dwDestContext*  
+*dwDestContext*<br/>
 Contexto de destino onde a interface especificada deve ser desempacotada.
 
 Especifique um ou mais valores de enumeração MSHCTX.
 
 Unmarshaling pode ocorrer em outra apartment do processo atual (MSHCTX_INPROC) ou em outro processo no mesmo computador que o processo atual (MSHCTX_LOCAL).
 
-*pvDestContext*  
+*pvDestContext*<br/>
 Reservado para uso futuro; deve ser zero.
 
-*mshlflags*  
+*mshlflags*<br/>
 Especifica se os dados a ser empacotado deve ser transmitido de volta para o processo do cliente — o caso comum — ou gravados em uma tabela global, onde ela pode ser recuperada por vários clientes.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -298,7 +298,7 @@ STDMETHODIMP ReleaseMarshalData(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pStm*  
+*pStm*<br/>
 Ponteiro para um fluxo que contém o pacote de dados a ser destruído.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -319,13 +319,13 @@ STDMETHODIMP UnmarshalInterface(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pStm*  
+*pStm*<br/>
 Ponteiro para o fluxo do qual o ponteiro de interface deve ser desempacotada.
 
-*riid*  
+*riid*<br/>
 Referência ao identificador da interface a ser desempacotada.
 
-*ppv*  
+*ppv*<br/>
 Quando essa operação for concluída, o endereço de uma variável de ponteiro que recebe o ponteiro de interface solicitado no *riid*. Se essa operação for bem-sucedida, **ppv* contém o ponteiro da interface a ser desempacotada de interface solicitada.
 
 ### <a name="return-value"></a>Valor de retorno

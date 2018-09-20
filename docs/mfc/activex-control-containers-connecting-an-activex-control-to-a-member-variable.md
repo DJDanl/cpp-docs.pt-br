@@ -19,35 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3aa243ab8c0fb49e20e5b7485acdcd8bb808831
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: ae0cefa518ce44913f5c316a096d221fa9bd41aa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930462"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433849"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>Contêineres de controle ActiveX: conectando um controle ActiveX a uma variável membro
-É a maneira mais fácil para um controle ActiveX de dentro de seu aplicativo de contêiner de controle de acesso associar o controle ActiveX uma variável de membro da classe de caixa de diálogo que contém o controle.  
-  
+
+É a maneira mais fácil de acessar um controle ActiveX de dentro de seu aplicativo de contêiner do controle associar o controle ActiveX uma variável de membro da classe de caixa de diálogo que contém o controle.
+
 > [!NOTE]
->  Isso não é a única maneira de acessar um controle inserido de dentro de uma classe de contêiner, mas para a finalidade deste artigo é suficiente.  
-  
-### <a name="adding-a-member-variable-to-the-dialog-class"></a>Adicionar uma variável de membro para a classe de caixa de diálogo  
-  
-1.  Exibição de classe, clique com botão direito a classe principal da caixa de diálogo para abrir o menu de atalho. Por exemplo, `CContainerDlg`.  
-  
-2.  No menu de atalho, clique em **adicionar** e **Adicionar variável**.  
-  
-3.  No Assistente para Adicionar variável de membro, clique em **variável de controle**.  
-  
-4.  No **ID de controle** caixa de listagem, selecione a ID do controle do controle ActiveX incorporado. Por exemplo, `IDC_CIRCCTRL1`.  
-  
-5.  No **nome da variável** , digite um nome.  
-  
-     Por exemplo, *m_circctl*.  
-  
-6.  Clique em **concluir** para aceitar as opções e sair do Assistente de variável de membro adicionar.  
-  
-## <a name="see-also"></a>Consulte também  
- [Contêineres de controle ActiveX](../mfc/activex-control-containers.md)
+>  Isso não é a única maneira de acessar um controle inserido de dentro de uma classe de contêiner, mas para os fins deste artigo é suficiente.
+
+### <a name="adding-a-member-variable-to-the-dialog-class"></a>Adicionar uma variável de membro para a classe de caixa de diálogo
+
+1. Na exibição de classe, clique com botão direito a classe principal da caixa de diálogo para abrir o menu de atalho. Por exemplo, `CContainerDlg`.
+
+1. No menu de atalho, clique em **Add** e, em seguida **Adicionar variável**.
+
+1. No Assistente para Adicionar variável de membro, clique em **variável de controle**.
+
+1. No **ID do controle** caixa de listagem, selecione a ID do controle do controle ActiveX incorporado. Por exemplo, `IDC_CIRCCTRL1`.
+
+1. No **nome da variável** , digite um nome.
+
+     Por exemplo, *m_circctl*.
+
+1. Clique em **concluir** para aceitar as opções e sair do Assistente de variável de membro adicionar.
+
+## <a name="see-also"></a>Consulte também
+
+[Contêineres de controle ActiveX](../mfc/activex-control-containers.md)
 

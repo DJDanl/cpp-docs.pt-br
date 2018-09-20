@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cd7acf018930c013f477cf4c3a8b3260a8d53ec
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b5a2e2c690b9e827992ca79f861e40452c071d42
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714606"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420979"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/Execution-charset (definir execução de conjunto de caracteres)
 
@@ -66,6 +66,6 @@ Se você quiser definir o conjunto de caracteres de origem e o conjunto de carac
 
 [Opções do Compilador](../../build/reference/compiler-options.md)<br/>
 [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
-[/Source-charset (Definir origem conjunto de caracteres)](../../build/reference/source-charset-set-source-character-set.md)
-[/utf-8 (Definir origem e executáveis conjuntos para UTF-8 de caracteres)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
-[/validate-charset (validar quanto caracteres compatíveis)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+[/source-charset (definir conjunto de caracteres de origem)](../../build/reference/source-charset-set-source-character-set.md)<br/>
+[/utf-8 (definir conjuntos de caracteres de origem e executáveis como UTF-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
+[/validate-charset (validar quanto à presença de caracteres compatíveis)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
