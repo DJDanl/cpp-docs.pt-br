@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 341333b0c4f51c42004ad638a5a8f4fcb7d7e466
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 17f79830cf50d83058ee2f2665b94f86a53acd78
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596485"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428974"
 ---
 # <a name="eventtargetarrayend-method"></a>Método EventTargetArray::End
 
@@ -50,5 +50,5 @@ Obtém o endereço do último elemento da matriz interna de manipuladores de eve
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe EventTargetArray](../windows/eventtargetarray-class.md)  
+[Classe EventTargetArray](../windows/eventtargetarray-class.md)<br/>
 [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

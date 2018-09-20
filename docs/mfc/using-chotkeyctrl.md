@@ -18,28 +18,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3678d95ff0748c1854e509d898dfa89778c9a5f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd966b74590d0e7641f2f789b5c45f901a3cf8c8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381797"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421499"
 ---
 # <a name="using-chotkeyctrl"></a>Usando CHotKeyCtrl
-Um controle de tecla ativo, representado pela classe [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md), é uma janela que exibe uma representação de texto da combinação de chave, o usuário digita, como CTRL + SHIFT + Q. Ele também mantém uma representação interna dessa chave na forma de um código de tecla virtual e um conjunto de sinalizadores que representam o estado de shift. O controle de chave de acesso não definem a tecla de acesso — isso é até seu programa. (Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser.)  
-  
- Use um controle de chave de acesso para obter a entrada do usuário para o qual tecla de atalho associar uma janela ou thread. Controles de chave de acesso geralmente são usados nas caixas de diálogo, como você pode exibir ao usuário para atribuir uma tecla de acesso. É responsabilidade do programa para recuperar os valores que descrevem a tecla de atalho do controle de chave de acesso e para chamar as funções apropriadas para associar a tecla de acesso uma janela ou thread.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
-  
--   [Usando um controle de tecla de acesso](../mfc/using-a-hot-key-control.md)  
-  
--   [Configurando uma tecla de acesso](../mfc/setting-a-hot-key.md)  
-  
--   [Teclas de acesso globais](../mfc/global-hot-keys.md)  
-  
--   [Teclas de acesso específicas de thread](../mfc/thread-specific-hot-keys.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Controles](../mfc/controls-mfc.md)
+
+Um controle de tecla hot, representado pela classe [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md), é uma janela que exibe uma representação de texto da combinação de chave, o usuário digita nele, como CTRL + SHIFT + Q. Ele também mantém uma representação interna dessa chave na forma de um código de tecla virtual e um conjunto de sinalizadores que representam o estado de deslocamento. O controle de chave de acesso não define a tecla de acesso — isso cabe em seu programa. (Para obter uma lista de códigos de tecla virtuais padrão, consulte WinUser. h).
+
+Use um controle de acesso de chave para obter a entrada do usuário para o qual tecla de atalho a ser associado a um thread ou janela. Controles de tecla de acessados geralmente são usados nas caixas de diálogo, como você pode exibir ao usuário para atribuir uma tecla de acesso. É responsabilidade do programa para recuperar os valores que descrevem a tecla de atalho do controle de chave de acesso e chamar as funções apropriadas para associar a tecla de atalho um thread ou janela.
+
+## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+
+- [Usando um controle de tecla de acesso](../mfc/using-a-hot-key-control.md)
+
+- [Configurando uma tecla de acesso](../mfc/setting-a-hot-key.md)
+
+- [Teclas de acesso globais](../mfc/global-hot-keys.md)
+
+- [Teclas de acesso específicas de thread](../mfc/thread-specific-hot-keys.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Controles](../mfc/controls-mfc.md)
 

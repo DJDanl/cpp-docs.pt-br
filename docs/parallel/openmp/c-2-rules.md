@@ -12,20 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb83b35a03608e272e9af67159b61e5dbf4e1ec6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c5845a9125bb32254fc0c03b03e9b6076a086d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755015"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404768"
 ---
 # <a name="c2-rules"></a>C.2 Regras
+
 A notação é descrita na seção 6.1 do padrão C. Este apêndice gramática mostra as extensões para a gramática da linguagem de base para as diretivas OpenMP C e C++.
 
 **/\* no C++ (ISO/IEC 14882:1998) \*/**
 
 *instrução seq*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Instrução*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*diretiva de OpenMP*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*instrução de declaração seq*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*diretiva de openmp seq de instrução*
@@ -33,7 +34,7 @@ A notação é descrita na seção 6.1 do padrão C. Este apêndice gramática m
 **/\* no C90 (ISO/IEC 9899:1990) \*/**
 
 *statement-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Instrução*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*diretiva de OpenMP*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*instrução de lista de instruções*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*diretiva de openmp da lista de instruções*
@@ -41,8 +42,8 @@ A notação é descrita na seção 6.1 do padrão C. Este apêndice gramática m
 **/\* em C99 (ISO/IEC 9899:1999) \*/**
 
 *Bloquear item*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaração*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Instrução*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*diretiva de OpenMP*
 
 **/\* instruções padrão \*/**
@@ -67,7 +68,7 @@ A notação é descrita na seção 6.1 do padrão C. Este apêndice gramática m
 &nbsp;&nbsp;&nbsp;&nbsp;*diretiva de liberação*
 
 *bloco estruturado*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Instrução*
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*
 
 *constructo paralelo*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*bloco estruturado de diretiva paralelo*
@@ -100,7 +101,7 @@ A notação é descrita na seção 6.1 do padrão C. Este apêndice gramática m
 &nbsp;&nbsp;&nbsp;&nbsp;**agenda (** *tipo de agenda* **,** *expressão* **)**
 
 *tipo de agenda*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Estático**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dinâmico**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**interativa**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**tempo de execução**
@@ -194,7 +195,7 @@ A notação é descrita na seção 6.1 do padrão C. Este apêndice gramática m
 
 **/\* declarações padrão \*/**
 
-*declaração*:<br/>
+*declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*diretiva threadprivate*
 
 *diretiva threadprivate*:<br/>
@@ -217,7 +218,7 @@ A notação é descrita na seção 6.1 do padrão C. Este apêndice gramática m
 **/\* em C \*/**
 
 *lista de variável*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identificador*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*lista de variável* **,** *identificador*
 
 **/\* no C++ \*/**

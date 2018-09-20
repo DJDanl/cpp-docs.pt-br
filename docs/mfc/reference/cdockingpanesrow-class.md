@@ -100,689 +100,721 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d98940ffbd1c6ff021712ee50721908d7760abee
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a06fafc1c2aee472b7a2fa4701802ee8a53956ca
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712121"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446264"
 ---
 # <a name="cdockingpanesrow-class"></a>Classe CDockingPanesRow
-Gerencia uma lista de painéis que estão localizados na mesma linha horizontal ou vertical (coluna) de um local de encaixe.  
 
- Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-class CDockingPanesRow : public CObject  
-```  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-constructors"></a>Construtores Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|`CDockingPanesRow::CDockingPanesRow`|Construtor padrão.|  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CDockingPanesRow::AddPane](#addpane)||  
-|[CDockingPanesRow::AddPaneFromRow](#addpanefromrow)||  
-|[CDockingPanesRow::ArrangePanes](#arrangepanes)|Organiza os painéis em uma linha de acordo com os parâmetros de espaçamento e margem especificada.|  
-|[CDockingPanesRow::CalcFixedLayout](#calcfixedlayout)||  
-|[CDockingPanesRow::Create](#create)||  
-|[CDockingPanesRow::ExpandStretchedPanes](#expandstretchedpanes)||  
-|[CDockingPanesRow::ExpandStretchedPanesRect](#expandstretchedpanesrect)||  
-|[CDockingPanesRow::FixupVirtualRects](#fixupvirtualrects)||  
-|[CDockingPanesRow::GetAvailableLength](#getavailablelength)||  
-|[CDockingPanesRow::GetAvailableSpace](#getavailablespace)||  
-|[CDockingPanesRow::GetClientRect](#getclientrect)||  
-|[CDockingPanesRow::GetDockSite](#getdocksite)||  
-|[CDockingPanesRow::GetExtraSpace](#getextraspace)||  
-|[CDockingPanesRow::GetGroupFromPane](#getgroupfrompane)||  
-|[CDockingPanesRow::GetID](#getid)||  
-|[CDockingPanesRow::GetMaxPaneSize](#getmaxpanesize)||  
-|[CDockingPanesRow::GetPaneCount](#getpanecount)||  
-|[CDockingPanesRow::GetPaneList](#getpanelist)||  
-|[CDockingPanesRow::GetRowAlignment](#getrowalignment)||  
-|[CDockingPanesRow::GetRowHeight](#getrowheight)||  
-|[CDockingPanesRow::GetRowOffset](#getrowoffset)||  
-|[CDockingPanesRow::GetVisibleCount](#getvisiblecount)||  
-|[CDockingPanesRow::GetWindowRect](#getwindowrect)||  
-|[CDockingPanesRow::HasPane](#haspane)||  
-|[CDockingPanesRow::IsEmpty](#isempty)||  
-|[CDockingPanesRow::IsExclusiveRow](#isexclusiverow)||  
-|[CDockingPanesRow::IsHorizontal](#ishorizontal)||  
-|[CDockingPanesRow::IsVisible](#isvisible)||  
-|[CDockingPanesRow::Move](#move)||  
-|[CDockingPanesRow::MovePane](#movepane)||  
-|[CDockingPanesRow::OnResizePane](#onresizepane)||  
-|[CDockingPanesRow::RedrawAll](#redrawall)||  
-|[CDockingPanesRow::RemovePane](#removepane)||  
-|[CDockingPanesRow::ReplacePane](#replacepane)||  
-|[CDockingPanesRow::RepositionPanes](#repositionpanes)||  
-|[CDockingPanesRow::Resize](#resize)||  
-|[CDockingPanesRow::ResizeByPaneDivider](#resizebypanedivider)||  
-|[CDockingPanesRow::ScreenToClient](#screentoclient)||  
-|[CDockingPanesRow::SetExtra](#setextra)||  
-|[CDockingPanesRow::ShowDockSiteRow](#showdocksiterow)||  
-|[CDockingPanesRow::ShowPane](#showpane)||  
-|[CDockingPanesRow::UpdateVisibleState](#updatevisiblestate)||  
-  
-## <a name="remarks"></a>Comentários  
- `CDockingPanesRow` objetos são criados internamente por objetos do site de encaixe.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como obter um `CDockingPanesRow` do objeto de um `CMFCAutoHideBar` objeto.  
-  
- [!code-cpp[NVC_MFC_RibbonApp#26](../../mfc/reference/codesnippet/cpp/cdockingpanesrow-class_1.cpp)]  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxDockingPanesRow.h  
-  
-##  <a name="addpane"></a>  CDockingPanesRow::AddPane  
+Gerencia uma lista de painéis que estão localizados na mesma linha horizontal ou vertical (coluna) de um local de encaixe.
 
-  
-```  
+Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+class CDockingPanesRow : public CObject
+```
+
+## <a name="members"></a>Membros
+
+### <a name="public-constructors"></a>Construtores Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|`CDockingPanesRow::CDockingPanesRow`|Construtor padrão.|
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CDockingPanesRow::AddPane](#addpane)||
+|[CDockingPanesRow::AddPaneFromRow](#addpanefromrow)||
+|[CDockingPanesRow::ArrangePanes](#arrangepanes)|Organiza os painéis em uma linha de acordo com os parâmetros de espaçamento e margem especificada.|
+|[CDockingPanesRow::CalcFixedLayout](#calcfixedlayout)||
+|[CDockingPanesRow::Create](#create)||
+|[CDockingPanesRow::ExpandStretchedPanes](#expandstretchedpanes)||
+|[CDockingPanesRow::ExpandStretchedPanesRect](#expandstretchedpanesrect)||
+|[CDockingPanesRow::FixupVirtualRects](#fixupvirtualrects)||
+|[CDockingPanesRow::GetAvailableLength](#getavailablelength)||
+|[CDockingPanesRow::GetAvailableSpace](#getavailablespace)||
+|[CDockingPanesRow::GetClientRect](#getclientrect)||
+|[CDockingPanesRow::GetDockSite](#getdocksite)||
+|[CDockingPanesRow::GetExtraSpace](#getextraspace)||
+|[CDockingPanesRow::GetGroupFromPane](#getgroupfrompane)||
+|[CDockingPanesRow::GetID](#getid)||
+|[CDockingPanesRow::GetMaxPaneSize](#getmaxpanesize)||
+|[CDockingPanesRow::GetPaneCount](#getpanecount)||
+|[CDockingPanesRow::GetPaneList](#getpanelist)||
+|[CDockingPanesRow::GetRowAlignment](#getrowalignment)||
+|[CDockingPanesRow::GetRowHeight](#getrowheight)||
+|[CDockingPanesRow::GetRowOffset](#getrowoffset)||
+|[CDockingPanesRow::GetVisibleCount](#getvisiblecount)||
+|[CDockingPanesRow::GetWindowRect](#getwindowrect)||
+|[CDockingPanesRow::HasPane](#haspane)||
+|[CDockingPanesRow::IsEmpty](#isempty)||
+|[CDockingPanesRow::IsExclusiveRow](#isexclusiverow)||
+|[CDockingPanesRow::IsHorizontal](#ishorizontal)||
+|[CDockingPanesRow::IsVisible](#isvisible)||
+|[CDockingPanesRow::Move](#move)||
+|[CDockingPanesRow::MovePane](#movepane)||
+|[CDockingPanesRow::OnResizePane](#onresizepane)||
+|[CDockingPanesRow::RedrawAll](#redrawall)||
+|[CDockingPanesRow::RemovePane](#removepane)||
+|[CDockingPanesRow::ReplacePane](#replacepane)||
+|[CDockingPanesRow::RepositionPanes](#repositionpanes)||
+|[CDockingPanesRow::Resize](#resize)||
+|[CDockingPanesRow::ResizeByPaneDivider](#resizebypanedivider)||
+|[CDockingPanesRow::ScreenToClient](#screentoclient)||
+|[CDockingPanesRow::SetExtra](#setextra)||
+|[CDockingPanesRow::ShowDockSiteRow](#showdocksiterow)||
+|[CDockingPanesRow::ShowPane](#showpane)||
+|[CDockingPanesRow::UpdateVisibleState](#updatevisiblestate)||
+
+## <a name="remarks"></a>Comentários
+
+`CDockingPanesRow` objetos são criados internamente por objetos do site de encaixe.
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir demonstra como obter um `CDockingPanesRow` do objeto de um `CMFCAutoHideBar` objeto.
+
+[!code-cpp[NVC_MFC_RibbonApp#26](../../mfc/reference/codesnippet/cpp/cdockingpanesrow-class_1.cpp)]
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** afxDockingPanesRow.h
+
+##  <a name="addpane"></a>  CDockingPanesRow::AddPane
+
+
+```
 virtual void AddPane(
-    CPane* pControlBar,  
-    AFX_DOCK_METHOD dockMethod,  
-    LPCRECT lpRect = NULL,  
+    CPane* pControlBar,
+    AFX_DOCK_METHOD dockMethod,
+    LPCRECT lpRect = NULL,
     BOOL bAddLast = FALSE);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
+```
+
+### <a name="parameters"></a>Parâmetros
+
 *pControlBar*<br/>
-[in] [in] *dockMethod*  
+[in] [in] *dockMethod*
 *lpRect*<br/>
-[in] [in] *bAddLast*  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="addpanefromrow"></a>  CDockingPanesRow::AddPaneFromRow  
+[in] [in] *bAddLast*
 
-  
-```  
+### <a name="remarks"></a>Comentários
+
+##  <a name="addpanefromrow"></a>  CDockingPanesRow::AddPaneFromRow
+
+
+```
 virtual void AddPaneFromRow(
-    CPane* pControlBar,  
+    CPane* pControlBar,
     AFX_DOCK_METHOD dockMethod);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
+```
+
+### <a name="parameters"></a>Parâmetros
+
 *pControlBar*<br/>
-[in] [in] *dockMethod*  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="arrangepanes"></a>  CDockingPanesRow::ArrangePanes  
- Organiza os painéis em uma linha de acordo com a margem especificada de encaixe e espaçamento de parâmetros.  
-  
-```  
+[in] [in] *dockMethod*
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="arrangepanes"></a>  CDockingPanesRow::ArrangePanes
+
+Organiza os painéis em uma linha de acordo com a margem especificada de encaixe e espaçamento de parâmetros.
+
+```
 virtual void ArrangePanes(
-    int nMargin,  
+    int nMargin,
     int nSpacing);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
+```
+
+### <a name="parameters"></a>Parâmetros
+
 *nMargin*<br/>
-[in] Especifica o deslocamento, em pixels, do primeiro painel no canto superior esquerdo da linha.  
-  
+[in] Especifica o deslocamento, em pixels, do primeiro painel no canto superior esquerdo da linha.
+
 *nSpacing*<br/>
-[in] Especifica o espaçamento, em pixels, entre os painéis.  
-  
-### <a name="remarks"></a>Comentários  
- Chame esse método para organizar painéis na linha onde eles serão encaixado. Depois de chamar esse método, você deve chamar `CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`.  
-  
-##  <a name="calcfixedlayout"></a>  CDockingPanesRow::CalcFixedLayout  
+[in] Especifica o espaçamento, em pixels, entre os painéis.
 
-  
-```  
+### <a name="remarks"></a>Comentários
+
+Chame esse método para organizar painéis na linha onde eles serão encaixado. Depois de chamar esse método, você deve chamar `CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`.
+
+##  <a name="calcfixedlayout"></a>  CDockingPanesRow::CalcFixedLayout
+
+
+```
 virtual CSize CalcFixedLayout(
-    BOOL bStretch,  
+    BOOL bStretch,
     BOOL bHorz);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
+```
+
+### <a name="parameters"></a>Parâmetros
+
 *bStretch*<br/>
-[in] [in] *bHorz*  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="cdockingpanesrow"></a>  CDockingPanesRow::CDockingPanesRow  
+[in] [in] *bHorz*
 
-  
-```  
+### <a name="return-value"></a>Valor de retorno
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="cdockingpanesrow"></a>  CDockingPanesRow::CDockingPanesRow
+
+
+```
 CDockingPanesRow(
-    CDockSite* pParentDockBar,  
-    int nOffset,  
+    CDockSite* pParentDockBar,
+    int nOffset,
     int nHeight);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
+```
+
+### <a name="parameters"></a>Parâmetros
+
 *pParentDockBar*<br/>
-[in] [in] *nOffset*  
- [in] *nHeight*  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="create"></a>  CDockingPanesRow::Create  
+[in] [in] *nOffset* [in] *nHeight*
 
-  
-```  
+### <a name="remarks"></a>Comentários
+
+##  <a name="create"></a>  CDockingPanesRow::Create
+
+
+```
 virtual BOOL Create();
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="expandstretchedpanes"></a>  CDockingPanesRow::ExpandStretchedPanes  
+```
 
-  
-```  
+### <a name="return-value"></a>Valor de retorno
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="expandstretchedpanes"></a>  CDockingPanesRow::ExpandStretchedPanes
+
+
+```
 void ExpandStretchedPanes();
-```  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="expandstretchedpanesrect"></a>  CDockingPanesRow::ExpandStretchedPanesRect  
+```
 
-  
-```  
+### <a name="remarks"></a>Comentários
+
+##  <a name="expandstretchedpanesrect"></a>  CDockingPanesRow::ExpandStretchedPanesRect
+
+
+```
 void ExpandStretchedPanesRect();
-```  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="fixupvirtualrects"></a>  CDockingPanesRow::FixupVirtualRects  
+```
 
-  
-```  
+### <a name="remarks"></a>Comentários
+
+##  <a name="fixupvirtualrects"></a>  CDockingPanesRow::FixupVirtualRects
+
+
+```
 void FixupVirtualRects(
-    bool bMoveBackToVirtualRect,  
+    bool bMoveBackToVirtualRect,
     CPane* pBarToExclude = NULL);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
+```
+
+### <a name="parameters"></a>Parâmetros
+
 *bMoveBackToVirtualRect*<br/>
-[in] [in] *pBarToExclude*  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="getavailablelength"></a>  CDockingPanesRow::GetAvailableLength  
+[in] [in] *pBarToExclude*
 
-  
-```  
-virtual int GetAvailableLength(BOOL bUseVirtualRect = FALSE) const;  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- [in] *bUseVirtualRect*  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="getavailablespace"></a>  CDockingPanesRow::GetAvailableSpace  
+### <a name="remarks"></a>Comentários
 
-  
-```  
+##  <a name="getavailablelength"></a>  CDockingPanesRow::GetAvailableLength
+
+
+```
+virtual int GetAvailableLength(BOOL bUseVirtualRect = FALSE) const;
+```
+
+### <a name="parameters"></a>Parâmetros
+
+[in] *bUseVirtualRect*
+
+### <a name="return-value"></a>Valor de retorno
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="getavailablespace"></a>  CDockingPanesRow::GetAvailableSpace
+
+
+```
 virtual void GetAvailableSpace(CRect& rect);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- [in] *rect*  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="getclientrect"></a>  CDockingPanesRow::GetClientRect  
+```
 
-  
-```  
-void GetClientRect(CRect& rect) const;  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- [in] *rect*  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="getdocksite"></a>  CDockingPanesRow::GetDockSite  
+### <a name="parameters"></a>Parâmetros
 
-  
-```  
-CDockSite* GetDockSite() const;  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="getextraspace"></a>  CDockingPanesRow::GetExtraSpace  
+[in] *rect*
 
-  
-```  
-int GetExtraSpace() const;  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="getgroupfrompane"></a>  CDockingPanesRow::GetGroupFromPane  
+### <a name="remarks"></a>Comentários
 
-  
-```  
+##  <a name="getclientrect"></a>  CDockingPanesRow::GetClientRect
+
+
+```
+void GetClientRect(CRect& rect) const;
+```
+
+### <a name="parameters"></a>Parâmetros
+
+[in] *rect*
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="getdocksite"></a>  CDockingPanesRow::GetDockSite
+
+
+```
+CDockSite* GetDockSite() const;
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="getextraspace"></a>  CDockingPanesRow::GetExtraSpace
+
+
+```
+int GetExtraSpace() const;
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="getgroupfrompane"></a>  CDockingPanesRow::GetGroupFromPane
+
+
+```
 void GetGroupFromPane(
-    CPane* pBar,  
+    CPane* pBar,
     CObList& lst);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
+```
+
+### <a name="parameters"></a>Parâmetros
+
 *pBar*<br/>
-[in] [in] *lst*  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="getid"></a>  CDockingPanesRow::GetID  
+[in] [in] *lst*
 
-  
-```  
-int GetID() const;  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="getmaxpanesize"></a>  CDockingPanesRow::GetMaxPaneSize  
+### <a name="remarks"></a>Comentários
 
-  
-```  
-int GetMaxPaneSize(BOOL bSkipHiddenBars = TRUE) const;  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- [in] *bSkipHiddenBars*  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="getpanecount"></a>  CDockingPanesRow::GetPaneCount  
+##  <a name="getid"></a>  CDockingPanesRow::GetID
 
-  
-```  
-int GetPaneCount() const;  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="getpanelist"></a>  CDockingPanesRow::GetPaneList  
 
-  
-```  
-const CObList& GetPaneList() const;  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="getrowalignment"></a>  CDockingPanesRow::GetRowAlignment  
+```
+int GetID() const;
+```
 
-  
-```  
-DWORD GetRowAlignment() const;  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="getrowheight"></a>  CDockingPanesRow::GetRowHeight  
+### <a name="return-value"></a>Valor de retorno
 
-  
-```  
-int GetRowHeight() const;  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="getrowoffset"></a>  CDockingPanesRow::GetRowOffset  
+### <a name="remarks"></a>Comentários
 
-  
-```  
-int GetRowOffset() const;  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="getvisiblecount"></a>  CDockingPanesRow::GetVisibleCount  
+##  <a name="getmaxpanesize"></a>  CDockingPanesRow::GetMaxPaneSize
 
-  
-```  
+
+```
+int GetMaxPaneSize(BOOL bSkipHiddenBars = TRUE) const;
+```
+
+### <a name="parameters"></a>Parâmetros
+
+[in] *bSkipHiddenBars*
+
+### <a name="return-value"></a>Valor de retorno
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="getpanecount"></a>  CDockingPanesRow::GetPaneCount
+
+
+```
+int GetPaneCount() const;
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="getpanelist"></a>  CDockingPanesRow::GetPaneList
+
+
+```
+const CObList& GetPaneList() const;
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="getrowalignment"></a>  CDockingPanesRow::GetRowAlignment
+
+
+```
+DWORD GetRowAlignment() const;
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="getrowheight"></a>  CDockingPanesRow::GetRowHeight
+
+
+```
+int GetRowHeight() const;
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="getrowoffset"></a>  CDockingPanesRow::GetRowOffset
+
+
+```
+int GetRowOffset() const;
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="getvisiblecount"></a>  CDockingPanesRow::GetVisibleCount
+
+
+```
 virtual int GetVisibleCount();
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="getwindowrect"></a>  CDockingPanesRow::GetWindowRect  
+```
 
-  
-```  
-void GetWindowRect(CRect& rect) const;  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- [in] *rect*  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="haspane"></a>  CDockingPanesRow::HasPane  
+### <a name="return-value"></a>Valor de retorno
 
-  
-```  
+### <a name="remarks"></a>Comentários
+
+##  <a name="getwindowrect"></a>  CDockingPanesRow::GetWindowRect
+
+
+```
+void GetWindowRect(CRect& rect) const;
+```
+
+### <a name="parameters"></a>Parâmetros
+
+[in] *rect*
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="haspane"></a>  CDockingPanesRow::HasPane
+
+
+```
 BOOL HasPane(CBasePane* pControlBar);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- [in] *pControlBar*  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="isempty"></a>  CDockingPanesRow::IsEmpty  
+```
 
-  
-```  
-virtual BOOL IsEmpty() const;  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="isexclusiverow"></a>  CDockingPanesRow::IsExclusiveRow  
+### <a name="parameters"></a>Parâmetros
 
-  
-```  
-virtual BOOL IsExclusiveRow() const;  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="ishorizontal"></a>  CDockingPanesRow::IsHorizontal  
+[in] *pControlBar*
 
-  
-```  
-bool IsHorizontal() const;  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="isvisible"></a>  CDockingPanesRow::IsVisible  
+### <a name="return-value"></a>Valor de retorno
 
-  
-```  
-virtual BOOL IsVisible() const;  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="move"></a>  CDockingPanesRow::Move  
+### <a name="remarks"></a>Comentários
 
-  
-```  
+##  <a name="isempty"></a>  CDockingPanesRow::IsEmpty
+
+
+```
+virtual BOOL IsEmpty() const;
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="isexclusiverow"></a>  CDockingPanesRow::IsExclusiveRow
+
+
+```
+virtual BOOL IsExclusiveRow() const;
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="ishorizontal"></a>  CDockingPanesRow::IsHorizontal
+
+
+```
+bool IsHorizontal() const;
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="isvisible"></a>  CDockingPanesRow::IsVisible
+
+
+```
+virtual BOOL IsVisible() const;
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="move"></a>  CDockingPanesRow::Move
+
+
+```
 virtual void Move(int nOffset);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- [in] *nOffset*  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="movepane"></a>  CDockingPanesRow::MovePane  
+```
 
-  
-```  
+### <a name="parameters"></a>Parâmetros
+
+[in] *nOffset*
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="movepane"></a>  CDockingPanesRow::MovePane
+
+
+```
 void MovePane(
-    CPane* pControlBar,  
-    CPoint ptOffset,  
-    BOOL bSwapControlBars,  
+    CPane* pControlBar,
+    CPoint ptOffset,
+    BOOL bSwapControlBars,
     HDWP& hdwp);
 
- 
+
 void MovePane(
-    CPane* pControlBar,  
-    CRect rectTarget,  
+    CPane* pControlBar,
+    CRect rectTarget,
     HDWP& hdwp);
 
- 
+
 void MovePane(
-    CPane* pControlBar,  
-    int nOffset,  
-    bool bForward,  
+    CPane* pControlBar,
+    int nOffset,
+    bool bForward,
     HDWP& hdwp);
 
- 
+
 void MovePane(
-    CPane* pControlBar,  
-    int nAbsolutOffset,  
+    CPane* pControlBar,
+    int nAbsolutOffset,
     HDWP& hdwp);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
+```
+
+### <a name="parameters"></a>Parâmetros
+
 *pControlBar*<br/>
-[in] [in] *ptOffset*  
+[in] [in] *ptOffset*
 *bSwapControlBars*<br/>
-[in] [in] *hdwp*  
+[in] [in] *hdwp*
 *rectTarget*<br/>
-[in] [in] *nOffset*  
+[in] [in] *nOffset*
 *bForward*<br/>
-[in] [in] *nAbsolutOffset*  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="onresizepane"></a>  CDockingPanesRow::OnResizePane  
+[in] [in] *nAbsolutOffset*
 
-  
-```  
+### <a name="remarks"></a>Comentários
+
+##  <a name="onresizepane"></a>  CDockingPanesRow::OnResizePane
+
+
+```
 virtual void OnResizePane(CBasePane* pControlBar);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- [in] *pControlBar*  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="redrawall"></a>  CDockingPanesRow::RedrawAll  
+```
 
-  
-```  
+### <a name="parameters"></a>Parâmetros
+
+[in] *pControlBar*
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="redrawall"></a>  CDockingPanesRow::RedrawAll
+
+
+```
 void RedrawAll();
-```  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="removepane"></a>  CDockingPanesRow::RemovePane  
+```
 
-  
-```  
+### <a name="remarks"></a>Comentários
+
+##  <a name="removepane"></a>  CDockingPanesRow::RemovePane
+
+
+```
 virtual void RemovePane(CPane* pControlBar);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- [in] *pControlBar*  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="replacepane"></a>  CDockingPanesRow::ReplacePane  
+```
 
-  
-```  
+### <a name="parameters"></a>Parâmetros
+
+[in] *pControlBar*
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="replacepane"></a>  CDockingPanesRow::ReplacePane
+
+
+```
 virtual BOOL ReplacePane(
-    CPane* pBarOld,  
+    CPane* pBarOld,
     CPane* pBarNew);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
+```
+
+### <a name="parameters"></a>Parâmetros
+
 *pBarOld*<br/>
-[in] [in] *pBarNew*  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="repositionpanes"></a>  CDockingPanesRow::RepositionPanes  
+[in] [in] *pBarNew*
 
-  
-```  
+### <a name="return-value"></a>Valor de retorno
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="repositionpanes"></a>  CDockingPanesRow::RepositionPanes
+
+
+```
 virtual void RepositionPanes(
-    CRect& rectNewParentBarArea,  
-    UINT nSide = (UINT)-1,  
-    BOOL bExpand = FALSE,  
+    CRect& rectNewParentBarArea,
+    UINT nSide = (UINT)-1,
+    BOOL bExpand = FALSE,
     int nOffset = 0);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
+```
+
+### <a name="parameters"></a>Parâmetros
+
 *rectNewParentBarArea*<br/>
-[in] [in] *Xplorando o*  
+[in] [in] *Xplorando*
 *bExpand*<br/>
-[in] [in] *nOffset*  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="resize"></a>  CDockingPanesRow::Resize  
+[in] [in] *nOffset*
 
-  
-```  
+### <a name="remarks"></a>Comentários
+
+##  <a name="resize"></a>  CDockingPanesRow::Resize
+
+
+```
 virtual int Resize(int nOffset);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- [in] *nOffset*  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="resizebypanedivider"></a>  CDockingPanesRow::ResizeByPaneDivider  
+```
 
-  
-```  
+### <a name="parameters"></a>Parâmetros
+
+[in] *nOffset*
+
+### <a name="return-value"></a>Valor de retorno
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="resizebypanedivider"></a>  CDockingPanesRow::ResizeByPaneDivider
+
+
+```
 virtual int ResizeByPaneDivider(int);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- [in] *int*  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="screentoclient"></a>  CDockingPanesRow::ScreenToClient  
+```
 
-  
-```  
-void ScreenToClient(CRect& rect) const;  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- [in] *rect*  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="setextra"></a>  CDockingPanesRow::SetExtra  
+### <a name="parameters"></a>Parâmetros
 
-  
-```  
+[in] *int*
+
+### <a name="return-value"></a>Valor de retorno
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="screentoclient"></a>  CDockingPanesRow::ScreenToClient
+
+
+```
+void ScreenToClient(CRect& rect) const;
+```
+
+### <a name="parameters"></a>Parâmetros
+
+[in] *rect*
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="setextra"></a>  CDockingPanesRow::SetExtra
+
+
+```
 void SetExtra(
-    int nExtraSpace,  
+    int nExtraSpace,
     AFX_ROW_ALIGNMENT rowExtraAlign);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
+```
+
+### <a name="parameters"></a>Parâmetros
+
 *nExtraSpace*<br/>
-[in] [in] *rowExtraAlign*  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="showdocksiterow"></a>  CDockingPanesRow::ShowDockSiteRow  
+[in] [in] *rowExtraAlign*
 
-  
-```  
+### <a name="remarks"></a>Comentários
+
+##  <a name="showdocksiterow"></a>  CDockingPanesRow::ShowDockSiteRow
+
+
+```
 virtual void ShowDockSiteRow(
-    BOOL bShow,  
+    BOOL bShow,
     BOOL bDelay);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
+```
+
+### <a name="parameters"></a>Parâmetros
+
 *bMostrar*<br/>
-[in] [in] *bDelay*  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="showpane"></a>  CDockingPanesRow::ShowPane  
+[in] [in] *bDelay*
 
-  
-```  
+### <a name="remarks"></a>Comentários
+
+##  <a name="showpane"></a>  CDockingPanesRow::ShowPane
+
+
+```
 virtual BOOL ShowPane(
-    CPane* pControlBar,  
-    BOOL bShow,  
+    CPane* pControlBar,
+    BOOL bShow,
     BOOL bDelay = FALSE);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
-*pControlBar*<br/>
-[in] [in] *bMostrar*  
- [in] *bDelay*  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="updatevisiblestate"></a>  CDockingPanesRow::UpdateVisibleState  
+```
 
-  
-```  
+### <a name="parameters"></a>Parâmetros
+
+*pControlBar*<br/>
+[in] [in] *bMostrar* [in] *bDelay*
+
+### <a name="return-value"></a>Valor de retorno
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="updatevisiblestate"></a>  CDockingPanesRow::UpdateVisibleState
+
+
+```
 virtual void UpdateVisibleState(BOOL bDelay);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- [in] *bDelay*  
-  
-### <a name="remarks"></a>Comentários  
-  
-## <a name="see-also"></a>Consulte também  
- [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [Classe CObject](../../mfc/reference/cobject-class.md)   
- [Classe CDockSite](../../mfc/reference/cdocksite-class.md)   
- [Classe CPane](../../mfc/reference/cpane-class.md)
+```
+
+### <a name="parameters"></a>Parâmetros
+
+[in] *bDelay*
+
+### <a name="remarks"></a>Comentários
+
+## <a name="see-also"></a>Consulte também
+
+[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[Classe CObject](../../mfc/reference/cobject-class.md)<br/>
+[Classe CDockSite](../../mfc/reference/cdocksite-class.md)<br/>
+[Classe CPane](../../mfc/reference/cpane-class.md)

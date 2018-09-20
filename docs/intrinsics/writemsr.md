@@ -18,46 +18,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 627e6bfdb33561e3d4be55aebf07e831b6cdc035
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 330e02b4f3b96461bd1dcb0e6bc6765aa41bda3e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705127"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438503"
 ---
 # <a name="writemsr"></a>__writemsr
-**Seção específica da Microsoft**  
-  
- Gera a gravação para registrar específicos do modelo (`wrmsr`) instrução.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void __writemsr(   
-   unsigned long Register,   
-   unsigned __int64 Value   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
+
+**Seção específica da Microsoft**
+
+Gera a gravação para registrar específicos do modelo (`wrmsr`) instrução.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+void __writemsr( 
+   unsigned long Register, 
+   unsigned __int64 Value 
+);
+```
+
+#### <a name="parameters"></a>Parâmetros
+
 *Registro*<br/>
-[in] O registro de modelo específico.  
-  
+[in] O registro de modelo específico.
+
 *Value*<br/>
-[in] O valor a ser gravado.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Intrínseco|Arquitetura|  
-|---------------|------------------|  
-|`__writemsr`|x86, x64|  
-  
- **Arquivo de cabeçalho** \<intrin. h >  
-  
-## <a name="remarks"></a>Comentários  
- Essa função só pode ser usada no modo kernel, e essa rotina só está disponível como um intrínseco.  
-  
-**Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)
+[in] O valor a ser gravado.
+
+## <a name="requirements"></a>Requisitos
+
+|Intrínseco|Arquitetura|
+|---------------|------------------|
+|`__writemsr`|x86, x64|
+
+**Arquivo de cabeçalho** \<intrin. h >
+
+## <a name="remarks"></a>Comentários
+
+Essa função só pode ser usada no modo kernel, e essa rotina só está disponível como um intrínseco.
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

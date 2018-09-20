@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f554d6d3369f94c5f4e9409d9f6af9a65935fc42
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: dcf9e9a6264f7c58cd0f44573e3b0be81b15f068
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313528"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446524"
 ---
 # <a name="changing-the-properties-of-a-toolbar-button-c"></a>Alterando as propriedades de um botão de barra de ferramentas (C++)
 
@@ -41,6 +41,6 @@ MFC ou ATL
 
 ## <a name="see-also"></a>Consulte também
 
-[Propriedades do botão de barra de ferramentas](../windows/toolbar-button-properties.md)  
-[Criando, movendo e editando botões da barra de ferramentas](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[Propriedades do botão de barra de ferramentas](../windows/toolbar-button-properties.md)<br/>
+[Criando, movendo e editando botões da barra de ferramentas](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [Editor de barra de ferramentas](../windows/toolbar-editor.md)

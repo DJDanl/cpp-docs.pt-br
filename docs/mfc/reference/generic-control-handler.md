@@ -19,20 +19,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae941e7a59fe673dea6068c6ca6df5feb94db239
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 060bda1de088f3e1e84791601f176097f764c412
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372924"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446420"
 ---
 # <a name="generic-control-handler"></a>Manipulador de controle genérico
-Corresponde a seguinte entrada do mapa para o protótipo de função.  
-  
-|Entrada de mapa|Protótipo da função|  
-|---------------|------------------------|  
-|ON_CONTROL ( \<wNotifyCode >, \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-  
-## <a name="see-also"></a>Consulte também  
- [Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)
+
+Corresponde a seguinte entrada de mapa para o protótipo de função.
+
+|Entrada de mapa|Protótipo da função|
+|---------------|------------------------|
+|ON_CONTROL ( \<wNotifyCode >, \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|
+
+## <a name="see-also"></a>Consulte também
+
+[Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)
 

@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c2cb19908b177ea1e07e0178023e868b96a4560
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 39329f4895060ff950f36c3d10dd5e4020f3b98a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754761"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448422"
 ---
 # <a name="coledatetime-class"></a>Classe COleDateTime
 
@@ -1236,9 +1236,9 @@ Veja o exemplo de [SetDate](#setdate).
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe COleVariant](../../mfc/reference/colevariant-class.md)   
-[Classe CTime](../../atl-mfc-shared/reference/ctime-class.md)   
-[Classe CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)   
-[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
+[Classe COleVariant](../../mfc/reference/colevariant-class.md)<br/>
+[Classe CTime](../../atl-mfc-shared/reference/ctime-class.md)<br/>
+[Classe CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
+[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes compartilhadas ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

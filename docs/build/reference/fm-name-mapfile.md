@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e69a273d523a78adc2b71652e5f13fb9141d3b1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bce549cd782c8d79066b16d2e3791ba906e9c4f9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699880"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410527"
 ---
 # <a name="fm-name-mapfile"></a>/Fm (mapfile de nome)
 
@@ -63,7 +63,7 @@ Símbolos globais em um arquivo de mapa geralmente têm um ou mais sublinhados �
 
 ## <a name="see-also"></a>Consulte também
 
-[Arquivo de saída (/ F) opções](../../build/reference/output-file-f-options.md)
-[opções do compilador](../../build/reference/compiler-options.md)<br/>
+[Opções do arquivo de saída (/F)](../../build/reference/output-file-f-options.md)<br/>
+[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
 [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
 [Especificando o nome de caminho](../../build/reference/specifying-the-pathname.md)

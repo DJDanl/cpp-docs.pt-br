@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 57d1a3adc160323726bcdd31808cf82bc8da2e7f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 19bb77128eee9cc8af514e60730c3a39115695cc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609248"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426530"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>Função de retorno da chamada (Biblioteca em Tempo de Execução C++ do Windows Runtime )
 
@@ -201,49 +201,49 @@ ComPtr<TDelegateInterface> Callback(
 
 ### <a name="parameters"></a>Parâmetros
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 Um parâmetro de modelo que especifica a interface do representante a ser chamado quando ocorre um evento.
 
-*TCallback*  
+*TCallback*<br/>
 Um parâmetro de modelo que especifica o tipo de um objeto que representa um objeto e sua função de membro de retorno de chamada.
 
-*TCallbackObject*  
+*TCallbackObject*<br/>
 Um parâmetro de modelo que especifica o objeto cuja função de membro é o método a ser chamado quando ocorre um evento.
 
-*DynamicSite<Targ1*  
+*DynamicSite<Targ1*<br/>
 Um parâmetro de modelo que especifica o tipo do primeiro argumento do método de retorno de chamada.
 
-*TArg2*  
+*TArg2*<br/>
 Um parâmetro de modelo que especifica o tipo do segundo argumento do método de retorno de chamada.
 
-*TArg3*  
+*TArg3*<br/>
 Um parâmetro de modelo que especifica o tipo do terceiro argumento de método de retorno de chamada.
 
-*TArg4*  
+*TArg4*<br/>
 Um parâmetro de modelo que especifica o tipo do quarto argumento do método de retorno de chamada.
 
-*TArg5*  
+*TArg5*<br/>
 Um parâmetro de modelo que especifica o tipo do quinto argumento do método de retorno de chamada.
 
-*TArg6*  
+*TArg6*<br/>
 Um parâmetro de modelo que especifica o tipo do sexto argumento do método de retorno de chamada.
 
-*TArg7*  
+*TArg7*<br/>
 Um parâmetro de modelo que especifica o tipo do sétimo argumento do método de retorno de chamada.
 
-*TArg8*  
+*TArg8*<br/>
 Um parâmetro de modelo que especifica o tipo do argumento do método de retorno de chamada oitava.
 
-*TArg9*  
+*TArg9*<br/>
 Um parâmetro de modelo que especifica o tipo do nono argumento do método de retorno de chamada.
 
-*retorno de chamada*  
+*retorno de chamada*<br/>
 Um objeto que representa o objeto de retorno de chamada e sua função de membro.
 
-*object*  
+*object*<br/>
 O objeto cuja função de membro é chamada quando ocorre um evento.
 
-*Método*  
+*Método*<br/>
 A função de membro ser chamada quando ocorre um evento.
 
 ## <a name="return-value"></a>Valor de retorno

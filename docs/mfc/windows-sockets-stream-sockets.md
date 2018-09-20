@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: Soquetes de fluxo | Microsoft Docs'
+title: 'Windows Sockets: Soquetes de Stream | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,40 +16,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5499395e517f056ffb224c22c888a3cc0382133
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 87045d02238071170d776ff1675fb7283d1295bd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386100"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423852"
 ---
 # <a name="windows-sockets-stream-sockets"></a>Windows Sockets: soquetes de fluxo
-Este artigo descreve os soquetes de fluxo, um dos dois tipos de Windows Socket disponível. (O outro tipo é o [soquete de datagrama](../mfc/windows-sockets-datagram-sockets.md).)  
-  
- Soquetes de fluxo fornecem um fluxo de dados sem limites de registro: um fluxo de bytes que podem ser bidirecionais (o aplicativo é full-duplex: ele pode transmitir e receber através do soquete). Fluxos de podem ser usados para entregar dados unduplicated sequenciados. ("Sequenciado" significa que os pacotes são entregues em ordem enviadas. "Unduplicated" significa que você obtenha um pacote específico apenas uma vez.) Recebimento de mensagens de fluxo é garantido e fluxos são adequados para lidar com grandes quantidades de dados.  
-  
- A camada de transporte de rede pode quebrar ou agrupar dados em pacotes de tamanho razoável. O `CSocket` classe tratará o empacotamento e a descompactação para você.  
-  
- Fluxos são com base nas conexões explícitas: soquete A solicita uma conexão de soquete B; soquete B aceita ou rejeita a solicitação de conexão.  
-  
- Uma chamada telefônica fornece uma boa analogia para um fluxo. Em circunstâncias normais, a parte destinatária ouve o que dizer na ordem dizer, sem perda ou de eliminação de duplicação. Soquetes de fluxo são apropriados, por exemplo, para implementações, como o protocolo FTP (File Transfer), que facilita a transferir ASCII ou os arquivos binários de tamanho arbitrário.  
-  
- Soquetes de fluxo são preferível soquetes de datagrama quando os dados devem ser garantidos de chegar e tamanho dos dados é grande. Para obter mais informações sobre soquetes de fluxo, consulte a especificação de Windows Sockets. A especificação está disponível no SDK do Windows.  
-  
- Usar soquetes de fluxo pode ser vantajoso para aplicativos projetados para usar um soquete de datagrama de difusão de dados para todos os soquetes de recebimento na rede como  
-  
--   O modelo de difusão está sujeita a problemas de saturação (ou "storm") da rede.  
-  
--   O modelo de cliente-servidor adotado subsequentemente é mais eficiente.  
-  
--   O modelo de fluxo fornece transferência de dados confiável, onde o modelo de datagrama não.  
-  
--   Modelo final aproveita a capacidade de se comunicar entre ANSI e Unicode aplicativos de soquete classe que carchive presta a classe CSocket.  
-  
+
+Este artigo descreve os soquetes de fluxo, um dos dois tipos de soquete do Windows disponíveis. (O outro tipo é o [soquete de datagrama](../mfc/windows-sockets-datagram-sockets.md).)
+
+Soquetes de Stream fornecem um fluxo de dados sem limites de registros: um fluxo de bytes que pode ser bidirecional (o aplicativo é full-duplex: ele pode transmitir e receber por meio do soquete). Fluxos podem ser utilizados para entregar dados sequenciados não duplicados. ("Sequenciado" significa que os pacotes sejam entregues na ordem enviadas. "Não duplicadas" significa que você obtenha um pacote específico apenas uma vez.) Tem a garantia de recebimento de mensagens do fluxo e fluxos são bem adequados para lidar com grandes quantidades de dados.
+
+A camada de transporte de rede pode dividir ou agrupar dados em pacotes de tamanho razoável. O `CSocket` classe manipulará o empacotamento e desempacotar para você.
+
+Fluxos são com base nas conexões explícitas: soquete A solicita uma conexão de soquete B; soquete B aceita ou rejeita a solicitação de conexão.
+
+Uma chamada telefônica fornece uma boa analogia para um fluxo. Em circunstâncias normais, a parte destinatária ouve na ordem em que você diz isso, sem duplicação ou perda, você diz. Soquetes de Stream são apropriados, por exemplo, para implementações, como o protocolo FTP (File Transfer), que facilita a transferência ASCII ou arquivos binários de tamanho arbitrário.
+
+Soquetes de Stream são preferíveis para soquetes de datagrama quando os dados devem ser garantidos de chegar e tamanho dos dados é grande. Para obter mais informações sobre os soquetes de fluxo, consulte a especificação de soquetes do Windows. A especificação está disponível no SDK do Windows.
+
+Usar soquetes de fluxo pode ser melhor do que os aplicativos projetados para usar um soquete de datagrama para difusão a todos os soquetes de recebimento na rede, pois
+
+- O modelo de difusão está sujeita a problemas de rede de inundação (ou "storm").
+
+- O modelo cliente-servidor adotado subsequentemente é mais eficiente.
+
+- O modelo de fluxo fornece transferência de dados confiável, em que o modelo de datagrama não tem.
+
+- O modelo final se beneficia da capacidade de se comunicar entre Unicode e ANSI, aplicativos de soquete dessa classe que carchive se presta à classe CSocket.
+
     > [!NOTE]
-    >  Se você usar a classe `CSocket`, você deve usar um fluxo. Uma declaração de MFC falha se você especificar o tipo de soquete como **SOCK_DGRAM**.  
-  
-## <a name="see-also"></a>Consulte também  
- [Windows Sockets em MFC](../mfc/windows-sockets-in-mfc.md)   
- [Windows Sockets: tela de fundo](../mfc/windows-sockets-background.md)
+    >  Se você usar a classe `CSocket`, você deve usar um fluxo. Uma asserção MFC falhará se você especificar como o tipo de soquete **SOCK_DGRAM**.
+
+## <a name="see-also"></a>Consulte também
+
+[Windows Sockets em MFC](../mfc/windows-sockets-in-mfc.md)<br/>
+[Windows Sockets: tela de fundo](../mfc/windows-sockets-background.md)
 

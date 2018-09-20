@@ -27,25 +27,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81cf497e73987e2a7c8ef285a705bc6e7554f7ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5b7a93afaee003f093e479cbdf9c9e14731cef7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373853"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447304"
 ---
 # <a name="user-button-handlers"></a>Manipuladores de botão do usuário
-As seguintes entradas de mapa correspondem aos protótipos de função.  
-  
-|Entrada de mapa|Protótipo da função|  
-|---------------|------------------------|  
-|ON_BN_CLICKED ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_BN_DISABLE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_BN_DOUBLECLICKED ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_BN_HILITE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_BN_PAINT ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_BN_UNHILITE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-  
-## <a name="see-also"></a>Consulte também  
- [Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)
+
+As seguintes entradas de mapa correspondem aos protótipos de função.
+
+|Entrada de mapa|Protótipo da função|
+|---------------|------------------------|
+|ON_BN_CLICKED ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|
+|ON_BN_DISABLE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|
+|ON_BN_DOUBLECLICKED ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|
+|ON_BN_HILITE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|
+|ON_BN_PAINT ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|
+|ON_BN_UNHILITE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|
+
+## <a name="see-also"></a>Consulte também
+
+[Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b910ce2416dc345e2a36c9858f260ef5b42c2cc8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d0b45106609c4bc93684e0d89737bb0753e36fb4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203316"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421083"
 ---
 # <a name="local-c"></a>local (C++)
 
@@ -57,7 +57,7 @@ Para obter mais informações, consulte [contextos de atributo](../windows/attri
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](../windows/idl-attributes.md)  
-[Atributos de interface](../windows/interface-attributes.md)  
-[Atributos de método](../windows/method-attributes.md)  
+[Atributos de IDL](../windows/idl-attributes.md)<br/>
+[Atributos de interface](../windows/interface-attributes.md)<br/>
+[Atributos de método](../windows/method-attributes.md)<br/>
 [call_as](../windows/call-as.md)  

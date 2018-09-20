@@ -12,60 +12,77 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8563bb757ad8d30f1639f017769bfd6c4084efa0
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: e95ad940aac14892ac14e8d56ba64f49d0bbf7c0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688590"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423826"
 ---
 # <a name="12-definition-of-terms"></a>1.2 Definições de termos
-Os seguintes termos são usados neste documento:  
-  
- barrier  
- Um ponto de sincronização que deve ser acessado por todos os threads em uma equipe.  Cada thread aguarda até que todos os threads da equipe de chegarem nesse ponto. Há barreiras explícitas identificadas por diretivas e implícitas barreiras criadas pela implementação.  
-  
- Construir  
- Uma construção é uma instrução. Ele consiste em uma diretiva e o bloco estruturado subsequente. Observe que algumas diretivas não fazem parte de uma construção. (Consulte *diretiva de openmp* na [Apêndice C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)).  
-  
- Diretiva  
- C ou C++ **#pragma** seguido de **omp** identificador, outro texto e uma nova linha. A diretiva especifica o comportamento do programa.  
-  
- extensão dinâmica  
- Todas as instruções no *extensão lexical*, além de qualquer instrução em uma função que é executada como resultado da execução de instruções dentro da extensão de léxica. Uma extensão dinâmica também é conhecida como um *região*.  
-  
- extensão de léxico  
- Instruções lexicalmente contidas em um *bloco estruturado*.  
-  
- thread mestre  
- O thread que cria uma equipe quando um *região parallel* é inserido.  
-  
- região Parallel  
- Instruções que associar a uma construção paralela OpenMP e podem ser executadas por vários threads.  
-  
- particulares  
- Uma variável privada nomeia um bloco de armazenamento que é exclusivo para o thread que faz a referência. Observe que há várias maneiras de especificar que uma variável particular: uma definição de dentro de uma região parallel, um **threadprivate** diretiva, um **privada**, **firstprivate**, **lastprivate**, ou **redução** cláusula ou uso da variável como um **para**variável de controle de loop em uma **para** loop imediatamente após um **para** ou **paralelo para** diretiva.  
-  
- região  
- Uma extensão dinâmica.  
-  
- região serial  
- Instruções executadas somente pelo *mestre thread* fora a extensão dinâmica de qualquer *região parallel*.  
-  
- Serializar  
- Para executar uma construção paralela com uma equipe de threads que consiste em apenas um único thread (que é o thread principal para essa construção paralela), com serial ordem de execução para as instruções dentro do bloco estruturado (a mesma ordem como se o bloco não eram parte de uma construção paralela) e sem afetar o valor retornado por **omp_in_parallel()** (além dos efeitos de qualquer aninhado construções paralelas).  
-  
- shared  
- Uma variável compartilhada nomeia um único bloco de armazenamento. Todos os threads em uma equipe que acessar essa variável acessarão este bloco único de armazenamento.  
-  
- bloco estruturado  
- Um bloco estruturado é uma instrução (simples ou composta) que tem uma única entrada e uma única saída. Nenhuma instrução é um bloco estruturado se há um salto para dentro ou fora dessa instrução (incluindo uma chamada para **longjmp**(3C) ou o uso de **gerar**, mas uma chamada para **sair** é permitido). Uma instrução composta é um bloco estruturado se sua execução sempre começa na abertura **{** e sempre termina no fechamento **}**. Uma instrução de expressão, a instrução de seleção, a instrução de iteração, ou **tente** bloco é um bloco estruturado, se a instrução composta correspondente obtido por delimitador na **{** e **}** seria um bloco estruturado. Uma instrução de salto, a instrução rotulada ou a instrução de declaração não é um bloco estruturado.  
-  
- Equipe  
- Um ou mais threads trabalhar de forma na execução de uma construção.  
-  
- thread  
- Uma entidade de execução com um série fluxo de controle, um conjunto de variáveis privadas e acesso a variáveis compartilhadas.  
-  
- variável  
- Um identificador, opcionalmente qualificado por nomes de namespace, que nomeia um objeto.
+
+Os seguintes termos são usados neste documento:
+
+- barrier
+
+   Um ponto de sincronização que deve ser acessado por todos os threads em uma equipe.  Cada thread aguarda até que todos os threads da equipe chegarem nesse ponto. Não há barreiras explícitas identificadas por diretivas e barreiras implícitas criadas pela implementação.
+
+- Construir
+
+   Uma construção é uma instrução. Ele consiste em uma diretiva e o bloco estruturado subsequente. Observe que algumas políticas não são parte de uma construção. (Consulte *diretiva de openmp* na [Apêndice C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)).
+
+- Diretiva
+
+   Um C ou C++ **#pragma** seguido de **omp** identificador, outros tipos de texto e uma nova linha. A diretiva especifica o comportamento do programa.
+
+- extensão dinâmico
+
+   Todas as instruções na *extensão de léxico*, além de qualquer instrução dentro de uma função que é executada como resultado da execução de instruções dentro a extensão de léxica. Uma extensão dinâmica também é conhecida como um *região*.
+
+- extensão de léxico
+
+   Instruções lexicalmente contidas em uma *bloco estruturado*.
+
+-  thread mestre
+
+   O thread que cria uma equipe quando um *região paralela* é inserido.
+
+- região paralela
+
+   Instruções que se associar a um constructo de paralela OpenMP e podem ser executadas por vários threads.
+
+- particulares
+
+   Uma variável privada nomeia um bloco de armazenamento que é exclusivo para o thread que faz a referência. Observe que há várias maneiras para especificar que uma variável é privada: uma definição em uma região paralela, um **threadprivate** diretiva, um **privada**, **firstprivate**, **lastprivate**, ou **redução** cláusula ou uso da variável como um **para**variável de controle de loop em um **para** loop imediatamente após um **para** ou **paralela para** diretiva.
+
+- região
+
+   Uma extensão dinâmica.
+
+- região serial
+
+   Instruções executadas apenas pelo *dominar thread* fora a extensão dinâmica de qualquer *região paralela*.
+
+- Serializar
+
+   Para executar uma construção paralela com uma equipe de threads que consiste em apenas um único thread (que é o thread mestre para essa construção paralela), com ordem serial de execução para as instruções dentro do bloco estruturado (a mesma ordem como se o bloco não eram parte de uma construção paralela) e sem afetar o valor retornado por **omp_in_parallel()** (além dos efeitos de qualquer aninhada construções paralelas).
+
+- shared
+
+   Uma variável compartilhada nomeia um único bloco de armazenamento. Todos os threads que acessam essa variável em uma equipe poderão acessar esse único bloco de armazenamento.
+
+- bloco estruturado
+
+   Um bloco estruturado é uma instrução (única ou composta) que tem uma única entrada e uma única saída. Nenhuma instrução é um bloco estruturado, se houver um salto para dentro ou fora dessa instrução (incluindo uma chamada para **longjmp**(3C) ou o uso de **throw**, mas uma chamada para **sair** é permitido). Uma instrução composta é um bloco estruturado, se sua execução sempre começa na abertura **{** e sempre termina no fechamento **}**. Uma instrução de expressão, a instrução de seleção, a instrução de iteração, ou **tente** bloco é um bloco estruturado, se a instrução composta correspondente é obtido, colocando-o no **{** e **}** seria um bloco estruturado. Uma instrução de salto, a instrução rotulada ou a instrução de declaração não é um bloco estruturado.
+
+-  Equipe
+
+   Um ou mais threads cooperativas na execução de uma construção.
+
+- thread
+
+   Uma entidade de execução com um fluxo serial de controle, um conjunto de variáveis privadas e acesso a variáveis compartilhadas.
+
+- variável
+
+   Um identificador, opcionalmente qualificado por nomes de namespace que nomeia um objeto.

@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77dcf22e82fda1d0326c35f3e56ced19a1ca05fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 653c81da4cb9cd1a4beff453b4a36847e1837491
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342901"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437060"
 ---
 # <a name="month-calendar-control-examples"></a>Exemplos de controle de calendário mensal
-O [CMNCTRL1](../visual-cpp-samples.md) aplicativo de exemplo demonstra os vários atributos do `CMonthCalCtrl` classe. O controle, encontrado em uma guia separada na amostra, demonstra a funcionalidade básica e permite que o usuário modifique dinamicamente determinados atributos.  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+
+O [CMNCTRL1](../visual-cpp-samples.md) aplicativo de exemplo demonstra os vários atributos do `CMonthCalCtrl` classe. O controle, encontrado em uma guia separada na amostra, demonstra a funcionalidade básica e permite que o usuário modificar dinamicamente a determinados atributos.
+
+## <a name="see-also"></a>Consulte também
+
+[Usando CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)<br/>
+[Controles](../mfc/controls-mfc.md)
 

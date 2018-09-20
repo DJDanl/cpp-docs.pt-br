@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59e748ef68d78f9cb77eb335f5c5cd44e058f0d4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1e0873b366c84e89b23ddbaa6c64f6b484f921e0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601150"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446329"
 ---
 # <a name="weakreferenceresolve-method"></a>Método WeakReference::Resolve
 
@@ -39,10 +39,10 @@ STDMETHOD(Resolve)
 
 ### <a name="parameters"></a>Parâmetros
 
-*riid*  
+*riid*<br/>
 Uma ID de interface.
 
-*ppvObject*  
+*ppvObject*<br/>
 Quando essa operação for concluída, uma cópia da referência forte atual se a contagem de referência forte for diferente de zero.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -65,5 +65,5 @@ Define o ponteiro especificado para o valor atual de referência forte se a cont
 
 ## <a name="see-also"></a>Consulte também
 
-[WeakReference Class1](../windows/weakreference-class1.md)  
+[WeakReference Class1](../windows/weakreference-class1.md)<br/>
 [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

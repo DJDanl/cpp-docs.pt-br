@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de24840ed3b6b7b747bb16cf26cbdb5aed29b1eb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9984e85bbdd047f7673d683e5c5237d93acb818b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380819"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429598"
 ---
 # <a name="tn046-commenting-conventions-for-the-mfc-classes"></a>TN046: convenções de comentário para as classes MFC
-Essa observação técnica descrita originalmente as convenções usadas para as classes MFC de comentário. Essas informações agora são abordadas em [MFC: usando os arquivos de origem MFC](../mfc/using-the-mfc-source-files.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Observações técnicas por número](../mfc/technical-notes-by-number.md)   
- [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
+
+Originalmente, essa observação técnica descrita as convenções usadas para as classes MFC de comentário. Essas informações agora são abordadas [MFC: usando os arquivos de origem MFC](../mfc/using-the-mfc-source-files.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
+[Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
 
