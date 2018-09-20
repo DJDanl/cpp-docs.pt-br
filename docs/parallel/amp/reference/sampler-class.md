@@ -22,16 +22,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7261a28f5dea4a8de4af3c169f9b67537e5f3088
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: ee5d50976b6d91bff6d84ec288560ff1348c73d9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121845"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424684"
 ---
 # <a name="sampler-class"></a>Classe de amostra
 
-A classe de amostra agrega informações de configuração de amostragem a ser usado para amostragem de textura.
+A classe sampler agrega informações de configuração de amostragem a ser usado para amostragem de textura.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -45,15 +45,15 @@ class sampler;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[amostra de construtor](#ctor)|Sobrecarregado. Constrói uma instância de amostra.|
+|[amostra de construtor](#ctor)|Sobrecarregado. Constrói uma instância de demonstrador.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Nome|Descrição|
 |----------|-----------------|
-|[get_address_mode](#get_address_mode)|Retorna o `address_mode` que foi associado ao objeto de amostra.|
-|[get_border_color](#get_border_color)|Retorna a cor da borda que foi associado ao objeto de amostra.|
-|[get_filter_mode](#get_filter_mode)|Retorna o `filter_mode` que foi associado ao objeto de amostra.|
+|[get_address_mode](#get_address_mode)|Retorna o `address_mode` associado o objeto da amostra.|
+|[get_border_color](#get_border_color)|Retorna a cor da borda que está associada com o objeto da amostra.|
+|[get_filter_mode](#get_filter_mode)|Retorna o `filter_mode` associado o objeto da amostra.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -66,7 +66,7 @@ class sampler;
 |Nome|Descrição|
 |----------|-----------------|
 |[address_mode](#address_mode)|Obtém o modo de endereço do `sampler` objeto.|
-|[border_color](#border_color)|Obtém a cor da borda do `sampler` objeto.|
+|[border_color](#border_color)|Obtém a cor da borda a `sampler` objeto.|
 |[filter_mode](#filter_mode)|Obtém o modo de filtro do `sampler` objeto.|
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
@@ -75,13 +75,13 @@ class sampler;
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** amp_graphics.h
+**Cabeçalho:** amp_graphics. h
 
 **Namespace:** Concurrency:: Graphics
 
 ##  <a name="ctor"></a> amostra
 
-Constrói uma instância do [amostra classe](sampler-class.md).
+Constrói uma instância do [classe sampler](sampler-class.md).
 
 ```cpp
 sampler() restrict(cpu);    // [1] default constructor
@@ -89,14 +89,12 @@ sampler() restrict(cpu);    // [1] default constructor
 sampler(                    // [2] constructor
     filter_mode _Filter_mode) restrict(cpu);
 
-
 sampler(                    // [3] constructor
     address_mode _Address_mode,
     float_4 _Border_color = float_4(0.0f,
     0.0f,
     0.0f,
     0.0f)) restrict(cpu);
-
 
 sampler(                    // [4] constructor
     filter_mode _Filter_mode,
@@ -106,11 +104,9 @@ sampler(                    // [4] constructor
     0.0f,
     0.0f)) restrict(cpu);
 
-
 sampler(                    // [5] copy constructor
     const sampler& _Other) restrict(amp,
     cpu);
-
 
 sampler(                    // [6] move constructor
     sampler&& _Other) restrict(amp,
@@ -119,21 +115,19 @@ sampler(                    // [6] move constructor
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Filter_mode*  
- O modo de filtro a ser usado na amostragem.
+*_Filter_mode*<br/>
+O modo de filtro a ser usado em amostragem.
 
-*_Address_mode*  
- O modo de endereçamento a ser usado na amostragem para todas as dimensões.
+*_Address_mode*<br/>
+O modo de endereçando a ser usado em amostragem para todas as dimensões.
 
-*_Border_color*  
- A cor da borda a ser usado se o modo de endereço é address_border. O valor padrão é `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.
+*_Border_color*<br/>
+A cor da borda a ser usado se o modo de endereço for address_border. O valor padrão é `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.
 
-*_Other*  
-[5] construtor de cópia  
-O `sampler` objeto a ser copiado para a nova `sampler` instância.
+*Outro*<br/>
+[5] construtor de cópia o `sampler` objeto a ser copiado no novo `sampler` instância.
 
-[6] construtor de movimento  
-O `sampler` objeto a ser movido para a nova `sampler` instância.
+[6] construtor de movimentação a `sampler` objeto a ser movido para a nova `sampler` instância.
 
 ##  <a name="address_mode"></a> address_mode
 
@@ -145,7 +139,7 @@ __declspec(property(get= get_address_mode)) Concurrency::graphics::address_mode 
 
 ##  <a name="border_color"></a> border_color
 
-Obtém a cor da borda do `sampler` objeto.
+Obtém a cor da borda a `sampler` objeto.
 
 ```cpp
 __declspec(property(get= get_border_color)) Concurrency::graphics::float_4 border_color;
@@ -161,7 +155,7 @@ __declspec(property(get= get_filter_mode)) Concurrency::graphics::filter_mode fi
 
 ##  <a name="get_address_mode"></a> get_address_mode
 
-Retorna o modo de filtro que está configurado para este `sampler`.
+Retorna o modo de filtro que é configurado para este `sampler`.
 
 ```cpp
 Concurrency::graphics::address_mode get_address_mode() const __GPU;
@@ -169,7 +163,7 @@ Concurrency::graphics::address_mode get_address_mode() const __GPU;
 
 ### <a name="return-value"></a>Valor de retorno
 
-O modo de endereço que está configurado para a amostra.
+O modo de endereço que é configurado para a amostra.
 
 ##  <a name="get_border_color"></a> get_border_color
 
@@ -185,7 +179,7 @@ Um float_4 que contém a cor da borda.
 
 ##  <a name="get_filter_mode"></a> get_filter_mode
 
-Retorna o modo de filtro que está configurado para este `sampler`.
+Retorna o modo de filtro que é configurado para este `sampler`.
 
 ```cpp
 Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
@@ -193,33 +187,31 @@ Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
 
 ### <a name="return-value"></a>Valor de retorno
 
-O modo de filtro que está configurado para a amostra.
+O modo de filtro que é configurado para a amostra.
 
 ##  <a name="operator_eq"></a> operador =
 
-Atribui o valor de outro objeto de amostra para uma amostra existente.
+Atribui o valor de outro objeto do demonstrador a um demonstrador existente.
 
 ```cpp
 sampler& operator= (    // [1] copy assignment operator
     const sampler& _Other) restrict(amp, cpu);
 
-sampler& operator= (    // [2] move assignment operator 
+sampler& operator= (    // [2] move assignment operator
     sampler&& _Other) restrict(amp, cpu);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*_Other*  
-[1] operador de atribuição de cópia  
-O `sampler` objeto para copiar a esta `sampler`.
+*Outro*<br/>
+[1] operador de atribuição de cópia o `sampler` o objeto a ser copiado neste `sampler`.
 
-[2] operador de atribuição de movimentação do  
-O `sampler` objeto para mover a esta `sampler`.
+[2] operador de atribuição de movimentação o `sampler` objeto a ser movido para este `sampler`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Uma referência a essa instância de amostra.
+Uma referência a esta instância de amostra.
 
 ## <a name="see-also"></a>Consulte também
 
-[Namespace Concurrency::graphics](concurrency-graphics-namespace.md)  
+[Namespace Concurrency::graphics](concurrency-graphics-namespace.md)
