@@ -19,16 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 488d34ead9a56250febe24bec7ebd4323ec07d95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c689504efbafe40cce54b9c333724a1390925cf9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345635"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375832"
 ---
 # <a name="orchestrating-other-window-actions"></a>Orquestrando outras ações de janela
-A janela do quadro orquestra estados semimodais como a Ajuda contextual e visualização de impressão. Para obter uma descrição da função da janela do quadro na visualização de impressão, consulte [impressão e visualização de impressão](../mfc/printing-and-print-preview.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando janelas com moldura](../mfc/using-frame-windows.md)
+
+A janela do quadro orquestra estados semimodais como a Ajuda contextual e visualização de impressão. Para obter uma descrição da função da janela de quadro na visualização de impressão, consulte [impressão e visualização de impressão](../mfc/printing-and-print-preview.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Usando janelas com moldura](../mfc/using-frame-windows.md)
 

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c1db7390be47d2f9530708b2a4cd59dd1c22cc7
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e754307c35d10aa36680a42415bd3a5b781321ba
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610388"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384839"
 ---
 # <a name="editing-properties-for-an-activex-control"></a>Editando propriedades de um controle ActiveX
 
@@ -48,7 +48,7 @@ Win32
 
 ## <a name="see-also"></a>Consulte também
 
-[Exibindo e adicionando controles ActiveX a uma caixa de diálogo](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)  
-[Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)  
-[Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)  
+[Exibindo e adicionando controles ActiveX a uma caixa de diálogo](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)<br/>
+[Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)<br/>
+[Controles ActiveX do MFC](../mfc/mfc-activex-controls.md)<br/>
 [Contêineres de controle ActiveX](../mfc/activex-control-containers.md)

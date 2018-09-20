@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2398f1e775dfa8b9331a4abc0137207c85531aff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0804397888d64ac5b6cab9a60f9912b27358bc43
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385064"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373315"
 ---
 # <a name="root-class-cobject"></a>Classe raiz: CObject
-A maioria das classes da biblioteca Microsoft Foundation Class (MFC) é derivada de uma única classe base na raiz da hierarquia de classe. `CObject` Fornece uma série de recursos úteis para todas as classes derivadas dele, com pouca sobrecarga. Para obter mais informações sobre `CObject` e seus recursos, consulte [usando CObject](../mfc/using-cobject.md).  
-  
- [CObject](../mfc/reference/cobject-class.md)  
- A classe base definitiva da maioria das classes do MFC. Dá suporte à serialização de dados e obter informações sobre uma classe em tempo de execução.  
-  
- [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)  
- Estrutura usada para determinar a classe exata de um objeto em tempo de execução.  
-  
-## <a name="see-also"></a>Consulte também  
- [Visão geral da classe](../mfc/class-library-overview.md)
+
+A maioria das classes na biblioteca Microsoft Foundation Class (MFC) é derivada de uma única classe base na raiz da hierarquia de classe. `CObject` Fornece uma série de recursos úteis para todas as classes derivadas dela, com muito pouca sobrecarga. Para obter mais informações sobre `CObject` e seus recursos, consulte [CObject usando](../mfc/using-cobject.md).
+
+[CObject](../mfc/reference/cobject-class.md)<br/>
+A classe base definitiva da maioria das classes do MFC. Dá suporte à serialização de dados e obter informações de tempo de execução sobre uma classe.
+
+[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)<br/>
+Estrutura usada para determinar a classe exata de um objeto em tempo de execução.
+
+## <a name="see-also"></a>Consulte também
+
+[Visão geral da classe](../mfc/class-library-overview.md)
 

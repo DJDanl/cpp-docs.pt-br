@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1193af2891a2cd3150fdb1cee9dd6957a1fe271
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 409d56699334d6e62294768f3c6b5f4890ea503c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704061"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379483"
 ---
 # <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/UTF-8 (Definir origem e executáveis conjuntos de caracteres UTF-8)
 
@@ -54,6 +54,6 @@ Por padrão, o Visual Studio detecta uma marca de ordem de byte para determinar 
 
 [Opções do Compilador](../../build/reference/compiler-options.md)<br/>
 [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
-[/Execution-charset (definir execução de conjunto de caracteres)](../../build/reference/execution-charset-set-execution-character-set.md)
-[/source-charset (Definir origem conjunto de caracteres)](../../build/reference/source-charset-set-source-character-set.md)
-[/validate-charset (validar quanto caracteres compatíveis)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+[/Execution-charset (definir execução de conjunto de caracteres)](../../build/reference/execution-charset-set-execution-character-set.md)<br/>
+[/source-charset (definir conjunto de caracteres de origem)](../../build/reference/source-charset-set-source-character-set.md)<br/>
+[/validate-charset (validar quanto à presença de caracteres compatíveis)](../../build/reference/validate-charset-validate-for-compatible-characters.md)

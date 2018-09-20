@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61a8e7b36448a485705b914fbb37892271d7d9fc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7ce497c621f116c4755e8b47d148e24a9043b46b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597160"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374732"
 ---
 # <a name="interfacelist-structure"></a>Estrutura InterfaceList
 
@@ -40,10 +40,10 @@ struct InterfaceList;
 
 ### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 Um nome de interface; a primeira interface na lista recursiva.
 
-*U*  
+*U*<br/>
 Um nome de interface; as interfaces restantes na lista recursiva.
 
 ## <a name="remarks"></a>Comentários

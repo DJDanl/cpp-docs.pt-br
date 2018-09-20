@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 795c16a46356eb9599e02b43b51066b603b8b9ce
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4fef169cb0e2386c1629064ad7ea8a1a70a5c517
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222102"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382070"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Usando um controle de usuário do Windows Form no MFC
 
@@ -85,5 +85,5 @@ Se seu aplicativo do MFC usa o Windows Forms, você precisará redistribuir mfcm
 
 ## <a name="see-also"></a>Consulte também
 
-[Elementos da Interface do usuário](../mfc/user-interface-elements-mfc.md)  
-[Modos de exibição de formulário](../mfc/form-views-mfc.md)  
+[Elementos da Interface do usuário](../mfc/user-interface-elements-mfc.md)<br/>
+[Modos de exibição de formulário](../mfc/form-views-mfc.md)

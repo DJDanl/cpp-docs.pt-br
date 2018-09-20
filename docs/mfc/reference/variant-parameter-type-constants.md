@@ -45,53 +45,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d61930bda4560baaf628ce018cc0161527d9d07e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 64b68fb930c6de732e009a251c5e8363bace80ec
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885943"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374730"
 ---
 # <a name="variant-parameter-type-constants"></a>Constantes do tipo de parâmetro variante
-Este tópico lista as novas constantes que indicam os tipos de parâmetro variante projetados para uso com as classes de controle OLE da biblioteca Microsoft Foundation Class.  
-  
- A seguir está uma lista de constantes de classe:  
-  
-##  <a name="_mfc_variant_data_constants"></a> Constantes de dados Variant  
-  
--   Inteiro de 32 bits do VTS_COLOR usado para representar um valor de cor RGB.  
-  
--   Ponteiro de um VTS_FONT para o `IFontDisp` interface de um objeto de fonte OLE.  
-  
--   Valor do identificador VTS_HANDLE um Windows.  
-  
--   Ponteiro de um VTS_PICTURE para o `IPictureDisp` interface de um objeto de imagem OLE.  
-  
--   Valor de 16 bits do VTS_OPTEXCLUSIVE usado para um controle que se destina a ser usado em um grupo de controles, como botões de opção. Esse tipo informa o contêiner que, se um controle em um grupo tem um valor TRUE, todos os outros devem ser FALSE.  
-  
--   VTS_TRISTATE de 16 bits assinado inteiro usado para as propriedades que podem ter um dos três valores possíveis (marcados, desmarcados, indisponíveis), por exemplo, uma caixa de seleção.  
-  
--   VTS_XPOS_HIMETRIC de 32 bits sem sinal número inteiro usado para representar uma posição ao longo do eixo x em unidades HIMETRIC.  
-  
--   VTS_YPOS_HIMETRIC de 32 bits sem sinal número inteiro usado para representar uma posição ao longo do eixo y em unidades HIMETRIC.  
-  
--   VTS_XPOS_PIXELS de 32 bits sem sinal número inteiro usado para representar uma posição ao longo do eixo x em pixels.  
-  
--   VTS_YPOS_PIXELS de 32 bits sem sinal número inteiro usado para representar uma posição ao longo do eixo y em pixels.  
-  
--   VTS_XSIZE_PIXELS de 32 bits sem sinal número inteiro usado para representar a largura de um objeto de tela em pixels.  
-  
--   VTS_YSIZE_PIXELS de 32 bits sem sinal número inteiro usado para representar a altura de um objeto de tela em pixels.  
-  
--   VTS_XSIZE_HIMETRIC de 32 bits sem sinal número inteiro usado para representar a largura de um objeto de tela em unidades HIMETRIC.  
-  
--   VTS_YSIZE_HIMETRIC de 32 bits sem sinal número inteiro usado para representar a altura de um objeto de tela em unidades HIMETRIC.  
-  
+
+Este tópico lista as novas constantes que indicam os tipos de parâmetro variante projetados para uso com as classes de controle OLE da biblioteca Microsoft Foundation Class.
+
+A seguir está uma lista de constantes de classe:
+
+##  <a name="_mfc_variant_data_constants"></a> Constantes de dados Variant
+
+- Inteiro de 32 bits do VTS_COLOR usado para representar um valor de cor RGB.
+
+- Ponteiro de um VTS_FONT para o `IFontDisp` interface de um objeto de fonte OLE.
+
+- Valor do identificador VTS_HANDLE um Windows.
+
+- Ponteiro de um VTS_PICTURE para o `IPictureDisp` interface de um objeto de imagem OLE.
+
+- Valor de 16 bits do VTS_OPTEXCLUSIVE usado para um controle que se destina a ser usado em um grupo de controles, como botões de opção. Esse tipo informa o contêiner que, se um controle em um grupo tem um valor TRUE, todos os outros devem ser FALSE.
+
+- VTS_TRISTATE de 16 bits assinado inteiro usado para as propriedades que podem ter um dos três valores possíveis (marcados, desmarcados, indisponíveis), por exemplo, uma caixa de seleção.
+
+- VTS_XPOS_HIMETRIC de 32 bits sem sinal número inteiro usado para representar uma posição ao longo do eixo x em unidades HIMETRIC.
+
+- VTS_YPOS_HIMETRIC de 32 bits sem sinal número inteiro usado para representar uma posição ao longo do eixo y em unidades HIMETRIC.
+
+- VTS_XPOS_PIXELS de 32 bits sem sinal número inteiro usado para representar uma posição ao longo do eixo x em pixels.
+
+- VTS_YPOS_PIXELS de 32 bits sem sinal número inteiro usado para representar uma posição ao longo do eixo y em pixels.
+
+- VTS_XSIZE_PIXELS de 32 bits sem sinal número inteiro usado para representar a largura de um objeto de tela em pixels.
+
+- VTS_YSIZE_PIXELS de 32 bits sem sinal número inteiro usado para representar a altura de um objeto de tela em pixels.
+
+- VTS_XSIZE_HIMETRIC de 32 bits sem sinal número inteiro usado para representar a largura de um objeto de tela em unidades HIMETRIC.
+
+- VTS_YSIZE_HIMETRIC de 32 bits sem sinal número inteiro usado para representar a altura de um objeto de tela em unidades HIMETRIC.
+
     > [!NOTE]
-    >  Constantes de variant adicionais foram definidos para todos os tipos variantes, com exceção do VTS_FONT e VTS_PICTURE, que fornecem um ponteiro para a constante de dados variant. Essas constantes são nomeadas usando o VTS_P`constantname` convenção. Por exemplo, VTS_PCOLOR é um ponteiro para uma constante VTS_COLOR.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxdisp.h  
-  
-## <a name="see-also"></a>Consulte também  
- [Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)
+    >  Constantes de variant adicionais foram definidos para todos os tipos variantes, com exceção do VTS_FONT e VTS_PICTURE, que fornecem um ponteiro para a constante de dados variant. Essas constantes são nomeadas usando o VTS_P`constantname` convenção. Por exemplo, VTS_PCOLOR é um ponteiro para uma constante VTS_COLOR.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** afxdisp.h
+
+## <a name="see-also"></a>Consulte também
+
+[Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)

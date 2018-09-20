@@ -18,78 +18,82 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03c38c5328500394871bee937cbc05395eb44cd5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8f8aa8c1fd1a5dad6fd70c566cb59bf8dddc4cc3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715494"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380121"
 ---
 # <a name="stosq"></a>__stosq
-**Seção específica da Microsoft**  
-  
- Gera uma instrução de cadeia de caracteres de repositório (`rep stosq`).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void __stosb(   
-   unsigned __int64* Dest,   
-   unsigned __int64 Data,   
-   size_t Count   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
+
+**Seção específica da Microsoft**
+
+Gera uma instrução de cadeia de caracteres de repositório (`rep stosq`).
+
+## <a name="syntax"></a>Sintaxe
+
+```
+void __stosb( 
+   unsigned __int64* Dest, 
+   unsigned __int64 Data, 
+   size_t Count 
+);
+```
+
+#### <a name="parameters"></a>Parâmetros
+
 *dest*<br/>
-[out] O destino da operação.  
-  
+[out] O destino da operação.
+
 *Dados*<br/>
-[in] Os dados serem armazenados.  
-  
+[in] Os dados serem armazenados.
+
 *Contagem*<br/>
-[in] O tamanho do bloco de palavras quádruplas escrever.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Intrínseco|Arquitetura|  
-|---------------|------------------|  
-|`__stosq`|AMD64|  
-  
- **Arquivo de cabeçalho** \<intrin. h >  
-  
-## <a name="remarks"></a>Comentários  
- O resultado é que o quadword `Data` é gravado em um bloco de `Count` palavras quádruplas no `Dest` cadeia de caracteres.  
-  
- Essa rotina só está disponível como função intrínseca.  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// stosq.c  
-// processor: x64  
-#include <stdio.h>  
-#include <intrin.h>  
-  
-#pragma intrinsic(__stosq)  
-  
-int main()  
-{  
-   unsigned __int64 val = 0xFFFFFFFFFFFFI64;  
-   unsigned __int64 a[10];  
-   memset(a, 0, sizeof(a));  
-   __stosq(a+1, val, 2);  
-   printf("%I64x %I64x %I64x %I64x", a[0], a[1], a[2], a[3]);   
-}  
-```  
-  
-## <a name="output"></a>Saída  
-  
-```  
-0 ffffffffffff ffffffffffff 0  
-```  
-  
-**Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)
+[in] O tamanho do bloco de palavras quádruplas escrever.
+
+## <a name="requirements"></a>Requisitos
+
+|Intrínseco|Arquitetura|
+|---------------|------------------|
+|`__stosq`|AMD64|
+
+**Arquivo de cabeçalho** \<intrin. h >
+
+## <a name="remarks"></a>Comentários
+
+O resultado é que o quadword `Data` é gravado em um bloco de `Count` palavras quádruplas no `Dest` cadeia de caracteres.
+
+Essa rotina só está disponível como função intrínseca.
+
+## <a name="example"></a>Exemplo
+
+```
+// stosq.c
+// processor: x64
+#include <stdio.h>
+#include <intrin.h>
+
+#pragma intrinsic(__stosq)
+
+int main()
+{
+   unsigned __int64 val = 0xFFFFFFFFFFFFI64;
+   unsigned __int64 a[10];
+   memset(a, 0, sizeof(a));
+   __stosq(a+1, val, 2);
+   printf("%I64x %I64x %I64x %I64x", a[0], a[1], a[2], a[3]);
+}
+```
+
+## <a name="output"></a>Saída
+
+```
+0 ffffffffffff ffffffffffff 0
+```
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

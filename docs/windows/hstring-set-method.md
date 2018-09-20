@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6eb2261ab973245c78ec8f5e0269663e5181a0ab
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 391af2939d4fc46f386299241f009ab2249200da
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590035"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372208"
 ---
 # <a name="hstringset-method"></a>Método HString::Set
 
@@ -42,13 +42,13 @@ HRESULT Set(
 
 ### <a name="parameters"></a>Parâmetros
 
-*str*  
+*str*<br/>
 Uma cadeia de caracteres largos.
 
-*Len*  
+*Len*<br/>
 O comprimento máximo do *str* parâmetro que é atribuído ao atual **HString** objeto.
 
-*HSTR*  
+*HSTR*<br/>
 Um existente **HString** objeto.
 
 ## <a name="requirements"></a>Requisitos

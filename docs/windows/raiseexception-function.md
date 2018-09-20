@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49024e903237160cc26a9c095cf9f313b43ccb6f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 12032318f898b2986b64d5cd8a1e611a31d1fc8c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600759"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372386"
 ---
 # <a name="raiseexception-function"></a>Função RaiseException
 
@@ -38,10 +38,10 @@ inline void __declspec(noreturn)   RaiseException(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hr*  
+*hr*<br/>
 O código de exceção da exceção que está sendo gerado; ou seja, o HRESULT de uma operação com falha.
 
-*dwExceptionFlags*  
+*dwExceptionFlags*<br/>
 Um sinalizador que indica uma exceção noncontinuable (o valor do sinalizador é diferente de zero) ou a exceção de continuidade (o valor do sinalizador é zero). Por padrão, a exceção é não continuável.
 
 ## <a name="remarks"></a>Comentários

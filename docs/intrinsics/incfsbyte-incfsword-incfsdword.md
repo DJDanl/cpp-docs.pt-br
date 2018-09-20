@@ -23,51 +23,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a80dc66f9626c87cef78a79b1c46a62afd0957d3
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d72fc5c130f9e92cc4575510fe7565da5199a996
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719349"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380263"
 ---
 # <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte, __incfsword, __incfsdword
-**Seção específica da Microsoft**  
-  
- Adicione um para o valor em um local de memória especificado por um deslocamento em relação ao início do `FS` segmento.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void __incfsbyte(   
-   unsigned long Offset   
-);  
-void __incfsword(   
-   unsigned long Offset   
-);  
-void __incfsdword(   
-   unsigned long Offset  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
+
+**Seção específica da Microsoft**
+
+Adicione um para o valor em um local de memória especificado por um deslocamento em relação ao início do `FS` segmento.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+void __incfsbyte(
+   unsigned long Offset
+);
+void __incfsword(
+   unsigned long Offset
+);
+void __incfsdword(
+   unsigned long Offset
+);
+```
+
+#### <a name="parameters"></a>Parâmetros
+
 *deslocamento*<br/>
-[in] O deslocamento do início do `FS`.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Intrínseco|Arquitetura|  
-|---------------|------------------|  
-|`__incfsbyte`|x86|  
-|`__incfsword`|x86|  
-|`__incfsdword`|x86|  
-  
-## <a name="remarks"></a>Comentários  
- Esses intrínsecos só estão disponíveis no modo kernel, e as rotinas somente estão disponíveis como intrínsecos.  
-  
-**Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)   
- [__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
- [__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   
- [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)
+[in] O deslocamento do início do `FS`.
+
+## <a name="requirements"></a>Requisitos
+
+|Intrínseco|Arquitetura|
+|---------------|------------------|
+|`__incfsbyte`|x86|
+|`__incfsword`|x86|
+|`__incfsdword`|x86|
+
+## <a name="remarks"></a>Comentários
+
+Esses intrínsecos só estão disponíveis no modo kernel, e as rotinas somente estão disponíveis como intrínsecos.
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)<br/>
+[__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)<br/>
+[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)<br/>
+[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

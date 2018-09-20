@@ -1,5 +1,5 @@
 ---
-title: 'Como: compilar MFC e ATL código usando o clr-| Microsoft Docs'
+title: 'Como: compilar código MFC e ATL usando - clr | Microsoft Docs'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -23,69 +23,71 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b7412d69230bcb6375a042d6cf8e8f27a3d9eac9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8c6079cd0371afa1b9a3ed32ba2cf67e1691d665
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33136061"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382798"
 ---
 # <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Como compilar código MFC e ATL usando /clr
-Este tópico discute como compilar os programas existentes MFC e ATL para direcionar o Common Language Runtime.  
-  
-### <a name="to-compile-an-mfc-executable-or-regular-mfc-dll-by-using-clr"></a>Para compilar uma DLL do MFC MFC regular ou executável usando /clr  
-  
-1.  Clique com botão direito no projeto no **Solution Explorer** e, em seguida, clique em **propriedades**.  
-  
-2.  No **propriedades do projeto** caixa de diálogo caixa, expanda o nó lado **propriedades de configuração** e selecione **geral**. No painel direito, em **padrões do projeto**, defina **suporte a Common Language Runtime** para **tempo de execução de linguagem comum suporte (/ clr)**.  
-  
-     No painel do mesmo, verifique se **uso de MFC** é definido como **Use MFC em uma DLL compartilhada**.  
-  
-3.  Em **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **geral**. Verifique se **formato informações de depuração** é definido como **banco de dados do programa /Zi** (não **/ZI**).  
-  
-4.  Selecione o **geração de código** nó. Definir **habilitar recompilação mínima** para **não (/ Gm-)**. Também definir **verificações de tempo de execução básico** para **padrão**.  
-  
-5.  Em **propriedades de configuração**, selecione **C/C++** e **geração de código**. Verifique se **biblioteca de tempo de execução** está definida como **multi-threaded depurar DLL (/ MDd)** ou **multi-threaded DLL (/ MD)**.  
-  
-6.  Em Stdafx. h, adicione a linha a seguir.  
-  
-    ```  
-    #using <System.Windows.Forms.dll>  
-    ```  
-  
-### <a name="to-compile-an-mfc-extension-dll-by-using-clr"></a>Para compilar uma DLL de extensão do MFC usando /clr  
-  
-1.  Siga as etapas em "To compilar uma DLL do MFC MFC regular ou executável, usando /clr".  
-  
-2.  Em **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **cabeçalhos pré-compilados**. Definir **criar/usar cabeçalho de pré-compilado** para **não usar cabeçalhos pré-compilados**.  
-  
-     Como alternativa, em **Solution Explorer**, clique com botão direito Stdafx.cpp e, em seguida, clique em **propriedades**. Em **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **geral**. Definir **compilar com suporte a Common Language Runtime** para **suporte No Common Language Runtime**.  
-  
-3.  Para o arquivo que contém DllMain e qualquer coisa chama, em **Solution Explorer**, clique no arquivo e, em seguida, clique em **propriedades**. Em **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **geral**. No painel direito, em **padrões do projeto**, defina **compilar com suporte a Common Language Runtime** para **suporte No Common Language Runtime**.  
-  
-### <a name="to-compile-an-atl-executable-by-using-clr"></a>Para compilar um executável ATL usando /clr  
-  
-1.  Em **Solution Explorer**, clique com o botão direito e, em seguida, clique em **propriedades**.  
-  
-2.  No **propriedades do projeto** caixa de diálogo caixa, expanda o nó lado **propriedades de configuração** e selecione **geral**. No painel direito, em **padrões do projeto**, defina **suporte a Common Language Runtime** para **tempo de execução de linguagem comum suporte (/ clr)**.  
-  
-3.  Em **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **geral**. Verifique se **formato informações de depuração** é definido como **banco de dados do programa /Zi** (não **/ZI**).  
-  
-4.  Selecione o **geração de código** nó. Definir **habilitar recompilação mínima** para **não (/ Gm-)**. Também definir **verificações de tempo de execução básico** para **padrão**.  
-  
-5.  Em **propriedades de configuração**, selecione **C/C++** e **geração de código**. Verifique se **biblioteca de tempo de execução** está definida como **multi-threaded depurar DLL (/ MDd)** ou **multi-threaded DLL (/ MD)**.  
-  
-6.  Para cada gerados por MIDL arquivo (C arquivos), clique no arquivo em **Solution Explorer** e, em seguida, clique em **propriedades**. Em **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **geral**. Definir **compilar com suporte a Common Language Runtime** para **suporte No Common Language Runtime**.  
-  
-### <a name="to-compile-an-atl-dll-by-using-clr"></a>Para compilar uma DLL da ATL usando /clr  
-  
-1.  Siga as etapas na seção "para compilar um executável de ATL usando /clr".  
-  
-2.  Em **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **cabeçalhos pré-compilados**. Definir **criar/usar cabeçalho de pré-compilado** para **não usar cabeçalhos pré-compilados**.  
-  
-     Como alternativa, em **Solution Explorer**, clique com botão direito Stdafx.cpp e, em seguida, clique em **propriedades**. Em **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **geral**. Definir **compilar com suporte a Common Language Runtime** para **suporte No Common Language Runtime**.  
-  
-3.  Para o arquivo que contém DllMain e qualquer coisa chama, em **Solution Explorer**, clique no arquivo e, em seguida, clique em **propriedades**. Em **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **geral**. No painel direito, em **padrões do projeto**, defina **compilar com suporte a Common Language Runtime** para **suporte No Common Language Runtime**.  
-  
-## <a name="see-also"></a>Consulte também  
- [Assemblies mistos (nativos e gerenciados)](../dotnet/mixed-native-and-managed-assemblies.md)
+
+Este tópico discute como compilar programas existentes do MFC e ATL para direcionar o Common Language Runtime.
+
+### <a name="to-compile-an-mfc-executable-or-regular-mfc-dll-by-using-clr"></a>Para compilar uma DLL do MFC MFC regulares ou executável usando /clr
+
+1. Clique com botão direito no projeto no **Gerenciador de soluções** e, em seguida, clique em **propriedades**.
+
+1. No **propriedades do projeto** diálogo caixa, expanda o nó lado **propriedades de configuração** e selecione **geral**. No painel direito, sob **padrões de projeto**, defina **suporte do Common Language Runtime** para **suporte a Common Language Runtime (/ clr)**.
+
+     No mesmo painel, verifique se **uso do MFC** é definido como **usar MFC em uma DLL compartilhada**.
+
+1. Sob **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **geral**. Certifique-se de que **formato de informações de depuração** é definido como **banco de dados do programa /Zi** (não **/ZI**).
+
+1. Selecione o **geração de código** nó. Definir **habilitar recompilação mínima** à **não (/ Gm-)**. Também defina **verificações básicas de tempo de execução** à **padrão**.
+
+1. Sob **propriedades de configuração**, selecione **C/C++** e, em seguida, **geração de código**. Certifique-se de que **biblioteca de tempo de execução** está definida como **DLL de depuração multi-threaded (/ MDd)** ou **DLL multi-threaded (/ MD)**.
+
+1. Em Stdafx. h, adicione a seguinte linha.
+
+    ```
+    #using <System.Windows.Forms.dll>
+    ```
+
+### <a name="to-compile-an-mfc-extension-dll-by-using-clr"></a>Para compilar uma DLL de extensão do MFC usando /clr
+
+1. Siga as etapas em "To compilar uma DLL do MFC MFC regulares ou executável usando /clr".
+
+1. Sob **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **cabeçalhos pré-compilados**. Definir **criar/usar cabeçalho de pré-compilado** à **não usar cabeçalhos pré-compilados**.
+
+     Como alternativa, na **Gerenciador de soluções**, clique com botão direito Stdafx e, em seguida, clique em **propriedades**. Sob **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **geral**. Definir **compilar com o suporte a Common Language Runtime** à **suporte No Common Language Runtime**.
+
+1. Para o arquivo que contém o DllMain e qualquer coisa ele chama, na **Gerenciador de soluções**, o arquivo com o botão direito e, em seguida, clique em **propriedades**. Sob **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **geral**. No painel direito, sob **padrões de projeto**, defina **compilar com o suporte a Common Language Runtime** para **suporte No Common Language Runtime**.
+
+### <a name="to-compile-an-atl-executable-by-using-clr"></a>Para compilar um executável ATL usando /clr
+
+1. Na **Gerenciador de soluções**, clique com botão direito no projeto e, em seguida, clique em **propriedades**.
+
+1. No **propriedades do projeto** diálogo caixa, expanda o nó lado **propriedades de configuração** e selecione **geral**. No painel direito, sob **padrões de projeto**, defina **suporte do Common Language Runtime** para **suporte a Common Language Runtime (/ clr)**.
+
+1. Sob **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **geral**. Certifique-se de que **formato de informações de depuração** é definido como **banco de dados do programa /Zi** (não **/ZI**).
+
+1. Selecione o **geração de código** nó. Definir **habilitar recompilação mínima** à **não (/ Gm-)**. Também defina **verificações básicas de tempo de execução** à **padrão**.
+
+1. Sob **propriedades de configuração**, selecione **C/C++** e, em seguida, **geração de código**. Certifique-se de que **biblioteca de tempo de execução** está definida como **DLL de depuração multi-threaded (/ MDd)** ou **DLL multi-threaded (/ MD)**.
+
+1. Para cada gerados por MIDL arquivo (arquivos C), clique no arquivo no **Gerenciador de soluções** e, em seguida, clique em **propriedades**. Sob **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **geral**. Definir **compilar com o suporte a Common Language Runtime** à **suporte No Common Language Runtime**.
+
+### <a name="to-compile-an-atl-dll-by-using-clr"></a>Para compilar uma DLL do ATL usando /clr
+
+1. Siga as etapas na seção "para compilar uma executável de ATL usando /clr".
+
+1. Sob **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **cabeçalhos pré-compilados**. Definir **criar/usar cabeçalho de pré-compilado** à **não usar cabeçalhos pré-compilados**.
+
+     Como alternativa, na **Gerenciador de soluções**, clique com botão direito Stdafx e, em seguida, clique em **propriedades**. Sob **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **geral**. Definir **compilar com o suporte a Common Language Runtime** à **suporte No Common Language Runtime**.
+
+1. Para o arquivo que contém o DllMain e qualquer coisa ele chama, na **Gerenciador de soluções**, o arquivo com o botão direito e, em seguida, clique em **propriedades**. Sob **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **geral**. No painel direito, sob **padrões de projeto**, defina **compilar com o suporte a Common Language Runtime** para **suporte No Common Language Runtime**.
+
+## <a name="see-also"></a>Consulte também
+
+[Assemblies mistos (nativos e gerenciados)](../dotnet/mixed-native-and-managed-assemblies.md)

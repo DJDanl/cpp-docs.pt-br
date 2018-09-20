@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc0506d5b4f264a2bdbecf30a7732c93c927bf18
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 29f487f77fac6c3f6def51b69715d1d47257dd7c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767976"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374217"
 ---
 # <a name="cpoint-class"></a>Classe CPoint
 
@@ -352,9 +352,9 @@ Use o operador unário para negar a um ponto. Por exemplo, usando o operador un�
 
 ## <a name="see-also"></a>Consulte também
 
-[Exemplo MFC MDI](../../visual-cpp-samples.md)   
-[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
-[Estrutura POINT](../../mfc/reference/point-structure1.md)   
-[Classe CRect](../../atl-mfc-shared/reference/crect-class.md)   
+[Exemplo MFC MDI](../../visual-cpp-samples.md)<br/>
+[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
+[Estrutura POINT](../../mfc/reference/point-structure1.md)<br/>
+[Classe CRect](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [Classe CSize](../../atl-mfc-shared/reference/csize-class.md)
 

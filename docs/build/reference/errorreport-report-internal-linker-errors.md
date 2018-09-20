@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30cc9cbab9a3575eee2f791b0af7dfcaffc1538d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3b4b19eed4b481ffa44688e15fb1567e73da1a8f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701084"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373445"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (erros de vinculador internos do relatório)
 
@@ -64,6 +64,6 @@ A opção **/errorreport: Send** envia automaticamente informações de erro à 
 
 ## <a name="see-also"></a>Consulte também
 
-[/errorReport (relatório de erros do compilador interno)](../../build/reference/errorreport-report-internal-compiler-errors.md)
-[definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
+[/errorReport (relatar erros internos do compilador)](../../build/reference/errorreport-report-internal-compiler-errors.md)<br/>
+[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
 [Opções do vinculador](../../build/reference/linker-options.md)

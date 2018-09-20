@@ -19,184 +19,206 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46a1607b0d69be21e38cace117ec2c0e248827be
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bd0a0a25e1607b3b4318fdfca1f68f272cd02173
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339391"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380185"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>Funções de bitmap cinza e pontilhado
-**Funções de Bitmap cinza**  
-  
- MFC fornece duas funções para fornecer um bitmap a aparência de um controle desabilitado.  
-  
- ![Comparação de versões de ícone cinza e originais](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
-  
-|||  
-|-|-|  
-|[AfxDrawGrayBitmap](#afxdrawgraybitmap)|Desenha uma versão de cinza de um bitmap.|  
-|[AfxGetGrayBitmap](#afxgetgraybitmap)|Copia uma versão de cinza de um bitmap.|  
-  
- **Funções de Bitmap pontilhado**  
-  
- MFC também fornece duas funções para substituir o plano de fundo de um bitmap com um padrão de pontilhado.  
-  
- ![Comparação de versões de ícone original e pontilhado](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
-  
-|||  
-|-|-|  
-|[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|Desenha um bitmap com um plano de fundo pontilhado.|  
-|[AfxGetDitheredBitmap](#afxgetditheredbitmap)|Copia um bitmap com um plano de fundo pontilhado.|  
-  
-##  <a name="afxdrawgraybitmap"></a>  AfxDrawGrayBitmap  
- Desenha uma versão de cinza de um bitmap.  
-  
-```   
+
+**Funções de Bitmap cinza**
+
+MFC fornece duas funções para fornecer um bitmap a aparência de um controle desabilitado.
+
+![Comparação de versões de ícone cinza e originais](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+
+|||
+|-|-|
+|[AfxDrawGrayBitmap](#afxdrawgraybitmap)|Desenha uma versão de cinza de um bitmap.|
+|[AfxGetGrayBitmap](#afxgetgraybitmap)|Copia uma versão de cinza de um bitmap.|
+
+**Funções de Bitmap pontilhado**
+
+MFC também fornece duas funções para substituir o plano de fundo de um bitmap com um padrão de pontilhado.
+
+![Comparação de versões de ícone original e pontilhado](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+
+|||
+|-|-|
+|[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|Desenha um bitmap com um plano de fundo pontilhado.|
+|[AfxGetDitheredBitmap](#afxgetditheredbitmap)|Copia um bitmap com um plano de fundo pontilhado.|
+
+##  <a name="afxdrawgraybitmap"></a>  AfxDrawGrayBitmap
+
+Desenha uma versão de cinza de um bitmap.
+
+```
 void AFXAPI AfxDrawGrayBitmap(
-    CDC* pDC,  
-    int x,  
-    int y,  
-    const CBitmap& rSrc,  
-    COLORREF crBackground); 
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *pDC*  
- Aponta para o controlador de domínio de destino.  
-  
- *x*  
- A destino coordenada x.  
-  
- *y*  
- A destino coordenada y.  
-  
- *rSrc*  
- O bitmap de origem.  
-  
- *crBackground*  
- A nova cor de plano de fundo (normalmente cinza, como COLOR_MENU).  
-  
-### <a name="remarks"></a>Comentários  
- Um bitmap desenhado com `AfxDrawGrayBitmap` terá a aparência de um controle desabilitado.  
-  
- ![Comparação de versões de ícone cinza e originais](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
-  
-### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_MFCDocView#191](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_1.cpp)]  
+    CDC* pDC,
+    int x,
+    int y,
+    const CBitmap& rSrc,
+    COLORREF crBackground);
+```
 
-### <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxwin. h  
+### <a name="parameters"></a>Parâmetros
 
-##  <a name="afxgetgraybitmap"></a>  AfxGetGrayBitmap  
- Copia uma versão de cinza de um bitmap.  
-  
-```   
+*pDC*<br/>
+Aponta para o controlador de domínio de destino.
+
+*x*<br/>
+A destino coordenada x.
+
+*y*<br/>
+A destino coordenada y.
+
+*rSrc*<br/>
+O bitmap de origem.
+
+*crBackground*<br/>
+A nova cor de plano de fundo (normalmente cinza, como COLOR_MENU).
+
+### <a name="remarks"></a>Comentários
+
+Um bitmap desenhado com `AfxDrawGrayBitmap` terá a aparência de um controle desabilitado.
+
+![Comparação de versões de ícone cinza e originais](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+
+### <a name="example"></a>Exemplo
+
+[!code-cpp[NVC_MFCDocView#191](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_1.cpp)]
+
+### <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** afxwin. h
+
+##  <a name="afxgetgraybitmap"></a>  AfxGetGrayBitmap
+
+Copia uma versão de cinza de um bitmap.
+
+```
 void AFXAPI AfxGetGrayBitmap(
-    const CBitmap& rSrc,  
-    CBitmap* pDest,  
-    COLORREF crBackground); 
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *rSrc*  
- O bitmap de origem.  
-  
- *pDest*  
- O bitmap de destino.  
-  
- *crBackground*  
- A nova cor de plano de fundo (normalmente cinza, como COLOR_MENU).  
-  
-### <a name="remarks"></a>Comentários  
- Um bitmap copiado com `AfxGetGrayBitmap` terá a aparência de um controle desabilitado.  
-  
- ![Comparação de versões de ícone cinza e originais](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
-  
-### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_MFCDocView#193](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_2.cpp)]  
+    const CBitmap& rSrc,
+    CBitmap* pDest,
+    COLORREF crBackground);
+```
 
-### <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxwin. h  
-  
-##  <a name="afxdrawditheredbitmap"></a>  AfxDrawDitheredBitmap  
- Desenha um bitmap, substituindo seu plano de fundo com um padrão de pontilhado (Verificador).  
-  
-```   
+### <a name="parameters"></a>Parâmetros
+
+*rSrc*<br/>
+O bitmap de origem.
+
+*pDest*<br/>
+O bitmap de destino.
+
+*crBackground*<br/>
+A nova cor de plano de fundo (normalmente cinza, como COLOR_MENU).
+
+### <a name="remarks"></a>Comentários
+
+Um bitmap copiado com `AfxGetGrayBitmap` terá a aparência de um controle desabilitado.
+
+![Comparação de versões de ícone cinza e originais](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+
+### <a name="example"></a>Exemplo
+
+[!code-cpp[NVC_MFCDocView#193](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_2.cpp)]
+
+### <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** afxwin. h
+
+##  <a name="afxdrawditheredbitmap"></a>  AfxDrawDitheredBitmap
+
+Desenha um bitmap, substituindo seu plano de fundo com um padrão de pontilhado (Verificador).
+
+```
 void AFXAPI AfxDrawDitheredBitmap(
-    CDC* pDC,  
-    int x,  
-    int y,  
-    const CBitmap& rSrc,  
-    COLORREF cr1  ,  
-    COLORREF cr2); 
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *pDC*  
- Aponta para o controlador de domínio de destino.  
-  
- *x*  
- A destino coordenada x.  
-  
- *y*  
- A destino coordenada y.  
-  
- *rSrc*  
- O bitmap de origem.  
-  
- *cr1*  
- Uma das cores dois pontilhamento, normalmente em branco.  
-  
- *cr2*  
- A outra pontilhamento cor, normalmente acinzentado (COLOR_MENU).  
-  
-### <a name="remarks"></a>Comentários  
- O bitmap de origem é desenhado no controlador de domínio de destino com duas cores (*cr1* e *cr2*) quadriculada padrão que substitui o plano de fundo do bitmap. O plano de fundo do bitmap de origem é definido como seus pixels brancas e todos os pixels correspondentes a cor do pixel no canto superior esquerdo do bitmap.  
-  
- ![Comparação de versões de ícone original e pontilhado](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
-  
-### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_MFCDocView#190](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_3.cpp)]  
+    CDC* pDC,
+    int x,
+    int y,
+    const CBitmap& rSrc,
+    COLORREF cr1  ,
+    COLORREF cr2);
+```
 
-### <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxwin. h  
+### <a name="parameters"></a>Parâmetros
+
+*pDC*<br/>
+Aponta para o controlador de domínio de destino.
+
+*x*<br/>
+A destino coordenada x.
+
+*y*<br/>
+A destino coordenada y.
+
+*rSrc*<br/>
+O bitmap de origem.
+
+*cr1*<br/>
+Uma das cores dois pontilhamento, normalmente em branco.
+
+*cr2*<br/>
+A outra pontilhamento cor, normalmente acinzentado (COLOR_MENU).
+
+### <a name="remarks"></a>Comentários
+
+O bitmap de origem é desenhado no controlador de domínio de destino com duas cores (*cr1* e *cr2*) quadriculada padrão que substitui o plano de fundo do bitmap. O plano de fundo do bitmap de origem é definido como seus pixels brancas e todos os pixels correspondentes a cor do pixel no canto superior esquerdo do bitmap.
+
+![Comparação de versões de ícone original e pontilhado](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+
+### <a name="example"></a>Exemplo
+
+[!code-cpp[NVC_MFCDocView#190](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_3.cpp)]
+
+### <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** afxwin. h
 
 
-##  <a name="afxgetditheredbitmap"></a>  AfxGetDitheredBitmap  
- Copia um bitmap, substituindo seu plano de fundo com um padrão de pontilhado (Verificador).  
-  
-```   
+##  <a name="afxgetditheredbitmap"></a>  AfxGetDitheredBitmap
+
+Copia um bitmap, substituindo seu plano de fundo com um padrão de pontilhado (Verificador).
+
+```
 void AFXAPI AfxGetDitheredBitmap(
-    const CBitmap& rSrc,  
-    CBitmap* pDest,  
-    COLORREF cr1  ,  
-    COLORREF cr2); 
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *rSrc*  
- O bitmap de origem.  
-  
- *pDest*  
- O bitmap de destino.  
-  
- *cr1*  
- Uma das cores dois pontilhamento, normalmente em branco.  
-  
- *cr2*  
- A outra pontilhamento cor, normalmente acinzentado (COLOR_MENU).  
-  
-### <a name="remarks"></a>Comentários  
- O bitmap de origem é copiado para o bitmap de destino com duas cores (*cr1* e *cr2*) quadriculada padrão que substitui o plano de fundo do bitmap de origem. O plano de fundo do bitmap de origem é definido como seus pixels brancas e todos os pixels correspondentes a cor do pixel no canto superior esquerdo do bitmap.  
-  
- ![Comparação de versões de ícone original e pontilhado](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
-  
-### <a name="example"></a>Exemplo  
- [!code-cpp[NVC_MFCDocView#192](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_4.cpp)]  
+    const CBitmap& rSrc,
+    CBitmap* pDest,
+    COLORREF cr1  ,
+    COLORREF cr2);
+```
 
-### <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxwin. h  
-  
-## <a name="see-also"></a>Consulte também  
- [Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)
+### <a name="parameters"></a>Parâmetros
+
+*rSrc*<br/>
+O bitmap de origem.
+
+*pDest*<br/>
+O bitmap de destino.
+
+*cr1*<br/>
+Uma das cores dois pontilhamento, normalmente em branco.
+
+*cr2*<br/>
+A outra pontilhamento cor, normalmente acinzentado (COLOR_MENU).
+
+### <a name="remarks"></a>Comentários
+
+O bitmap de origem é copiado para o bitmap de destino com duas cores (*cr1* e *cr2*) quadriculada padrão que substitui o plano de fundo do bitmap de origem. O plano de fundo do bitmap de origem é definido como seus pixels brancas e todos os pixels correspondentes a cor do pixel no canto superior esquerdo do bitmap.
+
+![Comparação de versões de ícone original e pontilhado](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+
+### <a name="example"></a>Exemplo
+
+[!code-cpp[NVC_MFCDocView#192](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_4.cpp)]
+
+### <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** afxwin. h
+
+## <a name="see-also"></a>Consulte também
+
+[Macros e globais](../../mfc/reference/mfc-macros-and-globals.md)

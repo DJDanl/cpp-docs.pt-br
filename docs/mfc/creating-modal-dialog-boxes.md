@@ -1,5 +1,5 @@
 ---
-title: Criando caixas de diálogo modais | Microsoft Docs
+title: Criando caixas de diálogo Modal | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a8bc947dbaf9cecc680f3cdbd8e6b429d2bcd5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3fcc449a376091c07a7fb26b81fe19752bc3bcd6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342423"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376637"
 ---
 # <a name="creating-modal-dialog-boxes"></a>Criando caixas de diálogo modais
-Para criar uma caixa de diálogo modal, chamar um dos dois construtores públicos declarados em [CDialog](../mfc/reference/cdialog-class.md). Em seguida, chame o objeto de caixa de diálogo [DoModal](../mfc/reference/cdialog-class.md#domodal) função de membro para exibir a caixa de diálogo e gerenciar a interação com ele até que o usuário escolhe Okey ou em Cancelar. Este gerenciamento por `DoModal` faz com que a caixa de diálogo modal. Para caixas de diálogo modais `DoModal` carrega o recurso de caixa de diálogo.  
-  
-## <a name="see-also"></a>Consulte também  
- [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
+
+Para criar uma caixa de diálogo modal, chamar qualquer um dos dois construtores públicos declarados no [CDialog](../mfc/reference/cdialog-class.md). Em seguida, chame o objeto de caixa de diálogo [DoModal](../mfc/reference/cdialog-class.md#domodal) função de membro para exibir a caixa de diálogo e gerenciar a interação com ele até que o usuário escolhe Okey ou Cancelar. Esse gerenciamento por `DoModal` faz com que a caixa de diálogo modal. Para caixas de diálogo modal, `DoModal` carrega o recurso de caixa de diálogo.
+
+## <a name="see-also"></a>Consulte também
+
+[Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
 

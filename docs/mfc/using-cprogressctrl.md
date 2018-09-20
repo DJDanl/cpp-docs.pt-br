@@ -19,28 +19,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a3d222ed4f3de143182cf0a413e4160b68356cc
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 04fdca189d31c5a13712a65780025fd9d8aa9123
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951147"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372438"
 ---
 # <a name="using-cprogressctrl"></a>Usando CProgressCtrl
-Você pode usar o controle de progresso para indicar o progresso de uma operação demorada. É um retângulo que é preenchido com a cor de realce do sistema conforme o andamento da operação.  
-  
- O controle de progresso é representado em MFC pela classe [CProgressCtrl](../mfc/reference/cprogressctrl-class.md).  
-  
- Quando você cria inicialmente o controle de progresso, especifique seu tamanho e posição, a janela pai (geralmente uma caixa de diálogo) e ID. Usando o *dwStyle* parâmetro, você também pode especificar vários estilos de janela para o controle e estilos de como ele é preenchido.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
-  
--   [Estilos para o controle de progresso](../mfc/styles-for-the-progress-control.md)  
-  
--   [Configurações para o controle de progresso](../mfc/settings-for-the-progress-control.md)  
-  
--   [Manipulando o controle de progresso](../mfc/manipulating-the-progress-control.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Controles](../mfc/controls-mfc.md)
+
+Você pode usar o controle de progresso para indicar o progresso de uma operação demorada. Ele é um retângulo que é preenchido com a cor de realce do sistema conforme o andamento da operação.
+
+O controle de progresso é representado no MFC pela classe [CProgressCtrl](../mfc/reference/cprogressctrl-class.md).
+
+Quando você cria inicialmente o controle de progresso, especifique seu tamanho e posição, a janela pai (normalmente, uma caixa de diálogo) e ID. Usando o *dwStyle* parâmetro, você também pode especificar vários estilos de janela para o controle e estilos para como ela preenche.
+
+## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+
+- [Estilos para o controle de progresso](../mfc/styles-for-the-progress-control.md)
+
+- [Configurações para o controle de progresso](../mfc/settings-for-the-progress-control.md)
+
+- [Manipulando o controle de progresso](../mfc/manipulating-the-progress-control.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Controles](../mfc/controls-mfc.md)
 

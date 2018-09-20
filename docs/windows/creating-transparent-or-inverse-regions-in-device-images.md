@@ -30,12 +30,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ab57df8151d02064b244212f28fe21628f0f3bb8
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2789d5c70dfe4569ef8eaa1d17136ad037efd18a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314840"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374549"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>Criando regiões transparentes ou inversas em imagens de dispositivo (editor de imagens para ícones)
 
@@ -71,5 +71,5 @@ Nenhum
 
 ## <a name="see-also"></a>Consulte também
 
-[Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Ícones e cursores: recursos de imagem para exibir dispositivos](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

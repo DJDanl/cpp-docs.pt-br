@@ -20,27 +20,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 398888a858165197c6e35be791169a9311f3014b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3e5c51cfccfa360b7f677ca3a30b7a05e0d4a799
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346263"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374451"
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>Mapeando mensagens do Windows para a classe
-Se você precisar de sua caixa de diálogo para lidar com mensagens do Windows, substitua as funções de manipulador adequado. Para fazer isso, use a janela Propriedades para [mapear as mensagens](../mfc/reference/mapping-messages-to-functions.md) para a classe de caixa de diálogo. Isso grava uma entrada de mapa de mensagem para cada mensagem e adiciona as funções de membro de manipulador de mensagens para a classe. Use o editor de código fonte do Visual C++ para escrever código em manipuladores de mensagens.  
-  
- Você também pode substituir funções membro de [CDialog](../mfc/reference/cdialog-class.md) e suas classes base, especialmente [CWnd](../mfc/reference/cwnd-class.md).  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
-  
--   [Mapeamento e a manipulação de mensagens](../mfc/message-handling-and-mapping.md)  
-  
--   [Funções de membro normalmente substituídas](../mfc/commonly-overridden-member-functions.md)  
-  
--   [Funções de membro normalmente adicionadas](../mfc/commonly-added-member-functions.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Caixas de diálogo](../mfc/dialog-boxes.md)   
- [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
+
+Se você precisar de sua caixa de diálogo para lidar com mensagens do Windows, substitua as funções de manipulador apropriado. Para fazer isso, use a janela de propriedades para [mapear as mensagens](../mfc/reference/mapping-messages-to-functions.md) para a classe de caixa de diálogo. Isso grava uma entrada de mapa de mensagem para cada mensagem e adiciona as funções de membro de manipulador de mensagens para a classe. Use o editor de código de origem do Visual C++ para escrever o código nos manipuladores de mensagem.
+
+Você também pode substituir as funções de membro [CDialog](../mfc/reference/cdialog-class.md) e suas classes base, especialmente [CWnd](../mfc/reference/cwnd-class.md).
+
+## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+
+- [Mapeamento e manipulação de mensagens](../mfc/message-handling-and-mapping.md)
+
+- [Funções de membro normalmente substituídas](../mfc/commonly-overridden-member-functions.md)
+
+- [Funções de membro normalmente adicionadas](../mfc/commonly-added-member-functions.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Caixas de diálogo](../mfc/dialog-boxes.md)<br/>
+[Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
 

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa06eaf8f16a80b849ce911468fc0001366b9e29
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3f4517125121c0129da028437bc7ce367f9f96b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725459"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373916"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (Arquivo de inclusão forçado do nome)
 
@@ -59,7 +59,7 @@ Essa opção tem o mesmo efeito que especificar o arquivo com aspas duplas em um
 
 ## <a name="see-also"></a>Consulte também
 
-[Arquivo de saída (/ F) opções](../../build/reference/output-file-f-options.md)
-[opções do compilador](../../build/reference/compiler-options.md)<br/>
+[Opções do arquivo de saída (/F)](../../build/reference/output-file-f-options.md)<br/>
+[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
 [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
 [Especificando o nome de caminho](../../build/reference/specifying-the-pathname.md)

@@ -17,19 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8258ff95fc91f6f29d424e77be95ce1b44f621ac
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 3192f53ae60f5249cd57fdd23c810b5590e394ab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215815"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375444"
 ---
 # <a name="paragraph-formatting-in-rich-edit-controls"></a>Formatação de parágrafo em controles de edição avançada
-Você pode usar funções de membro do controle de edição avançada ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) para formatar parágrafos e recuperar informações de formatação. Atributos de formatação de parágrafo incluem alinhamento, guias, recuos e numeração.  
-  
- Você pode aplicar formatação por meio de parágrafo a [SetParaFormat](../mfc/reference/cricheditctrl-class.md#setparaformat) função de membro. Para determinar a formatação para o texto selecionado do parágrafo atual, use o [GetParaFormat](../mfc/reference/cricheditctrl-class.md#getparaformat) função de membro. O [PARAFORMAT](/windows/desktop/api/richedit/ns-richedit-_paraformat) com essas funções de membro, a estrutura é usada para especificar atributos de parágrafo. Um dos membros importantes da **PARAFORMAT** é *dwMask*. Na `SetParaFormat`, *dwMask* Especifica quais atributos de parágrafo serão definidos por essa chamada de função. `GetParaFormat` informa os atributos do primeiro parágrafo na seleção; *dwMask* Especifica os atributos que são consistentes em toda a seleção.  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+
+Você pode usar funções de membro do controle de edição avançada ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) para formatar parágrafos e recuperar informações de formatação. Atributos de formatação de parágrafo incluem alinhamento, guias, recuos e numeração.
+
+Você pode aplicar formatação por meio de parágrafo a [SetParaFormat](../mfc/reference/cricheditctrl-class.md#setparaformat) função de membro. Para determinar a formatação para o texto selecionado do parágrafo atual, use o [GetParaFormat](../mfc/reference/cricheditctrl-class.md#getparaformat) função de membro. O [PARAFORMAT](/windows/desktop/api/richedit/ns-richedit-_paraformat) com essas funções de membro, a estrutura é usada para especificar atributos de parágrafo. Um dos membros importantes da **PARAFORMAT** é *dwMask*. Na `SetParaFormat`, *dwMask* Especifica quais atributos de parágrafo serão definidos por essa chamada de função. `GetParaFormat` informa os atributos do primeiro parágrafo na seleção; *dwMask* Especifica os atributos que são consistentes em toda a seleção.
+
+## <a name="see-also"></a>Consulte também
+
+[Usando CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
+[Controles](../mfc/controls-mfc.md)
 

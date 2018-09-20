@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e1e9355b6063ae67a40373828f394e3e6334f7d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e7320831a5cbe6c950baf61abfb167f010a8ecb1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613416"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375701"
 ---
 # <a name="asyncbasegeterrorcode-method"></a>Método AsyncBase::get_ErrorCode
 
@@ -38,7 +38,7 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Parâmetros
 
-*código de erro*  
+*código de erro*<br/>
 O local em que o código de erro atual é armazenado.
 
 ## <a name="return-value"></a>Valor de retorno

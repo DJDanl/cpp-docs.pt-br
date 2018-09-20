@@ -17,35 +17,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 273fd1e5afefb8a10b3e1ae8e3c2f81ccec05e7f
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: b62de2a1e6cba6ecbb29521518f5442ab002ddf3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950822"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381940"
 ---
 # <a name="servers-implementing-server-documents"></a>Servidores: implementando documentos de servidor
-Este artigo explica as etapas que necessárias para implementar com êxito um documento do servidor se você não especificou a opção de servidor OLE no Assistente do aplicativo.  
-  
-#### <a name="to-define-a-server-document-class"></a>Para definir uma classe de documento do servidor  
-  
-1.  Derive sua classe de documento da `COleServerDoc` em vez de `CDocument`.  
-  
-2.  Criar uma classe de item de servidor derivada de `COleServerItem`.  
-  
-3.  Implementar o `OnGetEmbeddedItem` a função de membro da classe de documento do servidor.  
-  
-     `OnGetEmbeddedItem` é chamado quando o usuário de um aplicativo de contêiner cria ou edita um item inserido. Ele deverá retornar um item que representa o documento inteiro. Isso deve ser um objeto do seu `COleServerItem`-classe derivada.  
-  
-4.  Substituir o `Serialize` a função de membro para serializar o conteúdo do documento. Você não precisa serializar a lista de itens do servidor, a menos que sejam usados para representar os dados nativos no documento. Para obter mais informações, consulte *itens do servidor implementando* no artigo [servidores: itens de servidor](../mfc/servers-server-items.md).  
-  
- Quando um documento do servidor é criado, a estrutura registra automaticamente o documento com a DLLs do sistema OLE. Isso permite que as DLLs identificar os documentos de servidor.  
-  
- Para obter mais informações, consulte [COleServerItem](../mfc/reference/coleserveritem-class.md) e [COleServerDoc](../mfc/reference/coleserverdoc-class.md) no *referência da biblioteca de classe*.  
-  
-## <a name="see-also"></a>Consulte também  
- [Servidores](../mfc/servers.md)   
- [Servidores: Itens do servidor](../mfc/servers-server-items.md)   
- [Servidores: Implementando um servidor](../mfc/servers-implementing-a-server.md)   
- [Servidores: implementando janelas de quadro in-loco](../mfc/servers-implementing-in-place-frame-windows.md)
+
+Este artigo explica as etapas que você deve adotar para implementar com êxito um documento do servidor, se você não especificou a opção de servidor OLE no Assistente do aplicativo.
+
+#### <a name="to-define-a-server-document-class"></a>Para definir uma classe de documento do servidor
+
+1. Derive sua classe de documento da `COleServerDoc` em vez de `CDocument`.
+
+1. Criar uma classe de item de servidor derivada `COleServerItem`.
+
+1. Implementar o `OnGetEmbeddedItem` a função de membro da sua classe de documento do servidor.
+
+     `OnGetEmbeddedItem` é chamado quando o usuário de um aplicativo de contêiner cria ou edita um item inserido. Ele deverá retornar um item que representa o documento inteiro. Isso deve ser um objeto do seu `COleServerItem`-classe derivada.
+
+1. Substituir o `Serialize` a função de membro para serializar o conteúdo do documento. Você não precisa serializar a lista de itens do servidor, a menos que você os estiver usando para representar os dados nativos no documento. Para obter mais informações, consulte *itens do servidor implementando* no artigo [servidores: itens do servidor](../mfc/servers-server-items.md).
+
+Quando um documento do servidor é criado, a estrutura registra automaticamente o documento com as DLLs do sistema OLE. Isso permite que as DLLs identificar os documentos de servidor.
+
+Para obter mais informações, consulte [COleServerItem](../mfc/reference/coleserveritem-class.md) e [COleServerDoc](../mfc/reference/coleserverdoc-class.md) no *referência da biblioteca de classe*.
+
+## <a name="see-also"></a>Consulte também
+
+[Servidores](../mfc/servers.md)<br/>
+[Servidores: itens de servidor](../mfc/servers-server-items.md)<br/>
+[Servidores: implementando um servidor](../mfc/servers-implementing-a-server.md)<br/>
+[Servidores: implementando janelas de quadro in-loco](../mfc/servers-implementing-in-place-frame-windows.md)
 

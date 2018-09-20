@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 72c312bdec9248cdc38150163d914b2ac7036ab8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 993f0e190d87b140fba0008872d57f2a34b6a5cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711081"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377260"
 ---
 # <a name="enum-class--c-component-extensions"></a>classe enum (Extensões de Componentes C++)
 
@@ -44,23 +44,23 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="parameters"></a>Parâmetros
 
-*access*  
+*access*<br/>
 A acessibilidade de enumeração, que pode ser **pública** ou **privada**.
 
-*Identificador de enumeração*  
+*Identificador de enumeração*<br/>
 O nome da enumeração.
 
-*tipo de base*  
+*tipo de base*<br/>
 (Opcional) O tipo subjacente da enumeração.
 
 (Opcional. Runtime do Windows somente) o tipo subjacente da enumeração, que pode ser **bool**, **char**, `char16`, `int16`, `uint16`, **int**, `uint32`, `int64`, ou `uint64`.
 
-*lista de enumerador*  
+*lista de enumerador*<br/>
 Uma lista delimitada por vírgulas de nomes de enumeradores.
 
 O valor de cada enumerador é uma expressão de constante ou é definida implicitamente pelo compilador, ou explicitamente a notação *enumerador*`=`*expressão constante*. Por padrão, o valor do primeiro enumerador é zero, se ele é definido implicitamente. O valor de cada enumerador subsequente de implicitamente definido é o valor do enumerador anterior + 1.
 
-*var*  
+*var*<br/>
 (Opcional) O nome de uma variável do tipo de enumeração.
 
 ### <a name="remarks"></a>Comentários
@@ -92,19 +92,19 @@ accessenum structname [:type] { enumerator-list } var;
 
 ### <a name="parameters"></a>Parâmetros
 
-*access*  
+*access*<br/>
 A acessibilidade do enum. Pode ser **pública** ou **privada**.
 
-*lista de enumerador*  
+*lista de enumerador*<br/>
 Uma lista separada por vírgula dos identificadores (enumeradores) na enumeração.
 
-*name*  
+*name*<br/>
 O nome da enumeração. Enumerações gerenciadas anônimas não são permitidas.
 
-*type*  
+*type*<br/>
 (Opcional) O tipo subjacente dos *identificadores*. Isso pode ser qualquer tipo escalar, como as versões com ou sem sinal de **int**, **curto**, ou **longo**.  **bool** ou **char** também é permitido.
 
-*var*  
+*var*<br/>
 (Opcional) O nome de uma variável do tipo de enumeração.
 
 ### <a name="remarks"></a>Comentários

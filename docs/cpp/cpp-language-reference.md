@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 708db2b20cdbbe2e322075789f64433ff70612a2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4fdf0980b8994c313349fd30f05e667b9c0cd461
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46025510"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377092"
 ---
 # <a name="c-language-reference"></a>Referência da linguagem C++
 
@@ -38,60 +38,85 @@ Consulte as tabelas a seguir para localizar rapidamente uma palavra-chave ou um 
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Convenções lexicais](../cpp/lexical-conventions.md) elementos lexicais fundamentais de um programa C++: tokens, comentários, operadores, palavras-chave, pontuadores, literais. Além disso, conversão de arquivo, precedência/associatividade de operadores.
+[Convenções lexicais](../cpp/lexical-conventions.md)<br/>
+Elementos lexicais fundamentais de um programa C++: tokens, comentários, operadores, palavras-chave, pontuadores, literais. Além disso, conversão de arquivo, precedência/associatividade de operadores.
 
-[Conceitos básicos](../cpp/basic-concepts-cpp.md) escopo, vínculo, inicialização do programa e encerramento, classes de armazenamento e tipos.
+[Conceitos básicos](../cpp/basic-concepts-cpp.md)<br/>
+Escopo, vínculo, inicialização e encerramento do programa, classes de armazenamento e tipos.
 
-[Conversões padrão](../cpp/standard-conversions.md) conversões de tipo entre tipos internos ou "fundamentais". Além disso, conversões aritméticas e conversões entre ponteiro, referência e tipos de ponteiro a membro.
+[Conversões padrão](../cpp/standard-conversions.md)<br/>
+Conversões de tipo entre tipos internos ou "fundamentais". Além disso, conversões aritméticas e conversões entre ponteiro, referência e tipos de ponteiro a membro.
 
-[Operadores, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md) os operadores em C++.
+[Operadores, precedência e associatividade](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+Os operadores em C++.
 
-[Expressões](../cpp/expressions-cpp.md) fazer referência a tipos de expressões, semântica de expressões, tópicos sobre operadores, conversão e operadores de conversão, informações de tipo de tempo de execução.
+[Expressões](../cpp/expressions-cpp.md)<br/>
+Tipos de expressões, semântica de expressões, tópicos de referência sobre operadores, conversão e operadores de conversão, informações de tipo de tempo de execução.
 
-[Expressões lambda](../cpp/lambda-expressions-in-cpp.md) uma técnica de programação que define uma classe de objeto de função e constrói um objeto de função desse tipo de classe implicitamente.
+[Expressões Lambda](../cpp/lambda-expressions-in-cpp.md)<br/>
+Uma técnica de programação que define implicitamente uma classe de objeto de função e constrói um objeto de função desse tipo de classe.
 
-[Instruções](../cpp/statements-cpp.md) expressão, nulo, composto, seleção, iteração, salto e declaração de instruções.
+[Instruções](../cpp/statements-cpp.md)<br/>
+Expressão, nulo, composto, seleção, iteração, salto e instruções de declaração.
 
-[Declarações e definições](declarations-and-definitions-cpp.md) especificadores de classe de armazenamento, definições de função, inicializações, enumerações, **classe**, **struct**, e **união** declarações, e **typedef** declarações. Além disso, **embutido** funções, **const** palavra-chave, namespaces.
+[Declarações e definições](declarations-and-definitions-cpp.md)<br/>
+Especificadores de classe de armazenamento, definições de função, inicializações, enumerações **classe**, **struct**, e **união** declarações, e **typedef**  declarações. Além disso, **embutido** funções, **const** palavra-chave, namespaces.
 
-[Classes, estruturas e uniões](../cpp/classes-and-structs-cpp.md) Introdução a classes, estruturas e uniões. Além disso, funções de membro, funções de membro especial, membros de dados, campos de bits, **isso** ponteiro, classes aninhadas.
+[Classes, estruturas e uniões](../cpp/classes-and-structs-cpp.md)<br/>
+Introdução a classes, estruturas e uniões. Além disso, funções de membro, funções de membro especial, membros de dados, campos de bits, **isso** ponteiro, classes aninhadas.
 
-[As Classes derivadas](../cpp/inheritance-cpp.md) herança única e múltipla, **virtual** funções, várias classes base, **abstrata** classes, regras de escopo. Além disso, o **super** e **interface** palavras-chave.
+[Classes derivadas](../cpp/inheritance-cpp.md)<br/>
+Herança única e múltipla, **virtual** funções, várias classes base, **abstrata** classes, regras de escopo. Além disso, o **super** e **interface** palavras-chave.
 
-[Controle de acesso de membro](../cpp/member-access-control-cpp.md) controlando o acesso a membros de classe: **públicas**, **privada**, e **protegido** palavras-chave. Funções e classes amigas.
+[Controle de acesso de membro](../cpp/member-access-control-cpp.md)<br/>
+Controlando o acesso a membros de classe: **pública**, **privada**, e **protegido** palavras-chave. Funções e classes amigas.
 
-[Sobrecarregando](operator-overloading.md) operadores sobrecarregados, regras para sobrecarga de operador.
+[Sobrecarga](operator-overloading.md)<br/>
+Operadores sobrecarregados, regras para sobrecarga de operador.
 
-[Tratamento de exceção](../cpp/exception-handling-in-visual-cpp.md) tratamento de exceções C++, SEH (manipulação) de exceção estruturada, palavras-chave usadas na escrita de instruções de tratamento de exceção.
+[Tratamento de Exceção](../cpp/exception-handling-in-visual-cpp.md)<br/>
+Tratamento de exceções C++, SEH (manipulação de exceção estruturada), palavras-chave usadas na escrita de instruções de tratamento de exceções.
 
-[Asserção e mensagens fornecida pelo usuário](../cpp/assertion-and-user-supplied-messages-cpp.md) 
- `#error` diretiva, o **static_assert** palavra-chave, o `assert` macro.
+[Asserção e mensagens fornecidas pelo usuário](../cpp/assertion-and-user-supplied-messages-cpp.md)<br/>
+`#error` diretiva, o **static_assert** palavra-chave, o `assert` macro.
 
-[Modelos](../cpp/templates-cpp.md) especificações de modelo, modelos de função, modelos de classe **typename** palavra-chave, modelos versus macros, modelos e ponteiros inteligentes.
+[Modelos](../cpp/templates-cpp.md)<br/>
+Especificações de modelo, modelos de função, modelos de classe **typename** palavra-chave, modelos versus macros, modelos e ponteiros inteligentes.
 
-[Manipulação de eventos](../cpp/event-handling.md) declarar eventos e manipuladores de eventos.
+[Manipulação de eventos](../cpp/event-handling.md)<br/>
+Eventos de declaração e manipuladores de eventos.
 
-[Modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md) modificadores específicos do Microsoft C++. Memória de endereçamento, convenções de chamada, **naked** funções, atributos de classe de armazenamento estendidos (**declspec**), **__w64**.
+[Modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md)<br/>
+Modificadores específicos do Microsoft C++. Memória de endereçamento, convenções de chamada, **naked** funções, atributos de classe de armazenamento estendidos (**declspec**), **__w64**.
 
-[Assembler embutido](../assembler/inline/inline-assembler.md) usando a linguagem de assembly e C++ no **ASM** blocos.
+[Assembler embutido](../assembler/inline/inline-assembler.md)<br/>
+Usando a linguagem de assembly e C++ no **ASM** blocos.
 
-[Suporte COM do compilador](../cpp/compiler-com-support.md) uma referência a classes específicas da Microsoft e funções globais usadas para dar suporte a tipos COM.
+[Suporte para COM do compilador](../cpp/compiler-com-support.md)<br/>
+Uma referência a classes específicas da Microsoft e funções globais usadas para oferecer suporte a tipos COM.
 
-[Microsoft Extensions](../cpp/microsoft-extensions.md) extensões da Microsoft para C++.
+[Extensões da Microsoft](../cpp/microsoft-extensions.md)<br/>
+Extensões da Microsoft para C++.
 
-[Comportamento não padrão](../cpp/nonstandard-behavior.md) informações sobre comportamento não padrão do compilador do Visual C++.
+[Comportamento não padrão](../cpp/nonstandard-behavior.md)<br/>
+Informações sobre comportamento não padrão do compilador do Visual C++.
 
-[Bem-vindo de volta ao C++](welcome-back-to-cpp-modern-cpp.md) uma visão geral de programação C++ moderna práticas recomendadas para escrever programas de seguros, corretos e eficientes.
+[Bem-vindo outra vez ao C++](welcome-back-to-cpp-modern-cpp.md)<br/>
+Uma visão geral de programação C++ moderna práticas para escrever programas de seguros, corretos e eficientes.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md) material sobre como usar o Visual C++ para direcionar o common language runtime de referência.
+[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)<br/>
+Material de referência sobre o uso do Visual C++ para focar no common language runtime.
 
-[Referência de build do C/C++](../build/reference/c-cpp-building-reference.md) opções compilador, opções do vinculador e outras ferramentas de compilação.
+[Referência de build C/C++](../build/reference/c-cpp-building-reference.md)<br/>
+Opções do compilador, opções de vinculador e outras ferramentas de compilação.
 
-[Referência do pré-processador C/C++](../preprocessor/c-cpp-preprocessor-reference.md) referenciar material sobre pragmas, diretivas do pré-processador, macros predefinidas e o pré-processador.
+[Referência de pré-processador do C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
+Material de referência sobre pragmas, diretivas de pré-processador, macros predefinidas e o pré-processador.
 
-[Bibliotecas do Visual C++](../standard-library/cpp-standard-library-reference.md) Iniciar de uma lista de links para a referência de páginas para várias bibliotecas do Visual C++.
+[Bibliotecas do Visual C++](../standard-library/cpp-standard-library-reference.md)<br/>
+Uma lista de links para as páginas iniciais de referência das várias bibliotecas do Visual C++.
 
 ## <a name="see-also"></a>Consulte também
 

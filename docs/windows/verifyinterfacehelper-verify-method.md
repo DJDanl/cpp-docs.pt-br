@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: be23f0f053c6f78225a323abf4c52f15d2ebbe21
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 29788fe7d2bd58d0ffc3bd058aa79966364fecdc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42580932"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375288"
 ---
 # <a name="verifyinterfacehelperverify-method"></a>Método VerifyInterfaceHelper::Verify
 
@@ -46,5 +46,5 @@ Verifica se a interface especificada pelo parâmetro de modelo atual atende a de
 
 ## <a name="see-also"></a>Consulte também
 
-[Estrutura VerifyInterfaceHelper](../windows/verifyinterfacehelper-structure.md)  
+[Estrutura VerifyInterfaceHelper](../windows/verifyinterfacehelper-structure.md)<br/>
 [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

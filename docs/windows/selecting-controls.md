@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 82abd52573c35b253e83587a18f2c4531af6bf23
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9d6b322559777d10f3a53f7ed8adbc5d6a05a342
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313124"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379691"
 ---
 # <a name="selecting-controls"></a>Selecionando controles
 
@@ -47,5 +47,5 @@ Win32
 
 ## <a name="see-also"></a>Consulte também
 
-[Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)  
+[Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)<br/>
 [Controles](../mfc/controls-mfc.md)
