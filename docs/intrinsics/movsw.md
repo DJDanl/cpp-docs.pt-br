@@ -18,78 +18,82 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb716f69a38b779c686bb07ac2af6240286b4a09
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4c8c361fa572435cb7c49320cc1f09abb5f6cd02
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721573"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439803"
 ---
 # <a name="movsw"></a>__movsw
-**Seção específica da Microsoft**  
-  
- Gera uma cadeia de caracteres mover (`rep movsw`) instrução.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void __movsw(   
-   unsigned short* Dest,   
-   unsigned short* Source,   
-   size_t Count   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
+
+**Seção específica da Microsoft**
+
+Gera uma cadeia de caracteres mover (`rep movsw`) instrução.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+void __movsw( 
+   unsigned short* Dest, 
+   unsigned short* Source, 
+   size_t Count 
+);
+```
+
+#### <a name="parameters"></a>Parâmetros
+
 *dest*<br/>
-[out] O destino da operação.  
-  
+[out] O destino da operação.
+
 *Source*<br/>
-[in] A origem da operação.  
-  
+[in] A origem da operação.
+
 *Contagem*<br/>
-[in] O número de palavras para copiar.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Intrínseco|Arquitetura|  
-|---------------|------------------|  
-|`__movsw`|x86, x64|  
-  
- **Arquivo de cabeçalho** \<intrin. h >  
-  
-## <a name="remarks"></a>Comentários  
- O resultado é que a primeira `Count` palavras apontado por `Source` são copiados para o `Dest` cadeia de caracteres.  
-  
- Essa rotina só está disponível como função intrínseca.  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// movsw.cpp  
-// processor: x86, x64  
-#include <stdio.h>  
-#include <intrin.h>  
-  
-#pragma intrinsic(__movsw)  
-  
-int main()  
-{  
-    unsigned short s1[10];  
-    unsigned short s2[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };  
-    __movsw(s1, s2, 10);  
-  
-    for (int i = 0; i < 10; i++)  
-        printf_s("%d ", s1[i]);  
-    printf_s("\n");  
-}  
-```  
-  
-```Output  
-0 1 2 3 4 5 6 7 8 9   
-```  
-  
-**Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)
+[in] O número de palavras para copiar.
+
+## <a name="requirements"></a>Requisitos
+
+|Intrínseco|Arquitetura|
+|---------------|------------------|
+|`__movsw`|x86, x64|
+
+**Arquivo de cabeçalho** \<intrin. h >
+
+## <a name="remarks"></a>Comentários
+
+O resultado é que a primeira `Count` palavras apontado por `Source` são copiados para o `Dest` cadeia de caracteres.
+
+Essa rotina só está disponível como função intrínseca.
+
+## <a name="example"></a>Exemplo
+
+```
+// movsw.cpp
+// processor: x86, x64
+#include <stdio.h>
+#include <intrin.h>
+
+#pragma intrinsic(__movsw)
+
+int main()
+{
+    unsigned short s1[10];
+    unsigned short s2[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+    __movsw(s1, s2, 10);
+
+    for (int i = 0; i < 10; i++)
+        printf_s("%d ", s1[i]);
+    printf_s("\n");
+}
+```
+
+```Output
+0 1 2 3 4 5 6 7 8 9
+```
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

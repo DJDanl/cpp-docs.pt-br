@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34aea466a3e673c3eebb3b415d544d9299fed615
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ac52c073135ecc88536b6aaa2beee7308ba53b9c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713135"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419120"
 ---
 # <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>/ZC: externconstexpr (habilitar variáveis de constexpr externas)
 
@@ -48,5 +48,5 @@ Se um arquivo de cabeçalho contém uma variável declarada `extern constexpr`, 
 
 ## <a name="see-also"></a>Consulte também
 
-[/ZC (conformidade)](../../build/reference/zc-conformance.md)
-[palavra-chave auto](../../cpp/auto-keyword.md)
+[/Zc (conformidade)](../../build/reference/zc-conformance.md)<br/>
+[Palavra-chave auto](../../cpp/auto-keyword.md)

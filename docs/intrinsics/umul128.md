@@ -16,75 +16,79 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6884face758cd7f7b9b507405f41f4fcbac8f188
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f6ca4db1103494c8c55d792391ac714311a3a7cd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721299"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444067"
 ---
 # <a name="umul128"></a>_umul128
-**Seção específica da Microsoft**  
-  
- Multiplica dois inteiros sem sinal de 64 bits passados como os primeiros dois argumentos e coloca os 64 bits altos do produto no inteiro de 64 bits sem sinal apontado pelo `HighProduct` e retorna os 64 bits baixos do produto.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-unsigned __int64 _umul128(   
-   unsigned __int64 Multiplier,   
-   unsigned __int64 Multiplicand,   
-   unsigned __int64 *HighProduct   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
+
+**Seção específica da Microsoft**
+
+Multiplica dois inteiros sem sinal de 64 bits passados como os primeiros dois argumentos e coloca os 64 bits altos do produto no inteiro de 64 bits sem sinal apontado pelo `HighProduct` e retorna os 64 bits baixos do produto.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+unsigned __int64 _umul128( 
+   unsigned __int64 Multiplier, 
+   unsigned __int64 Multiplicand, 
+   unsigned __int64 *HighProduct 
+);
+```
+
+#### <a name="parameters"></a>Parâmetros
+
 *Multiplicador*<br/>
-[in] O primeiro inteiro de 64 bits para multiplicar.  
-  
+[in] O primeiro inteiro de 64 bits para multiplicar.
+
 *Multiplicando*<br/>
-[in] O segundo inteiro de 64 bits para multiplicar.  
-  
+[in] O segundo inteiro de 64 bits para multiplicar.
+
 *HighProduct*<br/>
-[out] Os 64 bits altos do produto.  
-  
-## <a name="return-value"></a>Valor de retorno  
- Os 64 bits baixos do produto.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Intrínseco|Arquitetura|Cabeçalho|  
-|---------------|------------------|------------|  
-|`_umul128`|ARM, x64|\<intrin.h>|  
-  
-## <a name="example"></a>Exemplo  
-  
-```  
-// umul128.c  
-// processor: IPF, x64  
-  
-#include <stdio.h>  
-#include <intrin.h>  
-  
-#pragma intrinsic(_umul128)  
-  
-int main()  
-{  
-    unsigned __int64 a = 0x0fffffffffffffffI64;  
-    unsigned __int64 b = 0xf0000000I64;  
-    unsigned __int64 c, d;  
-  
-    d = _umul128(a, b, &c);  
-  
-    printf_s("%#I64x * %#I64x = %#I64x%I64x\n", a, b, c, d);  
-}  
-```  
-  
-```Output  
-0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000  
-```  
-  
-**Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)
+[out] Os 64 bits altos do produto.
+
+## <a name="return-value"></a>Valor de retorno
+
+Os 64 bits baixos do produto.
+
+## <a name="requirements"></a>Requisitos
+
+|Intrínseco|Arquitetura|Cabeçalho|
+|---------------|------------------|------------|
+|`_umul128`|ARM, x64|\<intrin.h>|
+
+## <a name="example"></a>Exemplo
+
+```
+// umul128.c
+// processor: IPF, x64
+
+#include <stdio.h>
+#include <intrin.h>
+
+#pragma intrinsic(_umul128)
+
+int main()
+{
+    unsigned __int64 a = 0x0fffffffffffffffI64;
+    unsigned __int64 b = 0xf0000000I64;
+    unsigned __int64 c, d;
+
+    d = _umul128(a, b, &c);
+
+    printf_s("%#I64x * %#I64x = %#I64x%I64x\n", a, b, c, d);
+}
+```
+
+```Output
+0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000
+```
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

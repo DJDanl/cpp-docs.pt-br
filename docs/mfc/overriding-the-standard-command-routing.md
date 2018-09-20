@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58156f6d1c361c24dc6cf04a9208157d614f91a8
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 33ee603f680919d69684ab94acfa0515d3ec6292
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929004"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439491"
 ---
 # <a name="overriding-the-standard-command-routing"></a>Substituindo o roteamento de comando padrão
-Em casos raros, quando você deve implementar algumas variações de roteamento de estrutura padrão, você pode substituí-la. A ideia é alterar o roteamento em uma ou mais classes, substituindo `OnCmdMsg` nessas classes. Fazer isso:  
-  
--   Na classe que interrompe a ordem para passar para um objeto não padrão.  
-  
--   No novo objeto não padrão ou em destinos de comando por sua vez ele pode passar comandos para.  
-  
- Se você inserir um novo objeto para o roteamento, sua classe deve ser uma classe de destino do comando. Em suas versões de substituição do `OnCmdMsg`, certifique-se de chamar a versão que você está substituindo. Consulte o [OnCmdMsg](../mfc/reference/ccmdtarget-class.md#oncmdmsg) função de membro de classe `CCmdTarget` no *referência MFC* e as versões nessas classes como `CView` e `CDocument` no código-fonte fornecido para obter exemplos.  
-  
-## <a name="see-also"></a>Consulte também  
- [Como o Framework chama um manipulador](../mfc/how-the-framework-calls-a-handler.md)
+
+Em casos raros quando você deve implementar algumas variações do roteamento de estrutura padrão, você pode substituí-la. A ideia é alterar o roteamento em uma ou mais classes por meio da substituição `OnCmdMsg` nessas classes. Fazer isso:
+
+- Na classe que interrompe a ordem para passar para um objeto não padrão.
+
+- No novo objeto não padrão ou em destinos de comando-lo por sua vez pode passar comandos para.
+
+Se você inserir algum objeto novo em roteamento, sua classe deve ser uma classe de destino do comando. Em suas versões de substituição do `OnCmdMsg`, certifique-se de chamar a versão que você está substituindo. Consulte a [OnCmdMsg](../mfc/reference/ccmdtarget-class.md#oncmdmsg) função de membro da classe `CCmdTarget` no *referência da MFC* e as versões em tais classes como `CView` e `CDocument` no código-fonte fornecido para obter exemplos.
+
+## <a name="see-also"></a>Consulte também
+
+[Como o Framework chama um manipulador](../mfc/how-the-framework-calls-a-handler.md)
 

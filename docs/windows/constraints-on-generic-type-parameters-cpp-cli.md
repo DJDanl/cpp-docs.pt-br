@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7abdc8f2deee962dc6ee5bcfa9857efb6f0bd847
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e0c6e860fa5d7633bd334d0c0a35d25936104636
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593898"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427700"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Restrições em parâmetros de tipo genérico (C++/CLI)
 
@@ -39,10 +39,10 @@ where type-parameter: constraint list
 
 ### <a name="parameters"></a>Parâmetros
 
-*parâmetro de tipo*  
+*parâmetro de tipo*<br/>
 Um dos parâmetros de tipo, a ser restringido.
 
-*lista de restrições*  
+*lista de restrições*<br/>
 *lista de restrições* é uma lista separada por vírgulas das especificações de restrição. A lista pode incluir as interfaces a serem implementadas pelo parâmetro de tipo.
 
 A lista também pode incluir uma classe. Para o argumento de tipo satisfazer uma restrição de classe base, ele deve ser da mesma classe que a restrição ou derivar de restrição.

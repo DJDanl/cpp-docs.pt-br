@@ -16,28 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a12a5cd19177761dfbf484c64f528d8def194ca5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46449a90223bdb5e7774d4be5710014ff2c6ccae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341130"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406068"
 ---
 # <a name="command-routing-illustration"></a>Ilustração de roteamento do comando
-Para ilustrar, considere uma mensagem de comando de um item de menu Limpar tudo no menu Editar do aplicativo um MDI. Suponha que a função de manipulador desse comando é uma função de membro de classe de documento do aplicativo. Aqui está como o comando atinge seu manipulador depois que o usuário escolhe o item de menu:  
-  
-1.  A janela do quadro principal recebe a mensagem de comando pela primeira vez.  
-  
-2.  A janela do quadro MDI principal fornece a janela de filho MDI ativa atualmente a oportunidade de lidar com o comando.  
-  
-3.  O roteamento padrão de uma janela do quadro filho MDI oportunidade sua exibição no comando antes de verificar seu próprio mapa de mensagem.  
-  
-4.  A exibição primeiro verifica seu próprio mapa de mensagem e, em seguida não localizar nenhum manipulador encaminha o comando para o documento associado.  
-  
-5.  O documento verifica seu mapa de mensagem e localiza um manipulador. Essa função de membro de documento é chamada e o roteamento para.  
-  
- Se o documento não tem um manipulador, ele seria lado rotear o comando para seu modelo de documento. Em seguida, o comando retornará para o modo de exibição e, em seguida, a janela do quadro. Por fim, a janela do quadro verifica seu mapa de mensagem. Se essa verificação falha, bem, o comando será encaminhado para a janela do quadro MDI principal e, em seguida, para o objeto de aplicativo — o destino final de comandos sem tratamento.  
-  
-## <a name="see-also"></a>Consulte também  
- [Como o Framework chama um manipulador](../mfc/how-the-framework-calls-a-handler.md)
+
+Para ilustrar, considere uma mensagem de comando de um item de menu Limpar tudo no menu de editar um aplicativo MDI. Suponha que a função do manipulador para este comando, por acaso, é uma função de membro de classe de documento do aplicativo. Aqui está como esse comando atinge seu manipulador depois que o usuário escolhe o item de menu:
+
+1. A janela do quadro principal recebe a mensagem de comando pela primeira vez.
+
+1. A janela de quadro MDI principal dá a oportunidade de manipular o comando da janela filho da MDI ativa no momento.
+
+1. O roteamento padrão de uma janela de quadro MDI filho oferece sua exibição a chance no comando antes de verificar seu próprio mapa de mensagem.
+
+1. O modo de exibição verifica primeiro o seu próprio mapa de mensagem e, em seguida é não encontrar nenhum manipulador, encaminha o comando para seu documento associado.
+
+1. O documento verifica seu mapa de mensagem e localiza um manipulador. Essa função de membro de documento é chamada e interrompe o roteamento.
+
+Se o documento não tem um manipulador, em seguida rotearia o comando para seu modelo de documento. Em seguida, o comando retornará para o modo de exibição e, em seguida, a janela do quadro. Por fim, a janela do quadro deve verificar seu mapa de mensagem. Se essa verificação falha, bem, o comando será encaminhado para a janela de quadro MDI principal e, em seguida, para o objeto de aplicativo — o destino final dos comandos sem tratamento.
+
+## <a name="see-also"></a>Consulte também
+
+[Como o Framework chama um manipulador](../mfc/how-the-framework-calls-a-handler.md)
 

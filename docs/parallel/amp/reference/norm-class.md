@@ -16,98 +16,97 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71e9baa101eb87ac10171722fa76fc462a154ad2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 362ad3a2676fa1a7c8f965a6750782617d6a3203
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087469"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425724"
 ---
 # <a name="norm-class"></a>Classe norm
-Representa um número de norma. Cada elemento é flutuante número de ponto no intervalo de [-1.0f, 1.0f].  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-class norm;  
-```  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-constructors"></a>Construtores Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[NORM construtor](#ctor)|Sobrecarregado. Construtor padrão. Inicialize a 0.0f.|  
-  
-### <a name="public-operators"></a>Operadores públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|NORM::Operator-||  
-|norm::operator--||  
-|NORM::operator float|Operador de conversão. Converter o número de norma para flutuante valor de ponto.|  
-|NORM::Operator * =||  
-|NORM::Operator =||  
-|NORM::Operator + +||  
-|+ NORM::Operator =||  
-|norm::operator=||  
-|norm::operator-=||  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `norm`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** amp_short_vectors. h  
-  
- **Namespace:** Concurrency:: Graphics  
-  
-##  <a name="ctor"></a> NORM 
 
- Construtor padrão. Inicialize a 0.0f.  
-  
-```  
+Representa um número de norma. Cada elemento é flutuante número de ponto no intervalo de [-1.0f, 1.0f].
+
+## <a name="syntax"></a>Sintaxe
+
+```
+class norm;
+```
+
+## <a name="members"></a>Membros
+
+### <a name="public-constructors"></a>Construtores Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[NORM construtor](#ctor)|Sobrecarregado. Construtor padrão. Inicialize a 0.0f.|
+
+### <a name="public-operators"></a>Operadores públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|NORM::Operator-||
+|norm::operator--||
+|NORM::operator float|Operador de conversão. Converter o número de norma para flutuante valor de ponto.|
+|NORM::Operator * =||
+|NORM::Operator =||
+|NORM::Operator + +||
+|+ NORM::Operator =||
+|norm::operator=||
+|norm::operator-=||
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`norm`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** amp_short_vectors. h
+
+**Namespace:** Concurrency:: Graphics
+
+##  <a name="ctor"></a> NORM
+
+Construtor padrão. Inicialize a 0.0f.
+
+```
 norm(
     void) restrict(amp,
     cpu);
 
- 
 explicit norm(
     float _V) restrict(amp,
     cpu);
 
- 
 explicit norm(
     unsigned int _V) restrict(amp,
     cpu);
 
- 
 explicit norm(
     int _V) restrict(amp,
     cpu);
 
- 
 explicit norm(
     double _V) restrict(amp,
     cpu);
 
- 
 norm(
     const norm& _Other) restrict(amp,
     cpu);
 
- 
 norm(
     const unorm& _Other) restrict(amp,
     cpu);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
+```
+
+### <a name="parameters"></a>Parâmetros
+
 *_V*<br/>
-O valor usado para inicializar.  
-  
+O valor usado para inicializar.
+
 *Outro*<br/>
-O objeto usado para inicializar.  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace Concurrency::graphics](concurrency-graphics-namespace.md)
+O objeto usado para inicializar.
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace Concurrency::graphics](concurrency-graphics-namespace.md)

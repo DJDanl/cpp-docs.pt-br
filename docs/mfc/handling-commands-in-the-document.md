@@ -19,16 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a1e848827b46d40c1ec39f2af4788e6957932c5
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 8845ea7c44fd5a34774db0508302f5959987cdc9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929106"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441259"
 ---
 # <a name="handling-commands-in-the-document"></a>Manipulando comandos no documento
-A classe de documento também pode lidar com determinados comandos gerados pelos itens de menu, botões da barra de ferramentas ou teclas de aceleração. Por padrão, `CDocument` manipula o salvamento e salvar como comandos no menu Arquivo, usando a serialização. Outros comandos que afetam os dados também podem ser tratados por funções de membro do documento. Por exemplo, no programa rabisco, classe `CScribDoc` fornece um manipulador para o comando Editar Limpar tudo, que exclui todos os dados atualmente armazenados no documento. Documentos podem ter mapas de mensagem, mas ao contrário de modos de exibição, os documentos não podem tratar mensagens padrão do Windows — somente **WM_COMMAND** mensagens ou "comandos".  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando documentos](../mfc/using-documents.md)
+
+Sua classe de documento também pode tratar certos comandos gerados pelos itens de menu, botões de barra de ferramentas ou teclas de aceleração. Por padrão, `CDocument` manipula o salvamento e salvar como os comandos no menu Arquivo, usando a serialização. Outros comandos que afetam os dados também podem ser manipulados por funções de membro de seu documento. Por exemplo, no programa rabisco, a classe `CScribDoc` fornece um manipulador para o comando Editar Limpar tudo, o que exclui todos os dados atualmente armazenados no documento. Documentos podem ter mapas de mensagem, mas ao contrário de modos de exibição, os documentos não podem manipular mensagens padrão do Windows — só **WM_COMMAND** mensagens ou "commands".
+
+## <a name="see-also"></a>Consulte também
+
+[Usando documentos](../mfc/using-documents.md)
 

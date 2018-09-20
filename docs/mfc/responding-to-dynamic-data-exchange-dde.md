@@ -21,16 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 327a719de5cdd3eef7c0eb769b0abf7cfe03ca49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f55836f013ffb85bb1d490190dc5c0d196cffcf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379197"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423462"
 ---
 # <a name="responding-to-dynamic-data-exchange-dde"></a>Respondendo à troca dinâmica de dados (DDE)
-A janela do quadro pode responder a solicitações de intercâmbio (DDE) de dados dinâmicos para abrir arquivos do Gerenciador de arquivos (se a extensão de arquivo é registrada ou associada ao aplicativo). Consulte [registro de Shell](../mfc/special-cwinapp-services.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando janelas com moldura](../mfc/using-frame-windows.md)
+
+A janela de quadro pode responder a solicitações de troca (DDE) de dados dinâmicos para abrir arquivos do Gerenciador de arquivos (se a extensão de arquivo é registrada ou associada ao aplicativo). Ver [registro de Shell](../mfc/special-cwinapp-services.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Usando janelas com moldura](../mfc/using-frame-windows.md)
 

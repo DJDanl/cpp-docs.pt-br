@@ -17,27 +17,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19dfaec7d97bed560665fce25c2ddf2cc816a483
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81958eda508a3e0b4b93ac0d169f3aa3bfece2a2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383387"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434265"
 ---
 # <a name="where-to-find-message-maps"></a>Onde encontrar mapas de mensagens
-Quando você cria um novo aplicativo de esqueleto com o Assistente de aplicativo, o Assistente de aplicativo grava um mapa de mensagem para cada classe de destino do comando que cria para você. Isso inclui o aplicativo derivado, documento, exibição e classes de janela do quadro. Alguns desses mapas de mensagem já tem as entradas fornecidas pelo Assistente de aplicativo para determinadas mensagens e comandos predefinidos, e alguns são apenas espaços reservados para manipuladores que serão adicionados.  
-  
- Mapa de mensagem da classe está localizado na. Arquivo CPP da classe. Trabalhando com os mapas de mensagem básica criado pelo Assistente de aplicativo, use a janela Propriedades para adicionar entradas para as mensagens e comandos que tratará cada classe. Um mapa de mensagem típico pode parecer com o seguinte depois de adicionar algumas entradas:  
-  
- [!code-cpp[NVC_MFCMessageHandling#1](../mfc/codesnippet/cpp/where-to-find-message-maps_1.cpp)]  
-  
- O mapa de mensagens consiste em uma coleção de macros. Duas macros, [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) e [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map), colchete o mapa da mensagem. Outras macros, como `ON_COMMAND`, preencha o conteúdo do mapa de mensagem.  
-  
+
+Quando você cria um novo aplicativo de esqueleto com o Assistente de aplicativo, o Assistente para aplicativo grava um mapa de mensagem para cada classe de destino do comando, que ele cria para você. Isso inclui seu aplicativo derivado, documento, exibição e classes de janela do quadro. Alguns desses mapas de mensagem já possuem as entradas fornecidas pelo Assistente de aplicativo para determinadas mensagens e comandos predefinidos, e alguns são apenas espaços reservados para manipuladores que serão adicionados.
+
+Mapa de mensagens de uma classe está localizado na. Arquivo CPP da classe. Trabalhando com os mapas de mensagem básico criado pelo Assistente de aplicativo, use a janela Propriedades para adicionar entradas para as mensagens e comandos que cada classe serão tratadas. Um mapa de mensagem típico pode parecer com o seguinte depois de adicionar algumas entradas:
+
+[!code-cpp[NVC_MFCMessageHandling#1](../mfc/codesnippet/cpp/where-to-find-message-maps_1.cpp)]
+
+Mapa de mensagens consiste em uma coleção de macros. Macros de duas [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) e [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map), colchete de mapa de mensagens. Outras macros, como `ON_COMMAND`, preencha o conteúdo do mapa de mensagem.
+
 > [!NOTE]
->  As macros de mapa de mensagem não são seguidas por ponto e vírgula.  
-  
- Quando você usar o Assistente para Adicionar classe para criar uma nova classe, ele fornece um mapa de mensagem para a classe. Como alternativa, você pode criar um mapa de mensagem manualmente usando o editor de código fonte.  
-  
-## <a name="see-also"></a>Consulte também  
- [Como o Framework pesquisa mapas de mensagem](../mfc/how-the-framework-searches-message-maps.md)
+>  As macros de mapa de mensagens não são seguidas por ponto e vírgula.
+
+Quando você usar o Assistente para Adicionar classe para criar uma nova classe, ele fornece um mapa de mensagem para a classe. Como alternativa, você pode criar um mapa de mensagens manualmente usando o editor de código fonte.
+
+## <a name="see-also"></a>Consulte também
+
+[Como o Framework pesquisa mapas de mensagem](../mfc/how-the-framework-searches-message-maps.md)
 

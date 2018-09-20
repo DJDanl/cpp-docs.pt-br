@@ -22,37 +22,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5c2bced4f7f04cf75c72e68db0f99e0f89d2566
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: f1077128ec417ab0cd3e1fb0d5b7e57e1ffaec37
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930510"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442793"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>Gerenciando os dados de estado dos módulos MFC
-Este artigo aborda os dados de estado dos módulos MFC e como esse estado é atualizado quando o fluxo de execução (o código de caminho leva através de um aplicativo ao executar) entra e sai de um módulo. Alternando estados de módulo com as macros AFX_MANAGE_STATE e METHOD_PROLOGUE também é abordado.  
-  
+
+Este artigo discute os dados de estado dos módulos MFC e como esse estado é atualizado quando o fluxo de execução (o código do caminho usa por meio de um aplicativo ao executar) entra e sai de um módulo. Alternando os estados de módulo com as macros AFX_MANAGE_STATE e METHOD_PROLOGUE também é discutido.
+
 > [!NOTE]
->  O termo "módulo" aqui se refere a um programa executável, ou para uma DLL (ou conjunto de DLLs) que operam independentemente do restante do aplicativo, mas usa uma cópia compartilhada da DLL do MFC. Um controle ActiveX é um exemplo típico de um módulo.  
-  
- Conforme mostrado na figura a seguir, o MFC tem dados de estado para cada módulo usado em um aplicativo. Esses dados são exemplos de identificadores de instância do Windows (usados para carregar os recursos), ponteiros para atual `CWinApp` e `CWinThread` objetos de um aplicativo, contagens de referência de módulo OLE e uma variedade de mapas que mantêm as conexões entre Windows do objeto correspondentes instâncias de objetos MFC e identificadores. No entanto, quando um aplicativo usa vários módulos, os dados de estado de cada módulo não são aplicativos ampla. Em vez disso, cada módulo tem sua própria cópia dos dados do estado do MFC.  
-  
- ![Dados de um único módulo de estado &#40;aplicativo&#41;](../mfc/media/vc387n1.gif "vc387n1")  
-Dados de estado de um único módulo (aplicativo)  
-  
- Dados de estado do módulo estão contidos em uma estrutura e estão sempre disponíveis por meio de um ponteiro para a estrutura. Quando o fluxo de execução entra em um módulo específico, conforme mostrado na figura a seguir, o estado do módulo deve ser o estado "atual" ou "efetivo". Portanto, cada objeto de thread tem um ponteiro para a estrutura de estado efetivo desse aplicativo. Manter esse ponteiro atualizado em todos os tempos de é essencial para gerenciar o estado do aplicativo global e manter a integridade do estado de cada módulo. Gerenciamento incorreto do estado global pode resultar em comportamento imprevisível do aplicativo.  
-  
- ![Dados de vários módulos de estado](../mfc/media/vc387n2.gif "vc387n2")  
-Dados de estado de vários módulos  
-  
- Em outras palavras, cada módulo é responsável por corretamente alternar entre os estados de módulo em todos os seus pontos de entrada. Um "ponto de entrada" é qualquer lugar em que o fluxo de execução pode inserir o código do módulo. Pontos de entrada incluem:  
-  
--   [Funções exportadas em uma DLL](../mfc/exported-dll-function-entry-points.md)  
-  
--   [Funções de membro de interfaces COM](../mfc/com-interface-entry-points.md)  
-  
--   [Procedimentos de janela](../mfc/window-procedure-entry-points.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Tópicos gerais do MFC](../mfc/general-mfc-topics.md)
+>  O termo "módulo" aqui se refere a um programa executável, ou a uma DLL (ou conjunto de DLLs) que operam independentemente do restante do aplicativo, mas usa uma cópia compartilhada da DLL da MFC. Um controle ActiveX é um exemplo típico de um módulo.
+
+Conforme mostrado na figura a seguir, o MFC tem dados de estado para cada módulo usado em um aplicativo. Esses dados são exemplos de identificadores de instância do Windows (usados para carregar os recursos), ponteiros para o atual `CWinApp` e `CWinThread` objetos de um aplicativo, contagens de referência de módulo OLE e uma variedade de mapas que mantêm as conexões entre O objeto Windows identificadores e instâncias correspondentes de objetos MFC. No entanto, quando um aplicativo usa vários módulos, os dados de estado de cada módulo não serão aplicativo ampla. Em vez disso, cada módulo tem sua própria cópia dos dados do estado do MFC.
+
+![Dados de um único módulo de estado &#40;aplicativo&#41;](../mfc/media/vc387n1.gif "vc387n1") dados de estado de um único módulo (aplicativo)
+
+Dados de estado de um módulo estão contidos em uma estrutura e sempre estão disponíveis por meio de um ponteiro para essa estrutura. Quando o fluxo de execução entra em um módulo específico, conforme mostrado na figura a seguir, o estado do módulo deve ser o estado "atual" ou "efetivo". Portanto, cada objeto de thread tem um ponteiro para a estrutura de estado efetivo desse aplicativo. Manter esse ponteiro atualizado em todos os tempos de é vital para gerenciar o estado do aplicativo global e manter a integridade de estado do cada módulo. Gerenciamento incorreto do estado global pode resultar em comportamento imprevisível do aplicativo.
+
+![Dados de vários módulos de estado](../mfc/media/vc387n2.gif "vc387n2") dados de vários módulos de estado
+
+Em outras palavras, cada módulo é responsável por corretamente alternando entre os estados de módulo em todos os seus pontos de entrada. Um "ponto de entrada" é qualquer lugar em que o fluxo de execução pode inserir o código do módulo. Pontos de entrada incluem:
+
+- [Funções exportadas em uma DLL](../mfc/exported-dll-function-entry-points.md)
+
+- [Funções de membro de interfaces COM](../mfc/com-interface-entry-points.md)
+
+- [Procedimentos de janela](../mfc/window-procedure-entry-points.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Tópicos gerais do MFC](../mfc/general-mfc-topics.md)
 

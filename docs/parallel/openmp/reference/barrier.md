@@ -16,29 +16,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf5b2cd9edf54e58c06e7d2a48529393cd3ced64
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c220106d62bf65505c9c5b48085a9ee3e67fe0cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690888"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415025"
 ---
 # <a name="barrier"></a>barrier
-Sincroniza todos os threads em uma equipe; todos os threads pausar a barreira, até que todos os threads executem a barreira.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-#pragma omp barrier  
-```  
-  
-## <a name="remarks"></a>Comentários  
- O `barrier` diretiva dá suporte a nenhuma cláusulas OpenMP.  
-  
- Para obter mais informações, consulte [2.6.3 diretiva barrier](../../../parallel/openmp/2-6-3-barrier-directive.md).  
-  
-## <a name="example"></a>Exemplo  
- Para obter um exemplo de como usar `barrier`, consulte [mestre](../../../parallel/openmp/reference/master.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Diretivas](../../../parallel/openmp/reference/openmp-directives.md)
+
+Sincroniza todos os threads em uma equipe; todos os threads pausar a barreira, até que todos os threads executem a barreira.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+#pragma omp barrier
+```
+
+## <a name="remarks"></a>Comentários
+
+O `barrier` diretiva dá suporte a nenhuma cláusulas OpenMP.
+
+Para obter mais informações, consulte [2.6.3 diretiva barrier](../../../parallel/openmp/2-6-3-barrier-directive.md).
+
+## <a name="example"></a>Exemplo
+
+Para obter um exemplo de como usar `barrier`, consulte [mestre](../../../parallel/openmp/reference/master.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Diretivas](../../../parallel/openmp/reference/openmp-directives.md)

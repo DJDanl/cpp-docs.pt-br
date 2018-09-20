@@ -17,30 +17,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1dde1f005e53aff7ebe505d1ce619bf5c94410f8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 2411659e6ae33fe9ce81d508d3e7c206b1e5b113
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955450"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440024"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>Configurações do CStatusBarCtrl
-A posição padrão de um [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) janela de status é na parte inferior da janela pai, mas você pode especificar o estilo CCS_TOP para que ele apareça na parte superior da área cliente da janela pai.  
-  
- Você pode especificar o estilo SBARS_SIZEGRIP para incluir na extremidade direita de uma alça de dimensionamento de `CStatusBarCtrl` janela de status. Uma alça de dimensionamento é semelhante a uma borda de dimensionamento; é uma área retangular que o usuário pode clicar e arrastar para redimensionar a janela pai.  
-  
+
+A posição padrão de um [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) é de janela de status na parte inferior da janela pai, mas você pode especificar o estilo CCS_TOP para que ele apareça na parte superior da área de cliente da janela pai.
+
+Você pode especificar o estilo SBARS_SIZEGRIP para incluir uma alça de dimensionamento na extremidade direita do `CStatusBarCtrl` janela de status. Uma alça de dimensionamento é semelhante a uma borda de dimensionamento; é uma área retangular que o usuário possa clicar e arrastar para redimensionar a janela pai.
+
 > [!NOTE]
->  Se você combinar os estilos CCS_TOP e SBARS_SIZEGRIP, a alça de dimensionamento resultante não está funcionando, embora o sistema desenha na janela de status.  
-  
- O procedimento de janela para a janela de status define automaticamente o tamanho inicial e a posição da janela do controle. A largura é o mesmo da área cliente da janela pai. A altura baseia-se a métrica da fonte selecionada no momento no contexto de dispositivo da janela de status e a largura das bordas da janela.  
-  
- O procedimento de janela ajusta automaticamente o tamanho da janela de status sempre que ele recebe uma mensagem WM_SIZE. Normalmente, quando o tamanho da janela pai for alterado, o pai envia uma mensagem WM_SIZE para a janela de status.  
-  
- Você pode definir a altura mínima da área de desenho de uma janela de status chamando [SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight), especificando a altura mínima em pixels. A área de desenho não incluem as bordas da janela.  
-  
- Recuperar as larguras das bordas de uma janela de status chamando [GetBorders](../mfc/reference/cstatusbarctrl-class.md#getborders). Essa função de membro inclui o ponteiro para uma matriz de três elementos que recebe a largura da borda horizontal, vertical borda e a borda entre os retângulos.  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+>  Se você combinar os estilos CCS_TOP e SBARS_SIZEGRIP, a alça de dimensionamento resultante não é funcional, embora o sistema desenha na janela de status.
+
+O procedimento de janela para a janela de status define automaticamente o tamanho inicial e a posição da janela de controle. A largura é o mesmo da área de cliente da janela pai. A altura é baseada nas métricas da fonte selecionada no momento no contexto de dispositivo da janela de status e na largura das bordas da janela.
+
+O procedimento de janela automaticamente ajusta o tamanho da janela de status sempre que receber uma mensagem WM_SIZE. Normalmente, quando o tamanho da janela pai for alterado, o pai envia uma mensagem WM_SIZE para a janela de status.
+
+Você pode definir a altura mínima da área de desenho de uma janela de status chamando [SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight), especificando a altura mínima, em pixels. A área de desenho não incluem bordas da janela.
+
+Recuperar as larguras das bordas de uma janela de status, chamando [GetBorders](../mfc/reference/cstatusbarctrl-class.md#getborders). Essa função membro inclui o ponteiro para uma matriz de três elementos que recebe a largura da borda horizontal, a borda vertical e a borda entre os retângulos.
+
+## <a name="see-also"></a>Consulte também
+
+[Usando CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
+[Controles](../mfc/controls-mfc.md)
 

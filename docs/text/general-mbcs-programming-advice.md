@@ -19,32 +19,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 532f1e060398b20d4714f461c2d687031756c910
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: bc27d0b0396fed6e6b03f6c3f8e1f2332fcceecf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201116"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421096"
 ---
 # <a name="general-mbcs-programming-advice"></a>Aviso de programação MBCS geral
-Use as dicas a seguir:  
-  
--   Para obter flexibilidade, usar macros de tempo de execução, como `_tcschr` e `_tcscpy` quando possível. Para obter mais informações, consulte [mapeamentos de texto genéricos em TCHAR. h](../text/generic-text-mappings-in-tchar-h.md).  
-  
--   Use o tempo de execução C `_getmbcp` função para obter informações sobre a página de código atual.  
-  
--   Não reutilize os recursos de cadeia de caracteres. Dependendo do idioma de destino, uma determinada cadeia de caracteres pode ter um significado diferente quando convertido. Por exemplo, menu principal do "File" na caixa de diálogo poderia traduzir de forma diferente da cadeia de caracteres "File" em uma caixa de diálogo. Se você precisar usar mais de uma cadeia de caracteres com o mesmo nome, use as IDs de cadeia de caracteres diferente para cada.  
-  
--   Você talvez queira descobrir se seu aplicativo está em execução em um sistema de operacional habilitado para MBCS. Para fazer isso, defina um sinalizador na inicialização do programa; Não confie em chamadas de API.  
-  
--   Durante a criação de caixas de diálogo, permitir aproximadamente 30% de espaço extra no final dos controles de texto estático para a conversão de MBCS.  
-  
--   Tenha cuidado ao selecionar fontes para seu aplicativo, pois algumas fontes não estão disponíveis em todos os sistemas.  
-  
--   Ao selecionar a fonte para caixas de diálogo, use [MS Shell Dlg](/windows/desktop/Intl/using-ms-shell-dlg-and-ms-shell-dlg-2) em vez de MS Sans Serif ou Helvetica. MS Shell Dlg é substituído com a fonte correta pelo sistema antes de criar a caixa de diálogo. Usar o MS Shell Dlg garante que as alterações no sistema operacional para lidar com essa fonte automaticamente estarão disponíveis. (MFC substitui MS Shell Dlg com o DEFAULT_GUI_FONT ou a fonte do sistema no Windows 95, Windows 98 e Windows NT 4 porque esses sistemas não tratam MS Shell Dlg corretamente.)  
-  
--   Ao projetar seu aplicativo, decida quais cadeias de caracteres podem ser localizadas. Em caso de dúvida, suponha que qualquer cadeia de caracteres fornecida será localizada. Como tal, não misture cadeias de caracteres que podem ser localizadas com aquelas que não é possível.  
-  
-## <a name="see-also"></a>Consulte também  
- [Dicas de programação MBCS](../text/mbcs-programming-tips.md)   
- [Incrementando e decrementando ponteiros](../text/incrementing-and-decrementing-pointers.md)
+
+Use as dicas a seguir:
+
+- Para obter flexibilidade, usar macros de tempo de execução, como `_tcschr` e `_tcscpy` quando possível. Para obter mais informações, consulte [mapeamentos de texto genéricos em TCHAR. h](../text/generic-text-mappings-in-tchar-h.md).
+
+- Use o tempo de execução C `_getmbcp` função para obter informações sobre a página de código atual.
+
+- Não reutilize os recursos de cadeia de caracteres. Dependendo do idioma de destino, uma determinada cadeia de caracteres pode ter um significado diferente quando convertido. Por exemplo, menu principal do "File" na caixa de diálogo poderia traduzir de forma diferente da cadeia de caracteres "File" em uma caixa de diálogo. Se você precisar usar mais de uma cadeia de caracteres com o mesmo nome, use as IDs de cadeia de caracteres diferente para cada.
+
+- Você talvez queira descobrir se seu aplicativo está em execução em um sistema de operacional habilitado para MBCS. Para fazer isso, defina um sinalizador na inicialização do programa; Não confie em chamadas de API.
+
+- Durante a criação de caixas de diálogo, permitir aproximadamente 30% de espaço extra no final dos controles de texto estático para a conversão de MBCS.
+
+- Tenha cuidado ao selecionar fontes para seu aplicativo, pois algumas fontes não estão disponíveis em todos os sistemas.
+
+- Ao selecionar a fonte para caixas de diálogo, use [MS Shell Dlg](/windows/desktop/Intl/using-ms-shell-dlg-and-ms-shell-dlg-2) em vez de MS Sans Serif ou Helvetica. MS Shell Dlg é substituído com a fonte correta pelo sistema antes de criar a caixa de diálogo. Usar o MS Shell Dlg garante que as alterações no sistema operacional para lidar com essa fonte automaticamente estarão disponíveis. (MFC substitui MS Shell Dlg com o DEFAULT_GUI_FONT ou a fonte do sistema no Windows 95, Windows 98 e Windows NT 4 porque esses sistemas não tratam MS Shell Dlg corretamente.)
+
+- Ao projetar seu aplicativo, decida quais cadeias de caracteres podem ser localizadas. Em caso de dúvida, suponha que qualquer cadeia de caracteres fornecida será localizada. Como tal, não misture cadeias de caracteres que podem ser localizadas com aquelas que não é possível.
+
+## <a name="see-also"></a>Consulte também
+
+[Dicas de programação do MBCS](../text/mbcs-programming-tips.md)<br/>
+[Incrementando e decrementando ponteiros](../text/incrementing-and-decrementing-pointers.md)

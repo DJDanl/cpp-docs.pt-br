@@ -18,30 +18,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d942dde74c25a40b5110b74f783d41684d1fdbe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 914b2eccf1d9896285eca5cf714dbb4b78a4fe50
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342180"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440674"
 ---
 # <a name="containers"></a>Contêineres
-Um aplicativo de contêiner é um aplicativo que pode incorporar itens incorporados ou vinculados em seus próprios documentos. Os documentos gerenciados por um aplicativo de contêiner devem ser capazes de armazenar e exibir os componentes do documento composto OLE, bem como os dados criados pelo próprio aplicativo. Um aplicativo de contêiner também deve permitir que os usuários inserir novos itens ou editar itens existentes.  
-  
-## <a name="in-this-section"></a>Nesta seção  
- [Implementar um contêiner](../mfc/containers-implementing-a-container.md)  
-  
- [Itens de cliente de contêiner](../mfc/containers-client-items.md)  
-  
- [Usar arquivos compostos](../mfc/containers-compound-files.md)  
-  
- [Problemas de Interface do usuário do contêiner](../mfc/containers-user-interface-issues.md)  
-  
- [Recursos avançados de contêineres](../mfc/containers-advanced-features.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [OLE](../mfc/ole-in-mfc.md)   
- [Servidores](../mfc/servers.md)   
- [ativação](../mfc/activation-cpp.md)   
- [Menus e recursos (OLE)](../mfc/menus-and-resources-ole.md)
+
+Um aplicativo de contêiner é um aplicativo que pode incorporar itens inseridos ou vinculados em seus próprios documentos. Os documentos gerenciados por um aplicativo de contêiner devem ser capazes de armazenar e exibir componentes de documento composto OLE, bem como os dados criados pelo próprio aplicativo. Um aplicativo de contêiner também deve permitir que os usuários a inserir novos itens ou editar itens existentes.
+
+## <a name="in-this-section"></a>Nesta seção
+
+[Implementar um contêiner](../mfc/containers-implementing-a-container.md)
+
+[Itens de cliente de contêiner](../mfc/containers-client-items.md)
+
+[Usar arquivos compostos](../mfc/containers-compound-files.md)
+
+[Problemas de Interface do usuário do contêiner](../mfc/containers-user-interface-issues.md)
+
+[Recursos avançados de contêineres](../mfc/containers-advanced-features.md)
+
+## <a name="see-also"></a>Consulte também
+
+[OLE](../mfc/ole-in-mfc.md)<br/>
+[Servidores](../mfc/servers.md)<br/>
+[Ativação](../mfc/activation-cpp.md)<br/>
+[Menus e recursos (OLE)](../mfc/menus-and-resources-ole.md)
 

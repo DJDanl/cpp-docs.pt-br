@@ -17,21 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2ef1e2135ebd780938fb0ed194a93058fd010f6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d749fad0fabf8ae99bba129caee399e3f93ff9af
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209148"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443846"
 ---
 # <a name="global-hot-keys"></a>Teclas de acesso globais
-Uma tecla de acesso global está associada uma janela nonchild específico. Ele permite que o usuário ative a janela a partir de qualquer parte do sistema. Um aplicativo define uma tecla de acesso global para uma determinada janela, enviando a [WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey) mensagem para essa janela. Por exemplo, se `m_HotKeyCtrl` é o [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) objeto e `pMainWnd` é um ponteiro para a janela a ser ativado quando é pressionada a tecla de acesso, você pode usar o código a seguir para associar a tecla de acesso especificada no controle com a janela apontado pelo `pMainWnd`.  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#18](../mfc/codesnippet/cpp/global-hot-keys_1.cpp)]  
-  
- Sempre que o usuário pressiona uma tecla de acesso global, a janela especificada recebe um [WM_SYSCOMMAND](/windows/desktop/menurc/wm-syscommand) mensagem especifica **SC_HOTKEY** como o tipo do comando. Essa mensagem também ativa a janela que recebe a ele. Como esta mensagem não incluir todas as informações na chave exato que foi pressionada, usando esse método não permite fazer a distinção entre teclas de acesso diferentes que podem ser conectadas à mesma janela. A tecla de acesso permanece válida até o aplicativo que enviou **WM_SETHOTKEY** é encerrado.  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+
+Uma tecla de acesso global está associada uma janela nonchild específico. Ele permite que o usuário ative a janela a partir de qualquer parte do sistema. Um aplicativo define uma tecla de acesso global para uma determinada janela, enviando a [WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey) mensagem para essa janela. Por exemplo, se `m_HotKeyCtrl` é o [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) objeto e `pMainWnd` é um ponteiro para a janela a ser ativado quando é pressionada a tecla de acesso, você pode usar o código a seguir para associar a tecla de acesso especificada no controle com a janela apontado pelo `pMainWnd`.
+
+[!code-cpp[NVC_MFCControlLadenDialog#18](../mfc/codesnippet/cpp/global-hot-keys_1.cpp)]
+
+Sempre que o usuário pressiona uma tecla de acesso global, a janela especificada recebe um [WM_SYSCOMMAND](/windows/desktop/menurc/wm-syscommand) mensagem especifica **SC_HOTKEY** como o tipo do comando. Essa mensagem também ativa a janela que recebe a ele. Como esta mensagem não incluir todas as informações na chave exato que foi pressionada, usando esse método não permite fazer a distinção entre teclas de acesso diferentes que podem ser conectadas à mesma janela. A tecla de acesso permanece válida até o aplicativo que enviou **WM_SETHOTKEY** é encerrado.
+
+## <a name="see-also"></a>Consulte também
+
+[Usando CHotKeyCtrl](../mfc/using-chotkeyctrl.md)<br/>
+[Controles](../mfc/controls-mfc.md)
 

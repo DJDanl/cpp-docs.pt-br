@@ -1,5 +1,5 @@
 ---
-title: Criando janelas com moldura de documento | Microsoft Docs
+title: Criando o documento quadro Windows | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,30 +20,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4b27154197e4e8347e73936f319aeb416a153d0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 172076113a6bd7e223d99c238d0e05987cdcaae6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342937"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433681"
 ---
 # <a name="creating-document-frame-windows"></a>Criando janelas com moldura de documento
-[Criação de documento/exibição](../mfc/document-view-creation.md) mostra como o [CDocTemplate](../mfc/reference/cdoctemplate-class.md) objeto coordena a criar a janela do quadro, documento e exibição e conectá-los juntos. Três [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) argumentos para o `CDocTemplate` construtor especifique a janela do quadro, documentos e classes de exibição do modelo de documento cria dinamicamente em resposta aos comandos do usuário, como o novo comando no arquivo menu ou o comando nova janela em um menu janela MDI. O modelo de documento armazena essas informações para uso posterior, quando ele cria uma janela do quadro para um modo de exibição e o documento.  
-  
- Para o [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) mecanismo funcione corretamente, derivada classes de janela com moldura devem ser declarados com a [DECLARE_DYNCREATE](../mfc/reference/run-time-object-model-services.md#declare_dyncreate) macro. Isso ocorre porque a estrutura precisa criar janelas de quadro usando o mecanismo de criação dinâmica da classe de documento `CObject`.  
-  
- Quando o usuário escolhe um comando que cria um documento, o framework chama o modelo de documento para criar o objeto de documento, o modo de exibição e a janela do quadro que exibirá o modo de exibição. Ao criar a janela do quadro de documento, o modelo de documento cria um objeto da classe apropriada, uma classe derivada de [CFrameWnd](../mfc/reference/cframewnd-class.md) para um aplicativo SDI ou [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) para um MDI aplicativo. O framework chama o objeto de janela com moldura [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) função de membro para obter informações sobre a criação de recursos e criar a janela do Windows. A estrutura anexa o identificador de janela para o objeto de janela do quadro. Em seguida, ele cria a exibição como uma janela filho da janela do quadro do documento.  
-  
- Tome cuidado ao decidir [quando inicializar](../mfc/when-to-initialize-cwnd-objects.md) sua `CWnd`-objeto derivado.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
-  
--   [Derivando uma classe de CObject (seu mecanismo de criação dinâmica)](../mfc/deriving-a-class-from-cobject.md)  
-  
--   [Criação de documento/exibição (modelos e criação de janela do quadro)](../mfc/document-view-creation.md)  
-  
--   [Destruindo janelas com moldura](../mfc/destroying-frame-windows.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando janelas com moldura](../mfc/using-frame-windows.md)
+
+[Criação de documento/exibição](../mfc/document-view-creation.md) mostra como o [CDocTemplate](../mfc/reference/cdoctemplate-class.md) objeto orquestra criando a janela do quadro, o documento e o modo de exibição e conectá-los juntos. Três [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) argumentos para o `CDocTemplate` construtor especifique a janela do quadro, documento e as classes de exibição do modelo de documento cria dinamicamente em resposta a comandos do usuário, como o novo comando no arquivo menu ou o comando nova janela no menu de uma janela MDI. O modelo de documento armazena essas informações para uso posterior quando ele cria uma janela do quadro para um modo de exibição e o documento.
+
+Para o [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) mecanismo para funcionar corretamente, seu derivado classes de janela de quadro devem ser declaradas com o [DECLARE_DYNCREATE](../mfc/reference/run-time-object-model-services.md#declare_dyncreate) macro. Isso ocorre porque o framework precisa criar janelas de quadro usando o mecanismo dinâmico de construção da classe de documento `CObject`.
+
+Quando o usuário escolhe um comando que cria um documento, o framework chama o modelo de documento para criar o objeto de documento, seu modo de exibição e a janela do quadro que exibirá o modo de exibição. Quando ele cria a janela de quadro do documento, o modelo de documento cria um objeto da classe apropriada — uma classe derivada de [CFrameWnd](../mfc/reference/cframewnd-class.md) para um aplicativo SDI ou da [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) para um MDI aplicativo. A estrutura, em seguida, chama o objeto de janela com moldura [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) função de membro para obter informações de criação de recursos e criar a janela do Windows. O framework anexa o identificador de janela para o objeto de janela do quadro. Em seguida, ele cria a exibição como uma janela filho da janela de quadro do documento.
+
+Tome cuidado ao decidir [quando inicializar](../mfc/when-to-initialize-cwnd-objects.md) seu `CWnd`-objeto derivado.
+
+## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+
+- [Derivando uma classe de CObject (seu mecanismo de criação dinâmica)](../mfc/deriving-a-class-from-cobject.md)
+
+- [Criação de documento/exibição (modelos e criação de janelas de quadro)](../mfc/document-view-creation.md)
+
+- [Destruindo janelas com moldura](../mfc/destroying-frame-windows.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Usando janelas com moldura](../mfc/using-frame-windows.md)
 

@@ -12,20 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3d8c7073548c015d9982b721387176a0ca658c2
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 25b52ce624777efe85e27b8ce5e7941bc2f5dcba
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33685899"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440375"
 ---
 # <a name="22-conditional-compilation"></a>2.2 Compilação condicional
-O _**OPENMP** nome de macro é definido pelas implementações OpenMP compatível como a constante decimal *yyyymm*, que será o ano e o mês da especificação aprovada. Esta macro não deve ser o assunto de uma **#define** ou um **#undef** diretiva de pré-processamento.  
-  
-```  
-#ifdef _OPENMP  
-iam = omp_get_thread_num() + index;  
-#endif  
-```  
-  
- Se fornecedores definam ampliações OpenMP, eles podem especificar macros predefinidas adicionais.
+
+O _**OPENMP** nome da macro é definida por implementações em conformidade com o OpenMP, como a constante decimal *yyyymm*, que será o ano e mês da especificação de aprovados. Essa macro não deve ser o assunto de um **#define** ou um **#undef** diretiva de pré-processamento.
+
+```
+#ifdef _OPENMP
+iam = omp_get_thread_num() + index;
+#endif
+```
+
+Se fornecedores definam ampliações OpenMP, eles podem especificar outras macros predefinidas.

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fb9178bc315385bab97cea473430745ad66d973
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: fc2a37f587d3b5ac2b695171f5620db6521693d2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538968"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439673"
 ---
 # <a name="rawmethodprefix"></a>raw_method_prefix
 **Específico do C++**  
@@ -49,5 +49,5 @@ Métodos e propriedades de baixo nível são expostos por funções de membro no
   
 ## <a name="see-also"></a>Consulte também  
  
-[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import diretiva](../preprocessor/hash-import-directive-cpp.md)

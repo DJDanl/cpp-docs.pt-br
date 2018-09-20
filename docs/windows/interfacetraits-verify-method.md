@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8c6491968541a0015110c55edf2bede40c084947
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e1950d6e9d5195ece315863b664b42411231184d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583438"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415376"
 ---
 # <a name="interfacetraitsverify-method"></a>Método InterfaceTraits::Verify
 
@@ -48,5 +48,5 @@ Para obter mais informações sobre `Base`, consulte o **Typedefs públicos** se
 
 ## <a name="see-also"></a>Consulte também
 
-[Estrutura InterfaceTraits](../windows/interfacetraits-structure.md)  
+[Estrutura InterfaceTraits](../windows/interfacetraits-structure.md)<br/>
 [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

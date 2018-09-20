@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d301f2bc7464d52be643d252e4febf7049657c2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f001f61a9425a064d3b899beb6cbb689471da5bf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724746"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442585"
 ---
 # <a name="event--c-component-extensions"></a>evento (Extensões de Componentes C++)
 
@@ -50,19 +50,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parâmetros
 
-*Modificador*  
+*Modificador*<br/>
 Um modificador que pode ser usado na declaração de evento ou um método de acessador de evento.  Os valores possíveis são **estáticos** e **virtual**.
 
-*delegate*  
+*delegate*<br/>
 O [delegar](../windows/delegate-cpp-component-extensions.md), cuja assinatura de manipulador de eventos deve corresponder.
 
-*event_name*  
+*event_name*<br/>
 O nome do evento.
 
-*RETURN_VALUE*  
+*RETURN_VALUE*<br/>
 O valor retornado do método de acessador de evento.  Para que seja verificável, o tipo de retorno deve ser **void**.
 
-*Parâmetros*  
+*Parâmetros*<br/>
 (opcional) Parâmetros para o `raise` método, que correspondem à assinatura do *delegar* parâmetro.
 
 ### <a name="remarks"></a>Comentários
@@ -71,10 +71,10 @@ Um evento é uma associação entre um delegado e uma função de membro (manipu
 
 Há dois tipos de declaração de eventos:
 
-*membro de dados de evento*  
+*membro de dados de evento*<br/>
 O compilador automaticamente cria o armazenamento para o evento na forma de um membro do tipo de delegado e cria interno `add()`, `remove()`, e `raise()` funções de membro. Um membro de dados de evento deve ser declarado dentro de uma classe. O tipo de retorno do tipo de retorno do delegado deve corresponder ao tipo de retorno do manipulador de eventos.
 
-*bloco de eventos*  
+*bloco de eventos*<br/>
 Um bloco de eventos permite que você declare explicitamente e personalizar o comportamento do `add()`, `remove()`, e `raise()` métodos.
 
 Você pode usar **+ = de operadores** e **operador-=** para adicionar e remover um evento manipulador, ou ligue para o `add()` e `remove()` métodos explicitamente.
@@ -114,19 +114,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parâmetros
 
-*Modificador*  
+*Modificador*<br/>
 Um modificador que pode ser usado na declaração de evento ou um método de acessador de evento.  Os valores possíveis são **estáticos** e **virtual**.
 
-*delegate*  
+*delegate*<br/>
 O [delegar](../windows/delegate-cpp-component-extensions.md), cuja assinatura de manipulador de eventos deve corresponder.
 
-*event_name*  
+*event_name*<br/>
 O nome do evento.
 
-*RETURN_VALUE*  
+*RETURN_VALUE*<br/>
 O valor retornado do método de acessador de evento.  Para que seja verificável, o tipo de retorno deve ser **void**.
 
-*Parâmetros*  
+*Parâmetros*<br/>
 (opcional) Parâmetros para o `raise` método, que correspondem à assinatura do *delegar* parâmetro.
 
 ### <a name="remarks"></a>Comentários
@@ -137,10 +137,10 @@ O delegado pode ter um ou mais métodos associados que serão chamados quando se
 
 Há dois tipos de declaração de eventos:
 
-*membros de dados de evento*  
+*membros de dados de evento*<br/>
 Armazenamento para o evento, na forma de um membro do tipo de delegado é criado pelo compilador para eventos de membro de dados.  Um membro de dados de evento deve ser declarado dentro de uma classe. Isso também é conhecido como um evento trivial (consulte o exemplo de código abaixo.)
 
-*blocos de evento*  
+*blocos de evento*<br/>
 Blocos de eventos permitem que você personalize o comportamento da adicionar, remover e métodos de aumento, com a implementação de add, remove e raise métodos. A assinatura do adicionar, remover e métodos de aumento deve corresponder à assinatura do delegado.  Eventos do bloco de eventos não são membros de dados e qualquer uso como um membro de dados irá gerar um erro do compilador.
 
 O tipo de retorno do manipulador de eventos deve corresponder ao tipo de retorno do delegado.

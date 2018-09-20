@@ -17,33 +17,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e780d411e62d1347d8286f86b45df864b0fcdb3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a1bb9b05a6d3149e7bb6ac5e472652b499ff22c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342960"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416143"
 ---
 # <a name="derived-message-maps"></a>Mapas de mensagem derivados
-Durante a manipulação, verificando uma mensagem da classe de mensagem mapa não é o final do texto de mapa de mensagem. O que acontece se classe `CMyView` (derivado de `CView`) não tem nenhuma entrada correspondente para uma mensagem  
-  
- Tenha em mente que `CView`, a classe base de `CMyView`, é derivado por sua vez `CWnd`. Portanto, `CMyView` *é* um `CView` e *é* um `CWnd`. Cada uma dessas classes tem seu próprio mapa de mensagem. A Figura "A exibição de hierarquia" abaixo mostra a relação hierárquica das classes, mas tenha em mente que uma `CMyView` objeto é um único objeto que tem as características de todos os três classes.  
-  
- ![Hierarquia de uma exibição](../mfc/media/vc38621.gif "vc38621")  
-Uma hierarquia de exibição  
-  
- Portanto, se uma mensagem não pode ser correspondida na classe `CMyView`do mapa da mensagem, a estrutura também procura o mapeamento de mensagem de sua classe base imediata. O `BEGIN_MESSAGE_MAP` macro no início do mapa de mensagem especifica dois nomes de classe como argumentos:  
-  
- [!code-cpp[NVC_MFCMessageHandling#2](../mfc/codesnippet/cpp/derived-message-maps_1.cpp)]  
-  
- O primeiro argumento nomeia a classe à qual pertence o mapa da mensagem. O segundo argumento fornece uma conexão com a classe base imediata — `CView` aqui — para o framework possa procurar seu mapa de mensagem muito.  
-  
- Os manipuladores de mensagem fornecidos em uma classe base, portanto, são herdados pela classe derivada. Isso é muito semelhante às funções de membro virtual normal sem a necessidade de fazer todas as funções de manipulador de membro virtual.  
-  
- Se nenhum manipulador foi encontrado em nenhum dos mapas de mensagem de classe base, o processamento da mensagem padrão será executado. Se a mensagem é um comando, a estrutura roteia para o próximo destino de comando. Se for uma mensagem do Windows padrão, a mensagem é passada para o procedimento de janela padrão apropriado.  
-  
- Para agilizar a correspondência de mapa de mensagem, o framework armazena em cache recentes correspondências na probabilidade de que ele receberá a mesma mensagem novamente. Uma consequência disso é que os processos do framework sem tratamento mensagens de maneira muito eficiente. Mapas de mensagem também são mais eficientes para o espaço do que implementações que usam funções virtuais.  
-  
-## <a name="see-also"></a>Consulte também  
- [Como o Framework pesquisa mapas de mensagem](../mfc/how-the-framework-searches-message-maps.md)
+
+Durante a manipulação, verificar uma mensagem da classe de mensagem mapa não é o fim da história do mapa de mensagem. O que acontece se classe `CMyView` (derivado de `CView`) não tem nenhuma entrada correspondente para uma mensagem
+
+Tenha em mente que `CView`, a classe base `CMyView`, é derivado, por sua vez, de `CWnd`. Assim `CMyView` *é* um `CView` e *é* um `CWnd`. Cada uma dessas classes tem seu próprio mapa de mensagem. A figura a "A hierarquia de exibição" abaixo mostra a relação hierárquica das classes, mas tenha em mente que um `CMyView` objeto é um único objeto que tem as características de todas as três classes.
+
+![Hierarquia de um modo de exibição](../mfc/media/vc38621.gif "vc38621") A hierarquia de exibição
+
+Portanto, se uma mensagem não pode ser correspondida na classe `CMyView`do mapa da mensagem, o framework também procura o mapa de mensagem da sua classe base imediata. O `BEGIN_MESSAGE_MAP` macro no início do mapa de mensagens especifica dois nomes de classe como argumentos:
+
+[!code-cpp[NVC_MFCMessageHandling#2](../mfc/codesnippet/cpp/derived-message-maps_1.cpp)]
+
+O primeiro argumento nomeia a classe à qual pertence o mapa da mensagem. O segundo argumento fornece uma conexão com a classe base imediata — `CView` aqui — portanto, a estrutura também pode pesquisar seu mapa de mensagem.
+
+Os manipuladores de mensagens fornecidos em uma classe base, portanto, são herdados pela classe derivada. Isso é muito semelhante às funções de membro virtual normal sem a necessidade de tornar todas as funções de membro de manipulador virtual.
+
+Se nenhum manipulador for encontrado em qualquer um dos mapas de mensagem de classe base, processamento de padrão da mensagem é executado. Se a mensagem é um comando, o framework encaminha para o próximo destino do comando. Se for uma mensagem padrão do Windows, a mensagem é passada para o procedimento de janela padrão apropriado.
+
+Para acelerar a correspondência de mapa de mensagem, o framework armazena em cache correspondências recentes sobre a probabilidade de que ele receberá a mesma mensagem novamente. Uma consequência disso é que os processos de estrutura sem tratamento mensagens muito eficiente. Mapas de mensagem também são mais eficientes para o espaço do que as implementações que usam funções virtuais.
+
+## <a name="see-also"></a>Consulte também
+
+[Como o Framework pesquisa mapas de mensagem](../mfc/how-the-framework-searches-message-maps.md)
 

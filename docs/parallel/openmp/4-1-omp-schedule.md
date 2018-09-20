@@ -12,27 +12,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e13332077a40e741f56b5602ac5197bbdfef071
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cbdad5ab56ea6979ae2b5952b092b5e85c7bdfa8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691044"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433446"
 ---
 # <a name="41-ompschedule"></a>4.1 OMP_SCHEDULE
-**OMP_SCHEDULE** só se aplica ao **para** e **paralelo para** diretivas com o tipo de agenda **tempo de execução**. O tamanho de bloco e de tipo de agendamento para todos os loops pode ser definido em tempo de execução definindo-se esta variável de ambiente para qualquer um dos tipos de agenda reconhecida e opcional *chunk_size*.  
-  
- Para **para** e **paralelo para** diretivas que têm um tipo de agenda diferentes de **tempo de execução**, **OMP_SCHEDULE** será ignorado. O valor padrão para essa variável de ambiente é definido pela implementação. Se o valor opcional *chunk_size* for definida, o valor deve ser positivo. Se *chunk_size* não está definida, será considerado um valor de 1, exceto no caso de um **estático** agendamento. Para uma **estático** agendamento, o tamanho da parte padrão é definido como o espaço de iteração do loop dividido pelo número de threads aplicada para o loop.  
-  
- Exemplo:  
-  
-```  
-setenv OMP_SCHEDULE "guided,4"  
-setenv OMP_SCHEDULE "dynamic"  
-```  
-  
-## <a name="cross-references"></a>Entre referências:  
-  
--   **para** diretiva, consulte [seção 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) na página 11.  
-  
--   **paralelo para** diretiva, consulte [seção 2.5.1](../../parallel/openmp/2-5-1-parallel-for-construct.md) na página 16.
+
+**OMP_SCHEDULE** só se aplica ao **para** e **paralela para** diretivas com o tipo de agenda **tempo de execução**. O tamanho de bloco e de tipo de agenda para todos os loops pode ser definido em tempo de execução, definindo a variável de ambiente para qualquer um dos tipos reconhecidos agenda e um opcional *chunk_size*.
+
+Para **para** e **paralela para** diretivas que têm um tipo de agenda diferente de **tempo de execução**, **OMP_SCHEDULE** será ignorado. O valor padrão para essa variável de ambiente é definido pela implementação. Se o opcional *chunk_size* for definido, o valor deve ser positivo. Se *chunk_size* não for definido, presume-se um valor de 1, exceto no caso de uma **estático** agendamento. Para um **estático** agendamento, o tamanho da parte padrão é definido como o espaço de iteração do loop dividido pelo número de threads aplicada para o loop.
+
+Exemplo:
+
+```
+setenv OMP_SCHEDULE "guided,4"
+setenv OMP_SCHEDULE "dynamic"
+```
+
+## <a name="cross-references"></a>Entre as referências:
+
+- **para** diretiva, consulte [seção 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) na página de 11.
+
+- **paralelo para** diretiva, consulte [seção 2.5.1](../../parallel/openmp/2-5-1-parallel-for-construct.md) na página 16.

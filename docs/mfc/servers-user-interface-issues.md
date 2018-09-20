@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18382d305c8128a70e17651de913f38303286885
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 539486ac1bce56fdc972943abcf8c7de72635f72
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379665"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445549"
 ---
 # <a name="servers-user-interface-issues"></a>Servidores: emissões de interface do usuário
-Um aplicativo de servidor tem um número de recursos que devem ser adicionados à interface do usuário para fornecer itens OLE para aplicativos de contêiner. Para obter mais informações sobre os menus e recursos adicionais que precisam ser adicionados a um aplicativo de servidor, consulte [Menus e recursos: adições de servidor](../mfc/menus-and-resources-server-additions.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Servidores](../mfc/servers.md)   
- [Menus e recursos (OLE)](../mfc/menus-and-resources-ole.md)
+
+Um aplicativo de servidor tem uma série de recursos que devem ser adicionados à interface do usuário para fornecer itens OLE para aplicativos de contêiner. Para obter mais informações sobre os menus e recursos adicionais que precisam ser adicionados a um aplicativo de servidor, consulte [Menus e recursos: adições de servidor](../mfc/menus-and-resources-server-additions.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Servidores](../mfc/servers.md)<br/>
+[Menus e recursos (OLE)](../mfc/menus-and-resources-ole.md)
 

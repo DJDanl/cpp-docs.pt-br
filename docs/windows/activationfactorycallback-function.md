@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7979dd21d68c5b1e2606573a5271fc8deafdfb07
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 62efb2b1aa2cd2caa0c5701696689ea3df19f962
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604174"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443600"
 ---
 # <a name="activationfactorycallback-function"></a>Função ActivationFactoryCallback
 
@@ -39,10 +39,10 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 
 ### <a name="parameters"></a>Parâmetros
 
-*activationId*  
+*activationId*<br/>
 Identificador para uma cadeia de caracteres que especifica um nome de classe de tempo de execução.
 
-*ppFactory*  
+*ppFactory*<br/>
 Quando essa operação for concluída, um alocador de ativação que corresponde ao parâmetro *activationId*.
 
 ## <a name="return-value"></a>Valor de retorno

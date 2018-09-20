@@ -1,5 +1,5 @@
 ---
-title: Folhas de propriedades e páginas de propriedade em MFC | Microsoft Docs
+title: Folhas de propriedades e páginas de propriedade no MFC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54469672c67e43d3692bc47d0b3efa00c18f8f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f35282ce46aff3a3f0fba5fca505653cd892a392
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348600"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430027"
 ---
 # <a name="property-sheets-and-property-pages-in-mfc"></a>Folhas de propriedades e páginas de propriedade em MFC
-Uma folha de propriedades, também conhecido como uma caixa de diálogo de guia, é uma caixa de diálogo que contém as páginas de propriedade. Cada página de propriedades se baseia em um recurso de modelo de caixa de diálogo e contém controles. Ele é colocado em uma página com uma guia na parte superior. Na guia nomes de página e indica sua finalidade. Clicam na guia na folha de propriedades para selecionar um conjunto de controles de usuários.  
-  
- Use as páginas para agrupar os controles na folha de propriedades em conjuntos significativos. A folha de propriedades independente normalmente tem vários controles de seu próprio. Eles se aplicam a todas as páginas.  
-  
- Folhas de propriedades são baseadas em classe [CPropertySheet](../mfc/reference/cpropertysheet-class.md). Páginas de propriedade são baseadas em classe [CPropertyPage](../mfc/reference/cpropertypage-class.md).  
-  
- Uma folha de propriedades é um tipo especial de caixa de diálogo que é geralmente usado para modificar os atributos de um objeto externo, como a seleção atual em uma exibição. A folha de propriedades tem três partes principais: caixa de diálogo contendo propriedade de um ou mais páginas mostrado um por vez e uma guia na parte superior de cada página que o usuário clica para selecionar a página. Folhas de propriedades são úteis para situações em que você tem vários grupos semelhantes de configurações ou opções para alterar. Informações de grupos de uma folha de propriedades de uma maneira fácil de entender.  
-  
+
+Uma folha de propriedades, também conhecido como uma caixa de diálogo de guia, é uma caixa de diálogo que contém as páginas de propriedades. Cada página de propriedades se baseia em um recurso de modelo de caixa de diálogo e contém controles. Ele é colocado em uma página com uma guia na parte superior. Na guia nomeia a página e indica sua finalidade. Os usuários clicam uma guia na folha de propriedades para selecionar um conjunto de controles.
+
+Use as páginas para agrupar os controles na folha de propriedades em conjuntos significativos. A folha de propriedades independente normalmente tem vários controles de seu próprio. Isso se aplica a todas as páginas.
+
+Folhas de propriedade são com base na classe [CPropertySheet](../mfc/reference/cpropertysheet-class.md). Páginas de propriedades são com base na classe [CPropertyPage](../mfc/reference/cpropertypage-class.md).
+
+Uma folha de propriedades é um tipo especial de caixa de diálogo que é geralmente usado para modificar os atributos de um objeto externo, como a seleção atual em uma exibição. A folha de propriedades tem três partes principais: páginas de propriedade de um ou mais de caixa de diálogo que contém um mostrado de cada vez e uma guia na parte superior de cada página que o usuário clica para selecionar a página. Folhas de propriedades são úteis para situações em que você tem vários grupos semelhantes de configurações ou opções para alterar. Informações de grupos de uma folha de propriedades de uma maneira fácil de entender.
+
 > [!NOTE]
->  Quando você está tentando exibir uma folha de propriedades, usando `CPropertySheet::DoModal`, o sistema pode gerar uma exceção de primeira chance. Essa exceção ocorre porque o sistema está tentando alterar o [estilos de janela](../mfc/reference/styles-used-by-mfc.md#window-styles) do objeto antes do objeto foi criado. Para obter mais informações sobre essa exceção e como evitá-la ou tratá-la, consulte [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal).  
-  
-## <a name="see-also"></a>Consulte também  
- [Folhas de propriedade](../mfc/property-sheets-mfc.md)
+>  Quando você está tentando mostrar uma folha de propriedades usando `CPropertySheet::DoModal`, o sistema pode gerar uma exceção de primeira chance. Essa exceção ocorre porque o sistema está tentando alterar o [estilos de janela](../mfc/reference/styles-used-by-mfc.md#window-styles) do objeto antes do objeto foi criado. Para obter mais informações sobre essa exceção e como evitá-lo ou manipulá-lo, consulte [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal).
+
+## <a name="see-also"></a>Consulte também
+
+[Folhas de propriedades](../mfc/property-sheets-mfc.md)
 

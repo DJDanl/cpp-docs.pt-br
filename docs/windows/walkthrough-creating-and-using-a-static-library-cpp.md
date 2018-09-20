@@ -16,12 +16,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4fb801e4f4cd39fba7f06e066ae0bf2f92e76a21
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d9b71435b4fd2952746b2b097d08008624f8942b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601431"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412529"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Instruções passo a passo: criando e usando uma biblioteca estática (C++)
 
@@ -136,5 +136,5 @@ Um entendimento dos fundamentos da linguagem C++.
 
 ## <a name="see-also"></a>Consulte também
 
-[Instruções passo a passo: criando e usando uma biblioteca de vínculo dinâmico (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)  
+[Instruções passo a passo: criando e usando uma biblioteca de vínculo dinâmico (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
 [Aplicativos de área de trabalho (Visual C++)](../windows/desktop-applications-visual-cpp.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d89fef6c2ed3f8ff1a4211cdf8da59d8406e7031
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bde6909716b55298a515aac32580a24f26c823fc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715397"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406640"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -43,7 +43,7 @@ Associa uma coluna especificada para uma variável no conjunto de linhas.
 
 #### <a name="parameters"></a>Parâmetros
 
-*Ordinal*  
+*Ordinal*<br/>
 O número de coluna ordinal (`DBCOLUMNINFO` ordinal) ou o nome de coluna (cadeia de caracteres ANSI ou Unicode) corresponde a um campo no conjunto de linhas à qual associar dados. Se você usar números, você pode ignorar ordinais consecutivos (por exemplo: 1, 2, 3, 5). O nome pode conter espaços, se o provedor OLE DB que você use suportá-lo. Por exemplo, você pode usar qualquer um dos seguintes formatos:
 
 ```cpp
@@ -51,19 +51,19 @@ O número de coluna ordinal (`DBCOLUMNINFO` ordinal) ou o nome de coluna (cadeia
 [db_column(L"city_name")] TCHAR szCity[30];
 ```
 
-*DbType*  
+*DbType*<br/>
 (Opcional) Um banco de dados OLE [indicador de tipo](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) para a entrada de coluna.
 
-*precision*  
+*precision*<br/>
 (Opcional) A precisão a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição dos `bPrecision` elemento o [estrutura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*Escala*  
+*Escala*<br/>
 (Opcional) A escala a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição da `bScale` elemento o [estrutura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*status*  
+*status*<br/>
 (Opcional) Uma variável de membro usada para manter o status dessa coluna. O status indica se o valor da coluna é um valor de dados ou algum outro valor, como nulo. Para os valores possíveis, consulte [Status](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) na *referência do programador DB OLE*.
 
-*length*  
+*length*<br/>
 (Opcional) Uma variável de membro usada para manter o tamanho da coluna em bytes.
 
 ## <a name="remarks"></a>Comentários
@@ -131,5 +131,5 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de consumidor do OLE DB](../windows/ole-db-consumer-attributes.md)  
+[Atributos de consumidor do OLE DB](../windows/ole-db-consumer-attributes.md)<br/>
 [Atributos de classe](../windows/class-attributes.md)  

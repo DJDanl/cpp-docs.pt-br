@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47925bcc647d253775e4dd61f6a7f5d5fb586dde
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2083992bcb444a10b495b7007c698499f9cd9628
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599277"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419159"
 ---
 # <a name="semaphorelock-method"></a>Método Semaphore::Lock
 
@@ -43,10 +43,10 @@ static SyncLock Lock(
 
 ### <a name="parameters"></a>Parâmetros
 
-*milissegundos*  
+*milissegundos*<br/>
 O intervalo de tempo limite em milissegundos. O valor padrão é infinito, o que espera indefinidamente.
 
-*h*  
+*h*<br/>
 Um identificador para um **semáforo** objeto.
 
 ## <a name="return-value"></a>Valor de retorno

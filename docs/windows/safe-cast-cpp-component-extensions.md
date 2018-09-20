@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 85a27fceabcac9c5fa3b36fae4990da7dcd65deb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8d5a4f92e16c2d758fa5e2b88575b12d5710dd08
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222920"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404197"
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (Extensões de Componentes C++)
 
@@ -60,10 +60,10 @@ expression
 
 ### <a name="parameters"></a>Parâmetros
 
-*id do tipo*  
+*id do tipo*<br/>
 O tipo para converter *expressão* para. Um identificador para uma referência ou tipo de valor, um tipo de valor ou uma referência a um tipo de valor ou referência de rastreamento.
 
-*Expressão*  
+*Expressão*<br/>
 Uma expressão que é avaliada como um identificador para uma referência ou tipo de valor, um tipo de valor ou uma referência a um tipo de valor ou referência de rastreamento.
 
 ### <a name="remarks"></a>Comentários
@@ -124,10 +124,10 @@ expression
 
 ### <a name="parameters"></a>Parâmetros
 
-*id do tipo*  
+*id do tipo*<br/>
 Um identificador para uma referência ou tipo de valor, um tipo de valor ou uma referência a um tipo de valor ou referência de rastreamento.
 
-*Expressão*  
+*Expressão*<br/>
 Uma expressão que é avaliada como um identificador para uma referência ou tipo de valor, um tipo de valor ou uma referência a um tipo de valor ou referência de rastreamento.
 
 ### <a name="remarks"></a>Comentários

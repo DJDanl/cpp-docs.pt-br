@@ -22,25 +22,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89cea1516924530f821003affd96e2848687882b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5fa5c4da3bb91983eceea739d42fae12e73b9b0f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344327"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406713"
 ---
 # <a name="initializing-the-parts-of-a-cstatusbarctrl-object"></a>Inicializando as partes de um objeto CStatusBarCtrl
-Por padrão, uma barra de status exibe informações de status usando painéis separados. Esses painéis (também conhecidos como partes) podem conter uma cadeia de caracteres de texto, um ícone ou ambos.  
-  
- Use [SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts) para definir quantos partes e o comprimento, terá a barra de status. Depois de ter criado as partes da barra de status, fazer chamadas para [SetText](../mfc/reference/cstatusbarctrl-class.md#settext) e [SetIcon](../mfc/reference/cstatusbarctrl-class.md#seticon) para definir o texto ou ícone de uma parte específica da barra de status. Quando a parte foi definida com êxito, o controle é redesenhado automaticamente.  
-  
- O exemplo a seguir inicializa um existente `CStatusBarCtrl` objeto (`m_StatusBarCtrl`) com quatro painéis e, em seguida, define um ícone (IDI_ICON1) e um texto na segunda parte.  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#31](../mfc/codesnippet/cpp/initializing-the-parts-of-a-cstatusbarctrl-object_1.cpp)]  
-  
- Para obter mais informações sobre como definir o modo de um `CStatusBarCtrl` objeto simple, consulte [definindo o modo de um objeto CStatusBarCtrl](../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+
+Por padrão, uma barra de status exibe informações de status usando painéis separados. Esses painéis (também conhecidos como partes) podem conter uma cadeia de caracteres de texto, um ícone ou ambos.
+
+Use [SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts) para definir quantas partes e o comprimento, terá a barra de status. Depois de ter criado as partes da barra de status, fazer chamadas para [SetText](../mfc/reference/cstatusbarctrl-class.md#settext) e [SetIcon](../mfc/reference/cstatusbarctrl-class.md#seticon) para definir o texto ou ícone de uma parte específica da barra de status. Depois que a parte tiver sido definida com êxito, o controle é redesenhado automaticamente.
+
+O exemplo a seguir inicializa um existente `CStatusBarCtrl` objeto (`m_StatusBarCtrl`) com quatro painéis e, em seguida, define um ícone (IDI_ICON1) e algum texto na segunda parte.
+
+[!code-cpp[NVC_MFCControlLadenDialog#31](../mfc/codesnippet/cpp/initializing-the-parts-of-a-cstatusbarctrl-object_1.cpp)]
+
+Para obter mais informações sobre como definir o modo de um `CStatusBarCtrl` objeto simples, veja [definindo o modo de um objeto CStatusBarCtrl](../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Usando CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
+[Controles](../mfc/controls-mfc.md)
 

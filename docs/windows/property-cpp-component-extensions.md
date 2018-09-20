@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6db0aa5801a8eca896282b65e4d9f156e9b38318
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6f9c444861587e21724fe5f6aff545935fed6086
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212806"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420498"
 ---
 # <a name="property--c-component-extensions"></a>propriedade (Extensões de Componentes C++)
 
@@ -33,15 +33,15 @@ Declara um *propriedade*, que é uma função de membro que se comporta e é ace
 
 Você pode declarar um dos seguintes tipos de propriedades.
 
-*propriedade simples*  
+*propriedade simples*<br/>
 Por padrão, cria uma *acessador set* que atribui o valor da propriedade, um *acessador get* que recupera o valor da propriedade e um membro de dados particulares geradas pelo compilador que contém o valor da propriedade.
 
-*bloco Property*  
+*bloco Property*<br/>
 Use isto para criar get definidas pelo usuário e/ou definir acessadores. A propriedade é leitura/gravação se ambos os get e acessadores set são definidas, somente leitura se somente o acessador get é definido e somente gravação se apenas o acessador set é definido.
 
 Você deve declarar explicitamente um membro de dados para conter o valor da propriedade.
 
-*propriedade indexada*  
+*propriedade indexada*<br/>
 Um bloco de propriedade que você pode usar para obter e definir um valor da propriedade que é especificado por um ou mais índices.
 
 Você pode criar uma propriedade indexada que tem um nome de uma propriedade definida pelo usuário ou um *padrão* nome da propriedade. O nome de uma propriedade de índice padrão é o nome da classe na qual a propriedade está definida. Para declarar uma propriedade padrão, especifique o **padrão** palavra-chave, em vez de um nome de propriedade.
@@ -71,27 +71,27 @@ property type default[index_list] {
 
 ### <a name="parameters"></a>Parâmetros
 
-*type*  
+*type*<br/>
 O tipo de dados do valor da propriedade e, consequentemente, a própria propriedade.
 
-*property_name*  
+*property_name*<br/>
 O nome da propriedade.
 
-*modificador de acesso*  
+*modificador de acesso*<br/>
 Um qualificador de acesso. Qualificadores válidos são **estáticos** e **virtual**.
 
 Get ou acessadores set não precisam concordar com o **virtual** qualificador, mas eles devem concordar com os **estático** qualificador.
 
-*modificador de herança*  
+*modificador de herança*<br/>
 Um qualificador de herança. Qualificadores válidos são **abstrata** e **lacrado**.
 
-*index_list*  
+*index_list*<br/>
 Uma lista delimitada por vírgula de um ou mais índices. Cada índice consiste em um tipo de índice e um identificador opcional que pode ser usado no corpo do método de propriedade.
 
-*value*  
+*value*<br/>
 O valor a ser atribuído à propriedade em uma operação definida, ou recuperar em uma operação get.
 
-*property_body*  
+*property_body*<br/>
 O corpo do método de propriedade do acessador set ou get. O *property_body* pode usar o *index_list* para acessar o membro de dados da propriedade subjacente, ou como parâmetros em processamento definidas pelo usuário.
 
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows
@@ -123,16 +123,16 @@ modifier property type default[index];
 
 ### <a name="parameters"></a>Parâmetros
 
-*Modificador*  
+*Modificador*<br/>
 Um modificador que pode ser usado em uma declaração de propriedade ou um método de acessador get/set. Os valores possíveis são **estáticos** e **virtual**.
 
-*type*  
+*type*<br/>
 O tipo do valor que é representado pela propriedade.
 
-*property_name*  
+*property_name*<br/>
 Parâmetro (s) para o método raise; deve corresponder à assinatura do delegado.
 
-*index_list*  
+*index_list*<br/>
 Uma lista delimitada por vírgula de um ou mais índices, especificado colchetes (o operador subscrito, ([])). Para cada índice, especifique um tipo e, opcionalmente, um identificador que pode ser usado no corpo do método de propriedade.
 
 ### <a name="remarks"></a>Comentários

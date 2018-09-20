@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98edb5945c2cf01d90cd5dae1a750c0fdd37757f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1255c92a7de4a0f1707cd20f91e8b9f1de640942
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723275"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440453"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE (opções de informações de depuração)
 
@@ -54,7 +54,7 @@ Para depurar o código no modo de usuário, que é típico para aplicativos, o *
 
 ## <a name="see-also"></a>Consulte também
 
-[/Debug (gerar informações de depuração)](../../build/reference/debug-generate-debug-info.md)
-[/DRIVER (Driver de modo de Kernel do Windows NT)](../../build/reference/driver-windows-nt-kernel-mode-driver.md)
-[/PROFILE (Profiler de ferramentas de desempenho)](../../build/reference/profile-performance-tools-profiler.md) 
- [Ferramentas de depuração para Windows (WinDbg, KD, CDB, NTSD.)](/windows-hardware/drivers/debugger/index)
+[/DEBUG (gerar informações de depuração)](../../build/reference/debug-generate-debug-info.md)<br/>
+[/DRIVER (driver de modo de kernel do Windows NT)](../../build/reference/driver-windows-nt-kernel-mode-driver.md)<br/>
+[/PROFILE (criador de perfil de ferramentas de desempenho)](../../build/reference/profile-performance-tools-profiler.md)<br/>
+[Ferramentas de depuração para Windows (WinDbg, KD, CDB, NTSD.)](/windows-hardware/drivers/debugger/index)

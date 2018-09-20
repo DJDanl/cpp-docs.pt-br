@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5caec6d9d77d743fa1a8455819b813364bde27d0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 156908a1611f8a1c8b22df61e6b789468753d25d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317050"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443079"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls-c"></a>Adicionando manipuladores de eventos para controles de caixa de diálogo (C++)
 
@@ -76,11 +76,11 @@ Win32
 
 ## <a name="see-also"></a>Consulte também
 
-[Eventos de controle padrão](../windows/default-control-events.md)  
-[Definindo variáveis de membro para controles de caixa de diálogo](../windows/defining-member-variables-for-dialog-controls.md)  
-[Controles da caixa de diálogo e tipos de variável](../ide/dialog-box-controls-and-variable-types.md)  
-[Adicionando uma classe](../ide/adding-a-class-visual-cpp.md)  
-[Adicionando uma função de membro](../ide/adding-a-member-function-visual-cpp.md)  
-[Adicionando uma variável de membro](../ide/adding-a-member-variable-visual-cpp.md)  
-[Substituindo uma função Virtual](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[Eventos de controle padrão](../windows/default-control-events.md)<br/>
+[Definindo variáveis de membro para controles de caixa de diálogo](../windows/defining-member-variables-for-dialog-controls.md)<br/>
+[Controles da caixa de diálogo e tipos de variável](../ide/dialog-box-controls-and-variable-types.md)<br/>
+[Adicionando uma classe](../ide/adding-a-class-visual-cpp.md)<br/>
+[Adicionando uma função de membro](../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Adicionando uma variável de membro](../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Substituindo uma função Virtual](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Manipulador de mensagens do MFC](../mfc/reference/adding-an-mfc-message-handler.md)  

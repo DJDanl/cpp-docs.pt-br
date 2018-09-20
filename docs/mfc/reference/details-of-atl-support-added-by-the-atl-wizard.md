@@ -17,31 +17,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ffe43c33e4b371f6d5dcf5dc7da327b11328af7
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: efa96037139e61e16b752b45617bb8a3c54be993
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37121373"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442143"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>Detalhes do suporte ATL adicionado pelo Assistente ATL
-Quando você [adicionar suporte ATL a um executável MFC existente ou uma DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), Visual C++ realiza as seguintes modificações para o projeto MFC existente (neste exemplo, o projeto é chamado `MFCEXE`):  
-  
--   Dois novos arquivos (um arquivo. idl e um arquivo. rgs, usado para registrar o servidor) são adicionados.  
-  
--   No aplicativo principal cabeçalho e implementação nos arquivos (Mfcexe.h e Mfcexe.cpp), uma nova classe (derivado de `CAtlMFCModule`) é adicionado. A nova classe, além de código é adicionado à `InitInstance` para registro. Código também é adicionado para o `ExitInstance` função para revogar o objeto da classe. No arquivo de cabeçalho, por fim, dois novos arquivos de cabeçalho (initguid. h e Mfcexe_i.c) são incluídos no arquivo de implementação, declarar e inicializar os GUIDs de novo para o `CAtlMFCModule`-classe derivada.  
-  
--   Para registrar o servidor corretamente, uma entrada para o novo arquivo. rgs é adicionada ao arquivo de recurso do projeto.  
-  
-## <a name="notes-for-dll-projects"></a>Observações para projetos DLL  
- Quando você adicionar suporte ATL para um projeto de DLL MFC, você verá algumas diferenças. Código é adicionado para o `DLLRegisterServer` e `DLLUnregisterServer` funções para registrar e cancelar o registro da DLL. Código também é adicionado à [DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow) e [DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject).  
-  
-## <a name="see-also"></a>Consulte também  
- [Suporte ATL em um projeto MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)   
- [Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)   
- [Adicionando uma função de membro](../../ide/adding-a-member-function-visual-cpp.md)   
- [Adicionando uma variável de membro](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Substituindo uma função virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Manipulador de mensagens do MFC](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [Navegando pela estrutura de classe](../../ide/navigating-the-class-structure-visual-cpp.md)
+
+Quando você [adicionar suporte ATL a um executável do MFC ou DLL existente](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), o Visual C++ torna as seguintes modificações ao projeto MFC existente (neste exemplo, o projeto é chamado `MFCEXE`):
+
+- Dois novos arquivos (um arquivo. idl e um arquivo. rgs, usado para registrar o servidor) são adicionados.
+
+- Nos principais arquivos do aplicativo cabeçalho e de implementação (Mfcexe.h e Mfcexe.cpp), uma nova classe (derivado de `CAtlMFCModule`) é adicionado. Além da nova classe, o código é adicionado ao `InitInstance` para o registro. Código também é adicionado para o `ExitInstance` função para revogar o objeto de classe. No arquivo de cabeçalho, por fim, dois novos arquivos de cabeçalho (initguid e Mfcexe_i.c) estão incluídos no arquivo de implementação, a declaração e inicialização de novos GUIDs para o `CAtlMFCModule`-classe derivada.
+
+- Para registrar o servidor corretamente, uma entrada para o novo arquivo. rgs é adicionada ao arquivo de recurso do projeto.
+
+## <a name="notes-for-dll-projects"></a>Notas para os projetos DLL
+
+Quando você adiciona suporte ATL em um projeto de DLL do MFC, você verá algumas diferenças. Código é adicionado para o `DLLRegisterServer` e `DLLUnregisterServer` funções para registrar e cancelar o registro da DLL. Código também é adicionado ao [DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow) e [DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject).
+
+## <a name="see-also"></a>Consulte também
+
+[Suporte ATL em um projeto MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)<br/>
+[Adicionando funcionalidade com assistentes de código](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)<br/>
+[Adicionando uma função de membro](../../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Adicionando uma variável de membro](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Substituindo uma função Virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Manipulador de mensagens do MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
+[Navegando pela estrutura de classe](../../ide/navigating-the-class-structure-visual-cpp.md)

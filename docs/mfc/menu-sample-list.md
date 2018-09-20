@@ -14,24 +14,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b9b1cc957dbc32978902d6efd072f032ae7508a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb28fb0b842cb551f3a53f126122b1ccddad4a75
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344302"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422019"
 ---
 # <a name="menu-sample-list"></a>Lista de exemplos do menu
-Consulte os seguintes programas de exemplo que ilustram a criação, edição e atualizando menus:  
-  
- *Exemplo MDI: Habilitar e desabilitar itens de Menu*  
-  
--   [RABISCO](../visual-cpp-samples.md)  
-  
- *Alterar dinamicamente a Menus*  
-  
--   [DYNAMENU](../visual-cpp-samples.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Menus](../mfc/menus-mfc.md)
+
+Consulte os seguintes programas de exemplo que ilustram a criação, edição e atualização de menus:
+
+*Exemplo MDI: Habilitar e desabilitar itens de Menu*
+
+- [RABISCO](../visual-cpp-samples.md)
+
+*Alterar dinamicamente os Menus*
+
+- [DYNAMENU](../visual-cpp-samples.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Menus](../mfc/menus-mfc.md)
 

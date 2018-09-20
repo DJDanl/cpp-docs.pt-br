@@ -1,5 +1,5 @@
 ---
-title: 'TN049: MBCS de MFC OLE para camada de translação Unicode (MFCANS32) | Microsoft Docs'
+title: 'TN049: MBCS de MFC-OLE para camada de translação Unicode (MFCANS32) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dba912886f88d4868a6d74b12ac977925d9c0f4e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5950765dbbd9b0afd5142315a7da1365e6e7bd49
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380735"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403130"
 ---
 # <a name="tn049-mfcole-mbcs-to-unicode-translation-layer-mfcans32"></a>TN049: MBCS MFC/OLE para camada de translação Unicode (MFCANS32)
-Esta anotação originalmente descrita como MFCANS32. DLL fornece interfaces de ANSI no principalmente Unicode mundo do OLE de 32 bits. Essa DLL não é mais usada pelo MFC.  
-  
-## <a name="see-also"></a>Consulte também  
- [Observações técnicas por número](../mfc/technical-notes-by-number.md)   
- [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
+
+Essa observação originalmente descrita como MFCANS32. DLL fornece interfaces de ANSI no mundo de Unicode principalmente de 32 bits OLE. Essa DLL não é mais usada pelo MFC.
+
+## <a name="see-also"></a>Consulte também
+
+[Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
+[Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
 

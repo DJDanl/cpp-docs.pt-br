@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb08a9dce4c90c9efddd10683bc4b7c2ac0b08b9
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 85d32a3dc01f5c0a496e6471472dab1cfafa0ca0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314411"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437463"
 ---
 # <a name="setting-accelerator-properties"></a>Configurando propriedades do acelerador
 
@@ -47,6 +47,6 @@ Win32
 
 ## <a name="see-also"></a>Consulte também
 
-[Teclas de aceleração predefinidas](../windows/predefined-accelerator-keys.md)  
-[Editores de recursos](../windows/resource-editors.md)  
+[Teclas de aceleração predefinidas](../windows/predefined-accelerator-keys.md)<br/>
+[Editores de recursos](../windows/resource-editors.md)<br/>
 [Editor de aceleradores](../windows/accelerator-editor.md)

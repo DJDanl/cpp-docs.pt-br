@@ -20,15 +20,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 20c36b4e3326ef8010558b4b99729ec8643b5af5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07433d1abe9fae109ee7a7be90219ce726f22eeb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104146"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419081"
 ---
 # <a name="cliext-namespace"></a>Namespace cliext
-O `cliext` namespace contém todos os tipos de biblioteca STL/CLR. Para obter uma lista de todos esses tipos e links para obter mais informações sobre os tipos STL/CLR, consulte [referência da biblioteca STL/CLR](../dotnet/stl-clr-library-reference.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência de biblioteca STL/CLR](../dotnet/stl-clr-library-reference.md)
+
+O `cliext` namespace contém todos os tipos da biblioteca STL/CLR. Para obter uma lista de todos esses tipos e links para obter mais informações sobre os tipos STL/CLR, consulte [referência da biblioteca STL/CLR](../dotnet/stl-clr-library-reference.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Referência de biblioteca STL/CLR](../dotnet/stl-clr-library-reference.md)

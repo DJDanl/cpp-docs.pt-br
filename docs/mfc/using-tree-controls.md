@@ -1,5 +1,5 @@
 ---
-title: Usando controles em árvore | Microsoft Docs
+title: Usando controles de árvore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,31 +15,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9cb5c8892583adac01ca883034b8c0af18595c9
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 1fc3efbf48a9005bf117c2dd7ab5f1bd01ed556d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954589"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403676"
 ---
 # <a name="using-tree-controls"></a>Usando controles de árvore
-Um uso típico de um controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) segue o padrão abaixo:  
-  
--   O controle é criado. Se o controle for especificado em um modelo de caixa de diálogo ou se você estiver usando `CTreeView`, criação é automática quando a caixa de diálogo ou o modo de exibição é criado. Se você deseja criar o controle de árvore, como uma janela filho de alguma outra janela, use o [criar](../mfc/reference/ctreectrl-class.md#create) função de membro.  
-  
--   Se você desejar que o controle de árvore para usar imagens, defina uma lista de imagens chamando [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist). Você também pode alterar o recuo chamando [SetIndent](../mfc/reference/ctreectrl-class.md#setindent). É um bom momento para fazer isso em [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) (para controles em caixas de diálogo) ou [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) (para modos de exibição).  
-  
--   Colocar dados no controle chamando o `CTreeCtrl`do [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) função uma vez para cada item de dados. `InsertItem` Retorna um identificador para o item que você pode usar para se referir a ele mais tarde, por exemplo, ao adicionar itens filhos. É um bom momento para inicializar os dados em `OnInitDialog` (para controles em caixas de diálogo) ou `OnInitialUpdate` (para modos de exibição).  
-  
--   Como o usuário interage com o controle, ele envia várias mensagens de notificação. Você pode especificar uma função para lidar com cada uma das mensagens que você deseja manipular adicionando uma macro ON_NOTIFY_REFLECT no mapa de mensagem da janela de controle ou pela adição de uma macro ON_NOTIFY ao mapa de mensagem da janela de seu pai. Consulte [mensagens de notificação de controle de árvore](../mfc/tree-control-notification-messages.md) mais adiante neste tópico para obter uma lista de notificações possíveis.  
-  
--   Chame várias funções de membro de conjunto para definir os valores para o controle. As alterações que você pode fazer incluem definir o recuo e alterar o texto, imagem ou associados a um item de dados.  
-  
--   Use as várias funções de Get para examinar o conteúdo do controle. Também é possível percorrer o conteúdo do controle de árvore com funções que permitem recuperar identificadores de pais, filhos e irmãos de um item especificado. Você ainda pode classificar os filhos de um nó específico.  
-  
--   Quando tiver terminado com o controle, certifique-se de que corretamente, ele será destruído. Se o controle de árvore está em uma caixa de diálogo ou se é um modo de exibição, ele e o `CTreeCtrl` objeto será destruído automaticamente. Se não, você precisará garantir que ambos o controle e o `CTreeCtrl` objeto corretamente são destruídas.  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Controles](../mfc/controls-mfc.md)
+
+Um uso típico de um controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) segue o padrão abaixo:
+
+- O controle é criado. Se o controle for especificado em um modelo de caixa de diálogo ou se você estiver usando `CTreeView`, criação é automática quando a caixa de diálogo ou uma exibição é criada. Se você deseja criar o controle de árvore como uma janela filho de alguma outra janela, use o [criar](../mfc/reference/ctreectrl-class.md#create) função de membro.
+
+- Se você quiser que o controle de árvore para usar imagens, defina uma lista de imagens, chamando [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist). Você também pode alterar o recuo chamando [SetIndent](../mfc/reference/ctreectrl-class.md#setindent). Um bom momento para fazer isso está em [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) (para controles em caixas de diálogo) ou [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) (para exibições).
+
+- Colocar dados no controle, chamando o `CTreeCtrl`do [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) função uma vez para cada item de dados. `InsertItem` Retorna um identificador para o item que você pode usar para fazer referência a ele mais tarde, por exemplo, ao adicionar itens filho. Um bom momento para inicializar os dados está em `OnInitDialog` (para controles em caixas de diálogo) ou `OnInitialUpdate` (para exibições).
+
+- Conforme o usuário interage com o controle, ele envia várias mensagens de notificação. Você pode especificar uma função para lidar com cada uma das mensagens que você deseja manipular, adicionando uma macro ON_NOTIFY_REFLECT no mapa de mensagens da janela de controle ou pela adição de uma macro ON_NOTIFY ao mapa de mensagem da sua janela pai. Ver [mensagens de notificação de controle de árvore](../mfc/tree-control-notification-messages.md) mais adiante neste tópico para obter uma lista de notificações possíveis.
+
+- Chame várias funções de membro de conjunto para definir valores para o controle. As alterações que você pode fazer incluem definir o recuo e alterar o texto, imagem ou associados a um item de dados.
+
+- Use as várias funções de Get para examinar o conteúdo do controle. Você também pode percorrer o conteúdo do controle de árvore com funções que permitem que você recupere os identificadores para os pais, filhos e irmãos de um item especificado. Você pode até mesmo classificar os filhos de um nó específico.
+
+- Quando você terminar com o controle, certifique-se de que ser destruído corretamente. Se o controle de árvore está em uma caixa de diálogo ou se ele é um modo de exibição, ele e o `CTreeCtrl` objeto será destruído automaticamente. Se não, você precisa garantir que os dois o controle e o `CTreeCtrl` objeto são destruídos corretamente.
+
+## <a name="see-also"></a>Consulte também
+
+[Usando CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
+[Controles](../mfc/controls-mfc.md)
 

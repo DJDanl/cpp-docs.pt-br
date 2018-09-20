@@ -19,19 +19,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57aa0dc35d2cc47eea4df072a9df7efde9812c23
-ms.sourcegitcommit: 9ad287c88bdccee2747832659fe50c2e5d682a0b
+ms.openlocfilehash: 6d85f98fd72567d2481e3a9f9e643b2d736eea92
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39034696"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397696"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>Definindo a cor da tela de fundo da caixa de diálogo
+
 Você pode definir a cor do plano de fundo de suas caixas de diálogo Manipulando mensagens WM_CTLCOLOR para a janela da caixa de diálogo. A cor que você definir é usada para apenas a caixa de diálogo especificada.
 
-Ver [codexpert blog](http://codexpert.ro/blog/2013/03/13/painting-the-dialog-backround/) para obter um exemplo.  
-  
-## <a name="see-also"></a>Consulte também  
- [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)   
- [Tratando mensagens do Windows na caixa de diálogo](../mfc/handling-windows-messages-in-your-dialog-box.md)
+Ver [codexpert blog](http://codexpert.ro/blog/2013/03/13/painting-the-dialog-backround/) para obter um exemplo.
+
+## <a name="see-also"></a>Consulte também
+
+[Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[Tratando mensagens do Windows na caixa de diálogo](../mfc/handling-windows-messages-in-your-dialog-box.md)
 

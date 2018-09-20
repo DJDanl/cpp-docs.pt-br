@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28be2caa3477eabc8b717b387c99d65585a9ef19
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4ea5026100239f00f03147e435ddd9555617f1dd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718049"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432705"
 ---
 # <a name="dlls-in-visual-c"></a>DLLs no Visual C++
 
@@ -71,46 +71,67 @@ Uma desvantagem em potencial do uso de DLLs é que o aplicativo não é autônom
 
 Os tópicos a seguir fornecem informações detalhadas sobre como a DLLs de programa em Visual C++.
 
-[Passo a passo: Criando e usando uma biblioteca de vínculo dinâmico (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md) descreve como criar e usar uma DLL usando o Visual Studio.
+[Instruções passo a passo: criando e usando uma biblioteca de vínculo dinâmico (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
+Descreve como criar e usar uma DLL com o Visual Studio.
 
-[Tipos de DLLs](../build/kinds-of-dlls.md) fornece informações sobre os diferentes tipos de DLLs que podem ser criados.
+[Tipos de DLLs](../build/kinds-of-dlls.md)<br/>
+Fornece informações sobre os diferentes tipos de DLLs que podem ser compilados.
 
-[Perguntas frequentes sobre o DLL](../build/dll-frequently-asked-questions.md) fornece respostas para perguntas frequentes sobre DLLs.
+[Perguntas frequentes sobre DLL](../build/dll-frequently-asked-questions.md)<br/>
+Fornece respostas para perguntas frequentes sobre DLLs.
 
-[Vincular um executável a uma DLL](../build/linking-an-executable-to-a-dll.md) descreve a vinculação explícita e implícita para uma DLL.
+[Vincular um executável a uma DLL](../build/linking-an-executable-to-a-dll.md)<br/>
+Descreve a vinculação explícita e implícita a uma DLL.
 
-[Inicialize um DLL](../build/run-time-library-behavior.md#initializing-a-dll) código de inicialização da DLL discute que deve ser executado quando a DLL é carregada.
+[Inicialize um DLL](../build/run-time-library-behavior.md#initializing-a-dll)<br/>
+Discute o código de inicialização da DLL que deve ser executado quando a DLL é carregada.
 
-[DLLs e comportamento da biblioteca em tempo de execução Visual C++](../build/run-time-library-behavior.md) descreve como a biblioteca de tempo de execução executa a sequência de inicialização da DLL.
+[Comportamento de DLLs e da biblioteca em tempo de execução do Visual C++](../build/run-time-library-behavior.md)<br/>
+Descreve como a biblioteca em tempo de execução executa a sequência de inicialização da DLL.
 
-[LoadLibrary e AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md) discute o uso **LoadLibrary** e `AfxLoadLibrary` para vincular explicitamente para uma DLL em tempo de execução.
+[LoadLibrary e AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)<br/>
+Discute o uso **LoadLibrary** e `AfxLoadLibrary` para vincular explicitamente para uma DLL em tempo de execução.
 
-[GetProcAddress](../build/getprocaddress.md) discute o uso **GetProcAddress** para obter o endereço de uma função exportada na DLL.
+[GetProcAddress](../build/getprocaddress.md)<br/>
+Discute o uso **GetProcAddress** para obter o endereço de uma função exportada na DLL.
 
-[FreeLibrary e AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md) discute o uso **FreeLibrary** e `AfxFreeLibrary` quando o módulo DLL não é mais necessário.
+[FreeLibrary e AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)<br/>
+Discute o uso **FreeLibrary** e `AfxFreeLibrary` quando o módulo DLL não é mais necessário.
 
-[Ordem de pesquisa de biblioteca de vínculo dinâmico](/windows/desktop/Dlls/dynamic-link-library-search-order) descreve o caminho de pesquisa que o sistema operacional Windows usa para localizar uma DLL no sistema.
+[Ordem de pesquisa de biblioteca de vínculo dinâmico](/windows/desktop/Dlls/dynamic-link-library-search-order)<br/>
+Descreve o caminho de pesquisa que o sistema operacional Windows usa para localizar uma DLL no sistema.
 
-[Estados de módulo de um Regular MFC DLL vinculada dinamicamente ao MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md) descreve os estados de módulo de uma expressão de DLL do MFC vinculada dinamicamente ao MFC.
+[Estados de módulo de uma DLL MFC regular vinculada dinamicamente ao MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>
+Descreve os estados de módulo de uma expressão de que DLL do MFC vinculada dinamicamente ao MFC.
 
-[DLLs de extensão MFC](../build/extension-dlls-overview.md) explica as DLLs que normalmente implementam classes reutilizáveis derivadas de classes existentes da biblioteca Microsoft Foundation Class.
+[DLLs de extensão de MFC](../build/extension-dlls-overview.md)<br/>
+Explica as DLLs que normalmente implementam classes reutilizáveis derivadas das classes existentes da biblioteca Microsoft Foundation Class.
 
-[Criando uma DLL Resource-Only](../build/creating-a-resource-only-dll.md) discute uma DLL somente de recursos, que contém nada além de recursos, como ícones, bitmaps, cadeias de caracteres e caixas de diálogo.
+[Criando uma DLL somente de recurso](../build/creating-a-resource-only-dll.md)<br/>
+Descreve uma DLL somente de recurso, que contém apenas recursos, como ícones, bitmaps, cadeias de caracteres e caixas de diálogo.
 
-[Recursos localizados em aplicativos MFC: DLLs satélite](../build/localized-resources-in-mfc-applications-satellite-dlls.md) fornece suporte avançado para DLLs satélite, um recurso que ajuda na criação de aplicativos localizados para vários idiomas.
+[Recursos localizados em aplicativos MFC: DLLs satélites](../build/localized-resources-in-mfc-applications-satellite-dlls.md)<br/>
+Fornece suporte avançado para DLLs satélite, um recurso que ajuda na criação de aplicativos localizados para vários idiomas.
 
-[Importando e exportando](../build/importing-and-exporting.md) descreve importando símbolos públicos para um aplicativo ou exportando funções de uma DLL
+[Importando e exportando](../build/importing-and-exporting.md)<br/>
+Descreve a importação de símbolos públicos para um aplicativo ou a exportação de funções de uma DLL
 
-[Ativos de tecnologia e DLLs](../build/active-technology-and-dlls.md) permite que os servidores de objeto a ser implementada dentro de uma DLL.
+[Tecnologia ativa e DLLs](../build/active-technology-and-dlls.md)<br/>
+Permite que os servidores de objeto a ser implementada dentro de uma DLL.
 
-[Automação em uma DLL](../build/automation-in-a-dll.md) descreve o que fornece a opção de automação no Assistente de DLL do MFC.
+[Automação em uma DLL](../build/automation-in-a-dll.md)<br/>
+Descreve o que a opção de automação no assistente de DLL do MFC fornece.
 
-[Convenções de nomenclatura para DLLs MFC](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions) discute como as DLLs e bibliotecas incluídas no MFC seguem uma convenção de nomenclatura estruturada.
+[Convenções de nomenclatura para DLLs do MFC](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)<br/>
+Discute como as DLLs e as bibliotecas incluídas no MFC seguem uma convenção de nomenclatura estruturada.
 
-[Chamando funções DLL a partir de aplicativos do Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md) descreve como chamar funções de DLL de aplicativos Visual Basic.
+[Chamando funções DLL a partir de aplicativos do Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)<br/>
+Descreve como chamar funções de DLL a partir de aplicativos do Visual Basic.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Usando MFC como parte de uma DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md) descreve DLLs normais do MFC, que permitem que você use a biblioteca do MFC como parte de uma biblioteca de vínculo dinâmico do Windows.
+[Usando MFC como parte de uma DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)<br/>
+Descreve DLLs normais do MFC, que permitem que você use a biblioteca do MFC como parte de uma biblioteca de vínculo dinâmico do Windows.
 
-[Versão de DLL do MFC](../mfc/tn033-dll-version-of-mfc.md) descreve como você pode usar o compartilhadas e Mfcxxd (onde x é o número de versão do MFC) compartilhado bibliotecas de vínculo dinâmico com aplicativos do MFC e DLLs de extensão do MFC.
+[Versão DLL do MFC](../mfc/tn033-dll-version-of-mfc.md)<br/>
+Descreve como você pode usar o compartilhadas e Mfcxxd (onde x é o número de versão do MFC) compartilhado bibliotecas de vínculo dinâmico com aplicativos do MFC e DLLs de extensão do MFC.

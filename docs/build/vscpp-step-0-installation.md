@@ -2,7 +2,7 @@
 title: Instalar o suporte do C++ no Visual Studio 2017 | Microsoft Docs
 description: Instalar o suporte do Visual Studio para o Visual C++
 ms.custom: mvc
-ms.date: 06/21/2018
+ms.date: 09/17/2018
 ms.topic: tutorial
 ms.technology:
 - devlang-C++
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e0fef319fbe119118e3a915a66bea3546bbb9a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6c905df6fb406b9189bd46d20c6f199d3d90a722
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702891"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441935"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalar o suporte do C++ no Visual Studio
 
@@ -37,7 +37,7 @@ Para obter detalhes sobre o espaço em disco e os requisitos do sistema operacio
 
 ## <a name="visual-studio-2015-installation"></a>Instalação do Visual Studio 2015
 
-Para instalar o Visual Studio 2015, acesse [Baixar versões mais antigas do Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Execute o programa de instalação, escolha **Instalação personalizada** e, em seguida, selecione o componente C++.
+Para instalar o Visual Studio 2015, acesse [Baixar versões mais antigas do Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Execute o programa de instalação, escolha **Instalação personalizada** e, em seguida, selecione o componente C++. Para adicionar suporte do C++ a uma instalação existente do Visual Studio 2015, clique no botão Iniciar do Windows e digite **adicionar ou remover programas**. Abra o programa na lista de resultados e, em seguida, localize sua instalação do Visual Studio 2015 na lista de programas instalados. Clique duas vezes nele e, em seguida, escolha **modificar** e selecione os componentes do Visual C++ para instalar.
 
 Em geral, é altamente recomendado que você use o Visual Studio 2017, mesmo que você precise compilar o código com o compilador do Visual Studio 2015. Para obter mais informações, consulte [Usar a multiplataforma nativa no Visual Studio para compilar projetos antigos](../porting/use-native-multi-targeting.md).
 

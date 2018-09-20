@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a39b4147bd997659f264b60fb1fc88956784bbaf
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: d72e37b8625480779620025dfd1e1eda1101b824
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318181"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430547"
 ---
 # <a name="working-with-resource-files"></a>Trabalhando com arquivos de recurso
 
@@ -39,24 +39,24 @@ Para obter informações sobre como adicionar recursos a projetos gerenciados, c
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Arquivos de recurso](../windows/resource-files-visual-studio.md)  
+[Arquivos de recurso](../windows/resource-files-visual-studio.md)<br/>
 Descreve os arquivos de recurso e como eles são usados em aplicativos da área de trabalho do Windows. Também fornece links para tópicos que descrevem como usar arquivos de recursos.
 
-[Símbolos: identificadores de recursos](../windows/symbols-resource-identifiers.md)  
+[Símbolos: identificadores de recursos](../windows/symbols-resource-identifiers.md)<br/>
 Descreve símbolos e fornece informações sobre como usar o **símbolos de recurso** caixa de diálogo Gerenciar símbolos em seus projetos.
 
-[Editores de recursos](../windows/resource-editors.md)  
+[Editores de recursos](../windows/resource-editors.md)<br/>
 Descreve os editores de recursos fornecidos no Visual Studio, os tipos de recursos que você pode modificar com cada editor e fornece links para informações detalhadas sobre como usar cada editor.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Visual C++](../visual-cpp-in-visual-studio.md)  
+[Visual C++](../visual-cpp-in-visual-studio.md)<br/>
 Fornece links para a documentação do Visual C++.
 
-[Fale conosco](/visualstudio/ide/talk-to-us)  
+[Fale conosco](/visualstudio/ide/talk-to-us)<br/>
 Fornece links para informações sobre o uso do conjunto de documentação, o contado com suporte ao produto, e a aplicação de recursos de acessibilidade.
 
 ## <a name="see-also"></a>Consulte também
 
-[Aplicativos de área de trabalho do Windows](../windows/windows-desktop-applications-cpp.md)  
+[Aplicativos de área de trabalho do Windows](../windows/windows-desktop-applications-cpp.md)<br/>
 [Menus e outros recursos](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

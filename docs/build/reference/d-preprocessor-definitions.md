@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19da0c8e29a27734b23a01a1b2d3ffaa64a7fe05
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3dc4da4235b57e9abd8e5f32b8f3e696bd1ce2de
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713783"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46397176"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (definições de pré-processador)
 
@@ -109,6 +109,6 @@ TEST defined 1
 
 [Opções do Compilador](../../build/reference/compiler-options.md)<br/>
 [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
-[/U, /u (excluir símbolos)](../../build/reference/u-u-undefine-symbols.md)
-[#undef (C/C++) de diretiva](../../preprocessor/hash-undef-directive-c-cpp.md)
-[#define diretiva (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)
+[/U, /u (excluir definições de símbolos)](../../build/reference/u-u-undefine-symbols.md)<br/>
+[Diretiva #undef (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br/>
+[Diretiva #define (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)

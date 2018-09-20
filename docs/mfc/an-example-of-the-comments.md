@@ -17,25 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aa6e0f0b69964ac8cadc3518e0540f4e51545fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 681c927a7e0e7960cb483e21ed2ff1e2e4b3c5f5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340878"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442338"
 ---
 # <a name="an-example-of-the-comments"></a>Um exemplo dos comentários
-A seguinte listagem parcial da classe `CChildFrame` usa a maior parte dos comentários padrão que MFC emprega em suas classes dividir os membros de classe, das maneiras em que eles são usados:  
-  
- [!code-cpp[NVC_MFCListView#5](../atl/reference/codesnippet/cpp/an-example-of-the-comments_1.h)]  
-  
- Esses comentários consistentemente marcam seções de declaração de classe que contêm tipos semelhantes de membros de classe. Tenha em mente que essas são as convenções do MFC, não defina regras.  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando os arquivos de origem MFC](../mfc/using-the-mfc-source-files.md)   
- [Comentário de implementação](../mfc/decrement-implementation-comment.md)   
- [Construtores de comentário](../mfc/decrement-constructors-comment.md)   
- [Comentário sobre atributos](../mfc/decrement-attributes-comment.md)   
- [Comentário sobre operações](../mfc/decrement-operations-comment.md)   
- [Comentário sobre substituíveis](../mfc/decrement-overridables-comment.md)
+
+A listagem parcial a seguir da classe `CChildFrame` usa a maior parte dos comentários de padrão MFC emprega em suas classes, dividir os membros de classe, as maneiras em que eles são usados:
+
+[!code-cpp[NVC_MFCListView#5](../atl/reference/codesnippet/cpp/an-example-of-the-comments_1.h)]
+
+Esses comentários consistentemente marcam seções da declaração de classe que contêm tipos semelhantes de membros de classe. Lembre-se de que essas são as convenções do MFC, não defina regras.
+
+## <a name="see-also"></a>Consulte também
+
+[Usando os arquivos de origem MFC](../mfc/using-the-mfc-source-files.md)<br/>
+[Comentário da implementação](../mfc/decrement-implementation-comment.md)<br/>
+[Comentário sobre construtores](../mfc/decrement-constructors-comment.md)<br/>
+[Comentário sobre atributos](../mfc/decrement-attributes-comment.md)<br/>
+[Comentário sobre operações](../mfc/decrement-operations-comment.md)<br/>
+[Comentário sobre substituíveis](../mfc/decrement-overridables-comment.md)
 

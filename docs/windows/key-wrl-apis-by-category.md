@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6d6bd580faf8c242ca5ac5e9b4b29ded9a7750a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d79888a58e5fc6d6911c4cc123877c1537f22cf1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612204"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441922"
 ---
 # <a name="key-wrl-apis-by-category"></a>APIs de chave WRL por categoria
 As tabelas a seguir listam os principais produtos de classes, structs, funções e macros biblioteca de modelos de C++ de tempo de execução do Windows. Construtores em classes e namespaces de auxiliar são omitidos. Essas listas ampliar a documentação de API, que é organizada por namespace.
@@ -76,4 +76,5 @@ As tabelas a seguir listam os principais produtos de classes, structs, funções
 |[Macro InspectableClass](../windows/inspectableclass-macro.md)|Define o nível de confiança e o nome de classe do tempo de execução.|
   
 ## <a name="see-also"></a>Consulte também
- [WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows)](../windows/windows-runtime-cpp-template-library-wrl.md)
+
+[WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows)](../windows/windows-runtime-cpp-template-library-wrl.md)

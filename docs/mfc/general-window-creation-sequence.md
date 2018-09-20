@@ -17,35 +17,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3a4b67ccbba97405678985e6412cc56911bd184
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 9336e5fa19b373f07c54e758a6f939bbc63e50ec
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929686"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432783"
 ---
 # <a name="general-window-creation-sequence"></a>Sequência de criação da janela geral
-Quando você cria uma janela de sua preferência, como um filho janela, a estrutura usa muito o mesmo processo descrito em [criação de documento/exibição](../mfc/document-view-creation.md).  
-  
- Todas as classes de janela fornecidas pelo empregar MFC [construção de dois estágios](../mfc/one-stage-and-two-stage-construction-of-objects.md). Isto é, durante uma chamada de C++ **novo** operador, o construtor aloca e inicializa um objeto C++, mas não cria uma janela do Windows correspondente. Isso é feito depois chamando o [criar](../mfc/reference/cwnd-class.md#create) função membro de objeto de janela.  
-  
- O `Create` função membro faz com que a janela do Windows e armazena seu `HWND` no membro de dados públicos do objeto C++ [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). `Create` Fornece concluir flexibilidade sobre os parâmetros de criação. Antes de chamar `Create`, talvez você queira registrar uma classe de janela com a função global [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) para definir os estilos de ícone e a classe do quadro.  
-  
- Janelas com moldura, você pode usar o [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) a função de membro em vez de `Create`. `LoadFrame` faz a janela do Windows usando menos parâmetros. Ele obtém muitos valores padrão de recursos, incluindo a legenda do quadro, ícone, tabela de Aceleradores e menu.  
-  
+
+Quando você cria uma janela de sua próprias, como um filho de janela, a estrutura usa muito o mesmo processo descrito em [criação de documento/exibição](../mfc/document-view-creation.md).
+
+Todas as classes de janela fornecidas pelo empregam MFC [construção de dois estágios](../mfc/one-stage-and-two-stage-construction-of-objects.md). Ou seja, durante uma invocação do C++ **novo** operador, o construtor aloca e inicializa um objeto de C++, mas não cria uma janela do Windows correspondente. Isso é feito posteriormente por meio da chamada a [criar](../mfc/reference/cwnd-class.md#create) função de membro do objeto window.
+
+O `Create` função de membro torna a janela do Windows e armazena suas `HWND` no membro de dados públicos do objeto C++ [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). `Create` Fornece concluir flexibilidade sobre os parâmetros de criação. Antes de chamar `Create`, talvez você queira registrar uma classe de janela com a função global [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) para definir os estilos de ícone e a classe para o quadro.
+
+Para janelas de quadro, você pode usar o [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) função de membro em vez de `Create`. `LoadFrame` torna a janela do Windows usando menos parâmetros. Ele obtém muitos valores padrão de recursos, incluindo a legenda do quadro, ícone, tabela de Aceleradores e menu.
+
 > [!NOTE]
->  O ícone, tabela de Aceleradores e recursos de menu devem ter uma ID de recurso comuns, como **IDR_MAINFRAME**, para que eles possam ser carregados pelo LoadFrame.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
-  
--   [Objetos de janela](../mfc/window-objects.md)  
-  
--   [Registrando "classes de janela"](../mfc/registering-window-classes.md)  
-  
--   [Destruindo objetos de janela](../mfc/destroying-window-objects.md)  
-  
--   [Criando janelas com moldura de documento](../mfc/creating-document-frame-windows.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Criando janelas](../mfc/creating-windows.md)
+>  Seu ícone, tabela de Aceleradores e recursos de menu devem ter uma ID de recurso comuns, como **IDR_MAINFRAME**, para que eles possam ser carregados pelo LoadFrame.
+
+## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+
+- [Objetos de janela](../mfc/window-objects.md)
+
+- [Registrando classes"janela"](../mfc/registering-window-classes.md)
+
+- [Destruindo objetos de janela](../mfc/destroying-window-objects.md)
+
+- [Criando janelas com moldura de documento](../mfc/creating-document-frame-windows.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Criando janelas](../mfc/creating-windows.md)
 

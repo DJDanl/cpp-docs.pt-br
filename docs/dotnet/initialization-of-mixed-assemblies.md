@@ -21,19 +21,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9004d62caa5368294a5a53e4e2587da05d1d495c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ba9f3143fb110b25f384e462e7dfcd69c0140802
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204536"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439569"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>Inicialização de assemblies mistos
 
 Os desenvolvedores do Windows sempre devem ter cautela ao bloqueio do carregador durante a execução de código durante `DllMain`. No entanto, há algumas considerações adicionais que entram em jogo ao lidar com C + + c++ /CLI assemblies de modo misto do clr.
 
 Código dentro do [DllMain](/windows/desktop/Dlls/dllmain) não deve acessar o CLR. Isso significa que `DllMain` não deve fazer nenhuma chamada para funções gerenciadas, direta ou indiretamente; nenhum código gerenciado deve ser declarado ou implementado no `DllMain`; e nenhuma coleta de lixo ou o carregamento da biblioteca automática deve ocorrer dentro de `DllMain` .
-  
+
 ## <a name="causes-of-loader-lock"></a>Causas de bloqueio do carregador
 
 Com a introdução da plataforma .NET, há dois mecanismos distintos para carregar um módulo de execução (EXE ou DLL): um para Windows, que é usado para os módulos não gerenciados, e outro para o .NET em tempo de execução CLR (Common Language) que carrega os assemblies do .NET. O problema de carregamento de DLL misto gira em torno do carregador do sistema operacional do Microsoft Windows.
@@ -130,7 +130,7 @@ Porque o mesmo cabeçalho pode ser incluídos por arquivos de C++ com **/clr** h
 Como uma conveniência para lidar com o bloqueio do carregador de usuários, o vinculador escolherá a implementação nativa sobre gerenciado quando apresentado com ambos. Isso evita os problemas acima. No entanto, há duas exceções a essa regra nesta versão devido a dois problemas não resolvidos com o compilador:
 
 - A chamada é para um embutido função é através de um ponteiro de função estático global. Esse cenário é particularmente importante, como funções virtuais são chamadas por meio de ponteiros de função global. Por exemplo,
-  
+
 ```cpp
 #include "definesmyObject.h"
 #include "definesclassC.h"
@@ -170,15 +170,15 @@ Para identificar a função específica do MSIL que foi chamada em bloqueio do c
    Para fazer isso, abra o **propriedades** grade para o projeto de inicialização na solução. Selecione **propriedades de configuração** > **depuração**. Defina as **tipo de depurador** à **somente nativo**.
 
 1. Inicie o depurador (F5).
-  
+
 1. Quando o **/clr** diagnóstico é gerado, escolha **Repita** e, em seguida, escolha **quebrar**.
-  
+
 1. Abra a janela de pilha de chamadas. (Na barra de menus, escolha **Debug** > **Windows** > **pilha de chamadas**.) Problemático `DllMain` ou inicializador estático é identificado com uma seta verde. Se a função transgressor não for identificada, as etapas a seguir devem ficar para encontrá-lo.
 
 1. Abra o **Immediate** janela (na barra de menus, escolha **Debug** > **Windows** > **imediato**.)
 
 1. Digite. carregar SOS. dll para o **imediato** janela para carregar o serviço de depuração SOS.
-  
+
 1. Tipo! dumpstack para o **imediato** janela para obter uma lista completa de interno **/clr** pilha.
 
 1. Procura a primeira instância (mais próxima à parte inferior da pilha) de qualquer um dos cordllmain (se `DllMain` faz com que o problema) ou _VTableBootstrapThunkInitHelperStub ou GetTargetForVTableEntry (se um inicializador estático faz com que o problema). A entrada da pilha logo abaixo dessa chamada é que a invocação do MSIL implementado a função que tentou executar em um bloqueio de carregador.

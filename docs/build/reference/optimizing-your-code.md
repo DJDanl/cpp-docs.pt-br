@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 180586f55ea57100286c3c598ac62eb83107d7c9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b715f3cc6bc505d9698484ad7c47b8262f2bc728
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714370"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444405"
 ---
 # <a name="optimizing-your-code"></a>Otimizando o código
 
@@ -33,11 +33,14 @@ Ao otimizar um executável, você pode obter um equilíbrio entre velocidade de 
 
 Os tópicos a seguir descrevem alguns dos recursos de otimização na linguagem C/C++.
 
-[Otimização Pragmas e palavras-chave](../../build/reference/optimization-pragmas-and-keywords.md) uma lista de palavras-chave e pragmas que você pode usar em seu código para melhorar o desempenho.
+[Pragmas e palavras-chave de otimização](../../build/reference/optimization-pragmas-and-keywords.md)<br/>
+Uma lista de palavras-chave e pragmas que você pode usar em seu código para melhorar o desempenho.
 
-[Opções de compilador listadas por categoria](../../build/reference/compiler-options-listed-by-category.md) uma lista de **/O** opções do compilador que afeta especificamente o tamanho de velocidade ou código de execução.
+[Opções de Compilador Listadas por Categoria](../../build/reference/compiler-options-listed-by-category.md)<br/>
+Uma lista dos **/O** opções do compilador que afeta especificamente o tamanho de velocidade ou código de execução.
 
-[Declarador de referência Rvalue: & &](../../cpp/rvalue-reference-declarator-amp-amp.md) a implementação de dar suporte a referências de Rvalue *semântica de movimentação*. Se a semântica é usada para implementar as bibliotecas de modelo, o desempenho de aplicativos que usam esses modelos de movimentação pode melhorar significativamente.
+[Declarador de referência Rvalue: &&](../../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
+A implementação de dar suporte a referências de Rvalue *semântica de movimentação*. Se a semântica é usada para implementar as bibliotecas de modelo, o desempenho de aplicativos que usam esses modelos de movimentação pode melhorar significativamente.
 
 ### <a name="the-optimize-pragma"></a>O pragma optimize
 
@@ -59,9 +62,11 @@ Paradoxalmente, otimização de um programa para velocidade pode fazer com que c
 
 Os tópicos a seguir discutem práticas de programação.
 
-[Dicas para melhorar código crítico em termos de tempo](../../build/reference/tips-for-improving-time-critical-code.md) melhor técnicas de codificação podem resultar em melhor desempenho. Este tópico sugere técnicas que podem ajudar a garantir que as partes críticas de seu código um desempenho satisfatório de codificação.
+[Dicas para melhorar código crítico em termos de tempo](../../build/reference/tips-for-improving-time-critical-code.md)<br/>
+Criando códigos melhores técnicas podem resultar em melhor desempenho. Este tópico sugere técnicas que podem ajudar a garantir que as partes críticas de seu código um desempenho satisfatório de codificação.
 
-[Melhores práticas de otimização](../../build/reference/optimization-best-practices.md) fornece diretrizes gerais sobre a melhor maneira de otimizar o aplicativo.
+[Melhores práticas de otimização](../../build/reference/optimization-best-practices.md)<br/>
+Fornece diretrizes gerais sobre a melhor maneira de otimizar o aplicativo.
 
 ## <a name="debugging-optimized-code"></a>Depurar o código otimizado
 

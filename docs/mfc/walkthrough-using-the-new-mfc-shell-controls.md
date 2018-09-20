@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fbf10ef749df0ce5e5984ac773e0d2c00106b82
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 81925cfa31c394a1b307a184388fb0d331d31fdd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42538779"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432484"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Instruções passo a passo: usando os novos controles de shell MFC
 
@@ -186,4 +186,4 @@ Este passo a passo pressupõe que você configurou o Visual Studio para usar **c
 
 ## <a name="see-also"></a>Consulte também
 
-[Explicações Passo a Passo](../mfc/walkthroughs-mfc.md)  
+[Explicações Passo a Passo](../mfc/walkthroughs-mfc.md)

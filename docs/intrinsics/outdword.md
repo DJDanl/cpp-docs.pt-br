@@ -18,46 +18,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1181cfa4fc2868fe96deb1d68d4140b9ab80e29b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c7f7d5cf08ba83f83513f591ce04b1ff527cd491
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708669"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46420563"
 ---
 # <a name="outdword"></a>__outdword
-**Seção específica da Microsoft**  
-  
- Gera o `out` instrução para enviar uma palavras duplas `Data` a porta de saída `Port`.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void __outdword(   
-   unsigned short Port,   
-   unsigned long Data   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
+
+**Seção específica da Microsoft**
+
+Gera o `out` instrução para enviar uma palavras duplas `Data` a porta de saída `Port`.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+void __outdword( 
+   unsigned short Port, 
+   unsigned long Data 
+);
+```
+
+#### <a name="parameters"></a>Parâmetros
+
 *Porta*<br/>
-[in] A porta para enviar os dados.  
-  
+[in] A porta para enviar os dados.
+
 *Dados*<br/>
-[in] As palavras duplas a serem enviados.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Intrínseco|Arquitetura|  
-|---------------|------------------|  
-|`__outdword`|x86, x64|  
-  
- **Arquivo de cabeçalho** \<intrin. h >  
-  
-## <a name="remarks"></a>Comentários  
- Essa rotina só está disponível como função intrínseca.  
-  
-**Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)
+[in] As palavras duplas a serem enviados.
+
+## <a name="requirements"></a>Requisitos
+
+|Intrínseco|Arquitetura|
+|---------------|------------------|
+|`__outdword`|x86, x64|
+
+**Arquivo de cabeçalho** \<intrin. h >
+
+## <a name="remarks"></a>Comentários
+
+Essa rotina só está disponível como função intrínseca.
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b599e5f25449dfef3b37d7811db572ee4299b241
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6bfd96962cebd4b94e9b1b50ca588ada9af69779
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719091"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418379"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -44,10 +44,10 @@ Associa a variável de membro especificado com um parâmetro de entrada ou saíd
 
 ### <a name="parameters"></a>Parâmetros
 
-*Ordinal*  
+*Ordinal*<br/>
 O número da coluna (ordinal DBCOLUMNINFO) correspondente a um campo no conjunto de linhas à qual associar dados.
 
-*paramtype*  
+*paramtype*<br/>
 (Opcional) O tipo a ser definido para o parâmetro. Provedores dão suporte a apenas tipos de e/s parâmetros que têm suporte pela fonte de dados subjacente. O tipo é uma combinação de um ou mais valores DBPARAMIOENUM:
 
 - DBPARAMIO_INPUT um parâmetro de entrada.
@@ -56,19 +56,19 @@ O número da coluna (ordinal DBCOLUMNINFO) correspondente a um campo no conjunto
 
 - DBPARAMIO_NOTPARAM o acessador não tem parâmetros. Definindo `eParamIO` para esse valor na linha acessadores lembra ao usuário que os parâmetros são ignorados.
 
-*DbType*  
+*DbType*<br/>
 (Opcional) Um banco de dados OLE [indicador de tipo](/previous-versions/windows/desktop/ms711251\(v=vs.85\)) para a entrada de coluna.
 
-*precision*  
+*precision*<br/>
 (Opcional) A precisão a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição da `bPrecision` elemento o [estrutura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*Escala*  
+*Escala*<br/>
 (Opcional) A escala a ser usado para a entrada da coluna. Para obter detalhes, consulte a descrição da `bScale` elemento o [estrutura DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*status*  
+*status*<br/>
 (Opcional) Uma variável de membro usada para manter o status dessa coluna. O status indica se o valor da coluna é um valor de dados ou algum outro valor, como nulo. Para os valores possíveis, consulte [Status](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) na *referência do programador DB OLE*.
 
-*length*  
+*length*<br/>
 (Opcional) Uma variável de membro usada para manter o tamanho da coluna em bytes.
 
 ## <a name="remarks"></a>Comentários

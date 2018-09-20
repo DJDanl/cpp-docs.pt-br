@@ -18,46 +18,48 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faf204f05c03e742e0f491fb3991b56d3405ebc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 05138040b6283b7af01f6e010bc371490aea495e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346175"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46440492"
 ---
 # <a name="life-cycle-of-a-dialog-box"></a>Ciclo de vida de uma caixa de diálogo
-Durante o ciclo de vida de uma caixa de diálogo, o usuário chama a caixa de diálogo, geralmente dentro de um manipulador de comando que cria e inicializa o objeto de caixa de diálogo, o usuário interage com a caixa de diálogo e fecha a caixa de diálogo.  
-  
- Para caixas de diálogo modal, o manipulador reúne todos os dados inseridos depois que a caixa de diálogo é fechada pelo usuário. Como o objeto de caixa de diálogo existe após sua janela de diálogo foi fechada, você poderá simplesmente usar as variáveis de membro da sua classe de caixa de diálogo para extrair os dados.  
-  
- Para caixas de diálogo sem janela restrita, geralmente você pode extrair dados do objeto de caixa de diálogo enquanto a caixa de diálogo ainda está visível. Em algum momento, o objeto de caixa de diálogo é destruído; Quando isso acontece, depende do seu código.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
-  
--   [Criando e exibindo caixas de diálogo](../mfc/creating-and-displaying-dialog-boxes.md)  
-  
--   [Criando caixas de diálogo modais](../mfc/creating-modal-dialog-boxes.md)  
-  
--   [Criando caixas de diálogo sem janela restrita](../mfc/creating-modeless-dialog-boxes.md)  
-  
--   [Usando um modelo de caixa de diálogo na memória](../mfc/using-a-dialog-template-in-memory.md)  
-  
--   [Definir a cor de plano de fundo da caixa de diálogo](../mfc/setting-the-dialog-boxs-background-color.md)  
-  
--   [Inicializando a caixa de diálogo](../mfc/initializing-the-dialog-box.md)  
-  
--   [Tratamento de mensagens do Windows na caixa de diálogo](../mfc/handling-windows-messages-in-your-dialog-box.md)  
-  
--   [Recuperando dados do objeto de caixa de diálogo](../mfc/retrieving-data-from-the-dialog-object.md)  
-  
--   [Fechar a caixa de diálogo](../mfc/closing-the-dialog-box.md)  
-  
--   [Destruindo a caixa de diálogo](../mfc/destroying-the-dialog-box.md)  
-  
--   [Validação (DDV) e troca de dados de caixa de diálogo (DDX)](../mfc/dialog-data-exchange-and-validation.md)  
-  
--   [Caixas de diálogo de folha de propriedade](../mfc/property-sheets-and-property-pages-mfc.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Caixas de diálogo](../mfc/dialog-boxes.md)
+
+Durante o ciclo de vida de uma caixa de diálogo, o usuário invoca a caixa de diálogo, normalmente dentro de um manipulador de comando que cria e inicializa o objeto de caixa de diálogo, o usuário interage com a caixa de diálogo e a caixa de diálogo é fechada.
+
+Para caixas de diálogo modal, seu manipulador reúne todos os dados inseridos depois que a caixa de diálogo é fechada pelo usuário. Como o objeto de caixa de diálogo existe depois que sua janela da caixa de diálogo foi fechada, você pode simplesmente usar as variáveis de membro da sua classe de caixa de diálogo para extrair os dados.
+
+Para caixas de diálogo sem janela restrita, você geralmente pode extrair dados do objeto de caixa de diálogo enquanto a caixa de diálogo ainda está visível. Em algum momento, o objeto de caixa de diálogo é destruído; Quando isso acontece depende do seu código.
+
+## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+
+- [Criando e exibindo caixas de diálogo](../mfc/creating-and-displaying-dialog-boxes.md)
+
+- [Criando caixas de diálogo modal](../mfc/creating-modal-dialog-boxes.md)
+
+- [Criando caixas de diálogo sem janela restrita](../mfc/creating-modeless-dialog-boxes.md)
+
+- [Usando um modelo de caixa de diálogo na memória](../mfc/using-a-dialog-template-in-memory.md)
+
+- [Definir a cor do plano de fundo da caixa de diálogo](../mfc/setting-the-dialog-boxs-background-color.md)
+
+- [Inicializando a caixa de diálogo](../mfc/initializing-the-dialog-box.md)
+
+- [Tratamento de mensagens do Windows na caixa de diálogo](../mfc/handling-windows-messages-in-your-dialog-box.md)
+
+- [Recuperando dados do objeto de caixa de diálogo](../mfc/retrieving-data-from-the-dialog-object.md)
+
+- [Fechar a caixa de diálogo](../mfc/closing-the-dialog-box.md)
+
+- [Destruindo a caixa de diálogo](../mfc/destroying-the-dialog-box.md)
+
+- [Troca de dados de caixa de diálogo (DDX) e a validação (DDV)](../mfc/dialog-data-exchange-and-validation.md)
+
+- [Caixas de diálogo de folha de propriedade](../mfc/property-sheets-and-property-pages-mfc.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Caixas de diálogo](../mfc/dialog-boxes.md)
 

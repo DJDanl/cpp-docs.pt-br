@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04a632e657b57519d02c013d9c03e558b9aec8e1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 60e388e18e6d3607dac1946c3fd9a511e948afd4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726616"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448370"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>Classes e Estruturas (Extensões de Componentes C++)
 
@@ -46,19 +46,19 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ### <a name="parameters"></a>Parâmetros
 
-*class_access*  
+*class_access*<br/>
 (Opcional) A acessibilidade de classe ou struct fora do assembly. Os valores possíveis são **pública** e **privada** (**privada** é o padrão). Classes aninhadas ou structs não podem ter uma *class_access* especificador.
 
-*name*  
+*name*<br/>
 O nome da classe ou struct.
 
-*Modificador*  
+*Modificador*<br/>
 (Opcional) [abstrata](../windows/abstract-cpp-component-extensions.md) e [lacrado](../windows/sealed-cpp-component-extensions.md) são os modificadores válidos.
 
-*inherit_access*  
+*inherit_access*<br/>
 (Opcional) A acessibilidade de *base_type*. É a única acessibilidade permitida **pública** (**público** é o padrão).
 
-*base_type*  
+*base_type*<br/>
 (Opcional) Um tipo base. No entanto, um tipo de valor não pode atuar como um tipo base.
 
 Para obter mais informações, consulte as descrições de idioma específico desse parâmetro em tempo de execução do Windows e Runtimesections de linguagem comum.
@@ -97,7 +97,7 @@ Ver [classes e estruturas Ref](../cppcx/ref-classes-and-structs-c-cx.md) e [clas
 
 ### <a name="parameters"></a>Parâmetros
 
-*base_type*  
+*base_type*<br/>
 (Opcional) Um tipo base. Um **classe ref** ou **ref struct** pode herdar de zero ou mais interfaces e zero ou uma **ref** tipos. Um **classe de valor** ou **struct de valor** só pode herdar de zero ou mais interfaces.
 
 Quando você declarar um objeto usando o **classe ref** ou **ref struct** palavras-chave, o objeto é acessado por um identificador para um objeto, ou seja, um ponteiro de contador de referência para o objeto. Quando a variável declarada sai do escopo, o compilador exclui automaticamente o objeto subjacente. Quando o objeto é usado como um parâmetro em uma chamada ou é armazenado em uma variável, um identificador para o objeto é passado, na verdade, ou armazenado.
@@ -116,7 +116,7 @@ A tabela a seguir lista as diferenças de sintaxe mostrada na **todos os tempos 
 
 ### <a name="parameters"></a>Parâmetros
 
-*base_type*  
+*base_type*<br/>
 (Opcional) Um tipo base. Um **classe ref** ou **ref struct** pode herdar de zero ou mais gerenciados interfaces e zero ou tipos de uma ref. Um **classe de valor** ou **struct de valor** só pode herdar de zero ou mais interfaces gerenciadas.
 
 O **classe ref** e **ref struct** palavras-chave dizer ao compilador que a classe ou estrutura deve ser alocado no heap. Quando o objeto é usado como um parâmetro em uma chamada ou é armazenado em uma variável, uma referência ao objeto é passada, na verdade, ou armazenada.

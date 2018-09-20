@@ -18,56 +18,58 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0fec32bf179424b5ec0164e4511f74eae44f7320
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9316d27637d335bc0e3a71656a5d7b9c8796ec28
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33130419"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424971"
 ---
 # <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>Como coletar eventos dos Windows Forms a partir de classes C++ nativas
-Você pode habilitar as classes C++ nativo receber retornos de chamada de gerenciado eventos gerados a partir de outros formulários com o formato de mapa de macro MFC ou controles de formulários do Windows. Recebendo eventos em exibições e caixas de diálogo é similar ao fazer a mesma tarefa para controles.  
-  
- Para fazer isso, você precisa:  
-  
--   Anexar um `OnClick` manipulador de eventos para o controle usando [MAKE_DELEGATE](../mfc/reference/delegate-and-interface-maps.md#make_delegate).  
-  
--   Criar um mapa de delegado usando [BEGIN_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map), [END_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map), e [EVENT_DELEGATE_ENTRY](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry).  
-  
- Este exemplo continua o trabalho feito em [como: fazer o associação de dados do DDX/DDV aos Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).  
-  
- Agora, você associará seu controle MFC (`m_MyControl`) com um representante do manipulador de eventos gerenciado chamado `OnClick` para gerenciada <xref:System.Windows.Forms.Control.Click> eventos.  
-  
-### <a name="to-attach-the-onclick-event-handler"></a>Para anexar o manipulador de eventos OnClick:  
-  
-1.  Adicione o seguinte código para a implementação de BOOL CMFC01Dlg::OnInitDialog:  
-  
-    ```  
-    m_MyControl.GetControl()->button1->Click += MAKE_DELEGATE( System::EventHandler, OnClick );  
-    ```  
-  
-2.  Adicione o seguinte código para a seção pública na declaração da classe CMFC01Dlg: CDialog pública.  
-  
-    ```  
-    // delegate map  
-    BEGIN_DELEGATE_MAP( CMFC01Dlg )  
-    EVENT_DELEGATE_ENTRY( OnClick, System::Object^, System::EventArgs^ )  
-    END_DELEGATE_MAP()  
-  
-    void OnClick( System::Object^ sender, System::EventArgs^ e );  
-    ```  
-  
-3.  Finalmente, adicione a implementação para `OnClick` para CMFC01Dlg.cpp:  
-  
-    ```  
-    void CMFC01Dlg::OnClick(System::Object^ sender, System::EventArgs^ e)  
-    {  
-        AfxMessageBox(_T("Button clicked"));  
-    }  
-    ```  
-  
-## <a name="see-also"></a>Consulte também  
- [MAKE_DELEGATE](../mfc/reference/delegate-and-interface-maps.md#make_delegate)   
- [BEGIN_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map)   
- [END_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map)   
- [EVENT_DELEGATE_ENTRY](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry)
+
+Você pode habilitar as classes nativas do C++ receber retornos de chamada de eventos gerenciados gerados a partir de controles dos Windows Forms ou outras formas com o formato de mapa de macro do MFC. Eventos em exibições e caixas de diálogo de coletor é similar ao fazer a mesma tarefa para controles.
+
+Para fazer isso, você precisa:
+
+- Anexar um `OnClick` manipulador de eventos para o controle usando [MAKE_DELEGATE](../mfc/reference/delegate-and-interface-maps.md#make_delegate).
+
+- Criar um mapa de delegado usando [BEGIN_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map), [END_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map), e [EVENT_DELEGATE_ENTRY](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry).
+
+Este exemplo continua o trabalho feito na [como: fazer o associação de dados do DDX/DDV com o Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
+
+Agora, você associará o controle MFC (`m_MyControl`) com um delegado de manipulador de eventos gerenciado chamado `OnClick` gerenciado <xref:System.Windows.Forms.Control.Click> eventos.
+
+### <a name="to-attach-the-onclick-event-handler"></a>Para anexar o manipulador de eventos OnClick:
+
+1. Adicione o seguinte código à implementação de BOOL CMFC01Dlg::OnInitDialog:
+
+    ```
+    m_MyControl.GetControl()->button1->Click += MAKE_DELEGATE( System::EventHandler, OnClick );
+    ```
+
+1. Adicione o seguinte código para a seção pública na declaração de classe CMFC01Dlg: CDialog público.
+
+    ```
+    // delegate map
+    BEGIN_DELEGATE_MAP( CMFC01Dlg )
+    EVENT_DELEGATE_ENTRY( OnClick, System::Object^, System::EventArgs^ )
+    END_DELEGATE_MAP()
+
+    void OnClick( System::Object^ sender, System::EventArgs^ e );
+    ```
+
+1. Por fim, adicione a implementação para `OnClick` para CMFC01Dlg.cpp:
+
+    ```
+    void CMFC01Dlg::OnClick(System::Object^ sender, System::EventArgs^ e)
+    {
+        AfxMessageBox(_T("Button clicked"));
+    }
+    ```
+
+## <a name="see-also"></a>Consulte também
+
+[MAKE_DELEGATE](../mfc/reference/delegate-and-interface-maps.md#make_delegate)<br/>
+[BEGIN_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map)<br/>
+[END_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map)<br/>
+[EVENT_DELEGATE_ENTRY](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry)

@@ -1,5 +1,5 @@
 ---
-title: Contenção de documentos ativos | Microsoft Docs
+title: Contenção de documento ativa | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,34 +18,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74ad16aa453c6fa0df2c84bd0a0a789b05f83169
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ae5ac3ab417eddd2c0038a5948487913824ef673
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332667"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433188"
 ---
 # <a name="active-document-containment"></a>Contenção de documento ativa
-Contenção de documentos ativos é uma tecnologia que fornece uma única estrutura na qual trabalhar com documentos, em vez de forçá-lo a criar e usar várias estruturas de aplicativo para cada tipo de documento. Ele difere de tecnologia OLE básica OLE funciona com objetos inseridos dentro de um documento composto no qual apenas uma única parte do conteúdo pode estar ativa. Com contenção de documentos ativos, você pode ativar um documento inteiro (isto é, um aplicativo inteiro, incluindo associados de menus, barras de ferramentas e assim por diante) dentro do contexto de uma única estrutura.  
-  
- A tecnologia de confinamento do documento ativo foi originalmente desenvolvida para o Microsoft Office implementar o Office Binder. No entanto, a tecnologia é flexível o suficiente para dar suporte a contêineres de documentos ativos que não sejam Office Binder e pode dar suporte a servidores de documentos que não sejam aplicativos do Office e compatível com o Office.  
-  
- O aplicativo que hospeda documentos ativos é chamado um [contêiner de documento ativo](../mfc/active-document-containers.md). Exemplos de tais contêineres são o Microsoft Office Binder ou Microsoft Internet Explorer.  
-  
- Contenção de documentos ativos é implementada como um conjunto de extensões para OLE documentos, a tecnologia de documento composto de OLE. As extensões são interfaces adicionais que permitem que um objeto pode ser incorporado no local representar um documento inteiro em vez de uma única parte do conteúdo incorporado. Assim como acontece com documentos OLE, a contenção de documentos ativos usa um contêiner que fornece o espaço de exibição de documentos ativos e servidores que fornecem o usuário funcionalidades de interface e manipulação para os próprios documentos ativos.  
-  
- Um [server documento ativo](../mfc/active-document-servers.md) é um aplicativo (como Word, Excel ou PowerPoint) que dá suporte a uma ou mais classes de documento ativo, onde cada objeto em si é compatível com as interfaces de extensão que permitem que o objeto a ser ativado em um contêiner adequado.  
-  
- Um [documento ativo](../mfc/active-documents.md) (fornecido de um servidor do documento ativo como o Word ou Excel) é essencialmente um documento de escala, convencional que será inserido como um objeto em outro contêiner de documento ativo. Ao contrário de objetos inseridos, documentos ativos tem total controle sobre suas páginas e a interface completa do aplicativo (com todas as suas subjacente comandos e ferramentas) está disponível para o usuário para editá-los.  
-  
- Um documento ativo é melhor entendido pelo diferenciá-lo de um objeto inserido OLE padrão. A seguir a convenção OLE, um objeto inserido é aquele que é exibido dentro da página do documento que ele pertence e o documento é gerenciado por um contêiner OLE. O contêiner armazena os dados do objeto inserido com o restante do documento. No entanto, objetos inseridos são limitados em que eles não controlam a página em que aparecem.  
-  
- Os usuários de um aplicativo de contêiner do documento ativo podem criar documentos ativos (chamados de seções no Office Binder) usando seus aplicativos favoritos (desde que esses aplicativos são documento ativo habilitado), mas os usuários podem gerenciar o projeto resultante como um entidade única, que pode ser exclusivamente nomeada, salvo, impressos, e assim por diante. Da mesma forma, um usuário de um navegador da Internet pode tratar toda a rede, bem como os sistemas de arquivos local, como uma entidade de armazenamento único documento com a capacidade de procurar documentos que o armazenamento de um único local.  
-  
-## <a name="sample-programs"></a>Programas de exemplo  
-  
--   O [MFCBIND](../visual-cpp-samples.md) exemplo ilustra a implementação de um aplicativo de contêiner do documento ativo.  
-  
-## <a name="see-also"></a>Consulte também  
- [MFC COM](../mfc/mfc-com.md)
+
+Contenção de documento ativa é uma tecnologia que fornece um único quadro no qual trabalhar com documentos, em vez de forçá-lo a criar e usar várias estruturas de aplicativo para cada tipo de documento. Ele difere de tecnologia básica do OLE OLE funciona com objetos inseridos dentro de um documento composto no qual apenas uma única parte do conteúdo pode estar ativa. Com confinamento do documento ativo, você pode ativar um documento inteiro (ou seja, um aplicativo inteiro, incluindo o associado de menus, barras de ferramentas e assim por diante) dentro do contexto de um único quadro.
+
+A tecnologia de confinamento do documento ativo foi originalmente desenvolvida para o Microsoft Office implementar o Office Binder. No entanto, a tecnologia é flexível o suficiente para dar suporte a contêineres de documento ativo além do Office Binder e pode dar suporte a servidores de documentos que não sejam aplicativos do Office e compatível com o Office.
+
+O aplicativo que hospeda documentos ativos é chamado de um [contêiner de documento ativo](../mfc/active-document-containers.md). Exemplos de tais contêineres são o Microsoft Office Binder ou o Microsoft Internet Explorer.
+
+Contenção de documento ativa é implementada como um conjunto de extensões para OLE documentos, a tecnologia de documento composto de OLE. As extensões são interfaces adicionais que permitem que um objeto pode ser incorporado, no local representar um documento inteiro em vez de uma única parte do conteúdo incorporado. Assim como acontece com documentos OLE, confinamento do documento ativo usa um contêiner que fornece o espaço de exibição de documentos ativos e servidores que fornecem recursos de interface e a manipulação do usuário para os próprios documentos Active Directory.
+
+Uma [servidor de documento ativo](../mfc/active-document-servers.md) é um aplicativo (como Word, Excel ou PowerPoint) que dá suporte a uma ou mais classes de documento ativo, onde cada objeto em si oferece suporte as interfaces de extensão que permitem que o objeto a ser ativado em um contêiner adequado.
+
+Uma [documento ativo](../mfc/active-documents.md) (fornecido de um servidor de documento ativo como o Word ou Excel) é, essencialmente, um documento de grande escala, convencional que é inserido como um objeto dentro de outro contêiner de documento ativo. Ao contrário de objetos inseridos, documentos ativos têm controle completo sobre suas páginas e a interface completa do aplicativo (com todos os seus subjacente comandos e ferramentas) está disponível para o usuário para editá-los.
+
+Um documento ativo é mais bem entendido por fazer a distinção de um objeto inserido do OLE padrão. Seguir a convenção do OLE, um objeto inserido é aquele que é exibido dentro da página do documento que ele pertence e o documento é gerenciado por um contêiner OLE. O contêiner armazena os dados do objeto inserido com o restante do documento. No entanto, objetos incorporados são limitados em que eles não controlam a página na qual elas aparecem.
+
+Os usuários de um aplicativo de contêiner do documento ativo podem criar documentos ativos (chamados de seções no Office Binder) usando seus aplicativos favoritos (desde que esses aplicativos são habilitado de documento ativo), mas os usuários podem gerenciar o projeto resultante como um entidade única, que pode ser um nome exclusivo, salva, impresso, e assim por diante. Da mesma forma, um usuário de um navegador da Internet pode tratar a toda a rede, bem como sistemas de arquivos locais, como uma entidade de armazenamento único documento com a capacidade de procurar os documentos em que o armazenamento em um único local.
+
+## <a name="sample-programs"></a>Programas de exemplo
+
+- O [MFCBIND](../visual-cpp-samples.md) exemplo ilustra a implementação de um aplicativo de contêiner do documento ativo.
+
+## <a name="see-also"></a>Consulte também
+
+[MFC COM](../mfc/mfc-com.md)
 
