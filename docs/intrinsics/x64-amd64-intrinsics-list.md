@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eedbc29b5012c3a4355178d0fbd83aad81e9cb95
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 006b6ce67182b698a1f6d0bb5d87d8165fba9cde
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680406"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406861"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>Lista de intrínsecos x64 (amd64)
 
@@ -1282,6 +1282,6 @@ A tabela a seguir lista os intrínsecos disponíveis em x64 processadores. A col
 
 ## <a name="see-also"></a>Consulte também
 
-[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)  
-[Intrínsecos do ARM](../intrinsics/arm-intrinsics.md)  
-[x86 intrínsecos](../intrinsics/x86-intrinsics-list.md)    
+[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
+[Intrínsecos do ARM](../intrinsics/arm-intrinsics.md)<br/>
+[x86 intrínsecos](../intrinsics/x86-intrinsics-list.md)

@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 280c008bf6d0f82149b382da2ca6e3d20cb28846
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 524e5dd86560afd660ebb2352b1c92111ddd72d5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380299"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442000"
 ---
 # <a name="tn044-mfc-support-for-dbcs"></a>TN044: suporte do MFC para DBCS
-Essa observação técnica descrita o suporte do MFC para "conjuntos de caracteres de byte duplo" ou DBCS. Esta informações bem como informações sobre do MFC suporte para UNICODE agora está disponível na *referência da biblioteca de classe*.  
-  
-## <a name="see-also"></a>Consulte também  
- [Observações técnicas por número](../mfc/technical-notes-by-number.md)   
- [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
+
+Essa observação técnica descrita o suporte do MFC para "conjuntos de caracteres de byte duplo" ou DBCS. Essa informações como informações sobre do MFC há suporte para UNICODE agora disponível na *referência da biblioteca de classe*.
+
+## <a name="see-also"></a>Consulte também
+
+[Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
+[Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
 

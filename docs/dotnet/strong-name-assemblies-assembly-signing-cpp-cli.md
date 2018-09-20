@@ -1,5 +1,5 @@
 ---
-title: Assemblies de nome forte (assinatura de Assembly) (C + + CLI) | Microsoft Docs
+title: Assemblies de nome forte (assinatura de Assembly) (C + + / CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,40 +20,43 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5d7ae911d2572a35ee8dbb21d5484b4679b64c4d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75b7df96b9366680b69d40dea866fb3067a507b7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169186"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430898"
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>Assemblies de nome forte (assinatura de assembly) (C++/CLI)
-Este tópico discute como você pode assinar o assembly, conhecida como fornecendo o seu assembly um nome forte.  
-  
-## <a name="remarks"></a>Comentários  
- Ao usar o Visual C++, use opções do vinculador para assinar seu assembly para evitar problemas relacionados aos atributos CLR para a assinatura de assembly:  
-  
--   <xref:System.Reflection.AssemblyDelaySignAttribute>  
-  
--   <xref:System.Reflection.AssemblyKeyFileAttribute>  
-  
--   <xref:System.Reflection.AssemblyKeyNameAttribute>  
-  
- Motivos para não usar os atributos incluem o fato de que o nome da chave está visível nos metadados do assembly, que podem ser um risco à segurança se o nome do arquivo contém informações confidenciais. Além disso, o processo de compilação usado pelo ambiente de desenvolvimento do Visual C++ invalida a chave com a qual o assembly é assinado se você usa atributos CLR para dar um nome forte de um assembly e, em seguida, executar uma ferramenta de pós-processamento como mt.exe no assembly.  
-  
- Se você compilar na linha de comando, use as opções do vinculador para assinar seu assembly e, em seguida, executar uma ferramenta de pós-processamento (como mt.exe), você precisará assinar novamente o assembly com sn.exe. Como alternativa, você pode criar e atrasar a assinatura de assembly e depois de executar ferramentas de pós-processamento, concluir a assinatura.  
-  
- Se você usar os atributos de assinatura ao compilar no ambiente de desenvolvimento, você pode assinar o assembly com êxito ao chamar explicitamente sn.exe ([Sn.exe (ferramenta de nome forte)](/dotnet/framework/tools/sn-exe-strong-name-tool)) em um evento de pós-compilação. Para obter mais informações, consulte [especificando eventos de Build](../ide/specifying-build-events.md). Tempos de compilação podem ser menor se você usar atributos e um evento de pós-compilação, comparado a usar as opções do vinculador.  
-  
- As seguintes opções do vinculador dão suporte a assinatura de assembly:  
-  
--   [/DELAYSIGN (assinar parcialmente um assembly)](../build/reference/delaysign-partially-sign-an-assembly.md)  
-  
--   [/KEYFILE (especificar chave ou par de chaves para assinar um assembly)](../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
-  
--   [/KEYCONTAINER (especificar um contêiner de chave para assinar um assembly)](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
-  
- Para obter mais informações sobre conjuntos de alta segurança, consulte [Creating and Using Strong-Named Assemblies](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies).  
-  
-## <a name="see-also"></a>Consulte também  
- [Programação do .NET com C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+
+Este tópico discute como você pode assinar o assembly, também conhecido como dando seu assembly um nome forte.
+
+## <a name="remarks"></a>Comentários
+
+Ao usar o Visual C++, use as opções do vinculador para assinar seu assembly para evitar problemas relacionados aos atributos CLR para a assinatura do assembly:
+
+- <xref:System.Reflection.AssemblyDelaySignAttribute>
+
+- <xref:System.Reflection.AssemblyKeyFileAttribute>
+
+- <xref:System.Reflection.AssemblyKeyNameAttribute>
+
+Motivos para não usar os atributos incluem o fato de que o nome da chave é visível nos metadados do assembly, que podem ser um risco à segurança se o nome do arquivo contém informações confidenciais. Além disso, o processo de compilação usado pelo ambiente de desenvolvimento do Visual C++ invalida a chave com a qual o assembly é assinado se você usa atributos CLR para dar um nome forte de um assembly e, em seguida, execute uma ferramenta de pós-processamento como mt.exe no assembly.
+
+Se você compilar na linha de comando, use as opções do vinculador para assinar seu assembly e, em seguida, execute uma ferramenta de pós-processamento (como mt.exe), você precisará assinar novamente o assembly com sn.exe. Como alternativa, é possível criar e atrasar a assinatura de assembly e depois de executar as ferramentas de pós-processamento, concluir a assinatura.
+
+Se você usar os atributos de assinatura ao compilar no ambiente de desenvolvimento, você pode entrar com êxito o assembly explicitamente chamando sn.exe ([Sn.exe (ferramenta de nome forte)](/dotnet/framework/tools/sn-exe-strong-name-tool)) em um evento de pós-compilação. Para obter mais informações, confira [Especificando eventos de build](../ide/specifying-build-events.md). Tempos de compilação podem ser menor, se você usar um evento de pós-compilação, em comparação ao uso de um opções do vinculador e de atributos.
+
+As seguintes opções do vinculador dão suporte a assinatura do assembly:
+
+- [/DELAYSIGN (assinar parcialmente um assembly)](../build/reference/delaysign-partially-sign-an-assembly.md)
+
+- [/KEYFILE (especificar chave ou par de chaves para assinar um assembly)](../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
+
+- [/KEYCONTAINER (especificar um contêiner de chave para assinar um assembly)](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)
+
+Para obter mais informações sobre conjuntos de alta segurança, consulte [criando e usando Assemblies nomes fortes](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies).
+
+## <a name="see-also"></a>Consulte também
+
+[Programação do .NET com C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -23,59 +23,63 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90f325df3825b3546616ce145d4477322a1b4eed
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 23ab29a219899f2c40e1b5c4a458d35f97cf49a7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36956288"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434408"
 ---
 # <a name="toolbar-tool-tips"></a>Dicas de ferramenta da barra de ferramentas
-Dicas de ferramenta são as janelas de pop-up pequeno que apresentam breves descrições de finalidade de um botão barra de ferramentas quando você posiciona o mouse sobre um botão para um período de tempo. Quando você cria um aplicativo com o Assistente de aplicativo que tem uma barra de ferramentas, suporte de dica de ferramenta é fornecido para você. Este artigo explica as duas o suporte de dica ferramenta criado pelo Assistente do aplicativo e como adicionar suporte de dica de ferramenta para seu aplicativo.  
-  
- Este artigo aborda:  
-  
--   [Ativar dicas de ferramenta](#_core_activating_tool_tips)  
-  
--   [Atualizações da barra de status flyby](#_core_fly_by_status_bar_updates)  
-  
-##  <a name="_core_activating_tool_tips"></a> Ativar dicas de ferramenta  
- Para ativar dicas de ferramenta em seu aplicativo, você deve fazer duas coisas:  
-  
--   Adicionar o estilo CBRS_TOOLTIPS nos outros estilos (como WS_CHILD, WS_VISIBLE e outros **CBRS_** estilos) passado como o *dwStyle* parâmetro para o [CToolBar::Create](../mfc/reference/ctoolbar-class.md#create) função ou no [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).  
-  
--   Conforme descrito no procedimento a seguir, acrescente o texto da dica de ferramentas, separado por um caractere de nova linha ("\n"), para o recurso de cadeia de caracteres que contém o prompt de linha de comando para o comando da barra de ferramentas. O recurso de cadeia de caracteres compartilha a ID do botão da barra de ferramentas.  
-  
-#### <a name="to-add-the-tool-tip-text"></a>Para adicionar o texto da dica de ferramenta  
-  
-1.  Enquanto você estiver editando a barra de ferramentas do editor de barra de ferramentas, abra o **propriedades de botão da barra de ferramentas** janela para um determinado botão.  
-  
-2.  No **Prompt** , especifique o texto a ser exibido na dica de ferramenta para esse botão.  
-  
+
+Dicas de ferramenta são as janelas de pop-up pequeno que apresentam breves descrições sobre a finalidade de um botão barra de ferramentas quando você posiciona o mouse sobre um botão para um período de tempo. Quando você cria um aplicativo com o Assistente de aplicativo que tem uma barra de ferramentas, suporte à dica de ferramenta é fornecido para você. Este artigo explica os dois o suporte de dica ferramenta criado pelo Assistente de aplicativo e como adicionar suporte à dica de ferramenta para seu aplicativo.
+
+Este artigo aborda:
+
+- [Ativar dicas de ferramenta](#_core_activating_tool_tips)
+
+- [Atualizações da barra de status flyby](#_core_fly_by_status_bar_updates)
+
+##  <a name="_core_activating_tool_tips"></a> Ativar dicas de ferramenta
+
+Para ativar dicas de ferramenta em seu aplicativo, você deve fazer duas coisas:
+
+- Adicionar o estilo CBRS_TOOLTIPS outros estilos (como WS_CHILD, WS_VISIBLE e outras **CBRS_** estilos) passado como o *dwStyle* parâmetro para o [CToolBar::Create](../mfc/reference/ctoolbar-class.md#create) função ou no [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).
+
+- Conforme descrito no procedimento a seguir, acrescente o texto da dica de ferramentas, separado por um caractere de nova linha ('\n'), para o recurso de cadeia de caracteres que contém o prompt de linha de comando para o comando da barra de ferramentas. O recurso de cadeia de caracteres compartilha a ID do botão de barra de ferramentas.
+
+#### <a name="to-add-the-tool-tip-text"></a>Para adicionar o texto da dica de ferramenta
+
+1. Enquanto você estiver editando a barra de ferramentas no editor de barra de ferramentas, abra o **propriedades do botão de barra de ferramentas** janela para um botão especificado.
+
+1. No **Prompt** , especifique o texto que você deseja que apareça na dica de ferramenta para esse botão.
+
 > [!NOTE]
->  Configurar o texto como uma propriedade do botão no editor de barra de ferramentas substitui o procedimento anterior, era necessário abrir e editar o recurso de cadeia de caracteres.  
-  
- Se uma barra de controle com dicas de ferramenta habilitado tem controles filho em, a barra de controle exibirá uma dica de ferramenta para cada controle filho na barra de controle, desde que ele atenda aos seguintes critérios:  
-  
--   A ID do controle é não - 1.  
-  
--   A entrada da tabela de cadeia de caracteres com a mesma ID que o controle filho no arquivo de recurso tem uma cadeia de caracteres de dica de ferramenta.  
-  
-##  <a name="_core_fly_by_status_bar_updates"></a> Atualizações da barra de Status flyby  
- Um recurso relacionado a dicas de ferramenta é a barra de atualização de status de "flyby". Por padrão, a mensagem na barra de status descreve apenas um botão de barra de ferramentas específica quando o botão estiver ativado. Incluindo CBRS_FLYBY em sua lista de estilos passado para `CToolBar::Create`, você pode ter essas mensagens atualizadas quando o cursor do mouse passa sobre a barra de ferramentas sem realmente ativar o botão.  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
-  
--   [Implementação de barra de ferramentas MFC (informações de visão geral das barras de ferramentas)](../mfc/mfc-toolbar-implementation.md)  
-  
--   [Encaixando e flutuando barras de ferramentas](../mfc/docking-and-floating-toolbars.md)  
-  
--   O [CToolBar](../mfc/reference/ctoolbar-class.md) e [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) classes  
-  
--   [Trabalhando com o controle de barra de ferramentas](../mfc/working-with-the-toolbar-control.md)  
-  
--   [Usando as barras de ferramentas antigas](../mfc/using-your-old-toolbars.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Implementação da barra de ferramentas do MFC](../mfc/mfc-toolbar-implementation.md)
+>  Definindo o texto como uma propriedade de botão no editor de barra de ferramentas substitui o procedimento anterior, era necessário abrir e editar o recurso de cadeia de caracteres.
+
+Se uma barra de controle com dicas de ferramenta habilitado tem controles filho colocados nele, a barra de controle exibirá uma dica de ferramenta para cada controle filho na barra de controle, desde que ele atende aos seguintes critérios:
+
+- A ID do controle é não - 1.
+
+- A entrada da tabela de cadeia de caracteres com a mesma ID que o controle filho no arquivo de recurso tem uma cadeia de caracteres de dica de ferramenta.
+
+##  <a name="_core_fly_by_status_bar_updates"></a> Atualizações da barra de Status flyby
+
+Um recurso relacionado a dicas de ferramenta é a barra de atualização de status de "flyby". Por padrão, a mensagem na barra de status descreve apenas um botão de barra de ferramentas específica quando o botão é ativado. Incluindo CBRS_FLYBY na sua lista de estilos passado para `CToolBar::Create`, você pode ter essas mensagens atualizadas quando o cursor do mouse passa sobre a barra de ferramentas sem, na verdade, ativar o botão.
+
+### <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+
+- [Implementação de barra de ferramentas MFC (informações de visão geral das barras de ferramentas)](../mfc/mfc-toolbar-implementation.md)
+
+- [Encaixando e flutuando barras de ferramentas](../mfc/docking-and-floating-toolbars.md)
+
+- O [CToolBar](../mfc/reference/ctoolbar-class.md) e [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) classes
+
+- [Trabalhando com o controle de barra de ferramentas](../mfc/working-with-the-toolbar-control.md)
+
+- [Usando as barras](../mfc/using-your-old-toolbars.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Implementação da barra de ferramentas do MFC](../mfc/mfc-toolbar-implementation.md)
 

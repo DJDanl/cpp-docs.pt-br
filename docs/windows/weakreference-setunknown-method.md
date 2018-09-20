@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f127b8435f934e5cf203de2aaa6f2d0c3a58d13
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6fc7accbad5633bd57d7fceb16f82edb82d80f4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603064"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422487"
 ---
 # <a name="weakreferencesetunknown-method"></a>Método WeakReference::SetUnknown
 
@@ -38,7 +38,7 @@ void SetUnknown(
 
 ### <a name="parameters"></a>Parâmetros
 
-*UNK*  
+*UNK*<br/>
 Um ponteiro para o `IUnknown` interface de um objeto.
 
 ## <a name="remarks"></a>Comentários
@@ -53,5 +53,5 @@ Define a referência forte do atual **WeakReference** objeto para o ponteiro de 
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe WeakReference](../windows/weakreference-class1.md)  
+[Classe WeakReference](../windows/weakreference-class1.md)<br/>
 [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

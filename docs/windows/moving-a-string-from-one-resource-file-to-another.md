@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c99b5640d2ea855ade7f3f39ba233b3e5ff2ef04
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: f1fbe498c5c255ec95772c9e75b6ce588ae4a4c3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318857"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401973"
 ---
 # <a name="moving-a-string-from-one-resource-file-to-another-c"></a>Movendo uma cadeia de caracteres de um arquivo de recurso para outro (C++)
 
@@ -51,6 +51,6 @@ Win32
 
 ## <a name="see-also"></a>Consulte também
 
-[Editor de cadeias de caracteres](../windows/string-editor.md)  
-[Arquivos de recurso](../windows/resource-files-visual-studio.md)  
+[Editor de cadeias de caracteres](../windows/string-editor.md)<br/>
+[Arquivos de recurso](../windows/resource-files-visual-studio.md)<br/>
 [Personalizando layouts de janela](/visualstudio/ide/customizing-window-layouts-in-visual-studio)  

@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2e9e13f7b5838cb13497dd874f7f0cf42f34e98
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6ec12275291321751c539d095c60fa9dabffa2b7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200140"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445172"
 ---
 # <a name="cpropertysheet-class"></a>Classe CPropertySheet
 
@@ -181,7 +181,7 @@ void AddPage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Página*  
+*Página*<br/>
 Aponta para a página a ser adicionado à folha de propriedades. Não pode ser NULL.
 
 ### <a name="remarks"></a>Comentários
@@ -237,25 +237,25 @@ void Construct(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nIDCaption*  
+*nIDCaption*<br/>
 ID da legenda a ser usado para a folha de propriedades.
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Ponteiro para a janela pai da folha de propriedades. Se for NULL, a janela pai será a janela principal do aplicativo.
 
-*iSelectPage*  
+*iSelectPage*<br/>
 O índice da página que será inicialmente na parte superior. O padrão é a primeira página adicionada à folha.
 
-*pszCaption*  
+*pszCaption*<br/>
 Ponteiro para uma cadeia de caracteres que contém a legenda a ser usado para a folha de propriedades. Não pode ser NULL.
 
-*hbmWatermark*  
+*hbmWatermark*<br/>
 Identificador para o bitmap de marca d'água da página de propriedades.
 
-*hpalWatermark*  
+*hpalWatermark*<br/>
 Identificador para a paleta do bitmap de marca d'água e/ou o bitmap de cabeçalho.
 
-*hbmHeader*  
+*hbmHeader*<br/>
 Identificador para o bitmap de cabeçalho da página de propriedades.
 
 ### <a name="remarks"></a>Comentários
@@ -312,25 +312,25 @@ CPropertySheet(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nIDCaption*  
+*nIDCaption*<br/>
 ID da legenda a ser usado para a folha de propriedades.
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Aponta para a janela pai da folha de propriedades. Se for NULL, a janela pai será a janela principal do aplicativo.
 
-*iSelectPage*  
+*iSelectPage*<br/>
 O índice da página que será inicialmente na parte superior. O padrão é a primeira página adicionada à folha.
 
-*pszCaption*  
+*pszCaption*<br/>
 Aponta para uma cadeia de caracteres que contém a legenda a ser usado para a folha de propriedades. Não pode ser NULL.
 
-*hbmWatermark*  
+*hbmWatermark*<br/>
 Um identificador para o bitmap do plano de fundo da folha de propriedades.
 
-*hpalWatermark*  
+*hpalWatermark*<br/>
 Um identificador para a paleta do bitmap de marca d'água e/ou o bitmap de cabeçalho.
 
-*hbmHeader*  
+*hbmHeader*<br/>
 Um identificador para o bitmap de cabeçalho da página de propriedades.
 
 ### <a name="remarks"></a>Comentários
@@ -357,13 +357,13 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 
 ### <a name="parameters"></a>Parâmetros
 
-*pParentWnd*  
+*pParentWnd*<br/>
 Aponta para a janela pai. Se for NULL, o pai é a área de trabalho.
 
-*dwStyle*  
+*dwStyle*<br/>
 Estilos de janela para a folha de propriedades. Para obter uma lista completa de estilos disponíveis, consulte [estilos de janela](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*dwExStyle*  
+*dwExStyle*<br/>
 Estilos de janela estendidos para a folha de propriedades. Para obter uma lista completa de estilos disponíveis, consulte [estilos de janela estendidos](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
 
 ### <a name="return-value"></a>Valor de retorno
@@ -445,7 +445,7 @@ void EnableStackedTabs(BOOL bStacked);
 
 ### <a name="parameters"></a>Parâmetros
 
-*bStacked*  
+*bStacked*<br/>
 Indica se as guias empilhadas estão habilitadas na folha de propriedades. Desabilitar linhas empilhadas de marcas, definindo *bStacked* como FALSE.
 
 ### <a name="remarks"></a>Comentários
@@ -468,7 +468,7 @@ void EndDialog(int nEndID);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nEndID*  
+*nEndID*<br/>
 Identificador a ser usado como valor de retorno da folha de propriedades.
 
 ### <a name="remarks"></a>Comentários
@@ -527,7 +527,7 @@ CPropertyPage* GetPage(int nPage) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*nPage*  
+*nPage*<br/>
 Índice da página desejada, começando em 0. Deve ser entre 0 e menor que o número de páginas na folha de propriedades, inclusive.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -564,7 +564,7 @@ int GetPageIndex(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Página*  
+*Página*<br/>
 Aponta para a página com o índice a ser localizada. Não pode ser NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -623,7 +623,7 @@ void MapDialogRect(LPRECT lpRect) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpRect*  
+*lpRect*<br/>
 Aponta para um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estrutura ou [CRect](../../atl-mfc-shared/reference/crect-class.md) coordenadas do objeto que contém a caixa de diálogo a ser convertido.
 
 ### <a name="remarks"></a>Comentários
@@ -664,7 +664,7 @@ void PressButton(int nButton);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nButton*  
+*nButton*<br/>
 nButton: identifica o botão seja pressionado. Esse parâmetro pode ser um dos seguintes valores:
 
 - PSBTN_BACK escolhe o botão Voltar.
@@ -702,10 +702,10 @@ void RemovePage(int nPage);
 
 ### <a name="parameters"></a>Parâmetros
 
-*Página*  
+*Página*<br/>
 Aponta para a página a ser removido da folha de propriedades. Não pode ser NULL.
 
-*nPage*  
+*nPage*<br/>
 Índice da página a ser removido. Deve ser entre 0 e menor que o número de páginas na folha de propriedades, inclusive.
 
 ### <a name="remarks"></a>Comentários
@@ -723,10 +723,10 @@ BOOL SetActivePage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nPage*  
+*nPage*<br/>
 Índice da página para definir. Ele deve estar entre 0 e um a menos que o número de páginas na folha de propriedades, inclusive.
 
-*Página*  
+*Página*<br/>
 Aponta para a página para definir na folha de propriedades. Ele não pode ser NULL.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -751,7 +751,7 @@ void SetFinishText(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpszText*  
+*lpszText*<br/>
 Aponta para o texto a ser exibido no botão de comando concluir.
 
 ### <a name="remarks"></a>Comentários
@@ -774,10 +774,10 @@ void SetTitle(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nStyle*  
+*nStyle*<br/>
 Especifica o estilo do título da folha de propriedade. O estilo deve ser especificado em 0 ou como PSH_PROPTITLE. Se o estilo é definido como PSH_PROPTITLE, a palavra "Propriedades" será exibida após o texto especificado como a legenda. Por exemplo, chamar `SetTitle`("Simples", PSH_PROPTITLE) resultará em uma legenda de folha de propriedade de "Propriedades simples".
 
-*lpszText*  
+*lpszText*<br/>
 Aponta para o texto a ser usado como a legenda na barra de título da folha de propriedades.
 
 ### <a name="remarks"></a>Comentários
@@ -798,7 +798,7 @@ void SetWizardButtons(DWORD dwFlags);
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwFlags*  
+*dwFlags*<br/>
 Um conjunto de sinalizadores que personalizam a função e a aparência dos botões do assistente. Esse parâmetro pode ser uma combinação dos seguintes valores:
 
 - Botão Voltar PSWIZB_BACK
@@ -847,9 +847,9 @@ Chame `SetWizardMode` antes de chamar [DoModal](#domodal). Depois de chamar `Set
 
 ## <a name="see-also"></a>Consulte também
 
-[CMNCTRL1 de exemplo do MFC](../../visual-cpp-samples.md)  
-[CMNCTRL2 de exemplo do MFC](../../visual-cpp-samples.md)  
-[Exemplo MFC PROPDLG](../../visual-cpp-samples.md)  
-[Exemplo MFC SNAPVW](../../visual-cpp-samples.md)  
-[Classe CWnd](../../mfc/reference/cwnd-class.md)  
-[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)  
+[CMNCTRL1 de exemplo do MFC](../../visual-cpp-samples.md)<br/>
+[CMNCTRL2 de exemplo do MFC](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC PROPDLG](../../visual-cpp-samples.md)<br/>
+[Exemplo MFC SNAPVW](../../visual-cpp-samples.md)<br/>
+[Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
+[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a4721cec6ebc11cf2107afe0048da90164c0f47f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 31bb19a0854bd28573d474a65781808eaecd7ce2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315555"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407556"
 ---
 # <a name="specifying-the-dominant-control"></a>Especificando o controle dominante
 
@@ -48,6 +48,6 @@ Win32
 
 ## <a name="see-also"></a>Consulte também
 
-[Selecionando vários controles](../windows/selecting-multiple-controls.md)  
-[Selecionando controles](../windows/selecting-controls.md)  
+[Selecionando vários controles](../windows/selecting-multiple-controls.md)<br/>
+[Selecionando controles](../windows/selecting-controls.md)<br/>
 [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)
