@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 47b8837cafaab2501e201a747fd9463e1e00639e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ff816e1cb6706847caceecebeffd13a210b3e94d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42580963"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403821"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Preenchendo uma área limitada de uma imagem com uma cor (editor de imagens para ícones)
 
@@ -50,5 +50,5 @@ Nenhum
 
 ## <a name="see-also"></a>Consulte também
 
-[Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Trabalhando com cor](../windows/working-with-color-image-editor-for-icons.md)

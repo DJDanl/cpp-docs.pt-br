@@ -20,24 +20,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e88a26c96564a75a41f221302169dd1f1e46e9e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3883a28e58e023630955cc1385e2a9c2db460fb2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367166"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447889"
 ---
 # <a name="child-window-notification-message-handlers"></a>Manipuladores de mensagens de notificação de janela filho
-Existem cinco categorias de mensagens de notificação de janela filho:  
-  
-|Categoria|Descrição|  
-|--------------|-----------------|  
-|[Manipulador de controle genérico](../../mfc/reference/generic-control-handler.md)|Manipulador de códigos de notificação de controle genérico.|  
-|[Manipuladores de botão do usuário](../../mfc/reference/user-button-handlers.md)|Manipuladores para códigos de notificação de botão do usuário.|  
-|[Manipuladores da caixa de combinação](../../mfc/reference/combo-box-handlers.md)|Manipuladores para códigos de notificação de caixa de combinação.|  
-|[Manipuladores do controle de edição](../../mfc/reference/edit-control-handlers.md)|Manipuladores para editar os códigos de notificação do controle.|  
-|[Manipuladores de caixa de listagem](../../mfc/reference/list-box-handlers.md)|Manipuladores para códigos de notificação de caixa de lista.|  
-  
-## <a name="see-also"></a>Consulte também  
- [Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)
+
+Há cinco categorias de mensagens de notificação de janela filho:
+
+|Categoria|Descrição|
+|--------------|-----------------|
+|[Manipulador de controle genérico](../../mfc/reference/generic-control-handler.md)|Manipulador para códigos de controle genérico de notificação.|
+|[Manipuladores de botão do usuário](../../mfc/reference/user-button-handlers.md)|Manipuladores para códigos de notificação de botão do usuário.|
+|[Manipuladores da caixa de combinação](../../mfc/reference/combo-box-handlers.md)|Manipuladores para códigos de notificação de caixa de combinação.|
+|[Manipuladores do controle de edição](../../mfc/reference/edit-control-handlers.md)|Manipuladores para códigos de notificação do controle de edição.|
+|[Manipuladores de caixa de listagem](../../mfc/reference/list-box-handlers.md)|Manipuladores para códigos de notificação de caixa de lista.|
+
+## <a name="see-also"></a>Consulte também
+
+[Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)
 

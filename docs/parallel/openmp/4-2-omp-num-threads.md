@@ -12,30 +12,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6b4208d7fe7d453dd1f701d820a85fce5cd68ba
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 9996a09661d962eb5e936fdb484c9dd534e46904
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687641"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445185"
 ---
 # <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
-O **OMP_NUM_THREADS** variável de ambiente define o número padrão de threads a serem usados durante a execução, a menos que esse número seja explicitamente alterado chamando o **omp_set_num_threads** rotina de biblioteca ou por explícito **num_threads** cláusula em uma **paralela** diretiva.  
-  
- O valor de **OMP_NUM_THREADS** variável de ambiente deve ser um inteiro positivo. Seu efeito depende se o ajuste dinâmico do número de threads está habilitado. Para um conjunto abrangente de regras sobre a interação entre o **OMP_NUM_THREADS** ambiente ajuste dinâmico e variável de threads, consulte a seção 2.3 na página 8.  
-  
- Se nenhum valor for especificado para o **OMP_NUM_THREADS** variável de ambiente, ou se o valor especificado não é um inteiro positivo, ou se o valor for maior que o número máximo de threads do sistema pode oferecer suporte, o número de threads a ser usado é definido pela implementação.  
-  
- Exemplo:  
-  
-```  
-setenv OMP_NUM_THREADS 16  
-```  
-  
-## <a name="cross-references"></a>Entre referências:  
-  
--   **num_threads** cláusula, consulte [seção 2.3](../../parallel/openmp/2-3-parallel-construct.md) na página de 8.  
-  
--   **omp_set_num_threads** funcionam, consulte [seção 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) na página 36.  
-  
--   **omp_set_dynamic** funcionam, consulte [seção 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) na página 39.
+
+O **OMP_NUM_THREADS** variável de ambiente define o número padrão de threads a serem usados durante a execução, a menos que esse número seja explicitamente alterado por meio da chamada a **omp_set_num_threads** rotina de biblioteca ou por um explícito **num_threads** cláusula em uma **paralela** diretiva.
+
+O valor de **OMP_NUM_THREADS** variável de ambiente deve ser um inteiro positivo. Seu efeito depende se o ajuste dinâmico do número de threads está habilitado. Para um conjunto abrangente de regras sobre a interação entre o **OMP_NUM_THREADS** ambiente ajuste dinâmico e variável de threads, consulte a seção 2.3 na página de 8.
+
+Se nenhum valor for especificado para o **OMP_NUM_THREADS** variável de ambiente, ou se o valor especificado não é um inteiro positivo, ou se o valor for maior que o número máximo de threads do sistema pode dar suporte, o número de threads a serem usados é definido pela implementação.
+
+Exemplo:
+
+```
+setenv OMP_NUM_THREADS 16
+```
+
+## <a name="cross-references"></a>Entre as referências:
+
+- **num_threads** cláusula, consulte [seção 2.3](../../parallel/openmp/2-3-parallel-construct.md) na página de 8.
+
+- **omp_set_num_threads** , consulte [seção 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) na página de 36.
+
+- **omp_set_dynamic** , consulte [seção 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) na página 39.

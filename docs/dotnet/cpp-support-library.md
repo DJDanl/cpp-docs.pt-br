@@ -17,23 +17,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d76705bded43b3b8686a8fe32736fb17dc02cca2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f1bae6cf2369d5d0f9b8eefde19d332083f52648
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104263"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405925"
 ---
 # <a name="c-support-library"></a>Biblioteca de suporte do C++
-A biblioteca de suporte do C++ fornece classes que oferecem suporte à programação gerenciada em C++.  
-  
-## <a name="in-this-section"></a>Nesta seção  
- [Visão geral de marshaling no C++](../dotnet/overview-of-marshaling-in-cpp.md)  
-  
- [Classes de gerenciamento de recursos](../dotnet/resource-management-classes.md)  
-  
- [Sincronização (classe lock)](../dotnet/synchronization-lock-class.md)  
-  
- [Chamando funções em um domínio de aplicativo específico](../dotnet/calling-functions-in-a-specific-application-domain.md)  
-  
- [com::ptr](../dotnet/com-ptr.md)
+
+A biblioteca de suporte do C++ fornece classes que dão suporte à programação gerenciada em C++.
+
+## <a name="in-this-section"></a>Nesta seção
+
+[Visão geral de marshaling no C++](../dotnet/overview-of-marshaling-in-cpp.md)
+
+[Classes de gerenciamento de recursos](../dotnet/resource-management-classes.md)
+
+[Sincronização (classe lock)](../dotnet/synchronization-lock-class.md)
+
+[Chamando funções em um domínio de aplicativo específico](../dotnet/calling-functions-in-a-specific-application-domain.md)
+
+[com::ptr](../dotnet/com-ptr.md)

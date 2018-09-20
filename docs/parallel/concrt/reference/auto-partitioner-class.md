@@ -18,54 +18,58 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05232aa954a9ded7d2ab3a26ae4e1524610c3d04
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: a2bb62d76733e77c2528a80dfc4e9ef358878895
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33705439"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425389"
 ---
 # <a name="autopartitioner-class"></a>Classe auto_partitioner
-O `auto_partitioner` classe representa o método padrão `parallel_for`, `parallel_for_each` e `parallel_transform` usar para o intervalo que itera através da partição. Esse método de particionamento employes roubo de balanceamento de carga de intervalo, bem como por-iterar cancelamento.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
+
+O `auto_partitioner` classe representa o método padrão `parallel_for`, `parallel_for_each` e `parallel_transform` usar para particionar o intervalo que itera em. Esse método de particionamento utiliza uma variam de roubo de balanceamento de carga, bem como por-iterar cancelamento.
+
+## <a name="syntax"></a>Sintaxe
+
 ```
 class auto_partitioner;
-```  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-constructors"></a>Construtores Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[auto_partitioner](#ctor)|Constrói um objeto `auto_partitioner`.|  
-|[~ auto_partitioner destruidor](#dtor)|Destrói um objeto `auto_partitioner`.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `auto_partitioner`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** ppl.h  
-  
- **Namespace:** simultaneidade  
-  
-##  <a name="dtor"></a> ~ auto_partitioner 
+```
 
- Destrói um objeto `auto_partitioner`.  
-  
+## <a name="members"></a>Membros
+
+### <a name="public-constructors"></a>Construtores Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[auto_partitioner](#ctor)|Constrói um objeto `auto_partitioner`.|
+|[~ auto_partitioner destruidor](#dtor)|Destrói um objeto `auto_partitioner`.|
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`auto_partitioner`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** ppl.h
+
+**Namespace:** simultaneidade
+
+##  <a name="dtor"></a> ~ auto_partitioner
+
+Destrói um objeto `auto_partitioner`.
+
 ```
 ~auto_partitioner();
-```  
-  
-##  <a name="ctor"></a> auto_partitioner 
+```
 
- Constrói um objeto `auto_partitioner`.  
-  
+##  <a name="ctor"></a> auto_partitioner
+
+Constrói um objeto `auto_partitioner`.
+
 ```
 auto_partitioner();
-```  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace de simultaneidade](concurrency-namespace.md)
+```
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace de simultaneidade](concurrency-namespace.md)

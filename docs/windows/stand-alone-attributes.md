@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d395053231f54570e1bf86ba79f6237b89681fc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1c44223dad2ac4d6306bf3896cd8ec7be84a5a2b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315542"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407758"
 ---
 # <a name="stand-alone-attributes"></a>Atributos autônomos
 Um atributo autônomo não funciona em uma palavra-chave C++, mas é mais parecido com uma linha de código. Declarações de atributo autônomo exigem um ponto e vírgula no final da linha.
@@ -45,4 +45,5 @@ Um atributo autônomo não funciona em uma palavra-chave C++, mas é mais pareci
 |[pragma](../windows/pragma.md)|Emite a cadeia de caracteres especificada, sem os caracteres de aspas no arquivo. idl gerado.|
   
 ## <a name="see-also"></a>Consulte também
- [Atributos por uso](../windows/attributes-by-usage.md)
+
+[Atributos por uso](../windows/attributes-by-usage.md)

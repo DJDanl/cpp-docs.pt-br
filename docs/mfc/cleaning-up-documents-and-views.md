@@ -16,21 +16,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2dfe54c13db6f44bc70289380ae5f50d99c3722b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f4325b0de10861fc76ee9ab816376f40ba0ba587
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341320"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437411"
 ---
 # <a name="cleaning-up-documents-and-views"></a>Limpando documentos e exibições
-Quando um documento está sendo fechado, o framework chama primeiro seu [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) função de membro. Se você tiver atribuído qualquer memória heap durante o curso de operação do documento, `DeleteContents` é o melhor lugar para desalocar a ele.  
-  
+
+Quando um documento está sendo fechado, o framework chama primeiro seu [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) função de membro. Se você tiver atribuído qualquer memória no heap no decorrer da operação do documento, `DeleteContents` é o melhor lugar para desalocá-la.
+
 > [!NOTE]
->  Você não deve ser desalocada dados de documento no destruidor do documento. No caso de um aplicativo SDI, o objeto de documento poderá ser reutilizado.  
-  
- Você pode substituir o destruidor de uma exibição para desalocar toda a memória alocada no heap.  
-  
-## <a name="see-also"></a>Consulte também  
- [Inicializando e limpando documentos e exibições](../mfc/initializing-and-cleaning-up-documents-and-views.md)
+>  Você não deverá desalocar os dados de documentos no destruidor do documento. No caso de um aplicativo SDI, o objeto do documento poderá ser reutilizado.
+
+Você pode substituir o destruidor do modo de exibição para desalocar toda a memória alocada no heap.
+
+## <a name="see-also"></a>Consulte também
+
+[Inicializando e limpando documentos e exibições](../mfc/initializing-and-cleaning-up-documents-and-views.md)
 

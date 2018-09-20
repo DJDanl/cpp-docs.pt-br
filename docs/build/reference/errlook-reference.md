@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8646ad544b6c481ea394add9e6e8faa82919e15
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 09db7dbb2af9294e215ab60c716f73eee821b29a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725030"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438568"
 ---
 # <a name="errlook-reference"></a>Referência de ERRLOOK
 
@@ -30,14 +30,19 @@ O Acelerador de chaves para copiar (CTRL + C), Recortar (CTRL + X) e trabalho Co
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Controle de edição de valor](../../build/reference/value-edit-control.md) descreve o controle Editar valor em ERRLOOK.
+[Controle de edição de valor](../../build/reference/value-edit-control.md)<br/>
+Descreve o controle Editar valor em ERRLOOK.
 
-[Controle de edição de mensagem de erro](../../build/reference/error-message-edit-control.md) descreve o controle editar de mensagem de erro no ERRLOOK.
+[Controle de edição mensagem de erro](../../build/reference/error-message-edit-control.md)<br/>
+Descreve o controle editar de mensagem de erro no ERRLOOK.
 
-[Botão módulos](../../build/reference/modules-button.md) descreve o botão de módulos no ERRLOOK.
+[Botão Módulos](../../build/reference/modules-button.md)<br/>
+Descreve o botão de módulos no ERRLOOK.
 
-[Botão Pesquisar para cima](../../build/reference/look-up-button.md) descreve o botão Procurar para cima no ERRLOOK.
+[Botão Pesquisar](../../build/reference/look-up-button.md)<br/>
+Descreve o botão Procurar para cima no ERRLOOK.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Ferramentas de Build do C/C++](../../build/reference/c-cpp-build-tools.md) fornece links para tópicos que abordam o C/C++ compilar ferramentas fornecidas no Visual C++.
+[Ferramentas de build de C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+Fornece links para tópicos que abordam o C/C++ build ferramentas fornecidas no Visual C++.

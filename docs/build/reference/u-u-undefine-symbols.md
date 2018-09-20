@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34030a8ef91e5a25bdb1a13981925c5ddf1f05df
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a32106dd9802643a827f8a3e97298f389d31d3b4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721546"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430664"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u (indefinir símbolos)
 
@@ -83,7 +83,7 @@ Por padrão, o compilador define símbolos de específico da Microsoft a seguir.
 
 [Opções do Compilador](../../build/reference/compiler-options.md)<br/>
 [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
-[/J (char padrão não é do tipo assinado)](../../build/reference/j-default-char-type-is-unsigned.md)
-[/GR (Habilitar informações de tipo em tempo de execução)](../../build/reference/gr-enable-run-time-type-information.md)
-[/EH (modelo de tratamento de exceção)](../../build/reference/eh-exception-handling-model.md) 
- [/MD, /MT, /LD (usar biblioteca em tempo de execução)](../../build/reference/md-mt-ld-use-run-time-library.md)
+[/J (o tipo char padrão não é assinado)](../../build/reference/j-default-char-type-is-unsigned.md)<br/>
+[/GR (habilitar informações de tipo em tempo de execução)](../../build/reference/gr-enable-run-time-type-information.md)<br/>
+[/EH (modelo de tratamento de exceções)](../../build/reference/eh-exception-handling-model.md)<br/>
+[/MD, /MT, /LD (usar biblioteca de tempo de execução)](../../build/reference/md-mt-ld-use-run-time-library.md)

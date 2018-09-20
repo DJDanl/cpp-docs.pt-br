@@ -20,42 +20,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b2d0915c4b2940e93b781e7a56e2640c64a7f20
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fe64ee4d9e6fc678d97c3e9fe37a85e53807541
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344357"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416637"
 ---
 # <a name="general-class-design-philosophy"></a>Filosofia de design da classe geral
-Microsoft Windows foi projetado muito antes que a linguagem C++ se tornou popular. Como milhares de aplicativos usam a interface de programação de aplicativo (API) do Windows da linguagem C, essa interface será mantida para um futuro próximo. Nenhuma interface do Windows do C++, portanto, deve ser criada sobre a procedimento API da linguagem C. Isso garante que os aplicativos C++ poderão coexistir com aplicativos C.  
-  
- A biblioteca Microsoft Foundation Class é uma interface orientada a objeto para o Windows que atenda aos seguintes objetivos de design:  
-  
--   Redução significativa na tentativa de gravar um aplicativo do Windows.  
-  
--   Velocidade de execução comparável ao que a API da linguagem C.  
-  
--   Sobrecarga de tamanho mínimo de código.  
-  
--   Capacidade de chamar qualquer função de C do Windows diretamente.  
-  
--   Conversão mais fácil de aplicativos existentes de C para C++.  
-  
--   Capacidade de aproveitar de base existente da linguagem C de experiência de programação do Windows.  
-  
--   Facilitar o uso da API do Windows com C++ que com C.  
-  
--   Mais fácil de uso ainda poderosas abstrações de complicado recursos, como controles ActiveX, suporte de banco de dados, impressão, barras de ferramentas e barras de status.  
-  
--   API do Windows True para C++ que usa com eficiência os recursos de linguagem do C++.  
-  
- Para obter mais informações sobre o design da biblioteca MFC, consulte:  
-  
--   [A estrutura de aplicativo](../mfc/application-framework.md)  
-  
--   [Relacionamento com a API da linguagem C](../mfc/relationship-to-the-c-language-api.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Visão geral da classe](../mfc/class-library-overview.md)
+
+Microsoft Windows foi projetado muito antes que a linguagem C++ se tornou popular. Como milhares de aplicativos usam a interface de programação de aplicativo (API) do Windows da linguagem C, essa interface será mantida no futuro. Nenhuma interface do Windows C++, portanto, deve ser criado sobre a API de linguagem C de procedimentos. Isso garante que aplicativos C++ seja capazes de coexistir com aplicativos C.
+
+A biblioteca Microsoft Foundation Class é uma interface orientada a objeto para o Windows que cumpra as metas de design a seguir:
+
+- Redução significativa no esforço necessário para escrever um aplicativo para Windows.
+
+- Velocidade de execução comparável da linguagem C API.
+
+- Sobrecarga de tamanho mínimo de código.
+
+- Capacidade de chamar qualquer função de C do Windows diretamente.
+
+- Conversão simplificada dos aplicativos existentes de C para C++.
+
+- Capacidade de aproveitar da base existente do Windows da linguagem C experiência em programação.
+
+- Facilitar o uso da API do Windows com C++ do que com C.
+
+- Mais fácil e ainda usar abstrações poderosos do complicado recursos, como controles ActiveX, suporte de banco de dados, impressão, as barras de ferramentas e barras de status.
+
+- True a API do Windows para C++ que usa com eficiência os recursos da linguagem C++.
+
+Para obter mais informações sobre o design da biblioteca MFC, consulte:
+
+- [A estrutura de aplicativo](../mfc/application-framework.md)
+
+- [Relacionamento com a API da linguagem C](../mfc/relationship-to-the-c-language-api.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Visão geral da classe](../mfc/class-library-overview.md)
 

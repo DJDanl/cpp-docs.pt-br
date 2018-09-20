@@ -19,34 +19,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfbc9ce7b99efc1f8d99f5735c16c252ff613c59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a92660223c84c5f53bc848e72b03316602180d36
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332121"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430287"
 ---
 # <a name="accessing-the-embedded-month-calendar-control"></a>Acessando o controle de calendário mensal inserido
-O objeto de controle de calendário mensal inserido pode ser acessado pelo `CDateTimeCtrl` objeto com uma chamada para o [GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl) função de membro.  
-  
+
+O objeto de controle de calendário mensal inserido pode ser acessado a partir de `CDateTimeCtrl` objeto com uma chamada para o [GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl) função de membro.
+
 > [!NOTE]
->  O controle de calendário mensal inserido é usado somente quando o controle de seletor de data e hora não tem o **DTS_UPDOWN** conjunto de estilos.  
-  
- Isso é útil se você quiser modificar determinados atributos antes do controle inserido é exibido. Para fazer isso, tratar o **DTN_DROPDOWN** notificação, recuperar o controle de calendário mensal (usando [CDateTimeCtrl::GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl)) e fazer as modificações. Infelizmente, o controle de calendário mensal não é persistente.  
-  
- Em outras palavras, quando o usuário solicita a exibição do controle de calendário do mês, um controle de calendário do mês novo é criado (antes do **DTN_DROPDOWN** notificação). O controle é destruído (após o **DTN_CLOSEUP** notificação) quando ignorado pelo usuário. Isso significa que todos os atributos que modificar, antes do controle inserido é exibido, são perdidos quando o controle inserido é descartado.  
-  
- O exemplo a seguir demonstra esse procedimento, usando um manipulador para o **DTN_DROPDOWN** notificação. O código altera a cor de plano de fundo do controle de calendário de mês, com uma chamada para [SetMonthCalColor](../mfc/reference/cdatetimectrl-class.md#setmonthcalcolor), em cinza. O código é da seguinte maneira:  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#5](../mfc/codesnippet/cpp/accessing-the-embedded-month-calendar-control_1.cpp)]  
-  
- Como mencionado anteriormente, todas as modificações às propriedades do controle de calendário de mês são perdidas, com duas exceções, quando o controle inserido é descartado. A primeira exceção, as cores do controle de calendário mensal, já foi discutida. A segunda exceção é a fonte usada pelo controle de calendário do mês. Você pode modificar a fonte padrão, fazendo uma chamada para [CDateTimeCtrl::SetMonthCalFont](../mfc/reference/cdatetimectrl-class.md#setmonthcalfont), passando o identificador de uma fonte existente. O exemplo a seguir (onde `m_dtPicker` é o objeto de controle de data e hora) demonstra um método possível:  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#6](../mfc/codesnippet/cpp/accessing-the-embedded-month-calendar-control_2.cpp)]  
-  
- Quando a fonte é alterada, com uma chamada para `CDateTimeCtrl::SetMonthCalFont`, a nova fonte é armazenada e usada na próxima vez em um calendário de mês é exibido.  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
- [Controles](../mfc/controls-mfc.md)
+>  O controle de calendário mensal inserido é usado somente quando o controle de seletor de data e hora não tem o **DTS_UPDOWN** conjunto de estilos.
+
+Isso é útil se você quiser modificar determinados atributos antes do controle inserido é exibido. Para fazer isso, lidar com o **DTN_DROPDOWN** notificação, recuperar o controle de calendário mensal (usando [CDateTimeCtrl::GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl)) e fazer as modificações. Infelizmente, o controle de calendário mensal não é persistente.
+
+Em outras palavras, quando o usuário solicita a exibição de controle de calendário mensal, um controle de calendário do mês novo é criado (antes do **DTN_DROPDOWN** notificação). O controle é destruído (depois que o **DTN_CLOSEUP** notificação) quando ignorado pelo usuário. Isso significa que todos os atributos que modificar, antes do controle inserido é exibido, são perdidos quando o controle inserido é descartado.
+
+O exemplo a seguir demonstra esse procedimento, usando um manipulador para o **DTN_DROPDOWN** notificação. O código altera a cor de plano de fundo do controle de calendário mensal, com uma chamada para [SetMonthCalColor](../mfc/reference/cdatetimectrl-class.md#setmonthcalcolor), em cinza. O código é da seguinte maneira:
+
+[!code-cpp[NVC_MFCControlLadenDialog#5](../mfc/codesnippet/cpp/accessing-the-embedded-month-calendar-control_1.cpp)]
+
+Conforme mencionado anteriormente, todas as modificações a propriedades de controle de calendário mensal são perdidas, com duas exceções, quando o controle inserido é descartado. A primeira exceção, as cores do controle de calendário mensal, já foi abordada. A segunda exceção é a fonte usada pelo controle de calendário mensal. Você pode modificar a fonte padrão, fazendo uma chamada para [CDateTimeCtrl::SetMonthCalFont](../mfc/reference/cdatetimectrl-class.md#setmonthcalfont), passando o identificador de uma fonte existente. O exemplo a seguir (onde `m_dtPicker` é o objeto de controle de data e hora) demonstra um método possível:
+
+[!code-cpp[NVC_MFCControlLadenDialog#6](../mfc/codesnippet/cpp/accessing-the-embedded-month-calendar-control_2.cpp)]
+
+Quando a fonte é alterada, com uma chamada para `CDateTimeCtrl::SetMonthCalFont`, a nova fonte é armazenada e usada na próxima vez em um calendário de mês deve ser exibido.
+
+## <a name="see-also"></a>Consulte também
+
+[Usando CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
+[Controles](../mfc/controls-mfc.md)
 

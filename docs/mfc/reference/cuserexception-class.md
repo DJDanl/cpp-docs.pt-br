@@ -21,45 +21,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1701f6894ba3b44205526c59bad7ef635c1bbbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71d2be1c00e518597a5d5121d7a53544bd29067f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369467"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419653"
 ---
 # <a name="cuserexception-class"></a>Classe CUserException
-Gerada para interromper uma operação do usuário final.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-class CUserException : public CSimpleException  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Use `CUserException` quando você deseja usar o mecanismo de exceção throw/catch para exceções específicas do aplicativo. "Usuário" no nome da classe pode ser interpretado como "Meu usuário fez algo excepcional que preciso tratar."  
-  
- Um `CUserException` geralmente é lançada após chamar a função global `AfxMessageBox` para notificar o usuário que houve falha na operação. Quando você escreve um manipulador de exceção, lidar com a exceção, especialmente, desde que o usuário geralmente já foi notificado da falha. A estrutura gera essa exceção em alguns casos. Para lançar uma `CUserException` por conta própria, alertar o usuário e, em seguida, chame a função global `AfxThrowUserException`.  
-  
- No exemplo a seguir, uma função que contém operações que podem falhar alerta o usuário e lança um `CUserException`. A função de chamada captura a exceção e manipule especialmente:  
-  
- [!code-cpp[NVC_MFCExceptions#24](../../mfc/codesnippet/cpp/cuserexception-class_1.cpp)]  
-  
- Para obter mais informações sobre como usar `CUserException`, consulte o artigo [de tratamento de exceção (MFC)](../../mfc/exception-handling-in-mfc.md).  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CException](../../mfc/reference/cexception-class.md)  
-  
- [CSimpleException](../../mfc/reference/csimpleexception-class.md)  
-  
- `CUserException`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxwin.h  
-  
-## <a name="see-also"></a>Consulte também  
- [Gráfico de hierarquia](../../mfc/hierarchy-chart.md)   
- [Classe CException](../../mfc/reference/cexception-class.md)
+
+Lançada para parar uma operação do usuário final.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+class CUserException : public CSimpleException
+```
+
+## <a name="remarks"></a>Comentários
+
+Use `CUserException` quando você quiser usar o mecanismo de exceção throw/catch para exceções específicas do aplicativo. "Usuário" no nome da classe pode ser interpretado como "Meu usuário fez algo excepcionais que eu preciso lidar com".
+
+Um `CUserException` geralmente é lançada após chamar a função global `AfxMessageBox` para notificar o usuário que uma operação falhou. Quando você escreve um manipulador de exceção, tratar a exceção, especialmente, pois o usuário geralmente já foi notificado da falha. A estrutura gera esta exceção em alguns casos. Para lançar uma `CUserException` por conta própria, alertar o usuário e, em seguida, chame a função global `AfxThrowUserException`.
+
+No exemplo a seguir, uma função que contém operações poderão falhar alertará o usuário e gera um `CUserException`. A função de chamada captura a exceção e lida com isso especialmente:
+
+[!code-cpp[NVC_MFCExceptions#24](../../mfc/codesnippet/cpp/cuserexception-class_1.cpp)]
+
+Para obter mais informações sobre como usar `CUserException`, consulte o artigo [tratamento de exceção (MFC)](../../mfc/exception-handling-in-mfc.md).
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CException](../../mfc/reference/cexception-class.md)
+
+[CSimpleException](../../mfc/reference/csimpleexception-class.md)
+
+`CUserException`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** afxwin. h
+
+## <a name="see-also"></a>Consulte também
+
+[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
+[Classe CException](../../mfc/reference/cexception-class.md)

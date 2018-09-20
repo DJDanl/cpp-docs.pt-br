@@ -16,47 +16,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d76717e68e37769cf55dceb4492ed78031c49e10
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 5db5170b6c946e4bfeda99a3275f045a07fc9beb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928218"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435214"
 ---
 # <a name="containers-client-item-notifications"></a>Contêineres: notificações de item do cliente
-Este artigo descreve as funções substituíveis que a estrutura MFC chama quando aplicativos de servidor modificar itens no documento do aplicativo cliente.  
-  
- [COleClientItem](../mfc/reference/coleclientitem-class.md) define várias funções substituíveis que são chamadas em resposta a solicitações do aplicativo de componente, que também é chamado para o aplicativo do servidor. Sobre esses substituíveis geralmente atuam como as notificações. Eles informam o aplicativo de contêiner de vários eventos, como ativação de rolagem, ou uma alteração da posição e das alterações feitas pelo usuário ao editar ou manipular o item.  
-  
- A estrutura notifica o aplicativo de contêiner de alterações por meio de uma chamada para `COleClientItem::OnChange`, uma função substituível cuja implementação é necessária. Esta função protegida recebe dois argumentos. A primeira Especifica o motivo pelo qual que o servidor mudou o item:  
-  
-|Notificação|Significado|  
-|------------------|-------------|  
-|**OLE_CHANGED**|Aparência do item OLE foi alterado.|  
-|**OLE_SAVED**|O item OLE foi salvo.|  
-|**OLE_CLOSED**|O item OLE foi fechado.|  
-|**OLE_RENAMED**|O documento de servidor que contém o item OLE foi renomeado.|  
-|**OLE_CHANGED_STATE**|O item OLE foi alterado de um estado para outro.|  
-|**OLE_CHANGED_ASPECT**|Aspecto de desenho do item OLE foi alterado pela estrutura.|  
-  
- Esses valores são a partir de **OLE_NOTIFICATION** enumeração, que é definida em AFXOLE. H.  
-  
- O segundo argumento para essa função especifica como o item foi alterado ou o estado que tiver inserido:  
-  
-|Quando o primeiro argumento é|Segundo argumento|  
-|----------------------------|---------------------|  
-|**OLE_SAVED** ou **OLE_CLOSED**|Não é usado.|  
-|**OLE_CHANGED**|Especifica a proporção do item OLE que foi alterado.|  
-|**OLE_CHANGED_STATE**|Descreve o estado que está sendo inserido (*emptyState*, *loadedState*, *openState*, *activeState*, ou  *activeUIState*).|  
-  
- Para obter mais informações sobre os estados de um item do cliente pode assumir, consulte [contêineres: Estados de Item do cliente](../mfc/containers-client-item-states.md).  
-  
- A estrutura chama `COleClientItem::OnGetItemPosition` quando um item está sendo ativado para edição no local. Implementação é necessária para aplicativos que oferecem suporte a edição no local. O Assistente de aplicativo MFC fornece uma implementação básica, o que atribui as coordenadas do item para o `CRect` objeto que é passado como um argumento para `OnGetItemPosition`.  
-  
- Se a posição ou o tamanho do item OLE é alterado durante a edição no local, informações do contêiner sobre retângulos de recorte e a posição do item devem ser atualizadas e o servidor deve receber informações sobre as alterações. A estrutura chama `COleClientItem::OnChangeItemPosition` para essa finalidade. O Assistente de aplicativo MFC fornece uma substituição que chama a função da classe base. Você deve editar a função que o Assistente de aplicativo grava para sua `COleClientItem`-classe derivada para que a função atualiza todas as informações mantidas pelo seu objeto de item do cliente.  
-  
-## <a name="see-also"></a>Consulte também  
- [Contêineres](../mfc/containers.md)   
- [Contêineres: Estados de Item do cliente](../mfc/containers-client-item-states.md)   
- [COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)
+
+Este artigo discute as funções substituíveis que a estrutura MFC chama quando aplicativos de servidor modificarem itens de documento do aplicativo cliente.
+
+[COleClientItem](../mfc/reference/coleclientitem-class.md) define várias funções substituíveis que são chamadas em resposta às solicitações do aplicativo de componente, que também é chamado para o aplicativo de servidor. Sobre esses substituíveis geralmente agem como notificações. Eles informam o aplicativo de contêiner de vários eventos, como a ativação de rolagem, ou uma alteração de posição e as alterações que o usuário faz ao editar ou manipular o item.
+
+O framework notifica seu aplicativo de contêiner de alterações por meio de uma chamada para `COleClientItem::OnChange`, uma função substituível cuja implementação é necessária. Essa função protegida recebe dois argumentos. A primeira Especifica o motivo pelo qual que o servidor mudou o item:
+
+|Notificação|Significado|
+|------------------|-------------|
+|**OLE_CHANGED**|Aparência do item OLE foi alterado.|
+|**OLE_SAVED**|O item OLE foi salvo.|
+|**OLE_CLOSED**|O item OLE foi fechado.|
+|**OLE_RENAMED**|O documento do servidor que contém o item OLE foi renomeado.|
+|**OLE_CHANGED_STATE**|O item OLE foi alterado de um estado para outro.|
+|**OLE_CHANGED_ASPECT**|Aspecto do desenho do item OLE foi alterado pela estrutura.|
+
+Esses valores são a partir de **OLE_NOTIFICATION** enumeração, que é definida em AFXOLE. H.
+
+O segundo argumento para essa função especifica como o item foi alterado ou o que estado que ele entrou em:
+
+|Quando o primeiro argumento é|Segundo argumento|
+|----------------------------|---------------------|
+|**OLE_SAVED** ou **OLE_CLOSED**|Não é usado.|
+|**OLE_CHANGED**|Especifica o aspecto do item OLE que foi alterado.|
+|**OLE_CHANGED_STATE**|Descreve o estado que está sendo inserido (*emptyState*, *loadedState*, *openState*, *activeState*, ou  *activeUIState*).|
+
+Para obter mais informações sobre os estados de um item do cliente pode supor, consulte [contêineres: Estados de Item do cliente](../mfc/containers-client-item-states.md).
+
+A estrutura chama `COleClientItem::OnGetItemPosition` quando um item está sendo ativado para edição no local. Implementação é necessária para aplicativos que dão suporte à edição in-loco. O Assistente de aplicativo do MFC fornece uma implementação básica, o que atribui as coordenadas do item para o `CRect` objeto que é passado como um argumento para `OnGetItemPosition`.
+
+Se o tamanho ou a posição do item OLE é alterado durante a edição in-loco, informações do contêiner sobre a posição e a retângulos de recorte o item devem ser atualizadas e o servidor deve receber informações sobre as alterações. A estrutura chama `COleClientItem::OnChangeItemPosition` para essa finalidade. O Assistente de aplicativo do MFC fornece uma substituição que chama a função da classe base. Você deve editar a função que o Assistente de aplicativo grava para sua `COleClientItem`-classe derivada, para que a função atualiza todas as informações mantidas pelo seu objeto de item do cliente.
+
+## <a name="see-also"></a>Consulte também
+
+[Contêineres](../mfc/containers.md)<br/>
+[Contêineres: estados de item do cliente](../mfc/containers-client-item-states.md)<br/>
+[COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)
 

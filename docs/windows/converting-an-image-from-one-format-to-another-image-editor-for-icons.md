@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ef3a2ce99309781ecbfd0c406fe8e0f6f7e0613
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5b34b0a55f079962860bb0d9055f19780273d267
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592112"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406372"
 ---
 # <a name="converting-an-image-from-one-format-to-another-image-editor-for-icons"></a>Convertendo uma imagem de um formato em outro (editor de imagens para ícones)
 
@@ -47,5 +47,5 @@ Nenhum
 
 ## <a name="see-also"></a>Consulte também
 
-[Editando recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Editando recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Editor de imagens para ícones](../windows/image-editor-for-icons.md)

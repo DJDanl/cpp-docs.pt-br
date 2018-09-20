@@ -26,39 +26,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ba12cce799d0d1ed9a02f3a4d3a268ca86d4447
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: a4abd2bf866a97e13324af22032cce9ebcaba4da
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931561"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408512"
 ---
 # <a name="opening-files"></a>Abrindo arquivos
-Em MFC, a maneira mais comum para abrir um arquivo é um processo de duas etapas.  
-  
-#### <a name="to-open-a-file"></a>Para abrir um arquivo  
-  
-1.  Crie o objeto de arquivo sem especificar um caminho ou permissão sinalizadores.  
-  
-     Você normalmente cria um objeto de arquivo, declarando um [CFile](../mfc/reference/cfile-class.md) variável no quadro de pilha.  
-  
-2.  Chamar o [abrir](../mfc/reference/cfile-class.md#open) função de membro para o objeto de arquivo, fornecendo um caminho e permissão sinalizadores.  
-  
-     O valor de retorno `Open` será diferente de zero se o arquivo foi aberto com êxito ou 0 se o arquivo especificado não pôde ser aberto. O `Open` função de membro é protótipo da seguinte maneira:  
-  
-     `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`  
-  
-     Os sinalizadores de abrir especificar quais permissões, como somente leitura, você deseja para o arquivo. Os valores possíveis de sinalizador são definidos como constantes enumeradas dentro de `CFile` de classe, para que sejam qualificados com "`CFile::`" como no `CFile::modeRead`. Use o `CFile::modeCreate` sinalizador se você deseja criar o arquivo.  
-  
- O exemplo a seguir mostra como criar um novo arquivo com permissão de leitura/gravação (substituindo qualquer arquivo anterior com o mesmo caminho):  
-  
- [!code-cpp[NVC_MFCFiles#1](../atl-mfc-shared/reference/codesnippet/cpp/opening-files_1.cpp)]  
-  
+
+No MFC, a maneira mais comum para abrir um arquivo é um processo de duas etapas.
+
+#### <a name="to-open-a-file"></a>Para abrir um arquivo
+
+1. Crie o objeto de arquivo sem especificar um caminho ou permissão sinalizadores.
+
+     Você normalmente cria um objeto de arquivo, declarando uma [CFile](../mfc/reference/cfile-class.md) variável no quadro da pilha.
+
+1. Chame o [abrir](../mfc/reference/cfile-class.md#open) função de membro para o objeto de arquivo, fornecendo um caminho e permissão sinalizadores.
+
+     O valor de retorno para `Open` será diferente de zero se o arquivo foi aberto com êxito ou 0 se o arquivo especificado não pôde ser aberto. O `Open` função de membro é o seguinte protótipo:
+
+     `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
+
+     Os sinalizadores de abrir especificam quais permissões, como somente leitura, você deseja para o arquivo. Os valores possíveis de sinalizador são definidos como constantes enumeradas dentro de `CFile` classe, portanto, eles são qualificados com "`CFile::`" como em `CFile::modeRead`. Use o `CFile::modeCreate` sinalizador se você quiser criar o arquivo.
+
+O exemplo a seguir mostra como criar um novo arquivo com permissão de leitura/gravação (substituindo qualquer arquivo anterior com o mesmo caminho):
+
+[!code-cpp[NVC_MFCFiles#1](../atl-mfc-shared/reference/codesnippet/cpp/opening-files_1.cpp)]
+
 > [!NOTE]
->  Este exemplo cria e abre um arquivo. Se houver problemas, o `Open` chamada possa retornar um `CFileException` do objeto no último parâmetro, conforme mostrado aqui. A macro de rastreamento imprime o nome de arquivo e um código que indica o motivo da falha. Você pode chamar o `AfxThrowFileException` funcionar se você precisar de mais detalhadas que o relatório de erros.  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe CFile](../mfc/reference/cfile-class.md)   
- [CFile::Open](../mfc/reference/cfile-class.md#open)   
- [Arquivos](../mfc/files-in-mfc.md)
+>  Este exemplo cria e abre um arquivo. Se houver problemas, o `Open` chamada possa retornar um `CFileException` do objeto em seu último parâmetro, conforme mostrado aqui. A macro TRACE imprime o nome do arquivo e um código que indica o motivo da falha. Você pode chamar o `AfxThrowFileException` funcionar se você precisar de mais detalhadas de relatório de erros.
+
+## <a name="see-also"></a>Consulte também
+
+[Classe CFile](../mfc/reference/cfile-class.md)<br/>
+[CFile::Open](../mfc/reference/cfile-class.md#open)<br/>
+[Arquivos](../mfc/files-in-mfc.md)
 

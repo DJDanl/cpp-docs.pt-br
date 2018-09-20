@@ -37,30 +37,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e1dcd48bfadcc4ed5a4b64fd0dcdee334c1f1b4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5751fbdd4bff0cf3d42231ad00bef0c3483ccfb9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368063"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424255"
 ---
 # <a name="combo-box-handlers"></a>Manipuladores da caixa de combinação
-As seguintes entradas de mapa correspondem aos protótipos de função.  
-  
-|Entrada de mapa|Protótipo da função|  
-|---------------|------------------------|  
-|ON_CBN_CLOSEUP ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg|  
-|ON_CBN_DBLCLK ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_CBN_DROPDOWN ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_CBN_EDITCHANGE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_CBN_EDITUPDATE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_CBN_ERRSPACE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_CBN_KILLFOCUS ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_CBN_SELCHANGE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_CBN_SELENDCANCEL ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_CBN_SELENDOK ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-|ON_CBN_SETFOCUS ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|  
-  
-## <a name="see-also"></a>Consulte também  
- [Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)
+
+As seguintes entradas de mapa correspondem aos protótipos de função.
+
+|Entrada de mapa|Protótipo da função|
+|---------------|------------------------|
+|ON_CBN_CLOSEUP ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg|
+|ON_CBN_DBLCLK ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|
+|ON_CBN_DROPDOWN ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|
+|ON_CBN_EDITCHANGE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|
+|ON_CBN_EDITUPDATE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|
+|ON_CBN_ERRSPACE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|
+|ON_CBN_KILLFOCUS ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|
+|ON_CBN_SELCHANGE ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|
+|ON_CBN_SELENDCANCEL ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|
+|ON_CBN_SELENDOK ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|
+|ON_CBN_SETFOCUS ( \<id >, \<memberFxn >)|() de void memberFxn afx_msg;|
+
+## <a name="see-also"></a>Consulte também
+
+[Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)
 

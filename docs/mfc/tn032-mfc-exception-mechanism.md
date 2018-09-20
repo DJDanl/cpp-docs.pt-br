@@ -1,5 +1,5 @@
 ---
-title: 'TN032: Mecanismo de exceção MFC | Microsoft Docs'
+title: 'TN032: Mecanismo de exceção do MFC | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,19 +18,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5256f787534ab408920f7154122ae0c5934019c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aee8ce02af874e1c3c30243a35e8f36acfce63f0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380835"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414752"
 ---
 # <a name="tn032-mfc-exception-mechanism"></a>TN032: mecanismo de exceção MFC
-Versões anteriores do Visual C++ não oferecia suporte para o mecanismo de exceção padrão do C++ e MFC fornecido macros **TRY/CATCH/THROW** que foram usados. Esta versão do Visual C++ totalmente dá suporte a exceções C++. Esta anotação coberto alguns dos detalhes de implementação avançada de macros anteriores incluindo como objetos de pilha com base em limpeza automaticamente. Como as exceções do C++ oferecem suporte a pilha de desenrolamento por padrão, essa observação técnica não é mais necessária.  
-  
- Consulte [exceções: usando Macros de MFC e exceções de C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) para obter mais informações sobre as diferenças entre as macros MFC e as novas palavras-chave C++.  
-  
-## <a name="see-also"></a>Consulte também  
- [Observações técnicas por número](../mfc/technical-notes-by-number.md)   
- [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
+
+As versões anteriores do Visual C++ não oferecia suporte para o mecanismo de exceção padrão do C++ e MFC fornecido macros **TRY/CATCH/THROW** que foram usados em vez disso. Esta versão do Visual C++ totalmente compatível com as exceções do C++. Essa observação abordado alguns detalhes de implementação avançada das macros anteriores incluindo como limpar automaticamente a objetos de pilha com base. Porque as exceções do C++ dá suporte a pilha de desenrolamento por padrão, essa observação técnica não é mais necessária.
+
+Consulte a [exceções: usando Macros MFC e exceções do C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) para obter mais informações sobre as diferenças entre as macros MFC e as novas palavras-chave do C++.
+
+## <a name="see-also"></a>Consulte também
+
+[Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
+[Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
 

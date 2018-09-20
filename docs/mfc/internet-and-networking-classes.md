@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c890803573f1acb45f511676cccdcc027c43223
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dcce5cc8265140c8f939c17389aef1ffc82404ac
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345085"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445562"
 ---
 # <a name="internet-and-networking-classes"></a>Classes de internet e rede
-Essas classes permitem que você trocar informações com outro computador usando um soquete do Windows ou Internet Win32 (WinInet). Há também um conjunto de classes para manipulação do Windows Sockets.  
-  
- As seguintes categorias de classes de suporte à conectividade.  
-  
--   [Classes de Windows Sockets](../mfc/windows-sockets-classes.md)  
-  
--   [Classes da Internet Win32](../mfc/win32-internet-classes.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Visão geral da classe](../mfc/class-library-overview.md)
+
+Essas classes permitem que você trocar informações com outro computador usando um soquete do Windows ou a Internet Win32 (WinInet). Há também um conjunto de classes para manipulação de soquetes do Windows.
+
+As seguintes categorias de classes de suporte à conectividade.
+
+- [Classes de Windows Sockets](../mfc/windows-sockets-classes.md)
+
+- [Classes da Internet Win32](../mfc/win32-internet-classes.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Visão geral da classe](../mfc/class-library-overview.md)
 

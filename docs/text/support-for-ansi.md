@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6dca289631f3289a7976b6dc3482770bf5f3fe7
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9f755ee59c7f0b6e4ae9897535cdc536537ba32f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200612"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446498"
 ---
 # <a name="support-for-ansi"></a>Suporte para ANSI
-A maioria dos métodos e classes MFC suportam o conjunto de caracteres ANSI, embora a estrutura MFC como um todo é gradualmente evoluindo para dar suporte a apenas o Unicode do conjunto de caracteres. Por causa dos aprimoramentos contínuos no Windows Vista e controles comuns do Windows versão 6.1, o suporte para vários métodos e classes de ANSI é preterido.  Para obter mais informações, consulte [preteridos ANSI APIs](../mfc/deprecated-ansi-apis.md) e [suporte para Unicode](../text/support-for-unicode.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Suporte para Unicode](../text/support-for-unicode.md)   
- [APIs ANSI preteridas](../mfc/deprecated-ansi-apis.md)   
- [Shell e versões de controles comuns](https://msdn.microsoft.com/library/windows/desktop/bb776779)
+
+A maioria dos métodos e classes MFC suportam o conjunto de caracteres ANSI, embora a estrutura MFC como um todo é gradualmente evoluindo para dar suporte a apenas o Unicode do conjunto de caracteres. Por causa dos aprimoramentos contínuos no Windows Vista e controles comuns do Windows versão 6.1, o suporte para vários métodos e classes de ANSI é preterido.  Para obter mais informações, consulte [preteridos ANSI APIs](../mfc/deprecated-ansi-apis.md) e [suporte para Unicode](../text/support-for-unicode.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Suporte para Unicode](../text/support-for-unicode.md)<br/>
+[APIs ANSI preteridas](../mfc/deprecated-ansi-apis.md)<br/>
+[Shell e versões de controles comuns](https://msdn.microsoft.com/library/windows/desktop/bb776779)

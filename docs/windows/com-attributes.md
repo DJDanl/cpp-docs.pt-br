@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e18f64d48b357ed691f42fc900f68c8e8054776
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 71ff4e3fdb80b48e306e543bdb683c3dd2b26ec3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317245"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443326"
 ---
 # <a name="com-attributes"></a>Atributos COM
 Os atributos COM injetam código para dar suporte a diversas áreas de desenvolvimento COM e desenvolvimento do .NET Framework common language runtime. Esses variam de áreas de implementação de interface personalizada e suporte às interfaces existentes para dar suporte a eventos, métodos e propriedades de estoque. Além disso, o suporte pode ser encontrado para a composição e a implementação de controle ActiveX.
@@ -44,4 +44,5 @@ Os atributos COM injetam código para dar suporte a diversas áreas de desenvolv
 |[vi_progid](../windows/vi-progid.md)|Define um ProgID independente de versão para um controle.|
   
 ## <a name="see-also"></a>Consulte também
- [Atributos por grupo](../windows/attributes-by-group.md)
+
+[Atributos por grupo](../windows/attributes-by-group.md)

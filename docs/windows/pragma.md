@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f24c01c225cf971592083162fbebddd99700814
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2e6d5d832cd051c8e527b1d161158483d8fcaed1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209108"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428739"
 ---
 # <a name="pragma"></a>(pragma)
 
@@ -38,7 +38,7 @@ Emite a cadeia de caracteres especificada no arquivo. idl gerado sem o uso de as
 
 ### <a name="parameters"></a>Parâmetros
 
-*pragma_statement*  
+*pragma_statement*<br/>
 O pragma que você deseja ir para o arquivo. idl gerado.
 
 ## <a name="remarks"></a>Comentários
@@ -76,6 +76,6 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](../windows/idl-attributes.md)  
-[Atributos independentes](../windows/stand-alone-attributes.md)  
+[Atributos de IDL](../windows/idl-attributes.md)<br/>
+[Atributos independentes](../windows/stand-alone-attributes.md)<br/>
 [pack](../preprocessor/pack.md)  

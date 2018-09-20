@@ -30,149 +30,169 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36f8a038cd282ddf233fe2cf15a134c52962ebff
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: fc5903f50136aaffcb0358e1a60c99a71e67540e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953695"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447122"
 ---
 # <a name="cdcrendertarget-class"></a>Classe CDCRenderTarget
-Um wrapper para ID2D1DCRenderTarget.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-class CDCRenderTarget : public CRenderTarget;  
-```  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-constructors"></a>Construtores Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CDCRenderTarget::CDCRenderTarget](#cdcrendertarget)|Constrói um objeto CDCRenderTarget.|  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CDCRenderTarget::Attach](#attach)|Conexões existentes renderizam a interface para o objeto de destino|  
-|[CDCRenderTarget::BindDC](#binddc)|Associa o destino de renderização para o contexto de dispositivo para o qual ele emite comandos de desenho|  
-|[CDCRenderTarget::Create](#create)|Cria um CDCRenderTarget.|  
-|[CDCRenderTarget::Detach](#detach)|Desanexa a interface de destino de renderização do objeto|  
-|[CDCRenderTarget::GetDCRenderTarget](#getdcrendertarget)|Interface de ID2D1DCRenderTarget retorna|  
-  
-### <a name="public-operators"></a>Operadores públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CDCRenderTarget::operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|Interface de ID2D1DCRenderTarget retorna|  
-  
-### <a name="protected-data-members"></a>Membros de dados protegidos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|Um ponteiro para um objeto ID2D1DCRenderTarget.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CRenderTarget](../../mfc/reference/crendertarget-class.md)  
-  
- [CDCRenderTarget](../../mfc/reference/cdcrendertarget-class.md)  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxrendertarget.h  
-  
-##  <a name="attach"></a>  CDCRenderTarget::Attach  
- Conexões existentes renderizam a interface para o objeto de destino  
-  
-```  
+
+Um wrapper para ID2D1DCRenderTarget.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+class CDCRenderTarget : public CRenderTarget;
+```
+
+## <a name="members"></a>Membros
+
+### <a name="public-constructors"></a>Construtores Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CDCRenderTarget::CDCRenderTarget](#cdcrendertarget)|Constrói um objeto CDCRenderTarget.|
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CDCRenderTarget::Attach](#attach)|Anexa existente renderizar a interface para o objeto de destino|
+|[CDCRenderTarget::BindDC](#binddc)|Associa o destino de renderização para o contexto de dispositivo ao qual ele emite comandos de desenho|
+|[CDCRenderTarget::Create](#create)|Cria um CDCRenderTarget.|
+|[CDCRenderTarget::Detach](#detach)|Desanexa a interface de destino de renderização do objeto|
+|[CDCRenderTarget::GetDCRenderTarget](#getdcrendertarget)|Interface de ID2D1DCRenderTarget retorna|
+
+### <a name="public-operators"></a>Operadores públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CDCRenderTarget::operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|Interface de ID2D1DCRenderTarget retorna|
+
+### <a name="protected-data-members"></a>Membros de dados protegidos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|Um ponteiro para um objeto ID2D1DCRenderTarget.|
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CRenderTarget](../../mfc/reference/crendertarget-class.md)
+
+[CDCRenderTarget](../../mfc/reference/cdcrendertarget-class.md)
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** afxrendertarget.h
+
+##  <a name="attach"></a>  CDCRenderTarget::Attach
+
+Anexa existente renderizar a interface para o objeto de destino
+
+```
 void Attach(ID2D1DCRenderTarget* pTarget);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *pTarget*  
- Interface de destino de renderização existente. Não pode ser NULL  
-  
-##  <a name="binddc"></a>  CDCRenderTarget::BindDC  
- Associa o destino de renderização para o contexto de dispositivo para o qual ele emite comandos de desenho  
-  
-```  
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*pTarget*<br/>
+Adaptador de destino de renderização existente. Não pode ser NULL
+
+##  <a name="binddc"></a>  CDCRenderTarget::BindDC
+
+Associa o destino de renderização para o contexto de dispositivo ao qual ele emite comandos de desenho
+
+```
 BOOL BindDC(
-    const CDC& dc,  
+    const CDC& dc,
     const CRect& rect);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *dc*  
- O contexto de dispositivo para o qual o destino de renderização emite comandos de desenho  
-  
- *Rect*  
- As dimensões do identificador em um contexto de dispositivo (HDC) à qual o destino de renderização está associado  
-  
-### <a name="return-value"></a>Valor de retorno  
- Se o método for bem-sucedido, retornará TRUE. Caso contrário, retornará FALSE.  
-  
-##  <a name="cdcrendertarget"></a>  CDCRenderTarget::CDCRenderTarget  
- Constrói um objeto CDCRenderTarget.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*dc*<br/>
+O contexto de dispositivo para o qual o destino de renderização emite comandos de desenho
+
+*Rect*<br/>
+As dimensões do identificador para um contexto de dispositivo (HDC) à qual o destino de renderização está associado
+
+### <a name="return-value"></a>Valor de retorno
+
+Se o método for bem-sucedido, ele retornará TRUE. Caso contrário, retornará FALSE.
+
+##  <a name="cdcrendertarget"></a>  CDCRenderTarget::CDCRenderTarget
+
+Constrói um objeto CDCRenderTarget.
+
+```
 CDCRenderTarget();
-```  
-  
-##  <a name="create"></a>  CDCRenderTarget::Create  
- Cria um CDCRenderTarget.  
-  
-```  
+```
+
+##  <a name="create"></a>  CDCRenderTarget::Create
+
+Cria um CDCRenderTarget.
+
+```
 BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *Propriedades*  
- O modo de renderização, formato de pixel, opções de comunicação remota, informações de DPI e o suporte do DirectX mínimo necessário para a renderização de hardware.  
-  
-### <a name="return-value"></a>Valor de retorno  
- Se o método for bem-sucedido, retornará TRUE. Caso contrário, retornará FALSE.  
-  
-##  <a name="detach"></a>  CDCRenderTarget::Detach  
- Desanexa a interface de destino de renderização do objeto  
-  
-```  
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*arquivos de propriedades*<br/>
+O modo de renderização, formato de pixel, opções de comunicação remota, informações de DPI e o suporte do DirectX mínimo necessário para a renderização de hardware.
+
+### <a name="return-value"></a>Valor de retorno
+
+Se o método for bem-sucedido, ele retornará TRUE. Caso contrário, retornará FALSE.
+
+##  <a name="detach"></a>  CDCRenderTarget::Detach
+
+Desanexa a interface de destino de renderização do objeto
+
+```
 ID2D1DCRenderTarget* Detach();
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
- Ponteiro para desanexado renderizar a interface de destino.  
-  
-##  <a name="getdcrendertarget"></a>  CDCRenderTarget::GetDCRenderTarget  
- Interface de ID2D1DCRenderTarget retorna  
-  
-```  
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Ponteiro para desanexado renderizar a interface de destino.
+
+##  <a name="getdcrendertarget"></a>  CDCRenderTarget::GetDCRenderTarget
+
+Interface de ID2D1DCRenderTarget retorna
+
+```
 ID2D1DCRenderTarget* GetDCRenderTarget();
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
- Ponteiro para uma interface ID2D1DCRenderTarget ou NULL se o objeto ainda não foi inicializado.  
-  
-##  <a name="m_pdcrendertarget"></a>  CDCRenderTarget::m_pDCRenderTarget  
- Um ponteiro para um objeto ID2D1DCRenderTarget.  
-  
-```  
-ID2D1DCRenderTarget* m_pDCRenderTarget;  
-```  
-  
-##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget *  
- Interface de ID2D1DCRenderTarget retorna  
-  
-```  
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Ponteiro para uma interface ID2D1DCRenderTarget ou NULL se o objeto ainda não foi inicializado.
+
+##  <a name="m_pdcrendertarget"></a>  CDCRenderTarget::m_pDCRenderTarget
+
+Um ponteiro para um objeto ID2D1DCRenderTarget.
+
+```
+ID2D1DCRenderTarget* m_pDCRenderTarget;
+```
+
+##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget *
+
+Interface de ID2D1DCRenderTarget retorna
+
+```
 operator ID2D1DCRenderTarget*();
-```   
-  
-### <a name="return-value"></a>Valor de retorno  
- Ponteiro para uma interface ID2D1DCRenderTarget ou NULL se o objeto ainda não foi inicializado.  
-  
-## <a name="see-also"></a>Consulte também  
- [Classes](../../mfc/reference/mfc-classes.md)
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Ponteiro para uma interface ID2D1DCRenderTarget ou NULL se o objeto ainda não foi inicializado.
+
+## <a name="see-also"></a>Consulte também
+
+[Classes](../../mfc/reference/mfc-classes.md)

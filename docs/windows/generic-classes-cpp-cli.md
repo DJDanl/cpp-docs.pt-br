@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 09390e25ffe06ce6702aef68d73c352e063a48ef
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3dbf6d861dd446745ba0cc3581c7e3e5511c01d3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716775"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409357"
 ---
 # <a name="generic-classes-ccli"></a>Classes genéricas (C++/CLI)
 
@@ -47,38 +47,38 @@ class-body
 
 Na sintaxe acima, os seguintes termos são usados:
 
-*Atributos*  
+*Atributos*<br/>
 (Opcional) Informações declarativas adicionais. Para obter mais informações sobre atributos e classes de atributos, consulte atributos.
 
-*chave de classe*  
+*chave de classe*<br/>
 Qualquer um dos **classe** ou **typename**
 
 *tipo-parâmetro-identificador (es)*, lista separada por vírgulas de identificadores para especificar os nomes dos parâmetros de tipo.
 
-*cláusulas de restrição*  
+*cláusulas de restrição*<br/>
 Uma lista (não separada por vírgulas) de **onde** cláusulas especificando as restrições para os parâmetros de tipo. Assume a forma:
 
 > **em que** *identificador de parâmetro de tipo* **:** *lista de restrições***...** 
 
-*lista de restrições*  
+*lista de restrições*<br/>
 *interface ou classe*[`,` *...* ]
 
-*modificadores de acessibilidade*  
+*modificadores de acessibilidade*<br/>
 Modificadores de acessibilidade para a classe genérica. Para o tempo de execução do Windows, é o modificador permitido apenas **privada**. Para o common language runtime, os modificadores permitidos são **privados** e **público**.
 
-*identifier*  
+*identifier*<br/>
 O nome da classe genérica, qualquer identificador válido do C++.
 
-*Modificadores*  
+*Modificadores*<br/>
 (Opcional) Permitido incluem modificadores **lacrado** e **abstrata**.
 
-*Base de dados de lista*  
+*Base de dados de lista*<br/>
 Uma lista que contém uma classe base e qualquer implementado interfaces, todos separados por vírgulas.
 
-*corpo da classe*  
+*corpo da classe*<br/>
 O corpo da classe, que contém campos, funções de membro, etc.
 
-*declaradores*  
+*declaradores*<br/>
 Declarações de todas as variáveis desse tipo. Por exemplo: `^` *identificador*[`,` ...]
 
 Você pode declarar classes genéricas como essas (Observe que a palavra-chave **classe** pode ser usado em vez de **typename**). Neste exemplo, `ItemType`, `KeyType` e `ValueType` são tipos desconhecidos que são especificados no ponto em que o tipo. `HashTable<int, int>` é um tipo construído do tipo genérico `HashTable<KeyType, ValueType>`. Um número de diferentes tipos construídos pode ser construído a partir de um único tipo genérico. Tipos construídos construídos a partir de classes genéricas são tratados como qualquer outro tipo de classe ref.

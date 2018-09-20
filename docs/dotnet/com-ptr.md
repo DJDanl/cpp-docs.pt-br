@@ -17,24 +17,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f3c4e3bb91e161f9176bcf6964fc843d4e4bd707
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5e6a3f7936e21d22282fe37a29b5d91f2e50caa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104512"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434486"
 ---
 # <a name="comptr"></a>com::ptr
-Um wrapper para um objeto COM que pode ser usado como um membro de uma classe CLR. O wrapper também automatiza o gerenciamento de tempo de vida do objeto COM, liberando referências de propriedade no objeto quando seu destruidor é chamado. Semelhante a [classe CComPtr](../atl/reference/ccomptr-class.md).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-#include <msclr\com\ptr.h>  
-```  
-  
-## <a name="remarks"></a>Comentários  
- [com:: PTR classe](../dotnet/com-ptr-class.md) é definido no \<msclr\com\ptr.h > arquivo.  
-  
-## <a name="see-also"></a>Consulte também  
- [Biblioteca de suporte do C++](../dotnet/cpp-support-library.md)
+
+Um wrapper para um objeto COM que pode ser usado como um membro de uma classe CLR. O wrapper também automatiza o gerenciamento de tempo de vida do objeto COM, liberando referências de propriedade no objeto quando seu destruidor é chamado. Análogo à [classe CComPtr](../atl/reference/ccomptr-class.md).
+
+## <a name="syntax"></a>Sintaxe
+
+```
+#include <msclr\com\ptr.h>
+```
+
+## <a name="remarks"></a>Comentários
+
+[com:: PTR classe](../dotnet/com-ptr-class.md) é definido no \<msclr\com\ptr.h > arquivo.
+
+## <a name="see-also"></a>Consulte também
+
+[Biblioteca de suporte do C++](../dotnet/cpp-support-library.md)

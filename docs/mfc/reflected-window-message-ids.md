@@ -56,44 +56,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 037eaa864f4b24622fdd72e15674fb8489f9b4bb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ac529c3084917bd43fbb0a9fd51f1f0e3942447b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220008"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416013"
 ---
 # <a name="reflected-window-message-ids"></a>IDs de mensagem da janela refletida
-Uma maneira rápida de criar um controle ActiveX ou outro controle especializado, é a subclasse uma janela. Para obter mais informações, consulte [controles ActiveX MFC: subclasses de um controle de Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  
-  
- Para impedir que o recebimento de mensagens de janela enviadas por um controle subclasse do Windows, o contêiner do controle [COleControl](../mfc/reference/colecontrol-class.md) cria uma janela de "reflector" para interceptar determinadas mensagens de janela e enviá-los de volta para o controle. O controle, em seu procedimento de janela pode processar essas mensagens refletidas executando ações apropriadas para um controle ActiveX.  
-  
- A tabela a seguir mostra as mensagens que são interceptadas e as mensagens correspondentes que envia a janela do reflector.  
-  
-|Mensagem enviada pelo controle|Mensagens refletidas ao controle|  
-|---------------------------------|--------------------------------------|  
-|[WM_COMMAND](/windows/desktop/menurc/wm-command)|OCM_COMMAND|  
-|[WM_CTLCOLORBTN](/windows/desktop/Controls/wm-ctlcolorbtn)|OCM_CTLCOLORBTN|  
-|[WM_CTLCOLOREDIT](/windows/desktop/Controls/wm-ctlcoloredit)|OCM_CTLCOLOREDIT|  
-|[WM_CTLCOLORDLG](/windows/desktop/dlgbox/wm-ctlcolordlg)|OCM_CTLCOLORDLG|  
-|[WM_CTLCOLORLISTBOX](/windows/desktop/Controls/wm-ctlcolorlistbox)|OCM_CTLCOLORLISTBOX|  
-|[WM_CTLCOLORSCROLLBAR](/windows/desktop/Controls/wm-ctlcolorscrollbar)|OCM_CTLCOLORSCROLLBAR|  
-|[WM_CTLCOLORSTATIC](/windows/desktop/Controls/wm-ctlcolorstatic)|OCM_CTLCOLORSTATIC|  
-|[WM_DRAWITEM](/windows/desktop/Controls/wm-drawitem)|OCM_DRAWITEM|  
-|[WM_MEASUREITEM](/windows/desktop/Controls/wm-measureitem)|OCM_MEASUREITEM|  
-|[WM_DELETEITEM](/windows/desktop/Controls/wm-deleteitem)|OCM_DELETEITEM|  
-|[WM_VKEYTOITEM](/windows/desktop/Controls/wm-vkeytoitem)|OCM_VKEYTOITEM|  
-|[WM_CHARTOITEM](/windows/desktop/Controls/wm-chartoitem)|OCM_CHARTOITEM|  
-|[WM_COMPAREITEM](/windows/desktop/Controls/wm-compareitem)|OCM_COMPAREITEM|  
-|[MENSAGENS WM_HSCROLL](/windows/desktop/Controls/wm-hscroll)|OCM_HSCROLL|  
-|[WM_VSCROLL](/windows/desktop/Controls/wm-vscroll)|OCM_VSCROLL|  
-|[WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|  
-|[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)|OCM_NOTIFY|  
-  
+
+Uma maneira rápida de criar um controle ActiveX ou outro controle especializado, é a subclasse uma janela. Para obter mais informações, consulte [controles ActiveX MFC: subclasses de um controle de Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+
+Para impedir que o recebimento de mensagens de janela enviadas por um controle subclasse do Windows, o contêiner do controle [COleControl](../mfc/reference/colecontrol-class.md) cria uma janela de "reflector" para interceptar determinadas mensagens de janela e enviá-los de volta para o controle. O controle, em seu procedimento de janela pode processar essas mensagens refletidas executando ações apropriadas para um controle ActiveX.
+
+A tabela a seguir mostra as mensagens que são interceptadas e as mensagens correspondentes que envia a janela do reflector.
+
+|Mensagem enviada pelo controle|Mensagens refletidas ao controle|
+|---------------------------------|--------------------------------------|
+|[WM_COMMAND](/windows/desktop/menurc/wm-command)|OCM_COMMAND|
+|[WM_CTLCOLORBTN](/windows/desktop/Controls/wm-ctlcolorbtn)|OCM_CTLCOLORBTN|
+|[WM_CTLCOLOREDIT](/windows/desktop/Controls/wm-ctlcoloredit)|OCM_CTLCOLOREDIT|
+|[WM_CTLCOLORDLG](/windows/desktop/dlgbox/wm-ctlcolordlg)|OCM_CTLCOLORDLG|
+|[WM_CTLCOLORLISTBOX](/windows/desktop/Controls/wm-ctlcolorlistbox)|OCM_CTLCOLORLISTBOX|
+|[WM_CTLCOLORSCROLLBAR](/windows/desktop/Controls/wm-ctlcolorscrollbar)|OCM_CTLCOLORSCROLLBAR|
+|[WM_CTLCOLORSTATIC](/windows/desktop/Controls/wm-ctlcolorstatic)|OCM_CTLCOLORSTATIC|
+|[WM_DRAWITEM](/windows/desktop/Controls/wm-drawitem)|OCM_DRAWITEM|
+|[WM_MEASUREITEM](/windows/desktop/Controls/wm-measureitem)|OCM_MEASUREITEM|
+|[WM_DELETEITEM](/windows/desktop/Controls/wm-deleteitem)|OCM_DELETEITEM|
+|[WM_VKEYTOITEM](/windows/desktop/Controls/wm-vkeytoitem)|OCM_VKEYTOITEM|
+|[WM_CHARTOITEM](/windows/desktop/Controls/wm-chartoitem)|OCM_CHARTOITEM|
+|[WM_COMPAREITEM](/windows/desktop/Controls/wm-compareitem)|OCM_COMPAREITEM|
+|[MENSAGENS WM_HSCROLL](/windows/desktop/Controls/wm-hscroll)|OCM_HSCROLL|
+|[WM_VSCROLL](/windows/desktop/Controls/wm-vscroll)|OCM_VSCROLL|
+|[WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|
+|[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)|OCM_NOTIFY|
+
 > [!NOTE]
->  Se o controle for executado em um sistema Win32, há vários tipos de WM_CTLCOLOR\* mensagens pode receber. Para obter mais informações, consulte WM_CTLCOLORBTN, WM_CTLCOLORDLG, WM_CTLCOLOREDIT, WM_CTLCOLORLISTBOX, WM_CTLCOLORMSGBOX, WM_CTLCOLORSCROLLBAR, WM_CTLCOLORSTATIC.  
-  
-## <a name="see-also"></a>Consulte também  
- [Controles ActiveX MFC: Subclasses de um controle do Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)   
- [TN062: reflexão de mensagem para controles do Windows](../mfc/tn062-message-reflection-for-windows-controls.md)
+>  Se o controle for executado em um sistema Win32, há vários tipos de WM_CTLCOLOR\* mensagens pode receber. Para obter mais informações, consulte WM_CTLCOLORBTN, WM_CTLCOLORDLG, WM_CTLCOLOREDIT, WM_CTLCOLORLISTBOX, WM_CTLCOLORMSGBOX, WM_CTLCOLORSCROLLBAR, WM_CTLCOLORSTATIC.
+
+## <a name="see-also"></a>Consulte também
+
+[Controles ActiveX do MFC: subclasses de um controle do Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
+[TN062: reflexão de mensagem para controles do Windows](../mfc/tn062-message-reflection-for-windows-controls.md)
 

@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6927ce218c862329e1669aaa1a42316cab68ec86
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: e507942bbb0e6f77ec6423a51e4260f3fdd647a3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317375"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405184"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>Personalizando ou alterando cores (editor de imagens para ícones)
 
@@ -56,5 +56,5 @@ Nenhum
 
 ## <a name="see-also"></a>Consulte também
 
-[Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Trabalhando com cor](../windows/working-with-color-image-editor-for-icons.md)

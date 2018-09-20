@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7e4f82840a4c5620762ad57b5b9fa8dd7e62d0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 757fb13ac93fdf26aec67d570ab097b353975604
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345954"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408538"
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>Exemplo de confinamento do documento ativo: Office Binder
-O Microsoft Office Binder é um exemplo de um contêiner de documento ativo. Um Office Binder inclui dois painéis principais, como contêineres normalmente. O painel esquerdo contém ícones que correspondem aos documentos ativos associador. Cada documento é chamado um *seção* dentro do fichário. Por exemplo, um associador pode conter documentos do Word, arquivos do PowerPoint, planilhas do Excel e assim por diante.  
-  
- Clicar em um ícone no painel esquerdo ativa o documento ativo correspondente. O painel direito do fichário, em seguida, exibe o conteúdo do documento ativo atualmente selecionado.  
-  
- Se você abrir e ativa um associador de um documento do Word, palavra barra de menus e barras de ferramentas aparecem na parte superior do quadro de exibição e você pode editar o conteúdo do documento usando qualquer comando do Word ou a ferramenta. No entanto, a barra de menu é uma combinação de barras de menus de Binder e do Word. Porque o fichário e palavras têm **ajuda** mesclagem de menus, o conteúdo dos respectivos menus. Fornecer automaticamente aos contêineres de documento ativo como o Office Binder **ajuda** menu mesclando; para obter mais informações, consulte [ajudar a mesclagem de Menu](../mfc/help-menu-merging.md).  
-  
- Quando você seleciona um documento ativo de outro tipo de aplicativo, alterações na interface do fichário para acomodar que tipo de aplicativo do documento ativo. Por exemplo, se um associador contiver uma planilha do Excel, você observará que os menus do fichário alterar quando você selecionar a seção de planilha do Excel.  
-  
- É claro, há outros possíveis tipos de contêineres ao lado de associadores. Explorador de arquivos usa a interface de painel dual típica em que o painel esquerdo usa um controle de árvore para exibir uma lista hierárquica de diretórios em uma unidade ou a rede, enquanto o painel direito exibe os arquivos contidos na pasta selecionada no momento. Um tipo de navegador da Internet do contêiner (como o Microsoft Internet Explorer), em vez de usar uma interface de dois painéis, geralmente tem uma única estrutura e fornece navegação usando hiperlinks.  
-  
-## <a name="see-also"></a>Consulte também  
- [Contenção de documentos ativos](../mfc/active-document-containment.md)
+
+O Microsoft Office Binder é um exemplo de um contêiner de documento ativo. Um associador de Office inclui dois painéis principais, como contêineres normalmente fazem. O painel esquerdo contém ícones que correspondem aos documentos ativos do fichário. Cada documento é chamado de um *seção* dentro do associador. Por exemplo, um fichário pode conter arquivos do PowerPoint, documentos do Word, planilhas do Excel e assim por diante.
+
+Clicar em um ícone no painel esquerdo ativa o documento ativo correspondente. O painel direito do associador, em seguida, exibe o conteúdo do documento ativo atualmente selecionado.
+
+Se você abrir e ativa um documento do Word em um fichário, Word barra de menus e barras de ferramentas aparecem na parte superior do quadro de exibição, e você pode editar o conteúdo do documento usando qualquer comando do Word ou a ferramenta. No entanto, a barra de menu é uma combinação de barras de menus do associador tanto do Word. Porque o associador e o Word têm **ajudar** menus, o conteúdo dos respectivos menus são mesclados. Os contêineres de documento ativo, como Office Binder automaticamente fornecem **ajudar** menu mesclando; para obter mais informações, consulte [ajuda a mesclagem de Menu](../mfc/help-menu-merging.md).
+
+Quando você seleciona um documento ativo de outro tipo de aplicativo, alterações na interface do fichário para atender a esse tipo de aplicativo do documento ativo. Por exemplo, se um fichário contiver uma planilha do Excel, você observará que os menus do fichário alterar quando você seleciona a seção de planilha do Excel.
+
+É claro, há outros possíveis tipos de contêineres ao lado de associadores. Explorador de arquivos usa a interface dupla painel típica em que o painel esquerdo usa um controle de árvore para exibir uma lista hierárquica de diretórios em uma unidade ou a rede, enquanto o painel direito exibe os arquivos contidos no diretório selecionado no momento. Um tipo de navegador da Internet do contêiner (como o Microsoft Internet Explorer), em vez de usar uma interface dupla painel, geralmente tem um único quadro e fornece o uso de hiperlinks de navegação.
+
+## <a name="see-also"></a>Consulte também
+
+[Contenção de documentos ativos](../mfc/active-document-containment.md)
 

@@ -15,43 +15,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ea51d6cd811572d73b0de64072f3d335e2682fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d024c9468b06291ba93c4e404674925202fabcad
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381687"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406783"
 ---
 # <a name="servers-implementing-a-server"></a>Servidores: implementando um servidor
-Este artigo explica o código de que Assistente de aplicativo MFC cria para um aplicativo de servidor de edição visual. Se você não estiver usando o Assistente de aplicativo, este artigo lista as áreas em que você deve escrever código para implementar um aplicativo de servidor.  
-  
- Se você estiver usando o Assistente de aplicativo para criar um novo aplicativo de servidor, ele fornece uma quantidade significativa de código específico do servidor para você. Se você estiver adicionando funcionalidade de servidor de edição visual para um aplicativo existente, você deverá duplicar o código que o Assistente de aplicativo deve ter fornecido antes de adicionar o restante do código do servidor necessários.  
-  
- O código do servidor que fornece o Assistente de aplicativo se encaixa em várias categorias:  
-  
--   Definindo recursos do servidor:  
-  
-    -   O recurso de menu usado quando o servidor estiver editando um item inserido em sua própria janela.  
-  
-    -   Os recursos de menu e barra de ferramentas usados quando o servidor está ativo no local.  
-  
-     Para obter mais informações sobre esses recursos, consulte [Menus e recursos: adições de servidor](../mfc/menus-and-resources-server-additions.md).  
-  
--   Definir uma classe de item derivado de `COleServerItem`. Para obter mais detalhes sobre itens do servidor, consulte [servidores: itens de servidor](../mfc/servers-server-items.md).  
-  
--   Alterando a classe base da classe do documento para `COleServerDoc`. Para obter mais detalhes, consulte [servidores: Implementando documentos de servidor](../mfc/servers-implementing-server-documents.md).  
-  
--   Definir uma classe de janela com moldura derivado de `COleIPFrameWnd`. Para obter mais detalhes, consulte [servidores: Implementando janelas com moldura no local](../mfc/servers-implementing-in-place-frame-windows.md).  
-  
--   Criando uma entrada para o aplicativo do servidor do banco de dados de registro do Windows e registrando a nova instância do servidor com o sistema OLE. Para obter informações sobre este tópico, consulte [registro](../mfc/registration.md).  
-  
--   Inicializar e iniciar o aplicativo do servidor. Para obter informações sobre este tópico, consulte [registro](../mfc/registration.md).  
-  
- Para obter mais informações, consulte [COleServerItem](../mfc/reference/coleserveritem-class.md), [COleServerDoc](../mfc/reference/coleserverdoc-class.md), e [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md) no *referência da biblioteca de classe*.  
-  
-## <a name="see-also"></a>Consulte também  
- [Servidores](../mfc/servers.md)   
- [Contêineres](../mfc/containers.md)   
- [Menus e recursos (OLE)](../mfc/menus-and-resources-ole.md)   
- [Registro](../mfc/registration.md)
+
+Este artigo explica o código que o Assistente de aplicativo do MFC cria para um aplicativo de servidor de edição visual. Se você não estiver usando o Assistente de aplicativo, este artigo lista as áreas onde você deve escrever código para implementar um aplicativo de servidor.
+
+Se você estiver usando o Assistente de aplicativo para criar um novo aplicativo de servidor, ele fornece uma quantidade significativa de código específico do servidor para você. Se você estiver adicionando funcionalidade de servidor de edição visual para um aplicativo existente, você deve duplicar o código que o Assistente para aplicativo seria fornecidas antes de adicionar o restante do código do servidor necessárias.
+
+O código do servidor que fornece o Assistente de aplicativo se encaixa em várias categorias:
+
+- Definindo recursos do servidor:
+
+   - O recurso de menu usado quando o servidor está editando um item inserido em sua própria janela.
+
+   - Os recursos de menu e barra de ferramentas usados quando o servidor está ativo em vigor.
+
+     Para obter mais informações sobre esses recursos, consulte [Menus e recursos: adições de servidor](../mfc/menus-and-resources-server-additions.md).
+
+- Definir uma classe de item derivado de `COleServerItem`. Para obter mais detalhes sobre itens de servidor, consulte [servidores: itens do servidor](../mfc/servers-server-items.md).
+
+- Alterando a classe base da classe de documento para `COleServerDoc`. Para obter mais detalhes, consulte [servidores: Implementando documentos de servidor](../mfc/servers-implementing-server-documents.md).
+
+- Definindo uma classe de janela com moldura derivado de `COleIPFrameWnd`. Para obter mais detalhes, consulte [servidores: Implementando Windows de quadro in-loco](../mfc/servers-implementing-in-place-frame-windows.md).
+
+- Criando uma entrada para o aplicativo de servidor no banco de dados de registro do Windows e registrar a nova instância do servidor com o sistema OLE. Para obter informações sobre esse tópico, consulte [registro](../mfc/registration.md).
+
+- Inicializar e iniciar o aplicativo de servidor. Para obter informações sobre esse tópico, consulte [registro](../mfc/registration.md).
+
+Para obter mais informações, consulte [COleServerItem](../mfc/reference/coleserveritem-class.md), [COleServerDoc](../mfc/reference/coleserverdoc-class.md), e [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md) no *referência da biblioteca de classe*.
+
+## <a name="see-also"></a>Consulte também
+
+[Servidores](../mfc/servers.md)<br/>
+[Contêineres](../mfc/containers.md)<br/>
+[Menus e recursos (OLE)](../mfc/menus-and-resources-ole.md)<br/>
+[Registro](../mfc/registration.md)
 

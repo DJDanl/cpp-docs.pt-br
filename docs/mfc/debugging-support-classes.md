@@ -22,22 +22,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 942302a07a55adf7d7a1a89ac2b518e3dcaefe2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9d513eb8d51f5161e70b168bb541fe899b74f41c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342599"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419068"
 ---
 # <a name="debugging-support-classes"></a>Depurando classes de suporte
-MFC fornece as classes a seguir para ajudá-lo a depurar problemas de alocação de memória dinâmica.  
-  
- [CDumpContext](../mfc/reference/cdumpcontext-class.md)  
- Fornece um destino para despejos de diagnósticos.  
-  
- [CMemoryState](../mfc/reference/cmemorystate-structure.md)  
- Estrutura que fornece os instantâneos de uso de memória. Também é usado para comparar instantâneos de memória anteriores e posteriores.  
-  
-## <a name="see-also"></a>Consulte também  
- [Visão geral da classe](../mfc/class-library-overview.md)
+
+MFC fornece as classes a seguir para ajudá-lo a depurar problemas de alocação de memória dinâmica.
+
+[CDumpContext](../mfc/reference/cdumpcontext-class.md)<br/>
+Fornece um destino para despejos de diagnóstico.
+
+[CMemoryState](../mfc/reference/cmemorystate-structure.md)<br/>
+Estrutura que fornece os instantâneos do uso de memória. Também é usado para comparar instantâneos de memória anteriores e posteriores.
+
+## <a name="see-also"></a>Consulte também
+
+[Visão geral da classe](../mfc/class-library-overview.md)
 

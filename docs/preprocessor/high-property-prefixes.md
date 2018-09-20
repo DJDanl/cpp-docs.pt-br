@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ce21958dbb928a29debe21fb7cfaed4b9036141
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 6f188cd833551542e636e764e76784635ae2ccf2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539929"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422760"
 ---
 # <a name="highpropertyprefixes"></a>high_property_prefixes
 **Específico do C++**  
@@ -52,5 +52,5 @@ Por padrão, tratamento de erros de alto nível `propget`, `propput`, e `propput
   
 ## <a name="see-also"></a>Consulte também  
  
-[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import diretiva](../preprocessor/hash-import-directive-cpp.md)

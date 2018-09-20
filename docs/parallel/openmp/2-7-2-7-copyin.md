@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ee711bfb24e7a2a1cbada1a7e01a243e204f4a8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 94b4c529b7ad6fd717be1e1dee0edd3ff9ac3ff5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689370"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426881"
 ---
 # <a name="2727-copyin"></a>2.7.2.7 copyin
-O **copyin** cláusula fornece um mecanismo para atribuir o mesmo valor para **threadprivate** variáveis para cada thread na equipe de região paralela em execução. Para cada variável especificada em uma **copyin** cláusula, o valor da variável no thread principal da equipe é copiada, como se fosse pela atribuição nas cópias de thread privado no início da região de dados paralela. A sintaxe do **copyin** cláusula é o seguinte:  
-  
-```  
-  
-copyin(  
-variable-list  
-)  
-  
-```  
-  
- As restrições para o **copyin** cláusula são da seguinte maneira:  
-  
--   Uma variável que é especificada no **copyin** cláusula deve ter um operador de atribuição de cópia não ambígua acessível.  
-  
--   Uma variável que é especificada no **copyin** cláusula deve ser um **threadprivate** variável.
+
+O **copyin** cláusula fornece um mecanismo para atribuir o mesmo valor para **threadprivate** variáveis para cada thread em que a equipe a região paralela em execução. Para cada variável especificada em uma **copyin** cláusula, o valor da variável no thread principal da equipe é copiada, como se por atribuição às cópias privadas de thread no início da região paralela. A sintaxe do **copyin** cláusula é da seguinte maneira:
+
+```
+
+copyin(
+variable-list
+)
+
+```
+
+As restrições para o **copyin** cláusula são da seguinte maneira:
+
+- Uma variável que é especificada na **copyin** cláusula deve ter um operador de atribuição de cópia acessível inequívoca.
+
+- Uma variável que é especificada na **copyin** cláusula deve ser um **threadprivate** variável.

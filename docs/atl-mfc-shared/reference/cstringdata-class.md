@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b212c0a8af3fde7fb8630b2fcb513f5edad2ee
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: effc4166fa25cec03ea62a5dd35a5396d2d2a3f2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759682"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419783"
 ---
 # <a name="cstringdata-class"></a>Classe CStringData
 
@@ -261,6 +261,6 @@ Bloqueando e desbloqueando é usado quando o desenvolvedor deve assegurar que os
 
 ## <a name="see-also"></a>Consulte também
 
-[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
+[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes compartilhadas ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46b09b5cbe74849c3dc08e8faee3ee4ca645a55b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 13ce7d2a35245716adc70b9e84532ea7d1a4a440
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602928"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432394"
 ---
 # <a name="delegate--c-component-extensions"></a>delegado (Extensões de Componentes C++)
 
@@ -57,16 +57,16 @@ delegate-type-identifier
 
 ### <a name="parameters"></a>Parâmetros
 
-*access*  
+*access*<br/>
 (opcional) A acessibilidade do delegado, que pode ser **pública** (o padrão) ou **privada**. O protótipo de função também pode ser qualificado com o **const** ou **volátil** palavras-chave.
 
-*tipo de retorno*  
+*tipo de retorno*<br/>
 O tipo de retorno do protótipo da função.
 
-*Identificador de tipo de delegado*  
+*Identificador de tipo de delegado*<br/>
 O nome do tipo de delegado declarado.
 
-*Parâmetros*  
+*Parâmetros*<br/>
 (Opcional) Os tipos e identificadores de protótipo da função.
 
 ### <a name="remarks"></a>Comentários
@@ -91,10 +91,10 @@ function_declaration
 
 ### <a name="parameters"></a>Parâmetros
 
-*access*  
+*access*<br/>
 (opcional) A acessibilidade do delegado fora do assembly pode ser público ou privado.  O padrão é particular.  Dentro de uma classe, um delegado pode ter qualquer acessibilidade.
 
-*function_declaration*  
+*function_declaration*<br/>
 A assinatura da função que pode ser associada ao delegado. O tipo de retorno de um delegado pode ser qualquer tipo gerenciado. Por motivos de interoperabilidade, é recomendável que o tipo de retorno de um delegado ser um tipo com CLS.
 
 Para definir um delegate não associado, o primeiro parâmetro na *function_declaration* deve ser o tipo dos **isso** ponteiro para o objeto.

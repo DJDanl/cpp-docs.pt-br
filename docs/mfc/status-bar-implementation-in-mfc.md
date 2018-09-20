@@ -26,39 +26,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cadb06076ff7a3dd481a1bcedc9cd0afe4989f28
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: e593227daabb2d2c25d593cfb58ef23ba7855be7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950442"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436709"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implementação da barra de status no MFC
-Um [CStatusBar](../mfc/reference/cstatusbar-class.md) objeto é uma barra de controle com uma linha de texto de painéis de saída. Os painéis de saída são usados como linhas de mensagem e indicadores de status. Exemplos incluem as linhas de mensagem de Ajuda do menu que explicam rapidamente o comando de menu selecionado e os indicadores que mostram o status de SCROLL LOCK, NUM LOCK e outras chaves.  
-  
- A partir da versão 4.0 do MFC, barras de status são implementadas usando a classe [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), que encapsula uma barra de controle comum de status. Para compatibilidade com versões anteriores, MFC retém a implementação da barra de status mais antiga na classe `COldStatusBar`. Descreve a documentação de versões anteriores do MFC `COldStatusBar` em `CStatusBar`.  
-  
- [CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl), uma função de membro novo MFC 4.0, permite aproveitar o suporte para personalização e funcionalidades adicionais da barra de status do controle comum do Windows. `CStatusBar` funções de membro lhe oferece a maioria da funcionalidade de controles comuns do Windows; No entanto, quando você chama `GetStatusBarCtrl`, você pode fornecer as barras de status ainda mais as características de uma barra de status. Quando você chama `GetStatusBarCtrl`, ela retornará uma referência a um `CStatusBarCtrl` objeto. Você pode usar essa referência para manipular o controle de barra de status.  
-  
- A figura a seguir mostra uma barra de status que exibe vários indicadores.  
-  
- ![Barra de status](../mfc/media/vc37dy1.gif "vc37dy1")  
-Uma barra de Status  
-  
- Como a barra de ferramentas, o objeto de barra de status é inserido na janela do quadro seu pai e é criado automaticamente quando a janela do quadro é construída. Barra de status, como todas as barras de controle é destruída automaticamente bem quando o quadro pai é destruído.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
-  
--   [Atualizando o texto de um painel da barra de status](../mfc/updating-the-text-of-a-status-bar-pane.md)  
-  
--   Classes MFC [CStatusBar](../mfc/reference/cstatusbar-class.md) e [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)  
-  
--   [Barras de controle](../mfc/control-bars.md)  
-  
--   [Barras da caixa de diálogo](../mfc/dialog-bars.md)  
-  
--   [Barras de ferramentas (implementação da barra de ferramentas MFC)](../mfc/mfc-toolbar-implementation.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Barras de status](../mfc/status-bars.md)
+
+Um [CStatusBar](../mfc/reference/cstatusbar-class.md) objeto é uma barra de controle com uma linha de painéis de saída de texto. Os painéis de saída normalmente são usados como linhas de mensagem e como os indicadores de status. Exemplos incluem as linhas de mensagem de Ajuda do menu que explicam resumidamente o comando de menu selecionado e os indicadores que mostram o status de SCROLL LOCK, NUM LOCK e outras chaves.
+
+A partir do MFC versão 4.0, barras de status são implementadas usando a classe [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), que encapsula um controle comum da barra de status. Para compatibilidade com versões anteriores, o MFC retém a implementação da barra de status mais antiga na classe `COldStatusBar`. Descreve a documentação de versões anteriores do MFC `COldStatusBar` sob `CStatusBar`.
+
+[CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl), uma função de membro novo a MFC 4.0, permite que você tirar proveito do suporte do controle do Windows comuns para personalização e funcionalidade adicional da barra de status. `CStatusBar` funções de membro lhe oferece a maioria da funcionalidade dos controles comuns do Windows; No entanto, quando você chama `GetStatusBarCtrl`, você pode dar as barras de status ainda mais as características de uma barra de status. Quando você chama `GetStatusBarCtrl`, ele retornará uma referência a um `CStatusBarCtrl` objeto. Você pode usar essa referência para manipular o controle de barra de status.
+
+A figura a seguir mostra uma barra de status que exibe vários indicadores.
+
+![Barra de status](../mfc/media/vc37dy1.gif "vc37dy1") A barra de Status
+
+Como a barra de ferramentas, o objeto de barra de status é inserido em sua janela de quadro pai e é construído automaticamente quando a janela do quadro é construída. Barra de status, como todas as barras de controle é destruída automaticamente também quando o quadro pai é destruído.
+
+## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+
+- [Atualizando o texto de um painel da barra de status](../mfc/updating-the-text-of-a-status-bar-pane.md)
+
+- Classes MFC [CStatusBar](../mfc/reference/cstatusbar-class.md) e [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)
+
+- [Barras de controle](../mfc/control-bars.md)
+
+- [Barras da caixa de diálogo](../mfc/dialog-bars.md)
+
+- [Barras de ferramentas (implementação de barra de ferramentas do MFC)](../mfc/mfc-toolbar-implementation.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Barras de status](../mfc/status-bars.md)
 

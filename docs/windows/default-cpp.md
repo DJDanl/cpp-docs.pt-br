@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6baefb7ef0af5054cb46ed4ad74b6a6bf80fbb61
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 28b162b63ad1fbd2363b4519817d466055e96bc9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699907"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429273"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -41,7 +41,7 @@ Indica que o personalizado ou dispinterface definido dentro de uma coclass repre
 
 ### <a name="parameters"></a>Parâmetros
 
-*Interface1*  
+*Interface1*<br/>
 A interface padrão que será disponibilizada para os ambientes de script que cria um objeto com base na classe definida com o **padrão** atributo.
 
 Se nenhuma interface padrão for especificado, a primeira ocorrência de uma interface nonsource é usada como o padrão.
@@ -125,6 +125,6 @@ Para obter mais informações, consulte [contextos de atributo](../windows/attri
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](../windows/idl-attributes.md)  
-[Atributos de classe](../windows/class-attributes.md)  
+[Atributos de IDL](../windows/idl-attributes.md)<br/>
+[Atributos de classe](../windows/class-attributes.md)<br/>
 [coclass](../windows/coclass.md)  

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce50d2c70107b4c88f223e32fdd8cc083df38840
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e2a780719e106c6045d1f80227045ab40607b336
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685539"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426532"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Passo a passo: Atualizando o aplicativo de rabisco MFC (parte 1)
 
@@ -292,5 +292,5 @@ Você modificou o clássico exemplo de rabisco MFC de 1.0 para usar o Designer d
 
 ## <a name="see-also"></a>Consulte também
 
-[Explicações Passo a Passo](../mfc/walkthroughs-mfc.md)  
-[Explicação passo a passo: atualizando o aplicativo de rabisco MFC (parte 2)] (.. / mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)  
+[Explicações Passo a Passo](../mfc/walkthroughs-mfc.md)<br/>
+[Explicação passo a passo: atualizando o aplicativo de rabisco MFC (parte 2)] (.. / mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

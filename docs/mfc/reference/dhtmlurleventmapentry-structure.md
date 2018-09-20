@@ -16,36 +16,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee629d9dcffc80ce20306989cad72d466722af87
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: bbac4b372f06f288eede8c578372d45334a5d707
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37123325"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427518"
 ---
 # <a name="dhtmlurleventmapentry-structure"></a>Estrutura DHtmlUrlEventMapEntry
-O `DHtmlUrlEventMapEntry` estrutura oferece suporte ao mapa de evento de multi-URL.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-struct DHtmlUrlEventMapEntry  
-{  
-LPCTSTR szUrl;  
-const DHtmlEventMapEntry *pEventMap;  
-};  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- *szUrl*  
- A URL.  
-  
- *pEventMap*  
- O mapa de evento associado à URL.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxdhtml.h  
-  
-## <a name="see-also"></a>Consulte também  
- [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+
+O `DHtmlUrlEventMapEntry` estrutura oferece suporte ao mapa de evento de várias URLs.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+struct DHtmlUrlEventMapEntry
+{
+LPCTSTR szUrl;
+const DHtmlEventMapEntry *pEventMap;
+};
+```
+
+#### <a name="parameters"></a>Parâmetros
+
+*szUrl*<br/>
+A URL.
+
+*pEventMap*<br/>
+O mapa de evento associado à URL.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** afxdhtml.h
+
+## <a name="see-also"></a>Consulte também
+
+[Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 

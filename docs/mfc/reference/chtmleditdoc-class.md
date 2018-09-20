@@ -24,89 +24,100 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d6d8f5f8fa3867e1a9e38dc6bf919d57ead72de
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 77219f4cac64faf2604c427a2c4abf3babfd26a3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335598"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425348"
 ---
 # <a name="chtmleditdoc-class"></a>Classe CHtmlEditDoc
-Com o [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), fornece a funcionalidade da plataforma de edição WebBrowser no contexto da arquitetura de exibição de documento do MFC.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-class AFX_NOVTABLE CHtmlEditDoc : public CDocument  
-```  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-constructors"></a>Construtores Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CHtmlEditDoc::CHtmlEditDoc](#chtmleditdoc)|Constrói um objeto `CHtmlEditDoc`.|  
-  
-### <a name="public-methods"></a>Métodos Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CHtmlEditDoc::GetView](#getview)|Recupera o `CHtmlEditView` objeto anexado a este documento.|  
-|[CHtmlEditDoc::IsModified](#ismodified)|Retorna se o controle WebBrowser de associados do modo de exibição contém um documento que foi modificado pelo usuário.|  
-|[CHtmlEditDoc::OpenURL](#openurl)|Abre uma URL.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- [CDocument](../../mfc/reference/cdocument-class.md)  
-  
- `CHtmlEditDoc`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxhtml.h  
-  
-##  <a name="chtmleditdoc"></a>  CHtmlEditDoc::CHtmlEditDoc  
- Constrói um objeto `CHtmlEditDoc`.  
-  
-```  
+
+Com o [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), fornece a funcionalidade da plataforma de edição WebBrowser no contexto da arquitetura de exibição de documento do MFC.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+class AFX_NOVTABLE CHtmlEditDoc : public CDocument
+```
+
+## <a name="members"></a>Membros
+
+### <a name="public-constructors"></a>Construtores Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CHtmlEditDoc::CHtmlEditDoc](#chtmleditdoc)|Constrói um objeto `CHtmlEditDoc`.|
+
+### <a name="public-methods"></a>Métodos Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CHtmlEditDoc::GetView](#getview)|Recupera o `CHtmlEditView` objeto anexado a este documento.|
+|[CHtmlEditDoc::IsModified](#ismodified)|Retorna se o controle WebBrowser de associados do modo de exibição contém um documento que foi modificado pelo usuário.|
+|[CHtmlEditDoc::OpenURL](#openurl)|Abre uma URL.|
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+[CDocument](../../mfc/reference/cdocument-class.md)
+
+`CHtmlEditDoc`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** afxhtml.h
+
+##  <a name="chtmleditdoc"></a>  CHtmlEditDoc::CHtmlEditDoc
+
+Constrói um objeto `CHtmlEditDoc`.
+
+```
 CHtmlEditDoc();
-```  
-  
-##  <a name="getview"></a>  CHtmlEditDoc::GetView  
- Recupera o [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) objeto anexado a este documento.  
-  
-```  
-virtual CHtmlEditView* GetView() const;  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
- Retorna um ponteiro para o documento `CHtmlEditView` objeto.  
-  
-##  <a name="ismodified"></a>  CHtmlEditDoc::IsModified  
- Retorna se o controle WebBrowser de associados do modo de exibição contém um documento que foi modificado pelo usuário.  
-  
-```  
+```
+
+##  <a name="getview"></a>  CHtmlEditDoc::GetView
+
+Recupera o [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) objeto anexado a este documento.
+
+```
+virtual CHtmlEditView* GetView() const;
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Retorna um ponteiro para o documento `CHtmlEditView` objeto.
+
+##  <a name="ismodified"></a>  CHtmlEditDoc::IsModified
+
+Retorna se o controle WebBrowser de associados do modo de exibição contém um documento que foi modificado pelo usuário.
+
+```
 virtual BOOL IsModified();
-```  
-  
-##  <a name="openurl"></a>  CHtmlEditDoc::OpenURL  
- Abre uma URL.  
-  
-```  
+```
+
+##  <a name="openurl"></a>  CHtmlEditDoc::OpenURL
+
+Abre uma URL.
+
+```
 virtual BOOL OpenURL(LPCTSTR lpszURL);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- *lpszURL*  
- A URL para abrir.  
-  
-### <a name="return-value"></a>Valor de retorno  
- Retorna verdadeiro em caso de êxito, FALSE em caso de falha.  
-  
-## <a name="see-also"></a>Consulte também  
- [Exemplo de HTMLEdit](../../visual-cpp-samples.md)   
- [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*lpszURL*<br/>
+A URL para abrir.
+
+### <a name="return-value"></a>Valor de retorno
+
+Retorna verdadeiro em caso de êxito, FALSE em caso de falha.
+
+## <a name="see-also"></a>Consulte também
+
+[Exemplo de HTMLEdit](../../visual-cpp-samples.md)<br/>
+[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
 

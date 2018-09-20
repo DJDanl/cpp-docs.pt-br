@@ -1,5 +1,5 @@
 ---
-title: Evitando exceções lançadas por objetos COM criados com o clr-| Microsoft Docs
+title: Evitando as exceções geradas por objetos COM criados com - clr | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,17 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0efd2af7eb4bf8a70bff983d627f802f1976c6ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 687585d0b25c64f5575646de3cd4823e0a89988e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103506"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408956"
 ---
 # <a name="avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr"></a>Evitando exceções no desligamento do CLR durante o consumo dos objetos COM criados com /clr
-Depois que o common language runtime (CLR) entra em modo de desligamento, funções nativas tem acesso limitado aos serviços CLR. Ao tentar chamar a versão em um objeto COM é compilado com **/clr**, o CLR fará a transição para o código nativo e, em seguida, transições de volta para o código gerenciado para atender à chamada de IUnknown:: Release (que é definida no código gerenciado). O CLR impede que a chamada no código gerenciado porque ele está em modo de desligamento.  
-  
- Para resolver esse problema, certifique-se de que destruidores chamadas de métodos de versão contém somente código nativo.  
-  
-## <a name="see-also"></a>Consulte também  
- [Assemblies mistos (nativos e gerenciados)](../dotnet/mixed-native-and-managed-assemblies.md)
+
+Depois que o common language runtime (CLR) entra em modo de desligamento, funções nativas têm acesso limitado aos serviços CLR. Ao tentar chamar a versão em um objeto COM é compilado com **/clr**, o CLR fará a transição para código nativo e, em seguida, faz a transição de volta em código gerenciado para a chamada de IUnknown:: Release (que é definida no código gerenciado) de serviço. O CLR impede que a chamada para o código gerenciado, pois ele está no modo de desligamento.
+
+Para resolver esse problema, certifique-se de que os destruidores chamados de métodos de versão contêm somente código nativo.
+
+## <a name="see-also"></a>Consulte também
+
+[Assemblies mistos (nativos e gerenciados)](../dotnet/mixed-native-and-managed-assemblies.md)

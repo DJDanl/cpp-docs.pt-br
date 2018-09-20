@@ -317,107 +317,109 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f7d1ef39a80ce8a06cef14ad227c7de54163644
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc2a7d2d51a66742794d0a58da19e77463318fc7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372541"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411723"
 ---
 # <a name="internal-classes"></a>Classes internas
-As classes a seguir são usadas internamente em MFC. Para fins de exatidão, esta seção descreve essas classes internas, mas eles não se destina a ser usado diretamente no seu código.  
-  
-## <a name="in-this-section"></a>Nesta seção  
-  
-|Classe|Descrição|  
-|-----------|-----------------|  
-|`CCommandManager Class`|O `CCommandManager` classe gerencia comandos e sua associação com imagens.|  
-|`CDialogImpl Class (MFC)`|Fornece detalhes de implementação para classes com base em caixa de diálogo, como `CDialogEx`.|  
-|`CDocumentAdapter Class`|Implementa a interface IDocument necessária para a pesquisa e organizar manipuladores.|  
-|`CFrameImpl Class`|O `CFrameImpl` classe manipula a personalização da barra de ferramentas para as seguintes classes de janela do quadro: [classe CWinAppEx é](../../mfc/reference/cframewndex-class.md), [classe CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md), e [COleIPFrameWndEx classe](../../mfc/reference/coleipframewndex-class.md).|  
-|`CFullScreenImpl Class`|Funcionalidade de tela inteira implementa comuns para aplicativos SDI e MDI.|  
-|`CMDIClientAreaWnd Class`|O `CMDIClientAreaWnd` classe é uma classe auxiliar que simplifica a implementação de guias MDI e grupos MDI com guias.|  
-|`CMemDC Class`|Uma classe auxiliar para um contexto de dispositivo de memória. O contexto de dispositivo de memória oferece suporte a desenho fora da tela.|  
-|`CMenuHash Class`|Lê o estado do `CMFCToolBar` objetos de um arquivo ou grava o estado de um arquivo morto.|  
-|`CMenuImages Class`|Fornece a funcionalidade para exibir imagens predefinidas, como fechar botões, maximizar botões, botões de opção e setas.|  
-|`CMFCCaptionButtonEx Class`|Mantém a área não cliente dos botões de legenda do sistema.|  
-|`CMFCCaptionMenuButton Class`|Representa um botão de menu que está localizado na área de legenda de um painel de tarefas ou a barra de ferramentas.|  
-|`CMFCColorPropertySheet Class`|Usado por [CMFCColorDialog classe](../../mfc/reference/cmfccolordialog-class.md) para fornecer uma caixa de diálogo.|  
-|`CMFCControlBarImpl Class`|Fornece detalhes de implementação para controlar as classes de barra, como `CMFCReBar` e `CMFCToolBar`.|  
-|`CMFCControlRenderer Class`|Uma classe auxiliar que manipula o processamento de imagem.|  
-|`CMFCControlRendererInfo Class`|Uma classe auxiliar para passar parâmetros para `CMFCControlRenderer` classe.|  
-|`CMFCCustomizeButton Class`|Oferece suporte a um comando de menu ou um botão que inicia uma caixa de diálogo de personalização.|  
-|`CMFCCustomizeMenuButton Class`|Representa um único botão em um menu de personalização.|  
-|`CMFCDropDownListBox Class`|Fornece a funcionalidade de caixa de listagem suspensa para caixas de combinação de faixa de opções.|  
-|`CMFCMousePropertyPage Class`|Uma página de propriedade que permite que o usuário personalizar o comportamento do mouse.|  
-|`CMFCOutlookBarPaneAdapter Class`||  
-|`CMFCOutlookBarPaneButton Class`|Implementa um botão que adiciona a estrutura para um `CMFCOutlookBarPane` objeto.|  
-|`CMFCOutlookBarPaneList Class`|Estende o `CMFCOutlookBarPane` classe para fornecer o estilo visual do Outlook.|  
-|`CMFCOutlookBarScrollButton Class`|Fornece a funcionalidade de rolagem para o `CMFCOutlookBarTabCtrl` classe.|  
-|`CMFCOutlookBarToolBar Class`|Implementa uma barra de ferramentas que possui o estilo visual do Outlook 2003.|  
-|`CMFCPropertySheetCategoryInfo Class`|Representa um nó em um controle de árvore.|  
-|`CMFCPropertySheetTabCtrl Class`|Estende o `CMFCTabCtrl` classe para fornecer funcionalidade de folha de propriedade.|  
-|`CMFCProperySheetListBox Class`|Estende o `CListBox` classe para fornecer funcionalidade de folha de propriedade.|  
-|`CMFCReBarState Class`||  
-|`CMFCRibbonCaptionButton Class`|Implementa um botão de legenda do sistema.|  
-|`CMFCRibbonCmdUI Class`|Atualizações de faixa da barra objetos conforme necessário quando o aplicativo estiver ocioso.|  
-|`CMFCRibbonCommandsListBox Class`||  
-|`CMFCRibbonDefaultPanelButton Class`||  
-|`CMFCRibbonGalleryIcon Class`|Representa um item em uma `CMFCRibbonGallery` objeto.|  
-|`CMFCRibbonKeyboardCustomizeDialog Class`|Implementa uma caixa de diálogo de personalização de teclado para aplicativos que contêm barras de faixa de opções.|  
-|`CMFCRibbonKeyTip Class`|Implementa uma janela pop-up que exibe uma dica de chave para uma barra de faixa de opções.|  
-|`CMFCRibbonPanelMenu Class`||  
-|`CMFCRibbonPanelMenuBar Class`|Representa uma barra de menus pop-up na barra de faixa de opções.|  
-|`CMFCRibbonQuickAccessToolBar Class`|Implementa a barra de ferramentas de acesso rápido para um elemento de faixa de opções.|  
-|`CMFCRibbonRichEditCtrl Class`|Implementa um controle de edição que está localizado em uma barra de faixa de opções.|  
-|`CMFCRibbonTab Class`|Representa uma guia em uma barra de faixa de opções.|  
-|`CMFCShadowRenderer Class`||  
-|`CMFCShowAllButton Class`|Representa um botão que está localizado na parte inferior de um menu pop-up que se expande para mostrar os comandos ocultos.|  
-|`CMFCStatusBarPaneInfo Class`|Descreve o conteúdo e a aparência de um `CMFCStatusBar` painel.|  
-|`CMFCTabButton Class`|Fornece a funcionalidade de botão de tabulação para controles de guia.|  
-|`CMFCTabInfo Class`|Fornece informações sobre os controles de guia para guia.|  
-|`CMFCTasksPaneFrameWnd Class`|Gerencia os botões de legenda personalizado de um painel de tarefas.|  
-|`CMFCTasksPanePropertyPage Class`|Gerencia a relação entre um `CMFCTasksPane` objeto e seu nome.|  
-|`CMFCTasksPaneToolBar Class`|Implementa uma barra de ferramentas de navegação que está localizada na parte superior de uma `CMFCTasksPane` objeto.|  
-|`CMFCToolBarButtonsListButton Class`|Exibe uma lista de imagens que o usuário pode selecionar durante a personalização no **aparência botão** caixa de diálogo.|  
-|`CMFCToolBarDateTimeCtrlImpl Class`|Implementa uma origem para soltar para `CMFCToolBar` objetos.|  
-|`CMFCToolBarDropSource Class`|Implementa uma origem para soltar para `CMFCToolBar` objetos.|  
-|`CMFCToolBarDropTarget Class`|Implementa um destino para `CMFCToolBar` objetos.|  
-|`CMFCToolBarEditCtrl Class`|Fornece a funcionalidade de controle de edição para `CMFCToolBarEditBoxButton` objetos.|  
-|`CMFCToolBarMenuButtonsButton Class`|Representa os botões de legenda sistema localizado à direita de uma barra de menus.|  
-|`CMFCToolBarNameDialog Class`|Representa uma caixa de diálogo que permite que o usuário especifique uma nova legenda da barra de ferramentas.|  
-|`CMFCToolBarsCommandsListBox Class`|Representa uma caixa de listagem que contém uma lista de comandos da barra de ferramentas.|  
-|`CMFCToolBarsCommandsPropertyPage Class`|Personalização de comandos implementa em uma página de propriedades.|  
-|`CMFCToolBarsKeyboardPropertyPage Class`||  
-|`CMFCToolBarsListCheckBox Class`|Exibe uma lista das barras de ferramentas no **barras de ferramentas** página de um **personalizar** caixa de diálogo.|  
-|`CMFCToolBarsListPropertyPage Class`|Representa uma página de propriedade que mostra a lista das barras de ferramentas em uma **personalizar** caixa de diálogo.|  
-|`CMFCToolBarsMenuPropertyPage Class`|Representa uma página de propriedade que contém opções de personalização de menu em um **personalizar** caixa de diálogo.|  
-|`CMFCToolBarsOptionsPropertyPage Class`|Representa o **opções** página em uma **personalizar** caixa de diálogo.|  
-|`CMFCToolBarSpinEditBoxButton Class`|Representa um botão de rotação que está localizado em uma caixa de edição.|  
-|`CMFCToolBarsToolsPropertyPage Class`|Representa uma página de propriedade que permite ao usuário personalizar as ferramentas de usuário.|  
-|`CMFCToolBarSystemMenuButton Class`|Implementa um botão de legenda de sistema que a estrutura adiciona a barra de menus principal quando um usuário maximiza a uma janela de filho MDI.|  
-|`CMFCVisualManagerBitmapCache Class`|Gerencia `CMFCControlRenderer` objetos para melhorar o desempenho de operações em bitmaps.|  
-|`CMultiDocTemplateEx Class`|Estende o `CMultiDocTemplate` classe para fornecer acesso para a ID de recurso de menu.|  
-|`COleCntrFrameWndEx Class`||  
-|`COleDocIPFrameWndEx Class`|Fornece suporte OLE.|  
-|`COleServerDocEx Class`|Fornece operações em documentos de servidor OLE.|  
-|`CPaneContainerGC Class`||  
-|`CPngImage Class`|Fornece acesso aos recursos de imagem que usam o formato de arquivo. PNG.|  
-|`CPreviewViewEx Class`||  
-|`CRecentPaneContainerInfo Class`|Mantém o estado anterior de um painel.|  
-|`CRibbonCategoryScroll Class`|Implementa um botão de rolagem que é exibido quando não que se ajustar todos os elementos na área de uma barra de faixa de opções.|  
-|`CSmartDockingGroupGuide Class`|Representa o elemento central de um grupo de encaixe inteligente.|  
-|`CSmartDockingGroupGuidesManager Class`|Gerencia os guias de grupo encaixe inteligente.|  
-|`CSmartDockingGroupGuidesWnd Class`|Implementa uma janela não retangular em camadas que usa a estrutura para exibir o grupo central de guias de encaixe inteligente.|  
-|`CSmartDockingHighlighterWnd Class`|Implementa uma janela semitransparente que abrange a área a ser executada pelo objeto acopláveis painel que está sendo encaixado.|  
-|`CSmartDockingManager Class`|Fornece a funcionalidade de encaixe inteligente para `CDockingManager` objetos.|  
-|`CSmartDockingStandaloneGuide Class`|Implementa o guia de encaixe inteligente.|  
-|`CSmartDockingStandaloneGuideWnd Class`|Implementa uma janela não retangular em camadas que usa a estrutura para exibir os guias de encaixe inteligente.|  
-|`CTagManager Class`|O `CTagManager` classe é destinada para ler valores que são armazenados em formato XML marcado.|  
-|`CVSListBoxBase Class`|Fornece a funcionalidade básica para o `CVSListBox` classe.|  
-|`CVSListBoxEditCtrl Class`|Estende o controle de edição da caixa de listagem padrão exibindo um pequeno botão que abre uma caixa de diálogo.|  
-|`CVSToolsListBox Class`|Estende o controle de caixa de listagem padrão fornecendo botões adicionais para adicionar, excluir e mover itens na caixa de listagem.|  
-  
-## <a name="see-also"></a>Consulte também  
- [Aplicativos da área de trabalho MFC](../../mfc/mfc-desktop-applications.md)
+
+As classes a seguir são usadas internamente no MFC. Para fins de exatidão, esta seção descreve essas classes internas, mas eles não se destina a ser usado diretamente em seu código.
+
+## <a name="in-this-section"></a>Nesta seção
+
+|Classe|Descrição|
+|-----------|-----------------|
+|`CCommandManager Class`|O `CCommandManager` classe gerencia a comandos e sua associação com imagens.|
+|`CDialogImpl Class (MFC)`|Fornece detalhes de implementação para classes com base em caixa de diálogo, como `CDialogEx`.|
+|`CDocumentAdapter Class`|Interface de IDocument implementa necessária para pesquisar e organizar os manipuladores.|
+|`CFrameImpl Class`|O `CFrameImpl` classe manipula a personalização da barra de ferramentas para as seguintes classes de janela de quadro: [classe CFrameWndEx](../../mfc/reference/cframewndex-class.md), [classe CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md), e [classe COleIPFrameWndEx](../../mfc/reference/coleipframewndex-class.md).|
+|`CFullScreenImpl Class`|Implementa a funcionalidade de tela inteira comum para aplicativos SDI e MDI.|
+|`CMDIClientAreaWnd Class`|O `CMDIClientAreaWnd` classe é uma classe auxiliar que simplifica a implementação de guias MDI e grupos MDI com guias.|
+|`CMemDC Class`|Uma classe auxiliar para um contexto de dispositivo de memória. O contexto de dispositivo de memória oferece suporte a desenho fora da tela.|
+|`CMenuHash Class`|Lê o estado de `CMFCToolBar` objetos de um arquivo morto ou grava o estado em um arquivo morto.|
+|`CMenuImages Class`|Fornece a funcionalidade para exibir imagens predefinidas, como botões Fechar, botões, botões de opção e setas de maximizar.|
+|`CMFCCaptionButtonEx Class`|Contém a área não cliente de botões de legenda do sistema.|
+|`CMFCCaptionMenuButton Class`|Representa um botão de menu que está localizado na área de legenda de um painel de tarefas ou a barra de ferramentas.|
+|`CMFCColorPropertySheet Class`|Usado pelo [classe CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) para fornecer uma caixa de diálogo com guias.|
+|`CMFCControlBarImpl Class`|Fornece detalhes de implementação para controlar as classes de barra, como `CMFCReBar` e `CMFCToolBar`.|
+|`CMFCControlRenderer Class`|Uma classe auxiliar que manipula a renderização de imagem.|
+|`CMFCControlRendererInfo Class`|Uma classe auxiliar para passar parâmetros para `CMFCControlRenderer` classe.|
+|`CMFCCustomizeButton Class`|Dá suporte a um comando de menu ou um botão de barra de ferramentas que inicia uma caixa de diálogo de personalização.|
+|`CMFCCustomizeMenuButton Class`|Representa um único botão em um menu de personalização.|
+|`CMFCDropDownListBox Class`|Fornece a funcionalidade de caixa de lista suspensa para caixas de combinação da faixa de opções.|
+|`CMFCMousePropertyPage Class`|Uma página de propriedade que permite ao usuário personalizar o comportamento do mouse.|
+|`CMFCOutlookBarPaneAdapter Class`||
+|`CMFCOutlookBarPaneButton Class`|Implementa um botão que o framework adiciona a um `CMFCOutlookBarPane` objeto.|
+|`CMFCOutlookBarPaneList Class`|Estende o `CMFCOutlookBarPane` classe para fornecer o estilo visual do Outlook.|
+|`CMFCOutlookBarScrollButton Class`|Fornece a funcionalidade de rolagem para o `CMFCOutlookBarTabCtrl` classe.|
+|`CMFCOutlookBarToolBar Class`|Implementa uma barra de ferramentas que tem o estilo visual do Outlook 2003.|
+|`CMFCPropertySheetCategoryInfo Class`|Representa um nó em um controle de árvore.|
+|`CMFCPropertySheetTabCtrl Class`|Estende o `CMFCTabCtrl` classe para fornecer a funcionalidade de folha de propriedade.|
+|`CMFCProperySheetListBox Class`|Estende o `CListBox` classe para fornecer a funcionalidade de folha de propriedade.|
+|`CMFCReBarState Class`||
+|`CMFCRibbonCaptionButton Class`|Implementa um botão de legenda do sistema.|
+|`CMFCRibbonCmdUI Class`|Atualizações de faixa de opções da barra objetos conforme necessário quando o aplicativo estiver ocioso.|
+|`CMFCRibbonCommandsListBox Class`||
+|`CMFCRibbonDefaultPanelButton Class`||
+|`CMFCRibbonGalleryIcon Class`|Representa um item em uma `CMFCRibbonGallery` objeto.|
+|`CMFCRibbonKeyboardCustomizeDialog Class`|Implementa uma caixa de diálogo de personalização de teclado para aplicativos que contêm as barras de faixa de opções.|
+|`CMFCRibbonKeyTip Class`|Implementa uma janela pop-up que exibe uma dica de chave para uma barra de faixa de opções.|
+|`CMFCRibbonPanelMenu Class`||
+|`CMFCRibbonPanelMenuBar Class`|Representa uma barra de menus pop-up em uma barra de faixa de opções.|
+|`CMFCRibbonQuickAccessToolBar Class`|Implementa a barra de ferramentas de acesso rápido para um elemento de faixa de opções.|
+|`CMFCRibbonRichEditCtrl Class`|Implementa um controle de edição que está localizado em uma barra de faixa de opções.|
+|`CMFCRibbonTab Class`|Representa uma guia em uma barra de faixa de opções.|
+|`CMFCShadowRenderer Class`||
+|`CMFCShowAllButton Class`|Representa um botão que está localizado na parte inferior de um menu pop-up que se expande para mostrar os comandos ocultos.|
+|`CMFCStatusBarPaneInfo Class`|Descreve o conteúdo e a aparência de um `CMFCStatusBar` painel.|
+|`CMFCTabButton Class`|Fornece a funcionalidade do botão de tabulação para controles de guia.|
+|`CMFCTabInfo Class`|Fornece informações sobre os controles de guia para guia.|
+|`CMFCTasksPaneFrameWnd Class`|Gerencia os botões de legenda personalizado de um painel de tarefas.|
+|`CMFCTasksPanePropertyPage Class`|Gerencia a relação entre um `CMFCTasksPane` objeto e seu nome.|
+|`CMFCTasksPaneToolBar Class`|Implementa uma barra de ferramentas de navegação que está localizada na parte superior de um `CMFCTasksPane` objeto.|
+|`CMFCToolBarButtonsListButton Class`|Exibe uma lista de imagens que o usuário pode selecionar durante a personalização na **aparência botão** caixa de diálogo.|
+|`CMFCToolBarDateTimeCtrlImpl Class`|Implementa uma origem para soltar para `CMFCToolBar` objetos.|
+|`CMFCToolBarDropSource Class`|Implementa uma origem para soltar para `CMFCToolBar` objetos.|
+|`CMFCToolBarDropTarget Class`|Implementa um destino de soltar para `CMFCToolBar` objetos.|
+|`CMFCToolBarEditCtrl Class`|Fornece a funcionalidade de controle de edição para `CMFCToolBarEditBoxButton` objetos.|
+|`CMFCToolBarMenuButtonsButton Class`|Representa os botões de legenda do sistema que estão localizados à direita de uma barra de menus.|
+|`CMFCToolBarNameDialog Class`|Representa uma caixa de diálogo que permite que o usuário especifique uma nova legenda da barra de ferramentas.|
+|`CMFCToolBarsCommandsListBox Class`|Representa uma caixa de listagem que contém uma lista de comandos da barra de ferramentas.|
+|`CMFCToolBarsCommandsPropertyPage Class`|Personalização de comandos implementa em uma página de propriedade.|
+|`CMFCToolBarsKeyboardPropertyPage Class`||
+|`CMFCToolBarsListCheckBox Class`|Exibe uma lista das barras de ferramentas sobre o **barras de ferramentas** página de um **personalizar** caixa de diálogo.|
+|`CMFCToolBarsListPropertyPage Class`|Representa uma página de propriedades que mostra a lista das barras de ferramentas em uma **personalizar** caixa de diálogo.|
+|`CMFCToolBarsMenuPropertyPage Class`|Representa uma página de propriedade que contém as opções de personalização de menu em um **personalizar** caixa de diálogo.|
+|`CMFCToolBarsOptionsPropertyPage Class`|Representa o **opções** página em um **personalizar** caixa de diálogo.|
+|`CMFCToolBarSpinEditBoxButton Class`|Representa um botão de rotação que está localizado em uma caixa de edição.|
+|`CMFCToolBarsToolsPropertyPage Class`|Representa uma página de propriedades que permite ao usuário personalizar as ferramentas do usuário.|
+|`CMFCToolBarSystemMenuButton Class`|Implementa um botão de legenda do sistema que o framework adiciona a barra de menus principal quando um usuário maximiza uma janela filho MDI.|
+|`CMFCVisualManagerBitmapCache Class`|Gerencia `CMFCControlRenderer` objetos para melhorar o desempenho de operações em bitmaps.|
+|`CMultiDocTemplateEx Class`|Estende o `CMultiDocTemplate` classe para fornecer acesso para a ID do recurso de menu.|
+|`COleCntrFrameWndEx Class`||
+|`COleDocIPFrameWndEx Class`|Fornece suporte OLE.|
+|`COleServerDocEx Class`|Fornece operações em documentos de servidor OLE.|
+|`CPaneContainerGC Class`||
+|`CPngImage Class`|Fornece acesso aos recursos de imagem que usam o formato de arquivo. PNG.|
+|`CPreviewViewEx Class`||
+|`CRecentPaneContainerInfo Class`|Mantém o estado anterior de um painel de encaixe.|
+|`CRibbonCategoryScroll Class`|Implementa um botão de rolagem é exibida quando não que se ajustar todos os elementos na área de uma barra de faixa de opções.|
+|`CSmartDockingGroupGuide Class`|Representa o elemento central de um grupo de inteligentes de encaixe.|
+|`CSmartDockingGroupGuidesManager Class`|Gerencia os guias de grupo inteligentes de encaixe.|
+|`CSmartDockingGroupGuidesWnd Class`|Implementa uma janela não retangular em camadas que a estrutura usa para exibir o grupo central de guias inteligentes de encaixe.|
+|`CSmartDockingHighlighterWnd Class`|Implementa uma janela semitransparente que abrange a área a ser executada pelo objeto de painel encaixáveis que está sendo encaixado.|
+|`CSmartDockingManager Class`|Fornece a funcionalidade inteligente de encaixe `CDockingManager` objetos.|
+|`CSmartDockingStandaloneGuide Class`|Implementa o guia inteligentes de encaixe.|
+|`CSmartDockingStandaloneGuideWnd Class`|Implementa uma janela não retangular em camadas que a estrutura usa para exibir guias inteligentes de encaixe.|
+|`CTagManager Class`|O `CTagManager` classe destina-se para ler os valores que são armazenados em formato XML com marcas de formatação.|
+|`CVSListBoxBase Class`|Fornece a funcionalidade básica para o `CVSListBox` classe.|
+|`CVSListBoxEditCtrl Class`|Estende o controle de edição de caixa de listagem padrão, exibindo um pequeno botão que abre uma caixa de diálogo.|
+|`CVSToolsListBox Class`|Estende o controle de caixa de listagem padrão fornecendo outros botões para adicionar, excluir e mover itens na caixa de listagem.|
+
+## <a name="see-also"></a>Consulte também
+
+[Aplicativos da área de trabalho MFC](../../mfc/mfc-desktop-applications.md)
 

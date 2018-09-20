@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18616b1010dfe6a23861c512b1113c30fe5251ce
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: 27a2cfaaf4ddb5ae58cdcd212b5fdcb7ded73bb0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535347"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434720"
 ---
 # <a name="implements-structure"></a>Implementa estrutura
 
@@ -69,37 +69,37 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
 
 ### <a name="parameters"></a>Parâmetros
 
-*I0*  
+*I0*<br/>
 A ID de interface inicial. (Obrigatório)
 
-*I1*  
+*I1*<br/>
 A primeira ID de interface. (Opcional)
 
-*I2*  
+*I2*<br/>
 A segunda ID de interface. (Opcional)
 
-*I3*  
+*I3*<br/>
 A terceira ID de interface. (Opcional)
 
-*I4*  
+*I4*<br/>
 A quarta ID de interface. (Opcional)
 
-*I5*  
+*I5*<br/>
 A quinta ID de interface. (Opcional)
 
-*I6*  
+*I6*<br/>
 A sexta ID de interface. (Opcional)
 
-*I7*  
+*I7*<br/>
 A sétima ID de interface. (Opcional)
 
-*I8*  
+*I8*<br/>
 A ID de interface do oitavo. (Opcional)
 
-*I9*  
+*I9*<br/>
 A nona ID de interface. (Opcional)
 
-*flags*  
+*flags*<br/>
 Sinalizadores de configuração para a classe. Um ou mais [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) enumerações que são especificadas em uma [RuntimeClassFlags](../windows/runtimeclassflags-structure.md) estrutura.
 
 ## <a name="remarks"></a>Comentários
@@ -163,10 +163,10 @@ __forceinline HRESULT CanCastTo(
 
 ### <a name="parameters"></a>Parâmetros
 
-*riid*  
+*riid*<br/>
 Uma referência a uma ID de interface.
 
-*ppv*  
+*ppv*<br/>
 Se for bem-sucedido, um ponteiro para a interface especificada por *riid*.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -206,10 +206,10 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parâmetros
 
-*index*  
+*index*<br/>
 Um índice baseado em zero que indica o elemento de matriz inicial para esta operação. Quando essa operação for concluída, *índice* é incrementado em 1.
 
-*IIDs*  
+*IIDs*<br/>
 Uma matriz do tipo IID.
 
 ### <a name="remarks"></a>Comentários

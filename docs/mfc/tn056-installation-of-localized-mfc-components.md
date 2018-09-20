@@ -26,19 +26,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c157dee9e1c8b604822d81fb87e2aef25ef97c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0831c59f9ea5c5068dc8cf70ca203c240bdcacc7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43682278"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424978"
 ---
 # <a name="tn056-installation-of-localized-mfc-components"></a>TN056: instalação de componentes MFC localizados
-Esta Observação técnica, que abordados a instalação de componentes localizados do MFC, agora é obsoleta.  
-  
- **Ver** [57 TechNote](../mfc/tn057-localization-of-mfc-components.md) para obter mais informações sobre como localizar aplicativos MFC.  
-  
-## <a name="see-also"></a>Consulte também  
- [Observações técnicas por número](../mfc/technical-notes-by-number.md)   
- [Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
+
+Esta Observação técnica, que abordados a instalação de componentes localizados do MFC, agora é obsoleta.
+
+**Ver** [57 TechNote](../mfc/tn057-localization-of-mfc-components.md) para obter mais informações sobre como localizar aplicativos MFC.
+
+## <a name="see-also"></a>Consulte também
+
+[Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
+[Observações técnicas por categoria](../mfc/technical-notes-by-category.md)
 

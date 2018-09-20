@@ -16,32 +16,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bfcf0d83aeffbb4f40e5786b867afcf87aa84cb
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 6905fd7db56fce26dee01ad5e1c69e89d439b436
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691138"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428285"
 ---
 # <a name="openmp-in-visual-c"></a>OpenMP no Visual C++
-A interface de programa aplicativo OpenMP C e C++ lhe permite escrever aplicativos que efetivamente usam vários processadores. Visual C++ dá suporte a OpenMP 2.0 padrão.  
-  
-## <a name="in-this-section"></a>Nesta seção  
- [Diretivas](../../parallel/openmp/reference/openmp-directives.md)  
- Fornece links para as diretivas usadas na API do OpenMP.  
-  
- [Cláusulas](../../parallel/openmp/reference/openmp-clauses.md)  
- Fornece links para cláusulas usadas na API do OpenMP.  
-  
- [Referência da biblioteca](../../parallel/openmp/reference/openmp-library-reference.md)  
- Fornece links para construções usadas na API do OpenMP.  
-  
- [C e C++ Interface de programação de aplicativo](../../parallel/openmp/openmp-c-and-cpp-application-program-interface.md)  
- Discute o OpenMP C e C++ API, conforme documentado na especificação da versão 2.0 da placa de revisão da arquitetura do OpenMP.  
-  
-## <a name="related-sections"></a>Seções relacionadas  
- [/openmp (habilitar suporte para OpenMP 2.0)](../../build/reference/openmp-enable-openmp-2-0-support.md)  
- Faz com que o compilador a processar `#pragma omp`.  
-  
- [Macros predefinidas](../../preprocessor/predefined-macros.md)  
- Nomes de macros predefinidas de implementação de ANSI C e C++ do Microsoft. Consulte a macro OpenMP.
+
+A interface de programa aplicativo OpenMP C e C++ permite escrever aplicativos que usam com eficácia vários processadores. Visual C++ dá suporte a OpenMP 2.0 padrão.
+
+## <a name="in-this-section"></a>Nesta seção
+
+[Diretivas](../../parallel/openmp/reference/openmp-directives.md)<br/>
+Fornece links para as diretivas usadas na API OpenMP.
+
+[Cláusulas](../../parallel/openmp/reference/openmp-clauses.md)<br/>
+Fornece links para as cláusulas usadas na API OpenMP.
+
+[Referência da biblioteca](../../parallel/openmp/reference/openmp-library-reference.md)<br/>
+Fornece links para construções usadas na API OpenMP.
+
+[Interface de programa de aplicativo do C++ e C](../../parallel/openmp/openmp-c-and-cpp-application-program-interface.md)<br/>
+Discute o OpenMP C e C++ API, conforme documentado na especificação da versão 2.0 da placa de revisão da arquitetura do OpenMP.
+
+## <a name="related-sections"></a>Seções relacionadas
+
+[/openmp (habilitar suporte para OpenMP 2.0)](../../build/reference/openmp-enable-openmp-2-0-support.md)<br/>
+Faz com que o compilador processar `#pragma omp`.
+
+[Macros predefinidas](../../preprocessor/predefined-macros.md)<br/>
+Nomes de macros predefinidas de implementação de ANSI C e Microsoft C++. Consulte a macro OpenMP.

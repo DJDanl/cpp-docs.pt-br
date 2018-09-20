@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7014440c3479016c89b774f9a80cc03fc4b5d4c3
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9c06e06633e6d0a990c72ebb65a4bd999df45a55
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708221"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406666"
 ---
 # <a name="ignoreidl-don39t-process-attributes-into-midl"></a>/IGNOREIDL (Don&#39;t processar atributos em MIDL)
 
@@ -54,7 +54,7 @@ A opção /IGNOREIDL Especifica que qualquer [atributos de IDL](../../windows/id
 
 [Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
 [Opções do vinculador](../../build/reference/linker-options.md)<br/>
-[/IDLOUT (nomear arquivos de saída MIDL)](../../build/reference/idlout-name-midl-output-files.md)
-[/TLBOUT (nome. O arquivo TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)
-[/MIDL (especificar opções de linha de comando MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)
+[/IDLOUT (nomear arquivos de saída MIDL)](../../build/reference/idlout-name-midl-output-files.md)<br/>
+[/TLBOUT (nomear arquivo .TLB)](../../build/reference/tlbout-name-dot-tlb-file.md)<br/>
+[/MIDL (especificar opções de linha de comando de MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)<br/>
 [Compilando um programa atribuído](../../windows/building-an-attributed-program.md)

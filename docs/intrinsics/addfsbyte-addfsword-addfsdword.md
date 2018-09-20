@@ -23,57 +23,61 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08a9948bb986ae57e42e37253b3b54737cf4d3f9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5831d109301fe400cf75110221c3c37204bf5b26
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714214"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414960"
 ---
 # <a name="addfsbyte-addfsword-addfsdword"></a>__addfsbyte, __addfsword, __addfsdword
-**Seção específica da Microsoft**  
-  
- Adicione um valor para um local de memória especificado por um deslocamento em relação ao início do `FS` segmento.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void __addfsbyte(   
-   unsigned long Offset,   
-   unsigned char Data   
-);  
-void __addfsword(   
-   unsigned long Offset,   
-   unsigned short Data   
-);  
-void __addfsdword(   
-   unsigned long Offset,   
-   unsigned long Data   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
+
+**Seção específica da Microsoft**
+
+Adicione um valor para um local de memória especificado por um deslocamento em relação ao início do `FS` segmento.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+void __addfsbyte( 
+   unsigned long Offset, 
+   unsigned char Data 
+);
+void __addfsword( 
+   unsigned long Offset, 
+   unsigned short Data 
+);
+void __addfsdword( 
+   unsigned long Offset, 
+   unsigned long Data 
+);
+```
+
+#### <a name="parameters"></a>Parâmetros
+
 *deslocamento*<br/>
-[in] O deslocamento do início do `FS`.  
-  
+[in] O deslocamento do início do `FS`.
+
 *Dados*<br/>
-[in] O valor a ser adicionado ao local da memória.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Intrínseco|Arquitetura|  
-|---------------|------------------|  
-|`__addfsbyte`|x86|  
-|`__addfsword`|x86|  
-|`__addfsdword`|x86|  
-  
-## <a name="remarks"></a>Comentários  
- Essas rotinas estão disponíveis apenas como intrínsecos.  
-  
-**Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [__incfsbyte, \__incfsword, \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)   
- [__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
- [__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   
- [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)
+[in] O valor a ser adicionado ao local da memória.
+
+## <a name="requirements"></a>Requisitos
+
+|Intrínseco|Arquitetura|
+|---------------|------------------|
+|`__addfsbyte`|x86|
+|`__addfsword`|x86|
+|`__addfsdword`|x86|
+
+## <a name="remarks"></a>Comentários
+
+Essas rotinas estão disponíveis apenas como intrínsecos.
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[__incfsbyte, \__incfsword, \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)<br/>
+[__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)<br/>
+[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)<br/>
+[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2cc6b296684c13c2cf9c538a226fb440a2e50349
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 121d3bf1fd7d59f36362a034216e0728b2fc25b0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599257"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448344"
 ---
 # <a name="generics--c-component-extensions"></a>Genéricos (Extensões de Componentes C++)
 
@@ -33,35 +33,35 @@ Genéricos são métodos e tipos parametrizados. Nesta seção, saiba quais recu
 
 ### <a name="supported-by-the-windows-runtime-and-the-common-language-runtime"></a>Com suporte pelo tempo de execução do Windows e o Common Language Runtime
 
-[Visão geral de genéricos no Visual C++](../windows/overview-of-generics-in-visual-cpp.md)  
+[Visão geral de genéricos no Visual C++](../windows/overview-of-generics-in-visual-cpp.md)<br/>
 São informações sobre os genéricos, a motivação para o recurso de linguagem, as definições dos termos usados para descrever os genéricos e informações sobre o uso de tipos de referência e tipos de valor como parâmetros de tipo genéricos.
 
-[Interfaces genéricas (Visual C++)](../windows/generic-interfaces-visual-cpp.md)  
+[Interfaces genéricas (Visual C++)](../windows/generic-interfaces-visual-cpp.md)<br/>
 Informações sobre como definir e usar interfaces genéricas.
 
-[Delegados genéricos (Visual C++)](../windows/generic-delegates-visual-cpp.md)  
+[Delegados genéricos (Visual C++)](../windows/generic-delegates-visual-cpp.md)<br/>
 Informações sobre como definir e usar delegados genéricos.
 
-[Restrições de parâmetros de tipo genérico (C++/CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+[Restrições de parâmetros de tipo genérico (C++/CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)<br/>
 Informações sobre como usar restrições em tipos genéricos.
 
-[Consumindo genéricos (C++/CLI)](../windows/consuming-generics-cpp-cli.md)  
+[Consumindo genéricos (C++/CLI)](../windows/consuming-generics-cpp-cli.md)<br/>
 Informações sobre como usar genéricos definidos em assemblies do .NET, possivelmente criados em outras linguagens, no Visual C++.
 
-[Genéricos e modelos (Visual C++)](../windows/generics-and-templates-visual-cpp.md)  
+[Genéricos e modelos (Visual C++)](../windows/generics-and-templates-visual-cpp.md)<br/>
 Uma comparação dos modelos, quando a cada uso e como combiná-los utilmente e genéricos.
 
 ### <a name="supported-by-the-common-language-runtime"></a>Com suporte pelo Common Language Runtime
 
-[Funções genéricas (C++/CLI)](../windows/generic-functions-cpp-cli.md)  
+[Funções genéricas (C++/CLI)](../windows/generic-functions-cpp-cli.md)<br/>
 Informações sobre como definir e usar métodos e funções genéricas.
 
-[Classes genéricas (C++/CLI)](../windows/generic-classes-cpp-cli.md)  
+[Classes genéricas (C++/CLI)](../windows/generic-classes-cpp-cli.md)<br/>
 Informações sobre como definir e usar classes genéricas.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Como iterar em uma coleção genérica com for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)  
+[Como iterar em uma coleção genérica com for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)<br/>
 Usando o [para cada um, no](../dotnet/for-each-in.md) palavra-chave em uma coleção genérica.
 
 ## <a name="see-also"></a>Consulte também

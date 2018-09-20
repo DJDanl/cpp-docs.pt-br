@@ -22,30 +22,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b9003ba503e0a78e5f223e766346d63679d9959
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ac60fb8d1b12708c7e64a91beb224ca436e5005
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347880"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404521"
 ---
 # <a name="frame-window-classes"></a>Classes de janela com moldura
-Cada aplicativo tem um "janela do quadro principal", uma janela de área de trabalho que geralmente tem o nome do aplicativo na sua legenda. Cada documento geralmente tem um "janela do quadro do documento." Uma janela do quadro de documento contém pelo menos um modo de exibição, que apresenta os dados do documento.  
-  
-## <a name="frame-windows-in-sdi-and-mdi-applications"></a>Janelas com moldura no SDI e MDI aplicativos  
- Para um aplicativo SDI, há uma janela do quadro derivada da classe [CFrameWnd](../mfc/reference/cframewnd-class.md). Esta janela é a janela do quadro principal e a janela do quadro do documento. Para um aplicativo MDI, a janela do quadro principal é derivada da classe [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), e as janelas de quadro do documento, que são janelas filho MDI, são derivadas da classe [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md).  
-  
-## <a name="use-the-frame-window-class-or-derive-from-it"></a>Use a classe de janela com moldura ou derivado dele  
- Essas classes fornecem a maioria da funcionalidade de janela do quadro que é necessário para seus aplicativos. Em circunstâncias normais, o comportamento padrão e a aparência que eles fornecem atenderá às suas necessidades. Se você precisar de funcionalidade adicional, derive dessas classes.  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
-  
--   [Classes de janela com moldura criadas pelo Assistente de aplicativo](../mfc/frame-window-classes-created-by-the-application-wizard.md)  
-  
--   [Estilos de janela com moldura](../mfc/frame-window-styles-cpp.md)  
-  
--   [Alternando os estilos de uma janela criada por MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Janelas com moldura](../mfc/frame-windows.md)
+
+Cada aplicativo tem uma "janela de quadro principal", uma janela da área de trabalho que geralmente tem o nome do aplicativo na sua legenda. Cada documento normalmente tem uma "janela de quadro do documento". Uma janela de quadro do documento contém pelo menos uma exibição, que apresenta os dados do documento.
+
+## <a name="frame-windows-in-sdi-and-mdi-applications"></a>Windows de quadro SDI e MDI aplicativos
+
+Para um aplicativo SDI, há uma janela de quadro derivada da classe [CFrameWnd](../mfc/reference/cframewnd-class.md). Essa janela é a janela do quadro principal e a janela de quadro do documento. Para um aplicativo MDI, a janela do quadro principal é derivada da classe [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), e as janelas de quadro do documento, que são janelas filho MDI, são derivadas da classe [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md).
+
+## <a name="use-the-frame-window-class-or-derive-from-it"></a>Use a classe de janela com moldura ou derivar dele
+
+Essas classes fornecem a maioria das funcionalidades de janela com moldura que você precisa para seus aplicativos. Em circunstâncias normais, o comportamento padrão e a aparência que eles fornecem atenderá às suas necessidades. Se você precisar da funcionalidade adicional, derivam dessas classes.
+
+### <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+
+- [Classes de janela com moldura criadas pelo Assistente de aplicativo](../mfc/frame-window-classes-created-by-the-application-wizard.md)
+
+- [Estilos de janela com moldura](../mfc/frame-window-styles-cpp.md)
+
+- [Alternando os estilos de uma janela criada por MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Janelas com moldura](../mfc/frame-windows.md)
 

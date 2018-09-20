@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 876f2bde68c53a27c1c40e9206b6285b8562bd91
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d570eaf3872f5d281d769e77298f9186d35e5a26
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591133"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410423"
 ---
 # <a name="implementshelperfillarraywithiid-method"></a>Método ImplementsHelper::FillArrayWithIid
 
@@ -38,10 +38,10 @@ void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parâmetros
 
-*index*  
+*index*<br/>
 Um índice baseado em zero que indica o elemento de matriz inicial para esta operação. Quando essa operação for concluída, *índice* é incrementado em 1.
 
-*IIDs*  
+*IIDs*<br/>
 Uma matriz do tipo IIDs.
 
 ## <a name="remarks"></a>Comentários
@@ -56,5 +56,5 @@ Insere a ID de interface especificada pelo parâmetro de modelo inicial atual pa
 
 ## <a name="see-also"></a>Consulte também
 
-[Estrutura ImplementsHelper](../windows/implementshelper-structure.md)  
+[Estrutura ImplementsHelper](../windows/implementshelper-structure.md)<br/>
 [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

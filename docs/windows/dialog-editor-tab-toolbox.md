@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fa16a2cf15d5004ff80dda3188d79ffcba72ec1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4b6e05e654b66c2178b7dc6e772c95df89512d1d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316205"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399841"
 ---
 # <a name="dialog-editor-tab-toolbox-c"></a>Guia do Editor de caixa de diálogo, caixa de ferramentas (C++)
 
@@ -100,10 +100,10 @@ Win32
 
 ## <a name="see-also"></a>Consulte também
 
-[Controles](../mfc/controls-mfc.md)  
-[Classes de controle](../mfc/control-classes.md)  
-[Classes da caixa de diálogo](../mfc/dialog-box-classes.md)  
-[Estilos de barra de rolagem](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)  
-[Exemplos de controle de edição avançada](../mfc/rich-edit-control-examples.md)  
-[Adicionando manipuladores de eventos a controles de caixa de diálogo](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+[Controles](../mfc/controls-mfc.md)<br/>
+[Classes de controle](../mfc/control-classes.md)<br/>
+[Classes da caixa de diálogo](../mfc/dialog-box-classes.md)<br/>
+[Estilos de barra de rolagem](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)<br/>
+[Exemplos de controle de edição avançada](../mfc/rich-edit-control-examples.md)<br/>
+[Adicionando manipuladores de eventos a controles de caixa de diálogo](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [Controles da caixa de diálogo e tipos de variável](../ide/dialog-box-controls-and-variable-types.md)

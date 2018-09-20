@@ -16,18 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7adaa21be5aada2de4cb5a4dd883e591e066185
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8773f7b93c67441fdf1cf6b6b992b152da14619
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343802"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401011"
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>Identificando mensagens do Windows na caixa de diálogo
-Caixas de diálogo são windows, para que eles possam lidar com mensagens do Windows se você fornecer as funções de manipulador adequado. Quando você cria sua classe de caixa de diálogo com o Assistente para Adicionar classe, o assistente adiciona um mapa de mensagem vazio à classe. Use a janela Propriedades para mapear quaisquer mensagens do Windows ou comandos que você deseja que a classe para manipular.  
-  
- Consulte [mapeando mensagens do Windows para sua classe de caixa de diálogo](../mfc/mapping-windows-messages-to-your-class.md) para obter mais informações.  
-  
-## <a name="see-also"></a>Consulte também  
- [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
+
+Caixas de diálogo são janelas, para que eles possam lidar com mensagens do Windows se você fornecer as funções de manipulador apropriado. Quando você cria sua classe de caixa de diálogo com o Assistente para adição de classe, o assistente adiciona um mapa de mensagem vazia à classe. Use a janela Propriedades para mapear as mensagens de Windows ou os comandos que você deseja que a classe para manipular.
+
+Ver [mapeando mensagens do Windows à sua classe de caixa de diálogo](../mfc/mapping-windows-messages-to-your-class.md) para obter mais informações.
+
+## <a name="see-also"></a>Consulte também
+
+[Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
 

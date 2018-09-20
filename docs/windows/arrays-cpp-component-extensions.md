@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbfcedd2bc17e21b94de46c63edd95bf58f576a7
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 836017dcec969db85a0725a49193d7b8e8a88875
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714428"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402844"
 ---
 # <a name="arrays-c-component-extensions"></a>Matrizes (Extensões de Componentes C++)
 
@@ -65,16 +65,16 @@ O primeiro exemplo da sintaxe usa o **ref novo** agregação palavra-chave para 
 *qualificadores*<br/>
 (Opcional) Um ou mais destes especificadores de classe de armazenamento: [mutável](../cpp/mutable-data-members-cpp.md), [volátil](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [estático](../cpp/static-members-cpp.md).
 
-*tipo de matriz*  
+*tipo de matriz*<br/>
 O tipo de variável de matriz. Os tipos válidos são classes de tempo de execução do Windows e tipos fundamentais, classes de referência e estruturas, classes de valor e structs e ponteiros nativos (`type*`).
 
 *rank*<br/>
 (Opcional) O número de dimensões da matriz. Deve ser 1.
 
-*identifier*  
+*identifier*<br/>
 O nome da variável da matriz.
 
-*tipo de inicialização*  
+*tipo de inicialização*<br/>
 O tipo dos valores que inicializar a matriz. Normalmente, *tipo de matriz* e *tipo de inicialização* são do mesmo tipo. No entanto, os tipos podem ser diferentes se há uma conversão de *tipo de inicialização* para *tipo de matriz*— por exemplo, se *tipo de inicialização* deriva *tipo de matriz*.
 
 *lista de inicialização*<br/>
@@ -121,19 +121,19 @@ O primeiro exemplo da sintaxe usa o **gcnew** palavra-chave para alocar uma matr
 *qualificadores*<br/>
 (Opcional) Um ou mais destes especificadores de classe de armazenamento: [mutável](../cpp/mutable-data-members-cpp.md), [volátil](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [estático](../cpp/static-members-cpp.md).
 
-*tipo de matriz*  
+*tipo de matriz*<br/>
 O tipo de variável de matriz. Os tipos válidos são classes de tempo de execução do Windows e tipos fundamentais, classes e structs, classes de valor e estruturas ref, ponteiros nativos (`type*`) e tipos nativos do POD (dados antigos simples).
 
 *rank*<br/>
 (Opcional) O número de dimensões da matriz. O padrão é 1; o máximo é 32. Cada dimensão da matriz em si é uma matriz.
 
-*identifier*  
+*identifier*<br/>
 O nome da variável da matriz.
 
-*tipo de inicialização*  
+*tipo de inicialização*<br/>
 O tipo dos valores que inicializar a matriz. Normalmente, *tipo de matriz* e *tipo de inicialização* são do mesmo tipo. No entanto, os tipos podem ser diferentes se há uma conversão de *tipo de inicialização* para *tipo de matriz*— por exemplo, se *tipo de inicialização* deriva *tipo de matriz*.
 
-*lista de tamanho de classificação*  
+*lista de tamanho de classificação*<br/>
 Uma lista delimitada por vírgula do tamanho de cada dimensão da matriz. Como alternativa, se o *lista de inicialização* parâmetro for especificado, o compilador pode deduzir o tamanho de cada dimensão e *lista de tamanhos de classificação* pode ser omitido.
 
 *lista de inicialização*<br/>

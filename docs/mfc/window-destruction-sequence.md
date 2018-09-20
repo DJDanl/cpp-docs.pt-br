@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b1c67d5a6391bbfc91bbce0d06a6bb58350e9a0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04ef1aa9dadbbe965ab17945da681a0e1189c404
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382603"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446628"
 ---
 # <a name="window-destruction-sequence"></a>Sequência de destruição da janela
-Na estrutura MFC, quando o usuário fecha a janela do quadro, padrão da janela [OnClose](../mfc/reference/cwnd-class.md#onclose) chamadas de manipulador [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow). É a última função membro chamada quando a janela do Windows é destruída [OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy), que faz alguma limpeza, chama o [padrão](../mfc/reference/cwnd-class.md#default) membro de função para executar a limpeza do Windows e finalmente chama a função membro virtual [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy). O [CFrameWnd](../mfc/reference/cframewnd-class.md) implementação de `PostNcDestroy` exclui o objeto de janela C++.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
-  
--   [Alocando e desalocando a memória da janela](../mfc/allocating-and-deallocating-window-memory.md)  
-  
--   [Desanexando um CWnd de HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Destruindo objetos de janela](../mfc/destroying-window-objects.md)
+
+No framework MFC, quando o usuário fecha a janela de quadro, o padrão da janela [OnClose](../mfc/reference/cwnd-class.md#onclose) chamadas do manipulador [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow). É a última função de membro chamada quando a janela do Windows é destruída [OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy), que faz alguma limpeza, chama o [padrão](../mfc/reference/cwnd-class.md#default) membro de função para executar a limpeza do Windows e, por fim, chama o função membro virtual [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy). O [CFrameWnd](../mfc/reference/cframewnd-class.md) implementação de `PostNcDestroy` exclui o objeto de janela C++.
+
+## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+
+- [Alocando e desalocando a memória da janela](../mfc/allocating-and-deallocating-window-memory.md)
+
+- [Desanexando um CWnd de HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Destruindo objetos de janela](../mfc/destroying-window-objects.md)
 

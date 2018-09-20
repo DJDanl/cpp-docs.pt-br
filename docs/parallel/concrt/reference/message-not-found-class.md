@@ -18,57 +18,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f28096fccae4f24b236631b3c27178bda7e22771
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5e73a33817ef39d8998173dacc282e6ee9477944
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46103978"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445601"
 ---
 # <a name="messagenotfound-class"></a>Classe message_not_found
-Esta classe descreve uma exceção gerada quando um bloco de mensagens não conseguir encontrar uma mensagem solicitada.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
+
+Esta classe descreve uma exceção gerada quando um bloco de mensagens não conseguir encontrar uma mensagem solicitada.
+
+## <a name="syntax"></a>Sintaxe
+
 ```
 class message_not_found : public std::exception;
-```  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-constructors"></a>Construtores Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[message_not_found](#ctor)|Sobrecarregado. Constrói um objeto `message_not_found`.|  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `exception`  
-  
- `message_not_found`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** concrt. h  
-  
- **Namespace:** simultaneidade  
-  
-##  <a name="ctor"></a> message_not_found 
+```
 
- Constrói um objeto `message_not_found`.  
-  
+## <a name="members"></a>Membros
+
+### <a name="public-constructors"></a>Construtores Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[message_not_found](#ctor)|Sobrecarregado. Constrói um objeto `message_not_found`.|
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`exception`
+
+`message_not_found`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** concrt. h
+
+**Namespace:** simultaneidade
+
+##  <a name="ctor"></a> message_not_found
+
+Constrói um objeto `message_not_found`.
+
 ```
 explicit _CRTIMP message_not_found(_In_z_ const char* _Message) throw();
 
 message_not_found() throw();
-```  
-  
-### <a name="parameters"></a>Parâmetros  
+```
+
+### <a name="parameters"></a>Parâmetros
+
 *Mensagem*<br/>
-Uma mensagem descritiva do erro.  
-  
-## <a name="see-also"></a>Consulte também  
- [Namespace de simultaneidade](concurrency-namespace.md)   
- [Blocos de mensagens assíncronos](../../../parallel/concrt/asynchronous-message-blocks.md)
+Uma mensagem descritiva do erro.
 
+## <a name="see-also"></a>Consulte também
 
+[Namespace de simultaneidade](concurrency-namespace.md)<br/>
+[Blocos de mensagens assíncronos](../../../parallel/concrt/asynchronous-message-blocks.md)
 

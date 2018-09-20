@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac142c628f3c2bef0bc29a2ffd50df8a9efda400
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cb9a554d9141223be7a5f6bc741c86b8f03511e2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216531"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428533"
 ---
 # <a name="241-for-construct"></a>2.4.1 Constructo for
 
@@ -115,28 +115,28 @@ Há uma barreira implícita no final de uma **para** construir, a menos que um *
 
 Restrições para o **para** diretiva são da seguinte maneira:
 
--   O **para** loop deve ser um bloco estruturado e, além disso, sua execução não deve ser terminada por um **quebra** instrução.
+- O **para** loop deve ser um bloco estruturado e, além disso, sua execução não deve ser terminada por um **quebra** instrução.
 
--   Os valores do loop de expressões de controlam a **para** loop associado com um **para** diretiva deve ser o mesmo para todos os threads da equipe.
+- Os valores do loop de expressões de controlam a **para** loop associado com um **para** diretiva deve ser o mesmo para todos os threads da equipe.
 
--   O **para** variável de iteração do loop deve ter um tipo de inteiro com sinal.
+- O **para** variável de iteração do loop deve ter um tipo de inteiro com sinal.
 
--   Um único **agendamento** cláusula pode aparecer em uma **para** diretiva.
+- Um único **agendamento** cláusula pode aparecer em uma **para** diretiva.
 
--   Um único **ordenados** cláusula pode aparecer em uma **para** diretiva.
+- Um único **ordenados** cláusula pode aparecer em uma **para** diretiva.
 
--   Um único **nowait** cláusula pode aparecer em uma **para** diretiva.
+- Um único **nowait** cláusula pode aparecer em uma **para** diretiva.
 
--   É se não especificado ou a frequência com que os efeitos de qualquer lado dentro de *chunk_size*, *lb*, *b*, ou *incr* expressões ocorrem.
+- É se não especificado ou a frequência com que os efeitos de qualquer lado dentro de *chunk_size*, *lb*, *b*, ou *incr* expressões ocorrem.
 
--   O valor de *chunk_size* expressão deve ser o mesmo para todos os threads da equipe.
+- O valor de *chunk_size* expressão deve ser o mesmo para todos os threads da equipe.
 
 ## <a name="cross-references"></a>Entre as referências:
 
--   **privado**, **firstprivate**, **lastprivate**, e **redução** cláusulas, consulte [seção 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na página 25.
+- **privado**, **firstprivate**, **lastprivate**, e **redução** cláusulas, consulte [seção 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na página 25.
 
--   **OMP_SCHEDULE** consulte de variável de ambiente [seção 4.1](../../parallel/openmp/4-1-omp-schedule.md) na página 48.
+- **OMP_SCHEDULE** consulte de variável de ambiente [seção 4.1](../../parallel/openmp/4-1-omp-schedule.md) na página 48.
 
--   **ordenado** construir, consulte [seção 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) na página 22.
+- **ordenado** construir, consulte [seção 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) na página 22.
 
--   [Apêndice D](../../parallel/openmp/d-using-the-schedule-clause.md), página 93, fornece mais informações sobre como usar a cláusula de agendamento.
+- [Apêndice D](../../parallel/openmp/d-using-the-schedule-clause.md), página 93, fornece mais informações sobre como usar a cláusula de agendamento.

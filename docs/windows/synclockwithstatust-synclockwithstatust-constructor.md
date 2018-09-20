@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 85d0adfd03b6822b949523643aa97f7a7d8b088b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 020632ff17ade10e7fcb9cd46d245849189b6860
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607624"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416780"
 ---
 # <a name="synclockwithstatustsynclockwithstatust-constructor"></a>Construtor SyncLockWithStatusT::SyncLockWithStatusT
 
@@ -43,13 +43,13 @@ explicit SyncLockWithStatusT(
 
 ### <a name="parameters"></a>Parâmetros
 
-*other*  
+*other*<br/>
 Uma referência rvalue para outro **SyncLockWithStatusT** objeto.
 
-*sync*  
+*sync*<br/>
 Uma referência a outro **SyncLockWithStatusT** objeto.
 
-*status*  
+*status*<br/>
 O valor da [status _](../windows/synclockwithstatust-status-data-member.md) membro de dados a *outras* parâmetro ou o *sincronização* parâmetro.
 
 ## <a name="remarks"></a>Comentários
@@ -66,5 +66,5 @@ O primeiro construtor inicializa o atual **SyncLockWithStatusT** objeto de outro
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe SyncLockWithStatusT](../windows/synclockwithstatust-class.md)  
+[Classe SyncLockWithStatusT](../windows/synclockwithstatust-class.md)<br/>
 [Método SyncLockWithStatusT::GetStatus](../windows/synclockwithstatust-getstatus-method.md)

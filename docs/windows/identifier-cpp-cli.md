@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d578c820660d99e6fa217a14181330d258ab081b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 572767c2f85b07f201bef93578b14b731aa467e0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613316"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415012"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 
@@ -108,5 +108,5 @@ int main() {
 
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)  
+[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)

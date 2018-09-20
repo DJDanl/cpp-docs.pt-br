@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da9e378ff75ec67660b0c29a5765be88a2c06496
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 00dd1042195bd7593676021cc4f2f1153ec47844
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43205660"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432848"
 ---
 # <a name="cppquote"></a>cpp_quote
 
@@ -38,7 +38,7 @@ Emite a cadeia de caracteres especificada, sem os caracteres de aspas no arquivo
 
 ### <a name="parameters"></a>Parâmetros
 
-*statement*  
+*statement*<br/>
 Uma instrução C.
 
 ## <a name="remarks"></a>Comentários
@@ -68,5 +68,5 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](../windows/idl-attributes.md)  
+[Atributos de IDL](../windows/idl-attributes.md)<br/>
 [Atributos independentes](../windows/stand-alone-attributes.md)  

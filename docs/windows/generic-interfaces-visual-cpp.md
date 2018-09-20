@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abad906c7fcc5c86a6901757ddfbb5dfeff2ec29
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2065b96875f2c441b24eb69f8ca51b06fe5717f0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704894"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444471"
 ---
 # <a name="generic-interfaces-visual-c"></a>Interfaces genéricas (Visual C++)
 
@@ -42,31 +42,31 @@ Para obter mais informações sobre interfaces, consulte [classe de interface](.
 
 ## <a name="remarks"></a>Comentários
 
-*Atributos*  
+*Atributos*<br/>
 (Opcional) Informações declarativas adicionais. Para obter mais informações sobre atributos e classes de atributos, consulte **atributos**.
 
-*chave de classe*  
+*chave de classe*<br/>
 **classe** ou **typename**
 
-*tipo-parâmetro-identificador (es)*  
+*tipo-parâmetro-identificador (es)*<br/>
 Lista de identificadores separados por vírgulas.
 
-*tipo de parâmetro-restrições cláusulas*  
+*tipo de parâmetro-restrições cláusulas*<br/>
 Assume o formato especificado no [restrições em parâmetros de tipo genéricos (C + + c++ CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*modificadores de acessibilidade*  
+*modificadores de acessibilidade*<br/>
 (Opcional) Modificadores de acessibilidade (por exemplo, **público, privado**).
 
-*identifier*  
+*identifier*<br/>
 O nome da interface.
 
-*Base de dados de lista*  
+*Base de dados de lista*<br/>
 (Opcional) Uma lista que contém um ou mais interfaces base explícitas separadas por vírgulas.
 
-*corpo de interface*  
+*corpo de interface*<br/>
 Declarações de membros de interface.
 
-*declaradores*  
+*declaradores*<br/>
 (Opcional) Declarações de variáveis com base nesse tipo.
 
 ## <a name="example"></a>Exemplo

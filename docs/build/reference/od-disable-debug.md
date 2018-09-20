@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adfa2e2feaf44f5f29c1a16b8e68642e438095fe
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1f0fa55b7ddfc97d1073211ad23c04d724aabe50
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703320"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404274"
 ---
 # <a name="od-disable-debug"></a>/Od (desabilitar [depuração])
 
@@ -59,7 +59,7 @@ Essa opção é o padrão. Porque **/Od** suprime a movimentação de código, e
 
 ## <a name="see-also"></a>Consulte também
 
-[/O opções (otimizar código)](../../build/reference/o-options-optimize-code.md)
-[opções do compilador](../../build/reference/compiler-options.md)<br/>
+[Opções /O (otimizar código)](../../build/reference/o-options-optimize-code.md)<br/>
+[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
 [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
 [/Z7, /Zi, /ZI (Formato de Informações de Depuração)](../../build/reference/z7-zi-zi-debug-information-format.md)

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e946406a708f26685d6f1b7307476b6253c5362e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e2c368ac8dfcb5a9d283f4b567e68d4a629c1ba4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713280"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417417"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (modelo de tratamento de exceções)
 
@@ -120,5 +120,5 @@ No entanto, o atributo de não lançamento não é uma garantia de que nenhuma e
 [Opções do Compilador](../../build/reference/compiler-options.md)<br/>
 [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
 [Erros e tratamento de exceções](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Especificações de exceção (lançar)](../../cpp/exception-specifications-throw-cpp.md)
-[tratamento de exceções estruturado (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)
+[Especificações de exceção (lançar)](../../cpp/exception-specifications-throw-cpp.md)<br/>
+[Tratamento de exceções estruturado (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)

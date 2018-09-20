@@ -1,28 +1,38 @@
 ---
 title: Classe ClassFactory | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/13/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::ClassFactory
+- module/Microsoft::WRL::ClassFactory::AddRef
+- module/Microsoft::WRL::ClassFactory::ClassFactory
+- module/Microsoft::WRL::ClassFactory::LockServer
+- module/Microsoft::WRL::ClassFactory::QueryInterface
+- module/Microsoft::WRL::ClassFactory::Release
 dev_langs:
 - C++
 helpviewer_keywords:
-- ClassFactory class
+- Microsoft::WRL::ClassFactory class
+- Microsoft::WRL::ClassFactory::AddRef method
+- Microsoft::WRL::ClassFactory::ClassFactory, constructor
+- Microsoft::WRL::ClassFactory::LockServer method
+- Microsoft::WRL::ClassFactory::QueryInterface method
+- Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f033fc20fac656e6b9fcfa9ac822099ea929d62
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bfaf95a477917fc417cfe3c296822233eca77c09
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611799"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413062"
 ---
 # <a name="classfactory-class"></a>Classe ClassFactory
 
@@ -48,18 +58,18 @@ class ClassFactory : public Details::RuntimeClass<
 
 ### <a name="parameters"></a>Parâmetros
 
-*I0*  
+*I0*<br/>
 A interface inicial.
 
-*I1*  
+*I1*<br/>
 A primeira interface.
 
-*I2*  
+*I2*<br/>
 A segunda interface.
 
 ## <a name="remarks"></a>Comentários
 
-Utilizar **ClassFactory** para fornecer uma implementação de fábrica definidos pelo usuário.
+Utilizar `ClassFactory` para fornecer uma implementação de fábrica definidos pelo usuário.
 
 O padrão de programação a seguir demonstra como usar o [implementa](../windows/implements-structure.md) estrutura para especificar mais de três interfaces em uma fábrica de classes.
 
@@ -69,18 +79,18 @@ O padrão de programação a seguir demonstra como usar o [implementa](../window
 
 ### <a name="public-constructors"></a>Construtores Públicos
 
-|Nome|Descrição|
-|----------|-----------------|
-|[Construtor ClassFactory::ClassFactory](../windows/classfactory-classfactory-constructor.md)||
+Nome                                        | Descrição
+------------------------------------------- | -----------
+[ClassFactory:: ClassFactory](#classfactory) |
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
-|----------|-----------------|
-|[Método ClassFactory::AddRef](../windows/classfactory-addref-method.md)|Incrementa a contagem de referência para o atual **ClassFactory** objeto.|
-|[Método ClassFactory::LockServer](../windows/classfactory-lockserver-method.md)|Aumenta ou diminui o número de subjacente objetos que são controladas pelo atual **ClassFactory** objeto.|
-|[Método ClassFactory::QueryInterface](../windows/classfactory-queryinterface-method.md)|Recupera um ponteiro para a interface especificada pelo parâmetro.|
-|[Método ClassFactory::Release](../windows/classfactory-release-method.md)|Diminui a contagem de referência para o atual **ClassFactory** objeto.|
+Nome                                            | Descrição
+----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------
+[ClassFactory:: AddRef](#addref)                 | Incrementa a contagem de referência atual `ClassFactory` objeto.
+[ClassFactory:: Lockserver](#lockserver)         | Aumenta ou diminui o número de subjacente objetos que são controladas pelo atual `ClassFactory` objeto.
+[ClassFactory:: QueryInterface](#queryinterface) | Recupera um ponteiro para a interface especificada pelo parâmetro.
+[ClassFactory:: Release](#release)               | Diminui a contagem de referência atual `ClassFactory` objeto.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -110,7 +120,83 @@ O padrão de programação a seguir demonstra como usar o [implementa](../window
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Consulte também
+## <a name="addref"></a>ClassFactory:: AddRef
 
-[Namespace Microsoft::WRL](../windows/microsoft-wrl-namespace.md)  
-[Enumeração RuntimeClassType](../windows/runtimeclasstype-enumeration.md)
+Incrementa a contagem de referência atual `ClassFactory` objeto.
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   AddRef
+)();
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha.
+
+## <a name="classfactory"></a>ClassFactory:: ClassFactory
+
+```cpp
+WRL_NOTHROW ClassFactory();
+```
+
+## <a name="lockserver"></a>ClassFactory:: Lockserver
+
+Aumenta ou diminui o número de subjacente objetos que são controladas pelo atual `ClassFactory` objeto.
+
+```cpp
+STDMETHOD(
+   LockServer
+)(BOOL fLock);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*Usam*<br/>
+`true` para incrementar o número de objetos rastreados. `false` para diminuir o número de objetos rastreadas.
+
+### <a name="return-value"></a>Valor de retorno
+
+S_OK se bem-sucedido; Caso contrário, E_FAIL.
+
+### <a name="remarks"></a>Comentários
+
+`ClassFactory` mantém o controle de objetos em uma instância subjacente do [módulo](../windows/module-class.md) classe.
+
+## <a name="queryinterface"></a>ClassFactory:: QueryInterface
+
+Recupera um ponteiro para a interface especificada pelo parâmetro.
+
+```cpp
+STDMETHOD(
+   QueryInterface
+)(REFIID riid, _Deref_out_ void **ppvObject);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*riid*<br/>
+Uma ID de interface.
+
+*ppvObject*<br/>
+Quando essa operação for concluída, um ponteiro para a interface especificada pelo parâmetro *riid*.
+
+### <a name="return-value"></a>Valor de retorno
+
+S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha.
+
+## <a name="release"></a>ClassFactory:: Release
+
+Diminui a contagem de referência atual `ClassFactory` objeto.
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   Release
+)();
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+S_OK se bem-sucedido; Caso contrário, um HRESULT que descreve a falha.

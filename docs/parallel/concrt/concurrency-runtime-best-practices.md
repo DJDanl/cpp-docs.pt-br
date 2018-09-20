@@ -1,5 +1,5 @@
 ---
-title: Práticas recomendadas de tempo de execução de simultaneidade | Microsoft Docs
+title: Práticas recomendadas do tempo de execução de simultaneidade | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 422abd1c4c60b0094165587d25b7ebe825fabc38
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 55787ef1f1e3daeb8c85783958f000a2166e4e18
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695636"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46447980"
 ---
 # <a name="concurrency-runtime-best-practices"></a>Práticas recomendadas do Tempo de Execução de Simultaneidade
-Esta seção descreve as práticas recomendadas que podem ajudá-lo a fazer uso eficiente de tempo de execução de simultaneidade. Aplicam estas práticas recomendadas para o [biblioteca de padrões paralelos](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL), o [biblioteca de agentes assíncrona](../../parallel/concrt/asynchronous-agents-library.md)e o [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
-  
-## <a name="in-this-section"></a>Nesta seção  
- [Práticas recomendadas na biblioteca de padrões paralelos](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)  
- Descreve as práticas recomendadas a seguir ao usar a biblioteca de padrões paralelos (PPL).  
-  
- [Práticas recomendadas na biblioteca de agentes assíncronos](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)  
- Descreve as práticas recomendadas a seguir quando você usar a biblioteca de agentes assíncrona.  
-  
- [Práticas recomendadas gerais no tempo de execução de simultaneidade](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)  
- Descreve as práticas recomendadas que se aplicam a várias áreas do tempo de execução de simultaneidade.  
-  
-## <a name="related-sections"></a>Seções relacionadas  
- [Tempo de Execução de Simultaneidade](../../parallel/concrt/concurrency-runtime.md)  
- Apresenta o tempo de execução de simultaneidade, uma estrutura de simultaneidade para C++.  
-  
- [PPL (Biblioteca de Padrões Paralelos)](../../parallel/concrt/parallel-patterns-library-ppl.md)  
- Descreve como usar vários padrões paralelos, por exemplo, os algoritmos paralelos, em seus aplicativos.  
-  
- [Biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md)  
- Descreve como usar agentes assíncronos em seus aplicativos.  
-  
- [Estruturas de dados de sincronização](../../parallel/concrt/synchronization-data-structures.md)  
- Descreve os vários primitivos de sincronização que fornece o tempo de execução de simultaneidade.  
-  
- [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md)  
- Descreve como usar o Agendador de tarefas para ajustar o desempenho de seus aplicativos.
+
+Esta seção descreve as práticas recomendadas que podem ajudar você a fazer uso eficiente do tempo de execução de simultaneidade. Essas práticas recomendadas se aplicam à [biblioteca de padrões paralelos](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL), o [biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md)e o [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
+
+## <a name="in-this-section"></a>Nesta seção
+
+[Práticas recomendadas na biblioteca de padrões paralelos](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
+Descreve as práticas recomendadas a seguir quando você usa a biblioteca de padrões paralelos (PPL).
+
+[Práticas recomendadas na biblioteca de agentes assíncronos](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)<br/>
+Descreve as práticas recomendadas a seguir quando você usa a biblioteca de agentes assíncronos.
+
+[Práticas recomendadas gerais no tempo de execução de simultaneidade](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)<br/>
+Descreve as práticas recomendadas que se aplicam a várias áreas do tempo de execução de simultaneidade.
+
+## <a name="related-sections"></a>Seções relacionadas
+
+[Tempo de Execução de Simultaneidade](../../parallel/concrt/concurrency-runtime.md)<br/>
+Apresenta o tempo de execução de simultaneidade, uma estrutura de simultaneidade para C++.
+
+[PPL (Biblioteca de Padrões Paralelos)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
+Descreve como usar vários padrões paralelos, por exemplo, algoritmos paralelos, em seus aplicativos.
+
+[Biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md)<br/>
+Descreve como usar agentes assíncronos em seus aplicativos.
+
+[Estruturas de dados de sincronização](../../parallel/concrt/synchronization-data-structures.md)<br/>
+Descreve os vários primitivos de sincronização que fornece o tempo de execução de simultaneidade.
+
+[Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
+Descreve como usar o Agendador de tarefas para ajustar o desempenho de seus aplicativos.
 

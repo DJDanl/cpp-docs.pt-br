@@ -12,27 +12,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eec5a2f0e91df6e8d71797199bd3a3911a3aab0
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1b2f2d2f5742dbc4faa1d8386e935c9d4ccc8049
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687264"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424645"
 ---
 # <a name="21-directive-format"></a>2.1 Formato de diretiva
-A sintaxe de uma diretiva de OpenMP formalmente especificada pela gramática em [Apêndice C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)e informalmente da seguinte maneira:  
-  
-```  
-#pragma omp directive-name  [clause[ [,] clause]...] new-line  
-```  
-  
- Cada diretiva começa com **#pragma omp**, para reduzir o potencial de conflito com outras diretivas de pragma (não OpenMP ou fornecedor extensões OpenMP) com os mesmos nomes. O restante da diretiva segue as convenções dos padrões de diretivas de compilador C e C++. Em particular, o espaço em branco pode ser usado antes e depois o **#**, e às vezes, o espaço em branco devem ser usado para separar as palavras em uma diretiva. Pré-processamento de tokens após a **#pragma omp** estão sujeitos a substituição de macro.  
-  
- Diretivas diferenciam maiusculas de minúsculas. A ordem na qual as cláusulas aparecerão em diretivas não é significativa. As cláusulas em diretivas podem ser repetidas, conforme necessário, sujeito as restrições listadas na descrição de cada cláusula. Se *lista variável* aparece em uma cláusula, ele deve especificar somente variáveis. Apenas uma *nome de diretiva* pode ser especificado por diretiva.  Por exemplo, não é permitida a seguinte diretiva:  
-  
-```  
-/* ERROR - multiple directive names not allowed */  
-#pragma omp parallel barrier  
-```  
-  
- Uma diretiva de OpenMP aplica-se a no máximo um sucessivo instrução, que deve ser um bloco estruturado.
+
+A sintaxe de uma diretiva de OpenMP formalmente é especificada pela gramática em [Apêndice C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)e informalmente da seguinte maneira:
+
+```
+#pragma omp directive-name  [clause[ [,] clause]...] new-line
+```
+
+Cada diretiva começa com **#pragma omp**, para reduzir o potencial de conflito com outras políticas de pragma (não-OpenMP ou fornecedor de extensões OpenMP) com os mesmos nomes. O restante da diretiva segue as convenções dos padrões de diretivas de compilador C e C++. Em particular, o espaço em branco pode ser usado antes e depois o **#**, e, às vezes, o espaço em branco devem ser usado para separar as palavras em uma diretiva. A seguir de tokens de pré-processamento a **#pragma omp** estão sujeitos a substituição de macro.
+
+As diretivas são diferencia maiusculas de minúsculas. A ordem na qual as cláusulas aparecem nas diretivas não é significativa. Cláusulas sobre as diretivas podem ser repetidas, conforme necessário, de acordo com as restrições listadas na descrição de cada cláusula. Se *lista variável* aparece em uma cláusula, ele deve especificar somente as variáveis. Somente um *nome da diretiva* pode ser especificado por diretiva.  Por exemplo, a diretiva a seguir não é permitida:
+
+```
+/* ERROR - multiple directive names not allowed */
+#pragma omp parallel barrier
+```
+
+Uma diretiva de OpenMP aplica-se a no máximo uma subsequente instrução, que deve ser um bloco estruturado.

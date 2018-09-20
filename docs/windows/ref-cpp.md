@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4895491a6b697d33d3ba5c6070a75d037e894e46
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d420566411326b21a6d219d51ceaec476f130be4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43219767"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437437"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -69,6 +69,6 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](../windows/idl-attributes.md)  
-[Atributos Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Atributos de IDL](../windows/idl-attributes.md)<br/>
+[Atributos Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributos de parâmetro](../windows/parameter-attributes.md)  

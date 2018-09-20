@@ -15,40 +15,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 689dacb98bc9f8053686a02414151b4982edca67
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 69f48ed099fe033ba1847a3414ed8e5c5ce88f71
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695766"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433667"
 ---
 # <a name="how-to-use-combinable-to-combine-sets"></a>Como usar combinável para combinar conjuntos
-Este tópico mostra como usar o [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) classe para calcular o conjunto de números primos.  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir calcula o conjunto de números primos duas vezes. Cada cálculo armazena o resultado em uma [std::bitset](../../standard-library/bitset-class.md) objeto. O exemplo primeiro calcula o conjunto em série e, em seguida, calcula o conjunto em paralelo. O exemplo também imprime no console o tempo necessário para executar ambos os cálculos.  
-  
- Este exemplo usa o [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo e uma `combinable` objeto para gerar conjuntos de local de thread. Ele usa o [concurrency::combinable::combine_each](reference/combinable-class.md#combine_each) método para combinar os conjuntos de local de thread para o conjunto final.  
 
-  
- [!code-cpp[concrt-parallel-combine-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-combine-sets_1.cpp)]  
-  
- A seguinte saída de exemplo é para um computador com quatro processadores.  
-  
-```Output  
-serial time: 312 ms  
- 
-parallel time: 78 ms  
-```  
-  
-## <a name="compiling-the-code"></a>Compilando o código  
- Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `parallel-combine-primes.cpp` e, em seguida, execute o seguinte comando em uma janela de Prompt de comando do Visual Studio.  
-  
- **cl.exe /EHsc paralelo-combinar-primes.cpp**  
-  
-## <a name="see-also"></a>Consulte também  
- [Objetos e contêineres paralelos](../../parallel/concrt/parallel-containers-and-objects.md)   
- [Classe combinable](../../parallel/concrt/reference/combinable-class.md)   
- [combinable:: método combine_each](reference/combinable-class.md#combine_each)
+Este tópico mostra como usar o [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) classe para calcular o conjunto de números primos.
 
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir calcula o conjunto de números primos duas vezes. Cada computação armazena o resultado em uma [std::bitset](../../standard-library/bitset-class.md) objeto. O exemplo primeiro calcula o conjunto em série e, em seguida, calcula o conjunto em paralelo. O exemplo também imprime no console a hora em que é necessária executar ambos os cálculos.
+
+Este exemplo usa o [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo e um `combinable` objeto para gerar conjuntos de thread local. Ele usa o [concurrency::combinable::combine_each](reference/combinable-class.md#combine_each) método para combinar os conjuntos de thread local em conjunto final.
+
+[!code-cpp[concrt-parallel-combine-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-combine-sets_1.cpp)]
+
+A saída de exemplo a seguir é para um computador com quatro processadores.
+
+```Output
+serial time: 312 ms
+
+parallel time: 78 ms
+```
+
+## <a name="compiling-the-code"></a>Compilando o código
+
+Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `parallel-combine-primes.cpp` e, em seguida, execute o seguinte comando em uma janela de Prompt de comando do Visual Studio.
+
+**cl.exe /EHsc paralelo-combinar-primes.cpp**
+
+## <a name="see-also"></a>Consulte também
+
+[Contêineres e objetos em paralelo](../../parallel/concrt/parallel-containers-and-objects.md)<br/>
+[Classe combinable](../../parallel/concrt/reference/combinable-class.md)<br/>
+[combinable:: combine_each método](reference/combinable-class.md#combine_each)
 

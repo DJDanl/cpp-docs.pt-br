@@ -17,17 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 373a30ed4a327cff99cb3cfce873707314608b57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f012897d968d108cb366126fc38992ff1dd11d0a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382954"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46424606"
 ---
 # <a name="word-breaks-in-rich-edit-controls"></a>Quebras de palavra em controles de edição avançada
-Controle de edição de um conjunto avançado ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) chama uma função que chamou um procedimento de quebra"word" para localizar quebras entre as palavras e determinar onde ele pode quebrar a linha. O controle usa essas informações ao executar operações de quebra automática de linha e ao processar as combinações de teclas CTRL + esquerda e CTRL + seta para direita. Um aplicativo pode enviar mensagens para um controle de edição para substituir o procedimento de quebra de palavras padrão, para recuperar informações de quebra de palavras e para determinar o que um determinado caractere da linha cai.  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+
+Controle de edição de uma avançada ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) chama uma função de chamada de "procedimento de quebra de palavra" para encontrar quebras entre as palavras e determinar onde ele pode quebrar a linha. O controle usa essas informações ao executar operações de quebra automática e ao processar as combinações de teclas CTRL + esquerda e CTRL + seta para direita. Um aplicativo pode enviar mensagens para um controle rich edit para substituir o procedimento de quebra de palavras do padrão, para recuperar informações de quebra de palavras e para determinar o que um determinado caractere de linha cai.
+
+## <a name="see-also"></a>Consulte também
+
+[Usando CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
+[Controles](../mfc/controls-mfc.md)
 

@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f376fe639d9bca58b6e2bd55fd081b88921a7342
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c15fa9d8c9d86b736bfc577a3b17e9809ec9baaf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686666"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439192"
 ---
 # <a name="43-ompdynamic"></a>4.3 OMP_DYNAMIC
-O **OMP_DYNAMIC** variável de ambiente ativa ou desativa o ajuste dinâmico do número de threads disponíveis para execução de regiões paralelas, a menos que o ajuste dinâmico é habilitado ou desabilitado chamando o explicitamente**omp_set_dynamic** rotina de biblioteca. O valor deve ser **TRUE** ou **FALSE**.  
-  
- Se definido como **TRUE**, o número de threads que são usados para a execução paralelas regiões pode ser ajustado pelo ambiente de tempo de execução para utilizar melhor os recursos do sistema.  Se definido como **FALSE**, ajuste dinâmico está desabilitado. A condição padrão é definido pela implementação.  
-  
- Exemplo:  
-  
-```  
-setenv OMP_DYNAMIC TRUE  
-```  
-  
-## <a name="cross-references"></a>Entre referências:  
-  
--   Para obter mais informações sobre regiões paralelas, consulte [seção 2.3](../../parallel/openmp/2-3-parallel-construct.md) na página de 8.  
-  
--   **omp_set_dynamic** funcionam, consulte [seção 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) na página 39.
+
+O **OMP_DYNAMIC** variável de ambiente habilita ou desabilita o ajuste dinâmico do número de threads disponíveis para a execução de regiões em paralelo, a menos que o ajuste dinâmico está habilitado ou desabilitado chamando o explicitamente**omp_set_dynamic** rotina da biblioteca. Seu valor deve ser **verdadeira** ou **falso**.
+
+Se definido como **verdadeira**, o número de threads que são usados para a execução de regiões em paralelo pode ser ajustado pelo ambiente de tempo de execução melhor usar recursos do sistema.  Se definido como **falsos**, ajuste dinâmico está desabilitado. A condição padrão é definido pela implementação.
+
+Exemplo:
+
+```
+setenv OMP_DYNAMIC TRUE
+```
+
+## <a name="cross-references"></a>Entre as referências:
+
+- Para obter mais informações sobre regiões em paralelo, consulte [seção 2.3](../../parallel/openmp/2-3-parallel-construct.md) na página de 8.
+
+- **omp_set_dynamic** , consulte [seção 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) na página 39.

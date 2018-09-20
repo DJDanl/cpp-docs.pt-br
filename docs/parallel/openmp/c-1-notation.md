@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d3ada700955c3acd2e96aa3e8a98c25c51393c1
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4bbb3190dd5aa32315cd8f402f92fd94893b4b27
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766146"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411866"
 ---
 # <a name="c1-notation"></a>C.1 Notação
+
 As regras de gramática consistem no nome de um não terminal, seguido por dois-pontos, seguido por alternativas de substituição em linhas separadas.
 
 O termo de expressão sintática<sub>opt</sub> indica que o termo é opcional dentro da substituição.

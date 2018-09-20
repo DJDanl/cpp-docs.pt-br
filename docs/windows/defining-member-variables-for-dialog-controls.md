@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6734391e56f076f247bd8887a7fdb61142b3669
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: fa4d894fb3fc436abab84bfee11199f59bd66f78
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317856"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402388"
 ---
 # <a name="defining-member-variables-for-dialog-controls-c"></a>Definindo variáveis de membro para controles de caixa de diálogo (C++)
 
@@ -55,11 +55,11 @@ MFC
 
 ## <a name="see-also"></a>Consulte também
 
-[Mapeando mensagens para funções](../mfc/reference/mapping-messages-to-functions.md)  
-[Adicionando funcionalidade com assistentes de código](../ide/adding-functionality-with-code-wizards-cpp.md)  
-[Assistente de classe do MFC](../mfc/reference/mfc-class-wizard.md)  
-[Adicionando uma classe](../ide/adding-a-class-visual-cpp.md)  
-[Adicionando uma função de membro](../ide/adding-a-member-function-visual-cpp.md)  
-[Adicionando uma variável de membro](../ide/adding-a-member-variable-visual-cpp.md)  
-[Substituindo uma função Virtual](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[Mapeando mensagens para funções](../mfc/reference/mapping-messages-to-functions.md)<br/>
+[Adicionando funcionalidade com assistentes de código](../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Assistente de classe do MFC](../mfc/reference/mfc-class-wizard.md)<br/>
+[Adicionando uma classe](../ide/adding-a-class-visual-cpp.md)<br/>
+[Adicionando uma função de membro](../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Adicionando uma variável de membro](../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Substituindo uma função Virtual](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Manipulador de mensagens do MFC](../mfc/reference/adding-an-mfc-message-handler.md)

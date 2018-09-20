@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 527f326d629bc8d41efcd73a938994570bed4d2e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 792d1e1bc0ea2f6044bc9ad145d30c1fda3e3648
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725906"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423865"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (gerar funções intrínsecas)
 
@@ -73,7 +73,7 @@ Você também usar [intrínseco](../../preprocessor/intrinsic.md) para criar fun
 
 ## <a name="see-also"></a>Consulte também
 
-[/O opções (otimizar código)](../../build/reference/o-options-optimize-code.md)
-[opções do compilador](../../build/reference/compiler-options.md)<br/>
+[Opções /O (otimizar código)](../../build/reference/o-options-optimize-code.md)<br/>
+[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
 [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)<br/>
 [Intrínsecos do compilador](../../intrinsics/compiler-intrinsics.md)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21b9efe8fc1ce5cb7ab90edd30b38253d44dabc0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2f937c2cdaa4bb7f31b39b8a28c657274830fc36
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106802"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446595"
 ---
 # <a name="event-maps"></a>Mapas de evento
 
@@ -89,10 +89,10 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 ### <a name="parameters"></a>Parâmetros
 
-*theClass*  
+*theClass*<br/>
 Especifica o nome da classe do controle cujo evento ser mapeado.
 
-*baseClass*  
+*baseClass*<br/>
 Especifica o nome da classe base da *theClass*.
 
 ### <a name="remarks"></a>Comentários
@@ -127,13 +127,13 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszName*  
+*pszName*<br/>
 O nome do evento.
 
-*pfnFire*  
+*pfnFire*<br/>
 O nome da função de acionamento do evento.
 
-*vtsParams*  
+*vtsParams*<br/>
 Uma lista separada por espaços de uma ou mais constantes especificando a lista de parâmetros da função.
 
 ### <a name="remarks"></a>Comentários
@@ -197,16 +197,16 @@ EVENT_CUSTOM_ID(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszName*  
+*pszName*<br/>
 O nome do evento.
 
-*DISPID*  
+*DISPID*<br/>
 A ID de expedição usada pelo controle ao acionar o evento.
 
-*pfnFire*  
+*pfnFire*<br/>
 O nome da função de acionamento do evento.
 
-*vtsParams*  
+*vtsParams*<br/>
 Uma lista de variáveis de parâmetros passada para o contêiner de controle quando o evento é acionado.
 
 ### <a name="remarks"></a>Comentários
@@ -268,10 +268,10 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 ### <a name="parameters"></a>Parâmetros
 
-*iVerb*  
+*iVerb*<br/>
 O índice do verbo padrão para o verbo que está sendo substituído.
 
-*memberFxn*  
+*memberFxn*<br/>
 A função chamada pelo framework quando o verbo é invocado.
 
 ### <a name="remarks"></a>Comentários

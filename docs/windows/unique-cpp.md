@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 868dd67a6f1e3e9e2e7f12e32fd7b2d8f5cff419
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1b3e6d0193319539f37182dc675553229bb4377b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195273"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426426"
 ---
 # <a name="unique-c"></a>unique (C++)
 
@@ -57,6 +57,6 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](../windows/idl-attributes.md)  
-[Atributos Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
+[Atributos de IDL](../windows/idl-attributes.md)<br/>
+[Atributos Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributos de parâmetro](../windows/parameter-attributes.md)  

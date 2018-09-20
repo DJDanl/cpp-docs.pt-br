@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: efca93e2e9b52ce646ef07465682815978550414
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 61c20647d96a66cf4b50e6f0b031cc04353553e5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607771"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410644"
 ---
 # <a name="dbaccessor"></a>db_accessor
 
@@ -39,10 +39,10 @@ Grupos `db_column` atributos que participam de `IAccessor`-com base em associaç
 
 #### <a name="parameters"></a>Parâmetros
 
-*num*  
+*num*<br/>
 Especifica o número de acessador (um índice de inteiro baseado em zero). Você deve especificar números de acessador aumentar ordem, usando inteiros ou valores definidos.
 
-*auto*  
+*auto*<br/>
 Um valor booliano que especifica se o acessador é automaticamente recuperado (TRUE) ou não recuperados (FALSE).
 
 ## <a name="remarks"></a>Comentários

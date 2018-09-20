@@ -18,39 +18,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa2628df5f446105e6b7881709a0c72c19fe230e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: c881e31d178d6303939c94d68e2824fb11ec2cbd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950484"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425386"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Usando uma caixa de diálogo com um controle rebar
-Conforme mencionado em [controles Rebar e bandas](../mfc/rebar-controls-and-bands.md), cada faixa pode conter apenas um filho janela (ou controle). Isso pode ser uma limitação se desejar ter mais de uma janela filho por faixa. É uma solução alternativa conveniente criar um recurso de barra da caixa de diálogo com vários controles e, em seguida, adicionar uma faixa de rebar (que contém a barra da caixa de diálogo) para o controle rebar.  
-  
- Normalmente, se você quiser que a faixa de barra da caixa de diálogo aparecer transparente, você configuraria o WS_EX_TRANSPARENT estendido para o objeto de barra da caixa de diálogo. No entanto, como WS_EX_TRANSPARENT tem alguns problemas com pintura corretamente o plano de fundo de uma barra da caixa de diálogo, você precisará fazer um pouco de trabalho extra para obter o efeito desejado.  
-  
- Os detalhes de procedimento a seguir as etapas necessárias para obter transparência sem usar o WS_EX_TRANSPARENT estilo estendido.  
-  
-### <a name="to-implement-a-transparent-dialog-bar-in-a-rebar-band"></a>Para implementar uma barra de caixa de diálogo transparente em uma faixa de rebar  
-  
-1.  Usando o [caixa de diálogo Adicionar classe](../mfc/reference/adding-an-mfc-class.md), adicione uma nova classe (por exemplo, `CMyDlgBar`) que implementa o objeto de barra da caixa de diálogo.  
-  
-2.  Adicione um manipulador para a mensagem WM_ERASEBKGND.  
-  
-3.  No manipulador de novo, modifique o código existente para corresponder ao exemplo a seguir:  
-  
-     [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]  
-  
-4.  Adicione um manipulador para a mensagem WM_MOVE.  
-  
-5.  No manipulador de novo, modifique o código existente para corresponder ao exemplo a seguir:  
-  
-     [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]  
-  
- Os manipuladores de novo simular a transparência da barra de caixa de diálogo encaminhar a mensagem WM_ERASEBKGND para a janela pai e forçando um redesenho toda vez que o objeto de barra da caixa de diálogo será movido.  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando CReBarCtrl](../mfc/using-crebarctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+
+Conforme mencionado na [controles Rebar e bandas](../mfc/rebar-controls-and-bands.md), cada faixa pode conter apenas um filho janela (ou controle). Isso pode ser uma limitação se você quiser ter mais de uma janela filho por banda. É uma solução alternativa conveniente criar um recurso da barra de diálogo com vários controles e, em seguida, adicionar uma faixa de rebar (que contém a barra da caixa de diálogo) para o controle rebar.
+
+Normalmente, se você quisesse que a faixa de barra da caixa de diálogo apareça transparente, você definiria o WS_EX_TRANSPARENT estendido de estilo para o objeto de barra da caixa de diálogo. No entanto, como WS_EX_TRANSPARENT tem alguns problemas com pintura corretamente o plano de fundo de uma barra de diálogo, você precisará fazer um pouco de trabalho extra para alcançar o efeito desejado.
+
+Os detalhes de procedimento a seguir as etapas necessárias para obter transparência sem usar o WS_EX_TRANSPARENT estilo estendido.
+
+### <a name="to-implement-a-transparent-dialog-bar-in-a-rebar-band"></a>Para implementar uma barra de diálogo transparente em uma faixa de rebar
+
+1. Usando o [caixa de diálogo Adicionar classe](../mfc/reference/adding-an-mfc-class.md), adicione uma nova classe (por exemplo, `CMyDlgBar`) que implementa o objeto de barra da caixa de diálogo.
+
+1. Adicione um manipulador para a mensagem WM_ERASEBKGND.
+
+1. No manipulador de novo, modifique o código existente para corresponder ao exemplo a seguir:
+
+     [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]
+
+1. Adicione um manipulador para a mensagem WM_MOVE.
+
+1. No manipulador de novo, modifique o código existente para corresponder ao exemplo a seguir:
+
+     [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]
+
+Os novos manipuladores de simular a transparência da barra de diálogo encaminhar a mensagem WM_ERASEBKGND para a janela pai e forçando um redesenho toda vez que o objeto de barra da caixa de diálogo será movido.
+
+## <a name="see-also"></a>Consulte também
+
+[Usando CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
+[Controles](../mfc/controls-mfc.md)
 

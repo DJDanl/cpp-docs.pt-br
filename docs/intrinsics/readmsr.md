@@ -18,47 +18,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26fb2637c5a92a430d72e496cabeb8f5749ccaa1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d21d33d1e90d7c4aac9ea833d0c5bd80f5172312
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711783"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416598"
 ---
 # <a name="readmsr"></a>__readmsr
-**Seção específica da Microsoft**  
-  
- Gera o `rdmsr` instrução, que lê o registro de modelo específico especificado pelo `register` e retorna seu valor.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-__int64 __readmsr(   
-   int register   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
+
+**Seção específica da Microsoft**
+
+Gera o `rdmsr` instrução, que lê o registro de modelo específico especificado pelo `register` e retorna seu valor.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+__int64 __readmsr( 
+   int register 
+);
+```
+
+#### <a name="parameters"></a>Parâmetros
+
 *register*<br/>
-[in] O registro específico de modelo para ler.  
-  
-## <a name="return-value"></a>Valor de retorno  
- O valor no registro especificado.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Intrínseco|Arquitetura|  
-|---------------|------------------|  
-|`__readmsr`|x86, x64|  
-  
- **Arquivo de cabeçalho** \<intrin. h >  
-  
-## <a name="remarks"></a>Comentários  
- Essa função só está disponível no modo kernel e a rotina só está disponível como um intrínseco.  
-  
- Para obter mais informações, consulte a documentação do AMD.  
-  
-**Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)
+[in] O registro específico de modelo para ler.
+
+## <a name="return-value"></a>Valor de retorno
+
+O valor no registro especificado.
+
+## <a name="requirements"></a>Requisitos
+
+|Intrínseco|Arquitetura|
+|---------------|------------------|
+|`__readmsr`|x86, x64|
+
+**Arquivo de cabeçalho** \<intrin. h >
+
+## <a name="remarks"></a>Comentários
+
+Essa função só está disponível no modo kernel e a rotina só está disponível como um intrínseco.
+
+Para obter mais informações, consulte a documentação do AMD.
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c97ca07e06da3663dfd0a06a125f361b4e4dc591
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7e3de9b373a80ef939f5ac5ff3d746e0ebdc8b74
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758024"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405457"
 ---
 # <a name="using-cstring"></a>Usando CString
 
@@ -54,41 +54,41 @@ int main() {
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Operações básicas de CString](../atl-mfc-shared/basic-cstring-operations.md)  
+[Operações básicas de CString](../atl-mfc-shared/basic-cstring-operations.md)<br/>
 Descreve as operações `CString` básicas, incluindo a criação de objetos de cadeias de caracteres literais de C, acessando caracteres individuais em uma `CString`, concatenando dois objetos e comparando objetos `CString`.
 
-[Gerenciamento de dados de cadeia de caracteres](../atl-mfc-shared/string-data-management.md)  
+[Gerenciamento de dados de cadeia de caracteres](../atl-mfc-shared/string-data-management.md)<br/>
 Discute o uso de Unicode e MBCS com `CString`.
 
-[Semântica de CString](../atl-mfc-shared/cstring-semantics.md)  
+[Semântica de CString](../atl-mfc-shared/cstring-semantics.md)<br/>
 Explica como os objetos `CString` são usados.
 
-[Operações de CString relacionadas a cadeias de caracteres de estilo C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)  
+[Operações de CString relacionadas a cadeias de caracteres de estilo C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
 Descreve a manipulação do conteúdo de um objeto `CString` como uma cadeia de caracteres de terminação nula de estilo C.
 
-[Alocando e liberando memória para um BSTR](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)  
+[Alocando e liberando memória para um BSTR](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)<br/>
 Discute o uso de memória para um BSTR e objetos COM.
 
-[Limpeza de exceção de CString](../atl-mfc-shared/cstring-exception-cleanup.md)  
+[Limpeza de exceção de CString](../atl-mfc-shared/cstring-exception-cleanup.md)<br/>
 Explica que a limpeza explícita no MFC 3.0 e versões posteriores não é mais necessária.
 
-[Passagem de argumento de CString](../atl-mfc-shared/cstring-argument-passing.md)  
+[Passagem de argumento de CString](../atl-mfc-shared/cstring-argument-passing.md)<br/>
 Explica como passar objetos CString para funções e como retornar objetos `CString` de funções.
 
-[Suporte a MBCS (conjunto de caracteres multibyte) e Unicode](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)  
+[Suporte a MBCS (conjunto de caracteres multibyte) e Unicode](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)<br/>
 Discute como o MFC é habilitado para suporte a Unicode e MBCS.
 
 ## <a name="reference"></a>Referência
 
-[CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
+[CStringT](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 Fornece informações de referência sobre a classe `CStringT`.
 
-[Classe de CSimpleStringT](../atl-mfc-shared/reference/csimplestringt-class.md)  
+[Classe de CSimpleStringT](../atl-mfc-shared/reference/csimplestringt-class.md)<br/>
 Fornece informações de referência sobre a classe `CSimpleStringT`.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Cadeias de caracteres (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
+[Cadeias de caracteres (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 Contem links para tópicos que descrevem várias maneiras de gerenciar dados da cadeia de caracteres.
 
 [Cadeias de caracteres (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)

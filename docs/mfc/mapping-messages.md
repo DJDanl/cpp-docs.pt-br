@@ -21,18 +21,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f521145599a3d734a22dd3b2707ad4dd16df8e80
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7324da5eaff15d240cabbaede2c2982021361257
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345980"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410970"
 ---
 # <a name="mapping-messages"></a>Mapeando mensagens
-Cada classe de estrutura que pode receber mensagens ou comandos tem seu próprio "mapa de mensagem". A estrutura usa mapas de mensagem para conectar-se as mensagens e comandos para suas funções de manipulador. Qualquer classe derivada da classe `CCmdTarget` pode ter um mapa de mensagem. Outros artigos explicam os mapas de mensagem em detalhes e descrevem como usá-los.  
-  
- Apesar do nome "mapa de mensagem," mensagem mapas tratar duas mensagens e comandos — todas as três categorias de mensagens listadas na [categorias de mensagem](../mfc/message-categories.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Mensagens e comandos no Framework](../mfc/messages-and-commands-in-the-framework.md)
+
+Cada classe de estrutura que pode receber mensagens ou comandos tem seu próprio "mapa de mensagens". A estrutura usa mapas de mensagem para se conectar a mensagens e comandos para suas funções do manipulador. Qualquer classe derivada da classe `CCmdTarget` pode ter um mapa de mensagem. Outros artigos explicam os mapas de mensagem em detalhes e descrevem como usá-los.
+
+Apesar do nome "mapa de mensagens," mensagem manipulam mapas de mensagens e comandos — todas as três categorias de mensagens listados na [categorias de mensagem](../mfc/message-categories.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Mensagens e comandos no Framework](../mfc/messages-and-commands-in-the-framework.md)
 

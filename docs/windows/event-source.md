@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6fc8d8100786f78d516bb5f880e4238b7e3a2388
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d2dfcf61ced958519e7255bd241d3c0ea911824e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611858"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408915"
 ---
 # <a name="eventsource"></a>origem do evento
 
@@ -45,7 +45,7 @@ Cria uma origem de evento.
 
 ### <a name="parameters"></a>Parâmetros
 
-*type*  
+*type*<br/>
 Uma enumeração de um dos seguintes valores:
 
 - `native` para código C/C++ não gerenciado (padrão para classes não gerenciadas).
@@ -58,10 +58,10 @@ Uma enumeração de um dos seguintes valores:
     #include <atlcom.h>
     ```
 
-*optimize*  
+*optimize*<br/>
 Quando *tipo* é `native`, você pode especificar `optimize=size`, para indicar que há 4 bytes de armazenamento (mínimo) para todos os eventos em uma classe ou `optimize=speed` (o padrão) para indicar que há 4 * bytes (n º de eventos) de armazenamento.
 
-*Decore*  
+*Decore*<br/>
 Quando *tipo* é `native`, você pode especificar `decorate=false`, para indicar que o nome expandido no arquivo mesclado (. mrg) não deve incluir o nome da classe delimitadora. [/FX](../build/reference/fx-merge-injected-code.md) permite gerar arquivos. mrg. `decorate=false`, que é o padrão, o que resulta em nomes de tipo totalmente qualificado no arquivo mesclado.
 
 ## <a name="remarks"></a>Comentários
@@ -88,9 +88,9 @@ Para obter mais informações, consulte [contextos de atributo](../windows/attri
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de compilador](../windows/compiler-attributes.md)  
-[event_receiver](../windows/event-receiver.md)  
-[__event](../cpp/event.md)  
-[__hook](../cpp/hook.md)  
-[__unhook](../cpp/unhook.md)  
+[Atributos de compilador](../windows/compiler-attributes.md)<br/>
+[event_receiver](../windows/event-receiver.md)<br/>
+[__event](../cpp/event.md)<br/>
+[__hook](../cpp/hook.md)<br/>
+[__unhook](../cpp/unhook.md)<br/>
 [Atributos de classe](../windows/class-attributes.md)  

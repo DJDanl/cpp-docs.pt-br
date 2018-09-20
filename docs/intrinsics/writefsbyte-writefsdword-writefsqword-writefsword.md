@@ -26,62 +26,66 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77791bdf33f38417d38ebdec3c73b83d96bde36f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 84d6c614b7d571eea378a8cd093e0cafbee1aa48
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718465"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404339"
 ---
 # <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte, __writefsdword, __writefsqword, __writefsword
-**Seção específica da Microsoft**  
-  
- Gravar a memória para um local especificado por um deslocamento relativo ao início do segmento FS.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void __writefsbyte(   
-   unsigned long Offset,   
-   unsigned char Data   
-);  
-void __writefsword(   
-   unsigned long Offset,   
-   unsigned short Data   
-);  
-void __writefsdword(   
-   unsigned long Offset,   
-   unsigned long Data   
-);  
-void __writefsqword(   
-   unsigned long Offset,   
-   unsigned __int64 Data   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
+
+**Seção específica da Microsoft**
+
+Gravar a memória para um local especificado por um deslocamento relativo ao início do segmento FS.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+void __writefsbyte( 
+   unsigned long Offset, 
+   unsigned char Data 
+);
+void __writefsword( 
+   unsigned long Offset, 
+   unsigned short Data 
+);
+void __writefsdword( 
+   unsigned long Offset, 
+   unsigned long Data 
+);
+void __writefsqword( 
+   unsigned long Offset, 
+   unsigned __int64 Data 
+);
+```
+
+#### <a name="parameters"></a>Parâmetros
+
 *deslocamento*<br/>
-[in] O deslocamento do início do FS a gravar.  
-  
+[in] O deslocamento do início do FS a gravar.
+
 *Dados*<br/>
-[in] O valor a ser gravado.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Intrínseco|Arquitetura|  
-|---------------|------------------|  
-|`__writefsbyte`|x86|  
-|`__writefsword`|x86|  
-|`__writefsdword`|x86|  
-|`__writefsqword`|x86|  
-  
- **Arquivo de cabeçalho** \<intrin. h >  
-  
-## <a name="remarks"></a>Comentários  
- Essas rotinas estão disponíveis apenas como intrínsecos.  
-  
-**Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
- [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)
+[in] O valor a ser gravado.
+
+## <a name="requirements"></a>Requisitos
+
+|Intrínseco|Arquitetura|
+|---------------|------------------|
+|`__writefsbyte`|x86|
+|`__writefsword`|x86|
+|`__writefsdword`|x86|
+|`__writefsqword`|x86|
+
+**Arquivo de cabeçalho** \<intrin. h >
+
+## <a name="remarks"></a>Comentários
+
+Essas rotinas estão disponíveis apenas como intrínsecos.
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)<br/>
+[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

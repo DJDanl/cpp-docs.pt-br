@@ -12,18 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32ce5ecdcac09164c83d7124a1b1984a142e8e6c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b2c233a90acb0418afb51425bacb398832d5519d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686107"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410462"
 ---
 # <a name="16-organization"></a>1.6 Organização
--   Funções de biblioteca em tempo de execução ([consulte o capítulo 3](../../parallel/openmp/3-run-time-library-functions.md)).  
-  
--   Variáveis de ambiente ([consulte o capítulo 4](../../parallel/openmp/4-environment-variables.md)).  
-  
--   Comportamentos definidos na implementação OpenMP C/C++ ([consulte o Apêndice E](../../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md)).  
-  
--   Novos recursos na versão 2.0 do OpenMP C/C++ ([consulte o Apêndice F](../../parallel/openmp/f-new-features-and-clarifications-in-version-2-0.md)).
+
+- Funções da biblioteca em tempo de execução ([consulte o capítulo 3](../../parallel/openmp/3-run-time-library-functions.md)).
+
+- Variáveis de ambiente ([consulte o capítulo 4](../../parallel/openmp/4-environment-variables.md)).
+
+- Comportamentos definidos por implementação no OpenMP C/C++ ([consulte o Apêndice E](../../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md)).
+
+- Novos recursos na versão 2.0 do OpenMP C/C++ ([consulte o Apêndice F](../../parallel/openmp/f-new-features-and-clarifications-in-version-2-0.md)).

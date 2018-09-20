@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4691a3c3afd5b5dfeececc1244a0dc0d03b9b0d2
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 84000e25e9638699e5f2a521023c762b9c3c9a9e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313059"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411431"
 ---
 # <a name="adding-an-image-for-a-different-display-device-image-editor-for-icons"></a>Adicionando uma imagem para um dispositivo de exibição diferente (editor de imagens para ícones)
 
@@ -41,6 +41,6 @@ Nenhum
 
 ## <a name="see-also"></a>Consulte também
 
-[Ícones e cursores: recursos de imagem para exibir dispositivos](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
-[Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Ícones e cursores: recursos de imagem para exibir dispositivos](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)<br/>
+[Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Ícones e cursores: recursos de imagem para exibir dispositivos](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0876aed966db79b23d506bffd9247dd68d4a3935
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 7608255b5369443ce1045f896b776cb283fdb1cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539149"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411853"
 ---
 # <a name="renamenamespace"></a>rename_namespace
 **Específico do C++**  
@@ -48,5 +48,5 @@ Para remover o namespace, use o [no_namespace](../preprocessor/no-namespace.md) 
   
 ## <a name="see-also"></a>Consulte também  
  
-[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import diretiva](../preprocessor/hash-import-directive-cpp.md)

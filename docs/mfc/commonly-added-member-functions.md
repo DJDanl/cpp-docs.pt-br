@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df1be2fa68f0a7a9ea9e54d500240cc6b5f06048
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a07c034a15cd0b575dab4cb3b647e64e6ad16c7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341242"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428558"
 ---
 # <a name="commonly-added-member-functions"></a>Funções de membro normalmente adicionadas
-Se a caixa de diálogo contém pushbuttons diferente Okey ou em Cancelar, você precisa gravar funções de membro de manipulador de mensagens em sua classe de caixa de diálogo para responder às mensagens de notificação de controle que elas geram. Para obter um exemplo, consulte o [Rabisco](../visual-cpp-samples.md) programa de exemplo. Você também pode lidar com mensagens de notificação de controle de outros controles na caixa de diálogo.  
-  
-## <a name="see-also"></a>Consulte também  
- [Caixas de diálogo](../mfc/dialog-boxes.md)   
- [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)   
- [Funções de membro normalmente substituídas](../mfc/commonly-overridden-member-functions.md)
+
+Se a caixa de diálogo contiver comportarem diferente Okey ou em Cancelar, você precisa escrever o manipulador de mensagem de funções de membro em sua classe de caixa de diálogo para responder às mensagens de notificação de controle que eles geram. Por exemplo, consulte o [Rabisco](../visual-cpp-samples.md) programa de exemplo. Você também pode manipular as mensagens de notificação de controle de outros controles na caixa de diálogo.
+
+## <a name="see-also"></a>Consulte também
+
+[Caixas de diálogo](../mfc/dialog-boxes.md)<br/>
+[Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[Funções de membro normalmente substituídas](../mfc/commonly-overridden-member-functions.md)

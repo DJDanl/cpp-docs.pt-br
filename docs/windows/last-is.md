@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e7b699f5b6aa023473416b822a94d9b3a91c2b07
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b565e6e37baba764ffc0bb970b9d7ebcac4e3db2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221113"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413725"
 ---
 # <a name="lastis"></a>last_is
 
@@ -38,7 +38,7 @@ Especifica o índice do último elemento da matriz a ser transmitido.
 
 ### <a name="parameters"></a>Parâmetros
 
-*Expressão*  
+*Expressão*<br/>
 Uma ou mais expressões de linguagem C. Slots de argumentos vazia são permitidos.
 
 ## <a name="remarks"></a>Comentários
@@ -64,10 +64,10 @@ Para obter mais informações, consulte [contextos de atributo](../windows/attri
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](../windows/idl-attributes.md)  
-[Atributos Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[Atributos de parâmetro](../windows/parameter-attributes.md)  
-[first_is](../windows/first-is.md)  
-[max_is](../windows/max-is.md)  
-[length_is](../windows/length-is.md)  
+[Atributos de IDL](../windows/idl-attributes.md)<br/>
+[Atributos Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[Atributos de parâmetro](../windows/parameter-attributes.md)<br/>
+[first_is](../windows/first-is.md)<br/>
+[max_is](../windows/max-is.md)<br/>
+[length_is](../windows/length-is.md)<br/>
 [size_is](../windows/size-is.md)  

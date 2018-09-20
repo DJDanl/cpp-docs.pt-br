@@ -12,12 +12,13 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b1c56bb4daaa6b87cf8e59e072cb73a746712f9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ab664bf15dd098b9d3e3bd7d6bd9c73db47fff2e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695883"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436904"
 ---
 # <a name="2-directives"></a>2. Diretivas
-As diretivas são baseadas em **#pragma** diretivas definidas nos padrões de C e C++.  Compiladores que dão suporte a OpenMP C e C++ API inclui uma opção de linha de comando que ativa e permite que a interpretação de todas as diretivas de compilador OpenMP.
+
+As diretivas se baseiam **#pragma** diretivas definidas nos padrões de C e C++.  Compiladores que dão suporte a OpenMP C e C++ API inclui uma opção de linha de comando que ativa e permite que a interpretação de todas as diretivas de compilador OpenMP.

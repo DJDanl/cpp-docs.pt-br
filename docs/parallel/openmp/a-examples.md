@@ -12,12 +12,13 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c67c29bbded76f4ef44337e557b58b6bad828947
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 3747b8a73c372ae3226b1f0c4f762da34dc40eab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695412"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446238"
 ---
 # <a name="a-examples"></a>R. Exemplos
-A seguir estão exemplos das construções definidos neste documento. Observe que uma declaração de uma diretiva a seguir é composta somente quando necessário, e uma instrução compostas não é recuada em relação a uma diretiva anterior.
+
+A seguir estão exemplos das construções definidos neste documento. Observe que uma declaração de uma diretiva a seguir é composta somente quando necessário, e uma instrução compound-não é recuada em relação a uma diretiva que precede.

@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 08347b4ccfa44d8645acc2bd5e96775bab4e7740
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: cd9ab28ccce14c5ac0975b7050588ee6524cfcc9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601490"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408343"
 ---
 # <a name="eventsource-class"></a>Classe EventSource
 
@@ -53,7 +53,7 @@ class EventSource;
 
 ### <a name="parameters"></a>Parâmetros
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 A interface para um delegado que representa um manipulador de eventos.
 
 ## <a name="members"></a>Membros
@@ -104,10 +104,10 @@ HRESULT Add(
 
 ### <a name="parameters"></a>Parâmetros
 
-*delegateInterface*  
+*delegateInterface*<br/>
 A interface para um objeto delegado, que representa um manipulador de eventos.
 
-*token*  
+*token*<br/>
 Quando essa operação for concluída, um identificador que representa o evento. Usar esse token como o parâmetro para o [remove ()](#remove) método para descartar o manipulador de eventos.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -302,64 +302,64 @@ void InvokeAll(
 
 ### <a name="parameters"></a>Parâmetros
 
-*T0*  
+*T0*<br/>
 O tipo de argumento do manipulador de evento inicial.
 
-*T1*  
+*T1*<br/>
 O tipo do primeiro argumento do manipulador de eventos.
 
-*T2*  
+*T2*<br/>
 O tipo do segundo argumento do manipulador de eventos.
 
-*T3*  
+*T3*<br/>
 O tipo do terceiro argumento de manipulador de eventos.
 
-*T4*  
+*T4*<br/>
 O tipo do quarto argumento de manipulador de eventos.
 
-*T5*  
+*T5*<br/>
 O tipo do quinto argumento do manipulador de eventos.
 
-*T6*  
+*T6*<br/>
 O tipo do sexto argumento do manipulador de eventos.
 
-*T7*  
+*T7*<br/>
 O tipo do sétimo argumento do manipulador de eventos.
 
-*T8*  
+*T8*<br/>
 O tipo de argumento do manipulador de evento oitava.
 
-*T9*  
+*T9*<br/>
 O tipo do nono argumento do manipulador de eventos.
 
-*arg0*  
+*arg0*<br/>
 O argumento do manipulador de evento inicial.
 
-*arg1*  
+*arg1*<br/>
 O primeiro argumento de manipulador de eventos.
 
-*Arg2*  
+*Arg2*<br/>
 O segundo argumento de manipulador de eventos.
 
-*arg3*  
+*arg3*<br/>
 O terceiro argumento de manipulador de eventos.
 
-*Arg4*  
+*Arg4*<br/>
 O quarto argumento de manipulador de eventos.
 
-*arg5*  
+*arg5*<br/>
 O quinto argumento de manipulador de eventos.
 
-*arg6*  
+*arg6*<br/>
 O sexto argumento de manipulador de eventos.
 
-*arg7*  
+*arg7*<br/>
 O sétimo argumento de manipulador de eventos.
 
-*arg8*  
+*arg8*<br/>
 O argumento de manipulador de eventos do oitavo.
 
-*arg9*  
+*arg9*<br/>
 O nono argumento de manipulador de eventos.
 
 ## <a name="remove"></a>EventSource:: remove
@@ -374,7 +374,7 @@ HRESULT Remove(
 
 ### <a name="parameters"></a>Parâmetros
 
-*token*  
+*token*<br/>
 Um identificador que representa um manipulador de eventos. Esse token foi retornado quando o manipulador de eventos foi registrado pela [Add ()](#add) método.
 
 ### <a name="return-value"></a>Valor de retorno

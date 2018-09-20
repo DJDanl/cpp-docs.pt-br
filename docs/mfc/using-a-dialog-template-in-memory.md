@@ -17,16 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10364cffa393c8f0968a4d7dffe40224b76ecf3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 649f3aecc79a0b05355b67b1d42cfd3cc2726f18
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381232"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430833"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>Usando um modelo da caixa de diálogo na memória
-Em vez de usar os métodos fornecidos no [tabela de criação da caixa de diálogo](../mfc/creating-a-dialog-class-with-code-wizards.md), você pode criar qualquer tipo de caixa de diálogo indiretamente a partir de um modelo de caixa de diálogo na memória. Para obter mais informações, consulte a classe [CDialog](../mfc/reference/cdialog-class.md) no *referência MFC*.  
-  
-## <a name="see-also"></a>Consulte também  
- [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
+
+Em vez de usar os métodos fornecidos na [tabela de criação de caixa de diálogo](../mfc/creating-a-dialog-class-with-code-wizards.md), você pode criar qualquer tipo de caixa de diálogo indiretamente a partir de um modelo de caixa de diálogo na memória. Para obter mais informações, consulte a classe [CDialog](../mfc/reference/cdialog-class.md) na *referência da MFC*.
+
+## <a name="see-also"></a>Consulte também
+
+[Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
 

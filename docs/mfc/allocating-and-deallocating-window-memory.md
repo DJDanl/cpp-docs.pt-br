@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1364b4d29e2ccd2c9563359716eba6880df5436
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 149a8e860913515551fc85be9b49675856d7e129
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341453"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415182"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>Alocando e desalocando a memória da janela
-Não use o C++ **excluir** operador destruir uma janela do quadro ou exibição. Em vez disso, chame o `CWnd` função de membro `DestroyWindow`. Janelas com moldura, portanto, devem ser alocadas no heap com operador **novo**. Tenha cuidado ao alocar janelas com moldura no quadro de pilha ou globalmente. Outras janelas devem ser alocadas no quadro de pilha sempre que possível.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
-  
--   [Criando janelas](../mfc/creating-windows.md)  
-  
--   [Sequência de destruição da janela](../mfc/window-destruction-sequence.md)  
-  
--   [Desanexando um CWnd de HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Destruindo objetos de janela](../mfc/destroying-window-objects.md)
+
+Não use o C++ **excluir** operador para destruir uma janela do quadro ou da exibição. Em vez disso, chame o `CWnd` função de membro `DestroyWindow`. Janelas de quadro, portanto, devem ser alocadas no heap com o operador **novo**. Tenha cuidado ao alocar janelas com moldura no quadro da pilha ou globalmente. Outras janelas devem ser alocadas no quadro da pilha sempre que possível.
+
+## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+
+- [Criando janelas](../mfc/creating-windows.md)
+
+- [Sequência de destruição da janela](../mfc/window-destruction-sequence.md)
+
+- [Desanexando um CWnd de HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Destruindo objetos de janela](../mfc/destroying-window-objects.md)
 

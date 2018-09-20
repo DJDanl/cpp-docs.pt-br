@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8de7bbfb2f00f5e1a909a83a5399e2d564747962
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: fafdb99296e19318f183b6c0893d9b4e91f0cd7b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213989"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422630"
 ---
 # <a name="appobject"></a>appobject
 
@@ -72,6 +72,6 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](../windows/idl-attributes.md)  
-[Atributos de classe](../windows/class-attributes.md)  
+[Atributos de IDL](../windows/idl-attributes.md)<br/>
+[Atributos de classe](../windows/class-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)  

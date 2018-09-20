@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6074519f472fff82af60695f37d0f96d9557f193
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2213266d281933c6a6a59775584532acaeb39d6e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313644"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412309"
 ---
 # <a name="exception-handling--c-component-extensions"></a>Tratamento de Exceção (Extensões de Componentes C++)
 
@@ -33,27 +33,27 @@ Aplicativos compilados com o `/ZW` opção de compilador ou `/clr` opção de co
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Conceitos básicos do uso de exceções gerenciadas](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
+[Conceitos básicos do uso de exceções gerenciadas](../dotnet/basic-concepts-in-using-managed-exceptions.md)<br/>
 Descreve Lançando exceções e usando **tente**/**catch** blocos.
 
-[Diferenças no comportamento em /CLR de tratamento de exceções](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
+[Diferenças no comportamento em /CLR de tratamento de exceções](../dotnet/differences-in-exception-handling-behavior-under-clr.md)<br/>
 Discute as diferenças do comportamento padrão de tratamento de exceções C++.
 
-[finally](../dotnet/finally.md)  
+[finally](../dotnet/finally.md)<br/>
 Discute como usar a palavra-chave finally.
 
-[Como definir e instalar um manipulador de exceção global](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
+[Como definir e instalar um manipulador de exceção global](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
 Demonstra como sem tratamento de exceções podem ser capturadas.
 
-[Como capturar exceções em código nativo lançadas pela MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)  
+[Como capturar exceções em código nativo lançadas pela MSIL](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)<br/>
 Discute como capturar exceções de CLR e C++ em código nativo.
 
-[Como definir e instalar um manipulador de exceção global](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
+[Como definir e instalar um manipulador de exceção global](../dotnet/how-to-define-and-install-a-global-exception-handler.md)<br/>
 Demonstra como capturar exceções não tratadas.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Tratamento de Exceção](../cpp/exception-handling-in-visual-cpp.md)  
+[Tratamento de Exceção](../cpp/exception-handling-in-visual-cpp.md)<br/>
 Descreve o tratamento de exceções em C++.
 
 ## <a name="see-also"></a>Consulte também

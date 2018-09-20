@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 229b4a5ffb32f4a167dcc8393a269bbb2e35b500
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83c1208d3001739ca78186972c629ea8a094c8d8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344874"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430885"
 ---
 # <a name="dialog-data-validation"></a>Validação dos dados da caixa de diálogo
-Você pode especificar validação além de troca de dados chamando funções DDV, conforme mostrado no exemplo de [troca de dados de caixa de diálogo](../mfc/dialog-data-exchange.md). O `DDV_MaxChars` chamada no exemplo valida que a cadeia de caracteres inserida no controle de caixa de texto não é mais de 20 caracteres. A função DDV normalmente alerta o usuário com uma caixa de mensagem se a validação falha e coloca o foco no controle inválido para que o usuário pode inserir os dados novamente. Uma função DDV para um dado controle deve ser chamada imediatamente após a função DDX para o mesmo controle.  
-  
- Você também pode definir suas próprias rotinas DDX e DDV personalizadas. Para obter detalhes sobre este e outros aspectos de DDX e DDV, consulte [26 de observação técnica MFC](../mfc/tn026-ddx-and-ddv-routines.md).  
-  
- O [Adicionar Assistente de variável de membro](../ide/add-member-variable-wizard.md) gravará todos o DDX e DDV chama no mapa de dados para você.  
-  
-## <a name="see-also"></a>Consulte também  
- [Caixa de diálogo dados Exchange e validação](../mfc/dialog-data-exchange-and-validation.md)   
- [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)   
- [Troca de dados da caixa de diálogo](../mfc/dialog-data-exchange.md)
+
+Você pode especificar a validação, além de troca de dados chamando funções DDV, conforme mostrado no exemplo na [troca de dados de caixa de diálogo](../mfc/dialog-data-exchange.md). O `DDV_MaxChars` chamada no exemplo valida que a cadeia de caracteres inserida no controle de caixa de texto não é mais de 20 caracteres. A função DDV normalmente alertará o usuário com uma caixa de mensagem se a validação falha e coloca o foco no controle incorreto para que o usuário pode inserir os dados novamente. Uma função de DDV para um determinado controle deve ser chamada imediatamente após a função DDX para o mesmo controle.
+
+Você também pode definir suas próprias rotinas DDX e DDV personalizadas. Para obter detalhes sobre esse e outros aspectos do DDX e DDV, consulte [26 de observação técnica MFC](../mfc/tn026-ddx-and-ddv-routines.md).
+
+O [Adicionar Assistente de variável de membro](../ide/add-member-variable-wizard.md) gravará todos o DDX e DDV chama no mapa de dados para você.
+
+## <a name="see-also"></a>Consulte também
+
+[Troca e validação de dados da caixa de diálogo](../mfc/dialog-data-exchange-and-validation.md)<br/>
+[Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[Troca de dados da caixa de diálogo](../mfc/dialog-data-exchange.md)
 

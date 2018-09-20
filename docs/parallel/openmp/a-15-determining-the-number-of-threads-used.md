@@ -1,5 +1,5 @@
 ---
-title: A.15 para determinar o número de Threads usados | Microsoft Docs
+title: A.15 determinando o número de Threads usados | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,31 +12,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b50858a3384fa5f8d867f13a699e1fc271c101ef
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1042b4871f53bddb5cff894330f3afe7d8a088ef
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686380"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46428729"
 ---
 # <a name="a15---determining-the-number-of-threads-used"></a>A.15  Determinando o número de threads usados
-Considere o seguinte exemplo incorreto (para [seção 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) na página 37):  
-  
-```  
-np = omp_get_num_threads(); // misplaced   
-#pragma omp parallel for schedule(static)  
-    for (i=0; i<np; i++)  
-        work(i);  
-```  
-  
- O `omp_get_num_threads()` chamada retorna 1 na seção serial do código, portanto *np* sempre será igual a 1 no exemplo anterior. Para determinar o número de threads que será implantado para a região paralela, a chamada deve ser dentro da região paralela.  
-  
- O exemplo a seguir mostra como reconfigurar o programa sem incluir uma consulta para o número de threads:  
-  
-```  
-#pragma omp parallel private(i)  
-{  
-    i = omp_get_thread_num();  
-    work(i);  
-}  
+
+Considere o seguinte exemplo incorreto (para [seção 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) na página 37):
+
+```
+np = omp_get_num_threads(); // misplaced
+#pragma omp parallel for schedule(static)
+    for (i=0; i<np; i++)
+        work(i);
+```
+
+O `omp_get_num_threads()` chamar retorna 1 na seção serial do código, então *np* sempre será igual a 1 no exemplo anterior. Para determinar o número de threads que serão implantados para a região paralela, a chamada deve ser dentro da região paralela.
+
+O exemplo a seguir mostra como reescrever esse programa sem a inclusão de uma consulta para o número de threads:
+
+```
+#pragma omp parallel private(i)
+{
+    i = omp_get_thread_num();
+    work(i);
+}
 ```
