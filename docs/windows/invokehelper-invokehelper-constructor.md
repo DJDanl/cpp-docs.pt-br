@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1ad09a5a4794a9db8882a088f90da5046b6f7b9d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 11f3e82f0834863c3cdfb476443a4dbd0bdf1f6f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609234"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385073"
 ---
 # <a name="invokehelperinvokehelper-constructor"></a>Construtor InvokeHelper::InvokeHelper
 
@@ -38,7 +38,7 @@ explicit InvokeHelper(
 
 ### <a name="parameters"></a>Parâmetros
 
-*retorno de chamada*  
+*retorno de chamada*<br/>
 Um manipulador de eventos.
 
 ## <a name="remarks"></a>Comentários
@@ -55,5 +55,5 @@ O `TCallback` parâmetro de modelo especifica o tipo de manipulador de eventos.
 
 ## <a name="see-also"></a>Consulte também
 
-[Estrutura InvokeHelper](../windows/invokehelper-structure.md)  
+[Estrutura InvokeHelper](../windows/invokehelper-structure.md)<br/>
 [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac443927c2dcbb00cc01dd3cd63a95441a4a1bf0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ea891ce5ee5c3570577edf7c2122b2cd39b5c64d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711787"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378541"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -52,7 +52,7 @@ Define o bloco de biblioteca no arquivo. idl.
 
 ### <a name="parameters"></a>Parâmetros
 
-*type*  
+*type*<br/>
 (Opcional) Pode ser uma das seguintes opções:
 
 - `dll` Adiciona funções e classes que permitem que a DLL resultante funcionar como um servidor de COM em processo. Este é o valor padrão.
@@ -63,50 +63,50 @@ Define o bloco de biblioteca no arquivo. idl.
 
 - `unspecified` Desabilita a injeção de código de ATL relacionado ao atributo de módulo: funções de ponto a injeção de classe de módulo ATL, _AtlModule de instância global e entrada. Não desabilite a injeção de código de ATL devido a outros atributos no projeto.
 
-*name*  
+*name*<br/>
 (Opcional) O nome do bloco de biblioteca.
 
-*version*  
+*version*<br/>
 (Opcional) O número de versão que você deseja atribuir ao bloco de biblioteca. O valor padrão é 1.0.
 
-*uuid*  
+*uuid*<br/>
 A ID exclusiva para a biblioteca. Se você omitir esse parâmetro, uma ID será gerada automaticamente para a biblioteca. Talvez você precise recuperar o *uuid* de seu bloco de biblioteca, que pode ser feito usando o identificador **uuidof (** *libraryname* **)**.
 
-*lcid*  
+*lcid*<br/>
 O parâmetro de localização. Ver [lcid](/windows/desktop/Midl/lcid) para obter mais informações.
 
-*control*  
+*control*<br/>
 (Opcional) Especifica que todas as coclasses na biblioteca de controles.
 
-*helpstring*  
+*helpstring*<br/>
 Especifica a biblioteca de tipos.
 
-*helpstringdll*  
+*helpstringdll*<br/>
 (Opcional) Define o nome do arquivo. dll para usar para executar uma pesquisa de cadeia de caracteres do documento. Ver [helpstringdll](/windows/desktop/Midl/helpstringdll) para obter mais informações.
 
-*helpfile*  
+*helpfile*<br/>
 (Opcional) O nome da **ajudar** arquivo da biblioteca de tipos.
 
-*helpcontext*  
+*helpcontext*<br/>
 (Opcional) O **identificação ajuda** para esta biblioteca de tipos.
 
-*helpstringcontext*  
+*helpstringcontext*<br/>
 (Opcional) Ver [helpstringcontext](../windows/helpstringcontext.md) para obter mais informações.
 
-*hidden*  
+*hidden*<br/>
 (Opcional) Impede que a biblioteca inteira seja exibido. Esse uso destina-se para uso com controles. Hosts precisam criar uma nova biblioteca de tipo que encapsula o controle com propriedades estendidas. Consulte a [ocultos](/windows/desktop/Midl/hidden) atributo MIDL para obter mais informações.
 
-*restricted*  
+*restricted*<br/>
 (Opcional) Membros da biblioteca não podem ser chamados arbitrariamente. Consulte a [restrito](/windows/desktop/Midl/restricted) atributo MIDL para obter mais informações.
 
-*custom*  
+*custom*<br/>
 (Opcional) Um ou mais atributos; Isso é semelhante a [personalizado](../windows/custom-cpp.md) atributo. O primeiro parâmetro para *personalizado* é o GUID do atributo. Por exemplo:
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]
 ```
 
-*resource_name*  
+*resource_name*<br/>
 A ID de recurso de cadeia de caracteres do arquivo. rgs usado para registrar a ID do aplicativo da DLL, executável ou de serviço. Quando o módulo é do tipo serviço, esse argumento também é usado para obter a ID da cadeia de caracteres que contém o nome do serviço.
 
 > [!NOTE]
@@ -188,13 +188,13 @@ Para obter mais informações, consulte [contextos de atributo](../windows/attri
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](../windows/idl-attributes.md)  
-[Atributos de classe](../windows/class-attributes.md)  
-[Atributos independentes](../windows/stand-alone-attributes.md)  
-[Atributos Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[usesgetlasterror](../windows/usesgetlasterror.md)  
-[Biblioteca](/windows/desktop/Midl/library)  
-[helpcontext](../windows/helpcontext.md)  
-[helpstring](../windows/helpstring.md)  
-[helpfile](../windows/helpfile.md)  
+[Atributos de IDL](../windows/idl-attributes.md)<br/>
+[Atributos de classe](../windows/class-attributes.md)<br/>
+[Atributos independentes](../windows/stand-alone-attributes.md)<br/>
+[Atributos Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[usesgetlasterror](../windows/usesgetlasterror.md)<br/>
+[Biblioteca](/windows/desktop/Midl/library)<br/>
+[helpcontext](../windows/helpcontext.md)<br/>
+[helpstring](../windows/helpstring.md)<br/>
+[helpfile](../windows/helpfile.md)<br/>
 [version](../windows/version-cpp.md)  

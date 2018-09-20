@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a79f731ef0080e38e2c1b60d8e4924a5bf75089e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fdea60808118ecd7caa04fab3421c481d908e833
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600289"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391807"
 ---
 # <a name="idlquote"></a>idl_quote
 
@@ -38,7 +38,7 @@ Permite que você use construções IDL que não têm suporte na versão atual d
 
 ### <a name="parameters"></a>Parâmetros
 
-*text*  
+*text*<br/>
 O nome do atributo que você pretende que o compilador do Visual C++ para passar para o arquivo. idl gerado sem retornar um erro do compilador.
 
 ## <a name="remarks"></a>Comentários
@@ -99,5 +99,5 @@ Para obter mais informações, consulte [contextos de atributo](../windows/attri
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](../windows/idl-attributes.md)  
+[Atributos de IDL](../windows/idl-attributes.md)<br/>
 [Atributos independentes](../windows/stand-alone-attributes.md)  

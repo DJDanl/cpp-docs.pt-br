@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdcd101759b35490451bf46bd6e222db469a3fba
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 26282ef73f6a979cd564bd7597f8418c6535179a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42581236"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390507"
 ---
 # <a name="win32-application-wizard"></a>Assistente de aplicativo Win32
 
@@ -62,5 +62,5 @@ Você pode exibir os arquivos que o assistente cria para seu projeto no **Gerenc
 
 ## <a name="see-also"></a>Consulte também
 
-[Criando um aplicativo da área de trabalho do Windows vazio](../windows/creating-an-empty-windows-desktop-application.md)  
+[Criando um aplicativo da área de trabalho do Windows vazio](../windows/creating-an-empty-windows-desktop-application.md)<br/>
 [Tipos de projeto do Visual C++](../ide/visual-cpp-project-types.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: usar o excesso de assinatura para deslocar latência | Microsoft Docs'
+title: 'Como: usar excesso de assinatura para compensar a latência | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,77 +15,81 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c27864d040d0b6ce7b36087cff85ed750aa7ed2
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 7f96a8a27b511c1a93114c32d048043aa9562fe1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689253"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392952"
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>Como usar excesso de assinatura para deslocar latência
-Excesso de assinatura pode melhorar a eficiência geral de alguns aplicativos que contêm as tarefas que têm uma grande quantidade de latência. Este tópico ilustra como usar excesso de assinatura para deslocar a latência é causada pela leitura de dados de uma conexão de rede.  
-  
-## <a name="example"></a>Exemplo  
- Este exemplo usa o [biblioteca de agentes assíncrona](../../parallel/concrt/asynchronous-agents-library.md) Baixe arquivos de servidores HTTP. O `http_reader` classe derivada de [concurrency::agent](../../parallel/concrt/reference/agent-class.md) e usa passando para ler assincronamente quais nomes de URL para fazer o download da mensagem.  
-  
- O `http_reader` classe usa a [concurrency::task_group](reference/task-group-class.md) classe para cada arquivo de leitura ao mesmo tempo. Cada tarefa chama o [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) método com o `_BeginOversubscription` parâmetro definido como `true` para habilitar o excesso de assinatura no contexto atual. Cada tarefa, em seguida, usa o Microsoft Foundation Classes (MFC) [CInternetSession](../../mfc/reference/cinternetsession-class.md) e [CHttpFile](../../mfc/reference/chttpfile-class.md) classes para baixar o arquivo. Por fim, cada tarefa chama `Context::Oversubscribe` com o `_BeginOversubscription` parâmetro definido como `false` para desabilitar o excesso de assinatura.  
-  
- Quando o excesso de assinatura é habilitado, o tempo de execução cria um thread adicional para execução de tarefas. Cada um desses threads pode subscrever também o contexto atual e, assim, criam threads adicionais. O `http_reader` classe usa um [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) objeto para limitar o número de threads que o aplicativo usa. O agente inicializa o buffer com um número fixo de valores do token. Para cada operação de download, o agente lê um valor do token do buffer antes da operação inicia e, em seguida, grava esse valor para o buffer após a conclusão da operação. Quando o buffer está vazio, o agente espera para uma das operações de download para gravar um valor de volta para o buffer.  
-  
- O exemplo a seguir limita o número de tarefas simultâneas para duas vezes o número de threads de hardware disponíveis. Esse valor é um bom ponto de partida para usar ao fazer experiências com excesso de assinatura. Você pode usar um valor que atenda a um ambiente de processamento específico ou dinamicamente altere este valor para responder à carga de trabalho real.  
-  
- [!code-cpp[concrt-download-oversubscription#1](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_1.cpp)]  
-  
- Este exemplo produz a saída a seguir em um computador que tem quatro processadores:  
-  
-```Output  
-Downloading http://www.adatum.com/...  
-Downloading http://www.adventure-works.com/...  
-Downloading http://www.alpineskihouse.com/...  
-Downloading http://www.cpandl.com/...  
-Downloading http://www.cohovineyard.com/...  
-Downloading http://www.cohowinery.com/...  
-Downloading http://www.cohovineyardandwinery.com/...  
-Downloading http://www.contoso.com/...  
-Downloading http://www.consolidatedmessenger.com/...  
-Downloading http://www.fabrikam.com/...  
-Downloading http://www.fourthcoffee.com/...  
-Downloading http://www.graphicdesigninstitute.com/...  
-Downloading http://www.humongousinsurance.com/...  
-Downloading http://www.litwareinc.com/...  
-Downloading http://www.lucernepublishing.com/...  
-Downloading http://www.margiestravel.com/...  
-Downloading http://www.northwindtraders.com/...  
-Downloading http://www.proseware.com/...  
-Downloading http://www.fineartschool.net...  
-Downloading http://www.tailspintoys.com/...  
-Downloaded 1801040 bytes in 3276 ms.  
-```  
-  
- O exemplo pode executar mais rápido quando excesso de assinatura foi habilitado porque as tarefas adicionais executadas enquanto outras tarefas de espera para a concluir uma operação latente.  
-  
-## <a name="compiling-the-code"></a>Compilando o código  
- Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `download-oversubscription.cpp` e, em seguida, execute um dos seguintes comandos em uma janela de Prompt de comando do Visual Studio.  
-  
- **cl.exe /EHsc /MD /D "_AFXDLL" download-oversubscription.cpp**  
-  
- **cl.exe /EHsc /MT download-oversubscription.cpp**  
-  
-## <a name="robust-programming"></a>Programação robusta  
- Depois que você não precisa sempre desabilite a excesso de assinatura. Considere uma função que não lida com a exceção que é lançada por outra função. Se você não desabilitar excesso de assinatura antes que a função retorna, qualquer trabalho paralelo adicional também será subscrever o contexto atual.  
-  
- Você pode usar o *recurso aquisição é inicialização* padrão (RAII) para limitar o excesso de assinatura para um determinado escopo. Em padrão RAII, uma estrutura de dados é alocada na pilha. Essa estrutura de dados inicializa ou adquire um recurso quando ele é criado e destrói ou libera esse recurso quando a estrutura de dados é destruída. O padrão RAII garante que o destruidor é chamado antes de sair do escopo delimitador. Portanto, o recurso é gerenciado corretamente quando uma exceção é lançada ou quando uma função contém várias `return` instruções.  
-  
- O exemplo a seguir define uma estrutura denominada `scoped_blocking_signal`. O construtor do `scoped_blocking_signal` estrutura permite que o excesso de assinatura e o destruidor desabilita o excesso de assinatura.  
-  
- [!code-cpp[concrt-download-oversubscription#2](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_2.cpp)]  
-  
- O exemplo a seguir modifica o corpo do `download` método RAII para garantir que excesso de assinatura está desabilitado antes da função retorna. Essa técnica garante que o `download` método é segura para a exceção.  
-  
- [!code-cpp[concrt-download-oversubscription#3](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_3.cpp)]  
-  
-## <a name="see-also"></a>Consulte também  
- [Contextos](../../parallel/concrt/contexts.md)   
- [Método: oversubscribe](reference/context-class.md#oversubscribe)
 
+Excesso de assinatura pode melhorar a eficiência geral de alguns aplicativos que contêm as tarefas que têm uma grande quantidade de latência. Este tópico ilustra como usar excesso de assinatura para deslocar a latência causada por leitura de dados de uma conexão de rede.
+
+## <a name="example"></a>Exemplo
+
+Este exemplo usa o [biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md) para baixar arquivos de servidores HTTP. O `http_reader` classe deriva [concurrency::agent](../../parallel/concrt/reference/agent-class.md) e usos da mensagem passando para ler os nomes de URL para baixar de forma assíncrona.
+
+O `http_reader` classe usa o [Concurrency:: task_group](reference/task-group-class.md) classe simultaneamente ler cada arquivo. Cada tarefa chama o [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) método com o `_BeginOversubscription` parâmetro definido como `true` para habilitar assinaturas em excesso no contexto atual. Cada tarefa, em seguida, usa o Microsoft Foundation Classes (MFC) [CInternetSession](../../mfc/reference/cinternetsession-class.md) e [CHttpFile](../../mfc/reference/chttpfile-class.md) classes para baixar o arquivo. Por fim, cada tarefa chama `Context::Oversubscribe` com o `_BeginOversubscription` parâmetro definido como `false` para desabilitar o excesso de assinatura.
+
+Quando o excesso de assinaturas estiver habilitado, o tempo de execução cria um thread adicional no qual executar tarefas. Cada um desses threads pode também substituir o contexto atual e, assim, criar threads adicionais. O `http_reader` classe usa um [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) objeto para limitar o número de threads que o aplicativo usa. O agente inicializa o buffer com um número fixo de valores do token. Para cada operação de download, o agente lê um valor de token do buffer antes que a operação inicia e, em seguida, grava esse valor de volta no buffer após a conclusão da operação. Quando o buffer está vazio, o agente espera uma das operações de download para gravar um valor de volta para o buffer.
+
+O exemplo a seguir limita o número de tarefas simultâneas para duas vezes o número de threads de hardware disponíveis. Esse valor é um bom ponto de partida para usar ao experimentar o excesso de assinatura. Você pode usar um valor que se ajusta a um ambiente de processamento específico ou alterar dinamicamente esse valor para responder a carga de trabalho real.
+
+[!code-cpp[concrt-download-oversubscription#1](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_1.cpp)]
+
+Este exemplo produz a saída a seguir em um computador que tem quatro processadores:
+
+```Output
+Downloading http://www.adatum.com/...
+Downloading http://www.adventure-works.com/...
+Downloading http://www.alpineskihouse.com/...
+Downloading http://www.cpandl.com/...
+Downloading http://www.cohovineyard.com/...
+Downloading http://www.cohowinery.com/...
+Downloading http://www.cohovineyardandwinery.com/...
+Downloading http://www.contoso.com/...
+Downloading http://www.consolidatedmessenger.com/...
+Downloading http://www.fabrikam.com/...
+Downloading http://www.fourthcoffee.com/...
+Downloading http://www.graphicdesigninstitute.com/...
+Downloading http://www.humongousinsurance.com/...
+Downloading http://www.litwareinc.com/...
+Downloading http://www.lucernepublishing.com/...
+Downloading http://www.margiestravel.com/...
+Downloading http://www.northwindtraders.com/...
+Downloading http://www.proseware.com/...
+Downloading http://www.fineartschool.net...
+Downloading http://www.tailspintoys.com/...
+Downloaded 1801040 bytes in 3276 ms.
+```
+
+O exemplo a pode executar mais rapidamente ao excesso de assinatura foi habilitado porque tarefas adicionais são executadas enquanto outras tarefas de espera para concluir uma operação de latente.
+
+## <a name="compiling-the-code"></a>Compilando o código
+
+Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `download-oversubscription.cpp` e, em seguida, execute um dos seguintes comandos em uma janela de Prompt de comando do Visual Studio.
+
+**cl.exe /EHsc /MD /D "_AFXDLL" download-oversubscription.cpp**
+
+**cl.exe de /EHsc /MT download-oversubscription.cpp**
+
+## <a name="robust-programming"></a>Programação robusta
+
+Sempre desabilite o excesso de assinatura depois que você não precisar. Considere uma função que não trata uma exceção que é lançada por outra função. Se você não desabilitar o excesso de assinatura antes da função retorna, qualquer trabalho paralelo adicional também serão subscrever o contexto atual.
+
+Você pode usar o *recurso de aquisição é inicialização* padrão (RAII) para limitar o excesso de assinatura para um determinado escopo. Sob o padrão RAII, uma estrutura de dados é alocada na pilha. Essa estrutura de dados inicializa ou adquire um recurso quando ele é criado e destrói ou libera esse recurso quando a estrutura de dados é destruída. O padrão RAII garante que o destruidor é chamado antes de sair do escopo delimitador. Portanto, os recursos são gerenciados corretamente quando uma exceção é lançada ou quando uma função contém várias `return` instruções.
+
+O exemplo a seguir define uma estrutura que é denominada `scoped_blocking_signal`. O construtor do `scoped_blocking_signal` estrutura permite que o excesso de assinatura e o destruidor desabilita o excesso de assinaturas.
+
+[!code-cpp[concrt-download-oversubscription#2](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_2.cpp)]
+
+O exemplo a seguir modifica o corpo do `download` método usar RAII para garantir que esse excesso de assinatura está desabilitado antes da função retorna. Essa técnica garante que o `download` método é à prova de exceções.
+
+[!code-cpp[concrt-download-oversubscription#3](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_3.cpp)]
+
+## <a name="see-also"></a>Consulte também
+
+[Contextos](../../parallel/concrt/contexts.md)<br/>
+[Método Context:: oversubscribe](reference/context-class.md#oversubscribe)
 

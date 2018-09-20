@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe80ae0d4045514c22c40af38deeeecbbfecc363
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9246d7a26c9764e31cca9c861ec0a15d4792c115
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316369"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389090"
 ---
 # <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>Definindo um Cursor&#39;s do ponto de acesso (Editor de imagens para ícones)
 
@@ -48,5 +48,5 @@ Nenhum
 
 ## <a name="see-also"></a>Consulte também
 
-[Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Ícones e cursores: recursos de imagem para exibir dispositivos](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

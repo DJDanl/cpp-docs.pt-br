@@ -15,63 +15,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50a6683db37fb6e994c1957a8df3ab6469acff6d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: cd1fbc1b402d7b858947a612295d4310302454a1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687732"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379197"
 ---
 # <a name="how-to-implement-various-producer-consumer-patterns"></a>Como implementar vários padrões de produtor-consumidor
-Este tópico descreve como implementar o padrão de produtor-consumidor em seu aplicativo. Nesse padrão, o *produtor* envia mensagens a um bloco de mensagens e o *consumidor* lê mensagens nesse bloco.  
-  
- O tópico demonstra dois cenários. O primeiro cenário, o consumidor deve receber cada mensagem que envia o produtor. O segundo cenário, o consumidor sonda periodicamente para dados e, portanto, não tem que cada mensagem.  
-  
- Ambos os exemplos neste tópico usam agentes, blocos de mensagens e funções de transmissão de mensagens para transmitir mensagens do produtor para o consumidor. O agente de produtor usa o [concurrency::send](reference/concurrency-namespace-functions.md#send) função para gravar mensagens para um [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md) objeto. O agente do cliente usa o [concurrency::receive](reference/concurrency-namespace-functions.md#receive) função para ler mensagens de uma [concurrency::ISource](../../parallel/concrt/reference/isource-class.md) objeto. Os dois agentes mantêm um valor de sentinela para coordenar o final do processamento.  
-  
- Para obter mais informações sobre agentes assíncronos, consulte [agentes assíncronos](../../parallel/concrt/asynchronous-agents.md). Para obter mais informações sobre funções de transmissão de mensagens e blocos de mensagens, consulte [blocos de mensagens assíncronas](../../parallel/concrt/asynchronous-message-blocks.md) e [funções de transmissão de mensagens](../../parallel/concrt/message-passing-functions.md).  
-  
-## <a name="example"></a>Exemplo  
- Neste exemplo, o agente de produtor envia uma série de números para o agente do consumidor. O consumidor recebe cada um desses números e computa sua média. O aplicativo grava a média para o console.  
-  
- Este exemplo usa um [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) objeto para permitir que o produtor e mensagens da fila. O `unbounded_buffer` classe implementa `ITarget` e `ISource` para que o produtor e consumidor podem enviar e receber mensagens e para um buffer compartilhado. O `send` e `receive` funções coordenam a tarefa de propagar os dados do produtor para o consumidor.  
-  
- [!code-cpp[concrt-producer-consumer-average#1](../../parallel/concrt/codesnippet/cpp/how-to-implement-various-producer-consumer-patterns_1.cpp)]  
-  
- Este exemplo gerencia a seguinte saída.  
-  
-```Output  
-The average is 50.  
-```  
-  
-## <a name="example"></a>Exemplo  
- Neste exemplo, o agente de produtor envia uma série de cotações de ações para o agente do consumidor. Periodicamente, o agente de consumidor lê a cotação atual e imprime no console.  
-  
- Este exemplo semelhante ao anterior, exceto que ele usa um [concurrency::overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) objeto para permitir que o produtor compartilhar uma mensagem com o consumidor. Como no exemplo anterior, `overwrite_buffer` classe implementa `ITarget` e `ISource` para que o produtor e consumidor podem agir em um buffer de mensagem compartilhado.  
-  
- [!code-cpp[concrt-producer-consumer-quotes#1](../../parallel/concrt/codesnippet/cpp/how-to-implement-various-producer-consumer-patterns_2.cpp)]  
-  
- Este exemplo produz a saída de exemplo a seguir.  
-  
-```Output  
-Current quote is 24.44.  
-Current quote is 24.44.  
-Current quote is 24.65.  
-Current quote is 24.99.  
-Current quote is 23.76.  
-Current quote is 22.30.  
-Current quote is 25.89.  
-```  
-  
- Ao contrário de com um `unbounded_buffer` objeto, o `receive` função não remove a mensagem do `overwrite_buffer` objeto. Se o consumidor lê do buffer de mensagem de mais de uma vez antes do produtor substitui essa mensagem, o destinatário obtém a mesma mensagem de cada vez.  
-  
-## <a name="compiling-the-code"></a>Compilando o código  
- Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `producer-consumer.cpp` e, em seguida, execute o seguinte comando em uma janela de Prompt de comando do Visual Studio.  
-  
- **cl.exe /EHsc produtor-consumer.cpp**  
-  
-## <a name="see-also"></a>Consulte também  
- [Biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md)   
- [Agentes assíncronos](../../parallel/concrt/asynchronous-agents.md)   
- [Blocos de mensagens assíncronos](../../parallel/concrt/asynchronous-message-blocks.md)   
- [Funções de transmissão de mensagem](../../parallel/concrt/message-passing-functions.md)
+
+Este tópico descreve como implementar o padrão de produtor-consumidor em seu aplicativo. Nesse padrão, o *produtor* envia mensagens a um bloco de mensagens e o *consumidor* lê mensagens nesse bloco.
+
+O tópico demonstra dois cenários. No primeiro cenário, o consumidor deve receber cada mensagem que envia o produtor. No segundo cenário, o consumidor sonda periodicamente para dados e, portanto, não tem que cada mensagem recebida.
+
+Ambos os exemplos neste tópico usam os agentes, blocos de mensagens e funções de transmissão de mensagens para transmitir mensagens do produtor para o consumidor. O agente de produtor usa o [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) função para gravar mensagens em uma [Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md) objeto. O agente de consumidor usa a [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) função para ler mensagens de uma [Concurrency:: ISource](../../parallel/concrt/reference/isource-class.md) objeto. Os dois agentes contêm um valor de sentinela para coordenar o final do processamento.
+
+Para obter mais informações sobre agentes assíncronos, consulte [agentes assíncronos](../../parallel/concrt/asynchronous-agents.md). Para obter mais informações sobre funções de transmissão de mensagens e os blocos de mensagem, consulte [blocos de mensagens assíncronas](../../parallel/concrt/asynchronous-message-blocks.md) e [funções de transmissão de mensagens](../../parallel/concrt/message-passing-functions.md).
+
+## <a name="example"></a>Exemplo
+
+Neste exemplo, o agente de produtor envia uma série de números para o agente de consumidor. O consumidor recebe cada um desses números e computa sua média. O aplicativo grava a média para o console.
+
+Este exemplo usa uma [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) objeto para permitir que o produtor para mensagens da fila. O `unbounded_buffer` classe implementa `ITarget` e `ISource` para que o produtor e consumidor podem enviar e receber mensagens e para um buffer compartilhado. O `send` e `receive` funções coordenam a tarefa de propagar os dados de produtor para o consumidor.
+
+[!code-cpp[concrt-producer-consumer-average#1](../../parallel/concrt/codesnippet/cpp/how-to-implement-various-producer-consumer-patterns_1.cpp)]
+
+Este exemplo gerencia a seguinte saída.
+
+```Output
+The average is 50.
+```
+
+## <a name="example"></a>Exemplo
+
+Neste exemplo, o agente de produtor envia uma série de cotações de ações para o agente de consumidor. Periodicamente, o agente de consumidor lê a cotação atual e imprime no console.
+
+Este exemplo é semelhante ao anterior, exceto que ele usa um [Concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) objeto para permitir que o produtor compartilhar uma mensagem com o consumidor. Como no exemplo anterior, `overwrite_buffer` classe implementa `ITarget` e `ISource` para que o produtor e consumidor podem atuar em um buffer de mensagens compartilhado.
+
+[!code-cpp[concrt-producer-consumer-quotes#1](../../parallel/concrt/codesnippet/cpp/how-to-implement-various-producer-consumer-patterns_2.cpp)]
+
+Este exemplo produz a saída de exemplo a seguir.
+
+```Output
+Current quote is 24.44.
+Current quote is 24.44.
+Current quote is 24.65.
+Current quote is 24.99.
+Current quote is 23.76.
+Current quote is 22.30.
+Current quote is 25.89.
+```
+
+Ao contrário de com um `unbounded_buffer` objeto, o `receive` função não remove a mensagem do `overwrite_buffer` objeto. Se o consumidor lê do buffer de mensagem mais de uma vez antes que o produtor substitui essa mensagem, o destinatário obtém a mesma mensagem de cada vez.
+
+## <a name="compiling-the-code"></a>Compilando o código
+
+Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `producer-consumer.cpp` e, em seguida, execute o seguinte comando em uma janela de Prompt de comando do Visual Studio.
+
+**cl.exe /EHsc produtor-consumer.cpp**
+
+## <a name="see-also"></a>Consulte também
+
+[Biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md)<br/>
+[Agentes assíncronos](../../parallel/concrt/asynchronous-agents.md)<br/>
+[Blocos de mensagens assíncronos](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
+[Funções de transmissão de mensagem](../../parallel/concrt/message-passing-functions.md)

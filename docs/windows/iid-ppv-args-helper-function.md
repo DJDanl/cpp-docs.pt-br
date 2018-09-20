@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32970c9d30e1804071190ee5a57c42fd4b6334af
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: c3964ce5257a6b2398571c9ed3ba5792b5bd9cca
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677245"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384475"
 ---
 # <a name="iidppvargshelper-function"></a>Função IID_PPV_ARGS_Helper
 
@@ -42,10 +42,10 @@ void** IID_PPV_ARGS_Helper(
 
 ### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 O tipo do argumento *pp*.
 
-*PP*  
+*PP*<br/>
 Um ponteiro duplamente indireta.
 
 ## <a name="return-value"></a>Valor de retorno

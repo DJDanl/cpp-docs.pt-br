@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8e029b1ffc4e17e55f2cb69405bb272b92e94e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6d8d4b0f740e69b57944cb35f2213ae0fd54b511
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221388"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386282"
 ---
 # <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071: implementação de IOleCommandTarget MFC
 
@@ -59,11 +59,11 @@ Essa macro vai para a declaração de classe (normalmente no arquivo de cabeçal
 BEGIN_OLECMD_MAP(theClass, baseClass)
 ```
 
-*theClass*  
- Nome da classe que contém o mapa de comando.
+*theClass*<br/>
+Nome da classe que contém o mapa de comando.
 
-*baseClass*  
- Nome da classe base da classe que contém o mapa de comando.
+*baseClass*<br/>
+Nome da classe base da classe que contém o mapa de comando.
 
 Essa macro marca o início do mapa do comando. Use esta macro no arquivo de implementação para a classe que contém o mapa de comando.
 
@@ -77,14 +77,14 @@ Essa macro marca o fim do mapa do comando. Use esta macro no arquivo de implemen
 ON_OLECMD(pguid, olecmdid, id)
 ```
 
-*pguid*  
- Ponteiro para o GUID do grupo de comando do comando OLE. Esse parâmetro é **nulo** para o grupo de comandos OLE padrão.
+*pguid*<br/>
+Ponteiro para o GUID do grupo de comando do comando OLE. Esse parâmetro é **nulo** para o grupo de comandos OLE padrão.
 
-*olecmdid*  
- ID de comando OLE do comando a ser invocado.
+*olecmdid*<br/>
+ID de comando OLE do comando a ser invocado.
 
-*id*  
- ID da mensagem WM_COMMAND seja enviado para o aplicativo que contém o mapa de comando quando esse comando OLE é invocado.
+*id*<br/>
+ID da mensagem WM_COMMAND seja enviado para o aplicativo que contém o mapa de comando quando esse comando OLE é invocado.
 
 Use a macro ON_OLECMD no mapa de comando para adicionar entradas para os comandos OLE que você deseja manipular. Quando os comandos OLE são recebidos, elas serão convertidas para a mensagem WM_COMMAND especificada e roteadas por meio do mapa de mensagens do aplicativo usando a arquitetura de roteamento de comando do MFC padrão.
 
@@ -158,5 +158,5 @@ void CContainerCntrItem::DoOleCmd()
 
 ## <a name="see-also"></a>Consulte também
 
-[Observações técnicas por número](../mfc/technical-notes-by-number.md)  
-[Observações técnicas por categoria](../mfc/technical-notes-by-category.md)  
+[Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
+[Observações técnicas por categoria](../mfc/technical-notes-by-category.md)

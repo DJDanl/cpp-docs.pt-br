@@ -16,33 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53601afdd562f29ccd4bce9db76811e610940b7a
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2dda3aab3c4a967c82a699058868edc8fc183984
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339365"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386373"
 ---
 # <a name="linger-structure"></a>Estrutura de LINGER
-O `LINGER` estrutura é usada para manipular as opções de SO_LINGER e SO_DONTLINGER `CAsyncSocket::GetSockOpt`.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-struct linger {  
-    u_short l_onoff;            // option on/off  
-    u_short l_linger;           // linger time  
-};  
-```  
-  
-## <a name="remarks"></a>Comentários  
- Definindo a opção SO_DONTLINGER impede que o bloqueio na função de membro `Close` enquanto aguarda unsent dados a serem enviados. Essa opção é equivalente a definir SO_LINGER com `l_onoff` definido como 0.  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** winsock2.h  
-  
-## <a name="see-also"></a>Consulte também  
- [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CAsyncSocket::GetSockOpt](../../mfc/reference/casyncsocket-class.md#getsockopt)   
- [CAsyncSocket::SetSockOpt](../../mfc/reference/casyncsocket-class.md#setsockopt)
+
+O `LINGER` estrutura é usada para manipular as opções de SO_LINGER e SO_DONTLINGER `CAsyncSocket::GetSockOpt`.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+struct linger {
+    u_short l_onoff;            // option on/off
+    u_short l_linger;           // linger time
+};
+```
+
+## <a name="remarks"></a>Comentários
+
+Definindo a opção SO_DONTLINGER impede que o bloqueio na função de membro `Close` enquanto aguarda unsent dados a serem enviados. Essa opção é equivalente a definir SO_LINGER com `l_onoff` definido como 0.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** winsock2.h
+
+## <a name="see-also"></a>Consulte também
+
+[Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CAsyncSocket::GetSockOpt](../../mfc/reference/casyncsocket-class.md#getsockopt)<br/>
+[CAsyncSocket::SetSockOpt](../../mfc/reference/casyncsocket-class.md#setsockopt)
 

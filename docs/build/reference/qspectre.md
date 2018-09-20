@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5dde5d8bb2e7b973b505b467165a710546f2a6a0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: aaf77e1856f535dba81d4b61e2ce19d363f48038
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716021"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386945"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -86,6 +86,6 @@ Para obter mais detalhes, consulte oficial [Microsoft Security Advisory ADV18000
 
 ## <a name="see-also"></a>Consulte também
 
-[/Q opções (operações de nível baixo)](../../build/reference/q-options-low-level-operations.md)
-[opções do compilador](../../build/reference/compiler-options.md)<br/>
+[Opções /Q (operações de nível baixo)](../../build/reference/q-options-low-level-operations.md)<br/>
+[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
 [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

@@ -20,24 +20,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a776b4ff4799750c89a322379a063030db748eec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c69703d8c528d82a696fc94be76ac4a569628b4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342673"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392639"
 ---
 # <a name="detaching-a-cwnd-from-its-hwnd"></a>Desanexando um CWnd de HWND
-Se você precisar evitar object -`HWND` relação, MFC fornece outra `CWnd` função de membro, [desanexar](../mfc/reference/cwnd-class.md#detach), que desconecta o objeto de janela C++ da janela do Windows. Isso impede que o destruidor destruir a janela do Windows quando o objeto é destruído.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
-  
--   [Criando janelas](../mfc/creating-windows.md)  
-  
--   [Sequência de destruição da janela](../mfc/window-destruction-sequence.md)  
-  
--   [Alocando e desalocando a memória da janela](../mfc/allocating-and-deallocating-window-memory.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Objetos de janela](../mfc/window-objects.md)
+
+Se você precisar ignorar o objeto -`HWND` relação, o MFC fornece outra `CWnd` função de membro [desanexar](../mfc/reference/cwnd-class.md#detach), que desconecta o objeto de janela C++ da janela do Windows. Isso impede que o destruidor destruir a janela do Windows, quando o objeto é destruído.
+
+## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+
+- [Criando janelas](../mfc/creating-windows.md)
+
+- [Sequência de destruição da janela](../mfc/window-destruction-sequence.md)
+
+- [Alocando e desalocando a memória da janela](../mfc/allocating-and-deallocating-window-memory.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Objetos de janela](../mfc/window-objects.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d79707eaa3e5e93ab5c05e120d1556ee86168af2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d3dfa87d950a12f115fb157124765fa5fd06eced
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607292"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396097"
 ---
 # <a name="comptrasiid-method"></a>Método ComPtr::AsIID
 
@@ -39,10 +39,10 @@ WRL_NOTHROW HRESULT AsIID(
 
 ### <a name="parameters"></a>Parâmetros
 
-*riid*  
+*riid*<br/>
 Uma ID de interface.
 
-*p*  
+*p*<br/>
 Se o objeto tem uma interface cuja ID é igual a *riid*, um ponteiro indireto duplamente para a interface especificada pelo *riid* parâmetro; caso contrário, um ponteiro para `IUnknown`.
 
 ## <a name="return-value"></a>Valor de retorno

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f91474ec4c435b6fb2a005b47c67210a54d0804
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: abe76a4153ecfb0e4db4ce9e92eb63f5b00067ff
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317258"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394641"
 ---
 # <a name="attributed-programming-concepts"></a>Conceitos de programação atribuídos
 
@@ -32,27 +32,27 @@ Embora atributos eliminam alguns da codificação detalhada necessária para esc
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Finalidade dos atributos](../windows/purpose-of-attributes.md)  
+[Finalidade dos atributos](../windows/purpose-of-attributes.md)<br/>
 Apresenta uma visão geral de programação atribuída.
 
-[Mecânica básica dos atributos](../windows/basic-mechanics-of-attributes.md)  
+[Mecânica básica dos atributos](../windows/basic-mechanics-of-attributes.md)<br/>
 Descreve como os atributos funcionam em seu projeto.
 
-[Compilando um programa atribuído](../windows/building-an-attributed-program.md)  
+[Compilando um programa atribuído](../windows/building-an-attributed-program.md)<br/>
 Fornece informações sobre como usar as opções do compilador do C++ em seu projeto.
 
-[Categorias de atributo](../windows/attribute-categories.md)  
+[Categorias de atributo](../windows/attribute-categories.md)<br/>
 Fornece links para as categorias de atributos usados no Visual C++.
 
-[Atributo Programmming perguntas Frequentes](../windows/attribute-programming-faq.md)  
+[Atributo Programmming perguntas Frequentes](../windows/attribute-programming-faq.md)<br/>
 Respostas a perguntas frequentes sobre programação atribuída.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Referência de atributos](../windows/cpp-attributes-reference.md)  
+[Referência de atributos](../windows/cpp-attributes-reference.md)<br/>
 Fornece links para o tópico de referência que descreve os atributos individuais e seu uso.
 
-[Depurar código injetado](/visualstudio/debugger/how-to-debug-injected-code)  
+[Depurar código injetado](/visualstudio/debugger/how-to-debug-injected-code)<br/>
 Descreve a depuração de programas atribuídos.
 
 [Super](../cpp/super.md)e [interface](../cpp/interface.md)  

@@ -13,68 +13,68 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0e7d0208e901e453a0ee7566d998a4cb4461980
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da0fde988b2fa4bbe079c4d392edc45329627ad3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351986"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379983"
 ---
 # <a name="mfc-concepts"></a>Conceitos MFC
 
-Esta seção fornece tópicos conceituais e baseados em tarefas para ajudá-lo a programar usando a biblioteca Microsoft Foundation Class (MFC).
+Esta seção fornece tópicos conceituais e baseados em tarefas para ajudar você a programar usando a biblioteca Microsoft Foundation Class (MFC).
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Tópicos gerais do MFC](../mfc/general-mfc-topics.md)  
-Discute os detalhes técnicos da biblioteca do MFC.
+[Tópicos gerais do MFC](../mfc/general-mfc-topics.md)<br/>
+Discute os detalhes técnicos da biblioteca MFC.
 
-[Usando CObject](../mfc/using-cobject.md)  
-Fornece links para usando `CObject`, a classe base para a maioria das classes em MFC.
+[Usando CObject](../mfc/using-cobject.md)<br/>
+Fornece links para usar `CObject`, a classe base para a maioria das classes no MFC.
 
-[Coleções](../mfc/collections.md)  
-Descreve classes de coleção criado a partir de e não criado a partir de modelos C++.
+[Coleções](../mfc/collections.md)<br/>
+Discute as classes de coleção criada a partir e não criado a partir de modelos C++.
 
-[Data e hora](../atl-mfc-shared/date-and-time.md)  
-Fornece links para tópicos que abordam usando a data e hora com MFC.
+[Data e hora](../atl-mfc-shared/date-and-time.md)<br/>
+Fornece links para tópicos que abordam o uso de data e hora com o MFC.
 
-[Arquivos](../mfc/files-in-mfc.md)  
+[Arquivos](../mfc/files-in-mfc.md)<br/>
 Discute `CFile` e como lidar com arquivos no MFC.
 
-[Gerenciamento de memória (MFC)](../mfc/memory-management.md)  
-Descreve como tirar proveito dos serviços de uso gerais relacionadas ao gerenciamento de memória.
+[Gerenciamento de memória (MFC)](../mfc/memory-management.md)<br/>
+Descreve como tirar proveito dos serviços de uso geral relacionados ao gerenciamento de memória.
 
-[Tratamento e mapeamento de mensagem](../mfc/message-handling-and-mapping.md)  
-Descreve como mensagens e comandos são processados pela estrutura MFC e como conectá-los para suas funções de manipulador.
+[Tratamento e mapeamento de mensagem](../mfc/message-handling-and-mapping.md)<br/>
+Descreve como as mensagens e comandos são processados pela estrutura MFC e como conectá-los às suas funções de manipulador.
 
-[Serialização](../mfc/serialization-in-mfc.md)  
-Explica o mecanismo de serialização fornecido para permitir que objetos persiste entre execuções do seu programa.
+[Serialização](../mfc/serialization-in-mfc.md)<br/>
+Explica o mecanismo de serialização fornecido para permitir que os objetos persistam entre execuções do seu programa.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Exceção tratamento (MFC)](../mfc/exception-handling-in-mfc.md)  
-Explica os mecanismos de tratamento de exceção disponíveis no MFC.
+[Exceção tratamento (MFC)](../mfc/exception-handling-in-mfc.md)<br/>
+Explica os mecanismos de tratamento de exceções disponíveis no MFC.
 
-[Noções básicas de programação da Internet no MFC](../mfc/mfc-internet-programming-basics.md)  
-Discute as classes MFC que dão suporte à programação de Internet.
+[Noções básicas de programação da Internet no MFC](../mfc/mfc-internet-programming-basics.md)<br/>
+Discute as classes MFC que oferecem suporte à programação da Internet.
 
-[Tarefas de programação da Internet no MFC](../mfc/mfc-internet-programming-tasks.md)  
-Descreve como adicionar suporte da Internet para seus aplicativos.
+[Tarefas de programação da Internet no MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
+Discute como adicionar suporte à Internet para seus aplicativos.
 
-[Suporte a MBCS (conjunto de caracteres multibyte) e Unicode](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)  
-Explica como usar o suporte do MFC e ATL conjuntos de caracteres multibyte e Unicode.
+[Suporte a MBCS (conjunto de caracteres multibyte) e Unicode](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)<br/>
+Explica como usar o suporte do MFC e ATL para Unicode e conjuntos de caracteres multibyte.
 
-[MFC COM](../mfc/mfc-com.md)  
-Discute a um subconjunto do MFC, que é projetado para suporte de COM, enquanto a maioria de biblioteca de modelo ativa (ATL) foi projetado para programação COM.
+[MFC COM](../mfc/mfc-com.md)<br/>
+Discute um subconjunto de MFC, que é projetado para dar suporte a COM, enquanto a maioria da biblioteca ATL (Active Template) foi projetado para a programação COM.
 
-[Multithreading com C++ e MFC](../parallel/multithreading-with-cpp-and-mfc.md)  
-Descreve quais são os processos e threads e discute a abordagem do MFC para multithreading.
+[Multithreading com C++ e MFC](../parallel/multithreading-with-cpp-and-mfc.md)<br/>
+Descreve quais são os processos e threads e discute a abordagem MFC para multithreading.
 
-[Windows Sockets em MFC](../mfc/windows-sockets.md)  
-Aborda a implementação do MFC de Windows Sockets.
+[Windows Sockets em MFC](../mfc/windows-sockets.md)<br/>
+Aborda a implementação MFC de soquetes do Windows.
 
-[Referência do MFC](../mfc/mfc-desktop-applications.md)  
+[Referência do MFC](../mfc/mfc-desktop-applications.md)<br/>
 Fornece material de referência da biblioteca MFC, um conjunto de classes que constituem uma estrutura de aplicativos, que é a estrutura de um aplicativo escrito para a API do Windows.
 
-[Exemplos MFC](../visual-cpp-samples.md)  
-Fornece links para exemplos que mostram como usar MFC em aplicativos de desktop, DLLs, aplicativos de banco de dados, controles, aplicativos Web e muito mais.
+[Exemplos de MFC](../visual-cpp-samples.md)<br/>
+Fornece links para exemplos que mostram como usar o MFC em aplicativos da área de trabalho, DLLs, aplicativos de banco de dados, controles, aplicativos Web e muito mais.

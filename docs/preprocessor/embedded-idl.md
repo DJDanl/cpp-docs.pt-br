@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b41af8375249a48ac3a866af224370b19f071d28
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 9ad4a58cf02522eb7ca1c00055c73ff921e92b11
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541516"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386113"
 ---
 # <a name="embeddedidl"></a>embedded_idl
 **Específico do C++**  
@@ -58,5 +58,5 @@ Pode ser um destes dois valores:
   
 ## <a name="see-also"></a>Consulte também  
  
-[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)   
+[atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import diretiva](../preprocessor/hash-import-directive-cpp.md)

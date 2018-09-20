@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d10c025c22523e6329f051fcfbe76988337992a2
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 806003e33e60b5146bdd722fa5248011cd4939c0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318142"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396539"
 ---
 # <a name="type-forwarding-ccli"></a>Encaminhamento de tipos (C++/CLI)
 
@@ -51,10 +51,10 @@ O exemplo de código a seguir demonstra como usar o encaminhamento de tipo.
 
 ### <a name="parameters"></a>Parâmetros
 
-*new*  
+*new*<br/>
 O assembly no qual você está movendo a definição de tipo.
 
-*type*  
+*type*<br/>
 O tipo cuja definição que você está movendo em outro assembly.
 
 ### <a name="remarks"></a>Comentários

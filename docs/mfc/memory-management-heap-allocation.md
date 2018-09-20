@@ -1,5 +1,5 @@
 ---
-title: 'Gerenciamento de memória: Alocação do Heap | Microsoft Docs'
+title: 'Gerenciamento de memória: Alocação de Heap | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,20 +21,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7ef166201103b1544d0a36d82452b485af75418
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: cc158ceda21bfb04053bbc490a3333a76e2d7afe
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928603"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383801"
 ---
 # <a name="memory-management-heap-allocation"></a>Gerenciamento de memória: alocação do heap
-Heap é reservado para as necessidades de alocação de memória do programa. É uma área além do código do programa e a pilha. Programas C típicos usam as funções **malloc** e **livre** para alocar e desalocar memória de heap. A versão de depuração do MFC fornece versões modificadas dos operadores internos C++ **novo** e **excluir** aloque e desaloque objetos na memória de heap.  
-  
- Quando você usa **novo** e **excluir** em vez de **malloc** e **livre**, é possível tirar proveito da biblioteca de classes memória-depuração aprimoramentos de gerenciamento, que podem ser úteis na detecção de vazamentos de memória. Quando você cria seu programa com a versão de lançamento do MFC, as versões padrão do **novo** e **excluir** operadores fornecem uma maneira eficiente para alocar e desalocar memória (versão de lançamento do MFC não fornece versões modificadas desses operadores).  
-  
- Observe que o tamanho total dos objetos alocados no heap é limitado apenas pela memória virtual disponível de seu sistema.  
-  
-## <a name="see-also"></a>Consulte também  
- [Gerenciamento de memória](../mfc/memory-management.md)
+
+O heap é reservado para as necessidades de alocação de memória do programa. É uma área além do código do programa e a pilha. Programas em C típicos usam as funções **malloc** e **livre** para alocar e desalocar a memória de heap. A versão de depuração do MFC fornece versões modificadas dos operadores C++ internos **novos** e **excluir** aloque e desaloque os objetos na memória de heap.
+
+Quando você usa **novos** e **excluir** em vez de **malloc** e **livre**, você é capaz de aproveitar a biblioteca de classes gerenciamento de memória depuração aprimoramentos, que podem ser úteis na detecção de vazamentos de memória. Quando você compila seu programa com a versão de lançamento do MFC, as versões padrão do **novos** e **excluir** operadores fornecem uma maneira eficiente para alocar e desalocar a memória (a versão de lançamento do MFC não fornece versões modificadas desses operadores).
+
+Observe que o tamanho total dos objetos alocados no heap é limitado apenas pela memória disponível de virtual do seu sistema.
+
+## <a name="see-also"></a>Consulte também
+
+[Gerenciamento de memória](../mfc/memory-management.md)
 

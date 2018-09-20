@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c43139dd1d927d9e6173d9e78765d0fcdbddae6a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8faad93ae57e42e0e28bcb697ed300c11e766136
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716008"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376909"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -40,13 +40,13 @@ Cria uma conexão a uma fonte de dados.
 
 ### <a name="parameters"></a>Parâmetros
 
-*db_source*  
+*db_source*<br/>
 A cadeia de conexão usada para se conectar à fonte de dados. Para o formato da cadeia de caracteres de conexão, consulte [cadeias de caracteres de Conexão e Links de dados](/previous-versions/windows/desktop/ms718376\(v=vs.85\)) no Microsoft Data Access Components (MDAC) do SDK.
 
-*name*  
+*name*<br/>
 (Opcional) Quando você usa **db_source** em uma classe *nome* é uma instância de um objeto de fonte de dados que tem o **db_source** atributo aplicado a ele (consulte o exemplo 1). Quando você usa **db_source** embutido na implementação de um método *nome* é uma variável (local para o método) que pode ser usada para acessar os dados de origem (consulte o exemplo 2). Você passá-la *nome* para o *source_name* parâmetro do `db_command` para associar a fonte de dados com um comando.
 
-*HRESULT*  
+*HRESULT*<br/>
 (Opcional) Identifica a variável que receberá o HRESULT desse comando de banco de dados. Se a variável não existir, ele será automaticamente injetado pelo atributo.
 
 ## <a name="remarks"></a>Comentários

@@ -15,28 +15,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ce109fa4a7eb3adbcb15150a14a03801a9e247b
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 138878964521a3470b6d68fea0d344c58dc724cf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316478"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395824"
 ---
 # <a name="attribute-categories"></a>Categorias de atributo
+
 A referência de atributos descreve os vários tipos de atributos que você pode usar no Visual C++.
   
 ## <a name="related-sections"></a>Seções relacionadas
- [Atributos de COM](../windows/com-attributes.md)  
- Insere um código para dar suporte a diversas áreas de desenvolvimento COM.
+
+[Atributos de COM](../windows/com-attributes.md)<br/>
+Insere um código para dar suporte a diversas áreas de desenvolvimento COM.
   
- [Atributos de IDL](../windows/idl-attributes.md)  
- Insere um código que cria ou modifica o arquivo. idl associado de dentro de um arquivo de código de origem sem um assistente e sem estar familiarizado com a estrutura e a sintaxe desse arquivo.
+[Atributos de IDL](../windows/idl-attributes.md)<br/>
+Insere um código que cria ou modifica o arquivo. idl associado de dentro de um arquivo de código de origem sem um assistente e sem estar familiarizado com a estrutura e a sintaxe desse arquivo.
   
- [Atributos de consumidor do OLE DB](../windows/ole-db-consumer-attributes.md)  
- Injeta código, com base nas [OLE DB modelos de consumidor](../data/oledb/ole-db-consumer-templates-reference.md), para criar um trabalho do OLE DB consumidor que executa tarefas como abrir tabelas, executar comandos e acesso a dados.
+[Atributos de consumidor do OLE DB](../windows/ole-db-consumer-attributes.md)<br/>
+Injeta código, com base nas [OLE DB modelos de consumidor](../data/oledb/ole-db-consumer-templates-reference.md), para criar um trabalho do OLE DB consumidor que executa tarefas como abrir tabelas, executar comandos e acesso a dados.
   
- [Atributos de compilador](../windows/compiler-attributes.md)  
- Insere um código que executa uma variedade de tarefas comuns de programação.
+[Atributos de compilador](../windows/compiler-attributes.md)<br/>
+Insere um código que executa uma variedade de tarefas comuns de programação.
   
- [Programação atribuída](../windows/attributed-programming-concepts.md)  
- Fornece links para tópicos conceituais que descrevem a programação atribuída.
+[Programação atribuída](../windows/attributed-programming-concepts.md)<br/>
+Fornece links para tópicos conceituais que descrevem a programação atribuída.

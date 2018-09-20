@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9b5250a730b0ce80cbbe9698b4b5e636a85986b6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 13ddef5b6bb83de16c72438e2b9f2bb3d4e8d635
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223180"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386347"
 ---
 # <a name="id"></a>id
 
@@ -38,7 +38,7 @@ Especifica um *dispid* parâmetro para uma função de membro (uma propriedade o
 
 ### <a name="parameters"></a>Parâmetros
 
-*DISPID*  
+*DISPID*<br/>
 A ID de expedição para o método de interface.
 
 ## <a name="remarks"></a>Comentários
@@ -64,9 +64,9 @@ Para obter mais informações, consulte [contextos de atributo](../windows/attri
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](../windows/idl-attributes.md)  
-[Atributos de método](../windows/method-attributes.md)  
-[Atributos de membro de dados](../windows/data-member-attributes.md)  
-[defaultvalue](../windows/defaultvalue.md)  
-[in](../windows/in-cpp.md)  
+[Atributos de IDL](../windows/idl-attributes.md)<br/>
+[Atributos de método](../windows/method-attributes.md)<br/>
+[Atributos de membro de dados](../windows/data-member-attributes.md)<br/>
+[defaultvalue](../windows/defaultvalue.md)<br/>
+[in](../windows/in-cpp.md)<br/>
 [out](../windows/out-cpp.md)  

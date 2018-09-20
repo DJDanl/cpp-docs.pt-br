@@ -20,22 +20,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8316030ba65796d0e9811ca35384c8a4a2a3afa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea35e51296b2fc528657c4dd9f9b9b76b84aae83
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342872"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391508"
 ---
 # <a name="ole-automation-classes"></a>Classes de automação OLE
-Essas classes de suportam a clientes de automação (aplicativos que controlam a outros aplicativos). Servidores de automação (aplicativos que podem ser controlados por outros aplicativos) têm suporte por meio de [mapas de envios](../mfc/reference/dispatch-maps.md).  
-  
- [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)  
- Usado para chamadas de servidores de automação de seu cliente de automação. Ao adicionar uma classe, essa classe é usada para criar classes de tipo seguro para servidores de automação que fornecem uma biblioteca de tipos.  
-  
- [COleDispatchException](../mfc/reference/coledispatchexception-class.md)  
- Uma exceção resultantes de um erro durante a automação OLE. Exceções de automação são lançadas por servidores de automação e capturadas por clientes de automação.  
-  
-## <a name="see-also"></a>Consulte também  
- [Visão geral da classe](../mfc/class-library-overview.md)
+
+Essas classes de dar suporte a clientes de automação (aplicativos que controlam a outros aplicativos). Servidores de automação (aplicativos que podem ser controlados por outros aplicativos) têm suporte por meio [mapas de envios](../mfc/reference/dispatch-maps.md).
+
+[COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)<br/>
+Usado para chamar os servidores de automação de seu cliente de automação. Ao adicionar uma classe, essa classe é usada para criar classes fortemente tipadas para os servidores de automação que fornecem uma biblioteca de tipos.
+
+[COleDispatchException](../mfc/reference/coledispatchexception-class.md)<br/>
+Uma exceção resultante de um erro durante a automação OLE. Exceções de automação são geradas por servidores de automação e capturadas por clientes de automação.
+
+## <a name="see-also"></a>Consulte também
+
+[Visão geral da classe](../mfc/class-library-overview.md)
 

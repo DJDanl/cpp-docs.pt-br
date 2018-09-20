@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 09e0dc3b9caf059bb8ecdce0468dfc118ce9ebfa
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 17e1f47c2dfaf53b63e6bc672cb7822f9bf2b391
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594938"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375340"
 ---
 # <a name="chaininterfacesfillarraywithiid-method"></a>Método ChainInterfaces::FillArrayWithIid
 
@@ -39,10 +39,10 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parâmetros
 
-*index*  
+*index*<br/>
 Ponteiro para um valor de índice para o *iids* matriz.
 
-*IIDs*  
+*IIDs*<br/>
 Uma matriz de IDs de interface.
 
 ## <a name="requirements"></a>Requisitos

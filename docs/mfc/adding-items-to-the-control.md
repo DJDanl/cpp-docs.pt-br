@@ -14,25 +14,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2e9434e93640de190b78e92a1f009a0ad9cbecf
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: cc1d4cefd7d292333c4797afea369104733d117d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214431"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385060"
 ---
 # <a name="adding-items-to-the-control"></a>Adicionando itens ao controle
-Para adicionar itens ao controle de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)), chame uma das várias versões dos [InsertItem](../mfc/reference/clistctrl-class.md#insertitem) função de membro, dependendo das informações que você tem. Uma versão usa uma [LV_ITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) estrutura que você prepara. Porque o `LV_ITEM` estrutura contém vários membros, você tem maior controle sobre os atributos do item da lista de controle.  
-  
- Dois membros importantes (em relação ao modo de exibição de relatório) da `LV_ITEM` estrutura são as `iItem` e `iSubItem` membros. O `iItem` membro é o índice baseado em zero do item que está fazendo referência à estrutura e o `iSubItem` membro é o índice baseado em um de um subitem, ou zero se a estrutura contém informações sobre um item. Com esses dois membros determinar, por item, o tipo e o valor de informações do subitem que são exibidas quando o controle de lista está no modo de exibição de relatório. Para obter mais informações, consulte [CListCtrl::SetItem](../mfc/reference/clistctrl-class.md#setitem).  
-  
- Membros adicionais especificam texto, ícone, estado e dados de item do item. "Dados de item" é um valor definido pelo aplicativo associado a um item de exibição de lista. Para obter mais informações sobre o `LV_ITEM` estrutura, consulte [CListCtrl::GetItem](../mfc/reference/clistctrl-class.md#getitem).  
-  
- Outras versões do `InsertItem` levar um ou mais valores separados, correspondentes a membros no `LV_ITEM` estrutura, permitindo que você inicialize somente os membros que você deseja dar suporte. Em geral, o controle de lista gerencia o armazenamento de itens de lista, mas você pode armazenar algumas das informações em seu aplicativo em vez disso, usando "itens de retorno de chamada". Para obter mais informações, consulte [itens de retorno de chamada e a máscara de retorno de chamada](../mfc/callback-items-and-the-callback-mask.md) neste tópico e [itens de retorno de chamada e a máscara de retorno de chamada](/windows/desktop/Controls/using-list-view-controls) no SDK do Windows.  
-  
- Para obter mais informações, consulte [adicionando o modo de exibição de lista de itens e subitens](/windows/desktop/Controls/using-list-view-controls).  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando CListCtrl](../mfc/using-clistctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+
+Para adicionar itens ao controle de lista ([CListCtrl](../mfc/reference/clistctrl-class.md)), chame uma das várias versões dos [InsertItem](../mfc/reference/clistctrl-class.md#insertitem) função de membro, dependendo das informações que você tem. Uma versão usa uma [LV_ITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) estrutura que você prepara. Porque o `LV_ITEM` estrutura contém vários membros, você tem maior controle sobre os atributos do item da lista de controle.
+
+Dois membros importantes (em relação ao modo de exibição de relatório) da `LV_ITEM` estrutura são as `iItem` e `iSubItem` membros. O `iItem` membro é o índice baseado em zero do item que está fazendo referência à estrutura e o `iSubItem` membro é o índice baseado em um de um subitem, ou zero se a estrutura contém informações sobre um item. Com esses dois membros determinar, por item, o tipo e o valor de informações do subitem que são exibidas quando o controle de lista está no modo de exibição de relatório. Para obter mais informações, consulte [CListCtrl::SetItem](../mfc/reference/clistctrl-class.md#setitem).
+
+Membros adicionais especificam texto, ícone, estado e dados de item do item. "Dados de item" é um valor definido pelo aplicativo associado a um item de exibição de lista. Para obter mais informações sobre o `LV_ITEM` estrutura, consulte [CListCtrl::GetItem](../mfc/reference/clistctrl-class.md#getitem).
+
+Outras versões do `InsertItem` levar um ou mais valores separados, correspondentes a membros no `LV_ITEM` estrutura, permitindo que você inicialize somente os membros que você deseja dar suporte. Em geral, o controle de lista gerencia o armazenamento de itens de lista, mas você pode armazenar algumas das informações em seu aplicativo em vez disso, usando "itens de retorno de chamada". Para obter mais informações, consulte [itens de retorno de chamada e a máscara de retorno de chamada](../mfc/callback-items-and-the-callback-mask.md) neste tópico e [itens de retorno de chamada e a máscara de retorno de chamada](/windows/desktop/Controls/using-list-view-controls) no SDK do Windows.
+
+Para obter mais informações, consulte [adicionando o modo de exibição de lista de itens e subitens](/windows/desktop/Controls/using-list-view-controls).
+
+## <a name="see-also"></a>Consulte também
+
+[Usando CListCtrl](../mfc/using-clistctrl.md)<br/>
+[Controles](../mfc/controls-mfc.md)
 

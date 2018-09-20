@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3efdce7cde39431a8d6f097aace2ed2f5a66b4d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7f4aee13808fd55c42319aab90c13af7922ed9d2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589941"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394823"
 ---
 # <a name="comptrreleaseandgetaddressof-method"></a>Método ComPtr::ReleaseAndGetAddressOf
 
@@ -46,5 +46,5 @@ O endereço do [PTR _](../windows/comptr-ptr-data-member.md) membro de dados des
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe ComPtr](../windows/comptr-class.md)  
+[Classe ComPtr](../windows/comptr-class.md)<br/>
 [Membro de dados ComPtr::ptr_](../windows/comptr-ptr-data-member.md)

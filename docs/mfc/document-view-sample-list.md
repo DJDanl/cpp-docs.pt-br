@@ -1,5 +1,5 @@
 ---
-title: Lista de exemplos de modo de exibição de documentos | Microsoft Docs
+title: Lista de exemplos de exibição de documento | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,38 +12,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54be40241244c5c219af6f8b329d0ddcc05b7e38
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 82204ad0d4150a36081fd53db1b59fcdad1cc7e5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343012"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378885"
 ---
 # <a name="documentview-sample-list"></a>Lista de exemplos de documento/exibição
-Consulte os seguintes programas de exemplo que ilustram o uso de arquitetura de documento/exibição do MFC de maneiras interessantes:  
-  
- *Variações de documento/exibição*  
-  
--   [MDI](../visual-cpp-samples.md)  
-  
--   [RABISCO](../visual-cpp-samples.md)  
-  
--   [VIEWEX](../visual-cpp-samples.md)  
-  
- *Interface de caixa de diálogo substitui a exibição de documentos*  
-  
--   [CMNCTRL1](../visual-cpp-samples.md)  
-  
--   [CMNCTRL2](../visual-cpp-samples.md)  
-  
- *Usando COleDocument e suas Classes derivadas*  
-  
--   [CONTÊINER](../visual-cpp-samples.md)  
-  
--   [HIERSVR](../visual-cpp-samples.md)  
-  
--   [OCLIENT](../visual-cpp-samples.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Arquitetura de documento/exibição](../mfc/document-view-architecture.md)
+
+Consulte os seguintes programas de exemplo que ilustram o uso de arquitetura de documento/exibição do MFC de maneiras interessantes:
+
+*Variações de documento/exibição*
+
+- [MDI](../visual-cpp-samples.md)
+
+- [RABISCO](../visual-cpp-samples.md)
+
+- [VIEWEX](../visual-cpp-samples.md)
+
+*Interface de caixa de diálogo substitui o documento/exibição*
+
+- [CMNCTRL1](../visual-cpp-samples.md)
+
+- [CMNCTRL2](../visual-cpp-samples.md)
+
+*Usando COleDocument e suas Classes derivadas*
+
+- [CONTÊINER](../visual-cpp-samples.md)
+
+- [HIERSVR](../visual-cpp-samples.md)
+
+- [OCLIENT](../visual-cpp-samples.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Arquitetura de documento/exibição](../mfc/document-view-architecture.md)
 

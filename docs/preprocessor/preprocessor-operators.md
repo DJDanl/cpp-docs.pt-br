@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fca1c097a01f34fb2cc708489338391dfced982f
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: b80c9c8ef371808fc98d0475afc00223b13194ea
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541706"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384033"
 ---
 # <a name="preprocessor-operators"></a>Operadores de pré-processador
 Quatro operadores específicos de pré-processadores são usados no contexto da política de `#define` (consulte a lista a seguir para obter um resumo de cada um.) Os operadores stringizing, charizing e token-pasting são discutidos nas três seções seguintes. Para obter informações sobre o `defined` operador, consulte [o #if, #elif, #else e # #endif](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md).  
@@ -34,6 +34,6 @@ Quatro operadores específicos de pré-processadores são usados no contexto da 
   
 ## <a name="see-also"></a>Consulte também  
  
-[Diretivas de pré-processador](../preprocessor/preprocessor-directives.md)   
-[Macros predefinidas](../preprocessor/predefined-macros.md)   
+[Diretivas do pré-processador](../preprocessor/preprocessor-directives.md)<br/>
+[Macros predefinidas](../preprocessor/predefined-macros.md)<br/>
 [Referência de pré-processador do C/C++](../preprocessor/c-cpp-preprocessor-reference.md)

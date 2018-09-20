@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 54699888fc2988dd9b4ccec2a57b6d9df0d4e79e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 335b22b015bf244e39d67781eae21b3c43328256
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314767"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379782"
 ---
 # <a name="attribute"></a>Atributo
 
@@ -43,13 +43,13 @@ Permite que você crie um atributo personalizado.
 
 ### <a name="parameters"></a>Parâmetros
 
-*AllowOn*  
+*AllowOn*<br/>
 Especifica os elementos de linguagem ao qual o atributo personalizado pode ser aplicado. O padrão é `System::AttributeTargets::All` (consulte [System::AttributeTargets](https://msdn.microsoft.com/library/system.attributetargets.aspx)).
 
-*AllowMultiple*  
+*AllowMultiple*<br/>
 Especifica se o atributo personalizado pode ser aplicado várias vezes para uma construção. Padrão é FALSE.
 
-*Herdado*  
+*Herdado*<br/>
 Indica se o atributo deve ser herdadas por subclasses. O compilador não oferece suporte especial para essa funcionalidade; é o trabalho dos consumidores de atributo (`Reflection`, por exemplo) para respeitar essas informações. Se *Inherited* for TRUE, o atributo é herdado. Se *AllowMultiple* for TRUE, o atributo serão acumulados no membro derivado; se *AllowMultiple* é FALSE, o atributo substituirá (ou substituir) na herança. Se *Inherited* é FALSE, o atributo não será herdado. O padrão é TRUE.
 
 ## <a name="remarks"></a>Comentários

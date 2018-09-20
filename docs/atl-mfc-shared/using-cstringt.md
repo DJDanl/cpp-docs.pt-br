@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca78687f79cdbf1d8bdb60c1a877c489498624ee
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5f11590a78cb691f4812e7b503350fb72a4bdc95
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766185"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390728"
 ---
 # <a name="using-cstringt"></a>Usando CStringT
 
@@ -27,10 +27,10 @@ Os tópicos nesta seção descrevem usando a classe de modelo de programação [
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Gerenciamento de memória com CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)  
+[Gerenciamento de memória com CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)<br/>
 Discute o gerenciamento de memória com `CStringT`, uma classe de modelo usada para manipular cadeias de caracteres de comprimento variável.
 
-[Exportando classes de cadeia de caracteres usando CStringT](../atl-mfc-shared/exporting-string-classes-using-cstringt.md)  
+[Exportando classes de cadeia de caracteres usando CStringT](../atl-mfc-shared/exporting-string-classes-using-cstringt.md)<br/>
 Explica como exportar sua própria classe de cadeia de caracteres de uma DLL usando a classe de modelo <> CStringT.
 
 ## <a name="reference"></a>Referência

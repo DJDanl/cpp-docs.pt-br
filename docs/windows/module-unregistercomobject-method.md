@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3409e0e2c1cac5f3934902523edd2653839989ed
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 46450142c0455dd4eb96f627abd077e478d96fea
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42575752"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383500"
 ---
 # <a name="moduleunregistercomobject-method"></a>Método Module::UnregisterCOMObject
 
@@ -39,13 +39,13 @@ virtual HRESULT UnregisterCOMObject(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ServerName*  
+*ServerName*<br/>
 (Não usado)
 
-*Cookies*  
+*Cookies*<br/>
 Uma matriz de ponteiros para valores que identificam os objetos de classe para cancelar o registro. A matriz foi criada por meio de [RegisterCOMObject](../windows/module-registercomobject-method.md) método.
 
-*count*  
+*count*<br/>
 O número de classes para cancelar o registro.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -59,4 +59,5 @@ S_OK se essa operação for bem-sucedida; Caso contrário, um erro HRESULT que i
 **Namespace:** Microsoft::WRL
 
 ## <a name="see-also"></a>Consulte também
+
 [Classe Module](../windows/module-class.md)

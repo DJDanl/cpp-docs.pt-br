@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2bbf6cb67973d7538aa7aea0d846cbadf030d585
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dc59b9c93cebb622f40881d961709079abcd9166
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590646"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388622"
 ---
 # <a name="eventtargetarrayeventtargetarray-constructor"></a>Construtor EventTargetArray::EventTargetArray
 
@@ -39,7 +39,7 @@ EventTargetArray(
 
 ### <a name="parameters"></a>Parâmetros
 
-*hr*  
+*hr*<br/>
 Depois de operações esse construtor, parâmetro *hr* indica se a alocação da matriz foi bem-sucedida ou falhou. A tabela a seguir lista os possíveis valores para *hr*.
 
 S_OK, a operação foi bem-sucedida.
@@ -48,7 +48,7 @@ Não foi possível alocar memória E_OUTOFMEMORY para a matriz.
 
 Parâmetro S_FALSE *itens* é menor ou igual a zero.
 
-*Itens*  
+*Itens*<br/>
 O número de elementos da matriz para alocar.
 
 ## <a name="remarks"></a>Comentários
@@ -65,5 +65,5 @@ Inicializa uma nova instância dos **EventTargetArray** classe.
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe EventTargetArray](../windows/eventtargetarray-class.md)  
+[Classe EventTargetArray](../windows/eventtargetarray-class.md)<br/>
 [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

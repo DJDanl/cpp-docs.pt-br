@@ -1,5 +1,5 @@
 ---
-title: Caixa de diálogo dados Exchange e validação | Microsoft Docs
+title: Dados de caixa de diálogo troca e validação | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,23 +25,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cc12a76f73e2d84a4cb5df66a6dd3d01249265a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a1006300a0d0a1bc0587e7866e97260ae293516
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343769"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379834"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>Troca de dados da caixa de diálogo e validação
-Troca de dados de caixa de diálogo (DDX) é uma maneira fácil para inicializar os controles na caixa de diálogo e para coletar dados de entrada do usuário. Validação de dados de caixa de diálogo (DDV) é uma maneira fácil para validar a entrada de dados em uma caixa de diálogo. Para tirar proveito de DDX e DDV em suas caixas de diálogo, use o [Adicionar Assistente de variável de membro](../ide/add-member-variable-wizard.md) para criar os membros de dados e definir os tipos de dados e especificar regras de validação.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
-  
--   [Troca de dados de caixa de diálogo](../mfc/dialog-data-exchange.md)  
-  
--   [Validação de dados de caixa de diálogo](../mfc/dialog-data-validation.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Caixas de diálogo](../mfc/dialog-boxes.md)   
- [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
+
+Troca de dados de caixa de diálogo (DDX) é uma maneira fácil para inicializar os controles na caixa de diálogo e para coletar entrada de dados pelo usuário. Validação de dados de caixa de diálogo (DDV) é uma maneira fácil para validar a entrada de dados em uma caixa de diálogo. Para tirar proveito de DDX e DDV em suas caixas de diálogo, use o [Adicionar Assistente de variável de membro](../ide/add-member-variable-wizard.md) para criar os membros de dados e definir seus tipos de dados e especificar regras de validação.
+
+## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+
+- [Troca de dados de caixa de diálogo](../mfc/dialog-data-exchange.md)
+
+- [Validação de dados de caixa de diálogo](../mfc/dialog-data-validation.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Caixas de diálogo](../mfc/dialog-boxes.md)<br/>
+[Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
 

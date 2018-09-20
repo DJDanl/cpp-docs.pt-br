@@ -17,29 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 839b38a135f9f7ada413de757035370e009cfa57
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 04b6aa92937ce2c7a0b94c5e5b796b0bf8581626
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346965"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385125"
 ---
 # <a name="menus-mfc"></a>Menus (MFC)
-MFC fornece dois elementos para ajudá-lo a trabalhar com menus:  
-  
--   Classe [CMenu](../mfc/reference/cmenu-class.md) para manipular os menus do programa em tempo de execução. Use a documentação para `CMenu` de exemplo para aprender a usar e `CMenu` efetivamente.  
-  
--   Um mecanismo para atualizar os menus e botões de barra de ferramentas: habilitar ou desabilitá-las rapidamente para atender às condições do programa atual.  
-  
- O Visual C++ também fornece um [editor de menu](../windows/menu-editor.md) para criar e editar recursos do menu do programa.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
-  
--   [Manipulando objetos menu durante a execução do programa](../mfc/manipulating-menus-during-program-execution.md)  
-  
--   [Como atualizar objetos de Interface do usuário](../mfc/how-to-update-user-interface-objects.md)  
-  
--   [Amostra](../mfc/menu-sample-list.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Elementos da Interface do usuário](../mfc/user-interface-elements-mfc.md)
+
+MFC fornece dois elementos para ajudá-lo a trabalhar com menus:
+
+- Classe [CMenu](../mfc/reference/cmenu-class.md) para manipulação de menus do seu programa em tempo de execução. Use a documentação para `CMenu` e o exemplo para aprender a usar `CMenu` com eficiência.
+
+- Um mecanismo para atualizar os menus e botões da barra de ferramentas: habilitando ou desabilitando-os em tempo real para atender às condições do programa atual.
+
+O Visual C++ também fornece um [editor de menu](../windows/menu-editor.md) para criar e editar os recursos do menu do seu programa.
+
+## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+
+- [Manipulando objetos de menu durante a execução do programa](../mfc/manipulating-menus-during-program-execution.md)
+
+- [Como atualizar objetos de Interface do usuário](../mfc/how-to-update-user-interface-objects.md)
+
+- [Amostra](../mfc/menu-sample-list.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Elementos da Interface do usuário](../mfc/user-interface-elements-mfc.md)

@@ -19,32 +19,36 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a860f79b740e0f34eef33b7a96e0236835f1f6b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ef0887ca3eec7510717aab21ba4c6c7aba98d25
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33129691"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380289"
 ---
 # <a name="lock-class"></a>Classe lock
-Essa classe automatiza colocar um bloqueio para sincronizar o acesso a um objeto de vários threads.  Quando construído adquire o bloqueio e quando destruído versões de bloqueio.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-ref class lock;  
-```  
-  
-## <a name="remarks"></a>Comentários  
- `lock` está disponível apenas para objetos CLR e só pode ser usado no código do CLR.  
-  
- Internamente, os usos de classe de bloqueio <xref:System.Threading.Monitor> para sincronizar o acesso. Consulte neste tópico para obter mais informações sobre a sincronização.  
-  
-## <a name="requirements"></a>Requisitos  
- **Arquivo de cabeçalho** \<msclr\lock.h >  
-  
- **Namespace** msclr  
-  
-## <a name="see-also"></a>Consulte também  
- [lock](../dotnet/lock.md)   
- [Membros lock](../dotnet/lock-members.md)
+
+Essa classe automatiza a usar um bloqueio para sincronizar o acesso a um objeto de vários threads.  Quando construído adquire o bloqueio e quando destruído versões o bloqueio.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+ref class lock;
+```
+
+## <a name="remarks"></a>Comentários
+
+`lock` está disponível somente para objetos CLR e só pode ser usado no código do CLR.
+
+Internamente, os usos da classe de bloqueio <xref:System.Threading.Monitor> para sincronizar o acesso. Consulte este tópico para obter mais informações sobre a sincronização.
+
+## <a name="requirements"></a>Requisitos
+
+**Arquivo de cabeçalho** \<msclr\lock.h >
+
+**Namespace** msclr
+
+## <a name="see-also"></a>Consulte também
+
+[lock](../dotnet/lock.md)<br/>
+[Membros lock](../dotnet/lock-members.md)

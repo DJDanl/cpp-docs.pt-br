@@ -1,5 +1,5 @@
 ---
-title: Uso A.28 de num_threads cláusula | Microsoft Docs
+title: A.28 uso da cláusula num_threads | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,25 +12,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12289192d056acac684f28712ccf2aa1423b6c3e
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 0fb0111645e1dba42fdd3fa28a885d1ce179ef6f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689110"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387908"
 ---
 # <a name="a28---use-of-numthreads-clause"></a>A.28   Uso da cláusula num_threads
-O exemplo a seguir demonstra o `num_threads` cláusula ([seção 2.3](../../parallel/openmp/2-3-parallel-construct.md) na página 8). A região parallel for executado com um máximo de 10 threads.  
-  
-```  
-#include <omp.h>  
-main()  
-{  
-    omp_set_dynamic(1);  
-    ...  
-    #pragma omp parallel num_threads(10)  
-    {  
-        ... parallel region ...  
-    }  
-}  
+
+O exemplo a seguir demonstra a `num_threads` cláusula ([seção 2.3](../../parallel/openmp/2-3-parallel-construct.md) na página de 8). A região paralela é executado com um máximo de 10 threads.
+
+```
+#include <omp.h>
+main()
+{
+    omp_set_dynamic(1);
+    ...
+    #pragma omp parallel num_threads(10)
+    {
+        ... parallel region ...
+    }
+}
 ```

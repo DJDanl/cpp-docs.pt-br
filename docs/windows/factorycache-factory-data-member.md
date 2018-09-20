@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 634e3ca3ac410680b75c7b682bcef94401ace09e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e671c4b307c4324799a6f3b31694aa1d46b70ad5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594979"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378157"
 ---
 # <a name="factorycachefactory-data-member"></a>Membro de dados FactoryCache::factory
 
@@ -46,5 +46,5 @@ Aponta para uma fábrica de classes de tempo de execução do Windows ou COM.
 
 ## <a name="see-also"></a>Consulte também
 
-[Estrutura FactoryCache](../windows/factorycache-structure.md)  
+[Estrutura FactoryCache](../windows/factorycache-structure.md)<br/>
 [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ad05e9448af9148965ca2f0137d3e0d666d48871
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 5615756f8716ae1f4c73ccf98e2754b57f674216
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315386"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392951"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box-c"></a>Agrupando botões de opção em uma caixa de diálogo (C++)
 
@@ -69,6 +69,6 @@ Win32
 
 ## <a name="see-also"></a>Consulte também
 
-[Organização de controles em caixas de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)  
-[Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)  
+[Organização de controles em caixas de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)<br/>
 [Controles](../mfc/controls-mfc.md)

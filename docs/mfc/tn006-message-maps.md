@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6faa29858e94c7d80d6039e35278b6a7ae263a85
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 69aecab15ffb1914dbc8a6a6ae15fca307bc77ef
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213971"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386243"
 ---
 # <a name="tn006-message-maps"></a>TN006: mapas de mensagem
 
@@ -87,7 +87,7 @@ Uma assinatura de função padrão foi definida para descompactar os parâmetros
 > [!NOTE]
 > ClassWizard exige que você use o **afx_msg** palavra-chave em suas declarações de manipulador de mapa de mensagem.
 
- Essas assinaturas de função foram derivadas usando uma convenção simple. O nome da função sempre começa com `"On`". Isso é seguido pelo nome da mensagem do Windows com o "WM de _" removido e a primeira letra de cada palavra em maiusculas. A ordem dos parâmetros é *wParam* seguido `LOWORD`(*lParam*), em seguida, `HIWORD`(*lParam*). Parâmetros não utilizados não são passados. Quaisquer identificadores que são encapsuladas por classes do MFC são convertidos em ponteiros para os objetos apropriados do MFC. O exemplo a seguir mostra como manipular a mensagem WM_PAINT e fazer com que o `CMyWnd::OnPaint` função a ser chamada:
+Essas assinaturas de função foram derivadas usando uma convenção simple. O nome da função sempre começa com `"On`". Isso é seguido pelo nome da mensagem do Windows com o "WM de _" removido e a primeira letra de cada palavra em maiusculas. A ordem dos parâmetros é *wParam* seguido `LOWORD`(*lParam*), em seguida, `HIWORD`(*lParam*). Parâmetros não utilizados não são passados. Quaisquer identificadores que são encapsuladas por classes do MFC são convertidos em ponteiros para os objetos apropriados do MFC. O exemplo a seguir mostra como manipular a mensagem WM_PAINT e fazer com que o `CMyWnd::OnPaint` função a ser chamada:
 
 ```cpp
 BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
@@ -97,7 +97,7 @@ BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()
 ```
 
- A tabela de mapa de mensagem deve ser definida fora do escopo de qualquer definição de função ou classe. Não devem ser colocado em um bloco de extern "C".
+A tabela de mapa de mensagem deve ser definida fora do escopo de qualquer definição de função ou classe. Não devem ser colocado em um bloco de extern "C".
 
 > [!NOTE]
 > ClassWizard modificará as entradas de mapa de mensagem que ocorrem entre o / / {{e / /}} o colchete de comentário.
@@ -223,7 +223,7 @@ Exemplos desses formulários:
     }
     ```
 
- Usuários avançados podem lidar com uma variedade de comandos por meio de um único manipulador de comandos: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) ou ON_COMMAND_RANGE_EX. Consulte a documentação do produto para obter mais informações sobre essas macros.
+Usuários avançados podem lidar com uma variedade de comandos por meio de um único manipulador de comandos: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) ou ON_COMMAND_RANGE_EX. Consulte a documentação do produto para obter mais informações sobre essas macros.
 
 > [!NOTE]
 > ClassWizard dá suporte à criação de manipuladores ON_COMMAND e ON_UPDATE_COMMAND_UI, mas não oferece suporte a criação de manipuladores ON_COMMAND_EX ou ON_COMMAND_RANGE. No entanto, o Assistente de classe analisará e permitem que você procure todas as variantes de manipulador de comando de quatro.
@@ -251,5 +251,5 @@ Os controles comuns do Windows usam mais potente [WM_NOTIFY](https://msdn.micros
 
 ## <a name="see-also"></a>Consulte também
 
-[Observações técnicas por número](../mfc/technical-notes-by-number.md)  
-[Observações técnicas por categoria](../mfc/technical-notes-by-category.md)  
+[Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
+[Observações técnicas por categoria](../mfc/technical-notes-by-category.md)

@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d775e9c42ceb8a564e2cc7992cb95ac9717a966d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 71dc4a3a1f2c08d3bac2fcf5c474768f438feccd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707675"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394979"
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD (habilitar verificações de proteção)
 
@@ -47,6 +47,6 @@ A opção /Guard: CF deve ser especificada para o compilador e vinculador para c
 
 ## <a name="see-also"></a>Consulte também
 
-[/Guard (habilitar o controle de fluxo de proteção)](../../build/reference/guard-enable-control-flow-guard.md)
-[definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
+[/guard (habilitar proteção de fluxo de controle)](../../build/reference/guard-enable-control-flow-guard.md)<br/>
+[Definindo opções de vinculador](../../build/reference/setting-linker-options.md)<br/>
 [Opções do vinculador](../../build/reference/linker-options.md)

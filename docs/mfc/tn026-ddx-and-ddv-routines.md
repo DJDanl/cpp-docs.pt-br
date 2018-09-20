@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18377d423ab150773ef5438f39c8e74914b5c425
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 3930f08ae0708b81dde218a88fcda4dc34931390
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317414"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389727"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026: rotinas DDX e DDV
 
@@ -242,5 +242,5 @@ Cada campo é delimitado por um caractere ';'. Os campos e sua finalidade são d
 
 ## <a name="see-also"></a>Consulte também
 
-[Observações técnicas por número](../mfc/technical-notes-by-number.md)  
-[Observações técnicas por categoria](../mfc/technical-notes-by-category.md)  
+[Observações técnicas por número](../mfc/technical-notes-by-number.md)<br/>
+[Observações técnicas por categoria](../mfc/technical-notes-by-category.md)

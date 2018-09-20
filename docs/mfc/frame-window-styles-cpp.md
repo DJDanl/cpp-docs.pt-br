@@ -19,28 +19,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 102b3a4c8372a53aada23ad448ce5dc1cf323a97
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f0e4bde874fc563535b661108cb68edefd8d977
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343746"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385008"
 ---
 # <a name="frame-window-styles-c"></a>Estilos de janela com moldura (C++)
-As janelas de quadro obter com o framework são adequadas para a maioria dos programas, mas você pode obter flexibilidade adicional, usando as funções avançadas [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) e a função global MFC [AfxRegisterWndClass ](../mfc/reference/application-information-and-management.md#afxregisterwndclass). `PreCreateWindow` é uma função de membro de `CWnd`.  
-  
- Se você aplicar o **WS_HSCROLL** e **WS_VSCROLL** estilos para a janela do quadro principal, em vez disso, são aplicados ao **MDICLIENT** janela para que os usuários podem rolar a **MDICLIENT** área.  
-  
- Se a janela **FWS_ADDTOTITLE** bit de estilo é definido (que é o padrão), a exibição informa a janela do quadro que título a ser exibido na barra de título da janela com base no nome do documento do modo de exibição.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
-  
--   [Gerenciando janelas de filhos MDI (MDICLIENT)](../mfc/managing-mdi-child-windows.md), a janela em um quadro MDI que contém as janelas filho MDI  
-  
--   [Alternando os estilos de uma janela criada por MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
-  
--   [Estilos de janela](../mfc/reference/styles-used-by-mfc.md#window-styles)  
-  
-## <a name="see-also"></a>Consulte também  
- [Janelas com moldura](../mfc/frame-windows.md)
+
+As janelas de quadro obter com o framework são adequadas para a maioria dos programas, mas você pode obter flexibilidade adicional, usando as funções avançadas [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) e a função MFC global [AfxRegisterWndClass ](../mfc/reference/application-information-and-management.md#afxregisterwndclass). `PreCreateWindow` é uma função de membro de `CWnd`.
+
+Se você aplicar a **WS_HSCROLL** e **WS_VSCROLL** estilos para a janela de quadro principal, em vez disso, são aplicados ao **MDICLIENT** janela para que os usuários podem rolar o **MDICLIENT** área.
+
+Se a janela **FWS_ADDTOTITLE** bit de estilo é definido (o que é o padrão), o modo de exibição indica que a janela do quadro que título a ser exibido na barra de título da janela com base no nome do documento da exibição.
+
+## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+
+- [Gerenciando janelas filho MDI (MDICLIENT)](../mfc/managing-mdi-child-windows.md), a janela de dentro de um quadro MDI que contém as janelas filho MDI
+
+- [Alternando os estilos de uma janela criada por MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)
+
+- [Estilos de janela](../mfc/reference/styles-used-by-mfc.md#window-styles)
+
+## <a name="see-also"></a>Consulte também
+
+[Janelas com moldura](../mfc/frame-windows.md)
 

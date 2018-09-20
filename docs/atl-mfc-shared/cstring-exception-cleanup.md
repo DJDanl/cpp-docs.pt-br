@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 656739ad000612f130f5cdfb1a53a6de2d67c4c8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 81349135fa822627cb40bdcd2570276d8040e50e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761362"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385515"
 ---
 # <a name="cstring-exception-cleanup"></a>Limpeza de exceção de CString
 
@@ -30,6 +30,6 @@ Em que o MFC usa mecanismo de tratamento de exceções de C++, você não precis
 
 ## <a name="see-also"></a>Consulte também
 
-[Cadeias de caracteres (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
+[Cadeias de caracteres (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [Tratamento de Exceção](../mfc/exception-handling-in-mfc.md)
 

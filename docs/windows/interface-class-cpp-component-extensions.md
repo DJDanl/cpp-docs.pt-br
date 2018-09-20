@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 775fbe39edc9478b1fce3afb39ee2bf1f6d5ed36
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0c7ebdf83730b661cbd855ba730da1abeee936c5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714305"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377065"
 ---
 # <a name="interface-class--c-component-extensions"></a>classe de interface (Extensões de Componentes C++)
 
@@ -36,21 +36,21 @@ Declara uma interface.  Para obter informações sobre interfaces nativas, consu
 ```cpp
 interface_access
 interface class
- name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
+name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*interface_access*  
+*interface_access*<br/>
 A acessibilidade de uma interface fora do assembly.  Os valores possíveis são **pública** e **privada**.  **privada** é o padrão. Interfaces aninhados não podem ter um *interface_access* especificador.
 
-*name*  
+*name*<br/>
 O nome da interface.
 
-*inherit_access*  
+*inherit_access*<br/>
 A acessibilidade de *base_interface*.  Os únicos permitidos acessibilidade para uma interface de base está **pública** (o padrão).
 
-*base_interface*  
+*base_interface*<br/>
 (Opcional) Uma interface base para a interface *nome*.
 
 ### <a name="remarks"></a>Comentários

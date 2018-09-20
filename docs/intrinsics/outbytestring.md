@@ -18,50 +18,54 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a816bd4df165b3df9de723560192ac9072b29c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7ef1bb6e4804fc71531f694a3dac4c5504941bf0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718829"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393757"
 ---
 # <a name="outbytestring"></a>__outbytestring
-**Seção específica da Microsoft**  
-  
- Gera o `rep outsb` instrução, que envia o primeiro `Count` bytes de dados apontado por `Buffer` para a porta especificada pelo `Port`.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void __outbytestring(   
-   unsigned short Port,   
-   unsigned char* Buffer,   
-   unsigned long Count   
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
+
+**Seção específica da Microsoft**
+
+Gera o `rep outsb` instrução, que envia o primeiro `Count` bytes de dados apontado por `Buffer` para a porta especificada pelo `Port`.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+void __outbytestring( 
+   unsigned short Port, 
+   unsigned char* Buffer, 
+   unsigned long Count 
+);
+```
+
+#### <a name="parameters"></a>Parâmetros
+
 *Porta*<br/>
-[in] A porta para enviar os dados.  
-  
+[in] A porta para enviar os dados.
+
 *buffer*<br/>
-[in] Os dados a serem enviadas a porta especificada.  
-  
+[in] Os dados a serem enviadas a porta especificada.
+
 *Contagem*<br/>
-[in] O número de bytes de dados a serem enviados.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Intrínseco|Arquitetura|  
-|---------------|------------------|  
-|`__outbytestring`|x86, x64|  
-  
- **Arquivo de cabeçalho** \<intrin. h >  
-  
-## <a name="remarks"></a>Comentários  
- Essa rotina só está disponível como função intrínseca.  
-  
-**Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)
+[in] O número de bytes de dados a serem enviados.
+
+## <a name="requirements"></a>Requisitos
+
+|Intrínseco|Arquitetura|
+|---------------|------------------|
+|`__outbytestring`|x86, x64|
+
+**Arquivo de cabeçalho** \<intrin. h >
+
+## <a name="remarks"></a>Comentários
+
+Essa rotina só está disponível como função intrínseca.
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

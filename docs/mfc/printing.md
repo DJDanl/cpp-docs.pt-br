@@ -17,53 +17,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7df782e3c30b9120fe7eb6728f1b622750d160f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e03e750941be02385ac4d5b7463d5b6f32997b6a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348207"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373942"
 ---
 # <a name="printing"></a>Imprimindo
-Microsoft Windows implementa independentes de dispositivo de exibição. Em MFC, isso significa que as chamadas de desenho mesmo, no `OnDraw` a função de membro da classe do modo de exibição, são responsáveis por desenho na tela e em outros dispositivos, como impressoras. Para visualização de impressão, o dispositivo de destino é uma saída de impressora simulada para a exibição.  
-  
-##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> Sua função na impressão versus de função da estrutura  
- A classe de exibição tem as seguintes responsabilidades:  
-  
--   Informe o framework é o número de páginas do documento.  
-  
--   Quando for solicitado para imprimir uma página especificada, desenhe a parte do documento.  
-  
--   Aloque e desaloque as fontes ou outros recursos GDI (interface) do dispositivo de gráficos necessários para impressão.  
-  
--   Se necessário, envie qualquer escape códigos necessários para alterar o modo de impressora antes de imprimir uma determinada página, por exemplo, para alterar a orientação de impressão em uma base por página.  
-  
- Responsabilidades da estrutura são da seguinte maneira:  
-  
--   Exibição de **impressão** caixa de diálogo.  
-  
--   Criar um [CDC](../mfc/reference/cdc-class.md) objeto para a impressora.  
-  
--   Chamar o [StartDoc](../mfc/reference/cdc-class.md#startdoc) e [EndDoc](../mfc/reference/cdc-class.md#enddoc) funções de membro de `CDC` objeto.  
-  
--   Chamar repetidamente o [StartPage](../mfc/reference/cdc-class.md#startpage) função membro do `CDC` objeto informar qual página deve ser impresso e chamar a classe de visualização a [EndPage](../mfc/reference/cdc-class.md#endpage) função membro do `CDC` objeto.  
-  
--   Chame funções substituíveis no modo de exibição nos momentos apropriados.  
-  
- Os artigos a seguir discutem como o framework oferece suporte à impressão e visualização de impressão:  
-  
-### <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre  
-  
--   [Como a impressão padrão é feita](../mfc/how-default-printing-is-done.md)  
-  
--   [Documentos Multipágina](../mfc/multipage-documents.md)  
-  
--   [Cabeçalhos e rodapés](../mfc/headers-and-footers.md)  
-  
--   [Alocando recursos GDI para impressão](../mfc/allocating-gdi-resources.md)  
-  
--   [Visualizar impressão](../mfc/print-preview-architecture.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Impressão e visualização de impressão](../mfc/printing-and-print-preview.md)
+
+Microsoft Windows implementa independentes de dispositivo de exibição. No MFC, isso significa que as mesmas chamadas de desenho, o `OnDraw` a função de membro da sua classe de exibição, são responsáveis por desenho na tela e em outros dispositivos, como impressoras. Para visualização de impressão, o dispositivo de destino é uma saída da impressora simulado para a exibição.
+
+##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> Sua função na impressão vs. a função da estrutura
+
+Sua classe de exibição tem as seguintes responsabilidades:
+
+- Informe a estrutura de quantas páginas estão no documento.
+
+- Quando for solicitado para imprimir uma página especificada, desenhe a parte do documento.
+
+- Aloque e desaloque todas as fontes ou outros recursos de interface (GDI) do dispositivo de gráficos necessários para impressão.
+
+- Se necessário, enviar um necessária para alterar o modo de impressora antes de imprimir uma determinada página, por exemplo, para alterar a orientação de impressão em uma base por página de códigos de escape.
+
+Responsabilidades da estrutura são da seguinte maneira:
+
+- Exibição de **impressão** caixa de diálogo.
+
+- Criar uma [CDC](../mfc/reference/cdc-class.md) objeto para a impressora.
+
+- Chame o [StartDoc](../mfc/reference/cdc-class.md#startdoc) e [EndDoc](../mfc/reference/cdc-class.md#enddoc) funções de membro a `CDC` objeto.
+
+- Chamar repetidamente o [StartPage](../mfc/reference/cdc-class.md#startpage) função de membro da `CDC` do objeto, informar qual página deve ser impresso e chamar a classe de exibição a [EndPage](../mfc/reference/cdc-class.md#endpage) função de membro do `CDC` objeto.
+
+- Chame funções substituíveis no modo de exibição nos momentos apropriados.
+
+Os artigos a seguir discutem como o framework oferece suporte à impressão e visualização de impressão:
+
+### <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
+
+- [Como a impressão padrão é feita](../mfc/how-default-printing-is-done.md)
+
+- [Documentos Multipágina](../mfc/multipage-documents.md)
+
+- [Cabeçalhos e rodapés](../mfc/headers-and-footers.md)
+
+- [Alocando recursos GDI para impressão](../mfc/allocating-gdi-resources.md)
+
+- [Visualização de impressão](../mfc/print-preview-architecture.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Impressão e visualização de impressão](../mfc/printing-and-print-preview.md)
 

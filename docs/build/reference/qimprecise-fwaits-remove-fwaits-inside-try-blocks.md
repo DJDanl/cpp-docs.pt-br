@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98dc9416ecee69bca285ff54d6321144c4a3fd02
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: cad23ebdd2289791b50b0e956368b934fe0f1087
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724419"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385190"
 ---
 # <a name="qimprecisefwaits-remove-fwaits-inside-try-blocks"></a>/Qimprecise_fwaits (remover fwaits dentro de blocos Try)
 
@@ -54,6 +54,6 @@ Essa opção não tem nenhum efeito se **/fp: except** também não for especifi
 
 ## <a name="see-also"></a>Consulte também
 
-[/Q opções (operações de nível baixo)](../../build/reference/q-options-low-level-operations.md)
-[opções do compilador](../../build/reference/compiler-options.md)<br/>
+[Opções /Q (operações de nível baixo)](../../build/reference/q-options-low-level-operations.md)<br/>
+[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
 [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

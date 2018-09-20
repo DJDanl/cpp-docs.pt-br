@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 213bfd9dc5c07ad1b3ef811b9333cb12bf9c2b7a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b6ac44a9a27b5c3ad62279dc3065aa9e0aac5236
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755587"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378211"
 ---
 # <a name="cfixedstringt-class"></a>Classe CFixedStringT
 
@@ -141,7 +141,7 @@ Você deve estar ciente que exceções podem ocorrer sempre que você usa o oper
 
 ## <a name="see-also"></a>Consulte também
 
-[Classe CStringT](../../atl-mfc-shared/reference/cstringt-class.md)   
-[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
+[Classe CStringT](../../atl-mfc-shared/reference/cstringt-class.md)<br/>
+[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes compartilhadas ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

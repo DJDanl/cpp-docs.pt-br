@@ -16,32 +16,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d97cae8091f88c283412b36ef757b03c72f7580d
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: c2b5a285ef019cd1752b60065f7040d9a937ce38
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33691255"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389883"
 ---
 # <a name="ompgetdynamic"></a>omp_get_dynamic
-Retorna um valor que indica se o número de threads disponíveis na região parallel subsequente pode ser ajustado por tempo de execução.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-int omp_get_dynamic();  
-```  
-  
-## <a name="return-value"></a>Valor de retorno  
- Se for diferente de zero, o ajuste dinâmico de threads está habilitado.  
-  
-## <a name="remarks"></a>Comentários  
- Ajuste dinâmico de threads é especificado com [omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md) e [OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md).  
-  
- Para obter mais informações, consulte [3.1.7 função omp_set_dynamic](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).  
-  
-## <a name="example"></a>Exemplo  
- Consulte [omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md) para obter um exemplo de como usar `omp_get_dynamic`.  
-  
-## <a name="see-also"></a>Consulte também  
- [Funções](../../../parallel/openmp/reference/openmp-functions.md)
+
+Retorna um valor que indica se o número de threads disponíveis na região paralela subsequente pode ser ajustado pelo tempo de execução.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+int omp_get_dynamic();
+```
+
+## <a name="return-value"></a>Valor de retorno
+
+Se for diferente de zero, o ajuste dinâmico de threads está habilitado.
+
+## <a name="remarks"></a>Comentários
+
+Ajuste dinâmico de segmentos é especificado com [omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md) e [OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md).
+
+Para obter mais informações, consulte [3.1.7 função omp_set_dynamic](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).
+
+## <a name="example"></a>Exemplo
+
+Ver [omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md) para obter um exemplo de como usar `omp_get_dynamic`.
+
+## <a name="see-also"></a>Consulte também
+
+[Funções](../../../parallel/openmp/reference/openmp-functions.md)

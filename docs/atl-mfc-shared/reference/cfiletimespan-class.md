@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06a9f4275ff6acfcef7b7173fbfc6f9abf89b4f3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8c69a45ec56c5ee6f1c8d7a48be2cac2d158dc6e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766000"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381927"
 ---
 # <a name="cfiletimespan-class"></a>Classe CFileTimeSpan
 
@@ -317,8 +317,8 @@ O novo valor para o período de tempo em milissegundos.
 
 ## <a name="see-also"></a>Consulte também
 
-[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)   
-[Classe CFileTime](../../atl-mfc-shared/reference/cfiletime-class.md)   
-[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
+[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)<br/>
+[Classe CFileTime](../../atl-mfc-shared/reference/cfiletime-class.md)<br/>
+[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes compartilhadas ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

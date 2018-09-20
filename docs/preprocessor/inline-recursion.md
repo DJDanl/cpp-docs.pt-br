@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 222cb7151d975219d0e92bd1270778586e89b4d3
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 2c22a9fa20e663a87d10dcb1e9ba154c921a5bf8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538373"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391300"
 ---
 # <a name="inlinerecursion"></a>inline_recursion
 Controla a expansão embutida das chamadas de função diretas ou mutuamente recursivas.  
@@ -42,6 +42,6 @@ O **inline_recursion** pragma controla como as funções recursivas são expandi
   
 ## <a name="see-also"></a>Consulte também  
  
-[Diretivas pragma e a palavra-chave pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
-[inline_depth](../preprocessor/inline-depth.md)   
+[Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
+[inline_depth](../preprocessor/inline-depth.md)<br/>
 [/Ob (expansão de função embutida)](../build/reference/ob-inline-function-expansion.md)

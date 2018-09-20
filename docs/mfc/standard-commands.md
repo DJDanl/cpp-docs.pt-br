@@ -25,44 +25,46 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 943d1bf01890696466638eca3c73839297807fd2
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: bd26246299f174281ba664875ec0c7d3a2de149d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953116"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389857"
 ---
 # <a name="standard-commands"></a>Comandos padrão
-A estrutura define muitas mensagens de comando padrão. Normalmente, as IDs para esses comandos assumem a forma:  
-  
- **ID _** *fonte*_*Item*  
-  
- onde *fonte* geralmente é um nome de menu e *Item* é um item de menu. Por exemplo, a ID de comando para o novo comando no menu arquivo é ID_FILE_NEW. IDs de comando padrão são mostrados em negrito na documentação. IDs definidos pelo programador são mostrados em uma fonte diferente do texto ao redor.  
-  
- A seguir está uma lista de alguns dos comandos mais importantes com suporte:  
-  
- *Comandos do Menu arquivo*  
- Novo, abrir, fechar, salvar, salvar como, Configurar página, Configurar impressão, imprimir, visualizar impressão, sair e arquivos usados mais recentemente.  
-  
- *Comandos do Menu Editar*  
- Claro, desmarque todos, copiar, recortar, localizar, colar, repetir, substituir, selecione todos, desfazer e refazer.  
-  
- *Comandos do menu Exibir*  
- Barra de ferramentas e barra de Status.  
-  
- *Comandos do menu Janela*  
- Novo, organizar, em cascata, bloco Horizontal, Vertical de bloco e dividir.  
-  
- *Comandos do menu Ajuda*  
- Índice, usando a Ajuda e sobre.  
-  
- *Comandos OLE (Menu Editar)*  
- Inserir objeto novo, Editar Links, Colar vínculo, Colar especial, e *typename* objeto (comandos de verbo).  
-  
- O framework fornece vários níveis de suporte para esses comandos. Alguns comandos são suportados apenas como IDs de comando definido, enquanto outros são compatíveis com implementações completa. Por exemplo, a estrutura implementa o comando Abrir no menu Arquivo Criando um novo objeto de documento, exibindo uma caixa de diálogo Abrir e abrir e ler o arquivo. Por outro lado, você deve implementar comandos no menu Editar por conta própria, desde que os comandos ID_EDIT_COPY dependerão da natureza dos dados que você está copiando.  
-  
- Para obter mais informações sobre os comandos com suporte e o nível de implementação fornecido, consulte [22 de observação técnica](../mfc/tn022-standard-commands-implementation.md). Os comandos padrão são definidos no arquivo AFXRES. H.  
-  
-## <a name="see-also"></a>Consulte também  
- [Objetos da interface do usuário e IDs de comando](../mfc/user-interface-objects-and-command-ids.md)
+
+O framework define várias mensagens de comando padrão. Normalmente, as IDs para esses comandos assumem a forma:
+
+**ID _** *código-fonte*_*Item*
+
+em que *fonte* geralmente é um nome de menu e *Item* é um item de menu. Por exemplo, a ID de comando para o comando novo no menu arquivo é ID_FILE_NEW. IDs de comando padrão são mostradas em negrito na documentação. IDs definidos pelo programador são mostrados em uma fonte diferente do texto ao redor.
+
+A seguir está uma lista de alguns dos comandos mais importantes com suporte:
+
+*Comandos do Menu arquivo*<br/>
+Novo, abrir, fechar, salvar, salvar como, Configurar página, Configurar impressão, impressão, visualização de impressão, sair e arquivos usados mais recentemente.
+
+*Comandos do Menu Editar*<br/>
+Claro, Clear All, copiar, cortar, Find, colar, repetir, Replace, selecionar tudo, desfazer e refazer.
+
+*Comandos do menu Exibir*<br/>
+Barra de ferramentas e barra de Status.
+
+*Comandos do menu Janela*<br/>
+Novo, organizar, em cascata, lado a lado Horizontal, Vertical de bloco e dividir.
+
+*Comandos do menu Ajuda*<br/>
+Indexar, usando a Ajuda e sobre.
+
+*Comandos OLE (Menu Editar)*<br/>
+Inserir novo objeto, Editar Links, Colar vínculo, Colar especial, e *typename* (comandos de verbo) do objeto.
+
+O framework fornece diferentes níveis de suporte para estes comandos. Alguns comandos só têm suporte como IDs de comando definidos, enquanto outros são compatíveis com implementações completas. Por exemplo, a estrutura implementa o comando Abrir no menu Arquivo, criando um novo objeto de documento, exibindo uma caixa de diálogo Abrir e abrir e ler o arquivo. Por outro lado, você deve implementar comandos no menu Editar por conta própria, uma vez que comandos como ID_EDIT_COPY dependerão da natureza dos dados que você está copiando.
+
+Para obter mais informações sobre os comandos com suporte e o nível de implementação fornecida, consulte [22 de observação técnica](../mfc/tn022-standard-commands-implementation.md). Os comandos padrão são definidos no arquivo AFXRES. H.
+
+## <a name="see-also"></a>Consulte também
+
+[Objetos da interface do usuário e IDs de comando](../mfc/user-interface-objects-and-command-ids.md)
 

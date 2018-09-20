@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a20dd5e2fb43dd5caae7a5185260d8c88637d33
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 88d3af154993bea6df509a69b832223aede7ad81
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597956"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386503"
 ---
 # <a name="comptr-class"></a>Classe ComPtr
 
@@ -40,10 +40,10 @@ friend class ComPtr;
 
 ### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 A interface que o **ComPtr** representa.
 
-*U*  
+*U*<br/>
 Uma classe à qual o atual **ComPtr** é um amigo. (O modelo que usa esse parâmetro é protegido).
 
 ## <a name="remarks"></a>Comentários

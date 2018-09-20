@@ -12,16 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1b0f253ce14ffc5d3740e582a9a51feea56ad32
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 17c60c621defa15c034f57d0af8f14637db54f03
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690059"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378131"
 ---
 # <a name="27-data-environment"></a>2.7 Ambiente de dados
-Esta seção apresenta uma diretiva e várias cláusulas para controlar o ambiente de dados durante a execução de regiões paralelas, da seguinte maneira:  
-  
--   Um **threadprivate** diretiva (consulte a seção a seguir) é fornecida para tornar o escopo de arquivo, escopo de namespace ou escopo de bloco estático variáveis local a um thread.  
-  
--   As cláusulas que podem ser especificadas em diretivas para controlar os atributos de compartilhamento de variáveis para a duração das construções paralelas ou compartilhamento de trabalho são descritas na [seção 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na página 25.
+
+Esta seção apresenta uma diretiva e várias cláusulas para controlar o ambiente de dados durante a execução de regiões em paralelo, da seguinte maneira:
+
+- Um **threadprivate** diretiva (consulte a seção a seguir) é fornecida para tornar o escopo de arquivo, escopo de namespace ou variáveis estáticas de escopo de bloco local para um thread.
+
+- As cláusulas que podem ser especificadas em que as diretivas para controlar os atributos de compartilhamento de variáveis para a duração das construções paralelas ou compartilhamento de trabalho são descritas em [seção 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) na página 25.

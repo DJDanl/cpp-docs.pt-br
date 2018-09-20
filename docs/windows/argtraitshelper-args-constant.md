@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e4817d0f0082ef4ec0a9a588982405772d733fe0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6a9b9239d7a75f17915c19e484ad25e0b230834d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598026"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395799"
 ---
 # <a name="argtraitshelperargs-constant"></a>Constante ArgTraitsHelper::args
 
@@ -46,5 +46,5 @@ Ajuda [argtraitshelper:: args](../windows/argtraitshelper-args-constant.md) mant
 
 ## <a name="see-also"></a>Consulte também
 
-[Estrutura ArgTraitsHelper](../windows/argtraitshelper-structure.md)  
+[Estrutura ArgTraitsHelper](../windows/argtraitshelper-structure.md)<br/>
 [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

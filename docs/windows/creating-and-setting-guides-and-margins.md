@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ceee8a6275ef612cb26eff042d29efa35e8aa5c
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0083affb850f35941ca18709785c9bd5e4fc35e8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318753"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378248"
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>Criando e definindo guias e margens
 
@@ -67,5 +67,5 @@ Win32
 
 ## <a name="see-also"></a>Consulte também
 
-[Estados do Editor de Caixa de Diálogo (guias e grades)](../windows/dialog-editor-states-guides-and-grids.md)  
+[Estados do Editor de Caixa de Diálogo (guias e grades)](../windows/dialog-editor-states-guides-and-grids.md)<br/>
 [Controles em caixas de diálogo](../windows/controls-in-dialog-boxes.md)

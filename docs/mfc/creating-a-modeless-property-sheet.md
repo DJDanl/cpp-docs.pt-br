@@ -16,28 +16,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10dbef813d922bd01a5f9215b6d6e642349d2b75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 16b0a558dcae7d2bf35cf530abfea15ef6f8138a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342716"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378092"
 ---
 # <a name="creating-a-modeless-property-sheet"></a>Criando uma folha de propriedades sem janela restrita
-Normalmente, as folhas de propriedades que você criar serão restritas. Ao usar uma folha de propriedades modal, o usuário deve fechar a folha de propriedades antes de usar qualquer outra parte do aplicativo. Este artigo descreve métodos que você pode usar para criar uma folha de propriedades não modal que permite ao usuário manter a folha de propriedades aberta durante o uso de outras partes do aplicativo.  
-  
- Para exibir uma folha de propriedades como uma caixa de diálogo sem janela restrita em vez de como uma caixa de diálogo modal, chame [CPropertySheet::Create](../mfc/reference/cpropertysheet-class.md#create) em vez de [DoModal](../mfc/reference/cpropertysheet-class.md#domodal). Você também deve implementar algumas tarefas adicionais para dar suporte a uma folha de propriedades sem janela restrita.  
-  
- Uma das tarefas adicionais é trocar dados entre a folha de propriedades e o objeto externo que ele está modificando quando a folha de propriedades é aberta. Isso geralmente é a mesma tarefa de caixas de diálogo sem janela restrita padrão. Parte dessa tarefa é implementar um canal de comunicação entre a folha de propriedades sem janela restrita e o objeto externo ao qual aplicam as configurações de propriedade. Essa implementação é muito mais fácil se você derivar uma classe de [CPropertySheet](../mfc/reference/cpropertysheet-class.md) para a folha de propriedades sem janela restrita. Este artigo pressupõe que você tenha feito isso.  
-  
- Um método de comunicação entre a folha de propriedades sem janela restrita e externo (a seleção atual em uma exibição, por exemplo) do objeto é definir um ponteiro de folha de propriedades para o objeto externo. Definir uma função (chamado algo como `SetMyExternalObject`) no `CPropertySheet`-derivado da classe para alterar o ponteiro sempre que o foco for alterado de um objeto externo para outro. O `SetMyExternalObject` função precisa redefinir as configurações de cada página de propriedades para refletir o recém-selecionada objeto externo. Para fazer isso, o `SetMyExternalObject` função deve ser capaz de acessar o [CPropertyPage](../mfc/reference/cpropertypage-class.md) objetos que pertencem ao `CPropertySheet` classe.  
-  
- É a maneira mais conveniente de fornecer acesso a páginas de propriedade de uma folha de propriedades inserir o `CPropertyPage` objetos no `CPropertySheet`-objeto derivado. Inserindo `CPropertyPage` objetos no `CPropertySheet`-objeto derivado difere do design do típico para caixas de diálogo modal, em que o proprietário da folha de propriedades cria o `CPropertyPage` objetos e os passa para a folha de propriedades por meio de [ CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage).  
-  
- Há muitas alternativas de interface do usuário para determinar quando as configurações da folha de propriedades sem janela restrita devem ser aplicadas a um objeto externo. Uma alternativa é aplicar as configurações da página de propriedades atual sempre que o usuário altere qualquer valor. Outra alternativa é fornecer um botão Aplicar, que permite ao usuário acumular alterações nas páginas de propriedades antes de confirmá-los para o objeto externo. Para obter informações sobre formas de lidar com o botão Aplicar, consulte o artigo [manipulando o botão Aplicar](../mfc/handling-the-apply-button.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Folhas de propriedade](../mfc/property-sheets-mfc.md)   
- [Troca de dados](../mfc/exchanging-data.md)   
- [Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
+
+Normalmente, as folhas de propriedades que você cria será modais. Ao usar uma folha de propriedades modal, o usuário deve fechar a folha de propriedades antes de usar qualquer outra parte do aplicativo. Este artigo descreve métodos que você pode usar para criar uma folha de propriedades sem janela restrita que permite ao usuário manter a folha de propriedades aberta durante o uso de outras partes do aplicativo.
+
+Para exibir uma folha de propriedades como uma caixa de diálogo sem janela restrita, em vez de como uma caixa de diálogo modal, chame [CPropertySheet::Create](../mfc/reference/cpropertysheet-class.md#create) em vez de [DoModal](../mfc/reference/cpropertysheet-class.md#domodal). Você também deve implementar algumas tarefas adicionais para dar suporte a uma folha de propriedades sem janela restrita.
+
+Uma das tarefas adicionais está trocando dados entre a folha de propriedades e o objeto externo que ele está modificando quando a folha de propriedades é aberta. Isso geralmente é a mesma tarefa de caixas de diálogo sem janela restrita padrão. Parte dessa tarefa é implementar um canal de comunicação entre a folha de propriedades sem janela restrita e o objeto externo ao qual aplicam as configurações de propriedade. Essa implementação é muito mais fácil se você derivar uma classe de [CPropertySheet](../mfc/reference/cpropertysheet-class.md) para sua folha de propriedades sem janela restrita. Este artigo pressupõe que você tenha feito isso.
+
+Um método de comunicação entre a folha de propriedades sem janela restrita e externo (a seleção atual em uma exibição, por exemplo) do objeto é definir um ponteiro de folha de propriedades para o objeto externo. Definir uma função (chamado semelhante `SetMyExternalObject`) na `CPropertySheet`-derivado da classe para alterar o ponteiro sempre que o foco é alterado de um objeto externo para outro. O `SetMyExternalObject` função precisar redefinir as configurações para cada página de propriedades para refletir o objeto externo recém-selecionado. Para fazer isso, o `SetMyExternalObject` função deve ser capaz de acessar o [CPropertyPage](../mfc/reference/cpropertypage-class.md) objetos que pertencem ao `CPropertySheet` classe.
+
+A maneira mais conveniente para fornecer acesso a páginas de propriedade de uma folha de propriedades é inserir a `CPropertyPage` objetos no `CPropertySheet`-objeto derivado. Inserindo `CPropertyPage` objetos na `CPropertySheet`-objeto derivado difere de design comum para caixas de diálogo modal, em que o proprietário da folha de propriedades cria a `CPropertyPage` objetos e os passa para a folha de propriedades por meio de [ CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage).
+
+Há diversas alternativas de interface do usuário para determinar quando as configurações da folha de propriedades sem janela restrita devem ser aplicadas a um objeto externo. Uma alternativa é aplicar as configurações da página de propriedades atual sempre que o usuário altera qualquer valor. Outra alternativa é fornecer um botão Aplicar, que permite ao usuário a se acumular alterações nas páginas de propriedades antes de confirmá-las para o objeto externo. Para obter informações sobre maneiras de lidar com o botão Aplicar, consulte o artigo [manipulando o botão Aplicar](../mfc/handling-the-apply-button.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Folhas de propriedades](../mfc/property-sheets-mfc.md)<br/>
+[Trocando dados](../mfc/exchanging-data.md)<br/>
+[Ciclo de vida de uma caixa de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
 

@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4e790281cd23ba43987ec6ab003787c115150be
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9cd0fb1eae8638f91ad97aec2ef24e0a578e7d7a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701295"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385541"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (representação de finalidade geral)
 
@@ -76,6 +76,6 @@ Quando você especificar uma dessas opções de modelo de herança, esse modelo 
 
 ## <a name="see-also"></a>Consulte também
 
-[/vmb, /vmg (método de representação)](../../build/reference/vmb-vmg-representation-method.md)
-[opções do compilador](../../build/reference/compiler-options.md)<br/>
+[/vmb, /vmg (método de representação)](../../build/reference/vmb-vmg-representation-method.md)<br/>
+[Opções do Compilador](../../build/reference/compiler-options.md)<br/>
 [Definindo opções do compilador](../../build/reference/setting-compiler-options.md)

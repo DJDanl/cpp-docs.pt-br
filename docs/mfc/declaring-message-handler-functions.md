@@ -14,24 +14,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4556323236897c6b3a48aa60d96a01c909a0576d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 82a95cea3a2674ca00c8a1dd20361e5b6a176d9b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341704"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385151"
 ---
 # <a name="declaring-message-handler-functions"></a>Declarando funções de manipulador de mensagens
-Certas regras e convenções controlam os nomes das funções de manipulador de mensagens. Eles dependem da categoria de mensagem, conforme descrito nos tópicos a seguir:  
-  
--   [Manipuladores de mensagens padrão do Windows](../mfc/handlers-for-standard-windows-messages.md)  
-  
--   [Manipuladores para comandos e notificações de controle](../mfc/handlers-for-commands-and-control-notifications.md)  
-  
--   [Manipuladores para intervalos de mensagens](../mfc/handlers-for-message-map-ranges.md)  
-  
--   [Manipulando mensagens refletidas](../mfc/handling-reflected-messages.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Tratamento e mapeamento de mensagem](../mfc/message-handling-and-mapping.md)
+
+Certas regras e convenções controlam os nomes de suas funções de manipulador de mensagens. Eles dependem a categoria de mensagem, conforme descrito nos tópicos a seguir:
+
+- [Manipuladores para mensagens padrão do Windows](../mfc/handlers-for-standard-windows-messages.md)
+
+- [Manipuladores para comandos e notificações de controle](../mfc/handlers-for-commands-and-control-notifications.md)
+
+- [Manipuladores para intervalos de mensagens](../mfc/handlers-for-message-map-ranges.md)
+
+- [Manipulando mensagens refletidas](../mfc/handling-reflected-messages.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Tratamento e mapeamento de mensagem](../mfc/message-handling-and-mapping.md)
 

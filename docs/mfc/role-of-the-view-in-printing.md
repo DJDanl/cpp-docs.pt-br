@@ -19,24 +19,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5735a718e353764ad8578548c965ae8a4dcd1843
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c78756ea84df66b77f71d8f8ad8d0b9dfa1a6c9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379249"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377520"
 ---
 # <a name="role-of-the-view-in-printing"></a>Função da exibição na impressão
-O modo de exibição também desempenha duas funções importantes na impressão de seu documento associado.  
-  
- O modo de exibição:  
-  
--   Usa a mesma [OnDraw](../mfc/reference/cview-class.md#ondraw) código para desenhar na impressora para desenhar na tela.  
-  
--   Gerencia dividir o documento em páginas para impressão.  
-  
- Para obter mais informações sobre como imprimir e sobre a função do modo de exibição na impressão, consulte [impressão e visualização de impressão](../mfc/printing-and-print-preview.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando exibições](../mfc/using-views.md)
+
+O modo de exibição também desempenha duas funções importantes no seu documento associado de impressão.
+
+O modo de exibição:
+
+- Usa as mesmas [OnDraw](../mfc/reference/cview-class.md#ondraw) código para desenhar na impressora para desenhar na tela.
+
+- Gerencia a dividir o documento em páginas para impressão.
+
+Para obter mais informações sobre impressão e a função da exibição na impressão, consulte [impressão e visualização de impressão](../mfc/printing-and-print-preview.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Usando exibições](../mfc/using-views.md)
 

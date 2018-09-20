@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68cfd7eb96cbf19f5675cec17a9270b9b37b2105
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 340b8827e10e4b539ee34e7dde998b18a34e2414
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599813"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384397"
 ---
 # <a name="supporterrorinfo"></a>support_error_info
 
@@ -38,7 +38,7 @@ Implementa o suporte para retornar erros detalhados.
 
 ### <a name="parameters"></a>Parâmetros
 
-*error_interface*  
+*error_interface*<br/>
 O identificador da implementação de interface `IErrorInfo`.
 
 ## <a name="remarks"></a>Comentários
@@ -86,5 +86,5 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de COM](../windows/com-attributes.md)  
+[Atributos de COM](../windows/com-attributes.md)<br/>
 [Atributos de classe](../windows/class-attributes.md)  

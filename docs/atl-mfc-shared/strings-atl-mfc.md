@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a918866710575ecc091fcce4564a7617d28a102d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f0751b218fe540a49c2cf0efde1dcf8976f2ebf6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752769"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387309"
 ---
 # <a name="strings-atlmfc"></a>Cadeias de caracteres (ATL/MFC)
 
@@ -44,18 +44,18 @@ Quase todos os programas funcionam com dados de cadeia de caracteres. Visual C++
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Usando CStringT](../atl-mfc-shared/using-cstringt.md)  
+[Usando CStringT](../atl-mfc-shared/using-cstringt.md)<br/>
 Descreve a programação usando a classe de modelo CStringT.
 
-[Usando CString](../atl-mfc-shared/using-cstring.md)  
+[Usando CString](../atl-mfc-shared/using-cstring.md)<br/>
 Descreve a programação usando o CString, a implementação padrão de CStringT.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Visão geral de CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
+[Visão geral de CStringT](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 Fornece informações de referência sobre o compartilhado `CStringT` classe.
 
-[Conceitos do MFC](../mfc/mfc-concepts.md)  
+[Conceitos do MFC](../mfc/mfc-concepts.md)<br/>
 Fornece tópicos conceituais e baseados em tarefas para ajudar você a programar usando a biblioteca do MFC.
 
 ## <a name="see-also"></a>Consulte também

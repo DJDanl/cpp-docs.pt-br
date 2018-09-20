@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 62e4cb9d6eebee4235db2bc38b2cd20935493b02
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bd4a25b208232c8a0923e33156730fc5612219a5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607974"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388193"
 ---
 # <a name="creating-a-custom-brush-image-editor-for-icons"></a>Criando um pincel personalizado (editor de imagens para ícones)
 
@@ -76,6 +76,6 @@ Nenhum
 
 ## <a name="see-also"></a>Consulte também
 
-[Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)  
-[Editando recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Teclas de aceleração](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[Editando recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Editor de imagens para ícones](../windows/image-editor-for-icons.md)

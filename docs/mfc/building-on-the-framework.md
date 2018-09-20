@@ -17,28 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c10b9d0903901cfe564b161a250d58078d5a08c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ca0ebd9bf03df8725c14df8d2aca1f7858b7b65
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341548"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396175"
 ---
 # <a name="building-on-the-framework"></a>Compilando no Framework
-Sua função na configuração de um aplicativo com o framework MFC é fornecer o código-fonte do aplicativo específico e para conectar os componentes com a definição de quais mensagens e comandos que eles responderem. Use a linguagem C++ e técnicas de C++ padrão para derivar suas próprias classes específicas de aplicativo daquelas fornecidas pela biblioteca de classe e para substituir e aumentar o comportamento da classe base.  
-  
- Tópicos relacionados, as tabelas a seguir descrevem a sequência geral das operações que você seguirá normalmente e suas responsabilidades versus responsabilidades do framework:  
-  
--   [Sequência de criação de um aplicativo com o Framework](../mfc/sequence-of-operations-for-building-mfc-applications.md)  
-  
--   [Sequência de operações para a criação de aplicativos OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)  
-  
--   [Sequência de operações para criação de controles ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)  
-  
--   [Sequência de operações para criação de aplicativos de banco de dados](../mfc/sequence-of-operations-for-creating-database-applications.md)  
-  
- A maior parte do tempo, você pode seguir essas tabelas como uma sequência de etapas para criar um aplicativo MFC, embora algumas das etapas são opções alternativas. Por exemplo, a maioria dos aplicativos usa um tipo de classe de exibição dos vários tipos disponíveis.  
-  
-## <a name="see-also"></a>Consulte também  
- [Tópicos gerais do MFC](../mfc/general-mfc-topics.md)
+
+Sua função na configuração de um aplicativo com a estrutura MFC é fornecer o código-fonte do aplicativo específico e para conectar os componentes definindo quais mensagens e comandos aos quais eles respondem. Use a linguagem C++ e as técnicas padrão do C++ para derivar suas próprias classes específicas do aplicativo daqueles fornecidos pela biblioteca de classes e para substituir e ampliar o comportamento da classe base.
+
+Em tópicos relacionados, as tabelas a seguir descrevem a sequência geral de operações que você normalmente seguirá e suas responsabilidades versus responsabilidades da estrutura:
+
+- [Sequência para a criação de um aplicativo com o Framework](../mfc/sequence-of-operations-for-building-mfc-applications.md)
+
+- [Sequência de operações para a criação de aplicativos OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)
+
+- [Sequência de operações para criação de controles ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)
+
+- [Sequência de operações para criação de aplicativos de banco de dados](../mfc/sequence-of-operations-for-creating-database-applications.md)
+
+Geralmente, você pode seguir essas tabelas como uma sequência de etapas para criar um aplicativo MFC, embora algumas das etapas são opções alternativas. Por exemplo, a maioria dos aplicativos usar um tipo de classe de exibição de vários tipos disponíveis.
+
+## <a name="see-also"></a>Consulte também
+
+[Tópicos gerais do MFC](../mfc/general-mfc-topics.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aac6e0456bf8a63712c498114d403c05af5ccddb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 54b02ab188ddd122bd3751f73a3edb33d87266f9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43212202"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388206"
 ---
 # <a name="pointerdefault"></a>pointer_default
 
@@ -38,7 +38,7 @@ Especifica o atributo de ponteiro padrão para todos os ponteiros, exceto pontei
 
 ### <a name="parameters"></a>Parâmetros
 
-*value*  
+*value*<br/>
 Um valor que descreve o tipo de ponteiro: **ptr**, **ref**, ou **exclusivo**.
 
 ## <a name="remarks"></a>Comentários
@@ -64,5 +64,5 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](../windows/idl-attributes.md)  
+[Atributos de IDL](../windows/idl-attributes.md)<br/>
 [Atributos de interface](../windows/interface-attributes.md)  

@@ -12,26 +12,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08f331862d6e48b1c0882382285ddffa9699e79c
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 25edca8391eb094691ef4fea3c360d351f979b43
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33687336"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385957"
 ---
 # <a name="2723-lastprivate"></a>2.7.2.3 lastprivate
-O `lastprivate` cláusula fornece um subconjunto da funcionalidade fornecida pelo `private` cláusula. A sintaxe de `lastprivate` cláusula é o seguinte:  
-  
-```  
-lastprivate(variable-list)  
-```  
-  
- Variáveis especificadas no *lista variável* ter `private` semântica de cláusula. Quando um `lastprivate` cláusula aparece na diretiva que identifica uma construção de compartilhamento de trabalho, o valor de cada `lastprivate` variável de sequência última iteração do loop associado ou a diretiva de seção lexicalmente última é atribuído para o objeto de original da variável. Variáveis que não estão atribuídos a um valor pela última iteração do **para** ou **paralelo para**, ou por lexicalmente última seção a **seções** ou  **paralelo seções** diretiva, têm valores após a construção. Não atribuídos subobjetos também tem um valor de indeterminado após a construção.  
-  
- As restrições para o `lastprivate` cláusula são da seguinte maneira:  
-  
--   Todas as restrições para `private` se aplicam.  
-  
--   Uma variável com um tipo de classe que é especificado como `lastprivate` deve ter um operador de atribuição de cópia não ambígua acessível.  
-  
--   Variáveis que são particulares dentro de uma região parallel ou que aparecem no `reduction` cláusula de um **paralela** diretiva não pode ser especificada um `lastprivate` cláusula em uma diretiva de compartilhamento de trabalho que vincula-se para a construção paralela.
+
+O `lastprivate` cláusula fornece um superconjunto da funcionalidade fornecida pelo `private` cláusula. A sintaxe do `lastprivate` cláusula é da seguinte maneira:
+
+```
+lastprivate(variable-list)
+```
+
+As variáveis especificadas na *variável-list* ter `private` semântica de cláusula. Quando um `lastprivate` cláusula é exibida sobre a diretiva que identifica uma construção de compartilhamento de trabalho, o valor de cada `lastprivate` variável de sequencialmente última iteração de loop associado ou lexicalmente última diretiva de seção, é atribuído à objeto de original da variável. Variáveis que não são atribuídos um valor pela última iteração do **para** ou **paralela para**, ou por lexicalmente última seção a **seções** ou  **seções em paralelo** diretiva, têm valores indeterminados após a construção. Não atribuídos subobjetos também tem um valor de indeterminado após a construção.
+
+As restrições para o `lastprivate` cláusula são da seguinte maneira:
+
+- Todas as restrições para `private` se aplicam.
+
+- Uma variável com um tipo de classe que é especificado como `lastprivate` deve ter um operador de atribuição de cópia acessível inequívoca.
+
+- Variáveis que são particulares dentro de uma região paralela ou que aparecem na `reduction` cláusula de uma **paralela** diretiva não pode ser especificada em uma `lastprivate` cláusula em uma diretiva de compartilhamento de trabalho que está associado a construção parallel.

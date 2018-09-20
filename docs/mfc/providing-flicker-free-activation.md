@@ -16,24 +16,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9d9c0108ce4afd2e65678280248488181ad34f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bd9f780472b8256f6d8332ecbde08138d85c8ebd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356548"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378313"
 ---
 # <a name="providing-flicker-free-activation"></a>Fornecendo ativação sem cintilação
-Se o controle se desenha identicamente nos Estados inativos e ativos (e não usar a ativação sem janelas), você poderá eliminar as operações de desenho e a oscilação visual que normalmente ocorrem quando você faz a transição entre o inativo e estados ativos. Para fazer isso, inclua o **noFlickerActivate** sinalizador no conjunto de sinalizadores retornado por [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Por exemplo:  
-  
- [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-flicker-free-activation_1.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#13](../mfc/codesnippet/cpp/providing-flicker-free-activation_2.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/providing-flicker-free-activation_3.cpp)]  
-  
- O código para incluir esse sinalizador é gerado automaticamente se você selecionar o **ativação sem cintilação** opção o [configurações de controle](../mfc/reference/control-settings-mfc-activex-control-wizard.md) página ao criar o controle com o Assistente de controle ActiveX MFC.  
-  
- Se você estiver usando a ativação sem janelas, essa otimização não tem nenhum efeito.  
-  
-## <a name="see-also"></a>Consulte também  
- [Controles ActiveX do MFC: otimização](../mfc/mfc-activex-controls-optimization.md)
+
+Se o controle se desenha identicamente nos estados ativos e inativos (e não usa ativação sem janelas), você poderá eliminar as operações de desenho e a cintilação de visual que acompanha este artigo que normalmente ocorrem ao fazer a transição entre o inativo e estados ativos. Para fazer isso, inclua o **noFlickerActivate** sinalizador no conjunto de sinalizadores retornado por [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Por exemplo:
+
+[!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-flicker-free-activation_1.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#13](../mfc/codesnippet/cpp/providing-flicker-free-activation_2.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/providing-flicker-free-activation_3.cpp)]
+
+O código para incluir esse sinalizador é gerado automaticamente se você selecionar o **ativação sem cintilação** opção a [configurações de controle](../mfc/reference/control-settings-mfc-activex-control-wizard.md) página durante a criação de seu controle com o Assistente de controle de ActiveX do MFC.
+
+Se você estiver usando a ativação sem janelas, essa otimização não tem nenhum efeito.
+
+## <a name="see-also"></a>Consulte também
+
+[Controles ActiveX do MFC: otimização](../mfc/mfc-activex-controls-optimization.md)
 

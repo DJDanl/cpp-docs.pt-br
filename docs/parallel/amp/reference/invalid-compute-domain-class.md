@@ -18,63 +18,67 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: def102ecb8063f82d90d41b2b678ff22638b1f8b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 17d0556a349d66f4c70d730108d9cd843b736dfd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116003"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387023"
 ---
 # <a name="invalidcomputedomain-class"></a>Classe invalid_compute_domain
-A exceção que é lançada quando o tempo de execução não pode iniciar um kernel usando o domínio de cálculo especificado na [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) site de chamada.  
 
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-class invalid_compute_domain : public runtime_exception;  
-```  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-constructors"></a>Construtores Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[Construtor de invalid_compute_domain](#ctor)|Inicializa uma nova instância da classe `invalid_compute_domain`.|  
+A exceção que é lançada quando o tempo de execução não pode iniciar um kernel usando o domínio de cálculo especificado na [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) site de chamada.
 
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- `exception`  
-  
- `runtime_exception`  
-  
- `invalid_compute_domain`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** amprt. h  
-  
- **Namespace:** Simultaneidade  
+## <a name="syntax"></a>Sintaxe
 
-## <a name="ctor"></a> invalid_compute_domain 
+```
+class invalid_compute_domain : public runtime_exception;
+```
 
-Inicializa uma nova instância da classe.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-explicit invalid_compute_domain(  
-    const char * _Message ) throw();  
-  
-invalid_compute_domain() throw();  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
+## <a name="members"></a>Membros
+
+### <a name="public-constructors"></a>Construtores Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[Construtor de invalid_compute_domain](#ctor)|Inicializa uma nova instância da classe `invalid_compute_domain`.|
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+`exception`
+
+`runtime_exception`
+
+`invalid_compute_domain`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** amprt. h
+
+**Namespace:** Simultaneidade
+
+## <a name="ctor"></a> invalid_compute_domain
+
+Inicializa uma nova instância da classe.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+explicit invalid_compute_domain(
+    const char * _Message ) throw();
+
+invalid_compute_domain() throw();
+```
+
+### <a name="parameters"></a>Parâmetros
+
 *Mensagem*<br/>
-Uma descrição do erro.  
-  
-### <a name="return-value"></a>Valor de retorno  
- Uma instância da `invalid_compute_domain` classe  
-    
-## <a name="see-also"></a>Consulte também  
- [Namespace de simultaneidade (C++ AMP)](concurrency-namespace-cpp-amp.md)
+Uma descrição do erro.
+
+### <a name="return-value"></a>Valor de retorno
+
+Uma instância da `invalid_compute_domain` classe
+
+## <a name="see-also"></a>Consulte também
+
+[Namespace de simultaneidade (C++ AMP)](concurrency-namespace-cpp-amp.md)

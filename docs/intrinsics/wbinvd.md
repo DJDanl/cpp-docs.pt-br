@@ -17,36 +17,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccee7703550bff7980e1cf07b30f29d284e2a3a5
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 5a1f412de7c8752ba1c1ba1324d20e1d4fb4c6a7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42539938"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388375"
 ---
 # <a name="wbinvd"></a>__wbinvd
-**Seção específica da Microsoft**  
-  
- Gera o gravar novamente e invalidar o Cache (`wbinvd`) instrução.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void __wbinvd(void);  
-```  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Intrínseco|Arquitetura|  
-|---------------|------------------|  
-|`__wbinvd`|x86, x64|  
-  
- **Arquivo de cabeçalho** \<intrin. h >  
-  
-## <a name="remarks"></a>Comentários  
- Essa função só está disponível no modo de kernel com um nível de privilégio (CPL) igual a 0 e a rotina só está disponível como um intrínseco.  
-  
-**Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)
+
+**Seção específica da Microsoft**
+
+Gera o gravar novamente e invalidar o Cache (`wbinvd`) instrução.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+void __wbinvd(void);
+```
+
+## <a name="requirements"></a>Requisitos
+
+|Intrínseco|Arquitetura|
+|---------------|------------------|
+|`__wbinvd`|x86, x64|
+
+**Arquivo de cabeçalho** \<intrin. h >
+
+## <a name="remarks"></a>Comentários
+
+Essa função só está disponível no modo de kernel com um nível de privilégio (CPL) igual a 0 e a rotina só está disponível como um intrínseco.
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)

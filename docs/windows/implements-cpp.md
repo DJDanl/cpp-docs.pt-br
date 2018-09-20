@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d21348d9c252fbcd3024ca6531671979d8834eb
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 138921cfb635125210e5f5bf9305c91243c4489c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605812"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387218"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -39,10 +39,10 @@ Especifica as interfaces de distribuição que são forçadas para serem membros
 
 ### <a name="parameters"></a>Parâmetros
 
-*interfaces*  
+*interfaces*<br/>
 Lista das interfaces que será um membro da coclass IDL separados por uma vírgula. É um método abreviado para especificar uma única interface **implementa (** *interface_name* **)**.
 
-*dispinterfaces*  
+*dispinterfaces*<br/>
 Lista da dispinterface que será um membro da coclass IDL separados por uma vírgula. É um método abreviado para especificar um único dispinterface **implementa (dispinterfaces =** *dispinterface_name* **)**.
 
 ## <a name="remarks"></a>Comentários
@@ -558,5 +558,5 @@ public:
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de compilador](../windows/compiler-attributes.md)  
+[Atributos de compilador](../windows/compiler-attributes.md)<br/>
 [Atributos de classe](../windows/class-attributes.md)  

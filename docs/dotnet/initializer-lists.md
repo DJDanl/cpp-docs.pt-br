@@ -15,18 +15,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6634b749480e5108548de0c8b53f8b09cc5a42c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 981f2737d370dc25ca4e7dc6c20947b3867a0c65
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33127946"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394602"
 ---
 # <a name="initializer-lists"></a>Listas de inicializadores
-Agora são chamadas de listas de inicializadores em construtores antes do construtor de classe base.  
-  
-## <a name="remarks"></a>Comentários  
- Antes do Visual C++ 2005, o construtor de classe base foi chamado antes da lista de inicializador ao compilar com extensões gerenciadas para C++. Agora, ao compilar com **/clr**, a lista de inicializadores é chamada primeiro.  
-  
-## <a name="see-also"></a>Consulte também  
- [Alterações gerais na linguagem (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)
+
+Listas de inicializadores em construtores agora são chamadas antes do construtor de classe base.
+
+## <a name="remarks"></a>Comentários
+
+Antes do Visual C++ 2005, o construtor de classe base foi chamado antes da lista do inicializador ao compilar com extensões gerenciadas para C++. Agora, ao compilar com **/clr**, a lista de inicializadores é chamada pela primeira vez.
+
+## <a name="see-also"></a>Consulte também
+
+[Alterações gerais na linguagem (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)

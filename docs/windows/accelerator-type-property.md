@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d38d5a78eb37a028f29da430a762604b2e50d632
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1b0d02ab8dfec7b6a3f286b09daf9797d62f0990
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315685"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384761"
 ---
 # <a name="accelerator-type-property-c"></a>Propriedade de tipo de acelerador (C++)
 
@@ -40,5 +40,5 @@ Win32
 
 ## <a name="see-also"></a>Consulte também
 
-[Configurando propriedades do acelerador](../windows/setting-accelerator-properties.md)  
+[Configurando propriedades do acelerador](../windows/setting-accelerator-properties.md)<br/>
 [Editor de aceleradores](../windows/accelerator-editor.md)

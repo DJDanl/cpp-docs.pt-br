@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: af0cfe6f3a94aa1bc2afc4e4857864f81099567e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: de7f4c94ec0d9cb5a9a57315ebda015b7737132c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591725"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392756"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 
@@ -51,16 +51,16 @@ Um *ponteiro de fixação* é um ponteiro interior que impedem o objeto apontado
 
 ### <a name="parameters"></a>Parâmetros
 
-*cv_qualifier*  
+*cv_qualifier*<br/>
 **Const** ou **volátil** qualificadores. Por padrão, é um ponteiro de fixação **volátil**. Ela é redundante, mas não um erro declarar um ponteiro de fixação **volátil**.
 
-*type*  
+*type*<br/>
 O tipo de *inicializador*.
 
-*var*  
+*var*<br/>
 O nome da **pin_ptr** variável.
 
-*initializer*  
+*initializer*<br/>
 Um membro de um tipo de referência, o elemento de uma matriz gerenciada ou qualquer outro objeto que você pode atribuir a um ponteiro nativo.
 
 ### <a name="remarks"></a>Comentários

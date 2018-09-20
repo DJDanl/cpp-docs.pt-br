@@ -17,31 +17,33 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0490c6383327531ff04ab3f484aeb4b085ef9106
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86c0178f0ea3bdccf9bd467aa24edc016a767530
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349220"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389094"
 ---
 # <a name="ole-mfc"></a>OLE (MFC)
-Implementando a funcionalidade OLE em seu programa afeta sua interface de usuário de várias maneiras:  
-  
--   Edição visual (in-loco ativação) exibe a interface do usuário de outro programa no windows do programa e modifica menus do programa com itens do outro programa.  
-  
--   Arrastar e soltar permite que os usuários arrastar objetos dentro e entre as janelas e até mesmo entre programas.  
-  
--   Rastreadores fornecem indicações visuais para o estado de objetos durante a edição do visual e arrastar e soltar.  
-  
- Para obter mais informações, consulte:  
-  
--   [OLE e MFC](../mfc/ole-in-mfc.md)  
-  
--   [Edição visual (ativação)](../mfc/activation-cpp.md)  
-  
--   [Arrastar e soltar](../mfc/drag-and-drop-ole.md)  
-  
--   [Controladores](../mfc/trackers.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Elementos da Interface do usuário](../mfc/user-interface-elements-mfc.md)
+
+Implementando a funcionalidade OLE em seu programa afeta sua interface do usuário de várias maneiras:
+
+- Edição visual (in-loco ativação) exibe a interface do usuário de outro programa no windows do seu programa e modifica menus do seu programa com itens de outro programa.
+
+- Arrastar e soltar permite aos usuários arrastar objetos dentro e entre o windows e até mesmo entre programas.
+
+- Rastreadores de fornecem dicas visuais para o estado dos objetos durante a edição visual e arraste e solte.
+
+Para obter mais informações, consulte:
+
+- [OLE e MFC](../mfc/ole-in-mfc.md)
+
+- [Edição visual (ativação)](../mfc/activation-cpp.md)
+
+- [Arrastar e soltar](../mfc/drag-and-drop-ole.md)
+
+- [Controladores](../mfc/trackers.md)
+
+## <a name="see-also"></a>Consulte também
+
+[Elementos da Interface do usuário](../mfc/user-interface-elements-mfc.md)

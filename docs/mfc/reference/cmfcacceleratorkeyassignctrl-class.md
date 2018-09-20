@@ -28,133 +28,151 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6adb289759e2050a67f9284e2763c44461c38c0d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 92b2fb4d9d96045886533f287fa7048d0b07c866
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683522"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388011"
 ---
 # <a name="cmfcacceleratorkeyassignctrl-class"></a>Classe CMFCAcceleratorKeyAssignCtrl
-O `CMFCAcceleratorKeyAssignCtrl` classe estende a [classe CEdit](../../mfc/reference/cedit-class.md) para dar suporte a botões adicionais do sistema como ALT, CONTROL e SHIFT.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-class CMFCAcceleratorKeyAssignCtrl : public CEdit  
-```  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="public-constructors"></a>Construtores Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl](#cmfcacceleratorkeyassignctrl)|Constrói um objeto `CMFCAcceleratorKeyAssignCtrl`.|  
-  
-### <a name="public-methods"></a>Métodos Públicos  
-  
-|Nome|Descrição|  
-|----------|-----------------|  
-|[CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel)|Recupera o `ACCEL` estrutura para uma tecla de atalho pressionado a `CMFCAcceleratorKeyAssignCtrl` objeto.|  
-|[CMFCAcceleratorKeyAssignCtrl::IsFocused](#isfocused)||  
-|[CMFCAcceleratorKeyAssignCtrl::IsKeyDefined](#iskeydefined)|Determina se uma tecla de atalho foi definida.|  
-|[CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage](#pretranslatemessage)|Usado pela classe [CWinApp](../../mfc/reference/cwinapp-class.md) para converter as mensagens da janela antes de serem expedidas para o [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funções do Windows. (Substitui [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
-|[CMFCAcceleratorKeyAssignCtrl::ResetKey](#resetkey)|Redefine a tecla de atalho.|  
-  
-## <a name="remarks"></a>Comentários  
- Essa classe estende a funcionalidade do `CEdit` classe, oferecendo suporte a teclas de atalho, também conhecido como teclas de aceleração. O `CMFCAcceleratorKeyAssignCtrl` classe funciona como um [classe CEdit](../../mfc/reference/cedit-class.md) e também consegue reconhecer os botões de sistema.  
-  
- Essa classe mapeia combinações de teclas de atalho físico para os valores de cadeia de caracteres. Por exemplo, suponha que a combinação de teclas ALT + B é mapeado para a cadeia de caracteres "Alt + B". Quando o usuário pressiona essa combinação de teclas em um `CMFCAcceleratorKeyAssignCtrl` do objeto, "Alt + B" é exibida ao usuário. Para obter mais informações sobre o mapeamento entre um formato de cadeia de caracteres e teclas de atalho, consulte [classe CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md).  
-  
-## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como criar uma `CMFCAcceleratorKeyAssignCtrl` do objeto e usar seu `ResetKey` método para redefinir a tecla de atalho.  
-  
- [!code-cpp[NVC_MFC_RibbonApp#31](../../mfc/reference/codesnippet/cpp/cmfcacceleratorkeyassignctrl-class_1.cpp)]  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- [CWnd](../../mfc/reference/cwnd-class.md)  
-  
- [CEdit](../../mfc/reference/cedit-class.md)  
-  
- `CMFCAcceleratorKeyAssignCtrl`   
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** afxacceleratorkeyassignctrl.h  
-  
-##  <a name="cmfcacceleratorkeyassignctrl"></a>  CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl  
- Constrói uma [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) objeto.  
-  
-```  
+
+O `CMFCAcceleratorKeyAssignCtrl` classe estende a [classe CEdit](../../mfc/reference/cedit-class.md) para dar suporte a botões adicionais do sistema como ALT, CONTROL e SHIFT.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+class CMFCAcceleratorKeyAssignCtrl : public CEdit
+```
+
+## <a name="members"></a>Membros
+
+### <a name="public-constructors"></a>Construtores Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl](#cmfcacceleratorkeyassignctrl)|Constrói um objeto `CMFCAcceleratorKeyAssignCtrl`.|
+
+### <a name="public-methods"></a>Métodos Públicos
+
+|Nome|Descrição|
+|----------|-----------------|
+|[CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel)|Recupera o `ACCEL` estrutura para uma tecla de atalho pressionado a `CMFCAcceleratorKeyAssignCtrl` objeto.|
+|[CMFCAcceleratorKeyAssignCtrl::IsFocused](#isfocused)||
+|[CMFCAcceleratorKeyAssignCtrl::IsKeyDefined](#iskeydefined)|Determina se uma tecla de atalho foi definida.|
+|[CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage](#pretranslatemessage)|Usado pela classe [CWinApp](../../mfc/reference/cwinapp-class.md) para converter as mensagens da janela antes de serem expedidas para o [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) e [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) funções do Windows. (Substitui [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|[CMFCAcceleratorKeyAssignCtrl::ResetKey](#resetkey)|Redefine a tecla de atalho.|
+
+## <a name="remarks"></a>Comentários
+
+Essa classe estende a funcionalidade do `CEdit` classe, oferecendo suporte a teclas de atalho, também conhecido como teclas de aceleração. O `CMFCAcceleratorKeyAssignCtrl` classe funciona como um [classe CEdit](../../mfc/reference/cedit-class.md) e também consegue reconhecer os botões de sistema.
+
+Essa classe mapeia combinações de teclas de atalho físico para os valores de cadeia de caracteres. Por exemplo, suponha que a combinação de teclas ALT + B é mapeado para a cadeia de caracteres "Alt + B". Quando o usuário pressiona essa combinação de teclas em um `CMFCAcceleratorKeyAssignCtrl` do objeto, "Alt + B" é exibida ao usuário. Para obter mais informações sobre o mapeamento entre um formato de cadeia de caracteres e teclas de atalho, consulte [classe CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md).
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir demonstra como criar uma `CMFCAcceleratorKeyAssignCtrl` do objeto e usar seu `ResetKey` método para redefinir a tecla de atalho.
+
+[!code-cpp[NVC_MFC_RibbonApp#31](../../mfc/reference/codesnippet/cpp/cmfcacceleratorkeyassignctrl-class_1.cpp)]
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+[CWnd](../../mfc/reference/cwnd-class.md)
+
+[CEdit](../../mfc/reference/cedit-class.md)
+
+`CMFCAcceleratorKeyAssignCtrl`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** afxacceleratorkeyassignctrl.h
+
+##  <a name="cmfcacceleratorkeyassignctrl"></a>  CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl
+
+Constrói uma [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) objeto.
+
+```
 CMFCAcceleratorKeyAssignCtrl();
-```  
-  
-##  <a name="getaccel"></a>  CMFCAcceleratorKeyAssignCtrl::GetAccel  
- Recupera o `ACCEL` estrutura para uma tecla de atalho pressionado a [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) objeto.  
-  
-```  
-ACCEL const* GetAccel() const;  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
- Um `ACCEL` estrutura que descreve a tecla de atalho.  
-  
-### <a name="remarks"></a>Comentários  
- Use essa função para recuperar o `ACCEL` estrutura de uma tecla de atalho que o usuário inseriu em sua `CMFCAcceleratorKeyAssignCtrl` objeto.  
-  
-##  <a name="isfocused"></a>  CMFCAcceleratorKeyAssignCtrl::IsFocused  
- Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
-  
-```  
-BOOL IsFocused() const;  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="iskeydefined"></a>  CMFCAcceleratorKeyAssignCtrl::IsKeyDefined  
- Determina se uma tecla de atalho foi definida na [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) objeto.  
-  
-```  
-BOOL IsKeyDefined() const;  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
- Diferente de zero se o usuário pressionou já uma combinação válida de chaves que definem uma tecla de atalho; Caso contrário, 0.  
-  
-### <a name="remarks"></a>Comentários  
- Use esta função para determinar se o usuário inseriu uma tecla de atalho válido em seu `CMFCAcceleratorKeyAssignCtrl` objeto. Se existir uma tecla de atalho, você pode usar [CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel) método para obter o `ACCEL` estrutura associada a essa tecla de atalho.  
-  
-##  <a name="pretranslatemessage"></a>  CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage  
- Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.  
-  
-```  
+```
+
+##  <a name="getaccel"></a>  CMFCAcceleratorKeyAssignCtrl::GetAccel
+
+Recupera o `ACCEL` estrutura para uma tecla de atalho pressionado a [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) objeto.
+
+```
+ACCEL const* GetAccel() const;
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Um `ACCEL` estrutura que descreve a tecla de atalho.
+
+### <a name="remarks"></a>Comentários
+
+Use essa função para recuperar o `ACCEL` estrutura de uma tecla de atalho que o usuário inseriu em sua `CMFCAcceleratorKeyAssignCtrl` objeto.
+
+##  <a name="isfocused"></a>  CMFCAcceleratorKeyAssignCtrl::IsFocused
+
+Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.
+
+```
+BOOL IsFocused() const;
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="iskeydefined"></a>  CMFCAcceleratorKeyAssignCtrl::IsKeyDefined
+
+Determina se uma tecla de atalho foi definida na [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) objeto.
+
+```
+BOOL IsKeyDefined() const;
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Diferente de zero se o usuário pressionou já uma combinação válida de chaves que definem uma tecla de atalho; Caso contrário, 0.
+
+### <a name="remarks"></a>Comentários
+
+Use esta função para determinar se o usuário inseriu uma tecla de atalho válido em seu `CMFCAcceleratorKeyAssignCtrl` objeto. Se existir uma tecla de atalho, você pode usar [CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel) método para obter o `ACCEL` estrutura associada a essa tecla de atalho.
+
+##  <a name="pretranslatemessage"></a>  CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage
+
+Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.
+
+```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
-```  
-  
-### <a name="parameters"></a>Parâmetros  
- [in] *pMsg*  
-  
-### <a name="return-value"></a>Valor de retorno  
-  
-### <a name="remarks"></a>Comentários  
-  
-##  <a name="resetkey"></a>  CMFCAcceleratorKeyAssignCtrl::ResetKey  
- Redefine a tecla de atalho.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parâmetros
+
+[in] *pMsg*
+
+### <a name="return-value"></a>Valor de retorno
+
+### <a name="remarks"></a>Comentários
+
+##  <a name="resetkey"></a>  CMFCAcceleratorKeyAssignCtrl::ResetKey
+
+Redefine a tecla de atalho.
+
+```
 void ResetKey();
-```  
-  
-### <a name="remarks"></a>Comentários  
- A função limpa o texto de controle de edição. Isso inclui quaisquer teclas de atalho que o usuário pressionou.  
-  
-## <a name="see-also"></a>Consulte também  
- [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
- [Classes](../../mfc/reference/mfc-classes.md)   
- [Classe CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)
+```
+
+### <a name="remarks"></a>Comentários
+
+A função limpa o texto de controle de edição. Isso inclui quaisquer teclas de atalho que o usuário pressionou.
+
+## <a name="see-also"></a>Consulte também
+
+[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[Classe CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)

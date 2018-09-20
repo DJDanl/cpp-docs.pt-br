@@ -16,25 +16,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0805e77e674a68d5fd81c8628407bcd77e164e07
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0cd4cce7f2e31e084224848f348dd4e5f408de67
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325910"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385359"
 ---
 # <a name="active-document-classes"></a>Classes de documento ativas
-Documentos ativos podem ser exibidos na janela inteira do cliente de um navegador da Web, como o Internet Explorer 5.5, ou em um contêiner de ativo, como o Microsoft Office Binder, que oferece suporte a documentos ativos.  
-  
- [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md)  
- Mapeia as interfaces do documento ativo e inicializa e ativa um objeto de documento ativo.  
-  
- [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md)  
- Verbos de servidor implementa OLE especificamente para servidores de documentos ativos.  
-  
- [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)  
- Contenção de documentos ativos implementa.  
-  
-## <a name="see-also"></a>Consulte também  
- [Visão geral da classe](../mfc/class-library-overview.md)
+
+Documentos ativos podem ser exibidos na janela de cliente inteira de um navegador da Web, como o Internet Explorer 5.5, ou em um contêiner do Active Directory, como o Microsoft Office Binder, que dá suporte a documentos do Active Directory.
+
+[CDocObjectServer](../mfc/reference/cdocobjectserver-class.md)<br/>
+Mapeia as interfaces de documento ativo e inicializa e ativa um objeto de documento ativo.
+
+[CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md)<br/>
+Verbos de servidor OLE especificamente para servidores do documento ativo.
+
+[COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)<br/>
+Contenção de documento ativo implementa.
+
+## <a name="see-also"></a>Consulte também
+
+[Visão geral da classe](../mfc/class-library-overview.md)
 

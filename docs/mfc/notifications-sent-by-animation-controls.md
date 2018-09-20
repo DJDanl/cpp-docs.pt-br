@@ -17,19 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7aff43577a4b1aa55fc0725ba4753228e334000
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: eb83fe6195c01c1e9dbcc2c00e43738af9ebc8e2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199655"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386386"
 ---
 # <a name="notifications-sent-by-animation-controls"></a>Notificações enviadas por controles de animação
-Um controle de animação ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) envia dois tipos diferentes de mensagens de notificação. As notificações são enviadas na forma de [WM_COMMAND](/windows/desktop/menurc/wm-command) mensagens.  
-  
- O [ACN_START](/windows/desktop/Controls/acn-start) mensagem é enviada quando o controle de animação foi iniciada, reproduzindo um clipe. O [ACN_STOP](/windows/desktop/Controls/acn-stop) mensagem é enviada quando o controle de animação tiver concluído ou interrompido reproduzindo um clipe.  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando CAnimateCtrl](../mfc/using-canimatectrl.md)   
- [Controles](../mfc/controls-mfc.md)
+
+Um controle de animação ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) envia dois tipos diferentes de mensagens de notificação. As notificações são enviadas na forma de [WM_COMMAND](/windows/desktop/menurc/wm-command) mensagens.
+
+O [ACN_START](/windows/desktop/Controls/acn-start) mensagem é enviada quando o controle de animação foi iniciada, reproduzindo um clipe. O [ACN_STOP](/windows/desktop/Controls/acn-stop) mensagem é enviada quando o controle de animação tiver concluído ou interrompido reproduzindo um clipe.
+
+## <a name="see-also"></a>Consulte também
+
+[Usando CAnimateCtrl](../mfc/using-canimatectrl.md)<br/>
+[Controles](../mfc/controls-mfc.md)
 

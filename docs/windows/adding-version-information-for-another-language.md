@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf01f1d4b1c687ed919b94f651ef7ccf4b0bf45d
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 97ad11f7982fd5a413c6740fe969c5edc20636a7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313437"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46389376"
 ---
 # <a name="adding-version-information-for-another-language-c"></a>Adicionando informações de versão para outra linguagem (C++)
 
@@ -51,5 +51,5 @@ Win32
 
 ## <a name="see-also"></a>Consulte também
 
-[Editor de informações de versão](../windows/version-information-editor.md)  
+[Editor de informações de versão](../windows/version-information-editor.md)<br/>
 [Informações de versão (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)

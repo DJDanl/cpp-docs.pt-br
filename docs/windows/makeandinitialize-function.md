@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 196834a5181164d141c1b9ee025cee5b6f1a5bd9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 05f577ce8845b85cdb3a263aaea1e8c2cdb0f240
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591040"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409175"
 ---
 # <a name="makeandinitialize-function"></a>Função MakeAndInitialize
 
@@ -43,61 +43,61 @@ typename TArg9> HRESULT MakeAndInitialize(_Outptr_result_nullonfailure_ I** ppvO
 
 ### <a name="parameters"></a>Parâmetros
 
-*T*  
+*T*<br/>
 Uma classe especificada pelo usuário que herda de `WRL::RuntimeClass`.
 
-*DynamicSite<Targ1*  
+*DynamicSite<Targ1*<br/>
 Tipo de argumento 1, o que é passado para a classe de tempo de execução especificado.
 
-*TArg2*  
+*TArg2*<br/>
 Tipo de argumento 2 que é passado para a classe de tempo de execução especificado.
 
-*TArg3*  
+*TArg3*<br/>
 Tipo de argumento 3 que é passado para a classe de tempo de execução especificado.
 
-*TArg4*  
+*TArg4*<br/>
 Tipo de argumento 4 que é passado para a classe de tempo de execução especificado.
 
-*TArg5*  
+*TArg5*<br/>
 Tipo de argumento 5, o que é passado para a classe de tempo de execução especificado.
 
-*TArg6*  
+*TArg6*<br/>
 Tipo de argumento 6, o que é passado para a classe de tempo de execução especificado.
 
-*TArg7*  
+*TArg7*<br/>
 Tipo de argumento 7, o que é passado para a classe de tempo de execução especificado.
 
-*TArg8*  
+*TArg8*<br/>
 Tipo de argumento 8, o que é passado para a classe de tempo de execução especificado.
 
-*TArg9*  
+*TArg9*<br/>
 Tipo de argumento 9 que é passado para a classe de tempo de execução especificado.
 
-*arg1*  
+*arg1*<br/>
 Argumento 1 que é passado para a classe de tempo de execução especificado.
 
-*Arg2*  
+*Arg2*<br/>
 Argumento 2 que é passado para a classe de tempo de execução especificado.
 
-*arg3*  
+*arg3*<br/>
 Argumento 3 que é passado para a classe de tempo de execução especificado.
 
-*Arg4*  
+*Arg4*<br/>
 Argumento de 4 que é passado para a classe de tempo de execução especificado.
 
-*arg5*  
+*arg5*<br/>
 Argumento 5 que é passado para a classe de tempo de execução especificado.
 
-*arg6*  
+*arg6*<br/>
 Argumento 6 que é passado para a classe de tempo de execução especificado.
 
-*arg7*  
+*arg7*<br/>
 Argumento 7 que é passado para a classe de tempo de execução especificado.
 
-*arg8*  
+*arg8*<br/>
 Argumento 8 que é passado para a classe de tempo de execução especificado.
 
-*arg9*  
+*arg9*<br/>
 Argumento 9 que é passado para a classe de tempo de execução especificado.
 
 ## <a name="return-value"></a>Valor de retorno

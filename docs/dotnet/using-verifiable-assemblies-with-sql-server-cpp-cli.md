@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bbd42d3d51921ccab01dfdcaed9ad988e22ae9a8
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 2bb4adbb960f9d062cc8573c7ca0f7cd5dcd0426
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894692"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382213"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Usando assemblies verificáveis com SQL Server (C++/CLI)
 
@@ -42,19 +42,20 @@ Para criar e carregar um assembly verificável no SQL Server, use os comandos Tr
 CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
   PERMISSION_SET <permissions>
 DROP ASSEMBLY <assemblyName>
-```  
+```
 
 O comando PERMISSION_SET Especifica o contexto de segurança e pode ter os valores irrestrito, SAFE ou estendido.
 
 Além disso, você pode usar o comando CREATE FUNCTION para associar a nomes de método em uma classe:
 
 ```sql
-CREATE FUNCTION <FunctionName>(<FunctionParams>)  
+CREATE FUNCTION <FunctionName>(<FunctionParams>)
 RETURNS returnType
 [EXTERNAL NAME <AssemblyName>:<ClassName>::<StaticMethodName>]
-```  
+```
 
 ## <a name="example"></a>Exemplo
+
 O seguinte script SQL (por exemplo, nomeado "Myscript") carrega um assembly no SQL Server e disponibiliza um método de uma classe:
 
 ```sql
@@ -69,23 +70,23 @@ with permission_set safe
 -- Create function on assembly with no external access
 drop function GetQuoteNoEA
 go
-create function GetQuoteNoEA(@sym nvarchar(10))  
+create function GetQuoteNoEA(@sym nvarchar(10))
 returns real
 external name stockNoEA:StockQuotes::GetQuote
 go
 
 -- To call the function
-select dbo.GetQuoteNoEA('MSFT')  
+select dbo.GetQuoteNoEA('MSFT')
 go
-```  
+```
 
 Scripts SQL podem ser executados interativamente no SQL Query Analyzer ou na linha de comando com o utilitário sqlcmd.exe. A seguinte linha de comando se conecta ao MyServer, usa o banco de dados padrão, usa uma conexão confiável, Myscript de entradas e saídas MyResult.txt.
 
 ```cmd
 sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
-```  
+```
 
 ## <a name="see-also"></a>Consulte também
 
-[Como: migrar para /CLR: Safe (C + + / CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
+[Como: migrar para /CLR: Safe (C + + / CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)<br/>
 [Classes e Structs](../cpp/classes-and-structs-cpp.md)

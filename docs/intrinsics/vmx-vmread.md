@@ -17,55 +17,58 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0c8b5a22cfef8ebde74fbe6d1f6920a969e7bc6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b0029513b111143cc665a51cefd3c3e8e1a786aa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706375"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380323"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
-**Seção específica da Microsoft**  
-  
- Lê um campo especificado da estrutura de controle de máquina virtual atual (VMCS) e o coloca no local especificado.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-unsigned char __vmx_vmread(  
-   size_t Field,  
-   size_t *FieldValue  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
-  
-|Parâmetro|Descrição|  
-|---------------|-----------------|  
-|*Campo*|[in] O campo VMCS para ler.|  
-|*FieldValue*|[in] Ler de um ponteiro para o local para armazenar o valor do campo VMCS especificado pela `Field` parâmetro.|  
-  
-## <a name="return-value"></a>Valor de retorno  
-  
-|Valor|Significado|  
-|-----------|-------------|  
-|0|A operação foi bem-sucedida.|  
-|1|A operação falhou com status estendido disponível no `VM-instruction error field` de VMCS o atual.|  
-|2|Falha na operação sem status disponível.|  
-  
-## <a name="remarks"></a>Comentários  
- O `__vmx_vmread` função é equivalente ao `VMREAD` instruções de máquina. O valor da `Field` parâmetro é um índice de campo codificado que é descrito na documentação da Intel. Para obter mais informações, pesquise o documento, "Intel Virtualization Technical especificação para a arquitetura IA-32 Intel," documento número C97063-002, o [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) do site e, em seguida, consulte o Apêndice C do documento .  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Intrínseco|Arquitetura|  
-|---------------|------------------|  
-|`__vmx_vmread`|X64|  
-  
- **Arquivo de cabeçalho** \<intrin. h >  
-  
-**Fim da seção específica da Microsoft**  
-  
-## <a name="see-also"></a>Consulte também  
- [Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)   
- [__vmx_vmwrite](../intrinsics/vmx-vmwrite.md)
+
+**Seção específica da Microsoft**
+
+Lê um campo especificado da estrutura de controle de máquina virtual atual (VMCS) e o coloca no local especificado.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+unsigned char __vmx_vmread(
+   size_t Field,
+   size_t *FieldValue
+);
+```
+
+#### <a name="parameters"></a>Parâmetros
+
+|Parâmetro|Descrição|
+|---------------|-----------------|
+|*Campo*|[in] O campo VMCS para ler.|
+|*FieldValue*|[in] Ler de um ponteiro para o local para armazenar o valor do campo VMCS especificado pela `Field` parâmetro.|
+
+## <a name="return-value"></a>Valor de retorno
+
+|Valor|Significado|
+|-----------|-------------|
+|0|A operação foi bem-sucedida.|
+|1|A operação falhou com status estendido disponível no `VM-instruction error field` de VMCS o atual.|
+|2|Falha na operação sem status disponível.|
+
+## <a name="remarks"></a>Comentários
+
+O `__vmx_vmread` função é equivalente ao `VMREAD` instruções de máquina. O valor da `Field` parâmetro é um índice de campo codificado que é descrito na documentação da Intel. Para obter mais informações, pesquise o documento, "Intel Virtualization Technical especificação para a arquitetura IA-32 Intel," documento número C97063-002, o [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) do site e, em seguida, consulte o Apêndice C do documento .
+
+## <a name="requirements"></a>Requisitos
+
+|Intrínseco|Arquitetura|
+|---------------|------------------|
+|`__vmx_vmread`|X64|
+
+**Arquivo de cabeçalho** \<intrin. h >
+
+**Fim da seção específica da Microsoft**
+
+## <a name="see-also"></a>Consulte também
+
+[Intrínsecos do compilador](../intrinsics/compiler-intrinsics.md)<br/>
+[__vmx_vmwrite](../intrinsics/vmx-vmwrite.md)

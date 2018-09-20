@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e673d01aa5657d9ada9ae1ee84ad3d56483e2fc5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 98f37a428c81276788ea4aef315e7266a9da02c4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723340"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383396"
 ---
 # <a name="safedivide"></a>SafeDivide
 
@@ -71,8 +71,8 @@ Para obter mais informações sobre os tipos de modelo T e U, consulte [funçõe
 
 ## <a name="see-also"></a>Consulte também
 
-[Funções SafeInt](../windows/safeint-functions.md)  
-[Biblioteca SafeInt](../windows/safeint-library.md)  
-[Classe SafeInt](../windows/safeint-class.md)  
-[SafeModulus](../windows/safemodulus.md)  
+[Funções SafeInt](../windows/safeint-functions.md)<br/>
+[Biblioteca SafeInt](../windows/safeint-library.md)<br/>
+[Classe SafeInt](../windows/safeint-class.md)<br/>
+[SafeModulus](../windows/safemodulus.md)<br/>
 [SafeMultiply](../windows/safemultiply.md)

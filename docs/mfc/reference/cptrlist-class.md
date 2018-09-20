@@ -18,49 +18,55 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36746c7979511890bb450c9204c0c7a908bbace3
-ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
+ms.openlocfilehash: 97eeeaaa2eea237eebda4f945f2c810268f406cd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37853888"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46384956"
 ---
 # <a name="cptrlist-class"></a>Classe de CPtrList
-Dá suporte a listas de ponteiros nulos.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-class CPtrList : public CObject  
-```  
-  
-## <a name="members"></a>Membros  
- As funções membro da `CPtrList` são semelhantes às funções de membro da classe [CObList](../../mfc/reference/coblist-class.md). Devido a essa semelhança, é possível usar a documentação de referência da `CObList` para obter a função específica de membro. Onde quer que você vê uma `CObject` ponteiro como um parâmetro de função ou um valor de retorno, substitua um ponteiro para **void**.  
-  
- `CObject*& CObList::GetHead() const;`  
-  
- por exemplo, traduz para  
-  
- `void*& CPtrList::GetHead() const;`  
-  
-## <a name="remarks"></a>Comentários  
- `CPtrList` incorpora a macro IMPLEMENT_DYNAMIC para dar suporte a acesso de tipo de tempo de execução e despejo para um `CDumpContext` objeto. Se você precisar de um despejo de elementos de lista de ponteiro individual, você deve definir a profundidade do contexto de despejo para 1 ou maior.  
-  
- Listas de ponteiro não podem ser serializadas.  
-  
- Quando um `CPtrList` objeto é excluído, ou quando seus elementos são removidos, somente os ponteiros são removidos, não as entidades que fazem referência.  
-  
- Para obter mais informações sobre como usar `CPtrList`, consulte o artigo [coleções](../../mfc/collections.md).  
-  
-## <a name="inheritance-hierarchy"></a>Hierarquia de herança  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- `CPtrList`  
-  
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** & amp;lt;1}afxcoll.h  
-  
-## <a name="see-also"></a>Consulte também  
- [Classe CObject](../../mfc/reference/cobject-class.md)   
- [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)   
- [Classe CObList](../../mfc/reference/coblist-class.md)
+
+Dá suporte a listas de ponteiros nulos.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+class CPtrList : public CObject
+```
+
+## <a name="members"></a>Membros
+
+As funções membro da `CPtrList` são semelhantes às funções de membro da classe [CObList](../../mfc/reference/coblist-class.md). Devido a essa semelhança, é possível usar a documentação de referência da `CObList` para obter a função específica de membro. Onde quer que você vê uma `CObject` ponteiro como um parâmetro de função ou um valor de retorno, substitua um ponteiro para **void**.
+
+`CObject*& CObList::GetHead() const;`
+
+por exemplo, traduz para
+
+`void*& CPtrList::GetHead() const;`
+
+## <a name="remarks"></a>Comentários
+
+`CPtrList` incorpora a macro IMPLEMENT_DYNAMIC para dar suporte a acesso de tipo de tempo de execução e despejo para um `CDumpContext` objeto. Se você precisar de um despejo de elementos de lista de ponteiro individual, você deve definir a profundidade do contexto de despejo para 1 ou maior.
+
+Listas de ponteiro não podem ser serializadas.
+
+Quando um `CPtrList` objeto é excluído, ou quando seus elementos são removidos, somente os ponteiros são removidos, não as entidades que fazem referência.
+
+Para obter mais informações sobre como usar `CPtrList`, consulte o artigo [coleções](../../mfc/collections.md).
+
+## <a name="inheritance-hierarchy"></a>Hierarquia de herança
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+`CPtrList`
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** & amp;lt;1}afxcoll.h
+
+## <a name="see-also"></a>Consulte também
+
+[Classe CObject](../../mfc/reference/cobject-class.md)<br/>
+[Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
+[Classe CObList](../../mfc/reference/coblist-class.md)

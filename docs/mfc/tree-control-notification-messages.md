@@ -1,5 +1,5 @@
 ---
-title: Mensagens de notificação de controle de árvore | Microsoft Docs
+title: Mensagens de notificação do controle de árvore | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,32 +18,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92035d3f1a20a0fd9cc0c7b95d7238ef014033da
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 07911dec25bf9d6b80f025e2f3738e3d98ffd2cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950961"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390741"
 ---
 # <a name="tree-control-notification-messages"></a>Mensagens de notificação do controle de árvore
-Um controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) envia as mensagens de notificação a seguir como mensagens WM_NOTIFY:  
-  
-|Mensagem de notificação|Descrição|  
-|--------------------------|-----------------|  
-|TVN_BEGINDRAG|Indica o início de uma operação de arrastar e soltar|  
-|TVN_BEGINLABELEDIT|Sinaliza o início da edição do rótulo no local|  
-|TVN_BEGINRDRAG|Indica o início de uma operação de arrastar e soltar com o botão direito do mouse|  
-|TVN_DELETEITEM|Sinaliza a exclusão de um item específico|  
-|TVN_ENDLABELEDIT|Sinaliza o término de edição do rótulo|  
-|TVN_GETDISPINFO|Informações de solicitações que requer que o controle de árvore para exibir um item|  
-|TVN_ITEMEXPANDED|Sinaliza que a lista de um item pai de itens filho foi expandida ou recolhida|  
-|TVN_ITEMEXPANDING|Sinais de que a lista de um item pai de itens filho está prestes a ser expandido ou recolhido|  
-|TVN_KEYDOWN|Indica um evento de teclado|  
-|TVN_SELCHANGED|Indica que a seleção foi alterada de um item para outro|  
-|TVN_SELCHANGING|Sinais de que a seleção está prestes a ser alterada de um item para outro|  
-|TVN_SETDISPINFO|Notificação para atualizar as informações mantidas para um item|  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando CTreeCtrl](../mfc/using-ctreectrl.md)   
- [Controles](../mfc/controls-mfc.md)
+
+Um controle de árvore ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) envia as seguintes mensagens de notificação como mensagens WM_NOTIFY:
+
+|Mensagem de notificação|Descrição|
+|--------------------------|-----------------|
+|TVN_BEGINDRAG|Sinaliza o início de uma operação de arrastar e soltar|
+|TVN_BEGINLABELEDIT|Sinaliza o início da edição de rótulos no local|
+|TVN_BEGINRDRAG|Sinaliza o início de uma operação de arrastar e soltar, usando o botão direito do mouse|
+|TVN_DELETEITEM|Sinaliza a exclusão de um item específico|
+|TVN_ENDLABELEDIT|Sinaliza o término da edição de rótulos|
+|TVN_GETDISPINFO|Solicita que o controle de árvore requer para exibir um item de informações|
+|TVN_ITEMEXPANDED|Sinais de que a lista de um item pai dos itens filhos foi expandida ou recolhida|
+|TVN_ITEMEXPANDING|Sinais de que a lista de um item pai dos itens filhos está prestes a ser expandido ou recolhido|
+|TVN_KEYDOWN|Sinaliza um evento de teclado|
+|TVN_SELCHANGED|Sinais de que a seleção foi alterada de um item para outro|
+|TVN_SELCHANGING|Sinais de que a seleção está prestes a ser alterada de um item para outro|
+|TVN_SETDISPINFO|Notificação para atualizar as informações mantidas para um item|
+
+## <a name="see-also"></a>Consulte também
+
+[Usando CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
+[Controles](../mfc/controls-mfc.md)
 

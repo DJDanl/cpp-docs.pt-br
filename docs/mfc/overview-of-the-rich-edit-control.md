@@ -14,26 +14,28 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 143fc93fb07d9ac7c4e803bbce426c114c02bfeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7598449539fffdc2a8a4248fe02b29c83a2d2dfe
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349968"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387088"
 ---
 # <a name="overview-of-the-rich-edit-control"></a>Visão geral do controle de edição avançada
+
 > [!IMPORTANT]
->  Se você estiver usando um controle de edição na caixa de diálogo (independentemente do aplicativo é SDI, MDI, com a caixa de diálogo ou), você deve chamar [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) depois antes da caixa de diálogo caixa é exibida. Em geral para chamar esta função é em seu programa `InitInstance` função de membro. Você não precisa chamá-la sempre que você exibir a caixa de diálogo, somente na primeira vez. Você não precisa chamar `AfxInitRichEdit` se você estiver trabalhando com `CRichEditView`.  
-  
- Controles de edição avançada ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) fornecem uma interface de programação de formatação de texto. No entanto, um aplicativo deve implementar quaisquer componentes de interface de usuário necessários para tornar as operações de formatação disponíveis para o usuário. Ou seja, a edição avançada controle oferece suporte ao alterar os atributos de parágrafo ou de caractere do texto selecionado. Alguns exemplos de atributos são de caractere negrito, itálico, família de fontes e tamanho de ponto. Exemplos de atributos de parágrafo incluem alinhamento, margens e paradas de tabulação. No entanto, é até que você forneça a interface do usuário seja botões da barra de ferramentas, itens de menu ou uma caixa de diálogo de caracteres de formato. Também há funções para consultar o controle de edição para os atributos da seleção atual. Use essas funções para exibir as configurações atuais para os atributos, por exemplo, definindo uma marca de seleção no comando de interface do usuário, se a seleção tem o atributo de formatação de caracteres em negrito.  
-  
- Para obter mais informações sobre formatação de parágrafo e caracteres, consulte [formatação de caractere](../mfc/character-formatting-in-rich-edit-controls.md) e [formatação de parágrafo](../mfc/paragraph-formatting-in-rich-edit-controls.md) mais adiante neste tópico.  
-  
- Edição rico controles suporte quase todas as operações e mensagens de notificação usadas com controles de edição de várias linhas. Portanto, os aplicativos que já use controles de edição podem ser facilmente modificados para usar rich controles de edição. Notificações e mensagens adicionais permitem que aplicativos acessem os controles de edição exclusivos avançados funcionalidade. Para obter informações sobre controles de edição, consulte [CEdit](../mfc/reference/cedit-class.md).  
-  
- Para obter mais informações sobre notificações, consulte [notificações de um controle de edição avançada](../mfc/notifications-from-a-rich-edit-control.md) mais adiante neste tópico.  
-  
-## <a name="see-also"></a>Consulte também  
- [Usando CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [Controles](../mfc/controls-mfc.md)
+>  Se você estiver usando um controle de edição rica em uma caixa de diálogo (independentemente de seu aplicativo é SDI, MDI, ou baseado em diálogo), você deve chamar [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) depois antes da caixa de diálogo caixa é exibida. Em geral para chamar essa função é em seu programa `InitInstance` função de membro. Você não precisa chamá-lo para cada vez que você exibe a caixa de diálogo, apenas na primeira vez. Você não precisa chamar `AfxInitRichEdit` se você estiver trabalhando com `CRichEditView`.
+
+Controles de edição avançada ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) fornecem uma interface de programação para formatação de texto. No entanto, um aplicativo deve implementar quaisquer componentes de interface do usuário necessários para tornar as operações de formatação disponíveis para o usuário. Ou seja, a edição avançada controle oferece suporte a alterar os atributos de caractere ou de parágrafo do texto selecionado. Alguns exemplos de caractere são atributos negrito, itálico, família de fontes e tamanho de ponto. Alinhamento, margens e paradas de tabulação são exemplos de atributos de parágrafo. No entanto, ele cabe a você para fornecer a interface do usuário, independentemente de ser botões de barra de ferramentas, itens de menu ou uma caixa de diálogo de caracteres de formato. Também há funções para consultar o controle de edição rica para os atributos da seleção atual. Use essas funções para exibir as configurações atuais para os atributos, por exemplo, definindo uma marca de seleção sobre o comando da interface do usuário, se a seleção tem o atributo de formatação de caracteres em negrito.
+
+Para obter mais informações sobre caracteres e formatação de parágrafo, consulte [formatação de caractere](../mfc/character-formatting-in-rich-edit-controls.md) e [formatação de parágrafo](../mfc/paragraph-formatting-in-rich-edit-controls.md) mais adiante neste tópico.
+
+Edição avançada controles suporte quase todas as operações e mensagens de notificação usadas com controles de edição de várias linhas. Assim, os aplicativos que já use controles de edição podem ser facilmente alterados para usar rich controles de edição. Notificações e mensagens adicionais permitem que aplicativos acessar os controles de edição exclusivo para rica de funcionalidade. Para obter informações sobre controles de edição, consulte [CEdit](../mfc/reference/cedit-class.md).
+
+Para obter mais informações sobre as notificações, consulte [as notificações de um controle de edição de Rich](../mfc/notifications-from-a-rich-edit-control.md) mais adiante neste tópico.
+
+## <a name="see-also"></a>Consulte também
+
+[Usando CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
+[Controles](../mfc/controls-mfc.md)
 

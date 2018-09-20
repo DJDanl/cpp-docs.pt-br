@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5644f99e15685f8f1784cc40886709b05a9a06bd
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d9c2efecf34e5d58f633bc21e62801157b1b8955
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221278"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388583"
 ---
 # <a name="helpcontext"></a>helpcontext
 
@@ -38,7 +38,7 @@ Especifica uma ID de contexto que permite que usuários exibir informações sob
 
 ### <a name="parameters"></a>Parâmetros
 
-*id*  
+*id*<br/>
 A ID de contexto do tópico da Ajuda. Ver [Ajuda em HTML: sensível ao contexto de ajuda para seus programas](../mfc/html-help-context-sensitive-help-for-your-programs.md) para obter mais informações sobre IDs de contexto.
 
 ## <a name="remarks"></a>Comentários
@@ -64,10 +64,10 @@ Para obter mais informações, consulte [contextos de atributo](../windows/attri
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](../windows/idl-attributes.md)  
-[Atributos de interface](../windows/interface-attributes.md)  
-[Atributos de classe](../windows/class-attributes.md)  
-[Atributos de método](../windows/method-attributes.md)  
-[Atributos Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)  
-[helpfile](../windows/helpfile.md)  
+[Atributos de IDL](../windows/idl-attributes.md)<br/>
+[Atributos de interface](../windows/interface-attributes.md)<br/>
+[Atributos de classe](../windows/class-attributes.md)<br/>
+[Atributos de método](../windows/method-attributes.md)<br/>
+[Atributos Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[helpfile](../windows/helpfile.md)<br/>
 [helpstring](../windows/helpstring.md)  
