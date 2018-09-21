@@ -1,7 +1,7 @@
 ---
 title: Programação do .NET com c++ CLI (Visual C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 105b1d709ca2d9bb68741050489ffa1ee75c8067
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 338404abe7499b6d9ff7679420f069a2857ce1e0
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410566"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494433"
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>Programação do .NET com c++ CLI (Visual C++)
 
-Os tópicos a seguir descrevem como o Visual C++ pode direcionar a plataforma .NET.
+**Visual Studio 2015**: por padrão, os projetos CLR criados com o Visual Studio 2015 direcionar o .NET Framework 4.5.2. Para o destino o .NET Framework 4.6 quando você cria um novo projeto, no **novo projeto** caixa de diálogo, altere a estrutura de destino na lista suspensa na parte central superior da caixa de diálogo. Para alterar a estrutura de destino para um projeto existente, feche o projeto, edite o arquivo de projeto (. vcxproj) e altere o valor da versão do Framework de destino a 4.6. Próxima vez que abrir o projeto, as configurações entrarão em vigor. 
 
-Por padrão, os projetos CLR criados com o Visual Studio 2015 de destino do .NET Framework 4.5.2. Para o destino o .NET Framework 4.6 quando você cria um novo projeto, no **novo projeto** caixa de diálogo, altere a estrutura de destino na lista suspensa na parte central superior da caixa de diálogo. Para alterar a estrutura de destino para um projeto existente, feche o projeto, edite o arquivo de projeto (. vcxproj) e altere o valor da versão do Framework de destino a 4.6. Próxima vez que abrir o projeto, as configurações entrarão em vigor.
+**Visual Studio 2017**: no Visual Studio 2017, a estrutura padrão é a 4.6.1 e o seletor de versão do Framework é na parte inferior a **caixa de diálogo Novo projeto**. C + + c++ CLI em si não é instalado por padrão. Para instalar o componente, abra o instalador do Visual Studio e escolha o C + + c++ /CLI componente de CLI em Visual C++. 
 
 ## <a name="in-this-section"></a>Nesta seção
 
