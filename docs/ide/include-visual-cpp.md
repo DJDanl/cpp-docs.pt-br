@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3cb07824ad5212f4174a6f19e3efa4549432455
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: cd68e4488857708d119399df8bbc0da467983115
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894441"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100741"
 ---
 # <a name="ltincludegt-visual-c"></a>&lt;include&gt; (Visual C++)
 
@@ -37,16 +37,16 @@ A marca \<include> permite consultar comentários em outro arquivo que descrevem
 
 #### <a name="parameters"></a>Parâmetros
 
-`filename`  
+*filename*<br/>
 O nome do arquivo que contém a documentação. O nome do arquivo pode ser qualificado com um caminho.  Coloque o nome entre aspas simples ou duplas.  O compilador emite um aviso se não encontra `filename`.
 
-`tagpath`  
+*tagpath*<br/>
 Uma expressão XPath válida que seleciona o conjunto de nós desejado contido no arquivo.
 
-`name`  
+*name*<br/>
 O especificador de nome na marca que precede os comentários; `name` terá um `id`.
 
-`id`  
+*id*<br/>
 A ID da marca que precede os comentários.  Coloque o nome entre aspas simples ou duplas.
 
 ## <a name="remarks"></a>Comentários

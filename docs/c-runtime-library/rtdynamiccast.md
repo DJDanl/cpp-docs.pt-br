@@ -27,55 +27,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90c68ed56b52b57deb234717b3b95ec197d26318
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5f94d60d4c6e804a9bd27293bb0eff67b29a1e8a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450928"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092057"
 ---
 # <a name="rtdynamiccast"></a>__RTDynamicCast
-Implementação de tempo de execução do operador [dynamic_cast](../cpp/dynamic-cast-operator.md).  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```cpp  
-PVOID __RTDynamicCast (  
-   PVOID inptr,   
-   LONG VfDelta,  
-   PVOID SrcType,  
-   PVOID TargetType,   
-   BOOL isReference  
-   ) throw(...)  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- `inptr`  
- Ponteiro para um objeto polimórfico.  
-  
- `VfDelta`  
- Deslocamento do ponteiro de função virtual no objeto.  
-  
- `SrcType`  
- O tipo estático do objeto apontado pelo parâmetro `inptr`.  
-  
- `TargetType`  
- Resultado desejado da conversão.  
-  
- `isReference`  
- `true` se a entrada for uma referência; `false` se ela for um ponteiro.  
-  
-## <a name="return-value"></a>Valor retornado  
- Ponteiro para o subobjeto apropriado, se for bem-sucedido; caso contrário, **NULL**.  
-  
-## <a name="exceptions"></a>Exceções  
- `bad_cast()` se a entrada para `dynamic_cast<>` for uma referência e a conversão falhar.  
-  
-## <a name="remarks"></a>Comentários  
- Converte `inptr` em um objeto do tipo `TargetType`. O tipo de `inptr` deve ser um ponteiro se `TargetType` for um ponteiro, ou um l-value se `TargetType` for uma referência. `TargetType` deve ser um ponteiro ou uma referência a um tipo de classe previamente definido ou a um “ponteiro para nulo”.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rotina|Cabeçalho necessário|  
-|-------------|---------------------|  
+
+Implementação de tempo de execução do operador [dynamic_cast](../cpp/dynamic-cast-operator.md).
+
+## <a name="syntax"></a>Sintaxe
+
+```cpp
+PVOID __RTDynamicCast (
+   PVOID inptr,
+   LONG VfDelta,
+   PVOID SrcType,
+   PVOID TargetType,
+   BOOL isReference
+   ) throw(...)
+```
+
+#### <a name="parameters"></a>Parâmetros
+
+*inptr*<br/>
+Ponteiro para um objeto polimórfico.
+
+*VfDelta*<br/>
+Deslocamento do ponteiro de função virtual no objeto.
+
+*SrcType*<br/>
+O tipo estático do objeto apontado pelo parâmetro `inptr`.
+
+*TargetType*<br/>
+Resultado desejado da conversão.
+
+*isReference*<br/>
+`true` se a entrada for uma referência; `false` se ela for um ponteiro.
+
+## <a name="return-value"></a>Valor retornado
+
+Ponteiro para o subobjeto apropriado, se for bem-sucedido; caso contrário, **NULL**.
+
+## <a name="exceptions"></a>Exceções
+
+`bad_cast()` se a entrada para `dynamic_cast<>` for uma referência e a conversão falhar.
+
+## <a name="remarks"></a>Comentários
+
+Converte `inptr` em um objeto do tipo `TargetType`. O tipo de `inptr` deve ser um ponteiro se `TargetType` for um ponteiro, ou um l-value se `TargetType` for uma referência. `TargetType` deve ser um ponteiro ou uma referência a um tipo de classe previamente definido ou a um “ponteiro para nulo”.
+
+## <a name="requirements"></a>Requisitos
+
+|Rotina|Cabeçalho necessário|
+|-------------|---------------------|
 |__RTDynamicCast|rtti.h|
