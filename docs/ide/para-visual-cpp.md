@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ebf50e4672ee2a3398f6c484c42f8e36f231169
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 00110a0e821077231c0f386a0656dc2214b0267d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325111"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034714"
 ---
 # <a name="ltparagt-visual-c"></a>&lt;para&gt; (Visual C++)
 A marca \<para> é para uso dentro de uma marca, como [\<summary>](../ide/summary-visual-cpp.md), [\<remarks>](../ide/remarks-visual-cpp.md) ou [\<returns>](../ide/returns-visual-cpp.md) e permite que você adicione estrutura ao texto.  
@@ -35,8 +35,8 @@ A marca \<para> é para uso dentro de uma marca, como [\<summary>](../ide/summar
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `content`  
- O texto do parágrafo.  
+*content*<br/>
+O texto do parágrafo.  
   
 ## <a name="remarks"></a>Comentários  
  Compile com [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação em um arquivo.  

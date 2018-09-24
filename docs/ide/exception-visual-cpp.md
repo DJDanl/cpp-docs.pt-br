@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d3d5b7a89a3725ae9dee2065bcd21d8f114ca00
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 03724e6f1ad0c85ad70e464786a7393b3f2f61e8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33323934"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46094982"
 ---
 # <a name="ltexceptiongt-visual-c"></a>&lt;exception&gt; (Visual C++)
 A marca \<exception> permite que você especifique quais exceções podem ser lançadas. Essa marcação é aplicada a uma definição de método.  
@@ -35,15 +35,15 @@ A marca \<exception> permite que você especifique quais exceções podem ser la
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `member`  
- Uma referência a uma exceção que está disponível no ambiente de compilação atual. Usando as regras da pesquisa de nome, o compilador verifica se a exceção fornecida existe e converte `member` no nome de elemento canônico no XML de saída.  O compilador emite um aviso se não encontra `member`.  
+*member*<br/>
+Uma referência a uma exceção que está disponível no ambiente de compilação atual. Usando as regras da pesquisa de nome, o compilador verifica se a exceção fornecida existe e converte `member` no nome de elemento canônico no XML de saída.  O compilador emite um aviso se não encontra `member`.  
   
  Coloque o nome entre aspas simples ou duplas.  
   
  Para obter informações sobre como criar uma referência cref para um tipo genérico, consulte [ \<consulte>](../ide/see-visual-cpp.md).  
   
- `description`  
- Uma descrição.  
+*description*<br/>
+Uma descrição.  
   
 ## <a name="remarks"></a>Comentários  
  Compile com [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação em um arquivo.  

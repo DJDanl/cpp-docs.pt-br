@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e13824780a5c73d4423bd544a97108b45d1b770a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: b1dab2c803fee38662a638d056b35f79f8d5e8e9
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33324077"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096607"
 ---
 # <a name="ltpermissiongt-visual-c"></a>&lt;permission&gt; (Visual C++)
 A marca \<permissão > permite documentar o acesso de um membro. <xref:System.Security.PermissionSet> permite que você especifique o acesso a um membro.  
@@ -35,15 +35,15 @@ A marca \<permissão > permite documentar o acesso de um membro. <xref:System.Se
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- `member`  
- Uma referência a um membro ou campo disponível para ser chamado do ambiente de compilação atual. O compilador verifica se o elemento de código fornecido existe e converte `member` no nome de elemento canônico no XML de saída.  Coloque o nome entre aspas simples ou duplas.  
+*member*<br/>
+Uma referência a um membro ou campo disponível para ser chamado do ambiente de compilação atual. O compilador verifica se o elemento de código fornecido existe e converte `member` no nome de elemento canônico no XML de saída.  Coloque o nome entre aspas simples ou duplas.  
   
  O compilador emite um aviso se não encontra `member`.  
   
  Para obter informações sobre como criar uma referência cref para um tipo genérico, consulte [ \<consulte>](../ide/see-visual-cpp.md).  
   
- `description`  
- Uma descrição do acesso ao membro.  
+*description*<br/>
+Uma descrição do acesso ao membro.  
   
 ## <a name="remarks"></a>Comentários  
  Compile com [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) para processar comentários de documentação em um arquivo.  
