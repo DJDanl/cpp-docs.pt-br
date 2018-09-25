@@ -1,28 +1,30 @@
 ---
 title: Estrutura VerifyInheritanceHelper | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/24/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::VerifyInheritanceHelper
+- implements/Microsoft::WRL::Details::VerifyInheritanceHelper::Verify
 dev_langs:
 - C++
 helpviewer_keywords:
-- VerifyInheritanceHelper structure
+- Microsoft::WRL::Details::VerifyInheritanceHelper structure
+- Microsoft::WRL::Details::VerifyInheritanceHelper::Verify method
 ms.assetid: 8a48a702-0f71-4807-935b-8311f0a7a8b6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ddd358c3eb20439f87de8614d80af01537ae31e6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6231345b837cae8f36e8441173300d804c0ea167
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396565"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169627"
 ---
 # <a name="verifyinheritancehelper-structure"></a>Estrutura VerifyInheritanceHelper
 
@@ -58,9 +60,9 @@ Testa se uma interface é derivada de outra interface.
 
 ### <a name="public-methods"></a>Métodos Públicos
 
-|Nome|Descrição|
-|----------|-----------------|
-|[Método VerifyInheritanceHelper::Verify](../windows/verifyinheritancehelper-verify-method.md)|Testa as duas interfaces especificadas pelos parâmetros de modelo atual e determina se uma interface é derivada da outra.|
+Nome                                       | Descrição
+------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------
+[Verifyinheritancehelper:: Verify](#verify) | Testa as duas interfaces especificadas pelos parâmetros de modelo atual e determina se uma interface é derivada da outra.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -72,6 +74,16 @@ Testa se uma interface é derivada de outra interface.
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Consulte também
+## <a name="verify"></a>Verifyinheritancehelper:: Verify
 
-[Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+
+```cpp
+static void Verify();
+```
+
+### <a name="remarks"></a>Comentários
+
+Testa as duas interfaces especificadas pelos parâmetros de modelo atual e determina se uma interface é derivada da outra.
+
+Um erro será emitido se uma interface não é derivada de outro.
