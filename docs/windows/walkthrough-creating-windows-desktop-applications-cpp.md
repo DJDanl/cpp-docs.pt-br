@@ -1,7 +1,7 @@
 ---
 title: 'Passo a passo: Criar um aplicativo tradicional de área de trabalho do Windows (C++) | Microsoft Docs'
 ms.custom: get-started-article
-ms.date: 06/12/2018
+ms.date: 09/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 34342fbca00a127d1fdee13d29626bc2a3dfe53f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 7e9541517852696073a3dbbff560bb6c44fd3264
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43679199"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029665"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Passo a passo: Criar um aplicativo tradicional de área de trabalho do Windows (C++)
 
@@ -120,7 +120,7 @@ Em seguida, você aprenderá a criar o código para um aplicativo de desktop do 
    Para obter informações sobre os parâmetros e o valor de retorno dessa função, consulte [ponto de entrada WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
 
    > [!NOTE]
-   > Quais são todas essas palavras extras, como `CALLBACK`, ou `HINSTANCE`, ou `_In_`? A API do Windows tradicional usa typedefs e macros de pré-processador extensivamente para abstrair alguns dos detalhes de tipos e específicos da plataforma código, como convenções de chamada, **declspec** declarações e pragmas do compilador. No Visual Studio, você pode usar o IntelliSense [informações rápidas](/visualstudio/ide/using-intellisense#quick-info) recurso para ver o que definem essas typedefs e macros. Passe o mouse sobre a palavra de interesse, ou selecione-o e pressione ctrl-K, ctrl-I para uma pequena janela pop-up que contém a definição. Para obter mais informações, veja [Usando o IntelliSense](/visualstudio/ide/using-intellisense). Geralmente usam parâmetros e tipos de retorno *anotações de SAL* para ajudá-lo catch erros de programação. Para obter mais informações, consulte [usando as anotações de SAL para reduzir defeitos de código C/C++](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+   > Quais são todas essas palavras extras, como `CALLBACK`, ou `HINSTANCE`, ou `_In_`? A API do Windows tradicional usa typedefs e macros de pré-processador extensivamente para abstrair alguns dos detalhes de tipos e específicos da plataforma código, como convenções de chamada, **declspec** declarações e pragmas do compilador. No Visual Studio, você pode usar o IntelliSense [informações rápidas](/visualstudio/ide/using-intellisense#quick-info) recurso para ver o que definem essas typedefs e macros. Passe o mouse sobre a palavra de interesse, ou selecione-o e pressione **Ctrl**+**K**, **Ctrl**+**eu** para um pequena janela pop-up que contém a definição. Para obter mais informações, veja [Usando o IntelliSense](/visualstudio/ide/using-intellisense). Geralmente usam parâmetros e tipos de retorno *anotações de SAL* para ajudá-lo catch erros de programação. Para obter mais informações, consulte [usando as anotações de SAL para reduzir defeitos de código C/C++](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
 1. Programas de desktop do Windows exigem &lt;Windows. h >. &lt;TCHAR. h > define a `TCHAR` macro, que é resolvida, por fim, para **wchar_t** se o símbolo UNICODE é definido em seu projeto, caso contrário, ele resolve para **char**.  Se você compilar sempre com habilitado para UNICODE, você não precisa TCHAR e podem usar apenas **wchar_t** diretamente.
 

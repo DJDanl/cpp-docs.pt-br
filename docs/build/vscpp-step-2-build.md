@@ -5,7 +5,7 @@ ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: tutorial
 ms.technology:
-- devlang-C++
+- cpp-tools
 ms.devlang: C++
 dev_langs:
 - C++
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05a5204234eb127da676e3b4a12ef875baecdad0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c9c32f6811a18fae00cb2943a9ca97a89cf159a1
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705777"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029587"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Compilar e executar um projeto de aplicativo de console C++
 
@@ -45,7 +45,7 @@ Se o Visual Studio se parece com isso, você estará pronto para compilar e exec
 
    ![Inicie o projeto](../build/media/vscpp-start-without-debugging.gif "iniciar o projeto")
 
-    Uma janela do console é aberta e, em seguida, executa seu aplicativo. Quando você inicia um aplicativo de console no Visual Studio, ele é executado em seu código e, em seguida, imprime "Pressione qualquer tecla para continuar. . ." para dar a oportunidade de ver a saída.
+   Uma janela do console é aberta e, em seguida, executa seu aplicativo. Quando você inicia um aplicativo de console no Visual Studio, ele é executado em seu código e, em seguida, imprime "Pressione qualquer tecla para continuar. . ." para dar a oportunidade de ver a saída.
 
 Parabéns! Você criou seu primeiro "Hello, world!" aplicativo de console no Visual Studio! Pressione uma tecla para fechar a janela do console e retorne ao Visual Studio.
 
