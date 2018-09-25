@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44211105429e33c136999a7877ac6ee42af29f17
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 5058e0b3bab1fb5fb5e8d52b55e3fa7c37fd8a4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327834"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430030"
 ---
 # <a name="move-definition-location"></a>Mover Local da Definição
 **O quê:** permite mover imediatamente uma definição de função para o arquivo de cabeçalho correspondente.
 
-**Quando:** você tem uma função que deseja mover para um arquivo de cabeçalho.  
+**Quando:** você tem uma função que deseja mover para um arquivo de cabeçalho.
 
 **Por quê:** você pode mover a função manualmente, mas esse recurso a moverá automaticamente, criando o arquivo de cabeçalho, se necessário.
 

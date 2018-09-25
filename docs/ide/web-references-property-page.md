@@ -19,35 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ff2a9ccec1dac6be41727b4a829bf4e63669f40
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 568dfc1b925254bec792138c59ff7f1b3e19cb28
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699641"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442065"
 ---
 # <a name="web-references-property-page"></a>Página de propriedades Referências Web
-A página de propriedades de **Referências Web** especifica como a classe proxy do serviço Web XML será gerada. Uma classe proxy do serviço Web XML será gerada se você adicionar uma referência Web ao projeto.  
-  
- A página de propriedades de **Referência Web** contém as seguintes propriedades:  
-  
+
+A página de propriedades de **Referências Web** especifica como a classe proxy do serviço Web XML será gerada. Uma classe proxy do serviço Web XML será gerada se você adicionar uma referência Web ao projeto.
+
+A página de propriedades de **Referência Web** contém as seguintes propriedades:
+
 - **Arquivo de saída**
 
-   O nome do arquivo para conter a classe proxy do serviço Web XML.  
-  
+   O nome do arquivo para conter a classe proxy do serviço Web XML.
+
 - **Suprimir Faixa de Inicialização**
 
-   Não exibe a faixa para a Ferramenta da linguagem WSDL (Wsdl.exe).  
-  
+   Não exibe a faixa para a Ferramenta da linguagem WSDL (Wsdl.exe).
+
 - **Namespace**
 
-   Especifica o nome do proxy Web gerado.  
-  
+   Especifica o nome do proxy Web gerado.
+
 - **Referências Adicionais**
 
-   Especifica as DLLs adicionais referenciadas pela DLL proxy.  
-  
-Para obter informações sobre como acessar a página de propriedades de **Referência Web**, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Páginas de propriedade](../ide/property-pages-visual-cpp.md)
+   Especifica as DLLs adicionais referenciadas pela DLL proxy.
+
+Para obter informações sobre como acessar a página de propriedades de **Referência Web**, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Páginas de propriedade](../ide/property-pages-visual-cpp.md)

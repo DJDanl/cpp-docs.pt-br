@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df30bdea71a890eed25f546a53e7f329fa330762
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: d4e7742afd3fecc4dd115624da0c1650dc662004
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132014"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412516"
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE e ferramentas para desenvolvimento do Visual C++
 
@@ -29,7 +29,7 @@ Além das ferramentas compartilhadas no IDE do Visual Studio, o MSVC tem várias
 
 ## <a name="creating-a-solution-and-projects"></a>Criando uma solução e projetos
 
-Um *projeto* é basicamente um conjunto de arquivos de código-fonte e recursos, como imagens ou arquivos de dados que são compilados em um arquivo executável. 
+Um *projeto* é basicamente um conjunto de arquivos de código-fonte e recursos, como imagens ou arquivos de dados que são compilados em um arquivo executável.
 
 O Visual Studio 2015 dá suporte para projetos do MSBuild. Você pode baixar extensões do Visual Studio para outros sistemas de build, como Qt ou CMake.
 
@@ -65,9 +65,9 @@ Depois que você cria um projeto, todos os arquivos de projeto são exibidos na 
 
 O editor de códigos também dá suporte a várias funcionalidades que, juntas, são conhecidas como IntelliSense. Focalize um método e veja a documentação básica sobre ele. Depois que você digita um nome de variável de classe e um . ou ->, uma lista de membros de instância dessa classe é exibida. Se você digita um nome de classe e, em seguida, um ::, uma lista de membros estáticos é exibida. Quando você começa a digitar um nome de classe ou de método, o editor de códigos oferece sugestões para completar a instrução. Para obter mais informações, veja [Usando o IntelliSense](/visualstudio/ide/using-intellisense).
 
-### <a name="code-snippets"></a>Trechos de código
+### <a name="code-snippets"></a>Snippets de código
 
-Use os trechos de código do IntelliSense para gerar constructos de código geralmente usados ou complicados com um pressionamento de tecla de atalho. Para obter mais informações, consulte [Trechos de Código](/visualstudio/ide/code-snippets).
+Use os snippets de código do IntelliSense para gerar constructos de código geralmente usados ou complicados com um pressionamento de tecla de atalho. Para obter mais informações, consulte [Snippets de Código](/visualstudio/ide/code-snippets).
 
 ## <a name="navigating-code"></a>Navegando pelo código
 
@@ -119,7 +119,7 @@ Depure o programa pressionando **F5** quando a configuração de projeto estiver
 
 ## <a name="deploy-completed-applications"></a>Implantar aplicativos concluídos
 
-Implante um aplicativo UWP nos clientes por meio da Microsoft Store na opção de menu **Projeto** > **Loja**. A implantação do CRT é manipulada automaticamente em segundo plano. Para obter mais informações, confira [Publicar aplicativos e jogos do Windows](/windows/uwp/publish/). 
+Implante um aplicativo UWP nos clientes por meio da Microsoft Store na opção de menu **Projeto** > **Loja**. A implantação do CRT é manipulada automaticamente em segundo plano. Para obter mais informações, confira [Publicar aplicativos e jogos do Windows](/windows/uwp/publish/).
 
 Ao implantar um aplicativo da área de trabalho do C++ nativo em outro computador, você precisa instalar o próprio aplicativo e os arquivos de biblioteca dos quais o aplicativo depende. Há três maneiras de implantar o UCRT (Tempo de Execução do C++ Universal) com um aplicativo: implantação central, implantação local ou vinculação estática. Para obter mais informações, confira [Implantando aplicativos da área de trabalho](../ide/deploying-native-desktop-applications-visual-cpp.md).
 

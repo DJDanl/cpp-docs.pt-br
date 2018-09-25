@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9961eaa6529773e8d21d9c953242d1656a6a443
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 85439e191ac8676603c9d7fab8a41bb126e97b9e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211657"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398658"
 ---
 # <a name="working-with-project-properties"></a>Trabalhando com propriedades do projeto
 
@@ -141,11 +141,11 @@ Uma macro definida pelo usuário é armazenada em uma folha de propriedades. Se 
 
 ##### <a name="to-create-a-user-defined-macro"></a>Para criar uma macro definida pelo usuário
 
-1.  Na janela **Gerenciador de Propriedades** (na barra de menus, escolha **Exibir**, **Gerenciador de Propriedades**), abra o menu de atalho de uma folha de propriedades (o nome termina com .user) e, em seguida, escolha Propriedades. A caixa de diálogo **Páginas de Propriedades** dessa folha de propriedades será aberta.
+1. Na janela **Gerenciador de Propriedades** (na barra de menus, escolha **Exibir**, **Gerenciador de Propriedades**), abra o menu de atalho de uma folha de propriedades (o nome termina com .user) e, em seguida, escolha Propriedades. A caixa de diálogo **Páginas de Propriedades** dessa folha de propriedades será aberta.
 
-2.  No painel esquerdo da caixa de diálogo, selecione **Macros de Usuário**. No painel direito, escolha o botão **Adicionar Macro** para abrir a caixa de diálogo **Adicionar Macro de Usuário**.
+1. No painel esquerdo da caixa de diálogo, selecione **Macros de Usuário**. No painel direito, escolha o botão **Adicionar Macro** para abrir a caixa de diálogo **Adicionar Macro de Usuário**.
 
-3.  Na caixa de diálogo, especifique um nome e um valor para a macro. Opcionalmente, marque a caixa de seleção **Definir esta macro como uma variável de ambiente no ambiente de build**.
+1. Na caixa de diálogo, especifique um nome e um valor para a macro. Opcionalmente, marque a caixa de seleção **Definir esta macro como uma variável de ambiente no ambiente de build**.
 
 ## <a name="property-editor"></a>Edição de Propriedades
 

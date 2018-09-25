@@ -16,20 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 580c11d19a1d2ea5510390296a80589cce988f12
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 54a9f68c1cd750cd3d0e5c638d1ab101a8588a61
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327805"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416884"
 ---
 # <a name="command-line-property-pages"></a>Páginas de propriedades Linha de Comando
-A maioria das pastas de páginas de propriedades contém uma página de propriedades da **Linha de Comando**. Essa página exibe quais propriedades são definidas na pasta. A página de propriedades da **Linha de Comando** também contém uma caixa **Opções Adicionais**, em que é possível especificar propriedades válidas para a ferramenta, mas para as quais não há nenhuma propriedade na pasta.  
-  
- Qualquer comando inserido na caixa de edição será passado para a ferramenta na pasta. Nenhuma verificação será feita na entrada, nem haverá nenhuma verificação de dependência.  
-  
- Para obter informações sobre como acessar as páginas de propriedades da **Linha de Comando**, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).  
-  
-## <a name="see-also"></a>Consulte também  
- [Páginas de propriedades](../ide/property-pages-visual-cpp.md)   
- [Arquivos .Lib como entrada do vinculador](../build/reference/dot-lib-files-as-linker-input.md)
+
+A maioria das pastas de páginas de propriedades contém uma página de propriedades da **Linha de Comando**. Essa página exibe quais propriedades são definidas na pasta. A página de propriedades da **Linha de Comando** também contém uma caixa **Opções Adicionais**, em que é possível especificar propriedades válidas para a ferramenta, mas para as quais não há nenhuma propriedade na pasta.
+
+Qualquer comando inserido na caixa de edição será passado para a ferramenta na pasta. Nenhuma verificação será feita na entrada, nem haverá nenhuma verificação de dependência.
+
+Para obter informações sobre como acessar as páginas de propriedades da **Linha de Comando**, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).
+
+## <a name="see-also"></a>Consulte também
+
+[Páginas de propriedade](../ide/property-pages-visual-cpp.md)<br>
+[Arquivos .Lib como entrada do vinculador](../build/reference/dot-lib-files-as-linker-input.md)

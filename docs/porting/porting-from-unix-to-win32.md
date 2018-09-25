@@ -20,14 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18217b1d4574f6591287ab6cb83e28c67fe95537
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a5dddac6d5e8b5be1b99d9c8004fcaa36d6b0b30
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218118"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394019"
 ---
 # <a name="porting-from-unix-to-win32"></a>Portando de UNIX para Win32
+
 Ao migrar aplicativos do UNIX para o Windows, há várias opções:  
   
 - Usar bibliotecas UNIX para portar aplicativos do UNIX para Win32  
@@ -84,6 +85,6 @@ Outra opção que os programadores do UNIX procuram é o subsistema POSIX do Win
   
 ## <a name="see-also"></a>Consulte também  
  
-[Guia de atualização e portabilidade do Visual C++](visual-cpp-change-history-2003-2015.md)   
-[UNIX](../c-runtime-library/unix.md)   
+[Guia de atualização e portabilidade do Visual C++](visual-cpp-change-history-2003-2015.md)<br/>
+[UNIX](../c-runtime-library/unix.md)<br/>
 [Regras de inferência](../build/inference-rules.md)

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eefb2347cfe3a46dabbf72a46fd46fcb16f57d38
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 01efc61d08204598cbce6d875bfe2c2293d8e711
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578394"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404261"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Portando para a Plataforma Universal do Windows (C++)
 
@@ -118,5 +118,5 @@ Se você criar um novo projeto UWP usando o Visual Studio, esse erro não dever�
 
 ## <a name="see-also"></a>Consulte também
 
-[Guia de portabilidade do Visual C++](../porting/porting-to-the-universal-windows-platform-cpp.md)  
+[Guia de portabilidade do Visual C++](../porting/porting-to-the-universal-windows-platform-cpp.md)<br/>
 [Desenvolver aplicativos para a UWP (Plataforma Universal do Windows)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)  

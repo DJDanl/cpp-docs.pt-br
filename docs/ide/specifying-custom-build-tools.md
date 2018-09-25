@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a880d8cac05ea662feafa4c309f70bb91179fb2c
-ms.sourcegitcommit: 6784c1d5081dbe4d8119379647a34666328e1fdf
+ms.openlocfilehash: 9e04cd1d5599663c878d7e9b06d9b0bd05a76242
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34798925"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433884"
 ---
 # <a name="specify-custom-build-tools"></a>Especificar ferramentas de build personalizadas
 
@@ -90,5 +90,5 @@ Quando você compilar o projeto, o sistema de build comparará os carimbos de da
 
 ## <a name="see-also"></a>Consulte também
 
-[Macros comuns para compilar comandos e propriedades](../ide/common-macros-for-build-commands-and-properties.md)  
-[Solucionando problemas de personalização de compilação](../ide/troubleshooting-build-customizations.md)  
+[Macros comuns para compilar comandos e propriedades](../ide/common-macros-for-build-commands-and-properties.md)<br>
+[Solucionando problemas de personalização de compilação](../ide/troubleshooting-build-customizations.md)

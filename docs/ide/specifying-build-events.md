@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5940f0d6efaec402a4a85ed659f42d7eab1bf91d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: dfdedf01c6203c483c1aa30d5d2934caa66e76d2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33334958"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375955"
 ---
 # <a name="specifying-build-events"></a>Especificando eventos de build
 
@@ -64,6 +64,6 @@ Para obter informações gerais sobre eventos de build, confira [Noções básic
 
 ## <a name="see-also"></a>Consulte também
 
-[Noções básicas sobre etapas e eventos compilação personalizada](../ide/understanding-custom-build-steps-and-build-events.md)  
-[Macros comuns para compilar comandos e propriedades](../ide/common-macros-for-build-commands-and-properties.md)  
-[Solucionando problemas de personalização de compilação](../ide/troubleshooting-build-customizations.md)  
+[Noções básicas sobre etapas e eventos compilação personalizada](../ide/understanding-custom-build-steps-and-build-events.md)<br>
+[Macros comuns para compilar comandos e propriedades](../ide/common-macros-for-build-commands-and-properties.md)<br>
+[Solucionando problemas de personalização de compilação](../ide/troubleshooting-build-customizations.md)

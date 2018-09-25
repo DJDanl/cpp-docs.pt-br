@@ -1,7 +1,7 @@
 ---
 title: Instruções passo a passo (MFC) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87cad8ec377901d41cf029999b22e69f9c69072f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 05255f71f304b32de95faf96eaa23f5ce3da9f96
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389781"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169405"
 ---
 # <a name="walkthroughs-mfc"></a>Explicações passo a passo (MFC)
 
@@ -42,4 +42,3 @@ Demonstra como adicionar um objeto gráfico a um projeto e apresenta como animá
 ## <a name="see-also"></a>Consulte também
 
 [Aplicativos da área de trabalho MFC](../mfc/mfc-desktop-applications.md)
-

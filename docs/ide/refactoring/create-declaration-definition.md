@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60d583ec47a3f9c5b61599a5945e3cfa0d375b1d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 383691a5c2da2af6e4a992ab8766cd99ffa3d781
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33331277"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408382"
 ---
 # <a name="create-declaration--definition"></a>Criar Declaração/Definição
 **O quê:** permite gerar imediatamente a declaração ou a definição de uma função.
 
-**Quando:** você tem uma função que precisa de uma declaração ou vice-versa.  
+**Quando:** você tem uma função que precisa de uma declaração ou vice-versa.
 
 **Por quê:** você pode criar a declaração/definição manualmente, mas isso vai criá-la automaticamente, criando o arquivo de código/cabeçalho, se necessário.
 

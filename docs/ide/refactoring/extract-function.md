@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fc4d48c972bca9352f326085574e4cf4df83aea
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 8ca75ca3b69fb175bea160d7f2a35d36416ea2f5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33333151"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441363"
 ---
 # <a name="extract-function"></a>Extrair Função
 **O quê:** permite transformar um fragmento de código em sua própria função.
 
-**Quando:** você tem um fragmento de código existente em uma função que precisa ser chamado por meio de outra função.  
+**Quando:** você tem um fragmento de código existente em uma função que precisa ser chamado por meio de outra função.
 
 **Por quê:** você poderia copiar/colar esse código, mas que poderia levar à eliminação de duplicação.  A melhor solução é refatorar esse fragmento em sua própria função, que pode ser chamada livremente por qualquer outra função.
 
@@ -39,7 +39,7 @@ ms.locfileid: "33333151"
      * Clique com o botão direito do mouse no código, selecione o menu **Ações Rápidas e Refatorações** e selecione **Extrair Função (Experimental)** no menu de contexto.
      * Clique no ícone de ![Lâmpada](images/bulb.png) exibido na margem esquerda e selecione **Extrair Função (Experimental)** no menu de contexto.
 
-1. Na janela **Extrair Função/Método (Experimental)**, insira o novo nome da função, selecione o local em que deseja que o código seja colocado e clique no botão **OK**.  
+1. Na janela **Extrair Função/Método (Experimental)**, insira o novo nome da função, selecione o local em que deseja que o código seja colocado e clique no botão **OK**.
 
    ![Função de Extrair função](images/extractfunction_dialog.png)
 

@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 019e63009706fd5d0ab22044642449c5bce3c3a6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 84aded46176c1c286ce5270254a0455dfce39d5d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222375"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427860"
 ---
 # <a name="porting-guide-spy"></a>Guia de portabilidade: Spy++
+
 Este estudo de caso de portabilidade foi projetado para dar a você uma ideia de como é um projeto típico de portabilidade, dos tipos de problemas que você pode encontrar e algumas dicas gerais e truques para resolver problemas de portabilidade. Ele não foi projetado para ser um guia definitivo de portabilidade, uma vez que a experiência de portar um projeto depende muito das especificidades do código.  
   
 ## <a name="spy"></a>Spy++  
@@ -74,7 +75,7 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h
   
 A Microsoft não dá mais suporte ao Windows XP, portanto, mesmo que seja permitido usá-lo como destino no Visual Studio 2015, você deve eliminar gradativamente o suporte para ele em seus aplicativos e incentivar os usuários a adotar as novas versões do Windows.  
   
- Para eliminar o erro, defina WINVER atualizando a configuração **Propriedades do Projeto** para a versão mais antiga do Windows que você deseja usar como destino no momento. Encontre uma tabela de valores para várias versões do Windows [aqui](/windows/desktop/WinProg/using-the-windows-headers).  
+Para eliminar o erro, defina WINVER atualizando a configuração **Propriedades do Projeto** para a versão mais antiga do Windows que você deseja usar como destino no momento. Encontre uma tabela de valores para várias versões do Windows [aqui](/windows/desktop/WinProg/using-the-windows-headers).  
   
 O arquivo stdafx.h continha algumas dessas definições de macro.  
   
@@ -551,7 +552,7 @@ wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
   
 A macro _T tem o efeito de fazer com que um literal de cadeia de caracteres seja compilado como uma cadeia de caracteres **char** ou uma cadeia de caracteres **wchar_t**, dependendo da configuração de MBCS ou UNICODE. Para substituir todas as cadeias de caracteres por _T no Visual Studio, abra primeiro a caixa **Substituição Rápida** (teclado: **Ctrl**+**F**) ou **Substituir nos Arquivos** (teclado: **Ctrl**+**Shift**+**H**), depois escolha a caixa de seleção **Usar Expressões Regulares**. Digite `((\".*?\")|('.+?'))` como o texto de pesquisa e `_T($1)` como o texto de substituição. Se você já tiver a macro _T em torno de algumas cadeias de caracteres este procedimento a adicionará novamente; além disso, ele também poderá encontrar casos em que você não deseja _T, por exemplo quando você usar `#include`, portanto, é melhor usar **Substituir Próximo** em vez de **Substituir Tudo**.  
   
- Essa função específica, [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa), na verdade é definida nos cabeçalhos do Windows e a documentação para ela recomenda que ela não seja usada, devido a um possível estouro de buffer. Nenhum tamanho é fornecido para o buffer `szTmp`, portanto, não há nenhuma maneira para a função verificar se o buffer pode conter todos os dados a serem gravados nele. Consulte a próxima seção sobre portabilidade para o CRT Seguro, na qual podemos resolver outros problemas semelhantes. Nós acabamos por substituí-lo por [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).  
+Essa função específica, [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa), na verdade é definida nos cabeçalhos do Windows e a documentação para ela recomenda que ela não seja usada, devido a um possível estouro de buffer. Nenhum tamanho é fornecido para o buffer `szTmp`, portanto, não há nenhuma maneira para a função verificar se o buffer pode conter todos os dados a serem gravados nele. Consulte a próxima seção sobre portabilidade para o CRT Seguro, na qual podemos resolver outros problemas semelhantes. Nós acabamos por substituí-lo por [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).  
   
 Outro erro comum que você verá na conversão para Unicode é este.  
   
@@ -680,5 +681,5 @@ Portabilidade do Spy++ do código Visual C++ 6.0 original para o compilador mais
   
 ## <a name="see-also"></a>Consulte também  
 
-[Portabilidade e atualização: exemplos e estudos de caso](../porting/porting-and-upgrading-examples-and-case-studies.md)   
+[Portabilidade e atualização: exemplos e estudos de caso](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Estudo de caso anterior: COM Spy](../porting/porting-guide-com-spy.md)

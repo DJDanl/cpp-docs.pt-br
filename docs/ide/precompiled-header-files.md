@@ -20,23 +20,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4595ea9ce27c40fb798ac050ce456c4d43b2cacb
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 8d2e2bab9da3d19347577f0b1d1e8ab2ed6bb0dc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328081"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404014"
 ---
 # <a name="precompiled-header-files"></a>Arquivos de cabeçalho pré-compilado
-Esses arquivos são usados para compilar um arquivo de cabeçalho pré-compilado *Nome_do_projeto*.pch e um arquivo de tipos pré-compilados Stdafx.obj.  
-  
- Esses arquivos estão localizados no diretório *Nome_do_projeto*. No Gerenciador de Soluções, Stdafx.h está na pasta Arquivos de Cabeçalho e Stdafx.cpp está localizado na pasta Arquivos de Origem.  
-  
-|Nome do arquivo|Descrição|  
-|---------------|-----------------|  
-|Stdafx.h|Um arquivo de inclusão para arquivos de inclusão do sistema padrão e para arquivos de inclusão específicos ao projeto que são usados com frequência, mas modificados raramente.<br /><br /> Você não deve definir nem excluir a definição de nenhuma das macros _AFX_NO_XXX em stdafx.h; confira o artigo da Base de Dados de Conhecimento "PRB: problemas ao definir _AFX_NO_XXX". Encontre os artigos da Base de Dados de Conhecimento na Biblioteca MSDN ou em [http:// support.microsoft.com/](http://%20support.microsoft.com/).|  
-|Stdafx.cpp|Contém a diretiva de pré-processador `#include "stdafx.h"` e adiciona arquivos de inclusão a tipos pré-compilados. Arquivos pré-compilados de qualquer tipo, incluindo arquivos de cabeçalho, dão suporte a tempos de compilação mais rápidos, restringindo a compilação somente aos arquivos que precisam dele. Depois que o projeto for compilado pela primeira vez, você observará tempos de build muito mais rápidos nos próximos builds, devido à presença dos arquivos de cabeçalho pré-compilado.|  
-  
-## <a name="see-also"></a>Consulte também  
- [Tipos de arquivo criados para projetos do Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)   
- [Trabalhando com Propriedades do Projeto](../ide/working-with-project-properties.md)
+
+Esses arquivos são usados para compilar um arquivo de cabeçalho pré-compilado *Nome_do_projeto*.pch e um arquivo de tipos pré-compilados Stdafx.obj.
+
+Esses arquivos estão localizados no diretório *Nome_do_projeto*. No Gerenciador de Soluções, Stdafx.h está na pasta Arquivos de Cabeçalho e Stdafx.cpp está localizado na pasta Arquivos de Origem.
+
+|Nome do arquivo|Descrição|
+|---------------|-----------------|
+|Stdafx.h|Um arquivo de inclusão para arquivos de inclusão do sistema padrão e para arquivos de inclusão específicos ao projeto que são usados com frequência, mas modificados raramente.<br /><br /> Você não deve definir nem excluir a definição de nenhuma das macros _AFX_NO_XXX em stdafx.h; confira o artigo da Base de Dados de Conhecimento "PRB: problemas ao definir _AFX_NO_XXX". Encontre os artigos da Base de Dados de Conhecimento na Biblioteca MSDN ou em [http:// support.microsoft.com/](http://%20support.microsoft.com/).|
+|Stdafx.cpp|Contém a diretiva de pré-processador `#include "stdafx.h"` e adiciona arquivos de inclusão a tipos pré-compilados. Arquivos pré-compilados de qualquer tipo, incluindo arquivos de cabeçalho, dão suporte a tempos de compilação mais rápidos, restringindo a compilação somente aos arquivos que precisam dele. Depois que o projeto for compilado pela primeira vez, você observará tempos de build muito mais rápidos nos próximos builds, devido à presença dos arquivos de cabeçalho pré-compilado.|
+
+## <a name="see-also"></a>Consulte também
+
+[Tipos de arquivo criados para projetos do Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)<br>
+[Trabalhando com Propriedades do Projeto](../ide/working-with-project-properties.md)

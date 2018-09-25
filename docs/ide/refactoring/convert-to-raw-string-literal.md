@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b98825719e7b3c0d8eb760a2ec50644b5eddd54e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 75037ea542a5bd2160d9a89138b12f82867002a5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328403"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388440"
 ---
 # <a name="convert-to-raw-string-literal"></a>Converter em literal de cadeia de caracteres bruta
 **O quê:** permite transformar qualquer cadeia de caracteres em um literal de cadeia de caracteres bruta C++.
@@ -37,6 +37,6 @@ ms.locfileid: "33328403"
      * Clique com o botão direito do mouse no código, selecione o menu **Ações Rápidas e Refatorações** e selecione **Converter em Literal de Cadeia de Caracteres Bruta** no menu de contexto.
      * Clique no ícone de ![Lâmpada](images/bulb.png) exibido na margem esquerda e selecione **Converter em Literal de Cadeia de Caracteres Bruta** no menu de contexto.
 
-1. A cadeia de caracteres será imediatamente convertida em um literal de cadeia de caracteres bruta.  
+1. A cadeia de caracteres será imediatamente convertida em um literal de cadeia de caracteres bruta.
 
    ![Resultado do Literal de Cadeia de Caracteres Bruta](images/stringliteral_result.png)

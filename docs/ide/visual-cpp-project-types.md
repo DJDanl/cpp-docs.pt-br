@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80ac3479338dcb7f6be9e7e5f3f150cc8e15a9a9
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 45b62d5ce8f49b023721cf7323dc42e1c65c2109
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339976"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396682"
 ---
 # <a name="visual-c-project-types"></a>Tipos de projeto do Visual C++
 
 Você pode usar um modelo de projeto para criar a estrutura básica do programa, menus, barras de ferramentas, ícones, referências e instruções `#include` que sejam apropriadas para o tipo de projeto que você deseja criar. O Visual Studio inclui vários tipos de modelos de projeto do Visual C++ e fornece assistentes para muitos deles, de modo que você pode personalizar seus projetos conforme os cria. Imediatamente depois de criar um projeto, você pode compilá-lo e executar o aplicativo; é uma boa prática compilar o projeto de forma intermitente durante o desenvolvimento do aplicativo.
 
-Você não precisa usar um modelo para criar um projeto, mas na maioria dos casos é mais eficiente fazê-lo, porque é mais fácil modificar os arquivos de projeto fornecidos e estruturá-los do que criá-los a partir do zero.  
-  
+Você não precisa usar um modelo para criar um projeto, mas na maioria dos casos é mais eficiente fazê-lo, porque é mais fácil modificar os arquivos de projeto fornecidos e estruturá-los do que criá-los a partir do zero.
+
 > [!NOTE]
 > Você pode criar um projeto de linguagem C, utilizando modelos de projeto C++. No projeto gerado, localize os arquivos que têm uma extensão de nome de arquivo .cpp e mude para .c. Em seguida, na página **Propriedades do Projeto** do projeto (não da solução), expanda **Propriedades de Configuração**, **C/C++** e selecione **Avançado**. Altere as configurações de **Compilar como** para **Compilar como Código C (/TC)**.
 
@@ -42,8 +42,8 @@ Os modelos de projeto incluídos no Visual Studio dependem da versão do produto
 
 ### <a name="windows-desktop"></a>Área de Trabalho do Windows
 
-|Modelo de projeto|Descrição|  
-|----------------------|-----------------------------| 
+|Modelo de projeto|Descrição|
+|----------------------|-----------------------------|
 |[Aplicativo de Console do Windows](../windows/creating-a-console-application.md)|Um projeto para a criação de um aplicativo de console do Windows.|
 |[Aplicativo da Área de Trabalho do Windows](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|Um projeto para a criação de um aplicativo da área de trabalho do Windows (Win32).|
 |[Biblioteca de Vínculo Dinâmico](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)|Um projeto para a criação de uma DLL (biblioteca de vínculo dinâmico).|
@@ -104,4 +104,4 @@ Muitos dos arquivos gerados por um modelo de projeto contêm comentários TODO p
 
 ## <a name="see-also"></a>Consulte também
 
-[Criando projetos para área de trabalho com Assistentes de Aplicativo](../ide/creating-desktop-projects-by-using-application-wizards.md)   
+[Criando projetos para área de trabalho com Assistentes de Aplicativo](../ide/creating-desktop-projects-by-using-application-wizards.md)

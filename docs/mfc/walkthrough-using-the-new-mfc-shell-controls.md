@@ -1,7 +1,7 @@
 ---
 title: 'Passo a passo: Usando o MFC novos controles de Shell | Microsoft Docs'
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 09/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81925cfa31c394a1b307a184388fb0d331d31fdd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8e1cffc9d1231cd9e8e91b445f05eb7dbbbc4ce4
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432484"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169613"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Instruções passo a passo: usando os novos controles de shell MFC
 
@@ -33,31 +33,29 @@ Este passo a passo pressupõe que você configurou o Visual Studio para usar **c
 
 1. Use o **Assistente de aplicativo MFC** para criar um novo aplicativo do MFC. Para executar o Assistente do **arquivo** menu, selecione **New**e, em seguida, selecione **projeto**. O **novo projeto** caixa de diálogo será exibida.
 
-2. No **novo projeto** diálogo caixa, expanda o **Visual C++** nó no **tipos de projeto** painel e selecione **MFC**. Em seguida, nos **modelos** painel, selecione **aplicativo MFC**. Digite um nome para o projeto, como `MFCShellControls` e clique em **Okey**. O **Assistente de aplicativo MFC** será exibido.
+1. No **novo projeto** diálogo caixa, expanda o **Visual C++** nó no **tipos de projeto** painel e selecione **MFC**. Em seguida, nos **modelos** painel, selecione **aplicativo MFC**. Digite um nome para o projeto, como `MFCShellControls` e clique em **Okey**. Após **Assistente de aplicativo MFC** exibida, use as seguintes opções:
 
-3. No **Assistente de aplicativo MFC** caixa de diálogo, clique em **próxima**. O **tipo de aplicativo** painel será exibido.
+    1. Sobre o **tipo de aplicativo** painel, em **tipo de aplicativo**, desmarque o **documentos com guias** opção. Em seguida, selecione **único documento** e selecione **suporte de arquitetura de documento/exibição**. Sob **estilo de projeto**, selecione **Visual Studio**e para o **Estilo Visual e cores** lista suspensa lista, selecione **Office 2007 (tema azul)**. 
 
-4. Sobre o **tipo de aplicativo** painel, em **tipo de aplicativo**, desmarque o **documentos com guias** opção. Em seguida, selecione **único documento** e selecione **suporte de arquitetura de documento/exibição**. Sob **estilo de projeto**, selecione **Visual Studio**e para o **Estilo Visual e cores** lista suspensa lista, selecione **Office 2007 (tema azul)**. Deixe todas as outras opções como estão. Clique em **próxima** para exibir o **suporte de documento composto** painel.
+    1. Sobre o **suporte de documento composto** painel, selecione **None**.
 
-5. Sobre o **suporte de documento composto** painel, selecione **None**. Clique em **próxima** para exibir o **cadeias de caracteres de modelo de documento** painel.
+    1. Não faça qualquer alteração para o **cadeias de caracteres de modelo de documento** painel.
 
-6. Não faça qualquer alteração para o **cadeias de caracteres de modelo de documento** painel. Clique em **próxima** para exibir o **suporte do banco de dados** painel.
+    1. Sobre o **suporte de banco de dados** painel (Visual Studio 2015 e anteriores), selecione **None** porque este aplicativo não usa um banco de dados. 
 
-7. Sobre o **suporte de banco de dados** painel, selecione **None** porque este aplicativo não usa um banco de dados. Clique em **próxima** para exibir o **recursos de Interface do usuário** painel.
+    1. No **recursos de Interface do usuário** painel, certifique-se de que o **usar uma barra de menus e barra de ferramentas** opção está selecionada. Deixe todas as outras opções como estão. 
 
-8. No **recursos de Interface do usuário** painel, certifique-se de que o **usar uma barra de menus e barra de ferramentas** opção está selecionada. Deixe todas as outras opções como estão. Clique em **próxima** para exibir o **recursos avançados** painel.
+    1. Sobre o **recursos avançados** painel, em **recursos avançados**, selecione apenas **controles ActiveX** e **manifesto de controle comuns**. Sob **avançadas de painéis de quadros**, selecione apenas a **painel de navegação** opção. Isso fará com que o assistente criar o painel à esquerda da janela com um `CMFCShellTreeCtrl` já inseridos. 
 
-9. Sobre o **recursos avançados** painel, em **recursos avançados**, selecione apenas **controles ActiveX** e **manifesto de controle comuns**. Sob **avançadas de painéis de quadros**, selecione apenas a **painel de navegação** opção. Isso fará com que o assistente criar o painel à esquerda da janela com um `CMFCShellTreeCtrl` já inseridos. Clique em **próxima** para exibir o **Classes geradas** painel.
+    1. Não vamos fazer nenhuma alteração para o **Classes geradas** painel. Portanto, clique em **concluir** para criar o novo projeto do MFC.
 
-10. Não vamos fazer nenhuma alteração para o **Classes geradas** painel. Portanto, clique em **concluir** para criar o novo projeto do MFC.
-
-11. Verifique se que o aplicativo foi criado com êxito pela criação e executá-lo. Para compilar o aplicativo, do **construir** menu, selecione **compilar solução**. Se o aplicativo for compilado com êxito, execute o aplicativo, selecionando **iniciar depuração** da **depurar** menu.
+1. Verifique se que o aplicativo foi criado com êxito pela criação e executá-lo. Para compilar o aplicativo, do **construir** menu, selecione **compilar solução**. Se o aplicativo for compilado com êxito, execute o aplicativo, selecionando **iniciar depuração** da **depurar** menu.
 
    O assistente cria automaticamente um aplicativo que tem uma barra de menus padrão, uma barra de ferramentas padrão, uma barra de status padrão e uma barra do Outlook à esquerda da janela com uma **pastas** modo de exibição e uma **calendário** exibição .
 
 ### <a name="to-add-the-shell-list-control-to-the-document-view"></a>Para adicionar o controle de lista do shell para o modo de exibição de documento
 
-1. Nesta seção, você irá adicionar uma instância de `CMFCShellListCtrl` para o modo de exibição criado pelo assistente. Abra o arquivo de cabeçalho do modo de exibição clicando duas vezes em MFCShellControlsView.h na **Gerenciador de soluções**.
+1. Nesta seção, você irá adicionar uma instância de `CMFCShellListCtrl` para o modo de exibição criado pelo assistente. Abra o arquivo de cabeçalho do modo de exibição clicando duas vezes **MFCShellControlsView.h** na **Gerenciador de soluções**.
 
    Localize o `#pragma once` diretiva na parte superior do arquivo de cabeçalho. Imediatamente sob ele adicione este código para incluir o arquivo de cabeçalho para `CMFCShellListCtrl`:
 
@@ -78,7 +76,7 @@ Este passo a passo pressupõe que você configurou o Visual Studio para usar **c
    CMFCShellListCtrl m_wndList;
    ```
 
-2. O **Assistente de aplicativo MFC** já criou um `CMFCShellTreeCtrl` do objeto no `CMainFrame` classe, mas é um membro protegido. Podemos poderão acessar esse objeto mais tarde. Agora, portanto, crie um acessador para ele. Abra o arquivo de cabeçalho MainFrm.h clicando duas vezes na **Gerenciador de soluções**. Localize o comentário a seguir:
+1. O **Assistente de aplicativo MFC** já criou um `CMFCShellTreeCtrl` do objeto no `CMainFrame` classe, mas é um membro protegido. Podemos poderão acessar esse objeto mais tarde. Agora, portanto, crie um acessador para ele. Abra o arquivo de cabeçalho MainFrm.h clicando duas vezes na **Gerenciador de soluções**. Localize o comentário a seguir:
 
    ```cpp
    // Attributes
@@ -100,13 +98,9 @@ Este passo a passo pressupõe que você configurou o Visual Studio para usar **c
    }
    ```
 
-3. Agora podemos atualizar o `CMFCShellControlsView` classe para lidar com o **WM_CREATE** mensagem do windows. Abra o arquivo de cabeçalho MFCShellControlsView.h e clique nesta linha de código:
+1. Agora podemos atualizar o `CMFCShellControlsView` classe para manipular o `WM_CREATE` mensagem do windows. Abra o **Class View** janela e selecione o `CMFCShellControlsView` classe. Clique com botão direito e selecione **propriedades**.
 
-    ```cpp
-    class CMFCShellControlsView : public CView
-    ```
-
-   Em seguida, nos **propriedades** janela, clique no **mensagens** ícone. Role para baixo até encontrar o **WM_CREATE** mensagem. Na lista suspensa lista lado a lado **WM_CREATE**, selecione  **\<Add > OnCreate**. Isso cria um manipulador de mensagens para nós e atualiza automaticamente o mapa de mensagens do MFC.
+    Em seguida, nos **propriedades** janela, clique no **mensagens** ícone. Role para baixo até encontrar o `WM_CREATE` mensagem. Na lista suspensa lista lado a lado `WM_CREATE`, selecione  **\<Add > OnCreate**. Isso cria um manipulador de mensagens para nós e atualiza automaticamente o mapa de mensagens do MFC.
 
    No `OnCreate` método agora, vamos criar nossa `CMFCShellListCtrl` objeto. Encontre o `OnCreate` definição de método no MFCShellControlsView.cpp arquivo de origem e substitua sua implementação com o código a seguir:
 
@@ -125,7 +119,7 @@ Este passo a passo pressupõe que você configurou o Visual Studio para usar **c
     }
     ```
 
-4. Repita a etapa anterior, mas para o **WM_SIZE** mensagem. Isso fará com que a exibição de aplicativos seja redesenhado sempre que um usuário altera o tamanho da janela do aplicativo. Substitua a definição para o `OnSize` método com o código a seguir:
+1. Repita a etapa anterior, mas para o `WM_SIZE` mensagem. Isso fará com que a exibição de aplicativos seja redesenhado sempre que um usuário altera o tamanho da janela do aplicativo. Substitua a definição para o `OnSize` método com o código a seguir:
 
     ```cpp
     void CMFCShellControlsView::OnSize(UINT nType, int cx, int cy)
@@ -137,7 +131,7 @@ Este passo a passo pressupõe que você configurou o Visual Studio para usar **c
     }
     ```
 
-5. A última etapa é conectar-se a `CMFCShellTreeCtrl` e `CMFCShellListCtrl` objetos usando o [CMFCShellTreeCtrl::SetRelatedList](../mfc/reference/cmfcshelltreectrl-class.md#setrelatedlist) método. Depois de chamar esse método, o `CMFCShellListCtrl` automaticamente exibirá o conteúdo do item selecionado no `CMFCShellTreeCtrl`. Isso será feito na `OnActivateView` método, que é substituído no [CView::OnActivateView](../mfc/reference/cview-class.md#onactivateview).
+1. A última etapa é conectar-se a `CMFCShellTreeCtrl` e `CMFCShellListCtrl` objetos usando o [CMFCShellTreeCtrl::SetRelatedList](../mfc/reference/cmfcshelltreectrl-class.md#setrelatedlist) método. Depois de chamar esse método, o `CMFCShellListCtrl` automaticamente exibirá o conteúdo do item selecionado no `CMFCShellTreeCtrl`. Isso será feito na `OnActivateView` método, que é substituído no [CView::OnActivateView](../mfc/reference/cview-class.md#onactivateview).
 
    No arquivo de cabeçalho MFCShellControlsView.h, dentro de `CMFCShellControlsView` declaração de classe, adicione a seguinte declaração de método:
 
@@ -172,15 +166,15 @@ Este passo a passo pressupõe que você configurou o Visual Studio para usar **c
     #include "MainFrm.h"
     ```
 
-6. Verifique se que o aplicativo foi criado com êxito pela criação e executá-lo. Para compilar o aplicativo, do **construir** menu, selecione **compilar solução**. Se o aplicativo foi compilado com êxito, execute-o, selecionando **iniciar depuração** da **depurar** menu.
+1. Verifique se que o aplicativo foi criado com êxito pela criação e executá-lo. Para compilar o aplicativo, do **construir** menu, selecione **compilar solução**. Se o aplicativo foi compilado com êxito, execute-o, selecionando **iniciar depuração** da **depurar** menu.
 
    Agora você deve ver os detalhes do item selecionado no `CMFCShellTreeCtrl` no painel de exibição. Quando você clica em um nó a `CMFCShellTreeCtrl`, o `CMFCShellListCtrl` será atualizado automaticamente. Da mesma forma, se você clicar duas vezes em uma pasta na `CMFCShellListCtrl`, o `CMFCShellTreeCtrl` devem ser atualizados automaticamente.
 
-   O clique com o botão direito em qualquer item no controle de árvore ou no controle de lista. Observe que você obtenha o mesmo menu de contexto, como se estivesse usando o Explorador de arquivos real.
+   O clique com o botão direito em qualquer item no controle de árvore ou no controle de lista. Observe que você obtenha o mesmo menu de contexto, como se você estivesse usando o real **Explorador de arquivos**.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- O assistente criou uma barra do Outlook com ambos um **pastas** painel e um **calendário** painel. Provavelmente não faz sentido ter um **calendário** painel em uma janela do Explorer. Agora, portanto, remova esse painel.
+- O assistente criou uma barra do Outlook com ambos um **pastas** painel e um **calendário** painel. Provavelmente não faz sentido ter um **calendário** painel em um **Explorer** janela. Agora, portanto, remova esse painel.
 
 - O `CMFCShellListCtrl` suporta a exibição de arquivos em modos diferentes, como **ícones grandes**, **ícones pequenos**, **lista**, e **detalhes**. Atualize seu aplicativo para implementar essa funcionalidade. Dica: consulte [exemplos do Visual C++](../visual-cpp-samples.md).
 

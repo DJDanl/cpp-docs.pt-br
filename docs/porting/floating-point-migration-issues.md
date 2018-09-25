@@ -12,14 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb8f7d4835fe50dba2cb7eb6d4e7cb6a54efdbba
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e204e8dcc0d846294393edf9bf73b86360b40de2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578532"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421980"
 ---
 # <a name="floating-point-migration-issues"></a>Problemas de migração de ponto flutuante  
+
   
 Às vezes, ao atualizar os projetos para uma versão mais nova do Visual Studio, você poderá achar que os resultados de algumas operações de ponto flutuantes foram alterados. Isso geralmente ocorre por um desses dois motivos: alterações de geração de código que aproveitam melhor o processador disponível e correções de bugs ou alterações nos algoritmos usados em funções matemáticas no CRT (biblioteca em tempo de execução C). Em geral, os novos resultados estão corretos e estão dentro dos limites especificados pelo padrão da linguagem. Continue lendo para descobrir o que mudou e se isso for importante, como obter os mesmos resultados obtidos antes pelas funções.  
 
@@ -41,6 +42,6 @@ Na maioria dos casos, as alterações de ponto flutuante nas bibliotecas e nos c
   
 ## <a name="see-also"></a>Consulte também  
   
-[Atualizando projetos de versões anteriores do Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[Visão geral de possíveis problemas de atualização (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
+[Atualizando projetos de versões anteriores do Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Visão geral de possíveis problemas de atualização (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Histórico de alterações de 2003 a 2015 do Visual C++](visual-cpp-change-history-2003-2015.md)  

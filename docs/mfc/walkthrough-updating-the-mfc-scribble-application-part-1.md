@@ -1,7 +1,7 @@
 ---
 title: 'Passo a passo: Atualizando o aplicativo de rabisco MFC (parte 1) | Microsoft Docs'
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 09/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2a780719e106c6045d1f80227045ab40607b336
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9d028d1cb3a42a68aab67d2b6fa90165a7d6264b
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426532"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169769"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Passo a passo: Atualizando o aplicativo de rabisco MFC (parte 1)
 
@@ -32,11 +32,9 @@ Este passo a passo demonstra como modificar um aplicativo MFC existente para usa
 
 Este passo a passo modifica o exemplo de rabisco MFC de 1.0 clássico que permite que você use o mouse para criar desenhos de linha. Esta parte do passo a passo mostra como modificar o exemplo de Scribble, para que ele exibe uma barra de faixa de opções. [Parte 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) adiciona mais botões à barra de faixa de opções.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Pré-requisitos 
 
-[Exemplos do Visual C++](../visual-cpp-samples.md)
-
-[Exemplos do Visual C++](../visual-cpp-samples.md)
+O [exemplo de rabisco MFC de 1.0](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Para obter ajuda sobre como converter para o Visual Studio 2017, consulte [guia de portabilidade: Scribble do MFC](../porting/porting-guide-mfc-scribble.md).
 
 ##  <a name="top"></a> Seções
 
@@ -62,50 +60,50 @@ Para converter um aplicativo que dá suporte a um menu a um aplicativo que dá s
 
 1. No scribble.cpp, verifique `CScribbleApp::InitInstance` inclui uma chamada para [AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit).
 
-2. Adicione o seguinte código ao arquivo Stdafx. h.
+1. Adicione o seguinte código ao arquivo Stdafx. h.
 
     ```cpp
     #include <afxcontrolbars.h>
     ```
 
-3. No scribble.h, modifique a definição para o `CScribbleApp` classe, de modo que ela é derivada de [classe CWinAppEx](../mfc/reference/cwinappex-class.md).
+1. No scribble.h, modifique a definição para o `CScribbleApp` classe, de modo que ela é derivada de [classe CWinAppEx](../mfc/reference/cwinappex-class.md).
 
     ```cpp
     class CScribbleApp: public CWinAppEx
     ```
 
-4. Scribble 1.0 foi gravado quando aplicativos do Windows usado um arquivo de inicialização (. ini) para salvar os dados de preferência do usuário. Em vez de um arquivo de inicialização, modifique o Rabisco para armazenar as preferências do usuário no registro. Para definir a chave do registro e a base, digite o seguinte código no `CScribbleApp::InitInstance` depois que o `LoadStdProfileSettings()` instrução.
+1. Scribble 1.0 foi gravado quando aplicativos do Windows usado um arquivo de inicialização (. ini) para salvar os dados de preferência do usuário. Em vez de um arquivo de inicialização, modifique o Rabisco para armazenar as preferências do usuário no registro. Para definir a chave do registro e a base, digite o seguinte código no `CScribbleApp::InitInstance` depois que o `LoadStdProfileSettings()` instrução.
 
     ```cpp
     SetRegistryKey(_T("MFCNext\\Samples\\Scribble2"));
     SetRegistryBase(_T("Settings"));
     ```
 
-5. O quadro principal para um aplicativo de interface MDI vários documentos não é derivado de `CMDIFrameWnd` classe. Em vez disso, é derivado de [CMDIFrameWndEx](../mfc/reference/cmdiframewndex-class.md) classe.
+1. O quadro principal para um aplicativo de interface MDI vários documentos não é derivado de `CMDIFrameWnd` classe. Em vez disso, é derivado de [CMDIFrameWndEx](../mfc/reference/cmdiframewndex-class.md) classe.
 
-     Nos arquivos mainfrm.h e mainfrm.cpp, substitua todas as referências aos `CMDIFrameWnd` com `CMDIFrameWndEx`.
+    Nos arquivos mainfrm.h e mainfrm.cpp, substitua todas as referências aos `CMDIFrameWnd` com `CMDIFrameWndEx`.
 
-6. Nos arquivos childfrm.h e childfrm.cpp, substitua `CMDIChildWnd` com `CMDIChildWndEx`.
+1. Nos arquivos childfrm.h e childfrm.cpp, substitua `CMDIChildWnd` com `CMDIChildWndEx`.
 
-     No childfrm. arquivo h, substitua `CSplitterWnd` com `CSplitterWndEx`.
+    No childfrm. arquivo h, substitua `CSplitterWnd` com `CSplitterWndEx`.
 
-7. Modificar as barras de ferramentas e barras de status para usar as novas classes MFC.
+1. Modificar as barras de ferramentas e barras de status para usar as novas classes MFC.
 
-     No arquivo mainfrm.h:
+    No arquivo mainfrm.h:
 
     1. Substitua `CToolBar` por `CMFCToolBar`.
 
-    2. Substitua `CStatusBar` por `CMFCStatusBar`.
+    1. Substitua `CStatusBar` por `CMFCStatusBar`.
 
-8. No arquivo mainfrm.cpp:
+1. No arquivo mainfrm.cpp:
 
     1. Substitua `m_wndToolBar.SetBarStyle` com `m_wndToolBar.SetPaneStyle`
 
-    2. Substitua `m_wndToolBar.GetBarStyle` com `m_wndToolBar.GetPaneStyle`
+    1. Substitua `m_wndToolBar.GetBarStyle` com `m_wndToolBar.GetPaneStyle`
 
-    3. Substitua `DockControlBar(&m_wndToolBar)` com `DockPane(&m_wndToolBar)`
+    1. Substitua `DockControlBar(&m_wndToolBar)` com `DockPane(&m_wndToolBar)`
 
-9. No arquivo ipframe.cpp, comente as três linhas de código a seguir.
+1. No arquivo ipframe.cpp, comente as três linhas de código a seguir.
 
     ```cpp
     m_wndToolBar.EnableDocking(CBRS_ALIGN_ANY);
@@ -113,115 +111,109 @@ Para converter um aplicativo que dá suporte a um menu a um aplicativo que dá s
     pWndFrame->DockPane(&m_wndToolBar);
     ```
 
-10. Se você pretende vincula estaticamente o seu aplicativo, adicione o seguinte código ao início do arquivo de recurso (. rc) do projeto.
-
-    ```cpp
-    #include "afxribbon.rc"
-    ```
-
-     O arquivo afxribbon.rc contém recursos que são necessários no tempo de execução. O [Assistente de aplicativo MFC](../mfc/reference/mfc-application-wizard.md) inclui esse arquivo automaticamente quando você cria um aplicativo.
-
-11. Salve as alterações e, em seguida, compilar e executar o aplicativo.
-
-[[Seções](#top)]
+1. Salve as alterações e, em seguida, compilar e executar o aplicativo.
 
 ##  <a name="addbitmap"></a> Adicionando Bitmaps ao projeto
 
 As próximas quatro etapas deste passo a passo exigem recursos de bitmap. Você pode obter bitmaps apropriado de várias maneiras:
 
-- Use o [editores de recursos](../windows/resource-editors.md) inventar seu próprio bitmaps. Ou use os editores de recursos para montar os bitmaps das imagens portable network graphics (. png) que estão incluídas com o Visual Studio. Essas imagens estão no `VS2008ImageLibrary` directory.
+- Use o [editores de recursos](../windows/resource-editors.md) inventar seu próprio bitmaps. Ou use os editores de recursos para agrupar bitmaps das imagens portable network graphics (. png) que estão incluídos com o Visual Studio e podem ser baixado do [biblioteca de imagens do Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
 
-     No entanto, a interface do usuário da faixa de opções exige que determinados bitmaps dá suporte a imagens transparentes. Bitmaps transparentes utilizam pixels de 32 bits, em que 24 bits especificar os componentes vermelhos, verdes e azuis da cor e 8 bits definem um *canal alfa* que especifica a transparência da cor. Os editores de recursos atual podem exibir, mas não modificar bitmaps com pixels de 32 bits. Consequentemente, use um editor de imagem externa em vez dos editores de recursos para manipular os bitmaps transparentes.
+    No entanto, o **faixa de opções** interface do usuário requer que determinadas bitmaps dá suporte a imagens transparentes. Bitmaps transparentes utilizam pixels de 32 bits, em que 24 bits especificar os componentes vermelhos, verdes e azuis da cor e 8 bits definem um *canal alfa* que especifica a transparência da cor. Os editores de recursos atual podem exibir, mas não modificar bitmaps com pixels de 32 bits. Consequentemente, use um editor de imagem externa em vez dos editores de recursos para manipular os bitmaps transparentes.
 
 - Copiar um arquivo de recurso apropriado de outro aplicativo para seu projeto e, em seguida, importe bitmaps desse arquivo.
 
-Este passo a passo copia os arquivos de recurso de um aplicativo no diretório de exemplos.
+Este passo a passo copia os arquivos de recurso do exemplo criado na [instruções passo a passo: Criando uma faixa de opções aplicativos por usando MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
 
 ### <a name="to-add-bitmaps-to-the-project"></a>Para adicionar os bitmaps ao projeto
 
-1. Usar o Explorador de arquivos para copiar os seguintes arquivos. bmp de diretório de recursos (`res`) do exemplo de gadget de fita:
+1. Usar o Explorador de arquivos para copiar os seguintes arquivos. bmp de diretório de recursos (`res`) de exemplo da faixa de opções para o diretório de recursos (`res`) do projeto Scribble:
 
    1. Copie main.bmp ao seu projeto Scribble.
 
-   2. Copie filesmall.bmp e filelarge.bmp ao seu projeto Scribble.
+   1. Copie filesmall.bmp e filelarge.bmp ao seu projeto Scribble.
 
-   3. Fazer novas cópias dos arquivos filelarge.bmp e filesmall.bmp, mas salvar as cópias no exemplo de gadget de fita. Renomeie a cópias homesmall.bmp e homelarge.bmp e, em seguida, mova as cópias ao seu projeto Scribble.
+   1. Fazer novas cópias dos arquivos filelarge.bmp e filesmall.bmp, mas salvar as cópias no exemplo a faixa de opções. Renomeie a cópias homesmall.bmp e homelarge.bmp e, em seguida, mova as cópias ao seu projeto Scribble.
 
-   4. Faça uma cópia do arquivo toolbar.bmp, mas salvar a cópia no exemplo de gadget de fita. Renomeie a cópia panelicons.bmp e, em seguida, transferir a cópia para o projeto Scribble.
+   1. Faça uma cópia do arquivo toolbar.bmp, mas salvar a cópia no exemplo a faixa de opções. Renomeie a cópia panelicons.bmp e, em seguida, transferir a cópia para o projeto Scribble.
 
-2. Importe o bitmap de um aplicativo do MFC. No **exibição de recurso**, clique duas vezes o **scribble.rc** nó, clique duas vezes o **Bitmap** nó e, em seguida, clique **adicionar recurso**. Na caixa de diálogo que aparece, clique em **importação**. Navegue até a `res` diretório, selecione o arquivo main.bmp e, em seguida, clique em **aberto**.
+1. Importe o bitmap de um aplicativo do MFC. No **exibição de recurso**, clique duas vezes o **scribble.rc** nó, clique duas vezes o **Bitmap** nó e, em seguida, clique **adicionar recurso**. Na caixa de diálogo que aparece, clique em **importação**. Navegue até a `res` diretório, selecione o arquivo main.bmp e, em seguida, clique em **aberto**.
 
-   O bitmap main.bmp contém uma imagem de 26 x 26. Altere a ID do bitmap para IDB_RIBBON_MAIN.
+   O bitmap main.bmp contém uma imagem de 26 x 26. Alterar a ID do bitmap a ser `IDB_RIBBON_MAIN`.
 
-3. Importe os bitmaps para o menu de arquivo que é anexado ao botão do aplicativo.
+1. Importar os bitmaps para o menu de arquivo que está associado a **aplicativo** botão.
 
-   1. Importe o arquivo filesmall.bmp, que contém dez 16 x 16 (16 x 160) imagens. Como precisamos apenas oito 16 x 16 imagens (16 x 128), use o **exibição de recurso** para alterar a largura desse bitmap de 160 para 128. Altere a ID do bitmap para IDB_RIBBON_FILESMALL.
+   1. Importe o arquivo filesmall.bmp, que contém onze 16 x 16 (16 x 176) imagens. Alterar a ID do bitmap a ser `IDB_RIBBON_FILESMALL`.
 
-   2. Importar filelarge.bmp, que contém oito 32 x 32 (32 x 256) imagens. Altere a ID do bitmap para IDB_RIBBON_FILELARGE.
+   > [!NOTE]
+   > Como precisamos apenas as imagens de oito primeiros 16 x 16 (16 x 128), você pode cortar, opcionalmente, a largura do lado direito deste bitmap de 176 a 128. 
 
-4. Importe os bitmaps para as categorias de faixa de opções e os painéis. Cada guia na barra de faixa de opções é uma categoria e consiste em um rótulo de texto e uma imagem opcional.
+   1. Importar filelarge.bmp, que contém os 32 x 32 (32 x 288) nove imagens. Alterar a ID do bitmap a ser `IDB_RIBBON_FILELARGE`.
 
-   1. Importe o bitmap homesmall.bmp, que contém oito 16 x 16 imagens para bitmaps de botão pequeno. Altere a ID do bitmap para IDB_RIBBON_HOMESMALL.
+1. Importe os bitmaps para as categorias de faixa de opções e os painéis. Cada guia na barra de faixa de opções é uma categoria e consiste em um rótulo de texto e uma imagem opcional.
 
-   2. Importe o bitmap homelarge.bmp, que contém oito 32 x 32 imagens para bitmaps de botão grande. Altere a ID do bitmap para IDB_RIBBON_HOMELARGE.
+   1. Importe o bitmap homesmall.bmp, que contém onze 16 x 16 imagens para bitmaps de botão pequeno. Alterar a ID do bitmap a ser `IDB_RIBBON_HOMESMALL`.
 
-5. Importar bitmaps para os painéis de faixa de opções redimensionada. Esses bitmaps ou ícones do painel, são usados após uma operação de redimensionamento, se a faixa de opções é muito pequena para exibir o painel inteiro.
+   1. Importe o bitmap homelarge.bmp, que contém nove 32 x 32 imagens para bitmaps de botão grande. Alterar a ID do bitmap a ser `IDB_RIBBON_HOMELARGE`.
 
-   1. Importe o bitmap panelicons.bmp, que contém oito 16 x 16 imagens. No **propriedades** janela da **Editor de Bitmap**, ajuste a largura do bitmap para 64 (16 x 64). Altere a ID do bitmap para IDB_PANEL_ICONS.
+1. Importar bitmaps para os painéis de faixa de opções redimensionada. Esses bitmaps ou ícones do painel, são usados após uma operação de redimensionamento, se a faixa de opções é muito pequena para exibir o painel inteiro.
 
-[[Seções](#top)]
+   1. Importe o bitmap panelicons.bmp, que contém oito 16 x 16 imagens. No **propriedades** janela da **Editor de Bitmap**, ajuste a largura do bitmap para 64 (16 x 64). Alterar a ID do bitmap a ser `IDB_PANEL_ICONS`.
+
+   > [!NOTE]
+   > Como precisamos apenas as imagens de quatro primeiros 16 x 16 (16 x 64), você pode cortar, opcionalmente, a largura do lado direito deste bitmap de 128 para 64. 
 
 ##  <a name="addribbon"></a> Adicionando um recurso de faixa de opções ao projeto
 
 Quando você converte um aplicativo que usa um aplicativo que usa uma faixa de opções de menus, não é necessário remover ou desabilitar os menus existentes. Em vez disso, você cria um recurso de faixa de opções, adicione botões de faixa de opções e, em seguida, associar os novos botões com os itens de menu existentes. Embora os menus não são mais visíveis, as mensagens da barra de faixa de opções são roteadas por meio dos menus. Além disso, os atalhos do menu continuam a funcionar.
 
-Uma faixa de opções consiste no botão de aplicativo, que é o botão grande no lado superior esquerdo da faixa de opções, e uma ou mais guias de categoria. Cada guia categoria contém um ou mais painéis que atuam como contêineres para controles e botões da faixa de opções. O procedimento a seguir mostra como criar um recurso de faixa de opções e, em seguida, personalizar o botão do aplicativo.
+Consiste em uma faixa de opções de **aplicativo** botão, que é o botão grande no lado superior esquerdo da faixa de opções e uma ou mais guias de categoria. Cada guia categoria contém um ou mais painéis que atuam como contêineres para controles e botões da faixa de opções. O procedimento a seguir mostra como criar um recurso de faixa de opções e, em seguida, personalizar o **aplicativo** botão.
 
 ### <a name="to-add-a-ribbon-resource-to-the-project"></a>Para adicionar um recurso de faixa de opções para o projeto
 
-1. Sobre o **Project** menu, clique em **adicionar recurso**.
+1. Com o projeto Scribble selecionado na **Gerenciador de soluções**, no **Project** menu, clique em **adicionar recurso**.
 
-2. No **adicionar recurso** caixa de diálogo, selecione **faixa de opções** e, em seguida, clique em **New**.
+1. No **adicionar recurso** caixa de diálogo, selecione **faixa de opções** e, em seguida, clique em **New**.
 
-   Visual Studio cria um recurso de faixa de opções e abre no modo de exibição design. A ID do recurso da faixa de opções é IDR_RIBBON1, que é exibido na **exibição de recurso**. A faixa de opções contém uma categoria e um painel.
+   Visual Studio cria um recurso de faixa de opções e abre no modo de exibição design. É a ID do recurso da faixa de opções `IDR_RIBBON1`, que é exibido na **exibição de recurso**. A faixa de opções contém uma categoria e um painel.
 
-3. Você pode personalizar o botão do aplicativo modificando suas propriedades. As IDs de mensagem que são usadas nesse código já estão definidas no menu para o Rabisco 1.0.
+1. Você pode personalizar o **aplicativo** botão modificando suas propriedades. As IDs de mensagem que são usadas nesse código já estão definidas no menu para o Rabisco 1.0.
 
-4. Na exibição de design, clique no botão de aplicativo para exibir suas propriedades. Alterar valores de propriedade da seguinte maneira: **imagem** à `IDB_RIBBON_MAIN`, **Prompt** para `File`, **chaves** para `f`, **imagens grandes** ao `IDB_RIBBON_FILELARGE`, e **imagens pequenas** para `IDB_RIBBON_FILESMALL`.
+1. No modo design, clique o **aplicativo** botão para exibir suas propriedades. Alterar valores de propriedade da seguinte maneira: **imagem** à `IDB_RIBBON_MAIN`, **Prompt** para `File`, **chaves** para `f`, **imagens grandes** ao `IDB_RIBBON_FILELARGE`, e **imagens pequenas** para `IDB_RIBBON_FILESMALL`.
 
-5. As modificações a seguir criar um menu que aparece quando o usuário clica no botão do aplicativo. Clique no botão de reticências (**...** ) ao lado **Main itens** para abrir o **Editor itens**.
+1. As modificações a seguir cria um menu que aparece quando o usuário clica o **aplicativo** botão. Clique no botão de reticências (**...** ) ao lado **Main itens** para abrir o **Editor itens**.
 
-   1. Clique em **adicionar** para adicionar um botão. Alteração **legenda** à `&New`, **ID** para `ID_FILE_NEW`, **imagem** para `0`, **imagem grande** para `0`.
+   1. Com o **Item** tipo **botão** selecionado, clique em **Add** para adicionar um botão. Alteração **legenda** à `&New`, **ID** para `ID_FILE_NEW`, **imagem** para `0`, **imagem grande** para `0`.
 
-   2. Clique em **adicionar** para adicionar um segundo botão. Alteração **legenda** à `&Save`, **ID** para `ID_FILE_SAVE`, **imagem** para `2`, e **imagem grande** para `2`.
+   1. Clique em **adicionar** para adicionar um botão. Alteração **legenda** à `&Save`, **ID** para `ID_FILE_SAVE`, **imagem** para `2`, e **imagem grande** para `2`.
 
-   3. Clique em **adicionar** para adicionar um terceiro botão. Alteração **legenda** à `Save &As`, **ID** para `ID_FILE_SAVE_AS`, **imagem** para `3`, e **imagem grande** para `3`.
+   1. Clique em **adicionar** para adicionar um botão. Alteração **legenda** à `Save &As`, **ID** para `ID_FILE_SAVE_AS`, **imagem** para `3`, e **imagem grande** para `3`.
 
-   4. Clique em **adicionar** para adicionar um quarto botão. Alteração **legenda** à `&Print`, **ID** para `ID_FILE_PRINT`, **imagem** para `4`, e **imagem grande** para `4`.
+   1. Clique em **adicionar** para adicionar um botão. Alteração **legenda** à `&Print`, **ID** para `ID_FILE_PRINT`, **imagem** para `4`, e **imagem grande** para `4`.
 
-   5. Alterar o **Item** de tipo para **separador** e, em seguida, clique em **adicionar**.
+   1. Alterar o **Item** de tipo para **separador** e, em seguida, clique em **adicionar**.
 
-   6. Alterar o **Item** de tipo para **botão**. Clique em **adicionar** para adicionar um quinto botão. Alteração **legenda** à `&Close`, **ID** para `ID_FILE_CLOSE`, **imagem** para `5`, e **imagem grande** para `5`.
+   1. Alterar o **Item** de tipo para **botão**. Clique em **adicionar** para adicionar um quinto botão. Alteração **legenda** à `&Close`, **ID** para `ID_FILE_CLOSE`, **imagem** para `5`, e **imagem grande** para `5`.
 
-6. As modificações a seguir cria um submenu sob o botão de impressão que você criou na etapa anterior.
+1. As modificações a seguir cria um submenu sob o **impressão** botão que você criou na etapa anterior.
 
    1. Clique o **Print** botão, altere o **Item** digite a **rótulo**e, em seguida, clique em **inserir**. Alteração **legenda** para `Preview and print the document`.
 
-   2. Clique o **Print** botão, altere o **Item** digite a **botão**e clique em **inserir**. Alteração **legenda** à `&Print`, **ID** para `ID_FILE_PRINT`, **imagem** para `4`, e **imagem grande** para `4`.
+   1. Clique o **Print** botão, altere o **Item** digite a **botão**e clique em **inserir**. Alteração **legenda** à `&Print`, **ID** para `ID_FILE_PRINT`, **imagem** para `4`, e **imagem grande** para `4`.
 
-   3. Clique o **Print** botão e, em seguida, clique em **inserir** para adicionar um botão. Alteração **legenda** à `&Quick Print`, **ID** para `ID_FILE_PRINT_DIRECT`, **imagem** para `7`, e **imagem grande** para `7`.
+   1. Clique o **Print** botão e, em seguida, clique em **inserir** para adicionar um botão. Alteração **legenda** à `&Quick Print`, **ID** para `ID_FILE_PRINT_DIRECT`, **imagem** para `7`, e **imagem grande** para `7`.
 
-   4. Clique o **Print** botão e, em seguida, clique em **inserir** para adicionar outro botão. Alteração **legenda** à `Print Pre&view`, **ID** para `ID_FILE_PRINT_PREVIEW`, **imagem** para `6`, e **imagem grande** para `6`.
+   1. Clique o **Print** botão e, em seguida, clique em **inserir** para adicionar outro botão. Alteração **legenda** à `Print Pre&view`, **ID** para `ID_FILE_PRINT_PREVIEW`, **imagem** para `6`, e **imagem grande** para `6`.
 
-   5. Agora você tenha modificado o **Main itens**. Clique em **feche** para sair do **Editor de itens**.
+   1. Agora você tenha modificado o **Main itens**. Clique em **feche** para sair do **Editor de itens**.
 
-7. A seguinte modificação cria um botão de sair que aparece na parte inferior do menu do botão do aplicativo.
+1. A seguinte modificação cria um botão de sair que aparece na parte inferior a **aplicativo** menu do botão.
 
    1. No **propriedades** janela, clique no botão de reticências (**...** ) ao lado **botão** para abrir o **Editor itens**.
 
-   2. Clique em **adicionar** para adicionar um botão. Alteração **legenda** à `E&xit`, **ID** para `ID_APP_EXIT`, **imagem** para `8`.
+   1. Com o **Item** tipo **botão** selecionado, clique em **Add** para adicionar um botão. Alteração **legenda** à `E&xit`, **ID** para `ID_APP_EXIT`, **imagem** para `8`.
 
-[[Seções](#top)]
+   1. Você modificou o **botões**. Clique em **feche** para sair do **Editor de itens**.
 
 ##  <a name="createinstance"></a> Criação de uma instância da barra de faixa de opções
 
@@ -247,26 +239,22 @@ As etapas a seguir mostram como criar uma instância da barra de faixa de opçõ
     m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);
     ```
 
-[[Seções](#top)]
-
 ##  <a name="addcategory"></a> Personalizando o recurso de faixa de opções
 
-Agora que você criou o botão do aplicativo, você pode adicionar elementos à faixa de opções.
+Agora que você criou o **aplicativo** botão, você pode adicionar elementos à faixa de opções.
 
 > [!NOTE]
 > Este passo a passo usa o mesmo ícone de painel para todos os painéis. No entanto, você pode usar outros índices de lista de imagem para exibir outros ícones.
 
 ### <a name="to-add-a-home-category-and-edit-panel"></a>Para adicionar uma categoria de Home e Editar painel
 
-1. O programa de rabisco requer apenas uma categoria. Na exibição de design, clique em **categoria** para exibir suas propriedades. Alterar valores de propriedade da seguinte maneira: **legenda** à `&Home`, **imagens grandes** para `IDB_RIBBON_HOMELARGE`, **imagens pequenas** para `IDB_RIBBON_HOMESMALL`.
+1. O programa de rabisco requer apenas uma categoria. Na exibição de design, nos **caixa de ferramentas**, clique duas vezes em **categoria** para adicioná-lo e exibir suas propriedades. Alterar valores de propriedade da seguinte maneira: **legenda** à `&Home`, **imagens grandes** para `IDB_RIBBON_HOMELARGE`, **imagens pequenas** para `IDB_RIBBON_HOMESMALL`.
 
-2. Cada categoria de faixa de opções é organizada em painéis nomeados. Cada painel contém um conjunto de controles que executam operações relacionadas. Esta categoria tem um painel. Clique em **painel**e altere **legenda** para `Edit` e **índice de imagem** para `0`.
+1. Cada categoria de faixa de opções é organizada em painéis nomeados. Cada painel contém um conjunto de controles que executam operações relacionadas. Esta categoria tem um painel. Clique em **painel**e altere **legenda** para `Edit`.
 
-3. Para o **editar** painel, adicione um botão que é responsável por limpar o conteúdo do documento. A ID da mensagem para que esse botão já foi definida no recurso do menu IDR_SCRIBBTYPE. Especificar `Clear All` como o texto do botão e o índice do bitmap que decora o botão. Abra o **caixa de ferramentas**e, em seguida, arraste um **botão** para o **editar** painel. Clique no botão e, em seguida, altere **legenda** à `Clear All`, **ID** para `ID_EDIT_CLEAR_ALL`, **índice de imagem** para `0`, **índice da imagem grande**  para `0`.
+1. Para o **editar** painel, adicione um botão que é responsável por limpar o conteúdo do documento. A ID da mensagem para que esse botão já foi definida no `IDR_SCRIBBTYPE` de recurso de menu. Especificar `Clear All` como o texto do botão e o índice do bitmap que decora o botão. Abra o **caixa de ferramentas**e, em seguida, arraste um **botão** para o **editar** painel. Clique no botão e, em seguida, altere **legenda** à `Clear All`, **ID** para `ID_EDIT_CLEAR_ALL`, **índice de imagem** para `0`, **índice da imagem grande**  para `0`.
 
-4. Salve as alterações e, em seguida, compilar e executar o aplicativo. O aplicativo de rabisco deve ser exibido e ele deve ter uma barra de faixa de opções na parte superior da janela, em vez de uma barra de menus. A barra de faixa de opções deve ter uma categoria, **página inicial**, e **Home** deve ter um painel, **editar**. Os botões da faixa de opções que você adicionou devem ser associados com os manipuladores de eventos existente e o **aberto**, **Close**, **salvar**, **impressão**, e **Limpar tudo** botões devem funcionar conforme o esperado.
-
-[[Seções](#top)]
+1. Salve as alterações e, em seguida, compilar e executar o aplicativo. O aplicativo de rabisco deve ser exibido e ele deve ter uma barra de faixa de opções na parte superior da janela, em vez de uma barra de menus. A barra de faixa de opções deve ter uma categoria, **página inicial**, e **Home** deve ter um painel, **editar**. Os botões da faixa de opções que você adicionou devem ser associados com os manipuladores de eventos existente e o **aberto**, **Close**, **salvar**, **impressão**, e **Limpar tudo** botões devem funcionar conforme o esperado.
 
 ##  <a name="setlook"></a> Definir a aparência do aplicativo
 
@@ -274,7 +262,7 @@ Um *Gerenciador visual* é um objeto global que controla todos os desenhos de um
 
 ### <a name="to-set-the-look-of-the-application"></a>Para definir a aparência do aplicativo
 
-1. No `CMainFrame::OnCreate` de função, digite o seguinte código para alterar o Gerenciador visual padrão e o estilo.
+1. No `CMainFrame::OnCreate` função, digite o seguinte código antes do `return 0;` instrução para alterar o Gerenciador visual padrão e o estilo.
 
     ```cpp
     // Set the default manager to Office 2007
@@ -282,15 +270,13 @@ Um *Gerenciador visual* é um objeto global que controla todos os desenhos de um
     CMFCVisualManagerOffice2007::SetStyle(CMFCVisualManagerOffice2007::Office2007_LunaBlue);
     ```
 
-2. Salve as alterações e, em seguida, compilar e executar o aplicativo. O interface do usuário do aplicativo deve se parecer com a interface do usuário do Office 2007.
-
-[[Seções](#top)]
+1. Salve as alterações e, em seguida, compilar e executar o aplicativo. O interface do usuário do aplicativo deve se parecer com a interface do usuário do Office 2007.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Você modificou o clássico exemplo de rabisco MFC de 1.0 para usar o Designer de faixa de opções. Agora vá para [parte 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md).
+Você modificou o clássico exemplo de rabisco MFC de 1.0 para usar o **Designer de faixa de opções**. Agora vá para [parte 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Explicações Passo a Passo](../mfc/walkthroughs-mfc.md)<br/>
-[Explicação passo a passo: atualizando o aplicativo de rabisco MFC (parte 2)] (.. / mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)
+[Instruções passo a passo: atualizando o aplicativo de rabisco MFC (parte 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

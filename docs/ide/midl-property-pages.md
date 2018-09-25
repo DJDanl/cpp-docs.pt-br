@@ -16,23 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4b32aaa7626bcb5cfabc59e0d3b9554d73379e5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1151f342c62dd0d657fecc82f4bff75164718a6e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328068"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378924"
 ---
 # <a name="midl-property-pages"></a>Páginas de propriedade MIDL
-O nó **MIDL** contém várias páginas de propriedades. Para acessá-los. clique com o botão direito do mouse no arquivo .idl no **Gerenciador de Soluções**.  
-  
--   [Páginas de propriedades de MDL: geral](../ide/midl-property-pages-general.md)  
-  
--   [Páginas de propriedades de MIDL: saída](../ide/midl-property-pages-output.md)  
-  
--   [Páginas de propriedades de MIDL: avançado](../ide/midl-property-pages-advanced.md)  
-  
- Para obter informações sobre como acessar programaticamente, consulte Opções de MIDL para projetos do C++ <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>  
-  
-## <a name="see-also"></a>Consulte também  
- [Páginas de propriedade](../ide/property-pages-visual-cpp.md)
+
+O nó **MIDL** contém várias páginas de propriedades. Para acessá-los. clique com o botão direito do mouse no arquivo .idl no **Gerenciador de Soluções**.
+
+- [Páginas de propriedades de MDL: geral](../ide/midl-property-pages-general.md)
+
+- [Páginas de propriedades de MIDL: saída](../ide/midl-property-pages-output.md)
+
+- [Páginas de propriedades de MIDL: avançado](../ide/midl-property-pages-advanced.md)
+
+Para obter informações sobre como acessar programaticamente, consulte Opções de MIDL para projetos do C++ <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>
+
+## <a name="see-also"></a>Consulte também
+
+[Páginas de propriedade](../ide/property-pages-visual-cpp.md)

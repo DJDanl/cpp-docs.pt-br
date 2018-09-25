@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f913f0b3065b136f626ef15cc2a77dce8d0254f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 0007cf50eafa7b61e48b550172eb2d316270c61f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33335085"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448308"
 ---
 # <a name="change-signature"></a>Alterar assinatura
 **O quê:** permite modificar os parâmetros de uma função.
 
-**Quando:** você deseja reordenar, adicionar, remover ou modificar os parâmetros de uma função que está sendo usada em uma variedade de locais.  
+**Quando:** você deseja reordenar, adicionar, remover ou modificar os parâmetros de uma função que está sendo usada em uma variedade de locais.
 
 **Por quê:** você pode alterar esses parâmetros manualmente por conta própria e, em seguida, encontrar todas as chamadas a essa função e alterá-las uma por uma, mas isso pode levar a erros.  Essa ferramenta de refatoração executará a tarefa automaticamente.
 

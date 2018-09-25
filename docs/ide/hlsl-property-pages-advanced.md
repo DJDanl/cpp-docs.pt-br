@@ -15,27 +15,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edcc84e8c12fab7149bbf6db2baf1f86e8635eb5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fa1a15f6542da165b615970591f384b875dd588b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725475"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444548"
 ---
 # <a name="hlsl-property-pages-advanced"></a>Páginas de propriedade HLSL: avançado
-Para configurar as propriedades a seguir do compilador HLSL (fxc.exe), use a página de propriedades **Avançado**. Para obter informações sobre como acessar a página de propriedades **Avançado** na pasta HLSL, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).  
-  
+
+Para configurar as propriedades a seguir do compilador HLSL (fxc.exe), use a página de propriedades **Avançado**. Para obter informações sobre como acessar a página de propriedades **Avançado** na pasta HLSL, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md).
+
 ## <a name="uielement-list"></a>Lista UIElement
 
 - **Suprimir Faixa de Inicialização**
 
-   **Sim (/nologo)** para suprimir a exibição da faixa de inicialização e da mensagem informativa; caso contrário, **Não**. Por padrão, o valor é **Sim (/nologo)**.  
-  
+   **Sim (/nologo)** para suprimir a exibição da faixa de inicialização e da mensagem informativa; caso contrário, **Não**. Por padrão, o valor é **Sim (/nologo)**.
+
 - **Tratar Avisos como Erros**
 
-   **Sim (/WX)** para tratar todos os avisos do compilador como erros; caso contrário, **Não**.  
-  
-## <a name="see-also"></a>Consulte também  
- [Páginas de propriedades de HLSL](../ide/hlsl-property-pages.md)   
- [Páginas de propriedades de HLSL: Geral](../ide/hlsl-property-pages-general.md)   
- [Páginas de propriedades HLSL: arquivos de saída](../ide/hlsl-property-pages-output-files.md)
+   **Sim (/WX)** para tratar todos os avisos do compilador como erros; caso contrário, **Não**.
+
+## <a name="see-also"></a>Consulte também
+
+[Páginas de propriedade HLSL](../ide/hlsl-property-pages.md)<br>
+[Páginas de propriedade HLSL: geral](../ide/hlsl-property-pages-general.md)<br>
+[Páginas de propriedades HLSL: arquivos de saída](../ide/hlsl-property-pages-output-files.md)
