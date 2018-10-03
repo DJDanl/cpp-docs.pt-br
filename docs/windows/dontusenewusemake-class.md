@@ -1,28 +1,30 @@
 ---
 title: Classe DontUseNewUseMake | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::DontUseNewUseMake
+- implements/Microsoft::WRL::Details::DontUseNewUseMake::operator new
 dev_langs:
 - C++
 helpviewer_keywords:
-- DontUseNewUseMake class
+- Microsoft::WRL::Details::DontUseNewUseMake class
+- Microsoft::WRL::Details::DontUseNewUseMake::operator new operator
 ms.assetid: 8b38d07b-fc14-4cea-afb9-4c1a7dde0093
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc2b2f03cfbd488de8358b2e4b123716efcbfe15
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9c1f3a57401a3ab2efd45cab2dace127010c24e6
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431301"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235276"
 ---
 # <a name="dontusenewusemake-class"></a>Classe DontUseNewUseMake
 
@@ -36,15 +38,15 @@ class DontUseNewUseMake;
 
 ## <a name="remarks"></a>Comentários
 
-Impeça o uso de operador **novos** em `RuntimeClass`. Consequentemente, você deve usar o [tornar função](../windows/make-function.md) em vez disso.
+Impeça o uso de operador `new` em `RuntimeClass`. Consequentemente, você deve usar o [tornar função](../windows/make-function.md) em vez disso.
 
 ## <a name="members"></a>Membros
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Nome|Descrição|
-|----------|-----------------|
-|[Operador DontUseNewUseMake::operator new](../windows/dontusenewusemake-operator-new-operator.md)|Sobrecarrega o operador **novos** e impede que ele seja usado no `RuntimeClass`.|
+Nome                                             | Descrição
+------------------------------------------------ | ---------------------------------------------------------------------------
+[Dontusenewusemake:: Operator new](#operator-new) | Sobrecarrega o operador `new` e impede que ele seja usado no `RuntimeClass`.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -56,7 +58,29 @@ Impeça o uso de operador **novos** em `RuntimeClass`. Consequentemente, você d
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Consulte também
+## <a name="operator-new"></a>Dontusenewusemake:: Operator new
 
-[Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)<br/>
-[Função Make](../windows/make-function.md)
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+
+```cpp
+void* operator new(
+   size_t,
+   _In_ void* placement
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*__unnamed0*<br/>
+Um parâmetro não nomeado que especifica o número de bytes de memória para alocar.
+
+*placement*<br/>
+O tipo a ser alocado.
+
+### <a name="return-value"></a>Valor de retorno
+
+Fornece uma maneira de passar argumentos adicionais se você sobrecarregar o operador `new`.
+
+### <a name="remarks"></a>Comentários
+
+Sobrecarrega o operador `new` e impede que ele seja usado no `RuntimeClass`.

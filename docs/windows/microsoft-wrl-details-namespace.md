@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dd07ead0608657597a81b239732347f67455273
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f95eaa49db5e09bceaefafc16312250d823e5d5c
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436878"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250387"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Namespace Microsoft::WRL::Details
 
@@ -43,7 +43,7 @@ namespace Microsoft::WRL::Details;
 |[Classe MakeAllocator](../windows/makeallocator-class.md)|Aloca memória para uma classe ativável, com ou sem suporte fraco de referência.|
 |[Classe ModuleBase](../windows/modulebase-class.md)|Representa a classe base do [módulo](../windows/module-class.md) classes.|
 |[Classe RemoveIUnknown](../windows/removeiunknown-class.md)|Cria um tipo que é equivalente a um `IUnknown`-tipo com base, mas tem não virtual `QueryInterface`, `AddRef`, e `Release` métodos.|
-|[Classe WeakReference](../windows/weakreference-class1.md)|Representa uma *referência fraca* que pode ser usado com o tempo de execução do Windows ou o com clássico. Uma referência fraca representa um objeto que pode ou não ser acessível.|
+|[Classe WeakReference](../windows/weakreference-class.md)|Representa uma *referência fraca* que pode ser usado com o tempo de execução do Windows ou o com clássico. Uma referência fraca representa um objeto que pode ou não ser acessível.|
 
 ### <a name="structures"></a>Estruturas
 
@@ -84,7 +84,7 @@ namespace Microsoft::WRL::Details;
 |[Função ActivationFactoryCallback](../windows/activationfactorycallback-function.md)|Obtém o alocador de ativação para a ID de ativação especificado.|
 |[Função Move](../windows/move-function.md)|Move o argumento especificado de um local para outro.|
 |[Função RaiseException](../windows/raiseexception-function.md)|Gera uma exceção no thread de chamada.|
-|[Função Swap (Biblioteca de Modelos C++ do Tempo de Execução do Windows)](../windows/swap-function-windows-runtime-cpp-template-library.md)|Troca os valores dos dois argumentos especificados.|
+|[Função swap (WRL)](../windows/swap-function-wrl.md)|Troca os valores dos dois argumentos especificados.|
 |[Função TerminateMap](../windows/terminatemap-function.md)|Desliga as fábricas de classes no módulo especificado.|
 
 ## <a name="requirements"></a>Requisitos

@@ -1,28 +1,34 @@
 ---
 title: Classe ComPtrRefBase | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::ComPtrRefBase
+- client/Microsoft::WRL::Details::ComPtrRefBase::operator IInspectable**
+- client/Microsoft::WRL::Details::ComPtrRefBase::operator IUnknown**
+- client/Microsoft::WRL::Details::ComPtrRefBase::ptr_
 dev_langs:
 - C++
 helpviewer_keywords:
-- ComPtrRefBase class
+- Microsoft::WRL::Details::ComPtrRefBase class
+- Microsoft::WRL::Details::ComPtrRefBase::operator IInspectable** operator
+- Microsoft::WRL::Details::ComPtrRefBase::operator IUnknown** operator
+- Microsoft::WRL::Details::ComPtrRefBase::ptr_ data member
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ca2cb8cdc748abcac61bd548491187095b71a3f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 02e430184c5fa7418eb02ed6ef2f63951af89a5c
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415311"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48233951"
 ---
 # <a name="comptrrefbase-class"></a>Classe ComPtrRefBase
 
@@ -40,7 +46,7 @@ class ComPtrRefBase;
 ### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
-Um [ComPtr\<T >](../windows/comptr-class.md) tipo ou um tipo derivado dele, não simplesmente a interface representada pelo **ComPtr**.
+Um [ComPtr\<T >](../windows/comptr-class.md) tipo ou um tipo derivado dele, não simplesmente a interface representada pelo `ComPtr`.
 
 ## <a name="remarks"></a>Comentários
 
@@ -50,22 +56,22 @@ Representa a classe base para o [ComPtrRef](../windows/comptrref-class.md) class
 
 ### <a name="public-typedefs"></a>Typedefs públicos
 
-|Nome|Descrição|
-|----------|-----------------|
-|`InterfaceType`|Um sinônimo para o tipo de parâmetro de modelo *T*.|
+Nome            | Descrição
+--------------- | -------------------------------------------------
+`InterfaceType` | Um sinônimo para o tipo de parâmetro de modelo *T*.
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Nome|Descrição|
-|----------|-----------------|
-|[Operador ComPtrRefBase::operator IInspectable**](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|Converte o atual [PTR _](../windows/comptrrefbase-ptr-data-member.md) membro de dados para um ponteiro-para-um-ponteiro-para o `IInspectable` interface.|
-|[Operador ComPtrRefBase::operator IUnknown**](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|Converte o atual [PTR _](../windows/comptrrefbase-ptr-data-member.md) membro de dados para um ponteiro-para-um-ponteiro-para o `IUnknown` interface.|
+Nome                                                                       | Descrição
+-------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------
+[Comptrrefbase:: Operator IInspectable * *](#operator-iinspectable-star-star) | Converte o atual [PTR _](#ptr) membro de dados para um ponteiro-para-um-ponteiro-para o `IInspectable` interface.
+[Comptrrefbase:: Operator IUnknown * *](#operator-iunknown-star-star)         | Converte o atual [PTR _](#ptr) membro de dados para um ponteiro-para-um-ponteiro-para o `IUnknown` interface.
 
 ### <a name="protected-data-members"></a>Membros de dados protegidos
 
-|Nome|Descrição|
-|----------|-----------------|
-|[Membro de dados ComPtrRefBase::ptr_](../windows/comptrrefbase-ptr-data-member.md)|Ponteiro para o tipo especificado pelo parâmetro de modelo atual.|
+Nome                        | Descrição
+--------------------------- | ----------------------------------------------------------------
+[ComPtrRefBase::ptr_](#ptr) | Ponteiro para o tipo especificado pelo parâmetro de modelo atual.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -77,6 +83,44 @@ Representa a classe base para o [ComPtrRef](../windows/comptrref-class.md) class
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>Consulte também
+## <a name="operator-iinspectable-star-star"></a>Comptrrefbase:: Operator IInspectable\* \* operador
 
-[Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+
+```cpp
+operator IInspectable**() const;
+```
+
+### <a name="remarks"></a>Comentários
+
+Converte o atual [PTR _](#ptr) membro de dados para um ponteiro-para-um-ponteiro-para o `IInspectable` interface.
+
+Um erro será emitido se o atual `ComPtrRefBase` não deriva de `IInspectable`.
+
+Essa conversão está disponível somente se `__WRL_CLASSIC_COM__` está definido.
+
+## <a name="operator-iunknown-star-star"></a>Comptrrefbase:: Operator IUnknown * * operador
+
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+
+```cpp
+operator IUnknown**() const;
+```
+
+### <a name="remarks"></a>Comentários
+
+Converte o atual [PTR _](#ptr) membro de dados para um ponteiro-para-um-ponteiro-para o `IUnknown` interface.
+
+Um erro será emitido se o atual `ComPtrRefBase` não deriva de `IUnknown`.
+
+## <a name="ptr"></a>ComPtrRefBase::ptr_
+
+Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretamente do seu código.
+
+```cpp
+T* ptr_;
+```
+
+### <a name="remarks"></a>Comentários
+
+Ponteiro para o tipo especificado pelo parâmetro de modelo atual. `ptr_` é o membro de dados protegidos.

@@ -1,28 +1,32 @@
 ---
 title: Estrutura HANDLETraits | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue
 dev_langs:
 - C++
 helpviewer_keywords:
-- HANDLETraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close method
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue method
 ms.assetid: 22963e88-d857-4624-9182-7c986daff722
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2193743da9e7b5667714650660cd8e1efdb5cf4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 33181b2cf477c3f753eacf63110a426b36e62b31
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610975"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235263"
 ---
 # <a name="handletraits-structure"></a>Estrutura HANDLETraits
 
@@ -38,16 +42,16 @@ struct HANDLETraits;
 
 ### <a name="public-typedefs"></a>Typedefs públicos
 
-|Nome|Descrição|
-|----------|-----------------|
-|`Type`|Um sinônimo de identificador.|
+Nome   | Descrição
+------ | ---------------------
+`Type` | Um sinônimo de identificador.
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
-|----------|-----------------|
-|[Método HANDLETraits::Close](../windows/handletraits-close-method.md)|Fecha o identificador especificado.|
-|[Método HANDLETraits::GetInvalidValue](../windows/handletraits-getinvalidvalue-method.md)|Representa um identificador inválido.|
+Nome                                              | Descrição
+------------------------------------------------- | -----------------------------
+[Handletraits:: Close](#close)                     | Fecha o identificador especificado.
+[Handletraits:: Getinvalidvalue](#getinvalidvalue) | Representa um identificador inválido.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -59,6 +63,33 @@ struct HANDLETraits;
 
 **Namespace:** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="see-also"></a>Consulte também
+## <a name="close"></a>Handletraits:: Close
 
-[Namespace Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+Fecha o identificador especificado.
+
+```cpp
+inline static bool Close(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*h*<br/>
+O identificador para fechar.
+
+### <a name="return-value"></a>Valor de retorno
+
+`true` Se manipular *h* fechado com êxito; caso contrário, `false`.
+
+## <a name="getinvalidvalue"></a>Handletraits:: Getinvalidvalue
+
+Representa um identificador inválido.
+
+```cpp
+inline static HANDLE GetInvalidValue();
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Sempre retorna INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE é definido pelo Windows).

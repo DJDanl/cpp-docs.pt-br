@@ -1,28 +1,48 @@
 ---
 title: Classe HandleT | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/25/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleT
+- corewrappers/Microsoft::WRL::Wrappers::HandleT::Attach
+- corewrappers/Microsoft::WRL::Wrappers::HandleT::Close
+- corewrappers/Microsoft::WRL::Wrappers::HandleT::Detach
+- corewrappers/Microsoft::WRL::Wrappers::HandleT::Get
+- corewrappers/Microsoft::WRL::Wrappers::HandleT::handle_
+- corewrappers/Microsoft::WRL::Wrappers::HandleT::HandleT
+- corewrappers/Microsoft::WRL::Wrappers::HandleT::InternalClose
+- corewrappers/Microsoft::WRL::Wrappers::HandleT::IsValid
+- corewrappers/Microsoft::WRL::Wrappers::HandleT::operator=
+- corewrappers/Microsoft::WRL::Wrappers::HandleT::~HandleT
 dev_langs:
 - C++
 helpviewer_keywords:
-- HandleT class
+- Microsoft::WRL::Wrappers::HandleT class
+- Microsoft::WRL::Wrappers::HandleT::Attach method
+- Microsoft::WRL::Wrappers::HandleT::Close method
+- Microsoft::WRL::Wrappers::HandleT::Detach method
+- Microsoft::WRL::Wrappers::HandleT::Get method
+- Microsoft::WRL::Wrappers::HandleT::handle_ data member
+- Microsoft::WRL::Wrappers::HandleT::HandleT, constructor
+- Microsoft::WRL::Wrappers::HandleT::InternalClose method
+- Microsoft::WRL::Wrappers::HandleT::IsValid method
+- Microsoft::WRL::Wrappers::HandleT::operator= operator
+- Microsoft::WRL::Wrappers::HandleT::~HandleT, destructor
 ms.assetid: 3822b32a-a426-4d94-a54d-919d4df60ee2
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6622e92112d9f73e673e2fb44598a393843bf0fa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fb39d7418ece213e9c36c048fb5bcd3c000beca4
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396331"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235315"
 ---
 # <a name="handlet-class"></a>Classe HandleT
 
@@ -46,44 +66,44 @@ Uma instância das [HandleTraits](../windows/handletraits-structure.md) estrutur
 
 ### <a name="public-typedefs"></a>Typedefs públicos
 
-|Nome|Descrição|
-|----------|-----------------|
-|`Traits`|Um sinônimo de `HandleTraits`.|
+Nome     | Descrição
+-------- | -----------------------------
+`Traits` | Um sinônimo de `HandleTraits`.
 
 ### <a name="public-constructors"></a>Construtores públicos
 
-|Nome|Descrição|
-|----------|-----------------|
-|[Construtor HandleT::HandleT](../windows/handlet-handlet-constructor.md)|Inicializa uma nova instância dos **HandleT** classe.|
-|[Destruidor HandleT::~HandleT](../windows/handlet-tilde-handlet-destructor.md)|Realiza o desligamento de uma instância das **HandleT** classe.|
+Nome                                | Descrição
+----------------------------------- | --------------------------------------------------
+[Handlet:: Handlet](#handlet)        | Inicializa uma nova instância da classe `HandleT`.
+[HandleT:: ~ HandleT](#tilde-handlet) | Realiza o desligamento de uma instância da `HandleT` classe.
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
-|----------|-----------------|
-|[Método HandleT::Attach](../windows/handlet-attach-method.md)|Associa o identificador especificado com o atual **HandleT** objeto.|
-|[Método HandleT::Close](../windows/handlet-close-method.md)|Fecha o atual **HandleT** objeto.|
-|[Método HandleT::Detach](../windows/handlet-detach-method.md)|Desassocia o atual **HandleT** objeto a partir de seu identificador subjacente.|
-|[Método HandleT::Get](../windows/handlet-get-method.md)|Obtém o valor do identificador subjacente.|
-|[Método HandleT::IsValid](../windows/handlet-isvalid-method.md)|Indica se o atual **HandleT** objeto representa um identificador.|
+Nome                         | Descrição
+---------------------------- | ----------------------------------------------------------------------
+[Handlet:: Attach](#attach)   | Associa o identificador especificado atual `HandleT` objeto.
+[Handlet:: Close](#close)     | Fecha o objeto `HandleT` atual.
+[Handlet:: Detach](#detach)   | Desassocia atual `HandleT` objeto a partir de seu identificador subjacente.
+[Handlet:: Get](#get)         | Obtém o valor do identificador subjacente.
+[Handlet:: IsValid](#isvalid) | Indica se o atual `HandleT` objeto representa um identificador.
 
 ### <a name="protected-methods"></a>Métodos Protegidos
 
-|Nome|Descrição|
-|----------|-----------------|
-|[Método HandleT::InternalClose](../windows/handlet-internalclose-method.md)|Fecha o atual **HandleT** objeto.|
+Nome                                     | Descrição
+---------------------------------------- | ------------------------------------
+[Handlet:: Internalclose](#internalclose) | Fecha o objeto `HandleT` atual.
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|Nome|Descrição|
-|----------|-----------------|
-|[Operador HandleT::operator=](../windows/handlet-operator-assign-operator.md)|Move o valor de especificado **HandleT** objeto atual **HandleT** objeto.|
+Nome                                   | Descrição
+-------------------------------------- | ----------------------------------------------------------------------------------
+[Handlet:: Operator =](#operator-assign) | Move o valor de especificado `HandleT` o objeto atual `HandleT` objeto.
 
 ### <a name="protected-data-members"></a>Membros de dados protegidos
 
-|Nome|Descrição|
-|----------|-----------------|
-|[Membro de dados HandleT::handle_](../windows/handlet-handle-data-member.md)|Contém o identificador que é representado pela **HandleT** objeto.|
+Nome                        | Descrição
+--------------------------- | ----------------------------------------------------------------
+[HandleT::handle_](#handle) | Contém o identificador que é representado pela `HandleT` objeto.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -95,6 +115,150 @@ Uma instância das [HandleTraits](../windows/handletraits-structure.md) estrutur
 
 **Namespace:** Microsoft::WRL::Wrappers
 
-## <a name="see-also"></a>Consulte também
+## <a name="tilde-handlet"></a>HandleT:: ~ HandleT
 
-[Namespace Microsoft::WRL::Wrappers](../windows/microsoft-wrl-wrappers-namespace.md)
+Realiza o desligamento de uma instância da `HandleT` classe.
+
+```cpp
+~HandleT();
+```
+
+## <a name="attach"></a>Handlet:: Attach
+
+Associa o identificador especificado atual `HandleT` objeto.
+
+```cpp
+void Attach(
+   typename HandleTraits::Type h
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*h*<br/>
+Um identificador.
+
+## <a name="close"></a>Handlet:: Close
+
+Fecha o objeto `HandleT` atual.
+
+```cpp
+void Close();
+```
+
+### <a name="remarks"></a>Comentários
+
+O identificador subjacente ao atual `HandleT` for fechada e o `HandleT` é definido como o estado inválido.
+
+Se o identificador não fechar corretamente, uma exceção é gerada no thread de chamada.
+
+## <a name="detach"></a>Handlet:: Detach
+
+Desassocia atual `HandleT` objeto a partir de seu identificador subjacente.
+
+```cpp
+typename HandleTraits::Type Detach();
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+O identificador subjacente.
+
+### <a name="remarks"></a>Comentários
+
+Quando essa operação for concluída, atual `HandleT` é definido como o estado inválido.
+
+## <a name="get"></a>Handlet:: Get
+
+Obtém o valor do identificador subjacente.
+
+```cpp
+typename HandleTraits::Type Get() const;
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Um identificador.
+
+## <a name="handle"></a>HandleT::handle_
+
+Contém o identificador que é representado pela `HandleT` objeto.
+
+```cpp
+typename HandleTraits::Type handle_;
+```
+
+## <a name="handlet"></a>Handlet:: Handlet
+
+Inicializa uma nova instância da classe `HandleT`.
+
+```cpp
+explicit HandleT(
+   typename HandleTraits::Type h =
+      HandleTraits::GetInvalidValue()  
+);
+
+HandleT(
+   _Inout_ HandleT&& h
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*h*<br/>
+Um identificador.
+
+### <a name="remarks"></a>Comentários
+
+O primeiro construtor inicializa um `HandleT` objeto que não é um identificador válido para um objeto. O segundo construtor cria um novo `HandleT` objeto de parâmetro *h*.
+
+## <a name="internalclose"></a>Handlet:: Internalclose
+
+Fecha o objeto `HandleT` atual.
+
+```cpp
+virtual bool InternalClose();
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+`true` Se o atual `HandleT` fechado com êxito; caso contrário, `false`.
+
+### <a name="remarks"></a>Comentários
+
+`InternalClose()` é `protected`.
+
+## <a name="isvalid"></a>Handlet:: IsValid
+
+Indica se o atual `HandleT` objeto representa um identificador.
+
+```cpp
+bool IsValid() const;
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+`true` Se o `HandleT` representa um identificador; caso contrário, `false`.
+
+## <a name="operator-assign"></a>Handlet:: Operator =
+
+Move o valor de especificado `HandleT` o objeto atual `HandleT` objeto.
+
+```cpp
+HandleT& operator=(
+   _Inout_ HandleT&& h
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*h*<br/>
+Uma referência rvalue para um identificador.
+
+### <a name="return-value"></a>Valor de retorno
+
+Uma referência ao atual `HandleT` objeto.
+
+### <a name="remarks"></a>Comentários
+
+Esta operação invalida a `HandleT` objeto especificado pelo parâmetro *h*.

@@ -1,28 +1,38 @@
 ---
 title: Estrutura ChainInterfaces | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/28/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::ChainInterfaces
+- implements/Microsoft::WRL::ChainInterfaces::CanCastTo
+- implements/Microsoft::WRL::ChainInterfaces::CastToUnknown
+- implements/Microsoft::WRL::ChainInterfaces::FillArrayWithIid
+- implements/Microsoft::WRL::ChainInterfaces::IidCount
+- implements/Microsoft::WRL::ChainInterfaces::Verify
 dev_langs:
 - C++
 helpviewer_keywords:
-- ChainInterfaces structure
+- Microsoft::WRL::ChainInterfaces structure
+- Microsoft::WRL::ChainInterfaces::CanCastTo method
+- Microsoft::WRL::ChainInterfaces::CastToUnknown method
+- Microsoft::WRL::ChainInterfaces::FillArrayWithIid method
+- Microsoft::WRL::ChainInterfaces::IidCount constant
+- Microsoft::WRL::ChainInterfaces::Verify method
 ms.assetid: d7415b59-5468-4bef-a3fd-8d82b12f0e9c
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88ddd3dd59000b629f6e72933b1a0b02cc582c89
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a80b9afd8f2db895440d12776173c559e41c2cfe
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409865"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234860"
 ---
 # <a name="chaininterfaces-structure"></a>Estrutura ChainInterfaces
 
@@ -100,24 +110,24 @@ Um tipo derivado.
 O tipo base de um tipo derivado.
 
 *hasImplements*<br/>
-Um valor booliano que, se **verdadeira**, significa que você não pode usar um [mescla](../windows/mixin-structure.md) estrutura com uma classe que deriva a [implementa](../windows/implements-structure.md) estrutura.
+Um valor booliano que, se `true`, significa que você não pode usar um [mescla](../windows/mixin-structure.md) estrutura com uma classe que deriva de [implementa](../windows/implements-structure.md) estrutura.
 
 ## <a name="members"></a>Membros
 
 ### <a name="protected-methods"></a>Métodos Protegidos
 
-|Nome|Descrição|
-|----------|-----------------|
-|[Método ChainInterfaces::CanCastTo](../windows/chaininterfaces-cancastto-method.md)|Indica se a ID de interface especificado pode ser convertida em cada um dos especializações definidas pela **ChainInterface** parâmetros de modelo.|
-|[Método ChainInterfaces::CastToUnknown](../windows/chaininterfaces-casttounknown-method.md)|Converte o ponteiro de interface do tipo definido pelos *I0* parâmetro de modelo para um ponteiro para `IUnknown`.|
-|[Método ChainInterfaces::FillArrayWithIid](../windows/chaininterfaces-fillarraywithiid-method.md)|Armazena a ID de interface definida pelo *I0* parâmetro de modelo em um local especificado em uma matriz especificada de IDs de interface.|
-|[Método ChainInterfaces::Verify](../windows/chaininterfaces-verify-method.md)|Verifica se cada interface definido pelos parâmetros de modelo *I0* por meio *I9* herda `IUnknown` e/ou `IInspectable`e que *I0* herda de *I1* por meio *I9*.|
+Nome                                                   | Descrição
+------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[Chaininterfaces:: Cancastto](#cancastto)               | Indica se a ID de interface especificado pode ser convertida em cada um dos especializações definidas pelo `ChainInterface` parâmetros de modelo.
+[Chaininterfaces:: Casttounknown](#casttounknown)       | Converte o ponteiro de interface do tipo definido pelos *I0* parâmetro de modelo para um ponteiro para `IUnknown`.
+[Chaininterfaces:: Fillarraywithiid](#fillarraywithiid) | Armazena a ID de interface definida pelo *I0* parâmetro de modelo em um local especificado em uma matriz especificada de IDs de interface.
+[Chaininterfaces:: Verify](#verify)                     | Verifica se cada interface definido pelos parâmetros de modelo *I0* por meio *I9* herda `IUnknown` e/ou `IInspectable`e que *I0* herda de *I1* por meio *I9*.
 
 ### <a name="protected-constants"></a>Constantes protegidos
 
-|Nome|Descrição|
-|----------|-----------------|
-|[Constante ChainInterfaces::IidCount](../windows/chaininterfaces-iidcount-constant.md)|O número total de IDs contidas nas interfaces especificadas pelos parâmetros de modelo de interface *I0* por meio *I9*.|
+Nome                                   | Descrição
+-------------------------------------- | -----------------------------------------------------------------------------------------------------------------
+[Chaininterfaces:: Iidcount](#iidcount) | O número total de IDs contidas nas interfaces especificadas pelos parâmetros de modelo de interface *I0* por meio *I9*.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -131,6 +141,86 @@ Um valor booliano que, se **verdadeira**, significa que você não pode usar um 
 
 **Namespace:** Microsoft::WRL
 
-## <a name="see-also"></a>Consulte também
+## <a name="cancastto"></a>Chaininterfaces:: Cancastto
 
-[Namespace Microsoft::WRL](../windows/microsoft-wrl-namespace.md)
+Indica se a ID de interface especificado pode ser convertida em cada um dos especializações definidas pelos parâmetros de modelo não padrão.
+
+```cpp
+__forceinline bool CanCastTo(
+   REFIID riid,
+   _Deref_out_ void **ppv
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*riid*<br/>
+Uma ID de interface.
+
+*ppv*<br/>
+Um ponteiro para a última ID de interface que foi convertido com êxito.
+
+### <a name="return-value"></a>Valor de retorno
+
+`true` Se todas as operações de conversão for bem-sucedida; Caso contrário, `false`.
+
+## <a name="casttounknown"></a>Chaininterfaces:: Casttounknown
+
+Converte o ponteiro de interface do tipo definido pelos *I0* parâmetro de modelo para um ponteiro para `IUnknown`.
+
+```cpp
+__forceinline IUnknown* CastToUnknown();
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Um ponteiro para `IUnknown`.
+
+## <a name="fillarraywithiid"></a>Chaininterfaces:: Fillarraywithiid
+
+Armazena a ID de interface definida pelo *I0* parâmetro de modelo em um local especificado em uma matriz especificada de IDs de interface.
+
+```cpp
+__forceinline static void FillArrayWithIid(
+   _Inout_ unsigned long &index,
+   _In_ IID* iids
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*index*<br/>
+Ponteiro para um valor de índice para o *iids* matriz.
+
+*IIDs*<br/>
+Uma matriz de IDs de interface.
+
+## <a name="iidcount"></a>Chaininterfaces:: Iidcount
+
+O número total de IDs contidas nas interfaces especificadas pelos parâmetros de modelo de interface *I0* por meio *I9*.
+
+```cpp
+static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + Details::InterfaceTraits<I1>::IidCount + Details::InterfaceTraits<I2>::IidCount + Details::InterfaceTraits<I3>::IidCount + Details::InterfaceTraits<I4>::IidCount + Details::InterfaceTraits<I5>::IidCount + Details::InterfaceTraits<I6>::IidCount + Details::InterfaceTraits<I7>::IidCount + Details::InterfaceTraits<I8>::IidCount + Details::InterfaceTraits<I9>::IidCount;
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+O número total de identificadores de interface.
+
+### <a name="remarks"></a>Comentários
+
+Parâmetros de modelo *I0* e *I1* são necessários e os parâmetros *I2* por meio de *I9* são opcionais. A contagem IID de cada interface normalmente é 1.
+
+## <a name="verify"></a>Chaininterfaces:: Verify
+
+Verifica se cada interface definido pelos parâmetros de modelo *I0* por meio *I9* herda `IUnknown` e/ou `IInspectable`e que *I0* herda de *I1* por meio *I9*.
+
+```cpp
+WRL_NOTHROW __forceinline static void Verify();
+```
+
+### <a name="remarks"></a>Comentários
+
+Se a operação de verificação falhar, um `static_assert` emite uma mensagem de erro que descreve a falha.
+
+Parâmetros de modelo *I0* e *I1* são necessários e os parâmetros *I2* por meio de *I9* são opcionais.

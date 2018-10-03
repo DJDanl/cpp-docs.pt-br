@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ffea6dede3bc6bcc7c28b2326299362e78ed2b9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8c9aebeb2216bf8248b3182159a0f0aef1482c3b
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599295"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250439"
 ---
 # <a name="microsoftwrl-namespace"></a>Namespace Microsoft::WRL
 
@@ -89,7 +89,7 @@ namespace Microsoft::WRL;
 |Nome|Descrição|
 |----------|-----------------|
 |[Função AsWeak](../windows/asweak-function.md)|Recupera uma referência fraca a uma instância especificada.|
-|[Função de retorno de chamada](../windows/callback-function-windows-runtime-cpp-template-library.md)|Cria um objeto cuja função de membro é um método de retorno de chamada.|
+|[Função de retorno de chamada (WRL)](../windows/callback-function-wrl.md)|Cria um objeto cuja função de membro é um método de retorno de chamada.|
 |[Função CreateActivationFactory](../windows/createactivationfactory-function.md)|Cria uma fábrica que produz instâncias da classe especificada que pode ser ativado pelo tempo de execução do Windows.|
 |[Função CreateClassFactory](../windows/createclassfactory-function.md)|Cria uma fábrica que produz instâncias da classe especificada.|
 |[Função Make](../windows/make-function.md)|Inicializa a classe de tempo de execução do Windows especificada.|

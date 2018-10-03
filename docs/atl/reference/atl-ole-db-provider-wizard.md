@@ -1,7 +1,7 @@
 ---
 title: Assistente de provedor ATL OLE DB | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -17,16 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15104e0252ad6994b6220b433c7324085199440c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6857bf80aaaad36b4dcfc4fbf1330eccd03f971a
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717204"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250348"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Assistente de provedor ATL OLE DB
 
 Este assistente cria as classes que compõem um provedor OLE DB.
+
+> [!WARNING]
+> No Visual Studio 2017 versão 15,9 este assistente de código foi preterido e será removido em uma versão futura do Visual Studio. Este assistente é raramente usado. Suporte geral para ATL e MFC não é afetado pela remoção desse assistente. Se você quiser compartilhar seus comentários sobre essa substituição, conclua [desta pesquisa](https://www.surveymonkey.com/r/QDWKKCN). Sua opinião é importante para nós.
+
 
 ## <a name="remarks"></a>Comentários
 

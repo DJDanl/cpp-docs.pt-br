@@ -1,28 +1,32 @@
 ---
 title: Estrutura HANDLENullTraits | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue
 dev_langs:
 - C++
 helpviewer_keywords:
-- HANDLENullTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close method
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue method
 ms.assetid: 88a29a14-c516-40cb-a0ca-ee897a668623
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a49a1a1ac4495c7697fc041f8fcf217850f09d8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 517e861020c48d08f40c9683822e3df23cbf38a2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609418"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235887"
 ---
 # <a name="handlenulltraits-structure"></a>Estrutura HANDLENullTraits
 
@@ -38,16 +42,16 @@ struct HANDLENullTraits;
 
 ### <a name="public-typedefs"></a>Typedefs públicos
 
-|Nome|Descrição|
-|----------|-----------------|
-|`Type`|Um sinônimo de identificador.|
+Nome   | Descrição
+------ | ---------------------
+`Type` | Um sinônimo de identificador.
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Nome|Descrição|
-|----------|-----------------|
-|[Método HANDLENullTraits::Close](../windows/handlenulltraits-close-method.md)|Fecha o identificador especificado.|
-|[Método HANDLENullTraits::GetInvalidValue](../windows/handlenulltraits-getinvalidvalue-method.md)|Representa um identificador inválido.|
+Nome                                                  | Descrição
+----------------------------------------------------- | -----------------------------
+[Handlenulltraits:: Close](#close)                     | Fecha o identificador especificado.
+[Handlenulltraits:: Getinvalidvalue](#getinvalidvalue) | Representa um identificador inválido.
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -59,6 +63,33 @@ struct HANDLENullTraits;
 
 **Namespace:** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="see-also"></a>Consulte também
+## <a name="close"></a>Handlenulltraits:: Close
 
-[Namespace Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+Fecha o identificador especificado.
+
+```cpp
+inline static bool Close(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*h*<br/>
+O identificador para fechar.
+
+### <a name="return-value"></a>Valor de retorno
+
+`true` Se manipular *h* fechado com êxito; caso contrário, `false`.
+
+## <a name="getinvalidvalue"></a>Handlenulltraits:: Getinvalidvalue
+
+Representa um identificador inválido.
+
+```cpp
+inline static Type GetInvalidValue();
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Sempre retorna `nullptr`.

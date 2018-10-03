@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b656af864f8a0dd7c5a69866976b4c1e624b87b9
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 30e843c6df70548257de1bf1af8c5f0e83555652
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764287"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234051"
 ---
 # <a name="implementing-a-dialog-box"></a>Implementando uma caixa de diálogo
 
@@ -30,7 +30,7 @@ Há duas maneiras de adicionar uma caixa de diálogo ao seu projeto ATL: usar o 
 
 ## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>Adicionando uma caixa de diálogo com o Assistente de caixa de diálogo do ATL
 
-No [caixa de diálogo Adicionar classe](../ide/add-class-dialog-box.md), selecione o objeto de caixa de diálogo do ATL para adicionar uma caixa de diálogo ao seu projeto ATL. Preencha o Assistente de caixa de diálogo do ATL conforme apropriado e clique em **concluir**. O assistente adiciona uma classe derivada de [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) ao seu projeto. Abra a exibição de recurso do **exibição** menu, localize a caixa de diálogo e clique duas vezes nele para abri-lo no editor de recursos.
+No [caixa de diálogo Adicionar classe](../ide/add-class-dialog-box.md), selecione o objeto de caixa de diálogo do ATL para adicionar uma caixa de diálogo ao seu projeto ATL. Preencha o Assistente de caixa de diálogo do ATL conforme apropriado e clique em **concluir**. O assistente adiciona uma classe derivada de [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) ao seu projeto. Abra **exibição de recurso** da **exibição** menu, localize a caixa de diálogo e clique duas vezes nele para abri-lo no editor de recursos.
 
 > [!NOTE]
 >  Se a caixa de diálogo é derivada de `CAxDialogImpl`, ele pode hospedar os dois ActiveX e controles do Windows. Se você não quiser a sobrecarga de suporte a controles ActiveX em sua classe de caixa de diálogo, use [CSimpleDialog](../atl/reference/csimpledialog-class.md) ou [CDialogImpl](../atl/reference/cdialogimpl-class.md) em vez disso.

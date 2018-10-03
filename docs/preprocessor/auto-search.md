@@ -16,28 +16,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09231dbb934d1846f3f54f0c04d89ec0a0957f73
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7ef8fbd52aada21295f1eb88dd98216e83366af7
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379054"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235627"
 ---
 # <a name="autosearch"></a>auto_search
-**Específico do C++**  
-  
-Especifica que, quando uma biblioteca de tipos é referenciada com `#import` e ela mesma referencia outra biblioteca de tipos, o compilador pode fazer implícito `#import` da biblioteca de tipos.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-auto_search  
-```  
-  
-## <a name="remarks"></a>Comentários  
- **FIM de específico de C++**  
-  
-## <a name="see-also"></a>Consulte também 
+
+**Específico do C++**
+
+Especifica que, quando uma biblioteca de tipos é referenciada com `#import` e ela mesma referencia outra biblioteca de tipos, o compilador pode fazer implícito `#import` da biblioteca de tipos.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+auto_search
+```
+
+## <a name="remarks"></a>Comentários
+
+**FIM de específico de C++**
+
+## <a name="see-also"></a>Consulte também
 
 [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import diretiva](../preprocessor/hash-import-directive-cpp.md)

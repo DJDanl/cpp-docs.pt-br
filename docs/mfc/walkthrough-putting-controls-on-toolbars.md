@@ -15,26 +15,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8267704e6bb1b43a13cc05d21d0572695365fd6
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 1995d3472f175872e084e2654531a2e72a90f950
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169743"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235499"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Instruções passo a passo: colocando controles em barras de ferramentas
 
-Este tópico descreve como adicionar um botão de barra de ferramentas que contém um controle do Windows para uma barra de ferramentas. No MFC, um botão de barra de ferramentas deve ser um [classe CMFCToolBarButton](../mfc/reference/cmfctoolbarbutton-class.md)-derivado de classe, por exemplo [classe CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [classe CMFCToolBarEditBoxButton](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Classe CMFCDropDownToolbarButton](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), ou [classe CMFCToolBarMenuButton](../mfc/reference/cmfctoolbarmenubutton-class.md).
+Este artigo descreve como adicionar um botão de barra de ferramentas que contém um controle do Windows para uma barra de ferramentas. No MFC, um botão de barra de ferramentas deve ser um [classe CMFCToolBarButton](../mfc/reference/cmfctoolbarbutton-class.md)-derivado de classe, por exemplo [classe CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [classe CMFCToolBarEditBoxButton](../mfc/reference/cmfctoolbareditboxbutton-class.md), [Classe CMFCDropDownToolbarButton](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), ou [classe CMFCToolBarMenuButton](../mfc/reference/cmfctoolbarmenubutton-class.md).
 
 ## <a name="adding-controls-to-toolbars"></a>Adicionando controles a barras de ferramentas
 
 Para adicionar um controle a uma barra de ferramentas, siga estas etapas:
 
-1. Reserve uma ID de recurso fictício para o botão no recurso da barra de ferramentas pai. Para obter mais informações sobre como criar botões usando o **barra de ferramentas do Editor** no Visual Studio, consulte o [Editor de barra de ferramentas](../windows/toolbar-editor.md) tópico.
+1. Reserve uma ID de recurso fictício para o botão no recurso da barra de ferramentas pai. Para obter mais informações sobre como criar botões usando o **barra de ferramentas do Editor** no Visual Studio, consulte o [Editor de barra de ferramentas](../windows/toolbar-editor.md) artigo.
 
 1. Reserve uma imagem da barra de ferramentas (ícone do botão) para o botão em todos os bitmaps de barra de ferramentas pai.
 
-1. No manipulador de mensagens que processa o `AFX_WM_RESETTOOLBAR` da mensagem, faça o seguinte:
+1. No manipulador de mensagens que processa o `AFX_WM_RESETTOOLBAR` a mensagem, execute as seguintes etapas:
 
    1. Construir o controle de botão, usando um `CMFCToolbarButton`-classe derivada.
 
@@ -51,7 +51,7 @@ Ao habilitar a personalização, você cria o **personalizar** caixa de diálogo
 
 ## <a name="example-creating-a-find-combo-box"></a>Exemplo: Criando uma caixa de combinação localizar
 
-Esta seção descreve como criar uma **localizar** controle de caixa de combinação que aparece em uma barra de ferramentas e contém cadeias de caracteres de pesquisa usados recentemente. O usuário pode digitar uma cadeia de caracteres no controle e, em seguida, pressione a tecla enter para pesquisar um documento ou pressione a tecla ESC para retornar o foco para o quadro principal. Este exemplo supõe que o documento é exibido em uma [classe CEditView](../mfc/reference/ceditview-class.md)-derivado do modo de exibição.
+Esta seção descreve como criar uma **localizar** controle de caixa de combinação que aparece em uma barra de ferramentas e contém cadeias de caracteres de pesquisa recentes usado. O usuário pode digitar uma cadeia de caracteres no controle e, em seguida, pressione a tecla enter para pesquisar um documento ou pressione a tecla ESC para retornar o foco para o quadro principal. Este exemplo supõe que o documento é exibido em uma [classe CEditView](../mfc/reference/ceditview-class.md)-derivado do modo de exibição.
 
 ### <a name="creating-the-find-control"></a>Criando o controle Find
 
@@ -72,7 +72,7 @@ Primeiro, crie o **localizar** controle caixa de combinação:
 
 1. No `CFindComboBox` classe, substitua o `PreTranslateMessage` método virtual. Esse método permitirá que a caixa de combinação processar o [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) mensagem. Se o usuário pressiona a tecla ESC (`VK_ESCAPE`), retornar o foco para a janela de quadro principal. Se o usuário pressiona a tecla Enter (`VK_ENTER`), postar para a janela de quadro principal um `WM_COMMAND` mensagem que contém o `ID_EDIT_FIND_COMBO` comando ID.
 
-1. Criar uma classe para o **encontrar** botão da caixa de combinação, derivado de [classe CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). Neste exemplo, o nome usado é `CFindComboButton`.
+1. Criar uma classe para o **encontrar** botão da caixa de combinação, derivado de [classe CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). Neste exemplo, ela é nomeada `CFindComboButton`.
 
 1. O construtor de `CMFCToolbarComboBoxButton` usa três parâmetros: a ID de comando do botão, o índice de imagem do botão e o estilo da caixa de combinação. Defina esses parâmetros da seguinte maneira:
 

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 210cf8d3183e9fcd94cfa51d875a0b26e4a8fa07
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 165ea5b42ea4e293eb60b7a798778e3a461e0385
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029652"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235445"
 ---
 # <a name="how-to-migrate-to-clr"></a>Como migrar para /clr
 
@@ -118,7 +118,7 @@ Cabeçalhos pré-compilados são suportados sob **/clr**. No entanto, se você c
 
 A maneira mais fácil compilar um projeto que alguns módulos são compilados **/clr** é desabilitar totalmente o cabeçalhos pré-compilados. (No diálogo de páginas de propriedades do projeto, abra o nó C/C++ e selecione cabeçalhos pré-compilados. Em seguida, altere a propriedade de criar/usar cabeçalho pré-compilado para "Não usando cabeçalhos pré-compilados".)
 
-No entanto, especialmente para projetos grandes, cabeçalhos pré-compilados fornecem muito maior velocidade de compilação, para que desabilitar esse recurso não é desejável. Nesse caso, é melhor configurar o **/clr** e não **/clr** arquivos para usar cabeçalhos pré-compilados separados. Isso pode ser feito em uma única etapa, a seleção de vários módulos a serem compilados **/clr** usando o Gerenciador de soluções, clicando duas vezes no grupo e selecionar propriedades. Em seguida, altere as propriedades a criar/usar PCH através de arquivo e o arquivo de cabeçalho pré-compilado para usar um nome de arquivo de cabeçalho diferente e um arquivo PCH, respectivamente.
+No entanto, especialmente para projetos grandes, cabeçalhos pré-compilados fornecem muito maior velocidade de compilação, para que desabilitar esse recurso não é desejável. Nesse caso, é melhor configurar o **/clr** e não **/clr** arquivos para usar cabeçalhos pré-compilados separados. Isso pode ser feito em uma única etapa, a seleção de vários módulos a serem compilados **/clr** usando **Gerenciador de soluções**, clicando duas vezes no grupo e selecionar propriedades. Em seguida, altere as propriedades a criar/usar PCH através de arquivo e o arquivo de cabeçalho pré-compilado para usar um nome de arquivo de cabeçalho diferente e um arquivo PCH, respectivamente.
 
 ## <a name="fixing-errors"></a>Correção de erros
 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 208ae27e694396a21b76bc482c87084e03a21975
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: d3623eb594ff82660e97809eef609a33e74e74dc
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169678"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235432"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Instruções passo a passo: atualizando o aplicativo de rabisco MFC (parte 2)
 
@@ -116,17 +116,17 @@ O aplicativo de rabisco original permite que o usuário selecione larguras de ca
 
 1. Clique na segunda caixa de combinação. Alteração **legenda** à `Thick Pen`, **ID** para `ID_PEN_THICK_WIDTH`, **tipo** para `Drop List`, **dados** para `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`, e **texto** para `5`.
 
-1. As novas caixas de combinação não correspondem a qualquer item de menu existente. Portanto, você deve criar um item de menu para cada opção de caneta.
+1. As novas caixas de combinação não correspondem a qualquer item de menu existentes, então você deve criar um item de menu para cada opção de caneta.
 
    1. No **exibição de recurso** janela, abra o **IDR_SCRIBBTYPE** de recurso de menu.
 
    1. Clique em **caneta** para abrir o menu de caneta. Em seguida, clique em **tipo aqui** e digite `Thi&n Pen`.
 
-   1. Clique com botão direito o texto que você acabou de digitar para abrir o **propriedades** janela e, em seguida, alterar a ID de propriedade para `ID_PEN_THIN_WIDTH`.
+   1. Clique com botão direito o texto que você digitou para abrir o **propriedades** janela e, em seguida, alterar a ID de propriedade para `ID_PEN_THIN_WIDTH`.
 
-   1. Você também deve criar um manipulador de eventos para cada item de menu de caneta. Clique com botão direito do **EST a & brir n** item de menu que você acabou de criar e, em seguida, clique em **Adicionar manipulador de eventos**. O **Assistente de manipulador de eventos** é exibida.
+   1. Crie um manipulador de eventos para cada item de menu de caneta. Clique com botão direito do **EST a & brir n** item de menu que você criou e, em seguida, clique em **Adicionar manipulador de eventos**. O **Assistente de manipulador de eventos** é exibida.
 
-   1. No **lista de classes** caixa no assistente, selecione **CScribbleDoc** e, em seguida, clique em **adicionar e editar**. Isso cria um manipulador de eventos chamado `CScribbleDoc::OnPenThinWidth`.
+   1. No **lista de classes** caixa no assistente, selecione **CScribbleDoc** e, em seguida, clique em **adicionar e editar**. O comando cria um manipulador de eventos chamado `CScribbleDoc::OnPenThinWidth`.
 
    1. Adicione o código a seguir ao `CScribbleDoc::OnPenThinWidth`.
 
@@ -156,11 +156,11 @@ O aplicativo de rabisco original permite que o usuário selecione larguras de ca
 
    1. Clique em **caneta** para abrir o menu de caneta. Em seguida, clique em **tipo aqui** e digite `Thic&k Pen`.
 
-   1. Clique com botão direito o texto que você acabou de digitar para exibir o **propriedades** janela. Altere a propriedade de ID para `ID_PEN_THICK_WIDTH`.
+   1. Clique com botão direito o texto que você digitou para exibir o **propriedades** janela. Altere a propriedade de ID para `ID_PEN_THICK_WIDTH`.
 
-   1. Clique com botão direito do **caneta espessa** item de menu que você acabou de criar e, em seguida, clique em **Adicionar manipulador de eventos**. O **Assistente de manipulador de eventos** é exibida.
+   1. Com o botão direito do **caneta espessa** item de menu que você criou e, em seguida, clique em **Adicionar manipulador de eventos**. O **Assistente de manipulador de eventos** é exibida.
 
-   1. No **lista de classes** caixa do assistente, selecione **CScribbleDoc** e, em seguida, clique em **adicionar e editar**. Isso cria um manipulador de eventos chamado `CScribbleDoc::OnPenThickWidth`.
+   1. No **lista de classes** caixa do assistente, selecione **CScribbleDoc** e, em seguida, clique em **adicionar e editar**. O comando cria um manipulador de eventos chamado `CScribbleDoc::OnPenThickWidth`.
 
    1. Adicione o código a seguir ao `CScribbleDoc::OnPenThickWidth`.
 
@@ -190,7 +190,7 @@ Em seguida, adicione uma [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolo
 
 ### <a name="to-add-a-color-button-to-the-pen-panel"></a>Para adicionar um botão de cor ao painel de caneta
 
-1. Antes de adicionar o botão de cor, crie um item de menu para ele. No **exibição de recurso** janela, abra o **IDR_SCRIBBTYPE** de recurso de menu. Clique o **caneta** item de menu para abrir o menu de caneta. Em seguida, clique em **tipo aqui** e digite `&Color`. Clique com botão direito o texto que você acabou de digitar para exibir o **propriedades** janela. Alterar a ID para `ID_PEN_COLOR`.
+1. Antes de adicionar o botão de cor, crie um item de menu para ele. No **exibição de recurso** janela, abra o **IDR_SCRIBBTYPE** de recurso de menu. Clique o **caneta** item de menu para abrir o menu de caneta. Em seguida, clique em **tipo aqui** e digite `&Color`. Clique com botão direito o texto que você digitou para exibir o **propriedades** janela. Alterar a ID para `ID_PEN_COLOR`.
 
 1. Agora, adicione o botão de cor. Dos **caixa de ferramentas**, arraste um **botão de cor** para o **caneta** painel.
 
@@ -200,7 +200,7 @@ Em seguida, adicione uma [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolo
 
 ##  <a name="addcolormember"></a> Adicionar um membro de cor para a classe de documento
 
-Porque o aplicativo de rabisco original não tem canetas de cor, você deve escrever uma implementação para eles. Para armazenar a cor da caneta do documento, adicionar um novo membro à classe de documento, `CscribbleDoc`.
+Como o aplicativo de rabisco original não tem canetas de cor, você deve escrever uma implementação para eles. Para armazenar a cor da caneta do documento, adicionar um novo membro à classe de documento, `CscribbleDoc`.
 
 ### <a name="to-add-a-color-member-to-the-document-class"></a>Para adicionar um membro de cor para a classe de documento
 
@@ -211,7 +211,7 @@ Porque o aplicativo de rabisco original não tem canetas de cor, você deve escr
    COLORREF m_penColor;
    ```
 
-1. Todo documento contém uma lista dos traços que o usuário já tenha criado. Cada traço é definido por um `CStroke` objeto. O `CStroke` classe inclui informações sobre a cor da caneta. Portanto, você deve modificar a classe. No scribdoc.h, no `CStroke` da classe, adicione as seguintes linhas de código após a definição do `m_nPenWidth` membro de dados.
+1. Todo documento contém uma lista dos traços que o usuário já tenha criado. Cada traço é definido por um `CStroke` objeto. O `CStroke` classe não inclui informações sobre a cor da caneta, portanto, você deve modificar a classe. No scribdoc.h, no `CStroke` da classe, adicione as seguintes linhas de código após a definição do `m_nPenWidth` membro de dados.
 
    ```cpp
    // Pen color for the stroke
@@ -267,7 +267,7 @@ Porque o aplicativo de rabisco original não tem canetas de cor, você deve escr
 
    1. Clique com botão direito do **cor** item de menu e clique em **Adicionar manipulador de eventos**. O **Assistente de manipulador de eventos** é exibida.
 
-   1. No **lista de classes** caixa no assistente, selecione **CScribbleDoc** e, em seguida, clique no **adicionar e editar** botão. Isso cria o `CScribbleDoc::OnPenColor` stub do manipulador de eventos.
+   1. No **lista de classes** caixa no assistente, selecione **CScribbleDoc** e, em seguida, clique no **adicionar e editar** botão. O comando cria o `CScribbleDoc::OnPenColor` stub do manipulador de eventos.
 
 1. Substitua o stub para o `CScribbleDoc::OnPenColor` manipulador de eventos com o código a seguir.
 
@@ -287,7 +287,7 @@ Porque o aplicativo de rabisco original não tem canetas de cor, você deve escr
    }
    ```
 
-1. Salve as alterações e, em seguida, compilar e executar o aplicativo. Você poderá pressionar o botão de cor e alterar a cor da caneta.
+1. Salve as alterações e, em seguida, compilar e executar o aplicativo. Agora você pode pressionar o botão de cor e alterar a cor da caneta.
 
 ##  <a name="initpensave"></a> Inicializando canetas e salvar preferências
 

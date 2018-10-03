@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48efa5d85ac6c7ba7e989cc55196f12fb391fa6d
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 899ddba8ee72039702f05b0d369b79e347f7db7e
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169717"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235601"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Instruções passo a passo: adicionando um CTaskDialog a um aplicativo
 
@@ -43,7 +43,7 @@ Você precisa dos seguintes componentes para concluir esta instrução passo a p
 
 ## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>Substituindo uma caixa de mensagem do Windows com um CTaskDialog
 
-O procedimento a seguir demonstra o uso mais básico do `CTaskDialog`, que é substituir a caixa de mensagem do Windows. Este exemplo também altera o ícone associado a caixa de diálogo de tarefa. Alterando o ícone torna o `CTaskDialog` são idênticos a caixa de mensagem do Windows.
+O procedimento a seguir demonstra o uso mais básico do `CTaskDialog`, que é substituir a caixa de mensagem do Windows. Este exemplo também altera o ícone associado a caixa de diálogo de tarefa. Alterando o ícone torna o `CTaskDialog` aparecer mesmo para a caixa de mensagem do Windows.
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Para substituir uma caixa de mensagem do Windows com um CTaskDialog
 
@@ -92,7 +92,7 @@ O procedimento a seguir demonstra o uso mais básico do `CTaskDialog`, que é su
     taskDialog.DoModal();
     ```
 
-Você pode pular a etapa 7 se você não quiser que o `CTaskDialog` para exibir o ícone mesmo que a caixa de mensagem do Windows. Se você omitir essa etapa, o `CTaskDialog` tem um ícone quando o aplicativo for exibido.
+Você pode evitar a etapa 7 se você não quiser o `CTaskDialog` para exibir o ícone mesmo que a caixa de mensagem do Windows. Se você evitar essa etapa, o `CTaskDialog` tem um ícone quando o aplicativo for exibido.
 
 Compile e execute o aplicativo. O aplicativo exibe a caixa de diálogo de tarefa depois de ter começado.
 
@@ -181,7 +181,7 @@ O procedimento a seguir mostra como exibir uma `CTaskDialog` sem primeiro criar 
 
 ### <a name="to-display-a-ctaskdialog-without-creating-a-ctaskdialog-object"></a>Para exibir um CTaskDialog sem criar um objeto CTaskDialog
 
-1. Abra o arquivo de MyProject.cpp se ele não ainda estiver aberto.
+1. Abra o arquivo de MyProject.cpp se ainda não estiver aberto.
 
 1. Navegue até o colchete de fechamento para o `if (CTaskDialog::IsSupported())` instrução.
 

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5481b9391d47887d85ca43746f1a6aff5f6eb92
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 342716f3197713a584e2f0a1d20e4de75ece474b
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029613"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234301"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Passo a passo: Criando um programa C++ padrão (C++)
 
@@ -32,7 +32,7 @@ Você pode usar o Visual C++ no ambiente de desenvolvimento integrado (IDE) do V
 
 Você pode digitar seu próprio programa C++ ou use um dos programas de exemplo. O programa de exemplo neste passo a passo é um aplicativo de console. Esse aplicativo usa o `set` contêiner na biblioteca padrão C++.
 
-Visual C++ está em conformidade com o padrão de C++ de 2003, com as seguintes exceções principais: pesquisa de nome de dois estágios, especificações de exceção e exportação. Além disso, o Visual C++ oferece suporte a vários recursos do c++0x, por exemplo, lambdas, auto, static_assert, referências de rvalue e modelos extern.
+Visual C++ segue o padrão de C++ de 2003, com as seguintes exceções principais: pesquisa de nome de dois estágios, especificações de exceção e exportação. Além disso, o Visual C++ oferece suporte a vários recursos do c++0x, por exemplo, lambdas, auto, static_assert, referências de rvalue e modelos extern.
 
 > [!NOTE]
 > Se a conformidade com o padrão é necessária, use o `/Za` opção de compilador desabilitar extensões da Microsoft para o padrão. Para obter mais informações, consulte [/Za, /Ze (desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md).
@@ -59,7 +59,7 @@ Para concluir este passo a passo, você deve compreender os fundamentos da lingu
    > [!NOTE]
    > Para versões do Visual Studio anteriores a 2017, conclua o **Assistente de aplicativo Win32**. Clique em **próxima**, certifique-se de **aplicativo de Console** está selecionado e desmarque a opção o **cabeçalhos pré-compilados** caixa. Clique em **Finalizar**.
 
-1. Se **Gerenciador de soluções** não aparecer, no **exibição** menu, clique em **Gerenciador de soluções**.
+1. Se **Gerenciador de soluções** não for exibido, na **exibição** menu, clique em **Gerenciador de soluções**.
 
 1. Adicione um novo arquivo de origem ao projeto, da seguinte maneira.
 

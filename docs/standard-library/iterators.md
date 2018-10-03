@@ -15,30 +15,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb8efba0146a0a230a85a7980f1e71381fcf4b2
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 858612ebdda30e68972d11072b4c2ac7f4f88954
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39208396"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235484"
 ---
 # <a name="iterators"></a>Iteradores
 
 Um iterador é um objeto que pode iterar em elementos em um contêiner da Biblioteca Padrão do C++ e fornecer acesso a elementos individuais. Os contêineres da Biblioteca Padrão do C++ fornecem iteradores de modo que todos os algoritmos possam acessar seus elementos de maneira padrão sem precisar se preocupar com o tipo do contêiner em que os elementos estão armazenados.
 
-Você pode usar iteradores explicitamente usando funções membro e globais, como begin() e end(), e operadores, como ++ e --, para avançar ou retroceder. Também é possível usar iteradores implicitamente com um loop range-for ou (para alguns tipos de iterador) o operador subscrito [].
+Você pode usar iteradores explicitamente usando funções membro e globais, como `begin()` e `end()` e operadores, como **++** e **--** para mover para frente ou com versões anteriores. Você também pode usar iteradores implicitamente com um intervalo de-loop for ou (para alguns tipos de iterador) o operador subscrito  **\[]**.
 
-Na Biblioteca Padrão do C++, o início de uma sequência ou intervalo é o primeiro elemento. O final de uma sequência ou intervalo sempre é definido como um após o último elemento. As funções globais começam e terminam iteradores de retorno para um contêiner especificado. O loop do iterador explícito típico sobre todos os elementos em um contêiner tem esta aparência:
+Na Biblioteca Padrão do C++, o início de uma sequência ou intervalo é o primeiro elemento. O final de uma sequência ou intervalo sempre é definido como um após o último elemento. As funções globais `begin` e `end` retornam iteradores a um contêiner especificado. O loop do iterador explícito típico sobre todos os elementos em um contêiner tem esta aparência:
 
 ```cpp
 vector<int> vec{ 0,1,2,3,4 };
-for (auto it = begin(vec);
-
-it != end(vec);
-
-it++)
-{  // Access element using dereference operator
-    cout <<*it <<" ";
+for (auto it = begin(vec); it != end(vec); it++)
+{
+    // Access element using dereference operator
+    cout << *it << " ";
 }
 ```
 
@@ -46,22 +43,23 @@ A mesma coisa pode ser feita de forma mais simples com um intervalo range-for:
 
 ```cpp
 for (auto num : vec)
- {  // no deference operator
-    cout <<num <<" ";
- }
+{
+    // no deference operator
+    cout << num << " ";
+}
 ```
 
 Há cinco categorias de iteradores. Em ordem crescente de potência, as categorias são:
 
-- **Saída**. Um iterador de saída `X` pode iterar para frente em uma sequência usando o + + operador e pode gravar apenas uma vez, um elemento usando o \* operador.
+- **Saída**. Uma *iterador de saída* `X` pode iterar para frente em uma sequência usando o **++** operador e pode gravar apenas uma vez, um elemento usando o **&ast;** operador.
 
-- **Entrada**. Um iterador de entrada `X` pode iterar para frente em uma sequência usando o + + operador e pode ler um elemento qualquer número de vezes usando o \* operador. É possível comparar iteradores de entrada usando os operadores ++ e !=. Depois de você incrementar qualquer cópia de um iterador de entrada, nenhuma das outras cópias pode ser comparada, cancelada ou incrementada com segurança.
+- **Entrada**. Uma *iterador de entrada* `X` pode iterar para frente em uma sequência usando o + + operador e pode ler um elemento qualquer número de vezes usando a **&ast;** operador. Você pode comparar iteradores de entrada usando o **++** e **! =** operadores. Depois de você incrementar qualquer cópia de um iterador de entrada, nenhuma das outras cópias pode ser comparada, cancelada ou incrementada com segurança.
 
-- **Avanço**. Um iterador de avanço `X` pode iterar para frente em uma sequência usando o + + operador e pode ler qualquer elemento ou gravar elementos não constantes quantas vezes desejar usando o \* operador. É possível acessar os membros do elemento usando o operador -> e comparar iteradores de avanço usando os operadores == e !=. Você pode fazer várias cópias de um iterador de avanço, cada uma das quais pode ser desreferenciada e incrementada de forma independente. Um iterador de avanço inicializado sem referência a nenhum contêiner é chamado de iterador de avanço nulo. Iteradores de avanço nulos sempre são comparados como iguais.
+- **Avanço**. Um *iterador de avanço* `X` pode iterar para frente em uma sequência usando o + + operador e pode ler qualquer elemento ou gravar elementos não constantes quantas vezes desejar usando a **&ast;** operador. Você pode acessar membros do elemento usando o **->** operador e a comparação de encaminham iteradores usando o **==** e **! =** operadores. Você pode fazer várias cópias de um iterador de avanço, cada uma das quais pode ser desreferenciada e incrementada de forma independente. Um iterador de avanço inicializado sem referência a nenhum contêiner é chamada de um *iterador de avanço nulo*. Iteradores de avanço nulos sempre são comparados como iguais.
 
-- Bidirecional. Um iterador bidirecional `X` pode tomar o lugar de um iterador de avanço. Você pode, no entanto, decrementar um iterador bidirecional, como em –`X`, `X`–, ou (`V` = \*`X`–). É possível acessar membros do elemento e comparar iteradores bidirecionais da mesma forma que ocorre com iteradores de avanço.
+- **Bidirecional**. Um *iterador bidirecional* `X` pode tomar o lugar de um iterador de avanço. Você pode, no entanto, decrementar um iterador bidirecional, como em `--X`, `X--`, ou `(V = *X--)`. É possível acessar membros do elemento e comparar iteradores bidirecionais da mesma forma que ocorre com iteradores de avanço.
 
-- **Acesso aleatório**. Um iterador de acesso aleatório `X` pode tomar o lugar de um iterador bidirecional. Com um iterador de acesso aleatório, você pode usar o operador subscrito [] para acessar elementos. É possível usar os operadores +, -, += e -= para avançar ou retroceder um número especificado de elementos e para calcular a distância entre iteradores. Você pode comparar iteradores bidirecionais usando ==, !=, \<, >, \<= e >=.
+- **Acesso aleatório**. Um *iterador de acesso aleatório* `X` pode tomar o lugar de um iterador bidirecional. Com um iterador de acesso aleatório, você pode usar o operador subscrito  **\[]** para acessar elementos. Você pode usar o **+**, **-**, **+=** e **-=** operadores para mover Avançar ou retroceder um número especificado de elementos e para calcular a distância entre iteradores. Você pode comparar iteradores bidirecionais usando **==**, **! =**, **\<**, **>**, **\< =**, e **>=**.
 
 Todos os iteradores podem ser atribuídos ou copiados. Eles são considerados objetos leves e geralmente são passados e retornados por valor, não por referência. Observe também que nenhuma das operações descritas anteriormente pode gerar uma exceção quando executada em um iterador válido.
 

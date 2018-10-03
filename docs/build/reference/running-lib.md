@@ -1,7 +1,7 @@
 ---
 title: Executando LIB | Microsoft Docs
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/28/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff75c149ff3cfff5a360314386cc4828d00f4e8d
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 5d8a221a829d3cded8d974c608bdd27edab07f60
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894597"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235406"
 ---
 # <a name="running-lib"></a>Executando LIB
 
@@ -62,25 +62,29 @@ Você pode passar argumentos de linha de comando para LIB em um arquivo de coman
 
 O arquivo *commandfile* é um arquivo de texto. Nenhum espaço ou tabulação é permitida entre o sinal de arroba (**\@**) e o nome do arquivo. Não há nenhuma extensão padrão; Você deve especificar o nome de arquivo completo, incluindo qualquer extensão. Caracteres curinga não pode ser usada. Você pode especificar um caminho absoluto ou relativo com o nome do arquivo.
 
-No arquivo de comando, os argumentos podem ser separados por espaços ou tabulações, como eles podem na linha de comando. Eles também podem ser separados por caracteres de nova linha. Use um ponto e vírgula (;) para marcar um comentário. LIB ignora todo o texto da vírgula ao final da linha.
+No arquivo de comando, os argumentos podem ser separados por espaços ou tabulações, como eles podem na linha de comando. Eles também podem ser separados por caracteres de nova linha. Use um ponto e vírgula (**;**) para marcar um comentário. LIB ignora todo o texto da vírgula ao final da linha.
 
 Você pode especificar todos ou parte da linha de comando em um arquivo de comando, e você pode usar mais de um arquivo de comando em um comando LIB. LIB aceita a entrada do arquivo de comando, como se ele foi especificado no local na linha de comando. Arquivos de comando não podem ser aninhados. LIB exibe o conteúdo dos arquivos de comando, a menos que a opção /NOLOGO é usada.
 
 ## <a name="using-lib-options"></a>Usando as opções de LIB
 
-Uma opção consiste em um especificador de opção, que é um traço (-) ou uma barra (/), seguido do nome da opção. Nomes de opção não podem ser abreviados. Algumas opções têm um argumento, especificado após dois-pontos (:). Não há espaços ou tabulações são permitidas em uma especificação de opção. Use um ou mais espaços ou tabulações para separar as especificações de opção na linha de comando. Nomes de opção e seus argumentos de nome de arquivo ou a palavra-chave não diferenciam maiusculas de minúsculas, mas identificadores usados como argumentos diferenciam maiusculas de minúsculas. LIB processa as opções na ordem especificada na linha de comando e nos arquivos de comando. Se uma opção é repetida com argumentos diferentes, o último a ser processada terá precedência.
+Uma opção consiste em um especificador de opção, qualquer um traço (**-**) ou uma barra invertida (**/**), seguido pelo nome da opção. Nomes de opção não podem ser abreviados. Algumas opções têm um argumento, especificado após dois-pontos (**:**). Não há espaços ou tabulações são permitidas em uma especificação de opção. Use um ou mais espaços ou tabulações para separar as especificações de opção na linha de comando. Nomes de opção e seus argumentos de nome de arquivo ou a palavra-chave não diferenciam maiusculas de minúsculas, mas identificadores usados como argumentos diferenciam maiusculas de minúsculas. LIB processa as opções na ordem especificada na linha de comando e nos arquivos de comando. Se uma opção é repetida com argumentos diferentes, o último a ser processada terá precedência.
 
 As opções a seguir se aplicam a todos os modos de LIB:
 
 > **/ERRORREPORT** [**NONE** &AMP;#124; **PROMPT** &AMP;#124; **FILA** &AMP;#124; **ENVIAR**]
 
-Se lib.exe falhar em tempo de execução, você pode usar /ERRORREPORT para enviar à Microsoft informações sobre esses erros internos.
+Se lib.exe falhar em tempo de execução, você pode usar **/ERRORREPORT** para enviar à Microsoft informações sobre esses erros internos.
 
-Para obter mais informações sobre /ERRORREPORT, consulte [/errorReport (relatório de erros do compilador interno)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+Para obter mais informações sobre **/ERRORREPORT**, consulte [/errorReport (relatório de erros do compilador interno)](../../build/reference/errorreport-report-internal-compiler-errors.md).
 
 > **/LTCG**
 
-Faz com que a biblioteca a ser criada usando a geração de código para link-time.  Para obter mais informações, consulte [/LTCG](../../build/reference/ltcg-link-time-code-generation.md).
+"LTCG" signifca *geração de código para link-time*. Este recurso requer a cooperação entre o compilador ([cl.exe](compiler-options.md)), LIB e o vinculador ([LINK](linker-options.md)) para otimizar o código além do que qualquer componente pode fazer por si só.
+
+Para LIB, o **/LTCG** opção especifica que as entradas de cl.exe incluem arquivos de objeto que foram gerados usando o [/GL](gl-whole-program-optimization.md) opção de compilador. Se o LIB encontrar essas entradas e **/LTCG** não for especificado, ele será reiniciado com /LTCG habilitado depois de exibir uma mensagem informativa. Em outras palavras, não é necessário definir explicitamente essa opção, mas ele acelera o desempenho de compilação para fazer isso porque não tem LIB para reiniciá-lo.
+
+No processo de compilação, a saída de LIB é enviada ao LINK. LINK tem seu próprio separado **/LTCG** opção que é usada para executar várias otimizações, incluindo a otimização de programa inteiro e a instrumentação de Otimização Guiada por perfil (PGO). Para obter mais informações sobre a opção de LINK, consulte [/LTCG](ltcg-link-time-code-generation.md).
 
 > **/ COMPUTADOR**
 

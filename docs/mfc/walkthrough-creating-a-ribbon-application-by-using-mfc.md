@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb7039481469bbd6c307ab1ec88b508ff089733
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 2d86749cc8481f2472ed2ebe29dd535e05dcb2e2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169574"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48236017"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Instruções passo a passo: criando um aplicativo da faixa de opções usando MFC
 
@@ -28,7 +28,7 @@ Este passo a passo mostra como usar o **Assistente de aplicativo MFC** para cria
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
-Este passo a passo pressupõe que você configurou o Visual Studio para usar **configurações gerais de desenvolvimento**. Se você estiver usando configurações diferentes, alguns dos elementos da interface do usuário (UI) mencionados nas instruções talvez não sejam exibidos.
+Este passo a passo pressupõe que você configurou o Visual Studio para usar **configurações gerais de desenvolvimento**. Se você estiver usando configurações diferentes, alguns dos elementos de (UI) de interface do usuário que são referenciados nas instruções a seguir podem não ser exibidos.
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Para criar um aplicativo do MFC que tenha uma faixa de opções
 
@@ -73,7 +73,7 @@ Este passo a passo pressupõe que você configurou o Visual Studio para usar **c
 
 1. Em seguida, personalize o painel. Os painéis são usados para agrupar itens logicamente relacionados uns aos outros. Por exemplo, na **página inicial** guia deste aplicativo, o **Recortar**, **cópia**, e **colar** comandos estão localizados no  **Área de transferência** painel. Para personalizar o painel, clique com botão direito **Panel1** e, em seguida, clique em **propriedades**. No **propriedades** janela, alteração **legenda** para *Favoritos*.
 
-    Você pode especificar o **índice de imagem** para o painel. Esse número Especifica o ícone que será exibido se o painel de faixa de opções é adicionado para o **ferramentas de acesso rápido**. O ícone não é exibido no painel da faixa de opções propriamente dito.
+    Você pode especificar o **índice de imagem** para o painel. Esse número Especifica o ícone que será exibido se o painel de faixa de opções é adicionado para o **ferramentas de acesso rápido**. O ícone não é exibido no painel de faixa de opções em si.
 
 1. Para verificar se a categoria e o painel da faixa de opções foram criados com êxito, visualize o controle da faixa de opções. Sobre o **barra de ferramentas do Editor de faixa de opções**, clique no **faixa de opções de teste** botão. Um **personalizado** guia e **Favoritos** painel deve ser exibida na faixa de opções.
 

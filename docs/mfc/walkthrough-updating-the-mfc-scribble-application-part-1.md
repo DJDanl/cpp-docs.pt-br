@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d028d1cb3a42a68aab67d2b6fa90165a7d6264b
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 48cbc29685660f00665fbbb08be76779272d0fcf
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169769"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235497"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Passo a passo: Atualizando o aplicativo de rabisco MFC (parte 1)
 
@@ -54,7 +54,7 @@ Esta parte do passo a passo tem as seguintes seções:
 
 ##  <a name="replaceclass"></a> Substituindo as Classes Base
 
-Para converter um aplicativo que dá suporte a um menu a um aplicativo que dá suporte a uma faixa de opções, você deve derivar de classes base atualizadas o aplicativo, janela de quadro e classes de barra de ferramentas. (Recomendamos que você não modificar o exemplo de Scribble original; em vez disso, limpe o projeto Scribble, copiá-lo para outro diretório e, em seguida, modificar a cópia.)
+Para converter um aplicativo que dá suporte a um menu a um aplicativo que dá suporte a uma faixa de opções, você deve derivar de classes base atualizadas o aplicativo, janela de quadro e classes de barra de ferramentas. (Recomendamos que você não modifique o exemplo de Scribble original. Em vez disso, limpe o projeto Scribble, copiá-lo para outro diretório e, em seguida, modificar a cópia.)
 
 ### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>Para substituir as classes base do aplicativo de rabisco
 
@@ -115,9 +115,9 @@ Para converter um aplicativo que dá suporte a um menu a um aplicativo que dá s
 
 ##  <a name="addbitmap"></a> Adicionando Bitmaps ao projeto
 
-As próximas quatro etapas deste passo a passo exigem recursos de bitmap. Você pode obter bitmaps apropriado de várias maneiras:
+As próximas quatro etapas deste passo a passo exigem recursos de bitmap. Você pode obter os bitmaps apropriados de várias maneiras:
 
-- Use o [editores de recursos](../windows/resource-editors.md) inventar seu próprio bitmaps. Ou use os editores de recursos para agrupar bitmaps das imagens portable network graphics (. png) que estão incluídos com o Visual Studio e podem ser baixado do [biblioteca de imagens do Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
+- Use o [editores de recursos](../windows/resource-editors.md) inventar seu próprio bitmaps. Ou use os editores de recursos para agrupar bitmaps das imagens portable network graphics (. png) que estão incluídos com o Visual Studio e podem ser baixadas do [biblioteca de imagens do Visual Studio](https://docs.microsoft.com/visualstudio/designers/the-visual-studio-image-library).
 
     No entanto, o **faixa de opções** interface do usuário requer que determinadas bitmaps dá suporte a imagens transparentes. Bitmaps transparentes utilizam pixels de 32 bits, em que 24 bits especificar os componentes vermelhos, verdes e azuis da cor e 8 bits definem um *canal alfa* que especifica a transparência da cor. Os editores de recursos atual podem exibir, mas não modificar bitmaps com pixels de 32 bits. Consequentemente, use um editor de imagem externa em vez dos editores de recursos para manipular os bitmaps transparentes.
 
@@ -165,7 +165,7 @@ Este passo a passo copia os arquivos de recurso do exemplo criado na [instruçõ
 
 ##  <a name="addribbon"></a> Adicionando um recurso de faixa de opções ao projeto
 
-Quando você converte um aplicativo que usa um aplicativo que usa uma faixa de opções de menus, não é necessário remover ou desabilitar os menus existentes. Em vez disso, você cria um recurso de faixa de opções, adicione botões de faixa de opções e, em seguida, associar os novos botões com os itens de menu existentes. Embora os menus não são mais visíveis, as mensagens da barra de faixa de opções são roteadas por meio dos menus. Além disso, os atalhos do menu continuam a funcionar.
+Quando você converte um aplicativo que usa um aplicativo que usa uma faixa de opções de menus, você não precisa remover ou desabilitar os menus existentes. Basta criar um recurso de faixa de opções, adicione botões de faixa de opções e, em seguida, associar os novos botões com os itens de menu existentes. Embora os menus não são mais visíveis, as mensagens da barra de faixa de opções são roteadas por meio dos menus e atalhos do menu continuam a funcionar.
 
 Consiste em uma faixa de opções de **aplicativo** botão, que é o botão grande no lado superior esquerdo da faixa de opções e uma ou mais guias de categoria. Cada guia categoria contém um ou mais painéis que atuam como contêineres para controles e botões da faixa de opções. O procedimento a seguir mostra como criar um recurso de faixa de opções e, em seguida, personalizar o **aplicativo** botão.
 
@@ -221,14 +221,14 @@ As etapas a seguir mostram como criar uma instância da barra de faixa de opçõ
 
 ### <a name="to-create-an-instance-of-the-ribbon-bar"></a>Para criar uma instância da barra de faixa de opções
 
-1. No arquivo mainfrm.h, adicione um membro de dados para a seção protegida de `CMainFrame`, a definição de classe para o quadro principal. Este membro representa a barra de faixa de opções.
+1. No arquivo mainfrm.h, adicione um membro de dados para a seção protegida de `CMainFrame`, a definição de classe para o quadro principal. Esse membro é para a barra de faixa de opções.
 
     ```cpp
     // Ribbon bar for the application
     CMFCRibbonBar m_wndRibbonBar;
     ```
 
-2. No arquivo mainfrm.cpp, adicione o seguinte código antes do final `return` instrução no final o `CMainFrame::OnCreate` função. Isso cria uma instância da barra de faixa de opções.
+2. No arquivo mainfrm.cpp, adicione o seguinte código antes do final `return` instrução no final o `CMainFrame::OnCreate` função. Ele cria uma instância da barra de faixa de opções.
 
     ```cpp
     // Create the ribbon bar
@@ -250,9 +250,9 @@ Agora que você criou o **aplicativo** botão, você pode adicionar elementos à
 
 1. O programa de rabisco requer apenas uma categoria. Na exibição de design, nos **caixa de ferramentas**, clique duas vezes em **categoria** para adicioná-lo e exibir suas propriedades. Alterar valores de propriedade da seguinte maneira: **legenda** à `&Home`, **imagens grandes** para `IDB_RIBBON_HOMELARGE`, **imagens pequenas** para `IDB_RIBBON_HOMESMALL`.
 
-1. Cada categoria de faixa de opções é organizada em painéis nomeados. Cada painel contém um conjunto de controles que executam operações relacionadas. Esta categoria tem um painel. Clique em **painel**e altere **legenda** para `Edit`.
+1. Cada categoria de faixa de opções é organizada em painéis nomeados. Cada painel contém um conjunto de controles que operações relacionadas completa. Esta categoria tem um painel. Clique em **painel**e altere **legenda** para `Edit`.
 
-1. Para o **editar** painel, adicione um botão que é responsável por limpar o conteúdo do documento. A ID da mensagem para que esse botão já foi definida no `IDR_SCRIBBTYPE` de recurso de menu. Especificar `Clear All` como o texto do botão e o índice do bitmap que decora o botão. Abra o **caixa de ferramentas**e, em seguida, arraste um **botão** para o **editar** painel. Clique no botão e, em seguida, altere **legenda** à `Clear All`, **ID** para `ID_EDIT_CLEAR_ALL`, **índice de imagem** para `0`, **índice da imagem grande**  para `0`.
+1. Para o **editar** painel, adicione um botão responsável por limpar o conteúdo do documento. A ID da mensagem para que esse botão já foi definida no `IDR_SCRIBBTYPE` de recurso de menu. Especificar `Clear All` como o texto do botão e o índice do bitmap que decora o botão. Abra o **caixa de ferramentas**e, em seguida, arraste um **botão** para o **editar** painel. Clique no botão e, em seguida, altere **legenda** à `Clear All`, **ID** para `ID_EDIT_CLEAR_ALL`, **índice de imagem** para `0`, **índice da imagem grande**  para `0`.
 
 1. Salve as alterações e, em seguida, compilar e executar o aplicativo. O aplicativo de rabisco deve ser exibido e ele deve ter uma barra de faixa de opções na parte superior da janela, em vez de uma barra de menus. A barra de faixa de opções deve ter uma categoria, **página inicial**, e **Home** deve ter um painel, **editar**. Os botões da faixa de opções que você adicionou devem ser associados com os manipuladores de eventos existente e o **aberto**, **Close**, **salvar**, **impressão**, e **Limpar tudo** botões devem funcionar conforme o esperado.
 
