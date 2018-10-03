@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b65ceb18eb6b8f24db0a85ba2ed13277b13f657
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 45428f1642b428640509978f29c0a36b60696cb0
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117486"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235055"
 ---
 # <a name="string-to-numeric-value-functions"></a>Funções de valor da cadeia de caracteres para numérico
 
@@ -94,7 +94,7 @@ Quando o valor retornado por essas funções poderia causar um estouro ou estour
 |`_strtoui64`|Estouro|**_UI64_MAX**|
 |`_strtoui64`|Sem conversão|0|
 
- **_I64_MAX**, _**I64_MIN** e **_UI64_MAX** são definidos em LIMITS.H.
+**_I64_MAX**, _**I64_MIN** e **_UI64_MAX** são definidos em LIMITS.H.
 
 `wcstod`, `wcstol`, `wcstoul`, `_wcstoi64`, e `_wcstoui64` são versões de caractere largo de `strtod`, `strtol`, `strtoul`, `_strtoi64`, e `_strtoui64`, respectivamente; o ponteiro para um argumento de final de conversão para cada uma dessas funções de caractere largo é uma cadeia de caracteres largos. Caso contrário, cada uma dessas funções de caractere largo se comporta de forma idêntica à sua equivalente de caractere de byte único.
 

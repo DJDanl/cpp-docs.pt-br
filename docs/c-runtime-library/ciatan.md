@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4db2c96f175691586d3fd4b4c0383d26ac4171d5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ac1bb0d9252a02c609b328bc1785e477ed44a763
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069437"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234305"
 ---
 # <a name="ciatan"></a>_CIatan
 
@@ -53,7 +53,8 @@ Esta versão da função `atan` tem uma convenção de chamada especializada que
 O valor resultante é colocado na parte superior da pilha.
 
 ## <a name="requirements"></a>Requisitos
- **Plataforma:** x86
+
+**Plataforma:** x86
 
 ## <a name="see-also"></a>Consulte também
 
