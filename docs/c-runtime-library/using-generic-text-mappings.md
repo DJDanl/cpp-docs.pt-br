@@ -37,12 +37,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9435076bdc02f9f0b8a909ffdbc60dd06e1a388
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4aeee73cb065e40d345dcbfe35ac2d6a7be03d90
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097517"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234652"
 ---
 # <a name="using-generic-text-mappings"></a>Usando mapeamentos de texto genérico
 
@@ -105,7 +105,7 @@ RetVal = strrev(szString);
 
 Portanto, você pode escrever, manter e compilar um arquivo de código fonte único para execução com rotinas que sejam específicas para qualquer um dos três tipos de conjuntos de caracteres.
 
- **Fim da seção específica da Microsoft**
+**Fim da seção específica da Microsoft**
 
 ## <a name="see-also"></a>Consulte também
 

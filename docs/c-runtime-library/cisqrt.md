@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04c628dec2c2fd7e0b0b5a61aa20abf9266ca416
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cb57de60736d55875206ead1eabc5fbd3c3c2c0e
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46084439"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235901"
 ---
 # <a name="cisqrt"></a>_CIsqrt
 
@@ -53,7 +53,8 @@ Esta versão da função `sqrt` tem uma convenção de chamada especializada que
 O valor resultante é colocado na parte superior da pilha.
 
 ## <a name="requirements"></a>Requisitos
- **Plataforma:** x86
+
+**Plataforma:** x86
 
 ## <a name="see-also"></a>Consulte também
 
