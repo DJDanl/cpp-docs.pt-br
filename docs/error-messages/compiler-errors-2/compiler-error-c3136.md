@@ -1,7 +1,7 @@
 ---
 title: Erro do compilador C3136 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0439aa157a683065ccf7fff5b5f9d6d4d85e2f12
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 082a89b69092a8320f6bb4b930d01a7fd2de10c8
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054214"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788377"
 ---
 # <a name="compiler-error-c3136"></a>Erro do compilador C3136
 
 'interface': uma interface COM só pode herdar de outra interface COM, 'interface' não é uma interface COM
 
-Uma interface para o qual você aplicou um [atributo interface](../../windows/interface-attributes.md) herda de uma interface que não é uma interface COM. Uma interface COM, por fim, herda `IUnknown`. Qualquer interface precedido por um atributo de interface é uma interface COM.
+Uma interface para o qual você aplicou um [atributo interface](../../windows/attributes/interface-attributes.md) herda de uma interface que não é uma interface COM. Uma interface COM, por fim, herda `IUnknown`. Qualquer interface precedido por um atributo de interface é uma interface COM.
 
 O exemplo a seguir gera C3136:
 

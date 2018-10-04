@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d26a8f3e404eaa19a102be4cb3f11350c4fe674
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a10c91f34cd00b8524a047131e9a39b901c83fce
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46089353"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788585"
 ---
 # <a name="compiler-error-c3455"></a>Erro do compilador C3455
 
 'attribute': nenhum dos construtores de atributo corresponderam aos argumentos
 
-Um valor inválido foi usado para declarar um atributo.  Ver [atributo](../../windows/attribute.md) para obter mais informações.
+Um valor inválido foi usado para declarar um atributo.  Ver [atributo](../../windows/attributes/attribute.md) para obter mais informações.
 
 ## <a name="example"></a>Exemplo
 

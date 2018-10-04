@@ -1,7 +1,7 @@
 ---
 title: Estrutura VerifyInheritanceHelper | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6231345b837cae8f36e8441173300d804c0ea167
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 2a011b0583d8221ec49d16236add978ac647acc3
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169627"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788923"
 ---
 # <a name="verifyinheritancehelper-structure"></a>Estrutura VerifyInheritanceHelper
 
@@ -33,14 +33,10 @@ Oferece suporte a infraestrutura do WRL e não se destina a ser usado diretament
 ## <a name="syntax"></a>Sintaxe
 
 ```cpp
-template <
-   typename I,
-   typename Base
->
+template <typename I, typename Base>
 struct VerifyInheritanceHelper;
-template <
-   typename I
->
+
+template <typename I>
 struct VerifyInheritanceHelper<I, Nil>;
 ```
 
