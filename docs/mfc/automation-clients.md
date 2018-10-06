@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cca4818d0ace6270b986ddb9b99068ca9532f1b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c4a4327e1c3e4d65c5bdc3b822cf2cdfc1ec0353
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395494"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820588"
 ---
 # <a name="automation-clients"></a>Clientes de automação
 
@@ -46,7 +46,7 @@ Você, em seguida, especifique o arquivo de biblioteca de tipos que descreve as 
 
 ### <a name="handling-events-in-automation-clients"></a>Manipulação de eventos em clientes de automação
 
-Se você quiser manipular eventos em seu cliente de automação, você precisará adicionar uma interface de coletor. MFC fornece suporte do Assistente para adicionar interfaces de coletor para controles ActiveX, mas não dão suporte para outros servidores COM. Para obter informações sobre como adicionar uma interface de coletor em um cliente do MFC para interfaces de origem descrito por servidores COM, consulte como: criar uma Interface do coletor no cliente de COM MFC-Based (181845 KB) em [ http://support.microsoft.com/default.aspxscid=kb; en-us; 181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845).
+Se você quiser manipular eventos em seu cliente de automação, você precisará adicionar uma interface de coletor. MFC fornece suporte do Assistente para adicionar interfaces de coletor para controles ActiveX, mas não dão suporte para outros servidores COM. Para obter informações sobre como adicionar uma interface de coletor em um cliente do MFC para interfaces de origem descrito por servidores COM, consulte como: criar uma Interface do coletor no cliente de COM MFC-Based (181845 KB) em [ http://support.microsoft.com/default.aspxscid=kb; 181845](http://support.microsoft.com/default.aspxscid=kb;181845).
 
 ## <a name="see-also"></a>Consulte também
 

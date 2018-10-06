@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 078fcbfd42c64a0ec5d90a41e8ec3e4ae392f57d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b001bb4d8ad9f1b4895147e0507ea3b6fda97ee5
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433928"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820694"
 ---
 # <a name="ud2"></a>__ud2
 
@@ -40,7 +40,7 @@ void __ud2();
 
 O processador gerará uma exceção de opcode inválido, se você executar uma instrução indefinida.
 
-O `__ud2` função é equivalente ao `UD2` instruções de máquina e está disponível apenas no modo kernel. Para obter mais informações, pesquise o documento, "Manual do desenvolvedor de Software de arquitetura Intel, Volume 2: referência de conjunto de instruções," no [Intel Corporation](https://software.intel.com/en-us/articles/intel-sdm) site.
+O `__ud2` função é equivalente ao `UD2` instruções de máquina e está disponível apenas no modo kernel. Para obter mais informações, pesquise o documento, "Manual do desenvolvedor de Software de arquitetura Intel, Volume 2: referência de conjunto de instruções," no [Intel Corporation](https://software.intel.com/articles/intel-sdm) site.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a901b7bd102736bfbeec95a1afe8e44dc26ae3b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 86adc1e2337b32ced77cafda92229ed9724ba548
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412167"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821511"
 ---
 # <a name="cwinapp-class"></a>Classe CWinApp
 
@@ -367,7 +367,7 @@ Ver [CWinApp: A classe de aplicativo](../../mfc/cwinapp-the-application-class.md
 
 - `CWinApp`da chave sobre substituíveis.
 
-O `m_hPrevInstance` membro de dados não existe mais. Para obter informações sobre detecção de uma instância anterior do `CWinApp`, consulte o artigo da Base de dados de Conhecimento "Como para identificar um anterior instância de um aplicativo" (KB106385) em [ http://support.microsoft.com/default.aspxscid=kb; en-us; 106385](http://support.microsoft.com/default.aspxscid=kb;en-us;106385).
+O `m_hPrevInstance` membro de dados não existe mais. Para obter informações sobre detecção de uma instância anterior do `CWinApp`, consulte o artigo da Base de dados de Conhecimento "Como para identificar um anterior instância de um aplicativo" (KB106385) em [ http://support.microsoft.com/default.aspxscid=kb; 106385](http://support.microsoft.com/default.aspxscid=kb;106385).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -1073,7 +1073,7 @@ Conceitualmente, a inicialização do aplicativo é dividida em duas seções: i
 Substituir `InitInstance` para inicializar cada nova instância do seu aplicativo em execução no Windows. Normalmente, você substitui `InitInstance` para construir o objeto de janela principal e definir o `CWinThread::m_pMainWnd` membro de dados para apontar para essa janela. Para obter mais informações sobre essa função de membro de substituição, consulte [CWinApp: A classe de aplicativo](../../mfc/cwinapp-the-application-class.md).
 
 > [!NOTE]
-> Aplicativos MFC devem ser inicializados como um compartimento de único thread (STA). Se você chamar [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) em seu `InitInstance` substituir, especifique COINIT_APARTMENTTHREADED (em vez de COINIT_MULTITHREADED). Para obter mais informações, consulte PRB: aplicativo do MFC para de responder quando você inicializar o aplicativo como um Multi-Threaded Apartment (828643) em [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).
+> Aplicativos MFC devem ser inicializados como um compartimento de único thread (STA). Se você chamar [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) em seu `InitInstance` substituir, especifique COINIT_APARTMENTTHREADED (em vez de COINIT_MULTITHREADED). Para obter mais informações, consulte PRB: aplicativo do MFC para de responder quando você inicializar o aplicativo como um Multi-Threaded Apartment (828643) em [ http://support.microsoft.com/default.aspxscid=kb; 828643](http://support.microsoft.com/default.aspxscid=kb;828643).
 
 ### <a name="example"></a>Exemplo
 

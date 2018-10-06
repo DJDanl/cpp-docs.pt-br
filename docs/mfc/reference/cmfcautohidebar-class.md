@@ -48,18 +48,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae293007250fb051339b42b1a09d50806b36b8e9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 78582039e172be92f397c898163ec62c6041f32f
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407892"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821446"
 ---
 # <a name="cmfcautohidebar-class"></a>Classe CMFCAutoHideBar
 
 O `CMFCAutoHideBar` é uma classe de barra de ferramentas especial que implementa o recurso de ocultar automaticamente.
 
 Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.
+
 ## <a name="syntax"></a>Sintaxe
 
 ```
@@ -131,7 +132,7 @@ O exemplo a seguir demonstra como criar uma `CMFCAutoHideBar` do objeto e usar s
 
 **Cabeçalho:** afxautohidebar.h
 
-##  <a name="addautohidewindow"></a>  CMFCAutoHideBar::AddAutoHideWindow
+## <a name="addautohidewindow"></a>  CMFCAutoHideBar::AddAutoHideWindow
 
 Adiciona a funcionalidade um `CDockablePane` janela que permite que ele ocultar automaticamente.
 
@@ -163,8 +164,7 @@ O *dwAlignment* parâmetro indica em que o botão Ocultar automaticamente reside
 
 - CBRS_ALIGN_BOTTOM
 
-##  <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu
-
+## <a name="allowshowonpanemenu"></a>  CMFCAutoHideBar::AllowShowOnPaneMenu
 
 ```
 virtual BOOL AllowShowOnPaneMenu() const;
@@ -174,8 +174,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="calcfixedlayout"></a>  CMFCAutoHideBar::CalcFixedLayout
-
+## <a name="calcfixedlayout"></a>  CMFCAutoHideBar::CalcFixedLayout
 
 ```
 virtual CSize CalcFixedLayout(
@@ -192,7 +191,7 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="cmfcautohidebar"></a>  CMFCAutoHideBar::CMFCAutoHideBar
+## <a name="cmfcautohidebar"></a>  CMFCAutoHideBar::CMFCAutoHideBar
 
 Constrói um objeto CMFCAutoHideBar.
 
@@ -202,8 +201,7 @@ CMFCAutoHideBar();
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="create"></a>  CMFCAutoHideBar::Create
-
+## <a name="create"></a>  CMFCAutoHideBar::Create
 
 ```
 virtual BOOL Create(
@@ -219,17 +217,24 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parâmetros
 
 *lpszClassName*<br/>
-[in] [in] *dwStyle*
-*rect*<br/>
-[in] [in] *pParentWnd*
+
+*dwStyle*<br/>
+
+*Rect*<br/>
+
+*pParentWnd*<br/>
+
 *nID*<br/>
-[in] [in] *dwControlBarStyle* [in] *pContext*
+
+*dwControlBarStyle*<br/>
+
+*pContext*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getfirstahwindow"></a>  CMFCAutoHideBar::GetFirstAHWindow
+## <a name="getfirstahwindow"></a>  CMFCAutoHideBar::GetFirstAHWindow
 
 Retorna um ponteiro para a primeira janela de ocultar automaticamente no aplicativo.
 
@@ -243,7 +248,7 @@ A primeira janela de ocultar automaticamente no aplicativo, ou NULL se não houv
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="getvisiblecount"></a>  CMFCAutoHideBar::GetVisibleCount
+## <a name="getvisiblecount"></a>  CMFCAutoHideBar::GetVisibleCount
 
 Obtém o número de botões de ocultar automaticamente visíveis.
 
@@ -257,7 +262,7 @@ Retorna o número de botões de ocultar automaticamente visíveis.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="m_nshowahwnddelay"></a>  CMFCAutoHideBar::m_nShowAHWndDelay
+## <a name="m_nshowahwnddelay"></a>  CMFCAutoHideBar::m_nShowAHWndDelay
 
 O tempo de espera entre o momento em que quando o usuário coloca o cursor do mouse sobre um [classe CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md) e o momento quando o framework mostra a janela associada.
 
@@ -269,8 +274,7 @@ int CMFCAutoHideBar::m_nShowAHWndDelay = 400;
 
 Quando o usuário coloca o cursor do mouse sobre um `CMFCAutoHideButton`, há um pequeno atraso antes que o framework seja exibida a janela associada. Esse parâmetro determina o comprimento desse atraso em milissegundos.
 
-##  <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu
-
+## <a name="onshowcontrolbarmenu"></a>  CMFCAutoHideBar::OnShowControlBarMenu
 
 ```
 virtual BOOL OnShowControlBarMenu(CPoint);
@@ -284,7 +288,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="removeautohidewindow"></a>  CMFCAutoHideBar::RemoveAutoHideWindow
+## <a name="removeautohidewindow"></a>  CMFCAutoHideBar::RemoveAutoHideWindow
 
 Remove e destrói a janela de ocultação automática.
 
@@ -302,7 +306,7 @@ VERDADEIRO se bem-sucedido; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="setactiveingroup"></a>  CMFCAutoHideBar::SetActiveInGroup
+## <a name="setactiveingroup"></a>  CMFCAutoHideBar::SetActiveInGroup
 
 Sinaliza uma barra de auto-ocultar como ativa.
 
@@ -318,8 +322,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 
 Ver [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup).
 
-##  <a name="setrecentvisiblestate"></a>  CMFCAutoHideBar::SetRecentVisibleState
-
+## <a name="setrecentvisiblestate"></a>  CMFCAutoHideBar::SetRecentVisibleState
 
 ```
 void SetRecentVisibleState(BOOL bState);
@@ -327,26 +330,32 @@ void SetRecentVisibleState(BOOL bState);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *bState*
+*bState*<br/>
+[in] Estado a ser definido.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="showautohidewindow"></a>  CMFCAutoHideBar::ShowAutoHideWindow
+## <a name="showautohidewindow"></a>  CMFCAutoHideBar::ShowAutoHideWindow
 
 Mostra a janela de ocultação automática.
 
 ```
 BOOL ShowAutoHideWindow(
-        CDockablePane* pAutoHideWnd,
-        BOOL bShow,
-        BOOL bDelay);
+    CDockablePane* pAutoHideWnd,
+    BOOL bShow,
+    BOOL bDelay);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] CDockablePane * *pAutoHideWnd* [BOOL in] *bMostrar* True para mostrar a janela.
+*pAutoHideWnd*<br/>
+[in] Janela para mostrar.
 
-[in] BOOL *bDelay* esse parâmetro é ignorado.
+*bMostrar*<br/>
+[in] TRUE para mostrar a janela.
+
+*bDelay*<br/>
+[in] Esse parâmetro é ignorado.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -354,7 +363,7 @@ VERDADEIRO se bem-sucedido; Caso contrário, FALSE.
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="stretchpane"></a>  CMFCAutoHideBar::StretchPane
+## <a name="stretchpane"></a>  CMFCAutoHideBar::StretchPane
 
 Redimensiona a barra de ocultar automaticamente em seu estado recolhido para se ajustar a `CMFCAutoHideButton` objeto.
 
@@ -380,7 +389,7 @@ O tamanho resultante do painel redimensionado.
 
 Classes derivadas podem substituir este método para personalizar o comportamento.
 
-##  <a name="unsetautohidemode"></a>  CMFCAutoHideBar::UnSetAutoHideMode
+## <a name="unsetautohidemode"></a>  CMFCAutoHideBar::UnSetAutoHideMode
 
 Desabilita oculta automaticamente o modo para um grupo de barras de ocultação automática.
 
@@ -394,7 +403,7 @@ void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup)
 
 ### <a name="remarks"></a>Comentários
 
-##  <a name="updatevisiblestate"></a>  CMFCAutoHideBar::UpdateVisibleState
+## <a name="updatevisiblestate"></a>  CMFCAutoHideBar::UpdateVisibleState
 
 Chamado pelo framework quando a barra de auto-ocultar precisa ser redesenhado.
 

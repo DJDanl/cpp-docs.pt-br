@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ceb0d29a5e49efa4f387f2949a0aa670082a62ab
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 64a42a65e112930767aa27f94612d06b7fb2d34a
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021935"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821628"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Declarador de referência Rvalue: &amp;&amp;
 
@@ -63,7 +63,7 @@ int main()
 
 Antes do Visual C++ 2010, cada chamada para **operador +** aloca e retorna um novo temporário `string` objeto (um rvalue). **operador +** não é possível acrescentar uma cadeia de caracteres para o outro, porque ele não sabe se as cadeias de caracteres de origem são lvalues ou rvalues. Se as cadeias de caracteres de origem forem lvalues, poderão ser referenciadas em outro local do programa e, portanto, não devem ser modificadas. Usando referências de rvalue **operador +** pode ser modificado para receber os rvalues, que não podem ser referenciadas em outro lugar no programa. Portanto, **operador +** agora pode acrescentar uma cadeia de caracteres para outra. Isso pode reduzir significativamente o número de alocações de memória dinâmica que a classe `string` deve executar. Para obter mais informações sobre o `string` classe, consulte [classe basic_string](../standard-library/basic-string-class.md).
 
-A semântica de movimentação também ajuda quando o compilador não pode usar a Otimização de Valor de Retorno (RVO) ou a Otimização de Valor de Retorno (NRVO). Nesses casos, o compilador chama o construtor de movimentação caso o tipo o defina. Para obter mais informações sobre a otimização de valor de retorno de chamada, consulte [denominada otimização de valor de retorno no Visual C++ 2005](https://msdn.microsoft.com/en-us/library/ms364057.aspx).
+A semântica de movimentação também ajuda quando o compilador não pode usar a Otimização de Valor de Retorno (RVO) ou a Otimização de Valor de Retorno (NRVO). Nesses casos, o compilador chama o construtor de movimentação caso o tipo o defina. Para obter mais informações sobre a otimização de valor de retorno de chamada, consulte [denominada otimização de valor de retorno no Visual C++ 2005](https://msdn.microsoft.com/library/ms364057.aspx).
 
 Para compreender melhor a semântica de movimentação, considere o exemplo de inserção de um elemento em um objeto `vector`. Se a capacidade do objeto `vector` for excedida, o objeto `vector` deverá realocar memória para os seus elementos e então copiar cada elemento para outro local da memória para dar espaço ao elemento inserido. Quando uma operação de inserção copia um elemento, ele cria um novo elemento, chama o construtor de cópia para copiar os dados do elemento anterior para o novo elemento e destrói o elemento anterior. A semântica de movimentação permite que você mova objetos diretamente sem ter que executar operações caras de alocação de memória e de cópia.
 

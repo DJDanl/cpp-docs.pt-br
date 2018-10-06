@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32a58d35a78fce6a0a6bb499df1363a80200de5a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dced1bd7db0f3eec9d9d070deb8cf990496116ae
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017554"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821654"
 ---
 # <a name="member-access-control-c"></a>Controle de acesso a membro (C++)
 
@@ -47,7 +47,7 @@ protected:      // Declare protected function for derived classes only.
 
 O acesso padrão é **privados** em uma classe, e **público** em um struct ou união. Especificadores de acesso em uma classe podem ser usado qualquer número de vezes em qualquer ordem. A alocação de armazenamento para objetos de tipos de classe depende da implementação, mas é garantido que os membros receberão endereços de memória sucessivamente mais altos entre especificadores de acesso.
 
-### <a name="member-access-control"></a>Controle de acesso de membros
+## <a name="member-access-control"></a>Controle de acesso de membros
 
 |Tipo de acesso|Significado|
 |--------------------|-------------|

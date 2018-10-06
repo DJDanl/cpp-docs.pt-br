@@ -1,7 +1,7 @@
 ---
-title: /CLRUNMANAGEDCODECHECK (Adicionar SuppressUnmanagedCodeSecurityAttribute) | Microsoft Docs
+title: /CLRUNMANAGEDCODECHECK (remova SuppressUnmanagedCodeSecurityAttribute) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 679adc527cc70056e1292eb7e639499bd814bca6
-ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
+ms.openlocfilehash: 9868f0c35f4a988ac8e0aee8076f232f86c04afd
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47429755"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820913"
 ---
-# <a name="clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (Adicionar SuppressUnmanagedCodeSecurityAttribute)
+# <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (remova SuppressUnmanagedCodeSecurityAttribute)
 
-**/CLRUNMANAGEDCODECHECK** Especifica se o vinculador aplicará <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> como gerada pelo vinculador `PInvoke` chamadas de código gerenciado nas DLLs nativas.
+**/CLRUNMANAGEDCODECHECK** Especifica que o vinculador não se aplica <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> como gerada pelo vinculador `PInvoke` chamadas de código gerenciado nas DLLs nativas.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,13 +34,13 @@ ms.locfileid: "47429755"
 
 ## <a name="remarks"></a>Comentários
 
-Por padrão, o vinculador aplica-se a **SuppressUnmanagedCodeSecurityAttribute** como gerada pelo vinculador `PInvoke` chamadas. Quando **/CLRUNMANAGEDCODECHECK** está em vigor, **SuppressUnmanagedCodeSecurityAttribute** não será aplicado.
+Por padrão, o vinculador aplica-se a **SuppressUnmanagedCodeSecurityAttribute** como gerada pelo vinculador `PInvoke` chamadas. Quando **/CLRUNMANAGEDCODECHECK** está em vigor, **SuppressUnmanagedCodeSecurityAttribute** é removido. Para aplicar explicitamente o **SuppressUnmanagedCodeSecurityAttribute** como gerada pelo vinculador `PInvoke` chamadas, você pode usar **/CLRUNMANAGEDCODECHECK:NO**.
 
-O vinculador só adiciona o atributo para objetos que são compilados com **/clr** ou **/clr: pure**. No entanto, o **/clr: pure** opção do compilador é preterida no Visual Studio 2015 e sem suporte no Visual Studio 2017.
+O vinculador só adiciona o atributo para objetos que são compilados usando **/clr** ou **/clr: pure**. No entanto, o **/clr: pure** opção do compilador é preterida no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
 Um `PInvoke` chamada será gerada pelo vinculador quando o vinculador não é possível encontrar um símbolo gerenciado para satisfazer uma referência de um chamador gerenciado, mas pode encontrar um símbolo de nativo para atender a essa referência. Para obter mais informações sobre `PInvoke`, consulte [Calling Native Functions from Managed Code](../../dotnet/calling-native-functions-from-managed-code.md).
 
-Observe que, se você usar <xref:System.Security.AllowPartiallyTrustedCallersAttribute> em seu código, você deve definir explicitamente **/CLRUNMANAGEDCODECHECK**. É possível vulnerabilidade de segurança se uma imagem contiver atributos SuppressUnmanagedCodeSecurity tanto o AllowPartiallyTrustedCallers.
+Observe que, se você usar <xref:System.Security.AllowPartiallyTrustedCallersAttribute> em seu código, você deve definir explicitamente **/CLRUNMANAGEDCODECHECK** para remover o **SuppressUnmanagedCodeSecurity** atributo. É uma possível vulnerabilidade de segurança se uma imagem contém o **SuppressUnmanagedCodeSecurity** e **AllowPartiallyTrustedCallers** atributos.
 
 Ver [diretrizes de codificação segura para código não gerenciado](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code) para obter mais informações sobre as implicações do uso **SuppressUnmanagedCodeSecurityAttribute**.
 

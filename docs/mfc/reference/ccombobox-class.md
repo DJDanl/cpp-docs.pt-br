@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c9ad08977e6b24886060c49b74c66697113cdf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03d418fc45d3947248c78d70af5d036bd93b204d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447421"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821498"
 ---
 # <a name="ccombobox-class"></a>Classe CComboBox
 
@@ -256,7 +256,7 @@ Se você criar uma `CComboBox` objeto dentro de uma caixa de diálogo (por meio 
 
 Se você inserir um `CComboBox` objeto dentro de outra janela do objeto, você não precisará destruí-lo. Se você criar o `CComboBox` do objeto na pilha, ele será destruído automaticamente. Se você criar o `CComboBox` objeto no heap usando a **novos** função, você deve chamar **excluir** no objeto a destruí-la quando a caixa de combinação do Windows é destruída.
 
-**Observação** se você quiser manipular mensagens WM_KEYDOWN e WM_CHAR, você tem a subclasse da caixa de combinação editar e controles de caixa de lista, derivar classes de `CEdit` e `CListBox`, e adicionar manipuladores para essas mensagens para as classes derivadas. Para obter mais informações, consulte [ http://support.microsoft.com/default.aspxscid=kb; en-us; Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667) e [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
+**Observação** se você quiser manipular mensagens WM_KEYDOWN e WM_CHAR, você tem a subclasse da caixa de combinação editar e controles de caixa de lista, derivar classes de `CEdit` e `CListBox`, e adicionar manipuladores para essas mensagens para as classes derivadas. Para obter mais informações, consulte [ http://support.microsoft.com/default.aspxscid=kb; Q174667](http://support.microsoft.com/default.aspxscid=kb;q174667) e [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 

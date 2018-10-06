@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28d1df72efcc1fa7408922876ad91bafcd2b005a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2ba89aadc8e1c617ed8e101a226560b80cb9e431
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422656"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821394"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Diretrizes para desenvolvedores de C++ para canais do lado de execução especulativa
 
@@ -73,7 +73,7 @@ As etapas acima fornecem um exemplo de como usar uma técnica conhecida como FLU
 
 ## <a name="what-software-scenarios-can-be-impacted"></a>Quais cenários de software podem ser afetados?
 
-Desenvolvimento de software seguro usando um processo, como o [Security Development Lifecycle](https://www.microsoft.com/en-us/sdl/) (SDL) normalmente exige que os desenvolvedores identificar os limites de confiança que existem em seus aplicativos. Existe um limite de confiança em lugares onde um aplicativo pode interagir com dados fornecidos por um contexto de menos confiáveis, como outro processo no sistema ou um processo de modo de usuário não administrativo no caso de um driver de dispositivo de modo kernel. A nova classe de vulnerabilidades que envolvem os canais do lado de execução especulativa é relevante para muitos dos limites de confiança nos modelos de segurança de software existentes que isolar o código e os dados em um dispositivo.
+Desenvolvimento de software seguro usando um processo, como o [Security Development Lifecycle](https://www.microsoft.com/sdl/) (SDL) normalmente exige que os desenvolvedores identificar os limites de confiança que existem em seus aplicativos. Existe um limite de confiança em lugares onde um aplicativo pode interagir com dados fornecidos por um contexto de menos confiáveis, como outro processo no sistema ou um processo de modo de usuário não administrativo no caso de um driver de dispositivo de modo kernel. A nova classe de vulnerabilidades que envolvem os canais do lado de execução especulativa é relevante para muitos dos limites de confiança nos modelos de segurança de software existentes que isolar o código e os dados em um dispositivo.
 
 A tabela a seguir fornece um resumo dos modelos de segurança de software em que os desenvolvedores podem precisar se preocupar com essas vulnerabilidades ocorrendo:
 
@@ -341,7 +341,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>Barreira de especulação por meio da instrumentação de tempo do compilador
 
-O compilador do Visual C++ no Visual Studio 2017 (começando com a versão 15.5.5) inclui suporte para o `/Qspectre` switch que automaticamente insere uma barreira de especulação para um conjunto limitado de padrões de codificação potencialmente vulnerável relacionados para CVE 2017-5753. A documentação para o [/Qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) sinalizador fornece mais informações sobre o seu uso e efeitos. É importante observar que esse sinalizador não abrange todos os padrões de codificação potencialmente vulneráveis e como tal, os desenvolvedores não devem confiar nele como uma mitigação abrangente para esta classe de vulnerabilidades.
+O compilador do Visual C++ no Visual Studio 2017 (começando com a versão 15.5.5) inclui suporte para o `/Qspectre` switch que automaticamente insere uma barreira de especulação para um conjunto limitado de padrões de codificação potencialmente vulnerável relacionados para CVE 2017-5753. A documentação para o [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) sinalizador fornece mais informações sobre o seu uso e efeitos. É importante observar que esse sinalizador não abrange todos os padrões de codificação potencialmente vulneráveis e como tal, os desenvolvedores não devem confiar nele como uma mitigação abrangente para esta classe de vulnerabilidades.
 
 ### <a name="masking-array-indices"></a>Índices da matriz de mascaramento
 

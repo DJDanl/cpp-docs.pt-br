@@ -1,7 +1,7 @@
 ---
 title: Criando o projeto de (ATL Tutorial, parte 1) | Microsoft Docs
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/26/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,42 +12,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54b45ff8c7af8c8aaf7232cefa2bb4f002fc37be
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bd53bc778b3229522d34993c72833500732323b3
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755612"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821095"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Criando o projeto (Tutorial ATL, parte 1)
 
 Este tutorial orienta você passo a passo por meio de um projeto ATL nonattributed que cria um objeto ActiveX que exibe um polígono. O objeto inclui opções para permitir que o usuário alterar o número de lados que compõe o polígono e o código para atualizar a exibição.
 
 > [!NOTE]
->  ATL e MFC não têm suporte em geral nas edições Express do Visual Studio.
+> ATL e MFC não têm suporte em geral nas edições Express do Visual Studio.
 
 > [!NOTE]
->  Este tutorial cria o mesmo código-fonte como o exemplo de polígono. Se você quiser evitar inserir manualmente o código-fonte, você pode baixá-lo partir o [abstrata de exemplo de polígono](../visual-cpp-samples.md). Em seguida, você pode consultar o código-fonte polígono conforme você trabalha com este tutorial, ou usá-lo para verificar se há erros em seu próprio projeto.
+> Este tutorial cria o mesmo código-fonte como o exemplo de polígono. Se você quiser evitar inserir manualmente o código-fonte, você pode baixá-lo partir o [abstrata de exemplo de polígono](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon). Em seguida, você pode consultar o código-fonte polígono conforme você trabalha com este tutorial, ou usá-lo para verificar se há erros em seu próprio projeto.
+> Para compilar, abra o Stdafx. h e substitua:
+> ```
+> #ifndef WINVER  
+> #define WINVER 0x0400   
+> #endif
+> ```
+> with
+> ```
+> #ifndef WINVER  
+> #define WINVER 0x0500
+> #define _WIN32_WINNT 0x0500
+> #endif
+> ```
+> O compilador reclamará ainda sobre `regsvr32` não sair corretamente, mas você ainda deve ter a DLL do controle interno e está disponível para uso.
 
 ### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>Para criar o projeto ATL inicial usando o Assistente de projeto do ATL
 
 1. No ambiente de desenvolvimento do Visual Studio, clique em **New** sobre o **arquivo** menu e, em seguida, clique **projeto**.
 
-2. Clique o **projetos do Visual C++** pasta e selecione **projeto ATL**.
+1. Abra o **Visual C++** e selecione **MFC/ATL**. Selecione **projeto da ATL**.
 
-3. Tipo de *polígono* como o nome do projeto.
+1. Tipo de *polígono* como o nome do projeto.
 
-     O local para o código-fonte normalmente padronizará para Meus Documentos\Visual Studio projetos e uma nova pasta será criada automaticamente.
+    O local para o código-fonte normalmente padrão será \Users\\\<username > \source\repos e uma nova pasta serão criada automaticamente.
 
-4. Clique em **Okey** e abre o Assistente de projeto de ATL.
+1. Clique em **Okey** e o **projeto ATL** assistente é aberto.
 
-5. Clique em **configurações do aplicativo** para ver as opções disponíveis.
+1. Clique em **configurações do aplicativo** para ver as opções disponíveis.
 
-6. À medida que você está criando um controle e um controle deve ser um servidor em processo, deixar o **tipo de aplicativo** como uma DLL.
+1. À medida que você está criando um controle e um controle deve ser um servidor em processo, deixar o **tipo de aplicativo** como uma DLL.
 
-7. Deixe as outras opções com seus valores padrão e, em seguida, clique em **concluir**.
+1. Deixe as outras opções com seus valores padrão e, em seguida, clique em **Okey**.
 
-O Assistente de projeto de ATL criará o projeto por meio da geração de vários arquivos. Você pode exibir esses arquivos no Gerenciador de soluções, expandindo o objeto de polígono. Os arquivos estão listados abaixo.
+O **ATL Project Wizard** criará o projeto por meio da geração de vários arquivos. Você pode exibir esses arquivos no **Gerenciador de soluções** expandindo o `Polygon` objeto. Os arquivos estão listados abaixo.
 
 |Arquivo|Descrição|
 |----------|-----------------|
@@ -61,13 +75,13 @@ O Assistente de projeto de ATL criará o projeto por meio da geração de vário
 |stdafx.cpp|O arquivo que será `#include` os arquivos de implementação de ATL.|
 |stdafx.h|O arquivo que será `#include` os arquivos de cabeçalho da ATL.|
 
-1. No Gerenciador de soluções, clique com botão direito do `Polygon` projeto.
+1. Na **Gerenciador de soluções**, clique com botão direito do `Polygon` projeto.
 
-2. No menu de atalho, clique em **propriedades**.
+1. No menu de atalho, clique em **propriedades**.
 
-3. Clique em **vinculador**. Alterar o **por UserRedirection** opção **Sim**.
+1. Clique em **vinculador**. Alterar o **por UserRedirection** opção **Sim**.
 
-4. Clique em **OK**.
+1. Clique em **OK**.
 
 A próxima etapa, você adicionará um controle ao seu projeto.
 
