@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10b258b12bb1ad7e47a7b126b8fd503814186645
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: df874ae68f786585e85a8bc1b01ea8d0ac831d87
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46041591"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861285"
 ---
 # <a name="c-runtime-error-r6024"></a>C R6024 de erro de tempo de execução
 
 Não há espaço suficiente para a tabela de OnExit
 
 > [!NOTE]
->  Se você encontrar esta mensagem de erro durante a execução de um aplicativo, o aplicativo foi encerrado porque ele tem um problema de memória interna. Esse erro geralmente é causado por uma condição de memória extremamente baixa, ou raramente, por um bug no programa ou por danos das bibliotecas do Visual C++ que ele usa.
+> Se você encontrar esta mensagem de erro durante a execução de um aplicativo, o aplicativo foi encerrado porque ele tem um problema de memória interna. Esse erro geralmente é causado por uma condição de memória extremamente baixa, ou raramente, por um bug no programa ou por danos das bibliotecas do Visual C++ que ele usa.
 >
->  Você pode tentar corrigir esse erro com estas etapas:
+> Você pode tentar corrigir esse erro com estas etapas:
 >
->  -   Feche outros aplicativos em execução ou reinicie o computador para liberar memória.
-> -   Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para reparar ou reinstalar o programa.
-> -   Use o **aplicativos e recursos** ou **programas e recursos** página de **painel de controle** para reparar ou reinstalar todas as cópias do Microsoft Visual C++ redistribuível.
-> -   Verifique **Windows Update** na **painel de controle** para atualizações de software.
-> -   Verifique se há uma versão atualizada do aplicativo. Se o problema persistir, entre em contato com o fornecedor do aplicativo.
+> - Feche outros aplicativos em execução ou reinicie o computador para liberar memória.
+> - Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para reparar ou reinstalar o programa.
+> - Use o **aplicativos e recursos** ou **programas e recursos** página de **painel de controle** para reparar ou reinstalar todas as cópias do Microsoft Visual C++ redistribuível.
+> - Verifique **Windows Update** na **painel de controle** para atualizações de software.
+> - Verifique se há uma versão atualizada do aplicativo. Se o problema persistir, entre em contato com o fornecedor do aplicativo.
 
 **Informações para programadores**
 

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985ff4eb96b904dc9c5b4377b336109b00e06b40
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ba4cb1411bca452de0f146626421315fa7dc177e
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716580"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48859855"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (especificar diretórios de metadados)
 
@@ -49,9 +49,9 @@ Apenas um diretório pode ser passado para um **/AI** invocação. Especifique u
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
 
-2. Selecione o **propriedades de configuração** > **C/C++** > **geral** página de propriedades.
+1. Selecione o **propriedades de configuração** > **C/C++** > **geral** página de propriedades.
 
-3. Modificar a **adicionais #using diretórios** propriedade.
+1. Modificar a **adicionais #using diretórios** propriedade.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 

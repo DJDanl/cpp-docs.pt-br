@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b5e3ef2e5c14ae93d4fcc3b016f4dbc955edbd
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f2d0e6567f8666df4ec170ad7911ef08f5a1d335
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709157"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861623"
 ---
 # <a name="diagnostics-compiler-diagnostic-options"></a>/Diagnostics (opções do compilador diagnóstico)
 
@@ -56,9 +56,9 @@ O **/diagnostics** opção está disponível a partir do Visual Studio 2017.
 
 1. Abra seu projeto **páginas de propriedade** caixa de diálogo.
 
-2. Sob **propriedades de configuração**, expanda o **C/C++** pasta e escolha o **geral** página de propriedades.
+1. Sob **propriedades de configuração**, expanda o **C/C++** pasta e escolha o **geral** página de propriedades.
 
-3. Use o controle de lista suspensa na **formato de diagnóstico** opção de exibição de campo para selecionar um diagnóstico. Escolher **Okey** ou **aplicar** para salvar suas alterações.
+1. Use o controle de lista suspensa na **formato de diagnóstico** opção de exibição de campo para selecionar um diagnóstico. Escolher **Okey** ou **aplicar** para salvar suas alterações.
 
 ## <a name="see-also"></a>Consulte também
 

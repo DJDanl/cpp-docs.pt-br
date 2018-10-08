@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d794b8bf762503900dad18c7457c31101ea6d62
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c79a9cace0cf2eacabdba63f327f86e95959f3fb
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377704"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861467"
 ---
 # <a name="sequence-of-operations-for-creating-activex-controls"></a>Sequência de operações para criação de controles ActiveX
 
@@ -36,7 +36,7 @@ A tabela a seguir mostra a sua função e a função da estrutura na criação d
 |Crie uma estrutura de controle ActiveX.|Execute o Assistente de controle ActiveX MFC para criar seu controle. Especifica as opções desejadas nas páginas de opções. As opções incluem o tipo e o nome do controle no projeto, licenciamento, a criação de subclasses e um método de caixa sobre.|O Assistente de controle ActiveX MFC cria os arquivos para um controle ActiveX com funcionalidade básica, incluindo arquivos de origem para seu aplicativo, o controle e a página de propriedades ou a páginas; um arquivo de recurso; um arquivo de projeto; e outros, todos adaptados às suas especificações.|
 |Veja o que oferecem o controle e o Assistente de controle ActiveX sem adicionar uma linha de seu próprio código.|Criar o controle ActiveX e testá-lo com o Internet Explorer ou o [exemplo TSTCON](../visual-cpp-samples.md).|O controle em execução tem a capacidade de ser redimensionado e movido. Ele também tem um **About Box** método (se escolhido) que pode ser invocado.|
 |Implemente os métodos e propriedades do controle.|Implemente suas propriedades e métodos específicos de controle, adicionando funções de membro para fornecer uma interface exposta para os dados do controle. Adicione variáveis de membro para armazenar estruturas de dados e usar manipuladores de eventos para disparar eventos quando você determinar.|O framework já definiu um mapa para dar suporte a eventos do controle, propriedades e métodos, deixando-o para se concentrar em como as propriedades e métodos são implementados. A página de propriedade padrão é visível e um método de caixa sobre o padrão é fornecido.|
-|Construa páginas ou página de propriedades do controle.|Use os editores de recursos do Visual C++ para editar visualmente a interface de página de propriedade do controle:<br /><br /> -Crie páginas de propriedades adicionais.<br />-Criar e editar bitmaps, ícones e cursores.<br /><br /> Você também pode testar as páginas de propriedade no editor de caixa de diálogo.|O arquivo de recurso padrão criado pelo Assistente de aplicativo do MFC fornece muitos dos recursos que você precisa. Visual C++ permite editar os recursos existentes e adicionar novos recursos, fácil e visualmente.|
+|Construa páginas ou página de propriedades do controle.|Use os editores de recursos do Visual C++ para editar visualmente a interface de página de propriedade do controle:<br /><br />-Crie páginas de propriedades adicionais.<br />-Criar e editar bitmaps, ícones e cursores.<br /><br /> Você também pode testar as páginas de propriedade no editor de caixa de diálogo.|O arquivo de recurso padrão criado pelo Assistente de aplicativo do MFC fornece muitos dos recursos que você precisa. Visual C++ permite editar os recursos existentes e adicionar novos recursos, fácil e visualmente.|
 |Propriedades, métodos e eventos do controle de teste.|Recompile o controle e usar o contêiner de teste para testar se seus manipuladores funcionam corretamente.|Você pode invocar métodos do controle e manipulam suas propriedades por meio da interface de página de propriedade ou por meio do contêiner de teste. Além disso, use o contêiner de teste para acompanhar eventos acionados a partir do controle e notificações recebidas pelo contêiner do controle.|
 
 ## <a name="see-also"></a>Consulte também

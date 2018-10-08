@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 512f791b3db513c2a143bda84a8dc2677b341544
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1b8074ad511544dcc6638ca804a26745e3da317b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106032"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860336"
 ---
 # <a name="adding-an-atl-dialog-box"></a>Adicionando uma caixa de diálogo do ATL
 
@@ -30,15 +30,15 @@ Para adicionar uma caixa de diálogo do ATL ao seu projeto, o projeto deve ser u
 Por padrão, o Assistente de caixa de diálogo do ATL implementa uma caixa de diálogo derivada [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Essa classe inclui suporte para hospedagem de controles ActiveX e Windows. Se você não quiser que a sobrecarga de suporte a controles ActiveX, depois que o Assistente gerou seu código, substitua todas as instâncias do `CAxDialogImpl` com um [CSimpleDialog](../../atl/reference/csimpledialog-class.md) ou [CDialogImpl](../../atl/reference/cdialogimpl-class.md) como sua classe base .
 
 > [!NOTE]
->  `CSimpleDialog` cria apenas as caixas de diálogo modal que dão suporte a apenas os controles comuns do Windows. `CDialogImpl` cria qualquer caixas de diálogo modal ou sem janela restrita.
+> `CSimpleDialog` cria apenas as caixas de diálogo modal que dão suporte a apenas os controles comuns do Windows. `CDialogImpl` cria qualquer caixas de diálogo modal ou sem janela restrita.
 
-### <a name="to-add-an-atl-dialog-resource-to-your-project"></a>Para adicionar um recurso de caixa de diálogo do ATL ao seu projeto
+## <a name="to-add-an-atl-dialog-resource-to-your-project"></a>Para adicionar um recurso de caixa de diálogo do ATL ao seu projeto
 
 1. Crie um projeto ATL usando o [ATL Project Wizard](../../atl/reference/atl-project-wizard.md).
 
-2. Partir [Class View](/visualstudio/ide/viewing-the-structure-of-code), clique com botão direito no nome do projeto e clique em **Add** no menu de atalho. Clique em **Adicionar classe**.
+1. Partir [Class View](/visualstudio/ide/viewing-the-structure-of-code), clique com botão direito no nome do projeto e clique em **Add** no menu de atalho. Clique em **Adicionar classe**.
 
-3. No painel de modelos do [Add Class](../../ide/add-class-dialog-box.md) caixa de diálogo, clique em **caixa de diálogo do ATL**. Clique em **aberto** para exibir o [Assistente de caixa de diálogo do ATL](../../atl/reference/atl-dialog-wizard.md).
+1. No **modelos** painel da [Add Class](../../ide/add-class-dialog-box.md) caixa de diálogo, clique em **caixa de diálogo do ATL**. Clique em **aberto** para exibir o [Assistente de caixa de diálogo do ATL](../../atl/reference/atl-dialog-wizard.md).
 
 Para obter mais informações, consulte [implementar uma caixa de diálogo](../../atl/implementing-a-dialog-box.md).
 
@@ -47,4 +47,3 @@ Para obter mais informações, consulte [implementar uma caixa de diálogo](../.
 [Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Classes de janela](../../atl/atl-window-classes.md)<br/>
 [Mapas de mensagem](../../atl/message-maps-atl.md)
-

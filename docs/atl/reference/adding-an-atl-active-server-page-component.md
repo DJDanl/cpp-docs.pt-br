@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a326b72ac5594d7ef5f0b9ad26f9bdf4e8472bd4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a9410ac275ecd321184153d45fd5b044deb80e5b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112987"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861506"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Adicionando um componente de página de servidor ativo do ATL
 
@@ -36,13 +36,13 @@ Componentes do Active Server Pages fazem parte da arquitetura de serviços de in
 
 - Você pode usar os recursos de tratamento de erros do ASP para seus aplicativos baseados na Web.
 
-### <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Para adicionar um componente Active Server Pages da ATL ao seu projeto
+## <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Para adicionar um componente Active Server Pages da ATL ao seu projeto
 
 1. Na **Gerenciador de soluções** clique no nome do projeto ao qual você deseja adicionar o componente Active Server Pages da ATL.
 
-2. No menu de atalho, clique em **Adicionar** e, em seguida, em **Adicionar Classe**.
+1. No menu de atalho, clique em **Adicionar** e, em seguida, em **Adicionar Classe**.
 
-3. No [Add Class](../../ide/add-class-dialog-box.md) caixa de diálogo, no painel modelos, clique em **componente Active Directory de página do servidor ATL**e, em seguida, clique em **abrir** para exibir o [ATL Server Active Directory Assistente de componentes de página](../../atl/reference/atl-active-server-page-component-wizard.md).
+1. No [Add Class](../../ide/add-class-dialog-box.md) na caixa a **modelos** painel, clique em **componente Active Directory de página do servidor ATL**e, em seguida, clique em **abrir** para exibir o [Assistente de página componente Active Server ATL](../../atl/reference/atl-active-server-page-component-wizard.md).
 
 ## <a name="see-also"></a>Consulte também
 
@@ -52,4 +52,3 @@ Componentes do Active Server Pages fazem parte da arquitetura de serviços de in
 [Adicionando um método](../../ide/adding-a-method-visual-cpp.md)<br/>
 [Classe do MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Adicionando uma classe do C++ genérica](../../ide/adding-a-generic-cpp-class.md)
-

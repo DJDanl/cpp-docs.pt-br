@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2be9b63ddf6e93c6e0db2645634a4f7bd7ecf3b8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d0c8e2294c7aee3634409a01c613d7e31729230a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591655"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861818"
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Configurações do aplicativo, Assistente de Projeto Win 32
 
@@ -38,7 +38,7 @@ Cria o tipo de aplicativo especificado.
 |**Aplicativo de console**|Crie um aplicativo de console. Programas de console são desenvolvidos com [funções do Console](https://msdn.microsoft.com/library/ms813137.aspx), que fornecem suporte de modo de caractere nas janelas do console. O Visual C++ [bibliotecas de tempo de execução](../c-runtime-library/c-run-time-library-reference.md) também fornecem a saída e entrada do windows do console com funções de e/s padrão, como `printf_s()` e `scanf_s()`. Um aplicativo de console não tem nenhuma interface gráfica do usuário. Ele compila em um arquivo .exe e pode ser executado como um aplicativo autônomo da linha de comando.<br /><br /> Você pode adicionar suportam a MFC e ATL para um aplicativo de console.|
 |**Aplicativo do Windows**|Cria um programa Win32. Um programa Win32 é um aplicativo executável (EXE) escrito em C ou C++, usando chamadas à API do Win32 para criar uma interface gráfica do usuário.<br /><br /> Não é possível adicionar o MFC ou ATL oferecem suporte a um aplicativo do Windows.|
 |**DLL**|Cria uma biblioteca de vínculo dinâmico (DLL) do Win32. Uma DLL Win32 é um arquivo binário, escrito em C ou C++, que usa chamadas à API do Win32 em vez de classes do MFC e que atua como uma biblioteca compartilhada de funções que podem ser usados simultaneamente por vários aplicativos.<br /><br /> Não é possível adicionar o MFC ou ATL oferecem suporte a um aplicativo de DLL. Você pode indicar que a DLL exporta símbolos.|
-|**Biblioteca estática**|Cria uma biblioteca estática. Uma biblioteca estática é um arquivo que contém objetos e suas funções e os dados que vincula-se ao seu programa quando o arquivo executável é compilado. Este tópico explica como criar os arquivos iniciais e [propriedades do projeto](../ide/property-pages-visual-cpp.md) para uma biblioteca estática. Um arquivo de biblioteca estática fornece os seguintes benefícios:<br /><br /> -Uma biblioteca estática do Win32 será útil se o aplicativo que você está trabalhando em faz chamadas para a API do Win32 em vez de classes do MFC.<br />– O processo de vinculação é o mesmo se o restante do seu aplicativo do Windows é escrito em C ou C++.<br />-Você pode vincular uma biblioteca estática em um programa MFC ou a um programa não MFC.|
+|**Biblioteca estática**|Cria uma biblioteca estática. Uma biblioteca estática é um arquivo que contém objetos e suas funções e os dados que vincula-se ao seu programa quando o arquivo executável é compilado. Este tópico explica como criar os arquivos iniciais e [propriedades do projeto](../ide/property-pages-visual-cpp.md) para uma biblioteca estática. Um arquivo de biblioteca estática fornece os seguintes benefícios:<br /><br />-Uma biblioteca estática do Win32 será útil se o aplicativo que você está trabalhando em faz chamadas para a API do Win32 em vez de classes do MFC.<br />– O processo de vinculação é o mesmo se o restante do seu aplicativo do Windows é escrito em C ou C++.<br />-Você pode vincular uma biblioteca estática em um programa MFC ou a um programa não MFC.|
 
 ## <a name="additional-options"></a>Opções adicionais
 

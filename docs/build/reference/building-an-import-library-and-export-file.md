@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6a980a96198db80f0956895292d37f123d0351c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 75f629c8a9c8a06f02024e9d52ab13b2d12b234c
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723301"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860377"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Compilando uma biblioteca de importação e um arquivo de exportação
 
@@ -52,9 +52,9 @@ Quando /DEF for especificado, a biblioteca cria os arquivos de saída das especi
 
 1. Um **dllexport** definição de uma da *objfiles* ou *bibliotecas*
 
-2. Uma especificação de /EXPORT:*nome* na linha de comando LIB
+1. Uma especificação de /EXPORT:*nome* na linha de comando LIB
 
-3. Uma definição em uma **exportações** instrução em um *deffile*
+1. Uma definição em uma **exportações** instrução em um *deffile*
 
 Esses são os mesmos métodos que você use para especificar exportações ao vincular a um programa de exportação. Um programa pode usar mais de um método. Você pode especificar partes do comando LIB (como o múltiplo *objfiles* ou /EXPORT especificações) em um arquivo de comando no comando LIB, assim como você pode em um comando LINK.
 

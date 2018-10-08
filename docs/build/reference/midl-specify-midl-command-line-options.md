@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d9ecfada513e16ce10bab37bb38b6ce6d67f907
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d2fa03920f60d7da4730bc46b23605ccfa13f6d7
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397618"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860375"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (especificar opções de linha de comando MIDL)
 
@@ -51,9 +51,9 @@ O arquivo deve conter uma opção de linha de comando de MIDL por linha.
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
 
-2. Selecione o **propriedades de configuração** > **vinculador** > **IDL incorporado** página de propriedades.
+1. Selecione o **propriedades de configuração** > **vinculador** > **IDL incorporado** página de propriedades.
 
-3. Modificar a **comandos de MIDL** propriedade.
+1. Modificar a **comandos de MIDL** propriedade.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 

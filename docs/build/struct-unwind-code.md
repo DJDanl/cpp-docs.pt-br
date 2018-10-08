@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da6f078741c598099e71da9164f54b56da3f355
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f5bccddd2ddd5c0f9dfbc828a7da3a66fa13339d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726642"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861714"
 ---
 # <a name="struct-unwindcode"></a>struct UNWIND_CODE
 
@@ -112,17 +112,17 @@ Esse código de desenrolamento sempre serão exibidas em um prólogo fictício, 
 
 1. Pop-RIP endereço de retorno da parte superior da pilha em *Temp*
 
-2. SS de envio por push
+1. SS de envio por push
 
-3. Enviar por push RSP antigo
+1. Enviar por push RSP antigo
 
-4. Enviar por push EFLAGS
+1. Enviar por push EFLAGS
 
-5. Enviar por push do CS
+1. Enviar por push do CS
 
-6. Enviar por push *Temp*
+1. Enviar por push *Temp*
 
-7. Enviar por push o código de erro (se as informações de operações é igual a 1)
+1. Enviar por push o código de erro (se as informações de operações é igual a 1)
 
 Simulated `UWOP_PUSH_MACHFRAME` diminui de operação RSP em 40 (informações de operações é igual a 0) ou 48 (informações de operações é igual a 1).
 

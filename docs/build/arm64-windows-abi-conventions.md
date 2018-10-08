@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc115fbc77ac68c774b85bb86fd0cf9eac1fa51b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 585fd757c18c3a7c09645b64656e6ef77cde6dca
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716632"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861376"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Visão geral das convenções de ABI ARM64
 
@@ -131,9 +131,9 @@ Esse estágio é executado exatamente uma vez, antes de começa o processamento 
 
 1. O número registrar uso geral (NGRN) próximo é definido como zero.
 
-2. A próxima SIMD e o número de registro de ponto flutuante (NSRN) é definido como zero.
+1. A próxima SIMD e o número de registro de ponto flutuante (NSRN) é definido como zero.
 
-3. O próximo endereço de argumento empilhado (NSAA) é definido como o valor atual do ponteiro de pilha (SP).
+1. O próximo endereço de argumento empilhado (NSAA) é definido como o valor atual do ponteiro de pilha (SP).
 
 ### <a name="stage-b--pre-padding-and-extension-of-arguments"></a>Estágio B — pré-enchimento e extensão de argumentos
 
@@ -141,11 +141,11 @@ Para cada argumento na lista, a primeira regra correspondente na lista a seguir 
 
 1. Se o tipo de argumento for um tipo composto cujo tamanho não pode ser determinado estaticamente pelo chamador e o receptor, o argumento é copiado para a memória e o argumento é substituído por um ponteiro para a cópia. (Não há nenhum desses tipos em C/C++, mas eles existem em outros idiomas ou em extensões de linguagem).
 
-2. Se o tipo de argumento for um HFA ou um HVA, o argumento é usado sem modificações.
+1. Se o tipo de argumento for um HFA ou um HVA, o argumento é usado sem modificações.
 
-3. Se o tipo de argumento for um tipo composto que é maior que 16 bytes, em seguida, o argumento é copiado para a memória alocada pelo chamador e o argumento é substituído por um ponteiro para a cópia.
+1. Se o tipo de argumento for um tipo composto que é maior que 16 bytes, em seguida, o argumento é copiado para a memória alocada pelo chamador e o argumento é substituído por um ponteiro para a cópia.
 
-4. Se o tipo de argumento é um tipo composto, em seguida, o tamanho do argumento é arredondado para o múltiplo de 8 bytes.
+1. Se o tipo de argumento é um tipo composto, em seguida, o tamanho do argumento é arredondado para o múltiplo de 8 bytes.
 
 ### <a name="stage-c--assignment-of-arguments-to-registers-and-stack"></a>Estágio C — atribuição de argumentos a registros e à pilha
 
@@ -153,33 +153,33 @@ Para cada argumento na lista as seguintes regras são aplicadas por sua vez até
 
 1. Se o argumento for uma metade, único, duplo ou ponto flutuante de precisão Quad ou tipo de vetor curto e o NSRN é menor que 8, em seguida, o argumento será alocado para os bits menos significativos do registro v [NSRN]. O NSRN é incrementado em um. O argumento foi alocado.
 
-2. Se o argumento for um HFA ou um HVA e há SIMD não alocado suficiente e registros de ponto flutuante (NSRN + número de membros ≤ 8), o argumento será alocado para SIMD e registra de ponto flutuante (com um registro por membro da HFA ou HVA). O NSRN é incrementado pelo número de registros usados. O argumento foi alocado.
+1. Se o argumento for um HFA ou um HVA e há SIMD não alocado suficiente e registros de ponto flutuante (NSRN + número de membros ≤ 8), o argumento será alocado para SIMD e registra de ponto flutuante (com um registro por membro da HFA ou HVA). O NSRN é incrementado pelo número de registros usados. O argumento foi alocado.
 
-3. Se o argumento for um HFA ou um HVA o NSRN é definido como 8, e o tamanho do argumento é arredondado para o múltiplo mais próximo de 8 bytes.
+1. Se o argumento for um HFA ou um HVA o NSRN é definido como 8, e o tamanho do argumento é arredondado para o múltiplo mais próximo de 8 bytes.
 
-4. Se o argumento for um HFA, um HVA, um vetor curto ou de ponto flutuante de precisão Quad digite, em seguida, o NSAA é arredondado até o maior dos 8 ou o alinhamento Natural do tipo do argumento.
+1. Se o argumento for um HFA, um HVA, um vetor curto ou de ponto flutuante de precisão Quad digite, em seguida, o NSAA é arredondado até o maior dos 8 ou o alinhamento Natural do tipo do argumento.
 
-5. Se o argumento for um tipo de ponto flutuante de precisão metade ou simples, em seguida, o tamanho do argumento é definido como 8 bytes. O efeito é como se tivesse o argumento foi copiado para os bits menos significativos de um registro de 64 bits e os bits restantes preenchidos com valores não especificados.
+1. Se o argumento for um tipo de ponto flutuante de precisão metade ou simples, em seguida, o tamanho do argumento é definido como 8 bytes. O efeito é como se tivesse o argumento foi copiado para os bits menos significativos de um registro de 64 bits e os bits restantes preenchidos com valores não especificados.
 
-6. Se o argumento for um HFA, um HVA, meia-, único, duplo - ou ponto flutuante de precisão Quad ou tipo de vetor curto e o argumento é copiado para a memória no NSAA ajustado. O NSAA é incrementado pelo tamanho do argumento. O argumento foi alocado.
+1. Se o argumento for um HFA, um HVA, meia-, único, duplo - ou ponto flutuante de precisão Quad ou tipo de vetor curto e o argumento é copiado para a memória no NSAA ajustado. O NSAA é incrementado pelo tamanho do argumento. O argumento foi alocado.
 
-7. Se o argumento for um tipo de ponteiro ou Integral, o tamanho do argumento é menor que ou igual a 8 bytes e o NGRN é menor do que 8, o argumento é copiado para os bits menos significativos em x [NGRN]. O NGRN é incrementado em um. O argumento foi alocado.
+1. Se o argumento for um tipo de ponteiro ou Integral, o tamanho do argumento é menor que ou igual a 8 bytes e o NGRN é menor do que 8, o argumento é copiado para os bits menos significativos em x [NGRN]. O NGRN é incrementado em um. O argumento foi alocado.
 
-8. Se o argumento tem um alinhamento de 16, em seguida, o NGRN é arredondado para o próximo número par.
+1. Se o argumento tem um alinhamento de 16, em seguida, o NGRN é arredondado para o próximo número par.
 
-9. Se o argumento é um tipo Integral, o tamanho do argumento é igual a 16 e o NGRN é menor que 7, o argumento é copiado para x [NGRN] e x [NGRN + 1]. x [NGRN] deve conter a inferior endereçada palavra dupla da representação de memória do argumento. O NGRN é incrementado por dois. O argumento foi alocado.
+1. Se o argumento é um tipo Integral, o tamanho do argumento é igual a 16 e o NGRN é menor que 7, o argumento é copiado para x [NGRN] e x [NGRN + 1]. x [NGRN] deve conter a inferior endereçada palavra dupla da representação de memória do argumento. O NGRN é incrementado por dois. O argumento foi alocado.
 
-10. Se o argumento for um tipo composto e o tamanho em palavras duplas do argumento não é maior que 8 menos NGRN, então o argumento é copiado para registros de uso geral consecutivos, começando em x [NGRN]. O argumento é passado como se tivesse sido carregada para os registros de um endereço alinhado à palavra dupla com uma sequência apropriada de LDR instruções carregar registros consecutivos de memória (o conteúdo de qualquer parte não utilizado dos registros é não especificado Por esse padrão). O NGRN é incrementado pelo número de registros usados. O argumento foi alocado.
+1. Se o argumento for um tipo composto e o tamanho em palavras duplas do argumento não é maior que 8 menos NGRN, então o argumento é copiado para registros de uso geral consecutivos, começando em x [NGRN]. O argumento é passado como se tivesse sido carregada para os registros de um endereço alinhado à palavra dupla com uma sequência apropriada de LDR instruções carregar registros consecutivos de memória (o conteúdo de qualquer parte não utilizado dos registros é não especificado Por esse padrão). O NGRN é incrementado pelo número de registros usados. O argumento foi alocado.
 
-11. O NGRN é definido como 8.
+1. O NGRN é definido como 8.
 
-12. O NSAA é arredondado para o maior dos 8 ou o alinhamento Natural do tipo do argumento...
+1. O NSAA é arredondado para o maior dos 8 ou o alinhamento Natural do tipo do argumento...
 
-13. Se o argumento for um tipo composto, em seguida, o argumento é copiado para a memória no NSAA ajustado. O NSAA é incrementado pelo tamanho do argumento. O argumento foi alocado.
+1. Se o argumento for um tipo composto, em seguida, o argumento é copiado para a memória no NSAA ajustado. O NSAA é incrementado pelo tamanho do argumento. O argumento foi alocado.
 
-14. Se o tamanho do argumento for menor que 8 bytes, em seguida, o tamanho do argumento é definido como 8 bytes. O efeito é como se o argumento foi copiado para os bits menos significativos de um registro de 64 bits e os bits restantes preenchidos com valores não especificados.
+1. Se o tamanho do argumento for menor que 8 bytes, em seguida, o tamanho do argumento é definido como 8 bytes. O efeito é como se o argumento foi copiado para os bits menos significativos de um registro de 64 bits e os bits restantes preenchidos com valores não especificados.
 
-15. O argumento é copiado para a memória no NSAA ajustado. O NSAA é incrementado pelo tamanho do argumento. O argumento foi alocado.
+1. O argumento é copiado para a memória no NSAA ajustado. O NSAA é incrementado pelo tamanho do argumento. O argumento foi alocado.
 
 ### <a name="addendum-variadic-functions"></a>Adendo: Funções de Variadic
 
@@ -187,7 +187,7 @@ Funções que usam um número variável de argumentos são tratadas de maneira d
 
 1. Todas as composições são tratadas parecidos; nenhum tratamento especial de HFAs ou HVAs.
 
-2. SIMD e registra de ponto flutuante não serão usado.
+1. SIMD e registra de ponto flutuante não serão usado.
 
 Efetivamente, isso equivale a C.12–C.15 para alocar os argumentos para uma pilha imaginário, onde os primeiros 64 bytes da pilha são carregados no x7 x0 e quaisquer argumentos de pilha restantes são colocados normalmente regras a seguir.
 

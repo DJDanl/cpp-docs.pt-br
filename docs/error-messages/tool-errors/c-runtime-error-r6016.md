@@ -16,27 +16,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65f4b4529e0faf433ff9dc5c4fc2c0594a4d9ff6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b14d6e20f58ef5a9fbda6d640f5c8a596635d70c
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076639"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861701"
 ---
 # <a name="c-runtime-error-r6016"></a>R6016 de erro de tempo de execução do C
 
 não há espaço suficiente para dados do thread
 
 > [!NOTE]
->  Se você encontrar esta mensagem de erro durante a execução de um aplicativo, o aplicativo foi encerrado porque ele tem um problema de memória interna. Há muitas razões possíveis para esse erro, mas geralmente é causado por uma condição de memória extremamente baixa, um bug no aplicativo, ou por um bug em um suplemento ou a extensão usada pelo aplicativo.
+> Se você encontrar esta mensagem de erro durante a execução de um aplicativo, o aplicativo foi encerrado porque ele tem um problema de memória interna. Há muitas razões possíveis para esse erro, mas geralmente é causado por uma condição de memória extremamente baixa, um bug no aplicativo, ou por um bug em um suplemento ou a extensão usada pelo aplicativo.
 >
->  Você pode tentar corrigir esse erro com estas etapas:
+> Você pode tentar corrigir esse erro com estas etapas:
 >
->  -   Feche outros aplicativos em execução ou reinicie o computador para liberar memória.
-> -   Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para reparar ou reinstalar o aplicativo.
-> -   Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para remover, reparar ou reinstalar o add-ins ou extensões usadas pelo aplicativo.
-> -   Verifique **Windows Update** na **painel de controle** para atualizações de software.
-> -   Verifique se há uma versão atualizada do aplicativo. Se o problema persistir, entre em contato com o fornecedor do aplicativo.
+> - Feche outros aplicativos em execução ou reinicie o computador para liberar memória.
+> - Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para reparar ou reinstalar o aplicativo.
+> - Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para remover, reparar ou reinstalar o add-ins ou extensões usadas pelo aplicativo.
+> - Verifique **Windows Update** na **painel de controle** para atualizações de software.
+> - Verifique se há uma versão atualizada do aplicativo. Se o problema persistir, entre em contato com o fornecedor do aplicativo.
 
 **Informações para programadores**
 

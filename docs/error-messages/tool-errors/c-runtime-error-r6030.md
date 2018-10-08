@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63606624e1cbcc5ef2c5ea453ee6d346e3e686a8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9d25969a9ecb833c53b93135e65fa27b4f005a0d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038120"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861194"
 ---
 # <a name="c-runtime-error-r6030"></a>R6030 de erro de tempo de execução do C
 
 CRT não inicializado
 
 > [!NOTE]
->  Se você encontrar esta mensagem de erro durante a execução de um aplicativo, o aplicativo foi encerrado porque ele tem um problema interno. Esse problema é causado mais frequentemente por determinados programas de software de segurança ou raramente, por um bug no programa.
+> Se você encontrar esta mensagem de erro durante a execução de um aplicativo, o aplicativo foi encerrado porque ele tem um problema interno. Esse problema é causado mais frequentemente por determinados programas de software de segurança ou raramente, por um bug no programa.
 >
->  Você pode tentar corrigir esse erro com estas etapas:
+> Você pode tentar corrigir esse erro com estas etapas:
 >
->  -   Seu software de segurança pode ter instruções específicas para atenuar esse problema. Verifique o site do seu fornecedor software de segurança para obter detalhes. Como alternativa, verificar se há versões atualizadas do seu software de segurança ou experimente o software de segurança diferentes.
-> -   Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para reparar ou reinstalar o programa.
-> -   Verifique **Windows Update** na **painel de controle** para atualizações de software.
-> -   Verifique se há uma versão atualizada do aplicativo. Se o problema persistir, entre em contato com o fornecedor do aplicativo.
+> - Seu software de segurança pode ter instruções específicas para atenuar esse problema. Verifique o site do seu fornecedor software de segurança para obter detalhes. Como alternativa, verificar se há versões atualizadas do seu software de segurança ou experimente o software de segurança diferentes.
+> - Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para reparar ou reinstalar o programa.
+> - Verifique **Windows Update** na **painel de controle** para atualizações de software.
+> - Verifique se há uma versão atualizada do aplicativo. Se o problema persistir, entre em contato com o fornecedor do aplicativo.
 
 **Informações para programadores**
 

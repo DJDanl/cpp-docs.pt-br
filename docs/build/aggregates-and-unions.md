@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f0ac55dce5d00f8931ee263be0fc5ab8a8a3a08
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: aac6da94a0786e5cdc2eee4d16f5927f66e0a8d5
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710015"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861181"
 ---
 # <a name="aggregates-and-unions"></a>Agregações e uniões
 
@@ -29,7 +29,7 @@ Outros tipos, como matrizes, estruturas e uniões, têm requisitos de alinhament
 
    Contém um grupo ordenado de objetos de dados adjacentes. Cada objeto é chamado de um elemento. Todos os elementos dentro de uma matriz tem o mesmo tamanho e tipo de dados.
 
--  Estrutura
+- Estrutura
 
    Contém um grupo ordenado de objetos de dados. Diferentemente dos elementos de uma matriz, os objetos dentro de uma estrutura de dados podem ter tamanhos e tipos de dados diferentes. Cada objeto de dados em uma estrutura é chamado de um membro.
 

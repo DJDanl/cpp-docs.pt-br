@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 471d6a273bfb4a446dbf5aba1c3b1bb31d988b24
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e167d1a8d6b7faa161edb332f1041659c176b323
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116094"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861779"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, o Assistente de componente ATL COM+ 1.0
 
@@ -34,7 +34,7 @@ Para obter mais informações sobre projetos ATL e classes COM da ATL, consulte 
    |Opção|Descrição|
    |------------|-----------------|
    |**Duplo**|Especifica que o objeto dá suporte a uma interface dupla (seu vtable tem funções de interface personalizada e associação tardia `IDispatch` métodos). Permite que os clientes COM e controladores de automação acessar o objeto.|
-   |**Personalizado**|Especifica que o objeto dá suporte a uma interface personalizada (seu vtable tem funções de interface personalizada). Uma interface personalizada pode ser mais rápida do que uma interface dupla, especialmente entre os limites do processo.<br /><br /> -   **Automação compatível** adiciona suporte de automação para a interface personalizada. Para projetos atribuídos, define o **oleautomation** atributo na coclass.|
+   |**Personalizado**|Especifica que o objeto dá suporte a uma interface personalizada (seu vtable tem funções de interface personalizada). Uma interface personalizada pode ser mais rápida do que uma interface dupla, especialmente entre os limites do processo.<br /><br /> - **Automação compatível** adiciona suporte de automação para a interface personalizada. Para projetos atribuídos, define o **oleautomation** atributo na coclass.|
 
 - **Passível de enfileiramento**
 

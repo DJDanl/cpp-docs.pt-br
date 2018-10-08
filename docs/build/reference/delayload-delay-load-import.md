@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 800b3d7d588d1038ac61cb7c9c4b9f1913bec9d4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 509464ba78a6b7693a849d9f753b13328ab868f9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722365"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860739"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD (importação de carga com atraso)
 
@@ -46,9 +46,9 @@ O [/Delay](../../build/reference/delay-delay-load-import-settings.md) opção es
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
 
-2. No **vinculador** pasta, selecione a **entrada** página de propriedades.
+1. No **vinculador** pasta, selecione a **entrada** página de propriedades.
 
-3. Modificar a **Atrasar DLLs carregadas** propriedade.
+1. Modificar a **Atrasar DLLs carregadas** propriedade.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d674b2e3049d27f0e79eb082a44640f67a395dea
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0d0b9da19ca3d1500e4e25822e8b10d5967a45cc
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097869"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861675"
 ---
 # <a name="cwndclassinfo-class"></a>Classe de CWndClassInfo
 
@@ -81,7 +81,7 @@ Se você quiser criar uma janela com base em uma classe de janela existente, der
 
 [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]
 
-Para obter mais informações sobre classes de janela, consulte [Classes de janela](https://msdn.microsoft.com/library/windows/desktop/ms632596) no SDK do Windows.
+Para obter mais informações sobre classes de janela, consulte [Classes de janela](/windows/desktop/winmsg/window-classes) no SDK do Windows.
 
 Para obter mais informações sobre como usar o windows em ATL, consulte o artigo [Classes de janela ATL](../../atl/atl-window-classes.md).
 

@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46e3926f31ec7d12da539d868cacb37e18134e96
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bd4f5ac780b36e51be63aef7ce87884284542cbb
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109672"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861935"
 ---
 # <a name="cwindow-class"></a>Classe CWindow
 
@@ -382,7 +382,7 @@ class CWindow
 
 [CDialogImpl](../../atl/reference/cdialogimpl-class.md) permite que você crie uma caixa de diálogo modal ou sem janela restrita.
 
-Para obter mais informações sobre o windows, consulte [Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595) e tópicos subsequentes no SDK do Windows. Para obter mais informações sobre como usar o windows em ATL, consulte o artigo [Classes de janela ATL](../../atl/atl-window-classes.md).
+Para obter mais informações sobre o windows, consulte [Windows](/windows/desktop/winmsg/windows) e tópicos subsequentes no SDK do Windows. Para obter mais informações sobre como usar o windows em ATL, consulte o artigo [Classes de janela ATL](../../atl/atl-window-classes.md).
 
 ## <a name="requirements"></a>Requisitos
 

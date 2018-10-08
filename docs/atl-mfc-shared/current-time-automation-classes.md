@@ -18,26 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9f267653f87ffcaf357a20abd5d72fd148d7900
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8ead35da3c20630e93757787f54755dd383264d2
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753429"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860609"
 ---
 # <a name="current-time-automation-classes"></a>Hora atual: Classes de automação
 
 O procedimento a seguir mostra como criar um `COleDateTime` do objeto e inicializá-lo com a hora atual.
 
-#### <a name="to-get-the-current-time"></a>Para obter a hora atual
+## <a name="to-get-the-current-time"></a>Para obter a hora atual
 
 1. Crie um objeto `COleDateTime`.
 
-2. Chamar `GetCurrentTime`.
+1. Chamar `GetCurrentTime`.
 
    [!code-cpp[NVC_ATLMFC_Utilities#177](../atl-mfc-shared/codesnippet/cpp/current-time-automation-classes_1.cpp)]
 
 ## <a name="see-also"></a>Consulte também
 
 [Data e hora: suporte a automação](../atl-mfc-shared/date-and-time-automation-support.md)
-

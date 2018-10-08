@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e95ad940aac14892ac14e8d56ba64f49d0bbf7c0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 66cbf25324b71c3fd28bdd344c7a217348cdb5d9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423826"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861610"
 ---
 # <a name="12-definition-of-terms"></a>1.2 Definições de termos
 
@@ -43,7 +43,7 @@ Os seguintes termos são usados neste documento:
 
    Instruções lexicalmente contidas em uma *bloco estruturado*.
 
--  thread mestre
+- thread mestre
 
    O thread que cria uma equipe quando um *região paralela* é inserido.
 
@@ -75,7 +75,7 @@ Os seguintes termos são usados neste documento:
 
    Um bloco estruturado é uma instrução (única ou composta) que tem uma única entrada e uma única saída. Nenhuma instrução é um bloco estruturado, se houver um salto para dentro ou fora dessa instrução (incluindo uma chamada para **longjmp**(3C) ou o uso de **throw**, mas uma chamada para **sair** é permitido). Uma instrução composta é um bloco estruturado, se sua execução sempre começa na abertura **{** e sempre termina no fechamento **}**. Uma instrução de expressão, a instrução de seleção, a instrução de iteração, ou **tente** bloco é um bloco estruturado, se a instrução composta correspondente é obtido, colocando-o no **{** e **}** seria um bloco estruturado. Uma instrução de salto, a instrução rotulada ou a instrução de declaração não é um bloco estruturado.
 
--  Equipe
+- Equipe
 
    Um ou mais threads cooperativas na execução de uma construção.
 

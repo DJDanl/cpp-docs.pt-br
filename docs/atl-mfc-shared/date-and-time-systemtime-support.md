@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae20f0ea5697883f361a1933601c24095b74d733
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2a4628d2db9c454bb689d4eb8316b77986588047
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767904"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860479"
 ---
 # <a name="date-and-time-systemtime-support"></a>Data e hora: suporte a SYSTEMTIME
 
@@ -57,4 +57,3 @@ Você provavelmente não usará `CTime` `FILETIME` inicialização diretamente. 
 ## <a name="see-also"></a>Consulte também
 
 [Data e hora](../atl-mfc-shared/date-and-time.md)
-

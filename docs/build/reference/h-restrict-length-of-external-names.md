@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61a931ac5f9793f800157ed02ffcb7ff5071f4df
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c4881ba20e999b13e2a7841161a775eac69638f6
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724393"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861012"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (restringir comprimento de nomes externos)
 
@@ -86,9 +86,9 @@ O **/H** opção foi preterida desde o Visual Studio 2005; os limites de comprim
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
 
-2. Selecione o **propriedades de configuração** > **C/C++** > **linha de comando** página de propriedades.
+1. Selecione o **propriedades de configuração** > **C/C++** > **linha de comando** página de propriedades.
 
-3. Insira a opção de compilador na **opções adicionais** caixa.
+1. Insira a opção de compilador na **opções adicionais** caixa.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 

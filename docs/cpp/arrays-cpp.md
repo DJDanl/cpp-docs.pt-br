@@ -16,44 +16,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7c88c1d0f4096017b8ffc48a92143a63d229c5e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b2423355aa53abe52fffcd81ec847b41337efcbf
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017905"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861025"
 ---
 # <a name="arrays-c"></a>Matrizes (C++)
 
 Uma matriz é uma coleção de objetos afins. O caso mais simples de uma matriz é um vetor, que pode ser declarado pela seguinte sequência:
 
-```
-decl-specifier identifier [ constant-expression ]
-decl-specifier identifier []
-decl-specifier identifer [][ constant-expression] . . .
-decl-specifier identifier [ constant-expression ]
-[ constant-expression ] . . .
-```
+> *especificador de Decl* *identificador* **\[** *expressão constante* **]**<br/>
+> *especificador de Decl* *identificador*  **\[]**<br/>
+> *especificador de Decl* *identificador* **\[]\[** *expressão constante* **]** . . .<br/>
+> *especificador de Decl* *identificador* **\[** *expressão constante* **]** **\[** *expressão constante* **]** . . .
 
 1. O especificador de declaração:
 
-- Um especificador de classe de armazenamento opcional.
+   - Um especificador de classe de armazenamento opcional.
 
-- Opcional **const** e/ou **volátil** especificadores.
+   - Opcional **const** e/ou **volátil** especificadores.
 
-- O nome do tipo dos elementos da matriz.
+   - O nome do tipo dos elementos da matriz.
 
-2. O declarador:
+1. O declarador:
 
-- O identificador.
+   - O identificador.
 
-- Uma expressão constante do tipo integral entre colchetes, **[]**. Se várias dimensões são declaradas usando os colchetes adicionais, a expressão de constante pode ser omitida no primeiro conjunto de colchetes.
+   - Uma expressão constante do tipo integral entre colchetes,  **\[]**. Se várias dimensões são declaradas usando os colchetes adicionais, a expressão de constante pode ser omitida no primeiro conjunto de colchetes.
 
-- Colchetes adicionais opcionais que incluem expressões constantes.
+   - Colchetes adicionais opcionais que incluem expressões constantes.
 
-3. Um inicializador opcional.  Ver [inicializadores](../cpp/initializers.md).
+1. Um inicializador opcional. Para obter mais informações, consulte [inicializadores](../cpp/initializers.md).
 
-O número de elementos na matriz é determinado pela expressão constante. O primeiro elemento na matriz é o elemento 0 e o último elemento é o (*n*-1) elemento, onde *n* é o número de elementos de matriz pode conter. O *expressão-constante* deve ser do tipo integral e deve ser maior que 0. Uma matriz de tamanho zero é válida somente quando a matriz é o último campo em uma **struct** ou **união** e quando as extensões da Microsoft (/Ze) estão habilitadas.
+O número de elementos na matriz é determinado pela *expressão-constante*. O primeiro elemento na matriz é o elemento 0 e o último elemento é o (*n*-1) elemento, onde *n* é o número de elementos de matriz pode conter. O *expressão-constante* deve ser do tipo integral e deve ser maior que 0. Uma matriz de tamanho zero é válida somente quando a matriz é o último campo em uma **struct** ou **união** e quando as extensões da Microsoft (/Ze) estão habilitadas.
 
 O exemplo a seguir mostra como definir uma matriz no tempo de execução:
 

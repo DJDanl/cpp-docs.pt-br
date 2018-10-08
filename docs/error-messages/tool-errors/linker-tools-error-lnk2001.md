@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb8e560e46da06c4312ab4261016ccd5a5ddda68
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3da81f46514fbdd7d01ce9c2a9d8be6007301b45
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017841"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861571"
 ---
 # <a name="linker-tools-error-lnk2001"></a>Erro das Ferramentas de Vinculador LNK2001
 
@@ -73,9 +73,9 @@ Esse erro pode ocorrer se você vincular para as bibliotecas de modo de versão 
 
 Esse erro pode ocorrer se seu código se refere a um símbolo de uma versão de uma biblioteca, mas você fornecer uma versão diferente da biblioteca para o vinculador. Em geral, você não pode misturar os arquivos de objeto ou bibliotecas que são criadas para versões diferentes do compilador. As bibliotecas que são fornecidos em uma nova versão podem conter símbolos que não foi encontrados nas bibliotecas fornecidas com versões anteriores e vice-versa. Para corrigir esse problema, crie todos os arquivos de objeto e bibliotecas com a mesma versão do compilador antes de vinculá-los juntos.
 
--  As ferramentas do &#124; opções &#124; projetos &#124; caixa de diálogo diretórios VC + +, sob a seleção de arquivos de biblioteca, permite que você altere a ordem de pesquisa de biblioteca. A pasta do vinculador na caixa de diálogo páginas de propriedades do projeto também pode conter caminhos que poderiam estar desatualizados.
+- As ferramentas do &#124; opções &#124; projetos &#124; caixa de diálogo diretórios VC + +, sob a seleção de arquivos de biblioteca, permite que você altere a ordem de pesquisa de biblioteca. A pasta do vinculador na caixa de diálogo páginas de propriedades do projeto também pode conter caminhos que poderiam estar desatualizados.
 
--  Esse problema pode aparecer quando um novo SDK está instalado (talvez para um local diferente) e a ordem de pesquisa não é atualizada para apontar para o novo local. Normalmente, você deve colocar o caminho para o novo SDK incluem e lib diretórios na frente do local padrão do Visual C++. Além disso, um projeto que contém os caminhos inseridos ainda pode apontar para caminhos antigos que são válidos, mas é atualizado para a nova funcionalidade adicionada pela nova versão que está instalada em um local diferente.
+- Esse problema pode aparecer quando um novo SDK está instalado (talvez para um local diferente) e a ordem de pesquisa não é atualizada para apontar para o novo local. Normalmente, você deve colocar o caminho para o novo SDK incluem e lib diretórios na frente do local padrão do Visual C++. Além disso, um projeto que contém os caminhos inseridos ainda pode apontar para caminhos antigos que são válidos, mas é atualizado para a nova funcionalidade adicionada pela nova versão que está instalada em um local diferente.
 
 - Se você compilar na linha de comando e tiver criado suas próprias variáveis de ambiente, verifique se que os caminhos para arquivos de cabeçalho, bibliotecas e ferramentas de ir para uma versão consistente. Para obter mais informações, consulte [definir o caminho e variáveis de ambiente para Builds de linha de comando](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)
 

@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486e7ba1b91f1e5b8a7f99f27b89183ed32608a1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c5a71e6f358a682adad2d12f7b567dc0bad3d0f3
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409643"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861859"
 ---
 # <a name="ctoolbarctrl-class"></a>Classe CToolBarCtrl
 
@@ -440,11 +440,11 @@ Os membros são da seguinte maneira:
 
    Índice baseado em zero da imagem do botão, -1 se nenhuma imagem para que esse botão.
 
--  `idCommand`
+- `idCommand`
 
    Identificador do comando associado ao botão. Esse identificador é enviado em uma mensagem WM_COMMAND, quando o botão for escolhido. Se o `fsStyle` membro tem o valor TBSTYLE_SEP, esse membro deve ser zero.
 
--  `fsState`
+- `fsState`
 
    Sinalizadores de estado do botão. Ele pode ser uma combinação dos valores listados abaixo:
 

@@ -1,7 +1,7 @@
 ---
 title: Experimente-exceto instrução | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/05/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 107b759345e221ad8100f11d97b79c5bd9fd2b65
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6e938f5b7e5f25461ae921fbfa3c49920eca86eb
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031426"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861922"
 ---
 # <a name="try-except-statement"></a>Instrução try-except
 
@@ -50,7 +50,14 @@ O **tente-exceto** instrução é uma extensão da Microsoft para o C e manipula
 
 ## <a name="syntax"></a>Sintaxe
 
-> **Try** {/ / protegida de código} **EXCEPT** ( *expressão* ) {/ / código do manipulador de exceção}
+> **__try** <br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;código protegido<br/>
+> }<br/>
+> **__except** ( *expression* )<br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;código do manipulador de exceção<br/>
+> }<br/>
 
 ## <a name="remarks"></a>Comentários
 
@@ -67,15 +74,15 @@ A instrução composta após a **Try** cláusula é o corpo ou a seção protegi
 
 1. A seção protegida é executada.
 
-2. Se nenhuma exceção ocorrer durante a execução da seção protegida, a execução continuará na instrução após o **EXCEPT** cláusula.
+1. Se nenhuma exceção ocorrer durante a execução da seção protegida, a execução continuará na instrução após o **EXCEPT** cláusula.
 
-3. Se uma exceção ocorre durante a execução da seção protegida ou em qualquer rotina chamada pela seção protegida, o **EXCEPT** *expressão* (chamado de *filtro* expressão) é avaliado e o valor determina como a exceção é tratada. Há três valores:
+1. Se uma exceção ocorre durante a execução da seção protegida ou em qualquer rotina chamada pela seção protegida, o **EXCEPT** *expressão* (chamado de *filtro* expressão) é avaliado e o valor determina como a exceção é tratada. Há três valores possíveis:
 
-   Exceção EXCEPTION_CONTINUE_EXECUTION (-1) é descartada. Continue a execução no ponto onde ocorreu a exceção.
+   - Exceção EXCEPTION_CONTINUE_EXECUTION (-1) é descartada. Continue a execução no ponto onde ocorreu a exceção.
 
-   Exceção de EXCEPTION_CONTINUE_SEARCH (0) não é reconhecida. Continue pesquisando manipuladores na pilha; primeiro os que contêm as instruções **try-except**, depois os que têm a próxima precedência mais alta.
+   - Exceção de EXCEPTION_CONTINUE_SEARCH (0) não é reconhecida. Continue pesquisando manipuladores na pilha; primeiro os que contêm as instruções **try-except**, depois os que têm a próxima precedência mais alta.
 
-   Exceção EXCEPTION_EXECUTE_HANDLER (1) é reconhecida. Transfere o controle para o manipulador de exceção executando o **EXCEPT** instrução composta, em seguida, continuar a execução após o **EXCEPT** bloco.
+   - Exceção EXCEPTION_EXECUTE_HANDLER (1) é reconhecida. Transfere o controle para o manipulador de exceção executando o **EXCEPT** instrução composta, em seguida, continuar a execução após o **EXCEPT** bloco.
 
 Porque o **EXCEPT** expressão é avaliada como uma expressão C, ela é limitada a um único valor, o operador de expressão condicional ou o operador vírgula. Se um processamento mais extenso for necessário, a expressão poderá chamar uma rotina que retorne um dos três valores listados acima.
 
@@ -83,9 +90,7 @@ Cada aplicativo pode ter seu próprio manipulador de exceção.
 
 Não é válido para ir para um **Try** instrução, mas é válido para sair de uma. O manipulador de exceção não é chamado se um processo é encerrado no meio da execução de um **tente-exceto** instrução.
 
-Para obter mais informações, consulte o artigo Q315937 da Base de Dados de Conhecimento: Como interceptar um estouro de pilha em um aplicativo do Visual C++.
-
-## <a name="the-leave-keyword"></a>A palavra-chave __leave
+### <a name="the-leave-keyword"></a>A palavra-chave __leave
 
 O **Leave** palavra-chave é válido somente dentro da seção protegida de um **tente-exceto** instrução e seu efeito é ignorar ao final da seção protegida. A execução continua na primeira instrução após o manipulador de exceção.
 
@@ -170,7 +175,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Saída
+### <a name="output"></a>Saída
 
 ```Output
 hello

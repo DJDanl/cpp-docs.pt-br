@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75ec7271950a2aee28e55d4b7b9fdcf7c8c894d0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b7d895671efdec4649faf1f0611380d2065770ac
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039368"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861441"
 ---
 # <a name="standard-conversions"></a>Conversões padrão
 
@@ -162,7 +162,7 @@ Muitos operadores binários (discutidos [expressões com operadores binários](.
 |Qualquer um dos operandos é do tipo **longo duplo**.|Outro operando será convertido ao tipo **longo duplo**.|
 |Precede a condição não atendida e qualquer operando for do tipo **duplas**.|Outro operando será convertido ao tipo **duplas**.|
 |Anterior condições não atendidas e qualquer operando for do tipo **float**.|Outro operando será convertido ao tipo **float**.|
-|As condições anteriores não foram atendidas (nenhum dos operandos é de tipo flutuante).|As promoções de integral são executadas nos operandos, da seguinte forma:<br /><br /> – Se qualquer operando for do tipo **unsigned long**, o outro operando será convertido ao tipo **unsigned long**.<br />-Se a condição anterior não atendidos e se qualquer operando for do tipo **longo** e o outro do tipo **unsigned int**, ambos os operandos são convertidos para o tipo **unsigned long**.<br />-Se as duas condições anteriores não forem atendidas e se qualquer operando for do tipo **longo**, o outro operando será convertido ao tipo **longo**.<br />-Se as três condições anteriores não forem atendidas e se qualquer operando for do tipo **int sem sinal**, o outro operando será convertido ao tipo **unsigned int**.<br />-Se nenhuma das condições anteriores for atendida, ambos os operandos serão convertidos ao tipo **int**.|
+|As condições anteriores não foram atendidas (nenhum dos operandos é de tipo flutuante).|As promoções de integral são executadas nos operandos, da seguinte forma:<br /><br />– Se qualquer operando for do tipo **unsigned long**, o outro operando será convertido ao tipo **unsigned long**.<br />-Se a condição anterior não atendidos e se qualquer operando for do tipo **longo** e o outro do tipo **unsigned int**, ambos os operandos são convertidos para o tipo **unsigned long**.<br />-Se as duas condições anteriores não forem atendidas e se qualquer operando for do tipo **longo**, o outro operando será convertido ao tipo **longo**.<br />-Se as três condições anteriores não forem atendidas e se qualquer operando for do tipo **int sem sinal**, o outro operando será convertido ao tipo **unsigned int**.<br />-Se nenhuma das condições anteriores for atendida, ambos os operandos serão convertidos ao tipo **int**.|
 
 O código a seguir ilustra as regras de conversão descritas na tabela:
 

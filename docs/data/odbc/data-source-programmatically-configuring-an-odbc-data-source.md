@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36f8233d7d3683a885fc0f38468ad5a7b9b59c57
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6c9b9cb66e64f85ad8800faf11011e351a3f3539
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030762"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861350"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Fonte de dados: configurando programaticamente uma fonte de dados ODBC
 
@@ -85,7 +85,7 @@ A descrição do driver. Isso é o nome apresentado aos usuários, em vez do nom
 *lpszAttributes*<br/>
 Lista de atributos no formulário "keyname = value". Essas cadeias de caracteres são separadas por terminadores nulos com dois terminadores nulos consecutivos no final da lista. Esses atributos são principalmente padrão entradas específicas de driver, que são incluídos no registro para a nova fonte de dados. Uma chave importante que não é mencionada na referência da API do ODBC para essa função é "DSN" ("nome fonte de dados"), que especifica o nome da nova fonte de dados. O restante das entradas são específicas do driver para a nova fonte de dados. Muitas vezes não é necessário fornecer todas as entradas porque o driver pode avisar o usuário com caixas de diálogo para os novos valores. (Defina *hwndParent* como NULL para fazer com que isso.) Você talvez queira fornecer explicitamente valores padrão para que o usuário não seja solicitado.  
   
-###### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>Para determinar a descrição de um driver para o parâmetro lpszDriver usando o administrador ODBC  
+#### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>Para determinar a descrição de um driver para o parâmetro lpszDriver usando o administrador ODBC  
   
 1. Execute o administrador de ODBC.  
   
@@ -97,23 +97,23 @@ Como alternativa, você pode examinar o registro (ou, para 16 bits, o arquivo Od
   
 Uma maneira de localizar os nomes de chave e valores para o *lpszAttributes* parâmetro é examinar o arquivo ODBC ini para uma fonte de dados já configurada (talvez um que tenha sido configurado pelo administrador de ODBC).  
   
-###### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>Para localizar nomes de chave e valores para o parâmetro de lpszAttributes  
+#### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>Para localizar nomes de chave e valores para o parâmetro de lpszAttributes  
   
 1. Execute o editor de registro do Windows (ou, para 16 bits, abra o arquivo ini).  
   
 1. Localize as informações de fontes de dados ODBC usando um dos seguintes:  
   
-    -   Para 32 bits, localize a chave **HKEY_CURRENT_USER\Software\ODBC\ODBC. Fontes de dados INI\ODBC** no painel esquerdo.  
+   - Para 32 bits, localize a chave **HKEY_CURRENT_USER\Software\ODBC\ODBC. Fontes de dados INI\ODBC** no painel esquerdo.  
   
-         O painel direito lista entradas no formato: "pub: REG_SZ:*<data source name>*", onde *<data source name>* é uma fonte de dados que já foi configurada com as configurações desejadas para o driver que você pretende Para usar. Selecione a fonte de dados que você deseja, por exemplo, o SQL Server. Os itens que seguem a cadeia de caracteres "pub:" são, por ordem, o keyname e o valor para usar em seu *lpszAttributes* parâmetro.  
+      O painel direito lista entradas no formato: "pub: REG_SZ:*<data source name>*", onde *<data source name>* é uma fonte de dados que já foi configurada com as configurações desejadas para o driver que você pretende Para usar. Selecione a fonte de dados que você deseja, por exemplo, o SQL Server. Os itens que seguem a cadeia de caracteres "pub:" são, por ordem, o keyname e o valor para usar em seu *lpszAttributes* parâmetro.  
   
-    -   Para 16 bits, localize a seção no arquivo ini marcado por [*\<nome da fonte de dados >*].  
+   - Para 16 bits, localize a seção no arquivo ini marcado por [*\<nome da fonte de dados >*].  
   
-         As linhas após esta linha estão no formato "keyname = value". Essas são exatamente as entradas para usar em seu *lpszAttributes* parâmetro.  
+      As linhas após esta linha estão no formato "keyname = value". Essas são exatamente as entradas para usar em seu *lpszAttributes* parâmetro.  
   
 Você também poderá examinar a documentação do driver específico que você pretende usar. Você pode encontrar informações úteis na Ajuda online para o driver, que pode ser acessada executando o administrador de ODBC. Esses arquivos de ajuda geralmente são colocados no diretório WINDOWS\SYSTEM para o Windows 95, Windows 3.1 ou Windows NT.  
   
-###### <a name="to-obtain-online-help-for-your-odbc-driver"></a>Para obter ajuda online para o driver ODBC  
+#### <a name="to-obtain-online-help-for-your-odbc-driver"></a>Para obter ajuda online para o driver ODBC  
   
 1. Execute o administrador de ODBC.  
   

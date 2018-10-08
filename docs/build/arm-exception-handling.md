@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2251aefebd6805cfd071d014ad6be30cbea065bb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ae80e1f7f824f41f6bc0b3f979973f5867666354
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711224"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861649"
 ---
 # <a name="arm-exception-handling"></a>Tratamento de exceção ARM
 
@@ -82,15 +82,15 @@ Esta tabela mostra o formato de um registro .pdata que possui dados de desenrola
 |Deslocamento da palavra|Bits|Finalidade|
 |-----------------|----------|-------------|
 |0|0-31|*Função RVA iniciar* é o RVA de 32 bits do início da função. Se a função contiver código de posição, o bit baixo deste endereço deverá ser configurado.|
-|1|0-1|*Sinalizador* é um campo de 2 bits que possui estes significados:<br /><br /> -00 = compactado desenrolar dados não usados; bits restantes apontam para o registro. XData.<br />-01 = compactado dados de desenrolamento.<br />-10 = compactado dados no qual a função deve para ter nenhum prólogo de desenrolamento. É útil para descrever fragmentos de função que são descontínuos com o início da função.<br />-11 = reservado.|
+|1|0-1|*Sinalizador* é um campo de 2 bits que possui estes significados:<br /><br />-00 = compactado desenrolar dados não usados; bits restantes apontam para o registro. XData.<br />-01 = compactado dados de desenrolamento.<br />-10 = compactado dados no qual a função deve para ter nenhum prólogo de desenrolamento. É útil para descrever fragmentos de função que são descontínuos com o início da função.<br />-11 = reservado.|
 |1|2-12|*Função comprimento* é um campo de 11 bits que fornece o comprimento da função inteira em bytes dividido por 2. Se a função tiver mais de 4K bytes, um registro completo de .xdata deverá ser usado no lugar.|
-|1|13-14|*RET* é um campo de 2 bits que indica como a função retorna:<br /><br /> -00 = retorno via pop {pc} (o *L* bit de sinalizador deve ser definida como 1 nesse caso).<br />-01 = retorno usando uma ramificação de 16 bits.<br />-10 = retorno usando uma ramificação de 32 bits.<br />-11 = nenhum epílogo em todos os. É útil para descrever um fragmento de função descontínuo que pode conter somente um prólogo, mas cujo epílogo está em outro lugar.|
+|1|13-14|*RET* é um campo de 2 bits que indica como a função retorna:<br /><br />-00 = retorno via pop {pc} (o *L* bit de sinalizador deve ser definida como 1 nesse caso).<br />-01 = retorno usando uma ramificação de 16 bits.<br />-10 = retorno usando uma ramificação de 32 bits.<br />-11 = nenhum epílogo em todos os. É útil para descrever um fragmento de função descontínuo que pode conter somente um prólogo, mas cujo epílogo está em outro lugar.|
 |1|15|*H* é um sinalizador de 1 bit que indica se a função "hospeda" o parâmetro numérico inteiro registra (r0-r3) enviando-os no início da função e desaloca os 16 bytes de pilha antes de retornar. (0 = não hospeda registros, 1 = hospeda registros.)|
 |1|16-18|*Reg* é salvo de um campo de 3 bits que indica o índice do último registro não volátil. Se o *R* bit for 0, então, apenas registros de inteiros estão sendo salvas e devem para estar no intervalo de r4-rN, onde N é igual a 4 + *Reg*. Se o *R* bit for 1, em seguida, registros de ponto flutuante só estão sendo salvas e devem para estar no intervalo de d8-dN, onde N é igual a 8 + *Reg*. A combinação especial de *R* = 1 e *Reg* = 7 indica que nenhum registro será salvo.|
 |1|19|*R* é um sinalizador de 1 bit que indica se os registros não voláteis salvos são registros de inteiros (0) ou registros de ponto flutuante (1). Se *R* é definido como 1 e o *Reg* é definido como 7, não há registros não voláteis foram enviados por push.|
 |1|20|*L* é um sinalizador de 1 bit que indica se a função salva/restaura LR, junto com outros registros indicados pelo *Reg* campo. (0 = não salva/restaura, 1 = salva/restaura.)|
 |1|21|*C* é um sinalizador de 1 bit que indica se a função inclui instruções extras para configurar uma cadeia de quadros de pilha com rapidez percorrer (1) ou não (0). Se este bit estiver configurado, r11 será implicitamente adicionado à lista de registros não voláteis de inteiros salvos. (Consulte as restrições abaixo se o *C* sinalizador é usado.)|
-|1|22-31|*Ajuste de pilha* é um campo de 10 bits que indica o número de bytes de pilha que são alocados para esta função, dividido por 4. No entanto, apenas valores entre 0x000-0x3F3 podem ser codificados diretamente. As funções que alocam mais de 4044 bytes de pilha devem usar um registro completo de .xdata. Se o *ajuste de pilha* campo é 0x3F4 ou maior, então os 4 bits baixos têm significado especial:<br /><br /> -Bits 0-1 indicam o número de palavras de ajuste de pilha (1-4) menos 1.<br />-Bit 2 é definido como 1 se o prólogo combinou esse ajuste em sua operação de envio por push.<br />-3 bit é definido como 1 se o epílogo combinou esse ajuste em sua operação pop.|
+|1|22-31|*Ajuste de pilha* é um campo de 10 bits que indica o número de bytes de pilha que são alocados para esta função, dividido por 4. No entanto, apenas valores entre 0x000-0x3F3 podem ser codificados diretamente. As funções que alocam mais de 4044 bytes de pilha devem usar um registro completo de .xdata. Se o *ajuste de pilha* campo é 0x3F4 ou maior, então os 4 bits baixos têm significado especial:<br /><br />-Bits 0-1 indicam o número de palavras de ajuste de pilha (1-4) menos 1.<br />-Bit 2 é definido como 1 se o prólogo combinou esse ajuste em sua operação de envio por push.<br />-3 bit é definido como 1 se o epílogo combinou esse ajuste em sua operação pop.|
 
 Devido a possíveis redundâncias nas codificações acima, estas restrições se aplicam:
 
@@ -187,7 +187,7 @@ Quando o formato de desenrolamento compactado for insuficiente para descrever o 
    |1|16-23|*Estendido código palavras* é um campo de 8 bits que fornece mais espaço para codificação de um número excepcionalmente grande de palavras de código de desenrolamento. A palavra de extensão que contém esse campo estará presente somente se o *contagem de epílogo* e *código palavras* campos da primeira palavra do cabeçalho são definidos como 0.|
    |1|24-31|Reservado|
 
-2. Depois que os dados de exceção (se o *eletrônico* bit no cabeçalho foi definido como 0) é uma lista de informações sobre escopos de epílogo, que são compactados um para uma palavra e armazenados em ordem crescente de deslocamento inicial. Cada escopo contém estes campos:
+1. Depois que os dados de exceção (se o *eletrônico* bit no cabeçalho foi definido como 0) é uma lista de informações sobre escopos de epílogo, que são compactados um para uma palavra e armazenados em ordem crescente de deslocamento inicial. Cada escopo contém estes campos:
 
    |Bits|Finalidade|
    |----------|-------------|
@@ -196,9 +196,9 @@ Quando o formato de desenrolamento compactado for insuficiente para descrever o 
    |20-23|*Condição* é um campo de 4 bits que oferece a condição sob a qual o epílogo é executado. Para epílogos incondicionais, ele deve ser configurado como 0xE, que indica "sempre". (Um epílogo deve ser inteiramente condicional ou inteiramente incondicional, e no modo Posição 2, o epílogo começa com a primeira instrução após o opcode de TI.)|
    |24-31|*Índice de início do epílogo* é um campo de 8 bits que indica o índice de bytes do primeiro código de desenrolamento que descreve este epílogo.|
 
-3. Após a lista de escopos de epílogo, é fornecida uma matriz de bytes que contém códigos de desenrolamento, que são descritos em detalhes na seção Códigos de Desenrolamento neste artigo. Essa matriz é preenchida no final, o mais próximo possível do limite da palavra completa. Os bytes são armazenados em ordem little-endian para que possam ser buscados diretamente no modo little-endian.
+1. Após a lista de escopos de epílogo, é fornecida uma matriz de bytes que contém códigos de desenrolamento, que são descritos em detalhes na seção Códigos de Desenrolamento neste artigo. Essa matriz é preenchida no final, o mais próximo possível do limite da palavra completa. Os bytes são armazenados em ordem little-endian para que possam ser buscados diretamente no modo little-endian.
 
-4. Se o *X* campo do cabeçalho é 1, os bytes de código de desenrolamento são seguidos pelas informações do manipulador de exceção. Isso consiste em uma *RVA de manipulador de exceção* que contém o endereço do manipulador de exceção, seguido imediatamente pela quantidade de dados exigidos pelo manipulador de exceção (comprimento variável).
+1. Se o *X* campo do cabeçalho é 1, os bytes de código de desenrolamento são seguidos pelas informações do manipulador de exceção. Isso consiste em uma *RVA de manipulador de exceção* que contém o endereço do manipulador de exceção, seguido imediatamente pela quantidade de dados exigidos pelo manipulador de exceção (comprimento variável).
 
 O registro .xdata é projetado para que seja possível buscar os primeiros 8 bytes e calcular o tamanho total do registro, sem incluir o comprimento dos dados de exceção de tamanho variável que se segue. Este trecho de código calcula o tamanho do registro:
 

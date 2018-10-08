@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5b550cd0b76aa0a2e061536ae6bb0ea61063909
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 048589ecab367a3762764b627de11d72160c4602
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087741"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861298"
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Ordenação parcial de modelos de função (C++)
 
@@ -31,23 +31,23 @@ Use o seguinte processo para determinar se um candidato a modelo de função é 
 
 1. Considere dois modelos de função, T1 e T2.
 
-2. Substitua os parâmetros em T1 por um tipo hipotético exclusivo X.
+1. Substitua os parâmetros em T1 por um tipo hipotético exclusivo X.
 
-3. Com a lista de parâmetros em T1, veja se T2 é um modelo válido para essa lista de parâmetros. Ignore as conversões implícitas.
+1. Com a lista de parâmetros em T1, veja se T2 é um modelo válido para essa lista de parâmetros. Ignore as conversões implícitas.
 
-4. Repita o mesmo processo com T1 e T2 invertidos.
+1. Repita o mesmo processo com T1 e T2 invertidos.
 
-5. Se você tiver uma lista de argumentos de modelo válida para o outro modelo, mas o inverso não for verdadeiro, o modelo será considerado menos especializado que o outro modelo. Se ambos os modelos usando os argumentos de válido de formulário anterior do etapa para cada um dos outros, em seguida, eles são considerados igualmente especializados e resultados de uma chamada ambígua quando você tentar usá-los.
+1. Se você tiver uma lista de argumentos de modelo válida para o outro modelo, mas o inverso não for verdadeiro, o modelo será considerado menos especializado que o outro modelo. Se ambos os modelos usando os argumentos de válido de formulário anterior do etapa para cada um dos outros, em seguida, eles são considerados igualmente especializados e resultados de uma chamada ambígua quando você tentar usá-los.
 
-6. Usando estas regras:
+1. Usando estas regras:
 
-     1. Uma especialização de modelo para um tipo específico é mais especializada do que a que usa um argumento de tipo genérico.
+   1. Uma especialização de modelo para um tipo específico é mais especializada do que a que usa um argumento de tipo genérico.
 
-     2. Um modelo levando só __T\*__  é mais especializado que colocar uma __T__, porque o tipo de um controle __X\*__  é um argumento válido para um __T__ argumento de modelo, mas __X__ não é um argumento válido para uma __T\*__  argumento de modelo.
+   1. Um modelo levando só __T\*__  é mais especializado que colocar uma __T__, porque o tipo de um controle __X\*__  é um argumento válido para um __T__ argumento de modelo, mas __X__ não é um argumento válido para uma __T\*__  argumento de modelo.
 
-     3. __Const T__ é mais especializado que __T__, pois __X const__ é um argumento válido para uma __T__ argumento de modelo, mas __X__ é não é um argumento válido para um __const T__ argumento de modelo.
+   1. __Const T__ é mais especializado que __T__, pois __X const__ é um argumento válido para uma __T__ argumento de modelo, mas __X__ é não é um argumento válido para um __const T__ argumento de modelo.
 
-     4. __Const T\*__  é mais especializado que __T\*__, pois __X const\*__  é um argumento válido para um __T\*__  argumento de modelo, mas __X\*__  não é um argumento válido para uma __const T\*__  argumento de modelo.
+   1. __Const T\*__  é mais especializado que __T\*__, pois __X const\*__  é um argumento válido para um __T\*__  argumento de modelo, mas __X\*__  não é um argumento válido para uma __const T\*__  argumento de modelo.
 
 ## <a name="example"></a>Exemplo
 

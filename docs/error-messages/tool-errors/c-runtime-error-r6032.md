@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43155f24411fb5206a03d607f0551c2d34294aeb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7dc68723e07d7ef8c3b9d9f6ad913466b7ff27e4
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024197"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48859712"
 ---
 # <a name="c-runtime-error-r6032"></a>C R6032 de erro de tempo de execução
 
 Não há espaço suficiente para obter informações de localidade
 
 > [!NOTE]
->  Se você encontrar esta mensagem de erro durante a execução de um aplicativo, o aplicativo foi encerrado porque ele tem um problema de memória interna. Há várias razões possíveis para esse erro, mas geralmente é causado por uma condição de memória extremamente baixa ou por um bug no programa.
+> Se você encontrar esta mensagem de erro durante a execução de um aplicativo, o aplicativo foi encerrado porque ele tem um problema de memória interna. Há várias razões possíveis para esse erro, mas geralmente é causado por uma condição de memória extremamente baixa ou por um bug no programa.
 >
->  Você pode tentar corrigir esse erro com estas etapas:
+> Você pode tentar corrigir esse erro com estas etapas:
 >
->  -   Feche outros aplicativos em execução ou reinicie o computador para liberar memória.
-> -   Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para reparar ou reinstalar o programa.
-> -   Verifique **Windows Update** na **painel de controle** para atualizações de software.
-> -   Verifique se há uma versão atualizada do aplicativo. Se o problema persistir, entre em contato com o fornecedor do aplicativo.
+> - Feche outros aplicativos em execução ou reinicie o computador para liberar memória.
+> - Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para reparar ou reinstalar o programa.
+> - Verifique **Windows Update** na **painel de controle** para atualizações de software.
+> - Verifique se há uma versão atualizada do aplicativo. Se o problema persistir, entre em contato com o fornecedor do aplicativo.
 
 **Informações para programadores**
 

@@ -1,7 +1,7 @@
 ---
 title: Classe AsyncBase | Microsoft Docs
 ms.custom: ''
-ms.date: 10/03/2018
+ms.date: 10/08/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -65,12 +65,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6538d06c291bccc8764403b26f5c8d88f4afd781
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: a1003553cb0c3fc3abc8c24a6870485816397eaa
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788793"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861948"
 ---
 # <a name="asyncbase-class"></a>Classe AsyncBase
 
@@ -436,7 +436,7 @@ virtual void OnClose(
 Quando substituído em uma classe derivada, inicia uma operação assíncrona.
 
 ```cpp
-virtual void OnStart(
+virtual HRESULT OnStart(
    void
 ) = 0;
 ```

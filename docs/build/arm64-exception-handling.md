@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dfcf1839048f3c110bbca6754d1549161b63301
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fd273afaf5934313067ada55574edbaeee43929b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716509"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861532"
 ---
 # <a name="arm64-exception-handling"></a>Tratamento de exceção ARM64
 
@@ -34,11 +34,11 @@ As convenções de dados de desenrolamento de exceção e essa descrição desti
 
    - Se o desenrolamento não pode ser completamente descrito com o uso de códigos de desenrolamento, em seguida, em alguns casos ele deve voltar para decodificação de instrução. Isso aumenta a complexidade geral e o ideal é que deve ser evitado.
 
-2. Suporte de desenrolamento no prólogo intermediário e de epílogo intermediário.
+1. Suporte de desenrolamento no prólogo intermediário e de epílogo intermediário.
 
    - Desenrolamento é usado no Windows por mais de manipulação de exceção, portanto, é essencial que é ser capaz de realizar uma lista exata de desenrolamento até mesmo quando no meio de uma sequência de código de prólogo ou epílogo.
 
-3. Levar uma quantidade mínima de espaço.
+1. Levar uma quantidade mínima de espaço.
 
    - Os códigos de desenrolamento não devem agregar para aumentar significativamente o tamanho do binário.
 
@@ -50,15 +50,15 @@ Estas são as suposições feitas no descrição de tratamento de exceção:
 
 1. Prólogos e epílogos tendem a refletir qualquer um dos outros. Ao aproveitando as vantagens dessa característica comum, o tamanho dos metadados necessários para descrever o desenrolamento pode ser reduzido significativamente. Dentro do corpo da função, não importa se a operações do prólogo são desfeitas ou operações do epílogo são executadas de uma maneira direta. Ambas devem produzir resultados idênticos.
 
-2. Funções em todo o tendem a ser relativamente pequeno. Várias otimizações para espaço contam com isso para alcançar a compactação de dados mais eficiente.
+1. Funções em todo o tendem a ser relativamente pequeno. Várias otimizações para espaço contam com isso para alcançar a compactação de dados mais eficiente.
 
-3. Não há nenhum código condicional em epílogos.
+1. Não há nenhum código condicional em epílogos.
 
-4. Dedicada de registro de ponteiro de quadro: se o sp seja salvo em outro registro (r29) no prólogo, que registra permanece inalterado durante todo a função, para que o sp original possa ser recuperado a qualquer momento.
+1. Dedicada de registro de ponteiro de quadro: se o sp seja salvo em outro registro (r29) no prólogo, que registra permanece inalterado durante todo a função, para que o sp original possa ser recuperado a qualquer momento.
 
-5. A menos que o sp seja salvo em outro registro, toda a manipulação do ponteiro de pilha ocorre estritamente dentro do prólogo e epílogo.
+1. A menos que o sp seja salvo em outro registro, toda a manipulação do ponteiro de pilha ocorre estritamente dentro do prólogo e epílogo.
 
-6. O layout do quadro de pilha é organizado, conforme descrito na próxima seção.
+1. O layout do quadro de pilha é organizado, conforme descrito na próxima seção.
 
 ## <a name="arm64-stack-frame-layout"></a>Layout de quadro de pilha ARM64
 
@@ -80,7 +80,7 @@ Para funções de quadro encadeada, o par de fp e lr pode ser salvos em qualquer
         sub    sp, #outsz               // (optional for #outsz != 0)
     ```
 
-2. Encadeadas, #localsz > 512
+1. Encadeadas, #localsz > 512
 
     ```asm
         stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -94,7 +94,7 @@ Para funções de quadro encadeada, o par de fp e lr pode ser salvos em qualquer
         add    r29,sp, #outsz           // setup r29 points to bottom of local area
     ```
 
-3. Sem cadeia, funções de folha (lr não salva)
+1. Sem cadeia, funções de folha (lr não salva)
 
     ```asm
         stp    r19,r20,[sp, -72]!       // pre-indexed, save in 1st FP/INT reg-pair
@@ -107,7 +107,7 @@ Para funções de quadro encadeada, o par de fp e lr pode ser salvos em qualquer
 
    Todos os locais são acessados com base no SP. \<r29, lr > aponta para o quadro anterior. Para o tamanho do quadro < = 512, o "sub sp,..." pode ser otimizada se a área regs salvadas é movida para a parte inferior da pilha. A desvantagem de que é que ele não é consistente com outros layouts acima e salvos regs fazem parte de um intervalo para regs par e o modo de endereçamento deslocamento pré e pós-indexado.
 
-4. Funções sem cadeia, não-folha (lr é salvo na área de Int salvada)
+1. Funções sem cadeia, não-folha (lr é salvo na área de Int salvada)
 
     ```asm
         stp    r19,r20,[sp,-80]!        // pre-indexed, save in 1st FP/INT reg-pair
@@ -141,7 +141,7 @@ Para funções de quadro encadeada, o par de fp e lr pode ser salvos em qualquer
 
    Todos os locais são acessados com base no SP. \<r29 > aponta para o quadro anterior.
 
-5. Encadeadas, #framesz < = 512, #outsz = 0
+1. Encadeadas, #framesz < = 512, #outsz = 0
 
     ```asm
         stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
@@ -152,7 +152,7 @@ Para funções de quadro encadeada, o par de fp e lr pode ser salvos em qualquer
 
    Em comparação à prólogo de #1 acima, a vantagem é que registrar todas as instruções de salvamento está pronto para ser executado logo após a pilha de apenas uma instrução de alocação. Portanto, não há nenhuma antino dependência de sp que impede o paralelismo de nível de instrução.
 
-6. Encadeadas, tamanho do quadro > 512 (opcional para funções sem alloca)
+1. Encadeadas, tamanho do quadro > 512 (opcional para funções sem alloca)
 
     ```asm
         stp    r29, lr, [sp, -80]!          // pre-indexed, save <r29,lr>
@@ -166,7 +166,7 @@ Para funções de quadro encadeada, o par de fp e lr pode ser salvos em qualquer
 
    Para fins de otimização, r29 pode ser colocado em qualquer posição em uma rede local para fornecer uma melhor cobertura para "reg par" e pré/pós-indexed deslocamento de modo de endereçamento. Locais abaixo ponteiros de quadro podem ser acessados com base no SP.
 
-7. Encadeadas, tamanho do quadro > 4K, com ou sem alloca(),
+1. Encadeadas, tamanho do quadro > 4K, com ou sem alloca(),
 
     ```asm
         stp    r29, lr, [sp, -80]!          // pre-indexed, save <r29,lr>
@@ -237,7 +237,7 @@ Esses dados são divididos em quatro seções:
 
    g. **Estendido a contagem de epílogo** e **palavras de código estendido** são campos de 8 e 16 bits, respectivamente, que fornecem mais espaço para codificação de um número excepcionalmente grande de epílogos ou um número excepcionalmente grande de palavras de código de desenrolamento. A palavra de extensão que contém esses campos só estará presente se os dois os **contagem de epílogo** e **código palavras** campos da primeira palavra do cabeçalho são definidos como 0.
 
-2. Depois que os dados de exceção, se **contagem de epílogo** não é zero, é uma lista de informações sobre escopos de epílogo, compactados um para uma palavra e armazenados em ordem crescente de deslocamento inicial. Cada escopo contém os bits do seguintes:
+1. Depois que os dados de exceção, se **contagem de epílogo** não é zero, é uma lista de informações sobre escopos de epílogo, compactados um para uma palavra e armazenados em ordem crescente de deslocamento inicial. Cada escopo contém os bits do seguintes:
 
    a. **Deslocamento de início do epílogo** é um campo de 18 bits que descreve o deslocamento em bytes dividido por 4 de epílogo em relação ao início da função
 
@@ -245,9 +245,9 @@ Esses dados são divididos em quatro seções:
 
    c. **Índice de início do epílogo** é um pouco de 10 (2 bits mais que **palavras de código estendido**) campo indicando o índice de bytes do primeiro código que descreve este epílogo de desenrolamento.
 
-3. Depois que a lista de escopos de epílogo trata de uma matriz de bytes que contêm códigos de desenrolamento, descritos em detalhes em uma seção posterior. Essa matriz é preenchida no final, o mais próximo possível do limite da palavra completa. Os bytes são armazenados em ordem little-endian para que possam ser buscados diretamente no modo little-endian.
+1. Depois que a lista de escopos de epílogo trata de uma matriz de bytes que contêm códigos de desenrolamento, descritos em detalhes em uma seção posterior. Essa matriz é preenchida no final, o mais próximo possível do limite da palavra completa. Os bytes são armazenados em ordem little-endian para que possam ser buscados diretamente no modo little-endian.
 
-4. Por fim, após os bytes de código de desenrolamento (e, se o **X** bit no cabeçalho foi definido como 1) é fornecido as informações do manipulador de exceção. Isso consiste em uma única **RVA de manipulador de exceção** fornecendo o endereço do manipulador de exceção em si, seguido imediatamente por uma quantidade de comprimento variável de dados necessários para o manipulador de exceção.
+1. Por fim, após os bytes de código de desenrolamento (e, se o **X** bit no cabeçalho foi definido como 1) é fornecido as informações do manipulador de exceção. Isso consiste em uma única **RVA de manipulador de exceção** fornecendo o endereço do manipulador de exceção em si, seguido imediatamente por uma quantidade de comprimento variável de dados necessários para o manipulador de exceção.
 
 O registro. XData acima foi projetado, que é possível buscar os primeiros 8 bytes e do que calcular o tamanho total do registro (menos o comprimento dos dados de exceção de tamanho variável que segue). O trecho de código a seguir calcula o tamanho do registro:
 
@@ -287,9 +287,9 @@ Se fosse garantido que exceções ocorressem sempre somente dentro de um corpo d
 
 1. Contando o número de códigos de desenrolamento, é possível calcular o comprimento do prólogo e epílogo.
 
-2. Contando o número de instruções passadas no início de um escopo de epílogo, é possível ignorar o número equivalente de códigos de desenrolamento e executar o restante de uma sequência para concluir o executado parcialmente que o epílogo estava executando de desenrolamento.
+1. Contando o número de instruções passadas no início de um escopo de epílogo, é possível ignorar o número equivalente de códigos de desenrolamento e executar o restante de uma sequência para concluir o executado parcialmente que o epílogo estava executando de desenrolamento.
 
-3. Contando o número de instruções antes do final do prólogo, é possível ignorar o número equivalente de códigos de desenrolamento e executar o restante da sequência para desfazer apenas aquelas partes do prólogo que concluíram a execução.
+1. Contando o número de instruções antes do final do prólogo, é possível ignorar o número equivalente de códigos de desenrolamento e executar o restante da sequência para desfazer apenas aquelas partes do prólogo que concluíram a execução.
 
 Os códigos de desenrolamento são codificados de acordo com a tabela a seguir. Todos os códigos de desenrolamento são uma única/de dois bytes, exceto aquele que aloca uma pilha enorme. Há totalmente 21 código de desenrolamento. Cada desenrolamento código mapas exatamente uma instrução no prólogo/epílogo para permitir o desenrolar da executado parcialmente Prólogos e epílogos.
 
@@ -433,9 +433,9 @@ Agora, ele nem sempre é o caso em que os códigos de prólogo e epílogo corres
 
 1. Se estiver desenrolando de dentro do corpo da função, simplesmente começar a executar códigos de desenrolamento no índice 0 e continuar até atingir um opcode "final".
 
-2. Se estiver desenrolando de dentro de um epílogo, use o índice inicial de específicas do epílogo fornecido com o escopo de epílogo como ponto de partida. Computação quantos bytes o PC em questão está desde o início do epílogo. Em seguida, avance para frente por meio de códigos de desenrolamento, ignorando os códigos de desenrolamento até que todas as instruções já executadas sejam consideradas. Em seguida, execute iniciando nesse ponto.
+1. Se estiver desenrolando de dentro de um epílogo, use o índice inicial de específicas do epílogo fornecido com o escopo de epílogo como ponto de partida. Computação quantos bytes o PC em questão está desde o início do epílogo. Em seguida, avance para frente por meio de códigos de desenrolamento, ignorando os códigos de desenrolamento até que todas as instruções já executadas sejam consideradas. Em seguida, execute iniciando nesse ponto.
 
-3. Se estiver desenrolando de dentro do prólogo, use o índice 0 como ponto de partida. Calcular o tamanho do código de prólogo da sequência e calcule quantos bytes o PC em questão está do final do prólogo. Em seguida, avance para frente por meio de códigos de desenrolamento, ignorando os códigos de desenrolamento até que todas as instruções que ainda não executadas sejam consideradas. Em seguida, execute iniciando nesse ponto.
+1. Se estiver desenrolando de dentro do prólogo, use o índice 0 como ponto de partida. Calcular o tamanho do código de prólogo da sequência e calcule quantos bytes o PC em questão está do final do prólogo. Em seguida, avance para frente por meio de códigos de desenrolamento, ignorando os códigos de desenrolamento até que todas as instruções que ainda não executadas sejam consideradas. Em seguida, execute iniciando nesse ponto.
 
 Como resultado dessas regras, os códigos de desenrolamento do prólogo devem ser sempre a primeira na matriz, e também os códigos usados para desenrolar no geral caso de desenrolamento de dentro do corpo. Todas as sequências de código específico do epílogo devem vir imediatamente após.
 
@@ -484,13 +484,13 @@ Um caso típico de fragmentos de função é "separação de código" com que o 
 
    Códigos de desenrolamento: `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
 
-2. Epílogos somente (região 2: prólogo está na região de host)
+1. Epílogos somente (região 2: prólogo está na região de host)
 
    Supõe-se pelo controle de tempo pular para essa região, todos os códigos de prólogo foram executados. Desenrolamento parcial pode acontecer em epílogos da mesma forma como em uma função normal. Esse tipo de região não pode ser representado por. pData compacto. No registro de xdata completo, ele pode ser codificado com um prólogo "fantasma", agrupado por uma `end_c` e `end` par de código de desenrolamento.  O entrelinhamento `end_c` indica o tamanho do prólogo é zero. Índice dos pontos de epílogo único para iniciar o epílogo `set_fp`.
 
    Código de desenrolamento para região 2: `end_c`, `set_fp`, `save_regp 0,240`, `save_fplr_x_256`, `end`.
 
-3. Não há Prólogos ou epílogos (região 3: Prólogos e epílogos todos os que estão em outros fragmentos):
+1. Não há Prólogos ou epílogos (região 3: Prólogos e epílogos todos os que estão em outros fragmentos):
 
    . PData compacto formato pode ser aplicado por meio de definir sinalizador = 10. Com o registro. XData completo, contagem de epílogo = 1. Desenrolar código é o mesmo que aqueles para a região 2 acima, mas o índice do começo epílogo também aponta para `end_c`. Desenrolamento parcial nunca ocorrerão nesta região do código.
 

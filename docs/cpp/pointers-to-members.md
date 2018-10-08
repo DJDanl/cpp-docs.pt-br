@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 509181abc0d9b3e2f2c2d4c76275e635ba3a4477
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 971f3df56f049b919ebb1f3fb8f517c97b2829e7
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076067"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861272"
 ---
 # <a name="pointers-to-members"></a>Ponteiros para membros
 
@@ -56,7 +56,7 @@ As declarações dos ponteiros para os membros são casos especiais de declaraç
   - O nome qualificado da classe.
   - O operador `::`.
   - O nome de um membro não estático da classe de tipo apropriado.
-  -  Como sempre, vários declaradores (e quaisquer inicializadores associados) são permitidos em uma única declaração.
+  - Como sempre, vários declaradores (e quaisquer inicializadores associados) são permitidos em uma única declaração.
 
 Um ponteiro para um membro de uma classe é diferente de um ponteiro regular somente porque tem as informações do tipo para o tipo do membro e para a classe a qual o membro pertence. Um ponteiro normal (tem o endereço de) identifica somente um único objeto na memória. Um ponteiro para um membro de uma classe identifica esse membro em qualquer instância da classe. O exemplo a seguir declara uma classe, `Window`, e alguns ponteiros para os dados de membro.
 

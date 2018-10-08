@@ -16,26 +16,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb107dcd2bd044ad6fb933869319bb7afd5aab72
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 64ff3069064b981ca1f4dd7b5c2d9a792cac8f26
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46049794"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861856"
 ---
 # <a name="c-runtime-error-r6033"></a>C R6033 de erro de tempo de execução
 
 Tentativa de usar o código MSIL desse assembly durante a inicialização do código nativo. Isso indica um bug em seu aplicativo. Provavelmente é o resultado da chamada de uma compilação de MSIL (/ clr) a partir de um construtor nativo ou DllMain de função.
 
 > [!NOTE]
->  Se você encontrar esta mensagem de erro durante a execução de um aplicativo, o aplicativo foi encerrado porque ele tem um problema interno. Esse erro pode ser causado por um bug no aplicativo ou por um bug em um suplemento ou uma extensão que ele usa.
+> Se você encontrar esta mensagem de erro durante a execução de um aplicativo, o aplicativo foi encerrado porque ele tem um problema interno. Esse erro pode ser causado por um bug no aplicativo ou por um bug em um suplemento ou uma extensão que ele usa.
 >
->  Você pode tentar corrigir esse erro com estas etapas:
+> Você pode tentar corrigir esse erro com estas etapas:
 >
->  -   Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para reparar ou reinstalar o programa.
-> -   Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para remover, reparar ou reinstalar todos os suplementos ou extensões.
-> -   Verifique **Windows Update** na **painel de controle** para atualizações de software.
-> -   Verifique se há uma versão atualizada do aplicativo. Se o problema persistir, entre em contato com o fornecedor do aplicativo.
+> - Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para reparar ou reinstalar o programa.
+> - Use o **aplicativos e recursos** ou **programas e recursos** página o **painel de controle** para remover, reparar ou reinstalar todos os suplementos ou extensões.
+> - Verifique **Windows Update** na **painel de controle** para atualizações de software.
+> - Verifique se há uma versão atualizada do aplicativo. Se o problema persistir, entre em contato com o fornecedor do aplicativo.
 
 **Informações para programadores**
 

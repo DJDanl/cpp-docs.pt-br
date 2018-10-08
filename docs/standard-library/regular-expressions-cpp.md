@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86c64ff0eda298ba330f3f1e1ff6d953fd859234
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: ca3d636b1dffdb3237fb94fade41c90057543b9d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209011"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861558"
 ---
 # <a name="regular-expressions-c"></a>Expressões regulares (C++)
 
@@ -58,17 +58,17 @@ Um elemento pode ser um dos seguintes itens:
 
 - Uma *expressão entre colchetes* da forma "[`expr`]", que corresponde a um caractere ou a um elemento de agrupamento na sequência de destino que também está no conjunto definido pela expressão `expr` ou da forma "[^`expr`]", que corresponde a um caractere ou a um elemento de agrupamento na sequência de destino que não está no conjunto definido pela expressão `expr`.
 
-     A expressão `expr` pode conter qualquer combinação dos seguintes itens:
+   A expressão `expr` pode conter qualquer combinação dos seguintes itens:
 
-    -   Um caractere individual. Adiciona esse caractere ao conjunto definido por `expr`.
+   - Um caractere individual. Adiciona esse caractere ao conjunto definido por `expr`.
 
-    -   Um *intervalo de caracteres* no formato "`ch1`-`ch2`". Adiciona os caracteres que são representados pelos valores no intervalo fechado [`ch1`, `ch2`] ao conjunto definido por `expr`.
+   - Um *intervalo de caracteres* no formato "`ch1`-`ch2`". Adiciona os caracteres que são representados pelos valores no intervalo fechado [`ch1`, `ch2`] ao conjunto definido por `expr`.
 
-    -   Uma *classe de caracteres* no formato "[:`name`:]". Adiciona os caracteres na classe nomeada ao conjunto definido por `expr`.
+   - Uma *classe de caracteres* no formato "[:`name`:]". Adiciona os caracteres na classe nomeada ao conjunto definido por `expr`.
 
-    -   Uma *classe de equivalência* no formato "[=`elt`=]". Adiciona os elementos de agrupamento que são equivalentes a `elt` ao conjunto definido por `expr`.
+   - Uma *classe de equivalência* no formato "[=`elt`=]". Adiciona os elementos de agrupamento que são equivalentes a `elt` ao conjunto definido por `expr`.
 
-    -   Um *símbolo de agrupamento* no formato "[.`elt`.]". Adiciona o elemento de agrupamento `elt` ao conjunto definido por `expr`.
+   - Um *símbolo de agrupamento* no formato "[.`elt`.]". Adiciona o elemento de agrupamento `elt` ao conjunto definido por `expr`.
 
 - Uma *âncora*. A âncora '^' corresponde ao início da sequência de destino; a âncora '$' corresponde ao fim da sequência de destino.
 
@@ -403,11 +403,11 @@ Um caractere comum é qualquer caractere válido que não tem um significado esp
 
 Em `ECMAScript`, os seguintes caracteres têm significados especiais:
 
-- ^  $  \  .  \*  +  ?  (  )  [  ]  {  }  &#124;
+- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }&#124;
 
 Em `basic` e `grep`, os seguintes caracteres têm significados especiais:
 
-- .   [   \
+- .   \[   \
 
 Além disso, em `basic` e `grep`, os seguintes caracteres têm significados especiais quando são usados em um determinado contexto:
 
@@ -419,7 +419,7 @@ Além disso, em `basic` e `grep`, os seguintes caracteres têm significados espe
 
 Em `extended`, `egrep` e `awk`, os seguintes caracteres têm significados especiais:
 
-- .   [   \   (   \*   +   ?   {   &#124;
+- .   \[   \   (   \*   +   ?   {   &#124;
 
 Além disso, em `extended`, `egrep` e `awk`, os seguintes caracteres têm significados especiais quando são usados em um determinado contexto.
 

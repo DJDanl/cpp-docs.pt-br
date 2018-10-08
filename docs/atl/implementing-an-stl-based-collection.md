@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d414df9d5e5f7d930497d42b5ec73d92a65ac3cc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cc7df3233b5605c4b19269571d1afa0f5a6215ae
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116694"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861090"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Implementando uma coleção de baseada na biblioteca padrão C++
 
@@ -57,15 +57,15 @@ Este é o formulário padrão para uma interface de coleção somente leitura pr
 
 1. Interfaces de coleção são geralmente duplos porque os clientes de automação acessa o `_NewEnum` propriedade via `IDispatch::Invoke`. No entanto, os clientes de automação podem acessar os métodos restantes via vtable, para que as interfaces duplas são preferíveis para dispinterfaces.
 
-2. Se uma interface dupla ou dispinterface não será estendido em tempo de execução (ou seja, você não fornecer métodos extras ou propriedades por meio `IDispatch::Invoke`), você deve aplicar a **nonextensible** à sua definição de atributo. Este atributo permite que os clientes de automação realizar a verificação de código completo no tempo de compilação. Nesse caso, a interface não deve ser estendida.
+1. Se uma interface dupla ou dispinterface não será estendido em tempo de execução (ou seja, você não fornecer métodos extras ou propriedades por meio `IDispatch::Invoke`), você deve aplicar a **nonextensible** à sua definição de atributo. Este atributo permite que os clientes de automação realizar a verificação de código completo no tempo de compilação. Nesse caso, a interface não deve ser estendida.
 
-3. O DISPID correto é importante se você deseja que os clientes de automação para ser capaz de usar essa propriedade. (Observe que há apenas um sublinhado no DISPID_NEWENUM.)
+1. O DISPID correto é importante se você deseja que os clientes de automação para ser capaz de usar essa propriedade. (Observe que há apenas um sublinhado no DISPID_NEWENUM.)
 
-4. Você pode fornecer qualquer valor como o DISPID do `Item` propriedade. No entanto, `Item` normalmente usa DISPID_VALUE para torná-lo a propriedade padrão da coleção. Isso permite que os clientes de automação para se referir à propriedade sem nomeá-lo explicitamente.
+1. Você pode fornecer qualquer valor como o DISPID do `Item` propriedade. No entanto, `Item` normalmente usa DISPID_VALUE para torná-lo a propriedade padrão da coleção. Isso permite que os clientes de automação para se referir à propriedade sem nomeá-lo explicitamente.
 
-5. O tipo de dados usado para o valor de retorno de `Item` propriedade é o tipo do item armazenado na coleção, como os clientes COM estão preocupados. A interface retorna cadeias de caracteres, portanto, você deve usar o tipo de cadeia de caracteres COM padrão, BSTR. Você pode armazenar os dados em um formato diferente internamente como você verá em breve.
+1. O tipo de dados usado para o valor de retorno de `Item` propriedade é o tipo do item armazenado na coleção, como os clientes COM estão preocupados. A interface retorna cadeias de caracteres, portanto, você deve usar o tipo de cadeia de caracteres COM padrão, BSTR. Você pode armazenar os dados em um formato diferente internamente como você verá em breve.
 
-6. O valor usado para o DISPID do `Count` propriedade é completamente arbitrária. Não há nenhum DISPID padrão para essa propriedade.
+1. O valor usado para o DISPID do `Count` propriedade é completamente arbitrária. Não há nenhum DISPID padrão para essa propriedade.
 
 ##  <a name="vcconstorage_and_exposure_typedefs"></a> Criando definições de tipo para o armazenamento e a exposição
 
@@ -114,4 +114,3 @@ Agora, você pode testar o código com o cliente de sua escolha.
 [Coleções e enumeradores](../atl/atl-collections-and-enumerators.md)<br/>
 [Exemplo de ATLCollections](../visual-cpp-samples.md)<br/>
 [Classes de política de cópia da ATL](../atl/atl-copy-policy-classes.md)
-

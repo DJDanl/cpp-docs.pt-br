@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: def07f92cc05828c132ba7d34d3dcc06d4aecf50
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4254506345ab72eccaa43968a0af9aab2dada3b9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721442"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861480"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Visão geral das convenções ABI ARM32
 
@@ -153,11 +153,11 @@ A inicialização é realizada exatamente uma vez, antes do início do processam
 
 1. O Próximo Número de Registro Principal (NCRN) é definido para r0.
 
-2. Os registros VFP são marcados como não alocados.
+1. Os registros VFP são marcados como não alocados.
 
-3. O Próximo Endereço de Argumento Empilhado (NSAA) é definido para o SP atual.
+1. O Próximo Endereço de Argumento Empilhado (NSAA) é definido para o SP atual.
 
-4. Se uma função que retorna um resultado na memória for chamada, o endereço do resultado é colocado em r0 e o NCRN é definido para r1.
+1. Se uma função que retorna um resultado na memória for chamada, o endereço do resultado é colocado em r0 e o NCRN é definido para r1.
 
 ### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Estágio b: pré-enchimento e extensão dos argumentos
 
@@ -165,9 +165,9 @@ Para cada argumento na lista, a primeira regra correspondente da seguinte lista 
 
 1. Se o argumento for um tipo composto cujo tamanho não pode ser determinado estaticamente pelo chamador e pelo receptor, o argumento é copiado para a memória e substituído por um ponteiro para a cópia.
 
-2. Se o argumento for um byte ou uma meia palavra de 16 bits, será estendido em zero ou estendido em sinal para uma palavra inteira de 32 bits e tratado como um argumento de 4 bytes.
+1. Se o argumento for um byte ou uma meia palavra de 16 bits, será estendido em zero ou estendido em sinal para uma palavra inteira de 32 bits e tratado como um argumento de 4 bytes.
 
-3. Se o argumento for um tipo composto, seu tamanho é arredondado para cima para o próximo múltiplo de 4.
+1. Se o argumento for um tipo composto, seu tamanho é arredondado para cima para o próximo múltiplo de 4.
 
 ### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Estágio c: atribuição de argumentos a registros e à pilha
 
@@ -175,17 +175,17 @@ Para cada argumento na lista, as seguintes regras são aplicadas em turnos até 
 
 1. Se o argumento for um tipo VFP e não houver registros VFP consecutivos não alocados suficientes do tipo adequado, o argumento será alocado para a sequência com menor número de tais registros.
 
-2. Se o argumento for um tipo VFP, todos os registros não alocados restantes serão marcados como não disponíveis. O NSAA é ajustado para cima até ser alinhado corretamente com o tipo de argumento e o argumento ser copiado para a pilha no NSAA ajustado. Em seguida, o NSAA é incrementado pelo tamanho do argumento.
+1. Se o argumento for um tipo VFP, todos os registros não alocados restantes serão marcados como não disponíveis. O NSAA é ajustado para cima até ser alinhado corretamente com o tipo de argumento e o argumento ser copiado para a pilha no NSAA ajustado. Em seguida, o NSAA é incrementado pelo tamanho do argumento.
 
-3. Se o argumento exige alinhamento de 8 bytes, o NCRN é arredondado para cima para o próximo número de registro par.
+1. Se o argumento exige alinhamento de 8 bytes, o NCRN é arredondado para cima para o próximo número de registro par.
 
-4. Se o tamanho do argumento em palavras de 32 bits não for maior que r4 menos o NCRN, o argumento será copiado nos registros principais, começando no NCRN, com os bits menos significativos ocupando os registros de números inferiores. O NCRN é incrementado pelo número de registros usados.
+1. Se o tamanho do argumento em palavras de 32 bits não for maior que r4 menos o NCRN, o argumento será copiado nos registros principais, começando no NCRN, com os bits menos significativos ocupando os registros de números inferiores. O NCRN é incrementado pelo número de registros usados.
 
-5. Se o NCRN for menor que r4 e o NSAA for igual ao SP, o argumento será dividido entre registros principais e a pilha. A primeira parte do argumento é copiado para os registros principais, começando no NCRN até e incluindo o r3. O lembrete do argumento é copiado para a pilha, começando no NSAA. O NCRN é definido para r4 e o NSAA é incrementado pelo tamanho do argumento menos a quantidade passada em registros.
+1. Se o NCRN for menor que r4 e o NSAA for igual ao SP, o argumento será dividido entre registros principais e a pilha. A primeira parte do argumento é copiado para os registros principais, começando no NCRN até e incluindo o r3. O lembrete do argumento é copiado para a pilha, começando no NSAA. O NCRN é definido para r4 e o NSAA é incrementado pelo tamanho do argumento menos a quantidade passada em registros.
 
-6. Se o argumento exige alinhamento de 8 bytes, o NSAA é arredondado para cima para o próximo endereço de 8 bytes alinhado.
+1. Se o argumento exige alinhamento de 8 bytes, o NSAA é arredondado para cima para o próximo endereço de 8 bytes alinhado.
 
-7. O argumento é copiado para a memória no NSAA. O NSAA é incrementado pelo tamanho do argumento.
+1. O argumento é copiado para a memória no NSAA. O NSAA é incrementado pelo tamanho do argumento.
 
 Os registros VFP não são usados para funções variadic e as regras 1 e 2 do Estágio C são ignoradas. Isso significa que uma função variadic pode começar com um push adicional {r0-r3} para preceder os argumentos do registro a qualquer argumento adicional passado pelo chamador e acessar a lista de argumentos inteira diretamente da pilha.
 

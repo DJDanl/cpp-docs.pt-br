@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fcaffc3eba3711accdfa13d311f5284e564b703
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 163949c4421cca8e4d5e414a18bda4ed98f32d3d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020427"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861636"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Assistente de consumidor OLE DB da ATL
 
@@ -52,7 +52,7 @@ Este assistente define uma classe de consumidor do OLE DB com as associações d
 
       1. **Selecione ou insira um nome de servidor:** clique no menu de lista suspensa para exibir todos os servidores de dados registrados na rede e selecione um.
 
-      2. **Insira informações para fazer logon no servidor:** Insira um nome de usuário e senha para fazer logon no servidor de dados.
+      1. **Insira informações para fazer logon no servidor:** Insira um nome de usuário e senha para fazer logon no servidor de dados.
 
          > [!NOTE]
          > Há um problema de segurança com o recurso de "Permitir salvamento de senha" da caixa de diálogo Propriedades do Link de dados. "Insira as informações de logon para o servidor", há dois botões de opção:
@@ -63,7 +63,7 @@ Este assistente define uma classe de consumidor do OLE DB com as associações d
          > Se você selecionar **usar um determinado nome de usuário e senha**, você tem a opção de salvar a senha (usando a caixa de seleção para "Permitir salvamento de senha"); no entanto, essa opção não é segura. É recomendável que você selecione **a segurança integrada Use Windows NT**; essa opção é segura porque ele criptografa a senha.
          > Pode haver situações em que você deseja selecionar "Permitir salvamento de senha". Por exemplo, se você estiver liberando uma biblioteca com uma solução de banco de dados particular, você deve não acessar o banco de dados diretamente, mas em vez disso, use um aplicativo de camada intermediária para verificar se o usuário (por meio de qualquer esquema de autenticação escolhido) e, em seguida, limitar a classificação de dados disponível para o usuário.
 
-      3. **Selecione o banco de dados no servidor:** clique no menu de lista suspensa para exibir todos os bancos de dados no servidor de data e selecione um.
+      1. **Selecione o banco de dados no servidor:** clique no menu de lista suspensa para exibir todos os bancos de dados no servidor de data e selecione um.
 
          \- ou -
 
@@ -80,13 +80,13 @@ Este assistente define uma classe de consumidor do OLE DB com as associações d
          **Usar cadeia de caracteres de conexão:** insira uma cadeia de caracteres de conexão já tenham obtido, ou clique em de **compilar** botão; o **Selecionar fonte de dados** caixa de diálogo é exibida. Selecione uma fonte de dados de arquivo ou de máquina e clique em **Okey**.
 
          > [!NOTE]
-         > Você pode obter uma cadeia de caracteres de conexão ao exibir as propriedades de uma conexão existente no Gerenciador de servidores, ou você pode criar uma conexão clicando duas vezes **Adicionar Conexão** no Gerenciador de servidores.
+         > Você pode obter uma cadeia de caracteres de conexão ao exibir as propriedades de uma conexão existente na **Gerenciador de servidores**, ou você pode criar uma conexão clicando duas vezes em **Adicionar Conexão** em **Server Explorer**.
 
-      2. **Insira informações para fazer logon no servidor:** Insira um nome de usuário e senha para fazer logon no servidor de dados.
+      1. **Insira informações para fazer logon no servidor:** Insira um nome de usuário e senha para fazer logon no servidor de dados.
 
-      3. Insira o catálogo inicial a ser usado.
+      1. Insira o catálogo inicial a ser usado.
 
-      4. Clique em **Testar Conexão**; se o teste for bem-sucedido, clique em **Okey**. Caso contrário, verifique suas informações de logon, tente outro banco de dados ou tente outro servidor de dados.
+      1. Clique em **Testar Conexão**; se o teste for bem-sucedido, clique em **Okey**. Caso contrário, verifique suas informações de logon, tente outro banco de dados ou tente outro servidor de dados.
 
    - **Advanced** guia
 

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7047161a059432b43d4ff1a92e9c4d10dc01d51
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3a2567182f0e2622a72ceb9b98988c4d122a3561
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387010"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860557"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>Operações CString relacionadas a cadeias de caracteres de estilo C
 
@@ -67,7 +67,7 @@ Você pode usar métodos `CString`, por exemplo, `SetAt`, para modificar caracte
 [!code-cpp[NVC_ATLMFC_Utilities#189](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_1.cpp)]
 
 > [!NOTE]
->  O terceiro argumento para `strcpy_s` (ou o Unicode/MBCS-portable `_tcscpy_s`) é um `const wchar_t*` (Unicode) ou um `const char*` (ANSI). O exemplo acima passa um `CString` para este argumento. O compilador C++ aplica automaticamente a função de conversão definida para o `CString` que converte uma classe `CString` para um `LPCTSTR`. A capacidade de definir as operações de conversão de um tipo para outro é um dos recursos mais úteis do C++.
+> O terceiro argumento para `strcpy_s` (ou o Unicode/MBCS-portable `_tcscpy_s`) é um `const wchar_t*` (Unicode) ou um `const char*` (ANSI). O exemplo acima passa um `CString` para este argumento. O compilador C++ aplica automaticamente a função de conversão definida para o `CString` que converte uma classe `CString` para um `LPCTSTR`. A capacidade de definir as operações de conversão de um tipo para outro é um dos recursos mais úteis do C++.
 
 ##  <a name="_core_working_with_standard_run.2d.time_library_string_functions"></a> Trabalhando com funções de cadeia de caracteres de biblioteca de tempo de execução padrão
 
@@ -83,13 +83,13 @@ Existem algumas situações em que faz sentido modificar diretamente o conteúdo
 
 Os métodos `GetBuffer` e `ReleaseBuffer` oferecem acesso ao buffer de caracteres interno de um objeto `CString` e deixam você modificá-lo diretamente. As etapas a seguir mostram como usar essas funções para essa finalidade.
 
-#### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>Para usar os métodos GetBuffer e ReleaseBuffer para acessar o buffer de caracteres interno de um objeto CString
+### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>Para usar os métodos GetBuffer e ReleaseBuffer para acessar o buffer de caracteres interno de um objeto CString
 
 1. Chame `GetBuffer` para um objeto `CString` e especifique o tamanho do buffer que você necessita.
 
-2. Use o ponteiro retornado por `GetBuffer` para escrever caracteres diretamente no objeto `CString`.
+1. Use o ponteiro retornado por `GetBuffer` para escrever caracteres diretamente no objeto `CString`.
 
-3. Chame `ReleaseBuffer` para o objeto `CString` para atualizar todas as informações de estado internas do `CString`, por exemplo, o comprimento da cadeia de caracteres. Depois de modificar o conteúdo de um objeto `CString` diretamente, chame `ReleaseBuffer` antes de chamar qualquer outra função de membro `CString`.
+1. Chame `ReleaseBuffer` para o objeto `CString` para atualizar todas as informações de estado internas do `CString`, por exemplo, o comprimento da cadeia de caracteres. Depois de modificar o conteúdo de um objeto `CString` diretamente, chame `ReleaseBuffer` antes de chamar qualquer outra função de membro `CString`.
 
 ##  <a name="_core_using_cstring_objects_with_variable_argument_functions"></a> Usando objetos CString com funções de argumentos variáveis
 
@@ -113,4 +113,3 @@ Para a maioria dos resultados de função, você pode simplesmente retornar um o
 
 [Cadeias de caracteres (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [Passagem de argumento de CString](../atl-mfc-shared/cstring-argument-passing.md)
-

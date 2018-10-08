@@ -17,62 +17,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a39ee9c45084d03198157f427ca3edca13767e6c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e896c1a00e45e5e7503837409903651ed2bdc3a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024106"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861233"
 ---
 # <a name="pointers-c"></a>Ponteiros (C++)
 
 Os ponteiros são declarados usando a seguinte sequência:
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers 
-[ms-modifier] declarator ;
-```
+> \[*especificadores de classe de armazenamento*] \[ *qualificadores cv*] *especificadores de tipo* \[ *ms-modifier*]  *Declarador* **;**
 
-onde qualquer declarador de ponteiro válido pode ser usado para `declarator`. A sintaxe de um declarador de ponteiro simples é a seguinte:
+onde qualquer Declarador de ponteiro válido pode ser usado para *declarador*. A sintaxe de um declarador de ponteiro simples é a seguinte:
 
-```
-* [cv-qualifiers] identifier [= expression]
-```
+> __\*__ \[*qualificadores CV*] *identificador* \[ **=** *expressão*]
 
 1. Os especificadores da declaração:
 
-    - Um especificador de classe de armazenamento opcional. Para obter mais informações, consulte [especificadores](../cpp/specifiers.md).
+   - Um especificador de classe de armazenamento opcional. Para obter mais informações, consulte [especificadores](../cpp/specifiers.md).
 
-    - Um recurso opcional **const** ou **volátil** palavra-chave para o tipo do objeto a ser apontado para a aplicação.
+   - Um recurso opcional **const** ou **volátil** palavra-chave para o tipo do objeto a ser apontado para a aplicação.
 
-    - O especificador de tipo: o nome de um tipo que representa o tipo do objeto que será o alvo do ponteiro.
+   - O especificador de tipo: o nome de um tipo que representa o tipo do objeto que será o alvo do ponteiro.
 
-2. O declarador:
+1. O declarador:
 
-    - Um modificador opcional específico da Microsoft. Para obter mais informações, consulte [modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md).
+   - Um modificador opcional específico da Microsoft. Para obter mais informações, consulte [modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-    - O operador `*`.
+   - O __\*__ operador.
 
-    - Um recurso opcional **const** ou **volátil** aplicando ao próprio ponteiro de palavra-chave.
+   - Um recurso opcional **const** ou **volátil** aplicando ao próprio ponteiro de palavra-chave.
 
-    - O identificador.
+   - O identificador.
 
-    - Um inicializador opcional.
+   - Um inicializador opcional.
 
-     O declarador de um ponteiro para função tem esta aparência:
+O declarador de um ponteiro para função tem esta aparência:
 
-```
-(* [cv-qualifiers] identifier )( argument-list ) [cv-qualifers]
-[exception specification] [= expression];
-```
+> __(\*__  \[ *qualificadores cv*] *identificador* **) (** *lista de argumentos* **)** \[ *qualificadores cv*] \[ *especificação de exceção*] \[ **=** *expressão*] **;**
 
-- Para uma matriz de ponteiros, a sintaxe é semelhante a esta:
+Para uma matriz de ponteiros, a sintaxe é semelhante a esta:
 
-```
-* identifier [ [ constant-expression ] ]
-```
+> __\*__ *identificador* **\[** \[ *expressão constante*] **]**
 
-- Vários declaradores e seus inicializadores podem aparecer juntos em uma única declaração em uma lista separada por vírgulas que segue o especificador da declaração.
+Vários declaradores e seus inicializadores podem aparecer juntos em uma única declaração em uma lista separada por vírgulas que segue o especificador da declaração.
 
 Um exemplo simples de uma declaração de ponteiro é:
 

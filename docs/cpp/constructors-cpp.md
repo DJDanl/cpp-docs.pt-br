@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08200320e30816ac45e6c91a14dc41508430cfae
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ae2a08431a29e4140e3a9af86e68ccfc9bff388a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069112"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861378"
 ---
 # <a name="constructors-c"></a>Construtores (C++)
 
@@ -388,11 +388,11 @@ Um construtor executa seu trabalho nesta ordem:
 
 1. Chama a classe base e os construtores membros na ordem da declaração.
 
-2. Se a classe for derivada de classes base virtuais, ela inicializará os ponteiros de base virtuais do objeto.
+1. Se a classe for derivada de classes base virtuais, ela inicializará os ponteiros de base virtuais do objeto.
 
-3. Se a classe tiver ou herdar funções virtuais, ela inicializará os ponteiros de função virtual do objeto. Os ponteiros de função virtual apontam para a tabela de função virtual da classe para permitir a associação de chamadas de função virtual ao código.
+1. Se a classe tiver ou herdar funções virtuais, ela inicializará os ponteiros de função virtual do objeto. Os ponteiros de função virtual apontam para a tabela de função virtual da classe para permitir a associação de chamadas de função virtual ao código.
 
-4. Executa qualquer código no corpo de sua função.
+1. Executa qualquer código no corpo de sua função.
 
 O exemplo a seguir mostra a ordem em que a classe base e os construtores membros são chamados no construtor para uma classe derivada. Primeiro, o construtor de base é chamado, depois os membros da classe base são inicializados na ordem em que aparecem na declaração de classe e, em seguida, o construtor derivado é chamado.
 
@@ -593,7 +593,6 @@ public:
     //... rest of class as before
 };
 ```
-
 
 O objeto criado pelos construtores é inicializado totalmente assim que o construtor é concluído. Para obter mais informações, consulte [inicialização uniforme e delegação de construtores](../cpp/uniform-initialization-and-delegating-constructors.md).
 

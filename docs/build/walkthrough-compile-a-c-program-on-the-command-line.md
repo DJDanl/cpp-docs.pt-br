@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8361890c264e11fbd5817331e07ba9005da17240
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: d8b48093641982f171a5d8b43fa70d7694122263
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821368"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861259"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Passo a passo: Compilar um programa em C na linha de comando
 
@@ -49,7 +49,7 @@ Antes de compilar um programa C ou C++ na linha de comando, você deve verificar
 
    Se você estiver usando uma versão diferente do Visual Studio ou estiver executando uma versão diferente do Windows, procure no seu menu Iniciar ou página inicial para uma pasta de ferramentas do Visual Studio que contém um atalho de prompt de comando do desenvolvedor. Você também pode usar a função de pesquisa do Windows para procurar por "prompt de comando do desenvolvedor" e escolha aquela que corresponde à sua versão instalada do Visual Studio. Use o atalho para abrir a janela de prompt de comando.
 
-1. Em seguida, verifique se o prompt de comando do desenvolvedor de Visual C++ está definido corretamente. Na janela do prompt de comando, digite `cl` e verifique se que a saída se parece com:
+1. Em seguida, verifique se o prompt de comando do desenvolvedor de Visual C++ está definido corretamente. Na janela do prompt de comando, digite `cl` e verifique se que a saída é semelhante a:
 
    ```Output
    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl

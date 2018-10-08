@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9f1d205eff155b628081c5bc615570c44a88f08
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: eea3159bff6f2c69c94ef31d01b1d6a85104ef13
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412802"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861844"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (listando arquivo)
 
@@ -87,9 +87,9 @@ Um arquivo de listagem chamado *filename.extension* é colocado no especificado 
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
 
-2. Selecione o **propriedades de configuração** > **C/C++** > **arquivos de saída** página de propriedades.
+1. Selecione o **propriedades de configuração** > **C/C++** > **arquivos de saída** página de propriedades.
 
-3. Modificar a **saída do Assembler** propriedade para definir o **/FAc** e **/FAs** opções de assembler, máquina e código-fonte. Modificar a **usar Unicode para listagem de montador** propriedade para definir o **/FAu** opção para a saída de ANSI ou UTF-8. Modificar a **local da lista ASM** para definir o **/Fa** opção para listar o nome de arquivo e o local.
+1. Modificar a **saída do Assembler** propriedade para definir o **/FAc** e **/FAs** opções de assembler, máquina e código-fonte. Modificar a **usar Unicode para listagem de montador** propriedade para definir o **/FAu** opção para a saída de ANSI ou UTF-8. Modificar a **local da lista ASM** para definir o **/Fa** opção para listar o nome de arquivo e o local.
 
 Observe que definir ambos **saída do Assembler** e **usar Unicode para listagem de montador** propriedades podem causar [D9025 de aviso de linha de comando](../../error-messages/tool-errors/command-line-warning-d9025.md). Para combinar essas opções no IDE, use o **opções adicionais** campo o **linha de comando** em vez disso, a página de propriedades.
 

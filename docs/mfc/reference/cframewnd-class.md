@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12982c212cf8ff4fe502638a5c466306bfe15eb1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 32456b15cc00d296354016f8769e020f8133b609
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374282"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861724"
 ---
 # <a name="cframewnd-class"></a>Classe CFrameWnd
 
@@ -1103,7 +1103,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*nState*|[in] Especifica se deseja exibir ou ocultar o menu. O *nState* parâmetro pode ter os seguintes valores:<br /><br /> -AFX_MBS_VISIBLE (0x01) - exibe o menu, se ele está oculto, mas não tem nenhum efeito se ele estiver visível.<br />-AFX_MBS_HIDDEN (0x02) – oculta o menu, se ele estiver visível, mas não tem nenhum efeito se ele está oculto.|
+|*nState*|[in] Especifica se deseja exibir ou ocultar o menu. O *nState* parâmetro pode ter os seguintes valores:<br /><br />-AFX_MBS_VISIBLE (0x01) - exibe o menu, se ele está oculto, mas não tem nenhum efeito se ele estiver visível.<br />-AFX_MBS_HIDDEN (0x02) – oculta o menu, se ele estiver visível, mas não tem nenhum efeito se ele está oculto.|
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1125,7 +1125,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 |Parâmetro|Descrição|
 |---------------|-----------------|
-|*nStyle*|[in] Especifica se o menu é por padrão, ocultada, ou estiver visível e tem o foco. O *nStyle* parâmetro pode ter os seguintes valores:<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01)-<br />     O menu é exibido em todos os momentos e por padrão não tem o foco.<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     O menu está oculto por padrão. Se o menu estiver oculto, pressione a tecla ALT para exibir o menu e dê a ele o foco. Se o menu é exibido, pressione a tecla ALT ou ESC para ocultar o menu.<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (combinação bit a bit (OR)) - menu está oculto por padrão. Se o menu estiver oculto, pressione a tecla F10 para exibir o menu e dê a ele o foco. Se o menu é exibido, pressione a tecla F10 para alternar o foco ou desativar o menu. O menu é exibido até que você pressionar a tecla ALT ou ESC para ocultá-la.|
+|*nStyle*|[in] Especifica se o menu é por padrão, ocultada, ou estiver visível e tem o foco. O *nStyle* parâmetro pode ter os seguintes valores:<br /><br />-AFX_MBV_KEEPVISIBLE (0X01)-<br />     O menu é exibido em todos os momentos e por padrão não tem o foco.<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     O menu está oculto por padrão. Se o menu estiver oculto, pressione a tecla ALT para exibir o menu e dê a ele o foco. Se o menu é exibido, pressione a tecla ALT ou ESC para ocultar o menu.<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (combinação bit a bit (OR)) - menu está oculto por padrão. Se o menu estiver oculto, pressione a tecla F10 para exibir o menu e dê a ele o foco. Se o menu é exibido, pressione a tecla F10 para alternar o foco ou desativar o menu. O menu é exibido até que você pressionar a tecla ALT ou ESC para ocultá-la.|
 
 ### <a name="remarks"></a>Comentários
 

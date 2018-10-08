@@ -21,32 +21,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcde08e8ffdb30f9ebf0ae7577bf836e84513a07
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d8f36c48cf654379e9db3a99c2404732dca30f63
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751671"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860311"
 ---
 # <a name="elapsed-time-automation-classes"></a>Tempo decorrido: Classes de automação
 
 Este procedimento mostra como calcular a diferença entre dois `CTime` objetos e obtenha um `CTimeSpan` resultado.
 
-#### <a name="to-calculate-elapsed-time"></a>Para calcular o tempo decorrido
+## <a name="to-calculate-elapsed-time"></a>Para calcular o tempo decorrido
 
 1. Crie duas `COleDateTime` objetos.
 
-2. Definir uma da `COleDateTime` objetos a hora atual.
+1. Definir uma da `COleDateTime` objetos a hora atual.
 
-3. Execute uma tarefa demorada.
+1. Execute uma tarefa demorada.
 
-4. As outras `COleDateTime` objeto para a hora atual.
+1. As outras `COleDateTime` objeto para a hora atual.
 
-5. Calcule a diferença entre as duas horas.
+1. Calcule a diferença entre as duas horas.
 
    [!code-cpp[NVC_ATLMFC_Utilities#178](../atl-mfc-shared/codesnippet/cpp/elapsed-time-automation-classes_1.cpp)]
 
 ## <a name="see-also"></a>Consulte também
 
 [Data e hora: suporte a automação](../atl-mfc-shared/date-and-time-automation-support.md)
-

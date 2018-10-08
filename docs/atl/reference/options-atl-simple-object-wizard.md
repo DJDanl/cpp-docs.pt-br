@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d337d31150b6da1a1556589d63fd60d63842efce
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7a337ceffbbfb1577b58fea2f60213cd79052b00
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098778"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861363"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Opções, ATL Simple Object Wizard
 
@@ -60,7 +60,7 @@ Para obter mais informações sobre projetos ATL e classes COM da ATL, consulte 
    |Opção|Descrição|
    |------------|-----------------|
    |**Duplo**|Especifica que o objeto dá suporte a uma interface dupla (seu vtable tem funções de interface personalizados além de associação tardia `IDispatch` métodos). Permite que ambos os clientes COM e [controladores de automação](../../mfc/automation-clients.md) para acessar o objeto. O padrão.|
-   |**Personalizado**|Especifica que o objeto dá suporte a uma interface personalizada (seu vtable tem funções de interface personalizada). Uma interface personalizada pode ser mais rápida do que uma interface dupla, especialmente entre os limites do processo.<br /><br /> -   **Automação compatível** controladores de automação permite acessar um objeto que tem o suporte de interface personalizada.|
+   |**Personalizado**|Especifica que o objeto dá suporte a uma interface personalizada (seu vtable tem funções de interface personalizada). Uma interface personalizada pode ser mais rápida do que uma interface dupla, especialmente entre os limites do processo.<br /><br /> - **Automação compatível** controladores de automação permite acessar um objeto que tem o suporte de interface personalizada.|
 
 - **Suporte**
 

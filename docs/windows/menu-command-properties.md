@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 28426e2ca75638f5ad45188a8790d1c281afa99b
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c846cecb415365db92e3097bbf04ab06cd4209d0
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317909"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860440"
 ---
 # <a name="menu-command-properties-c"></a>Propriedades do comando de menu (C++)
 
@@ -28,7 +28,7 @@ As informações a seguir são organizadas de acordo com o **menus** as propried
 
 |Propriedade|Descrição|
 |--------------|-----------------|
-|**quebra**|Pode ser um destes valores:<br /><br /> -   **Nenhum** (padrão): nenhuma quebra.<br />-   **Coluna**: para menus estáticos, esse valor coloca o comando de menu em uma nova linha. Para menus pop-up, esse valor coloca o comando de menu em uma nova coluna com nenhuma linha divisória entre as colunas. Definir essa propriedade afeta a aparência do menu apenas em tempo de execução, não no editor de menu.<br />-   **Barra**: igual **coluna** , exceto, para menus pop-up, esse valor separa a nova coluna de coluna antiga com uma linha vertical. Definir essa propriedade afeta a aparência do menu apenas em tempo de execução, não na **Menu** editor.|
+|**quebra**|Pode ser um destes valores:<br /><br />- **Nenhum** (padrão): nenhuma quebra.<br />- **Coluna**: para menus estáticos, esse valor coloca o comando de menu em uma nova linha. Para menus pop-up, esse valor coloca o comando de menu em uma nova coluna com nenhuma linha divisória entre as colunas. Definir essa propriedade afeta a aparência do menu apenas em tempo de execução, não no editor de menu.<br />- **Barra**: igual **coluna** , exceto, para menus pop-up, esse valor separa a nova coluna de coluna antiga com uma linha vertical. Definir essa propriedade afeta a aparência do menu apenas em tempo de execução, não na **Menu** editor.|
 |**Caption**|O texto que rotula o comando de menu (o nome do menu). Para fazer uma das letras na legenda de um menu de comando de uma tecla mnemônica, preceda-o com um e comercial (&).|
 |**Verificado**|Se **verdadeira**, o comando de menu inicialmente é verificado. Tipo: **Bool**. Padrão: **falsos**.|
 |**Habilitado**|Se **falsos**, o item de menu está desabilitado.|
