@@ -15,12 +15,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 88f5ef5379d597a81456dab7f3dd28a73a4df84b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82134d48853896ccb70c2620cd70c803fcc74bc8
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394914"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821043"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Configurar um projeto do Linux CMake
 
@@ -72,7 +72,7 @@ Para oferecer suporte ao IntelliSense para cabeçalhos remotos, o Visual Studio 
 
 Para depurar seu código no sistema remoto, defina um ponto de interrupção, selecione o destino do CMake como o item de inicialização no menu da barra de ferramentas ao lado da configuração do projeto e escolha **&#x23f5; Iniciar** na barra de ferramentas ou pressione F5.
 
-Para personalizar os argumentos de linha de comando do programa, clique com o botão direito do mouse no executável no **Gerenciador de Soluções** e selecione **Configurações de Depuração e de Inicialização**. Isso abre ou cria um arquivo de configuração launch.vs.json que contém as informações do seu programa. Para especificar argumentos adicionais, adicione-os na matriz JSON `args`. Para saber mais, veja [Projetos Abrir Pasta no Visual C++](https://docs.microsoft.com/en-us/cpp/ide/non-msbuild-projects).
+Para personalizar os argumentos de linha de comando do programa, clique com o botão direito do mouse no executável no **Gerenciador de Soluções** e selecione **Configurações de Depuração e de Inicialização**. Isso abre ou cria um arquivo de configuração launch.vs.json que contém as informações do seu programa. Para especificar argumentos adicionais, adicione-os na matriz JSON `args`. Para saber mais, veja [Projetos Abrir Pasta no Visual C++](../ide/non-msbuild-projects.md).
 
 ## <a name="configure-cmake-settings-for-linux"></a>Definir as configurações do CMake para Linux
 

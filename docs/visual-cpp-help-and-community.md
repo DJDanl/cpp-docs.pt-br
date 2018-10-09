@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d36f56161e352d67838bfaf68c8e2d1dcee0f33e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1e74ed975cce0ac3a87716d9f7ad00da2d75d509
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583979"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820666"
 ---
 # <a name="visual-c-help-and-community"></a>Ajuda e comunidade do Visual C++
 
@@ -27,14 +27,14 @@ Veja como obter informações sobre como escrever código C++ e usar as ferramen
 
 |Título|Descrição|
 |-----------|-----------------|
-|[Exemplos de código para desenvolvedores](http://go.microsoft.com/fwlink/p/?LinkId=256533)|Contém o código de exemplo para download da Microsoft e dos colaboradores da comunidade.|
+|[Exemplos de código para desenvolvedores](https://code.msdn.microsoft.com/)|Contém o código de exemplo para download da Microsoft e dos colaboradores da comunidade.|
 
 ## <a name="product-documentation"></a>Documentação sobre o produto
 
 |Título|Descrição|
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|Contém a referência e a documentação conceitual sobre o Visual C++. Parte da Biblioteca MSDN.|
-|[Centro de Desenvolvedores do Windows](http://go.microsoft.com/fwlink/p/?LinkId=256534)|Contém informações sobre como usar o C++ e outras linguagens para desenvolver aplicativos para Windows 8. Parte do Centro de Desenvolvedores Windows; o conteúdo em C++ está no nó Documentação > Referência da linguagem.|
+|[Centro de Desenvolvedores do Windows](https://developer.microsoft.com/windows/)|Contém informações sobre como usar o C++ e outras linguagens para desenvolver aplicativos para Windows 8. Parte do Centro de Desenvolvedores Windows; o conteúdo em C++ está no nó Documentação > Referência da linguagem.|
 
 ### <a name="online-and-offline-documentation"></a>Documentação online e offline
 
@@ -48,7 +48,7 @@ Muitas seções da documentação também estão disponíveis em formato PDF. Es
 
 |Título|Descrição|
 |-----------|-----------------|
-|[Blog da Equipe do Visual C++](http://go.microsoft.com/fwlink/p/?LinkId=256537)|Contém postagens sobre vários assuntos feitas por especialistas da equipe de produto do Visual C++.|
-|[Channel 9](http://go.microsoft.com/fwlink/p/?LinkId=251694)|Contém entrevistas e palestras em vídeo. Use a caixa de pesquisa na página inicial do Channel 9 para localizar o conteúdo do C++.|
-|[Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=256535)|Contém artigos e notícias sobre o Visual Studio e ferramentas de desenvolvimento relacionadas.|
-|[Fóruns do MSDN](http://go.microsoft.com/fwlink/p/?LinkId=256538)|Os fóruns oficiais da Microsoft onde você pode postar perguntas e obter respostas da Microsoft e dos especialistas na comunidade. Use a caixa de pesquisa na home page dos fóruns para localizar aqueles que são relacionados especificamente ao C++.|
+|[Blog da Equipe do Visual C++](https://blogs.msdn.microsoft.com/vcblog/)|Contém postagens sobre vários assuntos feitas por especialistas da equipe de produto do Visual C++.|
+|[Channel 9](https://channel9.msdn.com/)|Contém entrevistas e palestras em vídeo. Use a caixa de pesquisa na página inicial do Channel 9 para localizar o conteúdo do C++.|
+|[Visual Studio](https://visualstudio.microsoft.com/)|Contém artigos e notícias sobre o Visual Studio e ferramentas de desenvolvimento relacionadas.|
+|[Fóruns do MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=visualc) e da [Comunidade de desenvolvedores](https://developercommunity.visualstudio.com)|Fóruns oficiais da Microsoft onde você pode postar perguntas sobre C++ e obter respostas da Microsoft e dos especialistas na comunidade.|

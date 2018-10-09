@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85439e191ac8676603c9d7fab8a41bb126e97b9e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4420bdac9e788f80142546d8b09781a8aa3ce06d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398658"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821381"
 ---
 # <a name="working-with-project-properties"></a>Trabalhando com propriedades do projeto
 
@@ -250,7 +250,7 @@ No painel direito, modifique as configurações do projeto **Ambiente** ou **Amb
 
 ## <a name="modifying-properties-and-targets-without-changing-the-project-file"></a>Modificando propriedades e destinos sem alterar o arquivo de projeto
 
-Substitua as propriedades e os destinos do projeto no prompt de comando do MSBuild sem alterar o arquivo de projeto. Isso é útil quando você deseja aplicar algumas propriedades temporária ou ocasionalmente. Isso pressupõe noções básicas do MSBuild. Para obter mais informações, confira [MSBUild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild).
+Substitua as propriedades e os destinos do projeto no prompt de comando do MSBuild sem alterar o arquivo de projeto. Isso é útil quando você deseja aplicar algumas propriedades temporária ou ocasionalmente. Isso pressupõe noções básicas do MSBuild. Para obter mais informações, confira [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild).
 
 > [!IMPORTANT]
 > Use o Editor de XML no Visual Studio ou qualquer editor de texto para criar o arquivo .props ou .targets. Não use o **Gerenciador de Propriedades** neste cenário porque ele adiciona as propriedades ao arquivo de projeto.

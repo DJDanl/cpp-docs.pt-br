@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfda5807aab0c9930780b8374ffc934dde001c0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6993f209f5e7c5ab6f56ae886f2d57ba90a19936
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46096802"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860637"
 ---
 # <a name="while-statement-c"></a>Instrução while (C)
 
@@ -37,7 +37,7 @@ A *expressão* deve ter o tipo aritmético ou ponteiro. A execução procede da 
 
 1. A *expressão* é avaliada.
 
-2. Se a *expressão* for inicialmente falsa, o corpo da instrução `while` nunca será executado e o controle passará da instrução `while` para a próxima instrução do programa.
+1. Se a *expressão* for inicialmente falsa, o corpo da instrução `while` nunca será executado e o controle passará da instrução `while` para a próxima instrução do programa.
 
    Se a *expressão* for verdadeira (diferente de zero), o corpo da instrução será executado e o processo será repetido no início da etapa 1.
 

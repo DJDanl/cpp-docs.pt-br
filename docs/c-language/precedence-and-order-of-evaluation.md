@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e318687dfa3cc8e841643e5caf6fe1fbcc00d051
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 953473102a42792dc3ae3afa3b1a8caf507e5648
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080760"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861493"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Precedência e ordem da avaliação
 
@@ -53,7 +53,7 @@ A tabela a seguir resume a precedência e a associatividade (a ordem em que os o
 
 1. Os operadores são listados em ordem decrescente de precedência. Quando vários operadores aparecem na mesma linha ou em um grupo, eles têm a mesma precedência.
 
-2. Todos os operadores de atribuição simples e composta têm a mesma precedência.
+1. Todos os operadores de atribuição simples e composta têm a mesma precedência.
 
 Uma expressão pode conter vários operadores com a mesma precedência. Quando vários desses operadores aparecem no mesmo nível em uma expressão, a avaliação procede de acordo com a associatividade do operador, da direita para a esquerda ou da esquerda para a direita. A direção da avaliação não afeta os resultados das expressões que incluem mais de um operador de multiplicação (<strong>\*</strong>), adição (**+**) ou binário bit a bit (**&**, **&#124;** ou **^**) no mesmo nível. A ordem das operações não é definida pela linguagem. O compilador é livre para avaliar essas expressões em qualquer ordem, se ele puder garantir um resultado consistente.
 
