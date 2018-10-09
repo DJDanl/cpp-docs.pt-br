@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01610f888d8afe275b0e52b86e4f4c678f896c9f
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: ceb004cba243d6e2e9c44aadcaa40670ef7a0bbb
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820459"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890251"
 ---
 # <a name="project-build-error-prj0016"></a>Erro de Build PRJ0016 no Projeto
 
@@ -37,8 +37,4 @@ Para resolver esse erro, exclua a chave de RestrictRun. Se essa chave do registr
 
 Outra causa desse erro é que sua configuração de política não inclui VCSpawn.exe sob a chave do registro HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun como um programa de janela permitido para esta conta de usuário.
 
-Para obter mais informações, consulte:
-
-- Artigo da Base de dados de Conhecimento 324153, que está disponível no [ http://support.microsoft.com/default.aspx?scid=kb; 324153](http://support.microsoft.com/default.aspx?scid=kb;324153).
-
-- [Aderindo às configurações de política do sistema](https://msdn.microsoft.com/library/aa372139), a seção sobre "Executar apenas aplicativos do Windows permitidos".
+Para obter mais informações, consulte [aderindo às configurações de política do sistema](https://msdn.microsoft.com/library/aa372139), na seção "Executar apenas aplicativos do Windows permitidos".

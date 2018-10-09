@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 888c753920c4c0a858de8ab5bc72a07ff0696d1e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4dcbf18656e04e0732dbf377dae960ab0655be82
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429299"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890433"
 ---
 # <a name="cmdiframewnd-class"></a>Classe CMDIFrameWnd
 
@@ -220,8 +220,6 @@ Use essa função crie janelas de uma janela de quadro MDI filho.
 ### <a name="example"></a>Exemplo
 
 [!code-cpp[NVC_MFCWindowing#15](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_3.cpp)]
-
-Este exemplo é um extrato do artigo da Base de dados de Conhecimento Q201045, "como: adicionar vários tipos de janela para um aplicativo do MDI não são de documento/exibição." Artigos da Base de dados de Conhecimento estão disponíveis em [ http://support.microsoft.com ](http://support.microsoft.com/).
 
 ##  <a name="getwindowmenupopup"></a>  CMDIFrameWnd::GetWindowMenuPopup
 

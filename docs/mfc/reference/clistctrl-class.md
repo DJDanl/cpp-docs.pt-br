@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a93294e955dcdc04b320302c573dcbbb827670d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c530a9853aad3e16e5e4094f4d90e30c2643c0d8
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821558"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890888"
 ---
 # <a name="clistctrl-class"></a>Classe CListCtrl
 
@@ -457,12 +457,6 @@ Controles de exibição de lista podem exibir seu conteúdo de quatro maneiras d
 - Exibição de relatório
 
      Cada item é exibido em sua própria linha, com informações adicionais, organizadas em colunas à direita. A coluna mais à esquerda contém o ícone pequeno e o rótulo e as colunas subsequentes contêm subitens conforme especificado pelo aplicativo. Um controle de cabeçalho incorporado (classe [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementa essas colunas. Para obter mais informações sobre o controle de cabeçalho e colunas em uma exibição de relatório, consulte [usando CListCtrl: adicionando colunas ao controle (exibição de relatório)](../../mfc/adding-columns-to-the-control-report-view.md).
-
-Consulte também:
-
-- Artigo da Base de dados de Conhecimento Q250614: HOWTO: Classificar itens em um CListCtrl no modo de exibição de relatório
-
-- Artigo da Base de dados de Conhecimento Q200054: PRB: OnTimer() é não chamado repetidamente para um controle de lista
 
 O estilo de exibição de lista atual do controle determina o modo de exibição atual. Para obter mais informações sobre esses estilos e seu uso, consulte [usando CListCtrl: alterando estilos de controle de lista](../../mfc/changing-list-control-styles.md).
 

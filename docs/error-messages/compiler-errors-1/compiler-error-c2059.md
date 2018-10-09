@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88d33ba33483ba8a2c9764f5336218a354d644e6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 78640f61cb1d0f81fc405cbc3cfce16be0de5022
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46096945"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890069"
 ---
 # <a name="compiler-error-c2059"></a>Erro do compilador C2059
 
@@ -76,8 +76,6 @@ struct ag_type {
 void func(ag_type arg = {5, 7.0});   // C2059
 void func(ag_type arg = ag_type(5, 7.0));   // OK
 ```
-
-Você também pode obter C2059 se você definir uma classe de modelo de membro ou função fora da classe. Para obter informações, consulte [artigo da Base de dados de Conhecimento 241949](http://support.microsoft.com/kb/241949).
 
 C2059 pode ocorrer por uma conversão mal formado.
 

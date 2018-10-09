@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda3bcbd8686d985406842a4b7a64536616ae8ac
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fdbbda6956e3265e7b17aa63ea26ac760b1fda5a
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419538"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890615"
 ---
 # <a name="cdialog-class"></a>Classe CDialog
 
@@ -133,11 +133,7 @@ Caixa de diálogo modal será fechada automaticamente quando o usuário pression
 
 Quando você implementa uma caixa de diálogo sem janela restrita, sempre substituir a `OnCancel` função de membro e chamada `DestroyWindow` de dentro dele. Não chame a classe base `CDialog::OnCancel`, pois ele chama `EndDialog`, que fará a caixa de diálogo invisíveis, mas não destruirá. Você também deve substituir `PostNcDestroy` para caixas de diálogo sem janela restrita para excluí **isso**, uma vez que as caixas de diálogo sem janela restrita geralmente são alocadas com **nova**. Caixas de diálogo modal normalmente são construídas no quadro e não precisam `PostNcDestroy` limpeza.
 
-Para obter mais informações sobre `CDialog`, consulte:
-
-- [Caixas de diálogo](../../mfc/dialog-boxes.md)
-
-- Artigo da Base de dados de Conhecimento Q262954: HOWTO: criar uma caixa de diálogo redimensionáveis com as barras de rolagem
+Para obter mais informações sobre `CDialog`, consulte [caixas de diálogo](../../mfc/dialog-boxes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -281,7 +277,7 @@ Use o estilo WS_VISIBLE no modelo de caixa de diálogo se a caixa de diálogo de
 
 Use o `CWnd::DestroyWindow` função para destruir uma caixa de diálogo criada pela `CreateIndirect` função.
 
-Caixas de diálogo que contêm controles ActiveX exigem informações adicionais fornecidas em um recurso DLGINIT. Para obter mais informações, consulte o artigo da Base de dados de Conhecimento Q231591, "como: usar um modelo de caixa de diálogo para criar uma caixa de diálogo do MFC com um controle ActiveX." Artigos da Base de dados de Conhecimento estão disponíveis em [ http://support.microsoft.com ](http://support.microsoft.com/).
+Caixas de diálogo que contêm controles ActiveX exigem informações adicionais fornecidas em um recurso DLGINIT.
 
 ##  <a name="domodal"></a>  CDialog::DoModal
 
@@ -410,7 +406,7 @@ Diferente de zero se o objeto de caixa de diálogo foi criado e inicializado com
 
 Para criar uma caixa de diálogo modal indiretamente, alocar um bloco global de memória e preenchê-lo com o modelo de caixa de diálogo. Em seguida, chame a esvaziar `CDialog` construtor para construir o objeto de caixa de diálogo. Em seguida, chame `InitModalIndirect` para armazenar seu identificador para o modelo de caixa de diálogo na memória. A caixa de diálogo do Windows é criada e exibida posteriormente, quando o [DoModal](#domodal) função membro é chamada.
 
-Caixas de diálogo que contêm controles ActiveX exigem informações adicionais fornecidas em um recurso DLGINIT. Para obter mais informações, consulte o artigo da Base de dados de Conhecimento Q231591, "como: usar um modelo de caixa de diálogo para criar uma caixa de diálogo do MFC com um controle ActiveX." Artigos da Base de dados de Conhecimento estão disponíveis em [ http://support.microsoft.com ](http://support.microsoft.com/).
+Caixas de diálogo que contêm controles ActiveX exigem informações adicionais fornecidas em um recurso DLGINIT.
 
 ##  <a name="mapdialogrect"></a>  CDialog::MapDialogRect
 

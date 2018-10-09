@@ -162,12 +162,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ddefef4525e000002b6fb685887b666aa53fc87
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc76e89cf8ca44b3254b21585bf00ff6243d818c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378044"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890823"
 ---
 # <a name="cricheditctrl-class"></a>Classe CRichEditCtrl
 
@@ -278,8 +278,6 @@ Para obter mais informações sobre como usar `CRichEditCtrl`, consulte:
 - [Controles](../../mfc/controls-mfc.md)
 
 - [Usando CRichEditCtrl](../../mfc/using-cricheditctrl.md)
-
-- Artigo da Base de dados de Conhecimento Q259949: INFO: SetCaretPos() é não apropriado com CEdit ou controles de CRichEditCtrl
 
 Para obter um exemplo de como usar um controle de edição rica em um aplicativo MFC, consulte o [WORDPAD](../../visual-cpp-samples.md) aplicativo de exemplo.
 

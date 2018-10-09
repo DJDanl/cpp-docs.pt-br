@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c01336094077cc1f451f2e7b479ca4acf9fb77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 412d9150836511c88b85326d2ce59181a0566c57
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441350"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890582"
 ---
 # <a name="cwinthread-class"></a>Classe CWinThread
 
@@ -455,7 +455,7 @@ Diferente de zero se bem-sucedido; Caso contrário, 0.
 A mensagem postada é mapeada para o manipulador de mensagens apropriado, a macro de mapa de mensagem ON_THREAD_MESSAGE.
 
 > [!NOTE]
->  Ao chamar o Windows [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946) função dentro de um aplicativo do MFC, a mensagem MFC manipuladores não são chamados. Para obter mais informações, consulte o artigo da Base de dados de Conhecimento, "PRB: MFC mensagem manipulador não chamado com PostThreadMessage()" (Q142415).
+> Quando você chama [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946), a mensagem é colocada na fila de mensagens do thread. No entanto, porque as mensagens postadas dessa maneira não estão associadas uma janela, MFC será não distribuí-los para manipuladores de comando ou mensagem. Para lidar com essas mensagens, substitua o `PreTranslateMessage()` função da sua derivada de CWinApp de classe e manipular as mensagens manualmente.
 
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage
 

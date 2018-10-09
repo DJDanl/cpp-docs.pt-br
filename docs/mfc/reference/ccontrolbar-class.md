@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd69813251a96051f844051f27155e1d4ed404d6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27121334345556a744a6fc838c238352ccc36621
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393407"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890525"
 ---
 # <a name="ccontrolbar-class"></a>Classe CControlBar
 
@@ -118,8 +118,6 @@ Para obter mais informações sobre `CControlBar`, consulte:
 - [Barras de controle](../../mfc/control-bars.md)
 
 - [Observação técnica 31: Barras de controle](../../mfc/tn031-control-bars.md).
-
-- Artigo da Base de dados de Conhecimento Q242577: PRB: atualização de comando da interface do usuário manipuladores não funcionam para o Menu anexado a uma caixa de diálogo
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 

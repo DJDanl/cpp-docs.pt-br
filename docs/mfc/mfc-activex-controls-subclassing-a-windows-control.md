@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94b989594316f2eac3e65fad2cb5bf419e7ee2eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03fc15cc2d2a73c0e8a1a016a2a477a5c65cdc15
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407524"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890551"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Controles ActiveX MFC: subclasses de um controle do Windows
 
@@ -48,10 +48,8 @@ A subclasse um controle do Windows, conclua as seguintes tarefas:
 
 - [Lidar com quaisquer mensagens de controle ActiveX (OCM) refletidas ao controle](#_core_handling_reflected_window_messages)
 
-    > [!NOTE]
-    >  Grande parte desse trabalho é feito para você pelo Assistente de controle ActiveX se você selecionar o controle para ser uma subclasse usando o **Selecionar classe de janela pai** lista suspensa na **configurações de controle** página.
-
-Consulte o artigo da Base de dados de Conhecimento Q243454 para obter mais informações sobre subclasses de um controle.
+   > [!NOTE]
+   > Grande parte desse trabalho é feito para você pelo Assistente de controle ActiveX se você selecionar o controle para ser uma subclasse usando o **Selecionar classe de janela pai** lista suspensa na **configurações de controle** página.
 
 ##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> Substituindo IsSubclassedControl e PreCreateWindow
 

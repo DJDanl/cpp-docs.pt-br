@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0910c23202b975999e10ef2effaebc470c62fb9d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: e8b9f8614feb98f7e21392565aa610b7d42cd512
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821069"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890154"
 ---
 # <a name="linker-tools-error-lnk1168"></a>Erro das Ferramentas de Vinculador LNK1168
 
@@ -38,7 +38,3 @@ Se o arquivo estiver bloqueado por um programa antivírus, você poderá resolve
 Se o arquivo for bloqueada por um serviço de indexação de pesquisa, você poderá resolver esse problema excluindo os diretórios de saída de compilação de indexação automática. Consulte a documentação do serviço de indexação para obter mais informações. Para alterar a serviço de indexação de pesquisa de Windows, use **as opções de indexação** em que o Windows **painel de controle**. Para obter mais informações, consulte [Windows melhorar pesquisas usando o índice: perguntas frequentes](http://windows.microsoft.com/windows/improve-windows-searches-using-index-faq#1TC=windows-7).
 
 Se o executável não puder ser substituído pelo processo de compilação, ele poderá estar bloqueado pelo Explorador de Arquivos. Se o **experiência de aplicativo** serviço foi desabilitado, o Explorador de arquivos poderá se ater a um bloqueio de identificador de arquivo executável por um longo período. Para corrigir esse problema, execute **Services. msc** e, em seguida, abra o **propriedades** caixa de diálogo para o **experiência de aplicativo** service. Alterar o **tipo de inicialização** de **desabilitado** para **Manual**.
-
-## <a name="see-also"></a>Consulte também
-
-[Você pode receber um "erro de PRJ0008" ou a mensagem de erro "Erro Fatal LNK1168" ao tentar criar uma solução ou um projeto do ActiveX no Visual C++](http://support.microsoft.com/kb/308358)

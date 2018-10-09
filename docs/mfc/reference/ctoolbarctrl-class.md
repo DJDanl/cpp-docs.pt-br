@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5a71e6f358a682adad2d12f7b567dc0bad3d0f3
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 2473f33508274bb0f0aa9aebcb462973ec80b267
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861859"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890810"
 ---
 # <a name="ctoolbarctrl-class"></a>Classe CToolBarCtrl
 
@@ -731,8 +731,6 @@ void Customize();
 ### <a name="remarks"></a>Comentários
 
 Essa caixa de diálogo permite que o usuário personalizar a barra de ferramentas adicionando e excluindo botões. Para dar suporte à personalização, sua janela pai da barra deve tratar as mensagens de notificação de personalização conforme descrito em [manipulando notificações de personalização](../../mfc/handling-customization-notifications.md). Sua barra de ferramentas deve também ter sido criada com o estilo CCS_ADJUSTABLE, conforme descrito em [CToolBarCtrl::Create](#create).
-
-Para obter mais informações, consulte o artigo da Base de dados de Conhecimento Q241850: PRB: chamada a CToolBarCtrl::Customize não mantém visível a caixa de diálogo Personalizar.
 
 ##  <a name="deletebutton"></a>  CToolBarCtrl::DeleteButton
 

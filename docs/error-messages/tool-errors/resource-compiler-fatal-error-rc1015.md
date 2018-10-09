@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a72cba53ebe9a286ac2e7cbbf2c41b78f4e4e08
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0456845152fb2879d2f58c9c40af2562c7207535
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46100746"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890238"
 ---
 # <a name="resource-compiler-fatal-error-rc1015"></a>Erro fatal RC1015 (compilador de recurso)
 
@@ -32,5 +32,3 @@ O arquivo de inclusão especificado não existe, não pôde ser aberto ou não f
 Certifique-se de que as configurações de ambiente são válidas e se o caminho correto para o arquivo está especificado. Certifique-se de que os identificadores de arquivos suficientes estejam disponíveis para o compilador de recurso. Se o arquivo estiver em uma unidade de rede, certifique-se de que você tenha permissões para abrir o arquivo.
 
 RC1015 pode ocorrer mesmo que o arquivo de inclusão existe em um diretório especificado como um diretório adicional de incluir nas propriedades de configuração -> recursos -> página de propriedades geral; Especifique o caminho completo para o arquivo de inclusão.
-
-Para obter mais informações, consulte o artigo da Base de dados de Conhecimento Q326987: RC1015 erro quando usando o recurso modo de exibição se o caminho de inclusão é muito longo.

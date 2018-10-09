@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddf4b505689521fbdfd702eb1944ac0779f16bf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc5bca0f7ff1b2fdb2650eadbcdca4778d9b53ef
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409565"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890354"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Atualizando um controle ActiveX existente
 
@@ -56,7 +56,7 @@ Você também pode adicionar as otimizações, conforme descrito em [controles A
 
 ##  <a name="_core_packaging_code_for_downloading"></a> Empacotando código para download
 
-Para obter mais informações sobre este assunto, consulte o artigo da Base de dados de Conhecimento "Empacotamento MFC controles para uso pela Internet" (Q167158). Você pode encontrar artigos da Base de dados de conhecimento em [ http://support.microsoft.com/support ](http://support.microsoft.com/support).
+Para obter mais informações sobre este assunto, consulte [controles ActiveX de empacotamento](https://docs.microsoft.com//previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751974%28v%3dvs.85%29).
 
 ### <a name="the-codebase-tag"></a>A marca de base de código
 
@@ -94,7 +94,7 @@ Arquivos de gabinete são a maneira recomendada para controles ActiveX de pacote
 
 ### <a name="creating-cab-files"></a>Criação de arquivos CAB
 
-Você pode baixar o Kit de desenvolvimento de gabinete do artigo da Base de dados de Conhecimento [310618: Software Development Kit do Microsoft Cabinet](http://go.microsoft.com/fwlink/p/?linkid=148204). Esse kit, você encontrará as ferramentas necessárias para construir os arquivos de gabinete.
+Ferramentas para criar arquivos de gabinete estão agora faz parte dos [SDK do Windows 10](https://dev.windows.com/downloads/windows-10-sdk).
 
 O arquivo de gabinete apontado pelo `CODEBASE` deve conter o arquivo. ocx para seu controle ActiveX e um arquivo. inf para controlar sua instalação. Você cria o arquivo de gabinete, especificando o nome do seu arquivo de controle e um arquivo. inf. Não inclua as DLLs dependentes que possam existir no sistema nesse arquivo de gabinete. Por exemplo, as DLLs do MFC são empacotadas em um arquivo de gabinete separado e referenciadas pelo arquivo. inf controladora.
 

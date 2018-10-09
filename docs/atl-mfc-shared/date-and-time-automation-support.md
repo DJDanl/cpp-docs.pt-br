@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38933847065544f97d60dfc109436f059a025f7a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1ce0acc7eb90e534e1e66882f5a4a6a88b1eb782
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763848"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890173"
 ---
 # <a name="date-and-time-automation-support"></a>Data e hora: suporte de automação
 
@@ -57,11 +57,8 @@ O segundo método cria dois `COleDateTime` objetos, `oletime1` e `oletime2`e def
 
 A CRT corretamente calcula uma diferença de 23 horas. `COleDateTimeSpan` calcula a diferença de 24 horas.
 
-Observe que uma solução alternativa é usada no final do exemplo para exibir a data corretamente usando `COleDateTime::Format`. Consulte o artigo da Base de dados de Conhecimento "BUG: Format("%D") falhar por `COleDateTime` e `COleDateTimeSpan`" (Q167338).
-
 [!code-cpp[NVC_ATLMFC_Utilities#176](../atl-mfc-shared/codesnippet/cpp/date-and-time-automation-support_1.cpp)]
 
 ## <a name="see-also"></a>Consulte também
 
 [Data e hora](../atl-mfc-shared/date-and-time.md)
-

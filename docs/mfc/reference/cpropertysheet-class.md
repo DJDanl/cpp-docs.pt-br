@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec12275291321751c539d095c60fa9dabffa2b7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 50b1816320521f8ad20ee64fc4a051f938e902ec
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445172"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890771"
 ---
 # <a name="cpropertysheet-class"></a>Classe CPropertySheet
 
@@ -155,7 +155,7 @@ Você pode criar um tipo de caixa de diálogo de guia chamado um assistente, que
 
 Para criar uma caixa de diálogo de tipo de assistente, siga as mesmas etapas que você seguiria para criar uma folha de propriedades padrão, mas chama [SetWizardMode](#setwizardmode) antes de chamar [DoModal](#domodal). Para habilitar os botões do assistente, chame [SetWizardButtons](#setwizardbuttons), usar sinalizadores para personalizar sua função e aparência. Para habilitar o **terminar** botão, chame [SetFinishText](#setfinishtext) depois que o usuário executou a ação na última página do assistente.
 
-Para obter mais informações sobre como usar `CPropertySheet` objetos, consulte o artigo [folhas de propriedades e páginas de propriedade](../../mfc/property-sheets-and-property-pages-in-mfc.md). Além disso, consulte o artigo da Base de dados de Conhecimento Q146916: HOWTO: criar um CPropertySheet sem janela restrita com botões padrão e o artigo Q300606: HOWTO: criar uma folha de propriedades de MFC redimensionável.
+Para obter mais informações sobre como usar `CPropertySheet` objetos, consulte o artigo [folhas de propriedades e páginas de propriedade](../../mfc/property-sheets-and-property-pages-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 

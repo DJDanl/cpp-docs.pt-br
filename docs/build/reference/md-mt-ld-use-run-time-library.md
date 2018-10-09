@@ -45,12 +45,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee8e59fbc88e63343d4da75a4cbf95d4f83bf815
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1aefd61d724f7716392b5fd2d15ef3a2f9ff0006
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701357"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890225"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (Usar biblioteca de tempo de execução)
 
@@ -80,8 +80,6 @@ Para obter mais informações sobre bibliotecas de tempo de execução do C e qu
 Todos os módulos passados para determinada invocação do vinculador devem ter sido compilados com a mesma opção de compilador da biblioteca de tempo de execução (**/MD**, **/MT**, **/LD**).
 
 Para obter mais informações sobre como usar as versões de depuração das bibliotecas de tempo de execução, consulte [referência de biblioteca de tempo de execução C](../../c-runtime-library/c-run-time-library-reference.md).
-
-O artigo Q140584 da Base de Dados de Conhecimento também discute como escolher a biblioteca CRT adequada.
 
 Para obter mais informações sobre DLLs, consulte [DLLs no Visual C++](../../build/dlls-in-visual-cpp.md).
 

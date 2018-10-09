@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a6ac97eaa55dde337068e450c0223b4ec4409f8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1394c3c614d80a07bfea7f411576d5b303d67da8
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393302"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890595"
 ---
 # <a name="crecentfilelist-class"></a>Classe CRecentFileList
 
@@ -78,10 +78,6 @@ class CRecentFileList
 ## <a name="remarks"></a>Comentários
 
 Arquivos podem ser adicionados ao ou excluídos da lista de arquivos MRU, a lista de arquivos pode ser lido ou gravada no registro ou um. Arquivo INI e o menu Exibir a lista de arquivos MRU podem ser atualizado.
-
-Para obter mais informações sobre itens de menu MRU, consulte
-
-- Artigo da Base de dados de Conhecimento Q243751: HOWTO: adicionar manipuladores de comandos para itens de Menu de MRU no aplicativo do MFC
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 

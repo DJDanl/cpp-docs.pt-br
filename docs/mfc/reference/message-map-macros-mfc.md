@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa5cf1be80b22d3577347dbf7de9ee262125aa86
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c2d5a0f2f5f7515e36997b876373dcf25bb6fc03
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821355"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890628"
 ---
 # <a name="message-map-macros-mfc"></a>Macros de mapa de mensagem (MFC)
 
@@ -352,7 +352,7 @@ Mensagens definidas pelo usuário são todas as mensagens que não são mensagen
 Deve haver exatamente uma instrução de macro ON_MESSAGE no mapa de mensagem para todas as mensagens definidas pelo usuário que devem ser mapeada para uma função de manipulador de mensagens.
 
 > [!NOTE]
->  Além de mensagens definidas pelo usuário, ON_MESSAGE lida com mensagens menos comuns do Windows. Para obter mais informações, consulte o artigo de Base de dados de Conhecimento [99848: INFO: Use ON_MESSAGE() Macro mapa menos comuns mensagens](http://go.microsoft.com/fwlink/p/?linkid=192022).
+>  Além de mensagens definidas pelo usuário, ON_MESSAGE lida com mensagens menos comuns do Windows. Para obter mais informações, consulte [mapas de mensagem](../../mfc/tn006-message-maps.md).
 
 Para obter mais informações e exemplos, consulte [manipulação de mensagens e os tópicos de mapeamento](../../mfc/message-handling-and-mapping.md) e [manipuladores definidos pelo usuário](user-defined-handlers.md)
 

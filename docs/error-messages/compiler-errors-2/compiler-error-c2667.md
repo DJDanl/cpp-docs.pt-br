@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d6d14cf04ae399b10cbaa393d9e9fcc7133f274
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2a96da270da9dddfdd893e56cb88ac2662d57c54
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095242"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890135"
 ---
 # <a name="compiler-error-c2667"></a>Erro do compilador C2667
 
@@ -30,5 +30,3 @@ ms.locfileid: "46095242"
 Uma chamada de função sobrecarregada é ambígua e não pode ser resolvida.
 
 A conversão necessária para corresponder aos parâmetros na chamada de função para uma das funções sobrecarregadas reais deve ser estritamente melhor do que as conversões necessárias por todas as outras funções sobrecarregadas.
-
-Consulte o artigo da Base de dados de Conhecimento Q240869 para obter mais informações sobre ordenação parcial de modelos de função.

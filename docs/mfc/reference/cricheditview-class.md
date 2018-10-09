@@ -110,12 +110,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ca5b649ba5d09d0406658112b8067ed804f7e70
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 81ecc91d8c942a36920368bdb4054ffc2145478d
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423930"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890719"
 ---
 # <a name="cricheditview-class"></a>Classe CRichEditView
 
@@ -470,8 +470,6 @@ O tipo de seleção pode ser qualquer combinação dos sinalizadores a seguir:
 A implementação padrão retorna NULL. Isso é um avançado substituível.
 
 Para obter mais informações, consulte [IRichEditOleCallback::GetContextMenu](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu) e [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) no SDK do Windows.
-
-Para obter mais informações sobre o `OLEOBJECT` de tipo, consulte o artigo de estruturas de dados OLE e alocação de estrutura na *Base de dados de Conhecimento OLE*.
 
 ##  <a name="getdocument"></a>  CRichEditView::GetDocument
 

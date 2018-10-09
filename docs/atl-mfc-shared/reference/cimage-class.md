@@ -64,12 +64,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7053c72536c0ab91420f1bbc068f39843eb99c1b
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: df61ebeea72a7cf860237b760288cc47ff353bf2
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861805"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890654"
 ---
 # <a name="cimage-class"></a>Classe CImage
 
@@ -320,7 +320,7 @@ Um identificador para um HBITMAP.
 *eOrientation*<br/>
 Especifica a orientação do bitmap. Pode ser uma das seguintes opções:
 
-- DIBOR_DEFAULT a orientação do bitmap é determinado pelo sistema operacional. No entanto, isso pode não sempre ter os resultados pretendidos em todos os sistemas operacionais. Para obter mais informações sobre isso, consulte o seguinte artigo da Base de dados de Conhecimento (**Q186586**): PRB: GetObject () sempre retornará positivo altura para DIB seções.
+- DIBOR_DEFAULT a orientação do bitmap é determinado pelo sistema operacional.
 
 - DIBOR_BOTTOMUP as linhas do bitmap estão na ordem inversa. Isso faz com que [CImage::GetBits](#getbits) para retornar um ponteiro perto do fim do buffer de bitmap e [CImage::GetPitch](#getpitch) para retornar um número negativo.
 

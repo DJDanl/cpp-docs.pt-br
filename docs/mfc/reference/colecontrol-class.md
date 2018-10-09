@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 292121e95b20061e95e85b49c60d4758bd18a568
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 160d9857097c4cac1912d2ca44b0433905c238f5
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435526"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890862"
 ---
 # <a name="colecontrol-class"></a>Classe COleControl
 
@@ -2158,7 +2158,7 @@ Diferente de zero se o controle foi inicializado; Caso contrário, 0.
 
 ### <a name="remarks"></a>Comentários
 
-A implementação da estrutura de `IDispatch::Invoke` chamadas `IsInvokeAllowed` para determinar se uma determinada função (identificado por `dispid`) pode ser invocado. O comportamento padrão para um controle OLE é permitir que os métodos de automação a ser invocado apenas se o controle foi inicializado; No entanto, `IsInvokeAllowed` é uma função virtual e pode ser substituída se for necessário (por exemplo, quando o controle está sendo usado como um servidor de automação). Para obter mais informações, consulte o artigo da Base de dados de Conhecimento Q166472, "como: usar um controle OLE como um servidor de automação." Artigos da Base de dados de Conhecimento estão disponíveis em [ http://support.microsoft.com ](http://support.microsoft.com/).
+A implementação da estrutura de `IDispatch::Invoke` chamadas `IsInvokeAllowed` para determinar se uma determinada função (identificado por `dispid`) pode ser invocado. O comportamento padrão para um controle OLE é permitir que os métodos de automação a ser invocado apenas se o controle foi inicializado; No entanto, `IsInvokeAllowed` é uma função virtual e pode ser substituída se for necessário (por exemplo, quando o controle está sendo usado como um servidor de automação).
 
 ##  <a name="ismodified"></a>  COleControl::IsModified
 

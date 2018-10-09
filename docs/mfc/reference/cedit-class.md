@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2935ac160f5d778faf119390d1f023d00d6d322b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d4ae42373ddf70cf4945c540e781397d7d67bd21
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448539"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890745"
 ---
 # <a name="cedit-class"></a>Classe CEdit
 
@@ -225,11 +225,7 @@ Se você criar um `CEdit` do objeto dentro de uma janela, você também precisar
 
 Para modificar alguns estilos em um controle de edição (por exemplo, ES_READONLY) você deve enviar mensagens específicas para o controle em vez de usar [ModifyStyle](cwnd-class.md#modifystyle). Ver [estilos de controle de edição](/windows/desktop/Controls/edit-control-styles) no Windows SDK.
 
-Para obter mais informações sobre `CEdit`, consulte:
-
-- [Controles](../../mfc/controls-mfc.md)
-
-- Artigo da Base de dados de Conhecimento Q259949: INFO: SetCaretPos() é não apropriado com CEdit ou controles de CRichEditCtrl
+Para obter mais informações sobre `CEdit`, consulte [controles](../../mfc/controls-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 

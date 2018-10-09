@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23a9be38ebb870adf098b34fac79afff6345cd8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 660b2fc2f6ece6f60ff7bd1868b3a65bc8f045c1
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394732"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890030"
 ---
 # <a name="mfc-com"></a>MFC COM
 
@@ -57,8 +57,6 @@ Tecnologias do Active Directory incluem tecnologias de cliente e servidor, inclu
 - Esta seção também fornece informações sobre como escrever componentes usando o MFC, por exemplo, no [pontos de Conexão](../mfc/connection-points.md).
 
 Para uma discussão sobre o que ainda é chamado de OLE versus o que agora é chamado de tecnologia do Active Directory, consulte os tópicos sobre [OLE](../mfc/ole-in-mfc.md).
-
-Além disso, consulte o artigo da Base de dados de Conhecimento Q248019: HOWTO: evitar servidor ocupado caixa de diálogo caixa do que aparecem durante um COM operação demorada.
 
 ## <a name="in-this-section"></a>Nesta seção
 

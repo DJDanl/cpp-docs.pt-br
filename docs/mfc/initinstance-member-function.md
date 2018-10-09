@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cafc3868d41dcf90baabbf05e0d5a4671c5b11fc
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: bc9d1d1ff35755a966591e6f46f7742ddfa59e08
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820289"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890017"
 ---
 # <a name="initinstance-member-function"></a>Função de membro InitInstance
 
@@ -45,7 +45,7 @@ O padrão `InitInstance` implementação criada pelo Assistente de aplicativo MF
 Você pode adicionar seu próprio código de inicialização ou modificar o código escrito pelo assistente.
 
 > [!NOTE]
->  Aplicativos MFC devem ser inicializados como um compartimento de único thread (STA). Se você chamar [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) em seu `InitInstance` substituir, especifique COINIT_APARTMENTTHREADED (em vez de COINIT_MULTITHREADED). Para obter mais informações, consulte PRB: aplicativo do MFC para de responder quando você inicializar o aplicativo como um Multi-Threaded Apartment (828643) em [ http://support.microsoft.com/default.aspxscid=kb; 828643](http://support.microsoft.com/default.aspxscid=kb;828643).
+>  Aplicativos MFC devem ser inicializados como um compartimento de único thread (STA). Se você chamar [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) em seu `InitInstance` substituir, especifique COINIT_APARTMENTTHREADED (em vez de COINIT_MULTITHREADED).
 
 ## <a name="see-also"></a>Consulte também
 

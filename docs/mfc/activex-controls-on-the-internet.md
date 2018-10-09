@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47d1a5308b379d8bd1923bb9ad1ad805cb6bded3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6004c3acd052d1424004017941a5e4aa110c602c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432802"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890330"
 ---
 # <a name="activex-controls-on-the-internet"></a>Controles ActiveX na Internet
 
@@ -170,10 +170,6 @@ Monikers assíncronos fornecem uma maneira para baixar os dados de forma assínc
 Por exemplo, se apenas 10 bytes estão disponíveis e leitura é chamada de forma assíncrona em um arquivo de 1K, leitura não bloqueia, mas retorna com os 10 bytes disponíveis no momento.
 
 Você implementar [monikers assíncronos](../mfc/asynchronous-monikers-on-the-internet.md) usando o `CAsyncMonikerFile` classe. No entanto, os controles ActiveX podem usar o `CDataPathProperty` classe, que é derivada de `CAsyncMonikerFile`, para ajudar a implementar propriedades de controle assíncrono.
-
-O exemplo ASYNDOWN demonstra como configurar um loop assíncrono usando temporizadores para ler os dados. ASYNDOWN é descrito detalhadamente no artigo da Base de dados de Conhecimento "HOWTO: AsyncDown demonstra assíncrona dados baixar" (Q177244) e está disponível para download no Microsoft Download Center. (Para obter mais informações sobre como baixar arquivos do Microsoft Download Center, consulte o artigo "Como para obter Microsoft suporte a arquivos de serviços Online" (Q119591) na Base de dados de Conhecimento da Microsoft). Você pode encontrar artigos da Base de dados de conhecimento em [ http://support.microsoft.com/support ](http://support.microsoft.com/support).
-
-A técnica básica usada em ASYNDOWN é definir um timer no **CDataPathProperty::OnDataAvailable** para indicar quando os dados estiverem disponíveis. Quando a mensagem de timer é recebida, o aplicativo lê em blocos de 128 bytes de dados e preenche um controle de edição. Se os dados não estão disponíveis quando a mensagem de timer é manipulada, o temporizador é desativado. `OnDataAvailable` ativa o temporizador se mais dados chegarem mais tarde.
 
 ## <a name="displaying-a-control-on-a-web-page"></a>Exibição de um controle em uma página da Web
 

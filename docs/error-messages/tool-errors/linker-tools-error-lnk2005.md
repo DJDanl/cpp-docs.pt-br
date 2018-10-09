@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a800fb8065fd3c613a2bc05975c15decb0145891
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8a3dbb1d63e7d7c6f5e036fc0cde967277c91a40
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028305"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890114"
 ---
 # <a name="linker-tools-error-lnk2005"></a>Erro das Ferramentas de Vinculador LNK2005
 
@@ -121,14 +121,3 @@ Aqui estão algumas causas comuns desse erro.
     ```
 
    Para corrigir esse problema, adicione [Multiple](../../build/reference/force-force-file-output.md) às opções de linha de comando do vinculador e verifique se o UUID é a primeira biblioteca mencionada.
-
-## <a name="additional-information"></a>Informações adicionais
-
-Se você estiver usando uma versão mais antiga do conjunto de ferramentas, consulte estes artigos da Base de dados de conhecimento para obter mais informações sobre as causas específicas para esse erro:
-
-- [Um erro LNK2005 ocorre quando as bibliotecas CRT e MFC estão vinculadas na ordem errada no Visual C++](https://support.microsoft.com/kb/148652)
-
-- [CORREÇÃO: Exclusão sobrecarregado Global operador causa LNK2005](https://support.microsoft.com/kb/140440)
-
-- [Você recebe LNK2005 erros quando você compila um projeto executável (.exe) de ATL no Visual C++](https://support.microsoft.com/kb/184235).
-

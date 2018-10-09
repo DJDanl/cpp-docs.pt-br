@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5355b6e81354ef04b7cc4d2c3495289c9d1d029d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f2d77516ae53b0ee1c4f39e4d8f095848aa00acc
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444197"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889965"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>Exportando Classes de cadeia de caracteres usando CStringT
 
@@ -29,7 +29,7 @@ No passado, os desenvolvedores MFC derivada de `CString` especializar suas próp
 
 - Com o novo `CStringT` classe de modelo, você pode personalizar `CString` comportamento usando parâmetros de modelo que especifica as características de caractere, semelhantes aos modelos na biblioteca padrão C++.
 
-- Quando você exportar sua própria classe de cadeia de caracteres de uma DLL usando `CStringT`, o compilador também automaticamente exporta o `CString` classe base. Uma vez que `CString` em si for uma classe de modelo, pode ser instanciado pelo compilador quando usado, a menos que o compilador reconhece que `CString` é importado de uma DLL. Se você migrou projetos do Visual C++ 6.0 para o Visual C++ .NET, talvez você tenha visto erros de símbolo do vinculador para um definido de forma múltipla `CString` por causa a colisão do `CString` importados de uma DLL e a versão de instâncias locais. O modo adequado para fazer isso é descrito abaixo. Para obter mais informações sobre esse problema, consulte o artigo da Base de dados de Conhecimento, "vinculação erros quando você importa CString derivado Classes" (Q309801) em [ http://support.microsoft.com/default.aspx ](http://support.microsoft.com/default.aspx).
+- Quando você exportar sua própria classe de cadeia de caracteres de uma DLL usando `CStringT`, o compilador também automaticamente exporta o `CString` classe base. Uma vez que `CString` em si for uma classe de modelo, pode ser instanciado pelo compilador quando usado, a menos que o compilador reconhece que `CString` é importado de uma DLL. Se você migrou projetos do Visual C++ 6.0 para o Visual C++ .NET, talvez você tenha visto erros de símbolo do vinculador para um definido de forma múltipla `CString` por causa a colisão do `CString` importados de uma DLL e a versão de instâncias locais. O modo adequado para fazer isso é descrito abaixo.
 
 O cenário a seguir fará com que o vinculador a produzir erros de símbolo para classes definidas várias vezes. Suponha que você estiver exportando um `CString`-classe derivada (`CMyString`) de uma DLL de extensão do MFC:
 

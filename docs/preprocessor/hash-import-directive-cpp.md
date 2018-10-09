@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb62a61762c2c4e042777376f4d2b9f3ffc747e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 60397fea85e3fd121469ae4568dac18fa6b9ddb1
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429741"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890316"
 ---
 # <a name="import-directive-c"></a>Diretiva #import (C++)
 **Específico do C++**  
@@ -185,11 +185,9 @@ Se uma biblioteca de tipos incluir referências a tipos definidos em outras bibl
 O nome do arquivo real na **#import** comentário é o caminho completo da biblioteca de tipos com referência cruzada, conforme armazenado no registro. Se você encontrar erros devidos à ausência de definições de tipo, verifique os comentários no cabeçalho do .TLH para saber quais bibliotecas de tipos dependentes precisarão ser importadas primeiro. Erros prováveis são erros de sintaxe (por exemplo, C2143, C2146, C2321), C2501 (especificadores de declarações ausentes) ou C2433 ("embutido" não permitido na declaração de dados) ao compilar o arquivo .TLI.  
   
 Você deve determinar qual a dependência de comentários não são fornecidos de outra forma por cabeçalhos do sistema e, em seguida, fornecem uma **#import** diretiva em algum momento antes do **#import** diretiva do dependente biblioteca de tipos para resolver os erros.  
-  
-Para obter mais informações, consulte o artigo da Base de Dados de Conhecimento sobre métodos wrapper de #import causando violação de acesso (Q242527) ou sobre erros de compilador ao usar #import com XML (Q269194). Você pode encontrar artigos da Base de dados de Conhecimento na mídia de biblioteca do MSDN ou no [Microsoft Support](https://support.microsoft.com/).  
-  
-##  <a name="_predir_the_23import_directive_import_attributes"></a> atributos de #import  
- 
+
+##  <a name="_predir_the_23import_directive_import_attributes"></a> atributos de #import
+
 **#import** pode opcionalmente incluir um ou mais atributos. Esses atributos instruem o compilador a modificar o conteúdo dos cabeçalhos de biblioteca de tipos. Uma barra invertida (**\\**) símbolo pode ser usado para incluir linhas adicionais em um único **#import** instrução. Por exemplo:  
   
 ```  

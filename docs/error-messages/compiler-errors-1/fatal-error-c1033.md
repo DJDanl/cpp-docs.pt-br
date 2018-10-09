@@ -16,18 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0b096e5cacc64359887d7cf74f94f4febea70e6
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 48816aa801e5085d1646efdeff2af40e233cbf3f
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820531"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889857"
 ---
 # <a name="fatal-error-c1033"></a>Erro fatal C1033
 
 não é possível abrir o pdb de banco de dados do programa
 
-Esse erro pode ser causado por erro de disco.
-
-
-Para obter mais informações, consulte [ http://support.microsoft.com/default.aspx?scid=kb; 246007](http://support.microsoft.com/default.aspx?scid=kb;246007).
+Esse erro pode ser causado por um erro de disco, um bloqueio temporário criado por um programa antivírus, uma instância anterior do depurador que não foi totalmente desligado, ou processos de mspdbsrv.exe build paralelo que tentam acessam o mesmo arquivo, entre outras causas possíveis.

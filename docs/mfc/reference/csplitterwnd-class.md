@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e56ab939cd6b3cfcb0601eaec1e450835069705f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 549669841a4b10468679795ca045f5626f5e9101
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389522"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890667"
 ---
 # <a name="csplitterwnd-class"></a>Classe CSplitterWnd
 
@@ -181,11 +181,7 @@ Uma janela separadora dá suporte a barras de rolagem especial (além das barras
 
 Você cria essas barras de rolagem especial ao criar janela separadora. Por exemplo, um `CSplitterWnd` que tem uma linha, duas colunas e o estilo WS_VSCROLL exibirá uma barra de rolagem vertical é compartilhada por dois painéis. Quando o usuário move a barra de rolagem, mensagens WM_VSCROLL são enviadas para os dois painéis. Quando os painéis de definir a posição da barra de rolagem, a barra de rolagem compartilhado é definida.
 
-Para obter mais informações sobre janelas separadoras, consulte:
-
-- [Nota técnica 29](../../mfc/tn029-splitter-windows.md)
-
-- Artigo da Base de dados de Conhecimento Q262024: HOWTO: CPropertySheet de uso como um filho de CSplitterWnd
+Para obter mais informações sobre janelas separadoras, consulte [29 de observação técnica](../../mfc/tn029-splitter-windows.md).
 
 Para obter mais informações sobre como criar janelas separadoras dinâmicas, consulte:
 
