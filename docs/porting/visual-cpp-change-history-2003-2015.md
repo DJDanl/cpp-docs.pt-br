@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1f7d94dafa34c5ab01dfbcf28e2c429642dbf68
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d6f0e5ce08e362cef0fd625036a92c1d13885ded
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397295"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821537"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Histórico de alterações de 2003 a 2015 do Visual C++
 
@@ -2966,7 +2966,7 @@ O compilador C++ no Visual Studio 2013 detecta incompatibilidades em _ITERATOR_D
 
 ### <a name="mfc-and-atl"></a>MFC e ATL
 
-- **Visual Studio 2013 apenas**: a Biblioteca MFC MBCS não está mais incluída no Visual Studio porque o Unicode é muito popular e o uso de MBCS foi significativamente reduzido. Essa alteração também mantém o MFC alinhado de forma mais próxima ao próprio Windows SDK, uma vez que vários dos controles e mensagens novos são somente Unicode. No entanto, se for preciso continuar usando a biblioteca MFC MBCS, você poderá baixá-la no Centro de Download do MSDN em [Multibyte MFC Library for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40770) (Biblioteca MFC multibyte para Visual Studio 2013). O Pacote Redistribuível do Visual C++ ainda inclui esta biblioteca.  (Observação: a DLL do MBCS está incluída nos componentes de instalação do C++ no Visual Studio 2015 e posteriores).
+- **Visual Studio 2013 apenas**: a Biblioteca MFC MBCS não está mais incluída no Visual Studio porque o Unicode é muito popular e o uso de MBCS foi significativamente reduzido. Essa alteração também mantém o MFC alinhado de forma mais próxima ao próprio Windows SDK, uma vez que vários dos controles e mensagens novos são somente Unicode. No entanto, se for preciso continuar usando a biblioteca MFC MBCS, você poderá baixá-la no Centro de Download do MSDN em [Multibyte MFC Library for Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770) (Biblioteca MFC multibyte para Visual Studio 2013). O Pacote Redistribuível do Visual C++ ainda inclui esta biblioteca.  (Observação: a DLL do MBCS está incluída nos componentes de instalação do C++ no Visual Studio 2015 e posteriores).
 
 - A acessibilidade para a faixa de opções do MFC foi alterada.  Em vez de uma arquitetura de um nível, há agora uma arquitetura hierárquica. Você ainda pode usar o comportamento antigo chamando `CRibbonBar::EnableSingleLevelAccessibilityMode()`.
 
