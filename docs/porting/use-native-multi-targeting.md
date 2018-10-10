@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb9d7b950e4c38ea53db6e459edfa1a179eb971d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 62404de4012bcd49888da527ae93ed1b2137a48a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578236"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374139"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Usar multiplataforma nativa no Visual Studio para compilar projetos antigos
 
@@ -70,19 +70,11 @@ Após essa alteração, o compilador e as bibliotecas do Visual Studio 2008 são
 
 Talvez você tenha um projeto antigo do Visual C++ que você não pode ou não deseja atualizar, mas não a versão de conjunto de ferramentas de plataforma correspondente ao seu projeto. Nesse caso, para obter o conjunto de ferramentas, é possível instalar gratuitamente a edição Visual Studio Community ou Express da versão necessária. Cada versão do Visual Studio, do Visual Studio 2008 em diante, pode instalar o compilador, as ferramentas e as bibliotecas necessários para definir como destino essa versão com base no Visual Studio atual. Pesquise no Centro de Download da Microsoft para localizar e baixar uma versão específica do Visual Studio. Certifique-se de que escolher as opções de instalação do C++ durante a instalação. Quando a instalação for concluída, execute essa versão do Visual Studio para instalar quaisquer atualizações. Também verifique se há alterações do Windows Update que possam ser exigidas. Talvez seja necessário repetir esse processo de verificação de atualização mais de uma vez para obter todas as atualizações.
 
-Abaixo estão alguns downloads do Visual Studio de que talvez você possa precisar:
-
-  - [Microsoft Visual Studio Community 2015](https://www.microsoft.com/download/details.aspx?id=48146)  
-  - [Microsoft Visual Studio Express 2013 para Windows Desktop com Atualização 5](https://www.microsoft.com/download/details.aspx?id=48131)  
-  - [Microsoft Visual Studio Express 2012 para Windows Desktop](https://www.microsoft.com/download/details.aspx?id=34673)  
-  - [Visual Studio 2012 Atualização 5](https://www.microsoft.com/download/details.aspx?id=34673)  
-  - [Microsoft Visual C++ 2010 Express (Instalador da Web)](https://download.microsoft.com/download/1/D/9/1D9A6C0E-FC89-43EE-9658-B9F0E3A76983/vc_web.exe)  
-  - [Microsoft Visual Studio 2010 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=23691)  
-  - [Microsoft Visual C++ 2008 Express com SP1 (Instalador da Web)](https://go.microsoft.com/?linkid=7729279)  
+Para ver os downloads disponíveis no momento, consulte [Download older Visual Studio software](https://visualstudio.microsoft.com/vs/older-downloads/) (Baixar o software mais antigo do Visual Studio).
 
 Quando esses produtos são instalados, o menu suspenso de propriedades **Conjunto de Ferramentas de Plataforma** na caixa de diálogo **Páginas de Propriedade** é automaticamente atualizada para mostrar os conjuntos de ferramentas disponíveis. Agora você pode usar a versão mais recente do Visual Studio para compilar projetos para essas versões mais antigas do conjunto de ferramentas sem convertê-los ou atualizá-los.
 
 ## <a name="see-also"></a>Consulte também
 
-[Atualizando projetos de versões anteriores do Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
+[Atualizando projetos de versões anteriores do Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Aprimoramentos de conformidade do C++ no Visual Studio 2017](../cpp-conformance-improvements-2017.md)  

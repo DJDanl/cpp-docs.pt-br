@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c5c360246282f8b6062d21061856a57bd2c7194
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26b313aa3e1dec6d401ed27e1a4f8ae0bd870eaa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384327"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118512"
 ---
 # <a name="c-bitwise-operators"></a>Operadores bit a bit C
 
@@ -35,17 +35,11 @@ Os operadores bit a bit executam as operações E bit a bit (**&**), OR exclusiv
 
 ## <a name="syntax"></a>Sintaxe
 
-*AND-expression*:  
-&nbsp;&nbsp;*equality-expression*  
-&nbsp;&nbsp;*AND-expression* **&** *equality-expression*
+*AND-expression*: &nbsp;&nbsp;*equality-expression* &nbsp;&nbsp;*AND-expression* **&** *equality-expression*
 
-*exclusive-OR-expression*:  
-&nbsp;&nbsp;*AND-expression*  
-&nbsp;&nbsp;*exclusive-OR-expression* **^** *AND-expression*
+*exclusive-OR-expression*: &nbsp;&nbsp;*AND-expression* &nbsp;&nbsp;*exclusive-OR-expression* **^** *AND-expression*
 
-*inclusive-OR-expression*:  
-&nbsp;&nbsp;*exclusive-OR-expression*  
-&nbsp;&nbsp;*inclusive-OR-expression* &#124; *exclusive-OR-expression*
+*inclusive-OR-expression*: &nbsp;&nbsp;*exclusive-OR-expression* &nbsp;&nbsp;*inclusive-OR-expression* &#124; *exclusive-OR-expression*
 
 Os operandos dos operadores bit a bit devem ter tipos integrais, mas seus tipos podem ser diferentes. Esses operadores executam conversões aritméticas comuns; o tipo do resultado é o tipo dos operandos após a conversão.
 
@@ -96,6 +90,6 @@ O resultado do E bit a bit é decimal 96.
 
 ## <a name="see-also"></a>Consulte também
 
-[Operador AND bit a bit: &](../cpp/bitwise-and-operator-amp.md)  
-[Operador OR exclusivo bit a bit: ^](../cpp/bitwise-exclusive-or-operator-hat.md)  
-[Bitwise Inclusive OR Operator: &#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)  
+[Operador AND bit a bit: &](../cpp/bitwise-and-operator-amp.md)<br/>
+[Operador OR exclusivo bit a bit: ^](../cpp/bitwise-exclusive-or-operator-hat.md)<br/>
+[Bitwise Inclusive OR Operator: &#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)

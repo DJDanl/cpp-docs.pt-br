@@ -1,7 +1,7 @@
 ---
 title: 'Passo a passo: Compilando um projeto (C++) | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/14/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -16,54 +16,58 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c8d04dc3692076b867302af0e793eaac7ed25cb
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: eca30330e721575443ba9d3f7b0b19c315427eb2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33332449"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234119"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Instruções passo a passo: compilando um projeto (C++)
-Neste passo a passo, você introduzirá um erro de sintaxe do Visual C++ no código deliberadamente para saber o que é um erro de compilação e como corrigi-lo. Quando você compila o projeto, uma mensagem de erro indica qual é o problema e em que local ele ocorreu.  
-  
-## <a name="prerequisites"></a>Pré-requisitos  
-  
--   Este passo a passo pressupõe que você conheça os princípios básicos da linguagem C++.  
-  
--   Também pressupõe que você tenha concluído os passos a passos relacionados anteriores listados em [Usando o IDE do Visual Studio para desenvolvimento para desktop com C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
-  
-### <a name="to-fix-compilation-errors"></a>Para corrigir erros de compilação  
-  
-1.  Em TestGames.cpp, exclua o ponto-e-vírgula na última linha, de modo que ele fique parecido com isto:  
-  
-     `return 0`  
-  
-2.  Na barra de menus, escolha **Compilar**, **Compilar Solução**.  
-  
-3.  Uma mensagem na janela **Lista de Erros** indica que houve um erro na compilação do projeto. A descrição é parecida com esta:  
-  
-     `error C2143: syntax error : missing ';' before '}'`  
-  
-     Para exibir informações da Ajuda sobre este erro, realce-o na janela **Lista de Erros** e, em seguida, escolha a tecla F1.  
-  
-4.  Adicione o ponto-e-vírgula novamente ao fim da linha que contém o erro de sintaxe:  
-  
-     `return 0;`  
-  
-5.  Na barra de menus, escolha **Compilar**, **Compilar Solução**.  
-  
-     Uma mensagem na janela de **Saída** indica que o projeto foi compilado com êxito.  
-  
-    ```Output  
-    1>------ Build started: Project: Game, Configuration: Debug Win32 ------  
-    1>  TestGames.cpp  
-    1>  Game.vcxproj -> C:\Users\<username>\Documents\Visual Studio <version>\Projects\Game\Debug\Game.exe  
-    ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========  
-    ```  
-  
-## <a name="next-steps"></a>Próximas etapas  
- **Anterior:** [Passo a passo: Trabalhando com projetos e soluções (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) &#124; **Próximo:**[Passo a passo: Testando um projeto (C++)](../ide/walkthrough-testing-a-project-cpp.md)  
-  
-## <a name="see-also"></a>Consulte também  
- [Referência da linguagem C++](../cpp/cpp-language-reference.md)   
- [Compilando programas do C/C++](../build/building-c-cpp-programs.md)
+
+Neste passo a passo, você introduzirá um erro de sintaxe do Visual C++ no código deliberadamente para saber o que é um erro de compilação e como corrigi-lo. Quando você compila o projeto, uma mensagem de erro indica qual é o problema e em que local ele ocorreu.
+
+## <a name="prerequisites"></a>Pré-requisitos
+
+- Este passo a passo pressupõe que você conheça os princípios básicos da linguagem C++.
+
+- Também pressupõe que você tenha concluído os passos a passos relacionados anteriores listados em [Usando o IDE do Visual Studio para Desenvolvimento para Desktop com C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+
+### <a name="to-fix-compilation-errors"></a>Para corrigir erros de compilação
+
+1. Em Game.cpp, exclua o ponto e vírgula na última linha, de modo que ele fique parecido com a instrução:
+
+    `return 0`
+
+1. Na barra de menus, escolha **Compilar** > **Compilar Solução**.
+
+1. Uma mensagem na janela **Lista de Erros** indica que houve um erro na compilação do projeto. A descrição é parecida com esta mensagem de erro:
+
+    `error C2143: syntax error: missing ';' before '}'`
+
+  Para ver informações de ajuda sobre esse erro, realce-o na janela **Lista de Erros** e escolha a tecla **F1**.
+
+1. Adicione o ponto-e-vírgula novamente ao fim da linha que contém o erro de sintaxe:
+
+     `return 0;`
+
+1. Na barra de menus, escolha **Compilar** > **Compilar Solução**.
+
+  Uma mensagem na janela de **Saída** indica que o projeto foi compilado com êxito.
+
+    ```Output
+    1>------ Build started: Project: Game, Configuration: Debug Win32 ------
+    1>Game.cpp
+    1>Game.vcxproj -> C:\Users\<username>\source\repos\Game\Debug\Game.exe
+    ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+    ```
+
+## <a name="next-steps"></a>Próximas etapas
+
+**Anterior:** [Passo a passo: trabalhando com projetos e soluções (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
+**Próximo:** [Passo a passo: testando um projeto (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+
+## <a name="see-also"></a>Consulte também
+
+[Referência da linguagem C++](../cpp/cpp-language-reference.md)<br/>
+[Compilando programas do C/C++](../build/building-c-cpp-programs.md)<br/>

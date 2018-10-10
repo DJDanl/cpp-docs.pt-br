@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dca97238310c42b9a537baa4056563b25c20c617
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 98734522410b867d735d0af25f440d5b45874563
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895221"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393276"
 ---
 # <a name="hint-files"></a>Arquivos de dica
 
@@ -52,9 +52,9 @@ As definições de macro a seguir estão em um arquivo de cabeçalho separado.
 
 ```cpp
 // Header file.
-#define STDMETHOD(method) HRESULT (STDMETHODCALLTYPE * method)  
+#define STDMETHOD(method) HRESULT (STDMETHODCALLTYPE * method)
 #define STDMETHODCALLTYPE __stdcall
-#define HRESULT void*  
+#define HRESULT void*
 ```
 
 O sistema de análise não pode interpretar o código-fonte porque uma função chamada `STDMETHOD` parece estar declarada, e essa declaração está sintaticamente incorreta porque tem duas listas de parâmetros. O sistema de análise não abre o arquivo de cabeçalho para descobrir as definições para as macros `STDMETHOD`, `STDMETHODCALLTYPE` e `HRESULT`. Como o sistema de análise não pode interpretar a macro `STDMETHOD`, ele ignora toda a instrução e, em seguida, continua a análise.
@@ -127,21 +127,21 @@ Algumas macros fazem com que o sistema de análise interprete o código-fonte in
 
 No código-fonte a seguir, o tipo de parâmetro para a função `FormatWindowClassName()` é `PXSTR`, e o nome do parâmetro é `szBuffer`. No entanto, o sistema de análise confunde as anotações de SAL `_Pre_notnull_` e `_Post_z_` com o tipo ou o nome do parâmetro.
 
-**Código-fonte:**  
+**Código-fonte:**
 
-```  
-static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)  
-```  
+```cpp
+static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
+```
 
 **Estratégia:** definição nula
 
-A estratégia nessa situação é tratar as anotações de SAL como se elas não existissem. Para fazer isso, especifique uma dica cuja cadeia de caracteres de substituição seja nula. Consequentemente, o sistema de análise ignorará as anotações e o navegador do **Modo de Exibição de Classe** não as exibirá. (O Visual C++ inclui um arquivo de dica interno que oculta a anotação de SAL.)  
+A estratégia nessa situação é tratar as anotações de SAL como se elas não existissem. Para fazer isso, especifique uma dica cuja cadeia de caracteres de substituição seja nula. Consequentemente, o sistema de análise ignorará as anotações e o navegador do **Modo de Exibição de Classe** não as exibirá. (O Visual C++ inclui um arquivo de dica interno que oculta a anotação de SAL.)
 
-**Arquivo de dica:**  
+**Arquivo de dica:**
 
-```  
+```cpp.hint
 #define _Pre_notnull_
-```  
+```
 
 ### <a name="concealed-cc-language-elements"></a>Elementos ocultos da linguagem C/C++
 
@@ -149,11 +149,11 @@ Um motivo comum pelo qual o sistema de análise interpreta incorretamente o cód
 
 No código-fonte a seguir, a macro `START_NAMESPACE` oculta uma chave esquerda sem par (`{`).
 
-**Código-fonte:**  
+**Código-fonte:**
 
-```  
+```cpp
 #define START_NAMESPACE namespace MyProject {
-```  
+```
 
 **Estratégia:** cópia direta
 
@@ -161,11 +161,11 @@ Se a semântica de uma macro for crítica para a experiência de navegação, cr
 
 Observe que, se a macro no arquivo de origem contiver outras macros, essas macros serão interpretadas somente se já estiverem no conjunto de dicas efetivas.
 
-**Arquivo de dica:**  
+**Arquivo de dica:**
 
-```  
+```cpp.hint
 #define START_NAMESPACE namespace MyProject {
-```  
+```
 
 ### <a name="maps"></a>Mapas
 
@@ -173,9 +173,9 @@ Um mapa consiste em macros que designam um elemento inicial, um elemento final e
 
 O código-fonte a seguir define as macros `BEGIN_CATEGORY_MAP`, `IMPLEMENTED_CATEGORY` e `END_CATEGORY_MAP`.
 
-**Código-fonte:**  
+**Código-fonte:**
 
-```  
+```cpp
 #define BEGIN_CATEGORY_MAP(x)\
 static const struct ATL::_ATL_CATMAP_ENTRY* GetCategoryMap() throw() {\
 static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
@@ -183,15 +183,15 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 #define END_CATEGORY_MAP()\
    { _ATL_CATMAP_ENTRY_END, NULL } };\
    return( pMap ); }
-```  
+```
 
 **Estratégia:** identificar os elementos do mapa
 
 Especifique dicas para os elementos iniciais, intermediários (se houver) e finais de um mapa. Use as cadeias de caracteres de substituição de mapa especial `@<`, `@=` e `@>`. Para obter mais informações, confira a seção `Syntax` neste tópico.
 
-**Arquivo de dica:**  
+**Arquivo de dica:**
 
-```  
+```cpp.hint
 // Start of the map.
 #define BEGIN_CATEGORY_MAP(x) @<
 // Intermediate map element.
@@ -200,7 +200,7 @@ Especifique dicas para os elementos iniciais, intermediários (se houver) e fina
 #define REQUIRED_CATEGORY( catid ) @=
 // End of the map.
 #define END_CATEGORY_MAP() @>
-```  
+```
 
 ### <a name="composite-macros"></a>Macros compostas
 
@@ -208,11 +208,11 @@ As macros compostas contêm um ou mais dos tipos de macro que confundem o sistem
 
 O código-fonte a seguir contém a macro `START_NAMESPACE`, que especifica o início de um escopo de namespace, e a macro `BEGIN_CATEGORY_MAP`, que especifica o início de um mapa.
 
-**Código-fonte:**  
+**Código-fonte:**
 
-```  
+```cpp
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
-```  
+```
 
 **Estratégia:** cópia direta
 
@@ -220,31 +220,31 @@ Crie dicas para as macros `START_NAMESPACE` e `BEGIN_CATEGORY_MAP` e, em seguida
 
 Nesse exemplo, suponha que `START_NAMESPACE` já tenha uma dica, conforme descrito neste tópico no subtítulo `Concealed C/C++ Language Elements`. Suponha que `BEGIN_CATEGORY_MAP` tenha uma dica, conforme descrito anteriormente em `Maps`.
 
-**Arquivo de dica:**  
+**Arquivo de dica:**
 
-```  
+```cpp.hint
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
-```  
+```
 
 ### <a name="inconvenient-macros"></a>Macros inconvenientes
 
 Algumas macros podem ser interpretadas pelo sistema de análise, mas o código-fonte é difícil de ser lido, pois a macro é longa ou complexa. Para fins de legibilidade, forneça uma dica que simplifique a exibição da macro.
 
-**Código-fonte:**  
+**Código-fonte:**
 
-```  
-#define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)  
-```  
+```cpp
+#define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)
+```
 
 **Estratégia:** simplificação
 
 Crie uma dica que exibe uma definição de macro mais simples.
 
-**Arquivo de dica:**  
+**Arquivo de dica:**
 
-```  
+```cpp.hint
 #define STDMETHOD(methodName) void* methodName
-```  
+```
 
 ## <a name="example"></a>Exemplo
 
@@ -254,7 +254,7 @@ A ilustração a seguir mostra alguns dos diretórios físicos em um projeto do 
 
 ### <a name="hint-file-directories"></a>Diretórios de arquivos de dica
 
-![Diretórios de arquivos de dicas comuns e específicos ao projeto](../ide/media/hintfile.png "HintFile")  
+![Diretórios de arquivos de dicas comuns e específicos ao projeto](../ide/media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>Diretórios e conteúdo do arquivo de dica
 
@@ -262,41 +262,41 @@ A lista a seguir mostra os diretórios nesse projeto que contêm arquivos de dic
 
 - vcpackages
 
-    ```  
-    // vcpackages (partial list)  
+    ```cpp.hint
+    // vcpackages (partial list)
     #define _In_
     #define _In_opt_
     #define _In_z_
     #define _In_opt_z_
-    #define _In_count_(size)  
-    ```  
+    #define _In_count_(size)
+    ```
 
 - Depurar
 
-    ```  
+    ```cpp.hint
     // Debug
     #undef _In_
     #define OBRACE {
     #define CBRACE }
-    #define RAISE_EXCEPTION(x) throw (x)  
+    #define RAISE_EXCEPTION(x) throw (x)
     #define START_NAMESPACE namespace MyProject {
     #define END_NAMESPACE }
-    ```  
+    ```
 
 - A1
 
-    ```  
+    ```cpp.hint
     // A1
     #define START_NAMESPACE namespace A1Namespace {
-    ```  
+    ```
 
 - A2
 
-    ```  
+    ```cpp.hint
     // A2
     #undef OBRACE
     #undef CBRACE
-    ```  
+    ```
 
 ### <a name="effective-hints"></a>Dicas efetivas
 
@@ -306,19 +306,19 @@ A tabela a seguir lista as dicas efetivas para os arquivos de origem nesse proje
 
 - Dicas efetivas:
 
-    ```  
-    // vcpackages (partial list)  
+    ```cpp.hint
+    // vcpackages (partial list)
     #define _In_opt_
     #define _In_z_
     #define _In_opt_z_
-    #define _In_count_(size)  
+    #define _In_count_(size)
     // Debug...
-    #define RAISE_EXCEPTION(x) throw (x)  
+    #define RAISE_EXCEPTION(x) throw (x)
     // A1
     #define START_NAMESPACE namespace A1Namespace {
     // ...Debug
     #define END_NAMESPACE }
-    ```  
+    ```
 
 As observações a seguir se aplicam à lista anterior.
 
@@ -332,10 +332,10 @@ As observações a seguir se aplicam à lista anterior.
 
 ## <a name="see-also"></a>Consulte também
 
-[Tipos de arquivo criados para projetos do Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)    
-[Diretiva #define (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)   
-[Diretiva #undef (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)   
-[Anotações de SAL](../c-runtime-library/sal-annotations.md)   
-[Mapas de Mensagens](../mfc/reference/message-maps-mfc.md)   
-[Macros de Mapa de Mensagens](../atl/reference/message-map-macros-atl.md)   
+[Tipos de arquivo criados para projetos do Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)<br>
+[Diretiva #define (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)<br>
+[Diretiva #undef (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)<br>
+[Anotações de SAL](../c-runtime-library/sal-annotations.md)<br>
+[Mapas de mensagens](../mfc/reference/message-maps-mfc.md)<br>
+[Macros de mapa de mensagens](../atl/reference/message-map-macros-atl.md)<br>
 [Macros de mapa de objeto](../atl/reference/object-map-macros.md)

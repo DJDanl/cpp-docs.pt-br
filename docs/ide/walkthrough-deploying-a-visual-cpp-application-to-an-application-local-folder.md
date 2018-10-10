@@ -1,7 +1,7 @@
 ---
 title: Implantar um aplicativo do Visual C++ em uma pasta local do aplicativo | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,35 +14,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a02e585dc2b82c8b8ad675907e4205db6ad7279
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: f749a288ac08adfb5df5291ce3dd92b95c2301e8
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337903"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234236"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-to-an-application-local-folder"></a>Instruções passo a passo: implantando um aplicativo do Visual C++ em uma pasta local do aplicativo
+
 Descreve como implantar um aplicativo do Visual C++ copiando arquivos para sua pasta.  
   
 ## <a name="prerequisites"></a>Pré-requisitos  
   
--   Um computador que tenha o Visual Studio instalado.  
+- Um computador que tenha o Visual Studio instalado.  
   
--   Outro computador que não tenha as bibliotecas do Visual C++.  
+- Outro computador que não tem as bibliotecas do Visual C++.  
   
 ### <a name="to-deploy-an-application-to-an-application-local-folder"></a>Para implantar um aplicativo em uma pasta local do aplicativo  
   
-1.  Crie e compile um aplicativo MFC seguindo as etapas de [Passo a passo: Implantando um aplicativo do Visual C++ usando um projeto de instalação](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).  
+1. Crie e compile um aplicativo MFC seguindo as etapas de [Passo a passo: Implantando um aplicativo do Visual C++ usando um projeto de instalação](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).  
   
-2.  Copie os arquivos de biblioteca MFC e CRT (C Run-Time) apropriados – por exemplo, para uma plataforma x86 e suporte a Unicode, copie mfc100u.dll e msvcr100.dll de \Arquivos de Programas\Microsoft Visual Studio 10.0\VC\redist\x86\ – e, em seguida, cole-os na pasta \Release\ do projeto MFC. Para obter mais informações sobre outros arquivos que talvez você precise copiar, confira [Determinando quais DLLs devem ser redistribuídas](../ide/determining-which-dlls-to-redistribute.md).  
+1. Copie os arquivos de biblioteca MFC e CRT (Tempo de Execução C) do diretório de instalação do Visual Studio na pasta \\VC\\redist\\*versão* e, em seguida, cole-os na pasta \Release\ do seu projeto MFC. Para obter mais informações sobre outros arquivos que talvez você precise copiar, confira [Determinando quais DLLs devem ser redistribuídas](determining-which-dlls-to-redistribute.md).  
   
-3.  Execute o aplicativo MFC em um segundo computador que não tenha as bibliotecas do Visual C++.  
+1. Execute o aplicativo MFC em um segundo computador que não tenha as bibliotecas do Visual C++.  
   
-    1.  Copie o conteúdo da pasta \Release\ e cole-o na pasta do aplicativo no segundo computador.  
+   1. Copie o conteúdo da pasta \Release\ e cole-o na pasta do aplicativo no segundo computador.  
   
-    2.  Execute o aplicativo no segundo computador.  
+   1. Execute o aplicativo no segundo computador.  
   
-     O aplicativo é executado com êxito porque as bibliotecas do Visual C++ estão disponíveis na pasta local do aplicativo.  
+   O aplicativo é executado com êxito porque as bibliotecas do Visual C++ estão disponíveis na pasta local do aplicativo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplos de implantação](../ide/deployment-examples.md)
+
+[Exemplos de implantação](deployment-examples.md)<br/>

@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 359c9d3f72ffa87abf49c6e3ca90743ad0fc80a3
-ms.sourcegitcommit: 9be4b66efa45dc132cef06eb3b258c2252ea23a9
+ms.openlocfilehash: 279598c320131b163b936091560de45255c18a4d
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42583913"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235003"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Como relatar um problema com o conjunto de ferramentas ou a documentação do Visual C++
 
@@ -104,7 +104,7 @@ Adicione outros detalhes que puderem nos ajudar a diagnosticar o problema, como 
 
 ### <a name="the-repro"></a>A reprodução
 
-Uma reprodução é um exemplo de código-fonte completo e independente que demonstra o problema reproduzindo-o (daí o nome). Precisamos de uma reprodução para que possamos reproduzir o erro em nossos computadores. O código deve ser suficiente para, sozinho, criar um executável simples que seja compilado e executado, ou que seria compilado e executado se não fosse o problema encontrado. Uma reprodução não é um trecho de código. Ela deve ter classes e funções completas e conter todas as diretivas #include necessárias, mesmo para os cabeçalhos padrão.
+Uma reprodução é um exemplo de código-fonte completo e independente que demonstra o problema reproduzindo-o (daí o nome). Precisamos de uma reprodução para que possamos reproduzir o erro em nossos computadores. O código deve ser suficiente para, sozinho, criar um executável simples que seja compilado e executado, ou que seria compilado e executado se não fosse o problema encontrado. Uma reprodução não é um snippet de código. Ela deve ter classes e funções completas e conter todas as diretivas #include necessárias, mesmo para os cabeçalhos padrão.
 
 #### <a name="what-makes-a-good-repro"></a>O que compõe uma boa reprodução
 
@@ -370,14 +370,12 @@ Ao escolher relatar um problema, pesquise primeiro na Comunidade de Desenvolvedo
 
 ### <a name="use-the-visual-studio-developer-community-pages"></a>Usar as páginas da Comunidade de Desenvolvedores do Visual Studio
 
-As páginas da Comunidade de Desenvolvedores do Visual Studio são outra maneira prática para relatar problemas e encontrar soluções relacionadas ao Visual Studio, ao compilador do C++, às ferramentas e às bibliotecas. A página de [Perguntas do Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html) serve para relatar os problemas com a instalação ou com o IDE. Para problemas relacionados ao compilador C++, ao vinculador e às outras ferramentas e bibliotecas, use a página de [Perguntas do C++](https://developercommunity.visualstudio.com/spaces/62/index.html).
+As páginas da Comunidade de Desenvolvedores do Visual Studio são outra maneira prática para relatar problemas e encontrar soluções relacionadas ao Visual Studio e ao compilador do C++, às ferramentas e às bibliotecas. Há páginas da Comunidade de Desenvolvedores para [Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html), [Visual Studio para Mac](https://developercommunity.visualstudio.com/spaces/41/index.html), [.NET](https://developercommunity.visualstudio.com/spaces/61/index.html), [C++](https://developercommunity.visualstudio.com/spaces/62/index.html), [Azure DevOps](https://developercommunity.visualstudio.com/spaces/21/index.html) e [TFS](https://developercommunity.visualstudio.com/spaces/22/index.html). Embaixo dessas guias, próximo à parte superior de cada página, há uma caixa de pesquisa que você pode usar para encontrar postagens ou tópicos que relatam problemas semelhantes ao seu. Você poderá encontrar uma solução ou outras informações úteis relacionadas ao seu problema já disponíveis. Se alguém já tiver relatado o mesmo problema anteriormente, vote a favor e comente nesse tópico em vez de criar um novo relatório de problema. Para comentar, votar ou relatar um novo problema, talvez seja preciso entrar na conta do Visual Studio e concordar em permitir acesso do aplicativo da Comunidade de Desenvolvedores ao seu perfil.
 
-Na faixa próxima à parte superior de cada página da Comunidade de Desenvolvedores, há uma caixa de pesquisa que você pode usar para encontrar postagens ou tópicos que relatam problemas semelhantes ao seu. Você poderá encontrar uma solução ou outras informações úteis relacionadas ao seu problema já disponíveis em um tópico existente. Se alguém já tiver relatado o mesmo problema anteriormente, vote a favor e comente nesse tópico em vez de criar um novo relatório de problema.
-
-Se o problema não tiver sido relatado anteriormente, escolha o botão **Relatar um problema** ao lado da caixa de pesquisa na página da Comunidade de Desenvolvedores. Talvez seja preciso entrar na conta do Visual Studio e concordar em permitir acesso do aplicativo da Comunidade de Desenvolvedores ao seu perfil. Depois de entrar, você irá diretamente a uma página em que será possível relatar o problema. Você poderá incluir o código de reprodução e a linha de comando, capturas de tela, links para discussões relacionadas e qualquer outra informação que achar relevante e útil.
+Para problemas relacionados ao compilador C++, ao vinculador e às outras ferramentas e bibliotecas, use a página do [C++](https://developercommunity.visualstudio.com/spaces/62/index.html). Se você pesquisar seu problema e ele não tiver sido relatado anteriormente, escolha o botão **Relatar um problema** ao lado da caixa de pesquisa na parte superior da página. Você poderá incluir o código de reprodução e a linha de comando, capturas de tela, links para discussões relacionadas e qualquer outra informação que achar relevante e útil.
 
 > [!TIP]
-> Para outros tipos de problemas que podem ocorrer no Visual Studio não relacionados ao conjunto de ferramentas (por exemplo, problemas da interface do usuário, funcionalidade do IDE interrompida ou falhas gerais), a **ferramenta Relatar um Problema** pode ser uma opção especialmente boa devido às suas funcionalidades de captura de tela e sua capacidade de registrar ações da interface do usuário que levam ao problema encontrado. Esses tipos de erros também podem ser relatados no site [Comunidade de Desenvolvedores](https://developercommunity.visualstudio.com/).
+> Para ver outros tipos de problemas que possam ser encontrados no Visual Studio não relacionados ao conjunto de ferramentas do C++ (Por exemplo, problemas de interface do usuário, funcionalidade IDE corrompida ou falhas gerais), use a ferramenta **Relatar um problema** no IDE. Isso é a melhor opção, devido a suas funcionalidades de captura de tela e sua capacidade de registrar ações de interface do usuário que levam ao problema encontrado. Esses tipos de erros também podem ser pesquisados no site da [Comunidade de Desenvolvedores](https://developercommunity.visualstudio.com/). Para saber mais, consulte [Como relatar um problema com o Visual Studio](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017).
 
 ### <a name="reports-and-privacy"></a>Relatórios e privacidade
 

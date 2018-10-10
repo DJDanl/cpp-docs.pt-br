@@ -18,30 +18,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df491508f7898fe3c97bc02a83e5259baa9c89f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7be460ace4e407a328c0cf23c9e6c9af09d17ca0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382858"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101456"
 ---
 # <a name="c-additive-operators"></a>Operadores aditivos C
-Os operadores aditivos executam adição (**+**) e subtração (**-**).  
-  
-## <a name="syntax"></a>Sintaxe  
- *additive-expression*:  
- *multiplicative-expression*  
-  
- *additive-expression*  **+**  *multiplicative-expression*  
-  
- *additive-expression*  **-**  *multiplicative-expression*  
-  
+
+Os operadores aditivos executam adição (**+**) e subtração (**-**).
+
+## <a name="syntax"></a>Sintaxe
+
+*additive-expression*: *multiplicative-expression*
+
+*additive-expression*  **+**  *multiplicative-expression*
+
+*additive-expression*  **-**  *multiplicative-expression*
+
 > [!NOTE]
->  Embora a sintaxe de *additive-expression* inclua *multiplicative-expression*, isso não significa que expressões que usam multiplicação sejam necessárias. Consulte a sintaxe em [Resumo de sintaxe da linguagem C](../c-language/c-language-syntax-summary.md), para *multiplicative-expression*, *cast-expression* e *unary-expression*.  
-  
- Os operandos podem ser valores integrais ou flutuantes. Algumas operações aditivas também podem ser executadas em valores de ponteiro, como descrito na discussão de cada operador.  
-  
- Os operadores aditivos executam as conversões aritméticas comuns em operandos do tipo integral ou flutuantes. O tipo do resultado é o tipo dos operandos após conversão. Como as conversões executadas pelos operadores aditivos não fornecem condições de estouro ou de estouro negativo, as informações podem ser perdidas se o resultado de uma operação aditiva não puder ser representado no tipo dos operandos após a conversão.  
-  
-## <a name="see-also"></a>Consulte também  
- [Operadores aditivos: + e -](../cpp/additive-operators-plus-and.md)
+>  Embora a sintaxe de *additive-expression* inclua *multiplicative-expression*, isso não significa que expressões que usam multiplicação sejam necessárias. Consulte a sintaxe em [Resumo de sintaxe da linguagem C](../c-language/c-language-syntax-summary.md), para *multiplicative-expression*, *cast-expression* e *unary-expression*.
+
+Os operandos podem ser valores integrais ou flutuantes. Algumas operações aditivas também podem ser executadas em valores de ponteiro, como descrito na discussão de cada operador.
+
+Os operadores aditivos executam as conversões aritméticas comuns em operandos do tipo integral ou flutuantes. O tipo do resultado é o tipo dos operandos após conversão. Como as conversões executadas pelos operadores aditivos não fornecem condições de estouro ou de estouro negativo, as informações podem ser perdidas se o resultado de uma operação aditiva não puder ser representado no tipo dos operandos após a conversão.
+
+## <a name="see-also"></a>Consulte também
+
+[Operadores aditivos: + e -](../cpp/additive-operators-plus-and.md)

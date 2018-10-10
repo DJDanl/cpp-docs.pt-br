@@ -1,7 +1,7 @@
 ---
-title: Criando um projeto Makefile | Microsoft Docs
+title: Criando um projeto Makefile C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 02/28/2018
+ms.date: 09/12/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -17,28 +17,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc854f96f1c41baf28a5af4ca1f253e47d9a8914
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a3360d2ed86d220bc59d6f09f582c71b48f7d78c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33336772"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399477"
 ---
-# <a name="creating-a-makefile-project"></a>Criando um projeto de makefile
+# <a name="creating-a-c-makefile-project"></a>Criando um Projeto Makefile C++
 
-Se você tem um projeto de código-fonte compilado na linha de comando usando um makefile, o ambiente de desenvolvimento do Visual Studio apresenta várias maneiras de transformá-lo em um projeto que pode aproveitar ao máximo as funcionalidades do IDE do Visual Studio. Este artigo descreve como criar um Projeto Makefile no Visual Studio que usa o makefile existente para compilar o código no IDE. Como alternativa, você pode usar o assistente para **Criar Novo Projeto com base em Arquivos de Código Existentes** para criar um projeto nativo do MSBuild com base no código-fonte. Para obter mais informações, consulte [Como criar um projeto do C++ com base no código existente](how-to-create-a-cpp-project-from-existing-code.md). Começando pelo Visual Studio 2017, use também o recurso **Abrir Pasta**, que pode usar vários sistemas de build existentes como se fossem projetos nativos do Visual Studio. Para saber mais, veja [Projetos Abrir Pasta no Visual C++](non-msbuild-projects.md).
+Um *makefile* é um arquivo de texto que contém instruções sobre como criar e vincular (ou *compilar*) um conjunto de arquivos de código-fonte do C++. Um programa *make* lê o makefile e invoca um compilador, vinculador e possivelmente outros programas para criar um arquivo executável. A implementação do programa *make* pela Microsoft é chamada **NMAKE**. (Por padrão, o Visual Studio usa o sistema MSBuild com base em arquivos .vcsproj; este é o que foi criado por **Arquivo | Novo | Projeto**.)
 
-Para usar o Visual Studio para abrir e compilar o código-fonte usando o makefile existente, primeiro crie um projeto selecionando o modelo de projeto MakeFile. Um assistente ajudará você a especificar os comandos e o ambiente usados pelo makefile. Em seguida, use esse projeto para compilar seu código no ambiente de desenvolvimento do Visual Studio.
+Se tiver um projeto makefile existente, você terá estas opções se desejar codificar e/ou depurá-lo no Visual Studio IDE:
+
+- Crie um Projeto Makefile no Visual Studio que usa o makefile existente para compilar o código no IDE. (Você não terá todos os recursos do IDE que tem com um projeto MSBuild nativo). Consulte [Para criar um projeto makefile](#create_a_makefile_project) abaixo.
+- Use o assistente para **Criar Novo Projeto com base em Arquivos de Código Existentes** para criar um projeto nativo do MSBuild com base no código-fonte. Para obter mais informações, consulte [Como criar um projeto do C++ com base no código existente](how-to-create-a-cpp-project-from-existing-code.md).
+- **Visual Studio 2017 e posterior**: use o recurso **Abrir pasta** para abrir um makefile. Para saber mais, veja [Projetos Abrir Pasta no Visual C++](non-msbuild-projects.md).
+
+## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Para criar um projeto Makefile com o modelo de projeto makefile
+
+No Visual Studio 2017 e posterior, o modelo de projeto Makefile estará disponível quando a carga de trabalho de Desenvolvimento do C++ da área de trabalho for instalada.
+
+Siga o assistente para especificar os comandos e o ambiente usado pelo seu makefile. Em seguida, use esse projeto para compilar seu código no ambiente de desenvolvimento do Visual Studio.
 
 Por padrão, o projeto de makefile não exibe nenhum arquivo no Gerenciador de Soluções. O projeto de makefile especifica as configurações de build, que são refletidas na página de propriedades do projeto.
 
 O arquivo de saída que você especifica no projeto não tem efeito no nome que o script de compilação gera; ele declara apenas uma intenção. O makefile ainda controla o processo de build e especifica os destinos de build.
 
-## <a name="to-create-a-makefile-project"></a>Para criar um projeto Makefile
-
-1. Siga as instruções do tópico da Ajuda [Criando um projeto com um assistente de aplicativo do Visual C++](../ide/creating-desktop-projects-by-using-application-wizards.md).
-
-1. Na caixa de diálogo **Novo Projeto**, expanda **Visual C++** > **Geral** e, em seguida, selecione **Projeto Makefile** no painel Modelos para abrir o assistente de projeto.
+1. Na página inicial do Visual Studio, digite "makefile" na caixa de pesquisa **Novo projeto**. Ou, na caixa de diálogo **Novo Projeto**, expanda **Visual C++** > **Geral** (Visual Studio 2015) ou **Outro** (Visual Studio 2017) e, em seguida, selecione **Projeto Makefile** no painel Modelos para abrir o assistente de projeto.
 
 1. Na página [Configurações de Aplicativo](../ide/application-settings-makefile-project-wizard.md), forneça as informações de comando, saída, limpeza e recompilação para builds de depuração e varejo.
 

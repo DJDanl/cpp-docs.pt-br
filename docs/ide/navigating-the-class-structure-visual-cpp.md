@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b926ab618a631ca1334e89da983f169b6a38e49b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9c602717829db0b076add24b0db29b464068c68c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204645"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409123"
 ---
 # <a name="navigating-the-class-structure-visual-c"></a>Navegando na estrutura da classe (Visual C++)
-Navegue por uma estrutura de classe do projeto, incluindo funções, herança e interfaces, usando **Modo de Exibição de Classe** ou o **Pesquisador de Objetos**. Para obter mais informações, consulte [Exibindo a estrutura do código](/visualstudio/ide/viewing-the-structure-of-code).  
-  
- Acesse uma declaração da função clicando duas vezes no nome da função em Modo de Exibição de Classe. Acesse uma definição de classe clicando duas vezes em um nome de classe em Modo de Exibição de Classe.  
-  
-## <a name="see-also"></a>Consulte também  
- [Adicionando funcionalidade com assistentes de código](../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Adicionando uma classe](../ide/adding-a-class-visual-cpp.md)   
- [Adicionando uma função de membro](../ide/adding-a-member-function-visual-cpp.md)   
- [Adicionando uma variável de membro](../ide/adding-a-member-variable-visual-cpp.md)   
- [Substituindo uma função virtual](../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Manipulador de mensagens do MFC](../mfc/reference/adding-an-mfc-message-handler.md)
+
+Navegue por uma estrutura de classe do projeto, incluindo funções, herança e interfaces, usando **Modo de Exibição de Classe** ou o **Pesquisador de Objetos**. Para obter mais informações, consulte [Exibindo a estrutura do código](/visualstudio/ide/viewing-the-structure-of-code).
+
+Acesse uma declaração da função clicando duas vezes no nome da função em Modo de Exibição de Classe. Acesse uma definição de classe clicando duas vezes em um nome de classe em Modo de Exibição de Classe.
+
+## <a name="see-also"></a>Consulte também
+
+[Adicionando funcionalidade com assistentes de código](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
+[Adicionando uma classe](../ide/adding-a-class-visual-cpp.md)<br>
+[Adicionando uma função de membro](../ide/adding-a-member-function-visual-cpp.md)<br>
+[Adicionando uma variável de membro](../ide/adding-a-member-variable-visual-cpp.md)<br>
+[Substituindo uma função virtual](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
+[Manipulador de mensagens do MFC](../mfc/reference/adding-an-mfc-message-handler.md)

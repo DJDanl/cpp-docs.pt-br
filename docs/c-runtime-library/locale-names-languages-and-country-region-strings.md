@@ -20,23 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c072074c24466458ebd19e1335f49169c5c22bd5
-ms.sourcegitcommit: 3b78ddea5fd3e22b7c5cd2d787ec71a518a52223
+ms.openlocfilehash: 2622702cd19dab3cad2613aa3df28b5cef464853
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578435"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076002"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>Nomes de localidades, idiomas e cadeias de caracteres de país/região
 
 O argumento *locale* para as funções `setlocale` e `_create_locale` pode ser definido usando os nomes de localidades, idiomas, códigos de país/região e as páginas de códigos com suporte da API NLS do Windows. O argumento *locale* usa o seguinte formato:
 
-> *locale* :: "*locale_name*"  
-&nbsp;&nbsp;&nbsp;&nbsp;| "*language*\[\_*country-region*]\[.*code_page*]]"  
-&nbsp;&nbsp;&nbsp;&nbsp;| ".*code_page*"  
-&nbsp;&nbsp;&nbsp;&nbsp;| "C"  
-&nbsp;&nbsp;&nbsp;&nbsp;| ""  
-&nbsp;&nbsp;&nbsp;&nbsp;| NULL  
+> *locale* :: "*locale_name*" &nbsp;&nbsp;&nbsp;&nbsp;| "*language*\[\_*country-region*]\[.*code_page*]]" &nbsp;&nbsp;&nbsp;&nbsp;| ".*code_page*" &nbsp;&nbsp;&nbsp;&nbsp;| "C" &nbsp;&nbsp;&nbsp;&nbsp;| "" &nbsp;&nbsp;&nbsp;&nbsp;| NULL
 
 O formato de nome da localidade é preferido — por exemplo, use `en-US` para inglês (Estados Unidos) ou `bs-Cyrl-BA` para bósnio (cirílico, Bósnia e Herzegovina). O conjunto de nomes de localidade é descrito em [Nomes de localidade](/windows/desktop/Intl/locale-names). Para obter uma lista de nomes de locais com suporte pela versão do sistema operacional Windows, veja a coluna **Marca de idioma** da tabela no [Apêndice A: comportamento de produto](https://msdn.microsoft.com/library/cc233982.aspx) no [MS-LCID]: referência do identificador de código de idioma (LCID) do Windows. Esse recurso lista o idioma, o script e as partes da região com suporte dos nomes de localidade. Para obter informações sobre os nomes de localidades com suporte que têm ordens de classificação não padrão, consulte a coluna **Nome da localidade** em [Identificadores da ordem de classificação](/windows/desktop/Intl/sort-order-identifiers). Com o Windows 10 ou posterior, são permitidos nomes de localidade que correspondem às marcas de idioma BCP-47 válidas. Por exemplo, `jp-US` é uma marca BCP-47 válida, mas é eficaz somente `US` para a funcionalidade de localidade.
 
@@ -50,10 +45,9 @@ Um valor do argumento *locale* de `C` especifica o ambiente em conformidade mín
 
 Você pode especificar todas as categorias de localidade ao mesmo tempo para as funções `setlocale` e `_wsetlocale` usando a categoria `LC_ALL`. Todas as categorias podem ser definidas para a mesma localidade, ou você pode definir cada categoria individualmente usando um argumento de localidade que tenha esta forma:
 
-> LC_ALL_specifier :: locale  
-&nbsp;&nbsp;&nbsp;&nbsp;| [LC_COLLATE=locale][;LC_CTYPE=locale][;LC_MONETARY=locale][;LC_NUMERIC=locale][;LC_TIME=locale]
+> LC_ALL_specifier :: locale &nbsp;&nbsp;&nbsp;&nbsp;| [LC_COLLATE=locale][;LC_CTYPE=locale][;LC_MONETARY=locale][;LC_NUMERIC=locale][;LC_TIME=locale]
 
-Você pode especificar vários tipos de categoria, separados por ponto-e-vírgula. Os tipos da categoria que não especificados usam a definição de localidade atual. Por exemplo, este trecho de código define a localidade atual para todas as categorias como `de-DE` e, em seguida, define as categorias `LC_MONETARY` como `en-GB` e `LC_TIME` como `es-ES`:
+Você pode especificar vários tipos de categoria, separados por ponto-e-vírgula. Os tipos da categoria que não especificados usam a definição de localidade atual. Por exemplo, este snippet de código define a localidade atual para todas as categorias como `de-DE` e, em seguida, define as categorias `LC_MONETARY` como `en-GB` e `LC_TIME` como `es-ES`:
 
 ```C
 _wsetlocale(LC_ALL, L"de-DE");
@@ -62,9 +56,9 @@ _wsetlocale(LC_ALL, L"LC_MONETARY=en-GB;LC_TIME=es-ES");
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência da biblioteca em tempo de execução C](../c-runtime-library/c-run-time-library-reference.md)  
-[_get_current_locale](../c-runtime-library/reference/get-current-locale.md)  
-[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)  
-[_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)  
-[Cadeias de caracteres de idioma](../c-runtime-library/language-strings.md)  
-[Cadeias de caracteres de país/região](../c-runtime-library/country-region-strings.md)  
+[Referência da biblioteca em tempo de execução C](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)<br/>
+[Cadeias de caracteres de idioma](../c-runtime-library/language-strings.md)<br/>
+[Cadeias de caracteres de país/região](../c-runtime-library/country-region-strings.md)

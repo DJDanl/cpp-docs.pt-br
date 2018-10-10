@@ -30,34 +30,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 478f942b489aa2350319b90da4c05c61925101f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e232364c7c9403bdaafd41466a9999faa4e45953
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407916"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234275"
 ---
 # <a name="unlock"></a>_unlock
-Libera um bloqueio de vários threads.  
-  
+
+Libera um bloqueio de vários threads.
+
 > [!IMPORTANT]
->  Essa função é obsoleta. A partir do Visual Studio 2015, ela não está disponível no CRT.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-void __cdecl _unlock(  
-   int locknum  
-);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
- [in] `locknum`  
- O identificador do bloqueio a ser liberado.  
-  
-## <a name="requirements"></a>Requisitos  
- **Fonte:** mlock.c  
-  
-## <a name="see-also"></a>Consulte também  
- [Alphabetical Function Reference](../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Referência da função alfabética)  
- [_lock](../c-runtime-library/lock.md)
+>  Essa função é obsoleta. A partir do Visual Studio 2015, ela não está disponível no CRT.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+void __cdecl _unlock(
+   int locknum
+);
+```
+
+#### <a name="parameters"></a>Parâmetros
+
+*locknum*<br/>
+[in] O identificador do bloqueio a ser liberado.
+
+## <a name="requirements"></a>Requisitos
+
+**Fonte:** mlock.c
+
+## <a name="see-also"></a>Consulte também
+
+[Referência da Função Alfabética](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[_lock](../c-runtime-library/lock.md)

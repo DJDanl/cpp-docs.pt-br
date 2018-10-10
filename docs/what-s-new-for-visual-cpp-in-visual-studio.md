@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 996a891d62ee254fe2ce769483d34941ffb300b6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: cc82a45c181d4a2b56670af9cc0d6da055737b8d
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680533"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45722313"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Novidades do Visual C++ no Visual Studio 2017
 
@@ -394,8 +394,7 @@ O C++ é fornecido como um componente opcional para a carga de trabalho do Aplic
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>Novas opções para C++ na UWP (Plataforma Universal do Windows)
 Agora você tem novas opções para gravar e empacotar aplicativos do C++ para a Plataforma Universal do Windows e para a Windows Store: você pode usar a infraestrutura de Ponte de Desktop para empacotar o objeto COM ou aplicativo da área de trabalho existente para implantação por meio da Windows Store ou por meio dos canais existentes de sideload. Novos recursos no Windows 10 permitem que você adicione a funcionalidade UWP para seu aplicativo de área de trabalho de várias maneiras. Para saber mais, veja [Ponte de Desktop](/windows/uwp/porting/desktop-to-uwp-root).
 
-**Visual Studio 2017 versão 15.5**  
-Foi adicionado um modelo de projeto do **Projeto de Empacotamento de Aplicativo do Windows**, que simplifica muito o trabalho de empacotamento de aplicativos de área de trabalho usando a Ponte de Desktop. Ele está disponível em **Arquivo | Novo | Projeto | Instalado | Visual C++ | Plataforma Universal do Windows**. Para saber mais, veja [Empacotar um aplicativo usando o Visual Studio (Ponte de Desktop)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
+**Visual Studio 2017 versão 15.5**: foi adicionado um modelo de projeto do **Projeto de Empacotamento de Aplicativo do Windows**, que simplifica muito o trabalho de empacotamento de aplicativos de área de trabalho usando a Ponte de Desktop. Ele está disponível em **Arquivo | Novo | Projeto | Instalado | Visual C++ | Plataforma Universal do Windows**. Para saber mais, veja [Empacotar um aplicativo usando o Visual Studio (Ponte de Desktop)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 Ao escrever código novo, você pode usar a C++/WinRT, uma projeção de linguagem C++ padrão para o Windows Runtime implementada exclusivamente em arquivos de cabeçalho. Ela permite que você crie e consuma APIs de Windows Runtime usando qualquer compilador C++ em conformidade com os padrões. A C++/WinRT foi concebida para oferecer aos desenvolvedores em C++ um acesso de primeira classe à moderna API do Windows. Para obter mais informações, consulte [C++/WinRT disponível no GitHub](https://moderncpp.com/).
 

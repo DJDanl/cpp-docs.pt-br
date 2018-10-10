@@ -18,39 +18,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a3cf80e6237b21101f737f496eb39688ec6ed0a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 334bee129f7ec2515874cf228c6c549eb71fecfe
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32387171"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46038536"
 ---
 # <a name="overview-of-c-statements"></a>Visão geral de instruções C
-As instruções C consistem em tokens, expressões e outras instruções. Uma instrução que forma um componente de outra instrução chama-se o “corpo” da instrução pertinente. Cada tipo de instrução fornecido pela sintaxe a seguir será discutido nesta seção.  
-  
-## <a name="syntax"></a>Sintaxe  
- *statement*:  
- [labeled-statement](../c-language/goto-and-labeled-statements-c.md)  
-  
- [compound-statement](../c-language/compound-statement-c.md)  
-  
- [expression-statement](../c-language/expression-statement-c.md)  
-  
- [selection-statement](../c-language/if-statement-c.md)  
-  
- [iteration-statement](../c-language/do-while-statement-c.md)  
-  
- [jump-statement](../c-language/break-statement-c.md)  
-  
- [try-except-statement](../c-language/try-except-statement-c.md)  
-  
- /* Específico da Microsoft \*/[try-finally-statement](../c-language/try-finally-statement-c.md) /\* Específico da Microsoft \*/  
-  
- Geralmente, o corpo da instrução é uma “instrução composta”. Uma instrução composta consiste em outras instruções que podem incluir palavras-chave. A instrução compound é delimitada por chaves (**{ }**). Todas as outras instruções C terminam com ponto-e-vírgula (**;**). O ponto-e-vírgula é um terminador de instrução.  
-  
- A instrução da expressão contém a expressão C que pode conter operadores aritméticos ou lógicos introduzidos em [Expressões e atribuições](../c-language/expressions-and-assignments.md). A instrução null é uma instrução vazia.  
-  
- Qualquer instrução C pode começar com um rótulo de identificação que consiste em um nome e dois-pontos. Como apenas a instrução `goto` reconhece rótulos de instrução, os rótulos de instrução são explicados com `goto`. Consulte [as instruções goto e labeled](../c-language/goto-and-labeled-statements-c.md) para obter mais informações.  
-  
-## <a name="see-also"></a>Consulte também  
- [Instruções](../c-language/statements-c.md)
+
+As instruções C consistem em tokens, expressões e outras instruções. Uma instrução que forma um componente de outra instrução chama-se o “corpo” da instrução pertinente. Cada tipo de instrução fornecido pela sintaxe a seguir será discutido nesta seção.
+
+## <a name="syntax"></a>Sintaxe
+
+*statement*: [labeled-statement](../c-language/goto-and-labeled-statements-c.md)
+
+[compound-statement](../c-language/compound-statement-c.md)
+
+[expression-statement](../c-language/expression-statement-c.md)
+
+[selection-statement](../c-language/if-statement-c.md)
+
+[iteration-statement](../c-language/do-while-statement-c.md)
+
+[jump-statement](../c-language/break-statement-c.md)
+
+[try-except-statement](../c-language/try-except-statement-c.md)
+
+/* Específico da Microsoft \*/[try-finally-statement](../c-language/try-finally-statement-c.md) /\* Específico da Microsoft \*/
+
+Geralmente, o corpo da instrução é uma “instrução composta”. Uma instrução composta consiste em outras instruções que podem incluir palavras-chave. A instrução compound é delimitada por chaves (**{ }**). Todas as outras instruções C terminam com ponto-e-vírgula (**;**). O ponto-e-vírgula é um terminador de instrução.
+
+A instrução da expressão contém a expressão C que pode conter operadores aritméticos ou lógicos introduzidos em [Expressões e atribuições](../c-language/expressions-and-assignments.md). A instrução null é uma instrução vazia.
+
+Qualquer instrução C pode começar com um rótulo de identificação que consiste em um nome e dois-pontos. Como apenas a instrução `goto` reconhece rótulos de instrução, os rótulos de instrução são explicados com `goto`. Consulte [as instruções goto e labeled](../c-language/goto-and-labeled-statements-c.md) para obter mais informações.
+
+## <a name="see-also"></a>Consulte também
+
+[Instruções](../c-language/statements-c.md)

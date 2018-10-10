@@ -18,30 +18,32 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a86489e18220e674f48222ef1590b61d7c5defcf
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1e44ba6065658c085777ada39f75bd5fa1cdc2fb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716505"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382934"
 ---
 # <a name="advanced-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Caixa de diálogo Avançado, Ferramenta de Manifesto, Propriedades de Configuração, Páginas de Propriedades de &lt;Projectname&gt;
-Use essa caixa de diálogo para especificar opções avançadas para [Mt.exe](https://msdn.microsoft.com/library/aa375649).  
-  
- Para acessar essa caixa de diálogo da página de propriedades, abra as páginas de propriedades do projeto ou da folha de propriedades. Expanda o nó **Ferramenta de Manifesto** em **Propriedades de Configuração** e, em seguida, selecione **Avançado**.  
-  
+
+Use essa caixa de diálogo para especificar opções avançadas para [Mt.exe](https://msdn.microsoft.com/library/aa375649).
+
+Para acessar essa caixa de diálogo da página de propriedades, abra as páginas de propriedades do projeto ou da folha de propriedades. Expanda o nó **Ferramenta de Manifesto** em **Propriedades de Configuração** e, em seguida, selecione **Avançado**.
+
 ## <a name="uielement-list"></a>Lista UIElement
 
 - **Atualizar Hashes de Arquivo**
 
-   Usa a opção /hashupdate para especificar que a ferramenta de manifesto calculará o hash dos arquivos especificados em elementos `<file>` e, em seguida, atualizará os atributos de hash com o valor calculado.  
-  
+   Usa a opção /hashupdate para especificar que a ferramenta de manifesto calculará o hash dos arquivos especificados em elementos `<file>` e, em seguida, atualizará os atributos de hash com o valor calculado.
+
 - **Atualizar Caminho de Pesquisa de Hashes de Arquivo**
 
-   Especifica o caminho de pesquisa para arquivos referenciados em elementos `<file>`. Essa opção também usa a opção /hashupdate.  
-  
-## <a name="see-also"></a>Consulte também  
- [\<Elemento file>](/visualstudio/deployment/file-element-clickonce-application)   
- [Manifesto do aplicativo ClickOnce](/visualstudio/deployment/clickonce-application-manifest)   
- [Páginas de propriedades da Ferramenta de Manifesto](../ide/manifest-tool-property-pages.md)   
- [Trabalhando com Propriedades do Projeto](../ide/working-with-project-properties.md)   
+   Especifica o caminho de pesquisa para arquivos referenciados em elementos `<file>`. Essa opção também usa a opção /hashupdate.
+
+## <a name="see-also"></a>Consulte também
+
+[\<Elemento file>](/visualstudio/deployment/file-element-clickonce-application)<br>
+[Manifesto de aplicativo ClickOnce](/visualstudio/deployment/clickonce-application-manifest)<br>
+[Páginas de propriedades da ferramenta de manifesto](../ide/manifest-tool-property-pages.md)<br>
+[Trabalhando com Propriedades do Projeto](../ide/working-with-project-properties.md)
