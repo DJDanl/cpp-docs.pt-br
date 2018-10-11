@@ -1,35 +1,32 @@
 ---
 title: Visual C++ no Visual Studio | Microsoft Docs
+description: O Visual C++ é o nome do compilador do Microsoft C++, editor de código e ferramentas relacionadas no Visual Studio IDE. Use o Visual C++ para desenvolver programas para Windows, Linux, Android e iOS.
 ms.custom: ''
-ms.date: 08/22/2018
+ms.date: 09/26/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- unmanaged code, C++
-- development environment, Visual C++
-- unmanaged code
-- Visual C++
-- Visual C++, reference
+- Visual C++, home page
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6116a1b27595c6400edfcb79daafb362fb7aec5f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ae68abc0768c0a06526af6439a8a881684ecdb15
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684485"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821267"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ no Visual Studio
 
 > [!NOTE]  
 > Esta documentação para desenvolvedores aplica-se ao Visual Studio 2015 e ao Visual Studio 2017. 
 
-> Se você estiver procurando um pacote redistribuível do Visual C++ para executar um programa, acesse o [Centro de Download da Microsoft](http://www.microsoft.com/en-us/download/) e insira **Visual C++** na caixa de pesquisa.  
+> Se você estiver procurando um pacote redistribuível do Visual C++ para executar um programa, acesse o [Centro de Download da Microsoft](http://www.microsoft.com/download/) e insira **Visual C++** na caixa de pesquisa.  
   
 
 Microsoft Visual C++, geralmente abreviado para Visual C++ ou MSVC, é o nome para as bibliotecas e ferramentas de desenvolvimento de linguagem de assembly, C e C++ disponíveis como parte do Visual Studio no Windows. Essas ferramentas e bibliotecas permitem que você crie aplicativos da UWP (Plataforma Universal do Windows), aplicativos de servidor e área de trabalho Windows nativos, bibliotecas e aplicativos multiplataforma que são executados no Windows, Linux, Android e iOS, bem como bibliotecas e aplicativos que usam o .NET Framework. Você pode usar o Visual C++ escrever qualquer coisa, desde aplicativos de console simples até os aplicativos mais sofisticados e complexos para área de trabalho do Windows, de drivers de dispositivo e componentes do sistema operacional até jogos multiplataforma para dispositivos móveis e dos menores dispositivos IoT até computação de alto desempenho multisservidor na nuvem do Azure.
@@ -81,10 +78,20 @@ Informações sobre exemplos.
 
 ## <a name="c-development-tools"></a>Ferramentas de desenvolvimento do C++
 
-[IDE e ferramentas de desenvolvimento](ide/ide-and-tools-for-visual-cpp-development.md).
-Como usar o IDE do Visual Studio para criar projetos, trabalhar com arquivos de código-fonte, vincular a bibliotecas, compilar, depurar, criar testes de unidade, fazer análise estática, implantar e muito mais.
+[IDE e ferramentas de desenvolvimento](ide/ide-and-tools-for-visual-cpp-development.md)<br/>
+Como usar o IDE do Visual Studio para criar projetos, editar código, vincular a bibliotecas, compilar, depurar, criar testes de unidade, fazer análise estática, implantar e muito mais.
 
-[Compiladores e ferramentas de build](build/building-c-cpp-programs.md) Opções de compilador e vinculador C++ da Microsoft, mensagens de erro, exemplos de linha de comando, configuração para diferentes plataformas e tópicos de referência de build. 
+[Compiladores e ferramentas de build](build/building-c-cpp-programs.md)<br/>
+Opções de compilador e vinculador C++ da Microsoft, mensagens de erro, exemplos de linha de comando, configuração para diferentes plataformas e tópicos de referência de build.
+
+[Depurando código nativo](/visualstudio/debugger/debugging-native-code)<br/>
+Use o depurador do Visual Studio com projetos C++.
+
+[Análise de código para visão geral do C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+Use anotações de SAL ou os verificadores das Diretrizes Principais do C++ para executar análise estática.
+
+[Gravar testes de unidade para C/C++ no Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
+Crie testes de unidade usando a Estrutura de Teste de Unidade da Microsoft para C++, Google Test, Boost.Test ou CTest.
 
 ## <a name="write-applications-in-c"></a>Escrever aplicativos em C++
 
@@ -94,9 +101,11 @@ Encontre guias e conteúdo de referência no Centro de Desenvolvedores do Window
 [Aplicativos da área de trabalho (C++)](windows/desktop-applications-visual-cpp.md)<br/>
 Saiba como criar aplicativos da área de trabalho tradicionais, nativos, em C++ para Windows.
 
-[Programação no .NET com C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md) Saiba como criar DLLs que permitem a interoperabilidade entre programas nativos em C++ e no .NET escritos em linguagens como C# ou Visual Basic.
+[Programação do .NET com C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+Saiba como criar DLLs que permitem a interoperabilidade entre programas nativos em C++ e no .NET escritos em linguagens como C# ou Visual Basic.
 
-[Programação para Linux](linux/index.md) Use o IDE do Visual Studio para codificar e implantar em um computador Linux remoto para compilação com GCC.
+[Programação para Linux](linux/index.md)<br/>
+Use o Visual Studio IDE para codificar e implantar em um computador Linux remoto para compilação com GCC.
 
 [DLLs no Visual C++](build/dlls-in-visual-cpp.md)<br/>
 Descubra como usar o Win32, o ATL e o MFC para criar DLLs de área de trabalho do Windows e fornece informações sobre como compilar e registrar sua DLL.
@@ -116,11 +125,15 @@ Conecte-se a bancos de dados usando ODBC e outras tecnologias de acesso de banco
 [Texto e cadeias de caracteres](text/text-and-strings-in-visual-cpp.md)<br/>
 Saiba mais sobre como trabalhar com formatos e codificações diferentes de texto e de cadeia de caracteres para desenvolvimento local e internacional.
 
-## <a name="c-language-reference"></a>Referência da linguagem C++
+## <a name="languages-reference"></a>Referência de linguagens
 
-Para obter mais informações sobre a linguagem C++, consulte [Referência da linguagem C++](cpp/cpp-language-reference.md).
+[Referência da linguagem C++](cpp/cpp-language-reference.md)
 
-Para obter informações sobre o pré-processador C++, consulte [Referência de pré-processador C/C++](preprocessor/c-cpp-preprocessor-reference.md).
+[Referência de pré-processador do C/C++](preprocessor/c-cpp-preprocessor-reference.md)
+
+[Referência da linguagem C](c-language/c-language-reference.md)
+
+[Intrínsecos do compilador e linguagem assembly](intrinsics/compiler-intrinsics-and-assembly-language.md)
 
 ## <a name="c-libraries-in-visual-studio"></a>Bibliotecas do C++ no Visual Studio
 
