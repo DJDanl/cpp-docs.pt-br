@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3461c4965dd40d0aecc7515185592a13f30c08c9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4014d0d7cea999c105a5ee513d9dd1be410546f4
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422994"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084068"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Criando operações assíncronas em C++ para aplicativos UWP
 
@@ -113,7 +113,7 @@ Adicione o seguinte código para o arquivo de origem C++ gerado (Este exemplo re
 
 [!code-cpp[concrt-windowsstore-primes#2](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_3.cpp)]
 
-Cada método primeiro executa validação para garantir que os parâmetros de entrada sejam não-negativo. Se um valor de entrada for negativo, o método gerará [Platform:: invalidargumentexception](https://msdn.microsoft.com/library/windows/apps/hh755794\(v=vs.110\).aspx). Tratamento de erros é explicado mais adiante nesta seção.
+Cada método primeiro executa validação para garantir que os parâmetros de entrada sejam não-negativo. Se um valor de entrada for negativo, o método gerará [Platform:: invalidargumentexception](https://msdn.microsoft.com/library/windows/apps/hh755794.aspx). Tratamento de erros é explicado mais adiante nesta seção.
 
 Para consumir esses métodos de um aplicativo UWP, use o Visual c# **aplicativo em branco (XAML)** modelo para adicionar um segundo projeto à solução do Visual Studio. Este exemplo denomina o projeto `Primes`. Em seguida, na `Primes` do projeto, adicione uma referência para o `PrimesLibrary` projeto.
 
@@ -136,7 +136,7 @@ A ilustração a seguir mostra o `Primes` aplicativo depois de cada opção foi 
 
 ![Aplicativo de números primos de tempo de execução do Windows](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")
 
-Para obter exemplos que usam `create_async` para criar tarefas assíncronas que podem ser consumidas por outros idiomas, consulte [usando o C++ no exemplo Bing Maps Trip Optimizer](https://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx) e [operações assíncronas do Windows 8 em C++ com PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
+Para obter exemplos que usam `create_async` para criar tarefas assíncronas que podem ser consumidas por outros idiomas, consulte [usando o C++ no exemplo Bing Maps Trip Optimizer](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) e [operações assíncronas do Windows 8 em C++ com PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
 
 ##  <a name="exethread"></a> Controlando o Thread de execução
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf350b0a129c642678fc6af1bac7d35633fe909
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: b650c2a20d18f3f638f924cce1e4b475f7e33a0d
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860973"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084055"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -67,7 +67,7 @@ Para localizar os nomes decorados produzidos pelo compilador, use o [DUMPBIN](..
 
 Você pode usar \@ *ordinal* para especificar que um número e não o nome da função, entra em tabela de exportação da DLL. Muitos DLLs do Windows exportam ordinais para dar suporte a código legado. Era comum usar ordinais em código do Windows de 16 bits, pois isso podia ajudar a minimizar o tamanho de um DLL. Não recomendamos exportar funções por ordinais, a menos que os clientes DLL precisem disso para suporte legado. Como o arquivo .LIB conterá o mapeamento entre o ordinal e a função, é possível usar o nome da função como normalmente se faria em projetos que usam o DLL.
 
-Com o uso opcional **NONAME** palavra-chave, você pode exportar apenas por ordinal e reduzir o tamanho da tabela de exportação no DLL resultante. No entanto, se você quiser usar [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) no DLL, você deve conhecer o ordinal porque o nome não será válido.
+Com o uso opcional **NONAME** palavra-chave, você pode exportar apenas por ordinal e reduzir o tamanho da tabela de exportação no DLL resultante. No entanto, se você quiser usar [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) no DLL, você deve conhecer o ordinal porque o nome não será válido.
 
 A palavra-chave opcional **PRIVADOS** impede *Nome_da_entrada* sejam incluídos na biblioteca de importação gerada por LINK. Não afeta a exportação na imagem também gerada por LINK.
 

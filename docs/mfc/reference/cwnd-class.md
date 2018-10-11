@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cbe2269bfe4a67ba4e8c6952980216fce92165f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bd35c0879896ca7edfd6524c31a86765bbcce219
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448604"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084185"
 ---
 # <a name="cwnd-class"></a>Classe CWnd
 
@@ -1662,7 +1662,7 @@ void BringWindowToTop();
 
 Além disso, `BringWindowToTop` ativa janelas filho MDI, pop-up e de nível superior. A função membro `BringWindowToTop` deve ser usada para descobrir qualquer janela que esteja parcial ou completamente obscurecida por qualquer janela sobreposta.
 
-Essa função apenas chama o Win32 [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673\(v=vs.85\).aspx) função. Chame o [SetWindowPos](#setwindowpos) função para alterar a posição de uma janela na ordem Z. A função `BringWindowToTop` não altera o estilo da janela para torná-la uma janela de nível superior. Para obter mais informações, consulte [qual é a diferença entre HWND_TOP e HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
+Essa função apenas chama o Win32 [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673) função. Chame o [SetWindowPos](#setwindowpos) função para alterar a posição de uma janela na ordem Z. A função `BringWindowToTop` não altera o estilo da janela para torná-la uma janela de nível superior. Para obter mais informações, consulte [qual é a diferença entre HWND_TOP e HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
 
 ### <a name="example"></a>Exemplo
 

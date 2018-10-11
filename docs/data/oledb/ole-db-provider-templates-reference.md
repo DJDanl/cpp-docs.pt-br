@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3bafe1aa7197ef037bdd54b7215173866e8c15d3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8ede88e44c957ae34e9bb9c3f451e0f058310346
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039147"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083548"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Referência dos modelos de provedor de banco de dados OLE
 
@@ -63,7 +63,7 @@ Implementa o `IDBSchemaRowset` interface e a função de criador de modelos `Cre
 Abre e retorna um conjunto de linhas que inclui todas as linhas de uma única tabela base ou índice. Interface obrigatória para um objeto de sessão.  
   
 [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)<br/>
-Implementa o OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) interface, que permite atualização dos valores de colunas em linhas existentes, a exclusão de linhas e inserindo novas linhas.  
+Implementa o OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790) interface, que permite atualização dos valores de colunas em linhas existentes, a exclusão de linhas e inserindo novas linhas.  
   
 [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)<br/>
 Essa classe herda de [IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) e substitui [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite). `IRowsetCreatorImpl` executa as mesmas funções como `IObjectWithSite` , mas também permite que as propriedades de OLE DB `DBPROPCANSCROLLBACKWARDS` e `DBPROPCANFETCHBACKWARDS`.  
@@ -78,13 +78,13 @@ Fornece uma implementação do `IRowset` interface, que é a interface de conjun
 Implementa as propriedades do conjunto de linhas usando a propriedade conjunto definido em sua classe de comando de mapa. Interface obrigatória em conjuntos de linhas.  
   
 [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)<br/>
-Implementa o OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190\(v=vs.85\)) interface, que busca linhas arbitrárias em um conjunto de linhas. Para dar suporte a indicadores de OLE DB em um conjunto de linhas, verifique o conjunto de linhas herdam dessa classe.  
+Implementa o OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190) interface, que busca linhas arbitrárias em um conjunto de linhas. Para dar suporte a indicadores de OLE DB em um conjunto de linhas, verifique o conjunto de linhas herdam dessa classe.  
   
 [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)<br/>
-Implementa funções para informar ouvintes no ponto de conexão de difusão `IID_IRowsetNotify` de alterações no conteúdo do conjunto de linhas. Os consumidores que lidar com notificações implementam [IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\)) e registrá-lo no ponto de conexão.  
+Implementa funções para informar ouvintes no ponto de conexão de difusão `IID_IRowsetNotify` de alterações no conteúdo do conjunto de linhas. Os consumidores que lidar com notificações implementam [IRowsetNotify](/previous-versions/windows/desktop/ms712959) e registrá-lo no ponto de conexão.  
   
 [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)<br/>
-Implementa o OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\)) interface, que permite que os consumidores atrasar a transmissão das alterações feitas com [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) para os dados de origem e desfazer as alterações antes da transmissão.  
+Implementa o OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401) interface, que permite que os consumidores atrasar a transmissão das alterações feitas com [IRowsetChange](/previous-versions/windows/desktop/ms715790) para os dados de origem e desfazer as alterações antes da transmissão.  
   
 ## <a name="command-classes"></a>Classes de comando  
 
@@ -120,7 +120,7 @@ Implementa as propriedades para uma variedade de interfaces de propriedade do OL
   
 [IErrorRecordsImpl](../../data/oledb/ierrorrecordsimpl-class.md)  
   
-Implementa o OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) interface, adicionar registros a e recuperar registros de um membro de dados.  
+Implementa o OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112) interface, adicionar registros a e recuperar registros de um membro de dados.  
   
 ## <a name="see-also"></a>Consulte também  
 

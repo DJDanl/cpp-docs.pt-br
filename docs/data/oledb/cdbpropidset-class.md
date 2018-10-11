@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9619ffdf9fd24bd73548fb3992084eb0a5d437a7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 514a013cf3f327c0c73ca8469900693d6a4e5e21
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114469"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084029"
 ---
 # <a name="cdbpropidset-class"></a>Classe CDBPropIDSet
 
@@ -83,7 +83,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
   
 ## <a name="remarks"></a>Comentários  
 
-OLE DB que os consumidores usam `DBPROPIDSET` estruturas para passar uma matriz de IDs de propriedade para a qual o consumidor deseja obter informações de propriedade. As propriedades identificadas em uma única [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) estrutura pertencem ao conjunto de uma propriedade.  
+OLE DB que os consumidores usam `DBPROPIDSET` estruturas para passar uma matriz de IDs de propriedade para a qual o consumidor deseja obter informações de propriedade. As propriedades identificadas em uma única [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) estrutura pertencem ao conjunto de uma propriedade.  
 
 ## <a name="addpropertyid"></a> Cdbpropidset:: Addpropertyid
 
@@ -102,7 +102,7 @@ bool AddPropertyID(DBPROPID propid) throw();
 
 ## <a name="cdbpropidset"></a> Cdbpropidset:: Cdbpropidset
 
-O construtor. Inicializa o `rgProperties`, `cProperties`e (opcionalmente) `guidPropertySet` campos dos [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) estrutura.  
+O construtor. Inicializa o `rgProperties`, `cProperties`e (opcionalmente) `guidPropertySet` campos dos [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) estrutura.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -135,7 +135,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>Parâmetros  
 
 *guid*<br/>
-[in] Um GUID usado para definir a `guidPropertySet` campo do [DBPROPIDSET](/previous-versions/windows/desktop/ms717981\(v=vs.85\)) estrutura.  
+[in] Um GUID usado para definir a `guidPropertySet` campo do [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) estrutura.  
   
 ### <a name="remarks"></a>Comentários  
 

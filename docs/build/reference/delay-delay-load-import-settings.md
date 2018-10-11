@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ce585f9dc8439a02a2883229e8d9ec006c29c24
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 086fab7d1d50f96ab05c38f2e6d524d7ff344e02
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717685"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081910"
 ---
 # <a name="delay-delay-load-import-settings"></a>/DELAY (configurações da importação de carga com atraso)
 
@@ -46,7 +46,7 @@ A opção /DELAY controla [carregamento atrasado](../../build/reference/linker-s
 
 - O qualificador NOBIND pede para o vinculador não incluir uma IAT associável na imagem final. O padrão é criar a IAT associável para DLLs carregadas com atraso. A imagem resultante não pode ser associada estaticamente. (As imagens com IATs associáveis podem ser associadas estaticamente antes da execução.) Ver [/BIND](../../build/reference/bind.md).
 
-   Se a DLL estiver associada, a função auxiliar tentará usar as informações associadas em vez de chamar [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) em cada um das importações mencionadas. Se o carimbo de data/hora ou o endereço preferido não corresponder aos da DLL carregada, a função auxiliar considerará que a IAT associada está desatualizada e continuará como se a IAT associada não existisse.
+   Se a DLL estiver associada, a função auxiliar tentará usar as informações associadas em vez de chamar [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) em cada um das importações mencionadas. Se o carimbo de data/hora ou o endereço preferido não corresponder aos da DLL carregada, a função auxiliar considerará que a IAT associada está desatualizada e continuará como se a IAT associada não existisse.
 
    NOBIND aumenta a imagem do programa, mas pode agilizar o tempo de carregamento da DLL. Se você jamais teve a intenção associar a DLL, NOBIND evitará a geração da IAT associada.
 

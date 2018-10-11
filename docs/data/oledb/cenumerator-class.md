@@ -33,16 +33,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 22f4aee2ac7cbefee19a33d929ec80b319b537d4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6f85fafe213fa7e53f67fb6a3035f415235c8794
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117472"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082443"
 ---
 # <a name="cenumerator-class"></a>Classe CEnumerator
 
-Usa um objeto de enumerador OLE DB que expõe o [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) interface para retornar um conjunto de linhas que descrevem todas as fontes de dados e enumeradores.  
+Usa um objeto de enumerador OLE DB que expõe o [ISourcesRowset](/previous-versions/windows/desktop/ms715969) interface para retornar um conjunto de linhas que descrevem todas as fontes de dados e enumeradores.  
   
 ## <a name="syntax"></a>Sintaxe
 
@@ -90,7 +90,7 @@ bool Find(TCHAR* szSearchName) throw();
   
 ### <a name="remarks"></a>Comentários  
 
-Esse nome é mapeado para o `SOURCES_NAME` membro a [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) interface.  
+Esse nome é mapeado para o `SOURCES_NAME` membro a [ISourcesRowset](/previous-versions/windows/desktop/ms715969) interface.  
   
 ## <a name="getmoniker"></a> Cenumerator:: Getmoniker
 
@@ -119,7 +119,7 @@ Um HRESULT padrão.
 
 ## <a name="open"></a> Cenumerator:: Open
 
-Associa o identificador de origem para o enumerador, se for especificado, então recupera o conjunto de linhas para o enumerador chamando [ISourcesRowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)).  
+Associa o identificador de origem para o enumerador, se for especificado, então recupera o conjunto de linhas para o enumerador chamando [ISourcesRowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200).  
   
 ### <a name="syntax"></a>Sintaxe  
   

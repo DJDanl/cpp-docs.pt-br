@@ -25,16 +25,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9ecc830937e36e213177205549ee4dd4e989e0ed
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0101f0d32ebf5fa5a46d735f64fea03b7e5208da
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118694"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082573"
 ---
 # <a name="igetdatasourceimpl-class"></a>Classe IGetDataSourceImpl
 
-Fornece uma implementação de [IGetDataSource](/previous-versions/windows/desktop/ms709721\(v=vs.85\)) objeto.  
+Fornece uma implementação de [IGetDataSource](/previous-versions/windows/desktop/ms709721) objeto.  
   
 ## <a name="syntax"></a>Sintaxe
 
@@ -77,7 +77,7 @@ STDMETHOD(GetDataSource)(REFIID riid,
   
 #### <a name="parameters"></a>Parâmetros  
 
-Ver [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443\(v=vs.85\)) na *referência do programador do OLE DB*.  
+Ver [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443) na *referência do programador do OLE DB*.  
   
 ### <a name="remarks"></a>Comentários  
 

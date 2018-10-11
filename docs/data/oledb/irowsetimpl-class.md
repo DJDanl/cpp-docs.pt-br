@@ -102,12 +102,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 17e353f044a3b003736589f52c538101e18fd7ea
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b495a756cbccc88f00c42dc8de78bf80a39f4b7a
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085544"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083354"
 ---
 # <a name="irowsetimpl-class"></a>Classe IRowsetImpl
 
@@ -173,7 +173,7 @@ Unidade de armazenamento para todos os identificadores de linha mantidos pelo pr
   
 ## <a name="remarks"></a>Comentários  
 
-[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\)) é a interface de conjunto de linhas de base.  
+[IRowset](/previous-versions/windows/desktop/ms720986) é a interface de conjunto de linhas de base.  
 
 ## <a name="addrefrows"></a> Irowsetimpl:: Addrefrows
 
@@ -190,7 +190,7 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>Parâmetros  
 
-Ver [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) na *referência do programador do OLE DB*.  
+Ver [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) na *referência do programador do OLE DB*.  
 
 ## <a name="createrow"></a> Irowsetimpl:: Createrow
 
@@ -233,7 +233,7 @@ STDMETHOD(GetData )(HROW hRow,
   
 #### <a name="parameters"></a>Parâmetros  
 
-Ver [IRowset:: GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) na *referência do programador do OLE DB*.  
+Ver [IRowset:: GetData](/previous-versions/windows/desktop/ms716988) na *referência do programador do OLE DB*.  
   
 Alguns parâmetros correspondem aos *referência do programador DB OLE* parâmetros de nomes diferentes, que são descritos em `IRowset::GetData`:  
   
@@ -266,7 +266,7 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
   
 ### <a name="return-value"></a>Valor de retorno  
 
-O [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) sinalizadores para a coluna. 
+O [DBSTATUS](/previous-versions/windows/desktop/ms722617) sinalizadores para a coluna. 
 
 ## <a name="getnextrows"></a> Irowsetimpl:: GetNextRows
 
@@ -284,7 +284,7 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
   
 #### <a name="parameters"></a>Parâmetros  
 
-Ver [GetNextRows](/previous-versions/windows/desktop/ms709827\(v=vs.85\)) na *referência do programador do OLE DB*. 
+Ver [GetNextRows](/previous-versions/windows/desktop/ms709827) na *referência do programador do OLE DB*. 
 
 ## <a name="irowsetimpl"></a> Irowsetimpl:: Irowsetimpl
 
@@ -316,7 +316,7 @@ HRESULT RefRows(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>Parâmetros  
 
-Ver [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) na *referência do programador do OLE DB*.  
+Ver [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) na *referência do programador do OLE DB*.  
   
 ### <a name="return-value"></a>Valor de retorno  
 
@@ -338,7 +338,7 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>Parâmetros  
 
-Ver [IRowset:: Releaserows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) na *referência do programador do OLE DB*.  
+Ver [IRowset:: Releaserows](/previous-versions/windows/desktop/ms719771) na *referência do programador do OLE DB*.  
 
 ## <a name="restartposition"></a> Irowsetimpl:: RestartPosition
 
@@ -352,7 +352,7 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
   
 #### <a name="parameters"></a>Parâmetros  
 
-Ver [:: RestartPosition](/previous-versions/windows/desktop/ms712877\(v=vs.85\)) na *referência do programador do OLE DB*.  
+Ver [:: RestartPosition](/previous-versions/windows/desktop/ms712877) na *referência do programador do OLE DB*.  
   
 ### <a name="remarks"></a>Comentários  
 
@@ -373,7 +373,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 #### <a name="parameters"></a>Parâmetros  
 
 *statusFlags*<br/>
-O [DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) sinalizadores a serem definidos para a coluna.  
+O [DBSTATUS](/previous-versions/windows/desktop/ms722617) sinalizadores a serem definidos para a coluna.  
   
 *currentRow*<br/>
 A linha atual.  

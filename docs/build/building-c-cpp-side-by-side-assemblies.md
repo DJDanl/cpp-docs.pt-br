@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e3c80b383c592d3eebf892981c088e26529c515
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 93e02ee27fb8b5a1f4f4f7b2e435a737e1c637a2
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860934"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083834"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Compilando assemblies lado a lado do C/C++
 
@@ -30,7 +30,7 @@ Um aplicativo Visual C++ pode usar uma ou várias DLLs em diferentes partes do a
 Por padrão, quando uma DLL é compilada com o Visual Studio, ele tem um [manifesto do aplicativo](/windows/desktop/SbsCs/application-manifests) incorporado como um recurso RT_MANIFEST com ID igual a 2. Assim como um executável, esse manifesto descreve as dependências dessa DLL em outros assemblies. Isso pressupõe que a DLL não faz parte de um assembly lado a lado e aplicativos que dependem dessa DLL não pretende usar um manifesto de aplicativo para carregá-lo, mas em vez disso, contar o carregador do sistema operacional para encontrar essa DLL no caminho do sistema.
 
 > [!NOTE]
-> É importante para uma DLL que usa um manifesto de aplicativo para ter o manifesto inserido como um recurso com ID igual a 2. Se a DLL é carregada dinamicamente em tempo de execução (por exemplo, usando o [LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175) função), o carregador do sistema operacional carrega assemblies dependentes especificados no manifesto da DLL. Um manifesto de aplicativo externo para DLLs não é verificado durante um `LoadLibrary` chamar. Se o manifesto não for inserido, o carregador pode tentar carregar versões incorretas de assemblies ou não conseguir localizar para localizar assemblies de dependentes.
+> É importante para uma DLL que usa um manifesto de aplicativo para ter o manifesto inserido como um recurso com ID igual a 2. Se a DLL é carregada dinamicamente em tempo de execução (por exemplo, usando o [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) função), o carregador do sistema operacional carrega assemblies dependentes especificados no manifesto da DLL. Um manifesto de aplicativo externo para DLLs não é verificado durante um `LoadLibrary` chamar. Se o manifesto não for inserido, o carregador pode tentar carregar versões incorretas de assemblies ou não conseguir localizar para localizar assemblies de dependentes.
 
 Um ou vários relacionados a DLLs podem ser reempacotadas em um assembly lado a lado com um correspondente [manifesto do assembly](/windows/desktop/SbsCs/assembly-manifests), que descreve quais arquivos formam o assembly, bem como a dependência do assembly no outra lado a lado assemblies.
 

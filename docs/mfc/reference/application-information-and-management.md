@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64e92eaca38743f0bc9de31f9be7684271c4674
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9783da47a22260f0edbe5ddf6d8f5021aae31e5c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374341"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083795"
 ---
 # <a name="application-information-and-management"></a>Informações e gerenciamento do aplicativo
 
@@ -591,7 +591,7 @@ Se a função for bem-sucedida, o valor de retorno é um identificador para o m�
 
 ### <a name="remarks"></a>Comentários
 
-Ele retorna um identificador que pode ser usado em [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) para obter o endereço de uma função DLL. `AfxLoadLibrary` também pode ser usado para mapear a outros módulos executáveis.
+Ele retorna um identificador que pode ser usado em [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) para obter o endereço de uma função DLL. `AfxLoadLibrary` também pode ser usado para mapear a outros módulos executáveis.
 
 Cada processo mantém uma contagem de referência para cada módulo carregado de biblioteca. Essa contagem de referência é incrementada toda vez `AfxLoadLibrary` é chamado e é decrementado sempre `AfxFreeLibrary` é chamado. Quando a contagem de referência atinge zero, o módulo não estiver mapeado do espaço de endereço do processo de chamada e o identificador não é válido.
 

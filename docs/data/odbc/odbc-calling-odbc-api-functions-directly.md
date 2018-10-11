@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 24701e2bab154f0815408f4e2e3e37e56ad6d823
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5e5972eab67e19752700ac5f8a027288eb6fc43c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092514"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083678"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: chamando funções de API ODBC diretamente
 
@@ -49,7 +49,7 @@ Para chamar uma função de API ODBC diretamente, você deve levar as mesmas eta
   
 - Desalocar o armazenamento ao concluir.  
   
-Para obter mais informações sobre essas etapas, consulte a [conectividade aberta de banco de dados (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) SDK na documentação do MSDN.  
+Para obter mais informações sobre essas etapas, consulte a [conectividade aberta de banco de dados (ODBC)](/previous-versions/windows/desktop/ms710252) SDK na documentação do MSDN.  
   
 Além dessas etapas, você precisa executar etapas adicionais para verificar os valores de retorno de função, certifique-se de que seu programa não está aguardando uma chamada assíncrona para concluir e assim por diante. Você pode simplificar essas últimas etapas, usando as macros AFX_SQL_ASYNC e AFX_SQL_SYNC. Para obter mais informações, consulte [Macros e globais](../../mfc/reference/mfc-macros-and-globals.md) na *referência da MFC*.  
 

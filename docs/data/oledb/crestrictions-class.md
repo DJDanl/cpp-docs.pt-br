@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c66200acab5fc1be509136fc45895fdf08e40fdb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2e850b5ebad231b07ce7d6c7dca79126a9b2ba15
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46072054"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082352"
 ---
 # <a name="crestrictions-class"></a>Classe CRestrictions
 
@@ -103,7 +103,7 @@ Um dos valores HRESULT padrão.
 
 Você pode especificar um máximo de sete restrições em um conjunto de linhas de esquema.  
   
-Ver [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) para obter informações sobre as restrições definidas em cada conjunto de linhas de esquema.  
+Ver [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) para obter informações sobre as restrições definidas em cada conjunto de linhas de esquema.  
   
 ## <a name="see-also"></a>Consulte também  
 

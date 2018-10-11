@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54e4ab00a0d0df90601d06d9e2ffa100d82d4c03
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dee59f5e86cddeec47da47c648b0cf12789cc85a
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037353"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084094"
 ---
 # <a name="composite-control-global-functions"></a>Funções globais de controle de composição
 
@@ -81,7 +81,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in] Identifica uma instância do módulo cujo arquivo executável contém o modelo de caixa de diálogo.
 
 *lpTemplateName*<br/>
-[in] Identifica o modelo de caixa de diálogo. Esse parâmetro é o ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do modelo de caixa de diálogo ou um valor inteiro que especifica o identificador de recurso do modelo de caixa de diálogo. Se o parâmetro especifica um identificador de recurso, sua palavra de ordem superior deve ser zero e a palavra de ordem inferior deve conter o identificador. Você pode usar o [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) macro para criar esse valor.
+[in] Identifica o modelo de caixa de diálogo. Esse parâmetro é o ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do modelo de caixa de diálogo ou um valor inteiro que especifica o identificador de recurso do modelo de caixa de diálogo. Se o parâmetro especifica um identificador de recurso, sua palavra de ordem superior deve ser zero e a palavra de ordem inferior deve conter o identificador. Você pode usar o [MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) macro para criar esse valor.
 
 *hWndParent*<br/>
 [in] Identifica a janela que possui a caixa de diálogo.
@@ -128,7 +128,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in] Identifica uma instância do módulo cujo arquivo executável contém o modelo de caixa de diálogo.
 
 *lpTemplateName*<br/>
-[in] Identifica o modelo de caixa de diálogo. Esse parâmetro é o ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do modelo de caixa de diálogo ou um valor inteiro que especifica o identificador de recurso do modelo de caixa de diálogo. Se o parâmetro especifica um identificador de recurso, sua palavra de ordem superior deve ser zero e a palavra de ordem inferior deve conter o identificador. Você pode usar o [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) macro para criar esse valor.
+[in] Identifica o modelo de caixa de diálogo. Esse parâmetro é o ponteiro para uma cadeia de caracteres terminada em nulo que especifica o nome do modelo de caixa de diálogo ou um valor inteiro que especifica o identificador de recurso do modelo de caixa de diálogo. Se o parâmetro especifica um identificador de recurso, sua palavra de ordem superior deve ser zero e a palavra de ordem inferior deve conter o identificador. Você pode usar o [MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) macro para criar esse valor.
 
 *hWndParent*<br/>
 [in] Identifica a janela que possui a caixa de diálogo.

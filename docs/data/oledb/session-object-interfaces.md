@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e8c641cc543f213b6c81950c22b97f25b31d6c4e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 957fe69b413496af46aa8e19afd45ee41e58b490
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057322"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081767"
 ---
 # <a name="session-object-interfaces"></a>Interfaces de objeto da sessão
 
@@ -32,24 +32,24 @@ A tabela a seguir mostra as interfaces obrigatórias e opcionais definidas por O
   
 |Interface|Necessário?|Implementado por modelos OLE DB?|  
 |---------------|---------------|--------------------------------------|  
-|[IGetDataSource](/previous-versions/windows/desktop/ms709721\(v=vs.85\))|Obrigatório|Sim|  
-|[IOpenRowset](/previous-versions/windows/desktop/ms716946\(v=vs.85\))|Obrigatório|Sim|  
-|[ISessionProperties](/previous-versions/windows/desktop/ms713721\(v=vs.85\))|Obrigatório|Sim|  
-|[IAlterIndex](/previous-versions/windows/desktop/ms714943\(v=vs.85\))|Opcional|Não|  
-|[IAlterTable](/previous-versions/windows/desktop/ms719764\(v=vs.85\))|Opcional|Não|  
-|[IBindResource](/previous-versions/windows/desktop/ms714936\(v=vs.85\))|Opcional|Não|  
-|[ICreateRow](/previous-versions/windows/desktop/ms716832\(v=vs.85\))|Opcional|Não|  
-|[IDBCreateCommand](/previous-versions/windows/desktop/ms711625\(v=vs.85\))|Opcional|Sim|  
-|[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))|Opcional|Sim|  
-|[IIndexDefinition](/previous-versions/windows/desktop/ms711593\(v=vs.85\))|Opcional|Não|  
-|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Opcional|Sim|  
-|[ITableCreation](/previous-versions/windows/desktop/ms713639\(v=vs.85\))|Opcional|Não|  
-|[ITableDefinition](/previous-versions/windows/desktop/ms714277\(v=vs.85\))|Opcional|Não|  
-|[ITableDefinitionWithConstraints](/previous-versions/windows/desktop/ms720947\(v=vs.85\))|Opcional|Não|  
-|[ITransaction](/previous-versions/windows/desktop/ms723053\(v=vs.85\))|Opcional|Não|  
-|[ITransactionJoin](/previous-versions/windows/desktop/ms718071\(v=vs.85\))|Opcional|Não|  
-|[ITransactionLocal](/previous-versions/windows/desktop/ms714893\(v=vs.85\))|Opcional|Não|  
-|[ITransactionObject](/previous-versions/windows/desktop/ms713659\(v=vs.85\))|Opcional|Não|  
+|[IGetDataSource](/previous-versions/windows/desktop/ms709721)|Obrigatório|Sim|  
+|[IOpenRowset](/previous-versions/windows/desktop/ms716946)|Obrigatório|Sim|  
+|[ISessionProperties](/previous-versions/windows/desktop/ms713721)|Obrigatório|Sim|  
+|[IAlterIndex](/previous-versions/windows/desktop/ms714943)|Opcional|Não|  
+|[IAlterTable](/previous-versions/windows/desktop/ms719764)|Opcional|Não|  
+|[IBindResource](/previous-versions/windows/desktop/ms714936)|Opcional|Não|  
+|[ICreateRow](/previous-versions/windows/desktop/ms716832)|Opcional|Não|  
+|[IDBCreateCommand](/previous-versions/windows/desktop/ms711625)|Opcional|Sim|  
+|[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686)|Opcional|Sim|  
+|[IIndexDefinition](/previous-versions/windows/desktop/ms711593)|Opcional|Não|  
+|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816)|Opcional|Sim|  
+|[ITableCreation](/previous-versions/windows/desktop/ms713639)|Opcional|Não|  
+|[ITableDefinition](/previous-versions/windows/desktop/ms714277)|Opcional|Não|  
+|[ITableDefinitionWithConstraints](/previous-versions/windows/desktop/ms720947)|Opcional|Não|  
+|[ITransaction](/previous-versions/windows/desktop/ms723053)|Opcional|Não|  
+|[ITransactionJoin](/previous-versions/windows/desktop/ms718071)|Opcional|Não|  
+|[ITransactionLocal](/previous-versions/windows/desktop/ms714893)|Opcional|Não|  
+|[ITransactionObject](/previous-versions/windows/desktop/ms713659)|Opcional|Não|  
   
 O objeto de sessão cria um objeto de conjunto de linhas. Se o provedor oferece suporte a comandos, a sessão também cria um objeto de comando (`CCommand`, a implementação do OLE DB `TCommand`). O objeto de comando implementa a `ICommand` interface e usa o `ICommand::Execute` método para executar comandos no conjunto de linhas, conforme mostrado na figura a seguir.  
   

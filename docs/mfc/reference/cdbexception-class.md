@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b860084b12f285effff7cf3c8fc74409a9baf4a3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c34c70f1bca3091ba078846b7b94ad947d5f31cb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389525"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083106"
 ---
 # <a name="cdbexception-class"></a>Classe CDBException
 
@@ -142,7 +142,7 @@ Contém uma cadeia de caracteres que descreve o erro que causou a exceção.
 
 A cadeia de caracteres é do formulário "estado: % s, nativo: % ld, origem: % s", em que os códigos de formatação, em ordem, são substituídos pelos valores que descrevem:
 
-- O SQLSTATE retornado de uma cadeia de caracteres terminada em nulo que contém um código de erro de cinco caracteres na *szSqlState* parâmetro da função ODBC `SQLError`. Valores SQLSTATE são listados no Apêndice A, [códigos de erro ODBC](/previous-versions/windows/desktop/ms714687\(v=vs.85\)), no *referência do programador de ODBC*. Exemplo: "S0022".
+- O SQLSTATE retornado de uma cadeia de caracteres terminada em nulo que contém um código de erro de cinco caracteres na *szSqlState* parâmetro da função ODBC `SQLError`. Valores SQLSTATE são listados no Apêndice A, [códigos de erro ODBC](/previous-versions/windows/desktop/ms714687), no *referência do programador de ODBC*. Exemplo: "S0022".
 
 - O código de erro nativo específico para a fonte de dados retornado na *pfNativeError* parâmetro do `SQLError` função. Exemplo: 207.
 
@@ -150,7 +150,7 @@ A cadeia de caracteres é do formulário "estado: % s, nativo: % ld, origem: % s
 
 O framework interpreta a cadeia de caracteres de erro e coloca seus componentes em `m_strStateNativeOrigin`; se `m_strStateNativeOrigin` contém informações para mais de um erro, os erros são separados por novas linhas. O framework colocará o texto de erro alfanuméricos em `m_strError`.
 
-Para obter informações adicionais sobre os códigos usados para fazer essa cadeia de caracteres, consulte a [SQLError](/previous-versions/windows/desktop/ms716312\(v=vs.85\)) funcionar a *referência do programador de ODBC*.
+Para obter informações adicionais sobre os códigos usados para fazer essa cadeia de caracteres, consulte a [SQLError](/previous-versions/windows/desktop/ms716312) funcionar a *referência do programador de ODBC*.
 
 ### <a name="example"></a>Exemplo
 

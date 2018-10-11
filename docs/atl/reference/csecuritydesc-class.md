@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 591465ed9c16485498174a710d2d37ff68425058
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3df63cbed5fcb17b01450435aa2d991ca3e0c5a8
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116861"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083912"
 ---
 # <a name="csecuritydesc-class"></a>Classe CSecurityDesc
 
@@ -563,7 +563,7 @@ bool SetControl(
 ### <a name="parameters"></a>Parâmetros
 
 *ControlBitsOfInterest*<br/>
-Uma máscara SECURITY_DESCRIPTOR_CONTROL que indica os bits de controle para definir. Para obter uma lista dos sinalizadores que podem ser definidas, consulte [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).
+Uma máscara SECURITY_DESCRIPTOR_CONTROL que indica os bits de controle para definir. Para obter uma lista dos sinalizadores que podem ser definidas, consulte [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582).
 
 *ControlBitsToSet*<br/>
 Uma máscara SECURITY_DESCRIPTOR_CONTROL que indica os novos valores para os bits de controle especificados pela *ControlBitsOfInterest* máscara. Esse parâmetro pode ser uma combinação de sinalizadores listados para o *ControlBitsOfInterest* parâmetro.
@@ -574,7 +574,7 @@ Retorna true em caso de êxito, false em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Este método chama [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).
+Este método chama [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582).
 
 ##  <a name="setdacl"></a>  CSecurityDesc::SetDacl
 

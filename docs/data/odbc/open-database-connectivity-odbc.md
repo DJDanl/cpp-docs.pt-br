@@ -17,18 +17,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6e5282d1944ca789e56ac6890c10f41c15ec59e4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d28194b44fca4360fc7a0ca1614e9f5685cc0d98
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46111271"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082326"
 ---
 # <a name="open-database-connectivity-odbc"></a>Conectividade de banco de dados aberto (ODBC)
 
 A biblioteca MFC (Microsoft Foundation Classes) fornece classes para programar com ODBC (Conectividade Aberta de Banco de Dados). A partir do Visual Studio 2015 e o ODBC do SQL Server 2012 é a maneira preferencial para se conectar a fontes de dados SQL.
   
-Para obter mais informações sobre como usar a API do ODBC sem MFC, consulte o [conectividade aberta de banco de dados (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) SDK no MSDN.  
+Para obter mais informações sobre como usar a API do ODBC sem MFC, consulte o [conectividade aberta de banco de dados (ODBC)](/previous-versions/windows/desktop/ms710252) SDK no MSDN.  
   
   
 ## <a name="in-this-section"></a>Nesta seção  
@@ -69,7 +69,7 @@ Para obter mais informações sobre como usar a API do ODBC sem MFC, consulte o 
   
 ## <a name="odbc-database-tasks"></a>Tarefas de banco de dados ODBC  
 
-Essas tarefas se baseiam no MFC [ODBC](odbc-basics.md) classes. Para obter mais informações sobre como usar a API do ODBC sem MFC, consulte o [conectividade aberta de banco de dados (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) SDK.  
+Essas tarefas se baseiam no MFC [ODBC](odbc-basics.md) classes. Para obter mais informações sobre como usar a API do ODBC sem MFC, consulte o [conectividade aberta de banco de dados (ODBC)](/previous-versions/windows/desktop/ms710252) SDK.  
   
 - [Instalar e começar a trabalhar com ODBC](installing-and-getting-started-with-odbc.md)  
   

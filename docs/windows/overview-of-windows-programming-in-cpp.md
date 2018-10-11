@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ddfd6de46d6d0700265f5308f06458b3cdd984a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: b2870aa742806671e39728c3b73604dcf4e810e9
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677821"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083080"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Visão geral de programação do Windows no C++
 
@@ -58,7 +58,7 @@ Para obter mais informações sobre todos esses conceitos, consulte [guia para a
 
 ##  <a name="BK_Native"></a> Aplicativos de área de trabalho e servidor
 
-Para aprender as Noções básicas de criação de aplicativos de cliente do Windows para a área de trabalho, consulte [desenvolvimento de aplicativos do Windows em C++](https://msdn.microsoft.com/vstudio//hh304489) e [Introdução à programação do Windows em C++](https://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx).
+Para aprender as Noções básicas de criação de aplicativos de cliente do Windows para a área de trabalho, consulte [desenvolvimento de aplicativos do Windows em C++](https://msdn.microsoft.com/vstudio//hh304489) e [Introdução à programação do Windows em C++](https://msdn.microsoft.com/library/windows/desktop/ff381398).
 
 No Windows 10, você pode usar o Visual C++ para criar vários tipos de programas da área de trabalho:
 

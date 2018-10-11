@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 60bed04015060bd65f4d4c771a228e3b50c3486e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8c4e3003beb0e50887f6b765904095c65dd8f1b6
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057089"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083652"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Obtendo metadados com conjuntos de linhas de esquema
 
@@ -63,7 +63,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
 O [CRestrictions](../../data/oledb/crestrictions-class.md) classe fornece o suporte de restrição. Depois de criar uma instância do conjunto de linhas de esquema, chame [crestrictions:: Open](../../data/oledb/crestrictions-open.md). Esse método retorna um conjunto de resultados com base nas restrições que você especificar.  
   
-Para especificar restrições, consulte [apêndice b: Schema Rowsets](/previous-versions/windows/desktop/ms712921\(v=vs.85\)) e consultar o conjunto de linhas que você está usando. Por exemplo, `CColumns` corresponde do [conjunto de linhas COLUMNS](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); esse tópico lista as colunas de restrição no conjunto de linhas COLUMNS: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Você deve seguir nessa ordem no especificando suas restrições.  
+Para especificar restrições, consulte [apêndice b: Schema Rowsets](/previous-versions/windows/desktop/ms712921) e consultar o conjunto de linhas que você está usando. Por exemplo, `CColumns` corresponde do [conjunto de linhas COLUMNS](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); esse tópico lista as colunas de restrição no conjunto de linhas COLUMNS: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Você deve seguir nessa ordem no especificando suas restrições.  
   
 Portanto, por exemplo, se você quiser restringir por nome de tabela, observe que TABLE_NAME é a terceira coluna de restrição e, em seguida, chamar `Open`, especificando o nome da tabela desejado como o terceiro parâmetro de restrição, conforme mostrado no exemplo a seguir.  
   
@@ -93,7 +93,7 @@ Portanto, por exemplo, se você quiser restringir por nome de tabela, observe qu
   
 Para a referência do conjunto de linhas de esquema, classes typedef fornecida nos modelos do OLE DB (consulte [Classes de conjunto de linhas de esquema e Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).  
   
-Para obter mais informações sobre conjuntos de linhas de esquema de OLE DB, incluindo colunas de restrição, consulte [apêndice b: Schema Rowsets](/previous-versions/windows/desktop/ms712921\(v=vs.85\)) na referência do OLE DB do programador.  
+Para obter mais informações sobre conjuntos de linhas de esquema de OLE DB, incluindo colunas de restrição, consulte [apêndice b: Schema Rowsets](/previous-versions/windows/desktop/ms712921) na referência do OLE DB do programador.  
   
 Para obter exemplos mais complexos de como usar classes rowset do esquema, consulte o [CatDB](https://github.com/Microsoft/VCSamples) e [DBViewer](https://github.com/Microsoft/VCSamples) exemplos.  
   

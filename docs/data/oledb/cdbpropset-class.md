@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c6d62b8d4b033d1b90c753d5de1752f0cb737f0d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e998f0bed867356218e4a1b1c772d396c53afecb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114651"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082976"
 ---
 # <a name="cdbpropset-class"></a>Classe CDBPropSet
 
@@ -138,7 +138,7 @@ bool AddProperty(DWORD dwPropertyID,
 
 ## <a name="cdbpropset"></a> Cdbpropset:: Cdbpropset
 
-O construtor. Inicializa o `rgProperties`, `cProperties`, e `guidPropertySet` campos dos [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) estrutura.  
+O construtor. Inicializa o `rgProperties`, `cProperties`, e `guidPropertySet` campos dos [DBPROPSET](/previous-versions/windows/desktop/ms714367) estrutura.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -171,7 +171,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>Parâmetros  
 
 *guid*<br/>
-[in] Um GUID usado para definir a `guidPropertySet` campo do [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) estrutura.  
+[in] Um GUID usado para definir a `guidPropertySet` campo do [DBPROPSET](/previous-versions/windows/desktop/ms714367) estrutura.  
   
 ### <a name="remarks"></a>Comentários  
 
@@ -192,5 +192,5 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Classe CDBPropIDSet](../../data/oledb/cdbpropidset-class.md)<br/>
-[Estrutura DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))   
-[Estrutura DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\))
+[Estrutura DBPROPSET](/previous-versions/windows/desktop/ms714367)   
+[Estrutura DBPROP](/previous-versions/windows/desktop/ms717970)

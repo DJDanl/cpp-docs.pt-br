@@ -13,18 +13,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d4f44e3587e9b274bbe89e2fa4f91accadb08ab
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 991e3e74ba280b615d951c12472de46833b7de72
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688253"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083340"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplicativos da área de trabalho (Visual C++)
 
 Um *aplicativo de desktop* em C++ é um aplicativo nativo que pode acessar o conjunto completo de APIs do Windows e será executado em uma janela ou no console do sistema. Aplicativos da área de trabalho em C++ podem ser executados no Windows XP por meio do Windows 10 (embora o Windows XP não é mais oficialmente é suportado e há muitas APIs do Windows que foram introduzidos desde então).
 
-Um aplicativo da área de trabalho é diferente de um aplicativo de plataforma Universal do Windows (UWP), que pode ser executados em computadores que executam o Windows 10 e também no XBox, Windows Phone, Surface Hub e outros dispositivos. Para obter mais informações sobre a área de trabalho vs. Aplicativos UWP, consulte [escolha sua tecnologia](https://msdn.microsoft.com/library/windows/desktop/dn614993\(v=vs.85\).aspx).
+Um aplicativo da área de trabalho é diferente de um aplicativo de plataforma Universal do Windows (UWP), que pode ser executados em computadores que executam o Windows 10 e também no XBox, Windows Phone, Surface Hub e outros dispositivos. Para obter mais informações sobre a área de trabalho vs. Aplicativos UWP, consulte [escolha sua tecnologia](https://msdn.microsoft.com/library/windows/desktop/dn614993).
 
 
 ### <a name="desktop-bridge"></a>Ponte de desktop
@@ -35,7 +35,7 @@ No Visual Studio 2017 versão 15.4 e posteriores, você pode criar um projeto de
 
 ### <a name="terminology"></a>Terminologia
 
-- Um *Win32* aplicativo é um aplicativo da área de trabalho em C++ que pode fazer usar nativas de Windows [APIs de C do Windows e/ou APIs COM](https://msdn.microsoft.com/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT e APIs da biblioteca padrão e 3ª bibliotecas de terceiros. Um aplicativo Win32 que é executado em uma janela exige que o desenvolvedor trabalhar explicitamente com mensagens do Windows dentro de uma função de procedimento do Windows. Apesar do nome, um aplicativo Win32 pode ser compilado como um (x86) 32 bits ou 64 bits (x64) binário. No IDE do Visual Studio, os termos x86 e o Win32 são sinônimos.
+- Um *Win32* aplicativo é um aplicativo da área de trabalho em C++ que pode fazer usar nativas de Windows [APIs de C do Windows e/ou APIs COM](https://msdn.microsoft.com/library/windows/desktop/ff818516) CRT e APIs da biblioteca padrão e 3ª bibliotecas de terceiros. Um aplicativo Win32 que é executado em uma janela exige que o desenvolvedor trabalhar explicitamente com mensagens do Windows dentro de uma função de procedimento do Windows. Apesar do nome, um aplicativo Win32 pode ser compilado como um (x86) 32 bits ou 64 bits (x64) binário. No IDE do Visual Studio, os termos x86 e o Win32 são sinônimos.
 
 - O [(COM Component Object Model)](/windows/desktop/com/the-component-object-model) é uma especificação que permite que os programas escritos em linguagens diferentes para se comunicar entre si. Windows de muitos componentes são implementados como objetos COM e seguem regras padrão de COM para a criação de objeto, destruição de objeto e descoberta de interface.  Usando objetos COM de aplicativos da área de trabalho do C++ é relativamente simples, mas escrever seu próprio objeto COM é mais avançada. O [biblioteca ATL (Active Template)](../atl/atl-com-desktop-components.md) fornece macros e funções auxiliares que simplificam o desenvolvimento de COM.
 

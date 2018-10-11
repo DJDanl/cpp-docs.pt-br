@@ -101,12 +101,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a92f52f7d97e3c89de3d147c2c1b798d4af6d3a4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d0db07c8419db53d30612e6edbbe134634e37a74
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019452"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083938"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>Classe CDynamicParameterAccessor
 
@@ -323,7 +323,7 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 [in] O número do parâmetro (deslocamento de 1). O parâmetro 0 é reservado para valores de retorno. O número do parâmetro é o índice do parâmetro com base em sua ordem no SQL ou chamada de procedimento armazenado. Ver [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obter um exemplo.  
   
 *pStatus*<br/>
-[out] Um ponteiro para a variável que contém o status DBSTATUS do parâmetro especificado. Para obter informações sobre valores DBSTATUS, consulte [Status](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.  
+[out] Um ponteiro para a variável que contém o status DBSTATUS do parâmetro especificado. Para obter informações sobre valores DBSTATUS, consulte [Status](/previous-versions/windows/desktop/ms722617) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.  
   
 ### <a name="remarks"></a>Comentários  
 
@@ -435,7 +435,7 @@ Um parâmetro de modelo que é o tipo de dados.
 [in] O ponteiro para a memória que contém os dados a serem gravados no buffer.  
   
 *status*<br/>
-[in] O status da coluna DBSTATUS. Para obter informações sobre valores DBSTATUS, consulte [Status](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.  
+[in] O status da coluna DBSTATUS. Para obter informações sobre valores DBSTATUS, consulte [Status](/previous-versions/windows/desktop/ms722617) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.  
   
 ### <a name="return-value"></a>Valor de retorno  
 
@@ -483,7 +483,7 @@ bool SetParamStatus(DBORDINAL nParam,
 [in] O número do parâmetro (deslocamento de 1). O parâmetro 0 é reservado para valores de retorno. O número do parâmetro é o índice do parâmetro com base em sua ordem no SQL ou chamada de procedimento armazenado. Ver [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obter um exemplo.  
   
 *status*<br/>
-[in] O status DBSTATUS do parâmetro especificado. Para obter informações sobre valores DBSTATUS, consulte [Status](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.  
+[in] O status DBSTATUS do parâmetro especificado. Para obter informações sobre valores DBSTATUS, consulte [Status](/previous-versions/windows/desktop/ms722617) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.  
   
 ### <a name="remarks"></a>Comentários  
 
@@ -512,7 +512,7 @@ bool SetParamString(DBORDINAL nParam,
 [in] Um ponteiro para o ANSI (**CHAR**) ou Unicode (**WCHAR**) dados do parâmetro especificado da cadeia de caracteres. Consulte DBSTATUS OLEDB.  
   
 *status*<br/>
-[in] O status DBSTATUS do parâmetro especificado. Para obter informações sobre valores DBSTATUS, consulte [Status](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.  
+[in] O status DBSTATUS do parâmetro especificado. Para obter informações sobre valores DBSTATUS, consulte [Status](/previous-versions/windows/desktop/ms722617) na *referência do programador DB OLE*, ou procurar DBSTATUS no OLEDB.  
   
 ### <a name="remarks"></a>Comentários  
 

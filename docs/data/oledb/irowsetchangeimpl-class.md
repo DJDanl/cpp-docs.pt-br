@@ -43,16 +43,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3cac23621959fb71247b649171309ec9d12cf35b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0ee351771d56b417396583ef41a96c62ff6bafd
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038720"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082521"
 ---
 # <a name="irowsetchangeimpl-class"></a>Classe IRowsetChangeImpl
 
-A implementação de modelos OLE DB do [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) interface na especificação do OLE DB.  
+A implementação de modelos OLE DB do [IRowsetChange](/previous-versions/windows/desktop/ms715790) interface na especificação do OLE DB.  
   
 ## <a name="syntax"></a>Sintaxe
 
@@ -152,7 +152,7 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
   
 #### <a name="parameters"></a>Parâmetros  
 
-Ver [IRowsetChange:: Insertrow](/previous-versions/windows/desktop/ms716921\(v=vs.85\)) na *referência do programador do OLE DB*. 
+Ver [IRowsetChange:: Insertrow](/previous-versions/windows/desktop/ms716921) na *referência do programador do OLE DB*. 
 
 ## <a name="setdata"></a> Irowsetchangeimpl:: SetData
 
@@ -168,7 +168,7 @@ STDMETHOD (SetData )(HROW hRow,
   
 #### <a name="parameters"></a>Parâmetros  
 
-Ver [IRowsetChange:: SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\)) na *referência do programador do OLE DB*. 
+Ver [IRowsetChange:: SetData](/previous-versions/windows/desktop/ms721232) na *referência do programador do OLE DB*. 
 
 ## <a name="flushdata"></a> Irowsetchangeimpl:: Flushdata
 

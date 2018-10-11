@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0fa55ba0193f24acdf308888c3ec505c33003292
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 11a58511684a58ebb0b8ec13138bfbdb7afa4729
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790092"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081897"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -37,7 +37,7 @@ Cria uma conexão a uma fonte de dados.
 ### <a name="parameters"></a>Parâmetros
 
 *db_source*<br/>
-A cadeia de conexão usada para se conectar à fonte de dados. Para o formato da cadeia de caracteres de conexão, consulte [cadeias de caracteres de Conexão e Links de dados](/previous-versions/windows/desktop/ms718376\(v=vs.85\)) no Microsoft Data Access Components (MDAC) do SDK.
+A cadeia de conexão usada para se conectar à fonte de dados. Para o formato da cadeia de caracteres de conexão, consulte [cadeias de caracteres de Conexão e Links de dados](/previous-versions/windows/desktop/ms718376) no Microsoft Data Access Components (MDAC) do SDK.
 
 *name*<br/>
 (Opcional) Quando você usa **db_source** em uma classe *nome* é uma instância de um objeto de fonte de dados que tem o **db_source** atributo aplicado a ele (consulte o exemplo 1). Quando você usa **db_source** embutido na implementação de um método *nome* é uma variável (local para o método) que pode ser usada para acessar os dados de origem (consulte o exemplo 2). Você passá-la *nome* para o *source_name* parâmetro do `db_command` para associar a fonte de dados com um comando.

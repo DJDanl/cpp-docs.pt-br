@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce1a287a9fa608881a39f82a2b86cfc541674218
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ef48157d1f4efb467fd33270ff05271bedd1a563
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713707"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081884"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
-Processos que estejam vinculando explicitamente para uma DLL chamam [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) para obter o endereço de uma função exportada na DLL. Você pode usar o ponteiro de função retornado para chamar a função DLL. **GetProcAddress** leva como parâmetros o identificador de módulo DLL (retornado por **LoadLibrary**, `AfxLoadLibrary`, ou **GetModuleHandle**) e usa o nome da função que você deseja a chamada ou o ordinal de exportação da função.
+Processos que estejam vinculando explicitamente para uma DLL chamam [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) para obter o endereço de uma função exportada na DLL. Você pode usar o ponteiro de função retornado para chamar a função DLL. **GetProcAddress** leva como parâmetros o identificador de módulo DLL (retornado por **LoadLibrary**, `AfxLoadLibrary`, ou **GetModuleHandle**) e usa o nome da função que você deseja a chamada ou o ordinal de exportação da função.
 
 Como você está chamando a função DLL por meio de um ponteiro e não há nenhuma verificação de tipo de tempo de compilação, certifique-se de que os parâmetros para a função estão corretos para que você não ultrapasse a memória alocada na pilha e causar uma violação de acesso. Uma maneira para ajudar a fornecer segurança de tipos é examinar os protótipos de função das funções exportadas e criar typedefs correspondentes para ponteiros de função. Por exemplo:
 
@@ -73,7 +73,7 @@ Você pode obter o ordinal de exportação somente se a DLL que você está vinc
 
 - [LoadLibrary e AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)
 
-- [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152)
+- [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
 
 - [Exportando de uma DLL usando arquivos DEF](../build/exporting-from-a-dll-using-def-files.md)
 

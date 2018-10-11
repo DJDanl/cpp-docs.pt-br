@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3406614b99e2057c9469fe69d02a9fcbe4eae23b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3538a8cd15fc315f4d91d1c83c517811acce1802
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116757"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082898"
 ---
 # <a name="cbulkrowset-class"></a>Classe CBulkRowset
 
@@ -165,7 +165,7 @@ O exemplo a seguir demonstra o uso da `CBulkRowset` classe.
 
 ## <a name="addrefrows"></a> Cbulkrowset:: Addrefrows
 
-Chamadas [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) para incrementar a contagem de referência para todas as linhas recuperadas no momento do conjunto de linhas em massa.  
+Chamadas [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) para incrementar a contagem de referência para todas as linhas recuperadas no momento do conjunto de linhas em massa.  
   
 ### <a name="syntax"></a>Sintaxe  
   
@@ -264,7 +264,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
   
 ### <a name="return-value"></a>Valor de retorno  
 
-Ver [IRowset:: GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) na *referência do programador do OLE DB*. 
+Ver [IRowset:: GetData](/previous-versions/windows/desktop/ms716988) na *referência do programador do OLE DB*. 
 
 ## <a name="movetoratio"></a> Cbulkrowset:: Movetoratio
 
@@ -295,11 +295,11 @@ Um HRESULT padrão.
   
 `(nNumerator *  RowsetSize ) / nDenominator`  
   
-Onde `RowsetSize` é o tamanho do conjunto de linhas, medido em linhas. A precisão dessa fórmula depende do provedor específico. Para obter detalhes, consulte [irowsetscroll:: Getrowsatratio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)) na *referência do programador DB OLE*.   
+Onde `RowsetSize` é o tamanho do conjunto de linhas, medido em linhas. A precisão dessa fórmula depende do provedor específico. Para obter detalhes, consulte [irowsetscroll:: Getrowsatratio](/previous-versions/windows/desktop/ms709602) na *referência do programador DB OLE*.   
 
 ## <a name="releaserows"></a> Cbulkrowset:: Releaserows
 
-Chamadas [IRowset:: Releaserows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) para diminuir a contagem de referência para todas as linhas recuperadas no momento do conjunto de linhas em massa.  
+Chamadas [IRowset:: Releaserows](/previous-versions/windows/desktop/ms719771) para diminuir a contagem de referência para todas as linhas recuperadas no momento do conjunto de linhas em massa.  
   
 ### <a name="syntax"></a>Sintaxe  
   

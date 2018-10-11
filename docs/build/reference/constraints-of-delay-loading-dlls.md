@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69e985b81072de306c818218e19bbb660e3e04a4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 497de9695e75810f2fe68101627f2ba3606aa048
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719727"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082003"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Restrições de DLLs de carregamento do atraso
 
@@ -44,9 +44,9 @@ Há restrições relativas ao carregamento atrasado de importações.
 ## <a name="see-also"></a>Consulte também
 
 [Suporte do vinculador para DLLs carregadas com atraso](../../build/reference/linker-support-for-delay-loaded-dlls.md)<br/>
-[Função LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175.aspx)<br/>
-[Função GetModuleHandle](https://msdn.microsoft.com/library/windows/desktop/ms683199.aspx)<br/>
-[Função GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx)<br/>
+[Função LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)<br/>
+[Função GetModuleHandle](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)<br/>
+[Função GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>
 [Função TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)<br/>
 [Função TlsFree](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsfree)<br/>
 [Função TlsGetValue](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)<br/>

@@ -51,12 +51,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 74ad27ba1c56fe08bd6e155016d340ffc2d26d0a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8cbfa7dc712755790b3a398db3377a8faccd4525
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46051432"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084016"
 ---
 # <a name="csession-class"></a>Classe CSession
 
@@ -103,7 +103,7 @@ HRESULT Abort(BOID* pboidReason = NULL,
   
 #### <a name="parameters"></a>Parâmetros  
 
-Ver [ITransaction:: Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\)) na *referência do programador do OLE DB*.  
+Ver [ITransaction:: Abort](/previous-versions/windows/desktop/ms709833) na *referência do programador do OLE DB*.  
   
 ### <a name="return-value"></a>Valor de retorno  
 
@@ -137,7 +137,7 @@ HRESULT Commit(BOOL bRetaining = FALSE,
   
 #### <a name="parameters"></a>Parâmetros  
 
-Ver [ITransaction:: Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\)) na *referência do programador do OLE DB*.  
+Ver [ITransaction:: Commit](/previous-versions/windows/desktop/ms713008) na *referência do programador do OLE DB*.  
   
 ### <a name="return-value"></a>Valor de retorno  
 
@@ -145,7 +145,7 @@ Um HRESULT padrão.
   
 ### <a name="remarks"></a>Comentários  
 
-Para obter mais informações, consulte [ITransaction:: Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\)).  
+Para obter mais informações, consulte [ITransaction:: Commit](/previous-versions/windows/desktop/ms713008).  
 
 ## <a name="gettransactioninfo"></a> Csession:: Gettransactioninfo
 
@@ -159,7 +159,7 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
   
 #### <a name="parameters"></a>Parâmetros  
 
-Ver [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975\(v=vs.85\)) na *referência do programador do OLE DB*.  
+Ver [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975) na *referência do programador do OLE DB*.  
   
 ### <a name="return-value"></a>Valor de retorno  
 
@@ -167,7 +167,7 @@ Um HRESULT padrão.
   
 ### <a name="remarks"></a>Comentários  
 
-Para obter mais informações, consulte [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975\(v=vs.85\)) na *referência do programador DB OLE*. 
+Para obter mais informações, consulte [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975) na *referência do programador DB OLE*. 
 
 ## <a name="open"></a> Csession:: Open
 
@@ -187,10 +187,10 @@ HRESULT Open(const CDataSource& ds,
 [in] A fonte de dados para o qual a sessão for aberta.  
   
 *pPropSet*<br/>
-[in] Um ponteiro para uma matriz de [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) estruturas que contém as propriedades e valores a serem definidos. Ver [conjuntos de propriedades e grupos de propriedades](/previous-versions/windows/desktop/ms713696\(v=vs.85\)) na *referência do programador do OLE DB* no Windows SDK.  
+[in] Um ponteiro para uma matriz de [DBPROPSET](/previous-versions/windows/desktop/ms714367) estruturas que contém as propriedades e valores a serem definidos. Ver [conjuntos de propriedades e grupos de propriedades](/previous-versions/windows/desktop/ms713696) na *referência do programador do OLE DB* no Windows SDK.  
   
 *ulPropSets*<br/>
-[in] O número de [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) estruturas passada a *pPropSet* argumento.  
+[in] O número de [DBPROPSET](/previous-versions/windows/desktop/ms714367) estruturas passada a *pPropSet* argumento.  
   
 ### <a name="return-value"></a>Valor de retorno  
 
@@ -215,7 +215,7 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
   
 #### <a name="parameters"></a>Parâmetros  
 
-Ver [itransactionlocal:: Starttransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\)) na *referência do programador do OLE DB*.  
+Ver [itransactionlocal:: Starttransaction](/previous-versions/windows/desktop/ms709786) na *referência do programador do OLE DB*.  
   
 ### <a name="return-value"></a>Valor de retorno  
 
@@ -223,7 +223,7 @@ Um HRESULT padrão.
   
 ### <a name="remarks"></a>Comentários  
 
-Para obter mais informações, consulte [itransactionlocal:: Starttransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\)) na *referência do programador DB OLE*. 
+Para obter mais informações, consulte [itransactionlocal:: Starttransaction](/previous-versions/windows/desktop/ms709786) na *referência do programador DB OLE*. 
   
 ## <a name="see-also"></a>Consulte também  
 

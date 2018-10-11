@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc8fbe595259b0f5e59d3ac844710222042540c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 68211c3807893d28adb5e90e8863967b7f60318f
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206062"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083561"
 ---
 # <a name="mktime-mktime32-mktime64"></a>mktime, _mktime32, _mktime64
 
@@ -93,7 +93,7 @@ Essas funções podem ser usadas para validar e preencher uma estrutura de tm. S
 
 - Um valor menor que zero para fazer que com o código da biblioteca de tempo de execução C calcule se o horário padrão, ou o horário de verão está em vigor.
 
-A biblioteca em tempo de execução C determinará o comportamento do horário de verão da variável de ambiente [TZ](tzset.md). Se **TZ** não for definido, a chamada à API do Win32 [GetTimeZoneInformation](https://msdn.microsoft.com/library/windows/desktop/ms724421.aspx) é usado para obter o verão informações de tempo do sistema operacional. Se isso falhar, a biblioteca assume que serão usadas as regras dos Estados Unidos para implantar o cálculo do horário de verão. **tm_isdst** é um campo obrigatório. Se não definidas, seu valor é indefinido e o valor retornado dessas funções é imprevisível. Se *timeptr* aponta para um **tm** estrutura retornada por uma chamada anterior a [asctime](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md), ou [localtime](localtime-localtime32-localtime64.md) (ou variantes dessas funções), o **tm_isdst** campo contém o valor correto.
+A biblioteca em tempo de execução C determinará o comportamento do horário de verão da variável de ambiente [TZ](tzset.md). Se **TZ** não for definido, a chamada à API do Win32 [GetTimeZoneInformation](/windows/desktop/api/timezoneapi/nf-timezoneapi-gettimezoneinformation) é usado para obter o verão informações de tempo do sistema operacional. Se isso falhar, a biblioteca assume que serão usadas as regras dos Estados Unidos para implantar o cálculo do horário de verão. **tm_isdst** é um campo obrigatório. Se não definidas, seu valor é indefinido e o valor retornado dessas funções é imprevisível. Se *timeptr* aponta para um **tm** estrutura retornada por uma chamada anterior a [asctime](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md), ou [localtime](localtime-localtime32-localtime64.md) (ou variantes dessas funções), o **tm_isdst** campo contém o valor correto.
 
 Observe que **gmtime** e **localtime** (e **_gmtime32**, **_gmtime64**, **_localtime32**, e **_localtime64**) usam um único buffer por thread para a conversão. Se você fornecer desse buffer **mktime**, **_mktime32** ou **_mktime64**, os conteúdos anteriores serão destruídos.
 

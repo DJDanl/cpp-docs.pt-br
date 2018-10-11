@@ -23,16 +23,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e6c7e498100a60a3d4c592c343cc86b5ee0a0ea
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a86300b4814c8712f3cf88f91421dc1d0842e8a7
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713356"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081512"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary e AfxFreeLibrary
 
-Processos que vincule explicitamente para uma DLL chamam a [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152(v=vs.85).aspx) funcionar quando o módulo DLL não é mais necessário. Essa função diminui a contagem de referência do módulo e, se a contagem de referência é zero, unmaps-lo do espaço de endereço do processo.
+Processos que vincule explicitamente para uma DLL chamam a [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary) funcionar quando o módulo DLL não é mais necessário. Essa função diminui a contagem de referência do módulo e, se a contagem de referência é zero, unmaps-lo do espaço de endereço do processo.
 
 Em um aplicativo do MFC, use [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) em vez de `FreeLibrary` para descarregar uma DLL de extensão do MFC. A interface (protótipo de função) para `AfxFreeLibrary` é o mesmo que `FreeLibrary`.
 
@@ -51,5 +51,5 @@ Em um aplicativo do MFC, use [AfxFreeLibrary](../mfc/reference/application-infor
 ## <a name="see-also"></a>Consulte também
 
 [DLLs no Visual C++](../build/dlls-in-visual-cpp.md)<br/>
-[FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152(v=vs.85).aspx)
+[FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
 [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

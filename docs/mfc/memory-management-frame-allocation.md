@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca2d98898c232cdb65d3ac5d1288b06aca403772
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1138a675d64561a2e8399accd93c4ebb5eff382d
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398112"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083842"
 ---
 # <a name="memory-management-frame-allocation"></a>Gerenciamento de memória: alocação do quadro
 
@@ -47,7 +47,7 @@ Para variáveis de função local, essa transição de escopo acontece quando a 
 
 Quando um objeto é definido como uma variável de quadro, seu construtor é invocado automaticamente no ponto em que a definição for encontrada. Quando o objeto sai do escopo, seu destruidor é invocado automaticamente antes que a memória para o objeto seja recuperada. Essa construção automática e a destruição podem ser muito útil, mas você deve estar ciente das chamadas automático, especialmente para o destruidor.
 
-A principal vantagem de alocação de objetos no quadro é que eles são excluídos automaticamente. Quando você alocar seus objetos no quadro, você não precisa se preocupar sobre objetos esquecidos causar vazamentos de memória. (Para obter detalhes sobre vazamentos de memória, consulte o artigo [detectando vazamentos de memória no MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476\(v=vs.100\)).) Uma desvantagem de alocação do quadro é que as variáveis do quadro não podem ser usadas fora de seu escopo. Outro fator na escolha de alocação do quadro em comparação com a alocação de heap é que para estruturas grandes e objetos, geralmente é melhor usar o heap em vez da pilha para o armazenamento, pois o espaço de pilha é geralmente limitado.
+A principal vantagem de alocação de objetos no quadro é que eles são excluídos automaticamente. Quando você alocar seus objetos no quadro, você não precisa se preocupar sobre objetos esquecidos causar vazamentos de memória. (Para obter detalhes sobre vazamentos de memória, consulte o artigo [detectando vazamentos de memória no MFC](/previous-versions/visualstudio/visual-studio-2010/c99kz476).) Uma desvantagem de alocação do quadro é que as variáveis do quadro não podem ser usadas fora de seu escopo. Outro fator na escolha de alocação do quadro em comparação com a alocação de heap é que para estruturas grandes e objetos, geralmente é melhor usar o heap em vez da pilha para o armazenamento, pois o espaço de pilha é geralmente limitado.
 
 ## <a name="see-also"></a>Consulte também
 
