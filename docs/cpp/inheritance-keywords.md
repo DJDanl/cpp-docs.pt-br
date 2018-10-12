@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1106ad878f4053cacae67d9d0e343e9469b1a1c1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f4b3703d0bd4556090c08a874bce362120817397
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061169"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161790"
 ---
 # <a name="inheritance-keywords"></a>Palavras-chave de herança
 
@@ -83,6 +83,8 @@ independentemente das opções de linha de comando ou dos pragmas, os ponteiros 
 
 > [!NOTE]
 >  A mesma declaração de encaminhamento de uma representação de ponteiro para membro de classe deve ocorrer em cada unidade de tradução que declarar ponteiros para membros daquela classe, e a declaração deve ocorrer antes que os ponteiros para os membros sejam declarados.
+
+Para compatibilidade com versões anteriores, **_single_inheritance**, **_multiple_inheritance**, e **_virtual_inheritance** são sinônimos do **_ Single_Inheritance**, **multiple_inheritance**, e **virtual_inheritance** , a menos que a opção de compilador [/Za \(desativar idioma extensões)](../build/reference/za-ze-disable-language-extensions.md) for especificado.
 
 **Fim da seção específica da Microsoft**
 

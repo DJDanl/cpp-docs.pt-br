@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9b438725a5a725597a81f0587936618a06cbb4b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 218451b0483e569bf4c944e139aff3446f5925e7
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414297"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162068"
 ---
 # <a name="cancellationtoken-class"></a>Classe cancellation_token
 
@@ -55,7 +55,7 @@ class cancellation_token;
 |----------|-----------------|
 |[deregister_callback](#deregister_callback)|Remove um retorno de chamada registrado anteriormente por meio de `register` método com base no `cancellation_token_registration` objeto retornado no momento do registro.|
 |[is_cancelable](#is_cancelable)|Retorna um valor que indica se este token pode ser cancelado ou não.|
-|[is_canceled](#is_canceled)|Retorna `true` se o token foi cancelado.|
+|[is_canceled](#is_canceled)|Retorna **verdadeira** se o token foi cancelado.|
 |[none](#none)|Retorna um token de cancelamento que nunca pode estar sujeitos a cancelamento.|
 |[register_callback](#register_callback)|Registra uma função de retorno de chamada com o token. Se e quando o token é cancelado, o retorno de chamada será feito. Observe que, se o token já tiver sido cancelado no ponto em que esse método é chamado, o retorno de chamada será feito imediatamente e de forma síncrona.|
 
@@ -123,7 +123,7 @@ Uma indicação se este token pode ser cancelado ou não.
 
 ##  <a name="is_canceled"></a> is_canceled
 
-Retorna `true` se o token foi cancelado.
+Retorna **verdadeira** se o token foi cancelado.
 
 ```
 bool is_canceled() const;
@@ -131,7 +131,7 @@ bool is_canceled() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-O valor `true` se o token tiver sido cancelada; caso contrário, o valor `false`.
+O valor **verdadeira** se o token tiver sido cancelada; caso contrário, o valor **falso**.
 
 ##  <a name="none"></a> None
 

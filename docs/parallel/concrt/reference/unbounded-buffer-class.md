@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46789b74d0b7b8d882a1e2ea90103c4c2f1e934b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ffc1ea1f512e049f3a6af15170429a3618323dc5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396337"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162991"
 ---
 Uma `unbounded_buffer` bloco de mensagem é um destino de várias, várias fontes, ordenada `propagator_block` capaz de armazenar um número ilimitado de mensagens.
 
@@ -175,7 +175,7 @@ O item a ser adicionado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o item tiver sido aceita, `false` caso contrário.
+**Verdadeiro** se o item tiver sido aceita, **falso** caso contrário.
 
 ##  <a name="link_target_notification"></a> link_target_notification
 
@@ -274,11 +274,11 @@ O `runtime_object_identity` do `message` do objeto que está sendo reservado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se a mensagem foi reservada com êxito, `false` caso contrário.
+**Verdadeiro** se a mensagem foi reservada com êxito, **falso** caso contrário.
 
 ### <a name="remarks"></a>Comentários
 
-Após `reserve` é chamado, se ele retornar `true`, ambos `consume` ou `release` deve ser chamado para executar ou liberar a propriedade da mensagem.
+Após `reserve` é chamado, se ele retorna **verdadeiro**, ambos `consume` ou `release` deve ser chamado para executar ou liberar a propriedade da mensagem.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -321,7 +321,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` porque o bloco não adiar as mensagens oferecidas.
+**True** porque o bloco não adiar oferecido mensagens.
 
 ##  <a name="ctor"></a> unbounded_buffer
 

@@ -1,7 +1,7 @@
 ---
 title: Experimente-exceto instrução | Microsoft Docs
 ms.custom: ''
-ms.date: 10/05/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -11,6 +11,7 @@ f1_keywords:
 - EXCEPTION_CONTINUE_SEARCH
 - _exception_info
 - __except
+- _except
 - EXCEPTION_CONTINUE_EXECUTION
 - _exception_code
 - __except_cpp
@@ -35,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e938f5b7e5f25461ae921fbfa3c49920eca86eb
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: af4d14eb3fad691a5ff10665a83879ae4319a3d9
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861922"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162029"
 ---
 # <a name="try-except-statement"></a>Instrução try-except
 
@@ -89,6 +90,8 @@ Porque o **EXCEPT** expressão é avaliada como uma expressão C, ela é limitad
 Cada aplicativo pode ter seu próprio manipulador de exceção.
 
 Não é válido para ir para um **Try** instrução, mas é válido para sair de uma. O manipulador de exceção não é chamado se um processo é encerrado no meio da execução de um **tente-exceto** instrução.
+
+Para compatibilidade com versões anteriores, **_try**, **EXCEPT**, e **_leave** são sinônimos do **Try**, **except** , e **Leave** , a menos que a opção de compilador [/Za \(desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) for especificado.
 
 ### <a name="the-leave-keyword"></a>A palavra-chave __leave
 

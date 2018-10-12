@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f60cf71305731391d03763810775eaf7f8e5fd7e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7579c7493cd05d3cf2a0a119e601dd63ed5faf91
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411528"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162237"
 ---
 # <a name="lockoperator"></a>lock::operator==
 
@@ -46,11 +46,11 @@ A igualdade de um objeto a ser comparado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna `true` se `t` é o mesmo que objeto do bloqueio, `false` caso contrário.
+Retorna **verdadeira** se `t` é o mesmo objeto do bloqueio **falso** caso contrário.
 
 ## <a name="example"></a>Exemplo
 
-```
+```cpp
 // msl_lock_op_eq.cpp
 // compile with: /clr
 #include <msclr/lock.h>

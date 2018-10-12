@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b3997f8beb414992464c51ca1c1fd944145c43d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d8c8c3cc219f0cf658dc2669ccc10adf3aba55bd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715137"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163524"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (insere informações UAC no manifesto)
 
@@ -50,7 +50,7 @@ Uma cadeia de caracteres que contém o `level` e `uiAccess` valores. Para obter 
 Um dos *asInvoker*, *highestAvailable*, ou *requireAdministrator*. O padrão é asInvoker. Para obter mais informações, consulte a seção comentários mais adiante neste tópico.
 
 *_uiAccess*<br/>
-`true` Se você deseja que o aplicativo para ignorar os níveis de proteção de interface do usuário e a unidade de entrada para janelas de permissão superior na área de trabalho; Caso contrário, `false`. Assume o padrão de `false`. Definido como `true` somente para aplicativos de acessibilidade de interface do usuário.
+**Verdadeiro** se você deseja que o aplicativo para ignorar os níveis de proteção de interface do usuário e a unidade de entrada para janelas de permissão superior na área de trabalho; caso contrário, **falso**. O padrão é **falsos**. Definido como **verdadeira** somente para aplicativos de acessibilidade de interface do usuário.
 
 ## <a name="remarks"></a>Comentários
 

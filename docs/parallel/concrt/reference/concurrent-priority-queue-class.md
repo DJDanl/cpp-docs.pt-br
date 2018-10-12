@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b87ac316c08f93a95f7791297b74cbbb20d5452a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: de97557025929c394039b1a786fe12a7035381e1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413868"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163147"
 ---
 # <a name="concurrentpriorityqueue-class"></a>Classe concurrent_priority_queue
 
@@ -195,7 +195,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se a fila de prioridade estava vazia no momento em que a função foi chamada, `false` caso contrário.
+**Verdadeiro** se a fila de prioridade estava vazia no momento em que a função foi chamada, **falso** caso contrário.
 
 ##  <a name="get_allocator"></a> get_allocator
 
@@ -287,7 +287,7 @@ Uma referência a uma variável que será preenchida com o elemento de prioridad
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se um valor foi aparecido, `false` caso contrário.
+**Verdadeiro** se um valor foi aparecido, **falso** caso contrário.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f96a8a27b511c1a93114c32d048043aa9562fe1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 24e1113dac068a20e535bee3e8fd5fa9dcfb9064
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392952"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163563"
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>Como usar excesso de assinatura para deslocar latência
 
@@ -30,7 +30,7 @@ Excesso de assinatura pode melhorar a eficiência geral de alguns aplicativos qu
 
 Este exemplo usa o [biblioteca de agentes assíncronos](../../parallel/concrt/asynchronous-agents-library.md) para baixar arquivos de servidores HTTP. O `http_reader` classe deriva [concurrency::agent](../../parallel/concrt/reference/agent-class.md) e usos da mensagem passando para ler os nomes de URL para baixar de forma assíncrona.
 
-O `http_reader` classe usa o [Concurrency:: task_group](reference/task-group-class.md) classe simultaneamente ler cada arquivo. Cada tarefa chama o [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) método com o `_BeginOversubscription` parâmetro definido como `true` para habilitar assinaturas em excesso no contexto atual. Cada tarefa, em seguida, usa o Microsoft Foundation Classes (MFC) [CInternetSession](../../mfc/reference/cinternetsession-class.md) e [CHttpFile](../../mfc/reference/chttpfile-class.md) classes para baixar o arquivo. Por fim, cada tarefa chama `Context::Oversubscribe` com o `_BeginOversubscription` parâmetro definido como `false` para desabilitar o excesso de assinatura.
+O `http_reader` classe usa o [Concurrency:: task_group](reference/task-group-class.md) classe simultaneamente ler cada arquivo. Cada tarefa chama o [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) método com o `_BeginOversubscription` parâmetro definido como **true** para habilitar assinaturas em excesso no contexto atual. Cada tarefa, em seguida, usa o Microsoft Foundation Classes (MFC) [CInternetSession](../../mfc/reference/cinternetsession-class.md) e [CHttpFile](../../mfc/reference/chttpfile-class.md) classes para baixar o arquivo. Por fim, cada tarefa chama `Context::Oversubscribe` com o `_BeginOversubscription` parâmetro definido como **falso** para desabilitar o excesso de assinatura.
 
 Quando o excesso de assinaturas estiver habilitado, o tempo de execução cria um thread adicional no qual executar tarefas. Cada um desses threads pode também substituir o contexto atual e, assim, criar threads adicionais. O `http_reader` classe usa um [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) objeto para limitar o número de threads que o aplicativo usa. O agente inicializa o buffer com um número fixo de valores do token. Para cada operação de download, o agente lê um valor de token do buffer antes que a operação inicia e, em seguida, grava esse valor de volta no buffer após a conclusão da operação. Quando o buffer está vazio, o agente espera uma das operações de download para gravar um valor de volta para o buffer.
 
@@ -68,7 +68,7 @@ O exemplo a pode executar mais rapidamente ao excesso de assinatura foi habilita
 
 ## <a name="compiling-the-code"></a>Compilando o código
 
-Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `download-oversubscription.cpp` e, em seguida, execute um dos seguintes comandos em uma janela de Prompt de comando do Visual Studio.
+Copie o código de exemplo e cole-o em um projeto do Visual Studio ou colá-lo em um arquivo chamado `download-oversubscription.cpp` e, em seguida, execute um dos seguintes comandos em um **Prompt de comando do Visual Studio** janela.
 
 **cl.exe /EHsc /MD /D "_AFXDLL" download-oversubscription.cpp**
 

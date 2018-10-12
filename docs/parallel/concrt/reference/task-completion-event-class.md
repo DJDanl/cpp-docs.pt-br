@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16778adeb898759a9c15d08175d9482f8411b44c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 867f94cd290e6b8ee5f9e50b266b0e4c9df63adf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413764"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163251"
 ---
 # <a name="taskcompletionevent-class"></a>Classe task_completion_event
 
@@ -96,11 +96,11 @@ O resultado para definir este evento.
 
 ### <a name="return-value"></a>Valor de retorno
 
-O método retorna `true` se tiver sido bem-sucedido na configuração do evento. Ele retorna `false` se o evento já está definido.
+O método retornará **verdadeira** se tiver sido bem-sucedido na configuração do evento. Ele retorna **falsos** se o evento já está definido.
 
 ### <a name="remarks"></a>Comentários
 
-Na presença de vários ou chamadas simultâneas para `set`, somente a primeira chamada terá êxito e seu resultado (se houver) será armazenado no evento de conclusão de tarefa. Os conjuntos restantes são ignorados e o método retornará false. Quando você definir um evento de conclusão de tarefas, todas as tarefas criadas do que o evento serão concluídas imediatamente, e suas continuações, se houver, serão agendadas. Tarefa de objetos de conclusão que têm uma `_ResultType` diferente de `void` passará o valor para suas continuações.
+Na presença de vários ou chamadas simultâneas para `set`, somente a primeira chamada terá êxito e seu resultado (se houver) será armazenado no evento de conclusão de tarefa. Os conjuntos restantes são ignorados e o método retornará false. Quando você definir um evento de conclusão de tarefas, todas as tarefas criadas do que o evento serão concluídas imediatamente, e suas continuações, se houver, serão agendadas. Tarefa de objetos de conclusão que têm uma `_ResultType` diferente de **void** passará o valor para suas continuações.
 
 ##  <a name="set_exception"></a> set_exception
 

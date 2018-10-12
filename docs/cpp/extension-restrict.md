@@ -1,12 +1,14 @@
 ---
 title: Restrict | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __restrict_cpp
+- __restrict
+- _restrict
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d9754f8b0b218fc4d627eb0e27504e8521bf776
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9245571e21be04cc250347f30ce8ddb464ff9b55
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076431"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163446"
 ---
 # <a name="restrict"></a>__restrict
 
@@ -34,6 +36,8 @@ Como o **declspec ( [restringir](../cpp/restrict.md) )** modificador, o **Restri
 - Quando **Restrict** é usado, o compilador não propaga a propriedade de alias não de uma variável. Ou seja, se você atribuir uma **Restrict** variável para um**Restrict** variável, o compilador ainda permitirá que o não- Restrict variável para receber um alias. Isso é diferente do comportamento do **restringir** palavra-chave da especificação C99.
 
 Em geral, se você afeta o comportamento de uma função inteira, é melhor usar `__declspec ( restrict )` que a palavra-chave.
+
+Para compatibilidade com versões anteriores, **_restrict** é um sinônimo de **Restrict** , a menos que a opção de compilador [/Za \(desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) é especificado.
 
 No Visual Studio 2015 e versões posteriores, **Restrict** pode ser usado em referências C++.
 

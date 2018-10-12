@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04202b647910914de8ebe92397efe1373e9508be
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8d6d91f312b028f44e0671c7960d4b06c2634928
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401362"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162498"
 ---
 # <a name="agent-class"></a>Classe agente
 
@@ -132,7 +132,7 @@ bool cancel();
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o agente tiver sido cancelado, `false` caso contrário. Um agente não pode ser cancelado se já a execução foi iniciada ou já foi concluída.
+**Verdadeiro** se o agente tiver sido cancelado, **falso** caso contrário. Um agente não pode ser cancelado se já a execução foi iniciada ou já foi concluída.
 
 ##  <a name="done"></a> feito
 
@@ -144,7 +144,7 @@ bool done();
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o agente for movido para o `agent_done` estado, `false` caso contrário. Um agente que foi cancelado não pode ser movido para o `agent_done` estado.
+**Verdadeiro** se o agente for movido para o `agent_done` estado, **falso** caso contrário. Um agente que foi cancelado não pode ser movido para o `agent_done` estado.
 
 ### <a name="remarks"></a>Comentários
 
@@ -172,7 +172,7 @@ bool start();
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o agente foi iniciado corretamente, `false` caso contrário. Não é possível iniciar um agente que foi cancelado.
+**Verdadeiro** se o agente foi iniciado corretamente, **falso** caso contrário. Não é possível iniciar um agente que foi cancelado.
 
 ##  <a name="status"></a> status
 

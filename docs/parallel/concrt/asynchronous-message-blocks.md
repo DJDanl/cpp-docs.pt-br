@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e9379dd15dbb0d814da1e617fb1f3f8408d1da0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0b180b1a92defb2c29d0e54b0ecf9700dd299170
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388479"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163420"
 ---
 # <a name="asynchronous-message-blocks"></a>Blocos de mensagens assíncronos
 
@@ -307,7 +307,7 @@ A simultaneidade::[classe timer](../../parallel/concrt/reference/timer-class.md)
 
 O `timer` classe envia sua mensagem para apenas um destino. Se você definir a `_PTarget` parâmetro no construtor para `NULL`, mais tarde você pode especificar o destino chamando o [concurrency::ISource::link_target](reference/source-block-class.md#link_target) método.
 
-Um `timer` objeto pode ser de repetição ou não-repetição. Para criar um temporizador de repetição, passe `true` para o `_Repeating` parâmetro ao chamar o construtor. Caso contrário, passe `false` para o `_Repeating` parâmetro para criar um timer de não repetição. Se o temporizador está repetindo, ele envia a mesma mensagem para seu destino depois de cada intervalo.
+Um `timer` objeto pode ser de repetição ou não-repetição. Para criar um temporizador de repetição, passe **verdadeira** para o `_Repeating` parâmetro ao chamar o construtor. Caso contrário, passe **falsos** para o `_Repeating` parâmetro para criar um timer de não repetição. Se o temporizador está repetindo, ele envia a mesma mensagem para seu destino depois de cada intervalo.
 
 Cria a biblioteca de agentes `timer` objetos no estado não-started. Para iniciar um objeto de timer, chame o [concurrency::timer::start](reference/timer-class.md#start) método. Para interromper uma `timer` do objeto, destruir o objeto ou uma chamada a [concurrency::timer::stop](reference/timer-class.md#stop) método. Para pausar um temporizador de repetição, chame o [concurrency::timer::pause](reference/timer-class.md#pause) método.
 

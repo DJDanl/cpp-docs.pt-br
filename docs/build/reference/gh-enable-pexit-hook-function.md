@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 489ff00571c79d89c9e807f0d8796989e7a0f84f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e9b8ee4c80310c4d94ed432d48ee9702c41f80bf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714982"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161782"
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH (habilitar função de gancho _pexit)
 
@@ -43,7 +43,7 @@ O `_pexit` função não faz parte de qualquer biblioteca e cabe a você fornece
 A menos que você planeja chamar explicitamente `_pexit`, você não precisa fornecer um protótipo. A função deve aparecer como se tivesse o protótipo a seguir, e ele deve enviar por push o conteúdo de todos os registros na entrada e pop o conteúdo inalterado na saída:
 
 ```
-void __declspec(naked) _cdecl _pexit( void );
+void __declspec(naked) __cdecl _pexit( void );
 ```
 
 `_pexit` é semelhante à `_penter`; consulte [/Gh (habilitar penter função de gancho)](../../build/reference/gh-enable-penter-hook-function.md) para obter um exemplo de como escrever um `_pexit` função.

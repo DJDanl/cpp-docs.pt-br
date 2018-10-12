@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1cedafaea33ac642e3a5593468b996f2442bd50
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 47504b7a471dc38f30e4ceb59b5feeffcc53db6d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894558"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161822"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Chamando funções DLL a partir de aplicativos Visual Basic
 
@@ -33,7 +33,7 @@ Para aplicativos Visual Basic (ou aplicativos em outras linguagens como Pascal o
 
 `__stdcall` cria a convenção de chamada correta para a função (a função chamada limpa a pilha e os parâmetros são passados da direita para esquerda), mas adorna o nome da função de maneira diferente. Assim, quando **dllexport** é usado em uma função exportada em uma DLL, o nome decorado é exportado.
 
-O `__stdcall` decoração de nome Prefixa o nome de símbolo com um sublinhado (_) e acrescenta o símbolo com um sinal de arroba (**\@**) caractere seguido pelo número de bytes na lista de argumentos (o espaço de pilha necessário). Como resultado, a função quando declarada como:
+O `__stdcall` decoração de nome Prefixa o nome de símbolo com um sublinhado ( **\_** ) e acrescenta o símbolo com um sinal de arroba (**\@**) caractere seguido pelo número de bytes na lista de argumentos (o espaço de pilha necessário). Como resultado, a função quando declarada como:
 
 ```C
 int __stdcall func (int a, double b)
@@ -45,7 +45,7 @@ A convenção de chamada C (`__cdecl`) decora o nome como `_func`.
 
 Para obter o nome decorado, use [/Map](../build/reference/map-generate-mapfile.md). Uso de **dllexport** faz o seguinte:
 
-- Se a função será exportada com a convenção de chamada C (**cdecl**), ele tira o sublinhado (_) quando o nome é exportado.
+- Se a função será exportada com a convenção de chamada C (`__cdecl`), ele tira o sublinhado ( **\_** ) quando o nome é exportado.
 
 - Se a função que está sendo exportada não usa a convenção de chamada C (por exemplo, `__stdcall`), ele exporta o nome decorado.
 

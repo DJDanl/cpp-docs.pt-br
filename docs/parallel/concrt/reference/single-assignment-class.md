@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13ddf5a303096d3244f6b8b59e58bcb41bafe91f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ee06d9a30339a72bd7137db6f277a1eb41028d50
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374256"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163082"
 ---
 # <a name="singleassignment-class"></a>Classe single_assignment
 
@@ -158,7 +158,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o bloco tiver recebido um valor, `false` caso contrário.
+**Verdadeiro** se o bloco tiver recebido um valor **falso** caso contrário.
 
 ##  <a name="link_target_notification"></a> link_target_notification
 
@@ -236,11 +236,11 @@ O `runtime_object_identity` do `message` do objeto que está sendo reservado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se a mensagem foi reservada com êxito, `false` caso contrário.
+**Verdadeiro** se a mensagem foi reservada com êxito, **falso** caso contrário.
 
 ### <a name="remarks"></a>Comentários
 
-Após `reserve` é chamado, se ele retornar `true`, ambos `consume` ou `release` deve ser chamado para executar ou liberar a propriedade da mensagem.
+Após `reserve` é chamado, se ele retorna **verdadeiro**, ambos `consume` ou `release` deve ser chamado para executar ou liberar a propriedade da mensagem.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 

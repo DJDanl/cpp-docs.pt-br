@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20da45d6161f76043c3d06f027192726c3520f44
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 668365cf69fc3457efc615a5fa0da2c24b3cb02e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102545"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162380"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Classe Platform::Collections::VectorIterator
 
@@ -124,7 +124,7 @@ A primeira sintaxe diminui e, em seguida, retorna o VectorIterator atual. A segu
 
 A primeira sintaxe de VectorIterator pré-diminui o VectorIterator atual.
 
-A segunda sintaxe pós-diminui o VectorIterator atual. O `int` tipo na segunda sintaxe indica uma operação de pós-diminuição, não um operando de inteiro real.
+A segunda sintaxe pós-diminui o VectorIterator atual. O tipo `int` na segunda sintaxe indica uma operação de pós-diminuição, não um operando de inteiro real.
 
 ## <a name="operator-dereference"></a>  Operador vectoriterator::\* operador
 
@@ -157,7 +157,7 @@ Outro VectorIterator.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o VectorIterator atual for igual a `other`; caso contrário, `false`.
+**Verdadeiro** se o VectorIterator atual for igual a *outras*; caso contrário, **false**.
 
 ## <a name="operator-greater-than"></a>  Operador vectoriterator::&gt; operador
 
@@ -176,7 +176,7 @@ Outro VectorIterator.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o VectorIterator atual for maior que `other`; caso contrário, `false`.
+**Verdadeiro** se o VectorIterator atual for maior que *outras*; caso contrário, **false**.
 
 ## <a name="operator-greater-than-or-equals"></a>  Operador vectoriterator::&gt;Operator =
 
@@ -195,7 +195,7 @@ Outro VectorIterator.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o VectorIterator for maior ou igual ao `other`; caso contrário, `false`.
+**Verdadeiro** se o VectorIterator atual é maior que ou igual a *outras*; caso contrário, **false**.
 
 ## <a name="operator-increment"></a>  Operador vectoriterator:: + + operador
 
@@ -235,7 +235,7 @@ Outro VectorIterator.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o VectorIterator atual não for igual a `other`; caso contrário, `false`.
+**Verdadeiro** se o VectorIterator atual não for igual a *outras*; caso contrário, **false**.
 
 ## <a name="operator-less-than"></a>  Operador vectoriterator::&lt; operador
 
@@ -254,7 +254,7 @@ Outro VectorIterator.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o VectorIterator atual for menor que `other`; caso contrário, `false`.
+**Verdadeiro** se o VectorIterator atual for menor que *outras*; caso contrário, **false**.
 
 ## <a name="operator-less-than-or-equals"></a>  Operador vectoriterator::&lt;Operator =
 
@@ -273,7 +273,7 @@ Outro VectorIterator.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o VectorIterator atual é menor que ou igual a `other`; caso contrário, `false`.
+**Verdadeiro** se o VectorIterator atual é menor que ou igual a *outras*; caso contrário, **false**.
 
 ## <a name="operator-minus"></a>  Operador vectoriterator:: Operator-
 
@@ -298,7 +298,7 @@ Outro VectorIterator.
 
 ### <a name="return-value"></a>Valor de retorno
 
-A primeira sintaxe do operador retorna um objeto VectorIterator que é `n` elementos menos o VectorIterator atual. A segunda sintaxe do operador retorna o número de elementos entre atual e o `other` VectorIterator.
+A primeira sintaxe do operador retorna um objeto VectorIterator que corresponde a elementos `n`, menos o VectorIterator atual. A segunda sintaxe do operador retorna o número de elementos entre o VectorIterator atual e `other`.
 
 ## <a name="operator-plus-assign"></a>  Operador vectoriterator:: + = operador
 

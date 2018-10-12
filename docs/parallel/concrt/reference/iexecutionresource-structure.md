@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 912cdb59a1841bbe3bbe3e71202a796a3e67a94e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 642b73f81146fa8df68d36ee3b63b1902ed66619
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390248"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162393"
 ---
 # <a name="iexecutionresource-structure"></a>Estrutura IExecutionResource
 
@@ -79,7 +79,7 @@ O nível de assinatura atual.
 
 O nível de assinatura informa quantos threads em execução estão associados com o thread de hardware. Isso inclui apenas os threads que o Gerenciador de recursos está ciente de na forma de segmentos assinados e raízes de processador virtual que estão em execução ativamente a proxies de thread.
 
-Chamar o método [ischedulerproxy:: Subscribecurrentthread](ischedulerproxy-structure.md#subscribecurrentthread), ou o método [ischedulerproxy:: Requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) com o parâmetro `doSubscribeCurrentThread` definido como o valor `true`incrementa o nível de assinatura de um thread de hardware em um. Eles também retornam um `IExecutionResource` interface que representa a assinatura. Uma chamada correspondente para o [iexecutionresource:: remove](#remove) diminui nível de assinatura do thread de hardware por um.
+Chamar o método [ischedulerproxy:: Subscribecurrentthread](ischedulerproxy-structure.md#subscribecurrentthread), ou o método [ischedulerproxy:: Requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) com o parâmetro `doSubscribeCurrentThread` definido como o valor **verdadeiro** incrementa o nível de assinatura de um thread de hardware em um. Eles também retornam um `IExecutionResource` interface que representa a assinatura. Uma chamada correspondente para o [iexecutionresource:: remove](#remove) diminui nível de assinatura do thread de hardware por um.
 
 O ato de ativação de uma raiz de processador virtual usando o método [ivirtualprocessorroot:: Activate](ivirtualprocessorroot-structure.md#activate) incrementa o nível de assinatura de um thread de hardware em um. Os métodos [ivirtualprocessorroot:: Deactivate](ivirtualprocessorroot-structure.md#deactivate), ou [iexecutionresource:: remove](#remove) diminuir o nível de assinatura por um quando invocado em uma raiz de processador virtual ativado.
 

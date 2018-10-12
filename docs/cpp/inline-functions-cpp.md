@@ -1,7 +1,7 @@
 ---
 title: Funções embutidas (C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -9,6 +9,10 @@ f1_keywords:
 - __forceinline_cpp
 - __inline_cpp
 - inline_cpp
+- __inline
+- _inline
+- __forceinline
+- _forceinline
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31738407b788f69998681442f15a8f1c104477a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 21f3d74a7b640e203a8a5882710849c98ba5b40f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017815"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163578"
 ---
 # <a name="inline-functions-c"></a>Funções embutidas (C++)
 
@@ -84,7 +88,7 @@ O uso das funções embutidas pode fazer com que seu programa seja mais rápido 
 
 O compilador trata as opções de expansão embutida e as palavras-chave como sugestões. Não há garantia de que as funções serão embutidas. Você não pode forçar o compilador a embutir uma função específica, mesmo com o **forceinline** palavra-chave. Ao compilar com **/clr**, o compilador não embutirá uma função se houver atributos de segurança aplicados à função.
 
-O **embutido** palavra-chave está disponível apenas no C++. O **inline** e **forceinline** palavras-chave estão disponíveis em C e C++. Para compatibilidade com versões anteriores, **inline** é um sinônimo de **inline**.
+O **embutido** palavra-chave está disponível apenas no C++. O **inline** e **forceinline** palavras-chave estão disponíveis em C e C++. Para compatibilidade com versões anteriores, **inline** e **_forceinline** são sinônimos do **inline**, e **forceinline** , a menos que opção de compilador [/Za \(desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) for especificado.
 
 O **embutido** palavra-chave informa ao compilador que a expansão embutida é preferida. No entanto, o compilador pode criar uma instância separada da função (uma instância) e criar vínculos de chamada padrão em vez de inserir o código embutido. Os dois casos em que isso pode acontecer são:
 

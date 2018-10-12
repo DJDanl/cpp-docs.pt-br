@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 039f69f31c5a92cf07f96442c30bd59b0cc6f40e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9d38b8415b5ca214800c968d186f37c020dce6dc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414570"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163953"
 ---
 # <a name="choice-class"></a>Classe choice
 
@@ -216,7 +216,7 @@ Um ponteiro para o `message` do objeto que o chamador agora tem a propriedade do
 
 ### <a name="remarks"></a>Comentários
 
-O `consume` método é semelhante ao `accept`, mas sempre deve ser precedido por uma chamada para `reserve` que retornado `true`.
+O `consume` método é semelhante ao `accept`, mas sempre deve ser precedido por uma chamada para `reserve` que retornado **true**.
 
 ##  <a name="has_value"></a> has_value
 
@@ -229,7 +229,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o bloco tiver recebido um valor, `false` caso contrário.
+**Verdadeiro** se o bloco tiver recebido um valor **falso** caso contrário.
 
 ##  <a name="index"></a> Índice
 
@@ -315,7 +315,7 @@ Um ponteiro para o bloco de destino que está chamando o `reserve` método.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se a mensagem foi reservada com êxito, `false` caso contrário. As reservas podem falhar por vários motivos, incluindo: a mensagem já foi reservada ou aceito por outro destino, a fonte pode negar reservas e assim por diante.
+**Verdadeiro** se a mensagem foi reservada com êxito, **falso** caso contrário. As reservas podem falhar por vários motivos, incluindo: a mensagem já foi reservada ou aceito por outro destino, a fonte pode negar reservas e assim por diante.
 
 ### <a name="remarks"></a>Comentários
 

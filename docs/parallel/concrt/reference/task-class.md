@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40a98bd546f29cd42629ad991866a85a86852c9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bac539fc2826b5628769126d9802688c01f01c7b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399295"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163199"
 ---
 # <a name="task-class-concurrency-runtime"></a>Classe task (Tempo de Execução de Simultaneidade)
 
@@ -134,7 +134,7 @@ bool is_apartment_aware() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se a tarefa desempacotar uma `IAsyncInfo` interface ou é descendente de tal tarefa, `false` caso contrário.
+**True** se a tarefa desempacotar uma `IAsyncInfo` interface ou é descendente de tal tarefa **falso** caso contrário.
 
 ##  <a name="is_done"></a>  Task:: is_done (tempo de execução de simultaneidade) do método
 
@@ -169,7 +169,7 @@ A tarefa a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se os objetos se referirem a tarefas subjacentes diferentes, e `false` caso contrário.
+**Verdadeiro** se os objetos se referirem a tarefas subjacentes diferentes, e **falso** caso contrário.
 
 ##  <a name="operator_eq"></a> operador =
 
@@ -209,7 +209,7 @@ A tarefa a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se os objetos se referirem à mesma tarefa subjacente, e `false` caso contrário.
+**Verdadeiro** se os objetos se referirem à mesma tarefa subjacente, e **falso** caso contrário.
 
 ##  <a name="scheduler"></a>  Task:: Scheduler (tempo de execução de simultaneidade) do método
 

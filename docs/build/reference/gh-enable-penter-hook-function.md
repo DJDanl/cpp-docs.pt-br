@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 231eed17f155b9ec184e0cf4fe3bd91e7770a7f4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 608472f3133464137d2d0f96128453e4239b16a2
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716841"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162081"
 ---
 # <a name="gh-enable-penter-hook-function"></a>/Gh (habilitar função de gancho _penter)
 
@@ -43,7 +43,7 @@ O `_penter` função não faz parte de qualquer biblioteca e cabe a você fornec
 A menos que você planeja chamar explicitamente `_penter`, você não precisa fornecer um protótipo. A função deve aparecer como se tivesse o protótipo a seguir, e ele deve enviar por push o conteúdo de todos os registros na entrada e pop o conteúdo inalterado na saída:
 
 ```
-void __declspec(naked) _cdecl _penter( void );
+void __declspec(naked) __cdecl _penter( void );
 ```
 
 Essa declaração não está disponível para projetos de 64 bits.
@@ -66,7 +66,7 @@ Essa declaração não está disponível para projetos de 64 bits.
 
 O código a seguir, quando compilado com **/Gh**, mostra como `_penter` é chamado duas vezes; uma vez ao Inserir função `main` uma vez ao Inserir função `x`.
 
-```
+```cpp
 // Gh_compiler_option.cpp
 // compile with: /Gh
 // processor: x86
@@ -77,7 +77,7 @@ int main() {
    x();
 }
 
-extern "C" void __declspec(naked) _cdecl _penter( void ) {
+extern "C" void __declspec(naked) __cdecl _penter( void ) {
    _asm {
       push eax
       push ebx

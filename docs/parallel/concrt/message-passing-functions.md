@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0b7a7afb25d46fa3b521353c4577fbed66e69fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7435bdbc4d5959771a1f80e2ad12f038a8157bae
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436982"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162276"
 ---
 # <a name="message-passing-functions"></a>Funções de transmissão de mensagem
 
@@ -41,9 +41,9 @@ Este tópico descreve as funções de transmissão de mensagens a seguir:
 
 O [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) função envia uma mensagem para o destino especificado forma síncrona e o [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend) função envia uma mensagem para o destino especificado de forma assíncrona. Tanto a `send` e `asend` funções Aguarde até que o destino indica que eventualmente irá aceitar ou recusar a mensagem.
 
-O `send` função aguarda até que o destino aceita ou rejeita a mensagem antes de retornar. O `send` retornos de função `true` se a mensagem foi entregue e `false` caso contrário. Porque o `send` função funciona de forma síncrona, o `send` função aguarda o destino receber a mensagem antes de retornar.
+O `send` função aguarda até que o destino aceita ou rejeita a mensagem antes de retornar. O `send` retornos de função **verdadeira** se a mensagem foi entregue e **falso** caso contrário. Porque o `send` função funciona de forma síncrona, o `send` função aguarda o destino receber a mensagem antes de retornar.
 
-Por outro lado, o `asend` função não espera até que o destino aceitar ou recusar a mensagem antes de retornar. Em vez disso, o `asend` retornos de função `true` se o destino aceita a mensagem e, eventualmente, colocá-lo. Caso contrário, `asend` retorna `false` para indicar que o destino recusou a mensagem ou adiada a decisão sobre se deve pegar a mensagem.
+Por outro lado, o `asend` função não espera até que o destino aceitar ou recusar a mensagem antes de retornar. Em vez disso, o `asend` retornos de função **verdadeiro** se o destino aceita a mensagem e, eventualmente, colocá-lo. Caso contrário, `asend` retorna **falso** para indicar que o destino recusou a mensagem ou adiada a decisão sobre se deve pegar a mensagem.
 
 [[Superior](#top)]
 

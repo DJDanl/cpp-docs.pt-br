@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28bedc703a8fa965b5380cb8c7eba840d07f7772
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d5ad7d0210f99b1b1aa5c481ed1b8695c68fb311
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396929"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163381"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Práticas recomendadas na Biblioteca de Padrões Paralelos
 
@@ -180,7 +180,7 @@ Quando possível, não execute operações de bloqueio antes de chamar o [concur
 
 Quando uma tarefa executa a operação de bloqueio cooperativo, o tempo de execução pode executar outro trabalho enquanto a primeira tarefa aguarda os dados. O tempo de execução reagendará a tarefa de espera quando ele desbloqueia. Normalmente, o tempo de execução reagenda as tarefas que foram desbloqueadas mais recentemente, antes de ele reagenda as tarefas que foram desbloqueadas menos recentemente. Portanto, o tempo de execução foi possível agendar o trabalho desnecessário durante a operação de bloqueio, o que leva à redução do desempenho. Da mesma forma, quando você executa uma operação de bloqueio antes de cancelar o trabalho paralelo, a operação de bloqueio pode atrasar a chamada para `cancel`. Isso faz com que outras tarefas executar o trabalho desnecessário.
 
-Considere o seguinte exemplo define o `parallel_find_answer` função, que pesquisa um elemento da matriz fornecida que satisfaz a função de predicado fornecida. Quando a função de predicado retorna `true`, a função de trabalho paralela cria um `Answer` de objeto e cancela a tarefa geral.
+Considere o seguinte exemplo define o `parallel_find_answer` função, que pesquisa um elemento da matriz fornecida que satisfaz a função de predicado fornecida. Quando a função de predicado retorna **verdadeira**, a função de trabalho paralela cria um `Answer` de objeto e cancela a tarefa geral.
 
 [!code-cpp[concrt-blocking-cancel#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_13.cpp)]
 

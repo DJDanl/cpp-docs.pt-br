@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d45bd056bff41832a98c7936510d22a321891fd0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 36e0421e002efbcabc4c4525ddcf592258f6f7d1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102033"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163693"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Classe Platform::Collections::VectorViewIterator
 
@@ -123,7 +123,7 @@ A primeira sintaxe diminui e, em seguida, retorna o VectorViewIterator atual. A 
 
 A primeira sintaxe de VectorViewIterator pré-diminui o VectorViewIterator atual.
 
-A segunda sintaxe pós-diminui o VectorViewIterator atual. O `int` tipo na segunda sintaxe indica uma operação de pós-diminuição, não um operando de inteiro real.
+A segunda sintaxe pós-diminui o VectorViewIterator atual. O tipo `int` na segunda sintaxe indica uma operação de pós-diminuição, não um operando de inteiro real.
 
 ## <a name="operator-dereference"></a>  Operador vectorviewiterator::\* operador
 
@@ -156,7 +156,7 @@ Outro VectorViewIterator.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o VectorViewIterator atual for igual a `other`; caso contrário, `false`.
+**Verdadeiro** se o atual `VectorViewIterator` é igual a *outras*; caso contrário, **false**.
 
 ## <a name="operator-greater-than"></a>  Operador vectorviewiterator::&gt; operador
 
@@ -176,11 +176,11 @@ Outro VectorViewIterator.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o VectorViewIterator atual for maior que `other`; caso contrário, `false`.
+**Verdadeiro** se o VectorViewIterator atual for maior que *outras*; caso contrário, **false**.
 
 ## <a name="operator-greater-than-or-equals"></a>  Operador vectorviewiterator::&gt;Operator =
 
-Indica se o VectorViewIterator atual é maior ou igual ao VectorViewIterator especificado.
+Indica se o atual `VectorViewIterator` é maior que ou igual ao especificado `VectorViewIterator`.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -196,7 +196,7 @@ Outro VectorViewIterator.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o VectorViewIterator for maior ou igual ao `other`; caso contrário, `false`.
+**Verdadeiro** se atual `VectorViewIterator` é maior que ou igual a *outras*; caso contrário, **false**.
 
 ## <a name="operator-increment"></a>  Operador vectorviewiterator:: + + operador
 
@@ -237,7 +237,7 @@ Outro VectorViewIterator.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o VectorViewIterator atual não é igual a `other`; caso contrário, `false`.
+**Verdadeiro** se o atual `VectorViewIterator` não é igual a *outras*; caso contrário, **false**.
 
 ## <a name="operator-less-than"></a>  Operador vectorviewiterator::&lt; operador
 
@@ -252,15 +252,15 @@ bool operator<(const VectorViewIterator& other) const;
 ### <a name="parameters"></a>Parâmetros
 
 *other*<br/>
-Outro VectorIterator.
+Outro `VectorIterator`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o VectorIterator atual for menor que `other`; caso contrário, `false`.
+**Verdadeiro** se o atual `VectorIterator` é menor que *outras*; caso contrário, **false**.
 
 ## <a name="operator-less-than-or-equals"></a>  Operador vectorviewiterator::&lt;Operator =
 
-Indica se o VectorIterator atual é menor ou igual a um VectorIterator especificado.
+Indica se o atual `VectorIterator` é menor que ou igual a um especificado `VectorIterator`.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -272,11 +272,11 @@ bool operator<=(const VectorViewIterator& other) const;
 ### <a name="parameters"></a>Parâmetros
 
 *other*<br/>
-Outro VectorIterator.
+Outro `VectorIterator`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o VectorIterator atual é menor que ou igual a `other`; caso contrário, `false`.
+**Verdadeiro** se o atual `VectorIterator` é menor que ou igual a *outras*; caso contrário, **false**.
 
 ## <a name="operator-minus"></a>  Operador vectorviewiterator:: Operator-
 

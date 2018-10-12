@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c4ada69fcd687d63022d0527ddf8da43906c483
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8fe26b202dbe9aabc1ccf98a59ead6c51c498fc1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412009"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163706"
 ---
 # <a name="itarget-class"></a>Classe ITarget
 
@@ -67,7 +67,7 @@ O tipo de dados da carga de mensagens é aceito pelo bloco de destino.
 |----------|-----------------|
 |[propagate](#propagate)|Quando substituído em uma classe derivada, assincronamente transmite uma mensagem de um bloco de código-fonte para este bloco de destino.|
 |[send](#send)|Quando substituído em uma classe derivada, passa forma síncrona uma mensagem para o bloco de destino.|
-|[supports_anonymous_source](#supports_anonymous_source)|Quando substituído em uma classe derivada, retorna true ou false dependendo se o bloco de mensagens aceite mensagens oferecidas por uma fonte que não está vinculada a ele. Se o método substituído retornar `true`, o destino não for possível adiar uma mensagem oferecida, como a origem a ser identificados no seu registro do link sourse requer o consumo de uma mensagem adiada em um momento posterior.|
+|[supports_anonymous_source](#supports_anonymous_source)|Quando substituído em uma classe derivada, retorna true ou false dependendo se o bloco de mensagens aceite mensagens oferecidas por uma fonte que não está vinculada a ele. Se o método substituído retornar **verdadeira**, o destino não for possível adiar uma mensagem oferecida, como a origem a ser identificados no seu registro do link sourse requer o consumo de uma mensagem adiada em um momento posterior.|
 
 ### <a name="protected-methods"></a>Métodos Protegidos
 
@@ -174,7 +174,7 @@ Quando `send` retorna, a mensagem seja já foi aceita e transferida para o bloco
 
 ##  <a name="supports_anonymous_source"></a> supports_anonymous_source
 
-Quando substituído em uma classe derivada, retorna true ou false dependendo se o bloco de mensagens aceite mensagens oferecidas por uma fonte que não está vinculada a ele. Se o método substituído retornar `true`, o destino não for possível adiar uma mensagem oferecida, como a origem a ser identificados no seu registro do link sourse requer o consumo de uma mensagem adiada em um momento posterior.
+Quando substituído em uma classe derivada, retorna true ou false dependendo se o bloco de mensagens aceite mensagens oferecidas por uma fonte que não está vinculada a ele. Se o método substituído retornar **verdadeira**, o destino não for possível adiar uma mensagem oferecida, como a origem a ser identificados no seu registro do link sourse requer o consumo de uma mensagem adiada em um momento posterior.
 
 ```
 virtual bool supports_anonymous_source();
@@ -182,7 +182,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o bloco pode aceitar a mensagem de uma fonte que não está vinculada a ele `false` caso contrário.
+**Verdadeiro** se o bloco pode aceitar a mensagem de uma fonte que não está vinculada a ele **falso** caso contrário.
 
 ##  <a name="unlink_source"></a> unlink_source
 

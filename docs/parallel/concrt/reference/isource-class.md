@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f39b9fff9d5fad930123fc930afe1600cd259e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e53f8999b4559a221b335528ec20b6034de269d3
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396459"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162198"
 ---
 # <a name="isource-class"></a>Classe ISource
 
@@ -158,7 +158,7 @@ Um ponteiro para o `message` do objeto que o chamador agora tem a propriedade do
 
 ### <a name="remarks"></a>Comentários
 
-O `consume` método é semelhante ao `accept`, mas sempre deve ser precedido por uma chamada para `reserve` que retornado `true`.
+O `consume` método é semelhante ao `accept`, mas sempre deve ser precedido por uma chamada para `reserve` que retornado **true**.
 
 ##  <a name="dtor"></a> ~ ISource
 
@@ -236,7 +236,7 @@ Um ponteiro para o bloco de destino que está chamando o `reserve` método.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se a mensagem foi reservada com êxito, `false` caso contrário. As reservas podem falhar por vários motivos, incluindo: a mensagem já foi reservada ou aceito por outro destino, a fonte pode negar reservas e assim por diante.
+**Verdadeiro** se a mensagem foi reservada com êxito, **falso** caso contrário. As reservas podem falhar por vários motivos, incluindo: a mensagem já foi reservada ou aceito por outro destino, a fonte pode negar reservas e assim por diante.
 
 ### <a name="remarks"></a>Comentários
 

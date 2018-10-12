@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9eb820b533b74d5634695ddabda26f081a35f95
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8065be6cc53cad04d5d52bea91da05bb3125dd63
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436917"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162562"
 ---
 # <a name="concurrency-namespace-operators"></a>Operadores do namespace de simultaneidade
 
@@ -151,7 +151,7 @@ Um objeto do tipo `concurrent_vector`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o vetor simultâneo no lado esquerdo do operador é igual ao vetor simultâneo no lado direito do operador; Caso contrário, `false`.
+**Verdadeiro** se o vetor simultâneo no lado esquerdo do operador é igual ao vetor simultâneo no lado direito do operador; caso contrário **falso**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -189,7 +189,7 @@ Um objeto do tipo `concurrent_vector`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se os vetores simultâneos não forem iguais; `false` se os vetores simultâneos são iguais.
+**True** se os vetores simultâneos não forem iguais; **falsos** se os vetores simultâneos são iguais.
 
 ### <a name="remarks"></a>Comentários
 
@@ -227,7 +227,7 @@ Um objeto do tipo `concurrent_vector`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o vetor simultâneo no lado esquerdo do operador for menor que o vetor simultâneo no lado direito do operador; Caso contrário, `false`.
+**Verdadeiro** se o vetor simultâneo no lado esquerdo do operador for menor que o vetor simultâneo no lado direito do operador; caso contrário **falso**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -265,7 +265,7 @@ Um objeto do tipo `concurrent_vector`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o vetor simultâneo no lado esquerdo do operador é menor ou igual ao vetor à direita do operador; simultâneo Caso contrário, `false`.
+**Verdadeiro** se o vetor simultâneo no lado esquerdo do operador for menor que ou igual ao vetor simultâneo no lado direito do operador; caso contrário **falso**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -303,7 +303,7 @@ Um objeto do tipo `concurrent_vector`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o vetor simultâneo no lado esquerdo do operador for maior que o vetor simultâneo no lado direito do operador; Caso contrário, `false`.
+**Verdadeiro** se o vetor simultâneo no lado esquerdo do operador for maior que o vetor simultâneo no lado direito do operador; caso contrário **falso**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -341,7 +341,7 @@ Um objeto do tipo `concurrent_vector`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o vetor simultâneo no lado esquerdo do operador é maior que ou igual ao vetor à direita do operador; simultâneo Caso contrário, `false`.
+**Verdadeiro** se o vetor simultâneo no lado esquerdo do operador for maior que ou igual ao vetor simultâneo no lado direito do operador; caso contrário **falso**.
 
 ### <a name="remarks"></a>Comentários
 

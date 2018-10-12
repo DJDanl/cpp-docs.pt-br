@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f5b84020d9428066bdadfff53500d671233f07d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f4a184e0fee76f3aa5bb8f7729250c03b10b9dfc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386713"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163485"
 ---
 # <a name="sourceblock-class"></a>Classe source_block
 
@@ -237,7 +237,7 @@ O método lança um [invalid_argument](../../../standard-library/invalid-argumen
 
 O método lança um [bad_target](bad-target-class.md) exceção se o parâmetro `_PTarget` não representa o destino de chamada `reserve`.
 
-O `consume` método é semelhante ao `accept`, mas sempre deve ser precedido por uma chamada para `reserve` que retornado `true`.
+O `consume` método é semelhante ao `accept`, mas sempre deve ser precedido por uma chamada para `reserve` que retornado **true**.
 
 ##  <a name="consume_message"></a> consume_message
 
@@ -427,7 +427,7 @@ Um ponteiro para o bloco de destino que está chamando o `reserve` método.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se a mensagem foi reservada com êxito, `false` caso contrário. As reservas podem falhar por vários motivos, incluindo: a mensagem já foi reservada ou aceito por outro destino, a fonte pode negar reservas e assim por diante.
+**Verdadeiro** se a mensagem foi reservada com êxito, **falso** caso contrário. As reservas podem falhar por vários motivos, incluindo: a mensagem já foi reservada ou aceito por outro destino, a fonte pode negar reservas e assim por diante.
 
 ### <a name="remarks"></a>Comentários
 
@@ -450,11 +450,11 @@ O `runtime_object_identity` do `message` do objeto que está sendo reservado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se a mensagem foi reservada com êxito, `false` caso contrário.
+**Verdadeiro** se a mensagem foi reservada com êxito, **falso** caso contrário.
 
 ### <a name="remarks"></a>Comentários
 
-Após `reserve` é chamado, se ele retornar `true`, ambos `consume` ou `release` deve ser chamado para executar ou liberar a propriedade da mensagem.
+Após `reserve` é chamado, se ele retorna **verdadeiro**, ambos `consume` ou `release` deve ser chamado para executar ou liberar a propriedade da mensagem.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 

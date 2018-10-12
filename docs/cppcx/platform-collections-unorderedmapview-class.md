@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4acecf3697b793d52079d4f55176717e3f6f2d5c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 4d4638bafdf512caf7eeff6b95e53f9f0b1adeea
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109921"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163927"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Classe Platform::Collections::UnorderedMapView
 
@@ -112,7 +112,7 @@ A chave usada para localizar o elemento. O tipo de `key` é o typename *K*.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se a chave for encontrada; caso contrário, `false`.
+**Verdadeiro** se a chave for encontrada; caso contrário, **falso**.
 
 ## <a name="lookup"></a>  Método UnorderedMapView::Lookup
 

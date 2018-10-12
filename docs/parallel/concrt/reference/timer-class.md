@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b821dcc3426c6e1d9f3cd2f2ff8eb057197ca8d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e37348fe92354d2ea7be3168dc5b3c9aee9fcd63
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416195"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163088"
 ---
 # <a name="timer-class"></a>Classe timer
 
@@ -193,11 +193,11 @@ O `runtime_object_identity` do `message` do objeto que está sendo reservado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se a mensagem foi reservada com êxito, `false` caso contrário.
+**Verdadeiro** se a mensagem foi reservada com êxito, **falso** caso contrário.
 
 ### <a name="remarks"></a>Comentários
 
-Após `reserve` é chamado, se ele retornar `true`, ambos `consume` ou `release` deve ser chamado para executar ou liberar a propriedade da mensagem.
+Após `reserve` é chamado, se ele retorna **verdadeiro**, ambos `consume` ou `release` deve ser chamado para executar ou liberar a propriedade da mensagem.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 

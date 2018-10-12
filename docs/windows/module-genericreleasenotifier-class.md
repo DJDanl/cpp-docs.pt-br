@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18aeac7767fbd4c1688b202670a812e5738ef62f
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: ad7081e22762409682250da0330575885378e8ab
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494420"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161873"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Classe Module::GenericReleaseNotifier
 
@@ -99,11 +99,11 @@ GenericReleaseNotifier(
 
 ### <a name="parameters"></a>Parâmetros
 
-*retorno de chamada*  
+*retorno de chamada*<br/>
 Um lambda, functor ou manipulador de eventos de ponteiro para função que pode ser chamado com o operador de parênteses (`()`).
 
-*release*  
-Especificar `true` para habilitar a chamada subjacente [Module:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) método; caso contrário, especifique `false`.
+*release*<br/>
+Especificar **verdadeira** para habilitar a chamada subjacente [Module:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) método; caso contrário, especifique **false**.
 
 ## <a name="genericreleasenotifier-invoke"></a>Module:: genericreleasenotifier:: Invoke
 

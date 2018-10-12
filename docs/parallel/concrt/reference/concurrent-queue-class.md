@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41e4c6f3a540f44f6cec0d94ffab74d65a1ffe52
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7f8f864dcbf412b9dea0d96f6a0ba046792d7827
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386581"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162965"
 ---
 # <a name="concurrentqueue-class"></a>Classe concurrent_queue
 
@@ -177,7 +177,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se a fila simultânea estava vazia no momento em que procuramos, `false` caso contrário.
+**Verdadeiro** se a fila simultânea estava vazia no momento em que procuramos, **falso** caso contrário.
 
 ### <a name="remarks"></a>Comentários
 
@@ -229,11 +229,11 @@ Uma referência a um local para armazenar o item da fila.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se um item tiver sido com êxito da fila, `false` caso contrário.
+**Verdadeiro** se um item tiver sido com êxito da fila **falso** caso contrário.
 
 ### <a name="remarks"></a>Comentários
 
-Se um item tiver sido da fila com êxito, o parâmetro `_Dest` recebe o valor da fila, o valor original mantido na fila é destruído, e essa função retorna `true`. Se não houvesse nenhum item para remover da fila, essa função retorna `false` sem bloqueio e o conteúdo do `_Dest` parâmetro são indefinidos.
+Se um item tiver sido da fila com êxito, o parâmetro `_Dest` recebe o valor da fila, o valor original mantido na fila é destruído, e essa função retornará **verdadeiro**. Se não houvesse nenhum item para remover da fila, essa função retorna `false` sem bloqueio e o conteúdo do `_Dest` parâmetro são indefinidos.
 
 `try_pop` é seguro em simultaneidade em relação a chamadas para os métodos `push`, `try_pop`, e `empty`.
 

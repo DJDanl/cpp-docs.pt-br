@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26144fe1098e932512344550864c0949e5306238
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 174a168d6a22bca54fb00bf302cd7cbbc65cc961
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401700"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162328"
 ---
 # <a name="multilinkregistry-class"></a>Classe multi_link_registry
 
@@ -127,7 +127,7 @@ Um ponteiro para um bloco que deve ser pesquisado no `multi_link_registry` objet
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o bloco especificado foi encontrado, `false` caso contrário.
+**Verdadeiro** se o bloco especificado foi encontrado, **falso** caso contrário.
 
 ##  <a name="count"></a> Contagem
 
@@ -176,7 +176,7 @@ Um ponteiro para um bloco a ser removido, se encontrado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o link foi encontrado e removido, `false` caso contrário.
+**Verdadeiro** se o link foi encontrado e removido, **falso** caso contrário.
 
 ##  <a name="set_bound"></a> set_bound
 

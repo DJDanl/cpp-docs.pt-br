@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: eea3e1f54fa1c5e1c4313a9442e812770b0a6cdd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d0aee08fc59130e829d9448ba4f28a9823a461ed
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424723"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161769"
 ---
 # <a name="lockoperator-bool"></a>Bool lock::operator
 
@@ -40,17 +40,17 @@ operator bool();
 
 ## <a name="return-value"></a>Valor de retorno
 
-`true` Se um bloqueio for mantido, `false` caso contrário.
+**Verdadeiro** se um bloqueio for mantido, **falso** caso contrário.
 
 ## <a name="remarks"></a>Comentários
 
-Este operador converte realmente para `_detail_class::_safe_bool` que é mais segura do que `bool` porque ele não pode ser convertido em um tipo integral.
+Este operador converte realmente para `_detail_class::_safe_bool` que é mais segura do que **bool** porque ele não pode ser convertido em um tipo integral.
 
 ## <a name="example"></a>Exemplo
 
 Este exemplo usa uma única instância de uma classe entre vários threads.  A classe usa um bloqueio em si mesmo para garantir que os acessos a seus dados internos são consistentes para cada thread.  O thread do aplicativo principal usa um bloqueio na mesma instância da classe para verificar periodicamente para ver se os threads de trabalho ainda existem e esperas para sair até que todos os threads de trabalho concluir suas tarefas.
 
-```
+```cpp
 // msl_lock_op_bool.cpp
 // compile with: /clr
 #include <msclr/lock.h>

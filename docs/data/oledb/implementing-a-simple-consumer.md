@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 681aa3ef5a1434ab191854f23a9e7bc908b65728
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ce6f57846a0dcad79eead500286525e94c66a8e6
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082411"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162289"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementando um consumidor simples
 
@@ -34,17 +34,17 @@ Os tópicos a seguir mostram como editar os arquivos criados pelo Assistente de 
 - "Adicionando suporte a XML para o consumidor" mostra como modificar o código de consumidor para os dados recuperados do conjunto de linhas como dados XML de saída.  
   
 > [!NOTE]
->  Você pode usar o aplicativo do consumidor descrito nesta seção para testar os provedores de exemplo MyProv e provedor.  
+> Você pode usar o aplicativo do consumidor descrito nesta seção para testar os provedores de exemplo MyProv e provedor.  
   
 > [!NOTE]
->  Para criar um aplicativo de consumidor para testar MyProv (o mesmo provedor descrito em [melhorando o provedor somente leitura simples](../../data/oledb/enhancing-the-simple-read-only-provider.md)), você deve incluir suporte a indicadores, conforme descrito em "Adicionando suporte de indicador para o consumidor".  
+> Para criar um aplicativo de consumidor para testar MyProv (o mesmo provedor descrito em [melhorando o provedor somente leitura simples](../../data/oledb/enhancing-the-simple-read-only-provider.md)), você deve incluir suporte a indicadores, conforme descrito em "Adicionando suporte de indicador para o consumidor".  
   
 > [!NOTE]
->  Para criar um aplicativo de consumidor para testar o provedor, deixe de fora o suporte a indicadores descrito em "Adicionar indicador dão suporte para o consumidor" e vá para "Adicionando suporte a XML para o consumidor".  
+> Para criar um aplicativo de consumidor para testar o provedor, deixe de fora o suporte a indicadores descrito em "Adicionar indicador dão suporte para o consumidor" e vá para "Adicionando suporte a XML para o consumidor".  
   
 ## <a name="retrieving-data-with-the-consumer"></a>Recuperando dados com o consumidor  
   
-#### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Para modificar o aplicativo de console para usar o consumidor do OLE DB  
+### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Para modificar o aplicativo de console para usar o consumidor do OLE DB  
   
 1. No MyCons.cpp, altere o código principal inserindo o texto em negrito, da seguinte maneira:  
   
@@ -94,9 +94,9 @@ As etapas anteriores oferecem suporte a indicadores e um objeto de indicador com
 - A linha marcada com indicador, acrescentando-o ao final do arquivo de saída.  
   
 > [!NOTE]
->  Se você usar esse aplicativo de consumidor para testar o aplicativo de provedor de exemplo do provedor, deixe o suporte a indicadores descrito nesta seção.  
+> Se você usar esse aplicativo de consumidor para testar o aplicativo de provedor de exemplo do provedor, deixe o suporte a indicadores descrito nesta seção.  
   
-#### <a name="to-instantiate-the-bookmark"></a>Para instanciar o indicador  
+### <a name="to-instantiate-the-bookmark"></a>Para instanciar o indicador  
   
 1. O acessador deve conter um objeto do tipo [CBookmark](../../data/oledb/cbookmark-class.md). O *nSize* parâmetro especifica o tamanho do buffer indicador em bytes (normalmente 4 para plataformas de 32 bits) e 8 para plataformas de 64 bits. Adicione a seguinte declaração para os membros de dados de coluna na classe de registro de usuário:  
   
@@ -111,7 +111,7 @@ As etapas anteriores oferecem suporte a indicadores e um objeto de indicador com
        ...  
     ```  
   
-#### <a name="to-request-a-bookmark-column-from-the-provider"></a>Para solicitar uma coluna de indicador do provedor  
+### <a name="to-request-a-bookmark-column-from-the-provider"></a>Para solicitar uma coluna de indicador do provedor  
   
 1. Adicione o seguinte código no `GetRowsetProperties` método na classe de registro de usuário:  
   
@@ -125,7 +125,7 @@ As etapas anteriores oferecem suporte a indicadores e um objeto de indicador com
     }  
     ```  
   
-#### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Para adicionar uma entrada de indicador para o mapa de coluna  
+### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>Para adicionar uma entrada de indicador para o mapa de coluna  
   
 1. Adicione a seguinte entrada no mapa de coluna na classe de registro de usuário:  
   
@@ -139,7 +139,7 @@ As etapas anteriores oferecem suporte a indicadores e um objeto de indicador com
     END_COLUMN_MAP()  
     ```  
   
-#### <a name="to-use-a-bookmark-in-your-main-code"></a>Para usar um indicador em seu código principal  
+### <a name="to-use-a-bookmark-in-your-main-code"></a>Para usar um indicador em seu código principal  
   
 1. No arquivo MyCons.cpp do aplicativo de console que você criou anteriormente, altere o código principal para ler o seguinte. Para usar indicadores, o código principal precisa instanciar seu próprio objeto de indicador (`myBookmark`); isso é um indicador diferente no acessador (`m_bookmark`).  
   
@@ -184,7 +184,7 @@ As etapas anteriores oferecem suporte a indicadores e um objeto de indicador com
        {  
           nCounter++;  
           if(nCounter == 5 )  
-             myBookmark = rs.bookmark;  
+             myBookmark = rs.m_bookmark;  
           // Output the column information for each row:  
           outfile << rs.m_ProductID << rs.m_ProductName << lPrice << rs.m_QuantityPerUnit << rs.m_UnitsInStock << rs.m_ReorderLevel << endl;  
           hr = rs.MoveNext();  
@@ -216,7 +216,7 @@ Para obter mais informações sobre os indicadores, consulte [usando indicadores
 
 Conforme discutido em [acessando os dados XML](../../data/oledb/accessing-xml-data.md), para recuperar dados XML de uma fonte de dados de duas maneiras: usando [CStreamRowset](../../data/oledb/cstreamrowset-class.md) ou usando [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). Este exemplo usa `CStreamRowset`, que é mais eficiente, mas exige que você tenha o SQL Server 2000 em execução no computador no qual você executa esse aplicativo de exemplo.  
   
-#### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>Para modificar a classe de comando para herdar de CStreamRowset  
+### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>Para modificar a classe de comando para herdar de CStreamRowset  
   
 1. No aplicativo de consumidor que você criou anteriormente, altere sua `CCommand` declaração para especificar `CStreamRowset` como o conjunto de linhas de classe da seguinte maneira:  
   
@@ -224,7 +224,7 @@ Conforme discutido em [acessando os dados XML](../../data/oledb/accessing-xml-da
     class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
     ```  
   
-#### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>Para modificar o código principal para recuperar e os dados XML de saída  
+### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>Para modificar o código principal para recuperar e os dados XML de saída  
   
 1. No arquivo MyCons.cpp do aplicativo de console que você criou anteriormente, altere o código principal para ler o seguinte:  
   

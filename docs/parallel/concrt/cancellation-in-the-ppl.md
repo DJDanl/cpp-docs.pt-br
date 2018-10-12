@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17babc058ef3e1851da686e9a8c5bf17cefbc2fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f84ca4c924c837ec008c16d6ff3b77af379df4cd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426998"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163797"
 ---
 # <a name="cancellation-in-the-ppl"></a>Cancelamento no PPL
 
@@ -91,7 +91,7 @@ Para iniciar o cancelamento, chame o [concurrency::cancellation_token_source::ca
 
 - Para `task` objetos, use o [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) função. `cancel_current_task` Cancela a tarefa atual e qualquer uma de suas continuações com base no valor. (Ele não cancelará o cancelamento *token* que está associado com a tarefa ou suas continuações.)
 
-- Para grupos de tarefas e algoritmos paralelos, use o [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) função para detectar o cancelamento e retornar logo do corpo da tarefa quando esta função retorna `true`. (Não chamar `cancel_current_task` de um grupo de tarefas.)
+- Para grupos de tarefas e algoritmos paralelos, use o [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) função para detectar o cancelamento e retornar logo do corpo da tarefa quando esta função retorna **true** . (Não chamar `cancel_current_task` de um grupo de tarefas.)
 
 O exemplo a seguir mostra o primeiro padrão de básico para o cancelamento da tarefa. O corpo da tarefa, ocasionalmente, verifica o cancelamento dentro de um loop.
 

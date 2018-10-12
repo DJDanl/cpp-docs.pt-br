@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b4f993c357ef3d4f66f9b2f22c9fb37a4e10c77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0a99de307ec64c3b6d4e49f4e0a6eef532314bf9
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423891"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161860"
 ---
 # <a name="call-class"></a>Classe da chamada
 
@@ -227,7 +227,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` porque o bloco não adiar as mensagens oferecidas.
+**True** porque o bloco não adiar oferecido mensagens.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a674d63c52f6f204d0bb69c69cd5814cd6d9761a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 85f9498f44f4f1ec2598e6263c003d041f519105
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788936"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162211"
 ---
 # <a name="comptrref-class"></a>Classe ComPtrRef
 
@@ -176,11 +176,11 @@ Uma referência a outro `ComPtrRef` objeto ou um ponteiro para um tipo anônimo 
 
 ### <a name="return-value"></a>Valor de retorno
 
-A primeira produz do operador `true` se objeto *um* é igual ao objeto *b*; caso contrário, `false`.
+A primeira produz do operador **verdadeira** se objeto *um* é igual ao objeto *b*; caso contrário, **false**.
 
-Os operadores de segundo e terceiro yield `true` se objeto *um* é igual a `nullptr`; caso contrário, `false`.
+Os operadores de segundo e terceiro yield **verdadeira** se objeto *um* é igual a **nullptr**; caso contrário, **false**.
 
-Os quarto e quintas operadores produzem `true` se objeto *um* é igual ao objeto *b*; caso contrário, `false`.
+Os quarto e quintas operadores produzem **verdadeira** se objeto *um* é igual ao objeto *b*; caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -227,11 +227,11 @@ Uma referência a outro `ComPtrRef` objeto ou um ponteiro para um objeto anônim
 
 ### <a name="return-value"></a>Valor de retorno
 
-A primeira produz do operador `true` se objeto *um* não é igual ao objeto *b*; caso contrário, `false`.
+A primeira produz do operador **verdadeira** se objeto *um* não é igual ao objeto *b*; caso contrário, **false**.
 
-Os operadores de segundo e terceiro yield `true` se objeto *um* não é igual a `nullptr`; caso contrário, `false`.
+Os operadores de segundo e terceiro yield **verdadeira** se objeto *um* não é igual a **nullptr**; caso contrário, **false**.
 
-Os quarto e quintas operadores produzem `true` se objeto *um* não é igual ao objeto *b*; caso contrário, `false`.
+Os operadores de quarto e quintas yield **verdadeira** se objeto *um* não é igual ao objeto *b*; caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
 

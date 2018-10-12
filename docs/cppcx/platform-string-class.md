@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3777116bf2a641a4fdc220306680c0150d5ba2d0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2d9c68bde9fdd49e4007b8b6e1d92899d71dde4e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106406"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162536"
 ---
 # <a name="platformstring-class"></a>Classe Platform::String
 
@@ -174,7 +174,7 @@ O segundo objeto String ou `null`.
 
 Um novo objeto String^ cujo valor é a concatenação dos valores de `str1` e `str2`.
 
-Se `str1` está `null` e `str2` não for, `str1` será retornado. Se `str2` está `null` e `str1` não for, `str2` será retornado. Se `str1` e `str2` forem ambos `null`, a cadeia de caracteres vazia (L"") será retornada.
+Se `str1` for `null` e `str2` não for, `str1` será retornado. Se `str2` for `null` e `str1` não for, `str2` será retornado. Se `str1` e `str2` forem ambos `null`, a cadeia de caracteres vazia (L"") será retornada.
 
 ## <a name="data"></a>  Método String:: data
 
@@ -240,7 +240,7 @@ O objeto a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se `str` for igual ao objeto atual; caso contrário, `false`.
+**Verdadeiro** se `str` for igual ao objeto atual; caso contrário, **falso**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -272,7 +272,7 @@ bool IsEmpty();
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o objeto String atual for `null` ou a cadeia de caracteres vazia (L""); caso contrário, `false`.
+**Verdadeiro** se atual `String` objeto é **nulo** ou cadeia de caracteres vazia (L""); caso contrário, **false**.
 
 ## <a name="isfastpass"></a>  Método String:: isfastpass
 
@@ -286,7 +286,7 @@ bool IsFastPass();
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o objeto String atual for fast-past; caso contrário, `false`.
+**Verdadeiro** se o atual `String` objeto for fast-past; caso contrário, **falso**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -294,7 +294,7 @@ Em uma chamada à função em que um objeto contado por referência é um parâm
 
 ## <a name="length"></a>  Método String:: Length
 
-Recupera o número de caracteres no objeto de cadeia de caracteres atual.
+Recupera o número de caracteres atual `String` objeto.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -304,7 +304,7 @@ unsigned int Length();
 
 ### <a name="return-value"></a>Valor de retorno
 
-O número de caracteres no objeto de cadeia de caracteres atual.
+O número de caracteres atual `String` objeto.
 
 ### <a name="remarks"></a>Comentários
 
@@ -337,7 +337,7 @@ O segundo objeto `String` , cujo conteúdo será acrescentado a `str1`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se `str1` for igual a `str2`; caso contrário, `false`.
+**Verdadeiro** se *str1* é igual a *str2*; caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -356,14 +356,14 @@ bool String::operator==( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parâmetros
 
 *str1*<br/>
-O primeiro objeto String a ser comparado.
+O primeiro objeto `String` a ser comparado.
 
 *str2*<br/>
-O segundo objeto String a ser comparado.
+O segundo objeto `String` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o conteúdo de `str1` for igual a `str2`; caso contrário, `false`.
+**Verdadeiro** se o conteúdo de `str1` são iguais às `str2`; caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -371,7 +371,7 @@ Esse operador é equivalente a [String:: CompareOrdinal](#compareordinal).
 
 ##  <a name="operator-greater-than"></a>  String::operator&gt;
 
-Indica se o valor de um objeto String é maior que o valor de um segundo objeto String.
+Indica se o valor de um `String` objeto é maior que o valor de um segundo `String` objeto.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -382,14 +382,14 @@ bool String::operator>( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parâmetros
 
 *str1*<br/>
-O primeiro objeto String.
+O primeiro objeto `String`.
 
 *str2*<br/>
-O segundo objeto String.
+O segundo objeto `String`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o valor de `str1` for maior que o valor de `str2`; caso contrário, `false`.
+**Verdadeiro** se o valor da `str1` é maior que o valor de `str2`; caso contrário, **false**.
 
 ### <a name="remarks"></a>Comentários
 
@@ -397,7 +397,7 @@ Esse operador é equivalente a chamar explicitamente [String:: CompareOrdinal](#
 
 ## <a name="operator-greater-than-or-equals"></a> String::operator&gt;=
 
-Indica se o valor de um objeto String é maior ou igual ao valor de um segundo objeto String.
+Indica se o valor de um `String` objeto é maior que ou igual ao valor de um segundo `String` objeto.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -408,18 +408,18 @@ bool String::operator>=( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parâmetros
 
 *str1*<br/>
-O primeiro objeto String.
+O primeiro objeto `String`.
 
 *str2*<br/>
-O segundo objeto String.
+O segundo objeto `String`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o valor de `str1` for maior ou igual ao valor de `str2`; caso contrário, `false`.
+**Verdadeiro** se o valor da `str1` é maior que ou igual ao valor de `str2`; caso contrário, **false**.
 
 ## <a name="operator-inequality"></a> String:: Operator! =
 
-Indica se dois objetos String especificados têm valores diferentes.
+Indica se dois especificada `String` objetos têm valores diferentes.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -430,18 +430,18 @@ bool String::operator!=( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parâmetros
 
 *str1*<br/>
-O primeiro objeto String a ser comparado.
+O primeiro objeto `String` a ser comparado.
 
 *str2*<br/>
-O segundo objeto String a ser comparado.
+O segundo objeto `String` a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se `str1` não for igual a `str2`; caso contrário, `false`.
+**Verdadeiro** se `str1` não é igual a `str2`; caso contrário, **false**.
 
 ## <a name="operator-less-than"></a> String::operator&lt;
 
-Indica se o valor de um objeto String é menor que o valor de um segundo objeto String.
+Indica se o valor de um `String` objeto é menor que o valor de um segundo `String` objeto.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -452,18 +452,18 @@ bool String::operator<( String^ str1, String^ str2);
 ### <a name="parameters"></a>Parâmetros
 
 *str1*<br/>
-O primeiro objeto String.
+O primeiro objeto `String`.
 
 *str2*<br/>
-O segundo objeto String.
+O segundo objeto `String`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o valor de `str1` for menor que o valor de `str2`; caso contrário, `false`.
+**Verdadeiro** se o valor da *str1* é menor que o valor de *str2*; caso contrário, **false**.
 
 ## <a name="ctor"></a> Construtor String:: String
 
-Inicializa uma nova instância da classe String com uma cópia dos dados de cadeia de caracteres de entrada.
+Inicializa uma nova instância do `String` classe com uma cópia dos dados de cadeia de caracteres de entrada.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -492,7 +492,7 @@ String^ s = L"Hello!";
 
 ## <a name="tostring"></a> String::ToString
 
-Retorna um objeto String cujo valor é igual ao da cadeia de caracteres atual.
+Retorna um `String` objeto cujo valor é o mesmo que a cadeia de caracteres atual.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -502,7 +502,7 @@ String^ String::ToString();
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um objeto String cujo valor é igual ao da cadeia de caracteres atual.
+Um `String` objeto cujo valor é o mesmo que a cadeia de caracteres atual.
 
 ## <a name="see-also"></a>Consulte também
 

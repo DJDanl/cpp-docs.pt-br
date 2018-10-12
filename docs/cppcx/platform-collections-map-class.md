@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eccefff291dc509f846bce951cfe9508834876e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7e64f5857a2b0530fb0346a2635611db03fd9bc8
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103873"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162549"
 ---
 # <a name="platformcollectionsmap-class"></a>Classe Platform::Collections::Map
 
@@ -173,7 +173,7 @@ A chave usada para localizar o elemento Map. O tipo de *chave* é o typename *K*
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se a chave for encontrada; caso contrário, `false`.
+**Verdadeiro** se a chave for encontrada; caso contrário, **falso**.
 
 ## <a name="insert"></a>  Método Map:: Insert
 
@@ -195,7 +195,7 @@ A porção de valor do par chave-valor. O tipo de *valor* é o typename *V*.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se a chave de um elemento existente no Map atual corresponder *chave* e a parte do valor desse elemento é definida como *valor*. `false` Se nenhum elemento existente no Map atual corresponder *chave* e o *chave* e *valor* parâmetros são colocados em um par chave-valor e, em seguida, adicionados ao Map atual.
+**Verdadeiro** se a chave de um elemento existente no Map atual corresponder *chave* e a parte do valor desse elemento é definida como *valor*. **False** se nenhum elemento existente no Map atual corresponder *chave* e o *chave* e *valor* parâmetros são colocados em um par chave-valor e, em seguida, adicionados ao Map atual.
 
 ## <a name="lookup"></a>  Método Map:: Lookup
 

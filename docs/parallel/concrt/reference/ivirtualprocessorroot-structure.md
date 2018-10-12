@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7466c00ec1a5c507a84a098b3dca79d57ffee91e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 891fcd96901423e5d5c23b840784f9e050dbbe81
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445978"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162913"
 ---
 # <a name="ivirtualprocessorroot-structure"></a>Estrutura IVirtualProcessorRoot
 
@@ -111,7 +111,7 @@ O contexto que atualmente está sendo enviado por essa raiz.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Um valor booliano. Um valor de `true` indica que o proxy de thread retornado do `Deactivate` método em resposta a uma chamada para o `Activate` método. Um valor de `false` indica que o proxy de thread retornado do método em resposta a um evento de notificação no Gerenciador de recursos. Em um modo de usuário agendáveis (UMS) Agendador de threads, isso indica que apareceram itens na lista de conclusão do Agendador e o Agendador é necessária para lidar com eles.
+Um valor booliano. Um valor de **verdadeira** indica que o proxy de thread retornado do `Deactivate` método em resposta a uma chamada para o `Activate` método. Um valor de `false` indica que o proxy de thread retornado do método em resposta a um evento de notificação no Gerenciador de recursos. Em um modo de usuário agendáveis (UMS) Agendador de threads, isso indica que apareceram itens na lista de conclusão do Agendador e o Agendador é necessária para lidar com eles.
 
 ### <a name="remarks"></a>Comentários
 
@@ -119,9 +119,9 @@ Use esse método para interromper temporariamente a execução de uma raiz virtu
 
 Uma raiz de processador virtual desativado pode ser ativada com uma chamada para o `Activate` método, com o mesmo argumento que foi passado para o `Deactivate` método. O Agendador é responsável por garantir que chamadas para o `Activate` e `Deactivate` métodos são emparelhados, mas eles não são necessários para ser recebida em uma ordem específica. O Gerenciador de recursos pode manipular o recebimento de uma chamada para o `Activate` método antes de receber uma chamada para o `Deactivate` método foi criado.
 
-Se uma raiz virtual do processador desperta e o valor de retorno a `Deactivate` método é o valor `false`, o Agendador deve consultar a lista de conclusão de UMS via o `IUMSCompletionList::GetUnblockNotifications` método, agir sobre essas informações e, em seguida, chamar subsequentemente o `Deactivate`método novamente. Isso deve ser repetido até que o `Deactivate` método retorna o valor `true`.
+Se uma raiz virtual do processador desperta e o valor de retorno a `Deactivate` método é o valor **false**, o Agendador deve consultar a lista de conclusão de UMS via o `IUMSCompletionList::GetUnblockNotifications` método, o act nessas informações e, em seguida, chamar subsequentemente o `Deactivate` método novamente. Isso deve ser repetido até que o `Deactivate` método retorna o valor `true`.
 
-`invalid_argument` será gerada se o argumento `pContext` tem o valor `NULL`.
+`invalid_argument` será gerada se o argumento `pContext` tem o valor NULL.
 
 `invalid_operation` será gerada se a raiz do processador virtual nunca tiver sido ativado, ou o argumento `pContext` não representa o contexto de execução foi mais recentemente enviado por essa raiz virtual do processador.
 

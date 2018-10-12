@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67376497f3c0be84c0e24e403eaa3129ec38b255
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: a0aa56c511ac5f7b98ffdd75aebd7f71ef9f21ac
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110773"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162016"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Classe Platform::Collections::InputIterator
 
@@ -137,7 +137,7 @@ Outro InputIterator.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o InputIterator atual for igual a `other`; caso contrário, `false`.
+**Verdadeiro** se o InputIterator atual for igual a *outras*; caso contrário, **false**.
 
 ## <a name="operator-increment"></a>  Operador inputiterator:: Operator + +
 
@@ -177,7 +177,7 @@ Outro InputIterator.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o InputIterator atual não for igual a `other`; caso contrário, `false`.
+**Verdadeiro** se o InputIterator atual não é igual a *outras*; caso contrário, **false**.
 
 ## <a name="see-also"></a>Consulte também
 

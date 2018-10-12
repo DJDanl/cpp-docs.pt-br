@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78cbd53baf9e9ade8c20f3b9f5fa419eeb2d1c80
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 211005f273500992440c0e95d2c3c4e3adcef581
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441909"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163407"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Funções do namespace de simultaneidade (AMP)
 
@@ -92,7 +92,7 @@ O valor a ser armazenado para o local de memória especificado por `_Dest` se `_
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se a operação for bem-sucedida; caso contrário, `false`.
+**Verdadeiro** se a operação for bem-sucedida; caso contrário, **falso**.
 
 ##  <a name="atomic_exchange"></a>  Função (C++ AMP) atomic_exchange
 

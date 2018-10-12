@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa50628e9c63eee585eebe2ce63b2c5ec9b6f5fe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 68ea93c137962e48f8a627e9a9409e4e7fceef65
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422201"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163368"
 ---
 # <a name="concurrentvector-class"></a>Classe concurrent_vector
 
@@ -410,7 +410,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o vetor estiver vazio no momento em que a função foi chamada, `false` caso contrário.
+**Verdadeiro** se o vetor estiver vazio no momento em que a função foi chamada, **falso** caso contrário.
 
 ##  <a name="end"></a> final
 

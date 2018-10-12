@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 26ecab69c2c31db51e137ad012bf67541e03a095
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 2af59860016835f8e8dfddc9d0a77204ff866bd3
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788455"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161847"
 ---
 # <a name="issame-structure"></a>Estrutura IsSame
 
@@ -92,4 +92,4 @@ struct IsSame<T1, T1>
 
 Indica se um tipo é igual a outro.
 
-`value` está `true` se os parâmetros de modelo são os mesmos, e `false` se os parâmetros de modelo são diferentes.
+`value` está **verdadeira** se os parâmetros de modelo são os mesmos, e **falso** se os parâmetros de modelo são diferentes.

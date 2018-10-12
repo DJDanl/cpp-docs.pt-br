@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8adba73274fbc9821eb8096e82268b24b41718f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 72fa49d763159385607330231994d15952f0c771
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430028"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163134"
 ---
 # <a name="ischedulerproxy-structure"></a>Estrutura ISchedulerProxy
 
@@ -124,7 +124,7 @@ Se deseja assinar o thread atual e da conta para ele durante a alocação de rec
 
 ### <a name="return-value"></a>Valor de retorno
 
-O `IExecutionResource` da interface para o thread atual, se o parâmetro `doSubscribeCurrentThread` tem o valor `true`. Se o valor for `false`, o método retorna `NULL`.
+O `IExecutionResource` da interface para o thread atual, se o parâmetro `doSubscribeCurrentThread` tem o valor **verdadeiro**. Se o valor for **falsos**, o método retornará NULL.
 
 ### <a name="remarks"></a>Comentários
 
@@ -132,7 +132,7 @@ Antes de um agendador executa qualquer trabalho, ele deve usar esse método para
 
 O Gerenciador de recursos concede recursos para um agendador chamando o método [ischeduler:: Addvirtualprocessors](ischeduler-structure.md#addvirtualprocessors) com uma lista de raízes de processador virtual. O método é invocado como um retorno de chamada para o Agendador antes desse método retorna.
 
-Se o Agendador solicitou a assinatura para o thread atual, definindo o parâmetro `doSubscribeCurrentThread` à `true`, o método retorna um `IExecutionResource` interface. A assinatura deve ser terminada em um momento posterior, usando o [iexecutionresource:: remove](iexecutionresource-structure.md#remove) método.
+Se o Agendador solicitou a assinatura para o thread atual, definindo o parâmetro `doSubscribeCurrentThread` à **verdadeira**, o método retorna um `IExecutionResource` interface. A assinatura deve ser terminada em um momento posterior, usando o [iexecutionresource:: remove](iexecutionresource-structure.md#remove) método.
 
 Ao determinar quais segmentos de hardware são selecionados, o Gerenciador de recursos tentará otimizar para afinidade de nó do processador. Se a assinatura é solicitada para o thread atual, é uma indicação de que o thread atual pretende participar o trabalho atribuído a este agendador. Nesse caso, as raízes de processadores virtuais alocados estão localizadas no nó de processador que o thread atual está sendo executado, se possível.
 

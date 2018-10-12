@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b9a157f747f32b7e146a0bc89ac695837c37974
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 30eb0befda4d439bf4153d7c6726c982d3bf19ae
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399672"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163329"
 ---
 # <a name="acceleratorview-class"></a>Classe accelerator_view
 
@@ -74,9 +74,9 @@ class accelerator_view;
 
 |Nome|Descrição|
 |----------|-----------------|
-|[operator!=](#operator_neq)|Compara essa `accelerator_view` objeto com outro e retorna `false` se eles forem iguais; caso contrário, retornará `true`.|
+|[operator!=](#operator_neq)|Compara essa `accelerator_view` objeto com outro e retorna **falsos** se eles forem iguais; caso contrário, retornará **true**.|
 |[operator=](#operator_eq)|Copia o conteúdo especificado `accelerator_view` esse objeto.|
-|[operator==](#operator_eq_eq)|Compara essa `accelerator_view` objeto com outro e retorna `true` se eles forem iguais; caso contrário, retornará `false`.|
+|[operator==](#operator_eq_eq)|Compara essa `accelerator_view` objeto com outro e retorna **verdadeira** se eles forem iguais; caso contrário, retornará **false**.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 
@@ -183,7 +183,7 @@ bool get_is_auto_selection() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o tempo de execução selecionará automaticamente um acelerador apropriado; Caso contrário, `false`.
+**Verdadeiro** se o tempo de execução selecionará automaticamente um acelerador apropriado; caso contrário, **falso**.
 
 ## <a name="accelerator_view__get_is_debug"></a> get_is_debug
 
@@ -249,7 +249,7 @@ __declspec(property(get= get_is_debug)) bool is_debug;
 
 ## <a name="accelerator_view__operator_neq"></a> operador! =
 
-Compara este objeto accelerator_view com outro e retorna `false` se eles forem iguais; caso contrário, retornará `true`.
+Compara este objeto accelerator_view com outro e retorna **falsos** se eles forem iguais; caso contrário, retornará **verdadeiro**.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -264,7 +264,7 @@ O `accelerator_view` objeto a ser comparado com este.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`false` se os dois objetos forem iguais; caso contrário, `true`.
+**False** se os dois objetos forem iguais; caso contrário, **verdadeiro**.
 
 ## <a name="accelerator_view__operator_eq"></a> operador =
 
@@ -287,7 +287,7 @@ Uma referência ao modificado `accelerator_view` objeto.
 
 ## <a name="accelerator_view__operator_eq_eq"></a> operador = =
 
-Compara este objeto accelerator_view com outro e retorna `true` se eles forem iguais; caso contrário, retornará `false`.
+Compara este objeto accelerator_view com outro e retorna **verdadeira** se eles forem iguais; caso contrário, retornará **falso**.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -302,7 +302,7 @@ O `accelerator_view` objeto a ser comparado com este.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se os dois objetos forem iguais; caso contrário, `false`.
+**Verdadeiro** se os dois objetos forem iguais; caso contrário, **falso**.
 
 ## <a name="accelerator_view__queuing_mode"></a> queuing_mode
 

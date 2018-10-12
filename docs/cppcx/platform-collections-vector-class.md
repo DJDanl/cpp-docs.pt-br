@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36fe82bc5d17cd3c4951b008af28ba89b171c78f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: acf3ae2fd16eb3aacbc0a2e681ae39aece1b4dd4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103926"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163212"
 ---
 # <a name="platformcollectionsvector-class"></a>Classe Platform::Collections::Vector
 
@@ -71,7 +71,7 @@ Os tipos permitidos são:
 
 O **vetor** classe é a implementação concreta de C++ das [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) interface.
 
-Se você tentar usar um **vetor** digite um valor de retorno público ou um parâmetro, o erro do compilador C3986 será gerado. Você pode corrigir o erro alterando o parâmetro ou tipo de valor de retorno [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Para obter mais informações, consulte [Coleções (C++/CX)](../cppcx/collections-c-cx.md).
+Se você tentar usar um **vetor** digite um valor de retorno público ou um parâmetro, o erro do compilador C3986 será gerado. Você pode corrigir o erro alterando o tipo do parâmetro ou do valor de retorno para [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Para obter mais informações, consulte [Coleções (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Membros
 
@@ -240,11 +240,11 @@ O item a ser localizado.
 *index*<br/>
 O índice baseado em zero do item se parâmetro *valor* for encontrado; caso contrário, 0.
 
-O *índice* parâmetro é 0 se o item é o primeiro elemento do vetor ou o item não foi encontrado. Se o valor de retorno for `true`, o item foi encontrado e é o primeiro elemento; caso contrário, o item não foi encontrado.
+O *índice* parâmetro é 0 se o item é o primeiro elemento do vetor ou o item não foi encontrado. Se o valor retornado será **verdadeira**, o item foi encontrado e é o primeiro elemento; caso contrário, o item não foi encontrado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o item especificado for encontrado; caso contrário, `false`.
+**Verdadeiro** se o item especificado for encontrado; caso contrário, **falso**.
 
 ### <a name="remarks"></a>Comentários
 

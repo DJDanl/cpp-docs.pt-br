@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e1f944d19efd22cb2c6c7d6a3752d6d32ae1e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d544ac392e2eb227d7e1c37412110d09272f10d5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381667"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162497"
 ---
 # <a name="combinable-class"></a>Classe combinable
 
@@ -182,7 +182,7 @@ T& local(bool& _Exists);
 ### <a name="parameters"></a>Parâmetros
 
 *_Exists*<br/>
-Uma referência a um valor booliano. O valor booliano referenciado por esse argumento será definido como `true` se o cálculo de subpropriedades já existiam nesse thread e definido como `false` se esse foi o primeiro cálculo de subpropriedades nesse thread.
+Uma referência a um valor booliano. O valor booliano referenciado por esse argumento será definido como **verdadeira** se o cálculo de subpropriedades já existiam nesse thread e definido como **falso** se esse foi o primeiro cálculo de subpropriedades nesse thread.
 
 ### <a name="return-value"></a>Valor de retorno
 

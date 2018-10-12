@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3c516881115dd96337f950d83de2d30c57161b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9cfad80ac1f16d200f29504be1d4fb818e6e6afd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102506"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163888"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Classe Platform::Collections::VectorView
 
@@ -140,7 +140,7 @@ virtual unsigned int GetMany(
 O índice com base zero do início dos itens a serem recuperados.
 
 *dest*<br/>
-Quando essa operação for concluída, uma matriz de itens que começam com o elemento especificado por `startIndex` e de término no último elemento no VectorView.
+Quando essa operação for concluída, uma matriz de itens que começam com o elemento especificado por `startIndex` e que terminam no último elemento no VectorView.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -168,11 +168,11 @@ O item a ser localizado.
 *index*<br/>
 O índice com base zero do item se o parâmetro `value` for encontrado; caso contrário, 0.
 
-O parâmetro `index` será 0 se o item for o primeiro elemento de VectorView ou se o item não for encontrado. Se o valor de retorno for `true`, o item foi encontrado e é o primeiro elemento; caso contrário, o item não foi encontrado.
+O *índice* parâmetro é 0 se o item for o primeiro elemento do `VectorView` ou o item não foi encontrado. Se o valor retornado será **verdadeira**, o item foi encontrado e é o primeiro elemento; caso contrário, o item não foi encontrado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se o item especificado for encontrado; caso contrário, `false`.
+**Verdadeiro** se o item especificado for encontrado; caso contrário, **falso**.
 
 ## <a name="size"></a>  Método vectorview:: Size
 

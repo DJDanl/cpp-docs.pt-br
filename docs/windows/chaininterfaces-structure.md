@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: df483f08e96f2bd479504028ce4ce17513bb7d41
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 28683d8c69a800cb6f9a365beda26c75b3a69d15
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789015"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161808"
 ---
 # <a name="chaininterfaces-structure"></a>Estrutura ChainInterfaces
 
@@ -117,7 +117,7 @@ Um tipo derivado.
 O tipo base de um tipo derivado.
 
 *hasImplements*<br/>
-Um valor booliano que, se `true`, significa que você não pode usar um [mescla](../windows/mixin-structure.md) estrutura com uma classe que deriva de [implementa](../windows/implements-structure.md) estrutura.
+Um valor booliano que, se **verdadeira**, significa que você não pode usar um [mescla](../windows/mixin-structure.md) estrutura com uma classe que deriva a [implementa](../windows/implements-structure.md) estrutura.
 
 ## <a name="members"></a>Membros
 
@@ -169,7 +169,7 @@ Um ponteiro para a última ID de interface que foi convertido com êxito.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se todas as operações de conversão for bem-sucedida; Caso contrário, `false`.
+**Verdadeiro** se todas as operações de conversão for bem-sucedida; caso contrário, **falso**.
 
 ## <a name="casttounknown"></a>Chaininterfaces:: Casttounknown
 

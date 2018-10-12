@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7782f59ae63c185995fe52f19bca739bc12fcaa1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0f121ff9915e49c98bc9f32ff683f8d08914f560
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375835"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163459"
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
 
@@ -50,7 +50,7 @@ Valor de tempo limite em milissegundos, ou como um <xref:System.TimeSpan>.
 
 ## <a name="return-value"></a>Valor de retorno
 
-`true` Se o bloqueio foi adquirido, `false` caso contrário.
+**Verdadeiro** se o bloqueio foi adquirido, **falso** caso contrário.
 
 ## <a name="remarks"></a>Comentários
 
@@ -60,7 +60,7 @@ Se já tiver sido adquirido um bloqueio, essa função não faz nada.
 
 Este exemplo usa uma única instância de uma classe entre vários threads.  A classe usa um bloqueio em si mesmo para garantir que os acessos a seus dados internos são consistentes para cada thread.  O thread do aplicativo principal usa um bloqueio na mesma instância da classe para verificar periodicamente para ver se os threads de trabalho ainda existem e esperas para sair até que todos os threads de trabalho concluir suas tarefas.
 
-```
+```cpp
 // msl_lock_try_acquire.cpp
 // compile with: /clr
 #include <msclr/lock.h>

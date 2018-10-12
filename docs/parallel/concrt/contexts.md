@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be66658c9452fa97c1971ae6719dccb06dbd836
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9fb14544a799861053c2fdf2a5bb92f210eb5c46
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378209"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163823"
 ---
 # <a name="contexts"></a>Contextos
 
@@ -67,7 +67,7 @@ Para operações de computação intensivas, o excesso de assinaturas normalment
 > [!NOTE]
 >  Habilite o excesso de assinatura somente de um thread que foi criado pelo tempo de execução de simultaneidade. Excesso de assinatura não tem nenhum efeito quando ele é chamado de um thread que não foi criado pelo tempo de execução (incluindo o thread principal).
 
-Para habilitar assinaturas em excesso no contexto atual, chame o [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) método com o `_BeginOversubscription` parâmetro definido como `true`. Quando você habilita o excesso de assinaturas em um thread que foi criado pelo tempo de execução de simultaneidade, faz com que o tempo de execução criar um thread adicional. Depois de todas as tarefas que exigem o término de excesso de assinatura, chame `Context::Oversubscribe` com o `_BeginOversubscription` parâmetro definido como `false`.
+Para habilitar assinaturas em excesso no contexto atual, chame o [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) método com o `_BeginOversubscription` parâmetro definido como **true**. Quando você habilita o excesso de assinaturas em um thread que foi criado pelo tempo de execução de simultaneidade, faz com que o tempo de execução criar um thread adicional. Depois de todas as tarefas que exigem o término de excesso de assinatura, chame `Context::Oversubscribe` com o `_BeginOversubscription` parâmetro definido como **falso**.
 
 Você pode habilitar o excesso de assinatura várias vezes do contexto atual, mas você deve desabilitar o mesmo número de vezes que você habilitá-lo. Excesso de assinatura também pode ser aninhado. ou seja, uma tarefa que é criada por outra tarefa que usa o excesso de assinatura também pode substituir seu contexto. No entanto, se uma tarefa aninhada e seu pai pertencem ao mesmo contexto, somente a chamada mais externo para `Context::Oversubscribe` faz com que a criação de um thread adicional.
 

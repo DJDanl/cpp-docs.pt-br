@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b16dee4d0a3c5a6d09c1fd19006c832be400d5a4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 93578f9d798e0c0bab0fe58a3211c20507dd99d4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411061"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162055"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>Como usar um filtro de bloco de mensagens
 
@@ -48,7 +48,7 @@ Porque o `transformer` objeto recebe apenas os números primos, a `transformer` 
 
 [!code-cpp[concrt-primes-filter#2](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_2.cpp)]
 
-O `transformer` objeto agora processa apenas os valores que são primo. No exemplo anterior, `transformer` objeto processa todas as mensagens. Portanto, o exemplo anterior deve receber o mesmo número de mensagens que ele envia. Este exemplo usa o resultado do [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) função para determinar quantas mensagens para receber o `transformer` objeto. O `send` retornos de função `true` quando o buffer de mensagem aceita a mensagem e `false` quando o buffer de mensagem rejeitará a mensagem. Portanto, o número de vezes que o buffer de mensagem aceita a mensagem corresponde a contagem de números primos.
+O `transformer` objeto agora processa apenas os valores que são primo. No exemplo anterior, `transformer` objeto processa todas as mensagens. Portanto, o exemplo anterior deve receber o mesmo número de mensagens que ele envia. Este exemplo usa o resultado do [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) função para determinar quantas mensagens para receber o `transformer` objeto. O `send` retornos de função **verdadeira** quando o buffer de mensagem aceita a mensagem e **falso** quando o buffer de mensagem rejeitará a mensagem. Portanto, o número de vezes que o buffer de mensagem aceita a mensagem corresponde a contagem de números primos.
 
 ## <a name="example"></a>Exemplo
 

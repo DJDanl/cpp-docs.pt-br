@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e07c5b985552fcf30b2acb18030ab3288efb9be
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b89c1a3057e9753b99aaac837c903b6fd5f6d3ea
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428142"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163342"
 ---
 # <a name="concurrency-namespace-functions"></a>funções do namespace de simultaneidade
 
@@ -118,7 +118,7 @@ Uma referência para os dados a serem enviados.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se a mensagem foi aceita antes do método é retornado, `false` caso contrário.
+**Verdadeiro** se a mensagem foi aceita antes do método é retornado, **falso** caso contrário.
 
 ### <a name="remarks"></a>Comentários
 
@@ -424,7 +424,7 @@ bool __cdecl is_current_task_group_canceling();
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o grupo de tarefas que está em execução atualmente está cancelando, `false` caso contrário.
+**True** se o cancelamento de grupo de tarefas que está sendo executado **falso** caso contrário.
 
 ### <a name="remarks"></a>Comentários
 
@@ -687,7 +687,7 @@ Um iterador de acesso aleatório que trata da posição logo após o elemento fi
 Uma instância de um alocador de memória compatível da biblioteca padrão C++.
 
 *_Func*<br/>
-Um objeto de função de predicado definido pelo usuário que define os critérios de comparação a ser atendidos pelo sucessivos elementos na ordenação. Um predicado binário usa dois argumentos e retorna `true` quando é atendido e `false` quando não é atendido. Essa função de comparador deve impor uma ordenação fraca estrita aos pares de elementos da sequência.
+Um objeto de função de predicado definido pelo usuário que define os critérios de comparação a ser atendidos pelo sucessivos elementos na ordenação. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido. Essa função de comparador deve impor uma ordenação fraca estrita aos pares de elementos da sequência.
 
 *_Chunk_size*<br/>
 O tamanho mínimo de uma parte que será dividida em dois para execução paralela.
@@ -1217,7 +1217,7 @@ Um iterador de acesso aleatório que trata da posição do primeiro elemento no 
 Um iterador de acesso aleatório que trata da posição logo após o elemento final no intervalo a ser classificado.
 
 *_Func*<br/>
-Um objeto de função de predicado definido pelo usuário que define os critérios de comparação a ser atendidos pelo sucessivos elementos na ordenação. Um predicado binário usa dois argumentos e retorna `true` quando é atendido e `false` quando não é atendido. Essa função de comparador deve impor uma ordenação fraca estrita aos pares de elementos da sequência.
+Um objeto de função de predicado definido pelo usuário que define os critérios de comparação a ser atendidos pelo sucessivos elementos na ordenação. Um predicado binário usa dois argumentos e retorna **true** quando é atendido e **false** quando não é atendido. Essa função de comparador deve impor uma ordenação fraca estrita aos pares de elementos da sequência.
 
 *_Chunk_size*<br/>
 O tamanho mínimo de uma parte que será dividida em dois para execução paralela.
@@ -1460,7 +1460,7 @@ Uma referência para os dados a serem enviados.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se a mensagem foi aceita, `false` caso contrário.
+**Verdadeiro** se a mensagem foi aceita, **falso** caso contrário.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1613,7 +1613,7 @@ O nome para o objeto fornecido.
 
 ##  <a name="try_receive"></a>  try_receive
 
-Geral try-receive implementação, permitindo que um contexto procurar dados de origem exatamente um e filtrar os valores que são aceitos. Se os dados não estiverem prontos, o método retornará false.
+Geral try-receive implementação, permitindo que um contexto procurar dados de origem exatamente um e filtrar os valores que são aceitos. Se os dados não estiverem prontos, o método retornará **falsos**.
 
 ```
 template <class T>

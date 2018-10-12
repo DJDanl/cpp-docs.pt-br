@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fc41bdccf9cce3d455d4effd3541731929e5de2
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 90ceaf20a5d601fc2904b7ce8610b4a3906e30ac
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789261"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161197"
 ---
 # <a name="isbaseofstrict-structure"></a>Estrutura IsBaseOfStrict
 
@@ -52,7 +52,7 @@ O tipo derivado.
 
 Testa se um tipo é a base de outro.
 
-O primeiro modelo testa se um tipo é derivado de um tipo base, que pode produzir `true` ou `false`. O segundo modelo testa se um tipo é derivado de si mesma, que sempre produz `false`.
+O primeiro modelo testa se um tipo é derivado de um tipo base, que pode produzir **verdadeira** ou **falso**. O segundo modelo testa se um tipo é derivado de si mesma, que sempre produz **falsos**.
 
 ## <a name="members"></a>Membros
 
@@ -84,4 +84,4 @@ static const bool value = __is_base_of(Base, Derived);
 
 Indica se um tipo é a base de outro.
 
-`value` está `true` se tipo `Base` é uma classe base do tipo `Derived`, caso contrário, será `false`.
+`value` está **verdadeira** se tipo `Base` é uma classe base do tipo `Derived`, caso contrário, será **false**.

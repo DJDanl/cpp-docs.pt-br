@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ce4a78f385c1051d0c0f808126b127cf70ed8ee
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 77198b9282dbf3def8a92d5a824f7fbeb313310f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447149"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163433"
 ---
 # <a name="concurrentunorderedmap-class"></a>Classe concurrent_unordered_map
 
@@ -307,7 +307,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` Se o contêiner simultâneo estiver vazio, `false` caso contrário.
+**Verdadeiro** se o contêiner simultâneo estiver vazio, **falso** caso contrário.
 
 ### <a name="remarks"></a>Comentários
 

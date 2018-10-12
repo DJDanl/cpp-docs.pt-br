@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82f9cf473a1b38e3a77b43bc5fde30057c7b1a8a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0c2bc732453edb66f70fde88da8fb7230f66cd13
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106520"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162302"
 ---
 # <a name="platformobject-class"></a>Classe Platform::Object
 
@@ -86,7 +86,7 @@ O objeto a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se os objetos forem iguais; caso contrário, `false`.
+**Verdadeiro** se os objetos forem iguais; caso contrário **falso**.
 
 ## <a name="gethashcode"></a>  Método Object:: GetHashCode
 
@@ -104,7 +104,7 @@ Valor numérico que identifica esse objeto de forma exclusiva.
 
 ### <a name="remarks"></a>Comentários
 
-Você pode usar GetHashCode para criar chaves para objetos em mapas. Você pode comparar códigos hash usando [Object:: Equals](#equals). Se o caminho do código for extremamente crítico e `GetHashCode` e `Equals` não forem suficientemente rápidos, você poderá passar para a camada COM subjacente e fazer comparações do ponteiro `IUnknown` nativo.
+Você pode usar GetHashCode para criar chaves para objetos em mapas. Você pode comparar códigos hash usando [Object:: Equals](#equals). Se o demarcador do código for extremamente crítico e `GetHashCode` e `Equals` não forem suficientemente rápidos, você poderá passar para a camada COM subjacente e fazer comparações do ponteiro `IUnknown` nativo.
 
 ## <a name="gettype"></a>  Método Object:: GetType
 
@@ -168,7 +168,7 @@ O segundo objeto a ser comparado.
 
 ### <a name="return-value"></a>Valor de retorno
 
-`true` se os dois objetos forem iguais; caso contrário, `false`.
+**Verdadeiro** se os dois objetos forem iguais; caso contrário, **falso**.
 
 ## <a name="tostring"></a>  Método Object:: ToString (C++ c++ /CX)
 
