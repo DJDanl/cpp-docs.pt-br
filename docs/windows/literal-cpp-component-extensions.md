@@ -1,7 +1,7 @@
 ---
-title: literal (extensões de componentes C++) | Microsoft Docs
+title: literal (C + + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76a57261b28679c4f05b677dc7b49008535c921b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8168b3cd981bb288df35659ffd3520a7c8597d1e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596440"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328058"
 ---
-# <a name="literal-c-component-extensions"></a>literal (Extensões de Componentes C++)
+# <a name="literal-ccli-and-ccx"></a>literal (C + + c++ /CLI e c++ /CLI CX)
 
 Uma variável (membro de dados) marcado como **literal** em um **/clr** a compilação é o equivalente nativo de uma **const estático** variável.
 
@@ -137,4 +137,4 @@ Opção do compilador: `/clr`
 
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
+[Extensões de componentes para .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

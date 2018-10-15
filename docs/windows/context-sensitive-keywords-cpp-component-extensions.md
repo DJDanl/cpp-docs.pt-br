@@ -1,7 +1,7 @@
 ---
-title: Palavras-chave contextuais (extensões de componentes C++) | Microsoft Docs
+title: Palavras-chave contextuais (C + + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 785836f575c0dec3a0e08c32063116f01e16d4fe
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5d02939e61da4a247b46da5637c38d01e7990c49
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605233"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327928"
 ---
-# <a name="context-sensitive-keywords--c-component-extensions"></a>Palavras-chave Contextuais (Extensões de Componentes C++)
+# <a name="context-sensitive-keywords--ccli-and-ccx"></a>Palavras-chave contextuais (C + + c++ /CLI e c++ /CLI CX)
 
 *Palavras-chave contextuais* são elementos de linguagem que são reconhecidos apenas em contextos específicos. Fora do contexto específico, uma palavra-chave contextual pode ser um símbolo definido pelo usuário.
 
@@ -111,4 +111,4 @@ int main() {
 
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
+[Extensões de componentes para .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

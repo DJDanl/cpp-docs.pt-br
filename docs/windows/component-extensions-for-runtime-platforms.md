@@ -1,7 +1,7 @@
 ---
-title: Extensões de componentes para plataformas de tempo de execução | Microsoft Docs
+title: Extensões de componentes para .NET e UWP | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,28 +19,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0619585a0a5b59ffb6b8cfbe22e7930909369b23
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 45f83fbaaa867e2f58e329d8531259fa3751a521
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386740"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328409"
 ---
-# <a name="component-extensions-for-runtime-platforms"></a>Extensões de componente para plataformas de tempo de execução
+# <a name="component-extensions-for-net-and-uwp"></a>Extensões de componentes para .NET e UWP
 
-Visual C++ fornece extensões de linguagem para ajudar você programe em plataformas de tempo de execução. Usando C + + c++ /CX, você pode programar aplicativos da plataforma Universal do Windows e componentes que são compilados para código nativo. Embora você possa criar aplicativos da plataforma Universal do Windows por meio da programação diretamente em relação a interfaces COM tempo de execução do Windows, usando C + + c++ /CLI CX, você pode trabalhar com construtores, exceções e outras linguagens de programação de C++ moderno. Para habilitar a programação de C++ em um ambiente de execução gerenciado na plataforma .NET, você pode usar C + + / CLI.
+O padrão C++ permite que fornecedores de compilador fornecer extensões não padrão para a linguagem. A Microsoft fornece extensões para ajudá-lo a se conectar a C++ nativa de código para código que é executado no .NET Framework ou a Universal Windows Platform (UWP). As extensões do .NET são chamadas C + + c++ CLI e para gerar código que é executado no .NET gerenciado o ambiente de execução que é chamado o tempo de execução de linguagem comum (CLR). As extensões UWP são chamadas C + + c++ /CLI CX e eles produzem código de máquina nativo.
+
+> [!NOTE]
+> Para novos aplicativos, é recomendável usar C + + c++ /CLI WinRT em vez de C + + c++ /CLI CX. C + + c++ /CLI WinRT é uma nova, o padrão C + + 17 projeção de linguagem para APIs do Windows Runtime. Continuaremos a dar suporte a C + + c++ /CLI CX e WRL, mas altamente recomendável que usem novos aplicativos C + + c++ /CLI WinRT. Para obter mais informações, consulte [C + + c++ /CLI WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
 
 ### <a name="two-runtimes-one-set-of-extensions"></a>Dois tempos de execução, um conjunto de extensões
 
-C + + c++ /CX é um subconjunto do C + + c++ /CLI CLI. Para extensões que são comuns a C + + c++ /CLI CX e C + + / CLI, a semântica depende se você está visando o common language runtime (CLR) ou o tempo de execução do Windows. Para compilar seu aplicativo seja executado no tempo de execução do Windows, especifique o `/ZW` opção de compilador. Para compilá-lo para ser executado no CLR, especifique o `/clr` opção de compilador. Essas opções são definidas automaticamente quando você usa o Visual Studio para criar um projeto.
-
-Para obter mais informações sobre como criar aplicativos da plataforma Universal do Windows em C++, consulte [aplicativos de roteiro para o Windows Runtime usando C++](https://msdn.microsoft.com/library/windows/apps/hh700360.aspx).
-
 C + + c++ CLI estende o padrão ISO/ANSI C++ e é definido em Ecma C + c++ padrão da CLI. Para obter mais informações, consulte [programação do .NET com C + + c++ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).
+
+O C + + c++ /CLI extensões CX são um subconjunto de C + + c++ CLI. Embora a sintaxe de extensão é idêntica na maioria dos casos, o código que é gerado depende se você especificar o `/ZW` opção de compilador para que se destinam à UWP, ou o `/clr` opção ao destino .NET. Essas opções são definidas automaticamente quando você usa o Visual Studio para criar um projeto.
 
 ## <a name="data-type-keywords"></a>Palavras-chave de tipo de dados
 
-Incluem as extensões de linguagem *agregar as palavras-chave*, que são palavras-chave que consistem em dois tokens separados por espaço em branco. Os tokens podem ter um significado quando são usadas separadamente e outro significado quando eles são usados juntos. Por exemplo, a palavra "ref" é um identificador comum, e a palavra "class" é uma palavra-chave que declara uma classe nativa. Mas quando essas palavras são combinadas para formar **classe ref**, a palavra-chave agregada resultante declara uma entidade que é conhecida como um *classe runtime*.
+Incluem as extensões de linguagem *agregar as palavras-chave*, que consistem em dois tokens separados por espaço em branco. Os tokens podem ter um significado quando são usadas separadamente e outro significado quando eles são usados juntos. Por exemplo, a palavra "ref" é um identificador comum, e a palavra "class" é uma palavra-chave que declara uma classe nativa. Mas quando essas palavras são combinadas para formar **classe ref**, a palavra-chave agregada resultante declara uma entidade que é conhecida como um *classe runtime*.
 
 As extensões também incluem *contextual* palavras-chave. Uma palavra-chave é tratada como contextual, dependendo do tipo de instrução que contém e seu posicionamento na declaração. Por exemplo, o token "property" pode ser um identificador, ou ele pode declarar um tipo especial de membro de classe pública.
 
@@ -53,7 +54,7 @@ A tabela a seguir lista as palavras-chave na extensão de linguagem C++.
 |**classe de interface**<br /><br /> **estrutura de interface**|Não|Declara uma interface.|[classe de interface](../windows/interface-class-cpp-component-extensions.md)|
 |**classe de enum**<br /><br /> **Enum struct**|Não|Declara uma enumeração.|[classe de enum](../windows/enum-class-cpp-component-extensions.md)|
 |**propriedade**|Sim|Declara uma propriedade.|[propriedade](../windows/property-cpp-component-extensions.md)|
-|**delegate**|Sim|Declara um delegado.|[delegate (Extensões de componentes do C++)](../windows/delegate-cpp-component-extensions.md)|
+|**delegate**|Sim|Declara um delegado.|[Delegar (C + + c++ /CLI e c++ /CLI CX)](../windows/delegate-cpp-component-extensions.md)|
 |**event**|Sim|Declara um evento.|[event](../windows/event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>Especificadores de Substituição

@@ -1,7 +1,7 @@
 ---
-title: Visão geral de genéricos no Visual C++ | Microsoft Docs
+title: Visão geral de genéricos no C + + c++ CLI | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -22,20 +22,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2c1a6e9b9734fbb836d9e061b15534e23b95b29c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9e6240fd5e33f44c42d8a0d33302b9ef4cf9f8bb
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590932"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327850"
 ---
-# <a name="overview-of-generics-in-visual-c"></a>Visão geral de genéricos no Visual C++
+# <a name="overview-of-generics-in-ccli"></a>Visão geral de genéricos no C + + / CLI
 
 Genéricos são tipos parametrizados com suporte pelo common language runtime. Um tipo parametrizado é um tipo que é definido com um parâmetro de tipo desconhecido que é especificado quando a classe genérica é usada.
 
 ## <a name="why-generics"></a>Por que os genéricos?
 
-C++ oferece suporte a ambos os modelos e modelos e tipos parametrizados para criar classes de coleção com suporte a genéricos. No entanto, os modelos fornecem a parametrização de tempo de compilação. Você não pode referenciar um assembly que contém uma definição de modelo e criar novos especializações do modelo. Uma vez que compilado, um modelo especializado se parece com qualquer outra classe ou método. Em contraste, os genéricos são emitidos em MSIL como um tipo parametrizado conhecido no tempo de execução para ser um tipo parametrizado; código-fonte que faz referência a um assembly que contém um tipo genérico pode criar especializações de tipo genérico. Para obter mais informações sobre a comparação de modelos do Visual C++ e genéricos, consulte [genéricos e modelos (Visual C++)](../windows/generics-and-templates-visual-cpp.md).
+C++ oferece suporte a ambos os modelos e modelos e tipos parametrizados para criar classes de coleção com suporte a genéricos. No entanto, os modelos fornecem a parametrização de tempo de compilação. Você não pode referenciar um assembly que contém uma definição de modelo e criar novos especializações do modelo. Uma vez que compilado, um modelo especializado se parece com qualquer outra classe ou método. Em contraste, os genéricos são emitidos em MSIL como um tipo parametrizado conhecido no tempo de execução para ser um tipo parametrizado; código-fonte que faz referência a um assembly que contém um tipo genérico pode criar especializações de tipo genérico. Para obter mais informações sobre a comparação dos modelos padrão do C++ e genéricos, consulte [genéricos e modelos (C + + / CLI)](../windows/generics-and-templates-visual-cpp.md).
 
 ## <a name="generic-functions-and-types"></a>Tipos e funções genéricas
 

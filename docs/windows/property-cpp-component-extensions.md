@@ -1,7 +1,7 @@
 ---
-title: propriedade (extensões de componentes C++) | Microsoft Docs
+title: propriedade (C + + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f9c444861587e21724fe5f6aff545935fed6086
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9bd79042a43588ad4cedcbe88cc69f30947de7f8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420498"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328227"
 ---
-# <a name="property--c-component-extensions"></a>propriedade (Extensões de Componentes C++)
+# <a name="property--ccli-and-ccx"></a>propriedade (C + + c++ /CLI e c++ /CLI CX)
 
 Declara um *propriedade*, que é uma função de membro que se comporta e é acessada como um membro de dados ou um elemento de matriz.
 
@@ -226,4 +226,4 @@ test
 
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
+[Extensões de componentes para .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

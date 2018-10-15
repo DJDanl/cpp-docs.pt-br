@@ -1,7 +1,7 @@
 ---
-title: Atributo destinos (extensões de componentes C++) | Microsoft Docs
+title: Destinos de atributo (C + + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7a4cc42a0913636b0b63057f0f265f3fb8a034c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9dfb469bb9dcea8a2c1e197fa7c305d08d155cf1
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589410"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327774"
 ---
-# <a name="attribute-targets-c-component-extensions"></a>Destinos de Atributos (Extensões de Componentes C++)
+# <a name="attribute-targets-ccli-and-ccx"></a>Destinos de atributo (C + + c++ /CLI e c++ /CLI CX)
 
 Especificadores de uso de atributo permitem especificar destinos de atributos.  Cada atributo é definido para aplicar a determinados elementos de linguagem. Por exemplo, um atributo pode ser definido para aplicar somente a classes e estruturas.  A lista a seguir mostra os elementos sintáticos possíveis em que um atributo personalizado pode ser usado. Combinações desses valores (lógico ou) pode ser usado.
 

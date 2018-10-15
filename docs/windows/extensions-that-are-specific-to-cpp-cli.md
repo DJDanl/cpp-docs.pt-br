@@ -1,7 +1,7 @@
 ---
 title: Extensões específicas para C + + c++ CLI | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -13,15 +13,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e4a2b0c631c4356bed7ff190c2867a8540b57526
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0bb6b1738b0eecbfd4e97171d2a9faea2d9b6005
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444652"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327759"
 ---
 # <a name="extensions-that-are-specific-to-ccli"></a>Extensões específicas de C++/CLI
-Os seguintes recursos de linguagem, que são explicados nesta seção da documentação, se aplicam somente a C + + / CLI.
+
+Os seguintes recursos de idioma se aplicam somente a C + + c++ CLI:
   
 [__identifier (C++/CLI)](../windows/identifier-cpp-cli.md)  
   
@@ -37,4 +38,4 @@ Os seguintes recursos de linguagem, que são explicados nesta seção da documen
   
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
+[Extensões de componentes para .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

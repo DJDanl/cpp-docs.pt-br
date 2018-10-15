@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 39dac1bda25a66ecd67feac167e0029931a204e0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 49e298af793655bb3ea3854909a16dd4db03c6a3
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790247"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328175"
 ---
 # <a name="attributes-by-usage"></a>Atributos por uso
 
 Este tópico lista os atributos de acordo com os elementos de linguagem C++ para o qual eles se aplicam.
 
-Se um atributo precede um elemento Visual C++ que não está no escopo do atributo, o bloco de atributo será tratado como um comentário.
+Se um atributo precede um elemento que não está no escopo do atributo, o bloco de atributo será tratado como um comentário.
 
 |Atributo|Descrição|
 |---------------|-----------------|
@@ -89,6 +89,6 @@ Ao não especificar o [uuid](uuid-cpp-attributes.md) de atributo e usando o mesm
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de C++ para COM e .NET](cpp-attributes-com-net.md)<br/>
+[Atributos C++ para COM e .NET](cpp-attributes-com-net.md)<br/>
 [Atributos por grupo](attributes-by-group.md)<br/>
 [Referência alfabética de atributos](attributes-alphabetical-reference.md)

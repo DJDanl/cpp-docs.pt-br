@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0b305e928fec58833c4aac3f5625783aa2cb9ef
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 431ca9e88e644bd7a7c38f9ab4a1c3faeab6f9bb
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790287"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328396"
 ---
 # <a name="attributes-alphabetical-reference"></a>Referência alfabética de atributos
 
-Os seguintes atributos estão disponíveis no Visual C++.
+Os seguintes atributos estão disponíveis no compilador C++ da Microsoft:
 
 |Atributo|Descrição|
 |---------------|-----------------|
@@ -73,7 +73,7 @@ Os seguintes atributos estão disponíveis no Visual C++.
 |[idl_quote](idl-quote.md)|Permite que você use atributos ou IDL construções que não são suportados na versão atual do Visual C++.|
 |[iid_is](iid-is.md)|Especifica o IID da interface COM apontado por um ponteiro de interface.|
 |[immediatebind](immediatebind.md)|Indica que o banco de dados será notificado imediatamente de todas as alterações a uma propriedade de um objeto de associação de dados.|
-|[Implementa](implements-cpp.md)|Especifica as interfaces de distribuição que são forçadas para serem membros da coclass IDL.|
+|[implements](implements-cpp.md)|Especifica as interfaces de distribuição que são forçadas para serem membros da coclass IDL.|
 |[implements_category](implements-category.md)|Especifica as categorias de componentes implementados para a classe.|
 |[import](import.md)|Especifica outro arquivo. idl, odl ou cabeçalho que contém definições que você deseja fazer referência do seu arquivo. idl principal.|
 |[importidl](importidl.md)|Insere o arquivo. idl especificado no arquivo. idl gerado.|
@@ -88,7 +88,7 @@ Os seguintes atributos estão disponíveis no Visual C++.
 |[licensed](licensed.md)|Indica que a coclass ao qual se aplica é licenciada e deve ser instanciada usando `IClassFactory2`.|
 |[local](local-cpp.md)|Permite que você use o compilador MIDL como um gerador de cabeçalho quando usado no cabeçalho da interface. Quando usado em uma função individual, designa um procedimento de local para o qual nenhuma stubs são gerados.|
 |[max_is](max-is.md)|Designa o valor máximo para um índice de matriz válida.|
-|[módulo](module-cpp.md)|Define o bloco de biblioteca no arquivo. idl.|
+|[module](module-cpp.md)|Define o bloco de biblioteca no arquivo. idl.|
 |[ms_union](ms-union.md)|Controla o alinhamento de representação de dados de rede de uniões nonencapsulated.|
 |[no_injected_text](no-injected-text.md)|Impede que o compilador injetando código como resultado do uso do atributo.|
 |[nonbrowsable](nonbrowsable.md)|Indica que um membro de interface não deve ser exibido em um navegador de propriedade.|
@@ -97,7 +97,7 @@ Os seguintes atributos estão disponíveis no Visual C++.
 |[object](object-cpp.md)|Identifica uma interface personalizada; sinônimo de atributo personalizado.|
 |[odl](odl.md)|Identifica uma interface como uma interface de linguagem de descrição do objeto (ODL).|
 |[oleautomation](oleautomation.md)|Indica que uma interface é compatível com a automação.|
-|[Opcional](optional-cpp.md)|Especifica um parâmetro opcional para uma função de membro.|
+|[optional](optional-cpp.md)|Especifica um parâmetro opcional para uma função de membro.|
 |[out](out-cpp.md)|Identifica os parâmetros de ponteiro que são retornados do procedimento chamado ao procedimento de chamada (do servidor para o cliente).|
 |[pointer_default](pointer-default.md)|Especifica o atributo de ponteiro padrão para todos os ponteiros, exceto ponteiros de nível superior que aparecem em listas de parâmetros.|
 |[pragma](pragma.md)|Emite a cadeia de caracteres especificada, sem os caracteres de aspas no arquivo. idl gerado.|
@@ -124,7 +124,7 @@ Os seguintes atributos estão disponíveis no Visual C++.
 |[switch_is](switch-is.md)|Especifica a expressão ou um identificador que atua como o discriminador de união que seleciona o membro de união.|
 |[switch_type](switch-type.md)|Identifica o tipo da variável usada como o discriminador de união.|
 |[synchronize](synchronize.md)|Sincroniza o acesso a um método.|
-|[Threading](threading-cpp.md)|Especifica o modelo de threading para um objeto COM.|
+|[threading](threading-cpp.md)|Especifica o modelo de threading para um objeto COM.|
 |[transmit_as](transmit-as.md)|Instrui o compilador para associar um tipo apresentado, manipulam a quais aplicativos cliente e servidor, com um tipo transmitido.|
 |[uidefault](uidefault.md)|Indica que o membro de informações de tipo é o membro padrão para exibição na interface do usuário.|
 |[unique](unique-cpp.md)|Especifica um ponteiro exclusivo.|
@@ -138,6 +138,6 @@ Os seguintes atributos estão disponíveis no Visual C++.
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de C++ para COM e .NET](cpp-attributes-com-net.md)<br/>
+[Atributos C++ para COM e .NET](cpp-attributes-com-net.md)<br/>
 [Atributos por grupo](attributes-by-group.md)<br/>
 [Atributos por uso](attributes-by-usage.md)

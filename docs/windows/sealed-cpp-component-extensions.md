@@ -1,7 +1,7 @@
 ---
-title: sealed (extensões de componentes C++) | Microsoft Docs
+title: sealed (C + + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 134ee819edc0698c4ffa067d38b715968f22590f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 211428335473f677f520ee14ad688e5ffcbda8fd
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439556"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327993"
 ---
-# <a name="sealed--c-component-extensions"></a>autenticada (Extensões de Componentes C++)
+# <a name="sealed--ccli-and-ccx"></a>sealed (C + + c++ /CLI e c++ /CLI CX)
 
 **lacrado** é uma palavra-chave contextual para classes ref que indica que um membro virtual não pode ser substituído ou que um tipo não pode ser usado como um tipo base.
 
 > [!NOTE]
-> O ISO C + + 11 linguagem padrão tem o [final](../cpp/final-specifier.md) palavra-chave, que tem suporte no Visual Studio. Use **final** em classes padrão, e **lacrado** em classes ref.
+> O C + + 11 linguagem padrão ISO introduziu o [final](../cpp/final-specifier.md) palavra-chave. Use **final** em classes padrão, e **lacrado** em classes ref.
 
 ## <a name="all-runtimes"></a>Todos os Tempos de Execução
 
@@ -53,7 +53,7 @@ O tipo que é retornado por uma função.
 
 No primeiro exemplo de sintaxe, uma classe é selada. No segundo exemplo, uma função virtual está lacrada.
 
-O **lacrado** palavra-chave é válido para destinos nativos e também para o tempo de execução do Windows e o common language runtime (CLR). Para obter mais informações, consulte [especificadores de substituição e compilações nativas](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Use o **lacrado** palavra-chave para classes e suas funções de membro virtual. Para obter mais informações, consulte [especificadores de substituição e compilações nativas](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
 Você pode detectar no tempo de compilação se um tipo está lacrado usando o `__is_sealed(type)` característica de tipo. Para obter mais informações, consulte [suporte do compilador para características de tipo](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
 
@@ -108,7 +108,7 @@ public:
    // the following override generates a compiler error
    virtual void g() override {
       System::Console::WriteLine("Y::g override of I1::g");
-   } 
+   }
    */
 };
 
@@ -150,4 +150,4 @@ public:
 
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
+[Extensões de componentes para .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

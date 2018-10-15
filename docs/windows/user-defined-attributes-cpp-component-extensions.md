@@ -1,7 +1,7 @@
 ---
-title: Atributos (extensões de componentes C++) definidos pelo usuário | Microsoft Docs
+title: Atributos definidos pelo usuário (C + + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,26 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c2f5568b067c119bfa65744290c39d7ca577072
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 004c4c30c6e7e75f626e1ac87c09cb0a87f1c8cc
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789222"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328435"
 ---
-# <a name="user-defined-attributes--c-component-extensions"></a>Atributos Definidos pelo Usuário (Extensões de Componentes C++)
+# <a name="user-defined-attributes--ccli-and-ccx"></a>Atributos definidos pelo usuário (C + + c++ /CLI e c++ /CLI CX)
 
-Atributos personalizados permitem estender os metadados de uma interface, classe ou estrutura, parâmetro, método ou enumeração.
-
-## <a name="all-runtimes"></a>Todos os Tempos de Execução
-
-Todos os tempos de execução dá suporte a atributos personalizados.
+C + + c++ /CLI e c++ /CLI CX permitem que você crie atributos específicos da plataforma que estendem os metadados de uma interface, classe ou estrutura, parâmetro, método ou enumeração. Esses atributos são distintos do [atributos de C++ padrão](../cpp/attributes.md).
 
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows
 
-C + + / atributos CX dão suporte a apenas propriedades, mas não métodos ou construtores de atributo.
-
-### <a name="remarks"></a>Comentários
+Você pode aplicar C + + c++ /CLI atributos CX às propriedades, mas não a métodos ou construtores.
 
 ### <a name="requirements"></a>Requisitos
 
@@ -43,17 +37,11 @@ Opção do compilador: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-Atributos personalizados permitem que você estenda os metadados de um elemento gerenciado. Para obter mais informações, consulte [Atributos](/dotnet/standard/attributes/index).
-
-### <a name="remarks"></a>Comentários
-
 As informações e a sintaxe apresentadas neste tópico destina-se para substituir as informações apresentadas [atributo](attributes/attribute.md).
 
 Você pode definir um atributo personalizado definindo um tipo e fazendo <xref:System.Attribute> uma classe base para o tipo e, opcionalmente, aplicando o <xref:System.AttributeUsageAttribute> atributo.
 
-Por exemplo, em Microsoft Transaction Server (MTS) 1.0, comportamento em relação a transações, sincronização, o balanceamento de carga, e assim por diante foi especificado por meio de GUIDs personalizados inseridos na biblioteca de tipos usando o atributo personalizado de ODL. Portanto, um cliente de um servidor do MTS foi possível determinar suas características, lendo a biblioteca de tipos. No .NET Framework, o analógico da biblioteca de tipos é composta de metadados e do atributo ODL personalizado analógicas é atributos personalizados. Além disso, lendo a biblioteca de tipos é semelhante a usar a reflexão sobre os tipos.
-
-Para obter mais informações, consulte
+Para obter mais informações, consulte:
 
 - [Destinos de atributos](attribute-targets-cpp-component-extensions.md)
 
@@ -216,4 +204,4 @@ ref struct B {};
 
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](component-extensions-for-runtime-platforms.md)
+[Extensões de componentes para .NET e UWP](component-extensions-for-runtime-platforms.md)

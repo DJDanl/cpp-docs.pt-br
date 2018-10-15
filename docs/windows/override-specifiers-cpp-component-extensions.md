@@ -1,7 +1,7 @@
 ---
-title: Especificadores de substituição (extensões de componentes C++) | Microsoft Docs
+title: Especificadores de substituição (C + + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bcbc46ea12dd053c0c0cf5066173ea2a28857452
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0620bc7045dcb312667cfdfe670e1f19b0545cf2
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316114"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327458"
 ---
-# <a name="override-specifiers--c-component-extensions"></a>Especificadores de Substituição (Extensões de Componentes C++)
+# <a name="override-specifiers--ccli-and-ccx"></a>Especificadores de substituição (C + + c++ /CLI e c++ /CLI CX)
 
 *Especificadores de substituição* modificar herdados como tipos e membros de tipos herdados se comportam em tipos derivados.
 
@@ -65,4 +65,4 @@ Opção do compilador: `/clr`
 
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
+[Extensões de componentes para .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

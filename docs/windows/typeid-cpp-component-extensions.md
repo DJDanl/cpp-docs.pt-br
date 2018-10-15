@@ -1,7 +1,7 @@
 ---
-title: TypeId (extensões de componentes C++) | Microsoft Docs
+title: TypeId (C + + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1daf9d33b3eb21bf7d196a4263b5f2f7009b183
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b31344b1ba72b37bcfff45a3fd4feefda85f6a7a
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435396"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327577"
 ---
-# <a name="typeid--c-component-extensions"></a>typeid (Extensões de Componentes C++)
+# <a name="typeid--ccli-and-ccx"></a>TypeId (C + + c++ /CLI e c++ /CLI CX)
 
 Obtém um valor que indica o tipo de um objeto.
 
-> [!WARNING]
+> [!NOTE]
 > Este tópico refere-se para a versão de extensões de componentes C++ do typeid. Para obter a versão ISO C++ essa palavra-chave, consulte [operador typeid](../cpp/typeid-operator.md).
 
 ## <a name="all-runtimes"></a>Todos os Tempos de Execução
@@ -200,4 +200,4 @@ int::typeid == handle_to_int::typeid, as expected
 
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
+[Extensões de componentes para .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

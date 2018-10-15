@@ -1,7 +1,7 @@
 ---
-title: Classes e Structs (extensões de componentes C++) | Microsoft Docs
+title: classe ref e ref struct (C + + c++ CLI e C + + c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60e388e18e6d3607dac1946c3fd9a511e948afd4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f2d7ceea7dd3253b28eab5b5fad28381f115225f
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448370"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328059"
 ---
-# <a name="classes-and-structs--c-component-extensions"></a>Classes e Estruturas (Extensões de Componentes C++)
+# <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>classe ref e ref struct (C + + c++ CLI e C + + c++ /CLI CX)
 
-Declara uma classe ou struct cujos *tempo de vida do objeto* é administrado automaticamente. Quando o objeto não está mais acessível ou sai do escopo, o Visual C++ descarta automaticamente a memória alocada para o objeto.
+O **classe ref** ou **ref struct** extensões declarar uma classe ou struct cujo *tempo de vida do objeto* é administrado automaticamente. Quando o objeto não está mais acessível ou sai do escopo, a memória é liberada.
 
 ## <a name="all-runtimes"></a>Todos os Tempos de Execução
 
@@ -61,7 +61,7 @@ O nome da classe ou struct.
 *base_type*<br/>
 (Opcional) Um tipo base. No entanto, um tipo de valor não pode atuar como um tipo base.
 
-Para obter mais informações, consulte as descrições de idioma específico desse parâmetro em tempo de execução do Windows e Runtimesections de linguagem comum.
+Para obter mais informações, consulte as descrições de idioma específico desse parâmetro nas seções de tempo de execução do Windows e o Common Language Runtime.
 
 ### <a name="remarks"></a>Comentários
 
@@ -129,4 +129,4 @@ Opção do compilador: `/clr`
 
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
+[Extensões de componentes para .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

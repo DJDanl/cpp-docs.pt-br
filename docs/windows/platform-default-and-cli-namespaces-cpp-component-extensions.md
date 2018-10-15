@@ -1,7 +1,7 @@
 ---
-title: Plataforma padrão, Namespaces e cli (extensões de componentes C++) | Microsoft Docs
+title: Plataforma, padrão e cli Namespaces (C + + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,20 +19,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 726c9e2653f2914c01d4a45a572614438e12bc8f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a70fb5317f42e98ccddb21fe66e328e1cc6f7643
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194643"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328019"
 ---
-# <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Namespaces Plataforma, padrão e cli (Extensões de Componentes C++)
+# <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Plataforma, padrão e cli Namespaces (C + + c++ /CLI e c++ /CLI CX)
 
 Um namespace qualifica os nomes dos elementos da linguagem para que os nomes não entrem em conflito com nomes idênticos em outras áreas do código-fonte. Por exemplo, uma colisão de nomes pode impedir o compilador reconhecer [contextual as palavras-chave](../windows/context-sensitive-keywords-cpp-component-extensions.md). Os namespaces são usados pelo compilador, mas não preservados no assembly compilado.
 
 ## <a name="all-runtimes"></a>Todos os Tempos de Execução
 
-O Visual C++ fornece um namespace padrão para seu projeto quando o projeto é criado. Você pode renomear manualmente o namespace, embora no tempo de execução do Windows, o nome do arquivo. winmd deve corresponder ao nome do namespace raiz.
+Visual Studio fornece um namespace padrão para seu projeto quando você cria o projeto. Você pode renomear manualmente o namespace, embora no C + + c++ /CX o nome do arquivo. winmd deve corresponder ao nome do namespace raiz.
 
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows
 
@@ -90,4 +90,4 @@ int main() {
 
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
+[Extensões de componentes para .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

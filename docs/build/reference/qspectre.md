@@ -1,7 +1,7 @@
 ---
 title: /Qspectre | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/12/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ed4b84ab761653dde4da6adcd14ec8e77334688
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 0baba6503d1d5b4e382347f4f4d9680b11f954ce
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821641"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328513"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -32,7 +32,7 @@ Especifica a geração de compilador de instruções para atenuar as vulnerabili
 
 ## <a name="remarks"></a>Comentários
 
-O **/Qspectre** opção está disponível no Visual Studio 2017 versão 15.5.5 e posterior e no Visual Studio 2015 atualização 3 por meio de [4338871 KB](https://support.microsoft.com/en-us/help/4338871/visual-studio-2015-update-3-spectre-variant-1-toolset-qspectre). Faz com que o compilador a inserir instruções para atenuar determinados [vulnerabilidades de segurança do Spectre](https://spectreattack.com/spectre.pdf). Essas vulnerabilidades, chamadas *ataques de canal lateral de execução especulativa*, afetar muitos sistemas operacionais e processadores modernos, incluindo processadores da Intel, AMD e ARM.
+O **/Qspectre** opção está disponível no Visual Studio 2017 versão 15.5.5 e posterior e no Visual Studio 2015 atualização 3 por meio de [4338871 KB](https://support.microsoft.com/help/4338871/visual-studio-2015-update-3-spectre-variant-1-toolset-qspectre). Faz com que o compilador a inserir instruções para atenuar determinados [vulnerabilidades de segurança do Spectre](https://spectreattack.com/spectre.pdf). Essas vulnerabilidades, chamadas *ataques de canal lateral de execução especulativa*, afetar muitos sistemas operacionais e processadores modernos, incluindo processadores da Intel, AMD e ARM.
 
 O **/Qspectre** opção está desativada por padrão.
 

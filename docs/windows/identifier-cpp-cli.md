@@ -1,7 +1,7 @@
 ---
 title: Identifier (c + + / CLI) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,25 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 572767c2f85b07f201bef93578b14b731aa467e0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 09a8b69402dbe3812bdd49f8944c979300209bff
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415012"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328266"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 
-Permite o uso de palavras-chave do Visual C++ como identificadores.
+Permite o uso de palavras-chave C++ como identificadores.
 
 ## <a name="all-platforms"></a>Todas as Plataformas
 
 ### <a name="syntax"></a>Sintaxe
 
 ```cpp
-__identifier(
-Visual_C++_keyword
-)  
+__identifier(C++_keyword)  
 ```
 
 ### <a name="remarks"></a>Comentários
@@ -53,7 +51,7 @@ Opção do compilador: `/ZW`
 
 **Exemplo**
 
-No exemplo a seguir, uma classe chamada **modelo** é criado em c# e distribuído como uma DLL. No programa Visual C++ que usa o **modelo** classe, o **Identifier** palavra-chave oculta o fato de que **modelo** é uma palavra-chave C++ padrão.
+No exemplo a seguir, uma classe chamada **modelo** é criado em c# e distribuído como uma DLL. No C + c++ /CLI programa que usa o **modelo** classe, o **Identifier** palavra-chave oculta o fato de que **modelo** é uma palavra-chave C++ padrão.
 
 ```cs
 // identifier_template.cs
@@ -85,7 +83,7 @@ Opção do compilador: `/clr`
 
 ### <a name="examples"></a>Exemplos
 
-No exemplo a seguir, uma classe chamada **modelo** é criado em c# e distribuído como uma DLL. No programa Visual C++ que usa o **modelo** classe, o **Identifier** palavra-chave oculta o fato de que **modelo** é uma palavra-chave C++ padrão.
+No exemplo a seguir, uma classe chamada **modelo** é criado em c# e distribuído como uma DLL. No C + c++ /CLI programa que usa o **modelo** classe, o **Identifier** palavra-chave oculta o fato de que **modelo** é uma palavra-chave C++ padrão.
 
 ```cs
 // identifier_template.cs
@@ -108,5 +106,5 @@ int main() {
 
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)<br/>
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
+[Extensões de componentes para .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Extensões de componentes para .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

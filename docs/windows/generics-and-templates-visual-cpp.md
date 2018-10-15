@@ -1,7 +1,7 @@
 ---
-title: Genéricos e modelos (Visual C++) | Microsoft Docs
+title: Genéricos e modelos (C + + / CLI) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f8a58e26b571c119d45cb981c582ebec335eface
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4d63d7620aa4d2cb83b954494172da9db55f6a2e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590996"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328214"
 ---
-# <a name="generics-and-templates-visual-c"></a>Genéricos e modelos (Visual C++)
+# <a name="generics-and-templates-ccli"></a>Genéricos e modelos (C + + / CLI)
 
 Genéricos e modelos são recursos de linguagem que oferecem suporte para tipos parametrizados. No entanto, eles são diferentes e têm diferentes usos. Este tópico fornece uma visão geral das muitas diferenças.
 
@@ -61,7 +61,7 @@ A diferença básica em genéricos tem implicações para a criação de aplicat
 
 O exemplo a seguir mostra um exemplo simples de usar modelos e genéricos juntos. Neste exemplo, a classe de modelo passa seu parâmetro por meio de para o tipo genérico. O inverso não é possível.
 
-Essa linguagem pode ser usada quando você deseja criar em uma API genérica existente com o código de modelo que seja local para um assembly do Visual C++, ou quando você precisa adicionar uma camada extra de parametrização para um tipo genérico, para tirar proveito de determinados recursos de modelos não supporte 1!d por genéricos.
+Essa linguagem pode ser usada quando você deseja criar em uma API genérica existente com o código de modelo que seja local para C + c++ /CLI assembly da CLI, ou quando você precisa adicionar uma camada extra de parametrização para um tipo genérico tirar proveito de determinados recursos de modelos não há suporte para b genéricos de y.
 
 ### <a name="code"></a>Código
 

@@ -1,7 +1,7 @@
 ---
-title: Substituições explícitas (extensões de componentes C++) | Microsoft Docs
+title: Substituições explícitas (C + + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba6ed66359ee833b51154e47f8f6c26c0de8994c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 689c8420c2526f94f88c8b2ba8433c2310281874
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408941"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328032"
 ---
-# <a name="explicit-overrides--c-component-extensions"></a>Substituições explícitas (Extensões de componente C++)
+# <a name="explicit-overrides--ccli-and-ccx"></a>Substituições explícitas (C + + c++ /CLI e c++ /CLI CX)
 
 Este tópico discute como substituir explicitamente um membro de uma classe base ou interface. Uma substituição (explícita) nomeada só deve ser usada para substituir um método com um método derivado que tem um nome diferente.
 
@@ -184,4 +184,4 @@ public:
 
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
+[Extensões de componentes para .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

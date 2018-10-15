@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 721dd285760027c35ae93d89ec5bb3fde6e9ba11
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 86dc19600dc8cbb452db585993dec85c3f7b8591
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413439"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328383"
 ---
 # <a name="cpagesetupdialog-class"></a>Classe CPageSetupDialog
 
@@ -272,7 +272,7 @@ void GetMargins(
 ### <a name="parameters"></a>Parâmetros
 
 *lpRectMargins*<br/>
-Ponteiro para um [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) estrutura ou [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que descreve (em polegadas de 1/1000 ou 1/100 mm) as margens de impressão para a impressora atualmente selecionada. Passe NULL para esse parâmetro, se você não estiver interessado nesse retângulo.
+Ponteiro para um [RECT](rect-structure.md) estrutura ou [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que descreve (em polegadas de 1/1000 ou 1/100 mm) as margens de impressão para a impressora atualmente selecionada. Passe NULL para esse parâmetro, se você não estiver interessado nesse retângulo.
 
 *lpRectMinMargins*<br/>
 Ponteiro para um `RECT` estrutura ou `CRect` objeto que descreve (em polegadas de 1/1000 ou 1/100 mm) as margens de impressão mínimo para a impressora atualmente selecionada. Passe NULL para esse parâmetro, se você não estiver interessado nesse retângulo.
@@ -351,7 +351,7 @@ Especifica uma mensagem que indica a área da página no momento que está sendo
 - Área de WM_PSD_YAFULLPAGERECT para uma representação de endereço de retorno. Esta área se estende às bordas da área da página de exemplo.
 
 *lpRect*<br/>
-Ponteiro para um [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) objeto que contém as coordenadas da área de desenho.
+Ponteiro para um [CRect](../../atl-mfc-shared/reference/crect-class.md) ou [RECT](rect-structure.md) objeto que contém as coordenadas da área de desenho.
 
 ### <a name="return-value"></a>Valor de retorno
 

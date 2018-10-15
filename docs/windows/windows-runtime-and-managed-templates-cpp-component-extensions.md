@@ -1,7 +1,7 @@
 ---
-title: Tempo de execução do Windows e modelos gerenciados (extensões de componentes C++) | Microsoft Docs
+title: Tempo de execução do Windows e modelos gerenciados (C + + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a7d08354bcd2b0b0d8cf1db6e4bd58fb9821708
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b83aa54b9f9697fddbefc6da29e7cf99d497cc12
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591443"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328292"
 ---
-# <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows Runtime e Modelos Gerenciados (Extensões de Componentes C++)
+# <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Tempo de execução do Windows e modelos gerenciados (C + + c++ /CLI e c++ /CLI CX)
 
 Modelos permitem que você defina um protótipo de um tempo de execução do Windows ou o tipo common language runtime e, em seguida, criar uma instância de variações desse tipo por meio de parâmetros de tipo de modelo diferente.
 
@@ -50,7 +50,7 @@ Opção do compilador: `/clr`
 
 ### <a name="examples"></a>Exemplos
 
-É possível criar uma instância de um tipo genérico com um parâmetro de modelo do tipo gerenciado, mas você não pode instanciar um modelo gerenciado com um parâmetro de modelo de tipo genérico. Isso ocorre porque os tipos genéricos são resolvidos em tempo de execução. Para obter mais informações, consulte [genéricos e modelos (Visual C++)](../windows/generics-and-templates-visual-cpp.md).
+É possível criar uma instância de um tipo genérico com um parâmetro de modelo do tipo gerenciado, mas você não pode instanciar um modelo gerenciado com um parâmetro de modelo de tipo genérico. Isso ocorre porque os tipos genéricos são resolvidos em tempo de execução. Para obter mais informações, consulte [genéricos e modelos (C + + / CLI)](../windows/generics-and-templates-visual-cpp.md).
 
 ```cpp
 // managed_templates.cpp
@@ -142,4 +142,4 @@ class A <int> {};
 
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
+[Extensões de componentes para .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,7 +1,7 @@
 ---
-title: Conversão boxing (extensões de componentes C++) | Microsoft Docs
+title: Conversão boxing (C + + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92dc2032031fd0f3032db57b9eca8c723367da9e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b11ac2f6b640e42c14522b45fe0c3da89036ae24
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316712"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328006"
 ---
-# <a name="boxing--c-component-extensions"></a>Conversão boxing (Extensões de Componentes C++)
+# <a name="boxing--ccli-and-ccx"></a>Conversão boxing (C + + c++ /CLI e c++ /CLI CX)
 
-O compilador do Visual C++ pode converter tipos de valor em objetos em um processo chamado *conversão boxing*e converter objetos em tipos de valor em um processo chamado *unboxing*.
+A conversão de tipos de valor para objetos é chamada *conversão boxing*, e a conversão de objetos para tipos de valor é chamada *unboxing*.
 
 ## <a name="all-runtimes"></a>Todos os Tempos de Execução
 
@@ -86,7 +86,7 @@ Para obter mais informações, consulte [conversão Boxing (C + + c++ /CX)](http
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-O compilador do Visual C++ agora caixas de valor de tipos para <xref:System.Object>. Isso é possível por causa de uma conversão definida pelo compilador para converter os tipos de valor para <xref:System.Object>.
+Tipos de valor de caixas de compilador <xref:System.Object>. Isso é possível por causa de uma conversão definida pelo compilador para converter os tipos de valor para <xref:System.Object>.
 
 Conversão boxing e unboxing habilitar tipos de valor a serem tratados como objetos. Tipos de valor, incluindo tipos de structs e tipos internos, como int, podem ser convertidos para e do tipo <xref:System.Object>.
 
@@ -200,4 +200,4 @@ in func2(System::ValueType^)
 
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
+[Extensões de componentes para .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

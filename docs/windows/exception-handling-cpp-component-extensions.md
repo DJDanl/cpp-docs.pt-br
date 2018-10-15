@@ -1,7 +1,7 @@
 ---
-title: Tratamento de exceção (extensões de componentes C++) | Microsoft Docs
+title: Tratamento de exceções (C + + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -20,14 +20,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2213266d281933c6a6a59775584532acaeb39d6e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7d070cc223f90f84bd52176ee7e50dbbfa441789
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412309"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328123"
 ---
-# <a name="exception-handling--c-component-extensions"></a>Tratamento de Exceção (Extensões de Componentes C++)
+# <a name="exception-handling--ccli-and-ccx"></a>Tratamento de exceções (C + + c++ /CLI e c++ /CLI CX)
 
 Aplicativos compilados com o `/ZW` opção de compilador ou `/clr` opção de compilador ambos usam *exceções* para lidar com erros inesperados durante a execução do programa. Os tópicos a seguir discutem o tratamento de exceções em qualquer um dos C + + c++ /CLI CX ou C + + c++ /CLI aplicativos CLI.
 
@@ -36,7 +36,7 @@ Aplicativos compilados com o `/ZW` opção de compilador ou `/clr` opção de co
 [Conceitos básicos do uso de exceções gerenciadas](../dotnet/basic-concepts-in-using-managed-exceptions.md)<br/>
 Descreve Lançando exceções e usando **tente**/**catch** blocos.
 
-[Diferenças no comportamento em /CLR de tratamento de exceções](../dotnet/differences-in-exception-handling-behavior-under-clr.md)<br/>
+[Diferenças na exceção comportamento de tratamento em /clr](../dotnet/differences-in-exception-handling-behavior-under-clr.md)<br/>
 Discute as diferenças do comportamento padrão de tratamento de exceções C++.
 
 [finally](../dotnet/finally.md)<br/>
@@ -54,8 +54,8 @@ Demonstra como capturar exceções não tratadas.
 ## <a name="related-sections"></a>Seções relacionadas
 
 [Tratamento de Exceção](../cpp/exception-handling-in-visual-cpp.md)<br/>
-Descreve o tratamento de exceções em C++.
+Descreve o tratamento de exceções em C++ padrão.
 
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
+[Extensões de componentes para .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

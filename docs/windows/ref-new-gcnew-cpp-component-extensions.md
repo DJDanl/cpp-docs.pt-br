@@ -1,7 +1,7 @@
 ---
-title: REF new, gcnew (extensões de componentes C++) | Microsoft Docs
+title: gcnew de ref new, (C + + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -20,14 +20,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c31cda7c074b06025051661d27f00d2624721d0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f5a10278957e6a89b52e744f8f0dd78b475f7730
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596152"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328305"
 ---
-# <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew (Extensões de Componentes C++)
+# <a name="ref-new-gcnew--ccli-and-ccx"></a>gcnew de ref new, (C + + c++ /CLI e c++ /CLI CX)
 
 O **ref novos** palavra-chave agregação aloca uma instância de um tipo que é quando o objeto se torna inacessível e que retorna um identificador de coleta de lixo ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) para o objeto alocado.
 
@@ -99,4 +99,4 @@ int main()
 
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
+[Extensões de componentes para .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,7 +1,7 @@
 ---
-title: 'Como: melhorar o desempenho com genéricos (Visual C++) | Microsoft Docs'
+title: 'Como: melhorar o desempenho com genéricos (C + + / CLI) | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f946970f78b432774a5e4c7ba20fd15a00ae654
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ead9491e7b5302cadfa59eb7d98215fb3c41eb09
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318519"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327811"
 ---
-# <a name="how-to-improve-performance-with-generics-visual-c"></a>Como melhorar o desempenho com genéricos (Visual C++)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>Como: melhorar o desempenho com genéricos (C + + / CLI)
 
 Com genéricos, você pode criar códigos reutilizáveis, com base em um parâmetro de tipo. O tipo real do parâmetro de tipo é adiado até que a chamada pelo código do cliente. Para obter mais informações sobre os genéricos, consulte [genéricos](../windows/generics-cpp-component-extensions.md).
 

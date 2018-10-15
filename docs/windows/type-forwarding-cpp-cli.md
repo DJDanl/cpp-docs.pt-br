@@ -1,7 +1,7 @@
 ---
 title: Encaminhamento de tipo (C + + / CLI) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,28 +15,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 806003e33e60b5146bdd722fa5248011cd4939c0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7fe70de2503134bf76f5e1c7099773737cc153f8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396539"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328331"
 ---
 # <a name="type-forwarding-ccli"></a>Encaminhamento de tipos (C++/CLI)
 
 *Encaminhamento de tipo* permite que você mova um tipo de um assembly (assembly A) em outro assembly (assembly B), de modo que não é necessário recompilar os clientes que consomem o assembly A.
 
-## <a name="all-platforms"></a>Todas as Plataformas
-
-Não há suporte para esse recurso em todos os tempos de execução.
-
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows
 
 Não há suporte para esse recurso no tempo de execução do Windows.
-
-### <a name="requirements"></a>Requisitos
-
-Opção do compilador: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
@@ -44,7 +36,7 @@ O exemplo de código a seguir demonstra como usar o encaminhamento de tipo.
 
 ### <a name="syntax"></a>Sintaxe
 
-```
+```cpp
 #using "new.dll"
 [assembly:TypeForwardedTo(type::typeid)];
 ```
@@ -97,7 +89,7 @@ Portanto, se um arquivo de código fonte que é usado para compilar o assembly. 
 
 3. Excluir o `MyClass` tipo de definição do código-fonte usado para compilar a dll e substituí-lo com o seguinte:
 
-    ```
+    ```cpp
     #using "B.dll"
     [assembly:TypeForwardedTo(MyClass::typeid)];
     ```

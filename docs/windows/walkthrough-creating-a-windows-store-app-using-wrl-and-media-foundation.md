@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d745b912406407cd56252ba593601a7794fc841d
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 77664c6e849707e6ec9efafbc816a586d5b4850e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234693"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328201"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Passo a passo: Criando um aplicativo UWP usando WRL e Media Foundation
 
@@ -52,7 +52,7 @@ Na maioria dos casos, você pode usar C + + c++ /CX para criar o tempo de execu�
 
 - O [InspectableClass](../windows/inspectableclass-macro.md) macro implementa a funcionalidade básica de COM, como a contagem de referência e o `QueryInterface` método e define o tempo de execução do nome da classe e o nível de confiança.
 
-- Usar o Microsoft:: wrl::[classe de módulo](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/b4acf5de-2f4c-4c8b-b5ff-9140d023ecbe) para implementar as funções de ponto de entrada DLL, como [DllGetActivationFactory](https://msdn.microsoft.com/library/br205771.aspx), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), e [ DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject).
+- Usar o Microsoft:: wrl::[classe de módulo](module-class.md) para implementar as funções de ponto de entrada DLL, como [DllGetActivationFactory](https://msdn.microsoft.com/library/br205771.aspx), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), e [ DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject).
 
 - Vincule seu DLL do componente a runtimeobject. Também especifique [/WINMD](../cppcx/compiler-and-linker-options-c-cx.md) na linha do vinculador para gerar os metadados do Windows.
 

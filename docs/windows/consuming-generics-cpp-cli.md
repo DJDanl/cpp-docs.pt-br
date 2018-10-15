@@ -1,7 +1,7 @@
 ---
 title: Consumindo genéricos (C + + / CLI) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c17e8212b01ad2cf80c74f80de26209d00f6d1a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6bccfc4ab3e5df690c6fdb5ddb04c458756a4cd7
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589850"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327746"
 ---
 # <a name="consuming-generics-ccli"></a>Consumindo genéricos (C++/CLI)
 
-Genéricos criados em uma linguagem .NET podem ser usados em outras linguagens .NET. Ao contrário dos modelos, um genérico em um assembly compilado ainda permanece genérico. Assim, um pode criar uma instância de tipo genérico em um assembly diferente e até mesmo em um idioma diferente do assembly no qual o tipo genérico foi definido.
+Genéricos criados em uma linguagem .NET (ou UWP) podem ser usados em outras linguagens. Ao contrário dos modelos, um genérico em um assembly compilado ainda permanece genérico. Assim, um pode criar uma instância de tipo genérico em um assembly diferente e até mesmo em um idioma diferente do assembly no qual o tipo genérico foi definido.
 
 ## <a name="example"></a>Exemplo
 

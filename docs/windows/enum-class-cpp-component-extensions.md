@@ -1,7 +1,7 @@
 ---
-title: classe Enum (extensões de componentes C++) | Microsoft Docs
+title: classe Enum (C + + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -13,14 +13,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 993f0e190d87b140fba0008872d57f2a34b6a5cb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7b85807b9e9dd0cec63def8ffc4a9aa69056f270
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377260"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328136"
 ---
-# <a name="enum-class--c-component-extensions"></a>classe enum (Extensões de Componentes C++)
+# <a name="enum-class--ccli-and-ccx"></a>classe Enum (C + + c++ /CLI e c++ /CLI CX)
 
 Declara uma enumeração no escopo do namespace, que é um tipo definido pelo usuário que consiste em um conjunto de constantes nomeadas chamadas enumeradores.
 
@@ -146,13 +146,13 @@ Nomes de enumerador gerenciados (*identificadores*) não são injetados no escop
 
 Os enumeradores de um enum padrão fortemente são injetados no escopo delimitador.  Ou seja, se houver outro símbolo com o mesmo nome de um enumerador no escopo delimitador, o compilador gerará um erro.
 
-No Visual C++ 2002 e Visual C++ 2003, enumeradores fraca foram inseridos (visível no escopo delimitador, a menos que não havia outro identificador com o mesmo nome).
+No Visual Studio 2002 e Visual Studio 2003, enumeradores fraca foram inseridos (visível no escopo delimitador, a menos que não havia outro identificador com o mesmo nome).
 
-Se um enum C++ padrão é definido (sem **classe** ou **struct**), compilando com `/clr` fará com que a enumeração a ser compilado como um enum gerenciado.  A enumeração ainda tem a semântica de uma enumeração não gerenciada.  Observe que o compilador injeta um atributo `Microsoft::VisualC::NativeEnumAttribute`, que reconhece o compilador do Visual C++, para identificar a intenção do programador para o enum ser um enum nativo.  Outros compiladores simplesmente verá o enum padrão como um enum gerenciado.
+Se um enum C++ padrão é definido (sem **classe** ou **struct**), compilando com `/clr` fará com que a enumeração a ser compilado como um enum gerenciado.  A enumeração ainda tem a semântica de uma enumeração não gerenciada.  Observe que o compilador injeta um atributo `Microsoft::VisualC::NativeEnumAttribute` para identificar a intenção do programador para o enum ser um enum nativo.  Outros compiladores simplesmente verá o enum padrão como um enum gerenciado.
 
 A chamada, enum padrão compilado com `/clr` ficarão visíveis no assembly como um enum gerenciado e podem ser consumidos por qualquer outro compilador gerenciado.   No entanto, um enum padrão sem nome não será visível publicamente do assembly.
 
-No Visual C++ 2002 e Visual C++ 2003, um enum padrão usado como o tipo em um parâmetro de função:
+No Visual Studio 2002 e Visual Studio 2003, um enum padrão usado como o tipo em um parâmetro de função:
 
 ```cpp
 // mcppv2_enum.cpp
@@ -231,4 +231,4 @@ convert to int: 1
 
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
+[Extensões de componentes para .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

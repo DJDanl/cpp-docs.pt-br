@@ -1,7 +1,7 @@
 ---
-title: Suporte a compilador para características de tipo (extensões de componentes C++) | Microsoft Docs
+title: Suporte a compilador para características de tipo (C + + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -71,16 +71,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5df33233f78eed1f3dc6c9403eb4b1740ccf1a70
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dfa3f599da4594e9cb0d416def1846b9937664f8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42588276"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328526"
 ---
-# <a name="compiler-support-for-type-traits-c-component-extensions"></a>Suporte para Compilador de Traços de Tipo (Extensões de Componentes C++)
+# <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>Suporte a compilador para características de tipo (C + + c++ /CLI e c++ /CLI CX)
 
-O oferece suporte ao compilador *características de tipo*, que indicam várias características de um tipo em tempo de compilação.
+O compilador de Microsoft C++ oferece suporte ao *características de tipo* para C + + c++ CLI e C + + c++ /CLI extensões CX, que indicam várias características de um tipo em tempo de compilação.
 
 ## <a name="all-runtimes"></a>Todos os Tempos de Execução
 
@@ -90,9 +90,9 @@ Características de tipo são especialmente úteis para programadores que escrev
 
 A lista a seguir contém as características de tipo que são suportadas pelo compilador. Todos os tipo de retorno de características **falsos** se a condição especificada pelo nome da característica de tipo não for atendida.
 
-(Na lista a seguir, exemplos de código são gravados somente no C + + / CLI. Mas a característica de tipo correspondente também é compatível com extensões de componentes do Visual C++, a menos que indicado de outra forma. O termo "tipo de plataforma" refere-se a tipos de tempo de execução do Windows ou tipos common language runtime.)
+(Na lista a seguir, exemplos de código são gravados somente no C + + / CLI. Mas também há suporte para a característica de tipo correspondente no C + + c++ /CX, a menos que indicado de outra forma. O termo "tipo de plataforma" refere-se a tipos de tempo de execução do Windows ou tipos common language runtime.)
 
-- `__has_assign(``type``)`
+- `__has_assign(` *Tipo* `)`
 
    Retorna **verdadeira** se a plataforma ou tipo nativo tem um operador de atribuição de cópia.
 
@@ -106,7 +106,7 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__has_copy(``type``)`
+- `__has_copy(` *Tipo* `)`
 
    Retorna **verdadeira** se a plataforma ou tipo nativo tem um construtor de cópia.
 
@@ -120,9 +120,9 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__has_finalizer(``type``)`
+- `__has_finalizer(` *Tipo* `)`
 
-   (Sem suporte nas extensões de componente do Visual C++.) Retorna **verdadeira** se o tipo CLR tem um finalizador. Ver [destruidores e finalizadores em como: definir e consumir classes e estruturas (C + + c++ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) para obter mais informações.
+   (Não há suportada no C + + c++ /CLI CX.) Retorna **verdadeira** se o tipo CLR tem um finalizador. Ver [destruidores e finalizadores em como: definir e consumir classes e estruturas (C + + c++ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) para obter mais informações.
 
     ```cpp
     using namespace System;
@@ -137,7 +137,7 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__has_nothrow_assign(``type``)`
+- `__has_nothrow_assign(` *Tipo* `)`
 
    Retorna **verdadeira** se um operador de atribuição de cópia tem uma especificação de exceção vazio.
 
@@ -153,7 +153,7 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__has_nothrow_constructor(``type``)`
+- `__has_nothrow_constructor(` *Tipo* `)`
 
    Retorna **verdadeira** se o construtor padrão tem uma especificação de exceção vazio.
 
@@ -169,7 +169,7 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__has_nothrow_copy(``type``)`
+- `__has_nothrow_copy(` *Tipo* `)`
 
    Retorna **verdadeira** se o construtor de cópia tem uma especificação de exceção vazio.
 
@@ -185,7 +185,7 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__has_trivial_assign(``type``)`
+- `__has_trivial_assign(` *Tipo* `)`
 
    Retorna **verdadeira** se o tipo tem um operador de atribuição trivial, gerado pelo compilador.
 
@@ -199,7 +199,7 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__has_trivial_constructor(``type``)`
+- `__has_trivial_constructor(` *Tipo* `)`
 
    Retorna **verdadeira** se o tipo tem um construtor trivial, gerado pelo compilador.
 
@@ -213,7 +213,7 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__has_trivial_copy(``type``)`
+- `__has_trivial_copy(` *Tipo* `)`
 
    Retorna **verdadeira** se o tipo tem um construtor de cópia trivial, gerado pelo compilador.
 
@@ -227,7 +227,7 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__has_trivial_destructor(``type``)`
+- `__has_trivial_destructor(` *Tipo* `)`
 
    Retorna **verdadeira** se o tipo tem um destruidor trivial, gerado pelo compilador.
 
@@ -242,7 +242,7 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__has_user_destructor(``type``)`
+- `__has_user_destructor(` *Tipo* `)`
 
    Retorna **verdadeira** se a plataforma ou tipo nativo tem um destruidor declarado pelo usuário.
 
@@ -259,7 +259,7 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__has_virtual_destructor(``type``)`
+- `__has_virtual_destructor(` *Tipo* `)`
 
    Retorna **verdadeira** se o tipo tem um destruidor virtual.
 
@@ -278,11 +278,11 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__is_abstract(``type``)`
+- `__is_abstract(` *Tipo* `)`
 
-   Retorna **verdadeira** se o tipo for um tipo abstrato. Para obter mais informações sobre tipos abstratos nativos, consulte [abstrata](../windows/abstract-cpp-component-extensions.md).
+   Retorna **verdadeira** se o tipo for um tipo abstrato. Para obter mais informações sobre tipos abstratos nativos, consulte [Classes abstratas](../cpp/abstract-classes-cpp.md).
 
-   `__is_abstract` também funciona para tipos de plataforma. Uma interface com pelo menos um membro é um tipo abstrato, assim como um tipo de referência pelo menos um membro abstrato. Para obter mais informações sobre tipos de plataforma abstratas, consulte [Classes abstratas](../cpp/abstract-classes-cpp.md)
+   `__is_abstract` também funciona para tipos de plataforma. Uma interface com pelo menos um membro é um tipo abstrato, assim como um tipo de referência pelo menos um membro abstrato. Para obter mais informações sobre tipos de plataforma abstratas, consulte [abstrata](../windows/abstract-cpp-component-extensions.md).
 
     ```cpp
     // is_abstract.cpp
@@ -318,7 +318,7 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__is_class(``type``)`
+- `__is_class(` *Tipo* `)`
 
    Retorna **verdadeira** se o tipo é uma classe nativa ou estrutura.
 
@@ -350,9 +350,9 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__is_delegate(``type``)`
+- `__is_delegate(` *Tipo* `)`
 
-   Retorna **verdadeira** se `type` é um delegado. Para obter mais informações, consulte [delegado (extensões de componentes C++)](../windows/delegate-cpp-component-extensions.md).
+   Retorna **verdadeira** se `type` é um delegado. Para obter mais informações, consulte [delegar (C + + c++ /CLI e c++ /CLI CX)](../windows/delegate-cpp-component-extensions.md).
 
     ```cpp
     delegate void MyDel();
@@ -361,7 +361,7 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__is_empty(``type``)`
+- `__is_empty(` *Tipo* `)`
 
    Retorna **verdadeira** se o tipo não tiver nenhum membro de dados de instância.
 
@@ -377,7 +377,7 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__is_enum(``type``)`
+- `__is_enum(` *Tipo* `)`
 
    Retorna **verdadeira** se o tipo é uma enumeração nativa.
 
@@ -399,7 +399,7 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__is_interface_class(``type``)`
+- `__is_interface_class(` *Tipo* `)`
 
    Retorna **verdadeira** se passado a uma interface de plataforma. Para obter mais informações, consulte [classe de interface](../windows/interface-class-cpp-component-extensions.md).
 
@@ -413,7 +413,7 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__is_pod(``type``)`
+- `__is_pod(` *Tipo* `)`
 
    Retorna **verdadeira** se o tipo é uma classe ou união com nenhum construtor ou os membros não estáticos privados ou protegidos, sem classes base e sem funções virtuais. Consulte o C++ standard, seções 8.5.1/1, 9/4 e 3.9/10 para obter mais informações sobre PODs.
 
@@ -429,7 +429,7 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__is_polymorphic(``type``)`
+- `__is_polymorphic(` *Tipo* `)`
 
    Retorna **verdadeira** se um tipo nativo tem funções virtuais.
 
@@ -445,7 +445,7 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__is_ref_array(``type``)`
+- `__is_ref_array(` *Tipo* `)`
 
    Retorna **verdadeira** se passado a uma matriz de plataforma. Para obter mais informações, consulte [matrizes](../windows/arrays-cpp-component-extensions.md).
 
@@ -457,7 +457,7 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__is_ref_class(``type``)`
+- `__is_ref_class(` *Tipo* `)`
 
    Retorna **verdadeira** se passado a uma classe de referência. Para obter mais informações sobre tipos de referência definidos pelo usuário, consulte [Classes e Structs](../windows/classes-and-structs-cpp-component-extensions.md).
 
@@ -470,7 +470,7 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__is_sealed(``type``)`
+- `__is_sealed(` *Tipo* `)`
 
    Retorna **verdadeira** se passado a uma plataforma ou tipo nativo marcado como sealed. Para obter mais informações, consulte [lacrado](../windows/sealed-cpp-component-extensions.md).
 
@@ -481,7 +481,7 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__is_simple_value_class(``type``)`
+- `__is_simple_value_class(` *Tipo* `)`
 
    Retorna **verdadeira** se passado a um tipo de valor que não contém nenhuma referência para o heap coletado como lixo. Para obter mais informações sobre tipos de valor definidos pelo usuário, consulte [Classes e Structs](../windows/classes-and-structs-cpp-component-extensions.md).
 
@@ -499,7 +499,7 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__is_union(``type``)`
+- `__is_union(` *Tipo* `)`
 
    Retorna **verdadeira** se um tipo é uma união.
 
@@ -516,7 +516,7 @@ A lista a seguir contém as características de tipo que são suportadas pelo co
     }
     ```
 
-- `__is_value_class(``type``)`
+- `__is_value_class(` *Tipo* `)`
 
    Retorna **verdadeira** se passado a um tipo de valor. Para obter mais informações sobre tipos de valor definidos pelo usuário, consulte [Classes e Structs](../windows/classes-and-structs-cpp-component-extensions.md).
 
@@ -580,4 +580,4 @@ R is a ref class
 
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
+[Extensões de componentes para .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

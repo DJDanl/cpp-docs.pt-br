@@ -1,7 +1,7 @@
 ---
-title: Cadeia de caracteres (extensões de componentes C++) | Microsoft Docs
+title: Cadeia de caracteres (C + + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/08/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,24 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d6b6ce066c84056997ec9b54c9d74e782064df4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b835f1d507c8e577f8b44ca314422dd5b6f2ca46
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408395"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327419"
 ---
-# <a name="string--c-component-extensions"></a>Cadeia de caracteres (Extensões de Componentes C++)
-
-O compilador de Visual C++ oferece suporte ao *cadeias de caracteres*, que são objetos que representam o texto como uma sequência de caracteres. Visual C++ oferece suporte a variáveis de cadeia de caracteres, cujo valor é implícito, e literais, cujo valor é uma cadeia de caracteres entre aspas explícita.
-
-## <a name="all-runtimes"></a>Todos os Tempos de Execução
+# <a name="string--ccli-and-ccx"></a>Cadeia de caracteres (C + + c++ /CLI e c++ /CLI CX)
 
 O tempo de execução do Windows e o common language runtime representam cadeias de caracteres como objetos cuja memória alocada é gerenciada automaticamente. Ou seja, você não deve descartar explicitamente a memória para uma cadeia de caracteres quando termina o sai de variável de cadeia de caracteres do escopo ou seu aplicativo. Para indicar que o tempo de vida de um objeto de cadeia de caracteres deve ser gerenciado automaticamente, declare o tipo de cadeia de caracteres com o [handle-to-object (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) modificador.
 
 ## <a name="windows-runtime"></a>Tempo de Execução do Windows
 
-A arquitetura de tempo de execução do Windows requer o Visual C++ implementar o `String` tipo de dados no `Platform` namespace. Para sua conveniência, o Visual C++ também fornece o `string` tipo de dados, que é um sinônimo de `Platform::String`, no `default` namespace.
+A arquitetura de tempo de execução do Windows requer que o `String` tipo de dados estar localizado no `Platform` namespace. Para sua conveniência, o Visual C++ também fornece o `string` tipo de dados, que é um sinônimo de `Platform::String`, no `default` namespace.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -51,8 +47,6 @@ using namespace default;
 Opção do compilador: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
-
-Este tópico discute como o compilador do Visual C++ processa os literais de cadeia de caracteres quando você executá-lo usando o `/clr` opção de compilador. Para usar `/clr`, você também deve usar o runtime de linguagem comum (CLR), C + + c++ /CLI sintaxe da CLI e objetos gerenciados. Para obter mais informações sobre `/clr`, consulte [/clr (compilação de tempo de execução de linguagem comum)](../build/reference/clr-common-language-runtime-compilation.md).
 
 Ao compilar com `/clr`, o compilador irá converter literais de cadeia de caracteres para cadeias de caracteres do tipo <xref:System.String>. Para preservar a compatibilidade com versões anteriores com o código existente há são duas exceções a isso:
 
@@ -91,9 +85,9 @@ O exemplo de código a seguir demonstra a concatenação e comparando cadeias de
 using namespace System;
 
 int main() {
-   String ^ a = gcnew String("abc");
-   String ^ b = "def";   // same as gcnew form
-   Object ^ c = gcnew String("ghi");
+   String^ a = gcnew String("abc");
+   String^ b = "def";   // same as gcnew form
+   Object^ c = gcnew String("ghi");
 
    char d[100] = "abc";
 
@@ -111,12 +105,12 @@ int main() {
    // concatenation of a System::String and string literal
    Console::WriteLine(a + "zzz");
 
-   // you can append to a System::String ^
+   // you can append to a System::String^
    Console::WriteLine(a + 1);
    Console::WriteLine(a + 'a');
    Console::WriteLine(a + 3.1);
 
-   // test System::String ^ for equality
+   // test System::String^ for equality
    a += b;
    Console::WriteLine(a);
    a = b;
@@ -127,12 +121,12 @@ int main() {
    if (a != b)  
       Console::WriteLine("a and b are not equal");
 
-   // System:String ^ and tracking reference
+   // System:String^ and tracking reference
    String^% rstr1 = a;
    Console::WriteLine(rstr1);
 
-   // testing an empty System::String ^
-   String ^ n;
+   // testing an empty System::String^
+   String^ n;
    if (n == nullptr)  
       Console::WriteLine("n is empty");
 }
@@ -179,29 +173,29 @@ using namespace System;
 void Test_Overload(const char * a) {
    Console::WriteLine("const char * a");
 }
-void Test_Overload(String ^ a) {
-   Console::WriteLine("String ^ a");
+void Test_Overload(String^ a) {
+   Console::WriteLine("String^ a");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(String ^ a, String ^ b) {
-   return ("overloaded +(String ^ a, String ^ b)");
+String^ operator +(String^ a, String^ b) {
+   return ("overloaded +(String^ a, String^ b)");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(Object ^ a, String ^ b) {
-   return ("overloaded +(Object ^ a, String ^ b)");
+String^ operator +(Object^ a, String^ b) {
+   return ("overloaded +(Object^ a, String^ b)");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(String ^ a, Object ^ b) {
-   return ("overloaded +(String ^ a, Object ^ b)");
+String^ operator +(String^ a, Object^ b) {
+   return ("overloaded +(String^ a, Object^ b)");
 }
 
 int main() {
-   String ^ a = gcnew String("abc");
-   String ^ b = "def";   // same as gcnew form
-   Object ^ c = gcnew String("ghi");
+   String^ a = gcnew String("abc");
+   String^ b = "def";   // same as gcnew form
+   Object^ c = gcnew String("ghi");
 
    char d[100] = "abc";
 
@@ -215,13 +209,13 @@ int main() {
 ```
 
 ```Output
-overloaded +(String ^ a, String ^ b)
+overloaded +(String^ a, String^ b)
 
-overloaded +(String ^ a, Object ^ b)
+overloaded +(String^ a, Object^ b)
 
-overloaded +(Object ^ a, String ^ b)
+overloaded +(Object^ a, String^ b)
 
-String ^ a
+String^ a
 
 const char * a
 ```
@@ -277,6 +271,6 @@ System.String
 
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Extensões de componentes para .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Literais de cadeia de caracteres e de caracteres](../cpp/string-and-character-literals-cpp.md)<br/>
 [/clr (compilação do Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)
