@@ -1,7 +1,7 @@
 ---
 title: Página de propriedades de Diretórios do VC++ | Microsoft Docs
 ms.custom: ''
-ms.date: 04/26/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82aaa2dc43177963b9b38c398e74aaa0ffff11dd
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 1799bfedaacd5e1560b1294524f717db8912f6b0
+ms.sourcegitcommit: 243ee0395ee44654a81ce1232f4581fb54904868
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821212"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072392"
 ---
 # <a name="vc-directories-property-page-windows"></a>Página de propriedades de Diretórios do VC++ (Windows)
 
@@ -76,7 +76,7 @@ Observação: a lista é populada conforme você digita. Não pressione **Enter*
 
 Para obter mais informações sobre macros e por que você deve usá-las em vez de caminhos embutidos em código, sempre que possível, confira [Trabalhando com propriedades do projeto](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros).
 
-Para obter uma lista das macros geralmente usadas, confira [Macros comuns para comandos e propriedades de build](https://docs.microsoft.com/cpp/ide/common-macros-for-build-commands-and-properties).
+Para obter uma lista das macros geralmente usadas, confira [Macros comuns para comandos e propriedades de build](common-macros-for-build-commands-and-properties.md).
 
 Defina suas próprias macros de duas maneiras:
 

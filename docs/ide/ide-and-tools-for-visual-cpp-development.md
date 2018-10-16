@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 310dc9b8e31f72fbd04c620987d9857932f7a0a1
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 31b9c0c8668ec16d84ad84627eb73a0f406eb21e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821112"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328370"
 ---
 # <a name="ide-and-compiler-tools-for-visual-c-development"></a>IDE e Ferramentas de Compilador para Desenvolvimento do Visual C++
 
@@ -59,7 +59,7 @@ Se o programa tiver uma interface do usuário, você poderá usar um designer pa
 
 ![Designer e Caixa de Ferramentas](media/vs2017-toolbox-designer.png "Designer e Caixa de Ferramentas do Visual Studio 2017")
 
-Para obter mais informações sobre como criar uma interface do usuário para um aplicativo da Plataforma Universal do Windows, confira [Design e interface do usuário](https://developer.microsoft.com/en-us/windows/design).
+Para obter mais informações sobre como criar uma interface do usuário para um aplicativo da Plataforma Universal do Windows, confira [Design e interface do usuário](https://developer.microsoft.com/windows/design).
 
 Para obter mais informações sobre como criar uma interface do usuário para um aplicativo MFC, confira [Aplicativos da área de trabalho do MFC](../mfc/mfc-desktop-applications.md). Para obter informações sobre programas Windows Win32, confira [Aplicativos da área de trabalho do Windows](../windows/windows-desktop-applications-cpp.md).
 

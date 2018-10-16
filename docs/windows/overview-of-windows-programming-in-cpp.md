@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2870aa742806671e39728c3b73604dcf4e810e9
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: e8251f45d07e8a410c41a89fbc618839e9bbb838
+ms.sourcegitcommit: 6a6b2061db9d51c5cc79775512de54589a4d2fbc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083080"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347222"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Visão geral de programação do Windows no C++
 
@@ -35,7 +35,7 @@ Há várias categorias de aplicativos do Windows que você pode desenvolver com 
 
 Aplicativos UWP são capazes de executar em todos os dispositivos Windows 10, como tablets e celulares, bem como na área de trabalho. Na área de trabalho, eles podem ser executadas como uma janela da área de trabalho, em vez de sempre em execução em tela inteira. Esses aplicativos também podem executar no Xbox e em dispositivos futuros.  Aplicativos UWP são executados no tempo de execução do Windows, que fornece uma interface para os dispositivos de hardware diferentes que têm suporte no Windows, serviços e os elementos de interface do usuário.
 
-Você pode escrever aplicativos UWP no C + + c++ /CLI CX, um dialeto do C++, você pode usar o [C + + c++ /CLI biblioteca WinRT](https://moderncpp.com/)para alguns cenários. Aplicativos UWP compilados para código nativo e tem uma interface do usuário XAML ou usam o DirectX. Componentes de tempo de execução do Windows que são escritos em código nativo que aplicativos UWP escritos em outras linguagens podem consumir. Para obter mais informações, consulte [criar um aplicativo da plataforma Universal do Windows em C++](http://go.microsoft.com/fwlink/?LinkID=534976), [crie seu primeiro jogo UWP usando o DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), e [componentes de criação de tempo de execução do Windows em C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
+Você pode escrever aplicativos UWP no C + + c++ /CLI CX, um dialeto do C++, você pode usar o [C + + c++ /CLI biblioteca WinRT](https://moderncpp.com/) para alguns cenários. Aplicativos UWP compilados para código nativo e tem uma interface do usuário XAML ou usam o DirectX. Componentes de tempo de execução do Windows que são escritos em código nativo que aplicativos UWP escritos em outras linguagens podem consumir. Para obter mais informações, consulte [criar um aplicativo da plataforma Universal do Windows em C++](http://go.microsoft.com/fwlink/?LinkID=534976), [crie seu primeiro jogo UWP usando o DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), e [componentes de criação de tempo de execução do Windows em C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
 
    Essa categoria também inclui usando C++ para componentes principais e código computacional no contexto do servidor e de programação em nuvem. Às vezes, o código de alto desempenho a essência de um servidor ou aplicativo em nuvem é escrito em C++ para maximizar o desempenho. Você pode compilar esse código em uma DLL e usá-lo no c# ou Visual Basic.
 

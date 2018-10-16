@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f0e5ce08e362cef0fd625036a92c1d13885ded
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: bcf3ce1f0ddc5003886c367cfe5db8968a911ee9
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821537"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083977"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Histórico de alterações de 2003 a 2015 do Visual C++
 
@@ -282,7 +282,7 @@ Além disso, aprimoramentos contínuos para a conformidade do compilador podem a
 
 - **clock**
 
-   Nas versões anteriores, a função [clock](../c-runtime-library/reference/clock.md) foi implementada usando a API [GetSystemTimeAsFileTime](https://msdn.microsoft.com/library/windows/desktop/ms724397.aspx) do Windows. Com essa implementação, a função clock era sensível à hora do sistema e, portanto, não era necessariamente monotônica. A função clock foi reimplementada em termos de [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) e agora é monotônica.
+   Nas versões anteriores, a função [clock](../c-runtime-library/reference/clock.md) foi implementada usando a API [GetSystemTimeAsFileTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) do Windows. Com essa implementação, a função clock era sensível à hora do sistema e, portanto, não era necessariamente monotônica. A função clock foi reimplementada em termos de [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) e agora é monotônica.
 
 - **fstat e _utime**
 
@@ -2545,7 +2545,7 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
 
 - **Preterimento do suporte a código ATL atribuído** (Nível 1 [`/W1`] ativado por padrão)
 
-   As versões anteriores do compilador ofereciam suporte ao código ATL atribuído. Como um passo seguinte da remoção do suporte ao código ATL atribuído que [começou no Visual Studio 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), o código ATL atribuído foi preterido. Agora o compilador emite o aviso do compilador C4467 para ajudar a identificar esse tipo de código preterido.
+   As versões anteriores do compilador ofereciam suporte ao código ATL atribuído. Como um passo seguinte da remoção do suporte ao código ATL atribuído que [começou no Visual Studio 2008](https://msdn.microsoft.com/library/bb384632), o código ATL atribuído foi preterido. Agora o compilador emite o aviso do compilador C4467 para ajudar a identificar esse tipo de código preterido.
 
     ```Output
     warning C4467: Usage of ATL attributes is deprecated
