@@ -1,7 +1,7 @@
 ---
 title: Listas de argumentos variáveis (...) (C + + / CLI) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e58b7ea2d8db0c3d36ad36aaccbf23957c449a77
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 0e95f963636e50bdf453835ee920463e6e266a2a
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590457"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327798"
 ---
 # <a name="variable-argument-lists--ccli"></a>Listas de Argumentos Variáveis (...) (C++/CLI)
 
-Este exemplo mostra como você pode usar o `...` sintaxe no Visual C++ para implementar as funções que têm um número variável de argumentos.
+Este exemplo mostra como você pode usar o `...` sintaxe no C + + c++ CLI para implementar as funções que têm um número variável de argumentos.
 
 > [!NOTE]
 > Este tópico pertence ao C + + / CLI. Para obter informações sobre como usar o `...` em C++ padrão ISO, consulte [reticências e modelos Variadic](../cpp/ellipses-and-variadic-templates.md) e nas reticências e argumentos padrão em [expressões pós-fixadas](../cpp/postfix-expressions.md).

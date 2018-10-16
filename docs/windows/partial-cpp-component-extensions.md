@@ -1,7 +1,7 @@
 ---
-title: Partial (extensões de componentes C++) | Microsoft Docs
+title: parcial (C + + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 340323d2b540c74e600b76129edd360b73d0db23
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ace57934c741d0a6e7b7ab6fbe5e482540a9bc48
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372130"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327863"
 ---
-# <a name="partial--c-component-extensions"></a>parcial (Extensões de Componentes C++)
+# <a name="partial--ccli-and-ccx"></a>parcial (C + + c++ /CLI e c++ /CLI CX)
 
 O **parcial** palavra-chave permite que partes diferentes da mesma classe ref a ser criado de forma independente e em arquivos diferentes.
 

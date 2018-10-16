@@ -1,7 +1,7 @@
 ---
-title: Operador Handle to Object (^) (extensões de componentes C++) | Microsoft Docs
+title: Operador Handle to Object (^) (C + + c++ CLI e C + + c++ /CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa72b6ec2983c0d7b9850578e743d03b7e3946e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d7fb74dcff370b314df5da5428ba3e406023acbe
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410852"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327967"
 ---
-# <a name="handle-to-object-operator---c-component-extensions"></a>Operador Handle to Object (^) (Extensões de Componentes C++)
+# <a name="handle-to-object-operator---ccli-and-ccx"></a>Operador Handle to Object (^) (C + + c++ /CLI e c++ /CLI CX)
 
 O *manipular declarador* (`^`, pronunciado "hat"), modifica o tipo [especificador](../cpp/overview-of-declarators.md) para significar que o objeto declarado deve ser excluído automaticamente quando o sistema determina que o objeto é não é mais acessível.
 
@@ -34,7 +34,7 @@ Uma variável que é declarada com o declarator se comporta como um ponteiro par
 
 O compilador usa o COM *contagem de referência* mecanismo para determinar se o objeto não está sendo usado e pode ser excluído. Isso é possível porque um objeto que é derivado de uma interface de tempo de execução do Windows é realmente um objeto COM. A contagem de referência é incrementada quando o objeto é criado ou copiado e diminuído quando o objeto é definido como nulo ou sai do escopo. Se a contagem de referência chegar a zero, o objeto é automaticamente e imediatamente excluído.
 
-A vantagem do declarator é que, no COM é necessário gerenciar explicitamente a contagem de referência para um objeto, que é um processo propenso entediante e erro. Ou seja, para incrementar e reduzir a contagem de referência, você deve chamar os métodos do objeto AddRef e Release (). No entanto, se você declarar um objeto com o declarator, o compilador do Visual C++ gera o código que ajusta automaticamente a contagem de referência.
+A vantagem do declarator é que, no COM é necessário gerenciar explicitamente a contagem de referência para um objeto, que é um processo propenso entediante e erro. Ou seja, para incrementar e reduzir a contagem de referência, você deve chamar os métodos do objeto AddRef e Release (). No entanto, se você declarar um objeto com o declarator, o compilador gera código que ajusta automaticamente a contagem de referência.
 
 Para obter informações sobre como criar uma instância de um objeto, consulte [ref novo](../windows/ref-new-gcnew-cpp-component-extensions.md).
 
@@ -47,8 +47,6 @@ Opção do compilador: `/ZW`
 O sistema usa o CLR *coletor de lixo* mecanismo para determinar se o objeto não está sendo usado e pode ser excluído. O common language runtime mantém uma heap em que atribui objetos, e usa referências gerenciadas (variáveis) em seu programa indicam o local dos objetos no heap. Quando um objeto não é mais usado, a memória ocupada pelo mesmo na heap é liberada. Periodicamente, o coletor de lixo compacta a heap para melhorar o uso da memória liberada. Compactar a heap poderá mover os objetos na heap, o que invalida o locais referenciado por referências gerenciadas. No entanto, o coletor de lixo está ciente do local de todas as referências gerenciadas e as atualiza automaticamente para indicar o local atual dos objetos no heap.
 
 Como ponteiros nativos do C++ (`*`) e as referências (`&`) são referências não gerenciadas, o coletor de lixo não pode atualizar automaticamente os endereços que eles apontem para. Para resolver esse problema, use o declarator para especificar uma variável que o coletor de lixo está ciente e pode ser atualizada automaticamente.
-
-No Visual C++ 2002 e Visual C++ 2003, `__gc *` foi usado para declarar um objeto no heap gerenciado.  O `^` substitui `__gc *` na nova sintaxe.
 
 Para obter mais informações, consulte [como: declarar identificadores em tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).
 
@@ -235,5 +233,5 @@ Opção do compilador: `/clr`
 
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Extensões de componentes para .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Operador de referência de acompanhamento](../windows/tracking-reference-operator-cpp-component-extensions.md)

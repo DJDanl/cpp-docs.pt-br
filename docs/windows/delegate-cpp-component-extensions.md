@@ -1,7 +1,7 @@
 ---
-title: delegado (extensões de componentes C++) | Microsoft Docs
+title: Delegar (C + + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 13ce7d2a35245716adc70b9e84532ea7d1a4a440
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2281dfb6648f9c4756800a0693f184ccaa7435d7
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432394"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327954"
 ---
-# <a name="delegate--c-component-extensions"></a>delegado (Extensões de Componentes C++)
+# <a name="delegate--ccli-and-ccx"></a>Delegar (C + + c++ /CLI e c++ /CLI CX)
 
 Declara um tipo que representa um ponteiro de função.
 
@@ -131,7 +131,7 @@ Para obter mais informações sobre delegados, consulte
 
 - [Como definir e usar delegados (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
 
-- [Delegados genéricos (Visual C++)](../windows/generic-delegates-visual-cpp.md)
+- [Delegados genéricos (C + + / CLI)](../windows/generic-delegates-visual-cpp.md)
 
 ### <a name="requirements"></a>Requisitos
 
@@ -212,4 +212,4 @@ in static func3 11
 
 ## <a name="see-also"></a>Consulte também
 
-[Extensões de componentes para plataformas de tempo de execução](../windows/component-extensions-for-runtime-platforms.md)
+[Extensões de componentes para .NET e UWP](../windows/component-extensions-for-runtime-platforms.md)

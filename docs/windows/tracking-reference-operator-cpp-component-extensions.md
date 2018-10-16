@@ -1,7 +1,7 @@
 ---
-title: Acompanhamento de referência de operador (extensões de componentes C++) | Microsoft Docs
+title: Operador de referência de acompanhamento (C + + c++ /CLI e c++ /CLI CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da01a2dd7e871bb555b2b5711a59dbb5e65424a8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8ea8cec7a3cc2e24c55c9f8454b421f5488f1c89
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604070"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327915"
 ---
-# <a name="tracking-reference-operator-c-component-extensions"></a>Operador de Referência de Acompanhamento (Extensões de Componentes C++)
+# <a name="tracking-reference-operator-ccli-and-ccx"></a>Operador de referência de acompanhamento (C + + c++ /CLI e c++ /CLI CX)
 
 Um *referência de rastreamento* (`%`) se comporta como uma referência comum do C++ (`&`), exceto que quando um objeto é atribuído a uma referência de rastreamento, a contagem de referência do objeto é incrementada.
 
