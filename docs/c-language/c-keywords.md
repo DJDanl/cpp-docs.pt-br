@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3091437333d01db3fa556cb3c164e916c3628333
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 80c1f0d4ac5d843732771281202612e31a4073c2
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057779"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860882"
 ---
 # <a name="c-keywords"></a>Palavras-chave C
 
@@ -48,15 +48,15 @@ As palavras-chave e os identificadores especiais a seguir são reconhecidos pelo
 
 |||||
 |-|-|-|-|
-|**__asm**|**dllimport**2|**__int8**|**naked**2|
-|**__based**1|**__except**|**__int16**|**__stdcall**|
-|**__cdecl**|**__fastcall**|**__int32**|**thread**2|
+|**__asm**|**dllimport**<sup>2</sup>|**__int8**|**naked**<sup>2</sup>|
+|**__based**<sup>1</sup>|**__except**|**__int16**|**__stdcall**|
+|**__cdecl**|**__fastcall**|**__int32**|**thread**<sup>2</sup>|
 |**__declspec**|**__finally**|**__int64**|**__try**|
-|**dllexport**2|**__inline**|**__leave**||
+|**dllexport**<sup>2</sup>|**__inline**|**__leave**||
 
-1. A palavra-chave **__based** tem usos limitados para compilações de destino de 32 e 64 bits.
+<sup>1</sup> A palavra-chave **__based** tem usos limitados para compilações de destino de 32 e 64 bits.
 
-2. Esses são identificadores especiais quando usados com **__declspec**; seu uso em outros contextos não é restrito.
+<sup>2</sup> Esses são identificadores especiais quando usados com **__declspec**. Seu uso em outros contextos não é restrito.
 
 As extensões da Microsoft são ativadas por padrão. Para garantir que seus programas sejam totalmente portáteis, você poderá desabilitar as extensões da Microsoft especificando a opção /Za (compilar para compatibilidade ANSI) durante a compilação. Ao fazer isso, as palavras-chave específicas da Microsoft são desabilitadas.
 

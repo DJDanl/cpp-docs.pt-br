@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d2e2bab9da3d19347577f0b1d1e8ab2ed6bb0dc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d93486d8df8cdb8bc253a0e71037f4e2ddf9e128
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404014"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890473"
 ---
 # <a name="precompiled-header-files"></a>Arquivos de cabeçalho pré-compilado
 
@@ -35,7 +35,7 @@ Esses arquivos estão localizados no diretório *Nome_do_projeto*. No Gerenciado
 
 |Nome do arquivo|Descrição|
 |---------------|-----------------|
-|Stdafx.h|Um arquivo de inclusão para arquivos de inclusão do sistema padrão e para arquivos de inclusão específicos ao projeto que são usados com frequência, mas modificados raramente.<br /><br /> Você não deve definir nem excluir a definição de nenhuma das macros _AFX_NO_XXX em stdafx.h; confira o artigo da Base de Dados de Conhecimento "PRB: problemas ao definir _AFX_NO_XXX". Encontre os artigos da Base de Dados de Conhecimento na Biblioteca MSDN ou em [http:// support.microsoft.com/](http://%20support.microsoft.com/).|
+|Stdafx.h|Um arquivo de inclusão para arquivos de inclusão do sistema padrão e para arquivos de inclusão específicos ao projeto que são usados com frequência, mas modificados raramente.<br /><br /> Não é possível definir ou remover a definição de qualquer uma das macros _AFX_NO_XXX em stdafx.h.|
 |Stdafx.cpp|Contém a diretiva de pré-processador `#include "stdafx.h"` e adiciona arquivos de inclusão a tipos pré-compilados. Arquivos pré-compilados de qualquer tipo, incluindo arquivos de cabeçalho, dão suporte a tempos de compilação mais rápidos, restringindo a compilação somente aos arquivos que precisam dele. Depois que o projeto for compilado pela primeira vez, você observará tempos de build muito mais rápidos nos próximos builds, devido à presença dos arquivos de cabeçalho pré-compilado.|
 
 ## <a name="see-also"></a>Consulte também

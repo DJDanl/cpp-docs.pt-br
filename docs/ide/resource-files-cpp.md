@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9ba28a426c439454d8b0723f8d2997bbefa5759
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 101d58eeb61335939db507ff6addd0c4fa7917f0
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417222"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861896"
 ---
 # <a name="resource-files-c"></a>Arquivos de recurso (C++)
 
@@ -31,7 +31,7 @@ Confira [Trabalhando com recursos](../windows/working-with-resource-files.md) pa
 
 |Nome do arquivo|Local do diretório|Local do Gerenciador de Soluções|Descrição|
 |---------------|------------------------|--------------------------------|-----------------|
-|*Nome_do_projeto*.rc|*Nome_do_projeto*|Arquivos de fonte|O arquivo de script de recurso do projeto. O arquivo de script de recurso contém o seguinte, dependendo do tipo de projeto e do suporte selecionado para o projeto (por exemplo, barras de ferramentas, caixas de diálogo ou HTML):<br /><br /> - Definição de menu padrão.<br />- Tabelas de aceleradores e de cadeias de caracteres.<br />- Caixa de diálogo **Sobre** padrão.<br />- Outras caixas de diálogo.<br />- Arquivo de ícone (res\\*Nome_do_projeto*.ico).<br />- Informações de versão.<br />- Bitmaps.<br />- Barra de ferramentas.<br />- Arquivos HTML.<br /><br /> O arquivo de recurso inclui o arquivo Afxres.rc para os recursos padrão da Microsoft Foundation Class.|
+|*Nome_do_projeto*.rc|*Nome_do_projeto*|Arquivos de fonte|O arquivo de script de recurso do projeto. O arquivo de script de recurso contém o seguinte, dependendo do tipo de projeto e do suporte selecionado para o projeto (por exemplo, barras de ferramentas, caixas de diálogo ou HTML):<br /><br />- Definição de menu padrão.<br />- Tabelas de aceleradores e de cadeias de caracteres.<br />- Caixa de diálogo **Sobre** padrão.<br />- Outras caixas de diálogo.<br />- Arquivo de ícone (res\\*Projname*.ico).<br />- Informações de versão.<br />- Bitmaps.<br />- Barra de ferramentas.<br />- Arquivos HTML.<br /><br /> O arquivo de recurso inclui o arquivo Afxres.rc para os recursos padrão da Microsoft Foundation Class.|
 |Resource.h|*Nome_do_projeto*|Arquivos de cabeçalho|O arquivo de cabeçalho de recurso que inclui as definições para os recursos usados pelo projeto.|
 |*Nome_do_projeto*.rc2|*Nome_do_projeto*\res|Arquivos de fonte|O arquivo de script que contém recursos adicionais usados pelo projeto. É possível incluir o arquivo .rc2 na parte superior do arquivo .rc do projeto.<br /><br /> Um arquivo .rc2 é útil para a inclusão dos recursos usados por vários projetos diferentes. Em vez de criar os mesmos recursos várias vezes para projetos diferentes, você pode colocá-los em um arquivo .rc2 e incluir o arquivo .rc2 no arquivo .rc principal.|
 |*Nome_do_projeto*.def|*Nome_do_projeto*|Arquivos de fonte|O arquivo de definição de módulo para um projeto de DLL. Para um controle, ele fornece o nome e a descrição do controle, bem como o tamanho do heap de tempo de execução.|

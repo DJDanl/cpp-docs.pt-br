@@ -1,7 +1,7 @@
 ---
 title: Adicionando funcionalidade com assistentes de código (C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -20,16 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d531184b03d06dbe2a395e55638e4457c2c9c0e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 43d6301a13b0abd517b0fb596f953617cf80f7b0
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441961"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861168"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Adicionando funcionalidade com assistentes de código (C++)
 
 Depois de criar um projeto, você desejará alterar ou adicionar funcionalidades ao projeto. Essas tarefas incluem criação de classes, adição de novas variáveis e funções de membro e adição de métodos e propriedades de Automação. Os assistentes de código foram projetados para permitir que você faça tudo isso.
+
+> [!WARNING]
+> Vários assistentes de código do ATL e do MFC foram preteridos e serão removidos em uma versão futura do Visual Studio. Esses assistentes são usados raramente. O suporte geral para ATL e MFC não é afetado pela remoção desses assistentes. Se você quiser compartilhar seus comentários sobre essa alteração, participe [desta pesquisa](https://www.surveymonkey.com/r/QDWKKCN). Seus comentários são importantes para nós.
 
 > [!NOTE]
 >  Agora você pode adicionar manipuladores de mensagens e mapear as mensagens para eles e substituir funções virtuais MFC usando a [janela Propriedades](/visualstudio/ide/reference/properties-window).
@@ -72,9 +75,9 @@ Há três locais em que você pode acessar os assistentes de código do Visual C
 
    |Acessar o assistente de código em|Descrição|
    |-----------------------------|-----------------|
-   |Adicionar Novo Item|Os assistentes de código de Adicionar Novo Item adicionam arquivos de origem ao projeto. Se necessário, diretórios adicionais serão criados para conter os arquivos quando o mecanismo de build do projeto esperar encontrá-los. Os assistentes de código disponíveis no ícone Adicionar Item incluem:<br /><br /> - Adicionar arquivos de origem do C++ (.cpp, .h, .idl, .rc, .srf, .def, .rgs).<br />- Adicionar arquivos de desenvolvimento para a Web (.html, .asp, .css, .xml).<br />-   Adicionar arquivos de utilitário e de recurso (.bmp, .cur, .ico, .rct, .sql, .txt).<br /><br /> Em geral, esses assistentes de código não solicitam informações, mas adicionam um arquivo à árvore de desenvolvimento. Você pode renomear o arquivo na janela de propriedades.|
-   |Gerenciador de Soluções|Os assistentes de código disponíveis no Gerenciador de Soluções dependem do local em que o foco do cursor está quando você clica com o botão direito do mouse em um item. Se a opção **Adicionar** não for exibida quando você clicar com o botão direito do mouse em um item, mova o cursor para um nível acima na árvore de desenvolvimento e tente novamente. Os assistentes de código sempre colocarão o código adicional no local apropriado na árvore de desenvolvimento, seja qual for a localização do cursor. Os assistentes de código disponíveis no Gerenciador de Soluções incluem:<br /><br /> - Adicionar Classe (abre a caixa de diálogo **Adicionar Classe** que contém os novos assistentes de código).<br />- Adicionar Recurso (Novo, Importar ou Personalizado).<br />- Adicionar Referência Web.|
-   |Exibição de Classe|Os assistentes de código disponíveis no Modo de Exibição de Classe dependem do local em que o foco do cursor está quando você clica com o botão direito do mouse em um item. Se a opção **Adicionar** não for exibida quando você clicar com o botão direito do mouse em um item, mova o cursor para um nível acima na árvore de classe e tente novamente. Os assistentes de código sempre colocarão o código adicional no local apropriado na árvore de desenvolvimento, seja qual for a localização do cursor. Os assistentes de código disponíveis no Modo de Exibição de Classe incluem:<br /><br /> -   [Adicionar Função de Membro](../ide/adding-a-member-function-visual-cpp.md).<br />-   [Adicionar Variável de Membro](../ide/adding-a-member-variable-visual-cpp.md).<br />-   [Adicionar Classe](../ide/adding-a-class-visual-cpp.md).<br />-   [Implementar Interface](../ide/implement-interface-wizard.md) (somente em uma classe de controle)<br />-   [Adicionar Ponto de Conexão](../ide/implement-connection-point-wizard.md) (somente classe ATL)<br />-   [Adicionar Método](../ide/add-method-wizard.md) (somente em uma interface)<br />-   [Adicionar Propriedade](../ide/names-add-property-wizard.md) (somente em uma interface)<br />-   [Adicionar Evento](../ide/add-event-wizard.md) (somente em uma classe de controle)<br /><br /> A seleção de Adicionar Classe abre a caixa de diálogo **Adicionar Classe**, que fornece acesso a todos os novos assistentes de código de Adicionar Classe.|
+   |Adicionar Novo Item|Os assistentes de código de Adicionar Novo Item adicionam arquivos de origem ao projeto. Se necessário, diretórios adicionais serão criados para conter os arquivos quando o mecanismo de build do projeto esperar encontrá-los. Os assistentes de código disponíveis no ícone Adicionar Item incluem:<br /><br />- Adicionar arquivos de origem do C++ (.cpp, .h, .idl, .rc, .srf, .def, .rgs).<br />- Adicionar arquivos de desenvolvimento para a Web (.html, .asp, .css, .xml).<br />- Adicionar arquivos de utilitário e de recurso (.bmp, .cur, .ico, .rct, .sql, .txt).<br /><br />Em geral, esses assistentes de código não solicitam informações, mas adicionam um arquivo à árvore de desenvolvimento. Você pode renomear o arquivo na janela de propriedades.|
+   |Gerenciador de Soluções|Os assistentes de código disponíveis no Gerenciador de Soluções dependem do local em que o foco do cursor está quando você clica com o botão direito do mouse em um item. Se a opção **Adicionar** não for exibida quando você clicar com o botão direito do mouse em um item, mova o cursor para um nível acima na árvore de desenvolvimento e tente novamente. Os assistentes de código sempre colocarão o código adicional no local apropriado na árvore de desenvolvimento, seja qual for a localização do cursor. Os assistentes de código disponíveis no Gerenciador de Soluções incluem:<br /><br />- Adicionar Classe (abre a caixa de diálogo **Adicionar Classe** que contém os novos assistentes de código).<br />- Adicionar Recurso (Novo, Importar ou Personalizado).<br />- Adicionar Referência Web.|
+   |Exibição de Classe|Os assistentes de código disponíveis no Modo de Exibição de Classe dependem do local em que o foco do cursor está quando você clica com o botão direito do mouse em um item. Se a opção **Adicionar** não for exibida quando você clicar com o botão direito do mouse em um item, mova o cursor para um nível acima na árvore de classe e tente novamente. Os assistentes de código sempre colocarão o código adicional no local apropriado na árvore de desenvolvimento, seja qual for a localização do cursor. Os assistentes de código disponíveis no Modo de Exibição de Classe incluem:<br /><br />- [Adicionar Função de Membro](../ide/adding-a-member-function-visual-cpp.md).<br />- [Adicionar Variável de Membro](../ide/adding-a-member-variable-visual-cpp.md).<br />- [Adicionar Classe](../ide/adding-a-class-visual-cpp.md).<br />- [Implementar Interface](../ide/implement-interface-wizard.md) (somente em uma classe de controle)<br />- [Adicionar Ponto de Conexão](../ide/implement-connection-point-wizard.md) (somente classe ATL)<br />- [Adicionar Método](../ide/add-method-wizard.md) (somente em uma interface)<br />- [Adicionar Propriedade](../ide/names-add-property-wizard.md) (somente em uma interface)<br />- [Adicionar Evento](../ide/add-event-wizard.md) (somente em uma classe de controle)<br /><br />A seleção de Adicionar Classe abre a caixa de diálogo **Adicionar Classe**, que fornece acesso a todos os novos assistentes de código de Adicionar Classe.|
 
 ## <a name="see-also"></a>Consulte também
 
