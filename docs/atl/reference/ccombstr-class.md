@@ -39,16 +39,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2045a6c14a37d270d895a5eeb4fa455711e7354
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e209a314992fb0b4d2969c183a9b31071f0521c7
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097673"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410844"
 ---
 # <a name="ccombstr-class"></a>Classe CComBSTR
 
-Essa classe é um wrapper de BSTRs.
+Essa classe é um wrapper para [BSTR](/previous-versions/windows/desktop/automat/bstr)s.
 
 ## <a name="syntax"></a>Sintaxe
 

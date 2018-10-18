@@ -1,7 +1,7 @@
 ---
 title: Criando um consumidor sem usar um assistente | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a20abb132d0446874b099119dc6c54979aef4638
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7ce6949e582142e208058b4fa59d02008513e29f
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46023586"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410727"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Criando um consumidor sem usar um assistente
 
@@ -28,7 +28,7 @@ O exemplo a seguir pressupõe que você está adicionando o suporte de consumido
   
 Para adicionar suporte de consumidor do OLE DB sem usar a ATL OLE DB Assistente de consumidor:  
   
-- Em seu arquivo Stdafx. h, acrescente o seguinte `#include` instruções:  
+- Em seu arquivo pch. h, acrescente o seguinte `#include` instruções:  
   
     ```cpp  
     #include <atlbase.h>  
@@ -38,10 +38,10 @@ Para adicionar suporte de consumidor do OLE DB sem usar a ATL OLE DB Assistente 
   
 Programaticamente, um consumidor normalmente executa a seguinte sequência de operações:  
   
-- Crie uma classe de registro de usuário que associa as colunas para variáveis locais. Neste exemplo, `CMyTableNameAccessor` é a classe de registro de usuário (consulte [registros de usuário](../../data/oledb/user-records.md)). Essa classe contém o mapa de coluna e o mapa de parâmetro. Declarar um membro de dados na classe de registro de usuário de cada campo que você especificar no seu mapa de coluna; para cada um desses membros de dados, também declare um membro de dados de status e um membro de dados de comprimento. Para obter mais informações, consulte [membros de dados de Status de campo em acessadores de Wizard-Generated](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
+1. Crie uma classe de registro de usuário que associa as colunas para variáveis locais. Neste exemplo, `CMyTableNameAccessor` é a classe de registro de usuário (consulte [registros de usuário](../../data/oledb/user-records.md)). Essa classe contém o mapa de coluna e o mapa de parâmetro. Declarar um membro de dados na classe de registro de usuário de cada campo que você especificar no seu mapa de coluna; para cada um desses membros de dados, também declare um membro de dados de status e um membro de dados de comprimento. Para obter mais informações, consulte [membros de dados de Status de campo em acessadores de Wizard-Generated](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md).  
   
     > [!NOTE]
-    >  Se você escrever seu próprios consumidor, as variáveis de dados devem vir antes das variáveis de status e o comprimento.  
+    > Se você escrever seu próprios consumidor, as variáveis de dados devem vir antes das variáveis de status e o comprimento.  
   
 - Crie uma instância de uma fonte de dados e uma sessão. Decidir o tipo de conjunto de linhas e o acessador de usar e, em seguida, criar uma instância de um conjunto de linhas usando [CCommand](../../data/oledb/ccommand-class.md) ou [CTable](../../data/oledb/ctable-class.md):  
   
@@ -67,7 +67,7 @@ Programaticamente, um consumidor normalmente executa a seguinte sequência de op
     hr = rs.Open();            // (Open also executes the command)  
     ```  
   
-- Opcionalmente, o conjunto de linhas propriedades usando `CDBPropSet::AddProperty` e passá-los como um parâmetro para `rs.Open`. Para obter um exemplo de como isso é feito, consulte GetRowsetProperties na [Consumer Wizard-Generated métodos](../../data/oledb/consumer-wizard-generated-methods.md).  
+- Opcionalmente, o conjunto de linhas propriedades usando `CDBPropSet::AddProperty` e passá-los como um parâmetro para `rs.Open`. Para obter um exemplo de como isso é feito, consulte **GetRowsetProperties** na [Consumer Wizard-Generated métodos](../../data/oledb/consumer-wizard-generated-methods.md).  
   
 - Agora você pode usar o conjunto de linhas para recuperar/manipular os dados.  
   
@@ -83,7 +83,7 @@ Programaticamente, um consumidor normalmente executa a seguinte sequência de op
   
 - Chamar `CoUnInitialize` Cancelar COM. a Isso geralmente é chamado no código principal.  
   
-    ```  
+    ```cpp  
     CoUninitialize();  
     ```  
   

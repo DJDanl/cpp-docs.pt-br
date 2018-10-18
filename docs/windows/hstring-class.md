@@ -47,16 +47,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2a70b39352f26d76e9199b9da46f679507b148ed
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: a93c36748eb01a1c647a2aa433196c7364f60744
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163101"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410805"
 ---
 # <a name="hstring-class"></a>Classe HString
 
-Uma classe auxiliar para gerenciar o tempo de vida de um HSTRING usando o padrão RAII.
+Uma classe auxiliar para gerenciar a vida útil de um [HSTRING](/windows/desktop/WinRT/hstring) usando o padrão RAII.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -66,7 +66,7 @@ class HString;
 
 ## <a name="remarks"></a>Comentários
 
-O tempo de execução do Windows fornece acesso às cadeias de caracteres através das alças HSTRING. O `HString` classe fornece funções de conveniência e operadores para simplificar o uso de identificadores de HSTRING. Essa classe pode manipular o tempo de vida do HSTRING ela detém por meio de um padrão RAII.
+O tempo de execução do Windows fornece acesso às cadeias de caracteres através de [HSTRING](/windows/desktop/WinRT/hstring) identificadores. O `HString` classe fornece funções de conveniência e operadores para simplificar o uso de identificadores de HSTRING. Essa classe pode manipular o tempo de vida do HSTRING ela detém por meio de um padrão RAII.
 
 ## <a name="members"></a>Membros
 

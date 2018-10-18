@@ -1,7 +1,7 @@
 ---
 title: Editor de imagens para ícones | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/17/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -23,16 +23,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe7cad7fccabd7acc8af7ecf1f3711d5b0d636ce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ecd2b3b94f04a246242a33494a124171e95cae7c
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379184"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410655"
 ---
 # <a name="image-editor-for-icons"></a>Editor de imagens para ícones
 
-O Editor de Imagens possui um extenso conjunto de ferramentas para criar e editar imagens, bem como recursos para ajudar a criar bitmaps de barra de ferramentas. Além de bitmaps, ícones e cursores, você pode editar imagens no formato GIF ou JPEG usando os comandos a **imagem** menu e as ferramentas a **Editor de imagens** barra de ferramentas.
+Quando você clica em um arquivo de imagem (por exemplo,. ico,. bmp,. png) no Gerenciador de soluções, a imagem é aberto no Editor de imagens da mesma forma que arquivos de código aberto no Editor de códigos. Quando uma guia do Editor de imagem estiver ativa, você verá as barras de ferramentas com várias ferramentas para criar e editar imagens. Além de bitmaps, ícones e cursores, você pode editar imagens no formato GIF ou JPEG usando os comandos a **imagem** menu e as ferramentas a **Editor de imagens** barra de ferramentas.
 
 Com o Editor de Imagens, é possível:
 
