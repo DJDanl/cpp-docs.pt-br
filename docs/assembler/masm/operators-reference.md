@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4708af3c0fa272a1ca803f549ce8953caccaa27
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 5c9f5beb0e3525de6df88e44248410810502962e
+ms.sourcegitcommit: 4cbde5d164d681204c4011dc95a921d75292f423
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688170"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49459147"
 ---
 # <a name="masm-operators-reference"></a>Referência de operadores (MASM)
 
@@ -36,7 +36,7 @@ ms.locfileid: "43688170"
 
 ||||
 |-|-|-|
-|[! (not lógico de tempo de execução)](operator-logical-not-masm-run-time.md)|[! = (tempo de execução não igual)](operator-not-equal-masm.md)|[&#124;&#124;(tempo de execução de lógico ou)](operator-logical-or.md)|
+|[\! (not lógico de tempo de execução)](operator-logical-not-masm-run-time.md)|[\!= (tempo de execução não igual)](operator-not-equal-masm.md)|[&#124;&#124;(tempo de execução de lógico ou)](operator-logical-or.md)|
 |[& & (tempo de execução lógico e)](operator-logical-and-masm-run-time.md)|[< (tempo de execução menor que)](operator-less-than-masm-run-time.md)|[\<= (tempo de execução menor ou igual a)](operator-less-or-equal-masm-run-time.md)|
 |[= = (tempo de execução igual)](operator-equal-masm-run-time.md)|[> (tempo de execução maior que)](operator-greater-than-masm-run-time.md)|[> = (tempo de execução maior ou igual)](operator-greater-or-equal-masm-run-time.md)|
 |[& (tempo de execução do bit a bit e)](operator-bitwise-and.md)|||
@@ -54,7 +54,7 @@ ms.locfileid: "43688170"
 
 ||||
 |-|-|-|
-|[! (o caractere literal)](operator-logical-not-masm.md)|[% (trate como texto)](operator-percent.md)||
+|[\! (o caractere literal)](operator-logical-not-masm.md)|[% (trate como texto)](operator-percent.md)||
 |[;; (trate como comentário)](operator-semicolons.md)|[&lt; &gt; (trate como um literal)](operator-literal.md)|[& & (substitua o valor do parâmetro)](operator-logical-and-masm.md)|
 
 ## <a name="miscellaneous"></a>Diversos
