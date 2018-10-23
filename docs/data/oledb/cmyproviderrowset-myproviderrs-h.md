@@ -1,34 +1,37 @@
 ---
-title: CMyProviderRowset (myproviderrs. H) | Microsoft Docs
+title: CCustomRowset (CustomRS.H) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
 f1_keywords:
 - cmyproviderrowset
 - myproviderrs.h
+- ccustomrowset
+- customrs.h
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderRowset class in MyProviderRS.H
+- CCustomRowset class in CustomRS.H
 ms.assetid: 7ba1a124-3842-40eb-a36b-302190a1af3a
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c7c9830970f6e09d1993ac2fd78510b84068efaa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4ee7aed5463054256d6903e485b83ce201a685d2
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021260"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807907"
 ---
-# <a name="cmyproviderrowset-myproviderrsh"></a>CMyProviderRowset (MyProviderRS.H)
+# <a name="ccustomrowset-customrsh"></a>CCustomRowset (CustomRS.H)
 
-O assistente gera uma entrada para o objeto de conjunto de linhas. Nesse caso, ele é chamado `CMyProviderRowset`. O `CMyProviderRowset` classe herda de uma classe de provedor do OLE DB chamada `CRowsetImpl`, que implementa todas as interfaces necessárias para o objeto de conjunto de linhas. O código a seguir mostra a cadeia de herança para `CRowsetImpl`:  
+O assistente gera uma entrada para o objeto de conjunto de linhas. Nesse caso, ele é chamado `CCustomRowset`. O `CCustomRowset` classe herda de uma classe de provedor do OLE DB chamada `CRowsetImpl`, que implementa todas as interfaces necessárias para o objeto de conjunto de linhas. O código a seguir mostra a cadeia de herança para `CRowsetImpl`:  
   
 ```cpp  
 template <class T, class Storage, class CreatorClass,   

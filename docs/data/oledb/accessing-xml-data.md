@@ -1,7 +1,7 @@
 ---
 title: Acessando dados XML | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cfde3980e58ba86d6923eaac765332a23e40ad7e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d7db1d790ca9caeea6bd9c7853139f59ffa0ab6c
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46062495"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808713"
 ---
 # <a name="accessing-xml-data"></a>Acessando dados XML
 
@@ -61,12 +61,12 @@ Por outro lado, quando você chama `CCommand::Open` (mas especificar `CStreamRow
 myCmd.m_spStream->Read()  
 ```  
   
-SQL Server 2000 executa a formatação XML e retorna todas as colunas e todas as linhas do conjunto de linhas como uma cadeia de caracteres XML.  
+SQL Server 2000 faz a formatação XML e retorna todas as colunas e todas as linhas do conjunto de linhas como uma cadeia de caracteres XML.  
   
 Para obter um exemplo usando o `Read` método, consulte "Adicionando suporte de XML para o consumidor" na [implementando um consumidor simples](../../data/oledb/implementing-a-simple-consumer.md).  
   
 > [!NOTE]
->  Suporte a XML usando `CStreamRowset` funciona apenas com o SQL Server 2000 e exige que você tenha o provedor OLE DB para SQL Server 2000 (instalado com o MDAC).  
+> Suporte a XML usando `CStreamRowset` funciona apenas com o SQL Server 2000 e exige que você tenha o provedor OLE DB para SQL Server 2000 (instalado com o MDAC).  
   
 ## <a name="retrieving-xml-data-using-cxmlaccessor"></a>Recuperando dados XML usando CXMLAccessor  
 

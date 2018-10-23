@@ -1,7 +1,7 @@
 ---
 title: Componentes de área de trabalho COM ATL | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eadbcd138bd9fc73835938b8ff59d694ede152b8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 378cd6fd283cd36142e293b51fdb91527afb6f88
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46065615"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808895"
 ---
 # <a name="atl-com-desktop-components"></a>Componentes de área de trabalho COM da ATL
 
-Referência da ATL documenta a biblioteca ATL (Active Template), um conjunto de classes C++ baseadas em modelos que simplifica a programação de objetos de modelo de objeto de componente (COM). Para aproveitar ao máximo da ATL, esteja familiarizado com o COM é altamente recomendável.
+Referência da ATL documenta a biblioteca ATL (Active Template), um conjunto de classes C++ baseadas em modelos que simplifica a programação de objetos de modelo de objeto de componente (COM). COM é uma especificação de binária para criar e consumir componentes de software no Windows. Para aproveitar ao máximo da ATL, esteja familiarizado com o COM é altamente recomendável. Para obter mais informações sobre o COM, consulte [(COM Component Object Model)](/windows/desktop/com/component-object-model--com--portal).
 
 ## <a name="in-this-section"></a>Nesta seção
 

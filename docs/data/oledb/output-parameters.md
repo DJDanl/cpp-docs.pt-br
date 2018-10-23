@@ -19,16 +19,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5f9e0e273df1221801a9b761cd7f45200e0b50c0
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 4a17ff7e6e78b21267b71ba495ba10a98e29cfe7
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895078"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808843"
 ---
 # <a name="output-parameters"></a>Parâmetros de saída
 
-Chamar um procedimento armazenado é semelhante ao invocar um comando SQL. A principal diferença é que os procedimentos armazenados usam parâmetros de saída (ou "outparameters") e valores de retorno.
+Chamar um procedimento armazenado é semelhante à execução de um comando SQL. A principal diferença é que os procedimentos armazenados usam parâmetros de saída (ou "outparameters") e valores de retorno.
 
 O seguinte procedimento armazenado, o primeiro '? 'é o valor de retorno (telefone) e o segundo'?' é o parâmetro de entrada (nome):
 
@@ -64,7 +64,7 @@ as
 return 0
 ```  
 
-O \@_rowcount outparameter informa quantas linhas foram retornadas da tabela de teste. No entanto, esse procedimento armazenado limita o número de linhas a um máximo de 50. Por exemplo, se houvesse 100 linhas no teste, o número de linhas seria 50 (porque esse código recupera apenas as primeiras 50 linhas). Se houver apenas 30 linhas na tabela, o número de linhas seria 30. Você deve chamar `Close` ou `CloseAll` para preencher o outparameter antes de buscar o seu valor.
+O \@_rowcount outparameter informa quantas linhas foram retornadas da tabela de teste. No entanto, esse procedimento armazenado limita o número de linhas como 50. Por exemplo, se houvesse 100 linhas no teste, o número de linhas seria 50 (porque esse código recupera apenas as primeiras 50 linhas). Se houver apenas 30 linhas na tabela, o número de linhas seria 30. Certifique-se de chamar `Close` ou `CloseAll` para preencher o outparameter antes de buscar o seu valor.
 
 ## <a name="see-also"></a>Consulte também
 

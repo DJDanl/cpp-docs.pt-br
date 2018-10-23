@@ -1,7 +1,7 @@
 ---
 title: raw_property_prefixes | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,41 +16,43 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ae69e26077692188b8e013e949592df26d7701a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1170440428a5c92e383152826827989d602e69fb
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420394"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808728"
 ---
 # <a name="rawpropertyprefixes"></a>raw_property_prefixes
-**Específico do C++**  
-  
-Especifica prefixos alternativos para três métodos da propriedade.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-raw_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
-*GetPrefix*  
-Prefixo a ser usado para o `propget` métodos.  
-  
-*PutPrefix*  
-Prefixo a ser usado para o `propput` métodos.  
-  
-*PutRefPrefix*  
-Prefixo a ser usado para o `propputref` métodos.  
-  
-## <a name="remarks"></a>Comentários  
- 
-Por padrão, de baixo nível `propget`, `propput`, e `propputref` métodos são expostos por funções de membro nomeadas com prefixos de **get _**, **Put _**, e **PUTREF _** respectivamente. Esses prefixos são compatíveis com os nomes usados nos arquivos de cabeçalho gerados pelo MIDL.  
-  
-**FIM de específico de C++**  
-  
-## <a name="see-also"></a>Consulte também  
- 
+
+**Específico do C++**
+
+Especifica prefixos alternativos para três métodos da propriedade.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+raw_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*GetPrefix*<br/>
+Prefixo a ser usado para o `propget` métodos.
+
+*PutPrefix*<br/>
+Prefixo a ser usado para o `propput` métodos.
+
+*PutRefPrefix*<br/>
+Prefixo a ser usado para o `propputref` métodos.
+
+## <a name="remarks"></a>Comentários
+
+Por padrão, de baixo nível `propget`, `propput`, e `propputref` métodos são expostos por funções de membro nomeadas com prefixos de **get _**, **Put _**, e **PUTREF _** respectivamente. Esses prefixos são compatíveis com os nomes usados nos arquivos de cabeçalho gerados pelo MIDL.
+
+**FIM de específico de C++**
+
+## <a name="see-also"></a>Consulte também
+
 [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import diretiva](../preprocessor/hash-import-directive-cpp.md)

@@ -15,6 +15,7 @@
 ### [Corrigir suas dependências em recursos internos de biblioteca](fix-your-dependencies-on-library-internals.md)
 ### [Problemas de migração de ponto flutuante](floating-point-migration-issues.md)
 ### [Usar direcionamento múltiplo nativo no Visual Studio para compilar projetos antigos](use-native-multi-targeting.md)
+### [Recursos do Visual C++ preteridos na versão prévia do Visual Studio 2019](features-deprecated-in-visual-studio.md)
 ## [Introdução ao Visual C++ para usuários do UNIX](introduction-to-visual-cpp-for-unix-users.md)
 ## [Portabilidade de UNIX para Win32](porting-from-unix-to-win32.md)
 ## [Portabilidade para a Plataforma Universal do Windows (C++)](porting-to-the-universal-windows-platform-cpp.md)

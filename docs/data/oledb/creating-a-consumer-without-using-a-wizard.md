@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7ce6949e582142e208058b4fa59d02008513e29f
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: cd8412ed280c0a256ea8acb7274da5d6238134fc
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410727"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807791"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Criando um consumidor sem usar um assistente
 
@@ -67,7 +67,7 @@ Programaticamente, um consumidor normalmente executa a seguinte sequência de op
     hr = rs.Open();            // (Open also executes the command)  
     ```  
   
-- Opcionalmente, o conjunto de linhas propriedades usando `CDBPropSet::AddProperty` e passá-los como um parâmetro para `rs.Open`. Para obter um exemplo de como isso é feito, consulte **GetRowsetProperties** na [Consumer Wizard-Generated métodos](../../data/oledb/consumer-wizard-generated-methods.md).  
+- Opcionalmente, o conjunto de linhas propriedades usando `CDBPropSet::AddProperty` e passá-los como um parâmetro para `rs.Open`. Para obter um exemplo de como isso é feito, consulte `GetRowsetProperties` na [Consumer Wizard-Generated métodos](../../data/oledb/consumer-wizard-generated-methods.md).  
   
 - Agora você pode usar o conjunto de linhas para recuperar/manipular os dados.  
   

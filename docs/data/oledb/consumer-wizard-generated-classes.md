@@ -1,7 +1,7 @@
 ---
 title: Classes geradas pelo Assistente do consumidor | Microsoft Docs
 ms.custom: ''
-ms.date: 10/15/2018
+ms.date: 10/17/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a7498f15072f3b9687476ba7f6c291ebf5ff88cd
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: d6054695cf7483ffc3991efe89853a94a22ce284
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410767"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808661"
 ---
 # <a name="consumer-wizard-generated-classes"></a>Classes geradas pelo Assistente do Consumidor
 
@@ -133,7 +133,7 @@ SELECT \
 
 O assistente, em seguida, gera as associações de coluna ou um mapa de coluna. Para corrigir vários problemas com alguns provedores, o código a seguir pode associar colunas em uma ordem diferente daquela que relatado pelo provedor.  
   
-```  
+```cpp  
    BEGIN_COLUMN_MAP(CProductsAccessor)  
       COLUMN_ENTRY_LENGTH_STATUS(1, m_ProductID, m_dwProductIDLength, m_dwProductIDStatus)  
       COLUMN_ENTRY_LENGTH_STATUS(2, m_ProductName, m_dwProductNameLength, m_dwProductNameStatus)  
@@ -187,7 +187,7 @@ public:
   
 A declaração de classe de comando injetado tem esta aparência:  
   
-```  
+```cpp  
 class CProducts : public CCommand<CAccessor<_CProductsAccessor>>  
 ```  
   

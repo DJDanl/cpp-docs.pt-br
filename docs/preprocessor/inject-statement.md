@@ -1,7 +1,7 @@
 ---
 title: inject_statement | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb3bdc2b4e00cd9e2167adeb0ad7d3023af9eb2e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27b35c10e9e1953dc45dee1caf61d2e58c38d02d
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384202"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808637"
 ---
 # <a name="injectstatement"></a>inject_statement
-**Específico do C++**  
-  
-Insere seu argumento como texto de origem no cabeçalho da biblioteca de tipos.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-inject_statement("source_text")  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
-*source_text*  
-Texto de origem a ser inserido no arquivo de cabeçalho da biblioteca de tipos.  
-  
-## <a name="remarks"></a>Comentários  
- 
-O texto é colocado no início da declaração do namespace que envolve o conteúdo da biblioteca de tipos no arquivo de cabeçalho.  
-  
-**FIM de específico de C++**  
-  
-## <a name="see-also"></a>Consulte também  
- 
+
+**Específico do C++**
+
+Insere seu argumento como texto de origem no cabeçalho da biblioteca de tipos.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+inject_statement("source_text")
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*source_text*<br/>
+Texto de origem a ser inserido no arquivo de cabeçalho da biblioteca de tipos.
+
+## <a name="remarks"></a>Comentários
+
+O texto é colocado no início da declaração do namespace que envolve o conteúdo da biblioteca de tipos no arquivo de cabeçalho.
+
+**FIM de específico de C++**
+
+## <a name="see-also"></a>Consulte também
+
 [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import diretiva](../preprocessor/hash-import-directive-cpp.md)

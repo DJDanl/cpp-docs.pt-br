@@ -1,7 +1,7 @@
 ---
 title: 'TN041: Migração de MFC-OLE1 para MFC-OLE 2 | Microsoft Docs'
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75177743b893bdcf48b52b27c25ea4070e000f88
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2f93ffa79c5f737be032ae9edffa6c3e49c7055
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377052"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809012"
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: migração de MFC/OLE1 para MFC/OLE 2
 
@@ -301,7 +301,7 @@ Neste ponto, OCLIENT é um aplicativo de contêiner OLE funcional. É possível 
 
 Um dos recursos mais interessantes do OLE é ativação no local (ou "Edição Visual"). Esse recurso permite que o aplicativo de servidor assumir o controle partes da interface do usuário do contêiner fornecido uma interface de edição mais transparente para o usuário. Para implementar a ativação in-loco OCLIENT, alguns recursos especiais precisarão ser adicionadas, além de algum código adicional. Esses recursos e o código normalmente são fornecidas pelo AppWizard — na verdade, grande parte do código aqui foi emprestado diretamente de um aplicativo por AppWizard atualizado com o suporte de "Contêiner".
 
-Em primeiro lugar, é necessário adicionar um recurso de menu a ser usada quando há um item que está ativo no local. Você pode criar esse recurso de menu adicionais no Visual C++, copiando o recurso IDR_OCLITYPE e remoção de tudo, exceto os arquivo e a janela pop-ups. Duas barras de separação são inseridas entre os arquivo e janela pop-ups para indicar a separação de grupos de (deve se parecer com: arquivo de &#124; &#124; janela). Para obter mais informações sobre o que significam esses separadores e como os menus de servidor e um contêiner são mesclados consulte "Menus e recursos: mesclagem de Menu" na *Classes OLE 2*.
+Em primeiro lugar, é necessário adicionar um recurso de menu a ser usada quando há um item que está ativo no local. Você pode criar esse recurso de menu adicionais no Visual C++, copiando o recurso IDR_OCLITYPE e remoção de tudo, exceto os arquivo e a janela pop-ups. Duas barras de separação são inseridas entre os arquivo e janela pop-ups para indicar a separação de grupos de (deve se parecer com: arquivo de &#124; &#124; janela). Para obter mais informações sobre o que significam esses separadores e como os menus de servidor e um contêiner são mesclados, consulte [Menus e recursos: mesclagem de Menu](../mfc/menus-and-resources-menu-merging.md).
 
 Uma vez que esses menus criados, você precisa informar o framework sobre eles. Isso é feito chamando `CDocTemplate::SetContainerInfo` para o modelo de documento antes de adicioná-lo à lista de modelos de documento em seu InitInstance. O novo código para registrar o modelo de documento tem esta aparência:
 
@@ -618,7 +618,7 @@ Há muito mais erros na svritem.cpp que não foram resolvidos. Eles não são er
 \hiersvr\svrview.cpp(325) : error C2660: 'CopyToClipboard' : function does not take 2 parameters
 ```
 
-`COleServerItem::CopyToClipboard` não suporta o sinalizador 'bIncludeNative'. Os dados nativos (os dados gravados pela função de serialização do item de servidor) sempre são copiados, portanto, você remover o primeiro parâmetro. Além disso, `CopyToClipboard` lançará uma exceção quando ocorrer um erro em vez de retornar FALSE. Altere o código para CServerView::OnEditCopy da seguinte maneira:
+`COleServerItem::CopyToClipboard` não é compatível com o `bIncludeNative` sinalizador. Os dados nativos (os dados gravados pela função de serialização do item de servidor) sempre são copiados, portanto, você remover o primeiro parâmetro. Além disso, `CopyToClipboard` lançará uma exceção quando ocorrer um erro em vez de retornar FALSE. Altere o código para CServerView::OnEditCopy da seguinte maneira:
 
 ```cpp
 void CServerView::OnEditCopy()
@@ -654,7 +654,7 @@ Para adicionar "Edição Visual" (ou ativação in-loco) para este aplicativo de
 
 - Você precisa dizer à estrutura sobre essas classes e recursos especiais.
 
-O recurso de menu é fácil de criar. Executar o Visual C++, copiar o recurso de menu IDR_HIERSVRTYPE para um recurso de menu chamado IDR_HIERSVRTYPE_SRVR_IP. Modifique o menu para que somente as edição e a Ajuda do menu pop-ups são deixados. Adicionar dois separadores ao menu entre menus editar e ajuda (deve se parecer com: editar &#124; &#124; ajuda). Para obter mais informações sobre o que significam esses separadores e como os menus de servidor e um contêiner são mesclados, consulte "Menus e recursos: mesclagem de Menu" na *Classes OLE 2*.
+O recurso de menu é fácil de criar. Executar o Visual C++, copiar o recurso de menu IDR_HIERSVRTYPE para um recurso de menu chamado IDR_HIERSVRTYPE_SRVR_IP. Modifique o menu para que somente as edição e a Ajuda do menu pop-ups são deixados. Adicionar dois separadores ao menu entre menus editar e ajuda (deve se parecer com: editar &#124; &#124; ajuda). Para obter mais informações sobre o que significam esses separadores e como os menus de servidor e um contêiner são mesclados, consulte [Menus e recursos: mesclagem de Menu](../mfc/menus-and-resources-menu-merging.md).
 
 O bitmap para a barra de ferramentas do subconjunto pode ser criado facilmente, copiando aquele de um aplicativo atualizado do AppWizard gerado com uma opção "Servidor" marcada. Esse bitmap pode ser importado para o Visual C++. Certifique-se de dar a um ID de IDR_HIERSVRTYPE_SRVR_IP o bitmap.
 
@@ -677,7 +677,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
     AfxGetApp()->m_pMainWnd);
 ```
 
-Observe a referência ao *`AfxGetApp()->m_pMainWnd*`. Quando o servidor está ativado no local, ele tem uma janela principal e m_pMainWnd é definido, mas é geralmente invisível. Além disso, esta janela refere-se para o *principal* janela do aplicativo, a janela do quadro MDI que aparece quando o servidor está totalmente abrir ou executar autônoma. Ele não faz referência à janela do quadro ativo — que quando in-loco ativado é um quadro de janela é derivado de `COleIPFrameWnd`. Para obter a janela ativa correta, mesmo quando a ativação in-loco, esta versão do MFC adiciona uma nova função, `AfxGetMainWnd`. Em geral, você deve usar essa função em vez de *`AfxGetApp()->m_pMainWnd*`. Esse código necessitará de alteração da seguinte maneira:
+Observe a referência ao `AfxGetApp()->m_pMainWnd`. Quando o servidor está ativado no local, ele tem uma janela principal e m_pMainWnd é definido, mas é geralmente invisível. Além disso, esta janela refere-se para o *principal* janela do aplicativo, a janela do quadro MDI que aparece quando o servidor está totalmente abrir ou executar autônoma. Ele não faz referência à janela do quadro ativo — que quando in-loco ativado é um quadro de janela é derivado de `COleIPFrameWnd`. Para obter a janela ativa correta, mesmo quando a ativação in-loco, esta versão do MFC adiciona uma nova função, `AfxGetMainWnd`. Em geral, você deve usar essa função em vez de `AfxGetApp()->m_pMainWnd`. Esse código necessitará de alteração da seguinte maneira:
 
 ```cpp
 pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,

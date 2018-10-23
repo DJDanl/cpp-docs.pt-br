@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4a3f80d3e421701ac0612ddb2552d10d1eff1f02
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6d8bcd61fb77b12db612bb12ae516a8665caaee8
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056021"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808219"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Métodos gerados pelo Assistente do Consumidor
 
@@ -40,7 +40,7 @@ A ATL OLE DB Assistente de consumidor e o Assistente de aplicativo do MFC geram 
   
 - `CloseAll` Fecha todos os conjuntos de linhas e libera todas as execuções de comando.  
   
-- `OpenRowset` é chamado pelo OpenAll para abrir o conjunto de linhas ou a conjuntos de linhas do consumidor.  
+- `OpenRowset` é chamado pelo `OpenAll` para abrir o conjunto de linhas ou a conjuntos de linhas do consumidor.  
   
 - `GetRowsetProperties` recupera um ponteiro para a propriedade do conjunto de linhas definido com as propriedades que podem ser definidas.  
   
@@ -91,7 +91,7 @@ int main(int argc, char* argv[])
   
 ## <a name="remarks"></a>Comentários  
 
-Observe que, se você definir um `HasBookmark` método, o `OpenAll` código define a propriedade DBPROP_IRowsetLocate; Certifique-se de fazer isso se seu provedor oferecer suporte a essa propriedade.  
+Observe que, se você definir um `HasBookmark` método, o `OpenAll` código define o `DBPROP_IRowsetLocate` propriedade; Certifique-se de fazer isso se seu provedor oferecer suporte a essa propriedade.  
   
 ## <a name="openrowset"></a>OpenRowset  
   
@@ -104,7 +104,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);
   
 `OpenAll` chama esse método para abrir o conjunto de linhas ou conjuntos de linhas no consumidor. Normalmente, você não precisará chamar `OpenRowset` , a menos que você deseja trabalhar com vários dados fontes/sessões/conjuntos de linhas. `OpenRowset` é declarado no arquivo de cabeçalho de classe comando ou de tabela:  
   
-```  
+```cpp  
 // OLE DB Template version:  
 HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)  
 {  
@@ -117,7 +117,7 @@ HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)
 }  
 ```  
   
-Os atributos implementam esse método de forma diferente. Essa versão usa um objeto de sessão e uma cadeia de caracteres de comando padrão é a cadeia de caracteres de comando especificada no db_command, embora você pode passar um diferente. Observe que, se você definir um `HasBookmark` método, o `OpenRowset` código define a propriedade DBPROP_IRowsetLocate; Certifique-se de fazer isso se seu provedor oferecer suporte a essa propriedade.  
+Os atributos implementam esse método de forma diferente. Essa versão usa um objeto de sessão e uma cadeia de caracteres de comando padrão é a cadeia de caracteres de comando especificada no db_command, embora você pode passar um diferente. Observe que, se você definir um `HasBookmark` método, o `OpenRowset` código define o `DBPROP_IRowsetLocate` propriedade; Certifique-se de fazer isso se seu provedor oferecer suporte a essa propriedade.  
   
 ```cpp  
 // Attribute-injected version:  
@@ -142,7 +142,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
-Esse método recupera um ponteiro para o conjunto de propriedades do conjunto de linhas; Você pode usar esse ponteiro para definir propriedades como DBPROP_IRowsetChange. `GetRowsetProperties` é usado na classe de registro de usuário da seguinte maneira. Você pode modificar este código para definir as propriedades do conjunto de linhas adicionais:  
+Esse método recupera um ponteiro para o conjunto de propriedades do conjunto de linhas; Você pode usar esse ponteiro para definir propriedades como `DBPROP_IRowsetChange`. `GetRowsetProperties` é usado na classe de registro de usuário da seguinte maneira. Você pode modificar este código para definir as propriedades do conjunto de linhas adicionais:  
   
 ```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  

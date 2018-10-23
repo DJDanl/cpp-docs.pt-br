@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39329f4895060ff950f36c3d10dd5e4020f3b98a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 92761508a5e93c7ef0d0a4099dde587987a50dad
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448422"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809155"
 ---
 # <a name="coledatetime-class"></a>Classe COleDateTime
 
@@ -165,7 +165,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*Data*  
+*Data*<br/>
 O objeto `COleDateTime` a ser comparado.
 
 ### <a name="remarks"></a>Comentários
@@ -210,22 +210,22 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*dateSrc*  
+*dateSrc*<br/>
 Um existente `COleDateTime` o objeto a ser copiado para o novo `COleDateTime` objeto.
 
-*varSrc*  
+*varSrc*<br/>
 Um existente `VARIANT` estrutura de dados (possivelmente um `COleVariant` objeto) a ser convertido em um valor de data/hora (VT_DATE) e copiado no novo `COleDateTime` objeto.
 
-*dtSrc*  
+*dtSrc*<br/>
 Um valor de data/hora (`DATE`) o valor a ser copiado para o novo `COleDateTime` objeto.
 
-*timeSrc*  
+*timeSrc*<br/>
 Um `time_t` ou `__time64_t` valor a ser convertido em um valor de data/hora e copiado no novo `COleDateTime` objeto.
 
-*systimeSrc*  
+*systimeSrc*<br/>
 Um `SYSTEMTIME` estrutura a ser convertido em um valor de data/hora e copiado no novo `COleDateTime` objeto.
 
-*filetimeSrc*  
+*filetimeSrc*<br/>
 Um `FILETIME` estrutura a ser convertido em um valor de data/hora e copiado no novo `COleDateTime` objeto. Observe que `FILETIME` usa o Horário Coordenado Universal (UTC), portanto, se você passar uma hora local na estrutura, os resultados estarão incorretos. Ver [tempos de arquivo](/windows/desktop/SysInfo/file-times) no SDK do Windows para obter mais informações.
 
 *nYear*, *nMonth*, *nDay*, *Nhora*, *Nmín*, *nSec*  
@@ -234,7 +234,7 @@ Indique os valores de data e hora a ser copiado para o novo `COleDateTime` objet
 *wDosDate*, *wDosTime*  
 Valores de data e hora do MS-DOS para ser convertido em um valor de data/hora e copiado no novo `COleDateTime` objeto.
 
-*DBTS*  
+*DBTS*<br/>
 Uma referência a um [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) estrutura que contém a hora local atual.
 
 ### <a name="remarks"></a>Comentários
@@ -297,7 +297,7 @@ CString Format(UINT nFormatID) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*dwFlags*  
+*dwFlags*<br/>
 Indica que um dos seguintes sinalizadores de localidade:
 
 - LOCALE_NOUSEROVERRIDE usar as configurações de localidade do sistema padrão, em vez de configurações do usuário personalizadas.
@@ -306,10 +306,10 @@ Indica que um dos seguintes sinalizadores de localidade:
 
 - VAR_DATEVALUEONLY ignorar a parte de hora durante a análise.
 
-*lcid*  
+*lcid*<br/>
 Indica a ID de localidade a ser usado para a conversão. Para obter mais informações sobre identificadores de idioma, consulte [identificadores de idioma](/windows/desktop/Intl/language-identifiers).
 
-*lpszFormat*  
+*lpszFormat*<br/>
 Uma formatação de cadeia de caracteres semelhante ao `printf` cadeia de caracteres de formatação. Cada uma formatação de código, precedido por uma porcentagem ( `%`) entre, é substituído pelo correspondente `COleDateTime` componente. Outros caracteres na cadeia de caracteres de formatação são copiados sem alterações para a cadeia de caracteres retornada. Consulte a função de tempo de execução [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) para obter mais informações. O valor e o significado dos códigos de formatação para `Format` são:
 
 - `%H` Horas do dia atual
@@ -320,7 +320,7 @@ Uma formatação de cadeia de caracteres semelhante ao `printf` cadeia de caract
 
 - `%%` Sinal de porcentagem
 
-*nFormatID*  
+*nFormatID*<br/>
 A ID de recurso para a cadeia de caracteres de controle de formato.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -356,7 +356,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*DBTS*  
+*DBTS*<br/>
 Uma referência a um [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) estrutura.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -381,7 +381,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*sysTime*  
+*sysTime*<br/>
 Uma referência a um [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estrutura que receberá o valor de data/hora convertido do `COleDateTime` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -404,7 +404,7 @@ bool GetAsUDATE(UDATE& udate) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*udate*  
+*udate*<br/>
 Uma referência a um `UDATE` estrutura que receberá o valor de data/hora convertido do `COleDateTime` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -938,10 +938,10 @@ LCID lcid = LANG_USER_DEFAULT) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpszDate*  
+*lpszDate*<br/>
 Um ponteiro para a cadeia de caracteres terminada em nulo que deve ser analisado. Para obter detalhes, consulte Observações.
 
-*dwFlags*  
+*dwFlags*<br/>
 Indica os sinalizadores para as configurações de localidade e a análise. Um ou mais dos seguintes sinalizadores:
 
 - LOCALE_NOUSEROVERRIDE usar as configurações de localidade do sistema padrão, em vez de configurações do usuário personalizadas.
@@ -950,7 +950,7 @@ Indica os sinalizadores para as configurações de localidade e a análise. Um o
 
 - VAR_DATEVALUEONLY ignorar a parte de hora durante a análise.
 
-*lcid*  
+*lcid*<br/>
 Indica a ID de localidade a ser usado para a conversão.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1151,7 +1151,7 @@ void SetStatus(DateTimeStatus status) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*status*  
+*status*<br/>
 O novo valor de status para esse `COleDateTime` objeto.
 
 ### <a name="remarks"></a>Comentários

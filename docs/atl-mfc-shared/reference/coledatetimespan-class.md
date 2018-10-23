@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f313b659629f824828c52948b9a73c50f86b5e40
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: be0e05d61d4949deaee683c5b8f43d18e0501d23
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434174"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808973"
 ---
 # <a name="coledatetimespan-class"></a>Classe COleDateTimeSpan
 
@@ -124,7 +124,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*dateSpan*  
+*dateSpan*<br/>
 O `COleDateTimeSpan` de comparação.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -154,7 +154,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*dblSpanSrc*  
+*dblSpanSrc*<br/>
 O número de dias a ser copiado para o novo `COleDateTimeSpan` objeto.
 
 *lDays*, *nHours*, *nMins*, *nSecs*  
@@ -189,7 +189,7 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*pFormat*  
+*pFormat*<br/>
 Uma formatação de cadeia de caracteres semelhante ao `printf` cadeia de caracteres de formatação. Códigos de formatação, precedidos por uma porcentagem (`%`) entre, são substituídos por correspondente `COleDateTimeSpan` componente. Outros caracteres na cadeia de caracteres de formatação são copiados sem alterações para a cadeia de caracteres retornada. O valor e o significado dos códigos de formatação para `Format` estão listadas abaixo:
 
 - **%H** horas do dia atual
@@ -204,7 +204,7 @@ Os códigos de formatação quatro listados acima são os códigos de só aceita
 
 -
 
-*nID*  
+*nID*<br/>
 A ID de recurso para a cadeia de caracteres de controle de formato.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -731,7 +731,7 @@ void SetStatus(DateTimeSpanStatus status) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*status*  
+*status*<br/>
 O novo valor de status para esse `COleDateTimeSpan` objeto.
 
 ### <a name="remarks"></a>Comentários

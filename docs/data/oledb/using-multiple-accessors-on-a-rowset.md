@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3ab75c1a8b0c6addf41366c63f14305b68ce5bc5
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 43fa36e0f5b79a6901c1294345f54386340c43ef
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860687"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808453"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Usando vários acessadores em um conjunto de linhas
 
@@ -35,9 +35,9 @@ Há três cenários básicos em que você precisa usar vários acessadores:
 
    - Acessador 1 contém todas as colunas exceto a chave primária.
 
-- **Desempenho.** Nesse cenário, uma ou mais colunas contêm uma grande quantidade de dados, por exemplo, elementos gráficos, som, arquivos ou vídeo. Sempre que mudar para uma linha, você provavelmente não deseja recuperar a coluna com o arquivo de dados grandes, porque fazer então retardaria o desempenho do seu aplicativo.
+- **Desempenho.** Nesse cenário, uma ou mais colunas têm uma grande quantidade de dados, por exemplo, elementos gráficos, som, arquivos ou vídeo. Sempre que mudar para uma linha, você provavelmente não deseja recuperar a coluna com o arquivo de dados grandes, porque fazer então retardaria o desempenho do seu aplicativo.
 
-   Você pode definir acessadores separados no qual o acessador primeiro contém todas as colunas, exceto o com dados grandes e recupera dados dessas colunas automaticamente. Esse é o acessador automática. O acessador segundo recupera somente a coluna que contém dados grandes, mas ele não recuperar os dados desta coluna automaticamente. Você pode ter outros métodos de atualização ou buscar os dados grandes sob demanda.
+   Você pode definir acessadores separados no qual o acessador primeiro contém todas as colunas, exceto o com dados grandes e recupera dados dessas colunas automaticamente. o acessador primeiro é o acessador automática. O acessador segundo recupera somente a coluna que contém dados grandes, mas ela não recupera os dados desta coluna automaticamente. Você pode ter outros métodos de atualização ou buscar os dados grandes sob demanda.
 
    - Acessador 0 é um acessador automática; ele recupera todas as colunas, exceto o com dados grandes.
 
@@ -45,15 +45,15 @@ Há três cenários básicos em que você precisa usar vários acessadores:
 
    Use o argumento de automática para especificar se o acessador é um acessador de automático.
 
-- **Várias colunas de ISequentialStream.** Nesse cenário, você tem mais de uma coluna que contém `ISequentialStream` dados. No entanto, cada acessador é limitada a uma `ISequentialStream` fluxo de dados. Para resolver esse problema, configurar vários acessadores, cada um contendo um `ISequentialStream` ponteiro.
+- **Várias colunas de ISequentialStream.** Nesse cenário, você tem mais de uma coluna que contém `ISequentialStream` dados. No entanto, cada acessador é limitada a uma `ISequentialStream` fluxo de dados. Para resolver esse problema, configurar vários acessadores, cada um tendo uma `ISequentialStream` ponteiro.
 
 Você normalmente cria acessadores usando o [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) e [END_ACCESSOR](../../data/oledb/end-accessor.md) macros. Você também pode usar o [db_accessor](../../windows/db-accessor.md) atributo. (Acessadores são descritos mais detalhadamente em [registros de usuário](../../data/oledb/user-records.md).) As macros ou o atributo Especifique se um acessador é automático ou um acessador não automático:
 
 - Em um acessador automática, mover métodos como `MoveFirst`, `MoveLast`, `MoveNext`, e `MovePrev` recuperar dados para todas as colunas especificadas automaticamente. Acessador 0 deve ser o acessador automática.
 
-- Em um acessador não automático, a recuperação não ocorrerá até você chamar explicitamente um método como `Update`, `Insert`, `Fetch`, ou `Delete`. Nos cenários descritos acima, talvez você não queira recuperar todas as colunas em cada movimento. Você pode colocar uma ou mais colunas em um acessador separado e verifique um acessador não automático, conforme mostrado abaixo.
+- Em um acessador não automático, a recuperação não ocorre até que você chamar explicitamente um método como `Update`, `Insert`, `Fetch`, ou `Delete`. Nos cenários descritos acima, talvez você não queira recuperar todas as colunas em cada movimento. Você pode colocar uma ou mais colunas em um acessador separado e verifique um acessador não automático, conforme mostrado abaixo.
 
-O exemplo a seguir usa vários acessadores para ler e gravar na tabela de trabalhos de banco de dados de pubs do SQL Server usando vários acessadores. Isso é o uso mais comum de vários acessadores; Consulte o cenário de "vários conjuntos de leitura/gravação" acima.
+O exemplo a seguir usa vários acessadores para ler e gravar na tabela de trabalhos de banco de dados de pubs do SQL Server usando vários acessadores. Este exemplo é o uso mais comum de vários acessadores; Consulte o cenário de "vários conjuntos de leitura/gravação" acima.
 
 A classe de registro de usuário é da seguinte maneira. Ele configura dois acessadores: acessador 0 contém apenas a coluna de chave primária (ID) e o acessador 1 contém outras colunas.
 

@@ -1,7 +1,7 @@
 ---
 title: Buscando dados | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,22 +18,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b7aaff3ccd2756ecfbac1cf745aaac74b76a91f9
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 4f0467d322242bb222e5365b45a57e1aa2fe2943
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48859946"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807465"
 ---
 # <a name="fetching-data"></a>Recuperando dados
 
 Depois de abrir a fonte de dados, sessão e objetos de conjunto de linhas, você pode buscar dados. Dependendo do tipo de acessador que você está usando, você precisará associar colunas.
 
-### <a name="to-fetch-data"></a>Para buscar dados
+## <a name="to-fetch-data"></a>Para buscar dados
 
 1. Abra o conjunto de linhas usando apropriado **abrir** comando.
 
-1. Se você estiver usando `CManualAccessor`, associar as colunas de saída, se você ainda não fez isso. Para associar as colunas, chame `GetColumnInfo`e, em seguida, crie um acessador com as associações, conforme mostrado no exemplo a seguir:
+1. Se você estiver usando `CManualAccessor`, associar as colunas de saída, se você ainda não fez isso. O exemplo a seguir é retirado do [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer) exemplo. Para associar as colunas, chame `GetColumnInfo`e, em seguida, crie um acessador com as associações, conforme mostrado no exemplo a seguir:
 
     ```cpp
     // From the DBViewer Sample CDBTreeView::OnQueryEdit
@@ -50,7 +50,7 @@ Depois de abrir a fonte de dados, sessão e objetos de conjunto de linhas, você
     rs.Bind();
     ```
 
-1. Gravar um `while` loop para recuperar os dados. No loop, chame `MoveNext` para avançar o cursor e testar o valor de retorno com S_OK, conforme mostrado no exemplo a seguir:
+1. Gravar uma **enquanto** loop para recuperar os dados. No loop, chame `MoveNext` para avançar o cursor e testar o valor de retorno com S_OK, conforme mostrado no exemplo a seguir:
 
     ```cpp
     while (rs.MoveNext() == S_OK)
@@ -60,7 +60,7 @@ Depois de abrir a fonte de dados, sessão e objetos de conjunto de linhas, você
     }
     ```
 
-1. Dentro de `while` loop, você pode buscar os dados de acordo com seu tipo de acessador.
+1. Dentro de **enquanto** loop, você pode buscar os dados de acordo com seu tipo de acessador.
 
    - Se você usar o [CAccessor](../../data/oledb/caccessor-class.md) classe, você deve ter um registro de usuário que contém membros de dados. Você pode acessar seus dados usando os membros de dados, conforme mostrado no exemplo a seguir:
 

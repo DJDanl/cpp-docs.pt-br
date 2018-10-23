@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8218500fc17efda01b4ecaa11b6ebf12bd76812
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 721c8ba75fc72879a2c4c7de0f21010f51513f50
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436267"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808778"
 ---
 # <a name="mfc-dll-wizard"></a>Assistente de DLL MFC
 
@@ -53,8 +53,7 @@ Você pode executar as seguintes tarefas e tipos de aprimoramentos para um proje
 [Criando e gerenciando projetos do Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)<br/>
 [Páginas de propriedade](../../ide/property-pages-visual-cpp.md)<br/>
 [Trabalhando com Propriedades do Projeto](../../ide/working-with-project-properties.md)<br/>
-[Classe do MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
+[Classe MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Adicionando uma função de membro](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Implementando uma interface](../../ide/implementing-an-interface-visual-cpp.md)<br/>
-[Suporte do assistente para outros idiomas](../../ide/wizard-support-for-other-languages.md)
 

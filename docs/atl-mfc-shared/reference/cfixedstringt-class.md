@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6ac44a9a27b5c3ad62279dc3065aa9e0aac5236
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d9f48ffb9cad787159a40a58d85e6bff5dacc475
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378211"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808245"
 ---
 # <a name="cfixedstringt-class"></a>Classe CFixedStringT
 
@@ -39,10 +39,10 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 
 #### <a name="parameters"></a>Parâmetros
 
-*StringType*  
+*StringType*<br/>
 Usado como a classe base para o objeto de cadeia de caracteres fixa e pode ser qualquer `CStringT`-com base em tipo. Alguns exemplos incluem `CString`, `CStringA`, e `CStringW`.
 
-*t_nChars*  
+*t_nChars*<br/>
 O número de caracteres armazenados em buffer.
 
 ## <a name="members"></a>Membros
@@ -101,13 +101,13 @@ explicit CFixedStringT(const unsigned char* psz);
 
 ### <a name="parameters"></a>Parâmetros
 
-*psz*  
+*psz*<br/>
 Uma cadeia de caracteres terminada em nulo a ser copiado para isso `CFixedStringT` objeto.
 
-*str*  
+*str*<br/>
 Um existente `CFixedStringT` o objeto a ser copiado para isso `CFixedStringT` objeto.
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Um ponteiro para o Gerenciador de memória do `CFixedStringT` objeto. Para obter mais informações sobre `IAtlStringMgr` e o gerenciamento de memória para `CFixedStringT`, consulte [gerenciamento de memória e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
 ### <a name="remarks"></a>Comentários
@@ -129,10 +129,10 @@ CFixedStringT<StringType, t_nChars>& operator=(const StringType& str);
 
 ### <a name="parameters"></a>Parâmetros
 
-*str*  
+*str*<br/>
 Uma cadeia de caracteres terminada em nulo a ser copiado para isso `CFixedStringT` objeto.
 
-*psz*  
+*psz*<br/>
 Um existente `CFixedStringT` a ser copiado para isso `CFixedStringT` objeto.
 
 ### <a name="remarks"></a>Comentários

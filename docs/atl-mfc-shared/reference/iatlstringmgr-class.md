@@ -1,7 +1,7 @@
 ---
 title: Classe IAtlStringMgr | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad98923c21a28976b54c2251f2da83eb0ec4cf5f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6d637750ab4aa9dc30ca7b297373cb2c752802d8
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408135"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808852"
 ---
 # <a name="iatlstringmgr-class"></a>Classe IAtlStringMgr
 
@@ -73,10 +73,10 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*nAllocLength*  
+*nAllocLength*<br/>
 O número de caracteres no novo bloco de memória.
 
-*nCharSize*  
+*nCharSize*<br/>
 O tamanho (em bytes) do tipo de caractere usado pelo Gerenciador de cadeia de caracteres.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -124,7 +124,7 @@ void Free(CStringData* pData) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*pData*  
+*pData*<br/>
 Um ponteiro para o bloco de memória a ser liberado.
 
 ### <a name="remarks"></a>Comentários
@@ -151,31 +151,31 @@ Um ponteiro para o `CStringData` objeto usado para representar uma cadeia de car
 Chame essa função para retornar uma representação de cadeia de caracteres vazia.
 
 > [!NOTE]
->  Ao implementar um Gerenciador de cadeia de caracteres personalizada, essa função nunca deve falhar. Você pode garantir isso incorporando uma instância de `CNilStringData` na classe de Gerenciador de cadeia de caracteres e retornam um ponteiro para essa instância.
+> Ao implementar um Gerenciador de cadeia de caracteres personalizada, essa função nunca deve falhar. Você pode garantir isso incorporando uma instância de `CNilStringData` na classe de Gerenciador de cadeia de caracteres e retornam um ponteiro para essa instância.
 
 > [!NOTE]
->  Para obter exemplos de uso, consulte [gerenciamento de memória e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+> Para obter exemplos de uso, consulte [gerenciamento de memória e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-##  <a name="reallocate"></a>  IAtlStringMgr::Reallocate
+## <a name="reallocate"></a>  IAtlStringMgr::Reallocate
 
 Realoca uma estrutura de dados de cadeia de caracteres.
 
 ```
-CStringData* Reallocate(  
-CStringData* pData,
-int nAllocLength,
-int nCharSize) throw();
+CStringData* Reallocate(
+    CStringData* pData,
+    int nAllocLength,
+    int nCharSize) throw();
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*pData*  
+*pData*<br/>
 Ponteiro para a memória alocada anteriormente por este Gerenciador de memória.
 
-*nAllocLength*  
+*nAllocLength*<br/>
 O número de caracteres no novo bloco de memória.
 
-*nCharSize*  
+*nCharSize*<br/>
 O tamanho (em bytes) do tipo de caractere usado pelo Gerenciador de cadeia de caracteres.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -189,10 +189,9 @@ Chame essa função para redimensionar o bloco de memória existente, especifica
 Chame [IAtlStringMgr::Free](#free) para liberar a memória alocada por esse método.
 
 > [!NOTE]
->  Para obter exemplos de uso, consulte [gerenciamento de memória e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+> Para obter exemplos de uso, consulte [gerenciamento de memória e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
 ## <a name="see-also"></a>Consulte também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes compartilhadas ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

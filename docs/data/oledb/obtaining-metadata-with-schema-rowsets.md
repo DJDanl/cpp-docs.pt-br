@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8c4e3003beb0e50887f6b765904095c65dd8f1b6
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 3a3d2926b2f9c958d3770737729726bbad7b13e7
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083652"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808908"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Obtendo metadados com conjuntos de linhas de esquema
 
@@ -31,13 +31,13 @@ ms.locfileid: "49083652"
 Modelos OLE DB fornecer um conjunto de classes para recuperar informações de esquema; Essas classes criar conjuntos de linhas do esquema predefinido e são listadas na [Classes de conjunto de linhas de esquema e Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).  
   
 > [!NOTE]
->  Se você estiver usando o OLAP e alguns de seus conjuntos de linhas não são suportados pelas classes de conjunto de linhas de esquema (por exemplo, se você tiver um número variável de colunas), você deve considerar o uso `CManualAccessor` ou `CDynamicAccessor`. Você pode percorrer as colunas e usar instruções case para tratar os possíveis tipos de dados para cada coluna.  
+> Se você estiver usando o OLAP e alguns de seus conjuntos de linhas não são suportados pelas classes de conjunto de linhas de esquema (por exemplo, se você tiver um número variável de colunas), você deve considerar o uso `CManualAccessor` ou `CDynamicAccessor`. Você pode percorrer as colunas e usar instruções case para tratar os possíveis tipos de dados para cada coluna.  
   
 ## <a name="catalogschema-model"></a>Modelo de esquema do catálogo  
 
 ANSI SQL define um modelo de esquema do catálogo para armazenamentos de dados; OLE DB usa esse modelo. Nesse modelo, catálogos (bancos de dados) contém os esquemas e os esquemas contêm tabelas.  
   
-- **Catálogo** um catálogo é outro nome de um banco de dados. É uma coleção de esquemas relacionadas. Para listar os catálogos (bancos de dados) que pertencem a uma determinada fonte de dados, use [CCatalog](../../data/oledb/ccatalogs-ccataloginfo.md). Como muitos bancos de dados têm apenas um catálogo, metadados, às vezes, simplesmente é chamado informações de esquema.  
+- **Catálogo** um catálogo é outro nome de um banco de dados. É uma coleção de esquemas relacionadas. Para listar os catálogos (bancos de dados) que pertencem a uma determinada fonte de dados, use [CCatalog](../../data/oledb/ccatalogs-ccataloginfo.md). Como muitos bancos de dados têm apenas um catálogo, metadados é às vezes chamado de informações de esquema.  
   
 - **Esquema** um esquema é uma coleção de objetos de banco de dados que são de propriedade ou ter sido criado por um determinado usuário. Para listar os esquemas de propriedade de um determinado usuário, use [CSchemata](../../data/oledb/cschemata-cschematainfo.md).  
   
@@ -67,7 +67,7 @@ Para especificar restrições, consulte [apêndice b: Schema Rowsets](/previous-
   
 Portanto, por exemplo, se você quiser restringir por nome de tabela, observe que TABLE_NAME é a terceira coluna de restrição e, em seguida, chamar `Open`, especificando o nome da tabela desejado como o terceiro parâmetro de restrição, conforme mostrado no exemplo a seguir.  
   
-#### <a name="to-use-schema-rowsets"></a>Para usar conjuntos de linhas de esquema  
+### <a name="to-use-schema-rowsets"></a>Para usar conjuntos de linhas de esquema  
   
 1. Você deve incluir o arquivo de cabeçalho Atldbsch.h (é claro, você precisa Atldbcli.h para suporte de consumidor).  
   
@@ -89,7 +89,7 @@ Portanto, por exemplo, se você quiser restringir por nome de tabela, observe qu
     }  
     ```  
   
-1. Para buscar as informações, acessar o membro de dados apropriado do objeto de conjunto de linhas de esquema, por exemplo, `ColumnSchemaRowset.m_szColumnName`. Isso corresponde ao nome da coluna. Para ver qual coluna de banco de dados OLE, cada membro de dados corresponde ao, consulte [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md).  
+1. Para buscar as informações, acessar o membro de dados apropriado do objeto de conjunto de linhas de esquema, por exemplo, `ColumnSchemaRowset.m_szColumnName`. Este membro de dados corresponde ao nome da coluna. Para ver qual coluna de banco de dados OLE, cada membro de dados corresponde ao, consulte [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md).  
   
 Para a referência do conjunto de linhas de esquema, classes typedef fornecida nos modelos do OLE DB (consulte [Classes de conjunto de linhas de esquema e Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).  
   

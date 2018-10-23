@@ -1,7 +1,7 @@
 ---
 title: Classe CStrBufT | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43c460d45e0f1ce41cebd463bc3ba6b7f295d9ca
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82152ea3df6bb21ee1405790acf9d3fb2c9630c5
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411177"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808986"
 ---
 # <a name="cstrbuft-class"></a>Classe CStrBufT
 
@@ -43,7 +43,7 @@ class CStrBufT
 
 #### <a name="parameters"></a>Parâmetros
 
-*TCharType*  
+*TCharType*<br/>
 O tipo de caracteres a `CStrBufT` classe. Pode ser uma das seguintes opções:
 
 - **char** (para cadeias de caracteres ANSI)
@@ -121,13 +121,13 @@ explicit CStrBufT(StringType& str) throw(...);
 
 ### <a name="parameters"></a>Parâmetros
 
-*str*  
+*str*<br/>
 O objeto de cadeia de caracteres associado com o buffer. Normalmente, o desenvolvedor usará o typedefs predefinido da `CStrBuf` (variante TCHAR), `CStrBufA` (**char** variant) e `CStrBufW` (**wchar_t** variante).
 
-*nMinLength*  
+*nMinLength*<br/>
 O comprimento mínimo do buffer de caractere.
 
-*dwFlags*  
+*dwFlags*<br/>
 Determina se o comprimento da cadeia de caracteres é determinado automaticamente. Pode ser uma das seguintes opções:
 
 - Comprimento de cadeia de caracteres AUTO_LENGTH é automaticamente determinado quando [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) é chamado. A cadeia de caracteres deve ser terminada em nulo. Valor padrão.
@@ -212,7 +212,7 @@ void SetLength(int nLength);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nLength*  
+*nLength*<br/>
 O novo tamanho do buffer de caractere do objeto de cadeia de caracteres.
 
 > [!NOTE]

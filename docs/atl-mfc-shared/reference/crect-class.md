@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b135b318a77835d22d7547e78f3b5c4f7ee3daee
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: e8033ceb709ab66c37e1801cd4033e6830467f2b
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328578"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808609"
 ---
 # <a name="crect-class"></a>Classe CRect
 
@@ -259,7 +259,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpSrcRect*  
+*lpSrcRect*<br/>
 Aponta para o [RECT](../../mfc/reference/rect-structure.md) estrutura ou `CRect` objeto a ser copiado.
 
 ### <a name="example"></a>Exemplo
@@ -300,34 +300,34 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*l*  
+*l*<br/>
 Especifica a posição esquerda do `CRect`.
 
-*t*  
+*t*<br/>
 Especifica a parte superior do `CRect`.
 
-*r*  
+*r*<br/>
 Especifica a posição direita da `CRect`.
 
-*b*  
+*b*<br/>
 Especifica a parte inferior da `CRect`.
 
-*srcRect*  
+*srcRect*<br/>
 Refere-se para o [RECT](../../mfc/reference/rect-structure.md) estrutura com as coordenadas para `CRect`.
 
-*lpSrcRect*  
+*lpSrcRect*<br/>
 Aponta para o `RECT` estrutura com as coordenadas para `CRect`.
 
-*ponto*  
+*ponto*<br/>
 Especifica o ponto de origem para o retângulo a ser construído. Corresponde ao canto superior esquerdo.
 
-*size*  
+*size*<br/>
 Especifica o deslocamento do canto superior esquerdo para o canto inferior direito do retângulo a ser construído.
 
-*topLeft*  
+*topLeft*<br/>
 Especifica a posição do canto superior esquerdo do `CRect`.
 
-*bottomRight*  
+*bottomRight*<br/>
 Especifica a posição do canto inferior direito da `CRect`.
 
 ### <a name="remarks"></a>Comentários
@@ -387,28 +387,28 @@ void DeflateRect(int l, int t, int r, int b) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*x*  
+*x*<br/>
 Especifica o número de unidades para deflate à esquerda e à direita do `CRect`.
 
-*y*  
+*y*<br/>
 Especifica o número de unidades de deflate superior e inferior de `CRect`.
 
-*size*  
+*size*<br/>
 Um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) ou [CSize](csize-class.md) que especifica o número de unidades a serem deflate `CRect`. O `cx` valor Especifica o número de unidades para os lados esquerdo e direito de deflate e o `cy` valor Especifica o número de unidades a serem deflate superior e inferior.
 
-*lpRect*  
+*lpRect*<br/>
 Aponta para um [RECT](../../mfc/reference/rect-structure.md) estrutura ou `CRect` que especifica o número de unidades a serem deflate cada lado.
 
-*l*  
+*l*<br/>
 Especifica o número de unidades de deflate lado esquerdo do `CRect`.
 
-*t*  
+*t*<br/>
 Especifica o número de unidades de deflate parte superior do `CRect`.
 
-*r*  
+*r*<br/>
 Especifica o número de unidades de deflate lado direito da `CRect`.
 
-*b*  
+*b*<br/>
 Especifica o número de unidades de deflate parte inferior da `CRect`.
 
 ### <a name="remarks"></a>Comentários
@@ -442,7 +442,7 @@ BOOL EqualRect(LPCRECT lpRect) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpRect*  
+*lpRect*<br/>
 Aponta para um [RECT](../../mfc/reference/rect-structure.md) estrutura ou `CRect` objeto que contém as coordenadas do canto superior esquerdo e inferior direito de um retângulo.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -518,28 +518,28 @@ void InflateRect(int l, int t, int r,  int b) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*x*  
+*x*<br/>
 Especifica o número de unidades para Inflar à esquerda e à direita do `CRect`.
 
-*y*  
+*y*<br/>
 Especifica o número de unidades para Inflar superior e inferior de `CRect`.
 
-*size*  
+*size*<br/>
 Um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) ou [CSize](csize-class.md) que especifica o número de unidades para Inflar `CRect`. O `cx` valor Especifica o número de unidades para inflar os lados esquerdo e direito e o `cy` valor Especifica o número de unidades para Inflar superior e inferior.
 
-*lpRect*  
+*lpRect*<br/>
 Aponta para um [RECT](../../mfc/reference/rect-structure.md) estrutura ou `CRect` que especifica o número de unidades para Inflar cada lado.
 
-*l*  
+*l*<br/>
 Especifica o número de unidades para Inflar lado esquerdo do `CRect`.
 
-*t*  
+*t*<br/>
 Especifica o número de unidades para Inflar parte superior do `CRect`.
 
-*r*  
+*r*<br/>
 Especifica o número de unidades para Inflar lado direito da `CRect`.
 
-*b*  
+*b*<br/>
 Especifica o número de unidades para Inflar parte inferior da `CRect`.
 
 ### <a name="remarks"></a>Comentários
@@ -568,10 +568,10 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpRect1*  
+*lpRect1*<br/>
 Aponta para um [RECT](../../mfc/reference/rect-structure.md) estrutura ou `CRect` objeto que contém um retângulo de origem.
 
-*lpRect2*  
+*lpRect2*<br/>
 Aponta para um `RECT` estrutura ou `CRect` objeto que contém um retângulo de origem.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -684,7 +684,7 @@ void MoveToX(int x) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*x*  
+*x*<br/>
 A absoluta coordenada x para o canto superior esquerdo do retângulo.
 
 ### <a name="example"></a>Exemplo
@@ -712,13 +712,13 @@ void MoveToXY(POINT point) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*x*  
+*x*<br/>
 A absoluta coordenada x para o canto superior esquerdo do retângulo.
 
-*y*  
+*y*<br/>
 A absoluta coordenada y para o canto superior esquerdo do retângulo.
 
-*ponto*  
+*ponto*<br/>
 Um `POINT` estrutura especificando o absoluto canto superior esquerdo do retângulo.
 
 ### <a name="example"></a>Exemplo
@@ -745,7 +745,7 @@ void MoveToY(int y) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*y*  
+*y*<br/>
 A absoluta coordenada y para o canto superior esquerdo do retângulo.
 
 ### <a name="example"></a>Exemplo
@@ -803,16 +803,16 @@ void OffsetRect(SIZE size) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*x*  
+*x*<br/>
 Especifica a quantidade para mover para a esquerda ou direita. Ele deve ser negativo para mover para a esquerda.
 
-*y*  
+*y*<br/>
 Especifica o valor para mover para cima ou para baixo. Ele deve ser negativo para mover para cima.
 
-*ponto*  
+*ponto*<br/>
 Contém uma [ponto](../../mfc/reference/point-structure.md) estrutura ou [CPoint](cpoint-class.md) objeto especificando ambas as dimensões pela qual mover.
 
-*size*  
+*size*<br/>
 Contém uma [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura ou [CSize](csize-class.md) objeto especificando ambas as dimensões pela qual mover.
 
 ### <a name="remarks"></a>Comentários
@@ -872,7 +872,7 @@ void operator=(const RECT& srcRect) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*srcRect*  
+*srcRect*<br/>
 Refere-se a um retângulo de origem. Pode ser um [RECT](../../mfc/reference/rect-structure.md) ou `CRect`.
 
 ### <a name="example"></a>Exemplo
@@ -900,7 +900,7 @@ BOOL operator==(const RECT& rect) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*  
+*Rect*<br/>
 Refere-se a um retângulo de origem. Pode ser um [RECT](../../mfc/reference/rect-structure.md) ou `CRect`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -946,7 +946,7 @@ BOOL operator!=(const RECT& rect) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*  
+*Rect*<br/>
 Refere-se a um retângulo de origem. Pode ser um [RECT](../../mfc/reference/rect-structure.md) ou `CRect`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -993,13 +993,13 @@ void operator+=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*  
+*ponto*<br/>
 Um [ponto](../../mfc/reference/point-structure.md) estrutura ou [CPoint](cpoint-class.md) objeto que especifica o número de unidades para mover o retângulo.
 
-*size*  
+*size*<br/>
 Um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura ou [CSize](csize-class.md) objeto que especifica o número de unidades para mover o retângulo.
 
-*lpRect*  
+*lpRect*<br/>
 Aponta para um [RECT](../../mfc/reference/rect-structure.md) estrutura ou `CRect` objeto que contém o número de unidades para Inflar cada lado da `CRect`.
 
 ### <a name="remarks"></a>Comentários
@@ -1036,13 +1036,13 @@ void operator-=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*  
+*ponto*<br/>
 Um [ponto](../../mfc/reference/point-structure.md) estrutura ou [CPoint](cpoint-class.md) objeto que especifica o número de unidades para mover o retângulo.
 
-*size*  
+*size*<br/>
 Um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura ou [CSize](csize-class.md) objeto que especifica o número de unidades para mover o retângulo.
 
-*lpRect*  
+*lpRect*<br/>
 Aponta para um [RECT](../../mfc/reference/rect-structure.md) estrutura ou `CRect` objeto que contém o número de unidades para deflate cada lado da `CRect`.
 
 ### <a name="remarks"></a>Comentários
@@ -1077,7 +1077,7 @@ void operator&=(const RECT& rect) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*  
+*Rect*<br/>
 Contém uma [RECT](../../mfc/reference/rect-structure.md) ou `CRect`.
 
 ### <a name="remarks"></a>Comentários
@@ -1101,7 +1101,7 @@ void operator|=(const RECT& rect) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*Rect*  
+*Rect*<br/>
 Contém uma `CRect` ou [RECT](../../mfc/reference/rect-structure.md).
 
 ### <a name="remarks"></a>Comentários
@@ -1140,13 +1140,13 @@ CRect operator+(SIZE size) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*  
+*ponto*<br/>
 Um [ponto](../../mfc/reference/point-structure.md) estrutura ou [CPoint](cpoint-class.md) objeto que especifica o número de unidades para mover o valor de retorno.
 
-*size*  
+*size*<br/>
 Um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura ou [CSize](csize-class.md) objeto que especifica o número de unidades para mover o valor de retorno.
 
-*lpRect*  
+*lpRect*<br/>
 Aponta para um [RECT](../../mfc/reference/rect-structure.md) estrutura ou `CRect` objeto que contém o número de unidades para Inflar cada lado do valor de retorno.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1184,13 +1184,13 @@ CRect operator-(LPCRECT lpRect) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*  
+*ponto*<br/>
 Um [ponto](../../mfc/reference/point-structure.md) estrutura ou `CPoint` objeto que especifica o número de unidades para mover o valor de retorno.
 
-*size*  
+*size*<br/>
 Um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura ou `CSize` objeto que especifica o número de unidades para mover o valor de retorno.
 
-*lpRect*  
+*lpRect*<br/>
 Aponta para um [RECT](../../mfc/reference/rect-structure.md) estrutura ou `CRect` objeto que contém o número de unidades para deflate cada lado do valor de retorno.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1226,7 +1226,7 @@ CRect operator&(const RECT& rect2) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*rect2*  
+*rect2*<br/>
 Contém uma [RECT](../../mfc/reference/rect-structure.md) ou `CRect`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1264,7 +1264,7 @@ rect2) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*rect2*  
+*rect2*<br/>
 Contém uma [RECT](../../mfc/reference/rect-structure.md) ou `CRect`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1306,7 +1306,7 @@ BOOL PtInRect(POINT point) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*  
+*ponto*<br/>
 Contém uma [ponto](../../mfc/reference/point-structure.md) estrutura ou [CPoint](cpoint-class.md) objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1358,16 +1358,16 @@ void SetRect(int x1, int y1, int x2, int y2) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*x1*  
+*x1*<br/>
 Especifica a coordenada x do canto superior esquerdo.
 
-*y1*  
+*y1*<br/>
 Especifica a coordenada y do canto superior esquerdo.
 
-*X2*  
+*X2*<br/>
 Especifica a coordenada x do canto inferior direito.
 
-*y2*  
+*y2*<br/>
 Especifica a coordenada y do canto inferior direito.
 
 ### <a name="example"></a>Exemplo
@@ -1438,10 +1438,10 @@ BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpRectSrc1*  
+*lpRectSrc1*<br/>
 Aponta para o [RECT](../../mfc/reference/rect-structure.md) estrutura ou `CRect` objeto do qual um retângulo deve ser subtraído.
 
-*lpRectSrc2*  
+*lpRectSrc2*<br/>
 Aponta para o `RECT` estrutura ou `CRect` objeto a ser subtraído do retângulo apontado pelo *lpRectSrc1* parâmetro.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1526,10 +1526,10 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpRect1*  
+*lpRect1*<br/>
 Aponta para um [RECT](../../mfc/reference/rect-structure.md) ou `CRect` que contém um retângulo de origem.
 
-*lpRect2*  
+*lpRect2*<br/>
 Aponta para um `RECT` ou `CRect` que contém um retângulo de origem.
 
 ### <a name="return-value"></a>Valor de retorno

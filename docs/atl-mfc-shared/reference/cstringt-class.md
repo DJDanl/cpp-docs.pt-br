@@ -1,7 +1,7 @@
 ---
 title: Classe CStringT | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d6a6afeca0bcf0d08a0a206983d3db33b61a041
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: f2d31d24007da1ec279e9c9762158b549e83d114
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890693"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809116"
 ---
 # <a name="cstringt-class"></a>Classe CStringT
 
@@ -115,7 +115,7 @@ public CSimpleStringT<BaseType,
 
 #### <a name="parameters"></a>Parâmetros
 
-*BaseType*  
+*BaseType*<br/>
 O tipo de caractere da classe string. Pode ser uma das seguintes opções:
 
 - **char** (para cadeias de caracteres ANSI).
@@ -124,7 +124,7 @@ O tipo de caractere da classe string. Pode ser uma das seguintes opções:
 
 - TCHAR (para cadeias de caracteres ANSI e Unicode).
 
-*StringTraits*  
+*StringTraits*<br/>
 Determina se a classe de cadeia de caracteres precisa de suporte de biblioteca de tempo de execução C (CRT) e onde os recursos de cadeia de caracteres estão localizados. Pode ser uma das seguintes opções:
 
 - **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**
@@ -343,13 +343,13 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszFormat*  
+*pszFormat*<br/>
 Uma cadeia de caracteres de controle de formato.
 
-*nFormatID*  
+*nFormatID*<br/>
 O identificador de recurso de cadeia de caracteres que contém a cadeia de caracteres de controle de formato.
 
-*argument*  
+*argument*<br/>
 Argumentos opcionais.
 
 ### <a name="remarks"></a>Comentários
@@ -370,7 +370,7 @@ int Collate(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*psz*  
+*psz*<br/>
 A outra cadeia de caracteres usada para comparação.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -391,7 +391,7 @@ int CollateNoCase(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*psz*  
+*psz*<br/>
 A outra cadeia de caracteres usada para comparação.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -416,7 +416,7 @@ int Compare(PCXSTR psz) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*psz*  
+*psz*<br/>
 A outra cadeia de caracteres usada para comparação.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -445,7 +445,7 @@ int CompareNoCase(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*psz*  
+*psz*<br/>
 A outra cadeia de caracteres usada para comparação.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -539,28 +539,28 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 
 ### <a name="parameters"></a>Parâmetros
 
-*pch*  
+*pch*<br/>
 Um ponteiro para uma matriz de caracteres de comprimento *nLength*, não terminada em nulo.
 
-*nLength*  
+*nLength*<br/>
 Uma contagem do número de caracteres em *pch*.
 
-*ch*  
+*ch*<br/>
 Um único caractere.
 
-*pszSrc*  
+*pszSrc*<br/>
 Uma cadeia de caracteres terminada em nulo a ser copiado para isso `CStringT` objeto.
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Um ponteiro para o Gerenciador de memória para o `CStringT` objeto. Para obter mais informações sobre `IAtlStringMgr` e o gerenciamento de memória para `CStringT`, consulte [gerenciamento de memória com CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-*{1&gt;strsrc*  
+*{1&gt;strsrc*<br/>
 Um existente `CStringT` o objeto a ser copiado para isso `CStringT` objeto. Para obter mais informações sobre `CThisString` e `CThisSimpleString`, consulte a seção comentários.
 
-*varSrc*  
+*varSrc*<br/>
 Um objeto variante a ser copiado para isso `CStringT` objeto.
 
-*BaseType*  
+*BaseType*<br/>
 O tipo de caractere da classe string. Pode ser uma das seguintes opções:
 
 **char** (para cadeias de caracteres ANSI).
@@ -569,13 +569,13 @@ O tipo de caractere da classe string. Pode ser uma das seguintes opções:
 
 TCHAR (para cadeias de caracteres ANSI e Unicode).
 
-*bMFCDLL*  
+*bMFCDLL*<br/>
 Valor booleano que especifica se o projeto é uma DLL do MFC (TRUE) ou não (FALSE).
 
-*SystemString*  
+*SystemString*<br/>
 Deve ser `System::String`, e o projeto deve ser compilado com /clr.
 
-*pString*  
+*pString*<br/>
 Um identificador para um `CStringT` objeto.
 
 ### <a name="remarks"></a>Comentários
@@ -624,10 +624,10 @@ int Delete(int iIndex, int nCount = 1);
 
 ### <a name="parameters"></a>Parâmetros
 
-*iIndex*  
+*iIndex*<br/>
 O índice baseado em zero do primeiro caractere no `CStringT` objeto a ser excluído.
 
-*nCount*  
+*nCount*<br/>
 O número de caracteres a ser removido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -660,13 +660,13 @@ int Find(XCHAR ch, int iStart=0) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszSub*  
+*pszSub*<br/>
 Uma subcadeia de caracteres a ser pesquisado.
 
-*iStart*  
+*iStart*<br/>
 O índice do caractere na cadeia de caracteres para iniciar a pesquisa com, ou 0 para começar do zero.
 
-*ch*  
+*ch*<br/>
 Um único caractere a ser pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -691,7 +691,7 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszCharSet*  
+*pszCharSet*<br/>
 Cadeia de caracteres que contém os caracteres para correspondência.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -717,13 +717,13 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nFormatID*  
+*nFormatID*<br/>
 O identificador de recurso de cadeia de caracteres que contém a cadeia de caracteres de controle de formato.
 
-*pszFormat*  
+*pszFormat*<br/>
 Uma cadeia de caracteres de controle de formato.
 
-*argument*  
+*argument*<br/>
 Argumentos opcionais.
 
 ### <a name="remarks"></a>Comentários
@@ -751,13 +751,13 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 
 ### <a name="parameters"></a>Parâmetros
 
-*nFormatID*  
+*nFormatID*<br/>
 O identificador de recurso de cadeia de caracteres que contém o texto não formatado.
 
-*pszFormat*  
+*pszFormat*<br/>
 Aponta para a cadeia de caracteres de controle de formato. Ele será examinado em busca de inserções e formatado adequadamente. A cadeia de caracteres de formato é semelhante à função de tempo de execução *printf*-estilo de cadeias de caracteres de formato, exceto que ele permite que os parâmetros a serem inseridos em uma ordem arbitrária.
 
-*argument*  
+*argument*<br/>
 Argumentos opcionais.
 
 ### <a name="remarks"></a>Comentários
@@ -783,10 +783,10 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszFormat*  
+*pszFormat*<br/>
 Aponta para a cadeia de caracteres de controle de formato. Ele será examinado em busca de inserções e formatado adequadamente. A cadeia de caracteres de formato é semelhante à função de tempo de execução `printf`-estilo de cadeias de caracteres de formato, exceto que ele permite que os parâmetros a serem inseridos em uma ordem arbitrária.
 
-*pArgList*  
+*pArgList*<br/>
 Ponteiro para uma lista de argumentos.
 
 ### <a name="remarks"></a>Comentários
@@ -808,10 +808,10 @@ void FormatV(PCXSTR pszFormat, va_list args);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszFormat*  
+*pszFormat*<br/>
 Aponta para a cadeia de caracteres de controle de formato. Ele será examinado em busca de inserções e formatado adequadamente. A cadeia de caracteres de formato é semelhante à função de tempo de execução `printf`-estilo de cadeias de caracteres de formato, exceto que ele permite que os parâmetros a serem inseridos em uma ordem arbitrária.
 
-*args*  
+*args*<br/>
 Ponteiro para uma lista de argumentos.
 
 ### <a name="remarks"></a>Comentários
@@ -834,7 +834,7 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszVar*  
+*pszVar*<br/>
 Ponteiro para uma cadeia de caracteres terminada em nulo que especifica a variável de ambiente.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -860,13 +860,13 @@ int Insert(int iIndex, XCHAR ch);
 
 ### <a name="parameters"></a>Parâmetros
 
-*iIndex*  
+*iIndex*<br/>
 O índice do caractere antes do qual será realizada a inserção.
 
-*psz*  
+*psz*<br/>
 Um ponteiro para a subcadeia de caracteres a ser inserido.
 
-*ch*  
+*ch*<br/>
 O caractere a ser inserido.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -891,7 +891,7 @@ CStringT Left(int nCount) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*nCount*  
+*nCount*<br/>
 O número de caracteres para extrair desse objeto `CStringT`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -920,13 +920,13 @@ BOOL LoadString(UINT nID);
 
 ### <a name="parameters"></a>Parâmetros
 
-*hInstance*  
+*hInstance*<br/>
 Um identificador para a instância do módulo.
 
-*nID*  
+*nID*<br/>
 Uma ID de recurso de cadeia de caracteres de Windows.
 
-*wLanguageID*  
+*wLanguageID*<br/>
 O idioma do recurso de cadeia de caracteres.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1002,10 +1002,10 @@ CStringT Mid(int iFirst) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*iFirst*  
+*iFirst*<br/>
 O índice baseado em zero do primeiro caractere desta `CStringT` objeto a ser incluído na subcadeia de caracteres extraída.
 
-*nCount*  
+*nCount*<br/>
 O número de caracteres para extrair desse objeto `CStringT`. Se esse parâmetro não for fornecido, o restante da cadeia de caracteres é extraído.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1054,22 +1054,22 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 
 ### <a name="parameters"></a>Parâmetros
 
-*ch1*  
+*ch1*<br/>
 Um caractere a ser concatenada com uma cadeia de caracteres ANSI ou Unicode.
 
-*Cap2*  
+*Cap2*<br/>
 Um caractere a ser concatenada com uma cadeia de caracteres ANSI ou Unicode.
 
-*str1*  
+*str1*<br/>
 Um `CStringT` para concatenar com uma cadeia de caracteres ou um caractere.
 
-*str2*  
+*str2*<br/>
 Um `CStringT` para concatenar com uma cadeia de caracteres ou um caractere.
 
-*psz1*  
+*psz1*<br/>
 Um ponteiro para uma cadeia de caracteres terminada em nulo para concatenar com uma cadeia de caracteres ou um caractere.
 
-*psz2*  
+*psz2*<br/>
 Um ponteiro para uma cadeia de caracteres a ser concatenada com uma cadeia de caracteres ou um caractere.
 
 ### <a name="remarks"></a>Comentários
@@ -1108,22 +1108,22 @@ CStringT& operator+=(const VARIANT& var);
 STR  
 Uma referência a um objeto `CThisSimpleString`.
 
-*bMFCDLL*  
+*bMFCDLL*<br/>
 Um booliano que especifica se o projeto é uma DLL MFC ou não.
 
-*BaseType*  
+*BaseType*<br/>
 O tipo de base de cadeia de caracteres.
 
-*var*  
+*var*<br/>
 Um objeto variante de concatenar a essa cadeia de caracteres.
 
-*ch*  
+*ch*<br/>
 Um caractere a ser concatenada com uma cadeia de caracteres ANSI ou Unicode.
 
-*pszSrc*  
+*pszSrc*<br/>
 Um ponteiro para a cadeia de caracteres original são concatenado.
 
-*{1&gt;strsrc*  
+*{1&gt;strsrc*<br/>
 Um `CStringT` de concatenar a essa cadeia de caracteres.
 
 ### <a name="remarks"></a>Comentários
@@ -1155,22 +1155,22 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*ch1*  
+*ch1*<br/>
 Um caractere ANSI ou Unicode para comparação.
 
-*Cap2*  
+*Cap2*<br/>
 Um caractere ANSI ou Unicode para comparação.
 
-*str1*  
+*str1*<br/>
 Um `CStringT` para comparação.
 
-*str2*  
+*str2*<br/>
 Um `CStringT` para comparação.
 
-*psz1*  
+*psz1*<br/>
 Um ponteiro para uma cadeia de caracteres terminada em nulo para comparação.
 
-*psz2*  
+*psz2*<br/>
 Um ponteiro para uma cadeia de caracteres terminada em nulo para comparação.
 
 ### <a name="remarks"></a>Comentários
@@ -1197,22 +1197,22 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*ch1*  
+*ch1*<br/>
 Um caractere a ser concatenada com uma cadeia de caracteres ANSI ou Unicode.
 
-*Cap2*  
+*Cap2*<br/>
 Um caractere a ser concatenada com uma cadeia de caracteres ANSI ou Unicode.
 
-*str1*  
+*str1*<br/>
 Um `CStringT` para comparação.
 
-*str2*  
+*str2*<br/>
 Um `CStringT` para comparação.
 
-*psz1*  
+*psz1*<br/>
 Um ponteiro para uma cadeia de caracteres terminada em nulo para comparação.
 
-*psz2*  
+*psz2*<br/>
 Um ponteiro para uma cadeia de caracteres terminada em nulo para comparação.
 
 ### <a name="remarks"></a>Comentários
@@ -1235,16 +1235,16 @@ friend bool operator<(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*str1*  
+*str1*<br/>
 Um `CStringT` para comparação.
 
-*str2*  
+*str2*<br/>
 Um `CStringT` para comparação.
 
-*psz1*  
+*psz1*<br/>
 Um ponteiro para uma cadeia de caracteres terminada em nulo para comparação.
 
-*psz2*  
+*psz2*<br/>
 Um ponteiro para uma cadeia de caracteres terminada em nulo para comparação.
 
 ### <a name="remarks"></a>Comentários
@@ -1273,16 +1273,16 @@ friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*str1*  
+*str1*<br/>
 Um `CStringT` para comparação.
 
-*str2*  
+*str2*<br/>
 Um `CStringT` para comparação.
 
-*psz1*  
+*psz1*<br/>
 Um ponteiro para uma cadeia de caracteres terminada em nulo para comparação.
 
-*psz2*  
+*psz2*<br/>
 Um ponteiro para uma cadeia de caracteres terminada em nulo para comparação.
 
 ### <a name="remarks"></a>Comentários
@@ -1311,16 +1311,16 @@ friend bool operator<=(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*str1*  
+*str1*<br/>
 Um `CStringT` para comparação.
 
-*str2*  
+*str2*<br/>
 Um `CStringT` para comparação.
 
-*psz1*  
+*psz1*<br/>
 Um ponteiro para uma cadeia de caracteres terminada em nulo para comparação.
 
-*psz2*  
+*psz2*<br/>
 Um ponteiro para uma cadeia de caracteres terminada em nulo para comparação.
 
 ### <a name="remarks"></a>Comentários
@@ -1349,16 +1349,16 @@ friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*str1*  
+*str1*<br/>
 Um `CStringT` para comparação.
 
-*str2*  
+*str2*<br/>
 Um `CStringT` para comparação.
 
-*psz1*  
+*psz1*<br/>
 Um ponteiro para uma cadeia de caracteres para comparação.
 
-*psz2*  
+*psz2*<br/>
 Um ponteiro para uma cadeia de caracteres para comparação.
 
 ### <a name="remarks"></a>Comentários
@@ -1385,7 +1385,7 @@ int Remove(XCHAR chRemove);
 
 ### <a name="parameters"></a>Parâmetros
 
-*chRemove*  
+*chRemove*<br/>
 O caractere a ser removido de uma cadeia de caracteres.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1411,16 +1411,16 @@ int Replace(XCHAR chOld, XCHAR chNew);
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszOld*  
+*pszOld*<br/>
 Um ponteiro para uma cadeia de caracteres terminada em nulo a ser substituído por *pszNew*.
 
-*pszNew*  
+*pszNew*<br/>
 Um ponteiro para uma cadeia de caracteres terminada em nulo que substitui *pszOld*.
 
-*chOld*  
+*chOld*<br/>
 O caractere a ser substituído por *chNew*.
 
-*chNew*  
+*chNew*<br/>
 Substituindo o caractere *chOld*.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1458,7 +1458,7 @@ int ReverseFind(XCHAR ch) const throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*ch*  
+*ch*<br/>
 O caractere a ser pesquisado.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1483,7 +1483,7 @@ CStringT Right(int nCount) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*nCount*  
+*nCount*<br/>
 O número de caracteres para extrair desse objeto `CStringT`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1510,7 +1510,7 @@ BSTR SetSysString(BSTR* pbstr) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*pbstr*  
+*pbstr*<br/>
 Um ponteiro para uma cadeia de caracteres.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1537,7 +1537,7 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszCharSet*  
+*pszCharSet*<br/>
 Uma cadeia de caracteres é interpretada como um conjunto de caracteres.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1562,7 +1562,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszCharSet*  
+*pszCharSet*<br/>
 Uma cadeia de caracteres é interpretada como um conjunto de caracteres.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1587,10 +1587,10 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*pszTokens*  
+*pszTokens*<br/>
 Uma cadeia de caracteres que contém os delimitadores de token. A ordem desses delimitadores não é importante.
 
-*iStart*  
+*iStart*<br/>
 O índice baseado em zero para iniciar a pesquisa.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1629,10 +1629,10 @@ CStringT& Trim();
 
 ### <a name="parameters"></a>Parâmetros
 
-*chTarget*  
+*chTarget*<br/>
 O caractere de destino a serem cortados.
 
-*pszTargets*  
+*pszTargets*<br/>
 Um ponteiro para uma cadeia de caracteres que contém os caracteres de destino a serem cortados. Todos à direita e ocorrências de caracteres em *pszTarget* serão apagadas do `CStringT` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1674,10 +1674,10 @@ CStringT& TrimLeft();
 
 ### <a name="parameters"></a>Parâmetros
 
-*chTarget*  
+*chTarget*<br/>
 O caractere de destino a serem cortados.
 
-*pszTargets*  
+*pszTargets*<br/>
 Um ponteiro para uma cadeia de caracteres que contém os caracteres de destino a serem cortados. Todas as ocorrências à esquerda de caracteres em *pszTarget* serão apagadas do `CStringT` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1710,10 +1710,10 @@ CStringT& TrimRight();
 
 ### <a name="parameters"></a>Parâmetros
 
-*chTarget*  
+*chTarget*<br/>
 O caractere de destino a serem cortados.
 
-*pszTargets*  
+*pszTargets*<br/>
 Um ponteiro para uma cadeia de caracteres que contém os caracteres de destino a serem cortados. Todos à direita ocorrências de caracteres em *pszTarget* serão apagadas do `CStringT` objeto.
 
 ### <a name="return-value"></a>Valor de retorno

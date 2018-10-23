@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e7f97011e66c72c79c3ab6db3b6011e1d4d76ce7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d01674929522326c21eea2ad7d40f33e8ff6fae6
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017167"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807517"
 ---
 # <a name="provider-support-for-bookmarks"></a>Suporte do provedor para indicadores
 
@@ -36,7 +36,7 @@ O exemplo neste tópico adiciona o `IRowsetLocate` da interface para o `CMyProvi
   
 - Adicione suporte a indicadores.  
   
-A interface `IRowsetLocate` herda da interface `IRowset`. Para adicionar o `IRowsetLocate` interface, herdam `CMyProviderRowset` partir [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).  
+A interface `IRowsetLocate` herda da interface `IRowset` . Para adicionar o `IRowsetLocate` interface, herdam `CMyProviderRowset` partir [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).  
   
 Adicionando o `IRowsetLocate` interface é um pouco diferente da maioria das interfaces. Para tornar a linha VTABLEs de backup, o OLE DB, modelos de provedor têm um parâmetro de modelo para lidar com a interface derivada. O código a seguir mostra a nova lista de herança:  
   
@@ -247,7 +247,7 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 }  
 ```  
   
-While loop contém código para chamar o `Compare` método no `IRowsetLocate` interface. O código que você precisa sempre deve passar porque você está comparando indicadores mesmos exatos. Além disso, armazenar um indicador em uma variável temporária para que você pode usá-lo após o tempo de loop for concluído para chamar o `MoveToBookmark` função nos modelos de consumidor. O `MoveToBookmark` chamadas de função do `GetRowsAt` método na `IRowsetLocate`.  
+O **enquanto** loop contém código para chamar o `Compare` método no `IRowsetLocate` interface. O código que você precisa sempre deve passar porque você está comparando indicadores mesmos exatos. Além disso, armazenar um indicador em uma variável temporária para que possa usá-lo após o **enquanto** loop for concluído para chamar o `MoveToBookmark` função nos modelos de consumidor. O `MoveToBookmark` chamadas de função do `GetRowsAt` método na `IRowsetLocate`.  
   
 Você também precisará atualizar o registro do usuário no consumidor. Adicionar uma entrada na classe para lidar com um indicador e uma entrada no `COLUMN_MAP`:  
   

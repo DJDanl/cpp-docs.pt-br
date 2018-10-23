@@ -1,7 +1,7 @@
 ---
 title: Classe CSize | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ca548fec9a70a04b0bdb9a5169021fc43f149eb
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 9966bcdf31df3b6d3f702ec425131c5b8baa3aee
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328528"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808492"
 ---
 # <a name="csize-class"></a>Classe CSize
 
@@ -90,19 +90,19 @@ CSize( DWORD dwSize) throw();
 
 ### <a name="parameters"></a>Parâmetros
 
-*initCX*  
+*initCX*<br/>
 Define o `cx` membro para o `CSize`.
 
-*initCY*  
+*initCY*<br/>
 Define o `cy` membro para o `CSize`.
 
-*initSize*  
+*initSize*<br/>
 [TAMANHO](https://msdn.microsoft.com/library/windows/desktop/dd145106) estrutura ou `CSize` objeto usado para inicializar `CSize`.
 
-*initPt*  
+*initPt*<br/>
 [PONTO](../../mfc/reference/point-structure.md) estrutura ou `CPoint` objeto usado para inicializar `CSize`.
 
-*dwSize*  
+*dwSize*<br/>
 DWORD é usado para inicializar `CSize`. A palavra de ordem inferior é o `cx` membro e a palavra de ordem superior é o `cy` membro.
 
 ### <a name="remarks"></a>Comentários

@@ -1,7 +1,7 @@
 ---
 title: high_method_prefix | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 883f573100c31fab8cc0142d371f6a8a14f8783f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1fb69b9fbb7ede0ca458007aec1bee2cf38e286f
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428714"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807712"
 ---
 # <a name="highmethodprefix"></a>high_method_prefix
-**Específico do C++**  
-  
-Especifica um prefixo a ser usado na nomeação de propriedades e métodos de alto nível.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-high_method_prefix("Prefix")  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
-*Prefixo*  
-Prefixo a ser usado.  
-  
-## <a name="remarks"></a>Comentários  
- 
-Por padrão, as propriedades e métodos de tratamento de erros de alto nível são expostos pela funções membro nomeadas sem um prefixo. Os nomes são da biblioteca de tipos.  
-  
-**FIM de específico de C++**  
-  
-## <a name="see-also"></a>Consulte também  
- 
+
+**Específico do C++**
+
+Especifica um prefixo a ser usado na nomeação de propriedades e métodos de alto nível.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+high_method_prefix("Prefix")
+```
+
+### <a name="parameters"></a>Parâmetros
+
+*Prefixo*<br/>
+Prefixo a ser usado.
+
+## <a name="remarks"></a>Comentários
+
+Por padrão, as propriedades e métodos de tratamento de erros de alto nível são expostos pela funções membro nomeadas sem um prefixo. Os nomes são da biblioteca de tipos.
+
+**FIM de específico de C++**
+
+## <a name="see-also"></a>Consulte também
+
 [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import diretiva](../preprocessor/hash-import-directive-cpp.md)
