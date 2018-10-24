@@ -1,7 +1,7 @@
 ---
 title: Registros de usuário | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -26,16 +26,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4389fdd35c36a8f7708361176889111b1665f2c6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 10025d7bdb8035ee6ce9c070ab57bc52c507f585
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46073637"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990159"
 ---
 # <a name="user-records"></a>Registros de usuário
 
-Para usar um acessador estática (ou seja, um acessador é derivada de `CAccessor`), o consumidor deve ter um registro de usuário. O registro do usuário é uma classe C++ que contém os elementos de dados para o identificador de entrada ou saída. O ATL OLE DB consumidor assistente gera um registro de usuário para que o consumidor. Você pode adicionar métodos para o registro do usuário para tarefas opcionais, como tratamento de comandos.  
+Para usar um acessador estática (ou seja, um acessador é derivada de `CAccessor`), o consumidor deve ter um registro de usuário. O registro do usuário é uma classe C++ que contém os elementos de dados para o identificador de entrada ou saída. O **ATL OLE DB Assistente de consumidor** gera um registro de usuário para que o consumidor. Você pode adicionar métodos para o registro do usuário para tarefas opcionais, como tratamento de comandos.  
   
 O código a seguir mostra um registro de exemplo que manipula os comandos. No registro de usuário, BEGIN_COLUMN_MAP representa um conjunto de linhas de dados passado para o consumidor de um provedor. BEGIN_PARAM_MAP representa um conjunto de parâmetros de comando. Este exemplo usa uma [CCommand](../../data/oledb/ccommand-class.md) classe para lidar com os parâmetros de comando. Os membros de dados nas entradas de mapa representam deslocamentos em um bloco contíguo de memória para cada instância da classe. As macros COLUMN_ENTRY correspondem às macros PROVIDER_COLUMN_ENTRY no lado do provedor.  
   
@@ -66,7 +66,7 @@ END_PARAM_MAP()
   
 ## <a name="wizard-generated-user-records"></a>Registros de usuário gerado pelo Assistente  
 
-Se você usar a ATL OLE DB Assistente de consumidor para gerar um consumidor, você tem a opção de usar modelos OLE DB ou atributos do OLE DB. O código gerado é diferente em cada caso. Para obter mais informações sobre esse código, consulte [Consumer Wizard-Generated Classes](../../data/oledb/consumer-wizard-generated-classes.md).  
+Se você usar o **ATL OLE DB Assistente de consumidor** para gerar um consumidor, você tem a opção de usar modelos OLE DB ou atributos do OLE DB. O código gerado é diferente em cada caso. Para obter mais informações sobre esse código, consulte [Consumer Wizard-Generated Classes](../../data/oledb/consumer-wizard-generated-classes.md).  
   
 ## <a name="user-record-support-for-multiple-accessors"></a>Suporte ao registro de usuário para vários acessadores  
 

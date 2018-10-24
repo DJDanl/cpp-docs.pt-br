@@ -1,7 +1,7 @@
 ---
 title: Acessadores e conjuntos de linhas | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -28,12 +28,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f8dc681e149d54742e4bf5e7ff44afeebe2292eb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c3247cd3b5844df76b8a115a3f28a76874db2a16
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113091"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990172"
 ---
 # <a name="accessors-and-rowsets"></a>Acessadores e conjuntos de linhas
 
@@ -77,7 +77,7 @@ A figura a seguir mostra os tipos de conjunto de linhas.
 ![Gráfico de RowsetType](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")  
 Classes de conjunto de linhas  
   
-[Conjuntos de linhas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) fazem não acessar dados nos dados de repositório, mas em vez disso, acessar informações sobre o armazenamento de dados, chamada de metadados. Conjuntos de linhas de esquema normalmente são usados em situações nas quais a estrutura de banco de dados não é conhecida em tempo de compilação e deve ser obtida em tempo de execução.  
+[Conjuntos de linhas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) não acessar os dados nos dados de repositório, mas em vez disso, acessar informações sobre o armazenamento de dados, chamada de metadados. Conjuntos de linhas de esquema normalmente são usados em situações nas quais a estrutura de banco de dados não é conhecida em tempo de compilação e deve ser obtida em tempo de execução.  
   
 ## <a name="see-also"></a>Consulte também  
 

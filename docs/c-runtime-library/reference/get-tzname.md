@@ -1,7 +1,7 @@
 ---
 title: _get_tzname | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4b49aa404dda6234382ae461459dece64e5996d
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: d773d5d98466963ef621cc3fa7bc5ab8b4acc40a
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451687"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990302"
 ---
 # <a name="gettzname"></a>_get_tzname
 
@@ -62,7 +62,7 @@ errno_t _get_tzname(
 O comprimento da cadeia de caracteres de *timeZoneName* incluindo um terminador nulo.
 
 *timeZoneName*<br/>
-O endereço de uma cadeia de caracteres para a representação do nome do fuso horário ou o nome de zona de hora padrão de horário de verão (DST), dependendo de *índice*.
+O endereço de uma cadeia de caracteres para a representação do nome do fuso horário ou nome do fuso horário de verão (DST), dependendo do *índice*.
 
 *sizeInBytes*<br/>
 O tamanho do *timeZoneName* cadeia de caracteres em bytes.
@@ -70,11 +70,19 @@ O tamanho do *timeZoneName* cadeia de caracteres em bytes.
 *index*<br/>
 O índice de um dos dois nomes de fuso horário a serem recuperados.
 
+|*index*|Conteúdo de *timeZoneName*|*timeZoneName* valor padrão|
+|-|-|-|
+|0|Nome do fuso horário|"PST"|
+|1|O nome do fuso horário com horário de verão|"PDT"|
+|> 1 ou < 0|**errno** definido como **EINVAL**|não modificado|
+
+A menos que os valores sejam alterados explicitamente durante o tempo de execução, os valores padrão serão "PST" e "PDT" respectivamente.
+
 ## <a name="return-value"></a>Valor de retorno
 
-Zero se for bem-sucedido, caso contrário, um **errno** tipo de valor.
+Zero se for bem-sucedido, caso contrário, uma **errno** tipo de valor.
 
-Se qualquer um dos *timeZoneName* é **nulo**, ou *sizeInBytes* for zero ou menor que zero (mas não ambos), um manipulador de parâmetro inválido é invocado, conforme descrito em [ Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, esta função define **errno** para **EINVAL** e retorna **EINVAL**.
+Se qualquer um dos *timeZoneName* é **nulo**, ou *sizeInBytes* for zero ou menor que zero (mas não ambos), um manipulador de parâmetro inválido será invocado, conforme descrito em [ Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá **errno** à **EINVAL** e retorna **EINVAL**.
 
 ### <a name="error-conditions"></a>Condições de Erro
 
@@ -88,17 +96,51 @@ Se qualquer um dos *timeZoneName* é **nulo**, ou *sizeInBytes* for zero ou meno
 
 ## <a name="remarks"></a>Comentários
 
-O **get_tzname** função recupera a representação da cadeia de caracteres do nome do fuso horário ou o nome de zona de hora padrão do horário de verão (DST) no endereço de *timeZoneName* dependendo do índice valor, junto com o tamanho da cadeia de caracteres *pReturnValue*. Se *timeZoneName* é **nulo** e *sizeInBytes* for zero, o tamanho da cadeia de caracteres de horário zona em bytes é retornada no *pReturnValue*. Os valores de índice devem ser 0 para o fuso horário padrão ou 1 para o fuso horário com horário de verão; todos os outros valores de índice têm resultados indeterminados.
+O **get_tzname** função recupera a representação de cadeia de caracteres do nome do fuso horário atual ou o nome do fuso horário de verão (DST) no endereço de *timeZoneName* dependendo a valor, junto com o tamanho da cadeia de caracteres de índice *pReturnValue*. Se *timeZoneName* é **nulo** e *sizeInBytes* é zero, o tamanho da cadeia de caracteres necessário para manter o fuso horário especificado e um nulo de terminação em bytes é retornado no *pReturnValue*. Os valores de índice devem ser a 0 para o fuso horário padrão ou 1 para o fuso horário padrão de horário de verão; todos os outros valores de *índice* têm resultados indeterminados.
 
-### <a name="index-values"></a>Valores de índice
+## <a name="example"></a>Exemplo
 
-|*index*|Conteúdo de *timeZoneName*|*timeZoneName* valor padrão|
-|-------------|--------------------------------|----------------------------------|
-|0|Nome do fuso horário|"PST"|
-|1|O nome do fuso horário com horário de verão|"PDT"|
-|> 1 ou < 0|**errno** definida como **EINVAL**|não modificado|
+Este exemplo chama **get_tzname** obter o tamanho do buffer necessário para exibir o nome de zona de horário padrão verão atual, aloca um buffer desse tamanho, chamadas **get_tzname** novamente para o nome na carga de armazenar em buffer e o exibe no console.
 
-A menos que os valores sejam alterados explicitamente durante o tempo de execução, os valores padrão serão "PST" e "PDT" respectivamente.  Os tamanhos desses conjuntos de caracteres são administrados por **TZNAME_MAX** valor.
+```C
+// crt_get_tzname.c
+// Compile by using: cl /W4 crt_get_tzname.c
+#include <stdio.h>
+#include <time.h>
+#include <malloc.h>
+
+enum TZINDEX {
+    STD,
+    DST
+};
+
+int main()
+{
+    size_t tznameSize = 0;
+    char * tznameBuffer = NULL;
+
+    // Get the size of buffer required to hold DST time zone name
+    if (_get_tzname(&tznameSize, NULL, 0, DST))
+        return 1;    // Return an error value if it failed
+
+    // Allocate a buffer for the name
+    if (NULL == (tznameBuffer = (char *)(malloc(tznameSize))))
+        return 2;    // Return an error value if it failed
+
+    // Load the name in the buffer
+    if (_get_tzname(&tznameSize, tznameBuffer, tznameSize, DST))
+        return 3;    // Return an error value if it failed
+
+    printf_s("The current Daylight standard time zone name is %s.\n", tznameBuffer);
+    return 0;
+}
+```
+
+### <a name="output"></a>Saída
+
+```Output
+The current Daylight standard time zone name is PDT.
+```
 
 ## <a name="requirements"></a>Requisitos
 
@@ -115,4 +157,3 @@ Para obter mais informações, consulte [Compatibilidade](../../c-runtime-librar
 [_get_daylight](get-daylight.md)<br/>
 [_get_dstbias](get-dstbias.md)<br/>
 [_get_timezone](get-timezone.md)<br/>
-[TZNAME_MAX](../../c-runtime-library/tzname-max.md)<br/>

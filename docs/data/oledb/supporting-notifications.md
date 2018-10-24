@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a98848799163fd31037dc137b92b94878a1ee675
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 73bc32cd4a02affa98c53f892e5d34e1650d08f7
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082456"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990094"
 ---
 # <a name="supporting-notifications"></a>Dando suporte a notificações
 
@@ -39,7 +39,7 @@ Observe que você também deve implementar e registrar `IRowsetNotify` consumido
   
 Além disso, a classe também deve conter um mapa que define a entrada de ponto de conexão, como este:  
   
-```  
+```cpp  
 BEGIN_CONNECTION_POINT_MAP  
    CONNECTIONPOINT_ENTRY (IID_IRowsetNotify)  
 END_CONNECTION_POINT_MAP  
@@ -52,7 +52,7 @@ Para adicionar `IRowsetNotify`, você precisará adicionar `IConnectionPointCont
 Por exemplo, aqui está a cadeia de herança para `RUpdateRowset` na [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV):  
   
 > [!NOTE]
->  O código de exemplo pode ser diferente daquele que está listado aqui. Você deve considerar o código de exemplo como a versão mais recente.  
+> O código de exemplo pode ser diferente daquele que está listado aqui. Você deve considerar o código de exemplo como a versão mais recente.  
   
 ```cpp
 ///////////////////////////////////////////////////////////////////////////  
@@ -71,7 +71,7 @@ public CRowsetImpl< RUpdateRowset, CAgentMan, CUpdateCommand,
 
 Você também precisará adicionar o seguinte para o mapa COM em seu conjunto de linhas:  
   
-```  
+```cpp  
 COM_INTERFACE_ENTRY(IConnectionPointContainer)  
 COM_INTERFACE_ENTRY_IMPL(IConnectionPointContainer)  
 ```  
@@ -82,7 +82,7 @@ Essas macros permitem que qualquer pessoa chame `QueryInterface` para seu contê
 
 Você também precisará adicionar um mapa de ponto de conexão. Ele deve ser semelhante:  
   
-```  
+```cpp  
 BEGIN_CONNECTION_POINT_MAP(rowset-name)  
      CONNECTION_POINT_ENTRY(_uuidof(IRowsetNotify))  
 END_CONNECTION_POINT_MAP()  

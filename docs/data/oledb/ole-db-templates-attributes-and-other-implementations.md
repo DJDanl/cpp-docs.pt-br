@@ -1,7 +1,7 @@
 ---
 title: Modelos OLE DB, atributos e outras implementações | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b2cbe36a933580edc09e8139dca0ed6ec090f90
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 5798eeb4e99e4901ea83a26e4e570c18437ff445
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082651"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989925"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Modelos de banco de dados OLE, atributos e outras implementações
 
@@ -60,7 +60,7 @@ A biblioteca do MFC tem uma classe, [COleDBRecordView](../../mfc/reference/coled
   
 ## <a name="ole-db-sdk-interfaces"></a>SDK de Interfaces do OLE DB  
 
-Nos casos onde os modelos OLE DB não dão suporte à funcionalidade OLE DB, você precisará usar as interfaces do OLE DB em si. Para obter mais informações, consulte [referência do programador DB OLE](/previous-versions/windows/desktop/ms713643) no SDK do Windows.  
+Nos casos em que os modelos OLE DB não dá suporte a funcionalidade de OLE DB, você precisará usar as interfaces do OLE DB em si. Para obter mais informações, consulte [referência do programador DB OLE](/previous-versions/windows/desktop/ms713643) no SDK do Windows.  
   
 ## <a name="see-also"></a>Consulte também  
 

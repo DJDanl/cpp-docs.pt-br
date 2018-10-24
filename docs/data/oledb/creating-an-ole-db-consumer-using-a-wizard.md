@@ -1,7 +1,7 @@
 ---
 title: Criando um consumidor do OLE DB usando um assistente | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2f9a301d6e8b2c26d5be7c4234550ba4af7eefd3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 76f16c10ff4342e32a6081e89581945c53ee607c
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097868"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990100"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Criando um consumidor de banco de dados OLE sem usar um assistente
 
-Este procedimento demonstra como você pode usar o OLE DB Assistente de cliente ATL e ATL Project Wizard para gerar um consumidor de modelos OLE DB e, em seguida, modifique o código principal do aplicativo de console para recuperar e exibir dados de uma tabela de banco de dados.  
+Este procedimento demonstra como você pode usar o **ATL Project Wizard** e **ATL OLE DB Assistente de consumidor* para gerar um consumidor de modelos OLE DB e, em seguida, modifique o código principal do aplicativo de console recuperar e exibir dados de uma tabela de banco de dados.  
   
 As duas últimas seções explicam o código gerado pelo Assistente do consumidor OLE DB.  
   

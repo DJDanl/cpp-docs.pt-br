@@ -1,7 +1,7 @@
 ---
 title: Comandos e tabelas | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fefd4241d1412ec6ea319db9ca6669856715e631
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 762623d6460404b4de85a45adaff7c5662bac258
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028110"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990004"
 ---
 # <a name="commands-and-tables"></a>Comandos e tabelas
 
@@ -36,7 +36,7 @@ Comandos e tabelas permitem acessar conjuntos de linhas; ou seja, abra a conjunt
 ![CCommand e CTable](../../data/oledb/media/vccommandstables.gif "vccommandstables")  
 Comando e as Classes Table  
   
-Na tabela anterior, `TAccessor` pode ser qualquer tipo de acessador listado na [tipos de acessador](../../data/oledb/accessors-and-rowsets.md). *TRowset* pode ser qualquer tipo de conjunto de linhas listado na [tipos de conjunto de linhas](../../data/oledb/accessors-and-rowsets.md). *TMultiple* Especifica o tipo de resultado (um único ou vários conjunto de resultados).  
+Na tabela anterior, `TAccessor` pode ser qualquer tipo de acessador listado na [tipos de acessador](../../data/oledb/accessors-and-rowsets.md). `TRowset` pode ser qualquer tipo de conjunto de linhas listado na [tipos de conjunto de linhas](../../data/oledb/accessors-and-rowsets.md). `TMultiple` Especifica o tipo de resultado (um único ou vários conjunto de resultados).  
   
 O [ATL OLE DB Assistente de consumidor](../../atl/reference/atl-ole-db-consumer-wizard.md) permite que você especifique se deseja que um objeto de comando ou tabela.  
   
