@@ -485,7 +485,7 @@
 ## [Aviso do compilador (níveis 1 e 3) C4793](compiler-warning-level-1-and-3-c4793.md)
 ## [Aviso do compilador (nível 1) C4794](compiler-warning-level-1-c4794.md)
 ## [Aviso do compilador (nível 1) C4799](compiler-warning-level-1-c4799.md)
-# [Avisos do compilador C4800 a C4999](compiler-warnings-c4800-through-c4999.md)
+# [Avisos do Compilador C4800 a C5999](compiler-warnings-c4800-through-c4999.md)
 ## [Aviso do compilador (nível 3) C4800](compiler-warning-level-3-c4800.md)
 ## [Aviso do compilador (nível 1) C4803](compiler-warning-level-1-c4803.md)
 ## [Aviso do compilador (nível 1) C4804](compiler-warning-level-1-c4804.md)
@@ -560,3 +560,4 @@
 ## [Aviso do compilador (nível 1) C4999](compiler-warning-level-1-c4999.md)
 ## [Aviso do compilador C5038](c5038.md)
 ## [Aviso do compilador C5045](c5045.md)
+## [Aviso do compilador (nível 2) C5046](c5046.md)
