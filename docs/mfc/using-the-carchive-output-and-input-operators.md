@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49ea94258c163c241243934f41d55d896d0d1fa2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 74660dc2baeff683d35fac8d4b9dda06bdbec22d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372451"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061307"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Usando o CArchive &lt; &lt; e &gt; &gt; operadores
 
@@ -33,13 +33,13 @@ ms.locfileid: "46372451"
 
 1. O exemplo a seguir mostra como armazenar um objeto em um arquivo por meio de um arquivo morto:
 
-     [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
+   [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
 
 #### <a name="to-load-an-object-from-a-value-previously-stored-in-a-file"></a>Carregar um objeto de um valor anteriormente armazenado em um arquivo
 
 1. O exemplo a seguir mostra como carregar um objeto de um valor anteriormente armazenado em um arquivo:
 
-     [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
 
 Normalmente, você pode armazenar e carregar dados para e de um arquivo por meio de um arquivo morto na `Serialize` funções de `CObject`-classes derivadas, que você deve ter declarado com a macro DECLARE_SERIALIZE. Uma referência a um `CArchive` objeto é passado para sua `Serialize` função. Você chama o `IsLoading` função do `CArchive` objeto para determinar se o `Serialize` a função foi chamada para carregar dados do arquivo ou armazenar dados no arquivo.
 

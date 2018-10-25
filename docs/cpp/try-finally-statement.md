@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a250862f5514f290043bf596ba19bf0834e71e
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 4040f5a05f8c9bccfbf1c8b48a40188f684d48ad
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49161652"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060007"
 ---
 # <a name="try-finally-statement"></a>Instrução try-finally
 
@@ -44,7 +44,7 @@ ms.locfileid: "49161652"
 A sintaxe a seguir descreve o **try-finally** instrução:
 
 ```cpp
-__try {
+__try {
    // guarded code
 }
 __finally {
@@ -73,7 +73,7 @@ O controle atinge uma **Try** instrução em uma execução sequencial simple (q
 
 1. Quando o manipulador de término é concluído, a execução continua após o **Finally** instrução. Independentemente de como a seção protegida é encerrada (por exemplo, por meio de um **goto** fora do corpo protegido ou uma **retornar** instrução), o manipulador de término é executado *antes de* o fluxo de controle sai da seção protegida.
 
-     Um **Finally** instrução bloqueia a procura por um manipulador de exceção apropriado.
+   Um **Finally** instrução bloqueia a procura por um manipulador de exceção apropriado.
 
 Se ocorrer uma exceção na **Try** bloco, o sistema operacional deve localizar um manipulador para a exceção ou o programa falhará. Se um manipulador for encontrado, todos os **Finally** blocos são executados e a execução é retomada no manipulador.
 

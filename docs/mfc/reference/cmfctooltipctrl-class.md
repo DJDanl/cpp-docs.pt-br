@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81ff74e07308ec359375624a31f2cf196690443b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d3a704f4c683e774057265604ecd69cd03dfb657
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413153"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056939"
 ---
 # <a name="cmfctooltipctrl-class"></a>Classe CMFCToolTipCtrl
 
@@ -168,14 +168,13 @@ O exemplo a seguir demonstra como construir um `CMFCToolTipCtrl` do objeto, defi
 
 ##  <a name="cmfctooltipctrl"></a>  CMFCToolTipCtrl::CMFCToolTipCtrl
 
-
 ```
 CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *pParams*
+[in] *pParams*<br/>
 
 ### <a name="remarks"></a>Comentários
 
@@ -231,7 +230,6 @@ Substitua este método em uma classe derivada para personalizar a aparência da 
 
 ##  <a name="ondrawdescription"></a>  CMFCToolTipCtrl::OnDrawDescription
 
-
 ```
 virtual CSize OnDrawDescription(
     CDC* pDC,
@@ -241,8 +239,9 @@ virtual CSize OnDrawDescription(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pDC*<br/>
-[in] [in] *rect* [in] *bCalcOnly*
+[in] *pDC*<br/>
+[in] *rect*<br/>
+[in] *bCalcOnly*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -387,7 +386,6 @@ O texto de descrição é exibido na dica de ferramenta sob o separador.
 
 ##  <a name="setfixedwidth"></a>  CMFCToolTipCtrl::SetFixedWidth
 
-
 ```
 void SetFixedWidth(
     int nWidthRegular,
@@ -396,13 +394,12 @@ void SetFixedWidth(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nWidthRegular*<br/>
-[in] [in] *nWidthLargeImage*
+[in] *nWidthRegular*<br/>
+[in] *nWidthLargeImage*<br/>
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="sethotribbonbutton"></a>  CMFCToolTipCtrl::SetHotRibbonButton
-
 
 ```
 void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
@@ -410,12 +407,11 @@ void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *pRibbonButton*
+[in] *pRibbonButton*<br/>
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="setlocation"></a>  CMFCToolTipCtrl::SetLocation
-
 
 ```
 void SetLocation(CPoint pt);
@@ -423,7 +419,7 @@ void SetLocation(CPoint pt);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *pt*
+[in] *pt*<br/>
 
 ### <a name="remarks"></a>Comentários
 

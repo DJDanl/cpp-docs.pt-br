@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c63c10feff624abe399952b682303a6e262d35
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e6ef01a7943bbb0c14ec630651757a8665373b85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425005"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055210"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Servidores: implementando janelas de quadro in-loco
 
@@ -39,15 +39,15 @@ Este artigo explica o que você deve fazer para implementar janelas com moldura 
 
 1. Declarar um `COleResizeBar` membro na classe de janela do quadro. Isso é necessário se você quiser dar suporte a redimensionamento in-loco em aplicativos de servidor.
 
-     Declarar uma `OnCreate` manipulador de mensagens (usando o **propriedades** janela) e chame `Create` para sua `COleResizeBar` membro, se você defini-lo.
+   Declarar uma `OnCreate` manipulador de mensagens (usando o **propriedades** janela) e chame `Create` para sua `COleResizeBar` membro, se você defini-lo.
 
 1. Se você tiver uma barra de ferramentas, declare um `CToolBar` membro na classe de janela do quadro.
 
-     Substituir o `OnCreateControlBars` a função de membro para criar uma barra de ferramentas quando o servidor está ativo em vigor. Por exemplo:
+   Substituir o `OnCreateControlBars` a função de membro para criar uma barra de ferramentas quando o servidor está ativo em vigor. Por exemplo:
 
-     [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
+   [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
 
-     Consulte a discussão sobre esse código seguindo a etapa 5.
+   Consulte a discussão sobre esse código seguindo a etapa 5.
 
 1. Inclua o arquivo de cabeçalho para essa classe de janela com moldura no local em seu arquivo. cpp principal.
 

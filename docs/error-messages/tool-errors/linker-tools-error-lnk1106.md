@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 719ff1a87f3f1afc19cf38736c0059c46a8a9bdc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ce6a8b2ef9ac807e48cff42186453666cebda5ee
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46110868"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055978"
 ---
 # <a name="linker-tools-error-lnk1106"></a>Erro das Ferramentas de Vinculador LNK1106
 
@@ -33,16 +33,16 @@ A ferramenta não foi possível ler ou gravar em `location` em um arquivo mapead
 
 1. Disco cheio.
 
-     Libere espaço e vinculá-lo novamente.
+   Libere espaço e vinculá-lo novamente.
 
 1. Tentando vincular uma rede.
 
-     Algumas redes não suportam totalmente os arquivos mapeados na memória usados pelo vinculador. Tente vincular em seu disco local.
+   Algumas redes não suportam totalmente os arquivos mapeados na memória usados pelo vinculador. Tente vincular em seu disco local.
 
 1. Bloco inválido no disco.
 
-     Embora o sistema operacional e hardware de disco devem ter detectado esse erro, você talvez queira executar um programa de verificação de disco.
+   Embora o sistema operacional e hardware de disco devem ter detectado esse erro, você talvez queira executar um programa de verificação de disco.
 
 1. Sem espaço de heap.
 
-     Ver [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) para obter mais informações.
+   Ver [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) para obter mais informações.

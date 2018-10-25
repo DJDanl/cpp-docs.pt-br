@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ccb638669712222cac2dee522bf729766a4bc93
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e76dc8ca4a61839b893b4328bdb9d606424def91
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402259"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062219"
 ---
 # <a name="cview-class"></a>Classe CView
 
@@ -757,7 +757,7 @@ Substitua essa função para qualquer um dos seguintes motivos:
 
 - Para fazer com que a imagem impressa uma aparência diferente da imagem da tela (ou seja, se seu aplicativo não seja WYSIWYG). Em vez de passar a impressora contexto de dispositivo `OnDraw`, use o contexto de dispositivo para renderizar uma imagem usando os atributos não são mostrados na tela.
 
-     Se você precisar de recursos GDI para impressão que não são usadas para exibição na tela, selecione-as no contexto de dispositivo antes do desenho e desmarcá-los posteriormente. Esses recursos GDI devem ser alocados no [OnBeginPrinting](#onbeginprinting) e lançado em [OnEndPrinting](#onendprinting).
+   Se você precisar de recursos GDI para impressão que não são usadas para exibição na tela, selecione-as no contexto de dispositivo antes do desenho e desmarcá-los posteriormente. Esses recursos GDI devem ser alocados no [OnBeginPrinting](#onbeginprinting) e lançado em [OnEndPrinting](#onendprinting).
 
 - Para implementar cabeçalhos ou rodapés de páginas. Você ainda pode usar `OnDraw` para fazer o processamento, restringindo a área de impressão nos.
 

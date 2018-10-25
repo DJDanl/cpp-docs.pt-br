@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c3064da609c8a81a6e264c7f46d37d4cd5681d1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3a6eb1b97acfe2fa41511433de3990da8923de7d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107131"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059539"
 ---
 # <a name="general-rules-for-operator-overloading"></a>Regras gerais para sobrecarga de operador
 
@@ -48,7 +48,7 @@ As seguintes regras restringem o modo como os operadores sobrecarregados são im
     }
     ```
 
-     O exemplo de código anterior declara o operador menor que como uma função membro; no entanto, os operadores de adição são declarados como funções globais que têm acesso de amigo. Observe que mais de uma implementação pode ser fornecida para um determinado operador. No caso do operador de adição acima, as duas implementações são fornecidas para facilitar a comutatividade. É tão provável que os operadores que adicionam uma `Point` para um `Point`, **int** para um `Point`e assim por diante, pode ser implementado.
+   O exemplo de código anterior declara o operador menor que como uma função membro; no entanto, os operadores de adição são declarados como funções globais que têm acesso de amigo. Observe que mais de uma implementação pode ser fornecida para um determinado operador. No caso do operador de adição acima, as duas implementações são fornecidas para facilitar a comutatividade. É tão provável que os operadores que adicionam uma `Point` para um `Point`, **int** para um `Point`e assim por diante, pode ser implementado.
 
 - Os operadores obedecem a precedência, agrupamento e número de operandos ditados por seu uso típico com tipos internos. Portanto, não há nenhuma maneira para expressar o conceito "Adicionar 2 e 3 para um objeto do tipo `Point`," esperando 2 ser adicionado ao *x* coordenadas e 3 a ser adicionado ao *y* coordenar.
 

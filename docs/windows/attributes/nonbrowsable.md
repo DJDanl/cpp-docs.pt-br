@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8f13a7fc5ec780eef91f96d2da06c5450fccf0e8
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 276d6f2ac0ef9cfeb6c5fe7645dc2e6bf7a2fd11
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790236"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052325"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 
@@ -70,4 +70,4 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 ## <a name="see-also"></a>Consulte também
 
 [Atributos de IDL](idl-attributes.md)<br/>
-[Atributos de método](method-attributes.md)  
+[Atributos de método](method-attributes.md)

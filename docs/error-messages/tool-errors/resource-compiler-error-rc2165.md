@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61293576fa36d9e8a853cb7a8b71e4c2de98e932
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4c23e72940115e929658949dc0bb15bb41f82b34
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022546"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055056"
 ---
 # <a name="resource-compiler-error-rc2165"></a>Erro RC2165 (compilador de recurso)
 
@@ -31,4 +31,4 @@ A instrução não especificou um arquivo de inclusão válido.
 
 O **DLGINCLUDE** instrução deve usar a sintaxe a seguir:
 
-**DLGINCLUDE "*filename*. h"**
+**DLGINCLUDE "**<em>filename</em>**. h"**

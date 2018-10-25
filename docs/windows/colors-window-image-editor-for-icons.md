@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae58ae7cf09257b399fd21d7c34890b829394b98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a65959ffc149b93c6d9b28667647d8f49cfc1f2d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430586"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063228"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>Janela Cores (editor de imagens para ícones)
 
@@ -36,8 +36,8 @@ O **cores** janela tem duas partes:
 
 2. O **indicador de cor**, que mostra as cores de primeiro e segundo plano e os seletores de cor da tela e o inverso.
 
-   ![Janela de cores](../windows/media/vccolorswindow.gif "vcColorsWindow")  
-Janela Cores
+   ![Janela de cores](../windows/media/vccolorswindow.gif "vcColorsWindow")<br/>
+   Janela Cores
 
 > [!NOTE]
 > O **cor da tela** e **cor inverso** ferramentas só estão disponíveis para os ícones e cursores.

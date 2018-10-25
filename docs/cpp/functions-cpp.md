@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aacbb7709daf6952f00276663e20131e967a554d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 24eded7bac023bd2291e0c574012f72ba86b6bcf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022351"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053793"
 ---
 # <a name="functions-c"></a>Funções (C++)
 
@@ -101,7 +101,7 @@ Partes opcionais de uma declaração de função são:
 
     ```
 
-     Para obter mais informações, consulte [programa e ligação](../cpp/program-and-linkage-cpp.md).
+   Para obter mais informações, consulte [programa e ligação](../cpp/program-and-linkage-cpp.md).
 
 1. **embutido**, que instrui o compilador substitua cada chamada para a função com o código de função em si. inlining pode ajudar o desempenho em cenários em que uma função é executada rapidamente e é invocada repetidamente em uma seção crítica de desempenho do código.
 
@@ -112,7 +112,7 @@ Partes opcionais de uma declaração de função são:
     }
     ```
 
-     Para obter mais informações, consulte [funções embutidas](../cpp/inline-functions-cpp.md).
+   Para obter mais informações, consulte [funções embutidas](../cpp/inline-functions-cpp.md).
 
 1. Um `noexcept` expressão, que especifica se a função pode gerar uma exceção. No exemplo a seguir, a função não gera uma exceção se o `is_pod` expressão é avaliada como **verdadeiro**.
 
@@ -123,7 +123,7 @@ Partes opcionais de uma declaração de função são:
     T copy_object(T& obj) noexcept(std::is_pod<T>) {...}
     ```
 
-     Para obter mais informações, consulte [noexcept](../cpp/noexcept-cpp.md).
+   Para obter mais informações, consulte [noexcept](../cpp/noexcept-cpp.md).
 
 1. (Somente para funções de membro) Os qualificadores cv, que especifica se a função é **const** ou **volátil**.
 
@@ -263,7 +263,6 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 ```
 
 Quando **automática** é usado em conjunto com um tipo de retorno à direita, ele simplesmente serve como um espaço reservado para qualquer expressão decltype produz, e não em si faz a dedução de tipo.
-
 
 ## <a name="function-local-variables"></a>Variáveis locais de função
 

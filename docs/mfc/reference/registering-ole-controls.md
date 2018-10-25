@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9008ba16d52987e4d7f14b5692cdf349951f83a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27e0589e7ba0b2428f4cfea1d2561ef5e666641e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407706"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054157"
 ---
 # <a name="registering-ole-controls"></a>Registrando controles OLE
 
@@ -86,7 +86,7 @@ Contém um ou mais dos seguintes sinalizadores:
 
 - `afxRegFreeThreading` Define o modelo de threading no registro para ThreadingModel = gratuito.
 
-     Você pode combinar os dois sinalizadores `afxRegApartmentThreading` e `afxRegFreeThreading` definir ThreadingModel = Both. Ver [InprocServer32](/windows/desktop/com/inprocserver32) no SDK do Windows para obter mais informações sobre o registro do modelo de threading.
+   Você pode combinar os dois sinalizadores `afxRegApartmentThreading` e `afxRegFreeThreading` definir ThreadingModel = Both. Ver [InprocServer32](/windows/desktop/com/inprocserver32) no SDK do Windows para obter mais informações sobre o registro do modelo de threading.
 
 > [!NOTE]
 >  Nas versões MFC antes 4.2 do MFC, o **int** *nRegFlags* parâmetro era um parâmetro BOOL *bInsertable*, que permitidos ou não o controle a ser inserido da inserção Caixa de diálogo do objeto.

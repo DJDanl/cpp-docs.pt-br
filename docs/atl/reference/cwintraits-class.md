@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb6ee8cd591c4a5b5a4a3701c6974849f9e3238f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 69ea4cf411e0ded0f1c324cea439d5a5a4c0c553
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069385"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062464"
 ---
 # <a name="cwintraits-class"></a>Classe CWinTraits
 
@@ -68,15 +68,15 @@ Use este modelo quando desejar fornecer padrão estilos de janela que serão usa
 
 ATL fornece três especializações predefinidas desse modelo para comumente usadas combinações de estilos de janela:
 
-- `CControlWinTraits`  
+- `CControlWinTraits`
 
    Projetado para uma janela de controle padrão. Os seguintes estilos padrão são usados: WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN e WS_CLIPSIBLINGS. Não há nenhum estilos estendidos.
 
-- `CFrameWinTraits`  
+- `CFrameWinTraits`
 
    Projetado para uma janela de quadro padrão. Os estilos padrão usados incluem: WS_OVERLAPPEDWINDOW, WS_CLIPCHILDREN e WS_CLIPSIBLINGS. Os estilos estendidos usados incluem: WS_EX_APPWINDOW e WS_EX_WINDOWEDGE.
 
-- `CMDIChildWinTraits`  
+- `CMDIChildWinTraits`
 
    Projetado para uma janela filho da MDI padrão. Os estilos padrão usados incluem: WS_OVERLAPPEDWINDOW, WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN e WS_CLIPSIBLINGS. Os estilos estendidos usados incluem: WS_EX_MDICHILD.
 

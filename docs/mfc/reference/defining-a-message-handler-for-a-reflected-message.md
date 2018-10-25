@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26345a95559000815ed7d2e2cc336892d619969b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 104f9e0be67a350a1725dfbcd2bf234a8bc79553
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413738"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052558"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Definindo um manipulador de mensagens para uma mensagem refletida
 
@@ -53,7 +53,7 @@ Para criar uma [controle ActiveX](../../mfc/activex-controls-on-the-internet.md)
 
 1. Clique no nome sugerido para aceitar. O manipulador é adicionado ao seu projeto.
 
-     Nomes de manipulador de mensagem que você adicionou aparecem na coluna à direita da janela de mensagens refletidas.
+   Nomes de manipulador de mensagem que você adicionou aparecem na coluna à direita da janela de mensagens refletidas.
 
 9. Para editar ou excluir um manipulador de mensagens, repita as etapas 4 a 7. Clique na célula que contém o nome do manipulador para editar ou excluir e clique na tarefa apropriada.
 
@@ -64,6 +64,6 @@ Para criar uma [controle ActiveX](../../mfc/activex-controls-on-the-internet.md)
 [Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Adicionando uma função de membro](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Adicionando uma variável de membro](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
-[Substituindo uma função Virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Substituindo uma função virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Manipulador de mensagens do MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
 [Navegando pela estrutura de classe](../../ide/navigating-the-class-structure-visual-cpp.md)

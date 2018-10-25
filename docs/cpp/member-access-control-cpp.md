@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dced1bd7db0f3eec9d9d070deb8cf990496116ae
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: e0ac5ceda3b979454c5d37e513cbd77a4d3e3e20
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821654"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063348"
 ---
 # <a name="member-access-control-c"></a>Controle de acesso a membro (C++)
 
@@ -247,7 +247,6 @@ Em células entrelaçadas de herança múltipla que envolvem classes base virtua
 ![Acesso ao longo de caminhos de um gráfico de herança](../cpp/media/vc38v91.gif "vc38V91") ao longo de caminhos de acesso de um gráfico de herança
 
 Na figura, um nome declarado na classe `VBase` é sempre acessado pela classe `RightPath`. O caminho à direita é mais acessível porque `RightPath` declara `VBase` como uma classe base pública, enquanto que `LeftPath` declara `VBase` como particular.
-
 
 ## <a name="see-also"></a>Consulte também
 

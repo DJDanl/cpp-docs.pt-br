@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b20b5ea002ac16feb99707610fbe4556bf3254f7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b06302d330ec8677a3de9b3ccaebf0b7b237b0e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375988"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053885"
 ---
 # <a name="application-control"></a>Controle do aplicativo
 
@@ -41,7 +41,6 @@ OLE requer controle substancial sobre aplicativos e seus objetos. As DLLs do sis
 |[AfxOleUnlockControl](#afxoleunlockcontrol)| Desbloqueia o alocador de classe do controle especificado. |
 |[AfxOleRegisterServerClass](#afxoleregisterserverclass)|Registra um servidor no registro do sistema OLE.|
 |[AfxOleSetEditMenu](#afxoleseteditmenu)|Implementa a interface do usuário para o *typename* objeto de comando.|
-
 
 ##  <a name="afxolecanexitapp"></a>  AfxOleCanExitApp
 
@@ -192,6 +191,7 @@ Bloqueia o alocador de classe do controle especificado para que criado dinamicam
 BOOL AFXAPI AfxOleLockControl(  REFCLSID clsid  );
 BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 ```
+
 ### <a name="parameters"></a>Parâmetros
 
 *clsid*<br/>
@@ -357,6 +357,7 @@ Desbloqueia o alocador de classe do controle especificado.
 BOOL AFXAPI AfxOleUnlockControl( REFCLSID clsid );
 BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );
 ```
+
 ### <a name="parameters"></a>Parâmetros
 
 *clsid*<br/>

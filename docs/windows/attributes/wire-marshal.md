@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 599d602eba101a41892ea66cf203ea9d3d740e1e
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 5c59660f06cfd210e6a67c5bd7373c7f2d7ddab1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790220"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061593"
 ---
 # <a name="wiremarshal"></a>wire_marshal
 
@@ -74,4 +74,4 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 ## <a name="see-also"></a>Consulte também
 
 [Atributos de IDL](idl-attributes.md)<br/>
-[Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)  
+[Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)

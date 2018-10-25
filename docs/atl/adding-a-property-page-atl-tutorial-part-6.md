@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d0db4d53d64def1c1f55929aa9d7514142955cf
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 00390f5a5872c183fdea385158dfa5020362a06f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821108"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055054"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Adicionando uma página de propriedades (Tutorial ATL, parte 6)
 
@@ -45,7 +45,7 @@ Para adicionar uma página de propriedades para seu controle, use o modelo de p�
 
 1. Clique em **cadeias de caracteres** para abrir o **cadeias de caracteres** da página e insira **& polígono** como o **título**.
 
-     O **título** da propriedade de página é a cadeia de caracteres que aparece na guia para a página. O **cadeia de caracteres Doc** é uma descrição que um quadro de propriedade usa para colocar em uma dica de ferramenta ou de linha de status. Observe que o quadro de propriedades padrão no momento, não usa essa cadeia de caracteres, portanto, você pode deixá-lo com o conteúdo padrão. Você não irá gerar uma **arquivo de Ajuda** no momento, por isso, exclua a entrada na caixa de texto.
+   O **título** da propriedade de página é a cadeia de caracteres que aparece na guia para a página. O **cadeia de caracteres Doc** é uma descrição que um quadro de propriedade usa para colocar em uma dica de ferramenta ou de linha de status. Observe que o quadro de propriedades padrão no momento, não usa essa cadeia de caracteres, portanto, você pode deixá-lo com o conteúdo padrão. Você não irá gerar uma **arquivo de Ajuda** no momento, por isso, exclua a entrada na caixa de texto.
 
 1. Clique em **concluir**, e o objeto de página de propriedade será criado.
 

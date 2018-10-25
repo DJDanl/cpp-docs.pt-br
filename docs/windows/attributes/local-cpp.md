@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e24efe4d4ad4f4e28b93503ecf82936e3113c1ed
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: e510e4faa707c954c52ae9daae4c4dc0d4c800dd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790278"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057147"
 ---
 # <a name="local-c"></a>local (C++)
 
@@ -60,4 +60,4 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de interface](interface-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>
-[call_as](call-as.md)  
+[call_as](call-as.md)

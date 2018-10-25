@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db431b80a569436aab477b89be447ee6df1932b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e3b91d0397b1eec53988e7acd5a5b7dce61db4ec
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423995"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059877"
 ---
 # <a name="cmfcrebar-class"></a>Classe CMFCReBar
 
@@ -117,12 +117,14 @@ BOOL AddBar(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] [out] *pBar* um ponteiro para a janela filho que deve ser inserido no rebar. O objeto referenciado deve ter o **WS_CHILD** estilo da janela.
+*pBar*<br/>
+[no, out] Um ponteiro para a janela filho que deve ser inserido no rebar. O objeto referenciado deve ter o **WS_CHILD** estilo da janela.
 
 *pszText*<br/>
 [in] Especifica o texto para aparecer em rebar. O texto não é parte da janela filho. Em vez disso, ele é exibido em rebar em si.
 
-[in] [out] *pbmp* Especifica o bitmap a ser exibido no plano de fundo de rebar.
+*pbmp*<br/>
+[no, out] Especifica o bitmap a ser exibido no plano de fundo de rebar.
 
 *dwStyle*<br/>
 [in] Contém o estilo a ser aplicado para a faixa. Para obter uma lista completa dos estilos de banda, consulte a descrição para o `fStyle` no [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) estrutura na documentação do SDK do Windows.
@@ -151,7 +153,8 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] [out] *pParentWnd* um ponteiro para a janela pai desse controle rebar.
+*pParentWnd*<br/>
+[no, out] Um ponteiro para a janela pai desse controle rebar.
 
 *dwCtrlStyle*<br/>
 [in] Especifica o estilo do controle rebar. O valor de estilo padrão é **RBS_BANDBORDERS**, que exibe restringir linhas para separar as faixas adjacentes no controle rebar. Para obter uma lista de estilos válidas, consulte [estilos de controle Rebar](/windows/desktop/Controls/rebar-control-styles) na documentação do SDK do Windows.
@@ -186,7 +189,6 @@ Chame esse método para aproveitar a funcionalidade de controle comum do Windows
 
 ##  <a name="calcfixedlayout"></a>  CMFCReBar::CalcFixedLayout
 
-
 ```
 virtual CSize CalcFixedLayout(
     BOOL bStretch,
@@ -195,15 +197,14 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bStretch*<br/>
-[in] [in] *bHorz*
+[in] *bStretch*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="canfloat"></a>  CMFCReBar::CanFloat
-
 
 ```
 virtual BOOL CanFloat() const;
@@ -215,19 +216,17 @@ virtual BOOL CanFloat() const;
 
 ##  <a name="enabledocking"></a>  CMFCReBar::EnableDocking
 
-
 ```
 void EnableDocking(DWORD dwDockStyle);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *dwDockStyle*
+[in] *dwDockStyle*<br/>
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="getrebarbandinfosize"></a>  CMFCReBar::GetReBarBandInfoSize
-
 
 ```
 UINT GetReBarBandInfoSize() const;
@@ -239,21 +238,19 @@ UINT GetReBarBandInfoSize() const;
 
 ##  <a name="onshowcontrolbarmenu"></a>  CMFCReBar::OnShowControlBarMenu
 
-
 ```
 virtual BOOL OnShowControlBarMenu(CPoint);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *CPoint*
+[in] *CPoint*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="ontoolhittest"></a>  CMFCReBar::OnToolHitTest
-
 
 ```
 virtual INT_PTR OnToolHitTest(
@@ -263,15 +260,14 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>Parâmetros
 
-*ponto*<br/>
-[in] [in] *pTI*
+[in] *ponto*<br/>
+[in] *pTI*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="onupdatecmdui"></a>  CMFCReBar::OnUpdateCmdUI
-
 
 ```
 virtual void OnUpdateCmdUI(
@@ -281,13 +277,12 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pTarget*<br/>
-[in] [in] *bDisableIfNoHndler*
+[in] *pTarget*<br/>
+[in] *bDisableIfNoHndler*<br/>
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="setpanealignment"></a>  CMFCReBar::SetPaneAlignment
-
 
 ```
 virtual void SetPaneAlignment(DWORD dwAlignment);
@@ -295,7 +290,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *dwAlignment*
+[in] *dwAlignment*<br/>
 
 ### <a name="remarks"></a>Comentários
 

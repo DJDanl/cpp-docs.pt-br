@@ -16,16 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b46b5c3b4750957c548becfcc5143f5eed858f71
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0df8cb1def78e3a7b564f268eb1b3b0a2069fb11
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790102"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062841"
 ---
 # <a name="stand-alone-attributes"></a>Atributos autônomos
+
 Um atributo autônomo não funciona em uma palavra-chave C++, mas é mais parecido com uma linha de código. Declarações de atributo autônomo exigem um ponto e vírgula no final da linha.
-  
+
+## <a name="stand-alone-attribute-list"></a>Lista de atributos autônomos
+
 |Atributo|Descrição|
 |---------------|-----------------|
 |[cpp_quote](cpp-quote.md)|Emite a cadeia de caracteres especificada, sem caracteres de aspas, para o arquivo de cabeçalho gerado.|
@@ -40,10 +43,10 @@ Um atributo autônomo não funciona em uma palavra-chave C++, mas é mais pareci
 |[include](include-cpp.md)|Especifica um ou mais arquivos de cabeçalho a serem incluídos no arquivo. idl gerado.|
 |[includelib](includelib-cpp.md)|Faz com que um arquivo. IDL ou. h a serem incluídos no arquivo. idl gerado.|
 |[library_block](library-block.md)|Coloca uma construção de dentro do bloco de biblioteca do arquivo. idl.|
-|[módulo](module-cpp.md)|Define o bloco de biblioteca no arquivo. idl.|
+|[module](module-cpp.md)|Define o bloco de biblioteca no arquivo. idl.|
 |[no_injected_text](no-injected-text.md)|Impede que o compilador injetando código como resultado do uso do atributo.|
 |[pragma](pragma.md)|Emite a cadeia de caracteres especificada, sem os caracteres de aspas no arquivo. idl gerado.|
-  
+
 ## <a name="see-also"></a>Consulte também
 
 [Atributos por uso](attributes-by-usage.md)

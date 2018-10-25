@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f01b15a226887216b45ba232437d9d20c4691b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1b20dd592e180122e119b08ab59babfdaae8d54
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388323"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052793"
 ---
 # <a name="creating-an-active-document-container-application"></a>Criando um aplicativo de contêiner de documento ativo
 
@@ -57,9 +57,9 @@ A maneira mais simples e mais recomendada para criar um aplicativo de contêiner
 
          [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
-     `OnPreparePrinting` fornece suporte para impressão. Esse código substitui `DoPreparePrinting`, que é a preparação de impressão padrão.
+   `OnPreparePrinting` fornece suporte para impressão. Esse código substitui `DoPreparePrinting`, que é a preparação de impressão padrão.
 
-     Contenção de documento ativa fornece um esquema de impressão aprimorado:
+   Contenção de documento ativa fornece um esquema de impressão aprimorado:
 
    - Primeiro, você pode chamar o documento ativo por meio de seu `IPrint` de interface e informar a ele para imprimir em si. Isso é diferente do anterior confinamento OLE, no qual o contêiner tinha que processar uma imagem do item contido na impressora `CDC` objeto.
 
@@ -67,7 +67,7 @@ A maneira mais simples e mais recomendada para criar um aplicativo de contêiner
 
    - Se isso falhar, verifique sua própria renderização do item.
 
-     As funções de membro estático `COleDocObjectItem::OnPrint` e `COleDocObjectItem::OnPreparePrinting`, conforme implementado no código anterior, lidar com esse esquema de impressão aprimorada.
+   As funções de membro estático `COleDocObjectItem::OnPrint` e `COleDocObjectItem::OnPreparePrinting`, conforme implementado no código anterior, lidar com esse esquema de impressão aprimorada.
 
 11. Adicione qualquer implementação de sua preferência e compile o aplicativo.
 

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2705061b1914ac8fad9f7ca8d769df16bab2f5c1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1a970c7fd75eec2ea028f74220cbdb046e5d23bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415688"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053273"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>Controles MFC ActiveX: localizando um controle ActiveX
 
@@ -68,7 +68,7 @@ Para criar várias bibliotecas de tipo localizado, você pode adicionar qualquer
 
 1. Com o seu projeto de controle aberto, nos **Project** menu, clique em **Add Existing Item**.
 
-     O **Add Existing Item** caixa de diálogo é exibida.
+   O **Add Existing Item** caixa de diálogo é exibida.
 
 1. Se necessário, selecione a unidade e pasta para exibir.
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b42907273423d69ed93df5700b33556047338fe2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e103e43f23746f8274ad00da4d043e3446dfc706
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391420"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053022"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>Controles ActiveX MFC: adicionando métodos de estoque
 
@@ -51,7 +51,7 @@ Adicionando um método de estoque é simple usando o [Assistente de adição de 
 
 1. No menu de atalho, clique em **Add** e, em seguida, clique em **Add Method**.
 
-     Isso abre o Assistente para adição de método.
+   Isso abre o Assistente para adição de método.
 
 1. No **nome do método** , clique em **atualizar**.
 

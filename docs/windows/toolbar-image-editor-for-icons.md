@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8dee099912b69d48b0ded4184dc68c14da1899fe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ed6639bdf86a54689834c6eda03a3b6ec4dd171d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391898"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063842"
 ---
 # <a name="toolbar-c-image-editor-for-icons"></a>Barra de ferramentas (Editor de C++ imagens para ícones)
 
@@ -36,8 +36,7 @@ O **Editor de imagens** barra de ferramentas contém ferramentas para desenho, p
 > [!NOTE]
 > Todas as ferramentas disponíveis na **Editor de imagens** barra de ferramentas também estão disponíveis na **imagem** menu (sob o **ferramentas** comando).
 
-![Barra de ferramentas do Editor de imagens](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")  
-Barra de ferramentas do Editor de imagens
+![Barra de ferramentas do Editor de imagens](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar") barra de ferramentas do Editor de imagens
 
 Para usar o **Editor de imagens** barra de ferramentas e **opção** seletor, clique na ferramenta ou opção que você deseja.
 
@@ -46,8 +45,7 @@ Para usar o **Editor de imagens** barra de ferramentas e **opção** seletor, cl
 
 Com o **opção** seletor, você pode especificar a largura de uma linha, o pincelada, etc. O ícone na **opção** alterações de botão de seletor, dependendo de qual ferramenta você selecionou.
 
-![Desenho de&#45;seletor de forma na barra de ferramentas do Editor de imagens](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")  
-Seletor de opção na barra de ferramentas do Editor de imagens
+![Desenho de&#45;seletor de forma na barra de ferramentas do Editor de imagens](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector") seletor de opção na barra de ferramentas do Editor de imagens
 
 Para obter informações sobre como adicionar recursos a projetos gerenciados, consulte [recursos em aplicativos de área de trabalho](/dotnet/framework/resources/index) na *guia do desenvolvedor do .NET Framework*. Para obter informações sobre como adicionar manualmente os arquivos de recursos a projetos gerenciados, acessar recursos, exibir recursos estáticos e atribuir cadeias de caracteres de recurso a propriedades, consulte [criando arquivos de recursos para aplicativos de área de trabalho](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obter informações sobre globalização e localização de recursos em aplicativos gerenciados, consulte [Globalizing e Localizando aplicativos do .NET Framework](/dotnet/standard/globalization-localization/index).
 

@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b229382a5d72607d8aa624002a88ead88800a028
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 98da12276e21a9619468cea3bbaba0190ac54e63
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390832"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056861"
 ---
 # <a name="crecttracker-class"></a>Classe CRectTracker
 
@@ -150,7 +150,6 @@ Cria e inicializa um objeto `CRectTracker`.
 
 ```
 CRectTracker();
-
 
 CRectTracker(
     LPCRECT lpSrcRect,

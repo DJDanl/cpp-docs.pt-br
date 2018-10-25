@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f5beba4f9a33a5bd9ee93baae6176d3ea592d2e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b61df9a17903f50ea922edf9c29eee926063254
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445809"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055405"
 ---
 # <a name="internet-security-c"></a>Segurança da Internet (C++)
 
@@ -37,7 +37,6 @@ Código de segurança é uma questão importante para os desenvolvedores e usuá
 Há duas abordagens básicas de segurança ao desenvolver para a Internet. A primeira é chamada de "área restrita." Nessa abordagem, um aplicativo é restrito a um determinado conjunto de APIs e excluído da mais potencialmente perigosos como e/s de arquivo em que um programa pode destruir dados em um computador do usuário. A segunda é implementada usando assinaturas digitais. Essa abordagem é conhecida como "shrinkwrap" para a Internet. Código é verificado e assinada usando a tecnologia de chave de chave pública/privada. Antes do código é executado, sua assinatura digital é verificada para garantir que o código é de uma origem autenticada conhecida e que o código não tenha sido alterado desde que foi assinado.
 
 No primeiro caso, você confia que o aplicativo não fará nenhum dano e confia na origem do aplicativo. Na segunda, assinaturas digitais são usadas para verificar autenticidade. A assinatura digital é um padrão da indústria usado para identificar e fornecer detalhes sobre o Editor do código. Sua tecnologia baseia-se em padrões, incluindo a RSA e x. 509. Navegadores normalmente permite que os usuários escolham se desejam baixar e executar o código de origem desconhecida.
-
 
 ## <a name="see-also"></a>Consulte também
 

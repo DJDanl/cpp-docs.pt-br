@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcdbc8012edbe17ce9fcc8298da68f45acad4b8b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 2553ac5cdc20f3d5d38a6bad77dc79fc7c1737d8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683359"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052863"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Nuvem e programação da Web no Visual C++
 
@@ -52,11 +52,11 @@ No C++ há várias opções para conectar-se com a Web e com a nuvem.
   - Fazer conexões de WebSocket em relação aos serviços remotos
   - Uma tarefa totalmente assíncrona com base no PPL, incluindo um threadpool internos de API
 
-   Dá suporte à área de trabalho do Windows (7 +), Windows Server (2012 +), plataforma Universal do Windows, Linux, OSX, Android e iOS. 
+   Dá suporte à área de trabalho do Windows (7 +), Windows Server (2012 +), plataforma Universal do Windows, Linux, OSX, Android e iOS.
 
 - [Windows::Web::Http::HttpClient](https://msdn.microsoft.com/library/windows/apps/windows.web.http.httpclient.aspx)
 
-   Uma classe de cliente HTTP de tempo de execução do Windows modelada na classe do .NET Framework, o mesmo nome no namespace System. Web. `HttpClient` completamente assíncrona dá suporte a carregar e baixar via HTTP e filtros de pipeline que permitem a inserção de manipuladores HTTP personalizados no pipeline. O SDK do Windows inclui filtros de exemplo para redes limitadas, a autenticação OAuth e muito mais. Para aplicativos que se destinam apenas plataforma Universal do Windows, é recomendável que você use o `Windows::Web:HttpClient` classe. 
+   Uma classe de cliente HTTP de tempo de execução do Windows modelada na classe do .NET Framework, o mesmo nome no namespace System. Web. `HttpClient` completamente assíncrona dá suporte a carregar e baixar via HTTP e filtros de pipeline que permitem a inserção de manipuladores HTTP personalizados no pipeline. O SDK do Windows inclui filtros de exemplo para redes limitadas, a autenticação OAuth e muito mais. Para aplicativos que se destinam apenas plataforma Universal do Windows, é recomendável que você use o `Windows::Web:HttpClient` classe.
 
 - [Interface IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)
 

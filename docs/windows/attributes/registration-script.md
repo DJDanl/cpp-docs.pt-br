@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: edc9d5aa1d7c49de34ee3dbb02d2a55542962a50
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 78d108dfda75147e4147e94544ddddcdfa04481d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790242"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062854"
 ---
 # <a name="registrationscript"></a>registration_script
 
@@ -85,4 +85,4 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 [Atributos de COM](com-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
-[rdx](rdx.md)  
+[rdx](rdx.md)

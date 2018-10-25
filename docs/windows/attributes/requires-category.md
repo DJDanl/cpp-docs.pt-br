@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61743dfdb5eb684cbf09705ace4ce2531c292ff4
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: d570a2302f072d375962176f0e139035b4ec3ccc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790106"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059552"
 ---
 # <a name="requirescategory"></a>requires_category
 
@@ -80,4 +80,4 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 ## <a name="see-also"></a>Consulte também
 
 [Atributos de COM](com-attributes.md)<br/>
-[implements_category](implements-category.md)  
+[implements_category](implements-category.md)

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f446eb557fab4f4ff6396042e832e4584546bd96
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 60139821c1b15673fac0fb8f9ec3925cbfa6dc31
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416807"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052091"
 ---
 # <a name="ordering-items-in-the-header-control"></a>Ordenando itens no controle de cabeçalho
 
@@ -35,11 +35,11 @@ Depois que você tiver [adicionou itens para um controle de cabeçalho](../mfc/a
 
 - [CHeaderCtrl::GetOrderArray](../mfc/reference/cheaderctrl-class.md#getorderarray) e [CHeaderCtrl::SetOrderArray](../mfc/reference/cheaderctrl-class.md#setorderarray)
 
-     Recupera e define a ordem da esquerda para a direita dos itens de cabeçalho.
+   Recupera e define a ordem da esquerda para a direita dos itens de cabeçalho.
 
 - [CHeaderCtrl::OrderToIndex](../mfc/reference/cheaderctrl-class.md#ordertoindex).
 
-     Recupera o valor de índice para um item de cabeçalho específico.
+   Recupera o valor de índice para um item de cabeçalho específico.
 
 Além das funções de membro anterior, o estilo HDS_DRAGDROP permite ao usuário arrastar e soltar itens de cabeçalho dentro do controle de cabeçalho. Para obter mais informações, consulte [fornecendo suporte de arrastar e soltar para itens de cabeçalho](../mfc/providing-drag-and-drop-support-for-header-items.md).
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378cd6fd283cd36142e293b51fdb91527afb6f88
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: e5cce23d34c739ed6a3aca67e05b59c6cafd9191
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808895"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062295"
 ---
 # <a name="atl-com-desktop-components"></a>Componentes de área de trabalho COM da ATL
 
@@ -61,4 +61,4 @@ Orienta a criação de um controle e demonstra alguns conceitos básicos ATL no 
 Código de exemplo que mostra como usar a ATL para gravar objetos COM.
 
 [Modelos do OLE DB](../data/oledb/ole-db-templates.md)<br/>
-Fornece material de referência para os modelos OLE DB do consumidor e o provedor de um conjunto de classes de modelo que implementa várias interfaces OLE DB comumente usadas.  
+Fornece material de referência para os modelos OLE DB do consumidor e o provedor de um conjunto de classes de modelo que implementa várias interfaces OLE DB comumente usadas.

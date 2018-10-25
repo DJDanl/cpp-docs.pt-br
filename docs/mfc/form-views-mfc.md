@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9019b8f2314cfefa5b952994e7fa7c3e9d8d459e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8236ed06a5863e2208c77294e4ddb7352b0f83f7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442767"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052987"
 ---
 # <a name="form-views-mfc"></a>Exibições de formulário (MFC)
 
@@ -40,7 +40,7 @@ Quando você insere um novo formulário em seu aplicativo, o Visual C++ faz o se
 
 - Cria um recurso de caixa de diálogo com estilos apropriados (ou você pode usar um recurso de caixa de diálogo existente que ainda não foi associado uma classe).
 
-     Se você escolher um recurso de caixa de diálogo existente, você precisa definir esses estilos por meio da página de propriedades da caixa de diálogo. Estilos para uma caixa de diálogo devem incluir:
+   Se você escolher um recurso de caixa de diálogo existente, você precisa definir esses estilos por meio da página de propriedades da caixa de diálogo. Estilos para uma caixa de diálogo devem incluir:
 
      **WS_CHILD**= On
 
@@ -54,17 +54,17 @@ Para aplicativos com base na arquitetura de documento/exibição, o **novo formu
 
 - Cria um `CDocument`-com base em classe
 
-     Em vez de ter uma nova classe criada, você poderá usar qualquer existente `CDocument`-com base em classe em seu projeto.
+   Em vez de ter uma nova classe criada, você poderá usar qualquer existente `CDocument`-com base em classe em seu projeto.
 
 - Gera um modelo de documento (derivado de `CDocument`) com recursos de cadeia de caracteres, o menu e ícone.
 
-     Você também pode criar uma nova classe no qual basear o modelo.
+   Você também pode criar uma nova classe no qual basear o modelo.
 
 - Adiciona uma chamada para `AddDocumentTemplate` em seu aplicativo `InitInstance` código.
 
-     Visual C++ adiciona este código para cada novo formulário que você cria, que adiciona o formulário à lista de formulários disponíveis quando o usuário escolhe o **New** comando. Esse código inclui a ID do recurso associado do formulário e os nomes do documento associado, exibição e classes de quadro que juntos compõem o novo objeto de formulário.
+   Visual C++ adiciona este código para cada novo formulário que você cria, que adiciona o formulário à lista de formulários disponíveis quando o usuário escolhe o **New** comando. Esse código inclui a ID do recurso associado do formulário e os nomes do documento associado, exibição e classes de quadro que juntos compõem o novo objeto de formulário.
 
-     Modelos de documento servem como a conexão entre documentos, janelas de quadro e modos de exibição. Para um único documento, você pode criar muitos modelos.
+   Modelos de documento servem como a conexão entre documentos, janelas de quadro e modos de exibição. Para um único documento, você pode criar muitos modelos.
 
 Para obter mais informações, consulte:
 

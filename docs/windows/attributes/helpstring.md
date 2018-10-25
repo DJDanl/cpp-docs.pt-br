@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ea4a1ac927d03b0fc6427fb6ad39f748655fda7
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 8cca35d151d0f28c7273c84643662b442afbd3a3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790279"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056978"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -68,4 +68,4 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 [Atributos de método](method-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [helpfile](helpfile.md)<br/>
-[helpcontext](helpcontext.md)  
+[helpcontext](helpcontext.md)

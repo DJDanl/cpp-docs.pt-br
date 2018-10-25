@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e5b2783dda3c66736a7e668186d0645cdd4b84
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 659b76a640a0dfaee75179f135fee9d1eeb5ba02
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861311"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058330"
 ---
 # <a name="storage-classes-c"></a>Classes de armazenamento (C++)
 
@@ -35,7 +35,6 @@ Um *classe de armazenamento* no contexto do C++ declarações de variável é um
 1. O [mutável](../cpp/mutable-data-members-cpp.md) palavra-chave pode ser considerada um especificador de classe de armazenamento. No entanto, ela só está disponível na lista de membros de uma definição de classe.
 
 1. **Visual C++ 2010 e posterior:** as **automática** palavra-chave não é mais um especificador de classe de armazenamento do C++ e o **registrar** palavra-chave é preterida. **Visual Studio 2017 versão 15.7 e posterior:** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): O **registrar** palavra-chave é removida da linguagem C++.
-
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class

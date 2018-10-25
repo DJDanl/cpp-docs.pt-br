@@ -55,12 +55,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430d9d297161a05f9158893454f00be2afbe7a47
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8fba2e8d949745f694973f2d7b29c5244ab30db4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408564"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058902"
 ---
 # <a name="record-field-exchange-functions"></a>Registrar funções de troca de campos
 
@@ -440,7 +440,6 @@ Ver [RFX_Text](#rfx_text).
 
 **Cabeçalho:** afxdb. h
 
-
 ## <a name="rfx_text"></a>  RFX_Text
 
 Transferências `CString` dados entre os membros de dados do campo de um `CRecordset` tipo de objeto e colunas de um registro na fonte de dados do ODBC SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL ou SQL_NUMERIC.
@@ -506,7 +505,6 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 ### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxdb. h
-
 
 ## <a name="rfx_binary_bulk"></a>  RFX_Binary_Bulk
 
@@ -873,7 +871,6 @@ Ver [RFX_Text_Bulk](#rfx_text_bulk).
 
 **Cabeçalho:** afxdb. h
 
-
 ## <a name="rfx_text_bulk"></a>  RFX_Text_Bulk
 
 Transferências de várias linhas de dados de caractere de uma coluna de uma fonte de dados ODBC para uma matriz correspondente em um `CRecordset`-objeto derivado.
@@ -986,7 +983,6 @@ Ver [DFX_Text](#dfx_text).
 ### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxdao.h
-
 
 ## <a name="dfx_bool"></a>  DFX_Bool
 
@@ -1249,7 +1245,6 @@ Ver [DFX_Text](#dfx_text).
 
 **Cabeçalho:** afxdao.h
 
-
 ## <a name="dfx_longbinary"></a>  DFX_LongBinary
 
 **Importante** é recomendável que você use [DFX_Binary](#dfx_binary) em vez dessa função.
@@ -1342,7 +1337,6 @@ Ver [DFX_Text](#dfx_text).
 ### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxdao.h
-
 
 ## <a name="dfx_single"></a>  DFX_Single
 

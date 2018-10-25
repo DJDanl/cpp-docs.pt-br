@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07277e9b98186747415cf1bf6abed3e431e64fff
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b45b1a1f2903dfcdfa4a95adc161766f5bb3328c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403468"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053039"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternativas à arquitetura de documento/exibição
 
@@ -56,7 +56,7 @@ Como a arquitetura de documento/exibição fornecida pelo MFC é responsável po
 
 - Tratar o documento como um sufixo não utilizado e implementar seu código de gerenciamento de dados na classe de exibição, conforme sugerido acima. Sobrecarga para o documento é relativamente baixa. Uma única [CDocument](../mfc/reference/cdocument-class.md) objeto resulta em uma pequena quantidade de sobrecarga por si só, além da pequena sobrecarga `CDocument`da base de classes, [CCmdTarget](../mfc/reference/ccmdtarget-class.md) e [CObject](../mfc/reference/cobject-class.md). Ambas as classes de segundos são pequenas.
 
-     Declarado em `CDocument`:
+   Declarado em `CDocument`:
 
    - Dois `CString` objetos.
 
@@ -66,7 +66,7 @@ Como a arquitetura de documento/exibição fornecida pelo MFC é responsável po
 
    - Um `CPtrList` objeto, que contém uma lista de modos de exibição do documento.
 
-     Além disso, o documento requer o período de tempo para criar o objeto de documento, seus objetos de exibição, uma janela de quadro e um objeto de modelo de documento.
+   Além disso, o documento requer o período de tempo para criar o objeto de documento, seus objetos de exibição, uma janela de quadro e um objeto de modelo de documento.
 
 - Trate o documento e o modo de exibição como colossais não utilizados. Coloque seu código de desenho e o gerenciamento de dados na janela do quadro em vez do modo de exibição. Essa abordagem é mais próxima ao modelo de programação da linguagem C.
 

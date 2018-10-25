@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 157bcb8b1b8341e16d7dcb6c3a9d9fc9dc1a4d4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c113ce68cf609970342d69ebc03f700e17c7e2a9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431730"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064299"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>Classe CMFCDropDownToolbarButton
 
@@ -151,7 +151,6 @@ Constrói um objeto `CMFCDropDownToolbarButton`.
 
 ```
 CMFCDropDownToolbarButton();
-
 
 CMFCDropDownToolbarButton(
     LPCTSTR lpszName,
@@ -557,6 +556,4 @@ Chame esse método para especificar um comando padrão que a estrutura executa q
 [Classe CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)<br/>
 [Classe CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)<br/>
 [Instruções passo a passo: colocando controles em barras de ferramentas](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

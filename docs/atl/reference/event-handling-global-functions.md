@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acc8aeb54e98e531756d71d6be389dca8a494f4c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5ef89aec3a0eaf53c6c97b3480008b7e9fd586e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46091446"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054885"
 ---
 # <a name="event-handling-global-functions"></a>Funções globais de tratamento de evento
 
@@ -33,11 +33,11 @@ Essa função fornece um manipulador de eventos.
 
 |||
 |-|-|
-|[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Aguarda um objeto a ser sinalizado, enquanto despacha as mensagens da janela, conforme necessário.|  
+|[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Aguarda um objeto a ser sinalizado, enquanto despacha as mensagens da janela, conforme necessário.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlbase. h  
+**Cabeçalho:** atlbase. h
 
 ##  <a name="atlwaitwithmessageloop"></a>  AtlWaitWithMessageLoop
 

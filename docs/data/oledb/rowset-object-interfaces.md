@@ -19,46 +19,46 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 58986c7b80f2bb84b222047efc7aae359c0cd5b1
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 29371e1c1acff5846b7b2c454365f9ff52b77231
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083886"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056926"
 ---
 # <a name="rowset-object-interfaces"></a>Interfaces de objeto do conjunto de linhas
 
-A tabela a seguir mostra as interfaces obrigatórias e opcionais definidas por OLE DB para um objeto de conjunto de linhas.  
-  
-|Interface|Necessário?|Implementado por modelos OLE DB?|  
-|---------------|---------------|--------------------------------------|  
-|[IAccessor](/previous-versions/windows/desktop/ms719672)|Obrigatório|Sim|  
-|[IColumnsInfo](/previous-versions/windows/desktop/ms724541)|Obrigatório|Sim|  
-|[IConvertType](/previous-versions/windows/desktop/ms715926)|Obrigatório|Sim|  
-|[IRowset](/previous-versions/windows/desktop/ms720986)|Obrigatório|Sim|  
-|[IRowsetInfo](/previous-versions/windows/desktop/ms724541)|Obrigatório|Sim|  
-|[IChapteredRowset](/previous-versions/windows/desktop/ms718180)|Opcional|Não|  
-|[IColumnsInfo2](/previous-versions/windows/desktop/ms712953)|Opcional|Não|  
-|[IColumnsRowset](/previous-versions/windows/desktop/ms722657)|Opcional|Não|  
-|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Opcional|Sim (por meio de ATL)|  
-|[IDBAsynchStatus](/previous-versions/windows/desktop/ms709832)|Opcional|Não|  
-|[IGetRow](/previous-versions/windows/desktop/ms718047)|Opcional|Não|  
-|[IRowsetChange](/previous-versions/windows/desktop/ms715790)|Opcional|Sim|  
-|[IRowsetChapterMember](/previous-versions/windows/desktop/ms725430)|Opcional|Não|  
-|[IRowsetCurrentIndex](/previous-versions/windows/desktop/ms709700)|Opcional|Não|  
-|[IRowsetFind](/previous-versions/windows/desktop/ms724221)|Opcional|Não|  
-|[IRowsetIdentity](/previous-versions/windows/desktop/ms715913)|Opcional (mas necessário para provedores de nível 0)|Sim|  
-|[IRowsetIndex](/previous-versions/windows/desktop/ms719604)|Opcional|Não|  
-|[IRowsetLocate](/previous-versions/windows/desktop/ms721190)|Opcional|Sim|  
-|[IRowsetRefresh](/previous-versions/windows/desktop/ms714892)|Opcional|Não|  
-|[IRowsetScroll](/previous-versions/windows/desktop/ms712984)|Opcional|Não|  
-|[IRowsetUpdate](/previous-versions/windows/desktop/ms714401)|Opcional|Sim|  
-|[IRowsetView](/previous-versions/windows/desktop/ms709755)|Opcional|Não|  
-|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816)|Opcional|Sim|  
-|[IRowsetBookmark](/previous-versions/windows/desktop/ms714246)|Opcional|Não|  
-  
-O objeto de conjunto de linhas gerado pelo assistente implementa `IAccessor`, `IRowset`, e `IRowsetInfo` por meio da herança. O `IAccessorImpl` associa as duas colunas de saída. O `IRowset` interface manipula dados e busca linhas. O `IRowsetInfo` interface manipula as propriedades do conjunto de linhas.  
-  
-## <a name="see-also"></a>Consulte também  
+A tabela a seguir mostra as interfaces obrigatórias e opcionais definidas por OLE DB para um objeto de conjunto de linhas.
+
+|Interface|Necessário?|Implementado por modelos OLE DB?|
+|---------------|---------------|--------------------------------------|
+|[IAccessor](/previous-versions/windows/desktop/ms719672)|Obrigatório|Sim|
+|[IColumnsInfo](/previous-versions/windows/desktop/ms724541)|Obrigatório|Sim|
+|[IConvertType](/previous-versions/windows/desktop/ms715926)|Obrigatório|Sim|
+|[IRowset](/previous-versions/windows/desktop/ms720986)|Obrigatório|Sim|
+|[IRowsetInfo](/previous-versions/windows/desktop/ms724541)|Obrigatório|Sim|
+|[IChapteredRowset](/previous-versions/windows/desktop/ms718180)|Opcional|Não|
+|[IColumnsInfo2](/previous-versions/windows/desktop/ms712953)|Opcional|Não|
+|[IColumnsRowset](/previous-versions/windows/desktop/ms722657)|Opcional|Não|
+|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Opcional|Sim (por meio de ATL)|
+|[IDBAsynchStatus](/previous-versions/windows/desktop/ms709832)|Opcional|Não|
+|[IGetRow](/previous-versions/windows/desktop/ms718047)|Opcional|Não|
+|[IRowsetChange](/previous-versions/windows/desktop/ms715790)|Opcional|Sim|
+|[IRowsetChapterMember](/previous-versions/windows/desktop/ms725430)|Opcional|Não|
+|[IRowsetCurrentIndex](/previous-versions/windows/desktop/ms709700)|Opcional|Não|
+|[IRowsetFind](/previous-versions/windows/desktop/ms724221)|Opcional|Não|
+|[IRowsetIdentity](/previous-versions/windows/desktop/ms715913)|Opcional (mas necessário para provedores de nível 0)|Sim|
+|[IRowsetIndex](/previous-versions/windows/desktop/ms719604)|Opcional|Não|
+|[IRowsetLocate](/previous-versions/windows/desktop/ms721190)|Opcional|Sim|
+|[IRowsetRefresh](/previous-versions/windows/desktop/ms714892)|Opcional|Não|
+|[IRowsetScroll](/previous-versions/windows/desktop/ms712984)|Opcional|Não|
+|[IRowsetUpdate](/previous-versions/windows/desktop/ms714401)|Opcional|Sim|
+|[IRowsetView](/previous-versions/windows/desktop/ms709755)|Opcional|Não|
+|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816)|Opcional|Sim|
+|[IRowsetBookmark](/previous-versions/windows/desktop/ms714246)|Opcional|Não|
+
+O objeto de conjunto de linhas gerado pelo assistente implementa `IAccessor`, `IRowset`, e `IRowsetInfo` por meio da herança. O `IAccessorImpl` associa as duas colunas de saída. O `IRowset` interface manipula dados e busca linhas. O `IRowsetInfo` interface manipula as propriedades do conjunto de linhas.
+
+## <a name="see-also"></a>Consulte também
 
 [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

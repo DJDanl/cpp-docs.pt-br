@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e5902019704821d6c34c74480623593b7d7448a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3eb9ab5f08fe1984e52ed16eb26064093fb8e003
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46044243"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052948"
 ---
 # <a name="umenuorid-class"></a>Classe u_menuorid
 
@@ -57,7 +57,7 @@ class _U_MENUorID
 
 Essa classe de adaptador do argumento permite IDs (unidades) ou (HMENUs) a serem passados para uma função sem a necessidade de uma conversão explícita de identificadores de menu na parte do chamador.
 
-Essa classe é projetada para a implementação de invólucros para a API do Windows, particularmente o [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) e [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funções, que aceitam um argumento HMENU que pode ser uma janela filho identificador (UINT) em vez de um identificador de menu. Por exemplo, você pode ver essa classe em uso como um parâmetro para [CWindowImpl::Create](cwindowimpl-class.md#create).  
+Essa classe é projetada para a implementação de invólucros para a API do Windows, particularmente o [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) e [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funções, que aceitam um argumento HMENU que pode ser uma janela filho identificador (UINT) em vez de um identificador de menu. Por exemplo, você pode ver essa classe em uso como um parâmetro para [CWindowImpl::Create](cwindowimpl-class.md#create).
 
 A classe define duas sobrecargas de construtor: uma aceita um argumento UINT e o outra aceita um argumento HMENU. O argumento UINT apenas é convertido para um HMENU no construtor e o resultado armazenado no membro de dados único da classe, [m_hMenu](#_u_menuorid__m_hmenu). O argumento para o construtor HMENU é armazenado diretamente, sem conversão.
 

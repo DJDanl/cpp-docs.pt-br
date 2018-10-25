@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17040448771e4ca3c0f999e72a9c08f0e1fa28aa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c10908454252b1ae381a2b96835ce09f3aa6db6f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058491"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053650"
 ---
 # <a name="registry-macros"></a>Macros de registro
 
@@ -41,7 +41,7 @@ Essas macros definem os recursos de biblioteca e o registro do tipo útil.
 |[DECLARE_REGISTRY](#declare_registry)|Insere ou remove a entrada do objeto principal no registro do sistema.|
 |[DECLARE_REGISTRY_APPID_RESOURCEID](#declare_registry_appid_resourceid)|Especifica as informações necessárias para se registrar automaticamente o *appid*.|
 |[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|Localiza o recurso denominado e executa o script de registro dentro dele.|
-|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|Localiza o recurso identificado por um número de identificação e executa o script de registro dentro dele.|  
+|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|Localiza o recurso identificado por um número de identificação e executa o script de registro dentro dele.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -96,10 +96,10 @@ Insere o registro de classe padrão no registro do sistema ou remove-registro do
 
 ```
 DECLARE_REGISTRY(
-    class, 
-    pid, 
-    vpid, 
-    nid, 
+    class,
+    pid,
+    vpid,
+    nid,
     flags )
 ```
 
@@ -132,7 +132,7 @@ Especifica as informações necessárias para se registrar automaticamente o *ap
 
 ```
 DECLARE_REGISTRY_APPID_RESOURCEID(
-    resid, 
+    resid,
     appid )
 ```
 
@@ -173,7 +173,7 @@ Você pode vincular estaticamente com o componente de registro ATL (registrador)
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-Se você quiser ATL para substituir valores de substituição em tempo de execução, não especifique a macro DECLARE_REGISTRY_RESOURCE ou DECLARE_REGISTRY_RESOURCEID. Em vez disso, crie uma matriz de `_ATL_REGMAP_ENTRIES` estruturas, onde cada entrada contém um espaço reservado de variável emparelhado com um valor para substituir o espaço reservado em tempo de execução. Em seguida, chame [CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) ou [CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), passando a matriz. Isso adiciona todos os valores de substituição no `_ATL_REGMAP_ENTRIES` estruturas de mapa de substituição do registrador.  
+Se você quiser ATL para substituir valores de substituição em tempo de execução, não especifique a macro DECLARE_REGISTRY_RESOURCE ou DECLARE_REGISTRY_RESOURCEID. Em vez disso, crie uma matriz de `_ATL_REGMAP_ENTRIES` estruturas, onde cada entrada contém um espaço reservado de variável emparelhado com um valor para substituir o espaço reservado em tempo de execução. Em seguida, chame [CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) ou [CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), passando a matriz. Isso adiciona todos os valores de substituição no `_ATL_REGMAP_ENTRIES` estruturas de mapa de substituição do registrador.
 
 Para obter mais informações sobre parâmetros substituíveis e scripts, consulte o artigo [o componente de registro ATL (registrador)](../../atl/atl-registry-component-registrar.md).
 
@@ -198,7 +198,7 @@ Você pode vincular estaticamente com o componente de registro ATL (registrador)
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-Se você quiser ATL para substituir valores de substituição em tempo de execução, não especifique a macro DECLARE_REGISTRY_RESOURCE ou DECLARE_REGISTRY_RESOURCEID. Em vez disso, crie uma matriz de `_ATL_REGMAP_ENTRIES` estruturas, onde cada entrada contém um espaço reservado de variável emparelhado com um valor para substituir o espaço reservado em tempo de execução. Em seguida, chame [CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) ou [CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), passando a matriz. Isso adiciona todos os valores de substituição no `_ATL_REGMAP_ENTRIES` estruturas de mapa de substituição do registrador.  
+Se você quiser ATL para substituir valores de substituição em tempo de execução, não especifique a macro DECLARE_REGISTRY_RESOURCE ou DECLARE_REGISTRY_RESOURCEID. Em vez disso, crie uma matriz de `_ATL_REGMAP_ENTRIES` estruturas, onde cada entrada contém um espaço reservado de variável emparelhado com um valor para substituir o espaço reservado em tempo de execução. Em seguida, chame [CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) ou [CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), passando a matriz. Isso adiciona todos os valores de substituição no `_ATL_REGMAP_ENTRIES` estruturas de mapa de substituição do registrador.
 
 Para obter mais informações sobre parâmetros substituíveis e scripts, consulte o artigo [o componente de registro ATL (registrador)](../../atl/atl-registry-component-registrar.md).
 

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1d3f8dc2251dbfbcd8155b0edc512a9dc40bacc2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 71e42f7d7a60478ec9344a44e8e86463e5845500
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393393"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061567"
 ---
 # <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Como chamar propriedades e métodos do controle dos Windows Forms
 
@@ -39,11 +39,11 @@ Este tópico pressupõe que você concluiu previamente [como: criar o controle d
 
 1. Adicione a seguinte linha à seção pública substituições do `CMFC02View` declaração em MFC02View.h de classe.
 
-     `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
+   `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
 
 1. Adicione uma substituição para OnInitialupdate.
 
-     Exibição de **propriedades** janela (F4). Na **modo de exibição de classe** (CTRL + SHIFT + C), selecione a classe CMFC02View. No **propriedades** janela, selecione o ícone para substituições. Scoll para baixo na lista para OnInitialUpdate. Clique no menu suspenso lista e selecione \<Add >. No MFC02View.cpp. Verifique se que o corpo da função OnInitialUpdate é da seguinte maneira:
+   Exibição de **propriedades** janela (F4). Na **modo de exibição de classe** (CTRL + SHIFT + C), selecione a classe CMFC02View. No **propriedades** janela, selecione o ícone para substituições. Scoll para baixo na lista para OnInitialUpdate. Clique no menu suspenso lista e selecione \<Add >. No MFC02View.cpp. Verifique se que o corpo da função OnInitialUpdate é da seguinte maneira:
 
     ```
     CWinFormsView::OnInitialUpdate();
@@ -53,11 +53,11 @@ Este tópico pressupõe que você concluiu previamente [como: criar o controle d
 
 1. Compile e execute o projeto.
 
-     No menu **Compilar**, clique em **Compilar Solução**.
+   No menu **Compilar**, clique em **Compilar Solução**.
 
-     Sobre o **Debug** menu, clique em **iniciar sem depuração**.
+   Sobre o **Debug** menu, clique em **iniciar sem depuração**.
 
-     Observe que a caixa de texto agora é inicializada.
+   Observe que a caixa de texto agora é inicializada.
 
 ## <a name="see-also"></a>Consulte também
 

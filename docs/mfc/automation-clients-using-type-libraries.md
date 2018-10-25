@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 421040024e5dd95fb39bdc78cd54f3f7dc49bf83
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 001dfb29a5ac0f6d93b0715bd2b86ccd60e91259
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377702"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054599"
 ---
 # <a name="automation-clients-using-type-libraries"></a>Clientes de automação: usando bibliotecas de tipo
 
@@ -54,9 +54,9 @@ Visual C++ mantém automaticamente esse arquivo de biblioteca de tipos para voc�
     > [!NOTE]
     >  Você pode selecionar as interfaces de mais de uma biblioteca de tipos.
 
-     Selecione as interfaces, clique duas vezes neles ou clique no **adicionar** botão. Quando você fizer isso, os nomes das classes de expedição serão exibidos na **classes geradas** caixa. Você pode editar os nomes de classe a `Class` caixa.
+   Selecione as interfaces, clique duas vezes neles ou clique no **adicionar** botão. Quando você fizer isso, os nomes das classes de expedição serão exibidos na **classes geradas** caixa. Você pode editar os nomes de classe a `Class` caixa.
 
-     O **arquivo** caixa exibe o arquivo no qual a classe será declarada. (você pode editar esse nome de arquivo). Você também pode usar o botão Procurar para selecionar outros arquivos, se você preferir ter as informações de cabeçalho e de implementação escritas em arquivos existentes ou em um diretório que não seja o diretório do projeto.
+   O **arquivo** caixa exibe o arquivo no qual a classe será declarada. (você pode editar esse nome de arquivo). Você também pode usar o botão Procurar para selecionar outros arquivos, se você preferir ter as informações de cabeçalho e de implementação escritas em arquivos existentes ou em um diretório que não seja o diretório do projeto.
 
     > [!NOTE]
     >  Todas as classes de expedição de interfaces selecionadas serão colocadas no arquivo especificado aqui. Se você quiser que as interfaces sejam declaradas nos cabeçalhos separados, você deve executar esse assistente para cada arquivo de cabeçalho que você deseja criar.
@@ -66,7 +66,7 @@ Visual C++ mantém automaticamente esse arquivo de biblioteca de tipos para voc�
 
 1. Clique em **Finalizar**.
 
-     O assistente, em seguida, irá escrever o código para as suas classes de expedição usando a classe especificada e os nomes de arquivo.
+   O assistente, em seguida, irá escrever o código para as suas classes de expedição usando a classe especificada e os nomes de arquivo.
 
 ## <a name="see-also"></a>Consulte também
 

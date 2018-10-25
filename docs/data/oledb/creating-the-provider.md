@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0dbdf7350eeba1a29392bafc2f099a857e212e37
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 230620a2375ac5aa822e55496d1f26751ee6f7b3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410740"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055340"
 ---
 # <a name="creating-the-provider"></a>Criando o provedor
 
@@ -32,7 +32,7 @@ ms.locfileid: "49410740"
 
 1. No **Add Class** caixa de diálogo **instalado** > **Visual C++** > **ATL**, selecione o **Provedor de OLEDB do ATL** ícone e clique **aberto**.
 
-1. No **ATL OLE DB Provider Wizard**, insira um nome curto para o provedor na **nome curto** caixa. Os tópicos a seguir usam o nome curto "MyProvider", mas você pode usar outro nome. As outras caixas de nome populam de acordo com o nome que você inserir.
+1. No **ATL OLE DB Provider Wizard**, insira um nome curto para o provedor na **nome curto** caixa. Os tópicos a seguir usam o nome curto *personalizado*, mas você pode usar outro nome. As outras caixas de nome populam de acordo com o nome que você inserir.
 
 1. Edite as outras caixas de nome, se necessário. Além dos nomes de objeto e arquivos, você pode editar o seguinte:
 

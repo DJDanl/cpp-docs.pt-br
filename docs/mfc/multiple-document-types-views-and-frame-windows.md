@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a488a3d46d60762f73406ea6f604761804277aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ce4caa9b8a8575264563d69f47dbba1dcedb69e5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429767"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054105"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Vários tipos de documento, exibições e janelas com moldura
 
@@ -62,15 +62,15 @@ MFC dá suporte a três interfaces de usuário comuns que exigem várias exibiç
 
 - Objetos de exibição da mesma classe, cada um em uma janela de quadro de documento MDI separada.
 
-     Você talvez queira dar suporte à criação de uma segunda janela do quadro em um documento. O usuário pode escolher um comando nova janela para abrir um segundo quadro com um modo de exibição do mesmo documento e, em seguida, use dois quadros para exibir as diferentes partes do documento ao mesmo tempo. O framework suporta o comando nova janela no menu janela para aplicativos MDI duplicando a janela de quadro inicial e a exibição anexados ao documento.
+   Você talvez queira dar suporte à criação de uma segunda janela do quadro em um documento. O usuário pode escolher um comando nova janela para abrir um segundo quadro com um modo de exibição do mesmo documento e, em seguida, use dois quadros para exibir as diferentes partes do documento ao mesmo tempo. O framework suporta o comando nova janela no menu janela para aplicativos MDI duplicando a janela de quadro inicial e a exibição anexados ao documento.
 
 - Objetos de exibição da mesma classe na mesma janela de quadro do documento.
 
-     Janelas separadoras dividir o espaço do modo de exibição de uma janela de documento único em vários modos de exibição separados do documento. A estrutura cria vários objetos de exibição da mesma classe de exibição. Para obter mais informações, consulte [divisor Windows](#_core_splitter_windows).
+   Janelas separadoras dividir o espaço do modo de exibição de uma janela de documento único em vários modos de exibição separados do documento. A estrutura cria vários objetos de exibição da mesma classe de exibição. Para obter mais informações, consulte [divisor Windows](#_core_splitter_windows).
 
 - Exibir objetos de classes diferentes em uma janela de quadro único.
 
-     Nesse modelo, uma variação da janela separadora, vários modos de exibição compartilham uma janela de quadro único. As exibições são construídas a partir de classes diferentes, cada modo de exibição fornece uma maneira diferente para exibir o mesmo documento. Por exemplo, um modo de exibição pode mostrar um documento de processamento de texto no modo normal, enquanto o outro modo de exibição mostra-lo no modo de estrutura de tópicos. Um controle de splitter permite ao usuário ajustar os tamanhos relativos dos modos de exibição.
+   Nesse modelo, uma variação da janela separadora, vários modos de exibição compartilham uma janela de quadro único. As exibições são construídas a partir de classes diferentes, cada modo de exibição fornece uma maneira diferente para exibir o mesmo documento. Por exemplo, um modo de exibição pode mostrar um documento de processamento de texto no modo normal, enquanto o outro modo de exibição mostra-lo no modo de estrutura de tópicos. Um controle de splitter permite ao usuário ajustar os tamanhos relativos dos modos de exibição.
 
 A figura a seguir, dividido em partes a, b e c, mostra os três modelos de interface do usuário na ordem apresentada acima.
 

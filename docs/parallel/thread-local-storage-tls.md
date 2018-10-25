@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b271ed2c2af94e37edcbabb6611cda967f9587c7
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 18d9d2c1b3c633ba3399e93d34317c2360d45215
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081865"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059838"
 ---
 # <a name="thread-local-storage-tls"></a>Armazenamento local de thread (TLS)
 
@@ -100,7 +100,7 @@ As diretrizes a seguir devem ser observadas quando declarar estaticamente vincul
     int *p = &tls_i;       //This will generate an error in C.
     ```
 
-     Essa restrição não se aplica em C++. Como C++ permite para inicialização dinâmica de todos os objetos, você pode inicializar um objeto usando uma expressão que usa o endereço de uma variável local de thread. Isso é feito exatamente como a construção de objetos de thread local. Por exemplo, o código mostrado anteriormente não gera um erro quando ele é compilado como um arquivo de origem do C++. Observe que o endereço de uma variável local de thread é válido somente quando o thread em que o endereço foi feito ainda existe.
+   Essa restrição não se aplica em C++. Como C++ permite para inicialização dinâmica de todos os objetos, você pode inicializar um objeto usando uma expressão que usa o endereço de uma variável local de thread. Isso é feito exatamente como a construção de objetos de thread local. Por exemplo, o código mostrado anteriormente não gera um erro quando ele é compilado como um arquivo de origem do C++. Observe que o endereço de uma variável local de thread é válido somente quando o thread em que o endereço foi feito ainda existe.
 
 - C padrão permite a inicialização de um objeto ou variável com uma expressão que envolva uma referência a mesma, mas apenas para objetos de extensão não estática. Embora o C++ geralmente permita essa inicialização dinâmica de objetos com uma expressão que envolva uma referência a mesmo, esse tipo de inicialização não é permitido com objetos locais de thread. Por exemplo:
 
@@ -110,9 +110,9 @@ As diretrizes a seguir devem ser observadas quando declarar estaticamente vincul
     __declspec( thread )int tls_i = sizeof( tls_i )       // Legal in C and C++
     ```
 
-     Observe que um `sizeof` expressão que inclui o objeto que está sendo inicializado não representa uma referência a mesma e é habilitado em C e C++.
+   Observe que um `sizeof` expressão que inclui o objeto que está sendo inicializado não representa uma referência a mesma e é habilitado em C e C++.
 
-     O C++ não permite essa inicialização dinâmica de dados de thread devido a possíveis aprimoramentos futuros para o recurso de armazenamento local de thread.
+   O C++ não permite essa inicialização dinâmica de dados de thread devido a possíveis aprimoramentos futuros para o recurso de armazenamento local de thread.
 
 - Em sistemas de operacionais Windows anteriores ao Windows Vista, `__declspec`(thread) tem algumas limitações. Se uma DLL declara quaisquer dados ou objeto como `__declspec`(thread), isso pode causar uma falha de proteção se carregado dinamicamente. Depois que a DLL é carregada com [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya), ele causa falha do sistema sempre que o código faz referência a `__declspec`dados (thread). Como o espaço de variável global para um thread é alocado em tempo de execução, o tamanho desse espaço se baseia em um cálculo de requisitos do aplicativo mais os requisitos de todas as DLLs vinculadas estaticamente. Quando você usa `LoadLibrary`, você não pode estender esse espaço para permitir que as variáveis locais de thread declaradas com `__declspec`(thread). Use as APIs de TLS, tais como [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc), em sua DLL para alocar TLS, se a DLL pode ser carregada com `LoadLibrary`.
 

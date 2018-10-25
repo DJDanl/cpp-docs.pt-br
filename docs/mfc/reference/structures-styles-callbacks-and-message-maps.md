@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8499fd02e9338d518eae9c3f7ea4d4cb077fedb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4aebb9ab084bafa80f212a29969dce27a6ae6c5d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403598"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059682"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>Estruturas, estilos, retornos de chamada e mapas de mensagem
 
@@ -41,7 +41,7 @@ Fornece links para os estilos usados durante a criação de objetos MFC.
 [Funções de retorno de chamada usadas pelo MFC](../../mfc/reference/callback-functions-used-by-mfc.md)<br/>
 Fornece links para as funções de retorno de chamada que aparecem na biblioteca do MFC.
 
-[Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)<br/>
+[Mapas de mensagens](../../mfc/reference/message-maps-mfc.md)<br/>
 Descreve as macros de mapeamento de mensagem e `CWnd` entradas de mapa de mensagem.
 
 ## <a name="related-sections"></a>Seções relacionadas
@@ -51,6 +51,4 @@ Lista as classes na biblioteca do MFC de acordo com a categoria.
 
 [Exemplos de MFC](../../visual-cpp-samples.md)<br/>
 Fornece links para exemplos que demonstram como usar a biblioteca do MFC.
-
-
 

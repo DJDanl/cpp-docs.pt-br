@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378a99021ca1b48599ee934d659542384068e195
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2f3824e87a2016a848b3723aaa293f235f6f9b09
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443339"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054859"
 ---
 # <a name="serialization-making-a-serializable-class"></a>Serialização: criando uma classe serializável
 
@@ -67,9 +67,9 @@ Considere uma classe que deriva `CObject` e tem duas novas variáveis membro, do
 
 1. Inserir ou extrair as variáveis de membro específicas à sua classe.
 
-     Os operadores de inserção e extração de interagem com a classe de arquivo morto para ler e gravar os dados. O exemplo a seguir mostra como implementar `Serialize` para o `CPerson` classe declarada acima:
+   Os operadores de inserção e extração de interagem com a classe de arquivo morto para ler e gravar os dados. O exemplo a seguir mostra como implementar `Serialize` para o `CPerson` classe declarada acima:
 
-     [!code-cpp[NVC_MFCSerialization#2](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#2](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_2.cpp)]
 
 Você também pode usar o [CArchive::Read](../mfc/reference/carchive-class.md#read) e [CArchive::Write](../mfc/reference/carchive-class.md#write) funções de membro para ler e gravar grandes quantidades de dados não tipados.
 

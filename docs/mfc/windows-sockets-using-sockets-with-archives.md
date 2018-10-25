@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 217dcd1d5e999ea640795c656bbf40f7adad3d7d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 295077b474681cabeb1221052ae9e2c9ad5ed79a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398738"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053162"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: usando soquetes com arquivos mortos
 
@@ -49,7 +49,7 @@ Usando um `CSocket` objeto envolve criar e associar juntos vários objetos de cl
 
 1. Usar o objeto para criar subjacente **soquete** manipular.
 
-     Para um `CSocket` objeto de cliente, você normalmente deve usar os parâmetros padrão para [criar](../mfc/reference/casyncsocket-class.md#create), a menos que você precisa de um soquete de datagrama. Para um `CSocket` objeto de servidor, você deve especificar uma porta no `Create` chamar.
+   Para um `CSocket` objeto de cliente, você normalmente deve usar os parâmetros padrão para [criar](../mfc/reference/casyncsocket-class.md#create), a menos que você precisa de um soquete de datagrama. Para um `CSocket` objeto de servidor, você deve especificar uma porta no `Create` chamar.
 
     > [!NOTE]
     >  `CArchive` não funciona com soquetes de datagrama. Se você quiser usar `CSocket` para um soquete de datagrama, você deve usar a classe como você usaria `CAsyncSocket`, ou seja, sem um arquivo morto. Porque datagramas não são confiáveis (não a garantia de que chegam e podem ser repetidas ou fora de sequência), eles não são compatíveis com a serialização por meio de um arquivo morto. Você espera que uma operação de serialização para concluir com confiança e na sequência. Se você tentar usar `CSocket` com um `CArchive` de objeto para um datagrama uma asserção MFC falha.
@@ -58,7 +58,7 @@ Usando um `CSocket` objeto envolve criar e associar juntos vários objetos de cl
 
      -ou-
 
-     Se o soquete é um servidor, chame [CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen) para começar a escutar tentativas de conexão de um cliente. Ao receber uma solicitação de conexão, aceitá-lo chamando [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).
+   Se o soquete é um servidor, chame [CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen) para começar a escutar tentativas de conexão de um cliente. Ao receber uma solicitação de conexão, aceitá-lo chamando [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).
 
     > [!NOTE]
     >  O `Accept` função de membro usa uma referência a um novo e vazio `CSocket` objeto como seu parâmetro. Você deve construir esse objeto antes de chamar `Accept`. Se esse objeto de soquete sai do escopo, a conexão será fechada. Não chame `Create` para esse novo objeto de soquete.
@@ -67,13 +67,13 @@ Usando um `CSocket` objeto envolve criar e associar juntos vários objetos de cl
 
 1. Criar uma [CArchive](../mfc/reference/carchive-class.md) objeto para carregamento (recebimento) ou armazenamento de dados (envio). O arquivo está associado com o `CSocketFile` objeto.
 
-     Tenha em mente que `CArchive` não funciona com soquetes de datagrama.
+   Tenha em mente que `CArchive` não funciona com soquetes de datagrama.
 
 1. Use o `CArchive` objeto para passar dados entre os soquetes de cliente e servidor.
 
-     Tenha em mente que um determinado `CArchive` objeto move dados em apenas uma direção: para carregamento (recebimento) ou armazenar (envio). Em alguns casos, você usará dois `CArchive` objetos: uma para envio de dados, o outro para o recebimento de confirmações.
+   Tenha em mente que um determinado `CArchive` objeto move dados em apenas uma direção: para carregamento (recebimento) ou armazenar (envio). Em alguns casos, você usará dois `CArchive` objetos: uma para envio de dados, o outro para o recebimento de confirmações.
 
-     Depois de aceitar uma conexão e como configurar o arquivo morto, você pode executar tarefas como a validação de senhas.
+   Depois de aceitar uma conexão e como configurar o arquivo morto, você pode executar tarefas como a validação de senhas.
 
 1. Destrua objetos de soquete, o arquivo de soquete e arquivamento.
 

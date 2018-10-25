@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a491c120dff7f8f505878d6887498eb5f05fb22
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 7cdfa9011e0021d168c0ad10424a7d326b3c3725
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790143"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062152"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -72,4 +72,4 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 [Atributos de parâmetro](parameter-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
-[Atributos de interface](interface-attributes.md)  
+[Atributos de interface](interface-attributes.md)

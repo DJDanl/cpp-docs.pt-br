@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd4f5ac780b36e51be63aef7ce87884284542cbb
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 999e91f1f437077b90b2c8a0ea9f7ac8a4603080
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861935"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054665"
 ---
 # <a name="cwindow-class"></a>Classe CWindow
 
@@ -499,7 +499,7 @@ Ver [CheckDlgButton](/windows/desktop/api/winuser/nf-winuser-checkdlgbutton) no 
 Verifica se o botão de opção especificado.
 
 ```
-BOOL CheckRadioButton(  
+BOOL CheckRadioButton(
     int nIDFirstButton,
     int nIDLastButton,
     int nIDCheckButton) throw();
@@ -667,7 +667,7 @@ Inicializa o [m_hWnd](#m_hwnd) membro *hWnd*, que, por padrão é NULL.
 Atualiza a estrutura de posição da janela de vários especificada para a janela especificada.
 
 ```
-HDWP DeferWindowPos(  
+HDWP DeferWindowPos(
     HDWP hWinPosInfo,
     HWND hWndInsertAfter,
     int x,
@@ -720,7 +720,7 @@ O HWND associado com o `CWindow` objeto.
 Preenche uma caixa de listagem com os nomes de todos os arquivos que correspondem a um caminho especificado ou o nome de arquivo.
 
 ```
-int DlgDirList(  
+int DlgDirList(
     LPTSTR lpPathSpec,
     int nIDListBox,
     int nIDStaticPath,
@@ -736,7 +736,7 @@ Ver [DlgDirList](/windows/desktop/api/winuser/nf-winuser-dlgdirlista) no Windows
 Preenche uma caixa de combinação com os nomes de todos os arquivos que correspondem a um caminho especificado ou o nome de arquivo.
 
 ```
-int DlgDirListComboBox(  
+int DlgDirListComboBox(
     LPTSTR lpPathSpec,
     int nIDComboBox,
     int nIDStaticPath,
@@ -752,7 +752,7 @@ Ver [DlgDirListComboBox](/windows/desktop/api/winuser/nf-winuser-dlgdirlistcombo
 Recupera a seleção atual de uma caixa de listagem.
 
 ```
-BOOL DlgDirSelect(  
+BOOL DlgDirSelect(
     LPTSTR lpString,
     int nCount,
     int nIDListBox) throw();
@@ -767,7 +767,7 @@ Ver [DlgDirSelectEx](/windows/desktop/api/winuser/nf-winuser-dlgdirselectexa) no
 Recupera a seleção atual de uma caixa de combinação.
 
 ```
-BOOL DlgDirSelectComboBox(  
+BOOL DlgDirSelectComboBox(
     LPTSTR lpString,
     int nCount,
     int nIDComboBox) throw();
@@ -927,7 +927,7 @@ O identificador para uma janela de descendente.
 Chame essa função para obter um ponteiro para uma interface de um controle ActiveX hospedado por um controle de composição ou uma caixa de diálogo controle de hospedagem.
 
 ```
-HRESULT GetDlgControl(  
+HRESULT GetDlgControl(
     int nID,
     REFIID iid,
     void** ppCtrl) throw();
@@ -969,7 +969,7 @@ Ver [GetDlgCtrlID](/windows/desktop/api/winuser/nf-winuser-getdlgctrlid) no Wind
 Recupera um ponteiro para uma interface para o controle de ATL que hospeda o contêiner.
 
 ```
-HRESULT GetDlgHost(  
+HRESULT GetDlgHost(
     int nID,
     REFIID iid,
     void** ppHost) throw();
@@ -1011,7 +1011,7 @@ Ver [GetDlgItem](/windows/desktop/api/winuser/nf-winuser-getdlgitem) no Windows 
 Traduz o texto de um controle em um inteiro.
 
 ```
-UINT GetDlgItemInt(  
+UINT GetDlgItemInt(
     int nID,
     BOOL* lpTrans = NULL,
     BOOL bSigned = TRUE) const throw();
@@ -1026,12 +1026,12 @@ Ver [GetDlgItemInt](/windows/desktop/api/winuser/nf-winuser-getdlgitemint) no Wi
 Recupera um texto do controle.
 
 ```
-UINT GetDlgItemText(  
+UINT GetDlgItemText(
     int nID,
     LPTSTR lpStr,
     int nMaxCount) const throw();
 
-BOOL GetDlgItemText(  
+BOOL GetDlgItemText(
     int nID,
     BSTR& bstrText) const throw();
 ```
@@ -1202,7 +1202,7 @@ Ver [GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrollpos) no Wind
 Recupera o intervalo da barra de rolagem.
 
 ```
-BOOL GetScrollRange(  
+BOOL GetScrollRange(
     int nBar,
     LPINT lpMinPos,
     LPINT lpMaxPos) const throw();
@@ -1543,7 +1543,7 @@ Ver [HideCaret](/windows/desktop/api/winuser/nf-winuser-hidecaret) no Windows SD
 Realça ou remove o realce de um item de menu de nível superior.
 
 ```
-BOOL HiliteMenuItem(  
+BOOL HiliteMenuItem(
     HMENU hMenu,
     UINT uHiliteItem,
     UINT uHilite) throw();
@@ -1785,12 +1785,12 @@ HWND m_hWnd throw() throw();
 Converte um conjunto de pontos de espaço de coordenadas da janela para o espaço de coordenadas de outra janela.
 
 ```
-int MapWindowPoints(  
+int MapWindowPoints(
     HWND hWndTo,
     LPPOINT lpPoint,
     UINT nCount) const throw();
 
-int MapWindowPoints(  
+int MapWindowPoints(
     HWND hWndTo,
     LPRECT lpRect) const throw();
 ```
@@ -1806,7 +1806,7 @@ A segunda versão desse método permite que você converta as coordenadas de um 
 Exibe uma caixa de mensagem.
 
 ```
-int MessageBox(  
+int MessageBox(
     LPCTSTR lpszText,
     LPCTSTR lpszCaption = NULL,
     UINT nType = MB_OK) throw();
@@ -1825,7 +1825,7 @@ Ver [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) no Windows 
 Modifica os estilos de janela do `CWindow` objeto.
 
 ```
-BOOL ModifyStyle(  
+BOOL ModifyStyle(
     DWORD dwRemove,
     DWORD dwAdd,
     UINT nFlags = 0) throw();
@@ -1871,7 +1871,7 @@ Para modificar uma janela do estilos estendidos, chame [ModifyStyleEx](#modifyst
 Modifica os estilos de janela estendidos do `CWindow` objeto.
 
 ```
-BOOL ModifyStyleEx(  
+BOOL ModifyStyleEx(
     DWORD dwRemove,
     DWORD dwAdd,
     UINT nFlags = 0) throw();
@@ -1917,14 +1917,14 @@ Para modificar o windows usando estilos de janela normal, chame [ModifyStyle](#m
 Altera o tamanho e a posição da janela.
 
 ```
-BOOL MoveWindow(  
+BOOL MoveWindow(
     int x,
     int y,
     int nWidth,
     int nHeight,
     BOOL bRepaint = TRUE) throw();
 
-BOOL MoveWindow(  
+BOOL MoveWindow(
     LPCRECT lpRect,
     BOOL bRepaint = TRUE) throw();
 ```
@@ -1980,7 +1980,7 @@ CWindow& operator= (HWND hWnd) throw();
 Coloca uma mensagem na fila de mensagem associada ao thread que criou a janela.
 
 ```
-BOOL PostMessage(  
+BOOL PostMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
@@ -2077,7 +2077,7 @@ static RECT rcDefault;
 Atualiza um retângulo especificado ou a região na área de cliente.
 
 ```
-BOOL RedrawWindow(  
+BOOL RedrawWindow(
     LPCRECT lpRectUpdate = NULL,
     HRGN hRgnUpdate = NULL,
     UINT flags = RDW_INVALIDATE | RDW_UPDATENOW | RDW_ERASE);
@@ -2114,7 +2114,7 @@ Ver [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) no Windows SD
 Redimensiona a janela para o tamanho da área de cliente especificado.
 
 ```
-BOOL ResizeClient(  
+BOOL ResizeClient(
     int nWidth,
     int nHeight,
     BOOL bRedraw = FALSE) throw();
@@ -2151,7 +2151,7 @@ A segunda versão desse método permite que você converta as coordenadas de um 
 Rola a área de cliente especificado.
 
 ```
-BOOL ScrollWindow(  
+BOOL ScrollWindow(
     int xAmount,
     int yAmount,
     LPCRECT lpRect = NULL,
@@ -2167,7 +2167,7 @@ Ver [ScrollWindow](/windows/desktop/api/winuser/nf-winuser-scrollwindow) no Wind
 Rola a área de cliente especificado com recursos adicionais.
 
 ```
-int ScrollWindowEx(  
+int ScrollWindowEx(
     int dx,
     int dy,
     LPCRECT lpRectScroll,
@@ -2186,7 +2186,7 @@ Ver [ScrollWindowEx](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) no 
 Envia uma mensagem para um controle.
 
 ```
-LRESULT SendDlgItemMessage(  
+LRESULT SendDlgItemMessage(
     int nID,
     UINT message,
     WPARAM wParam = 0,
@@ -2202,12 +2202,12 @@ Ver [SendDlgItemMessage](/windows/desktop/api/winuser/nf-winuser-senddlgitemmess
 Envia uma mensagem para a janela e não retorna até que o procedimento de janela processou a mensagem.
 
 ```
-LRESULT SendMessage(  
+LRESULT SendMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
 
-static LRESULT SendMessage(  
+static LRESULT SendMessage(
     HWND hWnd,
     UINT message,
     WPARAM wParam,
@@ -2227,7 +2227,7 @@ Ver [SendMessage](https://msdn.microsoft.com/library/windows/desktop/ms644950) n
 Envia a mensagem especificada para todos os filhos imediatos do `CWindow` objeto.
 
 ```
-void SendMessageToDescendants(  
+void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0,
@@ -2257,7 +2257,7 @@ Se *bDeep* for TRUE, além disso, a mensagem é enviada para todas as outras jan
 Envia uma mensagem para a janela.
 
 ```
-BOOL SendNotifyMessage(  
+BOOL SendNotifyMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
@@ -2331,7 +2331,7 @@ Se for bem-sucedido, o identificador anterior da janela. Caso contrário, 0.
 Altera o texto do controle para a representação de cadeia de caracteres de um valor inteiro.
 
 ```
-BOOL SetDlgItemInt(  
+BOOL SetDlgItemInt(
     int nID,
     UINT nValue,
     BOOL bSigned = TRUE) throw();
@@ -2483,7 +2483,7 @@ Chamar `SetRedraw` para permitir que as alterações a serem redesenhados ou par
 Define os parâmetros de uma barra de rolagem.
 
 ```
-int SetScrollInfo(  
+int SetScrollInfo(
     int nBar,
     LPSCROLLINFO lpScrollInfo,
     BOOL bRedraw = TRUE) throw();
@@ -2498,7 +2498,7 @@ Ver [SetScrollInfo](/windows/desktop/api/winuser/nf-winuser-setscrollinfo) no Wi
 Altera a posição da caixa de rolagem.
 
 ```
-int SetScrollPos(  
+int SetScrollPos(
     int nBar,
     int nPos,
     BOOL bRedraw = TRUE) throw();
@@ -2513,7 +2513,7 @@ Ver [SetScrollPos](/windows/desktop/api/winuser/nf-winuser-setscrollpos) no Wind
 Altera o intervalo da barra de rolagem.
 
 ```
-BOOL SetScrollRange(  
+BOOL SetScrollRange(
     int nBar,
     int nMinPos,
     int nMaxPos,
@@ -2529,7 +2529,7 @@ Ver [SetScrollRange](/windows/desktop/api/winuser/nf-winuser-setscrollrange) no 
 Cria um evento de timer.
 
 ```
-UINT SetTimer(  
+UINT SetTimer(
     UINT nIDEvent,
     UINT nElapse,
     void (CALLBACK* lpfnTimer)(HWND, UINT, UINT, DWORD) = NULL) throw();
@@ -2597,7 +2597,7 @@ Ver [SetWindowPlacement](https://msdn.microsoft.com/library/windows/desktop/ms63
 Define o tamanho, posição e ordem Z.
 
 ```
-BOOL SetWindowPos(  
+BOOL SetWindowPos(
     HWND hWndInsertAfter,
     int x,
     int y,
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
     int cy,
     UINT nFlags) throw();
 
-BOOL SetWindowPos(  
+BOOL SetWindowPos(
     HWND hWndInsertAfter,
     LPCRECT lpRect,
     UINT nFlags) throw();
@@ -2770,7 +2770,7 @@ Ver [ValidateRgn](/windows/desktop/api/winuser/nf-winuser-validatergn) no Window
 Ajuda do Windows é iniciado.
 
 ```
-BOOL WinHelp(  
+BOOL WinHelp(
     LPCTSTR lpszHelp,
     UINT nCmd = HELP_CONTEXT,
     DWORD dwData = 0) throw();

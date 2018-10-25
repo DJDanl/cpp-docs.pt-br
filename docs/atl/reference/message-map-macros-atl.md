@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce6099b904c088399dcb43635a1b254567e8320
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fbfd58491981cdba1b3aa3002736f49a7c09038c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024900"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054470"
 ---
 # <a name="message-map-macros-atl"></a>Macros de mapa de mensagem (ATL)
 
@@ -93,11 +93,11 @@ Essas macros definem entradas e mapas de mensagem.
 |[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|Mapeia uma mensagem WM_NOTIFY refletida para uma função do manipulador, com base no código de notificação e o identificador de controle.|
 |[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|Mapeia uma mensagem WM_NOTIFY refletida para uma função do manipulador, com base no identificador do controle.|
 |[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|Mapeia uma mensagem WM_NOTIFY refletida para uma função do manipulador, com base no código de notificação e um intervalo contíguo de identificadores de controle.|
-|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Mapeia uma mensagem WM_NOTIFY refletida para uma função do manipulador, com base em um intervalo contíguo de identificadores de controle.|  
+|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|Mapeia uma mensagem WM_NOTIFY refletida para uma função do manipulador, com base em um intervalo contíguo de identificadores de controle.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlwin  
+**Cabeçalho:** atlwin
 
 ##  <a name="alt_msg_map"></a>  ALT_MSG_MAP
 
@@ -136,7 +136,7 @@ O exemplo a seguir mostra dois mapas de mensagem alternativa. O mapa de mensagem
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlwin   
+**Cabeçalho:** atlwin
 
 ##  <a name="begin_msg_map"></a>  BEGIN_MSG_MAP
 
@@ -153,7 +153,7 @@ BEGIN_MSG_MAP(theClass)
 
 ### <a name="remarks"></a>Comentários
 
-[CWindowImpl::WindowProc](cwindowimpl-class.md#windowproc) usa o mapa de mensagem padrão para processar as mensagens enviadas para a janela. Mapa de mensagens direciona as mensagens para a função de manipulador apropriado ou ao outro mapa de mensagem.  
+[CWindowImpl::WindowProc](cwindowimpl-class.md#windowproc) usa o mapa de mensagem padrão para processar as mensagens enviadas para a janela. Mapa de mensagens direciona as mensagens para a função de manipulador apropriado ou ao outro mapa de mensagem.
 
 As seguintes macros mapeiam uma mensagem para uma função de manipulador. Essa função deve ser definida em *theClass*.
 
@@ -328,7 +328,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 
 ### <a name="remarks"></a>Comentários
 
-CHAIN_MSG_MAP_DYNAMIC direciona mensagens, em tempo de execução para o mapa de mensagem padrão em outro objeto. O objeto e seu mapa de mensagem estão associados *dynaChainID*, que será definido por meio de [CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry). Você deve derivar de sua classe de `CDynamicChain` para usar CHAIN_MSG_MAP_DYNAMIC. Por exemplo, consulte o [CDynamicChain](../../atl/reference/cdynamicchain-class.md) visão geral.  
+CHAIN_MSG_MAP_DYNAMIC direciona mensagens, em tempo de execução para o mapa de mensagem padrão em outro objeto. O objeto e seu mapa de mensagem estão associados *dynaChainID*, que será definido por meio de [CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry). Você deve derivar de sua classe de `CDynamicChain` para usar CHAIN_MSG_MAP_DYNAMIC. Por exemplo, consulte o [CDynamicChain](../../atl/reference/cdynamicchain-class.md) visão geral.
 
 > [!NOTE]
 >  Sempre começam com um mapa de mensagem [BEGIN_MSG_MAP](#begin_msg_map). Em seguida, você pode declarar mapas de mensagem alternativa subsequentes com ALT_MSG_MAP. O [END_MSG_MAP](#end_msg_map) macro marca o fim do mapa de mensagens. Cada mapa de mensagem deve ter exatamente uma instância de BEGIN_MSG_MAP e END_MSG_MAP.
@@ -823,7 +823,7 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 [in] O código de notificação.
 
 *func*<br/>
-[in] O nome da função de manipulador de mensagens.  
+[in] O nome da função de manipulador de mensagens.
 
 ### <a name="requirements"></a>Requisitos
 
@@ -846,11 +846,11 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 [in] O código de notificação.
 
 *func*<br/>
-[in] O nome da função de manipulador de mensagens.  
+[in] O nome da função de manipulador de mensagens.
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlwin  
+**Cabeçalho:** atlwin
 
 ##  <a name="reflected_command_id_handler"></a>  REFLECTED_COMMAND_ID_HANDLER
 
@@ -866,11 +866,11 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 [in] O identificador do controle, item de menu ou acelerador.
 
 *func*<br/>
-[in] O nome da função de manipulador de mensagens.  
+[in] O nome da função de manipulador de mensagens.
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlwin  
+**Cabeçalho:** atlwin
 
 ##  <a name="reflected_command_range_code_handler"></a>  REFLECTED_COMMAND_RANGE_CODE_HANDLER
 
@@ -892,11 +892,11 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 [in] O código de notificação.
 
 *func*<br/>
-[in] O nome da função de manipulador de mensagens.  
+[in] O nome da função de manipulador de mensagens.
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlwin  
+**Cabeçalho:** atlwin
 
 ##  <a name="reflected_command_range_handler"></a>  REFLECTED_COMMAND_RANGE_HANDLER
 
@@ -915,11 +915,11 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 [in] Marca o fim de um intervalo contíguo de identificadores de controle.
 
 *func*<br/>
-[in] O nome da função de manipulador de mensagens.  
+[in] O nome da função de manipulador de mensagens.
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlwin  
+**Cabeçalho:** atlwin
 
 ##  <a name="reflected_notify_code_handler"></a>  REFLECTED_NOTIFY_CODE_HANDLER
 
@@ -935,11 +935,11 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 [in] O código de notificação.
 
 *func*<br/>
-[in] O nome da função de manipulador de mensagens.  
+[in] O nome da função de manipulador de mensagens.
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlwin  
+**Cabeçalho:** atlwin
 
 ##  <a name="reflected_notify_handler"></a>  REFLECTED_NOTIFY_HANDLER
 
@@ -958,11 +958,11 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 [in] O código de notificação.
 
 *func*<br/>
-[in] O nome da função de manipulador de mensagens.  
+[in] O nome da função de manipulador de mensagens.
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlwin  
+**Cabeçalho:** atlwin
 
 ##  <a name="reflected_notify_id_handler"></a>  REFLECTED_NOTIFY_ID_HANDLER
 
@@ -978,11 +978,11 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 [in] O identificador do controle, item de menu ou acelerador.
 
 *func*<br/>
-[in] O nome da função de manipulador de mensagens.  
+[in] O nome da função de manipulador de mensagens.
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlwin  
+**Cabeçalho:** atlwin
 
 ##  <a name="reflected_notify_range_code_handler"></a>  REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 

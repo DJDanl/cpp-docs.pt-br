@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f4951da1f6407dae1d31d92724bbcc80e677616
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ca9b67737933ceeb59861234759aa2652b6b985e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442429"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057446"
 ---
 # <a name="cmfctabdroptarget-class"></a>Classe CMFCTabDropTarget
 
@@ -264,6 +264,4 @@ Este método chama [COleDropTarget::Register](../../mfc/reference/coledroptarget
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [Arrastar e soltar (OLE)](../../mfc/drag-and-drop-ole.md)
-
-
 

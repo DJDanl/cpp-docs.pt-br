@@ -43,189 +43,189 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 63bf2b36477ddc0c4088698c552b8ef734e16986
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 8919a4bb17e65ad105b49e9fd9b4945e47cbdb63
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083718"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058057"
 ---
 # <a name="cmanualaccessor-class"></a>Classe CManualAccessor
 
-Representa um tipo de acessador projetado para uso avançado.  
-  
+Representa um tipo de acessador projetado para uso avançado.
+
 ## <a name="syntax"></a>Sintaxe
 
 ```cpp
-class CManualAccessor : public CAccessorBase  
-```  
+class CManualAccessor : public CAccessorBase
+```
 
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atldbcli.h  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="methods"></a>Métodos  
-  
-|||  
-|-|-|  
-|[AddBindEntry](#addbindentry)|Adiciona uma entrada de associação para as colunas de saída.|  
-|[AddParameterEntry](#addparameterentry)|Adiciona uma entrada de parâmetro para o acessador de parâmetro.|  
-|[CreateAccessor](#createaccessor)|Aloca memória para a coluna de estruturas de associação e inicializa os membros de dados de coluna.|  
-|[CreateParameterAccessor](#createparameteraccessor)|Aloca memória para o parâmetro de estruturas de associação e inicializa os membros de dados do parâmetro.|  
-  
-## <a name="remarks"></a>Comentários  
+**Cabeçalho:** atldbcli.h
 
-Usando `CManualAccessor`, você pode especificar o parâmetro e associação de coluna de saída por chamadas de função de tempo de execução.  
+## <a name="members"></a>Membros
+
+### <a name="methods"></a>Métodos
+
+|||
+|-|-|
+|[AddBindEntry](#addbindentry)|Adiciona uma entrada de associação para as colunas de saída.|
+|[AddParameterEntry](#addparameterentry)|Adiciona uma entrada de parâmetro para o acessador de parâmetro.|
+|[CreateAccessor](#createaccessor)|Aloca memória para a coluna de estruturas de associação e inicializa os membros de dados de coluna.|
+|[CreateParameterAccessor](#createparameteraccessor)|Aloca memória para o parâmetro de estruturas de associação e inicializa os membros de dados do parâmetro.|
+
+## <a name="remarks"></a>Comentários
+
+Usando `CManualAccessor`, você pode especificar o parâmetro e associação de coluna de saída por chamadas de função de tempo de execução.
 
 ## <a name="addbindentry"></a> Cmanualaccessor:: Addbindentry
 
-Adiciona uma entrada de associação para as colunas de saída.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
+Adiciona uma entrada de associação para as colunas de saída.
+
+### <a name="syntax"></a>Sintaxe
+
 ```cpp
-void AddBindEntry(DBORDINAL nOrdinal,  
-   DBTYPE wType,  DBLENGTH nColumnSize,  
-   void* pData,  
-   void* pLength = NULL,  
-   void* pStatus = NULL) throw ();  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
+void AddBindEntry(DBORDINAL nOrdinal,
+   DBTYPE wType,  DBLENGTH nColumnSize,
+   void* pData,
+   void* pLength = NULL,
+   void* pStatus = NULL) throw ();
+```
 
-Ver [DBBINDING](/previous-versions/windows/desktop/ms716845) na *referência do programador do OLE DB*.  
-  
+#### <a name="parameters"></a>Parâmetros
+
+Ver [DBBINDING](/previous-versions/windows/desktop/ms716845) na *referência do programador do OLE DB*.
+
 *nOrdinal*<br/>
-[in] Número da coluna.  
-  
-*wType*<br/>
-[in] Tipo de dados.  
-  
-*nColumnSize*<br/>
-[in] Tamanho de coluna em bytes.  
-  
-*pData*<br/>
-[in] Um ponteiro para os dados da coluna armazenados no buffer.  
-  
-*pLength*<br/>
-[in] Um ponteiro para o tamanho do campo, se necessário.  
-  
-*pStatus*<br/>
-[in] Um ponteiro para a variável a ser associado para o status da coluna, se necessário.  
-  
-### <a name="remarks"></a>Comentários  
+[in] Número da coluna.
 
-Para usar essa função, você deve primeiro chamar [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md). Não é possível adicionar mais entradas do que o número de colunas especificado em `CreateAccessor`. 
-  
+*wType*<br/>
+[in] Tipo de dados.
+
+*nColumnSize*<br/>
+[in] Tamanho de coluna em bytes.
+
+*pData*<br/>
+[in] Um ponteiro para os dados da coluna armazenados no buffer.
+
+*pLength*<br/>
+[in] Um ponteiro para o tamanho do campo, se necessário.
+
+*pStatus*<br/>
+[in] Um ponteiro para a variável a ser associado para o status da coluna, se necessário.
+
+### <a name="remarks"></a>Comentários
+
+Para usar essa função, você deve primeiro chamar [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md). Não é possível adicionar mais entradas do que o número de colunas especificado em `CreateAccessor`.
+
 ## <a name="addparameterentry"></a> Cmanualaccessor:: Addparameterentry
 
-Adiciona uma entrada de parâmetro para as estruturas de entrada de parâmetro.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
+Adiciona uma entrada de parâmetro para as estruturas de entrada de parâmetro.
+
+### <a name="syntax"></a>Sintaxe
+
 ```cpp
-void AddParameterEntry(DBORDINAL nOrdinal,  
-   DBTYPE wType,  DBLENGTH nColumnSize,  
-   void* pData,  
-   void* pLength = NULL,  
-   void* pStatus = NULL,  
-   DBPARAMIO eParamIO = DBPARAMIO_INPUT) throw ();  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
+void AddParameterEntry(DBORDINAL nOrdinal,
+   DBTYPE wType,  DBLENGTH nColumnSize,
+   void* pData,
+   void* pLength = NULL,
+   void* pStatus = NULL,
+   DBPARAMIO eParamIO = DBPARAMIO_INPUT) throw ();
+```
 
-Ver [DBBINDING](/previous-versions/windows/desktop/ms716845) na *referência do programador do OLE DB*.  
-  
+#### <a name="parameters"></a>Parâmetros
+
+Ver [DBBINDING](/previous-versions/windows/desktop/ms716845) na *referência do programador do OLE DB*.
+
 *nOrdinal*<br/>
-[in] Número do parâmetro.  
-  
-*wType*<br/>
-[in] Tipo de dados.  
-  
-*nColumnSize*<br/>
-[in] Tamanho de coluna em bytes.  
-  
-*pData*<br/>
-[in] Um ponteiro para os dados da coluna armazenados no buffer.  
-  
-*pLength*<br/>
-[in] Um ponteiro para o tamanho do campo, se necessário.  
-  
-*pStatus*<br/>
-[in] Um ponteiro para a variável a ser associado para o status da coluna, se necessário.  
-  
-*eParamIO*<br/>
-[in] Especifica se o parâmetro ao qual a associação está associada é um parâmetro de entrada, entrada/saída ou saído.  
-  
-### <a name="remarks"></a>Comentários  
+[in] Número do parâmetro.
 
-Para usar essa função, você deve primeiro chamar [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md). 
+*wType*<br/>
+[in] Tipo de dados.
+
+*nColumnSize*<br/>
+[in] Tamanho de coluna em bytes.
+
+*pData*<br/>
+[in] Um ponteiro para os dados da coluna armazenados no buffer.
+
+*pLength*<br/>
+[in] Um ponteiro para o tamanho do campo, se necessário.
+
+*pStatus*<br/>
+[in] Um ponteiro para a variável a ser associado para o status da coluna, se necessário.
+
+*eParamIO*<br/>
+[in] Especifica se o parâmetro ao qual a associação está associada é um parâmetro de entrada, entrada/saída ou saído.
+
+### <a name="remarks"></a>Comentários
+
+Para usar essa função, você deve primeiro chamar [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md).
 
 ## <a name="createaccessor"></a> Cmanualaccessor:: CreateAccessor
 
-Aloca memória para a coluna de estruturas de associação e inicializa os membros de dados de coluna.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
+Aloca memória para a coluna de estruturas de associação e inicializa os membros de dados de coluna.
+
+### <a name="syntax"></a>Sintaxe
+
 ```cpp
-HRESULT CreateAccessor(int nBindEntries,   
-  void* pBuffer,   
-   DBLENGTH nBufferSize) throw();  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
+HRESULT CreateAccessor(int nBindEntries, 
+  void* pBuffer, 
+   DBLENGTH nBufferSize) throw();
+```
+
+#### <a name="parameters"></a>Parâmetros
 
 *nBindEntries*<br/>
-[in] Número de colunas. Esse número deve corresponder ao número de chamadas para o [cmanualaccessor:: Addbindentry](../../data/oledb/cmanualaccessor-addbindentry.md) função.  
-  
+[in] Número de colunas. Esse número deve corresponder ao número de chamadas para o [cmanualaccessor:: Addbindentry](../../data/oledb/cmanualaccessor-addbindentry.md) função.
+
 *pBuffer*<br/>
-[in] Um ponteiro para o buffer no qual as colunas de saída são armazenadas.  
-  
+[in] Um ponteiro para o buffer no qual as colunas de saída são armazenadas.
+
 *nBufferSize*<br/>
-[in] O tamanho do buffer em bytes.  
-  
-### <a name="return-value"></a>Valor de retorno  
+[in] O tamanho do buffer em bytes.
 
-Um dos valores HRESULT padrão.  
-  
-### <a name="remarks"></a>Comentários  
+### <a name="return-value"></a>Valor de retorno
 
-Chame essa função antes de chamar o `CManualAccessor::AddBindEntry` função.  
+Um dos valores HRESULT padrão.
+
+### <a name="remarks"></a>Comentários
+
+Chame essa função antes de chamar o `CManualAccessor::AddBindEntry` função.
 
 ## <a name="createparameteraccessor"></a> Cmanualaccessor:: Createparameteraccessor
 
-Aloca memória para o parâmetro de estruturas de associação e inicializa os membros de dados do parâmetro.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
+Aloca memória para o parâmetro de estruturas de associação e inicializa os membros de dados do parâmetro.
+
+### <a name="syntax"></a>Sintaxe
+
 ```cpp
-HRESULT CreateParameterAccessor(int nBindEntries,   
-   void* pBuffer,   
-   DBLENGTH nBufferSize) throw();  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
+HRESULT CreateParameterAccessor(int nBindEntries, 
+   void* pBuffer, 
+   DBLENGTH nBufferSize) throw();
+```
+
+#### <a name="parameters"></a>Parâmetros
 
 *nBindEntries*<br/>
-[in] Número de colunas.  
-  
-*pBuffer*<br/>
-[in] Um ponteiro para o buffer no qual as colunas de entrada são armazenadas.  
-  
-*nBufferSize*<br/>
-[in] O tamanho do buffer em bytes.  
-  
-### <a name="return-value"></a>Valor de retorno  
+[in] Número de colunas.
 
-Um dos valores HRESULT padrão.  
-  
-### <a name="remarks"></a>Comentários  
+*pBuffer*<br/>
+[in] Um ponteiro para o buffer no qual as colunas de entrada são armazenadas.
+
+*nBufferSize*<br/>
+[in] O tamanho do buffer em bytes.
+
+### <a name="return-value"></a>Valor de retorno
+
+Um dos valores HRESULT padrão.
+
+### <a name="remarks"></a>Comentários
 
 Você deve chamar essa função antes de chamar [AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md).
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
 
 [DBViewer](../../visual-cpp-samples.md)<br/>
 [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

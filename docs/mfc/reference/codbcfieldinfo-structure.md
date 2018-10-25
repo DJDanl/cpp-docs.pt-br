@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 797a229007be58ff3da3bb529c9e8f4a062c12b3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5f178791bdaf57e5678f2e30d8994c2ffd140ffc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434304"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055791"
 ---
 # <a name="codbcfieldinfo-structure"></a>Estrutura CODBCFieldInfo
 
@@ -71,5 +71,4 @@ Para recuperar essas informações, chame [CRecordset::GetODBCFieldInfo](../../m
 [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CRecordset::GetODBCFieldInfo](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)<br/>
 [CRecordset::GetFieldValue](../../mfc/reference/crecordset-class.md#getfieldvalue)
-
 

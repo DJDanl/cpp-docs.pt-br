@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14adec8d601778e255ae7e4242fc552fc820e64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8c34b4a842655ebce6fccaa89a1dfc6d4ef49add
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396695"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063478"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Controles ActiveX MFC: usando fontes
 
@@ -64,7 +64,7 @@ Conforme discutido em [controles ActiveX MFC: propriedades](../mfc/mfc-activex-c
 
 1. No menu de atalho, clique em **Add** e, em seguida, clique em **adicionar propriedade**.
 
-     Isso abre o Assistente para adicionar propriedade.
+   Isso abre o Assistente para adicionar propriedade.
 
 1. No **nome da propriedade** , clique em **fonte**.
 
@@ -90,7 +90,7 @@ A propriedade Caption estoque é um exemplo de uma propriedade de texto que pode
 
 1. No menu de atalho, clique em **Add** e, em seguida, clique em **adicionar propriedade**.
 
-     Isso abre o Assistente para adicionar propriedade.
+   Isso abre o Assistente para adicionar propriedade.
 
 1. No **nome da propriedade** , clique em **legenda**.
 
@@ -132,7 +132,7 @@ Para implementar uma propriedade de fonte personalizada, você pode usar o Assis
 
 1. No menu de atalho, clique em **Add** e, em seguida, clique em **adicionar propriedade**.
 
-     Isso abre o Assistente para adicionar propriedade.
+   Isso abre o Assistente para adicionar propriedade.
 
 1. No **nome da propriedade** , digite um nome para a propriedade. Para este exemplo, use **HeadingFont**.
 
@@ -168,35 +168,35 @@ No arquivo de implementação de controle (. CPP), faça o seguinte:
 
 - Inicializar *m_fontHeading* no construtor de controle.
 
-     [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
 
 - Declare uma estrutura FONTDESC estática que contém os atributos padrão da fonte.
 
-     [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]
 
 - No controle `DoPropExchange` membro de função, adicione uma chamada para o `PX_Font` função. Isso fornece a inicialização e a persistência para a propriedade de fonte personalizada.
 
-     [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]
 
 - Concluir a implementação do controle `GetHeadingFont` função de membro.
 
-     [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]
 
 - Concluir a implementação do controle `SetHeadingFont` função de membro.
 
-     [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]
 
 - Modificar o controle `OnDraw` a função de membro para definir uma variável para manter a fonte selecionada anteriormente.
 
-     [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]
 
 - Modificar o controle `OnDraw` a função de membro para selecionar a fonte personalizada no contexto de dispositivo, adicionando a seguinte linha sempre que a fonte deve ser usada.
 
-     [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]
 
 - Modificar o controle `OnDraw` a função de membro para selecionar a fonte anterior volta para o contexto de dispositivo, adicionando a seguinte linha depois que a fonte foi usada.
 
-     [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]
 
 Depois que a propriedade de fonte personalizada tiver sido implementada, a página de propriedades de fonte padrão deve ser implementada, permitindo que os usuários de controle alterar a fonte do atual do controle. Para adicionar a ID de página de propriedade para a página de propriedades de fonte padrão, insira a seguinte linha após a macro BEGIN_PROPPAGEIDS:
 

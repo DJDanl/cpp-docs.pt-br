@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b25f957615d738d0608f911736bb42f8e3731dd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dbe2c743f04e8fc8dc67947b9bd9d5560dd35182
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391612"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052688"
 ---
 # <a name="html-basics"></a>Noções básicas de HTML
 
@@ -47,9 +47,9 @@ As etapas abaixo usam marcas HTML para criar uma página da Web simple. Nestas e
 
 1. Comutador de seu navegador e para o **arquivo** menu, escolha **aberto**, ou tipo *file://C:/webpages/first.htm* na caixa de edição de URL do navegador. Você deve ver uma página em branco com a legenda da janela "Principais marcas HTML".
 
-     Observe que as marcas são emparelhadas e são incluídas entre colchetes angulares. As marcas não diferenciam maiusculas de minúsculas, mas maiusculas e minúsculas é frequentemente usada para destacar as marcas.
+   Observe que as marcas são emparelhadas e são incluídas entre colchetes angulares. As marcas não diferenciam maiusculas de minúsculas, mas maiusculas e minúsculas é frequentemente usada para destacar as marcas.
 
-     A marca \<HTML > inicia o documento e a marca \</HTML mais externas > termina a ele. Marcas de fim (nem sempre necessárias) são o mesmo que a marca inicial, mas tem uma barra (/) na frente da marca. Não deve haver nenhum espaço entre o colchete angular (<) e o início de sua marca.
+   A marca \<HTML > inicia o documento e a marca \</HTML mais externas > termina a ele. Marcas de fim (nem sempre necessárias) são o mesmo que a marca inicial, mas tem uma barra (/) na frente da marca. Não deve haver nenhum espaço entre o colchete angular (<) e o início de sua marca.
 
 1. Alternar de volta para o bloco de notas e, depois do  \< /HEAD >, digite:
 
@@ -64,9 +64,9 @@ As etapas abaixo usam marcas HTML para criar uma página da Web simple. Nestas e
 
 1. Volte para o seu navegador e atualize a página.
 
-     As palavras, aparecerão na área de cliente da janela do navegador. Observe que o seu retorno de carro é ignorado. Se você quiser ter uma quebra de linha, você deve incluir um `<BR>` marca depois da primeira linha.
+   As palavras, aparecerão na área de cliente da janela do navegador. Observe que o seu retorno de carro é ignorado. Se você quiser ter uma quebra de linha, você deve incluir um `<BR>` marca depois da primeira linha.
 
-     Para todas as etapas a seguir, insira o texto em qualquer lugar entre \<BODY > e  \< /BODY > para adicionar ao corpo do documento.
+   Para todas as etapas a seguir, insira o texto em qualquer lugar entre \<BODY > e  \< /BODY > para adicionar ao corpo do documento.
 
 9. Adicione um cabeçalho:
 

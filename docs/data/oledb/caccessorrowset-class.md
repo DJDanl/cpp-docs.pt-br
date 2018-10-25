@@ -41,131 +41,131 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1ef9799c65f4932bf314f3c11fd8324e0fb40bf2
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: adb59e553565d9886cf27b55f2cfffb4cd0e7aa9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081730"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060150"
 ---
 # <a name="caccessorrowset-class"></a>Classe CAccessorRowset
 
-Encapsula um conjunto de linhas e de seus acessadores associados em uma única classe.  
-  
+Encapsula um conjunto de linhas e de seus acessadores associados em uma única classe.
+
 ## <a name="syntax"></a>Sintaxe
 
 ```cpp
-template <class TAccessor = CNoAccessor, 
-   template <typename T> class TRowset = CRowset>  
-class CAccessorRowset : public TAccessor, public TRowset<TAccessor>  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
+template <class TAccessor = CNoAccessor,
+   template <typename T> class TRowset = CRowset>
+class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
+```
+
+### <a name="parameters"></a>Parâmetros
 
 *TAccessor*<br/>
-Uma classe de acessador.  
-  
+Uma classe de acessador.
+
 *TRowset*<br/>
-Uma classe de conjunto de linhas.  
+Uma classe de conjunto de linhas.
 
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atldbcli.h  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="methods"></a>Métodos  
-  
-|||  
-|-|-|  
-|[Associar](#bind)|Cria associações (usado quando `bBind` é especificado como **falsos** na [ccommand:: Open](../../data/oledb/ccommand-open.md)).|  
-|[CAccessorRowset](#caccessorrowset)|Construtor.|  
-|[Fechar](#close)|Fecha o conjunto de linhas e qualquer acessadores.|  
-|[FreeRecordMemory](#freerecordmemory)|Libera quaisquer colunas no registro atual que precise ser liberada.|  
-|[GetColumnInfo](#getcolumninfo)|Implementa [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704).|  
-  
-## <a name="remarks"></a>Comentários  
+**Cabeçalho:** atldbcli.h
 
-Classe `TAccessor` gerencia o acessador. Classe *TRowset* gerencia o conjunto de linhas.  
+## <a name="members"></a>Membros
+
+### <a name="methods"></a>Métodos
+
+|||
+|-|-|
+|[Associar](#bind)|Cria associações (usado quando `bBind` é especificado como **falsos** na [ccommand:: Open](../../data/oledb/ccommand-open.md)).|
+|[CAccessorRowset](#caccessorrowset)|Construtor.|
+|[Fechar](#close)|Fecha o conjunto de linhas e qualquer acessadores.|
+|[FreeRecordMemory](#freerecordmemory)|Libera quaisquer colunas no registro atual que precise ser liberada.|
+|[GetColumnInfo](#getcolumninfo)|Implementa [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704).|
+
+## <a name="remarks"></a>Comentários
+
+Classe `TAccessor` gerencia o acessador. Classe *TRowset* gerencia o conjunto de linhas.
 
 ## <a name="bind"></a> Caccessorrowset:: Bind
 
-Cria as associações, se você tiver especificado `bBind` como **falsos** na [ccommand:: Open](../../data/oledb/ccommand-open.md).  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp
-HRESULT Bind();  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
+Cria as associações, se você tiver especificado `bBind` como **falsos** na [ccommand:: Open](../../data/oledb/ccommand-open.md).
 
-Um HRESULT padrão.  
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+HRESULT Bind();
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Um HRESULT padrão.
 
 ## <a name="caccessorrowset"></a> Caccessorrowset:: Caccessorrowset
 
-Inicializa o objeto `CAccessorRowset`.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
+Inicializa o objeto `CAccessorRowset`.
+
+### <a name="syntax"></a>Sintaxe
+
 ```cpp
-CAccessorRowset();  
-```  
+CAccessorRowset();
+```
 
 ## <a name="close"></a> Caccessorrowset:: Close
 
-Libera qualquer acessadores Active Directory e o conjunto de linhas.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp
-void Close();  
-```  
-  
-### <a name="remarks"></a>Comentários  
+Libera qualquer acessadores Active Directory e o conjunto de linhas.
 
-Libera qualquer memória associados.  
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+void Close();
+```
+
+### <a name="remarks"></a>Comentários
+
+Libera qualquer memória associados.
 
 ## <a name="freerecordmemory"></a> Caccessorrowset:: Freerecordmemory
 
-Libera quaisquer colunas no registro atual que precise ser liberada.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
+Libera quaisquer colunas no registro atual que precise ser liberada.
+
+### <a name="syntax"></a>Sintaxe
+
 ```cpp
-void FreeRecordMemory();  
-```  
+void FreeRecordMemory();
+```
 
 ## <a name="getcolumninfo"></a> Caccessorrowset:: Getcolumninfo
 
-Obtém informações de coluna do conjunto de linhas aberto.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
+Obtém informações de coluna do conjunto de linhas aberto.
+
+### <a name="syntax"></a>Sintaxe
+
 ```cpp
-HRESULT GetColumnInfo(DBORDINAL* pulColumns, 
-   DBCOLUMNINFO** ppColumnInfo, 
-   LPOLESTR* ppStrings) const; 
-    
-HRESULT GetColumnInfo(DBORDINAL* pColumns, 
-   DBCOLUMNINFO** ppColumnInfo);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
+HRESULT GetColumnInfo(DBORDINAL* pulColumns,
+   DBCOLUMNINFO** ppColumnInfo,
+   LPOLESTR* ppStrings) const;
 
-Ver [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704) na *referência do programador do OLE DB*.  
-  
-### <a name="return-value"></a>Valor de retorno  
+HRESULT GetColumnInfo(DBORDINAL* pColumns,
+   DBCOLUMNINFO** ppColumnInfo);
+```
 
-Um HRESULT padrão.  
-  
-### <a name="remarks"></a>Comentários  
+#### <a name="parameters"></a>Parâmetros
 
-O usuário deve liberar o buffer de cadeia de caracteres e informações de coluna retornada. Use a segunda versão desse método, quando você usa [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) e precisar substituir as associações.  
-  
-Para obter mais informações, consulte [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704) na *referência do programador DB OLE*.  
-  
-## <a name="see-also"></a>Consulte também  
+Ver [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704) na *referência do programador do OLE DB*.
+
+### <a name="return-value"></a>Valor de retorno
+
+Um HRESULT padrão.
+
+### <a name="remarks"></a>Comentários
+
+O usuário deve liberar o buffer de cadeia de caracteres e informações de coluna retornada. Use a segunda versão desse método, quando você usa [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) e precisar substituir as associações.
+
+Para obter mais informações, consulte [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704) na *referência do programador DB OLE*.
+
+## <a name="see-also"></a>Consulte também
 
 [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

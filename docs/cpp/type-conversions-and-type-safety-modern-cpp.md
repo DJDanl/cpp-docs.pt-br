@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb3f2ca2cfe094f4ea9da11786af6f90db7d2217
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9fb13c8c4ce2705d3e7af8ca5b4cd0e4b97b13ca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136142"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059084"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Conversões e segurança de tipo (C++ moderno)
 
@@ -70,7 +70,7 @@ Um tipo integral com sinal e sua contraparte não assinado são sempre o mesmo t
 
 ```cpp
 using namespace std;
-unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
+unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
 short num2 = num;
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 // Prints: unsigned val = 65535 signed val = -1
@@ -126,7 +126,7 @@ O operador de conversão C-style é idêntico para o operador de chamada () e, p
     Derived* d2 = static_cast<Derived*>(b);
     ```
 
-     Para obter mais informações, consulte [static_cast](../cpp/static-cast-operator.md).
+   Para obter mais informações, consulte [static_cast](../cpp/static-cast-operator.md).
 
 - **dynamic_cast**, para seguros, verificada pelo tempo de execução de conversões de ponteiro para a base a ponteiro para derivado. Um **dynamic_cast** é mais segura do que uma **static_cast** para downcasts, mas o tempo de execução seleção gera uma sobrecarga.
 
@@ -151,7 +151,7 @@ O operador de conversão C-style é idêntico para o operador de chamada () e, p
     //Output: d3 is null;
     ```
 
-     Para obter mais informações, consulte [dynamic_cast](../cpp/dynamic-cast-operator.md).
+   Para obter mais informações, consulte [dynamic_cast](../cpp/dynamic-cast-operator.md).
 
 - **const_cast**, para conversão imediatamente o **const**- ness de uma variável ou convertendo uma não -**const** variável para ser **const**. Distância de conversão **const**-ness usando esse operador é apenas tão propenso a erro pois está usando um C-style cast, exceto que com **conversão const** será menos provável executar a conversão acidentalmente. Às vezes, você tem que eliminar a **const**-ness de uma variável, por exemplo, para passar um **const** variável para uma função que usa um não**const** parâmetro. O exemplo a seguir mostra como fazer isso.
 
@@ -164,14 +164,14 @@ O operador de conversão C-style é idêntico para o operador de chamada () e, p
     }
     ```
 
-     Para obter mais informações, consulte [const_cast](../cpp/const-cast-operator.md).
+   Para obter mais informações, consulte [const_cast](../cpp/const-cast-operator.md).
 
 - **reinterpret_cast**, para conversões entre não relacionado a tipos, como **ponteiro** à **int**.
 
     > [!NOTE]
     >  Esse operador de conversão não é usado sempre que os outros e não há garantia de que seja portátil para outros compiladores.
 
-     O exemplo a seguir ilustra como **reinterpret_cast** difere **static_cast**.
+   O exemplo a seguir ilustra como **reinterpret_cast** difere **static_cast**.
 
     ```cpp
     const char* str = "hello";
@@ -183,7 +183,7 @@ O operador de conversão C-style é idêntico para o operador de chamada () e, p
                                        // However, it is not 64-bit safe.
     ```
 
-     Para obter mais informações, consulte [operador reinterpret_cast](../cpp/reinterpret-cast-operator.md).
+   Para obter mais informações, consulte [operador reinterpret_cast](../cpp/reinterpret-cast-operator.md).
 
 ## <a name="see-also"></a>Consulte também
 

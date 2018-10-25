@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5a4d4c359fb4a90bfd25801f7c73f5bc4d7d501
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 841630266778389969ead9191f7a2a31e20e7975
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019458"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055145"
 ---
 # <a name="commandhandler"></a>CommandHandler
 
@@ -31,9 +31,9 @@ ms.locfileid: "46019458"
 
 ```cpp
 LRESULT CommandHandler(
-    WORD wNotifyCode,  
-    WORD wID,  
-    HWND hWndCtl,  
+    WORD wNotifyCode,
+    WORD wID,
+    HWND hWndCtl,
     BOOL& bHandled);
 ```
 
@@ -62,6 +62,6 @@ Para obter um exemplo de como usar este manipulador de mensagens em um mapa de m
 ## <a name="see-also"></a>Consulte também
 
 [Implementando uma janela](../atl/implementing-a-window.md)<br/>
-[Mapas de mensagem](../atl/message-maps-atl.md)<br/>
+[Mapas de mensagens](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
 
