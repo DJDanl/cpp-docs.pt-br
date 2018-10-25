@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eaa6ce8a1ca566fd3d585b5c457e1fb2829b0b0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 787c6c35b698b5dce57c4aaf3acb4eca496ead95
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016735"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072155"
 ---
 # <a name="linker-tools-error-lnk1181"></a>Erro das Ferramentas de Vinculador LNK1181
 
@@ -42,8 +42,6 @@ Para obter mais informações, consulte [arquivos. lib como entrada de vinculado
 Outra causa possível para LNK1181 é que um nome de arquivo longo com espaços incorporados não foi colocado entre aspas.  Nesse caso, o vinculador reconhecerá apenas um nome de arquivo até o primeiro espaço e, em seguida, suponha que uma extensão de arquivo. obj.  A solução para essa situação é para delimitar o nome de arquivo longos (nome de caminho e arquivo) entre aspas.
 
 Compilar com o [/P (pré-processar em um arquivo)](../../build/reference/p-preprocess-to-a-file.md) opção pode resultar em LNK1181 porque essa opção suprime a criação de arquivos. obj.
-
-
 
 ## <a name="see-also"></a>Consulte também
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 740d99bfbc0da4c290a09a95f5d4f8f227a11fc8
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 8296ba9a6f5c6072f025dbdd931b6f609d9df9e8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790127"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067820"
 ---
 # <a name="synchronize"></a>synchronize
 
@@ -59,7 +59,7 @@ O código a seguir fornece sincronização para o `UpdateBalance` método da `CM
 threading(both),
 vi_progid("MyProject.MyClass"),
 progid("MyProject.MyClass.1"),
-uuid("7a7baa0d-59b8-4576-b754-79d07e1d1cc3")  
+uuid("7a7baa0d-59b8-4576-b754-79d07e1d1cc3")
 ]
 class CMyClass {
    float m_nBalance;
@@ -86,4 +86,4 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de COM](com-attributes.md)  
+[Atributos de COM](com-attributes.md)

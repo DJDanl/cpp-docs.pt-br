@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e76b1c8be4e180136c4c1ff3de3e4801770bce92
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7b6a915dbe9904a7bbe56e8ba1100631bd954d86
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437671"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071161"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>Como criar projetos vazios CLR
 
@@ -34,7 +34,7 @@ Para criar um projeto CLR vazio, use o **projeto CLR vazio** modelo, que está d
 
 1. No menu **Arquivo**, clique em **Novo** e clique em **Projeto**.
 
-     A caixa de diálogo **Novo Projeto** é exibida.
+   A caixa de diálogo **Novo Projeto** é exibida.
 
 1. Sob **modelos instalados**, clique no **Visual C++** nó; em seguida, clique o **CLR** nó. Escolha o **projeto CLR vazio** ícone.
 

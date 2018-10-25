@@ -1,7 +1,7 @@
 ---
 title: Usando indicadores | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,54 +18,56 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d8d23ba81ba83202da1dd6814374a0c4aa1cb98b
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 6eeb2b6d0c9aa82a6304225b4de14c4d387bfc96
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990056"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072168"
 ---
 # <a name="using-bookmarks"></a>Usando indicadores
 
-Antes de abrir o conjunto de linhas, você deve instruir o provedor que você deseja usar indicadores. Para fazer isso, defina as `DBPROP_BOOKMARKS` propriedade para **verdadeiro** no conjunto de suas propriedades. O provedor recupera indicadores como coluna de zero, então você deve usar a macro especial BOOKMARK_ENTRY e o `CBookmark` classe se você estiver usando um acessador estática. `CBookmark` é uma classe de modelo em que o argumento é o comprimento em bytes do buffer indicador. O comprimento do buffer exigido para um indicador depende do provedor. Se você estiver usando o provedor OLE DB ODBC, conforme mostrado no exemplo a seguir, o buffer deve ser de 4 bytes.  
-  
-```cpp  
-class CProducts  
-{  
-public:  
-   CBookmark<4>   bookmark;  
-  
-   BEGIN_COLUMN_MAP(CProducts)  
-      BOOKMARK_ENTRY(bookmark)  
-   END_COLUMN_MAP()  
-};  
-  
-CDBPropSet propset(DBPROPSET_ROWSET);  
+Antes de abrir o conjunto de linhas, você deve instruir o provedor que você deseja usar indicadores. Para fazer isso, defina as `DBPROP_BOOKMARKS` propriedade para **verdadeiro** no conjunto de suas propriedades. O provedor recupera indicadores como coluna de zero, então você deve usar a macro especial BOOKMARK_ENTRY e o `CBookmark` classe se você estiver usando um acessador estática. `CBookmark` é uma classe de modelo em que o argumento é o comprimento em bytes do buffer indicador. O comprimento do buffer exigido para um indicador depende do provedor. Se você estiver usando o provedor OLE DB ODBC, conforme mostrado no exemplo a seguir, o buffer deve ser de 4 bytes.
 
-propset.AddProperty(DBPROP_BOOKMARKS, true);  
-  
-CTable<CAccessor<CProducts>> product;  
-product.Open(session, "Products", &propset);  
-```  
-  
-Se você usar `CDynamicAccessor`, o buffer é alocado dinamicamente em tempo de execução. Nesse caso, você pode usar uma versão especializada do `CBookmark` para os quais você não especificar um comprimento de buffer. Use a função `GetBookmark` para recuperar o indicador do registro atual, conforme mostrado no exemplo de código:  
-  
-```cpp  
-CTable<CDynamicAccessor> product;  
-CBookmark<>              bookmark;  
-CDBPropSet propset(DBPROPSET_ROWSET);  
-  
-propset.AddProperty(DBPROP_BOOKMARKS, true);  
+```cpp
+class CProducts
+{
+public:
+   CBookmark<4> bookmark;
 
-product.Open(session, "Products", &propset);  
+   BEGIN_COLUMN_MAP(CProducts)
+      BOOKMARK_ENTRY(bookmark)
+   END_COLUMN_MAP()
+};
+```
 
-product.MoveNext();  
+Em seguida, usado pelo código a seguir:
 
-product.GetBookmark(&bookmark);  
-```  
-  
-Para obter informações sobre o suporte a indicadores em provedores, consulte [suporte do provedor para indicadores](../../data/oledb/provider-support-for-bookmarks.md).  
-  
-## <a name="see-also"></a>Consulte também  
+```cpp
+CDBPropSet propset(DBPROPSET_ROWSET);
+propset.AddProperty(DBPROP_BOOKMARKS, true);
+
+CTable<CAccessor<CProducts>> product;
+CSession session;
+product.Open(session, "Products", &propset);
+```
+
+Se você usar `CDynamicAccessor`, o buffer é definido dinamicamente em tempo de execução. Nesse caso, você pode usar uma versão especializada do `CBookmark` para os quais você não especificar um comprimento de buffer. Use a função `GetBookmark` para recuperar o indicador do registro atual, conforme mostrado no exemplo de código:
+
+```cpp
+CTable<CDynamicAccessor> product;
+CBookmark<> bookmark;
+CDBPropSet propset(DBPROPSET_ROWSET);
+CSession session;
+
+propset.AddProperty(DBPROP_BOOKMARKS, true);
+product.Open(session, "Products", &propset);
+product.MoveNext();
+product.GetBookmark(&bookmark);
+```
+
+Para obter informações sobre o suporte a indicadores em provedores, consulte [suporte do provedor para indicadores](../../data/oledb/provider-support-for-bookmarks.md).
+
+## <a name="see-also"></a>Consulte também
 
 [Usando acessadores](../../data/oledb/using-accessors.md)

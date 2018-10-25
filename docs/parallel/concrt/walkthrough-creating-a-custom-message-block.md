@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9391d99f75bdb5ac2191a65e525ce989aefcd6b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6c4e2f27a6f123d870e56750180a5b7d4ee624fc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421278"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066403"
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>Instruções passo a passo: criando um bloco de mensagens personalizado
 
@@ -92,19 +92,19 @@ O procedimento a seguir descreve como implementar o `priority_buffer` classe.
 
 [!code-cpp[concrt-priority-buffer#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_3.h)]
 
-     The `priority_buffer` class stores `message` objects in a `priority_queue` object. These type specializations enable the priority queue to sort messages according to their priority. The priority is the first element of the `tuple` object.
+   O `priority_buffer` classe armazenamentos `message` objetos em um `priority_queue` objeto. Essas especializações de tipo permitem que a fila de prioridade classifique mensagens de acordo com a prioridade. A prioridade é o primeiro elemento do `tuple` objeto.
 
 1. No `concurrencyex` namespace, declare o `priority_buffer` classe.
 
 [!code-cpp[concrt-priority-buffer#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_4.h)]
 
-     The `priority_buffer` class derives from `propagator_block`. Therefore, it can both send and receive messages. The `priority_buffer` class can have multiple targets that receive messages of type `Type`. It can also have multiple sources that send messages of type `tuple<PriorityType, Type>`.
+   O `priority_buffer` classe deriva de `propagator_block`. Portanto, ele pode tanto enviar e receber mensagens. O `priority_buffer` classe pode ter vários destinos que recebem mensagens do tipo `Type`. Ele também pode ter várias fontes que enviam mensagens do tipo `tuple<PriorityType, Type>`.
 
 1. No `private` seção o `priority_buffer` de classe, adicione as seguintes variáveis de membro.
 
 [!code-cpp[concrt-priority-buffer#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_5.h)]
 
-     The `priority_queue` object holds incoming messages; the `queue` object holds outgoing messages. A `priority_buffer` object can receive multiple messages simultaneously; the `critical_section` object synchronizes access to the queue of input messages.
+   O `priority_queue` objeto contém mensagens de entrada; o `queue` objeto contém mensagens de saída. Um `priority_buffer` objeto pode receber várias mensagens simultaneamente; o `critical_section` objeto sincroniza o acesso à fila de mensagens de entrada.
 
 1. No `private` seção, defina o construtor de cópia e o operador de atribuição. Isso impede que `priority_queue` objetos sejam atribuíveis.
 
@@ -122,65 +122,65 @@ O procedimento a seguir descreve como implementar o `priority_buffer` classe.
 
 [!code-cpp[concrt-priority-buffer#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_9.h)]
 
-     The `propagate_to_any_targets` method transfers the message that is at the front of the input queue to the output queue and propagates out all messages in the output queue.
+   O `propagate_to_any_targets` método transfere a mensagem que está à frente da fila de entrada para a fila de saída e propaga todas as mensagens na fila de saída.
 
 10. No `protected` seção, defina o `accept_message` método.
 
 [!code-cpp[concrt-priority-buffer#8](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_10.h)]
 
-     When a target block calls the `accept_message` method, the `priority_buffer` class transfers ownership of the message to the first target block that accepts it. (This resembles the behavior of `unbounded_buffer`.)
+   Quando um bloco de destino chama o `accept_message` método, o `priority_buffer` classe transfere a propriedade da mensagem para o primeiro bloco de destino que aceita a ele. (Isso se parece com o comportamento de `unbounded_buffer`.)
 
 11. No `protected` seção, defina o `reserve_message` método.
 
 [!code-cpp[concrt-priority-buffer#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_11.h)]
 
-     The `priority_buffer` class permits a target block to reserve a message when the provided message identifier matches the identifier of the message that is at the front of the queue. In other words, a target can reserve the message if the `priority_buffer` object has not yet received an additional message and has not yet  propagated out the current one.
+   O `priority_buffer` classe permite que um bloco de destino Reserve uma mensagem quando o identificador da mensagem fornecido corresponde ao identificador da mensagem que está no início da fila. Em outras palavras, um destino pode reservar a mensagem se o `priority_buffer` objeto ainda não recebeu uma mensagem adicional e ainda não tiver propagado à atual.
 
 12. No `protected` seção, defina o `consume_message` método.
 
 [!code-cpp[concrt-priority-buffer#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_12.h)]
 
-     A target block calls `consume_message` to transfer ownership of the message that it reserved.
+   Um bloco de destino chama `consume_message` para transferir a propriedade da mensagem que ele reservou.
 
 13. No `protected` seção, defina o `release_message` método.
 
 [!code-cpp[concrt-priority-buffer#12](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_13.h)]
 
-     A target block calls `release_message` to cancel its reservation to a message.
+   Um bloco de destino chama `release_message` para cancelar sua reserva para uma mensagem.
 
 14. No `protected` seção, defina o `resume_propagation` método.
 
 [!code-cpp[concrt-priority-buffer#13](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_14.h)]
 
-     The runtime calls `resume_propagation` after a target block either consumes or releases a reserved message. This method propagates out any messages that are in the output queue.
+   A tempo de execução chama `resume_propagation` depois que um bloco de destino consome ou libera uma mensagem reservada. Esse método propaga todas as mensagens que estão na fila de saída.
 
 15. No `protected` seção, defina o `link_target_notification` método.
 
 [!code-cpp[concrt-priority-buffer#14](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_15.h)]
 
-     The `_M_pReservedFor` member variable is defined by the base class, `source_block`. This member variable points to the target block, if any, that is holding a reservation to the message that is at the front of the output queue. The runtime calls `link_target_notification` when a new target is linked to the `priority_buffer` object. This method propagates out any messages that are in the output queue if no target is holding a reservation.
+   O `_M_pReservedFor` variável de membro é definido pela classe base, `source_block`. Essa variável de membro aponta para o bloco de destino, se houver, que está mantendo uma reserva para a mensagem que está à frente da fila de saída. A tempo de execução chama `link_target_notification` quando um novo destino está vinculado ao `priority_buffer` objeto. Esse método propaga todas as mensagens que estão na fila de saída se nenhum destino estiver mantendo uma reserva.
 
 16. No `private` seção, defina o `propagate_priority_order` método.
 
 [!code-cpp[concrt-priority-buffer#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_16.h)]
 
-     This method propagates out all messages from the output queue. Every message in the queue is offered to every target block until one of the target blocks accepts the message. The `priority_buffer` class preserves the order of the outgoing messages. Therefore, the first message in the output queue must be accepted by a target block before this method offers any other message to the target blocks.
+   Esse método propaga todas as mensagens da fila de saída. Todas as mensagens na fila é oferecida para cada bloco de destino até que um dos blocos de destino aceita a mensagem. O `priority_buffer` classe preserva a ordem das mensagens de saída. Portanto, a primeira mensagem na fila de saída deve ser aceitos por um bloco de destino antes desse método ofereça qualquer outra mensagem aos blocos de destino.
 
 17. No `protected` seção, defina o `propagate_message` método.
 
 [!code-cpp[concrt-priority-buffer#16](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_17.h)]
 
-     The `propagate_message` method enables the `priority_buffer` class to act as a message receiver, or target. This method receives the message that is offered by the provided source block and inserts that message into the priority queue. The `propagate_message` method then asynchronously sends all output messages to the target blocks.
+   O `propagate_message` método habilita o `priority_buffer` de classe para atuar como um destinatário da mensagem ou de destino. Esse método recebe a mensagem que é oferecida pelo bloco de origem fornecido e insere essa mensagem na fila de prioridade. O `propagate_message` método, em seguida, envia de forma assíncrona todas as mensagens de saída aos blocos de destino.
 
-     The runtime calls this method when you call the [concurrency::asend](reference/concurrency-namespace-functions.md#asend) function or when the message block is connected to other message blocks.
+   O tempo de execução chama esse método quando você chama o [Concurrency:: asend](reference/concurrency-namespace-functions.md#asend) função ou quando o bloco de mensagens está conectado a outros blocos de mensagem.
 
 18. No `protected` seção, defina o `send_message` método.
 
 [!code-cpp[concrt-priority-buffer#17](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_18.h)]
 
-     The `send_message` method resembles `propagate_message`. However it sends the output messages synchronously instead of asynchronously.
+   O `send_message` é semelhante ao método `propagate_message`. No entanto, ele envia mensagens de saída de forma síncrona em vez de forma assíncrona.
 
-     The runtime calls this method during a synchronous send operation, such as when you call the [concurrency::send](reference/concurrency-namespace-functions.md#send) function.
+   O tempo de execução chama esse método durante uma operação de envio síncrona, como quando você chama o [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) função.
 
 O `priority_buffer` classe contém sobrecargas de construtor que são comuns em muitos tipos de bloco de mensagem. Algumas sobrecargas do construtor take [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) ou [Concurrency:: schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md) objetos, que permitem que o bloco de mensagens a serem gerenciados por um agendador de tarefas específica. Outras sobrecargas do construtor têm uma função de filtro. Funções de filtro permitem que blocos de mensagem aceitar ou rejeitar uma mensagem com base em sua carga. Para obter mais informações sobre filtros de mensagem, consulte [blocos de mensagens assíncronas](../../parallel/concrt/asynchronous-message-blocks.md). Para obter mais informações sobre os agendadores de tarefa, consulte [Agendador de tarefas](../../parallel/concrt/task-scheduler-concurrency-runtime.md).
 

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 680ff7d339f592cf112a91fc303a6367fbc4805b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b972d4552a8e41ca0dcea4ef57d48ef161ea35b9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408747"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069224"
 ---
 # <a name="template-based-classes"></a>Classes com base no modelo
 
@@ -47,11 +47,11 @@ MFC predefine duas categorias de coleções com base em modelo:
 
 - [Matriz simples, lista e classes de mapa](#_core_using_simple_array.2c_.list.2c_.and_map_templates)
 
-     `CArray`, `CList`, `CMap`
+   `CArray`, `CList`, `CMap`
 
 - [Matrizes, listas e mapas de ponteiros tipados](#_core_using_typed.2d.pointer_collection_templates)
 
-     `CTypedPtrArray`, `CTypedPtrList`, `CTypedPtrMap`
+   `CTypedPtrArray`, `CTypedPtrList`, `CTypedPtrMap`
 
 As classes de coleção simples são derivadas da classe `CObject`, portanto, eles herdam a serialização, criação dinâmica e outras propriedades de `CObject`. As classes de coleção com tipo de ponteiro que você especifique a classe derivar de — que deve ser uma das coleções de ponteiro nontemplate predefinidas pelo MFC, como `CPtrList` ou `CPtrArray`. Sua nova classe de coleção herda da classe base especificado e funções de membro da classe nova usam encapsuladas chamadas para os membros da classe base para impor a segurança de tipos.
 

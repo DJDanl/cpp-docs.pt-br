@@ -140,12 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e1fb04de4097a2cdf1dd51dc12265bef8d6c0b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c86efacf7211415bfdc2936a736d78e29dc419bf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423124"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076393"
 ---
 # <a name="crecordset-class"></a>Classe CRecordset
 
@@ -727,17 +727,14 @@ void GetFieldValue(
     CDBVariant& varValue,
     short nFieldType = DEFAULT_FIELD_TYPE);
 
-
 void GetFieldValue(
     short nIndex,
     CDBVariant& varValue,
     short nFieldType = DEFAULT_FIELD_TYPE);
 
-
 void GetFieldValue(
     short nIndex,
     CStringA& strValue);
-
 
 void GetFieldValue(
     short nIndex,
@@ -822,7 +819,6 @@ Obtém informações sobre os campos no conjunto de registros.
 void GetODBCFieldInfo(
     LPCTSTR lpszName,
     CODBCFieldInfo& fieldinfo);
-
 
 void GetODBCFieldInfo(
     short nIndex,
@@ -1538,7 +1534,7 @@ Aceite o valor padrão, AFX_DB_USE_DEFAULT_TYPE ou use um dos seguintes valores 
 
 - `CRecordset::forwardOnly` Um conjunto de registros somente leitura com apenas roll-forward.
 
-     Para `CRecordset`, o valor padrão é `CRecordset::snapshot`. O mecanismo de valor padrão permite que os assistentes do Visual C++ interagir com ODBC `CRecordset` e DAO `CDaoRecordset`, que têm diferentes padrões.
+   Para `CRecordset`, o valor padrão é `CRecordset::snapshot`. O mecanismo de valor padrão permite que os assistentes do Visual C++ interagir com ODBC `CRecordset` e DAO `CDaoRecordset`, que têm diferentes padrões.
 
 Para obter mais informações sobre esses tipos de conjunto de registros, consulte o artigo [conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md). Para obter informações relacionadas, consulte o artigo "Usando o bloco e cursores roláveis" no SDK do Windows.
 
@@ -1613,7 +1609,7 @@ Quando você chama `Open`, uma consulta, normalmente, um SQL **selecione** instr
 
 O procedimento normal é passar NULL para `Open`; nesse caso, `Open` chamadas [GetDefaultSQL](#getdefaultsql). Se você estiver usando um derivado `CRecordset` classe, `GetDefaultSQL` fornece os nomes de tabela que você especificou no ClassWizard. Em vez disso, você pode especificar outras informações no `lpszSQL` parâmetro.
 
-Tudo o que você passa `Open` constrói uma cadeia de caracteres final SQL para a consulta (a cadeia de caracteres pode ter o SQL **onde** e **ORDER BY** cláusulas acrescentado ao `lpszSQL` cadeia de caracteres passada por você) e, em seguida, executa a consulta. Você pode examinar a cadeia de caracteres construída chamando [GetSQL](#getsql) depois de chamar *`Open`. Para obter mais detalhes sobre como o conjunto de registros constrói uma instrução SQL e seleciona os registros, consulte o artigo [conjunto de registros: como conjuntos de registros selecionar registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
+Tudo o que você passa `Open` constrói uma cadeia de caracteres final SQL para a consulta (a cadeia de caracteres pode ter o SQL **onde** e **ORDER BY** cláusulas acrescentado ao `lpszSQL` cadeia de caracteres passada por você) e, em seguida, executa a consulta. Você pode examinar a cadeia de caracteres construída chamando [GetSQL](#getsql) depois de chamar `Open`. Para obter mais detalhes sobre como o conjunto de registros constrói uma instrução SQL e seleciona os registros, consulte o artigo [conjunto de registros: como conjuntos de registros selecionar registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
 
 Os membros de dados do campo da sua classe de conjunto de registros são associados às colunas dos dados selecionados. Se todos os registros são retornados, o primeiro registro torna-se o registro atual.
 

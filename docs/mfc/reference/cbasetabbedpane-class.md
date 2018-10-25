@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d9a50e3dcfb82e245dcac5f57553b34fef584fa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: addbc7c81c8cd38f44b7b1004c0b4e23ca183ecb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412022"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067314"
 ---
 # <a name="cbasetabbedpane-class"></a>Classe CBaseTabbedPane
 
@@ -179,7 +179,8 @@ virtual BOOL AddTab(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] [out] *pNewBar* um ponteiro para o painel para adicionar. Esse ponteiro pode ser invalidadas depois de chamar esse método. Para obter mais informações, consulte a seção Comentários.
+*pNewBar*<br/>
+[no, out] Um ponteiro para o painel para adicionar. Esse ponteiro pode ser invalidadas depois de chamar esse método. Para obter mais informações, consulte a seção Comentários.
 
 *bVisible*<br/>
 [in] TRUE para tornar visível; a guia Caso contrário, FALSE.
@@ -384,7 +385,8 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] [out] *pBar* um ponteiro para o painel para float.
+*pBar*<br/>
+[no, out] Um ponteiro para o painel para float.
 
 *nTabID*<br/>
 [in] Especifica o índice baseado em zero da guia em float.
@@ -594,7 +596,8 @@ virtual BOOL RemovePane(CWnd* pBar);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] [out] *pBar* um ponteiro para o painel para remover do painel com guias.
+*pBar*<br/>
+[no, out] Um ponteiro para o painel para remover do painel com guias.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -689,7 +692,8 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 *dwAlignment*<br/>
 [in] Especifica o alinhamento do painel de ocultação automática deve ser criado. Para obter uma lista de valores possíveis, consulte [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).
 
-[in] [out] *pCurrAutoHideBar* um ponteiro para a barra de ferramentas de ocultação automática atual. Pode ser NULL.
+*pCurrAutoHideBar*<br/>
+[no, out] Um ponteiro para a barra de ferramentas de ocultação automática atual. Pode ser NULL.
 
 *bUseTimer*<br/>
 [in] Especifica se deve usar o efeito de ocultar automaticamente quando o usuário alterna o painel para o modo de ocultar automaticamente ou ocultar o painel imediatamente.

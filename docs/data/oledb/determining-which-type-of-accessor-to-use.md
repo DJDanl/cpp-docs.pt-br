@@ -1,7 +1,7 @@
 ---
 title: Determinando qual tipo de acessador a ser usado | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,32 +16,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 720a72406bec5672757c1b2c5713586b7fc7f1ca
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 591d3a3bee554fd87a8c48aea67611e6cc6e5111
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086961"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066377"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Determinando qual tipo de acessador a ser usado
 
-Você pode determinar os tipos de dados em um conjunto de linhas em tempo de compilação ou tempo de execução.  
-  
-Se você precisar determinar tipos de dados em tempo de compilação, use um acessador estática (como `CAccessor`). Você pode determinar os tipos de dados manualmente ou usando o ATL OLE DB Assistente de consumidor.  
-  
-Se você precisar determinar os tipos de dados em tempo de execução, use dinâmico (`CDynamicAccessor` ou seus filhos) ou o acessador manual (`CManualAccessor`). Nesses casos, você pode chamar `GetColumnInfo` no conjunto de linhas para retornar as informações de associação de coluna da qual você pode determinar os tipos.  
-  
-A tabela a seguir lista os tipos dos acessadores fornecidos nos modelos do consumidor. Cada acessador tem vantagens e desvantagens. Dependendo da sua situação, um tipo de acessador deve atender às suas necessidades.  
-  
-|Classe de acessador|Associação|Parâmetro|Comentário|  
-|--------------------|-------------|---------------|-------------|  
-|`CAccessor`|Crie um registro de usuário com macros COLUMN_ENTRY. As macros de associar um membro de dados no registro para o acessador. Quando o conjunto de linhas é criado, as colunas não podem ser desligadas.|Sim, usando uma entrada de macro PARAM_MAP. Uma vez associado, parâmetros não podem ser desligados.|Acessador mais rápido devido à pequena quantidade de código.|  
-|`CDynamicAccessor`|Automático.|Nº|É útil se você não souber o tipo de dados em um conjunto de linhas.|  
-|`CDynamicParameterAccessor`|Automático, mas pode ser [substituído](../../data/oledb/overriding-a-dynamic-accessor.md).|Sim, se o provedor oferece suporte a `ICommandWithParameters`. Os parâmetros associados automaticamente.|Mais lento do que `CDynamicAccessor` , mas útil para chamar procedimentos armazenados genéricos.|  
-|`CDynamicStringAccessor[A,W]`|Automático.|Nº|Recupera os dados acessados do armazenamento de dados como dados de cadeia de caracteres.|  
-|`CManualAccessor`|Manual usando `AddBindEntry`.|Manualmente usando `AddParameterEntry`.|Muito rápido; parâmetros e colunas associadas a apenas uma vez. Você determinar o tipo de dados a serem usados. (Consulte [DBVIEWER](https://github.com/Microsoft/VCSamples) exemplo para obter um exemplo.) Requer mais código que `CDynamicAccessor` ou `CAccessor`. É mais semelhante a chamar diretamente o banco de dados OLE.|  
-|`CXMLAccessor`|Automático.|Nº|Recupera os dados acessados do armazenamento de dados como dados de cadeia de caracteres e formatos de dados marcados como XML.|  
-  
-## <a name="see-also"></a>Consulte também  
+Você pode determinar os tipos de dados em um conjunto de linhas em tempo de compilação ou tempo de execução.
+
+Se você precisar determinar tipos de dados em tempo de compilação, use um acessador estática (como `CAccessor`). Você pode determinar os tipos de dados manualmente ou usando o **ATL OLE DB Assistente de consumidor**.
+
+Se você precisar determinar os tipos de dados em tempo de execução, use dinâmico (`CDynamicAccessor` ou seus filhos) ou o acessador manual (`CManualAccessor`). Nesses casos, você pode chamar `GetColumnInfo` no conjunto de linhas para retornar as informações de associação de coluna da qual você pode determinar os tipos.
+
+A tabela a seguir lista os tipos dos acessadores fornecidos nos modelos do consumidor. Cada acessador tem vantagens e desvantagens. Dependendo da sua situação, um tipo de acessador deve atender às suas necessidades.
+
+|Classe de acessador|Associação|Parâmetro|Comentário|
+|--------------------|-------------|---------------|-------------|
+|`CAccessor`|Crie um registro de usuário com macros COLUMN_ENTRY. As macros de associar um membro de dados no registro para o acessador. Quando o conjunto de linhas é criado, as colunas não podem ser desligadas.|Sim, usando uma entrada de macro PARAM_MAP. Uma vez associado, parâmetros não podem ser desligados.|Acessador mais rápido devido à pequena quantidade de código.|
+|`CDynamicAccessor`|Automático.|Nº|É útil se você não souber o tipo de dados em um conjunto de linhas.|
+|`CDynamicParameterAccessor`|Automático, mas pode ser [substituído](../../data/oledb/overriding-a-dynamic-accessor.md).|Sim, se o provedor oferece suporte a `ICommandWithParameters`. Os parâmetros associados automaticamente.|Mais lento do que `CDynamicAccessor` , mas útil para chamar procedimentos armazenados genéricos.|
+|`CDynamicStringAccessor[A,W]`|Automático.|Nº|Recupera os dados acessados do armazenamento de dados como dados de cadeia de caracteres.|
+|`CManualAccessor`|Manual usando `AddBindEntry`.|Manualmente usando `AddParameterEntry`.|Fast; parâmetros e colunas associadas a apenas uma vez. Você determinar o tipo de dados a serem usados. (Consulte [DBVIEWER](https://github.com/Microsoft/VCSamples) exemplo para obter um exemplo.) Requer mais código que `CDynamicAccessor` ou `CAccessor`. É mais semelhante a chamar diretamente o banco de dados OLE.|
+|`CXMLAccessor`|Automático.|Nº|Recupera os dados acessados do armazenamento de dados como dados de cadeia de caracteres e formatos de dados marcados como XML.|
+
+## <a name="see-also"></a>Consulte também
 
 [Usando acessadores](../../data/oledb/using-accessors.md)

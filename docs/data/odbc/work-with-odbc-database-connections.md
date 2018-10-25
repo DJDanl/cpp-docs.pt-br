@@ -20,23 +20,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5ad69bda1a49d6ebf2878d8b6a7b5d50840e9d8d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ec47e32ca1286ebf69806c211d5700bb25eaeafa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46084816"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076640"
 ---
 # <a name="work-with-odbc-database-connections"></a>Trabalhar com conexões de banco de dados ODBC
 
-Os tópicos a seguir explicam como se conectar a fontes de dados ODBC.  
-  
-## <a name="in-this-section"></a>Nesta seção  
-  
-- [Gerenciar conexões de banco de dados ODBC](../../data/odbc/data-source-managing-connections-odbc.md)  
-  
-- [Configurar programaticamente uma fonte de dados ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
-  
-## <a name="see-also"></a>Consulte também  
+Os tópicos a seguir explicam como se conectar a fontes de dados ODBC.
+
+## <a name="in-this-section"></a>Nesta seção
+
+- [Gerenciar conexões de banco de dados ODBC](../../data/odbc/data-source-managing-connections-odbc.md)
+
+- [Configurar programaticamente uma fonte de dados ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)
+
+## <a name="see-also"></a>Consulte também
 
 [ODBC (conectividade de banco de dados aberto)](../../data/odbc/open-database-connectivity-odbc.md)

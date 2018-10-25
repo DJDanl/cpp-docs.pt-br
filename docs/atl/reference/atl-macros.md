@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d99306fe806c29d224289d70ee7ea42555aa1e98
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b78110e8b79b6d82089c69fecbedfa7842e98f31
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105421"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067170"
 ---
 # <a name="atl-macros"></a>Macros de ATL
 
@@ -50,7 +50,7 @@ Fornece recursos úteis de depuração e rastreamento.
 [Macros de tratamento de exceção](../../atl/reference/exception-handling-macros.md)<br/>
 Fornece suporte para manipulação de exceção.
 
-[Macros de mapa de mensagem](../../atl/reference/message-map-macros-atl.md)<br/>
+[Macros de mapa de mensagens](../../atl/reference/message-map-macros-atl.md)<br/>
 Defina entradas e mapas de mensagem.
 
 [Macros de mapa de objeto](../../atl/reference/object-map-macros.md)<br/>
@@ -89,5 +89,5 @@ Encaminhar mensagens de janela.
 [Funções](../../atl/reference/atl-functions.md)<br/>
 [Variáveis globais](../../atl/reference/atl-global-variables.md)<br/>
 [Classes e structs](../../atl/reference/atl-classes.md)<br/>
-[Typedefs](../../atl/reference/atl-typedefs.md)   
+[Typedefs](../../atl/reference/atl-typedefs.md)
 

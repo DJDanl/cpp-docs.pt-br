@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59689abec68fc6cff2a742bd4db97b58cd023af1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 91098a0a225519f9b657d9424872e99be0e86354
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316257"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065532"
 ---
 # <a name="creating-a-menu-c"></a>Criando um Menu (C++)
 
@@ -37,8 +37,8 @@ ms.locfileid: "44316257"
 
 2. Selecione o **Novo Item** caixa (o retângulo que contém "Digite aqui") na barra de menus.
 
-   ![Caixa de novo Item no editor de menu](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")  
-Caixa de novo Item
+   ![Caixa de novo Item no editor de menu](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")<br/>
+   Caixa de novo Item
 
 3. Digite um nome para o novo menu, por exemplo, "Arquivo".
 
@@ -46,8 +46,8 @@ Caixa de novo Item
 
    Depois de você ter recebe um nome de seu novo menu na barra de menus, caixa novo item desloca para a direita (para permitir que você adicione outro menu) e outra caixa do novo item é aberta abaixo do menu do seu primeiro para que você possa adicionar comandos de menu a ele.
 
-   ![Caixa de novo Item expandida](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")  
-Depois de digitar o nome do Menu deslocados para a caixa de novo Item com foco
+   ![Caixa de novo Item expandida](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")<br/>
+   Depois de digitar o nome do Menu deslocados para a caixa de novo Item com foco
 
    > [!NOTE]
    > Para criar um único item de menu na barra de menus, defina as **pop-up** propriedade **falso**.

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e11e1ce061fcf2e9ce21155dcbeb93b45b66238
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 520b9bf8d6a71593acd95ebaac98a72036fcabf2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790224"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070017"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -49,7 +49,8 @@ Um desses valores possíveis: `true`, `false`, `forced`, `restricted`, `push`, o
 
 - `push` permite que você salve atual **emitidl** as configurações para interno **emitidl** pilha, e `pop` permite que você defina **emitidl** para qualquer valor que está na parte superior da interno **emitidl** pilha.
 
-`defaultimports=`*booleano* \(opcional)  
+`defaultimports=`*booleano* \(opcional)
+
 - Se *boolean* é **verdadeiro**, docobj. IDL é importado para o arquivo. idl gerado. Além disso, se um arquivo. idl com o mesmo nome que um. h do arquivo que você `#include` em sua fonte de código é encontrado no mesmo diretório que o arquivo. h e, em seguida, o arquivo. idl gerado contém uma instrução de importação para esse arquivo. idl.
 
 - Se *boolean* é **falso**, docobj. idl não será importado para o arquivo. idl gerado. Você deve explicitamente, importar arquivos. idl com [importação](import.md).
@@ -78,4 +79,4 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 ## <a name="see-also"></a>Consulte também
 
 [Atributos de compilador](compiler-attributes.md)<br/>
-[Atributos independentes](stand-alone-attributes.md)  
+[Atributos independentes](stand-alone-attributes.md)

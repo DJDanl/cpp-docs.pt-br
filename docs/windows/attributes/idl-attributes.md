@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebc257d78bf658b722a93e9d7c306c9bcf6e88bd
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 87ab9e42af139f9b156fa2a688558077967dfa8c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790221"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067794"
 ---
 # <a name="idl-attributes"></a>Atributos IDL
 
@@ -83,7 +83,7 @@ Observe que [idl_quote](idl-quote.md) permite que você use construções MIDL q
 |[licensed](licensed.md)|Indica que a coclass ao qual se aplica é licenciada e deve ser instanciada usando `IClassFactory2`.|
 |[local](local-cpp.md)|Permite que você use o compilador MIDL como um gerador de cabeçalho quando usado no cabeçalho da interface. Quando usado em uma função individual, designa um procedimento de local para o qual nenhuma stubs são gerados.|
 |[max_is](max-is.md)|Designa o valor máximo para um índice de matriz válida.|
-|[módulo](module-cpp.md)|Define o bloco de biblioteca no arquivo. idl.|
+|[module](module-cpp.md)|Define o bloco de biblioteca no arquivo. idl.|
 |[ms_union](ms-union.md)|Controla o alinhamento de representação de dados de rede de uniões nonencapsulated.|
 |[no_injected_text](no-injected-text.md)|Impede que o compilador injetando código como resultado do uso do atributo.|
 |[nonbrowsable](nonbrowsable.md)|Indica que um membro de interface não deve ser exibido em um navegador de propriedade.|
@@ -92,7 +92,7 @@ Observe que [idl_quote](idl-quote.md) permite que você use construções MIDL q
 |[object](object-cpp.md)|Identifica uma interface personalizada; sinônimo de atributo personalizado.|
 |[odl](odl.md)|Identifica uma interface como uma interface de linguagem de descrição do objeto (ODL).|
 |[oleautomation](oleautomation.md)|Indica que uma interface é compatível com a automação.|
-|[Opcional](optional-cpp.md)|Especifica um parâmetro opcional para uma função de membro.|
+|[optional](optional-cpp.md)|Especifica um parâmetro opcional para uma função de membro.|
 |[out](out-cpp.md)|Identifica os parâmetros de ponteiro que são retornados do procedimento chamado ao procedimento de chamada (do servidor para o cliente).|
 |[pointer_default](pointer-default.md)|Especifica o atributo de ponteiro padrão para todos os ponteiros, exceto ponteiros de nível superior que aparecem em listas de parâmetros.|
 |[pragma](pragma.md)|Emite a cadeia de caracteres especificada, sem os caracteres de aspas no arquivo. idl gerado.|
@@ -125,4 +125,4 @@ Observe que [idl_quote](idl-quote.md) permite que você use construções MIDL q
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos por grupo](attributes-by-group.md)  
+[Atributos por grupo](attributes-by-group.md)

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e5147faaf0170a10295006f12d7e95f5dfd3e8d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 159d452c3b0a813c52d8486f52d67b9817c3a558
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380692"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069276"
 ---
 # <a name="ccriticalsection-class"></a>Classe CCriticalSection
 
@@ -81,7 +81,7 @@ Há dois métodos para usar um `CCriticalSection` objeto: autônomas e inseridas
 
 - Método independente para usar autônoma `CCriticalSection` do objeto, construa o `CCriticalSection` objeto quando ele for necessário. Após um retorno bem-sucedido do construtor, bloquear explicitamente o objeto com uma chamada para [bloqueio](#lock). Chame [Unlock](#unlock) quando você terminar acessando a seção crítica. Esse método, ao mesmo tempo mais evidente para alguém ler seu código-fonte, é mais propenso a erros, como você deve se lembrar de bloquear e desbloquear a seção crítica antes e após o acesso.
 
-     Um método mais preferível é usar o [CSingleLock](../../mfc/reference/csinglelock-class.md) classe. Ele também tem um `Lock` e `Unlock` método, mas você não precisa se preocupar sobre como desbloquear o recurso se ocorrer uma exceção.
+   Um método mais preferível é usar o [CSingleLock](../../mfc/reference/csinglelock-class.md) classe. Ele também tem um `Lock` e `Unlock` método, mas você não precisa se preocupar sobre como desbloquear o recurso se ocorrer uma exceção.
 
 - Inserido de método, você também pode compartilhar uma classe com vários threads, adicionando um `CCriticalSection`-membro de dados de tipo para a classe e o bloqueio o membro de dados quando necessário.
 

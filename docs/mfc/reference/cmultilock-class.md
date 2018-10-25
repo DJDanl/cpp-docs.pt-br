@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39cde8affc84ed879ad3731cb6c18449c60498f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 097f6173faad4f99f64c5dac45e2a0d1292a07eb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430846"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076354"
 ---
 # <a name="cmultilock-class"></a>Classe CMultiLock
 
@@ -148,19 +148,19 @@ Se `Lock` falhar, retornará - 1. Se for bem-sucedido, ele retorna um dos seguin
 
 - Entre WAIT_OBJECT_0 e WAIT_OBJECT_0 + (número de objetos - 1)
 
-     Se *bWaitForAll* for TRUE, todos os objetos são sinalizados (disponível). Se *bWaitForAll* é FALSE, o valor de retorno - WAIT_OBJECT_0 é o índice na matriz de objetos do objeto que é sinalizado (disponível).
+   Se *bWaitForAll* for TRUE, todos os objetos são sinalizados (disponível). Se *bWaitForAll* é FALSE, o valor de retorno - WAIT_OBJECT_0 é o índice na matriz de objetos do objeto que é sinalizado (disponível).
 
 - WAIT_OBJECT_0 + (número de objetos)
 
-     Um evento especificado na *dwWakeMask* está disponível na fila de entrada do thread.
+   Um evento especificado na *dwWakeMask* está disponível na fila de entrada do thread.
 
 - Entre WAIT_ABANDONED_0 e WAIT_ABANDONED_0 + (número de objetos - 1)
 
-     Se *bWaitForAll* for TRUE, todos os objetos são sinalizados e pelo menos um dos objetos é um objeto de mutex abandonado. Se *bWaitForAll* é FALSE, o valor de retorno - WAIT_ABANDONED_0 é o índice na matriz de objetos do objeto mutex abandonado que atendeu à espera.
+   Se *bWaitForAll* for TRUE, todos os objetos são sinalizados e pelo menos um dos objetos é um objeto de mutex abandonado. Se *bWaitForAll* é FALSE, o valor de retorno - WAIT_ABANDONED_0 é o índice na matriz de objetos do objeto mutex abandonado que atendeu à espera.
 
 - WAIT_TIMEOUT
 
-     O intervalo de tempo limite especificado na *dwTimeOut* expiradas sem o sucesso de espera.
+   O intervalo de tempo limite especificado na *dwTimeOut* expiradas sem o sucesso de espera.
 
 ### <a name="remarks"></a>Comentários
 
@@ -174,7 +174,6 @@ Libera o objeto de sincronização pertencente a `CMultiLock`.
 
 ```
 BOOL Unlock();
-
 
 BOOL Unlock(
     LONG lCount,
@@ -202,6 +201,4 @@ A primeira forma de `Unlock` tenta desbloquear o objeto de sincronização geren
 ## <a name="see-also"></a>Consulte também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
-
-
 

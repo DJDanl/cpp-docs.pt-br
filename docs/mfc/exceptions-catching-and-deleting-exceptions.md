@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd59cc19c80e305a7e57fb711a49f59a024d528
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5ad6ad1c4d1d7d74f60acbd985ee549d708ae28f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434759"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074118"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Exceções: obtendo e excluindo exceções
 
@@ -36,9 +36,9 @@ Sua **catch** bloco deve excluir uma exceção quando:
 
 - O **catch** bloco lançar uma nova exceção.
 
-     Obviamente, você não pode excluir a exceção se você lançar a mesma exceção novamente:
+   Obviamente, você não pode excluir a exceção se você lançar a mesma exceção novamente:
 
-     [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
+   [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
 
 - Execução retorna de dentro de **catch** bloco.
 
@@ -49,15 +49,15 @@ Sua **catch** bloco deve excluir uma exceção quando:
 
 1. Use o **tente** palavra-chave para configurar um **tente** bloco. Executar quaisquer instruções de programa que podem gerar uma exceção dentro de um **tente** bloco.
 
-     Use o **catch** palavra-chave para configurar um **catch** bloco. Coloque o código de tratamento de exceção em um **catch** bloco. O código na **catch** bloco é executado somente se o código dentro a **tente** bloco lançar uma exceção do tipo especificado no **catch** instrução.
+   Use o **catch** palavra-chave para configurar um **catch** bloco. Coloque o código de tratamento de exceção em um **catch** bloco. O código na **catch** bloco é executado somente se o código dentro a **tente** bloco lançar uma exceção do tipo especificado no **catch** instrução.
 
-     A seguir mostra de esqueleto como **tente** e **catch** blocos normalmente são organizados:
+   A seguir mostra de esqueleto como **tente** e **catch** blocos normalmente são organizados:
 
-     [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
+   [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
 
-     Quando uma exceção é lançada, o controle passa para a primeira **catch** bloco cuja declaração de exceção corresponde ao tipo da exceção. Seletivamente pode lidar com diferentes tipos de exceções com sequencial **catch** bloqueia conforme listado abaixo:
+   Quando uma exceção é lançada, o controle passa para a primeira **catch** bloco cuja declaração de exceção corresponde ao tipo da exceção. Seletivamente pode lidar com diferentes tipos de exceções com sequencial **catch** bloqueia conforme listado abaixo:
 
-     [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
+   [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
 Para obter mais informações, consulte [exceções: Convertendo de Macros de exceção MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
 

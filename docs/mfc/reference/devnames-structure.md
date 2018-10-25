@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 637843873bbb0e12a76168bd08b613e14b391ef8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d91a44a38d331a49927d5129c5002eef53c224ad
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392457"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077966"
 ---
 # <a name="devnames-structure"></a>Estrutura DEVNAMES
 
@@ -66,5 +66,4 @@ O `PrintDlg` função utiliza essas cadeias de caracteres para inicializar os me
 
 [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CPrintDialog::CreatePrinterDC](../../mfc/reference/cprintdialog-class.md#createprinterdc)
-
 

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3374b2a292fc6463cb4fd85d0cd56fe9c3556443
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 986bc24c57f8692bfdd98194b9e58c9cee6817f6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448240"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067183"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Excluindo todos os objetos em uma coleção CObject
 
@@ -68,9 +68,9 @@ Observe a diferença entre a exclusão de objeto de um elemento e remover o elem
 
 1. Chamar o `RemoveAll` function para remover todos os elementos da matriz depois que eles foram excluídos.
 
-     O código para excluir todos os elementos de uma matriz é da seguinte maneira:
+   O código para excluir todos os elementos de uma matriz é da seguinte maneira:
 
-     [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
 
 Como com o exemplo da lista acima, você pode chamar `RemoveAll` para remover todos os elementos em uma matriz ou `RemoveAt` para remover um elemento individual.
 
@@ -82,9 +82,9 @@ Como com o exemplo da lista acima, você pode chamar `RemoveAll` para remover to
 
 1. Chamar o `RemoveAll` function para remover todos os elementos do mapa, depois que eles foram excluídos.
 
-     O código para excluir todos os elementos de um `CMap` coleção é da seguinte maneira. Cada elemento no mapa tem uma cadeia de caracteres como a chave e um `CPerson` objeto (derivado de `CObject`) como o valor.
+   O código para excluir todos os elementos de um `CMap` coleção é da seguinte maneira. Cada elemento no mapa tem uma cadeia de caracteres como a chave e um `CPerson` objeto (derivado de `CObject`) como o valor.
 
-     [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
+   [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
 
 Você pode chamar `RemoveAll` para remover todos os elementos em um mapa ou `RemoveKey` para remover um elemento individual com a chave especificada.
 

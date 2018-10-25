@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0baba6503d1d5b4e382347f4f4d9680b11f954ce
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 7bef66e8b3c326f205b6399538a811bcc83c9f9d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328513"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070394"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -36,7 +36,7 @@ O **/Qspectre** opção está disponível no Visual Studio 2017 versão 15.5.5 e
 
 O **/Qspectre** opção está desativada por padrão.
 
-Em sua versão inicial, o **/Qspectre** opção trabalhada somente o código otimizado. No Visual Studio 2017 versão 15.7 e posteriores, o **/Qspectre** opção tem suporte em todos os níveis de otimização. 
+Em sua versão inicial, o **/Qspectre** opção trabalhada somente o código otimizado. No Visual Studio 2017 versão 15.7 e posteriores, o **/Qspectre** opção tem suporte em todos os níveis de otimização.
 
 Bibliotecas do Microsoft Visual C++ também estão disponíveis em versões com mitigação do Spectre. As bibliotecas atenuadas de espectro para Visual Studio 2017 podem ser baixadas no instalador do Visual Studio. Eles são encontrados na **componentes individuais** guia sob **compiladores, ferramentas de build e tempos de execução**, e ter "Bibliotecas para Spectre" no nome. DLL e bibliotecas de tempo de execução estática com atenuação habilitado estão disponíveis para um subconjunto dos tempos de execução do Visual C++: código de inicialização do VC + +, vcruntime140, msvcp140, concrt140 e vcamp140. As DLLs são compatíveis para implantação de local do aplicativo apenas; o conteúdo do Visual C++ 2017 Runtime bibliotecas Redistributable não foi modificado. Você também pode instalar bibliotecas atenuadas de espectro para MFC e ATL, encontrado na **componentes individuais** guia sob **SDKs, bibliotecas e estruturas**.
 

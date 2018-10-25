@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 06948a41703377a3d0d09ed4d11792f0cf7d7c6c
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ddbd516421f72e1d6ee13a9c32fe90f99aec44e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790305"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067950"
 ---
 # <a name="public-c-attributes"></a>public (atributos C++)
 
@@ -72,4 +72,4 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 ## <a name="see-also"></a>Consulte também
 
 [Atributos de IDL](idl-attributes.md)<br/>
-[Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)  
+[Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)

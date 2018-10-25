@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f673f0212884fce33069f044b34d5396cf72b7c3
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: a102eae0dd5f96d74f7258c10c5bcce55c3a6443
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081923"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065364"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Derivando uma classe de CObject
 
@@ -65,9 +65,9 @@ A tabela a seguir mostra a relação entre as macros usadas para dar suporte à 
 
 1. Use a sintaxe de C++ normal para derivar a classe de `CObject` (ou de uma classe derivada de `CObject`).
 
-     O exemplo a seguir mostra o caso mais simples, a derivação de uma classe de `CObject`:
+   O exemplo a seguir mostra o caso mais simples, a derivação de uma classe de `CObject`:
 
-     [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
+   [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
 Normalmente, no entanto, você talvez queira substituir algumas das `CObject`de funções de membro para manipular as especificidades de sua nova classe. Por exemplo, normalmente, talvez queira substituir a `Dump` função de `CObject` para fornecer saída de depuração para o conteúdo da sua classe. Para obter detalhes sobre como substituir `Dump`, consulte o artigo [diagnóstico: despejar o conteúdo de objeto](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). Você talvez também queira substituir a `AssertValid` função de `CObject` para fornecer teste personalizado para validar a consistência dos membros de dados de objetos de classe. Para obter uma descrição de como substituir `AssertValid`, consulte [MFC ASSERT_VALID e CObject::assertvalid&lt;1}](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
 

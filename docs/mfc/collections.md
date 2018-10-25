@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b6f2fdeb02fbc5e57bbba58f685d21133841279
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 72bae0d985c81478321109c3c02c07e6b1386028
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412854"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069900"
 ---
 # <a name="collections"></a>Coleções
 
@@ -53,15 +53,15 @@ Cada uma das três formas de coleção fornecida é descrita brevemente posterio
 
 - Lista
 
-     A classe de lista fornece uma lista ordenada e não indexada de elementos, implementado como uma lista duplamente vinculada. Uma lista tem um "head" e "final" e adicionando ou removendo elementos do head ou da parte final do, ou inserindo ou excluindo elementos no meio, é muito rápida.
+   A classe de lista fornece uma lista ordenada e não indexada de elementos, implementado como uma lista duplamente vinculada. Uma lista tem um "head" e "final" e adicionando ou removendo elementos do head ou da parte final do, ou inserindo ou excluindo elementos no meio, é muito rápida.
 
 - Matriz
 
-     A classe array fornece uma matriz dinamicamente dimensionada, ordenada e indexados de inteiro de objetos.
+   A classe array fornece uma matriz dinamicamente dimensionada, ordenada e indexados de inteiro de objetos.
 
 - Mapa (também conhecido como um dicionário)
 
-     Um mapa é uma coleção que associa um objeto de chave com um objeto de valor.
+   Um mapa é uma coleção que associa um objeto de chave com um objeto de valor.
 
 ##  <a name="_core_the_template_based_collection_classes"></a> As Classes de coleção com base em modelo
 

@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b85807b9e9dd0cec63def8ffc4a9aa69056f270
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 7c63a043b8f1a91654c0b765632969b82725a3c0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328136"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066156"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>classe Enum (C + + c++ /CLI e c++ /CLI CX)
 
@@ -175,7 +175,7 @@ void f(int32);
 No entanto, nas versões atuais do compilador, o padrão enum é emitido como um enum gerenciado com um [NativeEnumAttribute] e o seguinte no MSIL para a assinatura de função:
 
 ```cpp
-void f(E)  
+void f(E)
 ```
 
 Para obter mais informações sobre enums nativas, consulte [declarações de enumeração C++](../cpp/enumerations-cpp.md).
@@ -202,7 +202,7 @@ public enum n { c, d };
 // unnamed, standard enum
 public enum { e, f } o;
 
-int main()  
+int main()
 {
    // consume managed enum
    m mym = m::b;

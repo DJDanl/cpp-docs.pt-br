@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0df3da3be3e2ad850b2b84b636d1bc1d3fb7eb98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 90203a2e4fc29b28e6c75193ed1db35e25044951
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447356"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076952"
 ---
 # <a name="cmemfile-class"></a>Classe CMemFile
 
@@ -165,7 +165,6 @@ A primeira sobrecarga abre um arquivo de memória vazia.
 
 ```
 CMemFile(UINT nGrowBytes = 1024);
-
 
 CMemFile(
     BYTE* lpBuffer,
@@ -303,6 +302,4 @@ Substitua essa função para implementar a realocação de memória personalizad
 
 [Classe CFile](../../mfc/reference/cfile-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
-
-
 

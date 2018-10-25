@@ -48,114 +48,114 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 896c1dd1f1d3a43a3678a086d80e0f95b60b6126
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 616d2cc9919c992212024d25ab11902ffe2eda5e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083327"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072142"
 ---
 # <a name="cenumeratoraccessor-class"></a>Classe CEnumeratorAccessor
 
-Usado pelo [CEnumerator](../../data/oledb/cenumerator-class.md) para acessar os dados do conjunto de linhas do enumerador.  
-  
+Usado pelo [CEnumerator](../../data/oledb/cenumerator-class.md) para acessar os dados do conjunto de linhas do enumerador.
+
 ## <a name="syntax"></a>Sintaxe
 
 ```cpp
-class CEnumeratorAccessor  
-```  
+class CEnumeratorAccessor
+```
 
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atldbcli.h  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="data-members"></a>Membros de Dados  
-  
-|||  
-|-|-|  
-|[m_bIsParent](#bisparent)|Uma variável que indica se o enumerador é um enumerador pai, se a linha é um enumerador.|  
-|[m_nType](#ntype)|Uma variável que indica se a linha descreve uma fonte de dados ou um enumerador.|  
-|[m_szDescription](#szdescription)|A descrição da fonte de dados ou enumerador.|  
-|[m_szName](#szname)|O nome da fonte de dados ou enumerador.|  
-|[m_szParseName](#szparsename)|Cadeia de caracteres para passar para [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) para obter um identificador de origem para a fonte de dados ou enumerador.|  
-  
-## <a name="remarks"></a>Comentários  
+**Cabeçalho:** atldbcli.h
 
-Esse conjunto de linhas consiste nas fontes de dados e enumeradores visíveis do enumerador atual.  
-  
+## <a name="members"></a>Membros
+
+### <a name="data-members"></a>Membros de Dados
+
+|||
+|-|-|
+|[m_bIsParent](#bisparent)|Uma variável que indica se o enumerador é um enumerador pai, se a linha é um enumerador.|
+|[m_nType](#ntype)|Uma variável que indica se a linha descreve uma fonte de dados ou um enumerador.|
+|[m_szDescription](#szdescription)|A descrição da fonte de dados ou enumerador.|
+|[m_szName](#szname)|O nome da fonte de dados ou enumerador.|
+|[m_szParseName](#szparsename)|Cadeia de caracteres para passar para [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) para obter um identificador de origem para a fonte de dados ou enumerador.|
+
+## <a name="remarks"></a>Comentários
+
+Esse conjunto de linhas consiste nas fontes de dados e enumeradores visíveis do enumerador atual.
+
 ## <a name="bisparent"></a> Cenumeratoraccessor:: M_bisparent
 
-Uma variável que indica se o enumerador é um enumerador pai, se a linha é um enumerador.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp
-VARIANT_BOOL m_bIsParent;  
-```  
-  
-### <a name="remarks"></a>Comentários  
+Uma variável que indica se o enumerador é um enumerador pai, se a linha é um enumerador.
 
-Ver [ISourcesRowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200) na *referência do programador DB OLE* para obter mais informações. 
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+VARIANT_BOOL m_bIsParent;
+```
+
+### <a name="remarks"></a>Comentários
+
+Ver [ISourcesRowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200) na *referência do programador DB OLE* para obter mais informações.
 
 ## <a name="ntype"></a> Cenumeratoraccessor:: M_ntype
 
-Uma variável que indica se a linha descreve uma fonte de dados ou um enumerador.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
+Uma variável que indica se a linha descreve uma fonte de dados ou um enumerador.
+
+### <a name="syntax"></a>Sintaxe
+
 ```cpp
-USHORT m_nType;  
-```  
-  
-### <a name="remarks"></a>Comentários  
+USHORT m_nType;
+```
+
+### <a name="remarks"></a>Comentários
 
 Ver [ISourcesRowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200) na *referência do programador DB OLE* para obter mais informações.
 
 ## <a name="szdescription"></a> Cenumeratoraccessor:: M_szdescription
 
-A descrição da fonte de dados ou enumerador.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
+A descrição da fonte de dados ou enumerador.
+
+### <a name="syntax"></a>Sintaxe
+
 ```cpp
-WCHAR m_szDescription[129];  
-```  
-  
-### <a name="remarks"></a>Comentários  
+WCHAR m_szDescription[129];
+```
+
+### <a name="remarks"></a>Comentários
 
 Ver [ISourcesRowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200) na *referência do programador DB OLE* para obter mais informações.
 
 ## <a name="szname"></a> Cenumeratoraccessor:: M_szname
 
-O nome da fonte de dados ou enumerador.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp
-WCHAR m_szName[129];  
-```  
-  
-### <a name="remarks"></a>Comentários  
+O nome da fonte de dados ou enumerador.
 
-Ver [ISourcesRowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200) na *referência do programador DB OLE* para obter mais informações.  
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+WCHAR m_szName[129];
+```
+
+### <a name="remarks"></a>Comentários
+
+Ver [ISourcesRowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200) na *referência do programador DB OLE* para obter mais informações.
 
 ## <a name="szparsename"></a> Cenumeratoraccessor:: M_szparsename
 
-Cadeia de caracteres para passar para [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) para obter um identificador de origem para a fonte de dados ou enumerador.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp
-WCHAR m_szParseName[129];  
-```  
-  
-### <a name="remarks"></a>Comentários  
+Cadeia de caracteres para passar para [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) para obter um identificador de origem para a fonte de dados ou enumerador.
 
-Ver [ISourcesRowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200) na *referência do programador DB OLE* para obter mais informações.  
-  
-## <a name="see-also"></a>Consulte também  
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+WCHAR m_szParseName[129];
+```
+
+### <a name="remarks"></a>Comentários
+
+Ver [ISourcesRowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200) na *referência do programador DB OLE* para obter mais informações.
+
+## <a name="see-also"></a>Consulte também
 
 [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

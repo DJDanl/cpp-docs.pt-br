@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 468b5c5dcadc1715384684062f203ae9179ef044
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 7b63e98e070dc5352d7c1456252722bea958b8bf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790283"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072090"
 ---
 # <a name="viprogid"></a>vi_progid
 
@@ -73,4 +73,4 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos Typedef, Enum, Union e Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
-[Chave progID](/windows/desktop/com/-progid--key)  
+[Chave progID](/windows/desktop/com/-progid--key)

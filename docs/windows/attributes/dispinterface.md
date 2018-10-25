@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3b02244e0576f99cc0a6940f2ee4a13511cfbe6f
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ea3ece20ac6df0fab00f1e21d27c41ae6e115517
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790067"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065896"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -74,4 +74,4 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 [dual](dual.md)<br/>
 [custom](custom-cpp.md)<br/>
 [object](object-cpp.md)<br/>
-[__interface](../../cpp/interface.md)  
+[__interface](../../cpp/interface.md)

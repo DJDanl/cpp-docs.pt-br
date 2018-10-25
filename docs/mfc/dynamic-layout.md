@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08fc6f6a5b93851468d412e34b3ee0a85ab534e5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e2fb7b2468946be29553f54fcedde98e43881d7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413244"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068821"
 ---
 # <a name="dynamic-layout"></a>Layout dinâmico
 
@@ -119,7 +119,7 @@ O procedimento anterior é útil para especificar propriedades de layout dinâmi
     dynamicLayout->LoadResource("IDD_DIALOG1");
     ```
 
-     O recurso denominado deve fazer referência a uma caixa de diálogo que contém informações de layout na forma de um **AFX_DIALOG_LAYOUT** entrada no arquivo de recurso, como no exemplo a seguir:
+   O recurso denominado deve fazer referência a uma caixa de diálogo que contém informações de layout na forma de um **AFX_DIALOG_LAYOUT** entrada no arquivo de recurso, como no exemplo a seguir:
 
     ```RC
     /////////////////////////////////////////////////////////////////////////////

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff655573f77b901725fe18c2346c46306c9b853a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bf5bca25f0e5b6a349544e24d0983d4d297be9ae
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716801"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065870"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>Enumerações de &lt;filesystem&gt;
 
@@ -73,7 +73,6 @@ enum class copy_options {
 |`directories_only`|Iterar somente diretórios, ignora arquivos.|
 |`create_symlinks`|Faz links simbólicos em vez de copiar arquivos. Um caminho absoluto deve ser usado como o caminho de origem, a menos que o destino seja o diretório atual.|
 |`create_hard_links`|Faz links físicos em vez de copiar arquivos.|
-
 
 ## <a name="directory_options"></a> directory_options
 

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0e4eba9940546e72f11c220dc03a6538750ae85
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: af2780c8b7fb332cd739416e5051a57a8bc7f765
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028331"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073521"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Funções globais TypeLib e registro
 
@@ -60,7 +60,7 @@ Essas funções controlam qual nó no registro o programa usa para armazenar inf
 |||
 |-|-|
 |[AtlGetPerUserRegistration](#atlgetperuserregistration)|Recupera se o aplicativo redireciona o acesso ao registro para o **HKEY_CURRENT_USER** ( **HKCU**) nó.|
-|[AtlSetPerUserRegistration](#atlsetperuserregistration)|Define se o aplicativo redireciona o acesso ao registro para o **HKEY_CURRENT_USER** ( **HKCU**) nó.|  
+|[AtlSetPerUserRegistration](#atlsetperuserregistration)|Define se o aplicativo redireciona o acesso ao registro para o **HKEY_CURRENT_USER** ( **HKCU**) nó.|
 
 ### <a name="requirements"></a>Requisitos
 
@@ -93,7 +93,7 @@ O redirecionamento não é global. Somente as estruturas MFC e ATL são afetadas
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlbase. h  
+**Cabeçalho:** atlbase. h
 
 ## <a name="afxregcreatekey"></a> AfxRegCreateKey
 
@@ -121,11 +121,11 @@ Ponteiro para um `CAtlTransactionManager` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Se a função for bem-sucedida, o valor de retorno será ERROR_SUCCESS. Se a função falhar, o valor de retorno é um código de erro diferente de zero definido em Winerror. h.  
+Se a função for bem-sucedida, o valor de retorno será ERROR_SUCCESS. Se a função falhar, o valor de retorno é um código de erro diferente de zero definido em Winerror. h.
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxpriv.h  
+**Cabeçalho:** afxpriv.h
 
 ## <a name="afxregdeletekey"></a> AfxRegDeleteKey
 
@@ -154,7 +154,7 @@ Se a função for bem-sucedida, o valor de retorno será ERROR_SUCCESS. Se a fun
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxpriv.h  
+**Cabeçalho:** afxpriv.h
 
 ## <a name="afxregisterpreviewhandler"></a>
 
@@ -179,7 +179,7 @@ Especifica a extensão de arquivo registrados com este manipulador.
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdisp.h   
+**Cabeçalho:** afxdisp.h
 
 ##  <a name="atlregistertypelib"></a>  AtlRegisterTypeLib
 
@@ -239,11 +239,11 @@ Se a função for bem-sucedida, o valor de retorno será ERROR_SUCCESS. Se a fun
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxpriv.h  
+**Cabeçalho:** afxpriv.h
 
 ## <a name="afxregopenkeyex"></a>  AfxRegOpenKeyEx
 
-Abre a chave do Registro especificada. 
+Abre a chave do Registro especificada.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -277,7 +277,7 @@ Se a função for bem-sucedida, o valor de retorno será ERROR_SUCCESS. Se a fun
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxpriv.h  
+**Cabeçalho:** afxpriv.h
 
 ## <a name="afxunregisterpreviewhandler"></a> AfxUnregisterPreviewHandler
 
@@ -296,7 +296,7 @@ Especifica o CLSID do manipulador para cancelar o registro.
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** afxdisp.h  
+**Cabeçalho:** afxdisp.h
 
 ## <a name="atlsetperuserregistration"></a> AtlSetPerUserRegistration
 
@@ -321,11 +321,11 @@ S_OK se o método for bem-sucedido, caso contrário, o HRESULT código de erro s
 
 Redirecionamento do registro não está habilitado por padrão. Se você habilitar essa opção, o acesso ao registro é redirecionado para **HKEY_CURRENT_USER\Software\Classes**.
 
-O redirecionamento não é global. Somente as estruturas MFC e ATL são afetadas por esse redirecionamento do registro.  
+O redirecionamento não é global. Somente as estruturas MFC e ATL são afetadas por esse redirecionamento do registro.
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlbase. h  
+**Cabeçalho:** atlbase. h
 
 ##  <a name="atlunregistertypelib"></a>  AtlUnRegisterTypeLib
 
@@ -335,7 +335,7 @@ Essa função é chamada para cancelar o registro de uma biblioteca de tipos.
 
 ```
 ATLAPI AtlUnRegisterTypeLib(
-    HINSTANCE hInstTypeLib, 
+    HINSTANCE hInstTypeLib,
     LPCOLESTR lpszIndex);
 ```
 
@@ -353,7 +353,7 @@ Retorna S_OK no êxito ou um erro HRESULT em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função auxiliar é utilizada pelo [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) e [AtlComModuleUnregisterServer](#atlcommoduleunregisterserver).  
+Essa função auxiliar é utilizada pelo [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) e [AtlComModuleUnregisterServer](#atlcommoduleunregisterserver).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -405,7 +405,7 @@ Essa função foi preterida no Visual Studio 2013 e será removida no Visual Stu
 
 ##  <a name="registrydataexchange"></a>  RegistryDataExchange
 
-Essa função é chamada para ler do ou gravar no Registro do sistema.  
+Essa função é chamada para ler do ou gravar no Registro do sistema.
 
 ### <a name="syntax"></a>Sintaxe
 

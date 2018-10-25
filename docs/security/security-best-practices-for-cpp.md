@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0bcfc1cef3ea8e7010dd4ecc14c8048f546b25f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a42abcf891b5ebdeb8f9eaac8fa7fc9b20733558
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438126"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068756"
 ---
 # <a name="security-best-practices-for-c"></a>Práticas recomendadas de segurança para C++
 
@@ -94,7 +94,6 @@ Também é possível usar o AppVerifier para:
 - Examinar um aplicativo por problemas relacionados à memória.
 
 - Identificar possíveis problemas de segurança em um aplicativo.
-
 
 ## <a name="windows-user-accounts"></a>Contas de usuário do Windows
 

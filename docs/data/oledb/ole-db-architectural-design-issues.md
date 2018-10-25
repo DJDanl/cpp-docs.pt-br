@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a79cc4dfa36170293a8832571ba3348d6e2c8865
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 0a0fc54c002511b9c091acc5d5e3fbe4636ad933
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990017"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072233"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Problemas de design arquitetônico de banco de dados OLE
 
-Considere os seguintes problemas antes de iniciar seu aplicativo OLE DB:  
-  
+Considere os seguintes problemas antes de iniciar seu aplicativo OLE DB:
+
 ## <a name="what-programming-implementation-will-you-use-to-write-your-ole-db-application"></a>Qual implementação de programação você usará para escrever seu aplicativo OLE DB?
 
 A Microsoft oferece várias bibliotecas para realizar essa tarefa: uma biblioteca de modelos OLE DB, OLE DB atributos e as interfaces OLE DB brutas no SDK do OLE DB. Além disso, há assistentes que o ajudam a escrever o seu programa. Essas implementações são descritas em [modelos OLE DB, atributos e outras implementações](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md).

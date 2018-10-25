@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a650d62a53fa6cada535119cb8897f1f97870ea1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 446ed0c6fb84990db572e1e1ead5c2ab5094ec70
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421252"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076055"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>Como criar aplicativos do console CLR (C++/CLI)
 
@@ -67,7 +67,7 @@ Quando você usa o modelo de aplicativo de Console para criar um projeto, ele au
 
 1. No **nome** , digite um nome exclusivo para seu aplicativo.
 
-     Você pode especificar outras configurações de projeto e solução, mas eles não são necessários.
+   Você pode especificar outras configurações de projeto e solução, mas eles não são necessários.
 
 1. Escolha o botão **OK**.
 

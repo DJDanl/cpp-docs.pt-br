@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8cba3c15049c176b19f0da197d19017ae2aa699d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 297b457bdf2c70a75b9abdc433c87381fd115037
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790225"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067742"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 
@@ -74,4 +74,4 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 ## <a name="see-also"></a>Consulte também
 
 [Atributos de IDL](idl-attributes.md)<br/>
-[Atributos de membro de dados](data-member-attributes.md)  
+[Atributos de membro de dados](data-member-attributes.md)

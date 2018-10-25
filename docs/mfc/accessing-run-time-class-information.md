@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b92f634e120bf40fe2355a4c09e0e0fb68e9ec2c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 61da17093d56dcfd8b0eeec3ade7955f27bc6b85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407434"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077706"
 ---
 # <a name="accessing-run-time-class-information"></a>Acessando informações da classe runtime
 
@@ -50,7 +50,7 @@ O `CObject` função de membro `IsKindOf` pode ser usado para determinar se um d
 
 1. Use `RUNTIME_CLASS` com o nome da classe, conforme mostrado aqui para a classe `CObject`:
 
-     [!code-cpp[NVC_MFCCObjectSample#4](../mfc/codesnippet/cpp/accessing-run-time-class-information_1.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#4](../mfc/codesnippet/cpp/accessing-run-time-class-information_1.cpp)]
 
 Você raramente precisará acessar diretamente o objeto da classe de tempo de execução. Um uso mais comum é para passar o objeto de classe de tempo de execução para o `IsKindOf` de função, conforme mostrado no próximo procedimento. O `IsKindOf` função testa um objeto para ver se ele pertence a uma determinada classe.
 
@@ -60,9 +60,9 @@ Você raramente precisará acessar diretamente o objeto da classe de tempo de ex
 
 1. Chame o `IsKindOf` função de membro para objetos dessa classe usando o `RUNTIME_CLASS` macro para gerar o `CRuntimeClass` argumento, como mostrado aqui:
 
-     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/accessing-run-time-class-information_2.h)]
+   [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/accessing-run-time-class-information_2.h)]
 
-     [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/cpp/accessing-run-time-class-information_3.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/cpp/accessing-run-time-class-information_3.cpp)]
 
     > [!NOTE]
     >  Retorna IsKindOf **verdadeira** se o objeto for um membro da classe especificada ou de uma classe derivada da classe especificada. `IsKindOf` não suporta vários herança ou as classes base virtuais, embora você possa usar herança múltipla para seu Microsoft Foundation classes derivadas, se necessário.

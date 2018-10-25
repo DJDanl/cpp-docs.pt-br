@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f3304106662d290a208545061bf9f71b7f30c10
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 16a61578b7512c1d9ce9d7ca217b29a3ea670657
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820939"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068483"
 ---
 # <a name="vmxvmptrld"></a>__vmx_vmptrld
 
@@ -33,22 +33,26 @@ Carrega o ponteiro para a estrutura atual do controle de máquina virtual (VMCS)
 ## <a name="syntax"></a>Sintaxe
 
 ```
-int __vmx_vmptrld( 
-   unsigned __int64 *VmcsPhysicalAddress 
+int __vmx_vmptrld( 
+   unsigned __int64 *VmcsPhysicalAddress 
 );
 ```
 
-#### <a name="parameters"></a>Parâmetros
+### <a name="parameters"></a>Parâmetros
 
-[in] *`VmcsPhysicalAddress` o endereço onde o ponteiro VMCS é armazenado.
+*VmcsPhysicalAddress*<br/>
+[in] O endereço onde o ponteiro VMCS está armazenado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-0 a operação foi bem-sucedida.
+0<br/>
+A operação foi bem-sucedida.
 
-1 a operação falhou com status estendido disponível no `VM-instruction error field` de VMCS o atual.
+1<br/>
+A operação falhou com status estendido disponível no `VM-instruction error field` de VMCS o atual.
 
-2 a operação falhou sem status disponível.
+2<br/>
+Falha na operação sem status disponível.
 
 ## <a name="remarks"></a>Comentários
 

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a502cbf61f3542c010a89b82131a95f94856cda
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 26861b11aafd4bfcd4f1d5a7cc618ed27b60e6b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042878"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071174"
 ---
 # <a name="cregkey-class"></a>Classe CRegKey
 
@@ -177,7 +177,7 @@ Se for bem-sucedido, retornará ERROR_SUCCESS; Caso contrário, retorna um valor
 Chame esse método para criar a chave especificada, se não existir como uma subchave da *hKeyParent*.
 
 ```
-LONG Create(  
+LONG Create(
     HKEY hKeyParent,
     LPCTSTR lpszKeyName,
     LPTSTR lpszClass = REG_NONE,
@@ -311,7 +311,7 @@ O HKEY associado com o `CRegKey` objeto.
 Chame esse método para enumerar as subchaves da chave do Registro aberta.
 
 ```
-LONG EnumKey(  
+LONG EnumKey(
     DWORD iIndex,
     LPTSTR pszName,
     LPDWORD pnNameLength,
@@ -361,7 +361,7 @@ Para obter mais informações, consulte [RegEnumFlush](/windows/desktop/api/winr
 Chame esse método para recuperar uma cópia do descritor de segurança que protege a chave do Registro aberta.
 
 ```
-LONG GetKeySecurity(  
+LONG GetKeySecurity(
     SECURITY_INFORMATION si,
     PSECURITY_DESCRIPTOR psd,
     LPDWORD pnBytes) throw();
@@ -409,7 +409,7 @@ CAtlTransactionManager* m_pTM;
 Este método notifica o chamador sobre as alterações para os atributos ou o conteúdo da chave do Registro aberta.
 
 ```
-LONG NotifyChangeKeyValue(  
+LONG NotifyChangeKeyValue(
     BOOL bWatchSubtree,
     DWORD dwNotifyFilter,
     HANDLE hEvent,
@@ -453,7 +453,7 @@ Para obter mais detalhes e um programa de exemplo, consulte [RegNotifyChangeKeyV
 Chame esse método para abrir a chave especificada e definir [m_hKey](#m_hkey) para o identificador dessa chave.
 
 ```
-LONG Open(  
+LONG Open(
     HKEY hKeyParent,
     LPCTSTR lpszKeyName,
     REGSAM samDesired = KEY_READ | KEY_WRITE) throw();
@@ -514,7 +514,7 @@ Esse operador desanexa *chave* de seu objeto atual e a atribui a `CRegKey` do ob
 Chame esse método para recuperar os dados binários de um nome de valor especificado.
 
 ```
-LONG QueryBinaryValue(  
+LONG QueryBinaryValue(
     LPCTSTR pszValueName,
     void* pValue,
     ULONG* pnBytes) throw();
@@ -547,7 +547,7 @@ Esse método faz uso de `RegQueryValueEx` e confirma que o tipo correto de dados
 Chame esse método para recuperar os dados DWORD para um nome de valor especificado.
 
 ```
-LONG QueryDWORDValue(  
+LONG QueryDWORDValue(
     LPCTSTR pszValueName,
     DWORD& dwValue) throw();
 ```
@@ -576,7 +576,7 @@ Esse método faz uso de `RegQueryValueEx` e confirma que o tipo correto de dados
 Chame esse método para recuperar os dados GUID para um nome de valor especificado.
 
 ```
-LONG QueryGUIDValue(  
+LONG QueryGUIDValue(
     LPCTSTR pszValueName,
     GUID& guidValue) throw();
 ```
@@ -605,7 +605,7 @@ Esse método utiliza `CRegKey::QueryStringValue` e converte a cadeia de caracter
 Chame esse método para recuperar os dados de cadeia de caracteres múltiplas para um nome de valor especificado.
 
 ```
-LONG QueryMultiStringValue(  
+LONG QueryMultiStringValue(
     LPCTSTR pszValueName,
     LPTSTR pszValue,
     ULONG* pnChars) throw();
@@ -638,7 +638,7 @@ Esse método faz uso de `RegQueryValueEx` e confirma que o tipo correto de dados
 Chame esse método para recuperar os dados QWORD para um nome de valor especificado.
 
 ```
-LONG QueryQWORDValue(  
+LONG QueryQWORDValue(
     LPCTSTR pszValueName,
     ULONGLONG& qwValue) throw();
 ```
@@ -667,7 +667,7 @@ Esse método faz uso de `RegQueryValueEx` e confirma que o tipo correto de dados
 Chame esse método para recuperar os dados de cadeia de caracteres para um nome de valor especificado.
 
 ```
-LONG QueryStringValue(  
+LONG QueryStringValue(
     LPCTSTR pszValueName,
     LPTSTR pszValue,
     ULONG* pnChars) throw();
@@ -700,7 +700,7 @@ Esse método faz uso de `RegQueryValueEx` e confirma que o tipo correto de dados
 Chame esse método para recuperar os dados para o campo de valor especificado do [m_hKey](#m_hkey). Versões anteriores desse método não têm mais suporte e são marcadas como ATL_DEPRECATED.
 
 ```
-LONG QueryValue(  
+LONG QueryValue(
     LPCTSTR pszValueName,
     DWORD* pdwType,
     void* pData,
@@ -781,7 +781,7 @@ Se a chave tiver subchaves, você deve chamar esse método para excluir a chave.
 Chame esse método para definir o valor binário da chave do registro.
 
 ```
-LONG SetBinaryValue(  
+LONG SetBinaryValue(
     LPCTSTR pszValueName,
     const void* pValue,
     ULONG nBytes) throw();
@@ -859,7 +859,7 @@ Esse método utiliza `CRegKey::SetStringValue` e converte o GUID em uma cadeia d
 Chame esse método para armazenar dados em um campo de valor especificado de uma chave especificada.
 
 ```
-LONG SetKeyValue(  
+LONG SetKeyValue(
     LPCTSTR lpszKeyName,
     LPCTSTR lpszValue,
     LPCTSTR lpszValueName = NULL) throw();
@@ -968,7 +968,7 @@ Esse método usa [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetval
 Chame esse método para definir o valor de cadeia de caracteres da chave do registro.
 
 ```
-LONG SetStringValue(  
+LONG SetStringValue(
     LPCTSTR pszValueName,
     LPCTSTR pszValue,
     DWORD dwType = REG_SZ) throw();
@@ -998,23 +998,23 @@ Esse método usa [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetval
 Chame esse método para armazenar dados no campo de valor especificado do [m_hKey](#m_hkey). Versões anteriores desse método não têm mais suporte e são marcadas como ATL_DEPRECATED.
 
 ```
-LONG SetValue(  
+LONG SetValue(
     LPCTSTR pszValueName,
     DWORD dwType,
     const void* pValue,
     ULONG nBytes) throw();
 
-static LONG WINAPI SetValue(  
+static LONG WINAPI SetValue(
     HKEY hKeyParent,
     LPCTSTR lpszKeyName,
     LPCTSTR lpszValue,
     LPCTSTR lpszValueName = NULL);
 
-ATL_DEPRECATED LONG SetValue(  
+ATL_DEPRECATED LONG SetValue(
     DWORD dwValue,
     LPCTSTR lpszValueName);
 
-ATL_DEPRECATED LONG SetValue(  
+ATL_DEPRECATED LONG SetValue(
     LPCTSTR lpszValue,
     LPCTSTR lpszValueName = NULL,
     bool bMulti = false,

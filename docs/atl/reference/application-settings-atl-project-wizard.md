@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cff60e5316202842b2ee22c5c6ba10813839b5d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 127e5187f2e6511279633ffe9b5e26b24014f6b2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46035845"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070641"
 ---
 # <a name="application-settings-atl-project-wizard"></a>Configurações do aplicativo, ATL Project Wizard
 
@@ -31,15 +31,15 @@ Use o **configurações do aplicativo** página do Assistente de projeto da ATL 
 
 Escolha um dos três tipos de servidor:
 
-- **Biblioteca de vínculo dinâmico (DLL)**  
+- **Biblioteca de vínculo dinâmico (DLL)**
 
    Selecione para criar um servidor em processo.
 
-- **Executável (EXE)**  
+- **Executável (EXE)**
 
    Selecione para criar um servidor local do out-of-process. Essa opção não permite o suporte para MFC ou COM+ 1.0. Ele não permite a mesclagem de código de proxy/stub.
 
-- **Serviço (EXE)**  
+- **Serviço (EXE)**
 
    Selecione para criar um aplicativo do Windows que é executado em segundo plano quando o Windows é iniciado. Essa opção não permite o suporte para MFC ou COM+ 1.0 ou não permite a mesclagem de código de proxy/stub.
 
@@ -48,15 +48,15 @@ Escolha um dos três tipos de servidor:
 > [!NOTE]
 > Todas as opções adicionais estão disponíveis para apenas os projetos DLL.
 
-- **Permitir mesclagem do código de proxy/stub**  
+- **Permitir mesclagem do código de proxy/stub**
 
    Selecione o **Permitir mesclagem do código de proxy/stub** caixa de seleção como uma conveniência ao marshaling de interfaces é necessária. Essa opção coloca o código de proxy e stub gerado pelo MIDL no mesmo executável como o servidor.
 
-- **Suporte MFC**  
+- **Suporte MFC**
 
    Selecione esta opção para especificar que seu objeto inclui suporte do MFC. Esta opção vincula seu projeto para as bibliotecas MFC para que você possa acessar qualquer uma das classes e funções que eles contêm.
 
-- **Suporte a COM+ 1.0**  
+- **Suporte a COM+ 1.0**
 
    Selecione esta opção para modificar as configurações de build do projeto para dar suporte a componentes COM+ 1.0. Além da lista padrão de bibliotecas, o assistente adiciona o comsvcs.lib de biblioteca específico do componente COM+ 1.0
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6ef86f54442031b4383e6a0b8cc6f57e4e53d58
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a26bd11c2a37e3644333a95ed03d9182f7b32b87
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418418"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066104"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Exceções: lançando exceções a partir das funções próprias
 
@@ -33,19 +33,19 @@ Quando uma exceção é lançada, a execução da função atual for interrompid
 
 1. Use uma das funções de auxiliar de MFC, como `AfxThrowMemoryException`. Essas funções geram um objeto de exceção pré-alocado do tipo apropriado.
 
-     No exemplo a seguir, uma função tenta alocar dois blocos de memória e gera uma exceção se a alocação falhar:
+   No exemplo a seguir, uma função tenta alocar dois blocos de memória e gera uma exceção se a alocação falhar:
 
-     [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]
+   [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]
 
-     Se a primeira alocação falhar, você pode simplesmente lançar a exceção de memória. Se a primeira alocação for bem-sucedida, mas a segunda falha, você deve liberar o primeiro bloco de alocação antes de lançar a exceção. Se as duas alocações tiver êxito, você pode prosseguir normalmente e liberar os blocos de quando a função de saída.
+   Se a primeira alocação falhar, você pode simplesmente lançar a exceção de memória. Se a primeira alocação for bem-sucedida, mas a segunda falha, você deve liberar o primeiro bloco de alocação antes de lançar a exceção. Se as duas alocações tiver êxito, você pode prosseguir normalmente e liberar os blocos de quando a função de saída.
 
      - ou –
 
 1. Use uma exceção definidas pelo usuário para indicar uma condição de problema. Você pode lançar um item de qualquer tipo, até mesmo uma classe inteira, como a exceção.
 
-     O exemplo a seguir tenta tocar um som por meio de um dispositivo de som wave e gera uma exceção se houver uma falha.
+   O exemplo a seguir tenta tocar um som por meio de um dispositivo de som wave e gera uma exceção se houver uma falha.
 
-     [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]
+   [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]
 
 > [!NOTE]
 >  Do MFC tratamento padrão de exceções se aplica somente aos ponteiros para `CException` objetos (e objetos do `CException`-as classes derivadas). O exemplo acima ignora o mecanismo de exceção do MFC.

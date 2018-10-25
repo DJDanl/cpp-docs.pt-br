@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee59f5e86cddeec47da47c648b0cf12789cc85a
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 8c8493650ef2c86a89c1a3060deb5ee6269a38a7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084094"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068639"
 ---
 # <a name="composite-control-global-functions"></a>Funções globais de controle de composição
 
@@ -56,11 +56,11 @@ Essas funções fornecem suporte para a criação de caixas de diálogo e para c
 |[AtlSetChildSite](#atlsetchildsite)|Inicializa o `IUnknown` do site filho.|
 |[AtlAxWinInit](#atlaxwininit)|Inicializa o código de hospedagem para objetos AxWin.|
 |[AtlAxWinTerm](#atlaxwinterm)|O código de hospedagem para objetos AxWin cancela a inicialização.|
-|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Retorna informações sobre a interface de origem padrão de um objeto.|  
+|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Retorna informações sobre a interface de origem padrão de um objeto.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlhost.h  
+**Cabeçalho:** atlhost.h
 
 ##  <a name="atlaxdialogbox"></a>  AtlAxDialogBox
 
@@ -101,7 +101,7 @@ Um dos valores HRESULT padrão.
 Para usar `AtlAxDialogBox` com um modelo de caixa de diálogo que contém um controle ActiveX, especifique uma cadeia CLSID, APPID ou URL válida, como o *texto* campo dos **controle** seção do recurso de caixa de diálogo, junto com " AtlAxWin80 "como o *nome da classe* campo sob a mesma seção. A seguir demonstra quais válida **controle** seção pode parecer com:
 
 ```
-CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
+CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
@@ -261,7 +261,7 @@ Para criar um controle ActiveX licenciado, consulte [AtlAxCreateControlLicEx](#a
 
 ##  <a name="atlaxcreatecontrollic"></a>  AtlAxCreateControlLic
 
-Cria um controle ActiveX licenciado, inicializa-o e hospeda-o na janela especificada.  
+Cria um controle ActiveX licenciado, inicializa-o e hospeda-o na janela especificada.
 
 ```
 ATLAPI AtlAxCreateControlLic(
@@ -484,7 +484,7 @@ Diferente de zero se a inicialização do controle de código de hospedagem foi 
 
 ### <a name="remarks"></a>Comentários
 
-Essa função deve ser chamada antes de usar o controle ATL que hospeda a API. Após uma chamada para essa função, o **"AtlAxWin"** classe de janela pode ser usado em chamadas para [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) ou [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa), conforme descrito no SDK do Windows.  
+Essa função deve ser chamada antes de usar o controle ATL que hospeda a API. Após uma chamada para essa função, o **"AtlAxWin"** classe de janela pode ser usado em chamadas para [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) ou [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa), conforme descrito no SDK do Windows.
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm
 

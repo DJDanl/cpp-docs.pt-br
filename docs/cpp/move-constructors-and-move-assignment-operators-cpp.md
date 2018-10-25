@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c819d024b9b89d28c0e87b86382bf1c1f23258a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b097e1d3c7d26c51283d4f63bb2bae14059f21cc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118486"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069770"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Operadores de construtores de movimento e de atribuição de movimento (C++)
 
@@ -151,14 +151,14 @@ Os procedimentos a seguir descrevem como escrever um construtor de movimentaçã
 
 1. Na instrução condicional, libere quaisquer recursos (como a memória) do objeto ao qual ela está sendo atribuída.
 
-     O exemplo a seguir libera o membro `_data` do objeto ao qual está sendo atribuído:
+   O exemplo a seguir libera o membro `_data` do objeto ao qual está sendo atribuído:
 
     ```cpp
     // Free the existing resource.
     delete[] _data;
     ```
 
-     Siga as etapas 2 e 3 no primeiro procedimento para transferir os membros de dados do objeto de origem para o objeto sendo construído:
+   Siga as etapas 2 e 3 no primeiro procedimento para transferir os membros de dados do objeto de origem para o objeto sendo construído:
 
     ```cpp
     // Copy the data pointer and its length from the

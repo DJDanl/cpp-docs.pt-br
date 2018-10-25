@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9351e363bfa0ca654837436a01bb36b4f2b51eb2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5099251f46d3446368c04a39d624fde8128ab2e4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378384"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076302"
 ---
 # <a name="cbasepane-class"></a>Classe CBasePane
 
@@ -332,7 +332,7 @@ As dicas de personalização a seguir pertencem ao `CBasePane Class` e todas as 
 
     - AFX_CBRS_CLOSE permite que o painel a ser fechado (oculto).
 
-     Esses são sinalizadores que você pode combinar com uma operação OR bit a bit.
+   Esses são sinalizadores que você pode combinar com uma operação OR bit a bit.
 
 `CBasePane` implementa os seguintes métodos de boolianos virtuais para refletir esses sinalizadores: [CBasePane::CanBeClosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). Você pode substituí-las em classes derivadas para personalizar seu comportamento.
 
@@ -1643,7 +1643,8 @@ virtual void OnMovePaneDivider(CPaneDivider*);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *CPaneDivider\**  não usado.
+*CPaneDivider\**<br/>
+[in] Não usado.
 
 ##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu
 

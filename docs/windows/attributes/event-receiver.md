@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b8e049d8338ba63e4d127c8a83fd3d9add32c6a1
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 95e5d65d437b60f6421978682997067d8f53a3d5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790131"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073949"
 ---
 # <a name="eventreceiver"></a>event_receiver
 
@@ -94,4 +94,4 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 [__event](../../cpp/event.md)<br/>
 [__hook](../../cpp/hook.md)<br/>
 [__unhook](../../cpp/unhook.md)<br/>
-[Atributos de classe](class-attributes.md)  
+[Atributos de classe](class-attributes.md)

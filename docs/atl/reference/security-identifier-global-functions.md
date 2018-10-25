@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8041d3928b819a7a5a53f89cc3dc2351a29ecf8f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4bcafdeecdc0091039e9bb4008aab4e85f6a34aa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020889"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064961"
 ---
 # <a name="security-identifier-global-functions"></a>Funções globais de identificador de segurança
 
@@ -94,11 +94,11 @@ Essas funções retornam objetos de SID bem conhecido comuns.
 |[SIDs::SystemOps](#systemops)|Retorna o SID DOMAIN_ALIAS_RID_SYSTEM_OPS.|
 |[SIDs::terminalserver](#terminalserver)|Retorna o SID SECURITY_TERMINAL_SERVER_RID.|
 |[SIDs::Users](#users)|Retorna o SID DOMAIN_ALIAS_RID_USERS.|
-|[SIDs::World](#world)|Retorna o SID SECURITY_WORLD_RID.|  
+|[SIDs::World](#world)|Retorna o SID SECURITY_WORLD_RID.|
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlsecurity. h 
+**Cabeçalho:** atlsecurity. h
 
 ##  <a name="accountops"></a>  SIDs::AccountOps
 
@@ -110,7 +110,7 @@ CSid AccountOps() throw(...);
 
 ##  <a name="admins"></a>  SIDs::Admins
 
-Retorna o SID DOMAIN_ALIAS_RID_ADMINS.  
+Retorna o SID DOMAIN_ALIAS_RID_ADMINS.
 
 ```
 CSid Admins() throw(...);
@@ -118,7 +118,7 @@ CSid Admins() throw(...);
 
 ##  <a name="anonymouslogon"></a>  SIDs::AnonymousLogon
 
-Retorna o SID SECURITY_ANONYMOUS_LOGON_RID.  
+Retorna o SID SECURITY_ANONYMOUS_LOGON_RID.
 
 ```
 CSid AnonymousLogon() throw(...);
@@ -126,7 +126,7 @@ CSid AnonymousLogon() throw(...);
 
 ##  <a name="authenticateduser"></a>  SIDs::AuthenticatedUser
 
-Retorna o SID SECURITY_AUTHENTICATED_USER_RID.  
+Retorna o SID SECURITY_AUTHENTICATED_USER_RID.
 
 ```
 CSid AuthenticatedUser() throw(...);
@@ -134,7 +134,7 @@ CSid AuthenticatedUser() throw(...);
 
 ##  <a name="backupops"></a>  SIDs::BackupOps
 
-Retorna o SID DOMAIN_ALIAS_RID_BACKUP_OPS.  
+Retorna o SID DOMAIN_ALIAS_RID_BACKUP_OPS.
 
 ```
 CSid BackupOps() throw(...);
@@ -142,7 +142,7 @@ CSid BackupOps() throw(...);
 
 ##  <a name="batch"></a>  SIDs::batch
 
-Retorna o SID SECURITY_BATCH_RID.  
+Retorna o SID SECURITY_BATCH_RID.
 
 ```
 CSid Batch() throw(...);
@@ -150,7 +150,7 @@ CSid Batch() throw(...);
 
 ##  <a name="creatorgroup"></a>  SIDs::CreatorGroup
 
-Retorna o SID SECURITY_CREATOR_GROUP_RID.  
+Retorna o SID SECURITY_CREATOR_GROUP_RID.
 
 ```
 CSid CreatorGroup() throw(...);
@@ -158,7 +158,7 @@ CSid CreatorGroup() throw(...);
 
 ##  <a name="creatorgroupserver"></a>  SIDs::CreatorGroupServer
 
-Retorna o SID SECURITY_CREATOR_GROUP_SERVER_RID.  
+Retorna o SID SECURITY_CREATOR_GROUP_SERVER_RID.
 
 ```
 CSid CreatorGroupServer() throw(...);
@@ -166,7 +166,7 @@ CSid CreatorGroupServer() throw(...);
 
 ##  <a name="creatorowner"></a>  SIDs::CreatorOwner
 
-Retorna o SID SECURITY_CREATOR_OWNER_RID.  
+Retorna o SID SECURITY_CREATOR_OWNER_RID.
 
 ```
 CSid CreatorOwner() throw(...);
@@ -174,7 +174,7 @@ CSid CreatorOwner() throw(...);
 
 ##  <a name="creatorownerserver"></a>  SIDs::CreatorOwnerServer
 
-Retorna o SID SECURITY_CREATOR_OWNER_SERVER_RID.  
+Retorna o SID SECURITY_CREATOR_OWNER_SERVER_RID.
 
 ```
 CSid CreatorOwnerServer() throw(...);
@@ -182,7 +182,7 @@ CSid CreatorOwnerServer() throw(...);
 
 ##  <a name="dialup"></a>  SIDs::dialup
 
-Retorna o SID SECURITY_DIALUP_RID.  
+Retorna o SID SECURITY_DIALUP_RID.
 
 ```
 CSid Dialup() throw(...);
@@ -190,7 +190,7 @@ CSid Dialup() throw(...);
 
 ##  <a name="guests"></a>  SIDs::Guests
 
-Retorna o SID DOMAIN_ALIAS_RID_GUESTS.  
+Retorna o SID DOMAIN_ALIAS_RID_GUESTS.
 
 ```
 CSid Guests() throw(...);
@@ -198,7 +198,7 @@ CSid Guests() throw(...);
 
 ##  <a name="interactive"></a>  SIDs::Interactive
 
-Retorna o SID SECURITY_INTERACTIVE_RID.  
+Retorna o SID SECURITY_INTERACTIVE_RID.
 
 ```
 CSid Interactive() throw(...);
@@ -206,7 +206,7 @@ CSid Interactive() throw(...);
 
 ##  <a name="local"></a>  SIDs::local
 
-Retorna o SID SECURITY_LOCAL_RID.  
+Retorna o SID SECURITY_LOCAL_RID.
 
 ```
 CSid Local() throw(...);
@@ -214,7 +214,7 @@ CSid Local() throw(...);
 
 ##  <a name="network"></a>  SIDs::Network
 
-Retorna o SID SECURITY_NETWORK_RID.  
+Retorna o SID SECURITY_NETWORK_RID.
 
 ```
 CSid Network() throw(...);
@@ -222,7 +222,7 @@ CSid Network() throw(...);
 
 ##  <a name="networkservice"></a>  SIDs::NetworkService
 
-Retorna o SID SECURITY_NETWORK_SERVICE_RID.  
+Retorna o SID SECURITY_NETWORK_SERVICE_RID.
 
 ```
 CSid NetworkService() throw(...);
@@ -236,7 +236,7 @@ Quando os contadores de log personalizado são criados com a classe ATLServer CP
 
 ##  <a name="null"></a>  SIDs::null
 
-Retorna o SID SECURITY_NULL_RID.  
+Retorna o SID SECURITY_NULL_RID.
 
 ```
 CSid Null() throw(...);
@@ -244,7 +244,7 @@ CSid Null() throw(...);
 
 ##  <a name="prew2kaccess"></a>  SIDs::PreW2KAccess
 
-Retorna o SID DOMAIN_ALIAS_RID_PREW2KCOMPACCESS.  
+Retorna o SID DOMAIN_ALIAS_RID_PREW2KCOMPACCESS.
 
 ```
 CSid PreW2KAccess() throw(...);
@@ -252,7 +252,7 @@ CSid PreW2KAccess() throw(...);
 
 ##  <a name="powerusers"></a>  SIDs::PowerUsers
 
-Retorna o SID DOMAIN_ALIAS_RID_POWER_USERS.  
+Retorna o SID DOMAIN_ALIAS_RID_POWER_USERS.
 
 ```
 CSid PowerUsers() throw(...);
@@ -260,7 +260,7 @@ CSid PowerUsers() throw(...);
 
 ##  <a name="printops"></a>  SIDs::PrintOps
 
-Retorna o SID DOMAIN_ALIAS_RID_PRINT_OPS.  
+Retorna o SID DOMAIN_ALIAS_RID_PRINT_OPS.
 
 ```
 CSid PrintOps() throw(...);
@@ -268,7 +268,7 @@ CSid PrintOps() throw(...);
 
 ##  <a name="proxy"></a>  SIDs::proxy
 
-Retorna o SID SECURITY_PROXY_RID.  
+Retorna o SID SECURITY_PROXY_RID.
 
 ```
 CSid Proxy() throw(...);
@@ -276,7 +276,7 @@ CSid Proxy() throw(...);
 
 ##  <a name="rasservers"></a>  SIDs::RasServers
 
-Retorna o SID DOMAIN_ALIAS_RID_RAS_SERVERS.  
+Retorna o SID DOMAIN_ALIAS_RID_RAS_SERVERS.
 
 ```
 CSid RasServers() throw(...);
@@ -284,7 +284,7 @@ CSid RasServers() throw(...);
 
 ##  <a name="replicator"></a>  SIDs::Replicator
 
-Retorna o SID DOMAIN_ALIAS_RID_REPLICATOR.  
+Retorna o SID DOMAIN_ALIAS_RID_REPLICATOR.
 
 ```
 CSid Replicator() throw(...);
@@ -292,7 +292,7 @@ CSid Replicator() throw(...);
 
 ##  <a name="restrictedcode"></a>  SIDs::RestrictedCode
 
-Retorna o SID SECURITY_RESTRICTED_CODE_RID.  
+Retorna o SID SECURITY_RESTRICTED_CODE_RID.
 
 ```
 CSid RestrictedCode() throw(...);
@@ -300,7 +300,7 @@ CSid RestrictedCode() throw(...);
 
 ##  <a name="self"></a>  SIDs::Self
 
-Retorna o SID SECURITY_PRINCIPAL_SELF_RID.  
+Retorna o SID SECURITY_PRINCIPAL_SELF_RID.
 
 ```
 CSid Self() throw(...);
@@ -308,7 +308,7 @@ CSid Self() throw(...);
 
 ##  <a name="serverlogon"></a>  SIDs::ServerLogon
 
-Retorna o SID SECURITY_SERVER_LOGON_RID.  
+Retorna o SID SECURITY_SERVER_LOGON_RID.
 
 ```
 CSid ServerLogon() throw(...);
@@ -316,7 +316,7 @@ CSid ServerLogon() throw(...);
 
 ##  <a name="service"></a>  SIDs::Service
 
-Retorna o SID SECURITY_SERVICE_RID.  
+Retorna o SID SECURITY_SERVICE_RID.
 
 ```
 CSid Service() throw(...);
@@ -324,7 +324,7 @@ CSid Service() throw(...);
 
 ##  <a name="system"></a>  SIDs::System
 
-Retorna o SID SECURITY_LOCAL_SYSTEM_RID.  
+Retorna o SID SECURITY_LOCAL_SYSTEM_RID.
 
 ```
 CSid System() throw(...);
@@ -332,7 +332,7 @@ CSid System() throw(...);
 
 ##  <a name="systemops"></a>  SIDs::SystemOps
 
-Retorna o SID DOMAIN_ALIAS_RID_SYSTEM_OPS.  
+Retorna o SID DOMAIN_ALIAS_RID_SYSTEM_OPS.
 
 ```
 CSid SystemOps() throw(...);
@@ -340,7 +340,7 @@ CSid SystemOps() throw(...);
 
 ##  <a name="terminalserver"></a>  SIDs::terminalserver
 
-Retorna o SID SECURITY_TERMINAL_SERVER_RID.  
+Retorna o SID SECURITY_TERMINAL_SERVER_RID.
 
 ```
 CSid TerminalServer() throw(...);
@@ -348,7 +348,7 @@ CSid TerminalServer() throw(...);
 
 ##  <a name="users"></a>  SIDs::Users
 
-Retorna o SID DOMAIN_ALIAS_RID_USERS.  
+Retorna o SID DOMAIN_ALIAS_RID_USERS.
 
 ```
 CSid Users() throw(...);
@@ -356,7 +356,7 @@ CSid Users() throw(...);
 
 ##  <a name="world"></a>  SIDs::World
 
-Retorna o SID SECURITY_WORLD_RID.  
+Retorna o SID SECURITY_WORLD_RID.
 
 ```
 CSid World() throw(...);

@@ -1,7 +1,7 @@
 ---
 title: Classe hash_multimap | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d34569f1b0f984a521b7d5a79221e089f1a1df0
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3796ba7b243305fbae75e64f44e14964a89a9805
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235757"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075314"
 ---
 # <a name="hashmultimap-class"></a>Classe hash_multimap
 
@@ -1497,7 +1497,6 @@ hash_multimap(
     initializer_list<Type> IList,
     const Compare& Comp);
 
-
 hash_multimap(
     initializer_list<Type> IList,
     const Compare& Comp,
@@ -2477,9 +2476,9 @@ Retorna o objeto da função de comparação que um hash_multimap usa para orden
 
 ### <a name="remarks"></a>Comentários
 
-Para um hash_multimap *m*, se dois elementos *e*1( *k*1 *, d*1) e *e*2( *k*2 *, d*2) forem objetos o tipo [value_type](#value_type), em que *k*1 e *k*2 forem suas chaves do tipo [key_type](#key_type) e `d`1 e `d`2 forem seus dados do tipo [mapped_type](#mapped_type), então *m.*`value_comp`( )( *e*1 *, e*2) será equivalente a *m.*`key_comp`( ) ( *k*1 *, k*2). Um objeto armazenado define a função de membro
+Para um hash_multimap *m*, se dois elementos *e1* (*k1*, *d1*) e *e2*(*k2* , *d2*) são objetos do tipo [value_type](#value_type), onde *k1* e *k2* são suas chaves de tipo [key_type](#key_type) e *d1* e *d2* são seus dados do tipo [mapped_type](#mapped_type), em seguida, `m.value_comp()(e1, e2)` é equivalente a `m.key_comp()(k1, k2)` . Um objeto armazenado define a função de membro
 
-**operador booliano**( **value_type&**`left`, **value_type&** `right`);
+`bool operator( value_type& left, value_type& right);`
 
 que retornará **true** se o valor de chave `left` preceder e for diferente do valor de chave de `right` na ordem de classificação.
 

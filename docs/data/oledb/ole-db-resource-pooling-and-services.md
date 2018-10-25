@@ -20,25 +20,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3cf18d1b06c6a738659bf30bf58fc10c48aa0ce5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a90f60f830b4d5ec98685dbd8cd1c573d0fbcb4e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46091030"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070290"
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>Pooling de recursos e serviços de banco de dados OLE
 
-Para funcionar bem com o pool de banco de dados OLE ou com qualquer serviço do OLE DB, seu provedor deve oferecer suporte a agregação de todos os objetos. Esse é um requisito de qualquer 1.5 do OLE DB ou o provedor mais recente. É fundamental para aproveitar os serviços. Provedores que não dão suporte a agregação não podem ser agrupadas e não há serviços adicionais são fornecidos.  
-  
-Para ser colocado em pool, os provedores devem oferecer suporte a modelo de thread livre. O pool de recursos determina o modelo de thread do provedor de acordo com o `DBPROP_THREADMODEL` propriedade.  
-  
-Se o provedor tem um estado de conexão global que podem ser alterados enquanto a fonte de dados está em um estado inicializado, ele deve dar suporte a novos `DBPROP_RESETDATASOURCE` propriedade. Essa propriedade é chamada antes que uma conexão é reutilizado e fornece o provedor a oportunidade para limpar o estado antes de seu próximo uso. Se o provedor não é possível limpar em algum estado associado a conexão, ele pode retornar `DBPROPSTATUS_NOTSETTABLE` para a propriedade e a conexão não serão reutilizados.  
-  
-Provedores que se conectar a um banco de dados remoto e podem detectar se que a conexão pode ser perdido deve dar suporte a `DBPROP_CONNECTIONSTATUS` propriedade. Esta propriedade fornece serviços de OLE DB a capacidade de detectar conexões inativas e certifique-se de que eles não são retornados ao pool.  
-  
-Por fim, a inscrição automática de transação geralmente não funciona, a menos que ele é implementado no mesmo nível que pooling ocorre. Provedores que dão suporte à inscrição automática de transação em si devem dar suporte a desabilitar esta inscrição, expondo os `DBPROP_INIT_OLEDBSERVICES` propriedade e desabilitar a inscrição, se o `DBPROPVAL_OS_TXNENLISTMENT` está desmarcada.  
-  
-## <a name="see-also"></a>Consulte também  
+Para funcionar bem com o pool de banco de dados OLE ou com qualquer serviço do OLE DB, seu provedor deve oferecer suporte a agregação de todos os objetos. Esse é um requisito de qualquer 1.5 do OLE DB ou o provedor mais recente. É fundamental para aproveitar os serviços. Provedores que não dão suporte a agregação não podem ser agrupadas e não há serviços adicionais são fornecidos.
+
+Para ser colocado em pool, os provedores devem oferecer suporte a modelo de thread livre. O pool de recursos determina o modelo de thread do provedor de acordo com o `DBPROP_THREADMODEL` propriedade.
+
+Se o provedor tem um estado de conexão global que podem ser alterados enquanto a fonte de dados está em um estado inicializado, ele deve dar suporte a novos `DBPROP_RESETDATASOURCE` propriedade. Essa propriedade é chamada antes que uma conexão é reutilizado e fornece o provedor a oportunidade para limpar o estado antes de seu próximo uso. Se o provedor não é possível limpar em algum estado associado a conexão, ele pode retornar `DBPROPSTATUS_NOTSETTABLE` para a propriedade e a conexão não serão reutilizados.
+
+Provedores que se conectar a um banco de dados remoto e podem detectar se que a conexão pode ser perdido deve dar suporte a `DBPROP_CONNECTIONSTATUS` propriedade. Esta propriedade fornece serviços de OLE DB a capacidade de detectar conexões inativas e certifique-se de que eles não são retornados ao pool.
+
+Por fim, a inscrição automática de transação geralmente não funciona, a menos que ele é implementado no mesmo nível que pooling ocorre. Provedores que dão suporte à inscrição automática de transação em si devem dar suporte a desabilitar esta inscrição, expondo os `DBPROP_INIT_OLEDBSERVICES` propriedade e desabilitar a inscrição, se o `DBPROPVAL_OS_TXNENLISTMENT` está desmarcada.
+
+## <a name="see-also"></a>Consulte também
 
 [Técnicas de provedor avançadas](../../data/oledb/advanced-provider-techniques.md)

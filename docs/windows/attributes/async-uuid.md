@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 336bbf00edc84335972171aba0e7fc01e206984e
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 384e3db9d1c5925d64d066b5a5a3b2e9ac4e68eb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790122"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067341"
 ---
 # <a name="asyncuuid"></a>async_uuid
 
@@ -73,4 +73,4 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 ## <a name="see-also"></a>Consulte também
 
 [Atributos de IDL](idl-attributes.md)<br/>
-[Atributos de interface](interface-attributes.md)  
+[Atributos de interface](interface-attributes.md)
