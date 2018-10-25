@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa1803fb34ce1c9cf50b996efb9cc5467dd55996
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0bd1e6953d936106f272aa8bef4243728d742d8c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387829"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078187"
 ---
 # <a name="colepropertiesdialog-class"></a>Classe COlePropertiesDialog
 
@@ -138,15 +138,15 @@ Por padrão, a caixa de diálogo Propriedades do objeto OLE comum tem três pág
 
 - Geral
 
-     Esta página contém informações do sistema para o arquivo representado pelo item de documento selecionado. Nessa página, o usuário pode converter o item selecionado em outro tipo.
+   Esta página contém informações do sistema para o arquivo representado pelo item de documento selecionado. Nessa página, o usuário pode converter o item selecionado em outro tipo.
 
 - Exibir
 
-     Esta página contém opções para exibir o item, alterando o ícone e alteração do dimensionamento da imagem.
+   Esta página contém opções para exibir o item, alterando o ícone e alteração do dimensionamento da imagem.
 
 - Link
 
-     Esta página contém as opções para alterar o local do item vinculado e atualizar o item vinculado. Nessa página, o usuário pode desfazer o link do item selecionado.
+   Esta página contém as opções para alterar o local do item vinculado e atualizar o item vinculado. Nessa página, o usuário pode desfazer o link do item selecionado.
 
 Para adicionar páginas além daqueles fornecidos por padrão, modifique a [m_psh](#m_psh) variável de membro antes de sair do construtor da sua `COlePropertiesDialog`-classe derivada. Essa é uma implementação avançada do `COlePropertiesDialog` construtor.
 

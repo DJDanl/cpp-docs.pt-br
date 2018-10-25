@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1abb923a52ccce181782d5387636c45491c342cd
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: a02bc21362c8f8acd71984f91d5528078d141eb4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890199"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060410"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Exemplo: exibindo uma caixa de diálogo por meio de um comando Menu
 
@@ -56,15 +56,15 @@ Os procedimentos usam os nomes e valores a seguir:
 
 1. Na **modo de exibição de classe**, selecione a classe de documento (CDisplayDialogDoc). Na janela **Propriedades**, clique no botão **Eventos**. Clique duas vezes a ID do comando menu (ID_VIEW_TEST) no painel esquerdo do **propriedades** janela e selecione **comando**. No painel direito, clique na seta para baixo e selecione  **\<Adicionar > OnViewTest**.
 
-     Se você tiver adicionado o comando de menu ao mainframe de um aplicativo MDI, selecione a classe de aplicativo (CDisplayDialogApp) em vez disso.
+   Se você tiver adicionado o comando de menu ao mainframe de um aplicativo MDI, selecione a classe de aplicativo (CDisplayDialogApp) em vez disso.
 
 1. Adicione a seguinte instrução CDisplayDialogDoc.cpp (ou CDisplayDialogApp.cpp) de inclusão depois existente inclui instruções:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]
 
 1. Adicione o seguinte código ao `OnViewTest` para implementar a função:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#43](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#43](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_2.cpp)]
 
 ### <a name="to-display-a-modeless-dialog-box"></a>Para exibir uma caixa de diálogo sem janela restrita
 

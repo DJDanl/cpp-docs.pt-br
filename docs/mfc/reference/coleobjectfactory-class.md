@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295749648dd54349c3fa735008ef8c04d51c8e04
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f4c2ad96674058ac57ccdc7cef9537f1cb413b92
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441896"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079695"
 ---
 # <a name="coleobjectfactory-class"></a>Classe COleObjectFactory
 
@@ -132,7 +132,6 @@ COleObjectFactory(
     BOOL bMultiInstance,
     LPCTSTR lpszProgID);
 
-
 COleObjectFactory(
     REFCLSID clsid,
     CRuntimeClass* pRuntimeClass,
@@ -163,7 +162,7 @@ Contém um ou mais dos seguintes sinalizadores:
 
 - `afxRegFreeThreading` Define o modelo de threading no registro para ThreadingModel = gratuito.
 
-     Você pode combinar os dois sinalizadores `afxRegApartmentThreading` e `afxRegFreeThreading` definir ThreadingModel = Both. Ver [InprocServer32](/windows/desktop/com/inprocserver32) no SDK do Windows para obter mais informações sobre o registro do modelo de threading.
+   Você pode combinar os dois sinalizadores `afxRegApartmentThreading` e `afxRegFreeThreading` definir ThreadingModel = Both. Ver [InprocServer32](/windows/desktop/com/inprocserver32) no SDK do Windows para obter mais informações sobre o registro do modelo de threading.
 
 *lpszProgID*<br/>
 Ponteiro para uma cadeia de caracteres que contém um identificador de programa textual, como "Microsoft Excel".
@@ -349,7 +348,7 @@ Execute as discussões breves das duas formas para esta função:
 
 - **UpdateRegistry (** `bRegister` **)** essa forma da função é substituível. Se *bRegistre-se participar* for TRUE, este registradores de função que o controle de classe com o registro do sistema. Caso contrário, ele cancela o registro da classe.
 
-     Se você usar ControlWizard de ActiveX do MFC para criar seu projeto, ControlWizard fornece uma substituição para essa função virtual pura.
+   Se você usar ControlWizard de ActiveX do MFC para criar seu projeto, ControlWizard fornece uma substituição para essa função virtual pura.
 
 ##  <a name="updateregistryall"></a>  COleObjectFactory::UpdateRegistryAll
 

@@ -1,7 +1,7 @@
 ---
 title: Classe CDockablePane | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed4325cc950cdfa5320f1107df7103cbb2c026b5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 91058da47a97098826939be2248d81ba657f3cbb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417482"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078294"
 ---
 # <a name="cdockablepane-class"></a>Classe CDockablePane
 
@@ -337,7 +337,8 @@ virtual CDockablePane* AttachToTabWnd(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] [out] *pTabControlBarAttachTo* Especifica que o painel atual anexa ao painel de destino. O painel de destino deve ser um painel encaixável.
+*pTabControlBarAttachTo*<br/>
+[no, out] Especifica que o painel atual anexa ao painel de destino. O painel de destino deve ser um painel encaixável.
 
 *dockMethod*<br/>
 [in] Especifica o método de encaixe.
@@ -585,7 +586,6 @@ virtual BOOL Create(
     DWORD dwControlBarStyle = AFX_DEFAULT_DOCKING_PANE_STYLE,
     CCreateContext* pContext = NULL);
 
-
 virtual BOOL Create(
     LPCTSTR lpszWindowName,
     CWnd* pParentWnd,
@@ -602,7 +602,8 @@ virtual BOOL Create(
 *lpszCaption*<br/>
 [in] Especifica o nome da janela.
 
-[in] [out] *pParentWnd* Especifica a janela pai.
+*pParentWnd*<br/>
+[no, out] Especifica a janela pai.
 
 *Rect*<br/>
 [in] Especifica o tamanho e posição da janela, em coordenadas do cliente do *pParentWnd*.
@@ -622,7 +623,8 @@ virtual BOOL Create(
 *dwControlBarStyle*<br/>
 [in] Especifica atributos de estilo adicionais.
 
-[in] [out] *pContext* Especifica o contexto de criação da janela.
+*pContext*<br/>
+[no, out] Especifica o contexto de criação da janela.
 
 *lpszWindowName*<br/>
 [in] Especifica o nome da janela.
@@ -705,7 +707,8 @@ virtual BOOL CreateEx(
 *lpszCaption*<br/>
 [in] Especifica o nome da janela.
 
-[in] [out] *pParentWnd* Especifica a janela pai.
+*pParentWnd*<br/>
+[no, out] Especifica a janela pai.
 
 *Rect*<br/>
 [in] Especifica o tamanho e posição da janela, em coordenadas do cliente do *pParentWnd*.
@@ -725,7 +728,8 @@ virtual BOOL CreateEx(
 *dwControlBarStyle*<br/>
 [in] Especifica os atributos de estilo adicionais.
 
-[in] [out] *pContext* Especifica o contexto de criação da janela.
+*pContext*<br/>
+[no, out] Especifica o contexto de criação da janela.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -842,7 +846,8 @@ virtual BOOL DockToWindow(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] [out] *pTargetWindow* Especifica o painel encaixável para encaixar deste painel para.
+*pTargetWindow*<br/>
+[no, out] Especifica o painel encaixável para encaixar deste painel para.
 
 *dwAlignment*<br/>
 [in] Especifica o alinhamento de encaixe do painel. Pode ser um dos CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM ou CBRS_ALIGN_ANY. (Definido em afxres. h).
@@ -1339,7 +1344,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *pWndOldParent*
+[in] *pWndOldParent*<br/>
 
 ### <a name="remarks"></a>Comentários
 
@@ -1509,7 +1514,8 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 *dwAlignment*<br/>
 [in] Especifica o alinhamento do painel de ocultar automaticamente para criar.
 
-[in] [out] *pCurrAutoHideBar* um ponteiro para a barra de ferramentas atual ocultar automaticamente. Pode ser NULL.
+*pCurrAutoHideBar*<br/>
+[no, out] Um ponteiro para a barra de ferramentas atual ocultar automaticamente. Pode ser NULL.
 
 *bUseTimer*<br/>
 [in] Especifica se deve usar o efeito de ocultar automaticamente quando o usuário alterna o painel para o modo de ocultar automaticamente ou ocultar o painel imediatamente.

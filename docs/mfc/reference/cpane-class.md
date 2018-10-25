@@ -143,12 +143,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 629e10d06a59b926604fad3b3a6e191fefcb71e7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1a32625001ae86f4d6dffa7eeb953c538822d207
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384490"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080215"
 ---
 # <a name="cpane-class"></a>Classe CPane
 
@@ -500,7 +500,8 @@ virtual BOOL Create(
 *Rect*<br/>
 [in] Especifica o tamanho inicial e a posição do *pParentWnd* janela, em coordenadas de cliente.
 
-[in] [out] *pParentWnd* Especifica a janela pai deste painel.
+*pParentWnd*<br/>
+[no, out] Especifica a janela pai deste painel.
 
 *nID*<br/>
 [in] Especifica a ID do painel.
@@ -508,7 +509,8 @@ virtual BOOL Create(
 *dwControlBarStyle*<br/>
 [in] Especifica o estilo para o painel. Para obter mais informações, consulte [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
-[in] [out] *pContext* Especifica o contexto de criação do painel.
+*pContext*<br/>
+[no, out] Especifica o contexto de criação do painel.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -573,7 +575,8 @@ virtual BOOL CreateEx(
 *Rect*<br/>
 [in] Especifica o tamanho inicial e a posição do *pParentWnd* janela, em coordenadas de cliente.
 
-[in] [out] *pParentWnd* Especifica a janela pai deste painel.
+*pParentWnd*<br/>
+[no, out] Especifica a janela pai deste painel.
 
 *nID*<br/>
 [in] Especifica a ID do painel.
@@ -581,7 +584,8 @@ virtual BOOL CreateEx(
 *dwControlBarStyle*<br/>
 [in] Especifica o estilo para o painel. Para obter mais informações, consulte [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
-[in] [out] *pContext* Especifica o contexto de criação para o painel.
+*pContext*<br/>
+[no, out] Especifica o contexto de criação para o painel.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -623,7 +627,8 @@ virtual BOOL DockPane(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] [out] *pDockBar* Especifica o painel de base para encaixar deste painel para.
+*pDockBar*<br/>
+[no, out] Especifica o painel de base para encaixar deste painel para.
 
 *lpRect*<br/>
 [in] Especifica o retângulo no painel de base onde este painel será encaixado.
@@ -1161,7 +1166,8 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] [out] *pWndOldParent* janela anterior de pai do painel.
+*pWndOldParent*<br/>
+[no, out] Janela de pai anterior do painel.
 
 ### <a name="remarks"></a>Comentários
 
@@ -1213,7 +1219,8 @@ virtual void OnBeforeChangeParent(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] [out] *pWndNewParent* Especifica a nova janela pai.
+*pWndNewParent*<br/>
+[no, out] Especifica a nova janela pai.
 
 *bDelay*<br/>
 [in] TRUE para atrasar o ajuste de layout encaixe global; Caso contrário, FALSE.
@@ -1237,7 +1244,8 @@ virtual BOOL OnBeforeDock(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] [out] *ppDockBar* Especifica o painel que é de encaixe para esse painel.
+*ppDockBar*<br/>
+[no, out] Especifica o painel que é de encaixe para esse painel.
 
 *lpRect*<br/>
 [in] Especifica o retângulo de encaixe.
@@ -1518,7 +1526,8 @@ void SetMiniFrameRTC(CRuntimeClass* pClass);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] [out] *pClass* Especifica as informações de classe de tempo de execução para a janela com minimoldura.
+*pClass*<br/>
+[no, out] Especifica as informações de classe de tempo de execução para a janela com minimoldura.
 
 ### <a name="remarks"></a>Comentários
 

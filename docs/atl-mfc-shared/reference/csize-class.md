@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9966bcdf31df3b6d3f702ec425131c5b8baa3aee
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 6d9927712077f7d0d57d9ece5ae72489be291866
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808492"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055211"
 ---
 # <a name="csize-class"></a>Classe CSize
 
@@ -35,7 +35,7 @@ Semelhante do Windows [tamanho](https://msdn.microsoft.com/library/windows/deskt
 ## <a name="syntax"></a>Sintaxe
 
 ```
-class CSize : public tagSIZE 
+class CSize : public tagSIZE
 ```
 
 ## <a name="members"></a>Membros
@@ -64,7 +64,7 @@ Essa classe é derivada de `SIZE` estrutura. Isso significa que você pode passa
 O `cx` e `cy` membros `SIZE` (e `CSize`) são públicos. Além disso, `CSize` implementa as funções de membro para manipular o `SIZE` estrutura.
 
 > [!NOTE]
->  Para obter mais informações sobre classes de utilitário de compartilhados (como `CSize`), consulte [Classes compartilhadas](../../atl-mfc-shared/atl-mfc-shared-classes.md).
+> Para obter mais informações sobre classes de utilitário de compartilhados (como `CSize`), consulte [Classes compartilhadas](../../atl-mfc-shared/atl-mfc-shared-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -85,7 +85,7 @@ CSize() throw();
 CSize( int initCX, int initCY) throw();
 CSize( SIZE initSize) throw();
 CSize( POINT initPt) throw();
-CSize( DWORD dwSize) throw(); 
+CSize( DWORD dwSize) throw();
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -117,8 +117,8 @@ Se nenhum argumento for fornecido, `cx` e `cy` são inicializados em zero.
 
 Verificações de igualdade entre dois tamanhos.
 
-``` 
-BOOL operator==(SIZE size) const throw(); 
+```
+BOOL operator==(SIZE size) const throw();
 ```
 
 ### <a name="remarks"></a>Comentários
@@ -133,8 +133,8 @@ Retorna diferente de zero se os tamanhos forem iguais, otherwize 0.
 
 Verifica a desigualdade entre dois tamanhos.
 
-``` 
-BOOL operator!=(SIZE size) const throw(); 
+```
+BOOL operator!=(SIZE size) const throw();
 ```
 
 ### <a name="remarks"></a>Comentários
@@ -149,8 +149,8 @@ Retorna não zero se os tamanhos não forem iguais, caso contrário, 0.
 
 Adiciona um tamanho a este `CSize`.
 
-``` 
-void operator+=(SIZE size) throw(); 
+```
+void operator+=(SIZE size) throw();
 ```
 
 ### <a name="example"></a>Exemplo
@@ -161,8 +161,8 @@ void operator+=(SIZE size) throw();
 
 Subtrai um tamanho deste `CSize`.
 
-``` 
-void operator-=(SIZE size) throw(); 
+```
+void operator-=(SIZE size) throw();
 ```
 
 ### <a name="example"></a>Exemplo
@@ -173,10 +173,10 @@ void operator-=(SIZE size) throw();
 
 Esses operadores adicionar isso `CSize` valor para o valor do parâmetro.
 
-``` 
+```
 CSize operator+(SIZE size) const throw();
 CPoint operator+(POINT point) const throw();
-CRect operator+(const RECT* lpRect) const throw(); 
+CRect operator+(const RECT* lpRect) const throw();
 ```
 
 ### <a name="remarks"></a>Comentários
@@ -197,11 +197,11 @@ Consulte as descrições dos operadores individuais a seguir:
 
 As três primeiras desses operadores subtrair isso `CSize` valor para o valor do parâmetro.
 
-``` 
+```
 CSize operator-(SIZE size) const throw();
 CPoint operator-(POINT point) const throw();
 CRect operator-(const RECT* lpRect) const throw();
-CSize operator-() const throw(); 
+CSize operator-() const throw();
 ```
 
 ### <a name="remarks"></a>Comentários

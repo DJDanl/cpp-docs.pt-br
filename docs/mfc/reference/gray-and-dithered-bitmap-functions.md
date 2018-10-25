@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd0a0a25e1607b3b4318fdfca1f68f272cd02173
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 01bd722dad7e09e52990d46d1c7666cdb939118c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380185"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064115"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>Funções de bitmap cinza e pontilhado
 
@@ -177,7 +177,6 @@ O bitmap de origem é desenhado no controlador de domínio de destino com duas c
 ### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** afxwin. h
-
 
 ##  <a name="afxgetditheredbitmap"></a>  AfxGetDitheredBitmap
 

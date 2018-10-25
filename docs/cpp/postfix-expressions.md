@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77bcb8257fc6907b48330301cf009fa44f00578d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d28d909866808fbffb6165e552bf825bf1241771
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082508"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069777"
 ---
 # <a name="postfix-expressions"></a>Expressões pós-fixadas
 
@@ -41,7 +41,7 @@ As expressões pós-fixadas consistem em expressões primárias ou expressões n
 A sintaxe a seguir descreve expressões pós-fixadas possíveis:
 
 ```
-primary-expression 
+primary-expression 
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )
 ```
 
@@ -83,20 +83,20 @@ Quando uma função for chamada, as seguintes tarefas serão executadas:
     Func( 7 );          // Execute function call
     ```
 
-     As inicializações conceituais antes da chamada são:
+   As inicializações conceituais antes da chamada são:
 
     ```cpp
     int Temp_i = 7;
     Func( Temp_i );
     ```
 
-     A inicialização é executada como se estivesse usando a sintaxe de sinal de igualdade em vez de sintaxe de parênteses. Uma cópia de `i` é feita antes de transmitir o valor à função. (Para obter mais informações, consulte [inicializadores](../cpp/initializers.md) e [conversões](../cpp/user-defined-type-conversions-cpp.md)).
+   A inicialização é executada como se estivesse usando a sintaxe de sinal de igualdade em vez de sintaxe de parênteses. Uma cópia de `i` é feita antes de transmitir o valor à função. (Para obter mais informações, consulte [inicializadores](../cpp/initializers.md) e [conversões](../cpp/user-defined-type-conversions-cpp.md)).
 
-     Portanto, se chama o protótipo da função (declaração) para um argumento do tipo **longo**, e se o programa de chamada fornece um argumento real do tipo **int**, o argumento real será promovido usando uma conversão de tipo padrão para o tipo **longo** (consulte [conversões padrão](../cpp/standard-conversions.md)).
+   Portanto, se chama o protótipo da função (declaração) para um argumento do tipo **longo**, e se o programa de chamada fornece um argumento real do tipo **int**, o argumento real será promovido usando uma conversão de tipo padrão para o tipo **longo** (consulte [conversões padrão](../cpp/standard-conversions.md)).
 
-     É um erro fornecer um argumento real para o qual não há conversão padrão ou definida pelo usuário para o tipo de argumento formal.
+   É um erro fornecer um argumento real para o qual não há conversão padrão ou definida pelo usuário para o tipo de argumento formal.
 
-     Para argumentos reais de tipos de classe, o argumento formal é inicializado chamando o construtor da classe. (Consulte [construtores](../cpp/constructors-cpp.md) para obter mais informações sobre essas funções de membro de classe especial.)
+   Para argumentos reais de tipos de classe, o argumento formal é inicializado chamando o construtor da classe. (Consulte [construtores](../cpp/constructors-cpp.md) para obter mais informações sobre essas funções de membro de classe especial.)
 
 - A chamada de função é executada.
 

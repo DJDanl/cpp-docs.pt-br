@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8d3db1d8c19b68adb8cec53984e0dfe5a189651
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7ff5c3f28a47eb4e1810f046a242f6170c537bf2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389858"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054917"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>Usando controles comuns em uma caixa de diálogo
 
@@ -42,7 +42,7 @@ Os controles comuns do Windows podem ser usados em [caixas de diálogo](../mfc/d
 
 1. Na [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) para sua classe de caixa de diálogo, defina as condições iniciais para o controle comum. Usando a variável de membro criada na etapa anterior, use as funções de membro para definir o valor inicial e outras configurações. Consulte as seguintes descrições dos controles para obter detalhes sobre as configurações.
 
-     Você também pode usar [troca de dados de caixa de diálogo](../mfc/dialog-data-exchange-and-validation.md) para inicializar os controles em uma caixa de diálogo (DDX).
+   Você também pode usar [troca de dados de caixa de diálogo](../mfc/dialog-data-exchange-and-validation.md) para inicializar os controles em uma caixa de diálogo (DDX).
 
 1. Nos manipuladores para os controles na caixa de diálogo, use a variável de membro para manipular o controle. Consulte as seguintes descrições dos controles para obter detalhes sobre métodos.
 

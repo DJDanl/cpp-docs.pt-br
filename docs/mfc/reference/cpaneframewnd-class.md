@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ac2ddb08b485a56274f6067871c5bbd5893f94
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fb6e87d9deac7a6d0082480196b7dbeecf5a85b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434811"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081073"
 ---
 # <a name="cpaneframewnd-class"></a>Classe CPaneFrameWnd
 
@@ -312,7 +312,6 @@ virtual void AdjustLayout();
 
 ##  <a name="adjustpaneframes"></a>  CPaneFrameWnd::AdjustPaneFrames
 
-
 ```
 virtual void AdjustPaneFrames();
 ```
@@ -401,7 +400,6 @@ Diferente de zero se o minipode quadro de ser encaixado às *pDockingBar*; caso 
 
 ##  <a name="checkgrippervisibility"></a>  CPaneFrameWnd::CheckGripperVisibility
 
-
 ```
 virtual void CheckGripperVisibility();
 ```
@@ -440,9 +438,11 @@ virtual BOOL Create(
 *Rect*<br/>
 [in] Especifica o tamanho inicial e a posição da janela de miniquadros.
 
-[in] [out] *pParentWnd* Especifica o quadro pai da janela de miniquadros. Esse valor não deve ser NULL.
+*pParentWnd*<br/>
+[no, out] Especifica o quadro pai da janela de miniquadros. Esse valor não deve ser NULL.
 
-[in] [out] *pContext* Especifica o contexto definido pelo usuário.
+*pContext*<br/>
+[no, out] Especifica o contexto definido pelo usuário.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -480,9 +480,11 @@ virtual BOOL CreateEx(
 *Rect*<br/>
 [in] Especifica o tamanho inicial e a posição da janela de miniquadros.
 
-[in] [out] *pParentWnd* Especifica o quadro pai da janela de miniquadros. Esse valor não deve ser NULL.
+*pParentWnd*<br/>
+[no, out] Especifica o quadro pai da janela de miniquadros. Esse valor não deve ser NULL.
 
-[in] [out] *pContext* Especifica o contexto definido pelo usuário.
+*pContext*<br/>
+[no, out] Especifica o contexto definido pelo usuário.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -607,7 +609,6 @@ Este método é chamado pelo framework quando ele exibe o texto da legenda.
 
 ##  <a name="getdockingmanager"></a>  CPaneFrameWnd::GetDockingManager
 
-
 ```
 CDockingManager* GetDockingManager() const;
 ```
@@ -648,7 +649,6 @@ O primeiro painel de janela com minimoldura ou nulo se a janela com minimoldura 
 
 ##  <a name="gethotpoint"></a>  CPaneFrameWnd::GetHotPoint
 
-
 ```
 CPoint GetHotPoint() const;
 ```
@@ -687,7 +687,6 @@ O número de painéis da janela com minimoldura. Esse valor pode ser zero.
 
 ##  <a name="getparent"></a>  CPaneFrameWnd::GetParent
 
-
 ```
 CWnd* GetParent();
 ```
@@ -698,7 +697,6 @@ CWnd* GetParent();
 
 ##  <a name="getpinstate"></a>  CPaneFrameWnd::GetPinState
 
-
 ```
 BOOL GetPinState() const;
 ```
@@ -708,7 +706,6 @@ BOOL GetPinState() const;
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="getrecentfloatingrect"></a>  CPaneFrameWnd::GetRecentFloatingRect
-
 
 ```
 CRect GetRecentFloatingRect() const;
@@ -770,7 +767,6 @@ Um dos seguintes valores:
 
 ##  <a name="iscaptured"></a>  CPaneFrameWnd::IsCaptured
 
-
 ```
 BOOL IsCaptured() const;
 ```
@@ -780,7 +776,6 @@ BOOL IsCaptured() const;
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="isdelayshow"></a>  CPaneFrameWnd::IsDelayShow
-
 
 ```
 BOOL IsDelayShow() const;
@@ -991,14 +986,13 @@ Chamado pelo framework quando um painel da janela com minimoldura é mostrado ou
 
 ##  <a name="pin"></a>  CPaneFrameWnd::Pin
 
-
 ```
 void Pin(BOOL bPin = TRUE);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *bPin*
+[in] *bPin*<br/>
 
 ### <a name="remarks"></a>Comentários
 
@@ -1141,19 +1135,17 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 
 ##  <a name="setdelayshow"></a>  CPaneFrameWnd::SetDelayShow
 
-
 ```
 void SetDelayShow(BOOL bDelayShow);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *bDelayShow*
+[in] *bDelayShow*<br/>
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="setdockingmanager"></a>  CPaneFrameWnd::SetDockingManager
-
 
 ```
 void SetDockingManager(CDockingManager* pManager);
@@ -1161,7 +1153,7 @@ void SetDockingManager(CDockingManager* pManager);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *pManager*
+[in] *pManager*<br/>
 
 ### <a name="remarks"></a>Comentários
 
@@ -1193,14 +1185,13 @@ virtual void SetDockState(CDockingManager* pDockManager);
 
 ##  <a name="sethotpoint"></a>  CPaneFrameWnd::SetHotPoint
 
-
 ```
 void SetHotPoint(CPoint& ptNew);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *ptNew*
+[in] *ptNew*<br/>
 
 ### <a name="remarks"></a>Comentários
 
@@ -1267,19 +1258,17 @@ TRUE se o método foi bem-sucedida; Caso contrário, FALSE.
 
 ##  <a name="storerecentdocksiteinfo"></a>  CPaneFrameWnd::StoreRecentDockSiteInfo
 
-
 ```
 virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *pBar*
+[in] *pBar*<br/>
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="storerecenttabrelatedinfo"></a>  CPaneFrameWnd::StoreRecentTabRelatedInfo
-
 
 ```
 virtual void StoreRecentTabRelatedInfo(
@@ -1289,8 +1278,8 @@ virtual void StoreRecentTabRelatedInfo(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pDockingBar*<br/>
-[in] [in] *pTabbedBar*
+[in] *pDockingBar*<br/>
+[in] *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>Comentários
 

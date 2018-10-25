@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c19b000c1d7ee5cb1f8480f0e9f384b42937dc9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 167d3af6d353ec48edde4288db26b9e407c62bd5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414479"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078954"
 ---
 # <a name="exception-handling-in-mfc"></a>Tratamento de exceções em MFC
 
@@ -81,15 +81,15 @@ Três categorias de resultados podem ocorrer quando uma função é chamada dura
 
 - Execução normal
 
-     A função pode executar normalmente e retornar. Algumas funções retornam um código de resultado para o chamador, que indica o resultado da função. Os códigos de resultado possíveis são estritamente definidos para a função e representam o intervalo de possíveis resultados da função. O código de resultado pode indicar o êxito ou falha, ou até mesmo pode indicar um determinado tipo de falha que está dentro do intervalo normal de expectativas. Por exemplo, uma função de status do arquivo pode retornar um código que indica que o arquivo não existe. Observe que o termo "código de erro" não é usado como um código de resultado representa um dos muitos resultados esperados.
+   A função pode executar normalmente e retornar. Algumas funções retornam um código de resultado para o chamador, que indica o resultado da função. Os códigos de resultado possíveis são estritamente definidos para a função e representam o intervalo de possíveis resultados da função. O código de resultado pode indicar o êxito ou falha, ou até mesmo pode indicar um determinado tipo de falha que está dentro do intervalo normal de expectativas. Por exemplo, uma função de status do arquivo pode retornar um código que indica que o arquivo não existe. Observe que o termo "código de erro" não é usado como um código de resultado representa um dos muitos resultados esperados.
 
 - Execução incorreta
 
-     O chamador cometeu passar argumentos para a função ou chama a função em um contexto inadequado. Essa situação causa um erro e ele deve ser detectado por uma asserção durante o desenvolvimento do programa. (Para obter mais informações sobre declarações, consulte [asserções C/C++](/visualstudio/debugger/c-cpp-assertions).)
+   O chamador cometeu passar argumentos para a função ou chama a função em um contexto inadequado. Essa situação causa um erro e ele deve ser detectado por uma asserção durante o desenvolvimento do programa. (Para obter mais informações sobre declarações, consulte [asserções C/C++](/visualstudio/debugger/c-cpp-assertions).)
 
 - Execução anormal
 
-     Execução anormal inclui situações em que condições fora do controle do programa, como memória insuficiente ou erros de e/s, estão influenciando o resultado da função. Situações anormais devem ser manipuladas capturando e lançando exceções.
+   Execução anormal inclui situações em que condições fora do controle do programa, como memória insuficiente ou erros de e/s, estão influenciando o resultado da função. Situações anormais devem ser manipuladas capturando e lançando exceções.
 
 Usando exceções é especialmente adequado para execução anormal.
 

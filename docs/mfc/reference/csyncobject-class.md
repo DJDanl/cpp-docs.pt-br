@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fea49ab46f55f4236194ebb811032d9351402d9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 91a3978b83be0cc1bc85d57cbde87d17eb4cc6d6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430274"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082795"
 ---
 # <a name="csyncobject-class"></a>Classe CSyncObject
 
@@ -173,6 +173,4 @@ A implementação padrão de declaração com dois parâmetros sempre retorna TR
 
 [Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
-
-
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdac159baf51d7143083eb1369d1a83233f0f022
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 1697c25f19fe024ea2f808f08baea3adb4bcc69a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790086"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083224"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
@@ -76,4 +76,4 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de interface](interface-attributes.md)<br/>
 [Atributos de classe](class-attributes.md)<br/>
-[Atributos de método](method-attributes.md)  
+[Atributos de método](method-attributes.md)

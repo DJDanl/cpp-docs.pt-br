@@ -50,140 +50,140 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b799b0383316c212ff2d2cd12ccac9b2b14dce0b
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 92d71bc780e66d4a61d74605aeb5c316b181beba
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082586"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081753"
 ---
 # <a name="idbinitializeimpl-class"></a>Classe IDBInitializeImpl
 
-Fornece uma implementação para o [IDBInitialize](/previous-versions/windows/desktop/ms713706) interface.  
-  
+Fornece uma implementação para o [IDBInitialize](/previous-versions/windows/desktop/ms713706) interface.
+
 ## <a name="syntax"></a>Sintaxe
 
 ```cpp
-template <class T>  
-class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
+template <class T>
+class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
+```
+
+### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
-Sua classe, derivada de `IDBInitializeImpl`.  
+Sua classe, derivada de `IDBInitializeImpl`.
 
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atldb.h  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="methods"></a>Métodos  
-  
-|||  
-|-|-|  
-|[IDBInitializeImpl](#idbinitializeimpl)|O construtor.|  
-  
-### <a name="interface-methods"></a>Métodos de interface  
-  
-|||  
-|-|-|  
-|[Initialize](#initialize)|Inicia o provedor.|  
-|[Cancelar inicialização](#uninitialize)|Interrompe o provedor.|  
-  
-### <a name="data-members"></a>Membros de Dados  
-  
-|||  
-|-|-|  
-|[m_dwStatus](#dwstatus)|Sinalizadores de fonte de dados.|  
-|[m_pCUtlPropInfo](#pcutlpropinfo)|Um ponteiro para a implementação das informações de propriedades de banco de dados.|  
-  
-## <a name="remarks"></a>Comentários  
+**Cabeçalho:** atldb.h
 
-Uma interface obrigatória em objetos de fonte de dados e interface opcional em enumeradores.  
+## <a name="members"></a>Membros
+
+### <a name="methods"></a>Métodos
+
+|||
+|-|-|
+|[IDBInitializeImpl](#idbinitializeimpl)|O construtor.|
+
+### <a name="interface-methods"></a>Métodos de interface
+
+|||
+|-|-|
+|[Initialize](#initialize)|Inicia o provedor.|
+|[Cancelar inicialização](#uninitialize)|Interrompe o provedor.|
+
+### <a name="data-members"></a>Membros de Dados
+
+|||
+|-|-|
+|[m_dwStatus](#dwstatus)|Sinalizadores de fonte de dados.|
+|[m_pCUtlPropInfo](#pcutlpropinfo)|Um ponteiro para a implementação das informações de propriedades de banco de dados.|
+
+## <a name="remarks"></a>Comentários
+
+Uma interface obrigatória em objetos de fonte de dados e interface opcional em enumeradores.
 
 ## <a name="idbinitializeimpl"></a> Idbinitializeimpl:: Idbinitializeimpl
 
-O construtor.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp
-IDBInitializeImpl();  
-```  
-  
-### <a name="remarks"></a>Comentários  
+O construtor.
 
-Inicializa todos os membros de dados. 
-  
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+IDBInitializeImpl();
+```
+
+### <a name="remarks"></a>Comentários
+
+Inicializa todos os membros de dados.
+
 ## <a name="initialize"></a> Idbinitializeimpl:: Initialize
 
-Inicializa o objeto de fonte de dados, Preparando seu suporte de propriedade.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp
-STDMETHOD(Initialize)(void);  
-```  
-  
-### <a name="remarks"></a>Comentários  
+Inicializa o objeto de fonte de dados, Preparando seu suporte de propriedade.
 
-Ver [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026) na *referência do programador do OLE DB*. 
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+STDMETHOD(Initialize)(void);
+```
+
+### <a name="remarks"></a>Comentários
+
+Ver [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026) na *referência do programador do OLE DB*.
 
 ## <a name="uninitialize"></a> Idbinitializeimpl:: Uninitialize
 
-Coloca os dados de objeto em um estado não inicializado da fonte ao liberar os recursos internos, como o suporte da propriedade.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
+Coloca os dados de objeto em um estado não inicializado da fonte ao liberar os recursos internos, como o suporte da propriedade.
+
+### <a name="syntax"></a>Sintaxe
+
 ```cpp
-STDMETHOD(Uninitialize)(void);  
-```  
-  
-### <a name="remarks"></a>Comentários  
+STDMETHOD(Uninitialize)(void);
+```
+
+### <a name="remarks"></a>Comentários
 
 Ver [IDBInitialize:: Uninitialize](/previous-versions/windows/desktop/ms719648) na *referência do programador do OLE DB*.
 
 ## <a name="dwstatus"></a> Idbinitializeimpl:: M_dwstatus
 
-Sinalizadores de fonte de dados.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp
-DWORD m_dwStatus;  
-```  
-  
-### <a name="remarks"></a>Comentários  
+Sinalizadores de fonte de dados.
 
-Esses sinalizadores especificam ou indicam o status de vários atributos para o objeto de fonte de dados. Contém um ou mais dos seguintes **enum** valores:  
-  
-```cpp  
-enum DATASOURCE_FLAGS {  
-    DSF_MASK_INIT     = 0xFFFFF00F,  
-    DSF_PERSIST_DIRTY = 0x00000001,  
-    DSF_INITIALIZED   = 0x00000010,  
-};  
-```  
-  
-|||  
-|-|-|  
-|`DSF_MASK_INIT`|Uma máscara para habilitar a restauração de estado não inicializado.|  
-|`DSF_PERSIST_DIRTY`|Defina se o objeto de fonte de dados requer persistência (ou seja, se houve alterações).|  
-|`DSF_INITIALIZED`|Defina se a fonte de dados foi inicializada.|  
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+DWORD m_dwStatus;
+```
+
+### <a name="remarks"></a>Comentários
+
+Esses sinalizadores especificam ou indicam o status de vários atributos para o objeto de fonte de dados. Contém um ou mais dos seguintes **enum** valores:
+
+```cpp
+enum DATASOURCE_FLAGS {
+    DSF_MASK_INIT     = 0xFFFFF00F,
+    DSF_PERSIST_DIRTY = 0x00000001,
+    DSF_INITIALIZED   = 0x00000010,
+};
+```
+
+|||
+|-|-|
+|`DSF_MASK_INIT`|Uma máscara para habilitar a restauração de estado não inicializado.|
+|`DSF_PERSIST_DIRTY`|Defina se o objeto de fonte de dados requer persistência (ou seja, se houve alterações).|
+|`DSF_INITIALIZED`|Defina se a fonte de dados foi inicializada.|
 
 ## <a name="pcutlpropinfo"></a> Idbinitializeimpl:: M_pcutlpropinfo
 
-Um ponteiro para objeto de implementação para obter informações de propriedades de banco de dados.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
+Um ponteiro para objeto de implementação para obter informações de propriedades de banco de dados.
+
+### <a name="syntax"></a>Sintaxe
+
 ```cpp
-CUtlPropInfo< T >* m_pCUtlPropInfo;  
-```  
-  
-## <a name="see-also"></a>Consulte também  
+CUtlPropInfo< T >* m_pCUtlPropInfo;
+```
+
+## <a name="see-also"></a>Consulte também
 
 [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -16,32 +16,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 77ea251b91e55d3a3f01b6591828beffaaa9272d
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 4cd51eaa06c8e9600b80d4a3cf6e192443105e65
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083379"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072181"
 ---
 # <a name="overriding-provider-service-defaults"></a>Substituindo padrões de serviço do fornecedor
 
-Valor do registro do provedor para OLEDB_SERVICES é retornado como o valor padrão para o [DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898) propriedade de inicialização no objeto de fonte de dados.  
-  
-Desde que exista a entrada do registro, objetos do provedor é agregado e o usuário pode substituir configuração padrão do provedor para serviços habilitados definindo o `DBPROP_INIT_OLEDBSERVICES` propriedade antes da inicialização. Para habilitar ou desabilitar um serviço específico, o usuário geralmente obtém o valor atual do `DBPROP_INIT_OLEDBSERVICES` propriedade, define ou limpa o bit para a propriedade específica a ser ativado ou desativado e redefine a propriedade. `DBPROP_INIT_OLEDBSERVICES` pode ser definido diretamente no OLE DB ou na cadeia de conexão passada para o ADO ou `IDataInitialize::GetDatasource`. Os valores correspondentes para habilitar/desabilitar serviços individuais são listados na tabela a seguir.  
-  
-|Serviços padrão habilitados|Valor da propriedade DBPROP_INIT_OLEDBSERVICES|Valor na cadeia de caracteres de conexão|  
-|------------------------------|------------------------------------------------|--------------------------------|  
-|Todos os serviços (padrão)|`DBPROPVAL_OS_ENABLEALL`|"Serviços do OLE DB = -1;"|  
-|Todos, exceto de Pooling e AutoEnlistment|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_RESOURCEPOOLING &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT`|"Serviços do OLE DB = -4;"|  
-|Todos, exceto o Cursor do cliente|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|"Serviços do OLE DB = -5;"|  
-|Todos exceto Pooling, AutoEnlistment e Cursor do cliente|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|"Serviços do OLE DB = -7;"|  
-|Não há serviços|`~DBPROPVAL_OS_ENABLEALL`|"Serviços do OLE DB = 0;"|  
-  
-Se a entrada do registro não existir para o provedor, os gerenciadores de componentes não serão agregados a objetos do provedor e nenhum serviço será invocado, mesmo que explicitamente solicitado pelo usuário.  
-  
-## <a name="see-also"></a>Consulte também  
+Valor do registro do provedor para OLEDB_SERVICES é retornado como o valor padrão para o [DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898) propriedade de inicialização no objeto de fonte de dados.
 
-[Pool de recursos](/previous-versions/windows/desktop/ms713655)   
-[Como os consumidores usam o pool de recursos](/previous-versions/windows/desktop/ms715907)   
-[Como os provedores funcionam com eficiência com o pool de recursos](/previous-versions/windows/desktop/ms714906)   
-[Habilitando e desabilitando serviços do OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)
+Desde que exista a entrada do registro, objetos do provedor é agregado e o usuário pode substituir configuração padrão do provedor para serviços habilitados definindo o `DBPROP_INIT_OLEDBSERVICES` propriedade antes da inicialização. Para habilitar ou desabilitar um serviço específico, o usuário geralmente obtém o valor atual do `DBPROP_INIT_OLEDBSERVICES` propriedade, define ou limpa o bit para a propriedade específica a ser ativado ou desativado e redefine a propriedade. `DBPROP_INIT_OLEDBSERVICES` pode ser definido diretamente no OLE DB ou na cadeia de conexão passada para o ADO ou `IDataInitialize::GetDatasource`. Os valores correspondentes para habilitar/desabilitar serviços individuais são listados na tabela a seguir.
+
+|Serviços padrão habilitados|Valor da propriedade DBPROP_INIT_OLEDBSERVICES|Valor na cadeia de caracteres de conexão|
+|------------------------------|------------------------------------------------|--------------------------------|
+|Todos os serviços (padrão)|`DBPROPVAL_OS_ENABLEALL`|"Serviços do OLE DB = -1;"|
+|Todos, exceto de Pooling e AutoEnlistment|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_RESOURCEPOOLING &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT`|"Serviços do OLE DB = -4;"|
+|Todos, exceto o Cursor do cliente|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|"Serviços do OLE DB = -5;"|
+|Todos exceto Pooling, AutoEnlistment e Cursor do cliente|`DBPROPVAL_OS_ENABLEALL &`<br /><br /> `~DBPROPVAL_OS_TXNENLISTMENT &`<br /><br /> `~DBPROPVAL_OS_CLIENTCURSOR`|"Serviços do OLE DB = -7;"|
+|Não há serviços|`~DBPROPVAL_OS_ENABLEALL`|"Serviços do OLE DB = 0;"|
+
+Se a entrada do registro não existir para o provedor, os gerenciadores de componentes não serão agregados a objetos do provedor e nenhum serviço será invocado, mesmo que explicitamente solicitado pelo usuário.
+
+## <a name="see-also"></a>Consulte também
+
+[Pool de recursos](/previous-versions/windows/desktop/ms713655)<br/>
+[Como os consumidores usam o pool de recursos](/previous-versions/windows/desktop/ms715907)<br/>
+[Como os provedores funcionam com eficiência com o pool de recursos](/previous-versions/windows/desktop/ms714906)<br/>
+[Habilitando e desabilitando serviços do OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)<br/>

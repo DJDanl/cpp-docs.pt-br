@@ -19,32 +19,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 67658f6edadd7723789288ab268b97cecdd611d2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6d68daae7bce6ca4c9ffafe7a24c80cff3a5426a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017346"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059851"
 ---
 # <a name="cnomultipleresults-class"></a>Classe CNoMultipleResults
 
-Usado como um argumento de modelo (*TMultiple*) para [CCommand](../../data/oledb/ccommand-class.md) criar um comando otimizado que lida com um único resultado definido.  
-  
+Usado como um argumento de modelo (*TMultiple*) para [CCommand](../../data/oledb/ccommand-class.md) criar um comando otimizado que lida com um único resultado definido.
+
 ## <a name="syntax"></a>Sintaxe
 
 ```cpp
-class CNoMultipleResults  
-```  
-  
-## <a name="remarks"></a>Comentários  
+class CNoMultipleResults
+```
 
-Se você quiser um comando para lidar com vários conjuntos de resultados, use [CMultipleResults](../../data/oledb/cmultipleresults-class.md) em vez disso.  
-  
-## <a name="requirements"></a>Requisitos  
+## <a name="remarks"></a>Comentários
 
-**Cabeçalho:** atldbcli.h  
-  
-## <a name="see-also"></a>Consulte também  
+Se você quiser um comando para lidar com vários conjuntos de resultados, use [CMultipleResults](../../data/oledb/cmultipleresults-class.md) em vez disso.
+
+## <a name="requirements"></a>Requisitos
+
+**Cabeçalho:** atldbcli.h
+
+## <a name="see-also"></a>Consulte também
 
 [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

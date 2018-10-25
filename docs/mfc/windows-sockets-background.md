@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fe08de0cbeaf6e70c8d786f3cfc849094117cd2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a6146106a7ae378821fc7133d2d65597d1225cc1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389520"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079656"
 ---
 # <a name="windows-sockets-background"></a>Windows Sockets: tela de fundo
 
@@ -69,11 +69,11 @@ Dois tipos de soquete estão disponíveis:
 
 - Soquetes de Stream
 
-     Soquetes de Stream fornecem um fluxo de dados sem limites de registros: um fluxo de bytes. Fluxos têm garantia de entrega e ser corretamente sequenciado e não duplicadas.
+   Soquetes de Stream fornecem um fluxo de dados sem limites de registros: um fluxo de bytes. Fluxos têm garantia de entrega e ser corretamente sequenciado e não duplicadas.
 
 - Soquetes de datagrama
 
-     Datagrama soquetes suporte um registro orientado por fluxo de dados que não é garantido para ser entregue e não pode ser sequenciado como enviado ou não duplicadas.
+   Datagrama soquetes suporte um registro orientado por fluxo de dados que não é garantido para ser entregue e não pode ser sequenciado como enviado ou não duplicadas.
 
 "Sequenciado" significa que os pacotes sejam entregues na ordem enviadas. "Não duplicadas" significa que você obtenha um pacote específico apenas uma vez.
 

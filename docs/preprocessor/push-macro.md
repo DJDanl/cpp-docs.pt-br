@@ -18,30 +18,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70b472ba11445cdc5aa2a192d02d82c51d724b8c
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: a6a389289f8849ac6155543299392586dcd389d2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541518"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078941"
 ---
 # <a name="pushmacro"></a>push_macro
-Salva o valor da *macro_name* macro no topo da pilha dessa macro.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-#pragma push_macro("  
-macro_name  
-")  
-```  
-  
-## <a name="remarks"></a>Comentários  
- 
-Você pode recuperar o valor para *macro_name* com `pop_macro`.  
-  
-Ver [pop_macro](../preprocessor/pop-macro.md) para obter um exemplo.  
-  
-## <a name="see-also"></a>Consulte também  
- 
+Salva o valor da *macro_name* macro no topo da pilha dessa macro.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+#pragma push_macro("
+macro_name
+")
+```
+
+## <a name="remarks"></a>Comentários
+
+Você pode recuperar o valor para *macro_name* com `pop_macro`.
+
+Ver [pop_macro](../preprocessor/pop-macro.md) para obter um exemplo.
+
+## <a name="see-also"></a>Consulte também
+
 [Diretivas Pragma e a palavra-chave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

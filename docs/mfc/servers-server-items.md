@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72f8de75607921edda62aec9baec424066431d61
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c134f0d0b0c8ee3009e372de7712a6c0894a51de
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438854"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082899"
 ---
 # <a name="servers-server-items"></a>Servidores: itens de servidor
 
@@ -43,7 +43,7 @@ Se você usar o Assistente de aplicativo para produzir código "inicial" para se
 
 1. Em sua classe derivada, substituir o `OnDraw` função de membro.
 
-     A estrutura chama `OnDraw` para renderizar o item OLE em um metarquivo. O aplicativo de contêiner usa essa meta-arquivo para renderizar o item. Classe de exibição do seu aplicativo também tem um `OnDraw` a função de membro, que é usada para renderizar o item quando o aplicativo de servidor está ativo.
+   A estrutura chama `OnDraw` para renderizar o item OLE em um metarquivo. O aplicativo de contêiner usa essa meta-arquivo para renderizar o item. Classe de exibição do seu aplicativo também tem um `OnDraw` a função de membro, que é usada para renderizar o item quando o aplicativo de servidor está ativo.
 
 1. Implementar uma substituição do `OnGetEmbeddedItem` para sua classe de documento do servidor. Para obter mais informações, consulte o artigo [servidores: Implementando documentos de servidor](../mfc/servers-implementing-server-documents.md) e o exemplo OLE do MFC [HIERSVR](../visual-cpp-samples.md).
 

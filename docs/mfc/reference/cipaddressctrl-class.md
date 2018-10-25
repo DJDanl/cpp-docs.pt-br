@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbc8daa4231a69d037ca6a775954d4a1b124bdb8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4b6699e0b8a37bba0505e9f6dde3d457f2230bd2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410020"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055015"
 ---
 # <a name="cipaddressctrl-class"></a>Classe CIPAddressCtrl
 
@@ -343,6 +343,4 @@ Essa função membro implementa o comportamento da mensagem do Win32 [IPM_SETRAN
 
 [Classe CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
-
-
 

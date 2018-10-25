@@ -16,26 +16,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ea4a816053a548ac8e3292d0416fe68da2dc4296
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 423ed9b97900777160818b7699f8dac7b81e38a8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107626"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057525"
 ---
 # <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Conjunto de registros: declarando uma classe para uma tabela (ODBC)
 
-Este tópico se aplica às classes ODBC do MFC.  
-  
-A classe de conjunto de registros mais comuns é aberta em uma única tabela. Para declarar uma classe de conjunto de registros para uma única tabela, use o [Assistente de consumidor ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) de **Adicionar classe** e escolha a cada coluna que você deseja ao nomear um membro de dados de campo de conjunto de registros correspondentes.  
-  
-Outros usos para conjuntos de registros incluem:  
-  
-- Unir duas ou mais tabelas.  
-  
-- Que contém os resultados de uma consulta predefinida.  
-  
-## <a name="see-also"></a>Consulte também  
+Este tópico se aplica às classes ODBC do MFC.
+
+A classe de conjunto de registros mais comuns é aberta em uma única tabela. Para declarar uma classe de conjunto de registros para uma única tabela, use o [Assistente de consumidor ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) de **Adicionar classe** e escolha a cada coluna que você deseja ao nomear um membro de dados de campo de conjunto de registros correspondentes.
+
+Outros usos para conjuntos de registros incluem:
+
+- Unir duas ou mais tabelas.
+
+- Que contém os resultados de uma consulta predefinida.
+
+## <a name="see-also"></a>Consulte também
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Conjunto de registros: criando e fechando conjuntos de registros (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>

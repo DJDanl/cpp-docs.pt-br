@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5b5bb50c99efc2a7b18fbbbabba394ec5330661
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fc151ae25df4cac2c6b5ed9ac5a523efda28dff2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378196"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082704"
 ---
 # <a name="using-property-sheets-in-your-application"></a>Usando folhas de propriedade no aplicativo
 
@@ -34,9 +34,9 @@ Para usar uma folha de propriedades em seu aplicativo, conclua as seguintes etap
 
 1. Crie um recurso de modelo de caixa de diálogo para cada página de propriedades. Tenha em mente que o usuário pode ser alternar de uma página para outra, para que o layout de cada página mais consistentemente possível.
 
-     Os modelos de caixa de diálogo para todas as páginas não é necessário ter o mesmo tamanho. A estrutura usa o tamanho da maior página para determinar quanto espaço alocar na folha de propriedades para as páginas de propriedade.
+   Os modelos de caixa de diálogo para todas as páginas não é necessário ter o mesmo tamanho. A estrutura usa o tamanho da maior página para determinar quanto espaço alocar na folha de propriedades para as páginas de propriedade.
 
-     Quando você cria o recurso de modelo de caixa de diálogo para uma página de propriedades, você deve especificar os seguintes estilos na folha de propriedades da caixa de diálogo de propriedades:
+   Quando você cria o recurso de modelo de caixa de diálogo para uma página de propriedades, você deve especificar os seguintes estilos na folha de propriedades da caixa de diálogo de propriedades:
 
    - Defina a **legenda** caixa de edição a **geral** página para o texto que você deseja que aparecem na guia para esta página.
 
@@ -60,9 +60,9 @@ Para usar uma folha de propriedades em seu aplicativo, conclua as seguintes etap
 
    - Chame [CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage) para cada página.
 
-     Normalmente, o objeto que cria o `CPropertySheet` também cria o `CPropertyPage` objetos nesta etapa. No entanto, se você implementar uma `CPropertySheet`-derivado da classe, você pode inserir o `CPropertyPage` objetos na `CPropertySheet` objeto e chame `AddPage` para cada página do `CPropertySheet`-derivado do construtor de classe. `AddPage` Adiciona o `CPropertyPage` o objeto para a lista da folha de propriedades de páginas, mas não cria, na verdade, a janela para a página. Portanto, não é necessário esperar até a criação da janela de folha de propriedade para chamar `AddPage`; você pode chamar `AddPage` de construtor da folha de propriedades.
+   Normalmente, o objeto que cria o `CPropertySheet` também cria o `CPropertyPage` objetos nesta etapa. No entanto, se você implementar uma `CPropertySheet`-derivado da classe, você pode inserir o `CPropertyPage` objetos na `CPropertySheet` objeto e chame `AddPage` para cada página do `CPropertySheet`-derivado do construtor de classe. `AddPage` Adiciona o `CPropertyPage` o objeto para a lista da folha de propriedades de páginas, mas não cria, na verdade, a janela para a página. Portanto, não é necessário esperar até a criação da janela de folha de propriedade para chamar `AddPage`; você pode chamar `AddPage` de construtor da folha de propriedades.
 
-     Por padrão, se uma folha de propriedades tem mais guias cabem em uma única linha de folha de propriedades, as guias serão empilhados de várias linhas. Para desabilitar o empilhamento, chame [CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) com o parâmetro definido como **falso**. Você deve chamar `EnableStackedTabs` quando você cria a folha de propriedades.
+   Por padrão, se uma folha de propriedades tem mais guias cabem em uma única linha de folha de propriedades, as guias serão empilhados de várias linhas. Para desabilitar o empilhamento, chame [CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) com o parâmetro definido como **falso**. Você deve chamar `EnableStackedTabs` quando você cria a folha de propriedades.
 
 1. Chame [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal) ou [criar](../mfc/reference/cpropertysheet-class.md#create) para exibir a folha de propriedades. Chamar `DoModal` para criar uma folha de propriedades como uma caixa de diálogo modal. Chame **criar** para criar a folha de propriedades como uma caixa de diálogo sem janela restrita.
 

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d050f27688d97cd3ef0352eed00f4dadb1fe6d98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 96bcaf768ece46c22422fb3d98b85def7c57ed6b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403780"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056588"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Criando coleções de pilhas e filas
 
@@ -40,9 +40,9 @@ Como a coleção de lista padrão tem um cabeçalho e uma cauda, é fácil criar
 
 1. Derivar uma nova classe de lista de uma das classes de lista MFC existentes e adicionar mais funções de membro para oferecer suporte a funcionalidade de operações de pilha.
 
-     O exemplo a seguir mostra como adicionar funções de membro para elementos na pilha, inspecionar o elemento superior da pilha, de push e pop-o elemento superior da pilha:
+   O exemplo a seguir mostra como adicionar funções de membro para elementos na pilha, inspecionar o elemento superior da pilha, de push e pop-o elemento superior da pilha:
 
-     [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
+   [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
 
 Observe que essa abordagem expõe subjacente `CObList` classe. O usuário pode chamar qualquer `CObList` função de membro, se faz sentido para uma pilha ou não.
 
@@ -54,9 +54,9 @@ Como a coleção de lista padrão tem um cabeçalho e uma cauda, também é fác
 
 1. Derivar uma nova classe de lista de uma das classes de lista predefinidos fornecidas com a biblioteca Microsoft Foundation Class e adicionar mais funções de membro para oferecer suporte a semântica das operações de fila.
 
-     O exemplo a seguir mostra como você pode acrescentar funções de membro para adicionar um elemento ao final da fila e obter o elemento do início da fila.
+   O exemplo a seguir mostra como você pode acrescentar funções de membro para adicionar um elemento ao final da fila e obter o elemento do início da fila.
 
-     [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
+   [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
 
 ## <a name="see-also"></a>Consulte também
 

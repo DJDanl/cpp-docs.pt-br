@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46e41ffab3f3f22bca1a9a721b4f2cdb03129d03
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 05e2a39f94eeefa264a9e93623f4ff7c6b2f2e91
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391690"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080450"
 ---
 # <a name="memory-management-examples"></a>Gerenciamento de memória: exemplos
 
@@ -52,19 +52,19 @@ Este artigo descreve como o MFC realiza a alocações de quadro e alocações de
 
 1. Defina a matriz, conforme mostrado pelo código a seguir. A matriz será excluída automaticamente e sua memória recuperada quando a variável de matriz é fechada seu escopo.
 
-     [!code-cpp[NVC_MFC_Utilities#1](../mfc/codesnippet/cpp/memory-management-examples_1.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#1](../mfc/codesnippet/cpp/memory-management-examples_1.cpp)]
 
 #### <a name="to-allocate-an-array-of-bytes-or-any-primitive-data-type-on-the-heap"></a>Para alocar uma matriz de bytes (ou qualquer tipo de dados primitivo) no heap
 
 1. Use o **novo** operador com a sintaxe de matriz mostrado neste exemplo:
 
-     [!code-cpp[NVC_MFC_Utilities#2](../mfc/codesnippet/cpp/memory-management-examples_2.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#2](../mfc/codesnippet/cpp/memory-management-examples_2.cpp)]
 
 #### <a name="to-deallocate-the-arrays-from-the-heap"></a>Para desalocar as matrizes do heap
 
 1. Use o **excluir** operador da seguinte maneira:
 
-     [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]
 
 ##  <a name="_core_allocation_of_a_data_structure"></a> Alocação de uma estrutura de dados
 
@@ -72,15 +72,15 @@ Este artigo descreve como o MFC realiza a alocações de quadro e alocações de
 
 1. Defina a variável de estrutura, da seguinte maneira:
 
-     [!code-cpp[NVC_MFC_Utilities#4](../mfc/codesnippet/cpp/memory-management-examples_4.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#4](../mfc/codesnippet/cpp/memory-management-examples_4.cpp)]
 
-     A memória ocupada pela estrutura é recuperada quando ele sai de seu escopo.
+   A memória ocupada pela estrutura é recuperada quando ele sai de seu escopo.
 
 #### <a name="to-allocate-data-structures-on-the-heap"></a>Para alocar estruturas de dados no heap
 
 1. Use **novos** alocar estruturas de dados no heap e **excluir** desalocá-los, conforme mostrado pelos exemplos a seguir:
 
-     [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]
 
 ##  <a name="_core_allocation_of_an_object"></a> Alocação de um objeto
 
@@ -88,25 +88,25 @@ Este artigo descreve como o MFC realiza a alocações de quadro e alocações de
 
 1. Declare o objeto da seguinte maneira:
 
-     [!code-cpp[NVC_MFC_Utilities#6](../mfc/codesnippet/cpp/memory-management-examples_6.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#6](../mfc/codesnippet/cpp/memory-management-examples_6.cpp)]
 
-     O destruidor do objeto é invocado automaticamente quando o objeto é encerrado em seu escopo.
+   O destruidor do objeto é invocado automaticamente quando o objeto é encerrado em seu escopo.
 
 #### <a name="to-allocate-an-object-on-the-heap"></a>Para alocar um objeto no heap
 
 1. Use o **novo** operador, que retorna um ponteiro para o objeto, para alocar objetos no heap. Use o **excluir** operador excluí-los.
 
-     Os exemplos de heap e o quadro a seguir pressupõem que o `CPerson` construtor não usa nenhum argumento.
+   Os exemplos de heap e o quadro a seguir pressupõem que o `CPerson` construtor não usa nenhum argumento.
 
-     [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]
 
-     Se o argumento para o `CPerson` construtor é um ponteiro para **char**, a política de alocação do quadro está:
+   Se o argumento para o `CPerson` construtor é um ponteiro para **char**, a política de alocação do quadro está:
 
-     [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]
 
-     A instrução para alocação de heap é:
+   A instrução para alocação de heap é:
 
-     [!code-cpp[NVC_MFC_Utilities#9](../mfc/codesnippet/cpp/memory-management-examples_9.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#9](../mfc/codesnippet/cpp/memory-management-examples_9.cpp)]
 
 ## <a name="see-also"></a>Consulte também
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46fa8b115dd01a9ee11442a0701cd719cc6d389e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 28c93e5d1331d7195b894fe88c3fe5fc11e7c31d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394355"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074066"
 ---
 # <a name="containers-implementing-a-container"></a>Contêineres: implementando um contêiner
 
@@ -62,15 +62,15 @@ Convém também oferecem suporte a alguns dos recursos a seguir em seu aplicativ
 
 - Ativação in-loco ao editar um item inserido.
 
-     Para obter mais informações, consulte [ativação](../mfc/activation-cpp.md).
+   Para obter mais informações, consulte [ativação](../mfc/activation-cpp.md).
 
 - Criação de OLE itens arrastando e soltando uma seleção de um aplicativo de servidor.
 
-     Para obter mais informações, consulte [arrastar e soltar (OLE)](../mfc/drag-and-drop-ole.md).
+   Para obter mais informações, consulte [arrastar e soltar (OLE)](../mfc/drag-and-drop-ole.md).
 
 - Contém links para os objetos inseridos ou aplicativos de servidor/contêiner de combinação.
 
-     Para obter mais informações, consulte [contêineres: recursos avançados](../mfc/containers-advanced-features.md).
+   Para obter mais informações, consulte [contêineres: recursos avançados](../mfc/containers-advanced-features.md).
 
 ## <a name="see-also"></a>Consulte também
 

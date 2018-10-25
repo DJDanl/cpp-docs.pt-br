@@ -16,12 +16,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 90754db9c648395ad916cf03682a5c87c0b7da3b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3cc592deaed967a7b6e93f9250103e28fb058de3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235302"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080748"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Instruções passo a passo: criando e usando uma biblioteca estática (C++)
 
@@ -97,7 +97,7 @@ Um entendimento dos fundamentos da linguagem C++.
 
 1. Na barra de menus, selecione **Arquivo** > **Novo** > **Projeto**.
 
-1. No painel esquerdo do **novo projeto** diálogo caixa, expanda **instalado** > **Visual C++** e, em seguida, selecione **área de trabalho do Windows**. No painel central, selecione **Assistente de área de trabalho do Windows**. 
+1. No painel esquerdo do **novo projeto** diálogo caixa, expanda **instalado** > **Visual C++** e, em seguida, selecione **área de trabalho do Windows**. No painel central, selecione **Assistente de área de trabalho do Windows**.
 
    > [!NOTE]
    > Para versões do Visual Studio anteriores a 2017, nos **novo projeto** diálogo caixa, expanda **instalado** > **modelos**  >  **Visual C++** e, em seguida, selecione **Win32**. No painel central, selecione **aplicativo do Console Win32**.
@@ -144,7 +144,7 @@ Um entendimento dos fundamentos da linguagem C++.
 
 1. Certifique-se de que **MyExecRefsLib** está selecionado como o projeto padrão, abrindo o menu de atalho **MyExecRefsLib** na **Gerenciador de soluções**e, em seguida, escolhendo  **Definir como projeto de inicialização**.
 
-1. Para executar o projeto, na barra de menus, escolha **Debug** > **Start Without Debugging**. A saída deve se parecer com:
+1. Para executar o projeto, na barra de menus, escolha **Depurar** > **Iniciar sem Depuração**. A saída deve se parecer com:
 
     ```Output
     a + b = 106.4

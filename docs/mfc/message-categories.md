@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b1b8da6f6c1b94432d9cd4c91d88f6d844fbb27
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4184ca20188ccbc3eff0818e807911635292b668
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433043"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081372"
 ---
 # <a name="message-categories"></a>Categorias de mensagem
 
@@ -33,17 +33,17 @@ Que tipos de mensagem escrever manipuladores para há três categorias principai
 
 1. mensagens do Windows
 
-     Isso inclui principalmente essas mensagens começando com o **WM _** prefixo, exceto para WM_COMMAND. Mensagens do Windows são manipuladas pelo windows e modos de exibição. Essas mensagens geralmente têm parâmetros que são usados na determinação de como lidar com a mensagem.
+   Isso inclui principalmente essas mensagens começando com o **WM _** prefixo, exceto para WM_COMMAND. Mensagens do Windows são manipuladas pelo windows e modos de exibição. Essas mensagens geralmente têm parâmetros que são usados na determinação de como lidar com a mensagem.
 
 1. Notificações de controle
 
-     Isso inclui mensagens de notificação de WM_COMMAND de controles e outras janelas filho para as janelas pai. Por exemplo, um controle de edição envia seu pai com uma mensagem WM_COMMAND que contém o código de controle-notificação de evento EN_CHANGE quando o usuário executou uma ação que pode ter alterado o texto no controle de edição. Manipulador da janela para a mensagem responde à mensagem de notificação de alguma forma apropriada, como recuperar o texto no controle.
+   Isso inclui mensagens de notificação de WM_COMMAND de controles e outras janelas filho para as janelas pai. Por exemplo, um controle de edição envia seu pai com uma mensagem WM_COMMAND que contém o código de controle-notificação de evento EN_CHANGE quando o usuário executou uma ação que pode ter alterado o texto no controle de edição. Manipulador da janela para a mensagem responde à mensagem de notificação de alguma forma apropriada, como recuperar o texto no controle.
 
-     O framework encaminha mensagens de notificação do controle como qualquer outra **WM _** mensagens. Uma exceção, no entanto, é a mensagem de notificação de controle BN_CLICKED enviada pelos botões quando o usuário clica neles. Essa mensagem é tratada de forma especial, como uma mensagem de comando e roteada como outros comandos.
+   O framework encaminha mensagens de notificação do controle como qualquer outra **WM _** mensagens. Uma exceção, no entanto, é a mensagem de notificação de controle BN_CLICKED enviada pelos botões quando o usuário clica neles. Essa mensagem é tratada de forma especial, como uma mensagem de comando e roteada como outros comandos.
 
 1. Mensagens de comando
 
-     Isso inclui mensagens de notificação de WM_COMMAND dos objetos de interface do usuário: menus, botões de barra de ferramentas e teclas de aceleração. O framework processa comandos de maneira diferente de outras mensagens e pode ser tratados por mais tipos de objetos, conforme explicado em [destinos de comando](../mfc/command-targets.md).
+   Isso inclui mensagens de notificação de WM_COMMAND dos objetos de interface do usuário: menus, botões de barra de ferramentas e teclas de aceleração. O framework processa comandos de maneira diferente de outras mensagens e pode ser tratados por mais tipos de objetos, conforme explicado em [destinos de comando](../mfc/command-targets.md).
 
 ##  <a name="_core_windows_messages_and_control.2d.notification_messages"></a> Mensagens do Windows e mensagens de notificação de controle
 

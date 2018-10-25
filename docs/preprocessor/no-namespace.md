@@ -16,33 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a02919e1e96717c1accc6343ecff32a66968cbcc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e84cfad5a11c0d691c56e6e7ddcca17ea87e3f02
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378807"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082912"
 ---
 # <a name="nonamespace"></a>no_namespace
-**Específico do C++**  
-  
-Especifica que o nome do namespace não é gerado pelo compilador.  
-  
-## <a name="syntax"></a>Sintaxe  
-  
-```  
-no_namespace  
-```  
-  
-## <a name="remarks"></a>Comentários  
- 
-O conteúdo da biblioteca de tipos no arquivo de cabeçalho de `#import` normalmente é definido em um namespace. O nome do namespace é especificado no `library` instrução do arquivo IDL original. Se o **no_namespace** atributo for especificado, esse namespace não é gerado pelo compilador.  
-  
-Se você quiser usar um nome de namespace diferentes, em seguida, use o [rename_namespace](../preprocessor/rename-namespace.md) atributo em vez disso.  
-  
-**FIM de específico de C++**  
-  
-## <a name="see-also"></a>Consulte também  
- 
+**Específico do C++**
+
+Especifica que o nome do namespace não é gerado pelo compilador.
+
+## <a name="syntax"></a>Sintaxe
+
+```
+no_namespace
+```
+
+## <a name="remarks"></a>Comentários
+
+O conteúdo da biblioteca de tipos no arquivo de cabeçalho de `#import` normalmente é definido em um namespace. O nome do namespace é especificado no `library` instrução do arquivo IDL original. Se o **no_namespace** atributo for especificado, esse namespace não é gerado pelo compilador.
+
+Se você quiser usar um nome de namespace diferentes, em seguida, use o [rename_namespace](../preprocessor/rename-namespace.md) atributo em vez disso.
+
+**FIM de específico de C++**
+
+## <a name="see-also"></a>Consulte também
+
 [atributos de #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import diretiva](../preprocessor/hash-import-directive-cpp.md)

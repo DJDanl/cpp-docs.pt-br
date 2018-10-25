@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 660b2fc2f6ece6f60ff7bd1868b3a65bc8f045c1
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 5ae1ccdcda4fac1cbd0660b054d792999ae449fc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890030"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079279"
 ---
 # <a name="mfc-com"></a>MFC COM
 
@@ -52,7 +52,7 @@ Tecnologias do Active Directory incluem tecnologias de cliente e servidor, inclu
 
 - [Automação](../mfc/automation.md) (anteriormente conhecido como automação OLE) torna possível para um aplicativo para manipular objetos implementados em outro aplicativo ou "expor" objetos para que eles podem ser manipulados.
 
-     O objeto automatizado pode ser local ou remoto (em outro computador acessível em uma rede). Automação está disponível para objetos OLE e COM.
+   O objeto automatizado pode ser local ou remoto (em outro computador acessível em uma rede). Automação está disponível para objetos OLE e COM.
 
 - Esta seção também fornece informações sobre como escrever componentes usando o MFC, por exemplo, no [pontos de Conexão](../mfc/connection-points.md).
 

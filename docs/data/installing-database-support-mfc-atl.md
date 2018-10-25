@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 81e03f515d01902ad4c6935b8b263e51823f62d8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: af1eab82c95c933108cf71861083828b939a7591
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080201"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079045"
 ---
 # <a name="installing-database-support-mfcatl"></a>Instalando o suporte a banco de dados (MFC/ATL)
 
-Visual C++ não inclui quaisquer produtos de banco de dados. Para  
-  
- 
-## <a name="see-also"></a>Consulte também  
+Visual C++ não inclui quaisquer produtos de banco de dados. Para
+
+
+## <a name="see-also"></a>Consulte também
 
 [Acesso a dados](data-access-in-cpp.md)

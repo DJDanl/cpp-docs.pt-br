@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ab41c396f8602d16e2b2d88c3d83aeb7cdf21a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cdf77589ea39de4d17ccad1e3ef369cf4f0ca24d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46018373"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080878"
 ---
 # <a name="naked-c"></a>naked (C++)
 
@@ -39,7 +39,6 @@ __declspec(naked) declarator
 ## <a name="remarks"></a>Comentários
 
 Porque o **naked** atributo só é relevante para a definição de uma função e não é um modificador de tipo, funções naked devem usar a sintaxe de atributo estendido e a [declspec](../cpp/declspec.md) palavra-chave.
-
 
 O compilador não gere uma função embutida para uma função marcada com o atributo naked, mesmo se a função também é marcada com o [forceinline](inline-functions-cpp.md) palavra-chave.
 

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 411b8f58b38d2b35c1353d1ff446407026977d66
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6537cdb9e7ff9806bef3bfec85a94e0d50808477
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030138"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078460"
 ---
 # <a name="ccomsafearray-class"></a>Classe CComSafeArray
 
@@ -100,7 +100,7 @@ O tipo de dados a serem armazenados na matriz.
 |----------|-----------------|
 |[CComSafeArray::operator LPSAFEARRAY](#operator_lpsafearray)|Converte um valor para um `SAFEARRAY` ponteiro.|
 |[CComSafeArray::operator\[\]](ccomsafearray-class.md#operator_at)|Recupera um elemento da matriz.|
-|[CComSafeArray::operator =](#operator_eq)|Operador de atribuição.|  
+|[CComSafeArray::operator =](#operator_eq)|Operador de atribuição.|
 
 ### <a name="public-data-members"></a>Membros de Dados Públicos
 

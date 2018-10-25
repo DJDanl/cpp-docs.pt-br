@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b205be3c2417453faa54c9d24ac28216ee0af5cf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 447a03cec8beba331aedc8077a44dc9090fccbc6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060520"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078507"
 ---
 # <a name="new-and-delete-operators"></a>Operadores new e delete
 
@@ -45,7 +45,6 @@ char *pch = new char[BUFFER_SIZE];
 Se a solicitação for para zero bytes de armazenamento, **operador new** retorna um ponteiro para um objeto distinto (ou seja, chamadas repetidas para **operador new** retornam ponteiros diferentes). Se não houver memória insuficiente para a solicitação de alocação **operador new** lança uma exceção std:: bad_alloc ou retorna **nullptr** se você tiver vinculado não jogando **operador new** dão suporte.
 
 Você pode escrever uma rotina que tenta liberar a memória e repetir a alocação; ver [set_new_handler](../c-runtime-library/reference/set-new-handler.md) para obter mais informações. Para obter mais detalhes sobre o esquema de recuperação, consulte a seção de memória insuficiente do tratamento deste tópico.
-
 
 Os dois escopos para **operador new** funções são descritas na tabela a seguir.
 

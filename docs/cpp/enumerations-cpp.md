@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35aa004a2c4f47c476175ac500777ee8eb6efb07
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1146c3e07ec6d9be4233981bcb2551a0c768c265
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028747"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054079"
 ---
 # <a name="enumerations-c"></a>Enumerações (C++)
 
@@ -39,7 +39,7 @@ Uma enumeração é um tipo definido pelo usuário que consiste em um conjunto d
 ```
 // unscoped enum:
 enum [identifier] [: type]
-{enum-list}; 
+{enum-list}; 
 
 // scoped enum:
 enum [class|struct]
@@ -134,19 +134,19 @@ O uso de conversões implícitas dessa maneira pode levar a efeitos colaterais n
 ```cpp
 namespace ScopedEnumConversions
 {
-    enum class Suit { Diamonds, Hearts, Clubs, Spades };
+    enum class Suit { Diamonds, Hearts, Clubs, Spades };
 
-    void AttemptConversions()
+    void AttemptConversions()
     {
-        Suit hand; 
-        hand = Clubs; // error C2065: 'Clubs' : undeclared identifier
-        hand = Suit::Clubs; //Correct.
-        int account_num = 135692;
-        hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'
-        hand = static_cast<Suit>(account_num); // OK, but probably a bug!!!
+        Suit hand; 
+        hand = Clubs; // error C2065: 'Clubs' : undeclared identifier
+        hand = Suit::Clubs; //Correct.
+        int account_num = 135692;
+        hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'
+        hand = static_cast<Suit>(account_num); // OK, but probably a bug!!!
 
-        account_num = Suit::Hearts; // error C2440: '=' : cannot convert from 'Suit' to 'int'
-        account_num = static_cast<int>(Suit::Hearts); // OK
+        account_num = Suit::Hearts; // error C2440: '=' : cannot convert from 'Suit' to 'int'
+        account_num = static_cast<int>(Suit::Hearts); // OK
 }
 ```
 
@@ -155,7 +155,6 @@ Observe que a linha `hand = account_num;` ainda causa o erro que ocorre com enum
 ## <a name="no_enumerators"></a> Enums com nenhum enumeradores
 
 **Visual Studio 2017 versão 15.3 e posterior** (disponível com [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): definindo uma enumeração (regular ou escopo) com um tipo subjacente explícito e nenhum enumeradores, você pode em vigor introduz um novo tipo integral que não tiver nenhuma conversão implícita em qualquer outro tipo. Usando esse tipo em vez de seu tipo subjacente interno, você pode eliminar a possibilidade de erros sutis causados por conversões implícitas acidentais.
-
 
 ```cpp
 enum class byte : unsigned char { };

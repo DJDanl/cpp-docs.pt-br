@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c8e2fc86d15472bd4ab63e472df99bb69393b386
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ca9d1ea34aa8a2793f895a3c89f94994743570e5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060298"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082667"
 ---
 # <a name="data-access-in-visual-c"></a>Acesso a dados no Visual C++
 
@@ -52,13 +52,13 @@ Conecte-se ao banco de dados SQL de aplicativos C ou C++.
 O [Armazenamento do Azure](/azure/storage/storage-introduction) é uma solução de armazenamento em nuvem para aplicativos modernos que dependem de durabilidade, disponibilidade e escalabilidade para atender às necessidades dos clientes. Conecte-se ao Armazenamento do Azure pelo C++ usando a Biblioteca de Cliente do Armazenamento do Azure para C++.
 
 [Driver ODBC 13.1 para SQL Server - Windows lançado](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server)<br/>
-O driver ODBC mais recente fornece acesso eficiente a dados para o Microsoft SQL Server 2016 e para o Banco de Dados SQL do Microsoft Azure para aplicativos baseados em C/C++. Fornece suporte para recursos, incluindo sempre criptografado, Active Directory do Azure e grupos de disponibilidade AlwaysOn. Também está disponível para MacOS e Linux.     
- 
+O driver ODBC mais recente fornece acesso eficiente a dados para o Microsoft SQL Server 2016 e para o Banco de Dados SQL do Microsoft Azure para aplicativos baseados em C/C++. Fornece suporte para recursos, incluindo sempre criptografado, Active Directory do Azure e grupos de disponibilidade AlwaysOn. Também está disponível para MacOS e Linux.
+
 [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client-programming)<br/>
 O SQL Server Native Client é uma API (Interface de Programação de Aplicativo) de acesso a dados autônoma, usada tanto para OLE DB quanto para ODBC, que dá suporte ao SQL Server 2005 por meio do SQL Server 2014. Aplicativos novos devem usar o Driver ODBC 13.1 para SQL Server.
 
 [Microsoft Azure C e C++ Developer Center](https://azure.microsoft.com/develop/cpp/)<br/>
-O Azure facilita o build de aplicativos do C++, com maior flexibilidade, escalabilidade e confiabilidade usando ferramentas que você adora.    
+O Azure facilita o build de aplicativos do C++, com maior flexibilidade, escalabilidade e confiabilidade usando ferramentas que você adora.
 
 [Como usar o armazenamento de BLOBs do C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
 O Armazenamento de Blobs do Azure é um serviço que armazena dados não estruturados na nuvem como objetos/blobs. O Armazenamento de Blobs pode armazenar qualquer tipo de texto ou dados binários, como um documento, um arquivo de mídia ou um instalador de aplicativo. O Armazenamento de Blobs também é conhecido como armazenamento de objeto.

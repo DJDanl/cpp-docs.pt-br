@@ -28,16 +28,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa3f3356cf3fdddeeb4245986549fa1bd2e12ae7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 16aa17ef58e8e4a7f0b8970cb229b6c914f291fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085219"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080111"
 ---
-# <a name="cominterfaceentry-macros"></a>Macros COM_INTERFACE_ENTRY  
+# <a name="cominterfaceentry-macros"></a>Macros COM_INTERFACE_ENTRY
 
-Essas macros inserir interfaces de um objeto em seu mapa COM, para que eles possam ser acessados por `QueryInterface`. A ordem das entradas no mapa de COM é que as interfaces de ordem serão verificadas para um IID correspondente durante `QueryInterface`.  
+Essas macros inserir interfaces de um objeto em seu mapa COM, para que eles possam ser acessados por `QueryInterface`. A ordem das entradas no mapa de COM é que as interfaces de ordem serão verificadas para um IID correspondente durante `QueryInterface`.
 
 |||
 |-|-|
@@ -55,7 +55,7 @@ Essas macros inserir interfaces de um objeto em seu mapa COM, para que eles poss
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Processa o mapa COM da classe base quando o processamento atinge essa entrada no mapa COM.|
 |[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)|Um mecanismo geral para vinculando do ATL `QueryInterface` lógica.|
 |[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|Mesmo que [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), exceto que consultar qualquer IID resulta em uma chamada para *func*.|
-|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Retorna E_NOINTERFACE e termina COM o mapa processamento quando a interface especificada é consultada para.|  
+|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Retorna E_NOINTERFACE e termina COM o mapa processamento quando a interface especificada é consultada para.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -70,6 +70,7 @@ Fecha o mapa de interface COM interfaces.
 ```
 COM_INTERFACE_ENTRY( x )
 ```
+
 ### <a name="parameters"></a>Parâmetros
 
 *x*<br/>
@@ -88,6 +89,7 @@ BEGIN_COM_MAP(CThisExample)
    COM_INTERFACE_ENTRY(ISupportErrorInfo)
 END_COM_MAP()
 ```
+
 ### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** atlcom
@@ -406,4 +408,3 @@ Você pode usar essa macro para impedir que uma interface que está sendo usado 
 
 A interface IID será construída por meio do acréscimo *x* para `IID_`. Por exemplo, se *x* é `IPersistStorage`, será o IID `IID_IPersistStorage`.
 
-  

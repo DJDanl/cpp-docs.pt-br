@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 876f3b45cc9f45ab5ff1aaa7e07116482f89afc1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2035e665bd7d8cba502c3516498934f32c2b3dd0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442078"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080839"
 ---
 # <a name="security-implications-of-customization"></a>Implicações de segurança da personalização
 
@@ -38,7 +38,7 @@ MFC permite que o usuário personalize a aparência de uma interface de usuário
 
 - Store os dados em um arquivo seguro em vez de no registro.
 
-     Para realizar qualquer uma das maneiras duas primeiras, derive uma classe de [classe CSettingsStore](../mfc/reference/csettingsstore-class.md) e substituir seus métodos para implementar a criptografia ou armazenamento fora do registro.
+   Para realizar qualquer uma das maneiras duas primeiras, derive uma classe de [classe CSettingsStore](../mfc/reference/csettingsstore-class.md) e substituir seus métodos para implementar a criptografia ou armazenamento fora do registro.
 
 - Você também pode desabilitar as personalizações em seu aplicativo.
 

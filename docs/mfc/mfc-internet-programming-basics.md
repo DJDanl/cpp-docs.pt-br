@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7134ea1a822fa61ec0d82592145f1fd3c5ecc6aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b2be02e6cac5dac226f7b04cd627a292e3761980
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418301"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082665"
 ---
 # <a name="mfc-internet-programming-basics"></a>Noções básicas de programação da Internet MFC
 
@@ -91,6 +91,4 @@ O [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=371
 A seção OLE do SDK do Windows contém informações adicionais sobre a programação de OLE. Essas informações fornecem detalhes sobre como usar as funções Win32 WinInet diretamente, em vez de por meio de classes do MFC. Ele também contém informações de visão geral sobre tecnologias da Internet.
 
 ## <a name="see-also"></a>Consulte também
-
-
 

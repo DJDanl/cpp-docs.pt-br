@@ -18,23 +18,23 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeb138a8b2598c209005031a3ccd3104fead48dc
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 3c06556d47bf0c471aa7e4fab610971e2b7ad11e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538568"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081463"
 ---
 # <a name="fenvaccess"></a>fenv_access
 Desabilita (**na**) ou habilita (**off**) otimizações que poderiam alterar o ambiente de ponto flutuante sinalizador testes e alterações de modo.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **#pragma fenv_access (** { **nos** | **off** } **)**  
+> **#pragma fenv_access (** { **nos** | **off** } **)**
 
 ## <a name="remarks"></a>Comentários
 
-Por padrão, **fenv_access** é **off**. Se o compilador não pode presumir que seu código não acessar ou manipular o ambiente de ponto flutuante, em seguida, ele pode executar muitas otimizações de código de ponto flutuante. Definir **fenv_access** à **em** para informar ao compilador que seu código acessa o ambiente de ponto flutuante para testar sinalizadores de status, exceções, ou para definir sinalizadores de modo de controle. O compilador desabilita essas otimizações para que seu código possa acessar o ambiente de ponto flutuante consistentemente. 
+Por padrão, **fenv_access** é **off**. Se o compilador não pode presumir que seu código não acessar ou manipular o ambiente de ponto flutuante, em seguida, ele pode executar muitas otimizações de código de ponto flutuante. Definir **fenv_access** à **em** para informar ao compilador que seu código acessa o ambiente de ponto flutuante para testar sinalizadores de status, exceções, ou para definir sinalizadores de modo de controle. O compilador desabilita essas otimizações para que seu código possa acessar o ambiente de ponto flutuante consistentemente.
 
 Para obter mais informações sobre o comportamento de ponto flutuante, consulte [/fp (Especificar comportamento de ponto flutuante)](../build/reference/fp-specify-floating-point-behavior.md).
 

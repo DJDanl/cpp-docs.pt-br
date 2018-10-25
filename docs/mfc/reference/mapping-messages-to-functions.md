@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb37637cbfc2ec0af96ed339da6e71cf349797e2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b53175e46cfa858a73b581dfefc78047e96380d6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402862"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058941"
 ---
 # <a name="mapping-messages-to-functions"></a>Mapeando mensagens para funções
 
@@ -42,7 +42,7 @@ Quando você usa o modo de exibição de classe para criar uma nova classe deriv
     > [!NOTE]
     >  O **mensagens** botão está disponível quando você seleciona o nome de classe no modo de exibição de classe ou quando você clica dentro da janela de código-fonte.
 
-     Se o projeto tiver um manipulador para uma mensagem, o nome do manipulador é exibido na coluna direita ao lado da mensagem.
+   Se o projeto tiver um manipulador para uma mensagem, o nome do manipulador é exibido na coluna direita ao lado da mensagem.
 
 1. Se a mensagem não tiver nenhum manipulador, em seguida, clique na célula na coluna à direita na janela Propriedades para exibir o nome sugerido do manipulador de como \<Adicionar >*HandlerName*. (Por exemplo, o manipulador de mensagens WM_TIMER sugere \<Adicionar >`OnTimer`).
 
@@ -59,6 +59,6 @@ Para remover um manipulador de mensagens, clique duas vezes o manipulador na col
 [Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Adicionando uma função de membro](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Adicionando uma variável de membro](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
-[Substituindo uma função Virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Substituindo uma função virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Adicionando manipuladores de eventos a controles de caixa de diálogo](../../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [Navegando pela estrutura de classe](../../ide/navigating-the-class-structure-visual-cpp.md)

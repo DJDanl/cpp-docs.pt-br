@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a977e3f0efd763ee416348f11e3c6b016c0d42e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c4f0367e19589093b31fcd64d5312e7b47e8a043
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373706"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080267"
 ---
 # <a name="abc-structure"></a>Estrutura ABC
 
@@ -60,5 +60,4 @@ A largura total de um caractere é a soma dos espaços de A, B e C. O r ou o esp
 
 [Estruturas, estilos, retornos de chamada e mapas de mensagem](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDC::GetCharABCWidths](../../mfc/reference/cdc-class.md#getcharabcwidths)
-
 
