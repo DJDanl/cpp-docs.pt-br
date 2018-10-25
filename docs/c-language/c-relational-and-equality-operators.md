@@ -1,7 +1,7 @@
 ---
 title: Operadores relacionais e de igualdade C | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bf3c406059fe8744843e1353ad997acc19c499b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9251aeb93ec53c47ca9c7474785b5180c36a3887
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058231"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808947"
 ---
 # <a name="c-relational-and-equality-operators"></a>Operadores relacionais e de igualdade C
 
@@ -31,32 +31,28 @@ Os operadores relacionais binários e de igualdade comparam o primeiro operando 
 
 **Sintaxe**
 
-*relational-expression*: *shift-expression*
+*relational-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;=** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>=** *shift-expression*<br/>
 
-*relational-expression*  **\<**  *shift-expression*
-
-*relational-expression*  **>**  *shift-expression*
-
-*relational-expression*  **\<=**  *shift-expression*
-
-*relational-expression*  **>=**  *shift-expression*
-
-*equality-expression*: *relational-expression*
-
-*equality-expression*  **==**  *relational-expression*
-
-*equality-expression*  **!=**  *relational-expression*
+*equality-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*equality-expression* **==** *relational-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*equality-expression* **!=** *relational-expression*
 
 Os operadores relacionais e de igualdade testam as seguintes relações:
 
 |Operador|Relação testada|
 |--------------|-------------------------|
-|**\<**|Primeiro operando menor que o segundo operando|
+|**&lt;**|Primeiro operando menor que o segundo operando|
 |**>**|Primeiro operando maior que o segundo operando|
-|**\<=**|Primeiro operando menor ou igual ao segundo operando|
+|**&lt;=**|Primeiro operando menor ou igual ao segundo operando|
 |**>=**|Primeiro operando maior ou igual ao segundo operando|
-|`==`|Primeiro operando igual ao segundo operando|
-|`!=`|Primeiro operando não é igual ao segundo operando|
+|**==**|Primeiro operando igual ao segundo operando|
+|**!=**|Primeiro operando não é igual ao segundo operando|
 
 Os primeiros quatro operadores na lista acima têm alta prioridade quanto aos operadores de igualdade (`==` e `!=`). Consulte as informações de precedência na tabela [Precedência e associatividade dos operadores de C](../c-language/precedence-and-order-of-evaluation.md).
 
@@ -64,7 +60,7 @@ Os operandos podem ter o tipo integral, flutuação ou ponteiro. Os tipos dos op
 
 - Ambos os operandos de qualquer operador relacional ou de igualdade podem ser ponteiros para o mesmo tipo. Para os operadores de igualdade (`==`) e de desigualdade (`!=`), o resultado da comparação indica se os dois ponteiros endereçam o mesmo local da memória. Para os outros operadores relacionais (**\<**, **>**, **\<**= e **>**=), o resultado da comparação indica a posição relativa dos dois endereços de memória dos objetos apontados. Os operadores relacionais são apenas deslocamentos.
 
-     A comparação do ponteiro é definida apenas para partes do mesmo objeto. Se os ponteiros fizerem referência aos membros de uma matriz, uma comparação é equivalente à comparação dos subscritos correspondentes. O endereço do primeiro elemento da matriz é "menor que" o endereço do último elemento. No caso de estruturas, os ponteiros para os membros da estrutura declarados posteriormente são ponteiros "maiores que" para os membros declarados anteriormente na estrutura. Os ponteiros para os membros da mesma união são iguais.
+   A comparação do ponteiro é definida apenas para partes do mesmo objeto. Se os ponteiros fizerem referência aos membros de uma matriz, uma comparação é equivalente à comparação dos subscritos correspondentes. O endereço do primeiro elemento da matriz é "menor que" o endereço do último elemento. No caso de estruturas, os ponteiros para os membros da estrutura declarados posteriormente são ponteiros "maiores que" para os membros declarados anteriormente na estrutura. Os ponteiros para os membros da mesma união são iguais.
 
 - Um valor de ponteiro pode ser comparado ao valor da constante 0 para igualdade (`==`) ou desigualdade (`!=`). Um ponteiro com um valor de 0 é chamado de ponteiro "nulo"; ou seja, ele não aponta para um local de memória válido.
 
@@ -74,14 +70,14 @@ Os operandos podem ter o tipo integral, flutuação ou ponteiro. Os tipos dos op
 
 Os exemplos a seguir ilustram os operadores relacionais e de igualdade.
 
-```
+```C
 int x = 0, y = 0;
 if ( x < y )
 ```
 
 Como `x` e `y` são iguais, a expressão neste exemplo gera o valor 0.
 
-```
+```C
 char array[10];
 char *p;
 
@@ -91,7 +87,7 @@ for ( p = array; p < &array[10]; p++ )
 
 O fragmento neste exemplo define cada elemento de `array` como uma constante de caractere nulo.
 
-```
+```C
 enum color { red, white, green } col;
    .
    .
