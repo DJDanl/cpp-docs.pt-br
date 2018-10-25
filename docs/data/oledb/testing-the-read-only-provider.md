@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aa56a62fa898f7ebe6c171af6f7246106b8e5ac7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4630391d9bce319c35af18767d7133bd34a92362
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038719"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990198"
 ---
 # <a name="testing-the-read-only-provider"></a>Testando o provedor somente leitura simples
 
@@ -31,13 +31,13 @@ Para testar um provedor, você precisa de um consumidor. Isso será útil se o c
   
 O exemplo neste tópico cria um aplicativo do Assistente de aplicativo MFC padrão para um consumidor de teste. O aplicativo de teste é uma caixa de diálogo simple com o código de modelo de consumidor OLE DB adicionado.  
   
-### <a name="to-create-the-test-application"></a>Para criar o aplicativo de teste  
+## <a name="to-create-the-test-application"></a>Para criar o aplicativo de teste  
   
 1. No menu **Arquivo**, clique em **Novo** e clique em **Projeto**.  
   
-1. No painel Tipos de Projeto, selecione a pasta **Projetos do Visual C++**. No painel modelos, selecione **aplicativo do MFC**.  
+1. No **tipos de projeto** painel, selecione o **projetos do Visual C++** pasta. No **modelos** painel, selecione **aplicativo MFC**.  
   
-1. Para o nome do projeto, insira **TestProv**e, em seguida, clique em **Okey**.  
+1. Para o nome do projeto, insira *TestProv*e, em seguida, clique em **Okey**.  
   
      O Assistente de aplicativo do MFC é exibida.  
   
@@ -46,9 +46,9 @@ O exemplo neste tópico cria um aplicativo do Assistente de aplicativo MFC padr�
 1. Sobre o **recursos avançados** página, selecione **automação**e, em seguida, clique em **concluir**.  
   
 > [!NOTE]
->  O aplicativo não exija o suporte de automação se você adicionar **CoInitialize** na **CTestProvApp::InitInstance**.  
+> O aplicativo não exija o suporte de automação se você adicionar `CoInitialize` em `CTestProvApp::InitInstance`.  
   
-Você pode exibir e editar a caixa de diálogo TestProv (IDD_TESTPROV_DIALOG), selecionando-o no modo de exibição de recursos. Coloque as duas caixas de listagem, uma para cada cadeia de caracteres no conjunto de linhas, na caixa de diálogo. Desativar a propriedade de classificação para as duas caixas de listagem, pressionando ALT + Enter quando uma caixa de listagem é selecionada, clicar na **estilos** guia e desmarcando o **classificação** caixa de seleção. Além disso, coloque um **executar** botão na caixa de diálogo para buscar o arquivo. A caixa de diálogo TestProv concluída deve ter duas caixas de listagem rotulada como "Cadeia de caracteres 1" e "Cadeia de caracteres 2", respectivamente; Ele também tem **Okey**, **Cancelar**, e **execute** botões.  
+Você pode exibir e editar os **TestProv** caixa de diálogo (IDD_TESTPROV_DIALOG), selecionando-o no **exibição de recurso**. Coloque as duas caixas de listagem, uma para cada cadeia de caracteres no conjunto de linhas, na caixa de diálogo. Desativar a propriedade de classificação para as duas caixas de listagem pressionando **Alt**+**Enter** quando uma caixa de listagem é selecionada, clicar no **estilos** guia e limpar o  **Classificação** caixa de seleção. Além disso, coloque um **executar** botão na caixa de diálogo para buscar o arquivo. O terminar **TestProv** caixa de diálogo deve ter duas caixas de listagem rotulada como "Cadeia de caracteres 1" e "Cadeia de caracteres 2", respectivamente; ele também tem **Okey**, **Cancelar**, e **executar**  botões.  
   
 Abra o arquivo de cabeçalho para a classe de caixa de diálogo (no TestProvDlg.h neste caso). Adicione o seguinte código para o arquivo de cabeçalho (fora de qualquer declaração de classe):  
   
@@ -73,7 +73,7 @@ END_COLUMN_MAP()
   
 O código representa um registro de usuário que define quais colunas serão no conjunto de linhas. Quando o cliente chama `IAccessor::CreateAccessor`, ele usa essas entradas para especificar quais colunas você deseja associar. Os modelos de consumidor do OLE DB também permitem que você associar colunas dinamicamente. As macros COLUMN_ENTRY são a versão do lado do cliente das macros PROVIDER_COLUMN_ENTRY. As duas macros COLUMN_ENTRY especifiquem o ordinal, o membro de dados, comprimento e tipo para duas cadeias de caracteres.  
   
-Adicionar uma função de manipulador para o **executados** botão pressionando CTRL e clicando duas vezes o **executar** botão. Coloque o seguinte código na função:  
+Adicionar uma função de manipulador para o **executados** botão pressionando **Ctrl** e clicando duas vezes o **execute** botão. Coloque o seguinte código na função:  
   
 ```cpp
 ///////////////////////////////////////////////////////////////////////  
@@ -115,9 +115,9 @@ if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
    return;  
 ```  
   
-As linhas para abrir cada uma das classes criam cada objeto COM no provedor. Para localizar o provedor, use o ProgID do provedor. Você pode obter o ProgID do registro do sistema ou examinando o arquivo MyProvider.rgs (abrir diretório e a pesquisa para a chave ProgID do provedor).  
+As linhas para abrir cada uma das classes criam cada objeto COM no provedor. Para localizar o provedor, use o `ProgID` do provedor. Você pode obter o `ProgID` do registro do sistema ou examinando o arquivo MyProvider.rgs (Abra o diretório do provedor e pesquise o `ProgID` chave).  
   
-O arquivo txt está incluído com o exemplo MyProv. Para criar um arquivo de sua preferência, use um editor e digite um número par de cadeias de caracteres, pressionando ENTER entre cada cadeia de caracteres. Se você mover o arquivo, altere o nome do caminho.  
+O arquivo txt está incluído com o `MyProv` exemplo. Para criar um arquivo de sua preferência, use um editor e digite um número par de cadeias de caracteres, pressionando ENTER entre cada cadeia de caracteres. Se você mover o arquivo, altere o nome do caminho.  
   
 Passe a cadeia de caracteres "c:\\\samples\\\myprov\\\MyData.txt" no `table.Open` linha. Se você entrar na `Open` chamada, você ver que essa cadeia de caracteres é transmitida para o `SetCommandText` método no provedor. Observe que o `ICommandText::Execute` método usou essa cadeia de caracteres.  
   

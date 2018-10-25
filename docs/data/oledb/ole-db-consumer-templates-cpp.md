@@ -1,7 +1,7 @@
 ---
 title: Modelos de consumidor do OLE DB (C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b22f97401900a24ae864174872027b18509dfe0c
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 9983b9347fb0c39333bba33f1c7b1d9237b407ce
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082417"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990133"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Modelos de consumidor de banco de dados OLE (C++)
 
-O OLE DB modelos de consumidor dão suporte a especificação de versão 2.6 do OLE DB. (O OLE DB modelos de consumidor são testados no OLE DB 2.6, mas não dão suporte a todas as interfaces na especificação.) Os modelos de consumidor minimizar a quantidade de código que você deve escrever para implementar um consumidor OLE DB. Os modelos fornecem:  
+O OLE DB modelos de consumidor dão suporte a especificação de versão 2.6 do OLE DB. (O OLE DB modelos de consumidor são testados no OLE DB 2.6, mas não oferecem suporte a todas as interfaces na especificação.) Os modelos de consumidor minimizar a quantidade de código que você deve escrever para implementar um consumidor OLE DB. Os modelos fornecem:  
   
 - Acesso fácil aos recursos de OLE DB e integração fácil com ATL e MFC.  
   
@@ -71,5 +71,5 @@ Para mais informações, consulte os seguintes tópicos:
 
 [Programação do OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Acesso a dados](../data-access-in-cpp.md)<br/>
-[Documentação do SDK do OLE DB](/previous-versions/windows/desktop/ms722784)   
+[Documentação do SDK do OLE DB](/previous-versions/windows/desktop/ms722784)<br/>
 [Referência do programador do OLE DB](/previous-versions/windows/desktop/ms713643)

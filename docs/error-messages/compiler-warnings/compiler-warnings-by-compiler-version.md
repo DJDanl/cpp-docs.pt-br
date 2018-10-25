@@ -1,7 +1,7 @@
 ---
 title: Avisos do compilador pela versão do compilador | Microsoft Docs
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 10/24/2018
 ms.technology:
 - devlang-cpp
 ms.topic: error-reference
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6645bb81a1fd4a2b42eb7419a0d008b9ac7692ad
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1c4d815ba1036a03042992d2715e49bbd8f74a28
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44319078"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990380"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Avisos do compilador pela versão do compilador
 
@@ -45,10 +45,19 @@ Essas versões do compilador introduziram novos avisos:
 | Visual C++ 2017 versão 15.5 | 19.12.25830.0 |
 | Visual C++ 2017 versão 15.6 | 19.13.26128.0 |
 | Visual C++ 2017 versão 15.7 | 19.14.26428.0 |
+| Visual C++ 2017 versão 15,8 | 19.15.26726.0 |
 
 Você pode especificar apenas o número principal, os números principais e secundárias ou major, minor e compilar os números para o __/Wv__ opção. O compilador relata todos os avisos que correspondem aos versões que começam com o número especificado e suprime todos os avisos para as versões superiores do número especificado. Por exemplo, __/Wv:17__ relata todos os avisos introduzidos em ou antes de qualquer versão do Visual Studio 2012 e suprime todos os avisos introduzidos por qualquer compilador do Visual Studio 2013 (versão de 18) ou posterior. Para suprimir avisos introduzidos no Visual Studio 2015 atualização 2 e posterior, você pode usar __/Wv:19.00.23506__. Use __/Wv:19.11__ para relatar todos os avisos introduzidos em qualquer versão do Visual Studio anteriores ao Visual Studio 2017 versão 15.5, mas suprime avisos introduzidos no Visual Studio 2017 versão 15.5 e posteriores.
 
 As seções a seguir listam os avisos introduzidos por cada versão do Visual C++ que você pode suprimir usando o __/Wv__ opção de compilador. O __/Wv__ opção não é possível suprimir avisos que não estão listados, que são anteriores às versões especificadas do compilador.
+
+## <a name="warnings-introduced-in-visual-c-2017-version-158-compiler-version-1915267260"></a>Avisos introduzidos no Visual C++ 2017 versão 15,8 (versão do compilador 19.15.26726.0)
+
+Esses avisos e todos os avisos em versões posteriores são suprimidos usando a opção de compilador __/Wv:19.14__.
+
+|||
+|-|-|
+C5046|'*função*': símbolo que envolvem o tipo com vinculação interna não definida|
 
 ## <a name="warnings-introduced-in-visual-c-2017-version-157-compiler-version-1914264280"></a>Avisos introduzidos no Visual C++ 2017 versão 15.7 (versão do compilador 19.14.26428.0)
 

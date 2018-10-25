@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cbf1c696a66024ec1d3b3022b1e3a03445e9b6fe
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ee405244d4c23e3cacddb5efe5dfa276a8a21db0
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46043294"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990315"
 ---
 # <a name="creating-an-updatable-provider"></a>Criando um provedor atualizável
 
@@ -33,7 +33,7 @@ Este tópico pressupõe que você está começando com um provedor viável. Há 
 Em seguida, você deve verificar se que seu provedor contém toda a funcionalidade para dar suporte a qualquer coisa que o consumidor pode solicitar dele. Se o consumidor deseja atualizar o armazenamento de dados, o provedor deve conter código que persiste os dados para o armazenamento de dados. Por exemplo, você pode usar a biblioteca de tempo de execução do C ou o MFC para realizar operações em sua fonte de dados. A seção "[escrevendo para a fonte de dados](#vchowwritingtothedatasource)" descreve como gravar na fonte de dados, lidar com valores nulos e padrão e definir sinalizadores de coluna.  
   
 > [!NOTE]
->  [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) é um exemplo de um provedor atualizável. UpdatePV é o mesmo que MyProv, mas com suporte atualizável.  
+> [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) é um exemplo de um provedor atualizável. UpdatePV é o mesmo que MyProv, mas com suporte atualizável.  
   
 ##  <a name="vchowmakingprovidersupdatable"></a> Tornando provedores atualizáveis  
 
@@ -47,7 +47,7 @@ Primeiro você deve decidir se deseja herdar `IRowsetChangeImpl` ou `IRowsetUpda
   
 Observe que `IRowsetUpdateImpl` deriva `IRowsetChangeImpl`. Portanto, `IRowsetUpdateImpl` dá a você alterar a funcionalidade além da funcionalidade de lote.  
   
-#### <a name="to-support-updatability-in-your-provider"></a>Para dar suporte à capacidade de atualização no provedor  
+### <a name="to-support-updatability-in-your-provider"></a>Para dar suporte à capacidade de atualização no provedor  
   
 1. Em sua classe de conjunto de linhas, herdam `IRowsetChangeImpl` ou `IRowsetUpdateImpl`. Essas classes fornecem interfaces apropriadas para o armazenamento de dados de alteração:  
   
@@ -70,7 +70,7 @@ Observe que `IRowsetUpdateImpl` deriva `IRowsetChangeImpl`. Portanto, `IRowsetUp
     ```  
   
     > [!NOTE]
-    >  Você deve remover o `IRowsetChangeImpl` linha de sua cadeia de herança. Essa única exceção à diretiva mencionada anteriormente deve incluir o código para `IRowsetChangeImpl`.  
+    > Você deve remover o `IRowsetChangeImpl` linha de sua cadeia de herança. Essa única exceção à diretiva mencionada anteriormente deve incluir o código para `IRowsetChangeImpl`.  
   
 1. Adicione o seguinte ao seu mapa COM (`BEGIN_COM_MAP ... END_COM_MAP`):  
   
@@ -109,7 +109,7 @@ Observe que `IRowsetUpdateImpl` deriva `IRowsetChangeImpl`. Portanto, `IRowsetUp
      Você pode encontrar os valores usados nessas chamadas de macro examinando Atldb.h para as IDs de propriedade e os valores (se Atldb.h difere da documentação online, Atldb.h substitui a documentação).  
   
     > [!NOTE]
-    >  Muitas da `VARIANT_FALSE` e `VARIANT_TRUE` configurações são necessários para os modelos OLE DB; a especificação OLE DB diz que eles podem ser de leitura/gravação, mas os modelos OLE DB só podem oferecer suporte a um valor.  
+    > Muitas da `VARIANT_FALSE` e `VARIANT_TRUE` configurações são necessários para os modelos OLE DB; a especificação OLE DB diz que eles podem ser de leitura/gravação, mas os modelos OLE DB só podem oferecer suporte a um valor.  
   
      **Se você implementar IRowsetChangeImpl**  
   
@@ -142,16 +142,14 @@ Observe que `IRowsetUpdateImpl` deriva `IRowsetChangeImpl`. Portanto, `IRowsetUp
     - `DBPROP_MAXPENDINGROWS`.  
   
         > [!NOTE]
-        >  Se você oferecer suporte a notificações, você também pode ter algumas outras propriedades também; Consulte a seção sobre `IRowsetNotifyCP` para esta lista.  
+        > Se você oferecer suporte a notificações, você também pode ter algumas outras propriedades também; Consulte a seção sobre `IRowsetNotifyCP` para esta lista.  
   
 ##  <a name="vchowwritingtothedatasource"></a> Escrevendo para a fonte de dados  
 
 Para ler da fonte de dados, chame o `Execute` função. Para gravar a fonte de dados, chame o `FlushData` função. (Em um sentido geral, liberação meios para salvar as modificações feitas a uma tabela ou índice em disco).  
 
 ```cpp
-
 FlushData(HROW, HACCESSOR);  
-
 ```
 
 O identificador de linha (HROW) e os argumentos do identificador (HACCESSOR) de acessador permitem que você especifique a região de gravação. Normalmente, você deve escrever um único campo de dados por vez.
@@ -192,7 +190,7 @@ Manipulando valores nulos.
 
 ### <a name="handling-default-values"></a>Lidar com valores padrão.
 
-Para implementar seu próprio método FlushData, você precisa:
+Para implementar sua própria `FlushData` método, você precisa:
 
 - Vá para a sua classe de conjunto de linhas.
 
@@ -207,7 +205,7 @@ Para implementar seu próprio método FlushData, você precisa:
 
 - Fornecer uma implementação de `FlushData`.
 
-Uma implementação de BOM de FlushData armazena apenas as linhas e colunas que são realmente atualizadas. Você pode usar os parâmetros HROW e HACCESSOR para determinar a linha atual e a coluna que estão sendo armazenados para otimização.
+Uma implementação de BOM de `FlushData` armazena apenas as linhas e colunas que são realmente atualizadas. Você pode usar os parâmetros HROW e HACCESSOR para determinar a linha atual e a coluna que estão sendo armazenados para otimização.
 
 Normalmente, o maior desafio que está trabalhando com seu próprio repositório de dados nativos. Se possível, tente:
 
@@ -219,7 +217,7 @@ Normalmente, o maior desafio que está trabalhando com seu próprio repositório
 
 A melhor coisa a fazer é ter especificado os valores reais no seu armazenamento de dados para valores nulos e padrão. É melhor se você pode extrapolar esses dados. Caso contrário, é recomendável não permitir valores nulos e padrão.
 
-A exemplo a seguir mostra como `FlushData` é implementado na classe RUpdateRowset na amostra UpdatePV (consulte Rowset.h no código de exemplo):
+A exemplo a seguir mostra como `FlushData` é implementado na `RUpdateRowset` classe o `UpdatePV` exemplo (consulte Rowset.h no código de exemplo):
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////////  
@@ -374,16 +372,15 @@ ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols, bool bBookma
   
     return _rgColumns;  
 }  
-
 ```
 
 ### <a name="default-values"></a>Valores padrão
 
 Assim como acontece com dados NULL, você tem a responsabilidade de lidar com valores padrão de alteração.
 
-O padrão de FlushData e Execute é retornar S_OK. Portanto, se você não substituir essa função, as alterações aparecem tenha êxito (S_OK será retornado), mas eles não serão transmitidos para o armazenamento de dados.
+O padrão de `FlushData` e `Execute` é retornar S_OK. Portanto, se você não substituir essa função, as alterações aparecem tenha êxito (S_OK será retornado), mas eles não serão transmitidos para o armazenamento de dados.
 
-O exemplo de UpdatePV (em Rowset.h), o `SetDBStatus` método lida com valores padrão da seguinte maneira:
+No `UpdatePV` exemplo (em Rowset.h), o `SetDBStatus` método lida com valores padrão da seguinte maneira:
 
 ```cpp
 virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,  
@@ -422,11 +419,11 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 
 ### <a name="column-flags"></a>Sinalizadores de coluna
 
-Se você oferecer suporte a valores padrão em suas colunas, você precisa configurá-lo usando os metadados na \<classe de provedor\>Conjunto_de_linhas_de_esquema classe. Definir `m_bColumnHasDefault` = VARIANT_TRUE.
+Se você oferecer suporte a valores padrão em suas colunas, você precisa configurá-lo usando os metadados na \<classe de provedor\>Conjunto_de_linhas_de_esquema classe. Definir `m_bColumnHasDefault = VARIANT_TRUE`.
 
 Você também tem a responsabilidade de definir os sinalizadores de coluna, que são especificados usar o DBCOLUMNFLAGS tipo enumerado. Os sinalizadores de coluna descrevem as características da coluna.
 
-Por exemplo, no `CUpdateSessionColSchemaRowset` classe no UpdatePV (em Session.h), a primeira coluna é configurada dessa forma:
+Por exemplo, nos `CUpdateSessionColSchemaRowset` classe `UpdatePV` (no Session.h), a primeira coluna é configurada dessa forma:
 
 ```cpp
 // Set up column 1  

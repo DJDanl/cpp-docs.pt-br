@@ -1,7 +1,7 @@
 ---
 title: Modelo de objeto do OLE DB | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c0bd4c8f18addf50dfcee525dea255f75b2fdf75
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d82b6d51e423109c433438731f16878284c2c277
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101460"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990250"
 ---
 # <a name="ole-db-object-model"></a>Modelo de objeto do banco de dados OLE
 
-O modelo de objeto do OLE DB inclui os seguintes objetos ou componentes. A primeira quatro objetos ou componentes listados (fontes de dados, sessões, comandos e conjuntos de linhas) permitem que você se conectar a uma fonte de dados e exibi-lo. O restante, começando com acessadores, estão relacionadas a trabalhar com os dados quando ele for exibido.  
+O modelo de objeto do OLE DB é feito dos seguintes objetos ou componentes. A primeira quatro objetos ou componentes listados (fontes de dados, sessões, comandos e conjuntos de linhas) permitem que você se conectar a uma fonte de dados e exibi-lo. O restante, começando com acessadores, estão relacionadas a trabalhar com os dados quando ele for exibido.  
   
 ## <a name="data-sources"></a>Data Sources  
 
@@ -35,7 +35,7 @@ Objetos de fonte de dados permitem que você se conectar a uma fonte de dados co
 
 Uma sessão gerencia uma interação específica com a fonte de dados para consultar e recuperar dados. Cada sessão é uma única transação. Uma transação é uma unidade indivisível de trabalho definida pelo teste de ACID. Para uma definição de ACID, consulte [transações](#vcconoledbcomponents_transactions).  
   
-Sessões de realizar tarefas importantes, como a abertura de conjuntos de linhas e retornar o objeto de fonte de dados que o criou. Sessões também podem retornar metadados ou informações sobre a fonte de dados (como informações de tabela).  
+Sessões de realizar tarefas importantes como abrindo conjuntos de linhas e retornar o objeto de fonte de dados que o criou. Sessões também podem retornar metadados ou informações sobre a fonte de dados (como informações de tabela).  
   
 Uma sessão pode criar um ou mais comandos.  
   
@@ -47,31 +47,31 @@ Um comando é simplesmente um contêiner para um comando de texto, que é uma ca
   
 ## <a name="rowsets"></a>Conjuntos de linhas  
 
-Conjuntos de linhas de expõem dados em formato tabular. Um índice é um caso especial de um conjunto de linhas. Você pode criar conjuntos de linhas da sessão ou o comando.  
+Conjuntos de linhas de mostram dados em formato tabular. Um índice é um caso especial de um conjunto de linhas. Você pode criar conjuntos de linhas da sessão ou o comando.  
   
 ### <a name="schema-rowsets"></a>Conjuntos de linhas do esquema  
 
-Os esquemas contêm metadados (informações estruturais) sobre um banco de dados. Conjuntos de linhas de esquema são conjuntos de linhas que contêm informações de esquema. Alguns provedores OLE DB para o DBMS dão suporte a objetos de conjunto de linhas de esquema. Para obter mais informações sobre conjuntos de linhas de esquema, consulte [obtendo metadados com conjuntos de linhas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) e [Classes de conjunto de linhas de esquema e Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).  
+Esquemas têm metadados (informações estruturais) sobre um banco de dados. Conjuntos de linhas de esquema são conjuntos de linhas que têm informações de esquema. Alguns provedores OLE DB para o DBMS dão suporte a objetos de conjunto de linhas de esquema. Para obter mais informações sobre conjuntos de linhas de esquema, consulte [obtendo metadados com conjuntos de linhas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) e [Classes de conjunto de linhas de esquema e Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md).  
   
 ### <a name="view-objects"></a>Objetos de exibição  
 
-Um objeto de exibição define um subconjunto de linhas e colunas de um conjunto de linhas. Ele não contém dados de seu próprio. Objetos de exibição não é possível combinar dados de vários conjuntos de linhas.  
+Um objeto de exibição define um subconjunto de linhas e colunas de um conjunto de linhas. Ele não tem dados de seu próprio. Objetos de exibição não é possível combinar dados de vários conjuntos de linhas.  
   
 ## <a name="accessors"></a>Acessadores  
 
-Somente OLE DB usa o conceito de acessadores. Um acessador descreve como os dados são armazenados em um consumidor. Ele contém um conjunto de associações (chamado de um mapa de coluna) entre os campos de conjunto de linhas (colunas) e membros de dados que você declare no consumidor.  
+Somente OLE DB usa o conceito de acessadores. Um acessador descreve como os dados são armazenados em um consumidor. Ele tem um conjunto de associações (chamado de um mapa de coluna) entre os campos de conjunto de linhas (colunas) e membros de dados que você declare no consumidor.  
   
 ##  <a name="vcconoledbcomponents_transactions"></a> Transações  
 
 Objetos de transação são usados quando a confirmação ou anulação de transações aninhadas em que não seja o nível mais baixo. Uma transação é uma unidade indivisível de trabalho definida pelo teste de ACID. ACID significa:  
   
-- Atomicidade: não pode ser dividido em unidades menores de trabalho.  
+- Atomicidade, não podem ser divididos em unidades menores de trabalho  
   
-- Simultaneidade: mais de uma transação pode ocorrer por vez.  
+- Simultaneidade, mais de uma transação pode ocorrer por vez  
   
-- Isolamento: uma transação limitou os dados de Conhecimento sobre as alterações feitas por outro.  
+- Isolamento, uma transação limitou os dados de Conhecimento sobre as alterações feitas por outro  
   
-- Durabilidade: a transação faz alterações persistentes.  
+- Durabilidade, a transação faz alterações persistentes 
   
 ## <a name="enumerators"></a>Enumeradores  
 
@@ -81,7 +81,7 @@ Um enumerador de raiz, fornecido no Microsoft Data Access SDK atravessa o regist
   
 ## <a name="errors"></a>Erros  
 
-Qualquer interface em qualquer objeto do OLE DB pode gerar erros. Erros de contenham informações adicionais sobre o erro, incluindo um objeto de erro personalizada opcional. Essas informações estão contidas em um HRESULT.  
+Qualquer interface em qualquer objeto do OLE DB pode gerar erros. Erros têm informações adicionais sobre o erro, incluindo um objeto de erro personalizada opcional. Essas informações são armazenadas em um HRESULT.  
   
 ## <a name="notifications"></a>Notificações  
 
