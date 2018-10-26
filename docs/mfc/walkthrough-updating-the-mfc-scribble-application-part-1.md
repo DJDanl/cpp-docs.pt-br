@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48cbc29685660f00665fbbb08be76779272d0fcf
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3daa42008bd385b2d45d05106162c99fb9ca0b12
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235497"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082873"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Passo a passo: Atualizando o aplicativo de rabisco MFC (parte 1)
 
@@ -32,7 +32,7 @@ Este passo a passo demonstra como modificar um aplicativo MFC existente para usa
 
 Este passo a passo modifica o exemplo de rabisco MFC de 1.0 clássico que permite que você use o mouse para criar desenhos de linha. Esta parte do passo a passo mostra como modificar o exemplo de Scribble, para que ele exibe uma barra de faixa de opções. [Parte 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) adiciona mais botões à barra de faixa de opções.
 
-## <a name="prerequisites"></a>Pré-requisitos 
+## <a name="prerequisites"></a>Pré-requisitos
 
 O [exemplo de rabisco MFC de 1.0](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe). Para obter ajuda sobre como converter para o Visual Studio 2017, consulte [guia de portabilidade: Scribble do MFC](../porting/porting-guide-mfc-scribble.md).
 
@@ -146,7 +146,7 @@ Este passo a passo copia os arquivos de recurso do exemplo criado na [instruçõ
    1. Importe o arquivo filesmall.bmp, que contém onze 16 x 16 (16 x 176) imagens. Alterar a ID do bitmap a ser `IDB_RIBBON_FILESMALL`.
 
    > [!NOTE]
-   > Como precisamos apenas as imagens de oito primeiros 16 x 16 (16 x 128), você pode cortar, opcionalmente, a largura do lado direito deste bitmap de 176 a 128. 
+   > Como precisamos apenas as imagens de oito primeiros 16 x 16 (16 x 128), você pode cortar, opcionalmente, a largura do lado direito deste bitmap de 176 a 128.
 
    1. Importar filelarge.bmp, que contém os 32 x 32 (32 x 288) nove imagens. Alterar a ID do bitmap a ser `IDB_RIBBON_FILELARGE`.
 
@@ -161,7 +161,7 @@ Este passo a passo copia os arquivos de recurso do exemplo criado na [instruçõ
    1. Importe o bitmap panelicons.bmp, que contém oito 16 x 16 imagens. No **propriedades** janela da **Editor de Bitmap**, ajuste a largura do bitmap para 64 (16 x 64). Alterar a ID do bitmap a ser `IDB_PANEL_ICONS`.
 
    > [!NOTE]
-   > Como precisamos apenas as imagens de quatro primeiros 16 x 16 (16 x 64), você pode cortar, opcionalmente, a largura do lado direito deste bitmap de 128 para 64. 
+   > Como precisamos apenas as imagens de quatro primeiros 16 x 16 (16 x 64), você pode cortar, opcionalmente, a largura do lado direito deste bitmap de 128 para 64.
 
 ##  <a name="addribbon"></a> Adicionando um recurso de faixa de opções ao projeto
 

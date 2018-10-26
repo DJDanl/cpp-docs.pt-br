@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1ee17fe577f30735ca78661394c432519d0a4050
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f6fa8dcf1488b693b53cde591c548122767f1af7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396987"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075106"
 ---
 # <a name="file-handling-and-io-ccli"></a>Tratamento de arquivos e E/S (C++/CLI)
 Demonstra várias operações de arquivo usando o .NET Framework.
@@ -182,6 +182,7 @@ int main()
    return 0;
 }
 ```
+
 ## <a name="read_text"></a> Ler um arquivo de texto
 
 O exemplo de código a seguir demonstra como abrir e ler um arquivo de texto uma linha por vez, usando o <xref:System.IO.StreamReader> classe que é definida no <xref:System.IO?displayProperty=fullName> namespace. Uma instância dessa classe é usada para abrir um arquivo de texto e, em seguida, o <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> método é usado para recuperar cada linha.

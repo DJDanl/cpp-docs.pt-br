@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 451cf4b404143ce8f9b94481dd27227f487874d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b66debe5c6401b4eee01bc81acc58b8445e20c21
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381160"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068769"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>Controles MFC ActiveX: licenciando um controle ActiveX
 
@@ -84,15 +84,15 @@ Essas funções de membro são:
 
 - [VerifyUserLicense](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)
 
-     Verifica se o controle permite que o uso de tempo de design, verificando o sistema para verificar a presença do arquivo de licença do controle. Essa função é chamada pelo framework como parte do processamento `IClassFactory2::GetLicInfo` e `IClassFactory::CreateInstanceLic`.
+   Verifica se o controle permite que o uso de tempo de design, verificando o sistema para verificar a presença do arquivo de licença do controle. Essa função é chamada pelo framework como parte do processamento `IClassFactory2::GetLicInfo` e `IClassFactory::CreateInstanceLic`.
 
 - [GetLicenseKey](../mfc/reference/coleobjectfactory-class.md#getlicensekey)
 
-     Solicita uma chave exclusiva da DLL de controle. Essa chave é inserida no aplicativo de contêiner e posterior, usado em conjunto com `VerifyLicenseKey`, para criar uma instância do controle. Essa função é chamada pelo framework como parte do processamento `IClassFactory2::RequestLicKey`.
+   Solicita uma chave exclusiva da DLL de controle. Essa chave é inserida no aplicativo de contêiner e posterior, usado em conjunto com `VerifyLicenseKey`, para criar uma instância do controle. Essa função é chamada pelo framework como parte do processamento `IClassFactory2::RequestLicKey`.
 
 - [VerifyLicenseKey](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)
 
-     Verifica se a chave inserida e do controle exclusivo são os mesmos. Isso permite que o contêiner criar uma instância do controle para seu uso. Essa função é chamada pelo framework como parte do processamento `IClassFactory2::CreateInstanceLic` e pode ser substituído para fornecer verificação personalizado da chave de licença. A implementação padrão executa uma comparação de cadeia de caracteres. Para obter mais informações, consulte [Personalizando o licenciamento de um controle ActiveX](#_core_customizing_the_licensing_of_an_activex_control), mais adiante neste artigo.
+   Verifica se a chave inserida e do controle exclusivo são os mesmos. Isso permite que o contêiner criar uma instância do controle para seu uso. Essa função é chamada pelo framework como parte do processamento `IClassFactory2::CreateInstanceLic` e pode ser substituído para fornecer verificação personalizado da chave de licença. A implementação padrão executa uma comparação de cadeia de caracteres. Para obter mais informações, consulte [Personalizando o licenciamento de um controle ActiveX](#_core_customizing_the_licensing_of_an_activex_control), mais adiante neste artigo.
 
 ###  <a name="_core_header_file_modifications"></a> Modificações de arquivos de cabeçalho
 

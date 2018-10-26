@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07ed60edf2b83810616e2ed58a92510d1d973ff0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b31062530bfe6da940cd6458bd5cfa91f3e29ae7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378105"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052545"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Como converter uma faixa de opções MFC existente em um recurso da faixa de opções
 
@@ -37,13 +37,13 @@ Você deve ter um projeto existente do MFC que tem o código que usa as classes 
 
 ```
 
-     Save and close the file.
+   Salve e feche o arquivo.
 
 1. Compilar e executar o aplicativo do MFC e, em seguida, no bloco de notas, abra RibbonOutput.txt e copie o conteúdo.
 
 1. No Visual Studio, sobre o **Project** menu, clique em **adicionar recurso**. No **adicionar recurso** caixa de diálogo, selecione **faixa de opções** e, em seguida, clique em **New**.
 
-     Visual Studio cria um recurso de faixa de opções e abre no modo de design. A ID do recurso da faixa de opções é IDR_RIBBON1, que é exibido na **exibição de recurso**. A faixa de opções é definida no arquivo XML ribbon1.mfcribbon ms.
+   Visual Studio cria um recurso de faixa de opções e abre no modo de design. A ID do recurso da faixa de opções é IDR_RIBBON1, que é exibido na **exibição de recurso**. A faixa de opções é definida no arquivo XML ribbon1.mfcribbon ms.
 
 1. No Visual Studio, abra ribbon1.mfcribbon ms, excluir seu conteúdo e, em seguida, cole o conteúdo do RibbonOutput.txt, que você copiou anteriormente. Salve e feche ribbon1.mfcribbon ms.
 
