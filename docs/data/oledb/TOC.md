@@ -66,7 +66,7 @@
 ###### [Lendo cadeias de caracteres no provedor do OLE DB](reading-strings-into-the-ole-db-provider.md)
 ###### [Armazenando cadeias de caracteres no provedor do OLE DB](storing-strings-in-the-ole-db-provider.md)
 ##### [Aprimorando o provedor somente leitura simples](enhancing-the-simple-read-only-provider.md)
-###### [Modificando a herança de RMyProviderRowset](modifying-the-inheritance-of-rmyproviderrowset.md)
+###### [Modificando a herança de RCustomRowset](modifying-the-inheritance-of-rmyproviderrowset.md)
 ###### [Determinando dinamicamente colunas retornadas ao consumidor](dynamically-determining-columns-returned-to-the-consumer.md)
 ##### [Testando o provedor somente leitura](testing-the-read-only-provider.md)
 #### [Criando um provedor atualizável](creating-an-updatable-provider.md)
