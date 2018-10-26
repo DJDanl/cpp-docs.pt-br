@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5a091a4301a107fb820f63c357c4e7f43c35948
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ca1bae4e2ca45424fd7f9cff48d8ece1039d73f6
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721286"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136166"
 ---
 # <a name="linker-options"></a>Opções do vinculador
 
@@ -60,7 +60,7 @@ Você pode usar o [comentário](../../preprocessor/comment-c-cpp.md) pragma para
 |[/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)|Define o tipo (IJW, puro ou seguro) de uma imagem do CLR.|
 |[/CLRSUPPORTLASTERROR](../../build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)|Preserva o código de erro mais recente de funções chamadas por meio do mecanismo P/Invoke.|
 |[/CLRTHREADATTRIBUTE](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md)|Especifica o atributo de threading a ser aplicado ao ponto de entrada do programa do CLR.|
-|[/CLRUNMANAGEDCODECHECK](../../build/reference/clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute.md)|Especifica se o vinculador aplicará o atributo SuppressUnmanagedCodeSecurity aos stubs PInvoke gerados pelo vinculador chamados do código gerenciado para DLLs nativas.|
+|[/CLRUNMANAGEDCODECHECK](../../build/reference/clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute.md)|Especifica se o vinculador aplicará o atributo SuppressUnmanagedCodeSecurity aos stubs PInvoke gerados pelo vinculador chamados do código gerenciado para DLLs nativas.|
 |[/ DEPURAÇÃO](../../build/reference/debug-generate-debug-info.md)|Cria informações de depuração.|
 |[/DEBUGTYPE](../../build/reference/debugtype-debug-info-options.md)|Especifica quais dados serão incluídos em informações de depuração.|
 |[/ DEF](../../build/reference/def-specify-module-definition-file.md)|Passa um arquivo de definição do módulo (.def) para o vinculador.|

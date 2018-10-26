@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4bdc67e13db11949371e2f9e3d8a205b146d701
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 8eb494d3a8ba2e2569f68dbfd0164c7bf6a9ae29
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890102"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136218"
 ---
 # <a name="compiler-error-c2872"></a>Erro do compilador C2872
 
@@ -31,7 +31,7 @@ O compilador não pode determinar o símbolo que você está referenciando. Mais
 
 C2872 pode ocorrer se um arquivo de cabeçalho inclui um [diretiva using](../../cpp/namespaces-cpp.md#using_directives), e um arquivo de cabeçalho subsequente é incluído que contém um tipo que também está no namespace especificado no `using` diretiva. Especifique um `using` diretiva somente depois de todos os arquivos de cabeçalho são especificados com `#include`.
 
-C2872 pode ocorrer no Visual Studio 2013 devido a um conflito à `Windows::Foundation::Metadata::Platform` enum tipo e o C + + c++ /CLI definido pelo CX `Platform` namespace. Para contornar esse problema, siga estas etapas:
+C2872 pode ocorrer no Visual Studio 2013 devido a um conflito entre o `Windows::Foundation::Metadata::Platform` enum tipo e o C + + c++ /CLI definido pelo CX `Platform` namespace. Para contornar esse problema, siga estas etapas:
 
 - Remova a cláusula "using namespace Windows::Foundation::Metadata" dos arquivos de projeto.
 

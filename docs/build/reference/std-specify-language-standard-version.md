@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80c501c74d0e36d7a1c564e107101782468708c3
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 32bbcd47c4ce22882941b6fa9c02373bab32eeb1
+ms.sourcegitcommit: 938d118d02543c822a5f58c84d6119d23339e43c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709057"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50135988"
 ---
 # <a name="std-specify-language-standard-version"></a>/STD (especificar versão de idioma padrão)
 
@@ -31,7 +31,7 @@ Habilitar suporte para recursos da linguagem C++ da versão especificada da ling
 
 ## <a name="remarks"></a>Comentários
 
-O **/std** está opção está disponível no Visual Studio 2017 e posterior. Ele é usado para controlar a versão específica de programação ISO C++ recursos padrão de idioma habilitados durante a compilação do seu código. Essa opção permite que você desabilite o suporte para determinados recursos de linguagem e biblioteca novos que podem quebrar o código existente que esteja de acordo com uma versão específica do idioma padrão. Por padrão, **/std: c + + 14** for especificado, que desabilita recursos de linguagem e biblioteca padrão encontrados nas versões mais recentes da linguagem C++ padrão. Use **/std: c + + 17** para habilitar o comportamento e específicas do padrão de recursos do c++17. Para habilitar explicitamente o compilador mais recente com suporte e recursos da biblioteca padrão, use **/std: c + + mais recente**.
+O **/std** opção está disponível no Visual Studio 2017 e posterior. Ele é usado para controlar a versão específica de programação ISO C++ recursos padrão de idioma habilitados durante a compilação do seu código. Essa opção permite que você desabilite o suporte para determinados recursos de linguagem e biblioteca novos que podem quebrar o código existente que esteja de acordo com uma versão específica do idioma padrão. Por padrão, **/std: c + + 14** for especificado, que desabilita recursos de linguagem e biblioteca padrão encontrados nas versões mais recentes da linguagem C++ padrão. Use **/std: c + + 17** para habilitar o comportamento e específicas do padrão de recursos do c++17. Para habilitar explicitamente o compilador mais recente com suporte e recursos da biblioteca padrão, use **/std: c + + mais recente**.
 
 O padrão **/std: c + + 14** opção permite que o conjunto de recursos do c++14 implementado pelo compilador do Visual C++. Esta opção desabilita o compilador e suporte de biblioteca padrão para recursos que são alterados ou novos em versões mais recentes do idioma padrão, com exceção de alguns recursos do c++17 já implementados nas versões anteriores do compilador do Visual C++. Para evitar alterações interruptivas para os usuários que já obtiveram dependências nos recursos disponíveis a partir do Visual Studio 2015 atualização 2, esses recursos permanecerão habilitados quando o **/std: c + + 14** opção for especificada:
 
