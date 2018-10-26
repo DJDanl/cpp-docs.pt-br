@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c777f2800d16775ccb9a6ba51baa708d861e0d68
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 8e92b52ce3b14b5ee26641186222ddc228877e71
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313345"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057264"
 ---
 # <a name="changing-the-properties-of-a-resource-c"></a>Alterando as propriedades de um recurso (C++)
 
@@ -29,7 +29,7 @@ ms.locfileid: "44313345"
 
 1. No [exibição de recurso](../windows/resource-view-window.md), clique com botão direito do recurso que deseja editar e escolha **propriedades** no menu de atalho.
 
-   > [!NOTE] 
+   > [!NOTE]
    > Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).
 
 2. No [janela de propriedades](/visualstudio/ide/reference/properties-window), alterar as propriedades do recurso.

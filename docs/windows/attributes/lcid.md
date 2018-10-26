@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b3e4b14353e811def1cfa7a3a60505fdc25d1767
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 1551a06168c1ea4255c43ef06c9180789d654893
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790277"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063517"
 ---
 # <a name="lcid"></a>lcid
 
@@ -69,4 +69,4 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 ## <a name="see-also"></a>Consulte também
 
 [Atributos de IDL](idl-attributes.md)<br/>
-[Atributos de parâmetro](parameter-attributes.md)  
+[Atributos de parâmetro](parameter-attributes.md)

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 320457928ef8bc1a03d86b3a898bc0b719e116a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bcaaf4723e8b6a1ad40fb534b7114f317d76f6b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442871"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060813"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Acessando todos os membros de uma coleção
 
@@ -48,38 +48,38 @@ Os procedimentos a seguir mostram como iterar sobre os três principais tipos de
 
 1. Usar números de índice sequenciais com o `GetAt` função de membro:
 
-     [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]
+   [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]
 
-     Este exemplo usa uma matriz de ponteiro tipado que contém ponteiros para `CPerson` objetos. A matriz é derivada da classe `CObArray`, uma da nontemplate classes predefinidas. `GetAt` Retorna um ponteiro para um `CPerson` objeto. Para classes de coleção do tipo ponteiro — matrizes ou listas — o primeiro parâmetro especifica a classe base; o segundo parâmetro especifica o tipo para armazenar.
+   Este exemplo usa uma matriz de ponteiro tipado que contém ponteiros para `CPerson` objetos. A matriz é derivada da classe `CObArray`, uma da nontemplate classes predefinidas. `GetAt` Retorna um ponteiro para um `CPerson` objeto. Para classes de coleção do tipo ponteiro — matrizes ou listas — o primeiro parâmetro especifica a classe base; o segundo parâmetro especifica o tipo para armazenar.
 
-     O `CTypedPtrArray` classe também sobrecargas a **[]** operador para que você possa usar a sintaxe de subscrito de matriz comum para acessar os elementos de uma matriz. Uma alternativa para a instrução do corpo do **para** loop acima é
+   O `CTypedPtrArray` classe também sobrecargas a **[]** operador para que você possa usar a sintaxe de subscrito de matriz comum para acessar os elementos de uma matriz. Uma alternativa para a instrução do corpo do **para** loop acima é
 
-     [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
 
-     Esse operador existe em ambos **const** e não-**const** versões. O **const** versão, que é invocado para **const** matrizes, pode aparecer somente no lado direito de uma instrução de atribuição.
+   Esse operador existe em ambos **const** e não-**const** versões. O **const** versão, que é invocado para **const** matrizes, pode aparecer somente no lado direito de uma instrução de atribuição.
 
 ### <a name="_core_to_iterate_a_list"></a> Para obter uma lista de iterar
 
 1. Use as funções de membro `GetHeadPosition` e `GetNext` para examinar a lista:
 
-     [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]
+   [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]
 
-     Este exemplo usa uma lista de ponteiro tipado para contêm ponteiros para `CPerson` objetos. A declaração de lista é semelhante o um para a matriz no procedimento [para iterar uma matriz](#_core_to_iterate_an_array) , mas é derivada da classe `CObList`. `GetNext` Retorna um ponteiro para um `CPerson` objeto.
+   Este exemplo usa uma lista de ponteiro tipado para contêm ponteiros para `CPerson` objetos. A declaração de lista é semelhante o um para a matriz no procedimento [para iterar uma matriz](#_core_to_iterate_an_array) , mas é derivada da classe `CObList`. `GetNext` Retorna um ponteiro para um `CPerson` objeto.
 
 ### <a name="_core_to_iterate_a_map"></a> Para iterar um mapa
 
 1. Use `GetStartPosition` para obter até o início do mapa e `GetNextAssoc` repetidamente obter a próxima chave e valor do mapa, conforme mostrado no exemplo a seguir:
 
-     [!code-cpp[NVC_MFCCollections#15](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_4.cpp)]
+   [!code-cpp[NVC_MFCCollections#15](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_4.cpp)]
 
-     Este exemplo usa um modelo simples de mapa (em vez de uma coleção com tipo de ponteiro) que utiliza `CString` as chaves e armazena ponteiros para `CPerson` objetos. Quando você usa funções de acesso, como `GetNextAssoc`, a classe fornece ponteiros para `CPerson` objetos. Se você usar uma das coleções de mapa fora do modelo em vez disso, você deve converter retornado `CObject` ponteiro para um ponteiro para um `CPerson`.
+   Este exemplo usa um modelo simples de mapa (em vez de uma coleção com tipo de ponteiro) que utiliza `CString` as chaves e armazena ponteiros para `CPerson` objetos. Quando você usa funções de acesso, como `GetNextAssoc`, a classe fornece ponteiros para `CPerson` objetos. Se você usar uma das coleções de mapa fora do modelo em vez disso, você deve converter retornado `CObject` ponteiro para um ponteiro para um `CPerson`.
 
     > [!NOTE]
     >  Para mapas de fora do modelo, o compilador requer uma referência a um `CObject` ponteiro no último parâmetro para `GetNextAssoc`. Na entrada, você deve converter os ponteiros para tipo, conforme mostrado no exemplo a seguir.
 
-     A solução de modelo é mais simples e ajuda a fornecer a melhor segurança de tipos. O código fora do modelo é mais complicado, como você pode ver aqui:
+   A solução de modelo é mais simples e ajuda a fornecer a melhor segurança de tipos. O código fora do modelo é mais complicado, como você pode ver aqui:
 
-     [!code-cpp[NVC_MFCCollections#16](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_5.cpp)]
+   [!code-cpp[NVC_MFCCollections#16](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_5.cpp)]
 
 Para obter mais informações, consulte [excluindo todos os objetos em uma coleção CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md).
 

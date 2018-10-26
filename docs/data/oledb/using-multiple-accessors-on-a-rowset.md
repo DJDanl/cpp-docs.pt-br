@@ -1,7 +1,7 @@
 ---
 title: Usando vários acessadores em um conjunto de linhas | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 43fa36e0f5b79a6901c1294345f54386340c43ef
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: fb0eeb3a0a3c347c115cb05c2a35d221e6a94fe4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808453"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071031"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Usando vários acessadores em um conjunto de linhas
 
@@ -45,7 +45,7 @@ Há três cenários básicos em que você precisa usar vários acessadores:
 
    Use o argumento de automática para especificar se o acessador é um acessador de automático.
 
-- **Várias colunas de ISequentialStream.** Nesse cenário, você tem mais de uma coluna que contém `ISequentialStream` dados. No entanto, cada acessador é limitada a uma `ISequentialStream` fluxo de dados. Para resolver esse problema, configurar vários acessadores, cada um tendo uma `ISequentialStream` ponteiro.
+- **Várias colunas de ISequentialStream.** Nesse cenário, que você espera de mais de uma coluna `ISequentialStream` dados. No entanto, cada acessador é limitada a uma `ISequentialStream` fluxo de dados. Para resolver esse problema, configurar vários acessadores, cada um tendo uma `ISequentialStream` ponteiro.
 
 Você normalmente cria acessadores usando o [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) e [END_ACCESSOR](../../data/oledb/end-accessor.md) macros. Você também pode usar o [db_accessor](../../windows/db-accessor.md) atributo. (Acessadores são descritos mais detalhadamente em [registros de usuário](../../data/oledb/user-records.md).) As macros ou o atributo Especifique se um acessador é automático ou um acessador não automático:
 

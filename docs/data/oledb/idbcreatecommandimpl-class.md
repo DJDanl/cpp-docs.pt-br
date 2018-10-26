@@ -23,72 +23,72 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b06d6c730562203cdef1191a9d73012c3b19c2c8
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 727d50025ce7fc4808444ac7ad73d828c6f0c545
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083952"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053507"
 ---
 # <a name="idbcreatecommandimpl-class"></a>Classe IDBCreateCommandImpl
 
-Fornece uma implementação de [IDBCreateCommand](/previous-versions/windows/desktop/ms711625) interface.  
-  
+Fornece uma implementação de [IDBCreateCommand](/previous-versions/windows/desktop/ms711625) interface.
+
 ## <a name="syntax"></a>Sintaxe
 
 ```cpp
-template <class T, class CommandClass >  
-class ATL_NO_VTABLE IDBCreateCommandImpl   
-   : public IDBCreateCommand  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
+template <class T, class CommandClass >
+class ATL_NO_VTABLE IDBCreateCommandImpl
+   : public IDBCreateCommand
+```
+
+### <a name="parameters"></a>Parâmetros
 
 *T*<br/>
-O objeto de sessão é derivado de `IDBCreateCommandImpl`.  
-  
+O objeto de sessão é derivado de `IDBCreateCommandImpl`.
+
 *Pkgmkcampo*<br/>
-Sua classe de comando.  
+Sua classe de comando.
 
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atldb.h  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="interface-methods"></a>Métodos de interface  
-  
-|||  
-|-|-|  
-|[CreateCommand](#createcommand)|Cria um novo comando.|  
-  
-## <a name="remarks"></a>Comentários  
+**Cabeçalho:** atldb.h
 
-Uma interface opcional no objeto de sessão para obter um novo comando.  
+## <a name="members"></a>Membros
+
+### <a name="interface-methods"></a>Métodos de interface
+
+|||
+|-|-|
+|[CreateCommand](#createcommand)|Cria um novo comando.|
+
+## <a name="remarks"></a>Comentários
+
+Uma interface opcional no objeto de sessão para obter um novo comando.
 
 ## <a name="createcommand"></a> Idbcreatecommandimpl:: CreateCommand
 
-Cria um novo comando e retorna a interface solicitada.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp
-STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,   
-   REFIID riid,   
-   IUnknown ** ppvCommand);  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
+Cria um novo comando e retorna a interface solicitada.
 
-Ver [idbcreatecommand:: CreateCommand](/previous-versions/windows/desktop/ms709772) na *referência do programador do OLE DB*.  
-  
-Alguns parâmetros correspondem aos *referência do programador DB OLE* parâmetros de nomes diferentes, que são descritos em `IDBCreateCommand::CreateCommand`:  
-  
-|Parâmetros de modelo de banco de dados OLE|*Referência do OLE DB Programmer* parâmetros|  
-|--------------------------------|------------------------------------------------|  
-|*ppvCommand*|*ppCommand*|  
-  
-## <a name="see-also"></a>Consulte também  
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+STDMETHOD(CreateCommand)(IUnknown * pUnkOuter, 
+   REFIID riid, 
+   IUnknown ** ppvCommand);
+```
+
+#### <a name="parameters"></a>Parâmetros
+
+Ver [idbcreatecommand:: CreateCommand](/previous-versions/windows/desktop/ms709772) na *referência do programador do OLE DB*.
+
+Alguns parâmetros correspondem aos *referência do programador DB OLE* parâmetros de nomes diferentes, que são descritos em `IDBCreateCommand::CreateCommand`:
+
+|Parâmetros de modelo de banco de dados OLE|*Referência do OLE DB Programmer* parâmetros|
+|--------------------------------|------------------------------------------------|
+|*ppvCommand*|*ppCommand*|
+
+## <a name="see-also"></a>Consulte também
 
 [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

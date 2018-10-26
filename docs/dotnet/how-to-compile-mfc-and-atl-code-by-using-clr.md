@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8c6079cd0371afa1b9a3ed32ba2cf67e1691d665
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 09cfc38626cab785eb7fa1c34178aa28aa23dac6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382798"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069921"
 ---
 # <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Como compilar código MFC e ATL usando /clr
 
@@ -40,7 +40,7 @@ Este tópico discute como compilar programas existentes do MFC e ATL para direci
 
 1. No **propriedades do projeto** diálogo caixa, expanda o nó lado **propriedades de configuração** e selecione **geral**. No painel direito, sob **padrões de projeto**, defina **suporte do Common Language Runtime** para **suporte a Common Language Runtime (/ clr)**.
 
-     No mesmo painel, verifique se **uso do MFC** é definido como **usar MFC em uma DLL compartilhada**.
+   No mesmo painel, verifique se **uso do MFC** é definido como **usar MFC em uma DLL compartilhada**.
 
 1. Sob **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **geral**. Certifique-se de que **formato de informações de depuração** é definido como **banco de dados do programa /Zi** (não **/ZI**).
 
@@ -60,7 +60,7 @@ Este tópico discute como compilar programas existentes do MFC e ATL para direci
 
 1. Sob **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **cabeçalhos pré-compilados**. Definir **criar/usar cabeçalho de pré-compilado** à **não usar cabeçalhos pré-compilados**.
 
-     Como alternativa, na **Gerenciador de soluções**, clique com botão direito Stdafx e, em seguida, clique em **propriedades**. Sob **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **geral**. Definir **compilar com o suporte a Common Language Runtime** à **suporte No Common Language Runtime**.
+   Como alternativa, na **Gerenciador de soluções**, clique com botão direito Stdafx e, em seguida, clique em **propriedades**. Sob **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **geral**. Definir **compilar com o suporte a Common Language Runtime** à **suporte No Common Language Runtime**.
 
 1. Para o arquivo que contém o DllMain e qualquer coisa ele chama, na **Gerenciador de soluções**, o arquivo com o botão direito e, em seguida, clique em **propriedades**. Sob **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **geral**. No painel direito, sob **padrões de projeto**, defina **compilar com o suporte a Common Language Runtime** para **suporte No Common Language Runtime**.
 
@@ -84,7 +84,7 @@ Este tópico discute como compilar programas existentes do MFC e ATL para direci
 
 1. Sob **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **cabeçalhos pré-compilados**. Definir **criar/usar cabeçalho de pré-compilado** à **não usar cabeçalhos pré-compilados**.
 
-     Como alternativa, na **Gerenciador de soluções**, clique com botão direito Stdafx e, em seguida, clique em **propriedades**. Sob **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **geral**. Definir **compilar com o suporte a Common Language Runtime** à **suporte No Common Language Runtime**.
+   Como alternativa, na **Gerenciador de soluções**, clique com botão direito Stdafx e, em seguida, clique em **propriedades**. Sob **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **geral**. Definir **compilar com o suporte a Common Language Runtime** à **suporte No Common Language Runtime**.
 
 1. Para o arquivo que contém o DllMain e qualquer coisa ele chama, na **Gerenciador de soluções**, o arquivo com o botão direito e, em seguida, clique em **propriedades**. Sob **propriedades de configuração**, expanda o nó do lado **C/C++** e selecione **geral**. No painel direito, sob **padrões de projeto**, defina **compilar com o suporte a Common Language Runtime** para **suporte No Common Language Runtime**.
 

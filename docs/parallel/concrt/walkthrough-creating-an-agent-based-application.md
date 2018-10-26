@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68c4b389bdd8f1121a59bce1a0ca8942f077e062
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 41ae491a851d2e9a21a57ce35a54590323060881
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377144"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070578"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Instruções passo a passo: criando um aplicativo com base no agente
 
@@ -64,7 +64,7 @@ Esta seção mostra como criar um aplicativo de console do Visual C++ que faz re
 
 [!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_1.h)]
 
-     The header file agents.h contains the functionality of the [concurrency::agent](../../parallel/concrt/reference/agent-class.md) class.
+   O arquivo de cabeçalho Agents. h contém a funcionalidade do [concurrency::agent](../../parallel/concrt/reference/agent-class.md) classe.
 
 1. Verifique se que o aplicativo foi criado com êxito pela criação e executá-lo. Para compilar o aplicativo, na **construir** menu, clique em **compilar solução**. Se o aplicativo for compilado com êxito, execute o aplicativo clicando **iniciar depuração** sobre o **depurar** menu.
 
@@ -90,19 +90,19 @@ Esta seção mostra como criar o `file_reader` classe. O tempo de execução age
 
 [!code-cpp[concrt-basic-agent#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_4.h)]
 
-     The `_file_name` member is the file name that the agent reads from. The `_target` member is a [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md) object that the agent writes the contents of the file to. The `_error` member holds any error that occurs during the life of the agent.
+   O `_file_name` membro é o nome do arquivo que o agente lê. O `_target` membro é um [Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md) do objeto que o agente grava o conteúdo do arquivo para. O `_error` membro contém qualquer erro que ocorre durante o ciclo de vida do agente.
 
 1. Adicione o seguinte código para o `file_reader` construtores para o `public` seção o `file_reader` classe.
 
 [!code-cpp[concrt-basic-agent#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_5.h)]
 
-     Each constructor overload sets the `file_reader` data members. The second and third constructor overload enables your application to use a specific scheduler with your agent. The first overload uses the default scheduler with your agent.
+   Cada sobrecarga do construtor define o `file_reader` membros de dados. A sobrecarga de segundo e o terceiro construtor permite que seu aplicativo para usar um agendador específico com o agente. A primeira sobrecarga usa o agendador padrão com o agente.
 
 1. Adicione a `get_error` método para a seção pública do `file_reader` classe.
 
 [!code-cpp[concrt-basic-agent#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_6.h)]
 
-     The `get_error` method retrieves any error that occurs during the life of the agent.
+   O `get_error` método recupera qualquer erro que ocorre durante o ciclo de vida do agente.
 
 1. Implementar o [concurrency::agent::run](reference/agent-class.md#run) método o `protected` seção da sua classe.
 
@@ -140,7 +140,7 @@ Esta seção mostra como usar o `file_reader` classe para ler o conteúdo de um 
 
 [!code-cpp[concrt-basic-agent#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_12.cpp)]
 
-     This `call` object also sets the `event` object when it receives the empty string to signal the end of processing.
+   Isso `call` objeto também define o `event` quando ele recebe a cadeia de caracteres vazia para sinalizar o final do processamento do objeto.
 
 1. Criar uma `file_reader` objeto que lê o arquivo Test. txt e grava o conteúdo desse arquivo para o `call` objeto.
 

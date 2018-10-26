@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 97c7ca1f808beb7e0658338dac77819455f9ed84
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 14a58573af8b8cb917d7aaaa864b6b4d61e70172
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790130"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062997"
 ---
 # <a name="include-c"></a>include (C++)
 
@@ -76,4 +76,4 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 [import](import.md)<br/>
 [importidl](importidl.md)<br/>
 [includelib](includelib-cpp.md)<br/>
-[importlib](importlib.md)  
+[importlib](importlib.md)

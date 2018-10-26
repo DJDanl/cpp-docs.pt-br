@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5161e23d17283ba1495baf6fcb201943f8b6ae12
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2af0148c386bc3b1ea8db60fdf84d080c38af857
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422409"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080683"
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Como adicionar roteamento de comando ao controle dos Windows Forms
 
@@ -51,7 +51,7 @@ Este tópico pressupõe que você concluiu previamente [como: criar o controle d
     partial class UserControl1
     ```
 
-     Para isso:
+   Para isso:
 
     ```
     partial class UserControl1 : System.Windows.Forms.UserControl, ICommandTarget
@@ -84,19 +84,19 @@ Este tópico pressupõe que você concluiu previamente [como: criar o controle d
 
 1. Adicionar uma opção de menu que invocará `singleMenuHandler`.
 
-     Vá para **exibição de recurso** (Ctrl + Shift + E), expanda o **Menu** pasta e clique duas vezes em **IDR_MFC02TYPE**. Isso exibe o editor de menu.
+   Vá para **exibição de recurso** (Ctrl + Shift + E), expanda o **Menu** pasta e clique duas vezes em **IDR_MFC02TYPE**. Isso exibe o editor de menu.
 
-     Adicionar uma opção de menu na parte inferior a **exibição** menu. Observe a ID da opção no menu de **propriedades** janela. Salve o arquivo.
+   Adicionar uma opção de menu na parte inferior a **exibição** menu. Observe a ID da opção no menu de **propriedades** janela. Salve o arquivo.
 
-     Na **Gerenciador de soluções**, abra o arquivo Resource. h, copie o valor da ID para a opção de menu que você acabou de adicionar e cole esse valor como o primeiro parâmetro para o `m_CmdSrc.AddCommandHandler` chamar do projeto c# `Initialize` método (substituindo `32771` se necessário).
+   Na **Gerenciador de soluções**, abra o arquivo Resource. h, copie o valor da ID para a opção de menu que você acabou de adicionar e cole esse valor como o primeiro parâmetro para o `m_CmdSrc.AddCommandHandler` chamar do projeto c# `Initialize` método (substituindo `32771` se necessário).
 
 9. Compile e execute o projeto.
 
-     No menu **Compilar**, clique em **Compilar Solução**.
+   No menu **Compilar**, clique em **Compilar Solução**.
 
-     Sobre o **Debug** menu, clique em **iniciar sem depuração**.
+   Sobre o **Debug** menu, clique em **iniciar sem depuração**.
 
-     Selecione a opção de menu que você adicionou. Observe que o método no arquivo. dll é chamado.
+   Selecione a opção de menu que você adicionou. Observe que o método no arquivo. dll é chamado.
 
 ## <a name="see-also"></a>Consulte também
 

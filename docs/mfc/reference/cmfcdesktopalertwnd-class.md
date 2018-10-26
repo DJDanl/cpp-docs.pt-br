@@ -1,7 +1,7 @@
 ---
 title: Classe CMFCDesktopAlertWnd | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 728aa39341eb808b2bae178e0a419ec3a2ab46e1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: abd7a3348f59379e798a0c1369a4f69ca99a4d7e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432419"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081060"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>Classe CMFCDesktopAlertWnd
 
@@ -160,7 +160,6 @@ virtual BOOL Create(
     CPoint ptPos = CPoint(-1,-1),
     CRuntimeClass* pRTIDlgBar = RUNTIME_CLASS(CMFCDesktopAlertDialog));
 
-
 virtual BOOL Create(
     CWnd* pWndOwner,
     CMFCDesktopAlertWndInfo& params,
@@ -170,7 +169,8 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] [out] *pWndOwner* Especifica o proprietário da janela de alerta. O proprietário receberá todas as notificações para a janela de alerta da área de trabalho. Esse valor não pode ser NULL.
+*pWndOwner*<br/>
+[no, out] Especifica o proprietário da janela de alerta. O proprietário receberá todas as notificações para a janela de alerta da área de trabalho. Esse valor não pode ser NULL.
 
 *uiDlgResID*<br/>
 [in] Especifica a ID do recurso da janela de alerta.
@@ -319,14 +319,13 @@ Use esse método para determinar se a janela pop-up tem uma legenda curta ou uma
 
 ##  <a name="onbeforeshow"></a>  CMFCDesktopAlertWnd::OnBeforeShow
 
-
 ```
 virtual BOOL OnBeforeShow(CPoint&);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *CPoint &*
+[in] *CPoint &*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -355,7 +354,6 @@ Substitua este método em uma classe derivada se você quiser ser notificado qua
 
 ##  <a name="oncommand"></a>  CMFCDesktopAlertWnd::OnCommand
 
-
 ```
 virtual BOOL OnCommand(
     WPARAM wParam,
@@ -364,8 +362,9 @@ virtual BOOL OnCommand(
 
 ### <a name="parameters"></a>Parâmetros
 
-*wParam*<br/>
-[in] [in] *lParam*
+[in] *wParam*<br/>
+
+[in] *lParam*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -373,19 +372,17 @@ virtual BOOL OnCommand(
 
 ##  <a name="ondraw"></a>  CMFCDesktopAlertWnd::OnDraw
 
-
 ```
 virtual void OnDraw(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *pDC*
+[in] *pDC*<br/>
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="processcommand"></a>  CMFCDesktopAlertWnd::ProcessCommand
-
 
 ```
 BOOL ProcessCommand(HWND hwnd);
@@ -393,7 +390,7 @@ BOOL ProcessCommand(HWND hwnd);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *hwnd*
+[in] *hwnd*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -495,7 +492,6 @@ void SetTransparency(BYTE nTransparency);
 Chame essa função para definir o nível de transparência da janela pop-up.
 
 ##  <a name="getdialogsize"></a>  CMFCDesktopAlertWnd::GetDialogSize
-
 
 ```
 virtual CSize GetDialogSize();

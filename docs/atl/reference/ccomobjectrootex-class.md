@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f24cf6cce5cdf268367f547e8a536dcdae7cc859
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 413485bc7675fbc68f2c224ceefdd0f552538eb9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098947"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076978"
 ---
 # <a name="ccomobjectrootex-class"></a>Classe CComObjectRootEx
 
@@ -51,7 +51,7 @@ class CComObjectRootEx : public CComObjectRootBase
 #### <a name="parameters"></a>Parâmetros
 
 *ThreadModel*<br/>
-A classe cujos métodos implementam o modelo de threading desejado. Você pode escolher o modelo de threading explicitamente definindo *ThreadModel* à [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), ou [ CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md). Você pode aceitar o modelo de thread do servidor padrão, definindo *ThreadModel* à [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) ou [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).  
+A classe cujos métodos implementam o modelo de threading desejado. Você pode escolher o modelo de threading explicitamente definindo *ThreadModel* à [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), ou [ CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md). Você pode aceitar o modelo de thread do servidor padrão, definindo *ThreadModel* à [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) ou [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).
 
 ## <a name="members"></a>Membros
 
@@ -139,9 +139,9 @@ Há vantagens em realizar a inicialização em `FinalConstruct` em vez do constr
 
 - Você não pode chamar funções virtuais por meio do mecanismo do construtor de uma classe de função virtual. Chamar uma função virtual do construtor de uma classe resulta em uma chamada estaticamente resolvida para a função que ele está definido nesse ponto na hierarquia de herança. Chamadas para funções virtuais puras resultam em erros de vinculador.
 
-     Sua classe não é a classe mais derivada na hierarquia de herança — ele se baseia em uma classe derivada fornecida pelo ATL para fornecer algumas das suas funcionalidades. Há uma boa chance de que sua inicialização precisará usar os recursos fornecidos pela classe (Isso é certamente verdadeiro quando objetos de sua classe precisam agregar outros objetos), mas o construtor em sua classe não tem nenhuma maneira de acessar esses recursos. O código de construção para a sua classe é executado antes que a classe mais derivada está totalmente construída.
+   Sua classe não é a classe mais derivada na hierarquia de herança — ele se baseia em uma classe derivada fornecida pelo ATL para fornecer algumas das suas funcionalidades. Há uma boa chance de que sua inicialização precisará usar os recursos fornecidos pela classe (Isso é certamente verdadeiro quando objetos de sua classe precisam agregar outros objetos), mas o construtor em sua classe não tem nenhuma maneira de acessar esses recursos. O código de construção para a sua classe é executado antes que a classe mais derivada está totalmente construída.
 
-     No entanto, `FinalConstruct` é chamado imediatamente depois de mais derivado classe está totalmente construído, permitindo que você chamar funções virtuais e usar a implementação de contagem de referência fornecida pela ATL.
+   No entanto, `FinalConstruct` é chamado imediatamente depois de mais derivado classe está totalmente construído, permitindo que você chamar funções virtuais e usar a implementação de contagem de referência fornecida pela ATL.
 
 ### <a name="example"></a>Exemplo
 
@@ -265,7 +265,7 @@ long m_dwRef;
 
 ### <a name="remarks"></a>Comentários
 
-Com `m_pOuterUnknown`, que faz parte de uma união:  
+Com `m_pOuterUnknown`, que faz parte de uma união:
 
 ```
 union {

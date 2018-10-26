@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 24d11a056d248e27be236f710cdd0532b3beca2d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: f78b7af310ce619eaf595726e51775ba72e37479
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790245"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057108"
 ---
 # <a name="string-c"></a>string (C++)
 
@@ -72,4 +72,4 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 
 [Atributos de IDL](idl-attributes.md)<br/>
 [Atributos de matriz](array-attributes.md)<br/>
-[export](export.md)  
+[export](export.md)

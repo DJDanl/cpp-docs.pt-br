@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47b169371b8551622650687e5d7bd8c06f560725
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 168d7c1740f9b33af1eca539e30514ce76259ceb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236043"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076328"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Instruções passo a passo: usando os novos controles de shell MFC
 
@@ -35,17 +35,17 @@ Este passo a passo pressupõe que você configurou o Visual Studio para usar **c
 
 1. No **novo projeto** diálogo caixa, expanda o **Visual C++** nó no **tipos de projeto** painel e selecione **MFC**. Em seguida, nos **modelos** painel, selecione **aplicativo MFC**. Digite um nome para o projeto, como `MFCShellControls` e clique em **Okey**. Após **Assistente de aplicativo MFC** exibida, use as seguintes opções:
 
-    1. Sobre o **tipo de aplicativo** painel, em **tipo de aplicativo**, desmarque o **documentos com guias** opção. Em seguida, selecione **único documento** e selecione **suporte de arquitetura de documento/exibição**. Sob **estilo de projeto**, selecione **Visual Studio**e para o **Estilo Visual e cores** lista suspensa lista, selecione **Office 2007 (tema azul)**. 
+    1. Sobre o **tipo de aplicativo** painel, em **tipo de aplicativo**, desmarque o **documentos com guias** opção. Em seguida, selecione **único documento** e selecione **suporte de arquitetura de documento/exibição**. Sob **estilo de projeto**, selecione **Visual Studio**e para o **Estilo Visual e cores** lista suspensa lista, selecione **Office 2007 (tema azul)**.
 
     1. Sobre o **suporte de documento composto** painel, selecione **None**.
 
     1. Não faça nenhuma alteração para o **cadeias de caracteres de modelo de documento** painel.
 
-    1. Sobre o **suporte do banco de dados** painel (Visual Studio 2015 e anteriores), selecione **None** porque o aplicativo não usa um banco de dados. 
+    1. Sobre o **suporte do banco de dados** painel (Visual Studio 2015 e anteriores), selecione **None** porque o aplicativo não usa um banco de dados.
 
-    1. No **recursos de Interface do usuário** painel, certifique-se a **usar uma barra de menus e barra de ferramentas** opção está selecionada. Deixe todas as outras opções como estão. 
+    1. No **recursos de Interface do usuário** painel, certifique-se a **usar uma barra de menus e barra de ferramentas** opção está selecionada. Deixe todas as outras opções como estão.
 
-    1. Sobre o **recursos avançados** painel, em **recursos avançados**, selecione apenas **controles ActiveX** e **manifesto de controle comuns**. Sob **avançadas de painéis de quadros**, selecione apenas a **painel de navegação** opção. Isso fará com que o assistente criar o painel à esquerda da janela com um `CMFCShellTreeCtrl` já inseridos. 
+    1. Sobre o **recursos avançados** painel, em **recursos avançados**, selecione apenas **controles ActiveX** e **manifesto de controle comuns**. Sob **avançadas de painéis de quadros**, selecione apenas a **painel de navegação** opção. Isso fará com que o assistente criar o painel à esquerda da janela com um `CMFCShellTreeCtrl` já inseridos.
 
     1. Não vamos fazer nenhuma alteração para o **Classes geradas** painel, portanto, clique em **concluir** para criar o novo projeto do MFC.
 

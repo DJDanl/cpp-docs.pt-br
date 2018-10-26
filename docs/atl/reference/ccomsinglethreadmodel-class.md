@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: b257628747dca488292cfdfff0ef783303bd1b88
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2a20a5c8ad87428e66f90b8f04c3006e5f1c2e84
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094413"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068860"
 ---
 # <a name="ccomsinglethreadmodel-class"></a>Classe CComSingleThreadModel
 
@@ -58,9 +58,9 @@ class CComSingleThreadModel
 
 ## <a name="remarks"></a>Comentários
 
-`CComSingleThreadModel` fornece métodos para incrementar e diminuir o valor de uma variável. Diferentemente [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) e [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), esses métodos não são thread-safe.  
+`CComSingleThreadModel` fornece métodos para incrementar e diminuir o valor de uma variável. Diferentemente [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) e [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), esses métodos não são thread-safe.
 
-Normalmente, você usa `CComSingleThreadModel` por meio de uma das duas **typedef** nomes tanto [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) ou [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel). A classe referenciada por cada **typedef** depende do modelo de threading usado, conforme mostrado na tabela a seguir:  
+Normalmente, você usa `CComSingleThreadModel` por meio de uma das duas **typedef** nomes tanto [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) ou [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel). A classe referenciada por cada **typedef** depende do modelo de threading usado, conforme mostrado na tabela a seguir:
 
 |typedef|Modelo de threading único|Modelo de apartment threading|Modelo de threading livre|
 |-------------|----------------------------|-------------------------------|--------------------------|

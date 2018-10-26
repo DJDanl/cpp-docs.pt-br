@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07dddbcfba7920efdda1f222843299ef29f19f0c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 926a0f90f366f3644bfce33f15a0a85dd1792a85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235783"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076744"
 ---
 # <a name="vector-class"></a>Classe vector
 
@@ -402,7 +402,6 @@ Retorna um iterador de acesso aleatório para o primeiro elemento no vetor.
 
 ```cpp
 const_iterator begin() const;
-
 
 iterator begin();
 ```
@@ -788,7 +787,6 @@ Retorna um ponteiro para o primeiro elemento no vetor.
 
 ```cpp
 const_pointer data() const;
-
 
 pointer data();
 ```
@@ -1554,7 +1552,6 @@ Adiciona um elemento ao final do vetor.
 
 ```cpp
 void push_back(const T& Val);
-
 
 void push_back(T&& Val);
 ```

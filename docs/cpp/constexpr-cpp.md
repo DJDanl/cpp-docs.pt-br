@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b9479957fdfb4d6b92ec531941808940765a9e5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 150179fc0fd97450ba805d6957f5282bfaf8345c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116718"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071245"
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
@@ -95,7 +95,6 @@ As seguintes regras se aplicam a **constexpr** funções no Visual Studio 2017 e
 - Ele pode conter declarações de variável local, mas a variável deve ser inicializada, deve ser um tipo literal e não pode ser estático ou locais de thread. A variável declarada localmente não é necessário para ser const e pode modificar.
 
 - Uma função de membro não estática constexpr não é necessário para que seja implicitamente const.
-
 
 ```cpp
 constexpr float exp(float x, int n)

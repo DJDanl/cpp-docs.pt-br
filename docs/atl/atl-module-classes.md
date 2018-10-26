@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e885ef1db8f282bbdca2e8c39c3d1221d791d1a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e067b1d72b80950b4ed33fbae8cac7333ac0438
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067630"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083068"
 ---
 # <a name="atl-module-classes"></a>Classes de módulo ATL
 
@@ -55,15 +55,15 @@ A funcionalidade de `CComModule` foi distribuído em várias classes novas pelos
 
 - Verifique a funcionalidade no `CComModule` granular.
 
-     Suporte para COM, janelas, interface de depuração e recursos específicos do aplicativo (DLL ou EXE) agora está em classes separadas.
+   Suporte para COM, janelas, interface de depuração e recursos específicos do aplicativo (DLL ou EXE) agora está em classes separadas.
 
 - Declare automaticamente a instância global de cada um desses módulos.
 
-     Uma instância global das classes de módulo necessário é vinculada ao projeto.
+   Uma instância global das classes de módulo necessário é vinculada ao projeto.
 
 - Remova a necessidade de chamar métodos Init e termo.
 
-     Métodos Init e o termo foram movidos para os construtores e destruidores para classes de módulo; não é necessário chamar Init e termo.
+   Métodos Init e o termo foram movidos para os construtores e destruidores para classes de módulo; não é necessário chamar Init e termo.
 
 ## <a name="see-also"></a>Consulte também
 

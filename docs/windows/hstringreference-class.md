@@ -31,12 +31,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae2199ec414556fe3401c94c273d5ef0c13c3c5d
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 4754a74365b2c596e240bd13eb11fdc852205e2c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162523"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077875"
 ---
 # <a name="hstringreference-class"></a>Classe HStringReference
 
@@ -110,7 +110,7 @@ Este método chama o [WindowsDuplicateString](https://msdn.microsoft.com/library
 Recupera o valor do identificador subjacente de HSTRING.
 
 ```cpp
-HSTRING Get() const throw()  
+HSTRING Get() const throw()
 ```
 
 ### <a name="return-value"></a>Valor de retorno
@@ -159,7 +159,7 @@ O terceiro construtor inicializa uma nova `HStringReference` objeto para o valor
 Move o valor de outro `HStringReference` o objeto atual `HStringReference` objeto.
 
 ```cpp
-HStringReference& operator=(HStringReference&& other) throw()  
+HStringReference& operator=(HStringReference&& other) throw()
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -186,7 +186,7 @@ inline bool operator==(
 
 inline bool operator==(
                const HStringReference& lhs,
-               const HSTRING& rhs) throw()  
+               const HSTRING& rhs) throw()
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -216,7 +216,7 @@ inline bool operator!=(
 
 inline bool operator!=(
                const HStringReference& lhs,
-               const HSTRING& rhs) throw()  
+               const HSTRING& rhs) throw()
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -238,7 +238,7 @@ Indica se o primeiro parâmetro é menor do que o segundo parâmetro.
 ```cpp
 inline bool operator<(
     const HStringReference& lhs,
-    const HStringReference& rhs) throw()  
+    const HStringReference& rhs) throw()
 ```
 
 ### <a name="parameters"></a>Parâmetros

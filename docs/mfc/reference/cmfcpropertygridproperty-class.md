@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 792e84c094497dc6e3b8a37afc4cf4e48046171f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6430e65e15458eec3a0591168ba7717e1236c089
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387595"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071843"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>Classe CMFCPropertyGridProperty
 
@@ -430,7 +430,6 @@ CMFCPropertyGridProperty(
     const CString& strGroupName,
     DWORD_PTR dwData=0,
     BOOL bIsValueList=FALSE);
-
 
 CMFCPropertyGridProperty(
     const CString& strName,
@@ -882,7 +881,6 @@ Aponta para o objeto de propriedade que corresponde ao item de lista de propried
 CMFCPropertyGridProperty* HitTest(
     CPoint point,
     CMFCPropertyGridProperty::ClickArea* pnArea=NULL);
-
 
 CMFCPropertyGridProperty* HitTest(
     CPoint pt,
@@ -1422,14 +1420,13 @@ Por padrão, esse método não faz nada e, em seguida, retorna TRUE. Se você su
 
 ##  <a name="onkillselection"></a>  CMFCPropertyGridProperty::OnKillSelection
 
-
 ```
 virtual void OnKillSelection(CMFCPropertyGridProperty*);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *CMFCPropertyGridProperty**
+[in] *CMFCPropertyGridProperty&#42;*<br/>
 
 ### <a name="remarks"></a>Comentários
 
@@ -1437,14 +1434,13 @@ Por padrão, esse método não fará nada.
 
 ##  <a name="onpossizechanged"></a>  CMFCPropertyGridProperty::OnPosSizeChanged
 
-
 ```
 virtual void OnPosSizeChanged(CRect);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *CRect*
+[in] *CRect*<br/>
 
 ### <a name="remarks"></a>Comentários
 
@@ -1519,14 +1515,13 @@ Este método suporta os seguintes tipos de variante: VT_INT, VT_I2, VT_I4, VT_UI
 
 ##  <a name="onsetselection"></a>  CMFCPropertyGridProperty::OnSetSelection
 
-
 ```
-virtual void OnSetSelection(CMFCPropertyGridProperty*);
+virtual void OnSetSelection CMFCPropertyGridProperty*);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *CMFCPropertyGridProperty**
+[in] *CMFCPropertyGridProperty&#42;*<br/>
 
 ### <a name="remarks"></a>Comentários
 

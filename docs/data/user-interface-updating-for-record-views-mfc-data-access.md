@@ -17,26 +17,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 43f5d1017b3f89474e9dd7eebce0cf71c8c8c448
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4f730a8c0b2c1f552e0aca7f360f402788630c96
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086870"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065402"
 ---
 # <a name="user-interface-updating-for-record-views--mfc-data-access"></a>Atualização de interface do usuário para exibições de registro (Acesso a dados MFC)
 
-`CRecordView` Fornece manipuladores de atualização de interface do usuário de padrão para os comandos de navegação. Esses manipuladores automatizam habilitando e desabilitando os objetos de interface do usuário – itens de menu e botões da barra de ferramentas. O Assistente de aplicativo fornece menus padrão e, se você escolher o **ferramentas acoplável** opção, um conjunto de botões da barra de comandos. Se você criar uma classe de exibição do registro usando `CRecordView`, poderá adicionar objetos de interface do usuário semelhantes ao seu aplicativo.  
-  
-### <a name="to-create-menu-resources-with-the-menu-editor"></a>Para criar recursos de menu com o editor de menu  
-  
-1. Consultando as informações sobre como usar o [editor de menu](../windows/menu-editor.md), criar seu próprio menu com os mesmos quatro comandos.  
-  
-#### <a name="to-create-toolbar-buttons-with-the-graphics-editor"></a>Para criar os botões da barra de ferramentas com o editor de gráficos  
-  
-1. Consultando as informações sobre como usar o [editor de barra de ferramentas](../windows/toolbar-editor.md), editar o recurso de barra de ferramentas para adicionar botões de barra de ferramentas para seus comandos de navegação de registro.  
-  
-## <a name="see-also"></a>Consulte também  
+`CRecordView` Fornece manipuladores de atualização de interface do usuário de padrão para os comandos de navegação. Esses manipuladores automatizam habilitando e desabilitando os objetos de interface do usuário – itens de menu e botões da barra de ferramentas. O Assistente de aplicativo fornece menus padrão e, se você escolher o **ferramentas acoplável** opção, um conjunto de botões da barra de comandos. Se você criar uma classe de exibição do registro usando `CRecordView`, poderá adicionar objetos de interface do usuário semelhantes ao seu aplicativo.
+
+### <a name="to-create-menu-resources-with-the-menu-editor"></a>Para criar recursos de menu com o editor de menu
+
+1. Consultando as informações sobre como usar o [editor de menu](../windows/menu-editor.md), criar seu próprio menu com os mesmos quatro comandos.
+
+#### <a name="to-create-toolbar-buttons-with-the-graphics-editor"></a>Para criar os botões da barra de ferramentas com o editor de gráficos
+
+1. Consultando as informações sobre como usar o [editor de barra de ferramentas](../windows/toolbar-editor.md), editar o recurso de barra de ferramentas para adicionar botões de barra de ferramentas para seus comandos de navegação de registro.
+
+## <a name="see-also"></a>Consulte também
 
 [Suporte à navegação em uma exibição de registro](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)<br/>
 [Usando uma exibição de registro](../data/using-a-record-view-mfc-data-access.md)

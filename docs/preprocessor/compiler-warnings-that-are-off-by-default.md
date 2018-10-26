@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b5a4551387716c81766ae99759f8188410497be
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: c7b48b2382ee22cc5d11c1145dc494aca4e7997f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42543065"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083185"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avisos do compilador que são desativados por padrão
 O compilador inclui avisos que são desativados por padrão, porque a maioria dos desenvolvedores não deseja vê-los. Em alguns casos, eles representam uma escolha estilísticas, são linguagens comuns no código mais antigo ou tirar proveito de uma extensão da Microsoft para o idioma. Em outros casos, elas indicam uma área em que os programadores geralmente fazem suposições incorretas, que podem resultar em comportamento inesperado ou indefinido. Alguns destes avisos podem ser muito barulhento nos cabeçalhos da biblioteca. As bibliotecas de tempo de execução do C e as bibliotecas padrão do C++ são destinadas para não emitir nenhum aviso somente no nível de aviso [/W4](../build/reference/compiler-option-warning-level.md).
@@ -154,12 +154,12 @@ Os seguintes avisos são desativados por padrão no Visual Studio 2015 e versõe
 |C5042 (nível 3)|'*função*': declarações de função no escopo de bloco não podem ser especificado 'inline' em C++ padrão; remova o especificador "embutido" <sup>15.5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|Compilador inserirá a mitigação de espectro para carga de memória se a opção /Qspectre especificada <sup>15.7</sup>|
 
-<sup>14,1</sup> esse aviso está disponível a partir do Visual Studio 2015 atualização 1.  
-<sup>14,3</sup> esse aviso está disponível a partir do Visual Studio 2015 atualização 3.  
-<sup>15.3</sup> esse aviso está disponível a partir do Visual Studio 2017 versão 15.3.  
-<sup>15.5</sup> esse aviso está disponível a partir do Visual Studio 2017 versão 15.5.  
-<sup>15.7</sup> esse aviso está disponível a partir do Visual Studio 2017 versão 15.7.  
-<sup>Perm</sup> esse aviso é desativado, a menos que o [/permissive--](../build/reference/permissive-standards-conformance.md) é definir a opção de compilador.  
+<sup>14,1</sup> esse aviso está disponível a partir do Visual Studio 2015 atualização 1.<br/>
+<sup>14,3</sup> esse aviso está disponível a partir do Visual Studio 2015 atualização 3.<br/>
+<sup>15.3</sup> esse aviso está disponível a partir do Visual Studio 2017 versão 15.3.<br/>
+<sup>15.5</sup> esse aviso está disponível a partir do Visual Studio 2017 versão 15.5.<br/>
+<sup>15.7</sup> esse aviso está disponível a partir do Visual Studio 2017 versão 15.7.<br/>
+<sup>Perm</sup> esse aviso é desativado, a menos que o [/permissive--](../build/reference/permissive-standards-conformance.md) é definir a opção de compilador.<br/>
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Avisos desativado por padrão em versões anteriores
 

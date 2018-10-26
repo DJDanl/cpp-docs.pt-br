@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73d04141d67b832f3c42fe74e7b2a35d8751afef
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 09b82a4ee1c10e009d403e0e0071cf90cb65cd86
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378677"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082509"
 ---
 # <a name="cmemorystate-structure"></a>Estrutura CMemoryState
 
@@ -150,7 +150,6 @@ Chamadas a `Dump` função para todos os objetos de um tipo derivado da classe `
 ```
 void DumpAllObjectsSince() const;
 
-
 ```
 
 ### <a name="remarks"></a>Comentários
@@ -167,7 +166,6 @@ Imprime um relatório de estatísticas de memória concisa de um `CMemoryState` 
 
 ```
 void DumpStatistics() const;
-
 
 ```
 
@@ -212,6 +210,4 @@ Agora você pode executar o programa no modo de depuração para ver a saída do
 ## <a name="see-also"></a>Consulte também
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
-
-
 

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b9ec3c034e388cec4f91617fbee0e6ab19180de
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 51dee27c69d42bde83f8eb6925e96d0dad80dca6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418743"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081242"
 ---
 # <a name="containers-advanced-features"></a>Contêineres: funcionalidades avançadas
 
@@ -49,7 +49,7 @@ O artigo [servidores: Implementando um servidor](../mfc/servers-implementing-a-s
 
 - Substituir `COleClientItem::CanActivate` para evitar a edição de itens em vigor enquanto o próprio servidor está sendo usado para editar no local.
 
-     Por exemplo, a OLE do MFC amostra [OCLIENT](../visual-cpp-samples.md) incorporou um item criado pelo seu aplicativo de contêiner/servidor. Abrir o aplicativo OCLIENT e in-loco editar o item criado pelo seu aplicativo de contêiner/servidor. Ao editar o item do seu aplicativo, você decide que deseja inserir um item criado por este exemplo OLE do MFC [HIERSVR](../visual-cpp-samples.md). Para fazer isso, você não pode usar a ativação in-loco. Totalmente, você deve abrir HIERSVR para ativar esse item. Porque a biblioteca Microsoft Foundation Class não oferece suporte a esse recurso OLE, substituindo `COleClientItem::CanActivate` permite que você verificar essa situação e evitar um possível erro de tempo de execução em seu aplicativo.
+   Por exemplo, a OLE do MFC amostra [OCLIENT](../visual-cpp-samples.md) incorporou um item criado pelo seu aplicativo de contêiner/servidor. Abrir o aplicativo OCLIENT e in-loco editar o item criado pelo seu aplicativo de contêiner/servidor. Ao editar o item do seu aplicativo, você decide que deseja inserir um item criado por este exemplo OLE do MFC [HIERSVR](../visual-cpp-samples.md). Para fazer isso, você não pode usar a ativação in-loco. Totalmente, você deve abrir HIERSVR para ativar esse item. Porque a biblioteca Microsoft Foundation Class não oferece suporte a esse recurso OLE, substituindo `COleClientItem::CanActivate` permite que você verificar essa situação e evitar um possível erro de tempo de execução em seu aplicativo.
 
 Se você estiver criando um novo aplicativo e deseja que ele funcione como um aplicativo de contêiner/servidor, escolha a que a opção na caixa de diálogo OLE opções no Assistente de aplicativo e esse suporte será criada automaticamente. Para obter mais informações, consulte o artigo [visão geral: Criando um contêiner de controle ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Para obter informações sobre exemplos de MFC, consulte exemplos de MFC.
 

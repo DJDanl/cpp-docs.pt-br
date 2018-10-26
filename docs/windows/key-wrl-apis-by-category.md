@@ -13,18 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d79888a58e5fc6d6911c4cc123877c1537f22cf1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2d0cc85272eae4a5231872232dc259a9120a6bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441922"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059864"
 ---
 # <a name="key-wrl-apis-by-category"></a>APIs de chave WRL por categoria
+
 As tabelas a seguir listam os principais produtos de classes, structs, funções e macros biblioteca de modelos de C++ de tempo de execução do Windows. Construtores em classes e namespaces de auxiliar são omitidos. Essas listas ampliar a documentação de API, que é organizada por namespace.
-  
-### <a name="classes"></a>Classes
-  
+
+## <a name="classes"></a>Classes
+
 |Título|Descrição|
 |-----------|-----------------|
 |[Classe ActivationFactory](../windows/activationfactory-class.md)|Permite que um ou mais classes sejam ativadas pelo tempo de execução do Windows.|
@@ -46,18 +47,18 @@ As tabelas a seguir listam os principais produtos de classes, structs, funções
 |[Classe SimpleActivationFactory](../windows/simpleactivationfactory-class.md)|Fornece um mecanismo fundamental para criar um tempo de execução do Windows ou a classe base do COM clássico.|
 |[Classe SimpleClassFactory](../windows/simpleclassfactory-class.md)|Fornece um mecanismo fundamental para criar uma classe base.|
 |[Classe WeakRef](../windows/weakref-class.md)|Representa uma *referência fraca* que pode ser usado pelo apenas Windows Runtime, com clássico não. Uma referência fraca representa um objeto que pode ou não ser acessível.|
-  
-### <a name="structures"></a>Estruturas
-  
+
+## <a name="structures"></a>Estruturas
+
 |Título|Descrição|
 |-----------|-----------------|
 |[Estrutura ChainInterfaces](../windows/chaininterfaces-structure.md)|Especifica as funções de verificação e de inicialização que podem ser aplicadas a um conjunto de IDs de interface.|
 |[Estrutura CloakedIid](../windows/cloakediid-structure.md)|Indica para o `RuntimeClass`, `Implements` e `ChainInterfaces` que a interface especificada não está acessível na lista de IID de modelos.|
 |[Estrutura Implements](../windows/implements-structure.md)|Implementa `QueryInterface` e `GetIid` para interfaces especificadas.|
 |[Estrutura MixIn](../windows/mixin-structure.md)|Garante que uma classe de tempo de execução deriva de interfaces do COM clássico, em seguida e as interfaces de tempo de execução do Windows, se houver.|
-  
-### <a name="functions"></a>Funções
-  
+
+## <a name="functions"></a>Funções
+
 |Título|Descrição|
 |-----------|-----------------|
 |[Função ActivateInstance](../windows/activateinstance-function.md)|Registra e recupera uma instância de um tipo especificado definido em uma ID de classe especificado.|
@@ -67,14 +68,14 @@ As tabelas a seguir listam os principais produtos de classes, structs, funções
 |[Função CreateClassFactory](../windows/createclassfactory-function.md)|Cria uma fábrica que produz instâncias da classe especificada.|
 |[Função GetActivationFactory](../windows/getactivationfactory-function.md)|Recupera um alocador de ativação para o tipo especificado pelo parâmetro de modelo.|
 |[Função Make](../windows/make-function.md)|Inicializa a classe de tempo de execução do Windows especificada.|
-  
-### <a name="macros"></a>Macros
-  
+
+## <a name="macros"></a>Macros
+
 |Título|Descrição|
 |-----------|-----------------|
 |[ActivatableClass Macros](../windows/activatableclass-macros.md)|Popula um cache interno que contém uma fábrica que pode criar uma instância da classe especificada.|
 |[Macro InspectableClass](../windows/inspectableclass-macro.md)|Define o nível de confiança e o nome de classe do tempo de execução.|
-  
+
 ## <a name="see-also"></a>Consulte também
 
 [WRL (Biblioteca de Modelos C++ do Tempo de Execução do Windows)](../windows/windows-runtime-cpp-template-library-wrl.md)

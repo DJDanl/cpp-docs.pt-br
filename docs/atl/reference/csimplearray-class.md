@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5603327e7bdc32d9b760fc25160543c682e6f4f4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 03f4161130a1517bba6ed87164a814a9e8c61bbd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054500"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069718"
 ---
 # <a name="csimplearray-class"></a>Classe CSimpleArray
 
@@ -79,7 +79,7 @@ Um objeto de característica, definindo o teste de igualdade para elementos do t
 |Nome|Descrição|
 |----------|-----------------|
 |[CSimpleArray::operator\[\]](#operator_at)|Recupera um elemento da matriz.|
-|[CSimpleArray::operator =](#operator_eq)|Operador de atribuição.|  
+|[CSimpleArray::operator =](#operator_eq)|Operador de atribuição.|
 
 ## <a name="remarks"></a>Comentários
 

@@ -20,25 +20,25 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: caf57ab85b7a37b8e43230dc9bcf1caf031f7a78
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: b8f03516aedcaf231f14943079eb9be40adf5be4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083782"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073117"
 ---
 # <a name="transaction-object-interfaces"></a>Interfaces de objeto da transação
 
-O objeto de transação define uma unidade atômica de trabalho em uma fonte de dados e determina como as unidades de trabalho se relacionam entre si. Esse objeto não é compatível diretamente pelos modelos de provedor do OLE DB (ou seja, você deverá criar seu próprio objeto).  
-  
-A tabela a seguir mostra as interfaces obrigatórias e opcionais definidas por OLE DB para um objeto de transação.  
-  
-|Interface|Necessário?|Implementado por modelos OLE DB?|  
-|---------------|---------------|--------------------------------------|  
-|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Obrigatório|Não|  
-|[ITransaction](/previous-versions/windows/desktop/ms723053)|Obrigatório|Não|  
-|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816)|Opcional|Não|  
-  
-## <a name="see-also"></a>Consulte também  
+O objeto de transação define uma unidade atômica de trabalho em uma fonte de dados e determina como as unidades de trabalho se relacionam entre si. Esse objeto não é compatível diretamente pelos modelos de provedor do OLE DB (ou seja, você deverá criar seu próprio objeto).
+
+A tabela a seguir mostra as interfaces obrigatórias e opcionais definidas por OLE DB para um objeto de transação.
+
+|Interface|Necessário?|Implementado por modelos OLE DB?|
+|---------------|---------------|--------------------------------------|
+|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Obrigatório|Não|
+|[ITransaction](/previous-versions/windows/desktop/ms723053)|Obrigatório|Não|
+|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816)|Opcional|Não|
+
+## <a name="see-also"></a>Consulte também
 
 [Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

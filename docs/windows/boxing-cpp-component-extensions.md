@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b11ac2f6b640e42c14522b45fe0c3da89036ae24
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 566a29b31ea931970937cc97da02b90e409bf2dc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328006"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072935"
 ---
 # <a name="boxing--ccli-and-ccx"></a>Conversão boxing (C + + c++ /CLI e c++ /CLI CX)
 
@@ -51,7 +51,7 @@ As seguintes caixas de exemplo de código e unboxes um `DateTime` valor. Primeir
 Para testar o exemplo, crie uma `BlankApplication` do projeto, substitua o `BlankPage::OnNavigatedTo()` método e, em seguida, especifique os pontos de interrupção no colchete de fechamento e a atribuição à variável `str1`. Quando o exemplo alcança o colchete de fechamento, examinar `str1`.
 
 ```cpp
-void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)  
+void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 {
     using namespace Windows::Globalization::DateTimeFormatting;
 
@@ -174,7 +174,7 @@ int main() {
                 // Will call void func1(System::Object^);
 
    func2(v2);   // OK: Calls "static V2::operator System::Object^(V2 v2)"
-   func2((V2^)v2);   // Using explicit boxing: calls func2(System::ValueType^)  
+   func2((V2^)v2);   // Using explicit boxing: calls func2(System::ValueType^)
 }
 ```
 
@@ -195,7 +195,7 @@ in func1(V2^)
 
 in func2(System::ValueType^)
 
-in func2(System::ValueType^)  
+in func2(System::ValueType^)
 ```
 
 ## <a name="see-also"></a>Consulte também

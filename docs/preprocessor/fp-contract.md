@@ -18,24 +18,24 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 514b4708129d625ea7880e4c61be22c4b1ac2db5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 95f23fa132a263970047a480ccde37382b6d03de
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912882"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052158"
 ---
 # <a name="fpcontract"></a>fp_contract
 
-Determina se contração de ponto flutuante ocorre. Uma contração de ponto flutuante é uma instrução como FMA (Fused-multiplicar-Adicionar) que combina dois separado operações de ponto flutuante em uma única instrução. Use estas instruções pode afetar a precisão de ponto flutuante, porque, em vez de arredondamento após cada operação, o processador pode arredondar apenas uma vez após as duas operações.
+Determina se contração do ponto flutuante ocorre. Uma contração de ponto flutuante é uma instrução como FMA (Fused-Multiply-Add) que combina dois separado operações de ponto flutuante em uma única instrução. O uso dessas instruções pode afetar a precisão de ponto flutuante, porque, em vez de arredondamento após cada operação, o processador pode arredondar apenas uma vez após as duas operações.
 
 ## <a name="syntax"></a>Sintaxe
 
-> **#pragma fp_contract (** { **na** | **off** } **)**  
+> **#pragma fp_contract (** { **nos** | **off** } **)**
 
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Comentários
 
-Por padrão, **fp_contract** é **em**. Isso informa ao compilador para usar instruções de ponto flutuante contração sempre que possível. Definir **fp_contract** para **off** para preservar as instruções de ponto flutuantes individuais.
+Por padrão, **fp_contract** é **em**. Isso informa ao compilador para usar as instruções de ponto flutuante contração sempre que possível. Definir **fp_contract** à **off** para preservar as instruções de ponto flutuantes individuais.
 
 Para obter mais informações sobre o comportamento de ponto flutuante, consulte [/fp (Especificar comportamento de ponto flutuante)](../build/reference/fp-specify-floating-point-behavior.md).
 
@@ -47,8 +47,8 @@ Outros pragmas de ponto flutuante incluem:
 
 ## <a name="example"></a>Exemplo
 
-O código gerado a partir deste exemplo não usa uma instrução fundido-multiplicar-adicionar mesmo quando ele está disponível no processador de destino. Se você comentar `#pragma fp_contract (off)`, o código gerado pode usar uma instrução fundido-multiplicar-adicionar se ele estiver disponível.  
-  
+O código gerado deste exemplo não usa uma instrução fused-multiply-add, mesmo quando ele está disponível no processador de destino. Se você comentar `#pragma fp_contract (off)`, o código gerado pode usar uma instrução fused-multiply-add, se ele estiver disponível.
+
 ```cpp
 // pragma_directive_fp_contract.cpp
 // on x86 and x64 compile with: /O2 /fp:fast /arch:AVX2

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5650707f9c08c144d2f5832744117dfdd06acc08
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0e151ba4fc2adbe6dab2397d68658b0cb1eb5ef1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106896"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059071"
 ---
 # <a name="window-class-macros"></a>Macros de classe de janela
 
@@ -32,7 +32,7 @@ Essas macros definem os utilitários de classe de janela.
 |[DECLARE_WND_CLASS](#declare_wnd_class)|Permite que você especifique o nome de uma nova classe de janela.|
 |[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017) Permite que você especifique o nome da classe delimitadora cujo procedimento de janela usará a nova classe e de uma nova classe de janela.|
 |[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|Permite que você especifique o nome de uma classe de janela existente no qual uma nova classe de janela será baseada.|
-|[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|Permite que você especifique os parâmetros de uma classe.|  
+|[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|Permite que você especifique os parâmetros de uma classe.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -69,9 +69,9 @@ DECLARE_WND_CLASS Especifica os estilos para a nova janela a seguir:
 
 DECLARE_WND_CLASS também especifica a cor do plano de fundo da janela padrão. Use o [DECLARE_WND_CLASS_EX](#declare_wnd_class_ex) macro para fornecer seus próprios estilos e cores de plano de fundo.
 
-[CWindowImpl](cwindowimpl-class.md) usa a macro DECLARE_WND_CLASS para criar uma janela com base em uma nova classe de janela. Para substituir esse comportamento, use o [DECLARE_WND_SUPERCLASS](#declare_wnd_superclass) macro, ou fornecer sua própria implementação da [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) função.  
+[CWindowImpl](cwindowimpl-class.md) usa a macro DECLARE_WND_CLASS para criar uma janela com base em uma nova classe de janela. Para substituir esse comportamento, use o [DECLARE_WND_SUPERCLASS](#declare_wnd_superclass) macro, ou fornecer sua própria implementação da [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) função.
 
-Para obter mais informações sobre como usar o windows em ATL, consulte o artigo [Classes de janela ATL](../../atl/atl-window-classes.md).  
+Para obter mais informações sobre como usar o windows em ATL, consulte o artigo [Classes de janela ATL](../../atl/atl-window-classes.md).
 
 ##  <a name="declare_wnd_class2"></a>  DECLARE_WND_CLASS2
 
@@ -84,7 +84,7 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 ### <a name="parameters"></a>Parâmetros
 
 *WndClassName*<br/>
-[in] O nome da nova classe de janela. Se for NULL, o ATL irá gerar um nome de classe de janela. 
+[in] O nome da nova classe de janela. Se for NULL, o ATL irá gerar um nome de classe de janela.
 
 *EnclosingClass*<br/>
 [in] O nome da classe de janela que inclui a nova classe de janela. Não pode ser NULL.
@@ -120,7 +120,7 @@ DECLARE_WND_SUPERCLASS implementa a seguinte função estática:
 
 Por padrão, [CWindowImpl](cwindowimpl-class.md) usa o [DECLARE_WND_CLASS](#declare_wnd_class) macro para criar uma janela com base em uma nova classe de janela. Especificando a macro DECLARE_WND_SUPERCLASS em um `CWindowImpl`-derivado da classe, a classe de janela se basearão em uma classe existente, mas usará seu procedimento de janela. Essa técnica é chamada superclassing.
 
-Além de usar as macros DECLARE_WND_CLASS e DECLARE_WND_SUPERCLASS, você pode substituir a [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) função com sua própria implementação.  
+Além de usar as macros DECLARE_WND_CLASS e DECLARE_WND_SUPERCLASS, você pode substituir a [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) função com sua própria implementação.
 
 Para obter mais informações sobre como usar o windows em ATL, consulte o artigo [Classes de janela ATL](../../atl/atl-window-classes.md).
 

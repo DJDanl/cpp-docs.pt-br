@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca420ce09cae5bf7c11dcfb0ad384e0002bdc4b1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 738d441cf88b41740cb0cff933916489cac683f2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403559"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073091"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Manipuladores para intervalos de mapa da mensagem
 
@@ -81,7 +81,7 @@ A entrada de mapa de mensagens consiste dos seguintes itens:
 
 - Parâmetros para a macro:
 
-     As duas primeiras macros usam três parâmetros:
+   As duas primeiras macros usam três parâmetros:
 
    - A ID de comando que inicia o intervalo
 
@@ -89,9 +89,9 @@ A entrada de mapa de mensagens consiste dos seguintes itens:
 
    - O nome da função de manipulador de mensagens
 
-     O intervalo de IDs de comando deve ser contíguo.
+   O intervalo de IDs de comando deve ser contíguo.
 
-     Terceira macro `ON_CONTROL_RANGE`, usa um parâmetro adicional de primeira: uma notificação de controle de mensagens, como **eventos EN_CHANGE**.
+   Terceira macro `ON_CONTROL_RANGE`, usa um parâmetro adicional de primeira: uma notificação de controle de mensagens, como **eventos EN_CHANGE**.
 
 ##  <a name="_core_declaring_the_handler_function"></a> Declarar a função do manipulador
 
@@ -113,11 +113,11 @@ Quando você escreve a entrada de mapa de mensagem, especifique:
 
 - Dois IDs, começando e terminando em um intervalo contíguo de comando.
 
-     Aqui estão elas **ID_VIEW_ZOOM25** e **ID_VIEW_ZOOM300**.
+   Aqui estão elas **ID_VIEW_ZOOM25** e **ID_VIEW_ZOOM300**.
 
 - O nome da função de manipulador para os comandos.
 
-     Aqui ele tem `OnZoom`.
+   Aqui ele tem `OnZoom`.
 
 A declaração de função seria semelhante a isso:
 
@@ -137,15 +137,15 @@ Quando você escreve o `ON_CONTROL_RANGE` macro em seu mapa de mensagem, especif
 
 - Uma mensagem de notificação de controle específico.
 
-     Aqui ele tem **BN_CLICKED**.
+   Aqui ele tem **BN_CLICKED**.
 
 - Os valores de ID de controle associados ao intervalo contíguo de controles.
 
-     Aqui, existem **IDC_BUTTON1** e **IDC_BUTTON10**.
+   Aqui, existem **IDC_BUTTON1** e **IDC_BUTTON10**.
 
 - O nome da função de manipulador de mensagens.
 
-     Aqui ele tem `OnButtonClicked`.
+   Aqui ele tem `OnButtonClicked`.
 
 Quando você escreve a função do manipulador, especifique o extra **UINT** parâmetro, conforme mostrado a seguir:
 

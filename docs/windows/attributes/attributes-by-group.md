@@ -15,26 +15,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19d8f6d636bdafa058391cbcd06da962538764fc
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 382a2e22e87910e2dff9ba59eb167777429aab0d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328240"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059760"
 ---
 # <a name="attributes-by-group"></a>Atributos por grupo
 
 Os atributos de C++ são organizados nos seguintes grupos funcionais.
-  
+
 |Atributo|Descrição|
 |---------------|-----------------|
 |[Atributos de COM](com-attributes.md)|Injete código para dar suporte a diversas áreas de desenvolvimento COM e desenvolvimento do .NET Framework common language runtime.|
 |[Atributos de IDL](idl-attributes.md)|Habilite a modificação do arquivo de um arquivo de código de origem sem o uso de um assistente e sem o conhecimento da estrutura e a sintaxe desse arquivo. idl.|
 |[Atributos de consumidor do OLE DB](ole-db-consumer-attributes.md)|Injetar código — com base nas [OLE DB modelos de consumidor](../../data/oledb/ole-db-consumer-templates-reference.md)— para criar um trabalho do OLE DB consumidor que executa tarefas como abrir tabelas, executar comandos e acesso a dados.|
 |[Atributos de compilador](compiler-attributes.md)|Fornecido pelo compilador do C++ da Microsoft.|
-  
+
 Para obter informações sobre como definir atributos personalizados para seu aplicativo .NET Framework, consulte [atributos definidos pelo usuário](../user-defined-attributes-cpp-component-extensions.md).
-  
+
 ## <a name="see-also"></a>Consulte também
 
 [Atributos C++ para COM e .NET](cpp-attributes-com-net.md)<br/>

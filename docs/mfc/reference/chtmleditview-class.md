@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c79991b22814140f93672dca2e1a92938aabdac8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a8069bd69af7743e0d83c7dbe770e1c73029ebf5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399139"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072649"
 ---
 # <a name="chtmleditview-class"></a>Classe CHtmlEditView
 
@@ -156,5 +156,4 @@ virtual LPCTSTR GetStartDocument();
 
 [Exemplo de HTMLEdit](../../visual-cpp-samples.md)<br/>
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)
-
 

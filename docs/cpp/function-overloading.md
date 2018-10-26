@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 608b4560f11e35d9aefb2c848a27c99c8dc6f4ec
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 3d942e2c5bca7d86e66cb579de1cbe946cb9f5f6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821342"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081489"
 ---
 # <a name="function-overloading"></a>Sobrecarga de função
 
@@ -126,7 +126,6 @@ O código anterior mostra a sobrecarga da função `print` no escopo do arquivo.
 O argumento padrão não é considerado parte do tipo de função. Consequentemente, não é usado na seleção de funções sobrecarregadas. Duas funções que diferem apenas nos argumentos padrão são consideradas várias definições em vez de funções sobrecarregadas.
 
 Não é possível fornecer argumentos padrão para operadores sobrecarregados.
-
 
 ## <a name="argument-matching"></a>Correspondência de argumento
 
@@ -471,7 +470,7 @@ Você pode sobrecarregar **operador new** exclusivamente de acordo com o tipo de
     void Print( PSTR szToPrint );
     ```
 
-     As duas funções anteriores têm listas de argumento idênticas. `PSTR` é um sinônimo do tipo `char *`. No escopo do membro, esse código gera um erro.
+   As duas funções anteriores têm listas de argumento idênticas. `PSTR` é um sinônimo do tipo `char *`. No escopo do membro, esse código gera um erro.
 
 - Os tipos enumerados são tipos distintos e podem ser usados para distinguir as funções sobrecarregadas.
 
@@ -482,7 +481,7 @@ Você pode sobrecarregar **operador new** exclusivamente de acordo com o tipo de
     void Print( char szToPrint[] );
     ```
 
-     Para matrizes dimensionadas multiplamente, a segunda e todas as dimensões seguintes são consideradas parte do tipo. Portanto, elas são usadas na distinção das funções sobrecarregadas:
+   Para matrizes dimensionadas multiplamente, a segunda e todas as dimensões seguintes são consideradas parte do tipo. Portanto, elas são usadas na distinção das funções sobrecarregadas:
 
     ```cpp
     void Print( char szToPrint[] );

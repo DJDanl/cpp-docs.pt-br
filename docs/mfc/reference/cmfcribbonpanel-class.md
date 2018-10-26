@@ -124,19 +124,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 664894fb99f02168d06cfc5d82b4225defe7fe38
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 46b7f613cdb67fa446c878ceda7dd9eca6eec7e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422214"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082574"
 ---
 # <a name="cmfcribbonpanel-class"></a>Classe CMFCRibbonPanel
 
 Implementa um painel que contém um conjunto de elementos de faixa de opções. Quando o painel é desenhado, ele exibe tantos elementos possível, dado o tamanho do painel.
 
 Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.
-
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -540,7 +539,6 @@ O nome do painel da faixa de opções.
 
 ##  <a name="getparentbutton"></a>  CMFCRibbonPanel::GetParentButton
 
-
 ```
 CMFCRibbonBaseElement* GetParentButton() const;
 ```
@@ -562,7 +560,6 @@ CMFCRibbonCategory* GetParentCategory() const;
 Um ponteiro para a categoria de faixa de opções que contém este painel de faixa de opções.
 
 ##  <a name="getparentmenubar"></a>  CMFCRibbonPanel::GetParentMenuBar
-
 
 ```
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
@@ -830,7 +827,6 @@ O painel principal da faixa de opções é exibido quando o usuário seleciona o
 
 ##  <a name="ismenumode"></a>  CMFCRibbonPanel::IsMenuMode
 
-
 ```
 BOOL IsMenuMode() const;
 ```
@@ -841,14 +837,13 @@ BOOL IsMenuMode() const;
 
 ##  <a name="onkey"></a>  CMFCRibbonPanel::OnKey
 
-
 ```
 virtual BOOL OnKey(UINT nChar);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *nChar*
+[in] *nChar*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -929,7 +924,8 @@ CMFCRibbonBaseElement* pElem);
 *nIndex*<br/>
 [in] Especifica o índice baseado em zero do elemento a ser substituído.
 
-[in] [out] *pElem* um ponteiro válido para o elemento que substitui o elemento original.
+*pElem*<br/>
+[no, out] Um ponteiro válido para o elemento que substitui o elemento original.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -954,7 +950,8 @@ CMFCRibbonBaseElement* pElem);
 *uiCmdID*<br/>
 [in] Especifica a ID do elemento de comando para substituir.
 
-[in] [out] *pElem* um ponteiro válido para o elemento que substituirá o elemento original.
+*pElem*<br/>
+[no, out] Um ponteiro válido para o elemento que substituirá o elemento original.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1007,7 +1004,6 @@ HMENU hMenu,
 BOOL bIsDefautCommand = FALSE,
 BOOL bRightAlign = FALSE);
 
-
 BOOL SetElementMenu(
 UINT uiCmdID,
 UINT uiMenuResID,
@@ -1055,7 +1051,8 @@ CRuntimeClass* pRTC);
 *nIndex*<br/>
 [in] Especifica o índice baseado em zero do elemento da faixa de opções para adicionar.
 
-[in] [out] *pRTC* um ponteiro para as informações de classe de tempo de execução para o elemento de faixa de opções que é adicionado ao painel de faixa de opções.
+*pRTC*<br/>
+[no, out] Um ponteiro para as informações de classe de tempo de execução para o elemento de faixa de opções que é adicionado ao painel de faixa de opções.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1080,7 +1077,8 @@ CRuntimeClass* pRTC);
 *uiCmdID*<br/>
 [in] Especifica a ID do elemento da faixa de opções de comando para adicionar.
 
-[in] [out] *pRTC* um ponteiro para as informações de classe de tempo de execução associados ao elemento de faixa de opções que é adicionado ao painel de faixa de opções.
+*pRTC*<br/>
+[no, out] Um ponteiro para as informações de classe de tempo de execução associados ao elemento de faixa de opções que é adicionado ao painel de faixa de opções.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -1106,7 +1104,6 @@ CMFCRibbonColorButton* pColorButton =
 (CMFCRibbonColorButton*)pPanel->SetElementRTCByID(
 ID_CHAR_COLOR,
     RUNTIME_CLASS (CMFCRibbonColorButton));
-
 
 // SetElementRTCByID sets runtime class and returns a pointer
 // to the newly created custom button,

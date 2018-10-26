@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9397dbd6c18d2256bf1803080f32d1fae36a159
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e23e883c143b1c65d4f150092193a7a693a34269
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430573"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065233"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>Classe CMFCRibbonMainPanel
 
@@ -96,7 +96,8 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] [out] *pElem* um ponteiro para o elemento de faixa de opções para adicionar ao painel principal.
+*pElem*<br/>
+[no, out] Um ponteiro para o elemento de faixa de opções para adicionar ao painel principal.
 
 ### <a name="remarks"></a>Comentários
 
@@ -132,7 +133,8 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] [out] *pElem* um ponteiro para o elemento de faixa de opções para adicionar a parte inferior do painel principal.
+*pElem*<br/>
+[no, out] Um ponteiro para o elemento de faixa de opções para adicionar a parte inferior do painel principal.
 
 ### <a name="remarks"></a>Comentários
 

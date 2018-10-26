@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c4acd417dacadbe2667f63c70435b97353bafe1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4d5db33dda6abc141c9247c74c16624bef5f0fc8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384410"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076029"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>Controles ActiveX MFC: adicionando eventos personalizados
 
@@ -48,7 +48,7 @@ O procedimento a seguir adiciona um evento personalizado específico, ClickIn. V
 
 1. No menu de atalho, clique em **Add** e, em seguida, clique em **Adicionar evento**.
 
-     Isso abre o Assistente para adicionar eventos.
+   Isso abre o Assistente para adicionar eventos.
 
 1. No **nome do evento** caixa, primeiro selecione qualquer evento existente, clique no **personalizado** radio botão e, em seguida, digite *ClickIn*.
 
@@ -94,7 +94,7 @@ Agora que você adicionou o evento personalizado do ClickIn usando o Assistente 
 
 1. Na janela Propriedades, clique o **mensagens** botão.
 
-     A janela Propriedades exibe uma lista de mensagens que podem ser manipulados pelo controle ActiveX. Qualquer mensagem mostrada em negrito já tem uma função de manipulador atribuída a ele.
+   A janela Propriedades exibe uma lista de mensagens que podem ser manipulados pelo controle ActiveX. Qualquer mensagem mostrada em negrito já tem uma função de manipulador atribuída a ele.
 
 1. Na janela Propriedades, selecione a mensagem que você deseja manipular. Neste exemplo, selecione WM_LBUTTONDOWN.
 
@@ -131,7 +131,7 @@ O procedimento a seguir adiciona um clique personalizado eventos.
 
 1. No menu de atalho, clique em **Add** e, em seguida, clique em **Adicionar evento**.
 
-     Isso abre o Assistente para adicionar eventos.
+   Isso abre o Assistente para adicionar eventos.
 
 1. No **nome do evento** lista suspensa, selecione um nome de evento de ação. Neste exemplo, selecione **clique em**.
 

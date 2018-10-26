@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b94172d57bc21e7f747a5d0986ef28dbfb80e481
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 33c79dc8c83f40d0b553a2c44cf22fa107f5ef34
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428636"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065584"
 ---
 # <a name="mfc-activex-controls"></a>Controles ActiveX MFC
 
@@ -109,19 +109,19 @@ Por padrão, as ferramentas e classes de controle ActiveX são instaladas nos se
 
 - **\Common7\Tools**
 
-     Contém os arquivos do contêiner de teste (TstCon32.exe, bem como seus arquivos de Ajuda).
+   Contém os arquivos do contêiner de teste (TstCon32.exe, bem como seus arquivos de Ajuda).
 
 - **\Vc7\atlmfc\include**
 
-     Contém os arquivos de inclusão necessários para o desenvolvimento de controles ActiveX com o MFC
+   Contém os arquivos de inclusão necessários para o desenvolvimento de controles ActiveX com o MFC
 
 - **\Vc7\atlmfc\src\mfc**
 
-     Contém o código-fonte para classes específicas de controle ActiveX no MFC
+   Contém o código-fonte para classes específicas de controle ActiveX no MFC
 
 - **\Vc7\atlmfc\lib**
 
-     Contém as bibliotecas necessárias para desenvolver controles ActiveX com o MFC
+   Contém as bibliotecas necessárias para desenvolver controles ActiveX com o MFC
 
 Também há exemplos para controles ActiveX do MFC. Para obter mais informações sobre esses exemplos, consulte [exemplos de controles: MFC-Based os controles ActiveX](../visual-cpp-samples.md)
 

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2cdeef97b92550731b06dcb4a1d425d77f5920a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bbac8dc499c08d96abd33d49f5adec08095ca420
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075144"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067273"
 ---
 # <a name="security-global-functions"></a>Funções globais de segurança
 
@@ -50,11 +50,11 @@ Essas funções dão suporte para modificar objetos ACL e SID.
 |[AtlSetOwnerSid](#atlsetownersid)|Chame essa função para definir o SID (identificador de segurança) do proprietário de um objeto.|
 |[AtlGetSacl](#atlgetsacl)|Chame essa função para recuperar as informações da SACL (lista de controle de acesso do sistema) de um objeto especificado.|
 |[AtlSetSacl](#atlsetsacl)|Chame essa função para definir as informações da SACL (lista de controle de acesso do sistema) de um objeto especificado.|
-|[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|Chame essa função para recuperar o descritor de segurança de determinado objeto.|  
+|[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|Chame essa função para recuperar o descritor de segurança de determinado objeto.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlsecurity. h 
+**Cabeçalho:** atlsecurity. h
 
 ##  <a name="atlgetdacl"></a>  AtlGetDacl
 
@@ -127,7 +127,7 @@ Retorna true em caso de êxito, false em caso de falha.
 Em compilações de depuração, um erro de asserção ocorrerá se *hObject* é inválido, ou se *dwInheritanceFlowControl* não é um dos três valores permitidos.
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlsecurity. h 
+**Cabeçalho:** atlsecurity. h
 
 ##  <a name="atlgetgroupsid"></a>  AtlGetGroupSid
 
@@ -156,11 +156,11 @@ Ponteiro para um `CSid` objeto que contém as novas informações de segurança.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna true em caso de êxito, false em caso de falha.  
+Retorna true em caso de êxito, false em caso de falha.
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlsecurity. h 
+**Cabeçalho:** atlsecurity. h
 
 ##  <a name="atlsetgroupsid"></a>  AtlSetGroupSid
 
@@ -189,11 +189,11 @@ O `CSid` objeto que contém as novas informações de segurança.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna true em caso de êxito, false em caso de falha.  
+Retorna true em caso de êxito, false em caso de falha.
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlsecurity. h 
+**Cabeçalho:** atlsecurity. h
 
 ##  <a name="atlgetownersid"></a>  AtlGetOwnerSid
 
@@ -222,11 +222,11 @@ Ponteiro para um `CSid` objeto que contém as novas informações de segurança.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna true em caso de êxito, false em caso de falha.  
+Retorna true em caso de êxito, false em caso de falha.
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlsecurity. h 
+**Cabeçalho:** atlsecurity. h
 
 ##  <a name="atlsetownersid"></a>  AtlSetOwnerSid
 
@@ -255,11 +255,11 @@ O `CSid` objeto que contém as novas informações de segurança.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Retorna true em caso de êxito, false em caso de falha.  
+Retorna true em caso de êxito, false em caso de falha.
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlsecurity. h 
+**Cabeçalho:** atlsecurity. h
 
 ##  <a name="atlgetsacl"></a>  AtlGetSacl
 
@@ -296,11 +296,11 @@ Retorna true em caso de êxito, false em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Se `AtlGetSacl` deve ser chamado várias vezes em vários objetos diferentes, será mais eficiente para habilitar o privilégio SE_SECURITY_NAME, uma vez antes de chamar a função, com *bRequestNeededPrivileges* definido como false.  
+Se `AtlGetSacl` deve ser chamado várias vezes em vários objetos diferentes, será mais eficiente para habilitar o privilégio SE_SECURITY_NAME, uma vez antes de chamar a função, com *bRequestNeededPrivileges* definido como false.
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlsecurity. h 
+**Cabeçalho:** atlsecurity. h
 
 ##  <a name="atlsetsacl"></a>  AtlSetSacl
 
@@ -343,11 +343,11 @@ Retorna true em caso de êxito, false em caso de falha.
 
 Em compilações de depuração, um erro de asserção ocorrerá se *hObject* é inválido, ou se *dwInheritanceFlowControl* não é um dos três valores permitidos.
 
-Se `AtlSetSacl` deve ser chamado várias vezes em vários objetos diferentes, será mais eficiente para habilitar o privilégio SE_SECURITY_NAME, uma vez antes de chamar a função, com *bRequestNeededPrivileges* definido como false.  
+Se `AtlSetSacl` deve ser chamado várias vezes em vários objetos diferentes, será mais eficiente para habilitar o privilégio SE_SECURITY_NAME, uma vez antes de chamar a função, com *bRequestNeededPrivileges* definido como false.
 
 ### <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atlsecurity. h 
+**Cabeçalho:** atlsecurity. h
 
 ##  <a name="atlgetsecuritydescriptor"></a>  AtlGetSecurityDescriptor
 
@@ -390,7 +390,7 @@ Retorna true em caso de êxito, false em caso de falha.
 
 ### <a name="remarks"></a>Comentários
 
-Se `AtlGetSecurityDescriptor` deve ser chamado várias vezes em vários objetos diferentes, será mais eficiente para habilitar o privilégio SE_SECURITY_NAME, uma vez antes de chamar a função, com *bRequestNeededPrivileges* definido como false.  
+Se `AtlGetSecurityDescriptor` deve ser chamado várias vezes em vários objetos diferentes, será mais eficiente para habilitar o privilégio SE_SECURITY_NAME, uma vez antes de chamar a função, com *bRequestNeededPrivileges* definido como false.
 
 ### <a name="requirements"></a>Requisitos
 

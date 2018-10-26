@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d92d196cc38e6033c6f16332e4977f2481c4496
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 98fec6659c2f4e998b946983a0bd2bdea6d0cde1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990328"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083250"
 ---
 # <a name="openmp-directives"></a>Diretivas OpenMP
 
@@ -52,19 +52,19 @@ Fornece links para as diretivas usadas na API OpenMP.
 
 Visual C++ suporta as seguintes diretivas OpenMP:
 
-Diretiva                             | Descrição
-------------------------------------- | -----------------------------------------------------------------------------------------------------------------
-[atomic](#atomic)                     | Especifica que um local de memória que será atualizado atomicamente.
-[barrier](#barrier)                   | Sincroniza todos os threads em uma equipe; todos os threads pausar a barreira, até que todos os threads executem a barreira.
-[critical](#critical)                 | Especifica que o código só é executado em um thread por vez.
-[flush](#flush-openmp)                | Especifica que todos os threads têm a mesma exibição de memória para todos os objetos compartilhados.
-[for](#for-openmp)                    | Faz com que o trabalho feito um `for` loop dentro de uma região paralela para ser dividido entre threads.
-[master](#master)                     | Especifica que somente o thread mestre deve ser executada uma seção do programa.
-[Ordenado](#ordered-openmp-directives) | Especifica que o código em um em paralelo `for` loop deve ser executado como um loop sequencial.
-[parallel](#parallel)                 | Define uma região paralela, que é um código que será executado por vários threads em paralelo.
-[Seções](#sections-openmp)          | Identifica as seções de código a ser dividida entre todos os threads.
-[single](#single)                     | Permite que você especifique que uma seção de código deve ser executada em um único thread, não necessariamente o thread mestre.
-[threadprivate](#threadprivate)       | Especifica que uma variável privada em um thread.
+|Diretiva|Descrição|
+|---------|-----------|
+|[atomic](#atomic)|Especifica que um local de memória que será atualizado atomicamente.|
+|[barrier](#barrier)|Sincroniza todos os threads em uma equipe; todos os threads pausar a barreira, até que todos os threads executem a barreira.|
+|[critical](#critical)|Especifica que o código só é executado em um thread por vez.|
+|[flush](#flush-openmp)|Especifica que todos os threads têm a mesma exibição de memória para todos os objetos compartilhados.|
+|[for](#for-openmp)|Faz com que o trabalho feito um `for` loop dentro de uma região paralela para ser dividido entre threads.|
+|[master](#master)|Especifica que somente o thread mestre deve ser executada uma seção do programa.|
+|[Ordenado](#ordered-openmp-directives)|Especifica que o código em um em paralelo `for` loop deve ser executado como um loop sequencial.|
+|[parallel](#parallel)|Define uma região paralela, que é um código que será executado por vários threads em paralelo.|
+|[Seções](#sections-openmp)|Identifica as seções de código a ser dividida entre todos os threads.|
+|[single](#single)|Permite que você especifique que uma seção de código deve ser executada em um único thread, não necessariamente o thread mestre.|
+|[threadprivate](#threadprivate)|Especifica que uma variável privada em um thread.|
 
 ## <a name="atomic"></a>Atomic
 
@@ -306,13 +306,13 @@ Um `for` loop. Um comportamento indefinido resultará se o código do usuário n
 
 O `for` diretiva suporta as seguintes cláusulas OpenMP:
 
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [lastprivate](../../../parallel/openmp/reference/lastprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [Ordenado](../../../parallel/openmp/reference/ordered-openmp-directives.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
-- [schedule](../../../parallel/openmp/reference/schedule.md)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [lastprivate](openmp-clauses.md#lastprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [Ordenado](openmp-clauses.md#ordered-openmp-clauses)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
+- [schedule](openmp-clauses.md#schedule)
 
 Se `parallel` também for especificado, `clauses` pode ser qualquer cláusula aceitos pela `parallel` ou `for` diretivas, exceto `nowait`.
 
@@ -535,14 +535,14 @@ Define uma região paralela, que é um código que será executado por vários t
 
 O `parallel` diretiva suporta as seguintes cláusulas OpenMP:
 
-- [copyin](../../../parallel/openmp/reference/copyin.md)
-- [default](../../../parallel/openmp/reference/default-openmp.md)
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [if](../../../parallel/openmp/reference/if-openmp.md)
-- [num_threads](../../../parallel/openmp/reference/num-threads.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
-- [shared](../../../parallel/openmp/reference/shared-openmp.md)
+- [copyin](openmp-clauses.md#copyin)
+- [default](openmp-clauses.md#default-openmp)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [if](openmp-clauses.md#if-openmp)
+- [num_threads](openmp-clauses.md#num-threads)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
+- [shared](openmp-clauses.md#shared-openmp)
 
 `parallel` também pode ser usado com o [seções](#sections-openmp) e [para](#for-openmp) diretivas.
 
@@ -603,11 +603,11 @@ O `sections` diretiva pode conter zero ou mais `section` diretivas.
 
 O `sections` diretiva suporta as seguintes cláusulas OpenMP:
 
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [lastprivate](../../../parallel/openmp/reference/lastprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [lastprivate](openmp-clauses.md#lastprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
 
 Se `parallel` também for especificado, `clauses` pode ser qualquer cláusula aceitos pela `parallel` ou `sections` diretivas, exceto `nowait`.
 
@@ -656,10 +656,10 @@ Permite que você especifique que uma seção de código deve ser executada em u
 
 O `single` diretiva suporta as seguintes cláusulas OpenMP:
 
-- [copyprivate](../../../parallel/openmp/reference/copyprivate.md)
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
+- [copyprivate](openmp-clauses.md#copyprivate)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [private](openmp-clauses.md#private-openmp)
 
 O [mestre](#master) diretiva permite que você especifique que uma seção de código deve ser executada somente no thread mestre.
 
@@ -745,4 +745,4 @@ Os usuários não tem controle sobre quando os threads que constitui a região p
 
 ### <a name="example"></a>Exemplo
 
-Para obter um exemplo de uso `threadprivate`, consulte [privada](../../../parallel/openmp/reference/private-openmp.md).
+Para obter um exemplo de uso `threadprivate`, consulte [privada](openmp-clauses.md#private-openmp).

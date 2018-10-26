@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6e8f448d4b6bee4b301fc567cc8e8e857747a4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1ec2e3253b4d26bc6773ffc4005100edfbec1bff
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440284"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077517"
 ---
 # <a name="cpen-class"></a>Classe CPen
 
@@ -92,12 +92,10 @@ Constrói um objeto `CPen`.
 ```
 CPen();
 
-
 CPen(
     int nPenStyle,
     int nWidth,
     COLORREF crColor);
-
 
 CPen(
     int nPenStyle,
@@ -132,13 +130,13 @@ A segunda versão do `CPen` construtor Especifica uma combinação de tipo, esti
 
 - PS_COSMETIC cria uma caneta superficial.
 
-     A segunda versão dos `CPen` construtor adiciona os seguintes estilos de caneta para *nPenStyle*:
+   A segunda versão dos `CPen` construtor adiciona os seguintes estilos de caneta para *nPenStyle*:
 
 - PS_ALTERNATE cria uma caneta que define todos os outros pixels. (Esse estilo é aplicável somente a canetas superficiais).
 
 - PS_USERSTYLE cria uma caneta que usa uma matriz de estilo fornecido pelo usuário.
 
-     O limite de extremidade pode ser um dos seguintes valores:
+   O limite de extremidade pode ser um dos seguintes valores:
 
 - PS_ENDCAP_ROUND delimitada é redonda.
 
@@ -146,7 +144,7 @@ A segunda versão do `CPen` construtor Especifica uma combinação de tipo, esti
 
 - PS_ENDCAP_FLAT delimitada é simples.
 
-     A junção pode ser um dos seguintes valores:
+   A junção pode ser um dos seguintes valores:
 
 - Une PS_JOIN_BEVEL são biselada.
 
@@ -192,7 +190,6 @@ BOOL CreatePen(
     int nPenStyle,
     int nWidth,
     COLORREF crColor);
-
 
 BOOL CreatePen(
     int nPenStyle,

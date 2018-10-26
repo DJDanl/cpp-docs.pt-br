@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 338404abe7499b6d9ff7679420f069a2857ce1e0
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: de3ca61005d0bafcc4387c793b09ec4925faf64b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494433"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064065"
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>Programação do .NET com c++ CLI (Visual C++)
 
-**Visual Studio 2015**: por padrão, os projetos CLR criados com o Visual Studio 2015 direcionar o .NET Framework 4.5.2. Para o destino o .NET Framework 4.6 quando você cria um novo projeto, no **novo projeto** caixa de diálogo, altere a estrutura de destino na lista suspensa na parte central superior da caixa de diálogo. Para alterar a estrutura de destino para um projeto existente, feche o projeto, edite o arquivo de projeto (. vcxproj) e altere o valor da versão do Framework de destino a 4.6. Próxima vez que abrir o projeto, as configurações entrarão em vigor. 
+**Visual Studio 2015**: por padrão, os projetos CLR criados com o Visual Studio 2015 direcionar o .NET Framework 4.5.2. Para o destino o .NET Framework 4.6 quando você cria um novo projeto, no **novo projeto** caixa de diálogo, altere a estrutura de destino na lista suspensa na parte central superior da caixa de diálogo. Para alterar a estrutura de destino para um projeto existente, feche o projeto, edite o arquivo de projeto (. vcxproj) e altere o valor da versão do Framework de destino a 4.6. Próxima vez que abrir o projeto, as configurações entrarão em vigor.
 
-**Visual Studio 2017**: no Visual Studio 2017, a estrutura padrão é a 4.6.1 e o seletor de versão do Framework é na parte inferior a **caixa de diálogo Novo projeto**. C + + c++ CLI em si não é instalado por padrão. Para instalar o componente, abra o instalador do Visual Studio e escolha o C + + c++ /CLI componente de CLI em Visual C++. 
+**Visual Studio 2017**: no Visual Studio 2017, a estrutura padrão é a 4.6.1 e o seletor de versão do Framework é na parte inferior a **caixa de diálogo Novo projeto**. C + + c++ CLI em si não é instalado por padrão. Para instalar o componente, abra o instalador do Visual Studio e escolha o C + + c++ /CLI componente de CLI em Visual C++.
 
 ## <a name="in-this-section"></a>Nesta seção
 

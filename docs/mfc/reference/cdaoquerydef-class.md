@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be2676609cae4de6b2f3995be1bc9311f88e0a84
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a10e1f6adb1fc9274a2a59215564fb60984ea661
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408701"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074482"
 ---
 # <a name="cdaoquerydef-class"></a>Classe CDaoQueryDef
 
@@ -235,7 +235,7 @@ Você pode modificar querydef se:
 
 - Você tem permissões de atualização para o banco de dados.
 
-     Isso depende se você tiver implementado a recursos de segurança. MFC não oferece suporte de segurança. Você deve implementá-la por conta própria, chamando DAO diretamente ou usando o Microsoft Access. Consulte o tópico "Propriedade Permissions" na Ajuda do DAO.
+   Isso depende se você tiver implementado a recursos de segurança. MFC não oferece suporte de segurança. Você deve implementá-la por conta própria, chamando DAO diretamente ou usando o Microsoft Access. Consulte o tópico "Propriedade Permissions" na Ajuda do DAO.
 
 ##  <a name="cdaoquerydef"></a>  CDaoQueryDef::CDaoQueryDef
 
@@ -426,7 +426,6 @@ void GetFieldInfo(
     CDaoFieldInfo& fieldinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 
-
 void GetFieldInfo(
     LPCTSTR lpszName,
     CDaoFieldInfo& fieldinfo,
@@ -519,7 +518,6 @@ void GetParameterInfo(
     int nIndex,
     CDaoParameterInfo& paraminfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetParameterInfo(
     LPCTSTR lpszName,
@@ -790,7 +788,6 @@ Chame essa função de membro para definir o valor de um parâmetro no querydef 
 virtual void SetParamValue(
     LPCTSTR lpszName,
     const COleVariant& varValue);
-
 
 virtual void SetParamValue(
     int nIndex,

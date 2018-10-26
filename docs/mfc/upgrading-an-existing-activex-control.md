@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5bca0f7ff1b2fdb2650eadbcdca4778d9b53ef
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 0567913eac57c4150f9fe6d051d2fc8e0e31860b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890354"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082914"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Atualizando um controle ActiveX existente
 
@@ -213,11 +213,11 @@ Para usar um controle licenciado em uma página HTML em um computador nonlicense
 
 1. Inserir o \<objeto > marca para o seu controle licenciado após a marca do Gerenciador de licenças.
 
-     Por exemplo, uma página HTML que exibe o controle de edição mascarada da Microsoft é mostrada abaixo. A primeira classe que ID é para o controle do Gerenciador de licenças, a segunda classe que ID é para o controle de edição mascarado. Alterar as marcas para apontar para o caminho relativo do arquivo. lpk que você criou anteriormente e adicione uma marca de objeto, incluindo a ID de classe para o seu controle.
+   Por exemplo, uma página HTML que exibe o controle de edição mascarada da Microsoft é mostrada abaixo. A primeira classe que ID é para o controle do Gerenciador de licenças, a segunda classe que ID é para o controle de edição mascarado. Alterar as marcas para apontar para o caminho relativo do arquivo. lpk que você criou anteriormente e adicione uma marca de objeto, incluindo a ID de classe para o seu controle.
 
 1. Inserir o \<EMBED > atributo para o arquivo LPK, se usar o NCompass ActiveX plug-in.
 
-     Se o controle pode ser exibido em outro ativo habilitado navegadores — por exemplo, o Netscape usando o plug-in do NCompass ActiveX — você deve adicionar o \<EMBED > sintaxe conforme mostrado abaixo.
+   Se o controle pode ser exibido em outro ativo habilitado navegadores — por exemplo, o Netscape usando o plug-in do NCompass ActiveX — você deve adicionar o \<EMBED > sintaxe conforme mostrado abaixo.
 
 ```
 <OBJECT CLASSID="clsid:5220cb21-c88d-11cf-b347-00aa00a28331">

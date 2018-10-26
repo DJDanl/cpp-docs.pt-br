@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4ec9bb1a35b1ce049dfeca7b356b98431fad4578
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: b777be28fcee3c11a8f3ae2058d6197f39d2ba22
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790302"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060163"
 ---
 # <a name="iidis"></a>iid_is
 
@@ -78,4 +78,4 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 ## <a name="see-also"></a>Consulte também
 
 [Atributos de IDL](idl-attributes.md)<br/>
-[Atributos de parâmetro](parameter-attributes.md)  
+[Atributos de parâmetro](parameter-attributes.md)

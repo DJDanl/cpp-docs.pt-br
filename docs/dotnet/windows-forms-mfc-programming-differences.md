@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e6bac12d841a065495f7775598c65f39a0aaba67
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d0b62bbca87e5b4fcabcf5124271ee8be68b755f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394264"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068834"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Windows Forms/diferenças de programação MFC
 
@@ -39,31 +39,31 @@ O seguinte modo de exibição do MFC ou documento e recursos de roteamento de co
 
 - Integração com o shell
 
-     MFC manipula os comandos de DDE (troca) de dados dinâmicos e os argumentos de linha de comando que o shell usa quando um documento com o botão direito e selecione esses verbos como abrir, editar ou imprimir. Windows Forms não tem nenhuma integração com o shell e não responder a verbos de shell.
+   MFC manipula os comandos de DDE (troca) de dados dinâmicos e os argumentos de linha de comando que o shell usa quando um documento com o botão direito e selecione esses verbos como abrir, editar ou imprimir. Windows Forms não tem nenhuma integração com o shell e não responder a verbos de shell.
 
 - Modelos de documento
 
-     No MFC, modelos de documento associar um modo de exibição, que está contido em uma janela com moldura (no modo MDI, SDI ou MTI), o documento aberto. Formulários do Windows não tem nenhum equivalente para modelos de documento.
+   No MFC, modelos de documento associar um modo de exibição, que está contido em uma janela com moldura (no modo MDI, SDI ou MTI), o documento aberto. Formulários do Windows não tem nenhum equivalente para modelos de documento.
 
 - Documentos
 
-     MFC registra tipos de arquivo do documento e processa o tipo de documento ao abrir um documento do shell. Formulários do Windows tem suporte documento.
+   MFC registra tipos de arquivo do documento e processa o tipo de documento ao abrir um documento do shell. Formulários do Windows tem suporte documento.
 
 - Estados de documento
 
-     MFC mantém sujos estados para o documento. Portanto, quando você fecha o aplicativo, feche a última exibição que contém o aplicativo ou sair do Windows, MFC solicitará que você salve o documento. Formulários do Windows tem suporte equivalente.
+   MFC mantém sujos estados para o documento. Portanto, quando você fecha o aplicativo, feche a última exibição que contém o aplicativo ou sair do Windows, MFC solicitará que você salve o documento. Formulários do Windows tem suporte equivalente.
 
 - Comandos
 
-     MFC tem o conceito de comandos. A barra de menus, barra de ferramentas e menu de contexto podem invocar o mesmo comando, por exemplo, recortar e copiar. No Windows Forms, os comandos são rigidamente acoplados eventos de um determinado elemento de interface do usuário (por exemplo, um item de menu); Portanto, você precisa vincular explicitamente todos os eventos de comando. Você também pode manipular vários eventos com um único manipulador em formulários do Windows. Para obter mais informações, consulte [conectar vários eventos a um único manipulador de eventos nos Windows Forms](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms).
+   MFC tem o conceito de comandos. A barra de menus, barra de ferramentas e menu de contexto podem invocar o mesmo comando, por exemplo, recortar e copiar. No Windows Forms, os comandos são rigidamente acoplados eventos de um determinado elemento de interface do usuário (por exemplo, um item de menu); Portanto, você precisa vincular explicitamente todos os eventos de comando. Você também pode manipular vários eventos com um único manipulador em formulários do Windows. Para obter mais informações, consulte [conectar vários eventos a um único manipulador de eventos nos Windows Forms](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms).
 
 - Roteamento de comando
 
-     Permite que o roteamento de comando do MFC, o modo de exibição ativo ou o documento para processar comandos. Como o mesmo comando geralmente tem significados diferentes para diferentes modos de exibição (por exemplo, cópia se comporta de forma diferente na exibição de edição de texto, que em um editor de gráficos), os comandos precisam ser manipulados pelo modo de exibição ativo. Como barras de ferramentas e menus de formulários do Windows têm não compreende inerente a exibição ativa, você não pode ter um manipulador diferentes para cada tipo de exibição para seu **MenuItem.Click** eventos sem escrever código interno adicional.
+   Permite que o roteamento de comando do MFC, o modo de exibição ativo ou o documento para processar comandos. Como o mesmo comando geralmente tem significados diferentes para diferentes modos de exibição (por exemplo, cópia se comporta de forma diferente na exibição de edição de texto, que em um editor de gráficos), os comandos precisam ser manipulados pelo modo de exibição ativo. Como barras de ferramentas e menus de formulários do Windows têm não compreende inerente a exibição ativa, você não pode ter um manipulador diferentes para cada tipo de exibição para seu **MenuItem.Click** eventos sem escrever código interno adicional.
 
 - Mecanismo de atualização de comando
 
-     MFC possui um mecanismo de atualização. Portanto, o modo de exibição ativo ou o documento é responsável pelo estado dos elementos da interface do usuário (por exemplo, habilitar ou desabilitar um botão de ferramenta ou item de menu e verificada estados). Formulários do Windows não tem nenhum equivalente de um mecanismo de atualização de comando.
+   MFC possui um mecanismo de atualização. Portanto, o modo de exibição ativo ou o documento é responsável pelo estado dos elementos da interface do usuário (por exemplo, habilitar ou desabilitar um botão de ferramenta ou item de menu e verificada estados). Formulários do Windows não tem nenhum equivalente de um mecanismo de atualização de comando.
 
 ## <a name="see-also"></a>Consulte também
 

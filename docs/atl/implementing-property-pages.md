@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f69dab9dfc9216d1c56ed54730d5f94cbb58b1db
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f00e95aee0f3e16a979f4969a33b90746b4082ea
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46088729"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062399"
 ---
 # <a name="implementing-property-pages"></a>Implementação de páginas de propriedade
 
@@ -43,11 +43,11 @@ Para criar uma página de propriedades usando ATL:
 
 - Opcionalmente, substituir o `IPropertyPageImpl` métodos usando as diretrizes abaixo.
 
-   |Método IPropertyPageImpl|Substitua quando quiser...|Observações|  
-   |------------------------------|----------------------------------|-----------|  
-   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|Execute as verificações de integridade básicas sobre o número de objetos que estão sendo passados para sua página e as interfaces que dão suporte a eles.|Execute seu próprio código antes de chamar a implementação da classe base. Se os objetos que está sendo definidos não atenderem suas expectativas, você deve fazer a chamada assim que possível.|  
-   |[Ativar](../atl/reference/ipropertypageimpl-class.md#activate)|Inicialize a interface do usuário da sua página (por exemplo, defina os controles de caixa de diálogo com valores da propriedade atual de objetos, criar controles dinamicamente ou executar outras inicializações).|Chame a implementação de classe base antes de seu código para que a classe base tenha a oportunidade de criar a janela de diálogo e todos os controles, antes de tentar atualizá-los.|  
-   |[Aplicar](../atl/reference/ipropertypageimpl-class.md#apply)|Valide as configurações de propriedade e atualize os objetos.|Não é necessário chamar a implementação da classe base, pois ele não faz nada além de rastreamento de chamada.|  
+   |Método IPropertyPageImpl|Substitua quando quiser...|Observações|
+   |------------------------------|----------------------------------|-----------|
+   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|Execute as verificações de integridade básicas sobre o número de objetos que estão sendo passados para sua página e as interfaces que dão suporte a eles.|Execute seu próprio código antes de chamar a implementação da classe base. Se os objetos que está sendo definidos não atenderem suas expectativas, você deve fazer a chamada assim que possível.|
+   |[Ativar](../atl/reference/ipropertypageimpl-class.md#activate)|Inicialize a interface do usuário da sua página (por exemplo, defina os controles de caixa de diálogo com valores da propriedade atual de objetos, criar controles dinamicamente ou executar outras inicializações).|Chame a implementação de classe base antes de seu código para que a classe base tenha a oportunidade de criar a janela de diálogo e todos os controles, antes de tentar atualizá-los.|
+   |[Aplicar](../atl/reference/ipropertypageimpl-class.md#apply)|Valide as configurações de propriedade e atualize os objetos.|Não é necessário chamar a implementação da classe base, pois ele não faz nada além de rastreamento de chamada.|
    |[Desativar](../atl/reference/ipropertypageimpl-class.md#deactivate)|Limpe itens relacionados a janela.|A implementação da classe base destrói a caixa de diálogo que representa a página de propriedades. Se você precisar limpar antes que a caixa de diálogo é destruída, você deve adicionar seu código antes de chamar a classe base.|
 
 Para uma implementação de página de propriedade de exemplo, consulte [exemplo: Implementando uma página de propriedades](../atl/example-implementing-a-property-page.md).

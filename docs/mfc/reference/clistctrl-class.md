@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c530a9853aad3e16e5e4094f4d90e30c2643c0d8
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: f89d70ed5b7a84cdbed61784b59b0748abc6432d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890888"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083315"
 ---
 # <a name="clistctrl-class"></a>Classe CListCtrl
 
@@ -444,19 +444,19 @@ Controles de exibição de lista podem exibir seu conteúdo de quatro maneiras d
 
 - Exibição de ícones
 
-     Cada item é exibido como um ícone em tamanho normal (32 x 32 pixels) com um rótulo abaixo dele. O usuário pode arrastar os itens em qualquer local na janela de exibição de lista.
+   Cada item é exibido como um ícone em tamanho normal (32 x 32 pixels) com um rótulo abaixo dele. O usuário pode arrastar os itens em qualquer local na janela de exibição de lista.
 
 - Modo de exibição de ícone pequeno
 
-     Cada item é exibido como um ícone pequeno (16 x 16 pixels) com o rótulo à direita dele. O usuário pode arrastar os itens em qualquer local na janela de exibição de lista.
+   Cada item é exibido como um ícone pequeno (16 x 16 pixels) com o rótulo à direita dele. O usuário pode arrastar os itens em qualquer local na janela de exibição de lista.
 
 - Exibição de lista
 
-     Cada item é exibido como um pequeno ícone com um rótulo à direita dele. Itens são organizados em colunas e não podem ser arrastados para qualquer local na janela de exibição de lista.
+   Cada item é exibido como um pequeno ícone com um rótulo à direita dele. Itens são organizados em colunas e não podem ser arrastados para qualquer local na janela de exibição de lista.
 
 - Exibição de relatório
 
-     Cada item é exibido em sua própria linha, com informações adicionais, organizadas em colunas à direita. A coluna mais à esquerda contém o ícone pequeno e o rótulo e as colunas subsequentes contêm subitens conforme especificado pelo aplicativo. Um controle de cabeçalho incorporado (classe [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementa essas colunas. Para obter mais informações sobre o controle de cabeçalho e colunas em uma exibição de relatório, consulte [usando CListCtrl: adicionando colunas ao controle (exibição de relatório)](../../mfc/adding-columns-to-the-control-report-view.md).
+   Cada item é exibido em sua própria linha, com informações adicionais, organizadas em colunas à direita. A coluna mais à esquerda contém o ícone pequeno e o rótulo e as colunas subsequentes contêm subitens conforme especificado pelo aplicativo. Um controle de cabeçalho incorporado (classe [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementa essas colunas. Para obter mais informações sobre o controle de cabeçalho e colunas em uma exibição de relatório, consulte [usando CListCtrl: adicionando colunas ao controle (exibição de relatório)](../../mfc/adding-columns-to-the-control-report-view.md).
 
 O estilo de exibição de lista atual do controle determina o modo de exibição atual. Para obter mais informações sobre esses estilos e seu uso, consulte [usando CListCtrl: alterando estilos de controle de lista](../../mfc/changing-list-control-styles.md).
 
@@ -466,19 +466,19 @@ Além dos estilos de lista padrão, a classe `CListCtrl` dá suporte a um grande
 
 - Passe o mouse seleção
 
-     Quando habilitada, permite a seleção automática de um item quando o cursor permanece sobre o item para um determinado período de tempo.
+   Quando habilitada, permite a seleção automática de um item quando o cursor permanece sobre o item para um determinado período de tempo.
 
 - Modos de exibição de lista virtual
 
-     Quando habilitada, permite que o controle dar suporte a até itens DWORD. Isso é possível, colocando a sobrecarga de gerenciamento de dados do item no aplicativo. Exceto para as informações de foco e seleção de item, todas as informações do item devem ser gerenciadas pelo aplicativo. Para obter mais informações, consulte [usando CListCtrl: controles de lista Virtual](../../mfc/virtual-list-controls.md).
+   Quando habilitada, permite que o controle dar suporte a até itens DWORD. Isso é possível, colocando a sobrecarga de gerenciamento de dados do item no aplicativo. Exceto para as informações de foco e seleção de item, todas as informações do item devem ser gerenciadas pelo aplicativo. Para obter mais informações, consulte [usando CListCtrl: controles de lista Virtual](../../mfc/virtual-list-controls.md).
 
 - Ativação de um e dois cliques
 
-     Quando habilitada, permite que o rastreio importante (realce automático do texto do item) e a ativação de um ou dois cliques do item realçado.
+   Quando habilitada, permite que o rastreio importante (realce automático do texto do item) e a ativação de um ou dois cliques do item realçado.
 
 - Arraste e solte a ordenação de coluna
 
-     Quando habilitada, permite a reordenação de arrastar e soltar de colunas em um controle de exibição de lista. Disponível somente no modo de exibição de relatório.
+   Quando habilitada, permite a reordenação de arrastar e soltar de colunas em um controle de exibição de lista. Disponível somente no modo de exibição de relatório.
 
 Para obter informações sobre como usar esses novos estilos estendidos, consulte [usando CListCtrl: alterando estilos de controle de lista](../../mfc/changing-list-control-styles.md).
 
@@ -496,19 +496,19 @@ Os ícones, imagens de item de cabeçalho e aplicativo - definido estados para e
 
 - Ícone grande
 
-     Usado no modo de exibição de ícone para ícones em tamanho normal.
+   Usado no modo de exibição de ícone para ícones em tamanho normal.
 
 - Ícone pequeno
 
-     Usado no ícone pequeno, lista e exibições de relatório para versões menores dos ícones usados no modo de exibição de ícone.
+   Usado no ícone pequeno, lista e exibições de relatório para versões menores dos ícones usados no modo de exibição de ícone.
 
 - Estado definido pelo aplicativo
 
-     Contém as imagens de estado, que são exibidas ao lado do ícone de um item para indicar um estado definido pelo aplicativo.
+   Contém as imagens de estado, que são exibidas ao lado do ícone de um item para indicar um estado definido pelo aplicativo.
 
 - Item de cabeçalho
 
-     Usado no modo de exibição de relatório para imagens pequenas que aparecem em cada item de controle de cabeçalho.
+   Usado no modo de exibição de relatório para imagens pequenas que aparecem em cada item de controle de cabeçalho.
 
 Por padrão, um controle de exibição de lista destrói as listas de imagens atribuídas a ele quando ele for destruído; No entanto, o desenvolvedor pode personalizar esse comportamento com a destruição de cada lista de imagens quando ele não é mais usado, conforme determinado pelo aplicativo. Para obter mais informações, consulte [usando CListCtrl: itens de lista e listas de imagens](../list-items-and-image-lists.md).
 

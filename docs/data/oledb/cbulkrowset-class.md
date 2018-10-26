@@ -113,224 +113,224 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3538a8cd15fc315f4d91d1c83c517811acce1802
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 3a5548d9c2b54b265910ea6708bc448f09f8f151
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082898"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059981"
 ---
 # <a name="cbulkrowset-class"></a>Classe CBulkRowset
 
-Busca e manipula as linhas para trabalhar em dados em massa recuperando vários identificadores de linha com uma única chamada.  
-  
+Busca e manipula as linhas para trabalhar em dados em massa recuperando vários identificadores de linha com uma única chamada.
+
 ## <a name="syntax"></a>Sintaxe
 
 ```cpp
-template <class TAccessor>  
-class CBulkRowset : public CRowset<TAccessor>  
-```  
-  
-### <a name="parameters"></a>Parâmetros  
+template <class TAccessor>
+class CBulkRowset : public CRowset<TAccessor>
+```
+
+### <a name="parameters"></a>Parâmetros
 
 *TAccessor*<br/>
-Uma classe de acessador.  
+Uma classe de acessador.
 
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos
 
-**Cabeçalho:** atldbcli.h  
-  
-## <a name="members"></a>Membros  
-  
-### <a name="methods"></a>Métodos  
-  
-|||  
-|-|-|  
-|[AddRefRows](#addrefrows)|Incrementa a contagem de referência.|  
-|[CBulkRowset](#cbulkrowset)|Construtor.|  
-|[MoveFirst](#movefirst)|Recupera a primeira linha de dados, executar uma busca em massa novo se necessário.|  
-|[MoveLast](#movelast)|Move para a última linha.|  
-|[MoveNext](#movenext)|Recupera a próxima linha de dados.|  
-|[MovePrev](#moveprev)|Move para a linha anterior.|  
-|[MoveToBookmark](#movetobookmark)|Busca a linha marcada por um indicador ou a linha em um deslocamento especificado desse indicador.|  
-|[MoveToRatio](#movetoratio)|Busca linhas a partir de uma posição fracionária no conjunto de linhas.|  
-|[ReleaseRows](#releaserows)|Define a linha atual (`m_nCurrentRow`) para zero e libera todas as linhas.|  
-|[SetRows](#setrows)|Define o número de identificadores de linha a ser recuperado por uma chamada.|  
-  
-## <a name="example"></a>Exemplo  
+**Cabeçalho:** atldbcli.h
 
-O exemplo a seguir demonstra o uso da `CBulkRowset` classe.  
-  
-[!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
+## <a name="members"></a>Membros
+
+### <a name="methods"></a>Métodos
+
+|||
+|-|-|
+|[AddRefRows](#addrefrows)|Incrementa a contagem de referência.|
+|[CBulkRowset](#cbulkrowset)|Construtor.|
+|[MoveFirst](#movefirst)|Recupera a primeira linha de dados, executar uma busca em massa novo se necessário.|
+|[MoveLast](#movelast)|Move para a última linha.|
+|[MoveNext](#movenext)|Recupera a próxima linha de dados.|
+|[MovePrev](#moveprev)|Move para a linha anterior.|
+|[MoveToBookmark](#movetobookmark)|Busca a linha marcada por um indicador ou a linha em um deslocamento especificado desse indicador.|
+|[MoveToRatio](#movetoratio)|Busca linhas a partir de uma posição fracionária no conjunto de linhas.|
+|[ReleaseRows](#releaserows)|Define a linha atual (`m_nCurrentRow`) para zero e libera todas as linhas.|
+|[SetRows](#setrows)|Define o número de identificadores de linha a ser recuperado por uma chamada.|
+
+## <a name="example"></a>Exemplo
+
+O exemplo a seguir demonstra o uso da `CBulkRowset` classe.
+
+[!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]
 
 ## <a name="addrefrows"></a> Cbulkrowset:: Addrefrows
 
-Chamadas [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) para incrementar a contagem de referência para todas as linhas recuperadas no momento do conjunto de linhas em massa.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp
-HRESULT AddRefRows() throw();  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
+Chamadas [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) para incrementar a contagem de referência para todas as linhas recuperadas no momento do conjunto de linhas em massa.
 
-Um HRESULT padrão. 
-  
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+HRESULT AddRefRows() throw();
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Um HRESULT padrão.
+
 ## <a name="cbulkrowset"></a> Cbulkrowset:: Cbulkrowset
 
-Cria um novo `CBulkRowset` do objeto e define a contagem de linha padrão para 10.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
+Cria um novo `CBulkRowset` do objeto e define a contagem de linha padrão para 10.
+
+### <a name="syntax"></a>Sintaxe
+
 ```cpp
-CBulkRowset();  
-```  
+CBulkRowset();
+```
 
 ## <a name="movefirst"></a> Cbulkrowset:: MoveFirst
 
-Recupera a primeira linha de dados.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
+Recupera a primeira linha de dados.
+
+### <a name="syntax"></a>Sintaxe
+
 ```cpp
-HRESULT MoveFirst() throw();  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
+HRESULT MoveFirst() throw();
+```
+
+### <a name="return-value"></a>Valor de retorno
 
 Um HRESULT padrão.
 
 ## <a name="movelast"></a> Cbulkrowset:: MoveLast
 
-Move para a última linha.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp
-HRESULT MoveLast() throw();  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
+Move para a última linha.
 
-Um HRESULT padrão.  
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+HRESULT MoveLast() throw();
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Um HRESULT padrão.
 
 ## <a name="movenext"></a> Cbulkrowset:: MoveNext
 
-Recupera a próxima linha de dados.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp
-HRESULT MoveNext() throw();  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
+Recupera a próxima linha de dados.
 
-Um HRESULT padrão. Quando o final do conjunto de linhas foi atingido, retorna DB_S_ENDOFROWSET. 
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+HRESULT MoveNext() throw();
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Um HRESULT padrão. Quando o final do conjunto de linhas foi atingido, retorna DB_S_ENDOFROWSET.
 
 ## <a name="moveprev"></a> Cbulkrowset:: Moveprev
 
-Move para a linha anterior.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp
-HRESULT MovePrev() throw();  
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
+Move para a linha anterior.
 
-Um HRESULT padrão.  
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+HRESULT MovePrev() throw();
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Um HRESULT padrão.
 
 ## <a name="movetobookmark"></a> Cbulkrowset:: Movetobookmark
 
-Busca a linha marcada por um indicador ou a linha em um deslocamento especificado (*lSkip*) desse indicador.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
+Busca a linha marcada por um indicador ou a linha em um deslocamento especificado (*lSkip*) desse indicador.
+
+### <a name="syntax"></a>Sintaxe
+
 ```cpp
-HRESULT MoveToBookmark(const CBookmarkBase& bookmark, 
-   DBCOUNTITEM lSkip = 0) throw();  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
+HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
+   DBCOUNTITEM lSkip = 0) throw();
+```
+
+#### <a name="parameters"></a>Parâmetros
 
 *Indicador*<br/>
-[in] Um indicador que marca o local do qual você deseja buscar dados.  
-  
-*lSkip*<br/>
-[in] A contagem do número de linhas de indicador para a linha de destino. Se *lSkip* for zero, a primeira linha buscada é a linha indicada. Se *lSkip* é 1, a primeira linha buscada é a linha após a linha indicada. Se *lSkip* é -1, a primeira linha buscada é a linha antes da linha indicada.  
-  
-### <a name="return-value"></a>Valor de retorno  
+[in] Um indicador que marca o local do qual você deseja buscar dados.
 
-Ver [IRowset:: GetData](/previous-versions/windows/desktop/ms716988) na *referência do programador do OLE DB*. 
+*lSkip*<br/>
+[in] A contagem do número de linhas de indicador para a linha de destino. Se *lSkip* for zero, a primeira linha buscada é a linha indicada. Se *lSkip* é 1, a primeira linha buscada é a linha após a linha indicada. Se *lSkip* é -1, a primeira linha buscada é a linha antes da linha indicada.
+
+### <a name="return-value"></a>Valor de retorno
+
+Ver [IRowset:: GetData](/previous-versions/windows/desktop/ms716988) na *referência do programador do OLE DB*.
 
 ## <a name="movetoratio"></a> Cbulkrowset:: Movetoratio
 
-Busca linhas a partir de uma posição fracionária no conjunto de linhas.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
+Busca linhas a partir de uma posição fracionária no conjunto de linhas.
+
+### <a name="syntax"></a>Sintaxe
+
 ```cpp
-HRESULT MoveToRatio(DBCOUNTITEM nNumerator, 
-   DBCOUNTITEM nDenominator)throw();  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
+HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
+   DBCOUNTITEM nDenominator)throw();
+```
+
+#### <a name="parameters"></a>Parâmetros
 
 *nNumerator*<br/>
-[in] O numerador usado para determinar a posição fracionária das quais buscar dados.  
-  
+[in] O numerador usado para determinar a posição fracionária das quais buscar dados.
+
 *nDenominator*<br/>
-[in] O denominador usado para determinar a posição fracionária das quais buscar dados.  
-  
-### <a name="return-value"></a>Valor de retorno  
+[in] O denominador usado para determinar a posição fracionária das quais buscar dados.
 
-Um HRESULT padrão.  
-  
-### <a name="remarks"></a>Comentários  
+### <a name="return-value"></a>Valor de retorno
 
-`MoveToRatio` busque as linhas mais ou menos, de acordo com a seguinte fórmula:  
-  
-`(nNumerator *  RowsetSize ) / nDenominator`  
-  
-Onde `RowsetSize` é o tamanho do conjunto de linhas, medido em linhas. A precisão dessa fórmula depende do provedor específico. Para obter detalhes, consulte [irowsetscroll:: Getrowsatratio](/previous-versions/windows/desktop/ms709602) na *referência do programador DB OLE*.   
+Um HRESULT padrão.
+
+### <a name="remarks"></a>Comentários
+
+`MoveToRatio` busque as linhas mais ou menos, de acordo com a seguinte fórmula:
+
+`(nNumerator *  RowsetSize ) / nDenominator`
+
+Onde `RowsetSize` é o tamanho do conjunto de linhas, medido em linhas. A precisão dessa fórmula depende do provedor específico. Para obter detalhes, consulte [irowsetscroll:: Getrowsatratio](/previous-versions/windows/desktop/ms709602) na *referência do programador DB OLE*.
 
 ## <a name="releaserows"></a> Cbulkrowset:: Releaserows
 
-Chamadas [IRowset:: Releaserows](/previous-versions/windows/desktop/ms719771) para diminuir a contagem de referência para todas as linhas recuperadas no momento do conjunto de linhas em massa.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
-```cpp
-HRESULT ReleaseRows() throw();   
-```  
-  
-### <a name="return-value"></a>Valor de retorno  
+Chamadas [IRowset:: Releaserows](/previous-versions/windows/desktop/ms719771) para diminuir a contagem de referência para todas as linhas recuperadas no momento do conjunto de linhas em massa.
 
-Um HRESULT padrão.  
+### <a name="syntax"></a>Sintaxe
+
+```cpp
+HRESULT ReleaseRows() throw();
+```
+
+### <a name="return-value"></a>Valor de retorno
+
+Um HRESULT padrão.
 
 ## <a name="setrows"></a> Cbulkrowset:: Setrows
 
-Define o número de identificadores de linha recuperados por cada chamada.  
-  
-### <a name="syntax"></a>Sintaxe  
-  
+Define o número de identificadores de linha recuperados por cada chamada.
+
+### <a name="syntax"></a>Sintaxe
+
 ```cpp
-void SetRows(DBROWCOUNT nRows) throw();  
-```  
-  
-#### <a name="parameters"></a>Parâmetros  
+void SetRows(DBROWCOUNT nRows) throw();
+```
+
+#### <a name="parameters"></a>Parâmetros
 
 *nRows*<br/>
-[in] O novo tamanho do conjunto de linhas (número de linhas).  
-  
-### <a name="remarks"></a>Comentários  
+[in] O novo tamanho do conjunto de linhas (número de linhas).
+
+### <a name="remarks"></a>Comentários
 
 Se você chamar essa função, ele deve ser antes que o conjunto de linhas é aberto.
-  
-## <a name="see-also"></a>Consulte também  
+
+## <a name="see-also"></a>Consulte também
 
 [Modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referência de modelos de consumidor do OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

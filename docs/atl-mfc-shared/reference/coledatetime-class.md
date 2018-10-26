@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92761508a5e93c7ef0d0a4099dde587987a50dad
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: b4490eef3427f66456ec79ae2f5429d309a82a54
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809155"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057395"
 ---
 # <a name="coledatetime-class"></a>Classe COleDateTime
 
@@ -228,10 +228,10 @@ Um `SYSTEMTIME` estrutura a ser convertido em um valor de data/hora e copiado no
 *filetimeSrc*<br/>
 Um `FILETIME` estrutura a ser convertido em um valor de data/hora e copiado no novo `COleDateTime` objeto. Observe que `FILETIME` usa o Horário Coordenado Universal (UTC), portanto, se você passar uma hora local na estrutura, os resultados estarão incorretos. Ver [tempos de arquivo](/windows/desktop/SysInfo/file-times) no SDK do Windows para obter mais informações.
 
-*nYear*, *nMonth*, *nDay*, *Nhora*, *Nmín*, *nSec*  
+*nYear*, *nMonth*, *nDay*, *Nhora*, *Nmín*, *nSec*<br/>
 Indique os valores de data e hora a ser copiado para o novo `COleDateTime` objeto.
 
-*wDosDate*, *wDosTime*  
+*wDosDate*, *wDosTime*<br/>
 Valores de data e hora do MS-DOS para ser convertido em um valor de data/hora e copiado no novo `COleDateTime` objeto.
 
 *DBTS*<br/>
@@ -333,13 +333,13 @@ Se o status deste `COleDateTime` objeto for nulo, o valor retornado é uma cadei
 
 Uma breve descrição das três formas para essa função é:
 
-`Format`( *dwFlags*, *lcid*)  
+`Format`( *dwFlags*, *lcid*)<br/>
 Este formulário formata o valor usando as especificações da linguagem (IDs de localidade) para data e hora. Usando os parâmetros padrão, esse formulário imprimirá a data e hora, a menos que a parte de hora é 0 (meia-noite), caso em que ele imprimirá apenas a data ou a parte de data é 0 (30 de dezembro de 1899) nesse caso, ele imprimirá apenas a hora. Se o valor de data/hora é 0 (30 de dezembro de 1899, meia-noite), este formulário com os parâmetros padrão imprimirá a meia-noite.
 
-`Format`( *lpszFormat*)  
+`Format`( *lpszFormat*)<br/>
 Este formulário formata o valor usando a cadeia de caracteres de formato que contém códigos de formatação especial que são precedidos por um sinal de porcentagem (%), como em `printf`. A cadeia de caracteres de formatação é passada como um parâmetro para a função. Para obter mais informações sobre os códigos de formatação, consulte [strftime, wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) na referência da biblioteca de tempo de execução.
 
-`Format`( *nFormatID*)  
+`Format`( *nFormatID*)<br/>
 Este formulário formata o valor usando a cadeia de caracteres de formato que contém códigos de formatação especial que são precedidos por um sinal de porcentagem (%), como em `printf`. A cadeia de caracteres de formatação é um recurso. A ID desse recurso de cadeia de caracteres é passada como o parâmetro. Para obter mais informações sobre os códigos de formatação, consulte [strftime, wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) na *referência de biblioteca de tempo de execução*.
 
 ### <a name="example"></a>Exemplo
@@ -701,13 +701,13 @@ Retorna o status deste `COleDateTime` valor. Se você chamar `GetStatus` em um `
 O valor de retorno é definido pela `DateTimeStatus` enumerados tipo, que é definido dentro de `COleDateTime` classe.
 
 ```
-enum DateTimeStatus  
-{  
-   error = -1,  
-   valid = 0,  
-   invalid = 1,    // Invalid date (out of range, etc.)  
-   null = 2,       // Literally has no value  
-};  
+enum DateTimeStatus
+{
+   error = -1,
+   valid = 0,
+   invalid = 1,    // Invalid date (out of range, etc.)
+   null = 2,       // Literally has no value
+};
 ```
 
 Para obter uma breve descrição desses valores de status, consulte a lista a seguir:
@@ -930,10 +930,10 @@ O `DATE` operador declarará se o `COleDateTime` objeto é definido como null. V
 Analisa uma cadeia de caracteres para ler um valor de data/hora.
 
 ```
-bool ParseDateTime(  
-LPCTSTR lpszDate,
-DWORD dwFlags = 0,
-LCID lcid = LANG_USER_DEFAULT) throw();
+bool ParseDateTime(
+    LPCTSTR lpszDate,
+    DWORD dwFlags = 0,
+    LCID lcid = LANG_USER_DEFAULT) throw();
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -991,15 +991,15 @@ Para obter mais informações sobre os limites e a implementação para `COleDat
 Define a data desta `COleDateTime` objeto.
 
 ```
-int SetDate(  
-int nYear,
-int nMonth,
-int nDay) throw();
+int SetDate(
+    int nYear,
+    int nMonth,
+    int nDay) throw();
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*nYear*, *nMonth*, *nDay*  
+*nYear*, *nMonth*, *nDay*<br/>
 Indique os componentes de data a ser copiado para isso `COleDateTime` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1062,18 +1062,18 @@ Para obter mais informações sobre os limites de `COleDateTime` valores, consul
 Define a data e hora deste `COleDateTime` objeto.
 
 ```
-int SetDateTime(  
-int nYear,
-int nMonth,
-int nDay,
-int nHour,
-int nMin,
-int nSec) throw();
+int SetDateTime(
+    int nYear,
+    int nMonth,
+    int nDay,
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*nYear*, *nMonth*, *nDay*, *Nhora*, *Nmín*, *nSec*  
+*nYear*, *nMonth*, *nDay*, *Nhora*, *Nmín*, *nSec*<br/>
 Indique os componentes de data e hora a ser copiado para isso `COleDateTime` objeto.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -1170,15 +1170,15 @@ Veja o exemplo de [GetStatus](#getstatus).
 Define o tempo isso `COleDateTime` objeto.
 
 ```
-int SetTime(  
-int nHour,
-int nMin,
-int nSec) throw();
+int SetTime(
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-*Nhora*, *Nmín*, *nSec*  
+*Nhora*, *Nmín*, *nSec*<br/>
 Indique os componentes de tempo a ser copiado para isso `COleDateTime` objeto.
 
 ### <a name="return-value"></a>Valor de retorno

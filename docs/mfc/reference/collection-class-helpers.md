@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a14a45341645feeb0b85f92379702c9fc40c9d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 010afb3939afcb392d38cda8dfb1ab1a37100d3b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381690"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083367"
 ---
 # <a name="collection-class-helpers"></a>Auxiliares da classe de coleção
 
@@ -152,7 +152,6 @@ Número de elementos a ser despejado.
 O `CArray::Dump`, `CList::Dump`, e `CMap::Dump` funções chamá-lo se a profundidade do despejo é maior que 0.
 
 A implementação padrão não faz nada. Se os elementos de sua coleção derivam `CObject`, sua substituição normalmente irá iterar os elementos da coleção, chamando `Dump` para cada elemento, por sua vez.
-
 
 ### <a name="requirements"></a>Requisitos
 

@@ -17,139 +17,139 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ee405244d4c23e3cacddb5efe5dfa276a8a21db0
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: f6dd2467ab7e7e731fec8a2375453a00267df5b6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990315"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073571"
 ---
 # <a name="creating-an-updatable-provider"></a>Criando um provedor atualizável
 
-Visual C++ oferece suporte a provedores atualizáveis ou os provedores que podem atualizar (gravar) o repositório de dados. Este tópico discute como criar provedores atualizáveis usando modelos OLE DB.  
-  
-Este tópico pressupõe que você está começando com um provedor viável. Há duas etapas para criar um provedor atualizável. Primeiro você deve decidir como o provedor será fazer alterações ao repositório de dados; Especificamente, se as alterações devem ser feito imediatamente ou adiada até que um comando update é emitido. A seção "[tornando provedores atualizáveis](#vchowmakingprovidersupdatable)" descreve as alterações e configurações que você precisa fazer no código do provedor.  
-  
-Em seguida, você deve verificar se que seu provedor contém toda a funcionalidade para dar suporte a qualquer coisa que o consumidor pode solicitar dele. Se o consumidor deseja atualizar o armazenamento de dados, o provedor deve conter código que persiste os dados para o armazenamento de dados. Por exemplo, você pode usar a biblioteca de tempo de execução do C ou o MFC para realizar operações em sua fonte de dados. A seção "[escrevendo para a fonte de dados](#vchowwritingtothedatasource)" descreve como gravar na fonte de dados, lidar com valores nulos e padrão e definir sinalizadores de coluna.  
-  
+Visual C++ oferece suporte a provedores atualizáveis ou os provedores que podem atualizar (gravar) o repositório de dados. Este tópico discute como criar provedores atualizáveis usando modelos OLE DB.
+
+Este tópico pressupõe que você está começando com um provedor viável. Há duas etapas para criar um provedor atualizável. Primeiro você deve decidir como o provedor será fazer alterações ao repositório de dados; Especificamente, se as alterações devem ser feito imediatamente ou adiada até que um comando update é emitido. A seção "[tornando provedores atualizáveis](#vchowmakingprovidersupdatable)" descreve as alterações e configurações que você precisa fazer no código do provedor.
+
+Em seguida, você deve verificar se que seu provedor contém toda a funcionalidade para dar suporte a qualquer coisa que o consumidor pode solicitar dele. Se o consumidor deseja atualizar o armazenamento de dados, o provedor deve conter código que persiste os dados para o armazenamento de dados. Por exemplo, você pode usar a biblioteca de tempo de execução do C ou o MFC para realizar operações em sua fonte de dados. A seção "[escrevendo para a fonte de dados](#vchowwritingtothedatasource)" descreve como gravar na fonte de dados, lidar com valores nulos e padrão e definir sinalizadores de coluna.
+
 > [!NOTE]
-> [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) é um exemplo de um provedor atualizável. UpdatePV é o mesmo que MyProv, mas com suporte atualizável.  
-  
-##  <a name="vchowmakingprovidersupdatable"></a> Tornando provedores atualizáveis  
+> [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) é um exemplo de um provedor atualizável. UpdatePV é o mesmo que MyProv, mas com suporte atualizável.
 
-A chave para tornar um provedor atualizável é entender as operações que você deseja que o provedor para executar no armazenamento de dados e como você deseja que o provedor para executar essas operações. Especificamente, o grande problema é se as atualizações para o armazenamento de dados devem ser feito imediatamente ou adiada (agrupados) até que um comando update é emitido.  
-  
-Primeiro você deve decidir se deseja herdar `IRowsetChangeImpl` ou `IRowsetUpdateImpl` em sua classe de conjunto de linhas. Dependendo de qual deles você optar por implementar, a funcionalidade dos três métodos será afetada: `SetData`, `InsertRows`, e `DeleteRows`.  
-  
-- Se você herda de [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md), esses três métodos de chamada imediatamente altera o armazenamento de dados.  
-  
-- Se você herda de [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md), os métodos de adiar as alterações ao repositório de dados até que você chame `Update`, `GetOriginalData`, ou `Undo`. Se a atualização envolver várias alterações, elas são executadas no modo de lote (Observe que o envio em lote de alterações pode adicionar sobrecarga considerável de memória).  
-  
-Observe que `IRowsetUpdateImpl` deriva `IRowsetChangeImpl`. Portanto, `IRowsetUpdateImpl` dá a você alterar a funcionalidade além da funcionalidade de lote.  
-  
-### <a name="to-support-updatability-in-your-provider"></a>Para dar suporte à capacidade de atualização no provedor  
-  
-1. Em sua classe de conjunto de linhas, herdam `IRowsetChangeImpl` ou `IRowsetUpdateImpl`. Essas classes fornecem interfaces apropriadas para o armazenamento de dados de alteração:  
-  
-     **Adicionando IRowsetChange**  
-  
-     Adicionar `IRowsetChangeImpl` para sua cadeia de herança usando este formato:  
-  
-    ```cpp  
-    IRowsetChangeImpl< rowset-name, storage-name >  
-    ```  
-  
-     Também adicione `COM_INTERFACE_ENTRY(IRowsetChange)` para o `BEGIN_COM_MAP` seção em sua classe de conjunto de linhas.  
-  
-     **Adicionando IRowsetUpdate**  
-  
-     Adicionar `IRowsetUpdate` para sua cadeia de herança usando este formato:  
-  
-    ```cpp  
-    IRowsetUpdateImpl< rowset-name, storage>  
-    ```  
-  
+##  <a name="vchowmakingprovidersupdatable"></a> Tornando provedores atualizáveis
+
+A chave para tornar um provedor atualizável é entender as operações que você deseja que o provedor para executar no armazenamento de dados e como você deseja que o provedor para executar essas operações. Especificamente, o grande problema é se as atualizações para o armazenamento de dados devem ser feito imediatamente ou adiada (agrupados) até que um comando update é emitido.
+
+Primeiro você deve decidir se deseja herdar `IRowsetChangeImpl` ou `IRowsetUpdateImpl` em sua classe de conjunto de linhas. Dependendo de qual deles você optar por implementar, a funcionalidade dos três métodos será afetada: `SetData`, `InsertRows`, e `DeleteRows`.
+
+- Se você herda de [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md), esses três métodos de chamada imediatamente altera o armazenamento de dados.
+
+- Se você herda de [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md), os métodos de adiar as alterações ao repositório de dados até que você chame `Update`, `GetOriginalData`, ou `Undo`. Se a atualização envolver várias alterações, elas são executadas no modo de lote (Observe que o envio em lote de alterações pode adicionar sobrecarga considerável de memória).
+
+Observe que `IRowsetUpdateImpl` deriva `IRowsetChangeImpl`. Portanto, `IRowsetUpdateImpl` dá a você alterar a funcionalidade além da funcionalidade de lote.
+
+### <a name="to-support-updatability-in-your-provider"></a>Para dar suporte à capacidade de atualização no provedor
+
+1. Em sua classe de conjunto de linhas, herdam `IRowsetChangeImpl` ou `IRowsetUpdateImpl`. Essas classes fornecem interfaces apropriadas para o armazenamento de dados de alteração:
+
+     **Adicionando IRowsetChange**
+
+   Adicionar `IRowsetChangeImpl` para sua cadeia de herança usando este formato:
+
+    ```cpp
+    IRowsetChangeImpl< rowset-name, storage-name >
+    ```
+
+   Também adicione `COM_INTERFACE_ENTRY(IRowsetChange)` para o `BEGIN_COM_MAP` seção em sua classe de conjunto de linhas.
+
+     **Adicionando IRowsetUpdate**
+
+   Adicionar `IRowsetUpdate` para sua cadeia de herança usando este formato:
+
+    ```cpp
+    IRowsetUpdateImpl< rowset-name, storage>
+    ```
+
     > [!NOTE]
-    > Você deve remover o `IRowsetChangeImpl` linha de sua cadeia de herança. Essa única exceção à diretiva mencionada anteriormente deve incluir o código para `IRowsetChangeImpl`.  
-  
-1. Adicione o seguinte ao seu mapa COM (`BEGIN_COM_MAP ... END_COM_MAP`):  
-  
-    |Se você implementar|Adicionar ao mapa COM|  
-    |----------------------|--------------------|  
-    |`IRowsetChangeImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)`|  
-    |`IRowsetUpdateImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)COM_INTERFACE_ENTRY(IRowsetUpdate)`|  
-  
-1. Em seu comando, adicione o seguinte ao seu mapa de conjunto de propriedade (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`):  
-  
-    |Se você implementar|Adicionar ao mapa de conjunto de propriedade|  
-    |----------------------|-----------------------------|  
-    |`IRowsetChangeImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`|  
-    |`IRowsetUpdateImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)`|  
-  
-1. Em seu mapa de conjunto de propriedade, você também deve incluir todas as configurações a seguir conforme elas aparecem abaixo:  
-  
-    ```cpp  
-    PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |   
-      DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE)  
-    PROPERTY_INFO_ENTRY_VALUE(CHANGEINSERTEDROWS, VARIANT_TRUE)  
-    PROPERTY_INFO_ENTRY_VALUE(IMMOBILEROWS, VARIANT_TRUE)  
-  
-    PROPERTY_INFO_ENTRY_EX(OWNINSERT, VT_BOOL, DBPROPFLAGS_ROWSET |   
-      DBPROPFLAGS_READ, VARIANT_TRUE, 0)  
-    PROPERTY_INFO_ENTRY_EX(OWNUPDATEDELETE, VT_BOOL, DBPROPFLAGS_ROWSET |   
-      DBPROPFLAGS_READ, VARIANT_TRUE, 0)  
-    PROPERTY_INFO_ENTRY_EX(OTHERINSERT, VT_BOOL, DBPROPFLAGS_ROWSET |   
-      DBPROPFLAGS_READ, VARIANT_TRUE, 0)  
-    PROPERTY_INFO_ENTRY_EX(OTHERUPDATEDELETE, VT_BOOL, DBPROPFLAGS_ROWSET |   
-      DBPROPFLAGS_READ, VARIANT_TRUE, 0)  
-    PROPERTY_INFO_ENTRY_EX(REMOVEDELETED, VT_BOOL, DBPROPFLAGS_ROWSET |   
-      DBPROPFLAGS_READ, VARIANT_FALSE, 0)  
-    ```  
-  
-     Você pode encontrar os valores usados nessas chamadas de macro examinando Atldb.h para as IDs de propriedade e os valores (se Atldb.h difere da documentação online, Atldb.h substitui a documentação).  
-  
+    > Você deve remover o `IRowsetChangeImpl` linha de sua cadeia de herança. Essa única exceção à diretiva mencionada anteriormente deve incluir o código para `IRowsetChangeImpl`.
+
+1. Adicione o seguinte ao seu mapa COM (`BEGIN_COM_MAP ... END_COM_MAP`):
+
+    |Se você implementar|Adicionar ao mapa COM|
+    |----------------------|--------------------|
+    |`IRowsetChangeImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)`|
+    |`IRowsetUpdateImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)COM_INTERFACE_ENTRY(IRowsetUpdate)`|
+
+1. Em seu comando, adicione o seguinte ao seu mapa de conjunto de propriedade (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`):
+
+    |Se você implementar|Adicionar ao mapa de conjunto de propriedade|
+    |----------------------|-----------------------------|
+    |`IRowsetChangeImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`|
+    |`IRowsetUpdateImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)`|
+
+1. Em seu mapa de conjunto de propriedade, você também deve incluir todas as configurações a seguir conforme elas aparecem abaixo:
+
+    ```cpp
+    PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |
+      DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE)
+    PROPERTY_INFO_ENTRY_VALUE(CHANGEINSERTEDROWS, VARIANT_TRUE)
+    PROPERTY_INFO_ENTRY_VALUE(IMMOBILEROWS, VARIANT_TRUE)
+
+    PROPERTY_INFO_ENTRY_EX(OWNINSERT, VT_BOOL, DBPROPFLAGS_ROWSET |
+      DBPROPFLAGS_READ, VARIANT_TRUE, 0)
+    PROPERTY_INFO_ENTRY_EX(OWNUPDATEDELETE, VT_BOOL, DBPROPFLAGS_ROWSET |
+      DBPROPFLAGS_READ, VARIANT_TRUE, 0)
+    PROPERTY_INFO_ENTRY_EX(OTHERINSERT, VT_BOOL, DBPROPFLAGS_ROWSET |
+      DBPROPFLAGS_READ, VARIANT_TRUE, 0)
+    PROPERTY_INFO_ENTRY_EX(OTHERUPDATEDELETE, VT_BOOL, DBPROPFLAGS_ROWSET |
+      DBPROPFLAGS_READ, VARIANT_TRUE, 0)
+    PROPERTY_INFO_ENTRY_EX(REMOVEDELETED, VT_BOOL, DBPROPFLAGS_ROWSET |
+      DBPROPFLAGS_READ, VARIANT_FALSE, 0)
+    ```
+
+   Você pode encontrar os valores usados nessas chamadas de macro examinando Atldb.h para as IDs de propriedade e os valores (se Atldb.h difere da documentação online, Atldb.h substitui a documentação).
+
     > [!NOTE]
-    > Muitas da `VARIANT_FALSE` e `VARIANT_TRUE` configurações são necessários para os modelos OLE DB; a especificação OLE DB diz que eles podem ser de leitura/gravação, mas os modelos OLE DB só podem oferecer suporte a um valor.  
-  
-     **Se você implementar IRowsetChangeImpl**  
-  
-     Se você implementar `IRowsetChangeImpl`, você deve definir as propriedades a seguir no seu provedor. Essas propriedades são usadas principalmente para solicitar interfaces por `ICommandProperties::SetProperties`.  
-  
-    - `DBPROP_IRowsetChange`: Isso automaticamente definindo conjuntos `DBPROP_IRowsetChange`.  
-  
-    - `DBPROP_UPDATABILITY`: Um bitmask que especifica os métodos com suporte no `IRowsetChange`: `SetData`, `DeleteRows`, ou `InsertRow`.  
-  
-    - `DBPROP_CHANGEINSERTEDROWS`: O consumidor pode chamar `IRowsetChange::DeleteRows` ou `SetData` para linhas recentemente inseridas.  
-  
-    - `DBPROP_IMMOBILEROWS`: O conjunto de linhas não reorganizará as linhas inseridas ou atualizadas.  
-  
-     **Se você implementar IRowsetUpdateImpl**  
-  
-     Se você implementar `IRowsetUpdateImpl`, você deve definir as propriedades a seguir no seu provedor, além para definir todas as propriedades para `IRowsetChangeImpl` listados anteriormente:  
-  
-    - `DBPROP_IRowsetUpdate`.  
-  
-    - `DBPROP_OWNINSERT`: Deve ser VARIANT_TRUE e de READ_ONLY.  
-  
-    - `DBPROP_OWNUPDATEDELETE`: Deve ser VARIANT_TRUE e de READ_ONLY.  
-  
-    - `DBPROP_OTHERINSERT`: Deve ser VARIANT_TRUE e de READ_ONLY.  
-  
-    - `DBPROP_OTHERUPDATEDELETE`: Deve ser VARIANT_TRUE e de READ_ONLY.  
-  
-    - `DBPROP_REMOVEDELETED`: Deve ser VARIANT_TRUE e de READ_ONLY.  
-  
-    - `DBPROP_MAXPENDINGROWS`.  
-  
+    > Muitas da `VARIANT_FALSE` e `VARIANT_TRUE` configurações são necessários para os modelos OLE DB; a especificação OLE DB diz que eles podem ser de leitura/gravação, mas os modelos OLE DB só podem oferecer suporte a um valor.
+
+     **Se você implementar IRowsetChangeImpl**
+
+   Se você implementar `IRowsetChangeImpl`, você deve definir as propriedades a seguir no seu provedor. Essas propriedades são usadas principalmente para solicitar interfaces por `ICommandProperties::SetProperties`.
+
+    - `DBPROP_IRowsetChange`: Isso automaticamente definindo conjuntos `DBPROP_IRowsetChange`.
+
+    - `DBPROP_UPDATABILITY`: Um bitmask que especifica os métodos com suporte no `IRowsetChange`: `SetData`, `DeleteRows`, ou `InsertRow`.
+
+    - `DBPROP_CHANGEINSERTEDROWS`: O consumidor pode chamar `IRowsetChange::DeleteRows` ou `SetData` para linhas recentemente inseridas.
+
+    - `DBPROP_IMMOBILEROWS`: O conjunto de linhas não reorganizará as linhas inseridas ou atualizadas.
+
+     **Se você implementar IRowsetUpdateImpl**
+
+   Se você implementar `IRowsetUpdateImpl`, você deve definir as propriedades a seguir no seu provedor, além para definir todas as propriedades para `IRowsetChangeImpl` listados anteriormente:
+
+    - `DBPROP_IRowsetUpdate`.
+
+    - `DBPROP_OWNINSERT`: Deve ser VARIANT_TRUE e de READ_ONLY.
+
+    - `DBPROP_OWNUPDATEDELETE`: Deve ser VARIANT_TRUE e de READ_ONLY.
+
+    - `DBPROP_OTHERINSERT`: Deve ser VARIANT_TRUE e de READ_ONLY.
+
+    - `DBPROP_OTHERUPDATEDELETE`: Deve ser VARIANT_TRUE e de READ_ONLY.
+
+    - `DBPROP_REMOVEDELETED`: Deve ser VARIANT_TRUE e de READ_ONLY.
+
+    - `DBPROP_MAXPENDINGROWS`.
+
         > [!NOTE]
-        > Se você oferecer suporte a notificações, você também pode ter algumas outras propriedades também; Consulte a seção sobre `IRowsetNotifyCP` para esta lista.  
-  
-##  <a name="vchowwritingtothedatasource"></a> Escrevendo para a fonte de dados  
+        > Se você oferecer suporte a notificações, você também pode ter algumas outras propriedades também; Consulte a seção sobre `IRowsetNotifyCP` para esta lista.
 
-Para ler da fonte de dados, chame o `Execute` função. Para gravar a fonte de dados, chame o `FlushData` função. (Em um sentido geral, liberação meios para salvar as modificações feitas a uma tabela ou índice em disco).  
+##  <a name="vchowwritingtothedatasource"></a> Escrevendo para a fonte de dados
+
+Para ler da fonte de dados, chame o `Execute` função. Para gravar a fonte de dados, chame o `FlushData` função. (Em um sentido geral, liberação meios para salvar as modificações feitas a uma tabela ou índice em disco).
 
 ```cpp
-FlushData(HROW, HACCESSOR);  
+FlushData(HROW, HACCESSOR);
 ```
 
 O identificador de linha (HROW) e os argumentos do identificador (HACCESSOR) de acessador permitem que você especifique a região de gravação. Normalmente, você deve escrever um único campo de dados por vez.
@@ -197,10 +197,10 @@ Para implementar sua própria `FlushData` método, você precisa:
 - No conjunto de linhas classe colocar a declaração de:
 
    ```cpp
-   HRESULT FlushData(HROW, HACCESSOR)  
-   {  
-      // Insert your implementation here and return an HRESULT.  
-   }  
+   HRESULT FlushData(HROW, HACCESSOR)
+   {
+      // Insert your implementation here and return an HRESULT.
+   }
    ```
 
 - Fornecer uma implementação de `FlushData`.
@@ -220,83 +220,83 @@ A melhor coisa a fazer é ter especificado os valores reais no seu armazenamento
 A exemplo a seguir mostra como `FlushData` é implementado na `RUpdateRowset` classe o `UpdatePV` exemplo (consulte Rowset.h no código de exemplo):
 
 ```cpp
-///////////////////////////////////////////////////////////////////////////  
-// class RUpdateRowset (in rowset.h)  
-...  
-HRESULT FlushData(HROW, HACCESSOR)  
-{  
-    ATLTRACE2(atlTraceDBProvider, 0, "RUpdateRowset::FlushData\n");  
-  
-    USES_CONVERSION;  
-    enum {  
-        sizeOfString = 256,  
-        sizeOfFileName = MAX_PATH  
-    };  
-    FILE*    pFile = NULL;  
-    TCHAR    szString[sizeOfString];  
-    TCHAR    szFile[sizeOfFileName];  
-    errcode  err = 0;  
-  
-    ObjectLock lock(this);  
-  
-    // From a filename, passed in as a command text,   
-    // scan the file placing data in the data array.  
-    if (m_strCommandText == (BSTR)NULL)  
-    {  
-        ATLTRACE( "RRowsetUpdate::FlushData -- "  
-                  "No filename specified\n");  
-        return E_FAIL;  
-    }  
-  
-    // Open the file  
-    _tcscpy_s(szFile, sizeOfFileName, OLE2T(m_strCommandText));  
-    if ((szFile[0] == _T('\0')) ||   
-        ((err = _tfopen_s(&pFile, &szFile[0], _T("w"))) != 0))  
-    {  
-        ATLTRACE("RUpdateRowset::FlushData -- Could not open file\n");  
-        return DB_E_NOTABLE;  
-    }  
-  
-    // Iterate through the row data and store it.  
-    for (long l=0; l<m_rgRowData.GetSize(); l++)  
-    {  
-        CAgentMan am = m_rgRowData[l];  
-  
-        _putw((int)am.dwFixed, pFile);  
-  
-        if (_tcscmp(&am.szCommand[0], _T("")) != 0)  
-            _stprintf_s(&szString[0], _T("%s\n"), am.szCommand);  
-        else  
-            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));  
-        _fputts(szString, pFile);  
-  
-        if (_tcscmp(&am.szText[0], _T("")) != 0)  
-            _stprintf_s(&szString[0], _T("%s\n"), am.szText);  
-        else  
-            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));  
-        _fputts(szString, pFile);  
-  
-        if (_tcscmp(&am.szCommand2[0], _T("")) != 0)  
-            _stprintf_s(&szString[0], _T("%s\n"), am.szCommand2);  
-        else  
-            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));  
-        _fputts(szString, pFile);  
-  
-        if (_tcscmp(&am.szText2[0], _T("")) != 0)  
-            _stprintf_s(&szString[0], _T("%s\n"), am.szText2);  
-        else  
-            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));  
-        _fputts(szString, pFile);  
-    }  
-  
-    if (fflush(pFile) == EOF || fclose(pFile) == EOF)  
-    {  
-        ATLTRACE("RRowsetUpdate::FlushData -- "  
-                 "Couldn't flush or close file\n");  
-    }  
-  
-    return S_OK;  
-}  
+///////////////////////////////////////////////////////////////////////////
+// class RUpdateRowset (in rowset.h)
+...
+HRESULT FlushData(HROW, HACCESSOR)
+{
+    ATLTRACE2(atlTraceDBProvider, 0, "RUpdateRowset::FlushData\n");
+
+    USES_CONVERSION;
+    enum {
+        sizeOfString = 256,
+        sizeOfFileName = MAX_PATH
+    };
+    FILE*    pFile = NULL;
+    TCHAR    szString[sizeOfString];
+    TCHAR    szFile[sizeOfFileName];
+    errcode  err = 0;
+
+    ObjectLock lock(this);
+
+    // From a filename, passed in as a command text,
+    // scan the file placing data in the data array.
+    if (m_strCommandText == (BSTR)NULL)
+    {
+        ATLTRACE( "RRowsetUpdate::FlushData -- "
+                  "No filename specified\n");
+        return E_FAIL;
+    }
+
+    // Open the file
+    _tcscpy_s(szFile, sizeOfFileName, OLE2T(m_strCommandText));
+    if ((szFile[0] == _T('\0')) ||
+        ((err = _tfopen_s(&pFile, &szFile[0], _T("w"))) != 0))
+    {
+        ATLTRACE("RUpdateRowset::FlushData -- Could not open file\n");
+        return DB_E_NOTABLE;
+    }
+
+    // Iterate through the row data and store it.
+    for (long l=0; l<m_rgRowData.GetSize(); l++)
+    {
+        CAgentMan am = m_rgRowData[l];
+
+        _putw((int)am.dwFixed, pFile);
+
+        if (_tcscmp(&am.szCommand[0], _T("")) != 0)
+            _stprintf_s(&szString[0], _T("%s\n"), am.szCommand);
+        else
+            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));
+        _fputts(szString, pFile);
+
+        if (_tcscmp(&am.szText[0], _T("")) != 0)
+            _stprintf_s(&szString[0], _T("%s\n"), am.szText);
+        else
+            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));
+        _fputts(szString, pFile);
+
+        if (_tcscmp(&am.szCommand2[0], _T("")) != 0)
+            _stprintf_s(&szString[0], _T("%s\n"), am.szCommand2);
+        else
+            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));
+        _fputts(szString, pFile);
+
+        if (_tcscmp(&am.szText2[0], _T("")) != 0)
+            _stprintf_s(&szString[0], _T("%s\n"), am.szText2);
+        else
+            _stprintf_s(&szString[0], _T("%s\n"), _T("NULL"));
+        _fputts(szString, pFile);
+    }
+
+    if (fflush(pFile) == EOF || fclose(pFile) == EOF)
+    {
+        ATLTRACE("RRowsetUpdate::FlushData -- "
+                 "Couldn't flush or close file\n");
+    }
+
+    return S_OK;
+}
 ```
 
 ### <a name="handling-changes"></a>Manipulação de alterações
@@ -322,56 +322,56 @@ Na implementação de modelos OLE DB, se você não marcar colunas como anuláve
 A exemplo a seguir mostra como o `CommonGetColInfo` função é implementada no CUpdateCommand (consulte UpProvRS.cpp) em UpdatePV. Observe como as colunas têm esse DBCOLUMNFLAGS_ISNULLABLE para colunas que permitem valor nulas.
 
 ```cpp
-/////////////////////////////////////////////////////////////////////////////  
-// CUpdateCommand (in UpProvRS.cpp)  
-  
-ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols, bool bBookmark)  
-{  
-    static ATLCOLUMNINFO _rgColumns[6];  
-    ULONG ulCols = 0;  
-  
-    if (bBookmark)  
-    {  
-        ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0,  
-                            sizeof(DWORD), DBTYPE_BYTES,  
-                            0, 0, GUID_NULL, CAgentMan, dwBookmark,  
-                            DBCOLUMNFLAGS_ISBOOKMARK)  
-        ulCols++;  
-    }  
-  
-    // Next set the other columns up.  
-    // Add a fixed length entry for OLE DB conformance testing purposes  
-    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Fixed"), 1, 4, DBTYPE_UI4,  
-                        10, 255, GUID_NULL, CAgentMan, dwFixed,   
-                        DBCOLUMNFLAGS_WRITE |   
-                        DBCOLUMNFLAGS_ISFIXEDLENGTH)  
-    ulCols++;  
-  
-    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Command"), 2, 16, DBTYPE_STR,  
-                        255, 255, GUID_NULL, CAgentMan, szCommand,  
-                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)  
-    ulCols++;  
-    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Text"), 3, 16, DBTYPE_STR,   
-                        255, 255, GUID_NULL, CAgentMan, szText,   
-                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)  
-    ulCols++;  
-  
-    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Command2"), 4, 16, DBTYPE_STR,  
-                        255, 255, GUID_NULL, CAgentMan, szCommand2,   
-                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)  
-    ulCols++;  
-    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Text2"), 5, 16, DBTYPE_STR,  
-                        255, 255, GUID_NULL, CAgentMan, szText2,   
-                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)  
-    ulCols++;  
-  
-    if (pcCols != NULL)  
-    {  
-        *pcCols = ulCols;  
-    }  
-  
-    return _rgColumns;  
-}  
+/////////////////////////////////////////////////////////////////////////////
+// CUpdateCommand (in UpProvRS.cpp)
+
+ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols, bool bBookmark)
+{
+    static ATLCOLUMNINFO _rgColumns[6];
+    ULONG ulCols = 0;
+
+    if (bBookmark)
+    {
+        ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0,
+                            sizeof(DWORD), DBTYPE_BYTES,
+                            0, 0, GUID_NULL, CAgentMan, dwBookmark,
+                            DBCOLUMNFLAGS_ISBOOKMARK)
+        ulCols++;
+    }
+
+    // Next set the other columns up.
+    // Add a fixed length entry for OLE DB conformance testing purposes
+    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Fixed"), 1, 4, DBTYPE_UI4,
+                        10, 255, GUID_NULL, CAgentMan, dwFixed,
+                        DBCOLUMNFLAGS_WRITE |
+                        DBCOLUMNFLAGS_ISFIXEDLENGTH)
+    ulCols++;
+
+    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Command"), 2, 16, DBTYPE_STR,
+                        255, 255, GUID_NULL, CAgentMan, szCommand,
+                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)
+    ulCols++;
+    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Text"), 3, 16, DBTYPE_STR,
+                        255, 255, GUID_NULL, CAgentMan, szText,
+                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)
+    ulCols++;
+
+    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Command2"), 4, 16, DBTYPE_STR,
+                        255, 255, GUID_NULL, CAgentMan, szCommand2,
+                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)
+    ulCols++;
+    ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Text2"), 5, 16, DBTYPE_STR,
+                        255, 255, GUID_NULL, CAgentMan, szText2,
+                        DBCOLUMNFLAGS_WRITE | DBCOLUMNFLAGS_ISNULLABLE)
+    ulCols++;
+
+    if (pcCols != NULL)
+    {
+        *pcCols = ulCols;
+    }
+
+    return _rgColumns;
+}
 ```
 
 ### <a name="default-values"></a>Valores padrão
@@ -383,38 +383,38 @@ O padrão de `FlushData` e `Execute` é retornar S_OK. Portanto, se você não s
 No `UpdatePV` exemplo (em Rowset.h), o `SetDBStatus` método lida com valores padrão da seguinte maneira:
 
 ```cpp
-virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,  
-                            ATLCOLUMNINFO* pColInfo)  
-{  
-    ATLASSERT(pRow != NULL && pColInfo != NULL && pdbStatus != NULL);  
-  
-    void* pData = NULL;  
-    char* pDefaultData = NULL;  
-    DWORD* pFixedData = NULL;  
-  
-    switch (*pdbStatus)  
-    {  
-        case DBSTATUS_S_DEFAULT:  
-            pData = (void*)&m_rgRowData[pRow->m_iRowset];  
-            if (pColInfo->wType == DBTYPE_STR)  
-            {  
-                pDefaultData = (char*)pData + pColInfo->cbOffset;  
-                strcpy_s(pDefaultData, "Default");  
-            }  
-            else  
-            {  
-                pFixedData = (DWORD*)((BYTE*)pData +   
-                                          pColInfo->cbOffset);  
-                *pFixedData = 0;  
-                return S_OK;  
-            }  
-            break;  
-        case DBSTATUS_S_ISNULL:  
-        default:  
-            break;  
-    }  
-    return S_OK;  
-}  
+virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
+                            ATLCOLUMNINFO* pColInfo)
+{
+    ATLASSERT(pRow != NULL && pColInfo != NULL && pdbStatus != NULL);
+
+    void* pData = NULL;
+    char* pDefaultData = NULL;
+    DWORD* pFixedData = NULL;
+
+    switch (*pdbStatus)
+    {
+        case DBSTATUS_S_DEFAULT:
+            pData = (void*)&m_rgRowData[pRow->m_iRowset];
+            if (pColInfo->wType == DBTYPE_STR)
+            {
+                pDefaultData = (char*)pData + pColInfo->cbOffset;
+                strcpy_s(pDefaultData, "Default");
+            }
+            else
+            {
+                pFixedData = (DWORD*)((BYTE*)pData +
+                                          pColInfo->cbOffset);
+                *pFixedData = 0;
+                return S_OK;
+            }
+            break;
+        case DBSTATUS_S_ISNULL:
+        default:
+            break;
+    }
+    return S_OK;
+}
 ```
 
 ### <a name="column-flags"></a>Sinalizadores de coluna
@@ -426,16 +426,16 @@ Você também tem a responsabilidade de definir os sinalizadores de coluna, que 
 Por exemplo, nos `CUpdateSessionColSchemaRowset` classe `UpdatePV` (no Session.h), a primeira coluna é configurada dessa forma:
 
 ```cpp
-// Set up column 1  
-trData[0].m_ulOrdinalPosition = 1;  
-trData[0].m_bIsNullable = VARIANT_FALSE;  
-trData[0].m_bColumnHasDefault = VARIANT_TRUE;  
-trData[0].m_nDataType = DBTYPE_UI4;  
-trData[0].m_nNumericPrecision = 10;  
-trData[0].m_ulColumnFlags = DBCOLUMNFLAGS_WRITE |  
-                            DBCOLUMNFLAGS_ISFIXEDLENGTH;  
-lstrcpyW(trData[0].m_szColumnDefault, OLESTR("0"));  
-m_rgRowData.Add(trData[0]);  
+// Set up column 1
+trData[0].m_ulOrdinalPosition = 1;
+trData[0].m_bIsNullable = VARIANT_FALSE;
+trData[0].m_bColumnHasDefault = VARIANT_TRUE;
+trData[0].m_nDataType = DBTYPE_UI4;
+trData[0].m_nNumericPrecision = 10;
+trData[0].m_ulColumnFlags = DBCOLUMNFLAGS_WRITE |
+                            DBCOLUMNFLAGS_ISFIXEDLENGTH;
+lstrcpyW(trData[0].m_szColumnDefault, OLESTR("0"));
+m_rgRowData.Add(trData[0]);
 ```
 
 Esse código especifica, entre outras coisas, a coluna dá suporte a um valor padrão de 0, que pode ser gravável, e se todos os dados na coluna tem o mesmo tamanho. Se você quiser que os dados em uma coluna tenha um comprimento variável, não definiria esse sinalizador.

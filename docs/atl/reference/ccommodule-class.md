@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 519837379369f08108d3d5b5b300fe0bcb9ac5e7
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 52a2d1387fd476cffa2027ffc136b4759b591e31
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083808"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059188"
 ---
 # <a name="ccommodule-class"></a>Classe CComModule
 
@@ -136,7 +136,7 @@ Além `CComModule`, a ATL fornece [CComAutoThreadModule](../../atl/reference/cco
 A partir do ATL 7.0 `CComModule` é obsoleto: ver [Classes de módulo ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
-HRESULT GetClassObject(  
+HRESULT GetClassObject(
     REFCLSID rclsid,
     REFIID riid,
     LPVOID* ppv) throw();
@@ -340,7 +340,7 @@ Aponta para o mapa de objetos mantidos pela instância de módulo.
 A partir do ATL 7.0 `CComModule` é obsoleto: ver [Classes de módulo ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
-ATL_DEPRECATED HRESULT RegisterClassHelper(  
+ATL_DEPRECATED HRESULT RegisterClassHelper(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID,
@@ -405,7 +405,7 @@ A partir do ATL 7.0 `CComModule` é obsoleto: ver [Classes de módulo ATL](../..
 
 ```
 HRESULT RegisterServer(
-    BOOL bRegTypeLib = FALSE,  
+    BOOL bRegTypeLib = FALSE,
     const CLSID* pCLSID = NULL) throw();
 ```
 
@@ -488,7 +488,7 @@ Libera todos os membros de dados.
 A partir do ATL 7.0 `CComModule` é obsoleto: ver [Classes de módulo ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
-ATL_DEPRECATED HRESULT UnregisterClassHelper(  
+ATL_DEPRECATED HRESULT UnregisterClassHelper(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID);
@@ -549,7 +549,7 @@ Ver [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) para obter infor
 A partir do ATL 7.0 `CComModule` é obsoleto: ver [Classes de módulo ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
-ATL_DEPRECATED HRESULT UpdateRegistryClass(  
+ATL_DEPRECATED HRESULT UpdateRegistryClass(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID,
@@ -557,7 +557,7 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
     DWORD dwFlags,
     BOOL bRegister);
 
-ATL_DEPRECATED HRESULT UpdateRegistryClass(  
+ATL_DEPRECATED HRESULT UpdateRegistryClass(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID,
@@ -608,12 +608,12 @@ Especificando o [DECLARE_REGISTRY](registry-macros.md#declare_registry) macro, `
 A partir do ATL 7.0 `CComModule` é obsoleto: ver [Classes de módulo ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
-virtual HRESULT UpdateRegistryFromResourceD(  
+virtual HRESULT UpdateRegistryFromResourceD(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-virtual HRESULT UpdateRegistryFromResourceD(  
+virtual HRESULT UpdateRegistryFromResourceD(
     UINT nResID,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw ();
@@ -658,12 +658,12 @@ Para obter mais informações sobre parâmetros substituíveis e scripts, consul
 A partir do ATL 7.0 `CComModule` é obsoleto: ver [Classes de módulo ATL](../../atl/atl-module-classes.md) para obter mais detalhes.
 
 ```
-virtual HRESULT UpdateRegistryFromResourceS(  
+virtual HRESULT UpdateRegistryFromResourceS(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-virtual HRESULT UpdateRegistryFromResourceS(  
+virtual HRESULT UpdateRegistryFromResourceS(
     UINT nResID,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();

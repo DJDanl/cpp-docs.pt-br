@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2241080fda6aa58dc5e70f57c83afec69a57203
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 57e685ea9ac4b1efc76f7657421d825b83f4a9b7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757332"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078616"
 ---
 # <a name="implementing-the-event-handling-interface"></a>Implementando o Interface de manipulação de eventos
 
@@ -37,7 +37,7 @@ As formas mais comuns de implementação de uma interface usando ATL são:
 
 - Derivando de [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) para dispinterfaces não são descritos em uma biblioteca de tipos ou quando você deseja melhorar a eficiência por não carregar as informações de tipo em tempo de execução.
 
-Se você estiver implementando uma interface dupla ou personalizada, você deve informar a origem do evento chamando [AtlAdvise](reference/connection-point-global-functions.md#atladvise) ou [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise). Você precisará manter o controle de cookie retornado pela chamada. Chame [AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise) para interromper a conexão.  
+Se você estiver implementando uma interface dupla ou personalizada, você deve informar a origem do evento chamando [AtlAdvise](reference/connection-point-global-functions.md#atladvise) ou [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise). Você precisará manter o controle de cookie retornado pela chamada. Chame [AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise) para interromper a conexão.
 
 Se você estiver implementando um usando dispinterface `IDispEventImpl` ou `IDispEventSimpleImpl`, você deve informar a origem do evento chamando [IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise). Chame [IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise) para interromper a conexão.
 
@@ -48,4 +48,3 @@ O `IDispEventImpl` e `IDispEventSimpleImpl` classes gerenciam o cookie para voc�
 ## <a name="see-also"></a>Consulte também
 
 [Manipulação de eventos](../atl/event-handling-and-atl.md)
-

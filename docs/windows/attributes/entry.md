@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95eb37898d4934740e1520df758ed33d3dd4c79a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ae14a6346f547d8c362bad478144e915ee9ebb98
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790099"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077283"
 ---
 # <a name="entry"></a>entry
 
@@ -62,4 +62,4 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 
 ## <a name="see-also"></a>Consulte também
 
-[Atributos de IDL](idl-attributes.md)  
+[Atributos de IDL](idl-attributes.md)

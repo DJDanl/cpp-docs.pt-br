@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ba6d6193c8422e25e174c7a4b73b2b74095cced9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4dd67728773df86f9961fe54c7dd9e4a08ec743d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436501"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060943"
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>Como converter de um coleção .NET em um contêiner STL/CLR
 
@@ -31,7 +31,7 @@ Este tópico mostra como converter coleções do .NET para seus contêineres STL
 
 1. Para converter uma coleção inteira, crie um contêiner STL/CLR e passa a coleção para o construtor.
 
-     O primeiro exemplo demonstra esse procedimento.
+   O primeiro exemplo demonstra esse procedimento.
 
 -OU-
 
@@ -39,7 +39,7 @@ Este tópico mostra como converter coleções do .NET para seus contêineres STL
 
 1. Copie o conteúdo da coleção do .NET para o contêiner. Isso pode ser feito usando um STL/CLR [algoritmo](../dotnet/algorithm-stl-clr.md), ou por iteração pela coleção .NET e a inserção de uma cópia de cada elemento no contêiner STL/CLR.
 
-     O segundo exemplo demonstra esse procedimento.
+   O segundo exemplo demonstra esse procedimento.
 
 ## <a name="example"></a>Exemplo
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a2434257290c673ca4e18be2e5ec70877e72e67
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c0c7d76ff3b1e05d482b365150c9072a9fdd8d5c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039082"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076705"
 ---
 # <a name="messagehandler"></a>MessageHandler
 
@@ -31,9 +31,9 @@ ms.locfileid: "46039082"
 
 ```
 LRESULT MessageHandler(
-    UINT uMsg,  
-    WPARAM wParam,  
-    LPARAM lParam,  
+    UINT uMsg,
+    WPARAM wParam,
+    LPARAM lParam,
     BOOL& bHandled);
 ```
 
@@ -62,5 +62,5 @@ Para obter um exemplo de como usar este manipulador de mensagens em um mapa de m
 ## <a name="see-also"></a>Consulte também
 
 [Implementando uma janela](../atl/implementing-a-window.md)<br/>
-[Mapas de mensagem](../atl/message-maps-atl.md)<br/>
+[Mapas de mensagens](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)

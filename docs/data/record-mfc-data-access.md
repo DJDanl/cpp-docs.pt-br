@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fe348043d991aa04652eae02ba0f2efa393bcf5f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3ac01274773abf04bf6f817b0f70bcd527865a1b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098128"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083471"
 ---
 # <a name="record-mfc-data-access"></a>Registro (Acesso a dados MFC)
 
-Um registro é um conjunto de dados sobre uma única entidade, como uma conta ou um cliente, armazenados em uma tabela (linha da tabela). Um registro consiste em um grupo de colunas contíguas (às vezes chamadas de campos) que contêm dados de vários tipos. Um conjunto de registros selecionados de uma fonte de dados – geralmente, chamado de conjunto de resultados em termos de banco de dados – e no MFC é chamado de um conjunto de registros. Para obter mais informações, consulte [conjunto de registros (ODBC)](../data/odbc/recordset-odbc.md).  
-  
-## <a name="see-also"></a>Consulte também  
+Um registro é um conjunto de dados sobre uma única entidade, como uma conta ou um cliente, armazenados em uma tabela (linha da tabela). Um registro consiste em um grupo de colunas contíguas (às vezes chamadas de campos) que contêm dados de vários tipos. Um conjunto de registros selecionados de uma fonte de dados – geralmente, chamado de conjunto de resultados em termos de banco de dados – e no MFC é chamado de um conjunto de registros. Para obter mais informações, consulte [conjunto de registros (ODBC)](../data/odbc/recordset-odbc.md).
+
+## <a name="see-also"></a>Consulte também
 
 [Acesso a dados (MFC/ATL) de programação](../data/data-access-programming-mfc-atl.md)

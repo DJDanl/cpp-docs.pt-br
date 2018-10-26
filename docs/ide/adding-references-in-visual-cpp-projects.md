@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5e32599096b4e0fa451c18b3e05adf01b34ff4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b372959105407074cd2a7295837e2c47ef629da7
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407589"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162159"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Adicionando referências em projetos do Visual C++
 
@@ -84,11 +84,11 @@ As propriedades a seguir estão disponíveis em vários tipos de referências. E
 
 - **Assemblies Satélite do Local da Cópia**
 
-   Especifica se os assemblies satélite serão copiados automaticamente do assembly referenciado para o local de destino durante um build. Usado somente se **Local da Cópia** é `true`.
+   Especifica se os assemblies satélite serão copiados automaticamente do assembly referenciado para o local de destino durante um build. Usado somente se **Local da cópia** for **true**.
 
 - **Saída do Assembly de Referência**
 
-   Especifica que esse assembly é usado no processo de build. Se `true`, o assembly é usado na linha de comando do compilador durante o build.
+   Especifica que esse assembly é usado no processo de build. Se for **true**, o assembly será usado na linha de comando do compilador durante o build.
 
 ### <a name="project-to-project-reference-properties"></a>Propriedades de referência projeto a projeto
 

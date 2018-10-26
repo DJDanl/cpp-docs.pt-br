@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea6b687b00310390e3748fb5a8f6db74a19dfd0a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 97735b5509fb841a8b9b3d8212f4a23514f9d28c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373890"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057459"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>Como gerenciar uma instância de agendador
 
@@ -34,7 +34,7 @@ Os exemplos criam agendadores que usam as políticas de agendador padrão. Para 
 
 1. Chame o [concurrency::CurrentScheduler::Create](reference/currentscheduler-class.md#create) método ou o [concurrency::Scheduler::Create](reference/scheduler-class.md#create) método para criar uma instância do Agendador.
 
-     Se você usar o `Scheduler::Create` método, a chamada a [concurrency::Scheduler::Attach](reference/scheduler-class.md#attach) método quando você precisa associar o Agendador com o contexto atual.
+   Se você usar o `Scheduler::Create` método, a chamada a [concurrency::Scheduler::Attach](reference/scheduler-class.md#attach) método quando você precisa associar o Agendador com o contexto atual.
 
 1. Chame o [CreateEvent](/windows/desktop/api/synchapi/nf-synchapi-createeventa) função para criar um identificador para um objeto de evento de redefinição automática não sinalizado.
 
@@ -44,7 +44,7 @@ Os exemplos criam agendadores que usam as políticas de agendador padrão. Para 
 
 1. Chame o [concurrency::CurrentScheduler::Detach](reference/currentscheduler-class.md#detach) método para desanexar o Agendador atual e restaurar o Agendador anterior que o atual.
 
-     Se você usar o `Scheduler::Create` método, a chamada a [concurrency::Scheduler::Release](reference/scheduler-class.md#release) método para diminuir a contagem de referência do `Scheduler` objeto.
+   Se você usar o `Scheduler::Create` método, a chamada a [concurrency::Scheduler::Release](reference/scheduler-class.md#release) método para diminuir a contagem de referência do `Scheduler` objeto.
 
 1. Passar o identificador para o evento para o [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) função esperar o Agendador desligar.
 

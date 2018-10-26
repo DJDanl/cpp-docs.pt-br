@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52b5c5bea282e4ebb4106d8e9c2fede40f375ae3
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: a06353780b78339c39ebb20e9bc2f770694f47c2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083600"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073248"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -125,4 +125,4 @@ Para obter mais informações sobre os contextos de atributo, consulte [contexto
 ## <a name="see-also"></a>Consulte também
 
 [Atributos de consumidor do OLE DB](ole-db-consumer-attributes.md)<br/>
-[Atributos de classe](class-attributes.md)  
+[Atributos de classe](class-attributes.md)

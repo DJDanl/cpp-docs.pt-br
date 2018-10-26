@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b025e29c93cffe9c600646a2475f7e3230fd03
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a654f820d3c1dcdaa49ed8b3b3203d2c271b6880
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039537"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055463"
 ---
 # <a name="connection-point-macros"></a>Macros de ponto de Conexão
 
@@ -33,7 +33,7 @@ Essas macros definem entradas e mapas de ponto de conexão.
 |[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)|Marca o início das entradas de mapa de ponto de conexão.|
 |[CONNECTION_POINT_ENTRY](#connection_point_entry)|Insere os pontos de conexão no mapa.|
 |[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| (Visual Studio 2017) Semelhante ao CONNECTION_POINT_ENTRY, mas usa um ponteiro para o iid.|
-|[END_CONNECTION_POINT_MAP](#end_connection_point_map)|Marca o fim das entradas de mapa de ponto de conexão.|  
+|[END_CONNECTION_POINT_MAP](#end_connection_point_map)|Marca o fim das entradas de mapa de ponto de conexão.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -74,7 +74,7 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 ### <a name="parameters"></a>Parâmetros
 
 *IID*<br/>
-[in] O GUID da interface que está sendo adicionado ao mapa de ponto de conexão. 
+[in] O GUID da interface que está sendo adicionado ao mapa de ponto de conexão.
 
 *piid*<br/>
 [in] Ponteiro para o GUID da interface que está sendo adde.

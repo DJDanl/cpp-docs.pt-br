@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 156908a1611f8a1c8b22df61e6b789468753d25d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ebb644c64bbc5eba65860ffb1c1115bfc7662951
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443079"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075262"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls-c"></a>Adicionando manipuladores de eventos para controles de caixa de diálogo (C++)
 
@@ -82,5 +82,5 @@ Win32
 [Adicionando uma classe](../ide/adding-a-class-visual-cpp.md)<br/>
 [Adicionando uma função de membro](../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Adicionando uma variável de membro](../ide/adding-a-member-variable-visual-cpp.md)<br/>
-[Substituindo uma função Virtual](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
-[Manipulador de mensagens do MFC](../mfc/reference/adding-an-mfc-message-handler.md)  
+[Substituindo uma função virtual](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Manipulador de mensagens do MFC](../mfc/reference/adding-an-mfc-message-handler.md)

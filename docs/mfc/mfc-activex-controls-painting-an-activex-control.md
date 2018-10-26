@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14f562bd93bf023d540bf362dd2f9a881c2e441
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b33097c6f6f747d99cf582c1553e25942f1bfcd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436787"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056003"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>Controles ActiveX MFC: pintando um controle ActiveX
 
@@ -112,11 +112,11 @@ Depois que você tiver implementado a renderização de meta-arquivo para o cont
 
 1. No **inserir o novo controle** caixa, selecione o controle e clique em **Okey**.
 
-     O controle será exibido no contêiner de teste.
+   O controle será exibido no contêiner de teste.
 
 1. Sobre o **controle** menu, clique em **desenhar metarquivo**.
 
-     É exibida uma janela separada, na qual o metarquivo é exibido. Você pode alterar o tamanho dessa janela para ver como o dimensionamento afeta metarquivo do controle. Você pode fechar esta janela a qualquer momento.
+   É exibida uma janela separada, na qual o metarquivo é exibido. Você pode alterar o tamanho dessa janela para ver como o dimensionamento afeta metarquivo do controle. Você pode fechar esta janela a qualquer momento.
 
 ## <a name="see-also"></a>Consulte também
 

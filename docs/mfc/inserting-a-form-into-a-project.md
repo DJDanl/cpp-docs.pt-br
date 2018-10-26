@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83606041250dafed0ef57eb4eea18d7314e0bbef
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ba22c87ee601d66ccfb1092047e69be42d8163c3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429260"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052741"
 ---
 # <a name="inserting-a-form-into-a-project"></a>Inserindo um formulário em um projeto
 
@@ -33,7 +33,7 @@ Formulários fornecem um contêiner conveniente para controles. Você pode inser
 
 1. No menu de atalho, clique em **Add** e, em seguida, clique em **Adicionar classe**.
 
-     Se o **novo formulário** comando não estiver disponível, seu projeto pode se basear na biblioteca ATL (Active Template). Para adicionar um formulário a um projeto da ATL, você deve [especificar determinadas configurações](../atl/reference/application-settings-atl-project-wizard.md) ao primeiro criar o projeto.
+   Se o **novo formulário** comando não estiver disponível, seu projeto pode se basear na biblioteca ATL (Active Template). Para adicionar um formulário a um projeto da ATL, você deve [especificar determinadas configurações](../atl/reference/application-settings-atl-project-wizard.md) ao primeiro criar o projeto.
 
 1. Dos **MFC** pasta, clique em **classe MFC**.
 

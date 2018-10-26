@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d412ac93ec9e89de8c85758d98d67fa2a7c50e92
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 37c220347070f9a2fecdda44ffe1a3971112f49f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790229"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066975"
 ---
 # <a name="lengthis"></a>length_is
 
@@ -68,4 +68,4 @@ Para obter mais informações, consulte [contextos de atributo](cpp-attributes-c
 [first_is](first-is.md)<br/>
 [max_is](max-is.md)<br/>
 [last_is](last-is.md)<br/>
-[size_is](size-is.md)  
+[size_is](size-is.md)

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15a03708f96f881206aa683b31c26c3c5192f8cb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8f4a3ba23fbf6e9465d78b04fcd79758c7cae525
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389051"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060217"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Área de Transferência: copiando e colando dados
 
@@ -56,7 +56,7 @@ Colagem de dados é mais complicado do que copiá-lo porque você precisa escolh
 
 1. Chamar `COleDataObject::IsDataAvailable` para verificar se um determinado formato está disponível.
 
-     Como alternativa, você pode usar `COleDataObject::BeginEnumFormats` para procurar outros formatos até encontrar uma mais adequado ao seu aplicativo.
+   Como alternativa, você pode usar `COleDataObject::BeginEnumFormats` para procurar outros formatos até encontrar uma mais adequado ao seu aplicativo.
 
 1. Realize a colagem no formato.
 

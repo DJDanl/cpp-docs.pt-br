@@ -20,74 +20,74 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a87f8cc4d6581c253225fa038d0c8972e71fcff1
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 947efa181a6b632050c01c4f2b327cf11a113e3f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808791"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070927"
 ---
 # <a name="ccustomwindowsfile"></a>CCustomWindowsFile
 
-O assistente cria uma classe para conter uma linha de dados. Nesse caso, ele é chamado `CCustomWindowsFile`. O código a seguir para `CCustomWindowsFile` é gerado pelo assistente e lista todos os arquivos em um diretório usando o `WIN32_FIND_DATA` estrutura. `CCustomWindowsFile` herda o `WIN32_FIND_DATA` estrutura:  
-  
+O assistente cria uma classe para conter uma linha de dados. Nesse caso, ele é chamado `CCustomWindowsFile`. O código a seguir para `CCustomWindowsFile` é gerado pelo assistente e lista todos os arquivos em um diretório usando o `WIN32_FIND_DATA` estrutura. `CCustomWindowsFile` herda o `WIN32_FIND_DATA` estrutura:
+
 ```cpp
-/////////////////////////////////////////////////////////////////////  
-// CustomRS.H  
-  
-class CCustomWindowsFile:   
-   public WIN32_FIND_DATA  
-{  
-public:  
-BEGIN_PROVIDER_COLUMN_MAP(CCustomWindowsFile)  
-   PROVIDER_COLUMN_ENTRY("FileAttributes", 1, dwFileAttributes)  
-   PROVIDER_COLUMN_ENTRY("FileSizeHigh", 2, nFileSizeHigh)  
-   PROVIDER_COLUMN_ENTRY("FileSizeLow", 3, nFileSizeLow)  
-   PROVIDER_COLUMN_ENTRY_STR("FileName", 4, cFileName)  
-   PROVIDER_COLUMN_ENTRY_STR("AltFileName", 5, cAlternateFileName)  
-END_PROVIDER_COLUMN_MAP()  
-};  
-```  
-  
-`CCustomWindowsFile` é chamado de [classe de registro de usuário](../../data/oledb/user-record.md) porque ele também contém um mapa que descreve as colunas no conjunto de linhas do provedor. O mapa de coluna do provedor contém uma entrada para cada campo no conjunto de linhas usando as macros PROVIDER_COLUMN_ENTRY. As macros especificam nome de coluna ordinal e deslocamento para uma entrada de estrutura. As entradas de coluna do provedor no código acima contém deslocamentos no `WIN32_FIND_DATA` estrutura. Quando o consumidor chama `IRowset::GetData`, os dados são transferidos em um buffer contíguo. Em vez de fazer a fazer aritmética de ponteiro, o mapa permite que você especifique um membro de dados.  
-  
-O `CCustomRowset` classe também contém o `Execute` método. `Execute` é o que realmente lê os dados da fonte de nativo. O código a seguir mostra o Assistente gerou `Execute` método. A função usa o Win32 `FindFirstFile` e `FindNextFile` APIs para recuperar informações sobre os arquivos no diretório e colocá-los em instâncias do `CCustomWindowsFile` classe.  
-  
+/////////////////////////////////////////////////////////////////////
+// CustomRS.H
+
+class CCustomWindowsFile:
+   public WIN32_FIND_DATA
+{
+public:
+BEGIN_PROVIDER_COLUMN_MAP(CCustomWindowsFile)
+   PROVIDER_COLUMN_ENTRY("FileAttributes", 1, dwFileAttributes)
+   PROVIDER_COLUMN_ENTRY("FileSizeHigh", 2, nFileSizeHigh)
+   PROVIDER_COLUMN_ENTRY("FileSizeLow", 3, nFileSizeLow)
+   PROVIDER_COLUMN_ENTRY_STR("FileName", 4, cFileName)
+   PROVIDER_COLUMN_ENTRY_STR("AltFileName", 5, cAlternateFileName)
+END_PROVIDER_COLUMN_MAP()
+};
+```
+
+`CCustomWindowsFile` é chamado de [classe de registro de usuário](../../data/oledb/user-record.md) porque ele também contém um mapa que descreve as colunas no conjunto de linhas do provedor. O mapa de coluna do provedor contém uma entrada para cada campo no conjunto de linhas usando as macros PROVIDER_COLUMN_ENTRY. As macros especificam nome de coluna ordinal e deslocamento para uma entrada de estrutura. As entradas de coluna do provedor no código acima contém deslocamentos no `WIN32_FIND_DATA` estrutura. Quando o consumidor chama `IRowset::GetData`, os dados são transferidos em um buffer contíguo. Em vez de fazer a fazer aritmética de ponteiro, o mapa permite que você especifique um membro de dados.
+
+O `CCustomRowset` classe também contém o `Execute` método. `Execute` é o que realmente lê os dados da fonte de nativo. O código a seguir mostra o Assistente gerou `Execute` método. A função usa o Win32 `FindFirstFile` e `FindNextFile` APIs para recuperar informações sobre os arquivos no diretório e colocá-los em instâncias do `CCustomWindowsFile` classe.
+
 ```cpp
-/////////////////////////////////////////////////////////////////////  
-// CustomRS.H  
-  
-HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)  
-{  
-   USES_CONVERSION;  
-   BOOL bFound = FALSE;  
-   HANDLE hFile;  
-   LPTSTR  szDir = (m_strCommandText == _T("")) ? _T("*.*") :  
-       OLE2T(m_strCommandText);  
-   CCustomWindowsFile wf;  
-   hFile = FindFirstFile(szDir, &wf);  
-   if (hFile == INVALID_HANDLE_VALUE)  
-      return DB_E_ERRORSINCOMMAND;  
-   LONG cFiles = 1;  
-   BOOL bMoreFiles = TRUE;  
-   while (bMoreFiles)  
-   {  
-      if (!m_rgRowData.Add(wf))  
-         return E_OUTOFMEMORY;  
-      bMoreFiles = FindNextFile(hFile, &wf);  
-      cFiles++;  
-   }  
-   FindClose(hFile);  
-   if (pcRowsAffected != NULL)  
-      *pcRowsAffected = cFiles;  
-   return S_OK;  
-}  
-```  
-  
-O diretório a ser pesquisado é representado por `m_strCommandText`; isso contém o texto representado pelo `ICommandText` interface no objeto de comando. Se nenhum diretório for especificado, ele usa o diretório atual.  
-  
-O método cria uma entrada para cada arquivo (correspondente a uma linha) e o coloca no `m_rgRowData` membro de dados. O `CRowsetImpl` classe define o `m_rgRowData` membro de dados. Os dados nessa matriz representa a tabela inteira e são usados em todo os modelos.  
-  
-## <a name="see-also"></a>Consulte também  
+/////////////////////////////////////////////////////////////////////
+// CustomRS.H
+
+HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
+{
+   USES_CONVERSION;
+   BOOL bFound = FALSE;
+   HANDLE hFile;
+   LPTSTR  szDir = (m_strCommandText == _T("")) ? _T("*.*") :
+       OLE2T(m_strCommandText);
+   CCustomWindowsFile wf;
+   hFile = FindFirstFile(szDir, &wf);
+   if (hFile == INVALID_HANDLE_VALUE)
+      return DB_E_ERRORSINCOMMAND;
+   LONG cFiles = 1;
+   BOOL bMoreFiles = TRUE;
+   while (bMoreFiles)
+   {
+      if (!m_rgRowData.Add(wf))
+         return E_OUTOFMEMORY;
+      bMoreFiles = FindNextFile(hFile, &wf);
+      cFiles++;
+   }
+   FindClose(hFile);
+   if (pcRowsAffected != NULL)
+      *pcRowsAffected = cFiles;
+   return S_OK;
+}
+```
+
+O diretório a ser pesquisado é representado por `m_strCommandText`; isso contém o texto representado pelo `ICommandText` interface no objeto de comando. Se nenhum diretório for especificado, ele usa o diretório atual.
+
+O método cria uma entrada para cada arquivo (correspondente a uma linha) e o coloca no `m_rgRowData` membro de dados. O `CRowsetImpl` classe define o `m_rgRowData` membro de dados. Os dados nessa matriz representa a tabela inteira e são usados em todo os modelos.
+
+## <a name="see-also"></a>Consulte também
 
 [Arquivos gerados pelo Assistente do Provedor](../../data/oledb/provider-wizard-generated-files.md)

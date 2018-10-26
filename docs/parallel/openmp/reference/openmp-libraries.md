@@ -1,7 +1,7 @@
 ---
 title: OpenMP bibliotecas | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-parallel
 ms.topic: reference
@@ -12,14 +12,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9a4ccfefeaeb9446731027db44b849233bfefd6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7620b0ea710a5474fbbbf614691ceeb1e5cc945e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391209"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061996"
 ---
-# <a name="openmp-libraries"></a>OpenMP Bibliotecas
+# <a name="openmp-libraries"></a>Bibliotecas de OpenMP
 
 Discute os arquivos. lib que compõem as bibliotecas de tempo de execução OpenMP no Visual C++.
 
@@ -38,4 +38,4 @@ As DLLs de OpenMP estão no diretório de pacotes redistribuíveis do Visual C++
 
 ## <a name="see-also"></a>Consulte também
 
-[Referência da biblioteca](../../../parallel/openmp/reference/openmp-library-reference.md)
+[Referência da biblioteca](openmp-library-reference.md)

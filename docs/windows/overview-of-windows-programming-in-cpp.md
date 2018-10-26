@@ -13,20 +13,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8251f45d07e8a410c41a89fbc618839e9bbb838
-ms.sourcegitcommit: 6a6b2061db9d51c5cc79775512de54589a4d2fbc
+ms.openlocfilehash: 6ea59ae2cb0c12a60a8463434105f1cc6af0a77d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347222"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073520"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Visão geral de programação do Windows no C++
 
 Você pode usar o Visual C++ para escrever muitos tipos de programas que são executados em um PC Windows (x x86, x64 ou ARM), em um servidor Windows, na nuvem ou no Xbox. Programas bem escritos em C++ têm essas qualidades:
+
 - eficiente para requisitos de memória
-- econômicos em consumo de energia 
+- econômicos em consumo de energia
 - capaz de aproveitar ao máximo de dispositivos de vários núcleos e vários núcleos
-- capaz de fazer a computação geral na unidade de processamento gráfico GPGPU)  
+- capaz de fazer a computação geral na unidade de processamento gráfico GPGPU)
 - é possível tirar proveito de outros avanços recentes no hardware.
 
 Há várias categorias de aplicativos do Windows que você pode desenvolver com o Visual C++. Essas categorias têm modelos de programação diferentes ou modelos de aplicativo, que foram introduzidos ao longo dos anos. Cada modelo usa diferentes bibliotecas e APIs para fornecer acesso à plataforma e criar interfaces do usuário, como janelas e caixas de diálogo. A biblioteca padrão C++, bem como bibliotecas de terceiros podem ser usadas em qualquer uma dessas categorias, com algumas restrições para UWP.
@@ -98,7 +99,7 @@ As bibliotecas da Microsoft incluem:
 
 - Tempo de Execução de Simultaneidade: uma biblioteca que simplifica o trabalho da programação paralela e assíncrona para dispositivos de vários e muitos núcleos. Para obter mais informações, consulte [Tempo de Execução de Simultaneidade](../parallel/concrt/concurrency-runtime.md).
 
-Muitos cenários de programação do Windows também exigem o Windows SDK, que inclui os arquivos de cabeçalho que permitem acesso aos componentes do sistema operacional Windows. Por padrão, o Visual Studio instala o SDK do Windows como um componente da carga de trabalho da área de trabalho do C++, que permite o desenvolvimento de aplicativos Windows Universal. Para desenvolver aplicativos da UWP, você precisa ter a versão do Windows 10 do SDK do Windows. Para obter informações, consulte [SDK do Windows 10](https://dev.windows.com/downloads/windows-10-sdk). (Para obter mais informações sobre os SDKs do Windows para versões anteriores do Windows, consulte o [arquivo Windows SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)). 
+Muitos cenários de programação do Windows também exigem o Windows SDK, que inclui os arquivos de cabeçalho que permitem acesso aos componentes do sistema operacional Windows. Por padrão, o Visual Studio instala o SDK do Windows como um componente da carga de trabalho da área de trabalho do C++, que permite o desenvolvimento de aplicativos Windows Universal. Para desenvolver aplicativos da UWP, você precisa ter a versão do Windows 10 do SDK do Windows. Para obter informações, consulte [SDK do Windows 10](https://dev.windows.com/downloads/windows-10-sdk). (Para obter mais informações sobre os SDKs do Windows para versões anteriores do Windows, consulte o [arquivo Windows SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)).
 
 **Programar arquivos (x86) \Windows Kits** é o local padrão para todas as versões do SDK do Windows que você instalou.
 

@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d057da51eadcd6afa8c50ddc0592f700d42f9f5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b3ba50c607d7522441420686340c1f1ff32a7ccc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447720"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081544"
 ---
 # <a name="cmfcstatusbar-class"></a>Classe CMFCStatusBar
 
@@ -196,7 +196,6 @@ O exemplo a seguir demonstra como chamar vários métodos `CMFCStatusBar` classe
 
 ##  <a name="calcfixedlayout"></a>  CMFCStatusBar::CalcFixedLayout
 
-
 ```
 virtual CSize CalcFixedLayout(
     BOOL bStretch,
@@ -205,8 +204,8 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>Parâmetros
 
-*bStretch*<br/>
-[in] [in] *bHorz*
+[in] *bStretch*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -214,21 +213,19 @@ virtual CSize CalcFixedLayout(
 
 ##  <a name="commandtoindex"></a>  CMFCStatusBar::CommandToIndex
 
-
 ```
 int CommandToIndex(UINT nIDFind) const;
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *nIDFind*
+[in] *nIDFind*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="create"></a>  CMFCStatusBar::Create
-
 
 ```
 BOOL Create(
@@ -239,15 +236,15 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pParentWnd*<br/>
-[in] [in] *dwStyle* [in] *nID*
+[in] *pParentWnd*<br/>
+[in] *dwStyle*<br/>
+[in] *nID*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="createex"></a>  CMFCStatusBar::CreateEx
-
 
 ```
 BOOL CreateEx(
@@ -259,17 +256,16 @@ BOOL CreateEx(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pParentWnd*<br/>
-[in] [in] *dwCtrlStyle*
-*dwStyle*<br/>
-[in] [in] *nID*
+[in] *pParentWnd*<br/>
+[in] *dwCtrlStyle*<br/>
+[in] *dwStyle*<br/>
+[in] *nID*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="doesallowdyninsertbefore"></a>  CMFCStatusBar::DoesAllowDynInsertBefore
-
 
 ```
 virtual BOOL DoesAllowDynInsertBefore() const;
@@ -352,7 +348,6 @@ O número de painéis da barra de status.
 
 ##  <a name="getdrawextendedarea"></a>  CMFCStatusBar::GetDrawExtendedArea
 
-
 ```
 BOOL GetDrawExtendedArea() const;
 ```
@@ -363,14 +358,13 @@ BOOL GetDrawExtendedArea() const;
 
 ##  <a name="getextendedarea"></a>  CMFCStatusBar::GetExtendedArea
 
-
 ```
 virtual BOOL GetExtendedArea(CRect& rect) const;
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *rect*
+[in] *rect*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -378,21 +372,19 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 
 ##  <a name="getitemid"></a>  CMFCStatusBar::GetItemID
 
-
 ```
 UINT GetItemID(int nIndex) const;
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *nIndex*
+[in] *nIndex*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="getitemrect"></a>  CMFCStatusBar::GetItemRect
-
 
 ```
 void GetItemRect(
@@ -402,13 +394,12 @@ void GetItemRect(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nIndex*<br/>
-[in] [in] *lpRect*
+[in] *nIndex*<br/>
+[in] *lpRect*<br/>
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="getpaneinfo"></a>  CMFCStatusBar::GetPaneInfo
-
 
 ```
 void GetPaneInfo(
@@ -420,15 +411,14 @@ void GetPaneInfo(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nIndex*<br/>
-[in] [in] *nID*
-*nStyle*<br/>
-[in] [in] *cxWidth*
+[in] *nIndex*<br/>
+[in] *nID*<br/>
+[in] *nStyle*<br/>
+[in] *cxWidth*<br/>
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="getpaneprogress"></a>  CMFCStatusBar::GetPaneProgress
-
 
 ```
 long GetPaneProgress(int nIndex) const;
@@ -436,7 +426,7 @@ long GetPaneProgress(int nIndex) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *nIndex*
+[in] *nIndex*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -444,21 +434,19 @@ long GetPaneProgress(int nIndex) const;
 
 ##  <a name="getpanestyle"></a>  CMFCStatusBar::GetPaneStyle
 
-
 ```
 UINT GetPaneStyle(int nIndex) const;
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *nIndex*
+[in] *nIndex*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="getpanetext"></a>  CMFCStatusBar::GetPaneText
-
 
 ```
 void GetPaneText(
@@ -470,8 +458,8 @@ CString GetPaneText(int nIndex) const;
 
 ### <a name="parameters"></a>Parâmetros
 
-*nIndex*<br/>
-[in] [in] *s*
+[in] *nIndex*<br/>
+[in] *s*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -554,14 +542,13 @@ Substitua este método em um `CMFCStatusBar`-derivado da classe para personaliza
 
 ##  <a name="precreatewindow"></a>  CMFCStatusBar::PreCreateWindow
 
-
 ```
 virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *cs*
+[in] *cs*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -569,19 +556,17 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
 ##  <a name="setdrawextendedarea"></a>  CMFCStatusBar::SetDrawExtendedArea
 
-
 ```
 void SetDrawExtendedArea(BOOL bSet = TRUE);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *bSet*
+[in] *bSet*<br/>
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="setindicators"></a>  CMFCStatusBar::SetIndicators
-
 
 ```
 BOOL SetIndicators(
@@ -591,8 +576,8 @@ BOOL SetIndicators(
 
 ### <a name="parameters"></a>Parâmetros
 
-*lpIDArray*<br/>
-[in] [in] *nIDCount*
+[in] *lpIDArray*<br/>
+[in] *nIDCount*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -660,7 +645,6 @@ void SetPaneIcon(
     HICON hIcon,
     BOOL bUpdate=TRUE);
 
-
 void SetPaneIcon(
     int nIndex,
     HBITMAP hBmp,
@@ -693,7 +677,6 @@ Se houver qualquer animação em execução que [CMFCStatusBar::SetPaneAnimation
 
 ##  <a name="setpaneinfo"></a>  CMFCStatusBar::SetPaneInfo
 
-
 ```
 void SetPaneInfo(
     int nIndex,
@@ -704,10 +687,10 @@ void SetPaneInfo(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nIndex*<br/>
-[in] [in] *nID*
-*nStyle*<br/>
-[in] [in] *cxWidth*
+[in] *nIndex*<br/>
+[in] *nID*<br/>
+[in] *nStyle*<br/>
+[in] *cxWidth*<br/>
 
 ### <a name="remarks"></a>Comentários
 
@@ -741,7 +724,6 @@ Para usar essa função para o painel de determinado, você deve chamar [CMFCSta
 
 ##  <a name="setpanestyle"></a>  CMFCStatusBar::SetPaneStyle
 
-
 ```
 void SetPaneStyle(
     int nIndex,
@@ -750,13 +732,12 @@ void SetPaneStyle(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nIndex*<br/>
-[in] [in] *nStyle*
+[in] *nIndex*<br/>
+[in] *nStyle*<br/>
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="setpanetext"></a>  CMFCStatusBar::SetPaneText
-
 
 ```
 virtual BOOL SetPaneText(
@@ -767,8 +748,9 @@ virtual BOOL SetPaneText(
 
 ### <a name="parameters"></a>Parâmetros
 
-*nIndex*<br/>
-[in] [in] *lpszNewText* [in] *b Update*
+[in] *nIndex*<br/>
+[in] *lpszNewText*<br/>
+[in] *b Update*<br/>
 
 ### <a name="return-value"></a>Valor de retorno
 

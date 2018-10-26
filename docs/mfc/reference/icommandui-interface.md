@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ec76a554068dbec050078a0e0558cecd583410c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cd9ea4397c655f0ebb28d10febe82581d6ad8771
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429195"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055002"
 ---
 # <a name="icommandui-interface"></a>Interface ICommandUI
 
@@ -73,6 +73,7 @@ Define o item de interface do usuário para esse comando para o estado de seleç
 ```
 property UICheckState Check;
 ```
+
 ## <a name="remarks"></a>Comentários
 
 Essa propriedade define o item de interface do usuário para esse comando para o estado de seleção apropriadas. Seleção de conjunto com os seguintes valores:
@@ -86,6 +87,7 @@ Informa ao mecanismo de roteamento de comando para continua a rotear a mensagem 
 ```
 void ContinueRouting();
 ```
+
 ## <a name="remarks"></a>Comentários
 
 Essa é uma função de membro avançado que deve ser usada em conjunto com um manipulador de ON_COMMAND_EX que retorna FALSE. Para obter mais informações, consulte TN006 de observação técnica: mapas de mensagem.
@@ -96,6 +98,7 @@ Habilita ou desabilita o item de interface do usuário para esse comando.
 ```
 property bool Enabled;
 ```
+
 ## <a name="remarks"></a>Comentários
 
 Esta propriedade habilita ou desabilita o item de interface do usuário para esse comando. Defina habilitado para True para habilitar o item, FALSE para desabilitá-lo.
@@ -106,6 +109,7 @@ Obtém a ID do objeto de interface do usuário representado pelo objeto ICommand
 ```
 property unsigned int ID;
 ```
+
 ## <a name="remarks"></a>Comentários
 
 Essa propriedade obtém a ID (um identificador) do item de menu, botão de barra de ferramentas ou outro objeto de interface do usuário representado pelo objeto ICommandUI.
@@ -116,6 +120,7 @@ Obtém o índice do objeto de interface do usuário representado pelo objeto ICo
 ```
 property unsigned int Index;
 ```
+
 ## <a name="remarks"></a>Comentários
 
 Essa propriedade obtém o índice (um identificador) do item de menu, botão de barra de ferramentas ou outro objeto de interface do usuário representado pelo objeto ICommandUI.
@@ -126,6 +131,7 @@ Define o item de interface do usuário para esse comando para o estado de seleç
 ```
 property bool Radio;
 ```
+
 ## <a name="remarks"></a>Comentários
 
 Essa propriedade define o item de interface do usuário para esse comando para o estado de seleção apropriadas. Defina a opção para True para habilitar o item; Caso contrário, FALSE.
@@ -136,6 +142,7 @@ Define o texto do item de interface de usuário para esse comando.
 ```
 property String^ Text;
 ```
+
 ## <a name="remarks"></a>Comentários
 
 Essa propriedade define o texto do item de interface de usuário para esse comando. Definir o texto a um identificador de cadeia de caracteres de texto.

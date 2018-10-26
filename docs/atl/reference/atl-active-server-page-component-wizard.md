@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57f6e24ec664128a47813c29ce07a4272ce4a771
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: 8a87b2ba1e846ce995a987379ae6f30567a39773
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250361"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053806"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Assistente de página componente Active Server ATL
 
@@ -31,7 +31,7 @@ Este assistente insere o projeto de um componente Active Server Pages (ASP). O M
 Usando esse assistente, você pode especificar que o componente do modelo de threading e seu suporte de agregação. Você também pode indicar o suporte para a interface de informações de erro, pontos de conexão e empacotamento de thread livre.
 
 > [!WARNING]
-> No Visual Studio 2017 versão 15,9 este assistente de código foi preterido e será removido em uma versão futura do Visual Studio. Este assistente é raramente usado. Suporte geral para ATL e MFC não é afetado pela remoção desse assistente. Se você quiser compartilhar seus comentários sobre essa substituição, conclua [desta pesquisa](https://www.surveymonkey.com/r/QDWKKCN). Sua opinião é importante para nós.
+> No Visual Studio 2017 versão 15.9, esse assistente de código foi preterido e será removido em uma versão futura do Visual Studio. Este assistente é raramente usado. O suporte geral para ATL e MFC não é afetado pela remoção do assistente. Se você quiser compartilhar seus comentários sobre essa alteração, participe [desta pesquisa](https://www.surveymonkey.com/r/QDWKKCN). Seus comentários são importantes para nós.
 
 ## <a name="remarks"></a>Comentários
 
@@ -47,27 +47,27 @@ Se você alterar o **Coclass** na seção de COM, a alteração é refletido na 
 
 Fornece informações para a classe C++ criada para o objeto.
 
-- **Nome curto**  
+- **Nome curto**
 
    Define o nome de raiz para o objeto. O nome que você forneceu determina o `Class` e **Coclass** nomes, o **arquivo. cpp** e **arquivo. h** nomes, o **Interface**nome, o **tipo de** nomes e o **ProgID**, a menos que você altere esses campos individualmente.
 
-- **Arquivo .h**  
+- **Arquivo .h**
 
    Define o nome do arquivo de cabeçalho para a nova classe do objeto. Por padrão, esse nome é baseado no nome que você fornecer em **Short name**. Clique no botão de reticências para salvar o nome de arquivo no local de sua escolha, ou para acrescentar a declaração de classe a um arquivo existente. Se você selecionar um arquivo existente, o assistente não salvará no local selecionado até que você clique **concluir** no assistente.
 
    O assistente não substitui um arquivo. Se você selecionar o nome de um arquivo existente, quando clicar em **Concluir**, o assistente solicitará que você indique se a declaração de classe deve ser acrescentada ao conteúdo do arquivo. Clique em **Sim** para acrescentar o arquivo; clique em **Não** para retornar ao assistente e especificar outro nome de arquivo.
 
-- **Class**  
+- **Class**
 
    Define o nome da classe a ser criado. Esse nome é baseado no nome que você fornecer em **Short name**, precedidos pela 'c', o prefixo típico para um nome de classe.
 
-- **Arquivo .cpp**  
+- **Arquivo .cpp**
 
    Define o nome do arquivo de implementação para a nova classe do objeto. Por padrão, esse nome é baseado no nome que você fornecer em **Short name**. Clique no botão de reticências para salvar o nome de arquivo no local de sua escolha. O arquivo não é salvo no local selecionado até que você clique em **Concluir** no assistente.
 
    O assistente não substitui um arquivo. Se você selecionar o nome de um arquivo existente, quando clicar em **Concluir**, o assistente solicitará que você indique se a implementação de classe deve ser acrescentada ao conteúdo do arquivo. Clique em **Sim** para acrescentar o arquivo; clique em **Não** para retornar ao assistente e especificar outro nome de arquivo.
 
-- **Atribuído**  
+- **Atribuído**
 
    Indica se o objeto usa atributos. Se você estiver adicionando um objeto para um projeto ATL atribuído, essa opção é selecionada e não está disponível para alterar. Ou seja, você pode adicionar apenas os objetos atribuídos a um projeto criado com o suporte do atributo.
 
@@ -81,19 +81,19 @@ Fornece informações para a classe C++ criada para o objeto.
 
 Fornece informações sobre a funcionalidade de COM para o objeto.
 
-- **Coclass**  
+- **Coclass**
 
    Define o nome da classe de componente que contém uma lista de interfaces com suporte do objeto. Se esse objeto ou seu projeto usa atributos, você não pode alterar essa opção porque ATL não inclui o **coclass** atributo.
 
-- **Tipo**  
+- **Tipo**
 
    Define a descrição do objeto que será exibido no registro para coclass.
 
-- **Interface**  
+- **Interface**
 
    Define a interface que você cria para seu objeto. Essa interface contém seus métodos personalizados.
 
-- **ProgID**  
+- **ProgID**
 
    Define o nome que contêineres podem usar em vez do CLSID do objeto.
 

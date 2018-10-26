@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fff5b7e43b489bdaf2a27b115af26c48e33956
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3bf023dbc52ccac7311a62aba1a290b1a03190dd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400778"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060553"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Controles ActiveX MFC: adicionando eventos de estoque a um controle ActiveX
 
@@ -73,13 +73,13 @@ O `COleControl` classe fornece eventos de estoque dez, listados na tabela a segu
 |-----------|---------------------|--------------|
 |Clique em|**void (FireClick)**|Acionado quando o controle captura o mouse, qualquer **BUTTONUP** (à esquerda, meio ou à direita) é recebida, e o botão é liberado sobre o controle. O estoque MouseDown e MouseUp eventos ocorrerem antes desse evento.<br /><br /> Entrada de mapa de evento: **(EVENT_STOCK_CLICK)**|
 |DblClick|**void (FireDblClick)**|Semelhante a clique, mas disparado quando um **BUTTONDBLCLK** mensagem é recebida.<br /><br /> Entrada de mapa de evento: **(EVENT_STOCK_DBLCLICK)**|
-|Erro|**void FireError (SCODE***scode* **, LPCSTR** `lpszDescription` **, UINT**`nHelpID`**= 0)** |Acionado quando ocorre um erro em seu controle ActiveX fora do escopo de um acesso de propriedade ou chamada de método.<br /><br /> Entrada de mapa de evento: **(EVENT_STOCK_ERROREVENT)**|
-|KeyDown|**void FireKeyDown (curto** `nChar` **curtos**`nShiftState`**)** |Acionado quando um `WM_SYSKEYDOWN` ou `WM_KEYDOWN` mensagem é recebida.<br /><br /> Entrada de mapa de evento: **(EVENT_STOCK_KEYDOWN)**|
-|KeyPress|**void FireKeyPress (curto** <strong>\*</strong> `pnChar` **)** |Acionado quando um `WM_CHAR` mensagem é recebida.<br /><br /> Entrada de mapa de evento: **(EVENT_STOCK_KEYPRESS)**|
-|KeyUp|**void FireKeyUp (curto** `nChar` **curtos**`nShiftState`**)** |Acionado quando um `WM_SYSKEYUP` ou `WM_KEYUP` mensagem é recebida.<br /><br /> Entrada de mapa de evento: **(EVENT_STOCK_KEYUP)**|
-|MouseDown|**void FireMouseDown (curto** `nButton` **curtos** `nShiftState` **, float***x* **, float** *y***)** |Acionado se houver **é** (esquerda, no meio ou à direita) é recebida. O mouse é capturado imediatamente antes que este evento é disparado.<br /><br /> Entrada de mapa de evento: **(EVENT_STOCK_MOUSEDOWN)**|
-|MouseMove|**void FireMouseMove (curto** `nButton` **curtos** `nShiftState` **, float***x* **, float** *y***)** |Acionado quando uma mensagem WM_MOUSEMOVE é recebida.<br /><br /> Entrada de mapa de evento: **(EVENT_STOCK_MOUSEMOVE)**|
-|MouseUp|**void FireMouseUp (curto** `nButton` **curtos** `nShiftState` **, float***x* **, float** *y***)** |Acionado se houver **BUTTONUP** (esquerda, no meio ou à direita) é recebida. A captura do mouse é liberada antes que esse evento é acionado.<br /><br /> Entrada de mapa de evento: **(EVENT_STOCK_MOUSEUP)**|
+|Erro|**void FireError (SCODE***scode* **, LPCSTR** `lpszDescription` **, UINT**`nHelpID`**= 0)**|Acionado quando ocorre um erro em seu controle ActiveX fora do escopo de um acesso de propriedade ou chamada de método.<br /><br /> Entrada de mapa de evento: **(EVENT_STOCK_ERROREVENT)**|
+|KeyDown|**void FireKeyDown (curto** `nChar` **curtos**`nShiftState`**)**|Acionado quando um `WM_SYSKEYDOWN` ou `WM_KEYDOWN` mensagem é recebida.<br /><br /> Entrada de mapa de evento: **(EVENT_STOCK_KEYDOWN)**|
+|KeyPress|**void FireKeyPress (curto** <strong>\*</strong> `pnChar` **)**|Acionado quando um `WM_CHAR` mensagem é recebida.<br /><br /> Entrada de mapa de evento: **(EVENT_STOCK_KEYPRESS)**|
+|KeyUp|**void FireKeyUp (curto** `nChar` **curtos**`nShiftState`**)**|Acionado quando um `WM_SYSKEYUP` ou `WM_KEYUP` mensagem é recebida.<br /><br /> Entrada de mapa de evento: **(EVENT_STOCK_KEYUP)**|
+|MouseDown|**void FireMouseDown (curto** `nButton` **curtos** `nShiftState` **, float***x* **, float** *y***)**|Acionado se houver **é** (esquerda, no meio ou à direita) é recebida. O mouse é capturado imediatamente antes que este evento é disparado.<br /><br /> Entrada de mapa de evento: **(EVENT_STOCK_MOUSEDOWN)**|
+|MouseMove|**void FireMouseMove (curto** `nButton` **curtos** `nShiftState` **, float***x* **, float** *y***)**|Acionado quando uma mensagem WM_MOUSEMOVE é recebida.<br /><br /> Entrada de mapa de evento: **(EVENT_STOCK_MOUSEMOVE)**|
+|MouseUp|**void FireMouseUp (curto** `nButton` **curtos** `nShiftState` **, float***x* **, float** *y***)**|Acionado se houver **BUTTONUP** (esquerda, no meio ou à direita) é recebida. A captura do mouse é liberada antes que esse evento é acionado.<br /><br /> Entrada de mapa de evento: **(EVENT_STOCK_MOUSEUP)**|
 |ReadyStateChange|**void (FireReadyStateChange)**|Acionado quando um controle fizer a transição para o próximo estado pronto devido à quantidade de dados recebidos.<br /><br /> Entrada de mapa de evento: **(EVENT_STOCK_READYSTATECHANGE)**|
 
 ##  <a name="_core_adding_a_stock_event_using_classwizard"></a> Adicionar um evento de ação usando o Assistente de eventos para adicionar
@@ -94,7 +94,7 @@ Adicionando eventos de estoque exige menos trabalhoso do que adicionando eventos
 
 1. No menu de atalho, clique em **Add** e, em seguida, clique em **Adicionar evento**.
 
-     Isso abre o Assistente para adicionar eventos.
+   Isso abre o Assistente para adicionar eventos.
 
 1. No **nome do evento** lista suspensa, selecione `KeyPress`.
 

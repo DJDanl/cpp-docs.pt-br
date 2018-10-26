@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03fc15cc2d2a73c0e8a1a016a2a477a5c65cdc15
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 7cd03babd97033495ecfa84817938103cde05a73
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890551"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081700"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Controles ActiveX MFC: subclasses de um controle do Windows
 
@@ -94,12 +94,12 @@ Para adicionar um manipulador de mensagens para uma mensagem da janela refletida
 
 - Na classe de controle. Arquivo do H, declarar uma função de manipulador. A função deve ter um tipo de retorno **LRESULT** e dois parâmetros com tipos **WPARAM** e **LPARAM**, respectivamente. Por exemplo:
 
-     [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
+   [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
     [!code-cpp[NVC_MFC_AxSub#6](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_6.h)]
 
 - Na classe de controle. CPP do arquivo, adicione uma entrada ON_MESSAGE ao mapa de mensagens. Os parâmetros desta entrada devem ser o identificador da mensagem e o nome da função de manipulador. Por exemplo:
 
-     [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
+   [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
 
 - Além disso, na. Arquivo CPP, implemente o `OnOcmCommand` a função de membro para processar a mensagem refletida. O *wParam* e *lParam* parâmetros são iguais da mensagem em janela original.
 

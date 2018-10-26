@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6613e38a19987abcc9f95288e9d1cb6957b076a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: add9336165195ba4da0125c606eebd39f3fce298
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427271"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062217"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: exemplo de soquetes que usam arquivos mortos
 
@@ -40,11 +40,11 @@ Para enviar, a função de exemplo faz um loop para um número especificado de v
 
 - Um "cabeçalho" que especifica a natureza dos dados (nesse caso, o valor da *bValue* variável e quantas cópias serão enviadas).
 
-     Os dois itens são gerados aleatoriamente para este exemplo.
+   Os dois itens são gerados aleatoriamente para este exemplo.
 
 - O número especificado de cópias dos dados.
 
-     Interno **para** loop envia *bValue* o número de vezes especificado.
+   Interno **para** loop envia *bValue* o número de vezes especificado.
 
 - Uma cadeia de caracteres chamado *strText* que o receptor exibe ao usuário.
 

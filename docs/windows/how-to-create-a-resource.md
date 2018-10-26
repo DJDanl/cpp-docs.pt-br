@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61105469abc25de38d0d9ae9a59755e08fd298b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23717c35d0590c88a4904e5b6b6ddb0e4c7ccffc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438633"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071960"
 ---
 # <a name="how-to-create-a-resource"></a>Como criar um recurso
 
@@ -33,7 +33,7 @@ ms.locfileid: "46438633"
 
 1. Com foco em seu arquivo. rc no [exibição de recurso](../windows/resource-view-window.md), clique no **editar** menu e escolha **adicionar recurso** (ou clique com botão direito no arquivo. rc no **domododeexibiçãoderecursos** e escolha **adicionar recurso** no menu de atalho).
 
-   > [!NOTE] 
+   > [!NOTE]
    > Se seu projeto já não contiver um arquivo. RC, consulte [criando um novo arquivo de Script de recurso](../windows/how-to-create-a-resource-script-file.md).
 
 2. No [caixa de diálogo Adicionar recurso](../windows/add-resource-dialog-box.md), escolha o tipo de recurso que você deseja adicionar ao seu projeto.

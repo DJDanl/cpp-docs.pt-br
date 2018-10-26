@@ -1,32 +1,30 @@
 ---
-title: Arquivos de projeto | Microsoft Docs
+title: Exemplo de arquivo de projeto | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- .vcproj files
-- Visual C++ projects, project file format
-- VCPROJ (Visual C++ project file) format
-- project files [C++], .vcproj file format
+- .vcxproj files
+- C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
 author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7202dff0bd1a790a4e8727bbac9d375daecb8e7a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 591802e04348ca08bded17504b3fb19fb9aa7213
+ms.sourcegitcommit: 243ee0395ee44654a81ce1232f4581fb54904868
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388997"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072379"
 ---
 # <a name="project-files"></a>Os arquivos de projeto
 
-Um arquivo de projeto do Visual C++ é um arquivo baseado em XML que tem a extensão de nome de arquivo .vcxproj e contém as informações necessárias para compilar um projeto do Visual C++.
+Um arquivo de projeto do Visual C++ é um arquivo baseado em XML que tem a extensão de nome de arquivo .vcxproj e contém as informações necessárias para compilar um projeto do Visual C++. Observe que o arquivo de projeto importa vários arquivos de projeto que têm a extensão *.props* ou *.targets*. Esses arquivos contem informações de build adicionais e eles mesmos podem se referir a outros arquivos *.props* ou *.targets*. As macros no caminho do arquivo (por exemplo, `$(VCTargetsPath)`) dependem de sua instalação do Visual Studio. Para obter mais informações sobre essas macros e arquivos *.props* e *.targets*, consulte [Página de propriedades de Diretórios do VC++](vcpp-directories-property-page.md), [Trabalhando com propriedades do projeto](working-with-project-properties.md#bkmkPropertiesVersusMacros) e [Macros comuns para comandos e propriedades de build](common-macros-for-build-commands-and-properties.md).
 
 ## <a name="example"></a>Exemplo
 

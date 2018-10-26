@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc19475cff0038d11131a26c36ab498a562b234c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 7e9ec6724addeb8002eeb681f289f232520f31dc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236030"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060086"
 ---
 # <a name="hashmap-class"></a>Classe hash_map
 
@@ -277,7 +277,6 @@ Uma referência ao valor de dados do elemento encontrado.
 ### <a name="remarks"></a>Comentários
 
 Se o valor de chave do argumento não for encontrado, a função gerará um objeto da [Classe out_of_range](../standard-library/out-of-range-class.md).
-
 
 ### <a name="example"></a>Exemplo
 
@@ -2688,9 +2687,9 @@ Retorna o objeto da função de comparação que um hash_map usa para ordenar se
 
 ### <a name="remarks"></a>Comentários
 
-Para um hash_map *m*, se dois elementos *e*1 *(k*1 *, d*1 *)* e *e*2 *(k*2 *, d*2 *)* forem objetos do tipo [value_type](#value_type), em que *k*1 e *k*2 são suas chaves do tipo [key_type](#key_type) e `d`1 e `d`2 são seus dados do tipo [mapped_type](#mapped_type), então *m.*`value_comp`*( )(e*1 *, e*2 *)* é equivalente a *m.*`key_comp`*( ) (k*1 *, k*2 *)*. Um objeto armazenado define a função de membro
+Para um hash_map *m*, se dois elementos *e1* (*k1*, *d1*) e *e2* (*k2*, *d2*) são objetos do tipo [value_type](#value_type), onde *k1* e *k2* são suas chaves de tipo [key_type](#key_type) e *d1* e *d2* são seus dados do tipo [mapped_type](#mapped_type), em seguida, `m.value_comp()(e1, e2)` é equivalente a `m.key_comp()(k1, k2)` . Um objeto armazenado define a função de membro
 
-**operador booliano**( **value_type&** `left`, **value_type&** `right`) **;**
+`bool operator(value_type& left, value_type& right);`
 
 que retornará **true** se o valor de chave `left` preceder e for diferente do valor de chave de `right` na ordem de classificação.
 

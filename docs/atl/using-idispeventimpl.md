@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48afac392d02edfd3d312583642367bc6726e536
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1d28a9a8bad8ced772d5c698e76d3d08f09c8db2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106786"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066468"
 ---
 # <a name="using-idispeventimpl"></a>Usando IDispEventImpl
 
@@ -41,7 +41,7 @@ Ao usar `IDispEventImpl` para manipular eventos, você precisará:
 
 O exemplo a seguir mostra como lidar com o `DocumentChange` eventos acionados por do Word **aplicativo** objeto. Esse evento é definido como um método no `ApplicationEvents` dispinterface.
 
-O exemplo é do [ATLEventHandling exemplo](../visual-cpp-samples.md).  
+O exemplo é do [ATLEventHandling exemplo](../visual-cpp-samples.md).
 
 ```cpp
 [ uuid(000209F7-0000-0000-C000-000000000046), hidden ]

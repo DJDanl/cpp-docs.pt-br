@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee6c0b958fe27c04c116b4f82098f459c1f0f745
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c6fddd337cb9c0bcd78df1bfa563d1f447131078
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070581"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077329"
 ---
 # <a name="this-pointer"></a>Ponteiro this
 
@@ -32,7 +32,7 @@ O **isso** ponteiro for um ponteiro acessível somente dentro de funções de me
 ## <a name="syntax"></a>Sintaxe
 
 ```
-this 
+this 
 this->member-identifier
 ```
 
@@ -181,7 +181,7 @@ int main()
 
 O tipo de **isso** em um membro da função é descrito pela seguinte sintaxe, onde *cv-qualifier-list* é determinado pelo declarador das funções de membro e pode ser **const**ou **volátil** (ou ambos), e *tipo de classe* é o nome da classe:
 
-*tipo de classe [cv-qualifier-list]* **\* const isso**
+*tipo de classe [cv-qualifier-list]* **&#42; const isso**
 
 Em outras palavras, **isso** é sempre um ponteiro const; ele não pode ser reatribuído.  O **const** ou **volátil** usado na declaração da função de membro se aplicam à instância de classe apontada por **isso** no escopo dessa função.
 

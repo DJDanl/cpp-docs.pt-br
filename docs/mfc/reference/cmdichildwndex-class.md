@@ -1,7 +1,7 @@
 ---
 title: Classe CMDIChildWndEx | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -122,19 +122,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f52ce513f0a0d96fe2454397417f2f7885e2c2f2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 64e8b62f79a6294810fc30b1796958c6ca4a153a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441727"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073858"
 ---
 # <a name="cmdichildwndex-class"></a>Classe CMDIChildWndEx
 
 O `CMDIChildWndEx` classe fornece a funcionalidade de um Windows vários janela filho da MDI (interface MDI) documento. Ela estende a funcionalidade do [classe CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md). A estrutura exige essa classe quando um aplicativo MDI usa determinadas classes do MFC.
 
 Para obter mais detalhes, consulte o código-fonte localizado na **VC\\atlmfc\\src\\mfc** pasta de instalação do Visual Studio.
-
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -284,7 +283,6 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs
 
-
 ```
 virtual BOOL CanShowOnMDITabs();
 ```
@@ -411,7 +409,6 @@ Chame esse método para permitir o alinhamento de encaixe para o quadro principa
 
 ##  <a name="getdockingmanager"></a>  CMDIChildWndEx::GetDockingManager
 
-
 ```
 CDockingManager* GetDockingManager();
 ```
@@ -502,7 +499,6 @@ CBasePane* GetPane(UINT nID);
 Um ponteiro para o painel, se encontrado, caso contrário, nulo.
 
 ##  <a name="getrelatedtabgroup"></a>  CMDIChildWndEx::GetRelatedTabGroup
-
 
 ```
 CMFCTabCtrl* GetRelatedTabGroup();
@@ -770,19 +766,17 @@ void RemovePaneFromDockManager(
 
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup
 
-
 ```
 void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
-[in] *p*
+[in] *p*<br/>
 
 ### <a name="remarks"></a>Comentários
 
 ##  <a name="showpane"></a>  CMDIChildWndEx::ShowPane
-
 
 ```
 void ShowPane(
@@ -794,10 +788,13 @@ void ShowPane(
 
 ### <a name="parameters"></a>Parâmetros
 
-*pBar*<br/>
-[in] [in] *bMostrar*
-*bDelay*<br/>
-[in] [in] *bActivate*
+[in] *pBar*<br/>
+
+[in] *bMostrar*<br/>
+
+[in] *bDelay*<br/>
+
+[in] *bActivate*<br/>
 
 ### <a name="remarks"></a>Comentários
 
