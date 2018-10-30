@@ -24,19 +24,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 397356f8144e3680f3b2d19824d19c0a3bbaddd1
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5a02330d938e1952d3e6b547d49ddb551bf594a5
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50062607"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204581"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Controles ActiveX MFC: usando associação de dados em um controle ActiveX
 
 Um dos usos mais poderosos de controles ActiveX é vinculação de dados, que permite que uma propriedade do controle a ser associado a um campo específico em um banco de dados. Quando um usuário modifica dados nessa propriedade associada, o controle notifica o banco de dados e solicitações que o campo de registro sejam atualizados. O banco de dados, em seguida, notifica o controle do sucesso ou falha da solicitação.
 
 >[!IMPORTANT]
-> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem as ActiveX, consulte [controles ActiveX](activex-controls.md).
+> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem o ActiveX, consulte [controles ActiveX](activex-controls.md).
 
 Este artigo aborda o lado de controle da sua tarefa. Implementar as interações de associação de dados com o banco de dados é de responsabilidade do contêiner de controle. Como gerenciar as interações de banco de dados em seu contêiner está além do escopo desta documentação. Como você prepara o controle de vinculação de dados é explicado no restante deste artigo.
 

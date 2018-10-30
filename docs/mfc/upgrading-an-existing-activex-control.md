@@ -22,19 +22,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0567913eac57c4150f9fe6d051d2fc8e0e31860b
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 48fee88dc991ff58bfb9178e370134ad3cdb11d8
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50082914"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204620"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Atualizando um controle ActiveX existente
 
 Controles ActiveX existente (anteriormente conhecido como controles OLE) pode ser usado na Internet sem modificação. No entanto, você talvez queira modificar controles para melhorar o desempenho.
 
 > [!IMPORTANT]
-> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem as ActiveX, consulte [controles ActiveX](activex-controls.md).
+> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem o ActiveX, consulte [controles ActiveX](activex-controls.md).
 
 Ao usar o controle em uma página da Web, há considerações adicionais. O arquivo. ocx e todos os arquivos de suporte devem ser no computador de destino ou ser baixados da Internet. Isso torna o tamanho do código e uma consideração importante de tempo de download. Downloads podem ser empacotados em um arquivo. cab assinados. Você pode marcar seu controle como seguros para script e como seguro para inicialização.
 

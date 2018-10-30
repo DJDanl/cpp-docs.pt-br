@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b33097c6f6f747d99cf582c1553e25942f1bfcd
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 4e5b0f1b38e73523a476c83e19ab9bf812fdc2fa
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50056003"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204529"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>Controles ActiveX MFC: pintando um controle ActiveX
 
 Este artigo descreve o processo de pintura do controle ActiveX e como você pode alterar o código de pintura para otimizar o processo. (Consulte [otimizando o desenho de controle](../mfc/optimizing-control-drawing.md) para técnicas sobre como otimizar o desenho por não ter controles individualmente restaurem objetos GDI selecionados anteriormente. Depois que todos os controles desenhados, o contêiner pode restaurar automaticamente os objetos originais.)
 
 >[!IMPORTANT]
-> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem as ActiveX, consulte [controles ActiveX](activex-controls.md).
+> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem o ActiveX, consulte [controles ActiveX](activex-controls.md).
 
 Os exemplos neste artigo são de um controle criado pelo Assistente de controle ActiveX do MFC com as configurações padrão. Para obter mais informações sobre como criar um aplicativo de esqueleto de controle usando o Assistente de controle de ActiveX do MFC, consulte o artigo [Assistente de controle ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md).
 

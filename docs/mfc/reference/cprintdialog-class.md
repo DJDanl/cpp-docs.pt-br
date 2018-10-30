@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f69c315f78c5ce1a587f48a873c9c2517f81537b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 61e2ea655c25b15982f3434437bc3bdc3eaf310f
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441428"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204646"
 ---
 # <a name="cprintdialog-class"></a>Classe CPrintDialog
 
@@ -108,7 +108,7 @@ Caixas de diálogo de impressão comuns fornecem uma maneira fácil de implement
 > [!NOTE]
 >  O `CPrintDialogEx` classe encapsula os serviços fornecidos pela folha de propriedades de impressão do Windows. Para obter mais informações, consulte o [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md) visão geral.
 
-`CPrintDialog`da funcionalidade é substituída pelo estado do [CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md), que é projetado para fornecer uma caixa de diálogo comum para ambos a instalação e configuração de página de impressão.
+`CPrintDialog`da funcionalidade é substituída da [CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md), que é projetado para fornecer uma caixa de diálogo comum para ambos a instalação e configuração de página de impressão.
 
 Você pode contar com o framework para lidar com muitos aspectos do processo de impressão para o seu aplicativo. Nesse caso, o framework exibe automaticamente a caixa de diálogo comuns do Windows para impressão. Você também pode ter o identificador de estrutura de impressão para o seu aplicativo mas substituir a caixa de diálogo de impressão comum com sua própria caixa de diálogo de impressão. Para obter mais informações sobre como usar o framework para lidar com tarefas de impressão, consulte o artigo [impressão](../../mfc/printing.md).
 

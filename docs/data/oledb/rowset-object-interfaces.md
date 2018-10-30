@@ -1,7 +1,7 @@
 ---
 title: Interfaces de objeto do conjunto de linhas | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 29371e1c1acff5846b7b2c454365f9ff52b77231
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: dc9ec134321b2acf9994ad7dfb43c5b14bf0e75f
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50056926"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216442"
 ---
 # <a name="rowset-object-interfaces"></a>Interfaces de objeto do conjunto de linhas
 
@@ -61,4 +61,4 @@ O objeto de conjunto de linhas gerado pelo assistente implementa `IAccessor`, `I
 
 ## <a name="see-also"></a>Consulte também
 
-[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
+[Arquitetura de modelo do provedor do OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

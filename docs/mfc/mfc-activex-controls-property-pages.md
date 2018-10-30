@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19dc08fc29de4affaea987025a2bc8b92bc56460
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 053a6dcf009fa65bbba9c864803db78866037196
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50079851"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204412"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Controles ActiveX MFC: páginas de propriedade
 
 As páginas de propriedade permitem que um usuário do controle ActiveX exibir e alterar as propriedades do controle ActiveX. Essas propriedades são acessadas pela invocação de uma caixa de diálogo de propriedades de controle, que contém um ou mais páginas de propriedades que fornecem uma interface gráfica personalizada para exibir e editar as propriedades do controle.
 
 >[!IMPORTANT]
-> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem as ActiveX, consulte [controles ActiveX](activex-controls.md).
+> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem o ActiveX, consulte [controles ActiveX](activex-controls.md).
 
 Páginas de propriedades do controle ActiveX são exibidas de duas maneiras:
 

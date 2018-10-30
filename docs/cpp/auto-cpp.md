@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e832dfa694e5d2977e6b6a4d659d373f726c0cd6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f38c4cdfcbb75cd4c2df4fadd10cfcaccda4540e
+ms.sourcegitcommit: a88d228480d4bb5834e985d7b3ead2760be95572
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059025"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50203060"
 ---
 # <a name="auto-c"></a>automático (C++)
 
@@ -79,22 +79,22 @@ Você pode usar **automática**, juntamente com o **decltype** especificador, pa
 Observe que o uso **automática** remove referências, qualificadores de constante e qualificadores voláteis. Considere o exemplo a seguir:
 
 ```cpp
-// cl.exe /analyze /EHsc /W4
-#include <iostream>
+// cl.exe /analyze /EHsc /W4
+#include <iostream>
 
-using namespace std;
+using namespace std;
 
-int main( )
+int main( )
 {
-    int count = 10;
-    int& countRef = count;
-    auto myAuto = countRef;
+    int count = 10;
+    int& countRef = count;
+    auto myAuto = countRef;
 
-    countRef = 11;
-    cout << count << " ";
+    countRef = 11;
+    cout << count << " ";
 
-    myAuto = 12;
-    cout << count << endl;
+    myAuto = 12;
+    cout << count << endl;
 }
 
 ```
@@ -103,7 +103,7 @@ No exemplo anterior, myAuto é um int, não uma referência int, portanto, a sa�
 
 ## <a name="type-deduction-with-braced-initializers-c14"></a>Dedução de tipo com inicializadores entre chaves (c++14)
 
-O exmample de código a seguir mostra como inicializar uma variável automática usando chaves. Observe a diferença entre B e C e entre um e E.
+O exemplo de código a seguir mostra como inicializar uma variável automática usando chaves. Observe a diferença entre B e C e entre um e E.
 
 ```cpp
 #include <initializer_list>

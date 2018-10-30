@@ -25,19 +25,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3be523feaacb403076f2c066943ca55ace958dce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cf2568561e3e79eaf7c2f56b0b571f5c9e74f268
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401830"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204516"
 ---
 # <a name="mfc-activex-controls-serializing"></a>Controles ActiveX MFC: serializando
 
 Este artigo descreve como serializar um controle ActiveX. A serialização é o processo de leitura ou gravação em uma mídia de armazenamento persistente, como um arquivo de disco. A biblioteca Microsoft Foundation Class (MFC) fornece suporte interno para a serialização na classe `CObject`. `COleControl` amplia esse suporte para controles ActiveX com o uso de um mecanismo de troca de propriedade.
 
 >[!IMPORTANT]
-> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem as ActiveX, consulte [controles ActiveX](activex-controls.md).
+> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem o ActiveX, consulte [controles ActiveX](activex-controls.md).
 
 Serialização para controles ActiveX é implementada por meio da substituição [COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange). Essa função, chamado durante o carregamento e salvando do objeto de controle, armazena todas as propriedades implementadas com uma variável de membro ou uma variável de membro com a notificação de alteração.
 

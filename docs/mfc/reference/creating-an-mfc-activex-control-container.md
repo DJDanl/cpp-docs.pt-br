@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37119934a70f8a68d32ed83699fa6deb012d8879
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bc12be2b7d3e25059333d4f22bd2d8eb458b959c
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404430"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204386"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>Criando um contêiner de controle ActiveX MFC
 
 Um contêiner de controle ActiveX é um programa de pai que fornece o ambiente para um controle ActiveX (anteriormente conhecido como OLE) para executar. Você pode criar um aplicativo capaz de conter controles ActiveX com ou sem MFC, mas é mais fácil fazer com o MFC.
 
 >[!IMPORTANT]
-> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem as ActiveX, consulte [controles ActiveX](../activex-controls.md).
+> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem o ActiveX, consulte [controles ActiveX](../activex-controls.md).
 
 Criar um programa de contêiner MFC usando o [Assistente de aplicativo MFC](../../mfc/reference/mfc-application-wizard.md) permite que você acesse os muitos recursos de automação e controles ActiveX que são implementados pelas classes MFC e ActiveX. Esses recursos incluem a edição visual, automação, criando arquivos compostos e suportam para controles. As opções de edição visual Assistente de aplicativo MFC que seu programa pai dará suporte incluem a criação de um contêiner, um minisservidor, um servidor completo e um programa que é um contêiner e um servidor.
 

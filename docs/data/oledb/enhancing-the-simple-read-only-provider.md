@@ -1,7 +1,7 @@
 ---
 title: Melhorando o provedor somente leitura simples | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/26/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dc899314070f10c0b10cd959af57a7230a406ac3
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: f798eb6219fdbc6c54e4c80474491f84f25a8060
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50069705"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216468"
 ---
 # <a name="enhancing-the-simple-read-only-provider"></a>Melhorando o provedor somente leitura simples
 
@@ -39,4 +39,4 @@ O exemplo nos tópicos a seguir aumenta o mecanismo de busca de linhas, adiciona
 
 ## <a name="see-also"></a>Consulte também
 
-[Criando um provedor somente leitura simples](../../data/oledb/creating-a-simple-read-only-provider.md)
+[Criando um provedor somente leitura simples](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>

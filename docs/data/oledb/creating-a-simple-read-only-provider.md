@@ -1,7 +1,7 @@
 ---
 title: Criando um provedor somente leitura simples | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/26/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b32517e8254f383e624c5262f3a806e66ed28824
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: c8fd4e5eb25ab1e8e6b20b576a0688da7b5aa2ef
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50056250"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216390"
 ---
 # <a name="creating-a-simple-read-only-provider"></a>Criando um provedor somente leitura simples
 
-Quando você tiver criado um provedor OLE DB usando o Assistente da ATL OLE DB Provider e o ATL Project Wizard, você pode adicionar outras funcionalidades que você deseja dar suporte. Começar a projetar seu provedor, examinando o tipo de dados que você está enviando para o consumidor e sob quais condições. É especialmente importante determinar se é necessário dar suporte a comandos, transações e outros objetos opcionais. Um bom design com antecedência irá acelerar a implementação e teste.
+Quando você criar um provedor OLE DB usando o **ATL Project Wizard** e **ATL OLE DB Provider Wizard**, você pode adicionar outras funcionalidades que você deseja dar suporte. Começar a projetar seu provedor, examinando o tipo de dados será enviado para o consumidor e sob quais condições. É especialmente importante determinar se é necessário dar suporte a comandos, transações e outros objetos opcionais. Um bom design com antecedência irá acelerar a implementação e teste.
 
 O exemplo é apresentado em duas partes:
 
@@ -35,4 +35,4 @@ O exemplo é apresentado em duas partes:
 
 ## <a name="see-also"></a>Consulte também
 
-[Criando um provedor do OLE DB](../../data/oledb/creating-an-ole-db-provider.md)
+[Criando um provedor do OLE DB](../../data/oledb/creating-an-ole-db-provider.md)<br/>

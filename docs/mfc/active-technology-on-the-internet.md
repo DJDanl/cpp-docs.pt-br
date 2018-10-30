@@ -14,19 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db0c93070fe8373cdd4494419ce1b71bf4068b14
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 30aef153dc99c0cbdc4de537496e42ab2bb0459f
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395109"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204503"
 ---
 # <a name="active-technology-on-the-internet"></a>Tecnologia ativa na Internet
 
 Tecnologia ativa é uma plataforma aberta que permite aos desenvolvedores criarem interessantes e dinâmica o conteúdo e aplicativos de Internet global ou de rede interna de uma empresa, conhecido como uma intranet. As principais tecnologias fornecidas pela Microsoft para programação da Internet são descritas abaixo.
 
 >[!IMPORTANT]
-> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem as ActiveX, consulte [controles ActiveX](activex-controls.md).
+> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem o ActiveX, consulte [controles ActiveX](activex-controls.md).
 
 ## <a name="activex-controls"></a>Controles ActiveX
 

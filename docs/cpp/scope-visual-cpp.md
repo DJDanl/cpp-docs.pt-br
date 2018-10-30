@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb9d21eee8e561e2caa8a7c4088774435d3ce273
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0e3d6501e969b103146aa53311069e5fdd4d048e
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080435"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204548"
 ---
 # <a name="scope-c"></a>Escopo (C++)
 
@@ -41,7 +41,7 @@ Há seis tipos de escopo:
 
 - **Escopo local** um nome declarado em uma função ou lambda, incluindo os nomes de parâmetro, têm escopo local. Eles são geralmente denominados "locais". Eles são visíveis apenas de seu ponto de declaração até o final do corpo da função ou lambda. Escopo local é um tipo de escopo de bloco, que é abordado neste artigo.
 
-- **Escopo de classe** nomes de membros de classe têm escopo de classe, que se estende em toda a definição de classe, independentemente do ponto de declaração. Acessibilidade de membro de classe é mais controlada pela **pública**, **privada**, e **protegido** palavras-chave. Membros públicos ou protegidos podem ser acessados usando os operadores de seleção de membro (**.** ou **->**) ou operadores de ponteiro para membro (**.** <strong>\*</strong> ou **->** <strong>\*</strong>).
+- **Escopo de classe** nomes de membros de classe têm escopo de classe, que se estende em toda a definição de classe, independentemente do ponto de declaração. Acessibilidade de membro de classe é ainda mais controlada pelo **pública**, **privada**, e **protegido** palavras-chave. Membros públicos ou protegidos podem ser acessados usando os operadores de seleção de membro (**.** ou **->**) ou operadores de ponteiro para membro (**.** <strong>\*</strong> ou **->** <strong>\*</strong>).
 
 - **Escopo da instrução** nomes declarados em uma **para**, **se**, **enquanto**, ou **alternar** instrução são visíveis até o final das bloco de instrução.
 

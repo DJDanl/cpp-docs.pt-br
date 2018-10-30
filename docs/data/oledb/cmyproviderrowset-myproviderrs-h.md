@@ -22,26 +22,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4808f9165fa6f139b0d3b576620e9db80eb360d3
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 211c83ec63611c493f03e48b58619caca373ce65
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50076991"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216351"
 ---
 # <a name="ccustomrowset-customrsh"></a>CCustomRowset (CustomRS.H)
 
 O assistente gera uma entrada para o objeto de conjunto de linhas. Nesse caso, ele é chamado `CCustomRowset`. O `CCustomRowset` classe herda de uma classe de provedor do OLE DB chamada `CRowsetImpl`, que implementa todas as interfaces necessárias para o objeto de conjunto de linhas. O código a seguir mostra a cadeia de herança para `CRowsetImpl`:
 
 ```cpp
-template <class T, class Storage, class CreatorClass,
+template <class T, class Storage, class CreatorClass, 
    class ArrayType = CAtlArray<Storage>>
 class CMyRowsetImpl:
-   public CRowsetImpl<T, Storage, CreatorClass, ArrayType,
+   public CRowsetImpl<T, Storage, CreatorClass, ArrayType, 
       CSimpleRow, IRowsetLocateImpl< T >>
 ```
 
-`CRowsetImpl` também usa o `IAccessor` e `IColumnsInfo` interfaces. Ele usa essas interfaces para campos de saída nas tabelas. A classe também fornece uma implementação para `IRowsetIdentity`, que permite que o consumidor determinar se duas linhas são idênticas. O `IRowsetInfo` interface implementa propriedades para o objeto de conjunto de linhas. O `IConvertType` interface permite que o provedor para resolver as diferenças entre tipos de dados solicitados pelo consumidor quanto os usados pelo provedor.
+`CRowsetImpl` também usa o `IAccessor` e `IColumnsInfo` interfaces. Ele usa essas interfaces para campos de saída nas tabelas. A classe também fornece uma implementação para `IRowsetIdentity`, que permite que o consumidor determinar se duas linhas são os mesmos. O `IRowsetInfo` interface implementa propriedades para o objeto de conjunto de linhas. O `IConvertType` interface permite que o provedor para resolver as diferenças entre tipos de dados solicitados pelo consumidor quanto os usados pelo provedor.
 
 O `IRowset` interface realmente lida com a recuperação de dados. Primeiro, o consumidor chama um método chamado `GetNextRows` para retornar um identificador para uma linha, conhecida como um `HROW`. O consumidor, em seguida, chama `IRowset::GetData` com que `HROW` para recuperar os dados solicitados.
 
@@ -51,4 +51,4 @@ O *RowsetInterface* parâmetro permite que você também usar o `IRowsetLocate` 
 
 ## <a name="see-also"></a>Consulte também
 
-[Arquivos gerados pelo Assistente do Provedor](../../data/oledb/provider-wizard-generated-files.md)
+[Arquivos gerados pelo Assistente do Provedor](../../data/oledb/provider-wizard-generated-files.md)<br/>

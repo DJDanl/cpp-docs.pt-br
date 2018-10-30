@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa8434230081afe0ad104853e80ba5aa28ec280e
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5fe5bf67df643f83d555d3f2d6fc9a0aadf84b01
+ms.sourcegitcommit: 68cd127a6606f0aed2eb1bc9a75cdfb95b9b6526
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50054131"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204884"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>Operador Handle to Object (^) (C + + c++ /CLI e c++ /CLI CX)
 
@@ -44,7 +44,7 @@ Opção do compilador: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-O sistema usa o CLR *coletor de lixo* mecanismo para determinar se o objeto não está sendo usado e pode ser excluído. O common language runtime mantém uma heap em que atribui objetos, e usa referências gerenciadas (variáveis) em seu programa indicam o local dos objetos no heap. Quando um objeto não é mais usado, a memória ocupada pelo mesmo na heap é liberada. Periodicamente, o coletor de lixo compacta a heap para melhorar o uso da memória liberada. Compactar a heap poderá mover os objetos na heap, o que invalida o locais referenciado por referências gerenciadas. No entanto, o coletor de lixo está ciente do local de todas as referências gerenciadas e as atualiza automaticamente para indicar o local atual dos objetos no heap.
+O sistema usa o CLR *coletor de lixo* mecanismo para determinar se o objeto não está sendo usado e pode ser excluído. O common language runtime mantém uma heap em que atribui objetos, e usa referências gerenciadas (variáveis) em seu programa indicam o local dos objetos no heap. Quando um objeto não é mais usado, a memória ocupada pelo mesmo na heap é liberada. Periodicamente, o coletor de lixo compacta a heap para melhorar o uso da memória liberada. Compactar a heap poderá mover os objetos na heap, o que invalida os locais referenciados por referências gerenciadas. No entanto, o coletor de lixo está ciente do local de todas as referências gerenciadas e as atualiza automaticamente para indicar o local atual dos objetos no heap.
 
 Como ponteiros nativos do C++ (`*`) e as referências (`&`) são referências não gerenciadas, o coletor de lixo não pode atualizar automaticamente os endereços que eles apontem para. Para resolver esse problema, use o declarator para especificar uma variável que o coletor de lixo está ciente e pode ser atualizada automaticamente.
 
