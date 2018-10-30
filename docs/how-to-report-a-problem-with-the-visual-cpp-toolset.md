@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 279598c320131b163b936091560de45255c18a4d
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: e2ca0f4aa5f3965adc97e4cdaef09e01646e8809
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235003"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062113"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Como relatar um problema com o conjunto de ferramentas ou a documentação do Visual C++
 
@@ -381,7 +381,7 @@ Para problemas relacionados ao compilador C++, ao vinculador e às outras ferram
 
 Por padrão, **todas as informações em relatórios e quaisquer comentários e respostas são publicamente visíveis**. Normalmente, isso é uma vantagem, pois permite que toda a comunidade veja os problemas, as soluções e alternativas encontradas por outros usuários. No entanto, se você está preocupado em tornar seus dados ou a sua identidade pública, por motivos de propriedade intelectual ou de privacidade, há opções.
 
-Se você está preocupado com a revelação da sua identidade, [crie uma conta da Microsoft](https://signup.live.com/) que não divulgue todos os detalhes sobre você. Use essa conta para criar seu relatório. 
+Se você está preocupado com a revelação da sua identidade, [crie uma conta da Microsoft](https://signup.live.com/) que não divulgue todos os detalhes sobre você. Use essa conta para criar seu relatório.
 
 **Não coloque algo que você deseja manter particular no título ou no conteúdo do relatório inicial, que é público.** Em vez disso, observe que você enviará detalhes em particular em um comentário separado. Para ter certeza de que o relatório será direcionado às pessoas certas, inclua **cppcompiler** na lista de tópicos do seu relatório de problemas. Depois de criar o relatório de problemas, é possível especificar quem pode ver suas respostas e anexos.
 

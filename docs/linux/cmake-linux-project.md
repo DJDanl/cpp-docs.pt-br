@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 20291e1f824704ee94cb45f14c16d6f0e4960348
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: b7c28a8e67ef2731d26071262383e93d32be9583
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410831"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064102"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Configurar um projeto do Linux CMake
 
@@ -29,8 +29,8 @@ Quando você instala a carga de trabalho Linux C++ para Visual Studio, o suporte
 
 Este tópico pressupõe que você tenha uma familiaridade básica com o suporte ao CMake no Visual Studio. Para saber mais, veja [Ferramentas do CMake no Visual C++](../ide/cmake-tools-for-visual-cpp.md). Para obter mais informações sobre o próprio CMake, consulte [Compilar, testar e empacotar seu software com o CMake](https://cmake.org/).
 
-> [!NOTE]  
-> O suporte ao CMake no Visual Studio requer o suporte do modo de servidor que foi apresentado no CMake 3.8. Para uma variante CMake fornecida pela Microsoft, baixe os binários predefinidos mais recentes em [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases). 
+> [!NOTE]
+> O suporte ao CMake no Visual Studio requer o suporte do modo de servidor que foi apresentado no CMake 3.8. Para uma variante CMake fornecida pela Microsoft, baixe os binários predefinidos mais recentes em [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
 
 ## <a name="open-a-folder"></a>Abrir uma pasta
 
@@ -120,10 +120,9 @@ Essas opções permitem que você execute comandos na caixa remota antes e depoi
 
 ## <a name="download-prebuilt-cmake-binaries"></a>Baixar binários predefinidos do CMake
 
-Sua distribuição Linux pode ter uma versão mais antiga do CMake. O suporte ao CMake no Visual Studio requer o suporte do modo de servidor que foi apresentado no CMake 3.8. Para uma variante CMake fornecida pela Microsoft, baixe os binários predefinidos mais recentes em [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases). 
-
+Sua distribuição Linux pode ter uma versão mais antiga do CMake. O suporte ao CMake no Visual Studio requer o suporte do modo de servidor que foi apresentado no CMake 3.8. Para uma variante CMake fornecida pela Microsoft, baixe os binários predefinidos mais recentes em [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
 
 ## <a name="see-also"></a>Consulte também
 
 [Trabalhando com Propriedades do Projeto](../ide/working-with-project-properties.md)<br/>
-[Ferramentas CMake para Visual C++](../ide/cmake-tools-for-visual-cpp.md)  
+[Ferramentas CMake para Visual C++](../ide/cmake-tools-for-visual-cpp.md)

@@ -14,12 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed44479f6e6d1569a9b27a059e837cbbb924b803
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 70af45a860ff854faf244cf51ad7462262f183fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821409"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072679"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: um gerenciador de pacotes do C++ para Windows, Linux e MacOS
 
@@ -37,11 +37,11 @@ Se você criar um clone de vcpkg com bibliotecas particulares na coleção de po
 
 [1] *Observação: as fontes não estão disponíveis para algumas bibliotecas proprietárias. O vcpkg baixará binários pré-criados compatíveis nesses casos.*
 
-## <a name="installation"></a>Instalação 
+## <a name="installation"></a>Instalação
 
 Clonar o repositório vcpkg do GitHub: https://github.com/Microsoft/vcpkg. Você pode baixar em qualquer local de pasta que você preferir.
 
-Execute o bootstrapper na pasta raiz: 
+Execute o bootstrapper na pasta raiz:
 
 - **bootstrap-vcpkg.bat** (Windows)
 - **./bootstrap-vcpkg.sh** (Linux, MacOS)
@@ -76,7 +76,7 @@ taglib      1.11.1-2   TagLib Audio Meta-Data Library
 
 Depois de obter o nome de uma biblioteca usando **vcpkg search**, você usa **vcpkg install** para baixar a biblioteca e compilá-la. O vcpkg usa o portfile da biblioteca no diretório de portas. Se nenhum tripleto for especificado, vcpkg instalará e compilará para o tripleto padrão para a plataforma de destino: x86-windows, x64-linux.cmake ou x64-osx.cmake.
 
-Para bibliotecas do Linux, vcpkg depende da instalação do gcc no computador local. No MacOS, o vcpkg usa Clang. 
+Para bibliotecas do Linux, vcpkg depende da instalação do gcc no computador local. No MacOS, o vcpkg usa Clang.
 
 Se o portfile especifica dependências, o vcpkg baixa e instala as dependências também. Depois de baixar, o vcpkg compila a biblioteca usando qualquer sistema de build que a biblioteca usa. Os projetos CMake (no Windows) e MSBuild são preferenciais, mas há suporte para MAKE juntamente com qualquer outro sistema de build. Se o vcpkg não pode localizar o sistema de build especificado no computador local, ele vai baixá-lo e instalá-lo.
 
@@ -91,7 +91,7 @@ Additional packages (*) will be installed to complete this operation.
 
 ```
 
-Para projetos do CMAKE, use CMAKE_TOOLCHAIN_FILE para tornar as bibliotecas disponíveis com `find_package()`. Por exemplo:  
+Para projetos do CMAKE, use CMAKE_TOOLCHAIN_FILE para tornar as bibliotecas disponíveis com `find_package()`. Por exemplo:
 
 ```cmd
 cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
@@ -132,14 +132,13 @@ Se você precisar usar uma versão específica de uma biblioteca que é diferent
 1. Execute **vcpkg install \<library>**.
 1. Use **vcpkg integrate project** para criar um pacote NuGet que faz referência a essa biblioteca com base em cada projeto.
 
-## <a name="integrate-with-visual-studio-code-linuxmacos"></a>Integrar com o Visual Studio Code (Linux/MacOS) 
+## <a name="integrate-with-visual-studio-code-linuxmacos"></a>Integrar com o Visual Studio Code (Linux/MacOS)
 
 Execute **vcpkg integrar install** para configurar o Visual Studio Code no Linux/MacOS com o local da inscrição do vcpkg e habilitar o IntelliSense em arquivos de origem.
 
 ## <a name="target-linux-from-windows-via-wsl"></a>Linux de destino do Windows por meio do WSL
 
 Você pode produzir os binários do Linux de um computador Windows usando o WSL (Subsistema do Windows para Linux). Siga as instruções para [Configurar o WSL no Windows 10](/windows/wsl/install-win10) e configurá-lo com a [extensão do Visual Studio para Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Você pode colocar todas as suas bibliotecas compiladas para Windows e Linux na mesma pasta e acessá-la do Windows e do WSL.
-
 
 ## <a name="export_binaries_per_project"></a> Exportar binários compilados e cabeçalhos
 

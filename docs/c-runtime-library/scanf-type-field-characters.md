@@ -24,12 +24,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50db1a8370a43b8b0c43c7c228c7b3acf9dd2c8a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 04a4c2005dc0a7e0e052002198bebb7c78267843
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082866"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059942"
 ---
 # <a name="scanf-type-field-characters"></a>Caracteres de campo de tipo scanf
 
@@ -54,7 +54,6 @@ O caractere `type` é o único campo de formato necessário; ele aparece depois 
 |`n`|Nenhuma entrada lida do fluxo ou buffer.|Ponteiro para `int`, no qual é armazenado o número de caracteres lidos com êxito do fluxo ou buffer até esse ponto na chamada atual para funções `scanf` ou funções `wscanf`.|Nº|
 |`s`|Cadeia de caracteres, até o primeiro caractere de espaço em branco (espaço, tabulação ou nova linha). Para ler cadeias de caracteres não delimitadas por caracteres de espaço, use o conjunto de colchetes (`[ ]`), conforme discutido em [Especificação de largura scanf Width](../c-runtime-library/scanf-width-specification.md).|Quando usado com funções `scanf`, significa matriz de caracteres de byte único; quando usado com funções `wscanf`, significa matriz de caracteres largos. Em ambos os casos, a matriz de caracteres deve ser grande o suficiente para o campo de entrada mais o caractere nulo de terminação, que é anexado automaticamente.|Necessário. O tamanho inclui espaço para um terminador nulo.|
 |`S`|Cadeia de caracteres de tamanho oposto, até o primeiro caractere de espaço em branco (espaço, tabulação ou nova linha). Para ler cadeias de caracteres não delimitadas por caracteres de espaço, use o conjunto de colchetes (`[ ]`), conforme discutido em [Especificação de largura scanf Width](../c-runtime-library/scanf-width-specification.md).|Quando usado com funções `scanf`, significa matriz de caracteres largos; quando usado com funções `wscanf`, significa matriz de caracteres de byte único. Em ambos os casos, a matriz de caracteres deve ser grande o suficiente para o campo de entrada mais o caractere nulo de terminação, que é anexado automaticamente.|Necessário. O tamanho inclui espaço para um terminador nulo.|
-
 
 Os argumentos de tamanho, se necessário, devem ser transmitidos na lista de parâmetros imediatamente após o argumento a que se aplicam. Por exemplo, o código a seguir:
 

@@ -14,20 +14,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae68abc0768c0a06526af6439a8a881684ecdb15
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 8cb811ccd3291caa9b3da095310c74416fbd5799
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821267"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067937"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ no Visual Studio
 
-> [!NOTE]  
-> Esta documentação para desenvolvedores aplica-se ao Visual Studio 2015 e ao Visual Studio 2017. 
+> [!NOTE]
+> Esta documentação para desenvolvedores aplica-se ao Visual Studio 2015 e ao Visual Studio 2017.
 
-> Se você estiver procurando um pacote redistribuível do Visual C++ para executar um programa, acesse o [Centro de Download da Microsoft](http://www.microsoft.com/download/) e insira **Visual C++** na caixa de pesquisa.  
-  
+> Se você estiver procurando um pacote redistribuível do Visual C++ para executar um programa, acesse o [Centro de Download da Microsoft](http://www.microsoft.com/download/) e insira **Visual C++** na caixa de pesquisa.
+
 
 Microsoft Visual C++, geralmente abreviado para Visual C++ ou MSVC, é o nome para as bibliotecas e ferramentas de desenvolvimento de linguagem de assembly, C e C++ disponíveis como parte do Visual Studio no Windows. Essas ferramentas e bibliotecas permitem que você crie aplicativos da UWP (Plataforma Universal do Windows), aplicativos de servidor e área de trabalho Windows nativos, bibliotecas e aplicativos multiplataforma que são executados no Windows, Linux, Android e iOS, bem como bibliotecas e aplicativos que usam o .NET Framework. Você pode usar o Visual C++ escrever qualquer coisa, desde aplicativos de console simples até os aplicativos mais sofisticados e complexos para área de trabalho do Windows, de drivers de dispositivo e componentes do sistema operacional até jogos multiplataforma para dispositivos móveis e dos menores dispositivos IoT até computação de alto desempenho multisservidor na nuvem do Azure.
 

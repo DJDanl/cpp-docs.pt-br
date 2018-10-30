@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aefcd05f4187e22adf5f21c4beffa74ca8be39b3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5c7473cd7d6f2f07d81011eca0826b8066513d23
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420550"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069250"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Projetos Abrir Pasta no Visual C++
 
@@ -198,7 +198,7 @@ Todas as variáveis de ambiente padrão e personalizadas também estão disponí
 Você tem acesso às seguintes macros internas dentro de CppProperties.json:
 |||
 |-|-|
-|`${workspaceRoot}`| o caminho completo para a pasta de espaço de trabalho|
+|`${workspaceRoot}`| o caminho completo para a pasta de workspace|
 |`${projectRoot}`| o caminho completo para a pasta na qual CppProperties.json foi colocado|
 |`${vsInstallDir}`| o caminho completo para a pasta na qual a instância em execução do VS 2017 está instalada|
 
@@ -245,9 +245,10 @@ Para solucionar erros do IntelliSense causados por caminhos de inclusão ausente
   ]
 }
 ```
+
 ### <a name="define-tasks-with-tasksvsjson"></a>Definir tarefas com tasks.vs.json
 
-Você pode automatizar os scripts de compilação, ou quaisquer outras operações externas nos arquivos existentes em seu espaço de trabalho atual, executando-os como tarefas diretamente no IDE. Você pode configurar uma nova tarefa clicando com o botão direito em um arquivo ou pasta e selecionando **Configurar Tarefas**.
+Você pode automatizar os scripts de compilação, ou quaisquer outras operações externas nos arquivos existentes em seu workspace atual, executando-os como tarefas diretamente no IDE. Você pode configurar uma nova tarefa clicando com o botão direito em um arquivo ou pasta e selecionando **Configurar Tarefas**.
 
 ![Configurar Tarefas do recurso Abrir Pasta](media/open-folder-config-tasks.png)
 
@@ -274,13 +275,13 @@ Depois de salvar tasks.vs.json, clique com o botão direito do mouse em qualquer
 Você pode criar tarefas para qualquer arquivo ou pasta especificando seu nome no campo `appliesTo`, por exemplo `"appliesTo" : "hello.cpp"`. As máscaras de arquivo a seguir podem ser usadas como valores:
 |||
 |-|-|
-|`"*"`| a tarefa está disponível para todos os arquivos e pastas no espaço de trabalho|
-|`"*/"`| a tarefa está disponível para todas as pastas no espaço de trabalho|
-|`"*.cpp"`| a tarefa está disponível para todos os arquivos com a extensão .cpp no espaço de trabalho|
-|`"/*.cpp"`| a tarefa está disponível para todos os arquivos com a extensão .cpp na raiz do espaço de trabalho|
+|`"*"`| a tarefa está disponível para todos os arquivos e pastas no workspace|
+|`"*/"`| a tarefa está disponível para todas as pastas no workspace|
+|`"*.cpp"`| a tarefa está disponível para todos os arquivos com a extensão.cpp no workspace|
+|`"/*.cpp"`| a tarefa está disponível para todos os arquivos com a extensão.cpp na raiz do workspace|
 |`"src/*/"`| a tarefa está disponível para todas as subpastas da pasta "src"|
-|`"makefile"`| a tarefa está disponível para todos os arquivos makefile no espaço de trabalho|
-|`"/makefile"`| a tarefa está disponível apenas para o makefile na raiz do espaço de trabalho|
+|`"makefile"`| a tarefa está disponível para todos os arquivos makefile no workspace|
+|`"/makefile"`| a tarefa está disponível apenas para o makefile na raiz do workspace|
 
 #### <a name="output"></a>saída
 
@@ -295,7 +296,7 @@ Use a propriedade `output` para especificar o executável que será iniciado qua
 |||
 |-|-|
 |`${env.<VARIABLE>}`| especifica qualquer variável de ambiente (por exemplo, ${env.PATH}, ${env.COMSPEC} e assim por diante) que esteja definida para o Prompt de Comando do Desenvolvedor. Para saber mais, confira [Prompt de comando do desenvolvedor para Visual Studio](/dotnet/framework/tools/developer-command-prompt-for-vs).|
-|`${workspaceRoot}`| o caminho completo para a pasta de espaço de trabalho (por exemplo, "C:\sources\hello")|
+|`${workspaceRoot}`| o caminho completo para a pasta de workspace (por exemplo, "C:\sources\hello")|
 |`${file}`| o caminho completo do arquivo ou da pasta selecionado para execução dessa tarefa (por exemplo, "C:\sources\hello\src\hello.cpp")|
 |`${relativeFile}`| o caminho relativo para o arquivo ou a pasta (por exemplo, "src\hello.cpp")|
 |`${fileBasename}`| o nome do arquivo sem o caminho nem a extensão (por exemplo, "hello")|

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04bec9c0de7734ae2c78dd3e9c124eac3d0a55d8
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: bd8d0cebc34b8f0d59f54e720d6a37a52ab2d9e9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234302"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069315"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Instruções passo a passo: depurando um projeto (C++)
 
@@ -45,11 +45,11 @@ Neste passo a passo, você modificará o programa para corrigir o problema encon
 
 1. Para diminuir o `totalParticipants` quando um Cardgame é encerrado, adicione o código a seguir entre as chaves de abertura e fechamento do destruidor `Cardgame::~Cardgame`.
 
-     [!code-cpp[NVC_Walkthrough_Debugging_A_Project#110](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_1.cpp)]
+   [!code-cpp[NVC_Walkthrough_Debugging_A_Project#110](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_1.cpp)]
 
 1. O arquivo Cardgame.cpp deve ter a aparência do código abaixo depois de alterado:
 
-     [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]
+   [!code-cpp[NVC_Walkthrough_Debugging_A_Project#111](../ide/codesnippet/CPP/walkthrough-debugging-a-project-cpp_2.cpp)]
 
 1. Na barra de menus, escolha **Compilar** > **Compilar Solução**.
 

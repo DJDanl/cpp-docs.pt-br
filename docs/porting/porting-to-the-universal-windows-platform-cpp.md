@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01efc61d08204598cbce6d875bfe2c2293d8e711
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 16fe66e6ba8ea3f6e4f88f434b58c61d46ce1edb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404261"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080644"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Portando para a Plataforma Universal do Windows (C++)
 
@@ -74,7 +74,7 @@ Se você tiver um aplicativo da Windows 8.1 Store, você poderá usar este proce
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
     ```
 
-     Essas instruções aplicam-se, respectivamente, a aplicativos UWP e a aplicativos da Windows Phone Store, a ambos ou a nenhum (somente área de trabalho clássica do Win32). Essas macros estão disponíveis apenas no SDK do Windows 8.1 e posterior, portanto, se seu código precisar ser compilado com versões anteriores do SDK do Windows ou para outras plataformas além do Windows, você também deverá considerar a possibilidade de que nenhuma delas esteja definida.
+   Essas instruções aplicam-se, respectivamente, a aplicativos UWP e a aplicativos da Windows Phone Store, a ambos ou a nenhum (somente área de trabalho clássica do Win32). Essas macros estão disponíveis apenas no SDK do Windows 8.1 e posterior, portanto, se seu código precisar ser compilado com versões anteriores do SDK do Windows ou para outras plataformas além do Windows, você também deverá considerar a possibilidade de que nenhuma delas esteja definida.
 
 11. Execute e depure o aplicativo em um emulador ou um dispositivo físico para cada tipo de dispositivo ao qual seu aplicativo dá suporte. Para executar um emulador, você precisa executar o Visual Studio em um computador físico, não em uma máquina virtual.
 
@@ -119,4 +119,4 @@ Se você criar um novo projeto UWP usando o Visual Studio, esse erro não dever�
 ## <a name="see-also"></a>Consulte também
 
 [Guia de portabilidade do Visual C++](../porting/porting-to-the-universal-windows-platform-cpp.md)<br/>
-[Desenvolver aplicativos para a UWP (Plataforma Universal do Windows)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)  
+[Desenvolver aplicativos para a UWP (Plataforma Universal do Windows)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)

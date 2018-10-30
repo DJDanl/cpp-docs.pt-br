@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 5e6a5dd4a00bd4d98c36222434d7cd83242905c9
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 387550fa7d3e745038d0be8ee66574d4496132a0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410753"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061282"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Conectar-se ao computador Linux remoto
 
@@ -29,7 +29,7 @@ Ao compilar um projeto Linux em C++ no Visual Studio, o código do Linux é copi
    ![Gerenciador de Conexões](media/settings_connectionmanager.png)
 
    Em qualquer cenário, a janela **Conectar-se ao sistema remoto** será exibida.
-   
+
    ![Conectar-se ao Site Remoto](media/connect.png)
 
 1. Insira as seguintes informações:

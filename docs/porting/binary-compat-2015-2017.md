@@ -14,23 +14,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cedef2d5343b93c544ab22c41d2e5ac661bc3dd
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 6f6d81f5cdce8955194985f66863940b97e32d40
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169561"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065519"
 ---
 # <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2017"></a>Compatibilidade binária de C++ entre o Visual Studio 2015 e o Visual Studio 2017
 
-Em versões anteriores do Visual Studio, não havia garantia de compatibilidade binária entre arquivo-objetos (OBJs), bibliotecas estáticas (LIBs), bibliotecas dinâmicas (DLLs) e executáveis (EXEs) compilados com versões diferentes do conjunto de ferramentas do computador e das bibliotecas de tempo de execução. Isso mudou no Visual Studio 2017. No Visual Studio 2015 e no Visual Studio 2017, o número principal do conjunto de ferramentas do C++ é 14 (v140 para Visual Studio 2015 e v141 para Visual Studio 2017). Isso reflete o fato de que tanto as bibliotecas de tempo de execução quanto os aplicativos compilados com uma das versões do compilador apresentam, em grande parte, compatibilidade binária. Por exemplo, isso significa que, se você tiver uma DLL no Visual Studio 2015, não será possível recompilá-la para consumi-la em um aplicativo criado com o Visual Studio 2017.  
+Em versões anteriores do Visual Studio, não havia garantia de compatibilidade binária entre arquivo-objetos (OBJs), bibliotecas estáticas (LIBs), bibliotecas dinâmicas (DLLs) e executáveis (EXEs) compilados com versões diferentes do conjunto de ferramentas do computador e das bibliotecas de tempo de execução. Isso mudou no Visual Studio 2017. No Visual Studio 2015 e no Visual Studio 2017, o número principal do conjunto de ferramentas do C++ é 14 (v140 para Visual Studio 2015 e v141 para Visual Studio 2017). Isso reflete o fato de que tanto as bibliotecas de tempo de execução quanto os aplicativos compilados com uma das versões do compilador apresentam, em grande parte, compatibilidade binária. Por exemplo, isso significa que, se você tiver uma DLL no Visual Studio 2015, não será possível recompilá-la para consumi-la em um aplicativo criado com o Visual Studio 2017.
 
-Há duas exceções a essa regra. Não há garantia de compatibilidade binária nesses casos:  
+Há duas exceções a essa regra. Não há garantia de compatibilidade binária nesses casos:
 
-1. Quando as bibliotecas estáticas ou os arquivos de objeto são compilados com a opção do compilador `/GL`.  
+1. Quando as bibliotecas estáticas ou os arquivos de objeto são compilados com a opção do compilador `/GL`.
 
 2. Ao consumir bibliotecas criadas com um conjunto de ferramentas cuja versão é maior que o conjunto de ferramentas usado para compilar e vincular o aplicativo. Por exemplo, um programa compilado e vinculado com a versão do compilador 19.12 pode consumir bibliotecas compiladas com as versões de 19.0 até 19.12. Além disso, a compatibilidade binária só existe entre o Visual Studio 2015 e o Visual Studio 2017. Não há suporte para a vinculação de programas 19.x com bibliotecas produzidas pelo Visual Studio 2013 ou anterior.
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte também
 
 [Histórico de alterações do Visual C++](..\porting\visual-cpp-change-history-2003-2015.md)

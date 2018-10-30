@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a81b358a89f3ed16747d27bc6401c01ad194680
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6eafdf3a140dd8a5976cf2fe8554b3b076111b74
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113715"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060501"
 ---
 # <a name="code-pages"></a>Páginas de código
 
@@ -43,7 +43,7 @@ A biblioteca em tempo de execução da Microsoft usa os seguintes tipos de pági
     setlocale ( LC_ALL, "" );
     ```
 
-     também define a localidade para a página de código ANSI padrão do sistema.
+   também define a localidade para a página de código ANSI padrão do sistema.
 
 - Página de código de localidade. O comportamento de várias rotinas de tempo de execução depende da configuração de localidade atual, que inclui a página de código de localidade. (Para obter mais informações, consulte [Rotinas dependentes de localidade](../c-runtime-library/locale.md).) Por padrão, todas as rotinas dependentes de localidade da biblioteca de tempo de execução da Microsoft usam a página de código que corresponde à localidade "C". Em tempo de execução, você pode alterar ou consultar a página de código de localidade em uso com uma chamada para [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
 

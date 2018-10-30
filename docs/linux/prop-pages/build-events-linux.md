@@ -12,18 +12,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 38c036bf747115823b853d0d66077f4402a7f7ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ea01c5d92cbdb6066dc87675221eae6865af354
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338400"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070968"
 ---
-# <a name="build-event-properties-linux-c"></a>Propriedades de evento de build (Linux C++) 
+# <a name="build-event-properties-linux-c"></a>Propriedades de evento de build (Linux C++)
 
 ## <a name="pre-build-event"></a>Evento de Pré-Build
 
-propriedade | Descrição
+Propriedade | Descrição
 --- | ---
 Linha de Comando | Especifica uma linha de comando para a ferramenta de evento de pré-build executar.
 Descrição | Especifica uma descrição para a ferramenta de evento de pré-build exibir.
@@ -32,7 +32,7 @@ Arquivos adicionais a serem copiados | Especifica os arquivos adicionais a serem
 
 ## <a name="pre-link-event"></a>Evento de Pré-link
 
-propriedade | Descrição
+Propriedade | Descrição
 --- | ---
 Linha de Comando | Especifica uma linha de comando para a ferramenta de evento de pré-link executar.
 Descrição | Especifica uma descrição para a ferramenta de evento de pré-link exibir.
@@ -41,7 +41,7 @@ Arquivos adicionais a serem copiados | Especifica os arquivos adicionais a serem
 
 ## <a name="post-build-event"></a>Evento de Pós-Build
 
-propriedade | Descrição
+Propriedade | Descrição
 --- | ---
 Linha de Comando | Especifica uma linha de comando para a ferramenta de evento de pós-build executar.
 Descrição | Especifica uma descrição para a ferramenta de evento de pós-build exibir.
@@ -50,7 +50,7 @@ Arquivos adicionais a serem copiados | Especifica os arquivos adicionais a serem
 
 ## <a name="remote-pre-build-event"></a>Evento de Pré-Build Remoto
 
-propriedade | Descrição
+Propriedade | Descrição
 --- | ---
 Linha de Comando | Especifica uma linha de comando para a ferramenta de evento de pré-build executar no sistema remoto.
 Descrição | Especifica uma descrição para a ferramenta de evento de pré-build exibir.
@@ -59,7 +59,7 @@ Arquivos adicionais a serem copiados | Especifica os arquivos adicionais a serem
 
 ## <a name="remote-pre-link-event"></a>Evento de Pré-Link Remoto
 
-propriedade | Descrição
+Propriedade | Descrição
 --- | ---
 Linha de Comando | Especifica uma linha de comando para a ferramenta de evento de pré-link executar no sistema remoto.
 Descrição | Especifica uma descrição para a ferramenta de evento de pré-link exibir.
@@ -68,7 +68,7 @@ Arquivos adicionais a serem copiados | Especifica os arquivos adicionais a serem
 
 ## <a name="remote-post-build-event"></a>Evento de Pós-Build Remoto
 
-propriedade | Descrição
+Propriedade | Descrição
 --- | ---
 Linha de Comando | Especifica uma linha de comando para a ferramenta de evento de pós-build executar no sistema remoto.
 Descrição | Especifica uma descrição para a ferramenta de evento de pós-build exibir.

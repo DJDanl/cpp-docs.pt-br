@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eca30330e721575443ba9d3f7b0b19c315427eb2
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3071b779338150816cb1d52d16932ac0e3878538
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234119"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079306"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Instruções passo a passo: compilando um projeto (C++)
 
@@ -49,7 +49,7 @@ Neste passo a passo, você introduzirá um erro de sintaxe do Visual C++ no cód
 
 1. Adicione o ponto-e-vírgula novamente ao fim da linha que contém o erro de sintaxe:
 
-     `return 0;`
+   `return 0;`
 
 1. Na barra de menus, escolha **Compilar** > **Compilar Solução**.
 

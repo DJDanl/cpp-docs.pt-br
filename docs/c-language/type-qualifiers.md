@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ecac60a1b9cbd2758090e52d917c7a65259d62d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4dc0fd45887975c9b50cee141b0c6e8faca33513
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094384"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083237"
 ---
 # <a name="type-qualifiers"></a>Qualificadores de tipo
 
@@ -69,7 +69,7 @@ Esta lista descreve como usar **const** e `volatile`.
 
 - O compilador pressupõe que, a qualquer momento no programa, uma variável de `volatile` pode ser acessada por um processo desconhecido que usa ou modifica seu valor. Portanto, independentemente das otimizações especificadas na linha de comando, o código para cada atribuição ou referência a uma variável `volatile` deve ser gerado mesmo se isso não tiver qualquer efeito aparente.
 
-     Se `volatile` for usado sozinho, `int` será presumido. O especificador de tipo `volatile` pode ser usado para fornecer acesso confiável aos locais especiais de memória. Use `volatile` com objetos de dados que possam ser acessados ou modificados por manipuladores de sinal, por programas de execução simultânea ou por hardware especial, como registros de controle de E/S mapeadas em memória. Você pode declarar uma variável como `volatile` para seu tempo de vida, ou você pode determinar que uma única referência seja `volatile`.
+   Se `volatile` for usado sozinho, `int` será presumido. O especificador de tipo `volatile` pode ser usado para fornecer acesso confiável aos locais especiais de memória. Use `volatile` com objetos de dados que possam ser acessados ou modificados por manipuladores de sinal, por programas de execução simultânea ou por hardware especial, como registros de controle de E/S mapeadas em memória. Você pode declarar uma variável como `volatile` para seu tempo de vida, ou você pode determinar que uma única referência seja `volatile`.
 
 - Um item pode ser **const** e `volatile` ao mesmo tempo. Nesse caso, ele não pode ser modificado legitimamente por seu próprio programa, mas pode ser modificado por algum processo não simultâneo.
 
