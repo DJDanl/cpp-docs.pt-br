@@ -21,19 +21,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b66debe5c6401b4eee01bc81acc58b8445e20c21
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: d7f9c3eeda36c6894103c96f1031f6770daf0c71
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50068769"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204711"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>Controles MFC ActiveX: licenciando um controle ActiveX
 
 Suporte de licenciamento, um recurso opcional de controles do ActiveX permite controlar quem é capaz de usar ou distribuir o controle. (Para obter informações adicionais sobre problemas de licenciamento, consulte os problemas de licenciamento na [atualizando um controle ActiveX existente](../mfc/upgrading-an-existing-activex-control.md).)
 
 >[!IMPORTANT]
-> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem as ActiveX, consulte [controles ActiveX](activex-controls.md).
+> ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem o ActiveX, consulte [controles ActiveX](activex-controls.md).
 
 Este artigo discute os seguintes tópicos:
 
