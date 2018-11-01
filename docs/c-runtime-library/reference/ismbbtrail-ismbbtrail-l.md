@@ -1,10 +1,6 @@
 ---
-title: _ismbbtrail, _ismbbtrail_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbtrail, _ismbbtrail_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbtrail
 - _ismbbtrail_l
@@ -26,24 +22,18 @@ f1_keywords:
 - ismbbtrail
 - _ismbbtrail_l
 - ismbbtrail_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbbtrail_l function
 - _ismbbtrail function
 - _ismbbtrail_l function
 - ismbbtrail function
 ms.assetid: dfdd0292-960b-4c1d-bf11-146e0fc80247
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e41ad2be1447946570f10028249582225386877
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c09884f013e878fca516388f1ad933a2a08b35a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399745"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545932"
 ---
 # <a name="ismbbtrail-ismbbtraill"></a>_ismbbtrail, _ismbbtrail_l
 
@@ -75,7 +65,7 @@ A localidade a ser usada.
 
 ## <a name="remarks"></a>Comentários
 
-**ismbbtrail** usa a localidade atual para o comportamento dependente de localidade. **ismbbtrail_l** é idêntico, exceto que ele usa a localidade que é transmitida em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**ismbbtrail** usa a localidade atual para o comportamento dependente da localidade. **ismbbtrail_l** é idêntico, exceto que ele usa a localidade que é passada em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

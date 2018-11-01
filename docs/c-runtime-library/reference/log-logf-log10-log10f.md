@@ -1,10 +1,6 @@
 ---
-title: log, logf, logl, log10, log10f, log10l | Microsoft Docs
-ms.custom: ''
+title: log, logf, logl, log10, log10f, log10l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - log10f
 - logf
@@ -34,8 +30,6 @@ f1_keywords:
 - log10f
 - log10l
 - log10
-dev_langs:
-- C++
 helpviewer_keywords:
 - calculating logarithms
 - log10f function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12f475cde27d4660f4b4936f3f7717a665b70e86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8e3f73e61fefa7a39a6d53d63739b094d78c499
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402836"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543293"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf, logl, log10, log10f, log10l
 
@@ -86,7 +76,7 @@ Valor cujo logaritmos deve ser localizado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **log** funções retornam o logaritmo natural (base *e*) de *x* se for bem-sucedido. O **log10** funções retornam o logaritmo de base 10. Se *x* é negativo, essas funções retornam uma (IND, indefinido) por padrão. Se *x* for 0, elas retornam infinito (INF).
+O **log** funções retornam o logaritmo natural (base *eletrônico*) do *x* se for bem-sucedido. O **log10** funções retornam o logaritmo de base 10. Se *x* é negativo, essas funções retornarão um (IND, indefinido) por padrão. Se *x* é 0, elas retornarão infinito (INF).
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
@@ -94,11 +84,11 @@ O **log** funções retornam o logaritmo natural (base *e*) de *x* se for bem-su
 |± 0|ZERODIVIDE|_SING|
 |*x* < 0|INVALID|_DOMAIN|
 
-**log** e **log10** ter uma implementação que usa extensões Streaming SIMD 2 (SSE2). Para obter informações e restrições sobre como usar a implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
+**log** e **log10** têm uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições sobre como usar a implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Comentários
 
-O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **log** e **log10** que levar e retornar **float** ou **long double** valores. Em um programa C, **log** e **log10** sempre levar e retornar um **duplo**.
+C++ permite sobrecargas, portanto, é possível chamar sobrecargas de **log** e **log10** que tomam e retornam **float** ou **longo duplo** valores. Em um programa do C **log** e **log10** sempre tomam e retornam uma **double**.
 
 ## <a name="requirements"></a>Requisitos
 

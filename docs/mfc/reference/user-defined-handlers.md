@@ -1,29 +1,19 @@
 ---
-title: Manipuladores definidos pelo usuário | Microsoft Docs
-ms.custom: ''
+title: Manipuladores definidos do usuário
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.handlers
-dev_langs:
-- C++
 helpviewer_keywords:
 - ON_REGISTERED_MESSAGE macro [MFC]
 - ON_MESSAGE macro [MFC]
 - user-defined handlers [MFC]
 ms.assetid: 99478294-bef0-4ba7-a369-25a6abdcdb62
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 50348d36badb955a14f15e30d846b052b297b4a1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4d2102668b7cc964e6fe3bffdcc6931a2961a737
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442533"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562247"
 ---
 # <a name="user-defined-handlers"></a>Manipuladores definidos do usuário
 
@@ -38,6 +28,6 @@ As seguintes entradas de mapa correspondem aos protótipos de função.
 
 ## <a name="see-also"></a>Consulte também
 
-[Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)<br/>
+[Mapas de mensagens](../../mfc/reference/message-maps-mfc.md)<br/>
 [Manipuladores para mensagens WM_](../../mfc/reference/handlers-for-wm-messages.md)
 

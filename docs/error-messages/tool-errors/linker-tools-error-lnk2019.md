@@ -1,28 +1,18 @@
 ---
-title: Ferramentas de vinculador LNK2019 erro | Microsoft Docs
-ms.custom: ''
+title: Erro das Ferramentas de Vinculador LNK2019
 ms.date: 12/15/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK2019
-dev_langs:
-- C++
 helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 679d322f6d5ebcf8e56d1691d18e634bb34a2bb2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: af40a48e36d316842ec9a744ad95d6c3b3af3731
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067539"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555591"
 ---
 # <a name="linker-tools-error-lnk2019"></a>Erro das Ferramentas de Vinculador LNK2019
 

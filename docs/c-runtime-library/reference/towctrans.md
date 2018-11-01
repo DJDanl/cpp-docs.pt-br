@@ -1,10 +1,6 @@
 ---
-title: towctrans | Microsoft Docs
-ms.custom: ''
+title: towctrans
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - towctrans
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - towctrans
-dev_langs:
-- C++
 helpviewer_keywords:
 - towctrans function
 ms.assetid: 1ed1e70d-7b31-490f-a7d9-42564b5924ca
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b9d70570339868feb62ee906a707cf16ca03d556
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b814c65d2f5d0bb18b19d97a539d79dd6df8a1c6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407623"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561402"
 ---
 # <a name="towctrans"></a>towctrans
 
@@ -61,11 +51,11 @@ Um identificador que contém o valor retornado de [wctrans](wctrans.md).
 
 ## <a name="return-value"></a>Valor de retorno
 
-O caractere *c*, depois **towctrans** usada a regra de transformação em *categoria*.
+O caractere *c*após **towctrans** usado a regra de transformação na *categoria*.
 
 ## <a name="remarks"></a>Comentários
 
-O valor de *categoria* deve ter sido retornado por uma chamada bem-sucedida anterior para [wctrans](wctrans.md).
+O valor de *categoria* deve ter sido retornado por uma chamada bem-sucedida anterior à [wctrans](wctrans.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -77,7 +67,7 @@ Para obter informações adicionais sobre compatibilidade, consulte [Compatibili
 
 ## <a name="example"></a>Exemplo
 
-Consulte **wctrans** para obter um exemplo que usa **towctrans**.
+Ver **wctrans** para obter um exemplo que usa **towctrans**.
 
 ## <a name="see-also"></a>Consulte também
 
