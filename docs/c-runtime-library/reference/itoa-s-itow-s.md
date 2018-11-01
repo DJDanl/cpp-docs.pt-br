@@ -1,10 +1,6 @@
 ---
-title: itoa_s, itow_s funções | Microsoft Docs
-ms.custom: ''
+title: itoa_s, itow_s funções
 ms.date: 03/21/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _itoa_s
 - _ltoa_s
@@ -60,8 +56,6 @@ f1_keywords:
 - ultot_s
 - i64tot_s
 - ui64tot_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ui64toa_s function
 - _itow_s function
@@ -81,20 +75,16 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 71808a65a58209f843cd65b4e53f49a1c9fd17f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47eb030790359f25a7df5275a247c071fb3d599f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404981"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441699"
 ---
 # <a name="itoas-ltoas-ultoas-i64toas-ui64toas-itows--ltows--ultows-i64tows-ui64tows"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s,  _ltow_s,  _ultow_s, _i64tow_s, _ui64tow_s
 
-Converte um inteiro em uma cadeia de caracteres. Essas são as versões do [itoa, itow funções](itoa-itow.md) com aprimoramentos de segurança, conforme descrito em [recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Converte um inteiro em uma cadeia de caracteres. Estas são versões dos [itoa, funções de itow](itoa-itow.md) com melhorias de segurança, conforme descrito em [recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -151,7 +141,7 @@ Buffer de saída que contém o resultado da conversão.
 Tamanho de *buffer* em caracteres ou caracteres largos.
 
 *radix*<br/>
-A base ou base numérica a ser usada para converter *valor*, que deve estar no intervalo de 2 a 36.
+A base ou a base numérica a ser usada para converter *valor*, que deve estar no intervalo de 2 a 36.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -164,21 +154,21 @@ Zero se for bem-sucedido; um código de erro em caso de falha. Se qualquer uma d
 |qualquer|**NULL**|qualquer|qualquer|**EINVAL**|
 |qualquer|qualquer|<=0|qualquer|**EINVAL**|
 |qualquer|qualquer|<= tamanho da cadeia de caracteres resultante necessário|qualquer|**EINVAL**|
-|qualquer|qualquer|qualquer|*base* < 2 ou *base* > 36|**EINVAL**|
+|qualquer|qualquer|qualquer|*fracionário* < 2 ou *fracionário* > 36|**EINVAL**|
 
 ### <a name="security-issues"></a>Problemas de segurança
 
-Essas funções podem gerar uma violação de acesso se *buffer* não aponta para memória válido e não é **nulo**, ou se o comprimento do buffer não é grande o suficiente para manter a cadeia de caracteres de resultado.
+Essas funções podem gerar uma violação de acesso se *buffer* não apontar para a memória válida e não está **nulo**, ou se o comprimento do buffer não é grande o suficiente para manter a cadeia de caracteres de resultado.
 
 ## <a name="remarks"></a>Comentários
 
-Exceto para os parâmetros e o valor de retorno, o **itoa_s** e **itow_s** famílias de função tem o mesmo comportamento que o menos seguro correspondente **itoa** e **itow** versões.
+Exceto para os parâmetros e o valor de retorno, o **itoa_s** e **itow_s** famílias de função tiverem o mesmo comportamento que correspondentes menos seguras **itoa** e **itow** versões.
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-As versões da biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFD. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+As versões da biblioteca de depuração dessas funções preenchem o buffer com 0xFD. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-CRT inclui macros convenientes para definir o tamanho do buffer necessário para converter o maior valor possível de cada tipo de inteiro, incluindo o terminador nulo e entre caracteres para várias bases comuns. Para obter informações, consulte [macros de contagem de conversão máximo](itoa-itow.md#maximum-conversion-count-macros).
+A CRT inclui macros convenientes para definir o tamanho do buffer necessário para converter o maior valor possível de cada tipo de inteiro, incluindo o terminador nulo e entre o caractere, para várias bases comuns. Para obter informações, consulte [macros de contagem do máximo conversão](itoa-itow.md#maximum-conversion-count-macros).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -201,7 +191,7 @@ Essas funções são específicas da Microsoft. Para obter mais informações so
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo demonstra o uso de algumas das funções de conversão de inteiro. Observe que o [countof](countof-macro.md) macro só funciona para determinar o tamanho do buffer quando a declaração de matriz é visível para o compilador e não para os parâmetros que têm diminuísse para ponteiros.
+Este exemplo demonstra o uso de algumas das funções de conversão de número inteiro. Observe que o [countof](countof-macro.md) macro funciona apenas para determinar o tamanho do buffer quando a declaração de matriz é visível para o compilador e não para os parâmetros que têm diminuísse para ponteiros.
 
 ```C
 // crt_itoa_s.c
@@ -272,4 +262,4 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ## <a name="see-also"></a>Consulte também
 
 [Conversão de Dados](../../c-runtime-library/data-conversion.md)<br/>
-[itoa, funções itow](itoa-itow.md)<br/>
+[itoa, itow funções](itoa-itow.md)<br/>

@@ -1,27 +1,17 @@
 ---
-title: Expressões Regulares (C++) |Microsoft Docs
-ms.custom: ''
+title: Expressões regulares (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, regular expressions
 - regular expressions, Visual C++
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca3d636b1dffdb3237fb94fade41c90057543b9d
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: dafbe7c7ba10db2b0f34fdc6065c1475d63be284
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861558"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443453"
 ---
 # <a name="regular-expressions-c"></a>Expressões regulares (C++)
 
@@ -56,7 +46,7 @@ Um elemento pode ser um dos seguintes itens:
 
 - Um *caractere curinga* '.' que corresponde a qualquer caractere na sequência de destino, exceto a uma nova linha.
 
-- Uma *expressão entre colchetes* da forma "[`expr`]", que corresponde a um caractere ou a um elemento de agrupamento na sequência de destino que também está no conjunto definido pela expressão `expr` ou da forma "[^`expr`]", que corresponde a um caractere ou a um elemento de agrupamento na sequência de destino que não está no conjunto definido pela expressão `expr`.
+- Uma *expressão entre colchetes* da forma "[`expr`]", que corresponde a um caractere ou a um elemento de ordenação na sequência de destino que também está no conjunto definido pela expressão `expr` ou da forma "[^`expr`]", que corresponde a um caractere ou a um elemento de ordenação na sequência de destino que não está no conjunto definido pela expressão `expr`.
 
    A expressão `expr` pode conter qualquer combinação dos seguintes itens:
 
@@ -68,7 +58,7 @@ Um elemento pode ser um dos seguintes itens:
 
    - Uma *classe de equivalência* no formato "[=`elt`=]". Adiciona os elementos de agrupamento que são equivalentes a `elt` ao conjunto definido por `expr`.
 
-   - Um *símbolo de agrupamento* no formato "[.`elt`.]". Adiciona o elemento de agrupamento `elt` ao conjunto definido por `expr`.
+   - Um *símbolo de agrupamento* no formato "[.`elt`.]". Adiciona o elemento de ordenação `elt` ao conjunto definido por `expr`.
 
 - Uma *âncora*. A âncora '^' corresponde ao início da sequência de destino; a âncora '$' corresponde ao fim da sequência de destino.
 
@@ -289,7 +279,7 @@ Exemplos:
 
 - Em sistemas que usam a codificação de caractere ASCII, "[+--]" representa o conjunto de caracteres { '+', ',', '-' }.
 
-No entanto, quando os intervalos que diferenciam a localidade são usados, os caracteres em um intervalo são determinados pelas regras de agrupamento da localidade. Os caracteres que são agrupados após o primeiro caractere na definição do intervalo e antes do último caractere na definição do intervalo estão no conjunto. Os dois caracteres finais também estão no conjunto.
+No entanto, quando os intervalos que diferenciam a localidade são usados, os caracteres em um intervalo são determinados pelas regras de ordenação da localidade. Os caracteres que são agrupados após o primeiro caractere na definição do intervalo e antes do último caractere na definição do intervalo estão no conjunto. Os dois caracteres finais também estão no conjunto.
 
 ### <a name="collating-element"></a>Elemento de agrupamento
 

@@ -1,26 +1,15 @@
 ---
-title: Classe de atributos (COM C++) | Microsoft Docs
-ms.custom: ''
+title: Atributos de classe (COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - attributes [C++/CLI], class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a727bcf53a11e98ffd7e037037452c6bbdc4fe8a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: bdc689107eb973b9701e3f1fbe37a10aa6ae8d85
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790118"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50448861"
 ---
 # <a name="class-attributes"></a>Atributos de classe
 
@@ -49,16 +38,16 @@ Os atributos a seguir se aplicam para o [classe](../../cpp/class-cpp.md) palavra
 |[helpstringcontext](helpstringcontext.md)|Especifica a ID do tópico da Ajuda em um arquivo. hlp ou. chm.|
 |[helpstring](helpstring.md)|Especifica uma cadeia de caracteres que é usada para descrever o elemento ao qual ela se aplica.|
 |[hidden](hidden.md)|Indica que o item existe, mas não deve ser exibido em um navegador orientado ao usuário.|
-|[Implementa](implements-cpp.md)|Especifica as interfaces de distribuição que são forçadas para serem membros da coclass IDL.|
+|[implements](implements-cpp.md)|Especifica as interfaces de distribuição que são forçadas para serem membros da coclass IDL.|
 |[implements_category](implements-category.md)|Especifica as categorias de componentes implementados para a classe.|
-|[módulo](module-cpp.md)|Define o bloco de biblioteca no arquivo. idl.|
+|[module](module-cpp.md)|Define o bloco de biblioteca no arquivo. idl.|
 |[noncreatable](noncreatable.md)|Define um objeto que não pode ser instanciado por si só.|
 |[progid](progid.md)|Define o ProgID de um controle.|
 |[registration_script](registration-script.md)|Executa o script de registro especificado.|
 |[requestedit](requestedit.md)|Indica que a propriedade oferece suporte a `OnRequestEdit` notificação.|
 |[source](source-cpp.md)|Especifica as interfaces de origem do controle para pontos de conexão em uma classe. Em uma propriedade ou método, o `source` atributo indica que o membro retorna um objeto ou `VARIANT` que é uma origem de eventos.|
 |[support_error_info](support-error-info.md)|Dá suporte a relatórios de erros para o objeto de destino.|
-|[Threading](threading-cpp.md)|Especifica o modelo de threading para um controle.|
+|[threading](threading-cpp.md)|Especifica o modelo de threading para um controle.|
 |[uuid](uuid-cpp-attributes.md)|Especifica a ID exclusiva para uma classe ou interface.|
 |[version](version-cpp.md)|Identifica uma versão específica entre várias versões de uma classe.|
 |[vi_progid](vi-progid.md)|Especifica uma forma independente de versão do ProgID.|

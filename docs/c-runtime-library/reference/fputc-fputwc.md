@@ -1,10 +1,6 @@
 ---
-title: fputc, fputwc | Microsoft Docs
-ms.custom: ''
+title: fputc, fputwc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fputc
 - fputwc
@@ -25,8 +21,6 @@ f1_keywords:
 - fputc
 - fputwc
 - _fputtc
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, writing characters to
 - fputtc function
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - fputwc function
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: af93e0c42002dc557f691daadd2fc003dced0247
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fc06c9f2060baae63071339768cef11fc5f34023
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401406"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447171"
 ---
 # <a name="fputc-fputwc"></a>fputc, fputwc
 
@@ -67,12 +57,12 @@ wint_t fputwc(
 *c*<br/>
 O caractere a ser gravado.
 
-*Fluxo*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retorna o caractere gravado. Para **fputc**, um valor de retorno **EOF** indica um erro. Para **fputwc**, um valor de retorno **WEOF** indica um erro. Se *fluxo* é **nulo**, essas funções invocam o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, retorne **EOF** e defina **errno** para **EINVAL**.
+Cada uma dessas funções retorna o caractere gravado. Para **fputc**, um valor de retorno **EOF** indica um erro. Para **fputwc**, um valor de retorno **WEOF** indica um erro. Se *stream* é **nulo**, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, eles retornam **EOF** e defina **errno** para **EINVAL**.
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.
 
@@ -88,8 +78,8 @@ Veja comentários específicos sobre a rotina a seguir.
 
 |Rotina|Comentários|
 |-------------|-------------|
-|**fputc**|Equivalente a **putc**, mas implementado apenas como uma função, em vez de como uma função e uma macro.|
-|**fputwc**|Versão de caractere largo de **fputc**. Grava *c* como um caractere multibyte ou um caractere largo de acordo com se *fluxo* é aberto em modo de texto ou binário.|
+|**fputc**|Equivalente a **putc**, mas implementado somente como uma função, em vez de uma função e uma macro.|
+|**fputwc**|Versão de caractere largo de **fputc**. Grava *c* como um caractere multibyte ou um caractere largo se *fluxo* é aberto no modo de texto ou binário.|
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -104,7 +94,7 @@ Veja comentários específicos sobre a rotina a seguir.
 |**fputc**|\<stdio.h>|
 |**fputwc**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos do Windows UWP (plataforma Universal). Os identificadores de fluxo padrão que estão associados com o console —**stdin**, **stdout**, e **stderr**— deverá ser redirecionado para funções de tempo de execução C podem usá-los em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console —**stdin**, **stdout**, e **stderr**— deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
