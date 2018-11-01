@@ -1,10 +1,6 @@
 ---
-title: 'Manipuladores de mensagens WM _: D - E | Microsoft Docs'
-ms.custom: ''
+title: 'Manipuladores de mensagens WM_: D - E'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - ON_WM_ERASEBKGND
 - ON_WM_DEVICECHANGE
@@ -19,8 +15,6 @@ f1_keywords:
 - ON_WM_ENABLE
 - ON_WM_DRAWITEM
 - ON_WM_DRAWCLIPBOARD
-dev_langs:
-- C++
 helpviewer_keywords:
 - ON_WM_ENTERIDLE [MFC]
 - ON_WM_DESTROYCLIPBOARD [MFC]
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - ON_WM_DEVICECHANGE [MFC]
 - WM_ messages [MFC]
 ms.assetid: 56fb89c8-68a8-4adf-883e-a9f63bf677e9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2465a58ec0b3d889eef2acacca09dcfc3a656191
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 90076e991667e829a97cb805a32763b6acbfe6d3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388994"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491046"
 ---
 # <a name="wm-message-handlers-d---e"></a>Manipuladores de mensagens WM_: D - E
 
@@ -76,6 +66,6 @@ As seguintes entradas de mapa à esquerda correspondem aos protótipos de funç�
 
 ## <a name="see-also"></a>Consulte também
 
-[Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)<br/>
+[Mapas de mensagens](../../mfc/reference/message-maps-mfc.md)<br/>
 [Manipuladores para mensagens WM_](../../mfc/reference/handlers-for-wm-messages.md)
 

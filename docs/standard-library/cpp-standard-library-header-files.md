@@ -1,12 +1,6 @@
 ---
-title: Arquivos de cabeçalho da Biblioteca Padrão C++ | Microsoft Docs
-ms.custom: ''
+title: Arquivos de cabeçalho da Biblioteca Padrão C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - header files, C++ Standard Library
 - wrappers
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - C++ Standard Library, header files
 - Visual C++, header files
 ms.assetid: e7bf497a-0f63-48d0-9b54-cb0eef4073c4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4f177ebceff77aa9776ce2943ff5cb6176440ec3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a94e419e07194ffb8903cd474f878b0e8553356c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846994"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496342"
 ---
 # <a name="c-standard-library-header-files"></a>Arquivos de cabeçalho da Biblioteca Padrão C++
 
@@ -39,13 +29,13 @@ Arquivos de cabeçalho da Biblioteca Padrão C++ e extensões, por categoria.
 |[Contêineres](../cpp/containers-modern-cpp.md)||
 |Contêineres de sequência|[\<array>](../standard-library/array.md), [\<deque>](../standard-library/deque.md), [<forward_list>](../standard-library/forward-list.md), [\<list>](../standard-library/list.md), [\<vector>](../standard-library/vector.md)|
 |Contêineres associativos ordenados| [\<map>](../standard-library/map.md), [\<set>](../standard-library/set.md)|
-|Contêineres de associação não ordenados|[<unordered_map>](../standard-library/unordered-map.md), [<unordered_set>](../standard-library/unordered-set.md)|
+|Contêineres associativos desordenados|[<unordered_map>](../standard-library/unordered-map.md), [<unordered_set>](../standard-library/unordered-set.md)|
 |Contêineres de adaptador|[\<queue>](../standard-library/queue.md), [\<stack>](../standard-library/stack.md)|
-|[Erros e tratamento de exceção](../cpp/errors-and-exception-handling-modern-cpp.md)|[\<exception>](../standard-library/exception.md), [\<stdexcept>](../standard-library/stdexcept.md), [<system_error>](../standard-library/system-error.md)|
-|[E/s e formatação](../cpp/string-and-i-o-formatting-modern-cpp.md)|[\<filesystem>](../standard-library/filesystem.md), [\<fstream>](../standard-library/fstream.md), [\<iomanip>](../standard-library/iomanip.md), [\<ios>](../standard-library/ios.md), [\<iosfwd>](../standard-library/iosfwd.md), [\<iostream>](../standard-library/iostream.md), [\<istream>](../standard-library/istream.md), [\<ostream>](../standard-library/ostream.md), [\<sstream>](../standard-library/sstream.md), [\<streambuf>](../standard-library/streambuf.md), [\<strstream>](../standard-library/strstream.md)|
+|[Erros e tratamento de exceções](../cpp/errors-and-exception-handling-modern-cpp.md)|[\<exception>](../standard-library/exception.md), [\<stdexcept>](../standard-library/stdexcept.md), [<system_error>](../standard-library/system-error.md)|
+|[Formatação e e/s](../cpp/string-and-i-o-formatting-modern-cpp.md)|[\<filesystem>](../standard-library/filesystem.md), [\<fstream>](../standard-library/fstream.md), [\<iomanip>](../standard-library/iomanip.md), [\<ios>](../standard-library/ios.md), [\<iosfwd>](../standard-library/iosfwd.md), [\<iostream>](../standard-library/iostream.md), [\<istream>](../standard-library/istream.md), [\<ostream>](../standard-library/ostream.md), [\<sstream>](../standard-library/sstream.md), [\<streambuf>](../standard-library/streambuf.md), [\<strstream>](../standard-library/strstream.md)|
 |Iterators|[\<iterator>](../standard-library/iterator.md)|
 |Localização|[\<codecvt>](../standard-library/codecvt.md), [\<cvt/wbuffer>](../standard-library/cvt-wbuffer.md), [\<cvt/wstring>](../standard-library/cvt-wstring.md), [\<locale>](../standard-library/locale.md)|
-|Matemática e valores numéricos|[\<complex>](../standard-library/complex.md), [\<limits>](../standard-library/limits.md), [\<numeric>](../standard-library/numeric.md), [\<random>](../standard-library/random.md), [\<ratio>](../standard-library/ratio.md), [\<valarray>](../standard-library/valarray.md)|
+|Matemática e numéricos|[\<complex>](../standard-library/complex.md), [\<limits>](../standard-library/limits.md), [\<numeric>](../standard-library/numeric.md), [\<random>](../standard-library/random.md), [\<ratio>](../standard-library/ratio.md), [\<valarray>](../standard-library/valarray.md)|
 |[Gerenciamento de memória](../cpp/smart-pointers-modern-cpp.md)|[\<allocators>](../standard-library/allocators-header.md), [\<memory>](../standard-library/memory.md), [\<new>](../standard-library/new.md), [<scoped_allocator>](../standard-library/scoped-allocator.md)|
 |Multithreading|[\<atomic>](../standard-library/atomic.md), [<condition_variable>](../standard-library/condition-variable.md), [\<future>](../standard-library/future.md), [\<mutex>](../standard-library/mutex.md), [<shared_mutex>](../standard-library/shared-mutex.md), [\<thread>](../standard-library/thread.md)|
 |Outros utilitários|[\<bitset>](../standard-library/bitset.md), [\<chrono>](../standard-library/chrono.md), [\<functional>](../standard-library/functional.md), [<initializer_list>](../standard-library/initializer-list.md), [\<tuple>](../standard-library/tuple.md), [<type_traits>](../standard-library/type-traits.md), [\<typeinfo>](../standard-library/typeinfo.md), [\<typeindex>](../standard-library/typeindex.md), [\<utility>](../standard-library/utility.md)|

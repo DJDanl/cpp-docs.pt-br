@@ -1,11 +1,6 @@
 ---
-title: feholdexcept | Microsoft Docs
-ms.custom: ''
+title: feholdexcept
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feholdexcept
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - feholdexcept
 - fenv/feholdexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - feholdexcept function
 ms.assetid: 88e512ae-b5d8-452c-afe9-c824cd3ef1d8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6250de98b2eb3f8cc8c475d341c1d63a79262362
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26097398b9f9d498ab4c56690dc9c6cbb950bafb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397536"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525730"
 ---
 # <a name="feholdexcept"></a>feholdexcept
 
@@ -63,9 +52,9 @@ Retorna zero se e somente se a função é capaz de ativar o tratamento de exce�
 
 ## <a name="remarks"></a>Comentários
 
-O **feholdexcept** função é usada para armazenar o estado do ambiente de ponto flutuante atual no **fenv_t** objeto apontada pelo *penv*e para definir o ambiente Não interrompa a execução em exceções de ponto flutuantes. Isso é conhecido como modo contínuo.  Esse modo continua até que o ambiente seja restaurado usando [fesetenv](fesetenv1.md) ou [feupdateenv](feupdateenv.md).
+O **feholdexcept** função é usada para armazenar o estado do ambiente de ponto flutuante atual na **fenv_t** objeto apontado por *penv*e para definir o ambiente como Não interrompa a execução em exceções de ponto flutuante. Isso é conhecido como modo contínuo.  Esse modo continua até que o ambiente seja restaurado usando [fesetenv](fesetenv1.md) ou [feupdateenv](feupdateenv.md).
 
-Você pode usar essa função no início de uma sub-rotina que precisa ocultar uma ou mais exceções de ponto flutuante do chamador. Para relatar uma exceção, você pode simplesmente limpar as exceções indesejadas usando [feclearexcept,](feclearexcept1.md) e, em seguida, encerrar o modo contínuo com uma chamada para **feupdateenv**.
+Você pode usar essa função no início de uma sub-rotina que precisa ocultar uma ou mais exceções de ponto flutuante do chamador. Para relatar uma exceção, basta limpar as exceções indesejadas usando [feclearexcept](feclearexcept1.md) e, em seguida, encerrar o modo contínuo com uma chamada para **feupdateenv**.
 
 Para usar essa função, você deve desligar otimizações de ponto flutuante que poderiam impedir o acesso usando a diretiva `#pragma fenv_access(on)` antes da chamada. Para obter mais informações, consulte [fenv_access](../../preprocessor/fenv-access.md).
 

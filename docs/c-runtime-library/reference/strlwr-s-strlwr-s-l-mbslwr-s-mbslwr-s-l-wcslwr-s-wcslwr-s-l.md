@@ -1,10 +1,6 @@
 ---
-title: _strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l | Microsoft Docs
-ms.custom: ''
+title: _strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strlwr_s_l
 - _mbslwr_s_l
@@ -41,8 +37,6 @@ f1_keywords:
 - _mbslwr_s_l
 - wcslwr_s
 - _mbslwr_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tcslwr_s function
 - wcslwr_s function
@@ -66,23 +60,19 @@ helpviewer_keywords:
 - tcslwr_s_l function
 - strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 61f3db37a61a30909e8deadee96c3bfbe2c46bb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7eb9d81b1269018cd41c80c1f9c15aa92a4f85a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415333"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497212"
 ---
 # <a name="strlwrs-strlwrsl-mbslwrs-mbslwrsl-wcslwrs-wcslwrsl"></a>_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
 
 Converte uma cadeia de caracteres em minúsculas, usando a localidade atual ou um objeto de localidade que é passado. Essas versões de [_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) têm aprimoramentos de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **mbslwr_s** e **mbslwr_s_l** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbslwr_s** e **mbslwr_s_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -158,11 +148,11 @@ A localidade a ser usada.
 
 Zero se tiver êxito; um código de erro diferente de zero em caso de falha.
 
-Essas funções validam seus parâmetros. Se *str* não é uma cadeia válida de terminação nula, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução é permitida para continuar, as funções retornam **EINVAL** e defina **errno** para **EINVAL**. Se *numberOfElements* é menor que o comprimento da cadeia de caracteres, as funções também retornam **EINVAL** e defina **errno** para **EINVAL**.
+Essas funções validam seus parâmetros. Se *str* não é uma cadeia válida terminada em nulo, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, as funções retornam **EINVAL** e defina **errno** para **EINVAL**. Se *numberOfElements* é menor que o comprimento da cadeia de caracteres, as funções também retornam **EINVAL** e defina **errno** para **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-O **strlwr_s** converte de função, no lugar, qualquer letras maiusculas no *str* em minúsculas. **mbslwr_s** é uma versão de caracteres multibyte do **strlwr_s**. **wcslwr_s** é uma versão de caractere largo de **strlwr_s**.
+O **strlwr_s** função converte, in-loco, quaisquer letras maiusculas no *str* em minúsculas. **mbslwr_s** é uma versão de caractere multibyte **strlwr_s**. **wcslwr_s** é uma versão de caractere largo de **strlwr_s**.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
