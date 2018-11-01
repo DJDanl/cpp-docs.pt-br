@@ -1,28 +1,18 @@
 ---
-title: Caracteres especiais em um Makefile | Microsoft Docs
-ms.custom: ''
+title: Caracteres especiais em um makefile
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - NMAKE program, special characters
 - makefiles, special characters
 - special characters, in NMAKE macros
 - macros, special characters
 ms.assetid: 92c34ab5-ca6b-4fc0-bcf4-3172eaeda9f0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3ae77e769672dcc88a9dd41c901424c8c8150e6b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 18fa83fcfd0c70ac4e8b9bf5be08ac1922998ecb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709352"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443724"
 ---
 # <a name="special-characters-in-a-makefile"></a>Caracteres especiais em um makefile
 

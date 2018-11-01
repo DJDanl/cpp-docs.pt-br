@@ -1,10 +1,6 @@
 ---
-title: atoi, _atoi_l, _wtoi, _wtoi_l | Microsoft Docs
-ms.custom: ''
+title: atoi, _atoi_l, _wtoi, _wtoi_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtoi
 - _wtoi_l
@@ -30,8 +26,6 @@ f1_keywords:
 - atoi
 - _atoi_l
 - _wtoi_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _atoi_l function
 - ttoi function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ec426518aed278f98ca334ba4ed34830f5836a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b54c0a58a070fa42218a7b048d9eb57b05040738
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397149"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452231"
 ---
 # <a name="atoi-atoil-wtoi-wtoil"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 
@@ -90,9 +80,9 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada função retorna o **int** valor produzido por interpretar os caracteres de entrada como um número. O valor de retorno é 0 para **atoi** e **wtoi**, se a entrada não pode ser convertida para um valor desse tipo.
+Cada função retorna o **int** valor produzido Interpretando os caracteres de entrada como um número. O valor de retorno é 0 para **atoi** e **wtoi**, se a entrada não pode ser convertida em um valor desse tipo.
 
-No caso de estouro com grandes valores negativos integrais, **LONG_MIN** é retornado. **atoi** e **wtoi** retornar **INT_MAX** e **INT_MIN** nestas condições. Em todos os casos de fora do intervalo, **errno** é definido como **ERANGE**. Se o parâmetro passado é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL** e retornar 0.
+No caso de estouro com grandes valores inteiros negativos **LONG_MIN** é retornado. **atoi** e **wtoi** retornar **INT_MAX** e **INT_MIN** nestas condições. Em todos os casos de fora do intervalo, **errno** é definido como **ERANGE**. Se o parâmetro passado é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e retornam 0.
 
 ## <a name="remarks"></a>Comentários
 
@@ -102,9 +92,9 @@ O *str* argumento **atoi** e **wtoi** tem a seguinte forma:
 
 > [*espaço em branco*] [*sinal*] [*dígitos*]]
 
-Um *espaço em branco* consiste em caracteres de espaço ou tabulação, que são ignorados; *sinal* é um sinal de adição (+) ou menos (-); e *dígitos* são um ou mais dígitos.
+Um *espaço em branco* consiste em caracteres de espaço ou tabulação, que são ignorados; *sinal* é um sinal de mais (+) ou menos (-); e *dígitos* são um ou mais dígitos.
 
-As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -122,7 +112,7 @@ As versões dessas funções com o **_l** sufixo são idênticas, exceto que ele
 
 ## <a name="example"></a>Exemplo
 
-Este programa mostra como os números armazenados como cadeias de caracteres podem ser convertidos em valores numéricos usando a **atoi** funções.
+Esse programa mostra como os números armazenados como cadeias de caracteres podem ser convertidos em valores numéricos usando o **atoi** funções.
 
 ```C
 // crt_atoi.c
