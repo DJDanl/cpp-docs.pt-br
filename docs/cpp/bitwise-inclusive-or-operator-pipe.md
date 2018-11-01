@@ -1,37 +1,27 @@
 ---
-title: 'Bit a bit operador OR inclusivo: | | Microsoft Docs'
-ms.custom: ''
+title: 'Bit a bit operador OR inclusivo: |'
 ms.date: 06/14/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - bitor
 - '|'
-dev_langs:
-- C++
 helpviewer_keywords:
 - OR operator [C++], bitwise inclusive
 - bitwise operators [C++], OR operator
 - inclusive OR operator
 - '| operator'
 ms.assetid: 4c8a6a68-d828-447d-875a-aedb4ce3aa9a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bda159ed4111bffe935d5ceb6824662159553ddc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 848bf3b2ec61084b59ab5b1ee6807f6066a4675e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46032010"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50649157"
 ---
 # <a name="bitwise-inclusive-or-operator-"></a>Bit a bit operador OR inclusivo: |
 
 ## <a name="syntax"></a>Sintaxe
 
-> *Expression1* **|** *expression2*
+> *expression1* **|** *expression2*
 
 ## <a name="remarks"></a>Comentários
 

@@ -1,10 +1,6 @@
 ---
-title: _expand_dbg | Microsoft Docs
-ms.custom: ''
+title: _expand_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _expand_dbg
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - expand_dbg
 - _expand_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks, changing size
 - expand_dbg function
 - _expand_dbg function
 ms.assetid: dc58c91f-72a8-48c6-b643-fe130fb6c1fd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 023bda761454a6a1e18ce68c8e7576af2759abbf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc3aa2b7e39b52eb71ac10a9b5c4a221ba6fb70c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403629"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663795"
 ---
 # <a name="expanddbg"></a>_expand_dbg
 
@@ -58,7 +48,7 @@ void *_expand_dbg(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Dados do usuário*<br/>
+*dados do usuário*<br/>
 Ponteiro para o bloco de memória alocado anteriormente.
 
 *newSize*<br/>
@@ -68,28 +58,28 @@ Solicitou o novo tamanho do bloco (em bytes).
 Tipo de bloco redimensionado solicitado: **client_block** ou **normal_block**.
 
 *filename*<br/>
-Ponteiro para o nome do arquivo de origem que solicitou expandir operação ou **nulo**.
+Operação de expansão de ponteiro para o nome do arquivo de origem que solicitou ou **nulo**.
 
 *linenumber*<br/>
-Número no arquivo de origem em que a operação de expansão foi solicitada da linha ou **nulo**.
+Número de linha no arquivo de origem onde a operação de expansão foi solicitada ou **nulo**.
 
-O *filename* e *linenumber* parâmetros estão disponíveis somente quando **expand_dbg** foi chamado explicitamente ou [crtdbg_map_alloc](../../c-runtime-library/crtdbg-map-alloc.md)constante de pré-processador foi definido.
+O *filename* e *linenumber* parâmetros estão disponíveis somente quando **expand_dbg** tiver sido chamado explicitamente ou o [crtdbg_map_alloc](../../c-runtime-library/crtdbg-map-alloc.md)constante do pré-processador foi definido.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Após a conclusão bem-sucedida, **expand_dbg** retorna um ponteiro para o bloco de memória redimensionado. Como a memória não é movida, o endereço é o mesmo que userData. Se ocorreu um erro ou o bloco não foi possível expandir o tamanho solicitado, ele retorna **nulo**. Se ocorrer uma falha, **errno** com informações do sistema operacional sobre a natureza da falha. Para obter mais informações sobre **errno**, consulte [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Após a conclusão bem-sucedida, **expand_dbg** retorna um ponteiro para o bloco de memória redimensionado. Como a memória não é movida, o endereço é o mesmo que userData. Se ocorreu um erro ou o bloco não pôde ser expandido para o tamanho solicitado, ele retornará **nulo**. Se ocorrer uma falha, **errno** é com informações do sistema operacional sobre a natureza da falha. Para obter mais informações sobre **errno**, consulte [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **expand_dbg** função é uma versão de depuração no _[expanda](expand.md) função. Quando [Debug](../../c-runtime-library/debug.md) não está definida, cada chamada para **expand_dbg** é reduzido para uma chamada para **expandir**. Ambos **expandir** e **expand_dbg** redimensionar um bloco de memória no heap de base, mas **expand_dbg** acomoda a vários recursos de depuração: buffers em ambos os lados do usuário parte do bloco para testar vazamentos, um parâmetro de tipo de bloco para rastrear tipos específicos de alocação, e *filename*/*linenumber* informações para determinar a origem do solicitações de alocação.
+O **expand_dbg** função é uma versão de depuração da _[expanda](expand.md) função. Quando [Debug](../../c-runtime-library/debug.md) não estiver definido, cada chamada para **expand_dbg** é reduzida a uma chamada para **expand**. Ambos **expand** e **expand_dbg** redimensionar um bloco de memória no heap de base, mas **expand_dbg** acomoda diversos recursos de depuração: buffers nos dois lados do usuário parte do bloco para testar vazamentos, um parâmetro de tipo de bloco para rastrear tipos de alocação específicos e *filename*/*linenumber* informações para determinar a origem do solicitações de alocação.
 
-**expand_dbg** redimensiona o bloco de memória especificado com um pouco mais espaço do que o solicitado *newSize*. *newSize* pode ser maior ou menor que o tamanho do bloco de memória alocada originalmente. O espaço adicional é usado pelo gerenciador de heaps de depuração para vincular os blocos de memória de depuração e fornecer informações do cabeçalho de depuração ao aplicativo e substituir buffers. O redimensionamento é realizado pela expansão ou contração do bloco de memória original. **expand_dbg** não move o bloco de memória, como faz o [realloc_dbg](realloc-dbg.md) função.
+**expand_dbg** redimensiona o bloco de memória especificado com um pouco mais de espaço que o solicitado *newSize*. *newSize* pode ser maior ou menor que o tamanho do bloco de memória alocado originalmente. O espaço adicional é usado pelo gerenciador de heaps de depuração para vincular os blocos de memória de depuração e fornecer informações do cabeçalho de depuração ao aplicativo e substituir buffers. O redimensionamento é realizado pela expansão ou contração do bloco de memória original. **expand_dbg** não move o bloco de memória, como faz o [realloc_dbg](realloc-dbg.md) função.
 
-Quando *newSize* for maior do que o bloco original tamanho, o bloco de memória é expandido. Durante uma expansão, se o bloco de memória não pode ser expandido para acomodar o tamanho solicitado, **nulo** é retornado. Quando *newSize* é menor do que o bloco original tamanho, o bloco de memória é reduzido até que o novo tamanho seja obtido.
+Quando *newSize* for maior do que o bloco original que o tamanho, o bloco de memória é expandido. Durante uma expansão, se o bloco de memória não pode ser expandido para acomodar o tamanho solicitado, **nulo** é retornado. Quando *newSize* é menor do que o bloco original tamanho, o bloco de memória será contraído até que o novo tamanho seja obtido.
 
 Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details). Para obter informações sobre os tipos de blocos de alocação e como eles são usados, consulte [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details) (Tipos de blocos no heap de depuração). Para obter informações sobre as diferenças entre chamar uma função de heap padrão e sua versão de depuração em um build de depuração de um aplicativo, consulte [Versões de depuração das funções de alocação de heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
-Essa função valida seus parâmetros. Se *memblock* é um ponteiro nulo, ou se o tamanho for maior do que **heap_maxreq**, esta função chama um manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e a função retorna **nulo**.
+Essa função valida seus parâmetros. Se *memblock* for um ponteiro nulo, ou se o tamanho é maior que **heap_maxreq**, essa função invocará um manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e a função retornará **nulo**.
 
 ## <a name="requirements"></a>Requisitos
 

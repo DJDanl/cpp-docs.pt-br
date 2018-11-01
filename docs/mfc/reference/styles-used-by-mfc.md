@@ -1,14 +1,8 @@
 ---
-title: Estilos usados pelo MFC | Microsoft Docs
-ms.custom: ''
+title: Estilos usados pelo MFC
 ms.date: 06/20/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.styles
-dev_langs:
-- C++
 helpviewer_keywords:
 - button objects (CButton), button styles
 - button styles [MFC]
@@ -202,16 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6ff82b4252584b5f874daf32f2be64dd2decfdb8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc70059e2de054e4b1aac4800e1d61c58bc9b467
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428844"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642904"
 ---
 # <a name="styles-used-by-mfc"></a>Estilos usados pelo MFC
 

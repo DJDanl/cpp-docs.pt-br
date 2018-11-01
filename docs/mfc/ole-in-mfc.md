@@ -1,12 +1,6 @@
 ---
-title: OLE no MFC | Microsoft Docs
-ms.custom: ''
+title: OLE no MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, OLE and
 - OLE items
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - applications [OLE], about OLE
 - OLE component object model (COM)
 ms.assetid: 5193479d-1239-4697-aea4-e82f92c707ab
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e43484e5f30191c604f43a2280a8deab6eddd93c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 992715c545f90176ab750890c4be3e05dfe950d3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434941"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520478"
 ---
 # <a name="ole-in-mfc"></a>OLE no MFC
 
@@ -83,7 +73,7 @@ Explica como implementar pontos de conexão (anteriormente conhecidos como ponto
 [Componentes do contêiner/servidor COM](../mfc/containers-advanced-features.md)<br/>
 Descreve as etapas necessárias para incorporar recursos avançados opcionais em aplicativos de contêiner existentes.
 
-[O modelo de objeto de componente](/windows/desktop/com/the-component-object-model)<br/>
+[O Component Object Model](/windows/desktop/com/the-component-object-model)<br/>
 Descreve como usar o OLE sem MFC.
 
 ## <a name="see-also"></a>Consulte também

@@ -1,27 +1,17 @@
 ---
-title: 'Como: criar o controle de usuário e o Host em uma caixa de diálogo | Microsoft Docs'
+title: Como criar o controle de usuário e hospedá-lo em uma caixa de diálogo
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: 03a53032-2f03-4fa2-b567-031615a26011
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 97dde9c90b3cf5c4c4e1e705a605dce98d755abb
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: ccb7219b9c7b3a64da61a77097b147424a92a701
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50072532"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50649989"
 ---
 # <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>Como criar o controle de usuário e hospedá-lo em uma caixa de diálogo
 

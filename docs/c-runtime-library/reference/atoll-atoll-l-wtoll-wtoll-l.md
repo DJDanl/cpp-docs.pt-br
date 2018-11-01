@@ -1,10 +1,6 @@
 ---
-title: atoll, _atoll_l, _wtoll, _wtoll_l | Microsoft Docs
-ms.custom: ''
+title: atoll, _atoll_l, _wtoll, _wtoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtoll
 - _atoll_l
@@ -31,24 +27,18 @@ f1_keywords:
 - _tstoll
 - _wtoll_l
 - atoll
-dev_langs:
-- C++
 helpviewer_keywords:
 - atoll function
 - _wtoll_l function
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 15a0753a487d969d3f75e1e41b6509ea40b9b19f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a857e0f04ff875a740a8a5d1401484cdaf9d3c75
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396109"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613964"
 ---
 # <a name="atoll-atolll-wtoll-wtolll"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
@@ -83,11 +73,11 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada função retorna o **longo** **longo** valor produzido por interpretar os caracteres de entrada como um número. O valor de retorno **Atol** é 0 se a entrada não pode ser convertida para um valor desse tipo.
+Cada função retorna o **longo** **longo** valor é produzido Interpretando os caracteres de entrada como um número. O valor de retorno **Atol** é 0 se a entrada não pode ser convertida em um valor desse tipo.
 
-Estouro com grandes valores positivos integrais, **atoll** retorna **LLONG_MAX**, e o estouro com grandes valores integrais negativos, retornará **LLONG_MIN**.
+Estouro com grandes valores inteiros positivos **Atol** retorna **LLONG_MAX**, e para estouro com grandes valores inteiros negativos, ele retorna **LLONG_MIN**.
 
-Em todos os casos de fora do intervalo, **errno** é definido como **ERANGE**. Se o parâmetro que é transmitido é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL** e retornar 0.
+Em todos os casos de fora do intervalo, **errno** é definido como **ERANGE**. Se o parâmetro passado for **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e retornam 0.
 
 ## <a name="remarks"></a>Comentários
 
@@ -99,11 +89,11 @@ O *str* argumento **Atol** tem a seguinte forma:
 
 > [*espaço em branco*] [*sinal*] [*dígitos*]
 
-Um *espaço em branco* consiste em caracteres de espaço ou tabulação, que são ignorados; *sinal* é um sinal de adição (+) ou menos (-); e *dígitos* são um ou mais dígitos.
+Um *espaço em branco* consiste em caracteres de espaço ou tabulação, que são ignorados; *sinal* é um sinal de mais (+) ou menos (-); e *dígitos* são um ou mais dígitos.
 
-**wtoll** é idêntico ao **Atol** exceto que assume uma cadeia de caracteres largos como um parâmetro.
+**wtoll** é idêntica à **Atol** exceto que assume uma cadeia de caracteres largos como um parâmetro.
 
-As versões dessas funções que têm o **_l** sufixo são idênticas para as versões que não o fez, exceto que eles usam o parâmetro de localidade que é transmitido em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções que têm o **l** sufixo são idênticas às versões que não têm, exceto que usarem o parâmetro de localidade passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -122,7 +112,7 @@ As versões dessas funções que têm o **_l** sufixo são idênticas para as ve
 
 ## <a name="example"></a>Exemplo
 
-Este programa mostra como usar o **Atol** funções para converter números armazenados como cadeias de caracteres para valores numéricos.
+Esse programa mostra como usar o **Atol** funções para converter números armazenados como cadeias de caracteres para valores numéricos.
 
 ```C
 // crt_atoll.c

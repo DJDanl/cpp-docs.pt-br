@@ -1,29 +1,19 @@
 ---
-title: C2144 de erro do compilador | Microsoft Docs
-ms.custom: ''
+title: Erro do compilador C2144
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2144
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 60a6b0a6019ab6ddf1a403d2cbd4f6ef96b2a865
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6472fc70ee4a86bed1422941e758127009f14cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33171137"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483324"
 ---
-# <a name="compiler-error-c2144"></a>C2144 de erro do compilador
+# <a name="compiler-error-c2144"></a>Erro do compilador C2144
 
 > Erro de sintaxe: '*tipo*'deve ser precedido por'*token*'
 
@@ -33,7 +23,7 @@ Esse erro pode ser causado por uma chave de fechamento ausente, parêntese direi
 
 C2144 também pode ocorrer ao tentar criar uma macro de uma palavra-chave CLR que contém um caractere de espaço em branco.
 
-Você também pode ver C2144 se você estiver tentando encaminhamento de tipos. Consulte [encaminhamento de tipo (C + + CLI)](../../windows/type-forwarding-cpp-cli.md) para obter mais informações.
+Você também poderá ver C2144 se você está tentando fazer o encaminhamento de tipo. Ver [encaminhamento de tipo (C + + / CLI)](../../windows/type-forwarding-cpp-cli.md) para obter mais informações.
 
 ## <a name="examples"></a>Exemplos
 

@@ -1,10 +1,6 @@
 ---
-title: _execlp, _wexeclp | Microsoft Docs
-ms.custom: ''
+title: _execlp, _wexeclp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wexeclp
 - _execlp
@@ -25,24 +21,18 @@ f1_keywords:
 - _wexeclp
 - wexeclp
 - _execlp
-dev_langs:
-- C++
 helpviewer_keywords:
 - execlp function
 - _execlp function
 - _wexeclp function
 - wexeclp function
 ms.assetid: 7b179163-4bcd-4d6a-8baf-68f886791928
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 43105dc6dc12546dd8fbb99367ba430205a62a42
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db13263ca4574d59821d5783b9ae83f278fef14d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399661"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506633"
 ---
 # <a name="execlp-wexeclp"></a>_execlp, _wexeclp
 
@@ -78,7 +68,7 @@ Lista de ponteiros para os parâmetros.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de -1 indica um erro, caso em que o **errno** variável global está definido.
+Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de -1 indica um erro, caso em que o **errno** variável global é definida.
 
 |**errno** valor|Descrição|
 |-------------------|-----------------|
@@ -94,9 +84,9 @@ Para obter mais informações sobre esses e outros códigos de retorno, consulte
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções carrega e executa um novo processo, passando cada argumento de linha de comando como um parâmetro separado e usando o **caminho** variável de ambiente para localizar o arquivo para executar.
+Cada uma dessas funções carrega e executa um novo processo, passando cada argumento de linha de comando como um parâmetro separado e usando o **caminho** variável de ambiente para localizar o arquivo a ser executado.
 
-O **execlp** funções validam seus parâmetros. Se *cmdname* ou *arg0* é um ponteiro nulo ou cadeia de caracteres vazia, essas funções invocam o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL** e retorne -1. Nenhum processo novo é inicializado.
+O **execlp** funções validam seus parâmetros. Se *cmdname* ou *arg0* é um ponteiro nulo ou cadeia de caracteres vazia, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e retornarão -1. Nenhum processo novo é inicializado.
 
 ## <a name="requirements"></a>Requisitos
 

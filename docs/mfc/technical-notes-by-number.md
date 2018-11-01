@@ -1,25 +1,15 @@
 ---
-title: Observações técnicas por número | Microsoft Docs
-ms.custom: ''
+title: Observações técnicas por número
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.tables.mfc.technotes
-dev_langs:
-- C++
 ms.assetid: aaa449be-9167-4510-a490-af872c4f60a2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5eccf9b92e30f523d2adbcf83305678305691b5a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c5a102f36c5556af48a1b3f79e39f256bc5797ab
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426062"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50634870"
 ---
 # <a name="technical-notes-by-number"></a>Observações técnicas por número
 
@@ -78,7 +68,7 @@ Observações técnicas a seguir são listadas numericamente, com a nota técnic
 |16|[Usando várias heranças do C++ com MFC](../mfc/tn016-using-cpp-multiple-inheritance-with-mfc.md)|
 |14|[Controles personalizados](../mfc/tn014-custom-controls.md)|
 |11|[Usando MFC como parte de uma DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)|
-|6|[Mapas de mensagem](../mfc/tn006-message-maps.md)|
+|6|[Mapas de mensagens](../mfc/tn006-message-maps.md)|
 |3|[Mapeamento de Windows identificadores para objetos](../mfc/tn003-mapping-of-windows-handles-to-objects.md)|
 |2|[Formato de dados do objeto persistente](../mfc/tn002-persistent-object-data-format.md)|
 |1|[Registro da classe Window](../mfc/tn001-window-class-registration.md)

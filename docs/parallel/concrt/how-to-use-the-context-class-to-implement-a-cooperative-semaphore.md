@@ -1,26 +1,16 @@
 ---
-title: 'Como: usar a classe de contexto para implementar um semáforo cooperativo | Microsoft Docs'
-ms.custom: ''
+title: Como usar a classe de contexto para implementar um semáforo cooperativo
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - cooperative semaphore implementing
 - context class
 ms.assetid: 22f4b9c0-ca22-4a68-90ba-39e99ea76696
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 384fe7674ff24af0250dede7cb4bafda0106bf46
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 460a1de03f34cb8ef9753e761aaef37470cd6d0e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424775"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467750"
 ---
 # <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>Como usar a classe de contexto para implementar um semáforo cooperativo
 

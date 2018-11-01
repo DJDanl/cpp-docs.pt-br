@@ -1,10 +1,6 @@
 ---
-title: _locking | Microsoft Docs
-ms.custom: ''
+title: _locking
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _locking
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _locking
-dev_langs:
-- C++
 helpviewer_keywords:
 - locking function
 - bytes [C++], locking file
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1666f631d9bceccb8925b2002b797753e024ab9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1309d99d8e7040626384e38324c1e910e4731295
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404140"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523776"
 ---
 # <a name="locking"></a>_locking
 
@@ -69,14 +59,14 @@ O número de bytes a serem bloqueados.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**Locking** retornará 0 se for bem-sucedido. Um valor de retorno de -1 indica falha, caso em que [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) é definido como um dos valores a seguir.
+**Locking** retorna 0 se for bem-sucedido. Um valor de retorno de -1 indica falha, caso em que [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) é definido como um dos valores a seguir.
 
 |Valor errno|Condição|
 |-|-|
 **EACCES**|Violação de bloqueio (arquivo já foi bloqueado ou desbloqueado).
 **EBADF**|Descritor de arquivo inválido.
 **EDEADLOCK**|Violação de bloqueio. Retornado quando o **lk_lock** ou **lk_rlck** sinalizador for especificado e o arquivo não pode ser bloqueado após 10 tentativas.
-**EINVAL**|Um argumento inválido foi fornecido para **Locking**.
+**EINVAL**|Um argumento inválido foi fornecido ao **Locking**.
 
 Se houver uma falha devido a um parâmetro incorreto, como um descritor de arquivo inválido, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md).
 
@@ -94,7 +84,7 @@ O **Locking** função bloqueia ou desbloqueia *nbytes* bytes do arquivo especif
 **LK_RLCK**|Mesmo que **lk_lock**.
 **LK_UNLCK**|Desbloqueia os bytes especificados, que devem ter sido bloqueados anteriormente.
 
-Várias regiões de um arquivo que não se sobrepõem podem ser bloqueadas. Uma região que está sendo desbloqueada deve ter sido bloqueada anteriormente. **Locking** não regiões adjacentes de mesclagem; se duas regiões bloqueadas são adjacentes, cada região deve ser desbloqueado separadamente. Regiões devem ser bloqueadas por um curto período de tempo e devem ser desbloqueadas antes de fechar um arquivo ou sair do programa.
+Várias regiões de um arquivo que não se sobrepõem podem ser bloqueadas. Uma região que está sendo desbloqueada deve ter sido bloqueada anteriormente. **Locking** mescla regiões adjacentes; se duas regiões bloqueadas forem adjacentes, cada região deve ser desbloqueada separadamente. Regiões devem ser bloqueadas por um curto período de tempo e devem ser desbloqueadas antes de fechar um arquivo ou sair do programa.
 
 ## <a name="requirements"></a>Requisitos
 

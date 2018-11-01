@@ -1,30 +1,20 @@
 ---
-title: -while instrução (C++) | Microsoft Docs
-ms.custom: ''
+title: Instrução do-while (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - do_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - do keyword [C++], do-while
 - do-while keyword [C++]
 - do keyword [C++]
 - while keyword [C++], do-while
 ms.assetid: e01e6f7c-7da1-4591-87f9-c26ff848e7b0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 37155be11caaee9c609a0e11ddbfeb5d62856903
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 014012166f3a659d71b2e3212d63a523f2b87b8c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071192"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656112"
 ---
 # <a name="do-while-statement-c"></a>Instrução do-while (C++)
 
@@ -34,7 +24,7 @@ Executa um *instrução* repetidamente até que a condição de término especif
 
 ```
 do
-   statement
+   statement
 while ( expression ) ;
 ```
 

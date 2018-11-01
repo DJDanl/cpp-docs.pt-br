@@ -1,10 +1,6 @@
 ---
-title: _kbhit | Microsoft Docs
-ms.custom: ''
+title: _kbhit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _kbhit
 apilocation:
@@ -24,8 +20,6 @@ f1_keywords:
 - _kbhit
 - kbhit
 - conio/_kbhit
-dev_langs:
-- C++
 helpviewer_keywords:
 - keyboard input
 - user input, checking for keyboard
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f414403774a6f2dbd5e21b70d707ab8c8b20c63f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9133d73e92438327bb2381e3293fd37076dd27ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399043"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667982"
 ---
 # <a name="kbhit"></a>_kbhit
 
@@ -67,7 +57,7 @@ int _kbhit( void );
 
 ## <a name="remarks"></a>Comentários
 
-O **kbhit** função verifica o console para um pressionamento de tecla recente. Se a função retornar um valor diferente de zero, um pressionamento de tecla está aguardando no buffer. O programa pode chamar **getch** ou **getche** para obter o pressionamento de tecla.
+O **kbhit** função verifica o console para um pressionamento de tecla recente. Se a função retornar um valor diferente de zero, um pressionamento de tecla está aguardando no buffer. O programa pode, em seguida, chamar **getch** ou **getche** para obter o pressionamento de tecla.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,10 +1,6 @@
 ---
-title: _ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l | Microsoft Docs
-ms.custom: ''
+title: _ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbcl2
 - _ismbcl1
@@ -38,8 +34,6 @@ f1_keywords:
 - _ismbcl0_l
 - _ismbcl2
 - ismbcl2_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbcl0_l function
 - _ismbcl2 function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - _ismbcl2_l function
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 29d80c6d26171d9ac347aae1ac488d1fcadb1fec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b4ea5a165e5fb06229c3fdf69c53cdf82c4f35f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403151"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430882"
 ---
 # <a name="ismbcl0-ismbcl0l-ismbcl1-ismbcl1l-ismbcl2-ismbcl2l"></a>_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 
@@ -108,7 +98,7 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste ou 0 se não satisfizer. Se *c* < = 255 e há um correspondente **ismbb** rotina (por exemplo, **ismbcalnum** corresponde à **ismbbalnum**), o resultado é o valor de retorno do **ismbb** rotina.
+Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste ou 0 se não satisfizer. Se *c* < = 255 e houver um correspondente **ismbb** rotina (por exemplo, **ismbcalnum** corresponde ao **ismbbalnum**), o resultado é o valor retornado de correspondente **ismbb** rotina.
 
 ## <a name="remarks"></a>Comentários
 
@@ -118,14 +108,14 @@ O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da lo
 
 |Rotina|Condição de teste (página de código 932 somente)|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|JIS Kanji não: 0x8140 < =*c*< = 0x889E.|
-|**_ismbcl0_l**|JIS Kanji não: 0x8140 < =*c*< = 0x889E.|
-|**_ismbcl1**|Nível 1 JIS: 0x889F < =*c*< = 0x9872.|
-|**_ismbcl1_l**|Nível 1 JIS: 0x889F < =*c*< = 0x9872.|
-|**_ismbcl2**|Nível 2 JIS: 0x989F < =*c*< = 0xEAA4.|
-|**_ismbcl2_l**|Nível 2 JIS: 0x989F < =*c*< = 0xEAA4.|
+|**_ismbcl0**|JIS não Kanji: 0x8140< < =*c*< lt;=0x889e.|
+|**_ismbcl0_l**|JIS não Kanji: 0x8140< < =*c*< lt;=0x889e.|
+|**_ismbcl1**|JIS nível 1: 0x889f< < =*c*< lt;=0x9872.|
+|**_ismbcl1_l**|JIS nível 1: 0x889f< < =*c*< lt;=0x9872.|
+|**_ismbcl2**|JIS nível 2: 0x989f< < =*c*< lt;=0xeaa4.|
+|**_ismbcl2_l**|JIS nível 2: 0x989f< < =*c*< lt;=0xeaa4.|
 
-As funções de verificam que o valor especificado *c* correspondências as condições de teste descrito acima, mas não verificam que *c* é um caractere de multibyte válido. Se o byte inferior estiver nos intervalos 0x00 – 0x3F, 0x7F ou 0xFD – 0xFF, essas funções retornarão um valor diferente de zero, indicando que o caractere satisfaz a condição de teste. Use [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) para testar se o caractere multibyte foi definido.
+As funções verificam se o valor especificado *c* correspondências as condições de teste descrito acima, mas não verificam se *c* é um caractere multibyte válido. Se o byte inferior estiver nos intervalos 0x00 – 0x3F, 0x7F ou 0xFD – 0xFF, essas funções retornarão um valor diferente de zero, indicando que o caractere satisfaz a condição de teste. Use [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) para testar se o caractere multibyte foi definido.
 
 **Final específico da página de código 932**
 

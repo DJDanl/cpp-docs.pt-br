@@ -1,23 +1,13 @@
 ---
-title: C.2 regras | Microsoft Docs
-ms.custom: ''
+title: C.2 Regras
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c5845a9125bb32254fc0c03b03e9b6076a086d1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7c0de4c14e229716bcf764d9859be439090368b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404768"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642800"
 ---
 # <a name="c2-rules"></a>C.2 Regras
 
@@ -199,18 +189,18 @@ A notação é descrita na seção 6.1 do padrão C. Este apêndice gramática m
 &nbsp;&nbsp;&nbsp;&nbsp;*diretiva threadprivate*
 
 *diretiva threadprivate*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**# pragma omp threadprivate (** *variável-list***)** *nova linha* 
+&nbsp;&nbsp;&nbsp;&nbsp;**# pragma omp threadprivate (** *variável-list***)** *nova linha*
 
 *cláusula data*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**privado (** *variável-list* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**copyprivate (***variável-list***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**firstprivate (***variável-list***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**lastprivate (** *variável-list***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**copyprivate (***variável-list***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**firstprivate (***variável-list***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**lastprivate (** *variável-list***)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**compartilhado (** *variável-list* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**padrão (compartilhado)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**padrão (nenhum)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**redução de (***operador de reduction***:***lista variável***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**copyin (***variável-list***)** 
+&nbsp;&nbsp;&nbsp;&nbsp;**redução de (***operador de reduction***:***lista variável***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**copyin (***variável-list***)**
 
 *operador de Reduction*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Um dos:  **+  \* -& ^ &#124; & &&#124;&#124;**

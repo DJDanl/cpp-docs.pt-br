@@ -1,26 +1,16 @@
 ---
-title: 'Como: adicionar controles de faixa de opções e manipuladores de eventos | Microsoft Docs'
-ms.custom: ''
+title: Como adicionar controles de faixa de opções e manipuladores de evento
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - event handlers [MFC], adding
 - ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f3c4af695553bc97815915454bda2aae481543e9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7f5b85fad181dba147c2135784d237bccdceb422
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427947"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637990"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Como adicionar controles de faixa de opções e manipuladores de evento
 

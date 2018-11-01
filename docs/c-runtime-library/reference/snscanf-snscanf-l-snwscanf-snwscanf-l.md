@@ -1,10 +1,6 @@
 ---
-title: _snscanf, _snscanf_l, _snwscanf, _snwscanf_l | Microsoft Docs
-ms.custom: ''
+title: _snscanf, _snscanf_l, _snwscanf, _snwscanf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _snwscanf
 - _snscanf_l
@@ -35,8 +31,6 @@ f1_keywords:
 - sntscanf
 - snwscanf
 - snwscanf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - snscanf_l function
 - snwscanf function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _snscanf function
 ms.assetid: da1ac890-f905-4cd7-954b-3c90957b5551
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d5d99cc7465f88c92588983d5356a004da466de4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ba80bec70bbb96c383d0bbe73ed52f30fb90b7ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408338"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626883"
 ---
 # <a name="snscanf-snscanfl-snwscanf-snwscanfl"></a>_snscanf, _snscanf_l, _snwscanf, _snwscanf_l
 
@@ -106,30 +96,30 @@ int __cdecl _snwscanf_l(
 A cadeia de caracteres de entrada para examinar.
 
 *length*<br/>
-Número de caracteres para examinar no *entrada*.
+Número de caracteres a examinar em *entrada*.
 
 *format*<br/>
 Um ou mais especificadores de formato.
 
 *...*<br/>
-Variáveis opcionais que serão usados para armazenar os valores extraídos da cadeia de entrada por especificadores de formato em *formato*.
+Variáveis opcionais que serão usadas para armazenar os valores extraídos da cadeia de entrada por especificadores de formato *formato*.
 
 *locale*<br/>
 A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Ambas essas funções retornam o número de campos convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos mas não foram atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. O valor de retorno é **EOF** para um erro ou se o fim da cadeia de caracteres for atingido antes da conversão primeiro. Para obter mais informações, consulte [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
+Ambas essas funções retornam o número de campos convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos mas não foram atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. O valor retornado será **EOF** para um erro ou se o final da cadeia de caracteres for atingido antes da primeira conversão. Para obter mais informações, consulte [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
 
-Se *entrada* ou *formato* é um **nulo** ponteiro, ou se *comprimento* é menor ou igual a zero, o manipulador de parâmetro inválido é chamado, como descrito na [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam **EOF** e defina **errno** para **EINVAL**.
+Se *entrada* ou *formato* é um **nulo** ponteiro, ou se *comprimento* é menor que ou igual a zero, o manipulador de parâmetro inválido será invocado, como descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **EOF** e defina **errno** para **EINVAL**.
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Esta função é como **sscanf** exceto que ele fornece a capacidade de especificar um número fixo de caracteres para examinar a partir da cadeia de entrada. Para obter mais informações, consulte [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
+Esta função é como **sscanf** , exceto que ele fornece a capacidade de especificar um número fixo de caracteres a examinar da cadeia de entrada. Para obter mais informações, consulte [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
 
-As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

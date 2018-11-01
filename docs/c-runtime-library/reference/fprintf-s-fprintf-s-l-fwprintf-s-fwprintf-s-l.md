@@ -1,10 +1,6 @@
 ---
-title: fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l | Microsoft Docs
-ms.custom: ''
+title: fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fprintf_s_l
 - fwprintf_s
@@ -26,8 +22,6 @@ f1_keywords:
 - _ftprintf_s
 - fprintf_s
 - fwprintf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftprintf_s_l function
 - ftprintf_s function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - _fwprintf_s_l function
 - print formatted data to streams
 ms.assetid: 16067c3c-69ce-472a-8272-9aadf1f5beed
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ea8e9d28a960149d0f199b090daa98e76049f291
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 05886dc4ce7de771749f157913a222b6b01a5c5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404211"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639420"
 ---
 # <a name="fprintfs-fprintfsl-fwprintfs-fwprintfsl"></a>fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l
 
@@ -85,7 +75,7 @@ int _fwprintf_s_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fluxo*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
 *format*<br/>
@@ -99,20 +89,20 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**fprintf_s** retorna o número de bytes gravados. **fwprintf_s** retorna o número de caracteres largos gravado. Cada uma dessas funções retorna um valor negativo quando ocorre um erro de saída.
+**fprintf_s** retorna o número de bytes gravados. **fwprintf_s** retorna o número de caracteres largos gravados. Cada uma dessas funções retorna um valor negativo quando ocorre um erro de saída.
 
 ## <a name="remarks"></a>Comentários
 
-**fprintf_s** formata e imprime uma série de caracteres e valores para a saída *fluxo*. Cada argumento *argument_list* (se houver) é convertido e de saída de acordo com a especificação de formato correspondente em *formato*. O *formato* argumento usa o [formatar a sintaxe de especificação para funções printf e and wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+**fprintf_s** formata e imprime uma série de caracteres e valores para a saída *fluxo*. Cada argumento na *argument_list* (se houver) é convertido e gerado de acordo com a especificação de formato correspondente em *formato*. O *formato* argumento usa o [formatar a sintaxe de especificação de funções printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-**fwprintf_s** é uma versão de caractere largo de **fprintf_s**; na **fwprintf_s**, *formato* é uma cadeia de caracteres largos. Essas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. **fprintf_s** atualmente não suportam a saída em um fluxo UNICODE.
+**fwprintf_s** é uma versão de caractere largo de **fprintf_s**; na **fwprintf_s**, *formato* é uma cadeia de caracteres largos. Essas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. **fprintf_s** atualmente, não suporta a saída em um fluxo UNICODE.
 
-As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade atual.
+As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade atual.
 
 > [!IMPORTANT]
 > Verifique se *format* não é uma cadeia de caracteres definida pelo usuário.
 
-Como as versões não seguras (consulte [fprintf, fprintf_l, fwprintf, fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), essas funções validar seus parâmetros e invocar o manipulador de parâmetro inválido, conforme descrito em [devalidaçãodeparâmetro](../../c-runtime-library/parameter-validation.md), se *fluxo* ou *formato* é um ponteiro nulo. A cadeia de formato também é validada. Se houver algum especificador de formatação desconhecido ou mal formado, essas funções gerarão a exceção de parâmetro inválido. Em todos os casos, se a execução é permitida para continuar, as funções retornam -1 e defina **errno** para **EINVAL**. Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.
+Assim como as versões não seguras (consulte [fprintf, fprintf_l, fwprintf, fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), essas funções validam seus parâmetros e invocam o manipulador de parâmetro inválido, conforme descrito em [devalidaçãodeparâmetro](../../c-runtime-library/parameter-validation.md), se qualquer um dos *stream* ou *formato* for um ponteiro nulo. A cadeia de caracteres de formato em si também é validada. Se houver algum especificador de formatação desconhecido ou mal formado, essas funções gerarão a exceção de parâmetro inválido. Em todos os casos, se a execução puder continuar, essas funções retornarão -1 e defina **errno** à **EINVAL**. Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

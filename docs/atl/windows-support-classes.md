@@ -1,28 +1,19 @@
 ---
-title: Classes (ATL) de suporte do Windows | Microsoft Docs
-ms.custom: ''
+title: Classes de suporte do Windows (ATL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.atl.windows
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL, windows
 - windows [C++], ATL
 ms.assetid: 750b14d5-d787-4d2b-9728-ac199ccad489
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9182241b1d33c63aae523cae0c2c9602466e4c2e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9a33136c63c5bdc32dfc882e8c53ab2f5c27eb46
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090419"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665407"
 ---
 # <a name="windows-support-classes"></a>Classes de suporte do Windows
 
@@ -65,6 +56,6 @@ As classes a seguir fornecem suporte para windows:
 ## <a name="see-also"></a>Consulte também
 
 [Visão geral da classe](../atl/atl-class-overview.md)<br/>
-[Macros de mapa de mensagem](../atl/reference/message-map-macros-atl.md)<br/>
+[Macros de mapa de mensagens](../atl/reference/message-map-macros-atl.md)<br/>
 [Macros de classe de janela](../atl/reference/window-class-macros.md)
 

@@ -1,30 +1,19 @@
 ---
-title: Restrições de nome de símbolo | Microsoft Docs
-ms.custom: ''
+title: Restrições de nome do símbolo
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.restrictions.name
-dev_langs:
-- C++
 helpviewer_keywords:
 - symbol names
 - symbols [C++], names
 - restrictions, symbol names
 ms.assetid: 4ae7f695-ca86-4f4b-989a-fe6f89650ff7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a2370a2f47e358358ed2c870f8fffcbe135a116f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7b6d8804dc7f3c9768dc9e86fde0e708f67c43fe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406679"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624842"
 ---
 # <a name="symbol-name-restrictions"></a>Restrições de nome do símbolo
 

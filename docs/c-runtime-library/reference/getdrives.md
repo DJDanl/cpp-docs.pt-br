@@ -1,10 +1,6 @@
 ---
-title: _getdrives | Microsoft Docs
-ms.custom: ''
+title: _getdrives
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdrives
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - getdrives
 - _getdrives
-dev_langs:
-- C++
 helpviewer_keywords:
 - _getdrives function
 - getdrives function
 - disk drives
 ms.assetid: 869bb51f-4209-4328-846e-3aadebaceb9c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ec2834e9f755a8039326ea6fb193c4bc591355ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d34b03e307a9c619fab077973e4cc0a4c644de6c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399937"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597245"
 ---
 # <a name="getdrives"></a>_getdrives
 
@@ -56,7 +46,7 @@ unsigned long _getdrives( void );
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se a função for bem-sucedida, o valor retornado será um bitmask que representa as unidades de disco disponíveis no momento. A posição de bit 0 (o bit menos significativo) é a unidade A, a posição de bit 1 é a unidade B, a posição de bit 2 é a unidade C e assim por diante. Se a função falhar, o valor retornado será zero. Para obter mais informações sobre o erro, chame **GetLastError**.
+Se a função for bem-sucedida, o valor retornado será um bitmask que representa as unidades de disco disponíveis no momento. A posição de bit 0 (o bit menos significativo) é a unidade A, a posição de bit 1 é a unidade B, a posição de bit 2 é a unidade C e assim por diante. Se a função falhar, o valor retornado será zero. Para obter outras informações de erro, chame **GetLastError**.
 
 ## <a name="requirements"></a>Requisitos
 

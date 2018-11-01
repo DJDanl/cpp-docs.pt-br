@@ -1,10 +1,6 @@
 ---
-title: _gcvt | Microsoft Docs
-ms.custom: ''
+title: _gcvt
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _gcvt
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _gcvt
-dev_langs:
-- C++
 helpviewer_keywords:
 - _gcvt function
 - _CVTBUFSIZE
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d824d42a102aee68619d602044c39f398af177dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9cf966b455af601d09b4444a5c590e305a6681c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400974"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430856"
 ---
 # <a name="gcvt"></a>_gcvt
 
@@ -76,11 +66,11 @@ Local de armazenamento para o resultado.
 
 ## <a name="remarks"></a>Comentários
 
-O **gcvt** função converte um ponto flutuante *valor* para uma cadeia de caracteres (que inclui um ponto decimal e um byte de entrada possíveis) e armazena a cadeia de caracteres em *buffer*. O *buffer* deve ser grande o suficiente para acomodar o valor convertido mais de um caractere null de terminação, que é acrescentado automaticamente. Se um tamanho de buffer de *dígitos* + 1 for usado, a função substitui o final do buffer. Isso ocorre porque a cadeia de caracteres convertida inclui um ponto decimal e pode conter informações expoente e sinal. Não há nenhuma provisão para estouros. **gcvt** tenta gerar *dígitos* dígitos no formato decimal. Se não for possível, ela produz *dígitos* dígitos no formato exponencial. Zeros à direita podem ser suprimidos na conversão.
+O **gcvt** função converte um ponto flutuante *valor* em uma cadeia de caracteres (que inclui um ponto decimal e um possível byte de sinal) e armazena a cadeia de caracteres no *buffer*. O *buffer* deve ser grande o suficiente para acomodar o valor convertido e um caractere nulo de terminação, que é acrescentado automaticamente. Se um tamanho de buffer de *dígitos* + 1 for usado, a função substituirá o final do buffer. Isso ocorre porque a cadeia de caracteres convertida inclui um ponto decimal e pode conter informações expoente e sinal. Não há nenhuma provisão para estouros. **gcvt** tenta produzir *dígitos* dígitos no formato decimal. Se não for possível, ele produzirá *dígitos* dígitos no formato exponencial. Zeros à direita podem ser suprimidos na conversão.
 
-Um *buffer* de comprimento **_CVTBUFSIZE** é suficiente para qualquer flutuante valor de ponto.
+Um *buffer* de comprimento **_CVTBUFSIZE** é suficiente para qualquer flutuantes valor de ponto.
 
-Essa função valida seus parâmetros. Se *buffer* é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, esta função define **errno** para **EINVAL** e retorna **nulo**.
+Essa função valida seus parâmetros. Se *buffer* é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá **errno** à **EINVAL** e retorna **nulo**.
 
 ## <a name="requirements"></a>Requisitos
 

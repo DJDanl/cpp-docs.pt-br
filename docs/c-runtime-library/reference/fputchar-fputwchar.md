@@ -1,10 +1,6 @@
 ---
-title: _fputchar, _fputwchar | Microsoft Docs
-ms.custom: ''
+title: _fputchar, _fputwchar
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fputchar
 - _fputwchar
@@ -28,8 +24,6 @@ f1_keywords:
 - _fputtchar
 - fputchar
 - _fputchar
-dev_langs:
-- C++
 helpviewer_keywords:
 - fputchar function
 - standard output, writing to
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3fd5a1d60c61fdde5864f3447b5f721f409bc3a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 57ec2350fa1d0b681c6eed0c4cfc4ec4660977e8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399586"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477968"
 ---
 # <a name="fputchar-fputwchar"></a>_fputchar, _fputwchar
 
@@ -72,13 +62,13 @@ O caractere a ser gravado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retorna o caractere gravado. Para **fputchar**, um valor de retorno **EOF** indica um erro. Para **fputwchar**, um valor de retorno **WEOF** indica um erro. Se for c **nulo**, essas funções para gerar uma exceção de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, retorne **EOF** (ou **WEOF**) e defina **errno** para **EINVAL**.
+Cada uma dessas funções retorna o caractere gravado. Para **fputchar**, um valor de retorno **EOF** indica um erro. Para **fputwchar**, um valor de retorno **WEOF** indica um erro. Se c for **nulo**, essas funções gerarão uma exceção de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, eles retornam **EOF** (ou **WEOF**) e defina **errno** para **EINVAL**.
 
 Para obter mais informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Ambas as funções grava o único caractere *c* para **stdout** e avança o indicador conforme apropriado. **fputchar** é equivalente a `fputc( stdout )`. Também é equivalente a **putchar**, mas implementado apenas como uma função, em vez de como uma função e uma macro. Ao contrário de **fputc** e **putchar**, essas funções não são compatíveis com o padrão ANSI.
+Ambas as funções grava o único caractere *c* à **stdout** e avança o indicador conforme apropriado. **fputchar** é equivalente a `fputc( stdout )`. Também é equivalente a **putchar**, mas implementado somente como uma função, em vez de uma função e uma macro. Diferentemente **fputc** e **putchar**, essas funções não são compatíveis com o padrão ANSI.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -93,7 +83,7 @@ Ambas as funções grava o único caractere *c* para **stdout** e avança o indi
 |**_fputchar**|\<stdio.h>|
 |**_fputwchar**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos do Windows UWP (plataforma Universal). Os identificadores de fluxo padrão que estão associados com o console —**stdin**, **stdout**, e **stderr**— deverá ser redirecionado para funções de tempo de execução C podem usá-los em aplicativos UWP . Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console —**stdin**, **stdout**, e **stderr**— deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

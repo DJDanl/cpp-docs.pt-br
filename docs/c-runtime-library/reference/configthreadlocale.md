@@ -1,10 +1,6 @@
 ---
-title: _configthreadlocale | Microsoft Docs
-ms.custom: ''
+title: _configthreadlocale
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _configthreadlocale
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _configthreadlocale
 - configthreadlocale
-dev_langs:
-- C++
 helpviewer_keywords:
 - configthreadlocale function
 - locales, per-thread
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7531a5849bc1e86d469a12747b5c4648b76c9117
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 244ef9ce93e39bef23a9d5d6792a10ca25355f5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395771"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648377"
 ---
 # <a name="configthreadlocale"></a>_configthreadlocale
 
@@ -64,19 +54,19 @@ O status de localidade por thread anterior (**_DISABLE_PER_THREAD_LOCALE** ou **
 
 ## <a name="remarks"></a>Comentários
 
-O **_configurethreadlocale** função é usada para controlar o uso de localidades específicas de thread. Usar um desses *per_thread_locale_type* opções para especificar ou determinar o status de localidade por thread:
+O **_configurethreadlocale** função é usada para controlar o uso de localidades específicas de thread. Usar uma destas *per_thread_locale_type* opções para especificar ou determinar o status de localidade por thread:
 
 |||
 |-|-|
-**_ENABLE_PER_THREAD_LOCALE**|Faça o thread atual usar uma localidade específica do thread. As chamadas subsequentes para **setlocale** neste thread afeta somente a localidade do thread.
-**_DISABLE_PER_THREAD_LOCALE**|Faça o thread atual usar a localidade global. As chamadas subsequentes para **setlocale** neste thread afetar outros threads usando a localidade global.
+**_ENABLE_PER_THREAD_LOCALE**|Faça o thread atual usar uma localidade específica do thread. As chamadas subsequentes para **setlocale** neste thread afetam somente a localidade do thread.
+**_DISABLE_PER_THREAD_LOCALE**|Faça o thread atual usar a localidade global. As chamadas subsequentes para **setlocale** neste thread afetam outros threads usando a localidade global.
 **0**|Recupera a configuração atual para este thread específico.
 
-Essas funções afetam o comportamento de **setlocale**, **tsetlocale**, **wsetlocale**, e **setmbcp**. Quando a localidade por thread é desabilitada, qualquer subsequente chamada para **setlocale** ou **wsetlocale** altera a localidade de todos os threads que usam a localidade global. Quando a localidade por thread é habilitada, **setlocale** ou **wsetlocale** afeta somente a localidade do thread atual.
+Essas funções afetam o comportamento do **setlocale**, **tsetlocale**, **wsetlocale**, e **setmbcp**. Quando a localidade por thread for desabilitada, qualquer chamada subsequente para **setlocale** ou **wsetlocale** altera a localidade de todos os threads que usam a localidade global. Quando a localidade por thread é habilitada, **setlocale** ou **wsetlocale** afeta somente a localidade do thread atual.
 
-Se você usar **_configurethreadlocale** para habilitar uma localidade por thread, recomendamos que você chamar **setlocale** ou **wsetlocale** para definir a localidade preferencial nesse thread Depois disso.
+Se você usar **_configurethreadlocale** para habilitar uma localidade por thread, recomendamos que você chame **setlocale** ou **wsetlocale** para definir a localidade preferencial nesse thread Depois disso.
 
-Se *per_thread_locale_type* não é um dos valores listados na tabela, essa função invoca o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, esta função define **errno** para **EINVAL** e retorna -1.
+Se *per_thread_locale_type* não é um dos valores listados na tabela, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá **errno** à **EINVAL** e retornará -1.
 
 ## <a name="requirements"></a>Requisitos
 

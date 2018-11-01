@@ -1,10 +1,6 @@
 ---
-title: _CrtGetAllocHook | Microsoft Docs
-ms.custom: ''
+title: _CrtGetAllocHook
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtGetAllocHook
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtGetAllocHook
 - _CrtGetAllocHook
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtGetAllocHook function
 - CrtGetAllocHook function
 ms.assetid: 036acf7c-547a-4b3f-a636-80451070d7ed
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fb811353d0ac252411cc5bfc8beb408b6e707089
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b49c4cfc820a925187d0ea4d1562965295bea817
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394516"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514953"
 ---
 # <a name="crtgetallochook"></a>_CrtGetAllocHook
 
@@ -55,7 +45,7 @@ Retorna a função de gancho de alocação atualmente definida.
 
 ## <a name="remarks"></a>Comentários
 
-**Crtgetallochook** recupera a função de gancho atual do aplicativo cliente definido para o processo de alocação de memória do C Runtime depuração biblioteca.
+**Crtgetallochook** recupera a função de gancho definidas pelo cliente de aplicativo atual para o processo de alocação de memória de biblioteca do C depuração em tempo de execução.
 
 Para obter mais informações sobre como usar outras funções em tempo de execução compatíveis com gancho e escrever suas próprias funções de gancho definidas pelo cliente, consulte [Gravação da função de gancho de depuração](/visualstudio/debugger/debug-hook-function-writing).
 

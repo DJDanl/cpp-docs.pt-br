@@ -1,10 +1,6 @@
 ---
-title: _set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler | Microsoft Docs
-ms.custom: ''
+title: _set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_invalid_parameter_handler
 - _set_thread_local_invalid_parameter_handler
@@ -25,24 +21,18 @@ f1_keywords:
 - set_invalid_parameter_handler
 - _set_invalid_parameter_handler
 - _set_thread_local_invalid_parameter_handler
-dev_langs:
-- C++
 helpviewer_keywords:
 - invalid parameter handler
 - set_invalid_parameter_handler function
 - _set_invalid_parameter_handler function
 - _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4808367c94ec6c869c7f3bcafd2965a317553a6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1df876d6df9327e817d5d2c401e0abe97ad7a548
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407597"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617029"
 ---
 # <a name="setinvalidparameterhandler-setthreadlocalinvalidparameterhandler"></a>_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
 
@@ -70,7 +60,7 @@ Um ponteiro para o manipulador de parâmetro inválido antes da chamada.
 
 ## <a name="remarks"></a>Comentários
 
-Muitas funções em tempo de execução C verificam a validade dos argumentos passados para elas. Se um argumento inválido for passado, a função pode definir o **errno** número do erro ou retornar um código de erro. Nesses casos, o manipulador de parâmetro inválido também é chamado. O tempo de execução C fornece um manipulador de parâmetro inválido global padrão que encerra o programa e exibe uma mensagem de erro em tempo de execução. Você pode usar o **set_invalid_parameter_handler** para definir sua própria função como o manipulador de parâmetro inválido global. O tempo de execução C também dá suporte a um manipulador de parâmetro inválido local de thread. Se um manipulador de parâmetro de local de thread é definido em um thread usando **_set_thread_local_invalid_parameter_handler**, as funções de tempo de execução do C chamadas do thread usam esse manipulador em vez do manipulador global. Apenas uma função por vez pode ser especificada como o manipulador de argumento inválido global. Apenas uma função por thread pode ser especificada como o manipulador de argumento inválido local de thread, mas threads diferentes podem ter diferentes manipuladores locais de thread. Isso permite que você altere o manipulador usado em uma parte do seu código sem afetar o comportamento de outros threads.
+Muitas funções em tempo de execução C verificam a validade dos argumentos passados para elas. Se um argumento inválido for passado, a função poderá definir a **errno** número do erro ou retornar um código de erro. Nesses casos, o manipulador de parâmetro inválido também é chamado. O tempo de execução C fornece um manipulador de parâmetro inválido global padrão que encerra o programa e exibe uma mensagem de erro em tempo de execução. Você pode usar o **set_invalid_parameter_handler** para definir sua própria função como o manipulador de parâmetro inválido global. O tempo de execução C também dá suporte a um manipulador de parâmetro inválido local de thread. Se um manipulador de parâmetro de local de thread é definido em um thread, usando **set_thread_local_invalid_parameter_handler**, as funções de tempo de execução C chamadas do thread usam esse manipulador, em vez do manipulador global. Apenas uma função por vez pode ser especificada como o manipulador de argumento inválido global. Apenas uma função por thread pode ser especificada como o manipulador de argumento inválido local de thread, mas threads diferentes podem ter diferentes manipuladores locais de thread. Isso permite que você altere o manipulador usado em uma parte do seu código sem afetar o comportamento de outros threads.
 
 Quando o tempo de execução chama a função de parâmetro inválido, isso normalmente significa que ocorreu um erro irrecuperável. A função de manipulador de parâmetro inválido fornecida por você deve salvar todos os dados que puder e, em seguida, anular. Ela não deve retornar o controle para a função principal a menos que você tenha certeza de que o erro é recuperável.
 
@@ -86,15 +76,15 @@ void _invalid_parameter(
 );
 ```
 
-O *expressão* argumento é uma representação de cadeia de caracteres larga da expressão do argumento que gerou o erro. O *função* argumento é o nome da função de CRT que recebeu o argumento inválido. O *arquivo* argumento é o nome do arquivo de origem CRT que contém a função. O *linha* é o número de linha no arquivo. O último argumento é reservado. Todos os parâmetros têm o valor **nulo** , a menos que uma versão de depuração da biblioteca CRT é usada.
+O *expressão* argumento for uma representação de cadeia de caracteres largos da expressão do argumento que gerou o erro. O *função* argumento é o nome da função CRT que recebeu o argumento inválido. O *arquivo* argumento é o nome do arquivo de origem CRT que contém a função. O *linha* argumento é o número da linha nesse arquivo. O último argumento é reservado. Todos os parâmetros têm o valor **nulo** , a menos que uma versão de depuração da biblioteca CRT é usada.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**set_invalid_parameter_handler**, **_set_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> ou \<stdlib.h>|
+|**set_invalid_parameter_handler**, **set_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> ou \<stdlib.h>|
 
-O **set_invalid_parameter_handler** e **_set_thread_local_invalid_parameter_handler** funções são específicas da Microsoft. Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+O **set_invalid_parameter_handler** e **set_thread_local_invalid_parameter_handler** funções são específicas da Microsoft. Para obter informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

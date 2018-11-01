@@ -1,10 +1,6 @@
 ---
-title: _CrtReportBlockType | Microsoft Docs
-ms.custom: ''
+title: _CrtReportBlockType
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtReportBlockType
 apilocation:
@@ -22,8 +18,6 @@ apitype: DLLExport
 f1_keywords:
 - _CrtReportBlockType
 - CrtReportBlockType
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtReportBlockType function
 - BLOCK_SUBTYPE macro
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 59f8e919ee8a3ec9cc0822420ebbf6581480a13b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 186c63ce1619d6427436ff1458ca551e464d0bce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395559"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50516048"
 ---
 # <a name="crtreportblocktype"></a>_CrtReportBlockType
 
@@ -62,11 +52,11 @@ Ponteiro para um bloco de heap de depuração válido.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Quando passado um ponteiro de heap de depuração válido, o **crtreportblocktype** função retorna o tipo de bloco e o subtipo na forma de um **int**. Ao passar um ponteiro inválido, a função retorna -1.
+Quando passado um ponteiro de heap de depuração válido, o **crtreportblocktype** função retorna o tipo de bloco e o subtipo na forma de uma **int**. Ao passar um ponteiro inválido, a função retorna -1.
 
 ## <a name="remarks"></a>Comentários
 
-Para extrair o tipo e subtipo retornado por **crtreportblocktype**, usar as macros **block_type** e **block_subtype** (ambos definidos no crtdbg. h) no valor de retorno.
+Para extrair o tipo e subtipo retornados por **crtreportblocktype**, use as macros **block_type** e **block_subtype** (ambos definidos em crtdbg. h) no valor de retorno.
 
 Para obter informações sobre os tipos de blocos de alocação e como eles são usados, consulte [Types of Blocks on the Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Tipos de blocos no heap de depuração).
 

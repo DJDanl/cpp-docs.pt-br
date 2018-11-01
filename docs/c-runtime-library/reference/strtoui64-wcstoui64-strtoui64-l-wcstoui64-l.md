@@ -1,10 +1,6 @@
 ---
-title: _strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l | Microsoft Docs
-ms.custom: ''
+title: _strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strtoui64
 - _strtoui64_l
@@ -32,8 +28,6 @@ f1_keywords:
 - strtoui64
 - _strtoui64
 - wcstoui64_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strtoui64_l function
 - _wcstoui64_l function
@@ -45,20 +39,16 @@ helpviewer_keywords:
 - strtoui64_l function
 - strtoui64 function
 ms.assetid: 7fcb537e-4554-4ceb-a5b6-bc09244e72ef
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ab70c1d74c0db837ba3d8e453988ca441f6fc06d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c733a14d5f32e5dc4ef31eb9fedd984079456505
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417876"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659804"
 ---
 # <a name="strtoui64-wcstoui64-strtoui64l-wcstoui64l"></a>_strtoui64, _wcstoui64, _strtoui64_l, _wcstoui64_l
 
-Converter uma cadeia de caracteres em uma não assinado **Int64** valor.
+Converter uma cadeia de caracteres em um unsigned **__int64** valor.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -103,19 +93,19 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**strtoui64** retorna o valor representado na cadeia de caracteres *strSource*, exceto quando a representação causaria um estouro, caso em que ele retorna **_UI64_MAX**. **strtoui64** retorna 0 se nenhuma conversão pode ser executada.
+**_strtoui64** retorna o valor representado na cadeia de caracteres *strSource*, exceto quando a representação causaria um estouro, nesse caso, retornaria **_UI64_MAX**. **_strtoui64** retorna 0 se nenhuma conversão pode ser executada.
 
 **_UI64_MAX** é definido em limites. H.
 
-Se *strSource* é **nulo** ou *base* é diferente de zero e qualquer menor que 2 ou maior que 36, **errno** é definido como **EINVAL** .
+Se *strSource* é **nulo** ou o *base* for diferente de zero e menos que 2 ou maior que 36, **errno** está definido como **EINVAL** .
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.
 
 ## <a name="remarks"></a>Comentários
 
-O **strtoui64** função converte *strSource* para um **sem sinal** **Int64**. **wcstoui64** é uma versão de caractere largo de **strtoui64**; seu *strSource* argumento é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
+O **_strtoui64** função converte *strSource* para um **unsigned** **__int64**. **_wcstoui64** é uma versão de caractere largo de **strtoui64**; sua *strSource* argumento é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
 
-Ambas as funções parar de ler a cadeia de caracteres *strSource* no primeiro caractere que não reconhecem como parte de um número. Isso pode ser o caractere null de terminação ou pode ser o primeiro caractere numérico maior que ou igual a *base*.
+Ambas as funções param de ler a cadeia de caracteres *strSource* no primeiro caractere que não reconhecem como parte de um número. Isso pode ser o caractere nulo de terminação ou pode ser o primeiro caractere numérico maior ou igual a *base*.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -124,15 +114,15 @@ Ambas as funções parar de ler a cadeia de caracteres *strSource* no primeiro c
 |**_tcstoui64**|**_strtoui64**|**_strtoui64**|**_wstrtoui64**|
 |**_tcstoui64_l**|**_strtoui64_l**|**_strtoui64_l**|**_wstrtoui64_l**|
 
-A localidade atual **LC_NUMERIC** categoria determina o reconhecimento do caractere base *strSource*; para obter mais informações, consulte [setlocale](setlocale-wsetlocale.md). As funções sem o sufixo _l usam a localidade atual; **_strtoui64_l** e **_wcstoui64_l** são idênticas às funções correspondentes sem o **_l** sufixo exceto que eles usam a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+A localidade atual **LC_NUMERIC** configuração de categoria determina o reconhecimento do caractere fracionário em *strSource*; para obter mais informações, consulte [setlocale](setlocale-wsetlocale.md). As funções sem o sufixo l usam a localidade atual; **_strtoui64_l** e **_wcstoui64_l** são idênticas às funções correspondentes sem o **l** sufixo, exceto que eles usam a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Se *endptr* não é **nulo**, um ponteiro para o caractere que interrompeu a verificação é armazenado no local apontado pela *endptr*. Se nenhuma conversão pode ser executada (sem dígitos válidos foram encontrados ou uma base inválida foi especificada), o valor de *strSource* é armazenado no local apontado pela *endptr*.
+Se *endptr* não está **nulo**, um ponteiro para o caractere que parou a verificação é armazenado no local apontado pela *endptr*. Se nenhuma conversão puder ser executada (Nenhum dígito válido foi encontrado ou uma base inválida foi especificada), o valor de *strSource* é armazenado no local apontado por *endptr*.
 
-**strtoui64** espera *strSource* para apontar para uma cadeia de caracteres da seguinte forma:
+**_strtoui64** espera *strSource* para apontar para uma cadeia de caracteres da seguinte forma:
 
 > [*espaço em branco*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*dígitos* &#124; *letras*]  
 
-Um *espaço em branco* pode consistir em caracteres de espaço e tabulação, que são ignorados. *dígitos* são um ou mais dígitos decimais. *letras* são um ou mais letras 'a' a 'z' ('A' a 'Z'). O primeiro caractere que não é adequado a esse formato interrompe o exame. Se *base* está entre 2 e 36, em seguida, ele é usado como a base do número. Se *base* é 0, os caracteres iniciais da cadeia de caracteres apontada por *strSource* são usados para determinar a base. Se o primeiro caractere é 0 e o segundo caractere não for 'x' ou 'X', a cadeia de caracteres é interpretada como um inteiro octal. Se o primeiro caractere for '0' e o segundo caractere for 'x' ou 'X', a cadeia de caracteres será interpretada como um inteiro hexadecimal. Se o primeiro caractere for de '1' até '9', a cadeia de caracteres será interpretada como um inteiro hexadecimal. As letras 'a' a 'z' (ou 'A' a 'Z') recebem os valores 10 a 35; somente são permitidas letras cujos valores atribuídos são menores que *base*. O primeiro caractere fora do intervalo da base interrompe o exame. Por exemplo, se *base* é 0 e o primeiro caractere examinado é '0', é considerado um inteiro octal e um caractere '8' ou '9' irá parar a verificação.
+Um *espaço em branco* pode consistir em caracteres de espaço ou tabulação, que são ignorados. *dígitos* são um ou mais dígitos decimais. *letras* são um ou mais das letras 'a' a 'z' (ou 'A' a 'Z'). O primeiro caractere que não é adequado a esse formato interrompe o exame. Se *base* está entre 2 e 36, ele será usado como a base do número. Se *base* for 0, os caracteres iniciais da cadeia de caracteres apontada por *strSource* são usados para determinar a base. Se o primeiro caractere é 0 e o segundo caractere não for 'x' ou 'X', a cadeia de caracteres é interpretada como um inteiro octal. Se o primeiro caractere for '0' e o segundo caractere for 'x' ou 'X', a cadeia de caracteres será interpretada como um inteiro hexadecimal. Se o primeiro caractere for de '1' até '9', a cadeia de caracteres será interpretada como um inteiro hexadecimal. As letras 'a' a 'z' (ou 'A' a 'Z') recebem os valores 10 a 35; somente são permitidas letras cujos valores atribuídos são menores que *base*. O primeiro caractere fora do intervalo da base interrompe o exame. Por exemplo, se *base* é 0 e o primeiro caractere verificado é '0', é considerado um inteiro octal e um caractere '8' ou '9' interromperá a verificação.
 
 ## <a name="requirements"></a>Requisitos
 

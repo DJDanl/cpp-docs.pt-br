@@ -1,28 +1,17 @@
 ---
-title: Adicionando um controle a uma caixa de diálogo (C++) | Microsoft Docs
-ms.custom: ''
+title: Adicionando um controle a uma caixa de diálogo (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.dialog
-dev_langs:
-- C++
 helpviewer_keywords:
 - dialog boxes [C++], adding controls to
 ms.assetid: b2a26d19-093f-49ca-93da-fef00dfbb381
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9ad87e80d3301eaeda7a0599c3e484046092ed60
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2d6698cbf9228b3ab9344c166d4477cf3b251b8c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446459"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436251"
 ---
 # <a name="adding-a-control-to-a-dialog-box-c"></a>Adicionando um controle a uma caixa de diálogo (C++)
 

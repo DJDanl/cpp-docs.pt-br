@@ -1,10 +1,6 @@
 ---
-title: _pclose | Microsoft Docs
-ms.custom: ''
+title: _pclose
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _pclose
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _pclose
 - pclose
-dev_langs:
-- C++
 helpviewer_keywords:
 - _pclose function
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 01e58c23bc91e8819abb3cd24f1ed01ee161ff8f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb0f54ec27992cd0e62b11d8fec5bd54c3daea4b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401770"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507712"
 ---
 # <a name="pclose"></a>_pclose
 
@@ -58,18 +48,18 @@ FILE *stream
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fluxo*<br/>
-Valor de retorno da chamada anterior para **popen**.
+*fluxo*<br/>
+Valor de retorno da chamada anterior a **popen**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna o status de saída do processador de comando de encerramento ou -1 se ocorrer um erro. O formato do valor de retorno é o mesmo que para **cwait**, exceto os bytes inferiores e superiores são trocados. Se o fluxo está **nulo**, **pclose** define **errno** para **EINVAL** e retorna -1.
+Retorna o status de saída do processador de comando de encerramento ou -1 se ocorrer um erro. O formato do valor de retorno é o mesmo que para **cwait**, exceto os bytes inferiores e superiores são trocados. Se o fluxo for **nulo**, **pclose** define **errno** para **EINVAL** e retornará -1.
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **pclose** função procura a ID do processo do processador de comando (Cmd.exe) iniciada por associado **popen** chamar, executa um [cwait](cwait.md) ligar o novo comando processador e fecha o fluxo no pipe associado.
+O **pclose** função de pesquisa a ID do processo do processador de comando (Cmd.exe) iniciada por associado **popen** chamar, executa uma [cwait](cwait.md) ligar o novo comando processador e fecha o fluxo no pipe associado.
 
 ## <a name="requirements"></a>Requisitos
 

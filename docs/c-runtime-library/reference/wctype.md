@@ -1,10 +1,6 @@
 ---
-title: wctype | Microsoft Docs
-ms.custom: ''
+title: wctype
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wctype
 apilocation:
@@ -21,22 +17,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wctype
-dev_langs:
-- C++
 helpviewer_keywords:
 - wctype function
 - wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0bb5003db02ed27c2906ebc3619313489e40e5fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81caf8e1ab04635d205d7b01af2d4c2896eec01c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411894"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456895"
 ---
 # <a name="wctype"></a>wctype
 
@@ -57,7 +47,7 @@ Cadeia de caracteres de propriedade.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se o **LC_CTYPE** categoria da localidade atual não define uma regra de classificação cujo nome corresponda a cadeia de caracteres de propriedade *propriedade*, a função retornará zero. Caso contrário, retornará um valor diferente de zero adequado para uso como o segundo argumento para uma chamada subsequente a [towctrans](towctrans.md).
+Se o **LC_CTYPE** categoria da localidade atual não define uma regra de classificação cujo nome corresponde a cadeia de caracteres da propriedade *propriedade*, a função retornará zero. Caso contrário, retornará um valor diferente de zero adequado para uso como o segundo argumento para uma chamada subsequente a [towctrans](towctrans.md).
 
 ## <a name="remarks"></a>Comentários
 
@@ -68,11 +58,11 @@ A função determina uma regra de classificação para códigos de caracteres la
 |iswalnum(c)|iswctype (c, wctype ("alnum"))|
 |iswalpha(c)|iswctype (c, wctype ("alpha"))|
 |iswcntrl(c)|iswctype (c, wctype ("cntrl"))|
-|iswdigit(c)|iswctype (c, wctype ("dígito"))|
-|iswgraph(c)|iswctype (c, wctype ("gráfico"))|
+|iswdigit(c)|iswctype (c, wctype ("dígitos"))|
+|iswgraph(c)|iswctype (c, wctype ("grafo"))|
 |iswlower(c)|iswctype (c, wctype ("inferior"))|
 |iswprint(c)|iswctype (c, wctype ("print"))|
-|iswpunct(c)|iswctype (c, wctype ("pontuação"))|
+|iswpunct(c)|iswctype (c, wctype ("punct"))|
 |iswspace(c)|iswctype (c, wctype ("espaço"))|
 |iswupper(c)|iswctype (c, wctype ("superior"))|
 |iswxdigit(c)|iswctype (c, wctype ("xdigit"))|

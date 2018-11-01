@@ -1,25 +1,15 @@
 ---
-title: Implementação de uma cadeia de caracteres Gerenciador de personalizada (método básico) | Microsoft Docs
-ms.custom: ''
+title: Implementação de uma cadeia de caracteres Gerenciador de personalizada (método básico)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: eac5d13e-cbb4-4e82-b01e-f5f2dbcb962a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5c251ae73b4adaaed09e5ed654e394a130281332
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4e3ffcdcd034fea81734aaeb87e4c33d81647f66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43756399"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537807"
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>Implementação de uma cadeia de caracteres Gerenciador de personalizada (método básico)
 

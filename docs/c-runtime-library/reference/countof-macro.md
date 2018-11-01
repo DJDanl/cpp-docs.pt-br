@@ -1,10 +1,6 @@
 ---
-title: Macro _countof | Microsoft Docs
-ms.custom: ''
+title: Macro _countof
 ms.date: 03/22/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,26 +16,20 @@ apitype: DLLExport
 f1_keywords:
 - _countof
 - countof
-dev_langs:
-- C++
 helpviewer_keywords:
 - countof macro
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f30df64b045e2af6181d343a4eafb962d22eaa05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60b4350d6cf14a545de67de0bdaee70ee2099006
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394737"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536130"
 ---
 # <a name="countof-macro"></a>Macro _countof
 
-Calcula o número de elementos em uma matriz em alocados estaticamente.
+Calcula o número de elementos em uma matriz alocada estaticamente.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -54,13 +44,13 @@ O nome de uma matriz.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O número de elementos na matriz, expressada como um **size_t**.
+O número de elementos na matriz, expressada como uma **size_t**.
 
 ## <a name="remarks"></a>Comentários
 
-**countof** é implementado como uma macro de pré-processador do tipo função. A versão de C++ tem máquinas de modelo extra para detectar no tempo de compilação se um ponteiro é passado em vez de uma matriz declarada estaticamente.
+**countof** é implementado como uma macro de pré-processador do tipo função. A versão do C++ tem maquinário de modelo extra para detectar no tempo de compilação se um ponteiro é passado em vez de uma matriz declarada estaticamente.
 
-Certifique-se de que *matriz* é realmente uma matriz, e não um ponteiro. Em C, **countof** produz resultados incorretos se *matriz* é um ponteiro. No C++, **countof** não compila se *matriz* é um ponteiro.  Uma matriz passado como um parâmetro para uma função *decai para um ponteiro*, que significa que, dentro da função, você não pode usar **countof** para determinar a extensão da matriz.
+Certifique-se de que *matriz* é, na verdade, uma matriz, e não um ponteiro. Em C, **countof** produz resultados incorretos se *matriz* é um ponteiro. No C++, **countof** Falha na compilação se *matriz* é um ponteiro.  Uma matriz é passada como um parâmetro para uma função *decai para um ponteiro*, que significa que, dentro da função, você não pode usar **countof** para determinar a extensão da matriz.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,11 +1,6 @@
 ---
-title: lrint, lrintf, lrintl, llrint, llrintf, llrintl | Microsoft Docs
-ms.custom: ''
+title: lrint, lrintf, lrintl, llrint, llrintf, llrintl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - lrint
 - lrintl
@@ -39,8 +34,6 @@ f1_keywords:
 - math/llrint
 - math/llrintf
 - math/llrintl
-dev_langs:
-- C++
 helpviewer_keywords:
 - lrint function
 - lrintf function
@@ -49,16 +42,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5ace427267a45c87213f62276e1d7799f27db1cd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a1fc404182d9d2a5cd6870fcb2cd1ff3e5f4da55
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401253"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500835"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -116,7 +105,7 @@ o valor a ser arredondado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, retorna o valor arredondado integral de *x*.
+Se for bem-sucedido, retornará o valor arredondado integral do *x*.
 
 |Problema|Valor de|
 |-----------|------------|
@@ -124,9 +113,9 @@ Se for bem-sucedido, retorna o valor arredondado integral de *x*.
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **lrint** e **llrint** que usam **float** e **longo**  **duplo** tipos. Em um programa C, **lrint** e **llrint** sempre têm um **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **lrint** e **llrint** que utilizam **float** e **longo**  **Double** tipos. Em um programa do C **lrint** e **llrint** sempre têm um **double**.
 
-Se *x* não representa o ponto flutuante equivalente de um valor inteiro, gerar essas funções **FE_INEXACT**.
+Se *x* não representa o equivalente de ponto flutuante de um valor integral, essas funções geram **FE_INEXACT**.
 
 **Seção específica da Microsoft**: quando o resultado estiver fora do intervalo de tipo retornado ou quando o parâmetro for um NaN ou infinito, o valor retornado será definido pela implementação. O compilador da Microsoft retorna um valor zero (0).
 

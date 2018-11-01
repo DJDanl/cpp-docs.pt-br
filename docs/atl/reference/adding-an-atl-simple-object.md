@@ -1,29 +1,19 @@
 ---
-title: Adição de um objeto Simple da ATL | Microsoft Docs
-ms.custom: ''
+title: Adição de um objeto Simple da ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.classes.adding.atl
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, adding objects
 - objects [ATL]
 - ATL, simple objects
 ms.assetid: 9c57d2ef-0447-4c84-8982-3304b8e49847
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f757602459c55b7b66e01d9512d9d4cdeb2f3946
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: df835b35bb036086382fc6adb4beed142f99be76
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861038"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50508285"
 ---
 # <a name="adding-an-atl-simple-object"></a>Adição de um objeto Simple da ATL
 
@@ -49,5 +39,5 @@ Você pode definir interfaces COM para seu novo objeto ATL ao primeiro criá-lo 
 [Adicionando uma nova Interface em um projeto da ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)<br/>
 [Adicionando pontos de conexão a um objeto](../../atl/adding-connection-points-to-an-object.md)<br/>
 [Adicionando um método](../../ide/adding-a-method-visual-cpp.md)<br/>
-[Classe do MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
+[Classe MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Adicionando uma classe do C++ genérica](../../ide/adding-a-generic-cpp-class.md)

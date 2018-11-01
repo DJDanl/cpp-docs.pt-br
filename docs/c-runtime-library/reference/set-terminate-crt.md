@@ -1,10 +1,6 @@
 ---
-title: set_terminate (CRT) | Microsoft Docs
-ms.custom: ''
+title: set_terminate (CRT)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - set_terminate
 apilocation:
@@ -22,27 +18,21 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - set_terminate
-dev_langs:
-- C++
 helpviewer_keywords:
 - set_terminate function
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e62dc1e4f99a1d2707c6e7b86c79e0ffc8aa027
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 7be81dec7fba80a273d635cbd30b96b09928bc66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450970"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493906"
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
 
-Instala a sua própria rotina de término deve ser chamado por **encerrar**.
+Instala sua própria rotina de terminação a ser chamado pelo **encerrar**.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -57,15 +47,15 @@ Ponteiro para uma função de encerramento que você escreve.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna um ponteiro para a função anterior registrada por **set_terminate** para que a função anterior pode ser restaurada posteriormente. Se nenhuma função anterior tiver sido definida, o valor de retorno pode ser usado para restaurar o comportamento padrão; Esse valor pode ser **nulo**.
+Retorna um ponteiro para a função anterior registrada por **set_terminate** para que a função anterior possa ser restaurada posteriormente. Se nenhuma função anterior tiver sido definida, o valor retornado pode ser usado para restaurar o comportamento padrão; Esse valor pode ser **nulo**.
 
 ## <a name="remarks"></a>Comentários
 
-O **set_terminate** função instala *termFunction* como a função chamada **encerrar**. **set_terminate** é usado com o tratamento de exceções C++ e pode ser chamado a qualquer momento em seu programa antes que a exceção é gerada. **encerrar** chamadas [anular](abort.md) por padrão. Você pode alterar esse padrão escrevendo sua própria função de encerramento e chamar **set_terminate** com o nome da sua função como seu argumento. **encerrar** chama a função último fornecida como um argumento para **set_terminate**. Depois de executar qualquer desejado tarefas de limpeza, *termFunction* deve sair do programa. Se ele não existir (se ele retorna ao chamador), [anular](abort.md) é chamado.
+O **set_terminate** função instala *termFunction* como a função chamada por **encerrar**. **set_terminate** é usado com o tratamento de exceções C++ e pode ser chamado a qualquer momento em seu programa antes que a exceção seja lançada. **encerrar** chamadas [anular](abort.md) por padrão. Você pode alterar esse padrão escrevendo sua própria função de encerramento e chamar **set_terminate** com o nome da sua função como seu argumento. **encerrar** chama a função last especificada como um argumento para **set_terminate**. Depois de executar quaisquer tarefas de limpeza, desejadas *termFunction* deve sair do programa. Se ele não é encerrado (se ele retorna para seu chamador), [anular](abort.md) é chamado.
 
 Em um ambiente multithreaded, funções de encerramento são mantidas separadamente para cada thread. Cada novo thread precisa instalar sua própria função de encerramento. Portanto, cada thread é responsável por sua própria manipulação de encerramento.
 
-O **terminate_function** tipo está definido em EH. H como um ponteiro para uma função definida pelo usuário encerramento, *termFunction* que retorna **void**. A função personalizada *termFunction* pode não usam argumentos e não deve retornar ao chamador. Em caso afirmativo, [anular](abort.md) é chamado. Não pode ser acionada uma exceção no *termFunction*.
+O **terminate_function** tipo é definido em EH. H como um ponteiro para uma função de encerramento definida pelo usuário, *termFunction* que retorna **void**. A função personalizada *termFunction* não pode levar argumentos e não deve retornar a seu chamador. Se isso acontecer, [anular](abort.md) é chamado. Uma exceção não pode ser lançada de dentro *termFunction*.
 
 ```cpp
 typedef void ( *terminate_function )( );
@@ -74,7 +64,7 @@ typedef void ( *terminate_function )( );
 > [!NOTE]
 > O **set_terminate** função só funciona fora do depurador.
 
-Há um único **set_terminate** manipulador para todos os vinculadas dinamicamente DLLs ou EXEs; mesmo se você chamar **set_terminate** o manipulador pode ser substituído por outro, ou você pode substituir um manipulador definido por outro DLL ou EXE.
+Há um único **set_terminate** manipulador para dinamicamente todas as DLLs ou EXEs vinculados; mesmo se você chamar **set_terminate** o manipulador poderá ser substituído por outro, ou que você esteja substituindo um manipulador definido por outro DLL ou EXE.
 
 ## <a name="requirements"></a>Requisitos
 
