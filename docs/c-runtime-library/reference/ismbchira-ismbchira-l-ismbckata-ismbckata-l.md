@@ -1,10 +1,6 @@
 ---
-title: _ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l | Microsoft Docs
-ms.custom: ''
+title: _ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbckata
 - _ismbchira_l
@@ -32,8 +28,6 @@ f1_keywords:
 - ismbchira_l
 - _ismbchira_l
 - _ismbchira
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbckata function
 - _ismbchira function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - Hiragana
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0fe2b9c824fcc45eb2d0fda82cd350d3a9435b94
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2a5d0336e5ed4ad8bbb19f8a259128ab33d004e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403723"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506581"
 ---
 # <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 
@@ -93,20 +83,20 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste ou 0 se não satisfizer. Se *c* < = 255 e há um correspondente **ismbb** rotina (por exemplo, **ismbcalnum** corresponde à **ismbbalnum**), o resultado é o valor de retorno do **ismbb** rotina.
+Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste ou 0 se não satisfizer. Se *c* < = 255 e houver um correspondente **ismbb** rotina (por exemplo, **ismbcalnum** corresponde ao **ismbbalnum**), o resultado é o valor retornado de correspondente **ismbb** rotina.
 
 ## <a name="remarks"></a>Comentários
 
 Cada uma dessas funções testa um determinado caractere multibyte quanto a uma determinada condição.
 
-As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam a localidade passada em vez da localidade atual para o seu comportamento dependente de localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam a localidade passada em vez da localidade atual para seu comportamento dependente da localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 |Rotina|Condição de teste (página de código 932 somente)|
 |-------------|-------------------------------------------|
-|**_ismbchira**|Hiragana de byte duplo: 0x829F < =*c*< = 0x82F1.|
-|**_ismbchira_l**|Hiragana de byte duplo: 0x829F < =*c*< = 0x82F1.|
-|**_ismbckata**|Byte duplo katakana: 0x8340 < =*c*< = 0x8396.|
-|**_ismbckata_l**|Byte duplo katakana: 0x8340 < =*c*< = 0x8396.|
+|**_ismbchira**|Hiragana de byte duplo: 0x829f< < =*c*< lt;=0x82f1.|
+|**_ismbchira_l**|Hiragana de byte duplo: 0x829f< < =*c*< lt;=0x82f1.|
+|**_ismbckata**|Katakana de byte duplo: 0x8340< < =*c*< lt;=0x8396.|
+|**_ismbckata_l**|Katakana de byte duplo: 0x8340< < =*c*< lt;=0x8396.|
 
 **Final específico da página de código 932**
 

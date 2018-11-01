@@ -1,8 +1,6 @@
 ---
-title: Funções &lt;utility&gt; | Microsoft Docs
-ms.custom: ''
+title: Funções &lt;utility&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - utility/std::exchange
 - utility/std::forward
@@ -16,12 +14,12 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: 12e8b2c4dfb0d7d36974fb2e5979d82b69c89316
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7a061ede19c5c4c181b5fea912b9c6212c583267
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718309"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543904"
 ---
 # <a name="ltutilitygt-functions"></a>Funções &lt;utility&gt;
 

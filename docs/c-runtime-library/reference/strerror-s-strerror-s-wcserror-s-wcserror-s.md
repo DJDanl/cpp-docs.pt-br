@@ -1,10 +1,6 @@
 ---
-title: strerror_s, _strerror_s, _wcserror_s, __wcserror_s | Microsoft Docs
-ms.custom: ''
+title: strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __wcserror_s
 - _strerror_s
@@ -31,8 +27,6 @@ f1_keywords:
 - tcserror_s
 - strerror_s
 - _strerror_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - __wcserror_s function
 - error messages, printing
@@ -45,20 +39,16 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 362716963911a29a9b3558c387e69c4cd91b369e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00ff9d0df1a78d07eaa509201fb998b30396cc4c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415576"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429634"
 ---
 # <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
-Obter uma mensagem de erro do sistema (**strerror_s**, **wcserror_s**) ou imprimir uma mensagem de erro fornecida pelo usuário (**strerror_s**, **wcserror_s** ). Estas são versões de [strerror, _strerror, _wcserror, \__wcserror](strerror-strerror-wcserror-wcserror.md) com aprimoramentos de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Receber uma mensagem de erro do sistema (**strerror_s**, **wcserror_s**) ou imprimir uma mensagem de erro fornecida pelo usuário (**strerror_s**, **wcserror_s** ). Estas são versões de [strerror, _strerror, _wcserror, \__wcserror](strerror-strerror-wcserror-wcserror.md) com aprimoramentos de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -132,7 +122,7 @@ Zero se for bem-sucedido ou um código de erro em caso de falha.
 
 ## <a name="remarks"></a>Comentários
 
-O **strerror_s** função mapas *errnum* para uma cadeia de caracteres de mensagem de erro, retornando a cadeia de caracteres em *buffer*. **strerror_s** não tem o número do erro; ele usa o valor atual de **errno** para determinar a mensagem apropriada. Nem **strerror_s** nem **strerror_s** realmente imprime a mensagem: para fazer isso, você precisa chamar uma função de saída como [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+O **strerror_s** função mapas *errnum* para uma cadeia de caracteres de mensagem de erro, retornando a cadeia de caracteres no *buffer*. **strerror_s** não tem o número de erro; ele usa o valor atual da **errno** para determinar a mensagem apropriada. Nem **strerror_s** nem **strerror_s** imprimem a mensagem: para fazer isso, você precisa chamar uma função de saída, como [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -142,17 +132,17 @@ if (( _access( "datafile",2 )) == -1 )
 }
 ```
 
-Se *strErrMsg* é **nulo**, **strerror_s** retorna uma cadeia de caracteres em *buffer* que contém a mensagem de erro do sistema para a última chamada de biblioteca que produziu um erro. A cadeia de caracteres de mensagens de erro é encerrada pelo caractere newline ('\n'). Se *strErrMsg* não é igual a **nulo**, em seguida, **strerror_s** retorna uma cadeia de caracteres em *buffer* que contém (na ordem), a mensagem de cadeia de caracteres, um dois-pontos, um espaço, a mensagem de erro do sistema para a última chamada de biblioteca gera um erro e um caractere de nova linha. Sua mensagem da cadeia de caracteres pode ter, no máximo, 94 caracteres de comprimento.
+Se *strErrMsg* é **nulo**, **strerror_s** retorna uma cadeia de caracteres *buffer* que contém a mensagem de erro do sistema para a última chamada da biblioteca que produziu um erro. A cadeia de caracteres de mensagens de erro é encerrada pelo caractere newline ('\n'). Se *strErrMsg* não é igual a **nulo**, em seguida, **strerror_s** retorna uma cadeia de caracteres *buffer* contendo (nessa ordem) sua mensagem de cadeia de caracteres, um dois-pontos, um espaço, a mensagem de erro do sistema para a última chamada da biblioteca produzir um erro e um caractere de nova linha. Sua mensagem da cadeia de caracteres pode ter, no máximo, 94 caracteres de comprimento.
 
-Essas funções truncar a mensagem de erro se o tamanho excede *numberOfElements* -1. A cadeia de caracteres resultante no *buffer* é sempre terminada em nulo.
+Essas funções truncarão a mensagem de erro se seu comprimento exceder *numberOfElements* -1. A cadeia de caracteres resultante no *buffer* é sempre terminada em nulo.
 
-O número de erro real **strerror_s** é armazenado na variável [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). As mensagens de erro do sistema são acessadas por meio da variável [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), que é uma matriz de mensagens ordenadas por número do erro. **strerror_s** acessa a mensagem de erro apropriado usando a **errno** valor como um índice para a variável **sys_errlist**. O valor da variável [sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) é definido como o número máximo de elementos de **sys_errlist** matriz. Para produzir resultados precisos, chame **strerror_s** imediatamente depois que retorna uma rotina de biblioteca com um erro. Caso contrário, chamadas subsequentes para **strerror_s** ou **strerror_s** pode substituir o **errno** valor.
+O número do erro real para **strerror_s** é armazenado na variável [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). As mensagens de erro do sistema são acessadas por meio da variável [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), que é uma matriz de mensagens ordenadas por número do erro. **strerror_s** acessa a mensagem de erro apropriada usando o **errno** valor como um índice para a variável **sys_errlist**. O valor da variável [sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) é definido como o número máximo de elementos na **sys_errlist** matriz. Para produzir resultados precisos, chame **strerror_s** imediatamente após uma rotina da biblioteca retorna um erro. Caso contrário, chamadas subsequentes para **strerror_s** ou **strerror_s** pode substituir o **errno** valor.
 
 **wcserror_s** e **wcserror_s** são versões de caractere largo de **strerror_s** e **strerror_s**, respectivamente.
 
-Essas funções validam seus parâmetros. Se o buffer é **nulo** ou se o parâmetro de tamanho é 0, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução é permitida para continuar, as funções retornam **EINVAL** e defina **errno** para **EINVAL**.
+Essas funções validam seus parâmetros. Se o buffer for **nulo** ou se o parâmetro de tamanho é 0, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, as funções retornam **EINVAL** e defina **errno** para **EINVAL**.
 
-**strerror_s**, **wcserror_s**, e **wcserror_s** não fazem parte da definição de ANSI, mas em vez disso, são extensões da Microsoft para ele. Não usá-los onde portabilidade é desejada; para compatibilidade ANSI, use **strerror_s** em vez disso.
+**strerror_s**, **wcserror_s**, e **wcserror_s** não fazem parte da definição de ANSI, mas em vez disso, são extensões da Microsoft. Não usá-los quando se desejar portabilidade; para compatibilidade ANSI, use **strerror_s** em vez disso.
 
 No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sobrecargas podem inferir automaticamente o tamanho do buffer, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

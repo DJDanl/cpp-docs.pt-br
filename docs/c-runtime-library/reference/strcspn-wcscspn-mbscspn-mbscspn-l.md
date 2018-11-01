@@ -1,10 +1,6 @@
 ---
-title: strcspn, wcscspn, _mbscspn, _mbscspn_l | Microsoft Docs
-ms.custom: ''
+title: strcspn, wcscspn, _mbscspn, _mbscspn_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbscspn_l
 - wcscspn
@@ -30,8 +26,6 @@ f1_keywords:
 - wcscspn
 - _ftcscspn
 - _tcscspn
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], searching
 - ftcscspn function
@@ -45,23 +39,19 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e282aa9d796f06e2682278e08dfae4f24b7a65c4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bcb1699f9a3f3c4d9e5ee040fdcb2e999397ac30
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415168"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446443"
 ---
 # <a name="strcspn-wcscspn-mbscspn-mbscspnl"></a>strcspn, wcscspn, _mbscspn, _mbscspn_l
 
 Retorna o índice da primeira ocorrência, em uma cadeia de caracteres, de um caractere que pertence a um conjunto de caracteres.
 
 > [!IMPORTANT]
-> **mbschr** e **mbschr_l** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbschr** e **mbschr_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -98,15 +88,15 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Essas funções retornam o índice do primeiro caractere em *str* em *strCharSet*. Se nenhum dos caracteres na *str* está em *strCharSet*, em seguida, o valor de retorno é o comprimento de *str*.
+Essas funções retornam o índice do primeiro caractere em *str* que está no *strCharSet*. Se nenhum dos caracteres na *str* está em *strCharSet*, em seguida, o valor de retorno é o comprimento dos *str*.
 
 Nenhum valor retornado é reservado para indicar um erro.
 
 ## <a name="remarks"></a>Comentários
 
-**wcscspn** e **mbscspn** são versões de caracteres largos e caracteres multibyte **strcspn**. Os argumentos de **wcscspn** são caracteres largos cadeias de caracteres; desses **mbscspn** são cadeias de caracteres multibyte.
+**wcscspn** e **mbscspn** são versões de caractere largo e caracteres multibyte **strcspn**. Os argumentos de **wcscspn** são largos cadeias de caracteres; aqueles de **mbscspn** são cadeias de caracteres multibyte.
 
-**mbscspn** valida seus parâmetros. Se qualquer um dos *str* ou *strCharSet* é um ponteiro nulo, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, a função retorna 0 e conjuntos de **errno** para **EINVAL**. **strcspn** e **wcscspn** não validar seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
+**mbscspn** valida seus parâmetros. Se qualquer um dos *str* ou *strCharSet* é um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará 0 e definirá **errno** à **EINVAL**. **strcspn** e **wcscspn** não validam seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 

@@ -1,10 +1,6 @@
 ---
-title: _execv, _wexecv | Microsoft Docs
-ms.custom: ''
+title: _execv, _wexecv
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wexecv
 - _execv
@@ -25,24 +21,18 @@ f1_keywords:
 - _execv
 - _wexecv
 - wexecv
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wexecv function
 - _execv function
 - wexecv function
 - execv function
 ms.assetid: 8dbaf7bc-9040-4316-a0c1-db7e866b52af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f8c6013e7d62b3738efe717c95e1464f31e2f0bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd0447e7863e25571a968a821b45614d5d76d1bd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399076"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523944"
 ---
 # <a name="execv-wexecv"></a>_execv, _wexecv
 
@@ -74,7 +64,7 @@ Matriz de ponteiros para os parâmetros.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de -1 indica um erro, caso em que o **errno** variável global está definido.
+Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de -1 indica um erro, caso em que o **errno** variável global é definida.
 
 |**errno** valor|Descrição|
 |-------------------|-----------------|
@@ -92,7 +82,7 @@ Para obter mais informações sobre esses e outros códigos de retorno, consulte
 
 Cada uma dessas funções carrega e executa um novo processo, passando uma matriz de ponteiros para argumentos de linha de comando.
 
-O **execv** funções validam seus parâmetros. Se *cmdname* é um ponteiro nulo, ou se *argv* é um ponteiro nulo, o ponteiro para uma matriz em branco, ou se a matriz contém uma cadeia de caracteres vazia como o primeiro argumento, o **execv** funções de invocam o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL** e retorne -1. Nenhum processo é inicializado.
+O **execv** funções validam seus parâmetros. Se *cmdname* for um ponteiro nulo, ou se *argv* é um ponteiro nulo, ponteiro para uma matriz vazia, ou se a matriz contiver uma cadeia de caracteres vazia como primeiro argumento, o **execv** funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e retornarão -1. Nenhum processo é inicializado.
 
 ## <a name="requirements"></a>Requisitos
 

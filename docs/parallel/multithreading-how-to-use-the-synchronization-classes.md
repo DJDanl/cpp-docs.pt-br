@@ -1,12 +1,6 @@
 ---
-title: 'Multithreading: Como usar as Classes de sincronização do MFC | Microsoft Docs'
-ms.custom: ''
+title: 'Multithreading: Como usar as Classes de sincronização do MFC'
 ms.date: 08/27/2018
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC [C++], multithreading
 - threading [MFC], synchronization classes
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - multithreading [C++], synchronization classes
 - threading [C++], thread-safe class design
 ms.assetid: f266d4c6-0454-4bda-9758-26157ef74cc5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca2603c2ba96cbf0df04f56d2334bd6e65110ac6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0f8304c3b45f87dadc2317de95a0b30b54baffa0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447967"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604159"
 ---
 # <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>Multithreading: Como usar as Classes de sincronização do MFC
 

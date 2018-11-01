@@ -1,30 +1,19 @@
 ---
-title: Painéis janela (Editor de imagens para ícones) | Microsoft Docs
-ms.custom: ''
+title: Painéis Janela (editor de imagens para ícones)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
-dev_langs:
-- C++
 helpviewer_keywords:
 - graphics editor [C++]
 - Image editor [C++], panes
 ms.assetid: d66ea5b3-e2e2-4fc4-aa99-f50022cc690e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b4177313a9fa05d160935e6602454ff6c73ab34f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f29766095048e4e06d16d37f2792ab18282eadf0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398730"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50474328"
 ---
 # <a name="window-panes-image-editor-for-icons"></a>Painéis Janela (editor de imagens para ícones)
 

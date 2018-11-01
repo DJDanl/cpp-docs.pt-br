@@ -1,8 +1,6 @@
 ---
-title: Funções &lt;atomic&gt; | Microsoft Docs
-ms.custom: ''
+title: Funções &lt;atomic&gt;
 ms.date: 07/11/2018
-ms.topic: reference
 f1_keywords:
 - atomic/std::atomic_compare_exchange_strong
 - atomic/std::atomic_compare_exchange_strong_explicit
@@ -34,8 +32,6 @@ f1_keywords:
 - atomic/std::atomic_thread_fence
 - atomic/std::kill_dependency
 ms.assetid: 5c53b4f8-6ff5-47d7-beb2-2d6ee3c6ea89
-author: mikeblome
-ms.author: mblome
 helpviewer_keywords:
 - std::atomic_compare_exchange_strong [C++]
 - std::atomic_compare_exchange_strong_explicit [C++]
@@ -66,14 +62,12 @@ helpviewer_keywords:
 - std::atomic_store_explicit [C++]
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c00f66eef11d2d26bbcaa07110e9d9e738fc7c2f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 6ec4ff879b70e4d2cc16a3328217660db695e859
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110156"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533751"
 ---
 # <a name="ltatomicgt-functions"></a>Funções &lt;atomic&gt;
 
@@ -116,7 +110,7 @@ Um ponteiro para um *atômica* objeto que armazena um valor do tipo `Ty`.
 *Exp*<br/>
 Um ponteiro para um valor do tipo `Ty`.
 
-*Value*<br/>
+*Valor*<br/>
 Um valor do tipo `Ty`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -157,7 +151,7 @@ Um ponteiro para um objeto `atomic` que armazena um valor do tipo `Ty`.
 *Exp*<br/>
 Um ponteiro para um valor do tipo `Ty`.
 
-*Value*<br/>
+*Valor*<br/>
 Um valor do tipo `Ty`.
 
 *Diffgr:ID="Order1*<br/>
@@ -200,7 +194,7 @@ Um ponteiro para um objeto `atomic` que armazena um valor do tipo `Ty`.
 *Exp*<br/>
 Um ponteiro para um valor do tipo `Ty`.
 
-*Value*<br/>
+*Valor*<br/>
 Um valor do tipo `Ty`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -241,7 +235,7 @@ Um ponteiro para um objeto `atomic` que armazena um valor do tipo `Ty`.
 *Exp*<br/>
 Um ponteiro para um valor do tipo `Ty`.
 
-*Value*<br/>
+*Valor*<br/>
 Um valor do tipo `Ty`.
 
 *Diffgr:ID="Order1*<br/>
@@ -275,7 +269,7 @@ inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 *Atom*<br/>
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `Ty`.
 
-*Value*<br/>
+*Valor*<br/>
 Um valor do tipo `Ty`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -309,7 +303,7 @@ inline Ty atomic_exchange_explicit(
 *Atom*<br/>
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `Ty`.
 
-*Value*<br/>
+*Valor*<br/>
 Um valor do tipo `Ty`.
 
 *Ordem*<br/>
@@ -339,7 +333,7 @@ T* atomic_fetch_add(atomic<T*>* Atom, ptrdiff_t Value) noexcept;
 *Atom*<br/>
 Um ponteiro para um objeto `atomic` que armazena um ponteiro para o tipo `T`.
 
-*Value*<br/>
+*Valor*<br/>
 Um valor do tipo `ptrdiff_t`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -383,7 +377,7 @@ T* atomic_fetch_add_explicit(
 *Atom*<br/>
 Um ponteiro para um objeto `atomic` que armazena um ponteiro para o tipo `T`.
 
-*Value*<br/>
+*Valor*<br/>
 Um valor do tipo `ptrdiff_t`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -426,7 +420,7 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 *Atom*<br/>
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `T`.
 
-*Value*<br/>
+*Valor*<br/>
 Um valor do tipo `T`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -460,7 +454,7 @@ inline T atomic_fetch_and_explicit(
 *Atom*<br/>
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `T`.
 
-*Value*<br/>
+*Valor*<br/>
 Um valor do tipo `T`.
 
 *Ordem*<br/>
@@ -490,7 +484,7 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 *Atom*<br/>
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `T`.
 
-*Value*<br/>
+*Valor*<br/>
 Um valor do tipo `T`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -524,7 +518,7 @@ inline T atomic_fetch_or_explicit(
 *Atom*<br/>
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `T`.
 
-*Value*<br/>
+*Valor*<br/>
 Um valor do tipo `T`.
 
 *Ordem*<br/>
@@ -559,7 +553,7 @@ T* atomic_fetch_sub(
 *Atom*<br/>
 Um ponteiro para um objeto `atomic` que armazena um ponteiro para o tipo `T`.
 
-*Value*<br/>
+*Valor*<br/>
 Um valor do tipo `ptrdiff_t`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -601,7 +595,7 @@ T* atomic_fetch_sub_explicit(
 *Atom*<br/>
 Um ponteiro para um objeto `atomic` que armazena um ponteiro para o tipo `T`.
 
-*Value*<br/>
+*Valor*<br/>
 Um valor do tipo `ptrdiff_t`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -645,7 +639,7 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 *Atom*<br/>
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `T`.
 
-*Value*<br/>
+*Valor*<br/>
 Um valor do tipo `T`.
 
 ### <a name="return-value"></a>Valor de retorno
@@ -679,7 +673,7 @@ inline T atomic_fetch_xor_explicit(
 *Atom*<br/>
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `T`.
 
-*Value*<br/>
+*Valor*<br/>
 Um valor do tipo `T`.
 
 *Ordem*<br/>
@@ -779,7 +773,7 @@ inline void atomic_init(atomic<Ty>* Atom, Ty Value) noexcept;
 *Atom*<br/>
 Um ponteiro para um objeto `atomic` que armazena um valor do tipo `Ty`.
 
-*Value*<br/>
+*Valor*<br/>
 Um valor do tipo `Ty`.
 
 ### <a name="remarks"></a>Comentários
@@ -899,7 +893,7 @@ inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
 *Atom*<br/>
 Um ponteiro para um objeto atômico que contém um valor do tipo `Ty`.
 
-*Value*<br/>
+*Valor*<br/>
 Um valor do tipo `Ty`.
 
 ### <a name="remarks"></a>Comentários
@@ -929,7 +923,7 @@ inline Ty atomic_store_explicit(
 *Atom*<br/>
 Um ponteiro para um objeto `atomic` que contém um valor do tipo `Ty`.
 
-*Value*<br/>
+*Valor*<br/>
 Um valor do tipo `Ty`.
 
 *Ordem*<br/>

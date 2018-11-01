@@ -1,28 +1,17 @@
 ---
-title: Referência de modelos de provedor do OLE DB | Microsoft Docs
-ms.custom: ''
+title: Referência dos modelos de provedor de banco de dados OLE
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
 f1_keywords:
 - vc.templates.ole
-dev_langs:
-- C++
 helpviewer_keywords:
 - OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: a49294ea864357e111abe4d6bfc6d2cbb1c8a61f
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 973274209ae291ea645a82f4a182e81a917cdf00
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50077628"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50460990"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Referência dos modelos de provedor de banco de dados OLE
 

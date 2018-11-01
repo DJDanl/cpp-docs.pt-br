@@ -1,27 +1,17 @@
 ---
-title: Classe ctype_base | Microsoft Docs
-ms.custom: ''
+title: Classe ctype_base
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - locale/std::ctype_base
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3def685a8cd108666b3e1b8be9314fc7585a9837
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 83ef35f9fac438cfa217decf222abd365ff84269
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844888"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531125"
 ---
 # <a name="ctypebase-class"></a>Classe ctype_base
 
@@ -79,7 +69,7 @@ Define uma máscara de enumeração. Cada constante de enumeração caracteriza 
 
 - **graph** (função [isgraph](../standard-library/locale-functions.md#isgraph))
 
-É possível caracterizar uma combinação de classificações pelo uso de OR nessas constantes. Em particular, é sempre true que **alnum** = = ( **alpha** &#124; **dígitos** \) e **gráfico** \= \= \( **alnum** &#124; **pontuação**).
+É possível caracterizar uma combinação de classificações pelo uso de OR nessas constantes. Em particular, ele é sempre verdadeiro que **alnum** = = ( **alpha** &#124; **dígito** \) e **graph** \= \= \( **alnum** &#124; **punct**).
 
 ## <a name="requirements"></a>Requisitos
 

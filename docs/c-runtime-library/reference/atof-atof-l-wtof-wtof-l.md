@@ -1,10 +1,6 @@
 ---
-title: atof, _atof_l, _wtof, _wtof_l | Microsoft Docs
-ms.custom: ''
+title: atof, _atof_l, _wtof, _wtof_l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtof_l
 - atof
@@ -36,8 +32,6 @@ f1_keywords:
 - corecrt_wstdlib/_wtof
 - _wtof_l
 - corecrt_wstdlib/_wtof_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tstof function
 - atof_l function
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d78fe14783200e1e145c39b9b274d9e7e3ddb6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c2ec158ac0b75a861b5b226d33de113d76988cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396804"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471169"
 ---
 # <a name="atof-atofl-wtof-wtofl"></a>atof, _atof_l, _wtof, _wtof_l
 
@@ -96,9 +86,9 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada função retorna o **duplo** valor produzido por interpretar os caracteres de entrada como um número. O valor retornado será 0,0 se a entrada não puder ser convertida para um valor desse tipo.
+Cada função retorna o **duplas** valor produzido Interpretando os caracteres de entrada como um número. O valor retornado será 0,0 se a entrada não puder ser convertida para um valor desse tipo.
 
-Em todos os casos de fora do intervalo, **errno** é definido como **ERANGE**. Se o parâmetro passado é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL** e retornar 0.
+Em todos os casos de fora do intervalo, **errno** é definido como **ERANGE**. Se o parâmetro passado é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e retornam 0.
 
 ## <a name="remarks"></a>Comentários
 
@@ -108,13 +98,13 @@ A cadeia de caracteres de entrada é uma sequência de caracteres que pode ser i
 
 O *str* argumento **atof** e **wtof** tem a seguinte forma:
 
-[*espaço em branco*] [*sinal*] [*dígitos*] [__.__ *dígitos*] [{**e** &#124; **E** } [*sinal*]*dígitos*]
+[*espaço em branco*] [*sinal*] [*dígitos*] [__.__ *dígitos*] [{**eletrônico** &#124; **eletrônico** } [*entrada*]*dígitos*]
 
-Um *espaço em branco* consiste em caracteres de espaço ou tabulação, que são ignorados; *sinal* é um sinal de adição (+) ou menos (-); e *dígitos* são um ou mais dígitos decimais. Se nenhum dígito aparecer antes do ponto decimal, pelo menos um deverá aparecer após o ponto decimal. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma carta de apresentação (**e**, ou **E**) e um inteiro decimal opcionalmente assinado.
+Um *espaço em branco* consiste em caracteres de espaço ou tabulação, que são ignorados; *sinal* é um sinal de mais (+) ou menos (-); e *dígitos* são um ou mais dígitos decimais. Se nenhum dígito aparecer antes do ponto decimal, pelo menos um deverá aparecer após o ponto decimal. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra de apresentação (**eletrônico**, ou **eletrônico**) e um inteiro decimal opcionalmente com sinal.
 
-As versões UCRT dessas funções não dão suporte à conversão de estilo Fortran (**d** ou **D**) letras expoente. Essa extensão não padrão tinha suporte em versões anteriores do CRT e pode ser uma alteração significativa para seu código.
+As versões UCRT dessas funções não têm suporte para conversão do estilo Fortran (**1!d** ou **1!d**) letras de expoente. Essa extensão não padrão tinha suporte em versões anteriores do CRT e pode ser uma alteração significativa para seu código.
 
-As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam o *localidade* parâmetro passado em vez da localidade atual.
+As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o *localidade* parâmetro passado em vez da localidade atual.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -132,7 +122,7 @@ As versões dessas funções com o **_l** sufixo são idênticas, exceto que ele
 
 ## <a name="example"></a>Exemplo
 
-Este programa mostra como os números armazenados como cadeias de caracteres podem ser convertidos em valores numéricos usando a **atof** e **atof_l** funções.
+Esse programa mostra como os números armazenados como cadeias de caracteres podem ser convertidos em valores numéricos usando o **atof** e **atof_l** funções.
 
 ```C
 // crt_atof.c

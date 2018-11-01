@@ -1,26 +1,16 @@
 ---
-title: Erros de avaliador de expressão CXX0000 até CXX0072 | Microsoft Docs
-ms.custom: ''
+title: Erros de avaliador da expressão CXX0000 até CXX0072
 ms.date: 11/17/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
-dev_langs:
-- C++
 ms.assetid: a47a9866-7fb2-4b21-978c-2b77402c7105
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2b46db5fd95d58691ea74df4d945a427fe4d4fb4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 678b0e5e5dce7436dcbf0b8bc76540501860ff06
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33294580"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524907"
 ---
 # <a name="expression-evaluator-errors-cxx0000-through-cxx0072"></a>Erros de avaliador da expressão CXX0000 até CXX0072
 
-Esta seção é uma referência para os erros gerados por ferramentas de diagnóstico.
+Esta seção é uma referência aos erros gerados pelas ferramentas de diagnóstico.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]

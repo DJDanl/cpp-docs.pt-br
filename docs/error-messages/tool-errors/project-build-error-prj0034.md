@@ -1,27 +1,17 @@
 ---
-title: Erro de Build prj0034 do projeto | Microsoft Docs
-ms.custom: ''
+title: Erro de Build PRJ0034 no Projeto
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - PRJ0034
-dev_langs:
-- C++
 helpviewer_keywords:
 - PRJ0034
 ms.assetid: 1da4a55b-231b-4476-8545-6997628fbc00
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b271875173bf0e55d94989d60a1c8f7aaf408b2a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7c078a3d2aef24df9151cb10f81c1b7423809e68
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46065576"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50549052"
 ---
 # <a name="project-build-error-prj0034"></a>Erro de Build PRJ0034 no Projeto
 

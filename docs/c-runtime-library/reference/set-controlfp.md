@@ -1,10 +1,6 @@
 ---
-title: _set_controlfp | Microsoft Docs
-ms.custom: ''
+title: _set_controlfp
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_controlfp
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - set_controlfp
 - _set_controlfp
-dev_langs:
-- C++
 helpviewer_keywords:
 - set_controlfp function
 - floating-point functions, setting control word
 - _set_controlfp function
 ms.assetid: e0689d50-f68a-4028-a9c1-fb23eedee4ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2647e9719c2aa3fe303393fcc1da55de0385581
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1187502f09849d7ca4d8e595c237cfa511d00c6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406414"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50498972"
 ---
 # <a name="setcontrolfp"></a>_set_controlfp
 
@@ -68,9 +58,9 @@ Nenhum.
 
 ## <a name="remarks"></a>Comentários
 
-O **set_controlfp** função é semelhante a **control87**, mas apenas define a palavra de controle de ponto flutuante *newControl*. Os bits nos valores indicam o estado do controle de ponto flutuante. O estado do controle de ponto flutuante permite que o programa altere os modos de precisão, arredondamento e infinito no pacote de matemática de ponto flutuante. Também pode mascarar ou Retirar máscara exceções de ponto flutuante usando **set_controlfp**. Para obter mais informações, consulte [_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md).
+O **set_controlfp** função é semelhante à **_control87**, mas ele apenas define a palavra de controle de ponto flutuante *newControl*. Os bits nos valores indicam o estado do controle de ponto flutuante. O estado do controle de ponto flutuante permite que o programa altere os modos de precisão, arredondamento e infinito no pacote de matemática de ponto flutuante. Você também pode mascarar ou remover a máscara das exceções de ponto flutuante usando **set_controlfp**. Para obter mais informações, consulte [_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md).
 
-Esta função é substituída durante a compilação com [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) porque o common language runtime suporta apenas a precisão de ponto flutuante padrão.
+Essa função foi preterida ao compilar com [/clr (compilação de tempo de execução de linguagem comum)](../../build/reference/clr-common-language-runtime-compilation.md) porque o common language runtime dá suporte apenas a precisão de ponto flutuante padrão.
 
 ## <a name="requirements"></a>Requisitos
 

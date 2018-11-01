@@ -1,27 +1,17 @@
 ---
-title: 'Controles ActiveX MFC: Avançado implementação da propriedade | Microsoft Docs'
-ms.custom: ''
+title: 'Controles ActiveX MFC: implementação da propriedade avançada'
 ms.date: 09/12/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 084ef5e2a6173340d33baea94bd1e5c5f14bff9b
-ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
+ms.openlocfilehash: d26dbcb1c18c3c939214051d9010cb5b6db90929
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50204477"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50568019"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>Controles ActiveX MFC: implementação da propriedade avançada
 

@@ -1,10 +1,6 @@
 ---
-title: _get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler | Microsoft Docs
-ms.custom: ''
+title: _get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_invalid_parameter_handler
 - _get_thread_local_invalid_parameter_handler
@@ -26,22 +22,16 @@ f1_keywords:
 - stdlib/_get_invalid_parameter_handler
 - _get_thread_local_invalid_parameter_handler
 - stdlib/_get_thread_local_invalid_parameter_handler
-dev_langs:
-- C++
 helpviewer_keywords:
 - _get_thread_local_invalid_parameter_handler function
 - _get_invalid_parameter_handler function
 ms.assetid: a176da0e-38ca-4d99-92bb-b0e2b8072f53
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0302f0ba8e7e34ca60ab73aa0193b48b8352bc77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7d1a87f9ade0845994918d5a4d59dc56e190d2b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399911"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623967"
 ---
 # <a name="getinvalidparameterhandler-getthreadlocalinvalidparameterhandler"></a>_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
 
@@ -60,7 +50,7 @@ Um ponteiro para a função do manipulador de parâmetro inválido definida atua
 
 ## <a name="remarks"></a>Comentários
 
-O **_get_invalid_parameter_handler** função obtém atualmente definida manipulador global de parâmetro inválido. Ela retornará um ponteiro nulo, se nenhum manipulador de parâmetro inválido global tiver sido definido. Da mesma forma, o **_get_thread_local_invalid_parameter_handler** obtém o manipulador de parâmetro inválido de local de thread atual do thread for chamado, ou um ponteiro nulo se nenhum manipulador foi definido. Para obter informações sobre como definir manipuladores de parâmetro inválido de thread local e global, consulte [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
+O **_get_invalid_parameter_handler** função obtém definida atualmente o manipulador de parâmetro inválido global. Ela retornará um ponteiro nulo, se nenhum manipulador de parâmetro inválido global tiver sido definido. Da mesma forma, o **_get_thread_local_invalid_parameter_handler** obtém o manipulador de parâmetro inválido local de thread atual do thread for chamado, ou um ponteiro nulo se nenhum manipulador foi definido. Para obter informações sobre como definir manipuladores de parâmetro inválido de thread local e global, consulte [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
 
 O ponteiro de função do manipulador de parâmetro inválido retornado tem o seguinte tipo:
 

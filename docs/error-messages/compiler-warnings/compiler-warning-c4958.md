@@ -1,41 +1,31 @@
 ---
-title: C4958 de aviso do compilador | Microsoft Docs
-ms.custom: ''
+title: Aviso do compilador C4958
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4958
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4958
 ms.assetid: e79b9e9c-d572-4a3a-a3b6-60962b70864a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6e32acc4ec45275976e7fb56f993b10ba8a2a855
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7d4ac6f21cfcfe0f37eb17ff81eabd3e6341a7d5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704867"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477396"
 ---
-# <a name="compiler-warning-c4958"></a>C4958 de aviso do compilador
+# <a name="compiler-warning-c4958"></a>Aviso do compilador C4958
 
 > '*operação*': aritmética de ponteiro não é verificável
 
 ## <a name="remarks"></a>Comentários
 
-Usar aritmética de ponteiro produzirá uma imagem não verificável.
+Usando a aritmética de ponteiro produzirá uma imagem não verificável.
 
-Para obter mais informações, consulte [puro e código verificável (C + + CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Para obter mais informações, consulte [código puro e verificável (C + + / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-O **/CLR: safe** opção de compilador foi preterida no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+O **/CLR: safe** opção do compilador é preterida no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
-Esse aviso é emitido como um erro e pode ser desabilitado com o [aviso](../../preprocessor/warning.md) pragma ou [/wd](../../build/reference/compiler-option-warning-level.md) opção de compilador.
+Esse aviso é emitido como um erro e pode ser desabilitado com o [aviso](../../preprocessor/warning.md) pragma ou o [/wd](../../build/reference/compiler-option-warning-level.md) opção de compilador.
 
 ## <a name="example"></a>Exemplo
 
@@ -54,7 +44,7 @@ int main( ) {
 }
 ```
 
-O compilador implementa operações de matriz com aritmética de ponteiro. Portanto, não são verificáveis; matrizes nativo Use uma matriz CLR. Para obter mais informações, consulte [matriz](../../windows/arrays-cpp-component-extensions.md).
+O compilador implementa operações de matriz com a aritmética de ponteiro. Portanto, as matrizes nativos não são verificáveis; Use uma matriz CLR. Para obter mais informações, consulte [matriz](../../windows/arrays-cpp-component-extensions.md).
 
 O exemplo a seguir gera C4958:
 

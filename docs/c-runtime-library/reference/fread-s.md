@@ -1,10 +1,6 @@
 ---
-title: fread_s | Microsoft Docs
-ms.custom: ''
+title: fread_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fread_s
 apilocation:
@@ -23,19 +19,13 @@ apitype: DLLExport
 f1_keywords:
 - fread_s
 - stdio/fread_s
-dev_langs:
-- C++
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: febfab21889afab773dd9a8405b1e07dc7798f5c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 898e813c19fd53cfdacd536c2e9819743a62a8da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401887"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519815"
 ---
 # <a name="freads"></a>fread_s
 
@@ -67,20 +57,20 @@ Tamanho do item a ser lido em bytes.
 *count*<br/>
 Número máximo de itens a serem lidos.
 
-*Fluxo*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**fread_s** retorna o número de (inteiro) itens que foram lidos no buffer, que pode ser menor que *contagem* se um erro de leitura ou até o fim do arquivo é encontrado antes *contagem* for atingido. Use o **feof** ou **ferror** função para distinguir um erro de uma condição de fim de arquivo. Se *tamanho* ou *contagem* é 0, **fread_s** retorna 0 e o conteúdo do buffer permanecem inalterado. Se *fluxo* ou *buffer* é um ponteiro nulo, **fread_s** invoca o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução é permitida para continuar, esta função define **errno** para **EINVAL** e retornará 0.
+**fread_s** retorna o número de (inteiro) de itens que foram lidos no buffer, que pode ser menor que *contagem* se um erro de leitura ou o final do arquivo é encontrado antes *contagem* for atingido. Use o **feof** ou **ferror** função para diferenciar um erro de uma condição de fim-de-arquivo. Se *tamanho* ou *contagem* é 0, o **fread_s** retorna 0 e o conteúdo do buffer é as mesmas. Se *stream* ou *buffer* é um ponteiro nulo, **fread_s** invocará o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, essa função definirá **errno** à **EINVAL** e retornará 0.
 
 Para obter mais informações sobre códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **fread_s** função lê até *contagem* itens do *elementSize* bytes da entrada *fluxo* e as armazena no *buffer*.  O ponteiro do arquivo que está associado com *fluxo* (se houver) é aumentado pelo número de bytes realmente lidos. Se o fluxo fornecido é aberto no modo de texto, pares de avanço de linha de retorno de carro são substituídos por caracteres de avanço de linha única. A substituição não interfere no ponteiro do arquivo ou no valor retornado. A posição do ponteiro do arquivo será indeterminada se ocorrer um erro. O valor de um item lido parcialmente não pode ser determinado.
+O **fread_s** função lê até *contagem* itens do *elementSize* bytes de entrada *fluxo* e as armazena no *buffer*.  O ponteiro do arquivo que está associado com *stream* (se houver) é aumentado pelo número de bytes realmente lidos. Se o fluxo em questão for aberto no modo de texto, pares de alimentação de linha de retorno de carro são substituídos por caracteres de avanço de linha única. A substituição não interfere no ponteiro do arquivo ou no valor retornado. A posição do ponteiro do arquivo será indeterminada se ocorrer um erro. O valor de um item lido parcialmente não pode ser determinado.
 
-Essa função bloqueia outros threads. Se você precisar de uma versão de não bloqueio, use **fread_nolock**.
+Essa função bloqueia outros threads. Se você precisar de uma versão sem bloqueio, use **fread_nolock**.
 
 ## <a name="requirements"></a>Requisitos
 

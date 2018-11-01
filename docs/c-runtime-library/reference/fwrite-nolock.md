@@ -1,10 +1,6 @@
 ---
-title: _fwrite_nolock | Microsoft Docs
-ms.custom: ''
+title: _fwrite_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fwrite_nolock
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _fwrite_nolock
 - fwrite_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - fwrite_nolock function
 - streams, writing data to
 - _fwrite_nolock function
 ms.assetid: 2b4ec6ce-742e-4615-8407-44a0a18ec1d7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e22f2c281b076e64419686b9f7c058e284cc5532
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c899e34e19547b30a42135f3f818f220f1bc5b7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397916"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626041"
 ---
 # <a name="fwritenolock"></a>_fwrite_nolock
 
@@ -67,7 +57,7 @@ Tamanho do item em bytes.
 *count*<br/>
 Máximo de itens a serem gravados.
 
-*Fluxo*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -76,7 +66,7 @@ O mesmo que [fwrite](fwrite.md).
 
 ## <a name="remarks"></a>Comentários
 
-Essa função é uma versão de não bloqueio de **fwrite**. Ele é idêntico ao **fwrite** exceto que ele não está protegido contra interferência por outros threads. Ela pode ser mais rápida, porque não incorre na sobrecarga de bloquear outros threads. Use esta função apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+Essa função é uma versão sem bloqueio do **fwrite**. Ela é idêntica à **fwrite** , exceto que não está protegida contra interferência de outros threads. Ela pode ser mais rápida, porque não incorre na sobrecarga de bloquear outros threads. Use esta função apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
 ## <a name="requirements"></a>Requisitos
 

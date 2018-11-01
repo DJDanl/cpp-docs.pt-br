@@ -1,10 +1,6 @@
 ---
-title: ispunct, iswpunct, _ispunct_l, _iswpunct_l | Microsoft Docs
-ms.custom: ''
+title: ispunct, iswpunct, _ispunct_l, _iswpunct_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - ispunct
 - _iswpunct_l
@@ -27,8 +23,6 @@ f1_keywords:
 - iswpunct
 - _istpunct
 - ispunct
-dev_langs:
-- C++
 helpviewer_keywords:
 - _istpunct function
 - _ispunct_l function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _iswpunct_l function
 - iswpunct_l function
 ms.assetid: 94403240-85c8-40a4-9c2b-e3e95c729c76
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9509270906de3f0a9c7a20fd5f126ecffcafcff0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 209f94bb8f9d3338f62b719d4d4b94b152ed5ab7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402664"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496378"
 ---
 # <a name="ispunct-iswpunct-ispunctl-iswpunctl"></a>ispunct, iswpunct, _ispunct_l, _iswpunct_l
 
@@ -83,11 +73,11 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada essas rotinas retornará zero se *c* é uma representação específica de um caractere de pontuação. **ispunct** retorna um valor diferente de zero para qualquer caractere imprimível que não é um caractere de espaço ou um caractere para a qual **isalnum** é diferente de zero. **iswpunct** retorna um valor diferente de zero para qualquer caractere imprimível ampla que não é o caractere de espaço ampla nem um caractere largo para o qual **iswalnum** é diferente de zero. Cada uma dessas rotinas retornará 0 se *c* não satisfaz a condição de teste.
+Cada uma dessas rotinas retornará diferente de zero se *c* é uma representação específica de um caractere de pontuação. **ispunct** retorna um valor diferente de zero para qualquer caractere imprimível que não é um caractere de espaço ou um caractere para o qual **isalnum** é diferente de zero. **iswpunct** retorna um valor diferente de zero para qualquer caractere largo imprimível que não é o caractere largo de espaço nem um caractere largo para o qual **iswalnum** é diferente de zero. Cada uma dessas rotinas retornará 0 se *c* não satisfaz a condição de teste.
 
-O resultado da condição de teste para o **ispunct** função depende do **LC_CTYPE** configuração de categoria da localidade, consulte [setlocale, wsetlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções que não têm o **_l** o uso de sufixo a localidade atual para qualquer comportamento dependente de localidade; as versões que têm o **_l** sufixo são idênticas, exceto que eles usam o localidade que é transmitida em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O resultado da condição de teste para o **ispunct** função depende do **LC_CTYPE** configuração de categoria da localidade; consulte [setlocale, wsetlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções que não têm o **l** sufixo usam a localidade atual para qualquer comportamento dependente da localidade; as versões que têm o **l** sufixo são idênticas, exceto que eles usam o localidade que é passada em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-O comportamento de **ispunct** e **ispunct_l** será indefinido se *c* não é EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca de depuração CRT é usada e *c* não é uma desses valores, o aumento de funções uma asserção.
+O comportamento de **ispunct** e **ispunct_l** é indefinido se *c* não for EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca de depuração CRT é usada e *c* é não um desses valores, as funções geram uma asserção.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

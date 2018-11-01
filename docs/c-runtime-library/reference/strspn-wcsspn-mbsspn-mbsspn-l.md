@@ -1,10 +1,6 @@
 ---
-title: strspn, wcsspn, _mbsspn, _mbsspn_l | Microsoft Docs
-ms.custom: ''
+title: strspn, wcsspn, _mbsspn, _mbsspn_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsspn_l
 - wcsspn
@@ -30,8 +26,6 @@ f1_keywords:
 - _mbsspn
 - _tcsspn
 - strspn
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcsspn function
 - strings [C++], searching
@@ -46,23 +40,19 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8b7d826b72a006e0a8b011d89dfc96aa8aea4690
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69463e23d0cddf4441716aacb11928f589ab2078
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415155"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477305"
 ---
 # <a name="strspn-wcsspn-mbsspn-mbsspnl"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 
 Retorna o índice do primeiro caractere, em uma cadeia de caracteres, que não pertence a um conjunto de caracteres.
 
 > [!IMPORTANT]
-> **mbsspn** e **mbsspn_l** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsspn** e **mbsspn_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -99,13 +89,13 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna um valor inteiro especificando o comprimento da subcadeia de caracteres em *str* que consiste inteiramente em caracteres *strCharSet*. Se *str* começa com um caractere não está em *strCharSet*, a função retornará 0.
+Retorna um valor inteiro especificando o comprimento da subcadeia de caracteres *str* que consiste inteiramente em caracteres no *strCharSet*. Se *str* começa com um caractere não em *strCharSet*, a função retornará 0.
 
 ## <a name="remarks"></a>Comentários
 
-O **strspn** função retorna o índice do primeiro caractere em *str* que não pertence ao conjunto de caracteres em *strCharSet*. A pesquisa não inclui os caracteres nulo de terminação.
+O **strspn** função retorna o índice do primeiro caractere no *str* que não pertence ao conjunto de caracteres *strCharSet*. A pesquisa não inclui os caracteres nulo de terminação.
 
-**wcsspn** e **mbsspn** são versões de caracteres largos e caracteres multibyte **strspn**. Os argumentos de **wcsspn** são caracteres largos cadeias de caracteres; desses **mbsspn** são cadeias de caracteres multibyte. **mbsspn** valida seus parâmetros. Se *str* ou *strCharSet* é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução é permitida para continuar, **_mbspn** define **errno** para **EINVAL** e retornará 0. **strspn** e **wcsspn** não validar seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
+**wcsspn** e **mbsspn** são versões de caractere largo e caracteres multibyte **strspn**. Os argumentos de **wcsspn** são largos cadeias de caracteres; aqueles de **mbsspn** são cadeias de caracteres multibyte. **mbsspn** valida seus parâmetros. Se *str* ou *strCharSet* está **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito no [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, **_mbspn** define **errno** para **EINVAL** e retornará 0. **strspn** e **wcsspn** não validam seus parâmetros. Caso contrário, essas três funções se comportam de forma idêntica.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 

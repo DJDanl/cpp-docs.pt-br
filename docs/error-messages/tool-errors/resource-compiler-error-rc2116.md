@@ -1,27 +1,17 @@
 ---
-title: RC2116 de erro do compilador de recurso | Microsoft Docs
-ms.custom: ''
+title: Erro RC2116 (compilador de recurso)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - RC2116
-dev_langs:
-- C++
 helpviewer_keywords:
 - RC2116
 ms.assetid: d9203ddf-798d-490b-be41-0dd3f7d53653
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a4e28be01c0f38579f09204a9b1312fdfe287851
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 38f500b203c0ec47743ccd76c8453ce6c9286918
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097114"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552081"
 ---
 # <a name="resource-compiler-error-rc2116"></a>Erro RC2116 (compilador de recurso)
 

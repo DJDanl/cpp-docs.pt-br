@@ -1,10 +1,6 @@
 ---
-title: tmpfile_s | Microsoft Docs
-ms.custom: ''
+title: tmpfile_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tmpfile_s
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - tmpfile_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - temporary files
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1cd7866a7135f04aa580910d5ac121311312c542
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 341e1c8ed6dd20ec7e6a3d71999fb365e45e614a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412144"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50488108"
 ---
 # <a name="tmpfiles"></a>tmpfile_s
 
@@ -63,19 +53,19 @@ Retornará 0 se for bem-sucedido; um código de erro em caso de falha.
 
 ### <a name="error-conditions"></a>Condições de Erro
 
-|*pFilePtr*|**Valor retornado**|**Conteúdo de***pFilePtr* |
+|*pFilePtr*|**Valor retornado**|**Conteúdo do***pFilePtr* |
 |----------------|----------------------|---------------------------------|
 |**NULL**|**EINVAL**|não alterado|
 
-Se ocorrer o erro de validação de parâmetro acima, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e o valor de retorno é **EINVAL**.
+Se ocorrer o erro de validação de parâmetro acima, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e o valor retornado será **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-O **tmpfile_s** função cria um arquivo temporário e coloca um ponteiro de fluxo no *pFilePtr* argumento. O arquivo temporário é criado no diretório raiz. Para criar um arquivo temporário em um diretório que não seja a raiz, use [tmpnam_s](tmpnam-s-wtmpnam-s.md) ou [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) em conjunto com [fopen](fopen-wfopen.md).
+O **tmpfile_s** função cria um arquivo temporário e coloca um ponteiro nesse fluxo na *pFilePtr* argumento. O arquivo temporário é criado no diretório raiz. Para criar um arquivo temporário em um diretório que não seja a raiz, use [tmpnam_s](tmpnam-s-wtmpnam-s.md) ou [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) em conjunto com [fopen](fopen-wfopen.md).
 
-Se o arquivo não pode ser aberto, **tmpfile_s** grava **nulo** para o *pFilePtr* parâmetro. O arquivo temporário é excluído automaticamente quando o arquivo é fechado, o programa será encerrado normalmente ou quando **rmtmp** é chamado, supondo que o diretório de trabalho atual não é alterado. O arquivo temporário é aberto no **w + b** modo (binário de leitura/gravação).
+Se o arquivo não pode ser aberto, **tmpfile_s** grava **nulo** para o *pFilePtr* parâmetro. Esse arquivo temporário é excluído automaticamente quando o arquivo é fechado quando o programa for encerrado normalmente ou quando **rmtmp** é chamado, supondo que o diretório de trabalho atual não é alterado. O arquivo temporário é aberto no **w + b** modo (leitura/gravação binária).
 
-Falha pode ocorrer se você tentar mais de **TMP_MAX_S** (consulte STDIO. H) chamadas com **tmpfile_s**.
+Falha pode ocorrer se você tentar mais de **TMP_MAX_S** (consulte STDIO. H) chamadas de com **tmpfile_s**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -88,7 +78,7 @@ Para obter informações adicionais sobre compatibilidade, consulte [Compatibili
 ## <a name="example"></a>Exemplo
 
 > [!NOTE]
-> Este exemplo pode exigir privilégios administrativos para executar no Windows.
+> Este exemplo pode exigir privilégios administrativos para ser executado no Windows.
 
 ```C
 // crt_tmpfile_s.c

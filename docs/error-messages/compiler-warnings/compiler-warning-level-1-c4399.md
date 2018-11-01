@@ -1,37 +1,27 @@
 ---
-title: Compilador (nível 1) de aviso C4399 | Microsoft Docs
-ms.custom: ''
+title: Compilador aviso (nível 1) C4399
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4399
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4399
 ms.assetid: f58d9ba7-71a0-4c3b-b26f-f946dda8af30
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aedad6aed07a6056f74ad338037a7268c722627f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 56fe0f314142d873fc02136bc2c3fe65e71f4dda
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703714"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544060"
 ---
-# <a name="compiler-warning-level-1-c4399"></a>Compilador C4399 de aviso (nível 1)
+# <a name="compiler-warning-level-1-c4399"></a>Compilador aviso (nível 1) C4399
 
 > '*símbolo*': símbolo per-process não deve ser marcado com __declspec(dllimport) quando compilado com /clr: pure
 
 ## <a name="remarks"></a>Comentários
 
-O **/clr: pure** opção de compilador foi preterida no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+O **/clr: pure** opção do compilador é preterida no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
-Dados de uma imagem nativa ou uma imagem com nativo e construções CLR não podem ser importados em uma imagem pura. Para resolver este aviso, compile com **/clr** (não **/clr: pure**) ou excluir `__declspec(dllimport)`.
+Dados de uma imagem nativa ou uma imagem com nativo e construções CLR não podem ser importados para uma imagem pura. Para resolver este aviso, compile com **/clr** (não **/clr: pure**) ou excluir `__declspec(dllimport)`.
 
 ## <a name="example"></a>Exemplo
 

@@ -1,23 +1,14 @@
 ---
-title: Erros não fatais de ML A2100 – A2149 | Microsoft Docs
-ms.custom: ''
+title: Erros não fatais A2100-A2149 (ML)
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
 ms.topic: error-reference
-dev_langs:
-- C++
 ms.assetid: 75f08cb1-b149-4bfd-9d36-77948977968b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34ad8a29e2b15b62d3e695f7b65da8b3c6b61fe8
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 29d929c8b1716b27ad594ecd130f18f429c417c5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684331"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547336"
 ---
 # <a name="ml-nonfatal-errors-a2100-a2149"></a>Erros não fatais A2100-A2149 (ML)
 

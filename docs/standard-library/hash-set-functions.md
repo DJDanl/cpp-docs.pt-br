@@ -1,18 +1,16 @@
 ---
-title: Funções &lt;hash_set&gt; | Microsoft Docs
-ms.custom: ''
+title: Funções &lt;hash_set&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-ms.openlocfilehash: 5c96ac897d870e1f8dc153847797379b6720dc7b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 05a7ffd1e3bf02a88fe6a6cce841a440550c1057
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103236"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551340"
 ---
 # <a name="lthashsetgt-functions"></a>Funções &lt;hash_set&gt;
 

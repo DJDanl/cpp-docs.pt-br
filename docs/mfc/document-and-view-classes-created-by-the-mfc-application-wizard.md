@@ -1,28 +1,18 @@
 ---
-title: Documentar e exibir Classes criadas pelo Assistente de aplicativo MFC | Microsoft Docs
-ms.custom: ''
+title: Classes de documento e exibição criadas pelo Assistente de Aplicativo MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - document classes [MFC]
 - document classes [MFC], created by application wizards
 - application wizards [MFC], document/view classes created
 - view classes [MFC], created by application wizards
 ms.assetid: 70c34a60-2701-4981-acea-c08a5787d8e6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb1a1fc6c35bfb9589e827d798cb112640fa9b2f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0ef0da4ea738d02518fb68085afc194e219103cd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417612"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464572"
 ---
 # <a name="document-and-view-classes-created-by-the-mfc-application-wizard"></a>Classes de documento e exibição criadas pelo Assistente de Aplicativo MFC
 

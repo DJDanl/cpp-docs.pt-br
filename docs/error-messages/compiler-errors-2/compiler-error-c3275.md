@@ -1,27 +1,17 @@
 ---
-title: Erro do compilador C3275 | Microsoft Docs
-ms.custom: ''
+title: Erro do compilador C3275
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3275
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3275
 ms.assetid: 5752680f-7d3e-4c42-ba9c-845e09d32e7a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ad39cf081996f583367a8e5c2cf74bbefba35478
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 937b6bc4b4268399f21089ddabe388de58d872b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042046"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609837"
 ---
 # <a name="compiler-error-c3275"></a>Erro do compilador C3275
 

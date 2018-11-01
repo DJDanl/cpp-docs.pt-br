@@ -1,10 +1,6 @@
 ---
-title: logb, logbf, logbl, _logb, _logbf | Microsoft Docs
-ms.custom: ''
+title: logb, logbf, logbl, _logb, _logbf
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - logb
 - _logb
@@ -30,8 +26,6 @@ f1_keywords:
 - _logb
 - _logbf
 - logbf
-dev_langs:
-- C++
 helpviewer_keywords:
 - _logbf function
 - mantissas, floating-point variables
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f09a243994112c3ce19d72213391e09ba23c3c4c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9f598eedaf30b1f2a1858129e648a117355d112e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402768"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466281"
 ---
 # <a name="logb-logbf-logbl-logb-logbf"></a>logb, logbf, logbl, _logb, _logbf
 
@@ -92,13 +82,13 @@ Um valor de ponto flutuante.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**logb** retorna o valor exponencial não polarizado de *x* como um inteiro com sinal representado como um valor de ponto flutuante.
+**logb** retorna o valor exponencial imparcial de *x* como um inteiro com sinal representado como um valor de ponto flutuante.
 
 ## <a name="remarks"></a>Comentários
 
-O **logb** funções extrair o valor exponencial do argumento ponto flutuante *x*, como se *x* são representados com intervalo infinito. Se o argumento *x* é desnormalizada, ele será tratado como se ele foi normalizado.
+O **logb** funções de extraem o valor exponencial do argumento de ponto flutuante *x*, como se *x* fosse representado com intervalo infinito. Se o argumento *x* for desnormalizado, ele será tratado como se fosse normalizado.
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **logb** que levar e retornar **float** ou **longo** **duplo** valores. Em um programa C, **logb** sempre usa e retorna um **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **logb** que usam e retornam **float** ou **longo** **double** valores. Em um programa do C **logb** sempre usa e retorna um **duplo**.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|

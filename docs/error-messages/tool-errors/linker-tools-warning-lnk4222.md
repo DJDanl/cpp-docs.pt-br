@@ -1,27 +1,17 @@
 ---
-title: Ferramentas de vinculador LNK4222 aviso | Microsoft Docs
-ms.custom: ''
+title: Aviso LNK4222 (Ferramentas de Vinculador)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK4222
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK4222
 ms.assetid: b7bb1794-41fb-4c83-b9b0-59c0d786a7da
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: abc4f85fbc361b37d9325f9d395a1c34e1eeed2e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 52a4fee532eb9997dcf013f95246b27fdffc4c20
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106916"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563092"
 ---
 # <a name="linker-tools-warning-lnk4222"></a>Aviso LNK4222 (Ferramentas de Vinculador)
 

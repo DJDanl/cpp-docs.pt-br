@@ -1,41 +1,31 @@
 ---
-title: C2441 de erro do compilador | Microsoft Docs
-ms.custom: ''
+title: Erro do compilador C2441
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2441
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2441
 ms.assetid: ffbd6573-777a-48dd-892f-5cf4a758dcab
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6d4224d9090f3ace43f61a10c599fafa78d21600
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7fcf333f62253eb676c0f0ada1c927ab962ae1ca
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705274"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551245"
 ---
-# <a name="compiler-error-c2441"></a>C2441 de erro do compilador
+# <a name="compiler-error-c2441"></a>Erro do compilador C2441
 
 > '*variável*': um símbolo declarado com __declspec(process) deve ser const em /clr: pure modo
 
 ## <a name="remarks"></a>Comentários
 
-O **/clr: pure** e **/CLR: safe** opções do compilador são substituídas no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
-Por padrão, as variáveis são por domínio de aplicativo em **/clr: pure**. Marcado como uma variável `__declspec(process)` em **/clr: pure** é propensa a erros se modificado em um domínio do aplicativo e de leitura em outro.
+Por padrão, variáveis são definidas por domínio de aplicativo sob **/clr: pure**. Marcado como uma variável `__declspec(process)` sob **/clr: pure** é propensa a erros, se modificado em um domínio de aplicativo e lidos em outra diferente.
 
-Portanto, o compilador aplica por processo ser variáveis `const` em **/clr: puro**, tornando-os de leitura apenas em todos os domínios de aplicativo.
+Portanto, o compilador impõe por processo de ser variáveis `const` sob **/clr: pure**, tomada-los de leitura somente em todos os domínios de aplicativo.
 
-Para obter mais informações, consulte [processo](../../cpp/process.md) e [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).
+Para obter mais informações, consulte [processo](../../cpp/process.md) e [/clr (compilação de tempo de execução de linguagem comum)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Exemplo
 

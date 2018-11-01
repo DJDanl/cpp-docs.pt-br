@@ -1,31 +1,21 @@
 ---
-title: C2457 de erro do compilador | Microsoft Docs
-ms.custom: ''
+title: Erro do compilador C2457
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2457
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2457
 ms.assetid: 347e169d-23ad-434f-8836-5b09b53980ff
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 61cdb4f4b679bab858717a6fb96838f389822a6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a08ac9f9cfbc332b90ad16c663349ee227427278
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33224917"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446625"
 ---
-# <a name="compiler-error-c2457"></a>C2457 de erro do compilador
+# <a name="compiler-error-c2457"></a>Erro do compilador C2457
 
-> '*macro*': macro predefinida não pode aparecer fora de um corpo de função
+> '*macro*': macro pré-definida não pode aparecer fora do corpo de uma função
 
 Você tentou usar uma macro predefinida, como [ &#95; &#95;função&#95;&#95;](../../preprocessor/predefined-macros.md), em um espaço global.
 
