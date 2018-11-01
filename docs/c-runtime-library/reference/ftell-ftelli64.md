@@ -1,10 +1,6 @@
 ---
-title: ftell, _ftelli64 | Microsoft Docs
-ms.custom: ''
+title: ftell, _ftelli64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ftelli64
 - ftell
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - _ftelli64
 - ftell
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftell function
 - ftelli64 function
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - file pointers [C++], getting current position
 - file pointers [C++]
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d09d29abc4d1406bd85187ceb5c6661be98229be
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc76ad0776ae82637b95d32cdc6254d3c40da5b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402423"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660519"
 ---
 # <a name="ftell-ftelli64"></a>ftell, _ftelli64
 
@@ -61,24 +51,24 @@ __int64 _ftelli64(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fluxo*<br/>
+*fluxo*<br/>
 Destino **arquivo** estrutura.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**ftell** e **ftelli64** retornar a posição atual do arquivo. O valor retornado por **ftell** e **ftelli64** podem não refletir o deslocamento de byte físico para fluxos aberto no modo de texto, como o modo de texto faz com que a conversão de avanço de linha de retorno de carro. Use **ftell** com [fseek](fseek-fseeki64.md) ou **ftelli64** com [fseeki64](fseek-fseeki64.md) para retornar para locais de arquivo corretamente. Em erro, **ftell** e **ftelli64** invocar o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam L-1 e o conjunto **errno** a uma das duas constantes, definidos em ERRNO. H. O **EBADF** constante significa o *fluxo* argumento não é um valor de ponteiro de arquivo válido ou não faz referência a um arquivo aberto. **EINVAL** significa inválido *fluxo* argumento foi passado para a função. Em dispositivos sem capacidade de busca (como terminais e impressoras), ou quando *fluxo* não se refere a um arquivo aberto, o valor retornado é indefinido.
+**ftell** e **_ftelli64** retornar a posição atual do arquivo. O valor retornado por **ftell** e **_ftelli64** podem não refletir o deslocamento de bytes físico para fluxos abertos no modo de texto, porque o modo de texto faz com que a conversão de linha de retorno de carro. Use **ftell** com [fseek](fseek-fseeki64.md) ou **_ftelli64** com [_fseeki64](fseek-fseeki64.md) para retornar para locais de arquivo corretamente. Em erro, **ftell** e **_ftelli64** invocarão o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão-1l e definirão **errno** a uma das duas constantes, definida em ERRNO. H. O **EBADF** constante significa que o *fluxo* argumento não é um valor de ponteiro de arquivo válido ou não faz referência a um arquivo aberto. **EINVAL** significa um inválido *stream* argumento foi passado para a função. Em dispositivos incapazes de fazer buscas (como terminais e impressoras), ou quando *stream* não faz referência a um arquivo aberto, o valor retornado será indefinido.
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.
 
 ## <a name="remarks"></a>Comentários
 
-O **ftell** e **ftelli64** funções recuperam a posição atual do ponteiro do arquivo (se houver) associada *fluxo*. A posição é expressa como um deslocamento relativo ao início do fluxo.
+O **ftell** e **_ftelli64** funções de recuperar a posição atual do ponteiro do arquivo (se houver) associado *fluxo*. A posição é expressa como um deslocamento relativo ao início do fluxo.
 
 Observe que quando um arquivo é aberto para acrescentar dados, a posição do arquivo atual é determinada pela última operação de E/S e não por onde a gravação seguinte ocorreria. Por exemplo, se um arquivo for aberto para fazer um acréscimo e a última operação tiver sido uma leitura, a posição do arquivo será o ponto em que a operação de leitura seguinte começaria e não onde a próxima gravação começaria. (Quando um arquivo é aberto para fazer um acréscimo, a posição do arquivo é movida para o final do arquivo antes de qualquer operação de gravação.) Se nenhuma operação de E/S tiver ocorrido em um arquivo aberto para acréscimo, a posição do arquivo será o início do arquivo.
 
-No modo de texto, CTRL+Z é interpretado como um caractere de fim do arquivo na entrada. Em arquivos abertos para leitura/gravação, **fopen** e todas as rotinas relacionadas verificar um CTRL + Z no final do arquivo e removê-la se possível. Isso é feito porque usando a combinação de **ftell** e [fseek](fseek-fseeki64.md) ou **ftelli64** e [fseeki64](fseek-fseeki64.md), mover dentro de um arquivo que termina com pode causar um CTRL + Z **ftell** ou **ftelli64** se comporte incorretamente no final do arquivo.
+No modo de texto, CTRL+Z é interpretado como um caractere de fim do arquivo na entrada. Em arquivos abertos para leitura/gravação **fopen** e todas as rotinas relacionadas a verificar se há um CTRL + Z no final do arquivo e removem-la se possível. Isso é feito porque usar a combinação de **ftell** e [fseek](fseek-fseeki64.md) ou **_ftelli64** e [_fseeki64](fseek-fseeki64.md)para movimentação dentro de um arquivo que termina com CTRL + Z pode causar **ftell** ou **_ftelli64** se comportar incorretamente perto do fim do arquivo.
 
-Essa função bloqueia o thread de chamada durante a execução e, portanto, é thread-safe. Para obter uma versão de não bloqueio, consulte **ftell_nolock**.
+Essa função bloqueia o thread de chamada durante a execução e, portanto, é thread-safe. Para obter uma versão sem bloqueio, consulte **ftell_nolock**.
 
 ## <a name="requirements"></a>Requisitos
 

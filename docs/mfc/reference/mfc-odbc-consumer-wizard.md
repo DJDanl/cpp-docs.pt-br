@@ -1,33 +1,23 @@
 ---
-title: Assistente de consumidor ODBC do MFC | Microsoft Docs
-ms.custom: ''
+title: Assistente de consumidor ODBC MFC
 ms.date: 10/03/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.mfc.consumer.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9623fae94891c62cca2ce34c621823251b65fe9
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: f86eded7cc7c04a85b1bcd93e917bd5a2b5c9696
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082599"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590873"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Assistente de consumidor ODBC MFC
 
 > [!WARNING]
-> No Visual Studio 2017 versão 15,9 este assistente de código foi preterido e será removido em uma versão futura do Visual Studio. Este assistente é raramente usado. Suporte geral para ATL e MFC não é afetado pela remoção desse assistente. Se você quiser compartilhar seus comentários sobre essa substituição, conclua [desta pesquisa](https://www.surveymonkey.com/r/QDWKKCN). Sua opinião é importante para nós.
+> No Visual Studio 2017 versão 15.9, esse assistente de código foi preterido e será removido em uma versão futura do Visual Studio. Este assistente é raramente usado. O suporte geral para ATL e MFC não é afetado pela remoção do assistente. Se você quiser compartilhar seus comentários sobre essa alteração, participe [desta pesquisa](https://www.surveymonkey.com/r/QDWKKCN). Seus comentários são importantes para nós.
 
 Este assistente configura uma classe de conjunto de registros ODBC e as associações de dados necessário para acessar a fonte de dados especificado.
 

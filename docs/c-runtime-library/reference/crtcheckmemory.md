@@ -1,10 +1,6 @@
 ---
-title: _CrtCheckMemory | Microsoft Docs
-ms.custom: ''
+title: _CrtCheckMemory
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtCheckMemory
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtCheckMemory
 - _CrtCheckMemory
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtCheckMemory function
 - CrtCheckMemory function
 ms.assetid: 457cc72e-60fd-4177-ab5c-6ae26a420765
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0b6d4b84fd717525e7206956964204794fe6b88c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cb39a76c140934dabdd1269c02aba6018691f917
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396658"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537144"
 ---
 # <a name="crtcheckmemory"></a>_CrtCheckMemory
 
@@ -56,9 +46,9 @@ Se for bem-sucedido, **crtcheckmemory** retorna TRUE; caso contrário, a funçã
 
 ## <a name="remarks"></a>Comentários
 
-O **crtcheckmemory** função valida a memória alocada pelo Gerenciador de heap de depuração, verificando o heap base subjacente e inspecionar todos os blocos de memória. Se uma inconsistência de memória ou de erro for encontrada no heap base subjacente, as informações de cabeçalho de depuração ou buffers de substituição, **crtcheckmemory** gera um relatório de depuração com informações que descrevem a condição de erro. Quando [Debug](../../c-runtime-library/debug.md) não está definido, chamadas para **crtcheckmemory** são removidos durante o pré-processamento.
+O **crtcheckmemory** função valida a memória alocada pelo Gerenciador de heap de depuração verificando o heap base subjacente e inspecionando cada bloco de memória. Se uma inconsistência de memória ou de erro for encontrada no heap base subjacente, as informações de cabeçalho de depuração ou buffers de substituição, **crtcheckmemory** gera um relatório de depuração com informações que descrevem a condição de erro. Quando [Debug](../../c-runtime-library/debug.md) não está definido, as chamadas a **crtcheckmemory** são removidas durante o pré-processamento.
 
-O comportamento de **crtcheckmemory** pode ser controlada definindo os campos de bit do [crtdbgflag](../../c-runtime-library/crtdbgflag.md) sinalizador usando o [crtsetdbgflag](crtsetdbgflag.md) função. Ativando o **crtdbg_check_always_df** resultados ON do campo de bit **crtcheckmemory** que está sendo chamado sempre que uma operação de alocação de memória é solicitada. Embora esse método reduza a velocidade de execução, ele é útil para capturar erros rapidamente. Ativando o **crtdbg_alloc_mem_df** causas de fora do campo de bit **crtcheckmemory** para não verificar heap e retornará imediatamente **TRUE**.
+O comportamento de **crtcheckmemory** pode ser controlado definindo os campos de bit a [crtdbgflag](../../c-runtime-library/crtdbgflag.md) sinalizador usando o [crtsetdbgflag](crtsetdbgflag.md) função. Ativar o **crtdbg_check_always_df** resultados Diante do campo de bit **crtcheckmemory** que está sendo chamado sempre que uma operação de alocação de memória é solicitada. Embora esse método reduza a velocidade de execução, ele é útil para capturar erros rapidamente. Ativar o **crtdbg_alloc_mem_df** faz com que campo de bits **crtcheckmemory** para não verificar a pilha e retornar imediatamente **verdadeiro**.
 
 Como essa função retorna **TRUE** ou **FALSE**, ela pode ser passada para uma das macros [_ASSERT](assert-asserte-assert-expr-macros.md) para criar um mecanismo simples de tratamento de erro de depuração. O seguinte exemplo causa uma falha de asserção se o dano é detectado no heap:
 
@@ -66,7 +56,7 @@ Como essa função retorna **TRUE** ou **FALSE**, ela pode ser passada para uma 
 _ASSERTE( _CrtCheckMemory( ) );
 ```
 
-Para obter mais informações sobre como **crtcheckmemory** pode ser usado com outras funções de depuração, consulte [funções de emissão de relatórios de estado de Heap](/visualstudio/debugger/crt-debug-heap-details). Para obter uma visão geral do gerenciamento de memória e do heap de depuração, consulte [Detalhes do heap de depuração do CRT](/visualstudio/debugger/crt-debug-heap-details).
+Para obter mais informações sobre como **crtcheckmemory** pode ser usado com outras funções de depuração, consulte [funções de relatório de estado de Heap](/visualstudio/debugger/crt-debug-heap-details). Para obter uma visão geral do gerenciamento de memória e do heap de depuração, consulte [Detalhes do heap de depuração do CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Requisitos
 

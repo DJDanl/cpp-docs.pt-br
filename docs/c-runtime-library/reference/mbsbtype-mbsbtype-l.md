@@ -1,10 +1,6 @@
 ---
-title: _mbsbtype, _mbsbtype_l | Microsoft Docs
-ms.custom: ''
+title: _mbsbtype, _mbsbtype_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsbtype_l
 - _mbsbtype
@@ -26,24 +22,18 @@ f1_keywords:
 - mbsbtype_l
 - _mbsbtype_l
 - _mbsbtype
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbsbtype function
 - mbsbtype function
 - _mbsbtype_l function
 - mbsbtype_l function
 ms.assetid: 0d5dd91a-d32d-4f98-ac57-98dfc9e98eac
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: be098cb1fe53e1345f0c4f40212657f4bfd97f4f
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5c2927b4e4b68b1284341fe7e767ec50feb21a44
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451013"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566797"
 ---
 # <a name="mbsbtype-mbsbtypel"></a>_mbsbtype, _mbsbtype_l
 
@@ -83,18 +73,18 @@ Localidade a usar.
 
 |Valor retornado|Tipo de byte|
 |------------------|---------------|
-|**_MBC_SINGLE** (0)|Caractere de um byte. Por exemplo, na página de código 932, **mbsbtype** retornará 0 se o byte especificado está dentro do intervalo 0x20-0x7E ou 0xA1 - 0xDF.|
-|**_MBC_LEAD** (1)|Byte inicial do caractere multibyte. Por exemplo, na página de código 932, **mbsbtype** retornará 1 se o byte especificado está dentro do intervalo 0x81-0x9F ou 0xE0 - 0xFC.|
-|**_MBC_TRAIL** (2)|Byte à direita do caractere multibyte. Por exemplo, na página de código 932, **mbsbtype** retorna 2 se o byte especificado está dentro do intervalo 0x40-0x7E ou 0x80 - 0xFC.|
-|**_MBC_ILLEGAL** (-1)|**NULO** cadeia de caracteres, um caractere inválido ou byte nulo encontrado antes de bytes no deslocamento *contagem* na *mbstr*.|
+|**_MBC_SINGLE** (0)|Caractere de um byte. Por exemplo, na página de código 932, **mbsbtype** retornará 0 se o byte especificado estiver dentro do intervalo 0x20 – 0x7E ou 0xA1 – 0xDF.|
+|**_MBC_LEAD** (1)|Byte inicial do caractere multibyte. Por exemplo, na página de código 932, **mbsbtype** retornará 1 se o byte especificado estiver dentro do intervalo 0x81 – 0x9F ou 0xE0 – 0xFC.|
+|**_MBC_TRAIL** (2)|Byte à direita do caractere multibyte. Por exemplo, na página de código 932, **mbsbtype** retorna 2 se o byte especificado estiver dentro do intervalo 0x40 – 0x7E ou 0x80 – 0xFC.|
+|**_MBC_ILLEGAL** (-1)|**NULO** cadeia de caracteres, caractere inválido ou byte nulo encontrado antes do byte no deslocamento *contagem* na *mbstr*.|
 
 ## <a name="remarks"></a>Comentários
 
-O **mbsbtype** função determina o tipo de um byte em uma cadeia de caracteres multibyte. A função examina apenas os bytes no deslocamento *contagem* na *mbstr*, ignorando os caracteres inválidos antes do byte especificado.
+O **mbsbtype** função determina o tipo de um byte em uma cadeia de caracteres multibyte. A função examina somente os bytes no deslocamento *contagem* na *mbstr*, ignorando os caracteres inválidos antes do byte especificado.
 
-O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. A versão dessa função sem o **_l** sufixo usa a localidade atual para este comportamento dependente de localidade; a versão com o **_l** sufixo é idêntico, exceto que ele use o parâmetro de localidade passado em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. A versão dessa função sem o **l** sufixo usa a localidade atual desse comportamento dependente da localidade; a versão com o **l** sufixo é idêntico, exceto que ele use o parâmetro de localidade passado em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Se a cadeia de caracteres de entrada é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e a função retorna **_MBC_ILLEGAL**.
+Se a cadeia de caracteres de entrada estiver **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e a função retornará **_MBC_ILLEGAL**.
 
 ## <a name="requirements"></a>Requisitos
 

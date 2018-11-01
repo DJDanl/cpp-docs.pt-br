@@ -1,10 +1,6 @@
 ---
-title: _execvp, _wexecvp | Microsoft Docs
-ms.custom: ''
+title: _execvp, _wexecvp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execvp
 - _wexecvp
@@ -25,24 +21,18 @@ f1_keywords:
 - _execvp
 - wexecvp
 - _wexecvp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _execvp function
 - _wexecvp function
 - wexecvp function
 - execvp function
 ms.assetid: a4db15df-b204-4987-be7c-de84c3414380
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c47154bd999b421c2170118236a899dcc4e2860
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 876ace62ac46b80d42f3ed0a3549757839e0b47a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402212"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505298"
 ---
 # <a name="execvp-wexecvp"></a>_execvp, _wexecvp
 
@@ -74,7 +64,7 @@ Matriz de ponteiros para os parâmetros.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de -1 indica um erro, caso em que o **errno** variável global está definido.
+Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de -1 indica um erro, caso em que o **errno** variável global é definida.
 
 |**errno** valor|Descrição|
 |-------------------|-----------------|
@@ -90,9 +80,9 @@ Para obter mais informações sobre esses e outros códigos de retorno, consulte
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções carrega e executa um novo processo, passando uma matriz de ponteiros para os argumentos de linha de comando e usar o **caminho** variável de ambiente para localizar o arquivo para executar.
+Cada uma dessas funções carrega e executa um novo processo, passando uma matriz de ponteiros para argumentos de linha de comando e usando o **caminho** variável de ambiente para localizar o arquivo a ser executado.
 
-O **execvp** funções validam seus parâmetros. Se o *cmdname* é um ponteiro nulo, ou *argv* é um ponteiro nulo, o ponteiro para uma matriz em branco, ou se a matriz contém uma cadeia de caracteres vazia como o primeiro argumento, essas funções invocar o manipulador de parâmetro inválido conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL** e retorne -1. Nenhum processo é inicializado.
+O **execvp** funções validam seus parâmetros. Se o *cmdname* for um ponteiro nulo, ou *argv* for um ponteiro nulo, ponteiro para uma matriz vazia, ou se a matriz contiver uma cadeia de caracteres vazia como o primeiro argumento, essas funções invocarão o manipulador de parâmetro inválido conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e retornarão -1. Nenhum processo é inicializado.
 
 ## <a name="requirements"></a>Requisitos
 

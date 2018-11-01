@@ -1,27 +1,17 @@
 ---
-title: Erro do compilador C3399 | Microsoft Docs
-ms.custom: ''
+title: Erro do compilador C3399
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3399
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3399
 ms.assetid: 306ad199-d150-4f6c-bcf1-24a7948b93be
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d3cae3c038e4af4a58756ad7387472c081bf4c3d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e400c181f987a83588f8aedc63ecdedb82be310f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016787"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50568669"
 ---
 # <a name="compiler-error-c3399"></a>Erro do compilador C3399
 

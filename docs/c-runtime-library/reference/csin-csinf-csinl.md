@@ -1,11 +1,6 @@
 ---
-title: csin, csinf, csinl | Microsoft Docs
-ms.custom: ''
+title: csin, csinf, csinl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - csin
 - csinf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/csin
 - complex/csinf
 - complex/csinl
-dev_langs:
-- C++
 helpviewer_keywords:
 - csin function
 - csinf function
 - csinl function
 ms.assetid: 3ed475e8-9aae-42ba-a25c-7ae656a0fd4d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 572220af53fe937dd0d5306f0e0e7d287b1d41b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 66483c9121750c3333850d6244704b89b8893cad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397308"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50633487"
 ---
 # <a name="csin-csinf-csinl"></a>csin, csinf, csinl
 
@@ -79,11 +68,11 @@ Um número complexo que representa um ângulo, em radianos.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O seno de *z*, em radianos.
+O seno *z*, em radianos.
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **csin** que levar e retornar **_Fcomplex** e **_Lcomplex** valores. Em um programa C, **csin** sempre usa e retorna um **_Dcomplex** valor.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **csin** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **csin** sempre usa e retorna um **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 

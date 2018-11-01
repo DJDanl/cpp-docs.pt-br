@@ -1,10 +1,6 @@
 ---
-title: _open_osfhandle | Microsoft Docs
-ms.custom: ''
+title: _open_osfhandle
 ms.date: 05/29/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _open_osfhandle
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _open_osfhandle
 - open_osfhandle
-dev_langs:
-- C++
 helpviewer_keywords:
 - open_osfhandle function
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: af3783420389dc008e39c818c39406f0b2af8af5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e8b7dc097c1af60894c627b8b660c4d9d81361db
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569830"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519451"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -64,13 +54,13 @@ Tipos de operações permitidas.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, **open_osfhandle** retorna um descritor de arquivo de tempo de execução C. Caso contrário, retornará -1.
+Se for bem-sucedido, **open_osfhandle** retorna um descritor de arquivo de tempo de execução C. Caso contrário, ele retornará -1.
 
 ## <a name="remarks"></a>Comentários
 
-O **open_osfhandle** função aloca um descritor de arquivo de tempo de execução do C e a associa o identificador de arquivo do sistema operacional especificado pelo *osfhandle*. Para evitar um aviso do compilador, converter o *osfhandle* argumento de **tratar** para **intptr_t**. O *sinalizadores* argumento é uma expressão de inteiro formada de um ou mais das constantes de manifesto definidos no \<fcntl.h >. Quando duas ou mais constantes de manifesto são usados para formar o *sinalizadores* argumento, as constantes são combinadas com o operador OR bit a bit ( **&#124;** ).
+O **open_osfhandle** função aloca um descritor de arquivo de tempo de execução do C e a associa com o identificador de arquivo do sistema operacional especificado por *osfhandle*. Para evitar um aviso do compilador, converta a *osfhandle* argumento de **MANIPULAR** para **intptr_t**. O *sinalizadores* argumento é uma expressão inteira formada por uma ou mais das constantes de manifesto definidas em \<fcntl. h >. Quando duas ou mais constantes manifestas são usadas para formar o *sinalizadores* argumento, as constantes são combinadas com o operador OR bit a bit ( **&#124;** ).
 
-Constantes de manifesto são definidos no \<fcntl.h >:
+Essas constantes de manifesto são definidas em \<fcntl. h >:
 
 |||
 |-|-|
@@ -79,7 +69,7 @@ Constantes de manifesto são definidos no \<fcntl.h >:
 **\_O\_TEXT**|Abre o arquivo no modo de texto (convertido).
 **\_O\_WTEXT**|Abre o arquivo no modo Unicode (convertido em UTF-16).
 
-O **open_osfhandle** chamada transfere a propriedade do identificador de arquivo do Win32 para o descritor de arquivo. Para fechar um arquivo aberto com **open_osfhandle**, chame [ \_fechar](close.md). O identificador de arquivo do sistema operacional subjacente também é fechado por uma chamada para **echar**, portanto, não é necessário chamar a função Win32 **CloseHandle** no identificador do original. Se o descritor de arquivo pertence a um **arquivo &#42;**  fluxo, em seguida, chamar [fclose](fclose-fcloseall.md) naquele **arquivo &#42;**  fluxo também fecha ambos o descritor de arquivo e o Identificador subjacente. Nesse caso, não chame **echar** no descritor de arquivo.
+O **open_osfhandle** chamada transfere a propriedade do identificador de arquivo do Win32 para o descritor de arquivo. Para fechar um arquivo aberto com **open_osfhandle**, chame [ \_fechar](close.md). O identificador de arquivo do sistema operacional subjacente também é fechado por uma chamada para **Close**, portanto, não é necessário chamar a função Win32 **CloseHandle** no identificador original. Se o descritor de arquivo pertence a um **arquivo &#42;**  fluxo, em seguida, chamar [fclose](fclose-fcloseall.md) em que **arquivo &#42;**  fluxo também fecha o descritor do arquivo e o Identificador subjacente. Nesse caso, não chame **Close** no descritor de arquivo.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,27 +1,17 @@
 ---
-title: Ferramentas de vinculador LNK4065 aviso | Microsoft Docs
-ms.custom: ''
+title: Aviso LNK4065 (Ferramentas de Vinculador)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK4065
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK4065
 ms.assetid: aa5c9e2c-9ad3-4460-8605-4c12bbc6d423
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98de30e7514c515d50751fab73533912e33da30e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 458685482e7cd5c61710c0080e99763c65e852e6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46135966"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569208"
 ---
 # <a name="linker-tools-warning-lnk4065"></a>Aviso LNK4065 (Ferramentas de Vinculador)
 

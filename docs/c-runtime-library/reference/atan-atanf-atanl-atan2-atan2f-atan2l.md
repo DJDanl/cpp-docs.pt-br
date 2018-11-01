@@ -1,10 +1,6 @@
 ---
-title: atan, atanf, atanl, atan2, atan2f, atan2l | Microsoft Docs
-ms.custom: ''
+title: atan, atanf, atanl, atan2, atan2f, atan2l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atan2f
 - atan2l
@@ -32,8 +28,6 @@ f1_keywords:
 - atanl
 - atanf
 - atan2f
-dev_langs:
-- C++
 helpviewer_keywords:
 - atan function
 - atanf function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e1f8b60c25c57e3e2eb6a9a964fd80664e3aa4c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59a67b0d213a11630f551fd7582b44aab60e314f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393892"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541720"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
@@ -86,21 +76,21 @@ Quaisquer números.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**ATAN** retorna o arco tangente de *x* no intervalo - π/2 a π/2 radianos. **ATAN2** retorna o arco tangente de *y*/*x* no intervalo - π, em radianos π. Se *x* é 0, **atan** retornará 0. Se ambos os parâmetros de **atan2** são 0, a função retornará 0. Todos os resultados estão em radianos.
+**ATAN** retorna o arco tangente *x* na - π/2 de intervalo para π/2 radianos. **ATAN2** retorna o arco tangente *y*/*x* no intervalo - π, em radianos π. Se *x* é 0, o **atan** retornará 0. Se ambos os parâmetros de **atan2** são 0, a função retornará 0. Todos os resultados estão em radianos.
 
 **ATAN2** usa os sinais de ambos os parâmetros para determinar o quadrante do valor de retorno.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|nenhum|**DOMAIN**|
+|± **QNAN**, **IND**|nenhum|**_DOMAIN**|
 
 ## <a name="remarks"></a>Comentários
 
-O **atan** função calcula o arco tangente (a função de tangente inversa) de *x*. **ATAN2** calcula o arco tangente de *y*/*x* (se *x* é igual a 0, **atan2** retorna π/2 se *y* for positivo, - π/2 se *y* for negativo ou 0 se *y* é 0.)
+O **atan** função calcula o arco tangente (a função inversa da tangente) de *x*. **ATAN2** calcula o arco tangente *y*/*x* (se *x* for igual a 0, **atan2** retorna π/2 se *y* for positivo, - π/2 if *y* for negativo ou 0 se *y* é 0.)
 
-**ATAN** tem uma implementação que usa extensões Streaming SIMD 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
+**ATAN** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **atan** e **atan2** que usam **float** ou **longo** **duplo**  argumentos. Em um programa C, **atan** e **atan2** sempre fazer **duplo** argumentos e retornar um **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **atan** e **atan2** que utilizam **float** ou **longo** **duplo**  argumentos. Em um programa C, **atan** e **atan2** sempre têm **double** argumentos e retornar um **double**.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,10 +1,6 @@
 ---
-title: _printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l | Microsoft Docs
-ms.custom: ''
+title: _printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _printf_p
 - _wprintf_p
@@ -31,8 +27,6 @@ f1_keywords:
 - _wprintf_p_l
 - _printf_p_l
 - wprintf_p_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - printf_p function
 - printf_p_l function
@@ -45,16 +39,12 @@ helpviewer_keywords:
 - tprintf_p_l function
 - _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 09a66fc0149b33d8fb5fe2d7eab411bf66e8dbdc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c7d798bde3ab68541bdcd64b768275b864694284
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404237"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660350"
 ---
 # <a name="printfp-printfpl-wprintfp-wprintfpl"></a>_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 
@@ -100,18 +90,18 @@ Retorna o número de caracteres impressos ou um valor negativo se ocorrer um err
 
 ## <a name="remarks"></a>Comentários
 
-O **printf_p** função formata e imprime uma série de caracteres e valores para o fluxo de saída padrão, **stdout**. Se argumentos siga o *formato* cadeia de caracteres, o *formato* cadeia de caracteres deve conter especificações que determinam o formato de saída para os argumentos (consulte [deparâmetrosposicionaisprintf_p](../../c-runtime-library/printf-p-positional-parameters.md)).
+O **printf_p** função formata e imprime uma série de caracteres e valores para o fluxo de saída padrão **stdout**. Se os argumentos seguirem o *formato* cadeia de caracteres, o *formato* cadeia de caracteres deve conter especificações que determinam o formato de saída para os argumentos (consulte [parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md)).
 
-A diferença entre **printf_p** e **printf_s** é que **printf_p** oferece suporte a parâmetros de posição, que permite especificar a ordem em que os argumentos são usado na cadeia de caracteres de formato. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+A diferença entre **printf_p** e **printf_s** é que **printf_p** dá suporte a parâmetros posicionais, o que permite especificar a ordem na qual os argumentos são usado na cadeia de caracteres de formato. Para obter mais informações, consulte [Parâmetros posicionais printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-**wprintf_p** é a versão de caractere largo de **printf_p**; se comportam de forma idêntica se o fluxo está aberto no modo de ANSI. **printf_p** atualmente não suportam a saída em um fluxo UNICODE.
+**wprintf_p** é a versão de caractere largo de **printf_p**; eles têm comportamento idêntico se o fluxo é aberto no modo ANSI. **printf_p** atualmente, não suporta a saída em um fluxo UNICODE.
 
-As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
 > [!IMPORTANT]
 > Verifique se *format* não é uma cadeia de caracteres definida pelo usuário.
 
-Se *formato* ou *argumento* são **nulo**, ou do formato de cadeia de caracteres contém caracteres inválidos de formatação, **printf_p** e **wprintf_p** funções chamar um manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, a função retornará -1 e conjuntos de **errno** para **EINVAL**.
+Se *formato* ou *argumento* são **nulo**, ou do formato de cadeia de caracteres contém caracteres de formatação inválidos **printf_p** e **wprintf_p** funções invocarão um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará -1 e definirá **errno** à **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -127,7 +117,7 @@ Se *formato* ou *argumento* são **nulo**, ou do formato de cadeia de caracteres
 |**printf_p**, **printf_p_l**|\<stdio.h>|
 |**wprintf_p**, **wprintf_p_l**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos do Windows UWP (plataforma Universal). Os identificadores de fluxo padrão que estão associados com o console, **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C podem usá-los em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 
