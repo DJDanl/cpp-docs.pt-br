@@ -1,11 +1,6 @@
 ---
-title: norma, normf, norml | Microsoft Docs
-ms.custom: ''
+title: norm, normf, norml
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - norm
 - normf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/norm
 - complex/normf
 - complex/norml
-dev_langs:
-- C++
 helpviewer_keywords:
 - norm function
 - normf function
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 272f43a7b92c069da8fc4eda64a678ff38efd6ab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c1803a54f0dfc27975af5bb0eeb7e5c042b2579
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401123"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628105"
 ---
 # <a name="norm-normf-norml"></a>norm, normf, norml
 
@@ -72,19 +61,19 @@ Um número complexo.
 
 ## <a name="return-value"></a>Valor de retorno
 
-A magnitude de quadrados do *z*.
+A magnitude quadrada de *z*.
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **norma** que usam **_Fcomplex** ou **_Lcomplex** valores e retornar **float** ou **long double** valores. Em um programa C, **norma** sempre leva um **_Dcomplex** valor e retorna um **duplo** valor.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **norma** que utilizam **fcomplex** ou **_Lcomplex** valores e retornar **float** ou **longo duplo** valores. Em um programa do C **norma** sempre usa um **_Dcomplex** valor e retorna um **double** valor.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho C|Cabeçalho C++|
 |-------------|--------------|------------------|
-|**norma**, **normf**, **norml**|\<complex.h>|\<complex.h>|
+|**NORM**, **normf**, **norml**|\<complex.h>|\<complex.h>|
 
-O **_Fcomplex**, **_Dcomplex**, e **_Lcomplex** tipos são equivalentes específicas da Microsoft dos tipos de C99 nativo não implementados **float Complex** , **Complex duplo**, e **Complex long double**, respectivamente.  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+O **fcomplex**, **_Dcomplex**, e **_Lcomplex** tipos são equivalentes de específico da Microsoft dos tipos nativos não implementados C99 **float Complex** , **double Complex**, e **long double Complex**, respectivamente.  Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 

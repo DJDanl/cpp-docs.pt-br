@@ -1,10 +1,6 @@
 ---
-title: round, roundf, roundl | Microsoft Docs
-ms.custom: ''
+title: round, roundf, roundl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - round
 - roundl
@@ -26,23 +22,17 @@ f1_keywords:
 - roundf
 - roundl
 - round
-dev_langs:
-- C++
 helpviewer_keywords:
 - roundl function
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83c157793b80ec851f2c6159a5454f7101d2baed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 126c6bace2b79123094a7f8bcc8f3d3378391d96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407233"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591754"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -75,15 +65,15 @@ O valor do ponto flutuante a ser arredondado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **arredondar** funções retornam um valor de ponto flutuante que representa o inteiro mais próximo para *x*. Valores decimais são arredondados para cima, independentemente da configuração do modo de arredondamento de ponto flutuante. Nenhum erro é retornado.
+O **arredondar** funções retornam um valor de ponto flutuante que representa o inteiro mais próximo a *x*. Valores decimais são arredondados para cima, independentemente da configuração do modo de arredondamento de ponto flutuante. Nenhum erro é retornado.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|nenhum|**DOMAIN**|
+|± **QNAN**, **IND**|nenhum|**_DOMAIN**|
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **arredondar** que levar e retornar **float** e **longo** **duplo** valores. Em um programa C, **arredondar** sempre usa e retorna um **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **arredondar** que usam e retornam **float** e **longo** **double** valores. Em um programa do C **arredondar** sempre usa e retorna um **duplo**.
 
 ## <a name="requirements"></a>Requisitos
 

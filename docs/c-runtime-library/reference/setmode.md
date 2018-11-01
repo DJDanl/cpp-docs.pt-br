@@ -1,10 +1,6 @@
 ---
-title: _setmode | Microsoft Docs
-ms.custom: ''
+title: _setmode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _setmode
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _setmode
-dev_langs:
-- C++
 helpviewer_keywords:
 - Unicode [C++], console output
 - files [C++], modes
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 59aed27ec4803cd1709635da44ef37d748342e29
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 887936299dce0a13738f9dd891a168785d17c979
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407490"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617432"
 ---
 # <a name="setmode"></a>_setmode
 
@@ -68,18 +58,18 @@ Novo modo de conversão.
 
 Se bem-sucedido, retorna para o modo de conversão anterior.
 
-Se parâmetros inválidos forem passados para essa função, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, esta função retornará -1 e conjuntos de **errno** como **EBADF**, que indica que um descritor de arquivo inválido ou **EINVAL**, que indica um inválido *modo* argumento.
+Se parâmetros inválidos forem passados para essa função, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retornará -1 e definirá **errno** para um **EBADF**, que indica um descritor de arquivo inválido, ou **EINVAL**, que indica um inválido *modo* argumento.
 
 Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **setmode** função define como *modo* o modo de conversão do arquivo fornecido pelo *fd*. Passando **o_text** como *modo* define o texto (que é, convertido) modo. Combinações de feed (CR LF) carro retorno de linha são convertidas em uma única linha de caractere de alimentação na entrada. Os caracteres de alimentação de linha são convertidos para combinações CR-LF na saída. Passando **o_binary** conjuntos (não traduzido) modo binário, na qual essas conversões são suprimidos.
+O **setmode** função define como *modo* o modo de conversão do arquivo fornecido pelo *fd*. Passando **o_text** como *modo* define o texto (ou seja, convertido) modo. Combinações de (CR-LF) feeds do carro de retorno de linha são convertidas em uma única linha, caractere de alimentação na entrada. Os caracteres de alimentação de linha são convertidos para combinações CR-LF na saída. Passando **o_binary** conjuntos (não convertido) modo binário, em que essas conversões são suprimidas.
 
-Você também pode passar **_O_U16TEXT**, **_O_U8TEXT**, ou **_O_WTEXT** para habilitar o modo de Unicode, conforme demonstrado no segundo exemplo neste documento. **setmode** normalmente é usado para modificar o modo de conversão padrão de **stdin** e **stdout**, mas você pode usá-lo em qualquer arquivo. Se você aplicar **setmode** para o descritor de arquivo para um fluxo, chame **setmode** antes de executar quaisquer operações de entrada ou saídas no fluxo.
+Você também pode passar **_O_U16TEXT**, **_O_U8TEXT**, ou **o_wtext** para habilitar o modo Unicode, conforme demonstrado no segundo exemplo neste documento. **setmode** normalmente é usado para modificar o modo de conversão padrão de **stdin** e **stdout**, mas você pode usá-lo em qualquer arquivo. Se você aplicar **setmode** para o descritor de arquivo para um fluxo, chame **setmode** antes de executar quaisquer operações de entrada ou saídas no fluxo.
 
 > [!CAUTION]
-> Se você gravar dados em um fluxo de arquivo, liberação explicitamente o código usando [fflush](fflush.md) antes de usar **setmode** para alterar o modo. Se você não limpar o código, pode ocorrer comportamento inesperado. Se você não tiver dados gravados no fluxo, não será preciso limpar o código.
+> Se você gravar dados em um fluxo de arquivos, limpe explicitamente o código por meio [fflush](fflush.md) antes de usar **setmode** para alterar o modo. Se você não limpar o código, pode ocorrer comportamento inesperado. Se você não tiver dados gravados no fluxo, não será preciso limpar o código.
 
 ## <a name="requirements"></a>Requisitos
 

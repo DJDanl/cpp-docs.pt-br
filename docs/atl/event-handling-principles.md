@@ -1,12 +1,6 @@
 ---
-title: Princípios (ATL) de manipulação de eventos | Microsoft Docs
-ms.custom: ''
+title: Princípios (ATL) de manipulação de eventos
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - event handling, implementing
 - event handling, advising event sources
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - dual interfaces, event interfaces
 - event handling, dual event interfaces
 ms.assetid: d17ca7cb-54f2-4658-ab8b-b721ac56801d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9931e194236871b9d767805464928fd4e553015e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e460685d17a568d9e3b49af40dd1e3f1dbda7c28
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762867"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610984"
 ---
 # <a name="event-handling-principles"></a>Princípios de manipulação de eventos
 

@@ -1,29 +1,19 @@
 ---
-title: Registrar uso | Microsoft Docs
-ms.custom: ''
+title: Uso do registro
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: ce58e2cf-afd3-4068-980e-28a209298265
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c77469a8cef03827101f4bf367c00a3bb440820
-ms.sourcegitcommit: 4fc6869067d533b175207befd2dc60346afee285
+ms.openlocfilehash: fa04318ad4af298f300fbbbad8c01d0df9500ec7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225213"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629977"
 ---
 # <a name="register-usage"></a>Uso do registro
 
-X64 arquitetura fornece para 16 registros de uso gerais (daqui em diante chamados registra inteiro), bem como XMM 16/YMM registra disponíveis para uso de ponto flutuante. Os registros voláteis são registros a partir do zero presumidos pelo chamador para serem destruídos em uma chamada. Os registros não voláteis são obrigados a manter seus valores em uma chamada de função e devem ser salvos pelo receptor da chamada se usados.
+X64 arquitetura fornece para 16 registros de uso geral (citados como registros de inteiros), bem como para 16 registros XMM/YMM registra disponíveis para uso de ponto flutuante. Os registros voláteis são registros a partir do zero presumidos pelo chamador para serem destruídos em uma chamada. Os registros não voláteis são obrigados a manter seus valores em uma chamada de função e devem ser salvos pelo receptor da chamada se usados.
 
-## <a name="register-volatility-and-preservation"></a>Registrar volatilidade e preservação
+## <a name="register-volatility-and-preservation"></a>Registrar a volatilidade e preservação
 
 A tabela a seguir descreve como cada registro é usado nas chamadas de função:
 
@@ -48,9 +38,9 @@ A tabela a seguir descreve como cada registro é usado nas chamadas de função:
 |XMM3, YMM3|Volátil|Quarto argumento FP; quarto argumento de tipo vetorial quando `__vectorcall` for usado|
 |XMM4, YMM4|Volátil|Deve ser preservado conforme necessário pelo chamador; quinto argumento de tipo vetorial quando `__vectorcall` for usado|
 |XMM5, YMM5|Volátil|Deve ser preservado conforme necessário pelo chamador; sexto argumento de tipo vetorial quando `__vectorcall` for usado|
-|XMM6:XMM15, YMM6:YMM15|Não volátil (XMM), Volátil (metade superior de YMM)|Deve ser preservado pelo receptor. Os registros YMM devem ser preservados conforme necessário pelo chamador.|
+|XMM6:XMM15, YMM6:YMM15|Não volátil (XMM), Volátil (metade superior de YMM)|Deve ser preservado pelo receptor da chamada. Os registros YMM devem ser preservados conforme necessário pelo chamador.|
 
-Na saída da função e na entrada de função para chamadas de biblioteca de tempo de execução do C e chamadas do sistema Windows, o sinalizador de direção na CPU sinalizadores de registro deve ser desmarcada.
+Na saída da função e na entrada da função de biblioteca em tempo de execução C chamadas e chamadas do sistema Windows, o sinalizador de direção do CPU register sinalizadores é esperado a ser apagado.
 
 ## <a name="see-also"></a>Consulte também
 

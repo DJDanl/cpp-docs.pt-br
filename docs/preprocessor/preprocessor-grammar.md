@@ -1,27 +1,17 @@
 ---
-title: Gramática de pré-processador | Microsoft Docs
-ms.custom: ''
+title: Gramática do pré-processador
 ms.date: 09/04/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 56df4d0bfdaf87ace87a9f9dcbde85166929e642
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 17768b7ec1442f2af1abf76596527d4df69b1534
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766110"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614182"
 ---
 # <a name="preprocessor-grammar"></a>Gramática do pré-processador
 
@@ -30,7 +20,7 @@ ms.locfileid: "43766110"
 &nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>identificador</em>**(** *identificador*<sub>aceitar</sub> **,** ... **,** *identificador*<sub>aceitar</sub> **)** *token de cadeia de caracteres*<sub>otimizado</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *caminho-spec* **"**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *especificação de caminho* **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#line** *sequência de dígitos***"** *filename* **"**<sub>otimizado  </sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#line** *sequência de dígitos***"** *filename* **"**<sub>otimizado</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#undef** *identificador*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#error** *cadeia de caracteres de token*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *cadeia de caracteres de token*
@@ -68,8 +58,8 @@ ms.locfileid: "43766110"
 &nbsp;&nbsp;&nbsp;&nbsp;**#endif**
 
 *sequência de dígitos* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Dígito*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*sequência de dígitos* *dígito*
+&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *digit*
 
 *Dígito* : um dos<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
@@ -78,10 +68,10 @@ ms.locfileid: "43766110"
 &nbsp;&nbsp;&nbsp;&nbsp;Cadeia de caracteres de tokens
 
 *token* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Palavra-chave*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identificador*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Constante*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*operador*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*keyword*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*constant*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*operator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*punctuator*
 
 *nome do arquivo* :<br/>

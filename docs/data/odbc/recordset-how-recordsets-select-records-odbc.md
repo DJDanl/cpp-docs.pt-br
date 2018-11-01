@@ -1,12 +1,6 @@
 ---
-title: 'Conjunto de registros: Como conjuntos de registros selecionam registros (ODBC) | Microsoft Docs'
-ms.custom: ''
+title: 'Conjunto de registros: como conjuntos de registros selecionam registros (ODBC)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - recordsets, selecting records
 - record selection, ODBC recordsets
@@ -15,17 +9,12 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 2f1f5ba7da2e2e61de9356b82f51bc9f2ef1cce9
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 9e39929b4e669b6d7ed5662484ee71f762b4ea42
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50055535"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618446"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Conjunto de registros: como conjuntos de registros selecionam registros (ODBC)
 

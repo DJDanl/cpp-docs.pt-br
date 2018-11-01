@@ -1,10 +1,6 @@
 ---
-title: COSH, coshf, coshl | Microsoft Docs
-ms.custom: ''
+title: COSH, coshf, coshl
 ms.date: 04/11/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cosh
 - coshf
@@ -26,24 +22,18 @@ f1_keywords:
 - cosh
 - coshf
 - coshl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cosh function
 - coshf function
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d77bb1d1b8f055bb4fe11d4c44c48fb3bf3be535
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f55e084e760cb6d04dbe7ec4fefb5e2ac1d79fd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395465"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609528"
 ---
 # <a name="cosh-coshf-coshl"></a>COSH, coshf, coshl
 
@@ -69,18 +59,18 @@ long double cosh( long double x );  // C++ only
 
 ## <a name="return-value"></a>Valor de retorno
 
-O cosseno hiperbólico de *x*.
+O cosseno hiperbólico *x*.
 
-Por padrão, se o resultado é muito grande em um **cosh**, **coshf**, ou **coshl** chamada, a função retorna **HUGE_VAL** e define **errno** para **ERANGE**.
+Por padrão, se o resultado for muito grande em uma **cosh**, **coshf**, ou **coshl** chamar, a função retorna **HUGE_VAL** e define **errno** para **ERANGE**.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|nenhum|**DOMAIN**|
-|*x* ≥ 7.104760e + 002|**INEXATO**+**DE ESTOURO**|**ESTOURO**|
+|± **QNAN**, **IND**|nenhum|**_DOMAIN**|
+|*x* ≥ 7,104760e+002|**INEXATA**+**OVERFLOW**|**ESTOURO**|
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **cosh** que levar e retornar **float** ou **longo** **duplo** valores. Em um programa C, **cosh** sempre usa e retorna um **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **cosh** que usam e retornam **float** ou **longo** **double** valores. Em um programa do C **cosh** sempre usa e retorna um **duplo**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -92,7 +82,7 @@ Para obter informações adicionais sobre compatibilidade, consulte [Compatibili
 
 ## <a name="example"></a>Exemplo
 
-Consulte o exemplo [sinh, sinhf, sinhl](sinh-sinhf-sinhl.md).
+Consulte o exemplo na [sinh, sinhf, sinhl](sinh-sinhf-sinhl.md).
 
 ## <a name="see-also"></a>Consulte também
 

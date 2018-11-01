@@ -1,25 +1,15 @@
 ---
-title: Práticas recomendadas gerais no tempo de execução de simultaneidade | Microsoft Docs
-ms.custom: ''
+title: Práticas recomendadas gerais no Tempo de Execução de Simultaneidade
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b998048db9f604ebda24d03eddc7e296519abb7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 445e985117929cae2ec9a26a1e148b3eff55c2a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392899"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647688"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>Práticas recomendadas gerais no Tempo de Execução de Simultaneidade
 

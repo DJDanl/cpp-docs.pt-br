@@ -1,26 +1,16 @@
 ---
-title: Pesquisa de nome dependente de argumento (Koenig) em funções | Microsoft Docs
-ms.custom: ''
+title: Pesquisa de nome dependente do argumento (Koenig) em funções
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - Koenig lookup
 - argument-dependent lookup [C++]
 ms.assetid: c0928401-da2c-4658-942d-9ba4df149c35
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8e71a1fd5a795fb95520ec8d7859e70460a9372c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d979b79c0f712ed35a42a44047dd1091010c72bf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028812"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650652"
 ---
 # <a name="argument-dependent-name-koenig-lookup-on-functions"></a>Pesquisa de nome dependente do argumento (Koenig) em funções
 

@@ -1,10 +1,6 @@
 ---
-title: _getdiskfree | Microsoft Docs
-ms.custom: ''
+title: _getdiskfree
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdiskfree
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - getdiskfree
 - _getdiskfree
-dev_langs:
-- C++
 helpviewer_keywords:
 - diskfree_t type
 - _getdiskfree function
@@ -32,20 +26,16 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2fad5c67f247a40f1c8d65bec50ccf80f44b3d4d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03c39802301406bc4250328983c8cf8bad94497f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401611"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602274"
 ---
 # <a name="getdiskfree"></a>_getdiskfree
 
-Usa as informações sobre uma unidade de disco para preencher um **diskfree_t** estrutura.
+Usa informações sobre uma unidade de disco para preencher uma **diskfree_t** estrutura.
 
 > [!IMPORTANT]
 > Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -69,11 +59,11 @@ Um **diskfree_t** estrutura será preenchida com informações sobre a unidade.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se a função obtiver êxito, o valor retornado será zero. Se a função falhar, o valor retornado será o código de erro. O valor **errno** está definida para quaisquer erros que são retornados pelo sistema operacional. Para obter mais informações sobre condições de erro que são indicadas por **errno**, consulte [constantes errno](../../c-runtime-library/errno-constants.md).
+Se a função obtiver êxito, o valor retornado será zero. Se a função falhar, o valor retornado será o código de erro. O valor **errno** está definido para todos os erros que são retornados pelo sistema operacional. Para obter mais informações sobre as condições de erro são indicados por **errno**, consulte [constantes errno](../../c-runtime-library/errno-constants.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **diskfree_t** estrutura é definida em Direct.h.
+O **diskfree_t** estrutura é definida em Direct. h.
 
 ```C
 struct _diskfree_t {
@@ -84,7 +74,7 @@ struct _diskfree_t {
 };
 ```
 
-Essa função valida seus parâmetros. Se o *driveinfo* ponteiro é **nulo** ou *unidade* Especifica uma unidade inválida, esta função chama um manipulador de parâmetro inválido, conforme descrito em [ Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, a função retorna **EINVAL** e define **errno** para **EINVAL**. Intervalo de unidades válidas, de 0 a 26. Um *unidade* valor de 0 especifica a unidade atual; depois disso, números são mapeados para letras do alfabeto inglês tal que 1 indica a unidade A, 3 indica a unidade C e assim por diante.
+Essa função valida seus parâmetros. Se o *driveinfo* é de ponteiro **nulo** ou *unidade* Especifica uma unidade inválida, essa função invocará um manipulador de parâmetro inválido, conforme descrito em [ Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará **EINVAL** e define **errno** para **EINVAL**. Intervalo de unidades válidas, de 0 a 26. Um *unidade* valor de 0 especifica a unidade atual; depois disso, os números são mapeados para letras do alfabeto inglês tal que 1 indica a unidade A, 3 indica a unidade C e assim por diante.
 
 ## <a name="requirements"></a>Requisitos
 

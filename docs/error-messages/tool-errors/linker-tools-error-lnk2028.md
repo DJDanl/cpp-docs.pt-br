@@ -1,27 +1,17 @@
 ---
-title: Ferramentas de vinculador LNK2028 erro | Microsoft Docs
-ms.custom: ''
+title: Erro das Ferramentas de Vinculador LNK2028
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK2028
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK2028
 ms.assetid: e2b03293-6066-464d-a050-ce747bcf7f0e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9c8eaa03927f51acd3c3d84731e9ef2b282b7c6
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ed2dc1a95d4dd7c447b360da21b5046e20f79083
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704148"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643671"
 ---
 # <a name="linker-tools-error-lnk2028"></a>Erro das Ferramentas de Vinculador LNK2028
 
@@ -29,9 +19,9 @@ ms.locfileid: "34704148"
 
 ## <a name="remarks"></a>Comentários
 
-Ao tentar importar uma função nativa em uma imagem pura, lembre-se de que as convenções de chamada implícita diferem entre compilações nativo e puras.
+Ao tentar importar uma função nativa em uma imagem pura, lembre-se de que as convenções de chamada implícitas diferem entre compilações nativas e puras.
 
-O **/clr: pure** opção de compilador foi preterida no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+O **/clr: pure** opção do compilador é preterida no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
 ## <a name="example"></a>Exemplo
 
@@ -47,7 +37,7 @@ __declspec(dllexport) int func() {
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir cria um cliente puro que consome a função nativa. No entanto, a convenção de chamada em **/clr: pure** é [clrcall](../../cpp/clrcall.md). O exemplo a seguir gera LNK2028.
+O exemplo a seguir cria um cliente puro que consome a função nativa. No entanto, a convenção de chamada sob **/clr: pure** é [clrcall](../../cpp/clrcall.md). O exemplo a seguir gera das LNK2028.
 
 ```cpp
 // LNK2028_b.cpp

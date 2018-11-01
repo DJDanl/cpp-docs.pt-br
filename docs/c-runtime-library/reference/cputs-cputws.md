@@ -1,10 +1,6 @@
 ---
-title: _cputs, _cputws | Microsoft Docs
-ms.custom: ''
+title: _cputs, _cputws
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cputws
 - _cputs
@@ -25,8 +21,6 @@ f1_keywords:
 - cputws
 - _cputs
 - _cputws
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], writing
 - _cputs function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3c192adccb6fe0e0cee66f03b5d85d89fc2e446a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81d2364cd1fc409ca3267bc416bd3cbd16c62a15
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399758"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601169"
 ---
 # <a name="cputs-cputws"></a>_cputs, _cputws
 
@@ -76,9 +66,9 @@ Se for bem-sucedido, **cputs** retornará 0. Se a função falhar, ela retornar�
 
 ## <a name="remarks"></a>Comentários
 
-O **cputs** função grava a cadeia de caracteres terminada em nulo que é apontada pelo *str* diretamente para o console. Uma combinação CR-LF (retorno de carro-alimentação de linha) não é acrescentada automaticamente à cadeia de caracteres.
+O **cputs** função grava a cadeia de caracteres terminada em nulo que é apontada por *str* diretamente para o console. Uma combinação CR-LF (retorno de carro-alimentação de linha) não é acrescentada automaticamente à cadeia de caracteres.
 
-Esta função valida seu parâmetro. Se *str* é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e -1 será retornado.
+Esta função valida seu parâmetro. Se *str* é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e -1 será retornado.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

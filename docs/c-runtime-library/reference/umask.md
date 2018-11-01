@@ -1,10 +1,6 @@
 ---
-title: _umask | Microsoft Docs
-ms.custom: ''
+title: _umask
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _umask
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _umask
-dev_langs:
-- C++
 helpviewer_keywords:
 - masks, file-permission-setting
 - _umask function
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce3053bfb19cc81dff15d41d1b5bc6d405da619f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f51e2c19933953eb4910cdeb5e1ec50b7387bd59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412609"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677156"
 ---
 # <a name="umask"></a>_umask
 
@@ -64,7 +54,7 @@ Configuração de permissão padrão.
 
 ## <a name="remarks"></a>Comentários
 
-O **umask** função define a máscara de permissão de arquivo do processo atual para o modo especificado por *pmode*. A máscara de permissão de arquivo modifica a configuração de permissão de novos arquivos criados por **Creat**, **abrir**, ou **sopen**. Se um bit na máscara for 1, o bit correspondente no valor da permissão solicitada do arquivo será definido como 0 (não permitido). Se um bit na máscara for 0, o bit correspondente será deixado inalterado. A configuração de permissão para um novo arquivo não é definida até que o arquivo é seja fechado pela primeira vez.
+O **umask** função define a máscara de permissão de arquivo do processo atual para o modo especificado por *pmode*. A máscara de permissão de arquivo modifica a configuração de permissão de novos arquivos criados pela **Creat**, **Open**, ou **sopen**. Se um bit na máscara for 1, o bit correspondente no valor da permissão solicitada do arquivo será definido como 0 (não permitido). Se um bit na máscara for 0, o bit correspondente será deixado inalterado. A configuração de permissão para um novo arquivo não é definida até que o arquivo é seja fechado pela primeira vez.
 
 A expressão de inteiro *pmode* contém uma ou ambas das seguintes constantes de manifesto, definidas em SYS\STAT. H:
 
@@ -74,9 +64,9 @@ A expressão de inteiro *pmode* contém uma ou ambas das seguintes constantes de
 **S_IREAD**|Leitura permitida.
 **S_IREAD** \| **S_IWRITE**|Leitura e gravação permitidas.
 
-Quando ambas as constantes são fornecidas, eles são associados ao operador OR bit a bit ( **|** ). Se o *pmode* argumento é **s_iread**, leitura não é permitida (o arquivo é somente gravação). Se o *pmode* argumento é **s_iwrite**, gravação não é permitida (o arquivo é somente leitura). Por exemplo, se o bit de gravação estiver definido na máscara, quaisquer novos arquivos serão somente leitura. Observe que nos sistemas operacionais MS-DOS e Windows, todos os arquivos podem ser lidos; não é possível conceder permissão somente gravação. Portanto, definir a bit de leitura **umask** não tem nenhum efeito sobre os modos do arquivo.
+Quando as duas constantes são informadas, elas são unidas com o operador OR bit a bit ( **|** ). Se o *pmode* argumento é **s_iread**, leitura não será permitida (o arquivo é somente gravação). Se o *pmode* argumento é **s_iwrite**, gravação não é permitida (o arquivo é somente leitura). Por exemplo, se o bit de gravação estiver definido na máscara, quaisquer novos arquivos serão somente leitura. Observe que nos sistemas operacionais MS-DOS e Windows, todos os arquivos podem ser lidos; não é possível conceder permissão somente gravação. Portanto, definir a bit de leitura **umask** não tem nenhum efeito sobre os modos do arquivo.
 
-Se *pmode* não é uma combinação de uma das constantes de manifesto ou incorpora um conjunto alternativo de constantes, a função simplesmente irá ignorar os.
+Se *pmode* não é uma combinação de uma das constantes de manifesto nem incorporar um conjunto alternativo de constantes, a função simplesmente irá ignorar os.
 
 ## <a name="requirements"></a>Requisitos
 

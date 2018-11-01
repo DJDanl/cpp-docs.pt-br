@@ -1,10 +1,6 @@
 ---
-title: EXP, expf, SOL | Microsoft Docs
-ms.custom: ''
+title: EXP, expf, expl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - expf
 - expl
@@ -27,8 +23,6 @@ f1_keywords:
 - expf
 - expl
 - exp
-dev_langs:
-- C++
 helpviewer_keywords:
 - exponential calculations
 - expf function
@@ -36,18 +30,14 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9569eee475a80fc5c08c2ec1d099cf627c7b5fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9fb38adcc442e60864ec632cd92793f16e47502
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396213"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596749"
 ---
-# <a name="exp-expf-expl"></a>EXP, expf, SOL
+# <a name="exp-expf-expl"></a>EXP, expf, expl
 
 Calcula o exponencial.
 
@@ -74,30 +64,30 @@ long double expl(
 ### <a name="parameters"></a>Parâmetros
 
 *x*<br/>
-Valor de ponto flutuante para exponentiate a base do logaritmo natural *e* por.
+Valor de ponto flutuante para exponentiate a base do logaritmo natural *eletrônico* por.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **exp** funções retornam o valor exponencial do parâmetro de ponto flutuante, *x*, se for bem-sucedido. Ou seja, o resultado é *e*<sup>*x*</sup>, onde *e* é a base do logaritmo natural. Estouro, a função retorna INF (infinito) e estouro negativo, **exp** retornará 0.
+O **exp** funções retornam o valor exponencial do parâmetro de ponto flutuante, *x*, se for bem-sucedido. Ou seja, o resultado será *eletrônico*<sup>*x*</sup>, onde *e* é a base do logaritmo natural. No estouro, a função retorna INF (infinito) e no estouro negativo, **exp** retornará 0.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± Silencioso NaN, indeterminado|Nenhum|_DOMAIN|
+|NaN silencioso ±, indeterminado|Nenhum|_DOMAIN|
 |± Infinito|INVALID|_DOMAIN|
 |x ≥ 7,097827e+002|INEXACT+OVERFLOW|OVERFLOW|
 |X ≤ -7,083964e+002|INEXACT+UNDERFLOW|UNDERFLOW|
 
-O **exp** função tem uma implementação que usa extensões Streaming SIMD 2 (SSE2). Para obter informações e restrições sobre como usar a implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
+O **exp** função tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições sobre como usar a implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Comentários
 
-O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **exp** que levam um **float** ou **long double** argumento. Em um programa C, **exp** sempre usa e retorna um **duplo**.
+C++ permite sobrecargas, portanto, é possível chamar sobrecargas de **exp** que utilizam um **float** ou **longo duplo** argumento. Em um programa do C **exp** sempre usa e retorna um **duplo**.
 
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho C necessário|Cabeçalho C++ necessário|
 |--------------|---------------------|---|
-|**EXP**, **expf**, **sol**|\<math.h>|\<cmath> ou \<math.h>|
+|**EXP**, **expf**, **expl**|\<math.h>|\<cmath> ou \<math.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

@@ -1,10 +1,6 @@
 ---
-title: strcpy_s, wcscpy_s, _mbscpy_s | Microsoft Docs
-ms.custom: ''
+title: strcpy_s, wcscpy_s, _mbscpy_s
 ms.date: 03/22/2086
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcscpy_s
 - _mbscpy_s
@@ -28,8 +24,6 @@ f1_keywords:
 - _mbscpy_s
 - _tcscpy_s
 - wcscpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - strcpy_s function
 - _tcscpy_s function
@@ -39,23 +33,19 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ee648776d4c8b7df1089edf34d30b5c7e59a63c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7deeb2d3286ca20518527df26c4765197f8a087
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416606"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616600"
 ---
 # <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s, wcscpy_s, _mbscpy_s
 
 Copia uma cadeia de caracteres. Estas versões de [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md) têm aprimoramentos de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **mbscpy_s** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbscpy_s** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -102,7 +92,7 @@ errno_t _mbscpy_s(
 Local do buffer de cadeia de caracteres de destino.
 
 *dest_size*<br/>
-Tamanho do buffer de cadeia de caracteres de destino em **char** unidades para funções estreitas e de vários bytes, e **wchar_t** unidades para as funções amplas. Esse valor deve ser maior que zero e não é maior que **RSIZE_MAX**.
+Tamanho do buffer de cadeia de caracteres de destino no **char** unidades para funções estreitas e multibyte, e **wchar_t** unidades para funções largas. Esse valor deve ser maior que zero e não é maior que **RSIZE_MAX**.
 
 *src*<br/>
 Buffer de cadeia de caracteres de origem com terminação nula.
@@ -121,17 +111,17 @@ Zero se for bem-sucedido; caso contrário, um código de erro.
 
 ## <a name="remarks"></a>Comentários
 
-O **strcpy_s** função copia o conteúdo no endereço de *src*, incluindo o caractere null de terminação, para o local que é especificado pelo *dest*. A cadeia de caracteres de destino deve ser grande o suficiente para conter a cadeia de caracteres de origem e o caractere nulo de terminação. O comportamento de **strcpy_s** será indefinido se sobreponham as cadeias de caracteres de origem e de destino.
+O **strcpy_s** função copia o conteúdo no endereço do *src*, incluindo o caractere nulo de terminação, para o local especificado por *dest*. A cadeia de caracteres de destino deve ser grande o suficiente para conter a cadeia de caracteres de origem e o caractere nulo de terminação. O comportamento de **strcpy_s** é indefinido se as cadeias de caracteres de origem e de destino se sobrepõem.
 
-**wcscpy_s** é a versão de caractere largo de **strcpy_s**, e **mbscpy_s** é a versão de caracteres multibyte. Os argumentos de **wcscpy_s** são caracteres largos cadeias de caracteres; desses **mbscpy_s** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
+**wcscpy_s** é a versão de caractere largo de **strcpy_s**, e **mbscpy_s** é a versão de caractere multibyte. Os argumentos de **wcscpy_s** são largos cadeias de caracteres; aqueles de **mbscpy_s** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
 
-Se *dest* ou *src* é um ponteiro nulo, ou se o tamanho da cadeia de caracteres de destino *dest_size* é muito pequeno, o manipulador de parâmetro inválido é invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam **EINVAL** e defina **errno** para **EINVAL** quando *dest* ou  *src* é um ponteiro nulo, e elas retornam **ERANGE** e defina **errno** para **ERANGE** quando a cadeia de caracteres de destino é muito pequena.
+Se *dest* ou *src* é um ponteiro nulo, ou se o tamanho da cadeia de caracteres de destino *dest_size* é muito pequeno, o manipulador de parâmetro inválido será invocado, conforme descrito na [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **EINVAL** e defina **errno** para **EINVAL** quando *dest* ou  *src* é um ponteiro nulo, e eles retornam **ERANGE** e defina **errno** para **ERANGE** quando a cadeia de caracteres de destino é muito pequena.
 
 No caso de execução bem-sucedida, a cadeia de caracteres de destino é sempre terminada em nulo.
 
 Em C++, o uso dessas funções é simplificado por sobrecargas de modelo que podem inferir o tamanho do buffer automaticamente, eliminando a necessidade de especificar um argumento de tamanho e podem substituir automaticamente funções mais antigas e menos seguras por equivalentes mais novas e mais seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-As versões da biblioteca de depuração dessas funções primeiro preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+As versões da biblioteca de depuração dessas funções preenchem o buffer com 0xFE. Para desabilitar esse comportamento, use [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -151,7 +141,7 @@ Essas funções são específicas da Microsoft. Para obter informações adicion
 
 ## <a name="example"></a>Exemplo
 
-Diferente do código de qualidade de produção, este exemplo chama as funções de cadeia de caracteres segura sem a verificação de erros:
+Ao contrário do código de qualidade de produção, este exemplo chama as funções de cadeia de caracteres segura sem verificar se há erros:
 
 ```C
 // crt_strcpy_s.c
@@ -181,7 +171,7 @@ int main(void)
 String = Hello world from strcpy_s and strcat_s!
 ```
 
-Ao compilar o código C++, as versões do modelo podem ser mais fácil de usar.
+Ao compilar código C++, as versões de modelo podem ser mais fácil de usar.
 
 ```cpp
 // crt_wcscpy_s.cpp

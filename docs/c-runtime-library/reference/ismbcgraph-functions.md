@@ -1,10 +1,6 @@
 ---
-title: _ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l | Microsoft Docs
-ms.custom: ''
+title: _ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbcpunct_l
 - _ismbcblank
@@ -42,8 +38,6 @@ f1_keywords:
 - ismbcgraph_l
 - ismbcspace
 - ismbcpunct
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbcspace_l function
 - _ismbcprint_l function
@@ -62,16 +56,12 @@ helpviewer_keywords:
 - _ismbcgraph_l function
 - _ismbcspace function
 ms.assetid: 8e0a5f47-ba64-4411-92a3-3c525d16e3be
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da9231dcf64222aa075194f72892896972e2abf7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 05946def8c4d832751554a1653afa98c9965fee9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405491"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626207"
 ---
 # <a name="ismbcgraph-ismbcgraphl-ismbcprint-ismbcprintl-ismbcpunct-ismbcpunctl-ismbcblank-ismbcblankl-ismbcspace-ismbcspacel"></a>_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
 
@@ -130,9 +120,9 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste, ou 0 se não satisfizer. Se *c* < = 255 e há um correspondente **ismbb** rotina (por exemplo, **ismbcalnum** corresponde à **ismbbalnum**), o resultado é o valor de retorno do **ismbb** rotina.
+Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste, ou 0 se não satisfizer. Se *c* < = 255 e houver um correspondente **ismbb** rotina (por exemplo, **ismbcalnum** corresponde ao **ismbbalnum**), o resultado é o valor retornado de correspondente **ismbb** rotina.
 
-As versões dessas funções são idênticas, exceto que os que têm o **_l** sufixo usam a localidade que é passada para o comportamento dependente de localidade, em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções são idênticas, exceto que aquelas que têm o **l** sufixo usam a localidade que é passada para o seu comportamento dependente da localidade, em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Comentários
 
@@ -140,11 +130,11 @@ Cada uma dessas funções testa um determinado caractere multibyte quanto a uma 
 
 |Rotina|Condição de teste|Exemplo da página de código 932|
 |-------------|--------------------|---------------------------|
-|**_ismbcgraph**|Gráfico|Retorna zero se e somente se *c* é uma representação de byte único de qualquer caractere imprimível ASCII ou katakana exceto (espaço em branco).|
-|**_ismbcprint**|Imprimível|Retorna zero se e somente se *c* é uma representação de byte único de qualquer caractere imprimível ASCII ou katakana incluindo um espaço em branco ().|
-|**_ismbcpunct**|Pontuação|Retorna zero se e somente se *c* é uma representação de byte único de qualquer caractere de pontuação ASCII ou katakana.|
-|**_ismbcblank**|Espaço ou tabulação horizontal|Retorna zero se e somente se *c* é um espaço ou caractere de tabulação horizontal: *c*= 0x20 ou *c*= 0x09.|
-|**_ismbcspace**|Espaço em branco|Retorna zero se e somente se *c* é um caractere de espaço em branco: *c*= 0x20 ou 0x09 < =*c*< = 0x0D.|
+|**_ismbcgraph**|Gráfico|Retorna diferente de zero se e somente se *c* é uma representação de byte único de qualquer caractere imprimível ASCII ou katakana, exceto um espaço em branco ().|
+|**_ismbcprint**|Imprimível|Retorna diferente de zero se e somente se *c* é uma representação de byte único de qualquer caractere imprimível ASCII ou katakana incluindo um espaço em branco ().|
+|**_ismbcpunct**|Pontuação|Retorna diferente de zero se e somente se *c* é uma representação de byte único de qualquer caractere de pontuação ASCII ou katakana.|
+|**_ismbcblank**|Espaço ou tabulação horizontal|Retorna diferente de zero se e somente se *c* é um espaço ou caractere de tabulação horizontal: *c*= 0x20 ou *c*= 0x09.|
+|**_ismbcspace**|Espaço em branco|Retorna diferente de zero se e somente se *c* é um caractere de espaço em branco: *c*= 0x20 ou 0x09&lt < =*c*< lt;=0x0D.|
 
 ## <a name="requirements"></a>Requisitos
 

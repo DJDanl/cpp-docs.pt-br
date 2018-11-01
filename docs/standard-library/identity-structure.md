@@ -1,28 +1,18 @@
 ---
-title: Estrutura identity | Microsoft Docs
-ms.custom: ''
+title: Estrutura identity
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - utility/std::identity
-dev_langs:
-- C++
 helpviewer_keywords:
 - identity class
 - identity structure
 ms.assetid: 990756fd-7969-4b39-ad7e-0878e8dac8fd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 62acade082847386e065470f23ffe8374f82eb55
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 722eb9c0579d0c07765434127d0a7c43718fbc37
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50079188"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615508"
 ---
 # <a name="identity-structure"></a>Estrutura identity
 
