@@ -1,10 +1,6 @@
 ---
-title: strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l | Microsoft Docs
-ms.custom: ''
+title: strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wcstok_s_l
 - _mbstok_s_l
@@ -35,8 +31,6 @@ f1_keywords:
 - wcstok_s
 - _mbstok_s
 - _strtok_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strtok_s_l function
 - _mbstok_s_l function
@@ -53,23 +47,19 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 467184acd7ef78ee52f1605d23f2d3b80e6adb83
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: a8b87e0b2d4ecf9dc6fb1b52f512406a6df0622c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451960"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50517449"
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
 Localiza o próximo token em uma cadeia de caracteres, usando a localidade atual ou uma localidade específica que é informada. Essas versões de [strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l](strtok-strtok-l-wcstok-wcstok-l-mbstok-mbstok-l.md) têm aprimoramentos de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **mbstok_s** e **mbstok_s_l** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbstok_s** e **mbstok_s_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -117,7 +107,7 @@ unsigned char* _mbstok_s(
 ### <a name="parameters"></a>Parâmetros
 
 *str*<br/>
-Uma cadeia de caracteres que contém o token ou os tokens de localizar.
+Uma cadeia de caracteres que contém o token ou os tokens para localizar.
 
 *Delimitadores*<br/>
 O conjunto de caracteres de delimitador a ser usado.
@@ -130,7 +120,7 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna um ponteiro para o próximo token encontrado no *str*. Retorna **nulo** quando não há mais tokens forem encontrados. Cada chamada modifica *str* substituindo um caractere nulo para o primeiro delimitador que ocorre após o token retornado.
+Retorna um ponteiro para o próximo token encontrado no *str*. Retorna **nulo** quando não há mais tokens são encontradas. Cada chamada modifica *str* substituindo um caractere nulo para o primeiro delimitador que ocorre após o token retornado.
 
 ### <a name="error-conditions"></a>Condições de Erro
 
@@ -144,15 +134,15 @@ Se *str* é **nulo** mas *contexto* é um ponteiro para um ponteiro de contexto 
 
 ## <a name="remarks"></a>Comentários
 
-O **strtok_s** família de funções localiza o próximo token em *str*. O conjunto de caracteres em *delimitadores* Especifica possíveis delimitadores de token a ser localizado na *str* na chamada atual. **wcstok_s** e **mbstok_s** são versões de caracteres largos e caracteres multibyte **strtok_s**. Os argumentos e valores de retorno de **wcstok_s** e **wcstok_s_l** são caracteres largos cadeias de caracteres; desses **mbstok_s** e **mbstok_s_l**são cadeias de caracteres multibyte. Caso contrário, essas funções se comportam de forma idêntica.
+O **strtok_s** família de funções localiza o próximo token na *str*. O conjunto de caracteres em *delimitadores* Especifica possíveis delimitadores de token a ser localizado na *str* na chamada atual. **wcstok_s** e **mbstok_s** são versões de caractere largo e caracteres multibyte **strtok_s**. Os argumentos e valores de retorno de **wcstok_s** e **wcstok_s_l** são largos cadeias de caracteres; aqueles de **mbstok_s** e **mbstok_s_l**são cadeias de caracteres multibyte. Caso contrário, essas funções se comportam de forma idêntica.
 
-Essa função valida seus parâmetros. Se ocorrer uma condição de erro, como na tabela de Condições de Erro, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL** e retornar **nulo**.
+Essa função valida seus parâmetros. Se ocorrer uma condição de erro, como na tabela de Condições de Erro, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e retornar **nulo**.
 
-Na primeira chamada para **strtok_s** a função ignora delimitadores à esquerda e retorna um ponteiro para o primeiro token no *str*, encerrando o token com um caractere nulo. Tokens mais podem ser divididas fora o restante do *str* por uma série de chamadas para **strtok_s**. Cada chamada para **strtok_s** modifica *str* inserindo um caractere nulo após o token retornado pela chamada. O *contexto* ponteiro mantém o controle de cadeia de caracteres que está sendo lido e onde o próximo token na cadeia de caracteres é a ser lido. Para ler o próximo token de *str*, chame **strtok_s** com um **nulo** valor para o *str* argumento e passar o mesmo  *contexto* parâmetro. O **nulo** *str* faz com que o argumento **strtok_s** para procurar o próximo token em modificada *str*. O *delimitadores* argumento pode ter qualquer valor de uma chamada para a próxima para que o conjunto de delimitadores pode variar.
+Na primeira chamada para **strtok_s** a função ignora delimitadores à esquerda e retorna um ponteiro para o primeiro token no *str*, encerrando o token com um caractere nulo. Mais tokens podem ser divididos, fora o restante da *str* por uma série de chamadas para **strtok_s**. Cada chamada para **strtok_s** modifica *str* inserindo um caractere nulo após o token retornado pela chamada. O *contexto* ponteiro mantém controle de qual cadeia de caracteres está sendo lido e onde o próximo token na cadeia de caracteres é a serem lidos. Para ler o próximo token de *str*, chame **strtok_s** com um **nulo** valor para o *str* argumento e passe o mesmo  *contexto* parâmetro. O **nulo** *str* faz com que o argumento **strtok_s** para procurar o próximo token no modificado *str*. O *delimitadores* argumento pode assumir qualquer valor de uma chamada para o próximo, de modo que o conjunto de delimitadores pode variar.
 
-Como o *contexto* parâmetro substitui os buffers estáticos usados em **strtok** e **strtok_l**, é possível analisar as duas cadeias de caracteres simultaneamente no mesmo thread.
+Uma vez que o *contexto* parâmetro substitui os buffers estáticos usados em **strtok** e **strtok_l**, é possível analisar cadeias de caracteres de dois simultaneamente no mesmo thread.
 
-O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o **_l** sufixo usam a localidade do thread atual para este comportamento dependente de localidade. As versões com o **_l** sufixo são idênticos, exceto que, em vez disso, eles usam o *localidade* parâmetro. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o **l** sufixo usam a localidade do thread atual desse comportamento dependente da localidade. As versões com o **l** sufixo são idênticas, exceto pelo fato de que usam o *localidade* parâmetro. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -167,7 +157,7 @@ Para obter informações adicionais sobre compatibilidade, consulte [Compatibili
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
-|Rotina TCHAR.H|\_UNICODE & \_MBCS não definido|\_MBCS definido|_UNICODE definido|
+|Rotina TCHAR.H|\_UNICODE & \_MBCS não definidos|\_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**tcstok_s**|**strtok_s**|**_mbstok_s**|**wcstok_s**|
 |**tcstok_s_l**|**_strtok_s_l**|**_mbstok_s_l**|**_wcstok_s_l**|

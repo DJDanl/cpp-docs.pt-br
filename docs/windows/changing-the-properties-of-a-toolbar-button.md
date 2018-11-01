@@ -1,29 +1,18 @@
 ---
-title: Alterando as propriedades de um botão de barra de ferramentas (C++) | Microsoft Docs
-ms.custom: ''
+title: Alterando as propriedades de um botão de barra de ferramentas (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - toolbar controls [MFC], command ID
 - toolbar buttons [C++], setting properties
 - Toolbar editor [C++], toolbar button properties
 - command IDs, toolbar buttons
 ms.assetid: b16a0635-e703-4156-acea-a54df279295a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: dcf9e9a6264f7c58cd0f44573e3b0be81b15f068
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a782da5e719009be98f488676399316828a34106
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446524"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519971"
 ---
 # <a name="changing-the-properties-of-a-toolbar-button-c"></a>Alterando as propriedades de um botão de barra de ferramentas (C++)
 
