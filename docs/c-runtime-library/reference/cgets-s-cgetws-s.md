@@ -1,10 +1,6 @@
 ---
-title: _cgets_s, _cgetws_s | Microsoft Docs
-ms.custom: ''
+title: _cgets_s, _cgetws_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cgetws_s
 - _cgets_s
@@ -26,8 +22,6 @@ f1_keywords:
 - cgets_s
 - cgetws_s
 - _cgetws_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], getting from console
 - console, getting strings from
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 48b00f9eee699b7e556c2fcc3f88abd8d783a261
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8341b775df3b9cbaececdfaa1f17e075d7c7416c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396791"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588533"
 ---
 # <a name="cgetss-cgetwss"></a>_cgets_s, _cgetws_s
 
@@ -99,14 +89,14 @@ O valor retornado será zero se obtiver sucesso; caso contrário, um código de 
 |*buffer*|*numberOfElements*|*pSizeRead*|Valor de|Conteúdo de *buffer*|
 |--------------|------------------------|-----------------|------------|--------------------------|
 |**NULL**|qualquer|qualquer|**EINVAL**|N/D|
-|não **nulo**|zero|qualquer|**EINVAL**|não modificado|
-|não **nulo**|qualquer|**NULL**|**EINVAL**|cadeia de caracteres de comprimento zero|
+|Não **nulo**|zero|qualquer|**EINVAL**|não modificado|
+|Não **nulo**|qualquer|**NULL**|**EINVAL**|cadeia de caracteres de comprimento zero|
 
 ## <a name="remarks"></a>Comentários
 
-**cgets_s** e **cgetws_s** ler uma cadeia de caracteres do console e copie a cadeia de caracteres (com um terminador nulo) *buffer*. **cgetws_s** é a versão de caractere largo da função; que o tamanho de caractere, o comportamento dessas duas funções é idêntico. O tamanho máximo da cadeia de caracteres a ser lido é passado como o *numberOfElements* parâmetro. Esse tamanho deve incluir um caractere extra para a terminação nula. O número real de caracteres lidos é colocado na *pSizeRead*.
+**cgets_s** e **cgetws_s** ler uma cadeia de caracteres do console e copie a cadeia de caracteres (com um terminador nulo) *buffer*. **cgetws_s** a versão de caractere largo da função; não for mais o tamanho de caractere, o comportamento dessas duas funções é idêntico. O tamanho máximo da cadeia de caracteres a ser lido é passado como o *numberOfElements* parâmetro. Esse tamanho deve incluir um caractere extra para a terminação nula. O número real de caracteres lidos é colocado na *pSizeRead*.
 
-Se ocorrer um erro durante a operação ou na validação dos parâmetros, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e **EINVAL** é retornado.
+Se ocorrer um erro durante a operação ou na validação dos parâmetros, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e **EINVAL** é retornado.
 
 No C++, o uso dessas funções é simplificado por sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente, eliminando a necessidade de especificar um argumento de tamanho e podem substituir automaticamente funções mais antigas e menos seguras por equivalentes mais novas e mais seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

@@ -1,10 +1,6 @@
 ---
-title: strcpy, wcscpy, _mbscpy | Microsoft Docs
-ms.custom: ''
+title: strcpy, wcscpy, _mbscpy
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strcpy
 - wcscpy
@@ -29,8 +25,6 @@ f1_keywords:
 - wcscpy
 - _tcscpy
 - strcpy
-dev_langs:
-- C++
 helpviewer_keywords:
 - strcpy function
 - tcscpy function
@@ -43,23 +37,19 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c996fc8ceb81d98d24e3c95330f2ed9c37097e7d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a6846123fedf48601d36ab8779d7c9868e5e9917
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413915"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640057"
 ---
 # <a name="strcpy-wcscpy-mbscpy"></a>strcpy, wcscpy, _mbscpy
 
 Copia uma cadeia de caracteres. Versões mais seguras dessas funções estão disponíveis; consulte [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
 > [!IMPORTANT]
-> **mbscpy** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbscpy** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -107,12 +97,12 @@ Cada uma dessas funções retorna a cadeia de caracteres de destino. Nenhum valo
 
 ## <a name="remarks"></a>Comentários
 
-O **strcpy** função cópias *strSource*, incluindo o caractere null de terminação, para o local que é especificado pelo *strDestination*. O comportamento de **strcpy** será indefinido se sobreponham as cadeias de caracteres de origem e de destino.
+O **strcpy** função cópias *strSource*, incluindo o caractere nulo de terminação, para o local especificado por *strDestination*. O comportamento de **strcpy** é indefinido se as cadeias de caracteres de origem e de destino se sobrepõem.
 
 > [!IMPORTANT]
-> Porque **strcpy** não verifica se há espaço suficiente na *strDestination* antes de copiar *strSource*, é uma causa potencial de saturações de buffer. Portanto, é recomendável que você use [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) em vez disso.
+> Porque **strcpy** não verifica se há espaço suficiente em *strDestination* antes de copiar *strSource*, ele é uma causa potencial de sobrecargas de buffer. Portanto, é recomendável que você use [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) em vez disso.
 
-**wcscpy** e **mbscpy** são, respectivamente, versões de caracteres largos e caracteres multibyte **strcpy**. O valor de retorno e argumentos **wcscpy** são caracteres largos cadeias de caracteres; desses **mbscpy** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
+**wcscpy** e **mbscpy** são, respectivamente, versões de caractere largo e caracteres multibyte de **strcpy**. Os argumentos e o valor de retorno **wcscpy** são largos cadeias de caracteres; aqueles de **mbscpy** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
@@ -120,7 +110,7 @@ No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes m
 
 |Rotina TCHAR.H|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**tcscpy**|**strcpy**|**_mbscpy**|**wcscpy**|
+|**tcscpy tenha**|**strcpy**|**_mbscpy**|**wcscpy**|
 
 ## <a name="requirements"></a>Requisitos
 

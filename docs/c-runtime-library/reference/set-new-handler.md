@@ -1,10 +1,6 @@
 ---
-title: _set_new_handler | Microsoft Docs
-ms.custom: ''
+title: _set_new_handler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_new_handler
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - _set_new_handler
 - set_new_handler
-dev_langs:
-- C++
 helpviewer_keywords:
 - _set_new_handler function
 - set_new_handler function
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 30cd0c2a991ec046b0b1f55100c58641833cb992
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bc7718503f59c69868a75cac9383286a548fc307
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409804"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640304"
 ---
 # <a name="setnewhandler"></a>_set_new_handler
 
@@ -59,11 +49,11 @@ Ponteiro para a função de manipulação de memória fornecida pelo aplicativo.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna um ponteiro para a função registrada por tratamento de exceção anterior **set_new_handler**, de modo que a função anterior pode ser restaurada posteriormente. Se nenhuma função anterior tiver sido definida, o valor de retorno pode ser usado para restaurar o comportamento padrão; Esse valor pode ser **nulo**.
+Retorna um ponteiro para a função registrada por manipulação de exceção anterior **set_new_handler**, de modo que a função anterior possa ser restaurada posteriormente. Se nenhuma função anterior tiver sido definida, o valor de retorno pode ser usado para restaurar o comportamento padrão; Esse valor pode ser **nulo**.
 
 ## <a name="remarks"></a>Comentários
 
-O C++ **set_new_handler** função especifica uma função de manipulação de exceção que obtiver controle se o **novo** operador falha ao alocar memória. Se **novo** falhar, o sistema de tempo de execução automaticamente chama a função de tratamento de exceção que foi passada como um argumento para **set_new_handler**. **Pnh**, definido em New.h, é um ponteiro para uma função que retorna tipo **int** e usa um argumento de tipo **size_t**. Use **size_t** para especificar a quantidade de espaço a ser alocado.
+O C++ **set_new_handler** função especifica uma função de manipulação de exceção que assumirá o controle se o **novos** operador falha ao alocar memória. Se **novos** falhar, o sistema de tempo de execução automaticamente chama a função de manipulação de exceção que foi passada como um argumento para **set_new_handler**. **Pnh**, definidas em h, é um ponteiro para uma função que retorna o tipo **int** e usa um argumento do tipo **size_t**. Use **size_t** para especificar a quantidade de espaço a ser alocado.
 
 Não há nenhum manipulador padrão.
 
@@ -87,7 +77,7 @@ int main( void )
 }
 ```
 
-Você pode salvar o endereço da função última passado para o **set_new_handler** de função e reabilitá-la mais tarde:
+Você pode salvar o endereço da função que foi passado pela última vez para o **set_new_handler** de função e restabelecê-lo mais tarde:
 
 ```cpp
    _PNH old_handler = _set_new_handler( my_handler );
@@ -98,7 +88,7 @@ Você pode salvar o endereço da função última passado para o **set_new_handl
    // . . .
 ```
 
-A função de C++ [set_new_mode](set-new-mode.md) define o novo modo do manipulador para [malloc](malloc.md). O novo modo de manipulador indica se, em caso de falha **malloc** é chamar a rotina do manipulador de novo conforme definido pela **set_new_handler**. Por padrão, **malloc** não chamar a rotina do manipulador de novo em caso de falha ao alocar memória. Você pode substituir esse comportamento padrão para que, quando **malloc** Falha ao alocar memória, **malloc** chama a rotina do manipulador de novo na mesma forma que o **novo** does de operador Quando falhar pela mesma razão. Para substituir o padrão, chame:
+A função de C++ [set_new_mode](set-new-mode.md) define o novo modo do manipulador para [malloc](malloc.md). O novo modo do manipulador indica se, em caso de falha, **malloc** é chamar a nova rotina do manipulador conforme definido pela **set_new_handler**. Por padrão, **malloc** não chama a nova rotina do manipulador em caso de falha ao alocar memória. Você pode substituir esse comportamento padrão para que, quando **malloc** falhar ao alocar memória, **malloc** chame a nova rotina do manipulador da mesma forma que o **novo** operador faz Quando ele falha pelo mesmo motivo. Para substituir o padrão, chame:
 
 ```cpp
 _set_new_mode(1);
@@ -106,11 +96,11 @@ _set_new_mode(1);
 
 no início de seu programa ou vincule com Newmode.obj.
 
-Se um usuário definido `operator new` for fornecido, as novas funções de manipulador não forem chamadas automaticamente em caso de falha.
+Se um usuário definido `operator new` for fornecido, as novas funções de manipulador não são chamadas automaticamente em caso de falha.
 
 Para obter mais informações, consulte [new](../../cpp/new-operator-cpp.md) e [delete](../../cpp/delete-operator-cpp.md) na *Referência da linguagem C++*.
 
-Há um único **set_new_handler** manipulador para todos os vinculadas dinamicamente DLLs ou executáveis; mesmo se você chamar **set_new_handler** o manipulador pode ser substituído por outro ou que você está substituindo um manipulador definido por outro DLL ou executável.
+Há um único **set_new_handler** manipulador para dinamicamente todas as DLLs ou executáveis vinculados; mesmo que você chame **set_new_handler** o manipulador pode ser substituído por outro ou que você está substituindo um manipulador definido por outra DLL ou executável.
 
 ## <a name="requirements"></a>Requisitos
 

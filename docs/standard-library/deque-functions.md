@@ -1,21 +1,15 @@
 ---
-title: Funções &lt;deque&gt; | Microsoft Docs
-ms.custom: ''
+title: Funções &lt;deque&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - deque/std::swap
 ms.assetid: 1d14be53-b0b7-4f66-90cc-65bdeac563fd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 69d449943cc60365f854ac5a06e34fccd4ff77c5
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: c45ab7bfd115e9847d6c8536aa36ef9b2b65a7fa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102493"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676675"
 ---
 # <a name="ltdequegt-functions"></a>Funções &lt;deque&gt;
 

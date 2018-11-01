@@ -1,10 +1,6 @@
 ---
-title: div, ldiv, lldiv | Microsoft Docs
-ms.custom: ''
+title: div, ldiv, lldiv
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - div
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - div
-dev_langs:
-- C++
 helpviewer_keywords:
 - div function
 - quotients, computing
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3ba1625105adf6edbc6419bd4fdabc8bda5d0e98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0ee1b3b6a5d7b15470ffe1e667b4077d1f9581e4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396586"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653421"
 ---
 # <a name="div-ldiv-lldiv"></a>div, ldiv, lldiv
 
@@ -84,13 +74,13 @@ O denominador.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**div** chamado com argumentos de tipo **int** retorna uma estrutura de tipo **div_t**, que abrange o quociente e o restante. O valor de retorno com argumentos de tipo **longo** é **ldiv_t**e o valor de retorno com argumentos de tipo **longo** **longo** é **lldiv_t**. **div_t**, **ldiv_t**, e **lldiv_t** são definidos no \<stdlib.h >.
+**div** chamado usando argumentos de tipo **int** retorna uma estrutura do tipo **div_t**, que compreende o quociente e o resto. O valor retornado com os argumentos de tipo **longo** é **ldiv_t**e o valor retornado com os argumentos de tipo **longo** **longo** é **lldiv_t**. **div_t**, **ldiv_t**, e **lldiv_t** são definidos em \<stdlib. h >.
 
 ## <a name="remarks"></a>Comentários
 
-O **div** função divide *número* por *denom* e, portanto, calcula o quociente e o restante. O [div_t](../../c-runtime-library/standard-types.md) estrutura contém o quociente **quot**e o resto, **rem**. O sinal do quociente é o mesmo do quociente matemático. Seu valor absoluto é o maior inteiro menor que o valor absoluto do quociente matemático. Se o denominador é 0, o programa é encerrado com uma mensagem de erro.
+O **div** função divide *número* pela *denom* e, portanto, calcula o quociente e o resto. O [div_t](../../c-runtime-library/standard-types.md) estrutura contém o quociente **quot**e o resto **rem**. O sinal do quociente é o mesmo do quociente matemático. Seu valor absoluto é o maior inteiro menor que o valor absoluto do quociente matemático. Se o denominador é 0, o programa é encerrado com uma mensagem de erro.
 
-As sobrecargas de **div** que usam argumentos de tipo **longo** ou **longo** **longo** só estão disponíveis para o código C++. Os tipos de retorno [ldiv_t](../../c-runtime-library/standard-types.md) e [lldiv_t](../../c-runtime-library/standard-types.md) contém membros **quot** e **rem**, que possuem os significados mesmo como os membros de **div_t**.
+As sobrecargas de **div** que usam argumentos de tipo **longo** ou **longo** **longo** só estão disponíveis para código C++. Os tipos de retorno [ldiv_t](../../c-runtime-library/standard-types.md) e [lldiv_t](../../c-runtime-library/standard-types.md) contém membros **quot** e **rem**, que têm o mesmo significado que os membros do **div_t**.
 
 ## <a name="requirements"></a>Requisitos
 

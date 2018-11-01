@@ -1,10 +1,6 @@
 ---
-title: fread | Microsoft Docs
-ms.custom: ''
+title: fread
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fread
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fread
-dev_langs:
-- C++
 helpviewer_keywords:
 - reading data [C++], from input streams
 - fread function
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 819ec0b494b6e800f858e2e5647164567531ab0b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d3516dc67047064b9293b1bb289888596736ed47
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400922"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468829"
 ---
 # <a name="fread"></a>fread
 
@@ -67,20 +57,20 @@ Tamanho do item em bytes.
 *count*<br/>
 Número máximo de itens a serem lidos.
 
-*Fluxo*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**fread** retorna o número de itens completos, na verdade, leitura, que pode ser menor que *contagem* se ocorrer um erro ou se o final do arquivo é encontrado antes de alcançar *contagem*. Use o **feof** ou **ferror** função para distinguir um erro de leitura de uma condição de fim de arquivo. Se *tamanho* ou *contagem* é 0, **fread** retorna 0 e o conteúdo do buffer permanecem inalterado. Se *fluxo* ou *buffer* é um ponteiro nulo, **fread** invoca o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, esta função define **errno** para **EINVAL** e retornará 0.
+**fread** retorna o número de itens completos realmente lidos, que pode ser menor que *contagem* se ocorrer um erro ou se o final do arquivo for encontrado antes de alcançar *contagem*. Use o **feof** ou **ferror** função para diferenciar um erro de leitura de uma condição de fim-de-arquivo. Se *tamanho* ou *contagem* é 0, o **fread** retorna 0 e o conteúdo do buffer é as mesmas. Se *stream* ou *buffer* é um ponteiro nulo, **fread** invocará o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá **errno** à **EINVAL** e retornará 0.
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.
 
 ## <a name="remarks"></a>Comentários
 
-O **fread** função lê até *contagem* itens do *tamanho* bytes da entrada *fluxo* e os armazena no *buffer* . O ponteiro de arquivo associado ao *fluxo* (se houver) é aumentado pelo número de bytes realmente lidos. Se o fluxo fornecido é aberto no modo de texto, pares de avanço de linha de retorno de carro são substituídos por caracteres de avanço de linha única. A substituição não interfere no ponteiro do arquivo ou no valor retornado. A posição do ponteiro do arquivo será indeterminada se ocorrer um erro. O valor de um item lido parcialmente não pode ser determinado.
+O **fread** função lê até *contagem* itens do *tamanho* bytes de entrada *fluxo* e armazena-os no *buffer* . O ponteiro de arquivo associado *stream* (se houver) é aumentado pelo número de bytes realmente lidos. Se o fluxo em questão for aberto no modo de texto, pares de alimentação de linha de retorno de carro são substituídos por caracteres de avanço de linha única. A substituição não interfere no ponteiro do arquivo ou no valor retornado. A posição do ponteiro do arquivo será indeterminada se ocorrer um erro. O valor de um item lido parcialmente não pode ser determinado.
 
-Essa função bloqueia outros threads. Se você precisar de uma versão de não bloqueio, use **fread_nolock**.
+Essa função bloqueia outros threads. Se você precisar de uma versão sem bloqueio, use **fread_nolock**.
 
 ## <a name="requirements"></a>Requisitos
 

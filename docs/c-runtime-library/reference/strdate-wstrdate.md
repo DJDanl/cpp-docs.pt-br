@@ -1,10 +1,6 @@
 ---
-title: _strdate, _wstrdate | Microsoft Docs
-ms.custom: ''
+title: _strdate, _wstrdate
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdate
 - _wstrdate
@@ -27,8 +23,6 @@ f1_keywords:
 - _wstrdate
 - _strdate
 - strdate
-dev_langs:
-- C++
 helpviewer_keywords:
 - strdate function
 - dates, copying
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8924ac1ad29408dd1d69a68c6f31d9194831fbc2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4dc2ea7f25e644c9bf7a4ddca4a625991f37d912
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411351"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639602"
 ---
 # <a name="strdate-wstrdate"></a>_strdate, _wstrdate
 
@@ -86,11 +76,11 @@ Cada uma dessas funções retorna um ponteiro para a cadeia de caracteres result
 
 Versões mais seguras dessas funções estão disponíveis; consulte [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md). É recomendável que as funções mais seguras sejam usadas sempre que possível.
 
-O **strDate** função copia a data atual do sistema para o buffer apontado pelo *datestr*formatado **mm**/**dd** / **AA**, onde **mm** são dois dígitos que representa o mês, **dd** são dois dígitos que representa o dia e **AA**  é os dois últimos dígitos do ano. Por exemplo, a cadeia de caracteres **05/12/99** representa o dia 5 de dezembro de 1999. O tamanho do buffer deve ser de, ao menos, 9 bytes.
+O **strDate** função copia a data atual do sistema para o buffer apontado por *datestr*formatado **mm**/**dd** / **yy**, onde **mm** são dois dígitos que representa o mês **dd** são dois dígitos que representa o dia e **AA**  é os dois últimos dígitos do ano. Por exemplo, a cadeia de caracteres **05/12/99** representa 5 de dezembro de 1999. O tamanho do buffer deve ser de, ao menos, 9 bytes.
 
-Se *datestr* é um **nulo** ponteiro, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam -1 e defina **errno** para **EINVAL**.
+Se *datestr* é um **nulo** ponteiro, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão -1 e defina **errno** à **EINVAL**.
 
-**wstrdate** é uma versão de caractere largo de **strDate**; o valor de retorno e de argumento de **wstrdate** são cadeias de caracteres do caractere largo. Caso contrário, essas funções se comportam de forma idêntica.
+**wstrdate** é uma versão de caractere largo de **strDate**; o argumento e o valor retornado de **wstrdate** são cadeias de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

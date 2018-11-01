@@ -1,10 +1,6 @@
 ---
-title: memmove_s, wmemmove_s | Microsoft Docs
-ms.custom: ''
+title: memmove_s, wmemmove_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wmemmove_s
 - memmove_s
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - wmemmove_s
 - memmove_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 39fde456dd2e45d38bdd1b6ba8d9d7eb9811dd05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b60174c3a06e60301a3e9123434220227f4f426
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403889"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561181"
 ---
 # <a name="memmoves-wmemmoves"></a>memmove_s, wmemmove_s
 
@@ -90,9 +80,9 @@ Zero se for bem-sucedido ou um código de erro em caso de falha
 
 ## <a name="remarks"></a>Comentários
 
-Cópias *contagem* bytes de caracteres de *src* para *dest*. Se algumas regiões da área de origem e o destino se sobrepõem, **memmove_s** garante que os bytes de origem original na região sobreposto são copiados antes que está sendo substituído.
+Cópias *contagem* bytes de caracteres de *src* para *dest*. Se algumas regiões da área de origem e o destino se sobrepõem, **memmove_s** garante que os bytes de origem originais na região sobreposta são copiados antes de serem substituídos.
 
-Se *dest* ou se *src* é um ponteiro nulo, ou se a cadeia de caracteres de destino é muito pequena, essas funções chamar um manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução é permitida para continuar, essas funções retornam **EINVAL** e defina **errno** para **EINVAL**.
+Se *dest* ou se *src* for um ponteiro nulo ou se a cadeia de caracteres de destino for muito pequena, essas funções invocarão um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, essas funções retornarão **EINVAL** e defina **errno** para **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 

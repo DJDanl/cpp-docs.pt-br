@@ -1,10 +1,6 @@
 ---
-title: _pipe | Microsoft Docs
-ms.custom: ''
+title: _pipe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _pipe
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - pipe
 - _pipe
-dev_langs:
-- C++
 helpviewer_keywords:
 - pipes, creating
 - _pipe function
 - pipes
 - pipe function
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e3e636bc5aac889e3c3a16b856525d4d7268e262
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c5db59fecd84ae291e5651b1cec1be31c815e53a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405121"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50453964"
 ---
 # <a name="pipe"></a>_pipe
 
@@ -62,7 +52,7 @@ int _pipe(
 ### <a name="parameters"></a>Parâmetros
 
 *PFDs*<br/>
-Ponteiro para uma matriz de dois **int** para manter a leitura e gravação descritores de arquivo.
+Ponteiro para uma matriz de dois **int** para manter a leitura e gravação de descritores de arquivo.
 
 *psize*<br/>
 Quantidade de memória a ser reservada.
@@ -72,31 +62,31 @@ Modo de arquivo.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna 0 se for bem-sucedido. Retorna -1 para indicar um erro. Em erro, **errno** é definido como um destes valores:
+Retorna 0 se for bem-sucedido. Retornará -1 para indicar um erro. Em erro, **errno** é definido como um destes valores:
 
-- **EMFILE**, que indica que não há mais descritores de arquivo estão disponíveis.
+- **EMFILE**, que indica que não há outros descritores de arquivo estão disponíveis.
 
 - **ENFILE**, que indica um estouro de tabela de sistema de arquivos.
 
-- **EINVAL**, que indica que a matriz de *pfds* é um ponteiro nulo ou valor inválido para *textmode* foi passado.
+- **EINVAL**, que indica que a matriz *pfds* for um ponteiro nulo ou que um valor inválido para *textmode* foi passado.
 
 Para obter mais informações sobre esses e outros códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **pipe** função cria uma *pipe*, que é um canal de e/s artificial que usa um programa para passar informações para outros programas. Um pipe lembra um arquivo, pois ele tem um ponteiro de arquivo, um descritor de arquivo ou ambos e pode ser lido ou gravado usando as funções de entrada e saída da Biblioteca Padrão. No entanto, um pipe não representa um arquivo ou dispositivo específico. Em vez disso, ele representa o armazenamento temporário na memória que é independente da memória do próprio programa e é controlada totalmente pelo sistema operacional.
+O **pipe** função cria um *pipe*, que é um canal de e/s artificial que um programa usa para passar informações para outros programas. Um pipe lembra um arquivo, pois ele tem um ponteiro de arquivo, um descritor de arquivo ou ambos e pode ser lido ou gravado usando as funções de entrada e saída da Biblioteca Padrão. No entanto, um pipe não representa um arquivo ou dispositivo específico. Em vez disso, ele representa o armazenamento temporário na memória que é independente da memória do próprio programa e é controlada totalmente pelo sistema operacional.
 
-**pipe** semelhante **abrir** mas abre o pipe para leitura e gravação e retorna dois de descritores em vez de um arquivo. O programa pode usar ambos os lados do pipe ou fechar um que não é necessário. Por exemplo, o processador de comandos do Windows cria um pipe quando ele executa um comando como **programa 1** | **2**.
+**pipe** lembra **Open** mas abre o pipe para leitura e gravação e retorna dois descritores em vez de um de arquivo. O programa pode usar ambos os lados do pipe ou fechar um que não é necessário. Por exemplo, o processador de comando do Windows cria um pipe quando ele executa um comando, como **programa1** | **Programa2**.
 
-O padrão de saída descritor de **programa 1** está anexado ao descritor de gravação do pipe. O descritor de entrada padrão de **2** está anexado ao descritor de leitura do pipe. Isso elimina a necessidade de criar arquivos temporários para passar informações para outros programas.
+O padrão de descritor de saída **programa1** está anexado ao descritor de gravação do pipe. O descritor de entrada padrão do **Programa2** está anexado ao descritor de leitura do pipe. Isso elimina a necessidade de criar arquivos temporários para passar informações para outros programas.
 
-O **pipe** função retorna dois descritores de arquivo para o pipe no *pfds* argumento. O elemento *pfds*[0] contém o descritor de leitura e o elemento *pfds*[1] contém o descritor de gravação. Descritores de arquivo de pipe são usados da mesma maneira que outros descritores de arquivo. (As funções de saída e entrada de baixo nível **Read** e **Write** pode ler e gravar em um pipe.) Para detectar a condição de fim de pipe, procure uma **Read** solicitação que retorna 0 como o número de bytes lidos.
+O **pipe** função retorna dois descritores de arquivo para o pipe na *pfds* argumento. O elemento *pfds*[0] contém o descritor de leitura e o elemento *pfds*[1] contém o descritor de gravação. Descritores de arquivo de pipe são usados da mesma maneira que outros descritores de arquivo. (As funções de saída e entrada de baixo nível **Read** e **Write** pode ler e gravar em um pipe.) Para detectar a condição de fim de pipe, procure uma **Read** solicitação que retorna 0 como o número de bytes lidos.
 
-O *psize* argumento especifica a quantidade de memória, em bytes, para reservar para o pipe. O *textmode* argumento especifica o modo de tradução para o pipe. A constante de manifesto **o_text** Especifica uma conversão de texto e a constante **o_binary** Especifica conversão binária. (Consulte [fopen, _wfopen](fopen-wfopen.md) para obter uma descrição dos modos binário e de texto.) Se o *textmode* argumento for 0, **pipe** usa o modo de conversão do padrão que é especificado pela variável de modo padrão [fmode](../../c-runtime-library/fmode.md).
+O *psize* argumento especifica a quantidade de memória, em bytes, para reservar para o pipe. O *textmode* argumento especifica o modo de conversão para o pipe. A constante de manifesto **o_text** Especifica uma tradução de texto e a constante **o_binary** Especifica a conversão binária. (Consulte [fopen, _wfopen](fopen-wfopen.md) para obter uma descrição dos modos binário e de texto.) Se o *textmode* argumento é 0, o **pipe** usa o modo de translação padrão que é especificado pela variável de modo padrão [fmode](../../c-runtime-library/fmode.md).
 
-Em programas multithread, nenhum bloqueio é executado. Os descritores de arquivo que são retornados são abertos recentemente e não deve ser referenciados por qualquer thread até após o **pipe** chamada é concluída.
+Em programas multithread, nenhum bloqueio é executado. Os descritores de arquivo que são retornados foram abertos recentemente e não devem ser referenciados por qualquer thread até após o **pipe** chamada é concluída.
 
-Para usar o **pipe** funcionar para a comunicação entre um processo pai e um processo filho, cada processo deve ter apenas um descritor aberto no pipe. Os descritores de deverão ser opostos: se o pai tiver um descritor de leitura aberto, o filho deve ter um descritor de gravação aberto. A maneira mais fácil de fazer isso é para bit a bit ou (**|**) o **_O_NOINHERIT** sinalizador com *textmode*. Em seguida, use **DUP** ou **dup2** para criar uma cópia herdável do descritor de conexão que você deseja passar para o filho. Feche o descritor original e gere o processo filho. No retorno da chamada de geração, feche o descritor duplicado no processo pai. Para obter mais informações, consulte o exemplo 2 mais adiante neste artigo.
+Para usar o **pipe** de função para a comunicação entre um processo pai e um processo filho, cada processo deve ter apenas um descritor aberto no pipe. Os descritores de deverão ser opostos: se o pai tiver um descritor de leitura aberto, o filho deve ter um descritor de gravação aberto. A maneira mais fácil de fazer isso é como bit a bit ou (**|**) a **o_noinherit** sinalizador com *textmode*. Em seguida, use **DUP** ou **_dup2** para criar uma cópia herdável do descritor de pipe que você deseja passar para o filho. Feche o descritor original e gere o processo filho. No retorno da chamada de geração, feche o descritor duplicado no processo pai. Para obter mais informações, consulte o exemplo 2 mais adiante neste artigo.
 
 No sistema operacional Windows, um pipe é destruído quando todos os seus descritores foram fechados. (Se todos os descritores de leitura no pipe foram fechados, então, gravar no pipe causa um erro.) Todas as operações de leitura e gravação no pipe esperam até que haja dados ou espaço em buffer suficiente para concluir a solicitação de E/S.
 

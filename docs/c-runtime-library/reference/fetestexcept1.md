@@ -1,11 +1,6 @@
 ---
-title: fetestexcept | Microsoft Docs
-ms.custom: ''
+title: fetestexcept
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fetestexcept
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - fetestexcept
 - fenv/fetestexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0450fcaddf8ca05484d0b2bd122ff006eb8355f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ae170e4c5826e2053b330d81773b75f176303332
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397392"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667435"
 ---
 # <a name="fetestexcept"></a>fetestexcept
 
@@ -55,7 +44,7 @@ int fetestexcept(
 
 ### <a name="parameters"></a>Parâmetros
 
-*excepts*<br/>
+*exceções de*<br/>
 Um OR bit a bit dos sinalizadores de status de ponto flutuante para testar.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -64,7 +53,7 @@ Em caso de sucesso, retorna uma bitmask contendo um OR bit a bit das macros de e
 
 ## <a name="remarks"></a>Comentários
 
-Use a função fetestexcept para determinar quais exceções foram geradas pela operação de ponto flutuante. Use o *excepts* parâmetro para especificar quais sinalizadores de status de exceção para testar. O **fetestexcept** função usa essas macros de exceção definidas no \<fenv.h > em *excepts* e o valor de retorno:
+Use a função fetestexcept para determinar quais exceções foram geradas pela operação de ponto flutuante. Use o *, exceto* parâmetro para especificar quais sinalizadores de status de exceção para testar. O **fetestexcept** função usa essas macros de exceção definidas em \<fenv. h > na *exceções* e o valor de retorno:
 
 |Macro de exceção|Descrição|
 |---------------------|-----------------|
@@ -75,7 +64,7 @@ Use a função fetestexcept para determinar quais exceções foram geradas pela 
 |FE_UNDERFLOW|O resultado de uma operação de ponto flutuante anterior era muito pequeno para ser representado na precisão total. Um valor de denormal foi criado.|
 |FE_ALLEXCEPT|O OR bit a bit de todas as exceções de ponto flutuante com suporte.|
 
-Especificado *excepts* argumento pode ser 0, um das macros de exceção de ponto flutuante com suporte, ou se o bit a bit ou de duas ou mais das macros. O efeito de qualquer outro *excepts* o valor do argumento é indefinido.
+Especificado *, exceto* argumento pode ser 0, uma das macros de exceção de ponto flutuante com suporte ou bit a bit ou de duas ou mais das macros. O efeito de qualquer outro *, exceto* o valor do argumento é indefinido.
 
 Para usar essa função, você deve desligar otimizações de ponto flutuante que poderiam impedir o acesso usando a diretiva `#pragma fenv_access(on)` antes da chamada. Para obter mais informações, consulte [fenv_access](../../preprocessor/fenv-access.md).
 

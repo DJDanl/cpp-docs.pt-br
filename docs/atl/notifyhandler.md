@@ -1,27 +1,18 @@
 ---
-title: NotifyHandler | Microsoft Docs
-ms.custom: ''
+title: NotifyHandler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
 ms.topic: reference
 f1_keywords:
 - NotifyHandler
-dev_langs:
-- C++
 helpviewer_keywords:
 - NotifyHandler function
 ms.assetid: 5ff953ec-de35-42bc-8b3c-d384d636c139
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8f11c698b0f89e0584b673a112da10e82250cf5c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9c669d856db895be7a9d0dafd0fda21879e7ff2e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46035767"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644646"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 
@@ -58,5 +49,5 @@ Para obter um exemplo de como usar este manipulador de mensagens em um mapa de m
 ## <a name="see-also"></a>Consulte também
 
 [Implementando uma janela](../atl/implementing-a-window.md)<br/>
-[Mapas de mensagem](../atl/message-maps-atl.md)<br/>
+[Mapas de mensagens](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)

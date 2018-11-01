@@ -1,10 +1,6 @@
 ---
-title: isupper, _isupper_l, iswupper, _iswupper_l | Microsoft Docs
-ms.custom: ''
+title: isupper, _isupper_l, iswupper, _iswupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - isupper
 - iswupper
@@ -27,8 +23,6 @@ f1_keywords:
 - isupper
 - _istupper
 - iswupper
-dev_langs:
-- C++
 helpviewer_keywords:
 - istupper function
 - iswupper function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _iswupper_l function
 - isupper function
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d58fc8e10fbc533787fe0e7b99194e282bb906f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 498644fc2de8a687e2b9b63a88591385055db6c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402095"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588429"
 ---
 # <a name="isupper-isupperl-iswupper-iswupperl"></a>isupper, _isupper_l, iswupper, _iswupper_l
 
@@ -83,11 +73,11 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada essas rotinas retornará zero se *c* é uma representação específica de uma letra maiuscula. **isupper** retorna um valor diferente de zero se *c* é um caractere maiusculo (A - Z). **iswupper** retorna um valor diferente de zero se *c* é um caractere largo que corresponde a uma letra maiuscula, ou se *c* é parte de um conjunto definido pela implementação de caracteres largos para que nenhum dos **iswcntrl**, **iswdigit**, **iswpunct**, ou **iswspace** é diferente de zero. Cada uma dessas rotinas retornará 0 se *c* não satisfaz a condição de teste.
+Cada uma dessas rotinas retornará diferente de zero se *c* for uma representação específica de uma letra maiuscula. **isupper** retorna um valor diferente de zero se *c* é um caractere maiusculo (A - Z). **iswupper** retorna um valor diferente de zero se *c* for um caractere largo que corresponde a uma letra maiuscula, ou se *c* é um de um conjunto de caracteres largos definidos pela implementação para o qual nenhum **iswcntrl**, **iswdigit**, **iswpunct**, ou **iswspace** é diferente de zero. Cada uma dessas rotinas retornará 0 se *c* não satisfaz a condição de teste.
 
-As versões dessas funções que têm o **_l** sufixo usam a localidade que é transmitida em vez da localidade atual para o comportamento dependente de localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções que têm o **l** sufixo usam a localidade passada em vez da localidade atual para seu comportamento dependente da localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-O comportamento de **isupper** e **isupper_l** será indefinido se *c* não é EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca de depuração CRT é usada e *c* não é uma desses valores, o aumento de funções uma asserção.
+O comportamento de **isupper** e **isupper_l** é indefinido se *c* não for EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca de depuração CRT é usada e *c* é não um desses valores, as funções geram uma asserção.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

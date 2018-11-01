@@ -1,26 +1,17 @@
 ---
-title: 'Passo a passo: Criar e usar sua própria biblioteca de vínculo dinâmico (C++) | Microsoft Docs'
+title: 'Passo a passo: Criar e usar sua própria biblioteca de vínculo dinâmico (C++)'
 ms.custom: conceptual
 ms.date: 09/24/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9806a17bfb603ff54609f2d509c50d0a5d91e15d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: d997cb37c6cadb03bd3d16c4b1d4e56874f00018
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821233"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591003"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Passo a passo: Criar e usar sua própria biblioteca de vínculo dinâmico (C++)
 
@@ -64,7 +55,7 @@ Neste conjunto de tarefas, crie um projeto para a sua DLL, adicione o código e 
 
 ### <a name="to-create-a-dll-project-in-visual-studio-2017-version-153-or-later"></a>Para criar um projeto de DLL no Visual Studio 2017 versão 15.3 ou posterior
 
-1. Na barra de menus, escolha **arquivo** > **New** > **projeto** para abrir o **novo projeto** caixa de diálogo.
+1. Na barra de menus, escolha **Arquivo** > **Novo** > **Projeto** para abrir a caixa de diálogo **Novo Projeto**.
 
 1. No painel esquerdo do **novo projeto** diálogo caixa, expanda **instalado** e **Visual C++** se necessário e, em seguida, escolha **Windows Desktop** . No painel central, selecione **Assistente de área de trabalho do Windows**. Insira `MathLibrary` no **nome** caixa para especificar um nome para o projeto.
 

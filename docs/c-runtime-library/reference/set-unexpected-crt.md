@@ -1,10 +1,6 @@
 ---
-title: set_unexpected (CRT) | Microsoft Docs
-ms.custom: ''
+title: set_unexpected (CRT)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - set_unexpected
 apilocation:
@@ -21,23 +17,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - set_unexpected
-dev_langs:
-- C++
 helpviewer_keywords:
 - set_unexpected function
 - unexpected function
 - exception handling, termination
 ms.assetid: ebcef032-4771-48e5-88aa-2a1ab8750aa6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7af5cce0b17747beb8c136f75489025d741f864a
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 6c38421e447ca7b3f263148f51f0ade5c59e2804
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451869"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484221"
 ---
 # <a name="setunexpected-crt"></a>set_unexpected (CRT)
 
@@ -52,29 +42,29 @@ unexpected_function set_unexpected( unexpected_function unexpFunction );
 ### <a name="parameters"></a>Parâmetros
 
 *unexpFunction*<br/>
-Ponteiro para uma função que você grava para substituir o **inesperado** função.
+Ponteiro para uma função que você escreve para substituir a **inesperado** função.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna um ponteiro para a função de encerramento anterior registrado por **_set_unexpected** para que a função anterior pode ser restaurada posteriormente. Se nenhuma função anterior tiver sido definida, o valor de retorno pode ser usado para restaurar o comportamento padrão; Esse valor pode ser **nulo**.
+Retorna um ponteiro para a função de terminação anterior registrado por **_set_unexpected** para que a função anterior possa ser restaurada posteriormente. Se nenhuma função anterior tiver sido definida, o valor retornado pode ser usado para restaurar o comportamento padrão; Esse valor pode ser **nulo**.
 
 ## <a name="remarks"></a>Comentários
 
-O **set_unexpected** função instala *unexpFunction* como a função chamada **inesperado**. **inesperado** não é usado na implementação atual de manipulação de exceção de C++. O **unexpected_function** tipo está definido em EH. H como um ponteiro para uma função inesperado definida pelo usuário, *unexpFunction* que retorna **void**. Personalizados *unexpFunction* função não deve retornar ao chamador.
+O **set_unexpected** função instala *unexpFunction* como a função chamada por **inesperado**. **inesperado** não é usado na implementação atual de manipulação de exceção do C++. O **unexpected_function** tipo é definido em EH. H como um ponteiro para uma função inesperada definida pelo usuário, *unexpFunction* que retorna **void**. O personalizado *unexpFunction* função não deve retornar a seu chamador.
 
 ```cpp
 typedef void ( *unexpected_function )( );
 ```
 
-Por padrão, **inesperado** chamadas **encerrar**. Você pode alterar esse comportamento padrão ao escrever sua própria função de encerramento e chamar **set_unexpected** com o nome da sua função como seu argumento. **inesperado** chama a função último fornecida como um argumento para **set_unexpected**.
+Por padrão, **inesperado** chamadas **encerrar**. Você pode alterar esse comportamento padrão escrevendo sua própria função de encerramento e chamar **set_unexpected** com o nome da sua função como seu argumento. **inesperado** chama a função last especificada como um argumento para **set_unexpected**.
 
-Diferentemente da função de encerramento personalizado instalada por uma chamada para **set_terminate**, uma exceção pode ser gerada no *unexpFunction*.
+Diferentemente da função de encerramento personalizada instalada por uma chamada para **set_terminate**, uma exceção pode ser gerada do interior *unexpFunction*.
 
 Em um ambiente multithreaded, funções inesperadas são mantidas separadamente para cada thread. Cada novo thread precisa instalar sua própria função inesperada. Portanto, cada thread é responsável por sua própria manipulação de evento inesperado.
 
-Na implementação atual do Microsoft C++ de tratamento de exceções, **inesperado** chamadas **encerrar** por padrão e nunca é chamado pela biblioteca de tempo de execução de tratamento de exceção. Não há nenhuma vantagem específica para chamar **inesperado** em vez de **encerrar**.
+Na implementação da Microsoft de tratamento de exceções do C++ **inesperado** chamadas **encerrar** por padrão e nunca é chamado pela biblioteca em tempo de execução de manipulação de exceção. Não há nenhuma vantagem em particular a chamar **inesperado** vez **encerrar**.
 
-Há um único **set_unexpected** manipulador para todos os vinculadas dinamicamente DLLs ou EXEs; mesmo se você chamar **set_unexpected** o manipulador pode ser substituído por outro ou que você está substituindo um manipulador definido por outro DLL ou EXE.
+Há um único **set_unexpected** manipulador para dinamicamente todas as DLLs ou EXEs vinculados; mesmo se você chamar **set_unexpected** o manipulador poderá ser substituído por outro ou que você está substituindo um manipulador definido por outra DLL ou EXE.
 
 ## <a name="requirements"></a>Requisitos
 

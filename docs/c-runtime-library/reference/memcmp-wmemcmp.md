@@ -1,10 +1,6 @@
 ---
-title: memcmp, wmemcmp | Microsoft Docs
-ms.custom: ''
+title: memcmp, wmemcmp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - memcmp
 - wmemcmp
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - memcmp
 - wmemcmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1e40264c3ee7e48a545c88d7d48891126117ecc8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9504635a2a96c4579afc7a8d9caf1844504c05b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404383"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610447"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 
@@ -69,21 +59,21 @@ Primeiro buffer.
 Segundo buffer.
 
 *count*<br/>
-O número de caracteres a serem comparados. (Compara bytes para **memcmp**, caracteres largo para **wmemcmp**).
+O número de caracteres a serem comparados. (Compara bytes para **memcmp**, caracteres largos para **wmemcmp**).
 
 ## <a name="return-value"></a>Valor de retorno
 
 O valor retornado indica a relação entre os buffers.
 
-|Valor retornado|Relação da primeira *contagem* caracteres de buf1 e buf2|
+|Valor retornado|Relação dos primeiros *contagem* caracteres de buf1 e buf2|
 |------------------|---------------------------------------------------------------|
-|< 0|*buffer1* menor *buffer2*|
+|< 0|*buffer1* menor que *buffer2*|
 |0|*buffer1* idêntico ao *buffer2*|
-|> 0|*buffer1* maior *buffer2*|
+|> 0|*buffer1* maior que *buffer2*|
 
 ## <a name="remarks"></a>Comentários
 
-Compara o primeiro *contagem* caracteres de *buffer1* e *buffer2* e retorna um valor que indica sua relação. O sinal de um valor retornado diferente de zero é o sinal da diferença entre o primeiro par de valores diferentes nos buffers. Os valores são interpretados como **sem sinal** **char** para **memcmp**e como **wchar_t** para **wmemcmp**.
+Compara os primeiros *contagem* caracteres de *buffer1* e *buffer2* e retorna um valor que indica a relação. O sinal de um valor retornado diferente de zero é o sinal da diferença entre o primeiro par de valores diferentes nos buffers. Os valores são interpretados como **sem sinal** **char** para **memcmp**e como **wchar_t** para **wmemcmp**.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,20 +1,13 @@
 ---
-title: Namespaces e visibilidade de tipo (C + + c++ /CX) | Microsoft Docs
-ms.custom: ''
+title: Namespaces e visibilidade do tipo (C++/CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 42457da3c85a73292b836c6da58b17f0341df1be
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e9efc207fe0ed49fecf30366d265019e7a3ee009
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102766"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440515"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Namespaces e visibilidade do tipo (C++/CX)
 
@@ -47,7 +40,7 @@ Use os modificadores de acesso a seguir para controlar a visibilidade dos metada
 
 ## <a name="windows-runtime-namespaces"></a>Namespaces de tempo de execução do Windows
 
-A API do Windows consiste em tipos que são declarados no Windows::\* namespaces. Esses namespaces são reservados para Windows e os tipos não podem ser adicionados a eles. No **Pesquisador de Objetos**, você pode exibir esses namespaces no arquivo windows.winmd. Para obter documentação sobre esses namespaces, consulte [API do Windows](https://msdn.microsoft.com/library/windows/apps/br211377).
+A API do Windows consiste em tipos que são declarados no Windows::\* namespaces. Esses namespaces são reservados para Windows e os tipos não podem ser adicionados a eles. No **Pesquisador de Objetos**, você pode exibir esses namespaces no arquivo windows.winmd. Para obter a documentação sobre esses namespaces, veja [API do Windows](https://msdn.microsoft.com/library/windows/apps/br211377).
 
 ## <a name="ccx-namespaces"></a>namespaces C++/CX
 

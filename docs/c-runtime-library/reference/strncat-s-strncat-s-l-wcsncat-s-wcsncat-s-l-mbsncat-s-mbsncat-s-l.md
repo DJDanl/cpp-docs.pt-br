@@ -1,10 +1,6 @@
 ---
-title: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l | Microsoft Docs
-ms.custom: ''
+title: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wcsncat_s_l
 - wcsncat_s
@@ -35,8 +31,6 @@ f1_keywords:
 - strncat_s
 - _mbsncat_s
 - _tcsncat_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - concatenating strings
 - _mbsncat_s function
@@ -53,23 +47,19 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d88467034eeab3f3a269f735d5b158d94a429873
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb188f9cb5ab5f6f1a8bb66575364b7a94fe6e22
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418465"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500744"
 ---
 # <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 
 Acrescenta caracteres a uma cadeia de caracteres. Essas versões de [strncat, _strncat_l, wcsncat, _wcsncat_l, mbsncat, mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) tem aprimoramentos de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **mbsncat_s** e **mbsncat_s_l** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsncat_s** e **mbsncat_s_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -179,15 +169,15 @@ Retornará 0 se for bem-sucedido; um código de erro em caso de falha.
 
 |*strDestination*|*numberOfElements*|*strSource*|Valor retornado|Conteúdo de *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULO** ou não finalizada|qualquer|qualquer|**EINVAL**|não modificado|
+|**NULO** ou não finalizado|qualquer|qualquer|**EINVAL**|não modificado|
 |qualquer|qualquer|**NULL**|**EINVAL**|não modificado|
 |qualquer|0 ou muito pequeno|qualquer|**ERANGE**|não modificado|
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções tentarem anexar o primeiro *D* caracteres de *strSource* ao final da *strDest*, onde *D* menor *contagem* e o comprimento de *strSource*. Se acrescentar os *D* caracteres se ajustarem *strDest* (cujo tamanho é determinado como *numberOfElements*) e ainda deixar espaço para um terminador nulo e, em seguida, esses caracteres são anexados, começando em original terminação nula de *strDest*, e um novo nulo de terminação é anexado; caso contrário, *strDest*[0] é definido como o caractere nulo e o parâmetro inválido manipulador é chamado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md).
+Essas funções tentam anexar os primeiros *1!d* caracteres de *strSource* ao final da *strDest*, onde *1!d* é inferior *contagem* e o comprimento da *strSource*. Se acrescentar aqueles *1!d* caracteres caiba dentro *strDest* (cujo tamanho é determinado como *numberOfElements*) e ainda deixar espaço para um terminador nulo, em seguida, esses caracteres são acrescentados, começando em original terminação nula de *strDest*, e uma novo terminação nula é anexada; caso contrário, *strDest*[0] é definido como o caractere nulo e o parâmetro inválido manipulador será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md).
 
-Há uma exceção para o parágrafo acima. Se *contagem* é [TRUNCATE](../../c-runtime-library/truncate.md) , em seguida, o que *strSource* como será o ajuste é acrescentado ao *strDest* enquanto ainda deixa espaço para acrescentar um terminação nula.
+Há uma exceção para o parágrafo acima. Se *contagem* é [TRUNCATE](../../c-runtime-library/truncate.md) , em seguida, o máximo de *strSource* que se ajustará será acrescentada ao *strDest* enquanto ainda deixa espaço para acrescentar um terminação nula.
 
 Por exemplo,
 
@@ -197,9 +187,9 @@ strncpy_s(dst, _countof(dst), "12", 2);
 strncat_s(dst, _countof(dst), "34567", 3);
 ```
 
-significa que estamos pedindo **strncat_s** acrescentar três caracteres de dois caracteres em um buffer de cinco caracteres longos; não deixando nenhum espaço para o terminador nulo, portanto, **strncat_s** zeros fora a cadeia de caracteres e chama o manipulador de parâmetro inválido.
+significa que estamos pedindo **strncat_s** anexar três caracteres em dois caracteres em um buffer de cinco caracteres longos; isso não deixaria nenhum espaço para o terminador nulo, portanto **strncat_s** zeros a cadeia de caracteres e chama o manipulador de parâmetro inválido.
 
-Se for necessário o comportamento de truncamento, use **TRUNCATE** ou ajustar o *tamanho* parâmetro adequadamente:
+Se for necessário o comportamento de truncamento, use **TRUNCATE** ou ajustar a *tamanho* parâmetro adequadamente:
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _TRUNCATE);
@@ -213,9 +203,9 @@ strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 
 Em todos os casos, a cadeia de caracteres resultante é encerrada com um caractere nulo. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
 
-Se *strSource* ou *strDest* é **nulo**, ou *numberOfElements* for zero, o manipulador de parâmetro inválido é invocado, conforme descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução é permitida para continuar, a função retorna **EINVAL** sem modificar seus parâmetros.
+Se *strSource* ou *strDest* está **nulo**, ou é *numberOfElements* for zero, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, a função retornará **EINVAL** sem modificar seus parâmetros.
 
-**wcsncat_s** e **mbsncat_s** são versões de caracteres largos e caracteres multibyte **strncat_s**. O valor de retorno e argumentos de cadeia de caracteres **wcsncat_s** são caracteres largos cadeias de caracteres; desses **mbsncat_s** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
+**wcsncat_s** e **mbsncat_s** são versões de caractere largo e caracteres multibyte **strncat_s**. Os argumentos de cadeia de caracteres e o valor de retorno **wcsncat_s** são largos cadeias de caracteres; aqueles de **mbsncat_s** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
@@ -230,7 +220,7 @@ As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD
 |**tcsncat_s**|**strncat_s**|**_mbsnbcat_s**|**wcsncat_s**|
 |**tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
-**_strncat_s_l** e **_wcsncat_s_l** não ter nenhuma dependência de localidade, que são fornecidas apenas para **tcsncat_s_l**.
+**strncat_s_l** e **wcsncat_s_l** não ter nenhuma dependência de localidade; eles são fornecidos somente para **tcsncat_s_l**.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,10 +1,6 @@
 ---
-title: system, _wsystem | Microsoft Docs
-ms.custom: ''
+title: system, _wsystem
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - system
 - _wsystem
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - _tsystem
 - _wsystem
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wsystem function
 - wsystem function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca44648ed378d4484b8e4c32a38a6780b3eddd53
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fa034b164a188b1b5b7ccd8a4ca71ab7ac754fa1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414696"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624660"
 ---
 # <a name="system-wsystem"></a>system, _wsystem
 
@@ -71,7 +61,7 @@ O comando a ser executado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se *comando* é **nulo** e o interpretador de comandos for encontrado, retorna um valor diferente de zero. Se o interpretador de comando não for encontrado, retorna 0 e define **errno** para **ENOENT**. Se *comando* não é **nulo**, **sistema** retorna o valor retornado pelo interpretador de comandos. Retornará o valor 0 somente se o interpretador de comandos retornar o valor 0. Um valor de retorno - 1 indica um erro, e **errno** é definido como um dos seguintes valores:
+Se *comando* é **nulo** e o interpretador de comandos for encontrado, retorna um valor diferente de zero. Se o interpretador de comandos não for encontrado, retornará 0 e definirá **errno** à **ENOENT**. Se *comando* não está **nulo**, **sistema** retorna o valor retornado pelo interpretador de comandos. Retornará o valor 0 somente se o interpretador de comandos retornar o valor 0. Um valor retornado de - 1 indica um erro, e **errno** é definido como um dos seguintes valores:
 
 |||
 |-|-|
@@ -84,11 +74,11 @@ Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/er
 
 ## <a name="remarks"></a>Comentários
 
-O **sistema** função passa *comando* ao interpretador de comandos, que executa a cadeia de caracteres como um comando de sistema operacional. **sistema** usa o **COMSPEC** e **caminho** CMD.exe de arquivo de variáveis de ambiente para localizar o interpretador de comandos. Se *comando* é **nulo**, a função apenas verifica se existe o interpretador de comandos.
+O **system** função passa *comando* ao interpretador de comandos, que executa a cadeia de caracteres como um comando de sistema operacional. **sistema** usa o **COMSPEC** e **caminho** CMD.exe de arquivo de variáveis de ambiente para localizar o interpretador de comandos. Se *comando* é **nulo**, a função apenas verificará se o interpretador de comandos existe.
 
-Você deve liberar explicitamente, usando [fflush](fflush.md) ou [flushall](flushall.md), ou feche qualquer fluxo antes de chamar **sistema**.
+Você deve liberar explicitamente, usando [fflush](fflush.md) ou [flushall](flushall.md), ou fechar qualquer fluxo antes de chamar **sistema**.
 
-**wsystem** é uma versão de caractere largo de **sistema**; o *comando* argumento **wsystem** é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
+**wsystem** é uma versão de caractere largo de **system**; o *comando* argumento **wsystem** é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

@@ -1,10 +1,6 @@
 ---
-title: _chsize_s | Microsoft Docs
-ms.custom: ''
+title: _chsize_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _chsize_s
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - chsize_s
 - _chsize_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], changing size
 - chsize_s function
 - _chsize_s function
 ms.assetid: d88d2e94-6e3b-42a5-8631-16ac4d82fa38
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d131f5e21fa4980e77cfb9dc858d5329b94e2b93
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a56efe826d43c80dc2cdee295e58872e7dd3c9ea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395105"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597594"
 ---
 # <a name="chsizes"></a>_chsize_s
 
@@ -64,17 +54,17 @@ Novo tamanho do arquivo em bytes.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**chsize_s** retorna o valor 0 se o tamanho do arquivo é alterado com êxito. Um valor de retorno diferente de zero indica um erro: o valor de retorno é **EACCES** se o arquivo especificado está bloqueado contra o acesso, **EBADF** se o arquivo especificado é somente leitura ou o descritor é inválido, **ENOSPC** se nenhum espaço é deixado no dispositivo, ou **EINVAL** se o tamanho for menor que zero. **errno** é definido como o mesmo valor.
+**chsize_s** retorna o valor 0 se o tamanho do arquivo for alterado com êxito. Um valor de retorno diferente de zero indica um erro: o valor retornado será **EACCES** se o arquivo especificado estiver protegido contra acesso, **EBADF** se o arquivo especificado é somente leitura ou o descritor for inválido, **ENOSPC** se não restar espaço no dispositivo, ou **EINVAL** se o tamanho é menor que zero. **errno** é definido como o mesmo valor.
 
 Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **chsize_s** função estende ou trunca o arquivo associado *fd* para o comprimento especificado por *tamanho*. O arquivo deve ser aberto em um modo que permita gravação. Caracteres nulos ('\0') que serão acrescentados se o arquivo for estendido. Se o arquivo for truncado, todos os dados do final do arquivo reduzido para o tamanho original do arquivo serão perdidos.
+O **chsize_s** função estende ou trunca o arquivo associado *fd* até o comprimento especificado por *tamanho*. O arquivo deve ser aberto em um modo que permita gravação. Caracteres nulos ('\0') que serão acrescentados se o arquivo for estendido. Se o arquivo for truncado, todos os dados do final do arquivo reduzido para o tamanho original do arquivo serão perdidos.
 
-**chsize_s** tem um inteiro de 64 bits como o tamanho do arquivo e, portanto, pode lidar com arquivos maiores que 4 GB. **chsize** é limitada a tamanhos de arquivos de 32 bits.
+**chsize_s** utiliza um inteiro de 64 bits como o tamanho do arquivo e, portanto, pode lidar com arquivos maiores que 4 GB. **chsize** é limitada a tamanhos de arquivo de 32 bits.
 
-Essa função valida seus parâmetros. Se *fd* não é um descritor de arquivo válido ou o tamanho é menor que zero, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md).
+Essa função valida seus parâmetros. Se *fd* não é um descritor de arquivo válido ou o tamanho é menor que zero, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="requirements"></a>Requisitos
 

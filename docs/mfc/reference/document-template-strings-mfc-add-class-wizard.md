@@ -1,27 +1,17 @@
 ---
-title: Cadeias de caracteres de modelo, documento MFC Assistente para Adicionar classe | Microsoft Docs
-ms.custom: ''
+title: Cadeias de caracteres de modelo do documento, Assistente para Adicionar Classe MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.mfc.simple.doctemp
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC Add Class Wizard, document control strings
 ms.assetid: 14e1c834-5e79-4dbd-811f-ec8f0a9cdcb2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 167ddb7fd6beabe734eb58e8b17355166b86445d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a5664a539af351051f9ae3642c089e51b54bc8cd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385412"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662417"
 ---
 # <a name="document-template-strings-mfc-add-class-wizard"></a>Cadeias de caracteres de modelo do documento, Assistente para Adicionar Classe MFC
 
@@ -84,5 +74,5 @@ Produz a cadeias de caracteres associadas a formulários e os documentos que sã
 ## <a name="see-also"></a>Consulte também
 
 [Assistente para adicionar classe do MFC](../../mfc/reference/mfc-add-class-wizard.md)<br/>
-[Classe do MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
+[Classe MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)

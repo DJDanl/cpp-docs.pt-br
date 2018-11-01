@@ -1,10 +1,6 @@
 ---
-title: _aligned_offset_malloc | Microsoft Docs
-ms.custom: ''
+title: _aligned_offset_malloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _aligned_offset_malloc
 apilocation:
@@ -23,22 +19,16 @@ apitype: DLLExport
 f1_keywords:
 - _aligned_offset_malloc
 - aligned_offset_malloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - _aligned_offset_malloc function
 - aligned_offset_malloc function
 ms.assetid: 447681a3-7c95-4655-86ba-fa3a4ca4c521
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8bcc5fe0d786c7fdb04455f231cc3c8e60b53a22
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 824edfd8bb96d805a030fb205dee62fa9eb4fd06
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392839"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644631"
 ---
 # <a name="alignedoffsetmalloc"></a>_aligned_offset_malloc
 
@@ -71,13 +61,13 @@ Um ponteiro para o bloco de memória que foi alocado ou **nulo** se a operação
 
 ## <a name="remarks"></a>Comentários
 
-**aligned_offset_malloc** é útil em situações em que o alinhamento é necessária em um elemento aninhado; por exemplo, se o alinhamento era necessária em uma classe aninhada.
+**aligned_offset_malloc** é útil em situações em que o alinhamento é necessário em um elemento aninhado; por exemplo, se o alinhamento foi necessário em uma classe aninhada.
 
-**aligned_offset_malloc** baseia-se em **malloc**; para obter mais informações, consulte [malloc](malloc.md).
+**aligned_offset_malloc** se baseia **malloc**; para obter mais informações, consulte [malloc](malloc.md).
 
-**aligned_offset_malloc** está marcado como `__declspec(noalias)` e `__declspec(restrict)`, que significa que a função é garantia de não modificar variáveis globais e que o ponteiro retornado não é um alias. Para obter mais informações, consulte [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
+**aligned_offset_malloc** está marcada `__declspec(noalias)` e `__declspec(restrict)`, o que significa que a função não é garantido que modifica variáveis globais e que o ponteiro retornado não é um alias. Para obter mais informações, consulte [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
 
-Esta função define **errno** para **ENOMEM** se a alocação de memória falhou ou se o tamanho solicitado é maior que **heap_maxreq**. Para obter mais informações sobre **errno**, consulte [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Além disso, **aligned_offset_malloc** valida seus parâmetros. Se *alinhamento* não é uma potência de 2 ou se *deslocamento* é maior que ou igual a *tamanho* e diferente de zero, esta função chama o manipulador de parâmetro inválido, conforme descrito em [ Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essa função retorna **nulo** e define **errno** para **EINVAL**.
+Essa função definirá **errno** à **ENOMEM** se a alocação de memória tiver falhado ou se o tamanho solicitado for maior **heap_maxreq**. Para obter mais informações sobre **errno**, consulte [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Além disso, **aligned_offset_malloc** valida seus parâmetros. Se *alinhamento* não for uma potência de 2 ou se *deslocamento* é maior que ou igual a *tamanho* e diferente de zero, essa função invocará o manipulador de parâmetro inválido, conforme descrito na [ Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retorna **nulo** e define **errno** para **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 

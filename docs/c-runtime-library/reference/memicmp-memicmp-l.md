@@ -1,10 +1,6 @@
 ---
-title: _memicmp, _memicmp_l | Microsoft Docs
-ms.custom: ''
+title: _memicmp, _memicmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _memicmp_l
 - _memicmp
@@ -25,24 +21,18 @@ f1_keywords:
 - _memicmp
 - memicmp_l
 - _memicmp_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - memicmp function
 - _memicmp function
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3ddd09fbfbfd4de095bfbc67bc669cf9c794dee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8beb632c8bd2cfac486fc58fc930b94490bdecbc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403047"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636807"
 ---
 # <a name="memicmp-memicmpl"></a>_memicmp, _memicmp_l
 
@@ -84,18 +74,18 @@ O valor retornado indica a relação entre os buffers.
 
 |Valor retornado|Relação dos primeiros count caracteres de buf1 e buf2|
 |------------------|--------------------------------------------------------|
-|< 0|*buffer1* menor *buffer2*.|
-|0|*buffer1* idêntico ao *buffer2*.|
-|> 0|*buffer1* maior *buffer2*.|
+|< 0|*buffer1* menor que *buffer2*.|
+|0|*buffer1* idênticos aos *buffer2*.|
+|> 0|*buffer1* maior que *buffer2*.|
 |**_NLSCMPERROR**|Ocorreu um erro.|
 
 ## <a name="remarks"></a>Comentários
 
-O **memicmp** função compara o primeiro *contagem* caracteres de dois buffers *buffer1* e *buffer2* byte por byte. A comparação não diferencia maiúsculas de minúsculas.
+O **memicmp** função compara os primeiros *contagem* caracteres de dois buffers *buffer1* e *buffer2* byte por byte. A comparação não diferencia maiúsculas de minúsculas.
 
-Se qualquer um dos *buffer1* ou *buffer2* é um ponteiro nulo, esta função chama um manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, a função retorna **_NLSCMPERROR** e define **errno** para **EINVAL**.
+Se qualquer um dos *buffer1* ou *buffer2* é um ponteiro nulo, essa função invocará um manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará **_NLSCMPERROR** e define **errno** para **EINVAL**.
 
-**memicmp** usa a localidade atual para o comportamento dependente de localidade; **memicmp_l** é idêntico, exceto que ele usa a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**memicmp** usa a localidade atual para o comportamento dependente da localidade. **memicmp_l** é idêntico, exceto que ele usa a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,24 +1,14 @@
 ---
-title: Extensões específicas para C + + c++ CLI | Microsoft Docs
-ms.custom: ''
+title: Extensões específicas de C++/CLI
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 81e3fd32-6c8f-490b-9190-a6dc291545c8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 82dcbbe31110a38c381dd0891ab1837b893be59e
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 34c9d48c10480d8afcd301b20909773f7585724d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50079123"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630926"
 ---
 # <a name="extensions-that-are-specific-to-ccli"></a>Extensões específicas de C++/CLI
 

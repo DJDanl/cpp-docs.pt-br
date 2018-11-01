@@ -1,11 +1,6 @@
 ---
-title: fegetround, fesetround | Microsoft Docs
-ms.custom: ''
+title: fegetround, fesetround
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fegetround
 - fesetround
@@ -27,22 +22,16 @@ f1_keywords:
 - fesetround
 - fenv/fegetround
 - fenv/fesetround
-dev_langs:
-- C++
 helpviewer_keywords:
 - fegetround function
 - fesetround function
 ms.assetid: 596af00b-be2f-4f57-b2f5-460485f9ff0b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 137d886d557cbb1fee7db1dd60405b9557bf6bf2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 061f0c9563d284396e85c6de70a2fe0911218eb3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398078"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666798"
 ---
 # <a name="fegetround-fesetround"></a>fegetround, fesetround
 
@@ -67,7 +56,7 @@ O modo de arredondamento a ser definido, como as macros de arredondamento de pon
 
 Em caso de sucesso, **fegetround** retorna o modo de arredondamento como um dos valores de macro de arredondamento de ponto flutuante. Ele retornará um valor negativo se o modo de arredondamento atual não puder ser determinado.
 
-Em caso de sucesso, **fesetround** retorna 0. Caso contrário, será retornado um valor diferente de zero.
+Em caso de sucesso, **fesetround** retornará 0. Caso contrário, será retornado um valor diferente de zero.
 
 ## <a name="remarks"></a>Comentários
 
@@ -88,13 +77,13 @@ O modo de arredondamento atual afeta essas operações:
 
 - Os resultados de operadores aritméticos de ponto flutuante fora das expressões constantes.
 
-- A biblioteca de arredondamento funções, como **imprimir** e **nearbyint**.
+- A biblioteca de funções, de arredondamento tal como **rimir** e **nearbyint**.
 
 - Valores de retorno de funções matemáticas da biblioteca padrão.
 
 O modo de arredondamento atual não afeta essas operações:
 
-- O **trunc**, **ceil**, **andar**, e **lround** funções de biblioteca.
+- O **trunc**, **ceil**, **floor**, e **lround** funções da biblioteca.
 
 - Ponto flutuante para conversões e transmissões implícitas de inteiro, que sempre arredondam em direção a zero.
 

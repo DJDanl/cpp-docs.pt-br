@@ -1,11 +1,6 @@
 ---
-title: quick_exit1 | Microsoft Docs
-ms.custom: ''
+title: quick_exit1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - quick_exit
 apilocation:
@@ -25,21 +20,15 @@ f1_keywords:
 - quick_exit
 - process/quick_exit
 - stdlib/quick_exit
-dev_langs:
-- C++
 helpviewer_keywords:
 - quick_exit function
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: de3eb88093db0eea470a0c1d775516574c466ddd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50f1ee72cce04c2bebc8f7396a2b6fad98301dd7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405725"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429009"
 ---
 # <a name="quickexit"></a>quick_exit
 
@@ -60,15 +49,15 @@ O código de status para retornar para o ambiente de host.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **quick_exit** função não pode retornar ao chamador.
+O **quick_exit** função não pode retornar a seu chamador.
 
 ## <a name="remarks"></a>Comentários
 
-O **quick_exit** função causa o encerramento normal do programa. Ele chama nenhuma função registradas por **atexit**, **OnExit** ou sinalizar manipuladores registrados pelo **sinal** função. Comportamento será indefinido se **quick_exit** é chamado mais de uma vez, ou se o **sair** também é chamada de função.
+O **quick_exit** função causa o término normal do programa. Ele chama nenhuma função registrada por **atexit**, **OnExit** ou manipuladores de sinal registrados pela **sinal** função. Comportamento será indefinido se **quick_exit** é chamado mais de quando ou se o **sair** também é chamada de função.
 
-O **quick_exit** chamadas de função, no último a entrar, primeiro a sair (UEPS) ordem, as funções registradas por **at_quick_exit**, exceto para essas funções já chamadas quando a função foi registrada.  O comportamento será indefinido se uma chamada [longjmp](longjmp.md) for realizada durante uma chamada para uma função registrada que terminaria a chamada para a função.
+O **quick_exit** chamadas de função, no último a entrar, primeiro a sair (UEPS) ordem, as funções registradas por **at_quick_exit**, exceto para aquelas funções já chamadas quando a função foi registrada.  O comportamento será indefinido se uma chamada [longjmp](longjmp.md) for realizada durante uma chamada para uma função registrada que terminaria a chamada para a função.
 
-Depois de tem sido chamadas de funções registradas, **quick_exit** invoca **exit** usando o *status* valor para retornar o controle para o ambiente de host.
+Depois que as funções registradas foram chamadas, **quick_exit** invoca **exit** usando o *status* valor para retornar o controle para o ambiente de host.
 
 ## <a name="requirements"></a>Requisitos
 

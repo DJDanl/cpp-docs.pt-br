@@ -1,10 +1,6 @@
 ---
-title: Namespace de simultaneidade | Microsoft Docs
-ms.custom: ''
+title: Namespace Concurrency
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue/concurrency
 - agents/concurrency
@@ -21,21 +17,15 @@ f1_keywords:
 - concurrent_unordered_set/concurrency
 - pplconcrt/concurrency
 - internal_concurrent_hash/concurrency
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9d423d80606da9edcec2cb5f4da4d02e39213ba7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ccfa168f811b2c357a3760097ca7bbaab4f5ed3a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386022"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629843"
 ---
 # <a name="concurrency-namespace"></a>Namespace Concurrency
 
@@ -155,7 +145,7 @@ namespace concurrency;
 |[Estrutura ITopologyExecutionResource](itopologyexecutionresource-structure.md)|Uma interface para um recurso de execução, conforme definido pelo Gerenciador de recursos.|
 |[Estrutura ITopologyNode](itopologynode-structure.md)|Uma interface para um nó da topologia conforme definido pelo Gerenciador de recursos. Um nó contém um ou mais recursos de execução.|
 |[Estrutura IUMSCompletionList](iumscompletionlist-structure.md)|Representa uma lista de conclusão UMS. Quando um thread seja bloqueado UMS, o Agendador designado de agendamento de contexto é enviado para tomar uma decisão do que agendar na raiz do processador virtual subjacente enquanto o thread original será bloqueado. Quando o thread original será desbloqueado, o sistema operacional coloca em fila-lo à lista de preenchimento que é acessível por meio dessa interface. O Agendador pode consultar a lista de conclusão no contexto de programação designado ou qualquer outro lugar, que ele procura por trabalho.|
-|[Estrutura IUMSScheduler](iumsscheduler-structure.md)|Uma interface para uma abstração de um agendador de trabalho que deseja o Gerenciador de recursos do tempo de execução de simultaneidade entregá-lo a threads agendáveis no modo de usuário (UMS). O Gerenciador de recursos usa essa interface para se comunicar com os agendadores de thread UMS. A interface `IUMSScheduler` herda da interface `IScheduler`.|
+|[Estrutura IUMSScheduler](iumsscheduler-structure.md)|Uma interface para uma abstração de um agendador de trabalho que deseja o Gerenciador de recursos do tempo de execução de simultaneidade entregá-lo a threads agendáveis no modo de usuário (UMS). O Gerenciador de recursos usa essa interface para se comunicar com os agendadores de thread UMS. A interface `IUMSScheduler` herda da interface `IScheduler` .|
 |[Estrutura IUMSThreadProxy](iumsthreadproxy-structure.md)|Uma abstração para um thread de execução. Se você quiser que seu Agendador para ser concedida a threads agendáveis no modo de usuário (UMS), defina o valor para o elemento de política de Agendador `SchedulerKind` à `UmsThreadDefault`e implementar o `IUMSScheduler` interface. Threads UMS são apenas com suporte em sistemas operacionais de 64 bits com a versão do Windows 7 e superior.|
 |[Estrutura IUMSUnblockNotification](iumsunblocknotification-structure.md)|Representa uma notificação do Gerenciador de recursos que um proxy de thread que bloqueado e disparou um retorno para o Agendador designado o contexto de programação tem desbloqueado e está pronto para ser agendada. Essa interface é inválida quando o contexto de execução associadas do proxy de thread, retornado do `GetContext` método, será reagendada.|
 |[Estrutura IVirtualProcessorRoot](ivirtualprocessorroot-structure.md)|Uma abstração para um thread de hardware no qual um proxy de thread pode executar.|

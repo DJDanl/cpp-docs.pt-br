@@ -1,10 +1,6 @@
 ---
-title: _fpclass, _fpclassf | Microsoft Docs
-ms.custom: ''
+title: _fpclass, _fpclassf
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fpclass
 - _fpclassf
@@ -28,24 +24,18 @@ f1_keywords:
 - math/_fpclass
 - float/_fpclass
 - math/_fpclassf
-dev_langs:
-- C++
 helpviewer_keywords:
 - fpclass function
 - floating-point numbers, IEEE representation
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 79895cf19c188addee45236df5dc47d3f4ebf6a3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 987c87cc7a03f4a24e47654ae52e8a2416a15184
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398360"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590964"
 ---
 # <a name="fpclass-fpclassf"></a>_fpclass, _fpclassf
 
@@ -87,7 +77,7 @@ O **fpclass** e **_fpclassf** funções retornam um valor inteiro que indica a c
 
 ## <a name="remarks"></a>Comentários
 
-O **fpclass** e **_fpclassf** funções são específicas da Microsoft. Elas são semelhantes a [fpclassify](fpclassify.md), mas retornam informações mais detalhadas sobre o argumento. O **_fpclassf** função só está disponível quando compilado para o x64 plataforma.
+O **fpclass** e **_fpclassf** funções são específicas da Microsoft. Elas são semelhantes a [fpclassify](fpclassify.md), mas retornam informações mais detalhadas sobre o argumento. O **_fpclassf** função só está disponível quando compilada para x64 plataforma.
 
 ## <a name="requirements"></a>Requisitos
 

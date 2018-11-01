@@ -1,10 +1,6 @@
 ---
-title: _recalloc_dbg | Microsoft Docs
-ms.custom: ''
+title: _recalloc_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _recalloc_dbg
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - recalloc_dbg
 - _recalloc_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _recalloc_dbg function
 - recalloc_dbg function
 ms.assetid: 43c3e9b2-be6d-4508-9b0f-3220c8a47ca3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3de6adddc4e7d95f3212c80666816d4855897388
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: e2782492d3338b5b548db0153b6123fb82ff5e72
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451043"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653265"
 ---
 # <a name="recallocdbg"></a>_recalloc_dbg
 
@@ -58,10 +48,10 @@ void *_recalloc_dbg(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Dados do usuário*<br/>
+*dados do usuário*<br/>
 Ponteiro para o bloco de memória alocado anteriormente.
 
-*Número*<br/>
+*número*<br/>
 Número necessário de blocos de memória.
 
 *size*<br/>
@@ -73,24 +63,24 @@ Tipo de bloco de memória solicitado: **client_block** ou **normal_block**.
 Para obter informações sobre os tipos de blocos de alocação e como eles são usados, consulte [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details) (Tipos de blocos no heap de depuração).
 
 *filename*<br/>
-Ponteiro para o nome do arquivo de origem que a operação de alocação solicitada ou **nulo**.
+Ponteiro para o nome do arquivo de origem que solicitou a operação de alocação ou **nulo**.
 
 *linenumber*<br/>
-Número no arquivo de origem em que a operação de alocação foi solicitada da linha ou **nulo**.
+Número de linha no arquivo de origem em que a operação de alocação foi solicitada ou **nulo**.
 
-O *filename* e *linenumber* parâmetros estão disponíveis somente quando **recalloc_dbg** foi chamado explicitamente ou [crtdbg_map_alloc](../../c-runtime-library/crtdbg-map-alloc.md) constante de pré-processador foi definido.
+O *filename* e *linenumber* parâmetros estão disponíveis somente quando **recalloc_dbg** tiver sido chamado explicitamente ou o [crtdbg_map_alloc](../../c-runtime-library/crtdbg-map-alloc.md) constante do pré-processador foi definido.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Após a conclusão bem-sucedida, essa função retorna um ponteiro à parte do usuário do bloco de memória realocada, chama a nova função de manipulador ou retorna **nulo**. Para obter uma descrição completa do comportamento de retorno, consulte a seção Comentários a seguir. Para obter mais informações sobre como a nova função do manipulador é usada, consulte a função [_recalloc](recalloc.md).
+Após a conclusão bem-sucedida, essa função retorna um ponteiro para a parte do usuário do bloco de memória realocado, chama a nova função de manipulador tanto retorna **nulo**. Para obter uma descrição completa do comportamento de retorno, consulte a seção Comentários a seguir. Para obter mais informações sobre como a nova função do manipulador é usada, consulte a função [_recalloc](recalloc.md).
 
 ## <a name="remarks"></a>Comentários
 
-**recalloc_dbg** é uma versão de depuração de [recalloc](recalloc.md) função. Quando [Debug](../../c-runtime-library/debug.md) não está definida, cada chamada para **recalloc_dbg** é reduzido para uma chamada para **recalloc**. Ambos **recalloc** e **recalloc_dbg** realocar um bloco de memória no heap de base, mas **recalloc_dbg** acomoda a vários recursos de depuração: buffers em ambos os lados da parte do bloco de teste para as perdas de usuário, um bloco de parâmetro para rastrear tipos específicos de alocação, do tipo e *filename*/*linenumber* informações para determinar o origem de solicitações de alocação.
+**recalloc_dbg** é uma versão de depuração de [recalloc](recalloc.md) função. Quando [Debug](../../c-runtime-library/debug.md) não estiver definido, cada chamada para **recalloc_dbg** é reduzida a uma chamada para **recalloc**. Ambos **recalloc** e **recalloc_dbg** realocam um bloco de memória no heap de base, mas **recalloc_dbg** acomoda diversos recursos de depuração: buffers nos dois lados da parte do usuário do bloco para testar se há vazamentos, um bloco de parâmetro para rastrear tipos específicos de alocação de tipo e *filename*/*linenumber* informações para determinar o origem das solicitações de alocação.
 
-**recalloc_dbg** realoca o bloco de memória especificado com um pouco mais espaço do que o tamanho solicitado (*número* * *tamanho*) que pode ser maior ou menor que o tamanho do o bloco de memória alocada originalmente. O espaço adicional é usado pelo gerenciador de heaps de depuração para vincular os blocos de memória de depuração e fornecer informações do cabeçalho de depuração ao aplicativo e substituir buffers. A realocação pode resultar no deslocamento do bloco de memória original para outro local do heap e alterar o tamanho do bloco de memória. A parte do usuário do bloco é preenchida com o valor 0xCD e cada um dos buffers de substituição são preenchidos com 0xFD.
+**recalloc_dbg** realoca o bloco de memória especificado com um pouco mais de espaço que o tamanho solicitado (*número* * *tamanho*) que pode ser maior ou menor que o tamanho de o bloco de memória alocado originalmente. O espaço adicional é usado pelo gerenciador de heaps de depuração para vincular os blocos de memória de depuração e fornecer informações do cabeçalho de depuração ao aplicativo e substituir buffers. A realocação pode resultar no deslocamento do bloco de memória original para outro local do heap e alterar o tamanho do bloco de memória. A parte do usuário do bloco é preenchida com o valor 0xCD e cada um dos buffers de substituição são preenchidos com 0xFD.
 
-**recalloc_dbg** define **errno** para **ENOMEM** se falhar de alocação de memória; **EINVAL** será retornado se a quantidade de memória necessária (incluindo a sobrecarga mencionada anteriormente) excede **heap_maxreq**. Para obter informações sobre esse e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**recalloc_dbg** define **errno** à **ENOMEM** se uma alocação de memória falhar; **EINVAL** será retornado se a quantidade de memória necessária (incluindo a sobrecarga mencionada anteriormente) excede **heap_maxreq**. Para obter informações sobre esse e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details). Para obter informações sobre as diferenças entre chamar uma função de heap padrão e sua versão de depuração em um build de depuração de um aplicativo, consulte [Versões de depuração das funções de alocação de heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 

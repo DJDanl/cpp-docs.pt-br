@@ -1,32 +1,22 @@
 ---
-title: '&lt;stack&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;stack&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <stack>
-dev_langs:
-- C++
 helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 68f16523b1fda7b8b3d6b8dca5b4d1960c5c815f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 51e350169babc3d5247fbdabab2f3b9bda717d47
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861747"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617043"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
-Define a pilha de classe de modelo e dois modelos de suporte.
+Define a pilha de classe de modelo e os dois modelos de suporte.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -39,10 +29,10 @@ Define a pilha de classe de modelo e dois modelos de suporte.
 
 |Operador|Descrição|
 |-|-|
-|[operator!=](../standard-library/stack-operators.md#op_neq)|Testa se o objeto de pilha no lado esquerdo do operador não é igual ao objeto de pilha no lado direito.|
+|[operator!=](../standard-library/stack-operators.md#op_neq)|Testa se o objeto stack do lado esquerdo do operador não é igual ao objeto stack do lado direito.|
 |[operator<](../standard-library/stack-operators.md#op_lt)|Testa se o objeto stack do lado esquerdo do operador é menor que o objeto stack do lado direito.|
 |[operator\<=](../standard-library/stack-operators.md#op_lt_eq)|Testa se o objeto stack do lado esquerdo do operador é menor ou igual ao objeto stack do lado direito.|
-|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Testa se o objeto de pilha no lado esquerdo do operador é igual ao objeto de pilha no lado direito.|
+|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Testa se o objeto stack do lado esquerdo do operador é igual ao objeto stack do lado direito.|
 |[operator>](../standard-library/stack-operators.md#op_gt)|Testa se o objeto stack do lado esquerdo do operador é maior que o objeto stack do lado direito.|
 |[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Testa se o objeto stack do lado esquerdo do operador é maior ou igual ao objeto stack do lado direito.|
 

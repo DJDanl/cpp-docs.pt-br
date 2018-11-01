@@ -1,10 +1,6 @@
 ---
-title: strtoul, _strtoul_l, wcstoul, _wcstoul_l | Microsoft Docs
-ms.custom: ''
+title: strtoul, _strtoul_l, wcstoul, _wcstoul_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wcstoul_l
 - _strtoul_l
@@ -27,8 +23,6 @@ f1_keywords:
 - strtoul
 - _tcstoul
 - wcstoul
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wcstoul_l function
 - _tcstoul function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - strtoul_l function
 - tcstoul function
 ms.assetid: 38f2afe8-8178-4e0b-8bbe-d5c6ad66e3ab
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 341d331d7de675588524a20596b7ebcd27358b5a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1ef17b7b5cf1dac2d10cd16889241c40f89a507
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416892"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436122"
 ---
 # <a name="strtoul-strtoull-wcstoul-wcstoull"></a>strtoul, _strtoul_l, wcstoul, _wcstoul_l
 
@@ -98,19 +88,19 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**strtoul** retorna o valor convertido, se houver, ou **ULONG_MAX** no estouro. **strtoul** retorna 0 se nenhuma conversão pode ser executada. **wcstoul** retorna valores de maneira semelhante para **strtoul**. Para ambas as funções, **errno** é definido como **ERANGE** se ocorrer estouro ou estouro negativo.
+**strtoul** retorna o valor convertido, se houver, ou **ULONG_MAX** no estouro. **strtoul** retorna 0 se nenhuma conversão pode ser executada. **wcstoul** retorna valores de maneira semelhante a **strtoul**. Para ambas as funções **errno** é definido como **ERANGE** se ocorre estouro ou estouro negativo.
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções converte a cadeia de caracteres de entrada *strSource* para um **sem sinal** **longo**.
+Cada uma dessas funções converte a cadeia de caracteres de entrada *strSource* para um **unsigned** **longo**.
 
-**strtoul** para de ler a cadeia de caracteres *strSource* no primeiro caractere que não reconhece como parte de um número. Isso pode ser o caractere null de terminação ou pode ser o primeiro caractere numérico maior que ou igual a *base*. O **LC_NUMERIC** categoria determina da localidade reconhecimento do caractere base *strSource*; para obter mais informações, consulte [setlocale](setlocale-wsetlocale.md). **strtoul** e **wcstoul** usam a localidade atual; **strtoul_l** e **wcstoul_l** são idênticos, exceto que eles usam a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**strtoul** deixa de ler a cadeia de caracteres *strSource* no primeiro caractere que não reconhece como parte de um número. Isso pode ser o caractere nulo de terminação ou pode ser o primeiro caractere numérico maior ou igual a *base*. O **LC_NUMERIC** configuração da categoria da localidade determina o reconhecimento do caractere fracionário em *strSource*; para obter mais informações, consulte [setlocale](setlocale-wsetlocale.md). **strtoul** e **wcstoul** usam a localidade atual; **strtoul_l** e **wcstoul_l** são idênticas, exceto que eles usam a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Se *endptr* não é **nulo**, um ponteiro para o caractere que interrompeu a verificação é armazenado no local apontado pela *endptr*. Se nenhuma conversão pode ser executada (sem dígitos válidos foram encontrados ou uma base inválida foi especificada), o valor de *strSource* é armazenado no local apontado pela *endptr*.
+Se *endptr* não está **nulo**, um ponteiro para o caractere que parou a verificação é armazenado no local apontado pela *endptr*. Se nenhuma conversão puder ser executada (Nenhum dígito válido foi encontrado ou uma base inválida foi especificada), o valor de *strSource* é armazenado no local apontado por *endptr*.
 
-**wcstoul** é uma versão de caractere largo de **strtoul**; seu *strSource* argumento é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
+**wcstoul** é uma versão de caractere largo de **strtoul**; sua *strSource* argumento é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -123,7 +113,7 @@ Se *endptr* não é **nulo**, um ponteiro para o caractere que interrompeu a ver
 
 > [*espaço em branco*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*dígitos* &#124; *letras*]  
 
-Um *espaço em branco* pode consistir em caracteres de espaço e tabulação, que são ignorados. *dígitos* são um ou mais dígitos decimais. *letras* são um ou mais letras 'a' a 'z' ('A' a 'Z'). O primeiro caractere que não é adequado a esse formato interrompe o exame. Se *base* está entre 2 e 36, em seguida, ele é usado como a base do número. Se *base* é 0, os caracteres iniciais da cadeia de caracteres apontada por *strSource* são usados para determinar a base. Se o primeiro caractere é 0 e o segundo caractere não for 'x' ou 'X', a cadeia de caracteres é interpretada como um inteiro octal. Se o primeiro caractere for '0' e o segundo caractere for 'x' ou 'X', a cadeia de caracteres será interpretada como um inteiro hexadecimal. Se o primeiro caractere for de '1' até '9', a cadeia de caracteres será interpretada como um inteiro hexadecimal. As letras 'a' a 'z' (ou 'A' a 'Z') recebem os valores 10 a 35; somente são permitidas letras cujos valores atribuídos são menores que *base*. O primeiro caractere fora do intervalo da base interrompe o exame. Por exemplo, se *base* é 0 e o primeiro caractere examinado é '0', é considerado um inteiro octal e um caractere '8' ou '9' irá parar a verificação. **strtoul** permite que um sinal de mais (**+**) ou sinal de subtração (**-**) prefixo de sinal; um sinal de subtração indica que o valor de retorno será negado.
+Um *espaço em branco* pode consistir em caracteres de espaço ou tabulação, que são ignorados. *dígitos* são um ou mais dígitos decimais. *letras* são um ou mais das letras 'a' a 'z' (ou 'A' a 'Z'). O primeiro caractere que não é adequado a esse formato interrompe o exame. Se *base* está entre 2 e 36, ele será usado como a base do número. Se *base* for 0, os caracteres iniciais da cadeia de caracteres apontada por *strSource* são usados para determinar a base. Se o primeiro caractere é 0 e o segundo caractere não for 'x' ou 'X', a cadeia de caracteres é interpretada como um inteiro octal. Se o primeiro caractere for '0' e o segundo caractere for 'x' ou 'X', a cadeia de caracteres será interpretada como um inteiro hexadecimal. Se o primeiro caractere for de '1' até '9', a cadeia de caracteres será interpretada como um inteiro hexadecimal. As letras 'a' a 'z' (ou 'A' a 'Z') recebem os valores 10 a 35; somente são permitidas letras cujos valores atribuídos são menores que *base*. O primeiro caractere fora do intervalo da base interrompe o exame. Por exemplo, se *base* é 0 e o primeiro caractere verificado é '0', é considerado um inteiro octal e um caractere '8' ou '9' interromperá a verificação. **strtoul** permite que um sinal de adição (**+**) ou de menos (**-**) prefixo; um sinal de subtração à esquerda indica que o valor retornado é negado.
 
 ## <a name="requirements"></a>Requisitos
 

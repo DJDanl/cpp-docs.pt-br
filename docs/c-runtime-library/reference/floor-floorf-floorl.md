@@ -1,10 +1,6 @@
 ---
-title: floor, floorf, floorl | Microsoft Docs
-ms.custom: ''
+title: floor, floorf, floorl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - floorf
 - floorl
@@ -27,24 +23,18 @@ f1_keywords:
 - floorl
 - _floorl
 - floorf
-dev_langs:
-- C++
 helpviewer_keywords:
 - floor function
 - floorf function
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83795c9388b3889f99c9283cbffd33755d63fcd8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 050b7ea0eedf07666fa52145eeaf43f8fde2e18b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399417"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647717"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -83,11 +73,11 @@ O **andar** funções retornam um valor de ponto flutuante que representa o maio
 |-----------|-------------------|-----------------------|
 |± QNAN,IND|nenhum|_DOMAIN|
 
-**Floor** tem uma implementação que usa extensões Streaming SIMD 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
+**Floor** tem uma implementação que usa Streaming SIMD Extensions 2 (SSE2). Para obter informações e restrições relativas ao uso da implementação de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Comentários
 
-O C++ permite sobrecarga, portanto, você pode chamar sobrecargas de **andar** que levar e retornar **float** e **longo** **duplo** valores. Em um programa C, **andar** sempre usa e retorna um **duplo**.
+C++ permite sobrecargas, portanto, é possível chamar sobrecargas de **andar** que usam e retornam **float** e **longo** **double** valores. Em um programa do C **andar** sempre usa e retorna um **duplo**.
 
 ## <a name="requirements"></a>Requisitos
 

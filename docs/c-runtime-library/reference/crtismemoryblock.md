@@ -1,10 +1,6 @@
 ---
-title: _CrtIsMemoryBlock | Microsoft Docs
-ms.custom: ''
+title: _CrtIsMemoryBlock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtIsMemoryBlock
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsMemoryBlock
 - _CrtIsMemoryBlock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtIsMemoryBlock function
 - CrtIsMemoryBlock function
 ms.assetid: f7cbbc60-3690-4da0-a07b-68fd7f250273
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 45331186cca5aab3c7971ba404d7b6da98139130
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c4a85ebeb45552c6f5355853de2a45766d6bc984
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450726"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555722"
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 
@@ -57,7 +47,7 @@ int _CrtIsMemoryBlock(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Dados do usuário*<br/>
+*dados do usuário*<br/>
 Ponteiro para o início do bloco de memória a ser verificado.
 
 *size*<br/>
@@ -70,17 +60,17 @@ Ponteiro para o número de alocação do bloco ou **nulo**.
 Ponteiro para o nome do arquivo de origem que solicitou o bloco ou **nulo**.
 
 *linenumber*<br/>
-Ponteiro para o número da linha no arquivo de origem ou **nulo**.
+Ponteiro para o número de linha no arquivo de origem ou **nulo**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**Crtismemoryblock** retorna **TRUE** se o bloco de memória especificado está localizado dentro de heap local e tem um identificador de tipo de bloco de heap de depuração válido; caso contrário, a função retornará **FALSE**.
+**Crtismemoryblock** retorna **verdadeira** se o bloco de memória especificado está localizado no heap local e tem um identificador de tipo de bloco de heap de depuração válido; caso contrário, a função retornará **FALSE**.
 
 ## <a name="remarks"></a>Comentários
 
-O **crtismemoryblock** função verifica se um bloco de memória especificado está localizado na pilha de local do aplicativo e se ele tem um identificador de tipo de bloco válido. Essa função também pode ser usada para obter o número de ordem de alocação do objeto e o nome do arquivo de origem/número de linha em que a alocação de bloco de memória foi originalmente solicitada. Passando não**nulo** valores para o *requestNumber*, *filename*, ou *linenumber* causas parâmetros **_ CrtIsMemoryBlock** para definir esses parâmetros para os valores no cabeçalho de depuração do bloco de memória, se ele encontrar o bloco na pilha de local. Quando [Debug](../../c-runtime-library/debug.md) não está definido, chamadas para **crtismemoryblock** são removidos durante o pré-processamento.
+O **crtismemoryblock** função verifica se um bloco de memória especificado está localizado no heap local do aplicativo e se ele tem um identificador de tipo de bloco válido. Essa função também pode ser usada para obter o número de ordem de alocação do objeto e o nome do arquivo de origem/número de linha em que a alocação de bloco de memória foi originalmente solicitada. Passagem de não -**nulo** os valores para o *requestNumber*, *filename*, ou *linenumber* causas parâmetros **_ CrtIsMemoryBlock** para definir esses parâmetros para os valores no cabeçalho de depuração do bloco de memória, se ele encontrar o bloco no heap local. Quando [Debug](../../c-runtime-library/debug.md) não está definido, as chamadas a **crtismemoryblock** são removidas durante o pré-processamento.
 
-Se **crtismemoryblock** falhar, ele retorna **FALSE** e os parâmetros de saída são inicializados para valores padrão: *requestNumber* e **lineNumber**  são definidos como 0 e *filename* é definido como **nulo**.
+Se **crtismemoryblock** falhar, retornará **falso** e os parâmetros de saída são inicializados para valores padrão: *requestNumber* e **lineNumber**  são definidos como 0 e *filename* é definido como **nulo**.
 
 Como essa função retorna **TRUE** ou **FALSE**, ela pode ser passada para uma das macros [_ASSERT](assert-asserte-assert-expr-macros.md) para criar um mecanismo simples de tratamento de erro de depuração. O seguinte exemplo causa uma falha de asserção se o endereço especificado não está localizado no heap local:
 
@@ -89,7 +79,7 @@ _ASSERTE( _CrtIsMemoryBlock( userData, size, &requestNumber,
           &filename, &linenumber ) );
 ```
 
-Para obter mais informações sobre como **crtismemoryblock** pode ser usado com outras funções de depuração e macros, consulte [Macros para relatórios](/visualstudio/debugger/macros-for-reporting). Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details).
+Para obter mais informações sobre como **crtismemoryblock** pode ser usado com outras macros e funções de depuração, consulte [Macros para relatórios](/visualstudio/debugger/macros-for-reporting). Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Requisitos
 

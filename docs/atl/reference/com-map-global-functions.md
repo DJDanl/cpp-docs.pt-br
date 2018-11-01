@@ -1,28 +1,18 @@
 ---
-title: Funções globais de mapa COM | Microsoft Docs
-ms.custom: ''
+title: Funções globais de mapa COM
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlInternalQueryInterface
 - atlbase/ATL::InlineIsEqualIUnknown
-dev_langs:
-- C++
 helpviewer_keywords:
 - COM interfaces, COM map global functions
 ms.assetid: b9612d30-eb23-46ef-8093-d56f237d3cf1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5c158e5b59decd751340f87d5c29c572d6972d8e
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 9f3f5e1c5ec1d845962783b8768404a89727edc8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50077901"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50458780"
 ---
 # <a name="com-map-global-functions"></a>Funções globais de mapa COM
 

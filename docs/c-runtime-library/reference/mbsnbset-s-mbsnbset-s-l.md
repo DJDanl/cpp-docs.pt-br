@@ -1,10 +1,6 @@
 ---
-title: _mbsnbset_s, _mbsnbset_s_l | Microsoft Docs
-ms.custom: ''
+title: _mbsnbset_s, _mbsnbset_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbset_s_l
 - _mbsnbset_s
@@ -26,8 +22,6 @@ f1_keywords:
 - _mbsnbset_s_l
 - _mbsnbset_s
 - mbsnbset_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcsnset_s function
 - mbsnbset_s function
@@ -38,20 +32,16 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 07cbdc979ddd7ba240d9dcaf623d408b8c2681e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5d021f147ba407f5b0b7316afc7cfd79fe300997
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404728"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580967"
 ---
 # <a name="mbsnbsets-mbsnbsetsl"></a>_mbsnbset_s, _mbsnbset_s_l
 
-Define o primeiro **n** bytes de uma cadeia de caracteres multibyte em um caractere especificado. Essas versões de [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md) têm melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Define os primeiros **n** bytes de uma cadeia de caracteres multibyte para um caractere especificado. Essas versões de [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md) têm melhorias de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
 > Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -110,13 +100,13 @@ Zero se for bem-sucedido, caso contrário, um código de erro.
 
 ## <a name="remarks"></a>Comentários
 
-O **mbsnbset_s** e **mbsnbset_s_l** funções definir, no máximo, a primeira *contagem* bytes de *str* para *c*. Se *contagem* é maior que o comprimento de *str*, o comprimento de *str* é usado em vez de *contagem*. Se *c* é um caractere multibyte e não pode ser definida totalmente para o último byte especificado por *contagem*, o último byte é preenchido com um caractere em branco. **mbsnbset_s** e **mbsnbset_s_l** não colocar uma terminação nula no final da *str*.
+O **mbsnbset_s** e **mbsnbset_s_l** funções definem, no máximo, o primeiro *contagem* bytes de *str* para *c*. Se *contagem* é maior que o comprimento de *str*, o comprimento da *str* é usado em vez de *contagem*. Se *c* é um caractere multibyte e não pode ser definido inteiramente para o último byte especificado por *contagem*, o último byte é preenchido com um caractere em branco. **mbsnbset_s** e **mbsnbset_s_l** não coloque uma terminação nula no final da *str*.
 
-**mbsnbset_s** e **mbsnbset_s_l** lembram **mbsnset**, exceto que eles configuram *contagem* bytes em vez de *contagem* caracteres de *c*.
+**mbsnbset_s** e **mbsnbset_s_l** lembram **mbsnset**, exceto que elas configuram *contagem* bytes em vez de *contagem* caracteres de *c*.
 
-Se *str* é **nulo** ou *contagem* for zero, esta função gera uma exceção de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e a função retorna **nulo**. Além disso, se *c* não é um caractere de multibyte válido, **errno** é definido como **EINVAL** e um espaço é usado em vez disso.
+Se *str* é **nulo** ou *contagem* for zero, essa função gera uma exceção de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e a função retornará **nulo**. Além disso, se *c* não é um caractere multibyte válido **errno** está definido como **EINVAL** e um espaço é usado em vez disso.
 
-O valor de saída é afetado pela configuração do **LC_CTYPE** configuração de categoria da localidade, consulte [setlocale, wsetlocale](setlocale-wsetlocale.md) para obter mais informações. O **mbsnbset_s** versão dessa função usa a localidade atual para este comportamento dependente de localidade; a **mbsnbset_s_l** versão é idêntica, exceto que ele em vez disso, usa o parâmetro de localidade que passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da **LC_CTYPE** configuração da categoria da localidade; consulte [setlocale, wsetlocale](setlocale-wsetlocale.md) para obter mais informações. O **mbsnbset_s** versão dessa função usa a localidade atual desse comportamento dependente da localidade; as **mbsnbset_s_l** versão é idêntico, exceto que em vez disso, ele usa o parâmetro de localidade que passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sobrecargas podem inferir o tamanho do buffer automaticamente, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

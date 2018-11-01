@@ -1,10 +1,6 @@
 ---
-title: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l | Microsoft Docs
-ms.custom: ''
+title: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbctohira
 - _mbctohira_l
@@ -32,8 +28,6 @@ f1_keywords:
 - mbctokata_l
 - mbctohira_l
 - _mbctokata_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbctokata function
 - _mbctokata_l function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 85c5cbca9d5decee1719f575f60db725c285d607
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 11b08449a7d27015c4ffe0ce398c471bbd6069f0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403086"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637795"
 ---
 # <a name="mbctohira-mbctohiral-mbctokata-mbctokatal"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
@@ -91,18 +81,18 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retorna o caractere convertido *c*, se possível. Caso contrário, retorna o caractere *c* inalterado.
+Cada uma dessas funções retorna o caractere convertido *c*, se possível. Caso contrário, retornará o caractere *c* inalterado.
 
 ## <a name="remarks"></a>Comentários
 
-O **mbctohira** e **mbctokata** funções testar um caractere *c* e, se possível, aplicar uma das conversões a seguir.
+O **mbctohira** e **mbctokata** funções testam um caractere *c* e, se possível, aplicam uma das conversões a seguir.
 
 |Rotinas|Converte|
 |--------------|--------------|
 |**mbctohira**, **mbctohira_l**|Katakana multibyte para Hiragana multibyte.|
 |**mbctokata**, **mbctokata_l**|Hiragana multibyte para Katakana multibyte.|
 
-O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções são idênticas, exceto que os que não têm o **_l** sufixo usam a localidade atual para este comportamento dependente de localidade e aqueles que têm o **_l** sufixo em vez disso Use o parâmetro de localidade que é transmitido. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções são idênticas, exceto que aquelas que não têm o **l** sufixo usam a localidade atual desse comportamento dependente da localidade e aqueles que têm o **l** sufixo em vez disso Use o parâmetro de localidade que é passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 Em versões anteriores, **mbctohira** foi nomeado **jtohira** e **mbctokata** foi nomeado **jtokata**. Para código novo, use os novos nomes.
 
