@@ -1,16 +1,10 @@
 ---
-title: Gerenciamento de memória com CStringT | Microsoft Docs
-ms.custom: ''
+title: Gerenciamento de memória com CStringT
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CStringT
 - ATL::CStringT
 - ATL.CStringT
-dev_langs:
-- C++
 helpviewer_keywords:
 - CString objects, memory management
 - memory [C++], usage
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - strings [C++], memory management
 - CStringT class, memory management
 ms.assetid: 88b8342d-19b5-48c4-9cf6-e4c44cece21e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8676626c47471c2d1702d49df3069b618cc3ff4f
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f45aac11f0c42aecf8c72cf6f7d1630d50b780f3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752200"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598008"
 ---
 # <a name="memory-management-with-cstringt"></a>Gerenciamento de memória com CStringT
 

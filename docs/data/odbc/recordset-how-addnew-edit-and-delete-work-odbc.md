@@ -1,12 +1,6 @@
 ---
-title: 'Conjunto de registros: Como AddNew, editar e excluir trabalham (ODBC) | Microsoft Docs'
-ms.custom: ''
+title: 'Conjunto de registros: como AddNew, editar e excluir trabalho (ODBC)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - records [C++], updating
 - record editing [C++], in recordsets
@@ -23,17 +17,12 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 38125a5808892593f270e178b2e585eb1ba47edb
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 13d4461833180b527fae153c1677c9e911fc2737
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50077238"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620474"
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Conjunto de registros: como AddNew, editar e excluir trabalho (ODBC)
 

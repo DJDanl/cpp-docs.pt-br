@@ -1,10 +1,6 @@
 ---
-title: _lfind | Microsoft Docs
-ms.custom: ''
+title: _lfind
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lfind
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - lfind
 - _lfind
-dev_langs:
-- C++
 helpviewer_keywords:
 - linear searching
 - lfind function
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0c3bfc7b6abe5f0d5902a02c88e7d5ba16cb24ab
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 1508d54d6b2f2566e4aee3afef02af45b28e4f48
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450644"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579160"
 ---
 # <a name="lfind"></a>_lfind
 
@@ -68,7 +58,7 @@ O objeto a ser pesquisado.
 *base*<br/>
 Ponteiro para a base dos dados de pesquisa.
 
-*Número*<br/>
+*número*<br/>
 Número de elementos da matriz.
 
 *width*<br/>
@@ -79,13 +69,13 @@ Ponteiro para a rotina de comparação. O primeiro parâmetro é um ponteiro par
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se a chave for encontrada, **lfind** retorna um ponteiro para o elemento da matriz em *base* que corresponda *chave*. Se a chave não for encontrada, **lfind** retorna **nulo**.
+Se a chave for encontrada, **lfind** retorna um ponteiro para o elemento da matriz na *base* que corresponde ao *chave*. Se a chave não for encontrada, **lfind** retorna **nulo**.
 
 ## <a name="remarks"></a>Comentários
 
-O **lfind** função executa uma pesquisa linear para o valor *chave* em uma matriz de *número* elementos, cada um dos *largura* bytes. Ao contrário de **bsearch**, **lfind** não exige que a matriz a ser classificada. O *base* argumento é um ponteiro para a base da matriz a ser pesquisada. O *comparar* argumento é um ponteiro para uma rotina fornecido pelo usuário que compara dois elementos de matriz e, em seguida, retorna um valor especificando suas relações. **lfind** chama o *comparar* rotina um ou mais vezes durante a pesquisa, passando os ponteiros para os dois elementos de matriz em cada chamada. O *comparar* rotina deve comparar os elementos e, em seguida, retornar diferente de zero (ou seja, os elementos são diferentes) ou 0 (ou seja, os elementos são idênticos).
+O **lfind** função executa uma pesquisa linear para o valor *chave* em uma matriz de *número* elementos, cada um dos *largura* bytes. Diferentemente **bsearch**, **lfind** exige que a matriz a ser classificado. O *base* argumento é um ponteiro para a base da matriz a ser pesquisada. O *comparar* argumento é um ponteiro para uma rotina fornecida pelo usuário que compara dois elementos de matriz e, em seguida, retorna um valor que especifica seu relacionamento. **lfind** chamadas a *comparar* rotina um ou mais vezes durante a pesquisa, passando ponteiros para dois elementos de matriz em cada chamada. O *comparar* rotina deve comparar os elementos e, em seguida, retornar diferente de zero (ou seja, os elementos são diferentes) ou 0 (ou seja, os elementos são idênticos).
 
-Essa função valida seus parâmetros. Se *comparar*, *chave* ou *número* é **nulo**, ou se *base* é **NULL**e *número* é diferente de zero, ou se *largura* é menor que zero, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e a função retorna **nulo**.
+Essa função valida seus parâmetros. Se *compare*, *chave* ou *número* é **nulo**, ou se *base* é **NULL**e *número* for diferente de zero ou se *largura* é menor que zero, o manipulador de parâmetro inválido é invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e a função retornará **nulo**.
 
 ## <a name="requirements"></a>Requisitos
 

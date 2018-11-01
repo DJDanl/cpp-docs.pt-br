@@ -1,10 +1,6 @@
 ---
-title: _strdate_s, _wstrdate_s | Microsoft Docs
-ms.custom: ''
+title: _strdate_s, _wstrdate_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdate_s
 - _wstrdate_s
@@ -27,8 +23,6 @@ f1_keywords:
 - _wstrdate_s
 - strdate_s
 - _tstrdate_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - dates, copying
 - tstrdate_s function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _strdate_s function
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8e4e9ff3783fc7a89e7af42ebf283209c034c0d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85c9ab7dcad68f3aa4832236461cd38b07d4ae44
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414305"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628998"
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s, _wstrdate_s
 
@@ -98,17 +88,17 @@ Zero se for bem-sucedido. Se houver uma falha, o valor retornado será um códig
 
 ## <a name="security-issues"></a>Problemas de segurança
 
-Passando um inválido não **nulo** valor para o buffer resultará em uma violação de acesso se o *numberOfElements* parâmetro for maior que 9.
+Passando um inválido não **nulo** valor para o buffer resultará em uma violação de acesso se o *numberOfElements* parâmetro é maior do que 9.
 
-Passando valores para o tamanho que é maior do que o tamanho real do *buffer* resultará em um estouro de buffer.
+Passar valores de tamanho que é maior que o tamanho real do *buffer* resultará em estouro de buffer.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções fornecem versões mais seguras do **strDate** e **wstrdate**. O **strdate_s** função copia a data atual do sistema para o buffer apontado pelo *buffer*formatado **mm**/**dd** / **AA**, onde **mm** são dois dígitos que representa o mês, **dd** são dois dígitos que representa o dia e **AA**  é os dois últimos dígitos do ano. Por exemplo, a cadeia de caracteres **05/12/99** representa o dia 5 de dezembro de 1999. O buffer deve ter, no mínimo, 9 caracteres de comprimento.
+Essas funções fornecem versões mais seguras **strDate** e **wstrdate**. O **strdate_s** função copia a data atual do sistema para o buffer apontado por *buffer*formatado **mm**/**dd** / **yy**, onde **mm** são dois dígitos que representa o mês **dd** são dois dígitos que representa o dia e **AA**  é os dois últimos dígitos do ano. Por exemplo, a cadeia de caracteres **05/12/99** representa 5 de dezembro de 1999. O buffer deve ter, no mínimo, 9 caracteres de comprimento.
 
-**wstrdate_s** é uma versão de caractere largo de **strdate_s**; o valor de retorno e de argumento de **wstrdate_s** são cadeias de caracteres do caractere largo. Caso contrário, essas funções se comportam de forma idêntica.
+**wstrdate_s** é uma versão de caractere largo de **strdate_s**; o argumento e o valor retornado de **wstrdate_s** são cadeias de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
 
-Se *buffer* é um **nulo** ponteiro, ou se *numberOfElements* é menor que 9 caracteres, o manipulador de parâmetro inválido é invocado, conforme descrito em [ Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam -1 e defina **errno** para **EINVAL** se o buffer for **nulo** ou se *numberOfElements*é menor ou igual a 0 ou conjunto **errno** para **ERANGE** se *numberOfElements* é menor que 9.
+Se *buffer* é um **nulo** ponteiro, ou se *numberOfElements* é menor que 9 caracteres, o manipulador de parâmetro inválido será invocado, conforme descrito em [ Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão -1 e defina **errno** à **EINVAL** se o buffer for **nulo** ou se *numberOfElements*é menor ou igual a 0 ou conjunto **errno** para **ERANGE** se *numberOfElements* for menor que 9.
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

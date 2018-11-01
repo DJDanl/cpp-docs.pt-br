@@ -1,10 +1,6 @@
 ---
-title: _searchenv_s, _wsearchenv_s | Microsoft Docs
-ms.custom: ''
+title: _searchenv_s, _wsearchenv_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wsearchenv_s
 - _searchenv_s
@@ -26,8 +22,6 @@ f1_keywords:
 - _wsearchenv_s
 - wsearchenv_s
 - searchenv_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - tsearchenv_s function
 - files [C++], finding
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b14dee908cdf1cc0d564047035a72f501df130b4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40c2d0c42a3d61f84db78015388eba19742af06e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410909"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505671"
 ---
 # <a name="searchenvs-wsearchenvs"></a>_searchenv_s, _wsearchenv_s
 
@@ -107,7 +97,7 @@ Tamanho do *pathname* buffer.
 
 Zero se for bem-sucedido; um código de erro em caso de falha.
 
-Se *filename* é uma cadeia de caracteres vazia, o valor de retorno é **ENOENT**.
+Se *filename* é uma cadeia de caracteres vazia, o valor retornado será **ENOENT**.
 
 ### <a name="error-conditions"></a>Condições de Erro
 
@@ -117,17 +107,17 @@ Se *filename* é uma cadeia de caracteres vazia, o valor de retorno é **ENOENT*
 |**NULL**|qualquer|qualquer|qualquer|**EINVAL**|não alterado|
 |qualquer|qualquer|qualquer|<= 0|**EINVAL**|não alterado|
 
-Se qualquer uma dessas condições de erro ocorrer, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL** e retornar **EINVAL**.
+Se qualquer uma dessas condições de erro ocorrer, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e retornar **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-O **searchenv_s** rotina procurará o arquivo de destino no domínio especificado. O *varname* variável pode ser qualquer ambiente ou a variável definida pelo usuário que especifica uma lista de caminhos de diretório, como **caminho**, **LIB**, e **INCLUDE** . Porque **searchenv_s** diferencia maiusculas de minúsculas, *varname* deve corresponder ao uso da variável de ambiente. Se *varname* não corresponde o nome de uma variável de ambiente definido no ambiente do processo, a função retornará zero e o *pathname* variável é alterada.
+O **searchenv_s** rotina procurará o arquivo de destino no domínio especificado. O *varname* variável pode ser qualquer ambiente ou variável definida pelo usuário que especifica uma lista de caminhos de diretório, como **caminho**, **LIB**, e **INCLUDE** . Porque **searchenv_s** diferencia maiusculas de minúsculas *varname* deve corresponder ao uso de variável de ambiente. Se *varname* não corresponde o nome de uma variável de ambiente definido no ambiente do processo, a função retornará zero e o *pathname* variável permanece inalterada.
 
 A rotina pesquisa pelo arquivo primeiramente no diretório de trabalho atual. Se não encontrar o arquivo, ela procurará em seguida nos diretórios especificados pela variável de ambiente. Se o arquivo de destino estiver em um desses diretórios, o caminho criado recentemente é copiado para *pathname*. Se o *filename* arquivo não for encontrado, *pathname* contém uma cadeia de caracteres vazia terminada em nulo.
 
-O *pathname* buffer deve ser pelo menos **MAX_PATH** caracteres para acomodar o comprimento total do nome do caminho construído. Caso contrário, **searchenv_s** podem ultrapassar o *pathname* buffer resultando em um comportamento inesperado.
+O *pathname* buffer deve ser pelo menos **MAX_PATH** caracteres para acomodar o comprimento total do nome do caminho criado. Caso contrário, **searchenv_s** poderia causar um estouro de *pathname* buffer resultando em comportamento inesperado.
 
-**wsearchenv_s** é uma versão de caractere largo de **searchenv_s**; os argumentos para **wsearchenv_s** são cadeias de caracteres do caractere largo. **wsearchenv_s** e **searchenv_s** se comportam de forma idêntica caso contrário.
+**wsearchenv_s** é uma versão de caractere largo de **searchenv_s**; os argumentos a serem **wsearchenv_s** são cadeias de caracteres largos. **wsearchenv_s** e **searchenv_s** se comportam de forma idêntica caso contrário.
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

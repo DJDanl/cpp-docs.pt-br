@@ -1,10 +1,6 @@
 ---
-title: btowc | Microsoft Docs
-ms.custom: ''
+title: btowc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - btowc
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - btowc
-dev_langs:
-- C++
 helpviewer_keywords:
 - btowc function
 ms.assetid: 99a46e02-6f86-4569-af79-5feca012add8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4d0e56649218e6249550638af4e198cbd1284bc2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 399f56fe133a9f67ed457b435ae6c0496e1ecaa5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393310"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514667"
 ---
 # <a name="btowc"></a>btowc
 
@@ -57,7 +47,7 @@ Inteiro a ser testado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retornará a representação de caractere largo do caractere se o inteiro representar um caractere de byte único válido no estado inicial do deslocamento. Retornará WEOF se o inteiro for EOF ou não for um caractere de byte único válido no estado inicial do deslocamento. A saída dessa função é afetada por atual **LC_TYPE** localidade.
+Retornará a representação de caractere largo do caractere se o inteiro representar um caractere de byte único válido no estado inicial do deslocamento. Retornará WEOF se o inteiro for EOF ou não for um caractere de byte único válido no estado inicial do deslocamento. A saída dessa função é afetada pelas atual **LC_TYPE** localidade.
 
 ## <a name="requirements"></a>Requisitos
 

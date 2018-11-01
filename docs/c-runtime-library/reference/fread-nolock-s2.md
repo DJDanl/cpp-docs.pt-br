@@ -1,11 +1,6 @@
 ---
-title: _fread_nolock_s2 | Microsoft Docs
-ms.custom: ''
+title: _fread_nolock_s2
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - _fread_nolock_s
 apilocation:
@@ -24,19 +19,13 @@ apitype: DLLExport
 f1_keywords:
 - _fread_nolock_s
 - stdio/_fread_nolock_s
-dev_langs:
-- C++
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db0cd82d251595be586b46fb66a0f0262484e2f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1dccbd362577e524f0455a2248d4d0f209ea6295
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398244"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580748"
 ---
 # <a name="freadnolocks"></a>_fread_nolock_s
 
@@ -68,7 +57,7 @@ Tamanho do item a ser lido em bytes.
 *elementCount*<br/>
 Número máximo de itens a serem lidos.
 
-*Fluxo*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -77,7 +66,7 @@ Consulte [fread_s](fread-s.md).
 
 ## <a name="remarks"></a>Comentários
 
-Essa função é uma versão de não bloqueio de **fread_s**. Ele é idêntico ao **fread_s** exceto que ele não está protegido contra interferência por outros threads. Ela pode ser mais rápida, porque não incorre na sobrecarga de bloquear outros threads. Use esta função apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+Essa função é uma versão sem bloqueio do **fread_s**. Ela é idêntica à **fread_s** , exceto que não está protegida contra interferência de outros threads. Ela pode ser mais rápida, porque não incorre na sobrecarga de bloquear outros threads. Use esta função apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
 ## <a name="requirements"></a>Requisitos
 

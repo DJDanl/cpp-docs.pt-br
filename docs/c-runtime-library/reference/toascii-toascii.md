@@ -1,10 +1,6 @@
 ---
-title: toascii, __toascii | Microsoft Docs
-ms.custom: ''
+title: toascii, __toascii
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __toascii
 apilocation:
@@ -25,24 +21,18 @@ f1_keywords:
 - toascii
 - ctype/toascii
 - ctype/__toascii
-dev_langs:
-- C++
 helpviewer_keywords:
 - toascii function
 - string conversion, to ASCII characters
 - __toascii function
 - ASCII characters, converting to
 ms.assetid: a07c0608-b0e2-4da2-a20c-7b64d6a9b77c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cead516a7e298e56d13d8f1a09a054057796ca64
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22f76bdbdb21eb5b3cc9a226c111e321ee2fd0ce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408416"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578961"
 ---
 # <a name="toascii-toascii"></a>toascii, __toascii
 
@@ -64,13 +54,13 @@ Caractere a ser convertido.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**ToAscii** converte o valor de *c* para ASCII de 7 bits de intervalo e retorna o resultado. Não há valor retornado reservado para indicar um erro.
+**ToAscii** converte o valor de *c* para ASCII de 7 bits, intervalo e retorna o resultado. Não há valor retornado reservado para indicar um erro.
 
 ## <a name="remarks"></a>Comentários
 
-O **ToAscii** rotina converte o caractere especificado em um caractere ASCII, truncando-o para os bits de ordem inferior 7. Nenhuma outra transformação é aplicada.
+O **ToAscii** rotina converte o caractere especificado em um caractere ASCII truncando-o para os 7-bits de ordem inferior. Nenhuma outra transformação é aplicada.
 
-O **ToAscii** rotina é definida como uma macro, a menos que o macro pré-processador _CTYPE_DISABLE_MACROS está definido. Para compatibilidade com versões anteriores, **toascii** é definido como uma macro somente quando [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) não está definido ou está definido como 0; caso contrário, será indefinido.
+O **ToAscii** rotina é definida como uma macro, a menos que a macro do pré-processador ctype_disable_macros é definido. Para fins de compatibilidade **toascii** é definido como uma macro somente quando [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) não está definido ou está definido como 0; caso contrário, será indefinido.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -78,7 +68,7 @@ O **ToAscii** rotina é definida como uma macro, a menos que o macro pré-proces
 |-------------|---------------------|
 |**ToAscii**, **ToAscii**|C: \<ctype.h><br /><br /> C++: \<cctype> ou \<ctype.h>|
 
-O **toascii** macro é uma extensão de POSIX e **ToAscii** é uma implementação específica da Microsoft da extensão POSIX. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+O **toascii** macro é uma extensão POSIX e **ToAscii** é uma implementação específica da Microsoft da extensão POSIX. Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Consulte também
 

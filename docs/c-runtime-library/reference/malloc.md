@@ -1,10 +1,6 @@
 ---
-title: malloc | Microsoft Docs
-ms.custom: ''
+title: malloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - malloc
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - malloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f600deb7bfa9b65ed9bdf784f2a16bd037729a51
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e6a007fb6f089ebf1c9f5fc9ce59cbcbf0b13888
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405517"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520361"
 ---
 # <a name="malloc"></a>malloc
 
@@ -58,15 +48,15 @@ Bytes para alocar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**malloc** retorna um ponteiro nulo para o espaço alocado, ou **nulo** se há memória suficiente disponível. Para retornar um ponteiro para um tipo diferente de **void**, use um tipo de conversão do valor de retorno. O espaço de armazenamento apontado pelo valor retornado é garantido para ser sutilmente alinhado para armazenamento de qualquer tipo de objeto que tenha um requisito de alinhamento menor ou igual ao alinhamento fundamental. (No Visual C++, o alinhamento de fundamental é que é necessário para o alinhamento de um **duplo**, ou 8 bytes. No código que direciona plataformas de 64 bits, ele tem 16 bytes.) Use [aligned_malloc](aligned-malloc.md) alocar armazenamento para objetos que têm um requisito de alinhamento maior — por exemplo, os tipos de SSE [m128](../../cpp/m128.md) e **__m256**e tipos de declarado usando `__declspec(align( n ))` onde **n** é maior que 8. Se *tamanho* é 0, **malloc** aloca um item de comprimento zero no heap e retorna um ponteiro válido para esse item. Sempre verifique se o retorno de **malloc**, mesmo que a quantidade de memória solicitada é pequena.
+**malloc** retorna um ponteiro nulo para o espaço alocado, ou **nulo** se há memória suficiente disponível. Para retornar um ponteiro para um tipo diferente de **void**, use uma conversão no valor de retorno de tipo. O espaço de armazenamento apontado pelo valor retornado é garantido para ser sutilmente alinhado para armazenamento de qualquer tipo de objeto que tenha um requisito de alinhamento menor ou igual ao alinhamento fundamental. (No Visual C++, o alinhamento fundamental é o alinhamento que é necessário para um **duplas**, ou 8 bytes. No código que direciona plataformas de 64 bits, ele tem 16 bytes.) Use [aligned_malloc](aligned-malloc.md) alocar armazenamento para objetos que têm um requisito de alinhamento maior — por exemplo, os tipos SSE [__m128](../../cpp/m128.md) e **__m256**e os tipos que são declarado usando `__declspec(align( n ))` onde **n** é maior que 8. Se *tamanho* é 0, o **malloc** alocará um item de comprimento zero no heap e retorna um ponteiro válido para aquele item. Sempre verifique o retorno de **malloc**, mesmo que a quantidade de memória solicitada seja pequena.
 
 ## <a name="remarks"></a>Comentários
 
-O **malloc** função aloca um bloco de memória de pelo menos *tamanho* bytes. O bloco pode ser maior que *tamanho* bytes devido ao espaço necessário para obter informações de alinhamento e manutenção.
+O **malloc** função aloca um bloco de memória de pelo menos *tamanho* bytes. O bloco pode ser maior que *tamanho* bytes por causa do espaço necessário para obter informações de alinhamento e manutenção.
 
-**malloc** define **errno** para **ENOMEM** se a falha de alocação de memória ou se a quantidade de memória solicitada excede **heap_maxreq**. Para obter informações sobre esse e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**malloc** define **errno** à **ENOMEM** se uma alocação de memória falhar ou se a quantidade de memória solicitada exceder **heap_maxreq**. Para obter informações sobre esse e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-O código de inicialização usa **malloc** para alocar armazenamento para o **Environ**, *envp*, e *argv* variáveis. As seguintes funções e suas contrapartes de caractere largo também chamar **malloc**.
+Usa o código de inicialização **malloc** alocar armazenamento para o **Environ**, *envp*, e *argv* variáveis. As seguintes funções e suas contrapartes de caractere largo também chamam **malloc**.
 
 |||||
 |-|-|-|-|
@@ -81,11 +71,11 @@ O código de inicialização usa **malloc** para alocar armazenamento para o **E
 |[fputs](fputs-fputws.md)|[_getdcwd](getcwd-wgetcwd.md)|[scanf](scanf-scanf-l-wscanf-wscanf-l.md)||
 |[fread](fread.md)|[gets](../../c-runtime-library/gets-getws.md)|[_searchenv](searchenv-wsearchenv.md)||
 
-A função de C++ [set_new_mode](set-new-mode.md) define o novo modo do manipulador para **malloc**. O novo modo de manipulador indica se, em caso de falha **malloc** é chamar a rotina do manipulador de novo conforme definido pela [set_new_handler](set-new-handler.md). Por padrão, **malloc** não chamar a rotina do manipulador de novo em caso de falha ao alocar memória. Você pode substituir esse comportamento padrão para que, quando **malloc** Falha ao alocar memória, **malloc** chama a rotina do manipulador de novo na mesma forma que o **novo** does de operador Quando falhar pela mesma razão. Para substituir o padrão, chame `_set_new_mode(1)` no início do seu programa, ou link com NEWMODE. OBJ (consulte [opções Link](../../c-runtime-library/link-options.md)).
+A função de C++ [set_new_mode](set-new-mode.md) define o novo modo do manipulador para **malloc**. O novo modo do manipulador indica se, em caso de falha, **malloc** é chamar a nova rotina do manipulador conforme definido pela [set_new_handler](set-new-handler.md). Por padrão, **malloc** não chama a nova rotina do manipulador em caso de falha ao alocar memória. Você pode substituir esse comportamento padrão para que, quando **malloc** falhar ao alocar memória, **malloc** chame a nova rotina do manipulador da mesma forma que o **novo** operador faz Quando ele falha pelo mesmo motivo. Para substituir o padrão, chame `_set_new_mode(1)` no início do seu programa ou vincule com NEWMODE. OBJ (consulte [opções de Link](../../c-runtime-library/link-options.md)).
 
-Quando o aplicativo está vinculado com uma versão de depuração das bibliotecas de tempo de execução do C, **malloc** resolve [malloc_dbg](malloc-dbg.md). Para obter mais informações sobre como o heap é gerenciado durante o processo de depuração, consulte [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details) (Detalhes do heap de depuração CRT).
+Quando o aplicativo estiver vinculado a uma versão de depuração das bibliotecas de tempo de execução C, **malloc** resolve [malloc_dbg](malloc-dbg.md). Para obter mais informações sobre como o heap é gerenciado durante o processo de depuração, consulte [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details) (Detalhes do heap de depuração CRT).
 
-**malloc** está marcado como `__declspec(noalias)` e `__declspec(restrict)`; isso significa que a função é garantida que não modificar variáveis globais, e que o ponteiro retornado não é um alias. Para obter mais informações, consulte [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
+**malloc** está marcada `__declspec(noalias)` e `__declspec(restrict)`; isso significa que a função não é garantido que modifica variáveis globais e que o ponteiro retornado não é um alias. Para obter mais informações, consulte [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
 
 ## <a name="requirements"></a>Requisitos
 

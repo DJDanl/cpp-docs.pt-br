@@ -1,24 +1,16 @@
 ---
-title: C4840 do compilador (nível 4) de aviso | Microsoft Docs
-ms.custom: ''
+title: C4840 do compilador (nível 4) de aviso
 ms.date: 09/13/2018
-ms.topic: error-reference
 f1_keywords:
 - C4840
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4840
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c43ce60d319c427877b77a043df7c30bd00edc9b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a757004659c1a9d2ce858cfae5ddfbc6c024d782
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46025874"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50586427"
 ---
 # <a name="compiler-warning-level-4-c4840"></a>C4840 do compilador (nível 4) de aviso
 

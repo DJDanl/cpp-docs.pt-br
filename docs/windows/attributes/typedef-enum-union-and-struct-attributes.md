@@ -1,27 +1,16 @@
 ---
-title: TypeDef, Enum, Union e Struct atributos (COM C++) | Microsoft Docs
-ms.custom: ''
+title: TypeDef, Enum, Union e Struct atributos (COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - union attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 89e1511df2aeabe7cbd63549a1dca6e53944fbe2
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 289935c3651535b5f935624dc33246fbe83a4ceb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790142"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631056"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Atributos Typedef, Enum, Union e Struct
 
@@ -107,7 +96,7 @@ Os atributos a seguir se aplicam para o [typedef](../../cpp/aliases-and-typedefs
 |[requires_category](requires-category.md)|Especifica as categorias de componente necessário da classe de destino.|
 |[size_is](size-is.md)|Especifica o tamanho da memória alocada para ponteiros de tamanho, tamanho de ponteiros para ponteiros de tamanho e único ou matrizes multidimensionais.|
 |[source](source-cpp.md)|Em uma classe, especifica as interfaces de origem do objeto COM para pontos de conexão. Em uma propriedade ou método, indica que o membro retorna um objeto ou uma VARIANTE que é uma origem de eventos.|
-|[Threading](threading-cpp.md)|Especifica o modelo de threading para um objeto COM.|
+|[threading](threading-cpp.md)|Especifica o modelo de threading para um objeto COM.|
 |[unique](unique-cpp.md)|Especifica um ponteiro exclusivo.|
 |[uuid](uuid-cpp-attributes.md)|Especifica a ID exclusiva para uma classe ou interface.|
 |[version](version-cpp.md)|Identifica uma versão específica entre várias versões de uma classe.|

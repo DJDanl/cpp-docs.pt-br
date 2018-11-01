@@ -1,10 +1,6 @@
 ---
-title: unexpected (CRT) | Microsoft Docs
-ms.custom: ''
+title: unexpected (CRT)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - unexpected
 apilocation:
@@ -21,25 +17,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - unexpected
-dev_langs:
-- C++
 helpviewer_keywords:
 - unexpected function
 ms.assetid: 2f873763-15ad-4556-a924-dcf28f2b52b4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd8dc51c41ebf938f59493cbd62fac3e0a491601
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 78538c0a10e183e72c742b041b297275c0859a03
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408101"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534012"
 ---
 # <a name="unexpected-crt"></a>unexpected (CRT)
 
-Chamadas **encerrar** ou função que você especifica usando **set_unexpected**.
+Chamadas **encerrar** ou uma função especificada usando **set_unexpected**.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -49,7 +39,7 @@ void unexpected( void );
 
 ## <a name="remarks"></a>Comentários
 
-O **inesperado** rotina não é usada com a implementação atual de tratamento de exceções C++. **inesperado** chamadas **encerrar** por padrão. Você pode alterar esse comportamento padrão ao escrever uma função personalizada de encerramento e chamar **set_unexpected** com o nome da sua função como seu argumento. **inesperado** chama a função último fornecida como um argumento para **set_unexpected**.
+O **inesperado** rotina não for usada com a implementação atual de tratamento de exceções C++. **inesperado** chamadas **encerrar** por padrão. Você pode alterar esse comportamento padrão escrevendo uma função de encerramento personalizada e chamando **set_unexpected** com o nome da sua função como seu argumento. **inesperado** chama a função last especificada como um argumento para **set_unexpected**.
 
 ## <a name="requirements"></a>Requisitos
 

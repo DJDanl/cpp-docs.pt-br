@@ -1,10 +1,6 @@
 ---
-title: _CrtSetReportHook2, _CrtSetReportHookW2 | Microsoft Docs
-ms.custom: ''
+title: _CrtSetReportHook2, _CrtSetReportHookW2
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetReportHook2
 - _CrtSetReportHookW2
@@ -25,24 +21,18 @@ f1_keywords:
 - CrtSetReportHook2
 - _CrtSetReportHookW2
 - _CrtSetReportHook2
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetReportHook2 function
 - _CrtSetReportHook2 function
 - _CrtSetReportHookW2 function
 - CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 17dc0fc97a46e6ce0b5bda68ec8adc6ef37c4218
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e850d3e83ed7b7c77873400deac073084708b78
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402254"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446768"
 ---
 # <a name="crtsetreporthook2-crtsetreporthookw2"></a>_CrtSetReportHook2, _CrtSetReportHookW2
 
@@ -67,19 +57,19 @@ int _CrtSetReportHookW2(
 A ação a ser tomada: **_CRT_RPTHOOK_INSTALL** ou **_CRT_RPTHOOK_REMOVE**.
 
 *pfnNewHook*<br/>
-Gancho de relatório para instalar ou remover a versão de caractere estreito ou caractere largo dessa função.
+Gancho de relatório para instalar ou remover na versão de caractere estreito ou caractere largo dessa função.
 
 ## <a name="return-value"></a>Valor de retorno
 
--1 se não foi encontrado um erro, com **EINVAL** ou **ENOMEM** definido; caso contrário, retorna a contagem de referência de *pfnNewHook* após a chamada.
+-1 se ocorreu um erro, com **EINVAL** ou **ENOMEM** definido; caso contrário, retorna a contagem de referência dos *pfnNewHook* após a chamada.
 
 ## <a name="remarks"></a>Comentários
 
-**Crtsetreporthook2** e **crtsetreporthookw2** permitem que você conecte ou remover uma função, enquanto [crtsetreporthook](crtsetreporthook.md) somente você encontrará uma função.
+**_CrtSetReportHook2** e **_CrtSetReportHookW2** permitem vincular ou desvincular uma função, enquanto [crtsetreporthook](crtsetreporthook.md) permite apenas vincular uma função.
 
-**Crtsetreporthook2** ou **crtsetreporthookw2** deve ser usado em vez de **crtsetreporthook** quando a chamada de gancho é feita em uma DLL e quando várias DLLs podem ser carregados e definindo seus próprios funções de gancho. Nessa situação, as DLLs podem ser descarregadas em uma ordem diferente da que foram carregadas e a função de gancho pode ser deixada apontando para uma DLL descarregada. Nenhuma saída de depuração falha do processo se as funções de gancho foram adicionadas com **crtsetreporthook**.
+**_CrtSetReportHook2** ou **_CrtSetReportHookW2** deve ser usado em vez de **crtsetreporthook** quando a chamada de gancho é feita em uma DLL e quando várias DLLs podem ser carregados e configurar suas próprias funções de gancho. Nessa situação, as DLLs podem ser descarregadas em uma ordem diferente da que foram carregadas e a função de gancho pode ser deixada apontando para uma DLL descarregada. Qualquer saída de depuração falha o processo se as funções de gancho foram adicionadas com **crtsetreporthook**.
 
-Qualquer conectar funções adicionadas com **crtsetreporthook** são chamados se não houver nenhum gancho funções adicionadas com **crtsetreporthook2** ou **crtsetreporthookw2** ou se conectar por todos funções adicionadas com **crtsetreporthook2** e **crtsetreporthookw2** retornar **FALSE**.
+Quaisquer funções de gancho adicionadas com **crtsetreporthook** são chamados se não houver nenhuma função de gancho adicionada com **_CrtSetReportHook2** ou **_CrtSetReportHookW2** ou se todos os de gancho funções adicionadas com **_CrtSetReportHook2** e **_CrtSetReportHookW2** retornar **FALSE**.
 
 A versão de caractere largo dessa função está disponível. As funções de gancho de relatório usam uma cadeia de caracteres cujo tipo (caracteres amplos ou estreitos) deve corresponder à versão da função usada. Use o seguinte protótipo de função para os ganchos de relatório usados com a versão de caractere largo desta função:
 
@@ -93,10 +83,10 @@ Use o seguinte protótipo para os ganchos de relatório de caractere estreito:
 int YourReportHook( int reportType, char *message, int *returnValue );
 ```
 
-Essas funções validam seus parâmetros. Se *modo* ou **pfnNewNook** é inválido, essas funções invocam o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL** e retorne -1.
+Essas funções validam seus parâmetros. Se *modo* ou **pfnNewNook** é inválido, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e retornarão -1.
 
 > [!NOTE]
-> Se seu aplicativo é compilado com **/clr** e a função de relatório é chamada depois que o aplicativo foi encerrado principal, o CLR lançará uma exceção se a função de relatório chama todas as funções CRT.
+> Se seu aplicativo for compilado com **/clr** e a função de relatório é chamada depois que o aplicativo foi encerrado principal, o CLR gerará uma exceção se a função de relatório chama todas as funções CRT.
 
 ## <a name="requirements"></a>Requisitos
 

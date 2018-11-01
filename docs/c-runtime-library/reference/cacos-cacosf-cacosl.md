@@ -1,11 +1,6 @@
 ---
-title: cacos, cacosf, cacosl | Microsoft Docs
-ms.custom: ''
+title: cacos, cacosf, cacosl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cacos
 - cacosf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/cacos
 - complex/cacosf
 - complex/cacosl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cacos function
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a6734080e8aff91d9276ef59203e2a3911ee9e7f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 18757ecd30f399ca3d1fdb77e8bff8213a265e74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394451"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543189"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos, cacosf, cacosl
 
-Recupera o arco cosseno de um número complexo, com cortes de ramificação fora do intervalo [-1, + 1] no eixo real.
+Recupera o arco cosseno de um número complexo, com cortes de ramificação fora do intervalo [-1, + 1] ao longo do eixo real.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -72,11 +61,11 @@ Um número complexo que representa um ângulo, em radianos.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O arco cosseno de *z*, em radianos. O resultado é ilimitado ao longo do eixo imaginário e no intervalo [0, π] ao longo do eixo real. Ocorrerá um erro de domínio se *z* estiver fora do intervalo [-1, + 1].
+O arco cosseno *z*, em radianos. O resultado é ilimitado ao longo do eixo imaginário e no intervalo [0, π] ao longo do eixo real. Ocorrerá um erro de domínio se *z* estiver fora do intervalo [-1, + 1].
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **cacos** que levar e retornar **_Fcomplex** e **_Lcomplex** valores. Em um programa C, **cacos** sempre usa e retorna um **_Dcomplex** valor.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **cacos** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **cacos** sempre usa e retorna um **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 

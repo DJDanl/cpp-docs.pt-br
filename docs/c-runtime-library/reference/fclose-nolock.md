@@ -1,10 +1,6 @@
 ---
-title: _fclose_nolock | Microsoft Docs
-ms.custom: ''
+title: _fclose_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fclose_nolock
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - fclose_nolock
 - _fclose_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, closing
 - fclose_nolock function
 - _fclose_nolock function
 ms.assetid: b4af4392-5fc8-49bb-9fe2-ca7293d3ce04
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7474d195f2a04525ed2bc4cf671950308a70c7b5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 440582bb42a1795721eab17b24be3e0bc3daf80f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398952"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620955"
 ---
 # <a name="fclosenolock"></a>_fclose_nolock
 
@@ -55,7 +45,7 @@ int _fclose_nolock(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fluxo*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -64,7 +54,7 @@ Ponteiro para a estrutura **FILE**.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções é uma versão de não bloqueio de **fclose**. Ela é idêntica, exceto pelo fato de não ser protegida contra interferência de outros threads. Ela pode ser mais rápida, porque não incorre na sobrecarga de bloquear outros threads. Use esta função apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+Esta função é uma versão sem bloqueio do **fclose**. Ela é idêntica, exceto pelo fato de não ser protegida contra interferência de outros threads. Ela pode ser mais rápida, porque não incorre na sobrecarga de bloquear outros threads. Use esta função apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
 ## <a name="requirements"></a>Requisitos
 
