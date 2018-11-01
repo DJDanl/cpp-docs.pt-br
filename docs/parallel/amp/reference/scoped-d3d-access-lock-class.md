@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bfa8867f405b5a3fa67046a1341d5b4848b8a72
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
-ms.translationtype: MT
+ms.openlocfilehash: b0bb3442de264e263ae0f0eabd93345eace1fde1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423050"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059604"
 ---
 # <a name="scopedd3daccesslock-class"></a>Classe scoped_d3d_access_lock
 
@@ -89,7 +89,7 @@ O `scoped_d3d_access_lock` objeto do qual mover um bloqueio existente.
 
 [1] construtor adquire um bloqueio de acesso de D3D na determinada [accelerator_view](accelerator-view-class.md) objeto. Blocos de construção até o bloqueio é adquirido.
 
-[2] construtor adote um bloqueio de acesso de D3D da determinada [accelerator_view](accelerator-view-class.md) objeto.
+[2]] construtor adote um bloqueio de acesso de D3D da determinada [accelerator_view](accelerator-view-class.md) objeto.
 
 [3] construtor de movimento usa um bloqueio de acesso de D3D existente de outro `scoped_d3d_access_lock` objeto. Construção não é bloqueada.
 
@@ -100,6 +100,7 @@ Libera o bloqueio de acesso de D3D de associado `accelerator_view` objeto.
 ```
 ~scoped_d3d_access_lock();
 ```
+
 ## <a name="operator_eq"></a> operador =
 
 Utiliza a propriedade de um bloqueio de acesso de D3D de outro `scoped_d3d_access_lock` objeto, liberando o bloqueio anterior.

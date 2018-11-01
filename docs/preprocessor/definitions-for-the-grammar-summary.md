@@ -1,26 +1,16 @@
 ---
-title: As definições para o resumo de gramática | Microsoft Docs
-ms.custom: ''
+title: Definições para o resumo de gramática
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor, definitions
 - preprocessor
 ms.assetid: cc752dc8-6f4e-4347-a556-e0d9ef4c46bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3c11f2f839ef806d74eae65c9fc8fe3a71cd2e9c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 133000c0cc8ef636a3f9752d2f6fc7f1934bd831
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760801"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521119"
 ---
 # <a name="definitions-for-the-grammar-summary"></a>Definições para o resumo de gramática
 
@@ -30,9 +20,9 @@ Os não terminais são espaços reservados na sintaxe. A maioria é definida em 
 
 `constant`, *constant-expression*, *identifier*, *keyword*, `operator`, `punctuator`
 
-Um componente opcional é indicado pelo Subscrita <sub>opt</sub>. Por exemplo, o exemplo a seguir indica uma expressão opcional incluída em chaves:
+Um componente opcional é indicado pelo <sub>opt</sub> subscrito. Por exemplo, o exemplo a seguir indica uma expressão opcional incluída em chaves:
 
-**{** *expressão*<sub>aceitar</sub> **}**
+**{** *expression*<sub>opt</sub> **}**
 
 ## <a name="see-also"></a>Consulte também
 

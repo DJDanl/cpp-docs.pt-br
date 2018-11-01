@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7d895671efdec4649faf1f0611380d2065770ac
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
-ms.translationtype: MT
+ms.openlocfilehash: dec0456c880fea47219dc11c509bbecac025f5d3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861441"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070562"
 ---
 # <a name="standard-conversions"></a>Conversões padrão
 
@@ -81,11 +81,11 @@ As promoções de preservação de valores e as promoções que preservam o sign
 
 - Um operando do **/**, `%`, `/=`, `%=`, **<**, **\< =**, **>**, ou **>=**
 
-     Esses operadores dependem do sinal para determinar o resultado. Portanto, as promoções de preservação de valores e de sinais geram resultados diferentes quando aplicadas a esses operandos.
+   Esses operadores dependem do sinal para determinar o resultado. Portanto, as promoções de preservação de valores e de sinais geram resultados diferentes quando aplicadas a esses operandos.
 
 - O operando da esquerda **>>** ou **>>=**
 
-     Esses operadores tratam quantidades assinadas e não assinadas de maneiras diferentes ao executar uma operação de alternância. Para quantidades assinadas, alternar uma quantidade para a direita faz com que o bit de sinal seja propagado para posições de bits vagas. Para quantidades não assinadas, as posições de bit vagas são preenchidas com zeros.
+   Esses operadores tratam quantidades assinadas e não assinadas de maneiras diferentes ao executar uma operação de alternância. Para quantidades assinadas, alternar uma quantidade para a direita faz com que o bit de sinal seja propagado para posições de bits vagas. Para quantidades não assinadas, as posições de bit vagas são preenchidas com zeros.
 
 - Um argumento para uma função ou um operando sobrecarregado de um operador sobrecarregado que depende de signedness do tipo desse operando para a correspondência do argumento. (Consulte [operadores sobrecarregados](../cpp/operator-overloading.md) para obter mais informações sobre como definir operadores sobrecarregados.)
 
@@ -221,7 +221,7 @@ O segundo caso em que um ponteiro para uma classe pode ser convertido em um pont
 
 O resultado dessa conversão é um ponteiro para o "subobjeto", a parte do objeto que é totalmente descrita pela classe base.
 
-O código a seguir define duas classes, `A` e `B`, onde `B` é derivado de `A`. (Para obter mais informações sobre herança, consulte [Classes derivadas de](../cpp/inheritance-cpp.md).) Ele define `bObject`, um objeto do tipo `B`, e dois ponteiros (`pA` e `pB`) que apontam para o objeto.
+O código a seguir define duas classes, `A` e `B`, onde `B` é derivado de `A`. (Para obter mais informações sobre herança, consulte [Classes derivadas de](../cpp/inheritance-cpp.md).) Ele define , um objeto do tipo , e dois ponteiros (`pA` e `pB`) que apontam para o objeto.
 
 ```cpp
 // C2039 expected
