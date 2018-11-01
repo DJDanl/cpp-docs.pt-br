@@ -1,35 +1,25 @@
 ---
-title: C4936 de aviso do compilador | Microsoft Docs
-ms.custom: ''
+title: Aviso do compilador C4936
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4936
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4936
 ms.assetid: 6676de35-bf1b-4d0b-a70f-b5734130336c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0be4a565dd251da77174c401c23b8ed8bfc531b0
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: bbb69cccbf93be6e97d13db5008780f57e63f9da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703933"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537560"
 ---
-# <a name="compiler-warning-c4936"></a>C4936 de aviso do compilador
+# <a name="compiler-warning-c4936"></a>Aviso do compilador C4936
 
 > Este declspec é suportado apenas quando compilado com /clr ou /clr: pure
 
 ## <a name="remarks"></a>Comentários
 
-O **/clr: pure** opção de compilador foi preterida no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+O **/clr: pure** opção do compilador é preterida no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
 Um `__declspec` modificador foi usado, mas que `__declspec` modificador só é válido quando compilado com uma da [/clr](../../build/reference/clr-common-language-runtime-compilation.md) opções.
 

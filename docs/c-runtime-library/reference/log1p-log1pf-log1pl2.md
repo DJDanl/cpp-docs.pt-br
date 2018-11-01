@@ -1,11 +1,6 @@
 ---
-title: log1p, log1pf, log1pl2 | Microsoft Docs
-ms.custom: ''
+title: log1p, log1pf, log1pl2
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - log1p
 - log1pf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 650fb8f7567b4f2f3b0b9032397c2b54a99013dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7984367aa4244a927bb9dabc5533a807d74ac1a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402742"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524989"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 
@@ -82,7 +73,7 @@ O argumento de ponto flutuante.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, retorna o natural (base -*e*) de log da (*x* + 1).
+Se for bem-sucedido, retornará natural (base -*eletrônico*) de log da (*x* + 1).
 
 Caso contrário, pode retornar um dos seguintes valores:
 
@@ -103,9 +94,9 @@ O **errno** valor é definido como ERANGE se *x* = -1. O **errno** valor é defi
 
 O **log1p** funções podem ser mais precisas do que usando `log(x + 1)` quando *x* está próximo de 0.
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **log1p** que levar e retornar **float** e **longo** **duplo** tipos. Em um programa C, **log1p** sempre usa e retorna um **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **log1p** que usam e retornam **float** e **longo** **double** tipos. Em um programa do C **log1p** sempre usa e retorna um **duplo**.
 
-Se *x* é um número natural, essa função retorna o logaritmo de fatorial (*x* - 1).
+Se *x* é um número natural, essa função retorna o logaritmo do fatorial de (*x* - 1).
 
 ## <a name="requirements"></a>Requisitos
 

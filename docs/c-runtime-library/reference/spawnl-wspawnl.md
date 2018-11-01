@@ -1,10 +1,6 @@
 ---
-title: _spawnl, _wspawnl | Microsoft Docs
-ms.custom: ''
+title: _spawnl, _wspawnl
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wspawnl
 - _spawnl
@@ -26,8 +22,6 @@ f1_keywords:
 - wspawnl
 - _wspawnl
 - _spawnl
-dev_langs:
-- C++
 helpviewer_keywords:
 - spawnl function
 - processes, creating
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - wspawnl function
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dcd276e59edd78942f14211845c615d7e4f7eb6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4dbc8fab611d98f7f87529196b0e10e85196faa9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410714"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518073"
 ---
 # <a name="spawnl-wspawnl"></a>_spawnl, _wspawnl
 
@@ -85,11 +75,11 @@ Modo de execução do processo de chamada.
 Caminho do arquivo a ser executado.
 
 *arg0*, *arg1*,... *argn*<br/>
-Lista de ponteiros para os argumentos. O *arg0* argumento geralmente é um ponteiro para *cmdname*. Os argumentos *arg1* por meio de *argn* são ponteiros para as cadeias de caracteres que formam a nova lista de argumentos. A seguir *argn*, deve haver uma **nulo** ponteiro para marcar o fim da lista de argumentos.
+Lista de ponteiros para os argumentos. O *arg0* argumento geralmente é um ponteiro para *cmdname*. Os argumentos *arg1* por meio *argn* são ponteiros para as cadeias de caracteres que formam a nova lista de argumentos. A seguir *argn*, deve haver uma **nulo** ponteiro para marcar o final da lista de argumentos.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O valor de retorno de um síncrono **spawnl** ou **wspawnl** (**p_wait** especificado para *modo*) é o status de saída do processo de novo. O valor de retorno de assíncrona **spawnl** ou **wspawnl** (**p_nowait** ou **p_nowaito** especificado para *modo* ) é o identificador de processo. O status de saída é 0 se o processo foi encerrado normalmente. Você pode definir o status de saída para um valor diferente de zero se o processo gerado especificamente chama o **sair** rotina com um argumento diferente de zero. Se o novo processo não definir explicitamente um status de saída positivo, um status de saída positivo indicará uma saída anormal com uma anulação ou uma interrupção. Um valor de retorno de -1 indica um erro (o novo processo não é iniciado). Nesse caso, **errno** é definido como um dos valores a seguir.
+O valor de retorno de um síncrono **spawnl** ou **wspawnl** (**p_wait** especificado para *modo*) é o status de saída do novo processo. O valor de retorno de um assíncrono **spawnl** ou **wspawnl** (**p_nowait** ou **p_nowaito** especificado para *modo* ) é o identificador de processo. O status de saída é 0 se o processo foi encerrado normalmente. Você pode definir o status de saída para um valor diferente de zero se o processo gerado chamar especificamente a **sair** rotina com um argumento diferente de zero. Se o novo processo não definir explicitamente um status de saída positivo, um status de saída positivo indicará uma saída anormal com uma anulação ou uma interrupção. Um valor de retorno de -1 indica um erro (o novo processo não é iniciado). Nesse caso, **errno** é definido como um dos valores a seguir.
 
 |||
 |-|-|
@@ -101,7 +91,7 @@ O valor de retorno de um síncrono **spawnl** ou **wspawnl** (**p_wait** especif
 
 Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-Essas funções validam seus parâmetros. Se qualquer um dos *cmdname* ou *arg0* é uma cadeia de caracteres vazia ou um ponteiro nulo, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL**e retorna -1. Nenhum processo novo é gerado.
+Essas funções validam seus parâmetros. Se qualquer um dos *cmdname* ou *arg0* é uma cadeia de caracteres vazia ou um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EINVAL**e retornarão -1. Nenhum processo novo é gerado.
 
 ## <a name="remarks"></a>Comentários
 

@@ -1,11 +1,6 @@
 ---
-title: ilogb, ilogbf, ilogbl2 | Microsoft Docs
-ms.custom: ''
+title: ilogb, ilogbf, ilogbl2
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ilogb
 - ilogbf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1436874e1ab35cc72dc40390adf5597529d3bf57
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63e04246d29fde50c745a5f353829bd337a814ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398173"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551977"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
@@ -82,7 +73,7 @@ O valor especificado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, retorna o expoente de base 2 de *x* como entrou **int** valor.
+Se for bem-sucedido, retorna o expoente de base 2 de *x* como com um sinal **int** valor.
 
 Caso contrário, retorna um dos valores a seguir, definidos em É um dos valores a seguir, definidos em \<math.h>:
 
@@ -95,9 +86,9 @@ Os erros são relatados conforme especificado em [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **ilogb** que levar e retornar **float** e **longo** **duplo** tipos. Em um programa C, **ilogb** sempre usa e retorna um **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **ilogb** que usam e retornam **float** e **longo** **double** tipos. Em um programa do C **ilogb** sempre usa e retorna um **duplo**.
 
-Chamar essa função é semelhante a chamar o equivalente **logb** função, em seguida, converter o valor de retorno para **int**.
+Chamar essa função é semelhante a chamar o equivalente **logb** função, em seguida, converter o valor de retorno **int**.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,11 +1,6 @@
 ---
-title: lgamma, lgammaf, lgammal | Microsoft Docs
-ms.custom: ''
+title: lgamma, lgammaf, lgammal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - lgamma
 - lgammaf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/lgamma
 - math/lgammaf
 - math/lgammal
-dev_langs:
-- C++
 helpviewer_keywords:
 - lgamma function
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4fb668e1c24d3f24331e0892002530192afdaeb6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43ce1599ab9161b9fadf5643ddd2ec739ab2d8b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400246"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533478"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
@@ -87,9 +76,9 @@ Os erros são relatados conforme especificado em [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **lgamma** que levar e retornar **float** e **longo** **duplo** tipos. Em um programa C, **lgamma** sempre usa e retorna um **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **lgamma** que usam e retornam **float** e **longo** **double** tipos. Em um programa do C **lgamma** sempre usa e retorna um **duplo**.
 
-Se x for um número racional, essa função retorna o logaritmo de fatorial (x - 1).
+Se x for um número racional, essa função retorna o logaritmo do fatorial de (x - 1).
 
 ## <a name="requirements"></a>Requisitos
 

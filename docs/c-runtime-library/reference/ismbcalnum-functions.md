@@ -1,10 +1,6 @@
 ---
-title: _ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l | Microsoft Docs
-ms.custom: ''
+title: _ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbcalpha
 - _ismbcalnum
@@ -36,8 +32,6 @@ f1_keywords:
 - _ismbcalnum_l
 - _ismbcalnum
 - ismbcdigit_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbcalpha function
 - _ismbcalnum function
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - ismbcalnum_l function
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a90fe131ff216bd9f758f3312d366e0ec29d79ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a2f928d826b70b788220130f69c53cc351b4910
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404263"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532217"
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 
@@ -112,19 +102,19 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste ou 0 se não satisfizer. Se *c*< = 255 e há um correspondente **ismbb** rotina (por exemplo, **ismbcalnum** corresponde à **ismbbalnum**), o resultado é o valor de retorno do **ismbb** rotina.
+Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste ou 0 se não satisfizer. Se *c*< = 255 e houver um correspondente **ismbb** rotina (por exemplo, **ismbcalnum** corresponde ao **ismbbalnum**), o resultado é o valor retornado de correspondente **ismbb** rotina.
 
 ## <a name="remarks"></a>Comentários
 
 Cada uma dessas rotinas testa um determinado caractere multibyte quanto a uma determinada condição.
 
-As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam a localidade passada em vez da localidade atual para o seu comportamento dependente de localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam a localidade passada em vez da localidade atual para seu comportamento dependente da localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 |Rotina|Condição de teste|Exemplo da página de código 932|
 |-------------|--------------------|---------------------------|
-|**ismbcalnum**, **ismbcalnum_l**|Alfanumérico|Retorna zero se e somente se *c* é uma representação de byte único de uma letra em inglês ASCII: Consulte exemplos de **ismbcdigit** e **ismbcalpha**.|
-|**ismbcalpha**, **ismbcalpha_l**|Alfabético|Retorna zero se e somente se *c* é uma representação de byte único de uma letra em inglês ASCII: 0x41 < =*c*< = 0x5A ou 0x61 < =*c*< = 0x7A; ou uma letra katakana: 0xA6 < =*c*< = 0xDF.|
-|**ismbcdigit**, **ismbcdigit**|Dígito|Retorna zero se e somente se *c* é uma representação de byte único de um dígito de ASCII: 0x30 < =*c*< = 0x39.|
+|**ismbcalnum**, **ismbcalnum_l**|Alfanumérico|Retorna diferente de zero se e somente se *c* é uma representação de byte único de uma letra ASCII em inglês: Confira exemplos de **ismbcdigit** e **ismbcalpha**.|
+|**ismbcalpha**, **ismbcalpha_l**|Alfabético|Retorna diferente de zero se e somente se *c* é uma representação de byte único de uma letra ASCII em inglês: 0x41&lt < =*c*< lt;=0x5a ou 0x61< < =*c*< lt;=0x7a; ou uma letra katakana: 0xa6< < =*c*< lt;=0xDF.|
+|**ismbcdigit**, **ismbcdigit**|Dígito|Retorna diferente de zero se e somente se *c* é uma representação de byte único de um dígito ASCII: 0x30 < =*c*< lt;=0x39.|
 
 ## <a name="requirements"></a>Requisitos
 

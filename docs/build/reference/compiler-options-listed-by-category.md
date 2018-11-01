@@ -1,25 +1,15 @@
 ---
-title: Opções do compilador listadas por categoria | Microsoft Docs
-ms.custom: ''
+title: Opções de compilador listadas por categoria
 ms.date: 08/20/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a255259af5f660a11007005fd71f85bff80a8e05
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: 20dab3e4ec1d0a409d591e2b470e127e20156a8a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42571929"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532945"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opções do compilador listadas por categoria
 

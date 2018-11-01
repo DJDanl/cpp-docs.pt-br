@@ -1,11 +1,6 @@
 ---
-title: feraiseexcept | Microsoft Docs
-ms.custom: ''
+title: feraiseexcept
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feraiseexcept
 apilocation:
@@ -23,21 +18,15 @@ apitype: HeaderDef
 f1_keywords:
 - feraiseexcept
 - fenv/feraiseexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dfd60612c92f8e3ff542fd22bbf5b4a01f7b7365
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 581dd4026a20ce7221945c5815af3ae102f132fa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398631"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532243"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -53,7 +42,7 @@ int feraiseexcept(
 
 ### <a name="parameters"></a>Parâmetros
 
-*excepts*<br/>
+*exceções de*<br/>
 As exceções de ponto flutuante que serão geradas.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -62,7 +51,7 @@ Se todas as exceções especificadas forem geradas com êxito, retornará 0.
 
 ## <a name="remarks"></a>Comentários
 
-O **feraiseexcept** função tenta gerar as exceções de ponto flutuantes especificadas por *excepts*.   O **feraiseexcept** função oferece suporte a essas macros de exceção, definidas em \<fenv.h >:
+O **feraiseexcept** função tenta gerar as exceções de ponto flutuantes especificadas por *, exceto*.   O **feraiseexcept** função dá suporte a essas macros de exceção, definidas em \<fenv. h >:
 
 |Macro de exceção|Descrição|
 |---------------------|-----------------|
@@ -73,11 +62,11 @@ O **feraiseexcept** função tenta gerar as exceções de ponto flutuantes espec
 |FE_UNDERFLOW|O resultado de uma operação de ponto flutuante anterior era muito pequeno para ser representado na precisão total. Um valor de denormal foi criado.|
 |FE_ALLEXCEPT|O OR bit a bit de todas as exceções de ponto flutuante com suporte.|
 
-O *excepts* argumento pode ser zero, um dos valores de exceção de macro ou bit a bit ou dos dois ou mais as macros de exceção com suporte. Se uma das macros de exceção especificadas for FE_OVERFLOW ou FE_UNDERFLOW, a exceção FE_INEXACT poderá ser gerada como um efeito colateral.
+O *, exceto* argumento pode ser zero, um dos valores de macro de exceção ou bit a bit ou de duas ou mais das macros de exceção com suporte. Se uma das macros de exceção especificadas for FE_OVERFLOW ou FE_UNDERFLOW, a exceção FE_INEXACT poderá ser gerada como um efeito colateral.
 
 Para usar essa função, você deve desligar otimizações de ponto flutuante que poderiam impedir o acesso usando a diretiva `#pragma fenv_access(on)` antes da chamada. Para obter mais informações, consulte [fenv_access](../../preprocessor/fenv-access.md).
 
-**Microsoft Specific:** exceções especificadas na *excepts* são gerados na ordem FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. No entanto, FE_INEXACT pode ser gerado quando FE_OVERFLOW ou FE_UNDERFLOW é gerado, mesmo se não for especificado em *excepts*. **Fim da seção específica da Microsoft**
+**Specific da Microsoft:** as exceções especificadas em *, exceto* são gerados na ordem FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. No entanto, FE_INEXACT pode ser gerada quando FE_OVERFLOW ou FE_UNDERFLOW for gerado, mesmo se não especificado na *, exceto*. **Fim da seção específica da Microsoft**
 
 ## <a name="requirements"></a>Requisitos
 
