@@ -1,11 +1,6 @@
 ---
-title: cexp, cexpf, cexpl | Microsoft Docs
-ms.custom: ''
+title: cexp, cexpf, cexpl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cexp
 - cexpf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cepx
 - complex/cexpf
 - complex/cexpl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cexp function
 - cexpl function
 - cexpf function
 ms.assetid: f27fd5a9-70c7-4957-a7ee-5256d19bd1da
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3a54dc0c25fd0b476887914778278ec83c19fe8e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 401dd30b326fcd6caef7cae6f1ecbdc43ed5dd5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393986"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462927"
 ---
 # <a name="cexp-cexpf-cexpl"></a>cexp, cexpf, cexpl
 
@@ -72,11 +61,11 @@ Um número complexo que representa o expoente.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O valor de **e** elevado à potência de *z*.
+O valor de **eletrônico** elevado à potência de *z*.
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **cexp** que levar e retornar **_Fcomplex** e **_Lcomplex** valores. Em um programa C, **cexp** sempre usa e retorna um **_Dcomplex** valor.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **cexp** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **cexp** sempre usa e retorna um **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 

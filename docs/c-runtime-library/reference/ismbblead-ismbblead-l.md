@@ -1,10 +1,6 @@
 ---
-title: _ismbblead, _ismbblead_l | Microsoft Docs
-ms.custom: ''
+title: _ismbblead, _ismbblead_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbblead_l
 - _ismbblead
@@ -28,8 +24,6 @@ f1_keywords:
 - _ismbblead_l
 - ismbblead
 - _istlead
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbblead_l function
 - ismbblead function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e2d85459f4addf0688acb5a82b0108ec6133b749
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7bf8e8c88153e2f22cfa08bb35ff8d4ba01a8804
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400587"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452540"
 ---
 # <a name="ismbblead-ismbbleadl"></a>_ismbblead, _ismbblead_l
 
@@ -75,13 +65,13 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna um valor diferente de zero se o número inteiro *c* é o primeiro byte de um caractere multibyte.
+Retorna um valor diferente de zero se o inteiro *c* for o primeiro byte de um caractere multibyte.
 
 ## <a name="remarks"></a>Comentários
 
-Caracteres multibyte consistem em um byte inicial seguido de um byte à direita. Bytes iniciais são diferenciados por estarem em um intervalo específico de um determinado conjunto de caracteres. Por exemplo, em bytes de avanço, somente de código 932 da página variam de 0x81-0x9F e 0xE0 - 0xFC.
+Caracteres multibyte consistem em um byte inicial seguido de um byte à direita. Bytes iniciais são diferenciados por estarem em um intervalo específico de um determinado conjunto de caracteres. Por exemplo, no código página 932 somente, os bytes iniciais vão de 0x81-0x9F e 0xE0 – 0xFC.
 
-**ismbblead** usa a localidade atual para o comportamento dependente de localidade. **ismbblead_l** é idêntico, exceto que ele usa a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**ismbblead** usa a localidade atual para o comportamento dependente da localidade. **ismbblead_l** é idêntico, exceto que ele usa a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

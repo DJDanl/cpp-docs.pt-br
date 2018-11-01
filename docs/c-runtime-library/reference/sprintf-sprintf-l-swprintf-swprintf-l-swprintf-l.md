@@ -1,10 +1,6 @@
 ---
-title: sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l | Microsoft Docs
-ms.custom: ''
+title: sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __swprintf_l
 - sprintf
@@ -33,8 +29,6 @@ f1_keywords:
 - sprintf
 - _stprintf
 - stprintf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _swprintf_l function
 - _stprintf function
@@ -51,20 +45,16 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 02538d8c74de4f48cb4a3d6285e10c3c4e03c322
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d24ea0c83d934afe81368a9fe734c2a39d08c3d0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415930"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451487"
 ---
 # <a name="sprintf-sprintfl-swprintf-swprintfl-swprintfl"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 
-Grave os dados formatados em uma cadeia de caracteres. Versões mais seguras de algumas funções estão disponíveis; consulte [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md). As versões seguras **swprintf** e **swprintf_l** não terão um *contagem* parâmetro.
+Grave os dados formatados em uma cadeia de caracteres. Versões mais seguras de algumas funções estão disponíveis; consulte [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md). As versões seguras **swprintf** e **swprintf_l** não terão uma *contagem* parâmetro.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -136,20 +126,20 @@ Para obter mais informações, consulte [Especificações de formato](../../c-ru
 
 ## <a name="return-value"></a>Valor de retorno
 
-O número de caracteres gravados, ou -1 se ocorreu um erro. Se *buffer* ou *formato* é um ponteiro nulo, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam -1 e defina **errno** para **EINVAL**.
+O número de caracteres gravados ou -1 se ocorreu um erro. Se *buffer* ou *formato* é um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão -1 e defina **errno** à **EINVAL**.
 
-**sprintf** retorna o número de bytes armazenados em *buffer*, sem contar o caractere null de terminação. **swprintf** retorna o número de caracteres largos armazenados em *buffer*, sem contar o caractere largo nulo de terminação.
+**sprintf** retorna o número de bytes armazenados no *buffer*, sem contar o caractere nulo de terminação. **swprintf** retorna o número de caracteres largos armazenados no *buffer*, sem contar o caractere largo nulo de terminação.
 
 ## <a name="remarks"></a>Comentários
 
-O **sprintf** função formata e armazena uma série de caracteres e valores em *buffer*. Cada *argumento* (se houver) é convertido e de saída de acordo com a especificação de formato correspondente em *formato*. O formato consiste em caracteres simples e tem o mesmo formulário e funcionar como o *formato* argumento [printf](printf-printf-l-wprintf-wprintf-l.md). Um caractere nulo é acrescentado após o último caractere escrito. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
+O **sprintf** função formata e armazena uma série de caracteres e valores em *buffer*. Cada *argumento* (se houver) é convertido e gerado de acordo com a especificação de formato correspondente em *formato*. O formato consiste em caracteres comuns e tem o mesmo formato e função que o *formato* argumento para [printf](printf-printf-l-wprintf-wprintf-l.md). Um caractere nulo é acrescentado após o último caractere escrito. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
 
 > [!IMPORTANT]
-> Usando **sprintf**, não é possível limitar o número de caracteres gravados, o que significa que o código usando **sprintf** é suscetível a saturações de buffer. Considere usar a função related [snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), que especifica um número máximo de caracteres a serem gravados *buffer*, ou use [scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md) para determinar o tamanho um buffer é necessário. Além disso, verifique se *formato* não é uma cadeia de caracteres definida pelo usuário.
+> Usando o **sprintf**, não há nenhuma maneira de limitar o número de caracteres gravados, o que significa que o código usando **sprintf** é suscetível a estouros de buffer. Considere usar a função related [snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md), que especifica um número máximo de caracteres a serem gravados *buffer*, ou use [scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md) para determinar quão grande um buffer é necessário. Além disso, certifique-se de que *formato* não é uma cadeia de caracteres definida pelo usuário.
 
-**swprintf** é uma versão de caractere largo de **sprintf**; os argumentos de ponteiro para **swprintf** são cadeias de caracteres do caractere largo. Detecção de erros de codificação **swprintf** pode ser diferente no **sprintf**. **swprintf** e **fwprintf** tenham comportamento idêntico, exceto que **swprintf** grava a saída para uma cadeia de caracteres em vez de um destino de tipo **arquivo**e **swprintf** requer o *contagem* parâmetro para especificar o número máximo de caracteres a serem gravados. As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+**swprintf** é uma versão de caractere largo de **sprintf**; os argumentos de ponteiro para **swprintf** são cadeias de caracteres largos. Detecção de erros de codificação **swprintf** pode ser diferente no **sprintf**. **swprintf** e **fwprintf** se comportam de forma idêntica exceto que **swprintf** grava a saída para uma cadeia de caracteres em vez de um destino do tipo **arquivo**e **swprintf** requer que o *contagem* parâmetro para especificar o número máximo de caracteres a serem gravados. As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
-**swprintf** está em conformidade com o ISO C Standard, que requer o segundo parâmetro, *contagem*, do tipo **size_t**. Para forçar o antigo comportamento não padrão, definir **_CRT_NON_CONFORMING_SWPRINTFS**. Em uma versão futura, o comportamento antigo pode ser removido, então o código deve ser alterado para usar o novo comportamento compatível.
+**swprintf** está em conformidade com o ISO C Standard, que exige que o segundo parâmetro, *contagem*, do tipo **size_t**. Para forçar o antigo comportamento não padrão, defina **_CRT_NON_CONFORMING_SWPRINTFS**. Em uma versão futura, o comportamento antigo pode ser removido, então o código deve ser alterado para usar o novo comportamento compatível.
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

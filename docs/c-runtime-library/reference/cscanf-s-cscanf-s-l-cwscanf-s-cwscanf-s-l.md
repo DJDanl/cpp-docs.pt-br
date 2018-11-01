@@ -1,10 +1,6 @@
 ---
-title: _cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l | Microsoft Docs
-ms.custom: ''
+title: _cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwscanf_s_l
 - _cwscanf_s
@@ -35,8 +31,6 @@ f1_keywords:
 - _tcscanf_s_l
 - tcscanf_s
 - tcscanf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - cscanf_s function
 - _cwscanf_s_l function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - _tcscanf_s function
 - tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ca65c4746256611ed6958bc76d8779cd36ae1ff
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b49c464c7262a60bb7744a68c0144234e152edd3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403268"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463694"
 ---
 # <a name="cscanfs-cscanfsl-cwscanfs-cwscanfsl"></a>_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l
 
@@ -108,20 +98,20 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O número de campos que foram convertidos e atribuídos com êxito. O valor retornado não inclui campos que foram lidos, mas não atribuídos. O valor de retorno é **EOF** para uma tentativa de leitura no final do arquivo. Isso pode ocorrer quando a entrada do teclado é redirecionada no nível de linha de comando do sistema operacional. Um valor retornado igual a 0 significa que nenhum campo foi atribuído.
+O número de campos que foram convertidos e atribuídos com êxito. O valor retornado não inclui campos que foram lidos, mas não atribuídos. O valor retornado será **EOF** para uma tentativa de leitura no final do arquivo. Isso pode ocorrer quando a entrada do teclado é redirecionada no nível de linha de comando do sistema operacional. Um valor retornado igual a 0 significa que nenhum campo foi atribuído.
 
-Essas funções validam seus parâmetros. Se *formato* é um ponteiro nulo, essas funções invocam o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam **EOF** e **errno** é definido como **EINVAL**.
+Essas funções validam seus parâmetros. Se *formato* for um ponteiro nulo, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **EOF** e **errno** está definido como **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-O **cscanf_s** função lê dados diretamente do console para os locais de fornecido pelo *argumento*. A função [_getche](getch-getwch.md) é usada para ler caracteres. Cada parâmetro opcional deve ser um ponteiro para uma variável com um tipo que corresponde a um especificador de tipo na *formato*. Os controles de formato a interpretação da entrada de campos e tem o mesmo formulário e funcionar como o *formato* parâmetro para o [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) função. Enquanto **cscanf_s** normalmente exibe o caractere de entrada, ele não faça isso se a última chamada **ungetch**.
+O **cscanf_s** função lê os dados diretamente do console nos locais fornecidos por *argumento*. A função [_getche](getch-getwch.md) é usada para ler caracteres. Cada parâmetro opcional deve ser um ponteiro para uma variável com um tipo que corresponde a um especificador de tipo em *formato*. O formato controla a interpretação da entrada campos e tem o mesmo formato e função que o *formato* parâmetro para o [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md) função. Embora **cscanf_s** normalmente retorne um caractere de entrada, ele não faz isso se a última chamada era **ungetch**.
 
-Outras versões seguras das funções, como o **scanf** família, **cscanf_s** e **_cswscanf_s** exigem argumentos de tamanho para os caracteres de campo do tipo **c** , **C**, **s**, **S**, e **[**. Para obter mais informações, consulte [Especificação de largura scanf](../../c-runtime-library/scanf-width-specification.md).
+Assim como outras versões seguras de funções na **scanf** família, **cscanf_s** e **_cswscanf_s** exigem argumentos de tamanho para os caracteres de campo do tipo **c** , **C**, **s**, **S**, e **[**. Para obter mais informações, consulte [Especificação de largura scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
-> O parâmetro de tamanho é do tipo **sem sinal**, não **size_t**.
+> O parâmetro de tamanho é do tipo **sem sinal**, e não **size_t**.
 
-As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

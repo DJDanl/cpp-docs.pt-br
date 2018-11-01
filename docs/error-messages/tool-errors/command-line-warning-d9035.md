@@ -1,27 +1,17 @@
 ---
-title: Linha de comando D9035 de aviso | Microsoft Docs
-ms.custom: ''
+title: Aviso D9035 (linha de comando)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - D9035
-dev_langs:
-- C++
 helpviewer_keywords:
 - D9035
 ms.assetid: 6254f933-e37a-45ba-b860-1a870d1bc8e8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f3422d0f2e57865ac846fd7ce40dd5b793699b37
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5b5d7e3d528808f478a1a6d2c9168da919dc5994
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46084244"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459092"
 ---
 # <a name="command-line-warning-d9035"></a>Aviso D9035 (linha de comando)
 
