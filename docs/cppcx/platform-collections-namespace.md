@@ -1,30 +1,22 @@
 ---
-title: 'Namespace Platform:: Collections | Microsoft Docs'
-ms.custom: ''
+title: Namespace Platform::Collections
 ms.date: 01/18/2018
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::Collections Namespace
 ms.assetid: b5042864-5f22-40b7-b7a5-c0691f65cc47
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a8c6191f8cbcf79973a5af55d222dd6f17fc47e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 025c25d6c01ab9a28c68574cc2a13e09dbf28388
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106064"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480360"
 ---
 # <a name="platformcollections-namespace"></a>Namespace Platform::Collections
 
-O namespace Platform:: Collections contém o `Map`, `MapView`, `Vector`, e `VectorView` classes. Essas classes são implementações concretas das interfaces correspondentes que são definidas na [Collections](/uwp/api/Windows.Foundation.Collections) namespace. Não é possível transmitir os tipos de coleção concretos pela ABI (por exemplo quando um programa Javascript ou C# é chamado em um componente C++), mas é possível convertê-los implicitamente nos seus tipos de interface correspondentes. Por exemplo, se você implementar um método público que popula e retorna uma coleção, em seguida, use [Platform::Collections::Vector&lt;2](../cppcx/platform-collections-vector-class.md) para implementar a coleção internamente e usar [Collections: : IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) como o tipo de retorno. Para obter mais informações, consulte [coleções](../cppcx/collections-c-cx.md) e [Criando componentes do tempo de execução do Windows em C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+O namespace Platform:: Collections contém o `Map`, `MapView`, `Vector`, e `VectorView` classes. Essas classes são implementações concretas das interfaces correspondentes que são definidas no namespace [Windows::Foundation::Collections](/uwp/api/Windows.Foundation.Collections) . Não é possível transmitir os tipos de coleção concretos pela ABI (por exemplo quando um programa Javascript ou C# é chamado em um componente C++), mas é possível convertê-los implicitamente nos seus tipos de interface correspondentes. Por exemplo, se você implementar um método público que popula e retorna uma coleção, use [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) para implementar a coleção internamente e [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) como o tipo de retorno. Para obter mais informações, consulte [coleções](../cppcx/collections-c-cx.md) e [Criando componentes do tempo de execução do Windows em C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 Você pode construir um Platform::Collections::Vector com base em um [std::vector](../standard-library/vector-class.md) e um [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) com base em um [std::map](../standard-library/map-class.md).
 

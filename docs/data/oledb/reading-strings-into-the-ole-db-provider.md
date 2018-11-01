@@ -1,26 +1,15 @@
 ---
-title: Lendo cadeias de caracteres no provedor OLE DB | Microsoft Docs
-ms.custom: ''
+title: Lendo cadeias de caracteres no provedor de banco de dados OLE
 ms.date: 10/13/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - OLE DB providers, reading strings into
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: b1730c839ab2eb87511a241c28409646a999cfd6
-ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
+ms.openlocfilehash: 4883edf08097f8dcdb18b821e9a0ca37f1ff6b0f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216247"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50469661"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Lendo cadeias de caracteres no provedor de banco de dados OLE
 

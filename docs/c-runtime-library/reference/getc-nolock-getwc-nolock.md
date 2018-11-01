@@ -1,10 +1,6 @@
 ---
-title: _getc_nolock, _getwc_nolock | Microsoft Docs
-ms.custom: ''
+title: _getc_nolock, _getwc_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getc_nolock
 - _getwc_nolock
@@ -28,8 +24,6 @@ f1_keywords:
 - getwc_nolock
 - gettc_nolock
 - _getwc_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - characters, reading
 - _getc_nolock function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - gettc_nolock function
 - _gettc_nolock function
 ms.assetid: eb37b272-e177-41c9-b077-12ce7ffd3b88
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7c727f43748be8beb327115350923ee3ea9994db
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 82c7e1f44dc3177985560319067f9114964218bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399203"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50465345"
 ---
 # <a name="getcnolock-getwcnolock"></a>_getc_nolock, _getwc_nolock
 
@@ -69,7 +59,7 @@ wint_t _getwc_nolock(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fluxo*<br/>
+*fluxo*<br/>
 Fluxo de entrada.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -78,7 +68,7 @@ Consulte [getc, getwc](getc-getwc.md).
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções são idênticas aos **getc** e **getwc** exceto que eles não bloqueiam o thread de chamada. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+Essas funções são idênticas às **getc** e **getwc** , exceto que eles não bloqueiam o thread de chamada. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

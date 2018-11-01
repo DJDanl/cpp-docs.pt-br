@@ -1,10 +1,6 @@
 ---
-title: _flushall | Microsoft Docs
-ms.custom: ''
+title: _flushall
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _flushall
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _flushall
-dev_langs:
-- C++
 helpviewer_keywords:
 - flushall function
 - flushing streams
 - streams, flushing
 - _flushall function
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7fb094e2f99e0554320df69946470f42f461819d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: de8caf30568816f41441f5d9487293c346d2bff1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398016"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466213"
 ---
 # <a name="flushall"></a>_flushall
 
@@ -57,11 +47,11 @@ int _flushall( void );
 
 ## <a name="remarks"></a>Comentários
 
-Por padrão, o **flushall** função grava o conteúdo de todos os buffers associados com fluxos de saída abertas de arquivos apropriados. Todos os buffers associados a fluxos de entrada abertos são limpos do seu conteúdo atual. (Normalmente, esses buffers são mantidos pelo sistema operacional, que determina o momento ideal para gravar os dados automaticamente no disco: quando um buffer estiver cheio, quando um fluxo for fechado ou quando um programa for encerrado normalmente sem fechar fluxos.)
+Por padrão, o **flushall** função grava em arquivos adequados o conteúdo de todos os buffers associados a fluxos de saída aberta. Todos os buffers associados a fluxos de entrada abertos são limpos do seu conteúdo atual. (Normalmente, esses buffers são mantidos pelo sistema operacional, que determina o momento ideal para gravar os dados automaticamente no disco: quando um buffer estiver cheio, quando um fluxo for fechado ou quando um programa for encerrado normalmente sem fechar fluxos.)
 
-Se uma leitura segue uma chamada para **flushall**, novos dados são lidos no arquivo de entrada nos buffers. Todos os fluxos permanecerão abertos após a chamada a **flushall**.
+Se uma leitura seguir uma chamada para **flushall**, novos dados serão lidos dos arquivos de entrada nos buffers. Todos os fluxos permanecerão abertos após a chamada para **flushall**.
 
-O recurso de confirmar no disco da biblioteca em tempo de execução permite assegurar que dados críticos sejam gravados diretamente no disco em vez de em buffers do sistema operacional. Sem reescrever um programa existente, você pode habilitar esse recurso vinculando os arquivos de objeto do programa com Commode.obj. No arquivo executável resultante, chamadas para **flushall** gravar o conteúdo de todos os buffers para o disco. Somente **flushall** e [fflush](fflush.md) são afetados por Commode.obj.
+O recurso de confirmar no disco da biblioteca em tempo de execução permite assegurar que dados críticos sejam gravados diretamente no disco em vez de em buffers do sistema operacional. Sem reescrever um programa existente, você pode habilitar esse recurso vinculando os arquivos de objeto do programa com Commode.obj. No arquivo executável resultante, chamadas para **flushall** gravam o conteúdo de todos os buffers no disco. Somente **flushall** e [fflush](fflush.md) são afetados por commode.
 
 Para obter informações sobre como controlar o recurso de confirmação em disco, consulte [E/S de fluxo](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md) e [_fdopen](fdopen-wfdopen.md).
 
