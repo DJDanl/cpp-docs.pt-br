@@ -1,10 +1,6 @@
 ---
-title: TANH, tanhf, tanhl | Microsoft Docs
-ms.custom: ''
+title: TANH, tanhf, tanhl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tanh
 - tanhf
@@ -27,8 +23,6 @@ f1_keywords:
 - tanhf
 - tanhl
 - _tanhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - tanhl function
 - _tanhl function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 438c587099edafedbb2cc3feb4b3a285aa155a0d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b9c7269d3c945301106098fc944383bbc364e5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408514"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432377"
 ---
 # <a name="tanh-tanhf-tanhl"></a>TANH, tanhf, tanhl
 
@@ -79,7 +69,7 @@ O **tanh** funções retornam a tangente hiperbólica de *x*. Nenhum erro é ret
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **tanh** que levar e retornar **float** ou **longo** **duplo** valores. Em um programa C, **tanh** sempre usa e retorna **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **tanh** que usam e retornam **float** ou **longo** **double** valores. Em um programa do C **tanh** sempre usa e retorna **duplo**.
 
 ## <a name="requirements"></a>Requisitos
 
