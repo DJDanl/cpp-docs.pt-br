@@ -1,10 +1,6 @@
 ---
-title: /GENPROFILE, /FASTGENPROFILE (gerar a criação de perfil instrumentada compilação) | Microsoft Docs
-ms.custom: ''
+title: /GENPROFILE, /FASTGENPROFILE (gerar Build instrumentado de criação de perfil)
 ms.date: 03/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - GENPROFILE
 - FASTGENPROFILE
@@ -14,20 +10,16 @@ helpviewer_keywords:
 - GENPROFILE
 - FASTGENPROFILE
 ms.assetid: deff5ce7-46f5-448a-b9cd-a7a83a6864c6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 05d7961ff46661b8f6df2768591932699c3965d4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e703c94d4a8b7cf7c70e68071959b775987f1710
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379296"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496441"
 ---
-# <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE, /FASTGENPROFILE (gerar compilação instrumentada de criação de perfil)
+# <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE, /FASTGENPROFILE (gerar Build instrumentado de criação de perfil)
 
-Especifica a geração de um arquivo. PGD pelo vinculador para dar suporte a Otimização Guiada por perfil (PGO). **/GENPROFILE** e **/FASTGENPROFILE** usar parâmetros diferentes do padrão. Use **/GENPROFILE** a favorecer precisão sobre velocidade e uso de memória durante a criação de perfil. Use **/FASTGENPROFILE** favorecer velocidade e menor uso de memória em precisão.
+Especifica a geração de um arquivo. PGD pelo vinculador para dar suporte à otimização guiada por perfil (PGO). **/GENPROFILE** e **/FASTGENPROFILE** usam parâmetros padrão diferentes. Use **/GENPROFILE** a favorecer precisão sobre o uso de memória e velocidade durante a criação de perfil. Use **/FASTGENPROFILE** favorecer velocidade e menor uso de memória sobre a precisão.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,41 +28,41 @@ Especifica a geração de um arquivo. PGD pelo vinculador para dar suporte a Oti
 
 ### <a name="arguments"></a>Arguments
 
-Qualquer um dos seguintes argumentos pode ser especificado para **/GENPROFILE** ou **/FASTGENPROFILE**. Argumentos listados aqui são separados por uma barra vertical (**|**) caracteres são mutuamente exclusivos. Use uma vírgula (**,**) caractere para separar opções.
+Qualquer um dos argumentos a seguir pode ser especificado para **/GENPROFILE** ou **/FASTGENPROFILE**. Argumentos listados aqui são separados por uma barra vertical (**|**) caractere são mutuamente exclusivos. Use uma vírgula (**,**) caractere para separar opções.
 
 **COUNTER32** &#124; **COUNTER64**<br/>
 Use **COUNTER32** para especificar o uso de contadores de teste de 32 bits, e **COUNTER64** para especificar os contadores de teste de 64 bits. Quando você especifica **/GENPROFILE**, o padrão é **COUNTER64**. Quando você especifica **/FASTGENPROFILE**, o padrão é **COUNTER32**.
 
 **EXACT** &#124; **NOEXACT**<br/>
-Use **exato** para especificar incrementos interlocked para testes de thread-safe. **NOEXACT** Especifica as operações de incremento desprotegido para testes. O padrão é **NOEXACT**.
+Use **EXACT** para especificar a incrementos interconectados thread-safe para investigações. **NOEXACT** Especifica as operações de incremento desprotegido para testes. O padrão é **NOEXACT**.
 
 **MEMMAX**=*valor*, **MEMMIN**=*valor*<br/>
-Use **MEMMAX** e **MEMMIN** para especificar os tamanhos de reserva máximo e mínimo para dados de treinamento na memória. O valor é a quantidade de memória para reservar em bytes. Por padrão, esses valores são determinados por uma heurística interna.
+Use **MEMMAX** e **MEMMIN** para especificar os tamanhos de reserva de mínimo e máximo para dados de treinamento na memória. O valor é a quantidade de memória reservado em bytes. Por padrão, esses valores são determinados por uma heurística interna.
 
 **PATH**  &#124; **NOPATH** <br/>
 Use **caminho** para especificar um conjunto separado de contadores PGO para cada caminho exclusivo para uma função. Use **NOPATH** para especificar apenas um conjunto de contadores para cada função. Quando você especifica **/GENPROFILE**, o padrão é **caminho** . Quando você especifica **/FASTGENPROFILE**, o padrão é **NOPATH** .
 
 **TRACKEH**  &#124; **NOTRACKEH** <br/>
-Especifica se deve usar os contadores extras para manter uma contagem precisa quando as exceções são geradas durante o treinamento. Use **TRACKEH** para especificar contadores extras para uma contagem exata. Use **NOTRACKEH** para especificar contadores único para o código que não usam a exceção manipulação ou que não encontrar exceções em seus cenários de treinamento.  Quando você especifica **/GENPROFILE**, o padrão é **TRACKEH** . Quando você especifica **/FASTGENPROFILE**, o padrão é **NOTRACKEH** .
+Especifica se deve usar os contadores extras para manter uma contagem precisa quando exceções forem geradas durante o treinamento. Use **TRACKEH** para especificar os contadores extras para uma contagem exata. Use **NOTRACKEH** para especificar contadores únicos para o código que não usa exceção manipulação ou que não encontrar exceções em seus cenários de treinamento.  Quando você especifica **/GENPROFILE**, o padrão é **TRACKEH** . Quando você especifica **/FASTGENPROFILE**, o padrão é **NOTRACKEH** .
 
 **PGD**=*nome de arquivo*<br/>
 Especifica um nome de arquivo de base para o arquivo. PGD. Por padrão, o vinculador usa o nome do arquivo de imagem executável base com uma extensão. PGD.
 
 ## <a name="remarks"></a>Comentários
 
-O **/GENPROFILE** e **/FASTGENPROFILE** opções informam o vinculador para gerar o arquivo de instrumentação de criação de perfil necessário para dar suporte a treinamento de aplicativo para Otimização Guiada por perfil (PGO). Essas opções são novas no Visual Studio 2015. Preferir essas opções para preterido **/LTCG:PGINSTRUMENT**, **/PGD** e **/POGOSAFEMODE** opções e o **PogoSafeMode**,  **VCPROFILE_ALLOC_SCALE** e **VCPROFILE_PATH** variáveis de ambiente. As informações de perfil geradas pelo treinamento de aplicativo são usadas como entrada para executar destinados otimizações de programa inteiro durante compilações. Você pode definir opções adicionais para controlar vários recursos de criação de perfil de desempenho durante o treinamento do aplicativo e cria. Opções padrão especificadas pelo **/GENPROFILE** dar resultados mais precisos, especialmente para aplicativos multithread grandes e complexos. O **/FASTGENPROFILE** opção usa padrões diferentes para uma base de memória menor e um desempenho mais rápido durante o treinamento, às custas de precisão.
+O **/GENPROFILE** e **/FASTGENPROFILE** opções dizer ao vinculador para gerar o arquivo de criação de perfil de instrumentação necessário para dar suporte a treinamento de aplicativo para a Otimização Guiada por perfil (PGO). Essas opções são novas no Visual Studio 2015. Prefira essas opções para preteridas **/LTCG:PGINSTRUMENT**, **/PGD.** e **/POGOSAFEMODE** opções e o **PogoSafeMode**,  **VCPROFILE_ALLOC_SCALE** e **VCPROFILE_PATH** variáveis de ambiente. As informações de perfil geradas pelo treinamento de aplicativo são usadas como entrada para executar direcionado a otimizações de programa inteiro durante builds. Você pode definir opções adicionais para controlar vários recursos de criação de perfil de desempenho durante o treinamento do aplicativo e se baseia. As opções padrão especificadas pelo **/GENPROFILE** dar resultados mais precisos, especialmente para grandes e complexos aplicativos multi-threaded. O **/FASTGENPROFILE** opção usa os padrões diferentes para um volume de memória menor e um desempenho mais rápido durante o treinamento, às custas da precisão.
 
-Informações de criação de perfil é capturada quando você executa o aplicativo instrumentado depois que você cria usando **/GENPROFILE** de **/FASTGENPROFILE**. Essas informações são capturadas quando você especificar o [/USEPROFILE](useprofile.md) opção de vinculador para executar a criação de perfil etapa e, em seguida, usado para guiar a etapa de compilação otimizada. Para obter mais informações sobre como treinar seu aplicativo e os detalhes sobre os dados coletados, consulte [Otimização Guiada por perfil](profile-guided-optimizations.md).
+Informações de criação de perfil é capturada quando você executar o aplicativo instrumentado depois que você compila usando **/GENPROFILE** dos **/FASTGENPROFILE**. Essas informações são capturadas quando você especifica o [/USEPROFILE](useprofile.md) etapa de opção de vinculador para executar a criação de perfil e, em seguida, usado para orientar a etapa de compilação otimizada. Para obter mais informações sobre como treinar seu aplicativo e obter detalhes sobre os dados coletados, consulte [Otimização Guiada por perfil](profile-guided-optimizations.md).
 
 Você também deve especificar **/LTCG** quando você especifica **/GENPROFILE** ou **/FASTGENPROFILE**.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **vinculador** > **linha de comando** página de propriedades.
 
-1. Insira o **/GENPROFILE** ou **/FASTGENPROFILE** opções e argumentos para o **opções adicionais** caixa. Escolha **Okey** para salvar suas alterações.
+1. Insira o **/GENPROFILE** ou **/FASTGENPROFILE** opções e argumentos para o **opções adicionais** caixa. Escolher **Okey** para salvar suas alterações.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 

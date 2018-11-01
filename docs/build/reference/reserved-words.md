@@ -1,10 +1,6 @@
 ---
-title: Palavras reservadas | Microsoft Docs
-ms.custom: ''
+title: Palavras reservadas
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - code
 - CONFORMING
@@ -15,55 +11,49 @@ f1_keywords:
 - Data
 - DYNAMIC
 - DEV386
-dev_langs:
-- C++
 helpviewer_keywords:
 - .def files [C++], reserved words
 - def files [C++], reserved words
 - linker [C++], reserved words
 - reserved words [C++]
 ms.assetid: 9b9f49e5-0739-45ab-a37e-81e3915ceb25
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 132bd8e5ba66cbf9486a6da4747994c667e2f6e7
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 360baf479f9100483fe694ca8860dfc1d7ebfe11
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705654"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50502460"
 ---
 # <a name="reserved-words"></a>Palavras reservadas
 
-As seguintes palavras são reservadas pelo vinculador. Esses nomes podem ser usados como argumentos em [instruções de definição de módulo](../../build/reference/module-definition-dot-def-files.md) somente se o nome é colocado entre aspas duplas ("").
+As seguintes palavras são reservadas pelo vinculador. Esses nomes podem ser usados como argumentos em [instruções de definição de módulo](../../build/reference/module-definition-dot-def-files.md) somente se o nome está entre aspas duplas ("").
 
 ||||
 |-|-|-|
 |**APPLOADER**<sup>1</sup>|**INITINSTANCE**<sup>2</sup>|**PRÉ-CARREGAMENTO**|
-|**BASE**|**IOPL**|**PRIVADA**|
+|**BASE DE DADOS DE**|**IOPL**|**PRIVADO**|
 |**CÓDIGO**|**BIBLIOTECA**<sup>1</sup>|**PROTMODE**<sup>2</sup>|
-|**EM CONFORMIDADE**|**LOADONCALL**<sup>1</sup>|**PURO**<sup>1</sup>|
+|**EM CONFORMIDADE COM**|**LOADONCALL**<sup>1</sup>|**PURO**<sup>1</sup>|
 |**DADOS**|**LONGNAMES**<sup>2</sup>|**READONLY**|
-|**DESCRIÇÃO**|**PODEM SER MOVIDOS**<sup>1</sup>|**READWRITE**|
+|**DESCRIÇÃO**|**MOVÍVEL**<sup>1</sup>|**READWRITE**|
 |**DEV386**|**MOVEABLE**<sup>1</sup>|**MODO REAL**<sup>1</sup>|
-|**DESCARTÁVEIS**|**VÁRIOS**|**RESIDENTE**|
+|**DESCARTÁVEL**|**VÁRIOS**|**RESIDENTE**|
 |**DINÂMICO**|**NOME**|**RESIDENTNAME**<sup>1</sup>|
 |**SOMENTE PARA EXECUÇÃO**|**NEWFILES**<sup>2</sup>|**SEÇÕES**|
 |**EXECUTEONLY**|**NODATA**<sup>1</sup>|**SEGMENTOS**|
 |**EXECUTEREAD**|**NOIOPL**<sup>1</sup>|**COMPARTILHADO**|
-|**EXETYPE**|**SEM NOME**|**ÚNICO**|
+|**EXETYPE**|**NONAME**|**ÚNICO**|
 |**EXPORTS**|**NÃO CONFORMES**<sup>1</sup>|**STACKSIZE**|
-|**FIXA**<sup>1</sup>|**NONDISCARDABLE**|**STUB**|
-|**FUNÇÕES**<sup>2</sup>|**NENHUM**|**VERSÃO**|
-|**HEAPSIZE**|**NÃO COMPARTILHADO**|**WINDOWAPI**|
+|**FIXO**<sup>1</sup>|**NONDISCARDABLE**|**STUB**|
+|**FUNÇÕES**<sup>2</sup>|**NONE**|**VERSÃO**|
+|**HEAPSIZE**|**NÃO COMPARTILHADOS**|**WINDOWAPI**|
 |**IMPORTAÇÕES**|**NOTWINDOWCOMPAT**<sup>1</sup>|**WINDOWCOMPAT**|
 |**IMPUROS**<sup>1</sup>|**OBJETOS**|**WINDOWS**|
 |**INCLUIR**<sup>2</sup>|**ANTIGO**<sup>1</sup>||
 
-<sup>1</sup> o vinculador emite um aviso ("ignorado") quando ele encontra esse termo. No entanto, a palavra é preservada.
+<sup>1</sup> o vinculador emite um aviso ("ignorado") quando encontra esse termo. No entanto, a palavra é preservada.
 
-<sup>2</sup> o vinculador ignora essa palavra mas emite sem aviso.
+<sup>2</sup> o vinculador ignora essa palavra, mas não emite nenhum aviso.
 
 ## <a name="see-also"></a>Consulte também
 
