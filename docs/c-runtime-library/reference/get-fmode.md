@@ -1,10 +1,6 @@
 ---
-title: _get_fmode | Microsoft Docs
-ms.custom: ''
+title: _get_fmode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_fmode
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - get_fmode
 - _get_fmode
-dev_langs:
-- C++
 helpviewer_keywords:
 - _get_fmode function
 - file translation [C++], default mode
 - get_fmode function
 ms.assetid: 22ea70e2-b9b5-422d-b514-64f4beaea45c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a28909e5e848712305fb28e8ac4d46180f8948cf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f326069c1c190b0fa1c1bbd5ee4ead7346481a38
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398296"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658023"
 ---
 # <a name="getfmode"></a>_get_fmode
 
@@ -48,23 +38,23 @@ Obtém o modo de conversão de arquivo padrão para operações de E/S de arquiv
 ## <a name="syntax"></a>Sintaxe
 
 ```C
-errno_t _get_fmode( 
-   int * pmode 
+errno_t _get_fmode( 
+   int * pmode 
 );
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *pmode*<br/>
-Um ponteiro para um inteiro a ser preenchida com o modo padrão atual: **o_text** ou **o_binary**.
+Um ponteiro para um inteiro a ser preenchido com o modo padrão atual: **o_text** ou **o_binary**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna zero se tiver êxito; um código de erro em caso de falha. Se *pmode* é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e a função retorna **EINVAL**.
+Retorna zero se tiver êxito; um código de erro em caso de falha. Se *pmode* é **nulo**, o manipulador de parâmetro inválido será invocado conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e a função retornará **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-A função obtém o valor da variável global [_fmode](../../c-runtime-library/fmode.md). Essa variável Especifica o modo de tradução de arquivo padrão para baixo nível e fluxo de operações de e/s de arquivo, como **abrir**, **pipe**, **fopen**, e [ freopen](freopen-wfreopen.md).
+A função obtém o valor da variável global [_fmode](../../c-runtime-library/fmode.md). Essa variável Especifica o modo de translação de arquivo padrão de baixo nível e fluxo de operações de e/s de arquivo, como **Open**, **pipe**, **fopen**, e [ freopen](freopen-wfreopen.md).
 
 ## <a name="requirements"></a>Requisitos
 

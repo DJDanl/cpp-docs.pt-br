@@ -1,11 +1,6 @@
 ---
-title: ctan, ctanf, ctanl | Microsoft Docs
-ms.custom: ''
+title: ctan, ctanf, ctanl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ctan
 - ctanf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/ctan
 - complex/ctanf
 - complex/ctanl
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctan function
 - ctanf function
 - ctanl function
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c272e34202f81a9f16eab5b57da35c548790c417
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2d4da5a39658e46bc633ae3bd9c8f6f0a01555aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396421"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50661741"
 ---
 # <a name="ctan-ctanf-ctanl"></a>ctan, ctanf, ctanl
 
@@ -79,7 +68,7 @@ Um número complexo que representa o ângulo, em radianos.
 
 ## <a name="return-value"></a>Valor de retorno
 
-A tangente do *z*.
+A tangente de *z*.
 
 |Entrada|Exceção SEH|**matherr** exceção|
 |-----------|-------------------|--------------------------|
@@ -88,7 +77,7 @@ A tangente do *z*.
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **ctan** que levar e retornar **_Fcomplex** e **_Lcomplex** valores. Em um programa C, **ctan** sempre usa e retorna um **_Dcomplex** valor.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **ctan** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **ctan** sempre usa e retorna um **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 

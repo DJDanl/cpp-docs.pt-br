@@ -1,10 +1,6 @@
 ---
-title: _strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l | Microsoft Docs
-ms.custom: ''
+title: _strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strncoll
 - _mbsncoll_l
@@ -40,8 +36,6 @@ f1_keywords:
 - _strncoll
 - _tcsncoll
 - mbsncoll
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strncoll_l function
 - code pages, using for string comparisons
@@ -66,23 +60,19 @@ helpviewer_keywords:
 - ftcsnccoll function
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 888484a80cc7c39921b973450afdaa361518432a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe6c3283c9379b370911cc63184535e813b96d8c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415901"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658530"
 ---
 # <a name="strncoll-wcsncoll-mbsncoll-strncolll-wcsncolll-mbsncolll"></a>_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 
 Compara cadeias de caracteres usando informações específicas de localidade.
 
 > [!IMPORTANT]
-> **mbsncoll** e **mbsncoll_l** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsncoll** e **mbsncoll_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -140,16 +130,16 @@ Cada uma dessas funções retorna um valor que indica a relação de subcadeias 
 |Valor retornado|Relação da string1 com a string2|
 |------------------|----------------------------------------|
 |< 0|*string1* é menor que *string2*.|
-|0|*string1* é idêntico ao *string2*.|
-|> 0|*string1* é maior do que *string2*.|
+|0|*string1* é idêntica à *string2*.|
+|> 0|*string1* é maior que *string2*.|
 
-Cada uma dessas funções retorna **_NLSCMPERROR**. Para usar **_NLSCMPERROR**, incluir STRING.h ou MBSTRING.h. **wcsncoll** pode falhar se *string1* ou *string2* contém códigos de caractere largo que estão fora do domínio da sequência de agrupamento. Quando ocorre um erro, **wcsncoll** podem definir **errno** para **EINVAL**. Para verificar se há um erro em uma chamada para **wcsncoll**, defina **errno** como 0 e, em seguida, verifique **errno** depois de chamar **wcsncoll**.
+Cada uma dessas funções retorna **_NLSCMPERROR**. Para usar **_NLSCMPERROR**, inclua String. h ou mbstring. **wcsncoll** pode falhar se *string1* ou *string2* contém códigos de caractere largo que estão fora do domínio da sequência de agrupamento. Quando ocorre um erro, **wcsncoll** podem definir **errno** para **EINVAL**. Para verificar se há um erro em uma chamada para **wcsncoll**, defina **errno** como 0 e, em seguida, marque **errno** depois de chamar **wcsncoll**.
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções executa uma comparação diferencia maiusculas e minúsculas do primeiro *contagem* caracteres de *string1* e *string2*, de acordo com a página de código que está no momento Use. Use essas funções somente quando há uma diferença entre a ordem do conjunto de caracteres e a ordem lexicográfica dos caracteres na página de código atual e essa diferença é de interesse para a comparação de cadeia de caracteres. A ordem do conjunto de caracteres é dependente de localidade. As versões dessas funções que não têm o **_l** uso de sufixo a localidade atual, mas as versões que têm o **_l** sufixo usam a localidade que é transmitida. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+Cada uma dessas funções executa uma comparação diferencia maiusculas de minúsculas dos primeiros *contagem* caracteres de *string1* e *string2*, de acordo com a página de código que está no momento Use. Use essas funções somente quando há uma diferença entre a ordem do conjunto de caracteres e a ordem lexicográfica dos caracteres na página de código atual e essa diferença é de interesse para a comparação de cadeia de caracteres. A ordem do conjunto de caracteres é dependente de localidade. As versões dessas funções que não têm o **l** sufixo usam a localidade atual, mas as versões que têm o **l** sufixo usam a localidade que é passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Todas essas funções validam seus parâmetros. Se qualquer um dos *string1* ou *string2* é um ponteiro nulo, ou *contagem* é maior do que **INT_MAX**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam **_NLSCMPERROR** e defina **errno** para **EINVAL**.
+Todas essas funções validam seus parâmetros. Se qualquer um dos *string1* ou *string2* é um ponteiro nulo, ou *contagem* é maior que **INT_MAX**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **_NLSCMPERROR** e defina **errno** para **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

@@ -1,25 +1,15 @@
 ---
-title: -WINMD (gerar metadados do Windows) | Microsoft Docs
-ms.custom: ''
+title: /WINMD (Gera metadados do Windows
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadata
-dev_langs:
-- C++
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 492be2c5510155ab0336070adc4b5ae96a9775c0
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 3a59dd770d9429f23a4f401c6e1f5b13b9f743ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162952"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656099"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (Gera metadados do Windows
 

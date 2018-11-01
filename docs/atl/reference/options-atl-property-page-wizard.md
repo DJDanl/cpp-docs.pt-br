@@ -1,27 +1,17 @@
 ---
-title: Opções, o Assistente de página de propriedades ATL | Microsoft Docs
-ms.custom: ''
+title: Opções, Assistente de página de propriedades da ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.ppg.options
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 92f3855cf9c760ef8e6bb761f4a0bac042f8c539
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e891bd9e37bbf2fbedcdd71649305cdc366065fd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081761"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641997"
 ---
 # <a name="options-atl-property-page-wizard"></a>Opções, Assistente de página de propriedades da ATL
 

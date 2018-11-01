@@ -1,10 +1,6 @@
 ---
-title: _mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l | Microsoft Docs
-ms.custom: ''
+title: _mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbicoll_l
 - _mbsnbcoll_l
@@ -32,8 +28,6 @@ f1_keywords:
 - _ftcsnicoll
 - _ftcsncoll
 - mbsnbcoll_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbsnbcoll_l function
 - mbsnbcoll_l function
@@ -48,20 +42,16 @@ helpviewer_keywords:
 - tcsncoll function
 - tcsnicoll function
 ms.assetid: d139ed63-ccba-4458-baa2-61cbcef03e94
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 19e17552a674d4931134eb9d7b436a0f858843d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c18faa3c93969a683b3ee3ef58dd02e1c1ae61f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405387"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665188"
 ---
 # <a name="mbsnbcoll-mbsnbcolll-mbsnbicoll-mbsnbicolll"></a>_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
 
-Compara *n* bytes de duas cadeias de caracteres multibyte usando as informações da página de código multibyte.
+Compara *n* bytes de duas cadeias de caracteres multibyte usando informações de página de código multibyte.
 
 > [!IMPORTANT]
 > Esta API não pode ser usada em aplicativos executados no Tempo de Execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -106,23 +96,23 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O valor de retorno indica a relação de subcadeias de caracteres de *string1* e *string2*.
+O valor retornado indica a relação das subcadeias de caracteres de *string1* e *string2*.
 
 |Valor retornado|Descrição|
 |------------------|-----------------|
-|< 0|*string1* subcadeia de caracteres menor *string2* subcadeia de caracteres.|
+|< 0|*string1* subcadeia de caracteres menor que *string2* subcadeia de caracteres.|
 |0|*string1* subcadeia de caracteres idêntica à *string2* subcadeia de caracteres.|
 |> 0|*string1* subcadeia de caracteres maior que *string2* subcadeia de caracteres.|
 
-Se *string1* ou *string2* é **nulo** ou *contagem* é maior do que **INT_MAX**, inválido manipulador de parâmetro é chamado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam **_NLSCMPERROR** e defina **errno** para **EINVAL**. Para usar **_NLSCMPERROR**, incluir String.h ou Mbstring.h.
+Se *string1* ou *string2* está **nulo** ou *contagem* é maior que **INT_MAX**, o inválido manipulador de parâmetro é invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **_NLSCMPERROR** e defina **errno** para **EINVAL**. Para usar **_NLSCMPERROR**, inclua String. h ou mbstring.
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções é agrupado, no máximo, o primeiro *contagem* bytes em *string1* e *string2* e retorna um valor que indica a relação entre resultante subcadeias de *string1* e *string2*. Se o byte final na subcadeia de caracteres de *string1* ou *string2* é um byte inicial, ele não está incluído na comparação; essas funções comparam apenas completas caracteres em subcadeias de caracteres. **mbsnbicoll** é uma versão de maiusculas e minúsculas do **mbsnbcoll**. Como [mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) e [mbsnbicmp](mbsnbicmp-mbsnbicmp-l.md), **mbsnbcoll** e **mbsnbicoll** agrupar as duas cadeias de caracteres de caracteres multibyte acordo com o ordem lexicográfica especificado pelo multibyte [página de código](../../c-runtime-library/code-pages.md) atualmente em uso.
+Cada uma dessas funções agrupa, no máximo, a primeira *contagem* bytes *string1* e *string2* e retorna um valor que indica a relação entre resultante as subcadeias de caracteres de *string1* e *string2*. Se o byte final na subcadeia de caracteres de *string1* ou *string2* é um byte inicial, ele não está incluído na comparação, essas funções comparam apenas caracteres completos nas subcadeias de caracteres. **mbsnbicoll** é uma versão sem diferenciação de **mbsnbcoll**. Como o [mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) e [mbsnbicmp](mbsnbicmp-mbsnbicmp-l.md), **mbsnbcoll** e **mbsnbicoll** agrupar as duas cadeias de caracteres multibyte acordo com o ordem lexicográfica especificada pela multibyte [página de código](../../c-runtime-library/code-pages.md) atualmente em uso.
 
-Para algumas páginas de código e conjuntos de caracteres correspondente, a ordem dos caracteres no conjunto de caracteres pode diferir da ordem de caracteres lexicográfica. Na localidade “C”, esse não é o caso: a ordem dos caracteres no conjunto de caracteres ASCII é a mesma que a ordem lexicográfica dos caracteres. No entanto, em algumas páginas de código europeias, por exemplo, o caractere “a” (valor 0x61) precede o caractere “ä” (valor 0xE4) no conjunto de caracteres, mas o caractere “ä” precede a caractere “a” lexicograficamente. Para executar uma comparação lexicográfica de cadeias de caracteres em bytes em uma instância, use **mbsnbcoll** em vez de **mbsnbcmp**; para verificar somente para fins de igualdade de cadeia de caracteres, use **mbsnbcmp**.
+Para algumas páginas de código e conjuntos de caracteres correspondente, a ordem dos caracteres no conjunto de caracteres pode diferir da ordem de caracteres lexicográfica. Na localidade “C”, esse não é o caso: a ordem dos caracteres no conjunto de caracteres ASCII é a mesma que a ordem lexicográfica dos caracteres. No entanto, em algumas páginas de código europeias, por exemplo, o caractere “a” (valor 0x61) precede o caractere “ä” (valor 0xE4) no conjunto de caracteres, mas o caractere “ä” precede a caractere “a” lexicograficamente. Para executar uma comparação lexicográfica de cadeias de caracteres por bytes, nesse caso, use **mbsnbcoll** vez **mbsnbcmp**; para verificar somente a igualdade de cadeia de caracteres, use **mbsnbcmp**.
 
-Porque o **coll** funções collate cadeias de caracteres lexicograficamente para comparação, enquanto o **cmp** funções simplesmente testam a igualdade de cadeia de caracteres, o **coll** são funções muito mais lento do que o correspondente **cmp** versões. Portanto, o **coll** funções devem ser usadas somente quando há uma diferença entre a ordem do conjunto de caracteres e a ordem lexicográfica de caractere na página de código atual, e essa diferença é de interesse para a comparação.
+Porque o **coll** funções agrupar cadeias de caracteres lexicograficamente para comparação, enquanto que o **cmp** funções simplesmente testam a igualdade de cadeia de caracteres, o **coll** são funções muito mais lento do que o correspondente **cmp** versões. Portanto, o **coll** funções devem ser usadas somente quando há uma diferença entre a ordem de conjunto de caracteres e a ordem lexicográfica de caracteres na página de código atual e essa diferença é de interesse para a comparação.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 

@@ -1,27 +1,17 @@
 ---
-title: Compilador aviso (nível 1) C4965 | Microsoft Docs
-ms.custom: ''
+title: Compilador aviso (nível 1) C4965
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4965
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d8613585d1f34060fb2e60f976f76c6801005aca
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7d77df395d680b467d1a04a3f59c9822842f99f5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036638"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653096"
 ---
 # <a name="compiler-warning-level-1-c4965"></a>Compilador aviso (nível 1) C4965
 
@@ -29,7 +19,7 @@ box implícito de inteiro 0; Use nullptr ou conversão explícita
 
 Conversão boxing implícita de tipos de valor de recursos do Visual C++. Uma instrução que resultaram em uma atribuição de nulo usando extensões gerenciadas para C++ agora se torna uma atribuição em um int. box
 
-Para obter mais informações, consulte [conversão Boxing](../../windows/boxing-cpp-component-extensions.md).
+Para obter mais informações, consulte [Boxing](../../windows/boxing-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemplo
 

@@ -1,10 +1,6 @@
 ---
-title: _sopen_s, _wsopen_s | Microsoft Docs
-ms.custom: ''
+title: _sopen_s, _wsopen_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _sopen_s
 - _wsopen_s
@@ -26,8 +22,6 @@ f1_keywords:
 - wsopen_s
 - _wsopen_s
 - sopen_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - sopen_s function
 - _wsopen_s function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - _sopen_s function
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c94219ff0b357e7627528d68938ec430fd8dc14
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b26f8e15efe3e0a044de4c3b2d19f70510a91f6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418478"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660351"
 ---
 # <a name="sopens-wsopens"></a>_sopen_s, _wsopen_s
 
@@ -95,20 +85,20 @@ Um valor de retorno diferente de zero indica um erro; Nesse caso **errno** é de
 |Valor errno|Condição|
 |-|-|
 **EACCES**| O caminho determinado é um diretório ou o arquivo é somente leitura, mas foi realizada uma tentativa de operação de abertura para gravação.
-**EEXIST**| **O_creat** e **o_excl** sinalizadores forem especificados, mas *filename* já existe.
-**EINVAL**| Inválido *oflag*, *shflag*, ou *pmode* argumento, ou *pfh* ou *filename* foi um ponteiro nulo.
+**EEXIST**| **O_creat** e **o_excl** sinalizadores foram especificados, mas *filename* já existe.
+**EINVAL**| Inválido *oflag*, *shflag*, ou *pmode* argumento, ou *pfh* ou *filename* é um ponteiro nulo.
 **EMFILE**|Nenhum outro descritor de arquivo disponível.
 **ENOENT**|Arquivo ou caminho não encontrado.
 
-Se um argumento inválido for passado para a função, o manipulador de parâmetro inválido será invocado, como descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e **EINVAL** é retornado.
+Se um argumento inválido for passado para a função, o manipulador de parâmetro inválido será invocado, como descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e **EINVAL** é retornado.
 
 Para obter mais informações sobre esses e outros códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-No caso de um erro, -1 é retornado por meio de *pfh* (a menos que *pfh* é um ponteiro nulo).
+No caso de um erro, -1 é retornado por *pfh* (a menos que *pfh* for um ponteiro nulo).
 
 ## <a name="remarks"></a>Comentários
 
-O **sopen_s** função abre o arquivo especificado por *filename* e prepara o arquivo compartilhado de leitura ou gravação, conforme definido pelo *oflag* e *shflag* . **wsopen_s** é uma versão de caractere largo de **sopen_s**; o *filename* argumento **wsopen_s** é uma cadeia de caracteres largos. **wsopen_s** e **sopen_s** se comportam de forma idêntica caso contrário.
+O **sopen_s** função abre o arquivo especificado por *filename* e prepara o arquivo para leitura ou gravação, compartilhada, conforme definido pela *oflag* e *shflag* . **wsopen_s** é uma versão de caractere largo de **sopen_s**; o *filename* argumento **wsopen_s** é uma cadeia de caracteres largos. **wsopen_s** e **sopen_s** se comportam de forma idêntica caso contrário.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -116,7 +106,7 @@ O **sopen_s** função abre o arquivo especificado por *filename* e prepara o ar
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tsopen_s**|**_sopen_s**|**_sopen_s**|**_wsopen_s**|
 
-A expressão de inteiro *oflag* é formado pela combinação de um ou mais constantes manifestos, que são definidas em \<fcntl.h >. Quando duas ou mais constantes formam o argumento *oflag*, eles são combinados com o operador OR bit a bit ( **&#124;** ).
+A expressão de inteiro *oflag* é formada combinando uma ou mais constantes de manifesto, definidas em \<fcntl. h >. Quando duas ou mais constantes formam o argumento *oflag*, elas são combinadas com o operador OR bit a bit ( **&#124;** ).
 
 |*oflag* constante|Comportamento|
 |-|-|
@@ -126,13 +116,13 @@ A expressão de inteiro *oflag* é formado pela combinação de um ou mais const
 **O_CREAT** &AMP;#124; **_O_SHORT_LIVED**|Cria um arquivo temporário e, se possível, não alinha com o disco. O *pmode* argumento é necessário quando **o_creat** for especificado.
 **O_CREAT** &AMP;#124; **_O_TEMPORARY**|Cria um arquivo temporário, que é excluído quando o último descritor de arquivo é fechado. O *pmode* argumento é necessário quando **o_creat** for especificado.
 **O_CREAT**&AMP;#124; ` _O_EXCL`|Retorna um valor de erro se um arquivo especificado por *filename* existe. Aplica-se somente quando usado com **o_creat**.
-**_O_NOINHERIT**|Impede a criação de um descritor de arquivo compartilhado.
+**O_NOINHERIT**|Impede a criação de um descritor de arquivo compartilhado.
 **_O_RANDOM**|Especifica que o cache é otimizado para acesso aleatório do disco, mas não se restringe a isso.
 **_O_RDONLY**|Abre um arquivo somente leitura. Não pode ser especificado com **o_rdwr** ou **o_wronly**.
 **O_RDWR**|Abre um arquivo para leitura e gravação. Não pode ser especificado com **o_rdonly** ou **o_wronly**.
 **_O_SEQUENTIAL**|Especifica que o cache é otimizado para acesso sequencial do disco, mas não se restringe a isso.
 **_O_TEXT**|Abre um arquivo no modo de texto (convertido). (Para obter mais informações, consulte [E/S de arquivo nos modos de texto e binário](../../c-runtime-library/text-and-binary-mode-file-i-o.md) e [fopen](fopen-wfopen.md).)
-**O_TRUNC**|Abre um arquivo e o trunca para que ele fique com tamanho zero; o arquivo deve ter permissão de gravação. Não pode ser especificado com **o_rdonly**. **O_trunc** usado com **o_creat** abre um arquivo existente ou cria um arquivo. **Observação:** o **o_trunc** sinalizador destrói o conteúdo do arquivo especificado.
+**O_TRUNC**|Abre um arquivo e o trunca para que ele fique com tamanho zero; o arquivo deve ter permissão de gravação. Não pode ser especificado com **o_rdonly**. **O_trunc** usado com **o_creat** abre um arquivo existente ou cria um arquivo. **Observação:** as **o_trunc** sinalizador destrói o conteúdo do arquivo especificado.
 **O_WRONLY**|Abre um arquivo somente gravação. Não pode ser especificado com **o_rdonly** ou **o_rdwr**.
 **_O_U16TEXT**|Abre um arquivo no modo Unicode UTF-16.
 **_O_U8TEXT**|Abre um arquivo no modo Unicode UTF-8.
@@ -140,11 +130,11 @@ A expressão de inteiro *oflag* é formado pela combinação de um ou mais const
 
 Para especificar o modo de acesso de arquivo, você deve especificar **o_rdonly**, **o_rdwr**, ou **o_wronly**. Não há um valor padrão para o modo de acesso.
 
-Quando um arquivo é aberto no modo Unicode usando **_O_WTEXT**, **_O_U8TEXT**, ou **_O_U16TEXT**, entrada funções convertem os dados lidos do arquivo de dados UTF-16 armazenados como tipo **wchar_t**. Funções que gravar em um arquivo aberto no modo Unicode esperam buffers que contêm dados UTF-16 armazenados como tipo **wchar_t**. Se o arquivo estiver codificado como UTF-8, os dados em UTF-16 serão convertidos em UTF-8 no momento da gravação. O conteúdo do arquivo codificado como UTF-8 será convertido em UTF-16 no momento da leitura. Tentar ler ou gravar uma quantidade ímpar de bytes no modo Unicode gera um erro de validação de parâmetro. Para ler ou gravar dados armazenados em seu programa como UTF-8, use um modo de arquivo de texto ou binário em vez do modo Unicode. Você é responsável por toda a conversão de codificação necessária.
+Quando um arquivo é aberto no modo Unicode, usando **o_wtext**, **_O_U8TEXT**, ou **_O_U16TEXT**, entrada funções convertem os dados lidos do arquivo em dados UTF-16 armazenados como tipo **wchar_t**. Funções que gravam em um arquivo aberto no modo Unicode esperam buffers que contenham dados UTF-16 armazenados como tipo **wchar_t**. Se o arquivo estiver codificado como UTF-8, os dados em UTF-16 serão convertidos em UTF-8 no momento da gravação. O conteúdo do arquivo codificado como UTF-8 será convertido em UTF-16 no momento da leitura. Tentar ler ou gravar uma quantidade ímpar de bytes no modo Unicode gera um erro de validação de parâmetro. Para ler ou gravar dados armazenados em seu programa como UTF-8, use um modo de arquivo de texto ou binário em vez do modo Unicode. Você é responsável por toda a conversão de codificação necessária.
 
-Se **sopen_s** é chamado com **o_wronly** | **o_append** (modo de acréscimo) e **_O_WTEXT**, **_O_ U16TEXT**, ou **_O_U8TEXT**, ele primeiro tenta abrir o arquivo para leitura e gravação, ler o BOM e reabri-la somente para gravação. Se uma falha impedir de abrir o arquivo para leitura e gravação, ele será aberto somente para gravação e usará o valor padrão na configuração do modo Unicode.
+Se **sopen_s** for chamado com **o_wronly** | **o_append** (modo de acréscimo) e **o_wtext**, **_O_ U16TEXT**, ou **_O_U8TEXT**, ele primeiro tenta abrir o arquivo para leitura e gravação, lerá a BOM e reabrirá somente gravação. Se uma falha impedir de abrir o arquivo para leitura e gravação, ele será aberto somente para gravação e usará o valor padrão na configuração do modo Unicode.
 
-O argumento *shflag* é uma expressão constante que consiste em uma das seguintes manifestos constantes, que são definidas no \<share.h >.
+O argumento *shflag* é uma expressão constante que consiste em uma das seguintes constantes de manifesto, definidas em \<Share. h >.
 
 |*shflag* constante|Comportamento|
 |-|-|
@@ -153,7 +143,7 @@ O argumento *shflag* é uma expressão constante que consiste em uma das seguint
 **SH_DENYRD**|Nega acesso de leitura a um arquivo.
 **SH_DENYNO**|Permite acesso de leitura e gravação.
 
-O *pmode* argumento sempre é necessário, ao contrário de **sopen**. Quando você especifica **o_creat**, se o arquivo não existir, *pmode* Especifica configurações de permissão do arquivo, que são definidas quando o novo arquivo será fechado na primeira vez. Caso contrário, *pmode* será ignorado. *pmode* é uma expressão de inteiro que contém uma ou ambas as constantes manifestos **s_iwrite** e **s_iread**, que é definido no \<sys\stat.h >. Quando as duas constantes são fornecidas, elas são combinadas com o operador OR bit a bit. O significado de *pmode* é o seguinte.
+O *pmode* argumento é sempre necessário, ao contrário no **sopen**. Quando você especifica **o_creat**, se o arquivo não existir, *pmode* Especifica configurações de permissão do arquivo, que são definidas quando o novo arquivo é fechado pela primeira vez. Caso contrário, *pmode* será ignorado. *pmode* é uma expressão de inteiro que contém uma ou ambas as constantes de manifesto **s_iwrite** e **s_iread**, que estão definidos na \<sys\stat.h. >. Quando as duas constantes são fornecidas, elas são combinadas com o operador OR bit a bit. O significado dos *pmode* é da seguinte maneira.
 
 |*pmode*|Significado|
 |-|-|
@@ -161,9 +151,9 @@ O *pmode* argumento sempre é necessário, ao contrário de **sopen**. Quando vo
 **S_IWRITE**|Gravação permitida. (Na verdade, permite leitura e gravação.)
 **S_IREAD** &AMP;#124; **S_IWRITE**|Leitura e gravação permitidas.
 
-Se a permissão de gravação não for fornecida, o arquivo será somente leitura. No sistema operacional Windows, todos os arquivos podem ser lidos; não é possível conceder permissão de somente gravação. Portanto, os modos de **s_iwrite** e **s_iread** | **s_iwrite** são equivalentes.
+Se a permissão de gravação não for fornecida, o arquivo será somente leitura. No sistema operacional Windows, todos os arquivos podem ser lidos; não é possível conceder permissão de somente gravação. Portanto, os modos **s_iwrite** e **s_iread** | **s_iwrite** são equivalentes.
 
-**sopen_s** aplica-se a máscara de permissão de arquivo atual para *pmode* antes que as permissões são definidas. (Consulte [_umask](umask.md).)
+**sopen_s** aplica-se a máscara de permissão de arquivo atual a *pmode* antes que as permissões estão definidas. (Consulte [_umask](umask.md).)
 
 ## <a name="requirements"></a>Requisitos
 
