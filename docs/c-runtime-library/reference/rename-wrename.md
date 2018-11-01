@@ -1,10 +1,6 @@
 ---
-title: rename, _wrename | Microsoft Docs
-ms.custom: ''
+title: rename, _wrename
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - rename
 - _wrename
@@ -25,8 +21,6 @@ f1_keywords:
 - _wrename
 - _trename
 - Rename
-dev_langs:
-- C++
 helpviewer_keywords:
 - trename function
 - directories [C++], renaming
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f02829b394649b86dfda9baad7c5792853fce746
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70793dee54460b6372bfbe815115aa9211670c6f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407467"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463980"
 ---
 # <a name="rename-wrename"></a>rename, _wrename
 
@@ -92,7 +82,7 @@ Para ver outros valores retornados possíveis, consulte [_doserrno, _errno, syse
 
 A função **rename** renomeia o arquivo ou o diretório especificado por *oldname* para o nome fornecido por *newname*. O nome antigo deve ser o caminho de um arquivo ou diretório existente. O novo nome não pode ser o nome de um arquivo ou diretório existente. Você pode usar **rename** para mover um arquivo de um diretório ou dispositivo para outro fornecendo um caminho diferente no argumento *newname*. No entanto, não é possível usar **rename** para mover um diretório. Diretórios podem ser renomeados, mas não movidos.
 
-**wrename** é uma versão de caractere largo de **Renomear**; os argumentos para **wrename** são cadeias de caracteres do caractere largo. **wrename** e **Renomear** se comportam de forma idêntica caso contrário.
+**wrename** é uma versão de caractere largo de **Rename**; os argumentos a serem **wrename** são cadeias de caracteres largos. **wrename** e **Rename** se comportam de forma idêntica caso contrário.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

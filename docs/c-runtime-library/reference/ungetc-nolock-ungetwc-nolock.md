@@ -1,10 +1,6 @@
 ---
-title: _ungetc_nolock, _ungetwc_nolock | Microsoft Docs
-ms.custom: ''
+title: _ungetc_nolock, _ungetwc_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ungetwc_nolock
 - _ungetc_nolock
@@ -27,8 +23,6 @@ f1_keywords:
 - ungetc_nolock
 - _ungetc_nolock
 - _ungetwc_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ungettc_nolock function
 - _ungetwc_nolock function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 14bd0f51ac01f2e335a5609a0140e30e83977433
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 17fadee825aff7b691db74eaaa7b695ba5a49a42
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409284"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50482856"
 ---
 # <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock, _ungetwc_nolock
 
@@ -71,12 +61,12 @@ wint_t _ungetwc_nolock(
 *c*<br/>
 O caractere a ser enviado.
 
-*Fluxo*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedida, cada uma dessas funções retornará o argumento de caractere *c*. Se *c* não pode ser enviada de volta ou se nenhum caractere for lido, o fluxo de entrada é alterado e **ungetc_nolock** retorna * * EOF`; **_ungetwc_nolock` retorna **WEOF**. Se *fluxo* é **nulo**, **EOF** ou **WEOF** é retornado e **errno** é definido como  **EINVAL**.
+Se for bem-sucedido, cada uma dessas funções retorna o argumento de caractere *c*. Se *c* não pode ser enviado de volta ou se nenhum caractere for lido, o fluxo de entrada permanecerá inalterado e **ungetc_nolock** retorna * * EOF`; **_ungetwc_nolock` retorna **WEOF**. Se *stream* é **nulo**, **EOF** ou **WEOF** será retornado e **errno** é definido como  **EINVAL**.
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

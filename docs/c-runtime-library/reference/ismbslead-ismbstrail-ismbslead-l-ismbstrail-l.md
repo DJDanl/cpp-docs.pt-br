@@ -1,10 +1,6 @@
 ---
-title: _ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l | Microsoft Docs
-ms.custom: ''
+title: _ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbstrail
 - _ismbslead_l
@@ -34,8 +30,6 @@ f1_keywords:
 - _ismbstrail_l
 - ismbstrail
 - _ismbslead_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbstrail function
 - _ismbslead function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c0dc0fb0a6912d728343de360b4e8f8a3a252566
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b4d3f371f4be640cc22a1bdc3d920acf88e2585
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403190"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468907"
 ---
 # <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 
@@ -100,13 +90,13 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**ismbslead** retornará -1 se o caractere é um byte e **ismbstrail** retornará -1 se o caractere é um byte final. Se as cadeias de caracteres de entrada forem válidas, mas não forem um byte inicial ou um byte final, essas funções retornarão zero. Se o argumento for **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam **nulo** e defina **errno** para **EINVAL**.
+**ismbslead** retornará -1 se o caractere for um byte inicial e **ismbstrail** retornará -1 se o caractere é um byte final. Se as cadeias de caracteres de entrada forem válidas, mas não forem um byte inicial ou um byte final, essas funções retornarão zero. Se o argumento for **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **nulo** e defina **errno** para **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-**ismbslead** e **ismbstrail** mais lentas do que o **ismbblead** e **ismbbtrail** versões porque eles consideram o contexto de cadeia de caracteres.
+**ismbslead** e **ismbstrail** são mais lentos que os **ismbblead** e **ismbbtrail** versões porque eles consideram o contexto de cadeia de caracteres.
 
-As versões dessas funções que têm o **_l** sufixo são idênticas, exceto pelo fato de seu comportamento dependente de localidade usarem a localidade que é transmitida em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções que têm o **l** sufixo são idênticas, exceto para seu comportamento dependente da localidade usam a localidade passada em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

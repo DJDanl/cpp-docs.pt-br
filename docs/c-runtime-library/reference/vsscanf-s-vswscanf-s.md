@@ -1,10 +1,6 @@
 ---
-title: vsscanf_s, vswscanf_s | Microsoft Docs
-ms.custom: ''
+title: vsscanf_s, vswscanf_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - vswscanf_s
 - vsscanf_s
@@ -24,19 +20,13 @@ f1_keywords:
 - vsscanf_s
 - vswscanf_s
 - _vstscanf_s
-dev_langs:
-- C++
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbcf6d0a8b54cc08242d613b24c415ac1ef05fd3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3106e3533f5bb65334f8a4f3d38f55d886faef4c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417097"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477162"
 ---
 # <a name="vsscanfs-vswscanfs"></a>vsscanf_s, vswscanf_s
 
@@ -70,26 +60,26 @@ Lista de argumentos variáveis.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retorna o número de campos que são convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. O valor de retorno é **EOF** para um erro ou se o fim da cadeia de caracteres for atingido antes da conversão primeiro.
+Cada uma dessas funções retorna o número de campos que são convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. O valor retornado será **EOF** para um erro ou se o final da cadeia de caracteres for atingido antes da primeira conversão.
 
-Se *buffer* ou *formato* é um **nulo** ponteiro, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam -1 e defina **errno** para **EINVAL**.
+Se *buffer* ou *formato* é um **nulo** ponteiro, o manipulador de parâmetro inválido será invocado, conforme descrito no [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão -1 e defina **errno** à **EINVAL**.
 
 Para obter mais informações sobre esses e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **vsscanf_s** função lê dados de *buffer* para os locais que são fornecidos por cada argumento o *arglist* lista de argumentos. Os argumentos na lista de argumentos especificam ponteiros para variáveis que têm um tipo que corresponde a um especificador de tipo na *formato*. Ao contrário da versão menos segura **vsscanf**, um parâmetro de tamanho do buffer é necessário quando você usar os caracteres de campo do tipo **c**, **C**, **s**, **S**, ou conjuntos de controle de cadeia de caracteres que são incluídos na **[]**. O tamanho do buffer em caracteres deve ser fornecido como um parâmetro adicional imediatamente após cada parâmetro de buffer que precisa dele.
+O **vsscanf_s** função lê dados da *buffer* nos locais fornecidos por cada argumento na *arglist* lista de argumentos. Os argumentos na lista de argumentos especificam ponteiros para variáveis que têm um tipo que corresponde a um especificador de tipo em *formato*. Ao contrário da versão menos segura **vsscanf**, um parâmetro de tamanho do buffer é necessário quando você usa os caracteres de campo do tipo **c**, **C**, **s**, **S**, ou conjuntos de controle de cadeia de caracteres que são colocados entre **[]**. O tamanho do buffer em caracteres deve ser fornecido como um parâmetro adicional imediatamente após cada parâmetro de buffer que precisa dele.
 
 O tamanho do buffer inclui o nulo de terminação. Um campo de especificação de largura pode ser usado para garantir que o token lido caiba no buffer. Se nenhum campo de especificação de largura for usado e o token lido for muito grande para caber no buffer, nada será gravado no buffer.
 
 Para obter mais informações, consulte os caracteres de campo do tipo [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) e [scanf](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> O parâmetro de tamanho é do tipo **sem sinal**, não **size_t**.
+> O parâmetro de tamanho é do tipo **sem sinal**, e não **size_t**.
 
-O *formato* controles de argumento a interpretação da entrada de campos e tem o mesmo formulário e funcionar como o *formato* argumento para o **scanf_s** função. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
+O *formato* controles de argumento a interpretação da entrada campos e tem o mesmo formato e função que o *formato* argumento para o **scanf_s** função. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
 
-**vswscanf_s** é uma versão de caractere largo de **vsscanf_s**; os argumentos para **vswscanf_s** são cadeias de caracteres do caractere largo. **vsscanf_s** não processa multibyte caracteres hexadecimais. **vswscanf_s** não trata hexadecimal de largura inteira Unicode ou caracteres de "zona de compatibilidade". Caso contrário, **vswscanf_s** e **vsscanf_s** se comportam de forma idêntica.
+**vswscanf_s** é uma versão de caractere largo de **vsscanf_s**; os argumentos a serem **vswscanf_s** são cadeias de caracteres largos. **vsscanf_s** não manipula caracteres hexadecimais multibyte. **vswscanf_s** não manipula hexadecimal de largura total Unicode ou caracteres de "zona de compatibilidade". Caso contrário, **vswscanf_s** e **vsscanf_s** se comportam de forma idêntica.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

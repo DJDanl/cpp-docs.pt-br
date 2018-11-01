@@ -1,10 +1,6 @@
 ---
-title: _execvpe, _wexecvpe | Microsoft Docs
-ms.custom: ''
+title: _execvpe, _wexecvpe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execvpe
 - _wexecvpe
@@ -26,24 +22,18 @@ f1_keywords:
 - execvpe
 - _wexecvpe
 - _execvpe
-dev_langs:
-- C++
 helpviewer_keywords:
 - wexecvpe function
 - execvpe function
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 97020ba4e1b20bfc95f48eaa1afe6fa111a9b769
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 064f8b94a9a97795015c09c11cd56e0370dcc60c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401224"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431688"
 ---
 # <a name="execvpe-wexecvpe"></a>_execvpe, _wexecvpe
 
@@ -80,7 +70,7 @@ Matriz de ponteiros para as configurações de ambiente.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de -1 indica um erro, caso em que o **errno** variável global está definido.
+Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de -1 indica um erro, caso em que o **errno** variável global é definida.
 
 |**errno** valor|Descrição|
 |-------------------|-----------------|
@@ -95,9 +85,9 @@ Para obter mais informações sobre esses e outros códigos de retorno, consulte
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções carrega e executa um novo processo, passando uma matriz de ponteiros para argumentos de linha de comando e uma matriz de ponteiros para as configurações de ambiente. Essas funções usam o **caminho** variável de ambiente para localizar o arquivo para executar.
+Cada uma dessas funções carrega e executa um novo processo, passando uma matriz de ponteiros para argumentos de linha de comando e uma matriz de ponteiros para as configurações de ambiente. Essas funções usam a **caminho** variável de ambiente para localizar o arquivo a ser executado.
 
-O **execvpe** funções validam seus parâmetros. Se o *cmdname* é um ponteiro nulo, ou se *argv* é um ponteiro nulo, um ponteiro para uma matriz vazia ou um ponteiro para uma matriz que contém uma cadeia de caracteres vazia como o primeiro argumento, essas funções invocar inválido manipulador de parâmetro, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL** e retorne -1. Nenhum processo é inicializado.
+O **execvpe** funções validam seus parâmetros. Se o *cmdname* for um ponteiro nulo, ou se *argv* é um ponteiro nulo, um ponteiro para uma matriz vazia ou um ponteiro para uma matriz que contém uma cadeia de caracteres vazia como o primeiro argumento, essas funções invocarão o inválido manipulador de parâmetro, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e retornarão -1. Nenhum processo é inicializado.
 
 ## <a name="requirements"></a>Requisitos
 

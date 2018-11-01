@@ -1,10 +1,6 @@
 ---
-title: _putenv, _wputenv | Microsoft Docs
-ms.custom: ''
+title: _putenv, _wputenv
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putenv
 - _wputenv
@@ -27,8 +23,6 @@ f1_keywords:
 - _putenv
 - wputenv
 - tputenv
-dev_langs:
-- C++
 helpviewer_keywords:
 - _putenv function
 - environment variables, deleting
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - _tputenv function
 - environment variables, modifying
 ms.assetid: 9ba9b7fd-276e-45df-8420-d70c4204b8bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fc7841963584bef19faf60de0112eeea25cb7ffd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 952a4d62f6ceb6b689091ac09f6ca338d0b10864
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403967"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432507"
 ---
 # <a name="putenv-wputenv"></a>_putenv, _wputenv
 
@@ -76,7 +66,7 @@ Definição de cadeia de caracteres de ambiente.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna 0 se for bem-sucedido ou -1 em caso de erro.
+Retorna 0 se for bem-sucedido ou -1 caso de erro.
 
 ## <a name="remarks"></a>Comentários
 
@@ -88,16 +78,16 @@ O **putenv** função adiciona novas variáveis de ambiente ou modifica os valor
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**tputenv**|**_putenv**|**_putenv**|**_wputenv**|
 
-O *cadeiacaracenv* argumento deve ser um ponteiro para uma cadeia de caracteres do formulário *varname*=*sequência_dovalor*, onde *varname* é o nome da variável de ambiente a ser adicionado ou modificado e *sequência_dovalor* é o valor da variável. Se *varname* já faz parte do ambiente, seu valor é substituído por *sequência_dovalor*; caso contrário, o novo *varname* variável e seu *sequência_dovalor*  valor são adicionadas ao ambiente. Você pode remover uma variável de ambiente especificando vazio *sequência_dovalor*, ou em outras palavras, especificando somente *varname*=.
+O *cadeiacaracenv* argumento deve ser um ponteiro para uma cadeia de caracteres do formulário *varname*=*sequência_dovalor*, em que *varname* é o nome da variável de ambiente a ser adicionada ou modificada e *sequência_dovalor* é o valor da variável. Se *varname* já é parte do ambiente, seu valor é substituído pelo *sequência_dovalor*; caso contrário, o novo *varname* variável e seu *sequência_dovalor*  valor são adicionadas ao ambiente. Você pode remover uma variável do ambiente especificando uma vazia *sequência_dovalor*, ou em outras palavras, especificando somente *varname*=.
 
-**putenv** e **wputenv** afetam apenas o ambiente local para o processo atual; você não pode usá-los para modificar o ambiente de nível de comando. Isso é, essas funções operam somente nas estruturas de dados que são acessíveis para a biblioteca em tempo de execução e não no segmento de ambiente criado para um processo pelo sistema operacional. Quando o processo atual termina, o ambiente é revertido para o nível do processo de chamada (que, na maioria dos casos, é o nível do sistema operacional). No entanto, o ambiente modificado pode ser passado para novos processos criados pelo **spawn**, **EXEC**, ou **sistema**, e esses novos processos obtém quaisquer novos itens adicionados por **putenv** e **wputenv**.
+**putenv** e **wputenv** afetam apenas o ambiente local para o processo atual; você não pode usá-los para modificar o ambiente de nível de comando. Isso é, essas funções operam somente nas estruturas de dados que são acessíveis para a biblioteca em tempo de execução e não no segmento de ambiente criado para um processo pelo sistema operacional. Quando o processo atual termina, o ambiente é revertido para o nível do processo de chamada (que, na maioria dos casos, é o nível do sistema operacional). No entanto, o ambiente modificado pode ser passado para novos processos criados por **spawn**, **EXEC**, ou **sistema**, e esses novos processos obtém os novos itens adicionados pelo **putenv** e **wputenv**.
 
-Não altere diretamente uma entrada de ambiente: em vez disso, use **putenv** ou **wputenv** alterá-lo. Em particular, liberando direta elementos do **[ Environ]** matriz global pode levar a memória inválido que está sendo resolvida.
+Não altere uma entrada de ambiente diretamente: em vez disso, use **putenv** ou **wputenv** alterá-la. Em particular, direta, liberar elementos dos **[ Environ]** matriz global pode levar a memória inválida seja resolvida.
 
-**GETENV** e **putenv** usar a variável global **Environ** para acessar a tabela do ambiente. **wgetenv** e **wputenv** usar **wenviron**. **putenv** e **wputenv** pode alterar o valor de **Environ** e **wenviron**, invalidação, portanto, o **_envp** argumento **principal** e **_wenvp** argumento **wmain**. Portanto, é mais seguro usar **Environ** ou **wenviron** para acessar as informações de ambiente. Para obter mais informações sobre a relação de **putenv** e **wputenv** variáveis globais, consulte [Environ, wenviron](../../c-runtime-library/environ-wenviron.md).
+**GETENV** e **putenv** usa a variável global **Environ** para acessar a tabela de ambiente; **wgetenv** e **wputenv** usar **wenviron**. **putenv** e **wputenv** pode alterar o valor de **Environ** e **wenviron**, invalidando, portanto, o **_envp** argumento para **principal** e o **_wenvp** argumento **wmain**. Portanto, é mais seguro usar **Environ** ou **wenviron** para acessar as informações de ambiente. Para obter mais informações sobre a relação de **putenv** e **wputenv** variáveis globais, consulte [Environ, wenviron](../../c-runtime-library/environ-wenviron.md).
 
 > [!NOTE]
-> O **putenv** e **_getenv** famílias de funções não são thread-safe. **_getenv** poderia retornar um ponteiro de cadeia de caracteres ao **putenv** está modificando a cadeia de caracteres, causando falhas aleatórias. As chamadas para essas funções devem estar sincronizadas.
+> O **putenv** e **_getenv** famílias de funções não são thread-safe. **_getenv** poderia retornar um ponteiro de cadeia de caracteres enquanto **putenv** está modificando a cadeia de caracteres, causando falhas aleatórias. As chamadas para essas funções devem estar sincronizadas.
 
 ## <a name="requirements"></a>Requisitos
 

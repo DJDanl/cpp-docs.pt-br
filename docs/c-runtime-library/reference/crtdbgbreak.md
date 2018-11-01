@@ -1,10 +1,6 @@
 ---
-title: _CrtDbgBreak | Microsoft Docs
-ms.custom: ''
+title: _CrtDbgBreak
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtDbgBreak
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _CrtDbgBreak
 - CrtDbgBreak
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtDbgBreak function
 - _CrtDbgBreak function
 ms.assetid: 01f8b4a2-a2c7-4e1f-9f39-e573b4a7871f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2141b3c70755eb03e77c8f66feed482b5e86b529
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4cf64daaea3193f7cf6b3aaa0b1aab031f104704
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394045"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478294"
 ---
 # <a name="crtdbgbreak"></a>_CrtDbgBreak
 
@@ -55,7 +45,7 @@ Nenhum valor de retorno.
 
 ## <a name="remarks"></a>Comentários
 
-O **crtdbgbreak** função define um ponto de interrupção de depuração na linha de código específica onde reside a função. Essa função é usada no modo de depuração apenas e é dependente de **Debug** sendo definido anteriormente.
+O **crtdbgbreak** função define um ponto de interrupção de depuração em determinada linha de código em que a função reside. Essa função é usada no modo de depuração apenas e é dependente **Debug** que está sendo definido anteriormente.
 
 Para obter mais informações sobre como usar outras funções em tempo de execução compatíveis com gancho e escrever suas próprias funções de gancho definidas pelo cliente, consulte [Writing Your Own Debug Hook Functions](/visualstudio/debugger/debug-hook-function-writing) (Escrevendo suas próprias funções de gancho de depuração).
 

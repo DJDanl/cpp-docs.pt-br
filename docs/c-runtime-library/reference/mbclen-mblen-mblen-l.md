@@ -1,10 +1,6 @@
 ---
-title: _mbclen, mblen, _mblen_l | Microsoft Docs
-ms.custom: ''
+title: _mbclen, mblen, _mblen_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbclen
 - mblen
@@ -31,8 +27,6 @@ f1_keywords:
 - _ftclen
 - _tclen
 - mbclen
-dev_langs:
-- C++
 helpviewer_keywords:
 - tclen function
 - _mblen_l function
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 932695b9d3474f892460e222fd1d9cc2b34c0dd6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dddf7d3a1705460d2c8d42cc1b36230d7bdaf942
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403203"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434380"
 ---
 # <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
 
@@ -93,13 +83,13 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**mbclen** retorna 1 ou 2, de acordo com se os caracteres multibyte *c* é de 1 ou 2 bytes. Não há nenhum erro de retorno para **mbclen**. Se *mbstr* não é **nulo**, **mblen** retorna o comprimento, em bytes, do caractere multibyte. Se *mbstr* é **nulo** ou aponta para o caractere null de caractere largo, **mblen** retorna 0. Se o objeto que *mbstr* pontos para não formam um caractere multibyte válido no primeiro *contagem* caracteres, **mblen** retornará -1.
+**mbclen** retorna 1 ou 2, dependendo do caractere multibyte *c* é 1 ou 2 bytes. Nenhum erro é retornado para **mbclen**. Se *mbstr* não está **nulo**, **mblen** retorna o tamanho, em bytes, do caractere multibyte. Se *mbstr* é **nulo** ou apontar para o caractere nulo de caractere largo **mblen** retornará 0. Se o objeto que *mbstr* aponta não formar um caractere multibyte válido dentro dos primeiros *contagem* caracteres **mblen** retornará -1.
 
 ## <a name="remarks"></a>Comentários
 
-O **mbclen** função retorna o tamanho, em bytes, do caractere multibyte *c*. Se *c* não aponta para o byte de um caractere multibyte conforme determinado por uma chamada implícita para **ismbblead**, o resultado de **mbclen** é imprevisível.
+O **mbclen** função retorna o tamanho, em bytes, do caractere multibyte *c*. Se *c* não apontar para o byte inicial de um caractere multibyte conforme determinado por uma chamada implícita para **ismbblead**, o resultado da **mbclen** é imprevisível.
 
-**mblen** retorna o comprimento em bytes do *mbstr* se ele é um caractere de multibyte válido e determina a validade de caracteres multibyte associada à página de código. **mblen** examina *contagem* ou menos bytes contidos em *mbstr*, mas não mais de **MB_CUR_MAX** bytes.
+**mblen** retorna o comprimento em bytes do *mbstr* se ele for um caractere multibyte válido e determina a validade de caracteres multibyte associada com a página de código. **mblen** examina *contagem* ou menos bytes contidos em *mbstr*, mas não mais de **MB_CUR_MAX** bytes.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
