@@ -1,10 +1,6 @@
 ---
-title: CoS, cosf, cosl | Microsoft Docs
-ms.custom: ''
+title: CoS, cosf, cosl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cos
 - cosf
@@ -26,8 +22,6 @@ f1_keywords:
 - cos
 - cosf
 - cosl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cosines
 - cosl function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a49f8489d084b1f67bc46432970114350c56f09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395442"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519881"
 ---
 # <a name="cos-cosf-cosl"></a>CoS, cosf, cosl
 
@@ -72,16 +62,16 @@ long double cos( long double x );  // C++ only
 
 ## <a name="return-value"></a>Valor de retorno
 
-O cosseno de *x*. Se *x* é maior que ou igual a 263 ou menor que ou igual a -263, ocorre uma perda de significância no resultado.
+O cosseno *x*. Se *x* é maior que ou igual a 263 ou menor que ou igual a -263, ocorre uma perda de significância no resultado.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|nenhum|**DOMAIN**|
-|± INF|**INVÁLIDO**|**DOMAIN**|
+|± QNAN, IND|nenhum|**_DOMAIN**|
+|± INF|**INVÁLIDO**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **cos** que levar e retornar **float** ou **longo** **duplo** valores. Em um programa C, **cos** sempre usa e retorna um **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **cos** que usam e retornam **float** ou **longo** **double** valores. Em um programa do C **cos** sempre usa e retorna um **duplo**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -93,7 +83,7 @@ Para obter informações adicionais sobre compatibilidade, consulte [Compatibili
 
 ## <a name="example"></a>Exemplo
 
-Consulte o exemplo [sin, sinf, sinl](sin-sinf-sinl.md).
+Consulte o exemplo na [sin, sinf, sinl](sin-sinf-sinl.md).
 
 ## <a name="see-also"></a>Consulte também
 

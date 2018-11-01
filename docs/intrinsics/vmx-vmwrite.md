@@ -1,28 +1,18 @@
 ---
-title: __vmx_vmwrite | Microsoft Docs
-ms.custom: ''
+title: __vmx_vmwrite
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __vmx_vmwrite
-dev_langs:
-- C++
 helpviewer_keywords:
 - __vmx_vmwrite intrinsic
 - VMWRITE instruction
 ms.assetid: 88139792-fd3f-4210-97ca-9d84f43a0252
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f333a37972a31b5815a05797bfabb603f5a26947
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c5c6e0edcb3136986cfd8e05f3d5217b3d021fa7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820667"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529240"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 
@@ -33,7 +23,7 @@ Grava o valor especificado para o campo especificado na estrutura de controle de
 ## <a name="syntax"></a>Sintaxe
 
 ```
-unsigned char __vmx_vmwrite( 
+unsigned char __vmx_vmwrite( 
    size_t Field,
    size_t FieldValue
 );
