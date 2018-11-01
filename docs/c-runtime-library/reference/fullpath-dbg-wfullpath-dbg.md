@@ -1,10 +1,6 @@
 ---
-title: _fullpath_dbg, _wfullpath_dbg | Microsoft Docs
-ms.custom: ''
+title: _fullpath_dbg, _wfullpath_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wfullpath_dbg
 - _fullpath_dbg
@@ -25,8 +21,6 @@ f1_keywords:
 - _wfullpath_dbg
 - _fullpath_dbg
 - fullpath_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fullpath_dbg function
 - relative file paths
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - _wfullpath_dbg function
 - wfullpath_dbg function
 ms.assetid: 81f72f85-07da-4f5c-866a-598e0fb03f6b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d04f3d7b53eca27d38a38b0bce284c17b15cae02
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: b84c5b77d0a9bfb298d4c597e372cd39a92441f9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450889"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50488004"
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
 
@@ -79,27 +69,27 @@ Ponteiro para um buffer que contém o nome de caminho absoluto ou completo, ou *
 *relPath*<br/>
 Nome de caminho relativo.
 
-*maxLength*<br/>
+*MaxLength*<br/>
 Comprimento máximo do buffer de nome de caminho absoluto (*absPath*). Esse comprimento é em bytes para **FullPath** , mas em caracteres largos (**wchar_t**) para **wfullpath**.
 
 *blockType*<br/>
 Tipo de bloco de memória solicitado: **client_block** ou **normal_block**.
 
 *filename*<br/>
-Ponteiro para o nome do arquivo de origem que a operação de alocação solicitada ou **nulo**.
+Ponteiro para o nome do arquivo de origem que solicitou a operação de alocação ou **nulo**.
 
 *linenumber*<br/>
-Número no arquivo de origem em que a operação de alocação foi solicitada da linha ou **nulo**.
+Número de linha no arquivo de origem em que a operação de alocação foi solicitada ou **nulo**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada função retorna um ponteiro para um buffer que contém o nome de caminho absoluto (*absPath*). Se houver um erro (por exemplo, se o valor passado na *relPath* inclui uma letra de unidade que não é válido ou não pode ser encontrada, ou se o comprimento do nome do caminho absoluto criado (*absPath*) é maior que *maxLength*) retorna a função **nulo**.
+Cada função retorna um ponteiro para um buffer que contém o nome de caminho absoluto (*absPath*). Se houver um erro (por exemplo, se o valor passado em *relPath* inclui uma letra de unidade que não é válido ou não for encontrada, ou se o comprimento do nome de caminho absoluto criado (*absPath*) é maior que *maxLength*) a função retorna **nulo**.
 
 ## <a name="remarks"></a>Comentários
 
-O **fullpath_dbg** e **wfullpath_dbg** funções são idênticas aos **FullPath** e **wfullpath** exceto que, quando **Debug** é definida, essas funções usam a versão de depuração **malloc**, **malloc_dbg**para alocar memória se **nulo** é passado como o primeiro parâmetro. Para obter informações sobre os recursos de depuração **malloc_dbg**, consulte [malloc_dbg](malloc-dbg.md).
+O **fullpath_dbg** e **wfullpath_dbg** funções são idênticas às **FullPath** e **wfullpath** , exceto que, quando **Debug** é definido, essas funções usam a versão de depuração **malloc**, **malloc_dbg**para alocar memória se **nulo** é passado como o primeiro parâmetro. Para obter informações sobre os recursos de depuração **malloc_dbg**, consulte [malloc_dbg](malloc-dbg.md).
 
-Na maioria dos casos, não é necessário chamar essas funções explicitamente. Em vez disso, você pode definir o **crtdbg_map_alloc** sinalizador. Quando **crtdbg_map_alloc** é definida, chamadas para **FullPath** e **wfullpath** são remapeados para **fullpath_dbg** e **wfullpath_dbg**, respectivamente, com o *blockType* definida como **normal_block**. Assim, você não precisa chamar essas funções explicitamente, a menos que você deseja marcar os blocos de heap como **client_block**. Para obter mais informações, consulte [Tipos de blocos no heap de depuração](/visualstudio/debugger/crt-debug-heap-details).
+Na maioria dos casos, não é necessário chamar essas funções explicitamente. Em vez disso, você pode definir as **crtdbg_map_alloc** sinalizador. Quando **crtdbg_map_alloc** for definido, chamadas para **FullPath** e **wfullpath** são remapeadas para **fullpath_dbg** e **wfullpath_dbg**, respectivamente, com o *blockType* definido como **normal_block**. Portanto, você não precisa chamar essas funções explicitamente, a menos que você deseja marcar os blocos de heap como **client_block**. Para obter mais informações, consulte [Tipos de blocos no heap de depuração](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

@@ -1,12 +1,6 @@
 ---
-title: 'Exemplo: Exibindo uma caixa de diálogo por meio de um comando de Menu | Microsoft Docs'
-ms.custom: ''
+title: 'Exemplo: exibindo uma caixa de diálogo por meio de um comando Menu'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC dialog boxes [MFC], examples
 - MFC dialog boxes [MFC], displaying
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a02bc21362c8f8acd71984f91d5528078d141eb4
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 830ba27945ce8da2abd52c7f29d786d098113151
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50060410"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483480"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Exemplo: exibindo uma caixa de diálogo por meio de um comando Menu
 

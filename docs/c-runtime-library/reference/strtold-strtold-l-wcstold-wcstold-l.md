@@ -1,10 +1,6 @@
 ---
-title: strtold, _strtold_l, wcstold, _wcstold_l | Microsoft Docs
-ms.custom: ''
+title: strtold, _strtold_l, wcstold, _wcstold_l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcstold
 - strtold
@@ -30,19 +26,13 @@ f1_keywords:
 - strtold
 - _strtold_l
 - wcstold
-dev_langs:
-- C++
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1a5018f9245da77fbadb301a8fa45d1f0f7b4117
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fce60775ee1ef6def214e559779004d4de95453c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417071"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484572"
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold, _strtold_l, wcstold, _wcstold_l
 
@@ -84,15 +74,15 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**strtold** retorna o valor do número de ponto flutuante como um **longo** **duplo**, exceto quando a representação causaria um estouro — nesse caso, a função retorna + /-**HUGE_VALL**. O sinal de **HUGE_VALL** coincide com o sinal do valor que não pode ser representado. **strtold** retorna 0 se nenhuma conversão pode ser executada ou ocorrerá um estouro negativo.
+**strtold** retorna o valor do número de ponto flutuante como uma **longo** **double**, exceto quando a representação causaria um estouro — nesse caso, a função retorna + /-**HUGE_VALL**. O sinal de **HUGE_VALL** coincide com o sinal do valor que não pode ser representado. **strtold** retorna 0 se nenhuma conversão pode ser realizada ou ocorrerá um estouro negativo.
 
-**wcstold** retorna valores de maneira semelhante para **strtold**. Para ambas as funções, **errno** é definido como **ERANGE** se ocorre estouro ou estouro negativo e o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md).
+**wcstold** retorna valores de maneira semelhante a **strtold**. Para ambas as funções **errno** é definido como **ERANGE** se ocorre estouro ou estouro negativo e o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md).
 
 Para obter mais informações sobre os códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Cada função converte a cadeia de caracteres de entrada *strSource* para um **longo** **duplo**. O **strtold** função deixa de ler a cadeia de caracteres *strSource* no primeiro caractere que não reconhece como parte de um número. Este pode ser o caractere nulo de terminação. A versão de caractere largo de **strtold** é **wcstold**; seu *strSource* argumento é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
+Cada função converte a cadeia de caracteres de entrada *strSource* para um **longo** **double**. O **strtold** função para de ler a cadeia de caracteres *strSource* no primeiro caractere que não reconhece como parte de um número. Este pode ser o caractere nulo de terminação. A versão de caractere largo de **strtold** é **wcstold**; sua *strSource* argumento é uma cadeia de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -101,15 +91,15 @@ Cada função converte a cadeia de caracteres de entrada *strSource* para um **l
 |**_tcstold**|**strtold**|**strtold**|**wcstold**|
 |**_tcstold_l**|**_strtold_l**|**_strtold_l**|**_wcstold_l**|
 
-O **LC_NUMERIC** definição de categoria da localidade atual determina o reconhecimento do caractere base *strSource*. Para obter mais informações, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md). As funções sem o **_l** sufixo usam a localidade atual; **_strtold_l** e **_wcstold_l** são idênticos aos **_strtold** e **_wcstold** exceto que eles em vez disso, usam a localidade que passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O **LC_NUMERIC** configuração da categoria da localidade atual determina o reconhecimento do caractere fracionário em *strSource*. Para obter mais informações, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md). As funções sem o **l** sufixo usam a localidade atual; **_strtold_l** e **_wcstold_l** são idênticos aos **_strtold** e **_wcstold** , exceto que eles usam a localidade que passado. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Se *endptr* não é **nulo**, um ponteiro para o caractere que interrompeu a verificação é armazenado no local que é apontado pelo *endptr*. Se nenhuma conversão pode ser executada (sem dígitos válidos foram encontrados ou uma base inválida foi especificada), o valor de *strSource* é armazenado no local que é apontado pelo *endptr*.
+Se *endptr* não está **nulo**, um ponteiro para o caractere que parou a verificação é armazenado no local apontado pela *endptr*. Se nenhuma conversão puder ser executada (Nenhum dígito válido foi encontrado ou uma base inválida foi especificada), o valor de *strSource* é armazenado no local apontado por *endptr*.
 
 **strtold** espera *strSource* para apontar para uma cadeia de caracteres da seguinte forma:
 
-[*espaço em branco*] [*sinal*] [*dígitos*] [. *dígitos*] [{**d** &#124; **D** &#124; **e** &#124; **E**} [*sinal* ]*dígitos*]
+[*espaço em branco*] [*sinal*] [*dígitos*] [. *dígitos*] [{**1!d** &#124; **1!d** &#124; **eletrônico** &#124; **eletrônico**} [*entrada* ]*dígitos*]
 
-Um *espaço em branco* pode consistir em caracteres de espaço e tabulação, que são ignorados; *sinal* é plus (**+**) ou sinal de subtração (**-**); e *dígitos* são um ou mais dígitos decimais. Se nenhum dígito aparecer antes do caractere fracionário, pelo menos um deverá aparecer após o caractere fracionário. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra de apresentação (**d**, **D**, **e** ou **E**) e um inteiro opcionalmente com sinal. Se nem um expoente nem um caractere fracionário aparecer, supõe-se que um caractere fracionário siga o último dígito na cadeia de caracteres. O primeiro caractere que não é adequado a esse formato interrompe o exame.
+Um *espaço em branco* pode consistir em caracteres de espaço ou tabulação, que são ignorados; *sinal* seja plus (**+**) ou de menos (**-**); e *dígitos* são um ou mais dígitos decimais. Se nenhum dígito aparecer antes do caractere fracionário, pelo menos um deverá aparecer após o caractere fracionário. Os dígitos decimais podem ser seguidos por um expoente, que consiste em uma letra de apresentação (**d**, **D**, **e** ou **E**) e um inteiro opcionalmente com sinal. Se nem um expoente nem um caractere fracionário aparecer, supõe-se que um caractere fracionário siga o último dígito na cadeia de caracteres. O primeiro caractere que não é adequado a esse formato interrompe o exame.
 
 ## <a name="requirements"></a>Requisitos
 

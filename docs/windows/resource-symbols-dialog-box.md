@@ -1,30 +1,19 @@
 ---
-title: Símbolos de recurso de caixa de diálogo (C++) | Microsoft Docs
-ms.custom: ''
+title: Caixa de diálogo símbolos do recurso (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.resourcesymbols
-dev_langs:
-- C++
 helpviewer_keywords:
 - New Symbol dialog box [C++]
 - Resource Symbols dialog box [C++]
 - Change Symbol dialog box [C++]
 ms.assetid: 9706cde3-1f48-4fcd-bedb-2b03b455e3c1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 09d34d0247f7fd039bca3ea9b643802856734926
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 156b531bfcedca70c930d77773d3a308735735f3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719297"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483506"
 ---
 # <a name="resource-symbols-dialog-box-c"></a>Caixa de diálogo símbolos do recurso (C++)
 
@@ -34,7 +23,7 @@ O **símbolos de recurso** caixa de diálogo C++ permite que você adicione novo
 
    Exibe o nome do símbolo. Para obter mais informações, consulte [restrições de nome de símbolo](../windows/symbol-name-restrictions.md).
 
-- **Value**
+- **Valor**
 
    Exibe o valor numérico do símbolo. Para obter mais informações, consulte [restrições de valor de símbolo](../windows/symbol-value-restrictions.md).
 
