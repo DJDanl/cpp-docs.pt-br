@@ -1,10 +1,6 @@
 ---
-title: nan, nanf, nanl | Microsoft Docs
-ms.custom: ''
+title: nan, nanf, nanl
 ms.date: 94/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - nanf
 - nan
@@ -26,23 +22,17 @@ f1_keywords:
 - nan
 - nanl
 - nanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - nan function
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 204d59d88c97d9b0fa161fda6f64f31267c73fd5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22b0e14094a0b6f0f3571c4d7551552210177a22
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401445"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610256"
 ---
 # <a name="nan-nanf-nanl"></a>nan, nanf, nanl
 
@@ -63,11 +53,11 @@ Um valor da cadeia de caracteres.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **nan** funções retornam um valor de NaN silencioso.
+O **nan** funções retornam um valor NaN silencioso.
 
 ## <a name="remarks"></a>Comentários
 
-O **nan** funções retornam um valor de ponto flutuante que corresponde a um NaN silencioso (sem sinal). O *entrada* valor é ignorado. Para obter informações sobre como um NaN é representado para saída, consulte [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+O **nan** funções retornam um valor de ponto flutuante que corresponde a um NaN silencioso (sem sinalização). O *entrada* valor é ignorado. Para obter informações sobre como um NaN é representado para saída, consulte [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="requirements"></a>Requisitos
 

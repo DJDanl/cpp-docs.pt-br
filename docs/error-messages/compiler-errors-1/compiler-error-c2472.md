@@ -1,37 +1,27 @@
 ---
-title: C2472 de erro do compilador | Microsoft Docs
-ms.custom: ''
+title: Erro do compilador C2472
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2472
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2472
 ms.assetid: 3b36bcdc-2ba5-4357-ab88-7545ba0551cd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 43279190847322fa2154c6faababdcd41b490eef
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d2f104bb61915f8d19d5fff22eea17929c0e8d74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704854"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632733"
 ---
-# <a name="compiler-error-c2472"></a>C2472 de erro do compilador
+# <a name="compiler-error-c2472"></a>Erro do compilador C2472
 
-> '*função*' não pode ser gerada no código gerenciado: '*mensagem*'; compile com /clr para gerar uma imagem mista
+> '*função*' não pode ser gerado em código gerenciado: '*mensagem*'; compile com /clr para gerar uma imagem mista
 
 ## <a name="remarks"></a>Comentários
 
-Este erro ocorre quando são usados tipos não compatíveis com o código gerenciado em um ambiente common language runtime (CLR) puro. Compilar com **/clr** para resolver o erro.
+Esse erro ocorrerá quando tipos não suportados pelo código gerenciado são usados dentro de um ambiente common language runtime (CLR) puro. Compilar com **/clr** para resolver o erro.
 
-O **/clr: pure** e **/CLR: safe** opções do compilador são substituídas no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
 ## <a name="example"></a>Exemplo
 

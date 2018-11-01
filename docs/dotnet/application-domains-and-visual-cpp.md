@@ -1,12 +1,6 @@
 ---
-title: Domínios do aplicativo e do Visual C++ | Microsoft Docs
-ms.custom: ''
+title: Domínios de aplicativo e Visual C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - interop [C++], application domains
 - application domains [C++], C++
@@ -14,21 +8,16 @@ helpviewer_keywords:
 - interoperability [C++], application domains
 - mixed assemblies [C++], application domains
 ms.assetid: 75a08efc-9b02-40ba-99b7-dcbd71010bbf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: b935b9a5d1561fa1c8b961ee48b92f59b98e2bd2
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 2296654e6935bc40f301226b184cf34f77cb126d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704328"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539263"
 ---
-# <a name="application-domains-and-visual-c"></a>Domínios do aplicativo e do Visual C++
+# <a name="application-domains-and-visual-c"></a>Domínios de aplicativo e do Visual C++
 
-Se você tiver um `__clrcall` função virtual, o vtable será por domínio de aplicativo (appdomain). Se você criar um objeto em um appdomain, você só pode chamar a função virtual de dentro do appdomain. No modo misto (**/clr**) por processo vtables será necessário se seu tipo não tiver nenhuma `__clrcall` funções virtuais. O **/clr: pure** e **/CLR: safe** opções do compilador são substituídas no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+Se você tiver um `__clrcall` função virtual, seja por domínio de aplicativo (appdomain) vtable. Se você criar um objeto em um appdomain, você só pode chamar a função virtual de dentro do appdomain. No modo misto (**/clr**) por processo vtables será necessário se seu tipo não tem nenhum `__clrcall` funções virtuais. O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
 Para obter mais informações, consulte:
 

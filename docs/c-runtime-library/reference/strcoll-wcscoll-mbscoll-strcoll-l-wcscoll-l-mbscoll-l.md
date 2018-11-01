@@ -1,10 +1,6 @@
 ---
-title: strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l | Microsoft Docs
-ms.custom: ''
+title: strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcscoll
 - _mbscoll
@@ -31,8 +27,6 @@ f1_keywords:
 - _mbscoll
 - _tcscoll
 - _ftcscoll
-dev_langs:
-- C++
 helpviewer_keywords:
 - code pages, using for string comparisons
 - mbscoll function
@@ -49,23 +43,19 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: 900a7540-c7ec-4c2f-b292-7a85f63e3fe8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d7ea6a480ad5600a69cae31033c4abc28ed78e5e
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: ae72b4cbb2b001a332d41a74883a0e2a9d20a181
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451918"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50625180"
 ---
 # <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 
 Compara cadeias de caracteres usando a localidade atual ou uma categoria de estado de conversão LC_COLLATE especificada.
 
 > [!IMPORTANT]
-> **mbscoll** e **_mbscoll_l** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbscoll** e **_mbscoll_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -109,23 +99,23 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retorna um valor que indica a relação de *string1* para *string2*, da seguinte maneira.
+Cada uma dessas funções retorna um valor que indica a relação das *string1* à *string2*, da seguinte maneira.
 
 |Valor retornado|Relação da string1 com a string2|
 |------------------|----------------------------------------|
-|< 0|*string1* menor *string2*|
+|< 0|*string1* menor que *string2*|
 |0|*string1* idêntico ao *string2*|
-|> 0|*string1* maior *string2*|
+|> 0|*string1* maior que *string2*|
 
-Cada uma dessas funções retorna **_NLSCMPERROR** em um erro. Para usar **_NLSCMPERROR**, incluir a cadeia de caracteres. H ou MBSTRING. H. **wcscoll** pode falhar se *string1* ou *string2* é **nulo** ou contém códigos de caractere largo fora do domínio da sequência de agrupamento. Quando ocorre um erro, **wcscoll** podem definir **errno** para **EINVAL**. Para verificar se há um erro em uma chamada para **wcscoll**, defina **errno** como 0 e, em seguida, verifique **errno** depois de chamar **wcscoll**.
+Cada uma dessas funções retorna **_NLSCMPERROR** em um erro. Para usar **_NLSCMPERROR**, incluir qualquer cadeia de caracteres. H ou MBSTRING. H. **wcscoll** pode falhar se *string1* ou *string2* é **nulo** ou contém códigos de caractere largo fora do domínio da sequência de agrupamento. Quando ocorre um erro, **wcscoll** podem definir **errno** para **EINVAL**. Para verificar se há um erro em uma chamada para **wcscoll**, defina **errno** como 0 e, em seguida, marque **errno** depois de chamar **wcscoll**.
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções executa uma comparação diferencia maiusculas e minúsculas de *string1* e *string2* acordo com a página de código em uso no momento. Essas funções devem ser usadas somente quando há uma diferença entre a ordem de conjunto de caracteres e a ordem lexicográfica de caracteres na página de código atual e essa diferença é de interesse para a comparação de cadeia de caracteres.
+Cada uma dessas funções executa uma comparação diferencia maiusculas de minúsculas de *string1* e *string2* acordo com a página de código atualmente em uso. Essas funções devem ser usadas somente quando há uma diferença entre a ordem de conjunto de caracteres e a ordem lexicográfica de caracteres na página de código atual e essa diferença é de interesse para a comparação de cadeia de caracteres.
 
-Todas essas funções validam seus parâmetros. Se qualquer um dos *string1* ou *string2* é um ponteiro nulo, ou se *contagem* é maior do que **INT_MAX**, o manipulador de parâmetro inválido é invocado , conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução é permitida para continuar, essas funções retornam **_NLSCMPERROR** e defina **errno** para **EINVAL**.
+Todas essas funções validam seus parâmetros. Se qualquer um dos *string1* ou *string2* é um ponteiro nulo, ou se *contagem* é maior que **INT_MAX**, o manipulador de parâmetro inválido será invocado , conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, essas funções retornarão **_NLSCMPERROR** e defina **errno** para **EINVAL**.
 
-A comparação de duas cadeias de caracteres é uma operação dependente de localidade, já que cada localidade tem regras diferentes para classificar caracteres. As versões dessas funções sem o **_l** sufixo use localidade do thread atual para este comportamento dependente de localidade; as versões com o **_l** sufixo são idênticos para a função correspondente sem o sufixo exceto que eles usam a localidade passada como um parâmetro em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+A comparação de duas cadeias de caracteres é uma operação dependente de localidade, já que cada localidade tem regras diferentes para classificar caracteres. As versões dessas funções sem o **l** sufixo uso a localidade do thread atual desse comportamento dependente da localidade; as versões com o **l** sufixo são idênticas à função correspondente sem o sufixo, exceto que eles usam a localidade passada como um parâmetro em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

@@ -1,10 +1,6 @@
 ---
-title: qsort | Microsoft Docs
-ms.custom: ''
+title: qsort
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - qsort
 apilocation:
@@ -23,24 +19,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - qsort
-dev_langs:
-- C++
 helpviewer_keywords:
 - qsort function
 - quick-sort algorithm
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 87e9ba6ef9bcb4a909e97466d7ea71ee18374991
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e912a7a53619e9347cf2c0cd40adf0f9162b314b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110184"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618485"
 ---
 # <a name="qsort"></a>qsort
 
@@ -78,7 +68,7 @@ O **qsort** função implementa um algoritmo de classificação rápida para cla
 **qsort** chamadas a *comparar* uma rotina ou mais vezes durante a classificação e passa ponteiros para dois elementos de matriz em cada chamada.
 
 ```C
-compare( (void *) & elem1, (void *) & elem2 );
+compare( (void *) & elem1, (void *) & elem2 );
 ```
 
 A rotina deve comparar os elementos e retornar um dos valores a seguir.

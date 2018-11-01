@@ -1,27 +1,16 @@
 ---
-title: Atributos de método (COM C++) | Microsoft Docs
-ms.custom: ''
+title: Atributos de método (COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - method attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8f5f9af9e302b9346b2bd42acdf1e268a59113f7
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 96a3eab3e6d2761019a9f0855ff7cbb978445f68
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48790128"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667916"
 ---
 # <a name="method-attributes"></a>Atributos de método
 

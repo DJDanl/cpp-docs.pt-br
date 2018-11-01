@@ -1,27 +1,17 @@
 ---
-title: RW2002 de erro do compilador de recurso | Microsoft Docs
-ms.custom: ''
+title: Erro RW2002 (compilador de recurso)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - RW2002
-dev_langs:
-- C++
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b90a0800708af41037325204a00c808bec2a7d20
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: e703fe27c725c29518a302f51200c405df16032c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50080852"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607894"
 ---
 # <a name="resource-compiler-error-rw2002"></a>Erro RW2002 (compilador de recurso)
 

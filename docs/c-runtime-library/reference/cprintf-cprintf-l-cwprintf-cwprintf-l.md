@@ -1,10 +1,6 @@
 ---
-title: _cprintf, _cprintf_l, _cwprintf, _cwprintf_l | Microsoft Docs
-ms.custom: ''
+title: _cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwprintf_l
 - _cprintf_l
@@ -34,8 +30,6 @@ f1_keywords:
 - cprintf_l
 - _cprintf_l
 - _cwprintf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _cprintf_l function
 - _cwprintf_l function
@@ -51,16 +45,12 @@ helpviewer_keywords:
 - cwprintf_l function
 - _cprintf function
 ms.assetid: 67ffefd4-45b3-4be0-9833-d8d26ac7c4e2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 57eaced46b786352b794e68a1a11423ba13b0948
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce1913012ee37b19e15602daaa4eea042a69a3de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400867"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534037"
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 
@@ -105,13 +95,13 @@ O número de caracteres impressos.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções formate e imprima uma série de caracteres e valores diretamente para o console usando o **putch** função (**putwch** para **cwprintf**) para caracteres de saída . Cada argumento *argument_list* (se houver) é convertido e de saída de acordo com a especificação de formato correspondente em *formato*. O *formato* argumento usa o [formatar a sintaxe de especificação para funções printf e and wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Ao contrário de **fprintf**, **printf**, e **sprintf** funções, nem **cprintf** nem **cwprintf**converte caracteres de alimentação de linha em carro (CR LF) de alimentação de linha de retorno de combinações de saída quando.
+Essas funções formatam e imprimem uma série de caracteres e valores diretamente no console, usando o **putch** função (**putwch** para **cwprintf**) para caracteres de saída . Cada argumento na *argument_list* (se houver) é convertido e gerado de acordo com a especificação de formato correspondente em *formato*. O *formato* argumento usa o [formatar a sintaxe de especificação de funções printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Ao contrário do **fprintf**, **printf**, e **sprintf** funções, nem **cprintf** nem **cwprintf**converte caracteres de alimentação de linha em combinações de retorno-alimentação de linha (CR-LF) do carro durante a geração.
 
-Uma diferença importante é que **cwprintf** exibe caracteres Unicode quando usados no Windows. Ao contrário de **cprintf**, **cwprintf** usa as configurações de localidade do console atual.
+Uma distinção importante é que **cwprintf** exibe caracteres Unicode quando usado no Windows. Diferentemente **cprintf**, **cwprintf** usa as configurações atuais de localidade do console.
 
-As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade atual.
+As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade atual.
 
-**cprintf** valida o *formato* parâmetro. Se *formato* é um ponteiro nulo, a função invoca o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, a função retornará -1 e conjuntos de **errno** para **EINVAL**.
+**cprintf** valida o *formato* parâmetro. Se *formato* for um ponteiro nulo, a função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará -1 e definirá **errno** à **EINVAL**.
 
 > [!IMPORTANT]
 > Verifique se *format* não é uma cadeia de caracteres definida pelo usuário.

@@ -1,28 +1,18 @@
 ---
-title: Assistente para ATL COM+ 1.0 do componente | Microsoft Docs
-ms.custom: ''
+title: Assistente para ATL COM+ 1.0 do componente
 ms.date: 10/03/2018
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.mts.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, adding components
 - ATL COM+ 1.0 Component Wizard
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 102ec4f85c8915cf6afb70f03d470cec4e9e807f
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: 227dda9518b67b410f52db8c6efb33bbc2c8f1b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250400"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513770"
 ---
 # <a name="atl-com-10-component-wizard"></a>Assistente para ATL COM+ 1.0 do componente
 
@@ -31,7 +21,7 @@ Use este assistente para adicionar um objeto ao seu projeto que oferece suporte 
 Você pode especificar se o objeto dá suporte a interfaces duplas e automação. Você também pode indicar o suporte para a interface de informações de erro, controle de objeto avançado, transações e enfileiramento de mensagens assíncronas.
 
 > [!WARNING]
-> No Visual Studio 2017 versão 15,9 este assistente de código foi preterido e será removido em uma versão futura do Visual Studio. Este assistente é raramente usado. Suporte geral para ATL e MFC não é afetado pela remoção desse assistente. Se você quiser compartilhar seus comentários sobre essa substituição, conclua [desta pesquisa](https://www.surveymonkey.com/r/QDWKKCN). Sua opinião é importante para nós.
+> No Visual Studio 2017 versão 15.9, esse assistente de código foi preterido e será removido em uma versão futura do Visual Studio. Este assistente é raramente usado. O suporte geral para ATL e MFC não é afetado pela remoção do assistente. Se você quiser compartilhar seus comentários sobre essa alteração, participe [desta pesquisa](https://www.surveymonkey.com/r/QDWKKCN). Seus comentários são importantes para nós.
 
 ## <a name="remarks"></a>Comentários
 

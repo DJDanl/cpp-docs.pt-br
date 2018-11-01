@@ -1,10 +1,6 @@
 ---
-title: asctime, _wasctime | Microsoft Docs
-ms.custom: ''
+title: asctime, _wasctime
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wasctime
 - asctime
@@ -25,8 +21,6 @@ f1_keywords:
 - _tasctime
 - asctime
 - _wasctime
-dev_langs:
-- C++
 helpviewer_keywords:
 - asctime function
 - tasctime function
@@ -36,20 +30,16 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2b18edc9e61f7065fcac1fe6231012bd232ccc18
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bc2d7a50442d9000eaaebf7a06bf336b3317e4df
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396190"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50577876"
 ---
 # <a name="asctime-wasctime"></a>asctime, _wasctime
 
-Converter um **tm** estrutura como uma cadeia de caracteres de tempo. Versões mais seguras dessas funções estão disponíveis; consulte [asctime_s, wasctime_s](asctime-s-wasctime-s.md).
+Converter um **tm** estrutura em uma cadeia de caracteres de hora. Versões mais seguras dessas funções estão disponíveis; consulte [asctime_s, wasctime_s](asctime-s-wasctime-s.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -75,27 +65,27 @@ Estrutura de hora/data.
 
 Versões mais seguras dessas funções estão disponíveis; consulte [asctime_s, wasctime_s](asctime-s-wasctime-s.md).
 
-O **asctime** função converte uma hora armazenada como uma estrutura para uma cadeia de caracteres. O *timeptr* valor normalmente é obtido de uma chamada para **gmtime** ou **localtime**, que retornam um ponteiro para um **tm** estrutura, definido no momento. H.
+O **asctime** função converte uma hora armazenada como uma estrutura de cadeia de caracteres. O *timeptr* valor geralmente é obtido de uma chamada para **gmtime** ou **localtime**, que ambas retornam um ponteiro para um **tm** estrutura, definido no tempo. H.
 
 |membro timeptr|Valor|
 |--------------------|-----------|
-|**tm_hour**|Horas desde a meia-noite (0-23)|
+|**tm_hour**|Horas desde a meia-noite (0 a 23)|
 |**tm_isdst**|Positivo se o horário de verão estiver em vigor; 0 se o horário de verão não estiver em vigor; negativo se o status de horário de verão for desconhecido. A biblioteca em tempo de execução C presume as regras dos Estados Unidos para implementar o cálculo de DST (horário de verão).|
-|**tm_mday**|Dia do mês (1-31)|
-|**tm_min**|Minutos após a hora (0-59)|
-|**tm_mon**|Mês (0-11; Janeiro = 0)|
-|**tm_sec**|Segundos após o minuto (0-59)|
-|**tm_wday**|Dia da semana (0 a 6; Domingo = 0)|
-|**tm_yday**|Dia do ano (365 0; 1 de janeiro = 0)|
+|**tm_mday**|Dia do mês (1 a 31)|
+|**tm_min**|Minutos após a hora (0 a 59)|
+|**tm_mon**|Mês (0 – 11; Janeiro = 0)|
+|**tm_sec**|Segundos após o minuto (0 a 59)|
+|**tm_wday**|Dia da semana (0 – 6; Domingo = 0)|
+|**tm_yday**|Dia do ano (0 – 365; 1 de janeiro = 0)|
 |**tm_year**|Ano (ano atual menos 1900)|
 
 A cadeia de caracteres convertida também é ajustada de acordo com as configurações de fuso horário local. Para obter mais informações sobre a configuração da hora local, consulte as funções [time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md) e [localtime](localtime-localtime32-localtime64.md) e a função [_tzset](tzset.md) para saber como definir variáveis globais e de ambiente de fuso horário.
 
-O resultado de cadeia de caracteres produzido por **asctime** contém exatamente 26 caracteres e tem o formato `Wed Jan 02 02:03:55 1980\n\0`. Um relógio de 24 horas é usado. Todos os campos têm uma largura constante. O caractere de nova linha e o caractere nulo ocupam as duas últimas posições da cadeia de caracteres. **asctime** usa um único buffer alocado estaticamente para manter a cadeia de caracteres de retorno. Cada chamada para essa função destrói o resultado da chamada anterior.
+O resultado de cadeia de caracteres produzido por **asctime** contém exatamente 26 caracteres e tem o formato `Wed Jan 02 02:03:55 1980\n\0`. Um relógio de 24 horas é usado. Todos os campos têm uma largura constante. O caractere de nova linha e o caractere nulo ocupam as duas últimas posições da cadeia de caracteres. **asctime** usa um único buffer alocado estaticamente para armazenar a cadeia de caracteres de retornada. Cada chamada para essa função destrói o resultado da chamada anterior.
 
 **wasctime** é uma versão de caractere largo de **asctime**. **wasctime** e **asctime** se comportam de forma idêntica caso contrário.
 
-Essas funções validam seus parâmetros. Se *timeptr* é um ponteiro nulo ou se ele contiver valores fora do intervalo, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, a função retorna **nulo** e define **errno** para **EINVAL**.
+Essas funções validam seus parâmetros. Se *timeptr* for um ponteiro nulo ou se ele contiver valores fora do intervalo, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará **nulo** e define **errno** para **EINVAL**.
 
 ### <a name="generic-text-routine-mapping"></a>Mapeamento da Rotina de Texto Genérico
 
@@ -112,7 +102,7 @@ Essas funções validam seus parâmetros. Se *timeptr* é um ponteiro nulo ou se
 
 ## <a name="example"></a>Exemplo
 
-Este programa coloca a hora do sistema em inteiro longo **aclock**, converte-o para a estrutura **newtime** e converte-o em forma de cadeia de caracteres de saída, usando o **asctime**função.
+Esse programa coloca a hora do sistema no inteiro longo **aclock**, converte-o para a estrutura **newtime** e, em seguida, converte para o formulário de cadeia de caracteres para saída, usando o **asctime**função.
 
 ```C
 // crt_asctime.c

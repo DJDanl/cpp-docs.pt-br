@@ -1,10 +1,6 @@
 ---
-title: _ismbbkprint, _ismbbkprint_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbkprint, _ismbbkprint_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbkprint
 - _ismbbkprint_l
@@ -26,24 +22,18 @@ f1_keywords:
 - ismbbkprint
 - _ismbbkprint
 - ismbbkprint_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbkprint function
 - ismbbkprint_l function
 - ismbbkprint function
 - _ismbbkprint_l function
 ms.assetid: 8d1d3258-1e34-4365-81ed-97c95de25475
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a1a6a215bac14f81d29d83a856313133fb4e88a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d30abb0bcb587aeb15087ceb80d60d54ac1bebe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399495"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645972"
 ---
 # <a name="ismbbkprint-ismbbkprintl"></a>_ismbbkprint, _ismbbkprint_l
 
@@ -71,7 +61,7 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**ismbbkprint** retorna um valor diferente de zero se o número inteiro *c* é um texto não-ASCII ou símbolo de pontuação não-ASCII ou 0 se não for. Por exemplo, somente na página de código 932, **_ismbbkprint** testa se há pontuação katakana ou alfanumérico katakana (intervalo: 0xA1 – 0xDF). **ismbbkprint** usa a localidade atual para configurações de caractere dependente de localidade. **ismbbkprint_l** é idêntico, exceto que ele usa a localidade passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**ismbbkprint** retorna um valor diferente de zero se o número inteiro *c* é um texto não ASCII ou símbolo de pontuação não ASCII ou 0 se não for. Por exemplo, somente na página de código 932, **_ismbbkprint** testa se há pontuação katakana ou alfanumérico katakana (intervalo: 0xA1 – 0xDF). **ismbbkprint** usa a localidade atual para configurações de caracteres dependentes da localidade. **ismbbkprint_l** é idêntico, exceto que ele usa a localidade passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 
