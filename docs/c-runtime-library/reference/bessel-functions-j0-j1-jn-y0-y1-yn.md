@@ -1,10 +1,6 @@
 ---
-title: 'Funções Bessel: _j0, _j1, _jn, _y0, _y1, _yn | Microsoft Docs'
-ms.custom: ''
+title: 'Funções Bessel: _j0, _j1, _jn, _y0, _y1, _yn'
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _j0
 - _j1
@@ -33,8 +29,6 @@ f1_keywords:
 - _y0
 - _y1
 - _yn
-dev_langs:
-- C++
 helpviewer_keywords:
 - Bessel functions
 - _j0 function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cf461a7737ee1f23650ff80f203524c427fb644d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393596"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531857"
 ---
 # <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Funções Bessel: _j0, _j1, _jn, _y0, _y1, _yn
 
@@ -94,29 +84,29 @@ Ordem de inteiro da função Bessel.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada essas rotinas retorna uma função de Bessel *x*. Se *x* é negativo no **y0**, **y1**, ou **Yn** funções, os conjuntos de rotina **errno** para  **EDOM**, imprime um **Domain** mensagem de erro **stderr**e retorna **_HUGE_VAL**. Você pode modificar por meio de tratamento de erros **matherr**.
+Cada uma dessas rotinas retorna uma função Bessel de *x*. Se *x* é negativo na **_y0**, **_y1**, ou **Yn** funções, a rotina definirá **errno** para  **EDOM**, imprime uma **_DOMAIN** mensagem de erro para **stderr**e retorna **_HUGE_VAL**. Você pode modificar por meio de tratamento de erros **matherr**.
 
 ## <a name="remarks"></a>Comentários
 
-O **j0**, **J1**, e **Jn** rotinas retornam Bessel funções do tipo primeiro: orders, 0, 1 e n, respectivamente.
+O **_j0**, **_j1**, e **Jn** rotinas retornam as funções Bessel do primeiro tipo: ordens 0, 1 e n, respectivamente.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**INVÁLIDO**|**DOMAIN**|
+|± **QNAN**, **IND**|**INVÁLIDO**|**_DOMAIN**|
 
-O **y0**, **y1**, e **Yn** rotinas retornam Bessel funções do segundo tipo: orders, 0, 1 e n, respectivamente.
+O **_y0**, **_y1**, e **Yn** rotinas retornam as funções Bessel do segundo tipo: ordens 0, 1 e n, respectivamente.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**INVÁLIDO**|**DOMAIN**|
+|± **QNAN**, **IND**|**INVÁLIDO**|**_DOMAIN**|
 |± 0|**ZERODIVIDE**|**SING**|
-|&#124;x&#124; < 0,0|**INVÁLIDO**|**DOMAIN**|
+|&#124;x&#124; < 0,0|**INVÁLIDO**|**_DOMAIN**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho necessário|
 |-------------|---------------------|
-|**j0**, **J1**, **Jn**, **y0**, **y1**, **Yn**|\<cmath> (C++), \<math.h> (C, C++)|
+|**_j0**, **_j1**, **Jn**, **_y0**, **_y1**, **Yn**|\<cmath> (C++), \<math.h> (C, C++)|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
