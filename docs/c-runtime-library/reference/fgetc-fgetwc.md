@@ -1,10 +1,6 @@
 ---
-title: fgetc, fgetwc | Microsoft Docs
-ms.custom: ''
+title: fgetc, fgetwc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fgetwc
 - fgetc
@@ -25,8 +21,6 @@ f1_keywords:
 - _fgettc
 - fgetwc
 - fgetc
-dev_langs:
-- C++
 helpviewer_keywords:
 - fgettc function
 - characters, reading
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f06c5c2f092932d97755a8f0cff63cde3a9682c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a853a46fc43106c9ea57be84b37fb46a18041ba8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401279"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639914"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc, fgetwc
 
@@ -64,20 +54,20 @@ wint_t fgetwc(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fluxo*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**fgetc** retorna o caractere lido como um **int** ou retorna **EOF** para indicar um erro ou o final do arquivo. **fgetwc** retorna, como um [wint_t](../../c-runtime-library/standard-types.md), o caractere largo que corresponde ao caractere de leitura ou retorna **WEOF** para indicar um erro ou o final do arquivo. Para ambas as funções, use **feof** ou **ferror** para distinguir entre um erro e uma condição de fim de arquivo. Se ocorrer um erro de leitura, o indicador de erro para o fluxo será definido. Se *fluxo* é **nulo**, **fgetc** e **fgetwc** invocar o manipulador de parâmetro inválido, conforme descrito em [parâmetro Validação](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL** e retornar **EOF**.
+**fgetc** retorna o caractere lido como uma **int** ou retorna **EOF** para indicar um erro ou fim do arquivo. **fgetwc** retorna, como um [wint_t](../../c-runtime-library/standard-types.md), o caractere largo que corresponde ao caractere lido ou retorna **WEOF** para indicar um erro ou fim do arquivo. Para ambas as funções, use **feof** ou **ferror** para distinguir entre um erro e uma condição de fim-de-arquivo. Se ocorrer um erro de leitura, o indicador de erro para o fluxo será definido. Se *stream* é **nulo**, **fgetc** e **fgetwc** invocarão o manipulador de parâmetro inválido, conforme descrito em [parâmetro Validação](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e retornar **EOF**.
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções lê um único caractere na posição atual do arquivo associado *fluxo*. A função, em seguida, incrementa o ponteiro de arquivo associado (se definido) para apontar para o próximo caractere. Se o fluxo estiver no fim do arquivo, o indicador de fim de arquivo para o fluxo será definido.
+Cada uma dessas funções lê um único caractere da posição atual do arquivo associado *fluxo*. A função, em seguida, incrementa o ponteiro de arquivo associado (se definido) para apontar para o próximo caractere. Se o fluxo estiver no fim do arquivo, o indicador de fim de arquivo para o fluxo será definido.
 
-**fgetc** é equivalente a **getc**, mas é implementada somente como uma função, em vez de como uma função e uma macro.
+**fgetc** é equivalente a **getc**, mas é implementado somente como uma função, em vez de uma função e uma macro.
 
-**fgetwc** é a versão de caractere largo de **fgetc**; ele lê **c** como um caractere multibyte ou um caractere largo de acordo com se *fluxo* é aberto em modo de texto ou no modo binário.
+**fgetwc** é a versão de caractere largo de **fgetc**; ele lê **c** como um caractere multibyte ou um caractere largo se *fluxo* é aberto no modo de texto ou binário.
 
 As versões com o sufixo **_nolock** são idênticas, exceto pelo fato de não serem protegidas contra interferência de outros threads.
 

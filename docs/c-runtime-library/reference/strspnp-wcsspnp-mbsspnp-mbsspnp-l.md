@@ -1,10 +1,6 @@
 ---
-title: _strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l | Microsoft Docs
-ms.custom: ''
+title: _strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsspnp
 - _wcsspnp
@@ -34,8 +30,6 @@ f1_keywords:
 - _wcsspnp
 - _strspnp
 - mbsspnp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strspnp function
 - _wcsspnp function
@@ -48,23 +42,19 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 80f257d7aef9678258644758e083817cbbfbe134
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 272375948c8c650b226bfb71073c6c65c5b8acef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415290"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635286"
 ---
 # <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 
 Retorna um ponteiro para o primeiro caractere em uma determinada sequência de caracteres não em outra cadeia de caracteres.
 
 > [!IMPORTANT]
-> **mbsspnp** e **_mbsspnp_l** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsspnp** e **_mbsspnp_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -102,13 +92,13 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**strspnp**, **wcsspnp**, e **mbsspnp** retornar um ponteiro para o primeiro caractere em *str* que não pertence ao conjunto de caracteres em *charset*. Cada uma dessas funções retorna **nulo** se *str* consiste inteiramente em caracteres de *charset*. Para cada uma dessas rotinas, nenhum valor retornado é reservado para indicar um erro.
+**_strspnp**, **_wcsspnp**, e **_mbsspnp** retornar um ponteiro para o primeiro caractere na *str* que não pertence ao conjunto de caracteres no *charset*. Cada uma dessas funções retorna **nulo** se *str* consiste inteiramente em caracteres de *charset*. Para cada uma dessas rotinas, nenhum valor retornado é reservado para indicar um erro.
 
 ## <a name="remarks"></a>Comentários
 
-O **mbsspnp** função retorna um ponteiro para o caractere de multibyte que é o primeiro caractere em *str* que não pertence ao conjunto de caracteres em *charset*. **mbsspnp** reconhece sequências de caracteres multibyte de acordo com o [página de código multibyte](../../c-runtime-library/code-pages.md) atualmente em uso. A pesquisa não inclui os caracteres nulo de terminação.
+O **_mbsspnp** função retorna um ponteiro para o que é o primeiro caractere no caractere multibyte *str* que não pertence ao conjunto de caracteres *charset*. **_mbsspnp** reconhece sequências de caracteres multibyte de acordo com o [página de código multibyte](../../c-runtime-library/code-pages.md) atualmente em uso. A pesquisa não inclui os caracteres nulo de terminação.
 
-Se qualquer um dos *str* ou *charset* é um ponteiro nulo, essa função invoca o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, a função retorna **nulo** e define **errno** para **EINVAL**.
+Se qualquer um dos *str* ou *charset* é um ponteiro nulo, essa função invocará o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará **nulo** e define **errno** para **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -116,9 +106,9 @@ Se qualquer um dos *str* ou *charset* é um ponteiro nulo, essa função invoca 
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
-**strspnp** e **wcsspnp** são caracteres de byte único e versões de caractere largo de **mbsspnp**. **strspnp** e **wcsspnp** se comportam de forma idêntica ao **mbsspnp** ; caso contrário, eles são fornecidos apenas para esse mapeamento e não deve ser usados por qualquer outro motivo. Para obter mais informações, consulte [Usando mapeamentos de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapeamentos de Texto Genérico](../../c-runtime-library/generic-text-mappings.md).
+**_strspnp** e **_wcsspnp** são caracteres de byte único e versões de caractere largo de **_mbsspnp**. **_strspnp** e **_wcsspnp** se comportam de maneira idêntica às **_mbsspnp** ; caso contrário, eles são fornecidos apenas para esse mapeamento e não deve ser usados por qualquer outro motivo. Para obter mais informações, consulte [Usando mapeamentos de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapeamentos de Texto Genérico](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsspnp_l** é idêntico, exceto que ele usa o parâmetro de localidade passado em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**_mbsspnp_l** é idêntico, exceto que ele usa o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

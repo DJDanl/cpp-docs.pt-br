@@ -1,10 +1,6 @@
 ---
-title: puts, _putws | Microsoft Docs
-ms.custom: ''
+title: puts, _putws
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putws
 - puts
@@ -25,8 +21,6 @@ f1_keywords:
 - _putts
 - _putws
 - puts
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], writing
 - _putts function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d8a0b4f0c4924970905cb541d82450a807de1357
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0151d29f627a8f6b91142d619f64921333bb48f5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404523"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667318"
 ---
 # <a name="puts-putws"></a>puts, _putws
 
@@ -69,15 +59,15 @@ Cadeia de caracteres de saída.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna um valor não negativo se for bem-sucedido. Se **coloca** falhar, ele retorna **EOF**; se **putws** falhar, ele retorna **WEOF**. Se *str* é um ponteiro nulo, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, as funções de conjunto **errno** para **EINVAL** e retornar **EOF** ou **WEOF**.
+Retorna um valor não negativo se for bem-sucedido. Se **coloca** falhar, retornará **EOF**; se **putws** falhar, retornará **WEOF**. Se *str* for um ponteiro nulo, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções definem **errno** à **EINVAL** e retornar **EOF** ou **WEOF**.
 
 Para obter informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **coloca** função gravações *str* ao fluxo de saída padrão **stdout**, substituindo a cadeia de caracteres do sendo encerrado porque o caractere nulo ('\0') com um caractere de nova linha ("\n") o fluxo de saída.
+O **coloca** função gravações *str* para o fluxo de saída padrão **stdout**, substituindo a cadeia de caracteres do caractere nulo de terminação ('\0') com um caractere de nova linha ('\n') na fluxo de saída.
 
-**putws** é a versão de caractere largo de **coloca**; as duas funções se comportam de forma idêntica se o fluxo está aberto no modo de ANSI. **coloca** atualmente não suportam a saída em um fluxo UNICODE.
+**putws** é a versão de caractere largo de **coloca**; as duas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. **coloca** atualmente, não suporta a saída em um fluxo UNICODE.
 
 **putwch** grava caracteres Unicode usando a configuração de localidade do CONSOLE atual.
 
@@ -94,7 +84,7 @@ O **coloca** função gravações *str* ao fluxo de saída padrão **stdout**, s
 |**puts**|\<stdio.h>|
 |**_putws**|\<stdio.h>|
 
-Não há suporte para o console em aplicativos do Windows UWP (plataforma Universal). Os identificadores de fluxo padrão que estão associados com o console, **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C podem usá-los em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Libraries
 
