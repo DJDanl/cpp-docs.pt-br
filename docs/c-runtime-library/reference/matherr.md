@@ -1,10 +1,6 @@
 ---
-title: _matherr | Microsoft Docs
-ms.custom: ''
+title: _matherr
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _matherr
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _matherr
 - matherr
-dev_langs:
-- C++
 helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5f8cba1887fe806c3a6cfa795437d3d60ed7f31e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 980bf8a14ceace82a76562cc47d353f78dbca582
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402319"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445715"
 ---
 # <a name="matherr"></a>_matherr
 
@@ -56,17 +46,17 @@ Ponteiro para a estrutura que contém informações de erro.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**matherr** retorna 0 para indicar um erro ou um valor diferente de zero para indicar êxito. Se **matherr** retorna 0, uma mensagem de erro pode ser exibida e **errno** é definido como um valor de erro apropriado. Se **matherr** retorna um valor diferente de zero, nenhuma mensagem de erro é exibido e **errno** permanece inalterado.
+**matherr** retorna 0 para indicar um erro ou um valor diferente de zero para indicar êxito. Se **matherr** retornar 0, uma mensagem de erro pode ser exibida e **errno** é definido como um valor de erro apropriado. Se **matherr** retorna um valor diferente de zero, nenhuma mensagem de erro é exibido e **errno** permanece inalterado.
 
 Para obter mais informações sobre esses códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **matherr** função processa erros gerados pelas funções da biblioteca de matemática de ponto flutuantes. Essas funções chamadas **matherr** quando for detectado um erro.
+O **matherr** função processa erros gerados pelas funções da biblioteca de matemática de ponto flutuante. Essas funções chamam **matherr** quando for detectado um erro.
 
-Para tratamento de erro especial, você pode fornecer uma definição diferente de **matherr**. Se você usar a versão dinamicamente vinculada da biblioteca de tempo de execução do C (CRT), você pode substituir o padrão **matherr** rotina em um executável com uma versão definida pelo usuário do cliente. No entanto, você não pode substituir o padrão **matherr** rotina em um cliente de DLL da DLL do CRT.
+Para a manipulação de erro especial, você pode fornecer uma definição diferente de **matherr**. Se você usar a versão dinamicamente vinculada da biblioteca em tempo de execução C (CRT), você pode substituir o padrão **matherr** rotina em um cliente executável com uma versão definida pelo usuário. No entanto, você não pode substituir o padrão **matherr** rotina em um cliente da DLL da DLL do CRT.
 
-Quando ocorre um erro em uma rotina de matemática, **matherr** é chamado com um ponteiro para um **Exception** tipo de estrutura (definidos no \<math.h >) como um argumento. A estrutura **_exception** contém os seguintes elementos.
+Quando ocorre um erro em uma rotina de matemática **matherr** for chamado com um ponteiro para um **Exception** estrutura de tipo (definido em \<Math. h >) como um argumento. A estrutura **_exception** contém os seguintes elementos.
 
 ```C
 struct _exception
@@ -79,12 +69,12 @@ struct _exception
 };
 ```
 
-O **tipo** membro Especifica o tipo de erro de matemática. É um dos valores a seguir, definidos em \<math.h >:
+O **tipo** membro Especifica o tipo de erro de matemática. Ele é um dos valores a seguir, definidos em \<Math. h >:
 
 |Macro|Significado|
 |-|-|
-**DOMAIN**|Erro de argumento de domínio
-**SING**|Singularidade de argumento
+**_DOMAIN**|Erro de argumento de domínio
+**SING**|Singularidade do argumento
 **OVERFLOW**|Erro de intervalo de estouro
 **PLOSS**|Perda parcial de significância
 **TLOSS**|Perda total de significância

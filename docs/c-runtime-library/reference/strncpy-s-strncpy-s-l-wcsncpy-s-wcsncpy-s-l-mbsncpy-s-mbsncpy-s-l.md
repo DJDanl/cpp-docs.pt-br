@@ -1,10 +1,6 @@
 ---
-title: strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l | Microsoft Docs
-ms.custom: ''
+title: strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsncpy_s_l
 - wcsncpy_s
@@ -33,8 +29,6 @@ f1_keywords:
 - _strncpy_s_l
 - wcsncpy_s
 - _tcsncpy_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wcsncpy_s_l function
 - _mbsnbcpy_s function
@@ -51,23 +45,19 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: add1f3ec75a3746d30e256ef32034b3d604f223a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8a6fc997ed874ba976e96f87df377e6fafd84a6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418205"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430063"
 ---
 # <a name="strncpys-strncpysl-wcsncpys-wcsncpysl-mbsncpys-mbsncpysl"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
 Copia caracteres de uma cadeia de caracteres para outra.  Essas versões do [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) tem aprimoramentos de segurança, conforme descrito em [Recursos de Segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsncpy_s** e **_mbsncpy_s_l** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsncpy_s** e **mbsncpy_s_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -180,13 +170,13 @@ Zero se tiver êxito, **STRUNCATE** se ocorreu truncamento, caso contrário, um 
 |**NULL**|qualquer|qualquer|**EINVAL**|não modificado|
 |qualquer|qualquer|**NULL**|**EINVAL**|*strDest*[0] definido como 0|
 |qualquer|0|qualquer|**EINVAL**|não modificado|
-|não **nulo**|muito pequeno|qualquer|**ERANGE**|*strDest*[0] definido como 0|
+|Não **nulo**|muito pequeno|qualquer|**ERANGE**|*strDest*[0] definido como 0|
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções tentam copiar o primeiro *D* caracteres de *strSource* para *strDest*, onde *D* é inferior a *contagem*  e o comprimento de *strSource*. Se esses *D* caracteres se ajustarem *strDest* (cujo tamanho é determinado como *numberOfElements*) e ainda deixar espaço para um terminador nulo, então esses caracteres são copiados e é anexado a um nulo de terminação; Caso contrário, *strDest*[0] é definido para o caractere nulo e o parâmetro inválido manipulador é chamado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md).
+Essas funções tentam copiar os primeiros *1!d* caracteres de *strSource* para *strDest*, onde *1!d* é o menor dos *contagem*  e o comprimento de *strSource*. Se esses *1!d* caracteres caiba dentro *strDest* (cujo tamanho é determinado como *numberOfElements*) e ainda deixar espaço para um terminador nulo, em seguida, esses caracteres são copiados e um nulo de terminação é anexado; Caso contrário, *strDest*[0] é definido para o caractere nulo e o parâmetro inválido manipulador é invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md).
 
-Há uma exceção para o parágrafo acima. Se *contagem* é **TRUNCATE**, em seguida, o que *strSource* como ajustará *strDest* é copiado e ainda deixar espaço para o encerrando nulo, que sempre é anexado.
+Há uma exceção para o parágrafo acima. Se *contagem* é **TRUNCATE**, então, a maioria dos *strSource* couber em *strDest* é copiado enquanto ainda deixa espaço para o terminação nula que sempre é acrescentada.
 
 Por exemplo,
 
@@ -195,7 +185,7 @@ char dst[5];
 strncpy_s(dst, 5, "a long string", 5);
 ```
 
-significa que estamos pedindo **strncpy_s** copiar cinco caracteres em um buffer de cinco bytes de comprimento; não deixando nenhum espaço para o terminador nulo, portanto, **strncpy_s** zeros fora a cadeia de caracteres e chama inválido manipulador de parâmetro.
+significa que estamos pedindo **strncpy_s** copiar cinco caracteres em um buffer de cinco bytes de comprimento; isso não deixaria nenhum espaço para o terminador nulo, portanto **strncpy_s** zera a cadeia de caracteres e chama o inválido manipulador de parâmetro.
 
 Se for necessário o comportamento de truncamento, use **TRUNCATE** ou (*tamanho* - 1):
 
@@ -204,13 +194,13 @@ strncpy_s(dst, 5, "a long string", _TRUNCATE);
 strncpy_s(dst, 5, "a long string", 4);
 ```
 
-Observe que, ao contrário de **strncpy**, se *contagem* é maior que o comprimento de *strSource*, a cadeia de caracteres de destino não está preenchida com caracteres nulos até o comprimento *contagem*.
+Observe que diferentemente **strncpy**, se *contagem* é maior que o comprimento da *strSource*, a cadeia de caracteres de destino não é preenchida com caracteres nulos até comprimento *contagem*.
 
-O comportamento de **strncpy_s** será indefinido se sobreponham as cadeias de caracteres de origem e de destino.
+O comportamento de **strncpy_s** é indefinido se as cadeias de caracteres de origem e de destino se sobrepõem.
 
-Se *strDest* ou *strSource* é **nulo**, ou *numberOfElements* for 0, o manipulador de parâmetro inválido é invocado. Se a execução é permitida para continuar, a função retorna **EINVAL** e define **errno** para **EINVAL**.
+Se *strDest* ou *strSource* está **nulo**, ou *numberOfElements* for 0, o manipulador de parâmetro inválido será invocado. Se a execução puder continuar, a função retornará **EINVAL** e define **errno** para **EINVAL**.
 
-**wcsncpy_s** e **_mbsncpy_s** são versões de caracteres largos e caracteres multibyte **strncpy_s**. O valor de retorno e argumentos **wcsncpy_s** e **mbsncpy_s** variam de acordo. Essas seis funções se comportam de forma idêntica.
+**wcsncpy_s** e **mbsncpy_s** são versões de caractere largo e caracteres multibyte **strncpy_s**. Os argumentos e o valor de retorno **wcsncpy_s** e **mbsncpy_s** variam de acordo. Essas seis funções se comportam de forma idêntica.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
@@ -226,7 +216,7 @@ As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD
 |**tcsncpy_s_l**|**_strncpy_s_l**|**_mbsnbcpy_s_l**|**_wcsncpy_s_l**|
 
 > [!NOTE]
-> **strncpy_s_l**, **wcsncpy_s_l** e **_mbsncpy_s_l** não ter nenhuma dependência de localidade e são fornecidos apenas para **tcsncpy_s_l** e não se destina a ser chamado diretamente.
+> **strncpy_s_l**, **wcsncpy_s_l** e **mbsncpy_s_l** não ter nenhuma dependência de localidade e são fornecidas apenas para **tcsncpy_s_l** e não pretende ser chamado diretamente.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -234,7 +224,7 @@ As versões de depuração dessas funções preenchem primeiro o buffer com 0xFD
 |-------------|---------------------|
 |**strncpy_s**, **strncpy_s_l**|\<string.h>|
 |**wcsncpy_s**, **wcsncpy_s_l**|\<string.h> ou \<wchar.h>|
-|**_mbsncpy_s**, **_mbsncpy_s_l**|\<mbstring.h>|
+|**mbsncpy_s**, **mbsncpy_s_l**|\<mbstring.h>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

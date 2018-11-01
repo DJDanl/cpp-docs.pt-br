@@ -1,12 +1,6 @@
 ---
-title: 'Exceções: Liberando objetos em exceções | Microsoft Docs'
-ms.custom: ''
+title: 'Exceções: liberando objetos em exceções'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - throwing exceptions [MFC], freeing objects in exceptions
 - local exception handling
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f0f7c9c28e438ad9d5cf643f005175512192be80
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6e03d46a2600458f3107efa6e0b6b0d643c9b160
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390755"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50442465"
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>Exceções: liberando objetos em exceções
 

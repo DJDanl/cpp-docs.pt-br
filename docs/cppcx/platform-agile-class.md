@@ -1,8 +1,6 @@
 ---
-title: 'Classe Platform:: Agile | Microsoft Docs'
-ms.custom: ''
+title: Classe Platform::Agile
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
@@ -11,21 +9,15 @@ f1_keywords:
 - AGILE/Platform::Platform::Agile::GetAddressOf
 - AGILE/Platform::Platform::Agile::GetAddressOfForInOut
 - AGILE/Platform::Platform::Agile::Release
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3745ead4fec8466df3f164c415b21d98f68c0ef7
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9350d94fdff615056fca193d654b2bb001d78d72
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109771"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471195"
 ---
 # <a name="platformagile-class"></a>Classe Platform::Agile
 
@@ -166,7 +158,7 @@ O endereço de um identificador para um objeto do tipo `T`.
 
 ### <a name="remarks"></a>Comentários
 
-Esta operação libera a representação atual de um objeto do tipo `T`, se houver; reinicializa membros de dados do objeto Agile; adquire o contexto de threading atual; e, em seguida, retorna o endereço de uma variável de objeto de identificador que pode representar um objeto não agile. Para fazer com que uma instância da classe Agile representar um objeto, use o operador de atribuição ([Agile:: Operator =](#operator-assign)) para atribuir o objeto para a instância da classe Agile.
+Esta operação libera a representação atual de um objeto do tipo `T`, se houver; reinicializa membros de dados do objeto Agile; adquire o contexto atual de threading; e retorna o endereço de uma variável de identificador para objeto que pode representar um objeto não Agile. Para fazer com que uma instância da classe Agile representar um objeto, use o operador de atribuição ([Agile:: Operator =](#operator-assign)) para atribuir o objeto para a instância da classe Agile.
 
 ## <a name="getaddressofforinout"></a>  Método Agile:: getaddressofforinout
 

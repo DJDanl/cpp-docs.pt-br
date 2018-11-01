@@ -1,10 +1,6 @@
 ---
-title: _strdup, _wcsdup, _mbsdup | Microsoft Docs
-ms.custom: ''
+title: _strdup, _wcsdup, _mbsdup
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdup
 - _mbsdup
@@ -30,8 +26,6 @@ f1_keywords:
 - _strdup
 - _ftcsdup
 - _wcsdup
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcsdup function
 - ftcsdup function
@@ -48,23 +42,19 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a88051cbf5ac32f51e18f6d3dd256b177b7044a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 094843fdb1432aa58ec04b3b4e39ac8861b928ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413506"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461510"
 ---
 # <a name="strdup-wcsdup-mbsdup"></a>_strdup, _wcsdup, _mbsdup
 
 Duplica cadeias de caracteres.
 
 > [!IMPORTANT]
-> **mbsdup** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, consulte [funções de CRT sem suporte em aplicativos de plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsdup** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, consulte [funções de CRT sem suporte em aplicativos da plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -91,9 +81,9 @@ Cada uma dessas funções retorna um ponteiro para o local de armazenamento para
 
 ## <a name="remarks"></a>Comentários
 
-O **strdup** chamadas de função [malloc](malloc.md) para alocar espaço de armazenamento para uma cópia de *strSource* e, em seguida, copia *strSource* para o o espaço alocado.
+O **strdup** chamadas de função [malloc](malloc.md) alocar espaço de armazenamento para uma cópia do *strSource* e, em seguida, copia *strSource* para o espaço alocado.
 
-**wcsdup** e **mbsdup** são versões de caracteres largos e caracteres multibyte **strdup**. O valor de retorno e argumentos **wcsdup** são caracteres largos cadeias de caracteres; desses **mbsdup** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
+**wcsdup** e **mbsdup** são versões de caractere largo e caracteres multibyte **strdup**. Os argumentos e o valor de retorno **wcsdup** são largos cadeias de caracteres; aqueles de **mbsdup** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -101,9 +91,9 @@ O **strdup** chamadas de função [malloc](malloc.md) para alocar espaço de arm
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**tcsdup**|**_strdup**|**_mbsdup**|**_wcsdup**|
 
-Porque **strdup** chamadas **malloc** para alocar espaço de armazenamento para a cópia do *strSource*, é recomendável sempre para liberar memória chamando o [livre](free.md) rotina no ponteiro retornado pela chamada para **strdup**.
+Porque **strdup** chamadas **malloc** alocar espaço de armazenamento para a cópia do *strSource*, é recomendável sempre liberar essa memória chamando o [livre](free.md) rotina no ponteiro retornado pela chamada para **strdup**.
 
-Se **Debug** e **crtdbg_map_alloc** são definidos, **strdup** e **wcsdup** são substituídos por chamadas para **strdup_dbg**  e **wcsdup_dbg** para permitir a depuração de alocações de memória. Para obter mais informações, consulte [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md).
+Se **Debug** e **crtdbg_map_alloc** estiverem definidos, **strdup** e **wcsdup** são substituídos por chamadas para **strdup_dbg**  e **wcsdup_dbg** para permitir a depuração de alocações de memória. Para obter mais informações, consulte [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md).
 
 ## <a name="requirements"></a>Requisitos
 

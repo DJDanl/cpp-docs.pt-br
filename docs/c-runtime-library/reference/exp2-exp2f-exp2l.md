@@ -1,11 +1,6 @@
 ---
-title: exp2, exp2f, exp2l | Microsoft Docs
-ms.custom: ''
+title: exp2, exp2f, exp2l
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - exp2
 - exp2f
@@ -30,27 +25,21 @@ f1_keywords:
 - math/exp2f
 - exp2l
 - math/exp2l
-dev_langs:
-- C++
 helpviewer_keywords:
 - exp2 function
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aea847d367200635c8fecbd694f8a50be859b3ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70a3b7eb610556d4a26de7cf0aad55affcdbdc94
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396716"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562754"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 
-Calcula 2 gerado para o valor especificado.
+Calcula o 2 gerado para o valor especificado.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -89,22 +78,22 @@ Se for bem-sucedido, retorna o expoente de base 2 de *x*, ou seja, 2<sup>x</sup>
 |-----------|------------|
 |*x* = ±0|1|
 |*x* = - infinito|+0|
-|*x* = + INFINITY|+INFINITY|
+|*x* = + infinito|+INFINITY|
 |*x* = NaN|NaN|
 |Erro de intervalo de estouro|+HUGE_VAL, +HUGE_VALF ou +HUGE_VALL|
-|Erro de intervalo de estouro negativo|Resultado correto, depois de arredondamento|
+|Erro de intervalo de estouro negativo|Resultado correto, após o arredondamento|
 
 Os erros são relatados conforme especificado em [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **exp2** que levar e retornar **float** e **long double** tipos. Em um programa C, **exp2** sempre usa e retorna um **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **exp2** que usam e retornam **float** e **longo duplo** tipos. Em um programa do C **exp2** sempre usa e retorna um **duplo**.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho C|Cabeçalho C++|
 |-------------|--------------|------------------|
-|**EXP**, **expf**, **sol**|\<math.h>|\<cmath>|
+|**EXP**, **expf**, **expl**|\<math.h>|\<cmath>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

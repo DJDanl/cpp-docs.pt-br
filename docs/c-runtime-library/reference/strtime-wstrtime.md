@@ -1,10 +1,6 @@
 ---
-title: _strtime, _wstrtime | Microsoft Docs
-ms.custom: ''
+title: _strtime, _wstrtime
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wstrtime
 - _strtime
@@ -27,8 +23,6 @@ f1_keywords:
 - wstrtime
 - strtime
 - _tstrtime
-dev_langs:
-- C++
 helpviewer_keywords:
 - strtime function
 - _strtime function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b0ca776394b47f5209fbf034cbb10461c220634
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 9d874321418854a703886eb80ee23ac1cba57fa4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450778"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431106"
 ---
 # <a name="strtime-wstrtime"></a>_strtime, _wstrtime
 
@@ -84,9 +74,9 @@ Retorna um ponteiro para a cadeia de caracteres resultante *timestr*.
 
 ## <a name="remarks"></a>Comentários
 
-O **strtime** função copia a hora local atual para o buffer apontado pelo *timestr*. A hora é formatada como **hh** onde **hh** são dois dígitos que representa a hora na notação de 24 horas, **mm** são dois dígitos que representa os minutos após a hora e **ss** são dois dígitos que representa segundos. Por exemplo, a cadeia de caracteres **18:23:44** representa 23 minutos e 44 segundos após 6 horas O tamanho do buffer deve ser de, ao menos, 9 bytes.
+O **strtime** função copia a hora local atual para o buffer apontado por *timestr*. A hora é formatada como **hh** onde **hh** são dois dígitos que representa a hora na notação de 24 horas **mm** são dois dígitos que representa os minutos após a hora e os **ss** são dois dígitos que representam os segundos. Por exemplo, a cadeia de caracteres **18:23:44** representa 23 minutos e 44 segundos após 6 horas. O tamanho do buffer deve ser de, ao menos, 9 bytes.
 
-**wstrtime** é uma versão de caractere largo de **strtime**; o valor de retorno e de argumento de **wstrtime** são cadeias de caracteres do caractere largo. Caso contrário, essas funções se comportam de forma idêntica. Se *timestr* é um **nulo** ponteiro ou se *timestr* está formatado incorretamente, inválido manipulador de parâmetro é chamado, conforme descrito em [parâmetro Validação](../../c-runtime-library/parameter-validation.md). Se a exceção é permitida para continuar, essas funções retornam uma **nulo** e defina **errno** para **EINVAL** se *timestr* foi um **Nulo** ou defina **errno** para **ERANGE** se *timestr* está formatado incorretamente.
+**wstrtime** é uma versão de caractere largo de **strtime**; o argumento e o valor retornado de **wstrtime** são cadeias de caracteres largos. Caso contrário, essas funções se comportam de forma idêntica. Se *timestr* é um **nulo** ponteiro ou se *timestr* está formatado incorretamente, o inválido manipulador de parâmetro é invocado, conforme descrito em [parâmetro Validação](../../c-runtime-library/parameter-validation.md). Se a exceção tiver permissão para continuar, essas funções retornarão uma **nulo** e defina **errno** para **EINVAL** se *timestr* foi um **Nulo** ou definir **errno** para **ERANGE** se *timestr* está formatado incorretamente.
 
 No C++, essas funções têm sobrecargas de modelo que invocam os equivalentes mais novos e seguros dessas funções. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

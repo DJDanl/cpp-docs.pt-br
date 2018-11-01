@@ -1,23 +1,13 @@
 ---
-title: Valores de retorno (C++) | Microsoft Docs
-ms.custom: ''
+title: Valores de retorno (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 53583524-b337-4228-a9c6-c9bf516babe8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 673853417ad3dd5f08171ea2d5b55df5440705ad
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 047058a18597384a3da47d1c22874c7a297f1a48
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714630"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463560"
 ---
 # <a name="return-values-c"></a>Valores de retorno (C++)
 

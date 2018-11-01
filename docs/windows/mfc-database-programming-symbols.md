@@ -1,28 +1,17 @@
 ---
-title: Símbolos de programação de banco de dados do MFC | Microsoft Docs
-ms.custom: ''
+title: Símbolos de programação do banco de dados MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC database programming symbols
 - symbols [C++], MFC
 - databases [C++], MFC programming model
 ms.assetid: 3f676a2c-cf07-415e-a336-680abdc42a5e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: dfdec25349afcd9b582952f2c907cd573e366a35
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 2be9838ebcffc01b0e558dbcf21370585b9b9422
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50059617"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50501252"
 ---
 # <a name="mfc-database-programming-symbols"></a>Símbolos de programação do banco de dados MFC
 

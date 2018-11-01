@@ -1,10 +1,6 @@
 ---
-title: _ismbbblank, _ismbbblank_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbblank, _ismbbblank_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbblank_l
 - _ismbbblank
@@ -21,19 +17,13 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 apitype: DLLExport
-dev_langs:
-- C++
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4d2849eca58c7fa3d7fc8250ab3bad0d346e4a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c6709d5a5870c44d200b704e4a34043ff9c37226
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399479"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646258"
 ---
 # <a name="ismbbblank-ismbbblankl"></a>_ismbbblank, _ismbbblank_l
 
@@ -64,7 +54,7 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**_ismbbblank** retorna um valor diferente de zero se *c* representa um caractere de espaço (0x20), um caractere de tabulação horizontal (0x09) ou um caractere específico de localidade que é usado para separar palavras em uma linha de texto para o qual **isspace** for true; caso contrário, retornará 0. **_ismbbblank** usa a localidade atual para qualquer comportamento dependente de localidade. **_ismbbblank_l** é idêntico, exceto que ele em vez disso, usa a localidade que é transmitida. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**_ismbbblank** retorna um valor diferente de zero se *c* representa um caractere de espaço (0x20), um caractere de tabulação horizontal (0x09) ou um caractere específico de localidade que é usado para separar palavras em uma linha de texto para o qual **isspace** for true; caso contrário, retornará 0. **_ismbbblank** usa a localidade atual para qualquer comportamento dependente da localidade. **_ismbbblank_l** é idêntico, exceto que em vez disso, ele usa a localidade que é passada. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

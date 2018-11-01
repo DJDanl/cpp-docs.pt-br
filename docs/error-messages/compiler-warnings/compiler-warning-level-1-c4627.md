@@ -1,27 +1,17 @@
 ---
-title: Compilador aviso (nível 1) C4627 | Microsoft Docs
-ms.custom: ''
+title: Compilador aviso (nível 1) C4627
 ms.date: 09/09/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4627
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4627
 ms.assetid: 8840f3e6-b496-423a-8635-eb55d5f854a2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fef8d0ab55205d2377fc52049c40a1c50151b93e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e833141020de1aef51a1ea3823dea86b024e077d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024171"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50542383"
 ---
 # <a name="compiler-warning-level-1-c4627"></a>Compilador aviso (nível 1) C4627
 
