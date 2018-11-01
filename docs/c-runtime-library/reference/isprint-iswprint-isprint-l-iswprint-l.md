@@ -1,10 +1,6 @@
 ---
-title: isprint, iswprint, _isprint_l, _iswprint_l | Microsoft Docs
-ms.custom: ''
+title: isprint, iswprint, _isprint_l, _iswprint_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswprint
 - isprint
@@ -27,8 +23,6 @@ f1_keywords:
 - iswprint
 - _istprint
 - isprint
-dev_langs:
-- C++
 helpviewer_keywords:
 - _istprint function
 - iswprint function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - iswprint_l function
 - _isprint_l function
 ms.assetid: a8bbcdb0-e8d0-4d8c-ae4e-56d3bdee6ca3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: af7cd775c22d4d34d7a6512938a0f612c3708940
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 826bc825824054a5a6716f8074690f18a2c3f016
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401510"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556397"
 ---
 # <a name="isprint-iswprint-isprintl-iswprintl"></a>isprint, iswprint, _isprint_l, _iswprint_l
 
@@ -83,11 +73,11 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada essas rotinas retornará zero se *c* é uma representação específica de um caractere imprimível. **isprint** retorna um valor diferente de zero se *c* é um caractere imprimível — isso inclui o caractere de espaço (0x20 - 0x7E). **iswprint** retorna um valor diferente de zero se *c* é um caractere largo imprimível — isso inclui o espaço de caractere largo. Cada uma dessas rotinas retornará 0 se *c* não satisfaz a condição de teste.
+Cada uma dessas rotinas retornará diferente de zero se *c* é uma representação específica de um caractere imprimível. **isprint** retorna um valor diferente de zero se *c* for um caractere imprimível — isso inclui o caractere de espaço (0x20 – 0x7E). **iswprint** retorna um valor diferente de zero se *c* é um caractere largo imprimível — isso inclui o caractere largo de espaço. Cada uma dessas rotinas retornará 0 se *c* não satisfaz a condição de teste.
 
-O resultado da condição de teste para essas funções depende de **LC_CTYPE** configuração de categoria da localidade, consulte [setlocale, wsetlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções que não têm o **_l** o uso de sufixo a localidade atual para qualquer comportamento dependente de localidade; as versões que têm o **_l** sufixo são idênticas, exceto que eles usam o localidade que é transmitida em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+O resultado da condição de teste para essas funções depende de **LC_CTYPE** configuração da categoria da localidade; consulte [setlocale, wsetlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções que não têm o **l** sufixo usam a localidade atual para qualquer comportamento dependente da localidade; as versões que têm o **l** sufixo são idênticas, exceto que eles usam o localidade que é passada em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-O comportamento de **isprint** e **isprint_l** será indefinido se *c* não é EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca de depuração CRT é usada e *c* não é uma desses valores, o aumento de funções uma asserção.
+O comportamento de **isprint** e **isprint_l** é indefinido se *c* não for EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca de depuração CRT é usada e *c* é não um desses valores, as funções geram uma asserção.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

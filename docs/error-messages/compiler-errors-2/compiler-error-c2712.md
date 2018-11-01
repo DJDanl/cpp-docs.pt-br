@@ -1,49 +1,39 @@
 ---
-title: C2712 de erro do compilador | Microsoft Docs
-ms.custom: ''
+title: Erro do compilador C2712
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2712
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2712
 ms.assetid: f7d4ffcc-7ed2-459b-8067-a728ce647071
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 27db5f8ae3fd56078a3085c8d216e7dd34edb2fc
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 19b9c5a54bf405114bd4d596c2a2cc4708aadcc9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704250"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507898"
 ---
-# <a name="compiler-error-c2712"></a>C2712 de erro do compilador
+# <a name="compiler-error-c2712"></a>Erro do compilador C2712
 
 > não é possível usar try em funções que exigem a liberação de objeto
 
 ## <a name="remarks"></a>Comentários
 
-C2712 de erro pode ocorrer se você usar [/EHsc](../../build/reference/eh-exception-handling-model.md), e uma função com tratamento de exceções estruturado também tiver objetos que exigem o desenrolamento (destruição).
+C2712 de erro pode ocorrer se você usar [/EHsc](../../build/reference/eh-exception-handling-model.md), e uma função com tratamento de exceções estruturado também tem os objetos que exigem o desenrolamento (destruição).
 
 Soluções possíveis:
 
-- Mova o código que requer SEH para outra função
+- Mover o código que requer o SEH para outra função
 
-- Reescreva funções que usam SEH para evitar o uso de variáveis locais e parâmetros que têm destruidores. Não use SEH em construtores ou destrutores
+- Reescreva funções que usam o SEH para evitar o uso de variáveis locais e parâmetros que têm destruidores. Não use SEH em construtores ou destruidores
 
 - Compilar sem /EHsc
 
-C2712 erro também poderá ocorrer se você chamar um método declarado usando a [Event](../../cpp/event.md) palavra-chave. Como o evento pode ser usado em um ambiente multithreaded, o compilador gera o código que impede a manipulação do objeto de evento subjacente e, em seguida, inclui o código gerado em um SEH [instrução try-finally](../../cpp/try-finally-statement.md). Consequentemente, o erro C2712 ocorrerá se você chamar o método de evento e passa por valor de um argumento cujo tipo tenha um destruidor. Nesse caso, uma solução é passar o argumento como uma referência constante.
+Erro C2712 também pode ocorrer se você chamar um método declarado usando a [Event](../../cpp/event.md) palavra-chave. Como o evento pode ser usado em um ambiente multithreaded, o compilador gera código que impede que a manipulação do objeto de evento subjacente e, em seguida, inclui o código gerado em um SEH [instrução try-finally](../../cpp/try-finally-statement.md). Consequentemente, o erro C2712 ocorrerá se você chamar o método de evento e passa por valor de um argumento cujo tipo tem um destruidor. Nesse caso, uma solução é passar o argumento como uma referência constante.
 
-C2712 também pode ocorrer se você compilar com **/clr: pure** e declarar uma matriz estática de ponteiros para funções em um `__try` bloco. Um membro estático requer que o compilador para usar a inicialização dinâmica em **/clr: pure**, que implica que o tratamento de exceções C++. No entanto, o tratamento de exceções C++ não é permitido em um `__try` bloco.
+C2712 também pode ocorrer se você compilar com **/clr: pure** e declarar uma matriz estática de ponteiros para funções em um `__try` bloco. Um membro estático exige que o compilador para usar inicialização dinâmica sob **/clr: pure**, que significa que o tratamento de exceções C++. No entanto, o tratamento de exceções C++ não é permitido em um `__try` bloco.
 
-O **/clr: pure** e **/CLR: safe** opções do compilador são substituídas no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
 ## <a name="example"></a>Exemplo
 

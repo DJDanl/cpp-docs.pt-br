@@ -1,10 +1,6 @@
 ---
-title: _set_se_translator | Microsoft Docs
-ms.custom: ''
+title: _set_se_translator
 ms.date: 02/21/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_se_translator
 apilocation:
@@ -22,27 +18,21 @@ apitype: DLLExport
 f1_keywords:
 - _set_se_translator
 - set_se_translator
-dev_langs:
-- C++
 helpviewer_keywords:
 - set_se_translator function
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8d4a5c9e86023ea47f23b648cad1a4dffedf905b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6435b5bfa2f1f238ae608e68d97d356af7fb03dd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411514"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521139"
 ---
 # <a name="setsetranslator"></a>_set_se_translator
 
-Defina uma função de retorno de chamada por thread para traduzir Win32 exceções (C estruturado de exceções) em C++ digitado exceções.
+Defina uma função de retorno de chamada por thread para converter exceções do Win32 (exceções C estruturadas) em C++ digitado exceções.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -59,29 +49,29 @@ Ponteiro para uma função conversora de exceção estruturada de C que você es
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna um ponteiro para a função anterior do conversor registrado por **set_se_translator**, de modo que a função anterior pode ser restaurada posteriormente. Se nenhuma função anterior tiver sido definida, o valor de retorno pode ser usado para restaurar o comportamento padrão; Esse valor pode ser **nullptr**.
+Retorna um ponteiro para a função conversora anterior registrado por **set_se_translator**, de modo que a função anterior possa ser restaurada posteriormente. Se nenhuma função anterior tiver sido definida, o valor de retorno pode ser usado para restaurar o comportamento padrão; Esse valor pode ser **nullptr**.
 
 ## <a name="remarks"></a>Comentários
 
-O **set_se_translator** função fornece uma maneira de lidar com exceções Win32 (C estruturado de exceções) como C++ digitado exceções. Para permitir que cada exceção C a ser manipulada por um C++ **catch** manipulador, primeiro defina uma classe de invólucro de exceção de C que pode ser usada ou derivada de um tipo de classe específica de atributo a uma exceção de C. Para usar essa classe, instale uma função personalizada de conversão da exceção de C, chamada pelo mecanismo interno de manipulação de exceção sempre que uma exceção de C é gerada. Dentro de sua função de conversor, você pode lançar qualquer exceção tipada que pode ser capturada por uma correspondência C++ **catch** manipulador.
+O **set_se_translator** função fornece uma maneira de lidar com exceções do Win32 (exceções C estruturadas) como C++ exceções. Para permitir que cada exceção de C a serem manipuladas por um C++ **catch** manipulador, primeiro defina uma classe de wrapper de exceção de C que pode ser usada ou derivada, para atribuir um tipo de classe específico a uma exceção de C. Para usar essa classe, instale uma função personalizada de conversão da exceção de C, chamada pelo mecanismo interno de manipulação de exceção sempre que uma exceção de C é gerada. Dentro de sua função translator, você pode gerar qualquer exceção tipada que pode ser capturada por um C++ correspondente **catch** manipulador.
 
 Você deve usar [/EHa](../../build/reference/eh-exception-handling-model.md) ao usar **set_se_translator**.
 
-Para especificar uma função de conversão personalizado, chame **set_se_translator** usando o nome da sua função de conversão como seu argumento. A função de conversor que você escreve é chamada uma vez para cada invocação de função na pilha que tem **tente** blocos. Não há nenhuma função conversora padrão.
+Para especificar uma função personalizada de tradução, chame **set_se_translator** usando o nome da sua função de conversão como seu argumento. A função de tradução que você escreve é chamada uma vez para cada invocação de função na pilha que tem **tente** blocos. Não há nenhuma função conversora padrão.
 
 Sua função conversora não deve fazer nada além de gerar uma exceção tipada C++. Se ela fizer qualquer coisa além de gerar (como gravar em um arquivo de log, por exemplo), seu programa poderá não se comportar conforme o esperado, pois o número de vezes que a função conversora é invocada depende da plataforma.
 
-Em um ambiente multithreaded, funções de conversão são mantidas separadamente para cada thread. Cada novo thread precisa instalar sua própria função conversora. Portanto, cada thread é responsável pela sua própria manipulação de encerramento. **set_se_translator** é específico para um thread; outro DLL pode instalar uma função de conversão diferentes.
+Em um ambiente multithreaded, funções de conversão são mantidas separadamente para cada thread. Cada novo thread precisa instalar sua própria função conversora. Portanto, cada thread é responsável pela sua própria manipulação de encerramento. **set_se_translator** é específico para um thread; outra DLL pode instalar uma função de conversão diferentes.
 
-O *seTransFunction* função que você escreve deve ser uma função nativo compilado (não compilada com /clr). Ele deve executar um inteiro não assinado e um ponteiro para um Win32 **exception_pointers** estrutura como argumentos. Os argumentos são os valores de retorno de chamadas à API do Win32 **GetExceptionCode** e **GetExceptionInformation** funções, respectivamente.
+O *seTransFunction* função que você escreve deve ser uma função nativo compilado (não compilada com /clr). Ele deve levar um inteiro sem sinal e um ponteiro para um Win32 **exception_pointers** estrutura como argumentos. Os argumentos são os valores de retorno de chamadas à API do Win32 **GetExceptionCode** e **GetExceptionInformation** funções, respectivamente.
 
 ```cpp
 typedef void (__cdecl *_se_translator_function)(unsigned int, struct _EXCEPTION_POINTERS* );
 ```
 
-Para **set_se_translator**, existem implicações quando vinculando dinamicamente a CRT; outro DLL no processo pode chamar **set_se_translator** e substitua o manipulador com seu próprio.
+Para **set_se_translator**, há implicações ao vincular dinamicamente ao CRT; outra DLL no processo pode chamar **set_se_translator** e substituir o manipulador com seu próprio.
 
-Ao usar **set_se_translator** de código gerenciado (código compilado com /CLR.) ou misto código nativo e gerenciado, esteja ciente de que o tradutor afeta exceções geradas no somente código nativo. Exceções gerenciadas geradas em código gerenciado (por exemplo, ao gerar `System::Exception`) não são roteadas por meio da função conversora. Exceções geradas no código gerenciado usando a função Win32 **RaiseException** ou causado por uma exceção de sistema como uma divisão por zero exceção são roteadas através do conversor.
+Ao usar **set_se_translator** do código gerenciado (código compilado com /clr) ou misto de código gerenciado e nativo, esteja ciente de que a conversora afeta as exceções geradas em código nativo somente. Exceções gerenciadas geradas em código gerenciado (por exemplo, ao gerar `System::Exception`) não são roteadas por meio da função conversora. As exceções geradas em código gerenciado usando a função Win32 **RaiseException** ou causado por uma exceção do sistema como uma divisão por zero exceção são roteadas por meio da conversora.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -154,7 +144,7 @@ Caught a __try exception, error c0000094.
 
 ## <a name="example"></a>Exemplo
 
-Embora a funcionalidade fornecida pelo **set_se_translator** é não está disponível em código gerenciado, é possível usar esse mapeamento de código nativo, mesmo que o código nativo está em uma compilação no **/clr** Alternar, desde que o código nativo é indicado usando `#pragma unmanaged`. Se uma exceção estruturada está sendo lançada em código gerenciado que deve ser mapeado, o código que gera e manipula a exceção deve ser marcado `#pragma unmanaged`. O código a seguir mostra um uso possível. Para obter mais informações, consulte [Diretivas Pragma e a palavra-chave __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+Embora a funcionalidade fornecida pela **set_se_translator** é não está disponível no código gerenciado, é possível usar esse mapeamento em código nativo, mesmo que o código nativo está em uma compilação na **/clr** Alternar, desde que o código nativo seja indicado usando `#pragma unmanaged`. Se uma exceção estruturada está sendo lançada em código gerenciado que deve ser mapeado, o código que gera e manipula a exceção deve ser marcado `#pragma unmanaged`. O código a seguir mostra um uso possível. Para obter mais informações, consulte [Diretivas Pragma e a palavra-chave __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
 ```cpp
 // crt_set_se_translator_clr.cpp

@@ -1,29 +1,19 @@
 ---
-title: Referência da função alfabética UCRT | Microsoft Docs
-ms.custom: ''
+title: Referência da função alfabética UCRT
 ms.date: 04/11/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - vc.tables.runtime
-dev_langs:
-- C++
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e5b6d73219bed94268ee3a9b8854d28d1fc6c06
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8c16b0f3eeb21bc9ad665bffee9fac15607f21f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405452"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520452"
 ---
 # <a name="ucrt-alphabetical-function-reference"></a>Referência da função alfabética UCRT
 
-A documentação de referência de biblioteca C Runtime Universal (UCRT, CRT geralmente apenas) é organizada em ordem alfabética por rotina. Para localizar uma rotina de CRT baseada na funcionalidade, consulte [C Universal rotinas de tempo de execução por categoria](../../c-runtime-library/run-time-routines-by-category.md).
+A documentação de referência da biblioteca C Runtime Universal (UCRT, com frequência simplesmente CRT) é organizada em ordem alfabética por rotina. Para localizar uma rotina CRT com base na funcionalidade, consulte [rotinas de tempo de execução C universais por categoria](../../c-runtime-library/run-time-routines-by-category.md).
 
 ## <a name="a"></a>Um
 
