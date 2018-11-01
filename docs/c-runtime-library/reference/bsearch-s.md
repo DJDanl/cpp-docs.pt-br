@@ -1,10 +1,6 @@
 ---
-title: bsearch_s | Microsoft Docs
-ms.custom: ''
+title: bsearch_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - bsearch_s
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - bsearch_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c2600b77031967bec5d5dd549a7dd8f34fc5c5e3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd621c1dae2cae847bbbf032dec7e6972c526203
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400610"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430830"
 ---
 # <a name="bsearchs"></a>bsearch_s
 
@@ -64,29 +54,29 @@ O objeto a ser pesquisado.
 *base*<br/>
 Ponteiro para a base de dados de pesquisa.
 
-*Número*<br/>
+*número*<br/>
 Número de elementos.
 
 *width*<br/>
 Largura de elementos.
 
 *compare*<br/>
-Função de retorno de chamada que compara dois elementos. O primeiro argumento é o *contexto* ponteiro. O segundo argumento é um ponteiro para o *chave* para a pesquisa. O terceiro argumento é um ponteiro para o elemento de matriz a ser comparada com *chave*.
+Função de retorno de chamada que compara dois elementos. O primeiro argumento é o *contexto* ponteiro. O segundo argumento é um ponteiro para o *chave* para a pesquisa. O terceiro argumento é um ponteiro para o elemento da matriz a ser comparado com *chave*.
 
 *context*<br/>
 Um ponteiro para um objeto que pode ser acessado na função de comparação.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**bsearch_s** retorna um ponteiro para uma ocorrência de *chave* na matriz apontada pelo *base*. Se *chave* não for encontrado, a função retorna **nulo**. Se a matriz não estiver em ordem de classificação crescente ou contiver registros duplicados com chaves idênticas, o resultado será imprevisível.
+**bsearch_s** retorna um ponteiro para uma ocorrência de *chave* na matriz apontada por *base*. Se *chave* não for encontrado, a função retorna **nulo**. Se a matriz não estiver em ordem de classificação crescente ou contiver registros duplicados com chaves idênticas, o resultado será imprevisível.
 
-Se parâmetros inválidos forem passados para a função, o manipulador de parâmetro inválido será invocado conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e a função retorna **nulo**. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Se parâmetros inválidos forem passados para a função, o manipulador de parâmetro inválido será invocado conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e a função retornará **nulo**. Para obter mais informações, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ### <a name="error-conditions"></a>Condições de Erro
 
 |||||||
 |-|-|-|-|-|-|
-|*key*|*base*|*compare*|*Número*|*width*|**errno**|
+|*key*|*base*|*compare*|*número*|*width*|**errno**|
 |**NULL**|qualquer|qualquer|qualquer|qualquer|**EINVAL**|
 |qualquer|**NULL**|qualquer|!= 0|qualquer|**EINVAL**|
 |qualquer|qualquer|qualquer|qualquer|= 0|**EINVAL**|
@@ -94,7 +84,7 @@ Se parâmetros inválidos forem passados para a função, o manipulador de parâ
 
 ## <a name="remarks"></a>Comentários
 
-O **bsearch_s** função executa uma pesquisa binária de uma matriz classificada de *número* elementos, cada um dos *largura* bytes de tamanho. O *base* valor é um ponteiro para a base da matriz a ser pesquisada, e *chave* é o valor que está sendo procurado. O *comparar* parâmetro é um ponteiro para uma rotina fornecido pelo usuário que compara a chave solicitada para um elemento de matriz e retorna um dos valores a seguir, especificando sua relação:
+O **bsearch_s** função executa uma pesquisa binária de uma matriz classificada de *número* elementos, cada um dos *largura* bytes de tamanho. O *base* valor é um ponteiro para a base da matriz a ser pesquisada, e *chave* é o valor que está sendo procurado. O *comparar* parâmetro é um ponteiro para uma rotina fornecida pelo usuário que compara a chave solicitada para um elemento de matriz e retorna um dos valores a seguir especifica seu relacionamento:
 
 |Valor retornado por *comparar* rotina|Descrição|
 |-----------------------------------------|-----------------|
@@ -102,7 +92,7 @@ O **bsearch_s** função executa uma pesquisa binária de uma matriz classificad
 |0|A chave é igual ao elemento da matriz.|
 |> 0|A chave é maior que o elemento da matriz.|
 
-O *contexto* ponteiro pode ser útil se a estrutura de dados pesquisada é parte de um objeto e a função de comparação precisa acessar membros do objeto. O *comparar* função pode lançar o ponteiro nulo em membros de tipo e o acesso a objeto apropriado do objeto. A adição do *contexto* parâmetro torna **bsearch_s** mais segura, pois um contexto adicional pode ser usado para evitar bugs reentrada associados ao uso de variáveis estáticas para tornar dados disponíveis para o *comparar* função.
+O *contexto* ponteiro pode ser útil se a estrutura de dados pesquisada for parte de um objeto e a função compare precisar acessar membros do objeto. O *comparar* função pode converter o ponteiro de void no objeto apropriado que o tipo e acessar membros desse objeto. A adição do *contexto* parâmetro torna **bsearch_s** mais seguro, pois o contexto adicional pode ser usado para evitar bugs de reentrância associados ao uso de variáveis estáticas para disponibilizar dados para o *comparar* função.
 
 ## <a name="requirements"></a>Requisitos
 

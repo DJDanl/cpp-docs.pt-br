@@ -1,10 +1,6 @@
 ---
-title: _finite, _finitef | Microsoft Docs
-ms.custom: ''
+title: _finite, _finitef
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _finite
 - _finitef
@@ -28,23 +24,17 @@ f1_keywords:
 - math/_finite
 - math/_finitef
 - float/_finite
-dev_langs:
-- C++
 helpviewer_keywords:
 - finite function
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3367f13e68aa85e53d9f5f0ee83521ef465d3996
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b1bce6f1b2da77ed9de255f49dd8d0160e33e31
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396635"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431639"
 ---
 # <a name="finite-finitef"></a>_finite, _finitef
 
@@ -69,11 +59,11 @@ O valor de ponto flutuante a ser testado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Ambos **Finitas** e **_finitef** retornar um valor diferente de zero se o argumento *x* é finita; o que é, se -INF < *x* < + INF. Ele retorna 0 se o argumento for infinito ou um NAN.
+Ambos **Finitas** e **_finitef** retornam um valor diferente de zero se o argumento *x* é finito; ou seja, se – INF < *x* < + INF. Ele retorna 0 se o argumento for infinito ou um NAN.
 
 ## <a name="remarks"></a>Comentários
 
-O **Finitas** e **_finitef** funções são específicas da Microsoft. O **_finitef** função só está disponível quando compilado para x86, ARM e ARM64 plataformas.
+O **Finitas** e **_finitef** funções são específicas da Microsoft. O **_finitef** função só está disponível quando compilada para x86, ARM ou ARM64 plataformas.
 
 ## <a name="requirements"></a>Requisitos
 

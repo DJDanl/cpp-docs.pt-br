@@ -1,20 +1,13 @@
 ---
-title: DLLs (C + + c++ /CX) | Microsoft Docs
-ms.custom: ''
+title: DLLs (C++/CX)
 ms.date: 02/06/2018
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1ac06336e5ba80406157285ebe660080aff6e319
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1a72ecc5eb46abfbc7b9a52a168510ce0873ee04
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763627"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445702"
 ---
 # <a name="dlls-ccx"></a>DLLs (C++/CX)
 
@@ -24,7 +17,7 @@ Você pode usar o Visual Studio para criar uma DLL Win32 padrão ou um DLL que p
 
 Em quase todos os casos, quando você deseja criar uma DLL para usar em um aplicativo UWP, criá-lo como um componente de tempo de execução do Windows usando o modelo de projeto, esse nome. Você pode criar um projeto de componente de tempo de execução do Windows para DLLs que tenham tipos de tempo de execução do Windows públicos ou privados. Um componente de tempo de execução do Windows pode ser acessado em aplicativos que são escritos em qualquer linguagem compatível com o Windows Runtime. Por padrão, as configurações do compilador para um componente de tempo de execução do Windows projeto use a **/ZW** alternar. Um arquivo .winmd deve ter o mesmo nome do namespace raiz. Por exemplo, uma classe denominada A.B.C.MyClass poderá ser instanciada somente se for definida em um arquivo de metadados denominado A.winmd ou A.B.winmd ou A.B.C.winmd. O nome da DLL não precisa coincidir com o nome do arquivo .winmd.
 
-Para obter mais informações, consulte [Criando componentes do tempo de execução do Windows em C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+Para obter mais informações, consulte [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 ### <a name="to-reference-a-third-party-windows-runtime-component-binary-in-your-project"></a>Para fazer referência a um componente de tempo de execução do Windows de terceiros binário no seu projeto
 

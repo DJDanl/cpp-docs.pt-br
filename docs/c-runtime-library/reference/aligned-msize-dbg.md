@@ -1,10 +1,6 @@
 ---
-title: _aligned_msize_dbg | Microsoft Docs
-ms.custom: ''
+title: _aligned_msize_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _aligned_msize_dbg
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _aligned_msize_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _aligned_msize_dbg
 ms.assetid: f1c44af0-3f66-4033-81d1-d71d3afecba0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c16fd1292f78c8c3f6b3133050e27046fb003343
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 054f7b88f93eef37a9a88fbb7895452f7c158716
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392868"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451292"
 ---
 # <a name="alignedmsizedbg"></a>_aligned_msize_dbg
 
@@ -68,11 +58,11 @@ Retorna o tamanho (em bytes) como um inteiro sem sinal.
 
 ## <a name="remarks"></a>Comentários
 
-O *alinhamento* e *deslocamento* valores devem ser o mesmo que os valores passados para a função que é alocada do bloco.
+O *alinhamento* e *deslocamento* valores devem ser o mesmo que os valores passados para a função que alocou o bloco.
 
-**_aligned_msize_dbg** é uma versão de depuração de [aligned_msize](aligned-msize.md) função. Quando [Debug](../../c-runtime-library/debug.md) não está definida, cada chamada para **_aligned_msize_dbg** é reduzido para uma chamada para **aligned_msize**. Ambos **aligned_msize** e **_aligned_msize_dbg** calcular o tamanho de um bloco de memória no heap de base, mas **_aligned_msize_dbg** adiciona um recurso de depuração: inclui bloqueiam os buffers em ambos os lados da parte do usuário da memória no tamanho retornado.
+**aligned_msize_dbg** é uma versão de depuração de [aligned_msize](aligned-msize.md) função. Quando [Debug](../../c-runtime-library/debug.md) não estiver definido, cada chamada para **aligned_msize_dbg** é reduzida a uma chamada para **aligned_msize**. Ambos **aligned_msize** e **aligned_msize_dbg** calcular o tamanho de um bloco de memória no heap de base, mas **aligned_msize_dbg** adiciona um recurso de depuração: ele inclui bloqueiam os buffers nos dois lados da parte do usuário da memória no tamanho retornado.
 
-Esta função valida seu parâmetro. Se *memblock* é um ponteiro nulo ou *alinhamento* não é uma potência de 2, **msize** invoca um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro ](../../c-runtime-library/parameter-validation.md). Se o erro é tratado, define a função **errno** para **EINVAL** e retorna -1.
+Esta função valida seu parâmetro. Se *memblock* for um ponteiro nulo ou *alinhamento* não for uma potência de 2 **msize** invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro ](../../c-runtime-library/parameter-validation.md). Se o erro for tratado, a função definirá **errno** à **EINVAL** e retornará -1.
 
 Para obter informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap de base, consulte [Detalhes do heap de depuração CRT](/visualstudio/debugger/crt-debug-heap-details). Para obter informações sobre os tipos de blocos de alocação e como eles são usados, consulte [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details) (Tipos de blocos no heap de depuração). Para obter informações sobre as diferenças entre chamar uma função de heap padrão e sua versão de depuração em um build de depuração de um aplicativo, consulte [Versões de depuração das funções de alocação de heap](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 

@@ -1,27 +1,17 @@
 ---
-title: 'Como: Adicionar comando de controle de formulários do roteamento para o Windows | Microsoft Docs'
+title: Como adicionar roteamento de comando ao controle dos Windows Forms
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - command routing [C++], adding to Windows Forms controls
 - Windows Forms controls [C++], command routing
 ms.assetid: bf138ece-b463-442a-b0a0-de7063a760c0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 2af0148c386bc3b1ea8db60fdf84d080c38af857
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: b3f93574e007fdb1b7d4009d85c573223091adf9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50080683"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447106"
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Como adicionar roteamento de comando ao controle dos Windows Forms
 

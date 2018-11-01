@@ -1,10 +1,6 @@
 ---
-title: _ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l | Microsoft Docs
-ms.custom: ''
+title: _ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbclower
 - _ismbclower_l
@@ -26,8 +22,6 @@ apitype: DLLExport
 f1_keywords:
 - _ismbcupper
 - _ismbclower
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbcupper function
 - ismbclower function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - ismbclower_l function
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4ef7b21cc10ca5e72a5054e34b0e228be89d74cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29a1e97f4583808931e5228a6905aed7c0a62702
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402228"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431857"
 ---
 # <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 
@@ -85,20 +75,20 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste ou 0 se não satisfizer. Se *c*< = 255 e há um correspondente **ismbb** rotina (por exemplo, **ismbcalnum** corresponde à **ismbbalnum**), o resultado é o valor de retorno do **ismbb** rotina.
+Cada uma dessas rotinas retornará um valor diferente de zero se o caractere satisfizer a condição de teste ou 0 se não satisfizer. Se *c*< = 255 e houver um correspondente **ismbb** rotina (por exemplo, **ismbcalnum** corresponde ao **ismbbalnum**), o resultado é o valor retornado de correspondente **ismbb** rotina.
 
 ## <a name="remarks"></a>Comentários
 
 Cada uma dessas funções testa um determinado caractere multibyte quanto a uma determinada condição.
 
-As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam a localidade passada em vez da localidade atual para o seu comportamento dependente de localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam a localidade passada em vez da localidade atual para seu comportamento dependente da localidade. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 |Rotina|Condição de teste|Exemplo da página de código 932|
 |-------------|--------------------|---------------------------|
-|**_ismbclower**|Alfabético minúsculo|Retorna zero se e somente se *c* é uma representação de byte único de uma letra minúscula de em inglês ASCII: 0x61 < =*c*< = 0x7A.|
-|**_ismbclower_l**|Alfabético minúsculo|Retorna zero se e somente se *c* é uma representação de byte único de uma letra minúscula de em inglês ASCII: 0x61 < =*c*< = 0x7A.|
-|**_ismbcupper**|Alfabético maiúsculo|Retorna zero se e somente se *c* é uma representação de byte único de ASCII em inglês letra maiuscula: 0x41 < =*c*< = 0x5A.|
-|**_ismbcupper_l**|Alfabético maiúsculo|Retorna zero se e somente se *c* é uma representação de byte único de ASCII em inglês letra maiuscula: 0x41 < =*c*< = 0x5A.|
+|**_ismbclower**|Alfabético minúsculo|Retorna diferente de zero se e somente se *c* é uma representação de byte único de uma letra ASCII minúsculos em inglês: 0x61< < =*c*< = 0x7A.|
+|**_ismbclower_l**|Alfabético minúsculo|Retorna diferente de zero se e somente se *c* é uma representação de byte único de uma letra ASCII minúsculos em inglês: 0x61< < =*c*< = 0x7A.|
+|**_ismbcupper**|Alfabético maiúsculo|Retorna diferente de zero se e somente se *c* é uma representação de byte único de uma letra ASCII em maiusculas em inglês: 0x41&lt < =*c*< lt;=0x5a.|
+|**_ismbcupper_l**|Alfabético maiúsculo|Retorna diferente de zero se e somente se *c* é uma representação de byte único de uma letra ASCII em maiusculas em inglês: 0x41&lt < =*c*< lt;=0x5a.|
 
 ## <a name="requirements"></a>Requisitos
 

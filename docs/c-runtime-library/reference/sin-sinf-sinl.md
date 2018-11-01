@@ -1,10 +1,6 @@
 ---
-title: sin, sinf, sinl | Microsoft Docs
-ms.custom: ''
+title: sin, sinf, sinl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sinl
 - sinf
@@ -27,8 +23,6 @@ f1_keywords:
 - sinf
 - sinl
 - sin
-dev_langs:
-- C++
 helpviewer_keywords:
 - _sinl function
 - sinl function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f99e7792e177c6203d38a368f3dd4125fe848a76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407571"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430356"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
@@ -72,7 +62,7 @@ long double sin(long double x);  // C++ only
 
 ## <a name="return-value"></a>Valor retornado
 
-O **sin** funções retornam o seno de *x*. Se *x* é maior que ou igual a 263 ou menor que ou igual a -263, ocorre uma perda de significância no resultado.
+O **sin** funções retornam o seno *x*. Se *x* é maior que ou igual a 263 ou menor que ou igual a -263, ocorre uma perda de significância no resultado.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
@@ -83,7 +73,7 @@ Para obter mais informações sobre os códigos de retorno, consulte [errno, _do
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **sin** que levar e retornar **float** ou **longo** **duplo** valores. Em um programa C, **sin** sempre usa e retorna **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **sin** que usam e retornam **float** ou **longo** **double** valores. Em um programa do C **sin** sempre usa e retorna **duplo**.
 
 ## <a name="requirements"></a>Requisitos
 
