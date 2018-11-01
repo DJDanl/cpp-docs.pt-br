@@ -1,27 +1,17 @@
 ---
-title: 'Passo a passo: Criar um aplicativo tradicional de área de trabalho do Windows (C++) | Microsoft Docs'
+title: 'Passo a passo: Criar um aplicativo tradicional de área de trabalho do Windows (C++)'
 ms.custom: get-started-article
 ms.date: 09/18/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0b50234efa193adda081520667658f57e42de1b4
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: fc2080470e3292a459325679a6c5dc00c01d6b35
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235407"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528369"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Passo a passo: Criar um aplicativo tradicional de área de trabalho do Windows (C++)
 

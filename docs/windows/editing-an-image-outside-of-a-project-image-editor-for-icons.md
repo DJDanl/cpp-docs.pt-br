@@ -1,27 +1,16 @@
 ---
-title: Editando uma imagem fora de um projeto (Editor de imagens para ícones) | Microsoft Docs
-ms.custom: ''
+title: Editando uma imagem fora de um projeto (editor de imagens para ícones)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], editing images
 - images [C++], editing
 ms.assetid: ac297b51-95c2-4512-a07f-b5d1596fc61e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2cabf76b4d98fc1732fdc2761b89774164595116
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 46f8d8a934887e11fff389aed3b1043fadb1e055
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419380"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511131"
 ---
 # <a name="editing-an-image-outside-of-a-project-image-editor-for-icons"></a>Editando uma imagem fora de um projeto (editor de imagens para ícones)
 

@@ -1,11 +1,6 @@
 ---
-title: trunc, truncf, truncl | Microsoft Docs
-ms.custom: ''
+title: trunc, truncf, truncl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - trunc
 - truncf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/trunc
 - math/truncf
 - math/truncl
-dev_langs:
-- C++
 helpviewer_keywords:
 - trunc function
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 67c179065a6b2c6fc10a4ba6ba87868c8306a2aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6e023b9d894ea1b40a0e056e73b7c32f1e3cbed7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409453"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519854"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc, truncf, truncl
 
@@ -72,7 +61,7 @@ O valor a ser truncado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, retorna um valor inteiro de *x*, arredondado em direção a zero.
+Se for bem-sucedido, retornará um valor inteiro *x*, arredondado em direção a zero.
 
 Caso contrário, pode retornar um dos seguintes:
 
@@ -86,7 +75,7 @@ Os erros são relatados conforme especificado em [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **trunc** que levar e retornar **float** e **longo** **duplo** tipos. Em um programa C, **trunc** sempre usa e retorna um **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **trunc** que usam e retornam **float** e **longo** **double** tipos. Em um programa do C **trunc** sempre usa e retorna um **duplo**.
 
 Como os maiores valores de ponto flutuantes são inteiros exatos, essa função não estourará por conta própria. No entanto, você pode causar o estouro, retornando um valor para um tipo inteiro.
 
