@@ -1,10 +1,6 @@
 ---
-title: _commit | Microsoft Docs
-ms.custom: ''
+title: _commit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _commit
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _commit
 - commit
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], flushing
 - flushing files to disk
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3e9bc746c347bfb60fb78edbf025b676f8218c66
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8408158cb3d4ef0d29d9af24d8a2acbd28e00192
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394825"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523061"
 ---
 # <a name="commit"></a>_commit
 
@@ -62,13 +52,13 @@ Descritor de arquivo que se refere ao arquivo aberto.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**Commit** retornará 0 se o arquivo com êxito foi liberado para disco. Um valor de retorno de -1 indica um erro.
+**Confirmar** retornará 0 se o arquivo tiver sido liberados no disco. Um valor de retorno de -1 indica um erro.
 
 ## <a name="remarks"></a>Comentários
 
-O **Commit** função força o sistema operacional para gravar o arquivo associado *fd* no disco. Essa chamada garante que o arquivo especificado seja liberado imediatamente, não a critério do sistema operacional.
+O **confirmar** função força o sistema operacional para gravar o arquivo associado *fd* no disco. Essa chamada garante que o arquivo especificado seja liberado imediatamente, não a critério do sistema operacional.
 
-Se *fd* é um descritor de arquivo inválido, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, a função retornará -1 e **errno** é definido como **EBADF**.
+Se *fd* for um descritor de arquivo inválido, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará -1 e **errno** é definido como **EBADF**.
 
 ## <a name="requirements"></a>Requisitos
 

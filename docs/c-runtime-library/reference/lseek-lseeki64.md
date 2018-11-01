@@ -1,10 +1,6 @@
 ---
-title: _lseek, _lseeki64 | Microsoft Docs
-ms.custom: ''
+title: _lseek, _lseeki64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lseeki64
 - _lseek
@@ -25,8 +21,6 @@ f1_keywords:
 - _lseeki64
 - _lseek
 - lseeki64
-dev_langs:
-- C++
 helpviewer_keywords:
 - lseek function
 - _lseek function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb47214ac2de3c3e217bf41387ba206b94caf906
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 19a312bcc3cdeea82bcebce6da95e26ef88992b0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403372"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541681"
 ---
 # <a name="lseek-lseeki64"></a>_lseek, _lseeki64
 
@@ -78,13 +68,13 @@ Posição inicial.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**lseek** retorna o deslocamento, em bytes, da nova posição desde o início do arquivo. **lseeki64** retorna o deslocamento em um inteiro de 64 bits. A função retorna L-1 para indicar um erro. Se um parâmetro inválido for passado, como um descritor de arquivo incorreto, o valor de *origem* será inválido ou a posição especificada por *deslocamento* será anterior ao início do arquivo e o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções definido **errno** para **EBADF** e retorna-1 L. Em dispositivos incapazes de fazer buscas (como terminais e impressoras), o valor retornado será indefinido.
+**lseek** retorna o deslocamento, em bytes, da nova posição desde o início do arquivo. **_lseeki64** retorna o deslocamento em um inteiro de 64 bits. A função retorna-1l para indicar um erro. Se um parâmetro inválido for passado, como um descritor de arquivo incorreto, o valor de *origem* será inválido ou a posição especificada por *deslocamento* será anterior ao início do arquivo e o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EBADF** e retornarão-1l. Em dispositivos incapazes de fazer buscas (como terminais e impressoras), o valor retornado será indefinido.
 
 Para obter mais informações sobre esses e outros códigos de erro, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **lseek** função move o ponteiro de arquivo associado ao *fd* para um novo local é *deslocamento* bytes do *origem*. A operação seguinte no arquivo ocorre no novo local. O argumento de *origem* deve ser uma das constantes a seguir, definidas em Stdio.h.
+O **lseek** função move o ponteiro de arquivo associado *fd* para um novo local é *deslocamento* bytes do *origem*. A operação seguinte no arquivo ocorre no novo local. O argumento de *origem* deve ser uma das constantes a seguir, definidas em Stdio.h.
 
 |*origem* valor||
 |-|-|
@@ -92,7 +82,7 @@ O **lseek** função move o ponteiro de arquivo associado ao *fd* para um novo l
 **SEEK_CUR**|Posição atual do ponteiro de arquivo.
 **SEEK_END**|Final do arquivo.
 
-Você pode usar **lseek** para reposicionar o ponteiro em qualquer lugar em um arquivo ou além do fim do arquivo.
+Você pode usar **lseek** para reposicionar o ponteiro em qualquer lugar em um arquivo ou após o fim do arquivo.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,10 +1,6 @@
 ---
-title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l | Microsoft Docs
-ms.custom: ''
+title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _atoldbl
 - _atoldbl_l
@@ -38,8 +34,6 @@ f1_keywords:
 - atoflt
 - atoldbl_l
 - _atodbl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _atodbl function
 - _atoldbl_l function
@@ -55,20 +49,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da36dfae81f33f5fb30a1a4bc93a57437980d720
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb8d711dc8dfa912333f34603ad607f0a74143bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393583"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552029"
 ---
 # <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 
-Converte uma cadeia de caracteres para um duplo (**atodbl**), long double (**atoldbl**), ou float (**atoflt**).
+Converte uma cadeia de caracteres em um duplo (**atodbl**), duplo longo (**atoldbl**), ou float (**atoflt**).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -94,15 +84,15 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna 0 se for bem-sucedido. Possíveis códigos de erro são **underflow** ou **overflow**, que é definido no arquivo de cabeçalho \<math.h >.
+Retorna 0 se for bem-sucedido. Códigos de erro possíveis são **underflow** ou **overflow**, que é definido no arquivo de cabeçalho \<Math. h >.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções convertem uma cadeia de caracteres em um valor de ponto flutuante. A diferença entre essas funções e o **atof** família de funções é que essas funções não gerar o código de ponto flutuante e não causam exceções de hardware. Em vez disso, condições de erro são relatadas como códigos de erro.
+Essas funções convertem uma cadeia de caracteres em um valor de ponto flutuante. A diferença entre essas funções e o **atof** família de funções é que essas funções não geram código de ponto flutuante e não causam exceções de hardware. Em vez disso, condições de erro são relatadas como códigos de erro.
 
-Se uma cadeia de caracteres não tiver uma interpretação válida como um valor de ponto flutuante, *valor* é definido como zero e o retorno de valor é zero.
+Se uma cadeia de caracteres não tiver uma interpretação válida como um valor de ponto flutuante *valor* é definido como zero e o retorno de valor é zero.
 
-As versões dessas funções que têm o **_l** sufixo são idênticas as versões que não têm o sufixo, exceto que eles usam o *localidade* parâmetro passado em vez do thread atual localidade.
+As versões dessas funções que têm o **l** sufixo são idênticas as versões que não têm o sufixo, exceto pelo fato de que usam o *localidade* parâmetro que é passado em vez do thread atual localidade.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,10 +1,6 @@
 ---
-title: getenv_s, _wgetenv_s | Microsoft Docs
-ms.custom: ''
+title: getenv_s, _wgetenv_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - getenv_s
 - _wgetenv_s
@@ -25,8 +21,6 @@ f1_keywords:
 - getenv_s
 - _tgetenv_s
 - _wgetenv_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tgetenv_s function
 - wgetenv_s function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - environment variables
 - tgetenv_s function
 ms.assetid: c3ae1ffe-d4cd-4bae-bcb1-3afa754c613a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 144c8d1d05d40f17e37f337902bbd2ee2cf15458
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eac3c036e2f4f271c7bc2d77c8ae82bec28d3617
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405160"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546504"
 ---
 # <a name="getenvs-wgetenvs"></a>getenv_s, _wgetenv_s
 
@@ -108,27 +98,27 @@ Zero se for bem-sucedido; caso contrário, um código de erro em caso de falha.
 |qualquer|**NULL**|>0|qualquer|**EINVAL**|
 |qualquer|qualquer|qualquer|**NULL**|**EINVAL**|
 
-Qualquer uma dessas condições de erro invoca um manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, as funções de conjunto **errno** para **EINVAL** e retornar **EINVAL**.
+Qualquer uma dessas condições de erro invoca um manipulador de parâmetro inválido, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções definem **errno** à **EINVAL** e retornar **EINVAL**.
 
-Além disso, se o buffer é muito pequeno, essas funções retornam **ERANGE**. Elas não invocam um manipulador de parâmetro inválido. Gravar o tamanho do buffer necessário em *pReturnValue*e assim habilitar programas chamar a função novamente com um buffer maior.
+Além disso, se o buffer for muito pequeno, essas funções retornarão **ERANGE**. Elas não invocam um manipulador de parâmetro inválido. O tamanho do buffer em que eles gravam *pReturnValue*e, portanto, habilitam programas a chamarem a função novamente com um buffer maior.
 
 ## <a name="remarks"></a>Comentários
 
-O **getenv_s** função pesquisa a lista de variáveis de ambiente para *varname*. **getenv_s** não diferencia maiusculas de minúsculas no sistema operacional Windows. **getenv_s** e [putenv_s](putenv-s-wputenv-s.md) usar a cópia do ambiente que é apontada pela variável global **Environ** acessem o ambiente. **getenv_s** opera somente em estruturas de dados que são acessíveis para a biblioteca de tempo de execução e não no ambiente "segmento" que é criado para o processo pelo sistema operacional. Portanto, programas que usam o *envp* argumento [principal](../../cpp/main-program-startup.md) ou [wmain](../../cpp/main-program-startup.md) pode recuperar informações inválidas.
+O **getenv_s** função pesquisa a lista de variáveis de ambiente para *varname*. **getenv_s** não diferencia maiusculas de minúsculas no sistema operacional Windows. **getenv_s** e [putenv_s](putenv-s-wputenv-s.md) usar a cópia do ambiente apontado pela variável global **Environ** para acessar o ambiente. **getenv_s** funciona somente nas estruturas de dados que são acessíveis para a biblioteca de tempo de execução e não no ambiente de "segmento" que é criado para o processo pelo sistema operacional. Portanto, programas que usam o *envp* argumento [principal](../../cpp/main-program-startup.md) ou [wmain](../../cpp/main-program-startup.md) podem recuperar informações inválidas.
 
-**wgetenv_s** é uma versão de caractere largo de **getenv_s**; o valor de retorno e de argumento de **wgetenv_s** são cadeias de caracteres do caractere largo. O **wenviron** variável global é uma versão de caractere largo de **Environ**.
+**wgetenv_s** é uma versão de caractere largo de **getenv_s**; o argumento e o valor retornado de **wgetenv_s** são cadeias de caracteres largos. O **wenviron** variável global é uma versão de caractere largo de **Environ**.
 
-Em um programa MBCS (por exemplo, em um programa de ASCII SBCS) **wenviron** é inicialmente **nulo** porque o ambiente é composto de cadeias de caracteres multibyte. Em seguida, na primeira chamada para [wputenv](putenv-wputenv.md), ou na primeira chamada para **wgetenv_s**, se já existir um ambiente (MBCS), um ambiente de cadeia de caracteres largos correspondente é criado e, em seguida, é apontado pelo **wenviron**.
+Em um programa MBCS (por exemplo, em um programa ASCII SBCS), **wenviron** é inicialmente **nulo** porque o ambiente é composto de cadeias de caracteres multibyte. Em seguida, na primeira chamada para [wputenv](putenv-wputenv.md), ou na primeira chamada para **wgetenv_s**, se um ambiente (MBCS) já existir, um ambiente de cadeia de caracteres largos correspondente é criado e, em seguida, é apontado pelo **wenviron**.
 
-Da mesma forma em Unicode (**_wmain**) programa, **Environ** é inicialmente **nulo** porque o ambiente é composto de cadeias de caracteres largos. Em seguida, na primeira chamada para [putenv](putenv-wputenv.md), ou na primeira chamada para **getenv_s** se já existir um ambiente (Unicode), um ambiente de MBCS correspondente é criado e, em seguida, é apontado pelo **_ ambiente**.
+Da mesma forma em Unicode (**_wmain**), programa de **Environ** é inicialmente **nulo** porque o ambiente é composto de cadeias de caracteres largos. Em seguida, na primeira chamada para [putenv](putenv-wputenv.md), ou na primeira chamada para **getenv_s** se já existir um ambiente (Unicode), um ambiente MBCS correspondente será criado e, em seguida, é apontado pelo **_ Environ**.
 
-Quando duas cópias do ambiente (MBCS e Unicode) existirem simultaneamente em um programa, o sistema de tempo de execução deverá manter as duas cópias e isso faz com que o tempo de execução fique mais lento. Por exemplo, quando você chama **putenv**, uma chamada para **wputenv** também é executado automaticamente para que as cadeias de caracteres de dois ambiente correspondem.
+Quando duas cópias do ambiente (MBCS e Unicode) existirem simultaneamente em um programa, o sistema de tempo de execução deverá manter as duas cópias e isso faz com que o tempo de execução fique mais lento. Por exemplo, quando você chama **putenv**, uma chamada para **wputenv** também é executada automaticamente para que as cadeias de caracteres de dois ambiente correspondam.
 
 > [!CAUTION]
 > Em casos raros, quando o sistema de tempo de execução mantém uma versão Unicode e uma versão multibyte do ambiente, as duas versões de ambiente podem não corresponder exatamente. Isso acontece porque, embora qualquer cadeia de caracteres multibyte exclusiva seja mapeada para uma cadeia de caracteres Unicode exclusiva, o mapeamento de uma cadeia de caracteres Unicode exclusiva para uma cadeia de caracteres multibyte não é necessariamente exclusivo. Para obter mais informações, consulte [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).
 
 > [!NOTE]
-> O **putenv_s** e **_getenv_s** famílias de funções não são thread-safe. **_getenv_s** poderia retornar um ponteiro de cadeia de caracteres ao **putenv_s** está modificando a cadeia de caracteres e, assim, causar falhas aleatórias. As chamadas para essas funções devem estar sincronizadas.
+> O **putenv_s** e **_getenv_s** famílias de funções não são thread-safe. **_getenv_s** poderia retornar um ponteiro de cadeia de caracteres enquanto **putenv_s** está modificando a cadeia de caracteres e, portanto, causar falhas aleatórias. As chamadas para essas funções devem estar sincronizadas.
 
 No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sobrecargas podem inferir o tamanho do buffer automaticamente, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
@@ -138,7 +128,7 @@ No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sob
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**tgetenv_s**|**getenv_s**|**getenv_s**|**_wgetenv_s**|
 
-Para verificar ou alterar o valor de **TZ** uso de variável de ambiente **getenv_s**, **putenv**, e **tzset**, conforme necessário. Para obter mais informações sobre **TZ**, consulte [tzset](tzset.md) e [Daylight, dstbias, TimeZone e tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
+Para verificar ou alterar o valor de **TZ** ambiente variável, use **getenv_s**, **putenv**, e **tzset**, conforme necessário. Para obter mais informações sobre **TZ**, consulte [tzset](tzset.md) e [Daylight, dstbias, TimeZone e tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
 
 ## <a name="requirements"></a>Requisitos
 

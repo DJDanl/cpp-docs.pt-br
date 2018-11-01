@@ -1,10 +1,6 @@
 ---
-title: wcrtomb_s | Microsoft Docs
-ms.custom: ''
+title: wcrtomb_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcrtomb_s
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wcrtomb_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wide characters, converting
 - wcrtomb_s function
 - multibyte characters
 - characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a035010c2af49c0d12b4b7f1d6429c66ba9032cc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7fe7fba861eecec562928cf381973f62a4db60fb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415602"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522454"
 ---
 # <a name="wcrtombs"></a>wcrtomb_s
 
@@ -83,21 +73,21 @@ Um ponteiro para um **mbstate_t** objeto.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna zero ou um **errno** valor se ocorrer um erro.
+Retorna zero ou um **errno** se ocorrer um erro de valor.
 
 ## <a name="remarks"></a>Comentários
 
-O **wcrtomb_s** função converte um caractere largo, a partir do estado de conversão especificado contido no *mbstate*, do valor contido na *wchar*, para o endereço representado por *mbchar*. O *pReturnValue* valor será o número de bytes convertidos, mas não mais de **MB_CUR_MAX** bytes, ou um -1 se ocorreu um erro.
+O **wcrtomb_s** função converte um caractere largo, a partir do estado da conversão especificado contido na *mbstate*, do valor contido no *wchar*, para o endereço representado por *mbchar*. O *pReturnValue* valor será o número de bytes convertidos, mas não mais de **MB_CUR_MAX** bytes ou – 1 em caso de erro.
 
-Se *mbstate* for nulo, o interno **mbstate_t** conversão estado é usado. Se o caractere contido no *wchar* não tem um caractere multibyte correspondente, o valor de *pReturnValue* será -1 e a função retornará o **errno** valor de **EILSEQ**.
+Se *mbstate* for nulo, a interna **mbstate_t** estado da conversão é usado. Se o caractere contido em *wchar* não tem um caractere multibyte correspondente, o valor de *pReturnValue* será -1 e a função retornará o **errno** valor de **EILSEQ**.
 
-O **wcrtomb_s** função difere da [wctomb_s, wctomb_s_l](wctomb-s-wctomb-s-l.md) por sua capacidade de reinicialização. O estado de conversão é armazenado em *mbstate* para chamadas subsequentes para o mesmo ou outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis. Por exemplo, um aplicativo usaria **wcsrlen** em vez de **wcslen**, se uma chamada subsequente para **wcsrtombs_s** foram usadas em vez de **wcstombs_s**.
+O **wcrtomb_s** função difere [wctomb_s, wctomb_s_l](wctomb-s-wctomb-s-l.md) por sua capacidade de reinicialização. O estado de conversão é armazenado em *mbstate* para chamadas posteriores às mesmas funções ou outras funções reiniciáveis. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis. Por exemplo, um aplicativo usaria **wcsrlen** vez **wcslen**, se uma chamada subsequente para **wcsrtombs_s** foram usadas em vez de **wcstombs_s**.
 
 Em C++, o uso dessa função é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Exceções
 
-O **wcrtomb_s** função é safe multithread desde que nenhuma função no thread atual chama **setlocale** enquanto essa função está em execução e o *mbstate* é nulo.
+O **wcrtomb_s** função será multithread-safe contanto que nenhuma função no thread atual chame **setlocale** enquanto essa função está em execução e o *mbstate* é nulo.
 
 ## <a name="example"></a>Exemplo
 
