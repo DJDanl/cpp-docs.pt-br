@@ -1,27 +1,17 @@
 ---
-title: Criando um controle DHTML da ATL | Microsoft Docs
-ms.custom: ''
+title: Criando um controle DHTML da ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - HTML controls, creating
 - DHTML controls
 - DHTML controls, creating
 ms.assetid: 1d8f0ede-7d8b-4959-976e-b4d0e2a87f5a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d22d3daa5f44021dcfd228b2928ef866e1d38dc
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: ca6641587512926c74349cc3acd91109a6174509
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860986"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480074"
 ---
 # <a name="creating-an-atl-dhtml-control"></a>Criando um controle DHTML da ATL
 

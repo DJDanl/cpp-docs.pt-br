@@ -1,10 +1,6 @@
 ---
-title: fputs, fputws | Microsoft Docs
-ms.custom: ''
+title: fputs, fputws
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fputs
 - fputws
@@ -25,8 +21,6 @@ f1_keywords:
 - fputs
 - fputws
 - _fputts
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, writing strings to
 - fputws function
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - fputs function
 - fputts function
 ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 94a8a872d88d42b2e76c5171b1adb22900b66436
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3f7c7cff3300ae28717062a41aebd9e19c0cb5e0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400171"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574844"
 ---
 # <a name="fputs-fputws"></a>fputs, fputws
 
@@ -67,18 +57,18 @@ int fputws(
 *str*<br/>
 Cadeia de caracteres de saída.
 
-*Fluxo*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retornará um valor não negativo se for bem-sucedida. Em um erro, **fputs** e **fputws** retornar **EOF**. Se *str* ou *fluxo* é um ponteiro nulo, essas funções invocam o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL** e **fputs** retorna **EOF**, e  **fputws** retorna **WEOF**.
+Cada uma dessas funções retornará um valor não negativo se for bem-sucedida. Em um erro **fputs** e **fputws** retornar **EOF**. Se *str* ou *fluxo* é um ponteiro nulo, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e, em seguida, **fputs** retorna **EOF**, e  **fputws** retorna **WEOF**.
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções cópias *str* para a saída *fluxo* na posição atual. **fputws** copia o argumento de caractere largo *str* para *fluxo* como uma cadeia de caracteres multibyte ou uma cadeia de caracteres de todo o acordo com se *fluxo*é aberto no modo de texto ou binário, respectivamente. Nenhuma função copia o caractere nulo de terminação.
+Cada uma dessas funções cópias *str* à saída *fluxo* na posição atual. **fputws** copia o argumento de caractere largo *str* à *fluxo* como uma cadeia de caracteres multibyte ou uma cadeia de caracteres largos dependendo *fluxo*é aberto no modo de texto ou binário, respectivamente. Nenhuma função copia o caractere nulo de terminação.
 
 As duas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. **fputs** não oferece suporte a saída em um fluxo UNICODE.
 
@@ -95,7 +85,7 @@ As duas funções terão comportamento idêntico se o fluxo for aberto no modo A
 |**fputs**|\<stdio.h>|
 |**fputws**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos do Windows UWP (plataforma Universal). Os identificadores de fluxo padrão que estão associados com o console —**stdin**, **stdout**, e **stderr**— deverá ser redirecionado para funções de tempo de execução C podem usá-los em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console —**stdin**, **stdout**, e **stderr**— deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

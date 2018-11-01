@@ -1,10 +1,6 @@
 ---
-title: __max | Microsoft Docs
-ms.custom: ''
+title: __max
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __max
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - max
 - __max
-dev_langs:
-- C++
 helpviewer_keywords:
 - max macro
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d223f4288ccf40646e8f560cec7243b7e8f9f649
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 32e1207ea4bb030ac5303de32c0566f98e0596a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398413"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613753"
 ---
 # <a name="max"></a>__max
 
@@ -52,7 +42,7 @@ Uma macro de pré-processador que retorna o maior dos dois valores.
 
 ### <a name="parameters"></a>Parâmetros
 
-*um*, *b*<br/>
+*uma*, *b*<br/>
 Valores de qualquer tipo numérico a serem comparados.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -61,9 +51,9 @@ Valores de qualquer tipo numérico a serem comparados.
 
 ## <a name="remarks"></a>Comentários
 
-O **max** macro compara dois valores e retorna o valor de um maior. Os argumentos podem ser de qualquer tipo de dados numérico, com ou sem sinal. Os argumentos e o valor retornado devem ser do mesmo tipo de dados.
+O **max** macro compara dois valores e retorna o valor do maior. Os argumentos podem ser de qualquer tipo de dados numérico, com ou sem sinal. Os argumentos e o valor retornado devem ser do mesmo tipo de dados.
 
-O argumento retornado é avaliado duas vezes pela macro. Isso pode levar a resultados inesperados se o argumento é uma expressão que altera seu valor quando ele é avaliado, como `*p++`.
+O argumento retornado é avaliado duas vezes, a macro. Isso pode levar a resultados inesperados se o argumento for uma expressão que altera seu valor quando ele é avaliado, tais como `*p++`.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,10 +1,6 @@
 ---
-title: _fpreset | Microsoft Docs
-ms.custom: ''
+title: _fpreset
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fpreset
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _fpreset
 - fpreset
-dev_langs:
-- C++
 helpviewer_keywords:
 - fpreset function
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8b550df3e43b56038ae6d1b2d6695c86d90c3499
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b3ea4289cd0ff031fd2828e3c4183911459297c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398888"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592602"
 ---
 # <a name="fpreset"></a>_fpreset
 
@@ -53,9 +43,9 @@ void _fpreset( void );
 
 ## <a name="remarks"></a>Comentários
 
-O **fpreset** função reinicializa o pacote de matemática de ponto flutuante. **fpreset** normalmente é usado com **sinal**, **sistema**, ou o **EXEC** ou **spawn** funções. Se um programa intercepta sinais de erro de ponto flutuante (**SIGFPE**) com **sinal**, ele pode recuperar de erros de ponto flutuantes com segurança invocando **fpreset** e usando **longjmp**.
+O **fpreset** função reinicializa o pacote de matemática de ponto flutuante. **fpreset** normalmente é usado com **sinal**, **sistema**, ou o **EXEC** ou **spawn** funções. Se um programa interceptar sinais de erro de ponto flutuante (**SIGFPE**) com **sinal**, ele pode recuperar com segurança erros de ponto flutuante invocando **fpreset** e usando **longjmp**.
 
-Esta função é substituída durante a compilação com [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) porque o common language runtime suporta apenas a precisão de ponto flutuante padrão.
+Essa função foi preterida ao compilar com [/clr (compilação de tempo de execução de linguagem comum)](../../build/reference/clr-common-language-runtime-compilation.md) porque o common language runtime dá suporte apenas a precisão de ponto flutuante padrão.
 
 ## <a name="requirements"></a>Requisitos
 

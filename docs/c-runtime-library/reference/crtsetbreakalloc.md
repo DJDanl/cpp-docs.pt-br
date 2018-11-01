@@ -1,10 +1,6 @@
 ---
-title: _CrtSetBreakAlloc | Microsoft Docs
-ms.custom: ''
+title: _CrtSetBreakAlloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetBreakAlloc
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtSetBreakAlloc
 - _CrtSetBreakAlloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetBreakAlloc function
 - _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32e8fedcd70d0e901c63cd5e794773451f436326
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbc4b0de553533dde95f37675b3c9234569e3505
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395429"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487822"
 ---
 # <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
 
@@ -62,9 +52,9 @@ Retorna o número da ordem de alocação do objeto anterior que continha um pont
 
 ## <a name="remarks"></a>Comentários
 
-**Crtsetbreakalloc** permite que um aplicativo executar detecção de vazamento de memória por quebra em um momento específico de alocação de memória e o rastreamento de volta para a origem da solicitação. A função usa o número da ordem de alocação do objeto sequencial atribuído ao bloco de memória quando ele foi alocado no heap. Quando [Debug](../../c-runtime-library/debug.md) não está definido, chamadas para **crtsetbreakalloc** são removidos durante o pré-processamento.
+**Crtsetbreakalloc** permite que um aplicativo executar a detecção de vazamento de memória interrompendo em um ponto específico da alocação de memória e rastreando de volta para a origem da solicitação. A função usa o número da ordem de alocação do objeto sequencial atribuído ao bloco de memória quando ele foi alocado no heap. Quando [Debug](../../c-runtime-library/debug.md) não está definido, as chamadas a **crtsetbreakalloc** são removidas durante o pré-processamento.
 
-O número de ordem de alocação do objeto é armazenado no campo *lRequest* da estrutura **_CrtMemBlockHeader**, definida em Crtdbg.h. Quando as informações sobre um bloco de memória são relatadas por uma das funções de despejo de depuração, esse número fica entre chaves, como {36}.
+O número de ordem de alocação do objeto é armazenado no campo *lRequest* da estrutura **_CrtMemBlockHeader**, definida em Crtdbg.h. Quando as informações sobre um bloco de memória são relatadas por uma das funções de despejo de depuração, esse número é colocado entre chaves, como {36}.
 
 Para obter mais informações sobre como **crtsetbreakalloc** pode ser usado com outras funções de gerenciamento de memória, consulte [Controlando solicitações de alocação de Heap](/visualstudio/debugger/crt-debug-heap-details). Para obter mais informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap base, consulte [Detalhes do heap de depuração do CRT](/visualstudio/debugger/crt-debug-heap-details).
 

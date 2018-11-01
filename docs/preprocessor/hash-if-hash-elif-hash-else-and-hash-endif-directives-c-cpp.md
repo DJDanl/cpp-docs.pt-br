@@ -1,10 +1,6 @@
 ---
-title: '#Se, #elif, #else e # #endif (C/C++) | Microsoft Docs'
-ms.custom: ''
+title: '#Se, #elif, #else e # #endif (C/C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - '#else'
 - '#endif'
@@ -12,8 +8,6 @@ f1_keywords:
 - '#elif'
 - defined
 - __has_include
-dev_langs:
-- C++
 helpviewer_keywords:
 - '#elif directive'
 - conditional compilation, directives
@@ -27,16 +21,12 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8dcacaab21ca763a9ce45a9ab6eb503cd6fc7b74
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 76b8be265145896105490a82946c50bc576e6f9f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753835"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520409"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>Diretivas #if, #elif, #else e #endif (C/C++)
 
@@ -51,16 +41,16 @@ O **#if** diretiva, com o **#elif**, **#else**, e **#endif** diretivas de compil
 &nbsp;&nbsp;&nbsp;&nbsp;*texto if-line*
 
 *if-line* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if***expressão constante* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef***identificador* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef***identificador* 
+&nbsp;&nbsp;&nbsp;&nbsp;**#if***expressão constante*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef***identificador*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef***identificador*
 
 *elif partes* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*texto de linha elif*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*texto de linha elif partes elif*
 
 *linha elif* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif***expressão constante* 
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif***expressão constante*
 
 *outra parte* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*texto Else-line*

@@ -1,10 +1,6 @@
 ---
-title: _atoi64, _atoi64_l, _wtoi64, _wtoi64_l | Microsoft Docs
-ms.custom: ''
+title: _atoi64, _atoi64_l, _wtoi64, _wtoi64_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _atoi64_l
 - _wtoi64
@@ -35,8 +31,6 @@ f1_keywords:
 - wtoi64_l
 - _atoi64_l
 - atoi64_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tstoi64 function
 - wtoi64 function
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fbb0f49edcba73bdf2b7e83d6495573cc2cc0567
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c80480be8895db6afe499d5426b91dcde786d654
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396671"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50515473"
 ---
 # <a name="atoi64-atoi64l-wtoi64-wtoi64l"></a>_atoi64, _atoi64_l, _wtoi64, _wtoi64_l
 
@@ -96,11 +86,11 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada função retorna o **Int64** valor produzido por interpretar os caracteres de entrada como um número. O valor de retorno é 0 para **atoi64** se a entrada não pode ser convertida para um valor desse tipo.
+Cada função retorna o **__int64** valor produzido Interpretando os caracteres de entrada como um número. O valor de retorno é 0 para **_atoi64** se a entrada não pode ser convertida em um valor desse tipo.
 
-No caso de estouro com grandes valores positivos integrais, **atoi64** retorna **I64_MAX** e **I64_MIN** no caso de estouro com grandes valores negativos de integrais.
+No caso de estouro com grandes valores inteiros positivos **_atoi64** retorna **I64_MAX** e **I64_MIN** no caso de estouro com grandes valores inteiros negativos.
 
-Em todos os casos de fora do intervalo, **errno** é definido como **ERANGE**. Se o parâmetro passado é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções definido **errno** para **EINVAL** e retornar 0.
+Em todos os casos de fora do intervalo, **errno** é definido como **ERANGE**. Se o parâmetro passado é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções definirão **errno** à **EINVAL** e retornam 0.
 
 ## <a name="remarks"></a>Comentários
 
@@ -108,33 +98,33 @@ Essas funções convertem uma cadeia de caracteres em um valor inteiro de 64 bit
 
 A cadeia de caracteres de entrada é uma sequência de caracteres que pode ser interpretada como um valor numérico do tipo especificado. A função para de ler a cadeia de caracteres de entrada no primeiro caractere que não consegue reconhecer como parte de um número. Esse caractere pode ser o caractere nulo ('\0' ou L'\0') que encerra a cadeia de caracteres.
 
-O *str* argumento **atoi64** tem a seguinte forma:
+O *str* argumento **_atoi64** tem a seguinte forma:
 
 > [*espaço em branco*] [*sinal*] [*dígitos*]
 
-Um *espaço em branco* consiste em caracteres de espaço ou tabulação, que são ignorados; *sinal* é um sinal de adição (+) ou menos (-); e *dígitos* são um ou mais dígitos.
+Um *espaço em branco* consiste em caracteres de espaço ou tabulação, que são ignorados; *sinal* é um sinal de mais (+) ou menos (-); e *dígitos* são um ou mais dígitos.
 
-**wtoi64** é idêntico ao **atoi64** exceto que assume uma cadeia de caracteres largos como um parâmetro.
+**_wtoi64** é idêntica à **_atoi64** exceto que assume uma cadeia de caracteres largos como um parâmetro.
 
-As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
 |Rotina Tchar.h|_UNICODE e _MBCS não definidos|_MBCS definido|_UNICODE definido|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**tstoi64**|**_atoi64**|**_atoi64**|**_wtoi64**|
-|**ttoi64**|**_atoi64**|**_atoi64**|**_wtoi64**|
+|**_tstoi64**|**_atoi64**|**_atoi64**|**_wtoi64**|
+|**_ttoi64**|**_atoi64**|**_atoi64**|**_wtoi64**|
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotinas|Cabeçalho necessário|
 |--------------|---------------------|
-|**atoi64**, **_atoi64_l**|\<stdlib.h>|
-|**wtoi64**, **_wtoi64_l**|\<stdlib.h> ou \<wchar.h>|
+|**_atoi64**, **_atoi64_l**|\<stdlib.h>|
+|**_wtoi64**, **_wtoi64_l**|\<stdlib.h> ou \<wchar.h>|
 
 ## <a name="example"></a>Exemplo
 
-Este programa mostra como os números armazenados como cadeias de caracteres podem ser convertidos em valores numéricos usando a **atoi64** funções.
+Esse programa mostra como os números armazenados como cadeias de caracteres podem ser convertidos em valores numéricos usando o **_atoi64** funções.
 
 ```C
 // crt_atoi64.c

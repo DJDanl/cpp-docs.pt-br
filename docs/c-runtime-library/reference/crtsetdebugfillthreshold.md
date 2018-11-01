@@ -1,10 +1,6 @@
 ---
-title: _CrtSetDebugFillThreshold | Microsoft Docs
-ms.custom: ''
+title: _CrtSetDebugFillThreshold
 ms.date: 03/21/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetDebugFillThreshold
 apilocation:
@@ -22,8 +18,6 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetDebugFillThreshold
 - CrtSetDebugFillThreshold
-dev_langs:
-- C++
 helpviewer_keywords:
 - debug, buffer-filling behavior
 - CrtSetDebugFillThreshold function
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - buffer-filling behavior
 - 0xFD
 ms.assetid: 6cb360e8-56ae-4248-b17f-e28aee3e0ed7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c0980331389a36fa123c6ee64989296f5afec5c8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebe958ddc1c9a5c372f4ae68336e0dea3144e8b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398653"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602196"
 ---
 # <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
 
@@ -63,7 +53,7 @@ O valor de limite anterior.
 
 ## <a name="remarks"></a>Comentários
 
-As versões de depuração de algumas funções de CRT com segurança aperfeiçoada preencher o buffer passado para eles com um caractere especial (0xFE). Isso ajuda a localizar casos em que o tamanho incorreto foi passado para a função. Infelizmente, isso também reduz o desempenho. Para melhorar o desempenho, use **crtsetdebugfillthreshold** para desabilitar o preenchimento de buffer para buffers de maior do que o *newThreshold* limite. Um *newThreshold* o valor 0 desativa para todos os buffers.
+As versões de depuração de algumas funções de CRT com segurança avançada preenchem o buffer passado para elas com um caractere especial (0xFE). Isso ajuda a localizar casos em que o tamanho incorreto foi passado para a função. Infelizmente, isso também reduz o desempenho. Para melhorar o desempenho, use **crtsetdebugfillthreshold** para desabilitar o preenchimento de buffer para buffers maiores que o *newThreshold* limite. Um *newThreshold* valor 0 desativa para todos os buffers.
 
 O limite padrão é **SIZE_T_MAX**.
 
@@ -115,7 +105,7 @@ Essa função é específico da Microsoft. Para obter mais informações sobre c
 
 ## <a name="libraries"></a>Libraries
 
-Versões de depuração do [bibliotecas em tempo de execução C](../../c-runtime-library/crt-library-features.md) somente.
+Versões de depuração a [bibliotecas de tempo de execução C](../../c-runtime-library/crt-library-features.md) apenas.
 
 ## <a name="example"></a>Exemplo
 

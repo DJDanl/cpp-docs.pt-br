@@ -1,28 +1,17 @@
 ---
-title: Recursos para criar um jogo de C++ usando o DirectX | Microsoft Docs
-ms.custom: ''
+title: Recursos para criar um jogo de C++ usando o DirectX
 ms.date: 06/08/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - games [C++]
 - Windows applications [C++], games
 - DirectX [C++]
 ms.assetid: 863090ed-6091-45db-aabb-7fd02f76c1df
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 41f506f5b8b60f925cfa2270168ed7a643cf4e3b
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: d76db600c5cec1099daa195324e7102ed5cdbd24
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083535"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50586791"
 ---
 # <a name="resources-for-creating-a-c-game-using-directx"></a>Recursos para criar um jogo de C++ usando o DirectX
 

@@ -1,37 +1,27 @@
 ---
-title: Compilador (nível 1) de aviso C4319 | Microsoft Docs
-ms.custom: ''
+title: Compilador aviso (nível 1) C4319
 ms.date: 1/18/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4319
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4319
 ms.assetid: 1fac8048-9bd6-4552-a21c-192c67772bb9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c1b5fe896ae7d8f43708b60ee4dda486ef08f428
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20b268bacd6e7e259e9b4fa1c9e98fa6fd353718
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33284739"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50599438"
 ---
-# <a name="compiler-warning-level-1-c4319"></a>Compilador C4319 de aviso (nível 1)
+# <a name="compiler-warning-level-1-c4319"></a>Compilador aviso (nível 1) C4319
 
-> ' ~': zero estendendo '*type1*'para'*type2*' de tamanho maior
+> ' ~': estendendo o zero '*type1*'para'*type2*' de tamanho maior
 
-O resultado da **~** operador (complemento bit a bit) é não assinado e, em seguida, estendido de zero quando ele é convertido em um tipo maior.
+O resultado do **~** operador (complemento bit a bit) é não assinado e, em seguida, estendido em zero quando ele é convertido em um tipo maior.
 
 ## <a name="example"></a>Exemplo
 
-No exemplo a seguir, `~(a - 1)` é avaliada como uma expressão longo não assinada de 32 bits e, em seguida, convertida em 64 bits pela extensão de zero. Isso pode levar a resultados de operação inesperado.
+No exemplo a seguir, `~(a - 1)` é avaliada como uma expressão longo sem sinal de 32 bits e, em seguida, convertido em 64 bits pela extensão de zero. Isso pode levar a resultados de operação inesperado.
 
 ```cpp
 // C4319.cpp

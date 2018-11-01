@@ -1,10 +1,6 @@
 ---
-title: _dupenv_s_dbg, _wdupenv_s_dbg | Microsoft Docs
-ms.custom: ''
+title: _dupenv_s_dbg, _wdupenv_s_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
@@ -24,8 +20,6 @@ f1_keywords:
 - _tdupenv_s_dbg
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tdupenv_s_dbg function
 - dupenv_s_dbg function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ef129cec096734c23e911a5dc77bf3bd0b2df03
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 95d8c18a0ebc543304fdb6bf51c4adde589333aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404299"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579576"
 ---
 # <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
 
@@ -83,27 +73,27 @@ Tamanho de *buffer*.
 Nome da variável de ambiente.
 
 *blockType*<br/>
-Tipo de bloco de memória solicitado: **client_block** ou **normal_block**.
+Tipo do bloco de memória solicitado: **client_block** ou **normal_block**.
 
 *filename*<br/>
 Ponteiro para o nome do arquivo de origem ou **nulo**.
 
 *linenumber*<br/>
-Número no arquivo de origem da linha ou **nulo**.
+Número de linha no arquivo de origem ou **nulo**.
 
 ## <a name="return-value"></a>Valor de retorno
 
 Zero em caso de êxito; código de erro em caso de falha.
 
-Essas funções validam seus parâmetros. Se *buffer* ou *varname* é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, as funções de conjunto **errno** para **EINVAL** e retornar **EINVAL**.
+Essas funções validam seus parâmetros. Se *buffer* ou *varname* está **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções definem **errno** à **EINVAL** e retornar **EINVAL**.
 
-Se essas funções não é possível alocar memória suficiente, eles definidos *buffer* para **nulo** e *numberOfElements* para 0 e retornar **ENOMEM**.
+Se essas funções não é possível alocar memória suficiente, elas definidas *buffer* à **nulo** e *numberOfElements* como 0 e retorno **ENOMEM**.
 
 ## <a name="remarks"></a>Comentários
 
-O **dupenv_s_dbg** e **wdupenv_s_dbg** funções são idênticas aos **dupenv_s** e **wdupenv_s** exceto que, quando **Debug** é definida, essas funções usam a versão de depuração [malloc](malloc.md), [malloc_dbg](malloc-dbg.md)para alocar memória para o valor da variável de ambiente. Para obter informações sobre os recursos de depuração **malloc_dbg**, consulte [malloc_dbg](malloc-dbg.md).
+O **dupenv_s_dbg** e **wdupenv_s_dbg** funções são idênticas às **dupenv_s** e **wdupenv_s** , exceto que, quando **Debug** é definido, essas funções usam a versão de depuração [malloc](malloc.md), [malloc_dbg](malloc-dbg.md)para alocar memória para o valor da variável de ambiente. Para obter informações sobre os recursos de depuração **malloc_dbg**, consulte [malloc_dbg](malloc-dbg.md).
 
-Na maioria dos casos, não é necessário chamar essas funções explicitamente. Em vez disso, você pode definir o sinalizador **crtdbg_map_alloc**. Quando **crtdbg_map_alloc** é definida, chamadas para **dupenv_s** e **wdupenv_s** são remapeados para **dupenv_s_dbg** e **wdupenv_s_dbg**, respectivamente, com o *blockType* definida como **normal_block**. Assim, você não precisa chamar essas funções explicitamente, a menos que você deseja marcar os blocos de heap como **client_block**. Para obter mais informações sobre os tipos de bloco, consulte [Tipos de blocos no heap de depuração](/visualstudio/debugger/crt-debug-heap-details).
+Na maioria dos casos, não é necessário chamar essas funções explicitamente. Em vez disso, você pode definir o sinalizador **crtdbg_map_alloc**. Quando **crtdbg_map_alloc** for definido, chamadas para **dupenv_s** e **wdupenv_s** são remapeadas para **dupenv_s_dbg** e **wdupenv_s_dbg**, respectivamente, com o *blockType* definido como **normal_block**. Portanto, você não precisa chamar essas funções explicitamente, a menos que você deseja marcar os blocos de heap como **client_block**. Para obter mais informações sobre os tipos de bloco, consulte [Tipos de blocos no heap de depuração](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

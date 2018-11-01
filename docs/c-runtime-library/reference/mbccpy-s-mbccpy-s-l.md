@@ -1,10 +1,6 @@
 ---
-title: _mbccpy_s, _mbccpy_s_l | Microsoft Docs
-ms.custom: ''
+title: _mbccpy_s, _mbccpy_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbccpy_s
 - _mbccpy_s_l
@@ -26,8 +22,6 @@ f1_keywords:
 - mbccpy_s_l
 - mbccpy_s
 - _mbccpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - tccpy_s_l function
 - _tccpy_s function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a3a52314209b62c818623e315757dcd358ec491
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9a7554630bd3b46196358c01c21b99978c53e53
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404022"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575026"
 ---
 # <a name="mbccpys-mbccpysl"></a>_mbccpy_s, _mbccpy_s_l
 
@@ -96,7 +86,7 @@ Destino da cópia.
 Tamanho do buffer de destino.
 
 *pCopied*<br/>
-Preenchido com o número de bytes copiados (1 ou 2 se for bem-sucedido). Passar **nulo** se você não se importa com o número.
+Preenchido com o número de bytes copiados (1 ou 2 se for bem-sucedido). Passar **nulo** se você não se importa o número.
 
 *src*<br/>
 Caracteres multibyte para copiar.
@@ -106,17 +96,17 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Zero se for bem-sucedido; um código de erro em caso de falha. Se *src* ou *dest* é **nulo**, ou se mais de **buffSizeinBytes** bytes serão copiados *dest*, em seguida, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, as funções retornam **EINVAL** e **errno** é definido como **EINVAL**.
+Zero se for bem-sucedido; um código de erro em caso de falha. Se *src* ou *dest* está **nulo**, ou se mais de **buffSizeinBytes** bytes seriam copiados para *dest*, em seguida, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornam **EINVAL** e **errno** está definido como **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-O **mbccpy_s** função copia caracteres multibyte um de *src* para *dest*. Se *src* não aponta para o byte de um caractere multibyte conforme determinado por uma chamada implícita para [ismbblead](ismbblead-ismbblead-l.md), em seguida, o byte único que *src* pontos é copiado. Se *src* aponta para um byte inicial, mas o byte seguinte é 0 e, portanto, inválida, 0 é copiado para *dest*, **errno** é definido como **EILSEQ**e o função retorna **EILSEQ**.
+O **mbccpy_s** função copia um caractere multibyte de *src* para *dest*. Se *src* não apontar para o byte inicial de um caractere multibyte conforme determinado por uma chamada implícita para [ismbblead](ismbblead-ismbblead-l.md), em seguida, o byte único que *src* aponta é copiado. Se *src* aponta para um byte inicial, mas o byte seguinte for 0 e, portanto, inválido, 0 será copiado para *dest*, **errno** é definido como **EILSEQ**e o retornos de função **EILSEQ**.
 
-**mbccpy_s** não anexa um terminador nulo; no entanto, se *src* aponta para um caractere null, e que null é copiado para *dest* (Esta é apenas uma cópia regular de byte único).
+**mbccpy_s** não anexa um terminador nulo; no entanto, se *src* aponta para um caractere nulo, então esse nulo será copiado para *dest* (Isso é apenas uma cópia de byte único regular).
 
-O valor em *pCopied* é preenchido com o número de bytes copiados. Os valores possíveis são 1 e 2 se a operação for bem-sucedida. Se **nulo** for passado, esse parâmetro é ignorado.
+O valor em *pCopied* é preenchido com o número de bytes copiados. Os valores possíveis são 1 e 2 se a operação for bem-sucedida. Se **nulo** for passado, esse parâmetro será ignorado.
 
-|*src*|copiados *dest*|*pCopied*|Valor retornado|
+|*src*|copiado para *dest*|*pCopied*|Valor retornado|
 |-----------|----------------------|---------------|------------------|
 |byte não inicial|byte não inicial|1|0|
 |0|0|1|0|
@@ -125,7 +115,7 @@ O valor em *pCopied* é preenchido com o número de bytes copiados. Os valores p
 
 Observe que a segunda linha é apenas um caso especial do primeiro. Observe também que a tabela considera *buffSizeInBytes* >= *pCopied*.
 
-**mbccpy_s** usa a localidade atual para qualquer comportamento dependente de localidade. **mbccpy_s_l** é idêntico ao **mbccpy_s** exceto que **mbccpy_s_l** usa a localidade passada para qualquer comportamento dependente de localidade.
+**mbccpy_s** usa a localidade atual para qualquer comportamento dependente da localidade. **mbccpy_s_l** é idêntica à **mbccpy_s** exceto que **mbccpy_s_l** usa a localidade passada para qualquer comportamento dependente da localidade.
 
 No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sobrecargas podem inferir automaticamente o tamanho do buffer, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

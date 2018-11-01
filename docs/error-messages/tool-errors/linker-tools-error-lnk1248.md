@@ -1,29 +1,19 @@
 ---
-title: Ferramentas de vinculador LNK1248 erro | Microsoft Docs
-ms.custom: ''
+title: Erro das Ferramentas de Vinculador LNK1248
 ms.date: 12/28/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1248
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1248
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5367ab248a34d85132ddc51578f477101dea1100
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec042251ef7cf6da5035d3d713927a46c87e3ac5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33301977"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573023"
 ---
 # <a name="linker-tools-error-lnk1248"></a>Erro das Ferramentas de Vinculador LNK1248
 
 > tamanho da imagem ('*tamanho*') excede o tamanho máximo permitido (80000000)
 
-O vinculador determinado que o tamanho do arquivo de saída excederá o maior tamanho possível para uma imagem do programa de 32 bits. Você talvez queira transformar seu programa em várias DLLs.
+O vinculador determinado que o tamanho do arquivo de saída excederá o maior tamanho possível para uma imagem do programa de 32 bits. Você talvez queira fazer seu programa em várias DLLs.

@@ -1,10 +1,6 @@
 ---
-title: _fputc_nolock, _fputwc_nolock | Microsoft Docs
-ms.custom: ''
+title: _fputc_nolock, _fputwc_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fputwc_nolock
 - _fputc_nolock
@@ -28,8 +24,6 @@ f1_keywords:
 - fputtc_nolock
 - _fputwc_nolock
 - _fputtc_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, writing characters to
 - fputwc_nolock function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _fputtc_nolock function
 - _fputwc_nolock function
 ms.assetid: c63eb3ad-58fa-46d0-9249-9c25f815eab9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c2ef3afffe1cbd8764e389f613b3679e3fa5a580
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 370b7e9f20bcc32f6243cff804381b5453801dbd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398549"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579758"
 ---
 # <a name="fputcnolock-fputwcnolock"></a>_fputc_nolock, _fputwc_nolock
 
@@ -72,7 +62,7 @@ wint_t _fputwc_nolock(
 *c*<br/>
 O caractere a ser gravado.
 
-*Fluxo*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
 ## <a name="return-value"></a>Valor de retorno
@@ -81,7 +71,7 @@ Cada uma dessas funções retorna o caractere gravado. Para obter informações 
 
 ## <a name="remarks"></a>Comentários
 
-**fputc_nolock** e **fputwc_nolock** são idênticos aos **fputc** e **fputwc**, respectivamente, exceto que eles não são protegidos contra interferência outros threads. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+**fputc_nolock** e **fputwc_nolock** são idênticas às **fputc** e **fputwc**, respectivamente, exceto que elas não são protegidas contra interferência por outros threads. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
 As duas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. **fputc_nolock** não oferece suporte a saída em um fluxo UNICODE.
 
@@ -98,7 +88,7 @@ As duas funções terão comportamento idêntico se o fluxo for aberto no modo A
 |**_fputc_nolock**|\<stdio.h>|
 |**_fputwc_nolock**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos do Windows UWP (plataforma Universal). Os identificadores de fluxo padrão que estão associados com o console —**stdin**, **stdout**, e **stderr**— deverá ser redirecionado para funções de tempo de execução C podem usá-los em aplicativos UWP . Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console —**stdin**, **stdout**, e **stderr**— deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter mais informações sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemplo
 

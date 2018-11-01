@@ -1,27 +1,17 @@
 ---
-title: Adicionando um manipulador de mensagens do MFC | Microsoft Docs
-ms.custom: ''
+title: Adicionando um manipulador de mensagens do MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.adding.mfc.msghandler
-dev_langs:
-- C++
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a9980a367c0272fe35e2135c1fb5a7df1c19a314
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: edb48b510be1de73abe3361f9bd409a8fed929d7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377287"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50593538"
 ---
 # <a name="adding-an-mfc-message-handler"></a>Adicionando um manipulador de mensagens do MFC
 
@@ -38,7 +28,7 @@ Usando a janela de propriedades para definir funções de manipulação de mensa
 [Adicionando uma classe](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Adicionando uma função de membro](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Adicionando uma variável de membro](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
-[Substituindo uma função Virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[Substituindo uma função virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Navegando pela estrutura de classe](../../ide/navigating-the-class-structure-visual-cpp.md)<br/>
 [Editor de caixa de diálogo](../../windows/dialog-editor.md)
 

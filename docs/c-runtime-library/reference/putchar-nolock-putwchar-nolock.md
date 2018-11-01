@@ -1,10 +1,6 @@
 ---
-title: _putchar_nolock, _putwchar_nolock | Microsoft Docs
-ms.custom: ''
+title: _putchar_nolock, _putwchar_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putchar_nolock
 - _putwchar_nolock
@@ -26,8 +22,6 @@ f1_keywords:
 - _putchar_nolock
 - _putwchar_nolock
 - putchar_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _puttchar_nolock function
 - putchar_nolock function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - _putwchar_nolock function
 - puttchar_nolock function
 ms.assetid: 9ac68092-bfc3-4352-b486-c3e780220575
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 47195d48c624496e806769bb02c1e70f2d7ccb71
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b7c0b4fcdbb7c29c48d9489cb262d2b1a1cf401
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405322"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580876"
 ---
 # <a name="putcharnolock-putwcharnolock"></a>_putchar_nolock, _putwchar_nolock
 
@@ -76,7 +66,7 @@ Consulte **putchar, putwchar**.
 
 ## <a name="remarks"></a>Comentários
 
-**putchar_nolock** e **putwchar_nolock** são idênticas às versões sem o **NOLOCK** sufixo exceto que eles não são protegidos contra interferência por outros threads. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+**putchar_nolock** e **putwchar_nolock** são idênticas às versões sem o **NOLOCK** sufixo, exceto que eles não são protegidos contra interferência de outros threads. Elas podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -91,7 +81,7 @@ Consulte **putchar, putwchar**.
 |**_putchar_nolock**|\<stdio.h>|
 |**_putwchar_nolock**|\<stdio.h> ou \<wchar.h>|
 
-Não há suporte para o console em aplicativos do Windows UWP (plataforma Universal). Os identificadores de fluxo padrão que estão associados com o console, **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C podem usá-los em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
+Não há suporte para o console em aplicativos da plataforma Universal do Windows (UWP). Os identificadores de fluxo padrão que estão associados com o console **stdin**, **stdout**, e **stderr**, deverá ser redirecionado para funções de tempo de execução C possam ser usados em aplicativos UWP . Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Libraries
 

@@ -1,10 +1,6 @@
 ---
-title: __uncaught_exception | Microsoft Docs
-ms.custom: ''
+title: __uncaught_exception
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __uncaught_exception
 apilocation:
@@ -21,25 +17,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - __uncaught_exception
-dev_langs:
-- C++
 helpviewer_keywords:
 - __uncaught_exception
 ms.assetid: 4d9b75c6-c9c7-4876-b761-ea9ab1925e96
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fcae75a5d25710866f781d766cfd77eceb977649
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 19d1e18af27722d6f9da39ebaaf6c9415c281849
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408209"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579628"
 ---
 # <a name="uncaughtexception"></a>__uncaught_exception
 
-Indica se uma ou mais exceções foram lançadas, mas ainda não foram manipuladas por correspondente **catch** block de um [de try-catch](../../cpp/try-throw-and-catch-statements-cpp.md) instrução.
+Indica se uma ou mais exceções foram lançadas, mas ainda não foram manipuladas por correspondente **catch** block de um [try-catch](../../cpp/try-throw-and-catch-statements-cpp.md) instrução.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -50,7 +40,7 @@ bool __uncaught_exception(
 
 ## <a name="return-value"></a>Valor de retorno
 
-**True** do momento em que uma exceção será lançada uma **tente** bloco até que a correspondência **catch** bloco for inicializada; caso contrário, **false**.
+**Verdadeiro** desde o momento em uma exceção é gerada em um **tente** bloco até que a correspondência **catch** bloco tiver sido iniciado; caso contrário, **false**.
 
 ## <a name="remarks"></a>Comentários
 

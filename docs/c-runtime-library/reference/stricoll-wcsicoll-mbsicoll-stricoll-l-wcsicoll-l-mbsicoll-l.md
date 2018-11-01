@@ -1,10 +1,6 @@
 ---
-title: _stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l | Microsoft Docs
-ms.custom: ''
+title: _stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsicoll_l
 - _stricoll_l
@@ -37,8 +33,6 @@ f1_keywords:
 - _tcsicoll
 - mbsicoll
 - stricoll_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - code pages, using for string comparisons
 - _ftcsicoll function
@@ -57,23 +51,19 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f90f6a25c6ecf6796ba3d4d94b6d2f5722eabf9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bd2406751fd2855afd02743c98938e530398e7d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416366"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579653"
 ---
 # <a name="stricoll-wcsicoll-mbsicoll-stricolll-wcsicolll-mbsicolll"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 
 Compara cadeias de caracteres usando informações específicas de localidade.
 
 > [!IMPORTANT]
-> **mbsicoll** e **mbsicoll_l** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbsicoll** e **mbsicoll_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -117,24 +107,24 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retorna um valor que indica a relação de *string1* para *string2*, da seguinte maneira.
+Cada uma dessas funções retorna um valor que indica a relação das *string1* à *string2*, da seguinte maneira.
 
 |Valor retornado|Relação da string1 com a string2|
 |------------------|----------------------------------------|
-|< 0|*string1* menor *string2*|
+|< 0|*string1* menor que *string2*|
 |0|*string1* idêntico ao *string2*|
-|> 0|*string1* maior *string2*|
+|> 0|*string1* maior que *string2*|
 |**_NLSCMPERROR**|Ocorreu um erro.|
 
-Cada uma dessas funções retorna **_NLSCMPERROR**. Para usar **_NLSCMPERROR**, incluir \<string.h > ou \<mbstring.h >. **wcsicoll** pode falhar se *string1* ou *string2* contém códigos de caractere largo fora do domínio da sequência de agrupamento. Quando ocorre um erro, **wcsicoll** podem definir **errno** para **EINVAL**. Para verificar se há um erro em uma chamada para **wcsicoll**, defina **errno** como 0 e, em seguida, verifique **errno** depois de chamar **wcsicoll**.
+Cada uma dessas funções retorna **_NLSCMPERROR**. Para usar **_NLSCMPERROR**, incluem \<String. h > ou \<mbstring >. **wcsicoll** pode falhar se *string1* ou *string2* contém códigos de caractere largo fora do domínio da sequência de agrupamento. Quando ocorre um erro, **wcsicoll** podem definir **errno** para **EINVAL**. Para verificar se há um erro em uma chamada para **wcsicoll**, defina **errno** como 0 e, em seguida, marque **errno** depois de chamar **wcsicoll**.
 
 ## <a name="remarks"></a>Comentários
 
-Cada uma dessas funções executa uma comparação de maiusculas e minúsculas de *string1* e *string2* acordo com a página de código em uso no momento. Essas funções devem ser usadas somente quando há uma diferença entre a ordem de conjunto de caracteres e a ordem lexicográfica de caracteres na página de código atual e essa diferença é de interesse para a comparação de cadeia de caracteres.
+Cada uma dessas funções executa uma comparação não diferencia maiusculas de *string1* e *string2* acordo com a página de código atualmente em uso. Essas funções devem ser usadas somente quando há uma diferença entre a ordem de conjunto de caracteres e a ordem lexicográfica de caracteres na página de código atual e essa diferença é de interesse para a comparação de cadeia de caracteres.
 
-**stricmp** difere **stricoll** em que o **stricmp** comparação é afetada por **LC_CTYPE**, enquanto o **stricoll** comparação está de acordo com o **LC_CTYPE** e **LC_COLLATE** categorias de localidade. Para obter mais informações sobre o **LC_COLLATE** categoria, consulte [setlocale](setlocale-wsetlocale.md) e [categorias de localidade](../../c-runtime-library/locale-categories.md). As versões dessas funções sem o **_l** sufixo use a localidade atual; as versões com o **_l** sufixo são idênticas, exceto que eles usam a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**stricmp** difere **stricoll** em que o **stricmp** comparação é afetada pela **LC_CTYPE**, enquanto o **stricoll** comparação está de acordo com o **LC_CTYPE** e **LC_COLLATE** categorias de localidade. Para obter mais informações sobre o **LC_COLLATE** categoria, consulte [setlocale](setlocale-wsetlocale.md) e [categorias de localidade](../../c-runtime-library/locale-categories.md). As versões dessas funções sem o **l** sufixo usar a localidade atual; as versões com o **l** sufixo são idênticas, exceto que eles usam a localidade passada em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Todas essas funções validam seus parâmetros. Se qualquer um dos *string1* ou *string2* são **nulo** ponteiros, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam **_NLSCMPERROR** e defina **errno** para **EINVAL**.
+Todas essas funções validam seus parâmetros. Se qualquer um dos *string1* ou *string2* são **nulo** ponteiros, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **_NLSCMPERROR** e defina **errno** para **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

@@ -1,36 +1,26 @@
 ---
-title: Erro fatal C1210 | Microsoft Docs
-ms.custom: ''
+title: Erro fatal C1210
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1210
-dev_langs:
-- C++
 helpviewer_keywords:
 - C1210
 ms.assetid: e2208309-c284-425c-a7e8-48e96e66f35b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4d22a34f44fb2c97fe341cb313d7917a35506cdd
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a90ca3e3b55642f1a6cd847997b83e4b7db46818
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704978"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591796"
 ---
 # <a name="fatal-error-c1210"></a>Erro fatal C1210
 
-> /CLR: pure e /CLR: safe não são suportados pela versão do tempo de execução instalada
+> /CLR: pure e /CLR: safe não são suportados pela versão do tempo de execução instalado
 
-O **/clr: pure** e **/CLR: safe** opções do compilador são substituídas no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
-C1210 ocorre quando você tiver um compilador para a versão atual, mas um tempo de execução de linguagem comum de uma versão anterior.
+C1210 ocorre quando você tem um compilador para a versão atual, mas um common language runtime de uma versão anterior.
 
-Algumas funcionalidades do compilador não podem funcionar em uma versão anterior do tempo de execução.
+Algumas funcionalidades do compilador podem não funcionar em uma versão anterior do tempo de execução.
 
-Para resolver C1210 instalar a versão de tempo de execução de linguagem comum que é destinada para uso com o compilador.
+Para resolver C1210 instale a versão common language runtime que é destinado para uso com o compilador.

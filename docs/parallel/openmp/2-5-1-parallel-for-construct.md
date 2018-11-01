@@ -1,23 +1,13 @@
 ---
-title: 2.5.1 paralela para Construct | Microsoft Docs
-ms.custom: ''
+title: 2.5.1 Construto parallel for
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: a233e7ed-2462-4f7a-9a5d-556ab9f363d8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cfff3b0c17dd098b5d802af61a7ca1f81cb02845
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e74fa958a70fb10aadd39ccc6b4e56670bc072b0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373955"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590317"
 ---
 # <a name="251-parallel-for-construct"></a>2.5.1 Construto parallel for
 
