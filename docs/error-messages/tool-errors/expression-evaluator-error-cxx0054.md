@@ -1,28 +1,18 @@
 ---
-title: CXX0054 de erro do avaliador de expressão | Microsoft Docs
-ms.custom: ''
+title: Erro CXX0054 (avaliador de expressão)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - CXX0054
-dev_langs:
-- C++
 helpviewer_keywords:
 - CXX0054
 - CAN0054
 ms.assetid: d5d4a093-6a7a-45c0-8aa7-e555023353ef
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7aaf1a55ffee1d06eb4807381ad2cf1315420dbd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d44d576509b4e84582a437aae5ce99c3b187845b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46074689"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50558464"
 ---
 # <a name="expression-evaluator-error-cxx0054"></a>Erro CXX0054 (avaliador de expressão)
 

@@ -1,10 +1,6 @@
 ---
-title: _aligned_offset_recalloc | Microsoft Docs
-ms.custom: ''
+title: _aligned_offset_recalloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _aligned_offset_recalloc
 apilocation:
@@ -23,22 +19,16 @@ apitype: DLLExport
 f1_keywords:
 - aligned_offset_recalloc
 - _aligned_offset_recalloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - aligned_offset_recalloc function
 - _aligned_offset_recalloc function
 ms.assetid: a258f54e-eeb4-4853-96fc-007d710f98e9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f9297defc32966209dd484da80e9230d6df5dbab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ee163d257665b5481d6ab1ead54698ace1ef210
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392976"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561987"
 ---
 # <a name="alignedoffsetrecalloc"></a>_aligned_offset_recalloc
 
@@ -61,7 +51,7 @@ void * _aligned_offset_recalloc(
 *memblock*<br/>
 O ponteiro do bloco de memória atual.
 
-*Número*<br/>
+*número*<br/>
 Número de elementos.
 
 *size*<br/>
@@ -75,17 +65,17 @@ O deslocamento na alocação de memória para forçar o alinhamento.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**aligned_offset_recalloc** retorna um ponteiro nulo para o bloco de memória realocada (e possivelmente movido). O valor de retorno é **nulo** se o tamanho é zero e o argumento de buffer não é **nulo**, ou se não houver memória suficiente disponível para expandir o bloco para determinado tamanho. No primeiro caso, o bloco original é liberado. No segundo caso, ele permanece inalterado. O valor retornado indica um espaço de armazenamento que sempre está sutilmente alinhado para armazenamento de qualquer tipo de objeto. Para obter um ponteiro para um tipo que não seja nulo, digite a conversão no valor retornado.
+**aligned_offset_recalloc** retorna um ponteiro nulo para o bloco de memória realocado (e possivelmente migrado). O valor retornado será **nulo** se o tamanho é zero e o argumento do buffer não está **nulo**, ou se não houver memória suficiente disponível para expandir o bloco para determinado tamanho. No primeiro caso, o bloco original é liberado. No segundo caso, ele permanece inalterado. O valor retornado indica um espaço de armazenamento que sempre está sutilmente alinhado para armazenamento de qualquer tipo de objeto. Para obter um ponteiro para um tipo que não seja nulo, digite a conversão no valor retornado.
 
-**aligned_offset_recalloc** está marcado como `__declspec(noalias)` e `__declspec(restrict)`, que significa que a função é garantia de não modificar variáveis globais e que o ponteiro retornado não é um alias. Para obter mais informações, consulte [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
+**aligned_offset_recalloc** está marcada `__declspec(noalias)` e `__declspec(restrict)`, o que significa que a função não é garantido que modifica variáveis globais e que o ponteiro retornado não é um alias. Para obter mais informações, consulte [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como [aligned_offset_malloc](aligned-offset-malloc.md), **aligned_offset_recalloc** permite que uma estrutura ser alinhado em um deslocamento dentro da estrutura.
+Como o [aligned_offset_malloc](aligned-offset-malloc.md), **aligned_offset_recalloc** permite que uma estrutura seja alinhada em um deslocamento dentro da estrutura.
 
-**aligned_offset_recalloc** baseia-se em **malloc**. Para obter mais informações sobre como usar **aligned_offset_malloc**, consulte [malloc](malloc.md). Se *memblock* é **nulo**, as chamadas de função **aligned_offset_malloc** internamente.
+**aligned_offset_recalloc** se baseia **malloc**. Para obter mais informações sobre como usar **aligned_offset_malloc**, consulte [malloc](malloc.md). Se *memblock* é **nulo**, as chamadas de função **aligned_offset_malloc** internamente.
 
-Esta função define **errno** para **ENOMEM** se a alocação de memória falhou ou se o tamanho solicitado (*número* * *tamanho* ) era maior que **heap_maxreq**. Para obter mais informações sobre **errno**, consulte [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Além disso, **aligned_offset_recalloc** valida seus parâmetros. Se *alinhamento* não é uma potência de 2 ou se *deslocamento* é maior que ou igual ao tamanho solicitado e diferente de zero, essa função invoca o manipulador de parâmetro inválido, conforme descrito em [parâmetro Validação](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essa função retorna **nulo** e define **errno** para **EINVAL**.
+Essa função definirá **errno** à **ENOMEM** se a alocação de memória tiver falhado ou se o tamanho solicitado (*número* * *tamanho* ) era maior que **heap_maxreq**. Para obter mais informações sobre **errno**, consulte [errno, doserrno, sys_errlist e sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Além disso, **aligned_offset_recalloc** valida seus parâmetros. Se *alinhamento* não for uma potência de 2 ou se *deslocamento* é maior que ou igual ao tamanho solicitado e diferente de zero, essa função invocará o manipulador de parâmetro inválido, conforme descrito em [parâmetro Validação](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função retorna **nulo** e define **errno** para **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 
