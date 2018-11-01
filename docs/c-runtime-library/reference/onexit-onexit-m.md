@@ -1,10 +1,6 @@
 ---
-title: _onexit, _onexit_m | Microsoft Docs
-ms.custom: ''
+title: _onexit, _onexit_m
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _onexit
 - _onexit_m
@@ -25,8 +21,6 @@ f1_keywords:
 - onexit_m
 - onexit
 - _onexit_m
-dev_langs:
-- C++
 helpviewer_keywords:
 - onexit function
 - registry, registering exit routines
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - registering exit routines
 - registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c190ce2c78135625a502d7509e56771fd670aa3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c190f777032904802f771bab9fc323ba305ff32e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401702"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609593"
 ---
 # <a name="onexit-onexitm"></a>_onexit, _onexit_m
 
@@ -73,9 +63,9 @@ Ponteiro para uma função a ser chamada na saída.
 
 ## <a name="remarks"></a>Comentários
 
-O **OnExit** função é passada para o endereço de uma função (*função*) a ser chamado quando o programa será encerrado normalmente. As chamadas sucessivas para **OnExit** criar um registro de funções que são executados em ordem LIFO (último-em-primeiro a sair). As funções são passados para **OnExit** não pode receber parâmetros.
+O **OnExit** função é passada para o endereço de uma função (*função*) a ser chamado quando o programa for encerrado normalmente. Chamadas sucessivas à **OnExit** criam um registro das funções que são executadas na ordem UEPS (último-no-primeiro a sair). As funções passadas para **OnExit** não pode receber parâmetros.
 
-No caso de quando **OnExit** é chamado de uma DLL, rotinas registradas com **OnExit** descarregamento de execução em uma DLL após **DllMain** é chamado com DLL_PROCESS_DETACH.
+No caso de quando **OnExit** é chamado de dentro de uma DLL, rotinas registradas com **OnExit** descarregamento de execução em uma DLL após **DllMain** é chamado com DLL_PROCESS_DETACH.
 
 **OnExit** é uma extensão da Microsoft. Para fins de portabilidade ANSI, use [atexit](atexit.md). O **onexit_m** versão da função é para uso de modo misto.
 

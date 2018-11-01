@@ -1,26 +1,16 @@
 ---
-title: Tipos de parâmetro de atributo (C + + c++ /CLI e c++ /CLI CX) | Microsoft Docs
-ms.custom: ''
+title: Tipos de parâmetro de atributo (C + + c++ /CLI e c++ /CLI CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8db82e2b31984429165ce39a328abc28ba6e2cfd
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 09a13fa2f8d6db89824262a921adb338b151c995
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328162"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50599323"
 ---
 # <a name="attribute-parameter-types--ccli-and-ccx"></a>Tipos de parâmetro de atributo (C + + c++ /CLI e c++ /CLI CX)
 

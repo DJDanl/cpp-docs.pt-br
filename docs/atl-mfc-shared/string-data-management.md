@@ -1,25 +1,15 @@
 ---
-title: Gerenciamento de dados de cadeia de caracteres | Microsoft Docs
-ms.custom: ''
+title: Gerenciamento de dados da cadeia de caracteres
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - Unicode, string objects
 ms.assetid: 0b53a542-eeb1-4108-9ada-6700645b6f8f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6b54bfbf614ca7e3d1c34c4924c545c5f46ed4e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cbc48008cd7b30f1630fc4ec2c30214e3c448c27
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763715"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595059"
 ---
 # <a name="string-data-management"></a>Gerenciamento de dados da cadeia de caracteres
 

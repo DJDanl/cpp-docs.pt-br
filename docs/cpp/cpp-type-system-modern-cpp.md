@@ -1,23 +1,14 @@
 ---
-title: O sistema de tipo C++ (C++ moderno) | Microsoft Docs
-ms.custom: ''
+title: Sistema do tipo C++ (C++ moderno)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
 ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 63af117df6f53f2b280dc990d58a099441679f44
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3e500980fbb5e6397e992f53b58f28fa710e7af0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060285"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602599"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema do tipo C++ (C++ moderno)
 

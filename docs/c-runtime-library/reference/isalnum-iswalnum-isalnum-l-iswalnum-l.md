@@ -1,10 +1,6 @@
 ---
-title: isalnum, iswalnum, _isalnum_l, _iswalnum_l | Microsoft Docs
-ms.custom: ''
+title: isalnum, iswalnum, _isalnum_l, _iswalnum_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _iswalnum_l
 - _isalnum_l
@@ -30,8 +26,6 @@ f1_keywords:
 - _isalnum_l
 - isalnum
 - _istalnum
-dev_langs:
-- C++
 helpviewer_keywords:
 - _istalnum function
 - _ismbcalnum_l function
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9c7c1156341d4c1b0b54d54f52a5a33eb6506e50
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97ac18eb85c62861c701f1498da0b4851021ca74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401536"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456622"
 ---
 # <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
 
@@ -76,11 +66,11 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada essas rotinas retornará zero se *c* é uma representação específica de um caractere alfanumérico. **isalnum** retorna um valor diferente de zero se **isalpha** ou **isdigit** é diferente de zero para *c*, ou seja, se *c* está dentro do intervalos de A - Z, a - z ou 0 - 9. **iswalnum** retorna um valor diferente de zero se **iswalpha** ou **iswdigit** é diferente de zero para *c*. Cada uma dessas rotinas retornará 0 se *c* não satisfaz a condição de teste.
+Cada uma dessas rotinas retornará diferente de zero se *c* é uma representação específica de um caractere alfanumérico. **isalnum** retorna um valor diferente de zero se **isalpha** ou **isdigit** for diferente de zero para *c*, ou seja, se *c* está dentro do intervalos A – Z, a - z ou 0 – 9. **iswalnum** retorna um valor diferente de zero se **iswalpha** ou **iswdigit** for diferente de zero para *c*. Cada uma dessas rotinas retornará 0 se *c* não satisfaz a condição de teste.
 
-As versões dessas funções que têm o **_l** sufixo use o parâmetro de localidade que é passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+As versões dessas funções que têm o **l** sufixo usam o parâmetro de localidade passado em vez da localidade atual. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-O comportamento de **isalnum** e **isalnum_l** será indefinido se *c* não é EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca de depuração CRT é usada e *c* não é uma desses valores, o aumento de funções uma asserção.
+O comportamento de **isalnum** e **isalnum_l** é indefinido se *c* não for EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca de depuração CRT é usada e *c* é não um desses valores, as funções geram uma asserção.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

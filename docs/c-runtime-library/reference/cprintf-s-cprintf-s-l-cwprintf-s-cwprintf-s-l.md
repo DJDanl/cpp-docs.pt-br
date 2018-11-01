@@ -1,10 +1,6 @@
 ---
-title: _cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l | Microsoft Docs
-ms.custom: ''
+title: _cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwprintf_s_l
 - _cprintf_s_l
@@ -33,8 +29,6 @@ f1_keywords:
 - cprintf_s
 - _cwprintf_s
 - tcprintf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcprintf_s_l function
 - _cprintf_s_l function
@@ -49,16 +43,12 @@ helpviewer_keywords:
 - cprintf_s_l function
 - cwprintf_s_l function
 ms.assetid: c28504fe-0d20-4f06-8f97-ee33225922ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2d8a2f5f80b00eef47d09a8d505f31a42a0fab2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3652587c9622c2eb9fe316782d1b1c7c9644dc8f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401338"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50606513"
 ---
 # <a name="cprintfs-cprintfsl-cwprintfs-cwprintfsl"></a>_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
 
@@ -107,16 +97,16 @@ O número de caracteres impressos.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções formate e imprima uma série de caracteres e valores diretamente para o console usando o **putch** função (**putwch** para **cwprintf_s**) para saída caracteres. Cada *argumento* (se houver) é convertido e de saída de acordo com a especificação de formato correspondente em *formato*. O formato tem o mesmo formulário e funcionar como o *formato* parâmetro para o [printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) função. Ao contrário de **fprintf_s**, **printf_s**, e **sprintf_s** funções, nem **cprintf_s** nem **cwprintf_s** converte caracteres de alimentação de linha em carro (CR LF) de alimentação de linha de retorno de combinações de saída quando.
+Essas funções formatam e imprimem uma série de caracteres e valores diretamente no console, usando o **putch** função (**putwch** para **cwprintf_s**) para saída caracteres. Cada *argumento* (se houver) é convertido e gerado de acordo com a especificação de formato correspondente em *formato*. O formato tem o mesmo formato e função que o *formato* parâmetro para o [printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) função. Ao contrário do **fprintf_s**, **printf_s**, e **sprintf_s** funções, nem **cprintf_s** nem **cwprintf_s** converte caracteres de alimentação de linha em combinações de retorno-alimentação de linha (CR-LF) do carro durante a geração.
 
-Uma diferença importante é que **cwprintf_s** exibe caracteres Unicode quando usados no Windows NT. Ao contrário de **cprintf_s**, **cwprintf_s** usa a localidade atual do console
+Uma distinção importante é que **cwprintf_s** exibe caracteres Unicode quando usado no Windows NT. Diferentemente **cprintf_s**, **cwprintf_s** usa a localidade atual do console
 
-As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade atual.
+As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade atual.
 
 > [!IMPORTANT]
 > Verifique se *format* não é uma cadeia de caracteres definida pelo usuário.
 
-Como as versões não seguras (consulte [cprintf, cprintf_l, cwprintf, cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)), essas funções validar seus parâmetros e invocar o manipulador de parâmetro inválido, conforme descrito em [devalidaçãodeparâmetro](../../c-runtime-library/parameter-validation.md), se *formato* é um ponteiro nulo. Essas funções diferem das versões não seguras pelo fato da própria cadeia de formato também ser validada. Se houver algum especificador de formatação desconhecido ou mal formado, essas funções invocarão o manipulador de parâmetro inválido. Em todos os casos, se a execução é permitida para continuar, as funções retornam -1 e defina **errno** para **EINVAL**.
+Assim como as versões não seguras (consulte [cprintf, cprintf_l, cwprintf, cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)), essas funções validam seus parâmetros e invocam o manipulador de parâmetro inválido, conforme descrito em [devalidaçãodeparâmetro](../../c-runtime-library/parameter-validation.md), se *formato* for um ponteiro nulo. Essas funções diferem das versões não seguras pelo fato da própria cadeia de formato também ser validada. Se houver algum especificador de formatação desconhecido ou mal formado, essas funções invocarão o manipulador de parâmetro inválido. Em todos os casos, se a execução puder continuar, essas funções retornarão -1 e defina **errno** à **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

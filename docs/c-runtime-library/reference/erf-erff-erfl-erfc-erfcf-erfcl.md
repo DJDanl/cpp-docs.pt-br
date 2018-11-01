@@ -1,10 +1,6 @@
 ---
-title: erf, erff, erfl, erfc, erfcf, erfcl | Microsoft Docs
-ms.custom: ''
+title: erf, erff, erfl, erfc, erfcf, erfcl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - erff
 - erfl
@@ -26,23 +22,17 @@ f1_keywords:
 - erfl
 - erf
 - erff
-dev_langs:
-- C++
 helpviewer_keywords:
 - erfl function
 - erff function
 - erf function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b7ab1448c3f1d77ab79266858a19d822b1cdb4f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5723286add75a57844f177b9df5d86eb15080229
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396151"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450033"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
@@ -90,17 +80,17 @@ Um valor de ponto flutuante.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **erf** funções retornam o Gauss função de erro do *x*. O **erfc** funções retornam o Gauss complementar função de erro do *x*.
+O **erf** funções retornam o Gauss função de erro de *x*. O **erfc** funções retornam o complementar em Gauss de função de erro de *x*.
 
 ## <a name="remarks"></a>Comentários
 
-O **erf** funções calculam a função de erro Gauss do *x*, que é definida como:
+O **erf** funções calculam a função de erro em Gauss de *x*, que é definida como:
 
 ![A função de erro de x](media/crt_erf_formula.PNG "CRT_erf_formula")
 
-A função de erro Gauss complementar é definida como 1 - erf(x). O **erf** funções retornam um valor no intervalo de -1,0 a 1.0. Nenhum erro é retornado. O **erfc** funções retornam um valor no intervalo de 0 a 2. Se *x* é muito grande para **erfc**, o **errno** variável é definida como **ERANGE**.
+A função de erro complementar em Gauss é definida como 1 – ERF (x). O **erf** funções retornam um valor no intervalo de -1,0 a 1,0. Nenhum erro é retornado. O **erfc** funções retornam um valor no intervalo de 0 a 2. Se *x* é muito grande para **erfc**, o **errno** variável é definida como **ERANGE**.
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **erf** e **erfc** que levar e retornar **float** e **longo** **duplo** tipos. Em um programa C, **erf** e **erfc** sempre levar e retornar um **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **erf** e **erfc** que tomam e retornam **float** e **longo** **duplas** tipos. Em um programa do C **erf** e **erfc** sempre tomam e retornam uma **double**.
 
 ## <a name="requirements"></a>Requisitos
 

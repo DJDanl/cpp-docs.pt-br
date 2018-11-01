@@ -1,39 +1,29 @@
 ---
-title: C3862 de erro do compilador | Microsoft Docs
-ms.custom: ''
+title: Erro do compilador C3862
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3862
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3862
 ms.assetid: ba547366-4189-4077-8c00-ab45e08a9533
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5b21e457feb6d090e4abaf531293987eb3504457
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 2ba130862b1debbe2991ca7cbcae50192f900cd8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704965"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446235"
 ---
-# <a name="compiler-error-c3862"></a>C3862 de erro do compilador
+# <a name="compiler-error-c3862"></a>Erro do compilador C3862
 
 > '*função*': não é possível compilar uma função não gerenciada com /clr: pure ou /CLR: safe
 
 ## <a name="remarks"></a>Comentários
 
-O **/clr: pure** e **/CLR: safe** opções do compilador são substituídas no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
-Uma compilação com **/clr: pure** ou **/CLR: safe** produzirá uma imagem do MSIL somente, uma imagem com nenhuma o código nativo (não gerenciado).  Portanto, você não pode usar o `unmanaged` pragma em um **/clr: pure** ou **/CLR: safe** compilação.
+Uma compilação com **/clr: pure** ou **/CLR: safe** produzirá uma imagem única do MSIL, uma imagem sem nenhum código (não gerenciado) nativo.  Portanto, é possível usar o `unmanaged` pragma em um **/clr: pure** ou **/CLR: safe** compilação.
 
-Para obter mais informações, consulte [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) e [gerenciado, não gerenciado](../../preprocessor/managed-unmanaged.md).
+Para obter mais informações, consulte [/clr (compilação de tempo de execução de linguagem comum)](../../build/reference/clr-common-language-runtime-compilation.md) e [gerenciado, não gerenciado](../../preprocessor/managed-unmanaged.md).
 
 ## <a name="example"></a>Exemplo
 
