@@ -1,28 +1,18 @@
 ---
-title: / POGOSAFEMODE (PGO executar no modo de segurança de thread) | Microsoft Docs
-ms.custom: ''
+title: / POGOSAFEMODE (executar PGO no modo de segurança do thread)
 ms.date: 03/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 f1_keywords:
 - POGOSAFEMODE
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 81392c67b47a0fa90c057ee4295667a054e34498
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f210884d693ef0d778943580b9c5a7b2ec2ea336
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377327"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544424"
 ---
-# <a name="pogosafemode-run-pgo-in-thread-safe-mode"></a>/ POGOSAFEMODE (PGO executar no modo de segurança de thread)
+# <a name="pogosafemode-run-pgo-in-thread-safe-mode"></a>/ POGOSAFEMODE (executar PGO no modo de segurança do thread)
 
-**A opção /POGOSAFEMODE foi preterida a partir do Visual Studio 2015**. Use o [/GENPROFILE: exata](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) e **/GENPROFILE:NOEXACT** opções em vez disso. O **/POGOSAFEMODE** opção de vinculador Especifica que a compilação instrumentada é criada para usar o modo de thread-safe para captura de dados de perfil durante a Otimização Guiada por perfil (PGO) treinamento é executado.
+**A opção /POGOSAFEMODE foi preterida a partir do Visual Studio 2015**. Use o [/GENPROFILE: exata](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) e **/GENPROFILE:NOEXACT** opções em vez disso. O **/POGOSAFEMODE** a opção de vinculador Especifica que o build instrumentado é criado para usar o modo thread-safe para captura de dados de perfil durante a Otimização Guiada por perfil (PGO) execuções de treinamento.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,17 +20,17 @@ ms.locfileid: "32377327"
 
 ## <a name="remarks"></a>Comentários
 
-Otimização Guiada por perfil (PGO) tem dois modos possíveis durante a fase de criação de perfil: *modo rápido* e *modo de segurança*. Quando a criação de perfil está no modo rápido, ele usa uma instrução de incremento para aumentar os contadores de dados. A instrução de incremento é mais rápida, mas não é thread-safe. Quando a criação de perfil está no modo de segurança, ele usa a instrução de incremento sincronizada para aumentar os contadores de dados. Esta instrução tem a mesma funcionalidade que tem a instrução de incremento e é thread-safe, mas é mais lento.
+Otimização Guiada por perfil (PGO) tem dois modos possíveis durante a fase de criação de perfil: *modo rápido* e *modo de segurança*. Quando a analise está no modo rápido, ele usa uma instrução de incremento para aumentar contadores de dados. A instrução de incremento é mais rápida, mas não é thread-safe. Quando a analise está no modo de segurança, ele usa a instrução de incremento interbloqueados para aumentar contadores de dados. Essa instrução tem a mesma funcionalidade, como a instrução de incremento tem e é thread-safe, mas é mais lento.
 
-O **/POGOSAFEMODE** opção define a compilação instrumentada para usar o modo de segurança. Essa opção só pode ser usado quando preterido [/LTCG:PGINSTRUMENT](ltcg-link-time-code-generation.md) for especificado, durante a fase de vinculador PGO instrumentação.
+O **/POGOSAFEMODE** opção define a compilação instrumentada para usar o modo de segurança. Essa opção só pode ser usado quando preteridas [/LTCG:PGINSTRUMENT](ltcg-link-time-code-generation.md) for especificado, durante a fase de vinculador de instrumentação de PGO.
 
-Por padrão, a criação de perfil de PGO opera em modo rápido. **/ POGOSAFEMODE** é necessário apenas se você deseja usar o modo de segurança.
+Por padrão, a criação de perfil de PGO opera no modo rápido. **/ POGOSAFEMODE** é necessário apenas se você deseja usar o modo de segurança.
 
-Para executar a criação de perfil PGO no modo de segurança, você deve usar **/GENPROFILE: exata** (preferencial), ou usar a variável de ambiente [PogoSafeMode](environment-variables-for-profile-guided-optimizations.md) ou a opção de vinculador **/POGOSAFEMODE**, dependendo do sistema. Se você estiver executando a criação de perfil em um x64 computador, você deve usar a opção de vinculador. Se você estiver executando a criação de perfil em um x86 computador, você pode usar a opção de vinculador ou definir a variável de ambiente para qualquer valor antes de iniciar o processo de instrumentação PGO.
+Para executar a criação de perfil de PGO no modo de segurança, você deve usar **/GENPROFILE: exata** (preferencial), ou usar a variável de ambiente [PogoSafeMode](environment-variables-for-profile-guided-optimizations.md) ou a opção de vinculador **/POGOSAFEMODE**, dependendo do sistema. Se você estiver executando a criação de perfil em um x64 computador, você deve usar a opção de vinculador. Se você estiver executando a criação de perfil em um x86 computador, você pode usar a opção de vinculador ou definir a variável de ambiente como qualquer valor antes de iniciar o processo de instrumentação de PGO.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **vinculador** > **otimização** página de propriedades.
 
@@ -48,7 +38,7 @@ Para executar a criação de perfil PGO no modo de segurança, você deve usar *
 
 1. Selecione o **propriedades de configuração** > **vinculador** > **linha de comando** página de propriedades.
 
-1. Insira o **/POGOSAFEMODE** opção para o **opções adicionais** caixa. Escolha **Okey** para salvar suas alterações.
+1. Insira o **/POGOSAFEMODE** opção para o **opções adicionais** caixa. Escolher **Okey** para salvar suas alterações.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 
