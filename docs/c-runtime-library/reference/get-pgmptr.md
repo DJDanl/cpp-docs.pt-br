@@ -1,10 +1,6 @@
 ---
-title: _get_pgmptr | Microsoft Docs
-ms.custom: ''
+title: _get_pgmptr
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_pgmptr
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - get_pgmptr
 - _get_pgmptr
-dev_langs:
-- C++
 helpviewer_keywords:
 - get_pgmptr function
 - _get_pgmptr function
 - pgmptr global variable
 - _pgmptr global variable
 ms.assetid: 29f16a9f-a685-4721-add3-7fad4f67eece
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0488e2a7b8cd907872e835abb63e62f29f259455
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40c9f237aadb5f44066bcbf40fe378fb2ce96fc5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397773"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562494"
 ---
 # <a name="getpgmptr"></a>_get_pgmptr
 
@@ -49,23 +39,23 @@ Obtém o valor atual de **pgmptr** variável global.
 ## <a name="syntax"></a>Sintaxe
 
 ```C
-errno_t _get_pgmptr( 
-   char **pValue 
+errno_t _get_pgmptr( 
+   char **pValue 
 );
 ```
 
 ### <a name="parameters"></a>Parâmetros
 
 *pValue*<br/>
-Um ponteiro para uma cadeia de caracteres a ser preenchida com o valor atual de **pgmptr** variável.
+Um ponteiro para uma cadeia de caracteres a ser preenchido com o valor atual de **pgmptr** variável.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna zero se tiver êxito; um código de erro em caso de falha. Se *pValue* é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, esta função define **errno** para **EINVAL** e retorna **EINVAL**.
+Retorna zero se tiver êxito; um código de erro em caso de falha. Se *pValue* é **nulo**, o manipulador de parâmetro inválido será invocado conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá **errno** à **EINVAL** e retorna **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-Somente chamar **get_pgmptr** se seu programa tiver um ponto de entrada específica, como **Main** ou **WinMain**. O **pgmptr** variável global contém o caminho completo para o executável associado ao processo. Para obter mais informações, consulte [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).
+Apenas chame **get_pgmptr** se seu programa tem um ponto de entrada estreitas, como **Main ()** ou **WinMain**. O **pgmptr** variável global contém o caminho completo para o executável associado ao processo. Para obter mais informações, consulte [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).
 
 ## <a name="requirements"></a>Requisitos
 

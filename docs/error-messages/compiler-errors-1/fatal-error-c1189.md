@@ -1,39 +1,29 @@
 ---
-title: Erro fatal C1189 | Microsoft Docs
-ms.custom: ''
+title: Erro fatal C1189
 ms.date: 04/27/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1189
-dev_langs:
-- C++
 helpviewer_keywords:
 - C1189
 ms.assetid: 2e5c8a78-edd4-411c-b619-558a96be148a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 051b7eb965526d12311dfacaeae7a00e4fbe4e75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06d42316a0109ac063bba43cefebd9aab71c2e72
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199788"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565523"
 ---
 # <a name="fatal-error-c1189"></a>Erro fatal C1189
 
-> **\#Erro:** *mensagem de erro fornecido pelo usuário*
+> **\#Erro:** *mensagem de erro fornecida pelo usuário*
 
 ## <a name="remarks"></a>Comentários
 
-C1189 é gerado pelo `#error` diretiva. O desenvolvedor que códigos de diretiva especifica o texto da mensagem de erro. Para obter mais informações, consulte [#error diretiva (C/C++)](../../preprocessor/hash-error-directive-c-cpp.md).
+C1189 é gerado pelo `#error` diretiva. O desenvolvedor que códigos a diretiva especifica o texto da mensagem de erro. Para obter mais informações, consulte [#error diretiva (C/C++)](../../preprocessor/hash-error-directive-c-cpp.md).
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir gera C1189. No exemplo, o desenvolvedor emite uma mensagem de erro personalizada porque o `_WIN32` identificador não está definido:
+O exemplo a seguir gera C1189. No exemplo, o desenvolvedor emitirá uma mensagem de erro personalizada porque o `_WIN32` identificador não está definido:
 
 ```cpp
 // C1189.cpp

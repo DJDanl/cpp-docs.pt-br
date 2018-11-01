@@ -1,11 +1,6 @@
 ---
-title: fma, fmaf, fmal | Microsoft Docs
-ms.custom: ''
+title: fma, fmaf, fmal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fma
 - fmaf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/fma
 - math/fmaf
 - math/fmal
-dev_langs:
-- C++
 helpviewer_keywords:
 - fma function
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b28009a9c3cc4edceb9032660a0c2a71916dfb2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3b540a72c6f2fc2264d6366111831fbe2a02a6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401471"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529942"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
@@ -107,7 +96,7 @@ Caso contrário, pode retornar um dos seguintes valores:
 |Problema|Valor de|
 |-----------|------------|
 |*x* = infinito, *y* = 0 ou<br /><br /> *x* = 0, *y* = infinito|NaN|
-|*x* ou *y* = exato ± infinito, *z* = infinito com o sinal oposto|NaN|
+|*x* ou *y* = ± exata infinito, *z* = infinito com o sinal oposto|NaN|
 |*x* ou *y* = NaN|NaN|
 |não (*x* = 0, *y*= indefinido) e *z* = NaN<br /><br /> não (*x*= indefinido, *y*= 0) e *z* = NaN|NaN|
 |Erro de intervalo de estouro|±HUGE_VAL, ±HUGE_VALF ou ±HUGE_VALL|
@@ -117,7 +106,7 @@ Os erros são relatados conforme especificado em [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **fma** que levar e retornar **float** e **longo** **duplo** tipos. Em um programa C, **fma** sempre usa e retorna um **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **fma** que usam e retornam **float** e **longo** **double** tipos. Em um programa do C **fma** sempre usa e retorna um **duplo**.
 
 Esta função calcula o valor como se ele tivesse precisão infinita e arredonda o resultado final.
 
