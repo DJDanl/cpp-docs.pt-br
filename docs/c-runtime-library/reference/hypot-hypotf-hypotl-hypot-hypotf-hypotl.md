@@ -1,10 +1,6 @@
 ---
-title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl | Microsoft Docs
-ms.custom: ''
+title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _hypotf
 - hypot
@@ -32,8 +28,6 @@ f1_keywords:
 - hypot
 - _hypot
 - _hypotf
-dev_langs:
-- C++
 helpviewer_keywords:
 - hypotenuse calculation
 - hypot function
@@ -43,16 +37,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3a8488b160c10eb29f0448127c44d3514f8debf3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea25ea87a0ec23a0e98dbdc7bb92ce691fc2fa0f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400197"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50439527"
 ---
 # <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
@@ -94,13 +84,13 @@ Valores de ponto flutuante.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, **hypot** retorna o comprimento da hipotenusa; no estouro, **hypot** retorna INF (infinito) e o **errno** variável é definida como **ERANGE** . Você pode usar **matherr** para modificar o tratamento de erros.
+Se for bem-sucedido, **hypot** retorna o comprimento da hipotenusa, no estouro, **hypot** retorna INF (infinito) e o **errno** variável é definida como **ERANGE** . Você pode usar **matherr** para modificar o tratamento de erros.
 
 Para obter mais informações sobre os códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **hypot** funções calculam o comprimento da hipotenusa de um triângulo, considerando o comprimento dos dois lados *x* e *y* (em outras palavras, a raiz quadrada de *x*<sup>2</sup> + *y*<sup>2</sup>).
+O **hypot** funções calculam o comprimento da hipotenusa de um triângulo retângulo, dado o comprimento dos dois lados *x* e *y* (em outras palavras, a raiz quadrada de *x*<sup>2</sup> + *y*<sup>2</sup>).
 
 As versões das funções que têm sublinhados iniciais são fornecidas para compatibilidade com os padrões anteriores. Seu comportamento é idêntico ao das versões que não têm sublinhados iniciais. É recomendável usar as versões sem sublinhados iniciais para o novo código.
 
