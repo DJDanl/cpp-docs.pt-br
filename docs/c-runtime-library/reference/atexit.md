@@ -1,10 +1,6 @@
 ---
-title: atexit | Microsoft Docs
-ms.custom: ''
+title: atexit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atexit
 apilocation:
@@ -21,22 +17,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - atexit
-dev_langs:
-- C++
 helpviewer_keywords:
 - processing, at exit
 - atexit function
 ms.assetid: 92c156d2-8052-4e58-96dc-00128baac6f9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d66954348d5d812fac7eca0b231304267cc26157
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48f0fbfa1f3350f73899fcdbb3bf7922f1c6174d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393128"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556632"
 ---
 # <a name="atexit"></a>atexit
 
@@ -57,15 +47,15 @@ Função a ser chamada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**atexit** retorna 0 se for bem-sucedido, ou um valor diferente de zero, se ocorrer um erro.
+**atexit** retorna 0 se for bem-sucedido ou um valor diferente de zero se ocorrer um erro.
 
 ## <a name="remarks"></a>Comentários
 
-O **atexit** função é passada para o endereço de uma função *func* a ser chamado quando o programa será encerrado normalmente. As chamadas sucessivas para **atexit** criar um registro de funções que são executados em último a entrar, primeiro a sair (UEPS) ordem. As funções são passados para **atexit** não pode receber parâmetros. **atexit** e **OnExit** usam o heap para armazenar o registro de funções. Assim, o número de funções que podem ser registradas é limitado apenas pela memória de heap.
+O **atexit** função é passada para o endereço de uma função *func* a ser chamado quando o programa for encerrado normalmente. Chamadas sucessivas à **atexit** criam um registro das funções que são executadas no último a entrar, primeiro a sair (UEPS) ordem. As funções passadas para **atexit** não pode receber parâmetros. **atexit** e **OnExit** usam o heap para conter o registro das funções. Assim, o número de funções que podem ser registradas é limitado apenas pela memória de heap.
 
-O código de **atexit** função não deve conter qualquer dependência em qualquer DLL que pode ter sido descarregado quando a **atexit** função é chamada.
+O código a **atexit** função não deve conter nenhuma dependência de nenhuma DLL que poderia já ter sido descarregada quando o **atexit** função é chamada.
 
-Para gerar um aplicativo compatível com ANSI, use o padrão ANSI **atexit** função (em vez de semelhante **OnExit** função).
+Para gerar um aplicativo compatível com ANSI, use o padrão ANSI **atexit** função (em vez de semelhantes **OnExit** função).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -75,7 +65,7 @@ Para gerar um aplicativo compatível com ANSI, use o padrão ANSI **atexit** fun
 
 ## <a name="example"></a>Exemplo
 
-Este programa envios quatro funções na pilha de funções para ser executado quando **atexit** é chamado. Quando o programa é encerrado, esses programas são executados no esquema último a entrar, primeiro a sair.
+Esse programa envia quatro funções para a pilha de funções seja executado quando **atexit** é chamado. Quando o programa é encerrado, esses programas são executados no esquema último a entrar, primeiro a sair.
 
 ```C
 // crt_atexit.c

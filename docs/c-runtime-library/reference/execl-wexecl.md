@@ -1,10 +1,6 @@
 ---
-title: _execl, _wexecl | Microsoft Docs
-ms.custom: ''
+title: _execl, _wexecl
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execl
 - _wexecl
@@ -25,24 +21,18 @@ f1_keywords:
 - _execl
 - _wexecl
 - wexecl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _execl function
 - wexecl function
 - _wexecl function
 - execl function
 ms.assetid: 81fefb8a-0a06-4221-b2bc-be18e38e89f4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32ec50c83a29f3c517955979c2df0de5203dc9a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3d736849f90782425e6e1c1cff04536972318c91
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398497"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530294"
 ---
 # <a name="execl-wexecl"></a>_execl, _wexecl
 
@@ -78,7 +68,7 @@ Lista de ponteiros para os parâmetros.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de -1 indica um erro, caso em que o **errno** variável global está definido.
+Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor de retorno de -1 indica um erro, caso em que o **errno** variável global é definida.
 
 |Valor errno|Descrição|
 |-----------------|-----------------|
@@ -94,7 +84,7 @@ Se bem-sucedidas, essas funções não retornam ao processo de chamada. Um valor
 
 Cada uma dessas funções carrega e executa um novo processo, passando cada argumento de linha de comando como um parâmetro separado. O primeiro argumento é o nome do arquivo executável ou comando e o segundo argumento deve ser o mesmo que o primeiro. Ele se torna `argv[0]` no processo executado. O terceiro argumento é o primeiro argumento, `argv[1]`, do processo que está sendo executado.
 
-O **execl** funções validam seus parâmetros. Se qualquer um dos *cmdname* ou *arg0* é um ponteiro nulo ou cadeia de caracteres vazia, essas funções invocam o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md) se execução tem permissão para continuar, defina essas funções **errno** para **EINVAL** e retorne -1. Nenhum processo novo é executado.
+O **execl** funções validam seus parâmetros. Se qualquer um dos *cmdname* ou *arg0* é um ponteiro nulo ou cadeia de caracteres vazia, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md) se execução tem permissão para continuar, essas funções definirão **errno** à **EINVAL** e retornarão -1. Nenhum processo novo é executado.
 
 ## <a name="requirements"></a>Requisitos
 

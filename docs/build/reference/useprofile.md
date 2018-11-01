@@ -1,28 +1,18 @@
 ---
-title: /USEPROFILE (dados de uso PGO com /ltcg) | Microsoft Docs
-ms.custom: ''
+title: /USEPROFILE (dados de uso PGO com /ltcg)
 ms.date: 03/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 f1_keywords:
 - USEPROFILE
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 156a571eaa3db31b8c5345f1550346503651665d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b780bed3b92b874f2bf18fb0235e8e2baf95ae9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377987"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550625"
 ---
-# <a name="useprofile-run-pgo-in-thread-safe-mode"></a>/USEPROFILE (PGO executar no modo de segurança de thread)
+# <a name="useprofile-run-pgo-in-thread-safe-mode"></a>/USEPROFILE (executar PGO no modo de segurança do thread)
 
-Essa opção de vinculador junto com [/LTCG (geração de código Link-time](ltcg-link-time-code-generation.md) informa o vinculador para criar, usando dados de treinamento de Otimização Guiada por perfil (PGO).
+Essa opção de vinculador junto com [/LTCG (geração de código Link-time](ltcg-link-time-code-generation.md) informa o vinculador para compilar usando dados de treinamento de Otimização Guiada por perfil (PGO).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,25 +28,25 @@ Especifica um nome de arquivo de base para o arquivo. PGD. Por padrão, o vincul
 
 ## <a name="remarks"></a>Comentários
 
-O **/USEPROFILE** opção de vinculador é usada junto com **/LTCG** para gerar ou atualizar uma compilação otimizada com base nos dados de treinamento PGO. É o equivalente de preterido **/LTCG:PGUPDATE** e **/LTCG:PGOPTIMIZE** opções.
+O **/USEPROFILE** opção de vinculador é usada junto com **/LTCG** para gerar ou atualizar uma compilação otimizada com base nos dados de treinamento de PGO. É o equivalente do preteridas **/LTCG:PGUPDATE** e **/LTCG:PGOPTIMIZE** opções.
 
-Opcional **AGRESSIVO** argumento desabilita relacionados a tamanho heurística para tentar otimizar a velocidade. Isso pode resultar em otimizações que substancialmente aumentam o tamanho de seu executável e não podem aumentar a velocidade resultante. Você deve criar o perfil e comparar os resultados de uso e não **AGRESSIVO**. Esse argumento deve ser especificado explicitamente. ele não está habilitado por padrão.
+Opcional **AGRESSIVA** argumento desabilita relacionadas ao tamanho heurística para tentar otimizar a velocidade. Isso pode resultar em otimizações que substancialmente aumentam o tamanho de seu executável e não podem aumentar a velocidade resultante. Você deve criar o perfil e comparar os resultados do uso e não usando **AGRESSIVA**. Esse argumento deve ser especificado explicitamente. ele não está habilitado por padrão.
 
-O **PGD** argumento especifica um nome opcional para o arquivo de PGD de dados de treinamento usar as mesmas que na [/GENPROFILE ou /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md). É o equivalente de preterido **/PGD** alternar. Por padrão, ou se nenhum *filename* for especificado, um arquivo. PGD que tem o mesmo nome base como o executável é usado.
+O **PGD** argumento especifica um nome opcional para o arquivo de PGD de dados de treinamento usar as mesmas que na [/GENPROFILE ou /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md). É o equivalente do preteridas **/PGD.** alternar. Por padrão, ou se nenhum *filename* for especificado, um arquivo. PGD que tem o mesmo nome base como o executável é usado.
 
-O **/USEPROFILE** opção de vinculador é nova no Visual Studio 2015.
+O **/USEPROFILE** a opção de vinculador é nova no Visual Studio 2015.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para definir esta opção do vinculador no ambiente de desenvolvimento do Visual Studio
 
-1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração Visual C++ Project Properties](../../ide/working-with-project-properties.md).
+1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, consulte [configuração de propriedades do projeto Visual C++](../../ide/working-with-project-properties.md).
 
 1. Selecione o **propriedades de configuração** > **vinculador** > **otimização** página de propriedades.
 
-1. No **geração de código de tempo de vinculação** propriedade, escolha **usar geração de código de tempo de vinculação (/ /ltcg)**.
+1. No **geração de código de tempo de vinculação** propriedade, escolha **Use geração de código de tempo de vinculação (/ LTCG)**.
 
 1. Selecione o **propriedades de configuração** > **vinculador** > **linha de comando** página de propriedades.
 
-1. Insira o **/USEPROFILE** opção e argumentos opcionais para o **opções adicionais** caixa. Escolha **Okey** para salvar suas alterações.
+1. Insira o **/USEPROFILE** opção e argumentos opcionais para o **opções adicionais** caixa. Escolher **Okey** para salvar suas alterações.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para definir esta opção do vinculador por meio de programação
 

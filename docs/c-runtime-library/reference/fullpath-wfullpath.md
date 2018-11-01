@@ -1,10 +1,6 @@
 ---
-title: _fullpath, _wfullpath | Microsoft Docs
-ms.custom: ''
+title: _fullpath, _wfullpath
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fullpath
 - _wfullpath
@@ -26,8 +22,6 @@ f1_keywords:
 - fullpath
 - _wfullpath
 - _fullpath
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wfullpath function
 - relative file paths
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b472987b0cac41c57e5fd22b2eedecef522613b4
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: aeacaf581b7f33ee893754c192ae547376ce73ea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451674"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550391"
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
 
@@ -74,16 +64,16 @@ Ponteiro para um buffer que contém o nome de caminho absoluto ou completo, ou *
 *relPath*<br/>
 Nome de caminho relativo.
 
-*maxLength*<br/>
+*MaxLength*<br/>
 Comprimento máximo do buffer de nome de caminho absoluto (*absPath*). Esse comprimento é em bytes para **FullPath** , mas em caracteres largos (**wchar_t**) para **wfullpath**.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retorna um ponteiro para um buffer que contém o nome de caminho absoluto (*absPath*). Se houver um erro (por exemplo, se o valor passado na *relPath* inclui uma letra de unidade que não é válido ou não pode ser encontrada, ou se o comprimento do nome do caminho absoluto criado (*absPath*) é maior que *maxLength*), a função retorna **nulo**.
+Cada uma dessas funções retorna um ponteiro para um buffer que contém o nome de caminho absoluto (*absPath*). Se houver um erro (por exemplo, se o valor passado em *relPath* inclui uma letra de unidade que não é válido ou não for encontrada, ou se o comprimento do nome de caminho absoluto criado (*absPath*) é maior que *maxLength*), a função retorna **nulo**.
 
 ## <a name="remarks"></a>Comentários
 
-O **FullPath** função expande o nome de caminho relativo no *relPath* de caminho totalmente qualificado ou absoluto e armazena esse nome no *absPath*. Se *absPath* é **nulo**, **malloc** é usada para alocar um buffer de tamanho suficiente para conter o nome de caminho. É responsabilidade do chamador liberar esse buffer. Um nome de caminho relativo especifica um caminho para outro local do local atual (como o diretório de trabalho atual: "."). Um nome de caminho absoluto é a expansão de um nome de caminho relativo que indica o caminho inteiro necessário para alcançar o local desejado da raiz do sistema de arquivos. Ao contrário de **makepath**, **FullPath** pode ser usado para obter o nome de caminho absoluto para caminhos relativos (*relPath*) que incluem ". /"ou"... / "em seus nomes.
+O **FullPath** expande o nome de caminho relativo no *relPath* a seu caminho totalmente qualificado ou absoluto e armazena esse nome no *absPath*. Se *absPath* é **nulo**, **malloc** é usado para alocar um buffer de tamanho suficiente para armazenar o nome do caminho. É responsabilidade do chamador liberar esse buffer. Um nome de caminho relativo especifica um caminho para outro local do local atual (como o diretório de trabalho atual: "."). Um nome de caminho absoluto é a expansão de um nome de caminho relativo que indica o caminho inteiro necessário para alcançar o local desejado da raiz do sistema de arquivos. Diferentemente **makepath**, **FullPath** pode ser usado para obter o nome de caminho absoluto para caminhos relativos (*relPath*) que incluem ". /"ou"... / "em seus nomes.
 
 Por exemplo, para usar rotinas de tempo de execução de C, o aplicativo deve incluir os arquivos de cabeçalho que contêm as declarações para as rotinas. Cada instrução include do arquivo de cabeçalho faz referência ao local do arquivo de forma relativa (do diretório de trabalho do aplicativo):
 
@@ -95,11 +85,11 @@ quando o caminho absoluto (local do sistema de arquivos real) do arquivo pode se
 
 `\\machine\shareName\msvcSrc\crt\headerFiles\stdlib.h`
 
-**FullPath** manipula automaticamente os argumentos da cadeia de caracteres multibyte conforme apropriado, reconhecer sequências de caracteres multibyte de acordo com a página de código multibyte em uso no momento. **wfullpath** é uma versão de caractere largo de **FullPath**; os argumentos de cadeia de caracteres para **wfullpath** são cadeias de caracteres do caractere largo. **wfullpath** e **FullPath** tenham comportamento idêntico, exceto que **wfullpath** não trata cadeias de caracteres multibyte.
+**FullPath** manipula automaticamente argumentos de cadeia de caracteres multibyte conforme apropriado, reconhecendo as sequências de caracteres multibyte de acordo com a página de código multibyte em uso no momento. **wfullpath** é uma versão de caractere largo de **FullPath**; os argumentos de cadeia de caracteres a serem **wfullpath** são cadeias de caracteres largos. **wfullpath** e **FullPath** se comportam de forma idêntica exceto que **wfullpath** não manipula cadeias de caracteres multibyte.
 
-Se **Debug** e **crtdbg_map_alloc** forem definida, chamadas para **FullPath** e **wfullpath** são substituídos por chamadas para **fullpath_dbg** e **wfullpath_dbg** para permitir a depuração de alocações de memória. Para obter mais informações, consulte [_fullpath_dbg, _wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md).
+Se **Debug** e **crtdbg_map_alloc** forem definidos, chamadas para **FullPath** e **wfullpath** são substituídos por chamadas para **fullpath_dbg** e **wfullpath_dbg** para permitir a depuração de alocações de memória. Para obter mais informações, consulte [_fullpath_dbg, _wfullpath_dbg](fullpath-dbg-wfullpath-dbg.md).
 
-Essa função invoca o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md), se *maxlen* é menor ou igual a 0. Se a execução é permitida para continuar, esta função define **errno** para **EINVAL** e retorna **nulo**.
+Essa função invocará o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md), se *maxlen* é menor ou igual a 0. Se a execução puder continuar, essa função definirá **errno** à **EINVAL** e retorna **nulo**.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -107,7 +97,7 @@ Essa função invoca o manipulador de parâmetro inválido, conforme descrito em
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfullpath**|**_fullpath**|**_fullpath**|**_wfullpath**|
 
-Se o *absPath* buffer é **nulo**, **FullPath** chamadas [malloc](malloc.md) para alocar um buffer e ignora o *maxLength*  argumento. É responsabilidade do chamador desalocar esse buffer (usando [free](free.md)) conforme apropriado. Se o *relPath* argumento especifica uma unidade de disco, o diretório atual da unidade é combinado com o caminho.
+Se o *absPath* buffer é **nulo**, **FullPath** chamadas [malloc](malloc.md) para alocar um buffer e ignorará o *maxLength*  argumento. É responsabilidade do chamador desalocar esse buffer (usando [free](free.md)) conforme apropriado. Se o *relPath* argumento especifica uma unidade de disco, o diretório atual dessa unidade é combinado com o caminho.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,10 +1,6 @@
 ---
-title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock | Microsoft Docs
-ms.custom: ''
+title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ungetch_nolock
 - _ungetwch_nolock
@@ -34,8 +30,6 @@ f1_keywords:
 - _ungettch_nolock
 - _ungettch
 - _ungetwch_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ungetch function
 - ungetwch function
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c9c6f09c3bd6ce679662d9ea77f8a7b360521b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7407d26606bd5242c430961faa4f60090b83f036
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411290"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430297"
 ---
 # <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
@@ -92,11 +82,11 @@ O caractere a ser enviado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-As duas funções retornam o caractere *c* se for bem-sucedido. Se houver um erro, **ungetch** retorna um valor de **EOF** e **ungetwch** retorna **WEOF**.
+Ambas as funções retornam o caractere *c* se for bem-sucedido. Se houver um erro **ungetch** retorna um valor de **EOF** e **ungetwch** retorna **WEOF**.
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções por push o caractere *c* para o console, causando *c* para ser o próximo caractere lido por **getch** ou **getche** (ou **getwch** ou **getwche**). **ungetch** e **ungetwch** falhar se eles são chamados mais de uma vez antes da próxima leitura. O *c* argumento pode não estar **EOF** (ou **WEOF**).
+Essas funções empurram o caractere *c* para o console, causando *c* para ser o próximo caractere lido por **getch** ou **getche** (ou **getwch** ou **getwche**). **ungetch** e **ungetwch** falhar se eles são chamados mais de uma vez antes da próxima leitura. O *c* argumento pode não estar **EOF** (ou **WEOF**).
 
 As versões com o sufixo **_nolock** são idênticas, exceto pelo fato de não serem protegidas contra interferência de outros threads. Elas pode ser mais rápidas, pois não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
