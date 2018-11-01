@@ -1,10 +1,6 @@
 ---
-title: sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l | Microsoft Docs
-ms.custom: ''
+title: sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _sscanf_s_l
 - sscanf_s
@@ -29,8 +25,6 @@ f1_keywords:
 - _swscanf_s_l
 - _stscanf_s_l
 - _sscanf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - stscanf_s_l function
 - stscanf_s function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 08cdc1b3fe2d190bdc4a6cbb3d505378e6dcf6ae
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: b1f535ad8a418fa3ce6492f9bdaa6e0299073504
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451817"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538132"
 ---
 # <a name="sscanfs-sscanfsl-swscanfs-swscanfsl"></a>sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l
 
@@ -104,15 +94,15 @@ A localidade a ser usada
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retorna o número de campos que são convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. O valor de retorno é **EOF** para um erro ou se o fim da cadeia de caracteres for atingido antes da conversão primeiro.
+Cada uma dessas funções retorna o número de campos que são convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. O valor retornado será **EOF** para um erro ou se o final da cadeia de caracteres for atingido antes da primeira conversão.
 
-Se *buffer* ou *formato* é um **nulo** ponteiro, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam -1 e defina **errno** para **EINVAL**
+Se *buffer* ou *formato* é um **nulo** ponteiro, o manipulador de parâmetro inválido será invocado, conforme descrito no [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão -1 e defina **errno** para **EINVAL**
 
 Para obter mais informações sobre esses e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **sscanf_s** função lê dados de *buffer* no local que é fornecido por cada *argumento*. Os argumentos após a cadeia de caracteres de formato especificam ponteiros para variáveis que têm um tipo que corresponde a um especificador de tipo na *formato*. Ao contrário da versão menos segura [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md), um parâmetro de tamanho do buffer é necessário quando você usar os caracteres de campo do tipo **c**, **C**, **s**, **S**, ou conjuntos de controle que são incluídos na cadeia de caracteres **[]**. O tamanho do buffer em caracteres deve ser fornecido como um parâmetro adicional imediatamente após cada parâmetro de buffer que precisa dele. Por exemplo, se você estiver lendo uma cadeia de caracteres, o tamanho do buffer para essa cadeia de caracteres será passado conforme demonstrado a seguir:
+O **sscanf_s** função lê dados da *buffer* para o local que é fornecido por cada *argumento*. Os argumentos após a cadeia de caracteres de formato especificam ponteiros para variáveis que têm um tipo que corresponde a um especificador de tipo em *formato*. Ao contrário da versão menos segura [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md), um parâmetro de tamanho do buffer é necessário quando você usa os caracteres de campo do tipo **c**, **C**, **s**, **S**, ou conjuntos de controle que são incluídos na cadeia de caracteres **[]**. O tamanho do buffer em caracteres deve ser fornecido como um parâmetro adicional imediatamente após cada parâmetro de buffer que precisa dele. Por exemplo, se você estiver lendo uma cadeia de caracteres, o tamanho do buffer para essa cadeia de caracteres será passado conforme demonstrado a seguir:
 
 ```C
 wchar_t ws[10];
@@ -138,13 +128,13 @@ sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated
 Para obter mais informações, consulte os caracteres de campo do tipo [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) e [scanf](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> O parâmetro de tamanho é do tipo **sem sinal**, não **size_t**. Ao compilar para destinos de 64 bits, use uma conversão estática para converter **countof** ou **sizeof** resultados para o tamanho correto.
+> O parâmetro de tamanho é do tipo **sem sinal**, e não **size_t**. Ao compilar para destinos de 64 bits, use uma conversão estática para converter **countof** ou **sizeof** resultados para o tamanho correto.
 
-O *formato* controles de argumento a interpretação da entrada de campos e tem o mesmo formulário e funcionar como o *formato* argumento para o **scanf_s** função. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
+O *formato* controles de argumento a interpretação da entrada campos e tem o mesmo formato e função que o *formato* argumento para o **scanf_s** função. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
 
-**swscanf_s** é uma versão de caractere largo de **sscanf_s**; os argumentos para **swscanf_s** são cadeias de caracteres do caractere largo. **sscanf_s** não processa multibyte caracteres hexadecimais. **swscanf_s** não trata hexadecimal de largura inteira Unicode ou caracteres de "zona de compatibilidade". Caso contrário, **swscanf_s** e **sscanf_s** se comportam de forma idêntica.
+**swscanf_s** é uma versão de caractere largo de **sscanf_s**; os argumentos a serem **swscanf_s** são cadeias de caracteres largos. **sscanf_s** não manipula caracteres hexadecimais multibyte. **swscanf_s** não manipula hexadecimal de largura total Unicode ou caracteres de "zona de compatibilidade". Caso contrário, **swscanf_s** e **sscanf_s** se comportam de forma idêntica.
 
-As versões dessas funções que têm o **_l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade que é transmitido em vez da localidade do thread atual.
+As versões dessas funções que têm o **l** sufixo são idênticas, exceto por usarem o parâmetro de localidade passado em vez da localidade do thread atual.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

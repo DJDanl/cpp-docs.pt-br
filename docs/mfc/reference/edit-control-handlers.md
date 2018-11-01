@@ -1,10 +1,6 @@
 ---
-title: Manipuladores do controle de edição | Microsoft Docs
-ms.custom: ''
+title: Manipuladores do controle de edição
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - ON_EN_ERRSPACE
 - ON_EN_UPDATE
@@ -14,8 +10,6 @@ f1_keywords:
 - ON_EN_MAXTEXT
 - ON_EN_SETFOCUS
 - ON_EN_CHANGE
-dev_langs:
-- C++
 helpviewer_keywords:
 - ON_EN_ERRSPACE macro [MFC]
 - ON_EN_SETFOCUS macro [MFC]
@@ -27,16 +21,12 @@ helpviewer_keywords:
 - ON_EN_KILLFOCUS macro [MFC]
 - edit controls [MFC], edit control handlers
 ms.assetid: 55b88b5e-12b5-4422-b03e-c8c2f27d095c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e4828eb2241346a0cee4a1d1a732426e28aeb61
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 67734281191d0b16d3ebaa43610915b04a8069ff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395317"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509025"
 ---
 # <a name="edit-control-handlers"></a>Manipuladores do controle de edição
 
@@ -55,5 +45,5 @@ As seguintes entradas de mapa correspondem ao protótipo de função.
 
 ## <a name="see-also"></a>Consulte também
 
-[Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)
+[Mapas de mensagens](../../mfc/reference/message-maps-mfc.md)
 

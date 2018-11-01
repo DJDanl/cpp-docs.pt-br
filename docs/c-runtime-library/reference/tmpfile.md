@@ -1,10 +1,6 @@
 ---
-title: tmpfile | Microsoft Docs
-ms.custom: ''
+title: tmpfile
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tmpfile
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - tmpfile
-dev_langs:
-- C++
 helpviewer_keywords:
 - temporary files
 - tmpfile function
 - temporary files, creating
 ms.assetid: c4a4dc24-70da-438d-ae4e-98352d88e375
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ebcad2a25af2f2acb0056d882c4191f1a51293d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 98afcb7a3e04a96a1b08bc1b975634153e550839
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409063"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530319"
 ---
 # <a name="tmpfile"></a>tmpfile
 
@@ -52,15 +42,15 @@ FILE *tmpfile( void );
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, **tmpfile** retorna um ponteiro de fluxo. Caso contrário, ele retorna um **nulo** ponteiro.
+Se for bem-sucedido, **tmpfile** retorna um ponteiro de fluxo. Caso contrário, retornará um **nulo** ponteiro.
 
 ## <a name="remarks"></a>Comentários
 
-O **tmpfile** função cria um arquivo temporário e retorna um ponteiro para esse fluxo. O arquivo temporário é criado no diretório raiz. Para criar um arquivo temporário em um diretório que não seja a raiz, use [tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) ou [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) em conjunto com [fopen](fopen-wfopen.md).
+O **tmpfile** função cria um arquivo temporário e retorna um ponteiro nesse fluxo. O arquivo temporário é criado no diretório raiz. Para criar um arquivo temporário em um diretório que não seja a raiz, use [tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) ou [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) em conjunto com [fopen](fopen-wfopen.md).
 
-Se o arquivo não pode ser aberto, **tmpfile** retorna um **nulo** ponteiro. O arquivo temporário é excluído automaticamente quando o arquivo é fechado, o programa será encerrado normalmente ou quando **rmtmp** é chamado, supondo que o diretório de trabalho atual não é alterado. O arquivo temporário é aberto no **w + b** modo (binário de leitura/gravação).
+Se o arquivo não pode ser aberto, **tmpfile** retorna um **nulo** ponteiro. Esse arquivo temporário é excluído automaticamente quando o arquivo é fechado quando o programa for encerrado normalmente ou quando **rmtmp** é chamado, supondo que o diretório de trabalho atual não é alterado. O arquivo temporário é aberto no **w + b** modo (leitura/gravação binária).
 
-Falha pode ocorrer se você tentar mais de TMP_MAX (consulte STDIO. H) chamadas com **tmpfile**.
+Falha pode ocorrer se você tentar mais de TMP_MAX (consulte STDIO. H) chamadas de com **tmpfile**.
 
 ## <a name="requirements"></a>Requisitos
 
