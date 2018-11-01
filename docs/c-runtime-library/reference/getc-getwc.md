@@ -1,10 +1,6 @@
 ---
-title: getc, getwc | Microsoft Docs
-ms.custom: ''
+title: getc, getwc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - getwc
 - getc
@@ -26,8 +22,6 @@ f1_keywords:
 - getwc
 - _gettchar
 - getc
-dev_langs:
-- C++
 helpviewer_keywords:
 - characters, reading
 - _gettc function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - getwc function
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9a4908e8fa3343bb54191fe2494f738ff0edf887
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbaee79eac6802959a11f7f1ba30eaf590ecf2f6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404325"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664861"
 ---
 # <a name="getc-getwc"></a>getc, getwc
 
@@ -66,12 +56,12 @@ wint_t getwc(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fluxo*<br/>
+*fluxo*<br/>
 Fluxo de entrada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna o caractere lido. Para indicar um erro de leitura ou uma condição de fim de arquivo, **getc** retorna **EOF**, e **getwc** retorna **WEOF**. Para **getc**, use **ferror** ou **feof** para verificar se um erro ou para o final do arquivo. Se *fluxo* é **nulo**, **getc** e **getwc** invocar o manipulador de parâmetro inválido, conforme descrito em [parâmetro Validação](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam **EOF** (ou **WEOF** para **getwc**) e defina **errno** para  **EINVAL**.
+Retorna o caractere lido. Para indicar um erro de leitura ou uma condição de fim-de-arquivo, **getc** retorna **EOF**, e **getwc** retorna **WEOF**. Para **getc**, use **ferror** ou **feof** para verificar um erro ou fim do arquivo. Se *stream* é **nulo**, **getc** e **getwc** invocarão o manipulador de parâmetro inválido, conforme descrito em [parâmetro Validação](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **EOF** (ou **WEOF** para **getwc**) e defina **errno** para  **EINVAL**.
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.
 
@@ -86,7 +76,7 @@ Veja comentários específicos sobre a rotina a seguir.
 |Rotina|Comentários|
 |-------------|-------------|
 |**getc**|Mesmo que **fgetc**, mas implementado como uma função e como uma macro.|
-|**getwc**|Versão de caractere largo de **getc**. Lê um caractere multibyte ou um caractere largo de acordo com se *fluxo* é aberto em modo de texto ou binário.|
+|**getwc**|Versão de caractere largo de **getc**. Lê um caractere multibyte ou um caractere largo se *stream* é aberto no modo de texto ou binário.|
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

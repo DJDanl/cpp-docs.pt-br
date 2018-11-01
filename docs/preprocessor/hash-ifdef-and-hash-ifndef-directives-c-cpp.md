@@ -1,15 +1,9 @@
 ---
-title: '#Diretivas de # ifdef e #ifndef (C/C++) | Microsoft Docs'
-ms.custom: ''
+title: '#Diretivas de # ifdef e #ifndef (C/C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - '#ifndef'
 - '#ifdef'
-dev_langs:
-- C++
 helpviewer_keywords:
 - '#ifdef directive'
 - preprocessor, directives
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - ifndef directive (#ifndef)
 - '#ifndef directive'
 ms.assetid: 2b0be69d-9e72-45d8-8e24-e4130fb2455b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d1ba603941b5d08bc56d8385f2b721fb1bef6586
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 418b19e844d56fa2f33cf91a1b072e9add771eb2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50075879"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643788"
 ---
 # <a name="ifdef-and-ifndef-directives-cc"></a>Diretivas #ifdef e #ifndef (C/C++)
 O **#ifdef** e **#ifndef** diretivas de executam a mesma tarefa como o `#if` diretiva quando ele é usado com **definidas**( *identificador* ).

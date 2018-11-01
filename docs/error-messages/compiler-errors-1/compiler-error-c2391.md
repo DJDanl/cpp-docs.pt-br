@@ -1,27 +1,17 @@
 ---
-title: Erro do compilador C2391 | Microsoft Docs
-ms.custom: ''
+title: Erro do compilador C2391
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2391
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2391
 ms.assetid: 63a9c6b9-03cc-4517-885c-bdcd048643b3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1201651ffc52dae7b8f184895f8005750ee4697e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7683ad1580454bd7edb1fc08e5bd110a3e5c36c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46102366"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491479"
 ---
 # <a name="compiler-error-c2391"></a>Erro do compilador C2391
 

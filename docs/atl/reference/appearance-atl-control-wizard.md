@@ -1,27 +1,17 @@
 ---
-title: Aparência, o Assistente de controle ATL | Microsoft Docs
-ms.custom: ''
+title: Aparência, o Assistente de controle ATL
 ms.date: 08/31/2018
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.control.misc
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL Control Wizard, appearance
 ms.assetid: cc16d7ff-74d7-4c15-9ebd-4b19201ff457
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 132930c1ad7d4b9fc4ae9c3a875bbd2c6ec6f9d2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d2ebba551d9b848a3a59944f7efb5f0f39af95e2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755119"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602157"
 ---
 # <a name="appearance-atl-control-wizard"></a>Aparência, o Assistente de controle ATL
 

@@ -1,10 +1,6 @@
 ---
-title: rint, rintf, rintl | Microsoft Docs
-ms.custom: ''
+title: rint, rintf, rintl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - rintf
 - rintl
@@ -26,23 +22,17 @@ f1_keywords:
 - rintf
 - rintl
 - rint
-dev_langs:
-- C++
 helpviewer_keywords:
 - rintf function
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 784a540982c41ba7aa144559d3846746b59481f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407282"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609476"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -68,7 +58,7 @@ O valor do ponto flutuante a ser arredondado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **imprimir** funções retornam um valor de ponto flutuante que representa o inteiro mais próximo para *x*. Na metade valores são arredondados acordo com a configuração atual do modo de arredondamento ponto flutuante, o mesmo que o **nearbyint** funções. Ao contrário de **nearbyint** funções, o **imprimir** funções podem gerar o **FE_INEXACT** exceção de ponto flutuante se o resultado for diferente no valor do argumento. Nenhum erro é retornado.
+O **rimir** funções retornam um valor de ponto flutuante que representa o inteiro mais próximo a *x*. Valores decimais são arredondados de acordo com a configuração atual do modo de arredondamento ponto flutuante, o mesmo que o **nearbyint** funções. Ao contrário do **nearbyint** funções, o **rimir** funções podem gerar o **FE_INEXACT** exceção de ponto flutuante se o resultado é diferente no valor do argumento. Nenhum erro é retornado.
 
 |Entrada|Exceção SEH|**matherr** exceção|
 |-----------|-------------------|--------------------------|
@@ -77,13 +67,13 @@ O **imprimir** funções retornam um valor de ponto flutuante que representa o i
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **imprimir** que levar e retornar **float** e **longo** **duplo** valores. Em um programa C, **imprimir** sempre usa e retorna um **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **rimir** que usam e retornam **float** e **longo** **double** valores. Em um programa do C **rimir** sempre usa e retorna um **duplo**.
 
 ## <a name="requirements"></a>Requisitos
 
 |Função|Cabeçalho C|Cabeçalho C++|
 |--------------|--------------|------------------|
-|**imprimir**, **rintf**, **rintl**|\<math.h>|\<cmath>|
+|**rimir**, **rintf**, **rintl**|\<math.h>|\<cmath>|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

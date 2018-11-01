@@ -1,10 +1,6 @@
 ---
-title: _RTC_SetErrorType | Microsoft Docs
-ms.custom: ''
+title: _RTC_SetErrorType
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _RTC_SetErrorType
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - RTC_SetErrorType
 - _RTC_SetErrorType
-dev_langs:
-- C++
 helpviewer_keywords:
 - run-time errors
 - RTC_SetErrorType function
 - _RTC_SetErrorType function
 ms.assetid: f5f99be7-d357-4b11-b8f5-ddd3428f2b06
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83395727b37ea3901e2e3c28d7adb6663f043d12
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 022079bd199477c8bca92e853ed66879c96428db
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406609"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635663"
 ---
 # <a name="rtcseterrortype"></a>_RTC_SetErrorType
 
@@ -59,9 +49,9 @@ int _RTC_SetErrorType(
 Um número entre zero e um a menos do que o valor retornado por [_RTC_NumErrors](rtc-numerrors.md).
 
 *ErrType*<br/>
-O valor a ser atribuído a esse *errnum*. Por exemplo, você pode usar **_CRT_ERROR**. Se você estiver usando **crtdbgreport** como seu manipulador de erro, *ErrType* só pode ser um dos símbolos definidos no [CrtSetReportMode](crtsetreportmode.md). Se você tiver seu próprio manipulador de erro ([_RTC_SetErrorFunc](rtc-seterrorfunc.md)), poderá ter tantos *ErrType*s quantos *errnum*s.
+O valor a ser atribuído a esse *errnum*. Por exemplo, você pode usar **_CRT_ERROR**. Se você estiver usando **crtdbgreport** como seu manipulador de erro *ErrType* só pode ser um dos símbolos definidos no [CrtSetReportMode](crtsetreportmode.md). Se você tiver seu próprio manipulador de erro ([_RTC_SetErrorFunc](rtc-seterrorfunc.md)), poderá ter tantos *ErrType*s quantos *errnum*s.
 
-Um *ErrType* de _RTC_ERRTYPE_IGNORE tem um significado especial para **CrtSetReportMode**; o erro será ignorado.
+Uma *ErrType* de rtc_errtype_ignore tem um significado especial para **CrtSetReportMode**; o erro será ignorado.
 
 ## <a name="return-value"></a>Valor de retorno
 

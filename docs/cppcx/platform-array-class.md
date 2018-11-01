@@ -1,28 +1,20 @@
 ---
-title: 'Classe Platform:: array | Microsoft Docs'
-ms.custom: ''
+title: Classe Platform::Array
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Namespace not found::Platform
 - VCCORLIB/Namespace not found::Platform::Array Constructors
 - VCCORLIB/Namespace not found::Platform::Array::Value
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4a1a015a0b8b473819d870a0262c96413bf1f9f1
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 6be34e801f7314efe76a4bea61caf13693eee31d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103756"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50661091"
 ---
 # <a name="platformarray-class"></a>Classe Platform::Array
 

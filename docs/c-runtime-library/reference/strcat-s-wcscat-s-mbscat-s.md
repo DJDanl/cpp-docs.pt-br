@@ -1,10 +1,6 @@
 ---
-title: strcat_s, wcscat_s, _mbscat_s | Microsoft Docs
-ms.custom: ''
+title: strcat_s, wcscat_s, _mbscat_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strcat_s
 - _mbscat_s
@@ -27,8 +23,6 @@ f1_keywords:
 - strcat_s
 - wcscat_s
 - _mbscat_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcscat_s function
 - strcat_s function
@@ -37,23 +31,19 @@ helpviewer_keywords:
 - _mbscat_s function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1f97152da60697edfcf337f8cceddfd77ed2704c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b622fbefc690317a4b57e3fd1bb54712b84f2a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414003"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621306"
 ---
 # <a name="strcats-wcscats-mbscats"></a>strcat_s, wcscat_s, _mbscat_s
 
 Acrescenta uma cadeia de caracteres. Estas versões de [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md) têm aprimoramentos de segurança, conforme descrito em [Recursos de segurança no CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **mbscat_s** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **mbscat_s** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -109,13 +99,13 @@ Zero se for bem-sucedido; um código de erro em caso de falha.
 
 |*strDestination*|*numberOfElements*|*strSource*|Valor retornado|Conteúdo de *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULO** ou não finalizada|qualquer|qualquer|**EINVAL**|não modificado|
+|**NULO** ou não finalizado|qualquer|qualquer|**EINVAL**|não modificado|
 |qualquer|qualquer|**NULL**|**EINVAL**|*strDestination*[0] definido como 0|
 |qualquer|0 ou muito pequeno|qualquer|**ERANGE**|*strDestination*[0] definido como 0|
 
 ## <a name="remarks"></a>Comentários
 
-O **strcat_s** função acrescenta *strSource* para *strDestination* e encerra a cadeia de caracteres resultante com um caractere nulo. O caractere inicial do *strSource* substitui o caractere null de terminação de *strDestination*. O comportamento de **strcat_s** será indefinido se sobreponham as cadeias de caracteres de origem e de destino.
+O **strcat_s** função acrescentará *strSource* para *strDestination* e encerra a cadeia de caracteres resultante com um caractere nulo. O caractere inicial de *strSource* substitui o caractere nulo de terminação de *strDestination*. O comportamento de **strcat_s** é indefinido se as cadeias de caracteres de origem e de destino se sobrepõem.
 
 Observe que o segundo parâmetro é o tamanho total do buffer, não o tamanho restante:
 
@@ -126,9 +116,9 @@ strcat_s(buf, 16, " End");               // Correct
 strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 ```
 
-**wcscat_s** e **mbscat_s** são versões de caracteres largos e caracteres multibyte **strcat_s**. O valor de retorno e argumentos **wcscat_s** são caracteres largos cadeias de caracteres; desses **mbscat_s** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
+**wcscat_s** e **mbscat_s** são versões de caractere largo e caracteres multibyte **strcat_s**. Os argumentos e o valor de retorno **wcscat_s** são largos cadeias de caracteres; aqueles de **mbscat_s** são cadeias de caracteres multibyte. Caso contrário, essas três funções se comportam de forma idêntica.
 
-Se *strDestination* é um ponteiro nulo ou não é terminada em nulo, ou se *strSource* é um **nulo** ponteiro, ou se a cadeia de caracteres de destino é muito pequena, o parâmetro inválido manipulador é chamado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam **EINVAL** e defina **errno** para **EINVAL**.
+Se *strDestination* for um ponteiro nulo ou não é terminada em nulo, ou se *strSource* é um **nulo** ponteiro, ou se a cadeia de caracteres de destino for muito pequena, o parâmetro inválido manipulador será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão **EINVAL** e defina **errno** para **EINVAL**.
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

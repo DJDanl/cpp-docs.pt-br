@@ -1,10 +1,6 @@
 ---
-title: vsscanf, vswscanf | Microsoft Docs
-ms.custom: ''
+title: vsscanf, vswscanf
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - vsscanf
 - vswscanf
@@ -24,22 +20,16 @@ f1_keywords:
 - _vstscanf
 - vsscanf
 - vswscanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - vswscanf function
 - vsscanf function
 ms.assetid: e96180f2-df46-423d-b4eb-0a49ab819bde
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7267e308f8b75a0e040e3fe33d51a9bdeea3914f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5bbe80cd2463c5c5b9b4ea55b8d6574675e42054
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415885"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478572"
 ---
 # <a name="vsscanf-vswscanf"></a>vsscanf, vswscanf
 
@@ -73,20 +63,20 @@ Lista de argumentos variáveis.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retorna o número de campos que são convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. O valor de retorno é **EOF** para um erro ou se o fim da cadeia de caracteres for atingido antes da conversão primeiro.
+Cada uma dessas funções retorna o número de campos que são convertidos e atribuídos com êxito; o valor retornado não inclui campos que foram lidos, mas não atribuídos. Um valor retornado igual a 0 indica que nenhum campo foi atribuído. O valor retornado será **EOF** para um erro ou se o final da cadeia de caracteres for atingido antes da primeira conversão.
 
-Se *buffer* ou *formato* é um **nulo** ponteiro, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, essas funções retornam -1 e defina **errno** para **EINVAL**.
+Se *buffer* ou *formato* é um **nulo** ponteiro, o manipulador de parâmetro inválido será invocado, conforme descrito no [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essas funções retornarão -1 e defina **errno** à **EINVAL**.
 
 Para obter mais informações sobre esses e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **vsscanf** função lê dados de *buffer* para os locais que são fornecidos por cada argumento o *arglist* lista de argumentos. Cada argumento na lista deve ser um ponteiro para uma variável que possui um tipo que corresponde a um especificador de tipo na *formato*. O *formato* controles de argumento a interpretação da entrada de campos e tem o mesmo formulário e funcionar como o *formato* argumento para o **scanf** função. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
+O **vsscanf** função lê dados da *buffer* nos locais fornecidos por cada argumento na *arglist* lista de argumentos. Cada argumento na lista deve ser um ponteiro para uma variável que tem um tipo que corresponde a um especificador de tipo em *formato*. O *formato* controles de argumento a interpretação da entrada campos e tem o mesmo formato e função que o *formato* argumento para o **scanf** função. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
 
 > [!IMPORTANT]
-> Quando você usa **vsscanf** para ler uma cadeia de caracteres, sempre especificar uma largura para o **%s** formato (por exemplo, **"% 32s texto"** em vez de **"%s"**); Caso contrário, a entrada formatada incorretamente pode causar uma saturação de buffer.
+> Quando você usa **vsscanf** para ler uma cadeia de caracteres, especifique sempre uma largura para o **%s** formato (por exemplo, **"% 32s texto"** , em vez de **"%s"**); Caso contrário, entrada formatada incorretamente poderá causar um estouro de buffer.
 
-**vswscanf** é uma versão de caractere largo de **vsscanf**; os argumentos para **vswscanf** são cadeias de caracteres do caractere largo. **vsscanf** não processa multibyte caracteres hexadecimais. **vswscanf** não trata hexadecimal de largura inteira Unicode ou caracteres de "zona de compatibilidade". Caso contrário, **vswscanf** e **vsscanf** se comportam de forma idêntica.
+**vswscanf** é uma versão de caractere largo de **vsscanf**; os argumentos a serem **vswscanf** são cadeias de caracteres largos. **vsscanf** não manipula caracteres hexadecimais multibyte. **vswscanf** não manipula hexadecimal de largura total Unicode ou caracteres de "zona de compatibilidade". Caso contrário, **vswscanf** e **vsscanf** se comportam de forma idêntica.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

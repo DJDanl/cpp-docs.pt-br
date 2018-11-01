@@ -1,10 +1,6 @@
 ---
-title: _chmod, _wchmod | Microsoft Docs
-ms.custom: ''
+title: _chmod, _wchmod
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _chmod
 - _wchmod
@@ -25,8 +21,6 @@ f1_keywords:
 - _chmod
 - _wchmod
 - wchmod
-dev_langs:
-- C++
 helpviewer_keywords:
 - _chmod function
 - wchmod function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0e4944f871195b276189014ed9d5d294b9b445fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f3133aac1548be5cb497fe32ae4f9f1c0e238d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399938"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595124"
 ---
 # <a name="chmod-wchmod"></a>_chmod, _wchmod
 
@@ -67,11 +57,11 @@ Configuração de permissão para o arquivo.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Essas funções retornarão 0 se a configuração de permissão for alterada com êxito. Um valor de retorno de -1 indica falha. Se o arquivo especificado não pôde ser encontrado, **errno** é definido como **ENOENT**; se um parâmetro é inválido, **errno** é definido como **EINVAL**.
+Essas funções retornarão 0 se a configuração de permissão for alterada com êxito. Um valor de retorno de -1 indica falha. Se o arquivo especificado não pôde ser encontrado, **errno** é definido como **ENOENT**; se um parâmetro for inválido, **errno** é definido como **EINVAL**.
 
 ## <a name="remarks"></a>Comentários
 
-O **chmod** função altera a configuração de permissão do arquivo especificado por *filename*. A configuração de permissão controla o acesso de leitura e gravação para o arquivo. A expressão de inteiro *pmode* contém uma ou ambas das seguintes constantes de manifesto, definidas em SYS\Stat.h.
+O **chmod** função altera a configuração de permissão do arquivo especificado por *filename*. A configuração de permissão controla o acesso de leitura e gravação para o arquivo. A expressão de inteiro *pmode* contém uma ou ambas das seguintes constantes de manifesto, definidas em sys\stat.h.
 
 |*pmode*|Significado|
 |-|-|
@@ -79,11 +69,11 @@ O **chmod** função altera a configuração de permissão do arquivo especifica
 **S_IWRITE**|Gravação permitida. (Na verdade, permite leitura e gravação.)
 **S_IREAD** &AMP;#124; **S_IWRITE**|Leitura e gravação permitidas.
 
-Quando ambas as constantes são fornecidas, elas estão unidas com o bit a bit ou operador (**|**). Se a permissão de gravação não for fornecida, o arquivo será somente leitura. Observe que todos os arquivos são sempre legíveis; não é possível dar permissão somente gravação. Portanto, os modos de **s_iwrite** e **s_iread** | **s_iwrite** são equivalentes.
+Quando as duas constantes são informadas, elas são unidas com o bit a bit ou operador (**|**). Se a permissão de gravação não for fornecida, o arquivo será somente leitura. Observe que todos os arquivos são sempre legíveis; não é possível dar permissão somente gravação. Portanto, os modos **s_iwrite** e **s_iread** | **s_iwrite** são equivalentes.
 
 **wchmod** é uma versão de caractere largo de **chmod**; o *filename* argumento **wchmod** é uma cadeia de caracteres largos. **wchmod** e **chmod** se comportam de forma idêntica caso contrário.
 
-Essa função valida seus parâmetros. Se *pmode* não é uma combinação de uma das constantes de manifesto ou incorpora um conjunto alternativo de constantes, a função simplesmente ignora os. Se *filename* é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e a função retornará -1.
+Essa função valida seus parâmetros. Se *pmode* não é uma combinação de uma das constantes de manifesto nem incorporar um conjunto alternativo de constantes, a função simplesmente as ignorará. Se *filename* é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e a função retornará -1.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

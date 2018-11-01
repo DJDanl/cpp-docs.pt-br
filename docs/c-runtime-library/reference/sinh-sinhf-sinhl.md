@@ -1,10 +1,6 @@
 ---
-title: SINH, sinhf, sinhl | Microsoft Docs
-ms.custom: ''
+title: SINH, sinhf, sinhl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sinhl
 - sinhf
@@ -26,8 +22,6 @@ f1_keywords:
 - sinh
 - sinhf
 - sinhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - sinh function
 - sinhl function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 220bbeb1d78957be153e23b578f217c8098f7e7d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7327809a20569c520aa799690203458d54e30fb5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410457"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569800"
 ---
 # <a name="sinh-sinhf-sinhl"></a>SINH, sinhf, sinhl
 
@@ -72,18 +62,18 @@ long double sinh(long double x);  // C++ only
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **sinh** funções retornam o seno hiperbólico de *x*. Por padrão, se o resultado é muito grande, **sinh** define **errno** para **ERANGE** e retorna ±**HUGE_VAL**.
+O **sinh** funções retornam o seno hiperbólico *x*. Por padrão, se o resultado é grande demais **sinh** define **errno** para **ERANGE** e retorna ±**HUGE_VAL**.
 
 |Entrada|Exceção SEH|Exceção Matherr|
 |-----------|-------------------|-----------------------|
 |± QNAN,IND|Nenhum|_DOMAIN|
-|&#124;x&#124; ≥ 7.104760e + 002|OVERFLOW+INEXACT|OVERFLOW|
+|&#124;x&#124; ≥ 7,104760e+002|OVERFLOW+INEXACT|OVERFLOW|
 
 Para obter mais informações sobre os códigos de retorno, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **sinh** que levar e retornar **float** ou **longo** **duplo** valores. Em um programa C, **sinh** sempre usa e retorna **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **sinh** que usam e retornam **float** ou **longo** **double** valores. Em um programa do C **sinh** sempre usa e retorna **duplo**.
 
 ## <a name="requirements"></a>Requisitos
 

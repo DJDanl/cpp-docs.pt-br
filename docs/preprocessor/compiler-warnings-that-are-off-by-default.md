@@ -1,25 +1,16 @@
 ---
-title: Avisos do compilador que são desativados por padrão | Microsoft Docs
+title: Avisos de compilador desativados por padrão
 ms.date: 05/30/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c7b48b2382ee22cc5d11c1145dc494aca4e7997f
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 48c18ce5af758e1329f149bc49969dad733af88f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083185"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50651367"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avisos do compilador que são desativados por padrão
 O compilador inclui avisos que são desativados por padrão, porque a maioria dos desenvolvedores não deseja vê-los. Em alguns casos, eles representam uma escolha estilísticas, são linguagens comuns no código mais antigo ou tirar proveito de uma extensão da Microsoft para o idioma. Em outros casos, elas indicam uma área em que os programadores geralmente fazem suposições incorretas, que podem resultar em comportamento inesperado ou indefinido. Alguns destes avisos podem ser muito barulhento nos cabeçalhos da biblioteca. As bibliotecas de tempo de execução do C e as bibliotecas padrão do C++ são destinadas para não emitir nenhum aviso somente no nível de aviso [/W4](../build/reference/compiler-option-warning-level.md).

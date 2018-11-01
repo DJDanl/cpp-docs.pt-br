@@ -1,27 +1,17 @@
 ---
-title: Erro de Build prj0017 do projeto | Microsoft Docs
-ms.custom: ''
+title: Erro de Build PRJ0017 no Projeto
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - PRJ0017
-dev_langs:
-- C++
 helpviewer_keywords:
 - PRJ0017
 ms.assetid: a192729f-bb10-486a-bfda-a7843fa259b2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 28348626417f6b4c961be4486f6d7573a0a67780
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dc96e24237cf29321bfa5987737baba6f6801541
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076054"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50475407"
 ---
 # <a name="project-build-error-prj0017"></a>Erro de Build PRJ0017 no Projeto
 

@@ -1,10 +1,6 @@
 ---
-title: _lfind_s | Microsoft Docs
-ms.custom: ''
+title: _lfind_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lfind_s
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - lfind_s
 - _lfind_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - linear searching
 - keys, finding in arrays
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - searching, linear
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 963b657a009f7376a17706b4ac1e5fb4e8b69237
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 08c04d9d1ca69998d54304c96468298013907179
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404812"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648429"
 ---
 # <a name="lfinds"></a>_lfind_s
 
@@ -69,7 +59,7 @@ O objeto a ser pesquisado.
 *base*<br/>
 Ponteiro para a base dos dados de pesquisa.
 
-*Número*<br/>
+*número*<br/>
 Número de elementos da matriz.
 
 *size*<br/>
@@ -83,9 +73,9 @@ Um ponteiro para um objeto que pode ser acessado na função de comparação.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se a chave for encontrada, **lfind_s** retorna um ponteiro para o elemento da matriz em *base* que corresponda *chave*. Se a chave não for encontrada, **lfind_s** retorna **nulo**.
+Se a chave for encontrada, **lfind_s** retorna um ponteiro para o elemento da matriz na *base* que corresponde ao *chave*. Se a chave não for encontrada, **lfind_s** retorna **nulo**.
 
-Se parâmetros inválidos forem passados para a função, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e a função retorna **nulo**.
+Se parâmetros inválidos forem passados para a função, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e a função retornará **nulo**.
 
 ### <a name="error-conditions"></a>Condições de Erro
 
@@ -98,9 +88,9 @@ Se parâmetros inválidos forem passados para a função, o manipulador de parâ
 
 ## <a name="remarks"></a>Comentários
 
-O **lfind_s** função executa uma pesquisa linear para o valor *chave* em uma matriz de *número* elementos, cada um dos *largura* bytes. Ao contrário de **bsearch_s**, **lfind_s** não exige que a matriz a ser classificada. O *base* argumento é um ponteiro para a base da matriz a ser pesquisada. O *comparar* argumento é um ponteiro para uma rotina fornecido pelo usuário que compara dois elementos de matriz e, em seguida, retorna um valor especificando suas relações. **lfind_s** chama o *comparar* rotina um ou mais vezes durante a pesquisa, passando o *contexto* ponteiro e ponteiros para os dois elementos de matriz em cada chamada. O *comparar* rotina deve comparar os elementos e retorne diferente de zero (que significa que os elementos são diferentes) ou 0 (ou seja, os elementos são idênticos).
+O **lfind_s** função executa uma pesquisa linear para o valor *chave* em uma matriz de *número* elementos, cada um dos *largura* bytes. Diferentemente **bsearch_s**, **lfind_s** exige que a matriz a ser classificado. O *base* argumento é um ponteiro para a base da matriz a ser pesquisada. O *comparar* argumento é um ponteiro para uma rotina fornecida pelo usuário que compara dois elementos de matriz e, em seguida, retorna um valor que especifica seu relacionamento. **lfind_s** chamadas a *comparar* rotina um ou mais vezes durante a pesquisa, passando o *contexto* ponteiro e ponteiros para dois elementos de matriz em cada chamada. O *comparar* rotina deve comparar os elementos e retornar diferente de zero (o que significa que os elementos são diferentes) ou 0 (ou seja, os elementos são idênticos).
 
-**lfind_s** é semelhante a **lfind** exceto pela adição da *contexto* ponteiro para os argumentos da função de comparação e a lista de parâmetros da função. O *contexto* ponteiro pode ser útil se a estrutura de dados pesquisada é parte de um objeto e o *comparar* função precisa acessar membros do objeto. O *comparar* função pode converter o ponteiro nulo em membros de tipo e o acesso a objeto apropriado do objeto. A adição do *contexto* parâmetro torna **lfind_s** mais segura porque o contexto adicional pode ser usado para evitar bugs reentrada associados ao uso de variáveis estáticas para tornar dados disponíveis para o *comparar* função.
+**lfind_s** é semelhante ao **lfind** , exceto para a adição dos *contexto* ponteiro para os argumentos da função de comparação e a lista de parâmetros da função. O *contexto* ponteiro pode ser útil se a estrutura de dados pesquisada for parte de um objeto e o *comparar* função precisa acessar membros do objeto. O *comparar* função pode converter o ponteiro de void no objeto apropriado que o tipo e acessar membros desse objeto. A adição do *contexto* parâmetro torna **lfind_s** mais seguro, pois o contexto adicional pode ser usado para evitar bugs de reentrância associados ao uso de variáveis estáticas para disponibilizar dados para o *comparar* função.
 
 ## <a name="requirements"></a>Requisitos
 

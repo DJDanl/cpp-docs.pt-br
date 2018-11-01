@@ -1,27 +1,17 @@
 ---
-title: Ferramentas de vinculador LNK1181 erro | Microsoft Docs
-ms.custom: ''
+title: Erro das Ferramentas de Vinculador LNK1181
 ms.date: 08/22/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1181
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1181
 ms.assetid: 984b0db6-e331-4284-b2a7-a212fe96c486
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 787c6c35b698b5dce57c4aaf3acb4eca496ead95
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 834220e6325e332a07c3865b5ff66e1bbc1b8c69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50072155"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50657971"
 ---
 # <a name="linker-tools-error-lnk1181"></a>Erro das Ferramentas de Vinculador LNK1181
 

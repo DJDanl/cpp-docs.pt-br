@@ -1,10 +1,6 @@
 ---
-title: fprintf, _fprintf_l, fwprintf, _fwprintf_l | Microsoft Docs
-ms.custom: ''
+title: fprintf, _fprintf_l, fwprintf, _fwprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fwprintf
 - fprintf
@@ -26,8 +22,6 @@ f1_keywords:
 - fprintf
 - fwprintf
 - _ftprintf
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fwprintf_l function
 - fprintf function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - print formatted data to streams
 - fwprintf_l function
 ms.assetid: 34a87e1c-6e4d-4d48-a611-58314dd4dc4b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c7578a8a8c2bef7fe68e9a08ae987ac7c1609cb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d84ef50e6fd522e393bb87664fb1eb47f3d32bb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403876"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637288"
 ---
 # <a name="fprintf-fprintfl-fwprintf-fwprintfl"></a>fprintf, _fprintf_l, fwprintf, _fwprintf_l
 
@@ -85,7 +75,7 @@ int _fwprintf_l(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fluxo*<br/>
+*fluxo*<br/>
 Ponteiro para a estrutura **FILE**.
 
 *format*<br/>
@@ -99,17 +89,17 @@ A localidade a ser usada.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**fprintf** retorna o número de bytes gravados. **fwprintf** retorna o número de caracteres largos gravado. Cada uma dessas funções retorna um valor negativo quando ocorre um erro de saída. Se *fluxo* ou *formato* é **nulo**, essas funções invocam o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, retornam -1, as funções e defina **errno** para **EINVAL**. A cadeia de caracteres de formato não é verificada para formatação de caracteres válida que quando usando **fprintf_s** ou **fwprintf_s**.
+**fprintf** retorna o número de bytes gravados. **fwprintf** retorna o número de caracteres largos gravados. Cada uma dessas funções retorna um valor negativo quando ocorre um erro de saída. Se *stream* ou *formato* está **nulo**, essas funções invocarão o manipulador de parâmetro inválido, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, as funções retornarão -1 e defina **errno** à **EINVAL**. A cadeia de caracteres de formato não é verificada para caracteres de formatação válidos conforme ela é ao usar **fprintf_s** ou **fwprintf_s**.
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de erro.
 
 ## <a name="remarks"></a>Comentários
 
-**fprintf** formata e imprime uma série de caracteres e valores para a saída *fluxo*. Cada função *argumento* (se houver) é convertido e de saída de acordo com a especificação de formato correspondente em *formato*. Para **fprintf**, o *formato* argumento tem a mesma sintaxe e uso que ele tem em **printf**.
+**fprintf** formata e imprime uma série de caracteres e valores para a saída *fluxo*. Cada função *argumento* (se houver) é convertido e gerado de acordo com a especificação de formato correspondente em *formato*. Para **fprintf**, o *formato* argumento tem a mesma sintaxe e uso que nos **printf**.
 
 **fwprintf** é uma versão de caractere largo de **fprintf**; na **fwprintf**, *formato* é uma cadeia de caracteres largos. Essas funções terão comportamento idêntico se o fluxo for aberto no modo ANSI. **fprintf** não oferece suporte a saída em um fluxo UNICODE.
 
-As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
 > [!IMPORTANT]
 > Verifique se *format* não é uma cadeia de caracteres definida pelo usuário.

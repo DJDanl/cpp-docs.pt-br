@@ -1,10 +1,6 @@
 ---
-title: time, _time32, _time64 | Microsoft Docs
-ms.custom: ''
+title: time, _time32, _time64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - time
 - _time64
@@ -29,8 +25,6 @@ f1_keywords:
 - time/_time32
 - time/_time64
 - _time32
-dev_langs:
-- C++
 helpviewer_keywords:
 - time32 function
 - _time32 function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3f627f0b9cbcfea1d048122d63c56d03aa61062d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0749ecbf0f88620e7293a043130b49dbe45aaf31
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410561"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546550"
 ---
 # <a name="time-time32-time64"></a>time, _time32, _time64
 
@@ -69,19 +59,19 @@ Ponteiro para o local de armazenamento de hora.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna a hora como segundos decorrido desde a meia-noite de 1º de janeiro de 1970, ou -1 em caso de erro.
+Retorna a hora como segundos decorridos desde a meia-noite de 1º de janeiro de 1970 ou -1 caso de erro.
 
 ## <a name="remarks"></a>Comentários
 
-O **tempo** função retorna o número de segundos decorridos desde a meia-noite (00: 00:00), 1 de janeiro de 1970, Tempo Universal Coordenado (UTC), de acordo com o relógio do sistema. O valor de retorno é armazenado no local fornecido por *destTime*. Esse parâmetro pode ser **nulo**, caso em que o valor de retorno não é armazenado.
+O **tempo** função retorna o número de segundos passados desde a meia-noite (00: 00:00) de 1º de janeiro de 1970, Tempo Universal Coordenado (UTC), acordo com o relógio do sistema. O valor retornado é armazenado no local fornecido por *destTime*. Esse parâmetro pode ser **nulo**, caso em que o valor retornado não é armazenado.
 
-**tempo** é um wrapper para **time64** e **time_t** é, por padrão, equivalente a **__time64_t**. Se você precisar forçar o compilador a interpretar **time_t** como o antigo 32-bit **time_t**, você pode definir **_USE_32BIT_TIME_T**. Isso não é recomendado, pois seu aplicativo poderá falhar após 18 de janeiro de 2038 e o uso dessa macro não é permitido em plataformas de 64 bits.
+**tempo** é um wrapper para **_time64** e **time_t** é, por padrão, equivalente a **__time64_t**. Se você precisar forçar o compilador a interpretar **time_t** como o antigo 32-bit **time_t**, você pode definir **_USE_32BIT_TIME_T**. Isso não é recomendado, pois seu aplicativo poderá falhar após 18 de janeiro de 2038 e o uso dessa macro não é permitido em plataformas de 64 bits.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rotina|Cabeçalho C necessário|Cabeçalho C++ necessário|
 |-------------|---------------------|
-|**tempo**, **time32**, **time64**|\<time.h>|\<ctime > ou \<time.h >|
+|**tempo**, **_time32**, **_time64**|\<time.h>|\<ctime > ou \<time. h >|
 
 Para obter informações adicionais sobre compatibilidade, consulte [Compatibilidade](../../c-runtime-library/compatibility.md).
 

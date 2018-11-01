@@ -1,10 +1,6 @@
 ---
-title: _mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l | Microsoft Docs
-ms.custom: ''
+title: _mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbcjistojms
 - _mbcjmstojis
@@ -32,8 +28,6 @@ f1_keywords:
 - mbcjmstojis_l
 - mbcjistojms_l
 - mbcjmstojis
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbcjmstojis_l function
 - _mbcjistojms function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - mbcjmstojis_l function
 - mbcjistojms_l function
 ms.assetid: dece5127-b337-40a4-aa10-53320a2c9432
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 07d34331e38362a6491e3231566443b5fe03260e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22cf8eeb5f99b6abee624aa3b1d06246d7230652
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402421"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665888"
 ---
 # <a name="mbcjistojms-mbcjistojmsl-mbcjmstojis-mbcjmstojisl"></a>_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
 
@@ -95,15 +85,15 @@ No Japão, essas funções retornarão um caractere convertido ou retornam 0 se 
 
 ## <a name="remarks"></a>Comentários
 
-O **mbcjistojms** função converte um caractere Japão setor padrão (JIS) para um caractere Microsoft Kanji (Shift JIS). O caractere é convertido somente se o cliente potencial e trilha bytes estão no intervalo 0x21 - 0x7E. Se o cliente potencial ou byte avaliação está fora desse intervalo, **errno** é definido como **EILSEQ**. Para obter mais informações sobre esse e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+O **mbcjistojms** função converte um caractere JIS Japan Industry Standard () em um caractere de Kanji Microsoft (Shift JIS). O caractere será convertido somente se os bytes inicial e final estão no intervalo 0x21 – 0x7E. Se o byte inicial ou final estiver fora desse intervalo **errno** é definido como **EILSEQ**. Para obter mais informações sobre esse e outros códigos de erro, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-O **mbcjmstojis** função converte um caractere Shift JIS um caractere JIS. O caractere é convertido somente se o byte inicial estiver no intervalo 0x81-0x9F ou 0xE0 - 0xFC e o byte final está no intervalo 0x40-0x7E ou 0x80 - 0xFC. Observe que alguns pontos de código nesse intervalo não têm um caractere atribuído e, portanto, não podem ser convertidos.
+O **mbcjmstojis** função converte um caractere Shift JIS em um caractere JIS. O caractere será convertido somente se o byte inicial estiver no intervalo 0x81 – 0x9F ou 0xE0 – 0xFC e o byte final estiver no intervalo 0x40 – 0x7E ou 0x80 – 0xFC. Observe que alguns pontos de código nesse intervalo não têm um caractere atribuído e, portanto, não podem ser convertidos.
 
-O valor *c* deve ser um valor de 16 bits cujos 8 bits superiores representam o byte de caractere para converter e cujos 8 bits inferiores representam o byte final.
+O valor *c* deve ser um valor de 16 bits cujos 8 bits superiores representam o byte inicial de caractere a ser convertido e cujos 8 bits inferiores representem o byte final.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-Em versões anteriores, **mbcjistojms** e **mbcjmstojis** chamadas **jistojms** e **jmstojis**, respectivamente. **mbcjistojms**, **mbcjistojms_l**, **mbcjmstojis** e **mbcjmstojis_l** deve ser usado em vez disso.
+Em versões anteriores, **mbcjistojms** e **mbcjmstojis** foram chamados **jistojms** e **jmstojis**, respectivamente. **mbcjistojms**, **mbcjistojms_l**, **mbcjmstojis** e **mbcjmstojis_l** deve ser usado em vez disso.
 
 ## <a name="requirements"></a>Requisitos
 

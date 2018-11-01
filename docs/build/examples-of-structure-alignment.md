@@ -1,30 +1,20 @@
 ---
-title: Exemplos de alinhamento da estrutura | Microsoft Docs
-ms.custom: ''
+title: Exemplos de alinhamento da estrutura
 ms.date: 03/26/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - structure alignment
 - examples [C++], structure alignment
 ms.assetid: 03d137bf-5cc4-472e-9583-6498f2534199
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a9c4e8cb27d02777e40af56217bd82dec6e647b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 27f7e89b1c7faec06347d8760247a76a33e0b91e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367736"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466224"
 ---
 # <a name="examples-of-structure-alignment"></a>Exemplos de alinhamento da estrutura
 
-Os quatro exemplos a seguir cada declarar que uma estrutura alinhada ou union e os números correspondentes a ilustrar o layout da estrutura ou união na memória. Cada coluna em uma figura representa um byte de memória e o número na coluna indica o deslocamento do que byte. O nome da segunda linha de cada figura corresponde ao nome de uma variável na declaração. As colunas sombreadas indicam o preenchimento que é necessário para alcançar o alinhamento especificado.
+Os quatro exemplos a seguir cada declaram que uma estrutura alinhada ou união e os números correspondentes ilustram o layout da estrutura ou união na memória. Cada coluna em uma figura representa um byte de memória, e o número na coluna indica o deslocamento do que bytes. O nome da segunda linha de cada figura corresponde ao nome de uma variável na declaração. Colunas sombreadas indicam o preenchimento que é necessário para alcançar o alinhamento especificado.
 
 ## <a name="example-1"></a>Exemplo 1
 

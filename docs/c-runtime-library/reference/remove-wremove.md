@@ -1,10 +1,6 @@
 ---
-title: remove, _wremove | Microsoft Docs
-ms.custom: ''
+title: remove, _wremove
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wremove
 - remove
@@ -25,8 +21,6 @@ f1_keywords:
 - remove
 - _wremove
 - _tremove
-dev_langs:
-- C++
 helpviewer_keywords:
 - tremove function
 - _wremove function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 36cdc09107a66067b358cb2fd72ec9bd1b2b30a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d5636912ea36fd1b1412a556d516ac3e8184e0b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406427"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613961"
 ---
 # <a name="remove-wremove"></a>remove, _wremove
 
@@ -69,7 +59,7 @@ Caminho do arquivo a ser removido.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas funções retornará 0 se o arquivo for excluído com êxito. Caso contrário, retornará -1 e define **errno** para **EACCES** para indicar que o caminho Especifica um arquivo somente leitura ou o arquivo está aberto, ou **ENOENT** para indicar que o nome do arquivo ou caminho não foi encontrado ou o caminho Especifica um diretório.
+Cada uma dessas funções retornará 0 se o arquivo for excluído com êxito. Caso contrário, retornará -1 e define **errno** ao **EACCES** para indicar que o caminho Especifica um arquivo somente leitura ou o arquivo está aberto, ou como **ENOENT** para indicar que o nome de arquivo ou caminho não foi encontrado ou o caminho Especifica um diretório.
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.
 

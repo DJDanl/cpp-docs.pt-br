@@ -1,10 +1,6 @@
 ---
-title: _alloca | Microsoft Docs
-ms.custom: ''
+title: _alloca
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _alloca
 apilocation:
@@ -22,27 +18,21 @@ apitype: DLLExport
 f1_keywords:
 - _alloca
 - alloca
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory allocation, stack
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fdc595d33bdc5ce464df1aed86cf885e5673ddc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7c083e791301d3224709a5fc6c711ceaa6397d38
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394110"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668060"
 ---
 # <a name="alloca"></a>_alloca
 
-Aloca memória na pilha. Essa função é preterida porque uma versão mais segura está disponível. consulte [malloca](malloca.md).
+Aloca memória na pilha. Essa função é preterida porque uma versão mais segura está disponível. ver [malloca](malloca.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -59,28 +49,28 @@ Bytes a serem alocados da pilha.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O **alloca** rotina retorna um **void** ponteiro para o espaço alocado, é garantido para ser alinhado adequadamente para o armazenamento de qualquer tipo de objeto. Se *tamanho* é 0, **alloca** aloca um item de comprimento zero e retorna um ponteiro válido para esse item.
+O **alloca** rotina retorna um **void** ponteiro para o espaço alocado, que é garantido para ser sutilmente alinhado para armazenamento de qualquer tipo de objeto. Se *tamanho* é 0, o **alloca** alocará um item de comprimento zero e retornará um ponteiro válido para esse item.
 
 Uma exceção de excedente de pilha será gerada se não for possível alocar o espaço. A exceção de excedente de pilha não é uma exceção de C++; ela é uma exceção estruturada. Em vez de usar o tratamento de exceções de C++, você deve usar a [SEH](../../cpp/structured-exception-handling-c-cpp.md) (Manipulação de Exceção Estruturada).
 
 ## <a name="remarks"></a>Comentários
 
-**alloca** aloca *tamanho* bytes da pilha de programa. O espaço alocado é liberado automaticamente quando a função de chamada for encerrada (não quando a alocação simplesmente passa fora do escopo). Portanto, não passe o valor do ponteiro retornado por **alloca** como um argumento para [livre](free.md).
+**alloca** aloca *tamanho* bytes da pilha de programa. O espaço alocado é liberado automaticamente quando a função de chamada é encerrado (não quando a alocação simplesmente passa fora do escopo). Portanto, não passe o valor do ponteiro retornado por **alloca** como um argumento para [livre](free.md).
 
-Há restrições ao chamar explicitamente **alloca** em um manipulador de exceção (EH). As rotinas do EH que são executadas em processadores da classe x86 operam em seu próprio quadro de memória: elas realizam suas tarefas no espaço de memória que não é baseado no local atual do ponteiro de pilha da função delimitadora. As implementações mais comuns incluem SEH (Manipulação de Exceção Estruturada ) do Windows NT e expressões de cláusula catch de C++. Portanto, chamar explicitamente **alloca** em qualquer um dos seguintes resultados de cenários de falha de programa durante o retorno para chamar a rotina EH:
+Há restrições para chamar explicitamente **alloca** em um manipulador de exceção (EH). As rotinas do EH que são executadas em processadores da classe x86 operam em seu próprio quadro de memória: elas realizam suas tarefas no espaço de memória que não é baseado no local atual do ponteiro de pilha da função delimitadora. As implementações mais comuns incluem SEH (Manipulação de Exceção Estruturada ) do Windows NT e expressões de cláusula catch de C++. Portanto, chamar explicitamente **alloca** em qualquer um dos seguintes cenários resulta em falha do programa durante o retorno ao chamar a rotina EH:
 
-- Expressão de filtro de exceção SEH Windows NT: `__except ( _alloca() )`
+- Expressão de filtro de exceção SEH do Windows NT: `__except ( _alloca() )`
 
-- Manipulador de exceção final SEH Windows NT: `__finally { _alloca() }`
+- Manipulador de exceção final do Windows NT SEH: `__finally { _alloca() }`
 
 - Expressão da cláusula catch do EH de C++
 
-No entanto, **alloca** pode ser chamado diretamente de dentro de uma rotina EH ou de um retorno de chamada fornecida pelo aplicativo que é invocado por um dos cenários de EH listados anteriormente.
+No entanto, **alloca** podem ser chamados diretamente de dentro de uma rotina do EH ou de um retorno de chamada fornecida pelo aplicativo que é invocado por um dos cenários do EH listados anteriormente.
 
 > [!IMPORTANT]
 > No Windows XP, se **alloca** é chamado dentro de um bloco try/catch, você deve chamar [resetstkoflw](resetstkoflw.md) em um bloco catch.
 
-Além das restrições anteriores, ao usar o[/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md) opção **alloca** não pode ser usado em **EXCEPT** blocos. Para obter mais informações, consulte [/clr Restrições](../../build/reference/clr-restrictions.md).
+Além das restrições acima, ao usar o[/clr (compilação de tempo de execução de linguagem comum)](../../build/reference/clr-common-language-runtime-compilation.md) opção **alloca** não pode ser usado na **EXCEPT** blocos. Para obter mais informações, consulte [/clr Restrições](../../build/reference/clr-restrictions.md).
 
 ## <a name="requirements"></a>Requisitos
 

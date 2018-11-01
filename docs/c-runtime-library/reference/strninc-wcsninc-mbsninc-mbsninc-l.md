@@ -1,10 +1,6 @@
 ---
-title: _strninc, _wcsninc, _mbsninc, _mbsninc_l | Microsoft Docs
-ms.custom: ''
+title: _strninc, _wcsninc, _mbsninc, _mbsninc_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsninc
 - _mbsninc_l
@@ -34,8 +30,6 @@ f1_keywords:
 - _ftcsninc
 - _wcsninc
 - _mbsninc
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbsninc_l function
 - mbsninc function
@@ -48,23 +42,19 @@ helpviewer_keywords:
 - mbsninc_l function
 - _tcsninc function
 ms.assetid: 6caace64-f9e4-48c0-afa8-ea51824ad723
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 21218c411ad8bab9e3e4bd73eea266d0889f6c7d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef30a9f57f0b8c84199befb00f3edc13342a1eaf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411326"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643177"
 ---
 # <a name="strninc-wcsninc-mbsninc-mbsnincl"></a>_strninc, _wcsninc, _mbsninc, _mbsninc_l
 
 Avança um ponteiro de cadeia de caracteres por **n** caracteres.
 
 > [!IMPORTANT]
-> **mbsninc** e **mbsninc_l** não pode ser usado em aplicativos que são executados o tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsninc** e **_mbsninc_l** não pode ser usado em aplicativos executados no tempo de execução do Windows. Para obter mais informações, confira [Funções do CRT sem suporte em aplicativos da Plataforma Universal do Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -101,11 +91,11 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada uma dessas rotinas retorna um ponteiro para *str* depois *str* foi incrementada *contagem* caracteres ou **nulo** se fornecido ponteiro é **nulo**. Se *contagem* é maior que ou igual ao número de caracteres em *str*, o resultado é indefinido.
+Cada uma dessas rotinas retornará um ponteiro para *str* após *str* ter sido incrementado por *contagem* caracteres ou **nulo** se fornecido ponteiro estiver **nulo**. Se *contagem* é maior que ou igual ao número de caracteres na *str*, o resultado será indefinido.
 
 ## <a name="remarks"></a>Comentários
 
-O **mbsninc** função incrementos *str* por *contagem* caracteres multibyte. **mbsninc** reconhece sequências de caracteres multibyte de acordo com o [página de código multibyte](../../c-runtime-library/code-pages.md) atualmente em uso.
+O **_mbsninc** função incrementos *str* pela *contagem* caracteres multibyte. **_mbsninc** reconhece sequências de caracteres multibyte de acordo com o [página de código multibyte](../../c-runtime-library/code-pages.md) atualmente em uso.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 
@@ -113,9 +103,9 @@ O **mbsninc** função incrementos *str* por *contagem* caracteres multibyte. **
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsninc**|**_strninc**|**_mbsninc**|**_wcsninc**|
 
-**strninc** e **wcsninc** são cadeia de caracteres de byte único e versões de cadeia de caracteres largos do **mbsninc**. **wcsninc** e **strninc** são fornecidos apenas para esse mapeamento e não deve ser usado caso contrário. Para obter mais informações, consulte [Usando mapeamentos de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapeamentos de Texto Genérico](../../c-runtime-library/generic-text-mappings.md).
+**_strninc** e **_wcsninc** são a cadeia de caracteres de byte único e de cadeia de caracteres largos em versões do **_mbsninc**. **_wcsninc** e **_strninc** são fornecidos apenas para esse mapeamento e não deve ser usado caso contrário. Para obter mais informações, consulte [Usando mapeamentos de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapeamentos de Texto Genérico](../../c-runtime-library/generic-text-mappings.md).
 
-**mbsninc_l** é idêntico, exceto que ele usa o parâmetro de localidade passado em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+**_mbsninc_l** é idêntico, exceto que ele usa o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,12 +1,7 @@
 ---
-title: Palavras-chave (C++) | Microsoft Docs
+title: Palavras-chave (C++)
 ms.custom: index-page
 ms.date: 10/10/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, keywords
 - keywords [C++]
@@ -14,16 +9,12 @@ helpviewer_keywords:
 - Microsoft-specific keywords
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 86912ad8dfa3e048b74c67b6936eb09f74db308a
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 645a0edb053320499c3ecca1c9d2ffd639b15931
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162445"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659298"
 ---
 # <a name="keywords-c"></a>Palavras-chave (C++)
 
@@ -85,7 +76,7 @@ Palavras-chave são identificadores reservados pré-definidos que têm significa
 
 No Microsoft C++, os identificadores com dois sublinhados iniciais são reservados para implementações de compilador. Portanto, a convenção da Microsoft é preceder palavras-chave específicas da Microsoft com sublinhados duplos. Essas palavras não podem ser usadas como nomes de identificadores.
 
-As extensões da Microsoft são ativadas por padrão. Para garantir que seus programas sejam totalmente portáteis, você pode desabilitar as extensões da Microsoft especificando a [/Za \(desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) opção durante a compilação. Quando você fizer isso, algumas palavras-chave específicas da Microsoft é desabilitadas.
+As extensões da Microsoft são ativadas por padrão. Para garantir que seus programas sejam totalmente portáteis, você poderá desabilitar as extensões da Microsoft especificando a opção [/Za \(Desabilitar extensões de linguagem)](../build/reference/za-ze-disable-language-extensions.md) durante a compilação. Ao fazer isso, algumas palavras-chave específicas da Microsoft são desabilitadas.
 
 Quando as extensões do Microsoft são ativadas, você pode usar as palavras-chave específicas da Microsoft em seus programas. Para estar em conformidade com o ANSI, essas palavras-chave são precedidas por um sublinhado duplo. Para compatibilidade com versões anteriores, há suporte para versões de sublinhado único de muitas das palavras-chave com sublinhado duplo. Além disso, **cdecl** está disponível sem sublinhado inicial.
 

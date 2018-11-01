@@ -1,11 +1,6 @@
 ---
-title: cimag, cimagf, cimagl | Microsoft Docs
-ms.custom: ''
+title: cimag, cimagf, cimagl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cimag
 - cimagf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cimagf
 - complex/cimagl
 - cimag
-dev_langs:
-- C++
 helpviewer_keywords:
 - cimag function
 - cimagf function
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c466ad2373686d368cb29c46c68da3aabd68662f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6f5067967aa62894abb5316f60074b5125b1cba1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394117"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572725"
 ---
 # <a name="cimag-cimagf-cimagl"></a>cimag, cimagf, cimagl
 
@@ -72,11 +61,11 @@ Um número complexo.
 
 ## <a name="return-value"></a>Valor de retorno
 
-A parte imaginária *z*.
+A parte imaginária de *z*.
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **cimag** que usam **_Fcomplex** ou **_Lcomplex** valores e retornar **float** ou **longo** **duplo** valores. Em um programa C, **cimag** sempre leva um **_Dcomplex** valor e retorna um **duplo** valor.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **cimag** que utilizam **fcomplex** ou **_Lcomplex** valores e retornar **float** ou **longo** **duplo** valores. Em um programa do C **cimag** sempre usa um **_Dcomplex** valor e retorna um **double** valor.
 
 ## <a name="requirements"></a>Requisitos
 
