@@ -1,10 +1,6 @@
 ---
-title: isblank, iswblank, _isblank_l, _iswblank_l | Microsoft Docs
-ms.custom: ''
+title: isblank, iswblank, _isblank_l, _iswblank_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - isblank
 - _isblank_l
@@ -30,19 +26,13 @@ f1_keywords:
 - _istblank
 - _isblank_l
 - iswblank
-dev_langs:
-- C++
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d2787be85aa4e12bf22d1be14f90568891b83824
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb088c4056e2277e188d7f98a57dd36216d013ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403307"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497312"
 ---
 # <a name="isblank-iswblank-isblankl-iswblankl"></a>isblank, iswblank, _isblank_l, _iswblank_l
 
@@ -77,11 +67,11 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Cada essas rotinas retornará zero se *c* é uma representação específica de um espaço ou caractere de tabulação horizontal, ou é um de um conjunto específico de localidade de caracteres que são usados para separar palavras em uma linha de texto. **isblank** retorna um valor diferente de zero se *c* é um caractere de espaço (0x20) ou caractere de guia horizontal (0x09). O resultado da condição de teste para o **isblank** funções depende de **LC_CTYPE** categoria de configuração da localidade; para obter mais informações, consulte [setlocale, wsetlocale](setlocale-wsetlocale.md). As versões dessas funções que não têm o **_l** o uso de sufixo a localidade atual para qualquer comportamento dependente de localidade; as versões que têm o **_l** sufixo são idênticas, exceto que eles usam o localidade que é transmitida em vez disso. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
+Cada uma dessas rotinas retornará diferente de zero se *c* é uma representação específica de um espaço ou caractere de tabulação horizontal ou é um dos conjuntos de caracteres que são usados para separar palavras em uma linha de texto específica de localidade. **isblank** retorna um valor diferente de zero se *c* é um caractere de espaço (0x20) ou o caractere de tabulação horizontal (0x09). O resultado da condição de teste para o **isblank** depende de funções a **LC_CTYPE** categoria da localidade; para obter mais informações, consulte [setlocale, wsetlocale](setlocale-wsetlocale.md). As versões dessas funções que não têm o **l** sufixo usam a localidade atual para qualquer comportamento dependente da localidade; as versões que têm o **l** sufixo são idênticas, exceto que eles usam o localidade que é passada em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
-**iswblank** retorna um valor diferente de zero se *c* é um caractere largo que corresponde a um padrão espaço ou caractere de tabulação horizontal.
+**iswblank** retorna um valor diferente de zero se *c* é um caractere largo que corresponde a um espaço padrão ou o caractere de tabulação horizontal.
 
-O comportamento de **isblank** e **_isblank_l** será indefinido se *c* não é EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca de depuração CRT é usada e *c* não é uma desses valores, o aumento de funções uma asserção.
+O comportamento de **isblank** e **_isblank_l** é indefinido se *c* não for EOF ou no intervalo de 0 a 0xFF, inclusive. Quando uma biblioteca de depuração CRT é usada e *c* é não um desses valores, as funções geram uma asserção.
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

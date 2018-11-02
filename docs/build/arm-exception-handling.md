@@ -1,23 +1,13 @@
 ---
-title: Tratamento de exceção do ARM | Microsoft Docs
-ms.custom: ''
+title: Tratamento de exceção ARM
 ms.date: 07/11/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ae80e1f7f824f41f6bc0b3f979973f5867666354
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: b2b6b9b3508dd7a4dd42a2e22ad1052851c7c0c2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861649"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522260"
 ---
 # <a name="arm-exception-handling"></a>Tratamento de exceção ARM
 

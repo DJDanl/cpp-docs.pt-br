@@ -1,10 +1,6 @@
 ---
-title: 'Manipuladores de mensagens WM _: L - M | Microsoft Docs'
-ms.custom: ''
+title: 'Manipuladores de mensagens WM_: L - M'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - ON_WM_MENUSELECT
 - ON_WM_MBUTTONDBLCLK
@@ -20,8 +16,6 @@ f1_keywords:
 - ON_WM_MBUTTONDOWN
 - ON_WM_MENUCHAR
 - ON_WM_MBUTTONUP
-dev_langs:
-- C++
 helpviewer_keywords:
 - ON_WM_MENUSELECT [MFC]
 - ON_WM_MBUTTONDBLCLK [MFC]
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - ON_WM_LBUTTONUP [MFC]
 - WM_ messages
 ms.assetid: 96ecaaf1-6d13-4e12-a454-535635967489
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: afb716b6ee334ebfc3c974ae4caf715d45a2dcc0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 395bd7f627fe85b8bb763bdb1e75ae36c91b3061
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426733"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550456"
 ---
 # <a name="wm-message-handlers-l---m"></a>Manipuladores de mensagens WM_: L - M
 
@@ -80,6 +70,6 @@ As seguintes entradas de mapa à esquerda correspondem aos protótipos de funç�
 
 ## <a name="see-also"></a>Consulte também
 
-[Mapas de mensagem](../../mfc/reference/message-maps-mfc.md)<br/>
+[Mapas de mensagens](../../mfc/reference/message-maps-mfc.md)<br/>
 [Manipuladores para mensagens WM_](../../mfc/reference/handlers-for-wm-messages.md)
 

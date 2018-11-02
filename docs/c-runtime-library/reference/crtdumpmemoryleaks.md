@@ -1,10 +1,6 @@
 ---
-title: _CrtDumpMemoryLeaks | Microsoft Docs
-ms.custom: ''
+title: _CrtDumpMemoryLeaks
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtDumpMemoryLeaks
 apilocation:
@@ -26,8 +22,6 @@ f1_keywords:
 - CrtDumpMemoryLeaks
 - _CrtDumpMemoryLeaks
 - _CRTDBG_CHECK_CRT_DF
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtDumpMemoryLeaks function
 - CRTDBG_LEAK_CHECK_DF macro
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - CRTDBG_CHECK_CRT_DF macro
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: 71b2eab4-7f55-44e8-a55a-bfea4f32d34c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 68a187283eedadcd2f435b0900fde648a5010368
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: baf4f8d8234ba744acda20541d37bbc3ed076678
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396960"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531940"
 ---
 # <a name="crtdumpmemoryleaks"></a>_CrtDumpMemoryLeaks
 
@@ -60,19 +50,19 @@ int _CrtDumpMemoryLeaks( void );
 
 ## <a name="return-value"></a>Valor de retorno
 
-**Crtdumpmemoryleaks** retorna TRUE se for encontrado um vazamento de memória. Caso contrário, a função retorna FALSE.
+**Crtdumpmemoryleaks** retorna TRUE se um vazamento de memória for encontrado. Caso contrário, a função retorna FALSE.
 
 ## <a name="remarks"></a>Comentários
 
-O **crtdumpmemoryleaks** função determina se um vazamento de memória ocorreu desde o início da execução do programa. Quando uma perda é encontrada, as informações de cabeçalho de depuração de todos os objetos no heap são despejadas em um formato legível pelo usuário. Quando [Debug](../../c-runtime-library/debug.md) não está definido, chamadas para **crtdumpmemoryleaks** são removidos durante o pré-processamento.
+O **crtdumpmemoryleaks** função determina se um vazamento de memória ocorreu desde o início da execução do programa. Quando uma perda é encontrada, as informações de cabeçalho de depuração de todos os objetos no heap são despejadas em um formato legível pelo usuário. Quando [Debug](../../c-runtime-library/debug.md) não está definido, as chamadas a **crtdumpmemoryleaks** são removidas durante o pré-processamento.
 
-**Crtdumpmemoryleaks** frequentemente é chamado no final da execução do programa para verificar que toda a memória alocada pelo aplicativo foi liberada. A função pode ser chamada automaticamente no encerramento do programa ao ativar o **crtdbg_leak_check_df** campo de bits de [crtdbgflag](../../c-runtime-library/crtdbgflag.md) sinalizador usando o [crtsetdbgflag](crtsetdbgflag.md)função.
+**Crtdumpmemoryleaks** frequentemente é chamado no final da execução do programa para verificar se toda a memória alocada pelo aplicativo foi liberada. A função pode ser chamada automaticamente no encerramento do programa ao ativar o **crtdbg_leak_check_df** campo de bits a [crtdbgflag](../../c-runtime-library/crtdbgflag.md) sinalizador usando o [crtsetdbgflag](crtsetdbgflag.md)função.
 
-**Crtdumpmemoryleaks** chamadas [crtmemcheckpoint](crtmemcheckpoint.md) para obter o estado atual da pilha e, em seguida, verifica o estado dos blocos que não foram liberadas. Quando um bloco dependentes é encontrado, **crtdumpmemoryleaks** chamadas [crtmemdumpallobjectssince](crtmemdumpallobjectssince.md) para informações de despejo para todos os objetos alocados no heap desde o início da execução do programa.
+**Crtdumpmemoryleaks** chamadas [crtmemcheckpoint](crtmemcheckpoint.md) para obter o estado atual do heap e, em seguida, verifica o estado dos blocos que não foram liberados. Quando um bloco não liberado é encontrado, **crtdumpmemoryleaks** chamadas [crtmemdumpallobjectssince](crtmemdumpallobjectssince.md) para despejar informações de todos os objetos alocados no heap desde o início da execução do programa.
 
-Por padrão, os blocos de tempo de execução C internos (**crt_block**) não são incluídas em operações de despejo de memória. O [crtsetdbgflag](crtsetdbgflag.md) função pode ser usada para ativar o **crtdbg_check_crt_df** um pouco de **crtdbgflag** para incluir esses blocos no processo de detecção de perda.
+Por padrão, os blocos internos de tempo de execução C (**crt_block**) não são incluídos em operações de despejo de memória. O [crtsetdbgflag](crtsetdbgflag.md) função pode ser usada para ativar o **crtdbg_check_crt_df** um pouco de **crtdbgflag** para incluir esses blocos no processo de detecção de vazamento.
 
-Para obter mais informações sobre funções de estado de heap e a **crtmemstate** estrutura, consulte [funções de emissão de relatórios de estado de Heap](/visualstudio/debugger/crt-debug-heap-details). Para obter mais informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap base, consulte [Detalhes do heap de depuração do CRT](/visualstudio/debugger/crt-debug-heap-details).
+Para obter mais informações sobre as funções de estado de heap e o **crtmemstate** estrutura, consulte [funções de relatório de estado de Heap](/visualstudio/debugger/crt-debug-heap-details). Para obter mais informações sobre como os blocos de memória são alocados, inicializados e gerenciados na versão de depuração do heap base, consulte [Detalhes do heap de depuração do CRT](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Requisitos
 

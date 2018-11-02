@@ -1,10 +1,6 @@
 ---
-title: _fcvt | Microsoft Docs
-ms.custom: ''
+title: _fcvt
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fcvt
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _fcvt
-dev_langs:
-- C++
 helpviewer_keywords:
 - converting floating point, to strings
 - _fcvt function
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - fcvt function
 - floating-point functions
 ms.assetid: 74584c88-f0dd-4907-8fca-52da5df583f5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 272b8e4ba5e57d71b4b785bceef7e5ea2f0ac7c2
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: ae9323e3bb629fd61b35a8c844b00bfcc73235bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450414"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662053"
 ---
 # <a name="fcvt"></a>_fcvt
 
@@ -77,17 +67,17 @@ Ponteiro para o indicador de logon armazenado.
 
 ## <a name="remarks"></a>Comentários
 
-O **fcvt** função converte um número de ponto flutuante em uma cadeia de caracteres terminada em nulo. O *valor* parâmetro é o número de ponto flutuante a ser convertido. **fcvt** armazena os dígitos de *valor* como uma cadeia de caracteres e acrescenta um caractere nulo ('\0'). O *contagem* parâmetro especifica o número de dígitos a serem armazenados após o ponto decimal. Dígitos em excesso são arredondados para *contagem* coloca. Se houver menos de *contagem* dígitos de precisão, a cadeia de caracteres é preenchida com zeros.
+O **fcvt** função converte um número de ponto flutuante em uma cadeia de caracteres terminada em nulo. O *valor* parâmetro é o número de ponto flutuante a ser convertido. **fcvt** armazena os dígitos de *valor* como uma cadeia de caracteres e acrescenta um caractere nulo ('\0'). O *contagem* parâmetro especifica o número de dígitos a serem armazenados após o ponto decimal. Dígitos em excesso são arredondados para *contagem* coloca. Se houver menos de *contagem* dígitos de precisão, a cadeia de caracteres será preenchida com zeros.
 
-O número total de dígitos retornado por **fcvt** não excederá **_CVTBUFSIZE**.
+O número total de dígitos retornados por **fcvt** não excederá **_CVTBUFSIZE**.
 
-Somente dígitos são armazenados na cadeia de caracteres. A posição do ponto decimal e o sinal de *valor* pode ser obtido *dez* e conexão após a chamada. O *dez* parâmetro aponta para um valor inteiro; esse valor de inteiro retorna a posição do ponto decimal em relação ao início da cadeia de caracteres. Um valor inteiro de zero ou negativo indica que o ponto decimal se encontra à esquerda do primeiro dígito. O parâmetro *sinal* aponta para um número inteiro indicando o sinal de *valor*. O inteiro é definido como 0 se *valor* for positivo e é definido para um número diferente de zero, se *valor* é negativo.
+Somente dígitos são armazenados na cadeia de caracteres. A posição do ponto decimal e o sinal de *valor* pode ser obtido *dec* e após a chamada. O *dec* parâmetro aponta para um valor inteiro; o valor inteiro dando a posição do ponto decimal em relação ao início da cadeia de caracteres. Um valor inteiro de zero ou negativo indica que o ponto decimal se encontra à esquerda do primeiro dígito. O parâmetro *sinal* aponta para um inteiro que indica o sinal do *valor*. O inteiro é definido como 0 se *valor* for positivo e é definido como um número diferente de zero se *valor* é negativo.
 
-A diferença entre **ecvt** e **fcvt** está na interpretação de *contagem* parâmetro. **ecvt** interpreta *contagem* como o número total de dígitos na cadeia de saída, enquanto **fcvt** interpreta *contagem* como o número de dígitos após o ponto decimal.
+A diferença entre **ecvt** e **fcvt** está na interpretação do *contagem* parâmetro. **ecvt** interpreta *contagem* como o número total de dígitos na cadeia de saída, enquanto **fcvt** interpreta *contagem* como o número de dígitos após o ponto decimal.
 
-**ecvt** e **fcvt** usar um único buffer estaticamente alocado para a conversão. Cada chamada a uma dessas rotinas destrói o resultado da chamada anterior.
+**ecvt** e **fcvt** usam um único buffer alocado estaticamente para a conversão. Cada chamada a uma dessas rotinas destrói o resultado da chamada anterior.
 
-Essa função valida seus parâmetros. Se *dez* ou *sinal* é **nulo**, ou *contagem* for 0, o manipulador de parâmetro inválido é invocado, conforme descrito em [parâmetro Validação](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EINVAL** e **nulo** é retornado.
+Essa função valida seus parâmetros. Se *dec* ou *sinal* está **nulo**, ou *contagem* for 0, o manipulador de parâmetro inválido será invocado, conforme descrito em [parâmetro Validação](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EINVAL** e **nulo** é retornado.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,10 +1,6 @@
 ---
-title: _getcwd, _wgetcwd | Microsoft Docs
-ms.custom: ''
+title: _getcwd, _wgetcwd
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wgetcwd
 - _getcwd
@@ -28,8 +24,6 @@ f1_keywords:
 - _wgetcwd
 - tgetcwd
 - _tgetcwd
-dev_langs:
-- C++
 helpviewer_keywords:
 - getcwd function
 - working directory
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 10f242569579680c8e388b84bdcaca235a142a34
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4c533f0e716cb9a13c152b9be3c46f60291118d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405283"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520231"
 ---
 # <a name="getcwd-wgetcwd"></a>_getcwd, _wgetcwd
 
@@ -77,17 +67,17 @@ Comprimento máximo do caminho em caracteres: **char** para **getcwd** e **wchar
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna um ponteiro para *buffer*. Um **nulo** retornar valor indica um erro, e **errno** é definido como **ENOMEM**, indicando que há memória suficiente para alocar *maxlen* bytes (quando um **nulo** argumento é determinado como *buffer*), ou **ERANGE**, indicando que o caminho é maior que *maxlen*  caracteres. Se *maxlen* é menor ou igual a zero, esta função chama um manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md).
+Retorna um ponteiro para *buffer*. Um **nulo** valor retornado indica um erro, e **errno** será definido como **ENOMEM**, indicando que há memória suficiente para alocar *maxlen* bytes (quando um **nulo** argumento é fornecido como *buffer*), ou **ERANGE**, que indica que o caminho é maior que *maxlen*  caracteres. Se *maxlen* é menor que ou igual a zero, essa função invocará um manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md).
 
 Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentários
 
-O **getcwd** função obtém o caminho completo do diretório de trabalho atual para a unidade padrão e o armazena em *buffer*. O argumento de inteiro *maxlen* Especifica o tamanho máximo para o caminho. Ocorrerá um erro se excede o comprimento do caminho (incluindo o caractere null de terminação) *maxlen*. O *buffer* argumento pode ser **nulo**; um buffer de tamanho de pelo menos *maxlen* (mais se necessário) é alocado automaticamente, usando **malloc**, para o caminho do repositório. Esse buffer posteriormente pode ser liberado chamando **livre** e passá-lo a **getcwd** (um ponteiro para o buffer alocado) do valor de retorno.
+O **getcwd** função obtém o caminho completo do diretório de trabalho atual para a unidade padrão e o armazena em *buffer*. O argumento de inteiro *maxlen* Especifica o comprimento máximo para o caminho. Ocorre um erro se o tamanho do caminho (incluindo o caractere nulo de terminação) ultrapassar *maxlen*. O *buffer* argumento pode ser **nulo**; um buffer de tamanho de pelo menos *maxlen* (mais somente se for necessário) é alocado automaticamente, usando **malloc**, para armazenar o caminho. Esse buffer pode, posteriormente, ser liberado chamando **livre** e passá-lo a **getcwd** retornar valor (um ponteiro para o buffer alocado).
 
 **getcwd** retorna uma cadeia de caracteres que representa o caminho do diretório de trabalho atual. Se o diretório de trabalho atual é a raiz, a cadeia de caracteres termina com uma barra invertida ( **\\** ). Se o diretório de trabalho atual for um diretório que não seja o raiz, a cadeia de caracteres terminará com o nome do diretório e não com uma barra invertida.
 
-**wgetcwd** é uma versão de caractere largo de **getcwd**; o *buffer* argumento e retornar o valor de **wgetcwd** são cadeias de caracteres do caractere largo. **wgetcwd** e **getcwd** se comportam de forma idêntica caso contrário.
+**wgetcwd** é uma versão de caractere largo de **getcwd**; o *buffer* argumento e o valor retornado de **wgetcwd** são cadeias de caracteres largos. **wgetcwd** e **getcwd** se comportam de forma idêntica caso contrário.
 
 Quando **Debug** e **crtdbg_map_alloc** são definidos, chamadas para **getcwd** e **wgetcwd** são substituídos por chamadas para **_ getcwd_dbg** e **wgetcwd_dbg** para permitir a depuração de alocações de memória. Para obter mais informações, consulte [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md).
 
