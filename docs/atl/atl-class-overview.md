@@ -1,28 +1,18 @@
 ---
-title: Visão geral da classe ATL | Microsoft Docs
-ms.custom: ''
+title: Visão geral da classe ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
 f1_keywords:
 - vc.atl.classes
-dev_langs:
-- C++
 helpviewer_keywords:
 - classes [C++], ATL
 - ATL, class reference
 ms.assetid: c38ac93d-c3a2-4ce7-8153-f1d34c0f0fa6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: de241532763267f5d20d051121e501934da972cf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: df5ae8da3bb8e192737a06396ab71ba138562b98
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46055150"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529645"
 ---
 # <a name="atl-class-overview"></a>Visão geral da classe ATL
 
@@ -46,7 +36,7 @@ Classes na biblioteca ATL (Active Template) podem ser categorizadas da seguinte 
 |[Informações de erro](../atl/error-information-classes.md)|[Seções críticas e modelos de Threading](../atl/threading-models-and-critical-sections-classes.md)|
 |[Manipulação de Arquivos](../atl/file-handling-classes.md)|[Suporte de interface do usuário](../atl/ui-support-classes.md)|
 |[Ponteiros de interface](../atl/interface-pointers-classes.md)|[Suporte do Windows](../atl/windows-support-classes.md)|
-|[Implementação de IUnknown](../atl/iunknown-implementation-classes.md)|[Utilitário](../atl/utility-classes.md)|
+|[Implementação de IUnknown](../atl/iunknown-implementation-classes.md)|[Utility](../atl/utility-classes.md)|
 
 Para classes adicionais que podem ser usadas em projetos ATL, consulte [Classes compartilhadas](../atl-mfc-shared/atl-mfc-shared-classes.md).
 

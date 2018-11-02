@@ -1,37 +1,27 @@
 ---
-title: C3268 de erro do compilador | Microsoft Docs
-ms.custom: ''
+title: Erro do compilador C3268
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3268
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3268
 ms.assetid: d74a630c-daea-4e29-9759-83efef7fb184
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eac0c4e7c25df466ecf1e7e28bccf9ee2a2e2953
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c766488b29273f321feffa8e38a97e54454db7b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705251"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480529"
 ---
-# <a name="compiler-error-c3268"></a>C3268 de erro do compilador
+# <a name="compiler-error-c3268"></a>Erro do compilador C3268
 
 > '*função*': uma função genérica ou uma função de membro de uma classe genérica não pode ter uma lista de parâmetros variáveis
 
 ## <a name="remarks"></a>Comentários
 
-O **/clr: pure** e **/CLR: safe** opções do compilador são substituídas no Visual Studio 2015 e sem suporte no Visual Studio de 2017.
+O **/clr: pure** e **/CLR: safe** opções do compilador são preteridas no Visual Studio 2015 e sem suporte no Visual Studio 2017.
 
-Consulte [genéricos](../../windows/generics-cpp-component-extensions.md) para obter mais informações.
+Ver [genéricos](../../windows/generics-cpp-component-extensions.md) para obter mais informações.
 
 ## <a name="example"></a>Exemplo
 

@@ -1,11 +1,6 @@
 ---
-title: fmax, fmaxf, fmaxl | Microsoft Docs
-ms.custom: ''
+title: fmax, fmaxf, fmaxl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fmax
 - fmaxf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/fmax
 - math/fmaxf
 - math/fmaxl
-dev_langs:
-- C++
 helpviewer_keywords:
 - fmax function
 - fmaxf function
 - fmaxl function
 ms.assetid: a773ccf7-495e-4a9a-8c6d-dfb53e341e35
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6e210fac83c19efaecb909d54734d0422956f37
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0fbe23a4b7d6e0c59523d62f844dd89e66642933
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399810"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50465150"
 ---
 # <a name="fmax-fmaxf-fmaxl"></a>fmax, fmaxf, fmaxl
 
@@ -92,7 +81,7 @@ O segundo valor a ser comparado.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Se for bem-sucedido, retorna o maior de *x* ou *y*. O valor retornado é exato e não depende de nenhuma forma de arredondamento.
+Se for bem-sucedido, retorna o maior dos *x* ou *y*. O valor retornado é exato e não depende de nenhuma forma de arredondamento.
 
 Caso contrário, pode retornar um dos seguintes valores:
 

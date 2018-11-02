@@ -1,28 +1,19 @@
 ---
-title: Classes (ATL) de objetos em execução | Microsoft Docs
-ms.custom: ''
+title: Classes de objetos em execução (ATL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.atl.objects.running
-dev_langs:
-- C++
 helpviewer_keywords:
 - object classes, running
 - objects [C++], running objects classes
 ms.assetid: b4d63c41-81fd-4000-96c5-ea0a011f4308
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32d1363f845014bd10e6f0126e676c12477cea16
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c58997add54515027290d4fb6cd1379d1e3ddd94
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752307"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574831"
 ---
 # <a name="running-objects-classes"></a>Classes de objetos em execução
 

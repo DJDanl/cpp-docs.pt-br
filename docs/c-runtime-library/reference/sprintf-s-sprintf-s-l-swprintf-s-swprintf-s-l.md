@@ -1,10 +1,6 @@
 ---
-title: sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l | Microsoft Docs
-ms.custom: ''
+title: sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _swprintf_s_l
 - _sprintf_s_l
@@ -31,8 +27,6 @@ f1_keywords:
 - stdio/_swprintf_s_l
 - _sprintf_s_l
 - _swprintf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - stprintf_s function
 - stprintf_s_l function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - _sprintf_s_l function
 - formatted text [C++]
 ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0200740df3b41e356bcf83f0756b8a5267b38166
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51469ccec348545ff780d14d5f433099def3eb69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417785"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511937"
 ---
 # <a name="sprintfs-sprintfsl-swprintfs-swprintfsl"></a>sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 
@@ -125,23 +115,23 @@ Para obter mais informações, consulte [Especificações de formato](../../c-ru
 
 ## <a name="return-value"></a>Valor de retorno
 
-O número de caracteres gravados, ou -1 se ocorreu um erro. Se *buffer* ou *formato* é um ponteiro nulo, **sprintf_s** e **swprintf_s** retornar -1 e definir **errno**para **EINVAL**.
+O número de caracteres gravados ou -1 se ocorreu um erro. Se *buffer* ou *formato* é um ponteiro nulo, **sprintf_s** e **swprintf_s** retornar -1 e definir **errno**para **EINVAL**.
 
-**sprintf_s** retorna o número de bytes armazenados em *buffer*, sem contar o caractere null de terminação. **swprintf_s** retorna o número de caracteres largos armazenados em *buffer*, sem contar o caractere largo nulo de terminação.
+**sprintf_s** retorna o número de bytes armazenados no *buffer*, sem contar o caractere nulo de terminação. **swprintf_s** retorna o número de caracteres largos armazenados no *buffer*, sem contar o caractere largo nulo de terminação.
 
 ## <a name="remarks"></a>Comentários
 
-O **sprintf_s** função formata e armazena uma série de caracteres e valores em *buffer*. Cada *argumento* (se houver) é convertido e de saída de acordo com a especificação de formato correspondente em *formato*. O formato consiste em caracteres simples e tem o mesmo formulário e funcionar como o *formato* argumento [printf](printf-printf-l-wprintf-wprintf-l.md). Um caractere nulo é acrescentado após o último caractere escrito. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
+O **sprintf_s** função formata e armazena uma série de caracteres e valores em *buffer*. Cada *argumento* (se houver) é convertido e gerado de acordo com a especificação de formato correspondente em *formato*. O formato consiste em caracteres comuns e tem o mesmo formato e função que o *formato* argumento para [printf](printf-printf-l-wprintf-wprintf-l.md). Um caractere nulo é acrescentado após o último caractere escrito. Se ocorrer cópia entre cadeias de caracteres que se sobrepõem, o comportamento será indefinido.
 
-Uma diferença principal entre **sprintf_s** e [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) é que **sprintf_s** verifica a cadeia de caracteres de formato para formatação de caracteres válida, enquanto [ sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) só verifica se o buffer ou cadeia de caracteres de formato são **nulo** ponteiros. Se uma das verificações falhar, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, a função retornará -1 e conjuntos de **errno** para **EINVAL**.
+Uma diferença principal entre **sprintf_s** e [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) é que **sprintf_s** verifica a cadeia de caracteres de formato para caracteres de formatação válidos, enquanto [ sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) apenas verifica se a cadeia de caracteres de formato ou buffer são **nulo** ponteiros. Se uma das verificações falhar, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, a função retornará -1 e definirá **errno** à **EINVAL**.
 
-A diferença principal entre **sprintf_s** e [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) é que **sprintf_s** usa um parâmetro de comprimento que especifica o tamanho do buffer de saída em caracteres. Se o buffer é muito pequeno para o texto formatado, incluindo o terminação null, em seguida, o buffer está definido para uma cadeia de caracteres vazia, colocando um caractere null no *buffer*[0], e o manipulador de parâmetro inválido é invocado. Ao contrário de **snprintf**, **sprintf_s** garante que o buffer será seja terminada em nulo, a menos que o tamanho do buffer é zero.
+A diferença principal entre **sprintf_s** e [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) é que **sprintf_s** assume um parâmetro de comprimento que especifica o tamanho do buffer de saída em caracteres. Se o buffer é muito pequeno para o texto formatado, incluindo o nulo de terminação, em seguida, o buffer será definido como uma cadeia vazia colocando um caractere nulo em *buffer*[0], e o manipulador de parâmetro inválido será invocado. Diferentemente **snprintf**, **sprintf_s** garante que o buffer será finalizado como nulo, a menos que o tamanho do buffer é zero.
 
-**swprintf_s** é uma versão de caractere largo de **sprintf_s**; os argumentos de ponteiro para **swprintf_s** são cadeias de caracteres do caractere largo. Detecção de erros de codificação **swprintf_s** pode ser diferente no **sprintf_s**. As versões dessas funções com o **_l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
+**swprintf_s** é uma versão de caractere largo de **sprintf_s**; os argumentos de ponteiro para **swprintf_s** são cadeias de caracteres largos. Detecção de erros de codificação **swprintf_s** pode ser diferente no **sprintf_s**. As versões dessas funções com o **l** sufixo são idênticas, exceto que eles usam o parâmetro de localidade passado em vez da localidade do thread atual.
 
 No C++, o uso dessas funções é simplificado por sobrecargas de modelo. As sobrecargas podem inferir o tamanho do buffer automaticamente, eliminando a necessidade de especificar um argumento de tamanho; além disso, elas podem substituir automaticamente funções mais antigas e não seguras por equivalentes mais novas e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 
-Versões de **sprintf_s** que oferecem mais controle sobre o que acontece se o buffer é muito pequeno. Para obter mais informações, consulte [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
+Existem versões do **sprintf_s** que oferecem controle adicional sobre o que acontece se o buffer for muito pequeno. Para obter mais informações, consulte [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mapeamentos da rotina de texto genérico
 

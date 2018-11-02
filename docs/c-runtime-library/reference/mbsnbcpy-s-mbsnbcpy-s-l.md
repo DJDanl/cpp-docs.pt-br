@@ -1,10 +1,6 @@
 ---
-title: _mbsnbcpy_s, _mbsnbcpy_s_l | Microsoft Docs
-ms.custom: ''
+title: _mbsnbcpy_s, _mbsnbcpy_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbcpy_s_l
 - _mbsnbcpy_s
@@ -26,8 +22,6 @@ f1_keywords:
 - _mbsnbcpy_s
 - mbsnbcpy_s
 - _mbsnbcpy_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbsnbcpy_s function
 - tcsncpy_s function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a9475609d304b6a3e49c2f71073c4d06c0380160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00f1fe7a6deb104a4f226e42858764f5649c52ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404111"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493490"
 ---
 # <a name="mbsnbcpys-mbsnbcpysl"></a>_mbsnbcpy_s, _mbsnbcpy_s_l
 
@@ -106,16 +96,16 @@ Localidade a usar.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Zero se for bem-sucedida; **EINVAL** se um parâmetro inválido foi passado.
+Zero se bem-sucedido; **EINVAL** se um parâmetro inválido foi passado.
 
 ## <a name="remarks"></a>Comentários
 
-O **mbsnbcpy_s** função cópias *contagem* bytes do *strSource* para *strDest*. Se *contagem* excede o tamanho de *strDest*, as cadeias de caracteres de entrada é um ponteiro nulo, ou *sizeInBytes* ou *contagem* é 0, a função invoca o manipulador de parâmetro inválido, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução é permitida para continuar, a função retorna **EINVAL**. Se as cadeias de caracteres de origem e de destino se sobrepõem, o comportamento de **mbsnbcpy_s** é indefinido.
+O **mbsnbcpy_s** função cópias *contagem* bytes do *strSource* para *strDest*. Se *contagem* excede o tamanho de *strDest*, seja de cadeias de caracteres de entrada for um ponteiro nulo, ou *sizeInBytes* ou *contagem* é 0, a função invoca o manipulador de parâmetro inválido, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md) . Se a execução puder continuar, a função retornará **EINVAL**. Se as cadeias de caracteres de origem e de destino se sobrepõem, o comportamento de **mbsnbcpy_s** é indefinido.
 
 O valor de saída é afetado pela configuração da categoria **LC_CTYPE** da localidade. Consulte [setlocale](setlocale-wsetlocale.md) para obter mais informações. As versões dessas funções sem o sufixo **_l** usam a localidade atual desse comportamento dependente da localidade. As versões com o sufixo **_l** são idênticas, exceto por usarem o parâmetro de localidade passado em seu lugar. Para obter mais informações, consulte [Localidade](../../c-runtime-library/locale.md).
 
 > [!NOTE]
-> Ao contrário da versão não segura dessa função, **mbsnbcpy_s** fazer qualquer preenchimento nulo e sempre null não encerra a cadeia de caracteres.
+> Ao contrário da versão não segura dessa função, **mbsnbcpy_s** não faz nenhum preenchimento nulo e o nulo sempre termina a cadeia de caracteres.
 
 Em C++, o uso dessas funções é simplificado pelas sobrecargas de modelo; as sobrecargas podem inferir o tamanho do buffer automaticamente (eliminando a necessidade de especificar um argumento de tamanho) e podem substituir automaticamente funções mais antigas e não seguras por suas equivalentes mais recentes e seguras. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

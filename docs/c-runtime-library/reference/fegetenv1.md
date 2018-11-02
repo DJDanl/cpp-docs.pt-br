@@ -1,11 +1,6 @@
 ---
-title: fegetenv | Microsoft Docs
-ms.custom: ''
+title: fegetenv
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fetegenv
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - fegetenv
 - fenv/fegetenv
-dev_langs:
-- C++
 helpviewer_keywords:
 - fetegenv function
 ms.assetid: 68962421-6978-4b27-8e4c-ad1577830cf6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fc8b5d189838c2788bc6200f9072c9511e61d42f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d3985e4dd2b3944bcdddb79605887def7ba15473
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396164"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668085"
 ---
 # <a name="fegetenv"></a>fegetenv
 
@@ -55,15 +44,15 @@ int fegetenv(
 ### <a name="parameters"></a>Parâmetros
 
 *penv*<br/>
-Ponteiro para um **fenv_t** objeto para conter os valores de ponto flutuante do ambiente atual.
+Ponteiro para um **fenv_t** objeto para conter os valores atuais do ambiente de ponto flutuante.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retorna 0 se o ambiente de ponto flutuante com êxito foi armazenado em *penv*. Caso contrário, retornará um valor diferente de zero.
+Retorna 0 se o ambiente de ponto flutuante foi armazenado com êxito no *penv*. Caso contrário, retornará um valor diferente de zero.
 
 ## <a name="remarks"></a>Comentários
 
-O **fegetenv** função armazena o ambiente de ponto flutuante atual no objeto apontado pelo *penv*. O ambiente de ponto flutuante é o conjunto de sinalizadores de status e modos de controle que afetam os cálculos de pontos flutuantes. Isso inclui o modo de direção de arredondamento e os sinalizadores de status para exceções de ponto flutuante.  Se *penv* não aponta para um válida **fenv_t** objeto subsequente comportamento será indefinido.
+O **fegetenv** função armazena o ambiente atual de ponto flutuante no objeto apontado por *penv*. O ambiente de ponto flutuante é o conjunto de sinalizadores de status e modos de controle que afetam os cálculos de pontos flutuantes. Isso inclui o modo de direção de arredondamento e os sinalizadores de status para exceções de ponto flutuante.  Se *penv* não apontar para um válido **fenv_t** do objeto, o comportamento subsequente será indefinido.
 
 Para usar essa função, você deve desligar otimizações de ponto flutuante que poderiam impedir o acesso usando a diretiva `#pragma fenv_access(on)` antes da chamada. Para obter mais informações, consulte [fenv_access](../../preprocessor/fenv-access.md).
 

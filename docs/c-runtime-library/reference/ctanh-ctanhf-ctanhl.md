@@ -1,11 +1,6 @@
 ---
-title: ctanh, ctanhf, ctanhl | Microsoft Docs
-ms.custom: ''
+title: ctanh, ctanhf, ctanhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ctanh
 - ctahf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/ctanh
 - complex/ctanhf
 - complex/ctanhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctanh function
 - ctanhl function
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bf81e503405959686974a26ceb5d064c1ab84400
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e390aceaad2ee82e1fe2a865d3903f5062f52e9d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396076"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50470547"
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh, ctanhf, ctanhl
 
@@ -79,7 +68,7 @@ Um número complexo que representa um ângulo, em radianos.
 
 ## <a name="return-value"></a>Valor de retorno
 
-A tangente hiperbólica complexas de *z*.
+A tangente hiperbólica complexa de *z*.
 
 |Entrada|Exceção SEH|**matherr** exceção|
 |-----------|-------------------|--------------------------|
@@ -88,7 +77,7 @@ A tangente hiperbólica complexas de *z*.
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **ctanh** que levar e retornar **_Fcomplex** e **_Lcomplex** valores. Em um programa C, **ctanh** sempre usa e retorna um **_Dcomplex** valor.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **ctanh** que usam e retornam **fcomplex** e **_Lcomplex** valores. Em um programa do C **ctanh** sempre usa e retorna um **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,11 +1,6 @@
 ---
-title: fdim, fdimf, fdiml | Microsoft Docs
-ms.custom: ''
+title: fdim, fdimf, fdiml
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fdim
 - fdimf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/fdim
 - math/fdimf
 - math/fdiml
-dev_langs:
-- C++
 helpviewer_keywords:
 - fdim function
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cdcad02c94717715fdda1b3a9d2e820fc16d0bf4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8cea831e333ebcd9677d830641c60e460ba5ed4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397500"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50515083"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 
@@ -111,9 +100,9 @@ Os erros são relatados conforme especificado em [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **fdim** que levar e retornar **float** e **longo** **duplo** tipos. Em um programa C, **fdim** sempre usa e retorna um **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **fdim** que usam e retornam **float** e **longo** **double** tipos. Em um programa do C **fdim** sempre usa e retorna um **duplo**.
 
-Exceto para a manipulação de NaN, essa função é equivalente a `fmax(x - y, 0)`.
+Exceto para o tratamento de NaN, essa função é equivalente a `fmax(x - y, 0)`.
 
 ## <a name="requirements"></a>Requisitos
 
