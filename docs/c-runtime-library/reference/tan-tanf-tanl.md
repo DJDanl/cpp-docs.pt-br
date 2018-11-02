@@ -1,10 +1,6 @@
 ---
-title: tan, tanf, tanl | Microsoft Docs
-ms.custom: ''
+title: tan, tanf, tanl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tan
 - tanf
@@ -27,8 +23,6 @@ f1_keywords:
 - tanf
 - _tanl
 - tanl
-dev_langs:
-- C++
 helpviewer_keywords:
 - tanl function
 - _tanl function
@@ -38,18 +32,14 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6c0108e6d72e35a253e31df6ec96cbff19113c0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 79a374142a914e8c2c7cf5c094d443b16e4bce88
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409622"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564011"
 ---
-# <a name="tan-tanf-tanl"></a>Marrom-Claro, tanf, tanl
+# <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
 Calcula a tangente.
 
@@ -73,7 +63,7 @@ long double tan( long double x );  // C++ only
 
 ## <a name="return-value"></a>Valor retornado
 
-O **tan** funções retornam a tangente do *x*. Se *x* é maior que ou igual a 263 ou menor que ou igual a -263, ocorre uma perda de significância no resultado.
+O **tan** funções retornam a tangente de *x*. Se *x* é maior que ou igual a 263 ou menor que ou igual a -263, ocorre uma perda de significância no resultado.
 
 |Entrada|Exceção SEH|**Matherr** exceção|
 |-----------|-------------------|-------------------------|
@@ -82,7 +72,7 @@ O **tan** funções retornam a tangente do *x*. Se *x* é maior que ou igual a 2
 
 ## <a name="remarks"></a>Comentários
 
-Como o C++ permite sobrecarga, você pode chamar sobrecargas de **tan** que levar e retornar **float** ou **longo** **duplo** valores. Em um programa C, **tan** sempre usa e retorna **duplo**.
+Como C++ permite sobrecargas, é possível chamar sobrecargas de **tan** que usam e retornam **float** ou **longo** **double** valores. Em um programa do C **tan** sempre usa e retorna **duplo**.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,10 +1,6 @@
 ---
-title: _fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32 | Microsoft Docs
-ms.custom: ''
+title: _fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fstat32
 - _fstat64
@@ -38,8 +34,6 @@ f1_keywords:
 - _fstat
 - fstat32
 - _fstat64i32
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fstat64 function
 - fstati64 function
@@ -55,16 +49,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 65d77bfdd7922387568ca8257e66f6e19dde1a35
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2cec64e408b326dccc7b950656d0aa699c084f83
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404962"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677780"
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
@@ -109,32 +99,32 @@ Ponteiro para a estrutura para armazenar resultados.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Retornará 0 se as informações de status do arquivo forem obtidas. Um valor de retorno de -1 indica um erro. Se o descritor de arquivo é inválido ou *buffer* é **nulo**, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EBADF**, no caso de um descritor de arquivo inválido ou a **EINVAL**, se *buffer* é **nulo**.
+Retornará 0 se as informações de status do arquivo forem obtidas. Um valor de retorno de -1 indica um erro. Se o descritor de arquivo é inválido ou *buffer* é **nulo**, o manipulador de parâmetro inválido será invocado, conforme descrito na [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EBADF**, no caso de um descritor de arquivo inválido ou a **EINVAL**, se *buffer* está **nulo**.
 
 ## <a name="remarks"></a>Comentários
 
-O **fstat** função obtém informações sobre o arquivo aberto associado *fd* e o armazena na estrutura apontada pelo *buffer*. O **STAT** estrutura, definida em SYS\Stat.h, contém os campos a seguir.
+O **fstat** função obtém informações sobre o arquivo aberto associado *fd* e o armazena na estrutura apontada por *buffer*. O **STAT** estrutura, definida em SYS\Stat.h, contém os campos a seguir.
 
 |Campo|Significado|
 |-|-|
 **st_atime**|Hora do último acesso ao arquivo.
 **st_ctime**|Hora da criação do arquivo.
-**st_dev**|Se um dispositivo, *fd*; caso contrário, 0.
-**st_mode**|Máscara de bits para informações sobre o modo de arquivo. O **s_ifchr** bit é definido se *fd* refere-se a um dispositivo. O **s_ifreg** bit é definido se *fd* refere-se a um arquivo comum. Os bits de leitura/gravação são definidos de acordo com o modo de permissão do arquivo. **S_ifchr** e outras constantes estão definidas no SYS\Stat.h.
+**st_dev**|Se um dispositivo *fd*; caso contrário, 0.
+**st_mode**|Máscara de bits para informações sobre o modo de arquivo. O **s_ifchr** bit será definido se *fd* refere-se a um dispositivo. O **s_ifreg** bit será definido se *fd* refere-se a um arquivo comum. Os bits de leitura/gravação são definidos de acordo com o modo de permissão do arquivo. **S_ifchr** e outras constantes estão definidas em sys\stat.h.
 **st_mtime**|Hora da última modificação do arquivo.
 **st_nlink**|Sempre 1 em sistemas de arquivos diferentes de NTFS.
-**st_rdev**|Se um dispositivo, *fd*; caso contrário, 0.
+**st_rdev**|Se um dispositivo *fd*; caso contrário, 0.
 **st_size**|Tamanho do arquivo em bytes.
 
-Se *fd* refere-se a um dispositivo, o **st_atime**, **st_ctime**, **st_mtime**, e **st_size** campos são não é significativo.
+Se *fd* refere-se a um dispositivo, o **st_atime**, **st_ctime**, **st_mtime**, e **st_size** campos são não é significativa.
 
 Como Stat.h usa o tipo [_dev_t](../../c-runtime-library/standard-types.md), que é definido em Types.h, você deve incluir Types.h antes de Stat.h em seu código.
 
-**fstat64**, que usa o **stat64** estrutura, permite que as datas de criação do arquivo a ser expressa backup por meio de 23:59:59, 31 de dezembro de 3000 a UTC; enquanto as outras funções representam apenas datas até 23:59:59 18 de janeiro, 2038, UTC. Meia-noite de 1º de janeiro de 1970 é o limite inferior do intervalo de datas para todas essas funções.
+**_fstat64**, que usa o **__stat64** estrutura, permite que as datas de criação de arquivo sejam expressas até 23:59:59, 31 de dezembro de 3000, a UTC; enquanto as outras funções representam apenas datas até 23:59:59 18 de janeiro 2038, UTC. Meia-noite de 1º de janeiro de 1970 é o limite inferior do intervalo de datas para todas essas funções.
 
-Variações dessas funções dão suporte a tipos de hora de 32 ou de 64 bits e a comprimentos de arquivo de 32 ou de 64 bits. O primeiro sufixo numérico (**32** ou **64**) indica o tamanho do tempo tipo usado; é o sufixo do segundo **i32** ou **i64**, que indica se o tamanho do arquivo é representado como um inteiro de 32 bits ou 64 bits.
+Variações dessas funções dão suporte a tipos de hora de 32 ou de 64 bits e a comprimentos de arquivo de 32 ou de 64 bits. O primeiro sufixo numérico (**32** ou **64**) indica o tamanho do tempo tipo usado; o segundo sufixo é **i32** ou **i64**, que indica se o tamanho do arquivo é representado como um inteiro de 32 bits ou 64 bits.
 
-**fstat** é equivalente a **_fstat64i32**, e **struct** **STAT** contém um tempo de 64 bits. Isso é verdadeiro, a menos que **_USE_32BIT_TIME_T** for definido, caso em que o comportamento antigo está em vigor; **fstat** usa um tempo de 32 bits, e **struct** **STAT** contém um tempo de 32 bits. O mesmo é verdadeiro para **fstati64**.
+**fstat** é equivalente a **_fstat64i32**, e **struct** **STAT** contém uma hora de 64 bits. Isso é verdadeiro, a menos que **_USE_32BIT_TIME_T** é definido, caso em que o comportamento antigo está em vigor. **fstat** usa uma hora de 32 bits, e **struct** **STAT** contém uma hora de 32 bits. O mesmo é verdadeiro para **_fstati64**.
 
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>Variações de tipo de hora e de tipo de tamanho de arquivo de _stat
 
