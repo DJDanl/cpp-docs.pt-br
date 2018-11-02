@@ -1,10 +1,6 @@
 ---
-title: _ftell_nolock, _ftelli64_nolock | Microsoft Docs
-ms.custom: ''
+title: _ftell_nolock, _ftelli64_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ftelli64_nolock
 - _ftell_nolock
@@ -26,8 +22,6 @@ f1_keywords:
 - ftelli64_nolock
 - ftell_nolock
 - _ftell_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftelli64_nolock function
 - _ftelli64_nolock function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - ftell_nolock function
 - file pointers [C++], getting current position
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 15d1001b1f0465273771649404de306153edf920
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 58bfc8c7a8b8e820fdec09d52e24dfcb07f328f8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398443"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580837"
 ---
 # <a name="ftellnolock-ftelli64nolock"></a>_ftell_nolock, _ftelli64_nolock
 
@@ -63,16 +53,16 @@ __int64 _ftelli64_nolock(
 
 ### <a name="parameters"></a>Parâmetros
 
-*Fluxo*<br/>
-Destino de **arquivo** estrutura.
+*fluxo*<br/>
+Destino do **arquivo** estrutura.
 
 ## <a name="return-value"></a>Valor de retorno
 
-Mesmo que **ftell** e **ftelli64**. Para obter mais informações, consulte [ftell, ftelli64](ftell-ftelli64.md).
+Mesmo que **ftell** e **_ftelli64**. Para obter mais informações, consulte [ftell, _ftelli64](ftell-ftelli64.md).
 
 ## <a name="remarks"></a>Comentários
 
-Essas funções são sem bloqueio versões do **ftell** e **ftelli64**, respectivamente. Eles são idênticos a **ftell** e **ftelli64** exceto que eles não são protegidos contra interferência por outros threads. Essas funções podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
+Essas funções são sem bloqueio versões do **ftell** e **_ftelli64**, respectivamente. Elas são idênticas às **ftell** e **_ftelli64** , exceto que eles não são protegidos contra interferência de outros threads. Essas funções podem ser mais rápidas, porque não incorrem na sobrecarga de bloquear outros threads. Use estas funções apenas em contextos thread-safe, como aplicativos de thread único ou em que o escopo de chamada já trata do isolamento de threads.
 
 ## <a name="requirements"></a>Requisitos
 

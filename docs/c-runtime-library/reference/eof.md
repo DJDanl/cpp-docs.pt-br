@@ -1,10 +1,6 @@
 ---
-title: _eof | Microsoft Docs
-ms.custom: ''
+title: _eof
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _eof
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _eof
-dev_langs:
-- C++
 helpviewer_keywords:
 - eof function
 - end of file, testing for
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da7ccad98491762d30db2741f8c3d9fe0d784dc6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1da849c3721d4d83ff0b3166bc18f95728ebf124
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395118"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522389"
 ---
 # <a name="eof"></a>_eof
 
@@ -62,7 +52,7 @@ Descritor de arquivo que se refere ao arquivo aberto.
 
 ## <a name="return-value"></a>Valor de retorno
 
-**EOF** retornará 1 se a posição atual está final do arquivo, ou 0 se não for. Um valor de retorno de -1 indica um erro; Nesse caso, o manipulador de parâmetro inválido é invocado, conforme descrito em [validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, **errno** é definido como **EBADF**, que indica que um descritor de arquivo inválido.
+**EOF** retornará 1 se a posição atual está final do arquivo ou 0 se não for. Um valor retornado de -1 indica um erro; Nesse caso, o manipulador de parâmetro inválido será invocado, conforme descrito em [validação de parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, **errno** é definido como **EBADF**, que indica um descritor de arquivo inválido.
 
 ## <a name="remarks"></a>Comentários
 

@@ -1,11 +1,6 @@
 ---
-title: c16rtomb, c32rtomb1 | Microsoft Docs
-ms.custom: ''
+title: c16rtomb, c32rtomb1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - c16rtomb
 - c32rtomb
@@ -27,22 +22,16 @@ f1_keywords:
 - c32rtomb
 - uchar/c16rtomb
 - uchar/c32rtomb
-dev_langs:
-- C++
 helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3282fb13e5b59ad3214c67410eef5186687114e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d735363bbb317b06c1ebc73a2b0678479a243ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394532"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536576"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb, c32rtomb
 
@@ -76,15 +65,15 @@ Um ponteiro para um **mbstate_t** objeto.
 
 ## <a name="return-value"></a>Valor de retorno
 
-O número de bytes armazenados no objeto de matriz *mbchar*, incluindo quaisquer sequências de turno. Se *wchar* não é um caractere largo válido, o valor (**size_t**)(-1) for retornado, **errno** é definido como **EILSEQ**e o valor de *estado* não está especificado.
+O número de bytes armazenados no objeto de matriz *mbchar*, incluindo quaisquer sequências de deslocamento. Se *wchar* não é um caractere largo válido, o valor (**size_t**)(-1) for retornado, **errno** é definido como **EILSEQ**e o valor de *estado* não está especificado.
 
 ## <a name="remarks"></a>Comentários
 
-O **c16rtomb** função converte o caractere UTF-16 *wchar* à sequência de caractere estreito multibyte equivalente na localidade atual. Se *mbchar* não é um ponteiro nulo, os repositórios de função a sequência convertida no objeto de matriz apontada pelo *mbchar*. Até **MB_CUR_MAX** bytes são armazenados em *mbchar*, e *estado* é definido como o estado de shift multibyte resultante.    Se *wchar* é um caractere largo nulo, uma sequência necessário para restaurar o estado de shift inicial é armazenado, se necessário, seguido pelo caractere null, e *estado* está definido para o estado inicial de conversão. O **c32rtomb** função é idêntica, mas converte um caractere UTF-32.
+O **c16rtomb** função converte o caractere UTF-16 *wchar* à sequência de caractere estreito multibyte equivalente na localidade atual. Se *mbchar* não é um ponteiro nulo, a função armazena a sequência convertida no objeto de matriz apontada por *mbchar*. Até **MB_CUR_MAX** bytes são armazenados em *mbchar*, e *estado* é definido como o estado de deslocamento multibyte resultante.    Se *wchar* é um caractere largo nulo, uma sequência necessária para restaurar o estado de deslocamento inicial será armazenado, se necessário, seguido pelo caractere null, e *estado* é definido como o estado de conversão inicial. O **c32rtomb** função é idêntica, mas converte um caractere UTF-32.
 
-Se *mbchar* é um ponteiro nulo, o comportamento é equivalente a uma chamada para a função que substitui um buffer interno para *mbchar* e um caractere null largo para *wchar*.
+Se *mbchar* for um ponteiro nulo, o comportamento é equivalente a uma chamada para a função que substitui um buffer interno para *mbchar* e um caractere nulo largo para *wchar*.
 
-O *estado* objeto de estado de conversão permite que você faça chamadas subsequentes para essa função e outras funções reiniciáveis que mantêm o estado de shift dos caracteres multibyte de saída. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não pode ser reiniciada, ou se uma chamada para **setlocale** é feita entre chamadas de função reiniciável.
+O *estado* objeto de estado de conversão permite que você faça chamadas subsequentes para essa função e outras funções reiniciáveis que mantenham o estado de deslocamento dos caracteres multibyte de saída. Os resultados são indefinidos ao combinar o uso de funções reiniciáveis e não reiniciáveis ou se uma chamada para **setlocale** é feita entre chamadas de função reiniciável.
 
 ## <a name="requirements"></a>Requisitos
 

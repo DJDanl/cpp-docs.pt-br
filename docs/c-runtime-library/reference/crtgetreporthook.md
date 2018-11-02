@@ -1,10 +1,6 @@
 ---
-title: _CrtGetReportHook | Microsoft Docs
-ms.custom: ''
+title: _CrtGetReportHook
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtGetReportHook
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtGetReportHook
 - _CrtGetReportHook
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtGetReportHook function
 - _CrtGetReportHook function
 ms.assetid: 922758ed-7edd-4359-9c92-0535192dc11a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d78c176d5d4de54f4ae5eea84b0483b9e6bc3bec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b8b666093807c95312d4328ca9b3043ad1e09df
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395004"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536754"
 ---
 # <a name="crtgetreporthook"></a>_CrtGetReportHook
 
@@ -55,7 +45,7 @@ Retorna a função de relatório atual definida pelo cliente.
 
 ## <a name="remarks"></a>Comentários
 
-**Crtgetreporthook** permite que um aplicativo recuperar a função de relatório atual para a biblioteca de depuração do tempo de execução C processo de relatório.
+**Crtgetreporthook** permite que um aplicativo recupere a função de relatório atual para a processo de relatório da biblioteca de depuração em tempo de execução C.
 
 Para obter mais informações sobre como usar outras funções em tempo de execução compatíveis com gancho e escrever suas próprias funções de gancho definidas pelo cliente, consulte [Gravação da função de gancho de depuração](/visualstudio/debugger/debug-hook-function-writing).
 

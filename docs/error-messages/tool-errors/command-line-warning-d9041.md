@@ -1,27 +1,17 @@
 ---
-title: Linha de comando D9041 de aviso | Microsoft Docs
-ms.custom: ''
+title: Aviso D9041 (linha de comando)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - D9041
-dev_langs:
-- C++
 helpviewer_keywords:
 - D9041
 ms.assetid: ada8815f-4246-4e25-b57d-a7f16fa107cc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 70bf82cfdca787898a02fb52926981bfd1a1b3e4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 79bdafcd4ed6af061b9c0ee27aae6eed6bc981a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46033375"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513913"
 ---
 # <a name="command-line-warning-d9041"></a>Aviso D9041 (linha de comando)
 

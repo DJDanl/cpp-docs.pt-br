@@ -1,10 +1,6 @@
 ---
-title: _fcvt_s | Microsoft Docs
-ms.custom: ''
+title: _fcvt_s
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fcvt_s
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - fcvt_s
 - _fcvt_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - fcvt_s function
 - converting floating point, to strings
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2897c199b1b7022de8d5735c4da5f02d7627a418
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51ff3c675f1f53aee9beab629b17193164a2e7eb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404055"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536835"
 ---
 # <a name="fcvts"></a>_fcvt_s
 
@@ -91,30 +81,30 @@ Ponteiro para o indicador de logon armazenado.
 
 Zero se for bem-sucedido. Se houver uma falha, o valor retornado será um código de erro. Códigos de erro são definidos em Errno.h. Para obter uma lista desses erros, consulte [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-No caso de um parâmetro inválido, conforme listado na tabela a seguir, essa função invoca o manipulador de parâmetro inválido, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução é permitida para continuar, esta função define **errno** para **EINVAL** e retorna **EINVAL**.
+No caso de um parâmetro inválido, conforme listado na tabela a seguir, essa função invoca o manipulador de parâmetro inválido, como descrito em [Validação do parâmetro](../../c-runtime-library/parameter-validation.md). Se a execução puder continuar, essa função definirá **errno** à **EINVAL** e retorna **EINVAL**.
 
 ### <a name="error-conditions"></a>Condições de Erro
 
 |*buffer*|*sizeInBytes*|Valor |count|dec|sinal|Valor de|Valor em *buffer*|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
 |**NULL**|qualquer|qualquer|qualquer|qualquer|qualquer|**EINVAL**|Não modificado.|
-|Não **nulo** (aponta válido da memória)|<=0|qualquer|qualquer|qualquer|qualquer|**EINVAL**|Não modificado.|
+|Não **nulo** (aponta para a memória válida)|<=0|qualquer|qualquer|qualquer|qualquer|**EINVAL**|Não modificado.|
 |qualquer|qualquer|qualquer|qualquer|**NULL**|qualquer|**EINVAL**|Não modificado.|
 |qualquer|qualquer|qualquer|qualquer|qualquer|**NULL**|**EINVAL**|Não modificado.|
 
 ## <a name="security-issues"></a>Problemas de segurança
 
-**fcvt_s** pode gerar uma violação de acesso se *buffer* não aponta para memória válido e não é **nulo**.
+**fcvt_s** pode gerar uma violação de acesso se *buffer* não apontar para a memória válida e não é **nulo**.
 
 ## <a name="remarks"></a>Comentários
 
-O **fcvt_s** função converte um número de ponto flutuante em uma cadeia de caracteres terminada em nulo. O *valor* parâmetro é o número de ponto flutuante a ser convertido. **fcvt_s** armazena os dígitos de *valor* como uma cadeia de caracteres e acrescenta um caractere nulo ('\0'). O *contagem* parâmetro especifica o número de dígitos a serem armazenados após o ponto decimal. Dígitos em excesso são arredondados para *contagem* coloca. Se houver menos de *contagem* dígitos de precisão, a cadeia de caracteres é preenchida com zeros.
+O **fcvt_s** função converte um número de ponto flutuante em uma cadeia de caracteres terminada em nulo. O *valor* parâmetro é o número de ponto flutuante a ser convertido. **fcvt_s** armazena os dígitos de *valor* como uma cadeia de caracteres e acrescenta um caractere nulo ('\0'). O *contagem* parâmetro especifica o número de dígitos a serem armazenados após o ponto decimal. Dígitos em excesso são arredondados para *contagem* coloca. Se houver menos de *contagem* dígitos de precisão, a cadeia de caracteres será preenchida com zeros.
 
-Somente dígitos são armazenados na cadeia de caracteres. A posição do ponto decimal e o sinal de *valor* pode ser obtido *dez* e *sinal* após a chamada. O *dez* parâmetro aponta para um valor inteiro; esse valor de inteiro retorna a posição do ponto decimal em relação ao início da cadeia de caracteres. Um valor inteiro de zero ou negativo indica que o ponto decimal se encontra à esquerda do primeiro dígito. O parâmetro *sinal* aponta para um número inteiro indicando o sinal de *valor*. O inteiro é definido como 0 se *valor* for positivo e é definido para um número diferente de zero, se *valor* é negativo.
+Somente dígitos são armazenados na cadeia de caracteres. A posição do ponto decimal e o sinal de *valor* pode ser obtido *dec* e *entrada* após a chamada. O *dec* parâmetro aponta para um valor inteiro; o valor inteiro dando a posição do ponto decimal em relação ao início da cadeia de caracteres. Um valor inteiro de zero ou negativo indica que o ponto decimal se encontra à esquerda do primeiro dígito. O parâmetro *sinal* aponta para um inteiro que indica o sinal do *valor*. O inteiro é definido como 0 se *valor* for positivo e é definido como um número diferente de zero se *valor* é negativo.
 
-Um buffer de comprimento **_CVTBUFSIZE** é suficiente para qualquer flutuante valor de ponto.
+Um buffer de tamanho **_CVTBUFSIZE** é suficiente para qualquer flutuantes valor de ponto.
 
-A diferença entre **ecvt_s** e **fcvt_s** está na interpretação de *contagem* parâmetro. **ecvt_s** interpreta *contagem* como o número total de dígitos na cadeia de saída, e **fcvt_s** interpreta *contagem* como o número de dígitos após o ponto decimal.
+A diferença entre **ecvt_s** e **fcvt_s** está na interpretação do *contagem* parâmetro. **ecvt_s** interpreta *contagem* como o número total de dígitos na cadeia de saída, e **fcvt_s** interpreta *contagem* como o número de dígitos após o ponto decimal.
 
 No C++, o uso dessa função é simplificado por uma sobrecarga de modelo. A sobrecarga pode inferir o tamanho do buffer automaticamente, eliminando a necessidade de especificar um argumento de tamanho. Para obter mais informações, consulte [Sobrecargas de modelo seguro](../../c-runtime-library/secure-template-overloads.md).
 

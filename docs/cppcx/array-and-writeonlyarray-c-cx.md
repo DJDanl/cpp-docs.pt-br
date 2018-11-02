@@ -1,20 +1,13 @@
 ---
-title: Matriz e WriteOnlyArray (C++ c++ /CX) | Microsoft Docs
-ms.custom: ''
+title: Matriz e WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4423616a9a05268a68e6eff095a2503c3a1d0590
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b957e7d34486aced4796a029ebfdfa710dc71fcc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103665"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530189"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Matriz e WriteOnlyArray (C++/CX)
 
@@ -86,13 +79,13 @@ O sistema de tipos do Tempo de Execução do Windows não oferece suporte ao con
 
 Em alguns cenários onde os dados estiverem sendo passados pela ABI para um [Platform::Array](../cppcx/platform-array-class.md)e você, por fim, desejar processar esses dados em uma matriz C-style para obter eficiência, poderá usar [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) para evitar a operação de cópia extra. Quando você passar um [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) como um argumento para um parâmetro que usa um `Platform::Array`, o `ArrayReference` armazenará os dados diretamente em uma matriz C-style especificada por você. Apenas esteja ciente de que `ArrayReference` não tem nenhum bloqueio nos dados de origem, portanto, se esses dados forem modificados ou excluídos em outro thread antes de a chamada ser concluída, os resultados serão indefinidos.
 
-O trecho de código a seguir mostra como copiar os resultados de uma [DataReader](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) operação em um `Platform::Array` (o padrão comum) e, em seguida, como substituir `ArrayReference` para copiar os dados diretamente em uma matriz C-style:
+O seguinte snippet de código mostra como copiar os resultados de uma operação [DataReader](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) em um `Platform::Array` (o padrão comum) e como substituir `ArrayReference` para copiar os dados diretamente em uma matriz C-style:
 
 [!code-cpp[cx_arrays#07](../cppcx/codesnippet/CPP/js-array/class1.h#07)]
 
 ## <a name="avoid-exposing-an-array-as-a-property"></a>Evitar a exposição de uma matriz como uma propriedade
 
-Em geral, você deve evitar expor um tipo `Platform::Array` como uma propriedade em uma classe ref, pois a matriz inteira será retornada mesmo quando o código do cliente estiver apenas tentando acessar um único elemento. Quando você precisa expor um contêiner de sequência como uma propriedade em uma classe ref pública, [Windows::Foundation::IVector](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) é uma opção melhor. Em APIs privadas ou internas (que não são publicadas nos metadados), pense na possibilidade de usar um contêiner padrão do C++, como [std::vector](../standard-library/vector-class.md).
+Em geral, você deve evitar expor um tipo `Platform::Array` como uma propriedade em uma classe ref, pois a matriz inteira será retornada mesmo quando o código do cliente estiver apenas tentando acessar um único elemento. Quando você precisar expor um contêiner de sequências como uma propriedade em uma classe ref pública, [Windows::Foundation::IVector](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) será uma opção melhor. Em APIs privadas ou internas (que não são publicadas nos metadados), pense na possibilidade de usar um contêiner padrão do C++, como [std::vector](../standard-library/vector-class.md).
 
 ## <a name="see-also"></a>Consulte também
 
