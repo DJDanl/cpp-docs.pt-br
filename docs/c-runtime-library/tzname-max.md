@@ -1,7 +1,7 @@
 ---
 title: TZNAME_MAX | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -16,16 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3be68ca3632d11231f446de262a8251c2b3409c2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dc44ff3178493132c1b8d5dc168cee6be4c5bc56
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46032491"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990146"
 ---
 # <a name="tznamemax"></a>TZNAME_MAX
 
-O comprimento máximo de cadeia de caracteres permitido para uma variável de nome de fuso horário.
+**Obsoleto**. O comprimento máximo de cadeia de caracteres permitido para uma variável de nome de fuso horário. Essa macro foi definida em \<limits.h> no Visual Studio 2012 e versões anteriores. Ela não está definida no Visual Studio 2013 e versões posteriores. Para obter o tamanho necessário para manter o nome do fuso horário atual, use [_get_tzname](../c-runtime-library/reference/get-tzname.md).
 
 ## <a name="syntax"></a>Sintaxe
 

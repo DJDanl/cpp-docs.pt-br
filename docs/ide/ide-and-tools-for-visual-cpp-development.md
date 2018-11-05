@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31b9c0c8668ec16d84ad84627eb73a0f406eb21e
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 99fdb8f9c08845c5f440fc4ae1f100f8afd832e2
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328370"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136153"
 ---
 # <a name="ide-and-compiler-tools-for-visual-c-development"></a>IDE e Ferramentas de Compilador para Desenvolvimento do Visual C++
 
@@ -30,7 +30,7 @@ Além das ferramentas compartilhadas no IDE do Visual Studio, o MSVC tem várias
 
 ## <a name="create-projects"></a>Criar projetos
 
-Um *projeto* é basicamente um conjunto de arquivos de código-fonte e recursos, como imagens ou arquivos de dados que são compilados em um arquivo executável. 
+Um *projeto* é basicamente um conjunto de arquivos de código-fonte e recursos, como imagens ou arquivos de dados que são compilados em um arquivo executável.
 
 O Visual Studio 2015 dá suporte para projetos do MSBuild. Você pode baixar extensões do Visual Studio para outros sistemas de build, como Qt ou CMake.
 
@@ -65,7 +65,7 @@ Para obter mais informações sobre como criar uma interface do usuário para um
 
 ## <a name="write-code"></a>Escrever código
 
-Depois que você cria um projeto, todos os arquivos de projeto são exibidos na janela **Gerenciador de Soluções**. Uma *solução* é um contêiner lógico para um ou mais projetos relacionados. Quando você clica em um arquivo .h ou .cpp no **Gerenciador de Soluções**, o arquivo é aberto no editor de códigos. 
+Depois que você cria um projeto, todos os arquivos de projeto são exibidos na janela **Gerenciador de Soluções**. Uma *solução* é um contêiner lógico para um ou mais projetos relacionados. Quando você clica em um arquivo .h ou .cpp no **Gerenciador de Soluções**, o arquivo é aberto no editor de códigos.
 
 ![Gerenciador de Soluções e editor de código](media/vs2017-solution-explorer-code-editor.png "Gerenciador de Soluções e editor de código do Visual Studio 2017")
 

@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98965b94c83b69e15c38319d7bc5a6e4151b323e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 91b97c653a5f035a767fbedcfcbfdfa7ca178327
+ms.sourcegitcommit: 038f1406b1172318f8832371ad14176f788c44fa
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704880"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50132147"
 ---
 # <a name="link-options"></a>Opções de link
 
@@ -57,6 +57,7 @@ As versões de modo puro CLR desses objetos são preteridos no Visual Studio 201
 |binmode.obj|pbinmode.obj|Define o modo padrão de conversão de arquivo como binário. Consulte [_fmode](../c-runtime-library/fmode.md).|
 |chkstk.obj|N/D|Oferece verificação de pilha e suporte a alloca quando o CRT não está sendo usado.|
 |commode.obj|pcommode.obj|Define o sinalizador de confirmação global como "confirmação". Consulte [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md) e [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md).|
+|exe_initialize_mta.lib|N/D|Inicializa o apartment MTA durante a inicialização do EXE, que permite o uso de objetos COM em ponteiros inteligentes globais. Como essa opção perde uma referência de apartment MTA durante o desligamento, não a use para DLLs. O vínculo a isso é equivalente a incluir combase.h e definir _EXE_INITIALIZE_MTA. |
 |fp10.obj|N/D|Altera o controle de precisão padrão para 64 bits. Consulte [Suporte de Ponto Flutuante](../c-runtime-library/floating-point-support.md).|
 |invalidcontinue.obj|pinvalidcontinue.obj|Define um manipulador de parâmetro inválido padrão que não realiza nenhuma atividade, isto é, parâmetros inválidos passados para funções CRT serão definidos como errno e retornarão um resultado de erro.|
 |loosefpmath.obj|N/D|Garante que códigos de ponto flutuante tolerem valores desnormalizados.|

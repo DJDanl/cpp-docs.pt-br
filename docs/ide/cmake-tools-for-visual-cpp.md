@@ -1,7 +1,7 @@
 ---
 title: Projetos do CMake no Visual C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 09/26/2018
+ms.date: 10/18/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76877a0559fd954661fb3e38131796e89c41679f
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 93cfa14e943e277b5255eeb486491c831eba0da3
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235094"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143725"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Projetos do CMake no Visual C++
 
@@ -54,7 +54,7 @@ Quando você escolhe **Arquivo | Abrir | Pasta** para abrir uma pasta que conté
 - O Visual Studio executa CMake.exe e gera o cache do CMake para a *configuração* padrão, que é Depuração x86. A linha de comando do CMake é exibida na **Janela de Saída**, juntamente com uma saída adicional do CMake.  **Visual Studio 2017 versão 15.7 e posteriores**: a geração automática de cache pode ser desabilitada na caixa de diálogo **Ferramentas | Opções | CMake | Geral**.
 - Em segundo plano, o Visual Studio começa a indexar os arquivos de origem para habilitar o IntelliSense, as informações de navegação, a refatoração e assim por diante. Conforme você trabalha, o Visual Studio monitora as alterações feitas no editor e também em disco para manter seu índice em sincronia com as fontes.
 
-Você pode abrir pastas que contêm qualquer quantidade de projetos do CMake. O Visual Studio detecta e configura todos os arquivos CMakeLists.txt "raiz" no espaço de trabalho. As operações do CMake (configuração, build, depuração), bem como o C++ IntelliSense e a navegação, estão disponíveis para todos os projetos do CMake no espaço de trabalho.
+Você pode abrir pastas que contêm qualquer quantidade de projetos do CMake. O Visual Studio detecta e configura todos os arquivos CMakeLists.txt "raiz" no workspace. As operações do CMake (configuração, build, depuração), bem como o C++ IntelliSense e a navegação, estão disponíveis para todos os projetos do CMake no workspace.
 
 ![Projeto do CMake com várias raízes](media/cmake-multiple-roots.png)
 
@@ -89,7 +89,7 @@ Nem tudo no cache é importado.  Propriedades, como o gerador e o local dos comp
 Para compilar um projeto do CMake, você tem estas opções:
 
 1. Selecione o destino na lista suspensa **Depuração** e pressione **F5** ou clique no botão **Executar** (triângulo verde). O projeto será compilado automaticamente pela primeira vez, assim como uma solução do Visual Studio.
-1. Clique com o botão direito do mouse em CMakeLists.txt e selecione **Build** no menu de contexto. Se você tiver vários destinos na estrutura de pastas, opte por compilar todos ou apenas um destino específico ou
+1. Clique com o botão direito do mouse em CMakeLists.txt e selecione **Build** no menu de contexto. Se você tiver vários destinos na estrutura de pastas, opte por compilar todos ou apenas um destino específico.
 1. No menu principal, selecione **Build | Compilar Solução** (**F7** ou **Ctrl+Shift+B**). Verifique se um destino do CMake já está selecionado na lista suspensa **Item de Inicialização** na barra de ferramentas **Geral**.
 
 ![Comando de menu de build do CMake](media/cmake-build-menu.png "Menu de comando de build do CMake")
@@ -215,7 +215,7 @@ Para especificar um gerador do Visual Studio, abra o CMakeSettings.json no menu 
 
 1. **buildRoot**: é mapeado para a opção **-DCMAKE_BINARY_DIR** e especifica o local em que o cache do CMake será criado. Se a pasta não existir, ela será criada.
 
-1. **variables**: contém um par nome-valor das variáveis do CMake que serão passadas como **-D**_name_**=**_value_ para o CMake. Se as instruções de build do projeto do CMake especificam a adição de variáveis diretamente ao arquivo de cache do CMake, é recomendável que você adicione-as aqui. O exemplo a seguir mostra como especificar os pares nome-valor:
+1. **variables**: contém um par nome-valor das variáveis do CMake que serão passadas como **-D** *_name_=_value_* para o CMake. Se as instruções de build do projeto do CMake especificam a adição de variáveis diretamente ao arquivo de cache do CMake, é recomendável que você adicione-as aqui. O exemplo a seguir mostra como especificar os pares nome-valor:
 
 ```json
 "variables": [
@@ -243,8 +243,8 @@ Para especificar um gerador do Visual Studio, abra o CMakeSettings.json no menu 
 CMakeSettings.json também dá suporte ao consumo de variáveis de ambiente em uma das propriedades mencionadas acima. A sintaxe a ser usada é `${env.FOO}` para expandir a variável de ambiente %FOO%.
 Você também tem acesso às macros internas dentro deste arquivo:
 
-- `${workspaceRoot}` – fornece o caminho completo da pasta de espaço de trabalho
-- `${workspaceHash}` – hash do local do espaço de trabalho; útil para criação de um identificador exclusivo para o espaço de trabalho atual (por exemplo, para uso em caminhos de pasta)
+- `${workspaceRoot}` – fornece o caminho completo da pasta de workspace
+- `${workspaceHash}` – hash do local do workspace; útil para criação de um identificador exclusivo para o workspace atual (por exemplo, para uso em caminhos de pasta)
 - `${projectFile}` – o caminho completo do arquivo CMakeLists.txt raiz
 - `${projectDir}` – o caminho completo da pasta do arquivo CMakeLists.txt raiz
 - `${thisFile}` – o caminho completo do arquivo CMakeSettings.json
@@ -285,7 +285,7 @@ CMakeSettings.json agora dá suporte a ambientes herdados. Esse recurso permite 
 
 O exemplo acima é o mesmo que executar o **Prompt de Comando do Desenvolvedor para VS 2017** com os argumentos **-arch=amd64 -host_arch=amd64**.
 
-A seguinte tabela mostra os valores padrão e seus equivalentes de linha de comando:
+A tabela a seguir mostra os valores padrão:
 
 |Nome do contexto|Descrição|
 |-----------|-----------------|
@@ -382,7 +382,7 @@ Quando vários projetos do CMake usam o mesmo nome de configuração do CMake (p
 
    ![Item de menu Somente Build do CMake](media/cmake-build-only.png "CMake Build Only menu item")
 
-Para limitar os builds e as sessões de depuração a um subconjunto dos projetos no espaço de trabalho, crie uma configuração com um nome exclusivo no arquivo CMakeSettings.json e aplique-a apenas a esses projetos. Quando essa configuração é selecionada, os comandos de build, de depuração e do IntelliSense são habilitados apenas para esses projetos especificados.
+Para limitar os builds e as sessões de depuração a um subconjunto dos projetos no workspace, crie uma configuração com um nome exclusivo no arquivo CMakeSettings.json e aplique-a apenas a esses projetos. Quando essa configuração é selecionada, os comandos de build, de depuração e do IntelliSense são habilitados apenas para esses projetos especificados.
 
 ## <a name="troubleshooting-cmake-cache-errors"></a>Solução de problemas de erros do cache do CMake
 

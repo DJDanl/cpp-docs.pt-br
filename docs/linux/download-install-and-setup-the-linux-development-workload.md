@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: a45d216f1d6ddcef704dba40ff97f6ed71f98240
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 8ef0a8d3ecae6371603716ad31530776eed7ee86
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410636"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143686"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Baixar, instalar e configurar a carga de trabalho do Linux
 
@@ -26,14 +26,14 @@ ms.locfileid: "49410636"
 
 ## <a name="visual-studio-setup"></a>Configuração do Visual Studio
 
-1. Digite "Instalador do Visual Studio" no menu de pesquisa do Windows, procure-o nos resultados dos **Aplicativos** e clique duas vezes nele. Quando o instalador é aberto, escolha **Modificar** e, em seguida, clique na guia **Cargas de trabalho**. Role para baixo até **Outros conjuntos de ferramentas** e selecione a carga de trabalho **Desenvolvimento para Linux com C++**.
+1. Digite "Instalador do Visual Studio" na caixa de pesquisa do Windows: ![caixa de pesquisa do Windows](media/visual-studio-installer-search.png)
+2. Procure o instalador sob os resultados dos **Aplicativos** e clique duas vezes nele. Quando o instalador é aberto, escolha **Modificar** e, em seguida, clique na guia **Cargas de trabalho**. Role para baixo até **Outros conjuntos de ferramentas** e selecione a carga de trabalho **Desenvolvimento para Linux com C++**.
 
    ![Carga de trabalho do Visual C++ para Desenvolvimento em Linux](media/linuxworkload.png)
 
-1. Se você usa o CMake ou está definindo as plataformas inseridas ou IoT como destino, vá para o painel **Detalhes da instalação** à direita, em **Desenvolvimento para Linux com C++**, expanda **Componentes opcionais** e escolha os componentes de que precisa. 
+1. Se você usa o CMake ou está definindo as plataformas inseridas ou IoT como destino, vá para o painel **Detalhes da instalação** à direita, em **Desenvolvimento para Linux com C++**, expanda **Componentes opcionais** e escolha os componentes de que precisa.
 
 1. Clique em **Modificar** para continuar a instalação.
-
 
 ## <a name="options-for-creating-a-linux-environment"></a>Opções para criar um ambiente Linux
 

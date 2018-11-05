@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcf3ce1f0ddc5003886c367cfe5db8968a911ee9
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 8bda25bc1705183d1482355ae064f87c040daec4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083977"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068067"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Histórico de alterações de 2003 a 2015 do Visual C++
 
@@ -37,7 +37,6 @@ Para evitar os erros de tempo de execução que são difíceis de detectar e dia
 Ainda é recomendável nunca escrever código que dependa de um determinado layout de um objeto que não seja uma interface COM ou um objeto POD. Se você escrever tal código, será preciso garantir que ele funcione após a atualização. Para obter mais informações, consulte [Portabilidade em limites ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md).
 
 Além disso, aprimoramentos contínuos para a conformidade do compilador podem alterar como o compilador compreende seu código-fonte existente. Quando isso acontecer, você poderá encontrar erros novos ou diferentes durante o build ou até diferenças de comportamento no código que foi compilado anteriormente e parecia executar corretamente. Embora essas não sejam alterações da falha, como aquelas discutidas neste documento, pode ser necessário fazer alterações de código-fonte para resolver esses problemas:
-
 
 - [Alterações significativas na Biblioteca CRT (Tempo de execução de C)](#BK_CRT)
 
@@ -183,7 +182,7 @@ Além disso, aprimoramentos contínuos para a conformidade do compilador podem a
     ```
 
     ```Output
-        Old:  1208925819614629200000000    New:  1208925819614629174706176
+        Old:  1208925819614629200000000    New:  1208925819614629174706176
     ```
 
    Os algoritmos de análise antigos considerariam até 17 dígitos significativos da cadeia de entrada e descartariam o restante dos dígitos. Isso é suficiente para gerar uma aproximação do valor representado pela cadeia de caracteres e o resultado é normalmente muito próximo do resultado corretamente arredondado. A nova implementação considera todos os dígitos presentes e produz o resultado arredondado corretamente para todas as entradas (até 768 dígitos). Além disso, essas funções agora respeitam o modo de arredondamento (controlável por meio de fesetround).  Essa é uma mudança de comportamento potencialmente significativa porque essas funções podem gerar resultados diferentes. Os novos resultados sempre são mais corretos que os resultados antigos.
@@ -652,7 +651,7 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
    Por exemplo, suponha que seu código defina um **placement new** e um **placement delete**:
 
     ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
     ```
 
@@ -1743,7 +1742,7 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
     }
     ```
 
-   -ou-
+   \- ou -
 
     ```cpp
     class base;  // as above
@@ -1919,7 +1918,7 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
 
 - **Restauração de avisos de instrução switch**
 
-   Uma versão anterior do compilador removeu avisos previamente existentes relacionados a instruções **switch**; esses avisos agora foram restaurados. Agora o compilador emite os avisos restaurados e os avisos relacionados a casos específicos (incluindo o caso padrão) são emitidos na linha que contém o caso com problema, em vez de na última linha da instrução switch. Como resultado da emissão desses avisos em linhas diferentes do que era no passado, os avisos que anteriormente eram suprimidos usando `#pragma warning(disable:####)` não podem mais ser suprimidos como esperado. Para suprimir esses avisos conforme o esperado, talvez seja necessário mover a diretriz `#pragma warning(disable:####)` para uma linha acima do primeiro caso potencialmente problemático. A seguir estão os avisos restaurados.
+   Uma versão anterior do compilador removeu avisos previamente existentes relacionados a instruções **switch**. Esses avisos agora foram restaurados. Agora o compilador emite os avisos restaurados e os avisos relacionados a casos específicos (incluindo o caso padrão) são emitidos na linha que contém o caso com problema, em vez de na última linha da instrução switch. Como resultado da emissão desses avisos em linhas diferentes do que era no passado, os avisos que anteriormente eram suprimidos usando `#pragma warning(disable:####)` não podem mais ser suprimidos como esperado. Para suprimir esses avisos conforme o esperado, talvez seja necessário mover a diretriz `#pragma warning(disable:####)` para uma linha acima do primeiro caso potencialmente problemático. A seguir estão os avisos restaurados.
 
     ```Output
     warning C4060: switch statement contains no 'case' or 'default' labels

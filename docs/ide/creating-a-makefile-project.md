@@ -1,7 +1,7 @@
 ---
 title: Criando um projeto Makefile C++ | Microsoft Docs
 ms.custom: ''
-ms.date: 09/12/2018
+ms.date: 10/19/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -17,22 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3360d2ed86d220bc59d6f09f582c71b48f7d78c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5f937c11b2453bd296468c5f153b7c9495eba290
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399477"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990237"
 ---
 # <a name="creating-a-c-makefile-project"></a>Criando um Projeto Makefile C++
 
-Um *makefile* é um arquivo de texto que contém instruções sobre como criar e vincular (ou *compilar*) um conjunto de arquivos de código-fonte do C++. Um programa *make* lê o makefile e invoca um compilador, vinculador e possivelmente outros programas para criar um arquivo executável. A implementação do programa *make* pela Microsoft é chamada **NMAKE**. (Por padrão, o Visual Studio usa o sistema MSBuild com base em arquivos .vcsproj; este é o que foi criado por **Arquivo | Novo | Projeto**.)
+Um *makefile* é um arquivo de texto que contém instruções sobre como criar e vincular (ou *compilar*) um conjunto de arquivos de código-fonte do C++. Um programa *make* lê o makefile e invoca um compilador, vinculador e possivelmente outros programas para criar um arquivo executável. A implementação do programa *make* pela Microsoft é chamada **NMAKE**. (Por padrão, o Visual Studio usa o sistema MSBuild com base em arquivos .vcxproj; este é o que foi criado por **Arquivo | Novo | Projeto**.)
 
 Se tiver um projeto makefile existente, você terá estas opções se desejar codificar e/ou depurá-lo no Visual Studio IDE:
 
 - Crie um Projeto Makefile no Visual Studio que usa o makefile existente para compilar o código no IDE. (Você não terá todos os recursos do IDE que tem com um projeto MSBuild nativo). Consulte [Para criar um projeto makefile](#create_a_makefile_project) abaixo.
 - Use o assistente para **Criar Novo Projeto com base em Arquivos de Código Existentes** para criar um projeto nativo do MSBuild com base no código-fonte. Para obter mais informações, consulte [Como criar um projeto do C++ com base no código existente](how-to-create-a-cpp-project-from-existing-code.md).
-- **Visual Studio 2017 e posterior**: use o recurso **Abrir pasta** para abrir um makefile. Para saber mais, veja [Projetos Abrir Pasta no Visual C++](non-msbuild-projects.md).
+- **Visual Studio 2017 e posterior**: use o recurso **Abrir Pasta** para abrir um projeto makefile sem convertê-lo para MSBuild. Para saber mais, veja [Projetos Abrir Pasta no Visual C++](non-msbuild-projects.md).
 
 ## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Para criar um projeto Makefile com o modelo de projeto makefile
 

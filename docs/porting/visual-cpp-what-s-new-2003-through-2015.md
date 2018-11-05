@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51921f8e55b9d4ce4e1875f5216984fe3257ca97
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: f005beb9bc71724c289322822a3bae4c03f19d48
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084107"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136244"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novidades do Visual C++ de 2003 até 2015
 
@@ -128,7 +128,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
 
     struct S2
     {
-        template <class C, void (C::*Function)(int) const> void f() {}        
+        template <class C, void (C::*Function)(int) const> void f() {}
     };
 
     void f()
@@ -271,7 +271,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
    Por exemplo, suponha que seu código defina um **placement new** e um **placement delete**:
 
    ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
    ```
 
@@ -318,14 +318,14 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
 
    ```cpp
     struct S {
-      S();
-     };
+      S();
+     };
 
-     union {
-      struct {
-       S s;
-      };
-     } u; // C2280
+     union {
+      struct {
+       S s;
+      };
+     } u; // C2280
    ```
 
    O código anterior gera o seguinte erro no Visual Studio 2015:
@@ -834,7 +834,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
 
 - **#include: uso do especificador do diretório pai '..' no nome de caminho** (afeta apenas `/Wall` `/WX`)
 
-     As versões anteriores do compilador não detectavam o uso do especificador '..' de diretório pai no nome do caminho de diretivas `#include`. O código escrito dessa maneira geralmente se destina a incluir cabeçalhos que existem fora do projeto usando caminhos relativos de projeto de forma incorreta. Esse comportamento antigo criava um risco de que o programa poderia ser compilado pela inclusão de um arquivo de origem diferente do pretendido pelo programador ou desses caminhos relativos não serem portáteis para outros ambientes de build. Agora o compilador detecta e notifica o programador do código escrito dessa maneira e emite um aviso do compilador C4464 opcional, caso esteja habilitado.
+   As versões anteriores do compilador não detectavam o uso do especificador '..' de diretório pai no nome do caminho de diretivas `#include`. O código escrito dessa maneira geralmente se destina a incluir cabeçalhos que existem fora do projeto usando caminhos relativos de projeto de forma incorreta. Esse comportamento antigo criava um risco de que o programa poderia ser compilado pela inclusão de um arquivo de origem diferente do pretendido pelo programador ou desses caminhos relativos não serem portáteis para outros ambientes de build. Agora o compilador detecta e notifica o programador do código escrito dessa maneira e emite um aviso do compilador C4464 opcional, caso esteja habilitado.
 
    ```Output
     warning C4464: relative include path contains '..'
@@ -1465,7 +1465,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
 
    Exemplo (antes):
 
-     X.cpp (-Ycc.h)
+   X.cpp (-Ycc.h)
 
    ```cpp
     #include "a.h"
@@ -1473,7 +1473,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
     #include "c.h"
    ```
 
-     Z.cpp (-Yuc.h)
+   Z.cpp (-Yuc.h)
 
    ```cpp
     #include "b.h"
@@ -1483,7 +1483,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
 
    Exemplo (depois)
 
-     X.cpp (-Ycc.h)
+   X.cpp (-Ycc.h)
 
    ```cpp
     #include "a.h"
@@ -1491,7 +1491,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
     #include "c.h"
    ```
 
-     Z.cpp (-Yuc.h)
+   Z.cpp (-Yuc.h)
 
    ```cpp
     #include "a.h"
@@ -1774,7 +1774,7 @@ Use a nova estrutura de teste da unidade C++ no Visual Studio para escrever test
 
 #### <a name="architecture-dependency-graphs"></a>Gráficos de dependência de arquitetura
 
-Para entender melhor o seu código, gere gráficos de dependência para binário, classe, namespace e arquivos de inclusão em uma solução. Na barra de menus, escolha **Arquitetura** > **Gerar Grafo de Dependência** e, em seguida, **Para Solução** ou **Para Arquivo de Inclusão** para gerar um grafo de dependência. Quando a geração do gráfico for concluída, você poderá explorá-lo expandindo cada nó, saber mais sobre os relacionamentos de dependência percorrendo os nós e procurar o código-fonte escolhendo **Exibir Conteúdo** no menu de atalho de um nó. Para gerar um grafo de dependência para arquivos de inclusão, no menu de atalho de um arquivo de código-fonte *.cpp ou arquivo de cabeçalho *.h, escolha **Gerar Grafo de Arquivos de Inclusão**.
+Para entender melhor o seu código, gere gráficos de dependência para binário, classe, namespace e arquivos de inclusão em uma solução. Na barra de menus, escolha **Arquitetura** > **Gerar Grafo de Dependência** e, em seguida, **Para Solução** ou **Para Arquivo de Inclusão** para gerar um grafo de dependência. Quando a geração do gráfico for concluída, você poderá explorá-lo expandindo cada nó, saber mais sobre os relacionamentos de dependência percorrendo os nós e procurar o código-fonte escolhendo **Exibir Conteúdo** no menu de atalho de um nó. Para gerar um grafo de dependência para arquivos de inclusão, no menu de atalho de um arquivo de código-fonte \*.cpp ou arquivo de cabeçalho \*.h, escolha **Gerar Grafo de Arquivos de Inclusão**.
 
 #### <a name="architecture-explorer"></a>Architecture Explorer
 
@@ -2100,7 +2100,7 @@ O compilador tem alterações significativas nesta versão.
 - A opção de vinculador `/CLRIMAGETYPE` (Especificar Tipo de Imagem do CLR) foi adicionada.
 - A opção do vinculador `/CLRSUPPORTLASTERROR` (Preservar Último Código de Erro para Chamadas PInvoke) foi adicionada.
 - A opção do vinculador `/CLRTHREADATTRIBUTE` (Definir Atributo de Thread do CLR) foi adicionada.
-- A opção do vinculador `/CLRUNMANAGEDCODECHECK` (Adicionar SupressUnmanagedCodeSecurityAttribute) foi adicionada.
+- A opção do vinculador `/CLRUNMANAGEDCODECHECK` (Adicionar SuppressUnmanagedCodeSecurityAttribute) foi adicionada.
 - A opção do vinculador `/ERRORREPORT` (Relatar Erros Internos do Vinculador) foi adicionada.
 - A opção do vinculador `/EXETYPE` foi removida. O vinculador não oferece mais suporte para a criação de drivers de dispositivo do Windows 95 e Windows 98. Use um DDK apropriado para criar esses drivers de dispositivo. A palavra-chave EXETYPE não é mais válida para arquivos de definição de módulo.
 - A opção do vinculador `/FUNCTIONPADMIN` (Criar Imagem Hotpatchable) foi adicionada.
