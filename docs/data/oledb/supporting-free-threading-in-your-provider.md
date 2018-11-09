@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, multithreaded
 - threading [C++], providers
 ms.assetid: a91270dc-cdf9-4855-88e7-88a54be7cbe8
-ms.openlocfilehash: 653736b52c116f1c72856bf0c12e9deff05e0cfb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14acaa6ad96f74b2a3f88ca366a43caa9199a1d8
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676194"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265029"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>Dando suporte ao thread livre no provedor
 
@@ -39,7 +39,7 @@ HRESULT MyObject::MyMethod(void)
 
 Para obter mais informações sobre como proteger seções críticas com `Lock` e `Unlock`, consulte [Multithreading: como usar as Classes de sincronização](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
-Você também deve verificar todos os métodos que você substituir (como `Execute`) são thread-safe.
+Verifique se todos os métodos que você substituir (como `Execute`) são thread-safe.
 
 ## <a name="see-also"></a>Consulte também
 

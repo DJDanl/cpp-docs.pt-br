@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-ms.openlocfilehash: 18edc1ae13ef66f9646edbcf1d0fdfdbe0586cff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cda4efcdb26499f910ad875b2bf7b7504a825cf6
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611205"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265094"
 ---
 # <a name="testing-the-read-only-provider"></a>Testando o provedor somente leitura simples
 
@@ -24,11 +24,11 @@ O exemplo neste tópico cria um aplicativo do Assistente de aplicativo MFC padr�
 
 1. No menu **Arquivo**, clique em **Novo** e clique em **Projeto**.
 
-1. No **tipos de projeto** painel, selecione o **projetos do Visual C++** pasta. No **modelos** painel, selecione **aplicativo MFC**.
+1. No **tipos de projeto** painel, selecione o **instalado** > **Visual C++** > **MFC/ATL** pasta. No **modelos** painel, selecione **aplicativo MFC**.
 
 1. Para o nome do projeto, insira *TestProv*e, em seguida, clique em **Okey**.
 
-   O Assistente de aplicativo do MFC é exibida.
+   O **aplicativo do MFC** assistente é exibido.
 
 1. Sobre o **tipo de aplicativo** página, selecione **caixa de diálogo com base em**.
 
@@ -37,13 +37,14 @@ O exemplo neste tópico cria um aplicativo do Assistente de aplicativo MFC padr�
 > [!NOTE]
 > O aplicativo não exija o suporte de automação se você adicionar `CoInitialize` em `CTestProvApp::InitInstance`.
 
-Você pode exibir e editar os **TestProv** caixa de diálogo (IDD_TESTPROV_DIALOG), selecionando-o no **exibição de recurso**. Coloque as duas caixas de listagem, uma para cada cadeia de caracteres no conjunto de linhas, na caixa de diálogo. Desativar a propriedade de classificação para as duas caixas de listagem pressionando **Alt**+**Enter** quando uma caixa de listagem é selecionada, clicar no **estilos** guia e limpar o  **Classificação** caixa de seleção. Além disso, coloque um **executar** botão na caixa de diálogo para buscar o arquivo. O terminar **TestProv** caixa de diálogo deve ter duas caixas de listagem rotulada como "Cadeia de caracteres 1" e "Cadeia de caracteres 2", respectivamente; ele também tem **Okey**, **Cancelar**, e **executar**  botões.
+Você pode exibir e editar os **TestProv** caixa de diálogo (IDD_TESTPROV_DIALOG), selecionando-o no **exibição de recurso**. Coloque as duas caixas de listagem, uma para cada cadeia de caracteres no conjunto de linhas, na caixa de diálogo. Desativar a propriedade de classificação para as duas caixas de listagem pressionando **Alt**+**Enter** quando uma caixa de listagem é selecionada e definindo o **classificação** propriedade para **False**. Além disso, coloque um **executar** botão na caixa de diálogo para buscar o arquivo. O terminar **TestProv** caixa de diálogo deve ter duas caixas de listagem rotulada como "Cadeia de caracteres 1" e "Cadeia de caracteres 2", respectivamente; ele também tem **Okey**, **Cancelar**, e **executar**  botões.
 
 Abra o arquivo de cabeçalho para a classe de caixa de diálogo (no TestProvDlg.h neste caso). Adicione o seguinte código para o arquivo de cabeçalho (fora de qualquer declaração de classe):
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
 // TestProvDlg.h
+#include <atldbcli.h>  
 
 class CProvider
 {
@@ -68,11 +69,11 @@ Adicionar uma função de manipulador para o **executados** botão pressionando 
 ///////////////////////////////////////////////////////////////////////
 // TestProvDlg.cpp
 
-void CtestProvDlg::OnRun()
+void CTestProvDlg::OnRun()
 {
    CCommand<CAccessor<CProvider>> table;
    CDataSource source;
-   CSession   session;
+   CSession session;
 
    if (source.Open("Custom.Custom.1", NULL) != S_OK)
       return;
@@ -91,36 +92,17 @@ void CtestProvDlg::OnRun()
 }
 ```
 
-O `CCommand`, `CDataSource`, e `CSession` classes todas pertencem aos modelos de consumidor OLE DB. Cada classe imita um objeto COM no provedor. O `CCommand` objeto leva o `CProvider` classe, declarada no arquivo de cabeçalho, como um parâmetro de modelo. O `CProvider` parâmetro representa as associações que você usa para acessar os dados do provedor. Aqui está o `Open` código para a fonte de dados, sessão e comando:
-
-```cpp
-if (source.Open("Custom.Custom.1", NULL) != S_OK)
-   return;
-
-if (session.Open(source) != S_OK)
-   return;
-
-if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
-   return;
-```
+O `CCommand`, `CDataSource`, e `CSession` classes todas pertencem aos modelos de consumidor OLE DB. Cada classe imita um objeto COM no provedor. O `CCommand` objeto leva o `CProvider` classe, declarada no arquivo de cabeçalho, como um parâmetro de modelo. O `CProvider` parâmetro representa as associações que você usa para acessar os dados do provedor. 
 
 As linhas para abrir cada uma das classes criam cada objeto COM no provedor. Para localizar o provedor, use o `ProgID` do provedor. Você pode obter o `ProgID` do registro do sistema ou examinando o arquivo Custom.rgs (Abra o diretório do provedor e pesquise o `ProgID` chave).
 
-O arquivo txt está incluído com o `MyProv` exemplo. Para criar um arquivo de sua preferência, use um editor e digite um número par de cadeias de caracteres, pressionando ENTER entre cada cadeia de caracteres. Se você mover o arquivo, altere o nome do caminho.
+O arquivo txt está incluído com o `MyProv` exemplo. Para criar um arquivo de sua preferência, use um editor e digite um número par de cadeias de caracteres, pressionar **Enter** entre cada cadeia de caracteres. Se você mover o arquivo, altere o nome do caminho.
 
 Passe a cadeia de caracteres "c:\\\samples\\\myprov\\\MyData.txt" no `table.Open` linha. Se você entrar na `Open` chamada, você ver que essa cadeia de caracteres é transmitida para o `SetCommandText` método no provedor. Observe que o `ICommandText::Execute` método usou essa cadeia de caracteres.
 
-Para buscar os dados, chame `MoveNext` na tabela. `MoveNext` chamadas a `IRowset::GetNextRows`, `GetRowCount`, e `GetData` funções. Quando não existem mais linhas (ou seja, a posição atual no conjunto de linhas é maior que `GetRowCount`), o loop é encerrado:
+Para buscar os dados, chame `MoveNext` na tabela. `MoveNext` chamadas a `IRowset::GetNextRows`, `GetRowCount`, e `GetData` funções. Quando não existem mais linhas (ou seja, a posição atual no conjunto de linhas é maior que `GetRowCount`), o loop é encerrado.
 
-```cpp
-while (table.MoveNext() == S_OK)
-{
-   m_ctlString1.AddString(table.szField1);
-   m_ctlString2.AddString(table.szField2);
-}
-```
-
-Observe que, quando não existem mais linhas, provedores retornam DB_S_ENDOFROWSET. O valor DB_S_ENDOFROWSET não é um erro. Você sempre deve verificar em relação a S_OK para cancelar um loop de busca de dados e não usar a macro SUCCEEDED.
+Quando não existem mais linhas, os provedores retornam DB_S_ENDOFROWSET. O valor DB_S_ENDOFROWSET não é um erro. Você sempre deve verificar em relação a S_OK para cancelar um loop de busca de dados e não usar a macro SUCCEEDED.
 
 Agora você deve ser capaz de compilar e testar o programa.
 

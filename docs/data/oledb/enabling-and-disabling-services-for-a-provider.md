@@ -1,20 +1,20 @@
 ---
 title: Habilitando e desabilitando serviços para um provedor
-ms.date: 11/04/2016
+ms.date: 10/29/2018
 helpviewer_keywords:
 - OLE DB services [OLE DB], enabling and disabling
 - service providers [OLE DB]
 ms.assetid: 3deac1bb-f660-407a-92ef-95e139e280c0
-ms.openlocfilehash: ca621b005dd0bad60c70298e4d49abce6fb8d1d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23579b9561356e95d315c0fbe47132208753afa8
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665446"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265120"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>Habilitando e desabilitando serviços para um provedor
 
-Serviços de OLE DB individuais podem ser habilitados ou desabilitados por padrão para todos os aplicativos que acessam um único provedor. Isso é feito adicionando uma entrada de registro OLEDB_SERVICES sob o CLSID do provedor, com um `DWORD` valor que especifica os serviços para habilitar ou desabilitar, conforme mostrado na tabela a seguir.
+Serviços de OLE DB individuais podem ser habilitados ou desabilitados por padrão para todos os aplicativos que acessam um único provedor. Isso é feito adicionando uma entrada de registro OLEDB_SERVICES sob o CLSID do provedor, com um valor DWORD que especifica os serviços para habilitar ou desabilitar, conforme mostrado na tabela a seguir.
 
 |Serviços padrão habilitados|Valor de palavra-chave|
 |------------------------------|-------------------|

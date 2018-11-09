@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE DB provider templates, notifications
 - OLE DB providers, notifications
 ms.assetid: 76e875fd-2bfd-4e4e-9f43-dbe5a3fa7382
-ms.openlocfilehash: 92af327ee69de73697464de59e8c29bdd971b46d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e5327f2197a1d48542ad5f7a615294a915948f5
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616548"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265016"
 ---
 # <a name="supporting-notifications"></a>Dando suporte a notificações
 
@@ -24,9 +24,9 @@ Para implementar notificações, uma classe de provedor deve herdar de [IRowsetN
 
 `IRowsetNotifyCP` implementa o site do provedor para a interface de ponto de conexão [IRowsetNotify](/previous-versions/windows/desktop/ms712959). `IRowsetNotifyCP` implementa funções para informar ouvintes no ponto de conexão de difusão `IID_IRowsetNotify` de alterações no conteúdo do conjunto de linhas.
 
-Observe que você também deve implementar e registrar `IRowsetNotify` consumidor (também conhecido como o coletor) usando [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) para que o consumidor pode lidar com notificações. Para obter informações sobre como implementar a interface de ponto de conexão no consumidor, consulte [recebendo notificações](../../data/oledb/receiving-notifications.md).
+Você também deve implementar e registrar `IRowsetNotify` consumidor (também conhecido como o coletor) usando [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) para que o consumidor pode lidar com notificações. Para obter informações sobre como implementar a interface de ponto de conexão no consumidor, consulte [recebendo notificações](../../data/oledb/receiving-notifications.md).
 
-Além disso, a classe também deve conter um mapa que define a entrada de ponto de conexão, como este:
+Além disso, a classe deve ter um mapa que define a entrada de ponto de conexão, como este:
 
 ```cpp
 BEGIN_CONNECTION_POINT_MAP
@@ -85,19 +85,19 @@ Você também precisa adicionar as propriedades a seguir ao seu provedor. Você 
 
 |Propriedade|Adicionar se você oferecer suporte|
 |--------------|------------------------|
-|`DBPROP_IConnectionPointContainer`|Sempre|
-|`DBPROP_NOTIFICATIONGRANULARITY`|Sempre|
-|`DBPROP_NOTIFICATIONPHASES`|Sempre|
-|`DBPROP_NOTIFYCOLUMNSET`|`IRowsetChange`|
-|`DBPROP_NOTIFYROWDELETE`|`IRowsetChange`|
-|`DBPROP_NOTIFYROWINSERT`|`IRowsetChange`|
-|`DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE`|Sempre|
-|`DBPROP_NOTIFYROWFIRSTCHANGE`|`IRowsetUpdate`|
-|`DBPROP_NOTIFYROWSETRELEASE`|Sempre|
-|`DBPROP_NOTIFYROWUNDOCHANGE`|`IRowsetUpdate`|
-|`DBPROP_NOTIFYROWUNDODELETE`|`IRowsetUpdate`|
-|`DBPROP_NOTIFYROWUNDOINSERT`|`IRowsetUpdate`|
-|`DBPROP_NOTIFYROWUPDATE`|`IRowsetUpdate`|
+|DBPROP_IConnectionPointContainer|Sempre|
+|DBPROP_NOTIFICATIONGRANULARITY|Sempre|
+|DBPROP_NOTIFICATIONPHASES|Sempre|
+|DBPROP_NOTIFYCOLUMNSET|`IRowsetChange`|
+|DBPROP_NOTIFYROWDELETE|`IRowsetChange`|
+|DBPROP_NOTIFYROWINSERT|`IRowsetChange`|
+|DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE|Sempre|
+|DBPROP_NOTIFYROWFIRSTCHANGE|`IRowsetUpdate`|
+|DBPROP_NOTIFYROWSETRELEASE|Sempre|
+|DBPROP_NOTIFYROWUNDOCHANGE|`IRowsetUpdate`|
+|DBPROP_NOTIFYROWUNDODELETE|`IRowsetUpdate`|
+|DBPROP_NOTIFYROWUNDOINSERT|`IRowsetUpdate`|
+|DBPROP_NOTIFYROWUPDATE|`IRowsetUpdate`|
 
 A maioria da implementação para as notificações já está incorporado os modelos do provedor de banco de dados OLE. Se você não adicionar `IRowsetNotifyCP` para sua cadeia de herança, o compilador removerá todo esse código de seu fluxo de compilação, tornando o tamanho do código menor.
 
