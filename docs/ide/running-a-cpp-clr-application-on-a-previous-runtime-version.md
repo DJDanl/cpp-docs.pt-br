@@ -1,12 +1,6 @@
 ---
-title: Executando um aplicativo do C++ -clr em uma versão de tempo de execução anterior | Microsoft Docs
-ms.custom: ''
+title: Executando um aplicativo do C++ -clr em uma versão de tempo de execução anterior
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - applications [C++], runtime version specified
 - versions [C++]
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - common language runtime [C++], version specified
 - deploying applications [C++], runtime version specified
 ms.assetid: 940171b7-6937-4b14-8e87-c199e23f4f2e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee823d7b37428ea335d5d789a4fcfb4caa673dda
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: effcda9de1cb1005855f5752060dc61e28dcebf4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378041"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50581513"
 ---
 # <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>Executando um aplicativo C++ /clr em uma versão de tempo de execução anterior
 

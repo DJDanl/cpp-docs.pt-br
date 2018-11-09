@@ -1,25 +1,15 @@
 ---
-title: Como criar um projeto do C++ com base no código existente | Microsoft Docs
-ms.custom: ''
+title: Como criar um projeto do C++ a partir do código existente
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - C++, creating projects from existing code
 ms.assetid: e328a938-395c-48ea-9e35-dd433de12b31
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 09b190dbc2670ab94f7952adc188dd43d91fb520
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dafd4e939444c581a76e9ccfcab4c3f6bbe819d3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397280"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552497"
 ---
 # <a name="how-to-create-a-c-project-from-existing-code"></a>Como criar um projeto do C++ a partir do código existente
 

@@ -5,33 +5,34 @@ helpviewer_keywords:
 - bookmarks [C++], dynamically determining columns
 - dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-ms.openlocfilehash: 0d01fdac1a64bee62bd7227f4efac8650ff635b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7db319aa153cb281c8fd8b4eec16972f5ac0c2c9
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428374"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265172"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Determinando dinamicamente colunas retornadas ao consumidor
 
 As macros PROVIDER_COLUMN_ENTRY lidar normalmente com o `IColumnsInfo::GetColumnsInfo` chamar. No entanto, como um consumidor pode optar por usar indicadores, o provedor deve ser capaz de alterar as colunas retornadas, dependendo se o consumidor solicita um indicador.
 
-Para lidar com o `IColumnsInfo::GetColumnsInfo` chamar, exclua o PROVIDER_COLUMN_MAP, que define uma função `GetColumnInfo`, da `CAgentMan` usuário gravada em CustomRS.h e substituí-lo com a definição para seu próprio `GetColumnInfo` função:
+Para lidar com o `IColumnsInfo::GetColumnsInfo` chamar, exclua o PROVIDER_COLUMN_MAP, que define uma função `GetColumnInfo`, da `CCustomWindowsFile` registro do usuário no *personalizado*RS.h e substituí-lo com a definição para seu próprio `GetColumnInfo` função:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
 // CustomRS.H
-class CAgentMan
+class CCustomWindowsFile
 {
 public:
    DWORD dwBookmark;
-   TCHAR szCommand[256];
-   TCHAR szText[256];
-   TCHAR szCommand2[256];
-   TCHAR szText2[256];
+   static const int iSize = 256;
+   TCHAR szCommand[iSize];
+   TCHAR szText[iSize];
+   TCHAR szCommand2[iSize];
+   TCHAR szText2[iSize];
   
    static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);
-   bool operator==(const CAgentMan& am)
+   bool operator==(const CCustomWindowsFile& am)
    {
       return (lstrcmpi(szCommand, am.szCommand) == 0);
    }
@@ -47,14 +48,14 @@ Para verificar se há o `DBPROP_BOOKMARKS` propriedade, `GetColumnInfo` usa o `I
 ```cpp
 ////////////////////////////////////////////////////////////////////
 // CustomRS.cpp
-ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
+ATLCOLUMNINFO* CCustomWindowsFile::GetColumnInfo(void* pThis, ULONG* pcCols)
 {
    static ATLCOLUMNINFO _rgColumns[5];
    ULONG ulCols = 0;
   
    // Check the property flag for bookmarks; if it is set, set the zero 
    // ordinal entry in the column map with the bookmark information.
-   CAgentRowset* pRowset = (CAgentRowset*) pThis;
+   CCustomRowset* pRowset = (CCustomRowset*) pThis;
    CComQIPtr<IRowsetInfo, &IID_IRowsetInfo> spRowsetProps = pRowset;
   
    CDBPropIDSet set(DBPROPSET_ROWSET);
@@ -75,7 +76,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
       if (SUCCEEDED(hr) && (var.boolVal == VARIANT_TRUE))
       {
          ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD), 
-         DBTYPE_BYTES, 0, 0, GUID_NULL, CAgentMan, dwBookmark, 
+         DBTYPE_BYTES, 0, 0, GUID_NULL, CCustomWindowsFile, dwBookmark, 
          DBCOLUMNFLAGS_ISBOOKMARK)
          ulCols++;
       }
@@ -83,17 +84,17 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
   
    // Next, set the other columns up.
    ADD_COLUMN_ENTRY(ulCols, OLESTR("Command"), 1, 256, DBTYPE_STR, 0xFF, 0xFF, 
-      GUID_NULL, CAgentMan, szCommand)
+      GUID_NULL, CCustomWindowsFile, szCommand)
    ulCols++;
    ADD_COLUMN_ENTRY(ulCols, OLESTR("Text"), 2, 256, DBTYPE_STR, 0xFF, 0xFF, 
-      GUID_NULL, CAgentMan, szText)
+      GUID_NULL, CCustomWindowsFile, szText)
    ulCols++;
   
    ADD_COLUMN_ENTRY(ulCols, OLESTR("Command2"), 3, 256, DBTYPE_STR, 0xFF, 0xFF, 
-      GUID_NULL, CAgentMan, szCommand2)
+      GUID_NULL, CCustomWindowsFile, szCommand2)
    ulCols++;
    ADD_COLUMN_ENTRY(ulCols, OLESTR("Text2"), 4, 256, DBTYPE_STR, 0xFF, 0xFF, 
-      GUID_NULL, CAgentMan, szText2)
+      GUID_NULL, CCustomWindowsFile, szText2)
    ulCols++;
   
    if (pcCols != NULL)
@@ -106,12 +107,43 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
 Este exemplo usa uma matriz estática para conter as informações de coluna. Se o consumidor não deseja que a coluna de indicador, uma entrada na matriz é não utilizada. Para lidar com as informações, você cria duas macros a matriz: ADD_COLUMN_ENTRY e ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX aceita um parâmetro extra, *sinalizadores*, que é necessário se você designar uma coluna de indicador.
 
 ```cpp
+////////////////////////////////////////////////////////////////////////  
+// CustomRS.h  
+  
+#define ADD_COLUMN_ENTRY(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member) \  
+   _rgColumns[ulCols].pwszName = (LPOLESTR)name; \  
+   _rgColumns[ulCols].pTypeInfo = (ITypeInfo*)NULL; \  
+   _rgColumns[ulCols].iOrdinal = (ULONG)ordinal; \  
+   _rgColumns[ulCols].dwFlags = 0; \  
+   _rgColumns[ulCols].ulColumnSize = (ULONG)colSize; \  
+   _rgColumns[ulCols].wType = (DBTYPE)type; \  
+   _rgColumns[ulCols].bPrecision = (BYTE)precision; \  
+   _rgColumns[ulCols].bScale = (BYTE)scale; \  
+   _rgColumns[ulCols].cbOffset = offsetof(dataClass, member);  
+  
+#define ADD_COLUMN_ENTRY_EX(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member, flags) \  
+   _rgColumns[ulCols].pwszName = (LPOLESTR)name; \  
+   _rgColumns[ulCols].pTypeInfo = (ITypeInfo*)NULL; \  
+   _rgColumns[ulCols].iOrdinal = (ULONG)ordinal; \  
+   _rgColumns[ulCols].dwFlags = flags; \  
+   _rgColumns[ulCols].ulColumnSize = (ULONG)colSize; \  
+   _rgColumns[ulCols].wType = (DBTYPE)type; \  
+   _rgColumns[ulCols].bPrecision = (BYTE)precision; \  
+   _rgColumns[ulCols].bScale = (BYTE)scale; \  
+   _rgColumns[ulCols].cbOffset = offsetof(dataClass, member); \  
+   memset(&(_rgColumns[ulCols].columnid), 0, sizeof(DBID)); \  
+   _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
+```
+
+No `GetColumnInfo` função, a macro de indicador é usada da seguinte forma:
+
+```cpp
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
    DBTYPE_BYTES, 0, 0, GUID_NULL, CAgentMan, dwBookmark,
    DBCOLUMNFLAGS_ISBOOKMARK)
 ```
 
-Agora você pode compilar e executar o provedor aprimorado. Para testar o provedor, modifique o consumidor de teste, conforme descrito na [implementando um consumidor simples](../../data/oledb/implementing-a-simple-consumer.md). Execute o consumidor de teste com o provedor. Verifique se que o consumidor de teste recupera as cadeias de caracteres apropriadas do provedor quando você clica o **executar** botão na **testar consumidor** caixa de diálogo.
+Agora você pode compilar e executar o provedor aprimorado. Para testar o provedor, modifique o consumidor de teste, conforme descrito na [implementando um consumidor simples](../../data/oledb/implementing-a-simple-consumer.md). Execute o consumidor de teste com o provedor e verifique se que o consumidor de teste recupera as cadeias de caracteres apropriadas do provedor.
 
 ## <a name="see-also"></a>Consulte também
 

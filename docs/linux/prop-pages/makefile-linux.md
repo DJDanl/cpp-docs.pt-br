@@ -1,23 +1,13 @@
 ---
 title: Propriedades gerais (Projeto do Linux C++ Makefile) | Microsoft Docs
-ms.custom: ''
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 6fb23d2c7275788b05fe4450613770c268ca6c64
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: fb742d552d0b70ba5f5c406dd43bdf4cf8d1914b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705693"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524586"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Propriedades do projeto makefile (Linux C++)
 
@@ -25,7 +15,7 @@ Esta é uma lista parcial das propriedades disponíveis em um projeto do Linux M
 
 ## <a name="general"></a>Geral
 
-propriedade | Descrição | Opções
+Propriedade | Descrição | Opções
 --- | ---| ---
 Diretório de saída | Especifica um caminho relativo para o diretório de arquivo de saída e pode incluir variáveis de ambiente.
 Diretório intermediário | Especifica um caminho relativo para o diretório de arquivo intermediário e pode incluir variáveis de ambiente.
@@ -47,7 +37,7 @@ Consulta [Copiar propriedades do projeto de origem (Linux C++)](copy-sources-pro
 
 ### <a name="pre-build-event"></a>Evento de Pré-Build
 
-propriedade | Descrição
+Propriedade | Descrição
 --- | ---
 Linha de Comando | Especifica uma linha de comando para a ferramenta de evento de pré-build executar.
 Descrição | Especifica uma descrição para a ferramenta de evento de pré-build exibir.
@@ -56,7 +46,7 @@ Arquivos adicionais a serem copiados | Especifica os arquivos adicionais a serem
 
 ### <a name="post-build-event"></a>Evento de Pós-Build
 
-propriedade | Descrição
+Propriedade | Descrição
 --- | ---
 Linha de Comando | Especifica uma linha de comando para a ferramenta de evento de pós-build executar.
 Descrição | Especifica uma descrição para a ferramenta de evento de pós-build exibir.
@@ -65,7 +55,7 @@ Arquivos adicionais a serem copiados | Especifica os arquivos adicionais a serem
 
 ### <a name="remote-pre-build-event"></a>Evento de Pré-Build Remoto
 
-propriedade | Descrição
+Propriedade | Descrição
 --- | ---
 Linha de Comando | Especifica uma linha de comando para a ferramenta de evento de pré-build executar no sistema remoto.
 Descrição | Especifica uma descrição para a ferramenta de evento de pré-build exibir.
@@ -74,7 +64,7 @@ Arquivos adicionais a serem copiados | Especifica os arquivos adicionais a serem
 
 ### <a name="remote-post-build-event"></a>Evento de Pós-Build Remoto
 
-propriedade | Descrição
+Propriedade | Descrição
 --- | ---
 Linha de Comando | Especifica uma linha de comando para a ferramenta de evento de pós-build executar no sistema remoto.
 Descrição | Especifica uma descrição para a ferramenta de evento de pós-build exibir.
@@ -87,7 +77,7 @@ Arquivos adicionais a serem copiados | Especifica os arquivos adicionais a serem
 
 As propriedades do IntelliSense podem ser definidas no nível do projeto ou de arquivo para fornecer dicas para o mecanismo IntelliSense. Elas não afetam a compilação.
 
-propriedade | Descrição
+Propriedade | Descrição
 --- | ---
 Caminho de pesquisa de inclusão | Especifica o caminho de pesquisa de inclusão para resolver os arquivos incluídos.
 Inclusões forçadas | Especifica os arquivos que passaram por inclusão forçada.
@@ -97,7 +87,7 @@ Opções Adicionais | Especifica opções adicionais do compilador a serem usada
 
 ### <a name="build"></a>Build
 
-propriedade | Descrição
+Propriedade | Descrição
 --- | ---
 Linha de comando de build | Especifica a linha de comando a ser executada para o comando ‘Build’.
 Linha de comando de Rebuild All | Especifica a linha de comando a ser executada para o comando ‘Rebuild All’.
@@ -105,7 +95,7 @@ Linha de comando de Clean | Especifica a linha de comando a ser executada para o
 
 ### <a name="remote-build"></a>Build Remoto
 
-propriedade | Descrição
+Propriedade | Descrição
 --- | ---
 Linha de comando de build | Especifica a linha de comando a ser executada para o comando “Build”. Isso é executado no sistema remoto.
 Linha de Comando de Rebuild All | Especifica a linha de comando a ser executada para o comando “Rebuild All”. Isso é executado no sistema remoto.

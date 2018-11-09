@@ -1,27 +1,17 @@
 ---
-title: Assistente de Adição de Variável de Membro | Microsoft Docs
-ms.custom: ''
+title: Assistente de Adição de Variável de Membro
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.variable.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - Add Member Variable Wizard [C++]
 ms.assetid: 73e8fa99-ac1a-42e2-8fc2-4684b9eb6d4d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e53f9075648d5ea0d2c02e98be30c3c43a87f335
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ea9b52c7448ee46a15c5da541784378d2b625d88
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396799"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598582"
 ---
 # <a name="add-member-variable-wizard"></a>Assistente de Adição de Variável de Membro
 
@@ -72,7 +62,7 @@ Este assistente adiciona uma declaração de variável de membro ao arquivo de c
    |Opção|Descrição|
    |------------|-----------------|
    |**Controle**|Essa opção está definida por padrão para o tipo de controle. Ela gerencia o controle em si e não o estado nem o conteúdo (como talvez você deseje fazer com uma caixa de listagem, caixa de combinação ou caixa de edição) do controle.|
-   |**Value**|Essa opção está disponível somente para os tipos de controle que podem conter um valor (como uma caixa de edição) ou refletir um estado (como uma caixa de seleção) e para os quais você pode gerenciar o intervalo, o conteúdo ou o estado. Confira [Controles de caixa de diálogo e tipos de variáveis](../ide/dialog-box-controls-and-variable-types.md) para obter mais informações.|
+   |**Valor**|Essa opção está disponível somente para os tipos de controle que podem conter um valor (como uma caixa de edição) ou refletir um estado (como uma caixa de seleção) e para os quais você pode gerenciar o intervalo, o conteúdo ou o estado. Confira [Controles de caixa de diálogo e tipos de variáveis](../ide/dialog-box-controls-and-variable-types.md) para obter mais informações.|
 
 - **Categoria**
 

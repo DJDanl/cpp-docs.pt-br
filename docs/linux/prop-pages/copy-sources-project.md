@@ -1,29 +1,19 @@
 ---
-title: Copiar propriedades do projeto de origem (Linux C++) | Microsoft Docs
-ms.custom: ''
+title: Copiar propriedades do projeto de origem (Linux C++)
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 1a44230d-5dd8-4d33-93b4-e77e03e00150
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: d13bc7c129696e2b7251ccb23b68338956864321
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd0a26db58265724f0a0e46c31365c97c00ff568
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325585"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477240"
 ---
 # <a name="copy-sources-project-properties-linux-c"></a>Copiar propriedades do projeto de origem (Linux C++)
 
 As propriedades definidas nesta página de propriedades aplicam-se a todos os arquivos no projeto, exceto aos que têm as propriedades no nível do arquivo definidas.
 
-propriedade | Descrição
+Propriedade | Descrição
 --- | ---
 Origens para copiar | Especifica as fontes a serem copiadas para o sistema remoto. Alterar essa lista pode mudar ou afetar de algum outro modo a estrutura de diretórios em que os arquivos são copiados para o sistema remoto.
 Fontes de dados | Especifica se as fontes devem ser copiadas para o sistema remoto.

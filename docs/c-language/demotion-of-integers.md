@@ -1,25 +1,15 @@
 ---
-title: Rebaixamento de inteiros | Microsoft Docs
-ms.custom: ''
+title: Rebaixamentos de inteiros
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - demoting integers
 ms.assetid: 51fb3654-60b0-4de7-80eb-bd910086c18a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 49177e7df11c0c7c4d7fefb201035ce12c5242af
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5dca8d414e7cf7dd04d405208ad6a86dd4372542
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087520"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480894"
 ---
 # <a name="demotion-of-integers"></a>Rebaixamentos de inteiros
 

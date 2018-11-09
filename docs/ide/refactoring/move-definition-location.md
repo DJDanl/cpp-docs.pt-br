@@ -1,21 +1,13 @@
 ---
-title: Mover Local da Definição | Microsoft Docs
-ms.custom: ''
+title: Mover Local da Definição
 ms.date: 11/16/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 ms.assetid: c6d507ac-c61e-4da2-95c8-d504b42e2520
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5058e0b3bab1fb5fb5e8d52b55e3fa7c37fd8a4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fd4fe2fb755919656fba935c29ab8a8591426bea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430030"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462355"
 ---
 # <a name="move-definition-location"></a>Mover Local da Definição
 **O quê:** permite mover imediatamente uma definição de função para o arquivo de cabeçalho correspondente.

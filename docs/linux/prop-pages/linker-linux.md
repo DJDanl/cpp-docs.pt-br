@@ -1,29 +1,19 @@
 ---
-title: Propriedades de vinculador (Linux C++) | Microsoft Docs
-ms.custom: ''
+title: Propriedades de vinculador (Linux C++)
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 9187222d2ced21ece2f183655591c483abc8d500
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db2fc37189ca05835888faed26b242abc0fe5fcb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333099"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580668"
 ---
 # <a name="linker-properties-linux-c"></a>Propriedades de vinculador (Linux C++)
 
 ## <a name="general"></a>Geral
 
-propriedade | Descrição | Opções
+Propriedade | Descrição | Opções
 --- | ---| ---
 Arquivo de saída | A opção substitui o nome e o local padrão do programa que o vinculador cria. (-o)
 Mostrar progresso | Imprime mensagens de progresso do vinculador.
@@ -42,7 +32,7 @@ Saída da Cópia | Especifica se é necessário copiar o arquivo de saída de bu
 
 ## <a name="input"></a>Entrada
 
-propriedade | Descrição | Opções
+Propriedade | Descrição | Opções
 --- | ---| ---
 Ignorar bibliotecas padrão específicas | Especifica um ou mais nomes de bibliotecas padrão a serem ignoradas. (--exclude-libs lib,lib)
 Ignorar Bibliotecas Padrão | Ignorar as bibliotecas padrão e pesquisar somente as bibliotecas explicitamente especificadas.
@@ -52,14 +42,14 @@ Dependências Adicionais | Especifica itens adicionais a serem adicionados à li
 
 ## <a name="debugging"></a>Depuração
 
-propriedade | Descrição | Opções
+Propriedade | Descrição | Opções
 --- | ---| ---
 Informações do Símbolo do Depurador | Informações de símbolo do depurador do arquivo de saída. | **Incluir Tudo**<br>**Omitir Somente Informações do Símbolo do Depurador**<br>**Omitir Todas as Informações de Símbolos**<br>
 Nome de Arquivo de Mapa | A opção Map instrui o vinculador a criar um arquivo de mapa com o nome especificado pelo usuário. (-Map=)
 
 ## <a name="advanced"></a>Avançado
 
-propriedade | Descrição | Opções
+Propriedade | Descrição | Opções
 --- | ---| ---
 Marcar Variáveis ReadOnly Após a Realocação | Essa opção marca as variáveis como somente leitura após a realocação.
 Habilitar associação de função imediata | Essa opção marca o objeto para associação de função imediata.
