@@ -1,27 +1,17 @@
 ---
-title: Classe scoped_d3d_access_lock | Microsoft Docs
-ms.custom: ''
+title: Classe scoped_d3d_access_lock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: reference
 f1_keywords:
 - scoped_d3d_access_lock
 - AMPRT/scoped_d3d_access_lock
 - AMPRT/concurrency::direct3d::scoped_d3d_access_lock::scoped_d3d_access_lock
-dev_langs:
-- C++
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b0bb3442de264e263ae0f0eabd93345eace1fde1
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: 08b6edc415d08d6dfb863fb90ff27bac6ce0960a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50059604"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598439"
 ---
 # <a name="scopedd3daccesslock-class"></a>Classe scoped_d3d_access_lock
 
@@ -89,7 +79,7 @@ O `scoped_d3d_access_lock` objeto do qual mover um bloqueio existente.
 
 [1] construtor adquire um bloqueio de acesso de D3D na determinada [accelerator_view](accelerator-view-class.md) objeto. Blocos de construção até o bloqueio é adquirido.
 
-[2]] construtor adote um bloqueio de acesso de D3D da determinada [accelerator_view](accelerator-view-class.md) objeto.
+[2] construtor adote um bloqueio de acesso de D3D da determinada [accelerator_view](accelerator-view-class.md) objeto.
 
 [3] construtor de movimento usa um bloqueio de acesso de D3D existente de outro `scoped_d3d_access_lock` objeto. Construção não é bloqueada.
 
