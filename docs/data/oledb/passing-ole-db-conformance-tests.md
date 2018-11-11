@@ -8,12 +8,12 @@ helpviewer_keywords:
 - conformance testing [OLE DB]
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-ms.openlocfilehash: f7c5435003866e2c3490bd07e28ec10eca0ec0cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7365176df314baf40ac1cc1ed53936598f05c79e
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491709"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265068"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>Passando testes de conformidade de banco de dados OLE
 
@@ -26,7 +26,7 @@ No Visual C++ 6.0, os modelos de provedor do OLE DB adicionado um número de fun
 > [!NOTE]
 > Você precisará adicionar várias funções de validação de seu provedor para passar nos testes de conformidade com OLE DB.
 
-Este provedor requer duas rotinas de validação. A rotina primeiro, `CRowsetImpl::ValidateCommandID`, faz parte de sua classe de conjunto de linhas. Ele é chamado durante a criação do conjunto de linhas pelos modelos de provedor. O exemplo usa essa rotina para informar os consumidores que ele não dá suporte a índices. A primeira chamada é para `CRowsetImpl::ValidateCommandID` (Observe que o provedor usa o `_RowsetBaseClass` typedef adicionado no mapa de interface para `CCustomRowset` na [suporte do provedor para indicadores](../../data/oledb/provider-support-for-bookmarks.md), para que você não precise digitar essa linha longa de modelo argumentos). Em seguida, retornar DB_E_NOINDEX se o parâmetro de índice não é nulo (Isso indica que o consumidor deseja usar um índice em nós). Para obter mais informações sobre IDs de comando, consulte a especificação OLE DB e procure `IOpenRowset::OpenRowset`.
+Este provedor requer duas rotinas de validação. A rotina primeiro, `CRowsetImpl::ValidateCommandID`, faz parte de sua classe de conjunto de linhas. Ele é chamado durante a criação do conjunto de linhas pelos modelos de provedor. O exemplo usa essa rotina para informar os consumidores que ele não dá suporte a índices. A primeira chamada é para `CRowsetImpl::ValidateCommandID` (Observe que o provedor usa o `_RowsetBaseClass` typedef adicionado no mapa de interface para `CCustomRowset` na [suporte do provedor para indicadores](../../data/oledb/provider-support-for-bookmarks.md), portanto, você não precise digitar essa linha longa de modelo argumentos). Em seguida, retorne DB_E_NOINDEX se o parâmetro de índice não é nulo (Isso indica que o consumidor deseja usar um índice em nós). Para obter mais informações sobre IDs de comando, consulte a especificação OLE DB e procure `IOpenRowset::OpenRowset`.
 
 O código a seguir é o `ValidateCommandID` rotina de validação:
 
@@ -48,9 +48,9 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
 }
 ```
 
-A chamada de modelos de provedor a `OnPropertyChanged` método sempre que alguém altera uma propriedade no `DBPROPSET_ROWSET` grupo. Se você quiser manipular propriedades de outros grupos, adicioná-los ao objeto apropriado (ou seja, `DBPROPSET_SESSION` verificações de entrar a `CCustomSession` classe).
+A chamada de modelos de provedor a `OnPropertyChanged` método sempre que alguém altera uma propriedade no grupo de DBPROPSET_ROWSET. Se você quiser manipular propriedades de outros grupos, adicioná-los ao objeto apropriado (ou seja, as verificações DBPROPSET_SESSION entrar a `CCustomSession` classe).
 
-O código primeiro verifica para ver se a propriedade está vinculada a outro. Se a propriedade está sendo encadeada, ele define o `DBPROP_BOOKMARKS` propriedade para `True`. Apêndice b da especificação do OLE DB contém informações sobre as propriedades. Essas informações também indica se a propriedade encadeada a outra.
+O código primeiro verifica para ver se a propriedade está vinculada a outro. Se a propriedade está sendo encadeada, ele define a propriedade DBPROP_BOOKMARKS como `True`. Apêndice b da especificação do OLE DB contém informações sobre as propriedades. Essas informações também indica se a propriedade encadeada a outra.
 
 Você também poderá adicionar o `IsValidValue` rotina ao seu código. A chamada de modelos `IsValidValue` durante a tentativa de definir uma propriedade. Você pode substituir esse método se você precisar de processamento adicional ao definir um valor de propriedade. Você pode ter um dos seguintes métodos para cada conjunto de propriedades.
 
