@@ -1,27 +1,17 @@
 ---
-title: Conversões padrão | Microsoft Docs
-ms.custom: ''
+title: Conversões padrão
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dec0456c880fea47219dc11c509bbecac025f5d3
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: 7a42a4f35a29489fe23327c6b34ed49197a64724
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50070562"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575442"
 ---
 # <a name="standard-conversions"></a>Conversões padrão
 
@@ -221,7 +211,7 @@ O segundo caso em que um ponteiro para uma classe pode ser convertido em um pont
 
 O resultado dessa conversão é um ponteiro para o "subobjeto", a parte do objeto que é totalmente descrita pela classe base.
 
-O código a seguir define duas classes, `A` e `B`, onde `B` é derivado de `A`. (Para obter mais informações sobre herança, consulte [Classes derivadas de](../cpp/inheritance-cpp.md).) Ele define , um objeto do tipo , e dois ponteiros (`pA` e `pB`) que apontam para o objeto.
+O código a seguir define duas classes, `A` e `B`, onde `B` é derivado de `A`. (Para obter mais informações sobre herança, consulte [Classes derivadas de](../cpp/inheritance-cpp.md).) Ele define `bObject`, um objeto do tipo `B`, e dois ponteiros (`pA` e `pB`) que apontam para o objeto.
 
 ```cpp
 // C2039 expected

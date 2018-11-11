@@ -1,12 +1,6 @@
 ---
-title: Algoritmos | Microsoft Docs
-ms.custom: ''
+title: Algoritmos
 ms.date: 10/18/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - libraries [C++], C++ algorithm conventions
 - algorithms [C++], C++
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0388a3c21fec2d902b74856e4a0ca596b4b3bcca
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: a0a1165d731e44568d530e3ed919d73e2a3e8e5e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50063011"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648014"
 ---
 # <a name="algorithms"></a>Algoritmos
 
@@ -35,7 +25,7 @@ As descrições das funções do modelo de algoritmo empregam várias frases abr
 
 - A frase "no intervalo \[ *um*, *B*)" significa que a sequência de zero ou mais valores discretos, começando com o *um* até, mas não incluir *B* . Um intervalo é válido somente se *B* possa ser acessado pela *A;* você pode armazenar *um* em um objeto *N* (*N*  =  *Um*), incrementar o objeto zero ou mais vezes (+ +*N*), e ter o objeto comparados como iguais *B* após um número finito de incrementos (*N*   ==  *B*).
 
-- A frase "cada *N* no intervalo \[ *um*, *B*)" significa que *N* começa com o valor *um*e é incrementado zero ou mais vezes até que ele é igual ao valor *B*. O caso N** == B* não está no intervalo.
+- A frase "cada *N* no intervalo \[ *um*, *B*)" significa que *N* começa com o valor *um*e é incrementado zero ou mais vezes até que ele é igual ao valor *B*. O caso N* == *B* não está no intervalo.
 
 - A frase "o menor valor de *N* no intervalo \[ *um*, *B*), de modo que *X*" significa que a condição *X* é determinada para cada *N* no intervalo \[ *um*, *B*) até que a condição *X*for atendida.
 

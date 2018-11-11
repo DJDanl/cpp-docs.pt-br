@@ -1,27 +1,17 @@
 ---
-title: Propriedades da etapa de build personalizada (Linux C++) | Microsoft Docs
-ms.custom: ''
+title: Propriedades da etapa de build personalizada (Linux C++)
 ms.date: 10/17/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 77a9c1fb-7c41-4a9b-9418-18ac17ce4e74
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 0ec787826a09379732ac00fa858d32f05cf8025b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e6580263e63547e3564eaee260158a312e5fa6a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326066"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644698"
 ---
 # <a name="custom-build-step-properties-linux-c"></a>Propriedades da etapa de build personalizada (Linux C++)
 
-propriedade | Descrição
+Propriedade | Descrição
 --- | ---
 Linha de Comando | O comando a ser executado pela etapa de compilação personalizada.
 Descrição | Uma mensagem que será exibida quando a etapa de compilação personalizada for executada.
