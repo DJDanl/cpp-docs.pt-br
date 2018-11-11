@@ -7,16 +7,16 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: 79eafef2f73d95c645eb12855c1918a39b76d26e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8c96021b93a35ae9fd10503e78401bbac8abeb7
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512522"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51264886"
 ---
 # <a name="supporting-schema-rowsets"></a>Dando suporte a conjuntos de linhas do esquema
 
-Conjuntos de linhas de esquema permitem que os consumidores podem obter informações sobre um armazenamento de dados sem saber sua estrutura subjacente ou o esquema. Por exemplo, um armazenamento de dados pode ter tabelas organizadas em uma hierarquia definida pelo usuário, portanto, não haveria nenhuma maneira de garantir o conhecimento do esquema, exceto por leitura. (Como outro exemplo, observe que os assistentes do Visual C++ usam conjuntos de linhas de esquema para gerar acessadores para o consumidor.) Para permitir que o consumidor fazer isso, o objeto de sessão do provedor expõe métodos sobre o [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) interface. Em aplicativos do Visual C++, você deve usar o [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) classe para implementar `IDBSchemaRowset`.
+Conjuntos de linhas de esquema permitem que os consumidores obter informações sobre um armazenamento de dados sem saber sua estrutura subjacente ou o esquema. Por exemplo, um armazenamento de dados pode ter tabelas organizadas em uma hierarquia definida pelo usuário, portanto, não haveria nenhuma maneira de garantir o conhecimento do esquema, exceto por leitura. (Como outro exemplo, os assistentes do Visual C++ usam conjuntos de linhas de esquema para gerar acessadores para o consumidor.) Para permitir que o consumidor fazer isso, o objeto de sessão do provedor expõe métodos sobre o [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) interface. Em aplicativos do Visual C++, você deve usar o [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) classe para implementar `IDBSchemaRowset`.
 
 `IDBSchemaRowsetImpl` dá suporte aos seguintes métodos:
 
@@ -32,7 +32,7 @@ Conjuntos de linhas de esquema permitem que os consumidores podem obter informa�
 
 ## <a name="atl-ole-db-provider-wizard-support"></a>Suporte do Assistente de provedor ATL OLE DB
 
-O ATL OLE DB Provider Wizard cria três classes de esquema no arquivo de cabeçalho de sessão:
+O **ATL OLE DB Provider Wizard** cria três classes de esquema no arquivo de cabeçalho de sessão:
 
 - **C**<em>ShortName</em>**SessionTRSchemaRowset**
 
@@ -42,11 +42,11 @@ O ATL OLE DB Provider Wizard cria três classes de esquema no arquivo de cabeça
 
 Essas classes respondem às solicitações do consumidor de informações de esquema; Observe que a especificação OLE DB exige que esses conjuntos de linhas de três esquema suporte:
 
-- **C**<em>ShortName</em>**SessionTRSchemaRowset** trata as solicitações de informações da tabela (o `DBSCHEMA_TABLES` linhas de esquema).
+- **C**<em>ShortName</em>**SessionTRSchemaRowset** trata as solicitações de informações da tabela (as linhas de esquema DBSCHEMA_TABLES).
 
-- **C**<em>ShortName</em>**SessionColSchemaRowset** trata as solicitações de informações de coluna (o `DBSCHEMA_COLUMNS` linhas de esquema). O assistente fornece exemplos de implementações para essas classes, que retornam informações de esquema para um provedor DOS.
+- **C**<em>ShortName</em>**SessionColSchemaRowset** trata as solicitações de informações de coluna (as linhas de esquema DBSCHEMA_COLUMNS). O assistente fornece exemplos de implementações para essas classes, que retornam informações de esquema para um provedor DOS.
 
-- **C**<em>ShortName</em>**SessionPTSchemaRowset** trata as solicitações de informações de esquema sobre o tipo de provedor (o `DBSCHEMA_PROVIDER_TYPES` linhas de esquema). Retorna a implementação padrão fornecida pelo assistente `S_OK`.
+- **C**<em>ShortName</em>**SessionPTSchemaRowset** trata as solicitações de informações de esquema sobre o tipo de provedor (o esquema de linhas DBSCHEMA_PROVIDER_TYPES). A implementação padrão fornecida pelo assistente retornará S_OK.
 
 Você pode personalizar essas classes para manipular informações de esquema apropriadas para seu provedor:
 
@@ -70,9 +70,9 @@ BEGIN_SCHEMA_MAP(CUpdateSession)
 END_SCHEMA_MAP()
 ```
 
-Para dar suporte à `IDBSchemaRowset`, você deve dar suporte à `DBSCHEMA_TABLES`, `DBSCHEMA_COLUMNS`, e `DBSCHEMA_PROVIDER_TYPES`. Você pode adicionar conjuntos de linhas de esquema adicionais a seu critério.
+Para dar suporte a `IDBSchemaRowset`, você deve dar suporte a DBSCHEMA_TABLES, DBSCHEMA_COLUMNS e DBSCHEMA_PROVIDER_TYPES. Você pode adicionar conjuntos de linhas de esquema adicionais a seu critério.
 
-Declarar uma classe de conjunto de linhas de esquema com um `Execute` método, como `CUpdateSessionTRSchemaRowset` em UpdatePV:
+Declarar uma classe de conjunto de linhas de esquema com um `Execute` método, como `CUpdateSessionTRSchemaRowset` em `UpdatePV`:
 
 ```cpp
 class CUpdateSessionTRSchemaRowset :
@@ -84,33 +84,33 @@ class CUpdateSessionTRSchemaRowset :
                     ULONG cRestrictions, const VARIANT* rgRestrictions)
 ```
 
-Observe que `CUpdateSession` herda de `IDBSchemaRowsetImpl`, portanto, ele tem todas as a restrição de métodos de manipulação. Usando o `CSchemaRowsetImpl`, declare as três classes filho (listadas no mapa de esquema acima): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, e `CUpdateSessionPTSchemaRowset`. Cada uma dessas classes filho tem um `Execute` método que manipula seu respectivo conjunto de restrições (critérios de pesquisa). Cada `Execute` método compara os valores da `cRestrictions` e `rgRestrictions` parâmetros. Consulte a descrição desses parâmetros na [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
+`CUpdateSession` herda de `IDBSchemaRowsetImpl`, portanto, ele tem todas as a restrição de métodos de manipulação. Usando o `CSchemaRowsetImpl`, declare as três classes filho (listadas no mapa de esquema acima): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, e `CUpdateSessionPTSchemaRowset`. Cada uma dessas classes filho tem um `Execute` método que manipula seu respectivo conjunto de restrições (critérios de pesquisa). Cada `Execute` método compara os valores da *cRestrictions* e *rgRestrictions* parâmetros. Consulte a descrição desses parâmetros na [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
 
-Para obter mais informações sobre quais restrições correspondem a um conjunto de linhas de esquema específico, consulte a tabela de GUIDs do conjunto de linhas de esquema no [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) na *referência do programador DB OLE* no Windows SDK.
+Para obter mais informações sobre quais restrições correspondem a um conjunto de linhas de esquema específico, consulte a tabela de GUIDs do conjunto de linhas de esquema no [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) na **referência do programador DB OLE** no SDK do Windows .
 
-Por exemplo, se você tiver o suporte a **TABLE_NAME** restrição em `DBSCHEMA_TABLES`, você faria o seguinte:
+Por exemplo, se você compatível com a restrição TABLE_NAME DBSCHEMA_TABLES, você faria o seguinte:
 
-Primeiro, pesquisar `DBSCHEMA_TABLES` e ver que ele oferece suporte a restrições de quatro (em ordem).
+Primeiro, pesquisar DBSCHEMA_TABLES e veja que ele oferece suporte a restrições de quatro (em ordem).
 
 |Restrição de conjunto de linhas de esquema|Valor de restrição|
 |-------------------------------|-----------------------|
-|**TABLE_CATALOG**|0x1 (binário 1)|
-|**TABLE_SCHEMA**|0x2 (10 binário)|
-|**TABLE_NAME**|0x4 (100 binário)|
-|**TABLE_TYPE**|0x8 (1000 binário)|
+|TABLE_CATALOG|0x1 (binário 1)|
+|TABLE_SCHEMA|0x2 (10 binário)|
+|TABLE_NAME|0x4 (100 binário)|
+|TABLE_TYPE|0x8 (1000 binário)|
 
-Em seguida, observe que há um bit para cada restrição. Como você deseja dar suporte a **TABLE_NAME** somente, você poderia retornar 0x4 no `rgRestrictions` elemento. Se você tiver o suporte **TABLE_CATALOG** e **TABLE_NAME**, retornaria 0x5 (101 binário).
+Em seguida, há um bit para cada restrição. Como você deseja dar suporte apenas a TABLE_NAME, retornaria 0x4 no `rgRestrictions` elemento. Se você tiver suporte TABLE_CATALOG e TABLE_NAME, retornaria 0x5 (101 binário).
 
-Por padrão, a implementação retorna 0 (não oferece suporte a quaisquer restrições) para qualquer solicitação. UpdatePV é um exemplo de um provedor que dá suporte a restrições.
+Por padrão, a implementação retorna 0 (não dá suporte a quaisquer restrições) para qualquer solicitação. UpdatePV é um exemplo de um provedor que dá suporte a restrições.
 
 ### <a name="example"></a>Exemplo
 
-Esse código é retirado do [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) exemplo. UpdatePv dá suporte a três conjuntos de linhas de esquema obrigatório: `DBSCHEMA_TABLES`, `DBSCHEMA_COLUMNS`, e `DBSCHEMA_PROVIDER_TYPES`. Como um exemplo de como implementar o suporte a esquema no seu provedor, este tópico apresenta a implementação de `DBSCHEMA_TABLE` conjunto de linhas.
+Esse código é retirado do [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) exemplo. `UpdatePv` dá suporte a três conjuntos de linhas de esquema obrigatório: DBSCHEMA_TABLES, DBSCHEMA_COLUMNS e DBSCHEMA_PROVIDER_TYPES. Como um exemplo de como implementar o suporte a esquema no seu provedor, este tópico apresenta Implementando o conjunto de linhas DBSCHEMA_TABLE.
 
 > [!NOTE]
 > O código de exemplo pode ser diferente daquele que está listado aqui. Você deve considerar o código de exemplo como a versão mais recente.
 
-A primeira etapa na adição de suporte do esquema é determinar quais restrições você pretende dar suporte. Para determinar quais restrições estão disponíveis para seu conjunto de linhas de esquema, veja a especificação OLE DB para a definição de `IDBSchemaRowset`. Após a definição principal, você deve ver uma tabela que contém o nome do conjunto de linhas de esquema, o número de restrições e colunas de restrição. Selecione o conjunto de linhas de esquema que você deseja dar suporte e anote o número de restrições e colunas de restrição. Por exemplo, `DBSCHEMA_TABLES` dá suporte a quatro restrições (**TABLE_CATALOG**, **TABLE_SCHEMA**, **TABLE_NAME**, e **TABLE_TYPE** ):
+É a primeira etapa na adição de suporte de esquema determinar quais restrições você pretende dar suporte. Para determinar quais restrições estão disponíveis para seu conjunto de linhas de esquema, veja a especificação OLE DB para a definição de `IDBSchemaRowset`. Após a definição principal, você deve ver uma tabela que contém o nome do conjunto de linhas de esquema, o número de restrições e colunas de restrição. Selecione o conjunto de linhas de esquema que você deseja dar suporte e anote o número de restrições e colunas de restrição. Por exemplo, o DBSCHEMA_TABLES dá suporte a quatro restrições (TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME e TABLE_TYPE):
 
 ```cpp
 void SetRestrictions(ULONG cRestrictions, GUID* rguidSchema,
@@ -129,25 +129,25 @@ void SetRestrictions(ULONG cRestrictions, GUID* rguidSchema,
 }
 ```
 
-Um bit representa cada coluna de restrição. Se você quiser dar suporte a uma restrição (ou seja, você pode consultar por ele), definir esse bit como 1. Se você não quiser dar suporte a uma restrição, defina esse bit como zero. Na linha de código acima, UpdatePV dá suporte a **TABLE_NAME** e **TABLE_TYPE** restrições sobre o `DBSCHEMA_TABLES` conjunto de linhas. Esses são o terceiro (máscara de bits 100) e o quartas restrições de (máscara de bits 1000). Portanto, a máscara de bits para UpdatePv é 1100 (ou 0x0C):
+Um bit representa cada coluna de restrição. Se você quiser dar suporte a uma restrição (ou seja, você pode consultar por ele), definir esse bit como 1. Se você não quiser para dar suporte a uma restrição, defina esse bit como zero. Da linha de código acima, `UpdatePV` dá suporte as restrições TABLE_NAME e TABLE_TYPE no conjunto de linhas DBSCHEMA_TABLES. Esses são o terceiro (máscara de bits 100) e o quartas restrições de (máscara de bits 1000). Portanto, a máscara de bits para `UpdatePv` é 1100 (ou 0x0C):
 
 ```cpp
 if (InlineIsEqualGUID(rguidSchema[l], DBSCHEMA_TABLES))
     rgRestrictions[l] = 0x0C;
 ```
 
-O seguinte `Execute` função é semelhante em conjuntos de linhas regulares. Você tem três argumentos: *pcRowsAffected*, *cRestrictions*, e *rgRestrictions*. O *pcRowsAffected* variável é um parâmetro de saída que o provedor pode retornar a contagem de linhas no conjunto de linhas de esquema. O *cRestrictions* parâmetro é um parâmetro de entrada que contém o número de restrições passada pelo consumidor para o provedor. O *rgRestrictions* parâmetro é uma matriz de `VARIANT` valores que contêm os valores de restrição.
+O seguinte `Execute` função é semelhante em conjuntos de linhas regulares. Você tem três argumentos: *pcRowsAffected*, *cRestrictions*, e *rgRestrictions*. O *pcRowsAffected* variável é um parâmetro de saída que o provedor pode retornar a contagem de linhas no conjunto de linhas de esquema. O *cRestrictions* parâmetro é um parâmetro de entrada que contém o número de restrições passada pelo consumidor para o provedor. O *rgRestrictions* parâmetro é uma matriz de valores de VARIANTE que mantêm os valores de restrição.
 
 ```cpp
 HRESULT Execute(DBROWCOUNT* pcRowsAffected, ULONG cRestrictions,
                 const VARIANT* rgRestrictions)
 ```
 
-O `cRestrictions` variável é baseada no número total de restrições para um conjunto de linhas de esquema, independentemente se o provedor oferece suporte a eles. Como UpdatePv oferece suporte a duas restrições (a terceira e quarta), esse código procura apenas por um `cRestrictions` valor maior que ou igual a três.
+O *cRestrictions* variável é baseada no número total de restrições para um conjunto de linhas de esquema, independentemente se o provedor oferece suporte a eles. Como UpdatePv oferece suporte a duas restrições (a terceira e quarta), esse código procura apenas por um *cRestrictions* valor maior que ou igual a três.
 
-O valor para o **TABLE_NAME** restrição é armazenada no `rgRestrictions[2]` (novamente, a terceira restrição em uma matriz de base zero é 2). Você precisa verificar se a restrição não é VT_EMPTY realmente dar suporte a ela. Observe que não é igual a VT_EMPTY VT_NULL. VT_NULL Especifica um valor de restrição válida.
+O valor para a restrição TABLE_NAME é armazenado no *rgRestrictions [2]* (novamente, a terceira restrição em uma matriz de base zero é 2). Verifique que a restrição não VT_EMPTY realmente dar suporte a ela. Observe que VT_NULL não é igual a VT_EMPTY. VT_NULL Especifica um valor de restrição válida.
 
-A definição de UpdatePv de um nome de tabela é um nome de caminho totalmente qualificado para um arquivo de texto. Extrair o valor de restrição e, em seguida, tentar abrir o arquivo para garantir que o arquivo, na verdade, existe. Se o arquivo não existir, retorne S_OK. Isso pode parecer um pouco para trás, mas o código que realmente está informando o consumidor é que não havia nenhuma tabela com suporte pelo nome especificado. O retorno S_OK significa que o código seja executado corretamente.
+O `UpdatePv` definição de um nome de tabela é um nome de caminho totalmente qualificado para um arquivo de texto. Extraia o valor de restrição e, em seguida, tente abrir o arquivo para garantir que o arquivo, na verdade, existe. Se o arquivo não existir, retorne S_OK. Isso pode parecer um pouco para trás, mas o código que realmente está informando o consumidor é que não havia nenhuma tabela com suporte pelo nome especificado. O retorno S_OK significa que o código seja executado corretamente.
 
 ```cpp
 USES_CONVERSION;
@@ -184,7 +184,7 @@ if (cRestrictions >= 3 && rgRestrictions[2].vt != VT_EMPTY)
 }
 ```
 
-Suporte a restrição de quarto (**TABLE_TYPE**) é semelhante à restrição de terceiro. Verifique o valor não é VT_EMPTY. Essa restrição só retorna o tipo de tabela **tabela**. Para determinar os valores válidos para o `DBSCHEMA_TABLES`, procure no Apêndice B do *referência do programador DB OLE* no **tabelas** seção conjunto de linhas.
+Dar suporte a restrição de quarto (TABLE_TYPE) é semelhante a restrição de terceiro. Verifique se o valor não é VT_EMPTY. Essa restrição só retorna o tipo de tabela, a tabela. Para determinar os valores válidos para o DBSCHEMA_TABLES, examine **Apêndice B** da **referência do programador DB OLE** na seção de conjunto de linhas de tabelas.
 
 ```cpp
 // TABLE_TYPE restriction:
@@ -203,7 +203,7 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 }
 ```
 
-Isso é onde você realmente criar uma entrada de linha para o conjunto de linhas. A variável `trData` corresponde à `CTABLESRow`, uma estrutura definida nos modelos de provedor do OLE DB. `CTABLESRow` corresponde do **tabelas** definição de conjunto de linhas no Apêndice B da especificação do OLE DB. Você tem apenas uma linha para adicionar o porque você pode apenas dá suporte a uma tabela por vez.
+Isso é onde você realmente criar uma entrada de linha para o conjunto de linhas. A variável `trData` corresponde à `CTABLESRow`, uma estrutura definida nos modelos de provedor do OLE DB. `CTABLESRow` corresponde à definição de conjunto de linhas de tabelas no **Apêndice B** da especificação do OLE DB. Você tem apenas uma linha para adicionar o porque você pode apenas dá suporte a uma tabela por vez.
 
 ```cpp
 // Bring over the data:
@@ -214,7 +214,7 @@ wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());
 ```
 
-UpdatePV define somente três colunas: **TABLE_NAME**, **TABLE_TYPE**, e **descrição**. Você deve fazer uma observação das colunas para as quais você retornar informações, pois você precisará dessas informações quando você implementa `GetDBStatus`:
+`UpdatePV` Define somente três colunas: TABLE_NAME, TABLE_TYPE e descrição. Tome nota das colunas para as quais você retornar informações, pois você precisará dessas informações quando você implementa `GetDBStatus`:
 
 ```cpp
     _ATLTRY
@@ -232,7 +232,7 @@ UpdatePV define somente três colunas: **TABLE_NAME**, **TABLE_TYPE**, e **descr
 }
 ```
 
-O `GetDBStatus` função é muito importante para a operação correta do conjunto de linhas de esquema. Porque você não retorna dados para cada coluna na **tabelas** conjunto de linhas, você precisa especificar quais colunas você retorna dados para e o que você não fizer isso.
+O `GetDBStatus` função é importante para a operação correta do conjunto de linhas de esquema. Porque você não retorna dados para cada coluna no conjunto de linhas de tabelas, você precisa especificar quais colunas devem retornar dados para e o que você não fizer isso.
 
 ```cpp
 virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
@@ -253,9 +253,9 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
 }
 ```
 
-Porque seu `Execute` função retorna dados para o **TABLE_NAME**, **TABLE_TYPE**, e **descrição** campos do **tabelas**conjunto de linhas, você pode procurar no Apêndice B da especificação do OLE DB e determinar (pela contagem de cima para baixo) que são números ordinais 3, 4 e 6. Para cada uma dessas colunas, retorne DBSTATUS_S_OK. Para todas as outras colunas, retorne DBSTATUS_S_ISNULL. É importante retornar esse status, porque um consumidor talvez não compreenda o valor que você retornar é nulo ou alguma outra coisa. Novamente, observe que NULL não é equivalente a vazio.
+Porque seu `Execute` função retorna dados para os campos TABLE_NAME, TABLE_TYPE e a descrição do conjunto de linhas de tabelas, você pode examinar **Apêndice B** da especificação do OLE DB e determinar (pela contagem de cima para baixo) que elas ordinais 3, 4 e 6. Para cada uma dessas colunas, retorne DBSTATUS_S_OK. Para todas as outras colunas, retorne DBSTATUS_S_ISNULL. É importante retornar esse status, porque um consumidor talvez não compreenda o valor que você retornar é nulo ou alguma outra coisa. Novamente, observe que NULL não é equivalente a vazio.
 
-Para obter mais informações sobre a interface de conjunto de linhas de esquema OLE DB, consulte a [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) interface na referência do OLE DB do programador.
+Para obter mais informações sobre a interface de conjunto de linhas de esquema OLE DB, consulte a [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) interface na **referência do programador DB OLE**.
 
 Para obter informações sobre como os consumidores podem utilizar `IDBSchemaRowset` métodos, consulte [obtendo metadados com conjuntos de linhas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).
 
