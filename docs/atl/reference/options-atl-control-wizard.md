@@ -6,16 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-ms.openlocfilehash: 932661227daa216934c061a8b6807b05ca8270ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e607e35b2b3970f329692ba8d2c612d7f6a6591b
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443752"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522305"
 ---
 # <a name="options-atl-control-wizard"></a>Opções, Assistente de controle ATL
-
-Insira "Resultados da pesquisa" Resumo aqui.
 
 Use esta página do Assistente para definir o tipo de controle que você está criando e o nível de suporte de interface que ele contém.
 
@@ -29,17 +27,17 @@ O tipo de controle que você deseja criar.
 
 - **Controle de composição**: um controle ActiveX que pode conter (semelhante a uma caixa de diálogo) outros controles ActiveX ou controles do Windows. Um controle composto inclui o seguinte:
 
-   - Um modelo para a caixa de diálogo que implementa o controle de composição.
+  - Um modelo para a caixa de diálogo que implementa o controle de composição.
 
-   - Um recurso personalizado, registro, que registra automaticamente o controle composto quando invocado.
+  - Um recurso personalizado, registro, que registra automaticamente o controle composto quando invocado.
 
-   - Uma classe C++ que implementa o controle de composição.
+  - Uma classe C++ que implementa o controle de composição.
 
-   - Uma interface COM, exposta pelo controle de composição.
+  - Uma interface COM, exposta pelo controle de composição.
 
-   - Uma página de teste HTML que contém o controle de composição.
+  - Uma página de teste HTML que contém o controle de composição.
 
-   Por padrão, esse controle define [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) como true, para indicar que este é um controle da janela. Ele implementa um mapa coletor. Para obter mais informações, consulte [suporte para controle DHTML](../../atl/atl-support-for-dhtml-controls.md).
+    Por padrão, esse controle define [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) como true, para indicar que este é um controle da janela. Ele implementa um mapa coletor. Para obter mais informações, consulte [suporte para controle DHTML](../../atl/atl-support-for-dhtml-controls.md).
 
 - **Controle DHTML**: controle de um DHTML da ATL Especifica a interface do usuário, usando HTML. A classe de UI DHTML contém um mapa COM. Por padrão, esse controle define [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) como true, para indicar que este é um controle da janela.
 

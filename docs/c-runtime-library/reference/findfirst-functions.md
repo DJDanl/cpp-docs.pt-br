@@ -90,12 +90,12 @@ helpviewer_keywords:
 - wfindfirst64i32 function
 - _wfindfirst64 function
 ms.assetid: 9bb46d1a-b946-47de-845a-a0b109a33ead
-ms.openlocfilehash: eaecf466617669e6abf156370854b88d16fc4086
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ceaa8fea4414bab4bbb035aa4525b415ca7ac0b8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542071"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331432"
 ---
 # <a name="findfirst-findfirst32-findfirst32i64-findfirst64-findfirst64i32-findfirsti64-wfindfirst-wfindfirst32-wfindfirst32i64-wfindfirst64-wfindfirst64i32-wfindfirsti64"></a>_findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64
 
@@ -166,12 +166,12 @@ Buffer de informações do arquivo.
 
 Se for bem-sucedido, **FindFirst** retorna um identificador de pesquisa exclusivo que identifica o arquivo ou grupo de arquivos que correspondem a *filespec* especificação, que pode ser usada em uma chamada subsequente para [_ FindNext](findnext-functions.md) ou a [FindClose](findclose.md). Caso contrário, **FindFirst** retornará -1 e definirá **errno** para um dos valores a seguir.
 
-|Valor errno|Condição|
+| Valor errno | Condição |
 |-|-|
-**EINVAL**|Parâmetro inválido: *filespec* ou *fileinfo* foi **nulo**. Ou o sistema operacional retornou um erro inesperado.
-**ENOENT**|Especificação de arquivo que não pôde ser correspondida.
-**ENOMEM**|Memória insuficiente.
-**EINVAL**|Especificação de nome de arquivo inválido ou o nome de arquivo fornecido era maior que **MAX_PATH**.
+| **EINVAL** | Parâmetro inválido: *filespec* ou *fileinfo* foi **nulo**. Ou o sistema operacional retornou um erro inesperado. |
+| **ENOENT** | Especificação de arquivo que não pôde ser correspondida. |
+| **ENOMEM** | Memória insuficiente. |
+| **EINVAL** | Especificação de nome de arquivo inválido ou o nome de arquivo fornecido era maior que **MAX_PATH**. |
 
 Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

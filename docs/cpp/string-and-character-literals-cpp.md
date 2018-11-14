@@ -16,12 +16,12 @@ helpviewer_keywords:
 - NULL, character constant
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: 787756dd3e886afb6afa87ed3871158bddcbf3ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3721f3624a64a24de0a5458d88de4836b07a9c1
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614585"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329833"
 ---
 # <a name="string-and-character-literals--c"></a>Cadeia de caracteres e literais de caracteres (C++)
 
@@ -49,7 +49,7 @@ int main()
 
     // Raw string literals containing unescaped \ and "
     auto R0 =   R"("Hello \ world")"; // const char*
-    auto R1 = u8R"("Hello \ world")"; // const char*, encoded as UTF-8
+    auto R1 = u8R"("Hello \ world")"; // const char*, encoded as UTF-8
     auto R2 =  LR"("Hello \ world")"; // const wchar_t*
     auto R3 =  uR"("Hello \ world")"; // const char16_t*, encoded as UTF-16
     auto R4 =  UR"("Hello \ world")"; // const char32_t*, encoded as UTF-32
@@ -106,15 +106,22 @@ Literais de caracteres são codificados de forma diferente com base em seu prefi
 
 Há três tipos de sequências de escape: simples, octais e hexadecimais. As sequências de escape podem ser qualquer uma das seguintes:
 
-|Valor|Sequência de escape|Valor|Sequência de escape|
-|-----------|---------------------|-----------|---------------------|
-|nova linha|\n|barra invertida|\\\|
-|tabulação horizontal|\t|ponto de interrogação|? ou \\?|
-|tabulação vertical|\v|aspas simples|\\'|
-|backspace|\b|aspas duplas|\\"|
-|retorno de carro|\r|o caractere nulo|\0|
-|avanço de página|\f|octal|\ooo|
-|alerta (sino)|\a|hexadecimal|\xhhh|
+|Valor|Sequência de escape|
+|-----------|---------------------|
+| nova linha | \\n |
+| barra invertida | \\\\ |
+| tabulação horizontal | \\t |
+| ponto de interrogação | ? ou \\? |
+| tabulação vertical | \\v |
+| aspas simples | \\' |
+| backspace | \\b |
+| aspas duplas | \\" |
+| retorno de carro | \\R |
+| o caractere nulo | \\0 |
+| avanço de página | \\f |
+| octal | \\OOO |
+| alerta (sino) | \\a |
+| hexadecimal | \\xhhh |
 
 O código a seguir mostra alguns exemplos de caracteres de escape usando literais de caractere comum. A mesma sintaxe de sequência de escape é válida para os outros tipos de literal de caractere.
 
@@ -253,7 +260,7 @@ Uma cadeia de caracteres bruta literal é uma matriz terminada em nulo — de qu
 // represents the string: An unescaped \ character
 const char* raw_narrow = R"(An unescaped \ character)";
 const wchar_t* raw_wide = LR"(An unescaped \ character)";
-const char*       raw_utf8  = u8R"(An unescaped \ character)";
+const char*       raw_utf8  = u8R"(An unescaped \ character)";
 const char16_t* raw_utf16 = uR"(An unescaped \ character)";
 const char32_t* raw_utf32 = UR"(An unescaped \ character)";
 ```

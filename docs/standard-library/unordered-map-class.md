@@ -138,12 +138,12 @@ helpviewer_keywords:
 - std::unordered_map::size
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-ms.openlocfilehash: 9106d8e2eaba1cc16b645f79418d0ff02766b04d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51b84b8a48365189abf1efa111ae2186af0cab11
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592186"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519810"
 ---
 # <a name="unorderedmap-class"></a>Classe unordered_map
 
@@ -275,7 +275,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -519,7 +518,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -538,7 +536,6 @@ bucket_count() == 128
 load_factor() == 0.0234375
 max_bucket_count() == 128
 max_load_factor() == 0.1
-
 ```
 
 ## <a name="bucket_size"></a>  unordered_map::bucket_size
@@ -705,7 +702,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -755,7 +751,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -803,7 +798,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -851,7 +845,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -898,7 +891,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -951,7 +943,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -1229,7 +1220,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -1324,7 +1314,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -1365,7 +1354,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -1403,7 +1391,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -1442,7 +1429,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -1555,7 +1541,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1595,7 +1580,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1636,7 +1620,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1692,7 +1675,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1766,7 +1748,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1785,7 +1766,6 @@ bucket_count() == 128
 load_factor() == 0.0234375
 max_bucket_count() == 128
 max_load_factor() == 0.1
-
 ```
 
 ## <a name="local_iterator"></a>  unordered_map::local_iterator
@@ -1829,7 +1809,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1885,7 +1864,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1959,7 +1937,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -1978,7 +1955,6 @@ bucket_count() == 128
 load_factor() == 0.0234375
 max_bucket_count() == 128
 max_load_factor() == 0.1
-
 ```
 
 ## <a name="max_load_factor"></a>  unordered_map::max_load_factor
@@ -2054,7 +2030,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2073,7 +2048,6 @@ bucket_count() == 128
 load_factor() == 0.0234375
 max_bucket_count() == 128
 max_load_factor() == 0.1
-
 ```
 
 ## <a name="max_size"></a>  unordered_map::max_size
@@ -2105,7 +2079,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2136,7 +2109,7 @@ Uma referência ao valor de dados do elemento inserido.
 
 Se o valor de chave do argumento não for encontrado, ele será inserido juntamente com o valor padrão do tipo de dados.
 
-`operator[]` pode ser usado para inserir elementos em um mapa *m* usando *m*[_*Key*] = `DataValue`; em que `DataValue` é o valor de `mapped_type` do elemento com um valor de chave de \_ *_Key*.
+`operator[]` pode ser usado para inserir elementos em um mapa *m* usando *m*[*chave*] = `DataValue`; onde `DataValue` é o valor da `mapped_type` do elemento com uma chave valor de *chave*.
 
 Ao usar `operator[]` para inserir elementos, a referência retornada não indica se uma inserção está alterando um elemento preexistente ou criando outro. As funções membro [find](../standard-library/map-class.md#find) e [insert](../standard-library/map-class.md#insert) podem ser usadas para determinar se um elemento com uma chave especificada já está presente antes de uma inserção.
 
@@ -2184,7 +2157,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2301,7 +2273,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2348,7 +2319,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2416,7 +2386,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2489,7 +2458,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2532,7 +2500,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2603,7 +2570,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output
@@ -2866,7 +2832,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output

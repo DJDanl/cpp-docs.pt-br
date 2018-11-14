@@ -1,23 +1,19 @@
 ---
-title: Melhorias de conformidade do C++ | Microsoft Docs
-ms.custom: ''
-ms.date: 08/15/2018
+title: Aprimoramentos de conformidade do C++
+ms.date: 10/31/2018
 ms.technology:
 - cpp-language
-ms.topic: conceptual
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5661ff0debb3d06947e5b8ff686cc049ebe68fee
-ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
+ms.openlocfilehash: 5dca047f6de1ee77734be8842f0ac68402b7dbfc
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50204737"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524242"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Melhorias de conformidade do C++ no Visual Studio 2017 versões 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157) e [15.8](#update_158)
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159update159"></a>Aprimoramentos de conformidade do C++ no Visual Studio 2017 versões 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158) e [15.9](#update_159)
 
 Com suporte para constexpr generalizado e NSDMI para agregações, agora o compilador do Microsoft Visual C++ está completo com relação aos recursos adicionados no padrão C++14. Observe que o compilador ainda não tem alguns recursos dos padrões C++11 e C++98. Confira [Conformidade com a linguagem Visual C++](visual-cpp-language-conformance.md) para ver uma tabela que mostra o estado atual do compilador.
 
@@ -227,9 +223,9 @@ O exemplo a seguir mostra o comportamento de conformidade do C++14:
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {};
@@ -247,9 +243,9 @@ O exemplo a seguir mostra o comportamento do C++17 no Visual Studio versão 15.7
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {
@@ -341,7 +337,7 @@ void bar(A<0> *p)
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) Alterações nas funções de membro `length`, `compare` e `find` do `std::traits_type`, para fazer com que `std::string_view` possa ser usado em expressões de constante. (No Visual Studio 2017 versão 15.6, compatível somente com Clang/LLVM. Na versão 15.7 Preview 2, há compatibilidade quase concluída com ClXX também).
 
-## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-and-158update158"></a>Correções de bug nas versões do Visual Studio 15.0, [15.3](#update_153), [15.5](#update_155), [15.7](#update_157) e [15.8](#update_158)
+## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-158update158-and-159update159"></a>Correções de bug no Visual Studio versões 15.0, [15.3](#update_153), [15.5](#update_155), [15.7](#update_157), [15.8](#update_158) e [15.9](#update_159)
 
 ### <a name="copy-list-initialization"></a>Inicialização de lista de cópia
 
@@ -1375,7 +1371,7 @@ Membros de dados constexpr estáticos agora são implicitamente embutidos, o que
 
 ```cpp
 struct X {
-    static constexpr int size = 3;
+    static constexpr int size = 3;
 };
 const int X::size; // C5041
 ```
@@ -1604,7 +1600,6 @@ int main() {
     };
     return 0;
 }
-
 ```
 
 No Visual Studio 2017 versão 15.7 atualização 3 e versões posteriores, o exemplo anterior agora gera o erro *C2078 muitos inicializadores*. O exemplo a seguir mostra como corrigir o código. Ao inicializar um `std::array` com chaves init-lists aninhadas, forneça para matriz interna uma lista entre chaves própria:
@@ -1623,7 +1618,6 @@ int main() {
     }}; // note double braces
     return 0;
 }
-
 ```
 
 ## <a name="update_158"></a> Correções de bugs e alterações de comportamento no Visual Studio 2017 versão 15.8
@@ -1679,7 +1673,6 @@ struct S : Base<T> {
         return base_value;
     }
 };
-
 ```
 
 Para corrigir o erro, altere a instrução `return` para `return this->base_value;`.
@@ -1832,6 +1825,155 @@ struct X : Base<T>
         Base<T>::template foo<int>();
     }
 };
+```
+## <a name="update_159"></a> Correções de bug e alterações de comportamento no Visual Studio 2017 versão 15.9
+
+### <a name="identifiers-in-member-alias-templates"></a>Identificadores em modelos de alias de membro
+Um identificador usado em uma definição de modelo de alias de membro precisa ser declarado antes de ser usado. 
+
+Nas versões anteriores do compilador, o código a seguir era permitido:
+
+```cpp
+template <typename... Ts>
+struct A
+{
+  public:
+    template <typename U>
+    using from_template_t = decltype(from_template(A<U>{}));
+
+  private:
+    template <template <typename...> typename Type, typename... Args>
+    static constexpr A<Args...> from_template(A<Type<Args...>>);
+
+};
+
+A<>::from_template_t<A<int>> a;
+```
+
+No Visual Studio 2017 versão 15.9, no modo **/permissive-**, o compilador gera C3861: *'from_template': identificador não encontrado*.d
+
+Para corrigir o erro, declare `a` antes de `A`.
+
+### <a name="modules-changes"></a>Alterações nos módulos
+
+No Visual Studio 2017, versão 15.9, o compilador gera C5050 sempre que as opções de linha de comando dos módulos não são consistentes entre os lados da criação do módulo e do consumo do módulo. No exemplo a seguir, há dois problemas:
+
+- no lado do consumo (main.cpp) a opção **/EHsc** não está especificada.
+- a versão do C++ é a **/std:c++17** no lado da criação e **/std:c++14** no lado do consumo. 
+
+```cmd
+cl /EHsc /std:c++17 m.ixx /experimental:module
+cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
+```
+
+O compilador gera C5050 para estes dois casos: *aviso C5050: possível ambiente incompatível durante a importação do módulo 'm': versões do C++ incompatíveis.  Versão do módulo "201402" atual "201703"*.
+
+Além disso, o compilador gera C7536 sempre que o arquivo .ifc é adulterado. O cabeçalho da interface do módulo contém um hash SHA2 do conteúdo abaixo dele. Na importação, o arquivo .ifc é transformado em hash da mesma forma e, em seguida, comparado com o hash fornecido no cabeçalho. Se eles não correspondem, o erro C7536 é gerado: *O ifc não foi aprovado nas verificações de integridade.  SHA2 esperado: '66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6'*.
+
+### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>Ordenação parcial envolvendo aliases e contextos não deduzidos
+
+Há uma divergência de implementação nas regras de ordenação parciais que envolvem aliases em contextos não deduzidos. No exemplo a seguir, a GCC e o compilador de C++ da Microsoft (no modo **/permissive-**) geram um erro, enquanto o Clang aceita o código. 
+
+```cpp
+#include <utility>
+using size_t = std::size_t;
+
+template <typename T>
+struct A {};
+template <size_t, size_t>
+struct AlignedBuffer {};
+template <size_t len>
+using AlignedStorage = AlignedBuffer<len, 4>;
+
+template <class T, class Alloc>
+int f(Alloc &alloc, const AlignedStorage<T::size> &buffer)
+{
+    return 1;
+}
+
+template <class T, class Alloc>
+int f(A<Alloc> &alloc, const AlignedStorage<T::size> &buffer)
+{
+    return 2;
+}
+
+struct Alloc
+{
+    static constexpr size_t size = 10;
+};
+
+int main()
+{
+    A<void> a;
+    AlignedStorage<Alloc::size> buf;
+    if (f<Alloc>(a, buf) != 2)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+```
+
+O exemplo anterior gera C2668:
+
+```Output
+partial_alias.cpp(32): error C2668: 'f': ambiguous call to overloaded function
+partial_alias.cpp(18): note: could be 'int f<Alloc,void>(A<void> &,const AlignedBuffer<10,4> &)'
+partial_alias.cpp(12): note: or       'int f<Alloc,A<void>>(Alloc &,const AlignedBuffer<10,4> &)'
+        with
+        [
+            Alloc=A<void>
+        ]
+partial_alias.cpp(32): note: while trying to match the argument list '(A<void>, AlignedBuffer<10,4>)'
+```
+
+A divergência de implementação ocorre devido a uma regressão no texto padrão em que a resolução do problema principal 2235 removeu a parte do texto que permitia que essas sobrecargas fossem ordenadas. O padrão do C++ atual não fornece um mecanismo para ordenar parcialmente essas funções, portanto, elas são consideradas ambíguas.
+
+Como alternativa, é recomendado que você não confie na ordenação parcial para resolver esse problema e use SFINAE para remover sobrecargas específicas. No exemplo a seguir, usamos uma classe auxiliar `IsA` para remover a primeira sobrecarga quando `Alloc` é uma especialização de `A`:
+
+```cpp
+#include <utility>
+using size_t = std::size_t;
+
+template <typename T>
+struct A {};
+template <size_t, size_t>
+struct AlignedBuffer {};
+template <size_t len>
+using AlignedStorage = AlignedBuffer<len, 4>;
+
+template <typename T> struct IsA : std::false_type {};
+template <typename T> struct IsA<A<T>> : std::true_type {};
+
+template <class T, class Alloc, typename = std::enable_if_t<!IsA<Alloc>::value>>
+int f(Alloc &alloc, const AlignedStorage<T::size> &buffer)
+{
+    return 1;
+}
+
+template <class T, class Alloc>
+int f(A<Alloc> &alloc, const AlignedStorage<T::size> &buffer)
+{
+    return 2;
+}
+
+struct Alloc
+{
+    static constexpr size_t size = 10;
+};
+
+int main()
+{
+    A<void> a;
+    AlignedStorage<Alloc::size> buf;
+    if (f<Alloc>(a, buf) != 2)
+    {
+        return 1;
+    }
+
+    return 0;
+}
 ```
 
 ## <a name="see-also"></a>Consulte também

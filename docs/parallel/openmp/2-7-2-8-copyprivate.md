@@ -2,12 +2,12 @@
 title: 2.7.2.8 copyprivate
 ms.date: 11/04/2016
 ms.assetid: c382348c-c785-45b2-8ee6-a66b76b97f3e
-ms.openlocfilehash: d4df1b4216014d3cd15be1480d2f83334fddb72d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f46b8ae1d42083c770bbc84c46d13b02d5227498
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622905"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521850"
 ---
 # <a name="2728-copyprivate"></a>2.7.2.8 copyprivate
 
@@ -20,7 +20,6 @@ A sintaxe do **copyprivate** cláusula é da seguinte maneira:
 copyprivate(
 variable-list
 )
-
 ```
 
 O efeito do **copyprivate** cláusula nas variáveis em sua lista de variável ocorre após a execução do bloco estruturado associado com o **único** construir e antes de qualquer um dos threads no equipe tenha deixado a barreira no final da construção. Em seguida, em todos os outros threads da equipe, para cada variável na *lista variável*, essa variável se torna definida (como se por atribuição) com o valor da variável no thread que executou a construção do estruturado bloco.

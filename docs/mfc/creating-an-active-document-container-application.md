@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-ms.openlocfilehash: ecce997c451b39600606550dd1198cddfd764334
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5cdd3de8f4efcc23f89b81cb61302b5950938800
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463319"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520407"
 ---
 # <a name="creating-an-active-document-container-application"></a>Criando um aplicativo de contêiner de documento ativo
 
@@ -37,15 +37,15 @@ A maneira mais simples e mais recomendada para criar um aplicativo de contêiner
 
 1. Clique em **Finalizar**.
 
-9. Quando o Assistente de aplicativo do MFC terminar de gerar o aplicativo, abra os arquivos a seguir usando o Gerenciador de soluções:
+1. Quando o Assistente de aplicativo do MFC terminar de gerar o aplicativo, abra os arquivos a seguir usando o Gerenciador de soluções:
 
    - *MyProjview.cpp*
 
-10. Na *MyProjview.cpp*, faça as seguintes alterações:
+1. Na *MyProjview.cpp*, faça as seguintes alterações:
 
    - No `CMyProjView::OnPreparePrinting`, substitua o conteúdo de função com o código a seguir:
 
-         [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
+     [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
    `OnPreparePrinting` fornece suporte para impressão. Esse código substitui `DoPreparePrinting`, que é a preparação de impressão padrão.
 
@@ -59,7 +59,7 @@ A maneira mais simples e mais recomendada para criar um aplicativo de contêiner
 
    As funções de membro estático `COleDocObjectItem::OnPrint` e `COleDocObjectItem::OnPreparePrinting`, conforme implementado no código anterior, lidar com esse esquema de impressão aprimorada.
 
-11. Adicione qualquer implementação de sua preferência e compile o aplicativo.
+1. Adicione qualquer implementação de sua preferência e compile o aplicativo.
 
 ## <a name="see-also"></a>Consulte também
 

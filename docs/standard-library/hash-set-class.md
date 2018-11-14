@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-ms.openlocfilehash: 12f177887552cb14edba6ae8cfeeab1abe24a45b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0668342468e30733f8257ccd2682bfe785551857
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657503"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333596"
 ---
 # <a name="hashset-class"></a>Classe hash_set
 
@@ -565,7 +565,7 @@ O valor dos elementos a serem correspondidos do hash_set.
 
 A função membro retorna o número de elementos no seguinte intervalo:
 
-[ **lower_bound** (_ *Key* ), **upper_bound** (\_ *Key* ) ).
+\[ lower_bound (*chave*), upper_bound (*chave*)).
 
 ### <a name="example"></a>Exemplo
 
@@ -1534,7 +1534,7 @@ Para obter mais informações sobre *Traits* consulte o [classe hash_set](../sta
 
 O objeto armazenado define a função membro:
 
-**operador booliano**( **const Key&** _ *xVal*, **const Key&** \_ `yVal`);
+`bool operator( const Key& _xVal, const Key& _yVal );`
 
 que retornará **true** se `_xVal` preceder e não for igual a `_yVal` na ordem de classificação.
 
@@ -2296,7 +2296,7 @@ Para obter mais informações sobre *Compare*, consulte a seção comentários a
 
 O objeto armazenado define a função membro:
 
-**operador booliano**( **const Key&** _ *xVal*, **const Key&** \_ `yVal`);
+`bool operator( const Key& _xVal, const Key& _yVal );`
 
 que retornará **true** se `_xVal` preceder e não for igual a `_yVal` na ordem de classificação.
 

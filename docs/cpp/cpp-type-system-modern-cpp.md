@@ -3,12 +3,12 @@ title: Sistema do tipo C++ (C++ moderno)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 3e500980fbb5e6397e992f53b58f28fa710e7af0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba24a4a739e4eb13d983202943ca046f857422d2
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602599"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521086"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema do tipo C++ (C++ moderno)
 
@@ -86,7 +86,6 @@ Qualquer tipo interno ou definido pelo usuário pode ser qualificado pela palavr
 
 const double PI = 3.1415;
 PI = .75 //Error. Cannot modify const variable.
-
 ```
 
 O **const** qualificador é amplamente usado em declarações de função e a variável e "exatidão de const" é um conceito importante em C++; essencialmente, significa usar **const** para garantir, no tempo de compilação valores não são modificados acidentalmente. Para obter mais informações, consulte [const](../cpp/const-cpp.md).

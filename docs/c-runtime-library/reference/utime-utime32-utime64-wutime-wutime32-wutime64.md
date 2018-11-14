@@ -58,12 +58,12 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-ms.openlocfilehash: f1e9633784ad78a2b46701e6600ad1ddb6b3318e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e52845a828e272ff3b8458b299c3757b8def748
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471079"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524623"
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 
@@ -112,10 +112,10 @@ Cada uma dessas funções retornará 0 se a hora de modificação do arquivo for
 
 |Valor errno|Condição|
 |-|-|
-**EACCES**|O caminho especifica o diretório ou o arquivo somente leitura
-**EINVAL**|Inválido *vezes* argumento
-**EMFILE**|Há muitos arquivos abertos (o arquivo deve ser aberto para seu tempo de modificação ser alterado)
-**ENOENT**|Caminho ou nome de arquivo não encontrado
+| **EACCES** | O caminho especifica o diretório ou o arquivo somente leitura |
+| **EINVAL** | Inválido *vezes* argumento |
+| **EMFILE** | Há muitos arquivos abertos (o arquivo deve ser aberto para seu tempo de modificação ser alterado) |
+| **ENOENT** | Caminho ou nome de arquivo não encontrado |
 
 Consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obter mais informações sobre esses e outros códigos de retorno.
 
@@ -123,14 +123,14 @@ A data de um arquivo poderá ser alterada se tal alteração ocorrer após a mei
 
 ## <a name="remarks"></a>Comentários
 
-O **utime** função define a hora de modificação para o arquivo especificado por *filename * *.* O processo deve ter acesso de gravação ao arquivo para alterar a hora. No sistema operacional Windows, você pode alterar o tempo de acesso e a hora de modificação na **utimbuf** estrutura. Se *vezes* é um **nulo** ponteiro, a modificação da hora é definida como a hora local atual. Caso contrário, *vezes* deve apontar para uma estrutura do tipo **utimbuf**, definida em SYS\UTIME. H.
+O **utime** função define a hora de modificação para o arquivo especificado por *filename*. O processo deve ter acesso de gravação ao arquivo para alterar a hora. No sistema operacional Windows, você pode alterar o tempo de acesso e a hora de modificação na **utimbuf** estrutura. Se *vezes* é um **nulo** ponteiro, a modificação da hora é definida como a hora local atual. Caso contrário, *vezes* deve apontar para uma estrutura do tipo **utimbuf**, definida em SYS\UTIME. H.
 
 O **utimbuf** estrutura armazena os horários de acesso e modificação de arquivo usados pelo **utime** para alterar as datas de modificação do arquivo. A estrutura tem os seguintes campos, ambos do tipo **time_t**:
 
-|Campo||
-|-|-|
-**actime**|Horário de acesso ao arquivo
-**modtime**|Horário de modificação do arquivo
+| Campo |   |
+|-------|---|
+| **actime** | Horário de acesso ao arquivo |
+| **modtime** | Horário de modificação do arquivo |
 
 Versões específicas do **utimbuf** estrutura (**_utimebuf32** e **__utimbuf64**) são definidos usando as versões de 32 bits e 64 bits do tipo tempo. Elas são usadas nas versões específicas de 32 e 64 bits dessa função. **utimbuf** por padrão usa um tipo de tempo de 64 bits, a menos que **_USE_32BIT_TIME_T** está definido.
 

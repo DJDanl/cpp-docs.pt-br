@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW2003
 ms.assetid: 9dc0ba70-6776-4aef-b316-5f1711d8e42e
-ms.openlocfilehash: 2e0a7d2d5b7e8fc4603b10450ba30dbf014e02cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f359c1f71f03ce0d946579776230398fb31d046f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583154"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520602"
 ---
 # <a name="resource-compiler-error-rw2003"></a>Erro RW2003 (compilador de recurso)
 
@@ -51,10 +51,10 @@ Erro de geração
 
    Para o Windows 3.1 um recurso não pode exceder aproximadamente 65000 bytes. Se seu recurso, em seguida, você não poderá compilá-lo com o Visual C++ ou o compilador de recurso de linha de comando. Esse limite não se aplica a cursores, ícones, bitmaps ou outros recursos baseados em arquivo.
 
-9. **Arquivo de recurso não está no formato 3.00**
+1. **Arquivo de recurso não está no formato 3.00**
 
    Um ícone ou cursor usava um formato anterior à versão 3,00. O recurso deve ser convertido ou reemitida usando o formato de versão 3,00 ou posterior.
 
-10. **Não é possível abrir o arquivo temporário**
+1. **Não é possível abrir o arquivo temporário**
 
    O recurso de compilador/Visual C++ não pôde abrir um arquivo temporário. A causa provável é que você não tem permissões de gravação para o diretório ou o diretório não existe. O recurso de compilador/Visual C++ tenta usar esses arquivos no diretório especificado pela **TMP** variável de ambiente ou o diretório atual se nenhum for especificado.

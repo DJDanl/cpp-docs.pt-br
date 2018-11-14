@@ -3,12 +3,12 @@ title: Erros e tratamento de exceções (C++ moderno)
 ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: 8f5e0070f3e52d20293ddd624a0d0de57660e316
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6192ab800667ceb35bf2e18dcbdc0be95ec70f5
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667981"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523282"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Erros e tratamento de exceções (C++ moderno)
 
@@ -58,7 +58,6 @@ int main()
     //...
     return 0;
 }
-
 ```
 
 Exceções em C++ são semelhantes àquelas em linguagens como c# e Java. No **tente** bloquear, se uma exceção é *lançada* será *capturada* pela primeira associado **catch** bloco cujo tipo corresponde do exceção. Em outras palavras, a execução vai dos **lançar** instrução para o **catch** instrução. Se nenhum bloco catch for encontrado, `std::terminate` é invocado e o programa será encerrado. No C++, qualquer tipo pode ser lançado; No entanto, recomendamos que você lança um tipo que deriva direta ou indiretamente `std::exception`. No exemplo anterior, o tipo de exceção [invalid_argument](../standard-library/invalid-argument-class.md), é definido na biblioteca padrão no [ \<stdexcept >](../standard-library/stdexcept.md) arquivo de cabeçalho. C++ não fornece e não requer uma **finalmente** bloco para certificar-se de que todos os recursos são liberados se uma exceção é lançada. A aquisição de recurso é o idioma de inicialização (RAII), que usa ponteiros inteligentes, oferece a funcionalidade necessária para limpeza de recursos. Para obter mais informações, consulte [como: Design para segurança de exceção](../cpp/how-to-design-for-exception-safety.md). Para obter informações sobre o mecanismo de desenrolamento de pilha do C++, consulte [exceções e desenrolamento de pilha](../cpp/exceptions-and-stack-unwinding-in-cpp.md).

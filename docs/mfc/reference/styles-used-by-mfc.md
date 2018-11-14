@@ -196,12 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: dc70059e2de054e4b1aac4800e1d61c58bc9b467
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0aef399b734ad5b15a9a2d4028be3fde3f02505
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642904"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525295"
 ---
 # <a name="styles-used-by-mfc"></a>Estilos usados pelo MFC
 
@@ -338,7 +338,7 @@ Estilos de caixa de listagem [classe CListBox](../../mfc/reference/clistbox-clas
 |LBS_HASSTRINGS|Especifica uma caixa de listagem do desenho proprietário que contém itens compostos por cadeias de caracteres. A caixa de listagem mantém a memória e os ponteiros para cadeias de caracteres para que o aplicativo possa usar o `GetText` a função de membro para recuperar o texto para um determinado item.|
 |LBS_MULTICOLUMN|Especifica uma caixa de listagem de várias colunas é rolada horizontalmente. O `SetColumnWidth` função de membro define a largura das colunas.|
 |LBS_MULTIPLESEL|Seleção de cadeia de caracteres é alternada de cada vez que o usuário clica ou clica duas vezes a cadeia de caracteres. Qualquer número de cadeias de caracteres pode ser selecionado.|
-|LBS_NODATA|Especifica uma caixa de listagem sem dados. Especifique esse estilo quando a contagem de itens na caixa de listagem excederá mil. Uma caixa de listagem sem dados também deve ter o estilo LBS_OWNERDRAWFIXED, mas não deve ter o estilo LBS_SORT ou LBS_HASSTRINGS. <br /></br / > uma caixa de listagem de dados não se parece com uma caixa de lista desenhado pelo proprietário, exceto que ele não contém cadeia de caracteres ou bitmap dados para um item. Comandos para adicionar, inserir ou excluir um item sempre ignorar qualquer item dados; as solicitações para localizar uma cadeia de caracteres dentro da caixa de listagem sempre falham. O sistema envia a mensagem WM_DRAWITEM à janela do proprietário quando um item deve ser desenhado. O membro itemID do `DRAWITEMSTRUCT` estrutura passada com a mensagem WM_DRAWITEM Especifica o número da linha do item a ser desenhado. Uma caixa de listagem de dados não não envia uma mensagem WM_DELETEITEM.|
+|LBS_NODATA|Especifica uma caixa de listagem sem dados. Especifique esse estilo quando a contagem de itens na caixa de listagem excederá mil. Uma caixa de listagem sem dados também deve ter o estilo LBS_OWNERDRAWFIXED, mas não deve ter o estilo LBS_SORT ou LBS_HASSTRINGS.<br/><br/> Uma caixa de listagem de dados não é semelhante a uma caixa de lista desenhado pelo proprietário, exceto que ele não contém cadeia de caracteres ou bitmap dados para um item. Comandos para adicionar, inserir ou excluir um item sempre ignorar qualquer item dados; as solicitações para localizar uma cadeia de caracteres dentro da caixa de listagem sempre falham. O sistema envia a mensagem WM_DRAWITEM à janela do proprietário quando um item deve ser desenhado. O membro itemID do `DRAWITEMSTRUCT` estrutura passada com a mensagem WM_DRAWITEM Especifica o número da linha do item a ser desenhado. Uma caixa de listagem de dados não não envia uma mensagem WM_DELETEITEM.|
 |LBS_NOINTEGRALHEIGHT|O tamanho da caixa de listagem é exatamente o tamanho especificado pelo aplicativo quando ele criado a caixa de listagem. Normalmente, o Windows dimensiona uma caixa de listagem para que a caixa de listagem não exibe itens parciais.|
 |LBS_NOREDRAW|Exibição da caixa de lista não é atualizada quando as alterações são feitas. Esse estilo pode ser alterado a qualquer momento, enviando uma mensagem WM_SETREDRAW.|
 |LBS_NOSEL|Especifica que a caixa de listagem contém itens que podem ser exibidos, mas não selecionados.|
@@ -350,7 +350,7 @@ Estilos de caixa de listagem [classe CListBox](../../mfc/reference/clistbox-clas
 |LBS_USETABSTOPS|Permite que uma caixa de listagem reconhecerá e expandirá os caracteres de tabulação ao desenhar suas cadeias de caracteres. As posições de tabulação padrão são 32 unidades de caixa de diálogo. (Uma unidade de caixa de diálogo é uma distância horizontal ou vertical. Uma unidade de caixa de diálogo horizontal é igual a um quarto da unidade de base de largura da caixa de diálogo atual. As unidades base da caixa de diálogo são calculadas com base na altura e largura da fonte atual do sistema. O `GetDialogBaseUnits` função Windows retorna a caixa de diálogo atual unidades base em pixels.) Esse estilo não deve ser usado com LBS_OWNERDRAWFIXED.|
 |LBS_WANTKEYBOARDINPUT|O proprietário da caixa de listagem recebe mensagens WM_VKEYTOITEM ou WM_CHARTOITEM sempre que o usuário pressiona uma tecla enquanto a caixa de listagem tem foco de entrada. Isso permite que um aplicativo para executar um processamento especial no teclado de entrada.|
 
-##<a name="message-box-styles"></a>  Estilos de caixa de mensagem
+## <a name="message-box-styles"></a>  Estilos de caixa de mensagem
 
 Estilos de caixa de mensagem se aplicam a [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) itens. Especificar uma combinação de estilos a *nType* parâmetro de `AfxMessageBox`. Para obter mais informações sobre estilos de caixa de mensagem no Windows, consulte [função MessageBox (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox).
 
@@ -383,6 +383,7 @@ Os estilos de caixa de mensagem a seguir estão disponíveis.
 |MB_ICONINFORMATION|Um ícone que consiste em um "I" em um círculo aparece na caixa de mensagem.|
 |MB_ICONQUESTION|Um ícone de ponto de interrogação é exibido na caixa de mensagem.|
 |MB_ICONSTOP|Um ícone de sinal de interrupção aparece na caixa de mensagem.|
+
 ### <a name="message-box-default-buttons"></a>Botões de padrão de caixa de mensagem
 
 |Estilo|Descrição|

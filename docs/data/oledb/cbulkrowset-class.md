@@ -102,12 +102,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: c62dd4ba7f4f91371378b7c1a6b0295edb3625e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb7f7ee0b4c190889daf661816a9e1c96575a052
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431064"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557083"
 ---
 # <a name="cbulkrowset-class"></a>Classe CBulkRowset
 
@@ -154,7 +154,7 @@ O exemplo a seguir demonstra o uso da `CBulkRowset` classe.
 
 ## <a name="addrefrows"></a> Cbulkrowset:: Addrefrows
 
-Chamadas [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) para incrementar a contagem de referência para todas as linhas recuperadas no momento do conjunto de linhas em massa.
+Chamadas [IRowset::AddRefRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85)) para incrementar a contagem de referência para todas as linhas recuperadas no momento do conjunto de linhas em massa.
 
 ### <a name="syntax"></a>Sintaxe
 
@@ -253,7 +253,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 ### <a name="return-value"></a>Valor de retorno
 
-Ver [IRowset:: GetData](/previous-versions/windows/desktop/ms716988) na *referência do programador do OLE DB*.
+Ver [IRowset:: GetData](https://docs.microsoft.com/previous-versions/windows/desktop/ms716988(v=vs.85)) na *referência do programador do OLE DB*.
 
 ## <a name="movetoratio"></a> Cbulkrowset:: Movetoratio
 
@@ -284,11 +284,11 @@ Um HRESULT padrão.
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-Onde `RowsetSize` é o tamanho do conjunto de linhas, medido em linhas. A precisão dessa fórmula depende do provedor específico. Para obter detalhes, consulte [irowsetscroll:: Getrowsatratio](/previous-versions/windows/desktop/ms709602) na *referência do programador DB OLE*.
+Onde `RowsetSize` é o tamanho do conjunto de linhas, medido em linhas. A precisão dessa fórmula depende do provedor específico. Para obter detalhes, consulte [irowsetscroll:: Getrowsatratio](https://docs.microsoft.com/previous-versions/windows/desktop/ms709602(v=vs.85)) na *referência do programador DB OLE*.
 
 ## <a name="releaserows"></a> Cbulkrowset:: Releaserows
 
-Chamadas [IRowset:: Releaserows](/previous-versions/windows/desktop/ms719771) para diminuir a contagem de referência para todas as linhas recuperadas no momento do conjunto de linhas em massa.
+Chamadas [IRowset:: Releaserows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85)) para diminuir a contagem de referência para todas as linhas recuperadas no momento do conjunto de linhas em massa.
 
 ### <a name="syntax"></a>Sintaxe
 

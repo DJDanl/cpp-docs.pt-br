@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-ms.openlocfilehash: 40294e0d0af3f5181ffe295a2a6c625fa5223f5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c35d7bf16b851fe9a96bdd896babfa450c726374
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463382"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525270"
 ---
 # <a name="mfc-classes"></a>Classes MFC
 
@@ -1012,7 +1012,7 @@ Usado para servidores, servidores de automação e contêineres (aplicativos que
 Usado para um caso especial de caixa de diálogo Editar Links do OLE, que deve ser usado quando você precisa atualizar somente objetos vinculados ou incorporados em um documento.
 
 [Classe COleVariant](../../mfc/reference/colevariant-class.md)<br/>
-Encapsula o [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) tipo de dados.
+Encapsula o [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) tipo de dados.
 
 [Classe CPagerCtrl](../../mfc/reference/cpagerctrl-class.md)<br/>
 O `CPagerCtrl` classe encapsula o controle de paginação do Windows, que pode rolar na exibição de uma janela contida que não se ajusta a janela.

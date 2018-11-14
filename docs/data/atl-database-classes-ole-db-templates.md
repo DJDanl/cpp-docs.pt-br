@@ -6,12 +6,12 @@ helpviewer_keywords:
 - database classes [C++], OLE DB
 - database classes [C++], ATL
 ms.assetid: 219766aa-e18a-405f-9e36-d7a0fdb31b2b
-ms.openlocfilehash: c73b4f318009cf95f58bdd69ec9fc4e0c967604f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4304c350ce6a9303a7542809fa85fb0cd2560031
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610373"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522058"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Classes de banco de dados ATL (modelos de banco de dados OLE)
 
@@ -29,7 +29,7 @@ Além disso, o [atributos de consumidor do OLE DB](../windows/ole-db-consumer-at
 
 Observe que a biblioteca do MFC contém uma classe, [COleDBRecordView](../mfc/reference/coledbrecordview-class.md), que exibe os registros do banco de dados em controles. A exibição é um modo de exibição de formulário conectado diretamente a um `CRowset` do objeto e exibe os campos do `CRowset` objeto nos controles do modelo de caixa de diálogo.
 
-Para obter mais informações, consulte [OLE DB de programação](../data/oledb/ole-db-programming.md) e [guia do programador do DB OLE](/previous-versions/windows/desktop/ms713643).
+Para obter mais informações, consulte [OLE DB de programação](../data/oledb/ole-db-programming.md) e [guia do programador do DB OLE](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming).
 
 ## <a name="see-also"></a>Consulte também
 

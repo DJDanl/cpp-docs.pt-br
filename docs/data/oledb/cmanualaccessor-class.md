@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: d6a910f53d15e637ead31235380b27fe608a792c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3d4a1a6f4680579adafec7c1fcf5f4372f9918e
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470311"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556706"
 ---
 # <a name="cmanualaccessor-class"></a>Classe CManualAccessor
 
@@ -84,7 +84,7 @@ void AddBindEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [DBBINDING](/previous-versions/windows/desktop/ms716845) na *referência do programador do OLE DB*.
+Ver [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) na *referência do programador do OLE DB*.
 
 *nOrdinal*<br/>
 [in] Número da coluna.
@@ -125,7 +125,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [DBBINDING](/previous-versions/windows/desktop/ms716845) na *referência do programador do OLE DB*.
+Ver [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) na *referência do programador do OLE DB*.
 
 *nOrdinal*<br/>
 [in] Número do parâmetro.
@@ -159,8 +159,8 @@ Aloca memória para a coluna de estruturas de associação e inicializa os membr
 ### <a name="syntax"></a>Sintaxe
 
 ```cpp
-HRESULT CreateAccessor(int nBindEntries, 
-  void* pBuffer, 
+HRESULT CreateAccessor(int nBindEntries,
+  void* pBuffer,
    DBLENGTH nBufferSize) throw();
 ```
 
@@ -190,8 +190,8 @@ Aloca memória para o parâmetro de estruturas de associação e inicializa os m
 ### <a name="syntax"></a>Sintaxe
 
 ```cpp
-HRESULT CreateParameterAccessor(int nBindEntries, 
-   void* pBuffer, 
+HRESULT CreateParameterAccessor(int nBindEntries,
+   void* pBuffer,
    DBLENGTH nBufferSize) throw();
 ```
 

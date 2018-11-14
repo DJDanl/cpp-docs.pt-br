@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: a8b204c2bf48802b8efcfe5ca487d62876942c29
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1397f3b3513fc9a3e93a69841a93b40c16e490cf
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540330"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333222"
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
@@ -117,12 +117,12 @@ A cadeia de caracteres *modo* Especifica o tipo de acesso solicitado para o arqu
 
 |*modo*|Acesso|
 |-|-|
-**"r"**|Abre para leitura. Se o arquivo não existe ou não for encontrado, o **fopen** chamar falhar.
-**"w"**|Abre um arquivo vazio para gravação. Se o arquivo determinado existir, seus conteúdos são destruídos.
-**"a"**|Abre para gravação no fim do arquivo (conexão) sem remover o marcador de EOF (Fim de arquivo) antes de novos dados serem gravados no arquivo. Cria o arquivo se ele não existir.
-**"r+"**|Abre para leitura e gravação. O arquivo deve existir.
-**"w+"**|Abre um arquivo vazio para leitura e gravação. Se o arquivo existir, seus conteúdos são destruídos.
-**"a+"**|Abre para leitura e conexão. A operação de conexão inclui a remoção do marcador de EOF antes de os novos dados serem gravados no arquivo. O marcador de EOF não é restaurado após a gravação ser concluída. Cria o arquivo se ele não existir.
+| **"r"** | Abre para leitura. Se o arquivo não existe ou não for encontrado, o **fopen** chamar falhar. |
+| **"w"** | Abre um arquivo vazio para gravação. Se o arquivo determinado existir, seus conteúdos são destruídos. |
+| **"a"** | Abre para gravação no fim do arquivo (conexão) sem remover o marcador de EOF (Fim de arquivo) antes de novos dados serem gravados no arquivo. Cria o arquivo se ele não existir. |
+| **"r+"** | Abre para leitura e gravação. O arquivo deve existir. |
+| **"w+"** | Abre um arquivo vazio para leitura e gravação. Se o arquivo existir, seus conteúdos são destruídos. |
+| **"a+"** | Abre para leitura e conexão. A operação de conexão inclui a remoção do marcador de EOF antes de os novos dados serem gravados no arquivo. O marcador de EOF não é restaurado após a gravação ser concluída. Cria o arquivo se ele não existir. |
 
 Quando um arquivo é aberto usando o **"a"** tipo de acesso ou o **"+"** acessar o tipo, todas as operações de gravação ocorrem no final do arquivo. O ponteiro do arquivo pode ser reposicionado usando [fseek](fseek-fseeki64.md) ou [rewind](rewind.md), mas é sempre movido de volta para o final do arquivo antes de qualquer gravação a operação é executada. Portanto, dados existentes não podem ser substituídos.
 
@@ -134,8 +134,8 @@ Além dos valores anteriores, os caracteres a seguir podem ser anexados à *modo
 
 |*modo* modificador|Modo de conversão|
 |-|-|
-**t**|Abra no modo de texto (convertido).
-**b**|Abra em um modo binário (não convertido); as conversões envolvendo caracteres de retorno de carro e avanço de linha são suprimidas.
+| **t** | Abra no modo de texto (convertido). |
+| **b** | Abra em um modo binário (não convertido); as conversões envolvendo caracteres de retorno de carro e avanço de linha são suprimidas. |
 
 No modo de texto, CTRL + Z é interpretado como um caractere EOF na entrada. Em arquivos que são abertos para leitura/gravação usando **"+"**, **fopen** verifica se há um CTRL + Z no final do arquivo e o remove, se for possível. Isso é feito porque usar [fseek](fseek-fseeki64.md) e **ftell** para movimentação dentro de um arquivo que termina com CTRL + Z pode fazer [fseek](fseek-fseeki64.md) se comportar incorretamente perto do fim do arquivo.
 
@@ -149,14 +149,14 @@ As opções a seguir podem ser anexadas à *modo* para especificar comportamento
 
 |*modo* modificador|Comportamento|
 |-|-|
-**c**|Habilitar o sinalizador de confirmação associado *filename* para que o conteúdo do buffer de arquivo sejam gravado diretamente no disco, se **fflush** ou **flushall** é chamado.
-**n**|Redefinir o sinalizador de confirmação associado *filename* para "no-commit". Esse é o padrão. Também substitui o sinalizador de confirmação global se você vincular o programa a COMMODE.OBJ. O padrão do sinalizador de confirmação global é "no-commit", a menos que você vincule explicitamente o programa a COMMODE.OBJ (consulte [Opções de vinculação](../../c-runtime-library/link-options.md)).
-**N**|Especifica que o arquivo não é herdado por processos filhos.
-**S**|Especifica que o cache é otimizado para acesso sequencial do disco, mas não se restringe a isso.
-**R**|Especifica que o cache é otimizado para acesso aleatório do disco, mas não se restringe a isso.
-**T**|Especifica um arquivo como temporário. Se possível, ele não é liberado no disco.
-**D**|Especifica um arquivo como temporário. É excluído quando o último ponteiro de arquivo é fechado.
-**CCS =**_codificação_|Especifica o caractere codificado definido para usar (um dos **UTF-8**, **UTF-16LE**, ou **UNICODE**) para esse arquivo. Deixe não especificado se desejar codificação ANSI.
+| **c** | Habilitar o sinalizador de confirmação associado *filename* para que o conteúdo do buffer de arquivo sejam gravado diretamente no disco, se **fflush** ou **flushall** é chamado. |
+| **n** | Redefinir o sinalizador de confirmação associado *filename* para "no-commit". Esse é o padrão. Também substitui o sinalizador de confirmação global se você vincular o programa a COMMODE.OBJ. O padrão do sinalizador de confirmação global é "no-commit", a menos que você vincule explicitamente o programa a COMMODE.OBJ (consulte [Opções de vinculação](../../c-runtime-library/link-options.md)). |
+| **N** | Especifica que o arquivo não é herdado por processos filhos. |
+| **S** | Especifica que o cache é otimizado para acesso sequencial do disco, mas não se restringe a isso. |
+| **R** | Especifica que o cache é otimizado para acesso aleatório do disco, mas não se restringe a isso. |
+| **T** | Especifica um arquivo como temporário. Se possível, ele não é liberado no disco. |
+| **D** | Especifica um arquivo como temporário. É excluído quando o último ponteiro de arquivo é fechado. |
+| **CCS =**_codificação_ | Especifica o caractere codificado definido para usar (um dos **UTF-8**, **UTF-16LE**, ou **UNICODE**) para esse arquivo. Deixe não especificado se desejar codificação ANSI. |
 
 Caracteres válidos para o *modo* cadeia de caracteres que é usada na **fopen** e **fdopen** correspondem às *oflag* argumentos que são usados no [Open](open-wopen.md) e [sopen](sopen-wsopen.md), da seguinte maneira.
 

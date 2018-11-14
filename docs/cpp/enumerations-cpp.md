@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: 2258683fae8d14051d798cd18a3c3d74f8fdac6d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ed135c0fc32f9218783c964ed4ce79a9b3ec067
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557970"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332407"
 ---
 # <a name="enumerations-c"></a>Enumerações (C++)
 
@@ -29,7 +29,7 @@ Uma enumeração é um tipo definido pelo usuário que consiste em um conjunto d
 ```
 // unscoped enum:
 enum [identifier] [: type]
-{enum-list}; 
+{enum-list};
 
 // scoped enum:
 enum [class|struct]
@@ -124,19 +124,20 @@ O uso de conversões implícitas dessa maneira pode levar a efeitos colaterais n
 ```cpp
 namespace ScopedEnumConversions
 {
-    enum class Suit { Diamonds, Hearts, Clubs, Spades };
+    enum class Suit { Diamonds, Hearts, Clubs, Spades };
 
-    void AttemptConversions()
+    void AttemptConversions()
     {
-        Suit hand; 
-        hand = Clubs; // error C2065: 'Clubs' : undeclared identifier
-        hand = Suit::Clubs; //Correct.
-        int account_num = 135692;
-        hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'
-        hand = static_cast<Suit>(account_num); // OK, but probably a bug!!!
+        Suit hand;
+        hand = Clubs; // error C2065: 'Clubs' : undeclared identifier
+        hand = Suit::Clubs; //Correct.
+        int account_num = 135692;
+        hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'
+        hand = static_cast<Suit>(account_num); // OK, but probably a bug!!!
 
-        account_num = Suit::Hearts; // error C2440: '=' : cannot convert from 'Suit' to 'int'
-        account_num = static_cast<int>(Suit::Hearts); // OK
+        account_num = Suit::Hearts; // error C2440: '=' : cannot convert from 'Suit' to 'int'
+        account_num = static_cast<int>(Suit::Hearts); // OK
+    }
 }
 ```
 

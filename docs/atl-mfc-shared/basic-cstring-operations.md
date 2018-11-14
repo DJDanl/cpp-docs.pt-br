@@ -9,12 +9,12 @@ helpviewer_keywords:
 - string comparison, CString operations
 - characters, accessing in CStrings
 ms.assetid: 41db66b2-9427-4bb3-845a-9b6869159a6c
-ms.openlocfilehash: d1f16e470123bd52cb2656541aafaabdfc16af8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b387cbb8671dda0aca63da9b57dd694e478b62a9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434069"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523124"
 ---
 # <a name="basic-cstring-operations"></a>Operações CString básicas
 
@@ -91,11 +91,10 @@ Para obter informações sobre como converter objetos CString para outros tipos 
 
 Para usar um CString com `wcout` é necessário converter explicitamente o objeto a ser um `const wchar_t*` conforme mostrado no exemplo a seguir:
 
-```
+```cpp
 CString cs("meow");
 
-    wcout <<(const wchar_t*) cs <<endl;
-
+wcout << (const wchar_t*) cs << endl;
 ```
 
 Sem a conversão `cs` é tratado como uma `void*` e `wcout` imprime o endereço do objeto. Esse comportamento é causado pelas interações sutis entre o modelo dedução e sobrecarga de resolução do argumento que são eles próprios correto e compatível com o padrão C++.

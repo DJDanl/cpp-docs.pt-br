@@ -30,12 +30,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 78e7bac10bb496e2ff1c270916fc732dbe71d8db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f870cf6c079786c49846bcf7c3010998ccdbe00
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573154"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556449"
 ---
 # <a name="caccessorrowset-class"></a>Classe CAccessorRowset
 
@@ -71,7 +71,7 @@ Uma classe de conjunto de linhas.
 |[CAccessorRowset](#caccessorrowset)|Construtor.|
 |[Fechar](#close)|Fecha o conjunto de linhas e qualquer acessadores.|
 |[FreeRecordMemory](#freerecordmemory)|Libera quaisquer colunas no registro atual que precise ser liberada.|
-|[GetColumnInfo](#getcolumninfo)|Implementa [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704).|
+|[GetColumnInfo](#getcolumninfo)|Implementa [icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)).|
 
 ## <a name="remarks"></a>Comentários
 
@@ -142,7 +142,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704) na *referência do programador do OLE DB*.
+Ver [icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) na *referência do programador do OLE DB*.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -152,7 +152,7 @@ Um HRESULT padrão.
 
 O usuário deve liberar o buffer de cadeia de caracteres e informações de coluna retornada. Use a segunda versão desse método, quando você usa [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) e precisar substituir as associações.
 
-Para obter mais informações, consulte [icolumnsinfo:: Getcolumninfo](/previous-versions/windows/desktop/ms722704) na *referência do programador DB OLE*.
+Para obter mais informações, consulte [icolumnsinfo:: Getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85)) na *referência do programador DB OLE*.
 
 ## <a name="see-also"></a>Consulte também
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - walkthroughs [Concurrency Runtime]
 - Concurrency Runtime, walkthroughs
 ms.assetid: 7374c5e9-54eb-44bf-9ed9-5e190cfd290b
-ms.openlocfilehash: f26ff3ba35539b24e4c670935212069a34b942a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2307581dc1cda3ed75ee1cea9fc4ff504a0a98b3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511079"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519484"
 ---
 # <a name="concurrency-runtime-walkthroughs"></a>Instruções passo a passo do Tempo de Execução de Simultaneidade
 
@@ -19,7 +19,7 @@ Os tópicos com base no cenário nesta seção mostram como usar muitos dos recu
 ## <a name="in-this-section"></a>Nesta seção
 
 [Instruções passo a passo: conexão usando tarefas e solicitações HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
-Mostra como usar o [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) e [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) interfaces junto com tarefas enviar solicitações HTTP GET e POST para um serviço web em um aplicativo da plataforma Universal do Windows (UWP).
+Mostra como usar o [IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) e [IXMLHTTPRequest2Callback](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) interfaces junto com tarefas enviar solicitações HTTP GET e POST para um serviço web em um aplicativo da plataforma Universal do Windows (UWP).
 
 [Instruções passo a passo: criando um aplicativo com base no agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
 Descreve como criar um aplicativo básico com base em agente.

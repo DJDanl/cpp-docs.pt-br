@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rowsets [C++], multiple accessors
 - accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
-ms.openlocfilehash: 2f88213fce0c5aa1d91f94d7fbeb26eab6432207
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ce150375b98c697c32767001911eade53ed2f8c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483285"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522019"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Usando vários acessadores em um conjunto de linhas
 
@@ -20,19 +20,19 @@ Há três cenários básicos em que você precisa usar vários acessadores:
 
 - **Vários conjuntos de linhas de leitura/gravação.** Nesse cenário, você tem uma tabela com uma chave primária. Você deseja ser capaz de ler todas as colunas na linha, incluindo a chave primária. Você também deseja ser capaz de gravar dados em todas as colunas, exceto a chave primária (porque você não pode gravar a coluna de chave primária). Nesse caso, você configurar dois acessadores:
 
-   - Acessador 0 contém todas as colunas.
+  - Acessador 0 contém todas as colunas.
 
-   - Acessador 1 contém todas as colunas exceto a chave primária.
+  - Acessador 1 contém todas as colunas exceto a chave primária.
 
 - **Desempenho.** Nesse cenário, uma ou mais colunas têm uma grande quantidade de dados, por exemplo, elementos gráficos, som, arquivos ou vídeo. Sempre que mudar para uma linha, você provavelmente não deseja recuperar a coluna com o arquivo de dados grandes, porque fazer então retardaria o desempenho do seu aplicativo.
 
-   Você pode definir acessadores separados no qual o acessador primeiro contém todas as colunas, exceto o com dados grandes e recupera dados dessas colunas automaticamente. o acessador primeiro é o acessador automática. O acessador segundo recupera somente a coluna que contém dados grandes, mas ela não recupera os dados desta coluna automaticamente. Você pode ter outros métodos de atualização ou buscar os dados grandes sob demanda.
+  Você pode definir acessadores separados no qual o acessador primeiro contém todas as colunas, exceto o com dados grandes e recupera dados dessas colunas automaticamente. o acessador primeiro é o acessador automática. O acessador segundo recupera somente a coluna que contém dados grandes, mas ela não recupera os dados desta coluna automaticamente. Você pode ter outros métodos de atualização ou buscar os dados grandes sob demanda.
 
-   - Acessador 0 é um acessador automática; ele recupera todas as colunas, exceto o com dados grandes.
+  - Acessador 0 é um acessador automática; ele recupera todas as colunas, exceto o com dados grandes.
 
-   - Acessador 1 não é um acessador automática; ele recupera a coluna com dados grandes.
+  - Acessador 1 não é um acessador automática; ele recupera a coluna com dados grandes.
 
-   Use o argumento de automática para especificar se o acessador é um acessador de automático.
+  Use o argumento de automática para especificar se o acessador é um acessador de automático.
 
 - **Várias colunas de ISequentialStream.** Nesse cenário, que você espera de mais de uma coluna `ISequentialStream` dados. No entanto, cada acessador é limitada a uma `ISequentialStream` fluxo de dados. Para resolver esse problema, configurar vários acessadores, cada um tendo uma `ISequentialStream` ponteiro.
 

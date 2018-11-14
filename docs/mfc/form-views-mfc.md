@@ -8,12 +8,12 @@ helpviewer_keywords:
 - forms-based applications [MFC]
 - forms [MFC], adding to applications
 ms.assetid: efbe73c1-4ca4-4613-aac2-30d916e92c0e
-ms.openlocfilehash: f092b9eca0fe0b4af40a5e1f6e77d3a0f1af74b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5bb61aaad767b1322c12f57ec16ae59cb75148c
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655618"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331536"
 ---
 # <a name="form-views-mfc"></a>Exibições de formulário (MFC)
 
@@ -38,7 +38,7 @@ Quando você insere um novo formulário em seu aplicativo, o Visual C++ faz o se
 
      **WS_VISIBLE**= Off
 
-     **WS_CAPTION =** desativado
+     **WS_CAPTION**= Off
 
 Para aplicativos com base na arquitetura de documento/exibição, o **novo formulário** (botão direito do mouse na exibição de classe) do comando também:
 

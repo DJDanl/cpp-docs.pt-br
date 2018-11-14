@@ -94,12 +94,12 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-ms.openlocfilehash: d15e38c63e335dbd574ad2d1c1ee23e0d5a70a30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 581652ea39d0729079666dc675b7214b4b3a4da3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565718"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524671"
 ---
 # <a name="basicstreambuf-class"></a>Classe basic_streambuf
 
@@ -457,7 +457,7 @@ Se a função não conseguir obter sucesso, ela retornará **traits_type::eof** 
 
 ### <a name="remarks"></a>Comentários
 
-Se _ *Meta* não for equivalente a **traits_type::eof**, a função membro virtual protegida buscará inserir o elemento **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) no fluxo de saída. Isso pode ser feito de várias maneiras:
+Se  *\_Meta* comparar como igual a **traits_type:: EOF**, a função membro virtual protegida buscará inserir o elemento **traits_type::** [ to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*) no fluxo de saída. Isso pode ser feito de várias maneiras:
 
 - Se `write position` estiver disponível, ela poderá armazenar o elemento na posição de gravação e incrementar o próximo ponteiro para o buffer de saída.
 
@@ -492,7 +492,7 @@ Se a função não conseguir obter sucesso, ela retornará **traits_type::eof** 
 
 ### <a name="remarks"></a>Comentários
 
-Se _ *Meta* for comparável a **traits_type::eof**, o elemento a ser recuado será efetivamente aquele que já estava no fluxo antes do elemento atual. Caso contrário, esse elemento é substituído por **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). A função pode colocar um elemento de volta de várias maneiras:
+Se  *\_Meta* comparado como igual a **traits_type:: EOF**, elemento a ser recuado será efetivamente aquele que já está no fluxo antes do elemento atual. Caso contrário, esse elemento é substituído por **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*). A função pode colocar um elemento de volta de várias maneiras:
 
 - Se uma posição putback estiver disponível, ela poderá armazenar o elemento na posição putback e diminuir o ponteiro seguinte para o buffer de entrada.
 
@@ -689,15 +689,12 @@ int main( )
 }
 ```
 
-```Output
-
+```Input
 3
-
 ```
 
 ```Output
-
-      33
+33
 51
 ```
 
@@ -967,14 +964,11 @@ int main( )
 }
 ```
 
-```Output
-
+```Input
 aa
-
 ```
 
 ```Output
-
 aa97
 ```
 

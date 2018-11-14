@@ -22,21 +22,21 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: c148bdb0a897e19bc3f3aeb7ed40e905073336b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb44af102f08e05edddc2fb692d1e30dd7e31717
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428584"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556667"
 ---
 # <a name="cenumerator-class"></a>Classe CEnumerator
 
-Usa um objeto de enumerador OLE DB que expõe o [ISourcesRowset](/previous-versions/windows/desktop/ms715969) interface para retornar um conjunto de linhas que descrevem todas as fontes de dados e enumeradores.
+Usa um objeto de enumerador OLE DB que expõe o [ISourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms715969(v=vs.85)) interface para retornar um conjunto de linhas que descrevem todas as fontes de dados e enumeradores.
 
 ## <a name="syntax"></a>Sintaxe
 
 ```cpp
-class CEnumerator : 
+class CEnumerator :
    public CAccessorRowset< CAccessor <CEnumeratorAccessor >>
 ```
 
@@ -79,7 +79,7 @@ bool Find(TCHAR* szSearchName) throw();
 
 ### <a name="remarks"></a>Comentários
 
-Esse nome é mapeado para o `SOURCES_NAME` membro a [ISourcesRowset](/previous-versions/windows/desktop/ms715969) interface.
+Esse nome é mapeado para o `SOURCES_NAME` membro a [ISourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms715969(v=vs.85)) interface.
 
 ## <a name="getmoniker"></a> Cenumerator:: Getmoniker
 
@@ -90,7 +90,7 @@ Analisa o nome de exibição para extrair o componente da cadeia de caracteres q
 ```cpp
 HRESULT GetMoniker(LPMONIKER* ppMoniker) const throw();
 
-HRESULT GetMoniker(LPMONIKER* ppMoniker, 
+HRESULT GetMoniker(LPMONIKER* ppMoniker,
    LPCTSTR lpszDisplayName) const throw();
 ```
 
@@ -108,7 +108,7 @@ Um HRESULT padrão.
 
 ## <a name="open"></a> Cenumerator:: Open
 
-Associa o identificador de origem para o enumerador, se for especificado, então recupera o conjunto de linhas para o enumerador chamando [ISourcesRowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200).
+Associa o identificador de origem para o enumerador, se for especificado, então recupera o conjunto de linhas para o enumerador chamando [ISourcesRowset:: Getsourcesrowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)).
 
 ### <a name="syntax"></a>Sintaxe
 

@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 28b2f929e9f8695904bcd3f02dd2d315ab3ca349
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd8fefd3424ab5ec422adb352972ba846e45139d
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483395"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525490"
 ---
 # <a name="cstringt-class"></a>Classe CStringT
 
@@ -94,13 +94,10 @@ Essa classe representa um `CStringT` objeto.
 ## <a name="syntax"></a>Sintaxe
 
 ```
-
 template<typename BaseType, class StringTraits>
 class CStringT :
-public CSimpleStringT<BaseType,
-                      _CSTRING_IMPL_::_MFCDLLTraitsCheck<BaseType, StringTraits>
-                      ::c_bIsMFCDLLTraits>
-
+    public CSimpleStringT<BaseType,
+        _CSTRING_IMPL_::_MFCDLLTraitsCheck<BaseType, StringTraits>::c_bIsMFCDLLTraits>
 ```
 
 #### <a name="parameters"></a>Parâmetros
@@ -117,19 +114,19 @@ O tipo de caractere da classe string. Pode ser uma das seguintes opções:
 *StringTraits*<br/>
 Determina se a classe de cadeia de caracteres precisa de suporte de biblioteca de tempo de execução C (CRT) e onde os recursos de cadeia de caracteres estão localizados. Pode ser uma das seguintes opções:
 
-- **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitATL < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; **char** &#124;  **TCHAR >>**
 
    A classe requer suporte de CRT e procura cadeias de caracteres de recurso no módulo especificado por `m_hInstResource` (um membro da classe de módulo do aplicativo).
 
-- **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitATL < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; **char** &#124;  **TCHAR >>**
 
    A classe não requer suporte de CRT e procura cadeias de caracteres de recurso no módulo especificado por `m_hInstResource` (um membro da classe de módulo do aplicativo).
 
-- **StrTraitMFC < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitMFC < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; **char** &#124;  **TCHAR >>**
 
    A classe requer suporte de CRT e procura cadeias de caracteres de recurso usando o algoritmo de pesquisa padrão do MFC.
 
-- **StrTraitMFC < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitMFC < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; **char** &#124;  **TCHAR >>**
 
    A classe não requer suporte de CRT e procura cadeias de caracteres de recurso usando o algoritmo de pesquisa padrão do MFC.
 
@@ -295,9 +292,9 @@ A cadeia de caracteres recém-alocada.
 
 Em programas MFC, uma [classe CMemoryException](../../mfc/reference/cmemoryexception-class.md) é lançada se houver memória insuficiente. Em programas ATL, uma [CAtlException](../../atl/reference/catlexception-class.md) é gerada. Essa função normalmente é usada para retornar cadeias de caracteres para a automação.
 
-Normalmente, se essa cadeia de caracteres for passada para uma função COM como [in] parâmetro, em seguida, isso requer que o chamador liberar a cadeia de caracteres. Isso pode ser feito por meio [SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring), conforme descrito no SDK do Windows. Para obter mais informações, consulte [alocando e liberando memória para um BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).
+Normalmente, se essa cadeia de caracteres for passada para uma função COM como [in] parâmetro, em seguida, isso requer que o chamador liberar a cadeia de caracteres. Isso pode ser feito por meio [SysFreeString](/windows/desktop/api/oleauto/nf-oleauto-sysfreestring), conforme descrito no SDK do Windows. Para obter mais informações, consulte [alocando e liberando memória para um BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).
 
-Para obter mais informações sobre as funções de alocação OLE no Windows, consulte [SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) no SDK do Windows.
+Para obter mais informações sobre as funções de alocação OLE no Windows, consulte [SysAllocString](/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) no SDK do Windows.
 
 ### <a name="example"></a>Exemplo
 

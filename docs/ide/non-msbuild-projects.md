@@ -4,12 +4,12 @@ ms.date: 06/01/2018
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 396b1fe9f879e7adcdfe9a69fee5c9e1916ff545
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6354cc656d501d1611219378f72831cc2fa94389
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542006"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523988"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Projetos Abrir Pasta no Visual C++
 
@@ -33,7 +33,8 @@ Use qualquer sistema de build no Visual C++ e ainda aproveite as vantagens do ID
 ## <a name="configuring-open-folder-projects"></a>Configurando projetos Abrir Pasta
 
 Personalize um projeto Abrir Pasta por meio de três arquivos JSON:
-|||
+
+| | |
 |-|-|
 |CppProperties.json|Especifica informações de configuração personalizada para navegação. Crie esse arquivo, se necessário, na pasta raiz do projeto.|
 |launch.vs.json|Especifica argumentos de linha de comando. Acessados por meio do item de menu de contexto do **Gerenciador de Soluções**, **Configurações de depuração e de inicialização**.|
@@ -58,6 +59,7 @@ O comportamento do IntelliSense e da navegação depende parcialmente da configu
   ]
 }
 ```
+
 Uma configuração pode ter uma das seguintes propriedades:
 
 |||
@@ -135,6 +137,7 @@ Defina variáveis de ambiente personalizadas em CppProperties.json globalmente o
   ]
 }
 ```
+
 Defina também uma propriedade **environments** dentro de uma configuração, de modo que ela só se aplique a essa configuração e substitua todas as variáveis globais com o mesmo nome. No seguinte exemplo, a configuração x64 define uma variável **INCLUDE** local que substitui o valor global:
 
 ```json
@@ -186,6 +189,7 @@ Todas as variáveis de ambiente padrão e personalizadas também estão disponí
 #### <a name="macros"></a>Macros
 
 Você tem acesso às seguintes macros internas dentro de CppProperties.json:
+
 |||
 |-|-|
 |`${workspaceRoot}`| o caminho completo para a pasta de workspace|
@@ -258,11 +262,13 @@ Isso cria (ou abre) o arquivo `tasks.vs.json` na pasta .vs criada pelo Visual St
   ]
 }
 ```
+
 Depois de salvar tasks.vs.json, clique com o botão direito do mouse em qualquer arquivo .cpp na pasta, escolha **Ecoar nome de arquivo** no menu de contexto e veja o nome de arquivo exibido na janela de Saída.
 
 #### <a name="appliesto"></a>appliesTo
 
 Você pode criar tarefas para qualquer arquivo ou pasta especificando seu nome no campo `appliesTo`, por exemplo `"appliesTo" : "hello.cpp"`. As máscaras de arquivo a seguir podem ser usadas como valores:
+
 |||
 |-|-|
 |`"*"`| a tarefa está disponível para todos os arquivos e pastas no workspace|
@@ -340,4 +346,3 @@ Quando você salva esse arquivo, a nova configuração é exibida na lista suspe
 ## <a name="see-also"></a>Consulte também
 
 [IDE e ferramentas para desenvolvimento no Visual C++](ide-and-tools-for-visual-cpp-development.md)
-

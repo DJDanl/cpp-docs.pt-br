@@ -1,15 +1,15 @@
 ---
 title: Opções de compilador listadas por categoria
-ms.date: 08/20/2018
+ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 20dab3e4ec1d0a409d591e2b470e127e20156a8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa93158e518950efa9d1f2f8092aeabbc3c7724c
+ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532945"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598815"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opções do compilador listadas por categoria
 
@@ -46,7 +46,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para obter 
 |[/Gh](gh-enable-penter-hook-function.md)|Chama a função de gancho `_penter`.|
 |[/GH](gh-enable-pexit-hook-function.md)|Chama a função de gancho `_pexit`.|
 |[/GL](gl-whole-program-optimization.md)|Habilita a otimização de todo o programa.|
-|[/Gm](gm-enable-minimal-rebuild.md)|Habilita recompilação mínima.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Preterido. Habilita recompilação mínima.|
 |[/GR](gr-enable-run-time-type-information.md)|Habilita RTTI (informações de tipo de tempo de execução).|
 |[/Gr](gd-gr-gv-gz-calling-convention.md)|Usa a convenção de chamada `__fastcall`. (apenas x86)|
 |[/GS](gs-buffer-security-check.md)|Verifica a segurança do buffer.|
@@ -202,6 +202,7 @@ Este artigo contém uma lista categórica de opções do compilador. Para obter 
 |[/clr:noAssembly](clr-common-language-runtime-compilation.md)|Preterido. Use [/LN (Criar módulo de MSIL)](ln-create-msil-module.md) em vez disso.|
 |[/Fr](fr-fr-create-dot-sbr-file.md)|Preterido. Cria um arquivo de informações de procura sem variáveis locais.|
 |[/Ge](ge-enable-stack-probes.md)|Preterido. Ativa investigações de pilha. Em por padrão.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Preterido. Habilita recompilação mínima.|
 |[/GX](gx-enable-exception-handling.md)|Preterido. Habilita o tratamento síncrono de exceções. Use [/EH](eh-exception-handling-model.md) em vez disso.|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Preterido. Habilita as verificações rápidas. Use [/rtc1](rtc-run-time-error-checks.md) em vez disso.|
 |[/H](h-restrict-length-of-external-names.md)|Preterido. Restringe o tamanho de nomes externos (públicos).|

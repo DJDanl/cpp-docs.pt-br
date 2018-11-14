@@ -6,12 +6,12 @@ helpviewer_keywords:
 - architecture [C++], OLE DB Provider
 - OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-ms.openlocfilehash: 3f12eb7c7da449715116e88c9f78ee2e32fc327f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6256328caa11d188f3a50445f62df096b6f6acb3
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596164"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557031"
 ---
 # <a name="ole-db-provider-template-architecture"></a>Arquitetura de modelo do provedor de banco de dados OLE
 
@@ -39,7 +39,7 @@ Os modelos de provedor do OLE DB oferecem implementações pré-empacotados para
 
 Os modelos de provedor do OLE DB não implementam os objetos de armazenamento e de linha.
 
-A tabela a seguir lista as interfaces obrigatórias e opcionais para os objetos listados acima, acordo com o [OLE DB 2.6 documentação do SDK](/previous-versions/windows/desktop/ms722784).
+A tabela a seguir lista as interfaces obrigatórias e opcionais para os objetos listados acima, acordo com o [OLE DB 2.6 documentação do SDK](https://docs.microsoft.com/previous-versions/windows/desktop/ms722784(v=vs.85)).
 
 |Componente|Interface|Comentário|
 |---------------|---------------|-------------|
@@ -58,4 +58,4 @@ Para mais informações, consulte os seguintes tópicos:
 ## <a name="see-also"></a>Consulte também
 
 [Modelos de provedor do OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Interfaces OLE DB](/previous-versions/windows/desktop/ms709709)<br/>
+[Interfaces OLE DB](https://docs.microsoft.com/previous-versions/windows/desktop/ms709709(v=vs.85))<br/>

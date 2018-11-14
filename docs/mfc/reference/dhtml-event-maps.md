@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-ms.openlocfilehash: 329b4176ad4d24651a41b5321c26318cf2af30e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75ceaf3d0532a557f5227e64edece2155aacb72f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547193"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519862"
 ---
 # <a name="dhtml-event-maps"></a>Mapas de evento DHTML
 
@@ -441,7 +441,6 @@ Manipula (no nível do documento) a `ondatasetcomplete` evento originada pelo el
 
 ```
 DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -514,7 +513,6 @@ Manipula (no nível do documento) a `onerrorupdate` evento originada pelo elemen
 
 ```
 DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -540,7 +538,6 @@ Manipula (no nível do documento) a `onfilterchange` evento originada pelo eleme
 ```
 
 DHTML_EVENT_ONFILTERCHANGE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -566,7 +563,6 @@ Manipula (no nível de elemento) o `onfocus` eventos. Este é um evento nonbubbl
 ```
 
 DHTML_EVENT_ONFOCUS(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -592,7 +588,6 @@ Manipula (no nível do documento) a `onhelp` evento originada pelo elemento HTML
 ```
 
 DHTML_EVENT_ONHELP(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -618,7 +613,6 @@ Manipula (no nível do documento) a `onkeydown` evento originada pelo elemento H
 ```
 
 DHTML_EVENT_ONKEYDOWN(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -644,7 +638,6 @@ Manipula (no nível do documento) a `onkeypress` evento originada pelo elemento 
 ```
 
 DHTML_EVENT_ONKEYPRESS(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -670,7 +663,6 @@ Manipula (no nível do documento) a `onkeyup` evento originada pelo elemento HTM
 ```
 
 DHTML_EVENT_ONKEYUP(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -696,7 +688,6 @@ Manipula (no nível do documento) a `onmousedown` evento originada pelo elemento
 ```
 
 DHTML_EVENT_ONMOUSEDOWN(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -722,7 +713,6 @@ Manipula (no nível do documento) a `onmousemove` evento originada pelo elemento
 ```
 
 DHTML_EVENT_ONMOUSEMOVE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -748,7 +738,6 @@ Manipula (no nível do documento) a `onmouseout` evento originada pelo elemento 
 ```
 
 DHTML_EVENT_ONMOUSEOUT(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -774,7 +763,6 @@ Manipula (no nível do documento) a `onmouseover` evento originada pelo elemento
 ```
 
 DHTML_EVENT_ONMOUSEOVER(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -800,7 +788,6 @@ Manipula (no nível do documento) a `onmouseup` evento originada pelo elemento H
 ```
 
 DHTML_EVENT_ONMOUSEUP(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -826,7 +813,6 @@ Manipula (no nível de elemento) o `onresize` eventos. Este é um evento nonbubb
 ```
 
 DHTML_EVENT_ONRESIZE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -852,7 +838,6 @@ Manipula (no nível do documento) a `onrowenter` evento originada pelo elemento 
 ```
 
 DHTML_EVENT_ONROWENTER(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -878,7 +863,6 @@ Manipula (no nível do documento) a `onrowexit` evento originada pelo elemento H
 ```
 
 DHTML_EVENT_ONROWEXIT(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -904,7 +888,6 @@ Manipula (no nível do documento) a `onselectstart` evento originada pelo elemen
 ```
 
 DHTML_EVENT_ONSELECTSTART(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -972,7 +955,6 @@ Inicia a definição de um mapa de evento DHTML e a URL em uma caixa de diálogo
 
 ```
 BEGIN_DHTML_URL_EVENT_MAP()
-
 ```
 
 ### <a name="remarks"></a>Comentários
@@ -993,7 +975,6 @@ Inicia a definição de um mapa de evento DHTML inseridos em uma caixa de diálo
 
 ```
 BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -1026,7 +1007,6 @@ Inicia a definição de um mapa de entrada de evento de URL em uma caixa de diá
 
 ```
 BEGIN_URL_ENTRIES(className)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -1052,7 +1032,6 @@ Declara um mapa de evento DHTML e a URL em uma definição de classe.
 
 ```
 DECLARE_DHTML_URL_EVENT_MAP()
-
 ```
 
 ### <a name="remarks"></a>Comentários
@@ -1071,7 +1050,6 @@ Marca o final de um mapa de evento DHTML e URL.
 
 ```
 END_DHTML_URL_EVENT_MAP(className)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -1093,7 +1071,6 @@ Marca o fim de um mapa de evento DHTML inserido.
 
 ```
 END_EMBED_DHTML_EVENT_MAP()
-
 ```
 
 ### <a name="example"></a>Exemplo
@@ -1110,7 +1087,6 @@ Marca o final de um mapa de entrada de evento de URL.
 
 ```
 END_URL_ENTRIES()
-
 ```
 
 ### <a name="example"></a>Exemplo

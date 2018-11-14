@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 66edab2950a752e00767e10e7b8c36a3a01240ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91d85f62917ff722a61ecbc87c58379a00016b83
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460873"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523150"
 ---
 # <a name="constructors-c"></a>Construtores (C++)
 
@@ -127,7 +127,6 @@ Você pode impedir que o compilador gerar um construtor padrão implícito, defi
 ```cpp
     // Default constructor
     Box() = delete;
-
 ```
 
 Um construtor padrão gerado pelo compilador será definido como excluído se nenhum membro de classe não pode ser construído por padrão. Por exemplo, todos os membros de tipo de classe e seus membros de tipo de classe, devem ter um construtor padrão e os destruidores são acessíveis. Todos os membros de dados de referência de tipo, bem como **const** membros devem ter um inicializador de membro padrão.

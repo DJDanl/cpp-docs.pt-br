@@ -2,12 +2,12 @@
 title: Portando para a Plataforma Universal do Windows (C++)
 ms.date: 11/04/2016
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 83af480dc2a2fdd5ccd15de8a9f62aacebcf4558
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06543ce27fe4fed839a6f6b885259e8cc1b180c6
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640408"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518535"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Portando para a Plataforma Universal do Windows (C++)
 
@@ -33,29 +33,29 @@ Se você tiver um aplicativo da Windows 8.1 Store, você poderá usar este proce
 
    Você precisa ter instalado as **Ferramentas do Windows 8.1 na instalação do Visual Studio**. Se essas ferramentas não estiverem instaladas, inicie a instalação do **Visual Studio** pela janela **Programas e Recursos**, escolha **Visual Studio 2017** e, na janela de instalação, escolha **Modificar**. Localize as **Ferramentas do Windows 8.1**, verifique se essa opção está selecionada e escolha **OK**.
 
-2. Abra a janela **Propriedades do Projeto** e, em **C++** > **Geral**, defina o **Conjunto de Ferramentas da Plataforma** como **v141**, o conjunto de ferramentas para o Visual Studio 2017.
+1. Abra a janela **Propriedades do Projeto** e, em **C++** > **Geral**, defina o **Conjunto de Ferramentas da Plataforma** como **v141**, o conjunto de ferramentas para o Visual Studio 2017.
 
-3. Compile o projeto como um projeto Windows 8.1 e resolva eventuais erros de build. Quaisquer erros neste estágio são provavelmente devido a alterações interruptivas nas ferramentas de build e bibliotecas. Consulte [Histórico de alterações de 2003 – 2015 do Visual C++](../porting/visual-cpp-change-history-2003-2015.md) para obter uma explicação detalhada das alterações que podem afetar seu código.
+1. Compile o projeto como um projeto Windows 8.1 e resolva eventuais erros de build. Quaisquer erros neste estágio são provavelmente devido a alterações interruptivas nas ferramentas de build e bibliotecas. Consulte [Histórico de alterações de 2003 – 2015 do Visual C++](../porting/visual-cpp-change-history-2003-2015.md) para obter uma explicação detalhada das alterações que podem afetar seu código.
 
    Depois que o projeto é compilado corretamente, você está pronto para portar para Universal do Windows (Windows 10).
 
-4. Crie um novo projeto de aplicativo Universal do Windows usando o modelo em branco. Você talvez queira dar a ele o mesmo nome do seu projeto existente, embora os projetos precisem estar em diretórios diferentes para que seja possível fazer isso.
+1. Crie um novo projeto de aplicativo Universal do Windows usando o modelo em branco. Você talvez queira dar a ele o mesmo nome do seu projeto existente, embora os projetos precisem estar em diretórios diferentes para que seja possível fazer isso.
 
-5. Feche a solução e, em seguida, usando o **Windows Explorer** ou a linha de comando, copie os arquivos de código (com extensões .cpp, .h e .xaml) do projeto do Windows 8.1 para a mesma pasta que o arquivo de projeto (.vcxproj) do projeto que você criou na Etapa 1. Não copie o arquivo Package.appxmanifest e, se você tiver códigos separados para telefone e área de trabalho do Windows 8.1, escolha um deles para portar primeiro (você precisará trabalhar um pouco mais tarde para adaptar-se ao outro). Certifique-se de copiar todas as subpastas e seus conteúdos. Se solicitado, escolha substituir todos os arquivos com nomes duplicados.
+1. Feche a solução e, em seguida, usando o **Windows Explorer** ou a linha de comando, copie os arquivos de código (com extensões .cpp, .h e .xaml) do projeto do Windows 8.1 para a mesma pasta que o arquivo de projeto (.vcxproj) do projeto que você criou na Etapa 1. Não copie o arquivo Package.appxmanifest e, se você tiver códigos separados para telefone e área de trabalho do Windows 8.1, escolha um deles para portar primeiro (você precisará trabalhar um pouco mais tarde para adaptar-se ao outro). Certifique-se de copiar todas as subpastas e seus conteúdos. Se solicitado, escolha substituir todos os arquivos com nomes duplicados.
 
-6. Reabra a solução e, em seguida, escolha **Adicionar** > **Item Existente** no menu de atalho do nó do projeto. Selecione todos os arquivos que você copiou, exceto eventuais arquivos que já sejam parte do projeto.
+1. Reabra a solução e, em seguida, escolha **Adicionar** > **Item Existente** no menu de atalho do nó do projeto. Selecione todos os arquivos que você copiou, exceto eventuais arquivos que já sejam parte do projeto.
 
    Verifique eventuais subpastas e certifique-se de adicionar os arquivos nelas também.
 
-7. Se você não estiver usando o mesmo nome do projeto usado em seu projeto anterior, abra o arquivo Package.appxmanifest e atualize o **Ponto de Entrada** para refletir o nome do namespace da classe `App`.
+1. Se você não estiver usando o mesmo nome do projeto usado em seu projeto anterior, abra o arquivo Package.appxmanifest e atualize o **Ponto de Entrada** para refletir o nome do namespace da classe `App`.
 
    O campo **Ponto de Entrada** no arquivo Package.appxmanifest contém um nome de escopo para a classe `App`, o qual inclui o namespace que contém a classe `App`. Quando você cria um projeto Universal do Windows, o namespace é definido como o nome do projeto. Se isso for diferente do que está nos arquivos copiados de seu projeto antigo, você deverá atualizar um ou outro para que eles correspondam.
 
-8. Compile o projeto e resolva eventuais erros de build devidos a alterações interruptivas entre as diferentes versões do SDK do Windows.
+1. Compile o projeto e resolva eventuais erros de build devidos a alterações interruptivas entre as diferentes versões do SDK do Windows.
 
-9. Execute o projeto na área de trabalho local. Verifique se não há nenhum erro de implantação e se o layout do aplicativo parece razoável e se ele funciona corretamente na área de trabalho.
+1. Execute o projeto na área de trabalho local. Verifique se não há nenhum erro de implantação e se o layout do aplicativo parece razoável e se ele funciona corretamente na área de trabalho.
 
-10. Se você tiver arquivos de código separados e .xaml para outro dispositivo, como Windows Phone 8.1, examine esse código e identifique onde ele difere do dispositivo padrão. Se a diferença for apenas no layout, você poderá usar um **Gerenciador de Estado Visual** no XAML para personalizar a exibição, dependendo do tamanho da tela. Para outras diferenças, você pode usar seções de condições no seu código usando as instruções #if a seguir.
+1. Se você tiver arquivos de código separados e .xaml para outro dispositivo, como Windows Phone 8.1, examine esse código e identifique onde ele difere do dispositivo padrão. Se a diferença for apenas no layout, você poderá usar um **Gerenciador de Estado Visual** no XAML para personalizar a exibição, dependendo do tamanho da tela. Para outras diferenças, você pode usar seções de condições no seu código usando as instruções #if a seguir.
 
     ```cpp
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_PC_APP)
@@ -66,7 +66,7 @@ Se você tiver um aplicativo da Windows 8.1 Store, você poderá usar este proce
 
    Essas instruções aplicam-se, respectivamente, a aplicativos UWP e a aplicativos da Windows Phone Store, a ambos ou a nenhum (somente área de trabalho clássica do Win32). Essas macros estão disponíveis apenas no SDK do Windows 8.1 e posterior, portanto, se seu código precisar ser compilado com versões anteriores do SDK do Windows ou para outras plataformas além do Windows, você também deverá considerar a possibilidade de que nenhuma delas esteja definida.
 
-11. Execute e depure o aplicativo em um emulador ou um dispositivo físico para cada tipo de dispositivo ao qual seu aplicativo dá suporte. Para executar um emulador, você precisa executar o Visual Studio em um computador físico, não em uma máquina virtual.
+1. Execute e depure o aplicativo em um emulador ou um dispositivo físico para cada tipo de dispositivo ao qual seu aplicativo dá suporte. Para executar um emulador, você precisa executar o Visual Studio em um computador físico, não em uma máquina virtual.
 
 ## <a name="BK_81Component"></a> Portabilidade um Componente do Tempo de Execução do Windows 8.1 para a UWP
 
@@ -76,11 +76,11 @@ Se você tiver uma DLL ou um Componente do Tempo de Execução do Windows que j�
 
 1. Na caixa de diálogo **Novo Projeto** no Visual Studio 2017, localize o nó **Windows Universal**. Se você não vir esse nó, instale primeiro as [Ferramentas para Windows 10](http://go.microsoft.com/fwlink/p/?LinkID=617903). Escolha o modelo **Componente do Tempo de Execução do Windows**, dê um nome para seu componente e escolha o botão **OK**. O nome do componente será usado como o nome do namespace, então você talvez queira usar o mesmo nome do namespace do seu projeto antigo. Isso requer que você crie o projeto em uma pasta diferente da antiga. Se você escolher um nome diferente, você poderá atualizar o nome do namespace nos arquivos de código gerados.
 
-2. Feche o projeto.
+1. Feche o projeto.
 
-3. Copie todos os arquivos de código (.cpp, .h, .xaml, etc.) de seu componente Windows 8.1 para seu projeto recém-criado. Não copie o arquivo Package.appxmanifest.
+1. Copie todos os arquivos de código (.cpp, .h, .xaml, etc.) de seu componente Windows 8.1 para seu projeto recém-criado. Não copie o arquivo Package.appxmanifest.
 
-4. Compile e resolva quaisquer erros devidos a alterações interruptivas entre versões diferentes do Windows SDK.
+1. Compile e resolva quaisquer erros devidos a alterações interruptivas entre versões diferentes do Windows SDK.
 
 ## <a name="troubleshooting"></a>Solução de problemas
 

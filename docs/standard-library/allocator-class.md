@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: dbae9ef71927fd5b781488258bf801cf19f4fb90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450668"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518860"
 ---
 # <a name="allocator-class"></a>Classe allocator
 
@@ -63,7 +63,7 @@ Todos os contêineres da biblioteca padrão C++ têm um parâmetro de modelo pad
 
 Por exemplo, um objeto alocador pode alocar armazenamento em um heap privado ou na memória compartilhada ou pode otimizar para tamanhos de objeto grandes ou pequenos. Ele também pode especificar, por meio das definições de tipo que fornece, que os elementos sejam acessados por meio de objetos acessadores especiais que gerenciam a memória compartilhada ou executam coleta de lixo automática. Portanto, uma classe que aloca armazenamento usando um objeto alocador deve usar esses tipos para declarar um ponteiro e referenciar objetos, como os contêineres na Biblioteca Padrão do C++.
 
-**(Somente C_++98/03)** Ao derivar da classe allocator, você precisa fornecer um struct [rebind](#rebind), cujo typedef `_Other` referencie a classe recém-derivada.
+<strong>(98/c++03 apenas)</strong>  Quando você deriva da classe allocator, você precisa fornecer um [reassociar](#rebind) struct, cujo `_Other` typedef referencia sua classe recém-derivada.
 
 Portanto, um alocador define os seguintes tipos:
 

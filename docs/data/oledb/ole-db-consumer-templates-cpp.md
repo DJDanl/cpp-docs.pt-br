@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB consumer templates [C++]
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
-ms.openlocfilehash: 2494293330e7c0f47a6f72e8833c82c21df8dca1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6bda050efd7d2d4ac6df196e42ffe6be43ab1a65
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573737"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556602"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Modelos de consumidor de banco de dados OLE (C++)
 
@@ -24,7 +24,7 @@ O OLE DB modelos de consumidor dão suporte a especificação de versão 2.6 do 
 
 - Tipos de dados de C/C++ nativos para programação de OLE DB.
 
-Para usar os modelos OLE DB, você deve estar familiarizado com modelos de C++, COM e as interfaces do OLE DB. Se você não estiver familiarizado com o OLE DB, consulte [referência do programador DB OLE](/previous-versions/windows/desktop/ms718124).
+Para usar os modelos OLE DB, você deve estar familiarizado com modelos de C++, COM e as interfaces do OLE DB. Se você não estiver familiarizado com o OLE DB, consulte [referência do programador DB OLE](https://docs.microsoft.com/previous-versions/windows/desktop/ms718124(v=vs.85)).
 
 Os modelos OLE DB oferecer suporte a modelo de objeto OLE DB existente em vez de adicionar um novo modelo de objeto. As classes de camada superior de OLE DB modelos de consumidor em paralelo os componentes definidos na especificação do OLE DB. O design dos modelos de consumidor de banco de dados OLE inclui recursos avançados como vários acessadores em um conjunto de linhas. O uso de modelos e herança múltipla torna a biblioteca de pequeno e flexível.
 
@@ -60,5 +60,5 @@ Para mais informações, consulte os seguintes tópicos:
 
 [Programação do OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Acesso a dados](../data-access-in-cpp.md)<br/>
-[Documentação do SDK do OLE DB](/previous-versions/windows/desktop/ms722784)<br/>
-[Referência do programador do OLE DB](/previous-versions/windows/desktop/ms713643)
+[Documentação do SDK do OLE DB](https://docs.microsoft.com/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
+[Referência do programador do OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)

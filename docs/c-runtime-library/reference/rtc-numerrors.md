@@ -23,12 +23,12 @@ helpviewer_keywords:
 - _RTC_NumErrors function
 - RTC_NumErrors function
 ms.assetid: 7e82adae-38e2-4f8b-bc0b-37bda8109fd1
-ms.openlocfilehash: e13f85f2140473d6e971d27abb6012effd36c37c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5e79f388164670e0fa48438d68a9b35d29f812d
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477188"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524957"
 ---
 # <a name="rtcnumerrors"></a>_RTC_NumErrors
 
@@ -39,7 +39,6 @@ Retorna o número total de erros que podem ser detectados por RTC (verificação
 ```C
 
 int _RTC_NumErrors( void );
-
 ```
 
 ## <a name="return-value"></a>Valor de retorno

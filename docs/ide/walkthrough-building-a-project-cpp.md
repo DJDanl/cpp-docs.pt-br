@@ -6,12 +6,12 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: 53f9d1ca823385c17bf2b235d844e40886092e44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c12cd50dd92e728c88945cd83029f7e5e62816da
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618355"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524151"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Instruções passo a passo: compilando um projeto (C++)
 
@@ -27,15 +27,15 @@ Neste passo a passo, você introduzirá um erro de sintaxe do Visual C++ no cód
 
 1. Em Game.cpp, exclua o ponto e vírgula na última linha, de modo que ele fique parecido com a instrução:
 
-    `return 0`
+   `return 0`
 
 1. Na barra de menus, escolha **Compilar** > **Compilar Solução**.
 
 1. Uma mensagem na janela **Lista de Erros** indica que houve um erro na compilação do projeto. A descrição é parecida com esta mensagem de erro:
 
-    `error C2143: syntax error: missing ';' before '}'`
+   `error C2143: syntax error: missing ';' before '}'`
 
-  Para ver informações de ajuda sobre esse erro, realce-o na janela **Lista de Erros** e escolha a tecla **F1**.
+   Para ver informações de ajuda sobre esse erro, realce-o na janela **Lista de Erros** e escolha a tecla **F1**.
 
 1. Adicione o ponto-e-vírgula novamente ao fim da linha que contém o erro de sintaxe:
 
@@ -43,7 +43,7 @@ Neste passo a passo, você introduzirá um erro de sintaxe do Visual C++ no cód
 
 1. Na barra de menus, escolha **Compilar** > **Compilar Solução**.
 
-  Uma mensagem na janela de **Saída** indica que o projeto foi compilado com êxito.
+   Uma mensagem na janela de **Saída** indica que o projeto foi compilado com êxito.
 
     ```Output
     1>------ Build started: Project: Game, Configuration: Debug Win32 ------

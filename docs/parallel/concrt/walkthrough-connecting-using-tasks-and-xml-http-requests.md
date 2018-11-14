@@ -6,16 +6,16 @@ helpviewer_keywords:
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: 69e365c0f0bbee7014b6d754c920bd6241064fdf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36769fa531decaee81c73a4751f5c6ed24008ffc
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495541"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525001"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Instruções passo a passo: conexão usando tarefas e solicitações HTTP XML
 
-Este exemplo mostra como usar o [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) e [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) interfaces junto com tarefas enviar solicitações HTTP GET e POST para um serviço web em um Windows UWP (plataforma Universal ) aplicativo. Combinando `IXMLHTTPRequest2` junto com tarefas, você pode escrever código que compõe com outras tarefas. Por exemplo, você pode usar a tarefa de download como parte de uma cadeia de tarefas. A tarefa de download também pode responder quando o trabalho é cancelado.
+Este exemplo mostra como usar o [IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) e [IXMLHTTPRequest2Callback](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) interfaces junto com tarefas enviar solicitações HTTP GET e POST para um serviço web em um Windows UWP (plataforma Universal ) aplicativo. Combinando `IXMLHTTPRequest2` junto com tarefas, você pode escrever código que compõe com outras tarefas. Por exemplo, você pode usar a tarefa de download como parte de uma cadeia de tarefas. A tarefa de download também pode responder quando o trabalho é cancelado.
 
 > [!TIP]
 >  Você também pode usar o C++ REST SDK para executar solicitações HTTP de um aplicativo UWP usando o aplicativo em C++ ou de uma aplicativo C++ da área de trabalho. Para obter mais informações, consulte [C++ REST SDK (codinome "Casablanca")](https://github.com/Microsoft/cpprestsdk).
@@ -69,35 +69,34 @@ Esta seção demonstra como usar o `HttpRequest` classe em um aplicativo UWP. O 
 
    [!code-xml[concrt-using-ixhr2#A1](../../parallel/concrt/codesnippet/xaml/walkthrough-connecting-using-tasks-and-xml-http-requests_4.xaml)]
 
-1. Em MainPage, adicione isso `#include` diretiva:
+2. Em MainPage, adicione isso `#include` diretiva:
 
    [!code-cpp[concrt-using-ixhr2#A2](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_5.h)]
 
-1. Em MainPage, adicione estas `private` variáveis de membro a `MainPage` classe:
+3. Em MainPage, adicione estas `private` variáveis de membro a `MainPage` classe:
 
    [!code-cpp[concrt-using-ixhr2#A3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_6.h)]
 
-1. Em MainPage, declare a `private` método `ProcessHttpRequest`:
+4. Em MainPage, declare a `private` método `ProcessHttpRequest`:
 
    [!code-cpp[concrt-using-ixhr2#A4](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_7.h)]
 
-1. Em MainPage, adicione estas `using` instruções:
+5. Em MainPage, adicione estas `using` instruções:
 
    [!code-cpp[concrt-using-ixhr2#A5](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_8.cpp)]
 
-1. Em MainPage, implemente a `GetButton_Click`, `PostButton_Click`, e `CancelButton_Click` métodos do `MainPage` classe.
+6. Em MainPage, implemente a `GetButton_Click`, `PostButton_Click`, e `CancelButton_Click` métodos do `MainPage` classe.
 
    [!code-cpp[concrt-using-ixhr2#A6](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_9.cpp)]
 
-    > [!TIP]
-
-    >  Se seu aplicativo não exija o suporte para cancelamento, passe [cancellation_token:: none](reference/cancellation-token-class.md#none) para o `HttpRequest::GetAsync` e `HttpRequest::PostAsync` métodos.
+   > [!TIP]
+   > Se seu aplicativo não exija o suporte para cancelamento, passe [cancellation_token:: none](reference/cancellation-token-class.md#none) para o `HttpRequest::GetAsync` e `HttpRequest::PostAsync` métodos.
 
 1. Em MainPage, implemente o `MainPage::ProcessHttpRequest` método.
 
    [!code-cpp[concrt-using-ixhr2#A7](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_10.cpp)]
 
-1. Nas propriedades do projeto, sob **vinculador**, **entrada**, especifique `shcore.lib` e `msxml6.lib`.
+8. Nas propriedades do projeto, sob **vinculador**, **entrada**, especifique `shcore.lib` e `msxml6.lib`.
 
 Aqui está o aplicativo em execução:
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: d997cb37c6cadb03bd3d16c4b1d4e56874f00018
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c09fa369cd4e0b726d809fa709518574d4fdbc6e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591003"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330535"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Passo a passo: Criar e usar sua própria biblioteca de vínculo dinâmico (C++)
 
@@ -396,7 +396,7 @@ Pressione qualquer tecla para fechar a janela de comando.
 
 Agora que você criou uma DLL e um aplicativo cliente, você pode experimentar. Tente definir pontos de interrupção no código do aplicativo cliente e executar o aplicativo no depurador. Veja o que acontece quando você entra em uma chamada de biblioteca. Adicione outras funções na biblioteca, ou escrever outro aplicativo de cliente que usa sua DLL.
 
-Quando você implanta seu aplicativo, você também deve implantar as DLLs que ele usa. A maneira mais simples para disponibilizar as DLLs que você cria ou que você incluir de terceiros para seu aplicativo é colocá-los no mesmo diretório que seu aplicativo, também conhecido como *implantação de aplicativo local*. Para obter mais informações sobre a implantação, consulte [implantação no Visual C++](..\ide\deployment-in-visual-cpp.md).
+Quando você implanta seu aplicativo, você também deve implantar as DLLs que ele usa. A maneira mais simples para disponibilizar as DLLs que você cria ou que você incluir de terceiros para seu aplicativo é colocá-los no mesmo diretório que seu aplicativo, também conhecido como *implantação de aplicativo local*. Para obter mais informações sobre a implantação, consulte [implantação no Visual C++](../ide/deployment-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Consulte também
 

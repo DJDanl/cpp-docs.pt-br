@@ -12,12 +12,12 @@ f1_keywords:
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-ms.openlocfilehash: 97d2e9fd8e64475d9194bb8b2ab12fdee315e176
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 342655e290167315b7f10caba979804461e10658
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677338"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521070"
 ---
 # <a name="concurrency-namespace-enums"></a>enumerações do namespace de simultaneidade
 
@@ -164,6 +164,7 @@ enum DynamicProgressFeedbackType;
 |----------|-----------------|
 |`ProgressFeedbackDisabled`|O Agendador não coleta informações de progresso. O rebalanceamento é feito com base apenas no nível da assinatura do thread de hardware subjacente. Para obter mais informações sobre os níveis de assinatura, consulte [iexecutionresource:: Currentsubscriptionlevel](IExecutionResource-structure.md).<br /><br /> Esse valor é reservado para uso pelo tempo de execução.|
 |`ProgressFeedbackEnabled`|O Agendador reúne informações sobre o andamento e o passa para o Gerenciador de recursos. O Gerenciador de recursos utilizará essas informações estatísticas para reequilibrar recursos em nome do Agendador além do nível de assinatura do thread de hardware subjacente. Para obter mais informações sobre os níveis de assinatura, consulte [iexecutionresource:: Currentsubscriptionlevel](IExecutionResource-structure.md).|
+
 ##  <a name="join_type"></a>  Enumeração join_type
 
 O tipo de um `join` bloco de mensagem.

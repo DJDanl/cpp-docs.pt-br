@@ -1,6 +1,6 @@
 ---
 title: /Gm (habilitar recompilação manual)
-ms.date: 11/04/2016
+ms.date: 11/12/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.MinimalRebuild
 - /Gm
@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Gm compiler option [C++]
 - -Gm compiler option [C++]
 ms.assetid: d8869ce0-d2ea-40eb-8dae-6d2cdb61dd59
-ms.openlocfilehash: 2a5bc4008ab9376367b3a32040c2a4a70147187f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7552da4764f009c0848f1d8f420f112be2d1120a
+ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570398"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598802"
 ---
 # <a name="gm-enable-minimal-rebuild"></a>/Gm (habilitar recompilação manual)
 
-Habilita recompilação mínima, que determina se os arquivos de origem C++ que incluem definições de classe C++ alteradas (armazenadas nos arquivos de cabeçalho (.h)) precisam ser recompilados.
+Preterido. Habilita recompilação mínima, que determina se os arquivos de origem C++ que incluem definições de classe C++ alteradas (armazenadas nos arquivos de cabeçalho (.h)) precisam ser recompilados.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,10 +32,12 @@ Habilita recompilação mínima, que determina se os arquivos de origem C++ que 
 
 ## <a name="remarks"></a>Comentários
 
+**/GM** foi preterido. Ele poderá não disparar uma compilação para determinados tipos de alterações do arquivo de cabeçalho. Você pode remover com segurança essa opção de seus projetos. Para melhorar o tempo de compilação, é recomendável usar cabeçalhos pré-compilados e paralelos e incrementais opções de build em vez disso. Para obter uma lista de opções do compilador preterido, consulte o **preteridos e removidos opções do compilador** seção [opções de compilador listadas por categoria](../../build/reference/compiler-options-listed-by-category.md).
+
 O compilador armazena as informações de dependência entre arquivos de origem e definições de classe no arquivo .idb do projeto durante a primeira compilação. (Informações sobre dependência dizem que arquivo de origem depende da definição de classe, e qual arquivo. h a definição está localizado em.) As compilações subsequentes usam as informações armazenadas no arquivo. IDB para determinar se um arquivo de origem precisa ser compilado, mesmo se ele inclui um arquivo. h modificado.
 
 > [!NOTE]
->  A recompilação mínima conta com definições de classe que não mudem entre os arquivos incluídos. As definições de classe devem ser globais para um projeto (deve haver apenas uma definição de uma determinada classe), pois as informações de dependência no arquivo .idb são criadas para todo o projeto. Se você tiver mais de uma definição para uma classe no seu projeto, desabilite a recompilação mínima.
+> A recompilação mínima conta com definições de classe que não mudem entre os arquivos incluídos. As definições de classe devem ser globais para um projeto (deve haver apenas uma definição de uma determinada classe), pois as informações de dependência no arquivo .idb são criadas para todo o projeto. Se você tiver mais de uma definição para uma classe no seu projeto, desabilite a recompilação mínima.
 
 Como o vinculador incremental não oferece suporte a metadados do Windows incluídos em arquivos. obj usando a [/ZW (compilação de tempo de execução do Windows)](../../build/reference/zw-windows-runtime-compilation.md) opção, o **/Gm** opção é incompatível com  **/ZW**.
 
@@ -43,9 +45,7 @@ Como o vinculador incremental não oferece suporte a metadados do Windows inclu�
 
 1. Abra a caixa de diálogo **Páginas de Propriedades** do projeto. Para obter detalhes, confira [Trabalhando com propriedades do projeto](../../ide/working-with-project-properties.md).
 
-1. Clique o **C/C++** pasta.
-
-1. Clique o **geração de código** página de propriedades.
+1. Selecione o **propriedades de configuração** > **C/C++** > **geração de código** página de propriedades.
 
 1. Modificar a **habilitar recompilação mínima** propriedade.
 

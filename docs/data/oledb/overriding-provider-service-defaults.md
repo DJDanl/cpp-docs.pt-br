@@ -5,16 +5,16 @@ helpviewer_keywords:
 - service providers [OLE DB]
 - OLE DB services [OLE DB], overriding defaults
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
-ms.openlocfilehash: a9f8eb1c96c40336f39f14fe1a0ee29d60efd003
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
-ms.translationtype: HT
+ms.openlocfilehash: 9f845834b844c16bf2820a295768696e8f6a6526
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265211"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556290"
 ---
 # <a name="overriding-provider-service-defaults"></a>Substituindo padrões de serviço do fornecedor
 
-Valor do registro do provedor para OLEDB_SERVICES é retornado como o valor padrão para o [DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898) propriedade de inicialização no objeto de fonte de dados.
+Valor do registro do provedor para OLEDB_SERVICES é retornado como o valor padrão para o [DBPROP_INIT_OLEDBSERVICES](https://docs.microsoft.com/previous-versions/windows/desktop/ms716898(v=vs.85)) propriedade de inicialização no objeto de fonte de dados.
 
 Desde que exista a entrada do registro, objetos do provedor é agregado. O usuário pode substituir configuração padrão do provedor para serviços habilitados, definindo a propriedade DBPROP_INIT_OLEDBSERVICES antes da inicialização. Para habilitar ou desabilitar um serviço específico, o usuário obtém o valor atual da propriedade DBPROP_INIT_OLEDBSERVICES, define ou limpa o bit para a propriedade específica a ser ativado ou desativado e redefine a propriedade. DBPROP_INIT_OLEDBSERVICES pode ser definido diretamente no OLE DB ou na cadeia de conexão passada para o ADO ou `IDataInitialize::GetDatasource`. Os valores correspondentes para habilitar/desabilitar serviços individuais são listados na tabela a seguir.
 
@@ -30,7 +30,7 @@ Se a entrada do registro não existir para o provedor, os gerentes de componente
 
 ## <a name="see-also"></a>Consulte também
 
-[Pool de recursos](/previous-versions/windows/desktop/ms713655)<br/>
-[Como os consumidores usam o pool de recursos](/previous-versions/windows/desktop/ms715907)<br/>
-[Como os provedores funcionam com eficiência com o pool de recursos](/previous-versions/windows/desktop/ms714906)<br/>
+[Pool de recursos](https://docs.microsoft.com/previous-versions/windows/desktop/ms713655(v=vs.85))<br/>
+[Como os consumidores usam o pool de recursos](https://docs.microsoft.com/previous-versions/windows/desktop/ms715907(v=vs.85))<br/>
+[Como os provedores funcionam com eficiência com o pool de recursos](https://docs.microsoft.com/previous-versions/windows/desktop/ms714906(v=vs.85))<br/>
 [Habilitando e desabilitando serviços do OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)<br/>

@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-ms.openlocfilehash: 21c77f71fb576177a6e61ef38d1ef0459f14ab05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a67afdf00f0a524a94b50643d6541251feca2c2c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625167"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520251"
 ---
 # <a name="collection-classes"></a>Classes de coleção
 
@@ -32,9 +32,9 @@ As classes a seguir dão suporte para matrizes, listas, mapas e também os méto
 
 - [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md) essa classe fornece métodos, funções estáticas, e definições de tipo útil durante a criação de coleções de COM ponteiros de interface.
 
-- [CComSafeArray](../atl/reference/ccomsafearray-class.md) essa classe é um wrapper para o [tipo de dados do SAFEARRAY](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) estrutura.
+- [CComSafeArray](../atl/reference/ccomsafearray-class.md) essa classe é um wrapper para o [tipo de dados do SAFEARRAY](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) estrutura.
 
-- [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) essa classe é um wrapper para um [SAFEARRAYBOUND](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound) estrutura.
+- [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) essa classe é um wrapper para um [SAFEARRAYBOUND](/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound) estrutura.
 
 - [CComUnkArray](../atl/reference/ccomunkarray-class.md) essa classe armazena **IUnknown** ponteiros e foi projetado para ser usado como um parâmetro para o [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) classe de modelo.
 

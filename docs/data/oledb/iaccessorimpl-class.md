@@ -37,16 +37,16 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: 45e7f7e86344f1928bb007e5f2bde1c0eca1f745
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a01a090d4302983f7d53e051cf4d8a72bd739b4a
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632226"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556732"
 ---
 # <a name="iaccessorimpl-class"></a>Classe IAccessorImpl
 
-Fornece uma implementação de [IAccessor](/previous-versions/windows/desktop/ms719672) interface.
+Fornece uma implementação de [IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85)) interface.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -91,7 +91,7 @@ Unidade de armazenamento para informações de coluna. O padrão é [CAtlMap](..
 
 ## <a name="remarks"></a>Comentários
 
-Isso é obrigatório em conjuntos de linhas e comandos. OLE DB exige que os provedores implementar um HACCESSOR, que é uma marca para uma matriz de [DBBINDING](/previous-versions/windows/desktop/ms716845) estruturas. HACCESSORs fornecidos pelo `IAccessorImpl` são os endereços do `BindType` estruturas. Por padrão, `BindType` é definido como um `ATLBINDINGS` no `IAccessorImpl`da definição de modelo. `BindType` Fornece um mecanismo usado pelo `IAccessorImpl` para controlar o número de elementos no seu `DBBINDING` , bem como um sinalizadores de acessador e contagem de referência de matriz.
+Isso é obrigatório em conjuntos de linhas e comandos. OLE DB exige que os provedores implementar um HACCESSOR, que é uma marca para uma matriz de [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) estruturas. HACCESSORs fornecidos pelo `IAccessorImpl` são os endereços do `BindType` estruturas. Por padrão, `BindType` é definido como um `ATLBINDINGS` no `IAccessorImpl`da definição de modelo. `BindType` Fornece um mecanismo usado pelo `IAccessorImpl` para controlar o número de elementos no seu `DBBINDING` , bem como um sinalizadores de acessador e contagem de referência de matriz.
 
 ## <a name="iaccessorimpl"></a> Iaccessorimpl:: Iaccessorimpl
 
@@ -116,7 +116,7 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978) na *referência do programador do OLE DB*.
+Ver [IAccessor::AddRefAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms714978(v=vs.85)) na *referência do programador do OLE DB*.
 
 ## <a name="createaccessor"></a> Iaccessorimpl:: CreateAccessor
 
@@ -135,7 +135,7 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [IAccessor:: CreateAccessor](/previous-versions/windows/desktop/ms720969) na *referência do programador do OLE DB*.
+Ver [IAccessor:: CreateAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms720969(v=vs.85)) na *referência do programador do OLE DB*.
 
 ## <a name="getbindings"></a> Iaccessorimpl:: Getbindings
 
@@ -152,7 +152,7 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253) na *referência do programador do OLE DB*.
+Ver [IAccessor::GetBindings](https://docs.microsoft.com/previous-versions/windows/desktop/ms721253(v=vs.85)) na *referência do programador do OLE DB*.
 
 ## <a name="releaseaccessor"></a> Iaccessorimpl:: Releaseaccessor
 
@@ -167,7 +167,7 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [IAccessor:: Releaseaccessor](/previous-versions/windows/desktop/ms719717) na *referência do programador do OLE DB*.
+Ver [IAccessor:: Releaseaccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719717(v=vs.85)) na *referência do programador do OLE DB*.
 
 ## <a name="see-also"></a>Consulte também
 

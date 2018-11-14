@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: fb928edf603a5eec2acf1ac53bcd73360a876735
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5fdb5a89bc475cf2d6a358768b84b8542da5e0e8
+ms.sourcegitcommit: d94714522428834a02ede6e6884572f0f6ca9824
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630952"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51597558"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funções &lt;algorithm&gt;
 
@@ -422,7 +422,6 @@ bool binary_search(
     ForwardIterator last,
     const Type& value,
     BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -1012,27 +1011,26 @@ using namespace std;
 
 int main()
 {
-    vector<int> v1 { 0, 5, 10, 15, 20, 25 };
-    vector<int> v2 { 0, 5, 10, 15, 20, 25 };
-    vector<int> v3 { 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 };
+    vector<int> v1 { 0, 5, 10, 15, 20, 25 };
+    vector<int> v2 { 0, 5, 10, 15, 20, 25 };
+    vector<int> v3 { 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 };
 
-    // Using range-and-a-half equal:
-    bool b = equal(v1.begin(), v1.end(), v2.begin());
-    cout << "v1 and v2 are equal: "
-       << b << endl; // true, as expected
+    // Using range-and-a-half equal:
+    bool b = equal(v1.begin(), v1.end(), v2.begin());
+    cout << "v1 and v2 are equal: "
+       << b << endl; // true, as expected
 
-    b = equal(v1.begin(), v1.end(), v3.begin());
-    cout << "v1 and v3 are equal: "
-       << b << endl; // true, surprisingly
+    b = equal(v1.begin(), v1.end(), v3.begin());
+    cout << "v1 and v3 are equal: "
+       << b << endl; // true, surprisingly
 
-    // Using dual-range equal:
-    b = equal(v1.begin(), v1.end(), v3.begin(), v3.end());
-    cout << "v1 and v3 are equal with dual-range overload: "
-       << b << endl; // false
+    // Using dual-range equal:
+    b = equal(v1.begin(), v1.end(), v3.begin(), v3.end());
+    cout << "v1 and v3 are equal with dual-range overload: "
+       << b << endl; // false
 
-    return 0;
+    return 0;
 }
-
 ```
 
 ## <a name="equal_range"></a>  equal_range
@@ -1199,7 +1197,6 @@ int main()
     equal_range_demo<string>( v2, "fred" );
     equal_range_demo<string>( v2, "fred", shorter_than, "shorter_than" );
 }
-
 ```
 
 ## <a name="fill"></a>  fill
@@ -1347,7 +1344,6 @@ int main()
         cout << w << " ";
     cout << ")" << endl;
 }
-
 ```
 
 ## <a name="find"></a>  find
@@ -1788,7 +1784,6 @@ int main()
     find_if_print_result(v.begin(), v.end(), // lambda
         [](int i){ return ((i % 2) == 0); }, "even integer");
 }
-
 ```
 
 ## <a name="find_if_not"></a>  find_if_not
@@ -2118,7 +2113,6 @@ int main()
     generate_n(dq.begin(), elemcount, [&](){ return dist(engine); });
     print("deque dq is: ", dq);
 }
-
 ```
 
 ## <a name="includes"></a>  includes
@@ -2365,7 +2359,7 @@ Os intervalos consecutivos classificados referenciados devem ser válidos, todos
 
 Cada intervalo consecutivo classificado deve ser organizado como uma pré-condição para a aplicação do algoritmo `inplace_merge`, de acordo com a mesma ordenação que deve ser usada pelo algoritmo para classificar os intervalos combinados. A operação é estável, pois a ordem relativa dos elementos em cada intervalo é preservada. Quando há elementos equivalentes nos dois intervalos de origem, o elemento no primeiro intervalo precede o elemento do segundo no intervalo combinado.
 
-A complexidade depende da memória disponível, pois o algoritmo aloca memória para um buffer temporário. Se memória suficiente estiver disponível, o melhor caso será linear com (* último - primeiro *) – 1 comparações; se nenhuma memória auxiliar está disponível, o pior caso será *N* log *(N)*, onde  *N* = (* último - primeiro*).
+A complexidade depende da memória disponível, pois o algoritmo aloca memória para um buffer temporário. Se memória suficiente estiver disponível, o melhor caso será linear com (*última* - *primeiro*) – 1 comparações; se nenhuma memória auxiliar está disponível, o pior caso será *N*log (*N*), onde *N* = (*último* - *primeiro*).
 
 ### <a name="example"></a>Exemplo
 
@@ -2705,7 +2699,6 @@ int main()
 
     return 0;
 }
-
 ```
 
 ## <a name="is_sorted"></a>  is_sorted
@@ -2788,7 +2781,6 @@ Troca dois valores referenciados por um par de iteradores especificados.
 ```cpp
 template<class ForwardIterator1, class ForwardIterator2>
 void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -2957,7 +2949,6 @@ bool lexicographical_compare(
     InputIterator2  first2,
     InputIterator2 Last2,
     BinaryPredicate  comp  );
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -3103,7 +3094,6 @@ ForwardIterator lower_bound(
     ForwardIterator last,
     const Type& value,
     BinaryPredicate comp );
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -3224,7 +3214,6 @@ int main()
     cout << "The lower_bound in v3 for the element with a value of 3 is: "
         << *Result << "." << endl;
 }
-
 ```
 
 ## <a name="make_heap"></a>  make_heap
@@ -3242,7 +3231,6 @@ void make_heap(
     RandomAccessIterator first,
     RandomAccessIterator last,
     BinaryPredicate comp );
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -3533,7 +3521,6 @@ constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator las
 
 template<class ForwardIterator, class BinaryPredicate>
 constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryPredicate comp );
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -3678,7 +3665,6 @@ OutputIterator merge(
     InputIterator2 last2,
     OutputIterator result,
     BinaryPredicate comp );
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -3717,7 +3703,7 @@ A operação é estável, pois a ordem relativa dos elementos em cada intervalo 
 
 Os tipos de valor dos iteradores de entrada precisam ser comparáveis como “menores que” para serem ordenados, de modo que, considerando dois elementos, possa ser determinado que eles são equivalentes (no sentido de que nenhum é menor que o outro) ou que um é menor que o outro. Isso resulta em uma ordenação entre os elementos não equivalentes. Quando há elementos equivalentes nos dois intervalos de origem, os elementos do primeiro intervalo precedem os elementos do segundo intervalo de origem no intervalo de destino.
 
-A complexidade do algoritmo é linear com no máximo (* last1 – first1 *) – (* last2 – first2*) - 1 comparações.
+A complexidade do algoritmo é linear com no máximo (*last1* - *first1*) – (*last2* - *first2*) - 1 comparações.
 
 A [classe list](../standard-library/list-class.md) fornece uma função de membro "merge" para mesclar os elementos de duas listas.
 
@@ -3852,7 +3838,6 @@ template<class Type, class Pr>
 constexpr Type min(
     initializer_list<Type>,
     BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -4057,7 +4042,6 @@ constexpr ForwardIterator min_element(
     ForwardIterator first,
     ForwardIterator last,
     BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -4259,7 +4243,6 @@ template<class Type, class BinaryPredicate>
 constexpr pair<Type&, Type&> minmax(
     initializer_list<Type>,
     BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -4450,7 +4433,6 @@ C++14 vec_3 v. modified vec_4 with pred: mismatch. Left iterator at 60 right ite
 C++14: vec_1 and list_1 are a mismatch: false
 Press a key
 */
-
 ```
 
 ## <a name="alg_move"></a>  &lt;alg&gt; move
@@ -4490,7 +4472,6 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
        BidirectionalIterator1 first,
        BidirectionalIterator1 last,
        BidirectionalIterator2 destEnd);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -4520,7 +4501,6 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last);
 
 template<class BidirectionalIterator, class BinaryPredicate>
 bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -4695,7 +4675,6 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
 
 template<class RandomAccessIterator, class BinaryPredicate>
 void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last, BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -4833,7 +4812,6 @@ void partial_sort(
     RandomAccessIterator sortEnd,
     RandomAccessIterator last
     BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -5065,7 +5043,6 @@ BidirectionalIterator partition(
     BidirectionalIterator first,
     BidirectionalIterator last,
     Predicate comp);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -5207,7 +5184,6 @@ void pop_heap( RandomAccessIterator first, RandomAccessIterator last);
 
 template<class RandomAccessIterator, class BinaryPredicate>
 void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -5316,7 +5292,6 @@ bool prev_permutation(
     BidirectionalIterator first,
     BidirectionalIterator last,
     BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -5486,7 +5461,6 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last );
 
 template<class RandomAccessIterator, class BinaryPredicate>
 void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -5596,7 +5570,6 @@ Elimina um valor especificado de um determinado intervalo sem afetar a ordem dos
 ```cpp
 template<class ForwardIterator, class Type>
 ForwardIterator remove(ForwardIterator first, ForwardIterator last, const Type& val);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -5679,7 +5652,6 @@ Copia os elementos de um intervalo de origem em um intervalo de destino, exceto 
 ```cpp
 template<class InputIterator, class OutputIterator, class Type>
 OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterator result, const Type& val);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -5762,7 +5734,6 @@ Copia os elementos de um intervalo de origem em um intervalo de destino, exceto 
 ```cpp
 template<class InputIterator, class OutputIterator, class Predicate>
 OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIterator result, Predicate pred);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -5857,7 +5828,6 @@ ForwardIterator remove_if(
     ForwardIterator first,
     ForwardIterator last,
     Predicate pred);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -6126,7 +6096,6 @@ OutputIterator replace_copy_if(
     OutputIterator result,
     Predicate pred,
     const Type& val);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -6235,7 +6204,6 @@ void replace_if(
     ForwardIterator last,
     Predicate pred,
     const Type& val);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -6315,7 +6283,6 @@ Inverte a ordem dos elementos em um intervalo.
 ```cpp
 template<class BidirectionalIterator>
 void reverse(BidirectionalIterator first, BidirectionalIterator last);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -6382,7 +6349,6 @@ OutputIterator reverse_copy(
     BidirectionalIterator first,
     BidirectionalIterator Last,
     OutputIterator result);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -6454,7 +6420,6 @@ void rotate(
     ForwardIterator first,
     ForwardIterator middle,
     ForwardIterator last);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -6560,7 +6525,6 @@ OutputIterator rotate_copy(
     ForwardIterator middle,
     ForwardIterator last,
     OutputIterator result );
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -6664,7 +6628,6 @@ ForwardIterator1 search(
     ForwardIterator2 first2,
     ForwardIterator2 last2
     Predicate comp);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -6813,7 +6776,6 @@ ForwardIterator1 search_n(
     Diff2 count,
     const Type& val,
     BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -7302,7 +7264,6 @@ OutputIterator set_symmetric_difference(
     InputIterator2 last2,
     OutputIterator result,
     BinaryPredicate comp );
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -7640,7 +7601,7 @@ int main()
 }
 ```
 
-## <a name="shuffle"></a>  std::shuffle
+## <a name="shuffle"></a>  ordem aleatória
 
 Embaralha (reorganiza) elementos para um determinado intervalo usando um gerador de número aleatório.
 
@@ -7681,7 +7642,6 @@ template<class RandomAccessIterator, class Predicate>
       RandomAccessIterator first,
       RandomAccessIterator last,
       Predicate comp);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -7877,7 +7837,6 @@ BidirectionalIterator stable_partition(
     BidirectionalIterator first,
     BidirectionalIterator last,
     Predicate pred );
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -7959,7 +7918,6 @@ void stable_sort(
     BidirectionalIterator first,
     BidirectionalIterator last,
     BinaryPredicate comp );
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -8061,7 +8019,6 @@ template<class Type, size_t N>
    void swap(
       Type (& left)[N],
       Type (& right)[N]);\r
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -8142,7 +8099,6 @@ ForwardIterator2 swap_ranges(
    ForwardIterator1 first1,
    ForwardIterator1 last1,
    ForwardIterator2 first2 );
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -8379,7 +8335,6 @@ template<class ForwardIterator, class Predicate>
       ForwardIterator first,
       ForwardIterator last,
       Predicate comp);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -8632,7 +8587,6 @@ template<class ForwardIterator, class Type, class Predicate>
       ForwardIterator last,
       const Type& value,
       Predicate comp);
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -8753,7 +8707,6 @@ int main()
     cout << "The upper_bound in v3 for the element with a value of 3 is: "
         << *Result << "." << endl;
 }
-
 ```
 
 ## <a name="see-also"></a>Consulte também

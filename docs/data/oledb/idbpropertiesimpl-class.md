@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 77385fc8b2869cc59c7a0061951c76a431490efe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ce9f3fa18d2a17d499b65258cfda52783ce46c5
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638042"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556940"
 ---
 # <a name="idbpropertiesimpl-class"></a>Classe IDBPropertiesImpl
 
@@ -62,7 +62,7 @@ Sua classe, derivada de `IDBPropertiesImpl`.
 
 ## <a name="remarks"></a>Comentários
 
-[IDBProperties](/previous-versions/windows/desktop/ms719607) é uma interface obrigatória para objetos de fonte de dados e uma interface opcional para enumeradores. No entanto, se expõe um enumerador [IDBInitialize](/previous-versions/windows/desktop/ms713706), ele deve expor `IDBProperties`. `IDBPropertiesImpl` implementa `IDBProperties` usando uma função estática definida por [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+[IDBProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms719607(v=vs.85)) é uma interface obrigatória para objetos de fonte de dados e uma interface opcional para enumeradores. No entanto, se expõe um enumerador [IDBInitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms713706(v=vs.85)), ele deve expor `IDBProperties`. `IDBPropertiesImpl` implementa `IDBProperties` usando uma função estática definida por [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
 ## <a name="getproperties"></a> Idbpropertiesimpl:: GetProperties
 
@@ -71,15 +71,15 @@ Retorna os valores das propriedades dos grupos de propriedade de inicialização
 ### <a name="syntax"></a>Sintaxe
 
 ```cpp
-STDMETHOD(GetProperties)(ULONG cPropertySets, 
-   const DBPROPIDSET rgPropertySets[], 
-   ULONG * pcProperties, 
+STDMETHOD(GetProperties)(ULONG cPropertySets,
+   const DBPROPIDSET rgPropertySets[],
+   ULONG * pcProperties,
    DBPROPSET ** prgProperties);
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [idbproperties:: GetProperties](/previous-versions/windows/desktop/ms714344) na *referência do programador do OLE DB*.
+Ver [idbproperties:: GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms714344(v=vs.85)) na *referência do programador do OLE DB*.
 
 Alguns parâmetros correspondem aos *referência do programador DB OLE* parâmetros de nomes diferentes, que são descritos em `IDBProperties::GetProperties`:
 
@@ -101,16 +101,16 @@ Retorna informações de propriedade com suporte pela fonte de dados.
 ### <a name="syntax"></a>Sintaxe
 
 ```cpp
-STDMETHOD(GetPropertyInfo)(ULONG cPropertySets, 
-   const DBPROPIDSET rgPropertySets[], 
-   ULONG * pcPropertyInfoSets, 
-   DBPROPINFOSET ** prgPropertyInfoSets, 
+STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
+   const DBPROPIDSET rgPropertySets[],
+   ULONG * pcPropertyInfoSets,
+   DBPROPINFOSET ** prgPropertyInfoSets,
    OLECHAR ** ppDescBuffer);
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [idbproperties:: Getpropertyinfo](/previous-versions/windows/desktop/ms718175) na *referência do programador do OLE DB*.
+Ver [idbproperties:: Getpropertyinfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms718175(v=vs.85)) na *referência do programador do OLE DB*.
 
 Alguns parâmetros correspondem aos *referência do programador DB OLE* parâmetros de nomes diferentes, que são descritos em `IDBProperties::GetPropertyInfo`:
 
@@ -130,13 +130,13 @@ Define propriedades em grupos de propriedades fonte de dados e de inicializaçã
 ### <a name="syntax"></a>Sintaxe
 
 ```cpp
-STDMETHOD(SetProperties)(ULONG cPropertySets, 
+STDMETHOD(SetProperties)(ULONG cPropertySets,
    DBPROPSET rgPropertySets[]);
 ```
 
 #### <a name="parameters"></a>Parâmetros
 
-Ver [idbproperties:: SetProperties](/previous-versions/windows/desktop/ms723049) na *referência do programador do OLE DB*.
+Ver [idbproperties:: SetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723049(v=vs.85)) na *referência do programador do OLE DB*.
 
 ### <a name="remarks"></a>Comentários
 

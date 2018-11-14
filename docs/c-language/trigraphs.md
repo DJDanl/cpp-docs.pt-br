@@ -15,12 +15,12 @@ helpviewer_keywords:
 - ??! trigraph
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
-ms.openlocfilehash: 2106f7dda6ecc71478b29cfad3f15dfee0483025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f84e5c1a1455e35992aa4b118c345bc1fa6ae587
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523893"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331614"
 ---
 # <a name="trigraphs"></a>Trígrafos
 
@@ -34,29 +34,29 @@ A tabela a seguir mostra as nove sequências de trígrafos. Em um arquivo de ori
 
 ### <a name="trigraph-sequences"></a>Sequências de trígrafos
 
-|Trígrafo|Caractere de pontuação|
-|--------------|---------------------------|
-|??=|#|
-|??(|[|
-|??/|\|
-|??)|]|
-|??'|^|
-|??\<|{|
-|??!|&#124;|
-|??>|}|
-|??-|~|
+| Trígrafo | Caractere de pontuação |
+|----------|-----------------------|
+| ??= | # |
+| ??( | \[ |
+| ??/ | \\ |
+| ??) | ] |
+| ??' | ^ |
+| ??\< | { |
+| ??! | &#124; |
+| ??> | } |
+| ??- | ~ |
 
 Um trígrafo é sempre tratado como um único caractere de origem. A conversão de trígrafos ocorre na primeira [fase de conversão](../preprocessor/phases-of-translation.md), antes do reconhecimento dos caracteres de escape em literais de cadeias e constantes de caracteres. Somente os nove trígrafos mostrados na tabela acima são reconhecidos. Todas as outras sequências de caracteres são mantidas sem conversão.
 
 A sequência de escape de caracteres, **\\?**, evita a interpretação errônea de sequências de caracteres semelhantes a trígrafos. (Para obter informações sobre sequências de escape, consulte [Sequências de escape](../c-language/escape-sequences.md).) Por exemplo, se você tentar imprimir a cadeia de caracteres `What??!` com esta instrução `printf`
 
-```
+```C
 printf( "What??!\n" );
 ```
 
 a cadeia impressa será `What|` porque `??!` é uma sequência de trígrafo que é substituída pelo caractere `|`. Escreva a instrução da seguinte maneira para imprimir a cadeia de caracteres corretamente:
 
-```
+```C
 printf( "What?\?!\n" );
 ```
 

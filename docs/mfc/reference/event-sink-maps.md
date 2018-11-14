@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - event sink maps [MFC]
 ms.assetid: a9757eb2-5f4a-45ec-a2cd-ce5eec85b16f
-ms.openlocfilehash: 48bd859795dfb7fdac74fbf2003db0e2c0c3c04a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e75f1d880ce767b6fdbb61b4877f0748ba779f4
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501403"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518925"
 ---
 # <a name="event-sink-maps"></a>Mapas de coleta de evento
 
@@ -222,7 +222,6 @@ Use a macro ON_PROPNOTIFY para definir uma entrada de mapa do coletor de eventos
 
 ```
 ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -259,7 +258,6 @@ Use a macro ON_PROPNOTIFY_RANGE para definir uma entrada de mapa do coletor de e
 ```
 
 ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros
@@ -293,7 +291,6 @@ A macro ON_PROPNOTIFY_REFLECT, quando usado no evento mapa coletor da classe de 
 ```
 
 ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
-
 ```
 
 ### <a name="parameters"></a>Parâmetros

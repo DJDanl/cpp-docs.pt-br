@@ -29,12 +29,12 @@ helpviewer_keywords:
 - tfreopen function
 - wfreopen function
 ms.assetid: de4b73f8-1043-4d62-98ee-30d2022da885
-ms.openlocfilehash: 4fa5afb1baea33178c987b45e8b7dace4e4515eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c570837bddea1f5e986ae5f767279ab2637ea21
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649521"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332498"
 ---
 # <a name="freopen-wfreopen"></a>freopen, _wfreopen
 
@@ -88,12 +88,12 @@ O **freopen** função fecha o arquivo atualmente associado *fluxo* e reatribui 
 
 |*modo*|Acesso|
 |-|-|
-**"r"**|Abre para leitura. Se o arquivo não existe ou não for encontrado, o **freopen** chamar falhar.
-**"w"**|Abre um arquivo vazio para gravação. Se o arquivo determinado existir, seus conteúdos são destruídos.
-**"a"**|Abre para gravação no fim do arquivo (conexão) sem remover o marcador de EOF (Fim de arquivo) antes de novos dados serem gravados no arquivo. Cria o arquivo se ele não existir.
-**"r+"**|Abre para leitura e gravação. O arquivo deve existir.
-**"w+"**|Abre um arquivo vazio para leitura e gravação. Se o arquivo existir, seus conteúdos são destruídos.
-**"a+"**|Abre para leitura e conexão. A operação de conexão inclui a remoção do marcador de EOF antes de os novos dados serem gravados no arquivo. O marcador de EOF não é restaurado após a gravação ser concluída. Cria o arquivo se ele não existir.
+| **"r"** | Abre para leitura. Se o arquivo não existe ou não for encontrado, o **freopen** chamar falhar. |
+| **"w"** | Abre um arquivo vazio para gravação. Se o arquivo determinado existir, seus conteúdos são destruídos. |
+| **"a"** | Abre para gravação no fim do arquivo (conexão) sem remover o marcador de EOF (Fim de arquivo) antes de novos dados serem gravados no arquivo. Cria o arquivo se ele não existir. |
+| **"r+"** | Abre para leitura e gravação. O arquivo deve existir. |
+| **"w+"** | Abre um arquivo vazio para leitura e gravação. Se o arquivo existir, seus conteúdos são destruídos. |
+| **"a+"** | Abre para leitura e conexão. A operação de conexão inclui a remoção do marcador de EOF antes de os novos dados serem gravados no arquivo. O marcador de EOF não é restaurado após a gravação ser concluída. Cria o arquivo se ele não existir. |
 
 Use o **"w"** e **"w +"** tipos com cuidado, pois eles podem destruir arquivos existentes.
 
@@ -105,8 +105,8 @@ Quando o **"r +"**, **"w +"**, ou **"+"** tipo de acesso for especificado, são 
 
 |*modo* modificador|Modo de conversão|
 |-|-|
-**t**|Abra no modo de texto (convertido).
-**b**|Abra em um modo binário (não convertido); as conversões envolvendo caracteres de retorno de carro e avanço de linha são suprimidas.
+| **t** | Abra no modo de texto (convertido). |
+| **b** | Abra em um modo binário (não convertido); as conversões envolvendo caracteres de retorno de carro e avanço de linha são suprimidas. |
 
 No modo de texto (convertido), as combinações de retorno-linha (CR-LF) do carro são convertidas em caracteres de única linha (LF) na entrada; Caracteres de LF são convertidos em combinações de CR-LF na saída. Além disso, CTRL+Z é interpretado como um caractere de fim do arquivo na entrada. Em arquivos abertos para leitura ou de leitura e gravação com **"+"**, a biblioteca de tempo de execução verifica se há um CTRL + Z no final do arquivo e o remove, se possível. Isso é feito porque usar [fseek](fseek-fseeki64.md) e [ftell](ftell-ftelli64.md) para movimentação dentro de um arquivo pode causar [fseek](fseek-fseeki64.md) se comportar incorretamente perto do fim do arquivo. O **t** opção é uma extensão da Microsoft que não deve ser usada quando se desejar portabilidade ANSI.
 
