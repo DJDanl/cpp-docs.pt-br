@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: 5479b892a2cb97fb645dba4ffac70dd9ac4aeffe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f7af0f3dd9ff373a458a6f93fb78fda443bd8e9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594494"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520472"
 ---
 # <a name="general-property-page-project"></a>Página de propriedade geral (projeto)
 
@@ -110,29 +110,29 @@ As propriedades na seção Padrão de Projeto representam as propriedades padrã
 
 - **Tipo de Configuração**
 
-   Há vários tipos de configuração para escolher:
+  Há vários tipos de configuração para escolher:
 
-   - **Aplicativo (.exe)**
+  - **Aplicativo (.exe)**
 
-      Exibe o conjunto de ferramentas do vinculador (Compilador C/C++, MIDL, Compilador de Recurso, Vinculador, BSCMake, Gerador de Proxy de Serviço Web XML, build personalizado, eventos de pré-build, pré-vínculo e pós-build).
+     Exibe o conjunto de ferramentas do vinculador (Compilador C/C++, MIDL, Compilador de Recurso, Vinculador, BSCMake, Gerador de Proxy de Serviço Web XML, build personalizado, eventos de pré-build, pré-vínculo e pós-build).
 
-   - **Biblioteca Dinâmica (.dll)**
+  - **Biblioteca Dinâmica (.dll)**
 
-      Exibe o conjunto de ferramentas do vinculador, especifica a opção /DLL do vinculador e adiciona a definição de _WINDLL a CL.
+     Exibe o conjunto de ferramentas do vinculador, especifica a opção /DLL do vinculador e adiciona a definição de _WINDLL a CL.
 
-   - **Makefile**
+  - **Makefile**
 
-      Exibe o conjunto de ferramentas de makefile (NMake).
+     Exibe o conjunto de ferramentas de makefile (NMake).
 
-   - **Biblioteca estática (.lib)**
+  - **Biblioteca estática (.lib)**
 
-      Exibe o conjunto de ferramentas do bibliotecário (o mesmo que o conjunto de ferramentas do vinculador, exceto pela substituição do bibliotecário pelo vinculador e omissão do Gerador de Proxy de Serviço Web XML).
+     Exibe o conjunto de ferramentas do bibliotecário (o mesmo que o conjunto de ferramentas do vinculador, exceto pela substituição do bibliotecário pelo vinculador e omissão do Gerador de Proxy de Serviço Web XML).
 
-   - **Utility**
+  - **Utility**
 
-      Exibe o conjunto de ferramentas do utilitário (MIDL, build personalizado, eventos de pré-build e pós-build).
+     Exibe o conjunto de ferramentas do utilitário (MIDL, build personalizado, eventos de pré-build e pós-build).
 
-   Para acessar essa propriedade de forma programática, confira <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>.
+  Para acessar essa propriedade de forma programática, confira <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>.
 
 - **Uso do MFC**
 
