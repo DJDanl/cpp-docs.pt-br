@@ -29,12 +29,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: 7f3133aac1548be5cb497fe32ae4f9f1c0e238d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 278ee1e6dda9e153b55676ce5c0ca389f383efd1
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595124"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518405"
 ---
 # <a name="chmod-wchmod"></a>_chmod, _wchmod
 
@@ -63,13 +63,13 @@ Essas funções retornarão 0 se a configuração de permissão for alterada com
 
 O **chmod** função altera a configuração de permissão do arquivo especificado por *filename*. A configuração de permissão controla o acesso de leitura e gravação para o arquivo. A expressão de inteiro *pmode* contém uma ou ambas das seguintes constantes de manifesto, definidas em sys\stat.h.
 
-|*pmode*|Significado|
+| *pmode* | Significado |
 |-|-|
-**S_IREAD**|Somente a leitura é permitida.
-**S_IWRITE**|Gravação permitida. (Na verdade, permite leitura e gravação.)
-**S_IREAD** &AMP;#124; **S_IWRITE**|Leitura e gravação permitidas.
+| **\_S\_IREAD** | Somente a leitura é permitida. |
+| **\_S\_IWRITE** | Gravação permitida. (Na verdade, permite leitura e gravação.) |
+| **\_S\_IREAD** &AMP;#124;  **\_S\_IWRITE** | Leitura e gravação permitidas. |
 
-Quando as duas constantes são informadas, elas são unidas com o bit a bit ou operador (**|**). Se a permissão de gravação não for fornecida, o arquivo será somente leitura. Observe que todos os arquivos são sempre legíveis; não é possível dar permissão somente gravação. Portanto, os modos **s_iwrite** e **s_iread** | **s_iwrite** são equivalentes.
+Quando as duas constantes são informadas, elas são unidas com o bit a bit ou operador (**\|**). Se a permissão de gravação não for fornecida, o arquivo será somente leitura. Observe que todos os arquivos são sempre legíveis; não é possível dar permissão somente gravação. Portanto, os modos **s_iwrite** e **s_iread** \| **s_iwrite** são equivalentes.
 
 **wchmod** é uma versão de caractere largo de **chmod**; o *filename* argumento **wchmod** é uma cadeia de caracteres largos. **wchmod** e **chmod** se comportam de forma idêntica caso contrário.
 
@@ -157,7 +157,6 @@ int main( void )
 ```Output
 
 A line of text.
-
 ```
 
 ```Output
