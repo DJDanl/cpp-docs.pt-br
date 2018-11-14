@@ -31,12 +31,12 @@ helpviewer_keywords:
 - wspawnl function
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
-ms.openlocfilehash: 4dbc8fab611d98f7f87529196b0e10e85196faa9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11ff3447487fcaf1a4225825c222b873005b2a1c
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518073"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326973"
 ---
 # <a name="spawnl-wspawnl"></a>_spawnl, _wspawnl
 
@@ -83,11 +83,11 @@ O valor de retorno de um síncrono **spawnl** ou **wspawnl** (**p_wait** especif
 
 |||
 |-|-|
-**E2BIG**|A lista de argumentos ultrapassa 1.024 bytes.
-**EINVAL**|*modo* argumento é inválido.
-**ENOENT**|Arquivo ou caminho não encontrado.
-**ENOEXEC**|O arquivo especificado não é executável ou tem um formato de arquivo executável inválido.
-**ENOMEM**|Não há memória suficiente disponível para executar o novo processo.
+| **E2BIG** | A lista de argumentos ultrapassa 1.024 bytes. |
+| **EINVAL** | *modo* argumento é inválido. |
+| **ENOENT** | Arquivo ou caminho não encontrado. |
+| **ENOEXEC** | O arquivo especificado não é executável ou tem um formato de arquivo executável inválido. |
+| **ENOMEM** | Não há memória suficiente disponível para executar o novo processo. |
 
 Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

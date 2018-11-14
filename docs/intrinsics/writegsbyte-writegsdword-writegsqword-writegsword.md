@@ -12,12 +12,12 @@ helpviewer_keywords:
 - __writegsword intrinsic
 - __writegsdword intrinsic
 ms.assetid: 7746cf6d-2259-4139-9aab-c07dd75c8037
-ms.openlocfilehash: d0de62333500a7ced2c953d86502b4dfb08f5a04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e248d8a500dd7c855213ef87198f0227b3749a6
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632460"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326934"
 ---
 # <a name="writegsbyte-writegsdword-writegsqword-writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
 
@@ -28,21 +28,21 @@ Gravar a memória para um local especificado por um deslocamento relativo ao in�
 ## <a name="syntax"></a>Sintaxe
 
 ```
-void __writegsbyte( 
-   unsigned long Offset, 
-   unsigned char Data 
+void __writegsbyte(
+   unsigned long Offset,
+   unsigned char Data
 );
-void __writegsword( 
-   unsigned long Offset, 
-   unsigned short Data 
+void __writegsword(
+   unsigned long Offset,
+   unsigned short Data
 );
-void __writegsdword( 
-   unsigned long Offset, 
-   unsigned long Data 
+void __writegsdword(
+   unsigned long Offset,
+   unsigned long Data
 );
-void __writegsqword( 
-   unsigned long Offset, 
-   unsigned __int64 Data 
+void __writegsqword(
+   unsigned long Offset,
+   unsigned __int64 Data
 );
 ```
 

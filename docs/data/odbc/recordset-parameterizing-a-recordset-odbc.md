@@ -7,12 +7,12 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: fdea70f8d87604ca0665baa64c8652c14295a670
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f58a33a0c43cb0d70d98f3f2ae33f766058b1c23
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506568"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331263"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>Conjunto de registros: parametrizando um conjunto de registros (ODBC)
 
@@ -54,7 +54,7 @@ Usos típicos para os parâmetros incluem:
 
    Cadeia de caracteres de filtro de seu conjunto de registros, armazenada em `m_strFilter`, teria esta aparência:
 
-    ```
+    ```cpp
     "StudentID = ?"
     ```
 
@@ -62,7 +62,7 @@ Usos típicos para os parâmetros incluem:
 
    Atribua o valor do parâmetro da seguinte maneira:
 
-    ```
+    ```cpp
     strInputID = "100";
     ...
     m_strParam = strInputID;
@@ -70,7 +70,7 @@ Usos típicos para os parâmetros incluem:
 
    Você não gostaria de configurar uma cadeia de caracteres de filtro dessa maneira:
 
-    ```
+    ```cpp
     m_strFilter = "StudentID = 100";   // 100 is incorrectly quoted
                                        // for some drivers
     ```
@@ -79,15 +79,15 @@ Usos típicos para os parâmetros incluem:
 
    O valor do parâmetro é diferente cada vez que você consulte novamente o conjunto de registros para uma nova ID do aluno.
 
-    > [!TIP]
-    >  É mais eficiente do que simplesmente um filtro usando um parâmetro. Para um conjunto de registros com parâmetros, o banco de dados deve processar um SQL **selecionar** instrução somente uma vez. Para um conjunto de registros filtrado sem parâmetros, o **selecionar** instrução deve ser processada cada vez que você `Requery` com um novo valor de filtro.
+   > [!TIP]
+   > É mais eficiente do que simplesmente um filtro usando um parâmetro. Para um conjunto de registros com parâmetros, o banco de dados deve processar um SQL **selecionar** instrução somente uma vez. Para um conjunto de registros filtrado sem parâmetros, o **selecionar** instrução deve ser processada cada vez que você `Requery` com um novo valor de filtro.
 
 Para obter mais informações sobre filtros, consulte [conjunto de registros: filtrando registros (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
 
 ##  <a name="_core_parameterizing_your_recordset_class"></a> Parametrização de sua classe de conjunto de registros
 
 > [!NOTE]
->  Esta seção se aplica a objetos derivados de `CRecordset` em qual linha em massa buscando não foi implementado. Se você estiver usando a linha em massa buscando, a implementação de parâmetros é um processo semelhante. Para obter mais informações, consulte [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Esta seção se aplica a objetos derivados de `CRecordset` em qual linha em massa buscando não foi implementado. Se você estiver usando a linha em massa buscando, a implementação de parâmetros é um processo semelhante. Para obter mais informações, consulte [conjunto de registros: buscando registros em massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Antes de criar sua classe de conjunto de registros, determine quais parâmetros você precisa, seus tipos de dados e como o conjunto de registros utiliza.
 
@@ -116,7 +116,7 @@ Antes de criar sua classe de conjunto de registros, determine quais parâmetros 
 
 1. Modificar a [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) definição de função de membro no arquivo. cpp. Adicione uma chamada de função RFX para cada membro de dados de parâmetro adicionado à classe. Para obter informações sobre como escrever suas funções RFX, consulte [troca de campos do registro: como funciona a RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Preceda as chamadas RFX para os parâmetros com uma única chamada para:
 
-    ```
+    ```cpp
     pFX->SetFieldType( CFieldExchange::param );
     // RFX calls for parameter data members
     ```
@@ -130,11 +130,10 @@ Antes de criar sua classe de conjunto de registros, determine quais parâmetros 
    Em tempo de execução "?" espaços reservados são preenchidos na ordem, pelos valores do parâmetro que você passar. O primeiro membro de dados de parâmetro definido após o [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) chamada substitui o primeiro "?"na cadeia de caracteres SQL, o segundo membro de dados de parâmetro substitui a segunda"?" e assim por diante.
 
 > [!NOTE]
->  Ordem do parâmetro é importante: a ordem dos RFX chama para parâmetros em seu `DoFieldExchange` função deve corresponder à ordem dos espaços reservados de parâmetro na sua cadeia de caracteres SQL.
+> Ordem do parâmetro é importante: a ordem dos RFX chama para parâmetros em seu `DoFieldExchange` função deve corresponder à ordem dos espaços reservados de parâmetro na sua cadeia de caracteres SQL.
 
 > [!TIP]
-
->  A cadeia de caracteres mais provável para trabalhar com é a cadeia de caracteres que você especificar (se houver) para a classe [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) membro de dados, mas alguns drivers ODBC podem permitir que parâmetros em outras cláusulas SQL.
+> A cadeia de caracteres mais provável para trabalhar com é a cadeia de caracteres que você especificar (se houver) para a classe [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) membro de dados, mas alguns drivers ODBC podem permitir que parâmetros em outras cláusulas SQL.
 
 ##  <a name="_core_passing_parameter_values_at_run_time"></a> Passar valores de parâmetro em tempo de execução
 

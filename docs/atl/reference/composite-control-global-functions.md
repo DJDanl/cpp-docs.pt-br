@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: d86978c6bf8aba87828cdda91c3e849a2f755a90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6438b9d125cc2b44c6c4525dcfa5a2bd95763304
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525262"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524424"
 ---
 # <a name="composite-control-global-functions"></a>Funções globais de controle de composição
 
@@ -95,7 +95,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-Para obter mais informações sobre como editar scripts de recurso, consulte [como: abrir um arquivo de Script de recurso no formato de texto](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Para obter mais informações sobre instruções de definição de recurso de controle, consulte [parâmetros de controle comuns](/windows/desktop/menurc/common-control-parameters) no SDK do Windows *: SDK Tools*.
+Para obter mais informações sobre como editar scripts de recurso, consulte [como: abrir um arquivo de Script de recurso no formato de texto](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Para obter mais informações sobre instruções de definição de recurso de controle, consulte [parâmetros de controle comuns](/windows/desktop/menurc/common-control-parameters) no SDK do Windows: SDK Tools.
 
 Para obter mais informações sobre caixas de diálogo em geral, consulte [DialogBox](/windows/desktop/api/winuser/nf-winuser-dialogboxa) e [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) no SDK do Windows.
 
@@ -160,7 +160,7 @@ Um ponteiro para uma cadeia de caracteres a serem passados para o controle. Deve
 
 - Um CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Uma URL, como "http://www.microsoft.com"
+- Uma URL, como "<http://www.microsoft.com>"
 
 - Uma referência a um documento ativo, como "file://\\\Documents\MyDoc.doc"
 
@@ -212,7 +212,7 @@ Um ponteiro para uma cadeia de caracteres a serem passados para o controle. Deve
 
 - Um CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Uma URL, como "http://www.microsoft.com"
+- Uma URL, como "<http://www.microsoft.com>"
 
 - Uma referência a um documento ativo, como "file://\\\Documents\MyDoc.doc"
 
@@ -271,7 +271,7 @@ Um ponteiro para uma cadeia de caracteres a serem passados para o controle. Deve
 
 - Um CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Uma URL, como "http://www.microsoft.com"
+- Uma URL, como "<http://www.microsoft.com>"
 
 - Uma referência a um documento ativo, como "file://\\\Documents\MyDoc.doc"
 
@@ -325,7 +325,7 @@ Um ponteiro para uma cadeia de caracteres a serem passados para o controle. Deve
 
 - Um CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Uma URL, como "http://www.microsoft.com"
+- Uma URL, como "<http://www.microsoft.com>"
 
 - Uma referência a um documento ativo, como "file://\\\Documents\MyDoc.doc"
 

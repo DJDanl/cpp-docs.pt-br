@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LOCAL directive
 ms.assetid: 76147e2d-23ca-4f1e-8817-81428becd113
-ms.openlocfilehash: c8ea49b9862159a5a56bfb3d2c3cd0c1f4cd7413
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94af498865151ff5c49fac9dbc03de65c4ecb934
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596866"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327597"
 ---
 # <a name="local-masm"></a>LOCAL (MASM)
 
@@ -19,9 +19,9 @@ Na primeira diretiva, dentro de uma macro **LOCAL** define rótulos que são exc
 
 ## <a name="syntax"></a>Sintaxe
 
-> LOCAL *localname* [[, *localname*]]...
-
-> LOCAL *etiqueta* [[[*contagem*]]] [[:*tipo*]] [[, *rótulo* [[[*contagem*]]] [[ *tipo*]]]]...
+> LOCAL *localname* \[, *localname*]...
+>
+> LOCAL *etiqueta* \[ __\[__ *contagem*__]__ ] \[ __:__  *tipo de*] \[ __,__ *rótulo* \[ __\[__ *contagem* __]__  ] \[ *tipo*]]...
 
 ## <a name="remarks"></a>Comentários
 

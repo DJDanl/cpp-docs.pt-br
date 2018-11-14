@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], str
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
-ms.openlocfilehash: 87ea8150e13076d176665bc3ddcc04482d639b79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462019"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329638"
 ---
 # <a name="basicstringbuf-class"></a>Classe basic_stringbuf
 
@@ -183,7 +183,7 @@ Se a função não conseguir obter êxito, ela retornará `traits_type::eof`. Ca
 
 ### <a name="remarks"></a>Comentários
 
-Se _ *Meta* não comparar como igual a **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), a função membro virtual protegida tentará inserir o elemento **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_*Meta*) no buffer de saída. Isso pode ser feito de várias maneiras:
+Se  *\_Meta* comparar como igual a **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), a função de membro virtual protegida tenta inserir o elemento  **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*) no buffer de saída. Isso pode ser feito de várias maneiras:
 
 - Se houver uma posição de gravação disponível, ela poderá armazenar o elemento na posição de gravação e incrementar o próximo ponteiro para o buffer de saída.
 

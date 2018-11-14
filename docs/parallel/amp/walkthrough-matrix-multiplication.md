@@ -1,13 +1,13 @@
 ---
 title: 'Instruções passo a passo: multiplicação de matrizes'
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: a8f43f5b9df0726c9c01f940965b77b856e35430
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9516cf79b738ec03dd98133a4603b47f75eb2c8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647441"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327103"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Instruções passo a passo: multiplicação de matrizes
 
@@ -27,15 +27,15 @@ Antes de começar:
 
 1. Na barra de menus no Visual Studio, escolha **arquivo** > **New** > **projeto**.
 
-2. Sob **Installed** no painel de modelos, selecione **Visual C++**.
+1. Sob **Installed** no painel de modelos, selecione **Visual C++**.
 
-3. Selecione **projeto vazio**, insira `MatrixMultiply` no **nome** caixa e, em seguida, escolha o **Okey** botão.
+1. Selecione **projeto vazio**, insira *MatrixMultiply* no **nome** caixa e, em seguida, escolha o **Okey** botão.
 
-4. Escolha o botão **Avançar**.
+1. Escolha o botão **Avançar**.
 
-5. Na **Gerenciador de soluções**, abra o menu de atalho **arquivos de origem**e, em seguida, escolha **Add** > **Novo Item**.
+1. Na **Gerenciador de soluções**, abra o menu de atalho **arquivos de origem**e, em seguida, escolha **Add** > **Novo Item**.
 
-6. No **Adicionar Novo Item** caixa de diálogo, selecione **arquivo do C++ (. cpp)**, insira `MatrixMultiply.cpp` no **nome** caixa e, em seguida, escolha o **adicionar** botão.
+1. No **Adicionar Novo Item** caixa de diálogo, selecione **arquivo do C++ (. cpp)**, insira *MatrixMultiply.cpp* no **nome** caixa e, em seguida, escolha o  **Adicionar** botão.
 
 ## <a name="multiplication-without-tiling"></a>Multiplicação sem lado a lado
 
@@ -47,7 +47,7 @@ Nesta seção, considere a multiplicação de duas matrizes, A e B, que são def
 
 Um é uma matriz de 3 por 2 e B é uma matriz 2 por 3. O produto da multiplicação A por B é a seguinte matriz de 3 por 3. O produto é calculado multiplicando-se as linhas de um pelas colunas de B, elemento por elemento.
 
-![3&#45;por&#45;matriz 3](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")
+![3&#45;por&#45;matriz 3](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;,&#45;matriz 3")
 
 ### <a name="to-multiply-without-using-c-amp"></a>Multiplicar sem usar o C++ AMP
 
@@ -79,13 +79,13 @@ void main() {
 }
 ```
 
-    The algorithm is a straightforward implementation of the definition of matrix multiplication. It does not use any parallel or threaded algorithms to reduce the computation time.
+   O algoritmo é uma implementação simples da definição de multiplicação de matriz. Ele não usa qualquer algoritmo paralelo ou multithread para reduzir o tempo de computação.
 
-2. Na barra de menus, escolha **Arquivo** > **Salvar Todos**.
+1. Na barra de menus, escolha **Arquivo** > **Salvar Todos**.
 
-3. Escolha o **F5** atalho de teclado para iniciar a depuração e verificar se a saída está correta.
+1. Escolha o **F5** atalho de teclado para iniciar a depuração e verificar se a saída está correta.
 
-4. Escolher **Enter** para sair do aplicativo.
+1. Escolher **Enter** para sair do aplicativo.
 
 ### <a name="to-multiply-by-using-c-amp"></a>Multiplicar usando C++ AMP
 
@@ -124,16 +124,16 @@ void MultiplyWithAMP() {
 }
 ```
 
-    The AMP code resembles the non-AMP code. The call to `parallel_for_each` starts one thread for each element in `product.extent`, and replaces the `for` loops for row and column. The value of the cell at the row and column is available in `idx`. You can access the elements of an `array_view` object by using either the `[]` operator and an index variable, or the `()` operator and the row and column variables. The example demonstrates both methods. The `array_view::synchronize` method copies the values of the `product` variable back to the `productMatrix` variable.
+   O código de AMP lembra o código de AMP não. A chamada para `parallel_for_each` inicia um thread para cada elemento na `product.extent`e substitui o `for` loops de linha e coluna. O valor da célula na linha e coluna está disponível em `idx`. Você pode acessar os elementos de uma `array_view` objeto usando o `[]` operador e uma variável de índice, ou o `()` operador e as variáveis de linha e coluna. O exemplo demonstra ambos os métodos. O `array_view::synchronize` método copia os valores da `product` variável de volta para o `productMatrix` variável.
 
-2. Adicione o seguinte `include` e `using` instruções na parte superior da MatrixMultiply.cpp.
+1. Adicione o seguinte `include` e `using` instruções na parte superior da MatrixMultiply.cpp.
 
 ```cpp
 #include <amp.h>
 using namespace concurrency;
 ```
 
-3. Modificar a `main` método para chamar o `MultiplyWithAMP` método.
+1. Modificar a `main` método para chamar o `MultiplyWithAMP` método.
 
 ```cpp
 void main() {
@@ -143,9 +143,9 @@ void main() {
 }
 ```
 
-4. Escolha o **Ctrl**+**F5** atalho de teclado para iniciar a depuração e verificar se a saída está correta.
+1. Escolha o **Ctrl**+**F5** atalho de teclado para iniciar a depuração e verificar se a saída está correta.
 
-5. Escolha o **barra de espaços** para sair do aplicativo.
+1. Escolha o **barra de espaços** para sair do aplicativo.
 
 ## <a name="multiplication-with-tiling"></a>Multiplicação com lado a lado
 
@@ -159,23 +159,23 @@ Lado a lado é uma técnica em que você particionar dados em subconjuntos de ta
 
 Para tirar proveito de lado a lado em uma multiplicação de matriz, o algoritmo deve dividir a matriz em blocos e, em seguida, copie os dados do bloco em `tile_static` variáveis para acesso mais rápido. Neste exemplo, a matriz é particionada em submatrices de tamanho igual. O produto é encontrado multiplicando os submatrices. As duas matrizes e seus produtos neste exemplo são:
 
-![4&#45;por&#45;matriz 4](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")
+![4&#45;por&#45;matriz 4](../../parallel/amp/media/campmatrixatiled.png "4&#45;,&#45;matriz de 4 A")
 
-![4&#45;por&#45;matriz 4](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")
+![4&#45;por&#45;matriz 4](../../parallel/amp/media/campmatrixbtiled.png "4&#45;,&#45;matriz 4 B")
 
-![4&#45;por&#45;matriz 4](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")
+![4&#45;por&#45;matriz 4](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;,&#45;matriz 4 produto")
 
 As matrizes são particionadas em matrizes de quatro de 2 x 2, que são definidas da seguinte maneira:
 
-![4&#45;por&#45;matriz 4 particionados em 2&#45;por&#45;sub 2&#45;matrizes](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")
+![4&#45;por&#45;matriz 4 particionados em 2&#45;por&#45;sub 2&#45;matrizes](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;por&#45;matriz 4 particionados em 2&#45;por&#45;sub 2&#45;matrizes")
 
-![4&#45;por&#45;matriz 4 particionados em 2&#45;por&#45;sub 2&#45;matrizes](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")
+![4&#45;por&#45;matriz 4 particionados em 2&#45;por&#45;sub 2&#45;matrizes](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;por&#45;matriz 4 particionados em 2&#45;por&#45;sub 2&#45;matrizes")
 
 O produto de A e B agora pode ser gravada e calculada da seguinte maneira:
 
-![4&#45;por&#45;matriz 4 particionados em 2&#45;por&#45;sub 2&#45;matrizes](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")
+![4&#45;por&#45;matriz 4 particionados em 2&#45;por&#45;sub 2&#45;matrizes](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;por&#45;matriz 4 produto de um e B")
 
-Porque as matrizes `a` por meio de `h` são matrizes de 2 x 2, todos os produtos e somas, eles também são matrizes de 2 x 2. Ele segue também que A * B é uma 4x4 matriz, conforme o esperado. Para verificar rapidamente o algoritmo, calcule o valor do elemento na primeira linha, primeira coluna no produto. No exemplo, isso seria o valor do elemento na primeira linha e primeira coluna da `ae + bg`. Você só precisará calcular a primeira coluna, a primeira linha da `ae` e `bg` para cada termo. Esse valor para `ae` é `1*1 + 2*5 = 11`. O valor para `bg` é `3*1 + 4*5 = 23`. O valor final é `11 + 23 = 34`, que está correto.
+Porque as matrizes `a` por meio de `h` são matrizes de 2 x 2, todos os produtos e somas, eles também são matrizes de 2 x 2. Ele segue também que o produto de A e B é uma 4x4 matriz, conforme o esperado. Para verificar rapidamente o algoritmo, calcule o valor do elemento na primeira linha, primeira coluna no produto. No exemplo, isso seria o valor do elemento na primeira linha e primeira coluna da `ae + bg`. Você só precisará calcular a primeira coluna, a primeira linha da `ae` e `bg` para cada termo. Esse valor para `ae` é `(1 * 1) + (2 * 5) = 11`. O valor para `bg` é `(3 * 1) + (4 * 5) = 23`. O valor final é `11 + 23 = 34`, que está correto.
 
 Para implementar esse algoritmo, o código:
 

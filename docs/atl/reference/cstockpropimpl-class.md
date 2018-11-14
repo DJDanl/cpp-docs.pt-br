@@ -1,6 +1,6 @@
 ---
 title: Classe CStockPropImpl
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 f1_keywords:
 - CStockPropImpl
 - ATLCTL/ATL::CStockPropImpl
@@ -64,33 +64,33 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: 7befbce6e062bdb7944c2ed1f351d6927adfd75a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff7610d85d73a99d55d6181fad178d0b12be0c32
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480854"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332420"
 ---
 # <a name="cstockpropimpl-class"></a>Classe CStockPropImpl
 
 Essa classe fornece métodos para dar suporte a valores de propriedade de estoque.
 
 > [!IMPORTANT]
->  Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
+> Essa classe e seus membros não podem ser usados em aplicativos executados no tempo de execução do Windows.
 
 ## <a name="syntax"></a>Sintaxe
 
 ```
-template <class T, class InterfaceName,
+template <
+    class T, 
+    class InterfaceName,
     const IID* piid = &_ATL_IIDOF(InterfaceName),
     const GUID* plibid = &CComModule::m_libid,
     WORD wMajor = 1,
-    WORD wMinor = 0, class tihclass = CcomTypeInfoHolder>
-class ATL_NO_VTABLE CStockPropImpl : public IDispatchImpl<InterfaceName, piid,
-plibid,
-    wMajor,
-wMinor,
-    tihclass>
+    WORD wMinor = 0, 
+    class tihclass = CcomTypeInfoHolder>
+class ATL_NO_VTABLE CStockPropImpl :
+    public IDispatchImpl<InterfaceName, piid, plibid, wMajor, wMinor, tihclass>
 ```
 
 #### <a name="parameters"></a>Parâmetros
@@ -949,7 +949,7 @@ HRESULT STDMETHODCALLTYPE put_HWND(LONG_PTR /* hWnd */);
 
 ### <a name="parameters"></a>Parâmetros
 
-*/&ast; hWnd &ast;/*<br/>
+*hWnd*<br/>
 Reservado.
 
 ### <a name="return-value"></a>Valor de retorno

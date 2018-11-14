@@ -2,12 +2,12 @@
 title: Funções explicitamente usadas como padrão e excluídas
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-ms.openlocfilehash: a090bd1b1a60dd7a5a5350fcf81dec7f17e083c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa03ca826eebe467e45e2bb7e0bc47537d40f366
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662599"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327012"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Funções explicitamente usadas como padrão e excluídas
 
@@ -36,12 +36,12 @@ Isso é conveniente para tipos simples, mas os tipos complexos geralmente define
    - Nenhum operador de atribuição de movimentação será gerado automaticamente.
 
 > [!NOTE]
->  Além disso, o padrão C++11 especifica as seguintes regras adicionais:
+> Além disso, o padrão C++11 especifica as seguintes regras adicionais:
 >
 > - Se um construtor de cópia ou um destruidor for declarado explicitamente, a geração automática do operador de atribuição de cópia será preterida.
 > - Se um operador de atribuição de cópia ou um destruidor for declarado explicitamente, a geração automática do construtor de cópia será preterida.
 >
->  Nos dois casos, o Visual Studio continua a gerar as funções necessárias de forma automática e implícita, e não emite um aviso.
+> Nos dois casos, o Visual Studio continua a gerar as funções necessárias de forma automática e implícita, e não emite um aviso.
 
 As consequências dessas regras também podem vazar para as hierarquias de objetos. Por exemplo, se por algum motivo uma classe base não tiver um construtor padrão que pode ser chamado de uma classe derivada — ou seja, uma **pública** ou **protegido** construtor sem parâmetros —, em seguida, uma classe deriva de que ele não é possível gerar automaticamente seu próprio construtor padrão.
 

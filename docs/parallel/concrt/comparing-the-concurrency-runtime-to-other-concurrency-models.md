@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 0b5c24761f176d9c256c1ef6aee85b25231cea2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82e1dca1345b909919320b911c4c107e965c9850
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655839"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332667"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Comparando o Tempo de Execução de Simultaneidade com outros modelos de simultaneidade
 
@@ -33,7 +33,7 @@ O modelo preemptive e o cooperativo agendamento modelos são duas maneiras comun
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>Agendamento preemptivo e cooperativo
 
-*Agendamento preemptivo* é um mecanismo round-robin, com base em prioridade que oferece cada acesso exclusivo da tarefa a um recurso de computação para um determinado período de tempo e, em seguida, alterna para outra tarefa. Agendamento preventivo é comum em sistemas operacionais de multitarefa, como Windows *. Agendando cooperativo* é um mecanismo que fornece cada acesso exclusivo da tarefa a um recurso de computação até que a tarefa seja concluída ou até que a tarefa gera seu acesso ao recurso. O tempo de execução de simultaneidade usa agendamento cooperativo junto com o Agendador preemptive do sistema operacional para alcançar a utilização máxima dos recursos de processamento.
+*Agendamento preemptivo* é um mecanismo round-robin, com base em prioridade que oferece cada acesso exclusivo da tarefa a um recurso de computação para um determinado período de tempo e, em seguida, alterna para outra tarefa. É comum em sistemas operacionais de multitarefa, como Windows agendamento preemptivo. *Agendando cooperativo* é um mecanismo que fornece cada acesso exclusivo da tarefa a um recurso de computação até que a tarefa seja concluída ou até que a tarefa gera seu acesso ao recurso. O tempo de execução de simultaneidade usa agendamento cooperativo junto com o Agendador preemptive do sistema operacional para alcançar a utilização máxima dos recursos de processamento.
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>Diferenças entre os agendadores Preemptive e cooperativos
 

@@ -31,12 +31,12 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: 26d1713d-b551-4f21-a07b-e9891a2ae6cf
-ms.openlocfilehash: 03fa25f5800928aad7185c98a331d06b1c39779b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e3a8d3cf476dfff7c74007ec371c39f5128bbe7
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562013"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326466"
 ---
 # <a name="spawnve-wspawnve"></a>_spawnve, _wspawnve
 
@@ -82,11 +82,11 @@ O valor de retorno de um síncrono **spawnve** ou **wspawnve** (**p_wait** espec
 
 |||
 |-|-|
-**E2BIG**|A lista de argumentos ultrapassa 1.024 bytes.
-**EINVAL**|*modo* argumento é inválido.
-**ENOENT**|Arquivo ou caminho não encontrado.
-**ENOEXEC**|O arquivo especificado não é executável ou tem um formato de arquivo executável inválido.
-**ENOMEM**|Não há memória suficiente disponível para executar o novo processo.
+| **E2BIG** | A lista de argumentos ultrapassa 1.024 bytes. |
+| **EINVAL** | *modo* argumento é inválido. |
+| **ENOENT** | Arquivo ou caminho não encontrado. |
+| **ENOEXEC** | O arquivo especificado não é executável ou tem um formato de arquivo executável inválido. |
+| **ENOMEM** | Não há memória suficiente disponível para executar o novo processo. |
 
 Para obter mais informações sobre esses e outros códigos de retorno, consulte [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 8d4caca4d5a0b5c12b0af5a948b17b7e2ad05221
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4012f1f0729ff0f46a8504c44f27a37cd55c77e5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474263"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327441"
 ---
 # <a name="message-map-macros-mfc"></a>Macros de mapa de mensagem (MFC)
 
@@ -250,27 +250,8 @@ O nome da função de manipulador de mensagens para o qual o comando é mapeado.
 
 ### <a name="remarks"></a>Comentários
 
-Uma forma estendida de manipuladores de mensagens de comando está disponível para usos avançados. A macro ON_COMMAND_EX é usada para esses manipuladores de mensagens e fornece um superconjunto da funcionalidade [ON_COMMAND] (#on_command).  Funções de membro de manipulador de comandos estendidos usam um único parâmetro, UINT que contém a ID de comando e retornam um BOOL. O valor de retorno deve ser verdadeiras para
-
-Essa macro mapeia uma mensagem de comando para uma função de membro estendido do manipulador de comandos.
-
-### <a name="syntax"></a>Sintaxe
-
-```
-ON_COMMAND_EX(id,  memberFxn);
-```
-
-### <a name="parameters"></a>Parâmetros
-
-*id*<br/>
-A ID de comando.
-
-*memberFxn*<br/>
-O nome da função de manipulador de mensagens para o qual o comando é mapeado.
-
-### <a name="remarks"></a>Comentários
-
 Uma forma estendida de manipuladores de mensagens de comando está disponível para usos avançados. A macro ON_COMMAND_EX é usada para esses manipuladores de mensagens e fornece um superconjunto do [ON_COMMAND](message-map-macros-mfc.md#on_command) funcionalidade. Funções de membro de manipulador de comandos estendidos usam um único parâmetro, UINT que contém a ID de comando e retornam um BOOL. O valor de retorno deve ser verdadeiro para indicar que o comando foi tratado; Caso contrário, o roteamento continuará a outros objetos de destino do comando.
+
 Para obter mais informações, consulte a Observação técnica [TN006: mapas de mensagem] tm006 de mensagem de maps.md).
 
 ### <a name="requirements"></a>Requisitos

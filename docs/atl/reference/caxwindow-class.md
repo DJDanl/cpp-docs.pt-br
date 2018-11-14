@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-ms.openlocfilehash: 6e8ebad0f99e086387bf9946323a2c1ef864f391
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1a1e7fe00218efe7514fe59ea78ea30b33b878f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523774"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329560"
 ---
 # <a name="caxwindow-class"></a>Classe CAxWindow
 
@@ -136,7 +136,7 @@ Um ponteiro para uma cadeia de caracteres para criar o controle. Deve ser format
 
 - Um CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Uma URL, como "http://www.microsoft.com"
+- Uma URL, como "<http://www.microsoft.com>"
 
 - Uma referência a um documento ativo, como "file://\\\Documents\MyDoc.doc"
 
@@ -203,7 +203,7 @@ Um ponteiro para uma cadeia de caracteres para criar o controle. Deve ser format
 
 - Um CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Uma URL, como "http://www.microsoft.com"
+- Uma URL, como "<http://www.microsoft.com>"
 
 - Uma referência a um documento ativo, como "file://\\\Documents\MyDoc.doc"
 

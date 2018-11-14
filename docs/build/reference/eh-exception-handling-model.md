@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-ms.openlocfilehash: f118f55ddaa4a2dbc8a4a3ad1e596ec461a2b078
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8707ac716a010ea1d3dc0fa51740e76a5822462
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615053"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329294"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (modelo de tratamento de exceções)
 
@@ -29,12 +29,17 @@ Especifica o tipo de manipulação de exceção usado pelo compilador, ao otimiz
 
 ## <a name="arguments"></a>Arguments
 
-|||
-|-|-|
-**a**|O modelo de tratamento de exceções que captura assíncronas (estruturadas) e exceções síncronas (C++), pelo uso do C++ `catch(...)` sintaxe.
-**s**|O modelo de tratamento de exceções que captura somente exceções síncronas (C++) e informa ao compilador para assumir que as funções declaradas como **extern "C"** pode lançar uma exceção.
-**c**|Se usado com **s** (**/EHsc**), captura somente exceções C++ e informa ao compilador para assumir que as funções declaradas como **extern "C"** nunca geram uma exceção de C++. **/ EHca** é equivalente a **/EHa**.
-**r**|Informa ao compilador sempre gera verificações de término do tempo de execução para todos os **noexcept** funções. Por padrão, tempo de execução procura **noexcept** podem ser removidas se o compilador determina a função chama funções de não lançamento somente.
+**a**<br/>
+O modelo de tratamento de exceções que captura assíncronas (estruturadas) e exceções síncronas (C++), pelo uso do C++ `catch(...)` sintaxe.
+
+**s**<br/>
+O modelo de tratamento de exceções que captura somente exceções síncronas (C++) e informa ao compilador para assumir que as funções declaradas como **extern "C"** pode lançar uma exceção.
+
+**c**<br/>
+Se usado com **s** (**/EHsc**), captura somente exceções C++ e informa ao compilador para assumir que as funções declaradas como **extern "C"** nunca geram uma exceção de C++. **/ EHca** é equivalente a **/EHa**.
+
+**r**<br/>
+Informa ao compilador sempre gera verificações de término do tempo de execução para todos os **noexcept** funções. Por padrão, tempo de execução procura **noexcept** podem ser removidas se o compilador determina a função chama funções de não lançamento somente.
 
 ## <a name="remarks"></a>Comentários
 

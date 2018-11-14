@@ -9,12 +9,12 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 9e39929b4e669b6d7ed5662484ee71f762b4ea42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e7bbaad949b5f4456ce4c8aea60099792deb786
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618446"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329457"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Conjunto de registros: como conjuntos de registros selecionam registros (ODBC)
 
@@ -61,9 +61,8 @@ Quando você chama um objeto de conjunto de registros [aberto](../../mfc/referen
 
 - O [sort](../../data/odbc/recordset-sorting-records-odbc.md) a ordem de conjunto de registros, se houver, contido na [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort) membro de dados. A estrutura usa essa cadeia de caracteres para construir um SQL **ORDER BY** cláusula.
 
-
-    > [!TIP]
-    >  Para usar o SQL **GROUP BY** cláusula (e, possivelmente, o **HAVING** cláusula), as cláusulas de acréscimo ao final da cadeia de caracteres de filtro.
+   > [!TIP]
+   > Para usar o SQL **GROUP BY** cláusula (e, possivelmente, o **HAVING** cláusula), as cláusulas de acréscimo ao final da cadeia de caracteres de filtro.
 
 - Os valores de qualquer [membros de dados do parâmetro](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) especificar para a classe. Definir valores de parâmetro antes de chamar `Open` ou `Requery`. O framework associa os valores de parâmetro para "?" espaços reservados na cadeia de caracteres SQL. Em tempo de compilação, você pode especificar a cadeia de caracteres com espaços reservados. Em tempo de execução, o framework preenche os detalhes com base nos valores de parâmetro que você passe.
 

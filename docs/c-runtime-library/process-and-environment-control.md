@@ -11,12 +11,12 @@ helpviewer_keywords:
 - environment control routines
 - process control routines
 ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
-ms.openlocfilehash: 74194311eb33a23de5643b3cb956c2e3f752dea0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df080d1ed8c5a00711468a159acb07159ad31930
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525613"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329404"
 ---
 # <a name="process-and-environment-control"></a>Processo e controle de ambiente
 
@@ -46,7 +46,7 @@ Use as rotinas de controle de processo para iniciar, parar e gerenciar processos
 |[exit](../c-runtime-library/reference/exit-exit-exit.md)|Chamar funções registradas por **atexit** e **_onexit**, liberar todos os buffers, fechar todos os arquivos abertos e terminar o processo|
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|Terminar o processo imediatamente sem chamar **atexit** ou **_onexit** ou liberar buffers|
 |[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md), [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Obter o valor da variável do ambiente|
-|[_getpid](../c-runtime-library/reference/getpid.md)|Obter o número de identificação do processo|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/library/system.diagnostics.process.id.aspx)|
+|[_getpid](../c-runtime-library/reference/getpid.md)|Obter o número de identificação do processo|
 |[longjmp](../c-runtime-library/reference/longjmp.md)|Restaurar o ambiente de pilha salvo. Usá-lo para executar um **goto** não local|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|Agendar rotinas para execução no encerramento do programa; usar para compatibilidade com a versão 7.0 do Microsoft C/C++ e versões anteriores|
 |[_pclose](../c-runtime-library/reference/pclose.md)|Aguardar um novo processador de comando e fechar o fluxo no pipe associado|

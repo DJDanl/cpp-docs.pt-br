@@ -7,12 +7,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: c40f394a-8b2c-4896-ab30-6922863ddbb5
-ms.openlocfilehash: 740bf02d40dfcb236eef0dccbf55201dd79aec4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b60f48983913f4dc146af1b4645710cd1393d072
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493841"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328325"
 ---
 # <a name="adding-formatting-or-special-characters-to-a-string-resource-c"></a>Adicionando formatação ou caracteres especiais a um recurso de cadeia de caracteres (C++)
 
@@ -29,12 +29,12 @@ ms.locfileid: "50493841"
 
    |Para obter isso|Digite isto|
    |-----------------|---------------|
-   |Nova linha|\n|
-   |Retorno de carro|\r|
-   |Tabulação|\t|
-   |Barra invertida (\\)|\\\|
-   |Caractere ASCII|\ddd (notação octal)|
-   |alerta (sino)|\a|
+   | Nova linha | \\n |
+   | Retorno de carro | \\R |
+   | Tabulação | \\t |
+   | Barra invertida (\\) | \\\\ |
+   | Caractere ASCII | \\DDD (notação octal) |
+   | alerta (sino) | \\a |
 
 > [!NOTE]
 > O **cadeia de caracteres** editor não oferece suporte para o conjunto completo de caracteres de escape ASCI. Você pode usar apenas aqueles listados acima.

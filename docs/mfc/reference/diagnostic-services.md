@@ -20,12 +20,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: a6677d5d265b2de9f94160dae6afaedfb3c8b89f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a900a472a3783bde66584b64e361d80c606f0e9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644321"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524554"
 ---
 # <a name="diagnostic-services"></a>Serviços de diagnóstico
 
@@ -657,7 +657,7 @@ Para usar essa função com êxito:
 - O arquivo IMAGEHLP. DLL deve estar em seu caminho. Se você não tiver essa DLL, a função exibirá uma mensagem de erro. Ver [biblioteca de ajuda de imagem](/windows/desktop/Debug/image-help-library) para obter informações sobre o conjunto de funções fornecida pelo IMAGEHLP.
 
 - Os módulos que têm os quadros na pilha devem incluir informações de depuração. Se eles não contêm informações de depuração, a função ainda irá gerar um rastreamento de pilha, mas o rastreamento será menos detalhado.
-### <a name="requirements"></a>Requisitos
+  ### <a name="requirements"></a>Requisitos
 
 **Cabeçalho:** AFX. h
 

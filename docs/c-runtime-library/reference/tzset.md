@@ -23,12 +23,12 @@ helpviewer_keywords:
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-ms.openlocfilehash: 33fd1cc0a618fccc4a59e5aff059d3f2cdeec8fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6312297e6daa9b4790674bd26d21812d5bee34c6
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661750"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330249"
 ---
 # <a name="tzset"></a>_tzset
 
@@ -51,11 +51,11 @@ O **tzset** função usa a configuração atual da variável de ambiente **TZ** 
 
 |Parâmetro|Descrição|
 |-|-|
-*tzn*|Nome de fuso horário de três letras, como PST. Você deve especificar o deslocamento correto da hora local em UTC.
-*hh*|Diferença de horas entre UTC e hora local. Sinal (+) opcional para valores positivos.
-*mm*|Minutos. Separados dos *hh* por dois-pontos (**:**).
-*ss*|Segundos. Separados dos *mm* por dois-pontos (**:**).
-*dzn*|Fuso horário de verão com três letras, como PDT. Se o horário de verão nunca estiver em vigor na localidade, defina **TZ** sem um valor para *dzn*. A biblioteca em tempo de execução C presume as regras dos Estados Unidos para implementar o cálculo de DST (horário de verão).
+| *tzn* | Nome de fuso horário de três letras, como PST. Você deve especificar o deslocamento correto da hora local em UTC. |
+| *hh* | Diferença de horas entre UTC e hora local. Sinal (+) opcional para valores positivos. |
+| *mm* | Minutos. Separados dos *hh* por dois-pontos (**:**). |
+| *ss* | Segundos. Separados dos *mm* por dois-pontos (**:**). |
+| *dzn* | Fuso horário de verão com três letras, como PDT. Se o horário de verão nunca estiver em vigor na localidade, defina **TZ** sem um valor para *dzn*. A biblioteca em tempo de execução C presume as regras dos Estados Unidos para implementar o cálculo de DST (horário de verão). |
 
 > [!NOTE]
 > Tome cuidado ao calcular o sinal da diferença de tempo. Como a diferença de tempo é o deslocamento de hora local em UTC (e não o contrário), o sinal pode ser o oposto do que você intuitivamente poderia esperar. Para fusos horários à frente do UTC, a diferença de tempo é negativa; para aqueles antes do UTC, a diferença é positiva.

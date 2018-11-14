@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: a35188e0194a57ac399610f3130634132addf8f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3ca469058ba65f83b0df60a93c63895e34f916e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644815"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332212"
 ---
 # <a name="ltstringgt-operators"></a>Operadores de &lt;cadeia de caracteres&gt;
 
@@ -115,7 +115,7 @@ A cadeia de caracteres que é a concatenação de cadeias de caracteres de entra
 
 ### <a name="remarks"></a>Comentários
 
-As funções de cada sobrecarga `operator+` para concatenar dois objetos da classe de modelo [Classe basic_string](../standard-library/basic-string-class.md). Todos efetivamente retornam `basic_string` \< **CharType**, **Traits**, **Allocator**> (_ *Esquerda*). [append](../standard-library/basic-string-class.md#append)(\_ *Direita*).
+As funções de cada sobrecarga `operator+` para concatenar dois objetos da classe de modelo [Classe basic_string](../standard-library/basic-string-class.md). Todos efetivamente retornam `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Para obter mais informações, consulte [acrescentar](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Exemplo
 
@@ -575,7 +575,7 @@ Grava o valor de cadeia de caracteres especificada no fluxo de saída *_Ostr*.
 
 ### <a name="remarks"></a>Comentários
 
-As sobrecargas de função de modelo **operador<<** para inserir um objeto _ *Str* da classe de modelo [basic_string](../standard-library/basic-string-class.md) no fluxo de \_ *Ostr.* A função retorna efetivamente \_ *Ostr*. **gravar**( \_ *Str*. [c_str](../standard-library/basic-string-class.md#c_str), \_ *Str*. [tamanho](../standard-library/basic-string-class.md#size)).
+As sobrecargas de função de modelo **operador <<** inserir um objeto *str* da classe de modelo [basic_string](../standard-library/basic-string-class.md) no fluxo  *\_ Ostr*. A função retorna efetivamente `_Ostr.write( str.c_str, str.size )`.
 
 ## <a name="op_gt"></a>  operator&gt;
 

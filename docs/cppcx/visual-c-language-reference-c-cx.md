@@ -2,12 +2,12 @@
 title: Referência da linguagem Visual C++ (C++/CX)
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: 97d4f6391a02dd88e15c8fa4145539ab41a4dae3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8d73523a2b9ae577125975726f0072503f0e2e0
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599999"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330418"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Referência da linguagem Visual C++ (C++/CX)
 
@@ -15,7 +15,7 @@ C + + c++ /CX é um conjunto de extensões para a linguagem C++ que permitem a c
 
 > [!NOTE]
 > **[C + + c++ /CLI WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index) é a alternativa recomendada para C + + c++ /CX**. É uma nova, o padrão C + + 17 projeção de linguagem para APIs do tempo de execução do Windows, disponível no Windows 10 SDK mais recente da versão 1803 em diante. C + + c++ /CLI WinRT é implementado inteiramente em arquivos de cabeçalho e projetado para fornecer acesso de primeira classe à moderna API do Windows.
-
+>
 > Com C + + c++ /CLI WinRT, você pode consumir e criar APIs do Windows Runtime usando qualquer compilador que 17 compatível com os padrões C + +. C + + c++ /CLI WinRT normalmente tem um desempenho melhor e produz binários menores do que qualquer outra opção de idioma para o tempo de execução do Windows. Continuaremos a dar suporte a C + + c++ /CLI CX e WRL, mas altamente recomendável que usem novos aplicativos C + + c++ /CLI WinRT. Para obter mais informações, consulte [C + + c++ /CLI WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
 
 Usando C + + c++ /CX, você pode criar:

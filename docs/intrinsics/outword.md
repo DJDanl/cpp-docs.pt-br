@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __outword intrinsic
 - out instruction
 ms.assetid: 995f8834-0f50-4b4f-a7a2-af0e7c371cda
-ms.openlocfilehash: e5a6274fef9d9e9e4a168b9849ab0021c32a4716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a34dfe8bfaedf8f6df5e6f26015eeccd67ed957
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626181"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332004"
 ---
 # <a name="outword"></a>__outword
 
@@ -23,9 +23,9 @@ Gera o `out` instrução, que envia a palavra `Data` para a porta de e/s especif
 ## <a name="syntax"></a>Sintaxe
 
 ```
-void __outword( 
-   unsigned short Port, 
-   unsigned short Data 
+void __outword(
+   unsigned short Port,
+   unsigned short Data
 );
 ```
 

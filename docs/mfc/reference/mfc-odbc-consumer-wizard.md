@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: f86eded7cc7c04a85b1bcd93e917bd5a2b5c9696
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b2d554cb6b4eaeb7ee1ddd884aefb3ab6da0f2e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590873"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523410"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Assistente de consumidor ODBC MFC
 
@@ -25,30 +25,30 @@ Este assistente configura uma classe de conjunto de registros ODBC e as associa�
 
 - **Fonte de dados**
 
-   O **fonte de dados** botão permite que você defina a fonte de dados especificado usando o driver ODBC especificado. Para obter mais informações sobre arquivos de fonte de dados (DSN), consulte [fontes de dados de arquivo](/previous-versions/windows/desktop/ms715401) no SDK do ODBC.
+  O **fonte de dados** botão permite que você defina a fonte de dados especificado usando o driver ODBC especificado. Para obter mais informações sobre arquivos de fonte de dados (DSN), consulte [fontes de dados de arquivo](/previous-versions/windows/desktop/ms715401) no SDK do ODBC.
 
-   O **Selecionar fonte de dados** caixa de diálogo tem duas guias:
+  O **Selecionar fonte de dados** caixa de diálogo tem duas guias:
 
-   - **Fonte de dados do arquivo** guia:
+  - **Fonte de dados do arquivo** guia:
 
-      O **xaminar** caixa especifica o diretório no qual selecionar arquivos a serem usados como fontes de dados. O padrão é \Program Comuns\odbc\fontes de dados. As fontes de dados de arquivo existente (arquivos. DSN) são exibidos na caixa de listagem principal. Você pode definir as fontes de dados previamente usando o **DSN de arquivo** guia o [administrador de fonte de dados ODBC](/previous-versions/windows/desktop/ms714024), ou crie novos objetos usando essa caixa de diálogo.
+     O **xaminar** caixa especifica o diretório no qual selecionar arquivos a serem usados como fontes de dados. O padrão é \Program Comuns\odbc\fontes de dados. As fontes de dados de arquivo existente (arquivos. DSN) são exibidos na caixa de listagem principal. Você pode definir as fontes de dados previamente usando o **DSN de arquivo** guia o [administrador de fonte de dados ODBC](/previous-versions/windows/desktop/ms714024), ou crie novos objetos usando essa caixa de diálogo.
 
-      Para criar uma nova fonte de dados de arquivo nessa caixa de diálogo, clique em `New` para especificar um nome DSN; a **criar nova fonte de dados** caixa de diálogo é exibida. No **criar nova fonte de dados** diálogo caixa, selecione um driver apropriado e clique em `Next`; clique em **procurar**e selecione o nome do arquivo a ser usado como uma fonte de dados (você precisa selecionar "Todos os arquivos" para modo de exibição não DSN arquivos, como arquivos. xls); Clique em `Next`e, em seguida, clique em **concluir**. (Se você tiver selecionado um arquivo não DSN, você obterá uma caixa de diálogo de específicos do driver, como "Configurar ODBC para Microsoft Excel," que converterá o arquivo em um DSN.)
+     Para criar uma nova fonte de dados de arquivo nessa caixa de diálogo, clique em `New` para especificar um nome DSN; a **criar nova fonte de dados** caixa de diálogo é exibida. No **criar nova fonte de dados** diálogo caixa, selecione um driver apropriado e clique em `Next`; clique em **procurar**e selecione o nome do arquivo a ser usado como uma fonte de dados (você precisa selecionar "Todos os arquivos" para modo de exibição não DSN arquivos, como arquivos. xls); Clique em `Next`e, em seguida, clique em **concluir**. (Se você tiver selecionado um arquivo não DSN, você obterá uma caixa de diálogo de específicos do driver, como "Configurar ODBC para Microsoft Excel," que converterá o arquivo em um DSN.)
 
-      > [!NOTE]
-      > Você também pode criar uma nova fonte de dados de arquivo antes de usar o administrador de fonte de dados ODBC. Dos **inicie** menu, selecione **configurações**, **painel de controle**, **ferramentas administrativas**, **fontes de dados (ODBC)** e então **administrador de fonte de dados ODBC**.
+     > [!NOTE]
+     > Você também pode criar uma nova fonte de dados de arquivo antes de usar o administrador de fonte de dados ODBC. Dos **inicie** menu, selecione **configurações**, **painel de controle**, **ferramentas administrativas**, **fontes de dados (ODBC)** e então **administrador de fonte de dados ODBC**.
 
-      O **nome DSN** caixa permite que você especifique um nome para a fonte de dados de arquivo. Você deve garantir que o nome DSN termina com a extensão de arquivo apropriado, como. xls para arquivos do Excel ou. mdb para acessar os arquivos.
+     O **nome DSN** caixa permite que você especifique um nome para a fonte de dados de arquivo. Você deve garantir que o nome DSN termina com a extensão de arquivo apropriado, como. xls para arquivos do Excel ou. mdb para acessar os arquivos.
 
-      Para obter mais informações sobre DSNs, consulte [fontes de dados de arquivo](/previous-versions/windows/desktop/ms715401) no SDK do ODBC.
+     Para obter mais informações sobre DSNs, consulte [fontes de dados de arquivo](/previous-versions/windows/desktop/ms715401) no SDK do ODBC.
 
-   - **Fonte de dados de máquina** guia:
+  - **Fonte de dados de máquina** guia:
 
-      Essa guia lista de fontes de dados de usuário e do sistema. Fontes de dados do usuário são específicas a um usuário neste computador. Fontes de dados do sistema podem ser usadas por todos os usuários neste computador ou em um serviço de todo o sistema. Ver [fontes de dados de máquina](/previous-versions/windows/desktop/ms710952) no SDK do ODBC
+     Essa guia lista de fontes de dados de usuário e do sistema. Fontes de dados do usuário são específicas a um usuário neste computador. Fontes de dados do sistema podem ser usadas por todos os usuários neste computador ou em um serviço de todo o sistema. Ver [fontes de dados de máquina](/previous-versions/windows/desktop/ms710952) no SDK do ODBC
 
-      Para obter mais informações sobre fontes de dados ODBC, consulte [fontes de dados](/previous-versions/windows/desktop/ms711688) no SDK do ODBC.
+     Para obter mais informações sobre fontes de dados ODBC, consulte [fontes de dados](/previous-versions/windows/desktop/ms711688) no SDK do ODBC.
 
-   Clique em **Okey** para concluir. O **Selecionar objeto de banco de dados** caixa de diálogo é exibida. Nessa caixa de diálogo, selecione a tabela ou exibição que o consumidor usará. Observe que você pode selecionar várias tabelas e exibições mantendo a tecla control ao clicar nos itens. Clique em **Okey** para concluir.
+  Clique em **Okey** para concluir. O **Selecionar objeto de banco de dados** caixa de diálogo é exibida. Nessa caixa de diálogo, selecione a tabela ou exibição que o consumidor usará. Observe que você pode selecionar várias tabelas e exibições mantendo a tecla control ao clicar nos itens. Clique em **Okey** para concluir.
 
 - **Class**
 

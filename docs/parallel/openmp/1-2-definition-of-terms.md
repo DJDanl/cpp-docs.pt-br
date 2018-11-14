@@ -2,12 +2,12 @@
 title: 1.2 Definições de termos
 ms.date: 11/04/2016
 ms.assetid: fcaa8eb8-bbbf-4a24-ad0e-e299c442db79
-ms.openlocfilehash: ac117a03f784e617e5db246f4bda28e350d2e7a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cd8bcc47a7fc9d1d0683c220ccd5ef1edac2b4e9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597204"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326024"
 ---
 # <a name="12-definition-of-terms"></a>1.2 Definições de termos
 
@@ -63,7 +63,7 @@ Os seguintes termos são usados neste documento:
 
 - bloco estruturado
 
-   Um bloco estruturado é uma instrução (única ou composta) que tem uma única entrada e uma única saída. Nenhuma instrução é um bloco estruturado, se houver um salto para dentro ou fora dessa instrução (incluindo uma chamada para **longjmp**(3C) ou o uso de **throw**, mas uma chamada para **sair** é permitido). Uma instrução composta é um bloco estruturado, se sua execução sempre começa na abertura **{** e sempre termina no fechamento **}**. Uma instrução de expressão, a instrução de seleção, a instrução de iteração, ou **tente** bloco é um bloco estruturado, se a instrução composta correspondente é obtido, colocando-o no **{** e **}** seria um bloco estruturado. Uma instrução de salto, a instrução rotulada ou a instrução de declaração não é um bloco estruturado.
+   Um bloco estruturado é uma instrução (única ou composta) que tem uma única entrada e uma única saída. Nenhuma instrução é um bloco estruturado, se houver um salto para dentro ou fora dessa instrução (incluindo uma chamada para **longjmp**(3C) ou o uso de **throw**, mas uma chamada para **sair** é permitido). Uma instrução composta é um bloco estruturado, se sua execução sempre começa na abertura **{** e sempre termina no fechamento **}**. Uma instrução de expressão, a instrução de seleção, a instrução de iteração, ou **tente** bloco é um bloco estruturado, se a instrução composta correspondente é obtido, colocando-o no **{** e **}**  seria um bloco estruturado. Uma instrução de salto, a instrução rotulada ou a instrução de declaração não é um bloco estruturado.
 
 - Equipe
 

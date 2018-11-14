@@ -108,12 +108,12 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 3c9b1081a7e2ccd45c64c1cbcd833dcda9470f7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8911c3763e6a0c861c162611e1b2617ec26f0cf9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648663"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333341"
 ---
 # <a name="iosbase-class"></a>Classe ios_base
 
@@ -914,7 +914,7 @@ Os sinalizadores de formato anterior
 
 ### <a name="remarks"></a>Comentários
 
-A primeira função membro chama efetivamente [sinalizadores](#flags)(_ *máscara* &#124; \_ *sinalizadores*) (conjunto de bits selecionadas) e, em seguida, retorna os sinalizadores de formato anterior. A segunda função membro chama efetivamente **sinalizadores**(\_ *máscara* **& fmtfl, sinalizadores & ~**`_Mask`) (substitua bits selecionados em uma máscara) e, em seguida, retorna os sinalizadores de formato anterior.
+A primeira função membro chama efetivamente [sinalizadores](#flags)(  *\_máscara* &#124;  *\_sinalizadores*) (conjunto de bits selecionadas) e, em seguida, retorna o sinalizadores de formato anterior. A segunda função membro efetivamente chama `flags(_Mask & fmtfl, flags & ~_Mask)` (substitua bits selecionados em uma máscara) e, em seguida, retorna os sinalizadores de formato anterior.
 
 ### <a name="example"></a>Exemplo
 

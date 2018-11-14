@@ -4,12 +4,12 @@ ms.date: 09/20/2018
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-ms.openlocfilehash: d618d79c50892523b3e4a71be163b8778402e48e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a52486658307f001001e91772dad1167730def2
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570333"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519263"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Instruções passo a passo: atualizando o aplicativo de rabisco MFC (parte 2)
 
@@ -120,25 +120,25 @@ O aplicativo de rabisco original permite que o usuário selecione larguras de ca
 
    1. Adicione o código a seguir ao `CScribbleDoc::OnPenThinWidth`.
 
-    ```cpp
-    // Get a pointer to the ribbon bar
-    CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar();
-    ASSERT_VALID(pRibbon);
+        ```cpp
+        // Get a pointer to the ribbon bar
+        CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar();
+        ASSERT_VALID(pRibbon);
 
-    // Get a pointer to the Thin Width combo box
-    CMFCRibbonComboBox* pThinComboBox = DYNAMIC_DOWNCAST(
-    CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THIN_WIDTH));
+        // Get a pointer to the Thin Width combo box
+        CMFCRibbonComboBox* pThinComboBox = DYNAMIC_DOWNCAST(
+        CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THIN_WIDTH));
 
-    //Get the selected value
-    int nCurSel = pThinComboBox->GetCurSel();
-    if (nCurSel>= 0)
-    {
-        m_nThinWidth = atoi(CStringA(pThinComboBox->GetItem(nCurSel)));
-    }
+        //Get the selected value
+        int nCurSel = pThinComboBox->GetCurSel();
+        if (nCurSel>= 0)
+        {
+            m_nThinWidth = atoi(CStringA(pThinComboBox->GetItem(nCurSel)));
+        }
 
-    // Create a new pen using the selected width
-    ReplacePen();
-    ```
+        // Create a new pen using the selected width
+        ReplacePen();
+        ```
 
 1. Em seguida, crie um menu de manipuladores de eventos e de item para a caneta grossa.
 
@@ -154,23 +154,23 @@ O aplicativo de rabisco original permite que o usuário selecione larguras de ca
 
    1. Adicione o código a seguir ao `CScribbleDoc::OnPenThickWidth`.
 
-      ```cpp
-      // Get a pointer to the ribbon bar
-      CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx *) AfxGetMainWnd())->GetRibbonBar();
-      ASSERT_VALID(pRibbon);
+        ```cpp
+        // Get a pointer to the ribbon bar
+        CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx *) AfxGetMainWnd())->GetRibbonBar();
+        ASSERT_VALID(pRibbon);
 
-      CMFCRibbonComboBox* pThickComboBox = DYNAMIC_DOWNCAST(
-          CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THICK_WIDTH));
-      // Get the selected value
-      int nCurSel = pThickComboBox->GetCurSel();
-      if (nCurSel>= 0)
-      {
-          m_nThickWidth = atoi(CStringA(pThickComboBox->GetItem(nCurSel)));
-      }
+        CMFCRibbonComboBox* pThickComboBox = DYNAMIC_DOWNCAST(
+            CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THICK_WIDTH));
+        // Get the selected value
+        int nCurSel = pThickComboBox->GetCurSel();
+        if (nCurSel>= 0)
+        {
+            m_nThickWidth = atoi(CStringA(pThickComboBox->GetItem(nCurSel)));
+        }
 
-      // Create a new pen using the selected width
-      ReplacePen();
-      ```
+        // Create a new pen using the selected width
+        ReplacePen();
+        ```
 
 1. Salve as alterações e, em seguida, compilar e executar o aplicativo. Novos botões e caixas de combinação devem ser exibidas. Tente usar larguras diferentes caneta Rabiscar.
 

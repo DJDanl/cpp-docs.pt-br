@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: f5f33cbb179e3d0304f8128066dc04d6c3927d8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 633571f00cfe761b687e9b76624029f57ab6043e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565367"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523904"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
@@ -21,7 +21,6 @@ Define as classes de modelo do contêiner set e multiset e seus modelos de supor
 
 ```cpp
 #include <set>
-
 ```
 
 ## <a name="members"></a>Membros

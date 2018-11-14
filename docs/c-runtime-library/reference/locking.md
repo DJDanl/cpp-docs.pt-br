@@ -25,12 +25,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: 1309d99d8e7040626384e38324c1e910e4731295
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90327ed3388d4f18e0f64f92c33112c9ddd800f5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523776"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327038"
 ---
 # <a name="locking"></a>_locking
 
@@ -63,10 +63,10 @@ O número de bytes a serem bloqueados.
 
 |Valor errno|Condição|
 |-|-|
-**EACCES**|Violação de bloqueio (arquivo já foi bloqueado ou desbloqueado).
-**EBADF**|Descritor de arquivo inválido.
-**EDEADLOCK**|Violação de bloqueio. Retornado quando o **lk_lock** ou **lk_rlck** sinalizador for especificado e o arquivo não pode ser bloqueado após 10 tentativas.
-**EINVAL**|Um argumento inválido foi fornecido ao **Locking**.
+| **EACCES** | Violação de bloqueio (arquivo já foi bloqueado ou desbloqueado). |
+| **EBADF** | Descritor de arquivo inválido. |
+| **EDEADLOCK** | Violação de bloqueio. Retornado quando o **lk_lock** ou **lk_rlck** sinalizador for especificado e o arquivo não pode ser bloqueado após 10 tentativas. |
+| **EINVAL** | Um argumento inválido foi fornecido ao **Locking**. |
 
 Se houver uma falha devido a um parâmetro incorreto, como um descritor de arquivo inválido, o manipulador de parâmetro inválido será invocado, conforme descrito em [Validação de Parâmetro](../../c-runtime-library/parameter-validation.md).
 
@@ -78,11 +78,11 @@ O **Locking** função bloqueia ou desbloqueia *nbytes* bytes do arquivo especif
 
 |*modo* valor|Efeito|
 |-|-|
-**LK_LOCK**|Bloqueia os bytes especificados. Se os bytes não puderem ser bloqueados, o programa tentará novamente após 1 segundo. Se, após 10 tentativas, os bytes não puderem ser bloqueados, a constante retornará um erro.
-**LK_NBLCK**|Bloqueia os bytes especificados. Se os bytes não puderem ser bloqueados, a constante retornará um erro.
-**LK_NBRLCK**|Mesmo que **lk_nblck**.
-**LK_RLCK**|Mesmo que **lk_lock**.
-**LK_UNLCK**|Desbloqueia os bytes especificados, que devem ter sido bloqueados anteriormente.
+| **LK_LOCK** | Bloqueia os bytes especificados. Se os bytes não puderem ser bloqueados, o programa tentará novamente após 1 segundo. Se, após 10 tentativas, os bytes não puderem ser bloqueados, a constante retornará um erro. |
+| **LK_NBLCK** | Bloqueia os bytes especificados. Se os bytes não puderem ser bloqueados, a constante retornará um erro. |
+| **LK_NBRLCK** | Mesmo que **lk_nblck**. |
+| **LK_RLCK** | Mesmo que **lk_lock**. |
+| **LK_UNLCK** | Desbloqueia os bytes especificados, que devem ter sido bloqueados anteriormente. |
 
 Várias regiões de um arquivo que não se sobrepõem podem ser bloqueadas. Uma região que está sendo desbloqueada deve ter sido bloqueada anteriormente. **Locking** mescla regiões adjacentes; se duas regiões bloqueadas forem adjacentes, cada região deve ser desbloqueada separadamente. Regiões devem ser bloqueadas por um curto período de tempo e devem ser desbloqueadas antes de fechar um arquivo ou sair do programa.
 

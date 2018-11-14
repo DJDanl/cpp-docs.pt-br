@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: 72038e119f7d4483dcd6c6b343d20fd3655856b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3bf93a876f9092d5615b75ca45fea71341d3557
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533868"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327337"
 ---
 # <a name="cchecklistbox-class"></a>Classe CCheckListBox
 
@@ -80,13 +80,13 @@ Se você quiser manipular mensagens de notificação do Windows enviadas por uma
 
 Cada entrada de mapa de mensagem usa o seguinte formato:
 
-**On _** notificação **(**`id`, `memberFxn` **)**
+**Diante\_**_notificação_ **(** _id_, _memberFxn_ **)**
 
 em que `id` Especifica a ID de janela filho do controle que está enviando a notificação e `memberFxn` é o nome da função de membro pai que você tenha escrito para manipular a notificação.
 
 O protótipo de função do pai é o seguinte:
 
-**afx_msg** `void` `memberFxn` **();**
+`afx_msg void memberFxn();`
 
 Há apenas uma entrada de mapa de mensagens que pertencem especificamente ao `CCheckListBox` (mas consulte também as entradas de mapa de mensagem para [CListBox](../../mfc/reference/clistbox-class.md)):
 

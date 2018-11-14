@@ -1,15 +1,15 @@
 ---
 title: Criando um consumidor simples
-ms.date: 10/09/2018
+ms.date: 11/06/2018
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: 2a10e4da743c1f867d801ffe6767ab6b5b6c0290
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4346bca99d3744657072a4940776934e3c03e9de
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608046"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326635"
 ---
 # <a name="creating-a-simple-consumer"></a>Criando um consumidor simples
 
@@ -51,18 +51,18 @@ Em seguida, use o **ATL OLE DB Assistente de consumidor** para adicionar um obje
 
 1. No **propriedades de vínculo de dados** caixa de diálogo caixa, faça o seguinte:
 
-    1. Sobre o **provedor** guia, especifique um provedor OLE DB.
+   1. Sobre o **provedor** guia, especifique um provedor OLE DB.
 
-    1. Sobre o **Conexão** , especifique as informações necessárias, como o nome do servidor, ID de logon e senha para sua fonte de dados e o banco de dados no servidor.
+   1. Sobre o **Conexão** , especifique as informações necessárias, como o nome do servidor, ID de logon e senha para sua fonte de dados e o banco de dados no servidor.
 
-       > [!NOTE]
-       > Há um problema de segurança com o **permitir salvamento de senha** recurso da **propriedades de vínculo de dados** caixa de diálogo. No **insira as informações de logon para o servidor**, há dois botões de opção: **segurança integrada Use Windows NT** e **usar um determinado nome de usuário e senha**.
+      > [!NOTE]
+      > Há um problema de segurança com o **permitir salvamento de senha** recurso da **propriedades de vínculo de dados** caixa de diálogo. No **insira as informações de logon para o servidor**, há dois botões de opção: **segurança integrada Use Windows NT** e **usar um determinado nome de usuário e senha**.
 
-       > [!NOTE]
-       > Se você selecionar **usar um determinado nome de usuário e senha**, você tem a opção de salvar a senha (usando o **permitir salvamento de senha** caixa de seleção); no entanto, essa opção não é segura. É recomendável que você selecione **a segurança integrada Use Windows NT**; essa opção usa o Windows NT para verificar sua identidade.
+      > [!NOTE]
+      > Se você selecionar **usar um determinado nome de usuário e senha**, você tem a opção de salvar a senha (usando o **permitir salvamento de senha** caixa de seleção); no entanto, essa opção não é segura. É recomendável que você selecione **a segurança integrada Use Windows NT**; essa opção usa o Windows NT para verificar sua identidade.
 
-       > [!NOTE]
-       > Se você não pode usar segurança integrada do Windows NT, você deve usar um aplicativo de camada intermediária para solicitar ao usuário a senha ou para armazenar a senha em um local com mecanismos de segurança para ajudar a protegê-lo (em vez de no código-fonte).
+      > [!NOTE]
+      > Se você não pode usar segurança integrada do Windows NT, você deve usar um aplicativo de camada intermediária para solicitar ao usuário a senha ou para armazenar a senha em um local com mecanismos de segurança para ajudar a protegê-lo (em vez de no código-fonte).
 
    1. Depois de selecionar o provedor e outras configurações, clique em **Conexão de teste** para verificar as seleções feitas nas páginas de caixa de diálogo anterior. Se o **resultados** caixa relatórios `Test connection succeeded`, clique em **Okey** para criar o link de dados.
 

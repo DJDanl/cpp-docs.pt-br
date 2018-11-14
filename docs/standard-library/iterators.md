@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: cf1f519521d86f2b7782fb93ed3b4aca4ecd5b24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b6713a80244d7063baac2c75ffead76fe93facc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643437"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326493"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -41,7 +41,7 @@ for (auto num : vec)
 
 Há cinco categorias de iteradores. Em ordem crescente de potência, as categorias são:
 
-- **Saída**. Uma *iterador de saída* `X` pode iterar para frente em uma sequência usando o **++** operador e pode gravar apenas uma vez, um elemento usando o **&ast;** operador.
+- **Saída**. Uma *iterador de saída* `X` pode iterar para frente em uma sequência usando o **++** operador e pode gravar apenas uma vez, um elemento usando o __\*__ operador.
 
 - **Entrada**. Uma *iterador de entrada* `X` pode iterar para frente em uma sequência usando o + + operador e pode ler um elemento qualquer número de vezes usando a **&ast;** operador. Você pode comparar iteradores de entrada usando o **++** e **! =** operadores. Depois de você incrementar qualquer cópia de um iterador de entrada, nenhuma das outras cópias pode ser comparada, cancelada ou incrementada com segurança.
 

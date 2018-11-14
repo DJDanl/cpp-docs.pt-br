@@ -29,12 +29,12 @@ helpviewer_keywords:
 - single OpenMP directive
 - threadprivate OpenMP directive
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
-ms.openlocfilehash: eb371f4a2a16ea851b075d7e3819260e68945ffb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a61e74bda4e508bac3c4afd183fa2ab204c629d1
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542955"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333235"
 ---
 # <a name="openmp-directives"></a>Diretivas OpenMP
 
@@ -578,7 +578,7 @@ Identifica as seções de código a ser dividida entre todos os threads.
    #pragma omp section
    {
       code_block
-   } 
+   }
 }
 ```
 
@@ -631,7 +631,7 @@ Hello from thread 0
 Permite que você especifique que uma seção de código deve ser executada em um único thread, não necessariamente o thread mestre.
 
 ```
-#pragma omp single [clauses] 
+#pragma omp single [clauses]
 {
    code_block
 }

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - browsing database file, .sdf
 - file types [C++], project files
 ms.assetid: 5823b954-36cf-42d3-8fd5-25bab3ef63d9
-ms.openlocfilehash: 8b84c28db2afb914a73a0cb4d0d778c99cfd6635
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea7fc0fa7ea57de9f12f30804ace2cecccaa4bff
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616631"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330879"
 ---
 # <a name="project-and-solution-files"></a>Arquivos de projeto e solução
 
@@ -29,8 +29,8 @@ Os arquivos a seguir são criados quando você cria um projeto no Visual Studio.
 |*Nome_do_projeto*.vcxproj|*Nome_do_projeto*|Não exibido no Gerenciador de Soluções|O arquivo de *projeto*. Armazena informações específicas a cada projeto. (Nas versões anteriores, esse arquivo era nomeado *Nome_do_projeto*.vcproj ou *Nome_do_projeto*.dsp.) Para obter um exemplo de arquivo de projeto do Visual C++, confira [Arquivos de projeto](../ide/project-files.md).|
 |*Nome_do_projeto*.vcxitems|*Nome_do_projeto*|Não exibido no Gerenciador de Soluções|O arquivo de *projeto Itens Compartilhados*. O projeto não é compilado.  Em vez disso, ele pode ser referenciado por outro projeto do C++ e seus arquivos se tornarão parte do processo de build do projeto de referência. Isso pode ser usado para compartilhar um código comum com projetos do C++ multiplataforma.|
 |*Nome_do_projeto*.sdf|*Nome_do_projeto*|Não exibido no Gerenciador de Soluções|O arquivo de *navegação no banco de dados*. Dá suporte às funcionalidades de procura e de navegação como **Ir para definição**, **Localizar Todas as Referências** e **Modo de Exibição de Classe**. É gerado pela análise dos arquivos de cabeçalho.|
-|*Nome_do_projeto.* vcxproj.filters|*Nome_do_projeto*|Não exibido no Gerenciador de Soluções|O arquivo de *filtros*. Especifica o local em que colocar um arquivo adicionado à solução. Por exemplo, um arquivo .h é colocado no nó **Arquivos de Cabeçalho**.|
-|*Nome_do_projeto.* vcxproj.user|*Nome_do_projeto*|Não exibido no Gerenciador de Soluções|O arquivo de *usuário de migração*. Depois que um projeto é migrado do Visual Studio 2008, esse arquivo contém informações que foram convertidas de qualquer arquivo .vsprops.|
+|*Projname*.vcxproj.filters|*Nome_do_projeto*|Não exibido no Gerenciador de Soluções|O arquivo de *filtros*. Especifica o local em que colocar um arquivo adicionado à solução. Por exemplo, um arquivo .h é colocado no nó **Arquivos de Cabeçalho**.|
+|*Projname*.vcxproj.user|*Nome_do_projeto*|Não exibido no Gerenciador de Soluções|O arquivo de *usuário de migração*. Depois que um projeto é migrado do Visual Studio 2008, esse arquivo contém informações que foram convertidas de qualquer arquivo .vsprops.|
 |*Nome_do_projeto*.idl|*Nome_do_projeto*|Origem|(Específico ao projeto) Contém o código-fonte da linguagem IDL para uma biblioteca de tipos de controle. Esse arquivo é usado pelo Visual C++ para gerar uma biblioteca de tipos. A biblioteca gerada expõe a interface do controle para outros clientes de Automação. Para obter mais informações, confira [Arquivo IDL](/windows/desktop/Rpc/the-interface-definition-language-idl-file) no SDK do Windows.|
 |Readme.txt|*Nome_do_projeto*|Projeto|O arquivo *Leiame*. É gerado pelo assistente de aplicativo e descreve os arquivos em um projeto.|
 

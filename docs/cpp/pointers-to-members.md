@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: ac8a1b43b3bf8bde8f910e72b601bf7d94e0d19d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a15e519be14d9a05cb30a8c9282baccc87a5f35e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480282"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326960"
 ---
 # <a name="pointers-to-members"></a>Ponteiros para membros
 
@@ -25,28 +25,40 @@ As declarações dos ponteiros para os membros são casos especiais de declaraç
 ```
 
 1. O especificador de declaração:
-  - Um especificador de classe de armazenamento opcional.
 
-  - Opcional **const** e/ou **volátil** especificadores.
+   - Um especificador de classe de armazenamento opcional.
 
-  - O especificador de tipo: o nome de um tipo.  Este é o tipo de membro a ser apontado, não a classe.
+   - Opcional **const** e/ou **volátil** especificadores.
+
+   - O especificador de tipo: o nome de um tipo.  Este é o tipo de membro a ser apontado, não a classe.
 
 1. O declarador:
 
-  - Um modificador opcional específico da Microsoft. Para obter mais informações, consulte [modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md).
-1. O nome qualificado da classe que contém os membros a serem apontados.
-  - O operador ::.
-  - O <strong>\*</strong> operador.
-  - Opcional **const** e/ou **volátil** especificadores.
-  - O identificador que nomeia o ponteiro para o membro.
+   - Um modificador opcional específico da Microsoft. Para obter mais informações, consulte [modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-  - Um inicializador opcional:
-  - O **=** operador.
-  - O **&** operador.
-  - O nome qualificado da classe.
-  - O operador `::`.
-  - O nome de um membro não estático da classe de tipo apropriado.
-  - Como sempre, vários declaradores (e quaisquer inicializadores associados) são permitidos em uma única declaração.
+   - O nome qualificado da classe que contém os membros a serem apontados.
+
+   - O __::__ operador.
+
+   - O __\*__ operador.
+
+   - Opcional **const** e/ou **volátil** especificadores.
+
+   - O identificador que nomeia o ponteiro para o membro.
+
+1. Um inicializador opcional:
+
+   - O **=** operador.
+
+   - O **&** operador.
+
+   - O nome qualificado da classe.
+
+   - O __::__ operador.
+
+   - O nome de um membro não estático da classe de tipo apropriado.
+
+Como sempre, vários declaradores (e quaisquer inicializadores associados) são permitidos em uma única declaração.
 
 Um ponteiro para um membro de uma classe é diferente de um ponteiro regular somente porque tem as informações do tipo para o tipo do membro e para a classe a qual o membro pertence. Um ponteiro normal (tem o endereço de) identifica somente um único objeto na memória. Um ponteiro para um membro de uma classe identifica esse membro em qualquer instância da classe. O exemplo a seguir declara uma classe, `Window`, e alguns ponteiros para os dados de membro.
 

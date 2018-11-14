@@ -14,12 +14,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: 54cfbc6d31c0c86163400df691dec47e0c093d36
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9efac8ba0889d648def622ca045b9398c8eeef11
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603652"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518483"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Controles ActiveX MFC: usando associação de dados em um controle ActiveX
 
@@ -45,7 +45,7 @@ Este artigo aborda os seguintes tópicos:
 É possível criar uma propriedade de estoque de associação de dados, embora seja mais provável que você desejará um [método get/set associável](#vchowcreatingbindablegetsetmethod).
 
 > [!NOTE]
->  Propriedades de estoque têm o `bindable` e `requestedit` atributos por padrão.
+> Propriedades de estoque têm o `bindable` e `requestedit` atributos por padrão.
 
 #### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>Para adicionar uma propriedade de estoque vinculável usando o Assistente para adicionar propriedade
 
@@ -74,7 +74,7 @@ Agora você pode compilar o projeto, que registrará o controle. Quando você in
 Além de uma associação de dados get/set de método, você também pode criar uma [propriedade de estoque associável](#vchowcreatingbindablestockproperty).
 
 > [!NOTE]
->  Este procedimento pressupõe que você tem um controle ActiveX que pode efetuar subclasses de projeto a um controle do Windows.
+> Este procedimento pressupõe que você tem um controle ActiveX que pode efetuar subclasses de projeto a um controle do Windows.
 
 #### <a name="to-add-a-bindable-getset-method-using-the-add-property-wizard"></a>Para adicionar um método get/set vinculáveis usando o Assistente para adicionar propriedade
 
@@ -96,37 +96,37 @@ Além de uma associação de dados get/set de método, você também pode criar 
 
 1. Para **tipo de implementação**, clique em **métodos Get/Set**.
 
-9. Selecione as seguintes caixas de seleção na guia atributos IDL: **associável**, **requestedit**, **displaybind**, e **defaultbind** adicionar os atributos para a definição da propriedade do projeto. Arquivo IDL. Esses atributos tornar o controle visível para o usuário e verifique a propriedade de estoque a propriedade associável padrão.
+1. Selecione as seguintes caixas de seleção na guia atributos IDL: **associável**, **requestedit**, **displaybind**, e **defaultbind** adicionar os atributos para a definição da propriedade do projeto. Arquivo IDL. Esses atributos tornar o controle visível para o usuário e verifique a propriedade de estoque a propriedade associável padrão.
 
-10. Clique em **Finalizar**.
+1. Clique em **Finalizar**.
 
-11. Modificar o corpo do `SetMyProp` função para que ele contém o código a seguir:
+1. Modificar o corpo do `SetMyProp` função para que ele contém o código a seguir:
 
    [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
 
-12. O parâmetro passado para o `BoundPropertyChanged` e `BoundPropertyRequestEdit` funções é o dispid da propriedade, que é o parâmetro passado para o atributo de ID () para a propriedade na. Arquivo IDL.
+1. O parâmetro passado para o `BoundPropertyChanged` e `BoundPropertyRequestEdit` funções é o dispid da propriedade, que é o parâmetro passado para o atributo de ID () para a propriedade na. Arquivo IDL.
 
-13. Modificar a [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) funcionar de modo que ele contém o código a seguir:
+1. Modificar a [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) funcionar de modo que ele contém o código a seguir:
 
    [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
 
-14. Modificar o `OnDraw` função para que ele contém o código a seguir:
+1. Modificar o `OnDraw` função para que ele contém o código a seguir:
 
    [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
 
-15. Na seção pública do arquivo de cabeçalho do arquivo de cabeçalho para sua classe de controle, adicione as seguintes definições (construtores) para as variáveis de membro:
+1. Na seção pública do arquivo de cabeçalho do arquivo de cabeçalho para sua classe de controle, adicione as seguintes definições (construtores) para as variáveis de membro:
 
    [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
 
-16. Verifique a seguinte linha na última linha a `DoPropExchange` função:
+1. Verifique a seguinte linha na última linha a `DoPropExchange` função:
 
    [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
 
-17. Modificar o `OnResetState` função para que ele contém o código a seguir:
+1. Modificar o `OnResetState` função para que ele contém o código a seguir:
 
    [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
 
-18. Modificar o `GetMyProp` função para que ele contém o código a seguir:
+1. Modificar o `GetMyProp` função para que ele contém o código a seguir:
 
    [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
 

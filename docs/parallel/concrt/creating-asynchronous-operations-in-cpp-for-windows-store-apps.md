@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: ecef168d2162adf3a478268ec08b0a61f35c6260
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4824180ec0ff9f7adb7c2d0a9b505a2abb58c20b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563196"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333319"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Criando operações assíncronas em C++ para aplicativos UWP
 
@@ -148,11 +148,10 @@ Você pode passar uma `task_continuation_context` do objeto para o [Task:: Then]
 A seção a seguir mostra um aplicativo que lê um arquivo do disco, localiza as palavras mais comuns nesse arquivo e, em seguida, mostra os resultados na interface do usuário. A operação final, atualizando a interface do usuário ocorre no thread da interface do usuário.
 
 > [!IMPORTANT]
->  Esse comportamento é específico para aplicativos UWP. Para aplicativos da área de trabalho, você não controlar onde as continuações é executado. Em vez disso, o agendador escolherá um thread de trabalho no qual executar cada continuação.
+> Esse comportamento é específico para aplicativos UWP. Para aplicativos da área de trabalho, você não controlar onde as continuações é executado. Em vez disso, o agendador escolherá um thread de trabalho no qual executar cada continuação.
 
 > [!IMPORTANT]
-
->  Não chame [concurrency::task::wait](reference/task-class.md#wait) no corpo de uma continuação que é executado no STA. Caso contrário, o tempo de execução gera [Concurrency:: invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) porque esse método bloqueia o thread atual e pode fazer com que o aplicativo pare de responder. No entanto, você pode chamar o [concurrency::task::get](reference/task-class.md#get) método para receber o resultado da tarefa antecedente em uma continuação baseada em tarefa.
+> Não chame [concurrency::task::wait](reference/task-class.md#wait) no corpo de uma continuação que é executado no STA. Caso contrário, o tempo de execução gera [Concurrency:: invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) porque esse método bloqueia o thread atual e pode fazer com que o aplicativo pare de responder. No entanto, você pode chamar o [concurrency::task::get](reference/task-class.md#get) método para receber o resultado da tarefa antecedente em uma continuação baseada em tarefa.
 
 ##  <a name="example-app"></a> Exemplo: Controlando a execução em um aplicativo de tempo de execução do Windows com C++ e XAML
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LABEL directive
 ms.assetid: 39ec44e8-91e6-4f3c-8cf0-b66479974e42
-ms.openlocfilehash: a1058600ff657df71d7117a4733bebd4685d569f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b90dd4b9c1a0a02526b63f98467a037aff484cd
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641643"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51325816"
 ---
 # <a name="label-masm"></a>LABEL (MASM)
 
@@ -20,8 +20,8 @@ Cria um novo rótulo atribuindo o valor de contador do local atual e a determina
 ## <a name="syntax"></a>Sintaxe
 
 > *nome da* rótulo *tipo*
-
-> *nome* rótulo [[NEAR | MUITO | PTR PROC]] [[*tipo*]]
+>
+> *nome da* rótulo \[NEAR | MUITO | PROC] PTR \[ *tipo*]
 
 ## <a name="see-also"></a>Consulte também
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ull_rshift intrinsic
 - __ull_rshift intrinsic
 ms.assetid: b7ff5254-3540-4e6e-b57c-a6c4beb7dca2
-ms.openlocfilehash: fee48cc731331e7cb427bc880d84ae07cc8ed9c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 940e1e3a957b44f0aaa225f7fc9e107926ba879f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521288"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330496"
 ---
 # <a name="ullrshift"></a>__ull_rshift
 
@@ -23,9 +23,9 @@ no x64, desloca um valor de 64 bits especificado pelo primeiro parâmetro para a
 ## <a name="syntax"></a>Sintaxe
 
 ```
-unsigned __int64 __ull_rshift( 
-   unsigned __int64 mask,  
-   int nBit 
+unsigned __int64 __ull_rshift(
+   unsigned __int64 mask, 
+   int nBit
 );
 ```
 

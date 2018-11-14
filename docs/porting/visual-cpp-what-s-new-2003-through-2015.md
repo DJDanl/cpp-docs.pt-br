@@ -2,12 +2,12 @@
 title: Novidades do Visual C++ de 2003 até 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 7066b5bd8ea0fcd7cc7cda34ca05588199cbaef5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d79406e07b8839e196f15d9bc3aed96cbc3dca8
+ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499613"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51520170"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novidades do Visual C++ de 2003 até 2015
 
@@ -260,7 +260,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
    Por exemplo, suponha que seu código defina um **placement new** e um **placement delete**:
 
    ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
    ```
 
@@ -306,15 +306,15 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
    agora estão mais em conformidade com o padrão. As versões anteriores do compilador geravam um construtor e um destruidor explícitos de uniões anônimas. Eles foram excluídos no Visual Studio 2015.
 
    ```cpp
-    struct S {
-      S();
-     };
+   struct S {
+      S();
+   };
 
-     union {
-      struct {
-       S s;
-      };
-     } u; // C2280
+   union {
+      struct {
+         S s;
+      };
+   } u; // C2280
    ```
 
    O código anterior gera o seguinte erro no Visual Studio 2015:
@@ -328,14 +328,14 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
 
    ```cpp
     struct S {
-    // Provide a default constructor by adding an empty function body.
-    S() {}
+       // Provide a default constructor by adding an empty function body.
+       S() {}
     };
 
     union {
-    struct {
-    S s;
-    };
+       struct {
+          S s;
+       };
     } u;
    ```
 
@@ -552,7 +552,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
     }
    ```
 
-  -ou-
+  \-ou-
 
    ```cpp
     class base;  // as above
@@ -586,7 +586,7 @@ Embora essas diferenças podem afetar seu código-fonte ou outros artefatos de b
     void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // removed 'static inline'
    ```
 
-      Additionally, although the compiler doesn't give a specific diagnostic, inline operator new is considered ill-formed.
+   Além disso, embora o compilador não forneça um diagnóstico específico, o operador new embutido é considerado mal formado.
 
 - **Chamando '*tipo*de operador ()' (conversão definida pelo usuário) em tipos diferentes de classe** Versões anteriores do compilador permitiram que o '*tipo*de operador ()' fosse chamado em tipos diferentes de classe, enquanto o ignoravam silenciosamente. Esse comportamento antigo criava um risco de geração silenciosa de código incorreto, resultando em um comportamento imprevisível do tempo de execução. O compilador não aceita mais código escrito dessa maneira e, em vez disso, emite o erro do compilador C2228.
 
@@ -1673,10 +1673,10 @@ Esse suporte aperfeiçoado para padrões ISO C/C++ pode exigir alterações do c
 - Suporte a enumerações em escopo. Agora há suporte para a chave de enumeração da classe C++ enum. O código a seguir demonstra como a chave de enumeração é diferente do comportamento anterior do enum.
 
    ```cpp
-enum class Element { Hydrogen, Helium, Lithium, Beryllium };
-void func1(Element e);
-func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
-func1(Element::Helium); // OK
+  enum class Element { Hydrogen, Helium, Lithium, Beryllium };
+  void func1(Element e);
+  func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
+  func1(Element::Helium); // OK
    ```
 
 ### <a name="windows-runtime-app-development-support"></a>Suporte ao desenvolvimento de aplicativos do Windows Runtime

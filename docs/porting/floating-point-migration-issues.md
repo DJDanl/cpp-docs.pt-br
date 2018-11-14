@@ -2,12 +2,12 @@
 title: Problemas de migração de ponto flutuante
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
-ms.openlocfilehash: ea34f1eb8e8bd528273da5d7d18cd545cd22de37
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a259cf276c0347fda4954b46318cc79be88028ee
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530865"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332342"
 ---
 # <a name="floating-point-migration-issues"></a>Problemas de migração de ponto flutuante
 
@@ -17,7 +17,7 @@ ms.locfileid: "50530865"
 
 A maioria das funções matemáticas do CRT está disponível no Visual Studio há vários anos, mas a partir do Visual Studio 2013, todas as funções exigidas pela ISO C99 estão incluídas. Essas funções são implementadas para equilibrar o desempenho com exatidão. Uma vez que produzir o resultado arredondado corretamente pode ter um custo proibitivo em todos os casos, essas funções foram criadas para produzir de forma eficiente um resultado próximo ao resultado arredondado corretamente. Na maioria dos casos, o resultado produzido está dentro de +/-1 unidade da precisão mínima ou *ulp*, do resultado arredondado corretamente, embora possa haver casos em que a imprecisão é maior. Se você estava usando outra biblioteca de matemática para obter essas funções antes, as diferenças de implementação podem ser responsáveis pela alteração nos resultados.
 
-Quando as funções matemáticas foram movidas para o CRT Universal no Visual Studio 2015, alguns novos algoritmos foram utilizados e vários bugs na implementação das funções que eram novas no Visual Studio 2013 foram corrigidos. Essas alterações podem levar a diferenças detectáveis nos resultados de cálculos de ponto flutuante que usam essas funções. As funções que tiveram problemas de bugs foram erf, exp2, remainder, remquo, scalbln, scalbn e suas variantes de flutuação e longo duplo.  Outras alterações no Visual Studio 2015 corrigiram problemas de preservação de palavra de status de ponto flutuante e informações de estado de exceção nas funções _clear87, _clearfp, fegetenv, fesetenv e feholdexcept.
+Quando as funções matemáticas foram movidas para o CRT Universal no Visual Studio 2015, alguns novos algoritmos foram utilizados e vários bugs na implementação das funções que eram novas no Visual Studio 2013 foram corrigidos. Essas alterações podem levar a diferenças detectáveis nos resultados de cálculos de ponto flutuante que usam essas funções. As funções que tiveram problemas de bugs foram erf, exp2, remainder, remquo, scalbln, scalbn e suas variantes de flutuação e longo duplo.  Outras alterações no Visual Studio 2015 corrigiram problemas de preservação de palavra de status de ponto flutuante e informações de estado de exceção nas funções _clear87, _clearfp, fegetenv, fesetenv e feholdexcept.
 
 ## <a name="processor-differences-and-compiler-flags"></a>Diferenças de processador e sinalizadores de compilador
 

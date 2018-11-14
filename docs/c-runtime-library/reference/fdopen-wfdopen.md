@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-ms.openlocfilehash: c68bc835adf19df7f1538d30b2be162fe6dc6021
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cde110bf1dd12c23a6b0b658809502743d9edd3
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584451"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327155"
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
 
@@ -85,25 +85,25 @@ Arquivo descritores passados para **fdopen** são de propriedade por retornado *
 
 O *modo* cadeia de caracteres Especifica o tipo de acesso ao arquivo solicitado para o arquivo:
 
-|*modo*|Acesso|
-|-|-|
-**"r"**|Abre para leitura. Se o arquivo não existe ou não for encontrado, o **fopen** chamar falhar.
-**"w"**|Abre um arquivo vazio para gravação. Se o arquivo determinado existir, seus conteúdos são destruídos.
-**"a"**|Abre para gravação no final do arquivo (acréscimo). Cria o arquivo se ele não existir.
-**"r+"**|Abre para leitura e gravação. O arquivo deve existir.
-**"w+"**|Abre um arquivo vazio para leitura e gravação. Se o arquivo existir, seus conteúdos são destruídos.
-**"a+"**|Abre para leitura e conexão. Cria o arquivo se ele não existir.
+| *modo* | Acesso |
+|--------|--------|
+| **"r"** | Abre para leitura. Se o arquivo não existe ou não for encontrado, o **fopen** chamar falhar. |
+| **"w"** | Abre um arquivo vazio para gravação. Se o arquivo determinado existir, seus conteúdos são destruídos. |
+| **"a"** | Abre para gravação no final do arquivo (acréscimo). Cria o arquivo se ele não existir. |
+| **"r+"** | Abre para leitura e gravação. O arquivo deve existir. |
+| **"w+"** | Abre um arquivo vazio para leitura e gravação. Se o arquivo existir, seus conteúdos são destruídos. |
+| **"a+"** | Abre para leitura e conexão. Cria o arquivo se ele não existir. |
 
 Quando um arquivo é aberto com o **"a"** ou **"+"** acessar o tipo, todas as operações de gravação ocorrem no final do arquivo. O ponteiro do arquivo pode ser reposicionado usando [fseek](fseek-fseeki64.md) ou [rewind](rewind.md), mas é sempre movido de volta até o final do arquivo antes de qualquer operação de gravação é realizada. Sendo assim, dados existentes não podem ser substituídos. Quando o **"r +"**, **"w +"**, ou **"+"** tipo de acesso for especificado, são permitidas leitura e gravação (o arquivo deve ser aberto para "atualização"). No entanto, quando você muda entre leitura e gravação, deve haver uma intervenção [fflush](fflush.md), [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md), ou [rewind](rewind.md) operação. Você pode especificar a posição atual para o [fsetpos](fsetpos.md) ou [fseek](fseek-fseeki64.md) operação, se você quiser.
 
 Além dos valores acima, os caracteres a seguir podem ser incluídos no *modo* para especificar o modo de conversão de caracteres de nova linha:
 
-|*modo* modificador|Comportamento|
-|-|-|
-**t**|Abra no modo de texto (convertido). Neste modo, combinações de CR-LF (retorno de carro – avanço de linha) são convertidas em LFs (avanços de uma linha) na entrada e caracteres de LF são convertidos em combinações de CR-LF na saída. Além disso, Ctrl+Z é interpretado como um caractere de fim do arquivo na entrada.
-**b**|Abre no modo binário (não convertido). Todas as conversões do **t** modo são suprimidas.
-**c**|Habilitar o sinalizador de confirmação associado *filename* para que o conteúdo do buffer de arquivo sejam gravado diretamente no disco, se **fflush** ou **flushall** é chamado.
-**n**|Redefinir o sinalizador de confirmação associado *filename* para "no-commit". Esse é o padrão. Também substitui o sinalizador de confirmação global se você vincular o programa a Commode.obj. O padrão do sinalizador de confirmação global é "no-commit", a menos que você vincule explicitamente o programa a Commode.obj.
+| *modo* modificador | Comportamento |
+|-----------------|----------|
+| **t** | Abra no modo de texto (convertido). Neste modo, combinações de CR-LF (retorno de carro – avanço de linha) são convertidas em LFs (avanços de uma linha) na entrada e caracteres de LF são convertidos em combinações de CR-LF na saída. Além disso, Ctrl+Z é interpretado como um caractere de fim do arquivo na entrada. |
+| **b** | Abre no modo binário (não convertido). Todas as conversões do **t** modo são suprimidas. |
+| **c** | Habilitar o sinalizador de confirmação associado *filename* para que o conteúdo do buffer de arquivo sejam gravado diretamente no disco, se **fflush** ou **flushall** é chamado. |
+| **n** | Redefinir o sinalizador de confirmação associado *filename* para "no-commit". Esse é o padrão. Também substitui o sinalizador de confirmação global se você vincular o programa a Commode.obj. O padrão do sinalizador de confirmação global é "no-commit", a menos que você vincule explicitamente o programa a Commode.obj. |
 
 O **t**, **c**, e **n** *modo* opções são extensões da Microsoft para **fopen** e **fdopen**. Não as use se você quiser preservar a portabilidade ANSI.
 

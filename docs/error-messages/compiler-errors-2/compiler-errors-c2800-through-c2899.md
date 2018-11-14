@@ -42,12 +42,12 @@ helpviewer_keywords:
 - C2895
 - C2899
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-ms.openlocfilehash: 1c1b001e4d55c913cd2b9a50ee2e4bb4d2915523
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c35cd91f836070ff45faa489e1c16c40909f922
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601097"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332069"
 ---
 # <a name="compiler-errors-c2800-through-c2899"></a>Erros de compilador C2800 a C2899
 
@@ -74,7 +74,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Erro do compilador C2812](compiler-error-c2812.md)|#import não é suportado com /clr: pure e /CLR: safe|
 |[Erro do compilador C2813](compiler-error-c2813.md)|#import não é suportado com /MP|
 |[Erro do compilador C2814](compiler-error-c2814.md)|'*membro*': um tipo nativo não pode ser aninhado dentro de um tipo gerenciado/WinRT '*classe*'|
-|[Erro do compilador C2815](compiler-error-c2815.md)|'operator delete': primeiro parâmetro formal deve ser ' void *', mas '* tipo *' foi usado|
+|[Erro do compilador C2815](compiler-error-c2815.md)|'operator delete': primeiro parâmetro formal deve ser ' void \*', mas '*tipo*' foi usado|
 |C2816 de erro do compilador|Obsoleto.|
 |[Erro do compilador C2817](compiler-error-c2817.md)|tipo de retorno para 'operator delete' deve ser 'void'|
 |[Erro do compilador C2818](compiler-error-c2818.md)|'aplicativo de operador ->' sobrecarregado é recursiva através do tipo '*classe*'|
@@ -83,7 +83,7 @@ Os artigos nesta seção da documentação explicam um subconjunto das mensagens
 |[Erro do compilador C2821](compiler-error-c2821.md)|o primeiro parâmetro formal para 'operator new' deve ser 'size_t'|
 |C2822 de erro do compilador|desenrolamento local não tem suporte nesta plataforma|
 |[Erro do compilador C2823](compiler-error-c2823.md)|um typedef modelo/genérico é ilegal|
-|[Erro do compilador C2824](compiler-error-c2824.md)|tipo de retorno para 'operator new' deve ser ' void *'|
+|[Erro do compilador C2824](compiler-error-c2824.md)|tipo de retorno para 'operator new' deve ser ' void \*'|
 |[Erro do compilador C2825](compiler-error-c2825.md)|'*identificador*': deve ser uma classe ou namespace quando seguido por ':: '|
 |C2826 de erro do compilador|Obsoleto.|
 |[Erro do compilador C2827](compiler-error-c2827.md)|' operador *operador*' não pode ser substituído globalmente com forma unária|

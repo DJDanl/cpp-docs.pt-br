@@ -26,12 +26,12 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-ms.openlocfilehash: 244ef9ce93e39bef23a9d5d6792a10ca25355f5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99e10a0330ba4880ea181e9fe3d56f3fb6bd6493
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648377"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326037"
 ---
 # <a name="configthreadlocale"></a>_configthreadlocale
 
@@ -56,11 +56,11 @@ O status de localidade por thread anterior (**_DISABLE_PER_THREAD_LOCALE** ou **
 
 O **_configurethreadlocale** função é usada para controlar o uso de localidades específicas de thread. Usar uma destas *per_thread_locale_type* opções para especificar ou determinar o status de localidade por thread:
 
-|||
+| Opção | Descrição |
 |-|-|
-**_ENABLE_PER_THREAD_LOCALE**|Faça o thread atual usar uma localidade específica do thread. As chamadas subsequentes para **setlocale** neste thread afetam somente a localidade do thread.
-**_DISABLE_PER_THREAD_LOCALE**|Faça o thread atual usar a localidade global. As chamadas subsequentes para **setlocale** neste thread afetam outros threads usando a localidade global.
-**0**|Recupera a configuração atual para este thread específico.
+| **_ENABLE_PER_THREAD_LOCALE** | Faça o thread atual usar uma localidade específica do thread. As chamadas subsequentes para **setlocale** neste thread afetam somente a localidade do thread. |
+| **_DISABLE_PER_THREAD_LOCALE** | Faça o thread atual usar a localidade global. As chamadas subsequentes para **setlocale** neste thread afetam outros threads usando a localidade global. |
+| **0** | Recupera a configuração atual para este thread específico. |
 
 Essas funções afetam o comportamento do **setlocale**, **tsetlocale**, **wsetlocale**, e **setmbcp**. Quando a localidade por thread for desabilitada, qualquer chamada subsequente para **setlocale** ou **wsetlocale** altera a localidade de todos os threads que usam a localidade global. Quando a localidade por thread é habilitada, **setlocale** ou **wsetlocale** afeta somente a localidade do thread atual.
 

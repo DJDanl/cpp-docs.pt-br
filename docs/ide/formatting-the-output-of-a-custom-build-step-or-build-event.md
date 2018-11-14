@@ -9,12 +9,12 @@ helpviewer_keywords:
 - build steps [C++], output format
 - builds [C++], custom build steps
 ms.assetid: 92ad3e38-24d7-4b89-90e6-5a16f5f998da
-ms.openlocfilehash: 70ab20c1564d9530059fb850437bd1e3a47b9af9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 333d3af92da2388b42f51f197dee5da82900022d
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501550"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330405"
 ---
 # <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>Formatando a saída de uma etapa de build personalizado ou evento de build
 
@@ -43,7 +43,7 @@ Sendo que:
 Por exemplo:
 
 > C:\\*sourcefile.cpp*(134) : error C2143: syntax error : missing ';' before '}'
-
+>
 > LINK: erro fatal LNK1104: não é possível abrir o arquivo '*somelib.lib*'
 
 ## <a name="see-also"></a>Consulte também

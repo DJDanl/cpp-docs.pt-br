@@ -1,12 +1,12 @@
 ---
 title: Tratamento de exceção ARM64
 ms.date: 07/11/2018
-ms.openlocfilehash: 82775a61adf8437565b5bb691716451b225e72e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5189c399a4cbff071d2ec846008229ba76306882
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620591"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333583"
 ---
 # <a name="arm64-exception-handling"></a>Tratamento de exceção ARM64
 
@@ -56,7 +56,7 @@ Estas são as suposições feitas no descrição de tratamento de exceção:
 
 Para funções de quadro encadeada, o par de fp e lr pode ser salvos em qualquer posição na área de variável local, dependendo das considerações de otimização. O objetivo é maximizar o número de locais que podem ser alcançadas por uma instrução única, com base em ponteiro de quadro (r29) ou o ponteiro de pilha (sp). No entanto para `alloca` funções, ele deve ser encadeado e r29 deve apontar para a parte inferior da pilha. Para permitir melhor cobertura de register-par-endereçamento-mode, não-volátil registrar aave áreas são posicionadas na parte superior da pilha de rede Local. Aqui estão exemplos que ilustram algumas das sequências de prólogo mais eficientes. Para fins de clareza e melhor localidade de cache, a ordem de armazenamento de registros salvos pelo receptor em todos os Prólogos canônicos é em ordem "cada vez maior para cima". `#framesz` abaixo representa o tamanho da pilha inteira (excluindo alloca área). `#localsz` e `#outsz` indicam o tamanho da área local (incluindo o salvamento área para o \<r29, lr > par) e o tamanho do parâmetro de saída, respectivamente.
 
-1. Encadeadas, #localsz < = 512
+1. Encadeadas, #localsz \<= 512
 
     ```asm
         stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -95,7 +95,7 @@ Para funções de quadro encadeada, o par de fp e lr pode ser salvos em qualquer
         sub    sp,#framesz-72           // allocate the remaining local area
     ```
 
-   Todos os locais são acessados com base no SP. \<r29, lr > aponta para o quadro anterior. Para o tamanho do quadro < = 512, o "sub sp,..." pode ser otimizada se a área regs salvadas é movida para a parte inferior da pilha. A desvantagem de que é que ele não é consistente com outros layouts acima e salvos regs fazem parte de um intervalo para regs par e o modo de endereçamento deslocamento pré e pós-indexado.
+   Todos os locais são acessados com base no SP. \<r29, lr > aponta para o quadro anterior. Para o tamanho do quadro \<= 512, o "sub sp,..." pode ser otimizada se a área regs salvadas é movida para a parte inferior da pilha. A desvantagem de que é que ele não é consistente com outros layouts acima e salvos regs fazem parte de um intervalo para regs par e o modo de endereçamento deslocamento pré e pós-indexado.
 
 1. Funções sem cadeia, não-folha (lr é salvo na área de Int salvada)
 
@@ -131,7 +131,7 @@ Para funções de quadro encadeada, o par de fp e lr pode ser salvos em qualquer
 
    Todos os locais são acessados com base no SP. \<r29 > aponta para o quadro anterior.
 
-1. Encadeadas, #framesz < = 512, #outsz = 0
+1. Encadeadas, #framesz \<= 512, #outsz = 0
 
     ```asm
         stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
@@ -283,40 +283,40 @@ Se fosse garantido que exceções ocorressem sempre somente dentro de um corpo d
 
 Os códigos de desenrolamento são codificados de acordo com a tabela a seguir. Todos os códigos de desenrolamento são uma única/de dois bytes, exceto aquele que aloca uma pilha enorme. Há totalmente 21 código de desenrolamento. Cada desenrolamento código mapas exatamente uma instrução no prólogo/epílogo para permitir o desenrolar da executado parcialmente Prólogos e epílogos.
 
-Código de desenrolamento|Bits e a interpretação
+|Código de desenrolamento|Bits e a interpretação|
 |-|-|
-`alloc_s`|000xxxxx: alocar pequena pilha com tamanho < 512 (2 ^ 5 * 16).
-`save_r19r20_x`|    001zzzzz: salvar \<r19, r20 > par na [Z de sp-# * 8]!, deslocamento previamente indexado > =-248
-`save_fplr`|        01zzzzzz: salvar \<r29, lr > emparelhar em [sp + #Z * 8], deslocamento < = 504.
-`save_fplr_x`|        10zzzzzz: salvar \<r29, lr > emparelhar em [sp-(#Z + 1) * 8]!, deslocamento previamente indexado > = -512
-`alloc_m`|        11000xxx\|xxxxxxxx: alocar pilha grande com tamanho < 16K (2 ^ 11 * 16).
-`save_regp`|        110010xx\|xxzzzzzz: salvar r(19+#X) par em [sp + #Z * 8], deslocamento < = 504
-`save_regp_x`|        110011xx\|xxzzzzzz: salvar r(19+#X) par em [sp-(#Z + 1) * 8]!, deslocamento previamente indexado > = -512
-`save_reg`|        110100xx\|xxzzzzzz: salvar r(19+#X) reg em [sp + #Z * 8], deslocamento < = 504
-`save_reg_x`|        x 1101010\|xxxzzzzz: salvar r(19+#X) reg em [sp-(#Z + 1) * 8]!, deslocamento previamente indexado > = -256
-`save_lrpair`|         x 1101011\|xxzzzzzz: salvar par \<r19 + 2 *#x10, lr > em [sp + #Z*8], deslocamento < = 504
-`save_fregp`|        x 1101100\|xxzzzzzz: salvar d(8+#X) par em [sp + #Z * 8], deslocamento < = 504
-`save_fregp_x`|        x 1101101\|xxzzzzzz: salvar d(8+#X) par, em [sp-(#Z + 1) * 8]!, deslocamento previamente indexado > = -512
-`save_freg`|        x 1101110\|xxzzzzzz: salvar d(8+#X) reg em [sp + #Z * 8], deslocamento < = 504
-`save_freg_x`|        11011110\|xxxzzzzz: salvar d(8+#X) reg em [sp-(#Z + 1) * 8]!, deslocamento previamente indexado > = -256
-`alloc_l`|         11100000\|xxxxxxxx\|xxxxxxxx\|xxxxxxxx: alocar pilha grande com tamanho de M < 256 (2 ^ 24 * 16)
-`set_fp`|        11100001: configurar r29: com: r29 mov, sp
-`add_fp`|        11100010\|xxxxxxxx: configurar r29 com: Adicionar r29, sp, #x10 * 8
-`nop`|            11100011: nenhum desenrolar a operação é necessária.
-`end`|            11100100: final do código de desenrolamento. Implica ret no epílogo.
-`end_c`|        11100101: final do código de desenrolamento no escopo atual de encadeadas.
-`save_next`|        11100110: Salvar próximo Int de não-volátil ou FP registrar par.
-`arithmetic(add)`|    11100111\| 000zxxxx: adicionar o cookie reg(z) a lr (0 = x28, 1 = sp); adicionar lr, lr, reg(z)
-`arithmetic(sub)`|    11100111\| 001zxxxx: sub reg(z) de cookie de lr (0 = x28, 1 = sp); sub lr, lr, reg(z)
-`arithmetic(eor)`|    11100111\| 010zxxxx: eor lr com o cookie reg(z) (0 = x28, 1 = sp); eor lr, lr, reg(z)
-`arithmetic(rol)`|    11100111\| 0110xxxx: rol simulado de lr com cookie reg (x28); xip0 = neg x28; ror lr, xip0
-`arithmetic(ror)`|    11100111\| 100zxxxx: ror lr com o cookie reg(z) (0 = x28, 1 = sp); ror lr, lr, reg(z)
-||            11100111: xxxz---:---reservado
-||              11101xxx: reservado para casos de pilha personalizados abaixo gerados apenas para rotinas do asm
-||              11101001: personalizado stack para MSFT_OP_TRAP_FRAME
-||              11101010: personalizado stack para MSFT_OP_MACHINE_FRAME
-||              11101011: personalizado stack para MSFT_OP_CONTEXT
-||              1111xxxx: reservado
+|`alloc_s`|000xxxxx: alocar pequena pilha com tamanho \< 512 (2 ^ 5 * 16).|
+|`save_r19r20_x`|    001zzzzz: salvar \<r19, r20 > par na [Z de sp-# * 8]!, deslocamento previamente indexado > =-248 |
+|`save_fplr`|        01zzzzzz: Salve \<r29, lr > emparelhar em [sp + #Z * 8], deslocamento \<= 504. |
+|`save_fplr_x`|        10zzzzzz: salvar \<r29, lr > emparelhar em [sp-(#Z + 1) * 8]!, deslocamento previamente indexado > = -512 |
+|`alloc_m`|        11000xxx'xxxxxxxx: alocar pilha grande com tamanho \< 16K (2 ^ 11 * 16). |
+|`save_regp`|        110010xx'xxzzzzzz: salvar r(19+#X) par em [sp + #Z * 8], deslocamento \<= 504 |
+|`save_regp_x`|        110011xx'xxzzzzzz: salvar r(19+#X) par em [sp-(#Z + 1) * 8]!, deslocamento previamente indexado > = -512 |
+|`save_reg`|        110100xx'xxzzzzzz: salvar r(19+#X) reg em [sp + #Z * 8], deslocamento \<= 504 |
+|`save_reg_x`|        x 1101010'xxxzzzzz: salvar r(19+#X) reg em [sp-(#Z + 1) * 8]!, deslocamento previamente indexado > = -256 |
+|`save_lrpair`|         x 1101011'xxzzzzzz: salvar par \<r19 + 2 *#x10, lr > em [sp + #Z*8], deslocamento \<= 504 |
+|`save_fregp`|        x 1101100'xxzzzzzz: salvar d(8+#X) par em [sp + #Z * 8], deslocamento \<= 504 |
+|`save_fregp_x`|        x 1101101'xxzzzzzz: salvar d(8+#X) par, em [sp-(#Z + 1) * 8]!, deslocamento previamente indexado > = -512 |
+|`save_freg`|        x 1101110'xxzzzzzz: salvar d(8+#X) reg em [sp + #Z * 8], deslocamento \<= 504 |
+|`save_freg_x`|        11011110' xxxzzzzz: salvar d(8+#X) reg em [sp-(#Z + 1) * 8]!, deslocamento previamente indexado > = -256 |
+|`alloc_l`|         11100000' xxxxxxxx 'xxxxxxxx' xxxxxxxx: alocar pilha grande com tamanho \< 256m (2 ^ 24 * 16) |
+|`set_fp`|        11100001: configurar r29: com: r29 mov, sp |
+|`add_fp`|        11100010' xxxxxxxx: configurar r29 com: Adicionar r29, sp, #x10 * 8 |
+|`nop`|            11100011: nenhum desenrolar a operação é necessária. |
+|`end`|            11100100: final do código de desenrolamento. Implica ret no epílogo. |
+|`end_c`|        11100101: final do código de desenrolamento no escopo atual de encadeadas. |
+|`save_next`|        11100110: Salvar próximo Int de não-volátil ou FP registrar par. |
+|`arithmetic(add)`|    11100111' 000zxxxx: adicionar o cookie reg(z) a lr (0 = x28, 1 = sp); Adicionar lr, lr, reg(z) |
+|`arithmetic(sub)`|    11100111' 001zxxxx: sub reg(z) de cookie de lr (0 = x28, 1 = sp); sub lr, lr, reg(z) |
+|`arithmetic(eor)`|    11100111' 010zxxxx: eor lr com o cookie reg(z) (0 = x28, 1 = sp); EOR lr, lr, reg(z) |
+|`arithmetic(rol)`|    11100111' 0110xxxx: rol simulado de lr com cookie reg (x28); xip0 = neg x28; RoR lr, xip0 |
+|`arithmetic(ror)`|    11100111' 100zxxxx: ror lr com o cookie reg(z) (0 = x28, 1 = sp); RoR lr, lr, reg(z) |
+| |            11100111: xxxz---:---reservado |
+| |              11101xxx: reservado para casos de pilha personalizados abaixo gerados apenas para rotinas do asm |
+| |              11101001: personalizado stack para MSFT_OP_TRAP_FRAME |
+| |              11101010: personalizado stack para MSFT_OP_MACHINE_FRAME |
+| |              11101011: personalizado stack para MSFT_OP_CONTEXT |
+| |              1111xxxx: reservado |
 
 Instruções com valores grandes que abrangem vários bytes, os bits mais significativos são armazenados primeiro. Os códigos de desenrolamento acima são projetados, que simplesmente procurando o primeiro byte do código, é possível saber o tamanho total em bytes do código de desenrolamento. Considerando que cada código de desenrolamento exatamente é mapeado para uma instrução de prólogo/epílogo, para calcular o tamanho do prólogo ou epílogo, tudo o que precisa ser feito é movimentar desde o início da sequência para o final, usando uma tabela de pesquisa ou um dispositivo semelhante para determinar quanto tempo o cor é o opcode está respondendo.
 
@@ -382,7 +382,7 @@ Etapa n º|Valores de sinalizador|n º de instruções|Opcode|Código de desenro
 5D|(**CR** = = 00 \| \| **CR**= = 01) &AMP; &AMP;<br/>#locsz < = 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
 5e|(**CR** = = 00 \| \| **CR**= = 01) &AMP; &AMP;<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
-\*: Se **CR** = = 01 e **RegI** é um número ímpar, etapa 2 e a última save_rep na etapa 1 são mesclados em um save_regp.
+\* Se **CR** = = 01 e **RegI** é um número ímpar, etapa 2 e a última save_rep na etapa 1 são mesclados em um save_regp.
 
 \*\* Se **RegI** == **CR** = = 0, e **RegF** ! = 0, o stp primeiro para o ponto flutuante faz o pré-decremento.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-ms.openlocfilehash: a0245862fe90c108b8ffc038b723a8b5bb62a665
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7451b462087d6430c642ddbe3b7cf8141a792f2e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431898"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329365"
 ---
 # <a name="csize-class"></a>Classe CSize
 
@@ -173,11 +173,17 @@ CRect operator+(const RECT* lpRect) const throw();
 
 Consulte as descrições dos operadores individuais a seguir:
 
-- **operador + (** `size` **)** essa operação adiciona duas `CSize` valores.
+- **operador + (** *tamanho* **)**
 
-- **operador + (** `point` **)** essa operação deslocamentos (se move) um [ponto](https://msdn.microsoft.com/library/windows/desktop/dd162805) (ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) valor por este `CSize` valor. O **cx** e **cy** membros deste `CSize` valor são adicionados à **x** e **y** membros de dados a **ponto**  valor. Ele é análogo à versão do [CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) que usa um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) parâmetro.
+  Essa operação adiciona duas `CSize` valores.
 
-- **operador + (** `lpRect` **)** essa operação deslocamentos (se move) um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) (ou [CRect](../../atl-mfc-shared/reference/crect-class.md)) valor por este `CSize` valor. O **cx** e **cy** membros deste `CSize` valor são adicionados para o **esquerdo**, **superior**, **direita**, e **inferior** membros de dados a `RECT` valor. Ele é análogo à versão do [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) que usa um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) parâmetro.
+- **operador + (** *aponte* **)**
+
+  Esta operação deslocamentos (se move) uma [ponto](https://msdn.microsoft.com/library/windows/desktop/dd162805) (ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) valor por este `CSize` valor. O `cx` e `cy` membros deste `CSize` valor são adicionados para o `x` e `y` membros de dados a `POINT` valor. Ele é análogo à versão do [CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) que usa um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) parâmetro.
+
+- **operador + (** *lpRect* **)**
+
+   Esta operação deslocamentos (se move) uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) (ou [CRect](../../atl-mfc-shared/reference/crect-class.md)) valor por este `CSize` valor. O `cx` e `cy` membros deste `CSize` valor são adicionados para o `left`, `top`, `right`, e `bottom` membros de dados a `RECT` valor. Ele é análogo à versão do [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) que usa um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) parâmetro.
 
 ### <a name="example"></a>Exemplo
 
@@ -198,13 +204,21 @@ CSize operator-() const throw();
 
 O quarto operador, o operador unário menos, altera o sinal do `CSize` valor. Consulte as descrições dos operadores individuais a seguir:
 
-- **operador-(** `size` **)** essa operação subtrai dois `CSize` valores.
+- **operador-(** *tamanho* **)**
 
-- **operador-(** `point` **)** essa operação deslocamentos (se move) um [ponto](https://msdn.microsoft.com/library/windows/desktop/dd162805) ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) valor segundo o inverso de aditivo isso `CSize` valor. O **cx** e **cy** isso `CSize` valor são subtraídos do **x** e **y** membros de dados a **ponto**  valor. Ele é análogo à versão do [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) que usa um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) parâmetro.
+  Esta operação subtrai dois `CSize` valores.
 
-- **operador-(** `lpRect` **)** essa operação deslocamentos (se move) um [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) ou [CRect](../../atl-mfc-shared/reference/crect-class.md) valor segundo o inverso de aditivo isso `CSize` valor. O **cx** e **cy** membros deste `CSize` valor são subtraídos do **esquerdo**, **superior**, **direita**, e **inferior** membros de dados a `RECT` valor. Ele é análogo à versão do [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) que usa um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) parâmetro.
+- **operador-(** *aponte* **)**
 
-- **operador-()** essa operação retorna o inverso de aditivo isso `CSize` valor.
+  Esta operação deslocamentos (se move) uma [ponto](https://msdn.microsoft.com/library/windows/desktop/dd162805) ou [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) valor segundo o inverso de aditivo isso `CSize` valor. O `cx` e `cy` isso `CSize` valor são subtraídos do `x` e `y` membros de dados a `POINT` valor. Ele é análogo à versão do [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) que usa um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) parâmetro.
+
+- **operador-(** *lpRect* **)**
+
+  Esta operação deslocamentos (se move) uma [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) ou [CRect](../../atl-mfc-shared/reference/crect-class.md) valor segundo o inverso de aditivo isso `CSize` valor. O `cx` e `cy` membros deste `CSize` valor são subtraídos do `left`, `top`, `right`, e `bottom` membros de dados a `RECT` valor. Ele é análogo à versão do [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) que usa um [tamanho](https://msdn.microsoft.com/library/windows/desktop/dd145106) parâmetro.
+
+- **operador-)**
+
+  Esta operação retorna o inverso de aditivo isso `CSize` valor.
 
 ### <a name="example"></a>Exemplo
 

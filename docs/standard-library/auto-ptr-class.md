@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-ms.openlocfilehash: 587168323b8af63d232b8df63e9dcac2f4601433
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0c8e0c1f4dc2e1082d5df230c74efafcae24f29
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620942"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327116"
 ---
 # <a name="autoptr-class"></a>Classe auto_ptr
 
@@ -282,11 +282,11 @@ Um objeto do tipo `auto_ptr`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Uma referência a um objeto do tipo `auto_ptr`\< **Type**>.
+Referência a um objeto do tipo `auto_ptr<Type>`.
 
 ### <a name="remarks"></a>Comentários
 
-A atribuição avalia a expressão `delete myptr`, mas somente se o ponteiro armazenado `myptr` mudar como resultado da atribuição. Ele então transfere a propriedade do ponteiro armazenado em _*Right* armazenando \_ *Right*. [liberar](#release) em `myptr`. A função retorna **\*this**.
+A atribuição avalia a expressão `delete myptr`, mas somente se o ponteiro armazenado `myptr` mudar como resultado da atribuição. Ele então transfere a propriedade do ponteiro armazenado em *certa*, armazenando *à direita*.[ liberar](#release) em `myptr`. A função retorna __\*this__.
 
 ### <a name="example"></a>Exemplo
 

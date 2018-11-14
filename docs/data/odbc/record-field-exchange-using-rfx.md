@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - RFX (ODBC), implementing
 ms.assetid: ada8f043-37e6-4d41-9db3-92c997a61957
-ms.openlocfilehash: e1ecb43226c9e21f3b13c2d5b7c2a0f93b72f3cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d8ba1e66c1ffc46429b5c0e987be833aef2e72f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469544"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328520"
 ---
 # <a name="record-field-exchange-using-rfx"></a>Registrar troca de campos: usando RFX
 
@@ -30,10 +30,13 @@ A tabela a seguir mostra a sua função em relação ao que a estrutura faz para
 
 |Você|A estrutura|
 |---------|-------------------|
-
-| Declare suas classes de conjunto de registros com um assistente. Especifique os nomes e tipos de dados de membros de dados do campo. | O assistente deriva uma `CRecordset` classe e gravações uma [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) substituir para você, incluindo um RFX chamada para cada membro de dados do campo de função. | | ( Opcional) adicionar manualmente todas necessárias membros de dados de parâmetro para a classe. Adicionar manualmente uma chamada de função para RFX `DoFieldExchange` para cada membro de dados de parâmetro, adicione uma chamada para [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) para o grupo de parâmetros e especifique o número total de parâmetros em [m_nParams ](../../mfc/reference/crecordset-class.md#m_nparams). Ver [conjunto de registros: parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md). | | | ( Opcional) associar manualmente as colunas adicionais aos membros de dados do campo. Incrementar manualmente [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields). Ver [conjunto de registros: associando dinamicamente colunas de dados (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). | |
-
-| Construa um objeto da sua classe de conjunto de registros. Antes de usar o objeto, defina os valores de seu parâmetro membros de dados, se houver. | Para obter eficiência, o framework prebinds os parâmetros, usando o ODBC. Quando você passa valores de parâmetro, o framework passa para a fonte de dados. Somente os valores de parâmetro são enviados para requeries, a menos que as cadeias de caracteres de classificação e/ou filtro foram alterados. | | Abra um objeto de conjunto de registros usando [{1&gt;crecordset::Open&lt;1](../../mfc/reference/crecordset-class.md#open). | Executa a consulta do conjunto de registros, associa as colunas para membros de dados de campo do conjunto de registros e chamadas `DoFieldExchange` para trocar dados entre o primeiro registro selecionado e membros de dados de campo do conjunto de registros. | | Rolagem no conjunto de registros usando [CRecordset::Move](../../mfc/reference/crecordset-class.md#move) ou um comando de menu ou barra de ferramentas. | Chamadas `DoFieldExchange` para transferir dados para os membros de dados do campo do novo registro atual. | | Adicionar, atualizar e excluir registros. | Chamadas `DoFieldExchange` para transferir dados para a fonte de dados. |
+|Declare suas classes de conjunto de registros com um assistente. Especifique os nomes e tipos de dados de membros de dados do campo.|O assistente deriva uma `CRecordset` classe e gravações uma [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) substituir para você, incluindo um RFX chamada para cada membro de dados do campo de função.|
+|(Opcional) Adicione manualmente quaisquer membros de dados de parâmetro necessários para a classe. Adicionar manualmente uma chamada de função para RFX `DoFieldExchange` para cada membro de dados de parâmetro, adicione uma chamada para [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) para o grupo de parâmetros e especifique o número total de parâmetros em [m_nParams ](../../mfc/reference/crecordset-class.md#m_nparams). Ver [conjunto de registros: parametrizando um conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).||
+|(Opcional) Associe manualmente as colunas adicionais aos membros de dados do campo. Incrementar manualmente [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields). Ver [conjunto de registros: associando dinamicamente colunas de dados (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).||
+|Construa um objeto da sua classe de conjunto de registros. Antes de usar o objeto, defina os valores de seu parâmetro membros de dados, se houver.|Para obter eficiência, o framework prebinds os parâmetros, usando o ODBC. Quando você passa valores de parâmetro, o framework passa para a fonte de dados. Somente os valores de parâmetro são enviados para requeries, a menos que as cadeias de caracteres de classificação e/ou filtro foram alterados.|
+|Abra um objeto de conjunto de registros usando [{1&gt;crecordset::Open&lt;1](../../mfc/reference/crecordset-class.md#open).|Executa a consulta do conjunto de registros, associa as colunas para membros de dados de campo do conjunto de registros e chamadas `DoFieldExchange` para trocar dados entre o primeiro registro selecionado e membros de dados de campo do conjunto de registros.|
+|Rolagem no conjunto de registros usando [CRecordset::Move](../../mfc/reference/crecordset-class.md#move) ou um comando de menu ou barra de ferramentas.|Chamadas `DoFieldExchange` para transferir dados para os membros de dados do campo do novo registro atual.|
+|Adicionar, atualizar e excluir registros.|Chamadas `DoFieldExchange` para transferir dados para a fonte de dados.|
 
 ## <a name="see-also"></a>Consulte também
 

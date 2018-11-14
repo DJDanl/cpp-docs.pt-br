@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::strstreambuf [C++], str
 - std::strstreambuf [C++], underflow
 ms.assetid: b040b8ea-0669-4eba-8908-6a9cc159c54b
-ms.openlocfilehash: 5a9fa47ab19a5935bf0c7c36dea37b3cfe6180ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75c9a96b727ef60280055536296f850f492d16ac
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512379"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327298"
 ---
 # <a name="strstreambuf-class"></a>Classe strstreambuf
 
@@ -186,11 +186,11 @@ O caractere a ser inserido no buffer ou `EOF`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Se a função não conseguir obter êxito, ela retornará `EOF`. Caso contrário, se _ *Meta* == `EOF`, ele retorna um valor diferente de `EOF`. Caso contrário, retornará \_ *Meta*.
+Se a função não conseguir obter êxito, ela retornará `EOF`. Caso contrário, se  *\_Meta* == `EOF`, ele retorna um valor diferente de `EOF`. Caso contrário, retornará  *\_Meta*.
 
 ### <a name="remarks"></a>Comentários
 
-Se _ *Meta* != `EOF`, a função de membro virtual protegida tenta inserir o elemento ( `char`)\_ *Meta* no buffer de saída. Isso pode ser feito de várias maneiras:
+Se  *\_Meta* ! = `EOF`, a função de membro virtual protegida tenta inserir o elemento `(char)_Meta` no buffer de saída. Isso pode ser feito de várias maneiras:
 
 - Se houver uma posição de gravação disponível, ela poderá armazenar o elemento na posição de gravação e incrementar o próximo ponteiro para o buffer de saída.
 
@@ -211,13 +211,13 @@ O caractere a ser inserido no buffer ou `EOF`.
 
 ### <a name="return-value"></a>Valor de retorno
 
-Se a função não conseguir obter êxito, ela retornará `EOF`. Caso contrário, se _ *Meta* == `EOF`, ele retorna um valor diferente de `EOF`. Caso contrário, retornará \_ *Meta*.
+Se a função não conseguir obter êxito, ela retornará `EOF`. Caso contrário, se  *\_Meta* == `EOF`, ele retorna um valor diferente de `EOF`. Caso contrário, retornará  *\_Meta*.
 
 ### <a name="remarks"></a>Comentários
 
 A função membro virtual protegida tenta colocar um elemento de volta no buffer de entrada e, em seguida, faz com que ele seja o elemento atual (apontado pelo próximo ponteiro).
 
-Se _ *Meta* == `EOF`, o elemento a ser recuado é efetivamente o que já está no fluxo antes do elemento atual. Caso contrário, esse elemento é substituído por **ch** = ( `char`)\_ *Meta*. A função pode colocar um elemento de volta de várias maneiras:
+Se  *\_Meta* == `EOF`, elemento a ser recuado será efetivamente aquele que já está no fluxo antes do elemento atual. Caso contrário, esse elemento é substituído por `ch = (char)_Meta`. A função pode colocar um elemento de volta de várias maneiras:
 
 - Se uma posição putback estiver disponível, e o elemento armazenado lá compara como igual a `ch`, ela poderá decrementar o próximo ponteiro para o buffer de entrada.
 
@@ -289,15 +289,15 @@ A função de membro virtual protegida busca alterar as posições atuais para o
 
 A nova posição é determinada da seguinte forma:
 
-- Se `_Way`  ==  `ios_base::beg`, a nova posição é o início do fluxo mais _ *Off*.
+- Se `_Way == ios_base::beg`, a nova posição é o início do fluxo mais *off*.
 
-- Se `_Way`  ==  `ios_base::cur`, a nova posição é a posição atual do fluxo mais _ *Off*.
+- Se `_Way == ios_base::cur`, a nova posição é a posição atual do fluxo mais *off*.
 
-- Se `_Way`  ==  `ios_base::end`, a nova posição é o final do fluxo mais _ *Off*.
+- Se `_Way == ios_base::end`, a nova posição é o final do fluxo mais *off*.
 
-Se `_Which`  &  **ios_base::in** é diferente de zero e o buffer de entrada existir, a função altera a próxima posição de leitura no buffer de entrada. Se `_Which`  &  **ios_base::out** também é diferente de zero, `_Way` ! = **ios_base::cur**e o buffer de saída existe, a função também define a próxima posição de gravação coincidir com a próxima posição de leitura.
+Se `_Which & ios_base::in` é diferente de zero e o buffer de entrada existir, a função altera a próxima posição de leitura no buffer de entrada. Se `_Which & ios_base::out` também é diferente de zero, `_Way != ios_base::cur`e o buffer de saída existir, a função também define a próxima posição de gravação coincidir com a próxima posição de leitura.
 
-Caso contrário, se `_Which` & `ios_base::out` é diferente de zero e o buffer de saída existir, a função altera a próxima posição de gravação no buffer de saída. Caso contrário, a operação de posicionamento falhará. Para que uma operação de posicionamento seja bem-sucedida, a posição do fluxo resultante deve estar dentro da sequência controlada.
+Caso contrário, se `_Which & ios_base::out` é diferente de zero e o buffer de saída existir, a função altera a próxima posição a ser gravada no buffer de saída. Caso contrário, a operação de posicionamento falhará. Para que uma operação de posicionamento seja bem-sucedida, a posição do fluxo resultante deve estar dentro da sequência controlada.
 
 ## <a name="seekpos"></a>  strstreambuf::seekpos
 
@@ -321,7 +321,7 @@ Se a função tiver êxito na alteração de uma ou de ambas as posições de fl
 
 ### <a name="remarks"></a>Comentários
 
-A função de membro virtual protegida busca alterar as posições atuais para os fluxos controlados. Para um objeto da classe strstreambuf, uma posição de fluxo consiste em apenas um deslocamento de fluxo. O deslocamento zero designa o primeiro elemento da sequência controlada. A nova posição é determinada por _ *Sp*.
+A função de membro virtual protegida busca alterar as posições atuais para os fluxos controlados. Para um objeto da classe strstreambuf, uma posição de fluxo consiste em apenas um deslocamento de fluxo. O deslocamento zero designa o primeiro elemento da sequência controlada. A nova posição é determinada pela *_Sp*.
 
 Se `_Which` & **ios_base::in** é diferente de zero e o buffer de entrada existir, a função altera a próxima posição de leitura no buffer de entrada. Se `_Which` & `ios_base::out` é diferente de zero e o buffer de saída existir, a função também define a próxima posição de gravação coincidir com a próxima posição de leitura. Caso contrário, se `_Which` & `ios_base::out` é diferente de zero e o buffer de saída existir, a função altera a próxima posição de gravação no buffer de saída. Caso contrário, a operação de posicionamento falhará. Para que uma operação de posicionamento seja bem-sucedida, a posição do fluxo resultante deve estar dentro da sequência controlada.
 
@@ -398,7 +398,7 @@ Um buffer usado para a saída.
 
 O primeiro construtor armazena um ponteiro nulo em todos os ponteiros controlando o buffer de entrada, o buffer de saída e a alocação strstreambuf. Ele define o modo de strstreambuf armazenado para tornar a sequência controlada modificável e extensível. Ele também aceita *contagem* como um tamanho de alocação inicial sugerida.
 
-O segundo construtor se comporta como o primeiro, exceto que ele armazena _ *Allocfunc* como o ponteiro para a função a ser chamada para alocar o armazenamento e \_ *Freefunc* como o ponteiro para a função a ser chamada para liberar o armazenamento.
+O segundo construtor se comporta como a primeira, exceto que ele armazena  *\_Allocfunc* como o ponteiro para a função ser chamada para alocar o armazenamento e  *\_Freefunc* que o ponteiro a função a ser chamada para liberar o armazenamento.
 
 Os três construtores:
 
