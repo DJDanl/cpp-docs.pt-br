@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 6438b9d125cc2b44c6c4525dcfa5a2bd95763304
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3b4abc1afc99a00d83c25574df06ebfb27141c65
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524424"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694173"
 ---
 # <a name="composite-control-global-functions"></a>Funções globais de controle de composição
 
@@ -490,7 +490,7 @@ Sempre retorna TRUE.
 
 ### <a name="remarks"></a>Comentários
 
-Essa função simplesmente chama [UnregisterClass](https://msdn.microsoft.com/library/windows/desktop/ms644899) conforme descrito no SDK do Windows.
+Essa função simplesmente chama [UnregisterClass](/windows/desktop/api/winuser/nf-winuser-unregisterclassa) conforme descrito no SDK do Windows.
 
 Chame essa função para limpar após todas as janelas existentes de host tenham sido destruídas se você chamasse [AtlAxWinInit](#atlaxwininit) e você não precisa criar host do windows. Se você não chamar essa função, a classe de janela será cancelada automaticamente quando o processo termina.
 

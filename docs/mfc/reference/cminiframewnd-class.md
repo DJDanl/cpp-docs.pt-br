@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-ms.openlocfilehash: f16a8cd21fe724c44a1ed648f29e42cb5d00dcd1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6fdef34ba5873718caed509100cbe7e905d880d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663289"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693517"
 ---
 # <a name="cminiframewnd-class"></a>Classe CMiniFrameWnd
 
@@ -167,7 +167,7 @@ virtual BOOL CreateEx(
 Especifica o estilo estendido do `CMiniFrameWnd` que está sendo criado. Aplicar qualquer um dos [estilos de janela estendidos](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) à janela.
 
 *lpClassName*<br/>
-Aponta para uma cadeia de caracteres terminada em nulo que nomeia a classe do Windows (um [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) estrutura). O nome de classe pode ser qualquer nome registrado com global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) função ou qualquer um dos nomes predefinidos de classe de controle. Ele não deve ser NULL.
+Aponta para uma cadeia de caracteres terminada em nulo que nomeia a classe do Windows (um [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) estrutura). O nome de classe pode ser qualquer nome registrado com global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) função ou qualquer um dos nomes predefinidos de classe de controle. Ele não deve ser NULL.
 
 *Sinalizador para liberação final*<br/>
 Aponta para uma cadeia de caracteres terminada em nulo que contém o nome da janela.

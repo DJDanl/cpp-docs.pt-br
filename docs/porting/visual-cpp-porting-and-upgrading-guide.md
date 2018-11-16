@@ -2,12 +2,12 @@
 title: Guia de atualização e portabilidade do Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: c1f4114be236e5e3707113bc19779bb50f358ca8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39b0e716ae6dbc1210130908b27cfa1d06f86ec6
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478085"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556862"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Guia de atualização e portabilidade do Visual C++
 
@@ -63,7 +63,7 @@ Além das alterações que você não pode evitar devido a erros de compilador, 
 
 3. Você pode atualizar o código para usar os novos recursos de linguagem que simplificam o código, melhoram o desempenho de seus programas ou atualizar o código para usar bibliotecas modernas e entrar em conformidade com padrões modernos e melhores práticas.
 
-Depois de ter atualizado e testado seu projeto, você também pode melhorar ainda mais seu código ou planejar a direção futura do seu código ou até mesmo reconsiderar a arquitetura do seu projeto. Ele receberá trabalho de desenvolvimento contínuo? Será importante que seu código seja executado em outras plataformas?  Em caso afirmativo, quais plataformas?  O C++ é uma linguagem padronizada projetada com a ideia de desenvolvimento de portabilidade de plataforma cruzada e ainda assim, o código para muitos aplicativos do Windows está intimamente ligado à plataforma Windows. Você deseja refatorar o seu código para separar as partes que estão mais ligadas à plataforma do Windows?
+Depois de ter atualizado e testado seu projeto, você também pode melhorar ainda mais seu código ou planejar a direção futura do seu código ou até mesmo reconsiderar a arquitetura do seu projeto. Ele receberá trabalho de desenvolvimento contínuo? Será importante que seu código seja executado em outras plataformas?  Em caso afirmativo, quais plataformas?  O C++ é uma linguagem padronizada criada com a ideia de desenvolvimento de portabilidade e plataforma cruzada e, ainda assim, o código para muitos aplicativos do Windows está intimamente ligado à plataforma Windows. Você deseja refatorar o seu código para separar as partes que estão mais ligadas à plataforma do Windows?
 
 E a sua interface do usuário? Se você estiver usando o MFC, convém atualizar a interface do usuário. Você está usando algum dos recursos mais recentes do MFC que foram introduzidos no 2008 como um Feature Pack? Se você só deseja dar uma aparência e funcionalidade mais recente ao seu aplicativo sem reescrevê-lo, considere usar as APIs da Faixa de Opções no MFC ou alguns dos novos recursos do MFC.
 

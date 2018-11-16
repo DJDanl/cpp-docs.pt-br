@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 495d30f9fabcb3a9586504282dee881362988c3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9b6a462cf359bbd31958509c4fe7d0d71e490d11
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523475"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694303"
 ---
 # <a name="afxglobaldata-structure"></a>Estrutura AFX_GLOBAL_DATA
 
@@ -259,10 +259,10 @@ Use o [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata) mé
 [in] Ponteiro para um contexto de dispositivo.
 
 *iPartId*<br/>
-[in] A parte do controle que tem a aparência do texto desejado. Para obter mais informações, consulte a coluna de partes da tabela no [partes e estados](https://msdn.microsoft.com/library/windows/desktop/bb773210). Se esse valor for 0, o texto é desenhado em uma fonte selecionada no contexto de dispositivo ou a fonte padrão.
+[in] A parte do controle que tem a aparência do texto desejado. Para obter mais informações, consulte a coluna de partes da tabela no [partes e estados](/windows/desktop/controls/parts-and-states). Se esse valor for 0, o texto é desenhado em uma fonte selecionada no contexto de dispositivo ou a fonte padrão.
 
 *iStateId*<br/>
-[in] O estado do controle que tem a aparência do texto desejado. Para obter mais informações, consulte a coluna de estados da tabela no [partes e estados](https://msdn.microsoft.com/library/windows/desktop/bb773210).
+[in] O estado do controle que tem a aparência do texto desejado. Para obter mais informações, consulte a coluna de estados da tabela no [partes e estados](/windows/desktop/controls/parts-and-states).
 
 *strText*<br/>
 [in] O texto a ser desenhado.
@@ -293,7 +293,7 @@ Um tema define o estilo visual de um aplicativo. Um tema não é usado para dese
 
 [Gráfico da hierarquia](../../mfc/hierarchy-chart.md)<br/>
 [COLORREF](/windows/desktop/gdi/colorref)<br/>
-[Partes e Estados](https://msdn.microsoft.com/library/windows/desktop/bb773210)<br/>
+[Partes e Estados](/windows/desktop/controls/parts-and-states)<br/>
 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)<br/>
 [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
 [Gerenciador de janelas da área de trabalho](/windows/desktop/dwm/dwm-overview)<br/>
@@ -431,7 +431,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ### <a name="parameters"></a>Parâmetros
 
 *Informações de*<br/>
-[no, out] Um [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175) estrutura que contém as métricas escalonáveis associadas com a área não cliente de uma janela não minimizada.
+[no, out] Um [NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa) estrutura que contém as métricas escalonáveis associadas com a área não cliente de uma janela não minimizada.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -439,7 +439,7 @@ TRUE se este método for bem-sucedido; Caso contrário, FALSE.
 
 ### <a name="see-also"></a>Consulte também
 
-[Estrutura NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)
+[Estrutura NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 

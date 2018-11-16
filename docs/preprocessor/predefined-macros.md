@@ -1,7 +1,7 @@
 ---
 title: Macros predefinidas
 ms.custom: update_every_version
-ms.date: 04/30/2018
+ms.date: 11/12/2018
 f1_keywords:
 - _ATL_VER
 - __ATOM__
@@ -143,12 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: 42b81431ca69de84a5d38cca3eaa088bb7255656
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ebc23545817de0f249185700454237c66610c13
+ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660454"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678348"
 ---
 # <a name="predefined-macros"></a>Macros predefinidas
 
@@ -378,6 +378,8 @@ Microsoft Visual C++ dá suporte a essas macros predefinidas adicionais.
    |Visual Studio 2017 versão 15.5|1912|
    |Visual Studio 2017 versão 15.6|1913|
    |Visual Studio 2017 versão 15.7|1914|
+   |Visual Studio 2017 versão 15.8|1915|
+   |Visual Studio 2017 versão 15,9|1916|
 
    Para testar versões do compilador ou atualizações em uma determinada versão do Visual Studio ou depois, use o **>=** operador (maior ou igual a) para comparar  **&#95;MSC&#95;VIDOR** contra que conhecidos Versão. Se você tiver várias versões para comparar de forma mutuamente exclusiva, é recomendável que você ordenar nas comparações em ordem decrescente de número de versão. Por exemplo, esse código verifica para compiladores lançados no Visual Studio 2015 e versões posteriores, em seguida, compiladores, lançados em ou após o Visual Studio 2013, em seguida, executa uma ação para todos os compiladores lançado antes do Visual Studio 2013:
 

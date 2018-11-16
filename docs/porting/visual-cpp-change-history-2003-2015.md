@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 1025b3469611ee1e880a2abd5a4e553a1317a0d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1070a330e40c0bf73f3713783b3f126d0848cbc
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570710"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525516"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Histórico de alterações de 2003 a 2015 do Visual C++
 
@@ -64,19 +64,19 @@ Além disso, aprimoramentos contínuos para a conformidade do compilador podem a
 
    Funções que foram movidas:
 
-   - double abs(double) e float abs(float)
+  - double abs(double) e float abs(float)
 
-   - double pow(double, int), float pow(float, float), float pow(float, int), long double pow(long double, long double), long double pow(long double, int)
+  - double pow(double, int), float pow(float, float), float pow(float, int), long double pow(long double, long double), long double pow(long double, int)
 
-   - versões float e long double de funções de ponto flutuante acos, acosh, asin, asinh, atan, atanh, atan2, cbrt, ceil, copysign, cos, cosh, erf, erfc, exp, exp2, expm1, fabs, fdim, floor, fma, fmax, fmin, fmod, frexp, hypot, ilogb, ldexp, lgamma, llrint, llround, log, log10, log1p, log2, lrint, lround, modf, nearbyint, nextafter, nexttoward, remainder, remquo, rint, round, scalbln, scalbn, sin, sinh, sqrt, tan, tanh, tgamma, trunc
+  - versões float e long double de funções de ponto flutuante acos, acosh, asin, asinh, atan, atanh, atan2, cbrt, ceil, copysign, cos, cosh, erf, erfc, exp, exp2, expm1, fabs, fdim, floor, fma, fmax, fmin, fmod, frexp, hypot, ilogb, ldexp, lgamma, llrint, llround, log, log10, log1p, log2, lrint, lround, modf, nearbyint, nextafter, nexttoward, remainder, remquo, rint, round, scalbln, scalbn, sin, sinh, sqrt, tan, tanh, tgamma, trunc
 
-   Se você tem código que usa abs com um tipo de ponto flutuante que inclui apenas o cabeçalho math.h, as versões de ponto flutuante não estarão mais disponíveis, portanto, a chamada, mesmo com um argumento de ponto flutuante, agora resolve-se em abs(int). Isso gera o erro:
+  Se você tem código que usa abs com um tipo de ponto flutuante que inclui apenas o cabeçalho math.h, as versões de ponto flutuante não estarão mais disponíveis, portanto, a chamada, mesmo com um argumento de ponto flutuante, agora resolve-se em abs(int). Isso gera o erro:
 
     ```Output
     warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
     ```
 
-   A correção para esse aviso é substituir a chamada de `abs` por uma versão de ponto flutuante de `abs`, como `fabs` para um argumento double ou `fabsf` para um argumento float, ou incluir o cabeçalho cmath e continuar usando `abs`.
+  A correção para esse aviso é substituir a chamada de `abs` por uma versão de ponto flutuante de `abs`, como `fabs` para um argumento double ou `fabsf` para um argumento float, ou incluir o cabeçalho cmath e continuar usando `abs`.
 
 - **Conformidade de ponto flutuante**
 
@@ -116,7 +116,7 @@ Além disso, aprimoramentos contínuos para a conformidade do compilador podem a
 
    Para adicionar essa biblioteca a sua entrada de vinculador no IDE, abra o menu de contexto do nó do projeto, escolha **Propriedades** e, em seguida, na caixa de diálogo **Propriedades do Projeto**, escolha **Vinculador** e edite a **Entrada do Vinculador** para adicionar `legacy_stdio_definitions.lib` à lista separada por ponto-e-vírgulas.
 
-   Se seu projeto se vincula a bibliotecas estáticas que foram compiladas com uma versão do Visual Studio anterior a 2015, o vinculador pode relatar um símbolo externo não resolvido. Esses erros podem fazer referência a definições stdio internas de _iob, _iob_func ou importações relacionadas de determinadas funções stdio na forma de _imp\_*. A Microsoft recomenda que você recompile todas as bibliotecas estáticas com a versão mais recente do compilador e das bibliotecas do C++ ao atualizar um projeto. Se a biblioteca é uma biblioteca de terceiros cuja fonte não está disponível, você deve solicitar ao terceiro um binário atualizado ou encapsular o uso dessa biblioteca em uma DLL separada que você compila com a versão mais antiga do compilador e das bibliotecas.
+   Se seu projeto se vincula a bibliotecas estáticas que foram compiladas com uma versão do Visual Studio anterior a 2015, o vinculador pode relatar um símbolo externo não resolvido. Esses erros podem fazer referência a definições stdio internas de `_iob`, `_iob_func` ou importações relacionadas de determinadas funções stdio na forma de _imp_\*. A Microsoft recomenda que você recompile todas as bibliotecas estáticas com a versão mais recente do compilador e das bibliotecas do C++ ao atualizar um projeto. Se a biblioteca é uma biblioteca de terceiros cuja fonte não está disponível, você deve solicitar ao terceiro um binário atualizado ou encapsular o uso dessa biblioteca em uma DLL separada que você compila com a versão mais antiga do compilador e das bibliotecas.
 
     > [!WARNING]
     > Se você estiver vinculando com SDK do Windows 8.1 ou anterior, você poderá se deparar com esses erros de símbolo externo não resolvido. Nesse caso, você deve resolver o erro adicionando a legacy_stdio_definitions.lib ao vinculador de entrada conforme descrito anteriormente.
@@ -139,27 +139,27 @@ Além disso, aprimoramentos contínuos para a conformidade do compilador podem a
 
    Nas versões anteriores, infinitos e NaNs eram formatados usando um conjunto de cadeias de caracteres de sentinela específico do MSVC.
 
-   - Infinito: 1.#INF
+  - Infinito: 1.#INF
 
-   - NaN silencioso: 1.#QNAN
+  - NaN silencioso: 1.#QNAN
 
-   - NaN sinalizado: 1.#SNAN
+  - NaN sinalizado: 1.#SNAN
 
-   - NaN indefinido: 1.#IND
+  - NaN indefinido: 1.#IND
 
-   Qualquer um desses poderia ser prefixado por um sinal e poderia ser formatado de forma ligeiramente diferente, dependendo da largura do campo e da precisão (às vezes com efeitos incomuns, por exemplo, `printf("%.2f\n", INFINITY)` imprimiria 1.#J porque o #INF seria "arredondado" com uma precisão de 2 dígitos). O C99 introduziu novos requisitos a respeito de como os infinitos e NaNs devem ser formatados. A implementação do MSVC agora está em conformidade com esses requisitos. As novas cadeias de caracteres são as seguintes:
+  Qualquer um desses poderia ser prefixado por um sinal e poderia ser formatado de forma ligeiramente diferente, dependendo da largura do campo e da precisão (às vezes com efeitos incomuns, por exemplo, `printf("%.2f\n", INFINITY)` imprimiria 1.#J porque o #INF seria "arredondado" com uma precisão de 2 dígitos). O C99 introduziu novos requisitos a respeito de como os infinitos e NaNs devem ser formatados. A implementação do MSVC agora está em conformidade com esses requisitos. As novas cadeias de caracteres são as seguintes:
 
-   - Infinito: inf
+  - Infinito: inf
 
-   - NaN silencioso: nan
+  - NaN silencioso: nan
 
-   - NaN sinalizado: nan(snan)
+  - NaN sinalizado: nan(snan)
 
-   - NaN indefinido: nan(ind)
+  - NaN indefinido: nan(ind)
 
-   Todas podem ser prefixadas por um sinal. Se um especificador de formato maiúsculo for usado (%F, em vez de %f), as cadeias de caracteres serão impressas em letras maiúsculas (INF em vez de inf), conforme necessário.
+  Todas podem ser prefixadas por um sinal. Se um especificador de formato maiúsculo for usado (%F, em vez de %f), as cadeias de caracteres serão impressas em letras maiúsculas (INF em vez de inf), conforme necessário.
 
-   As funções [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) foram modificadas para analisar essas novas cadeias de caracteres, portanto, essas cadeias de caracteres farão viagem de ida e volta entre printf e scanf.
+  As funções [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) foram modificadas para analisar essas novas cadeias de caracteres, portanto, essas cadeias de caracteres farão viagem de ida e volta entre printf e scanf.
 
 - **Formatação e análise de ponto flutuante**
 
@@ -171,8 +171,16 @@ Além disso, aprimoramentos contínuos para a conformidade do compilador podem a
     printf("%.0f\n", pow(2.0, 80))
     ```
 
+   Saída antiga:
+
     ```Output
-        Old:  1208925819614629200000000    New:  1208925819614629174706176
+    1208925819614629200000000
+    ```
+
+   Nova saída:
+
+    ```Output
+    1208925819614629174706176
     ```
 
    Os algoritmos de análise antigos considerariam até 17 dígitos significativos da cadeia de entrada e descartariam o restante dos dígitos. Isso é suficiente para gerar uma aproximação do valor representado pela cadeia de caracteres e o resultado é normalmente muito próximo do resultado corretamente arredondado. A nova implementação considera todos os dígitos presentes e produz o resultado arredondado corretamente para todas as entradas (até 768 dígitos). Além disso, essas funções agora respeitam o modo de arredondamento (controlável por meio de fesetround).  Essa é uma mudança de comportamento potencialmente significativa porque essas funções podem gerar resultados diferentes. Os novos resultados sempre são mais corretos que os resultados antigos.
@@ -641,7 +649,7 @@ Embora essas diferenças possam afetar seu código-fonte ou outros artefatos de 
    Por exemplo, suponha que seu código defina um **placement new** e um **placement delete**:
 
     ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
     ```
 

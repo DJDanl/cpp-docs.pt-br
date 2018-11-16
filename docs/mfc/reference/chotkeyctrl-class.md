@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 1ab89c860813996360cddbf0caf5d4ebc395603d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ec5b734b23a27522fe430d24d2a65eebcca3dd3
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452709"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694719"
 ---
 # <a name="chotkeyctrl-class"></a>Classe CHotKeyCtrl
 
@@ -67,7 +67,7 @@ Esse controle (e, portanto, o `CHotKeyCtrl` classe) está disponível somente pa
 
 Quando o usuário escolheu uma combinação de teclas, o aplicativo pode recuperar a combinação de chave especificada do controle e usar a mensagem WM_SETHOTKEY para configurar a tecla de acesso no sistema. Sempre que o usuário pressiona a tecla de atalho daí em diante, de qualquer parte do sistema, a janela especificada na mensagem WM_SETHOTKEY recebe uma mensagem WM_SYSCOMMAND especificando SC_HOTKEY. Essa mensagem ativa a janela que recebe a ele. A tecla de acesso permanece válida até o aplicativo que chamou WM_SETHOTKEY sai.
 
-Esse mecanismo é diferente do que o suporte a chaves hot que depende da mensagem WM_HOTKEY e o Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) e [UnregisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646327) funções.
+Esse mecanismo é diferente do que o suporte a chaves hot que depende da mensagem WM_HOTKEY e o Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) e [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) funções.
 
 Para obter mais informações sobre como usar `CHotKeyCtrl`, consulte [controles](../../mfc/controls-mfc.md) e [usando CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).
 

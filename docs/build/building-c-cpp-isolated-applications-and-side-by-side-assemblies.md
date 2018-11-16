@@ -9,16 +9,16 @@ helpviewer_keywords:
 - side-by-side applications [C++]
 - builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-ms.openlocfilehash: da8bd6d583d6f9d714853e545979d54ddcb79ce5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d487e8a124d2edd7ce5a658d4965f1567756d5a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429123"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694147"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Compilando aplicativos isolados do C/C++ e assemblies lado a lado
 
-Visual C++ oferece suporte a um modelo de implantação para aplicativos de cliente do Windows com base na ideia de [aplicativos isolados](/windows/desktop/SbsCs/isolated-applications) e [assemblies lado a lado](/windows/desktop/SbsCs/about-side-by-side-assemblies-). Por padrão, o Visual C++ compila todos os aplicativos C/C++ nativos como aplicativos isolados que usam [manifestos](https://msdn.microsoft.com/library/aa375365) para descrever suas dependências em bibliotecas do Visual C++.
+Visual C++ oferece suporte a um modelo de implantação para aplicativos de cliente do Windows com base na ideia de [aplicativos isolados](/windows/desktop/SbsCs/isolated-applications) e [assemblies lado a lado](/windows/desktop/SbsCs/about-side-by-side-assemblies-). Por padrão, o Visual C++ compila todos os aplicativos C/C++ nativos como aplicativos isolados que usam [manifestos](/windows/desktop/sbscs/manifests) para descrever suas dependências em bibliotecas do Visual C++.
 
 A compilação de programas do C/C++ como aplicativos isolados apresenta muitas vantagens. Por exemplo, um aplicativo isolado não é afetado quando outros aplicativos do C/C++ instalam ou desinstalam bibliotecas do Visual C++. Bibliotecas do Visual C++ usadas por aplicativos isolados ainda podem ser redistribuídas na pasta local do aplicativo ou pela instalação para o cache de assembly nativo (WinSxS); No entanto, a manutenção das bibliotecas do Visual C++ para aplicativos já implantados podem ser simplificados usando um [arquivo de configuração de publicador](/windows/desktop/SbsCs/publisher-configuration). O modelo de implantação do aplicativo isolado facilita a garantia de que os aplicativos do C/C++ em execução em um computador específico usam a versão mais recente das bibliotecas do Visual C++, enquanto mantém aberta a possibilidade dos administradores de sistema e dos autores de aplicativos controlarem a associação de versão explícita dos aplicativos para suas DLLs dependentes.
 

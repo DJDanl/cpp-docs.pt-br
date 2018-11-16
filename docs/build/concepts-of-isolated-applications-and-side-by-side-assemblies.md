@@ -5,12 +5,12 @@ helpviewer_keywords:
 - side-by-side assemblies [C++]
 - isolated assemblies [C++]
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
-ms.openlocfilehash: 6453e68b07013bc5f5799b7252ad9a88e73250f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac354ed34bc3ab849eecf9256b447308f449abfe
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532932"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693562"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>Conceitos de aplicativos isolados e assemblies lado a lado
 
@@ -22,7 +22,7 @@ Um assembly lado a lado pode ser compartilhado ou particular. [Assemblies lado a
 
 ## <a name="manifests-and-search-order"></a>Manifestos e ordem de pesquisa
 
-Aplicativos isolados e assemblies lado a lado são descritos por [manifestos](https://msdn.microsoft.com/library/aa375365). Um manifesto é um documento XML que pode ser um arquivo externo ou pode ser inserido em um aplicativo ou em um assembly como um recurso. O arquivo de manifesto de um aplicativo isolado é usado para gerenciar os nomes e as versões dos assemblies lado a lado compartilhados aos quais o aplicativo deve se associar no tempo de execução. O manifesto de um assembly lado a lado especifica nomes, versões, recursos e os assemblies dependentes de assemblies lado a lado. Para um assembly lado a lado compartilhado, seu manifesto é instalado na pasta %WINDIR%\WinSxS\Manifests\. No caso de um assembly particular, recomendamos que você inclua seu manifesto na DLL como um recurso que tenha uma ID igual a 1. Você também pode dar ao assembly particular o mesmo nome da DLL. Para obter mais informações, consulte [sobre Assemblies particulares](/windows/desktop/SbsCs/about-private-assemblies-).
+Aplicativos isolados e assemblies lado a lado são descritos por [manifestos](/windows/desktop/sbscs/manifests). Um manifesto é um documento XML que pode ser um arquivo externo ou pode ser inserido em um aplicativo ou em um assembly como um recurso. O arquivo de manifesto de um aplicativo isolado é usado para gerenciar os nomes e as versões dos assemblies lado a lado compartilhados aos quais o aplicativo deve se associar no tempo de execução. O manifesto de um assembly lado a lado especifica nomes, versões, recursos e os assemblies dependentes de assemblies lado a lado. Para um assembly lado a lado compartilhado, seu manifesto é instalado na pasta %WINDIR%\WinSxS\Manifests\. No caso de um assembly particular, recomendamos que você inclua seu manifesto na DLL como um recurso que tenha uma ID igual a 1. Você também pode dar ao assembly particular o mesmo nome da DLL. Para obter mais informações, consulte [sobre Assemblies particulares](/windows/desktop/SbsCs/about-private-assemblies-).
 
 No momento da execução, o Windows usa as informações do assembly do manifesto do aplicativo para procurar e carregar o assembly lado a lado correspondente. Se um aplicativo isolado especificar uma dependência do assembly, o sistema operacional procura pelo assembly primeiro entre os assemblies compartilhados em cache de assembly nativo na pasta %WINDIR%\WinSxS\. Se o assembly necessário não for localizado, o sistema operacional procurará um assembly particular em uma pasta da estrutura de diretórios do aplicativo. Para obter mais informações, consulte [sequência de pesquisa de Assembly](/windows/desktop/SbsCs/assembly-searching-sequence).
 

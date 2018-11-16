@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: c1eeb649917e8457af5a3a27324ae65ae8259ac8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f6c41b3675251df6b07e44003215fa67fb7e795
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477308"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694186"
 ---
 # <a name="cwinthread-class"></a>Classe CWinThread
 
@@ -445,7 +445,7 @@ Diferente de zero se bem-sucedido; Caso contrário, 0.
 A mensagem postada é mapeada para o manipulador de mensagens apropriado, a macro de mapa de mensagem ON_THREAD_MESSAGE.
 
 > [!NOTE]
-> Quando você chama [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946), a mensagem é colocada na fila de mensagens do thread. No entanto, porque as mensagens postadas dessa maneira não estão associadas uma janela, MFC será não distribuí-los para manipuladores de comando ou mensagem. Para lidar com essas mensagens, substitua o `PreTranslateMessage()` função da sua derivada de CWinApp de classe e manipular as mensagens manualmente.
+> Quando você chama [PostThreadMessage](/windows/desktop/api/winuser/nf-winuser-postthreadmessagea), a mensagem é colocada na fila de mensagens do thread. No entanto, porque as mensagens postadas dessa maneira não estão associadas uma janela, MFC será não distribuí-los para manipuladores de comando ou mensagem. Para lidar com essas mensagens, substitua o `PreTranslateMessage()` função da sua derivada de CWinApp de classe e manipular as mensagens manualmente.
 
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage
 

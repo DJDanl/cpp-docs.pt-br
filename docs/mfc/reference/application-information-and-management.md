@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 71b5eb9c97b8c6370a08281fdf4be7074a579f8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d5216cd399943cda67bc9387ea37c938e5cab48
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596658"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694323"
 ---
 # <a name="application-information-and-management"></a>Informações e gerenciamento do aplicativo
 
@@ -646,7 +646,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 ### <a name="parameters"></a>Parâmetros
 
 *lpWndClass*<br/>
-Ponteiro para um [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) estrutura que contém informações sobre a classe de janela a ser registrado. Para obter mais informações sobre essa estrutura, consulte o SDK do Windows.
+Ponteiro para um [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) estrutura que contém informações sobre a classe de janela a ser registrado. Para obter mais informações sobre essa estrutura, consulte o SDK do Windows.
 
 ### <a name="return-value"></a>Valor de retorno
 
@@ -681,7 +681,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>Parâmetros
 
 *nClassStyle*<br/>
-Especifica o estilo de classe do Windows ou uma combinação de estilos, criados com o uso de OR bit a bit ( **&#124;**) operador, para a classe de janela. Para obter uma lista de estilos de classe, consulte o [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) estrutura no SDK do Windows. Se for NULL, os padrões serão definidos da seguinte maneira:
+Especifica o estilo de classe do Windows ou uma combinação de estilos, criados com o uso de OR bit a bit ( **&#124;**) operador, para a classe de janela. Para obter uma lista de estilos de classe, consulte o [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) estrutura no SDK do Windows. Se for NULL, os padrões serão definidos da seguinte maneira:
 
 - Define o estilo de mouse para CS_DBLCLKS, que envia duas vezes em mensagens para o procedimento de janela quando o usuário clica duas vezes no mouse.
 

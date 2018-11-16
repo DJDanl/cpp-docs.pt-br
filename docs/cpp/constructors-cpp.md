@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 91d85f62917ff722a61ecbc87c58379a00016b83
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e2027d967aebe68618e44e454ec268770b53ee4b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523150"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694056"
 ---
 # <a name="constructors-c"></a>Construtores (C++)
 
@@ -25,7 +25,7 @@ public:
     // Default constructor
     Box() {}
 
-    // Initalize a Box with equal dimensions (i.e. a cube)
+    // Initialize a Box with equal dimensions (i.e. a cube)
     explicit Box(int i) : m_width(i), m_length(i), m_height(i) // member init list
     {}
 
@@ -70,7 +70,7 @@ int main()
 
 Um construtor pode, opcionalmente, ter uma lista de inicializador de membro, que inicializa membros de classe antes da execução do corpo do construtor. (Observe que uma lista de inicializadores de membro não é a mesma coisa que um *lista de inicializadores* do tipo [std:: initializer_list\<T >](../standard-library/initializer-list-class.md).)
 
-Usar uma lista de inicializador de membro é preferível atribuindo valores no corpo do construtor porque ela inicializa diretamente o membro. No exemplo a seguir mostra o inicializador de membro lista consiste em todos os **identifier(argument)** expressões após os dois-pontos:
+Usar uma lista de inicializadores de membro é preferível atribuindo valores no corpo do construtor porque ela inicializa diretamente o membro. No exemplo a seguir mostra o inicializador de membro lista consiste em todos os **identifier(argument)** expressões após os dois-pontos:
 
 ```cpp
     Box(int width, int length, int height)
@@ -571,7 +571,7 @@ public:
     // Default constructor
     Box() {}
 
-    // Initalize a Box with equal dimensions (i.e. a cube)
+    // Initialize a Box with equal dimensions (i.e. a cube)
     Box(int i) :  Box(i, i, i);  // delegating constructor
     {}
 

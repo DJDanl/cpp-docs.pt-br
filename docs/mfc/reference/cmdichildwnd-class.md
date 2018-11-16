@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: ffe7b975443b8bdc050bcb19af4f990b2e5ffafa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50fb7da1a59d35d96f1f65428b3a361e3a226607
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576625"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694448"
 ---
 # <a name="cmdichildwnd-class"></a>Classe CMDIChildWnd
 
@@ -142,7 +142,7 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parâmetros
 
 *lpszClassName*<br/>
-Aponta para uma cadeia de caracteres terminada em nulo que nomeia a classe do Windows (um [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) estrutura). O nome de classe pode ser qualquer nome registrado com o [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) função global. Deve ser NULL para um padrão `CMDIChildWnd`.
+Aponta para uma cadeia de caracteres terminada em nulo que nomeia a classe do Windows (um [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) estrutura). O nome de classe pode ser qualquer nome registrado com o [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) função global. Deve ser NULL para um padrão `CMDIChildWnd`.
 
 *lpszWindowName*<br/>
 Aponta para uma cadeia de caracteres com terminação nula que representa o nome da janela. Usado como o texto da barra de título.

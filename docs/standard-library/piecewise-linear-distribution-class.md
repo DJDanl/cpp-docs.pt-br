@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::piecewise_linear_distribution [C++], param_type
 - std::piecewise_linear_distribution [C++], param_type
 ms.assetid: cd141152-7163-4754-8f98-c6d6500005e0
-ms.openlocfilehash: ff443f4c6721e77de95da49384bc912c2c382930
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 327da9c6793e4e74f099bdc313ce34720561bbd0
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528677"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693458"
 ---
 # <a name="piecewiselineardistribution-class"></a>Classe piecewise_linear_distribution
 
@@ -301,7 +301,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-constrói um objeto de distribuição com intervalos da lista do inicializador *intervalos* e pesos gerados da função *weightfunc*.
+constrói um objeto de distribuição com intervalos da lista de inicializador *intervalos* e pesos gerados da função *weightfunc*.
 
 O construtor definido como
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-ms.openlocfilehash: a9d1e3638df46f9a60af54ae4c402337710c7561
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 58d8453cc50c28527c1f777db1b47ea23299d38f
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474720"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693939"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Solucionando problemas de aplicativos isolados do C/C++ e assemblies lado a lado
 
@@ -37,7 +37,7 @@ Se seu aplicativo é implantado em um computador que não tenha o Visual Studio,
 
 1. Se seu aplicativo depende de assemblies lado a lado e um manifesto não estiver presente, você precisa garantir que o vinculador gera um manifesto para seu projeto. Marque a opção de vinculador **gerar manifesto** na **propriedades do projeto** caixa de diálogo para o projeto.
 
-1. Se o manifesto é incorporado no binário, certifique-se de que a ID de RT_MANIFEST está correto para esse tipo de binário. Para obter mais informações sobre qual ID do recurso para usar, consulte [Assemblies lado a lado de uso como um recurso (Windows)](/windows/desktop/SbsCs/using-side-by-side-assemblies-as-a-resource). Se o manifesto é em um arquivo separado, abra-o em um editor de XML ou editor de texto. Para obter mais informações sobre manifestos e regras de implantação, consulte [manifestos](https://msdn.microsoft.com/library/aa375365).
+1. Se o manifesto é incorporado no binário, certifique-se de que a ID de RT_MANIFEST está correto para esse tipo de binário. Para obter mais informações sobre qual ID do recurso para usar, consulte [Assemblies lado a lado de uso como um recurso (Windows)](/windows/desktop/SbsCs/using-side-by-side-assemblies-as-a-resource). Se o manifesto é em um arquivo separado, abra-o em um editor de XML ou editor de texto. Para obter mais informações sobre manifestos e regras de implantação, consulte [manifestos](/windows/desktop/sbscs/manifests).
 
    > [!NOTE]
    > Se um manifesto inserido e um arquivo de manifesto separado estiverem presentes, o carregador do sistema operacional usa o manifesto inserido e ignora o arquivo separado. No entanto, no Windows XP, o oposto é verdadeiro, o arquivo de manifesto separado é usado e o manifesto inserido é ignorado.

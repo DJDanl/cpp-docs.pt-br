@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory [MFC], managing
 - memory allocation [MFC], MFC
 ms.assetid: 934ac81b-d630-4232-88e5-ea74f7187987
-ms.openlocfilehash: b5b91245d08c6c4a17c9ba96a0ca4dcf19932d9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22c5c2c835872a189fe342093a737d7887538256
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461376"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692731"
 ---
 # <a name="memory-management"></a>Gerenciamento de memória
 
@@ -21,7 +21,7 @@ Esse grupo de artigos descreve como tirar proveito dos serviços de uso geral da
 
 Uma diferença principal entre as técnicas de duas alocação é que com a alocação de quadro, que você normalmente trabalha com a memória real bloquear em si, embora com alocação de heap você sempre terá um ponteiro para o bloco de memória. Uma outra grande diferença entre os dois esquemas é que objetos de quadro são automaticamente excluídos, enquanto os objetos de heap devem ser excluídos explicitamente pelo programador.
 
-Para obter informações sobre o gerenciamento de memória em programas para Windows não MFC, consulte [gerenciamento de memória](https://msdn.microsoft.com/library/windows/desktop/aa366779) no SDK do Windows.
+Para obter informações sobre o gerenciamento de memória em programas para Windows não MFC, consulte [gerenciamento de memória](/windows/desktop/memory/memory-management) no SDK do Windows.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
 

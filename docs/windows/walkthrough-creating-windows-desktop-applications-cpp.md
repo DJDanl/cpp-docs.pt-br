@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: fc2080470e3292a459325679a6c5dc00c01d6b35
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da95b1dac2f058de67719b4754d2df6dbeb6f7f0
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528369"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694043"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Passo a passo: Criar um aplicativo tradicional de área de trabalho do Windows (C++)
 
@@ -132,7 +132,7 @@ Em seguida, você aprenderá a criar o código para um aplicativo de desktop do 
 
    Nessa função, você pode escrever código para manipular *mensagens* que o aplicativo recebe do Windows quando *eventos* ocorrer. Por exemplo, se um usuário escolhe um botão Okey em seu aplicativo, Windows enviará uma mensagem para você e você pode escrever código dentro de seu `WndProc` função que faz qualquer trabalho que seja apropriado. Ele é chamado *tratamento* um evento. Você só manipulam os eventos que são relevantes para seu aplicativo.
 
-   Para obter mais informações, consulte [procedimentos de janela](https://msdn.microsoft.com/library/windows/desktop/ms632593).
+   Para obter mais informações, consulte [procedimentos de janela](/windows/desktop/winmsg/window-procedures).
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>Para adicionar funcionalidade à função WinMain
 
@@ -157,7 +157,7 @@ Em seguida, você aprenderá a criar o código para um aplicativo de desktop do 
 
    Para obter informações sobre os campos da estrutura acima, consulte [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
 
-1. Registrar o `WNDCLASSEX` com Windows para que ele saiba sobre sua janela e como enviar mensagens para ela. Use o [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) de função e passar a estrutura de classe de janela como um argumento. O `_T` macro é usada como usamos o `TCHAR` tipo.
+1. Registrar o `WNDCLASSEX` com Windows para que ele saiba sobre sua janela e como enviar mensagens para ela. Use o [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa) de função e passar a estrutura de classe de janela como um argumento. O `_T` macro é usada como usamos o `TCHAR` tipo.
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -237,7 +237,7 @@ Em seguida, você aprenderá a criar o código para um aplicativo de desktop do 
    return (int) msg.wParam;
    ```
 
-   Para obter mais informações sobre as estruturas e funções no loop de mensagem, consulte [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage), e [DispatchMessage ](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
+   Para obter mais informações sobre as estruturas e funções no loop de mensagem, consulte [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage), e [DispatchMessage ](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
 
    Neste ponto, o `WinMain` função deve se parecer com o código a seguir.
 

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: a1f24221-5b09-4824-be48-92eae5644b53
-ms.openlocfilehash: d4dceec94a8868ed9b6d744a9f481825bf6af58a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a4391ffd3b7d293ed04a4852582444550570e577
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660429"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693354"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>Noções básicas sobre geração de manifesto para programas do C/C++
 
-Um [manifesto](https://msdn.microsoft.com/library/aa375365) é um documento XML que pode ser um arquivo XML externo ou um recurso incorporado dentro de um aplicativo ou um assembly. O manifesto de um [aplicativo isolado](/windows/desktop/SbsCs/isolated-applications) é usado para gerenciar os nomes e versões de assemblies lado a lado a lado compartilhados aos quais o aplicativo deve associar em tempo de execução. O manifesto de um assembly lado a lado especifica suas dependências em nomes, versões, recursos e outros assemblies.
+Um [manifesto](/windows/desktop/sbscs/manifests) é um documento XML que pode ser um arquivo XML externo ou um recurso incorporado dentro de um aplicativo ou um assembly. O manifesto de um [aplicativo isolado](/windows/desktop/SbsCs/isolated-applications) é usado para gerenciar os nomes e versões de assemblies lado a lado a lado compartilhados aos quais o aplicativo deve associar em tempo de execução. O manifesto de um assembly lado a lado especifica suas dependências em nomes, versões, recursos e outros assemblies.
 
 Há duas maneiras de criar um manifesto para um aplicativo isolado ou um assembly lado a lado. Primeiro, o autor do assembly pode criar manualmente um arquivo de manifesto seguindo regras e requisitos de nomenclatura. Como alternativa, se apenas um programa depende de assemblies do Visual C++, como o CRT, MFC, ATL ou outras pessoas, em seguida, um manifesto pode ser gerado automaticamente pelo vinculador.
 

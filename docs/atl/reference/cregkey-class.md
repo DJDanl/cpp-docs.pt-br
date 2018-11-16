@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 33ca9e1c07dc350845104a6027166e511b3bbe4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf2f97c1c3b389d0ee2b3d4bcdd2d9da2dbb3c8d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605069"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694849"
 ---
 # <a name="cregkey-class"></a>Classe CRegKey
 
@@ -892,7 +892,7 @@ Especifica os componentes do descritor de segurança para definir. O valor pode 
 |DACL_SECURITY_INFORMATION|Define a lista da chave de controle de acesso discricionário (DACL). A chave deve ter acesso WRITE_DAC ou o processo de chamada deve ser o proprietário do objeto.|
 |GROUP_SECURITY_INFORMATION|Define o identificador de segurança da chave primária de grupo (SID). A chave deve ter acesso WRITE_OWNER ou o processo de chamada deve ser o proprietário do objeto.|
 |OWNER_SECURITY_INFORMATION|Define o proprietário da chave SID. A chave deve ter acesso WRITE_OWNER ou o processo de chamada deve ser o proprietário do objeto ou ter o privilégio SE_TAKE_OWNERSHIP_NAME habilitado.|
-|SACL_SECURITY_INFORMATION|Define a lista de controle de acesso de sistema da chave (SACL). A chave deve ter acesso ACCESS_SYSTEM_SECURITY. O modo adequado para obter esse acesso é habilitar o SE_SECURITY_NAME [privilégio](https://msdn.microsoft.com/library/windows/desktop/aa379306) no token de acesso atual do chamador, abrir o identificador para o acesso ACCESS_SYSTEM_SECURITY e, em seguida, desabilite o privilégio.|
+|SACL_SECURITY_INFORMATION|Define a lista de controle de acesso de sistema da chave (SACL). A chave deve ter acesso ACCESS_SYSTEM_SECURITY. O modo adequado para obter esse acesso é habilitar o SE_SECURITY_NAME [privilégio](/windows/desktop/secauthz/privileges) no token de acesso atual do chamador, abrir o identificador para o acesso ACCESS_SYSTEM_SECURITY e, em seguida, desabilite o privilégio.|
 
 *PSD*<br/>
 Ponteiro para um [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) estrutura que especifica os atributos de segurança a ser definido para a chave especificada.

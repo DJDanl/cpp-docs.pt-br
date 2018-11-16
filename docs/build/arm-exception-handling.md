@@ -2,12 +2,12 @@
 title: Tratamento de exceção ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: b2b6b9b3508dd7a4dd42a2e22ad1052851c7c0c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6df8afd453f7e71d1ecc2ebb188c079a3aad02a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522260"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694342"
 ---
 # <a name="arm-exception-handling"></a>Tratamento de exceção ARM
 
@@ -15,7 +15,7 @@ O Windows baseado em ARM usa o mesmo mecanismo de tratamento de exceção estrut
 
 ## <a name="arm-exception-handling"></a>Tratamento de exceção ARM
 
-Usa o Windows em ARM *códigos de desenrolamento* para controlar o desenrolamento de pilha durante [manipulação de exceção estruturada](https://msdn.microsoft.com/library/windows/desktop/ms680657) (SEH). Os códigos de desenrolamento são uma sequência de bytes armazenados na seção .xdata da imagem executável. Eles descrevem a operação de código de prólogo e epílogo da função de uma maneira abstrata, para que os efeitos do prólogo de uma função possam ser desfeitos na preparação para desenrolar para o registro de ativação do chamador.
+Usa o Windows em ARM *códigos de desenrolamento* para controlar o desenrolamento de pilha durante [manipulação de exceção estruturada](/windows/desktop/debug/structured-exception-handling) (SEH). Os códigos de desenrolamento são uma sequência de bytes armazenados na seção .xdata da imagem executável. Eles descrevem a operação de código de prólogo e epílogo da função de uma maneira abstrata, para que os efeitos do prólogo de uma função possam ser desfeitos na preparação para desenrolar para o registro de ativação do chamador.
 
 A EABI (interface binária do aplicativo inserido) do ARM especifica um modelo de desenrolamento de exceção que usa códigos de desenrolamento, mas que não é suficiente para que o SEH desenrole no Windows, o qual deve manipular casos assíncronos em que o processador esteja no meio do prólogo ou do epílogo de uma função. O Windows também separa o controle de desenrolamento em desenrolamento no nível de função e em desenrolamento de escopo específico da linguagem, o qual é unificado na EABI do ARM. Por esses motivos, o Windows baseado em ARM especifica mais detalhes para os dados e o procedimento de desenrolamento.
 

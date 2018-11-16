@@ -32,12 +32,12 @@ helpviewer_keywords:
 - drawing [MFC], directly into windows
 - painting and device context
 ms.assetid: d0cd51f1-f778-4c7e-bf50-d738d10433c7
-ms.openlocfilehash: 8eca18795fac96e5cbddb404b901eb35da2de4b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 105e438a9ed3e8f7de7edc813fec516c0e99700a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585972"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694680"
 ---
 # <a name="device-contexts"></a>Contextos de dispositivo
 
@@ -57,21 +57,21 @@ Nesse caso, você pode usar um [CClientDC](../mfc/reference/cclientdc-class.md) 
 
 ### <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
 
-- [Contextos de dispositivo (definição)](https://msdn.microsoft.com/library/windows/desktop/dd183553)
+- [Contextos de dispositivo (definição)](/windows/desktop/gdi/device-contexts)
 
 - [Desenhando em uma exibição](../mfc/drawing-in-a-view.md)
 
 - [Interpretando a entrada do usuário por meio de uma exibição](../mfc/interpreting-user-input-through-a-view.md)
 
-- [Linhas e curvas](https://msdn.microsoft.com/library/windows/desktop/dd145028)
+- [Linhas e curvas](/windows/desktop/gdi/lines-and-curves)
 
-- [Formas preenchidas](https://msdn.microsoft.com/library/windows/desktop/dd162714)
+- [Formas preenchidas](/windows/desktop/gdi/filled-shapes)
 
 - [Fontes e texto](/windows/desktop/gdi/fonts-and-text)
 
-- [Cores](https://msdn.microsoft.com/library/windows/desktop/dd183450)
+- [Cores](/windows/desktop/gdi/colors)
 
-- [Espaços de coordenadas e transformações](https://msdn.microsoft.com/library/windows/desktop/dd183475)
+- [Espaços de coordenadas e transformações](/windows/desktop/gdi/coordinate-spaces-and-transformations)
 
 ## <a name="see-also"></a>Consulte também
 
