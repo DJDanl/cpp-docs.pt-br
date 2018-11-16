@@ -10,25 +10,25 @@ helpviewer_keywords:
 - tags, structure tags
 - union keyword [C]
 ms.assetid: b4bda1d1-cb5e-4f60-ac2b-29af93d8a9a2
-ms.openlocfilehash: 3441f111a82a336b329b6ee17d7bded32f7c2c07
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebf1961d83d14bf95633d4248c2f970c54923274
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676718"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51325985"
 ---
 # <a name="name-spaces"></a>Namespaces
 
 O compilador configura os “name spaces” para distinguir entre os identificadores usados para tipos diferentes de itens. Os nomes em cada name space devem ser exclusivos para evitar conflitos, mas um nome idêntico pode aparecer em mais de um name space. Isso significa que você pode usar o mesmo identificador de dois ou mais itens diferentes, contanto que os itens estejam em name spaces diferentes. O compilador pode resolver referências com base no contexto sintático do identificador no programa.
 
 > [!NOTE]
->  Não confunda a noção limitada de um name space em C com o recurso “namespace” em C++. Consulte [Namespaces](../cpp/namespaces-cpp.md), na *referência da linguagem C++* para obter mais informações.
+> Não confunda a noção limitada de um name space em C com o recurso “namespace” em C++. Consulte [Namespaces](../cpp/namespaces-cpp.md), na referência da linguagem C++ para obter mais informações.
 
 Esta lista descreve os name spaces usados em C.
 
-Rótulos de instrução Rótulos de instrução nomeados fazem parte das instruções. As definições de rótulos de instrução sempre são seguidas por dois pontos, mas não fazem parte dos rótulos **case**. O uso dos rótulos de instrução sempre ocorre imediatamente após a palavra-chave `goto`. Os rótulos de instrução não precisam ser diferentes de outros nomes ou nomes de rótulo em outras funções.
+Rótulos de instrução Rótulos de instrução nomeados fazem parte das instruções. As definições de rótulos de instrução sempre são seguidas por dois pontos, mas não fazem parte dos rótulos **case**. O uso dos rótulos de instrução sempre ocorre imediatamente após a palavra-chave **goto**. Os rótulos de instrução não precisam ser diferentes de outros nomes ou nomes de rótulo em outras funções.
 
-Marcas de estrutura, união e enumeração Essas marcas fazem parte de especificadores do tipo estrutura, união e enumeração e, se estiverem presentes, ocorrerão sempre imediatamente após as palavras reservadas `struct`, **union** ou `enum`. Os nomes de marcas devem ser diferentes de todas as outras marcas de estrutura, enumeração e união com a mesma visibilidade.
+Marcas de estrutura, união e enumeração. Essas marcas fazem parte de especificadores do tipo estrutura, união e enumeração e, quando presentes, ocorrerão sempre imediatamente após as palavras reservadas **struct**, **union** ou **enum**. Os nomes de marcas devem ser diferentes de todas as outras marcas de estrutura, enumeração e união com a mesma visibilidade.
 
 Membros de estruturas ou uniões Os nomes de membros são alocados em namespaces associados a cada tipo de estrutura e união. Ou seja, o mesmo identificador pode ser um nome de componente em várias estruturas ou uniões ao mesmo tempo. As definições de nomes de componente sempre ocorrem dentro dos especificadores do tipo estrutura ou união. O uso de nomes de componente sempre ocorre imediatamente após os operadores de seleção de membros (**->** e **.**). O nome de um membro deve ser exclusivo dentro da estrutura ou da união, mas não precisa ser diferente de outros nomes no programa, inclusive os nomes dos membros de estruturas e uniões diferentes ou o nome da própria estrutura.
 
@@ -38,7 +38,7 @@ Nomes Typedef Os nomes Typedef não podem ser usados como identificadores no mes
 
 Por exemplo, como as marcas de estrutura, os membros de estrutura e os nomes de variável estão em três name spaces diferentes, os três itens nomeados `student` neste exemplo não estão em conflito. O contexto de cada item permite a interpretação correta de cada ocorrência de `student` no programa. (Para obter informações sobre estruturas, consulte [Declarações de estrutura](../c-language/structure-declarations.md).)
 
-```
+```C
 struct student {
    char student[20];
    int class;
@@ -46,7 +46,7 @@ struct student {
    } student;
 ```
 
-Quando `student` aparece após a palavra-chave de `struct`, o compilador o reconhece como uma marca de estrutura. Quando `student` aparece após um operador de seleção de membros (**->** ou **.**), o nome faz referência ao membro da estrutura. Em outros contextos, `student` se refere à variável da estrutura. Porém, sobrecarregar a marca name space não é recomendado porque obscurece o significado.
+Quando `student` aparece após a palavra-chave **struct**, o compilador o reconhece como uma marca de estrutura. Quando `student` aparece após um operador de seleção de membros (**->** ou **.**), o nome faz referência ao membro da estrutura. Em outros contextos, `student` se refere à variável da estrutura. Porém, sobrecarregar a marca name space não é recomendado porque obscurece o significado.
 
 ## <a name="see-also"></a>Consulte também
 

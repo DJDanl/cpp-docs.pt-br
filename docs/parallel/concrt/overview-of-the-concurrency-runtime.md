@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: c1b9f9ca0565bfb04c3bff56b23ea1ef1dfa42d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dab4860bcc69780fa6a6390e2ef111216642637a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613662"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693631"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Visão geral do Tempo de Execução de Simultaneidade
+
 Este documento fornece uma visão geral do tempo de execução de simultaneidade. Ele descreve os benefícios do tempo de execução de simultaneidade, quando usá-lo e como seus componentes interagem entre si e com o sistema operacional e aplicativos.
 
 ##  <a name="top"></a> Seções

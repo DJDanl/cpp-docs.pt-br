@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 92a81e318c74f1acd39fbfe870a7ad1277b25125
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05545051b145f3beb11e4b48e8f93fd7908a783a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501628"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694238"
 ---
 # <a name="ccomboboxex-class"></a>Classe CComboBoxEx
 
@@ -247,7 +247,7 @@ O número de itens restantes no controle. Se *iIndex* é inválido, a função r
 
 ### <a name="remarks"></a>Comentários
 
-Essa função membro implementa a funcionalidade da mensagem [CBEM_DELETEITEM](/windows/desktop/Controls/cbem-deleteitem), conforme descrito no SDK do Windows. Quando você chama DeleteItem, uma [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) mensagem com notificação CBEN_DELETEITEM será enviada para a janela pai.
+Essa função membro implementa a funcionalidade da mensagem [CBEM_DELETEITEM](/windows/desktop/Controls/cbem-deleteitem), conforme descrito no SDK do Windows. Quando você chama DeleteItem, uma [WM_NOTIFY](/windows/desktop/controls/wm-notify) mensagem com notificação CBEN_DELETEITEM será enviada para a janela pai.
 
 ##  <a name="getcomboboxctrl"></a>  CComboBoxEx::GetComboBoxCtrl
 
@@ -373,7 +373,7 @@ O índice no qual o novo item foi inserido se for bem-sucedido; Caso contrário,
 
 ### <a name="remarks"></a>Comentários
 
-Quando você chama `InsertItem`, um [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) da mensagem com [CBEN_INSERTITEM](/windows/desktop/Controls/cben-insertitem) notificação será enviada para a janela pai.
+Quando você chama `InsertItem`, um [WM_NOTIFY](/windows/desktop/controls/wm-notify) da mensagem com [CBEN_INSERTITEM](/windows/desktop/Controls/cben-insertitem) notificação será enviada para a janela pai.
 
 ##  <a name="setextendedstyle"></a>  CComboBoxEx::SetExtendedStyle
 
