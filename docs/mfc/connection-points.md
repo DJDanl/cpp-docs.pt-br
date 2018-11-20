@@ -1,6 +1,6 @@
 ---
 title: Pontos de conexão
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - IConnectionPoint
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: cddbdb30cbc5f5ddb5fa98524ad067655f262be1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf21e7bf591a5b1977784db1542053817a73e6cd
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517631"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175477"
 ---
 # <a name="connection-points"></a>Pontos de conexão
 
@@ -30,7 +30,8 @@ No passado, o modelo de objeto de componente (COM) definido um mecanismo geral (
 
 Uma conexão tem duas partes: o objeto que está chamando a interface, chamada a origem e o objeto que implementa a interface, chamou o coletor. Um ponto de conexão é a interface exposta pela origem. Ao expor um ponto de conexão, uma fonte permite coletores estabelecer conexões a mesmo (a origem). A conexão por meio do mecanismo de ponto (o `IConnectionPoint` interface), um ponteiro para a interface de coletor é passado para o objeto de origem. Esse ponteiro fornece o código-fonte com acesso à implementação do coletor de um conjunto de funções de membro. Por exemplo, para disparar um evento implementado pelo coletor, o código-fonte pode chamar o método apropriado da implementação do coletor. A figura a seguir demonstra a conexão ponto que acabei de descrever.
 
-![Implementado o ponto de conexão](../mfc/media/vc37lh1.gif "vc37lh1") Conexão um implementado de ponto
+![Implementado o ponto de conexão](../mfc/media/vc37lh1.gif "implementado o ponto de conexão") <br/>
+Um ponto de Conexão implementado
 
 MFC implementa esse modelo na [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md) e [CCmdTarget](../mfc/reference/ccmdtarget-class.md) classes. As classes derivadas `CConnectionPoint` implementar o `IConnectionPoint` interface, usado para expor pontos de conexão a outros objetos. As classes derivadas `CCmdTarget` implementar o `IConnectionPointContainer` interface, que pode enumerar todos os pontos de conexão disponíveis de um objeto ou localizar um ponto de conexão específico.
 
@@ -54,7 +55,8 @@ Por fim, adicione uma chamada para `EnableConnections` no construtor da classe. 
 
 Depois que esse código foi inserido, sua `CCmdTarget`-classe derivada expõe um ponto de conexão para o `ISampleSink` interface. A figura a seguir ilustra esse exemplo.
 
-![Ponto de Conexão implementado pelo uso de MFC](../mfc/media/vc37lh2.gif "vc37lh2") uma Conexão de ponto implementado com MFC
+![Ponto de Conexão implementado pelo uso de MFC](../mfc/media/vc37lh2.gif "implementado pelo uso de MFC de ponto de Conexão") <br/>
+Um ponto de Conexão implementado com MFC
 
 Normalmente, os pontos de conexão dão suporte a "multicast" — a capacidade de fazer uma transmissão para vários coletores conectados para a mesma interface. O fragmento de exemplo a seguir demonstra como multicast iterando por cada coletor em um ponto de conexão:
 

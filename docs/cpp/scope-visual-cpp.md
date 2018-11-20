@@ -1,6 +1,6 @@
 ---
 title: Escopo (C++)
-ms.date: 04/08/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - classes [C++], scope
 - scope [C++]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-ms.openlocfilehash: f44b75be7b2b1459e3ee9d0472f9a5ef6dac9025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 534bb9711ff54e21ca091b399aa3d13ec5a7359d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506607"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176751"
 ---
 # <a name="scope-c"></a>Escopo (C++)
 
@@ -41,7 +41,8 @@ Há seis tipos de escopo:
 
 Você pode ocultar um nome declarando-o em um bloco fechado. Na figura a seguir, `i` é redeclarado dentro do bloco interno, ocultando assim a variável associada a `i` no escopo do bloco externo.
 
-![Bloco&#45;definir o escopo de ocultação de nome](../cpp/media/vc38sf1.png "vc38SF1") escopo de bloco e ocultação de nome
+![Bloco&#45;definir o escopo de ocultação de nome](../cpp/media/vc38sf1.png "bloco&#45;ocultação de nome de escopo") <br/>
+Escopo de bloco e ocultação de nome
 
 O resultado do programa mostrado na figura é:
 

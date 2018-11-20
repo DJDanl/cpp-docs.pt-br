@@ -1,18 +1,18 @@
 ---
 title: Várias classes base
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - base classes [C++], multiple
 - derived classes [C++], multiple bases
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-ms.openlocfilehash: fbbe6d6194b878b4851cbde84b55d71b9e4fc02c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b58c238da37fbbaf7c2c2913b652c26d98fbd96e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483454"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176348"
 ---
 # <a name="multiple-base-classes"></a>Várias classes base
 
@@ -52,11 +52,13 @@ Ao declarar uma classe base virtual, o **virtual** palavra-chave aparece nas lis
 
 Considere a hierarquia de classes na figura a seguir, que ilustra uma linha simulada de almoço.
 
-![Gráfico de linha de almoço simulado](../cpp/media/vc38xp1.gif "vc38XP1") gráfico de linha de almoço simulado
+![Gráfico de linha de almoço simulado](../cpp/media/vc38xp1.gif "gráfico de linha de almoço simulado") <br/>
+Gráfico de linha de almoço simulado
 
 Na figura, `Queue` é a classe base para `CashierQueue` e `LunchQueue`. No entanto, quando as duas classes são combinadas para formar `LunchCashierQueue`, o seguinte problema ocorre: a nova classe contém dois subobjetos do tipo `Queue`, um de `CashierQueue` e o outro de `LunchQueue`. A figura a seguir mostra o layout conceitual de memória (o layout real de memória pode ser otimizado).
 
-![Simulada de almoço&#45;objeto line](../cpp/media/vc38xp2.gif "vc38XP2") objeto de linha de almoço simulado
+![Simulada de almoço&#45;objeto line](../cpp/media/vc38xp2.gif "simulada de almoço&#45;o objeto de linha") <br/>
+Objeto de linha de almoço simulado
 
 Observe que há dois subobjetos `Queue` no objeto `LunchCashierQueue`. O código a seguir declara `Queue` como uma classe base virtual:
 
@@ -71,15 +73,18 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
 
 O **virtual** palavra-chave garante que apenas uma cópia do subobjeto `Queue` está incluído (consulte a figura a seguir).
 
-![Simulada de almoço&#45;objeto de linha, as classes base virtuais](../cpp/media/vc38xp3.gif "vc38XP3") objeto de linha de almoço simulado com Classes Base virtuais
+![Simulada de almoço&#45;objeto de linha, as classes base virtuais](../cpp/media/vc38xp3.gif "simulada de almoço&#45;o objeto de linha, as classes base virtuais") <br/>
+Objeto de linha de almoço simulado com classes base virtuais
 
 Uma classe pode ter um componente virtual e um componente não virtual de determinado tipo. Isso acontece nas condições ilustradas na figura a seguir.
 
-![Componentes virtuais e de uma classe](../cpp/media/vc38xp4.gif "vc38XP4") virtuais e componentes não virtuais da mesma classe
+![Virtual e não&#45;componentes virtuais de uma classe](../cpp/media/vc38xp4.gif "Virtual e não&#45;componentes virtuais de uma classe") <br/>
+Componentes virtuais e não virtuais da mesma classe
 
 Na figura, `CashierQueue` e `LunchQueue` usam `Queue` como uma classe base virtual. No entanto, `TakeoutQueue` especifica `Queue` como uma classe base, não uma classe base virtual. Portanto, `LunchTakeoutCashierQueue` tem dois subobjetos do tipo `Queue`: um do caminho de herança que inclui `LunchCashierQueue` e outro do caminho que inclui `TakeoutQueue`. Isso é ilustrado na figura a seguir.
 
-![Herança virtual e não virtual no layout do objeto](../cpp/media/vc38xp5.gif "vc38XP5") Layout do objeto com herança não virtual e Virtual
+![Não & virtual&#45;herança virtual no layout do objeto](../cpp/media/vc38xp5.gif "virtuais e não&#45;herança virtual no layout do objeto") <br/>
+Layout do objeto com herança virtual e não virtual
 
 > [!NOTE]
 >  A herança virtual oferece benefícios significativos de tamanho quando comparada com a herança não virtual. No entanto, pode apresentar a sobrecarga adicional de processamento.
@@ -187,7 +192,8 @@ As conversões explícitas e implícitas de ponteiros ou as referências aos tip
 
 - O efeito de converter explicitamente o ponteiro obtido usando o operador address-of para o tipo de classe base `A`. Observe que a coerção do endereço do objeto para o tipo `A*` não fornece sempre ao compilador informações suficientes sobre o subobjeto do tipo `A` a ser selecionado; nesse caso, existem dois subobjetos.
 
-![Conversão ambígua dos ponteiros para classes base](../cpp/media/vc38xt1.gif "vc38XT1") conversão ambígua dos ponteiros para Classes Base
+![Conversão ambígua dos ponteiros para classes base](../cpp/media/vc38xt1.gif "conversão ambígua dos ponteiros para classes base") <br/>
+Conversão ambígua dos ponteiros para classes base
 
 A conversão para o tipo `A*` (ponteiro para `A`) é ambígua porque não há como distinguir qual subobjeto do tipo `A` está correto. Observe que você pode evitar a ambiguidade explicitamente especificando qual subobjeto você pretende usar, como segue:
 
@@ -202,7 +208,8 @@ Se forem usadas classes base virtuais, as funções, os objetos, os tipos e os e
 
 A figura a seguir mostra como os objetos são compostos usando a herança virtual e não virtual.
 
-![Derivação virtual e não virtual derivação](../cpp/media/vc38xr1.gif "vc38XR1") Virtual vs. Derivação não virtual
+![Derivação virtual e não&#45;derivação virtual](../cpp/media/vc38xr1.gif "derivação Virtual e não&#45;derivação virtual") <br/>
+Derivação não virtual contra não virtual
 
 Na figura, o acesso a qualquer membro da classe `A` por meio de classes base não virtuais causa uma ambiguidade; o compilador não tem nenhuma informação que explique se ele deve usar o subobjeto associado a `B` ou o subobjeto associado a `C`. No entanto, quando `A` é especificada como uma classe base virtual, não há dúvida sobre qual subobjeto está sendo acessado.
 

@@ -1,6 +1,6 @@
 ---
 title: Relação entre um objeto de janela do C++ e um HWND
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - HWND
 helpviewer_keywords:
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - CWnd class [MFC], HWND
 - HWND, window objects [MFC]
 ms.assetid: f2e76340-6691-4ee6-9424-0345634a9469
-ms.openlocfilehash: 46a3bdfdc3a9d1a41463eaf913e224a3f7c886e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fcd885fbaf7e81d68bcd51edc4b74c553f70578b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519503"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176846"
 ---
 # <a name="relationship-between-a-c-window-object-and-an-hwnd"></a>Relação entre um objeto de janela do C++ e um HWND
 
 A janela *objeto* é um objeto de C++ `CWnd` classe (ou uma classe derivada) que seu programa cria diretamente. Ela é ativada e desativada em resposta a chamadas de construtor e destruidor do seu programa. O Windows *janela*, por outro lado, é um identificador opaco a uma estrutura de dados interno do Windows que corresponde a uma janela e consome recursos do sistema quando presentes. Uma janela do Windows é identificada por um "identificador de janela" (`HWND`) e é criada após o `CWnd` objeto é criado por uma chamada para o `Create` a função de membro da classe `CWnd`. A janela pode ser destruída por uma chamada do programa ou por uma ação do usuário. O identificador de janela é armazenado no objeto de janela *m_hWnd* variável de membro. A figura a seguir mostra a relação entre o objeto de janela C++ e a janela do Windows. Criando janelas é discutido [criando Windows](../mfc/creating-windows.md). Destruindo janelas com é discutida [destruindo objetos de janela](../mfc/destroying-window-objects.md).
 
-![CWnd objeto de janela e a janela resultante](../mfc/media/vc37fj1.gif "vc37fj1") objeto de janela e a janela do Windows
+![CWnd objeto de janela e a janela resultante](../mfc/media/vc37fj1.gif "CWnd objeto de janela e a janela resultante") <br/>
+Objeto de janela e a janela do Windows
 
 ## <a name="see-also"></a>Consulte também
 
 [Objetos de janela](../mfc/window-objects.md)
-

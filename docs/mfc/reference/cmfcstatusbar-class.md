@@ -1,6 +1,6 @@
 ---
 title: Classe CMFCStatusBar
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCStatusBar
 - AFXSTATUSBAR/CMFCStatusBar
@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: bd63ee83412c3f89b6eea755c0b0a213b1dcc2e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4891c6bb66fe5e4b737ca9b128a01bcedcf39e7
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498040"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176569"
 ---
 # <a name="cmfcstatusbar-class"></a>Classe CMFCStatusBar
 
@@ -140,7 +140,7 @@ class CMFCStatusBar : public CPane
 
 O diagrama a seguir mostra uma figura da barra de status de [amostra de demonstração da barra de Status](../../visual-cpp-samples.md) aplicativo.
 
-![Exemplo de CMFCStatusBar](../../mfc/reference/media/cmfcstatusbar.png "cmfcstatusbar")
+![Exemplo de CMFCStatusBar](../../mfc/reference/media/cmfcstatusbar.png "exemplo de CMFCStatusBar")
 
 ## <a name="example"></a>Exemplo
 

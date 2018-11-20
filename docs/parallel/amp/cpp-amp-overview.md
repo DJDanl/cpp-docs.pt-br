@@ -1,6 +1,6 @@
 ---
 title: Visão geral do C++ AMP
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, requirements
 - C++ Accelerated Massive Parallelism, architecture
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 070f0885f11f29413aca3028d4f747e0edfd2413
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26f24e922769a565c88264032373662116eee290
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663782"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176982"
 ---
 # <a name="c-amp-overview"></a>Visão geral do C++ AMP
 
@@ -362,7 +362,7 @@ Em aplicativos típicos, os elementos em um bloco são relacionados de alguma fo
 
 O diagrama a seguir representa uma matriz bidimensional de dados que são organizados em blocos de amostragem.
 
-![Indexar valores em uma extensão lado a lado](../../parallel/amp/media/camptiledgridexample.png "camptiledgridexample")
+![Indexar valores em uma extensão lado a lado](../../parallel/amp/media/camptiledgridexample.png "indexar valores em uma extensão lado a lado")
 
 O exemplo de código a seguir usa os dados de amostragem do diagrama anterior. O código substitui cada valor no bloco pela média dos valores no bloco.
 

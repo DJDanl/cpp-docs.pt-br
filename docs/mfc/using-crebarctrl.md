@@ -1,6 +1,6 @@
 ---
 title: Usando CReBarCtrl
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CReBarCtrl
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - combo boxes [MFC], in rebar controls
 - rebar controls
 ms.assetid: 2c0aeec2-ffc3-44b8-97b5-0f56e116a338
-ms.openlocfilehash: 0317ece49d3d5ee3c815df6f9716809ebb1fd27f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2749e4ec919e2014b3de50f1cd164ef66d2fa0ad
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562169"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175438"
 ---
 # <a name="using-crebarctrl"></a>Usando CReBarCtrl
 
@@ -21,7 +21,7 @@ Um controle rebar atua como um contêiner para janelas filho. Essas janelas filh
 
 A ilustração a seguir mostra um controle rebar que tem duas faixas. Um contém uma barra de garra, um rótulo de texto ("Address") e uma janela filho da caixa de combinação. A faixa contém uma barra de garra, um rótulo de texto e uma barra de ferramentas simples (implementado com uma janela filho).
 
-![Controle que tem duas bandas rebar](../mfc/media/vc4ruz1.gif "vc4ruz1")
+![Controle que tem duas bandas rebar](../mfc/media/vc4ruz1.gif "controle que tem duas bandas Rebar")
 
 ## <a name="what-do-you-want-to-know-more-about"></a>O que você deseja saber mais sobre
 

@@ -2,16 +2,16 @@
 title: Instalar o suporte do C++ no Visual Studio 2017
 description: Instalar o suporte do Visual Studio para o Visual C++
 ms.custom: mvc
-ms.date: 09/17/2018
+ms.date: 11/19/2018
 ms.topic: tutorial
 ms.devlang: C++
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 019eadee35829bb546de0a69707520dc98f4077e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0dd1c25cd17c67c310840396c80fe05dfc2b7e1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507231"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175736"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalar o suporte do C++ no Visual Studio
 
@@ -45,11 +45,11 @@ Em geral, é altamente recomendado que você use o Visual Studio 2017, mesmo que
 
 1. Localize o arquivo do instalador baixado e executá-lo. Ele pode ser exibido em seu navegador, ou você pode encontrá-lo na pasta Downloads. O instalador precisa de privilégios de administrador para ser executado. Você poderá ver uma **User Account Control** caixa de diálogo solicitando que você conceda permissão para permitir que o instalador de fazer alterações ao seu sistema; escolher **Sim**. Se você estiver tendo problemas, localize o arquivo baixado no Explorador de arquivos, clique com botão direito no ícone de instalação e escolha **executar como administrador** no menu de contexto.
 
-   ![Execute o instalador do Visual Studio 2017](../build/media/vscpp-concierge-run-installer.gif "execute o instalador do Visual Studio")
+   ![Baixe e instale o instalador do Visual Studio](../build/media/vscpp-concierge-run-installer.gif "Baixe e instale o instalador do Visual Studio")
 
 1. O instalador apresenta uma lista de cargas de trabalho, que são grupos de opções relacionadas para áreas de desenvolvimento específicas. Suporte para C++ agora faz parte das cargas de trabalho opcionais que não são instalados por padrão.
 
-   ![Desenvolvimento para desktop com C++](../build/media/desktop-development-with-cpp.png "desenvolvimento para Desktop com C++")
+   ![Desenvolvimento para desktop com a carga de trabalho C++](../build/media/desktop-development-with-cpp.png "desenvolvimento para Desktop com C++")
 
    Para C++, selecione o **desenvolvimento para Desktop com C++** carga de trabalho e, em seguida, escolha **instalar**.
 

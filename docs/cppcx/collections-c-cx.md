@@ -1,13 +1,13 @@
 ---
 title: Coleções (C++/CX)
-ms.date: 01/22/2017
+ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: d139bcfc6cdf61940a40ca069dd157c1805e2034
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d256e333ddf31bdb637680b70718af85e753a21d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531580"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176387"
 ---
 # <a name="collections-ccx"></a>Coleções (C++/CX)
 
@@ -15,7 +15,7 @@ No C + + / programa c++ /CX, você pode usar livremente de contêineres STL Stan
 
 O tempo de execução do Windows define as interfaces para coleções e tipos relacionados e C + + c++ /CLI CX fornece as implementações C++ concretas no arquivo de cabeçalho Collection. h. Esta ilustração mostra as relações entre os tipos de coleção:
 
-![C&#43;&#43;&#47;árvore de herança do CX para tipos de coleção](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")
+![C&#43;&#43;&#47;árvore de herança do CX para tipos de coleção](../cppcx/media/cppcxcollectionsinheritancetree.png "C&#43;&#43;&#47;árvore de herança do CX para tipos de coleção")
 
 - A [classe Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) é semelhante à [classe std::vector](../standard-library/vector-class.md).
 
@@ -63,7 +63,7 @@ Quando você usar um loop `range for` sobre contêineres `IVector` , use `auto&&
 
 A ilustração a seguir mostra um loop `range for` sobre um `IVector<Person^>`. Observe que a execução é interrompida no ponto de interrupção na linha 64. A janela **QuickWatch** mostra que a variável de iterador `p` é na verdade um `VectorProxy<Person^>` que tem as variáveis de membro `m_v` e `m_i` . Entretanto, quando você chama `GetType` nessa variável, é retornado o tipo idêntico à instância `Person` de `p2`. A conclusão é que, embora `VectorProxy` e `ArrowProxy` possam aparecer em **QuickWatch**, determinados erros do compilador do depurador, ou outros locais, geralmente não precisam ter uma codificação explícita para eles.
 
-![VectorProxy no intervalo&#45;com base em loop for](../cppcx/media/vectorproxy-1.png "VectorProxy_1")
+![VectorProxy no intervalo&#45;com base em loop for](../cppcx/media/vectorproxy-1.png "VectorProxy no intervalo&#45;com base em loop for")
 
 Um cenário em que é necessário codificar em torno do objeto proxy é quando você precisa executar um `dynamic_cast` nos elementos — por exemplo, quando você está procurando objetos XAML de um determinado tipo em uma coleção de elementos `UIElement` . Nesse caso, você deve primeiro converter o elemento em [Platform::Object](../cppcx/platform-object-class.md)^ e depois executar a conversão dinâmica:
 

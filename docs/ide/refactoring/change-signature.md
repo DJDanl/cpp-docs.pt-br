@@ -2,14 +2,15 @@
 title: Alterar assinatura
 ms.date: 11/16/2016
 ms.assetid: 8daaa060-7305-4035-99d2-8b460b4f4454
-ms.openlocfilehash: 776f777eb64128e9914e6d087551930593a490fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 97f70f7fdf6cb8a130427d8920152d44c1cb1349
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584030"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693524"
 ---
 # <a name="change-signature"></a>Alterar assinatura
+
 **O quê:** permite modificar os parâmetros de uma função.
 
 **Quando:** você deseja reordenar, adicionar, remover ou modificar os parâmetros de uma função que está sendo usada em uma variedade de locais.

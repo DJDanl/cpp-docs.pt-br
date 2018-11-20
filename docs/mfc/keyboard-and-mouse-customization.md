@@ -1,16 +1,16 @@
 ---
 title: Personalização de teclado e mouse
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - customizations [MFC], keyboard and mouse (MFC Extensions)
 - keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
-ms.openlocfilehash: 8bb685974ed4020611ffe275ba504951d132afac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ccbe83185c48439273024a97c881f1c32a2ddc7
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487380"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175672"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Personalização de teclado e mouse
 
@@ -22,7 +22,8 @@ No **personalização** caixa de diálogo, o usuário pode alterar os controles 
 
 A ilustração a seguir mostra a **teclado** guia o **personalização** caixa de diálogo.
 
-![Guia de teclado na caixa de diálogo Personalizar](../mfc/media/mfcnextkeyboardtab.png "mfcnextkeyboardtab") guia de personalização de teclado
+![Guia de teclado na caixa de diálogo Personalizar](../mfc/media/mfcnextkeyboardtab.png "guia de teclado na caixa de diálogo Personalizar") <br/>
+Guia de personalização de teclado
 
 O usuário interage com a guia de teclado para atribuir um ou mais atalhos de teclado a um comando. Os comandos disponíveis são listados no lado esquerdo da guia. O usuário pode selecionar qualquer comando disponível no menu. Somente os comandos de menu podem ser associados um atalho de teclado. Depois que o usuário insere um novo atalho, o **atribuir** botão fica habilitado. Quando o usuário clica nesse botão, o aplicativo associa esse atalho o comando selecionado.
 
@@ -36,7 +37,8 @@ Se você usar o Assistente para criar seu aplicativo, o assistente irá iniciali
 
 A ilustração a seguir mostra a **Mouse** guia o **personalização** caixa de diálogo.
 
-![Guia do mouse na caixa de diálogo Personalizar](../mfc/media/mfcnextmousetab.png "mfcnextmousetab") guia de personalização de Mouse
+![Guia do mouse na caixa de diálogo Personalizar](../mfc/media/mfcnextmousetab.png "guia do Mouse na caixa de diálogo Personalizar") <br/>
+Guia de personalização de mouse
 
 O usuário interage com essa guia para atribuir um menu de comando para o mouse clique duas vezes em ação. O usuário seleciona um modo de exibição do lado esquerdo da janela e, em seguida, usa os controles no lado direito para associar um comando com a ação de clique duplo. Depois que o usuário clica **fechar**, o aplicativo executa o comando associado sempre que o usuário clica duas vezes em qualquer lugar no modo de exibição.
 

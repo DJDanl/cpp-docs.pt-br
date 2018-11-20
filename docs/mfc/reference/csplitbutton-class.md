@@ -1,6 +1,6 @@
 ---
 title: Classe CSplitButton
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CSplitButton
 - AFXCMN/CSplitButton
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: ca4899714fa336d058b2a53bcd5103c5b0c993e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56c006eaa9b0c9860a973727602fd29a33d7ec43
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547271"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176622"
 ---
 # <a name="csplitbutton-class"></a>Classe CSplitButton
 
@@ -58,7 +58,7 @@ O `CSplitButton` classe é derivada de [CButton](../../mfc/reference/cbutton-cla
 
 A figura abaixo mostra uma caixa de diálogo que contém um controle de paginação e um controle de botão de divisão (1). A seta suspensa (2) já foi clicado e o submenu (3) é exibida.
 
-![Caixa de diálogo com um controle splitbutton e pager. ](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")
+![Caixa de diálogo com um controle splitbutton e pager. ](../../mfc/reference/media/splitbutton_pager.png "Caixa de diálogo com um controle splitbutton e pager.")
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
@@ -188,7 +188,7 @@ O *nMenuId* parâmetro identifica uma barra de menus, que é uma lista de itens 
 
 A figura abaixo mostra uma caixa de diálogo que contém um controle de paginação e um controle de botão de divisão (1). A seta suspensa (2) já foi clicado e o submenu (3) é exibida.
 
-![Caixa de diálogo com um controle splitbutton e pager. ](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")
+![Caixa de diálogo com um controle splitbutton e pager. ](../../mfc/reference/media/splitbutton_pager.png "Caixa de diálogo com um controle splitbutton e pager.")
 
 ### <a name="example"></a>Exemplo
 

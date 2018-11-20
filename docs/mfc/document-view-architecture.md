@@ -1,6 +1,6 @@
 ---
 title: Arquitetura de exibição de documento
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - CView class [MFC], view architecture
 - CDocument class [MFC]
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: 943199e2398bcb49c7dddf6b3a67f5556c9c81a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0886f364637c8844aceb5d5d7b6b2ed7175225d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509273"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176842"
 ---
 # <a name="documentview-architecture"></a>Arquitetura de documento/exibição
 
@@ -47,7 +47,8 @@ O [CView](../mfc/reference/cview-class.md) (ou uma de suas classes derivadas mui
 
 A figura a seguir mostra a relação entre um documento e sua exibição.
 
-![Modo de exibição é a parte do documento que é exibido](../mfc/media/vc379n1.gif "vc379n1") documento e exibição
+![Modo de exibição é a parte do documento que é exibido](../mfc/media/vc379n1.gif "exibição é a parte do documento que é exibido") <br/>
+Documento e exibição
 
 A implementação de documento/exibição na biblioteca de classes separa os próprios dados de sua exibição em operações de usuário nos dados. Todas as alterações nos dados são gerenciadas por meio da classe de documento. O modo de exibição chama essa interface para acessar e atualizar os dados.
 

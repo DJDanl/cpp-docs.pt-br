@@ -1,18 +1,18 @@
 ---
 title: Contêineres de documento ativos
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - active documents [MFC], containers
 - active document containers [MFC]
 - containers [MFC], active document
 - MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
-ms.openlocfilehash: ec2e4d11e00040cf0b94957db8466d127e0b5420
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfd4018496f1516f8016bb56da2406f2e4b04c08
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510832"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176777"
 ---
 # <a name="active-document-containers"></a>Contêineres de documento ativos
 
@@ -54,7 +54,7 @@ O objeto de quadro, os objetos de exibição e o objeto de contêiner podem impl
 
 A figura a seguir mostra as relações conceituais entre um contêiner e seus componentes (à esquerda) e o documento ativo e seus modos de exibição (à direita). O documento ativo gerencia o armazenamento e os dados e o modo de exibição exibe ou imprime opcionalmente que os dados. Interfaces em negrito são aqueles necessários para a participação do documento ativo; Esses negrito e itálico são opcionais. Todas as outras interfaces são necessários.
 
-![Interfaces de contêiner do documento ativo](../mfc/media/vc37gj1.gif "vc37gj1")
+![Interfaces de contêiner do documento ativo](../mfc/media/vc37gj1.gif "interfaces de contêiner do documento ativo")
 
 Um documento que dá suporte a apenas uma única exibição pode implementar o modo de exibição e o documento componentes (ou seja, as interfaces correspondentes) em uma única classe concreta. Além disso, um site de contêiner que dá suporte apenas a uma exibição de cada vez pode combinar o site de documentos e o site de modo de exibição em uma classe concreta de site único. Objeto de quadro do contêiner, no entanto, deve permanecer distinto e componente de documento do contêiner é meramente incluído aqui para fornecer uma visão completa da arquitetura; ele não é afetado pela arquitetura de confinamento do documento ativo.
 

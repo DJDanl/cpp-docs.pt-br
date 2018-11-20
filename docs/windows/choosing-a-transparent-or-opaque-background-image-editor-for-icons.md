@@ -1,6 +1,6 @@
 ---
 title: Escolhendo uma tela de fundo transparente ou opaco (editor de imagens para ícones)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - opaque backgrounds [C++]
 - colors [C++], image
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [C++], transparency
 - images [C++], opaque background
 ms.assetid: 61b743d9-c86b-405d-9a81-0806431b4363
-ms.openlocfilehash: a7e4d427a6926d48b5115a1b5bb9ba2ca2d8068c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ceea31b998d5c4dca52657db570ace664f7e373f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653525"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175425"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Escolhendo uma tela de fundo transparente ou opaco (editor de imagens para ícones)
 
@@ -21,7 +21,7 @@ Quando você move ou copia uma seleção de uma imagem, os pixels da seleção q
 
 Você pode alternar de um plano de fundo transparente (o padrão) para um plano de fundo opaco e vice-versa. Quando você usa uma ferramenta de seleção, o **plano de fundo transparente** e **tela de fundo opaca** opções aparecem no **opção** seletor do **doEditordeimagens** barra de ferramentas (conforme mostrado abaixo).
 
-![Opções de plano de fundo &#45; opaca ou transparente](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")<br/>
+![Opções de plano de fundo &#45; opaca ou transparente](../windows/media/vcimageeditoropaqtranspback.gif "opções de plano de fundo &#45; opaca ou transparente")<br/>
 **Opções de transparentes e opacas** sobre o **barra de ferramentas do Editor de imagens**
 
 ### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Para alternar entre um plano de fundo transparente e opaco
@@ -32,9 +32,9 @@ Você pode alternar de um plano de fundo transparente (o padrão) para um plano 
 
    - `Transparent Background (T)`: Imagem existente mostra por meio de partes da seleção que correspondem à cor do plano de fundo atual.
 
-\- ou -
+   \- ou -
 
-- Sobre o **imagem** menu, marque ou desmarque **desenho opaco**.
+1. Sobre o **imagem** menu, marque ou desmarque **desenho opaco**.
 
 Você pode alterar a cor do plano de fundo enquanto uma seleção já estiver em vigor para alterar quais partes da imagem são transparentes.
 

@@ -1,21 +1,21 @@
 ---
 title: Como personalizar a barra de ferramentas de acesso rápido
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: d9bdc523218c7fad217d066eabd518aaff011df3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aced2e732b68f838c679518ef67b1d6bdd361964
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558477"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176322"
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>Como personalizar a barra de ferramentas de acesso rápido
 
 A barra de ferramentas de acesso rápido (QAT) é uma barra de ferramentas personalizável que contém um conjunto de comandos que são que uma exibida ao lado do botão de aplicativo ou sob as guias de categoria. A ilustração a seguir mostra um típico de ferramentas de acesso rápido.
 
-![Ferramentas de acesso rápido da faixa de opções MFC](../mfc/media/quick_access_toolbar.png "quick_access_toolbar")
+![Ferramentas de acesso rápido de faixa de opções do MFC](../mfc/media/quick_access_toolbar.png "ferramentas de acesso rápido de faixa de opções do MFC")
 
 Para personalizar a barra de ferramentas de acesso rápido, abri-lo na **propriedades** janela, modifique seus comandos e, em seguida, o controle de faixa de opções de visualização.
 
@@ -55,4 +55,3 @@ Comandos de barra de ferramentas de acesso rápidos não aparecem na superfície
 ## <a name="see-also"></a>Consulte também
 
 [Designer da faixa de opções (MFC)](../mfc/ribbon-designer-mfc.md)
-

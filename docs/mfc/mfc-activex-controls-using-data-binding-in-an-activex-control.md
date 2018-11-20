@@ -1,6 +1,6 @@
 ---
 title: 'Controles ActiveX MFC: usando associação de dados em um controle ActiveX'
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - bindable
 - requestedit
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: 9efac8ba0889d648def622ca045b9398c8eeef11
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a5cb73496cd6678e3f45500d9d53c2127b0fb17c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518483"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175792"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Controles ActiveX MFC: usando associação de dados em um controle ActiveX
 
@@ -30,7 +30,8 @@ Um dos usos mais poderosos de controles ActiveX é vinculação de dados, que pe
 
 Este artigo aborda o lado de controle da sua tarefa. Implementar as interações de associação de dados com o banco de dados é de responsabilidade do contêiner de controle. Como gerenciar as interações de banco de dados em seu contêiner está além do escopo desta documentação. Como você prepara o controle de vinculação de dados é explicado no restante deste artigo.
 
-![Diagrama conceitual de um dado&#45;controle de limite](../mfc/media/vc374v1.gif "vc374v1") diagrama conceitual de um controle associado a dados
+![Diagrama conceitual de um dado&#45;controle de limite](../mfc/media/vc374v1.gif "diagrama conceitual de um dado&#45;controle com limite") <br/>
+Diagrama conceitual de um controle associado a dados
 
 O `COleControl` classe fornece duas funções de membro que tornam um processo fácil implementar de vinculação de dados. A primeira função, [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), é usado para solicitar permissão para alterar o valor da propriedade. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), a segunda função, é chamado depois que o valor da propriedade foi alterado com êxito.
 

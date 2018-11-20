@@ -1,6 +1,6 @@
 ---
 title: Herança única
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - single inheritance
 - base classes [C++], indirect
@@ -10,18 +10,19 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-ms.openlocfilehash: a188780201c00451b125288b37c7c62fbe2322c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96af0c42a32f14280fd8c208a3e4eaec38a8ca3a
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461848"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175607"
 ---
 # <a name="single-inheritance"></a>Herança única
 
 Na “herança única”, uma forma comum de herança, as classes têm apenas uma classe base. Considere a relação lustrada na figura a seguir.
 
-![Único básico&#45;gráfico de herança](../cpp/media/vc38xj1.gif "vc38XJ1") gráfico simples de herança única
+![Único básico&#45;gráfico de herança](../cpp/media/vc38xj1.gif "único básico&#45;gráfico de herança") <br/>
+Gráfico simples de herança única
 
 Observe a progressão de geral a específico na figura. Outro atributo comum encontrado no design da maioria das hierarquias de classes é que a classe derivada tem um “tipo de” relação com a classe base. Na figura, `Book` é um tipo de `PrintedDocument`, e `PaperbackBook` é um tipo de `book`.
 
@@ -47,12 +48,13 @@ No exemplo anterior, o especificador de acesso **pública** é usado. O signific
 
 Uma classe pode servir como a classe base para muitas aulas específicas, como ilustrado na figura a seguir.
 
-![Orientado de grafo acíclico](../cpp/media/vc38xj2.gif "vc38XJ2") exemplo de gráfico acíclico direcionado
+![Orientado de grafo acíclico](../cpp/media/vc38xj2.gif "orientado de grafo acíclico") <br/>
+Exemplo de gráfico acíclico direcionado
 
 No diagrama mostrado acima, chamado “grafo direcionado acíclico” (ou “DAG”), algumas das classes são classes base para mais de uma classe derivada. No entanto, o contrário não é verdadeiro: há apenas uma classe base direta para qualquer classe derivada especificada. O gráfico na figura denota uma estrutura de "herança única".
 
 > [!NOTE]
->  Os grafos direcionados acíclicos não são exclusivos da herança única. Também são usados para denotar gráficos de herança múltipla.
+> Os grafos direcionados acíclicos não são exclusivos da herança única. Também são usados para denotar gráficos de herança múltipla.
 
 Na herança, a classe derivada contém os membros da classe base mais os novos membros que você adicionar. Como resultado, uma classe derivada pode se referir a membros da classe base (a menos que esses membros sejam redefinidos na classe derivada). O operador de resolução de escopo (`::`) pode ser usado para fazer referência a membros de classes base diretas e indiretas quando esses membros são redefinidos na classe derivada. Considere este exemplo:
 

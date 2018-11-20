@@ -1,18 +1,18 @@
 ---
 title: Semântica de expressões
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - grammar, expressions
 - expressions [C++], semantics
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: df86f73aa38ad9393adcbf193390cd785c934115
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490955"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175772"
 ---
 # <a name="semantics-of-expressions"></a>Semântica de expressões
 
@@ -43,7 +43,8 @@ int main()
 54
 ```
 
-![Ordem de avaliação em uma expressão](../cpp/media/vc38zv1.gif "vc38ZV1") ordem de avaliação de expressão
+![Ordem de avaliação em uma expressão](../cpp/media/vc38zv1.gif "ordem de avaliação em uma expressão") <br/>
+Ordem de avaliação de expressão
 
 A ordem na qual a expressão mostrada na figura acima é avaliada é determinada pela precedência e associatividade dos operadores:
 
@@ -55,7 +56,8 @@ A ordem na qual a expressão mostrada na figura acima é avaliada é determinada
 
 Quando são usados parênteses para agrupar as subexpressões, eles alteram a precedência e também a ordem em que a expressão é avaliada, conforme mostra a figura a seguir.
 
-![Ordem de avaliação de expressão com parênteses](../cpp/media/vc38zv2.gif "vc38ZV2") ordem de avaliação da expressão com parênteses
+![Ordem de avaliação de expressão com parênteses](../cpp/media/vc38zv2.gif "ordem de avaliação de expressão com parênteses") <br/>
+Ordem de avaliação da expressão com parênteses
 
 Expressões como as da figura acima são avaliadas apenas por seus efeitos colaterais — nesse caso, para transferir informações para o dispositivo de saída padrão.
 
@@ -68,7 +70,7 @@ A linguagem C++ especifica determinadas compatibilidades ao especificar operando
 |Tipo esperado|Tipos permitidos|
 |-------------------|-------------------|
 |*type*|`const` *Tipo*<br /> `volatile` *Tipo*<br /> *Tipo*&<br /> `const` *Tipo*&<br /> `volatile` *Tipo*&<br /> `volatile const` *Tipo*<br /> `volatile const` *Tipo*&|
-|*Tipo*\*|*Tipo*\*<br /> `const` *Tipo*\*<br /> `volatile` *Tipo*\*<br /> `volatile const` *Tipo*\*|
+|*Tipo* \*|*Tipo* \*<br /> `const` *Tipo* \*<br /> `volatile` *Tipo* \*<br /> `volatile const` *Tipo* \*|
 |`const` *Tipo*|*type*<br /> `const` *Tipo*<br />`const` *Tipo*&|
 |`volatile` *Tipo*|*type*<br /> `volatile` *Tipo*<br /> `volatile` *Tipo*&|
 

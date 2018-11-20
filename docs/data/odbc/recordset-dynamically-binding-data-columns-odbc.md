@@ -1,6 +1,6 @@
 ---
 title: 'Conjunto de registros: associando dinamicamente colunas de dados (ODBC)'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - ODBC recordsets [C++], binding columns dynamically
 - data binding [C++], recordset columns
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: 0284fbeed23c5fdad47cafd29af7a47251b923a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2fc870ba08bbec0a886b3d77281f3c697ae09fe
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469674"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175659"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Conjunto de registros: associando dinamicamente colunas de dados (ODBC)
 
@@ -78,7 +78,7 @@ Associação dinâmica adicionados a colunas em tempo de execução exige as seg
 
    Uma abordagem é criar uma ou mais listas dinâmicas, um para os nomes das novas colunas, outro para seus valores de resultado e um terceiro para seus tipos de dados (se necessário). Essas listas, especialmente a lista de valores, fornecem as informações e o armazenamento necessários para a associação. A figura a seguir ilustra a criação de listas.
 
-   ![Criando listas de colunas para associar dinamicamente](../../data/odbc/media/vc37w61.gif "vc37w61")<br/>
+   ![Criando listas de colunas para associar dinamicamente](../../data/odbc/media/vc37w61.gif "criar listas de colunas para associar dinamicamente")<br/>
    Criar listas de colunas para associar dinamicamente
 
 1. Adicione uma chamada de função RFX em seu conjunto de registros principal `DoFieldExchange` de função para cada coluna de adicionado. Essas chamadas RFX fazem o trabalho de buscar um registro, incluindo as colunas adicionais e as colunas de associação para membros de dados do conjunto de registros ou para seu armazenamento dinamicamente fornecido para eles.

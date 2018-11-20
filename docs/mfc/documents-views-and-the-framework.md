@@ -1,6 +1,6 @@
 ---
 title: Documentos, exibições e o Framework
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - document templates [MFC], template objects
 - applications [MFC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - MFC object relationships
 - thread objects [MFC]
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
-ms.openlocfilehash: f9397c2a16d8411fe91cbf6c1c1de3ecdffbeae7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e59e8b69dcdf0bf3b22d4286ba4692558a11e096
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662365"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175750"
 ---
 # <a name="documents-views-and-the-framework"></a>Documentos, exibições e o Framework
 
@@ -59,7 +59,8 @@ Os objetos de chave em um aplicativo em execução são:
 
 Em um aplicativo em execução, esses objetos cooperativamente respondem às ações do usuário, agrupadas por comandos e outras mensagens. Um objeto de aplicativo único gerencia um ou mais modelos de documento. Cada modelo de documento cria e gerencia um ou mais documentos (dependendo do tipo de aplicativo SDI ou MDI). O usuário exibe e manipula um documento por meio de um modo de exibição contido dentro de uma janela do quadro. A figura a seguir mostra as relações entre esses objetos para um aplicativo SDI.
 
-![Objetos em um aplicativo em execução de SDI](../mfc/media/vc386v1.gif "vc386v1") objetos em um aplicativo de SDI em execução
+![Objetos em um aplicativo em execução de SDI](../mfc/media/vc386v1.gif "objetos em um aplicativo SDI em execução") <br/>
+Objetos em um aplicativo SDI de execução
 
 O restante desta família de artigos explica como as ferramentas do framework, o Assistente de aplicativo do MFC e os editores de recursos, criam esses objetos, como eles funcionam juntos e como usá-los em sua programação. Documentos, exibições e janelas com moldura são discutidas mais detalhadamente [objetos Window](../mfc/window-objects.md) e [arquitetura de documento/exibição](../mfc/document-view-architecture.md).
 

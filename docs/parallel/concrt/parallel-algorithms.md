@@ -1,15 +1,15 @@
 ---
 title: Algoritmos paralelos
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-ms.openlocfilehash: 0ad7f67016dcb7d4638de0f159feb23cd1282b19
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8a08919ce6792babb9b8b1b809e242465a200f9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445585"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176439"
 ---
 # <a name="parallel-algorithms"></a>Algoritmos paralelos
 
@@ -247,7 +247,7 @@ A tabela a seguir resume as propriedades importantes dos três algoritmos de cla
 
 A ilustração a seguir mostra as propriedades importantes dos algoritmos de classificação paralelas três mais graficamente.
 
-![Comparação dos algoritmos de classificação](../../parallel/concrt/media/concrt_parallel_sorting.png "concrt_parallel_sorting")
+![Comparação dos algoritmos de classificação](../../parallel/concrt/media/concrt_parallel_sorting.png "comparação dos algoritmos de classificação")
 
 Esses algoritmos de classificação paralela seguem as regras de cancelamento e tratamento de exceção. Para obter mais informações sobre cancelamento e tratamento de exceções no tempo de execução de simultaneidade, consulte [Cancelando algoritmos paralelos](../../parallel/concrt/cancellation-in-the-ppl.md#algorithms) e [Exception Handling](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 

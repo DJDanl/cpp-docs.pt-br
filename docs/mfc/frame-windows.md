@@ -1,6 +1,6 @@
 ---
 title: Janelas com moldura
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - document frame windows [MFC]
 - windows [MFC], MDI
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-ms.openlocfilehash: 09db7bab392778297f17c14f7bb807f91af4d896
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76c2f303713644c5f78f20d2ea868bd67b9eae71
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619928"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175362"
 ---
 # <a name="frame-windows"></a>Janelas com moldura
 
@@ -30,7 +30,8 @@ Quando um aplicativo é executado em Windows, o usuário interage com documentos
 
 Estrutura MFC usa janelas de quadro contenha modos de exibição. Os dois componentes — quadro e conteúdo — são representados e gerenciados por duas classes diferentes no MFC. Uma classe de janela com moldura gerencia o quadro e uma classe de exibição gerencia o conteúdo. A janela de exibição é um filho da janela do quadro. Desenho e outra interação do usuário com o documento assumir o lugar na área de cliente do modo de exibição, não área de cliente da janela do quadro. A janela do quadro fornece um quadro visível em torno de uma exibição, completo com uma barra de legenda e os controles de janela padrão como um menu de controle, botões minimizar e maximizar a janela e controles para redimensionamento da janela. O "conteúdo" consistem em área de cliente da janela, que fica totalmente ocupada por uma janela filho — o modo de exibição. A figura a seguir mostra a relação entre uma janela de quadro em uma exibição.
 
-![Exibição da janela de quadro](../mfc/media/vc37fx1.gif "vc37fx1") janela de quadro e o modo de exibição
+![Exibição da janela de quadro](../mfc/media/vc37fx1.gif "exibição da janela de quadro") <br/>
+Modo de exibição e a janela do quadro
 
 ## <a name="frame-windows-and-splitter-windows"></a>Quadro Windows e Windows divisor
 

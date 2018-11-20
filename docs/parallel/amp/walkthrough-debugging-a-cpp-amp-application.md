@@ -1,18 +1,18 @@
 ---
 title: 'Instruções passo a passo: depurando um aplicativo C++ AMP'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - debugging, C++ Accelerated Massive Parallelism
 - C++ AMP, debugging
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 4f8cdc315b561b5cbb4538e8486208d6278af9df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 610cf317982204715d55d12ece510cb477543f4d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579887"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176686"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Instruções passo a passo: depurando um aplicativo C++ AMP
 
@@ -201,7 +201,8 @@ Neste procedimento, você usará o depurador Local do Windows para certificar-se
 
 4. Definir pontos de interrupção nas linhas do código mostrado na ilustração a seguir (aproximadamente linhas 67 linha 70).
 
-     ![Pontos de interrupção de CPU](../../parallel/amp/media/campcpubreakpoints.png "campcpubreakpoints") pontos de interrupção de CPU
+   ![Pontos de interrupção de CPU](../../parallel/amp/media/campcpubreakpoints.png "pontos de interrupção de CPU") <br/>
+   Pontos de interrupção de CPU
 
 5. Na barra de menus, escolha **Depurar** > **Iniciar Depuração**.
 
@@ -229,7 +230,8 @@ Esta seção mostra como depurar o código GPU, que é o código contido no `sum
 
 6. Defina um ponto de interrupção na linha 30, conforme mostrado na ilustração a seguir.
 
-     ![Pontos de interrupção GPU](../../parallel/amp/media/campgpubreakpoints.png "campgpubreakpoints") ponto de interrupção GPU
+   ![Pontos de interrupção GPU](../../parallel/amp/media/campgpubreakpoints.png "pontos de interrupção GPU") <br/>
+   Ponto de interrupção GPU
 
 7. Na barra de menus, escolha **Depurar** > **Iniciar Depuração**. Os pontos de interrupção no código da CPU em linhas 67 e 70 não são executados durante a depuração, pois as linhas de código são executadas na CPU de GPU.
 
@@ -241,7 +243,8 @@ Esta seção mostra como depurar o código GPU, que é o código contido no `sum
 
 2. Encaixe a **Threads da GPU** janela na parte inferior do Visual Studio. Escolha o **comutador de Thread expanda** botão para exibir caixas de texto lado a lado e thread. O **Threads da GPU** janela mostra o número total de threads de GPU do Active Directory e bloqueado, conforme mostrado na ilustração a seguir.
 
-     ![Janela Threads da GPU com 4 threads ativos](../../parallel/amp/media/campc.png "campc") janela Threads da GPU
+   ![Janela Threads da GPU com 4 threads ativos](../../parallel/amp/media/campc.png "janela Threads da GPU com 4 threads ativos") <br/>
+   Janela Threads da GPU
 
    Há 313 blocos alocados para esse cálculo. Cada bloco contém 32 segmentos. Como a depuração de GPU local ocorre em um emulador de software, há quatro threads GPU ativos. Os quatro threads de executam as instruções simultaneamente e, em seguida, passar em conjunto para a próxima instrução.
 
@@ -263,13 +266,15 @@ Esta seção mostra como depurar o código GPU, que é o código contido no `sum
 
 3. Certifique-se de que **Threads** é selecionado na lista no canto superior esquerdo. Na ilustração a seguir, o **pilhas paralelas** janela mostra uma exibição de pilha de chamadas com foco os threads da GPU que você viu na **Threads da GPU** janela.
 
-     ![Janela pilhas paralelas com 4 threads ativos](../../parallel/amp/media/campd.png "campd") janela pilhas paralelas
+   ![Janela pilhas paralelas com 4 threads ativos](../../parallel/amp/media/campd.png "janela pilhas paralelas com 4 threads ativos") <br/>
+   Janela pilhas paralelas
 
    32 segmentos passaram de `_kernel_stub` à instrução lambda na `parallel_for_each` chamada de função e, em seguida, para o `sum_kernel_tiled` função, onde ocorre a redução paralela. 28 sem os 32 threads progrediram para o [tile_barrier:: wait](reference/tile-barrier-class.md#wait) instrução e permanecem bloqueados na linha 22, enquanto outros 4 threads permanecem ativos no `sum_kernel_tiled` função na linha 30.
 
    Você pode inspecionar as propriedades de um thread GPU que estão disponíveis na **Threads da GPU** janela no DataTip Avançada da **pilhas paralelas** janela. Para fazer isso, o ponteiro do mouse no quadro da pilha **sum_kernel_tiled**. A ilustração a seguir mostra o DataTip.
 
-     ![DataTip para a janela pilhas paralelas](../../parallel/amp/media/campe.png "campe") DataTip de thread de GPU
+   ![DataTip para a janela pilhas paralelas](../../parallel/amp/media/campe.png "DataTip para a janela pilhas paralelas") <br/>
+   Thread de GPU DataTip
 
    Para obter mais informações sobre o **pilhas paralelas** janela, consulte [usando a janela Parallel Stacks](/visualstudio/debugger/using-the-parallel-stacks-window).
 
@@ -291,7 +296,8 @@ Esta seção mostra como depurar o código GPU, que é o código contido no `sum
 
    Selecione o **localA [localIdx [0]]** cabeçalho de coluna para classificar a coluna. A ilustração a seguir mostra os resultados da classificação por **localA [localIdx [0]]**.
 
-     ![Janela de inspeção paralela com os resultados classificados](../../parallel/amp/media/campf.png "campf") resultados de classificação
+   ![Janela de inspeção paralela com os resultados classificados](../../parallel/amp/media/campf.png "janela Inspeção paralela com os resultados classificados") <br/>
+   Resultados de classificação
 
    Você pode exportar o conteúdo a **inspeção paralela** janela para o Excel, escolhendo o **Excel** botão e, em seguida, escolhendo **abrir no Excel**. Se você tiver o Excel instalado em seu computador de desenvolvimento, isso abre uma planilha do Excel que contém o conteúdo.
 
@@ -313,7 +319,8 @@ Você pode marcar os threads GPU específicos sinalizando-los de **Threads da GP
 
    A ilustração a seguir mostra os quatro threads sinalizados Active Directory na **Threads da GPU** janela.
 
-     ![Janela Threads da GPU com threads sinalizados](../../parallel/amp/media/campg.png "campg") threads ativos na janela Threads da GPU
+   ![Janela Threads da GPU com threads sinalizados](../../parallel/amp/media/campg.png "janela Threads da GPU com threads sinalizados") <br/>
+   Threads ativos na janela Threads da GPU
 
    O **inspeção paralela** janela e o DataTip da **pilhas paralelas** janela ambos os indicam os threads sinalizados.
 
@@ -321,8 +328,8 @@ Você pode marcar os threads GPU específicos sinalizando-los de **Threads da GP
 
    Escolha o **Mostrar apenas sinalizados** botão em qualquer uma das janelas ou nos **local de depuração** barra de ferramentas. A ilustração a seguir mostra a **Mostrar apenas sinalizados** botão a **local de depuração** barra de ferramentas.
 
-     ![Depurar barra de ferramentas do local com o ícone de mostrar somente sinalizados](../../parallel/amp/media/camph.png "camph")
-**Mostrar apenas sinalizados** botão
+   ![Depurar barra de ferramentas do local com o ícone de mostrar somente sinalizados](../../parallel/amp/media/camph.png "barra de ferramentas de depuração local com o ícone de mostrar somente sinalizados") <br/>
+   **Mostrar apenas sinalizados** botão
 
    Agora o **Threads da GPU**, **inspeção paralela**, e **pilhas paralelas** janelas exibem apenas os threads sinalizados.
 
@@ -340,7 +347,8 @@ Você pode congelar (Suspender) e descongelar (retomar) GPU threads de qualquer 
 
    A ilustração a seguir da **Threads da GPU** janela mostra que todos os quatro threads estão congelados.
 
-     ![Janelas de Threads da GPU mostrando threads congelados](../../parallel/amp/media/campk.png "campk") congeladas threads no **Threads da GPU** janela
+   ![Janelas de Threads da GPU mostrando threads congelados](../../parallel/amp/media/campk.png "janelas de Threads da GPU mostrando threads congelados") <br/>
+   Congeladas threads na **Threads da GPU** janela
 
    Da mesma forma, o **inspeção paralela** janela mostra que todos os quatro threads estão congelados.
 
@@ -356,7 +364,8 @@ Você pode congelar (Suspender) e descongelar (retomar) GPU threads de qualquer 
 
    Os threads na **Threads da GPU** janela são agrupadas por endereço. O endereço corresponde à instrução no desmontagem onde cada grupo de threads está localizado. 24 threads estão na linha 22 em que o [tile_barrier:: wait método](reference/tile-barrier-class.md#wait) é executado. 12 threads são durante a instrução para a barreira na linha 32. Quatro desses threads sinalizados. Oito threads estão no ponto de interrupção na linha 30. Quatro desses threads estão congelados. A ilustração a seguir mostra os segmentos agrupados na **Threads da GPU** janela.
 
-     ![Janela Threads da GPU com threads são agrupados pelo endereço](../../parallel/amp/media/campl.png "campl") agrupados threads no **Threads da GPU** janela
+   ![Janela Threads da GPU com threads são agrupados pelo endereço](../../parallel/amp/media/campl.png "janela Threads da GPU com segmentos agrupados por endereço") <br/>
+   Agrupados threads na **Threads da GPU** janela
 
 2. Você também pode executar o **Group By** operação abrindo o menu de atalho para a grade de dados das **inspeção paralela** janela, escolhendo **Group By**e, em seguida, escolhendo o menu item que corresponde a como você deseja agrupar threads.
 

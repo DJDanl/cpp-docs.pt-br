@@ -1,6 +1,6 @@
 ---
 title: Vários tipos de documento, exibições e janelas com moldura
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - static splitter windows [MFC]
 - multiple views [MFC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-ms.openlocfilehash: 3c1422aed5535d30a2f9fb79300f6093326d2ef3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9c26413d45dfa03087bf9909bf8004064766a00
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669099"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175778"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Vários tipos de documento, exibições e janelas com moldura
 
@@ -64,7 +64,8 @@ MFC dá suporte a três interfaces de usuário comuns que exigem várias exibiç
 
 A figura a seguir, dividido em partes a, b e c, mostra os três modelos de interface do usuário na ordem apresentada acima.
 
-![Vários&#45;exibir as interfaces do usuário](../mfc/media/vc37a71.gif "vc37a71") modo de exibição de várias Interfaces de usuário
+![Vários&#45;exibir interfaces do usuário](../mfc/media/vc37a71.gif "diversos&#45;exibir interfaces do usuário") <br/>
+Interfaces do usuário do modo de exibição de vários
 
 A estrutura fornece esses modelos, Implementando o comando nova janela e fornecendo a classe [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), como descrito em [divisor Windows](#_core_splitter_windows). Você pode implementar outros modelos usando esses como seu ponto de partida. Para programas de exemplo que ilustram as diferentes configurações de exibições e janelas com moldura divisores, consulte [exemplos de MFC](../visual-cpp-samples.md).
 

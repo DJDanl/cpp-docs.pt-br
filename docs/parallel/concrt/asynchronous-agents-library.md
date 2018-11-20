@@ -1,16 +1,16 @@
 ---
 title: Biblioteca de Agentes Assíncronos
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-ms.openlocfilehash: 9086734b22523d395022299fb75b7a130a8e7a16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b4e8e6489e98aadb6ea41d32d5a9ba14efe2668
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629275"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175854"
 ---
 # <a name="asynchronous-agents-library"></a>Biblioteca de Agentes Assíncronos
 
@@ -26,7 +26,7 @@ A biblioteca de agentes é composta de três componentes: *agentes assíncronos*
 
 A ilustração a seguir mostra como dois agentes uso blocos de mensagem e funções de transmissão de mensagens para se comunicar. Nesta ilustração `agent1` envia uma mensagem à `agent2` usando o [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) função e um [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) objeto. `agent2` usa o [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) função para ler a mensagem. `agent2` usa o mesmo método para enviar uma mensagem para `agent1`. Setas tracejadas representam o fluxo de dados entre os agentes. As setas sólidas conectam os agentes para os blocos de mensagem que eles gravar ou leiam.
 
-![Os componentes da biblioteca de agentes](../../parallel/concrt/media/agent_librarycomp.png "agent_librarycomp")
+![Os componentes da biblioteca de agentes](../../parallel/concrt/media/agent_librarycomp.png "os componentes da biblioteca de agentes")
 
 Um exemplo de código que implementa esta ilustração é mostrado posteriormente neste tópico.
 

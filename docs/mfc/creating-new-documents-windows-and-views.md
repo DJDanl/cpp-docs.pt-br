@@ -1,6 +1,6 @@
 ---
 title: Criando novos documentos, janelas e exibições
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - MDI [MFC], creating windows
 - window objects [MFC], creating
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - views [MFC], overriding default behavior
 - initializing views [MFC]
 ms.assetid: 88aa1f5f-2078-4603-b16b-a2b4c7b4a2a3
-ms.openlocfilehash: 20bc94c7a688d3cf88fa89fff060ab155d327606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57e558848ce76a7c74b5715529661ad24c9cbb8e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643892"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175386"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Criando novos documentos, janelas e exibições
 
@@ -37,11 +37,14 @@ As figuras a seguir oferecem uma visão geral do processo de criação de docume
 
 Após a conclusão desse processo, os objetos de cooperação existem e armazenam ponteiros uns aos outros. As figuras a seguir mostram a sequência na qual os objetos são criados. Você pode seguir a sequência de figura da figura.
 
-![Sequência para a criação de um documento](../mfc/media/vc387l1.gif "vc387l1") sequência na criação de um documento
+![Sequência para a criação de um documento](../mfc/media/vc387l1.gif "sequência para a criação de um documento") <br/>
+A sequência na criação de um documento
 
-![Sequência de criação da janela de quadro](../mfc/media/vc387l2.png "vc387l2") sequência na criação de uma janela do quadro
+![Sequência de criação da janela de quadro](../mfc/media/vc387l2.png "sequência de criação da janela de quadro") <br/>
+A sequência na criação de uma janela do quadro
 
-![Sequência para a criação de um modo de exibição](../mfc/media/vc387l3.gif "vc387l3") sequência na criação de um modo de exibição
+![Sequência para a criação de um modo de exibição](../mfc/media/vc387l3.gif "sequência para criar uma exibição") <br/>
+A sequência na criação de um modo de exibição
 
 Para obter informações sobre como o framework inicializa o novo documento, exibição e objetos de janela com moldura, consulte classes [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), e [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) na referência da biblioteca MFC. Consulte também [22 de observação técnica](../mfc/tn022-standard-commands-implementation.md), que explica os processos de criação e a inicialização adicional em sua discussão de comandos de padrão da estrutura para o **New** e **abrir** itens sobre os **arquivo** menu.
 

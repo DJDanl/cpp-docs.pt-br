@@ -1,6 +1,6 @@
 ---
 title: Acessadores e conjuntos de linhas
-ms.date: 10/22/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - accessors [C++]
 - OLE DB consumer templates, rowset support
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-ms.openlocfilehash: 74a839d36f96b115d1f4e0c35532bd76d998a4b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d29c409f2ed410d9f697419e9a98b675eee7a69d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651250"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175701"
 ---
 # <a name="accessors-and-rowsets"></a>Acessadores e conjuntos de linhas
 
@@ -34,7 +34,7 @@ Todos os acessadores derivam [CAccessorBase](../../data/oledb/caccessorbase-clas
 
 A figura a seguir mostra os tipos de acessador.
 
-![Tipos de acessador](../../data/oledb/media/vcaccessortypes.gif "vcaccessortypes")<br/>
+![Tipos de acessador](../../data/oledb/media/vcaccessortypes.gif "tipos de acessador")<br/>
 Classes de acessador
 
 - [CAccessor](../../data/oledb/caccessor-class.md) usa esse acessador quando você conhece a estrutura da fonte de banco de dados em tempo de design. `CAccessor` vincula estaticamente um registro de banco de dados, que contém o buffer, à fonte de dados.
@@ -63,7 +63,7 @@ Os modelos OLE DB dão suporte a três tipos de conjuntos de linhas (consulte a 
 
 A figura a seguir mostra os tipos de conjunto de linhas.
 
-![Gráfico de RowsetType](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")<br/>
+![Gráfico de RowsetType](../../data/oledb/media/vcrowsettypes.gif "de RowsetType")<br/>
 Classes de conjunto de linhas
 
 [Conjuntos de linhas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) não acessar os dados nos dados de repositório, mas em vez disso, acessar informações sobre o armazenamento de dados, chamada de metadados. Conjuntos de linhas de esquema normalmente são usados em situações nas quais a estrutura de banco de dados não é conhecida em tempo de compilação e deve ser obtida em tempo de execução.

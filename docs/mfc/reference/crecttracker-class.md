@@ -1,6 +1,6 @@
 ---
 title: Classe CRectTracker
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CRectTracker
 - AFXEXT/CRectTracker
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 519f88a3706812ae77d7dbd77e199b3e3ef4e97a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c82b06903f0705a79a15b263b1dbdfc6aee4c8ca
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473366"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176504"
 ---
 # <a name="crecttracker-class"></a>Classe CRectTracker
 
@@ -237,7 +237,7 @@ As alças de redimensionamento aparecem das laterais e cantos do retângulo e pe
 
 Um retângulo tem 8 alças de redimensionamento numeradas de 0 a 7. Cada alça de redimensionamento é representada por um bit na máscara; o valor desse bit é 2 ^ *n*, onde *n* é o número da alça de redimensionamento. Bits de 0 a 3 correspondem às alças de redimensionamento de canto, começando na parte superior esquerda movimentação no sentido horário. Começando do topo no sentido horário de alças de redimensionamento de bits correspondem ao lado de 4 a 7. A ilustração a seguir mostra as alças de redimensionamento de um retângulo e suas respectivas redimensionar o identificador de números e valores:
 
-![Redimensionar os números de identificador](../../mfc/reference/media/vc35dp1.gif "vc35dp1")
+![Redimensionar os números de identificador](../../mfc/reference/media/vc35dp1.gif "números da alça de redimensionamento")
 
 A implementação padrão de `GetHandleMask` retorna a máscara de bits para que sejam exibidas as alças de redimensionamento. Se o bit único estiver ativado, a alça de redimensionamento correspondente será desenhada.
 

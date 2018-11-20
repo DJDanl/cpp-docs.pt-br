@@ -1,17 +1,17 @@
 ---
 title: Matrizes (C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-ms.openlocfilehash: 746a6b5a2122a7ccdd207d278d285af3e448d7ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 176e358bd0217ac914eb4ee6079126d3f429b6dd
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550664"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176873"
 ---
 # <a name="arrays-c"></a>Matrizes (C++)
 
@@ -75,7 +75,8 @@ int i2[5][7];
 
 Especifica uma matriz do tipo **int**, organizada conceitualmente em uma matriz bidimensional de cinco linhas e sete colunas, conforme mostrado na figura a seguir:
 
-![Layout conceitual de uma de várias&#45;matriz dimensional](../cpp/media/vc38rc1.gif "vc38RC1") Layout conceitual de matriz Multidimensional
+![Layout conceitual de uma de várias&#45;matriz dimensional](../cpp/media/vc38rc1.gif "layout conceitual de uma de várias&#45;matriz dimensional") <br/>
+Layout conceitual de uma matriz multidimensional
 
 Em declarações de matrizes multidimensionadas que têm uma lista de inicializadores (conforme descrito em [inicializadores](../cpp/initializers.md)), a expressão de constante que especifica os limites para a primeira dimensão pode ser omitida. Por exemplo:
 

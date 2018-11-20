@@ -1,15 +1,15 @@
 ---
 title: Implementando uma página de propriedades (ATL)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 6eb65ca3ddff79262c2f2b53d84d2f964f273c9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a76a0f49e8b0ec7458b781785cd5030d2c523f0b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669086"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176465"
 ---
 # <a name="example-implementing-a-property-page"></a>Exemplo: Implementando uma página de propriedades
 
@@ -58,7 +58,7 @@ Clique em **Okey** para que o Assistente para gerar a sua página de propriedade
 
 Agora que sua página de propriedades foi gerada, você precisará adicionar alguns controles para o recurso de caixa de diálogo que representa sua página. Adicione uma caixa de edição, um controle de texto estático e uma caixa de seleção e defina suas IDs, conforme mostrado abaixo:
 
-![Editando um recurso de caixa de diálogo](../atl/media/ppgresourcelabeled.gif "ppgresourcelabeled")
+![Editando um recurso de caixa de diálogo](../atl/media/ppgresourcelabeled.gif "editando um recurso de caixa de diálogo")
 
 Esses controles serão usados para exibir o nome de arquivo do documento e seu status de somente leitura.
 

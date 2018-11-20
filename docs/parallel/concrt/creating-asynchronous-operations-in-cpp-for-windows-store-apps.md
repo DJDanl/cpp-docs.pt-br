@@ -1,16 +1,16 @@
 ---
 title: Criando operações assíncronas em C++ para aplicativos UWP
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 4824180ec0ff9f7adb7c2d0a9b505a2abb58c20b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 59630c7702dffc4b606943e174e44fdba6aecfe8
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333319"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176946"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Criando operações assíncronas em C++ para aplicativos UWP
 
@@ -124,7 +124,7 @@ O `getPrimesCancellation` e `cancelGetPrimes` métodos funcionam juntos para per
 
 A ilustração a seguir mostra o `Primes` aplicativo depois de cada opção foi escolhida.
 
-![Aplicativo de números primos de tempo de execução do Windows](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")
+![Tempo de execução do Windows inicia o aplicativo](../../parallel/concrt/media/concrt_windows_primes.png "tempo de execução do Windows inicia o aplicativo")
 
 Para obter exemplos que usam `create_async` para criar tarefas assíncronas que podem ser consumidas por outros idiomas, consulte [usando o C++ no exemplo Bing Maps Trip Optimizer](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) e [operações assíncronas do Windows 8 em C++ com PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
 
@@ -186,7 +186,7 @@ Modificar a `MainPage` construtor para criar uma cadeia de tarefas de continuaç
 
 A ilustração a seguir mostra os resultados do `CommonWords` aplicativo.
 
-![Aplicativo do Windows Runtime CommonWords](../../parallel/concrt/media/concrt_windows_common_words.png "concrt_windows_common_words")
+![Aplicativo do Windows Runtime CommonWords](../../parallel/concrt/media/concrt_windows_common_words.png "Windows CommonWords de tempo de execução de aplicativo")
 
 Neste exemplo, é possível oferecer suporte ao cancelamento, porque o `task` objetos que dão suporte ao `create_async` usar um token de cancelamento implícito. Definir sua função de trabalho para tirar uma `cancellation_token` objeto se suas tarefas precisam responder ao cancelamento de forma cooperativa. Para obter mais informações sobre cancelamento no PPL, consulte [cancelamento no PPL](cancellation-in-the-ppl.md)
 

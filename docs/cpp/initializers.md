@@ -1,6 +1,6 @@
 ---
 title: Inicializadores
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - array-element initializers
 - initializing arrays [C++], initializers
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: 2948e65538359815da151a540e96227e56bbea6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1890899fb2ad63bff06d514ae8b18f9dc3ff9e21
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544658"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176283"
 ---
 # <a name="initializers"></a>Inicializadores
 
@@ -528,7 +528,8 @@ As variáveis do tipo de referência podem ser declaradas sem inicializadores, a
 
 Ao inicializar uma variável do tipo de referência, o compilador usa o gráfico de decisão mostrado na figura a seguir para selecionar entre a criação de uma referência para um objeto ou a criação de um objeto temporário para o qual a referência aponta.
 
-![Gráfico de decisão para a inicialização dos tipos ref](../cpp/media/vc38s71.gif "vc38S71") gráfico de decisão para inicialização de tipos de referência
+![Gráfico de decisão para a inicialização de tipos de referência](../cpp/media/vc38s71.gif "gráfico de decisão para a inicialização de tipos de referência") <br/>
+Gráfico de decisão para a inicialização de tipos de referência
 
 Referências aos **volátil** tipos (declaradas como **volátil** *typename* <strong>&</strong> *identificador*) pode ser inicializado com **volátil** objetos do mesmo tipo ou com objetos que não tenham sido declarados como **volátil**. Eles não é possível, no entanto, ser inicializado com **const** objetos desse tipo. Da mesma forma, as referências a **const** tipos (declaradas como **const** *typename* <strong>&</strong> *identificador* ) pode ser inicializado com **const** objetos do mesmo tipo (ou qualquer coisa que tem uma conversão para esse tipo ou com objetos que não tenham sido declarados como **const**). Eles não é possível, no entanto, ser inicializado com **volátil** objetos desse tipo.
 

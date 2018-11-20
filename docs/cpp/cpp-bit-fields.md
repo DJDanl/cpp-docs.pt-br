@@ -1,17 +1,17 @@
 ---
 title: Campos de bit C++
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - bitfields [C++]
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: df4e5a068f76c35dc22b3915ad7e4ace421ca10b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 747920378472cc091928a080e303a0543e287aaa
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644949"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175087"
 ---
 # <a name="c-bit-fields"></a>Campos de bit C++
 
@@ -43,7 +43,8 @@ struct Date {
 
 O layout de memória conceitual de um objeto do tipo `Date` é mostrado na figura a seguir.
 
-![Layout de memória de um objeto date](../cpp/media/vc38uq1.png "vc38UQ1") Layout de memória do objeto Date
+![Layout de memória de um objeto date](../cpp/media/vc38uq1.png "layout de memória de um objeto de data") <br/>
+Layout de memória de um objeto Date
 
 Observe que `nYear` é o comprimento de 8 bits e estouraria o limite de palavra do tipo declarado, **não assinados** **curto**. Portanto, ele começa no início de uma nova **sem sinal** **curto**. Não é necessário que todos os campos de bits caibam em um mesmo objeto do tipo subjacente; novas unidades de armazenamento são alocadas de acordo com o número de bits solicitados na declaração.
 
@@ -69,7 +70,8 @@ struct Date {
 
 em seguida, o layout de memória é conforme mostrado na figura a seguir:
 
-![Layout do objeto de data com zero de&#45;campo de bits de comprimento](../cpp/media/vc38uq2.png "vc38UQ2") Layout do objeto Date com campo de bits de comprimento Zero
+![Layout do objeto de data com zero de&#45;campo de bits de comprimento](../cpp/media/vc38uq2.png "objeto de Layout de data com zero&#45;campo de bits de comprimento") <br/>
+Layout do objeto Date com campo de bits de comprimento zero
 
 O tipo subjacente de um campo de bits deve ser um tipo integral, conforme descrito em [tipos fundamentais](../cpp/fundamental-types-cpp.md).
 

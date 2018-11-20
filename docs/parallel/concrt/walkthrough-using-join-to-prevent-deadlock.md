@@ -1,18 +1,18 @@
 ---
 title: 'Instruções passo a passo: usando join para Evitar Deadlock'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - preventing deadlock with joins [Concurrency Runtime]
 - deadlock, preventing [Concurrency Runtime]
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: b98c2deb158b9b9fc71caa7133aeaeb2acfd369c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b62f4007a79faaff479e4e8ff998a8b48e4d5dd1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498807"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175906"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Instruções passo a passo: usando join para Evitar Deadlock
 
@@ -48,7 +48,7 @@ Este passo a passo contém as seguintes seções:
 
 O problema de filósofos jantar ilustra como o deadlock ocorre em um aplicativo. Na solução desse problema, cinco filósofos ficam em uma mesa redonda. Cada filósofo alterna entre a concepção de ideias e comer. Cada filósofo deve compartilhar um chopstick com o vizinho para a esquerda e outro chopstick com o vizinho para a direita. A ilustração a seguir mostra esse layout.
 
-![O problema de filósofos jantando](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")
+![O problema de filósofos jantar](../../parallel/concrt/media/dining_philosophersproblem.png "o problema de filósofos jantar")
 
 Para comer um filósofo deve conter Pauzinhos dois japoneses. Se cada filósofo contém apenas um chopstick e está aguardando a outra, em seguida, não poderá consumir a nenhum filósofo e sentir falta de todos.
 

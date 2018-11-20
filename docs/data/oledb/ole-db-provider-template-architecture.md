@@ -1,17 +1,17 @@
 ---
 title: Arquitetura de modelo do provedor de banco de dados OLE
-ms.date: 10/24/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - OLE DB [C++], object model
 - architecture [C++], OLE DB Provider
 - OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-ms.openlocfilehash: 6256328caa11d188f3a50445f62df096b6f6acb3
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 099c29e141d721645c416e60be240c22d22cd869
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557031"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175633"
 ---
 # <a name="ole-db-provider-template-architecture"></a>Arquitetura de modelo do provedor de banco de dados OLE
 
@@ -19,7 +19,7 @@ ms.locfileid: "51557031"
 
 A arquitetura do provedor OLE DB inclui um objeto de fonte de dados e uma ou mais sessões. O objeto de fonte de dados é o objeto inicial que deve criar uma instância de cada provedor. Quando um aplicativo de consumidor precisa de dados, ele conjunta cria o objeto de fonte de dados para iniciar o provedor. O objeto de fonte de dados cria um objeto de sessão (usando o `IDBCreateSession` interface) por meio do qual o consumidor conecta-se ao objeto de fonte de dados. Programadores ODBC podem pensar que o objeto de fonte de dados como sendo o equivalente para o `HENV` e o objeto de sessão como equivalente ao `HDBC`.
 
-![Arquitetura de provedor](../../data/oledb/media/vc4twb1.gif "vc4twb1")
+![Arquitetura de provedor](../../data/oledb/media/vc4twb1.gif "arquitetura de provedor")
 
 Junto com os arquivos de código-fonte criados pelo **OLE DB Provider Wizard**, os modelos OLE DB implementam um objeto de fonte de dados. Uma sessão é um objeto que corresponde ao OLE DB `TSession`.
 

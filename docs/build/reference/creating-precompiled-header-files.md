@@ -1,6 +1,6 @@
 ---
 title: Criando arquivos de cabeçalho pré-compilado
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - pch
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 3014b2da9f9d9e03e9ea791c9a97ff59f842e8ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b570b76328ee9824610aac495d97cede19189cf9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482609"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176426"
 ---
 # <a name="creating-precompiled-header-files"></a>Criando arquivos de cabeçalho pré-compilado
 
@@ -42,8 +42,6 @@ Este tópico aborda os seguintes assuntos de cabeçalho pré-compilado:
 
 Para obter informações de referência sobre as opções do compilador relacionadas aos cabeçalhos pré-compilados, consulte [/Y (cabeçalhos pré-compilados)](../../build/reference/y-precompiled-headers.md).
 
-<a name="when-to-precompile-source-code"></a>
-
 ## <a name="when-to-precompile-source-code"></a>Quando pré-compilar o código-fonte
 
 Código pré-compilado é útil durante o ciclo de desenvolvimento para reduzir o tempo de compilação, especialmente se:
@@ -57,11 +55,9 @@ A primeira compilação — aquele que cria o arquivo de cabeçalho pré-compila
 Você pode pré-compilar programas em C e C++. Na programação do C++, é prática comum para separar as informações de interface de classe em arquivos de cabeçalho. Esses arquivos de cabeçalho mais tarde podem ser incluídos em programas que usam a classe. Por meio da pré-compilação esses cabeçalhos, você pode reduzir o tempo que um programa necessário para compilar.
 
 > [!NOTE]
->  Embora você possa usar apenas um arquivo de cabeçalho pré-compilado (. pch) por arquivo de origem, você pode usar vários arquivos. pch em um projeto.
+> Embora você possa usar apenas um arquivo de cabeçalho pré-compilado (. pch) por arquivo de origem, você pode usar vários arquivos. pch em um projeto.
 
-<a name="two-choices-for-precompiling-code"></a>
-
-# <a name="two-choices-for-precompiling-code"></a>Duas escolhas para pré-compilar código
+## <a name="two-choices-for-precompiling-code"></a>Duas escolhas para pré-compilar código
 
 Com o Visual C++, você pode pré-compilar qualquer código C ou C++; Você não está limitado a pré-compilar somente os arquivos de cabeçalho.
 
@@ -73,13 +69,9 @@ São as opções de cabeçalho pré-compilado [/Yc (criar a arquivo de cabeçalh
 
 Os tópicos de referência de opção de compilador para **/Yu** e **/Yc** discutem como acessar essa funcionalidade no ambiente de desenvolvimento.
 
-<a name="precompiled-header-consistency-rules"></a>
-
 ## <a name="precompiled-header-consistency-rules"></a>Regras de consistência do cabeçalho pré-compilado
 
 Como os arquivos PCH contêm informações sobre o ambiente de máquina, bem como informações de endereço de memória sobre o programa, você deve usar apenas um arquivo PCH na máquina onde ele foi criado.
-
-<a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>
 
 ## <a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>Regras de consistência para uso por arquivo de cabeçalhos pré-compilados
 
@@ -134,8 +126,6 @@ Esses pragmas são mantidos como parte de um cabeçalho pré-compilado e afetar 
 |`data_seg`|`intrinsic`|`warning`|
 |`function`|`optimize`||
 
-<a name="consistency-rules-for-yc-and-yu"></a>
-
 ## <a name="consistency-rules-for-yc-and-yu"></a>Regras de consistência para /Yc e /Yu
 
 Quando você usa um cabeçalho pré-compilado criado usando /Yc ou /Yu, o compilador compara o ambiente de compilação atual para aquela que existia quando você criou o arquivo PCH. Certifique-se de especificar um ambiente consistente com o anterior (usando as opções do compilador consistente, pragmas e assim por diante) para a compilação atual. Se o compilador detecta uma inconsistência, ele emite um aviso e identifica a inconsistência, sempre que possível. Esses avisos não indica necessariamente um problema com o arquivo PCH; eles simplesmente avisá-lo sobre possíveis conflitos. As seções a seguir explicam os requisitos de consistência para cabeçalhos pré-compilados.
@@ -155,15 +145,11 @@ Esta tabela lista as opções do compilador que podem disparar um aviso de incon
 > [!NOTE]
 >  O recurso de cabeçalho pré-compilado destina-se apenas para uso em arquivos de código-fonte C e C++.
 
-<a name="using-precompiled-headers-in-a-project"></a>
-
 ## <a name="using-precompiled-headers-in-a-project"></a>Usando cabeçalhos pré-compilados em um projeto
 
 As seções anteriores apresentam uma visão geral dos cabeçalhos pré-compilados: /Yc e /Yu, a opção /Fp e o [hdrstop](../../preprocessor/hdrstop.md) pragma. Esta seção descreve um método para usar as opções de cabeçalho pré-compilado manuais em um projeto; ele termina com um makefile de exemplo e o código que ele gerencia.
 
 Para outra abordagem para usar as opções de cabeçalho pré-compilado manuais em um projeto, estude uma das makefiles localizados no diretório MFC\SRC que é criado durante a configuração padrão do Visual C++. Esses makefiles adotar uma abordagem semelhante ao apresentado nesta seção, mas usar mais de macros do Microsoft programa manutenção Utility (NMAKE) e oferecem maior controle do processo de compilação.
-
-<a name="pch-files-in-the-build-process"></a>
 
 ## <a name="pch-files-in-the-build-process"></a>Arquivos PCH no processo de Build
 
@@ -171,8 +157,8 @@ A base de código de um projeto de software geralmente está contida em vários 
 
 A figura usa três dispositivos diagramáticas para mostrar o fluxo do processo de compilação. Chamado retângulos representam cada arquivo ou uma macro; as três macros representam um ou mais arquivos. Áreas sombreadas representam cada ação de compilação ou de vinculação. As setas mostram quais arquivos e macros são combinadas durante o processo de vinculação ou compilação.
 
-![Makefile que usa um arquivo de cabeçalho pré-compilado](../../build/reference/media/vc30ow1.gif "estrutura de um Makefile que usa um arquivo de cabeçalho pré-compilado")
-##### <a name="structure-of-a-makefile-that-uses-a-precompiled-header-file"></a>Estrutura de um Makefile que usa um arquivo de cabeçalho pré-compilado
+![Estrutura de um makefile que usa um arquivo de cabeçalho pré-compilado](../../build/reference/media/vc30ow1.gif "estrutura de um makefile que usa um arquivo de cabeçalho pré-compilado") <br/>
+Estrutura de um Makefile que usa um arquivo de cabeçalho pré-compilado
 
 Começando na parte superior do diagrama, STABLEHDRS e limite são macros NMAKE no qual você provavelmente não precisam de recompilação de arquivos de lista. Esses arquivos são compilados pela cadeia de caracteres de comando
 
@@ -187,8 +173,6 @@ Continuando para baixo no diagrama, APPLIB.obj representa o código de suporte u
 MYAPP.obj representa o aplicativo final. Ele é criado de MYAPP.cpp, os arquivos listados na macro UNSTABLEHDRS e pré-compilados código de cabeçalho pré-compilado.
 
 Por fim, o arquivo executável (MYAPP. EXE) é criado, vinculando os arquivos listados na macro objetos (APPLIB.obj e MYAPP.obj).
-
-<a name="sample-makefile-for-pch"></a>
 
 ## <a name="sample-makefile-for-pch"></a>Makefile de exemplo para PCH
 
@@ -254,8 +238,6 @@ NMAKE DEBUG=0
 ```
 
 Para obter mais informações sobre makefiles, consulte [referência de NMAKE](../../build/nmake-reference.md). Consulte também [opções do compilador](../../build/reference/compiler-options.md) e o [opções de vinculador](../../build/reference/linker-options.md).
-
-<a name="example-code-for-pch"></a>
 
 ## <a name="example-code-for-pch"></a>Código de exemplo para PCH
 

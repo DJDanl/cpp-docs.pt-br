@@ -1,17 +1,17 @@
 ---
 title: Operador dynamic_cast
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - dynamic_cast_cpp
 helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-ms.openlocfilehash: 75085fe6dd1478fee769e23938c55c6300429d86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b359885eb72f9272fb1efe14afe9a6cbe6ddb30
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529149"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176959"
 ---
 # <a name="dynamiccast-operator"></a>Operador dynamic_cast
 
@@ -121,7 +121,8 @@ int main() {
 }
 ```
 
-![Classe de hierarquia que mostra a herança múltipla](../cpp/media/vc39011.gif "vc39011") classe hierarquia mostrando várias heranças
+![Classe de hierarquia que mostra a herança múltipla](../cpp/media/vc39011.gif "hierarquia que mostra várias heranças de classes") <br/>
+Hierarquia de classe que mostra a herança múltipla
 
 Um ponteiro para um objeto do tipo `D` pode seguramente ser gerado em `B` ou `C`. No entanto, se `D` for gerado para apontar para um objeto `A`, qual instância de `A` resultaria? Isso resultará em um erro ambíguo de geração. Para contornar esse problema, você pode executar duas conversões inequívocas. Por exemplo:
 
@@ -141,13 +142,15 @@ void f() {
 
 As ambiguidades adicionais podem ser introduzidas quando você usar classes base virtuais. Considere a hierarquia da classe mostrada na figura a seguir.
 
-![Classe de hierarquia que mostra as classes base virtuais](../cpp/media/vc39012.gif "vc39012") classe hierarquia mostrando Classes Base virtuais
+![Classe de hierarquia que mostra as classes base virtuais](../cpp/media/vc39012.gif "classe hierarquia que mostra as classes base virtuais") <br/>
+Hierarquia de classe que mostra as classes base virtuais
 
 Nesta hierarquia, `A` é uma classe base virtual. Dada uma instância da classe `E` e um ponteiro para o `A` subobjeto, um **dynamic_cast** em um ponteiro para `B` falhará devido à ambiguidade. Primeiro você deve converter de volta ao objeto completo `E`, então trabalhar até a hierarquia, de maneira não ambígua, para alcançar o objeto correto `B`.
 
 Considere a hierarquia da classe mostrada na figura a seguir.
 
-![Classe de hierarquia que mostra as classes base duplicadas](../cpp/media/vc39013.gif "vc39013") classe hierarquia mostrando Classes Base duplicadas
+![Classe de hierarquia que mostra as classes base duplicadas](../cpp/media/vc39013.gif "classe hierarquia que mostra as classes base duplicadas") <br/>
+Hierarquia de classes que mostra as classes base duplicadas
 
 Dado um objeto de tipo `E` e um ponteiro para o subobjeto `D`, para navegar do subobjeto `D` ao subobjeto mais à esquerda `A`, três conversões podem ser feitas. Você pode executar uma **dynamic_cast** conversão da `D` ponteiro para um `E` ponteiro e, em seguida, uma conversão (ambos **dynamic_cast** ou uma conversão implícita) de `E`para `B`e finalmente uma conversão implícita da `B` para `A`. Por exemplo:
 

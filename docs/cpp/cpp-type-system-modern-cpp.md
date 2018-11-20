@@ -1,14 +1,14 @@
 ---
 title: Sistema do tipo C++ (C++ moderno)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: ba24a4a739e4eb13d983202943ca046f857422d2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 476ebabc4bfc19f995119649d6f012d4b39d8369
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521086"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176335"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema do tipo C++ (C++ moderno)
 
@@ -59,7 +59,7 @@ Os tipos fundamentais são reconhecidos pelo compilador, que tem regras internas
 
 A ilustração a seguir mostra os tamanhos relativos dos tipos internos:
 
-![Tamanho em bytes do criados&#45;em tipos](../cpp/media/built-intypesizes.png "inTYpeSizes desenvolvido")
+![Tamanho em bytes do criado&#45;em tipos](../cpp/media/built-intypesizes.png "criados de tamanho em bytes do&#45;em tipos")
 
 A tabela a seguir lista os tipos fundamentais usados com mais frequência:
 
@@ -70,13 +70,13 @@ A tabela a seguir lista os tipos fundamentais usados com mais frequência:
 |bool|1 byte|Representa valores que podem ser true ou false.|
 |char|1 byte|Use os caracteres ASCII em cadeias de caracteres do estilo C mais antigo ou objetos std::string que nunca precisarão ser convertidos em UNICODE.|
 |wchar_t|2 bytes|Representa os valores de caractere "largos" que podem ser codificados no formato UNICODE (UTF-16 no Windows, outros sistemas operacionais podem ser diferentes). Esse é o tipo de caractere usado em cadeias de caracteres do tipo `std::wstring`.|
-|unsigned char|1 byte|O C++ não tem o tipo `byte` interno.  Use unsigned char para representar um valor de bytes.|
+|sem sinal&nbsp;char|1 byte|O C++ não tem o tipo `byte` interno.  Use unsigned char para representar um valor de bytes.|
 |unsigned int|4 bytes|Escolha padrão para sinalizadores de bit.|
 |long long|8 bytes|Representa valores inteiros muito grandes.|
 
 ## <a name="the-void-type"></a>O tipo void
 
-O **void** é um tipo especial; você não pode declarar uma variável do tipo **void**, mas você pode declarar uma variável do tipo `void *` (ponteiro para **void**), que é às vezes, é necessário ao alocar memória bruta de (não tipada). No entanto, ponteiros para **void** são fortemente tipadas não e geralmente seu uso é altamente desaconselhável em C++ moderno. Em uma declaração de função, uma **void** valor de retorno significa que a função não retorna um valor; esse é um uso comum e aceitável de **void**. Embora as linguagem C exigida funções que têm zero parâmetros para declarar **void** na lista de parâmetros, por exemplo, `fou(void)`, essa prática é desaconselhável em C++ moderno e deve ser declarado como `fou()`. Para obter mais informações, consulte [conversões de tipo e a segurança de tipo](../cpp/type-conversions-and-type-safety-modern-cpp.md).
+O **void** é um tipo especial; você não pode declarar uma variável do tipo **void**, mas você pode declarar uma variável do tipo __void \*__  (ponteiro para **void**), que, às vezes, é necessário ao alocar memória bruta de (não tipada). No entanto, ponteiros para **void** são fortemente tipadas não e geralmente seu uso é altamente desaconselhável em C++ moderno. Em uma declaração de função, uma **void** valor de retorno significa que a função não retorna um valor; esse é um uso comum e aceitável de **void**. Embora as linguagem C exigida funções que têm zero parâmetros para declarar **void** na lista de parâmetros, por exemplo, `fou(void)`, essa prática é desaconselhável em C++ moderno e deve ser declarado como `fou()`. Para obter mais informações, consulte [conversões de tipo e a segurança de tipo](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 ## <a name="const-type-qualifier"></a>Qualificador do tipo const
 

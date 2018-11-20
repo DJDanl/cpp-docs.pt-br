@@ -1,21 +1,22 @@
 ---
 title: Visão geral dos declaradores
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
-ms.openlocfilehash: 66f1068fd3f69d3e4546f159ec22b34024bd2057
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e651b4422a159bf947e364c82cc4aac1b888d30d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326752"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177076"
 ---
 # <a name="overview-of-declarators"></a>Visão geral dos declaradores
 
 Declaradores são os componentes de uma declaração que especificam nomes de objetos ou funções. Os declaradores também especificam se o objeto nomeado é ou não um objeto, um ponteiro, uma referência ou uma matriz.  Quando os declaradores não especificam o tipo de base, eles modificam as informações de tipo no tipo básico para especificar tipos derivados, como ponteiros, referências e matrizes.  Aplicado a funções, o declarador trabalha com o especificador de tipo para especificar completamente o tipo de retorno de uma função para ser um objeto, ponteiro ou referência. (Especificadores, abordados em [declarações e definições](declarations-and-definitions-cpp.md), transmitem propriedades como o armazenamento e o tipo de classe. Os modificadores, abordados nesta seção e, na [modificadores específicos da Microsoft](../cpp/microsoft-specific-modifiers.md), modificam declaradores.) A figura a seguir mostra uma declaração completa de `MyFunction`, e chama os componentes da declaração.
 
-![Modificadores, especificadores e declaradores](../cpp/media/vc38qy1.gif "vc38QY1") especificadores, modificadores e declaradores
+![Modificadores, especificadores e declaradores](../cpp/media/vc38qy1.gif "modificadores, especificadores e declaradores") <br/>
+Especificadores, modificadores e declaradores
 
 **Seção específica da Microsoft**
 

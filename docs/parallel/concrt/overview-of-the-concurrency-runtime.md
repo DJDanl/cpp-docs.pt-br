@@ -1,18 +1,18 @@
 ---
 title: Visão geral do Tempo de Execução de Simultaneidade
-ms.date: 07/20/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Concurrency Runtime, requirements
 - Concurrency Runtime, architecture
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: dab4860bcc69780fa6a6390e2ef111216642637a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: ffaf560361da2fd54febb5e38af121ad5149f012
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693631"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176660"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Visão geral do Tempo de Execução de Simultaneidade
 
@@ -60,10 +60,10 @@ O tempo de execução de simultaneidade é dividido em quatro componentes: a bib
 
 **Arquitetura de tempo de execução de simultaneidade**
 
-![A arquitetura de tempo de execução de simultaneidade](../../parallel/concrt/media/concurrencyrun.png "concurrencyrun")
+![A arquitetura de tempo de execução de simultaneidade](../../parallel/concrt/media/concurrencyrun.png "a arquitetura de tempo de execução de simultaneidade")
 
 > [!IMPORTANT]
->  Os componentes de Agendador de tarefas e o Gerenciador de recursos não estão disponíveis de um aplicativo da plataforma Universal do Windows (UWP) ou quando você usa a classe de tarefa ou outros tipos em ppltasks. h.
+> Os componentes de Agendador de tarefas e o Gerenciador de recursos não estão disponíveis de um aplicativo da plataforma Universal do Windows (UWP) ou quando você usa a classe de tarefa ou outros tipos em ppltasks. h.
 
 O tempo de execução de simultaneidade é altamente *Combinável*, ou seja, você pode combinar a funcionalidade existente para fazer mais. O tempo de execução de simultaneidade compõe muitos recursos, como algoritmos paralelos, de componentes de nível inferior.
 

@@ -1,17 +1,17 @@
 ---
 title: Controle de acesso a membro (C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - access control [C++]
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: ee4e9d89878aab4be2e4daf45525f9e951d214f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 546b23b939078c723084bdfc659ff4fd3216b479
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611413"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176219"
 ---
 # <a name="member-access-control-c"></a>Controle de acesso a membro (C++)
 
@@ -234,7 +234,8 @@ No exemplo anterior, chamar a função virtual `GetState` usando um ponteiro par
 
 Em células entrelaçadas de herança múltipla que envolvem classes base virtuais, um nome determinado pode ser acessado por mais de um caminho. Como o controle de acesso diferente pode ser aplicado ao longo desses caminhos diferentes, o compilador escolhe o caminho que fornece o maior acesso. Veja a figura a seguir.
 
-![Acesso ao longo de caminhos de um gráfico de herança](../cpp/media/vc38v91.gif "vc38V91") ao longo de caminhos de acesso de um gráfico de herança
+![Acesso ao longo de caminhos de um gráfico de herança](../cpp/media/vc38v91.gif "acesso ao longo de caminhos de um gráfico de herança") <br/>
+Acesso ao longo de caminhos de um gráfico de herança
 
 Na figura, um nome declarado na classe `VBase` é sempre acessado pela classe `RightPath`. O caminho à direita é mais acessível porque `RightPath` declara `VBase` como uma classe base pública, enquanto que `LeftPath` declara `VBase` como particular.
 

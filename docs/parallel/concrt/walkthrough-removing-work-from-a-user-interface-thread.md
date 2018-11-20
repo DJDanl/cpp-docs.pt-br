@@ -1,16 +1,16 @@
 ---
 title: 'Instruções passo a passo: removendo trabalho de um thread de interface de usuário'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 85622b68f94342ece2c9fc666b9ff6d515cfe10b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1230cf2b3fa510aeca8516e41cf30f9665987d05
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472431"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176309"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Instruções passo a passo: removendo trabalho de um thread de interface de usuário
 
@@ -104,11 +104,11 @@ Esta seção descreve como desenhar o fractal Mandelbrot. Esta versão desenha o
 
    [!code-cpp[concrt-mandelbrot#8](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_8.cpp)]
 
-9. Verifique se que o aplicativo foi atualizado com êxito pela criação e executá-lo.
+1. Verifique se que o aplicativo foi atualizado com êxito pela criação e executá-lo.
 
 A ilustração a seguir mostra os resultados do aplicativo Mandelbrot.
 
-![O aplicativo de Mandelbrot](../../parallel/concrt/media/mandelbrot.png "mandelbrot")
+![O aplicativo de Mandelbrot](../../parallel/concrt/media/mandelbrot.png "o aplicativo de Mandelbrot")
 
 Como a computação para cada pixel é computacionalmente cara, o thread de interface do usuário não pode processar mensagens adicionais até que a computação geral seja concluída. Isso pode reduzir a capacidade de resposta do aplicativo. No entanto, você pode aliviar esse problema removendo o trabalho do thread de interface do usuário.
 

@@ -1,6 +1,6 @@
 ---
 title: Funções de bitmap cinza e pontilhado
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - AFXWIN/AfxDrawGrayBitmap
 - AFXWIN/AfxGetGrayBitmap
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: 1134cde55fbe5addac34b9c0433ff11df4c9bdc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e1d4bd0e851a14680a46d7d6ae79dcf4bd190e4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490890"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176725"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>Funções de bitmap cinza e pontilhado
 
@@ -22,7 +22,7 @@ ms.locfileid: "50490890"
 
 MFC fornece duas funções para fornecer um bitmap a aparência de um controle desabilitado.
 
-![Comparação de versões de ícone cinza e originais](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![Comparação de versões de ícone cinza e originais](../../mfc/reference/media/vcgraybitmap.gif "comparação de versões de ícone cinza e original")
 
 |||
 |-|-|
@@ -33,7 +33,7 @@ MFC fornece duas funções para fornecer um bitmap a aparência de um controle d
 
 MFC também fornece duas funções para substituir o plano de fundo de um bitmap com um padrão de pontilhado.
 
-![Comparação de versões de ícone original e pontilhado](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+![Comparação de versões de ícone original e pontilhado](../../mfc/reference/media/vcditheredbitmap.gif "comparação de versões de ícone original e pontilhado")
 
 |||
 |-|-|
@@ -74,7 +74,7 @@ A nova cor de plano de fundo (normalmente cinza, como COLOR_MENU).
 
 Um bitmap desenhado com `AfxDrawGrayBitmap` terá a aparência de um controle desabilitado.
 
-![Comparação de versões de ícone cinza e originais](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![Comparação de versões de ícone cinza e originais](../../mfc/reference/media/vcgraybitmap.gif "comparação de versões de ícone cinza e original")
 
 ### <a name="example"></a>Exemplo
 
@@ -110,7 +110,7 @@ A nova cor de plano de fundo (normalmente cinza, como COLOR_MENU).
 
 Um bitmap copiado com `AfxGetGrayBitmap` terá a aparência de um controle desabilitado.
 
-![Comparação de versões de ícone cinza e originais](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![Comparação de versões de ícone cinza e originais](../../mfc/reference/media/vcgraybitmap.gif "comparação de versões de ícone cinza e original")
 
 ### <a name="example"></a>Exemplo
 
@@ -158,7 +158,7 @@ A outra pontilhamento cor, normalmente acinzentado (COLOR_MENU).
 
 O bitmap de origem é desenhado no controlador de domínio de destino com duas cores (*cr1* e *cr2*) quadriculada padrão que substitui o plano de fundo do bitmap. O plano de fundo do bitmap de origem é definido como seus pixels brancas e todos os pixels correspondentes a cor do pixel no canto superior esquerdo do bitmap.
 
-![Comparação de versões de ícone original e pontilhado](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+![Comparação de versões de ícone original e pontilhado](../../mfc/reference/media/vcditheredbitmap.gif "comparação de versões de ícone original e pontilhado")
 
 ### <a name="example"></a>Exemplo
 

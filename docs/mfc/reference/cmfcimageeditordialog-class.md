@@ -1,6 +1,6 @@
 ---
 title: Classe CMFCImageEditorDialog
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCImageEditorDialog
 - AFXIMAGEEDITORDIALOG/CMFCImageEditorDialog
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
-ms.openlocfilehash: 84bbe72abeedc03f19f06a1f8498023ff54be95e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68cfa663f9be9f190a6d3425a2ebf6ceb73e2007
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503054"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175063"
 ---
 # <a name="cmfcimageeditordialog-class"></a>Classe CMFCImageEditorDialog
 
@@ -47,7 +47,7 @@ O `CMFCImageEditorDialog` classe fornece uma caixa de diálogo que inclui:
 
 A ilustração a seguir mostra um editor de imagens de caixa de diálogo.
 
-![Caixa de diálogo CMFCImageEditorDialog](../../mfc/reference/media/imageedit.png "imageedit")
+![Caixa de diálogo CMFCImageEditorDialog](../../mfc/reference/media/imageedit.png "caixa de diálogo CMFCImageEditorDialog")
 
 Uma maneira de usar um `CMFCImageEditorDialog` objeto é passá-lo um `CBitmap` imagem a ser editado. Não crie uma imagem grande porque a área de edição de imagem tem um tamanho limitado e o tamanho de pixel lógico é ajustado para caber na área. Chamar o `DoModal` método para iniciar a caixa de diálogo modal.
 

@@ -1,17 +1,17 @@
 ---
 title: Sobrecarga de função
-ms.date: 1/25/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-ms.openlocfilehash: f37a539c74b995b1dce5f68344c555a679a87991
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c05e4b840a02b3d9bbcd4ed259509be4c35c22c2
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333365"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176296"
 ---
 # <a name="function-overloading"></a>Sobrecarga de função
 
@@ -280,7 +280,8 @@ A sequência em que as conversões são executadas é a seguinte:
 
    - A conversão de um ponteiro em uma classe derivada, em um ponteiro em uma classe base gera uma correspondência melhor quanto mais próxima a classe base estiver de uma classe base direta. Suponhamos que a hierarquia de classes seja a ilustrada na figura a seguir.
 
-![Conversões de preferência](../cpp/media/vc391t1.gif "vc391T1") grafo ilustrando preferencial conversões
+![Gráfico de conversões preferenciais](../cpp/media/vc391t1.gif "grafo das conversões preferidas") <br/>
+Gráfico que mostra as conversões preferidas
 
 A conversão do tipo `D*` no tipo `C*` é preferível à conversão do tipo `D*` no tipo `B*`. Da mesma forma, a conversão do tipo `D*` no tipo `B*` é preferível à conversão do tipo `D*` no tipo `A*`.
 
@@ -290,7 +291,8 @@ Essa mesma regra se aplica às conversões de ponteiro em membro. A conversão d
 
 A regra anterior só se aplica ao longo de um caminho específico de derivação. Considere o gráfico mostrado na figura a seguir.
 
-![Vários&#45;herança que mostra as conversões preferidas](../cpp/media/vc391t2.gif "vc391T2") herança múltipla Gráfico ilustrando as conversões preferidas
+![Vários&#45;herança que mostra as conversões preferidas](../cpp/media/vc391t2.gif "diversos&#45;herança que mostra as conversões preferidas") <br/>
+Gráfico de herança múltipla que mostra as conversões preferidas
 
 A conversão do tipo `C*` no tipo `B*` é preferível à conversão do tipo `C*` no tipo `A*`. A razão é que eles estão no mesmo caminho, e `B*` é mais próximo. No entanto, a conversão do tipo `C*` no tipo `D*` não é preferível à conversão no tipo `A*`; não há preferência porque as conversões seguem caminhos diferentes.
 

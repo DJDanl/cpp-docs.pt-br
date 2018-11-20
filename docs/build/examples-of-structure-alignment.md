@@ -1,16 +1,16 @@
 ---
 title: Exemplos de alinhamento da estrutura
-ms.date: 03/26/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - structure alignment
 - examples [C++], structure alignment
 ms.assetid: 03d137bf-5cc4-472e-9583-6498f2534199
-ms.openlocfilehash: 27f7e89b1c7faec06347d8760247a76a33e0b91e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c4b3ae29674e9c4fc27e8e175867339001b9a0d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466224"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175334"
 ---
 # <a name="examples-of-structure-alignment"></a>Exemplos de alinhamento da estrutura
 
@@ -26,7 +26,7 @@ _declspec(align(2)) struct {
 }
 ```
 
-![Exemplo de conversão AMD](../build/media/vcamd_conv_ex_1_block.png "vcAmd_conv_ex_1")
+![Layout de estrutura de exemplo 1 de conversão AMD](../build/media/vcamd_conv_ex_1_block.png "layout da estrutura AMD conversão exemplo 1")
 
 ## <a name="example-2"></a>Exemplo 2
 
@@ -40,7 +40,7 @@ _declspec(align(8)) struct {
 }
 ```
 
-![Exemplo de conversão AMD](../build/media/vcamd_conv_ex_2_block.png "vcAmd_conv_ex_2")
+![Layout de estrutura de exemplo 2 de conversão AMD](../build/media/vcamd_conv_ex_2_block.png "layout da estrutura AMD conversão exemplo 2")
 
 ## <a name="example-3"></a>Exemplo 3:
 
@@ -55,7 +55,7 @@ _declspec(align(4)) struct {
 }
 ```
 
-![Exemplo de conversão AMD](../build/media/vcamd_conv_ex_3_block.png "vcAmd_conv_ex_3")
+![Layout de estrutura de exemplo 2 de conversão AMD](../build/media/vcamd_conv_ex_3_block.png "layout da estrutura AMD conversão exemplo 2")
 
 ## <a name="example-4"></a>Exemplo 4
 
@@ -69,7 +69,7 @@ _declspec(align(8)) union {
 }
 ```
 
-![Exemplo de conversão AMD](../build/media/vcamd_conv_ex_4_block.png "vcAmd_conv_ex_4")
+![AMD conversão exemplo 4 união layouit](../build/media/vcamd_conv_ex_4_block.png "layouit union do AMD conversão exemplo 4")
 
 ## <a name="see-also"></a>Consulte também
 

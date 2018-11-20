@@ -1,17 +1,17 @@
 ---
 title: Atributos de C++ para COM e .NET
 ms.custom: index-page
-ms.date: 10/02/2018
+ms.date: 11/19/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: bacfd4cb78c5bf65422fb4472a4563776041a87b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a37542bd69926572e44322c406862117560affe
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589274"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175763"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atributos de C++ para COM e .NET
 
@@ -55,7 +55,7 @@ Como antes, quando o projeto é compilado, o compilador analisa cada arquivo de 
 
 A figura a seguir demonstra a relação entre o compilador e o provedor de atributo.
 
-![Comunicação de atributos do componente](../media/vccompattrcomm.gif "vcCompAttrComm")
+![Comunicação de atributos do componente](../media/vccompattrcomm.gif "comunicação de atributos do componente")
 
 > [!NOTE]
 > Uso do atributo não altera o conteúdo do arquivo de origem. É a única vez em que o código gerado do atributo é visível durante as sessões de depuração. Além disso, para cada arquivo de origem no projeto, você pode gerar um arquivo de texto que exibe os resultados da substituição de atributo. Para obter mais informações sobre esse procedimento, consulte [/Fx (mesclar código injetado)](../../build/reference/fx-merge-injected-code.md) e [depurando código injetado](/visualstudio/debugger/how-to-debug-injected-code).

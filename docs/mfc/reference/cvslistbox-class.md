@@ -1,6 +1,6 @@
 ---
 title: Classe CVSListBox
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CVSListBox
 - AFXVSLISTBOX/CVSListBox
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CVSListBox [MFC], SetItemData
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
-ms.openlocfilehash: e44fa868fc573efbf89bb00147f670298f633381
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb12f17aec43653931343e80926d59560d879c3a
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513757"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176206"
 ---
 # <a name="cvslistbox-class"></a>Classe CVSListBox
 
@@ -81,7 +81,7 @@ O `CVSListBox` classe fornece um conjunto de botões de edição que permitem ao
 
 A seguir está uma imagem do controle de lista editável. A segunda entrada da lista, que é intitulada "Item2", é selecionada para edição.
 
-![Controle CVSListBox](../../mfc/reference/media/cvslistbox.png "cvslistbox")
+![Controle CVSListBox](../../mfc/reference/media/cvslistbox.png "controle CVSListBox")
 
 Se você usar o editor de recurso para adicionar um controle de lista editável, observe que o **caixa de ferramentas** painel do editor não oferece um controle de lista editável predefinida. Em vez disso, adicione um controle estático, como o **caixa de grupo** controle. A estrutura usa o controle estático como um espaço reservado para especificar o tamanho e posição do controle de lista editável.
 

@@ -1,29 +1,34 @@
 ---
 title: Gerenciador de visualização
-ms.date: 06/28/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Visualization Manager
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
-ms.openlocfilehash: befff860f50677f9c70c0fbb6b45ac528c36e773
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c9dc19266d80d56f696953c5f5896eb9d99cc8b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521366"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175568"
 ---
 # <a name="visualization-manager"></a>Gerenciador de visualização
 
 O Gerenciador visual é um objeto que controla a aparência de todo o aplicativo. Ele atua como uma única classe em que você pode colocar todo o código de desenho para seu aplicativo. A biblioteca MFC inclui vários gerenciadores de visual. Você também pode criar seu próprio Gerenciador visual se você quiser criar uma exibição personalizada para seu aplicativo. As imagens a seguir mostram o mesmo aplicativo quando os diferentes gerentes visuais estão habilitados:
 
-![MyApp conforme renderizado pelo CMFCVisualManagerWindows](../mfc/media/vmwindows.png "vmwindows") MyApp que usa o Gerenciador de visual CMFCVisualManagerWindows
+![MyApp conforme renderizado pelo CMFCVisualManagerWindows](../mfc/media/vmwindows.png "MyApp conforme renderizado pelo CMFCVisualManagerWindows") <br/>
+MyApp que usa o Gerenciador de visual CMFCVisualManagerWindows
 
-![MyApp conforme renderizado pelo CMFCVisualManagerVS2005](../mfc/media/vmvs2005.png "vmvs2005") MyApp que usa o Gerenciador de visual CMFCVisualManagerVS2005
+![MyApp conforme renderizado pelo CMFCVisualManagerVS2005](../mfc/media/vmvs2005.png "MyApp conforme renderizado pelo CMFCVisualManagerVS2005") <br/>
+MyApp que usa o Gerenciador de visual CMFCVisualManagerVS2005
 
-![MyApp conforme renderizado pelo CMFCVisualManagerOfficeXP](../mfc/media/vmofficexp.png "vmofficexp") MyApp que usa o Gerenciador de visual CMFCVisualManagerOfficeXP
+![MyApp conforme renderizado pelo CMFCVisualManagerOfficeXP](../mfc/media/vmofficexp.png "MyApp conforme renderizado pelo CMFCVisualManagerOfficeXP") <br/>
+MyApp que usa o Gerenciador de visual CMFCVisualManagerOfficeXP
 
-![MyApp conforme renderizado pelo CMFCVisualManagerOffice2003](../mfc/media/vmoffice2003.png "vmoffice2003") MyApp que usa o Gerenciador de visual CMFCVisualManagerOffice2003
+![MyApp conforme renderizado pelo CMFCVisualManagerOffice2003](../mfc/media/vmoffice2003.png "MyApp conforme renderizado pelo CMFCVisualManagerOffice2003") <br/>
+MyApp que usa o Gerenciador de visual CMFCVisualManagerOffice2003
 
-![MyApp conforme renderizado pelo CMFCVisualManagerOffice2007](../mfc/media/msoffice2007.png "msoffice2007") MyApp que usa o Gerenciador de visual CMFCVisualManagerOffice2007
+![MyApp conforme renderizado pelo CMFCVisualManagerOffice2007](../mfc/media/msoffice2007.png "MyApp conforme renderizado pelo CMFCVisualManagerOffice2007") <br/>
+MyApp que usa o Gerenciador de visual CMFCVisualManagerOffice2007
 
 Por padrão, o Gerenciador visual mantém o código de desenho para vários elementos de interface gráfica do usuário. Para fornecer elementos de interface do usuário personalizados, você precisa substituir os métodos de desenho relacionados do Gerenciador visual. Para obter a lista desses métodos, consulte [classe CMFCVisualManager](../mfc/reference/cmfcvisualmanager-class.md). Os métodos que você pode substituir para fornecer uma aparência personalizada são todos os métodos que começam com `OnDraw`.
 

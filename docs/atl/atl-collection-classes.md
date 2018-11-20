@@ -1,6 +1,6 @@
 ---
 title: Classes de coleção ATL
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - DestructElements function
 - collection classes, choosing
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: dcb784fe2df8383382c7a9d184e9f241684bf931
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f24e5f7dd2ffa4eb5992362aee18a78fb0000aa9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474804"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176699"
 ---
 # <a name="atl-collection-classes"></a>Classes de coleção ATL
 
@@ -110,7 +110,7 @@ Para obter uma lista das classes CTraits, consulte [Classes de coleção](../atl
 
 O diagrama a seguir mostra a hierarquia de classe para as classes CTraits.
 
-![Hierarquia de características para classes de coleção](../atl/media/vctraitscollectionclasseshierarchy.gif "vctraitscollectionclasseshierarchy")
+![Hierarquia de características para classes de coleção](../atl/media/vctraitscollectionclasseshierarchy.gif "hierarquia de atributos para classes de coleção")
 
 ## <a name="collection-classes-samples"></a>Exemplos de Classes de coleção
 
@@ -128,4 +128,3 @@ Os exemplos a seguir demonstram as classes de coleção:
 
 [Conceitos](../atl/active-template-library-atl-concepts.md)<br/>
 [Classes de coleção](../atl/collection-classes.md)
-

@@ -1,6 +1,6 @@
 ---
 title: CNetAddressCtrl Class
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CNetAddressCtrl
 - AFXCMN/CNetAddressCtrl
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 09dfdb57fb22b958edc64ec8cbdce95527a304d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee44c05fa6417aaca367798d7a94a900d521b896
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654657"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176232"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl Class
 
@@ -64,7 +64,7 @@ O `CNetAddressCtrl` classe é derivada de [CEdit](../../mfc/reference/cedit-clas
 
 A figura abaixo mostra uma caixa de diálogo que contém um controle de endereço de rede. O texto caixa (1) para o controle de endereço de rede contém um endereço de rede inválido. A mensagem de InfoDica (2) é exibida se o endereço de rede é inválido.
 
-![Caixa de diálogo com um controle de endereço de rede e uma InfoDica. ](../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")
+![Caixa de diálogo com um controle de endereço de rede e uma InfoDica. ](../../mfc/reference/media/cnetaddctrl.png "Caixa de diálogo com um controle de endereço de rede e uma InfoDica.")
 
 ## <a name="example"></a>Exemplo
 

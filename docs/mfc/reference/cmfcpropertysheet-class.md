@@ -1,6 +1,6 @@
 ---
 title: Classe CMFCPropertySheet
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCPropertySheet
 - AFXPROPERTYSHEET/CMFCPropertySheet
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 8e643474d577c606e80f5f34c6166a59753610f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1168375606ef86061269454aa361a076efa331a4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531606"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176400"
 ---
 # <a name="cmfcpropertysheet-class"></a>Classe CMFCPropertySheet
 
@@ -112,15 +112,15 @@ Execute as seguintes etapas para usar o `CMFCPropertySheet` classe em seu aplica
 
 A ilustração a seguir ilustra uma folha de propriedades está no estilo de uma barra de ferramentas do Microsoft Outlook incorporado. A barra de ferramentas do Outlook aparece no lado esquerdo da folha de propriedades.
 
-![Controles de cor CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_color.png "cmfcpropertysheet_color")
+![Controles de cor CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_color.png "CMFCPropertySheet controles de cor")
 
 A ilustração a seguir mostra uma folha de propriedades que contém um [classe CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) objeto. Esse objeto é uma folha de propriedades no estilo de uma folha de propriedades de controles comuns padrão.
 
-![Controles de lista e a propriedade CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_list.png "cmfcpropertysheet_list")
+![Controles de lista e a propriedade CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_list.png "controles de lista e a propriedade CMFCPropertySheet")
 
 A ilustração a seguir ilustra uma folha de propriedades está no estilo de um controle de árvore.
 
-![Árvore de propriedades](../../mfc/reference/media/proptree.png "proptree")
+![Propriedade árvore](../../mfc/reference/media/proptree.png "árvore de propriedade")
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 

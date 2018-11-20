@@ -45,12 +45,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 49a65680d330752679c86c47c4b142ee3153237c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: caaa3fb40a75292bd32e14ddec33b504e0c1296b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533790"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693708"
 ---
 # <a name="spawn-wspawn-functions"></a>Funções _spawn, _wspawn
 
@@ -139,7 +139,7 @@ As configurações de sinal não são preservadas em novos processos criados por
 
 Se você estiver chamando `_spawn` de uma DLL ou um aplicativo GUI e desejar redirecionar a saída para um pipe, você terá duas opções:
 
-- Usar a API do Win32 para criar um pipe, depois chamar [AllocConsole](https://msdn.microsoft.com/library/windows/desktop/ms681944), definir os valores de identificador na estrutura de inicialização e chamar [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa).
+- Usar a API do Win32 para criar um pipe, depois chamar [AllocConsole](/windows/console/allocconsole), definir os valores de identificador na estrutura de inicialização e chamar [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa).
 
 - Chamar [_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md), que criará um pipe e invocará o aplicativo usando **cmd.exe /c** (ou **command.exe /c**).
 

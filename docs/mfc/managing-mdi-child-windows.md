@@ -1,6 +1,6 @@
 ---
 title: Gerenciando janelas filhos MDI
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - MDICLIENT
 helpviewer_keywords:
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child windows [MFC]
 - MDI [MFC], frame windows
 ms.assetid: 1828d96e-a561-48ae-a661-ba9701de6bee
-ms.openlocfilehash: 2055c215392c6805791de729ff6ab8c6a9057308
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4b6ccf8a75cc7679f78fba48314073bc53b66a5
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629405"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176790"
 ---
 # <a name="managing-mdi-child-windows"></a>Gerenciando janelas filhos MDI
 
@@ -25,7 +25,8 @@ Janelas de quadro principal de MDI (um por aplicativo) contêm uma janela filho 
 
 Em uma janela de quadro MDI, a janela do quadro gerencia a janela MDICLIENT, reposicionamento-lo em conjunto com barras de controle. Janela MDICLIENT, por sua vez, gerencia todas as janelas de quadro MDI filho. A figura a seguir mostra a relação entre uma janela de quadro MDI, sua janela MDICLIENT e suas janelas de quadro de documento filho.
 
-![Janelas filho em uma janela de quadro MDI](../mfc/media/vc37gb1.gif "vc37gb1") Windows de quadro MDI e filhos
+![Janelas filho em uma janela de quadro MDI](../mfc/media/vc37gb1.gif "janelas filho em uma janela de quadro MDI") <br/>
+Filhos e Windows de quadro MDI
 
 Uma janela de quadro MDI também funciona em conjunto com a janela filho MDI atual, se houver um. A janela de quadro MDI delega as mensagens de comando para o filho MDI antes de tentar tratá-las em si.
 
