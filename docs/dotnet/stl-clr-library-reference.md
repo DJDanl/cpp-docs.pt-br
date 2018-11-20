@@ -7,16 +7,16 @@ helpviewer_keywords:
 - STL/CLR, redistribution
 - cliext directory
 ms.assetid: a9d9ca00-7bf2-48c1-b205-3ae6f8c25f82
-ms.openlocfilehash: b1628ebc315dd0e94b54f6d0c7847d46e002351e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6914b61597e38c94a214089ecc3aeed17aec46d3
+ms.sourcegitcommit: 984fb4814a2dd9bcea5ec88c9528707f17a7cffa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539458"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51949512"
 ---
 # <a name="stlclr-library-reference"></a>Referência de biblioteca STL/CLR
 
-A biblioteca STL/CLR fornece uma interface semelhante para os contêineres da biblioteca padrão C++ para uso com C++ e o .NET Framework common language runtime (CLR). STL/CLR é completamente separado da implementação da Microsoft a biblioteca C++ padrão. STL/CLR é mantida para dar suporte, mas não é mantido atualizado com o padrão C++. É altamente recomendável usar nativo [biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md) contêineres em vez de STL/CLR sempre que possível.
+A biblioteca STL/CLR fornece uma interface semelhante para os contêineres da biblioteca padrão C++ para uso com C++ e o .NET Framework common language runtime (CLR). STL/CLR é completamente separado da implementação Microsoft da biblioteca padrão C++. STL/CLR é mantida para dar suporte, mas não é mantido atualizado com o padrão C++. É altamente recomendável usar nativo [biblioteca padrão C++](../standard-library/cpp-standard-library-reference.md) contêineres em vez de STL/CLR sempre que possível.
 
 Para usar STL/CLR:
 

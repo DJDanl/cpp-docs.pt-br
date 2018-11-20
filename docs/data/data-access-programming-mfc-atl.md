@@ -1,6 +1,6 @@
 ---
 title: Acesso a dados (MFC / ATL) de programação
-ms.date: 11/04/2016
+ms.date: 11/16/2018
 helpviewer_keywords:
 - MFC [C++], data access applications
 - databases [C++], MFC
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: def97b2c-b5a6-445f-afeb-308050fd4852
-ms.openlocfilehash: 8341cf715c96783880fd83f1b8fbb197dbff6046
-ms.sourcegitcommit: b08ddf79ea76369c388173913e4e8f6fd8ad02d5
+ms.openlocfilehash: 5417918ee3cf966183e1910fdbc12bd7b8cc046e
+ms.sourcegitcommit: 984fb4814a2dd9bcea5ec88c9528707f17a7cffa
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51830472"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51949486"
 ---
 # <a name="data-access-programming-mfcatl"></a>Programação de acesso a dados (MFC/ATL)
 
@@ -21,9 +21,11 @@ Ao longo dos anos, o Visual C++ forneceu várias maneiras de trabalhar com banco
 
 A OLE DB é uma API de nível baixo e alto desempenho com base na especificação COM e só tem suporte no Windows. Use a OLE DB se seu programa estiver acessando [servidores vinculados](/sql/relational-databases/linked-servers/linked-servers-database-engine). A ATL fornece modelos de OLE DB que facilitam a criação de consumidores e provedores OLE DB personalizados. A versão mais recente da OLE DB é fornecida no SQL Native Client 11.
 
+## <a name="porting-data-applications"></a>Movimentando aplicativos de dados
+
 Se seu aplicativo herdado usa a OLE DB ou a interface ADO de nível mais alto para se conectar ao SQL Server e você não está acessando servidores vinculados, você deve considerar a migração para o ODBC em um futuro próximo. Se você não precisa de portabilidade multiplataforma ou dos recursos mais recentes do SQL Server, você pode usar o Provedor Microsoft OLE DB para ODBC (MSDASQL).  O MSDASQL permite que os aplicativos que são criados com base em OLE DB e ADO (que usa internamente OLEDB) acessem fontes de dados por meio de um driver ODBC. Assim como acontece com qualquer camada de translação, MSDASQL pode afetar o desempenho do banco de dados. Você deve testar para determinar se o impacto é significativo para seu aplicativo. O MSDASQL é fornecido com o sistema operacional Windows e o Windows Server 2008 e Windows Vista SP1 são as primeira versões a incluir uma versão de 64 bits da tecnologia.
 
-O componente SNAC (SQL Native Client), que empacota os drivers OLE DB e ODBC em uma única DLL, foi preterido para aplicativos ODBC. A versão do SQL Server 2012 do SNAC (SQLNCLI11.DLL) é fornecida com o SQL Server 2016 porque os outros componentes do SQL Server dependem dele. No entanto, os novos aplicativos de C++ que se conectam ao SQL Server ou ao Banco de Dados SQL do Azure por meio de ODBC devem usar [o driver ODBC mais recente](https://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server). Para obter mais informações, consulte [Programação do SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client-programming)
+O componente SNAC (SQL Native Client), que empacota os drivers OLE DB e ODBC em uma única DLL, foi preterido para aplicativos ODBC. A versão do SQL Server 2012 do SNAC (SQLNCLI11.DLL) é fornecida com o SQL Server 2016 porque os outros componentes do SQL Server dependem dele. No entanto, os novos aplicativos de C++ que se conectam ao SQL Server ou ao Banco de Dados SQL do Azure por meio de ODBC devem usar [o driver ODBC mais recente](/sql/connect/odbc/download-odbc-driver-for-sql-server). Para obter mais informações, consulte [Programação do SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client-programming)
 
 Se você usa C++/CLI, você pode continuar a usar o ADO.NET como sempre. Para obter mais informações, consulte [Acesso a dados usando ADO.NET (C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md) e [Acesso a dados no Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).
 
@@ -34,5 +36,4 @@ Para obter mais informações sobre o histórico de tecnologias de acesso a dado
 ## <a name="see-also"></a>Consulte também
 
 [Acesso a dados](data-access-in-cpp.md)<br/>
-[Microsoft ODBC (Open Database Connectivity)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc)<br/>
-[Roteiro das tecnologias de acesso a dados](https://msdn.microsoft.com/library/ms810810.aspx)
+[Microsoft ODBC (Open Database Connectivity)](/sql/odbc/microsoft-open-database-connectivity-odbc)<br/>
