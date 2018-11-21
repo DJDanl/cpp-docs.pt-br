@@ -1,6 +1,6 @@
 ---
 title: Classe CTaskDialog
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CTaskDialog
 - AFXTASKDIALOG/CTaskDialog
@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: cbfb0a355b4901907b5df0a0b42ac28d5a76c551
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b95252c830e27a0602f149f880258511ec24e64
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441945"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177063"
 ---
 # <a name="ctaskdialog-class"></a>Classe CTaskDialog
 
@@ -200,7 +200,7 @@ class CTaskDialog : public CObject
 |[CTaskDialog::ShowDialog](#showdialog)|Cria e exibe um `CTaskDialog`.|
 |[CTaskDialog::TaskDialogCallback](#taskdialogcallback)|O framework chama isso em resposta a várias mensagens do Windows.|
 
-### <a name="data-members"></a>Membros de Dados
+### <a name="data-members"></a> Membros de Dados
 
 |||
 |-|-|
@@ -242,7 +242,8 @@ O `CTaskDialog` possui dois construtores diferentes. Um construtor permite que v
 
 A imagem a seguir mostra um exemplo `CTaskDialog` para ilustrar a localização de alguns dos controles.
 
-![Exemplo de CTaskDialog](../../mfc/reference/media/ctaskdialogsample.png "ctaskdialogsample") CTaskDialog de exemplo
+![Exemplo de CTaskDialog](../../mfc/reference/media/ctaskdialogsample.png "exemplo de classe CTaskDialog") <br/>
+Exemplo de classe CTaskDialog
 
 ## <a name="requirements"></a>Requisitos
 

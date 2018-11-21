@@ -1,6 +1,6 @@
 ---
 title: 'Controles MFC ActiveX: licenciando um controle ActiveX'
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - COleObjectFactory
 helpviewer_keywords:
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - GetLicenseKey method [MFC]
 - licensing ActiveX controls
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
-ms.openlocfilehash: 4001d49da8477ab9dd481d0eb3ee02cb10e1e18b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35ca5d410f642f2557d9ee797eda2d9529f7f4d1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465618"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176349"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>Controles MFC ActiveX: licenciando um controle ActiveX
 
 Suporte de licenciamento, um recurso opcional de controles do ActiveX permite controlar quem é capaz de usar ou distribuir o controle. (Para obter informações adicionais sobre problemas de licenciamento, consulte os problemas de licenciamento na [atualizando um controle ActiveX existente](../mfc/upgrading-an-existing-activex-control.md).)
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > ActiveX é uma tecnologia herdada que não deve ser usada para novos desenvolvimentos. Para obter mais informações sobre tecnologias modernas que substituem o ActiveX, consulte [controles ActiveX](activex-controls.md).
 
 Este artigo discute os seguintes tópicos:
@@ -43,13 +43,15 @@ Para fornecer suporte de licença para controles ActiveX, o [COleObjectFactory](
 
 A figura a seguir demonstra a verificação de licença de um controle ActiveX que será usado durante o desenvolvimento de um aplicativo de contêiner. Conforme mencionado anteriormente, o desenvolvedor do aplicativo de contêiner deve ter as devidas. Arquivo lic. instalado na máquina de desenvolvimento para criar uma instância do controle.
 
-![Licenciado verificado no desenvolvimento de controle de ActiveX](../mfc/media/vc374d1.gif "vc374d1") verificação de um controle licenciado de ActiveX durante o desenvolvimento
+![Licenciado verificado no desenvolvimento de controle de ActiveX](../mfc/media/vc374d1.gif "verificado no desenvolvimento de controle de ActiveX licenciado") <br/>
+Verificação de um controle ActiveX licenciado durante o desenvolvimento
 
 O próximo processo, mostrado na figura a seguir ocorre quando o usuário final executar o aplicativo de contêiner.
 
 Quando o aplicativo é iniciado, uma instância do controle geralmente precisa ser criado. O contêiner consegue isso fazendo uma chamada para `CreateInstanceLic`, passando a chave de licença incorporado como um parâmetro. Uma comparação de cadeia de caracteres, em seguida, é feita entre a chave de licença inserida e a cópia do controle a chave de licença. Se a correspondência for bem-sucedida, uma instância do controle é criada e o aplicativo continua sendo executado normalmente. Observe que o. Arquivo lic. não precisa ser presente no computador do usuário do controle.
 
-![Licenciado verificado na execução de controle de ActiveX](../mfc/media/vc374d2.gif "vc374d2") verificação de uma licença ActiveX controle durante a execução
+![Licenciado verificado na execução de controle de ActiveX](../mfc/media/vc374d2.gif "controle ActiveX licenciado verificado em execução") <br/>
+Verificação de um controle ActiveX licenciado durante a execução
 
 Licenciamento de controle consiste em dois componentes básicos: o arquivo de licença e de código específicos na DLL de implementação do controle. O código é composto de dois (ou, possivelmente, três) chamadas de função e uma cadeia de caracteres, citado como uma "cadeia de licença", que contém um aviso de direitos autorais. Essas chamadas e a cadeia de caracteres de licença são encontradas na implementação do controle (. Arquivo CPP). O arquivo de licença, gerado pelo Assistente de controle ActiveX, é um arquivo de texto com uma declaração de direitos autorais. Ela é nomeada usando o nome do projeto com um. Extensão lic., por exemplo, exemplo. LIC. Um controle licenciado deve ser acompanhado pelo arquivo de licença, se é necessário usar tempo de design.
 

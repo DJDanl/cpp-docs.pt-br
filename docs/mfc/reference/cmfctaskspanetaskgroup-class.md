@@ -1,6 +1,6 @@
 ---
 title: Classe CMFCTasksPaneTaskGroup
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPaneTaskGroup
 - AFXTASKSPANE/CMFCTasksPaneTaskGroup
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCTasksPaneTaskGroup [MFC], m_rectGroup
 - CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
-ms.openlocfilehash: 25e714aa617cdccc4e02e288f1a24f636e05cb0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ed50950bc62a0c2f382e42782c58a0d7354116f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539601"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176582"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Classe CMFCTasksPaneTaskGroup
 
@@ -56,7 +56,7 @@ class CMFCTasksPaneTaskGroup : public CObject
 |----------|-----------------|
 |[CMFCTasksPaneTaskGroup::SetACCData](#setaccdata)|Determina os dados de acessibilidade para o grupo de tarefa atual.|
 
-### <a name="data-members"></a>Membros de Dados
+### <a name="data-members"></a> Membros de Dados
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -72,19 +72,19 @@ class CMFCTasksPaneTaskGroup : public CObject
 
 A ilustração a seguir mostra um grupo de tarefas expandido:
 
-![Grupo de tarefas, expandido](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")
+![Grupo de tarefas, expandido](../../mfc/reference/media/nexttaskgrpexpand.png "grupo de tarefas, expandido")
 
 A ilustração a seguir mostra um grupo de tarefas recolhido:
 
-![Grupo de tarefas recolhido](../../mfc/reference/media/nexttaskgrpcollapse.png "nexttaskgrpcollapse")
+![Grupo de tarefas recolhido](../../mfc/reference/media/nexttaskgrpcollapse.png "grupo de tarefas recolhido")
 
 A ilustração a seguir mostra um grupo de tarefas sem uma legenda:
 
-![Grupo de tarefas sem uma legenda](../../mfc/reference/media/nexttaskgrpnocapt.png "nexttaskgrpnocapt")
+![Grupo de tarefas sem uma legenda](../../mfc/reference/media/nexttaskgrpnocapt.png "grupo de tarefas sem uma legenda")
 
 A ilustração a seguir mostra dois grupos de tarefas. O primeiro grupo de tarefas está marcado como especial, definindo o `m_bIsSpecial` sinalizador como TRUE, enquanto o segundo grupo de tarefas não é especial. Observe como a legenda para o primeiro grupo de tarefas é mais escura do que o segundo grupo de tarefas:
 
-![Grupo de tarefas especiais](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")
+![Grupo de tarefas especiais](../../mfc/reference/media/nexttaskgrpspecial.png "grupo especial de tarefa")
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 

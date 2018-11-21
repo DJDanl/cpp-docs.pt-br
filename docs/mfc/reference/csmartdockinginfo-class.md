@@ -1,6 +1,6 @@
 ---
 title: Classe CSmartDockingInfo
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CSmartDockingInfo
 - AFXDOCKINGMANAGER/CSmartDockingInfo
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-ms.openlocfilehash: 885af55987c2d1e78cd0145fcee5ca0f4ef67dc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8931af856bc75bd499d8237278998adfcdb02a6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524651"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176764"
 ---
 # <a name="csmartdockinginfo-class"></a>Classe CSmartDockingInfo
 
@@ -57,7 +57,7 @@ class CSmartDockingInfo : public CObject
 |----------|-----------------|
 |[CSmartDockingInfo::CopyTo](#copyto)|Copia os parâmetros de encaixe informações inteligentes atual fornecido [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) objeto.|
 
-### <a name="data-members"></a>Membros de Dados
+### <a name="data-members"></a> Membros de Dados
 
 |Nome|Descrição|
 |----------|-----------------|
@@ -75,7 +75,7 @@ class CSmartDockingInfo : public CObject
 
 As alças da estrutura inteligente marcadores de encaixe internamente. A ilustração a seguir mostra os marcadores inteligentes de encaixe padrão:
 
-![Marcadores de Standard para encaixar smart](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")
+![Marcadores de Standard para encaixar smart](../../mfc/reference/media/nextsdmarkers.png "marcadores padrão para inteligentes de encaixe")
 
 Nesta figura, a imagem à esquerda mostra um marcador de encaixe inteligente grupo central que não tenha de encaixe para uma guia habilitada. A imagem no meio mostra um marcador de encaixe inteligentes de borda direita. A imagem à direita mostra um marcador de encaixe inteligente grupo central que têm o encaixe à guia habilitada. O marcador de encaixe inteligente do grupo central tem um bitmap principal e cinco inteligente encaixe bitmaps de marcador.
 
@@ -93,7 +93,7 @@ Você pode personalizar os seguintes parâmetros de marcadores inteligentes de e
 
 A ilustração a seguir mostra um exemplo de marcadores inteligentes de encaixe que foram personalizados:
 
-![Marcadores personalizados para encaixar smart](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")
+![Marcadores personalizados para encaixar smart](../../mfc/reference/media/nextsdmarkerscustom.png "marcadores personalizado para encaixar inteligente")
 
 ## <a name="inheritance-hierarchy"></a>Hierarquia de herança
 
