@@ -1,21 +1,21 @@
 ---
 title: Como personalizar o botão do aplicativo
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: e556e9e6509179b692e4c86b67d59ff2e2ec0f02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba29e9ad65e0bb1d2163e4051c7c7b53664d8817
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592784"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175321"
 ---
 # <a name="how-to-customize-the-application-button"></a>Como personalizar o botão do aplicativo
 
 Quando você clica no botão de aplicativo, é exibido um menu de comandos. Normalmente, o menu contém comandos relacionados ao arquivo, como **aberto**, **salve**, **impressão**, e **Exit**.
 
-![Botão de aplicativo de faixa de opções do MFC](../mfc/media/application_button.png "application_button")
+![Botão de aplicativo de faixa de opções do MFC](../mfc/media/application_button.png "botão de aplicativo de faixa de opções do MFC")
 
 Para personalizar o botão do aplicativo, abri-lo na **propriedades** , modifique suas propriedades e, em seguida, o controle de faixa de opções de visualização.
 
@@ -57,4 +57,3 @@ O menu de aplicativo não for exibido na superfície de design. Para exibi-lo, v
 ## <a name="see-also"></a>Consulte também
 
 [Designer da faixa de opções (MFC)](../mfc/ribbon-designer-mfc.md)
-

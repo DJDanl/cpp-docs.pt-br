@@ -1,24 +1,24 @@
 ---
 title: Designer da faixa de opções (MFC)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - vc.editors.ribbon.F1
 helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 3b28783cb12aeeb03bf1687e5922b276af0d52c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 903adc96f4c9bc092ac23787781a76c0e7e3714c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521392"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175828"
 ---
 # <a name="ribbon-designer-mfc"></a>Designer da faixa de opções (MFC)
 
 O Designer de faixa de opções permite que você crie e personalize faixas de opções em aplicativos MFC. Uma faixa de opções é um elemento de interface do usuário do usuário que organiza comandos em grupos lógicos. Esses grupos aparecem em guias separadas em uma faixa na parte superior da janela. A faixa de opções substitui a barra de menus e barras de ferramentas. Uma faixa de opções pode melhorar significativamente a usabilidade do aplicativo. Para obter mais informações, consulte [faixas de opções](/windows/desktop/uxguide/cmd-ribbons). A ilustração a seguir mostra uma faixa de opções.
 
-![Controle de recurso de faixa de opções do MFC](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")
+![Controle de recurso de faixa de opções do MFC](../mfc/media/ribbon_no_callouts.png "controle de recurso de faixa de opções do MFC")
 
 Em versões anteriores do Visual Studio, as faixas tinham que ser criadas escrevendo código que usa as classes de faixa de opções do MFC, como [classe CMFCRibbonBar](../mfc/reference/cmfcribbonbar-class.md). No Visual Studio 2010 e posterior, o designer de faixa de opções fornece um método alternativo para a criação de faixas de opções. Primeiro, crie e personalize uma fita como um recurso. Em seguida, carregue o recurso de faixa de opções do código no aplicativo MFC. Você pode até usar recursos de faixa de opções e classes de faixa de opções do MFC juntos. Por exemplo, você pode criar um recurso de faixa de opções e, em seguida, adicionar programaticamente mais elementos a ele em tempo de execução por meio de código.
 
@@ -71,7 +71,7 @@ Para abrir uma faixa de opções no designer de faixa de opções, clique duas v
 
 A ilustração a seguir mostra os vários componentes no designer de faixa de opções.
 
-![Designer de faixa de opções do MFC](../mfc/media/ribbon_designer.png "ribbon_designer")
+![Designer de faixa de opções do MFC](../mfc/media/ribbon_designer.png "Designer de faixa de opções do MFC")
 
 - **Caixa de ferramentas:** contém controles que podem ser arrastados para a superfície do designer.
 
@@ -95,7 +95,7 @@ Os tópicos a seguir descrevem como usar os recursos no designer de faixa de op�
 
 ## <a name="definitions-of-ribbon-elements"></a>Definições de elementos de faixa de opções
 
-![Faixa de opções do MFC](../mfc/media/ribbon.png "faixa de opções")
+![Faixa de opções do MFC](../mfc/media/ribbon.png "faixa de opções do MFC")
 
 - **Botão do aplicativo:** o botão que aparece no canto superior esquerdo de uma faixa de opções. O botão aplicativo substitui o menu Arquivo e fica visível mesmo quando a fita estiver minimizada. Quando o botão é clicado, é exibido um menu que tem uma lista de comandos.
 

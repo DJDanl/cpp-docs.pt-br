@@ -1,6 +1,6 @@
 ---
 title: 'Controles ActiveX MFC: usando fontes'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - OnFontChanged
 - HeadingFont
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 6a647f67849d84119d58186fc71ec1b412713734
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9fb7668f65b04372b87059034c3ec6cd20abc48d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608864"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175813"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Controles ActiveX MFC: usando fontes
 
@@ -204,7 +204,8 @@ Na maioria dos casos o controle precisa saber quando as características do obje
 
 Se o controle usa a propriedade de fonte de estoque, suas notificações são manipuladas pelo `OnFontChanged` função de membro de `COleControl`. Quando você adiciona as propriedades de fonte personalizado, é necessário que eles usam a mesma implementação. No exemplo na seção anterior, isso foi feito ao passar &*m_xFontNotification* ao inicializar o *m_fontHeading* variável de membro.
 
-![Implementando várias interfaces de objeto de fonte](../mfc/media/vc373q1.gif "vc373q1") implementar várias Interfaces de objeto de fonte
+![Implementando várias interfaces de objeto de fonte](../mfc/media/vc373q1.gif "implementando várias interfaces de objeto de fonte") <br/>
+Implementando várias Interfaces de objeto de fonte
 
 As linhas sólidas na figura acima mostram que os dois objetos de fonte estão usando a mesma implementação de `IFontNotification`. Isso pode causar problemas se você quiser distinguir qual fonte é alterada.
 

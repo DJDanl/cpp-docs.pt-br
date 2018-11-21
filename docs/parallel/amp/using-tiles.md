@@ -1,13 +1,13 @@
 ---
 title: Usando blocos
-ms.date: 06/28/2018
+ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: 02a6f35801c30ce5e25e79a4e736e6c08776a1da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588507"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176088"
 ---
 # <a name="using-tiles"></a>Usando blocos
 
@@ -27,7 +27,7 @@ Para tirar proveito de lado a lado, seu algoritmo deve dividir o domínio de cá
 
 O diagrama a seguir representa uma 8x9 matriz de dados organizados em 2x3 tiles.
 
-![8&#45;por&#45;matriz 9 dividido em 2&#45;por&#45;3 blocos](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")
+![8&#45;por&#45;matriz 9 dividido em 2&#45;por&#45;3 blocos](../../parallel/amp/media/usingtilesmatrix.png "8&#45;por&#45;9 matriz dividida em 2&#45;por&#45;3 blocos")
 
 O exemplo a seguir exibe o bloco global, e lado a lado local Tile dessa matriz. Uma `array_view` objeto é criado usando elementos do tipo `Description`. O `Description` mantém global, lado a lado, locais e Tile do elemento na matriz. O código na chamada para `parallel_for_each` define os valores do global, lado a lado e índices de locais de cada elemento. A saída exibe os valores de `Description` estruturas.
 

@@ -1,6 +1,6 @@
 ---
 title: Instrução try-finally
-ms.date: 10/09/2018
+ms.date: 11/19/2018
 f1_keywords:
 - __try
 - _try
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: 55d22951c4203c582f7823fef033a0476f8c9a52
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: d05e1d113f4fc661cb6e2e2905fbd8c9dcdd7e2d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326908"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175909"
 ---
 # <a name="try-finally-statement"></a>Instrução try-finally
 
@@ -68,7 +68,8 @@ Se ocorrer uma exceção na **Try** bloco, o sistema operacional deve localizar 
 
 Por exemplo, imagine que uma série de chamadas de função vincula a função A à função D, conforme mostrado na figura a seguir. Cada função tem um manipulador de encerramento. Se uma exceção é gerada na função D e tratada na A, os manipuladores de encerramento são chamados nessa ordem à medida que o sistema desenrola a pilha: D, C, B.
 
-![Ordem de encerramento&#45;execução do manipulador](../cpp/media/vc38cx1.gif "vc38CX1") ordem de execução do manipulador de término
+![Ordem de encerramento&#45;execução do manipulador](../cpp/media/vc38cx1.gif "ordem de término&#45;execução do manipulador") <br/>
+Ordem de execução do manipulador de encerramento
 
 > [!NOTE]
 > O comportamento de try-finally é diferente de outras linguagens que dão suporte ao uso de **finalmente**, como c#.  Uma única **Try** pode ter, mas não ambos, do **Finally** e **EXCEPT**.  Se ambos devem ser usados juntos, uma instrução try-except externa deve incluir a instrução interna try-finally.  As regras que especificam quando cada bloco é executado também são diferentes.

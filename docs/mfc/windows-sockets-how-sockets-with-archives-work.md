@@ -1,6 +1,6 @@
 ---
 title: 'Windows Sockets: como funcionam soquetes com arquivos mortos'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows Sockets [MFC], synchronous
 - sockets [MFC], synchronous operation
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-ms.openlocfilehash: e87ee1467946003580ffa75e36e39b2c747892b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6101193c85e41fbf82681b0b2ae1e09e4162f87
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510754"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174906"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets: como funcionam soquetes com arquivos mortos
 
@@ -30,7 +30,8 @@ O `CSocketFile` objeto chama o membro de funções de seu `CSocket` objeto para 
 
 A figura a seguir mostra as relações entre esses objetos em ambos os lados da comunicação.
 
-![CArchive, CSocketFile e CSocket](../mfc/media/vc38ia1.gif "vc38ia1") CArchive, CSocketFile e CSocket
+![CArchive, CSocketFile e CSocket](../mfc/media/vc38ia1.gif "CArchive, CSocketFile e CSocket") <br/>
+CArchive, CSocketFile e CSocket
 
 A finalidade dessa complexidade aparente é proteger você da necessidade de gerenciar os detalhes do soquete por conta própria. Você cria o soquete, o arquivo e o arquivo morto e, em seguida, começar a enviar ou receber dados por inseri-lo para o arquivo morto ou extraindo-o do arquivo morto. [CArchive](../mfc/reference/carchive-class.md), [CSocketFile](../mfc/reference/csocketfile-class.md), e [CSocket](../mfc/reference/csocket-class.md) gerenciar os detalhes nos bastidores.
 
@@ -41,7 +42,7 @@ Um `CSocket` é, na verdade, um objeto de dois estados: assíncrona, às vezes, 
 Se `CSocket` não foram implementados como um objeto de dois estados, é possível receber notificações adicionais para o mesmo tipo de evento, embora você esteja processando uma notificação anterior. Por exemplo, você pode obter um `OnReceive` notificação ao processar um `OnReceive`. No fragmento de código acima, extraindo `str` do arquivo morto pode levar a recursão. Alternando estados, `CSocket` impede a recursão, impedindo que notificações adicionais. A regra geral não é que nenhuma notificação dentro de notificações.
 
 > [!NOTE]
->  Um `CSocketFile` também pode ser usado como um arquivo (limitado) sem um `CArchive` objeto. Por padrão, o `CSocketFile` do construtor *bArchiveCompatible* parâmetro é **TRUE**. Isso especifica que o objeto de arquivo é para uso com um arquivo morto. Para usar o objeto de arquivo sem um arquivo morto, passe **falsos** na *bArchiveCompatible* parâmetro.
+> Um `CSocketFile` também pode ser usado como um arquivo (limitado) sem um `CArchive` objeto. Por padrão, o `CSocketFile` do construtor *bArchiveCompatible* parâmetro é **TRUE**. Isso especifica que o objeto de arquivo é para uso com um arquivo morto. Para usar o objeto de arquivo sem um arquivo morto, passe **falsos** na *bArchiveCompatible* parâmetro.
 
 No modo de "compatível com o arquivo morto", um `CSocketFile` objeto fornece um melhor desempenho e reduz o risco de um "deadlock". Um deadlock ocorre quando os soquetes de envio e recebimento estão aguardando uns aos outros ou aguardando um recurso comum. Essa situação pode ocorrer se o `CArchive` objeto trabalhou com o `CSocketFile` da forma que faz com um `CFile` objeto. Com `CFile`, o arquivo morto pode presumir que se ela recebe menos bytes que ele é solicitado, o final do arquivo foi atingido. Com `CSocketFile`, no entanto, dados for baseado em mensagem; o buffer pode conter várias mensagens, então receber menos do que o número de bytes solicitado não implica o final do arquivo. O aplicativo não bloqueia neste caso, como pode ocorrer com `CFile`, e pode continuar lendo mensagens do buffer até que o buffer está vazio. O [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty) funcionar em `CArchive` é útil para monitorar o estado do buffer do arquivo morto nesse caso.
 
@@ -51,4 +52,3 @@ Para obter mais informações, consulte [Windows Sockets: usando soquetes com ar
 
 [Windows Sockets em MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)
-

@@ -1,18 +1,18 @@
 ---
 title: Mapas de mensagem derivados
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - message handling [MFC], derived message handlers
 - messages, routing
 - message maps [MFC], derived
 - derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
-ms.openlocfilehash: 1413290bc04af37a6d3204150dff5244e1dcb5c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ae536a53a43472a4fb81d30e685fbc3faaa603f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662521"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175594"
 ---
 # <a name="derived-message-maps"></a>Mapas de mensagem derivados
 
@@ -20,7 +20,8 @@ Durante a manipulação, verificar uma mensagem da classe de mensagem mapa não 
 
 Tenha em mente que `CView`, a classe base `CMyView`, é derivado, por sua vez, de `CWnd`. Assim `CMyView` *é* um `CView` e *é* um `CWnd`. Cada uma dessas classes tem seu próprio mapa de mensagem. A figura a "A hierarquia de exibição" abaixo mostra a relação hierárquica das classes, mas tenha em mente que um `CMyView` objeto é um único objeto que tem as características de todas as três classes.
 
-![Hierarquia de um modo de exibição](../mfc/media/vc38621.gif "vc38621") A hierarquia de exibição
+![Hierarquia de um modo de exibição](../mfc/media/vc38621.gif "hierarquia de uma exibição") <br/>
+Uma hierarquia de exibição
 
 Portanto, se uma mensagem não pode ser correspondida na classe `CMyView`do mapa da mensagem, o framework também procura o mapa de mensagem da sua classe base imediata. O `BEGIN_MESSAGE_MAP` macro no início do mapa de mensagens especifica dois nomes de classe como argumentos:
 

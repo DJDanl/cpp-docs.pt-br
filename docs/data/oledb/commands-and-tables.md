@@ -1,6 +1,6 @@
 ---
 title: Comandos e tabelas
-ms.date: 10/22/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - OLE DB consumer templates, table support
 - CCommand class, OLE DB consumer templates
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - tables [C++], OLE DB Consumer Templates
 - OLE DB consumer templates, command support
 ms.assetid: 4bd3787b-6d26-40a9-be0c-083080537c12
-ms.openlocfilehash: 0baa388fc1667769892c841a4cc5d68a1b9d0255
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94581339353866d78faf7e20335c80250fb6027b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543475"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175308"
 ---
 # <a name="commands-and-tables"></a>Comandos e tabelas
 
 Comandos e tabelas permitem acessar conjuntos de linhas; ou seja, abra a conjuntos de linhas, executar comandos e associar colunas. O [CCommand](../../data/oledb/ccommand-class.md) e [CTable](../../data/oledb/ctable-class.md) classes instancia os objetos de comando e tabela, respectivamente. Essas classes derivam [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) conforme mostrado na figura a seguir.
 
-![CCommand e CTable](../../data/oledb/media/vccommandstables.gif "vccommandstables")<br/>
+![CCommand e CTable](../../data/oledb/media/vccommandstables.gif "CCommand e CTable")<br/>
 Comando e as Classes Table
 
 Na tabela anterior, `TAccessor` pode ser qualquer tipo de acessador listado na [tipos de acessador](../../data/oledb/accessors-and-rowsets.md). `TRowset` pode ser qualquer tipo de conjunto de linhas listado na [tipos de conjunto de linhas](../../data/oledb/accessors-and-rowsets.md). `TMultiple` Especifica o tipo de resultado (um único ou vários conjunto de resultados).
