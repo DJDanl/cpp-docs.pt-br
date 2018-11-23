@@ -1,49 +1,78 @@
 ---
-title: Adicionando um manipulador de eventos (Visual C++)
-ms.date: 11/04/2016
+title: Adicionar um manipulador de eventos
+ms.date: 11/12/2018
 f1_keywords:
+- vc.codewiz.eventhandler.overview
 - vc.codewiz.eventhandler.overview
 helpviewer_keywords:
 - event handlers, adding
 - properties [Visual Studio], MSBuild
 - MSBuild, properties
+- event handler wizard [C++]
 ms.assetid: 050bebf0-a9e0-474b-905c-796fe5ac8fc3
-ms.openlocfilehash: d9256fca75b6980d87382bbeb794fa90b89f37c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e6b2511b00b7f949718e5b0d9fd793ac53d0d8b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512431"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694511"
 ---
-# <a name="adding-an-event-handler-visual-c"></a>Adicionando um manipulador de eventos (Visual C++)
+# <a name="add-an-event-handler"></a>Adicionar um manipulador de eventos
 
-No editor de recursos, você poderá adicionar um novo manipulador de eventos a um controle de caixa de diálogo, ou editar um manipulador de eventos existente, usando o [Assistente de Manipulador de Eventos](../ide/event-handler-wizard.md).
+No editor de recursos, você poderá adicionar um novo manipulador de eventos a um controle de caixa de diálogo ou editar um manipulador de eventos existente usando o [assistente de manipulador de eventos](#event-handler-wizard).
 
-Adicione um evento à classe que implementa a caixa de diálogo usando a [janela Propriedades](/visualstudio/ide/reference/properties-window). Caso deseje adicionar o evento a uma classe que não seja a classe de caixa de diálogo, use o Assistente de Manipulador de Eventos.
+Adicione um evento à classe que implementa a caixa de diálogo usando a [janela Propriedades](/visualstudio/ide/reference/properties-window). Para adicionar o evento a uma classe que não seja a classe de caixa de diálogo, use o assistente de manipulador de eventos.
 
-### <a name="to-add-an-event-handler-to-a-dialog-box-control"></a>Para adicionar um manipulador de eventos a um controle de caixa de diálogo
+**Para adicionar um manipulador de eventos a um controle de caixa de diálogo:**
 
 1. Clique duas vezes no recurso de caixa de diálogo no [Modo de Exibição de Recursos](../windows/resource-view-window.md) para abrir o recurso de caixa de diálogo que contém o controle no [editor de caixas de diálogo](../windows/dialog-editor.md).
 
 1. Clique com o botão direito do mouse no controle para o qual deseja manipular o evento de notificação.
 
-1. No menu de atalho, clique em **Adicionar Manipulador de Eventos** para exibir o Assistente de Manipulador de Eventos.
+1. No menu de atalho, escolha **Adicionar Manipulador de Eventos** para exibir o Assistente de Manipulador de Eventos.
 
 1. Selecione o evento na caixa **Tipo de mensagem** para adicionar à classe selecionada na caixa **Lista de classes**.
 
 1. Aceite o nome padrão da caixa **Nome do manipulador de funções** ou forneça o nome de sua escolha.
 
-1. Clique em **Adicionar e editar** para adicionar o manipulador de eventos ao projeto e abra o editor de texto na nova função para adicionar o código do manipulador de eventos apropriado.
+1. Selecione **Adicionar e editar** para adicionar o manipulador de eventos ao projeto e abra o editor de texto na nova função para adicionar o código do manipulador de eventos apropriado.
 
-   Se o tipo de mensagem selecionado já tem um manipulador de eventos para a classe selecionada, a opção **Adicionar e editar** não fica disponível e a opção **Editar código** fica disponível. Clique em **Editar código** para abrir o editor de texto na função existente.
+   Se o tipo de mensagem selecionado já tem um manipulador de eventos para a classe selecionada, a opção **Adicionar e editar** não fica disponível e a opção **Editar código** fica disponível. Selecione **Editar código** para abrir o editor de texto na função existente.
 
-Como alternativa, você pode adicionar manipuladores de eventos por meio da [janela Propriedades](/visualstudio/ide/reference/properties-window). Confira [Adicionando manipuladores de eventos a controles de caixa de diálogo](../windows/adding-event-handlers-for-dialog-box-controls.md) para obter mais informações.
+Como alternativa, você pode adicionar manipuladores de eventos por meio da [janela Propriedades](/visualstudio/ide/reference/properties-window). Para obter mais informações, confira [Adicionando manipuladores de eventos a controles de caixa de diálogo](../windows/adding-event-handlers-for-dialog-box-controls.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="in-this-section"></a>Nesta seção
 
-[Adicionando funcionalidade com assistentes de código](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
-[Adicionando uma classe](../ide/adding-a-class-visual-cpp.md)<br>
-[Adicionando uma variável de membro](../ide/adding-a-member-variable-visual-cpp.md)<br>
-[Adicionando uma função de membro](../ide/adding-a-member-function-visual-cpp.md)<br>
-[Manipulador de mensagens do MFC](../mfc/reference/adding-an-mfc-message-handler.md)<br>
-[Navegando pela estrutura de classe](../ide/navigating-the-class-structure-visual-cpp.md)
+- [Assistente de manipulador de eventos](#event-handler-wizard)
+
+## <a name="event-handler-wizard"></a>Assistente de manipulador de eventos
+
+Este assistente adiciona um manipulador de eventos a um controle de caixa de diálogo para a classe de sua escolha. Se você adicionar um manipulador de eventos por meio da [janela Propriedades](/visualstudio/ide/reference/properties-window), adicione-o somente para a classe que implementa a caixa de diálogo. Para obter mais informações, confira [Adicionando manipuladores de eventos a controles de caixa de diálogo](../windows/adding-event-handlers-for-dialog-box-controls.md).
+
+- **Nome do comando**
+
+  Identifica o controle selecionado, ao qual o manipulador de eventos é adicionado. Essa caixa não fica disponível.
+
+- **Tipo de mensagem**
+
+  Exibe a lista de possíveis manipuladores de mensagens atuais para o controle selecionado.
+
+- **Nome do manipulador de funções**
+
+  Exibe o nome da função adicionada para manipular o evento. Por padrão, o nome se baseia no tipo de mensagem e no comando, precedido por `On`. Por exemplo, para o botão chamado `IDC_BUTTON1`, o tipo de mensagem `BN_CLICKED` exibe o nome do manipulador de funções `OnBnClickedButton1`.
+
+- **Lista de classes**
+
+  Exibe as classes disponíveis às quais você pode adicionar um manipulador de eventos. A classe para a caixa de diálogo selecionada é exibida em vermelho.
+
+- **Descrição do manipulador**
+
+  Fornece uma descrição para o item selecionado na caixa **Tipo de mensagem**. Essa caixa não fica disponível.
+
+- **Adicionar e editar**
+
+  Adiciona o manipulador de mensagens à classe ou objeto selecionado. Também abre o editor de texto na nova função de modo que você possa adicionar ou editar o código do manipulador para a notificação de controle.
+
+- **Editar código**
+
+  Abre o editor de texto na função selecionada, de modo que você possa adicionar ou editar o código do manipulador de notificações de controle.

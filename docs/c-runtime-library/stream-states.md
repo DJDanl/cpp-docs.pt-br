@@ -1,21 +1,21 @@
 ---
 title: Estados de fluxo
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - streams, states
 ms.assetid: 5f28c968-f132-403f-968c-8417ff315e52
-ms.openlocfilehash: d51f24b82c10d58e91f5d20b6656eb16621004ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43d28fa504c64fcb25d5c7cd3ee2c6ed906acd7e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481166"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175555"
 ---
 # <a name="stream-states"></a>Estados de fluxo
 
 Os estados válidos e transições de estado para um fluxo são mostrados na figura a seguir.
 
-![Fluxo](../c-runtime-library/media/stream.gif "fluxo")
+![Diagrama dos estados de fluxo](../c-runtime-library/media/stream.gif "Diagrama dos estados de fluxo")
 
 Cada um dos círculos indica um estado estável. Cada uma das linhas denota uma transição que pode ocorrer como resultado de uma chamada de função que opera no fluxo. Cinco grupos de funções podem causar transições de estado.
 

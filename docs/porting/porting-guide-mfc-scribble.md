@@ -1,13 +1,13 @@
 ---
 title: 'Guia de portabilidade: rabisco do MFC'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: b41689b1e0207029f4494cfd91c261705789a733
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 353dc8fb42b73ec7e0ee748ef9fefd030c073703
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539757"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175646"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Guia de portabilidade: rabisco do MFC
 
@@ -31,7 +31,7 @@ Observe que você também pode executar devenv na linha de comando, usando a op�
 
 Quando você abre um arquivo de projeto antigo no Visual Studio 2017, o Visual Studio se oferece para converter o arquivo de projeto para a versão mais recente, o que aceitamos. A caixa de diálogo a seguir é exibida:
 
-![Examinar Alterações de Projeto e Solução](../porting/media/scribbleprojectupgrade.PNG "ScribbleProjectUpgrade")
+![Examinar alterações de projeto e solução](../porting/media/scribbleprojectupgrade.PNG "Examinar alterações de projeto e solução")
 
 Ocorreu um erro notificando que o destino do Itanium não está disponível e não será convertido.
 
@@ -43,7 +43,7 @@ Quando que o projeto Scribble anterior foi criado, o Itanium era uma plataforma 
 
 O Visual Studio, em seguida, exibe um relatório de migração listando todos os problemas com o arquivo de projeto antigo.
 
-![Relatório de atualização](../porting/media/scribblemigrationreport.PNG "ScribbleMigrationReport")
+![Relatório de atualização](../porting/media/scribblemigrationreport.PNG "Relatório de atualização")
 
 Nesse caso, os problemas eram todos avisos e Visual Studio fez as alterações apropriadas no arquivo de projeto. A grande diferença que diz respeito ao projeto é que a ferramenta de build mudou da vcbuild para msbuild. Essa alteração foi introduzida no Visual Studio 2010. Outras alterações incluem a reorganização da sequência de elementos no arquivo de projeto em si. Nenhum dos problemas precisou de atenção adicional para esse projeto simples.
 

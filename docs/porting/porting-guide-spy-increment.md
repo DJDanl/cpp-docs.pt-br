@@ -1,13 +1,13 @@
 ---
 title: 'Guia de portabilidade: Spy++'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 9e36bbefb2ab851350e17c0561addb680593f457
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bd69853b13d58ff79910eafcc601b0507d5a9ad
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487809"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176998"
 ---
 # <a name="porting-guide-spy"></a>Guia de portabilidade: Spy++
 
@@ -25,7 +25,7 @@ O arquivo de projeto, dois arquivos .dsw antigos do Visual C++ 6.0, foram conver
 
 Depois de atualizar os dois projetos, nossa solução tinha esta aparência:
 
-![A Solução Spy&#43;&#43;](../porting/media/spyxxsolution.PNG "SpyxxSolution")
+![A solução Spy&#43;&#43;](../porting/media/spyxxsolution.PNG "A solução Spy&#43;&#43;")
 
 Temos dois projetos, um com um grande número de arquivos de C++ e o outro com uma DLL que é escrita em C.
 
