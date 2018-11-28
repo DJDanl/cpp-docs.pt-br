@@ -1,15 +1,15 @@
 ---
 title: /sdl (Habilitar verificações de segurança adicionais)
-ms.date: 11/04/2016
+ms.date: 11/26/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-ms.openlocfilehash: 84e3b7b80727c359e711f182e2f06a7332989549
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49ac57f81ef07eb2a9c1e11280e160f0c48fce73
+ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587454"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389936"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (Habilitar verificações de segurança adicionais)
 
@@ -49,7 +49,17 @@ Quando **/sdl** é habilitado, o compilador gera código para executar essas ver
 
 - Executa a limpeza de ponteiro limitado. Em expressões que não envolvem cancela a referência e tipos que não têm nenhum destruidor definido pelo usuário, as referências do ponteiro são definidas como um endereço inválido após uma chamada para `delete`. Isso ajuda a evitar a reutilização de referências do ponteiro obsoletos.
 
-- Executa a inicialização de membro de classe. Inicializa automaticamente todos os membros de classe como zero na instanciação do objeto (antes da execução do construtor). Isso ajuda a impedir o uso de dados não inicializados associados a membros de classe que o construtor inicializa explicitamente.
+- Executa a inicialização de ponteiro de membro de classe. Automaticamente membros de tipo de ponteiro para a classe do inicializa **nullptr** na instanciação do objeto (antes da execução do construtor). Isso ajuda a impedir o uso de ponteiros não inicializados que o construtor inicializa explicitamente. A inicialização de ponteiro gerado pelo compilador membro é chamada, desde:
+
+  - O objeto não é alocado usando um personalizado (definido pelo usuário) `operator new`
+
+  - O objeto não está alocado como parte de uma matriz (por exemplo `new A[x]`)
+
+  - A classe não é gerenciada ou importada
+
+  - A classe tem um construtor padrão definido pelo usuário.
+
+  Para ser inicializado pela função de inicialização de classe gerado pelo compilador, um membro deve ser um ponteiro e não uma propriedade ou constante.
 
 ## <a name="remarks"></a>Comentários
 

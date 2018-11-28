@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 28796826a7c312b92b3ec0510513ad4804800ca1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c91f02fe044b5e6afccfc075c5d73ec004b8222
+ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476031"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389949"
 ---
 # <a name="std-specify-language-standard-version"></a>/STD (especificar versão de idioma padrão)
 
@@ -19,11 +19,11 @@ Habilitar suporte para recursos da linguagem C++ da versão especificada da ling
 
 ## <a name="syntax"></a>Sintaxe
 
-> / std:<c++14|c++17|c++Latest&gt: [c + + 14 | c++17 | c + + mais recente]
+> / std:\[c++14\|c++17\|c + + mais recente]
 
 ## <a name="remarks"></a>Comentários
 
-O **/std** opção está disponível no Visual Studio 2017 e posterior. Ele é usado para controlar a versão específica de programação ISO C++ recursos padrão de idioma habilitados durante a compilação do seu código. Essa opção permite que você desabilite o suporte para determinados recursos de linguagem e biblioteca novos que podem quebrar o código existente que esteja de acordo com uma versão específica do idioma padrão. Por padrão, **/std: c + + 14** for especificado, que desabilita recursos de linguagem e biblioteca padrão encontrados nas versões mais recentes da linguagem C++ padrão. Use **/std: c + + 17** para habilitar o comportamento e específicas do padrão de recursos do c++17. Para habilitar explicitamente o compilador mais recente com suporte e recursos da biblioteca padrão, use **/std: c + + mais recente**.
+O **/std** opção está disponível no Visual Studio 2017 e posterior. Ele é usado para controlar a versão específica de programação ISO C++ recursos padrão de idioma habilitados durante a compilação do seu código. Essa opção permite que você desabilite o suporte para determinados recursos de linguagem e biblioteca novos que podem quebrar o código existente que esteja de acordo com uma versão específica do idioma padrão. Por padrão, **/std: c + + 14** for especificado, que desabilita recursos de linguagem e biblioteca padrão encontrados nas versões mais recentes da linguagem C++ padrão. Use **/std: c + + 17** para habilitar o comportamento e específicas do padrão de recursos do c++17. Para habilitar explicitamente o compilador implementado atualmente e recursos da biblioteca padrão propostos para o próximo padrão de rascunho, use **/std: c + + mais recente**.
 
 O padrão **/std: c + + 14** opção permite que o conjunto de recursos do c++14 implementado pelo compilador do Visual C++. Esta opção desabilita o compilador e suporte de biblioteca padrão para recursos que são alterados ou novos em versões mais recentes do idioma padrão, com exceção de alguns recursos do c++17 já implementados nas versões anteriores do compilador do Visual C++. Para evitar alterações interruptivas para os usuários que já obtiveram dependências nos recursos disponíveis a partir do Visual Studio 2015 atualização 2, esses recursos permanecerão habilitados quando o **/std: c + + 14** opção for especificada:
 
@@ -41,7 +41,10 @@ Para obter mais informações sobre quais C + + 14 e C + + 17 recursos estão ha
 
 O **/std: c + + 17** opção habilita o conjunto completo de recursos do c++17 implementado pelo compilador do Visual C++. Essa opção desabilita o suporte ao compilador e à biblioteca padrão para funcionalidades alteradas ou novas nas versões das atualizações de defeito e de rascunho de trabalho do C++ Standard após o C++17.
 
-O **/std:c++17 + + mais recente** opção permite que o conjunto de recursos de linguagem e biblioteca do C++ implementado pelo Visual C++ para acompanhar a maior parte C + + 20 defeito e rascunho de trabalho atualizações recentes do C++ Standard que não estão incluídas no c++17. Use essa opção para obter o pós-recursos de linguagem C + + 17 compatíveis com o compilador e a biblioteca padrão. Para obter uma lista de idiomas com suporte e recursos de biblioteca, consulte [o que há de novo para o Visual C++](../../what-s-new-for-visual-cpp-in-visual-studio.md). O **/std:c++17 + + mais recente** opção não permite recursos protegidos pela **/ experimental** alternar.
+O **/std:c++17 + + mais recente** opção permite que o post-C + + 17 recursos de linguagem e biblioteca atualmente implementados no compilador e bibliotecas. Eles podem incluir recursos das C + + 20 defeito e rascunho de trabalho atualizações do C++ Standard que não estão incluídos no c++17, bem como propostas experimentais para o padrão de rascunho. Para obter uma lista de idiomas com suporte e recursos de biblioteca, consulte [o que há de novo para o Visual C++](../../what-s-new-for-visual-cpp-in-visual-studio.md). O **/std:c++17 + + mais recente** opção não permite recursos protegidos pela **/ experimental** mudar, mas pode ser necessário habilitá-los.
+
+> [!IMPORTANT]
+> Os recursos de biblioteca e compilador habilitados pela **/std:c++17 + + mais recente** são fornecidos como-está e sem suporte. Eles estão sujeitos às últimas alterações ou remoção sem aviso prévio. Eles destinam-se como uma visualização dos recursos de linguagem que podem aparecer na próxima versão do padrão, mas o padrão é um trabalho em andamento. Use **/std: c + + 17** para usar os recursos no padrão ISO C++ mais recente.
 
 O **/std** opção em vigor durante a compilação de C++ pode ser detectada pelo uso das [ \_MSVC\_LANG](../../preprocessor/predefined-macros.md) macro do pré-processador. Para obter mais informações, consulte [Macros de pré-processador](../../preprocessor/predefined-macros.md).
 
