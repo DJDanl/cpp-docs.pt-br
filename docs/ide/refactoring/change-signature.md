@@ -2,12 +2,12 @@
 title: Alterar assinatura
 ms.date: 11/16/2016
 ms.assetid: 8daaa060-7305-4035-99d2-8b460b4f4454
-ms.openlocfilehash: 97f70f7fdf6cb8a130427d8920152d44c1cb1349
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: ec42fd00ecf48fb700042f02543e3fe194fe6975
+ms.sourcegitcommit: 7c05ebd2c75e9326fe774e95cbce7f150ba2eeba
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693524"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52281942"
 ---
 # <a name="change-signature"></a>Alterar assinatura
 
@@ -38,7 +38,7 @@ ms.locfileid: "51693524"
    | Botão | Descrição
    | ------ | ---
    | **Para cima/baixo**    | Mova o parâmetro selecionado para cima e para baixo na lista
-   | **Adicionar**        | Adicione um novo parâmetro à lista
+   | **Adicionar**        | Adicionar um novo parâmetro à lista
    | **Removerr**     | Remova o parâmetro selecionado da lista
    | **Modificar**     | Modifica o parâmetro selecionado alterando seu tipo, nome e indica se ele é opcional e qual seu valor injetado
    | **Reverter**     | Restaura o parâmetro selecionado para seu estado original
