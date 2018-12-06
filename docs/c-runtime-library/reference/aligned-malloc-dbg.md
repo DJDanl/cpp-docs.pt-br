@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_malloc_dbg function
 - _aligned_malloc_dbg function
 ms.assetid: fb0429c3-685d-4826-9075-2515c5bdc5c6
-ms.openlocfilehash: 4fc6789e5fecda38678052c7e805728a49219bc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb58313c892ffe13e9f8e34e98b7940022899d14
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631862"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977804"
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -64,7 +64,7 @@ Um ponteiro para o bloco de memória que foi alocado ou nulo se a operação fal
 
 ## <a name="remarks"></a>Comentários
 
-**aligned_malloc_dbg** é uma versão de depuração de [aligned_malloc](aligned-malloc.md) função. Quando [Debug](../../c-runtime-library/debug.md) não estiver definido, cada chamada para **aligned_malloc_dbg** é reduzida a uma chamada para `_aligned_malloc`. Ambos `_aligned_malloc` e **aligned_malloc_dbg** alocar um bloco de memória no heap de base, mas **aligned_malloc_dbg** oferece vários recursos de depuração: buffers nos dois lados da parte do usuário a bloco para testar se há perdas, e *filename*/*linenumber* informações para determinar a origem das solicitações de alocação.
+**aligned_malloc_dbg** é uma versão de depuração de [aligned_malloc](aligned-malloc.md) função. Quando [Debug](../../c-runtime-library/debug.md) não estiver definido, cada chamada para **aligned_malloc_dbg** é reduzida a uma chamada para `_aligned_malloc`. Ambos `_aligned_malloc` e **aligned_malloc_dbg** alocar um bloco de memória no heap de base, mas **aligned_malloc_dbg** oferece vários recursos de depuração: buffers nos dois lados da parte do usuário a bloco para testar se há perdas, e *filename*/*linenumber* informações para determinar a origem das solicitações de alocação. Tipos de alocação específicos com um parâmetro de tipo de bloco de controle não é um recurso de depuração com suporte para alocações alinhados. Alocações alinhadas serão exibido como um tipo de bloco normal_block.
 
 **aligned_malloc_dbg** aloca o bloco de memória com um pouco mais de espaço que o solicitado *tamanho*. O espaço adicional é usado pelo gerenciador de heaps de depuração para vincular os blocos de memória de depuração e fornecer informações do cabeçalho de depuração ao aplicativo e substituir buffers. Quando um bloco é alocado, a parte do usuário do bloco é preenchida com o valor 0xCD e cada um dos buffers de substituição é preenchido com 0xFD.
 

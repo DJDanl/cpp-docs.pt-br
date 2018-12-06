@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_recalloc_dbg function
 - _aligned_recalloc_dbg function
 ms.assetid: 55c3c27e-561c-4d6b-9bf9-1e34cc556e4b
-ms.openlocfilehash: 85af821aaa873b6e71341823d47085996f697235
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0f0cacc5efa5e63cbe05b481f922b35742e3924
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664692"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977778"
 ---
 # <a name="alignedrecallocdbg"></a>_aligned_recalloc_dbg
 
@@ -74,7 +74,7 @@ Realocar a memória e alterar o alinhamento de um bloco é um erro.
 
 ## <a name="remarks"></a>Comentários
 
-**aligned_recalloc_dbg** é uma versão de depuração de [aligned_recalloc](aligned-recalloc.md) função. Quando [Debug](../../c-runtime-library/debug.md) não estiver definido, cada chamada para **aligned_recalloc_dbg** é reduzida a uma chamada para **aligned_recalloc**. Ambos **aligned_recalloc** e **aligned_recalloc_dbg** realocam um bloco de memória no heap de base, mas **aligned_recalloc_dbg** acomoda a depuração de vários recursos: buffers nos dois lados da parte do usuário do bloco para testar se há vazamentos, um parâmetro de tipo de bloco para rastrear tipos de alocação específicos e *filename*/*linenumber* informações para determinar a origem das solicitações de alocação.
+**aligned_recalloc_dbg** é uma versão de depuração de [aligned_recalloc](aligned-recalloc.md) função. Quando [Debug](../../c-runtime-library/debug.md) não estiver definido, cada chamada para **aligned_recalloc_dbg** é reduzida a uma chamada para **aligned_recalloc**. Ambos **aligned_recalloc** e **aligned_recalloc_dbg** realocam um bloco de memória no heap de base, mas **aligned_recalloc_dbg** acomoda a depuração de vários recursos: buffers nos dois lados da parte do usuário do bloco para testar se há perdas, e *filename*/*linenumber* informações para determinar a origem da alocação solicitações. Tipos de alocação específicos com um parâmetro de tipo de bloco de controle não é um recurso de depuração com suporte para alocações alinhados. Alocações alinhadas serão exibido como um tipo de bloco normal_block.
 
 **aligned_recalloc_dbg** realoca o bloco de memória especificado com um pouco mais de espaço que o tamanho solicitado (*número* * *tamanho*) que pode ser maior ou menor que o tamanho do bloco de memória alocado originalmente. O espaço adicional é usado pelo gerenciador de heaps de depuração para vincular os blocos de memória de depuração e fornecer informações do cabeçalho de depuração ao aplicativo e substituir buffers. A realocação pode resultar no deslocamento do bloco de memória original para outro local do heap e alterar o tamanho do bloco de memória. A parte do usuário do bloco é preenchida com o valor 0xCD e os buffers de substituição são preenchidos com 0xFD.
 

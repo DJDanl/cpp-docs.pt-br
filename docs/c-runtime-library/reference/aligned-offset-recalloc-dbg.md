@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_offset_recalloc_dbg function
 - _aligned_offset_recalloc_dbg function
 ms.assetid: 7ab719c3-77e0-4d2e-934f-01529d062fbf
-ms.openlocfilehash: 0b314b4aca080877b4e41723a8d2010fd8e835ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 671635e6cdc0f3f9bcd140de40500ed49beb4a8f
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627962"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977791"
 ---
 # <a name="alignedoffsetrecallocdbg"></a>_aligned_offset_recalloc_dbg
 
@@ -76,7 +76,7 @@ Número de linha no arquivo de origem em que a operação de realloc foi solicit
 
 ## <a name="remarks"></a>Comentários
 
-**aligned_offset_realloc_dbg** é uma versão de depuração de [aligned_offset_recalloc](aligned-offset-recalloc.md) função. Quando [Debug](../../c-runtime-library/debug.md) não estiver definido, cada chamada para **aligned_offset_recalloc_dbg** é reduzida a uma chamada para **aligned_offset_recalloc**. Ambos **aligned_offset_recalloc** e **aligned_offset_recalloc_dbg** realocam um bloco de memória no heap de base, mas **aligned_offset_recalloc_dbg** acomoda vários recursos de depuração: buffers nos dois lados da parte do usuário do bloco para testar se há vazamentos, um parâmetro de tipo de bloco para rastrear tipos de alocação específicos e *filename*/*linenumber*  informações para determinar a origem das solicitações de alocação.
+**aligned_offset_realloc_dbg** é uma versão de depuração de [aligned_offset_recalloc](aligned-offset-recalloc.md) função. Quando [Debug](../../c-runtime-library/debug.md) não estiver definido, cada chamada para **aligned_offset_recalloc_dbg** é reduzida a uma chamada para **aligned_offset_recalloc**. Ambos **aligned_offset_recalloc** e **aligned_offset_recalloc_dbg** realocam um bloco de memória no heap de base, mas **aligned_offset_recalloc_dbg** acomoda vários recursos de depuração: buffers nos dois lados da parte do usuário do bloco para testar se há perdas, e *filename*/*linenumber* informações para determinar a origem do solicitações de alocação. Tipos de alocação específicos com um parâmetro de tipo de bloco de controle não é um recurso de depuração com suporte para alocações alinhados. Alocações alinhadas serão exibido como um tipo de bloco normal_block.
 
 **aligned_offset_realloc_dbg** realoca o bloco de memória especificado com um pouco mais de espaço que o solicitado *newSize*. *newSize* pode ser maior ou menor que o tamanho do bloco de memória alocado originalmente. O espaço adicional é usado pelo gerenciador de heaps de depuração para vincular os blocos de memória de depuração e fornecer informações do cabeçalho de depuração ao aplicativo e substituir buffers. A realocação pode resultar no deslocamento do bloco de memória original para outro local do heap e alterar o tamanho do bloco de memória. Se o bloco de memória for movido, o conteúdo do bloco original será substituído.
 
