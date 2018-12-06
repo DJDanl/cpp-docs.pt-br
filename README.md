@@ -8,9 +8,9 @@ A documentação do Visual Basic e do Visual C# está localizada em um repositó
 
 ## <a name="contributing-to-the-documentation"></a>Contribuindo para a documentação
 
-Agradecemos suas contribuições para nos ajudar a melhorar a documentação do Visual C++. Para obter um guia abrangente para contribuir para o docs.microsoft.com, consulte a [Visão geral do guia do colaborador do Microsoft Docs](https://docs.microsoft.com/contribute). Para obter detalhes sobre como fazer uma contribuição à documentação do Visual C++, consulte o guia [Contribuição](CONTRIBUTING.md).
+Agradecemos suas contribuições para nos ajudar a melhorar a documentação do Visual C++. Para obter um guia abrangente para contribuir para o docs.microsoft.com, consulte a [Visão geral do guia do colaborador do Microsoft Docs](https://docs.microsoft.com/contribute). Para obter detalhes sobre como colaborar para a documentação do Visual C++, consulte o [guia Colaboração](CONTRIBUTING.md).
 
-Várias áreas de recursos do Visual C++ têm suas próprias pastas nesse repositório, como `standard-library` para tópicos na Biblioteca Padrão C++, `ide` para tópicos específicos do C++ sobre o IDE (ambiente de desenvolvimento interativo) do Visual Studio e assim por diante. A subpasta `/media` de cada pasta contém arquivos de arte para os tópicos. O guia de [Contribuição](CONTRIBUTING.md) traz mais informações.
+Várias áreas de recursos do Visual C++ têm suas próprias pastas nesse repositório, como `standard-library` para tópicos na Biblioteca Padrão C++, `ide` para tópicos específicos do C++ sobre o IDE (ambiente de desenvolvimento interativo) do Visual Studio e assim por diante. A subpasta `/media` de cada pasta contém arquivos de arte para os tópicos. O [Guia de contribuição](CONTRIBUTING.md) traz mais informações.
 
 ## <a name="microsoft-open-source-code-of-conduct"></a>Código de Conduta de Código-fonte da Microsoft
 
