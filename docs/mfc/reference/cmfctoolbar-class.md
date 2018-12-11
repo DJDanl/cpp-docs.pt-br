@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: d1677716db42f7f2e3b74e63562d00527291c144
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98de92a9473d64a87b9b7a9f2891adf4263e1951
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524654"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178961"
 ---
 # <a name="cmfctoolbar-class"></a>Classe CMFCToolBar
 
@@ -519,7 +519,7 @@ Para incorporar um `CMFCToolBar` de objeto em seu aplicativo, siga estas etapas:
 
 1. Chame [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) para especificar o estilo de encaixe.
 
-Para inserir um botão especial, como uma caixa de combinação ou lista suspensa da barra de ferramentas, reservar um botão fictício no recurso pai e substitua o botão fictício em tempo de execução usando [CMFCToolBar::ReplaceButton](#replacebutton). Para obter mais informações, consulte [instruções passo a passo: colocando controles em barras de ferramentas](../walkthrough-putting-controls-on-toolbars.md).
+Para inserir um botão especial, como uma caixa de combinação ou lista suspensa da barra de ferramentas, reservar um botão fictício no recurso pai e substitua o botão fictício em tempo de execução usando [CMFCToolBar::ReplaceButton](#replacebutton). Para obter mais informações, consulte [passo a passo: Colocando controles em barras de ferramentas](../walkthrough-putting-controls-on-toolbars.md).
 
 `CMFCToolBar` é a classe base para as classes de biblioteca MFC [classe CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md), [classe CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md), e [classe CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md).
 
@@ -1242,7 +1242,7 @@ void EnableReflections(BOOL bEnable = TRUE);
 
 Chame esse método para habilitar a reflexão de comando para botões da barra de ferramentas que contêm controles incorporados, como caixas de combinação.
 
-Para obter mais informações sobre reflexão de comando, consulte [TN062: reflexão de mensagem para controles de Windows](../../mfc/tn062-message-reflection-for-windows-controls.md).
+Para obter mais informações sobre reflexão de comando, consulte [TN062: Mensagem de reflexão para controles do Windows](../../mfc/tn062-message-reflection-for-windows-controls.md).
 
 ##  <a name="enabletextlabels"></a>  CMFCToolBar::EnableTextLabels
 
@@ -2491,7 +2491,7 @@ TRUE se o último comando foi enviado com o botão que *pButton* Especifica; cas
 
 ### <a name="remarks"></a>Comentários
 
-Esse método obtém um ponteiro para um [estrutura MSG](../../mfc/reference/msg-structure1.md) chamando `CWnd::GetCurrentMessage`. Ele então compara o HWND do botão com o `MSG::lParam` e `MSG::hwnd` membros para determinar se o botão foi a origem do comando.
+Esse método obtém um ponteiro para um [estrutura MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) chamando `CWnd::GetCurrentMessage`. Ele então compara o HWND do botão com o `MSG::lParam` e `MSG::hwnd` membros para determinar se o botão foi a origem do comando.
 
 ##  <a name="islocked"></a>  CMFCToolBar::IsLocked
 
@@ -3905,5 +3905,5 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 [Classe CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md)<br/>
 [Classe CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)<br/>
 [Classe CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
-[Instruções passo a passo: colocando controles em barras de ferramentas](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+[Passo a passo: Colocando controles em barras de ferramentas](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 

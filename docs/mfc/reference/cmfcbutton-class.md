@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: b33c4c89276b99b6b5f8a4129ef17f809f058ac5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a82793ce29765bf01e8c52c94257bd3150187505
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547310"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178454"
 ---
 # <a name="cmfcbutton-class"></a>Classe CMFCButton
 
@@ -567,7 +567,7 @@ virtual void OnDraw(
 [in] Uma referência a um retângulo que delimita o botão.
 
 *uiState*<br/>
-[in] O estado atual do botão. Para obter mais informações, consulte o `itemState` membro a [estrutura DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) tópico.
+[in] O estado atual do botão. Para obter mais informações, consulte o `itemState` membro a [estrutura DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) tópico.
 
 ### <a name="remarks"></a>Comentários
 
@@ -593,7 +593,7 @@ virtual void OnDrawBorder(
 [in] Uma referência a um retângulo que delimita o botão.
 
 *uiState*<br/>
-[in] O estado atual do botão. Para obter mais informações, consulte o `itemState` membro a [estrutura DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) tópico.
+[in] O estado atual do botão. Para obter mais informações, consulte o `itemState` membro a [estrutura DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) tópico.
 
 ### <a name="remarks"></a>Comentários
 
